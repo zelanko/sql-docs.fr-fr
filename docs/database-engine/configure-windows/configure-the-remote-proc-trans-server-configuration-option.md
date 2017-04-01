@@ -1,0 +1,105 @@
+---
+title: "Configurer l&#39;option de configuration du serveur remote proc trans | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/02/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "remote proc trans (option)"
+  - "transactions distribuées [SQL Server], application"
+ms.assetid: cfbc6158-ab96-44b4-87eb-ea278c1b0c6b
+caps.latest.revision: 23
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 23
+---
+# Configurer l&#39;option de configuration du serveur remote proc trans
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  Cette rubrique explique comment configurer l'option de configuration de serveur **Transactions de procédures distantes** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L’option **Transactions de procédures distantes** contribue à protéger les actions d’une procédure de serveur à serveur via une transaction MS DTC ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator).  
+  
+ Attribuez la valeur 1 à l’option **Transactions de procédures distantes** pour obtenir une transaction distribuée coordonnée par MS DTC qui protège les propriétés ACID (Atomicité, Cohérence, Isolation et Durabilité) des transactions. Les sessions qui commencent après l'attribution de la valeur 1 à cette option héritent par défaut des options de configuration.  
+  
+> [!IMPORTANT]  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
+  
+ **Dans cette rubrique**  
+  
+-   **Avant de commencer :**  
+  
+     [Conditions préalables](#Prerequisites)  
+  
+     [Recommandations](#Recommendations)  
+  
+     [Sécurité](#Security)  
+  
+-   **Pour configurer l'option Transactions de procédures distantes, utilisez :**  
+  
+     [SQL Server Management Studio](#SSMSProcedure)  
+  
+     [Transact-SQL](#TsqlProcedure)  
+  
+-   **Suivi :**  [Après avoir configuré l'option Transactions de procédures distantes](#FollowUp)  
+  
+##  <a name="BeforeYouBegin"></a> Avant de commencer  
+  
+###  <a name="Prerequisites"></a> Configuration requise  
+  
+-   Les connexions au serveur distant doivent être autorisées avant que cette valeur puisse être définie.  
+  
+###  <a name="Recommendations"></a> Recommandations  
+  
+-   Cette option garantit la compatibilité avec les versions antérieures de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les applications qui utilisent des procédures stockées distantes. Au lieu d’émettre des appels de procédures stockées distantes, utilisez des requêtes distribuées faisant référence à des serveurs liés, qui sont définis à l’aide de [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
+  
+###  <a name="Security"></a> Sécurité  
+  
+####  <a name="Permissions"></a> Autorisations  
+ Les autorisations d’exécution de **sp_configure**, sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
+  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+  
+#### Pour configurer l'option Transactions de procédures distantes  
+  
+1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur un serveur et sélectionnez **Propriétés**.  
+  
+2.  Cliquez sur le nœud **Connexions** .  
+  
+3.  Sous **Connexions au serveur distant**, activez la case à cocher **Nécessite des transactions distribuées pour la communication de serveur à serveur** .  
+  
+##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+  
+#### Pour configurer l'option Transactions de procédures distantes  
+  
+1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  
+2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
+  
+3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple montre comment utiliser [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) pour attribuer à l’option `remote proc trans` la valeur `1`.  
+  
+```tsql  
+USE AdventureWorks2012 ;  
+GO  
+EXEC sp_configure 'remote proc trans', 1 ;  
+GO  
+RECONFIGURE ;  
+GO  
+  
+```  
+  
+ Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+  
+##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option Transactions de procédures distantes  
+ Le paramètre prend effet immédiatement sans redémarrage du serveur.  
+  
+## Voir aussi  
+ [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
+ [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
+ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
+  
+  

@@ -1,0 +1,104 @@
+---
+title: "R&#233;cup&#233;rer un num&#233;ro s&#233;quentiel dans le journal (SQL Server) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/17/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dbe-backup-restore"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "numéros séquentiels dans le journal [SQL Server]"
+  - "STOPBEFOREMARK, option [instruction RESTORE]"
+  - "STOPATMARK, option [instruction RESTORE]"
+  - "récupération jusqu'à une date et heure [SQL Server]"
+  - "restauration des bases de données [SQL Server], point dans le temps"
+  - "récupération [SQL Server], bases de données"
+  - "restauration [SQL Server], point dans le temps"
+  - "NSE"
+  - "récupération de base de données [SQL Server]"
+  - "restaurations des bases de données [SQL Server], point dans le temps"
+ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
+caps.latest.revision: 38
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 37
+---
+# R&#233;cup&#233;rer un num&#233;ro s&#233;quentiel dans le journal (SQL Server)
+  Cette rubrique s'applique uniquement aux bases de données employant les modes de restauration complète ou de récupération utilisant les journaux de transactions.  
+  
+ Vous pouvez utiliser un numéro séquentiel dans le journal pour définir le point de récupération d'une opération de restauration. Toutefois, cette fonctionnalité est spécialement conçue pour les fournisseurs d'outils et ne devrait pas être nécessaire dans la plupart des cas.  
+  
+##  <a name="LSNs"></a> Vue d'ensemble des numéros séquentiels dans le journal  
+ Les numéros LSN sont utilisés en interne pendant une séquence RESTORE pour rechercher le point dans le temps par rapport auquel les données ont été restaurées. Lorsqu'une sauvegarde est restaurée, les données sont restaurées par rapport au numéro LSN qui correspond au point dans le temps à partir duquel la sauvegarde a été effectuée. Les sauvegardes différentielles et de journaux font passer la base de données restaurée à une date ultérieure qui correspond à un numéro LSN supérieur.  
+  
+ Chaque enregistrement du journal de transactions est identifié de manière unique par un numéro séquentiel dans le journal (LSN). Les numéros de séquence d'enregistrement sont ordonnés de sorte que si LSN2 est supérieur à LSN1, la modification décrite par l'enregistrement de journal référencé par LSN2 se produit après la modification décrite par le numéro LSN d'enregistrement de journal.  
+  
+ Le numéro LSN d'un enregistrement de journal qui correspond à l'occurrence d'un événement significatif peut s'avérer utile pour créer les séquences de restauration appropriées. Du fait que les numéros LSN sont ordonnés, il est possible de comparer leur égalité et leur inégalité (à savoir, **\<**, **>**, **=**, **\<=**, **>=**). Ces comparaisons sont utiles pour créer des séquences de restauration.  
+  
+> [!NOTE]  
+>  Les numéros LSN sont des valeurs de type données **numeric** (25,0). Les opérations arithmétiques (addition ou soustraction, par exemple) ne sont pas significatives et ne doivent pas être utilisées avec les numéros LSN.  
+  
+ [&#91;Haut&#93;](#Top)  
+  
+## Affichage des numéros LSN utilisés par la sauvegarde et la restauration  
+ Le numéro LSN d'un enregistrement de journal dans lequel un événement de sauvegarde et de restauration s'est produit peut être affiché en utilisant une ou plusieurs des commandes suivantes :  
+  
+-   [backupset](../../relational-databases/system-tables/backupset-transact-sql.md)  
+  
+-   [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)  
+  
+-   [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) ; [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
+  
+-   [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+  
+-   [RESTORE FILELISTONLY](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)  
+  
+> [!NOTE]  
+>  Les numéros LSN figurent également dans les textes de message.  
+  
+## Syntaxe Transact-SQL relative à la restauration d'après un LSN  
+ Grâce à l'instruction [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) , vous pouvez vous arrêter à un LSN ou immédiatement avant ce point de la façon suivante :  
+  
+-   Utilisez la clause WITH STOPATMARK **='**lsn:*<numéro_lsn>***'**, où lsn:*\<numéro_lsn>* correspond à une chaîne précisant que l’enregistrement du journal qui contient le LSN spécifié équivaut au point de récupération.  
+  
+     STOPATMARK permet la restauration par progression jusqu'au NSE et inclut l'enregistrement correspondant issu du journal, dans la restauration.  
+  
+-   Utilisez la clause WITH STOPBEFOREMARK **='**lsn:*<numéro_lsn>***'**, où lsn:*\<numéro_lsn>* correspond à une chaîne précisant que l’entrée se trouvant dans le journal immédiatement avant celle qui contient le NSE précisé équivaut au point de récupération.  
+  
+     STOPBEFOREMARK permet la restauration par progression jusqu'au NSE mais exclut l'enregistrement correspondant, se trouvant dans le journal, de la restauration par progression.  
+  
+ De façon générale, une transaction donnée est sélectionnée dans le but d'être incluse ou exclue. Dans la pratique, et ce même s'il n'est pas requis, l'enregistrement spécifié dans le journal correspond à un enregistrement de validation de transaction.  
+  
+## Exemples  
+ L'exemple suivant suppose que la base de données `AdventureWorks` a été modifiée afin d'utiliser le mode de récupération complète.  
+  
+```  
+RESTORE LOG AdventureWorks FROM DISK = 'c:\adventureworks_log.bak'   
+WITH STOPATMARK = 'lsn:15000000040000037'  
+GO  
+```  
+  
+##  <a name="RelatedTasks"></a> Tâches associées  
+  
+-   [Restaurer une sauvegarde de base de données à l’aide de SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
+  
+-   [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
+  
+-   [Restaurer une sauvegarde de journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
+  
+-   [Restaurer une base de données jusqu’au point d’échec en mode de récupération complète &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+  
+-   [Restaurer une base de données jusqu’à une transaction marquée &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
+  
+-   [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
+  
+## Voir aussi  
+ [Appliquer les sauvegardes du journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
+ [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+  
+  

@@ -1,0 +1,1 @@
+<Token>**CETTE RUBRIQUE S’APPLIQUE À :** ![oui](../includes/media/yes.png)SQL Server (à partir de la version 2016)![oui](../includes/media/yes.png)Azure SQL Database![oui](../includes/media/yes.png)Azure SQL Data Warehouse![oui](../includes/media/yes.png)Parallel Data Warehouse </Token>

@@ -1,0 +1,54 @@
+---
+title: "Modifier une alerte de donn&#233;es dans le Concepteur d&#39;alertes | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "reporting-services-sharepoint"
+  - "reporting-services-native"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "modification, alertes de données"
+  - "mise à jour, alertes de données"
+  - "modification, alertes"
+  - "mise à jour, alertes"
+ms.assetid: dde3664d-90b5-4b12-969e-39152c86e58a
+caps.latest.revision: 11
+author: "guyinacube"
+ms.author: "asaxton"
+manager: "erikre"
+caps.handback.revision: 11
+---
+# Modifier une alerte de donn&#233;es dans le Concepteur d&#39;alertes
+  Vous ouvrez la définition d'alerte de données que vous souhaitez modifier dans le Gestionnaire des alertes de données. Uniquement l'utilisateur qui a créé la définition d'alerte peut la modifier. Pour plus d’informations sur l’ouverture du Gestionnaire des alertes de données, consultez [Gérer mes alertes de données dans le Gestionnaire des alertes de données](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
+  
+ L'image suivante montre le menu contextuel d'une alerte de données dans le Gestionnaire des alertes de données.  
+  
+ ![Ouvrir le Concepteur d'alertes de données en cliquant sur Modifier](../reporting-services/media/rs-alertmanageriwopendesigner.gif "Ouvrir le Concepteur d'alertes de données en cliquant sur Modifier")  
+  
+ La procédure suivante décrit les étapes pour ouvrir la définition d'alerte et la modifier dans le Concepteur d'alertes de données du Gestionnaire des alertes de données.  
+  
+### Pour modifier une définition d'alerte de données dans le Concepteur d'alertes de données  
+  
+1.  Dans le Gestionnaire des alertes de données, cliquez avec le bouton droit sur la définition d’alerte de données à modifier, puis cliquez sur l’option **Modifier**.  
+  
+     La définition de l'alerte s'ouvre dans le Concepteur d'alertes de données.  
+  
+2.  Mettez à jour les règles, les paramètres de planification et les paramètres de courrier électronique. Pour plus d’informations, consultez [Concepteur d’alertes de données](../reporting-services/data-alert-designer.md) et [Créer une alerte de données dans le Concepteur d’alertes](../reporting-services/create-a-data-alert-in-data-alert-designer.md).  
+  
+    > [!NOTE]  
+    >  Vous ne pouvez pas choisir un flux de données différent. Si vous souhaitez utiliser un flux de données différent, vous devez créer une nouvelle définition d'alerte de données.  
+  
+3.  Cliquez sur **Enregistrer**.  
+  
+    > [!NOTE]  
+    >  Si le rapport a changé et les flux de données générés à partir du rapport ont changé, la définition d'alerte peut ne plus être valide. Ceci se produit lorsqu'une colonne référencée par la définition d'alerte dans ses règles est supprimée du rapport, si le type de ses données change, ou encore, si le rapport est supprimé ou déplacé. Vous pouvez ouvrir une définition d'alerte non valide, mais vous ne pouvez pas l'enregistrer tant qu'elle n'est pas compatible avec la version actuelle du flux de données du rapport sur lequel elle repose. Pour en savoir plus sur la façon dont les flux de données sont générés à partir des rapports, consultez [Génération de flux de données à partir de rapports &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
+  
+## Voir aussi  
+ [Gestionnaire des alertes de données pour les administrateurs d'alertes](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+ [Alertes de données Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
+  
+  

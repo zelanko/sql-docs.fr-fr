@@ -1,0 +1,64 @@
+---
+title: "Fonction CountRows (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/09/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "reporting-services-sharepoint"
+  - "reporting-services-native"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 5b1c403d-6afd-44c8-b5f6-5ecff2a29a45
+caps.latest.revision: 7
+author: "maggiesMSFT"
+ms.author: "maggies"
+manager: "erikre"
+---
+# Fonction CountRows (G&#233;n&#233;rateur de rapports et SSRS)
+  Retourne le nombre de lignes dans l'étendue spécifiée, y compris celles contenant des valeurs Null.  
+  
+> [!NOTE]  
+>  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+  
+## Syntaxe  
+  
+```  
+  
+CountRows(scope, recursive)  
+```  
+  
+#### Paramètres  
+ *portée*  
+ (**String**) Nom d’un dataset, d’un groupe ou d’une région de données qui contient les éléments de rapport à compter.  
+  
+ *récursifs*  
+ (**Type énuméré**) Facultatif. **Simple** (par défaut) ou **RdlRecursive**. Indique s'il faut effectuer l'agrégation de manière récursive.  
+  
+## Type de retour  
+ Retourne un **Integer**.  
+  
+## Notes  
+ **CountRows** compte toutes les lignes dans l'étendue spécifiée, y compris celles contenant des valeurs Null.  
+  
+ La valeur du paramètre *scope* ne peut pas être une expression et doit faire référence à l'étendue actuelle ou à une étendue contenante.  
+  
+ Pour plus d’informations, consultez [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/aggregate-functions-reference-report-builder-and-ssrs.md) et [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression scope for totals, aggregates, and built-in collections.md).  
+  
+ Pour plus d’informations sur les agrégats récursifs, consultez [Création de groupes de hiérarchies récursives &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
+  
+## Exemple  
+ L'exemple de code suivant affiche une expression qui calcule le nombre de lignes dans un groupe de lignes nommé `GroupbyCategory` (basé sur l'expression `[Category]`).  
+  
+```  
+="Number of rows: " & CountRows("GroupbyCategory")  
+```  
+  
+## Voir aussi  
+ [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression scope for totals, aggregates, and built-in collections.md)  
+  
+  

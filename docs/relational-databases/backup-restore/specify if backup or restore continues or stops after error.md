@@ -1,0 +1,106 @@
+---
+title: "Sp&#233;cifier si une op&#233;ration de sauvegarde ou de restauration continue ou s&#39;arr&#234;te apr&#232;s la survenue d&#39;une erreur (SQL Server) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/29/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dbe-backup-restore"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "erreurs [SQL Server], sauvegardes"
+  - "sauvegarde de bases de données [SQL Server], erreurs"
+  - "sauvegardes [SQL Server], erreurs"
+  - "sauvegardes de bases de données [SQL Server], erreurs"
+ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
+caps.latest.revision: 27
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+---
+# Sp&#233;cifier si une op&#233;ration de sauvegarde ou de restauration continue ou s&#39;arr&#234;te apr&#232;s la survenue d&#39;une erreur (SQL Server)
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+
+  Cette rubrique indique comment spécifier si une opération de sauvegarde ou de restauration continue ou s'arrête après la survenue d'une erreur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  
+ **Dans cette rubrique**  
+  
+-   **Avant de commencer :**  
+  
+     [Sécurité](#Security)  
+  
+-   **Pour spécifier si une opération de sauvegarde ou de restauration continue après la survenue d'une erreur, utilisez :**  
+  
+     [SQL Server Management Studio](#SSMSProcedure)  
+  
+     [Transact-SQL](#TsqlProcedure)  
+  
+##  <a name="BeforeYouBegin"></a> Avant de commencer  
+  
+###  <a name="Security"></a> Sécurité  
+  
+####  <a name="Permissions"></a> Autorisations  
+ BACKUP  
+ Les autorisations BACKUP DATABASE et BACKUP LOG reviennent par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_backupoperator**.  
+  
+ Des problèmes de propriété et d'autorisations sur le fichier physique de l'unité de sauvegarde sont susceptibles de perturber une opération de sauvegarde. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être en mesure de lire et d'écrire sur l'unité ; le compte sous lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute doit avoir des autorisations d'écriture. Toutefois, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), qui ajoute une entrée pour une unité de sauvegarde dans les tables système, ne vérifie pas les autorisations d’accès au fichier. De tels problèmes pour le fichier physique de l'unité de sauvegarde peuvent n'apparaître que lorsque la ressource physique est sollicitée au moment de la sauvegarde ou de la restauration.  
+  
+ RESTORE  
+ Si la base de données restaurée n'existe pas, l'utilisateur doit posséder les autorisations CREATE DATABASE afin de pouvoir exécuter RESTORE. Si la base de données existe, les autorisations RESTORE reviennent par défaut aux membres des rôles serveur fixe **sysadmin** et **dbcreator** et au propriétaire (**dbo**) de la base de données (pour l’option FROM DATABASE_SNAPSHOT, la base de données existe toujours).  
+  
+ Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas quand RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
+  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+  
+#### Pour spécifier si la sauvegarde continue ou s'arrête après la survenue d'une erreur  
+  
+1.  Suivez les étapes pour [créer une sauvegarde de base de données](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
+  
+2.  Sur la page **Options** , dans la section **Fiabilité** , cliquez sur **Effectuer une somme de contrôle avant d'écrire sur le support** et sur **Continuer lors d'erreurs**.  
+  
+##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+  
+#### Pour spécifier si une opération de sauvegarde continue ou s'arrête après la survenue d'une erreur  
+  
+1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  
+2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
+  
+3.  Dans l’instruction [BACKUP](../../t-sql/statements/backup-transact-sql.md), spécifiez l’option CONTINUE_AFTER ERROR pour continuer ou l’option STOP_ON_ERROR pour arrêter. Le comportement par défaut consiste à arrêter l'opération après la survenue d'une erreur. Cet exemple indique à l'opération de sauvegarde de continuer en dépit d'une erreur.  
+  
+```tsql  
+BACKUP DATABASE AdventureWorks2012   
+ TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
+   WITH CHECKSUM, CONTINUE_AFTER_ERROR;  
+GO  
+```  
+  
+#### Pour spécifier si l'opération de restauration continue ou s'arrête après la survenue d'une erreur  
+  
+1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  
+2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
+  
+3.  Dans l’instruction [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md), spécifiez l’option CONTINUE_AFTER ERROR pour continuer ou l’option STOP_ON_ERROR pour arrêter. Le comportement par défaut consiste à arrêter l'opération après la survenue d'une erreur. Cet exemple indique à l'opération de restauration de continuer en dépit d'une erreur.  
+  
+```tsql  
+RESTORE DATABASE AdventureWorks2012   
+ FROM DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'   
+   WITH CHECKSUM, CONTINUE_AFTER_ERROR;  
+GO  
+```  
+  
+## Voir aussi  
+ [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)   
+ [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)   
+ [RESTORE LABELONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)   
+ [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)   
+ [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
+ [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
+ [Arguments RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)   
+ [Erreurs de support possibles pendant les opérations de sauvegarde et de restauration &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
+ [Activer ou désactiver des sommes de contrôle de sauvegarde au cours d’opérations de sauvegarde ou de restauration &#40;SQL Server&#41;](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
+  
+  

@@ -1,0 +1,108 @@
+---
+title: "T&#226;che Observateur d&#39;&#233;v&#233;nement WMI | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "integration-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "sql13.dts.designer.wmieventwatchertask.f1"
+helpviewer_keywords: 
+  - "WQL [Integration Services]"
+  - "tâche Observateur d'événement WMI [Integration Services]"
+ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
+caps.latest.revision: 53
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "jhubbard"
+caps.handback.revision: 53
+---
+# T&#226;che Observateur d&#39;&#233;v&#233;nement WMI
+  La tâche Observateur d'événement WMI observe les événements WMI (Windows Management Instrumentation) à l'aide d'une requête d'événement WQL (Windows Management Instrumentation Query Language) pour spécifier les événements dignes d'intérêt. Vous pouvez utiliser la tâche Observateur d'événement WMI pour effectuer les opérations suivantes :  
+  
+-   Attendre la notification signalant que des fichiers ont été ajoutés à un dossier, puis initier le traitement du fichier.  
+  
+-   Exécuter un package qui supprime des fichiers lorsque la mémoire disponible sur un serveur tombe en deçà d'un pourcentage spécifique.  
+  
+-   Observer l'installation d'une application, puis exécuter un package qui utilise cette application.  
+  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut une tâche qui lit les informations WMI.  
+  
+ Pour plus d'informations sur cette tâche, cliquez sur la rubrique suivante :  
+  
+-   [Tâche Lecteur de données WMI](../../integration-services/control-flow/wmi-data-reader-task.md)  
+  
+## Requêtes WQL  
+ WQL est un dialecte de SQL avec des extensions qui permettent de prendre en charge la notification d'événement WMI et d'autres fonctionnalités spécifiques à WMI. Pour plus d’informations sur WQL, consultez la documentation Windows Management Instrumentation dans [MSDN Library](http://go.microsoft.com/fwlink/?linkid=62553).  
+  
+> [!NOTE]  
+>  Les classes WMI varient d'une version de Windows à l'autre.  
+  
+ La requête suivante observe la notification signalant que l'utilisation du processeur est supérieure à 40 %.  
+  
+```  
+SELECT * from __InstanceModificationEvent WITHIN 2 WHERE TargetInstance ISA 'Win32_Processor' and TargetInstance.LoadPercentage > 40  
+```  
+  
+ La requête suivante observe la notification signalant qu'un fichier a été ajouté à un dossier.  
+  
+```  
+SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_DirectoryContainsFile" and TargetInstance.GroupComponent= "Win32_Directory.Name=\"c:\\\\WMIFileWatcher\""   
+```  
+  
+## Messages de journalisation personnalisés disponibles dans la tâche Observateur d'événement WMI  
+ Le tableau suivant répertorie les entrées de journal personnalisées de la tâche Observateur d'événement WMI. Pour plus d’informations, consultez [Journalisation Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md) et [Messages personnalisés pour la journalisation](../../integration-services/performance/custom-messages-for-logging.md).  
+  
+|Entrée du journal|Description|  
+|---------------|-----------------|  
+|**WMIEventWatcherEventOccurred**|Indique qu'un événement surveillé par la tâche s'est produit.|  
+|**WMIEventWatcherTimedout**|Indique que le délai de la tâche a expiré.|  
+|**WMIEventWatcherWatchingForWMIEvents**|Indique que la tâche a commencé l'exécution de la requête WQL. L'entrée inclut la requête.|  
+  
+## Configuration de la tâche Observateur d'événement WMI  
+ Vous pouvez configurer la tâche Lecteur de données WMI de plusieurs manières :  
+  
+-   Spécifiez le gestionnaire de connexions WMI à utiliser.  
+  
+-   Spécifiez la source de la requête WQL. Celle-ci peut être externe à la tâche, une variable ou un fichier, ou la requête peut être stockée dans une propriété de tâche.  
+  
+-   Spécifiez l'action exécutée par la tâche lorsque l'événement WMI se produit. Vous pouvez enregistrer la notification d'événement et l'état après l'événement ou déclencher des événements [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] personnalisés qui fournissent des informations associées à l'événement WMI, à la notification et à l'état après l'événement.  
+  
+-   Définissez la manière dont la tâche répond à l'événement. La tâche peut être configurée de façon à réussir ou à échouer, selon l'événement, ou elle peut simplement observer encore l'événement.  
+  
+-   Spécifiez l'action exécutée par la tâche lorsque le délai d'attente de requête WMI arrive à expiration. Vous pouvez enregistrer le délai d’attente et l’état après le délai d’attente ou bien déclencher un événement [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] personnalisé, indiquant que l’événement WMI a dépassé le délai d’attente, et enregistrant le délai d’attente et l’état après le délai d’attente.  
+  
+-   Définissez la manière dont la tâche répond au délai d'attente. La tâche peut être configurée de façon à réussir ou à échouer, ou elle peut simplement observer encore l'événement.  
+  
+-   Spécifiez le nombre de fois où la tâche observe l'événement.  
+  
+-   Spécifiez le délai d'attente.  
+  
+ Si la source est un fichier, la tâche Observateur d'événement WMI utilise un gestionnaire de connexions de fichiers pour se connecter au fichier. Pour plus d'informations, consultez [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
+  
+ La tâche Observateur d'événement WMI utilise un gestionnaire de connexions WMI pour se connecter au serveur à partir duquel elle lit les informations WMI. Pour plus d'informations, consultez [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md).  
+  
+ Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+  
+ Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
+  
+-   [Éditeur de tâche Observateur d’événement WMI &#40;page Général&#41;](../../integration-services/control-flow/wmi-event-watcher-task-editor-general-page.md)  
+  
+-   [Éditeur de tâche Observateur d’événement WMI &#40;page Options WMI&#41;](../../integration-services/control-flow/wmi-event-watcher-task-editor-wmi-options-page.md)  
+  
+-   [Page Expressions](../../integration-services/expressions/expressions-page.md)  
+  
+ Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
+  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+  
+## Configuration par programmation de la tâche Observateur d'événement WMI  
+ Pour plus d'informations sur la définition par programmation de ces propriétés, cliquez sur la rubrique suivante :  
+  
+-   <xref:Microsoft.SqlServer.Dts.Tasks.WmiEventWatcherTask.WmiEventWatcherTask>  
+  
+  

@@ -1,0 +1,2 @@
+  Vous pouvez créer et modifier des fichiers de définition de rapport (.rdl) paginés dans le Générateur de rapports et dans le Concepteur de rapports dans SQL Server Data Tools. Chaque environnement de création offre différentes possibilités pour créer, ouvrir et enregistrer des rapports et des éléments connexes.
+   
