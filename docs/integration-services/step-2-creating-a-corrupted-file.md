@@ -1,0 +1,67 @@
+---
+title: "&#201;tape 2 : Cr&#233;ation d&#39;un fichier corrompu | Microsoft Docs"
+ms.custom: ""
+ms.date: "02/27/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "integration-services"
+ms.tgt_pltfrm: ""
+ms.topic: "get-started-article"
+applies_to: 
+  - "SQL Server 2016"
+ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
+caps.latest.revision: 23
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "jhubbard"
+---
+# &#201;tape 2 : Cr&#233;ation d&#39;un fichier corrompu
+Afin de démontrer l'utilisation des fonctions de configuration et de gestion des erreurs de transformation, vous allez devoir créer un exemple de fichier plat qui, lors de son traitement, entraîne l'échec d'un composant.  
+  
+Au cours de cette tâche, vous allez créer une copie d'un fichier plat existant. Vous ouvrirez ensuite ce fichier dans le Bloc-notes et modifierez la colonne **CurrencyID** pour vous assurer qu'aucune correspondance ne peut être établie au cours de la recherche de transformations. Lors du traitement du nouveau fichier, l'échec de la recherche provoquera à son tour l'échec de la transformation Lookup Currency Key et, par conséquent, celui du reste du package. Une fois le fichier exemple corrompu créé, vous exécuterez le package pour examiner son échec.  
+  
+### Pour créer un fichier plat exemple corrompu  
+  
+1.  Dans le Bloc-notes ou un autre éditeur de texte, ouvrez le fichier Currency_VEB.txt.  
+  
+    Les exemples de données sont inclus dans les packages de leçons SSIS. Pour télécharger ces exemples de données et les packages de leçons, procédez comme suit.  
+  
+    1.  Accédez à [Exemples de produits Integration Services](http://go.microsoft.com/fwlink/?LinkID=267527).  
+  
+    2.  Cliquez sur l'onglet **DOWNLOADS** (Téléchargements).  
+  
+    3.  Cliquez sur le fichier SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
+  
+2.  Utilisez la fonction Rechercher/Remplacer de l'éditeur de texte pour retrouver toutes les instances de **VEB** et les remplacer par **BAD**.  
+  
+3.  Dans le dossier qui contient les autres exemples de fichiers de données, enregistrez le fichier modifié en tant que **Currency_BAD.txt**.  
+  
+    > [!IMPORTANT]  
+    > Vérifiez que **Currency_BAD.txt** est enregistré dans le même dossier que les autres exemples de fichiers de données.  
+  
+4.  Fermez l'éditeur de texte.  
+  
+### Pour vérifier si une erreur se produit au moment de l'exécution  
+  
+1.  Dans le menu **Déboguer** , cliquez sur **Démarrer le débogage**.  
+  
+    À la troisième itération du flux de données, la transformation Lookup Currency Key tente de traiter le fichier Currency_BAD.txt et la transformation échoue. L'échec de la transformation entraîne l'échec de tout le package.  
+  
+2.  Dans le menu **Déboguer** , cliquez sur **Arrêter le débogage**.  
+  
+3.  Dans la zone de conception, cliquez sur l'onglet **Résultats d'exécution** .  
+  
+4.  Parcourez le journal et vérifiez si les erreurs non gérées suivantes se sont produites :  
+  
+    `[Lookup Currency Key[27]] Error: Row yielded no match during lookup.`  
+  
+    > [!NOTE]  
+    > Le nombre 27 désigne l'ID du composant. Cette valeur est attribuée lors de la création du flux de données ; la valeur définie dans votre package peut être différente.  
+  
+## Étapes suivantes  
+[Étape 3 : Ajout de redirection de flux d'erreurs](../integration-services/step-3-adding-error-flow-redirection.md)  
+  
+  
+  

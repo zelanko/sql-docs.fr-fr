@@ -1,0 +1,174 @@
+---
+title: "Restaurer les fichiers &#224; un nouvel emplacement (SQL Server) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dbe-backup-restore"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "restauration de fichiers [SQL Server], rubriques de procédures"
+  - "restauration des bases de données [SQL Server], déplacement"
+  - "restauration de fichiers [SQL Server], étapes"
+  - "restaurations de fichiers [SQL Server], rubriques de procédures"
+  - "groupes de fichiers [SQL Server], restauration"
+  - "restauration de groupes de fichiers [SQL Server]"
+ms.assetid: b4f4791d-646e-4632-9980-baae9cb1aade
+caps.latest.revision: 26
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 26
+---
+# Restaurer les fichiers &#224; un nouvel emplacement (SQL Server)
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+
+  Cette rubrique explique comment restaurer des fichiers à un nouvel emplacement dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  
+ **Dans cette rubrique**  
+  
+-   **Avant de commencer :**  
+  
+     [Limitations et restrictions](#Restrictions)  
+  
+     [Sécurité](#Security)  
+  
+-   **Pour restaurer des fichiers à un nouvel emplacement, utilisez :**  
+  
+     [SQL Server Management Studio](#SSMSProcedure)  
+  
+     [Transact-SQL](#TsqlProcedure)  
+  
+##  <a name="BeforeYouBegin"></a> Avant de commencer  
+  
+###  <a name="Restrictions"></a> Limitations et restrictions  
+  
+-   L'administrateur système qui restaure les fichiers doit être la seule personne à utiliser la base de données au moment de la restauration.  
+  
+-   La commande RESTORE n'est pas autorisée dans une transaction explicite ou implicite.  
+  
+-   Que vous soyez en mode de récupération complète ou en mode de récupération utilisant les journaux de transactions, pour pouvoir restaurer des fichiers, vous devez d'abord sauvegarder le journal des transactions actif (appelé fin du journal). Pour plus d’informations, consultez [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
+  
+-   Pour restaurer une base de données chiffrée, vous devez avoir accès au certificat ou à la clé asymétrique qui a servi à chiffrer la base de données. Sans le certificat et la clé asymétrique, la base de données ne peut pas être restaurée. En conséquence, le certificat utilisé pour chiffrer la clé de chiffrement de base de données doit être conservé tant que la sauvegarde est utile. Pour plus d’informations, consultez [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
+  
+###  <a name="Security"></a> Sécurité  
+  
+####  <a name="Permissions"></a> Autorisations  
+ Si la base de données restaurée n'existe pas, l'utilisateur doit posséder les autorisations CREATE DATABASE afin de pouvoir exécuter RESTORE. Si la base de données existe, les autorisations RESTORE reviennent par défaut aux membres des rôles serveur fixes **sysadmin** et **dbcreator** et au propriétaire (**dbo**) de la base de données (pour l’option FROM DATABASE_SNAPSHOT, la base de données existe toujours).  
+  
+ Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que lorsque la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas quand RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
+  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+  
+#### Pour restaurer les fichiers à un nouvel emplacement  
+  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], développez cette instance, puis développez **Bases de données**.  
+  
+2.  Cliquez avec le bouton droit sur la base de données de votre choix, pointez sur **Tâches** et sur **Restaurer**, puis cliquez sur **Fichiers et groupes de fichiers**.  
+  
+3.  Sur la page **Général** , dans la zone de liste **Vers la base de données** , entrez la base de données à restaurer. Vous pouvez entrer une nouvelle base de données ou choisir une base de données existante dans la liste déroulante. La liste contient toutes les bases de données sur le serveur, à l'exception des bases de données système **master** et **tempdb**.  
+  
+4.  Pour préciser la source et l'emplacement des jeux de sauvegarde à restaurer, cliquez sur l'une des options suivantes :  
+  
+    -   **À partir de la base de données**  
+  
+         Entrez un nom de base de données dans la zone de liste. Cette liste ne contient que les bases de données ayant été sauvegardées d'après l'historique de sauvegarde de **msdb** .  
+  
+    -   **À partir de l'unité**  
+  
+         Cliquez sur le bouton de recherche. Dans la boîte de dialogue **Spécifier les unités de sauvegarde** , sélectionnez l'un des types d'unités proposés dans la zone de liste **Type de support de sauvegarde** . Pour sélectionner une ou plusieurs unités pour la zone de liste **Support de sauvegarde** , cliquez sur **Ajouter**.  
+  
+         Après avoir ajouté les unités souhaitées à la zone de liste **Support de sauvegarde** , cliquez sur **OK** pour revenir à la page **Général** .  
+  
+5.  Dans la grille **Sélectionnez les jeux de sauvegarde à restaurer** , sélectionnez les sauvegardes à restaurer. Cette grille affiche les sauvegardes disponibles pour l'emplacement spécifié. Par défaut, un plan de récupération est suggéré. Pour ignorer le plan de récupération suggéré, vous pouvez modifier les sélections dans la grille. Les sauvegardes qui dépendent d'une sauvegarde désélectionnée sont automatiquement désélectionnées.  
+  
+    |En-tête de colonne|Valeurs|  
+    |-----------------|------------|  
+    |**Restore**|Les cases à cocher sélectionnées correspondent aux jeux de sauvegarde à restaurer.|  
+    |**Nom**|Nom du jeu de sauvegarde.|  
+    |**Type de fichier**|Spécifie le type de données de la sauvegarde : **Données**, **Journal**ou **Données Filestream**. Les données qui sont contenues dans les tables sont dans les fichiers **Données** . Les données du journal des transactions sont dans les fichiers **Journaux** . Les données des objets BLOB (Binary Large Object) qui sont stockées dans le système de fichiers se trouvent dans des fichiers **Données Filestream**.|  
+    |**Type**|Type de sauvegarde effectué : **Complète**, **Différentielle**ou **Journal des transactions**.|  
+    |**Server**|Nom de l'instance Base de données-Moteur ayant effectué l'opération de sauvegarde.|  
+    |**Nom logique du fichier**|Comme son nom l'indique.|  
+    |**Base de données**|Nom de la base de données impliquée dans la sauvegarde.|  
+    |**Date de début**|Date et heure de lancement de l'opération de sauvegarde, présentée conformément aux paramètres régionaux du client.|  
+    |**Date de fin**|Date et heure de fin de l'opération de sauvegarde, exprimée d'après les paramètres régionaux du client.|  
+    |**Taille**|Taille du jeu de sauvegarde, exprimée en octets.|  
+    |**Nom d'utilisateur**|Nom de l'utilisateur qui a exécuté l'opération de sauvegarde.|  
+  
+6.  Dans le volet **Sélectionner une page** , cliquez sur la page **Options** .  
+  
+7.  Dans la grille **Restaurer les fichiers de base de données en tant que** , spécifiez un nouvel emplacement pour le ou les fichiers à déplacer.  
+  
+    |En-tête de colonne|Valeurs|  
+    |-----------------|------------|  
+    |**Nom du fichier d'origine**|Chemin d'accès complet d'un fichier de sauvegarde source.|  
+    |**Type de fichier**|Spécifie le type de données de la sauvegarde : **Données**, **Journal**ou **Données Filestream**. Les données qui sont contenues dans les tables sont dans les fichiers **Données** . Les données du journal des transactions sont dans les fichiers **Journaux** . Les données des objets BLOB (Binary Large Object) qui sont stockées dans le système de fichiers se trouvent dans des fichiers **Données Filestream**.|  
+    |**Restaurer sous**|Chemin d'accès complet du fichier de base de données à restaurer. Pour définir un nouveau fichier de restauration, cliquez sur la zone de texte et modifiez le chemin d'accès et le nom de fichier proposés. La modification du chemin d'accès ou du nom de fichier dans la colonne **Restaurer sous** équivaut à utiliser l'option MOVE dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE.|  
+  
+8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+  
+##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+  
+#### Pour restaurer les fichiers à un nouvel emplacement  
+  
+1.  Exécutez éventuellement l'instruction RESTORE FILELISTONLY pour déterminer le nombre de fichiers et les noms des fichiers dans la sauvegarde complète de la base de données.  
+  
+2.  Exécutez l'instruction RESTORE DATABASE pour restaurer la sauvegarde complète de la base de données, en spécifiant :  
+  
+    -   le nom de la base de données à restaurer ;  
+  
+    -   l'unité de sauvegarde à partir de laquelle sera restaurée la sauvegarde complète de la base de données ;  
+  
+    -   la clause MOVE de chaque fichier à restaurer au nouvel emplacement ;  
+  
+    -   la clause NORECOVERY.  
+  
+3.  Si les fichiers ont été modifiés depuis la création de la sauvegarde du fichier, exécutez l'instruction RESTORE LOG pour appliquer la sauvegarde du journal des transactions, en spécifiant :  
+  
+    -   le nom de la base de données à laquelle sera appliqué le journal des transactions ;  
+  
+    -   l'unité de sauvegarde à partir de laquelle sera restaurée la sauvegarde du journal des transactions ;  
+  
+    -   la clause NORECOVERY si vous devez appliquer une autre sauvegarde du journal des transactions après la sauvegarde en cours. Dans les autres cas, spécifiez la clause RECOVERY.  
+  
+         Les sauvegardes du journal des transactions, lorsqu’elles sont appliquées, doivent couvrir le temps de sauvegarde des fichiers et groupes de fichiers.  
+  
+###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
+ L’exemple suivant restaure deux des fichiers pour la base de données `MyNwind` ; ces fichiers, à l’origine sur le lecteur C, sont placés à de nouveaux emplacements sur le lecteur D. Deux journaux des transactions seront également appliqués pour restaurer la base de données à l’heure actuelle. L'instruction `RESTORE FILELISTONLY` permet de déterminer le nombre et les noms logique et physique des fichiers de la base de données en cours de restauration.  
+  
+```tsql  
+USE master;  
+GO  
+-- First determine the number and names of the files in the backup.  
+RESTORE FILELISTONLY  
+   FROM MyNwind_1;  
+-- Restore the files for MyNwind.  
+RESTORE DATABASE MyNwind  
+   FROM MyNwind_1  
+   WITH NORECOVERY,  
+   MOVE 'MyNwind_data_1' TO 'D:\MyData\MyNwind_data_1.mdf',   
+   MOVE 'MyNwind_data_2' TO 'D:\MyData\MyNwind_data_2.ndf';  
+GO  
+-- Apply the first transaction log backup.  
+RESTORE LOG MyNwind  
+   FROM MyNwind_log1  
+   WITH NORECOVERY;  
+GO  
+-- Apply the last transaction log backup.  
+RESTORE LOG MyNwind  
+   FROM MyNwind_log2  
+   WITH RECOVERY;  
+GO  
+```  
+  
+## Voir aussi  
+ [Restaurer une sauvegarde de base de données à l’aide de SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [Copier des bases de données avec la sauvegarde et la restauration](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
+ [Restaurer des fichiers et des groupes de fichiers &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
+  
+  
