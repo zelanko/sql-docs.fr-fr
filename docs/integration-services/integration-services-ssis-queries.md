@@ -1,0 +1,64 @@
+---
+title: "Requ&#234;tes Integration Services (SSIS) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "integration-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "sql13.dts.designer.querybuilder.f1"
+helpviewer_keywords: 
+  - "Générateur de requêtes [Integration Services]"
+  - "requêtes [Integration Services]"
+  - "instructions [Integration Services]"
+  - "requêtes [Integration Services], à propos des requêtes dans des packages"
+ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
+caps.latest.revision: 58
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "jhubbard"
+caps.handback.revision: 57
+---
+# Requ&#234;tes Integration Services (SSIS)
+  La tâche Exécution SQL, la source OLE DB, la destination OLE DB et la transformation de recherche peuvent utiliser des requêtes SQL. Dans la tâche d'exécution SQL, les instructions SQL peuvent créer, mettre à jour et supprimer des données et des objets de base de données, exécuter des procédures stockées et des instructions SELECT. Dans la source OLE DB et la transformation de recherche, les instructions SQL sont généralement des instructions SELECT ou EXEC. Cette dernière exécute le plus souvent des procédures stockées qui retournent des jeux de résultats.  
+  
+ Un requête peut être analysée pour déterminer si elle est valide. Pendant l’analyse d’une requête utilisant une connexion vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la requête est analysée, exécutée et le résultat de l’exécution (succès ou échec) est affecté au résultat de l’analyse. Si la requête utilise une connexion à des données qui ne sont pas [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l'instruction est seulement analysée.  
+  
+ L'instruction SQL peut être définie soit en l'entrant directement dans le concepteur, soit en spécifiant une connexion de fichier ou une variable qui contient l'instruction.  
+  
+## SQL à entrée directe  
+ Le Générateur de requêtes est disponible dans l'interface utilisateur pour la tâche d'exécution SQL, la source OLE DB, la destination OLE DB et la transformation de recherche. Le générateur de requêtes présente les avantages suivants :  
+  
+-   Travailler visuellement ou avec des commandes SQL.  
+  
+     Le Générateur de requêtes comprend des volets graphiques qui composent visuellement votre requête et un volet de texte qui contient le texte SQL de votre requête. Vous pouvez travailler dans le volet graphique ou le volet de texte. Le Générateur de requêtes synchronise les vues afin de toujours faire correspondre le texte de la requête et la représentation graphique.  
+  
+-   Joindre des tables liées.  
+  
+     Si vous ajoutez plusieurs tables à votre requête, le générateur de requêtes détermine automatiquement la manière dont les tables sont associées entre elles et construit la commande de jointure appropriée.  
+  
+-   Interroger ou mettre à jour les bases de données.  
+  
+     Vous pouvez utiliser le générateur de requêtes pour renvoyer des données à l'aide d'instructions Transact-SQL SELECT, ou pour créer des requêtes qui mettent à jour, ajoutent ou suppriment des enregistrements dans une base de données.  
+  
+-   Afficher et modifier les résultats immédiatement.  
+  
+     Vous pouvez exécuter votre requête et travailler avec un jeu d'enregistrements dans une grille qui vous permet de faire défiler et de modifier les enregistrements de la base de données.  
+  
+ Bien que le générateur de requêtes soit limité visuellement à la création de requêtes SELECT, vous pouvez tapez le SQL pour d'autres types d'instructions, par exemple des instructions DELETE et UPDATE, dans le volet de texte. Le volet graphique est automatiquement mis à jour pour prendre en compte l'instruction SQL que vous avez tapée.  
+  
+ Vous pouvez également fournir une entrée directe en tapant la requête dans la boîte de dialogue de la tâche ou du composant de flux de données ou dans la fenêtre Propriétés.  
+  
+ Pour plus d’informations, consultez [Générateur de requêtes](../Topic/Query%20Builder.md).  
+  
+## SQL dans des fichiers  
+ L'instruction SQL pour la tâche d'exécution SQL peut également se trouver dans un fichier distinct. Par exemple, vous pouvez écrire des requêtes à l'aide d'outils tels que l'éditeur de requêtes dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], enregistrer la requête dans un fichier, puis lire la requête à partir du fichier lors de l'exécution d'un package. Le fichier ne peut contenir que les instructions SQL à exécuter et des commentaires. Pour utiliser une instruction SQL stockée dans un fichier, vous devez fournir une connexion de fichiers qui spécifie le nom et l'emplacement du fichier. Pour plus d’informations, consultez [File Connection Manager](../integration-services/connection-manager/file-connection-manager.md).  
+  
+## SQL dans des variables  
+ Si la source de l'instruction SQL dans la tâche d'exécution SQL est une variable, vous fournissez le nom de la variable qui contient la requête. La propriété Value de la variable contient le texte de la requête. Vous définissez la propriété ValueType de la variable en tant que type de données String, puis vous tapez ou copiez l’instruction SQL dans la propriété Value. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](../Topic/Use%20Variables%20in%20Packages.md).  
+  
+  

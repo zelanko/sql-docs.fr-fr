@@ -1,0 +1,83 @@
+---
+title: "Stretch Database | Microsoft Docs"
+ms.custom: 
+  - "SQL2016_New_Updated"
+ms.date: "06/27/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.service: "sql-server-stretch-database"
+ms.suite: ""
+ms.technology: 
+  - "dbe-stretch"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Stretch Database"
+ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
+caps.latest.revision: 39
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "jhubbard"
+caps.handback.revision: 39
+---
+# Stretch Database
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+
+  Stretch Database migre vos données à froid en toute sécurité et de façon transparente vers le cloud Microsoft Azure.  
+  
+ Si vous souhaitez simplement prendre en main Stretch Database, consultez [Get started by running the Enable Database for Stretch Wizard](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md).  
+  
+## Quels sont les avantages de Stretch Database ?  
+ Stretch Database présente les avantages suivants :  
+  
+ **Disponibilité économique des données à froid**  
+ Étendez les données transactionnelles à chaud et à froid dynamiquement de SQL Server vers Microsoft Azure avec SQL Server Stretch Database. Vos données sont toujours en ligne et disponibles pour les requêtes, ce qui n’est pas le cas avec le stockage de données à froid habituel. Vous pouvez sans vous ruiner fournir des durées de conservation de données plus longues pour des tables volumineuses telles que l’historique des commandes client. Tirez parti du faible coût d’Azure plutôt que d’essayer de mettre à l’échelle un stockage local coûteux. Vous pouvez choisir le niveau de tarification et configurer les paramètres dans le portail Azure afin de garder le contrôle des prix et des coûts. Montez ou descendez en puissance selon vos besoins. Pour plus d’informations, consultez [Tarification de SQL Server Stretch Database](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).  
+  
+ **Aucune modification des requêtes ou des applications requise**  
+ Accédez de façon transparente à vos données SQL Server, que celles-ci soient locales ou étendues vers le cloud.  Définissez la stratégie qui détermine où les données sont stockées et SQL Server gère le déplacement des données en arrière-plan. La table entière est toujours en ligne et peut toujours être interrogée. De plus, Stretch Database ne nécessite aucune modification des requêtes ou applications existantes : l’emplacement des données est totalement transparent pour l’application.  
+  
+ **Simplification de la maintenance locale des données**  
+ Réduisez la maintenance et le stockage locaux de vos données. Les sauvegardes de vos données locales sont exécutées plus rapidement et se terminent dans la fenêtre de maintenance. Les sauvegardes de la partie de vos données stockées dans le cloud sont exécutées automatiquement. Vos besoins en stockage local sont considérablement réduits. Le stockage Azure peut vous coûter 80 % de moins que l’extension du SSD local.  
+  
+ **Protection de vos données même pendant la migration**  
+ Étant donné que vos applications les plus importantes sont étendues en toute sécurité vers le cloud, vous n’avez aucune inquiétude à vous faire. SQL Server Always Encrypted assure le chiffrement de vos données en mouvement. De plus, vous pouvez également utiliser la sécurité au niveau des lignes et d’autres fonctionnalités avancées de sécurité de SQL Server avec Stretch Database pour protéger vos données.  
+  
+## À quoi sert Stretch Database ?  
+ Une fois que vous avez activé la fonctionnalité Stretch Database pour une instance SQL Server, une base de données et au moins une table, Stretch Database commence à migrer vos données à froid vers Azure en mode silencieux.  
+  
+-   Si vous stockez des données à froid dans une table distincte, vous pouvez migrer la table entière.  
+  
+-   Si votre table contient des données actuelles et anciennes, vous pouvez spécifier une fonction de filtre pour sélectionner les lignes à migrer.
+
+**Vous n’avez pas besoin de modifier les requêtes et les applications clientes existantes.** Vous pouvez toujours accéder de façon transparente aux données locales et distantes, même pendant leur migration. Un certain degré de latence se produit pour les requêtes à distance, mais uniquement quand vous interrogez les données à froid.
+
+**Stretch Database vous protège contre la perte de données** en cas de défaillance pendant la migration. Sa logique de nouvelle tentative permet également de gérer les problèmes de connexion qui peuvent se produire pendant la migration. L’état de la migration est indiqué dans une vue de gestion dynamique.
+
+**Vous pouvez suspendre la migration des données** pour résoudre des problèmes sur le serveur local ou optimiser la bande passante réseau disponible.  
+  
+ ![Stretch database overview](../../sql-server/stretch-database/media/stretch-overview.png "Stretch database overview")  
+  
+## Stretch Database, est-ce pour vous ?  
+ Si vous répondez oui aux affirmations suivantes, Stretch Database peut vous aider à satisfaire vos besoins et à résoudre vos problèmes.  
+  
+|Si vous êtes décideur|Si vous êtes administrateur de bases de données|  
+|--------------------------------|---------------------|  
+|Je dois conserver les données transactionnelles longtemps.|La taille de mes tables devient ingérable.|  
+|Je dois parfois interroger les données à froid.|Mes utilisateurs disent qu’ils veulent pouvoir accéder aux données à froid, mais ils les utilisent rarement.|  
+|Je dispose d’applications, y compris d’applications anciennes, que je ne souhaite pas mettre à jour.|Je dois constamment engager des fonds pour augmenter la capacité de stockage.|  
+|Je souhaite trouver un moyen de faire des économies sur le stockage.|Je ne peux pas sauvegarder ni restaurer des tables d’un tel volume dans le cadre du contrat SLA.|  
+  
+## Quelles sont les bases de données et tables qui conviennent à une utilisation avec Stretch Database ?  
+ Stretch Database cible les bases de données transactionnelles comportant de grands volumes de données à froid généralement stockées dans un petit nombre de tables. Ces tables peuvent contenir plus d’un milliard de lignes.  
+  
+ Si vous vous servez de la fonctionnalité de table temporelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez utiliser Stretch Database pour migrer tout ou partie de la table de l’historique associée vers le stockage économique d’Azure. Pour plus d’informations, consultez [Gérer la rétention des données d’historique dans les tables temporelles avec version gérée par le système](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md).  
+  
+ Pour identifier les bases de données et tables pour Stretch Database, utilisez Stretch Database Advisor, une fonctionnalité du Conseiller de mise à niveau de SQL Server 2016. Pour plus d’informations, consultez [Identifier des bases de données et tables pour Stretch Database en exécutant Stretch Database Advisor](../../sql-server/stretch-database/stretch database databases and tables - stretch database advisor.md). Pour en savoir plus sur les problèmes de blocages potentiels, consultez [Limitations concernant Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md).  
+
+## Tester Stretch Database  
+ **Tester Stretch Database à l’aide de l’exemple de base de données AdventureWorks.** Pour obtenir l’exemple de base de données AdventureWorks, téléchargez au minimum le fichier de base de données et le fichier d’exemples et de scripts [ici](https://www.microsoft.com/en-us/download/details.aspx?id=49502). Après avoir restauré l’exemple de base de données dans une instance de SQL Server 2016, décompressez le fichier d’exemples et ouvrez le fichier d’exemples Stretch Database à partir du dossier Stretch DB. Exécutez les scripts de ce fichier pour vérifier l’espace utilisé par vos données avant et après l’activation de Stretch Database, pour suivre la progression de la migration des données et pour confirmer que vous pouvez continuer à interroger les données existantes et insérer de nouvelles données à la fois pendant et après la migration des données.  
+  
+## Étape suivante  
+ **Identifier les bases de données et les tables qui peuvent être utilisées avec Stretch Database.** Pour identifier les bases de données et tables que vous pouvez utiliser avec Stretch Database, téléchargez le Conseiller de mise à niveau de SQL Server 2016 et exécutez Stretch Database Advisor. Stretch Database Advisor identifie également les problèmes bloquants. Pour plus d’informations, consultez [Identifier des bases de données et tables pour Stretch Database en exécutant Stretch Database Advisor](../../sql-server/stretch-database/stretch database databases and tables - stretch database advisor.md).  
+  
+  

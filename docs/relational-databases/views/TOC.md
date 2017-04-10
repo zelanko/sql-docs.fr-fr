@@ -1,0 +1,8 @@
+# [Créer des vues indexées](create-indexed-views.md)
+# [Vues](views.md)
+# [Supprimer des vues](delete-views.md)
+# [Renommer des vues](rename-views.md)
+# [Modifier les données par l'intermédiaire d'une vue](modify-data-through-a-view.md)
+# [Modifier des vues](modify-views.md)
+# [Créer des vues](create-views.md)
+# [Obtenir des informations au sujet d'une vue](get-information-about-a-view.md)

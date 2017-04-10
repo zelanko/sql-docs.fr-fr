@@ -1,0 +1,93 @@
+---
+title: "Afficher la taille du fichier partiellement allou&#233; d&#39;un instantan&#233; de base de donn&#233;es (Transact-SQL) | Microsoft Docs"
+ms.date: "07/28/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "instantanés [instantanés de base de données SQL Server], fichiers partiellement alloués"
+  - "espace [SQL Server], fichiers partiellement alloués"
+  - "fichiers partiellement alloués [SQL Server]"
+  - "taille [SQL Server], fichiers partiellement alloués"
+  - "taille maximale d'un fichier partiellement alloué"
+  - "instantanés de base de données [SQL Server], fichiers partiellement alloués"
+  - "espace [SQL Server], instantanés de base de données"
+ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
+caps.latest.revision: 41
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 41
+---
+# Afficher la taille du fichier partiellement allou&#233; d&#39;un instantan&#233; de base de donn&#233;es (Transact-SQL)
+  Cette rubrique explique comment utiliser [!INCLUDE[tsql](../../includes/tsql-md.md)] pour vérifier qu'un fichier de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un fichier partiellement alloué et pour déterminer ses tailles réelle et maximale. Les fichiers partiellement alloués, qui sont une fonctionnalité du système de fichiers NTFS, sont utilisés par les instantanés de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  
+> [!NOTE]  
+>  Pendant la création d'un instantané de base de données, ces fichiers partiellement alloués sont créés et nommés par l'instruction CREATE DATABASE. Ces noms de fichiers sont stockés dans **sys.master_files** dans la colonne **physical_name**. Dans **sys.database_files** (dans la base de données source ou dans l’instantané), la colonne **physical_name** contient toujours les noms des fichiers de la base de données source.  
+  
+## Vérifier qu'un fichier de base de données est un fichier partiellement alloué  
+  
+1.  Sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
+  
+     Sélectionnez la colonne **is_sparse** soit dans **sys.database_files** dans l’instantané de la base de données, soit dans **sys.master_files**. La valeur indique si le fichier est un fichier partiellement alloué, comme suit :  
+  
+     1 = le fichier est un fichier partiellement alloué.  
+  
+     0 = le fichier n'est pas un fichier partiellement alloué.  
+  
+## Pour connaître la taille réelle d'un fichier partiellement alloué  
+  
+> [!NOTE]  
+>  La taille d’un fichier partiellement alloué augmente par incréments de 64 kilo-octets (Ko). Il s’agit donc toujours d’un multiple de 64 Ko.  
+  
+ Pour afficher le nombre d’octets utilisés actuellement sur le disque par chaque fichier partiellement alloué d’un instantané, interrogez la colonne **size_on_disk_bytes** de la vue de gestion dynamique [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md).  
+  
+ Pour afficher l’espace disque occupé par un fichier partiellement alloué, cliquez avec le bouton droit sur le fichier dans Microsoft Windows, cliquez sur **Propriétés** et notez la valeur indiquée dans **Taille sur le disque**.  
+  
+## Pour connaître la taille maximale d'un fichier partiellement alloué  
+ La taille maximale d'un fichier partiellement alloué correspond à la taille du fichier de la base de données source au moment de la création de l'instantané. Pour connaître la taille de ce fichier, utilisez une des méthodes suivantes :  
+  
+-   Utilisation de l'invite de commandes Windows :  
+  
+    1.  Utilisez les commandes **dir** de Windows.  
+  
+    2.  Sélectionnez le fichier partiellement alloué, ouvrez la boîte de dialogue **Propriétés** dans Windows et relevez la valeur du champ **Taille** .  
+  
+-   Sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
+  
+     Sélectionnez la colonne **size** soit dans **sys.database_files** dans l’instantané de la base de données, soit dans **sys.master_files**. La valeur de la colonne **size** reflète l'espace maximal que l'instantané peut utiliser en pages SQL. Cette valeur correspond à celle du champ **Taille** de Windows, sauf qu'elle est exprimée en termes de nombre de pages SQL dans le fichier ; la taille en octets étant :  
+  
+     ( *nombre_de_pages* * 8192)  
+
+##  Exemple
+Le script suivant indique la taille du disque en kilooctets, pour chaque fichier partiellement alloué.  Le script affiche également la taille maximale en mégaoctets que peut atteindre un fichier partiellement alloué.  Exécutez le script Transact-SQL en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+
+```tsql
+SELECT  DB_NAME(sd.source_database_id) AS [SourceDatabase], 
+        sd.name AS [Snapshot],
+        mf.name AS [Filename], 
+        size_on_disk_bytes/1024 AS [size_on_disk (KB)],
+        mf2.size/128 AS [MaximumSize (MB)]
+FROM sys.master_files mf
+JOIN sys.databases sd
+    ON mf.database_id = sd.database_id
+JOIN sys.master_files mf2
+    ON sd.source_database_id = mf2.database_id
+    AND mf.file_id = mf2.file_id
+CROSS APPLY sys.dm_io_virtual_file_stats(sd.database_id, mf.file_id)
+WHERE mf.is_sparse = 1
+AND mf2.is_sparse = 0
+ORDER BY 1;
+```
+  
+## Voir aussi  
+ [Instantanés de base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
+ [sys.fn_virtualfilestats &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md)   
+ [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
+  
+  

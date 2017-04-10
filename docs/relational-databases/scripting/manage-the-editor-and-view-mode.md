@@ -1,0 +1,120 @@
+---
+title: "G&#233;rer l&#39;&#201;diteur et le mode d&#39;affichage | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Éditeur de requête [SQL Server Management Studio], gestion du comportement de la fenêtre"
+  - "modes d'affichages de Workbench [SQL Server Management Studio]"
+  - "mode plein écran [SQL Server Management Studio]"
+  - "polices [SQL Server Management Studio]"
+  - "retours automatiques à la ligne [SQL Server Management Studio]"
+  - "mode espace virtuel [SQL Server Management Studio]"
+  - "fractionnement des vues de document"
+  - "affichage des numéros de ligne"
+  - "modes d'affichage [SQL Server Management Studio]"
+ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
+caps.latest.revision: 21
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 21
+---
+# G&#233;rer l&#39;&#201;diteur et le mode d&#39;affichage
+  L'Éditeur offre plusieurs moyens de contrôler l'affichage du code.  
+  
+## Changement du mode d'affichage  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] propose un mode d’affichage appelé **Documents avec onglet**, qui permet d’ouvrir plusieurs éditeurs et documents en même temps et d’y accéder au moyen des onglets situés dans la partie supérieure de l’Éditeur. Vous pouvez également ouvrir l'environnement [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dans le mode MD, dans lequel il est possible d'attacher les fenêtres sans les onglets, de les organiser, de les réduire, etc.  
+  
+#### Pour passer d'un mode d'affichage à un autre  
+  
+1.  Cliquez sur **Options** dans le menu **Outils**.  
+  
+2.  Cliquez sur **Environnement**. Cliquez sur **Général**.  
+  
+3.  Cliquez sur **Documents avec onglet** ou sur **Environnement MDI**.  
+  
+    > [!NOTE]  
+    >  Les modifications sont prises en compte uniquement une fois [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] redémarré.  
+  
+## Fractionnement de l'affichage  
+ Une fenêtre d'Éditeur peut être fractionnée en deux volets distincts afin de faciliter les opérations de modification.  
+  
+#### Pour fractionner une fenêtre  
+  
+1.  Cliquez sur la barre de fractionnement (située au-dessus de la barre de défilement).  
+  
+2.  Faites glisser la barre de fractionnement vers le bas.  
+  
+3.  Pour revenir à un affichage ne contenant qu'un seul volet, double-cliquez sur la barre qui scinde la fenêtre en deux volets.  
+  
+ Le nouveau volet contient le même document et toute modification apportée dans un volet est reflétée dans l'autre volet à condition que cet autre volet affiche la même partie du document.  
+  
+## Retour automatique à la ligne  
+ Lorsque vous activez le retour automatique à la ligne, la barre de défilement horizontale est supprimée et les lignes de code qui dépassent la largeur de la fenêtre de l'Éditeur sont renvoyées automatiquement à la ligne affichée suivante, au lieu de se poursuivre latéralement.  
+  
+#### Pour activer le retour automatique à la ligne  
+  
+1.  Cliquez sur **Options** dans le menu **Outils**.  
+  
+2.  Cliquez sur **Éditeur de texte**.  
+  
+3.  Ouvrez le dossier de langage approprié (ou **Tous les langages** pour que tous les langages soient pris en compte).  
+  
+4.  Sélectionnez **Retour automatique à la ligne**.  
+  
+## Activation du mode Espace virtuel  
+ Quand le mode **Espace virtuel** est activé, l’Éditeur se comporte comme si l’espace après la fin de chaque ligne se composait d’un nombre infini d’espaces, ce qui permet aux lignes de code de se poursuivre en dehors de la zone latérale visible de l’écran.  
+  
+#### Pour activer le mode Espace virtuel  
+  
+1.  Cliquez sur **Options** dans le menu **Outils**.  
+  
+2.  Cliquez sur **Éditeur de texte**.  
+  
+3.  Ouvrez le dossier de langage approprié (ou **Tous les langages** pour que tous les langages soient pris en compte).  
+  
+4.  Sélectionnez **Activer l’espace virtuel**.  
+  
+ Lorsque le mode Espace virtuel n'est pas activé, le curseur passe de la fin d'une ligne au premier caractère de la ligne suivante et inversement.  
+  
+## Affichage des numéros de ligne  
+ Vous pouvez activer la numérotation des lignes dans votre code. Les numéros de ligne sont utiles pour se déplacer dans le code. Pour plus d’informations, consultez [Navigation dans le code et le texte](../../relational-databases/scripting/navigate-code-and-text.md).  
+  
+> [!NOTE]  
+>  L'activation de la numérotation des lignes ne signifie pas que ces numéros soient repris sur le document imprimé. Pour imprimer les numéros de ligne, cochez la case **Numéros de ligne** dans la commande **Mise en page** du menu **Fichier**.  
+  
+#### Pour afficher les numéros de ligne dans le code  
+  
+1.  Cliquez sur **Options** dans le menu **Outils**.  
+  
+2.  Cliquez sur **Éditeur de texte**.  
+  
+3.  Cliquez sur **Tous les langages**.  
+  
+4.  Cliquez sur **Général**.  
+  
+5.  Sélectionnez **Numéros de ligne**.  
+  
+ Pour choisir de numéroter les lignes uniquement pour certains langages de programmation, sélectionnez **Numéros de ligne** dans le dossier de langage approprié.  
+  
+## Activation du mode Plein écran  
+ Vous pouvez choisir de masquer toutes les fenêtres Outil et d'afficher uniquement les fenêtres de document en activant le mode Plein écran.  
+  
+#### Pour activer le mode Plein écran  
+  
+1.  Appuyez sur ALT+MAJ+ENTRÉE pour activer le mode Plein écran.  
+  
+## Utilisation de l'option Masquer tout automatiquement  
+  
+#### Pour masquer toutes les fenêtres Outil en même temps  
+  
+1.  Dans le menu **Fenêtre**, sélectionnez **Masquer tout automatiquement**.  
+  
+  
