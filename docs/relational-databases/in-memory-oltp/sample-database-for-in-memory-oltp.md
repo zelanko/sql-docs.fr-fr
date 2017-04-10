@@ -302,7 +302,7 @@ caps.handback.revision: 15
     -   Elle repose sur les procédures d'assistance dbo.usp_GenerateCKCheck, dbo.usp_GenerateFKCheck, et dbo.GenerateUQCheck pour générer l'instruction T-SQL nécessaire pour effectuer les vérifications d'intégrité.  
   
 ##  <a name="a-nameperformancemeasurementsusingthedemoworkloada-performance-measurements-using-the-demo-workload"></a><a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Mesures de performance à l’aide de la charge de travail de démonstration  
- Ostress est un outil de ligne de commande qui a été développé par l'équipe de support technique de [!INCLUDE[msCoName](../Token/msCoName_md.md)] [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] . Cet outil peut être utilisé pour exécuter des requêtes ou des procédures stockées distantes en parallèle. Vous pouvez configurer le nombre de threads pour exécuter une instruction T-SQL donnée en parallèle et spécifier combien de fois l'instruction doit être exécutée sur ce thread. Ostress assemblera les threads et exécutera l'instruction sur tous les threads en parallèle. Lorsque l'exécution est terminée pour tous les threads, Ostress indique le temps qu'il a fallu pour terminer l'exécution sur tous les threads.  
+ Ostress est un outil de ligne de commande qui a été développé par l'équipe de support technique de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cet outil peut être utilisé pour exécuter des requêtes ou des procédures stockées distantes en parallèle. Vous pouvez configurer le nombre de threads pour exécuter une instruction T-SQL donnée en parallèle et spécifier combien de fois l'instruction doit être exécutée sur ce thread. Ostress assemblera les threads et exécutera l'instruction sur tous les threads en parallèle. Lorsque l'exécution est terminée pour tous les threads, Ostress indique le temps qu'il a fallu pour terminer l'exécution sur tous les threads.  
   
 ### <a name="installing-ostress"></a>Installation d'Ostress  
  Ostress est installé avec les utilitaires RML ; il n'y a aucune installation autonome pour Ostress.  
@@ -324,9 +324,9 @@ caps.handback.revision: 15
   
  Les options de ligne de commande d'Ostress s'affichent en exécutant simplement ostress.exe, sans besoin d'aucune option de ligne de commande. Les options principales à prendre en compte pour exécuter Ostress avec cet exemple sont les suivantes :  
   
--   -S Nom de l’instance [!INCLUDE[msCoName](../Token/msCoName_md.md)][!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] à laquelle se connecter  
+-   -S Nom de l’instance [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle se connecter  
   
--   -E Utilisez l'authentification Windows pour la connexion (valeur par défaut) ; si vous utilisez l'authentification [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] , utilisez les options – U et – P pour spécifier le nom d'utilisateur et le mot de passe, respectivement  
+-   -E Utilisez l'authentification Windows pour la connexion (valeur par défaut) ; si vous utilisez l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , utilisez les options – U et – P pour spécifier le nom d'utilisateur et le mot de passe, respectivement  
   
 -   -d Nom de la base de données, pour cet exemple AdventureWorks2014  
   
@@ -410,7 +410,7 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i in
   
  Sur un serveur de test avec un nombre total de 8 noyaux physiques (16 logiques), ceci a nécessité 41 minutes et 25 secondes. Sur un second serveur de test avec 24 noyaux physiques (48 logiques), ceci a nécessité 52 minutes et 16 secondes.  
   
- La raison principale de la différence de performances entre les tables optimisées en mémoire et les tables sur disque pendant ce test, est que lorsque vous utilisez des tables sur disque, [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] n'utilise pas entièrement l'UC. Cela est dû à une contention de verrou : les transactions simultanées tentent d'écrire dans la même page de données ; les verrous sont utilisés pour garantir qu'une seule transaction à la fois écrit sur une page. Le moteur d' [!INCLUDE[hek_2](../Token/hek_2_md.md)] n'a pas de verrous, et les lignes de données ne sont pas organisées en pages. Par conséquent, les transactions simultanées ne bloquent pas les insertions réciproques, ce qui permet à [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] d'utiliser pleinement l'UC.  
+ La raison principale de la différence de performances entre les tables optimisées en mémoire et les tables sur disque pendant ce test, est que lorsque vous utilisez des tables sur disque, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'utilise pas entièrement l'UC. Cela est dû à une contention de verrou : les transactions simultanées tentent d'écrire dans la même page de données ; les verrous sont utilisés pour garantir qu'une seule transaction à la fois écrit sur une page. Le moteur d' [!INCLUDE[hek_2](../../includes/hek-2-md.md)] n'a pas de verrous, et les lignes de données ne sont pas organisées en pages. Par conséquent, les transactions simultanées ne bloquent pas les insertions réciproques, ce qui permet à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'utiliser pleinement l'UC.  
   
  Observez l'utilisation de l'UC pendant que la charge de travail est exécutée, par exemple via le Gestionnaire des tâches. Vous verrez qu'avec les tables sur disque, l'utilisation de l'UC est loin d'être de 100 %. Dans une configuration de test avec 16 processeurs logiques, l'utilisation serait d'environ 24 %.  
   
@@ -430,13 +430,13 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="a-nametroubleshootingslow-runningtestsa-troubleshooting-slow-running-tests"></a><a name="Troubleshootingslow-runningtests"></a> Dépannage des tests lents  
  Les résultats des tests varient généralement selon le matériel, mais aussi selon le niveau de concurrence utilisé dans l'exécution du test. Voici quelques pistes à explorer, si les résultats ne sont pas tels que prévu :  
   
--   Nombre de transactions simultanées : lors de l'exécution de la charge de travail sur un seul thread, le gain de performances avec [!INCLUDE[hek_2](../Token/hek_2_md.md)] sera probablement inférieur à 2X. La contention de verrou n'est un problème que si le niveau de concurrence est élevé.  
+-   Nombre de transactions simultanées : lors de l'exécution de la charge de travail sur un seul thread, le gain de performances avec [!INCLUDE[hek_2](../../includes/hek-2-md.md)] sera probablement inférieur à 2X. La contention de verrou n'est un problème que si le niveau de concurrence est élevé.  
   
--   Nombre faible de noyaux disponibles pour [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]: cela signifie qu'il y aura un niveau de concurrence faible dans le système, car il ne peut y avoir qu'autant de transactions simultanée en cours d'exécution qu'il y a de noyaux disponibles pour SQL.  
+-   Nombre faible de noyaux disponibles pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: cela signifie qu'il y aura un niveau de concurrence faible dans le système, car il ne peut y avoir qu'autant de transactions simultanée en cours d'exécution qu'il y a de noyaux disponibles pour SQL.  
   
     -   Symptôme : si l'utilisation de l'UC est élevée lors de l'exécution de la charge de travail sur les tables sur disque, cela signifie qu'il n'y a pas beaucoup de contentions, et donc qu'il n'y a pas de concurrence.  
   
--   Vitesse du lecteur de journalisation : si le lecteur de journalisation n'arrive pas à suivre le débit des transactions dans le système, la charge de travail est congestionnée dans le journal des E/S. Bien que la journalisation soit plus efficace avec [!INCLUDE[hek_2](../Token/hek_2_md.md)], si le journal des E/S est congestionné, le gain de performance potentiel est limité.  
+-   Vitesse du lecteur de journalisation : si le lecteur de journalisation n'arrive pas à suivre le débit des transactions dans le système, la charge de travail est congestionnée dans le journal des E/S. Bien que la journalisation soit plus efficace avec [!INCLUDE[hek_2](../../includes/hek-2-md.md)], si le journal des E/S est congestionné, le gain de performance potentiel est limité.  
   
     -   Symptôme : si l'utilisation de l'UC n'est pas proche de 100 % ou varie beaucoup pendant l'exécution de la charge de travail sur les tables mémoire optimisées, il est possible qu'il existe un goulot d'étranglement du journal des E/S. Cela peut être vérifié en ouvrant le moniteur de ressource et en examinant la longueur de la file d'attente du lecteur de journalisation.  
   
@@ -446,7 +446,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="a-namememoryutilizationforthememory-optimizedtablesa-memory-utilization-for-the-memory-optimized-tables"></a><a name="Memoryutilizationforthememory-optimizedtables"></a> Utilisation de la mémoire pour les tables optimisées en mémoire  
   
 #### <a name="overall-utilization-of-the-database"></a>Utilisation générale de la base de données  
- La requête suivante peut être utilisée pour obtenir l'utilisation totale de mémoire pour [!INCLUDE[hek_2](../Token/hek_2_md.md)] dans le système.  
+ La requête suivante peut être utilisée pour obtenir l'utilisation totale de mémoire pour [!INCLUDE[hek_2](../../includes/hek-2-md.md)] dans le système.  
   
 ```  
 SELECT type  
@@ -514,7 +514,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 |MEMORYCLERK_XTP|Valeur par défaut|0|  
 |MEMORYCLERK_XTP|Valeur par défaut|0|  
   
- Comme vous pouvez le voir, [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] utilise un bit sous 8 Go pour les tables optimisées en mémoire et les index dans l'exemple de base de données.  
+ Comme vous pouvez le voir, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise un bit sous 8 Go pour les tables optimisées en mémoire et les index dans l'exemple de base de données.  
   
  Voici l'utilisation de la mémoire détaillée par table après l'exécution d'un exemple :  
   
@@ -543,7 +543,7 @@ WHERE t.type='U'
 #### <a name="after-demo-reset"></a>Après la réinitialisation de la démonstration  
  La procédure stockée Demo.usp_DemoReset peut être utilisée pour réinitialiser la démonstration. Elle supprime les données dans les tables SalesOrderHeader_inmem et SalesOrderDetail_inmem, puis réinsère les données à partir des tables d'origine SalesOrderHeader et SalesOrderDetail.  
   
- Cependant, même si les lignes des tables ont été supprimées, cela ne signifie pas pour autant que la mémoire est immédiatement récupérée. [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] récupère la mémoire des lignes supprimées dans les tables optimisées en mémoire en arrière-plan, si nécessaire. Vous verrez qu'immédiatement après la réinitialisation de la démonstration, sans charge de travail transactionnelle sur le système, la mémoire des lignes supprimées n'est pas encore récupérée :  
+ Cependant, même si les lignes des tables ont été supprimées, cela ne signifie pas pour autant que la mémoire est immédiatement récupérée. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] récupère la mémoire des lignes supprimées dans les tables optimisées en mémoire en arrière-plan, si nécessaire. Vous verrez qu'immédiatement après la réinitialisation de la démonstration, sans charge de travail transactionnelle sur le système, la mémoire des lignes supprimées n'est pas encore récupérée :  
   
 ```  
 SELECT type  
@@ -636,7 +636,7 @@ ORDER BY state, file_type
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
   
- Comme vous pouvez le voir, la majeure partie de l'espace est utilisé par les fichiers de données et delta précréés. [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] créé au préalable une paire de fichiers (données, delta) par processeur logique. En outre, les fichiers de données ont une taille prédimensionnée de 128 Mo, et les fichiers delta de 8 Mo, afin d'optimiser l'insertion des données dans ces fichiers.  
+ Comme vous pouvez le voir, la majeure partie de l'espace est utilisé par les fichiers de données et delta précréés. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] créé au préalable une paire de fichiers (données, delta) par processeur logique. En outre, les fichiers de données ont une taille prédimensionnée de 128 Mo, et les fichiers delta de 8 Mo, afin d'optimiser l'insertion des données dans ces fichiers.  
   
  Les données réelles dans les tables optimisées en mémoire se trouvent dans un seul fichier de données.  
   

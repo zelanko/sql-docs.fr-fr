@@ -88,6 +88,6 @@ caps.handback.revision: 106
  Les fonctionnalités 64 bits sont installées dans le répertoire **Program Files** et les fonctionnalités 32 bits sont installées séparément dans le répertoire **Program Files (x86)**. (Ce comportement n'est pas spécifique à [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)    
     
 > [!IMPORTANT]    
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)](environnement de développement 32 bits des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]) n’est pas pris en charge sur le système d’exploitation 64 bits [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] et n’est pas installé sur les serveurs [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)].    
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]\(environnement de développement 32 bits des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]) n’est pas pris en charge sur le système d’exploitation 64 bits [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] et n’est pas installé sur les serveurs [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)].    
     
   
