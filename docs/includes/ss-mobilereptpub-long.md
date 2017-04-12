@@ -1,1 +1,1 @@
-\<Token xmlns:xlink="http://www.w3.org/1999/xlink">Éditeur de rapports mobiles SQL Server</Token>
+Éditeur de rapports mobiles SQL Server
