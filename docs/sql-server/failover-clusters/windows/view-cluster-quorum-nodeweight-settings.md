@@ -1,38 +1,42 @@
 ---
-title: "Afficher les param&#232;tres NodeWeight pour le quorum de cluster | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Groupes de disponibilité [SQL Server], clusters WSFC"
-  - "quorum [SQL Server], AlwaysOn et quorum WSFC"
+title: "Afficher les paramètres NodeWeight pour le quorum de cluster | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- quorum [SQL Server], AlwaysOn and WSFC quorum
 ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 caps.latest.revision: 17
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1bd8e579c3d75e804a552622039053b6700a352a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Afficher les param&#232;tres NodeWeight pour le quorum de cluster
-  Cette rubrique explique comment afficher les paramètres NodeWeight pour chaque nœud membre dans un cluster de clustering de basculement Windows Server (WSFC). Les paramètres NodeWeight sont utilisés pendant le vote du quorum pour prendre en charge les scénarios de récupération d'urgence et de sous-réseaux multiples pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et les instances de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+# <a name="view-cluster-quorum-nodeweight-settings"></a>Afficher les paramètres NodeWeight pour le quorum de cluster
+  Cette rubrique explique comment afficher les paramètres NodeWeight pour chaque nœud membre dans un cluster de clustering de basculement Windows Server (WSFC). Les paramètres NodeWeight sont utilisés pendant le vote du quorum pour prendre en charge les scénarios de récupération d'urgence et de sous-réseaux multiples pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et les instances de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   **Avant de commencer :**  [Conditions préalables](#Prerequisites), [Sécurité](#Security)  
+-   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
   
--   **Pour afficher les paramètres NodeWeight du quorum avec :** [Utilisation de Transact-SQL](#TsqlProcedure), [Utilisation de PowerShell](#PowerShellProcedure), [Utilisation de Cluster.exe](#CommandPromptProcedure)  
+-   **To view quorum NodeWeight settings using:** [Using Transact-SQL](#TsqlProcedure), [Using Powershell](#PowerShellProcedure), [Using Cluster.exe](#CommandPromptProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a> Prérequis  
  Cette fonctionnalité est prise en charge uniquement dans [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ou versions ultérieures.  
   
 > [!IMPORTANT]  
->  Pour utiliser les paramètres NodeWeight, le correctif logiciel suivant doit être appliqué à tous les serveurs dans le cluster WSFC :  
+>  Pour utiliser les paramètres NodeWeight, le correctif logiciel suivant doit être appliqué à tous les serveurs dans le cluster WSFC :  
 >   
 >  [KB2494036](http://support.microsoft.com/kb/2494036): un correctif est disponible pour vous permettre de configurer un nœud de cluster qui n'a pas de votes de quorum dans [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] et dans [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
@@ -44,13 +48,13 @@ caps.handback.revision: 17
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-##### Pour consulter les paramètres NodeWeight  
+##### <a name="to-view-nodeweight-settings"></a>Pour consulter les paramètres NodeWeight  
   
 1.  Connectez-vous à une instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans le cluster.  
   
 2.  Interrogez la vue [sys].[dm_hadr_cluster_members].  
   
-### Exemple (Transact-SQL)  
+### <a name="example-transact-sql"></a>Exemple (Transact-SQL)  
  L'exemple suivant interroge une vue système pour retourner les valeurs de tous les nœuds du cluster de cette instance.  
   
 ```tsql  
@@ -60,7 +64,7 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
   
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
   
-##### Pour consulter les paramètres NodeWeight  
+##### <a name="to-view-nodeweight-settings"></a>Pour consulter les paramètres NodeWeight  
   
 1.  Démarrez Windows PowerShell avec élévation de privilèges via **Exécuter en tant qu'administrateur**.  
   
@@ -70,8 +74,8 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
   
 4.  Générez la sortie des propriétés du nœud de cluster dans un format lisible.  
   
-### Exemple (PowerShell)  
- L'exemple suivant génère certaines des propriétés de nœud du cluster appelé « Cluster001 ».  
+### <a name="example-powershell"></a>Exemple (PowerShell)  
+ L'exemple suivant génère certaines des propriétés de nœud du cluster appelé « Cluster001 ».  
   
 ```powershell  
 Import-Module FailoverClusters  
@@ -87,20 +91,20 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 > [!NOTE]  
 >  L'utilitaire cluster.exe est déconseillé dans [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] .  Utilisez PowerShell avec le clustering de basculement pour le développement futur.  L'utilitaire cluster.exe sera supprimé dans la prochaine version de Windows Server. Pour plus d'informations, consultez [Mappage des commandes Cluster.exe aux applets de commande Windows PowerShell pour les clusters de basculement](http://technet.microsoft.com/library/ee619744\(WS.10\).aspx).  
   
-##### Pour consulter les paramètres NodeWeight  
+##### <a name="to-view-nodeweight-settings"></a>Pour consulter les paramètres NodeWeight  
   
 1.  Démarrez une invite de commandes avec élévation de privilèges via **Exécuter en tant qu'administrateur**.  
   
 2.  Utilisez **cluster.exe** pour retourner l'état du nœud et les valeurs de NodeWeight  
   
-### Exemple (Cluster.exe)  
- L'exemple suivant génère certaines des propriétés de nœud du cluster appelé « Cluster001 ».  
+### <a name="example-clusterexe"></a>Exemple (Cluster.exe)  
+ L'exemple suivant génère certaines des propriétés de nœud du cluster appelé « Cluster001 ».  
   
 ```ms-dos  
 cluster.exe Cluster001 node /status /properties  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Modes de quorum WSFC et configuration de vote &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [Configurer les paramètres NodeWeight pour un quorum de cluster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)   
  [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)   

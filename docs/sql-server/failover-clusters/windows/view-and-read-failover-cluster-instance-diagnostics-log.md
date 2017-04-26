@@ -1,34 +1,38 @@
 ---
-title: "Afficher et lire le journal de diagnostic de l&#39;instance de cluster de basculement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Afficher et lire le journal de diagnostic de l’instance de cluster de basculement | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 912c05cd783ead67aaa506f07586387eabcb2ca4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Afficher et lire le journal de diagnostic de l&#39;instance de cluster de basculement
+# <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Afficher et lire le journal de diagnostic de l'instance de cluster de basculement
   Toutes les erreurs et tous les événements d'avertissements critiques pour la DLL de ressource SQL Server sont écrits dans le journal des événements Windows. Un journal en cours des informations de diagnostic spécifiques de SQL Server est capturé par la procédure stockée système [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) ; il est écrit dans les fichiers journaux de diagnostics du cluster de basculement de SQL Server (également appelés journaux *SQLDIAG*).  
   
 -   **Avant de commencer :**  [Recommandations](#Recommendations), [Sécurité](#Security)  
   
--   **Pour afficher le journal de diagnostics, à l’aide de : ** [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Pour afficher le journal de diagnostic avec :**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Pour configurer les paramètres du journal de diagnostics, à l’aide de :** [Transact-SQL](#TsqlConfigure)  
+-   **Pour configurer les paramètres du journal de diagnostic avec :** [Transact-SQL](#TsqlConfigure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Recommendations"></a> Recommandations  
- Par défaut, les journaux SQLDIAG sont stockés dans un dossier LOG local du répertoire d’instance SQL Server, par exemple, « C\Program Files\Microsoft SQL Server\MSSQL13.\<Nom_Instance>\MSSQL\LOG » du nœud propriétaire de l’instance de cluster de basculement (FCI) Always On. La taille de chaque fichier journal SQLDIAG est fixée à 100 Mo. Dix fichiers journaux de ce type sont stockés sur l'ordinateur avant qu'ils ne soient recyclés pour les nouveaux journaux.  
+ Par défaut, les journaux SQLDIAG sont stockés dans un dossier LOG local du répertoire d’instance SQL Server, par exemple, « C\Program Files\Microsoft SQL Server\MSSQL13.\<Nom_Instance>\MSSQL\LOG » du nœud propriétaire de l’instance de cluster de basculement (FCI) Always On. La taille de chaque fichier journal SQLDIAG est fixée à 100 Mo. Dix fichiers journaux de ce type sont stockés sur l'ordinateur avant qu'ils ne soient recyclés pour les nouveaux journaux.  
   
  Les journaux utilisent le format de fichier d'événements étendus. La fonction système **sys.fn_xe_file_target_read_file** peut être utilisée pour lire les fichiers créés par les événements étendus. Au format XML, un événement par ligne est retourné. Interrogez la vue système pour analyser les données XML définies comme ensemble de résultats. Pour plus d’informations, consultez [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md).  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 23
   
  Ouvrez SQL Server Management Studio en tant qu'administrateur  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour afficher les fichiers journaux de diagnostics :**  
   
 1.  Dans le menu de **Fichier** , sélectionnez **Ouvrir**, puis **Fichier**et choisissez le fichier journal de diagnostics à afficher.  
@@ -55,9 +59,9 @@ caps.handback.revision: 23
 4.  Vous pouvez filtrer et trier les données d'événement à l'aide du menu **ExtendedEvents** , en sélectionnant l'option **Filtre** .  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
- **Pour afficher les fichiers journaux de diagnostics :**  
+ **Pour afficher les fichiers journaux de diagnostics :**  
   
- Pour consulter tous les éléments de journal du fichier journal SQLDIAG, utilisez la requête suivante :  
+ Pour consulter tous les éléments de journal du fichier journal SQLDIAG, utilisez la requête suivante :  
   
 ```  
 SELECT  
@@ -96,24 +100,24 @@ ORDER BY Time;
   
 ###  <a name="ConfigTsqlExample"></a> Exemples (Transact-SQL)  
   
-####  <a name="TsqlExample"></a> Définition des options du journal de diagnostics  
+####  <a name="TsqlExample"></a> Setting diagnostic log options  
  Les exemples de cette section montrent comment définir les valeurs de l'option de journal de diagnostics.  
   
-##### A. Début de la journalisation des diagnostics  
+##### <a name="a-starting-diagnostic-logging"></a>A. Début de la journalisation des diagnostics  
  L'exemple suivant démarre la journalisation de données de diagnostics.  
   
 ```  
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG ON;  
 ```  
   
-##### B. Fin de la journalisation des diagnostics  
+##### <a name="b-stopping-diagnostic-logging"></a>B. Fin de la journalisation des diagnostics  
  L'exemple suivant met fin à la journalisation des données de diagnostics.  
   
 ```  
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG OFF;  
 ```  
   
-##### C. Spécification de l'emplacement des journaux de diagnostics  
+##### <a name="c-specifying-the-location-of-the-diagnostic-logs"></a>C. Spécification de l'emplacement des journaux de diagnostics  
  L'exemple suivant définit l'emplacement des journaux de diagnostics sur le chemin d'accès au fichier spécifié.  
   
 ```  
@@ -121,15 +125,15 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG PATH = 'C:\logs';  
 ```  
   
-##### D. Spécification de la taille maximale de chaque journal de diagnostics  
- L'exemple suivant définit la taille maximale de chaque journal de diagnostics sur 10 mégaoctets.  
+##### <a name="d-specifying-the-maximum-size-of-each-diagnostic-log"></a>D. Spécification de la taille maximale de chaque journal de diagnostics  
+ L'exemple suivant définit la taille maximale de chaque journal de diagnostics sur 10 mégaoctets.  
   
 ```  
 ALTER SERVER CONFIGURATION   
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Stratégie de basculement pour les instances de cluster de basculement](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

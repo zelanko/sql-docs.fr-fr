@@ -1,0 +1,1 @@
+**CETTE RUBRIQUE S’APPLIQUE À :**![oui](media/yes.png)SQL Server 2016![non](media/no.png)Version d’évaluation technique de janvier 2017 des rapports Power BI dans SQL Server Reporting Services

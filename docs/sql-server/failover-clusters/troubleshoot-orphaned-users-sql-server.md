@@ -1,30 +1,34 @@
 ---
-title: "D&#233;panner des utilisateurs orphelins (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "utilisateurs orphelins [SQL Server]"
-  - "connexions [SQL Server], utilisateurs orphelins"
-  - "dépannage de [SQL Server], comptes d'utilisateur"
-  - "comptes d’utilisateur [SQL Server], utilisateurs orphelins"
-  - "basculement [SQL Server], gestion des métadonnées"
-  - "mise en miroir de bases de données [SQL Server], métadonnées"
-  - "utilisateurs de [SQL Server], orphelins"
+title: "Résoudre les problèmes liés aux utilisateurs orphelins (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 07/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- orphaned users [SQL Server]
+- logins [SQL Server], orphaned users
+- troubleshooting [SQL Server], user accounts
+- user accounts [SQL Server], orphaned users
+- failover [SQL Server], managing metadata
+- database mirroring [SQL Server], metadata
+- users [SQL Server], orphaned
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5f76cf5789d67f93443149074b0c4e8708f90000
+ms.lasthandoff: 04/11/2017
+
 ---
-# D&#233;panner des utilisateurs orphelins (SQL Server)
+# <a name="troubleshoot-orphaned-users-sql-server"></a>Résoudre les problèmes liés aux utilisateurs orphelins (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   L’apparition d’utilisateurs orphelins dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se produit lorsqu'un utilisateur de base de données est basé sur un utilisateur dans la base de données **MASTER** , mais que l’utilisateur n’existe plus dans le **MASTER**. Cela peut se produire lorsque l’utilisateur est supprimé, ou lorsque la base de données est déplacée vers un autre serveur sur lequel l’utilisateur n'existe pas. Cette rubrique décrit comment rechercher des utilisateurs orphelins, puis comment les remapper à des utilisateurs.  
@@ -32,8 +36,8 @@ caps.handback.revision: 41
 > [!NOTE]  
 >  Réduisez la possibilité d’apparition d’utilisateurs orphelins en utilisant des utilisateurs de base de données à relation contenant-contenu pour les bases de données pouvant être déplacées. Pour plus d’informations, consultez [Utilisateurs de base de données à relation contenant-contenu - Rendre votre base de données portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
-## Arrière-plan  
- Pour connecter une base de données à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec un principal de sécurité (identité de l’utilisateur de base de données) basé sur un utilisateur, le principal doit disposer d’un identifiant valide dans la base de données **master**. Cette connexion est utilisée dans le processus d'authentification chargé de vérifier l’identité du principal pour s’assurer que le principal est autorisé à se connecter à l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’une instance de serveur sont visibles dans l’affichage catalogue **sys.server_principals** et l’affichage de compatibilité **sys.syslogins**.  
+## <a name="background"></a>Arrière-plan  
+ Pour connecter une base de données à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec un principal de sécurité (identité de l’utilisateur de base de données) basé sur un utilisateur, le principal doit disposer d’un identifiant valide dans la base de données **master** . Cette connexion est utilisée dans le processus d'authentification chargé de vérifier l’identité du principal pour s’assurer que le principal est autorisé à se connecter à l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’une instance de serveur sont visibles dans l’affichage catalogue **sys.server_principals** et l’affichage de compatibilité **sys.syslogins** .  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accèdent aux bases de données en tant qu’utilisateur de base de données mappé à l’utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il y a trois exceptions à cette règle :  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 41
   
  Un utilisateur de base de données (basé sur un identifiant) pour lequel la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondante n’est pas définie sur une instance serveur, ou l’est de façon incorrecte, ne peut pas se connecter à cette instance. L'utilisateur devient donc un *utilisateur orphelin* de la base de données sur cette instance du serveur. Le fait de se retrouver orphelin peut se produire si l'utilisateur de base de données est mappé à un SID de connexion absent dans l’instance `master` . Un utilisateur peut devenir orphelin après qu'une base de données a été restaurée ou attachée à une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur laquelle l’identifiant n’a jamais été créé. Un utilisateur de base de données peut également se retrouver orphelin si la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondante est supprimée. Même si l’utilisateur est recréé, il aura un SID différent. Ainsi, l'utilisateur de base de données reste orphelin.  
   
-## Pour détecter des utilisateurs orphelins  
+## <a name="to-detect-orphaned-users"></a>Pour détecter des utilisateurs orphelins  
 
 **Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et PDW**
 
@@ -68,7 +72,7 @@ WHERE sp.SID IS NULL
     AND authentication_type_desc = 'INSTANCE';  
 ```  
   
- Vous obtenez la liste des utilisateurs d’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et de leurs identificateurs de sécurité (SID) qui, dans la base de données active, ne sont liés à aucune connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Vous obtenez la liste des utilisateurs d’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et de leurs identificateurs de sécurité (SID) qui, dans la base de données active, ne sont liés à aucune connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
 **Pour SQL Database et SQL Data Warehouse**
 
@@ -81,7 +85,7 @@ La table `sys.server_principals` n’est pas disponible dans la SQL Database ou 
     WHERE type = 'S'; 
     ```
 
-2. Connectez-vous à la base de données utilisateur et passez en revue les SID des utilisateurs dans la table `sys.database_principals`, à l’aide de la requête suivante :
+2. Connectez-vous à la base de données utilisateur et passez en revue les SID des utilisateurs dans la table `sys.database_principals` , à l’aide de la requête suivante :
 
     ```
     SELECT name, sid, principal_id
@@ -93,7 +97,7 @@ La table `sys.server_principals` n’est pas disponible dans la SQL Database ou 
 
 3. Comparez les deux listes pour déterminer si des SID dans la table `sys.database_principals` de la base de données utilisateur n’ont aucun SID de connexion correspondant dans la table `sql_logins` de la base de données master. 
   
-## Pour résoudre le cas d'un utilisateur orphelin  
+## <a name="to-resolve-an-orphaned-user"></a>Pour résoudre le cas d'un utilisateur orphelin  
 Dans la base de données master, utilisez l’instruction [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) avec l’option SID pour recréer un identifiant manquant, en fournissant le `SID` de l’utilisateur de base de données obtenu dans la section précédente :  
   
 ```  
@@ -119,7 +123,7 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
   
  La procédure déconseillée [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md) fonctionne également avec les utilisateurs orphelins. `sp_change_users_login` avec [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [ALTER USER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-user-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
@@ -134,3 +138,4 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
  [sys.syslogins &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)  
   
   
+

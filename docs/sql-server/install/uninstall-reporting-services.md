@@ -1,26 +1,30 @@
 ---
-title: "D&#233;sinstaller Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Désinstaller Reporting Services | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
 caps.latest.revision: 7
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "erikre"
-caps.handback.revision: 7
+author: MikeRayMSFT
+ms.author: mikeray
+manager: erikre
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: be3ac5ed46a8807d6d78296d142ae36b9eb7664d
+ms.lasthandoff: 04/11/2017
+
 ---
-# D&#233;sinstaller Reporting Services
+# <a name="uninstall-reporting-services"></a>Désinstaller Reporting Services
   La désinstallation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne supprime pas le contenu que vous avez créé ou la configuration que vous avez modifiée. Toutefois, s'il existe du contenu dont vous avez besoin une fois la désinstallation terminée, il est recommandé de faire des copies de contenu avant de commencer le processus de désinstallation.  
   
-## Désinstaller en mode SharePoint  
+## <a name="uninstall-sharepoint-mode"></a>Désinstaller en mode SharePoint  
  Lorsque vous désinstallez le mode SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , les éléments suivants sont supprimés :  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et proxy de service.  
@@ -39,10 +43,10 @@ caps.handback.revision: 7
   
 -   **Base de données des alertes du serveur de rapports :** ReportingService_7f616e2d253040e8ab5653b3c09a065e_Alerting  
   
-### Désinstallez le complément pour les produits SharePoint.  
+### <a name="uninstall-the-add-in-for-sharepoint-products"></a>Désinstallez le complément pour les produits SharePoint.  
  Lorsque vous désinstallez le complément sur un ordinateur, vous pouvez choisir de désinstaller uniquement les fichiers ou de supprimer également la fonctionnalité [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la batterie de serveurs. Pour plus d’informations sur la désinstallation du complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint, consultez [Installer ou désinstaller le complément Reporting Services pour SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
   
-## Désinstaller en mode natif  
+## <a name="uninstall-native-mode"></a>Désinstaller en mode natif  
  Lorsque vous désinstallez en mode natif [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , tout ce qui **a été créé** ou **modifié** après l'installation est laissé en place. Par exemple, les fichiers de base de données, les fichiers journaux, les fichiers de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et les éléments de contenu tels que des rapports et des fichiers de source de données.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est une fonctionnalité d'instance et par conséquent, elle n'est pas répertoriée dans le Panneau de configuration Windows sous Programmes et fonctionnalités. Pour désinstaller [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif :  
@@ -61,7 +65,7 @@ caps.handback.revision: 7
   
 5.  Terminez l'Assistant.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Désinstaller une instance existante de SQL Server &#40;programme d’installation&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
  [Installer ou désinstaller le complément Power Pivot pour SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
  [Installer ou désinstaller le complément Reporting Services pour SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  

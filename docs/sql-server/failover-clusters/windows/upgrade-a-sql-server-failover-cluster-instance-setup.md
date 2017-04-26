@@ -1,28 +1,32 @@
 ---
-title: "Mettre &#224; niveau une instance de cluster de basculement SQL Server (programme d&#39;installation) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/22/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mise à niveau de clusters"
-  - "clusters [SQL Server], mise à niveau"
-  - "clustering de basculement [SQL Server], création de clusters"
-  - "clusters [SQL Server], création"
-  - "clustering de basculement [SQL Server], mise à niveau"
+title: "Mettre à niveau une instance de cluster de basculement SQL Server (programme d’installation) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/22/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- upgrading clusters
+- clusters [SQL Server], upgrading
+- failover clustering [SQL Server], creating clusters
+- clusters [SQL Server], creating
+- failover clustering [SQL Server], upgrading
 ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 caps.latest.revision: 63
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 63
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 50db49a567f4247b1014fba9114aa168b90709f5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Mettre &#224; niveau une instance de cluster de basculement SQL Server (programme d&#39;installation)
+# <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Mettre à niveau une instance de cluster de basculement SQL Server (programme d'installation)
   Vous pouvez mettre à niveau un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers un cluster de basculement [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l’aide de l’interface utilisateur d’installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou à partir d’une invite de commandes.  
   
  Dans le cas d'une installation locale, vous devez exécuter le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en qualité d'administrateur. Si vous installez [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine qui dispose des autorisations de lecture sur le partage distant.  
@@ -31,7 +35,7 @@ caps.handback.revision: 63
   
 ##  <a name="UpgradeSteps"></a> Pour mettre à niveau un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
-#### Pour mettre à niveau un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+#### <a name="to-upgrade-a-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>Pour mettre à niveau un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
 1.  Sur le média d’installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] portant sur l’édition qui correspond à celle que vous mettez à niveau, double-cliquez sur le fichier setup.exe dans le dossier racine. Il se peut que vous deviez installer les composants requis si ceux-ci ne sont pas déjà présents sur l'ordinateur.  
   
@@ -47,7 +51,7 @@ caps.handback.revision: 63
   
 7.  Dans la page Sélectionner une instance, spécifiez l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à mettre à niveau vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Cliquez sur**Suivant**pour continuer.  
   
-8.  Dans la page Sélection de composant, les fonctionnalités à mettre à niveau sont présélectionnées. Une description de chaque groupe de composants apparaît dans le volet droit après que vous avez sélectionné le nom de la fonctionnalité. N'oubliez pas que vous ne pouvez pas modifier les fonctionnalités à mettre à niveau, de même que vous ne pouvez pas ajouter de fonctionnalités pendant l'opération de mise à niveau. Pour ajouter des fonctionnalités à une instance mise à niveau de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] une fois l’opération de mise à niveau terminée, consultez [Ajouter des fonctionnalités à une instance de SQL Server 2016 &#40;Setup&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
+8.  Dans la page Sélection de composant, les fonctionnalités à mettre à niveau sont présélectionnées. Une description de chaque groupe de composants apparaît dans le volet droit après que vous avez sélectionné le nom de la fonctionnalité. N'oubliez pas que vous ne pouvez pas modifier les fonctionnalités à mettre à niveau, de même que vous ne pouvez pas ajouter de fonctionnalités pendant l'opération de mise à niveau. Pour ajouter des fonctionnalités à une instance mise à niveau de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] une fois l’opération de mise à niveau terminée, consultez [Ajouter des fonctionnalités à une instance de SQL Server 2016 &#40;programme d’installation&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
   
      Les composants requis pour les fonctionnalités sélectionnées sont affichés dans le volet droit. Le programme d'installation de SQL Server installera les composants requis qui ne sont pas déjà installés pendant l'étape d'installation décrite ultérieurement dans cette procédure. Pour gagner du temps, préinstallez ces composants requis sur chaque nœud.  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 63
   
 10. La page Espace disque nécessaire calcule l'espace disque nécessaire pour les fonctionnalités que vous spécifiez et compare cet espace à l'espace disque disponible sur l'ordinateur où le programme d'installation s'exécute.  
   
-11. Dans la page de mise à niveau de recherche en texte intégral, spécifiez les options de mise à niveau pour les bases de données mises à niveau. Pour plus d’informations, consultez [Options de mise à niveau de recherche en texte intégral](../Topic/Full-Text%20Search%20Upgrade%20Options.md).  
+11. Dans la page de mise à niveau de recherche en texte intégral, spécifiez les options de mise à niveau pour les bases de données mises à niveau. Pour plus d’informations, consultez [Options de mise à niveau de recherche en texte intégral](http://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
   
 12. Dans la page **Création de rapports d'erreurs** , spécifiez les informations que vous souhaitez envoyer à [!INCLUDE[msCoName](../../../includes/msconame-md.md)] afin d'aider à améliorer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les options de création de rapports d'erreurs sont activées par défaut.  
   
@@ -79,34 +83,35 @@ caps.handback.revision: 63
   
 20. Pour terminer la mise à niveau, répétez ces étapes sur tous les autres nœuds du cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## Pour mettre à niveau un cluster de basculement de sous-réseaux multiples [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+## <a name="to-upgrade-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>Pour mettre à niveau un cluster de basculement de sous-réseaux multiples [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
-#### Pour mettre à niveau vers un cluster de basculement de sous-réseaux multiples [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (le cluster [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existant est un cluster de sous-réseaux non multiples.)  
+#### <a name="to-upgrade-to-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster-existing-includessnoversionincludesssnoversion-mdmd-cluster-is-a-non-multi-subnet-cluster"></a>Pour mettre à niveau vers un cluster de basculement de sous-réseaux multiples [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (le cluster [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existant est un cluster de sous-réseaux non multiples.)  
   
 1.  Suivez la procédure ci-dessus pour mettre à niveau votre cluster vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 2.  Ajoutez un nœud sur un sous-réseau différent à l'aide de l'action d'installation AddNode et confirmez la dépendance de ressource d'adresse IP sur OR dans la page **Configuration du réseau du cluster** . Pour plus d’informations, consultez [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
-#### Pour mettre à niveau un cluster de sous-réseaux multiples utilisant actuellement l'étirement V-LAN  
+#### <a name="to-upgrade-a-multi-subnet-cluster-currently-using-stretch-v-lan"></a>Pour mettre à niveau un cluster de sous-réseaux multiples utilisant actuellement l'étirement V-LAN  
   
 1.  Suivez la procédure ci-dessus pour mettre à niveau votre cluster vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 2.  Modifiez les paramètres réseau pour déplacer le nœud distant vers un autre sous-réseau.  
   
-3.  À l'aide de l'outil d'administration de cluster de basculement Windows, ajoutez une nouvelle adresse IP pour le nouveau sous-réseau et définissez la dépendance de ressource d'adresse IP sur OR.  
+3.  À l'aide de l'outil d'administration de cluster de basculement Windows, ajoutez une nouvelle adresse IP pour le nouveau sous-réseau et définissez la dépendance de ressource d'adresse IP sur OR.  
   
-## Étapes suivantes  
- Après avoir effectué la mise à niveau vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], effectuez les tâches suivantes :  
+## <a name="next-steps"></a>Étapes suivantes  
+ Après avoir effectué la mise à niveau vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], effectuez les tâches suivantes :  
   
 -   [Mise à niveau du moteur de base de données](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
   
 -   [Modifier le mode de compatibilité de base de données et utiliser le magasin des requêtes](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)  
   
--   [Tirer parti des nouveautés de SQL Server 2016](../Topic/Take%20Advantage%20of%20New%20SQL%20Server%202016%20Features.md)  
+-   [Tirer parti des nouveautés de SQL Server 2016](http://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mise à niveau d’une instance de cluster de basculement SQL Server](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)   
- [Afficher et lire les fichiers journaux d'installation de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
+ [Afficher et lire les fichiers journaux d’installation de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Ajouter des fonctionnalités à une instance de SQL Server 2016 &#40;programme d’installation&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)  
   
   
+
