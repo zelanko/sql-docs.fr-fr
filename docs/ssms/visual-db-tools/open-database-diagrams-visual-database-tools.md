@@ -1,0 +1,49 @@
+---
+title: "Ouvrir des schémas de base de données (Visual Database Tools) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database diagrams [SQL Server], opening
+- opening database diagrams
+- diagrams [SQL Server], opening
+ms.assetid: 06d9a7d5-ef04-400c-a340-7a3e5d54f685
+caps.latest.revision: 4
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 54c012b6648c2c35395b22489d3f2f3493f189fe
+ms.lasthandoff: 04/11/2017
+
+---
+# <a name="open-database-diagrams-visual-database-tools"></a>Ouvrir des schémas de base de données (Visual Database Tools)
+Vous pouvez ouvrir des schémas de base de données en vue d'afficher ou de modifier la structure du schéma.  
+  
+### <a name="to-open-a-database-diagram"></a>Pour ouvrir un schéma de base de données  
+  
+1.  Dans l’Explorateur d’objets, développez le dossier **Schémas de base de données** .  
+  
+2.  Double-cliquez sur le nom du schéma de base de données que vous souhaitez ouvrir.  
+  
+    -ou-  
+  
+    Cliquez avec le bouton droit sur le nom du schéma de base de données que vous souhaitez ouvrir, puis choisissez **Création Schéma de base de données**.  
+  
+Le schéma de base de données s'ouvre dans le Concepteur de schémas de base de données à partir duquel vous pouvez modifier le schéma.  
+  
+> [!NOTE]  
+> Seul le propriétaire du schéma ou un membre du rôle db_owner de la base de données peut ouvrir le schéma.  
+  
+## <a name="see-also"></a>Voir aussi  
+[Utiliser des schémas de base de données &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Comprendre la propriété du schéma de base de données &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
+  
+

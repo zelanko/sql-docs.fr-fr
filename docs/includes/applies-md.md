@@ -1,1 +1,1 @@
-  **S'applique à :**  
+  **S’applique à :**  

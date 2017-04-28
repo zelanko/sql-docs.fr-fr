@@ -1,31 +1,35 @@
 ---
-title: "R&#233;cup&#233;ration d&#39;urgence WSFC par le quorum forc&#233; (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Groupes de disponibilité [SQL Server], clusters WSFC"
-  - "quorum [SQL Server], AlwaysOn et quorum WSFC"
-  - "clustering de basculement [SQL Server], groupes de disponibilité AlwaysOn"
+title: "Récupération d’urgence WSFC par le quorum forcé (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- quorum [SQL Server], AlwaysOn and WSFC quorum
+- failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f79077825cabd60fa12cd906ff375d149b29a7d3
+ms.lasthandoff: 04/11/2017
+
 ---
-# R&#233;cup&#233;ration d&#39;urgence WSFC par le quorum forc&#233; (SQL Server)
+# <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Récupération d'urgence WSFC par le quorum forcé (SQL Server)
   L'échec du quorum est généralement dû à un problème systémique grave, à un échec de communication persistant ou à une mauvaise configuration impliquant plusieurs nœuds dans le cluster WSFC.  Une intervention manuelle est nécessaire pour la récupération d'une défaillance de quorum.  
   
--   **Avant de commencer :**  [Conditions préalables](#Prerequisites), [Sécurité](#Security)  
+-   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
   
--   **Récupération d'urgence WSFC par le quorum forcé** [Récupération d'urgence WSFC par le quorum forcé](#Main)  
+-   **WSFC Disaster Recovery through the Forced Quorum Procedure** [WSFC Disaster Recovery through the Forced Quorum Procedure](#Main)  
   
 -   [Tâches associées](#RelatedTasks)  
   
@@ -37,28 +41,28 @@ caps.handback.revision: 20
  La procédure de quorum forcé suppose qu'un quorum sain existait avant l'échec de quorum.  
   
 > [!WARNING]  
->  L'utilisateur doit bien connaître les concepts et les interactions du clustering de basculement Windows Server, des modèles de quorum WSFC, de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et de la configuration de déploiement spécifique à l'environnement.  
+>  L'utilisateur doit bien connaître les concepts et les interactions du clustering de basculement Windows Server, des modèles de quorum WSFC, de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]et de la configuration de déploiement spécifique à l'environnement.  
 >   
->  Pour plus d’informations, consultez : [Clustering de basculement Windows Server (WSFC) avec SQL Server](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [Modes de quorum WSFC et configuration de vote (SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx).  
+>  Pour plus d’informations, consultez :  [Clustering de basculement Windows Server (WSFC) avec SQL Server](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [Modes de quorum WSFC et configuration de vote (SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx).  
   
 ###  <a name="Security"></a> Sécurité  
  L'utilisateur doit être un compte de domaine qui est membre du groupe Administrateurs local sur chaque nœud du cluster WSFC.  
   
 ##  <a name="Main"></a> Récupération d'urgence WSFC par le quorum forcé  
- N'oubliez pas qu'un échec de quorum met hors ligne tous les services cluster, toutes les instances SQL Server et [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] dans le cluster WSFC, car le cluster, tel que configuré, ne peut pas garantir la tolérance de panne au niveau du nœud.  Un échec de quorum signifie que les nœuds votants sains dans le cluster WSFC ne satisfont plus le modèle de quorum. Certains nœuds ont peut-être échoué complètement, et d'autres ont peut-être simplement arrêté le service WSFC et sont sains par ailleurs, sauf en ce qui concerne la perte de la capacité de communiquer avec un quorum.  
+ N'oubliez pas qu'un échec de quorum met hors ligne tous les services cluster, toutes les instances SQL Server et [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]dans le cluster WSFC, car le cluster, tel que configuré, ne peut pas garantir la tolérance de panne au niveau du nœud.  Un échec de quorum signifie que les nœuds votants sains dans le cluster WSFC ne satisfont plus le modèle de quorum. Certains nœuds ont peut-être échoué complètement, et d'autres ont peut-être simplement arrêté le service WSFC et sont sains par ailleurs, sauf en ce qui concerne la perte de la capacité de communiquer avec un quorum.  
   
  Pour remettre le cluster WSFC en ligne, vous devez corriger la cause première de l'échec de quorum dans la configuration existante, récupérer les bases de données concernées si nécessaire et, éventuellement, reconfigurer les nœuds restants dans le cluster WSFC pour refléter la topologie de cluster survivante.  
   
  Vous pouvez utiliser la procédure de *quorum forcé* sur un nœud de cluster WSFC pour remplacer les contrôles de sécurité qui ont mis le cluster hors connexion.  Cela est efficace pour indiquer au cluster d'interrompre les contrôles de vote du quorum et vous permet de remettre en ligne les ressources du cluster WSFC et SQL Server sur tous les nœuds dans le cluster.  
   
- Ce type de processus de récupération d'urgence doit inclure les étapes suivantes :  
+ Ce type de processus de récupération d'urgence doit inclure les étapes suivantes :  
   
-#### Pour une récupération en cas d'échec de quorum :  
+#### <a name="to-recover-from-quorum-failure"></a>Pour une récupération en cas d'échec de quorum :  
   
 1.  **Déterminez l'étendue de l'échec.** Identifiez les groupes de disponibilité ou les instances de SQL Server non sensibles et les nœuds du cluster qui sont en ligne et disponibles à l'utilisation post-incident, puis examinez les journaux des événements Windows et les journaux système de SQL Server.  Si possible, vous devez conserver les données d'analyse et les journaux système pour les examiner ultérieurement.  
   
     > [!TIP]  
-    >  Sur une instance de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] qui répond, vous pouvez obtenir des informations sur l’état d’intégrité des groupes de disponibilité qui possèdent un réplica de disponibilité sur l’instance de serveur local en interrogeant la vue de gestion dynamique (DMV) [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md).  
+    >  Sur une instance de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]qui répond, vous pouvez obtenir des informations sur l’état d’intégrité des groupes de disponibilité qui possèdent un réplica de disponibilité sur l’instance de serveur local en interrogeant la vue de gestion dynamique (DMV) [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md) .  
   
 2.  **Démarrez le cluster WSFC en utilisant le quorum forcé sur un nœud unique.** Identifiez un nœud avec un nombre minime de défaillances de composant, autre que celui qui a arrêté le service de cluster WSFC.  Vérifiez que ce nœud peut communiquer avec la majorité des autres nœuds.  
   
@@ -85,7 +89,7 @@ caps.handback.revision: 20
   
 5.  **Récupérez les réplicas de base de données du groupe de disponibilité si nécessaire.** Les bases de données qui n'appartiennent pas au groupe de disponibilité doivent être restaurées et remises en ligne au cours du processus de démarrage normal de SQL Server, sans autre intervention.  
   
-     Vous pouvez minimiser la perte potentielle de données et le temps de récupération pour les réplicas de groupe de disponibilité en les remettant en ligne dans cette séquence : réplica principal, réplicas secondaires synchrones, réplicas secondaires asynchrones.  
+     Vous pouvez minimiser la perte potentielle de données et le temps de récupération pour les réplicas de groupe de disponibilité en les remettant en ligne dans cette séquence : réplica principal, réplicas secondaires synchrones, réplicas secondaires asynchrones.  
   
 6.  **Réparez ou remplacez les composants en échec et re-validez le cluster.** Maintenant que vous avez remédié au sinistre et à l’échec de quorum, vous devez réparer ou remplacer les nœuds en échec et modifier les configurations WSFC et Always On associées en conséquence.  Cela peut inclure la suppression des réplicas de groupe de disponibilité, l'éviction des nœuds du cluster ou la mise à plat et la réinstallation des logiciels sur un nœud.  
   
@@ -112,7 +116,7 @@ caps.handback.revision: 20
   
 -   [Configurer les paramètres NodeWeight pour un quorum de cluster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
--   [Utiliser le tableau de bord Always On &#40;SQL Server Management Studio&#41;](../Topic/Use%20the%20AlwaysOn%20Dashboard%20\(SQL%20Server%20Management%20Studio\).md)  
+-   [Utiliser le tableau de bord Always On &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)
   
 ##  <a name="RelatedContent"></a> Contenu connexe  
   
@@ -120,7 +124,7 @@ caps.handback.revision: 20
   
 -   [Applets de commande de cluster de basculement Get-ClusterLog](http://technet.microsoft.com/library/ee461045.aspx)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

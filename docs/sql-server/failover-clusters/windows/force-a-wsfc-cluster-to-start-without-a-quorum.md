@@ -1,32 +1,36 @@
 ---
-title: "Forcer un cluster WSFC &#224; d&#233;marrer sans quorum | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Groupes de disponibilité [SQL Server], clusters WSFC"
-  - "quorum [SQL Server], AlwaysOn et quorum WSFC"
+title: "Forcer un cluster WSFC à démarrer sans quorum | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- quorum [SQL Server], AlwaysOn and WSFC quorum
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7cef5f82996bc541f55bc8ec6560edce2e0d9acf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Forcer un cluster WSFC &#224; d&#233;marrer sans quorum
-  Cette rubrique explique comment forcer un nœud de cluster de clustering de basculement Windows Server (WSFC) à démarrer sans quorum.  Cela peut être nécessaire dans les scénarios de récupération d'urgence et de sous-réseaux multiples pour récupérer des données et pour rétablir entièrement la haute disponibilité pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et les instances de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+# <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Forcer un cluster WSFC à démarrer sans quorum
+  Cette rubrique explique comment forcer un nœud de cluster de clustering de basculement Windows Server (WSFC) à démarrer sans quorum.  Cela peut être nécessaire dans les scénarios de récupération d'urgence et de sous-réseaux multiples pour récupérer des données et pour rétablir entièrement la haute disponibilité pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et les instances de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   **Avant de commencer :**  [Recommandations](#Recommendations), [Sécurité](#Security)  
+-   **Before you start:**  [Recommendations](#Recommendations), [Security](#Security)  
   
--   **Pour forcer un cluster à démarrer sans quorum :**  [Utilisation du Gestionnaire du cluster de basculement](#FailoverClusterManagerProcedure), [Utilisation de PowerShell](#PowerShellProcedure), [Utilisation de Net.exe](#CommandPromptProcedure)  
+-   **To force a cluster to start without a quorum using:**  [Using Failover Cluster Manager](#FailoverClusterManagerProcedure), [Using Powershell](#PowerShellProcedure), [Using Net.exe](#CommandPromptProcedure)  
   
--   **Suivi :**  [Suivi : après avoir forcé le cluster à démarrer sans quorum](#FollowUp)  
+-   **Follow up:**  [Follow Up: After Forcing Cluster to Start without a Quorum](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 21
   
 ##  <a name="FailoverClusterManagerProcedure"></a> Utilisation du Gestionnaire du cluster de basculement  
   
-##### Pour forcer un cluster à démarrer sans quorum  
+##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>Pour forcer un cluster à démarrer sans quorum  
   
 1.  Ouvrez un Gestionnaire du cluster de basculement et connectez-vous au nœud de cluster souhaité pour forcer la mise en ligne.  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 21
   
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
   
-##### Pour forcer un cluster à démarrer sans quorum  
+##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>Pour forcer un cluster à démarrer sans quorum  
   
 1.  Démarrez Windows PowerShell avec élévation de privilèges via **Exécuter en tant qu'administrateur**.  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 21
   
 6.  Générez la sortie des propriétés du nœud de cluster dans un format lisible.  
   
-### Exemple (PowerShell)  
+### <a name="example-powershell"></a>Exemple (PowerShell)  
  L’exemple suivant force le service de cluster du nœud Always OnSrv02 à démarrer sans quorum, définit `NodeWeight = 1`, puis énumère l’état du nœud de cluster à partir du nœud récemment forcé.  
   
 ```powershell  
@@ -83,7 +87,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
   
 ##  <a name="CommandPromptProcedure"></a> Utilisation de Net.exe  
   
-##### Pour forcer un cluster à démarrer sans quorum  
+##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>Pour forcer un cluster à démarrer sans quorum  
   
 1.  Utilisez le Bureau à distance pour vous connecter au nœud de cluster souhaité pour forcer la mise en ligne.  
   
@@ -93,7 +97,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
   
 4.  Utilisez **net.exe** avec `/forcequorum` pour forcer le service de cluster local à démarrer.  
   
-### Exemple (Net.exe)  
+### <a name="example-netexe"></a>Exemple (Net.exe)  
  L'exemple suivant force le service de cluster d'un nœud à démarrer sans quorum, définit `NodeWeight = 1`, puis énumère l'état du nœud de cluster à partir du nœud récemment forcé.  
   
 ```ms-dos  
@@ -101,7 +105,7 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a> Suivi : après avoir forcé le cluster à démarrer sans quorum  
+##  <a name="FollowUp"></a> Suivi : après avoir forcé le cluster à démarrer sans quorum  
   
 -   Vous devez réévaluer et reconfigurer les valeurs NodeWeight pour construire correctement un nouveau quorum avant de mettre en ligne d'autres nœuds. Sinon, le cluster peut de nouveau se trouver hors connexion.  
   
@@ -109,9 +113,9 @@ net.exe start clussvc /forcequorum
   
 -   Les procédures de cette rubrique ne constituent qu'une étape de la mise en ligne du cluster WSFC si un échec non planifié du quorum se produit.  Vous pouvez aussi effectuer des étapes supplémentaires pour empêcher d'autres nœuds de cluster WSFC d'interférer avec la nouvelle configuration de quorum.  
   
--   D'autres fonctionnalités [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], telles que [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], la mise en miroir de bases de données et la copie des journaux de transaction peuvent également nécessiter les actions suivantes pour récupérer les données et rétablir entièrement la haute disponibilité.  
+-   D'autres fonctionnalités [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , telles que [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], la mise en miroir de bases de données et la copie des journaux de transaction peuvent également nécessiter les actions suivantes pour récupérer les données et rétablir entièrement la haute disponibilité.  
   
-     **Pour plus d'informations, consultez :**  
+     **Pour plus d'informations, consultez :**  
   
      [Effectuer un basculement manuel forcé d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
@@ -125,7 +129,7 @@ net.exe start clussvc /forcequorum
   
 -   [Applets de commande de cluster de basculement Get-ClusterLog](http://technet.microsoft.com/library/ee461045.aspx)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Récupération d’urgence WSFC par le quorum forcé &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [Configurer les paramètres NodeWeight pour un quorum de cluster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)   
  [Applets de commande de cluster de basculement dans Windows PowerShell répertoriées par tâche](http://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  

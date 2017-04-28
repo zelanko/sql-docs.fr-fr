@@ -1,1 +1,1 @@
-\<Token xmlns:xlink="http://www.w3.org/1999/xlink">SQL Server 2016 Reporting Services (SSRS)</Token>
+\<Jeton xmlns:xlink="http://www.w3.org/1999/xlink">SQL Server 2016 Reporting Services (SSRS)</Token>

@@ -1,28 +1,32 @@
 ---
-title: "Clustering de basculement Windows Server (WSFC) avec SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Groupes de disponibilité [SQL Server], clusters WSFC"
-  - "Clustering de basculement Windows Server (WSFC) avec SQL Server"
-  - "WSFC, avec SQL Server"
-  - "quorum [SQL Server]"
-  - "clustering de basculement [SQL Server], groupes de disponibilité AlwaysOn"
+title: Clustering de basculement Windows Server (WSFC) avec SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- Windows Server Failover Clustering (WSFC), with SQL Server
+- WSFC, with SQL Server
+- quorum [SQL Server]
+- failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 caps.latest.revision: 35
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: faf617519fde35e957969a98d2564821ee01e8a2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Clustering de basculement Windows Server (WSFC) avec SQL Server
+# <a name="windows-server-failover-clustering-wsfc-with-sql-server"></a>Clustering de basculement Windows Server (WSFC) avec SQL Server
   Un cluster *WSFC* (clustering de basculement Windows Server) est un groupe de serveurs indépendants qui fonctionnent conjointement afin d’augmenter la disponibilité des applications et des services. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tire parti des services et des fonctionnalités de WSFC afin de prendre en charge [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et les instances de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
    
@@ -31,7 +35,7 @@ caps.handback.revision: 34
  Un cluster WSFC (clustering de basculement Windows Server) est un groupe de serveurs indépendants qui fonctionnent conjointement afin d'augmenter la disponibilité des applications et des services.  
   
  Instance de cluster de basculement  
- Une instance d'un service Windows qui gère une ressource d'adresse IP, une ressource de nom réseau et des ressources supplémentaires requises pour exécuter un ou plusieurs services ou applications. Les clients peuvent utiliser le nom réseau pour accéder aux ressources du groupe, comme c'est le cas d'un nom d'ordinateur utilisé pour accéder aux services sur un serveur physique. Toutefois, comme une instance de cluster de basculement est un groupe, elle peut être basculée vers un autre nœud sans affecter le nom ou l'adresse sous-jacent.  
+ Une instance d'un service Windows qui gère une ressource d'adresse IP, une ressource de nom réseau et des ressources supplémentaires requises pour exécuter un ou plusieurs services ou applications. Les clients peuvent utiliser le nom réseau pour accéder aux ressources du groupe, comme c'est le cas d'un nom d'ordinateur utilisé pour accéder aux services sur un serveur physique. Toutefois, comme une instance de cluster de basculement est un groupe, elle peut être basculée vers un autre nœud sans affecter le nom ou l'adresse sous-jacent.  
   
  Nœud  
  Système Microsoft Windows Server qui est membre actif ou inactif d'un cluster de serveurs.  
@@ -43,10 +47,10 @@ caps.handback.revision: 34
  Collection de ressources de cluster gérée comme objet de cluster unique. Généralement, un groupe de ressources contient toutes les ressources de cluster nécessaires pour exécuter une application ou un service spécifique. Le basculement et la restauration automatique agissent toujours sur des groupes de ressources.  
   
  Dépendance de ressources  
- Ressource dont dépend une autre ressource. Si la ressource A dépend de la ressource B, alors B est une dépendance de A.  
+ Ressource dont dépend une autre ressource. Si la ressource A dépend de la ressource B, alors B est une dépendance de A.  
   
  Ressource de nom réseau  
- Nom de serveur logique qui est géré en tant que ressource de cluster. La ressource de nom réseau doit être utilisée avec une ressource d'adresse IP.  
+ Nom de serveur logique qui est géré en tant que ressource de cluster. La ressource de nom réseau doit être utilisée avec une ressource d'adresse IP.  
   
  Propriétaire favori  
  Nœud sur lequel un groupe de ressources préfère s'exécuter. Chaque groupe de ressources est associé à une liste des propriétaires favoris triés par ordre de préférence. Au cours d'un basculement automatique, le groupe de ressources est déplacé vers le nœud favori suivant dans la liste des propriétaires favoris.  
@@ -83,10 +87,10 @@ caps.handback.revision: 34
   
 > **IMPORTANT** Pour tirer pleinement parti des technologies [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn, vous devez remplir plusieurs conditions requises en rapport avec WSFC.  
 >   
->  Pour plus d’informations, consultez [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+>  Pour plus d’informations, consultez [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-### Haute disponibilité au niveau de l’instance avec des instances de cluster de basculement AlwaysOn  
- Une *instance de cluster de basculement* (FCI) AlwaysOn est une instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installée sur des nœuds dans un cluster WSFC. Ce type d'instance dispose de dépendances de ressources sur le stockage sur disque partagé (via Fibre Channel ou SAN iSCSI) et sur un nom de réseau virtuel. Le nom de réseau virtuel comporte une dépendance de ressources sur une ou plusieurs adresses IP virtuelles, chacune dans un sous-réseau différent. Le service SQL Server et le service de SQL Server Agent sont enregistrés en tant que ressources et sont rendus dépendants de la ressource de nom de réseau virtuel.  
+### <a name="instance-level-high-availability-with-always-on-failover-cluster-instances"></a>Haute disponibilité au niveau de l’instance avec des instances de cluster de basculement AlwaysOn  
+ Une *instance de cluster de basculement* (FCI) AlwaysOn est une instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installée sur des nœuds dans un cluster WSFC. Ce type d’instance dépend de ressources pour le stockage et le nom de réseau virtuel. Le stockage peut utiliser Fibre Channel, iSCSI, FCoE ou SAS pour le stockage sur disque partagé, ou encore un stockage attaché localement avec [espaces de stockage direct (S2D)](http://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview). La ressource de nom de réseau virtuel dépend d’une ou plusieurs adresses IP virtuelles situées chacune dans un sous-réseau distinct. Le service SQL Server et le service SQL Server Agent sont également des ressources. Tous deux sont dépendants des ressources de stockage et de nom de réseau virtuel.  
   
  En cas de basculement, le service WSFC transfère la propriété des ressources de l'instance à un nœud de basculement indiqué. L'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est ensuite redémarrée sur le nœud de basculement, et les bases de données sont récupérées comme à l'accoutumée. À un moment donné, seul un nœud dans le cluster peut héberger l'instance FCI et les ressources sous-jacentes.  
   
@@ -94,7 +98,7 @@ caps.handback.revision: 34
   
  Pour plus d’informations, consultez [Instances de cluster de basculement Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
-### Haute disponibilité de niveau base de données avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]  
+### <a name="database-level-high-availability-with-includesshadrincludessshadr-mdmd"></a>Haute disponibilité de niveau base de données avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]  
  Un *groupe de disponibilité* est un ensemble de bases de données utilisateur qui basculent de concert. Un groupe de disponibilité comprend un *réplica de disponibilité* principal et un à quatre réplicas secondaires qui sont conservés par le biais des déplacements de données enregistrés dans le journal SQL Server pour la protection des données sans qu’un stockage partagé soit requis. Chaque réplica est hébergé par une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur un autre nœud du cluster WSFC. Le groupe de disponibilité et un nom de réseau virtuel correspondant sont inscrits en tant que ressources dans le cluster WSFC.  
   
  Un *écouteur de groupe de disponibilité* sur le nœud du réplica principal répond aux requêtes client entrantes pour la connexion au nom de réseau virtuel et, selon les attributs figurant dans la chaîne de connexion, il redirige chaque requête vers l'instance appropriée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -103,7 +107,7 @@ caps.handback.revision: 34
   
  À un moment donné, seule une instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut héberger le réplica principal des bases de données d'un groupe de disponibilité, tous les réplicas secondaires associés doivent résider sur une instance distincte et chaque instance doit résider sur des nœuds physiques distincts.  
   
-> **REMARQUE :** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ne nécessite pas le déploiement d’une instance de cluster de basculement ni l’utilisation du stockage symétrique (SAN ou SMB).  
+> **NOTE:** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] do not require deployment of a Failover Cluster Instance or use of symmetric shared storage (SAN or SMB).  
 >   
 >  Une instance de cluster de basculement (FCI) peut être utilisée avec un groupe de disponibilité afin d'améliorer la disponibilité d'un réplica de disponibilité. Toutefois, pour empêcher des conditions de concurrence potentielles dans le cluster WSFC, le basculement automatique du groupe de disponibilité n'est pas pris en charge dans ou à partir d'un réplica de disponibilité qui réside sur une instance FCI.  
   
@@ -112,19 +116,19 @@ caps.handback.revision: 34
 ##  <a name="AlwaysOnWsfcHealth"></a> Contrôle d'intégrité de WSFC et basculement  
  La haute disponibilité d’une solution AlwaysOn tient au contrôle d’intégrité proactif des ressources de cluster WSFC physiques et logiques, ainsi qu’au basculement automatique et à la reconfiguration du matériel redondant.  Un administrateur système peut également initier un *basculement manuel* d'un groupe de disponibilité ou d'une instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d'un nœud vers un autre.  
   
-### Stratégies de basculement pour les nœuds, les instances de cluster de basculement et les groupes de disponibilité  
+### <a name="failover-policies-for-nodes-failover-cluster-instances-and-availability-groups"></a>Stratégies de basculement pour les nœuds, les instances de cluster de basculement et les groupes de disponibilité  
  Une *stratégie de basculement* est configurée au niveau du nœud de cluster WSFC, de l’instance de cluster de basculement (FCI) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et aux niveaux du groupe de disponibilité.  Ces stratégies, selon la gravité, la durée et la fréquence d'un état de ressource de cluster défectueux et la réactivité de nœud, peuvent déclencher le redémarrage d'un service ou le *basculement automatique* de ressources de cluster d'un nœud vers un autre, ou elles peuvent déclencher le déplacement d'un réplica principal de groupe de disponibilité d'une instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers une autre.  
   
  Le basculement d'un réplica de groupe de disponibilité n'affecte pas l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sous-jacente.  Le basculement d'une instance FCI déplace les réplicas de groupe de disponibilité hébergés avec l'instance.  
   
  Pour plus d’informations, consultez [Stratégie de basculement pour les instances de cluster de basculement](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md).  
   
-### Détection d'intégrité des ressources WSFC  
- Chaque ressource dans un nœud de cluster WSFC peut signaler son état et son intégrité, de manière régulière ou à la demande. D'autres circonstances peuvent indiquer un échec de la ressource : par exemple, une faille de l'alimentation, des erreurs de disque ou de la mémoire, des erreurs de communication réseau ou des services non réactifs.  
+### <a name="wsfc-resource-health-detection"></a>Détection d'intégrité des ressources WSFC  
+ Chaque ressource dans un nœud de cluster WSFC peut signaler son état et son intégrité, de manière régulière ou à la demande. D'autres circonstances peuvent indiquer un échec de la ressource : par exemple, une faille de l'alimentation, des erreurs de disque ou de la mémoire, des erreurs de communication réseau ou des services non réactifs.  
   
  Les ressources de cluster WSFC telles que les réseaux, le stockage ou les services peuvent être rendues dépendantes les unes des autres. L'intégrité cumulative d'une ressource est déterminée en regroupant successivement son intégrité avec l'intégrité de chacune de ses dépendances de ressource.  
   
-### Détection d'intégrité entre les nœuds WSFC et vote du quorum  
+### <a name="wsfc-inter-node-health-detection-and-quorum-voting"></a>Détection d'intégrité entre les nœuds WSFC et vote du quorum  
  Chaque nœud d'un cluster WSFC participe à la communication périodique de pulsation pour partager l'état d'intégrité du nœud avec les autres nœuds. Les nœuds qui ne répondent pas sont considérés comme étant en état d'échec.  
   
  Un ensemble de nœuds de *quorum* est une majorité des nœuds votants et des témoins dans le cluster WSFC. L'intégrité globale et le statut d'un cluster WSFC sont déterminés par un *vote de quorum*périodique. La présence d'un quorum signifie que le cluster est intègre et en mesure d'assurer la tolérance aux pannes au niveau du nœud.  
@@ -135,7 +139,7 @@ caps.handback.revision: 34
 >   
 >  Pour plus d’informations, consultez [Modes de quorum WSFC et configuration de vote (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
-### Récupération d'urgence par le quorum forcé  
+### <a name="disaster-recovery-through-forced-quorum"></a>Récupération d'urgence par le quorum forcé  
  En fonction des pratiques opérationnelles et de la configuration de cluster WSFC, vous pouvez procéder à des basculements automatiques et manuels, tout en conservant une solution AlwaysOn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fiable et à tolérance de pannes. Cependant, si un quorum des nœuds de vote éligibles dans le cluster WSFC ne peut pas communiquer avec un autre, ou si le cluster WSFC échoue lors de la validation d'intégrité, le cluster WSFC peut être mis hors connexion.  
   
  Si le cluster WSFC est mis hors connexion en raison d’un problème grave non planifié, ou en raison d’un problème de matériel ou de communication persistant, une intervention administrative manuelle est nécessaire pour *forcer un quorum* et remettre les nœuds de cluster survivants en ligne dans une configuration sans tolérance de panne.  
@@ -145,16 +149,16 @@ caps.handback.revision: 34
  Pour plus d’informations, consultez [Récupération d’urgence WSFC par le quorum forcé (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
   
 ##  <a name="AlwaysOnWsfcRelationship"></a> Relation des composants AlwaysOn de SQL Server avec WSFC  
- Plusieurs couches de relations existent entre les fonctionnalités et les composants WSFC et AlwaysOn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Plusieurs couches de relations existent entre les fonctionnalités et les composants WSFC et AlwaysOn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- Les groupes de disponibilité AlwaysOn sont hébergés sur des instances [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
- Une requête d'un client qui spécifie un nom réseau d'écouteur de groupe de disponibilité logique pour se connecter à une base de données principale ou secondaire est acheminée vers le nom de réseau d'instance approprié de l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sous-jacente ou de l'instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Les groupes de disponibilité AlwaysOn sont hébergés sur des instances [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ Une requête d'un client qui spécifie un nom réseau d'écouteur de groupe de disponibilité logique pour se connecter à une base de données principale ou secondaire est acheminée vers le nom de réseau d'instance approprié de l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sous-jacente ou de l'instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Les instances SQL Server sont hébergées activement sur un nœud unique.  
  Si elle est présente, une instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autonome réside toujours sur un nœud unique avec un nom réseau d'instance statique.  Si elle est présente, une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est active sur l'un des deux nœuds ou plus de basculement possibles avec un nom réseau d'instance virtuel unique.  
   
  Les nœuds sont membres d'un cluster WSFC.  
- Les métadonnées et l'état de la configuration WSFC pour tous les nœuds sont stockés sur chaque nœud. Chaque serveur peut fournir des volumes de stockage ou de stockage partagé asymétriques (SAN) pour les bases de données utilisateur ou système. Chaque serveur possède au moins une interface réseau physique sur un ou plusieurs sous-réseaux IP.  
+ Les métadonnées et l'état de la configuration WSFC pour tous les nœuds sont stockés sur chaque nœud. Chaque serveur peut fournir des volumes de stockage ou de stockage partagé asymétriques (SAN) pour les bases de données utilisateur ou système. Chaque serveur possède au moins une interface réseau physique sur un ou plusieurs sous-réseaux IP.  
   
  Le service WSFC surveille l'intégrité et gère la configuration d'un groupe de serveurs.  
  Le service WSFC (Windows Server Failover Cluster) propage les modifications apportées aux métadonnées et à l'état de la configuration WSFC à tous les nœuds du cluster. Les métadonnées partielles et l'état peuvent être stockés sur un partage de fichiers distant témoin du quorum WSFC. Deux ou plusieurs nœuds actifs ou témoins constituent un quorum de vote pour l'intégrité du cluster WSFC.  
@@ -162,7 +166,7 @@ caps.handback.revision: 34
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sont des sous-clés du cluster WSFC.  
  Si vous supprimez et recréez un cluster WSFC, vous devez désactiver puis réactiver la fonctionnalité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sur chaque instance de serveur pour laquelle [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] était activé sur le cluster WSFC d'origine. Pour plus d’informations, consultez [Activer et désactiver les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
- ![Diagramme du contexte du composant SQL Server AlwaysOn](../../../sql-server/failover-clusters/windows/media/alwaysoncomponentcontextdiagram.gif "Diagramme du contexte du composant SQL Server AlwaysOn")  
+ ![Diagramme de contexte du composant SQL Server AlwaysOn](../../../sql-server/failover-clusters/windows/media/alwaysoncomponentcontextdiagram.gif "Diagramme de contexte du composant SQL Server AlwaysOn")  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   
@@ -174,19 +178,22 @@ caps.handback.revision: 34
   
 ##  <a name="RelatedContent"></a> Contenu connexe  
   
--   [Technologies de Windows Server : clusters de basculement](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
-  
--   [Clusters de basculement dans Windows Server 2008 R2](http://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
+-   [Technologies de Windows Server : clusters de basculement](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+
+-   [Espaces de stockage direct \(S2D\) Vue d’ensemble](http://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)
+
+-   [Clusters de basculement dans Windows Server 2008 R2](http://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
   
 -   [Afficher les événements et journaux pour un cluster de basculement](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
 -   [Applets de commande de cluster de basculement Get-ClusterLog](http://technet.microsoft.com/library/ee461045.aspx)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Instances de cluster de basculement Always On (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [Vue d’ensemble des groupes de disponibilité Always On (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Modes de quorum WSFC et configuration de vote (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [Stratégie de basculement pour les instances de cluster de basculement](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
- [Récupération d'urgence WSFC par le quorum forcé (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
+ [Récupération d’urgence WSFC par le quorum forcé (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
+ [SQL  Server 2016 prend en charge la fonctionnalité Espaces de stockage direct de Windows Server 2016](http://blogs.technet.microsoft.com/dataplatforminsider/2016/09/27/sql-server-2016-now-supports-windows-server-2016-storage-spaces-direct/)
   
-  
+

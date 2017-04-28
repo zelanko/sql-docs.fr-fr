@@ -1,32 +1,36 @@
 ---
-title: "Ajouter des d&#233;pendances &#224; une ressource SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dépendances de ressource [SQL Server]"
-  - "clustering de basculement [SQL Server], dépendances"
-  - "clusters [SQL Server], dépendances"
-  - "dépendances [SQL Server], clustering"
+title: "Ajouter des dépendances à une ressource SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resource dependencies [SQL Server]
+- failover clustering [SQL Server], dependencies
+- clusters [SQL Server], dependencies
+- dependencies [SQL Server], clustering
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 caps.latest.revision: 33
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: bffe545296432d465fd744092519c9882ccc04c1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ajouter des d&#233;pendances &#224; une ressource SQL Server
+# <a name="add-dependencies-to-a-sql-server-resource"></a>Ajouter des dépendances à une ressource SQL Server
   Cette rubrique explique comment ajouter des dépendances à une ressource d’instance de cluster de basculement (FCI) Always On à l’aide du composant logiciel enfichable Gestionnaire du cluster de basculement. Le composant logiciel enfichable Gestionnaire du cluster de basculement est l'application de gestion du service de cluster de basculement Windows Server (WSFC).  
   
--   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [Conditions préalables requises](#Prerequisites)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Prerequisites](#Prerequisites)  
   
--   **Pour ajouter une dépendance à une ressource SQL Server à l'aide du** [Gestionnaire du cluster de basculement Windows](#WinClusManager)  
+-   **To add a dependency to a SQL Server resource, using:** [Windows Failover Cluster Manager](#WinClusManager)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -41,7 +45,7 @@ caps.handback.revision: 33
   
 -   Le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut échouer. Si ce problème se produit, vous ne pouvez pas installer d'autres instances [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou effectuer des opérations de maintenance régulière.  
   
- Tenez compte de ces problèmes supplémentaires :  
+ Tenez compte de ces problèmes supplémentaires :  
   
 -   FTP avec la réplication [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] : pour les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui utilisent FTP avec la réplication [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , votre service FTP doit utiliser un des mêmes disques physiques que pour l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurée pour utiliser le service FTP.  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 33
   
 -   Ressources de partage de fichiers ou d'imprimantes : lorsque vous installez des ressources de partage de fichiers ou de clusters d'imprimantes, celles-ci ne doivent pas se trouver sur les mêmes ressources des disques physiques que l'ordinateur qui exécute [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si elles se trouvent sur les ressources des disques physiques, vous pouvez constater une dégradation des performances et une perte des services sur l'ordinateur qui exécute [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   Considérations relatives à MS DTC : après avoir installé le système d'exploitation et configuré votre FCI, vous devez configurer le Coordinateur de transactions distribuées (MS DTC) de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] pour travailler dans un cluster à l'aide du composant logiciel enfichable Gestionnaire du cluster de basculement. L'échec de la mise en cluster de MS DTC ne bloquera pas l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mais les fonctionnalités des applications [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent être affectées si MS DTC n'est pas configuré correctement.  
+-   Considérations relatives à MS DTC : après avoir installé le système d'exploitation et configuré votre FCI, vous devez configurer le Coordinateur de transactions distribuées (MS DTC) de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] pour travailler dans un cluster à l'aide du composant logiciel enfichable Gestionnaire du cluster de basculement. L'échec de la mise en cluster de MS DTC ne bloquera pas l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , mais les fonctionnalités des applications [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent être affectées si MS DTC n'est pas configuré correctement.  
   
      Si vous installez MS DTC dans votre groupe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et si d'autres ressources dépendent de MS DTC, MS DTC ne sera pas disponible si ce groupe est hors connexion ou lors d'un basculement. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recommande de placer MS DTC dans un groupe distinct avec sa propre ressource de disque physique, si possible.  
   
@@ -63,7 +67,7 @@ caps.handback.revision: 33
   
 -   Recherchez le groupe qui contient la ressource [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] applicable que vous voulez rendre dépendante.  
   
--   Si la ressource du disque se trouve déjà dans ce groupe, passez à l'étape 4.  Sinon, recherchez le groupe qui contient le disque. Si ce groupe et le groupe qui contient [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'appartiennent pas au même nœud, déplacez le groupe qui contient la ressource du disque vers le nœud propriétaire du groupe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+-   Si la ressource du disque se trouve déjà dans ce groupe, passez à l'étape 4. Sinon, recherchez le groupe qui contient le disque. Si ce groupe et le groupe qui contient [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'appartiennent pas au même nœud, déplacez le groupe qui contient la ressource du disque vers le nœud propriétaire du groupe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   Sélectionnez la ressource [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ouvrez la boîte de dialogue **Propriétés** et utilisez l'onglet **Dépendances** pour ajouter le disque à l'ensemble de dépendances [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   

@@ -1,24 +1,28 @@
 ---
-title: "Notes de publication de SQL Server&#160;2016 | Microsoft Docs"
-ms.date: "11/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "server-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "notes de build"
-  - "problèmes de cette version"
+title: "Notes de publication de SQL Server 2016 | Microsoft Docs"
+ms.date: 11/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- server-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- build notes
+- release issues
 ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 caps.latest.revision: 276
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
-caps.handback.revision: 276
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0447dd94774287a71028252723508ebc5e2e50f8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Notes de publication de SQL Server&#160;2016
+# <a name="sql-server-2016-release-notes"></a>Notes de publication de SQL Server 2016
   Cette rubrique décrit les limitations et les problèmes de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .    
     
  **Essayez-le :**    
@@ -27,25 +31,25 @@ caps.handback.revision: 276
     
 [![Machine virtuelle Azure de petite taille](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Vous avez un compte Azure ?  Cliquez **[ici](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** pour lancer une machine virtuelle avec SQL Server 2016 SP1 déjà installé.
     
-[![Télécharger SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **SSMS :** pour obtenir la dernière version de SQL Server Management Studio, consultez **[Télécharger SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)**.   
+[![Download SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **SSMS:** To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)**.   
     
- Pour plus d’informations sur les nouveautés, consultez [Nouveautés de SQL Server 2016](What's%20New%20in%20Report%20Builder%20for%20SQL%20Server%202016.md).
+ Pour plus d’informations sur les nouveautés, consultez [Nouveautés de SQL Server 2016](http://msdn.microsoft.com/library/8223c19b-4b0d-4b1d-a042-9a726c18e708).
     
-##  <a name="a-namebkmktopa-sections-in-this-topic"></a><a name="bkmk_top"></a> Sections de cette rubrique :    
+##  <a name="bkmk_top"></a> Sections In this topic:    
 
 -   [SQL Server 2016 Service Pack 1 (SP1) disponible](#bkmk_2016sp1)    
 -   [Disponibilité générale (DG) de SQL Server 2016](#bkmk_2016_ga) 
 -   [SQL Server 2016 version Release Candidate 3 (RC3)](#bkmk_2016_rc3)     
 
-## <a name="a-namebkmk2016sp1asql-server-2016-service-pack-1-sp1-available"></a><a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1) disponible
+## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1) disponible
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 permet la mise à niveau de l’ensemble des éditions et niveaux de service de SQL Server 2016 vers SQL Server 2016 SP1. En plus des correctifs présentés dans cet article, SQL Server 2016 SP1 inclut les correctifs logiciels qui étaient inclus dans les mises à jour cumulatives (CU) 1 à 3 de SQL Server 2016.
     
 - [Page de téléchargement de SQL Server 2016 SP1](https://www.microsoft.com/en-us/download/details.aspx?id=54276)
 - [SQL Server 2016 Service Pack 1 - Informations sur la version](https://support.microsoft.com/en-us/kb/3182545) Répertorie les numéros de bogue et les problèmes individuels qui ont été résolus ou modifiés dans la version SP1.
- - ![info_tip](../sql-server/media/info-tip.png) Consultez le [Centre de mise à jour SQL Server](https://msdn.microsoft.com/library/ff803383.aspx) pour obtenir des liens et des informations concernant toutes les versions prises en charge, y compris les Service Packs de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]. 
+ - ![info_tip](../sql-server/media/info-tip.png) See the [SQL Server Update Center](https://msdn.microsoft.com/library/ff803383.aspx) for links and information for all supported versions, inlcuding service packs of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 
     
     
-##  <a name="a-namebkmk2016gaa-sql-server-2016-release---general-availability-ga"></a><a name="bkmk_2016_ga"></a> SQL Server 2016 – Disponibilité générale (DG)
+##  <a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
 -   [Moteur de base de données (DG)](#bkmk_ga_instalpatch) 
 
 -   [Stretch Database (DG)](#bkmk_ga_stretch)
@@ -54,8 +58,8 @@ caps.handback.revision: 276
 
 -   [Documentation du produit (DG)](#bkmk_ga_docs)
  
-### <a name="repliconwarnimagerepliconwarngif-a-namebkmkgainstalpatcha-install-patch-requirement-ga"></a>![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.png) <a name="bkmk_ga_instalpatch"></a> Installation exigée du correctif (DG) 
-**Problème et impact sur le client :** Microsoft a identifié un problème qui affecte les fichiers binaires Microsoft VC ++ 2013 Runtime qui sont installés en tant que composants requis par SQL Server 2016. Une mise à jour est disponible pour résoudre ce problème. Si cette mise à jour des fichiers binaires du runtime VC n’est pas installée, SQL Server 2016 risque de rencontrer des problèmes de stabilité dans certains scénarios. Avant d’installer SQL Server 2016, vérifiez si l’ordinateur a besoin du correctif décrit dans l’[article 3164398 de la Base de connaissances](http://support.microsoft.com/kb/3164398). Le correctif est également inclus dans [Package de mises à jour cumulatives 1 (CU1) pour SQL Server 2016 RTM](https://www.microsoft.com/en-us/download/details.aspx?id=53338). 
+### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA) 
+**Problème et impact sur le client :** Microsoft a identifié un problème qui affecte les fichiers binaires Microsoft VC ++ 2013 Runtime qui sont installés en tant que composants requis par SQL Server 2016. Une mise à jour est disponible pour résoudre ce problème. Si cette mise à jour des fichiers binaires du runtime VC n’est pas installée, SQL Server 2016 risque de rencontrer des problèmes de stabilité dans certains scénarios. Avant d’installer SQL Server 2016, vérifiez si l’ordinateur a besoin du correctif décrit dans l’ [article 3164398 de la Base de connaissances](http://support.microsoft.com/kb/3164398). Le correctif est également inclus dans [Package de mises à jour cumulatives 1 (CU1) pour SQL Server 2016 RTM](https://www.microsoft.com/en-us/download/details.aspx?id=53338). 
 
 **Résolution :** procédez de l’une des façons suivantes :
 
@@ -69,7 +73,7 @@ caps.handback.revision: 276
     1.  Redémarrez l'ordinateur.
  
 
- - Installez [KB 3164398 – Mise à jour critique pour les composants requis MSVCRT de SQL Server 2016](http://support.microsoft.com/kb/3164398).  
+ - Installez  [KB 3164398 – Mise à jour critique pour les composants requis MSVCRT de SQL Server 2016](http://support.microsoft.com/kb/3164398).  
  
     Si vous utilisez **KB 3164398**, vous pouvez l’installer en même temps que SQL Server, via Microsoft Update ou à partir du Centre de téléchargement Microsoft. 
 
@@ -80,7 +84,7 @@ caps.handback.revision: 276
     - **Centre de téléchargement :** enfin, la mise à jour est accessible à partir du Centre de téléchargement Microsoft. Vous pouvez télécharger le logiciel nécessaire à la mise à jour et l’installer sur les serveurs équipés de SQL Server 2016. 
 
 
-### <a name="a-namebkmkgastretchastretch-database"></a><a name="bkmk_ga_stretch"></a>Stretch Database
+### <a name="bkmk_ga_stretch"></a>Stretch Database
 
 #### <a name="problem-with-a-specific-character-in-a-database-or-table-name"></a>Problème lié à la présence d’un caractère spécifique dans le nom d’une base de données ou d’une table
 
@@ -94,7 +98,7 @@ caps.handback.revision: 276
 
 **Solution de contournement :** supprimez l’index qui utilise le mot clé INCLUDE, activez Stretch Database sur la table, puis recréez l’index. Dans ce cas, veillez à suivre les pratiques et stratégies de maintenance de votre organisation pour limiter autant que possible ou éviter tout impact sur les utilisateurs de la table concernée.
 
-### <a name="a-namebkmkgaquerystoreaquery-store"></a><a name="bkmk_ga_query_store"></a>Magasin de requêtes
+### <a name="bkmk_ga_query_store"></a>Query Store
 
 #### <a name="problem-with-automatic-data-cleanup-on-editions-other-than-enterprise-and-developer"></a>Problème de nettoyage de données automatique sur les éditions autres que Enterprise et Developer
 
@@ -117,12 +121,12 @@ De même, exécutez les procédures stockées ci-dessous du magasin de requêtes
 -    ```sp_query_store_remove_query```
 
 
-###  <a name="a-namebkmkgadocsa-product-documentation-ga"></a><a name="bkmk_ga_docs"></a>Documentation du produit (DG) 
+###  <a name="bkmk_ga_docs"></a> Documentation du produit (DG) 
  **Problème et impact sur le client :** la version téléchargeable de la documentation de SQL Server 2016 n’est pas encore disponible. Quand vous utilisez le Gestionnaire de bibliothèque d’aide pour **installer du contenu à partir d’une source en ligne**, vous voyez la documentation de SQL Server 2012 et SQL Server 2014, mais il n’existe aucune option pour la documentation de SQL Server 2016.    
     
  **Solution de contournement :** utilisez l’une des options suivantes :    
     
- ![Manage Help Settings for SQL Server](../sql-server/media/docs-sql2016-managehelpsettings.png "Manage Help Settings for SQL Server")    
+ ![Gérer les paramètres de l’aide pour SQL Server](../sql-server/media/docs-sql2016-managehelpsettings.png "Gérer les paramètres de l’aide pour SQL Server")    
     
 -   Utilisez l’option **Choisir l’aide en ligne ou locale** , puis sélectionnez « Utiliser l’aide en ligne ».    
     
@@ -140,17 +144,17 @@ Dans SQL Server Management Studio et Visual Studio, l’application Visionneuse 
      Cache LastRefreshed="12/31/2017 00:00:00"    
 ``` 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png "horizontal_bar")  
-##  <a name="a-namebkmk2016rc3a-sql-server-2016-release-candidate-3-rc3"></a><a name="bkmk_2016_rc3"></a> SQL Server 2016 version Release Candidate 3 (RC3)    
+##  <a name="bkmk_2016_rc3"></a> SQL Server 2016 version Release Candidate 3 (RC3)    
 -   [Documentation du produit (RC2)](#bkmk_rc3_docs)    
 -   [PolyBase (RC3)](#bkmk_rc3_polybase) 
 
     
-###  <a name="a-namebkmkrc3docsa-product-documentation-rc3"></a><a name="bkmk_rc3_docs"></a> Documentation du produit (RC3)    
+###  <a name="bkmk_rc3_docs"></a> Product Documentation (RC3)    
  **Problème et impact sur le client :** la version téléchargeable de la documentation de SQL Server 2016 n’est pas encore disponible. Quand vous utilisez le Gestionnaire de bibliothèque d’aide pour **installer du contenu à partir d’une source en ligne**, vous voyez la documentation de SQL Server 2012 et SQL Server 2014, mais il n’existe aucune option pour la documentation de SQL Server 2016.    
     
  **Solution de contournement :** utilisez l’une des options suivantes :    
     
- ![Manage Help Settings for SQL Server](../sql-server/media/docs-sql2016-managehelpsettings.png "Manage Help Settings for SQL Server")    
+ ![Gérer les paramètres de l’aide pour SQL Server](../sql-server/media/docs-sql2016-managehelpsettings.png "Gérer les paramètres de l’aide pour SQL Server")    
     
 -   Utilisez l’option **Choisir l’aide en ligne ou locale** , puis sélectionnez « Utiliser l’aide en ligne ».    
     
@@ -168,10 +172,10 @@ Dans SQL Server Management Studio et Visual Studio, l’application Visionneuse 
      Cache LastRefreshed="12/31/2017 00:00:00"    
 ```    
     
-###  <a name="a-namebkmkrc3polybasea-polybase-rc3"></a><a name="bkmk_rc3_polybase"></a> PolyBase (RC3)        
+###  <a name="bkmk_rc3_polybase"></a> PolyBase (RC3)        
  Les requêtes PolyBase peuvent échouer après une mise à niveau de RC1 ou de versions précédentes.    
     
- **Problème et impact sur le client** : après une mise à niveau de SQL Server 2016 RC1 ou d’une version précédente, les requêtes PolyBase, l’importation et l’exportation peuvent échouer avec l’erreur suivante : « Erreur interne du processeur de requêtes : le processeur de requêtes a rencontré une erreur inattendue pendant le traitement d’une phase de la requête distante ».    
+ **Problème et impact sur le client**: après une mise à niveau de SQL Server 2016 RC1 ou d’une version précédente, les requêtes PolyBase, l’importation et l’exportation peuvent échouer avec l’erreur suivante : « Erreur interne du processeur de requêtes : le processeur de requêtes a rencontré une erreur inattendue pendant le traitement d’une phase de la requête distante ».    
     
  **Solution de contournement**    
     
@@ -179,7 +183,7 @@ Dans SQL Server Management Studio et Visual Studio, l’application Visionneuse 
     
 -   Réinstallez PolyBase. Exécutez le programme d’installation et ajoutez la fonctionnalité PolyBase sur la même instance SQL Server.    
     
- **S’applique à** : SQL Server 2016 RC3 lors de la mise à niveau de RC1 ou de versions précédentes.    
+ **S’applique à**: SQL Server 2016 RC3 lors de la mise à niveau de RC1 ou de versions précédentes.    
  
 ## <a name="additional-information"></a>Informations supplémentaires
 - [Installation de SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)
@@ -187,3 +191,4 @@ Dans SQL Server Management Studio et Visual Studio, l’application Visionneuse 
  ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png "MS_Logo_X-Small")    
     
   
+
