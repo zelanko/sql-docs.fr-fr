@@ -1,40 +1,44 @@
 ---
-title: "Utiliser l&#39;Assistant Indexation de texte int&#233;gral | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.fulltextindexingwizard.welcome.f1"
-  - "sql13.swb.fulltextindexingwizard.selectorcreatepopschedules.f1"
-  - "sql13.swb.fulltextindexingwizard.progress.f1"
-  - "sql13.swb.fulltextindexingwizard.selectchangetracking.f1"
-  - "sql13.swb.fulltextindexingwizard.selectacatalog.f1"
-  - "sql13.swb.fulltextindexingwizard.selectatableorview.f1"
-  - "sql13.swb.fulltextindexingwizard.selectanindex.f1"
-  - "sql13.swb.fulltextindexingwizard.summary.f1"
-  - "sql13.swb.fulltextindexingwizard.selecttablecolumns.f1"
-helpviewer_keywords: 
-  - "Assistant Indexation de texte intégral"
-  - "recherche en texte intégral [SQL Server], Assistant Indexation de texte intégral"
+title: "Utiliser l’Assistant Indexation de texte intégral | Microsoft Docs"
+ms.custom: 
+ms.date: 08/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.fulltextindexingwizard.welcome.f1
+- sql13.swb.fulltextindexingwizard.selectorcreatepopschedules.f1
+- sql13.swb.fulltextindexingwizard.progress.f1
+- sql13.swb.fulltextindexingwizard.selectchangetracking.f1
+- sql13.swb.fulltextindexingwizard.selectacatalog.f1
+- sql13.swb.fulltextindexingwizard.selectatableorview.f1
+- sql13.swb.fulltextindexingwizard.selectanindex.f1
+- sql13.swb.fulltextindexingwizard.summary.f1
+- sql13.swb.fulltextindexingwizard.selecttablecolumns.f1
+helpviewer_keywords:
+- Full-Text Indexing Wizard
+- full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: dd4ac1d2f93c1fa776473cdc7b1b99a07b5f8164
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utiliser l&#39;Assistant Indexation de texte int&#233;gral
+# <a name="use-the-full-text-indexing-wizard"></a>Utiliser l'Assistant Indexation de texte intégral
   L’Assistant Indexation de texte intégral de SSMS vous guide tout au long d’une série d’étapes destinées à vous aider à créer un index de texte intégral.  
   
-## Créer un index de recherche en texte intégral 
+## <a name="create-a--full-text-index"></a>Créer un index de recherche en texte intégral 
 
-1. Dans l’Explorateur d’objets, cliquez avec le bouton droit sur la table sur laquelle vous souhaitez créer un index de recherche en texte intégral, pointez sur **Index de recherche en texte intégral**, puis cliquez sur **Define Full-Text Index** (Définir l’index de recherche en texte intégral). L’Assistant s’ouvre alors dans une fenêtre distincte.
+1. Dans l’Explorateur d’objets, cliquez avec le bouton droit sur la table sur laquelle vous souhaitez créer un index de recherche en texte intégral, pointez sur **Index de recherche en texte intégral**, puis cliquez sur **Define Full-Text Index**(Définir l’index de recherche en texte intégral). L’Assistant s’ouvre alors dans une fenêtre distincte.
    Cliquez sur Suivant. 
   
 2. **Index unique.**  Sélectionnez un index dans la liste déroulante. Cet index doit être un index unique, n'acceptant pas les valeurs Null, avec une colonne à clé unique. Sélectionnez le plus petit index de clé unique comme clé unique de texte intégral. Pour optimiser les performances, un index cluster est recommandé.  
@@ -44,7 +48,7 @@ caps.handback.revision: 24
 4. **Langue pour l’analyseur lexical.** Sélectionnez une langue dans la liste déroulante. Cette option sera utilisée pour identifier les analyseurs lexicaux appropriés pour l’index. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des analyseurs lexicaux pour identifier les limites des mots dans les données indexées en texte intégral.  
   
 5.  **Colonne de type.** Sélectionnez le nom de la colonne qui contient le type de document de la colonne indexée en texte intégral.  
-> **REMARQUE :** L’option **Colonne de type** est activée uniquement quand la colonne nommée dans la colonne **Colonnes disponibles** est de type **varbinary(max)** ou **image**.  
+> **REMARQUE :** L’option  **Colonne de type** est activée uniquement quand la colonne nommée dans la colonne **Colonnes disponibles** est de type **varbinary(max)** ou **image**.  
   
 6. **Sémantique statistique.** Sélectionnez s'il faut activer l'indexation sémantique pour la colonne sélectionnée. Pour plus d’informations, consultez [Recherche sémantique &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
@@ -71,13 +75,13 @@ caps.handback.revision: 24
      
      Cliquez sur Suivant.
   
-## Catalogue, groupe de fichiers d’index et liste de mots vides   
+## <a name="catalog-index-filegroup-and-stoplist"></a>Catalogue, groupe de fichiers d’index et liste de mots vides   
   
 9.  **Sélectionner un catalogue de recherche en texte intégral**  
 
      **Sélectionner un catalogue :** Sélectionnez un catalogue de texte intégral dans la liste. Le catalogue par défaut pour la base de données devient l'élément sélectionné par défaut dans la liste. Si aucun catalogue n’est disponible, cette dernière est désactivée, et la case **Créer un nouveau catalogue** est cochée, mais désactivée.  
   
-  - ou -
+  ou
   
  10. **Créer un nouveau catalogue**
  - Sélectionnez un catalogue de recherche en texte intégral.  
@@ -97,7 +101,7 @@ caps.handback.revision: 24
      e. Sélectionner une valeur :  
     |Valeur|Description|  
     |-----------|-----------------|
-      |**\<paramètre par défaut>**| Si la table ou la vue n'est pas partitionnée, sélectionnez cette option pour utiliser le même groupe de fichiers que la table ou la vue sous-jacente. Si la table ou la vue est partitionnée, le groupe de fichiers primaire est utilisé.|
+      |**<default>**| Si la table ou la vue n'est pas partitionnée, sélectionnez cette option pour utiliser le même groupe de fichiers que la table ou la vue sous-jacente. Si la table ou la vue est partitionnée, le groupe de fichiers primaire est utilisé.|
       |**PRIMARY**|Sélectionnez cette option pour utiliser le groupe de fichiers primaire pour le nouvel index de recherche en texte intégral.|
              *groupe de fichiers par défaut spécifié par l’utilisateur*|S'il existe une liste de mots vides par défaut définie par l'utilisateur, sélectionnez son nom dans la liste pour utiliser ce groupe de fichiers pour le nouvel index de recherche en texte intégral.|  
   
@@ -107,12 +111,12 @@ caps.handback.revision: 24
   
      Les mots vides sont gérés dans des bases de données à l'aide d'objets appelés des listes de mots vides. Une *liste de mots vides* est une liste qui, associée à un index de recherche en texte intégral, s’applique aux requêtes de texte intégral sur cet index. Pour plus d’informations, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
-     Sélectionnez l'une des valeurs suivantes :  
+     Sélectionnez l'une des valeurs suivantes :  
   
    |Valeur|Description|  
     |-----------|-----------------|  
-    |**\<système>**|Sélectionnez cette option pour utiliser la liste de mots vides système sur le nouvel index de recherche en texte intégral. Il s'agit du paramètre par défaut.|  
-    |**\<désactivé>**|Sélectionnez cette option pour désactiver des listes de mots vides pour le nouvel index de recherche en texte intégral.|  
+    |**<system>**|Sélectionnez cette option pour utiliser la liste de mots vides système sur le nouvel index de recherche en texte intégral. Il s'agit du paramètre par défaut.|  
+    |**<off>**|Sélectionnez cette option pour désactiver des listes de mots vides pour le nouvel index de recherche en texte intégral.|  
     |*user-defined-stoplist-name*|La liste affiche le nom de chaque liste de mots vides définie par l'utilisateur, le cas échéant, qui a été créée sur la base de données. Sélectionnez une liste de mots vides définie par l'utilisateur à utiliser pour le nouvel index de recherche en texte intégral.|  
   
   Cliquez sur Suivant.
@@ -140,3 +144,4 @@ caps.handback.revision: 24
      Lorsque toutes les opérations ont fini de s'exécuter, cliquez sur ce bouton pour accéder à un rapport sur les opérations effectuées. Vous pouvez afficher le rapport, l'imprimer dans un fichier, le copier dans le Presse-papiers ou l'envoyer par courrier électronique.  
   
   
+

@@ -1,35 +1,39 @@
 ---
-title: "Rechercher du texte avec des expressions r&#233;guli&#232;res | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vsregularexpressionhelp"
-  - "vs.regularexpressionhelp"
-  - "vs.regularexpressionbuilder"
-helpviewer_keywords: 
-  - "expressions régulières [SQL Server Management Studio]"
-  - "Éditeur de requêtes [SQL Server Management Studio], recherches avec des expressions régulières"
-  - "recherches [SQL Server Management Studio], expressions régulières"
+title: "Rechercher du texte avec des expressions régulières | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vsregularexpressionhelp
+- vs.regularexpressionhelp
+- vs.regularexpressionbuilder
+helpviewer_keywords:
+- regular expressions [SQL Server Management Studio]
+- Query Editor [SQL Server Management Studio], regular expression searches
+- searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 530e940d95c3375b58b494e165cf5a193fdec720
+ms.lasthandoff: 04/11/2017
+
 ---
-# Rechercher du texte avec des expressions r&#233;guli&#232;res
+# <a name="search-text-with-regular-expressions"></a>Rechercher du texte avec des expressions régulières
   Les expressions régulières sont une notation souple et concise pour rechercher et remplacer des modèles de texte. Un ensemble spécifique d'expressions régulières peut être utilisé dans le champ **Rechercher** de la boîte de dialogue [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **de** .  
   
-#### Pour effectuer une recherche à l'aide d'expressions régulières  
+#### <a name="to-find-using-regular-expressions"></a>Pour effectuer une recherche à l'aide d'expressions régulières  
   
-1.  Pour pouvoir utiliser des expressions régulières dans le champ **Rechercher** pendant des opérations **Recherche rapide**, **Rechercher dans les fichiers**, **Remplacement rapide** ou **Remplacer dans les fichiers**, sélectionnez l’option **Utiliser** sous **Options de recherche**, puis choisissez **Expressions régulières**.  
+1.  Pour pouvoir utiliser des expressions régulières dans le champ **Rechercher** pendant des opérations **Recherche rapide**, **Rechercher dans les fichiers**, **Remplacement rapide**ou **Remplacer dans les fichiers** , sélectionnez l’option **Utiliser** sous **Options de recherche**, puis choisissez **Expressions régulières**.  
   
 2.  Le bouton triangulaire **Générateur d'expressions** situé en regard du champ **Rechercher** devient alors disponible. Cliquez sur ce bouton pour afficher la liste des expressions régulières les plus couramment utilisées. Lorsque vous choisissez un élément dans le Générateur d'expressions, il est inséré dans la chaîne **Rechercher** .  
   
@@ -48,8 +52,8 @@ caps.handback.revision: 25
 |Début de mot|\<|Représente la concordance uniquement lorsqu'un mot commence à cette position dans le texte.|  
 |Fin de mot|>|Représente la concordance uniquement lorsqu'un mot se termine à cette position dans le texte.|  
 |Saut de ligne|\n|Représente un saut de ligne indépendant de la plateforme. Dans une expression Remplacer, insère un saut de ligne.|  
-|Tout caractère de l'ensemble|[]|Représente tout caractère figurant entre les crochets []. Pour spécifier une plage de caractères, répertoriez les caractères de début et de fin, en les séparant par un tiret (-) ; par exemple [a-z].|  
-|Tout caractère hors de l'ensemble|[^...]|Représente tout caractère ne figurant pas dans le jeu de caractères qui suit le signe ^.|  
+|Tout caractère de l'ensemble|[]|Représente tout caractère figurant entre les crochets []. Pour spécifier une plage de caractères, répertoriez les caractères de début et de fin, en les séparant par un tiret (-) ; par exemple [a-z].|  
+|Tout caractère hors de l'ensemble|[^...]|Représente tout caractère ne figurant pas dans le jeu de caractères qui suit le signe ^.|  
 |Ou|&#124;|Représente l’expression placée avant ou après le symbole OU (&#124;). Critère surtout utilisé à l'intérieur d'un groupe. Par exemple, compte (courant&#124;rendu) retourne « compte courant » et « compte rendu ».|  
 |Caractère d'échappement|\|Représente le caractère qui suit la barre oblique inverse (\\) comme littéral. Cette syntaxe vous permet de rechercher les caractères utilisés dans les expressions régulières, tels { et ^. Par exemple, \\^ recherche le caractère ^.|  
 |Expression avec balises|{}|Représente le texte avec les balises de l'expression.|  
@@ -66,10 +70,10 @@ caps.handback.revision: 25
 |Une ou plusieurs occurrences au minimum|#|Représente au moins une occurrence de l'expression précédente, en faisant correspondre le moins de caractères possible.|  
 |Répétition n fois|^n|Représente n occurrences de l'expression précédente. Par exemple, [0-9]^4 représente toute séquence à 4 chiffres.|  
 |Regroupement|()|Regroupe une sous-expression.|  
-|Énième texte avec balises|\n|Dans une expression **Rechercher ou Remplacer** , recherche la concordance du texte correspondant à la énième expression avec balises, où n désigne un chiffre compris entre 1 et 9.<br /><br /> Dans une expression **Remplacer**, \0 insère le texte correspondant à l’expression entière.|  
-|Champ justifié à droite|\\(w,n)|Dans une expression **Remplacer**, aligne à droite la énième expression avec balises dans un champ comportant au moins *w* caractères.|  
-|Champ justifié à gauche|\\(-w,n)|Dans une expression **Remplacer**, aligne à gauche la énième expression avec balises dans un champ comportant au moins *w* caractères.|  
-|Empêcher la concordance|~(X)|Empêche la recherche d'une concordance quand le caractère X apparaît à cet endroit dans l'expression. Par exemple, réal~(ité) correspond à « réal » dans « réalisme » et « réalisation », mais pas à « réal » dans « réalité ».|  
+|Énième texte avec balises|\n|Dans une expression **Rechercher ou Remplacer** , recherche la concordance du texte correspondant à la énième expression avec balises, où n désigne un chiffre compris entre 1 et 9.<br /><br /> Dans une expression **Remplacer** , \0 insère le texte correspondant à l’expression entière.|  
+|Champ justifié à droite|\\(w,n)|Dans une expression **Remplacer** , aligne à droite la énième expression avec balises dans un champ comportant au moins *w* caractères.|  
+|Champ justifié à gauche|\\(-w,n)|Dans une expression **Remplacer** , aligne à gauche la énième expression avec balises dans un champ comportant au moins *w* caractères.|  
+|Empêcher la concordance|~(X)|Empêche la recherche d'une concordance quand le caractère X apparaît à cet endroit dans l'expression. Par exemple, réal~(ité) correspond à « réal » dans « réalisme » et « réalisation », mais pas à « réal » dans « réalité ».|  
 |Caractère alphanumérique|:a|Représente l'expression ([a-zA-Z0-9]).|  
 |Caractère alphabétique|:c|Représente l'expression ([a-zA-Z]).|  
 |Chiffre décimal|:d|Représente l'expression ([0-9]).|  
@@ -86,8 +90,8 @@ caps.handback.revision: 25
   
 |Expression|Syntaxe|Description|  
 |----------------|------------|-----------------|  
-|Lettre majuscule|:Lu|Représente n'importe quelle lettre majuscule. Par exemple, Lues retourne « Les » mais pas « les ».|  
-|Lettre minuscule|:Ll|Représente n'importe quelle lettre minuscule. Par exemple, :Lles retourne « les » mais pas « Les ».|  
+|Lettre majuscule|:Lu|Représente n'importe quelle lettre majuscule. Par exemple, Lues retourne « Les » mais pas « les ».|  
+|Lettre minuscule|:Ll|Représente n'importe quelle lettre minuscule. Par exemple, :Lles retourne « les » mais pas « Les ».|  
 |Lettre capitale|:Lt|Représente les caractères associant une lettre majuscule à une lettre minuscule, par exemple Nj et Dz.|  
 |Lettre modificative|:Lm|Représente des lettres ou de la ponctuation telle que des virgules, des accents croisés, et guillemets doubles qui servent à indiquer les modifications apportées à la lettre précédente.|  
 |Autre lettre|:Lo|Représente d'autres lettres, telles que la lettre gothique ahsa.|  
@@ -121,7 +125,7 @@ caps.handback.revision: 25
   
 |Expression|Syntaxe|Description|  
 |----------------|------------|-----------------|  
-|Alpha|:Al|Représente n'importe quel caractère. Par exemple, :Alar retourne des mots comme « Par », « partie » ou « épargne ».|  
+|Alpha|:Al|Représente n'importe quel caractère. Par exemple, :Alar retourne des mots comme « Par », « partie » ou « épargne ».|  
 |Numérique|:Nu|Représente n'importe quel nombre ou chiffre.|  
 |Ponctuation|:Pu|Représente n'importe quel signe de ponctuation tel que ?, @, ', etc.|  
 |Espace blanc|:Wh|Représente n'importe quel type d'espace blanc, y compris les espaces typographiques et idéographiques.|  
@@ -131,7 +135,7 @@ caps.handback.revision: 25
 |Katakana|:Ka|Représente les caractères Katakana.|  
 |Idéographique/Han/Kanji|:Id|Représente des caractères idéographiques tels Han et Kanji.|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Recherche et remplacement](../../relational-databases/scripting/search-and-replace.md)   
  [Rechercher du texte avec des caractères génériques](../../relational-databases/scripting/search-text-with-wildcards.md)  
   

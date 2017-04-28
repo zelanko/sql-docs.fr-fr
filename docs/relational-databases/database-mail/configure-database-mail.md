@@ -1,59 +1,63 @@
 ---
-title: "Configuration de la Messagerie de base de donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.sqlimail.profileandaccountmanagement.f1"
-  - "sql13.swb.sqlimail.newaccount.f1"
-  - "sql13.swb.dbmail. manageprofilesecurity.profileview.f1"
-  - "sql13.swb.sqlimail.manageexistingprofile.f1"
-  - "sql13.swb.sqlimail.addaccounttoprofile.f1"
-  - "sql13.swb.dbmail.manageexistingaccount.f1"
-  - "sql13.swb.sqlimail.manageprofilesecurity.profileview.f1"
-  - "sql13.swb.sqlimail.welcome.f1"
-  - "sql13.swb.sqlimail.manageprofilesecurity.principalview.f1"
-  - "sql13.swb.sqlimail.newsqlimailaccount.f1"
-  - "sql13.swb.sqlimail.selectconfiguration.f1"
-  - "sql13.swb.dbmail.completewizard.f1"
-  - "sql13.swb.dbmail.sendtestemail.test.f1"
-  - "sql13.swb.sqlimail.newprofile.f1"
-  - "sql13.swb.dbmail.addaccounttoprofile.f1"
-  - "sql13.swb.dbmail.newprofile.f1"
-  - "sql13.swb.sqlimail.manageexistingaccount.f1"
-  - "sql13.swb.dbmail.welcome.f1"
-  - "sql13.swb.dbmail.newaccount.f1"
-  - "sql13.swb.dbmail.profileandaccountmanagement.f1"
-  - "sql13.swb.dbmail.selectconfiguration.f1"
-  - "sql13.swb.dbmail.sendtestemail.f1"
-  - "sql13.swb.sqlimail.completewizard.f1"
-  - "sql13.swb.dbmail.configuresystem.f1"
-  - "sql13.swb.sqlimail.configuresystem.f1"
-  - "sql13.swb.dbmail.newsqlimailaccount.f1"
-  - "sql13.swb.dbmail.manageexistingprofile.f1"
-  - "sql13.swb.dbmail.manageprofilesecurity.principalview.f1"
+title: "Configuration de la Messagerie de base de données | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.sqlimail.profileandaccountmanagement.f1
+- sql13.swb.sqlimail.newaccount.f1
+- sql13.swb.dbmail. manageprofilesecurity.profileview.f1
+- sql13.swb.sqlimail.manageexistingprofile.f1
+- sql13.swb.sqlimail.addaccounttoprofile.f1
+- sql13.swb.dbmail.manageexistingaccount.f1
+- sql13.swb.sqlimail.manageprofilesecurity.profileview.f1
+- sql13.swb.sqlimail.welcome.f1
+- sql13.swb.sqlimail.manageprofilesecurity.principalview.f1
+- sql13.swb.sqlimail.newsqlimailaccount.f1
+- sql13.swb.sqlimail.selectconfiguration.f1
+- sql13.swb.dbmail.completewizard.f1
+- sql13.swb.dbmail.sendtestemail.test.f1
+- sql13.swb.sqlimail.newprofile.f1
+- sql13.swb.dbmail.addaccounttoprofile.f1
+- sql13.swb.dbmail.newprofile.f1
+- sql13.swb.sqlimail.manageexistingaccount.f1
+- sql13.swb.dbmail.welcome.f1
+- sql13.swb.dbmail.newaccount.f1
+- sql13.swb.dbmail.profileandaccountmanagement.f1
+- sql13.swb.dbmail.selectconfiguration.f1
+- sql13.swb.dbmail.sendtestemail.f1
+- sql13.swb.sqlimail.completewizard.f1
+- sql13.swb.dbmail.configuresystem.f1
+- sql13.swb.sqlimail.configuresystem.f1
+- sql13.swb.dbmail.newsqlimailaccount.f1
+- sql13.swb.dbmail.manageexistingprofile.f1
+- sql13.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 74432814fa4cc99c8ef8ec8c3c63f37ec8b8b25a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configuration de la Messagerie de base de donn&#233;es
+# <a name="configure-database-mail"></a>Configuration de la Messagerie de base de données
   Cette rubrique explique comment activer et configurer la messagerie de base de données à l'aide de l'Assistant Configuration de la messagerie de base de données, et créer un script de configuration de la messagerie de base de données à l'aide de modèles.  
   
--   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [Sécurité](#Security)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
   
--   **Pour configurer la messagerie de base de données, utilisez :**  [Assistant Configuration de la messagerie de base de données](#DBWizard), [Utilisation de modèles](#Template)  
+-   **To configure Database Mail, using:**  [Database Mail Configuration Wizard](#DBWizard), [Using Templates](#Template)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
- Pour activer la messagerie de base de données sur ce serveur, utilisez l’option **Messagerie de base de données XPs**. Pour plus d’informations, consultez la rubrique de référence [Messagerie de base de données XPs (option de configuration de serveur)](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md).  
+ Pour activer la messagerie de base de données sur ce serveur, utilisez l’option **Messagerie de base de données XPs** . Pour plus d’informations, consultez la rubrique de référence [Messagerie de base de données XPs (option de configuration de serveur)](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) .  
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
  L'activation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker dans une base de données requiert un verrou de base de données. Si Service Broker a été désactivé dans **msdb**, pour activer la messagerie de base de données, arrêtez d'abord l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin que Service Broker puisse obtenir le verrou nécessaire.  
@@ -103,7 +107,7 @@ caps.handback.revision: 13
   
  **Ne plus afficher cette page** - activez cette option pour ignorer cette page d'accueil.  
   
- **Suivant** - passe à la page **Sélectionner une tâche de configuration**.  
+ **Suivant** - passe à la page **Sélectionner une tâche de configuration** .  
   
  **Annuler** - termine l'Assistant sans configurer la messagerie de base de données  
   
@@ -113,7 +117,7 @@ caps.handback.revision: 13
  Chaque fois que vous utilisez l'Assistant, utilisez la page **Sélectionner une tâche de configuration** pour indiquer quelle tâche vous allez réaliser. Si vous changez d'avis avant d'avoir terminé l'Assistant, utilisez le bouton **Précédent** pour retourner à cette page et sélectionner une autre tâche.  
   
 > [!NOTE]  
->  Si la messagerie de base de données n'a pas été activée, vous recevrez le message : **Le composant de messagerie de base de données n'est pas disponible.  Voulez-vous activer ce composant ?** Répondre **Oui** équivaut à activer la messagerie de base de données à l’aide de l’option [Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) de la procédure stockée système **sp_configure**.  
+>  Si la messagerie de base de données n'a pas été activée, vous recevrez le message : **Le composant de messagerie de base de données n'est pas disponible.  Voulez-vous activer ce composant ?** Répondre **Oui**équivaut à activer la messagerie de base de données à l’aide de l’option [Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) de la procédure stockée système **sp_configure** .  
   
  **Configurer la messagerie de base de données en effectuant les tâches suivantes**  
  Permet d'exécuter toutes les tâches nécessaires pour configurer la messagerie de base de données pour la première fois. Cette option inclut l'ensemble des trois autres options.  
@@ -143,13 +147,13 @@ caps.handback.revision: 13
  Tapez une description du compte. Cette description est facultative.  
   
  **Adresse de messagerie**  
- Tapez l'adresse de messagerie du compte. C'est à partir de cette adresse qu'est envoyé le courrier électronique. Par exemple, un compte de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut envoyer les messages électroniques à partir de l'adresse SqlAgent@Adventure-Works.com.  
+ Tapez l'adresse de messagerie du compte. C'est à partir de cette adresse qu'est envoyé le courrier électronique. Par exemple, un compte du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peut envoyer des e-mails à partir de l’adresse SqlAgent@Adventure-Works.com.  
   
  **Nom complet**  
- Tapez le nom à afficher sur les messages électroniques envoyés à partir de ce compte. Le nom affiché est facultatif. C'est le nom qui sera affiché dans les messages envoyés à partir de ce compte. Par exemple, un compte de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut afficher le nom « Messagerie automatisée de SQL Server Agent » sur les messages électroniques.  
+ Tapez le nom à afficher sur les messages électroniques envoyés à partir de ce compte. Le nom affiché est facultatif. C'est le nom qui sera affiché dans les messages envoyés à partir de ce compte. Par exemple, un compte de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut afficher le nom « Messagerie automatisée de SQL Server Agent » sur les messages électroniques.  
   
  **Répondre au courrier**  
- Tapez l'adresse de messagerie à utiliser pour les réponses aux messages électroniques envoyés à partir de ce compte. L'adresse Répondre au courrier est facultative. Par exemple, les réponses aux messages provenant d'un compte de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être envoyées à l'administrateur de la base de données, danw@Adventure-Works.com.  
+ Tapez l'adresse de messagerie à utiliser pour les réponses aux messages électroniques envoyés à partir de ce compte. L'adresse Répondre au courrier est facultative. Par exemple, les réponses envoyées vers un compte du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peuvent être adressées à l’administrateur de base de données, dont l’adresse est danw@Adventure-Works.com.  
   
  **Nom du serveur**  
  Tapez le nom ou l'adresse IP du serveur SMTP utilisé par le compte pour envoyer du courrier électronique. En général, son format est semblable à celui-ci : **smtp.***<votre_société>***.com**. Pour plus d'informations, contactez l'administrateur de messagerie.  
@@ -161,7 +165,7 @@ caps.handback.revision: 13
  Chiffre la communication au moyen de Secure Sockets Layer.  
   
  **Authentification Windows à l'aide d'informations d'identification du service de moteur de bases de données**  
- La connexion au serveur SMTP s'effectue avec les informations d'identification configurées pour le service [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+ La connexion au serveur SMTP s'effectue avec les informations d'identification configurées pour le service [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
  **Authentification de base**  
  Spécifiez le nom d'utilisateur et le mot de passe demandés par le serveur SMTP.  
@@ -211,7 +215,7 @@ caps.handback.revision: 13
  Chiffre la communication au moyen de Secure Sockets Layer.  
   
  **Authentification Windows à l'aide d'informations d'identification du service de moteur de bases de données**  
- La connexion au serveur SMTP s'effectue avec les informations d'identification configurées pour le service [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+ La connexion au serveur SMTP s'effectue avec les informations d'identification configurées pour le service [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
  **Authentification de base**  
  Spécifiez le nom d'utilisateur et le mot de passe demandés par le serveur SMTP.  
@@ -293,19 +297,19 @@ caps.handback.revision: 13
  **Nom du compte**  
  Affichez le nom du compte.  
   
- **Adresse de messagerie**  
+ **E-mail Address**  
  Affichez l'adresse de messagerie du compte.  
   
  [Assistant Configuration de la messagerie de base de données](#DBWizard)  
   
-###  <a name="AddAccount"></a> Page Ajouter un compte au profil  
+###  <a name="AddAccount"></a> Add Account to Profile Page  
  Utilisez cette page pour choisir le compte à ajouter au profil. Choisissez un compte existant dans la zone **Nom du compte** ou cliquez sur **Nouveau compte**.  
   
  **Nom du compte**  
  Sélectionnez le nom du compte à ajouter au profil.  
   
  **Adresse de messagerie**  
- Affichez l'adresse de messagerie du compte sélectionné. Vous ne pouvez pas modifier l'adresse de messagerie dans cette page. Pour modifier l’adresse de messagerie du compte, revenez à la page principale de l’Assistant et sélectionnez l’option **Gérer les comptes et les profils de messagerie de base de données**.  
+ Affichez l'adresse de messagerie du compte sélectionné. Vous ne pouvez pas modifier l'adresse de messagerie dans cette page. Pour modifier l’adresse de messagerie du compte, revenez à la page principale de l’Assistant et sélectionnez l’option **Gérer les comptes et les profils de messagerie de base de données** .  
   
  **Nom du serveur**  
  Affichez le nom de serveur de messagerie du compte sélectionné. Vous ne pouvez pas modifier le nom du serveur dans cette page. Pour modifier le nom de serveur pour le compte, revenez à la page principale de l'Assistant et sélectionnez l'option **Gérer les comptes et les profils de messagerie de base de données** .  
@@ -327,7 +331,7 @@ caps.handback.revision: 13
  **Créer un nouveau profil**  
  Créez un nouveau profil.  
   
- **Affichez, modifiez ou supprimez un profil existant. Vous pouvez également gérer les comptes associés au profil.**  
+ **Afficher, modifier ou supprimer un profil existant. Vous pouvez également gérer les comptes associés au profil.**  
  Mettez à jour ou supprimez un profil existant. Cette option permet également de gérer les comptes associés au profil.  
   
  [Assistant Configuration de la messagerie de base de données](#DBWizard)  
@@ -337,12 +341,12 @@ caps.handback.revision: 13
   
  Les profils sont soit publics soit privés. Un profil privé n'est accessible qu'à des utilisateurs ou des rôles spécifiques. Un profil public permet à tout utilisateur ou rôle ayant accès à la base de données hôte de messagerie (**msdb**) d’envoyer des messages en utilisant ce profil.  
   
- Un profil peut être un profil par défaut. Dans ce cas, les utilisateurs ou les rôles peuvent envoyer des messages électroniques avec ce profil, sans le spécifier explicitement. Si l'utilisateur ou le rôle qui envoie ce message possède un profil privé par défaut, la messagerie de base de données utilise ce profil. Si l’utilisateur ou le rôle ne possède pas de profil privé par défaut, **sp_send_dbmail** utilise le profil public par défaut pour la base de données **msdb**. S’il n’existe ni profil privé par défaut pour l’utilisateur ou le rôle, ni profil public par défaut pour la base de données, **sp_send_dbmail** renvoie une erreur. Un seul profil peut être marqué comme profil par défaut.  
+ Un profil peut être un profil par défaut. Dans ce cas, les utilisateurs ou les rôles peuvent envoyer des messages électroniques avec ce profil, sans le spécifier explicitement. Si l'utilisateur ou le rôle qui envoie ce message possède un profil privé par défaut, la messagerie de base de données utilise ce profil. Si l’utilisateur ou le rôle ne possède pas de profil privé par défaut, **sp_send_dbmail** utilise le profil public par défaut pour la base de données **msdb** . S’il n’existe ni profil privé par défaut pour l’utilisateur ou le rôle, ni profil public par défaut pour la base de données, **sp_send_dbmail** renvoie une erreur. Un seul profil peut être marqué comme profil par défaut.  
   
  **Public**  
  Sélectionnez cette option pour rendre public le profil spécifié.  
   
- **Nom de profil**  
+ **Profile Name**  
  Affiche le nom du profil.  
   
  **Profil par défaut**  
@@ -358,10 +362,10 @@ caps.handback.revision: 13
   
  Les profils sont soit publics soit privés. Un profil privé n'est accessible qu'à des utilisateurs ou des rôles spécifiques. Un profil public permet à tout utilisateur ou rôle ayant accès à la base de données hôte de messagerie (**msdb**) d’envoyer des messages en utilisant ce profil.  
   
- Un profil peut être un profil par défaut. Dans ce cas, les utilisateurs ou les rôles peuvent envoyer des messages électroniques avec ce profil, sans le spécifier explicitement. Si l'utilisateur ou le rôle qui envoie ce message possède un profil privé par défaut, la messagerie de base de données utilise ce profil. Si l’utilisateur ou le rôle ne possède pas de profil privé par défaut, **sp_send_dbmail** utilise le profil public par défaut pour la base de données **msdb**. S’il n’existe ni profil privé par défaut pour l’utilisateur ou le rôle, ni profil public par défaut pour la base de données, **sp_send_dbmail** renvoie une erreur.  
+ Un profil peut être un profil par défaut. Dans ce cas, les utilisateurs ou les rôles peuvent envoyer des messages électroniques avec ce profil, sans le spécifier explicitement. Si l'utilisateur ou le rôle qui envoie ce message possède un profil privé par défaut, la messagerie de base de données utilise ce profil. Si l’utilisateur ou le rôle ne possède pas de profil privé par défaut, **sp_send_dbmail** utilise le profil public par défaut pour la base de données **msdb** . S’il n’existe ni profil privé par défaut pour l’utilisateur ou le rôle, ni profil public par défaut pour la base de données, **sp_send_dbmail** renvoie une erreur.  
   
  **Nom d'utilisateur**  
- Pour sélectionner le nom d’un utilisateur ou d’un rôle dans la base de données **msdb**.  
+ Pour sélectionner le nom d’un utilisateur ou d’un rôle dans la base de données **msdb** .  
   
  **Accès**  
  Pour choisir si l'utilisateur ou le rôle a accès au profil spécifié.  
@@ -396,13 +400,13 @@ caps.handback.revision: 13
  Durée minimale (en secondes) pendant laquelle le processus de messagerie externe reste actif. Le processus demeure actif aussi longtemps qu'il reste des messages dans la file d'attente de la messagerie de base de données. Ce paramètre spécifie le délai pendant lequel le processus demeure actif s'il n'y a pas de messages à traiter.  
   
  **Niveau de journalisation**  
- Spécifiez quels messages sont enregistrés dans le journal de la messagerie de base de données. Les valeurs possibles sont :  
+ Spécifiez quels messages sont enregistrés dans le journal de la messagerie de base de données. Les valeurs possibles sont :  
   
--   Normal : ne journalise que les erreurs  
+-   Normal : ne journalise que les erreurs  
   
--   Étendu : journalise les messages d'information, d'avertissement et d'erreur  
+-   Étendu : journalise les messages d'information, d'avertissement et d'erreur  
   
--   Commentaires : journalise les messages d'information, d'avertissement et d'erreur, les messages de réussite et les autres messages internes. Utilisez la journalisation commentée pour le dépannage.  
+-   Commentaires : journalise les messages d'information, d'avertissement et d'erreur, les messages de réussite et les autres messages internes. Utilisez la journalisation commentée pour le dépannage.  
   
  La valeur par défaut est Étendu.  
   
@@ -416,7 +420,7 @@ caps.handback.revision: 13
   
  [Assistant Configuration de la messagerie de base de données](#DBWizard)  
   
-###  <a name="TestEmail"></a> Page Envoyer un message électronique de test  
+###  <a name="TestEmail"></a> Send Test E-Mail Page  
  Utilisez la page **Envoyer un message électronique de test à partir de***<nom_instance>* pour envoyer un message électronique en utilisant le profil de messagerie de base de données spécifié. Seuls les membres du rôle serveur fixe **sysadmin** peuvent envoyer des messages électroniques de test avec cette page.  
   
  **Profil de messagerie de base de données**  
@@ -452,7 +456,7 @@ caps.handback.revision: 13
   
 4.  Dans le menu **Requête** , sélectionnez **Spécifier les valeurs des paramètres du modèle**. La fenêtre **Remplacer les paramètres de modèle** s'ouvre.  
   
-5.  Tapez les valeurs des **profile_name**, **account_name**, **SMTP_servername**, **email_address** et **display_name**. SQL Server Management Studio renseigne le modèle avec les valeurs que vous fournissez.  
+5.  Tapez les valeurs des **profile_name**, **account_name**, **SMTP_servername**, **email_address**et **display_name**. SQL Server Management Studio renseigne le modèle avec les valeurs que vous fournissez.  
   
 6.  Exécutez le script pour créer la configuration.  
   

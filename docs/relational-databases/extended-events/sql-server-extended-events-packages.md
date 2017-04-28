@@ -1,33 +1,37 @@
 ---
-title: "Packages d&#39;&#233;v&#233;nements &#233;tendus SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "événements étendus [SQL Server], packages"
-  - "xe"
+title: "Packages d’événements étendus SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extended events [SQL Server], packages
+- xe
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 caps.latest.revision: 21
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: afb2140445252ca5b3a27f5ec9bf33219e3eef0c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Packages d&#39;&#233;v&#233;nements &#233;tendus SQL Server
+# <a name="sql-server-extended-events-packages"></a>Packages d'événements étendus SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Un package est un conteneur d'objets d'événements étendus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il existe trois sortes de packages Événements étendus :  
+  Un package est un conteneur d'objets d'événements étendus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il existe trois sortes de packages Événements étendus :  
   
 -   package0 - objets système d'événements étendus. Il s'agit du package par défaut.  
   
--   sqlserver - objets connexes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   sqlserver - objets connexes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   sqlos - objets du système d'exploitation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOS).  
   
@@ -52,12 +56,12 @@ caps.handback.revision: 21
   
  Des objets de packages différents peuvent être mélangés dans une session d'événements. Pour plus d’informations, consultez [Sessions Événements étendus SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md).  
   
-## Contenu des packages  
+## <a name="package-contents"></a>Contenu des packages  
  L'illustration suivante montre les objets qui peuvent exister dans des packages, inclus dans un module. Un module peut être un exécutable ou une bibliothèque de liens dynamiques.  
   
- ![Relation d'un module, de packages et d'objets](../../relational-databases/extended-events/media/xepackagesobjects.gif "Relation d'un module, de packages et d'objets")  
+ ![Relation d’un module, de packages et d’objets](../../relational-databases/extended-events/media/xepackagesobjects.gif "Relation d’un module, de packages et d’objets")  
   
-### Événements  
+### <a name="events"></a>Événements  
  Les événements surveillent les détails intéressants dans le chemin d'exécution d'un programme, tel que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le déclenchement d'un événement indique que le détail intéressant s'est manifesté et fournit les informations d'état correspondant au moment du déclenchement de l'événement.  
   
  Les événements peuvent être utilisés uniquement à des fins de suivi ou pour déclencher des actions. Ces actions peuvent être synchrones ou asynchrones.  
@@ -69,7 +73,7 @@ caps.handback.revision: 21
   
  Tous les événements ont un schéma avec contrôle de version qui définit leur contenu. Ce schéma est composé de colonnes d'événements de types déterminés. Un événement d'un type spécifique doit toujours fournir ses données exactement dans le même ordre que celui spécifié dans le schéma. Toutefois, une cible d'événement n'a pas à consommer toutes les données fournies.  
   
-#### Catégorisation des événements  
+#### <a name="event-categorization"></a>Catégorisation des événements  
  Les événements étendus utilisent un modèle de catégorisation d'événements semblable au suivi d'événements pour Windows. Deux propriétés d'événement sont utilisées pour la catégorisation, canal et mot clé. L'utilisation de ces propriétés prend en charge l'intégration des événements étendus avec le suivi ETW et ses outils.  
   
  **Channel**  
@@ -95,26 +99,26 @@ where name = 'keyword_map'
 > [!NOTE]  
 >  Les mots clés correspondent étroitement au regroupement actuel des événements SQL Trace.  
   
-### Cibles  
- Les cibles sont des consommateurs d'événements. Les cibles traitent des événements, de façon synchrone sur le thread qui déclenche l'événement ou de façon asynchrone sur un thread fourni par le système. Les événements étendus fournissent plusieurs cibles que vous pouvez utiliser d'une manière appropriée pour diriger les données de sortie des événements. Pour plus d'informations, consultez [SQL Server Extended Events Targets](../Topic/SQL%20Server%20Extended%20Events%20Targets.md).  
+### <a name="targets"></a>Cibles  
+ Les cibles sont des consommateurs d'événements. Les cibles traitent des événements, de façon synchrone sur le thread qui déclenche l'événement ou de façon asynchrone sur un thread fourni par le système. Les événements étendus fournissent plusieurs cibles que vous pouvez utiliser d'une manière appropriée pour diriger les données de sortie des événements. Pour plus d'informations, consultez [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
   
-### Actions  
+### <a name="actions"></a>Actions  
  Une action est une réponse de programmation ou une série de réponses à un événement. Les actions sont liées à un événement et chaque événement peut posséder un ensemble unique d'actions.  
   
 > [!NOTE]  
 >  Des actions prévues pour un ensemble spécifique d'événements ne peuvent pas être liées à des événements inconnus.  
   
- Une action liée à un événement est appelée de façon synchrone sur le thread qui a déclenché l'événement. Il existe de nombreux types d'actions et elles présentent une gamme étendue de capacités. Les actions peuvent correspondre aux opérations suivantes :  
+ Une action liée à un événement est appelée de façon synchrone sur le thread qui a déclenché l'événement. Il existe de nombreux types d'actions et elles présentent une gamme étendue de capacités. Les actions peuvent correspondre aux opérations suivantes :  
   
--   capturer un vidage de pile et inspecter des données ;  
+-   capturer un vidage de pile et inspecter des données ;  
   
--   stocker des informations d'état dans un contexte local par le biais du stockage de variables ;  
+-   stocker des informations d'état dans un contexte local par le biais du stockage de variables ;  
   
--   agréger des données d'événement ;  
+-   agréger des données d'événement ;  
   
 -   ajouter des données à des données d'événement.  
   
- Voici quelques exemples typiques et bien connus d'actions :  
+ Voici quelques exemples typiques et bien connus d'actions :  
   
 -   Gestionnaire de vidage de pile  
   
@@ -126,7 +130,7 @@ where name = 'keyword_map'
   
 -   Collecter les entrées utilisateur en cas d'exception  
   
-### Prédicats  
+### <a name="predicates"></a>Prédicats  
  Les prédicats sont un ensemble de règles logiques qui permettent d'évaluer des événements lorsqu'ils sont traités. Cela permet à l'utilisateur d'événements étendus de capturer de manière sélective des données d'événement en fonction de critères spécifiques.  
   
  Les prédicats peuvent stocker des données dans un contexte local qui peut être utilisé pour créer des prédicats qui retournent la valeur true une fois toutes les *n* minutes ou toutes les *n* fois qu’un événement est déclenché. Ce stockage de contexte local permet également de mettre à jour dynamiquement le prédicat, en supprimant le déclenchement futur des événements si les événements contiennent des données semblables.  
@@ -136,8 +140,8 @@ where name = 'keyword_map'
 > [!NOTE]  
 >  Les prédicats avec effets secondaires ne peuvent pas être évalués en cas d'échec d'un contrôle de prédicat antérieur.  
   
-### Types  
- Comme les données sont une collection d'octets enchaînés, la longueur et les caractéristiques de la collection d'octets sont requises pour interpréter les données. Ces informations sont encapsulées dans l'objet Type. Les types suivants sont fournis pour les objets de package :  
+### <a name="types"></a>Types  
+ Comme les données sont une collection d'octets enchaînés, la longueur et les caractéristiques de la collection d'octets sont requises pour interpréter les données. Ces informations sont encapsulées dans l'objet Type. Les types suivants sont fournis pour les objets de package :  
   
 -   événement  
   
@@ -153,7 +157,7 @@ where name = 'keyword_map'
   
  Pour plus d’informations, consultez [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md).  
   
-### Cartes  
+### <a name="maps"></a>Cartes  
  Une table de mappage mappe une valeur interne à une chaîne, ce qui permet à un utilisateur de savoir ce que la valeur représente. Au lieu d'obtenir simplement une valeur numérique, un utilisateur peut obtenir une description explicite de la valeur interne. La requête ci-dessous indique comment obtenir les valeurs de mappage.  
   
 ```  
@@ -213,11 +217,11 @@ where name = 'lock_mode'
   
  `21          RX_X`  
   
- En utilisant cette table comme exemple, supposez que vous possédez une colonne nommée mode et que sa valeur est 5. Le tableau indique que 5 correspond à X, ce qui signifie que le type de verrou est Exclusif.  
+ En utilisant cette table comme exemple, supposez que vous possédez une colonne nommée mode et que sa valeur est 5. Le tableau indique que 5 correspond à X, ce qui signifie que le type de verrou est Exclusif.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Sessions Événements étendus SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [Moteur des Événements étendus SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [Cibles des Événements étendus SQL Server](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)  
+ [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

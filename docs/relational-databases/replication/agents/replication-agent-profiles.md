@@ -1,47 +1,51 @@
 ---
-title: "Profils de l&#39;Agent de r&#233;plication | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Agent de distribution, profils"
-  - "réplication [SQL Server], agents et profils"
-  - "profils d'agent de réplication [SQL Server]"
-  - "Agent de fusion, profils"
-  - "agents [réplication SQL Server], profils"
-  - "Agent de lecture de la file d’attente, profils"
-  - "profils [SQL Server], agents de réplication"
-  - "Agent d’instantané, profils"
-  - "Agent de lecture du journal, profils"
+title: "Profils de l’Agent de réplication | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Distribution Agent, profiles
+- replication [SQL Server], agents and profiles
+- replication agent profiles [SQL Server]
+- Merge Agent, profiles
+- agents [SQL Server replication], profiles
+- Queue Reader Agent, profiles
+- profiles [SQL Server], replication agents
+- Snapshot Agent, profiles
+- Log Reader Agent, profiles
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a11a7821231d4c7fa3a8719a05bdd1a7bc49ff47
+ms.lasthandoff: 04/11/2017
+
 ---
-# Profils de l&#39;Agent de r&#233;plication
-  Quand la réplication est configurée, un ensemble de profils d'agent est installé sur le serveur de distribution. Un profil d'agent contient un ensemble de paramètres qui sont utilisés chaque fois qu'un agent s'exécute : pendant le processus de démarrage, chaque agent se connecte au service de distribution et interroge les paramètres situés dans son profil. Pour les abonnements de fusion utilisant la synchronisation Web, les profils sont téléchargés et stockés sur l'Abonné. En cas de modification du profil, le profil sur l'Abonné est mis à jour à l'exécution suivante de l'Agent de fusion. Pour plus d'informations sur la synchronisation Web, consultez [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
+# <a name="replication-agent-profiles"></a>Profils de l'Agent de réplication
+  Quand la réplication est configurée, un ensemble de profils d'agent est installé sur le serveur de distribution. Un profil d'agent contient un ensemble de paramètres qui sont utilisés chaque fois qu'un agent s'exécute : pendant le processus de démarrage, chaque agent se connecte au service de distribution et interroge les paramètres situés dans son profil. Pour les abonnements de fusion utilisant la synchronisation Web, les profils sont téléchargés et stockés sur l'Abonné. En cas de modification du profil, le profil sur l'Abonné est mis à jour à l'exécution suivante de l'Agent de fusion. Pour plus d'informations sur la synchronisation Web, consultez [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
   
- La réplication fournit un profil par défaut pour chaque agent et des profils supplémentaires prédéfinis pour l'Agent de lecture du journal, l'Agent de distribution et l'Agent de fusion. En plus des profils fournis, vous pouvez créer des profils adaptés aux besoins de vos applications. Un profil d'agent permet de modifier aisément les paramètres clés de tous les agents associés à ce profil. Par exemple, si vous disposez de 20 Agents de capture instantanée et que vous devez modifier la valeur du délai de requête (le **- QueryTimeout** paramètre), vous pouvez mettre à jour le profil utilisé par les Agents de capture instantanée et tous les agents de ce type commence à utiliser la nouvelle valeur automatiquement lors de leur prochaine exécution.  
+ La réplication fournit un profil par défaut pour chaque agent et des profils supplémentaires prédéfinis pour l'Agent de lecture du journal, l'Agent de distribution et l'Agent de fusion. En plus des profils fournis, vous pouvez créer des profils adaptés aux besoins de vos applications. Un profil d'agent permet de modifier aisément les paramètres clés de tous les agents associés à ce profil. Par exemple, si vous disposez de 20 Agents d'instantané et devez changer la valeur du délai d'expiration des requêtes (paramètre **-QueryTimeout** ), vous pouvez mettre à jour le profil utilisé par les Agents d'instantané ; tous les agents de ce type utiliseront automatiquement la nouvelle valeur lors de leur exécution suivante.  
   
- Vous pouvez également disposer de profils différents pour les diverses instances d'un agent. Par exemple, un Agent de fusion qui se connecte à l’éditeur et de distributeur via une connexion à distance peut utiliser un ensemble de paramètres qui sont mieux adaptés à la liaison de communication plus lente à l’aide de la **lente** profil.  
+ Vous pouvez également disposer de profils différents pour les diverses instances d'un agent. Par exemple, un Agent de fusion qui utilise une connexion à distance pour se connecter au serveur de publication et au serveur de distribution peut se servir d'un ensemble de paramètres plus adaptés à cette liaison de communication moins rapide en recourant au profil **liaison lente** .  
   
 > [!NOTE]  
 >  Si vous spécifiez une valeur pour un paramètre d'agent sur la ligne de commande, cette valeur supplante la valeur définie pour le même paramètre dans le profil d'agent.  
   
  **Pour utiliser et modifier des profils d'agents**  
   
--   [Work with Replication Agent Profiles](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
+-   [Utiliser des profils d’agent de réplication](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
-## Profils de l'Agent d'instantané  
- Le tableau suivant montre les paramètres définis dans le profil par défaut de l'Agent d'instantané. Pour plus d’informations sur ces paramètres, consultez la page [Agent de capture instantanée de réplication](../../../relational-databases/replication/agents/replication-snapshot-agent.md).  
+## <a name="snapshot-agent-profiles"></a>Profils de l'Agent d'instantané  
+ Le tableau suivant montre les paramètres définis dans le profil par défaut de l'Agent d'instantané. Pour plus d'informations sur ces paramètres, consultez [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md).  
   
 ||par défaut|  
 |-|-------------|  
@@ -50,8 +54,8 @@ caps.handback.revision: 44
 |**-LoginTimeout**|15|  
 |**-QueryTimeout**|1800|  
   
-## Profils de l'Agent de lecture du journal  
- Le tableau suivant montre les paramètres définis dans les profils de l'Agent de lecture du journal. Chaque colonne du tableau représente un profil nommé. Pour plus d’informations sur ces paramètres, consultez la page [Agent de lecture du journal de réplication](../../../relational-databases/replication/agents/replication-log-reader-agent.md).  
+## <a name="log-reader-agent-profiles"></a>Profils de l'Agent de lecture du journal  
+ Le tableau suivant montre les paramètres définis dans les profils de l'Agent de lecture du journal. Chaque colonne du tableau représente un profil nommé. Pour plus d'informations sur ces paramètres, consultez [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md).  
   
 ||par défaut|historique commenté|  
 |-|-------------|---------------------|  
@@ -62,8 +66,8 @@ caps.handback.revision: 44
 |**-QueryTimeout**|1800|1800|  
 |**-ReadBatchSize**|500|500|  
   
-## Profils de l'Agent de distribution  
- Le tableau suivant montre les paramètres définis dans les profils de l'Agent de distribution. Chaque colonne du tableau représente un profil nommé. Pour plus d’informations sur ces paramètres, consultez la page [Agent de Distribution](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
+## <a name="distribution-agent-profiles"></a>Profils de l'Agent de distribution  
+ Le tableau suivant montre les paramètres définis dans les profils de l'Agent de distribution. Chaque colonne du tableau représente un profil nommé. Pour plus d'informations sur ces paramètres, consultez [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
 ||par défaut|historique commenté|Gestionnaire de synchronisation Windows|Continuer avec les erreurs de cohérence des données|Profil de distribution du flux de données OLEDB|  
 |-|-------------|---------------------|-------------------------------------|-----------------------------------------|----------------------------------------------|  
@@ -83,8 +87,8 @@ caps.handback.revision: 44
 |**-TransactionsPerHistory**|100|100|100|100|100|  
 |**-UseOledbStreaming**|NULL|NULL|NULL|NULL|**-UseOledbStreaming**|  
   
-## Profils de l'Agent de fusion  
- Le tableau suivant montre les paramètres définis dans les profils de l'Agent de fusion. Chaque colonne du tableau représente un profil nommé. Pour plus d’informations sur ces paramètres, consultez [l’Agent de réplication de fusion](../../../relational-databases/replication/agents/replication-merge-agent.md).  
+## <a name="merge-agent-profiles"></a>Profils de l'Agent de fusion  
+ Le tableau suivant montre les paramètres définis dans les profils de l'Agent de fusion. Chaque colonne du tableau représente un profil nommé. Pour plus d'informations sur ces paramètres, consultez [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md).  
   
 ||par défaut|historique commenté|Gestionnaire de synchronisation Windows|validation du nombre de lignes|validation du nombre de lignes et du total de contrôle|liaison lente|serveur à serveur haut volume|  
 |-|-------------|---------------------|-------------------------------------|-------------------------|--------------------------------------|---------------|------------------------------------|  
@@ -114,8 +118,8 @@ caps.handback.revision: 44
 |**-Validate**|0|0|0|1|3|0|0|  
 |**-ValidateInterval**|60|60|60|60|60|60|60|  
   
-## Profils de l'Agent de lecture de la file d'attente  
- Le tableau suivant montre les paramètres définis dans le profil par défaut de l'Agent de lecture de la file d'attente. Pour plus d’informations sur ces paramètres, consultez la page [Agent de lecture de file d’attente de réplication](../../../relational-databases/replication/agents/replication-queue-reader-agent.md).  
+## <a name="queue-reader-agent-profiles"></a>Profils de l'Agent de lecture de la file d'attente  
+ Le tableau suivant montre les paramètres définis dans le profil par défaut de l'Agent de lecture de la file d'attente. Pour plus d'informations sur ces paramètres, consultez [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md).  
   
 ||par défaut|  
 |-|-------------|  
@@ -124,9 +128,9 @@ caps.handback.revision: 44
 |**-PollingInterval**|5|  
 |**-QueryTimeout**|1800|  
   
-## Voir aussi  
- [Administration de l'Agent de réplication](../../../relational-databases/replication/agents/replication-agent-administration.md)   
- [Afficher et modifier les paramètres d’invite de l’Agent de réplication & #40 ; SQL Server Management Studio & #41 ;](../../../relational-databases/replication/agents/view and modify replication agent command prompt parameters.md)   
- [Concepts des exécutables de l'agent de réplication](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Administration de l’Agent de réplication](../../../relational-databases/replication/agents/replication-agent-administration.md)   
+ [Afficher et modifier des paramètres d’invite de commandes d’un Agent de réplication &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)   
+ [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
   

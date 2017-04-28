@@ -1,36 +1,40 @@
 ---
-title: "Utiliser les param&#232;tres table (Moteur de base de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "paramètres table"
-  - "paramètres table, à propos des paramètres table"
-  - "paramètres [SQL Server], paramètres table"
-  - "TVP Voir paramètres table"
+title: "Utiliser les paramètres table (Moteur de base de données) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table-valued parameters
+- table-valued parameters, about table-valued parameters
+- parameters [SQL Server], table-valued
+- TVP See table-valued parameters
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 021177aa350c47474e48453f7d9a5735e1083b04
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utiliser les param&#232;tres table (Moteur de base de donn&#233;es)
+# <a name="use-table-valued-parameters-database-engine"></a>Utiliser les paramètres table (Moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Les paramètres table sont déclarés en utilisant des types de table définis par l'utilisateur. Vous pouvez utiliser des paramètres table pour envoyer plusieurs lignes de données à une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] ou à une routine, telle qu'une procédure stockée ou une fonction, sans créer de table temporaire ou de nombreux paramètres.  
   
  Les paramètres table sont comme les tableaux de paramètres dans OLE DB et ODBC, mais ils offrent plus de souplesse et une intégration plus étroite avec [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ils ont également l'avantage de pouvoir participer aux opérations basées sur des ensembles.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] passe des paramètres table aux routines par référence afin d’éviter d’effectuer une copie des données d’entrée. Vous pouvez créer et exécuter des routines [!INCLUDE[tsql](../../includes/tsql-md.md)] avec des paramètres table et les appeler depuis du code [!INCLUDE[tsql](../../includes/tsql-md.md)], des clients gérés et natifs dans tout langage managé.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] passe des paramètres table aux routines par référence afin d’éviter d’effectuer une copie des données d’entrée. Vous pouvez créer et exécuter des routines [!INCLUDE[tsql](../../includes/tsql-md.md)] avec des paramètres table et les appeler depuis du code [!INCLUDE[tsql](../../includes/tsql-md.md)] , des clients gérés et natifs dans tout langage managé.  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
  [Avantages](#Benefits)  
   
@@ -43,7 +47,7 @@ caps.handback.revision: 31
 ##  <a name="Benefits"></a> Avantages  
  Un paramètre table a comme portée la procédure stockée, la fonction ou le texte [!INCLUDE[tsql](../../includes/tsql-md.md)] dynamique, exactement comme d'autres paramètres. De même, une variable de type de table a une portée semblable à toute autre variable locale créée à l'aide d'une instruction DECLARE. Vous pouvez déclarer des variables table dans des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dynamiques et passer ces variables comme paramètres table à des procédures stockées et des fonctions.  
   
- Les paramètres table offrent davantage de souplesse et dans certains cas de meilleures performances que les tables temporaires ou autres méthodes de passage d'une liste de paramètres. Les paramètres table offrent les avantages suivants :  
+ Les paramètres table offrent davantage de souplesse et dans certains cas de meilleures performances que les tables temporaires ou autres méthodes de passage d'une liste de paramètres. Les paramètres table offrent les avantages suivants :  
   
 -   Pas d'acquisition de verrous pour le remplissage initial de données à partir d'un client.  
   
@@ -62,11 +66,11 @@ caps.handback.revision: 31
 -   Sont mis en cache comme une table temporaire en cas de utilisation dans une procédure stockée. À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les paramètres table sont également mis en cache pour les requêtes paramétrables.  
   
 ##  <a name="Restrictions"></a> Restrictions  
- Les paramètres table ont les restrictions suivantes :  
+ Les paramètres table ont les restrictions suivantes :  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne maintient pas de statistiques sur les colonnes de paramètres table.  
   
--   Les paramètres table doivent être passés comme paramètres READONLY d'entrée aux routines [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous ne pouvez pas effectuer d'opérations DML telles que UPDATE, DELETE ou INSERT sur un paramètre table dans le corps d'une routine.  
+-   Les paramètres table doivent être passés comme paramètres READONLY d'entrée aux routines [!INCLUDE[tsql](../../includes/tsql-md.md)] . Vous ne pouvez pas effectuer d'opérations DML telles que UPDATE, DELETE ou INSERT sur un paramètre table dans le corps d'une routine.  
   
 -   Vous ne pouvez pas utiliser de paramètre table comme cible d'une instruction SELECT INTO ou INSERT EXEC. Un paramètre table peut être dans la clause FROM de SELECT INTO ou dans la chaîne ou procédure stockée INSERT EXEC.  
   
@@ -117,7 +121,7 @@ EXEC usp_InsertProductionLocation @LocationTVP;
 GO  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   

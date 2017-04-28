@@ -1,25 +1,29 @@
 ---
-title: "Guide d’architecture de gestion de la m&#233;moire | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/21/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "guide, architecture de gestion de la mémoire"
-  - "guide d’architecture de gestion de la mémoire"
+title: "Guide d’architecture de gestion de la mémoire | Microsoft Docs"
+ms.custom: 
+ms.date: 10/21/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- guide, memory management architecture
+- memory management architecture guide
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d00e5c97e6c27f3fe40b2066b5e194b8011f6b1e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Guide d’architecture de gestion de la m&#233;moire
+# <a name="memory-management-architecture-guide"></a>Guide d’architecture de gestion de la mémoire
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 ## <a name="memory-architecture"></a>Architecture de la mémoire
@@ -33,26 +37,26 @@ L'un des objectifs principaux de tous les logiciels de base de données est de r
 
 
 > [!NOTE]
-> Dans un système surchargé, certaines requêtes volumineuses dont l'exécution nécessite une importante quantité de mémoire ne peuvent pas obtenir la quantité minimale de mémoire requise et reçoivent une erreur de temporisation pendant qu'elles attendent des ressources mémoire. Pour résoudre ce problème, augmentez la valeur de [l'option query wait](../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md). Pour une requête parallèle, envisagez de réduire [l'option max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) (Degré maximum de parallélisme).
+> Dans un système surchargé, certaines requêtes volumineuses dont l'exécution nécessite une importante quantité de mémoire ne peuvent pas obtenir la quantité minimale de mémoire requise et reçoivent une erreur de temporisation pendant qu'elles attendent des ressources mémoire. Pour résoudre ce problème, augmentez la valeur de [l'option query wait](../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md). Pour une requête parallèle, envisagez de réduire [l'option max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)(Degré maximum de parallélisme).
  
 > [!NOTE]
 > Dans un système où une charge très lourde pèse sur les ressources mémoire, les requêtes comportant jointure de fusion, tri et bitmap dans le plan de requête peuvent éliminer le bitmap si elles n'obtiennent pas la mémoire minimale nécessaire pour ce bitmap. Ceci peut affecter les performances de la requête, et, si le processus de tri ne tient pas en mémoire, ceci peut accroître l'utilisation des tables de travail dans la base de données tempdb, ce qui augmente le volume de tempdb. Pour résoudre ce problème, ajoutez de la mémoire physique ou paramétrez les requêtes de façon qu'elles utilisent un autre plan de requête plus rapide.
  
-### <a name="providing-the-maximum-amount-of-memory-to-includessnoversiontokenssnoversionmdmd"></a>Apport de la quantité maximale de mémoire à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+### <a name="providing-the-maximum-amount-of-memory-to-includessnoversionincludesssnoversion-mdmd"></a>Apport de la quantité maximale de mémoire à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
-L’utilisation d’AWE et du privilège de verrouillage des pages en mémoire vous permet de fournir les quantités de mémoire suivantes au moteur de base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. (le tableau suivant comprend une colonne pour les versions 32 bits qui ne sont plus disponibles).
+L’utilisation d’AWE et du privilège de verrouillage des pages en mémoire vous permet de fournir les quantités de mémoire suivantes au moteur de base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . (le tableau suivant comprend une colonne pour les versions 32 bits qui ne sont plus disponibles).
 
 | |32 bits <sup>1</sup> |64 bits
 |-------|-------|-------| 
-|Mémoire conventionnelle |Toutes les éditions [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. jusqu'à la limite d'espace d'adressage virtuel de processus : <br>- 2 Go<br>- 3 Go avec le paramètre d’amorçage /3 gb <sup>2</sup> <br>- 4 Go sur WOW64 <sup>3</sup> |Toutes les éditions [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. jusqu'à la limite d'espace d'adressage virtuel de processus : <br>- 7 To avec l’architecture IA64 (IA64 non pris en charge dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] et les versions ultérieures)<br>- Maximum du système d’exploitation avec architecture x64 <sup>4</sup>
-|Mécanisme AWE (Permet à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] d'aller au-delà de la limite d'espace d'adressage virtuel de processus sur une plateforme 32 bits.) |Éditions [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard, Enterprise et Developer : le pool de mémoires tampons est en mesure d’accéder à 64 Go de mémoire maximum.|Non applicable <sup>5</sup> |
+|Mémoire conventionnelle |Toutes les éditions [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . jusqu'à la limite d'espace d'adressage virtuel de processus : <br>- 2 Go<br>- 3 Go avec le paramètre d’amorçage /3 gb <sup>2</sup> <br>- 4 Go sur WOW64 <sup>3</sup> |Toutes les éditions [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . jusqu'à la limite d'espace d'adressage virtuel de processus : <br>- 7 To avec l’architecture IA64 (IA64 non pris en charge dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] et les versions ultérieures)<br>- Maximum du système d’exploitation avec architecture x64 <sup>4</sup>
+|Mécanisme AWE (Permet à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] d'aller au-delà de la limite d'espace d'adressage virtuel de processus sur une plateforme 32 bits.) |Éditions[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard, Enterprise et Developer : le pool de mémoires tampons est en mesure d’accéder à 64 Go de mémoire maximum.|Non applicable <sup>5</sup> |
 |Privilège de verrouillage des pages en mémoire du système d’exploitation (permet de verrouiller la mémoire physique, empêchant ainsi la pagination par le système d’exploitation de la mémoire verrouillée). <sup>6</sup> |Éditions [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard, Enterprise et Developer : nécessaire pour les processus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] devant utiliser le mécanisme AWE. La mémoire allouée par le biais du mécanisme AWE ne peut pas être dépaginée. <br> L'accord de ce privilège sans l'activation de AWE n'a aucun effet sur le serveur. |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] éditions Enterprise et Developer : recommandé, afin d’éviter la pagination par le système d’exploitation. Peut apporter un gain de performances, selon la charge de travail. La quantité de mémoire accessible est semblable au cas de mémoire conventionnelle. |
 
 <sup>1</sup> les versions 32 bits ne sont pas disponibles à partir de la version [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
 <sup>2</sup> /3gb est un paramètre d’amorçage de système d’exploitation. Pour plus d'informations, consultez la MSDN Library.  
 <sup>3</sup> WOW64 (Windows on Windows 64) est un mode dans lequel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 32 bits s’exécute sur un système d’exploitation 64 bits.  
-<sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] édition Standard prend en charge jusqu’à 128 Go. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] édition Enterprise prend en charge le maximum du maximum du système d’exploitation...  
-<sup>5</sup> Notez que l’option sp_configure awe enabled est présente sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 64 bits, mais qu’elle est ignorée.    
+<sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition supports up to 128 GB. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] édition Enterprise prend en charge le maximum du maximum du système d’exploitation...  
+<sup>5</sup> Notez que l’option sp_configure awe enabled est présente sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]64 bits, mais qu’elle est ignorée.    
 <sup>6</sup> Si le privilège de verrouillage des pages en mémoire (LPIM) est accordé (sur la version 32 bits pour la prise en charge d’AWE ou sur la version 64 bits par elle-même), nous recommandons de définir également la mémoire de serveur maximale.
 
 > [!NOTE]
@@ -65,41 +69,41 @@ Le comportement par défaut de la gestion de la mémoire du moteur de base de do
 
 L’espace d’adressage virtuel de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut être divisé en deux zones distinctes : l’espace occupé par le pool de mémoires tampons et le reste. Si le mécanisme AWE est activé, le pool de mémoires tampons peut se trouver dans la mémoire mappée AWE, ce qui donne davantage d'espace pour les pages de base de données. 
 
-Le pool de mémoires tampons fait office de source principale d'allocation mémoire de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Des composants externes qui résident dans le processus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], tels que les objets COM, et qui ne gèrent pas les fonctions de gestion de mémoire de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], utilisent la mémoire en dehors de l’espace d’adressage virtuel occupé par le pool de mémoires tampons.
+Le pool de mémoires tampons fait office de source principale d'allocation mémoire de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Des composants externes qui résident dans le processus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , tels que les objets COM, et qui ne gèrent pas les fonctions de gestion de mémoire de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , utilisent la mémoire en dehors de l’espace d’adressage virtuel occupé par le pool de mémoires tampons.
 
 Lorsque [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] démarre, il calcule la taille de l'espace d'adressage virtuel pour le pool de mémoires tampons d'après plusieurs paramètres, dont la quantité de mémoire physique du système, le nombre de threads serveur et diverses options de démarrage. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] réserve la quantité ainsi calculée de son espace d’adressage virtuel de processus pour le pool de mémoires tampons, mais il acquiert (valide) uniquement la quantité nécessaire de mémoire physique pour la charge actuelle.
 
 L'instance continue alors à acquérir de la mémoire comme l'exige la prise en charge de la charge de travail. Au fur et à mesure que des utilisateurs se connectent et exécutent des requêtes, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] acquiert la mémoire physique supplémentaire à la demande. Une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] continue d’acquérir de la mémoire physique jusqu’à ce qu’elle atteigne sa cible d’allocation de mémoire maximum du serveur ou jusqu’à ce que Windows indique qu’il n’y a plus de mémoire disponible en surplus. Elle libère de la mémoire quand elle en a plus que la valeur de mémoire minimum du serveur paramétrée et si Windows indique qu’il y a une insuffisance de mémoire disponible.
 
-Étant donné que d'autres applications sont démarrées sur l'ordinateur exécutant une instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], elles consomment de la mémoire et la quantité de mémoire physique disponible descend en dessous de la cible de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. L'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] règle sa consommation de mémoire. Si une autre application est arrêtée, la mémoire disponible est augmentée, et l’instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] augmente la taille de son allocation de mémoire. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut libérer et acquérir plusieurs mégaoctets de mémoire chaque seconde, ce qui lui permet de s’adapter rapidement aux changements d’allocation de mémoire.
+Étant donné que d'autres applications sont démarrées sur l'ordinateur exécutant une instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], elles consomment de la mémoire et la quantité de mémoire physique disponible descend en dessous de la cible de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . L'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] règle sa consommation de mémoire. Si une autre application est arrêtée, la mémoire disponible est augmentée, et l’instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] augmente la taille de son allocation de mémoire. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut libérer et acquérir plusieurs mégaoctets de mémoire chaque seconde, ce qui lui permet de s’adapter rapidement aux changements d’allocation de mémoire.
 
 
 ## <a name="effects-of-min-and-max-server-memory"></a>Effets des options de configuration « min server memory » et « max server memory »
 
-Les options de configuration min server memory et max server memory permettent d’établir les limites supérieure et inférieure de la quantité de mémoire utilisée par le pool de mémoires tampons du moteur de base de données Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Le pool de mémoires tampons n'obtient pas immédiatement la quantité de mémoire spécifiée dans min server memory. En effet, il commence seulement avec la mémoire nécessaire à l'initialisation. Au fur et à mesure que la charge de travail du moteur de base de données augmente, celui-ci acquiert la mémoire nécessaire à la prise en charge de cette charge de travail. Le pool de mémoires tampons ne libère aucune partie de la mémoire acquise avant d'atteindre la valeur spécifiée dans min server memory. Dès lors que la quantité spécifiée dans min server memory est atteinte, le pool de mémoires tampons utilise l'algorithme standard pour acquérir et libérer la mémoire en fonction des besoins. La seule différence réside dans le fait que le pool de mémoires tampons ne diminue jamais son allocation de mémoire en dessous de la valeur spécifiée dans min server memory et n'obtient jamais plus de mémoire que le niveau spécifié dans max server memory.
+Les options de configuration min server memory et max server memory permettent d’établir les limites supérieure et inférieure de la quantité de mémoire utilisée par le pool de mémoires tampons du moteur de base de données Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Le pool de mémoires tampons n'obtient pas immédiatement la quantité de mémoire spécifiée dans min server memory. En effet, il commence seulement avec la mémoire nécessaire à l'initialisation. Au fur et à mesure que la charge de travail du moteur de base de données augmente, celui-ci acquiert la mémoire nécessaire à la prise en charge de cette charge de travail. Le pool de mémoires tampons ne libère aucune partie de la mémoire acquise avant d'atteindre la valeur spécifiée dans min server memory. Dès lors que la quantité spécifiée dans min server memory est atteinte, le pool de mémoires tampons utilise l'algorithme standard pour acquérir et libérer la mémoire en fonction des besoins. La seule différence réside dans le fait que le pool de mémoires tampons ne diminue jamais son allocation de mémoire en dessous de la valeur spécifiée dans min server memory et n'obtient jamais plus de mémoire que le niveau spécifié dans max server memory.
 
 > [!NOTE]
-> En tant que processus, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] acquiert plus de mémoire qu’indiqué par l’option max server memory. Les composants internes et externes peuvent allouer de la mémoire en dehors du pool de mémoires tampons, qui consomme un supplément de mémoire, mais la mémoire allouée au pool de mémoires tampons représente généralement la plus grande part de mémoire consommée par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+> En tant que processus,[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] acquiert plus de mémoire qu’indiqué par l’option max server memory. Les composants internes et externes peuvent allouer de la mémoire en dehors du pool de mémoires tampons, qui consomme un supplément de mémoire, mais la mémoire allouée au pool de mémoires tampons représente généralement la plus grande part de mémoire consommée par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 
 La quantité de mémoire acquise par le moteur de base de données dépend entièrement de la charge de travail placée dans l'instance. Une instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui ne traite pas beaucoup de demandes risque de ne jamais atteindre la valeur de min server memory.
 
 Si la valeur spécifiée pour min server memory et pour max server memory est identique, le moteur de base de données cesse de libérer et d'acquérir de la mémoire de façon dynamique pour le pool de mémoires tampons une fois que la mémoire allouée au moteur de base de données a atteint cette valeur.
 
-Si une instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fonctionne sur un ordinateur sur lequel d’autres applications sont régulièrement arrêtées ou démarrées, l’allocation et la désallocation de mémoire par l’instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut ralentir le démarrage de ces applications. De même, si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est une application serveur parmi d’autres exécutées sur un seul ordinateur, l’administrateur système doit éventuellement contrôler la quantité de mémoire allouée à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour ce faire, il peut utiliser les options min server memory et max server memory pour contrôler la quantité de mémoire utilisable par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour en savoir plus, consultez les [Options de configuration de la mémoire du serveur](../database-engine/configure-windows/server-memory-server-configuration-options.md).
+Si une instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fonctionne sur un ordinateur sur lequel d’autres applications sont régulièrement arrêtées ou démarrées, l’allocation et la désallocation de mémoire par l’instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut ralentir le démarrage de ces applications. De même, si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est une application serveur parmi d’autres exécutées sur un seul ordinateur, l’administrateur système doit éventuellement contrôler la quantité de mémoire allouée à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour ce faire, il peut utiliser les options min server memory et max server memory pour contrôler la quantité de mémoire utilisable par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour en savoir plus, consultez les [Options de configuration de la mémoire du serveur](../database-engine/configure-windows/server-memory-server-configuration-options.md).
 
 Les options min server memory et max server memory sont spécifiées en mégaoctets.
 
-## <a name="memory-used-by-includessnoversiontokenssnoversionmdmd-objects-specifications"></a>Utilisation de la mémoire par les spécifications d’objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+## <a name="memory-used-by-includessnoversionincludesssnoversion-mdmd-objects-specifications"></a>Utilisation de la mémoire par les spécifications d’objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 La liste suivante décrit la quantité estimée de mémoire utilisée par différents objets dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les quantités indiquées sont des estimations. Elles peuvent varier en fonction de l’environnement et de la manière dont les objets sont créés.
 
 * Verrou : 64 octets + 32 octets par propriétaire   
-* Connexion utilisateur : environ (3* *taille_paquet_réseau + 94 Ko)    
+* Connexion utilisateur : environ (3* *taille_paquet_réseau + 94 Ko)    
 
-La taille des paquets réseau représente la taille des paquets TDS (Tabular Data Scheme) utilisés pour la communication entre des applications et le moteur de base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La taille par défaut s'élève à 4 Ko ; elle est contrôlée par l'option de configuration Taille du paquet réseau.
+La taille des paquets réseau représente la taille des paquets TDS (Tabular Data Scheme) utilisés pour la communication entre des applications et le moteur de base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . La taille par défaut s'élève à 4 Ko ; elle est contrôlée par l'option de configuration Taille du paquet réseau.
 
-Lorsque la fonctionnalité MARS (Multiple Active Result Sets) est activée, la connexion utilisateur est environ (3 + 3 * nombre_connexions_logiques) * taille_paquet_réseau + 94 Ko.
+Quand la fonctionnalité MARS (Multiple Active Result Sets) est activée, la connexion utilisateur est environ (3 + 3 * nombre_connexions_logiques) * taille_paquet_réseau + 94 Ko.
 
 ## <a name="buffer-management"></a>Gestion des tampons
 
@@ -113,7 +117,7 @@ Lorsque [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] démarre, il calc
 
 L’intervalle entre le démarrage de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et le moment où la mémoire tampon obtient sa cible de mémoire s’appelle l’accélération. Au cours de cette opération, les tampons se remplissent de demandes de lecture selon les besoins. Par exemple, une demande de lecture d'une page unique remplit une page de tampon unique. Cela signifie que l'accélération dépend du nombre et du type des demandes clientes. L'accélération s'effectue par la transformation des demandes de lecture de page unique en demandes de huit pages alignées. Cette opération permet au processus d'accélération de s'achever plus rapidement en particulier sur les ordinateurs possédant beaucoup de mémoire.
 
-Comme le gestionnaire de tampons consomme l'essentiel de la mémoire dans les processus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], il collabore avec le gestionnaire de la mémoire afin de permettre aux autres composants d'utiliser ses tampons. Le gestionnaire de tampons interagit essentiellement avec les composants suivants :
+Comme le gestionnaire de tampons consomme l'essentiel de la mémoire dans les processus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , il collabore avec le gestionnaire de la mémoire afin de permettre aux autres composants d'utiliser ses tampons. Le gestionnaire de tampons interagit essentiellement avec les composants suivants :
 
 * Le gestionnaire de ressources pour contrôler l'utilisation de l'ensemble de la mémoire et, sur les plateformes 32 bits, pour contrôler l'utilisation de l'espace d'adressage.  
 * Le gestionnaire de base de données et le système d’exploitation [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (SQLOS) pour les opérations d’E/S de fichier peu importantes.  
@@ -167,7 +171,7 @@ La protection de page endommagée, introduite dans [!INCLUDE[ssNoVersion](../inc
 #### <a name="checksum-protection"></a>Protection de la somme de contrôle  
 La protection de la somme de contrôle, introduite dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2005, fournit une vérification renforcée de l’intégrité des données. Une somme de contrôle est calculée pour les données de chaque page écrite, elle est stockée dans l'en-tête de page. À chaque lecture d'une page contenant une somme de contrôle stockée sur le disque, le moteur de la base de données recalcule la somme de contrôle pour les données de la page et renvoie l'erreur 824 si la nouvelle somme de contrôle n'est pas identique à la somme de contrôle stockée. La protection de la somme de contrôle peut détecter un plus grand nombre d'erreurs que la protection de page endommagée car celle-ci est affectée par chaque octet de la page, elle utilise toutefois peu de ressources. Lorsque la somme de contrôle est activée, les erreurs causées par les pannes d'alimentation et du matériel ou des microprogrammes défectueux sont détectables à chaque lecture d'une page sur le disque par le gestionnaire de tampons.
 
-Le type de protection de page utilisé est un attribut de la base de données qui contient la page. La protection de la somme de contrôle est la protection par défaut pour les bases de données créées dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2005 et les versions ultérieures. Le mécanisme de protection de page est spécifié au moment de la création de la base de données et peut être modifié à l'aide de ALTER DATABASE. Vous pouvez déterminer le paramètre de protection de page en cours en interrogeant la colonne page_verify_option de l’affichage catalogue [sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ou la propriété IsTornPageDetectionEnabled de la fonction [DATABASEPROPERTYEX](../t-sql/functions/databasepropertyex-transact-sql.md). En cas de modification du paramètre de protection de page, le nouveau paramètre ne prend pas immédiatement effet dans l'ensemble de la base de données. Par contre, les pages adoptent le niveau de protection en cours de la base de données lors de leur écriture ultérieure. Cela signifie que la base de données peut contenir des pages utilisant différents types de protection. 
+Le type de protection de page utilisé est un attribut de la base de données qui contient la page. La protection de la somme de contrôle est la protection par défaut pour les bases de données créées dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2005 et les versions ultérieures. Le mécanisme de protection de page est spécifié au moment de la création de la base de données et peut être modifié à l'aide de ALTER DATABASE. Vous pouvez déterminer le paramètre de protection de page en cours en interrogeant la colonne page_verify_option de l’affichage catalogue [sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ou la propriété IsTornPageDetectionEnabled de la fonction [DATABASEPROPERTYEX](../t-sql/functions/databasepropertyex-transact-sql.md) . En cas de modification du paramètre de protection de page, le nouveau paramètre ne prend pas immédiatement effet dans l'ensemble de la base de données. Par contre, les pages adoptent le niveau de protection en cours de la base de données lors de leur écriture ultérieure. Cela signifie que la base de données peut contenir des pages utilisant différents types de protection. 
 
 ## <a name="understanding-non-uniform-memory-access"></a>Présentation de l'accès NUMA (Non-uniform Memory Access)
 
@@ -176,3 +180,5 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est compatible 
 ## <a name="see-also"></a>Voir aussi
 [Lecture de pages](../relational-databases/reading-pages.md)   
  [Écriture de pages](../relational-databases/writing-pages.md)
+
+

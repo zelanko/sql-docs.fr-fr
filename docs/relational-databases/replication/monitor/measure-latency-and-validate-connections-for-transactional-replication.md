@@ -1,31 +1,35 @@
 ---
-title: "Mesurer la latence et valider les connexions pour la r&#233;plication transactionnelle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Replication Monitor, performance"
-  - "tracer tokens [SQL Server replication]"
-  - "latency [SQL Server replication]"
-  - "transactional replication, tracer tokens"
-  - "analyse des performances [réplication SQL Server], jetons de suivi"
+title: "Mesurer la latence et valider les connexions pour la réplication transactionnelle | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Replication Monitor, performance
+- tracer tokens [SQL Server replication]
+- latency [SQL Server replication]
+- transactional replication, tracer tokens
+- monitoring performance [SQL Server replication], tracer tokens
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b2ef601ab4c3dca3b524805e9cce7798213deab9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Mesurer la latence et valider les connexions pour la r&#233;plication transactionnelle
-  Cette rubrique explique comment mesurer la latence et valider les connexions pour la réplication transactionnelle dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide du Moniteur de réplication, de [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou d'objets RMO (Replication Management Objects). La réplication transactionnelle offre la fonctionnalité de jeton de suivi, moyen facile de mesurer la latence dans les topologies de réplication transactionnelle et de valider les connexions entre le serveur de publication, le serveur de distribution et les Abonnés. Un jeton (une petite quantité de données) est écrit dans le journal des transactions de la base de données de publication et est marqué comme s'il s'agissait d'une transaction standard répliquée, puis est envoyé dans le système, permettant ainsi le calcul :  
+# <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Mesurer la latence et valider les connexions pour la réplication transactionnelle
+  Cette rubrique explique comment mesurer la latence et valider les connexions pour la réplication transactionnelle dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide du Moniteur de réplication, de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects). La réplication transactionnelle offre la fonctionnalité de jeton de suivi, moyen facile de mesurer la latence dans les topologies de réplication transactionnelle et de valider les connexions entre le serveur de publication, le serveur de distribution et les Abonnés. Un jeton (une petite quantité de données) est écrit dans le journal des transactions de la base de données de publication et est marqué comme s'il s'agissait d'une transaction standard répliquée, puis est envoyé dans le système, permettant ainsi le calcul :  
   
--   du temps écoulé entre la validation d'une transaction par le serveur de publication et l'insertion de la commande qui en découle dans la base de données de distribution sur le serveur de distribution ;  
+-   du temps écoulé entre la validation d'une transaction par le serveur de publication et l'insertion de la commande qui en découle dans la base de données de distribution sur le serveur de distribution ;  
   
 -   du temps écoulé entre l'insertion d'une commande dans la base de données de distribution et la validation de la transaction qui en découle au niveau d'un Abonné.  
   
@@ -43,7 +47,7 @@ caps.handback.revision: 36
   
 -   **Pour mesurer la latence et valider les connexions à l'aide de :**  
   
-     [Moniteur de réplication de SQL Server](#SSMSProcedure)  
+     [Moniteur de réplication de SQL Server](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -52,7 +56,7 @@ caps.handback.revision: 36
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
- Les jetons de suivi peuvent également être utiles lors de la suspension d'un système, qui consiste à arrêter toute l'activité pour vérifier que tous les nœuds ont reçu les changements en cours. Pour plus d’informations, consultez [Suspendre une topologie de réplication & #40 ; Programmation de Transact-SQL de réplication & #41 ;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
+ Les jetons de suivi peuvent également être utiles lors de la suspension d'un système, qui consiste à arrêter toute l'activité pour vérifier que tous les nœuds ont reçu les changements en cours. Pour plus d’informations, consultez [Suspendre une topologie de réplication &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
  Pour utiliser les jetons de suivi, vous devez utiliser certaines versions de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -77,9 +81,9 @@ caps.handback.revision: 36
 -   Après un basculement vers un réplica secondaire, le Moniteur de réplication ne peut pas ajuster le nom de l'instance de publication de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et continue à afficher les informations de réplication sous le nom de l'instance principale [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]d'origine. Après le basculement, un jeton de suivi ne peut pas être écrit à l'aide du Moniteur de réplication, toutefois un jeton de suivi écrit sur le nouveau serveur de publication à l'aide de [!INCLUDE[tsql](../../../includes/tsql-md.md)]est visible dans le Moniteur de réplication.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation du Moniteur de réplication SQL Server  
- Pour plus d’informations sur le démarrage du moniteur de réplication, consultez [Démarrer le moniteur de réplication](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+ Pour plus d’informations sur le démarrage du moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
-#### Pour insérer un jeton de suivi et afficher des informations sur le jeton  
+#### <a name="to-insert-a-tracer-token-and-view-information-on-the-token"></a>Pour insérer un jeton de suivi et afficher des informations sur le jeton  
   
 1.  Développez un groupe de serveurs de publication dans le volet gauche, développez un serveur de publication, puis cliquez sur une publication.  
   
@@ -89,42 +93,42 @@ caps.handback.revision: 36
   
 4.  Affichez le temps écoulé pour le jeton de suivi dans les colonnes suivantes : **Du serveur de publication vers le serveur de distribution**, **Du serveur de distribution vers l'Abonné**et **Latence totale**. Une valeur **En attente** indique que le jeton n'a pas atteint un point donné.  
   
-#### Pour afficher les informations d'un jeton de suivi inséré précédemment  
+#### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>Pour afficher les informations d'un jeton de suivi inséré précédemment  
   
 1.  Développez un groupe de serveurs de publication dans le volet gauche, développez un serveur de publication, puis cliquez sur une publication.  
   
 2.  Cliquez sur l'onglet **Jetons de suivi** .  
   
-3.  Sélectionnez une heure à partir de la **fois inséré** liste déroulante.  
+3.  Sélectionnez une heure dans la liste déroulante **Heure de l'insertion** .  
   
 4.  Affichez le temps écoulé pour le jeton de suivi dans les colonnes suivantes : **Du serveur de publication vers le serveur de distribution**, **Du serveur de distribution vers l'Abonné**et **Latence totale**. Une valeur **En attente** indique que le jeton n'a pas atteint un point donné.  
   
     > [!NOTE]  
-    >  Les informations de jeton de suivi sont conservées pour la même durée que toute autre donnée d'historique, elles-mêmes étant régies par la période de rétention des historiques définie dans la base de données de distribution. Pour plus d’informations sur la modification des propriétés de base de données de distribution, consultez [Afficher et de modifier le serveur de distribution et de propriétés de l’éditeur](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
+    >  Les informations de jeton de suivi sont conservées pour la même durée que toute autre donnée d'historique, elles-mêmes étant régies par la période de rétention des historiques définie dans la base de données de distribution. Pour plus d’informations sur la modification des propriétés de base de données de distribution, consultez [Afficher et modifier les propriétés d’un serveur de distribution ou d’un serveur de publication](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour publier un jeton de suivi sur une publication transactionnelle  
+#### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>Pour publier un jeton de suivi sur une publication transactionnelle  
   
-1.  (Facultatif) Sur le serveur de publication sur la base de données de publication, exécutez [sp_helppublication & #40 ; Transact-SQL & #41 ;](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). Vérifiez que la publication existe et que l'état est actif.  
+1.  (Facultatif) Dans la base de données de publication sur le serveur de publication, exécutez [sp_helppublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). Vérifiez que la publication existe et que l'état est actif.  
   
-2.  (Facultatif) Sur le serveur de publication sur la base de données de publication, exécutez [sp_helpsubscription & #40 ; Transact-SQL & #41 ;](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md). Vérifiez que l'abonnement existe et que l'état est actif.  
+2.  (Facultatif) Dans la base de données de publication sur le serveur de publication, exécutez [sp_helpsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md). Vérifiez que l'abonnement existe et que l'état est actif.  
   
-3.  Sur le serveur de publication sur la base de données de publication, exécutez [sp_posttracertoken & #40 ; Transact-SQL & #41 ;](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md), en spécifiant **@publication**. Notez la valeur de la **@tracer_token_id** paramètre de sortie.  
+3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_posttracertoken &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md), en spécifiant **@publication**. Notez la valeur du paramètre de sortie **@tracer_token_id** .  
   
-#### Pour déterminer la latence et valider les connexions d'une publication transactionnelle  
+#### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>Pour déterminer la latence et valider les connexions d'une publication transactionnelle  
   
 1.  Publiez un jeton de suivi sur la publication à l'aide de la procédure précédente.  
   
-2.  Sur le serveur de publication sur la base de données de publication, exécutez [sp_helptracertokens & #40 ; Transact-SQL & #41 ;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), en spécifiant **@publication**. La liste de tous les jetons de suivi publiés sur la publication est ainsi retournée. Notez l’élément **tracer_id** dans le résultat défini.  
+2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), en spécifiant **@publication**. La liste de tous les jetons de suivi publiés sur la publication est ainsi retournée. Notez le **tracer_id** désiré dans le jeu de résultats.  
   
-3.  Sur le serveur de publication sur la base de données de publication, exécutez [sp_helptracertokenhistory & #40 ; Transact-SQL & #41 ;](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md), en spécifiant **@publication** et l’ID de jeton de suivi à l’étape 2 pour **@tracer_id**. Les informations de latence pour le jeton de suivi sélectionné sont ainsi retournées.  
+3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md), en spécifiant **@publication** et l’ID du jeton de suivi obtenu à l’étape 2 pour **@tracer_id**. Les informations de latence pour le jeton de suivi sélectionné sont ainsi retournées.  
   
-#### Pour supprimer les jetons de suivi  
+#### <a name="to-remove-tracer-tokens"></a>Pour supprimer les jetons de suivi  
   
-1.  Sur le serveur de publication sur la base de données de publication, exécutez [sp_helptracertokens & #40 ; Transact-SQL & #41 ;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), en spécifiant **@publication**. La liste de tous les jetons de suivi publiés sur la publication est ainsi retournée. Remarque la **tracer_id** pour le jeton de suivi à supprimer dans le résultat défini.  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), en spécifiant **@publication**. La liste de tous les jetons de suivi publiés sur la publication est ainsi retournée. Notez **tracer_id** pour le jeton de suivi à supprimer dans le jeu de résultats.  
   
-2.  Sur le serveur de publication sur la base de données de publication, exécutez [sp_deletetracertokenhistory & #40 ; Transact-SQL & #41 ;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md), en spécifiant **@publication** et l’ID de suivi à supprimer à l’étape 2 pour **@tracer_id**.  
+2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md), en spécifiant **@publication** et l’ID du jeton de suivi à supprimer obtenu à l’étape 2 pour **@tracer_id**.  
   
 ###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
  Cet exemple publie un enregistrement de jeton de suivi et utilise l'ID retourné du jeton de suivi publié pour consulter les informations de latence.  
@@ -133,48 +137,48 @@ caps.handback.revision: 36
   
 ##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
   
-#### Pour publier un jeton de suivi sur une publication transactionnelle  
+#### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>Pour publier un jeton de suivi sur une publication transactionnelle  
   
-1.  Créer une connexion au serveur de publication à l’aide de la <xref:Microsoft.SqlServer.Management.Common.ServerConnection> (classe).  
+1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Créez une instance de la <xref:Microsoft.SqlServer.Replication.TransPublication> classe.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPublication>.  
   
-3.  Définir le <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> Propriétés de la publication et définissez la <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> propriété à la connexion créée à l’étape 1.  
+3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publication, et affectez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> la connexion créée à l’étape 1.  
   
-4.  Appelez le <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> méthode pour obtenir les propriétés de l’objet. Si cette méthode retourne **false**, soit les propriétés de la publication ont été définies de manière incorrecte à l’étape 3, soit la publication n’existe pas.  
+4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l’objet. Si cette méthode retourne **false**, soit les propriétés de la publication ont été définies de manière incorrecte à l’étape 3, soit la publication n’existe pas.  
   
-5.  Appelez le <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A> (méthode). Cette méthode insère un jeton de suivi dans le journal des transactions de la publication.  
+5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A>. Cette méthode insère un jeton de suivi dans le journal des transactions de la publication.  
   
-#### Pour déterminer la latence et valider les connexions d'une publication transactionnelle  
+#### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>Pour déterminer la latence et valider les connexions d'une publication transactionnelle  
   
-1.  Créer une connexion au serveur de distribution à l’aide de la <xref:Microsoft.SqlServer.Management.Common.ServerConnection> (classe).  
+1.  Créez une connexion au serveur de distribution en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Créez une instance de la <xref:Microsoft.SqlServer.Replication.PublicationMonitor> (classe).  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor>.  
   
-3.  Définir le <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, et <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> propriétés et affectez le <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> propriété à la connexion créée à l’étape 1.  
+3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A> et <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>, et affectez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> la connexion créée à l’étape 1.  
   
-4.  Appelez le <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> méthode pour obtenir les propriétés de l’objet. Si cette méthode retourne **false**, soit les propriétés d’analyse de la publication ont été définies de manière incorrecte à l’étape 3, soit la publication n’existe pas.  
+4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l’objet. Si cette méthode retourne **false**, soit les propriétés de surveillance de la publication ont été définies de manière incorrecte à l'étape 3, soit la publication n'existe pas.  
   
-5.  Appelez le <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> (méthode). Effectuer un cast retourné <xref:System.Collections.ArrayList> objet à un tableau de <xref:Microsoft.SqlServer.Replication.TracerToken> objets.  
+5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A>. Effectuez un cast de l’objet <xref:System.Collections.ArrayList> retourné en un tableau d’objets <xref:Microsoft.SqlServer.Replication.TracerToken>.  
   
-6.  Appelez le <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A> (méthode). Passez la valeur <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> pour un jeton de suivi de l’étape 5. Cela renvoie des informations de latence pour le jeton de suivi sélectionné comme un <xref:System.Data.DataSet> objet. Si toutes les informations de jeton de suivi sont retournées, la connexion entre le serveur de publication et le serveur de distribution et la connexion entre le serveur de distribution et l'Abonné existent et la topologie de réplication fonctionne.  
+6.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A>. Passez une valeur de <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> pour un jeton de suivi de l’étape 5. Les informations de latence pour le jeton de suivi sélectionné sont ainsi retournées comme objet <xref:System.Data.DataSet>. Si toutes les informations de jeton de suivi sont retournées, la connexion entre le serveur de publication et le serveur de distribution et la connexion entre le serveur de distribution et l'Abonné existent et la topologie de réplication fonctionne.  
   
-#### Pour supprimer les jetons de suivi  
+#### <a name="to-remove-tracer-tokens"></a>Pour supprimer les jetons de suivi  
   
-1.  Créer une connexion au serveur de distribution à l’aide de la <xref:Microsoft.SqlServer.Management.Common.ServerConnection> (classe).  
+1.  Créez une connexion au serveur de distribution en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Créez une instance de la <xref:Microsoft.SqlServer.Replication.PublicationMonitor> (classe).  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor>.  
   
-3.  Définir le <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, et <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> propriétés et affectez le <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> propriété à la connexion créée à l’étape 1.  
+3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A> et <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>, et affectez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> la connexion créée à l’étape 1.  
   
-4.  Appelez le <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> méthode pour obtenir les propriétés de l’objet. Si cette méthode retourne **false**, soit les propriétés d’analyse de la publication ont été définies de manière incorrecte à l’étape 3, soit la publication n’existe pas.  
+4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l’objet. Si cette méthode retourne **false**, soit les propriétés de surveillance de la publication ont été définies de manière incorrecte à l'étape 3, soit la publication n'existe pas.  
   
-5.  Appelez le <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> (méthode). Effectuer un cast retourné <xref:System.Collections.ArrayList> objet à un tableau de <xref:Microsoft.SqlServer.Replication.TracerToken> objets.  
+5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A>. Effectuez un cast de l’objet <xref:System.Collections.ArrayList> retourné en un tableau d’objets <xref:Microsoft.SqlServer.Replication.TracerToken>.  
   
-6.  Appelez le <xref:Microsoft.SqlServer.Replication.PublicationMonitor.CleanUpTracerTokenHistory%2A> (méthode). Passez l'une des valeurs suivantes :  
+6.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.PublicationMonitor.CleanUpTracerTokenHistory%2A>. Passez l'une des valeurs suivantes :  
   
     -   Le <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> pour un jeton de suivi de l’étape 5. Les informations d'un jeton sélectionné sont alors supprimées.  
   
-    -   Un <xref:System.DateTime> objet. Les informations pour tous les jetons plus anciens que les date et heure spécifiées sont alors supprimées.  
+    -   Un objet <xref:System.DateTime>. Les informations pour tous les jetons plus anciens que les date et heure spécifiées sont alors supprimées.  
   
   

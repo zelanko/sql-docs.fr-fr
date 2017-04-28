@@ -1,29 +1,33 @@
 ---
-title: "R&#233;f&#233;rencer la collection de sch&#233;mas XML int&#233;gr&#233;e (sys) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "collections de schémas XML (sys) [SQL Server]"
-  - "collections de schémas [SQL Server], prédéfinies"
-  - "collections de schémas XML prédéfinies [SQL Server]"
-  - "collections de schémas XML [SQL Server], prédéfinies"
-  - "collections de schémas XML intégrées [SQL Server]"
+title: "Référencer la collection de schémas XML intégrée (sys) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sys XML schema collections [SQL Server]
+- schema collections [SQL Server], predefined
+- predefined XML schema collections [SQL Server]
+- XML schema collections [SQL Server], predefined
+- built-in XML schema collections [SQL Server]
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fa2b103a4c846e52c9af999980bb3c8080a4f6d5
+ms.lasthandoff: 04/11/2017
+
 ---
-# R&#233;f&#233;rencer la collection de sch&#233;mas XML int&#233;gr&#233;e (sys)
-  Chaque base de données que vous créez a une collection de schémas XML **sys** prédéfinie dans le schéma relationnel **sys**. Elle réserve ces schémas prédéfinis, qui sont accessibles à toute autre collection de schémas XML créés par l'utilisateur. Les préfixes utilisés dans ces schémas prédéfinis ont une signification dans XQuery. Seul **xml** est un préfixe réservé.  
+# <a name="reference-the-built-in-xml-schema-collection-sys"></a>Référencer la collection de schémas XML intégrée (sys)
+  Chaque base de données que vous créez a une collection de schémas XML **sys** prédéfinie dans le schéma relationnel **sys** . Elle réserve ces schémas prédéfinis, qui sont accessibles à toute autre collection de schémas XML créés par l'utilisateur. Les préfixes utilisés dans ces schémas prédéfinis ont une signification dans XQuery. Seul **xml** est un préfixe réservé.  
   
 ```  
 xml = http://www.w3.org/XML/1998/namespace  
@@ -36,15 +40,15 @@ xdt = http://www.w3.org/2004/07/xpath-datatypes
 (no prefix) = http://schemas.microsoft.com/sqlserver/2004/SOAP  
 ```  
   
- Notez que l’espace de noms **sqltypes** contient des composants qui peuvent être référencés à partir de toute collection de schémas XML créée par l’utilisateur. Vous pouvez télécharger le schéma **sqltypes** à partir de ce [site web de Microsoft](http://go.microsoft.com/fwlink/?linkid=31850). Les composants intégrés incluent les éléments suivants :  
+ Notez que l’espace de noms **sqltypes** contient des composants qui peuvent être référencés à partir de toute collection de schémas XML créée par l’utilisateur. Vous pouvez télécharger le schéma **sqltypes** à partir de ce [site web de Microsoft](http://go.microsoft.com/fwlink/?linkid=31850). Les composants intégrés incluent les éléments suivants :  
   
 -   Types XSD  
   
--   Attributs XML **lang**, **base** et **space**  
+-   Attributs XML **lang**, **base**et **space**  
   
 -   Composants de l’espace de noms **sqltypes**  
   
- La requête ci-dessous retourne les composants intégrés qui peuvent être référencés à partir d'une collection de schémas XML créés par l'utilisateur :  
+ La requête ci-dessous retourne les composants intégrés qui peuvent être référencés à partir d'une collection de schémas XML créés par l'utilisateur :  
   
 ```  
 SELECT C.name, N.name, C.symbol_space_desc from sys.xml_schema_components C join sys.xml_schema_namespaces N  
@@ -56,7 +60,7 @@ AND (SC.schema_id = 4))
 GO  
 ```  
   
- L'exemple suivant montre comment ces composants sont référencés dans un schéma utilisateur. `CREATE XML SCHEMA COLLECTION` crée une collection de schémas XML qui fait référence au type `varchar` défini dans l’espace de noms `sqltypes`. L'exemple référence également l'attribut `lang` défini dans l'espace de noms `xml`.  
+ L'exemple suivant montre comment ces composants sont référencés dans un schéma utilisateur. `CREATE XML SCHEMA COLLECTION` crée une collection de schémas XML qui fait référence au type `varchar` défini dans l’espace de noms `sqltypes` . L'exemple référence également l'attribut `lang` défini dans l'espace de noms `xml` .  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
@@ -89,9 +93,9 @@ DROP xml schema collection SC
 GO  
 ```  
   
- Notez les points suivants :  
+ Notez les points suivants :  
   
--   Vous ne pouvez pas modifier les schémas XML avec ces espaces de noms dans toutes les collections de schémas XML créés par l'utilisateur. Par exemple, la collection de schémas XML ci-dessous échoue, car elle ajoute un composant dans l'espace de noms protégé `sqltypes` :  
+-   Vous ne pouvez pas modifier les schémas XML avec ces espaces de noms dans toutes les collections de schémas XML créés par l'utilisateur. Par exemple, la collection de schémas XML ci-dessous échoue, car elle ajoute un composant dans l'espace de noms protégé `sqltypes` :  
   
     ```  
     CREATE XML SCHEMA COLLECTION SC AS '  
@@ -103,13 +107,13 @@ GO
     GO  
     ```  
   
--   Vous ne pouvez pas utiliser la collection de schémas XML `sys` pour taper des colonnes, des variables ou des paramètres `xml`. Par exemple, le code suivant retourne une erreur :  
+-   Vous ne pouvez pas utiliser la collection de schémas XML `sys` pour taper des colonnes, des variables ou des paramètres `xml` . Par exemple, le code suivant retourne une erreur :  
   
     ```  
     DECLARE @x xml (sys.sys)  
     ```  
   
--   La sérialisation de ces schémas intégrés n'est pas prise en charge. Par exemple, le code suivant retourne une erreur :  
+-   La sérialisation de ces schémas intégrés n'est pas prise en charge. Par exemple, le code suivant retourne une erreur :  
   
     ```  
     SELECT XML_SCHEMA_NAMESPACE(N'sys',N'sys')  
@@ -146,9 +150,9 @@ data(/ns:root[1]) instance of sqltypes:varchar?')
 GO  
 ```  
   
- L’expression `instance of sqltypes:varchar?` retourne TRUE, car la valeur de l’élément <`root`> est d’un type dérivé de **varchar`@var` d’après le schéma associé à la variable **.  
+ L’expression `instance of sqltypes:varchar?` retourne TRUE, car la valeur de l’élément <`root`> est d’un type dérivé de **varchar`@var` d’après le schéma associé à la variable** .  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Collections de schémas XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

@@ -1,36 +1,40 @@
 ---
-title: "Configurer des r&#232;gles de pare-feu avant d’ex&#233;cuter le d&#233;bogueur TSQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/20/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.error.sqlde_register_failed"
-  - "vs.debug.error.sqlde_accessdenied"
-  - "vs.debug.error.sqlde_firewall.remotemachines"
-helpviewer_keywords: 
-  - "débogueur Transact-SQL, connexions à distance"
-  - "Pare-feu Windows [moteur de base de données], débogueur Transact-SQL"
-  - "débogueur Transact-SQL, Pare-feu Windows"
-  - "débogueur Transact-SQL, configurer"
-  - "ports [SQL Server], débogueur Transact-SQL"
-  - "TCP/IP [SQL Server], numéros de port"
+title: "Configurer des règles de pare-feu avant d’exécuter le débogueur TSQL | Microsoft Docs"
+ms.custom: 
+ms.date: 10/20/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.error.sqlde_register_failed
+- vs.debug.error.sqlde_accessdenied
+- vs.debug.error.sqlde_firewall.remotemachines
+helpviewer_keywords:
+- Transact-SQL debugger, remote connections
+- Windows Firewall [Database Engine], Transact-SQL debugger
+- Transact-SQL debugger, Windows Firewall
+- Transact-SQL debugger, configuring
+- ports [SQL Server], Transact-SQL debugger
+- TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1aec49f13a7e4c37fd9d8212393c5bdc3a5694d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurer des r&#232;gles de pare-feu avant d’ex&#233;cuter le d&#233;bogueur TSQL
+# <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Configurer des règles de pare-feu avant d’exécuter le débogueur TSQL
   Vous devez configurer des règles de Pare-feu Windows pour permettre le débogage [!INCLUDE[tsql](../../includes/tsql-md.md)] en cas de connexion à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui s'exécute sur un autre ordinateur que l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
-## Configuration du débogueur Transact-SQL  
+## <a name="configuring-the-transact-sql-debugger"></a>Configuration du débogueur Transact-SQL  
  Le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] inclut des composants côté serveur et côté client. Les composants du débogueur côté serveur sont installés avec chaque instance du moteur de base de données à partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) ou version ultérieure. Les composants côté client du débogueur sont inclus :  
   
 -   Lorsque vous utilisez les outils côté client de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou version ultérieure.  
@@ -46,7 +50,7 @@ caps.handback.revision: 43
 > [!CAUTION]  
 >  L'activation des règles dans le Pare-feu Windows peut exposer votre ordinateur à des atteintes à la sécurité que le pare-feu est conçu pour bloquer. L'activation des règles pour le débogage distant débloque les ports et les programmes répertoriés dans cette rubrique.  
   
-## Règles de pare-feu sur le serveur  
+## <a name="firewall-rules-on-the-server"></a>Règles de pare-feu sur le serveur  
  Sur l'ordinateur qui exécute l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)], utilisez le **Pare-feu Windows avec fonctions avancées de sécurité** pour spécifier les informations suivantes :  
   
 -   Ajoutez une règle de programme entrante pour sqlservr.exe. Vous devez avoir une règle pour chaque instance qui doit prendre en charge les sessions de débogage distant.  
@@ -91,7 +95,7 @@ caps.handback.revision: 43
   
 -   Si la stratégie de domaine exige que les communications réseau s'effectuent par le biais du protocole IPsec, vous devez également ajouter des règles entrantes ouvrant les ports UDP 4500 et UDP 500.  
   
-## Règles de pare-feu sur le client  
+## <a name="firewall-rules-on-the-client"></a>Règles de pare-feu sur le client  
  Sur l'ordinateur qui exécute l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , le programme d'installation de SQL Server ou le programme d'installation de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] a peut-être configuré le Pare-feu Windows de façon à autoriser le débogage distant.  
   
  Si vous obtenez des erreurs lors de la tentative d'ouverture d'une session de débogage distant, vous pouvez configurer manuellement les exceptions de port et programme à l'aide du **Pare-feu Windows avec fonctions avancées de sécurité** pour configurer des règles de pare-feu :  
@@ -146,7 +150,7 @@ caps.handback.revision: 43
   
     9. Sélectionnez **TCP** dans la zone **Type de protocole :** , sélectionnez **Ports dynamiques RPC** dans la zone **Port local :** , cliquez sur **Appliquer**, puis sur **OK**.  
   
-## Configuration requise pour le démarrage du débogueur  
+## <a name="requirements-for-starting-the-debugger"></a>Configuration requise pour le démarrage du débogueur  
  Toute tentative de démarrer le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] doit également respecter les conditions suivantes :  
   
 * [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] doit s'exécuter sous un compte Windows qui est membre du rôle serveur fixe sysadmin.  
@@ -157,7 +161,7 @@ caps.handback.revision: 43
 
 * Le serveur doit communiquer avec le client par le biais de RPC. Le compte sous lequel le service SQL Server est exécuté doit avoir des autorisations d’authentification pour le client  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Exécuter le débogueur Transact-SQL](../../relational-databases/scripting/run-the-transact-sql-debugger.md)   
  [Exécuter pas à pas du code Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)   
@@ -165,3 +169,4 @@ caps.handback.revision: 43
  [Éditeur de requête du moteur de base de données &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)  
   
   
+

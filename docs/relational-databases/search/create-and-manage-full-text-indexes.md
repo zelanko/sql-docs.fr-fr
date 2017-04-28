@@ -1,131 +1,205 @@
 ---
-title: "Cr&#233;er et g&#233;rer des index de recherche en texte int&#233;gral | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "index de recherche en texte intégral [SQL Server], à propos de"
+title: "Créer et gérer des index de recherche en texte intégral | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text indexes [SQL Server], about
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 33ac4c4c97735b494db016df17405eaff9b848c6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er et g&#233;rer des index de recherche en texte int&#233;gral
-  Les informations contenues dans les index de recherche en texte intégral sont utilisées par le Moteur d'indexation et de recherche en texte intégral pour compiler des requêtes de texte intégral qui permettent de rechercher rapidement certains mots ou combinaisons de mots dans une table. Un index de recherche en texte intégral stocke les informations se rapportant aux mots significatifs et à leur emplacement dans une ou plusieurs colonnes d'une table de base de données. Un index de recherche en texte intégral est un type spécial d'index fonctionnel par jeton qui est construit et géré par le Moteur d'indexation et de recherche en texte intégral pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le processus de création d'un index de texte intégral diffère du processus de création des autres types d'index. Au lieu de construire une structure d'arbre B (B-tree) en fonction d'une valeur stockée dans une ligne particulière, le Moteur d'indexation et de recherche en texte intégral crée une structure d'index inversée, empilée, compressée et basée sur des jetons individuels provenant du texte indexé.  La taille d’un index de recherche en texte intégral est limitée uniquement par les ressources mémoire dont dispose l’ordinateur sur lequel l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute.  
+# <a name="create-and-manage-full-text-indexes"></a>Créer et gérer des index de recherche en texte intégral
+Cette rubrique décrit comment créer, remplir et gérer des index de recherche en texte intégral dans SQL Server.
   
- À compter de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], les index de recherche en texte intégral sont intégrés au Moteur de base de données, au lieu de résider dans le système de fichiers comme dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour une nouvelle base de données, le catalogue de texte intégral est désormais un objet virtuel qui n'appartient à aucun groupe de fichiers ; il s'agit tout simplement d'un concept logique qui fait référence à un groupe d'index de recherche en texte intégral. Notez toutefois que pendant la mise à niveau d’une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], pour tout catalogue de texte intégral qui contient des fichiers de données, un nouveau groupe de fichiers est créé ; pour plus d’informations, consultez [Mise à niveau de la fonction de recherche en texte intégral](../../relational-databases/search/upgrade-full-text-search.md).  
+## <a name="prerequisite---create-a-full-text-catalog"></a>Prérequis - Créer un catalogue de texte intégral
+Avant de pouvoir créer un index de recherche en texte intégral, vous devez disposer d’un catalogue de texte intégral. Le catalogue est un conteneur virtuel pour un ou plusieurs index de recherche en texte intégral. Pour plus d’informations, consultez [Créer et gérer des catalogues de texte intégral](../../relational-databases/search/create-and-manage-full-text-catalogs.md).
   
-> [!NOTE]  
->  Dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures, le moteur d'indexation et de recherche en texte intégral réside dans le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], plutôt que dans un service séparé. L'intégration du Moteur d'indexation et de recherche en texte intégral dans le Moteur de base de données permet une simplification de la gestion de l'indexation et de la recherche en texte intégral, ainsi qu'une amélioration de l'optimisation des requêtes mixtes et des performances globales.  
-  
- Un seul index de recherche en texte intégral est autorisé par table. Pour qu'un index de recherche en texte intégral puisse être créé sur une table, cette dernière doit posséder une colonne d'index unique, qui n'accepte pas les valeurs Null. Vous pouvez créer un index de recherche en texte intégral sur les colonnes de type **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** et **varbinary(max)** peut être indexé pour la recherche en texte intégral. Lorsque vous créez un index de recherche en texte intégral sur une colonne de type de données **varbinary**, **varbinary(max)**, **image** ou **xml**, vous devez spécifier une colonne de type. Une *colonne de type* est une colonne de table dans laquelle vous stockez l’extension de fichier (.doc, .pdf, .xls, etc.) du document dans chaque ligne.  
-  
- Le processus de création et de gestion d’un index de recherche en texte intégral est appelé *alimentation* (également appelé *analyse*). Il existe trois types d'alimentation de l'index de recherche en texte intégral : l'alimentation complète, l'alimentation basée sur le suivi des modifications et l'alimentation incrémentielle basée sur l'horodateur. Pour plus d’informations, consultez [Alimenter des index de recherche en texte intégral](../../relational-databases/search/populate-full-text-indexes.md).  
-  
-##  <a name="tasks"></a> Tâches courantes  
- **Pour créer un index de recherche en texte intégral**  
+##  <a name="tasks"></a> Créer, modifier ou supprimer un index de recherche en texte intégral  
+### <a name="create-a-full-text-index"></a>Créer un index de recherche en texte intégral  
   
 -   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)  
   
- **Pour modifier un index de recherche en texte intégral**  
+### <a name="alter-a-full-text-index"></a>Modifier un index de recherche en texte intégral
   
 -   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
- **Pour supprimer un index de recherche en texte intégral**  
+### <a name="drop-a-full-text-index"></a>Supprimer un index de recherche en texte intégral 
   
--   [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)  
+-   [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)
+
+## <a name="populate-a-full-text-index"></a>Remplir un index de recherche en texte intégral
+Le processus de création et de gestion d’un index de recherche en texte intégral est appelé *alimentation* (également appelé *analyse*). Il existe trois types de remplissage d’index de recherche en texte intégral :
+-   Remplissage complet
+-   Remplissage basé sur le suivi des modifications
+-   Remplissage incrémentiel basé sur un horodatage.
+
+Pour plus d’informations, consultez [Alimenter des index de recherche en texte intégral](../../relational-databases/search/populate-full-text-indexes.md).
+
+##  <a name="view"></a> Afficher les propriétés d’un index de recherche en texte intégral
+### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>Afficher les propriétés d’un index de recherche en texte intégral avec Transact-SQL
+|Vue catalogue ou vue de gestion dynamique| Description|  
+|----------------------------------------|-----------------|  
+|[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)|Retourne une ligne pour chaque catalogue de texte intégral vers une référence d'index de recherche en texte intégral.|  
+|[sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)|Contient une ligne pour chaque colonne qui fait partie d'un index de recherche en texte intégral.|  
+|[sys.fulltext_index_fragments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md)|Un index de recherche en texte intégral utilise des tables internes appelées fragments d'index de recherche en texte intégral pour stocker les données d'index inversées. Cette vue permet d'interroger les métadonnées relatives à ces fragments. Cette vue contient une ligne pour chaque fragment d'index de recherche en texte intégral dans chaque table qui contient un index.|  
+|[sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)|Contient une ligne par index de recherche en texte intégral d'un objet tabulaire.|  
+|[sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)|Retourne des informations sur le contenu d'un index de recherche en texte intégral pour la table spécifiée.|  
+|[sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)|Retourne des informations sur le contenu de niveau document d'un index de recherche en texte intégral pour la table spécifiée. Un mot clé donné peut apparaître dans plusieurs documents.|  
+|[sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)|Retourne des informations sur les remplissages d'index de texte intégral actuellement en cours.|  
+ 
+### <a name="view-the-properties-of-a-full-text-index-with-management-studio"></a>Afficher les propriétés d’un index de recherche en texte intégral avec Management Studio 
+1.  Dans Management Studio, dans l’Explorateur d’objets, développez le serveur.  
   
- [Dans cette rubrique](#top)  
+2.  Développez **Bases de données**, puis la base de données qui contient l’index de recherche en texte intégral.  
   
-##  <a name="structure"></a> Structure d'index de recherche en texte intégral  
- La compréhension de la structure d'un index de recherche en texte intégral vous permet de comprendre également le fonctionnement du Moteur d'indexation et de recherche en texte intégral. Cette rubrique utilise l'extrait suivant de la table **Document** dans [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] comme exemple de table. L'extrait suivant montre deux colonnes, la colonne **DocumentID** et la colonne **Title** , ainsi que trois lignes provenant de cette table.  
+3.  Développez **Tables**.  
   
- Pour cet exemple, il faut partir de l’hypothèse qu’un index de recherche en texte intégral a été créé sur la colonne **Title**.  
+4.  Cliquez avec le bouton droit sur la table sur laquelle l’index de recherche en texte intégral est défini, sélectionnez **Index de recherche en texte intégral**et, dans le menu contextuel **Index de recherche en texte intégral** , cliquez sur **Propriétés**. La boîte de dialogue **Propriétés d’index de recherche en texte intégral** s’affiche.  
   
-|DocumentID|Titre|  
-|----------------|-----------|  
-|1|Crank Arm and Tire Maintenance|  
-|2|Front Reflector Bracket and Reflector Assembly 3|  
-|3|Front Reflector Bracket Installation|  
+5.  Dans le volet **Sélectionner une page** , vous pouvez sélectionner l’une des pages suivantes :  
   
- Par exemple, la table suivante, qui illustre le Fragment 1, décrit le contenu de l’index de recherche en texte intégral créé sur la colonne **Title** de la table **Document**. Les index de recherche en texte intégral contiennent plus d'informations que les éléments présentés dans cette table. La table est une représentation logique d'un index de recherche en texte intégral et est fournie à des fins de démonstration uniquement. Les lignes sont stockées dans un format compressé pour optimiser l'utilisation du disque.  
+    |Radiomessagerie| Description|  
+    |----------|-----------------|  
+    |**Général**|Affiche les propriétés de base de l'index de recherche en texte intégral. Il s'agit de plusieurs propriétés modifiables et non modifiables telles que le nom de la base de données, le nom de la table et le nom de la colonne clé de recherche en texte intégral. Les propriétés modifiables sont les suivantes :<br /><br /> **Liste de mots vides de l’index de recherche en texte intégral**<br /><br /> **Indexation de texte intégral activée**<br /><br /> **Suivi des modifications**<br /><br /> **Liste de propriétés de recherche**<br /><br />Pour plus d’informations, consultez [Propriétés d’index de recherche en texte intégral &#40;page Général&#41;](http://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f).|  
+    |**Columns**|Affiche les colonnes de table qui sont disponibles pour l'indexation de texte intégral. La ou les colonnes sélectionnées sont indexées en texte intégral. Vous pouvez sélectionner autant de colonnes disponibles que vous souhaitez inclure dans l'index de recherche en texte intégral. Pour plus d’informations, consultez [Propriétés d’index de recherche en texte intégral &#40;page Colonnes&#41;](http://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35).|  
+    |**Planifications**|Utilisez cette page afin de créer ou gérer des planifications pour un travail de l'Agent SQL Server qui démarre un remplissage incrémentiel de la table pour remplir l'index de recherche en texte intégral. Pour plus d’informations, consultez [Alimenter des index de recherche en texte intégral](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Remarque : Une fois que vous avez fermé la boîte de dialogue **Propriétés d’index de recherche en texte intégral** , la planification que vous venez de créer est associée à un travail de SQL Server Agent (Démarrer le remplissage incrémentiel de la table sur *nom_base_de_données*.*nom_table*).|  
   
- Remarquez que les données ont été inversées par rapport aux documents d'origine. L'inversion se produit parce que les mots clés sont mappés aux ID de document. Pour cette raison, un index de recherche en texte intégral est souvent désigné par le nom d'un index inversé.  
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] pour enregistrer vos modifications et fermer la boîte de dialogue **Propriétés d’index de recherche en texte intégral**.  
   
- Remarquez également que le mot clé « and » a été supprimé de l'index de recherche en texte intégral. Cela s'explique du fait que « and » est un mot vide, et que la suppression de mots vides d'un index de recherche en texte intégral peut induire des économies substantielles en termes d'espace disque, d'où une amélioration des performances des requêtes. Pour plus d’informations sur les mots vides, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
+##  <a name="props"></a> Afficher les propriétés des colonnes et tables indexées  
+ Vous pouvez faire appel à plusieurs fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)], comme OBJECTPROPERTYEX, pour vous procurer la valeur de diverses propriétés d'indexation de texte intégral. Ces informations sont utiles pour administrer la recherche en texte intégral et résoudre les problèmes qui la concernent.  
   
- **Fragment 1**  
+ Le tableau ci-après recense les propriétés en texte intégral liées aux colonnes et tables indexées, ainsi que les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui leur sont associées.  
   
-|Mot clé|ColId|DocId|Occurrence|  
-|-------------|-----------|-----------|----------------|  
-|Crank|1|1|1|  
-|Arm|1|1|2|  
-|Tire|1|1|4|  
-|Maintenance|1|1|5|  
-|Front|1|2|1|  
-|Front|1|3|1|  
-|Reflector|1|2|2|  
-|Reflector|1|2|5|  
-|Reflector|1|3|2|  
-|Bracket|1|2|3|  
-|Bracket|1|3|3|  
-|Assembly|1|2|6|  
-|3|1|2|7|  
-|Installation|1|3|4|  
+|Propriété|Description|Fonction|  
+|--------------|-----------------|--------------|  
+|**FullTextTypeColumn**|TYPE COLUMN de la table qui contient les informations sur le type de document de la colonne.|[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)|  
+|**IsFulltextIndexed**|Indique si une colonne a été activée pour l'indexation de texte intégral.|COLUMNPROPERTY|  
+|**IsFulltextKey**|Indique si l'index représente la clé de texte intégral d'une table.|[INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md)|  
+|**TableFulltextBackgroundUpdateIndexOn**|Indique si une table possède une indexation de mise à jour d'arrière-plan de texte intégral.|[OBJECTPROPERTYEX](../../t-sql/functions/objectpropertyex-transact-sql.md)|  
+|**TableFulltextCatalogId**|ID du catalogue de texte intégral dans lequel résident les données d'indexation de texte intégral de la table.|OBJECTPROPERTYEX|  
+|**TableFulltextChangeTrackingOn**|Indique si le suivi des modifications de texte intégral est activé pour la table.|OBJECTPROPERTYEX|  
+|**TableFulltextDocsProcessed**|Nombre de lignes traitées depuis le démarrage de l'indexation de texte intégral.|OBJECTPROPERTYEX|  
+|**TableFulltextFailCount**|Nombre de lignes que la recherche en texte intégral n'a pas indexées.|OBJECTPROPERTYEX|  
+|**TableFulltextItemCount**|Nombre de lignes dont l'indexation de texte intégral a réussi.|OBJECTPROPERTYEX|  
+|**TableFulltextKeyColumn**|ID de la colonne clé unique de texte intégral.|OBJECTPROPERTYEX|  
+|**TableFullTextMergeStatus**|Indique s'il s'agit d'une table qui a un index de recherche en texte intégral qui est en cours de fusion.|OBJECTPROPERTYEX|  
+|**TableFulltextPendingChanges**|Nombre d'entrées de suivi des modifications en attente de traitement.|OBJECTPROPERTYEX|  
+|**TableFulltextPopulateStatus**|État de remplissage de la table de texte intégral.|OBJECTPROPERTYEX|  
+|**TableHasActiveFulltextIndex**|Indique si une table possède un index de recherche en texte intégral actif.|OBJECTPROPERTYEX|  
   
- La colonne **Keyword** contient la représentation d'un jeton unique extrait au moment de l'indexation. Les analyseurs lexicaux déterminent le contenu d'un jeton.  
+##  <a name="key"></a> Obtenir des informations sur la colonne de clés de texte intégral  
+ En général, le résultat des fonctions d'ensemble de lignes CONTAINSTABLE ou FREETEXTTABLE doit être joint avec la table de base. Dans ce cas-là, vous devez connaître le nom de la colonne clé unique. Vous pouvez déterminer si un index unique donné est utilisé comme clé de texte intégral et obtenir l'identificateur de la colonne clés de texte intégral.  
   
- La colonne **ColId** contient une valeur qui correspond à une colonne particulière indexée en texte intégral.  
+### <a name="determine-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>Déterminer si un index unique donné est utilisé comme colonne de clés de texte intégral  
   
- La colonne **DocId** contient les valeurs d’un entier sur 8 octets mappé à une valeur de clé de texte intégral particulière dans une table indexée en texte intégral. Ce mappage est nécessaire lorsque la clé de texte intégral n'est pas un type de données integer. Dans de tels cas, les mappages entre les valeurs de clé de texte intégral et les valeurs **DocId** sont maintenus dans une table séparée appelée la table de mappage DocId. Pour lancer une requête à propos de ces mappages, utilisez la procédure stockée système [sp_fulltext_keymapping](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Pour satisfaire à un critère de recherche, les valeurs DocId de la table précitée doivent être jointes avec la table de mappage DocId pour extraire des lignes de la table de base qui est interrogée. Lorsque la valeur de clé de texte intégral de la table de base est un type de données Integer, la valeur sert directement de DocId et aucun mappage n'est nécessaire. Par conséquent, l'utilisation de valeurs de clé de texte intégral Integer peut contribuer à optimiser des requêtes de texte intégral.  
+Utilisez une instruction [SELECT](../../t-sql/queries/select-transact-sql.md) pour appeler la fonction [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md). Lors de l’appel de fonction, utilisez la fonction OBJECT_ID pour convertir le nom de la table (*nom_table*) en ID de table, spécifiez le nom d’un index unique pour la table et indiquez la propriété d’index **IsFulltextKey** , comme suit :  
   
- La colonne **Occurrence** contient une valeur entière. Pour chaque valeur DocId, il existe une liste de valeurs d'occurrences qui correspondent aux décalages de mots relatifs du mot clé spécifique contenu dans DocId. Les valeurs d'occurrences servent à déterminer les correspondances d'expressions ou de proximité, par exemple lorsque des expressions ont des valeurs d'occurrences adjacentes numériquement. Elles servent également à calculer les scores de pertinence ; par exemple, le nombre d'occurrences d'un mot clé dans DocId peut être utilisé pour l'établissement d'un score.  
+```  
+SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );  
+```  
   
- [Dans cette rubrique](#top)  
+ L'instruction retourne la valeur 1 si l'index est utilisé pour garantir l'unicité de la colonne clé de texte intégral, et la valeur 0 dans le cas contraire.  
   
-##  <a name="fragments"></a> Fragments d'index de recherche en texte intégral  
- L'index de recherche en texte intégral logique est habituellement fractionné entre plusieurs tables internes. Chaque table interne est appelé fragment d'index de recherche en texte intégral. Quelques-uns de ces fragments peuvent contenir des données plus récentes que d'autres. Par exemple, si un utilisateur met à jour la ligne suivante dont DocId est 3 et que la table effectue un suivi automatique des modifications, un nouveau fragment est créé.  
+ **Exemple**  
   
-|DocumentID|Titre|  
-|----------------|-----------|  
-|3|Rear Reflector|  
+ L'exemple suivant permet de déterminer si l'index `PK_Document_DocumentID` est utilisé pour garantir l'unicité de la colonne clé de texte intégral, comme suit :  
   
- Dans l'exemple suivant, qui illustre le Fragment 2, le fragment contient des données plus récentes à propos de DocId 3 par rapport à Fragment 1. Par conséquent, lorsque l'utilisateur émet des requêtes concernant « Rear Reflector », les données de Fragment 2 sont utilisées pour DocId 3. Chaque fragment est marqué avec un horodateur de création qui peut être interrogé à l’aide de la vue de catalogue [sys.fulltext_index_fragments](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md).  
+```  
+USE AdventureWorks  
+GO  
+SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID',  'IsFulltextKey' )  
+```  
   
- **Fragment 2**  
+ Cet exemple retourne la valeur 1 si l'index `PK_Document_DocumentID` est utilisé pour garantir l'unicité de la colonne clés de texte intégral. Si tel n'est pas le cas, la valeur 0 ou une valeur Null est retournée. La valeur Null signifie que vous utilisez un nom d'index non valide, que le nom d'index ne correspond pas à la table, que la table n'existe pas, etc.  
   
-|Mot clé|ColId|DocId|Occ|  
-|-------------|-----------|-----------|---------|  
-|Rear|1|3|1|  
-|Reflector|1|3|2|  
+### <a name="find-the-identifier-of-the-full-text-key-column"></a>Rechercher l’identificateur de la colonne de clés de texte intégral  
   
- Comme on peut le constater d'après Fragment 2, les requêtes de texte intégral doivent interroger chaque fragment en interne et ignorer les entrées plus anciennes. Par conséquent, trop de fragments d'index de recherche en texte intégral dans l'index de texte intégral peut conduire à une dégradation substantielle dans les performances des requêtes. Pour réduire le nombre de fragments, réorganisez le catalogue de texte intégral en utilisant l’option REORGANIZE de l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md). Cette instruction effectue une *fusion principale*, c’est-à-dire une fusion de tous les fragments en un fragment unique plus grand, et supprime toutes les entrées obsolètes de l’index de recherche en texte intégral.  
+Chaque table activée pour la recherche en texte intégral comporte une colonne qui est utilisée pour garantir l’unicité des lignes de la table (*colonne clé* *unique*). La propriété **TableFulltextKeyColumn**, obtenue à l’aide de la fonction OBJECTPROPERTYEX, contient l’ID de la colonne clé unique.  
+ 
+Pour obtenir cet identificateur, vous pouvez utiliser une instruction SELECT afin d'appeler la fonction OBJECTPROPERTYEX. Utilisez la fonction OBJECT_ID pour convertir le nom de la table (*nom_table*) en ID de table et spécifiez la propriété **TableFulltextKeyColumn** , comme suit :  
   
- Une fois réorganisé, l'index de l'exemple contient les lignes suivantes :  
+```  
+SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 'Column Identifier';  
+```  
   
-|Mot clé|ColId|DocId|Occ|  
-|-------------|-----------|-----------|---------|  
-|Crank|1|1|1|  
-|Arm|1|1|2|  
-|Tire|1|1|4|  
-|Maintenance|1|1|5|  
-|Front|1|2|1|  
-|Rear|1|3|1|  
-|Reflector|1|2|2|  
-|Reflector|1|2|5|  
-|Reflector|1|3|2|  
-|Bracket|1|2|3|  
-|Assembly|1|2|6|  
-|3|1|2|7|  
+ **Exemples**  
   
- [Dans cette rubrique](#top)  
+ L'exemple ci-après retourne l'identificateur de la colonne clé de texte intégral ou une valeur Null. La valeur Null signifie que vous utilisez un nom d'index non valide, que le nom d'index ne correspond pas à la table, que la table n'existe pas, etc.  
+  
+```  
+USE AdventureWorks;  
+GO  
+SELECT OBJECTPROPERTYEX(OBJECT_ID('Production.Document'), 'TableFulltextKeyColumn');  
+GO  
+```  
+  
+ L'exemple ci-après explique comment utiliser l'identificateur de la colonne clé unique pour obtenir le nom de la colonne.  
+  
+```  
+USE AdventureWorks;  
+GO  
+DECLARE @key_column sysname  
+SET @key_column = Col_Name(Object_Id('Production.Document'),  
+ObjectProperty(Object_id('Production.Document'),  
+'TableFulltextKeyColumn')   
+)  
+SELECT @key_column AS 'Unique Key Column';  
+GO  
+```  
+  
+ Cet exemple retourne une colonne de jeu de résultats appelée `Unique Key Column`, qui contient une seule ligne indiquant le nom de la colonne clé unique de la table Document, DocumentID. Notez que, si cette requête contenait un nom d'index non valide, si le nom d'index ne correspondait pas à la table, si la table n'existait pas, etc., une valeur NULL serait retournée.  
+
+## <a name="index-varbinarymax-and-xml-columns"></a>Colonnes varbinary(max) et xml d’index  
+ Si une colonne **varbinary(max)**, **varbinary**ou **xml** est indexée en texte intégral, elle peut faire l’objet d’une requête à l’aide des prédicats de texte intégral (CONTAINS et FREETEXT) et des fonctions de texte intégral (CONTAINSTABLE et FREETEXTTABLE), au même titre que n’importe quelle autre colonne indexée en texte intégral.
+   
+### <a name="index-varbinarymax-or-varbinary-data"></a>Données varbinary(max) ou varbinary d’index  
+ Une seule colonne **varbinary(max)** ou **varbinary** peut stocker de nombreux types de documents. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge tout type de document pour lequel un filtre est installé et disponible dans le système d'exploitation. Le type d'un document est identifié par l'extension de fichier de celui-ci. Par exemple, pour une extension de fichier .doc, la recherche en texte intégral utilise le filtre qui prend en charge les documents Microsoft Word. Pour obtenir la liste des types de documents disponibles, interrogez l’affichage catalogue [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) .  
+  
+Notez que le Moteur d'indexation et de recherche en texte intégral peut bénéficier des filtres installés dans le système d'exploitation. Avant de pouvoir utiliser des filtres de système d'exploitation, des analyseurs lexicaux et des générateurs de formes dérivées, vous devez les charger dans l'instance de serveur, comme suit :  
+  
+```tsql  
+EXEC sp_fulltext_service @action='load_os_resources', @value=1  
+```  
+  
+Pour créer un index de recherche en texte intégral sur une colonne **varbinary(max)** , le moteur d’indexation et de recherche en texte intégral a besoin d’accéder aux extensions de fichier des documents dans la colonne **varbinary(max)** . Ces informations doivent être stockées dans une colonne de table, appelée colonne de type, qui doit être associée à la colonne **varbinary(max)** dans l’index de recherche en texte intégral. Lors de l'indexation d'un document, le Moteur d'indexation et de recherche en texte intégral utilise l'extension de fichier indiquée dans la colonne de type pour identifier le filtre à utiliser.  
+   
+### <a name="index-xml-data"></a>Données xml d’index  
+ Une colonne de type de données **xml** stocke uniquement des documents et des fragments XML, et seul le filtre XML est utilisé pour les documents. Par conséquent, une colonne de type est inutile. Sur les colonnes **xml** , l’index de recherche en texte intégral indexe le contenu des éléments XML, sans prendre en compte les balises XML. Les valeurs d'attributs sont indexées en texte intégral, à moins qu'il ne s'agisse de valeurs numériques. Des balises d'éléments sont utilisées comme limites de jeton. Les fragments et les documents XML ou HTML correctement formés contenant plusieurs langues sont pris en charge.  
+  
+ Pour plus d’informations sur l’indexation et l’interrogation sur une colonne **xml**, consultez [Utiliser la recherche en texte intégral avec des colonnes XML](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
+  
+##  <a name="disable"></a> Désactiver ou réactiver l’indexation de texte intégral pour une table   
+ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par défaut, toutes les bases de données créées par les utilisateurs sont activées pour la recherche en texte intégral. De plus, une table individuelle est automatiquement activée pour l'indexation de texte intégral dès qu'un index de recherche en texte intégral est créé sur cette table et qu'une colonne est ajoutée à l'index. Une table est automatiquement désactivée pour l'indexation de recherche en texte intégral lorsque la dernière colonne est supprimée de son index de texte intégral.  
+  
+ Dans une table à index de recherche en texte intégral, vous pouvez désactiver ou réactiver manuellement une table pour l'indexation de recherche en texte intégral en utilisant [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+
+1.  Développez le groupe de serveurs, **Bases de données**, puis la base de données qui contient la table à activer pour l’indexation de texte intégral.  
+  
+2.  Développez **Tables**et cliquez avec le bouton droit sur la table que vous souhaitez désactiver ou réactiver pour l’indexation de texte intégral.  
+  
+3.  Sélectionnez **Index de recherche en texte intégral**, puis cliquez sur **Disable Full-Text index** (Désactiver l’index de recherche en texte intégral) ou **Enable Full-Text index**(Activer l’index de recherche en texte intégral).  
+  
+##  <a name="remove"></a> Supprimer un index de recherche en texte intégral d’une table  
+  
+1.  Dans l'Explorateur d'objets, cliquez avec le bouton droit sur la table dotée de l'index de recherche en texte intégral à supprimer.  
+  
+2.  Sélectionnez **Supprimer l’index de recherche en texte intégral**.  
+  
+3.  Quand le système vous y invite, cliquez sur **OK** pour confirmer la suppression de l’index de recherche en texte intégral.  
   
   

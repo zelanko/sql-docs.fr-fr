@@ -1,27 +1,31 @@
 ---
-title: "Exemple&#160;: sp&#233;cification de la directive XMLTEXT | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XMLTEXT, directive"
+title: "Exemple : spécification de la directive XMLTEXT | Microsoft Docs"
+ms.custom: 
+ms.date: 04/05/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 54ada9bad44e2cd8410fe3a70fd022769febc960
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exemple&#160;: sp&#233;cification de la directive XMLTEXT
+# <a name="example-specifying-the-xmltext-directive"></a>Exemple : spécification de la directive XMLTEXT
   Cet exemple illustre l’adressage des informations contenues dans la colonne de dépassement de capacité à l’aide de la directive **XMLTEXT** dans une instruction `SELECT` utilisant le mode EXPLICIT.  
   
- Soit la table `Person`. Cette table possède une colonne nommée `Overflow`, qui stocke les données non consommées du document XML.  
+ Soit la table `Person` . Cette table possède une colonne nommée `Overflow` , qui stocke les données non consommées du document XML.  
   
 ```  
 USE tempdb;  
@@ -34,13 +38,13 @@ INSERT INTO Person VALUES
    ,('P3','Joe',N'<SomeTag attr3="data" PersonID="P">content</SomeTag>');  
 ```  
   
- La requête suivante extrait des colonnes de la table `Person`. Concernant la colonne `Overflow`, *AttributeName* n’est pas spécifié, mais *directive* a pour valeur `XMLTEXT` et fournit une composante du nom d’une colonne de la table universelle.  
+ La requête suivante extrait des colonnes de la table `Person` . Concernant la colonne `Overflow` , *AttributeName* n’est pas spécifié, mais *directive* a pour valeur `XMLTEXT` et fournit une composante du nom d’une colonne de la table universelle.  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  
        PersonID as [Parent!1!PersonID],  
        PersonName as [Parent!1!PersonName],  
-       Overflow as [Parent!1!!XMLTEST] -- No AttributeName; XMLTEXT directive  
+       Overflow as [Parent!1!!XMLTEXT] -- No AttributeName; XMLTEXT directive  
 FROM Person  
 FOR XML EXPLICIT;  
 ```  
@@ -53,11 +57,11 @@ FOR XML EXPLICIT;
   
  Voici le résultat obtenu :  
   
- `<Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>`  
-  
- `<Parent PersonID="P2" PersonName="Joe" attr2="data"></Parent>`  
-  
- `<Parent PersonID="P3" PersonName="Joe" attr3="data">content</Parent>`  
+ ```   
+ <Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>  
+ <Parent PersonID="P2" PersonName="Joe" attr2="data"></Parent>  
+ <Parent PersonID="P3" PersonName="Joe" attr3="data">content</Parent>
+ ```  
   
  Si les données en excès contiennent des sous-éléments et que la même requête est exécutée, les sous-éléments contenus dans la colonne `Overflow` sont ajoutés en tant que sous-éléments de l'élément englobant <`Parent`>.  
   
@@ -87,15 +91,13 @@ FOR XML EXPLICIT;
   
  Voici le résultat obtenu :  
   
- `<Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>`  
-  
- `<Parent PersonID="P2" PersonName="Joe" attr2="data"></Parent>`  
-  
- `<Parent PersonID="P3" PersonName="Joe" attr3="data">`  
-  
- `<name>PersonName</name>`  
-  
- `</Parent>`  
+ ```   
+ <Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>  
+ <Parent PersonID="P2" PersonName="Joe" attr2="data"></Parent>  
+ <Parent PersonID="P3" PersonName="Joe" attr3="data">  
+ <name>PersonName</name>  
+ </Parent>
+ ```  
   
  Si *AttributeName* est spécifié avec la directive `xmltext`, les attributs de l’élément <`overflow`> sont ajoutés en tant qu’attributs des sous-éléments de l’élément englobant <`Parent`>. Le nom spécifié pour *AttributeName* devient le nom du sous-élément.  
   
@@ -113,27 +115,19 @@ FOR XML EXPLICIT
   
  Voici le résultat obtenu :  
   
- `<Parent PersonID="P1" PersonName="Joe">`  
-  
- `<overflow attr1="data">content</overflow>`  
-  
- `</Parent>`  
-  
- `<Parent PersonID="P2" PersonName="Joe">`  
-  
- `<overflow attr2="data" />`  
-  
- `</Parent>`  
-  
- `<Parent PersonID="P3" PersonName="Joe">`  
-  
- `<overflow attr3="data" PersonID="P">`  
-  
- `<name>PersonName</name>`  
-  
- `</overflow>`  
-  
- `</Parent>`  
+ ```   
+ <Parent PersonID="P1" PersonName="Joe">  
+ <overflow attr1="data">content</overflow>  
+ </Parent>  
+ <Parent PersonID="P2" PersonName="Joe">  
+ <overflow attr2="data" />  
+ </Parent>  
+ <Parent PersonID="P3" PersonName="Joe">  
+ <overflow attr3="data" PersonID="P">  
+ <name>PersonName</name>  
+ </overflow>  
+ </Parent>
+ ```  
   
  Dans l’élément de requête suivant, l’argument *directive* est spécifié pour l’attribut `PersonName`. Par conséquent, `PersonName` est ajouté en tant que sous-élément de l'élément englobant <`Parent`>. Les attributs de <`xmltext`> sont néanmoins ajoutés à l'élément englobant <`Parent`>. Le contenu de l'élément <`overflow`>, les sous-éléments, sont ajoutés avant les autres sous-éléments des éléments englobants <`Parent`>.  
   
@@ -148,25 +142,19 @@ FOR XML EXPLICIT;
   
  Voici le résultat obtenu :  
   
- `<Parent PersonID="P1" attr1="data">content<PersonName>Joe</PersonName>`  
+ ```   
+ <Parent PersonID="P1" attr1="data">content<PersonName>Joe</PersonName>  
+ </Parent>  
+ <Parent PersonID="P2" attr2="data">  
+ <PersonName>Joe</PersonName>  
+ </Parent>  
+ <Parent PersonID="P3" attr3="data">  
+ <name>PersonName</name>  
+ <PersonName>Joe</PersonName>  
+ </Parent>
+ ```  
   
- `</Parent>`  
-  
- `<Parent PersonID="P2" attr2="data">`  
-  
- `<PersonName>Joe</PersonName>`  
-  
- `</Parent>`  
-  
- `<Parent PersonID="P3" attr3="data">`  
-  
- `<name>PersonName</name>`  
-  
- `<PersonName>Joe</PersonName>`  
-  
- `</Parent>`  
-  
- Si les données de la colonne `XMLTEXT` contiennent des attributs sur l'élément racine, ces attributs ne sont pas montrés dans le schéma de données XML et l'analyseur MSXML ne valide pas le fragment de document XML obtenu. Exemple :  
+ Si les données de la colonne `XMLTEXT` contiennent des attributs sur l'élément racine, ces attributs ne sont pas montrés dans le schéma de données XML et l'analyseur MSXML ne valide pas le fragment de document XML obtenu. Exemple :  
   
 ```  
 SELECT 1 AS Tag,  
@@ -175,25 +163,21 @@ SELECT 1 AS Tag,
 FOR XML EXPLICIT, xmldata;  
 ```  
   
- Voici l'ensemble de résultats. Notez que l'attribut en excès `a` ne figure pas dans le schéma renvoyé :  
+ Voici l'ensemble de résultats. Notez que l'attribut en excès `a` ne figure pas dans le schéma renvoyé :  
   
- `<Schema name="Schema2"`  
+ ```   
+ <Schema name="Schema2"  
+ xmlns="urn:schemas-microsoft-com:xml-data"  
+ xmlns:dt="urn:schemas-microsoft-com:datatypes">  
+ <ElementType name="overflow" content="mixed" model="open">`  
+ </ElementType>`  
+ </Schema>`  
+ <overflow xmlns="x-schema:#Schema2" a="1">  
+ </overflow>
+ ```  
   
- `xmlns="urn:schemas-microsoft-com:xml-data"`  
-  
- `xmlns:dt="urn:schemas-microsoft-com:datatypes">`  
-  
- `<ElementType name="overflow" content="mixed" model="open">`  
-  
- `</ElementType>`  
-  
- `</Schema>`  
-  
- `<overflow xmlns="x-schema:#Schema2" a="1">`  
-  
- `</overflow>`  
-  
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser le mode EXPLICIT avec FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   
+

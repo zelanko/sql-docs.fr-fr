@@ -1,28 +1,32 @@
 ---
-title: "Filtrer une trace | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "filtres [SQL Server], événements"
-  - "événements [SQL Server], filtres"
-  - "filtres [SQL Server]"
-  - "filtres [SQL Server], traces"
-  - "traces [SQL Server], filtres"
+title: Filtrer une trace | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filters [SQL Server], events
+- events [SQL Server], filters
+- filters [SQL Server]
+- filters [SQL Server], traces
+- traces [SQL Server], filters
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6315705010a41afb985682e63338cc95237b5e78
+ms.lasthandoff: 04/11/2017
+
 ---
-# Filtrer une trace
+# <a name="filter-a-trace"></a>Filtrer une trace
   Les filtres limitent les événements recueillis dans une trace. Si aucun filtre n'est défini, tous les événements des classes d'événements sélectionnées sont retournés dans le résultat de trace. Par exemple, limiter les noms d'utilisateurs Windows d'une trace à des utilisateurs particuliers réduit le volume des données de sortie à ces seuls utilisateurs.  
   
  Il n'est pas obligatoire de définir un filtre pour une trace. Cependant, un filtre minimise la charge générée au cours d'une trace. Un filtre retourne des données ciblées et permet ainsi de faciliter les analyses de performance et les audits.  
@@ -32,9 +36,9 @@ caps.handback.revision: 28
 > [!NOTE]  
 >  Lorsque le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] crée des traces, il exclut sa propre activité par défaut.  
   
- À titre d'exemple supplémentaire, lorsque vous surveillez des requêtes pour déterminer les traitements les plus longs à exécuter, vous pouvez définir les critères d'événements de trace pour surveiller (analyser) uniquement les traitements dont l'exécution prend plus de 30 secondes (valeur minimale de l'UC de 30 000 millisecondes).  
+ À titre d'exemple supplémentaire, lorsque vous surveillez des requêtes pour déterminer les traitements les plus longs à exécuter, vous pouvez définir les critères d'événements de trace pour surveiller (analyser) uniquement les traitements dont l'exécution prend plus de 30 secondes (valeur minimale de l'UC de 30 000 millisecondes).  
   
-## Instructions de création de filtres  
+## <a name="filter-creation-guidelines"></a>Instructions de création de filtres  
  En général, suivez ces étapes pour filtrer une trace.  
   
 1.  Identifiez les événements que vous voulez inclure dans la trace.  
@@ -61,8 +65,8 @@ caps.handback.revision: 28
   
 |Opérateur relationnel|Symbole d'opérateur|Description|  
 |-------------------------|---------------------|-----------------|  
-|Correspond à|LIKE|Indique que les données d'événements de trace doivent correspondre au texte entré. Autorise plusieurs valeurs.|  
-|Ne correspond pas à|NOT LIKE|Indique que les données d'événements de trace ne doivent pas correspondre au texte entré. Autorise plusieurs valeurs.|  
+|Correspond à|Correspond à|Indique que les données d'événements de trace doivent correspondre au texte entré. Autorise plusieurs valeurs.|  
+|Ne correspond pas à|Ne correspond pas à|Indique que les données d'événements de trace ne doivent pas correspondre au texte entré. Autorise plusieurs valeurs.|  
 |Égal à|=|Indique que les données d'événements de trace doivent être égales à la valeur entrée. Autorise plusieurs valeurs.|  
 |Différent de|<>|Indique que les données d'événements de trace ne doivent pas être égales à la valeur entrée. Autorise plusieurs valeurs.|  
 |Supérieur à|>|Indique que les données d'événements de trace doivent être supérieures à la valeur entrée.|  
@@ -136,7 +140,7 @@ caps.handback.revision: 28
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- \* Si le traçage des événements est réalisé avec l’utilitaire **osql** ou **sqlcmd**, vous devez toujours ajouter **%** aux filtres de la colonne de données **TextData**.  
+ \* Si le traçage des événements est réalisé avec l’utilitaire **osql** ou **sqlcmd** , vous devez toujours ajouter **%** aux filtres de la colonne de données **TextData** .  
   
  En tant que mécanisme de sécurité, le Générateur de profils SQL omet automatiquement de la trace les procédures stockées de sécurité qui affectent les mots de passe. Ce mécanisme de sécurité n'est pas configurable et est toujours actif. Il empêche les utilisateurs, qui par ailleurs ont l'autorisation de tracer l'ensemble de l'activité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], d'intercepter les mots de passe.  
   

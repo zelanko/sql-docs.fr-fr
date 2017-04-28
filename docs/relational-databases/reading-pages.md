@@ -1,24 +1,28 @@
 ---
-title: "Lecture de pages | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "server-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pages"
+title: Lecture de pages | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- server-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pages
 ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e
 caps.latest.revision: 3
-author: "pmasl"
-ms.author: "pelopes"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: pmasl
+ms.author: pelopes
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c7ac5398f3b10db59812539e58abaff9ef2c7cd0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Lecture de pages
+# <a name="reading-pages"></a>Lecture de pages
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Les E/S d’une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)] SQL Server incluent les lectures logiques et physiques. Une lecture logique se produit chaque fois que le [!INCLUDE[ssDE](../includes/ssde-md.md)] demande une page du [cache de tampons](../relational-databases/memory-management-architecture-guide.md). Si la page ne se trouve pas actuellement dans le cache des tampons, le système effectue une lecture physique afin de copier la page contenue dans le cache.

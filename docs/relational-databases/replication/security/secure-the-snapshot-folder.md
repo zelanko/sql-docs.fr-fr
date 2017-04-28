@@ -1,30 +1,34 @@
 ---
-title: "S&#233;curiser le dossier d&#39;instantan&#233; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "instantanés [réplication SQL Server], sécurité"
+title: "Sécuriser le dossier d’instantanés | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- snapshots [SQL Server replication], security
 ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 190f5cb081710100927ef837a09699cfc6c78f11
+ms.lasthandoff: 04/11/2017
+
 ---
-# S&#233;curiser le dossier d&#39;instantan&#233;
-  Le dossier d'instantané est un répertoire qui stocke les fichiers d'instantanés ; il vous est recommandé de dédier ce dossier au stockage des instantanés. Accordez à l'Agent d'instantané l'autorisation d'écriture sur ce dossier, et assurez-vous que l'autorisation de lecture n'est accordée qu'au compte Windows qu'utilise l'Agent de fusion ou l'Agent de distribution lorsqu'il accède à ce dossier. Pour accéder à un dossier d'instantané situé sur un ordinateur distant, le compte Windows associé à l'Agent doit être un compte de domaine.  
+# <a name="secure-the-snapshot-folder"></a>Sécuriser le dossier d'instantanés
+  Le dossier d'instantanés est un répertoire qui stocke les fichiers d'instantanés ; il vous est recommandé de dédier ce dossier au stockage des instantanés. Accordez à l'Agent d'instantané l'autorisation d'écriture sur ce dossier, et assurez-vous que l'autorisation de lecture n'est accordée qu'au compte Windows qu'utilise l'Agent de fusion ou l'Agent de distribution lorsqu'il accède à ce dossier. Pour accéder à un dossier d'instantané situé sur un ordinateur distant, le compte Windows associé à l'Agent doit être un compte de domaine.  
   
 > [!NOTE]  
->  Contrôle de compte utilisateur (UAC) aide les administrateurs à gérer leurs droits utilisateur élevés (parfois appelé *privilèges*). Dans les systèmes d'exploitation dans lesquels le contrôle de compte d'utilisateur est activé, les administrateurs n'utilisent pas leurs droits d'administration. À la place, ils effectuent la plupart des actions en tant qu'utilisateurs standard (non administratifs), assumant temporairement leurs droits d'administration seulement lorsque cela est nécessaire. La fonctionnalité Contrôle de compte d'utilisateur peut empêcher l'accès administratif au partage de fichiers d'instantanés. Vous devez donc octroyer explicitement des autorisations sur le partage de fichiers d'instantanés aux comptes Windows qui sont utilisés par l'Agent d'instantané, l'Agent de distribution et l'Agent de fusion. Vous devez effectuer cette opération même si les comptes Windows sont membres du groupe Administrateurs.  
+>  Le contrôle de compte d'utilisateur (UAC) aide les administrateurs à gérer leurs droits utilisateur élevés (parfois appelés *privilèges*). Dans les systèmes d'exploitation dans lesquels le contrôle de compte d'utilisateur est activé, les administrateurs n'utilisent pas leurs droits d'administration. À la place, ils effectuent la plupart des actions en tant qu'utilisateurs standard (non administratifs), assumant temporairement leurs droits d'administration seulement lorsque cela est nécessaire. La fonctionnalité Contrôle de compte d'utilisateur peut empêcher l'accès administratif au partage de fichiers d'instantanés. Vous devez donc octroyer explicitement des autorisations sur le partage de fichiers d'instantanés aux comptes Windows qui sont utilisés par l'Agent d'instantané, l'Agent de distribution et l'Agent de fusion. Vous devez effectuer cette opération même si les comptes Windows sont membres du groupe Administrateurs.  
   
- Lorsque vous configurez un serveur de distribution via l’Assistant Configuration de la Distribution ou de l’Assistant Nouvelle Publication, le dossier de capture instantanée par défaut un chemin local : X:\Program Files\Microsoft SQL Server\\*\< instance>*\MSSQL\ReplData. Si vous utilisez un serveur de distribution distant ou d’abonnements extraits, vous devez spécifier un partage réseau UNC (tel que \\\\<*nom_ordinateur >*\snapshot) au lieu d’un chemin d’accès local.  
+ Quand vous configurez un serveur de distribution au moyen de l’Assistant Configuration de distribution ou de l’Assistant Nouvelle publication, le dossier d’instantanés est installé par défaut sur un chemin local : X:\Program Files\Microsoft SQL Server\\\*\<instance>*\MSSQL\ReplData. Si vous utilisez un serveur de distribution distant ou des abonnements par extraction, vous devez spécifier un partage réseau UNC (tel que \\\\<*nom_ordinateur>*\snapshot) plutôt qu’un chemin local.  
   
  Lorsque vous accordez des autorisations d'accès au dossier d'instantané, faites-le en fonction du mode d'accès au dossier. Les onglets de boîte de dialogue suivants sont utilisés dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 2003 :  
   
@@ -40,20 +44,20 @@ caps.handback.revision: 46
 > [!NOTE]  
 >  Si une publication est abandonnée, la réplication tente de supprimer le dossier d'instantané dans le contexte de sécurité du compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si ce compte ne détient pas les privilèges suffisants, connectez-vous à l'aide d'un compte qui dispose des bons privilèges et supprimez le dossier manuellement. La suppression d'un dossier nécessite le privilège **Modification** si le dossier a un chemin local, et le privilège **Contrôle total** si le dossier a un chemin réseau.  
   
-## Remise d'instantanés via FTP  
+## <a name="delivering-snapshots-through-ftp"></a>Remise d'instantanés via FTP  
  Une pratique de sécurité vous recommande de stocker les instantanés dans un partage UNC, mais ils peuvent également être stockés dans un partage FTP puis remis à un Abonné via FTP. Lors de la configuration du serveur FTP, assurez-vous que le répertoire virtuel expose un partage UNC sous-jacent qui accorde à l'Agent d'instantané un accès en écriture pour la publication.  
   
- Pour configurer un Abonné pour qu'il récupère l'instantané via FTP, commencez par configurer un serveur FTP avec un nom de connexion et un mot de passe FTP donnant aux Abonnés un accès en lecture (ou accès « get ») pour leur permettre de télécharger les fichiers d'instantanés.  
+ Pour configurer un Abonné pour qu'il récupère l'instantané via FTP, commencez par configurer un serveur FTP avec un nom de connexion et un mot de passe FTP donnant aux Abonnés un accès en lecture (ou accès « get ») pour leur permettre de télécharger les fichiers d'instantanés.  
   
- Pour remettre des instantanés via FTP, consultez [remettre un instantané via FTP](../../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
+ Pour remettre des instantanés via FTP, consultez [Remettre un instantané via FTP](../../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
  Pour plus d'informations sur la définition et la modification du mot de passe d'accès aux instantanés via FTP, consultez la section « Remise d'instantanés via FTP » dans [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md).  
   
-## Voir aussi  
- [Autres emplacements du dossier d'instantané](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Autres emplacements du dossier d’instantanés](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
  [Initialiser un abonnement avec un instantané](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
- [Méthodes préconisées en matière de sécurité de réplication](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Sécurité et Protection & #40 ; Réplication & #41 ;](../../../relational-databases/replication/security/security-and-protection-replication.md)   
+ [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
+ [Sécurité et protection &#40;réplication&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   
  [Transférer des instantanés via FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md)  
   
   

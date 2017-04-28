@@ -1,42 +1,46 @@
 ---
-title: "SQL Server, objet Gestionnaire de tampons | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Buffer Manager (objet)"
-  - "SQLServer:Buffer Manager"
+title: SQL Server, objet Buffer Manager | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Buffer Manager object
+- SQLServer:Buffer Manager
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 29b1764e30fe28153f6f86731f5b6fc520dc9027
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, objet Gestionnaire de tampons
-  L'objet **Gestionnaire de tampons** fournit des compteurs pour analyser comment [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise :  
+# <a name="sql-server-buffer-manager-object"></a>SQL Server, objet Buffer Manager
+  L'objet **Buffer Manager** fournit des compteurs pour analyser comment [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise :  
   
--   la mémoire pour stocker des pages de données ;  
+-   la mémoire pour stocker des pages de données ;  
   
 -   Compteurs pour analyser les E/S physiques lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lit et écrit des pages de base de données.  
   
 -   Extension du pool de mémoires tampons pour étendre le cache des tampons à l'aide d'une mémoire non volatile rapide comme les disques SSD.  
   
- L'analyse de la mémoire et des compteurs utilisés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous aide à déterminer :  
+ L'analyse de la mémoire et des compteurs utilisés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous aide à déterminer :  
   
 -   Si des goulots d'étranglement sont créés par de la mémoire physique inadéquate. Si vous ne pouvez pas stocker dans le cache les données fréquemment sollicitées, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit les récupérer sur disque.   
   
 -   Si les performances des requêtes peuvent être améliorées en ajoutant de la mémoire ou en mettant plus de mémoire à la disposition du cache des données ou des structures internes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   La fréquence de lecture de données à partir du disque par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Comparées aux autres opérations, comme les accès mémoire, les E/S physiques consomment beaucoup de temps. La diminution des E/S physiques permet d'améliorer les performances des requêtes.  
+-   La fréquence de lecture de données à partir du disque par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Comparées aux autres opérations, comme les accès mémoire, les E/S physiques consomment beaucoup de temps. La diminution des E/S physiques permet d'améliorer les performances des requêtes.  
   
-## Objets de performance du gestionnaire de tampons  
+## <a name="buffer-manager-performance-objects"></a>Objets de performance du gestionnaire de tampons  
  Ce tableau décrit les objets de performance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Gestionnaire de tampons** .  
   
 |Compteurs du gestionnaire de tampons de SQL Server|Description|  
@@ -55,8 +59,8 @@ caps.handback.revision: 36
 |**Heure non référencée de la page d'extension**|Nombre moyen de secondes pendant lesquelles une page est conservée dans l'extension du pool de mémoires tampons sans être référencée.|  
 |**Écritures de pages d'extension par seconde**|Nombre de pages écrites sur le fichier d'extension du pool de mémoires tampons par seconde.|  
 |**Piles de liste libre/s**|Indique le nombre de requêtes par seconde qui ont dû attendre une page libre.|  
-|**Pente intégrale du contrôleur**|Pente que le contrôleur intégral a utilisé la dernière fois pour le pool de mémoires tampons, fois -10 milliards.| 
-|**Écritures différées/s**|Indique le nombre de tampons écrits par seconde par l'outil d'écriture différée du gestionnaire de tampons. L’outil d’*écriture différée* est un processus système dont le rôle consiste à vider les traitements de tampons modifiés ou âgés (tampons qui contiennent des modifications devant être réécrites sur le disque avant que le tampon puisse être réutilisé pour une page différente) et à les rendre disponibles pour les processus utilisateur. L'outil d'écriture différée élimine le besoin de fréquents points de contrôle pour créer des tampons disponibles.|  
+|**Pente intégrale du contrôleur**|Pente que le contrôleur intégral a utilisé la dernière fois pour le pool de mémoires tampons, fois -10 milliards.| 
+|**Écritures différées/s**|Indique le nombre de tampons écrits par seconde par l'outil d'écriture différée du gestionnaire de tampons. L’outil d’ *écriture différée* est un processus système dont le rôle consiste à vider les traitements de tampons modifiés ou âgés (tampons qui contiennent des modifications devant être réécrites sur le disque avant que le tampon puisse être réutilisé pour une page différente) et à les rendre disponibles pour les processus utilisateur. L'outil d'écriture différée élimine le besoin de fréquents points de contrôle pour créer des tampons disponibles.|  
 |**Espérance de vie d'une page**|Indique le nombre de secondes pendant lesquelles une page est conservée dans le pool de mémoires tampons sans références.|  
 |**Recherches de pages/s**|Indique le nombre de requêtes par seconde pour rechercher une page dans le pool de mémoires tampons.|  
 |**Lectures de pages/s**|Indique le nombre de lectures de pages de base de données physiques effectuées par seconde. Cette statistique affiche le nombre total de lectures physiques de pages sur toutes les bases de données. Les E/S physiques étant coûteuses en terme de temps machine, vous pouvez les minimiser en utilisant un cache de données plus important, des index intelligents et des requêtes plus efficaces, ou en modifiant la structure de la base de données.|  
@@ -66,7 +70,7 @@ caps.handback.revision: 36
 |**Pages cibles**|Nombre idéal de pages dans le pool de mémoires tampons.|
 
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server:Buffer Node](../../relational-databases/performance-monitor/sql-server-buffer-node.md)   
  [Mémoire du serveur (option de configuration de serveur)](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [SQL Server - Objet Plan Cache](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)   

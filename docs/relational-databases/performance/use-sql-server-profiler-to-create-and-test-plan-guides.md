@@ -1,40 +1,44 @@
 ---
-title: "Utiliser le G&#233;n&#233;rateur de profils SQL Server pour cr&#233;er et tester des rep&#232;res de plan | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "contrôle des repères de plan"
-  - "repères de plan [SQL Server], test"
-  - "repères de plan [SQL Server], SQL Server Profiler"
-  - "mise en correspondance des repères de plan [SQL Server]"
-  - "test des repères de plan"
-  - "SQL Server Profiler, repères de plan"
-  - "repères de plan [SQL Server], création"
-  - "capture de texte de requête [SQL Server]"
-  - "vérification des repères de plan"
-  - "Profiler [SQL Server Profiler], repères de plan"
-  - "repères de plan [SQL Server], mise en correspondance"
+title: "Utiliser le Générateur de profils SQL Server pour créer et tester des repères de plan | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- checking plan guides
+- plan guides [SQL Server], testing
+- plan guides [SQL Server], SQL Server Profiler
+- matching queries to plan guides [SQL Server]
+- testing plan guides
+- SQL Server Profiler, plan guides
+- plan guides [SQL Server], creating
+- capturing query text [SQL Server]
+- verifying plan guides
+- Profiler [SQL Server Profiler], plan guides
+- query-to-plan guide matching [SQL Server]
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 06df9d04d443ee83ab188bf56b08afd7126e70b2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utiliser le G&#233;n&#233;rateur de profils SQL Server pour cr&#233;er et tester des rep&#232;res de plan
-  Lorsque vous créez un repère de plan, vous pouvez recourir à [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour capturer le texte de requête exact à utiliser dans l’argument *statement_text* de la procédure stockée **sp_create_plan_guide**. Ainsi, au moment de la compilation, le repère de plan correspondra à la requête. Une fois le repère de plan créé, vous pouvez également utiliser [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour tester la correspondance effective du repère de plan à la requête. En règle générale, vous devez tester les repères de plan à l'aide de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour vérifier que la requête correspond au repère de plan.  
+# <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Utiliser le Générateur de profils SQL Server pour créer et tester des repères de plan
+  Lorsque vous créez un repère de plan, vous pouvez recourir à [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour capturer le texte de requête exact à utiliser dans l’argument *statement_text* de la procédure stockée **sp_create_plan_guide** . Ainsi, au moment de la compilation, le repère de plan correspondra à la requête. Une fois le repère de plan créé, vous pouvez également utiliser [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour tester la correspondance effective du repère de plan à la requête. En règle générale, vous devez tester les repères de plan à l'aide de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour vérifier que la requête correspond au repère de plan.  
   
-## Capture du texte de requête à l'aide du Générateur de profils SQL Server  
+## <a name="capturing-query-text-by-using-sql-server-profiler"></a>Capture du texte de requête à l'aide du Générateur de profils SQL Server  
  Si vous exécutez une requête et capturez le texte tel qu'il a été soumis à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], vous pouvez créer un repère de plan de type SQL ou TEMPLATE qui corresponde exactement à ce texte. Cela permet de faire en sorte que le repère de plan soit utilisé par l'optimiseur de requête.  
   
- Imaginons la requête suivante soumise par une application en tant que traitement autonome :  
+ Imaginons la requête suivante soumise par une application en tant que traitement autonome :  
   
 ```  
 SELECT COUNT(*) AS c  
@@ -65,7 +69,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  Ouvrez le fichier du texte de traitement dans l'application Bloc-notes puis copiez le texte dans le Presse-papiers.  
   
-8.  Créez le repère de plan, puis collez le texte copié entre les guillemets (**''**) de l’argument **@stmt**. Vous devez isoler tout guillemet simple contenu dans l'argument **@stmt** en le faisant précéder par un autre guillemet simple. Faites attention de ne pas ajouter ou supprimer d'autres caractères lorsque vous insérez ces guillemets simples. Par exemple, le littéral de date **'**20000101**'** doit être délimité de la façon suivante : **''**20000101**''**.  
+8.  Créez le repère de plan, puis collez le texte copié entre les guillemets (**''**) de l’argument **@stmt** . Vous devez isoler tout guillemet simple contenu dans l'argument **@stmt** en le faisant précéder par un autre guillemet simple. Faites attention de ne pas ajouter ou supprimer d'autres caractères lorsque vous insérez ces guillemets simples. Par exemple, le littéral de date **'**20000101**'** doit être délimité de la façon suivante : **''**20000101**''**.  
   
  Voici le repère de plan :  
   
@@ -79,10 +83,10 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION (MERGE JOIN)';  
 ```  
   
-## Test des repères de plan à l'aide du Générateur de profils SQL Server  
- Pour vérifier qu'un repère de plan correspond à une requête, procédez comme suit :  
+## <a name="testing-plan-guides-by-using-sql-server-profiler"></a>Test des repères de plan à l'aide du Générateur de profils SQL Server  
+ Pour vérifier qu'un repère de plan correspond à une requête, procédez comme suit :  
   
-1.  Démarrez une trace du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], en veillant à ce que le type d’événement **Showplan XML**, situé sous le nœud **Performances**, soit sélectionné.  
+1.  Démarrez une trace du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , en veillant à ce que le type d’événement **Showplan XML** , situé sous le nœud **Performances** , soit sélectionné.  
   
 2.  Faites exécuter la requête par l'application.  
   
@@ -95,7 +99,7 @@ EXEC sp_create_plan_guide
   
 5.  Si le repère de plan est de type OBJECT ou SQL, vérifiez que l'événement **Showplan XML** contient les attributs **PlanGuideDB** et **PlanGuideName** du repère de plan qui doit correspondre à la requête. Ou, dans le cas d'un repère de plan TEMPLATE, vérifiez que l'événement **Showplan XML** contient les attributs **TemplatePlanGuideDB** et **TemplatePlanGuideName** du repère de plan prévu. Cette opération vérifie que le repère de plan fonctionne. Ces attributs sont contenus sous l’élément **\<StmtSimple>** du plan.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)  
   
   

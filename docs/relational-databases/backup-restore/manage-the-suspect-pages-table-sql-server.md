@@ -1,43 +1,47 @@
 ---
-title: "G&#233;rer la table suspect_pages (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "824 (erreur du moteur de base de données)"
-  - "restauration de pages [SQL Server]"
-  - "pages [SQL Server], suspectes"
-  - "pages [SQL Server], restauration"
-  - "suspect_pages (table système)"
-  - "pages suspectes [SQL Server]"
-  - "restauration [SQL Server], pages"
+title: "Gérer la table suspect_pages (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- 824 (Database Engine error)
+- restoring pages [SQL Server]
+- pages [SQL Server], suspect
+- pages [SQL Server], restoring
+- suspect_pages system table
+- suspect pages [SQL Server]
+- restoring [SQL Server], pages
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f06acec180d12a9cabfff5e35b4f254883111838
+ms.lasthandoff: 04/11/2017
+
 ---
-# G&#233;rer la table suspect_pages (SQL Server)
+# <a name="manage-the-suspectpages-table-sql-server"></a>Gérer la table suspect_pages (SQL Server)
   Cette rubrique explique comment gérer la table **suspect_pages** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La table **suspect_pages** est conçue pour gérer les informations sur les pages suspectes et aide à déterminer si une restauration est nécessaire ou non. La table [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) réside dans la [base de données msdb](../../relational-databases/databases/msdb-database.md).  
   
- Une page est considérée « suspecte » quand le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] rencontre l'une des erreurs suivantes alors qu'il essaie de lire une page de données :  
+ Une page est considérée « suspecte » quand le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] rencontre l'une des erreurs suivantes alors qu'il essaie de lire une page de données :  
   
--   Une [erreur 823](../Topic/MSSQLSERVER_823.md) provoquée par un contrôle de redondance cyclique (CRC) généré par le système d’exploitation, telle qu’une erreur disque (certaines défaillances matérielles)  
+-   Une erreur 823 provoquée par un contrôle de redondance cyclique (CRC) généré par le système d’exploitation, telle qu’une erreur disque (certaines défaillances matérielles)  
   
--   Une [erreur 824](../Topic/MSSQLSERVER_824.md) telle qu’une page endommagée (toute erreur logique)  
+-   Une erreur 824, telle qu’une page endommagée (toute erreur logique)  
   
- L’ID de page de chaque page suspecte est enregistré dans la table **suspect_pages**. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] enregistre toutes les pages suspectes détectées lors du traitement standard, notamment dans les cas suivants :  
+ L’ID de page de chaque page suspecte est enregistré dans la table **suspect_pages** . Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] enregistre toutes les pages suspectes détectées lors du traitement standard, notamment dans les cas suivants :  
   
 -   une requête doit lire une page ;  
   
--   au cours d'une opération DBCC CHECKDB ;  
+-   au cours d'une opération DBCC CHECKDB ;  
   
 -   au cours d'une opération de sauvegarde.  
   
@@ -45,13 +49,13 @@ caps.handback.revision: 54
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Recommandations](#Recommendations)  
   
      [Sécurité](#Security)  
   
--   **Pour gérer la table suspect_pages, utilisez :**  
+-   **Pour gérer la table suspect_pages, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -63,15 +67,15 @@ caps.handback.revision: 54
   
 -   **Erreurs enregistrées dans la table suspect_pages**  
   
-     La table **suspect_pages** contient une ligne pour chaque page dans laquelle une erreur 824 (avec une limite de 1 000 lignes) s’est produite. Le tableau suivant présente les erreurs consignées dans la colonne **event_type** de la table **suspect_pages**.  
+     La table **suspect_pages** contient une ligne pour chaque page dans laquelle une erreur 824 (avec une limite de 1 000 lignes) s’est produite. Le tableau suivant présente les erreurs consignées dans la colonne **event_type** de la table **suspect_pages** .  
   
-    |Description de l'erreur|Valeur **event_type**|  
+    |Description de l'erreur|Valeur**event_type** |  
     |-----------------------|---------------------------|  
-    |Erreur 823 provoquée par une erreur CRC du système d'exploitation ou erreur 824 autre qu'une somme de contrôle incorrecte ou une page endommagée (par exemple, ID de page incorrect)|1|  
+    |Erreur 823 provoquée par une erreur CRC du système d'exploitation ou erreur 824 autre qu'une somme de contrôle incorrecte ou une page endommagée (par exemple, ID de page incorrect)|1|  
     |Somme de contrôle incorrecte|2|  
     |Page endommagée|3|  
     |Page restaurée (la page a été restaurée après avoir été marquée comme incorrecte)|4|  
-    |Page réparée (par DBCC)|5|  
+    |Page réparée (par DBCC)|5|  
     |Page désallouée par DBCC|7|  
   
      La table **suspect_pages** enregistre aussi les erreurs temporaires.  Elles peuvent être le résultat notamment d'une erreur d'E/S (un câble déconnecté, par exemple) ou de l'échec temporaire d'un test de somme de contrôle répété sur une page.  
@@ -90,25 +94,25 @@ caps.handback.revision: 54
   
      Un serveur partenaire de mise en miroir de bases de données ou un réplica de disponibilité Always On met à jour la table **suspect_pages** après l’échec d’une tentative de lecture d’une page d’un fichier de données pour l’une des raisons suivantes.  
   
-    -   Une erreur 823 provoquée par une erreur CRC du système d'exploitation  
+    -   Une erreur 823 provoquée par une erreur CRC du système d'exploitation  
   
-    -   Une erreur 824 (altération logique telle qu'une page endommagée)  
+    -   Une erreur 824 (altération logique telle qu'une page endommagée)  
   
-     Les actions suivantes mettent également à jour automatiquement des lignes de la table **suspect_pages**.  
+     Les actions suivantes mettent également à jour automatiquement des lignes de la table **suspect_pages** .  
   
     -   DBCC CHECKDB REPAIR_ALLOW_DATA_LOSS met à jour la table **suspect_pages** pour indiquer chaque page qu’il a désallouée ou réparée.  
   
     -   Une restauration (RESTORE) complète de fichier ou de page marque les entrées de pages comme restaurées.  
   
-     Les actions suivantes suppriment automatiquement des lignes de la table **suspect_pages**.  
+     Les actions suivantes suppriment automatiquement des lignes de la table **suspect_pages** .  
   
-    -   ALTER DATABASE REMOVE FILE  
+    -   ALTER DATABASE REMOVE FILE  
   
     -   DROP DATABASE  
   
 -   **Rôle de maintenance de l'administrateur de base de données**  
   
-     Les administrateurs de base de données sont responsables de la gestion de la table ; leur rôle consiste principalement à supprimer les lignes anciennes. La table **suspect_pages** est limitée en taille ; une fois la table remplie, les nouvelles erreurs ne sont plus consignées. Pour empêcher la saturation de la table, l'administrateur de la base de données ou l'administrateur système doit manuellement y effacer les anciennes entrées en supprimant les lignes. Ainsi, nous vous recommandons de supprimer ou d’archiver régulièrement les lignes comportant un **event_type** restauré ou réparé, ou les lignes comportant une valeur ancienne pour **last_update**.  
+     Les administrateurs de base de données sont responsables de la gestion de la table ; leur rôle consiste principalement à supprimer les lignes anciennes. La table **suspect_pages** est limitée en taille ; une fois la table remplie, les nouvelles erreurs ne sont plus consignées. Pour empêcher la saturation de la table, l'administrateur de la base de données ou l'administrateur système doit manuellement y effacer les anciennes entrées en supprimant les lignes. Ainsi, nous vous recommandons de supprimer ou d’archiver régulièrement les lignes comportant un **event_type** restauré ou réparé, ou les lignes comportant une valeur ancienne pour **last_update** .  
   
      Pour surveiller l’activité sur la table suspect_pages, vous pouvez utiliser la [classe d’événements Database Suspect Data Page](../../relational-databases/event-classes/database-suspect-data-page-event-class.md). Des lignes sont parfois ajoutées à la table **suspect_pages** à cause d’erreurs temporaires. Cependant, si de nombreuses lignes sont ajoutées à la table, le sous-système d'E/S est probablement défectueux. Si vous remarquez une augmentation soudaine du nombre de lignes ajoutées à la table, nous vous recommandons de rechercher la source des problèmes éventuels dans le sous-système d'E/S.  
   
@@ -117,11 +121,11 @@ caps.handback.revision: 54
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Toute personne ayant accès à **msdb** peut lire les données de la table **suspect_pages**. Toute personne ayant l'autorisation UPDATE sur la table suspect_pages peut mettre à jour ses enregistrements. Les membres du rôle de base de données fixe **db_owner** sur **msdb** ou du rôle serveur fixe **sysadmin** peuvent insérer, mettre à jour et supprimer des enregistrements.  
+ Toute personne ayant accès à **msdb** peut lire les données de la table **suspect_pages** . Toute personne ayant l'autorisation UPDATE sur la table suspect_pages peut mettre à jour ses enregistrements. Les membres du rôle de base de données fixe **db_owner** sur **msdb** ou du rôle serveur fixe **sysadmin** peuvent insérer, mettre à jour et supprimer des enregistrements.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour gérer la table suspect_pages  
+#### <a name="to-manage-the-suspectpages-table"></a>Pour gérer la table suspect_pages  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], développez cette instance, puis développez **Bases de données**.  
   
@@ -133,7 +137,7 @@ caps.handback.revision: 54
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour gérer la table suspect_pages  
+#### <a name="to-manage-the-suspectpages-table"></a>Pour gérer la table suspect_pages  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -149,7 +153,7 @@ GO
   
 ```  
   
- Cet exemple retourne les pages incorrectes dans la table `suspect_pages`.  
+ Cet exemple retourne les pages incorrectes dans la table `suspect_pages` .  
   
 ```  
 -- Select nonspecific 824, bad checksum, and torn page errors.  
@@ -159,14 +163,18 @@ GO
   
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
  [Restaurer des pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [suspect_pages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
- [MSSQLSERVER_823](../Topic/MSSQLSERVER_823.md)   
- [MSSQLSERVER_824](../Topic/MSSQLSERVER_824.md)  
+    
+   
   
   
+
+
+
+

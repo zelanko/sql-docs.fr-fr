@@ -1,26 +1,30 @@
 ---
-title: "Conseiller de compilation native | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.nativecompilationwizard.f1"
-  - "swb.nativecompilationwizard.f1"
+title: Conseiller de compilation native | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.nativecompilationwizard.f1
+- swb.nativecompilationwizard.f1
 ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6a6107fe8c3b05c31320f90c77df04731e226ba8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Conseiller de compilation native
+# <a name="native-compilation-advisor"></a>Conseiller de compilation native
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   L’outil d’analyse des rapports de transaction indique quelles procédures stockées interprétées dans votre base de données tireront parti de l’utilisation de la compilation native. Pour plus d’informations, consultez [Déterminer si une table ou une procédure stockée doit être déplacée vers l’OLTP en mémoire](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md).  
@@ -31,16 +35,16 @@ caps.handback.revision: 14
   
  Pour plus d’informations sur les méthodologies de transfert, consultez [OLTP en mémoire – Modèles de charge de travail courants et considérations relatives à la migration](http://msdn.microsoft.com/library/dn673538.aspx).  
   
-## Procédure pas à pas d'utilisation du Conseiller de compilation native  
+## <a name="walkthrough-using-the-native-compilation-advisor"></a>Procédure pas à pas d'utilisation du Conseiller de compilation native  
  Dans l' **Explorateur d'objets**, cliquez avec le bouton droit sur la procédure stockée à convertir, puis sélectionnez **Conseiller de compilation native**. Ce faisant, vous affichez la page d'accueil du **Conseiller compilation native de procédure stockée**. Cliquez sur **Suivant** pour continuer.  
   
-### Validation de la procédure stockée  
+### <a name="stored-procedure-validation"></a>Validation de la procédure stockée  
  Cette page signale si la procédure stockée utilise des éléments qui ne sont pas compatibles avec la compilation native. Vous pouvez cliquer sur **Suivant** pour afficher les détails. Si certains éléments ne sont pas compatibles avec la compilation native, vous pouvez cliquer sur **Suivant** pour afficher les détails.  
   
-### Résultats de la validation de la procédure stockée  
- Si certains éléments ne sont pas compatibles avec la compilation native, la page **Résultat de la validation de la procédure stockée** affiche les détails. Vous pouvez générer un rapport (cliquez sur **Générer le rapport**), quitter le **Conseiller de compilation native** et mettre à jour votre code afin qu’il soit compatible avec la compilation native.  
+### <a name="stored-procedure-validation-result"></a>Résultats de la validation de la procédure stockée  
+ Si certains éléments ne sont pas compatibles avec la compilation native, la page **Résultat de la validation de la procédure stockée** affiche les détails. Vous pouvez générer un rapport (cliquez sur **Générer le rapport**), quitter le **Conseiller de compilation native**et mettre à jour votre code afin qu’il soit compatible avec la compilation native.  
   
-## Exemple de code  
+## <a name="code-sample"></a>Exemple de code  
  L’exemple suivant illustre une procédure stockée interprétée et la procédure stockée *équivalente* pour la compilation native. L'exemple suppose la présence d'un répertoire appelé c:\data.  
   
 > [!NOTE]  
@@ -102,7 +106,7 @@ EXECUTE dbo.InsertOrderXTP @id= 11, @date = '1956-01-01 12:01:00', @status = 2;
 SELECT * from SalesOrders;  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Migration vers OLTP en mémoire](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)   
  [Conditions requises pour l'utilisation des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)  
   

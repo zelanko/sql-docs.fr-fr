@@ -1,28 +1,32 @@
 ---
-title: "Comparer les options pour le stockage des objets blob (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Comparer les options pour le stockage des objets blob (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 98538bd77f81cd6a1f16857b70a866ee3f6d171a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Comparer les options pour le stockage des objets blob (SQL Server)
+# <a name="compare-options-for-storing-blobs-sql-server"></a>Comparer les options pour le stockage des objets blob (SQL Server)
   Explique et compare les options disponibles pour stocker des fichiers et des documents dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="Expectations"></a> Stockage de fichiers dans la base de données – Avantages et attentes  
  Un pourcentage important des données d'entreprise correspond à des données non structurées par nature et est stocké en général sous la forme de fichiers et de documents dans des systèmes de fichiers. La plupart de ces données sont produites, gérées et consommées par des applications qui accèdent aux fichiers via des API Windows. Les entreprises conservent en général ces données dans le système de fichiers, en stockant les métadonnées connexes des fichiers dans une base de données relationnelle.  
   
- L'intégration de données non structurées à la base de données relationnelle apporte des avantages significatifs. Ces avantages incluent ce qui suit :  
+ L'intégration de données non structurées à la base de données relationnelle apporte des avantages significatifs. Ces avantages incluent ce qui suit :  
   
 -   Fonctions intégrées de stockage et de gestion des données telles que la sauvegarde.  
   
@@ -30,7 +34,7 @@ caps.handback.revision: 10
   
 -   Facilité d'administration et gestion de la stratégie sur les données non structurées.  
   
- Dans la plupart des cas, cependant, il n'a pas été possible de stocker aisément de telles données non structurées dans une base de données relationnelle. Il n'était pas possible précédemment d'exécuter des applications basées sur Windows existantes sur des systèmes relationnels. Il n'est pas pratique de réécrire des applications établies (telles que Microsoft Word ou Adobe Reader) pour s'exécuter sur des API de base de données relationnelle. Ces applications attendent simplement que les données soient accessibles via des API Windows. En d'autres termes, les attentes concernent les éléments suivants :  
+ Dans la plupart des cas, cependant, il n'a pas été possible de stocker aisément de telles données non structurées dans une base de données relationnelle. Il n'était pas possible précédemment d'exécuter des applications basées sur Windows existantes sur des systèmes relationnels. Il n'est pas pratique de réécrire des applications établies (telles que Microsoft Word ou Adobe Reader) pour s'exécuter sur des API de base de données relationnelle. Ces applications attendent simplement que les données soient accessibles via des API Windows. En d'autres termes, les attentes concernent les éléments suivants :  
   
 -   Les applications Windows ne sont pas informées des transactions de base de données et ne les requièrent pas.  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 10
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispose déjà de la fonctionnalité FILESTREAM, qui fournit un stockage efficace, une gestion et une diffusion en continu de données non structurées stockées en tant que fichiers sur le système de fichiers. Toutefois, une solution FILESTREAM nécessite une programmation personnalisée et ne répond pas à la configuration requise en matière de compatibilité complète avec les applications Windows décrite ci-dessus.  
   
 ##  <a name="FileTables"></a> FileTables  
- La fonctionnalité FileTable s'appuie sur les fonctions FILESTREAM existantes afin de permettre aux clients d'entreprise de stocker des données de fichier non structurées et des hiérarchies de répertoires dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en respectant les configurations requises pour l'accès non transactionnel et la compatibilité d'applications Windows pour les données basées sur des fichiers.  
+ La fonctionnalité FileTable s'appuie sur les fonctions FILESTREAM existantes afin de permettre aux clients d'entreprise de stocker des données de fichier non structurées et des hiérarchies de répertoires dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , en respectant les configurations requises pour l'accès non transactionnel et la compatibilité d'applications Windows pour les données basées sur des fichiers.  
   
 ##  <a name="CompareFileTable"></a> Comparaison de FILESTREAM et de FileTable  
   

@@ -1,34 +1,38 @@
 ---
-title: "FOR XML (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clause FOR XML, à propos de la clause FOR XML"
-  - "mode PATH FOR XML, construction"
-  - "EXPLICIT FOR XML, mode"
-  - "RAW, mode FOR XML"
-  - "extraction de données XML"
-  - "XML [SQL Server], clause FOR XML"
-  - "AUTO FOR XML, mode"
-  - "XML [SQL Server], construction"
+title: FOR XML (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, about FOR XML clause
+- PATH FOR XML mode, construction
+- EXPLICIT FOR XML mode
+- RAW FOR XML mode
+- retrieving XML data
+- XML [SQL Server], FOR XML clause
+- AUTO FOR XML mode
+- XML [SQL Server], construction
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f48dc6ebc5af10d1157978a65ceb224041229326
+ms.lasthandoff: 04/11/2017
+
 ---
-# FOR XML (SQL Server)
+# <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
   Une requête SELECT retourne les résultats sous la forme d'un ensemble de lignes. Vous pouvez si vous le souhaitez récupérer les résultats d'une requête SQL sous forme de code XML en spécifiant la clause FOR XML dans la requête. La clause FOR XML peut être utilisée dans les requêtes de premier niveau et dans les sous-requêtes. La clause FOR XML de premier niveau ne peut être utilisée que dans l'instruction SELECT. Dans les sous-requêtes, FOR XML peut être utilisée dans les instructions INSERT, UPDATE et DELETE. Elle peut être également utilisée dans les instructions d'assignation.  
   
- Dans une clause FOR XML, vous spécifiez l'un des modes suivants :  
+ Dans une clause FOR XML, vous spécifiez l'un des modes suivants :  
   
 -   RAW  
   
@@ -52,8 +56,8 @@ caps.handback.revision: 44
   
  La clause FOR XML n'est pas valide en cas de sélection comportant une clause FOR BROWSE.  
   
-## Exemple  
- L’instruction `SELECT` suivante récupère des informations des tables `Sales.Customer` et `Sales.SalesOrderHeader` de la base de données `AdventureWorks2012`. Cette requête spécifie le mode `AUTO` dans la clause `FOR XML` :  
+## <a name="example"></a>Exemple  
+ L’instruction `SELECT` suivante récupère des informations des tables `Sales.Customer` et `Sales.SalesOrderHeader` de la base de données `AdventureWorks2012` . Cette requête spécifie le mode `AUTO` dans la clause `FOR XML` :  
   
 ```  
 USE AdventureWorks2012  
@@ -68,10 +72,10 @@ ON Cust.CustomerID = OrderHeader.CustomerID
 FOR XML AUTO  
 ```  
   
-## La clause FOR XML et les noms de serveurs  
+## <a name="the-for-xml-clause-and-server-names"></a>La clause FOR XML et les noms de serveurs  
  Quand une instruction SELECT avec une clause FOR XML spécifie un nom en quatre parties dans la requête, le nom du serveur n'est pas renvoyé dans le document XML résultant quand la requête est exécutée sur l'ordinateur local. Cependant, le nom du serveur est renvoyé sous forme de nom en quatre parties quand la requête s'exécute sur un serveur.  
   
- Par exemple, envisagez la requête suivante :  
+ Par exemple, envisagez la requête suivante :  
   
 ```  
 SELECT TOP 1 LastName  
@@ -79,19 +83,19 @@ FROM ServerName.AdventureWorks2012.Person.Person
 FOR XML AUTO  
 ```  
   
- Quand `ServerName` est un serveur local, la requête renvoie :  
+ Quand `ServerName` est un serveur local, la requête renvoie :  
   
 ```  
 <AdventureWorks2012.Person.Person LastName="Achong" />  
 ```  
   
- Quand `ServerName` est un serveur réseau, la requête renvoie :  
+ Quand `ServerName` est un serveur réseau, la requête renvoie :  
   
 ```  
 <ServerName.AdventureWorks2012.Person.Person LastName="Achong" />  
 ```  
   
- Cette ambiguïté peut être levée à condition de spécifier cet alias :  
+ Cette ambiguïté peut être levée à condition de spécifier cet alias :  
   
 ```  
 SELECT TOP 1 LastName  
@@ -99,16 +103,16 @@ FROM ServerName.AdventureWorks2012.Person.Person x
 FOR XML AUTO   
 ```  
   
- Cette requête donne le résultat suivant :  
+ Cette requête donne le résultat suivant :  
   
 ```  
 <x LastName="Achong"/>  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Syntaxe de base de la clause FOR XML](../../relational-databases/xml/basic-syntax-of-the-for-xml-clause.md)   
  [Utiliser le mode RAW avec FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   
- [UTiliser le mode AUTO avec FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
+ [Utiliser le mode AUTO avec FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
  [Utiliser le mode EXPLICIT avec FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)   
  [Utiliser le mode PATH avec FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)   
  [OPENXML &#40;SQL Server&#41;](../../relational-databases/xml/openxml-sql-server.md)   

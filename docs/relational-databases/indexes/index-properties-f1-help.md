@@ -1,35 +1,39 @@
 ---
-title: "Propri&#233;t&#233;s de l&#39;index – Aide (F1) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.swb.indexproperties.filter.f1"
-  - "sql13.swb.indexproperties.partitions.f1"
-  - "sql13.swb.indexproperties.general.f1"
-  - "sql13.swb.indexproperties.storage.f1"
-  - "sql13.swb.indexproperties.columns.f1"
-  - "sql13.swb.indexproperties.options.f1"
-  - "sql13.swb.indexproperties.spatial.f1"
+title: "Propriétés de l’index – Aide (F1) | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- sql13.swb.indexproperties.filter.f1
+- sql13.swb.indexproperties.partitions.f1
+- sql13.swb.indexproperties.general.f1
+- sql13.swb.indexproperties.storage.f1
+- sql13.swb.indexproperties.columns.f1
+- sql13.swb.indexproperties.options.f1
+- sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d646d06bd41ce4db35011d65ecab45109326c15
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propri&#233;t&#233;s de l&#39;index – Aide (F1)
+# <a name="index-properties-f1-help"></a>Propriétés de l'index – Aide (F1)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Les sections de cette rubrique font référence aux différentes propriétés d'index disponibles au moyen des boîtes de dialogue [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
  [Propriétés de l'index (page Général)](#General)  
   
@@ -47,7 +51,7 @@ caps.handback.revision: 38
  **Nom de la table**  
  Affiche le nom de la table ou de la vue sur laquelle l'index a été créé. Ce champ est en lecture seule. Pour sélectionner une table différente, fermez la page Propriétés de l'index, sélectionnez la table appropriée, puis ouvrez de nouveau la page Propriétés de l'index.  
   
- Des index spatiaux ne peuvent pas être spécifiés sur des vues indexées. Les index spatiaux peuvent être uniquement définis pour une table dotée d'une clé primaire. Le nombre maximal de colonnes clés primaires sur la table est de 15. La taille par ligne combinée des colonnes clés primaires est limitée à 895 octets.  
+ Des index spatiaux ne peuvent pas être spécifiés sur des vues indexées. Les index spatiaux peuvent être uniquement définis pour une table dotée d'une clé primaire. Le nombre maximal de colonnes clés primaires sur la table est de 15. La taille par ligne combinée des colonnes clés primaires est limitée à 895 octets.  
   
  **Nom de l'index**  
  Affiche le nom de l'index. Ce champ est en lecture seule pour un index existant. Permet de taper le nom de l'index, si vous en créez un nouveau.  
@@ -63,7 +67,7 @@ caps.handback.revision: 38
  Si vous sélectionnez **Spatial** dans le champ **Type d'index** , la case à cocher **Unique** est estompée.  
   
  **Colonnes clés d'index**  
- Ajoutez les colonnes de votre choix dans la grille **Colonnes de clés d’index**. Lorsque plusieurs colonnes sont ajoutées, elles doivent être répertoriées dans l'ordre souhaité. L'ordre des colonnes dans un index peut avoir un impact important sur les performances de l'index.  
+ Ajoutez les colonnes de votre choix dans la grille **Colonnes de clés d’index** . Lorsque plusieurs colonnes sont ajoutées, elles doivent être répertoriées dans l'ordre souhaité. L'ordre des colonnes dans un index peut avoir un impact important sur les performances de l'index.  
   
  Un maximum de 16 colonnes peuvent être utilisées dans un index composé individuel. Si la valeur est supérieure à 16 colonnes, consultez la section traitant des colonnes incluses à la fin de cette rubrique.  
   
@@ -85,7 +89,7 @@ caps.handback.revision: 38
 >  Si la colonne de table est une colonne calculée, le paramètre **Type de données** a la valeur « colonne calculée ».  
   
  **Taille**  
- Affiche le nombre maximal d'octets requis pour stocker le type de données de la colonne. Affiche zéro (0) pour une colonne spatiale ou XML.  
+ Affiche le nombre maximal d'octets requis pour stocker le type de données de la colonne. Affiche zéro (0) pour une colonne spatiale ou XML.  
   
  **Identity**  
  Indique si la colonne utilisée dans la clé d'index est une colonne d'identité.  
@@ -94,7 +98,7 @@ caps.handback.revision: 38
  Indique si la colonne utilisée dans la clé d'index autorise le stockage de valeurs NULL dans la colonne de la table ou de la vue.  
   
  **Ajouter**  
- Ajoute une colonne à la clé d'index. Sélectionnez des colonnes de table dans la boîte de dialogue **Sélectionnez les colonnes dans** *\<nom de la table>* qui s’affiche quand vous cliquez sur **Ajouter**. Pour un index spatial, lorsque vous sélectionnez une colonne, ce bouton est estompé.  
+ Ajoute une colonne à la clé d'index. Sélectionnez des colonnes de table dans la boîte de dialogue **Sélectionnez les colonnes dans** *\<nom_table>* qui s’affiche quand vous cliquez sur **Ajouter**. Pour un index spatial, lorsque vous sélectionnez une colonne, ce bouton est estompé.  
   
  **Supprimer**  
  Supprime la colonne sélectionnée de la clé d'index.  
@@ -117,7 +121,7 @@ caps.handback.revision: 38
  **Case à cocher**  
  Activez pour ajouter des colonnes.  
   
- **Nom   **  
+ **Nom**  
  Nom de la colonne.  
   
  **Type de données**  
@@ -129,7 +133,7 @@ caps.handback.revision: 38
  **Identity**  
  Affiche **Oui** pour les colonnes d’identité et **Non** pour les autres.  
   
- **Null autorisé**  
+ **Allow Nulls**  
  Affiche **Oui** si la définition de table autorise la présence de valeurs Null dans la colonne. Affiche **Non** si la définition de la table interdit la présence de valeurs Null dans la colonne.  
   
 ##  <a name="Storage"></a> Options (page Stockage)  
@@ -178,7 +182,7 @@ caps.handback.revision: 38
 ##  <a name="Spatial"></a> Options de l'index (page Spatial)  
  Utilisez la page **Spatial** pour afficher ou spécifier les valeurs des propriétés spatiales. Pour plus d’informations, consultez [Données spatiales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
-### Cadre englobant  
+### <a name="bounding-box"></a>Cadre englobant  
  Le *cadre englobant* est le périmètre de la grille de niveau supérieur d’un plan géométrique. Les paramètres du cadre englobant existent uniquement dans le pavage de la grille géométrique. Ces paramètres sont indisponibles si le **Schéma de pavage** est une **Grille géographique**.  
   
  Le panneau affiche les coordonnées **(***Min. X***,***Min. Y***)** et **(***Max. X***,***Max. Y***)** du cadre englobant. Il n'y a pas de valeurs de coordonnées par défaut. Par conséquent, quand vous créez un index spatial sur une colonne de type **geometry** , vous devez spécifier les valeurs des coordonnées.  
@@ -189,24 +193,24 @@ caps.handback.revision: 38
  **Min. Y**  
  Coordonnée Y de l'angle inférieur gauche du cadre englobant.  
   
- **Max. X**  
+ **Max. X**  
  Coordonnée X de l'angle supérieur droit du cadre englobant.  
   
  **Max. Y**  
  Coordonnée Y de l'angle supérieur droit du cadre englobant.  
   
-### Général  
+### <a name="general"></a>Général  
  **Schéma de pavage**  
  Indique le schéma de pavage de l'index. Les schémas de pavage pris en charge se présentent comme suit.  
   
  **Grille géométrique**  
- Spécifie le schéma de pavage de la grille géométrique qui s’applique à une colonne du type de données **geometry**.  
+ Spécifie le schéma de pavage de la grille géométrique qui s’applique à une colonne du type de données **geometry** .  
   
  **Grille automatique géométrique**  
  Cette option est activée pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quand le niveau de compatibilité de la base de données a la valeur 110 ou une valeur supérieure.  
   
  **Grille géographique**  
- Spécifie le schéma de pavage de la grille géographique qui s’applique à une colonne du type de données **geography**.  
+ Spécifie le schéma de pavage de la grille géographique qui s’applique à une colonne du type de données **geography** .  
   
  **Grille automatique géographique**  
  Cette option est activée pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quand le niveau de compatibilité de la base de données a la valeur 110 ou une valeur supérieure.  
@@ -214,34 +218,35 @@ caps.handback.revision: 38
  Pour plus d’informations sur la façon dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implémente le pavage, consultez [Données spatiales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
  **Cellules par objet**  
- Indique le nombre de cellules par objet de pavage qui peuvent être utilisées pour un objet spatial unique dans l'index. Ce nombre peut être un entier compris entre 1 et 8192 (inclus). La valeur par défaut est 16, et 8 pour les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsque le niveau de compatibilité de la base de données est défini sur 110 ou ultérieur.  
+ Indique le nombre de cellules par objet de pavage qui peuvent être utilisées pour un objet spatial unique dans l'index. Ce nombre peut être un entier compris entre 1 et 8192 (inclus). La valeur par défaut est 16, et 8 pour les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsque le niveau de compatibilité de la base de données est défini sur 110 ou ultérieur.  
   
- Au niveau supérieur, si un objet couvre plus de cellules que le nombre spécifié par *n*, l’indexation utilise autant de cellules que nécessaire pour fournir un pavage de niveau supérieur complet. Dans de tels cas, un objet peut recevoir plus de cellules que le nombre spécifié. Dans ce cas, le nombre maximal est le nombre de cellules générées par la grille de niveau supérieur, qui dépend de la densité du **Niveau 1**.  
+ Au niveau supérieur, si un objet couvre plus de cellules que le nombre spécifié par *n*, l’indexation utilise autant de cellules que nécessaire pour fournir un pavage de niveau supérieur complet. Dans de tels cas, un objet peut recevoir plus de cellules que le nombre spécifié. Dans ce cas, le nombre maximal est le nombre de cellules générées par la grille de niveau supérieur, qui dépend de la densité du **Niveau 1** .  
   
-### Grilles  
+### <a name="grids"></a>Grilles  
  Ce panneau affiche la densité de la grille à chaque niveau du schéma de pavage. La densité est spécifiée comme suit : **Basse**, **Moyenne**ou **Haute**. La valeur par défaut est **Moyenne**. **Basse** représente une grille 4x4 (16 cellules), **Moyenne** une grille 8x8 (64 cellules) et **Haute** une grille 16x16 (256 cellules). Ces options ne sont pas disponibles lorsque les options de pavage **Grille automatique géométrique** ou **Grille automatique géographique** sont choisies.  
   
- **Niveau 1**  
+ **Niveau 1**  
  Densité de la grille de premier niveau (haut).  
   
- **Niveau 2**  
+ **Niveau 2**  
  Densité de la grille de second niveau.  
   
- **Niveau 3**  
+ **Niveau 3**  
  Densité de la grille de troisième niveau.  
   
- **Niveau 4**  
+ **Niveau 4**  
  Densité de la grille de quatrième niveau.  
   
 ##  <a name="Filter"></a> Page Filtre  
  Utilisez cette page pour entrer le prédicat de filtre d'un index filtré. Pour plus d'informations, consultez [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
  **Expression de filtre**  
- Définit quelles lignes de données inclure dans l'index filtré. Par exemple : `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
+ Définit quelles lignes de données inclure dans l'index filtré. Par exemple : `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Définir les options d'index](../../relational-databases/indexes/set-index-options.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   
+

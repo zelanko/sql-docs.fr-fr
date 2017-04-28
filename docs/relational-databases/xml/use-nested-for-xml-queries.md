@@ -1,29 +1,33 @@
 ---
-title: "Utiliser des requ&#234;tes FOR XML imbriqu&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clause FOR XML, requêtes FOR XML imbriquées"
-  - "requêtes [XML dans SQL Server], FOR XML imbriquée"
-  - "FOR XML, requêtes imbriquées"
+title: "Utiliser des requêtes FOR XML imbriquées | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, nested FOR XML queries
+- queries [XML in SQL Server], nested FOR XML
+- nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: af44fc3250f620dcaad219e67b0e414cd76974a7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utiliser des requ&#234;tes FOR XML imbriqu&#233;es
+# <a name="use-nested-for-xml-queries"></a>Utiliser des requêtes FOR XML imbriquées
   Le type de données **xml** et la [directive TYPE dans les requêtes FOR XML](../../relational-databases/xml/type-directive-in-for-xml-queries.md) permettent au XML retourné par les requêtes FOR XML d’être traité sur le serveur et sur le client.  
   
-## Traitement avec des variables de type xml  
+## <a name="processing-with-xml-type-variables"></a>Traitement avec des variables de type xml  
  Vous pouvez affecter le résultat de la requête FOR XML à une variable de type **xml** ou bien utiliser XQuery pour interroger le résultat et affecter celui-ci à une variable de type **xml** en vue d’un traitement supplémentaire.  
   
 ```  
@@ -38,7 +42,7 @@ SELECT @x
 --<row ProductModelID="119" Name="Bike Wash" />  
 ```  
   
- Vous pouvez poursuivre le traitement du document XML renvoyé dans la variable `@x` à l’aide de l’une des méthodes de type de données **xml**. Par exemple, vous pouvez extraire la valeur de l’attribut `ProductModelID` à l’aide de la [méthode value()](../../t-sql/xml/value-method-xml-data-type.md).  
+ Vous pouvez poursuivre le traitement du document XML renvoyé dans la variable `@x`à l’aide de l’une des méthodes de type de données **xml** . Par exemple, vous pouvez extraire la valeur de l’attribut `ProductModelID` à l’aide de la [méthode value()](../../t-sql/xml/value-method-xml-data-type.md).  
   
 ```  
 DECLARE @i int;  
@@ -46,7 +50,7 @@ SET @i = (SELECT @x.value('/row[1]/@ProductModelID[1]', 'int'));
 SELECT @i;  
 ```  
   
- Dans l’exemple suivant, le résultat de la requête `FOR XML` renvoyé est de type **xml** car la directive `TYPE` est spécifiée dans la clause `FOR XML`.  
+ Dans l’exemple suivant, le résultat de la requête `FOR XML` renvoyé est de type **xml** car la directive `TYPE` est spécifiée dans la clause `FOR XML` .  
   
 ```  
 SELECT ProductModelID, Name  
@@ -56,7 +60,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
   
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <myRoot>  
@@ -81,8 +85,8 @@ SELECT  (SELECT ProductModelID, Name
 <row ProductModelID="122" Name="All-Purpose Bike Stand" />  
 ```  
   
-## Renvoi de résultats de requêtes FOR XML internes à des requêtes externes en tant qu'instances de type xml  
- Vous pouvez écrire des requêtes `FOR XML` imbriquées où le résultat de la requête interne est retourné en tant que type **xml** à la requête externe. Par exemple :  
+## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>Renvoi de résultats de requêtes FOR XML internes à des requêtes externes en tant qu'instances de type xml  
+ Vous pouvez écrire des requêtes `FOR XML` imbriquées où le résultat de la requête interne est retourné en tant que type **xml** à la requête externe. Par exemple :  
   
 ```  
 SELECT Col1,   
@@ -97,13 +101,13 @@ WHERE ...
 FOR XML AUTO, TYPE;  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
--   Le XML généré par la requête `FOR XML` interne est ajouté au XML généré par la requête `FOR XML` externe.  
+-   Le XML généré par la requête `FOR XML` interne est ajouté au XML généré par la requête `FOR XML`externe.  
   
--   La requête interne spécifie la directive `TYPE`. Par conséquent, les données XML retournées par la requête interne sont du type **xml**. Si la directive TYPE n’est pas spécifiée, le résultat de la requête `FOR XML` interne est retourné en tant que **nvarchar(max)** et les données XML sont converties en entités.  
+-   La requête interne spécifie la directive `TYPE` . Par conséquent, les données XML retournées par la requête interne sont du type **xml** . Si la directive TYPE n’est pas spécifiée, le résultat de la requête `FOR XML` interne est retourné en tant que **nvarchar(max)** et les données XML sont converties en entités.  
   
-## Contrôle de la forme des données XML résultantes  
+## <a name="controlling-the-shape-of-resulting-xml-data"></a>Contrôle de la forme des données XML résultantes  
  Les requêtes FOR XML imbriquées vous permettent de mieux contrôler la forme des données XML résultantes. Vous pouvez utiliser des requêtes FOR XML imbriquées pour construire des données XML centrées partiellement sur l'attribut et partiellement sur l'élément.  
   
  Pour plus d’informations sur la spécification de données XML centrées sur l’attribut et sur l’élément avec des requêtes FOR XML imbriquées, consultez [Comparaison de la requête FOR XML et de la requête FOR XML imbriquée](../../relational-databases/xml/for-xml-query-compared-to-nested-for-xml-query.md) et [Façonner des données XML avec des requêtes FOR XML imbriquées](../../relational-databases/xml/shape-xml-with-nested-for-xml-queries.md).  
@@ -112,13 +116,13 @@ FOR XML AUTO, TYPE;
   
  Quel que soit le mode utilisé, les requêtes FOR XML imbriquées procurent davantage de contrôle dans la description de la forme des données XML résultantes. Elles peuvent être utilisées à la place des requêtes en mode EXPLICIT.  
   
-## Exemples  
+## <a name="examples"></a>Exemples  
  Les rubriques suivantes fournissent des exemples de requêtes FOR XML imbriquées.  
   
  [Comparaison de la requête FOR XML et de la requête FOR XML imbriquée](../../relational-databases/xml/for-xml-query-compared-to-nested-for-xml-query.md)  
  Compare une requête FOR XML d'un seul niveau à une requête FOR XML imbriquée. Cet exemple inclut une démonstration de la manière de spécifier à la fois des données XML centrées sur l'attribut et centrées sur l'élément comme résultat de requête.  
   
- [Générer des frères à l'aide d'une requête imbriquée en mode AUTO](../../relational-databases/xml/generate-siblings-with-a-nested-auto-mode-query.md)  
+ [Générer des frères à l’aide d’une requête imbriquée en mode AUTO](../../relational-databases/xml/generate-siblings-with-a-nested-auto-mode-query.md)  
  Montre comment générer des frères à l'aide d'une requête imbriquée en mode AUTO  
   
  [Utiliser des requêtes FOR XML imbriquées dans ASP.NET](../../relational-databases/xml/use-nested-for-xml-queries-in-asp-net.md)  

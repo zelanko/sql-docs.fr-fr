@@ -1,38 +1,42 @@
 ---
-title: "Activer ou d&#233;sactiver un rep&#232;re de plan | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "repères de plan [SQL Server], désactivation"
-  - "repères de plan, activation"
-  - "repères de plan [SQL Server], activation"
-  - "repères de plan, désactivation"
+title: "Activer ou désactiver un repère de plan | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- plan guides [SQL Server], disabling
+- enabling plan guides
+- plan guides [SQL Server], enabling
+- disabling plan guides
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c1d76a7087ce1225c2ae3f4f685cb234b53dbf0b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Activer ou d&#233;sactiver un rep&#232;re de plan
+# <a name="enable-or-disable-a-plan-guide"></a>Activer ou désactiver un repère de plan
   Vous pouvez désactiver et activer les repères de plan dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il est possible d'activer ou de désactiver un seul repère de plan ou tous les repères de plan d'une base de données.  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour désactiver et activer des repères de plan, à l'aide de :**  
+-   **Pour désactiver et activer des repères de plan, à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -49,11 +53,11 @@ caps.handback.revision: 6
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- La désactivation ou l'activation d'un repère de plan OBJECT nécessite l'autorisation ALTER sur l'objet (par exemple : fonction, procédure stockée) qui est référencé par le repère de plan. Tous les autres repères de plan nécessitent l'autorisation ALTER DATABASE.  
+ La désactivation ou l'activation d'un repère de plan OBJECT nécessite l'autorisation ALTER sur l'objet (par exemple : fonction, procédure stockée) qui est référencé par le repère de plan. Tous les autres repères de plan nécessitent l'autorisation ALTER DATABASE.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour désactiver ou activer un repère de plan  
+#### <a name="to-disable-or-enable-a-plan-guide"></a>Pour désactiver ou activer un repère de plan  
   
 1.  Cliquez sur le signe plus pour développer la base de données dans laquelle vous souhaitez désactiver ou activer un repère de plan, puis cliquez sur le signe plus pour développer le dossier **Programmabilité** .  
   
@@ -63,17 +67,17 @@ caps.handback.revision: 6
   
 4.  Dans la boîte de dialogue **Désactiver le repère de plan** ou **Activer le repère de plan** , vérifiez que l'action choisie a abouti, puis cliquez sur **Fermer**.  
   
-#### Pour activer ou désactiver tous les repères de plan dans une base de données  
+#### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>Pour activer ou désactiver tous les repères de plan dans une base de données  
   
 1.  Cliquez sur le signe plus pour développer la base de données dans laquelle vous souhaitez désactiver ou activer un repère de plan, puis cliquez sur le signe plus pour développer le dossier **Programmabilité** .  
   
-2.  Cliquez avec le bouton droit sur le dossier **Repères de plan**, puis sélectionnez **Tout activer** ou **Tout désactiver**.  
+2.  Cliquez avec le bouton droit sur le dossier **Repères de plan** , puis sélectionnez **Tout activer** ou **Tout désactiver**.  
   
 3.  Dans la boîte de dialogue **Désactiver tous les repères de plan** ou **Activer tous les repères de plan** , vérifiez que l'action choisie a abouti, puis cliquez sur **Fermer**.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour désactiver ou activer un repère de plan  
+#### <a name="to-disable-or-enable-a-plan-guide"></a>Pour désactiver ou activer un repère de plan  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -117,7 +121,7 @@ caps.handback.revision: 6
   
     ```  
   
-#### Pour activer ou désactiver tous les repères de plan dans une base de données  
+#### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>Pour activer ou désactiver tous les repères de plan dans une base de données  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -135,6 +139,6 @@ caps.handback.revision: 6
   
     ```  
   
- Pour plus d’informations, consultez [sp_control_plan_guide &#40;Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md).  
+ Pour plus d’informations, consultez [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md).  
   
   

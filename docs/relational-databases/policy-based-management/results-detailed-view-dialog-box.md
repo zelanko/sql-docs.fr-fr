@@ -1,28 +1,32 @@
 ---
-title: "Bo&#238;te de dialogue Vue d&#233;taill&#233;e des r&#233;sultats | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.results.f1"
-  - "sql13.swb.dmf.policy.resultdetails.f1"
+title: "Boîte de dialogue Vue détaillée des résultats | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.results.f1
+- sql13.swb.dmf.policy.resultdetails.f1
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7893f4dbf2a91106721e2d6c266a7f938bce3c45
+ms.lasthandoff: 04/11/2017
+
 ---
-# Bo&#238;te de dialogue Vue d&#233;taill&#233;e des r&#233;sultats
+# <a name="results-detailed-view-dialog-box"></a>Boîte de dialogue Vue détaillée des résultats
   Cette boîte de dialogue affiche les résultats d'évaluation de stratégie après l'exécution d'une stratégie lorsque vous ouvrez la boîte de dialogue **Évaluer les stratégies** et que vous cliquez sur **Afficher**. Cette boîte de dialogue est en lecture seule et vous aide à comprendre quelle partie d'une expression de propriété peut échouer.  
   
-## Options  
+## <a name="options"></a>Options  
  **AndOr**  
  Lorsque plusieurs expressions de propriété sont présentes, indique si les expressions de propriété sont cumulatives ou autres.  
   
@@ -47,7 +51,7 @@ caps.handback.revision: 21
  **Aide supplémentaire**  
  Cliquez sur le lien hypertexte pour ouvrir une page Web en rapport avec cette stratégie. Le lien hypertexte d'aide supplémentaire est configuré lors de la création de la stratégie et il peut être vide ou non disponible.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Nœud Gestion de la stratégie &#40;Explorateur d’objets&#41;](../../relational-databases/policy-based-management/policy-management-node-object-explorer.md)   
  [Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   

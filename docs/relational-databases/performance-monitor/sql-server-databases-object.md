@@ -1,41 +1,45 @@
 ---
-title: "SQL&#160;Server, objet Databases | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "groupes de disponibilité [SQL Server], analyse"
-  - "Databases (objet)"
-  - "SQLServer:Databases"
-  - "groupes de disponibilité [SQL Server], compteurs de performance"
+title: "SQL Server, objet Databases | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], monitoring
+- Databases object
+- SQLServer:Databases
+- Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1b2355b85d82050496d1df27480723a0831e3a60
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL&#160;Server, objet Databases
+# <a name="sql-server-databases-object"></a>SQL Server, objet Databases
   L’objet **SQLServer:Databases** dans SQL Server fournit des compteurs pour analyser les opérations de copie en bloc, le débit des sauvegardes et des restaurations, ainsi que l’activité des journaux des transactions. Surveillez les transactions et le journal des transactions pour déterminer l'intensité de l'activité de l'utilisateur dans la base de données et le taux de remplissage du journal des transactions. Le volume d'activité de l'utilisateur peut déterminer les performances de la base de données et affecter la taille du journal, le verrouillage et la réplication. La surveillance de l'activité du journal de bas niveau afin de mesurer l'activité de l'utilisateur et l'exploitation des ressources peut permettre d'identifier les goulots d'étranglement des performances.  
   
- Plusieurs instances de l’objet **Databases**, chacune représentant une seule base de données, peuvent être analysées simultanément.  
+ Plusieurs instances de l’objet **Databases** , chacune représentant une seule base de données, peuvent être analysées simultanément.  
   
  Le tableau suivant décrit les compteurs **Databases** SQL Server.  
   
-|Compteurs Bases de données SQL Server|Description|  
+|Compteurs Bases de données SQL Server|Description|  
 |-----------------------------------|-----------------|  
 |**Transactions actives**|Nombre de transactions actives pour la base de données.|  
 |**Avg Dist From EOL/LP Request**|Distance moyenne en octets de la fin du journal par requête de pool du journal, pour les requêtes figurant dans le dernier fichier journal virtuel.| 
 |**Débit de sauvegarde/restauration/seconde**|Débit de lecture/écriture par seconde pour les opérations de sauvegarde et de restauration d'une base de données. Par exemple, il est possible de mesurer l'évolution des performances de l'opération de sauvegarde d'une base de données si l'on utilise davantage d'unités de sauvegarde en parallèle ou si ces dernières sont plus rapides. Le débit d'une opération de sauvegarde ou de restauration d'une base de données permet de déterminer la progression et les performances de ces opérations.|  
 |**Lignes de la copie en bloc/s**|Nombre de lignes copiées en bloc par seconde.|  
 |**Débit de la copie en bloc/s**|Quantité de données copiées en bloc (en kilo-octets) par seconde.|  
-|**Entrées de la table de validation**|Taille de la partie en mémoire de la table de validation pour la base de données. Pour plus d’informations, consultez [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../Topic/sys.dm_tran_commit_table%20\(Transact-SQL\).md).|  
+|**Entrées de la table de validation**|Taille de la partie en mémoire de la table de validation pour la base de données. Pour plus d’informations, consultez [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md).|  
 |**Taille des fichiers de données (Ko)**|Taille cumulée (en kilo-octets) de tous les fichiers de données de la base de données prenant en compte la croissance automatique. Il est utile d’analyser ce compteur, par exemple pour déterminer la taille appropriée de **tempdb**.|  
 |**Octets d'analyse logique DBCC/s**|Nombre d'octets d'analyse de lecture logique par seconde pour les commandes DBCC (Database Console Commands).|  
 |**Durée de validation du groupe/sec**|Temps d’attente du groupe (microsecondes) par seconde|
@@ -60,7 +64,7 @@ caps.handback.revision: 40
 |**Envois au pool du journal – Pool libre vide/seconde**|Taux d’échecs d’envoi de blocs du journal dus à un pool libre vide.|
 |**Envois au pool du journal – Mémoire insuffisante/seconde**|Taux d’échecs d’envoi de blocs du journal dus à une mémoire insuffisante.|
 |**Envois au pool du journal – Pas de mémoire tampon libre/seconde**|Taux d’échecs d’envoi de blocs du journal dus à l’indisponibilité de mémoires tampon libres.|
-|**Demande de pool de journal Derrière troncation/s**|Absences dans le cache du pool du journal liées à une demande de bloc derrière un LSN de troncation.|
+|**Demande de pool du journal derrière troncation/s**|Absences dans le cache du pool du journal liées à une demande de bloc derrière un LSN de troncation.|
 |**Journaliser la base des requêtes du pool**|À usage interne uniquement| 
 |**Journaliser le fichier journal virtuel des anciennes requêtes/s du pool**|Journaliser les requêtes du pool qui n’étaient pas dans le dernier fichier journal virtuel du journal.|  
 |**Journaliser les requêtes/s du pool**|Nombre de requêtes de bloc du journal traitées par le pool du journal.|  
@@ -69,8 +73,8 @@ caps.handback.revision: 40
 |**Compactages de journal**|Nombre total de compactages de journal pour cette base de données.|  
 |**Troncatures de journal**|Nombre de fois où le journal des transactions a été réduit.|  
 |**Pourcentage utilisé du journal**|Pourcentage de l'espace en cours d'utilisation dans le journal.|  
-|**Taux de de réplication en attente**|Nombre de transactions dans le journal des transactions de la base de données de publication, marquées pour la réplication, mais non encore remises à la base de données de distribution.|  
-|**Taux de transactions de Taux**|Nombre de transactions extraites par seconde du journal des transactions de la base de données de publication et remises à la base de données de distribution.|  
+|**Transactions de réplication en attente**|Nombre de transactions dans le journal des transactions de la base de données de publication, marquées pour la réplication, mais non encore remises à la base de données de distribution.|  
+|**Répl. Trans. Fréquence**|Nombre de transactions extraites par seconde du journal des transactions de la base de données de publication et remises à la base de données de distribution.|  
 |**Mouvement de réduction de données en octets/s**|Volume de données déplacées par seconde par les opérations Autoshrink, ou par les instructions DBCC SHRINKDATABASE ou DBCC SHRINKFILE.|  
 |**Transactions suivies/s**|Nombre de transactions validées enregistrées dans la table de validation pour la base de données.|  
 |**Transactions/s**|Nombre de transactions démarrées pour la base de données par seconde.<br /><br /> **Transactions/s** ne tient pas compte des transactions XTP uniquement (transactions commencées par une procédure stockée compilée en mode natif).|  
@@ -81,7 +85,7 @@ caps.handback.revision: 40
 |**Traitement du journal par le contrôleur XTP/s**|Quantité d’octets de journal traités par le thread du contrôleur XTP par seconde.|
 |**Mémoire XTP utilisée (Ko)**|La quantité de mémoire utilisée par XTP dans la base de données.| 
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, réplica de base de données](../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   

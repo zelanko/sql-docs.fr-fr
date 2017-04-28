@@ -1,94 +1,117 @@
 ---
-title: "Recherche de mots dans le voisinage d&#39;autres mots avec NEAR | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "recherches de mots [recherche en texte intégral]"
-  - "Option NEAR [recherche en texte intégral]"
-  - "recherches d'expressions [recherche en texte intégral]"
-  - "recherches de proximité [recherche en texte intégral]"
-  - "recherche en texte intégral [SQL Server], recherches de proximité"
-  - "requêtes de texte intégral [SQL Server], proximité"
-  - "requêtes [recherche en texte intégral], proximité"
+title: "Recherche de mots dans le voisinage d’autres mots avec NEAR | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- word searches [full-text search]
+- NEAR option [full-text search]
+- phrase searches [full-text search]
+- proximity searches [full-text search]
+- full-text search [SQL Server], proximity searches
+- full-text queries [SQL Server], proximity
+- queries [full-text search], proximity
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
 caps.latest.revision: 65
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 63
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: aaff4768722fa830cccf9e2ee397945f0866ae07
+ms.lasthandoff: 04/11/2017
+
 ---
-# Recherche de mots dans le voisinage d&#39;autres mots avec NEAR
-  Vous pouvez utiliser un terme de proximité (NEAR) dans un prédicat [CONTAINS](../../t-sql/queries/contains-transact-sql.md) ou une fonction [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) pour rechercher des mots ou des expressions à proximité les uns des autres. Vous pouvez également spécifier le nombre maximal de termes de non-recherche qui séparent le premier et le dernier terme de recherche. De plus, vous pouvez rechercher des mots ou des expressions dans n'importe quel ordre ou dans un ordre spécifié. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge à la fois l'ancien [terme de proximité générique](#Generic_NEAR), qui est maintenant déconseillé et le [terme de proximité personnalisé](#Custom_NEAR), qui est une nouveauté de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+# <a name="search-for-words-close-to-another-word-with-near"></a>Recherche de mots dans le voisinage d'autres mots avec NEAR
+  Vous pouvez utiliser le *terme de proximité* **NEAR** dans un prédicat [CONTAINS](../../t-sql/queries/contains-transact-sql.md) ou une fonction [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) pour rechercher des mots ou des expressions à proximité les uns des autres. 
   
-##  <a name="Custom_NEAR"></a> Terme de proximité personnalisé  
- Le terme de proximité personnalisé présente les nouvelles fonctions suivantes :  
+##  <a name="Custom_NEAR"></a> Vue d’ensemble de NEAR  
+**NEAR** offre les fonctionnalités suivantes :  
+-   Vous pouvez spécifier le nombre maximal de termes de non-recherche qui séparent le premier et le dernier terme de recherche.
+
+-   Vous pouvez rechercher des mots ou des expressions dans n’importe quel ordre ou dans un ordre spécifié.
   
 -   Vous pouvez spécifier le nombre maximal de termes de non-recherche, ou *distance maximale*, qui sépare le premier et le dernier terme de recherche pour établir une correspondance.  
+
+-   Si vous spécifiez le nombre maximal de termes, vous pouvez également spécifier l'ordre dans lequel les termes de recherche doivent figurer dans les correspondances.
+
+ 
+ Pour être une correspondance valide, une chaîne de texte doit :  
   
--   Si vous spécifiez le nombre maximal de termes, vous pouvez également spécifier l'ordre dans lequel les termes de recherche doivent figurer dans les correspondances.  
+-   Commencer par l'un des termes de recherche spécifiés et se terminer par l'un des autres termes de recherche spécifiés  
   
- Pour être une correspondance valide, une chaîne de texte doit :  
+-   Contenir tous les termes de recherche spécifiés  
   
--   commencer par l'un des termes de recherche spécifiés et se terminer par l'un des autres termes de recherche spécifiés ;  
+-   Le nombre de termes de non-recherche, notamment de mots vides situés entre le premier et le dernier terme de recherche, doit être inférieur ou égal à la distance maximale, si celle-ci est spécifiée.  
   
--   contenir tous les termes de recherche spécifiés ;  
-  
--   le nombre de termes de non-recherche, notamment de mots vides situés entre le premier et le dernier terme de recherche, doit être inférieur ou égal à la distance maximale, si celle-ci est spécifiée.  
-  
- La syntaxe de base est la suivante :  
-  
+## <a name="syntax-of-near"></a>Syntaxe de NEAR
+La syntaxe de base de **NEAR** est la suivante :  
+
+``` 
  NEAR (  
   
  {  
   
- *terme_de_recherche* [,...*n* ]  
+ *search_term* [ ,…*n* ]  
   
  |  
   
- (*terme_de_recherche* [ ,…*n* ] ) [, <distance_maximale> [, <ordre_de_correspondance> ] ]  
+ (*search_term* [ ,…*n* ] ) [, <maximum_distance> [, <match_order> ] ]  
   
  }  
   
  )  
+```
+
+Pour plus d’informations sur la syntaxe, consultez [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md).  
+
+## <a name="examples"></a>Exemples
+### <a name="example-1"></a>Exemple 1
+ Par exemple, vous pourriez rechercher « John » à deux termes de distance de « Smith », comme suit :  
   
-> [!NOTE]  
->  Pour plus d’informations sur la syntaxe de <terme_de_proximité_personnalisé>, consultez [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md).  
-  
- Par exemple, vous pourriez rechercher « John » à deux termes de distance de « Smith », comme suit :  
-  
+```tsql
+... CONTAINS(column_name, 'NEAR((John, Smith), 2)')
 ```  
-CONTAINS(column_name, 'NEAR((John, Smith), 2)')  
-```  
   
- Les chaînes qui correspondent sont par exemple « `John Jacob Smith` » et « `Smith, John` ». La chaîne « `John Jones knows Fred Smith` » contient trois termes de non-recherche intermédiaires, donc ce n'est pas une correspondance.  
+ Les chaînes qui correspondent sont par exemple «`John Jacob Smith`» et «`Smith, John`». La chaîne «`John Jones knows Fred Smith`» contient trois termes de non-recherche intermédiaires, donc ce n'est pas une correspondance.  
   
- Pour que les termes soient recherchés dans un ordre spécifié, vous pouvez modifier le terme de proximité de l'exemple en `NEAR((John, Smith),2, TRUE).` Cela permet de rechercher « `John` » à deux termes de distance de « `Smith` », mais uniquement à condition que « `John` » précède « `Smith` ». Dans une langue qui se lit de gauche à droite, tel que l'anglais, un exemple de chaîne correspondante est `John Jacob Smith`.  
+ Pour que les termes soient recherchés dans un ordre spécifié, vous pouvez modifier le terme de proximité de l'exemple en `NEAR((John, Smith),2, TRUE).` Cela permet de rechercher «`John`» à deux termes de distance de «`Smith`», mais uniquement à condition que «`John`» précède «`Smith`». Dans une langue qui se lit de gauche à droite, tel que l'anglais, un exemple de chaîne correspondante est`John Jacob Smith`.  
   
- Notez que pour une langue qui se lit de droite à gauche, telle que l'arabe ou l'hébreu, le moteur d'indexation et de recherche en texte intégral applique les termes spécifiés dans l'ordre inverse. De même, l'Explorateur d'objets de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] inverse automatiquement l'ordre d'affichage des mots spécifiés dans les langues s'écrivant de droite à gauche.  
+ Notez que pour une langue qui se lit de droite à gauche, telle que l'arabe ou l'hébreu, le moteur d'indexation et de recherche en texte intégral applique les termes spécifiés dans l'ordre inverse. De même, l'Explorateur d'objets de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] inverse automatiquement l'ordre d'affichage des mots spécifiés dans les langues s'écrivant de droite à gauche.   
+
+### <a name="example-2"></a>Exemple 2
+ L'exemple suivant recherche dans la table `Production.Document` de l'exemple de base de données `AdventureWorks` tous les résumés de document qui contiennent le mot « reflector » dans le même document que le mot « bracket ».  
   
-> [!NOTE]  
->  Pour plus d'informations, consultez «[Considérations supplémentaires concernant les recherches de proximité](#Additional_Considerations)», plus loin dans cette rubrique.  
-  
-### Comment mesurer la distance maximale  
- Une distance maximale spécifique, telle que 10 ou 25, détermine combien de termes de non-recherche, notamment les mots vides, peuvent séparer le premier et le dernier terme de recherche dans une chaîne donnée. Par exemple, `NEAR((dogs, cats, "hunting mice"), 3)` retournerait la ligne suivante, dans laquelle le nombre total de termes de non-recherche est trois (« `enjoy` », « `but` » et « `avoid` ») :  
+```tsql
+SELECT DocumentNode, Title, DocumentSummary  
+FROM Production.Document AS DocTable   
+INNER JOIN CONTAINSTABLE(Production.Document, Document,  
+  'NEAR(bracket, reflector)' ) AS KEY_TBL  
+  ON DocTable.DocumentNode = KEY_TBL.[KEY]  
+WHERE KEY_TBL.RANK > 50  
+ORDER BY KEY_TBL.RANK DESC;  
+GO  
+``` 
+ 
+## <a name="how-maximum-distance-is-measured"></a>Comment mesurer la distance maximale  
+ Une distance maximale spécifique, telle que 10 ou 25, détermine combien de termes de non-recherche, notamment les mots vides, peuvent séparer le premier et le dernier terme de recherche dans une chaîne donnée. Par exemple, `NEAR((dogs, cats, "hunting mice"), 3)` retournerait la ligne suivante, dans laquelle le nombre total de termes de non-recherche est trois («`enjoy`», «`but`» et «`avoid`») :  
   
  «`Cats` `enjoy` `hunting mice``, but avoid` `dogs``.`»  
   
- Le même terme de proximité ne retournerait pas la ligne suivante, car les quatre termes de non-recherche (« `enjoy` », « `but` », « `usually` » et « `avoid` ») dépassent la distance maximale :  
+ Le même terme de proximité ne retournerait pas la ligne suivante, car les quatre termes de non-recherche («`enjoy`», «`but`», «`usually`» et «`avoid`») dépassent la distance maximale :  
   
  «`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`»  
   
-### Combinaison d'un terme de proximité personnalisé avec d'autres termes  
- Vous pouvez combiner un terme de proximité personnalisé avec d'autres termes. Vous pouvez utiliser AND (&), OR (|) ou AND NOT (&!) pour combiner un terme de proximité personnalisé avec un autre terme de proximité personnalisé, un terme simple ou un terme de préfixe. Par exemple :  
+## <a name="combine-near-with-other-terms"></a>Combiner NEAR avec d’autres termes  
+ Vous pouvez combiner NEAR avec d’autres termes. Vous pouvez utiliser AND (&), OR (|) ou AND NOT (&!) pour combiner un terme de proximité personnalisé avec un autre terme de proximité personnalisé, un terme simple ou un terme de préfixe. Par exemple :  
   
 -   CONTAINS('NEAR((*terme1*,*terme2*),5) AND *terme3*')  
   
@@ -100,33 +123,16 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
   
 -   CONTAINS('NEAR((*terme1*,*terme2*),5) OR NEAR((*terme3*,*terme4*),2, TRUE)')  
   
- Par exemple :  
+ Par exemple :  
   
 ```  
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  
 ```  
   
- Vous ne pouvez pas combiner un terme de proximité personnalisé avec un terme de proximité générique (*terme1* NEAR *terme2*), un terme de forme canonique (ISABOUT…) ou un terme pondéré (FORMSOF…).  
+ Vous ne pouvez pas combiner NEAR avec un terme de génération (ISABOUT …) ou un terme pondéré (FORMSOF …).  
   
-### Exemple : utilisation du terme de proximité personnalisé  
- L'exemple suivant recherche dans la table `Production.Document` de l'exemple de base de données `AdventureWorks2012` tous les résumés de document qui contiennent le mot « reflector » dans le même document que le mot « bracket ».  
-  
-```  
-SELECT DocumentNode, Title, DocumentSummary  
-FROM Production.Document AS DocTable   
-INNER JOIN CONTAINSTABLE(Production.Document, Document,  
-  'NEAR(bracket, reflector)' ) AS KEY_TBL  
-  ON DocTable.DocumentNode = KEY_TBL.[KEY]  
-WHERE KEY_TBL.RANK > 50  
-ORDER BY KEY_TBL.RANK DESC;  
-GO  
-```  
-  
- [Dans cette rubrique](#top)  
-  
-##  <a name="Additional_Considerations"></a> Considérations supplémentaires concernant les recherches de proximité  
- Cette section présente des points à prendre en considération qui concernent à la fois les recherches de proximité génériques et personnalisées :  
-  
+##  <a name="Additional_Considerations"></a> Plus d’informations sur les recherches de proximité  
+   
 -   Chevauchement des occurrences des termes de recherche  
   
      Les recherches de proximité ne cherchent toujours que des occurrences sans chevauchement. Les occurrences des termes de recherche qui se chevauchent ne sont jamais validées comme des correspondances. Par exemple, supposons le terme de proximité suivant, qui recherche «`A`» et «`AA`», dans cet ordre, à une distance maximale de deux termes :  
@@ -140,92 +146,18 @@ GO
     > [!NOTE]  
     >  Vous pouvez spécifier des termes qui se chevauchent, par exemple, `NEAR("mountain bike", "bike trails")` ou `(NEAR(comfort*, comfortable), 5)`. Spécifier des termes qui se chevauchent rend la requête plus complexe en augmentant les permutations de correspondances possibles. Si vous spécifiez un grand nombre de termes se chevauchant, la requête peut échouer en raison de ressources insuffisantes. Dans ce cas, simplifiez la requête et réessayez.  
   
--   NEAR générique et NEAR personnalisé (qu'une distance maximale soit spécifiée ou non) indiquent tous deux la distance logique entre les termes, plutôt que la distance absolue qui les sépare. Par exemple, les termes des différentes expressions ou phrases d'un paragraphe sont considérés comme plus éloignés que les termes situés dans une même expression ou phrase, indépendamment de leur proximité réelle, en supposant que leur relation soit moins étroite. De même, les termes situés dans des paragraphes différents sont considérés comme étant encore plus éloignés. Si une correspondance comprend la fin d'une phrase, d'un paragraphe ou d'un chapitre, l'intervalle utilisé pour le classement d'un document est augmenté respectivement de 8, 128 ou 1024.  
+-   Qu’une distance maximale soit spécifiée ou non, NEAR indique la distance logique entre les termes plutôt que la distance absolue qui les sépare. Par exemple, les termes des différentes expressions ou phrases d'un paragraphe sont considérés comme plus éloignés que les termes situés dans une même expression ou phrase, indépendamment de leur proximité réelle, en supposant que leur relation soit moins étroite. De même, les termes situés dans des paragraphes différents sont considérés comme étant encore plus éloignés. Si une correspondance comprend la fin d'une phrase, d'un paragraphe ou d'un chapitre, l'intervalle utilisé pour le classement d'un document est augmenté respectivement de 8, 128 ou 1024.  
   
 -   Impact des termes de proximité sur le classement par la fonction CONTAINSTABLE  
   
-     Lorsque NEAR est utilisé dans la fonction CONTAINSTABLE, le nombre de résultats dans un document par rapport à sa longueur, ainsi que la distance entre le premier et le dernier terme de recherche dans chacun des résultats, affectent le classement de chaque document. Pour un terme de proximité générique, si les termes de recherche trouvés sont séparés de >50 termes logiques, le classement retourné sur un document est 0. Pour un terme de proximité personnalisé qui ne spécifie pas d'entier comme distance maximale, un document qui contient uniquement des résultats à intervalle de >100 termes logiques recevra un classement de 0. Pour plus d'informations sur le classement des recherches de proximité personnalisées, consultez [Limit Search Results with RANK](../../relational-databases/search/limit-search-results-with-rank.md).  
+    Lorsque NEAR est utilisé dans la fonction CONTAINSTABLE, le nombre de résultats dans un document par rapport à sa longueur, ainsi que la distance entre le premier et le dernier terme de recherche dans chacun des résultats, affectent le classement de chaque document. Pour un terme de proximité générique, si les termes de recherche trouvés sont séparés de >50 termes logiques, le classement retourné sur un document est 0. Pour un terme de proximité personnalisé qui ne spécifie pas d'entier comme distance maximale, un document qui contient uniquement des résultats à intervalle de >100 termes logiques recevra un classement de 0. Pour plus d'informations sur le classement des recherches de proximité personnalisées, consultez [Limit Search Results with RANK](../../relational-databases/search/limit-search-results-with-rank.md).  
   
 -   Option de serveur **Transformer les mots parasites**   
   
-     La valeur de l’option **Transformer les mots parasites** influe sur la manière dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traite les mots vides, s’ils sont spécifiés dans les recherches de proximité. Pour plus d’informations, voir [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md).  
+     La valeur de l’option **Transformer les mots parasites** influe sur la manière dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traite les mots vides, s’ils sont spécifiés dans les recherches de proximité. Pour plus d’informations, voir [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md).   
   
- [Dans cette rubrique](#top)  
-  
-##  <a name="Generic_NEAR"></a> Terme de proximité générique déconseillé  
-  
-> [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Nous vous recommandons d’utiliser le [terme de proximité personnalisé](#Custom_NEAR).  
-  
- Un terme de proximité générique indique que les termes de recherche spécifiés doivent figurer dans un document pour qu’une correspondance soit retournée, indépendamment du nombre de termes de non-recherche (la *distance*) entre les termes de recherche. La syntaxe de base est la suivante :  
-  
- { *terme_de_recherche* { NEAR | ~ } *terme_de_recherche* } [ ,…*n* ]  
-  
- Par exemple, dans les exemples suivants, les mots « fox » et « chicken »doivent apparaître tous les deux, dans n'importe quel ordre, pour qu'une correspondance soit établie :  
-  
--   `CONTAINS(column_name, 'fox NEAR chicken')`  
-  
--   `CONTAINSTABLE(table_name, column_name, 'fox ~ chicken')`  
-  
-> [!NOTE]  
->  Pour plus d’informations sur la syntaxe de <terme_de_proximité_générique>, consultez [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md).  
-  
- Pour plus d'informations, consultez «[Considérations supplémentaires concernant les recherches de proximité](#Additional_Considerations)», plus loin dans cette rubrique.  
-  
-### Combinaison d'un terme de proximité générique avec d'autres termes  
- Vous pouvez utiliser AND (&), OR (|) ou AND NOT (&!) pour combiner un terme de proximité générique avec un autre terme de proximité générique, un terme simple ou un terme de préfixe. Par exemple :  
-  
-```  
-CONTAINSTABLE (Production.ProductDescription,  
-   Description,   
-   '(light NEAR aluminum) OR  
-   (lightweight NEAR aluminum)'  
-)  
-```  
-  
- Vous ne pouvez pas combiner de terme de proximité générique avec un terme de proximité personnalisé, tel que `NEAR((term1,term2),5)`, un terme pondéré (ISABOUT …) ou un terme de forme canonique (FORMSOF …).  
-  
-### Exemple : utilisation du terme de proximité générique  
- L'exemple suivant utilise le terme de proximité générique pour rechercher le mot « reflector » dans le même document que le mot « bracket ».  
-  
-```  
-USE AdventureWorks2012;  
-GO  
-  
-SELECT DocumentNode, Title, DocumentSummary  
-FROM Production.Document AS DocTable INNER JOIN  
-  CONTAINSTABLE(Production.Document, Document,  
-  '(reflector NEAR bracket)' ) AS KEY_TBL  
-  ON DocTable.DocumentNode = KEY_TBL.[KEY]  
-ORDER BY KEY_TBL.RANK DESC;  
-GO  
-```  
-  
- Notez que vous pouvez aussi inverser l'ordre des termes dans CONTAINSTABLE pour obtenir le même résultat :  
-  
-```  
-CONTAINSTABLE(Production.Document, Document, '(bracket NEAR reflector)' ) AS KEY_TBL  
-```  
-  
- Vous pouvez utiliser le caractère tilde (~) à la place du mot clé NEAR utilisé dans la requête précédente et obtenir les mêmes résultats :  
-  
-```  
-CONTAINSTABLE(Production.Document, Document, '(reflector ~ bracket)' ) AS KEY_TBL  
-```  
-  
- Il est possible de spécifier plusieurs mots ou expressions dans les conditions de recherche. Par exemple, il est possible d'écrire :  
-  
-```  
-CONTAINSTABLE(Production.Document, Document, '(reflector ~ bracket ~ installation)' ) AS KEY_TBL  
-```  
-  
- Cela signifie que « reflector » doit figurer dans le même document que « bracket », et que « bracket » doit figurer dans le même document que « installation ».  
-  
- [Dans cette rubrique](#top)  
-  
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
+ [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [Exécuter une requête avec une recherche en texte intégral](../../relational-databases/search/query-with-full-text-search.md)   
- [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)  
-  
-  
+

@@ -1,27 +1,31 @@
 ---
-title: "Sp&#233;cifier qu&#39;un article de table de fusion est en t&#233;l&#233;chargement seul | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "merge replication [SQL Server replication], download-only articles"
-  - "articles [SQL Server replication], download-only"
-  - "articles disponibles uniquement par téléchargement"
+title: "Spécifier qu’un article de table de fusion est en téléchargement seul | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- merge replication [SQL Server replication], download-only articles
+- articles [SQL Server replication], download-only
+- download-only articles
 ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 83d7383aff0ccc5ab8f6716135d07c3642e6c9d6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sp&#233;cifier qu&#39;un article de table de fusion est en t&#233;l&#233;chargement seul
-  Cette rubrique explique comment définir un article de table de fusion en téléchargement seul dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Les articles en téléchargement uniquement sont conçus pour les applications dont les données ne sont pas mises à jour au niveau des Abonnés. Pour plus d’informations, consultez [optimiser les performances de réplication de fusion avec des Articles avec](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+# <a name="specify-that-a-merge-table-article-is-download-only"></a>Spécifier qu'un article de table de fusion est en téléchargement seul
+  Cette rubrique explique comment définir un article de table de fusion en téléchargement seul dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Les articles en téléchargement uniquement sont conçus pour les applications dont les données ne sont pas mises à jour au niveau des Abonnés. Pour plus d’informations, consultez [Optimiser les performances de la réplication de fusion avec les articles en téléchargement seul](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
  **Dans cette rubrique**  
   
@@ -29,7 +33,7 @@ caps.handback.revision: 40
   
      [Limitations et restrictions](#Restrictions)  
   
--   **Pour spécifier qu'un article de table de fusion est en téléchargement seul à l'aide de :**  
+-   **Pour spécifier qu'un article de table de fusion est en téléchargement seul à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -39,60 +43,60 @@ caps.handback.revision: 40
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
   
--   Si vous spécifiez qu'un article est en téléchargement seul après l'initialisation des abonnements, tous les abonnements client qui ont reçu l'aticle doivent être réinitialisés. Les abonnements serveur n'ont pas besoin d'être réinitialisés. Pour plus d’informations sur les effets des modifications de propriétés, consultez [Publication de modification et les propriétés de l’Article](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+-   Si vous spécifiez qu'un article est en téléchargement seul après l'initialisation des abonnements, tous les abonnements client qui ont reçu l'aticle doivent être réinitialisés. Les abonnements serveur n'ont pas besoin d'être réinitialisés. Pour plus d’informations sur les effets des modifications de propriétés, consultez [Changer des propriétés de publication et d’article](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- Spécifier qu’un article est en téléchargement uniquement sur le **Articles** page de l’Assistant Nouvelle Publication ou **propriétés** onglet de le **Propriétés de l’Article - \< Article>** boîte de dialogue. Cette boîte de dialogue est disponible dans l’Assistant Nouvelle Publication et **Propriétés de la Publication - \< Publication>** boîte de dialogue. Pour plus d’informations sur l’utilisation de l’Assistant et accéder à la boîte de dialogue, consultez [créer une Publication](../../../relational-databases/replication/publish/create-a-publication.md) et [Afficher et modifier les propriétés de la Publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Spécifiez qu’un article est en téléchargement seul dans la page **Articles** de l’Assistant Nouvelle publication ou sous l’onglet **Propriétés** de la boîte de dialogue **Propriétés de l’article - \<Article>**. Cette boîte de dialogue est disponible dans l’Assistant Nouvelle publication et dans la boîte de dialogue **Propriétés de la publication - \<Publication>**. Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](../../../relational-databases/replication/publish/create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-#### Pour spécifier qu'un article est en téléchargement seul dans la page Articles  
+#### <a name="to-specify-that-an-article-is-download-only-on-the-articles-page"></a>Pour spécifier qu'un article est en téléchargement seul dans la page Articles  
   
--   Sur le **Articles** page des nouvelles Assistant Publication, sélectionnez une table, puis activez la case à cocher **table sélectionnée est en téléchargement seul**.  
+-   Dans la page **Articles** de l'Assistant Nouvelle publication, sélectionnez une table, puis activez la case à cocher **La table sélectionnée est en téléchargement seul**.  
   
-#### Pour spécifier qu’un article est en téléchargement uniquement sur l’onglet de propriétés propriétés de l’Article - \< Article> boîte de dialogue  
+#### <a name="to-specify-that-an-article-is-download-only-on-the-properties-tab-of-the-article-properties---article-dialog-box"></a>Pour spécifier qu’un article est en téléchargement seul sous l’onglet Propriétés de la boîte de dialogue Propriétés de l’article - \<Article>  
   
-1.  Sur le **Articles** page de l’Assistant Nouvelle Publication ou le **Propriétés de la Publication - \< Publication>** boîte de dialogue, sélectionnez une table, puis cliquez sur **Propriétés de l’Article**.  
+1.  Dans la page **Articles** de l’Assistant Nouvelle publication ou la boîte de dialogue **Propriétés de la publication - \<Publication>**, sélectionnez une table, puis cliquez sur **Propriétés de l’article**.  
   
 2.  Cliquez sur **Définir les propriétés de l'article de la table en surbrillance** ou **Définir les propriétés de tous les articles de la table**.  
   
-3.  Dans la **objet de Destination** section de la **propriétés** onglet de le **Propriétés de l’Article - \< Article>** boîte de dialogue, spécifiez une des valeurs suivantes pour **la direction de synchronisation**:  
+3.  Dans la section **Objet de destination** de l’onglet **Propriétés** de la boîte de dialogue **Propriétés de l’article - \<Article>**, spécifiez l’une des valeurs suivantes pour **Direction de la synchronisation** :  
   
     -   **Téléchargement seul pour l'Abonné, interdire les modifications de l'Abonné**  
   
     -   **Téléchargement seul pour l'Abonné, autoriser les modifications de l'Abonné**  
   
-4.  Si vous êtes dans le **Propriétés de la Publication - \< Publication>** boîte de dialogue, cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
+4.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>**, cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour spécifier qu'une nouvelle table de fusion est en téléchargement uniquement  
+#### <a name="to-specify-that-a-new-merge-table-article-is-download-only"></a>Pour spécifier qu'une nouvelle table de fusion est en téléchargement uniquement  
   
-1.  Exécutez [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), la valeur **1** ou **2** pour le paramètre **@subscriber_upload_options**. Ces chiffres correspondent aux comportements suivants :  
+1.  Exécutez [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), en affectant la valeur **1** ou de **2** au paramètre **@subscriber_upload_options**. Ces chiffres correspondent aux comportements suivants :  
   
-    -   **0** -aucune restriction (valeur par défaut). Les modifications sur l'abonné sont téléchargées par le serveur de publication.  
+    -   **0** - aucune restriction (valeur par défaut). Les modifications sur l'abonné sont téléchargées par le serveur de publication.  
   
-    -   **1** : les modifications sont autorisées sur l’abonné, mais ils ne sont pas téléchargées sur le serveur de publication.  
+    -   **1** -  modifications autorisées au niveau de l'Abonné, mais elles ne sont pas téléchargées sur le serveur de publication.  
   
-    -   **2** -modifications ne sont pas autorisées sur l’abonné.  
+    -   **2** - modifications interdites au niveau de l'Abonné.  
   
         > [!NOTE]  
-        >  Si la table source d’un article est déjà publiée dans une autre publication, la valeur de **@subscriber_upload_options** doivent être identiques pour les deux articles.  
+        >  Si la table source d'un article est déjà publiée dans une autre publication, la valeur de **@subscriber_upload_options** doit être la même pour les deux articles.  
   
-#### Pour modifier un article de table fusion existant en article en téléchargement uniquement  
+#### <a name="to-modify-an-existing-merge-table-article-to-be-download-only"></a>Pour modifier un article de table fusion existant en article en téléchargement uniquement  
   
-1.  Pour déterminer si un article est en téléchargement uniquement, exécutez [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md). Notez la valeur de **upload_options** pour l’article dans le résultat défini.  
+1.  Pour déterminer si un article est en téléchargement uniquement, exécutez [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md). Notez la valeur de **upload_options** pour l'article dans le jeu de résultats.  
   
-2.  Si la valeur retournée dans l’étape 1 est **0**, exécutez [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), la valeur de **subscriber_upload_options** pour **@property**, une valeur de **1** pour **@force_invalidate_snapshot** et **@force_reinit_subscription**, et la valeur **1** ou **2** pour **@value**, qui correspond au comportement suivant :  
+2.  Si la valeur retournée à l'étape 1 est **0**, exécutez [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), en affectant la valeur **subscriber_upload_options** à **@property**, la valeur **1** à **@force_invalidate_snapshot** et **@force_reinit_subscription**, et la valeur **1** ou de **2** à **@value**, qui correspondent aux comportements suivants :  
   
-    -   **1** : les modifications sont autorisées sur l’abonné, mais ils ne sont pas téléchargées sur le serveur de publication.  
+    -   **1** -  modifications autorisées au niveau de l'Abonné, mais elles ne sont pas téléchargées sur le serveur de publication.  
   
-    -   **2** -modifications ne sont pas autorisées sur l’abonné.  
+    -   **2** - modifications interdites au niveau de l'Abonné.  
   
         > [!NOTE]  
         >  Si la table source d'un article est déjà publiée dans une autre publication, les deux articles doivent être en téléchargement uniquement ou ne pas l'être.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Optimiser les performances de la réplication de fusion avec les articles en téléchargement seul](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)   
- [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)   
- [Afficher et modifier les propriétés d'un article](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)  
+ [Définir un article](../../../relational-databases/replication/publish/define-an-article.md)   
+ [Afficher et modifier les propriétés d’un article](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)  
   
   

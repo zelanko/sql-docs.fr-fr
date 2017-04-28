@@ -1,110 +1,114 @@
 ---
-title: "Actions courantes n&#233;cessitant une sauvegarde mise &#224; jour | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "récupération [réplication SQL Server], actions nécessitant une sauvegarde"
-  - "restauration [réplication SQL Server], actions nécessitant une sauvegarde"
-  - "sauvegardes [réplication SQL Server], actions nécessitant une sauvegarde"
+title: "Actions courantes nécessitant une sauvegarde mise à jour | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recovery [SQL Server replication], actions requiring a backup
+- restoring [SQL Server replication], actions requiring a backup
+- backups [SQL Server replication], actions requiring a backup
 ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8784d006b175b3b6471464f401ad460080a273a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Actions courantes n&#233;cessitant une sauvegarde mise &#224; jour
-  Si vous effectuez des sauvegardes régulières des journaux, toutes les modifications liées à la réplication doivent être capturées dans les sauvegardes des journaux. Si vous n’effectuez des sauvegardes de journaux, effectuez une sauvegarde de la publication, la distribution, l’abonnement, **msdb**, et **master** bases de données après avoir apporté des modifications à votre schéma de réplication ou de la topologie.  
+# <a name="common-actions-requiring-an-updated-backup"></a>Actions courantes nécessitant une sauvegarde mise à jour
+  Si vous effectuez des sauvegardes régulières des journaux, toutes les modifications liées à la réplication doivent être capturées dans les sauvegardes des journaux. Si vous ne sauvegardez pas les journaux, effectuez une sauvegarde des bases de données de publication, de distribution, d'abonnement ainsi que des bases de données **msdb**et **master** après avoir apporté des modifications à votre schéma ou topologie de réplication.  
   
-## Base de données de publication  
- Sauvegardez la base de données de publication après avoir :  
+## <a name="publication-database"></a>Base de données de publication  
+ Sauvegardez la base de données de publication après avoir :  
   
--   créé de nouvelles de publications ;  
+-   créé de nouvelles de publications ;  
   
--   modifié toute propriété de publication, notamment le filtrage ;  
+-   modifié toute propriété de publication, notamment le filtrage ;  
   
--   ajouté des articles à une publication existante ;  
+-   ajouté des articles à une publication existante ;  
   
--   réalisé une réinitialisation des abonnements au niveau de la publication ;  
+-   réalisé une réinitialisation des abonnements au niveau de la publication ;  
   
--   effectué une modification de schéma sur une table publiée ;  
+-   effectué une modification de schéma sur une table publiée ;  
   
--   Exécution de l’exécution du script de la demande avec [sp_addscriptexec & #40 ; Transact-SQL & #41 ;](../../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md).  
+-   Exécution de script à la demande avec [sp_addscriptexec &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md).  
   
--   modifié toute propriété d'article ;  
+-   modifié toute propriété d'article ;  
   
--   supprimé une publication ;  
+-   supprimé une publication ;  
   
--   supprimé un article ;  
+-   supprimé un article ;  
   
 -   désactivé la réplication.  
   
-## Base de données de distribution  
- Sauvegardez la base de données de distribution après avoir :  
+## <a name="distribution-database"></a>Base de données de distribution  
+ Sauvegardez la base de données de distribution après avoir :  
   
--   créé ou modifié des profils d'Agent de réplication ;  
+-   créé ou modifié des profils d'Agent de réplication ;  
   
--   modifié les paramètres de profils d'Agent de réplication ;  
+-   modifié les paramètres de profils d'Agent de réplication ;  
   
 -   modifié les propriétés d'Agent de réplication (notamment les planifications) d'abonnements envoyés.  
   
 -   Une nouvelle plage d'identité est assignée par la fonctionnalité de gestion des plages d'identité.  
   
-## Base de données d'abonnement  
- Sauvegardez la base de données d'abonnement après avoir :  
+## <a name="subscription-database"></a>Base de données d'abonnement  
+ Sauvegardez la base de données d'abonnement après avoir :  
   
--   modifié toute propriété d'abonnement ;  
+-   modifié toute propriété d'abonnement ;  
   
--   modifié la priorité d'un abonnement de fusion sur le serveur de publication ;  
+-   modifié la priorité d'un abonnement de fusion sur le serveur de publication ;  
   
--   supprimé un abonnement ;  
+-   supprimé un abonnement ;  
   
 -   désactivé la réplication.  
   
-## Base de données msdb  
- Sauvegarde le **msdb** base de données système sur le nœud approprié après :  
+## <a name="msdb-database"></a>Base de données msdb  
+ Sauvegardez la base de données système **msdb** sur le nœud approprié après avoir :  
   
--   activé ou désactivé la réplication ;  
+-   activé ou désactivé la réplication ;  
   
--   ajouté ou supprimé une base de données de distribution (sur le serveur de distribution) ;  
+-   ajouté ou supprimé une base de données de distribution (sur le serveur de distribution) ;  
   
--   activé ou désactivé une base de données destinée à être publiée (sur le serveur de publication) ;  
+-   activé ou désactivé une base de données destinée à être publiée (sur le serveur de publication) ;  
   
--   créé ou modifié des profils d'Agent de réplication (sur le serveur de distribution) ;  
+-   créé ou modifié des profils d'Agent de réplication (sur le serveur de distribution) ;  
   
--   modifié des paramètres de profils d'Agent de réplication (sur le serveur de distribution) ;  
+-   modifié des paramètres de profils d'Agent de réplication (sur le serveur de distribution) ;  
   
--   modifié les propriétés d'Agent de réplication (notamment les planifications) d'un abonnement envoyé (sur le serveur de distribution) ;  
+-   modifié les propriétés d'Agent de réplication (notamment les planifications) d'un abonnement envoyé (sur le serveur de distribution) ;  
   
--   modifié les propriétés d'Agent de réplication (notamment les planifications) d'un abonnement extrait (sur l'Abonné) ;  
+-   modifié les propriétés d'Agent de réplication (notamment les planifications) d'un abonnement extrait (sur l'Abonné) ;  
   
--   créé un package DTS associé à une publication transactionnelle qui utilise des abonnements transformables (sur le serveur de distribution et sur le serveur de publication) ;  
+-   créé un package DTS associé à une publication transactionnelle qui utilise des abonnements transformables (sur le serveur de distribution et sur le serveur de publication) ;  
   
--   ajouté ou supprimé un abonnement transformable (sur le serveur de distribution et sur le serveur de publication) ;  
+-   ajouté ou supprimé un abonnement transformable (sur le serveur de distribution et sur le serveur de publication) ;  
   
-## Base de données master  
- Sauvegarde le **master** base de données système sur le nœud approprié après :  
+## <a name="master-database"></a>Base de données master  
+ Sauvegardez la base de données système **master** sur le nœud approprié après avoir :  
   
--   activé ou désactivé la réplication ;  
+-   activé ou désactivé la réplication ;  
   
--   ajouté ou supprimé une base de données de distribution (sur le serveur de distribution) ;  
+-   ajouté ou supprimé une base de données de distribution (sur le serveur de distribution) ;  
   
--   activé ou désactivé une base de données destinée à être publiée (sur le serveur de publication) ;  
+-   activé ou désactivé une base de données destinée à être publiée (sur le serveur de publication) ;  
   
--   ajouté la première publication, ou supprimé la dernière, dans une base de données (sur le serveur de publication) ;  
+-   ajouté la première publication, ou supprimé la dernière, dans une base de données (sur le serveur de publication) ;  
   
--   ajouté le premier abonnement, ou supprimé le dernier, dans une base de données (sur l'Abonné) ;  
+-   ajouté le premier abonnement, ou supprimé le dernier, dans une base de données (sur l'Abonné) ;  
   
 -   activé ou désactivé un serveur de publication sur un serveur de publication de distribution (sur le serveur de publication et le serveur de distribution).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Sauvegarde et restauration des bases de données SQL Server](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Sauvegarder et restaurer des bases de données répliquées](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
   

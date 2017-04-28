@@ -1,34 +1,38 @@
 ---
-title: "Utiliser le fournisseur PowerShell pour les &#233;v&#233;nements &#233;tendus | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PowerShell [SQL Server], xevent"
-  - "événements étendus [SQL Server], PowerShell"
-  - "PowerShell [SQL Server], événements étendus"
+title: "Utiliser le fournisseur PowerShell pour les événements étendus | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PowerShell [SQL Server], xevent
+- extended events [SQL Server], PowerShell
+- PowerShell [SQL Server], extended events
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a89501cc32ec51bd081230ea897058d3956c7a2b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utiliser le fournisseur PowerShell pour les &#233;v&#233;nements &#233;tendus
+# <a name="use-the-powershell-provider-for-extended-events"></a>Utiliser le fournisseur PowerShell pour les événements étendus
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Vous pouvez gérer les Événements étendus de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du fournisseur PowerShell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le sous-dossier XEvent est disponible sous le lecteur SQLSERVER. Vous pouvez accéder à ce dossier selon l'une des méthodes suivantes :  
   
--   À l’invite de commandes, saisissez **sqlps**, puis appuyez sur ENTRÉE. Saisissez **cd xevent**, puis appuyez sur ENTRÉE. De là, vous pouvez utiliser les commandes **cd** et **dir** (ou les applets de commande **Set-Location** et **Get-Childitem**) pour accéder au nom du serveur et de l’instance.  
+-   À l’invite de commandes, saisissez **sqlps**, puis appuyez sur ENTRÉE. Saisissez **cd xevent**, puis appuyez sur ENTRÉE. De là, vous pouvez utiliser les commandes **cd** et **dir** (ou les applets de commande **Set-Location** et **Get-Childitem** ) pour accéder au nom du serveur et de l’instance.  
   
--   Dans l’Explorateur d’objets, développez le nom de l’instance, développez **Gestion**, cliquez avec le bouton droit sur **Événements étendus**, puis cliquez sur **Démarrer PowerShell**. Cela démarre PowerShell selon le chemin d'accès suivant :  
+-   Dans l’Explorateur d’objets, développez le nom de l’instance, développez **Gestion**, cliquez avec le bouton droit sur **Événements étendus**, puis cliquez sur **Démarrer PowerShell**. Cela démarre PowerShell selon le chemin d'accès suivant :  
   
      PS SQLSERVER:\XEvent\\*nom_serveur*\\*nom_instance*>  
   
@@ -41,7 +45,7 @@ caps.handback.revision: 14
   
  Le fournisseur PowerShell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un outil puissant que vous pouvez utiliser pour créer, modifier et gérer des sessions Événements étendus. La section suivante fournit quelques exemples simples d'utilisation de scripts PowerShell avec des Événements étendus.  
   
-## Exemples  
+## <a name="examples"></a>Exemples  
  Dans les exemples ci-après, notez les éléments suivants :  
   
 -   Les scripts doivent être exécutés à partir de l’invite PS SQLSERVER:\\> (disponible en tapant **sqlps** en réponse à une invite de commandes).  
@@ -50,9 +54,9 @@ caps.handback.revision: 14
   
 -   Les scripts doivent être enregistrés avec une extension .ps1.  
   
--   La stratégie d'exécution de PowerShell doit autoriser l'exécution du script. Pour définir la stratégie d’exécution, utilisez l’applet de commande **Set-Executionpolicy**. (Pour plus d’informations, tapez **get-help set-executionpolicy -detailed**, puis appuyez sur Entrée).  
+-   La stratégie d'exécution de PowerShell doit autoriser l'exécution du script. Pour définir la stratégie d’exécution, utilisez l’applet de commande **Set-Executionpolicy** . (Pour plus d’informations, tapez **get-help set-executionpolicy -detailed**, puis appuyez sur Entrée).  
   
- Le script suivant crée une nouvelle session nommée « TestSession ».  
+ Le script suivant crée une nouvelle session nommée « TestSession ».  
   
 ```  
 #Script for creating a session.  
@@ -68,7 +72,7 @@ $event.AddAction("package0.callstack")
 $session.Create()  
 ```  
   
- Le script suivant ajoute la cible de mémoire tampon en anneau à la session créée dans l'exemple précédent. (Cet exemple montre comment utiliser la méthode **Alter**. Sachez que vous pouvez ajouter la cible au moment même où vous créez la session).  
+ Le script suivant ajoute la cible de mémoire tampon en anneau à la session créée dans l'exemple précédent. (Cet exemple montre comment utiliser la méthode **Alter** . Sachez que vous pouvez ajouter la cible au moment même où vous créez la session).  
   
 ```  
 #Script to alter a session.  
@@ -108,10 +112,10 @@ $event.SetPredicate($predicate)
 $session.Create()  
 ```  
   
-## Sécurité  
+## <a name="security"></a>Sécurité  
  Pour créer, modifier ou supprimer une session Événements étendus, vous devez disposer de l'autorisation ALTER ANY EVENT SESSION.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
  [Utiliser la session system_health](../../relational-databases/extended-events/use-the-system-health-session.md)   
  [Outils associés aux événements étendus](../../relational-databases/extended-events/extended-events-tools.md)  

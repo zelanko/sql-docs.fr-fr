@@ -1,24 +1,28 @@
 ---
-title: "Acc&#233;der aux FileTables avec des API d’entr&#233;e-sortie de fichier | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], accès aux fichiers avec des API File"
+title: "Accéder aux FileTables avec des API d’entrée-sortie de fichier | Microsoft Docs"
+ms.custom: 
+ms.date: 08/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fee941d70d60091034abfd77998616508fedd611
+ms.lasthandoff: 04/11/2017
+
 ---
-# Acc&#233;der aux FileTables avec des API d’entr&#233;e-sortie de fichier
+# <a name="access-filetables-with-file-input-output-apis"></a>Accéder aux FileTables avec des API d’entrée-sortie de fichier
   Décrit le fonctionnement des E/S du système de fichiers sur un FileTable.  
   
 ##  <a name="accessing"></a> Commencer à utiliser les API d'E/S de fichier avec des FileTables  
@@ -35,7 +39,7 @@ caps.handback.revision: 16
   
 -   La création d'un fichier ou répertoire correspond à la création d'une ligne dans le FileTable sous-jacent.  
   
--   Pour les fichiers, les données de flux sont stockées dans la colonne **file_stream**, alors que pour les répertoires, cette colonne est Null.  
+-   Pour les fichiers, les données de flux sont stockées dans la colonne **file_stream** , alors que pour les répertoires, cette colonne est Null.  
   
 -   Pour les fichiers, la colonne **is_directory** contient la valeur **false**. Pour les répertoires, cette colonne contient la valeur **true**.  
   
@@ -60,13 +64,13 @@ caps.handback.revision: 16
 -   La suppression d'un fichier ou d'un répertoire entraîne la suppression de la ligne correspondante dans le FileTable. Cela équivaut à supprimer la ligne via une opération [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ##  <a name="supported"></a> Opérations du système de fichiers prises en charge  
- Les FileTables prennent en charge les API de système de fichiers associées aux opérations de système de fichiers suivantes :  
+ Les FileTables prennent en charge les API de système de fichiers associées aux opérations de système de fichiers suivantes :  
   
 -   Gestion des répertoires  
   
 -   Gestion des fichiers  
   
- Les FileTables ne prennent pas en charge les opérations suivantes :  
+ Les FileTables ne prennent pas en charge les opérations suivantes :  
   
 -   Gestion des disques  
   
@@ -83,7 +87,7 @@ caps.handback.revision: 16
  Un descripteur accessible en écriture obtenu pour des données FILESTREAM dans un FileTable à l’aide de la fonction [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) peut être utilisé pour effectuer des mises à jour sur place et partielles du contenu FILESTREAM. Ce comportement contraste avec l’accès FILESTREAM transactionnel effectué via un descripteur obtenu en appelant **OpenSQLFILESTREAM()** et en passant un contexte de transaction explicite.  
   
 ###  <a name="trans"></a> Sémantique transactionnelle  
- Lorsque vous accédez aux fichiers d'un FileTable à l'aide des API d'E/S de fichier, ces opérations ne sont pas associées à des transactions utilisateur. Elles présentent les caractéristiques supplémentaires suivantes :  
+ Lorsque vous accédez aux fichiers d'un FileTable à l'aide des API d'E/S de fichier, ces opérations ne sont pas associées à des transactions utilisateur. Elles présentent les caractéristiques supplémentaires suivantes :  
   
 -   Dans la mesure où l'accès non transactionnel aux données FILESTREAM dans un FileTable n'est pas associé à une transaction, il n'a pas de sémantique d'isolation spécifique. Toutefois [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut utiliser des transactions internes pour appliquer une sémantique de verrouillage ou de concurrence aux données de FileTable. Toutes les transactions internes de ce type sont effectuées avec une isolation de lecture validée (READ COMMITTED).  
   
@@ -103,7 +107,7 @@ caps.handback.revision: 16
   
 |Fonctionnalité|Pris en charge|Commentaires|  
 |----------------|---------------|--------------|  
-|**Oplocks**|Oui|La prise en charge du niveau 2, du niveau 1, des oplocks Lot et Filtre est assurée.|  
+|**Oplocks**|Oui|La prise en charge du niveau 2, du niveau 1, des oplocks Lot et Filtre est assurée.|  
 |**Attributs étendus**|Non||  
 |**Points d'analyse**|Non||  
 |**ACL persistants**|Non||  
@@ -124,10 +128,11 @@ caps.handback.revision: 16
 |**Sécurité**|Non|La sécurité au niveau du partage Windows et la sécurité au niveau table/colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont appliquées.|  
 |**Journal USN**|Non|Les modifications de métadonnées apportées aux fichiers et répertoires d'un FileTable sont des opérations DML sur une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par conséquent, elles sont journalisées dans le fichier journal de base de données correspondant. En revanche, elles ne sont pas consignées dans le journal USN NTFS (à l'exception des modifications de taille).<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permettent d'obtenir des informations similaires.|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Charger des fichiers dans FileTables](../../relational-databases/blob/load-files-into-filetables.md)   
- [Travailler avec des répertoires et des chemins d'accès dans FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
+ [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [Accéder aux FileTables avec Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [DDL, fonctions, procédures stockées et vues FileTable](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
+

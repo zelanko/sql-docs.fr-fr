@@ -1,32 +1,36 @@
 ---
-title: "R&#233;cup&#233;rer et interroger des donn&#233;es XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Données XML [SQL Server], récupération"
-  - "extraction d'instance XML"
+title: "Récupérer et interroger des données XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XML data [SQL Server], retrieving
+- XML instance retrieval
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: cff6370e1e57b4f1163100f029bd56d7bf63e552
+ms.lasthandoff: 04/11/2017
+
 ---
-# R&#233;cup&#233;rer et interroger des donn&#233;es XML
-  Cette rubrique décrit les options de requête que vous devez spécifier pour interroger les données XML. Elle décrit aussi les parties des instances XML qui ne sont pas conservées lorsqu'elles sont stockées dans des bases de données.  
+# <a name="retrieve-and-query-xml-data"></a>Récupérer et interroger des données XML
+  Cette rubrique décrit les options de requête que vous devez spécifier pour interroger les données XML. Elle décrit aussi les parties des instances XML qui ne sont pas conservées lorsqu'elles sont stockées dans des bases de données.  
   
 ##  <a name="features"></a> Fonctionnalités d'une instance XML qui ne sont pas conservées  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve le contenu de l’instance XML, mais ne conserve pas les aspects de l’instance XML qui ne sont pas considérés significatifs dans le modèle de données XML. Cela signifie qu'une instance XML extraite peut ne pas être identique à l'instance stockée sur le serveur, mais contiendra les mêmes informations.  
   
-### Déclaration XML  
- La déclaration XML d'une instance n'est pas conservée lors du stockage de l'instance dans la base de données. Exemple :  
+### <a name="xml-declaration"></a>Déclaration XML  
+ La déclaration XML d'une instance n'est pas conservée lors du stockage de l'instance dans la base de données. Exemple :  
   
 ```  
 CREATE TABLE T1 (Col1 int primary key, Col2 xml)  
@@ -39,16 +43,14 @@ FROM T1
   
  Le résultat est `<doc/>`.  
   
- La déclaration XML, telle que `<?xml version='1.0'?>`, n’est pas conservée en cas de stockage des données XML dans une instance de type de données **xml**. C'est la procédure normale. La déclaration XML () et ses attributs (version/encoding/stand-alone) sont perdus une fois les données converties au type **xml**. La déclaration XML est traitée comme une directive de l'analyseur XML. Les données XML sont stockées en interne au format ucs-2. Toutes les autres instructions de traitement dans l'instance XML sont conservées.  
+ La déclaration XML, telle que `<?xml version='1.0'?>`, n’est pas conservée en cas de stockage des données XML dans une instance de type de données **xml** . C'est la procédure normale. La déclaration XML () et ses attributs (version/encoding/stand-alone) sont perdus une fois les données converties au type **xml**. La déclaration XML est traitée comme une directive de l'analyseur XML. Les données XML sont stockées en interne au format ucs-2. Toutes les autres instructions de traitement dans l'instance XML sont conservées.  
   
- [Dans cette rubrique](#top)  
   
-### Ordre des attributs  
- L'ordre des attributs d'une instance XML n'est pas conservé. Quand vous interrogez l’instance XML stockée dans la colonne de type **xml**, l’ordre des attributs du code XML résultant peut différer de l’ordre utilisé dans l’instance XML d’origine.  
+### <a name="order-of-attributes"></a>Ordre des attributs  
+ L'ordre des attributs d'une instance XML n'est pas conservé. Quand vous interrogez l’instance XML stockée dans la colonne de type **xml** , l’ordre des attributs du code XML résultant peut différer de l’ordre utilisé dans l’instance XML d’origine.  
   
- [Dans cette rubrique](#top)  
   
-### Guillemets autour des valeurs d'attributs  
+### <a name="quotation-marks-around-attribute-values"></a>Guillemets autour des valeurs d'attributs  
  Les guillemets et les guillemets simples qui encadrent les valeurs des attributs ne sont pas conservés. Les valeurs des attributs sont stockées sous forme de paire nom et valeur. Les guillemets ne sont pas stockés. En cas d'exécution d'une requête XQuery sur une instance XML, le code XML résultant est sérialisé, et les valeurs des attributs figurent entre guillemets.  
   
 ```  
@@ -66,10 +68,9 @@ GO
   
  Les deux requêtes retournent = `<root a="1" />`.  
   
- [Dans cette rubrique](#top)  
   
-### Préfixes d'espace de noms  
- Les préfixes d'espace de noms ne sont pas conservés. Quand vous définissez une requête XQuery sur une colonne de type **xml**, le code XML sérialisé qui en découle peut retourner des préfixes d’espace de noms différents.  
+### <a name="namespace-prefixes"></a>Préfixes d'espace de noms  
+ Les préfixes d'espace de noms ne sont pas conservés. Quand vous définissez une requête XQuery sur une colonne de type **xml** , le code XML sérialisé qui en découle peut retourner des préfixes d’espace de noms différents.  
   
 ```  
 DECLARE @x xml  
@@ -81,16 +82,15 @@ SELECT @x.query('/*')
 GO  
 ```  
   
- Le préfixe d'espace de noms peut avoir une valeur différente dans le résultat. Par exemple :  
+ Le préfixe d'espace de noms peut avoir une valeur différente dans le résultat. Exemple :  
   
 ```  
 <p1:root xmlns:p1="abc"><p1:SomeElement/></p1:root>  
 ```  
   
- [Dans cette rubrique](#top)  
   
 ##  <a name="query"></a> Définition des options requises de requête  
- Quand vous interrogez des variables ou colonnes de type **xml** à l’aide de méthodes de type de données **xml**, vous devez définir les options suivantes, comme indiqué.  
+ Quand vous interrogez des variables ou colonnes de type **xml** à l’aide de méthodes de type de données **xml** , vous devez définir les options suivantes, comme indiqué.  
   
 |Options SET|Valeurs requises|  
 |-----------------|---------------------|  
@@ -104,9 +104,8 @@ GO
   
  Si les options ne sont pas définies comme indiqué, les requêtes et les modifications portant sur les méthodes de type de données **xml** sont vouées à l’échec.  
   
- [Dans cette rubrique](#top)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md)  
   
   

@@ -1,28 +1,32 @@
 ---
-title: "Interrogation des donn&#233;es dans une table temporelle avec syst&#232;me par version | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Interrogation des données dans une table temporelle avec système par version | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 caps.latest.revision: 7
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9cc4156eccf9dd642e53ec2aeea967d9dcf016af
+ms.lasthandoff: 04/11/2017
+
 ---
-# Interrogation des donn&#233;es dans une table temporelle avec syst&#232;me par version
+# <a name="querying-data-in-a-system-versioned-temporal-table"></a>Interrogation des données dans une table temporelle avec système par version
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Lorsque vous souhaitez obtenir l’état le plus récent (réel) des données d’une table temporelle, l’interrogation est exactement la même que pour une table non temporelle. Si les colonnes PERIOD ne sont pas masquées, leurs valeurs apparaissent dans une requête SELECT \*. Si vous avez spécifié les colonnes **PERIOD** comme étant masquées, leurs valeurs n’apparaissent pas dans une requête SELECT \*. Lorsque les colonnes **PERIOD** sont masquées, référencez spécifiquement les colonnes **PERIOD** dans la clause SELECT pour retourner les valeurs de ces colonnes.  
+  Lorsque vous souhaitez obtenir l’état le plus récent (réel) des données d’une table temporelle, l’interrogation est exactement la même que pour une table non temporelle. Si les colonnes PERIOD ne sont pas masquées, leurs valeurs apparaissent dans une requête SELECT \* . Si vous avez spécifié les colonnes **PERIOD** comme étant masquées, leurs valeurs n’apparaissent pas dans une requête SELECT \* . Lorsque les colonnes **PERIOD** sont masquées, référencez spécifiquement les colonnes **PERIOD** dans la clause SELECT pour retourner les valeurs de ces colonnes.  
   
- Pour exécuter tout type d’analyse temporelle, utilisez la nouvelle clause **FOR SYSTEM_TIME** avec quatre sous-clauses temporelles spécifiques afin d’interroger les données des tables actuelles et d’historique. Pour plus d’informations sur ces clauses, consultez [Tables temporelles](../../relational-databases/tables/temporal-tables.md) et [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
+ Pour exécuter tout type d’analyse temporelle, utilisez la nouvelle clause  **FOR SYSTEM_TIME** avec quatre sous-clauses temporelles spécifiques afin d’interroger les données des tables actuelles et d’historique. Pour plus d’informations sur ces clauses, consultez [Tables temporelles](../../relational-databases/tables/temporal-tables.md) et [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
 -   AS OF <date_time>  
   
@@ -34,11 +38,11 @@ caps.handback.revision: 7
   
 -   ALL  
   
- La clause **FOR SYSTEM_TIME** peut être spécifiée de façon indépendante pour chaque table dans une requête. Elle peut être utilisée à l'intérieur d’expressions de table communes, de fonctions table incluses et de procédures stockées.  
+ La clause**FOR SYSTEM_TIME** peut être spécifiée de façon indépendante pour chaque table dans une requête. Elle peut être utilisée à l'intérieur d’expressions de table communes, de fonctions table incluses et de procédures stockées.  
   
-## Requête d’un point précis dans le temps à l'aide de la sous-clause AS OF  
- Utilisez la sous-clause **AS OF** quand vous devez reconstruire l’état des données tel qu’il était à un point précis dans le passé.  Vous pouvez reconstruire les données avec la précision de type datetime2 qui avait été spécifiée dans les définitions de colonne **PERIOD** .    
-La sous-clause **AS OF** peut être utilisée avec des constantes littérales ou des variables, ce qui vous permet de spécifier de manière dynamique la condition de temps. Les valeurs fournies sont interprétées en heure UTC.  
+## <a name="query-for-a-specific-time-using-the-as-of-sub-clause"></a>Requête d’un point précis dans le temps à l'aide de la sous-clause AS OF  
+ Utilisez la sous-clause**AS OF** quand vous devez reconstruire l’état des données tel qu’il était à un point précis dans le passé.  Vous pouvez reconstruire les données avec la précision de type datetime2 qui avait été spécifiée dans les définitions de colonne **PERIOD** .    
+La sous-clause**AS OF** peut être utilisée avec des constantes littérales ou des variables, ce qui vous permet de spécifier de manière dynamique la condition de temps. Les valeurs fournies sont interprétées en heure UTC.  
   
  Ce premier exemple retourne l'état de la table dbo.Department à partir (AS OF) d’une date spécifique dans le passé.  
   
@@ -65,7 +69,7 @@ JOIN [Department] AS D ON  D_1_Ago.[DeptID] = [D].[DeptID]
 AND D_1_Ago.[DeptID] BETWEEN 1 and 5 ;  
 ```  
   
-### Utilisation de vues avec la sous-clause AS OF dans des requêtes temporelles  
+### <a name="using-views-with-as-of-sub-clause-in-temporal-queries"></a>Utilisation de vues avec la sous-clause AS OF dans des requêtes temporelles  
  Les vues sont très utiles dans les scénarios nécessitant une analyse complexe à un point précis dans le temps.   
 Un exemple courant est la création aujourd’hui d’un rapport d'entreprise s’appuyant sur les valeurs du mois précédent.   
 En règle générale, les clients utilisent un modèle de base de données normalisé qui implique plusieurs tables avec des relations de clés étrangères. Connaître l’état des données de ce modèle normalisé à un point précis dans le passé peut se révéler très difficile car toutes les tables changent indépendamment, à leur propre rythme.   
@@ -93,12 +97,12 @@ FOR SYSTEM_TIME AS OF '2015-09-01 T10:00:00.7230011' ;
   
 ```  
   
-## Rechercher des modifications sur des lignes spécifiques dans le temps  
+## <a name="query-for-changes-to-specific-rows-over-time"></a>Rechercher des modifications sur des lignes spécifiques dans le temps  
  Les sous-clauses temporelles **FROM...TO**, **BETWEEN...AND** et **CONTAINED IN** sont utiles quand vous souhaitez effectuer un audit des données, autrement dit lorsque vous devez obtenir l’historique de toutes les modifications appliquées à une ligne spécifique dans la table actuelle.   
 Les deux premières sous-clauses renvoient les versions de ligne qui se chevauchent sur une période donnée (c'est-à-dire celles qui ont démarré avant une certaine période et qui se sont terminées après celle-ci), tandis que CONTAINED IN retourne uniquement celles qui existaient dans des plages précises de la période.  
   
 > [!IMPORTANT]  
->  Si vous recherchez uniquement les versions de ligne non actuelles, nous vous recommandons d’utiliser la clause **CONTAINED IN**, car elle s’applique uniquement à la table d’historique et génère les meilleurs résultats. Utilisez **ALL** lorsque vous devez interroger des données historiques et actuelles sans aucune restriction.  
+>  Si vous recherchez uniquement les versions de ligne non actuelles, nous vous recommandons d’utiliser la clause **CONTAINED IN** , car elle s’applique uniquement à la table d’historique et génère les meilleurs résultats. Utilisez **ALL** lorsque vous devez interroger des données historiques et actuelles sans aucune restriction.  
   
 ```  
 /* Query using BETWEEN...AND sub-clause*/  
@@ -132,10 +136,10 @@ ORDER BY [DeptID], [SysStartTime] Desc
   
 ```  
   
-## Cet article vous a-t-il été utile ? Nous sommes à votre écoute  
- Quels renseignements souhaitez-vous obtenir ? Avez-vous trouvé ce que vous cherchiez ? Nous tenons compte de vos commentaires pour améliorer le contenu de nos articles. Veuillez envoyer vos commentaires à l’adresse suivante : [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Queryinging%20a%20System-Versioned%20Temporal%20Table%20page).  
+## <a name="did-this-article-help-you-were-listening"></a>Cet article vous a-t-il été utile ? Nous sommes à votre écoute  
+ Quels renseignements souhaitez-vous obtenir ? Avez-vous trouvé ce que vous cherchiez ? Nous tenons compte de vos commentaires pour améliorer le contenu de nos articles. Veuillez envoyer vos commentaires à l’adresse suivante : [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Queryinging%20a%20System-Versioned%20Temporal%20Table%20page)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tables temporelles](../../relational-databases/tables/temporal-tables.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [Création d’une table temporelle avec contrôle de version du système](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)   
@@ -144,3 +148,4 @@ ORDER BY [DeptID], [SysStartTime] Desc
  [Arrêt du contrôle de version par le système sur une table temporelle à version contrôlée par le système](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
+

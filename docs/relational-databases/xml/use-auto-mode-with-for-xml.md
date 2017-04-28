@@ -1,27 +1,31 @@
 ---
-title: "UTiliser le mode AUTO avec FOR XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Clause FOR XML, mode AUTO"
-  - "ELEMENTS, option"
-  - "FOR XML AUTO, mode"
-  - "AUTO FOR XML, mode"
+title: Utiliser le mode AUTO avec FOR XML | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, AUTO mode
+- ELEMENTS option
+- FOR XML AUTO mode
+- AUTO FOR XML mode
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1dcb415f177d7a7163520c1b4295cadbca5f4cc9
+ms.lasthandoff: 04/11/2017
+
 ---
-# UTiliser le mode AUTO avec FOR XML
+# <a name="use-auto-mode-with-for-xml"></a>Utiliser le mode AUTO avec FOR XML
   Comme décrit dans [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md), le mode AUTO retourne des résultats de requête en tant qu’éléments XML imbriqués. Cela ne permet pas de contrôler de façon précise la forme du document XML généré à partir du résultat d'une requête. Les requêtes au mode AUTO sont utiles pour générer des hiérarchies simples. Toutefois, [Utiliser le mode EXPLICIT avec FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md) et [Utiliser le mode PATH avec FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md) fournissent davantage de contrôle et de souplesse pour déterminer la forme du XML à partir d’un résultat de requête.  
   
  Chaque table de la clause FROM, dont au moins une colonne est répertoriée dans la clause SELECT, est représentée sous la forme d'un élément XML. Les colonnes répertoriées dans la clause SELECT sont mappées avec des attributs ou des sous-éléments si l'option ELEMENTS facultative est spécifiée dans la clause FOR XML.  
@@ -30,7 +34,7 @@ caps.handback.revision: 31
   
  Si un nom de colonne répertorié dans la clause SELECT provient d'une table déjà identifiée par une colonne précédemment spécifiée dans cette clause, la colonne est ajoutée en tant qu'attribut de l'élément déjà créé et aucun nouveau niveau de hiérarchie n'est ouvert. Si l'option ELEMENTS est spécifiée, la colonne est ajoutée en tant qu'attribut.  
   
- Exécutez par exemple cette requête :  
+ Exécutez par exemple cette requête :  
   
 ```  
 SELECT Cust.CustomerID,   
@@ -44,7 +48,7 @@ ORDER BY Cust.CustomerID
 FOR XML AUTO  
 ```  
   
- Voici le résultat partiel :  
+ Voici le résultat partiel :  
   
 ```  
 <Cust CustomerID="1" CustomerType="S">  
@@ -56,7 +60,7 @@ FOR XML AUTO
 ...  
 ```  
   
- Notez les points suivants relatifs à la clause SELECT :  
+ Notez les points suivants relatifs à la clause SELECT :  
   
 -   L'identificateur CustomerID référence la table Cust. Par conséquent, un élément <`Cust`> est créé et un attribut CustomerID y est ajouté.  
   
@@ -104,7 +108,7 @@ ORDER BY Cust.CustomerID
 FOR XML AUTO, ELEMENTS  
 ```  
   
- Voici le résultat partiel :  
+ Voici le résultat partiel :  
   
 ```  
 <Cust>  
@@ -120,24 +124,24 @@ FOR XML AUTO, ELEMENTS
 ...  
 ```  
   
- Dans cette requête, les valeurs CustomerID sont comparées d’une ligne à l’autre lors de la création des éléments \<Cust> car CustomerID est la clé primaire de la table. Si CustomerID n'est pas identifié en tant que clé primaire de la table, toutes les valeurs de colonnes (CustomerID et CustomerType dans cette requête) sont comparées d'une ligne à l'autre. Si les valeurs diffèrent, un nouvel élément \<Cust> est ajouté au document XML.  
+ Dans cette requête, les valeurs CustomerID sont comparées d’une ligne à l’autre lors de la création des éléments \<Cust>, car CustomerID est la clé primaire de la table. Si CustomerID n'est pas identifié en tant que clé primaire de la table, toutes les valeurs de colonnes (CustomerID et CustomerType dans cette requête) sont comparées d'une ligne à l'autre. Si les valeurs diffèrent, un nouvel élément \<Cust> est ajouté au document XML.  
   
- Lors de la comparaison de ces valeurs de colonnes, si l’une des colonnes à comparer est de type **text**, **ntext**, **image** ou **xml**, la clause FOR XML considère que les valeurs sont différentes et non comparées, même si elles peuvent être identiques. Cela est dû au fait que la comparaison des objets volumineux n'est pas prise en charge. Des éléments sont ajoutés au résultat pour chaque ligne sélectionnée. Les colonnes de type **(n)varchar(max)** et **varbinary(max)** sont comparées.  
+ Lors de la comparaison de ces valeurs de colonnes, si l’une des colonnes à comparer est de type **text**, **ntext**, **image**ou **xml**, la clause FOR XML considère que les valeurs sont différentes et non comparées, même si elles peuvent être identiques. Cela est dû au fait que la comparaison des objets volumineux n'est pas prise en charge. Des éléments sont ajoutés au résultat pour chaque ligne sélectionnée. Les colonnes de type **(n)varchar(max)** et **varbinary(max)** sont comparées.  
   
  À l'image d'une colonne d'agrégation ou calculée, lorsqu'une colonne figurant dans la clause SELECT ne peut être associée à aucune des tables identifiées dans la clause FROM, elle est ajoutée au document XML dans le niveau d'imbrication le plus profond dans la liste. Si une telle colonne apparaît comme première colonne dans la clause SELECT, elle est ajoutée à l'élément supérieur.  
   
- Si le caractère générique astérisque « * » est spécifié dans la clause SELECT, l'imbrication est déterminée de la même façon que celle précédemment décrite, en fonction de l'ordre dans lequel les lignes sont renvoyées par le moteur de requête.  
+ Si le caractère générique astérisque « * » est spécifié dans la clause SELECT, l'imbrication est déterminée de la même façon que celle précédemment décrite, en fonction de l'ordre dans lequel les lignes sont renvoyées par le moteur de requête.  
   
-## Dans cette section  
- Les rubriques suivantes fournissent des informations supplémentaires sur le mode AUTO :  
+## <a name="in-this-section"></a>Dans cette section  
+ Les rubriques suivantes fournissent des informations supplémentaires sur le mode AUTO :  
   
 -   [Utiliser l'option BINARY BASE64](../../relational-databases/xml/use-the-binary-base64-option.md)  
   
 -   [Heuristique du mode AUTO permettant de définir la forme des données XML renvoyées](../../relational-databases/xml/auto-mode-heuristics-in-shaping-returned-xml.md)  
   
--   [Exemples : utilisation du mode AUTO](../../relational-databases/xml/examples-using-auto-mode.md)  
+-   [Exemples : utilisation du mode AUTO](../../relational-databases/xml/examples-using-auto-mode.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   

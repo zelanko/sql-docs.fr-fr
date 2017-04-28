@@ -1,28 +1,32 @@
 ---
-title: "Prise en charge de FOR XML pour le type de donn&#233;es XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "fonctions définies par l’utilisateur [SQL Server], XML"
-  - "type de données XML [SQL Server], clause FOR XML"
+title: "Prise en charge de FOR XML pour le type de données XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user-defined functions [SQL Server], XML
+- xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9fcd42a40be7da666ed66dc7eb05600b081457ea
+ms.lasthandoff: 04/11/2017
+
 ---
-# Prise en charge de FOR XML pour le type de donn&#233;es XML
+# <a name="for-xml-support-for-the-xml-data-type"></a>Prise en charge de FOR XML pour le type de données XML
   Si une requête FOR XML spécifie une colonne de type **xml** dans la clause SELECT, les valeurs de la colonne sont mappées comme éléments dans le code XML retourné, que vous spécifiiez ou non la directive ELEMENTS. Aucune déclaration XML dans la colonne de type **xml** n’est sérialisée.  
   
- Par exemple, la requête suivante récupère des informations de contact sur des clients, telles que les colonnes `BusinessEntityID`, `FirstName` et `LastName`, ainsi que les numéros de téléphone à partir de la colonne `AdditionalContactInfo` du type **xml**.  
+ Par exemple, la requête suivante récupère des informations de contact sur des clients, telles que les colonnes `BusinessEntityID`, `FirstName`et `LastName` , ainsi que les numéros de téléphone à partir de la colonne `AdditionalContactInfo` du type **xml** .  
   
 ```  
 USE AdventureWorks2012;  
@@ -39,9 +43,9 @@ declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-
 FOR XML AUTO, TYPE;  
 ```  
   
- La requête ne spécifiant pas la directive ELEMENTS, les valeurs de colonne sont retournées en tant qu’attributs, à l’exception des valeurs d’informations de contact supplémentaires récupérées à partir de la colonne de type **xml**. Celles-ci sont retournées en tant qu'éléments.  
+ La requête ne spécifiant pas la directive ELEMENTS, les valeurs de colonne sont retournées en tant qu’attributs, à l’exception des valeurs d’informations de contact supplémentaires récupérées à partir de la colonne de type **xml** . Celles-ci sont retournées en tant qu'éléments.  
   
- Voici le résultat partiel :  
+ Voici le résultat partiel :  
   
  `<Person.Person BusinessEntityID="291" FirstName="Gustavo" LastName="Achong">`  
   
@@ -140,14 +144,14 @@ for xml auto;
 </root>  
 ```  
   
-## Retour de code XML à partir d'une fonction définie par l'utilisateur  
- Il est possible d'utiliser des requêtes FOR XML pour retourner du code XML à partir d'une fonction définie par l'utilisateur qui retourne l'un des éléments suivants :  
+## <a name="returning-xml-from-a-user-defined-function"></a>Retour de code XML à partir d'une fonction définie par l'utilisateur  
+ Il est possible d'utiliser des requêtes FOR XML pour retourner du code XML à partir d'une fonction définie par l'utilisateur qui retourne l'un des éléments suivants :  
   
 -   une table avec une seule colonne de type **xml** ;  
   
--   une instance du type **xml**.  
+-   une instance du type **xml** .  
   
- Par exemple, la fonction définie par l’utilisateur suivante retourne une table avec une seule colonne de type **xml** :  
+ Par exemple, la fonction définie par l’utilisateur suivante retourne une table avec une seule colonne de type **xml**:  
   
 ```  
 USE AdventureWorks2012;  
@@ -169,7 +173,7 @@ declare namespace PD="http://www.adventure-works.com/schemas/products/descriptio
 END;  
 ```  
   
- Vous pouvez exécuter la fonction définie par l'utilisateur et interroger la table retournée par celle-ci. Dans cet exemple, le code XML retourné suite à l’interrogation de la table est assigné à une variable de type **xml**.  
+ Vous pouvez exécuter la fonction définie par l'utilisateur et interroger la table retournée par celle-ci. Dans cet exemple, le code XML retourné suite à l’interrogation de la table est assigné à une variable de type **xml** .  
   
 ```  
 declare @x xml;  
@@ -177,7 +181,7 @@ set @x = (SELECT * FROM MyUDF(19));
 select @x;  
 ```  
   
- Voici un autre exemple de fonction définie par l'utilisateur. Cette fonction définie par l’utilisateur retourne une instance du type **xml**. Dans cet exemple, la fonction définie par l'utilisateur retourne une instance XML typée car l'espace de noms du schéma est spécifié.  
+ Voici un autre exemple de fonction définie par l'utilisateur. Cette fonction définie par l’utilisateur retourne une instance du type **xml** . Dans cet exemple, la fonction définie par l'utilisateur retourne une instance XML typée car l'espace de noms du schéma est spécifié.  
   
 ```  
 DROP FUNCTION dbo.MyUDF;  
@@ -202,7 +206,7 @@ SELECT @x= dbo.MyUDF4 (19) ;
 select @x;  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge FOR XML des différents types de données SQL Server](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
   
   

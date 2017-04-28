@@ -1,31 +1,35 @@
 ---
-title: "Restaurations de fichiers (mode de restauration compl&#232;te) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restaurations de fichiers [SQL Server]"
-  - "modèle de récupération complète [SQL Server], exécution de restaurations"
-  - "restauration de fichiers [SQL Server], séquence de restauration Transact-SQL"
-  - "restauration des fichiers [SQL Server]"
-  - "restaurations de fichiers [SQL Server], mode de récupération complète"
-  - "restauration de fichiers [SQL Server], modèle de récupération complète"
-  - "séquence de restauration Transact-SQL"
-  - "restaurations de fichiers [SQL Server], séquence de restauration Transact-SQL"
+title: "Restaurations de fichiers (mode de récupération complète) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- file restores [SQL Server]
+- full recovery model [SQL Server], performing restores
+- restoring files [SQL Server], Transact-SQL restore sequence
+- restoring files [SQL Server]
+- file restores [SQL Server], full recovery model
+- restoring files [SQL Server], full recovery model
+- Transact-SQL restore sequence
+- file restores [SQL Server], Transact-SQL restore sequence
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 686d6473f247f5b71764c1b4529bdf30c2f2efc1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaurations de fichiers (mode de restauration compl&#232;te)
+# <a name="file-restores-full-recovery-model"></a>Restaurations de fichiers (mode de récupération complète)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique concerne uniquement les bases de données contenant plusieurs fichiers ou groupes de fichiers en modes de restauration complète ou de récupération utilisant les journaux de transactions.  
@@ -36,7 +40,7 @@ caps.handback.revision: 41
   
  Si le groupe de fichiers en cours de restauration est en lecture seule, l'application de sauvegardes de journal est souvent inutile et ignorée. Si la sauvegarde a été réalisée après la mise en lecture seule du fichier, il s'agit de la dernière sauvegarde à restaurer. La récupération par progression s'arrête au point cible.  
   
- Les scénarios de restauration de fichiers sont les suivants :  
+ Les scénarios de restauration de fichiers sont les suivants :  
   
 -   Restauration de fichiers hors ligne  
   
@@ -48,16 +52,11 @@ caps.handback.revision: 41
   
      Dans une *restauration de fichiers en ligne*, si la base de données est en ligne au moment de la restauration, elle reste en ligne durant la restauration de fichiers. Toutefois, chaque groupe de fichiers dans lequel un fichier est restauré est hors connexion pendant l'opération de restauration. Une fois que tous les fichiers d'un groupe de fichiers hors connexion sont récupérés, le groupe de fichiers est automatiquement mis en ligne.  
   
-     Pour plus d’informations sur la prise en charge de la restauration de fichiers et de pages en ligne, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md). Pour plus d’informations sur les restaurations en ligne, consultez [Restauration en ligne &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
+     Pour plus d’informations sur la prise en charge de la restauration de fichiers et de pages en ligne, consultez [Éditions et fonctionnalités prises en charge dans SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Pour plus d’informations sur les restaurations en ligne, consultez [Restauration en ligne (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md).
   
     > [!TIP]  
-    >  Si vous souhaitez que la base de données soit hors connexion pour une restauration de fichiers, mettez-la hors connexion avant de démarrer la séquence de restauration en exécutant l’instruction [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) suivante : ALTER DATABASE *nom_base_de_données* SET OFFLINE.  
+    >  Si vous souhaitez que la base de données soit hors connexion pour une restauration de fichiers, mettez-la hors connexion avant de démarrer la séquence de restauration en exécutant l’instruction [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) suivante : ALTER DATABASE *nom_base_de_données* SET OFFLINE.  
   
- **Dans cette rubrique :**  
-  
--   [Restauration de fichiers endommagés à partir de sauvegardes de fichiers](#Overview)  
-  
--   [Tâches associées](#RelatedTasks)  
   
 ##  <a name="Overview"></a> Restauration de fichiers endommagés à partir de sauvegardes de fichiers  
   
@@ -74,7 +73,7 @@ caps.handback.revision: 41
   
 3.  Restaurez la sauvegarde différentielle de fichiers la plus récente, si elle existe, pour chaque fichier restauré.  
   
-4.  Restaurez dans l'ordre les sauvegardes du journal des transactions, en commençant par la sauvegarde correspondant aux fichiers restaurés les plus anciens jusqu'à la sauvegarde de la fin du journal créée à l'étape 1.  
+4.  Restaurez dans l'ordre les sauvegardes du journal des transactions, en commençant par la sauvegarde correspondant aux fichiers restaurés les plus anciens jusqu'à la sauvegarde de la fin du journal créée à l'étape 1.  
   
      Vous devez restaurer les sauvegardes du journal des transactions créées après les sauvegardes de fichiers pour rendre à la base de données sa cohérence. Les sauvegardes du journal des transactions peuvent être rapidement restaurées par progression, car seuls les changements concernant les fichiers restaurés sont appliqués. La restauration de fichiers individuels est parfois une meilleure option que la restauration intégrale d'une base de données parce que les fichiers non endommagés ne sont pas copiés puis restaurés par progression. Cependant, la lecture de la séquence complète des sauvegardes de journaux reste nécessaire.  
   
@@ -83,10 +82,10 @@ caps.handback.revision: 41
 > [!NOTE]  
 >  Les sauvegardes de fichiers peuvent également servir à restaurer la base de données à un état antérieur dans le temps. Pour cela, vous devez restaurer un jeu complet de sauvegardes de fichiers, puis restaurer dans l'ordre les sauvegardes du journal des transactions pour atteindre un moment cible postérieur à la fin de la dernière sauvegarde de fichiers restaurée. Pour plus d’informations sur la récupération jusqu’à une date et heure, consultez [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
-## Séquence de restauration Transact-SQL pour une restauration de fichiers hors connexion (mode de restauration complète)  
+## <a name="transact-sql-restore-sequence-for-an-offline-file-restore-full-recovery-model"></a>Séquence de restauration Transact-SQL pour une restauration de fichiers hors connexion (mode de restauration complète)  
  Un scénario de restauration de fichiers consiste en une séquence de restauration unique qui copie, restaure par progression et récupère les données appropriées.  
   
- Cette section présente les options [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) essentielles pour une séquence de restauration de fichiers. La syntaxe et les détails qui ne sont pas pertinents sont omis.  
+ Cette section présente les options [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) essentielles pour une séquence de restauration de fichiers. La syntaxe et les détails qui ne sont pas pertinents sont omis.  
   
  L'exemple de séquence de restauration suivant illustre une restauration hors ligne de deux fichiers secondaires, `A` et `B`, à l'aide de WITH NORECOVERY. Ensuite, deux sauvegardes de journal sont appliquées à l'aide de NORECOVERY, suivies de la sauvegarde de la fin du journal qui est restaurée à l'aide de WITH RECOVERY.  
   
@@ -117,7 +116,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
    WITH RECOVERY;  
 ```  
   
-## Exemples  
+## <a name="examples"></a>Exemples  
   
 -   [Exemple : restauration en ligne d’un fichier en lecture/écriture &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
@@ -134,15 +133,14 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A> (SMO)  
   
- [&#91;Haut&#93;](#Top)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Sauvegarde et restauration : interopérabilité et coexistence &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Sauvegardes différentielles &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [Sauvegardes de fichiers complètes &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)   
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Vue d’ensemble de la restauration et de la récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restaurations complètes de bases de données &#40;mode de récupération simple&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [Restaurations fragmentaires &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
   

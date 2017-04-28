@@ -1,30 +1,34 @@
 ---
-title: "Utiliser des r&#233;sultats FOR XML dans le code de l&#39;application | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML (clause), utilisation dans le code de l’application"
-  - "XML [SQL Server], clause FOR XML"
-  - "ASP.NET [SQL Server]"
-  - ".NET Framework [SQL Server], données FOR XML"
-  - "ADO [SQL Server]"
-  - "îlots de données XML [SQL Server]"
-  - "îlots de données [SQL Server]"
+title: "Utiliser des résultats FOR XML dans le code de l’application | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, application code usage
+- XML [SQL Server], FOR XML clause
+- ASP.NET [SQL Server]
+- .NET Framework [SQL Server], FOR XML data
+- ADO [SQL Server]
+- XML data islands [SQL Server]
+- data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f687e8b100ea8810bf92b21b0467932c72d21237
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utiliser des r&#233;sultats FOR XML dans le code de l&#39;application
+# <a name="use-for-xml-results-in-application-code"></a>Utiliser des résultats FOR XML dans le code de l'application
   En utilisant des clauses FOR XML avec des requêtes SQL, vous pouvez récupérer et même convertir les résultats de la requête en données XML. Dès lors que les résultats d'une requête FOR XML peuvent être utilisés dans le code de l'application XML, vous pouvez notamment effectuer les opérations suivantes :  
   
 -   Interroger des tables SQL pour des instances de valeurs de [Données XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
@@ -33,10 +37,10 @@ caps.handback.revision: 23
   
  Cette rubrique donne des exemples expliquant ces approches.  
   
-## Récupération des données FOR XML avec des îlots de données ADO et XML  
- L’objet ADO **Stream** ou d’autres objets prenant en charge l’interface COM **IStream**, tels que les objets Active Server Pages (ASP) **Request** et **Response**, peuvent servir à contenir les résultats en cas d’utilisation de requêtes FOR XML.  
+## <a name="retrieving-for-xml-data-with-ado-and-xml-data-islands"></a>Récupération des données FOR XML avec des îlots de données ADO et XML  
+ L’objet ADO **Stream** ou d’autres objets prenant en charge l’interface COM **IStream** , tels que les objets Active Server Pages (ASP) **Request** et **Response** , peuvent servir à contenir les résultats en cas d’utilisation de requêtes FOR XML.  
   
- Le code ASP suivant, par exemple, montre les résultats d'une requête lancée sur la colonne de type **xml** Demographics de la table Sales.Store de la base de données AdventureWorks. La requête recherche plus particulièrement la valeur d'instance de cette colonne pour la ligne où CustomerID est égal à 3.  
+ Le code ASP suivant, par exemple, montre les résultats d'une requête lancée sur la colonne de type **xml** Demographics de la table Sales.Store de la base de données AdventureWorks. La requête recherche plus particulièrement la valeur d'instance de cette colonne pour la ligne où CustomerID est égal à 3.  
   
 ```  
 <!-- BeginRecordAndStreamVBS -->  
@@ -121,7 +125,7 @@ caps.handback.revision: 23
   
  Cet exemple de page ASP contient le code VBScript côté serveur qui utilise ADO pour exécuter la requête FOR XML et renvoyer les résultats XML dans l'îlot de données XML MyDataIsle. Cet îlot de données XML est ensuite renvoyé dans le navigateur en vue d'un traitement supplémentaire côté client. Côté client, le code VBScript supplémentaire sert ensuite à traiter le contenu de l'îlot de données XML. Ce processus a lieu avant l'affichage du contenu sous forme DHTML et avant l'ouverture d'une boîte de message afin de montrer le contenu prétraité de l'îlot de données XML.  
   
-#### Pour tester cet exemple  
+#### <a name="to-test-this-example"></a>Pour tester cet exemple  
   
 1.  Vérifiez que les services Internet (IIS) sont installés et que l'exemple de base de données AdventureWorks a bien été installé pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -129,15 +133,15 @@ caps.handback.revision: 23
   
 2.  Copiez l'exemple de code précédemment fourni et collez-le dans l'éditeur XML ou de texte que vous utilisez. Enregistrez le fichier sous RetrieveResults.asp dans le répertoire racine utilisé pour IIS. Il s'agit généralement de C:Inetpub\wwwroot.  
   
-3.  Ouvrez la page ASP dans une fenêtre du navigateur en utilisant l'URL qui suit. Premièrement, remplacez « MyServer » par « localhost » ou par le nom réel du serveur sur lequel résident [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les services Internet (IIS).  
+3.  Ouvrez la page ASP dans une fenêtre du navigateur en utilisant l'URL qui suit. Premièrement, remplacez « MyServer » par « localhost » ou par le nom réel du serveur sur lequel résident [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les services Internet (IIS).  
   
     ```  
     http://MyServer/RetrieveResults.asp  
     ```  
   
- La page HTML générée qui en résulte et qui apparaît ressemblera à l'exemple de sortie suivant :  
+ La page HTML générée qui en résulte et qui apparaît ressemblera à l'exemple de sortie suivant :  
   
-##### Traitement côté serveur  
+##### <a name="server-side-processing"></a>Traitement côté serveur  
  Page Generated @ 3/11/2006 3:36:02 PM  
   
  Connect String = Provider=SQLOLEDB;Data Source=MyServer;Initial Catalog=AdventureWorks;Integrated Security=SSPI;  
@@ -150,7 +154,7 @@ caps.handback.revision: 23
   
  Envoi du code XML au client en vue du traitement  
   
-##### Traitement côté client du document XML MyDataIsle  
+##### <a name="client-side-processing-of-xml-document-mydataisle"></a>Traitement côté client du document XML MyDataIsle  
   
 -   **AnnualSales:** 1500000  
   
@@ -195,7 +199,7 @@ caps.handback.revision: 23
 </ROOT>  
 ```  
   
-## Récupération des données FOR XML avec ASP.NET et .NET Framework  
+## <a name="retrieving-for-xml-data-with-aspnet-and-the-net-framework"></a>Récupération des données FOR XML avec ASP.NET et .NET Framework  
  Comme dans l'exemple précédent, le code ASP suivant montre les résultats d'une requête lancée sur une colonne de type **xml** , Demographics, de la table Sales.Store de la base de données AdventureWorks. Comme dans l'exemple précédent, la requête recherche plus particulièrement la valeur d'instance de cette colonne pour la ligne où CustomerID est égal à 3.  
   
  Dans cet exemple, les API gérées Microsoft .NET Framework sont chargées de renvoyer et de rendre les résultats de la requête FOR XML :  
@@ -260,7 +264,7 @@ caps.handback.revision: 23
     </HTML>  
     ```  
   
-#### Pour tester cet exemple  
+#### <a name="to-test-this-example"></a>Pour tester cet exemple  
   
 1.  Vérifiez que les services Internet (IIS) sont installés et que l'exemple de base de données AdventureWorks a bien été installé pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -268,15 +272,15 @@ caps.handback.revision: 23
   
 2.  Copiez le code précédemment fourni et collez-le dans l'éditeur XML ou de texte que vous utilisez. Enregistrez le fichier sous RetrieveResults.aspx dans le répertoire racine utilisé pour IIS. Il s'agit généralement de C:Inetpub\wwwroot.  
   
-3.  Ouvrez la page ASP.NET dans une fenêtre du navigateur en utilisant l'URL qui suit. Premièrement, remplacez « MyServer » par « localhost » ou par le nom réel du serveur sur lequel résident [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les services Internet (IIS).  
+3.  Ouvrez la page ASP.NET dans une fenêtre du navigateur en utilisant l'URL qui suit. Premièrement, remplacez « MyServer » par « localhost » ou par le nom réel du serveur sur lequel résident [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les services Internet (IIS).  
   
     ```  
     http://MyServer/RetrieveResults.aspx  
     ```  
   
- La page HTML générée qui en résulte et qui apparaît ressemblera à l'exemple de sortie suivant :  
+ La page HTML générée qui en résulte et qui apparaît ressemblera à l'exemple de sortie suivant :  
   
-##### Traitement côté serveur  
+##### <a name="server-side-processing"></a>Traitement côté serveur  
   
 ```  
 Page Generated @ 3/11/2006 3:36:02 PM  
@@ -291,7 +295,7 @@ SqlConnection closed.
 > [!NOTE]  
 >  La méthode [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml** vous permet de demander que le résultat d’une requête FOR XML soit retourné avec le type de données **xml** plutôt que sous forme de données de type chaîne ou image ; pour cela, il vous suffit de spécifier la [directive TYPE](../../relational-databases/xml/type-directive-in-for-xml-queries.md). L’emploi d’une directive TYPE dans les requêtes FOR XML donne automatiquement accès à des résultats FOR XML très similaires à ceux qui sont présentés dans [Utiliser des données XML dans les applications](../../relational-databases/xml/use-xml-data-in-applications.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

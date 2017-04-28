@@ -1,26 +1,30 @@
 ---
-title: "Entrep&#244;t de donn&#233;es de gestion | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "collecteur de données [SQL Server], entrepôt de données de gestion"
-  - "entrepôt de données"
-  - "entrepôt de données de gestion"
+title: "Entrepôt de données de gestion | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data collector [SQL Server], management data warehouse
+- data warehouse
+- management data warehouse
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0430b88308cb3ebc07b1addfb2e34575150fa41e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Entrep&#244;t de donn&#233;es de gestion
+# <a name="management-data-warehouse"></a>Entrepôt de données de gestion
   L'entrepôt de données de gestion est une base de données relationnelle qui contient les données collectées à partir d'un serveur faisant office de cible de collecte de données. Ces données permettent de générer les rapports pour les jeux d'éléments de collecte de données système ainsi que de créer des rapports personnalisés.  
   
  L'infrastructure du collecteur de données définit les travaux et les plans de maintenance nécessaires pour implémenter les stratégies de rétention définies par l'administrateur de base de données.  
@@ -28,13 +32,13 @@ caps.handback.revision: 43
 > [!IMPORTANT]  
 >  Pour cette version du collecteur de données, l'entrepôt de données de gestion est créé à l'aide du mode de récupération simple, pour réduire la journalisation. Vous devez implémenter le mode de récupération adapté à votre organisation.  
   
-## Déploiement et utilisation de l'entrepôt de données  
+## <a name="deploying-and-using-the-data-warehouse"></a>Déploiement et utilisation de l'entrepôt de données  
  Vous pouvez installer l'entrepôt de données de gestion sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui exécute le collecteur de données. Toutefois, si les ressources ou les performances du serveur constituent un problème sur le serveur analysé, vous pouvez installer l'entrepôt de données de gestion sur un autre ordinateur.  
   
  Les schémas requis et leurs objets pour les jeux d'éléments de collecte de données système prédéfinis sont créés lorsque vous créez l'entrepôt de données de gestion. Les schémas créés sont les schémas Core et Snapshots. Un troisième schéma, custom_snapshots, est créé lors de la création de jeux d’éléments de collecte définis par l’utilisateur qui incluent des éléments de collecte qui utilisent le type de collecteur Requête T-SQL générique.  
   
-###### Schéma principal (Core)  
- Le schéma principal (Core) décrit les tables, les procédures stockées et les vues utilisées pour organiser et identifier les données collectées. Ces tables sont réparties entre toutes les tables de données créées pour les types de collecteurs individuels. Ce schéma est verrouillé et seul le propriétaire de la base de données de l'entrepôt de données de gestion peut le modifier. Les noms des tables de ce schéma incluent le préfixe « core ».  
+###### <a name="core-schema"></a>Schéma principal (Core)  
+ Le schéma principal (Core) décrit les tables, les procédures stockées et les vues utilisées pour organiser et identifier les données collectées. Ces tables sont réparties entre toutes les tables de données créées pour les types de collecteurs individuels. Ce schéma est verrouillé et seul le propriétaire de la base de données de l'entrepôt de données de gestion peut le modifier. Les noms des tables de ce schéma incluent le préfixe « core ».  
   
  Le tableau ci-dessous décrit les tables de base de données incluses dans le schéma principal. Ces tables de base de données permettent au collecteur de données d'effectuer le suivi des données indiquant d'où les données proviennent, qui a inséré les données et quand elles ont été téléchargées vers l'entrepôt de données.  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 43
 |core.wait_types|Contient les types d'attente reconnus par le collecteur de données.|  
 |core.purge_info_internal|Indique qu'une demande a été faite pour arrêter la suppression de données de l'entrepôt de données de gestion.|  
   
- Les tables précédentes sont utilisées avec des tables de type de collecteur pour stocker des informations. Par exemple, le type de collecteur Trace SQL générique utilise les tables suivantes pour stocker les données de trace :  
+ Les tables précédentes sont utilisées avec des tables de type de collecteur pour stocker des informations. Par exemple, le type de collecteur Trace SQL générique utilise les tables suivantes pour stocker les données de trace :  
   
 -   core.source_info_internal  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 43
   
 -   snapshots.trace_data  
   
-###### Schéma des instantanés  
+###### <a name="snapshots-schema"></a>Schéma des instantanés  
  Le schéma des instantanés décrit les objets nécessaires au stockage et à la gestion des données collectées par les types de collecteurs fournis. Les tables dans ce schéma sont fixes et n'ont pas besoin d'être modifiées pendant la durée de vie du type de collecteur. Si des modifications sont nécessaires, seuls les membres du rôle mdw_admin peuvent modifier le schéma. Ces tables sont créées pour stocker les données collectées par les jeux d'éléments de collecte de données système.  
   
  Les tables ci-dessous illustrent une partie du schéma de l'entrepôt de données de gestion qui est nécessaire pour les jeux d'éléments de collecte Activité du serveur et Statistiques de requête.  
@@ -108,8 +112,8 @@ caps.handback.revision: 43
   
  Vous pouvez obtenir des informations détaillées sur le type et le contenu des données pour les colonnes de table de base de données en lisant la documentation de la procédure stockée du collecteur de données approprié pour chacune des tables.  
   
-### Bonnes pratiques  
- Lors de l'utilisation de l'entrepôt de données de gestion, nous vous recommandons d'appliquer les méthodes conseillées suivantes :  
+### <a name="best-practices"></a>Bonnes pratiques  
+ Lors de l'utilisation de l'entrepôt de données de gestion, nous vous recommandons d'appliquer les méthodes conseillées suivantes :  
   
 -   Ne modifiez pas les métadonnées des tables de l'entrepôt de données de gestion sauf si vous ajoutez un nouveau type de collecteur.  
   
@@ -117,14 +121,14 @@ caps.handback.revision: 43
   
 -   Au lieu d'utiliser directement les tables, recourez aux procédures stockées et aux fonctions documentées fournies avec le collecteur de données pour accéder aux données d'instance et d'application. Les noms et les définitions de tables peuvent changer, sont modifiés lorsque vous mettez à jour l'application et pourront différer dans des versions futures.  
   
-## Historique des modifications  
+## <a name="change-history"></a>Historique des modifications  
   
 |Mise à jour du contenu|  
 |---------------------|  
-|Ajout de la table core.performance_counter_report_group_items à la section « Schéma principal (Core) ».|  
-|Mise à jour de la liste de tables dans la section « Schéma des instantanés ». Ajout de snapshots.os_memory_clerks, snapshots.sql_process_and_system_memory et snapshots.io_virtual_file_stats. Suppression de snapshots.os_process_memory et snapshots.distinct_query_stats.|  
+|Ajout de la table core.performance_counter_report_group_items à la section « Schéma principal (Core) ».|  
+|Mise à jour de la liste de tables dans la section « Schéma des instantanés ». Ajout de snapshots.os_memory_clerks, snapshots.sql_process_and_system_memory et snapshots.io_virtual_file_stats. Suppression de snapshots.os_process_memory et snapshots.distinct_query_stats.|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de l’entrepôt de données de gestion &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)   
  [Procédures stockées du collecteur de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Collecte de données](../../relational-databases/data-collection/data-collection.md)   

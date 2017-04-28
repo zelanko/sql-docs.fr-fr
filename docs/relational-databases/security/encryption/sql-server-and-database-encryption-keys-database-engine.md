@@ -1,43 +1,47 @@
 ---
-title: "SQL Server et cl&#233;s de chiffrement de base de donn&#233;es (moteur de base de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clés [SQL Server], chiffrement de base de données"
+title: "SQL Server et clés de chiffrement de base de données (moteur de base de données) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 909656391a0c51345860aece6f41f02de1dc360f
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server et cl&#233;s de chiffrement de base de donn&#233;es (moteur de base de donn&#233;es)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise des clés de chiffrement pour mieux sécuriser les données, les informations d’identification et les informations de connexion qui sont stockées dans une base de données du serveur. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a deux types de clés : des clés *symétriques* et *asymétriques*. Les clés symétriques utilisent le même mot de passe pour chiffrer et déchiffrer des données. Les clés asymétriques utilisent un premier mot de passe pour chiffrer des données (appelé clé *publique*) et un second mot de passe pour déchiffrer les données (appelé clé *privée*).  
+# <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server et clés de chiffrement de base de données (moteur de base de données)
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise des clés de chiffrement pour mieux sécuriser les données, les informations d’identification et les informations de connexion qui sont stockées dans une base de données du serveur. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a deux types de clés : des clés *symétriques* et *asymétriques*. Les clés symétriques utilisent le même mot de passe pour chiffrer et déchiffrer des données. Les clés asymétriques utilisent un premier mot de passe pour chiffrer des données (appelé clé *publique* ) et un second mot de passe pour déchiffrer les données (appelé clé *privée* ).  
   
- Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les clés de chiffrement incluent une combinaison d'une clé publique, d'une clé privée et d'une clé symétrique, dont le but est de protéger les données sensibles. La clé symétrique est créée pendant l'initialisation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], lorsque vous démarrez pour la première fois l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Cette clé est utilisée par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour chiffrer les données sensibles stockées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les clés publique et privée sont créées par le système d'exploitation et servent à protéger la clé symétrique. Une paire de clés privée et publique est créée pour chaque instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui stocke des données sensibles dans une base de données.  
+ Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les clés de chiffrement incluent une combinaison d'une clé publique, d'une clé privée et d'une clé symétrique, dont le but est de protéger les données sensibles. La clé symétrique est créée pendant l'initialisation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , lorsque vous démarrez pour la première fois l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Cette clé est utilisée par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour chiffrer les données sensibles stockées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les clés publique et privée sont créées par le système d'exploitation et servent à protéger la clé symétrique. Une paire de clés privée et publique est créée pour chaque instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui stocke des données sensibles dans une base de données.  
   
-## Applications pour les clés SQL Server et de base de données  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a deux applications principales pour les clés : une *clé principale de service* (SMK) générée sur et pour une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], et une *clé principale de base de données* (DMK) utilisée pour une base de données.  
+## <a name="applications-for-sql-server-and-database-keys"></a>Applications pour les clés SQL Server et de base de données  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a deux applications principales pour les clés : une *clé principale de service* (SMK) générée sur et pour une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , et une *clé principale de base de données* (DMK) utilisée pour une base de données.  
   
  La clé SMK est générée automatiquement la première fois que l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est démarrée et utilisée pour chiffrer un mot de passe de serveur lié, des informations d’identification et la clé principale de base de données. La clé SMK est chiffrée en utilisant la clé de l'ordinateur local à l'aide de l'API de protection des données Windows (DPAPI). L’interface DPAPI utilise une clé dérivée des informations d’identification Windows du compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et des informations d’identification de l’ordinateur. La clé principale de service peut être déchiffrée uniquement par le compte de service sous lequel elle a été créée ou par un principal qui a accès aux informations d'identification de l'ordinateur.  
   
  La clé principale de base de données est une clé symétrique qui permet de protéger les clés privées des certificats et des clés asymétriques présentes dans la base de données. Elle peut également être utilisée pour chiffrer des données, mais elle présente des limitations de longueur qui la rendent moins pratique pour les données que l'utilisation d'une clé symétrique.  
   
- Lors de sa création, la clé principale est chiffrée à l'aide de l'algorithme Triple DES et d'un mot de passe fourni par l'utilisateur. Pour activer le déchiffrement automatique de la clé principale, une copie de la clé est chiffrée au moyen de la clé SMK. Elle est stockée à la fois dans la base de données où elle est utilisée et dans la base de données système **master**.  
+ Lors de sa création, la clé principale est chiffrée à l'aide de l'algorithme Triple DES et d'un mot de passe fourni par l'utilisateur. Pour activer le déchiffrement automatique de la clé principale, une copie de la clé est chiffrée au moyen de la clé SMK. Elle est stockée à la fois dans la base de données où elle est utilisée et dans la base de données système **master** .  
   
- La copie de la clé DMK stockée dans la base de données système **master** est mise à jour silencieusement chaque fois que la clé DMK est modifiée. Toutefois, vous pouvez modifier ce comportement par défaut à l’aide de l’option **DROP ENCRYPTION BY SERVICE MASTER KEY** de l’instruction **ALTER MASTER KEY**. Une DMK qui n’est pas chiffrée par la clé principale de service doit être ouverte à l’aide de l’instruction **OPEN MASTER KEY** et d’un mot de passe.  
+ La copie de la clé DMK stockée dans la base de données système **master** est mise à jour silencieusement chaque fois que la clé DMK est modifiée. Toutefois, vous pouvez modifier ce comportement par défaut à l’aide de l’option **DROP ENCRYPTION BY SERVICE MASTER KEY** de l’instruction **ALTER MASTER KEY** . Une DMK qui n’est pas chiffrée par la clé principale de service doit être ouverte à l’aide de l’instruction **OPEN MASTER KEY** et d’un mot de passe.  
   
-## Gestion des clés SQL Server et de base de données  
+## <a name="managing-sql-server-and-database-keys"></a>Gestion des clés SQL Server et de base de données  
  La gestion des clés de chiffrement consiste à créer de nouvelles clés de base de données, à créer une sauvegarde des clés de serveur et de base de données et à savoir quand et comment restaurer, supprimer et modifier les clés.  
   
- Pour gérer des clés symétriques, vous pouvez utiliser les outils inclus dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour effectuer les opérations suivantes :  
+ Pour gérer des clés symétriques, vous pouvez utiliser les outils inclus dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour effectuer les opérations suivantes :  
   
 -   Sauvegarde d'une copie des clés de serveur et de base de données permettant de les utiliser pour récupérer une installation de serveur ou dans le cadre d'une migration planifiée.  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 18
   
 -   Ajout ou suppression d'une instance de serveur à partir d'un déploiement évolutif de serveur dans lequel plusieurs serveurs partagent une base de données unique et la clé qui fournit un chiffrement réversible pour cette base de données.  
   
-## Informations de sécurité importantes  
+## <a name="important-security-information"></a>Informations de sécurité importantes  
  L'accès aux objets sécurisés par la clé principale du service requiert le compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui a permis de créer la clé ou le compte d'ordinateur (machine). Autrement dit, l'ordinateur est attaché au système dans lequel la clé a été créée. Vous pouvez modifier le compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *ou* le compte d’ordinateur sans perdre l’accès à la clé. Toutefois, si vous modifiez les deux, vous perdrez l'accès à la clé principale de service. Si vous perdez l’accès à la clé principale de service sans un de ces deux éléments, vous ne pouvez pas déchiffrer les données et les objets chiffrés en utilisant la clé d’origine.  
   
  Les connexions sécurisées avec la clé principale de service ne peuvent pas être restaurées sans la clé principale de service.  
@@ -57,16 +61,16 @@ caps.handback.revision: 18
  L'accès à des objets et données sécurisés avec la clé principale de base de données requiert uniquement le mot de passe utilisé pour sécuriser la clé.  
   
 > [!CAUTION]  
->  Si vous perdez tout accès aux clés décrites précédemment, vous perdez l'accès aux objets, connexions et données sécurisés par ces clés. Vous pouvez restaurer la clé principale de service, comme décrit dans les liens répertoriés ici, ou vous pouvez revenir au système de chiffrement d'origine pour récupérer l'accès. Il n'existe aucune « porte dérobée » pour récupérer l'accès.  
+>  Si vous perdez tout accès aux clés décrites précédemment, vous perdez l'accès aux objets, connexions et données sécurisés par ces clés. Vous pouvez restaurer la clé principale de service, comme décrit dans les liens répertoriés ici, ou vous pouvez revenir au système de chiffrement d'origine pour récupérer l'accès. Il n'existe aucune « porte dérobée » pour récupérer l'accès.  
   
-## Dans cette section  
- [Clé principale du service](../../../relational-databases/security/encryption/service-master-key.md)  
+## <a name="in-this-section"></a>Dans cette section  
+ [Service Master Key](../../../relational-databases/security/encryption/service-master-key.md)  
  Fournit une brève explication pour la clé principale de service et les meilleures pratiques associées.  
   
  [Gestion de clés extensible &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
  Explique comment utiliser des systèmes de gestion de clés tiers avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## Tâches associées  
+## <a name="related-tasks"></a>Tâches associées  
  [Sauvegarder la clé principale du service](../../../relational-databases/security/encryption/back-up-the-service-master-key.md)  
   
  [Restaurer la clé principale du service](../../../relational-databases/security/encryption/restore-the-service-master-key.md)  
@@ -85,16 +89,16 @@ caps.handback.revision: 18
   
  [Chiffrer une colonne de données](../../../relational-databases/security/encryption/encrypt-a-column-of-data.md)  
   
-## Contenu connexe  
+## <a name="related-content"></a>Contenu connexe  
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)  
   
  [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-service-master-key-transact-sql.md)  
   
  [Restaurer une clé principale de base de données](../../../relational-databases/security/encryption/restore-a-database-master-key.md)  
   
-## Voir aussi  
- [Sauvegarder et restaurer les clés de chiffrement Reporting Services](../../../reporting-services/install-windows/back-up-and-restore-reporting-services-encryption-keys.md)   
- [Supprimer et recréer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../../reporting-services/install-windows/delete-and-re-create-encryption-keys-ssrs-configuration-manager.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Sauvegarder et restaurer les clés de chiffrement Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [Supprimer et recréer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [Ajouter et supprimer des clés de chiffrement pour un déploiement évolutif &#40;Gestionnaire de configuration de SSRS&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [Chiffrement transparent des données &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)  
   

@@ -1,29 +1,31 @@
 ---
-title: "Rechercher des documents similaires ou connexes avec la recherche s&#233;mantique | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "recherche sémantique [SQL Server], requêtes de ressemblance de document"
+title: "Rechercher des documents similaires ou connexes avec la recherche sémantique | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- semantic search [SQL Server], document similarity queries
 ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
 caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: cf6a2042a33da89c453c278b1beb1950bfb96e61
+ms.lasthandoff: 04/11/2017
+
 ---
-# Rechercher des documents similaires ou connexes avec la recherche s&#233;mantique
+# <a name="find-similar-and-related-documents-with-semantic-search"></a>Rechercher des documents similaires ou connexes avec la recherche sémantique
   Explique comment rechercher des valeurs textuelles ou des documents similaires ou connexes et donne des informations sur leur similitude, dans des colonnes configurées pour l'indexation sémantique statistique.  
-  
-##  <a name="BasicsQuerySimilar"></a> Recherche de documents similaires ou connexes  
-  
-###  <a name="HowToQuerySimilar"></a> Procédure : rechercher des documents similaires ou connexes avec SEMANTICSIMILARITYTABLE  
+   
+##  <a name="HowToQuerySimilar"></a> Rechercher des documents similaires ou connexes avec SEMANTICSIMILARITYTABLE  
  Pour identifier des documents similaires ou connexes dans une colonne spécifique, interrogez la fonction [semanticsimilaritytable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semanticsimilaritytable-transact-sql.md).  
   
  **SEMANTICSIMILARITYTABLE** retourne une table de zéro, une ou plusieurs lignes pour les colonnes dont le contenu dans la colonne spécifiée est sémantiquement similaire au document spécifié. Cette fonction d'ensemble de lignes peut être référencée dans la clause FROM d'une instruction SELECT comme un nom de table classique.  
@@ -35,7 +37,7 @@ caps.handback.revision: 17
 > [!IMPORTANT]  
 >  L'indexation sémantique et de texte intégral doit être activée pour les colonnes que vous ciblez.  
   
-###  <a name="HowToIdentifySimilar"></a> Exemple : rechercher les documents de niveau supérieur qui sont similaires à un autre document  
+###  <a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
  L'exemple suivant récupère les 10 premiers candidats similaires au candidat spécifié par *@CandidateID* dans la table HumanResources.JobCandidate de l'exemple de base de données AdventureWorks2012.  
   
 ```scr  
@@ -50,9 +52,7 @@ ORDER BY KEY_TBL.score DESC;
 GO  
 ```  
   
-##  <a name="BasicsQuerySimilarity"></a> Recherche d'informations sur la manière dont des documents sont similaires ou connexes  
-  
-###  <a name="HowToQuerySimilarity"></a> Procédure : rechercher des informations sur la manière dont des documents sont similaires ou connexes avec SEMANTICSIMILARITYDETAILSTABLE  
+##  <a name="HowToQuerySimilarity"></a> Rechercher des informations sur la manière dont des documents sont similaires ou connexes avec SEMANTICSIMILARITYDETAILSTABLE  
  Pour obtenir des informations sur les expressions clés qui rendent des documents similaires ou connexes, vous pouvez interroger la fonction [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md).  
   
  **SEMANTICSIMILARITYDETAILSTABLE** retourne une table de zéro, une ou plusieurs lignes d’expressions clés communes dans deux documents (un document source et un document mis en correspondance) dont le contenu est similaire sémantiquement. Cette fonction d'ensemble de lignes peut être référencée dans la clause FROM d'une instruction SELECT comme un nom de table classique.  
@@ -62,7 +62,7 @@ GO
 > [!IMPORTANT]  
 >  L'indexation sémantique et de texte intégral doit être activée pour les colonnes que vous ciblez.  
   
-###  <a name="HowToSimilarPhrases"></a> Exemple : rechercher les expressions de niveau supérieur qui sont similaires entre des documents  
+###  <a name="HowToSimilarPhrases"></a> Example: Find the top key phrases that are similar between documents  
  L'exemple suivant récupère les 5 expressions clés qui ont le score de similarité le plus élevé parmi les candidats spécifiés dans la table **HumanResources.JobCandidate** de l'exemple de base de données AdventureWorks2012.  
   
 ```tsql  

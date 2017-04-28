@@ -1,37 +1,41 @@
 ---
-title: "Sp&#233;cifier les colonnes calcul&#233;es dans une table | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "colonnes calculées, définir"
+title: "Spécifier les colonnes calculées dans une table | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a540a749f8682e47215f18ca022fbfc446f93e1d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sp&#233;cifier les colonnes calcul&#233;es dans une table
+# <a name="specify-computed-columns-in-a-table"></a>Spécifier les colonnes calculées dans une table
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Une colonne calculée est une colonne virtuelle qui n'est pas stockée physiquement dans la table, à moins que la colonne ne soit indiquée comme PERSISTED. Une expression de colonne calculée peut utiliser des données d'autres colonnes afin de calculer une valeur pour la colonne à laquelle elle appartient. Vous pouvez spécifier une expression pour une colonne calculée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Limitations)  
   
      [Sécurité](#Security)  
   
--   **Pour spécifier une colonne calculée à l'aide de :**  
+-   **Pour spécifier une colonne calculée à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 19
 ####  <a name="Permissions"></a> Autorisations  
  Requiert une autorisation ALTER sur la table.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 ###  <a name="NewColumn"></a> Pour ajouter une nouvelle colonne calculée  
   
@@ -60,18 +64,18 @@ caps.handback.revision: 19
   
 3.  Dans l'onglet **Propriétés des colonnes** , développez la propriété **Spécification de la colonne calculée** .  
   
-4.  Dans la propriété enfant **(Formule)**, entrez l’expression pour cette colonne dans la cellule de grille située à droite. Par exemple, dans une colonne `SalesTotal`, la formule que vous écrivez peut être `SubTotal+TaxAmt+Freight`, qui ajoute la valeur dans ces colonnes pour chaque ligne de la table.  
+4.  Dans la propriété enfant **(Formule)** , entrez l’expression pour cette colonne dans la cellule de grille située à droite. Par exemple, dans une colonne `SalesTotal` , la formule que vous écrivez peut être `SubTotal+TaxAmt+Freight`, qui ajoute la valeur dans ces colonnes pour chaque ligne de la table.  
   
     > [!IMPORTANT]  
     >  Lorsqu'une formule combine deux expressions de type de données différents, les règles de priorité des types de données spécifient que le type ayant une priorité plus faible est converti dans un type ayant une priorité plus élevée. Si la conversion n'est pas prise en charge en tant que conversion implicite, l'erreur «`Error validating the formula for column column_name.`» est retournée. Utilisez la fonction CAST ou CONVERT pour résoudre le conflit de type de données. Par exemple, si une colonne de type **nvarchar** est associée à une colonne de type **int**, le type entier doit être converti en **nvarchar** comme indiqué dans cette formule `('Prod'+CONVERT(nvarchar(23),ProductID))`. Pour plus d’informations, consultez [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 5.  Indiquez si les données doivent être enregistrées en choisissant **Oui** ou **Non** dans la liste déroulante de la propriété enfant **Is Persisted**.  
   
-6.  Dans le menu **Fichier**, cliquez sur **Enregistrer***nom de la table*.  
+6.  Dans le menu **Fichier** , cliquez sur **Enregistrer***nom de la table*.  
   
-#### Pour ajouter une définition de colonne calculée à une colonne existante  
+#### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>Pour ajouter une définition de colonne calculée à une colonne existante  
   
-1.  Dans l’**Explorateur d’objets**, cliquez avec le bouton droit sur la table contenant la colonne à modifier et développez **Colonnes**.  
+1.  Dans l’ **Explorateur d’objets**, cliquez avec le bouton droit sur la table contenant la colonne à modifier et développez **Colonnes** .  
   
 2.  Cliquez avec le bouton droit sur la colonne dans laquelle vous voulez spécifier une formule de colonne calculée et cliquez sur **Supprimer**. Cliquez sur **OK**.  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour ajouter une colonne calculée lors de la création d'une table  
+#### <a name="to-add-a-computed-column-when-creating-a-table"></a>Pour ajouter une colonne calculée lors de la création d'une table  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -106,7 +110,7 @@ caps.handback.revision: 19
   
     ```  
   
-#### Pour ajouter une nouvelle colonne calculée dans une table existante  
+#### <a name="to-add-a-new-computed-column-to-an-existing-table"></a>Pour ajouter une nouvelle colonne calculée dans une table existante  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -119,7 +123,7 @@ caps.handback.revision: 19
   
     ```  
   
-#### Pour modifier une colonne existante en une colonne calculée  
+#### <a name="to-change-an-existing-column-to-a-computed-column"></a>Pour modifier une colonne existante en une colonne calculée  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

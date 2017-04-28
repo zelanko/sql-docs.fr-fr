@@ -1,42 +1,46 @@
 ---
-title: "SQL&#160;Server, objet Database Mirroring | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:Database Mirroring"
-  - "mise en miroir de bases de données [SQL Server], compteurs de performance"
-  - "compteurs de performance [SQL Server], mise en miroir de bases de données"
-  - "Database Mirroring (objet)"
+title: "SQL Server, objet Database Mirroring | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Database Mirroring
+- database mirroring [SQL Server], performance counters
+- performance counters [SQL Server], database mirroring
+- Database Mirroring object
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 41cc798b19f243d91b9693ca63c70d1de6661d0c
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL&#160;Server, objet Database Mirroring
-  L’objet de performance **SQLServer:Database Mirroring** contient des compteurs de performances qui font état d’informations sur la mise en miroir de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le tableau ci-dessous répertorie les compteurs inclus dans cet objet.  
+# <a name="sql-server-database-mirroring-object"></a>SQL Server, objet Database Mirroring
+  L’objet de performance **SQLServer:Database Mirroring** contient des compteurs de performances qui font état d’informations sur la mise en miroir de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le tableau ci-dessous répertorie les compteurs inclus dans cet objet.  
   
 |Nom|Description|  
 |----------|-----------------|  
 |**Octets reçus/s**|Nombre d'octets reçus par seconde.|  
 |**Octets envoyés/s**|Nombre d'octets envoyés par seconde.|  
 |**Octets de journal reçus/s**|Nombre d'octets du journal reçus par seconde.|  
-|**Octets du journal restaurés à partir du cache/s**|Nombre d'octets du journal restaurés qui ont été obtenus à partir du cache du journal de mise en miroir au cours de la dernière seconde.<br /><br /> Ce compteur est uniquement utilisé sur le serveur miroir. Sur le serveur principal, la valeur est toujours 0.|  
-|**Octets du journal envoyés du cache/s**|Nombre d'octets du journal envoyés qui ont été obtenus à partir du cache du journal de mise en miroir au cours de la dernière seconde.<br /><br /> Ce compteur est uniquement utilisé sur le serveur principal. Sur le serveur miroir, la valeur est toujours 0.|  
+|**Octets du journal restaurés à partir du cache/s**|Nombre d'octets du journal restaurés qui ont été obtenus à partir du cache du journal de mise en miroir au cours de la dernière seconde.<br /><br /> Ce compteur est uniquement utilisé sur le serveur miroir. Sur le serveur principal, la valeur est toujours 0.|  
+|**Octets du journal envoyés du cache/s**|Nombre d'octets du journal envoyés qui ont été obtenus à partir du cache du journal de mise en miroir au cours de la dernière seconde.<br /><br /> Ce compteur est uniquement utilisé sur le serveur principal. Sur le serveur miroir, la valeur est toujours 0.|  
 |**Octets du journal envoyés/s**|Nombre d'octets du journal envoyés par seconde.|  
 |**Octets compressés du journal reçus/s**|Nombre d'octets compressés du journal reçus au cours de la dernière seconde.|  
 |**Octets compressés du journal envoyés/s**|Nombre d'octets compressés du journal envoyés au cours de la dernière seconde.|  
 |**Temps de renforcement de journal (ms)**|Temps en millisecondes passé par les blocs du journal en attente de renforcement sur disque au cours de la dernière seconde.|  
-|**Enregistrer les Ko restants pour l'annulation**|Nombre total de kilo-octets du journal qui restent à analyser par le nouveau serveur miroir après le basculement.<br /><br /> Ce compteur est uniquement utilisé sur le serveur miroir pendant la phase de restauration. Lorsque la phase de restauration est terminée, le compteur est réinitialisé à 0. Sur le serveur principal, la valeur est toujours 0.|  
-|**Enregistrer les Ko analysés pour l'annulation**|Nombre total de kilo-octets de journal qui ont été analysés par le nouveau serveur miroir depuis le basculement.<br /><br /> Ce compteur est uniquement utilisé sur le serveur miroir pendant la phase de restauration. Lorsque la phase de restauration est terminée, le compteur est réinitialisé à 0. Sur le serveur principal, la valeur est toujours 0.|  
+|**Enregistrer les Ko restants pour l'annulation**|Nombre total de kilo-octets du journal qui restent à analyser par le nouveau serveur miroir après le basculement.<br /><br /> Ce compteur est uniquement utilisé sur le serveur miroir pendant la phase de restauration. Lorsque la phase de restauration est terminée, le compteur est réinitialisé à 0. Sur le serveur principal, la valeur est toujours 0.|  
+|**Enregistrer les Ko analysés pour l'annulation**|Nombre total de kilo-octets de journal qui ont été analysés par le nouveau serveur miroir depuis le basculement.<br /><br /> Ce compteur est uniquement utilisé sur le serveur miroir pendant la phase de restauration. Lorsque la phase de restauration est terminée, le compteur est réinitialisé à 0. Sur le serveur principal, la valeur est toujours 0.|  
 |**Temps de contrôle du flux d'envoi du journal (ms)**|Temps en millisecondes passé par les messages de flux du journal en attente de contrôle du flux d'envoi au cours de la dernière seconde.<br /><br /> L'envoi de données et de métadonnées du journal au partenaire de mise en miroir est l'opération qui nécessite le plus de données dans la mise en miroir de bases de données et peut monopoliser les mémoires tampons d'envoi de la mise en miroir de bases de données et de Service Broker. Utilisez ce compteur pour surveiller l'utilisation de cette mémoire tampon par la session de mise en miroir de bases de données.|  
 |**Ko de la file d'attente d'envoi du journal**|Nombre total de kilo-octets du journal qui n'ont pas été envoyés au serveur miroir.|  
 |**Transactions d'écriture en miroir/s**|Nombre de transactions qui ont écrit dans la base de données mise en miroir et ont attendu que le journal soit envoyé au miroir pour être validées au cours de la dernière seconde.<br /><br /> Ce compteur est incrémenté uniquement lorsque le serveur principal envoie activement des enregistrements du journal au serveur miroir.|  
@@ -51,10 +55,10 @@ caps.handback.revision: 26
 > [!NOTE]  
 >  Sur chaque partenaire, certains des compteurs affichent une valeur de zéro en fonction du rôle que le partenaire détient actuellement.  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Les compteurs de performances vous permettent d'analyser les performances de la mise en miroir de bases de données. Par exemple, vous pouvez examiner le compteur **Délai de transaction** pour savoir si la mise en miroir de bases de données a une incidence sur les performances du serveur principal, et vous pouvez examiner les compteurs **File d'attente de restauration par progression** et **File d'attente d'envoi du journal** pour savoir si la mise en miroir de la base de données est synchronisée avec la base de données principale. Vous pouvez examiner le compteur **Octets du journal envoyés/s** pour analyser la quantité de données de journal envoyées par seconde.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

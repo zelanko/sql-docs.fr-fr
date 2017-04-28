@@ -1,36 +1,40 @@
 ---
-title: "SQL Server Audit (moteur de base de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "audit"
-helpviewer_keywords: 
-  - "SQL Server Audit"
-  - "audits [SQL Server], SQL Server Audit"
+title: "SQL Server Audit (moteur de base de données) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- audit
+helpviewer_keywords:
+- SQL Server Audit
+- audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 caps.latest.revision: 58
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7852b00948b193a07e4ac38d1ace6135a63bc599
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server Audit (moteur de base de donn&#233;es)
+# <a name="sql-server-audit-database-engine"></a>SQL Server Audit (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  L'*audit* d'une instance de [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] ou d'une base de données individuelle implique le suivi et la journalisation des événements qui se produisent sur le [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. L'audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vous permet de créer des audits de serveur, qui peuvent contenir des spécifications d'audit de serveur pour les événements de niveau serveur, ainsi que des spécifications d'audit de base de données pour les événements de niveau base de données. Les événements audités peuvent être écrits dans des journaux d'événements ou des fichiers d'audit.  
+  L'*audit* d'une instance de [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] ou d'une base de données individuelle implique le suivi et la journalisation des événements qui se produisent sur le [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. L'audit[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vous permet de créer des audits de serveur, qui peuvent contenir des spécifications d'audit de serveur pour les événements de niveau serveur, ainsi que des spécifications d'audit de base de données pour les événements de niveau base de données. Les événements audités peuvent être écrits dans des journaux d'événements ou des fichiers d'audit.  
   
  Il existe plusieurs niveaux d'audit pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], selon les spécifications de normes pour votre installation. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit fournit les outils et processus nécessaires pour activer, stocker et afficher les audits sur différents objets de serveur et de base de données.  
   
  Vous pouvez enregistrer des groupes d'actions d'audit du serveur par instance, et des groupes d'actions d'audit de base de données ou des actions d'audit de base de données par base de données. L'événement d'audit se produit chaque fois que l'action pouvant être auditée est rencontrée.  
   
- Toutes les éditions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prennent en charge les audits de niveau serveur. Toutes les éditions prennent en charge les audits de niveau base de données à partir de la version [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1. Avant cette version, les audits de niveau base de données sont limités aux éditions Enterprise, Developer et Evaluation. Pour plus d’informations, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+ Toutes les éditions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prennent en charge les audits de niveau serveur. Toutes les éditions prennent en charge les audits de niveau base de données à partir de la version [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1. Avant cette version, les audits de niveau base de données sont limités aux éditions Enterprise, Developer et Evaluation. Pour plus d’informations, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 > [!NOTE]  
 >  Cette rubrique s’applique à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  Pour [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], voir [Prise en main de l’audit de base de données SQL](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/).  
@@ -38,7 +42,7 @@ caps.handback.revision: 58
 ## <a name="sql-server-audit-components"></a>Composants de SQL Server Audit  
  Un *audit* correspond à la combinaison de plusieurs éléments au sein d'un package unique pour un groupe spécifique d'actions de serveur ou d'actions de base de données. Les composants d'audit de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se combinent de façon à produire une sortie appelée audit, tout comme une définition de rapport combinée à des graphiques et des éléments de données produit un rapport.  
   
- L’audit de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise des *événements étendus* pour aider à créer un audit. Pour plus d'informations sur les événements étendus, consultez [événements étendus](../../../relational-databases/extended-events/extended-events.md).  
+ L’audit de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise des *événements étendus* pour aider à créer un audit. Pour plus d'informations sur les événements étendus, consultez [événements étendus](../../../relational-databases/extended-events/extended-events.md).  
   
 ### <a name="sql-server-audit"></a>SQL Server Audit  
  L’objet *Audit SQL Server* recueille une seule instance des actions et des groupes d’actions au niveau du serveur ou de la base de données à surveiller. L'audit s'effectue au niveau de l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Vous pouvez exécuter plusieurs audits par instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -149,7 +153,7 @@ caps.handback.revision: 58
 ### <a name="dynamic-views-and-functions"></a>Fonctions et vues dynamiques  
  Le tableau suivant répertorie les vues et fonctions dynamiques que vous pouvez utiliser pour l'audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-|Fonctions et vues dynamiques| Description|  
+|Fonctions et vues dynamiques|Description|  
 |---------------------------------|-----------------|  
 |[sys.dm_audit_actions](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)|Retourne une ligne pour chaque action d'audit qui peut être signalée dans le journal d'audit et chaque groupe d'actions d'audit qui peut être configuré dans le cadre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit.|  
 |[sys.dm_server_audit_status](../../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)|Fournit des informations sur l'état actuel de l'audit.|  
@@ -159,7 +163,7 @@ caps.handback.revision: 58
 ### <a name="catalog-views"></a>Affichages catalogue  
  Le tableau suivant répertorie les affichages catalogue que vous pouvez utiliser pour l'audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-|Affichages catalogue| Description|  
+|Affichages catalogue|Description|  
 |-------------------|-----------------|  
 |[sys.database_ audit_specifications](../../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|Contient des informations sur les spécifications de l'audit de la base de données dans un audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur une instance de serveur.|  
 |[sys.database_audit_specification_details](../../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)|Contient des informations sur les spécifications de l’audit de la base de données dans un audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur une instance de serveur, pour toutes les bases de données.|  
@@ -213,3 +217,5 @@ caps.handback.revision: 58
  [Enregistrements SQL Server Audit](../../../relational-databases/security/auditing/sql-server-audit-records.md)  
   
   
+
+

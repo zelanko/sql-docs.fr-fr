@@ -1,44 +1,48 @@
 ---
-title: "Acc&#233;der aux donn&#233;es FILESTREAM avec Transact-SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], Transact-SQL"
+title: "Accéder aux données FILESTREAM avec Transact-SQL | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server], Transact-SQL
 ms.assetid: a6bf0ce7-7e5e-4a07-8917-ee526c9d0a05
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 55caf01faba0be9c5277cbea435b256910e3dfc5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Acc&#233;der aux donn&#233;es FILESTREAM avec Transact-SQL
+# <a name="access-filestream-data-with-transact-sql"></a>Accéder aux données FILESTREAM avec Transact-SQL
   Cette rubrique explique comment utiliser les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT, UPDATE et DELETE pour gérer des données FILESTREAM.  
   
 > [!NOTE]  
 >  Les exemples de cette rubrique nécessitent la base de données compatible FILESTREAM et la table qui sont créées dans [Créer une base de données compatible FILESTREAM](../../relational-databases/blob/create-a-filestream-enabled-database.md) et [Créer une table pour le stockage de données FILESTREAM](../../relational-databases/blob/create-a-table-for-storing-filestream-data.md).  
   
 ##  <a name="ins"></a> Insertion d'une ligne qui contient des données FILESTREAM  
- Pour ajouter une ligne à une table prenant en charge les données FILESTREAM, utilisez l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT. Quand vous insérez des données dans une colonne FILESTREAM, vous pouvez insérer une valeur NULL ou **varbinary(max)**.  
+ Pour ajouter une ligne à une table prenant en charge les données FILESTREAM, utilisez l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT. Quand vous insérez des données dans une colonne FILESTREAM, vous pouvez insérer une valeur NULL ou **varbinary(max)** .  
   
-### Insertion de NULL  
+### <a name="inserting-null"></a>Insertion de NULL  
  L'exemple suivant montre comment insérer `NULL`. Lorsque la valeur FILESTREAM est `NULL`, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne crée pas de fichier dans le système de fichiers.  
   
  [!code-sql[FILESTREAM#FS_InsertNULL](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_1.sql)]  
   
-### Insertion d'un enregistrement de longueur nulle  
+### <a name="inserting-a-zero-length-record"></a>Insertion d'un enregistrement de longueur nulle  
  L'exemple suivant illustre l'utilisation de `INSERT` pour créer un enregistrement de longueur nulle. C'est utile lorsque vous souhaitez obtenir un descripteur de fichier, mais que vous manipulerez le fichier en utilisant des API Win32.  
   
  [!code-sql[FILESTREAM#FS_InsertZero](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_2.sql)]  
   
-### Création d'un fichier de données  
- L'exemple suivant illustre l'utilisation de `INSERT` pour créer un fichier contenant des données. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] convertit la chaîne `Seismic Data` en valeur `varbinary(max)`. FILESTREAM crée le fichier Windows s'il n'existe pas déjà. Les données sont ensuite ajoutées au fichier de données.  
+### <a name="creating-a-data-file"></a>Création d'un fichier de données  
+ L'exemple suivant illustre l'utilisation de `INSERT` pour créer un fichier contenant des données. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] convertit la chaîne `Seismic Data` en valeur `varbinary(max)` . FILESTREAM crée le fichier Windows s'il n'existe pas déjà. Les données sont ensuite ajoutées au fichier de données.  
   
  [!code-sql[FILESTREAM#FS_InsertData](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_3.sql)]  
   
@@ -50,7 +54,6 @@ caps.handback.revision: 15
 |`F8F5C314-0559-4927-8FA9-1535EE0BDF50`|`2`|`0x`|  
 |`7F680840-B7A4-45D4-8CD5-527C44D35B3F`|`3`|`0x536569736D69632044617461`|  
   
- [Dans cette rubrique](#TOP)  
   
 ##  <a name="upd"></a> Mise à jour de données FILESTREAM  
  Vous pouvez utiliser [!INCLUDE[tsql](../../includes/tsql-md.md)] pour mettre à jour les données dans le fichier de système de fichiers, bien que cela soit plutôt déconseillé quand vous devez transmettre en continu de gros volumes de données à un fichier.  
@@ -59,7 +62,6 @@ caps.handback.revision: 15
   
  [!code-sql[FILESTREAM#FS_UpdateData](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_4.sql)]  
   
- [Dans cette rubrique](#TOP)  
   
 ##  <a name="del"></a> Suppression de données FILESTREAM  
  Lorsque vous supprimez une ligne qui contient un champ FILESTREAM, vous supprimez également ses fichiers de système de fichiers sous-jacents. La seule façon de supprimer une ligne, et par conséquent le fichier, consiste à utiliser l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] DELETE.  
@@ -68,14 +70,13 @@ caps.handback.revision: 15
   
  [!code-sql[FILESTREAM#FS_DeleteData](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_5.sql)]  
   
- Lorsque vous sélectionnez toutes les données de la table `dbo.Archive`, la ligne disparaît. Vous ne pouvez plus utiliser le fichier associé.  
+ Lorsque vous sélectionnez toutes les données de la table `dbo.Archive` , la ligne disparaît. Vous ne pouvez plus utiliser le fichier associé.  
   
 > [!NOTE]  
 >  Les fichiers sous-jacents sont supprimés par le garbage collector FILESTREAM.  
   
- [Dans cette rubrique](#TOP)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Activer et configurer FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)   
  [Éviter les conflits avec les opérations de base de données dans les applications FILESTREAM](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)  
   

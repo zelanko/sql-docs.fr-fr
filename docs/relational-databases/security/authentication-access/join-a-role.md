@@ -1,27 +1,31 @@
 ---
-title: "Attacher un r&#244;le | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1"
-helpviewer_keywords: 
-  - "ajouter un membre à un rôle"
-  - "joindre un rôle"
+title: "Joindre un rôle | Microsoft Docs"
+ms.custom: 
+ms.date: 07/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1
+helpviewer_keywords:
+- adding a member to a role
+- join a role
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 750dc366fde98b7d1c6514a2beeae4d7fd831c6f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Attacher un r&#244;le
+# <a name="join-a-role"></a>joindre un rôle
   Cette rubrique décrit comment affecter des rôles aux utilisateurs des connexions et des bases de données dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Utilisez les rôles dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour gérer efficacement les autorisations. Affectez des autorisations aux rôles, puis ajoutez et supprimez des utilisateurs et des connexions aux rôles. L'utilisation de rôles évite de devoir maintenir individuellement les autorisations pour chaque utilisateur.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge quatre types de rôle :  
@@ -38,13 +42,13 @@ caps.handback.revision: 13
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour assigner des rôles aux utilisateurs des connexions et des bases de données, à l'aide de :**  
+-   **Pour assigner des rôles aux utilisateurs des connexions et des bases de données, à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -63,9 +67,9 @@ caps.handback.revision: 13
 ####  <a name="Permissions"></a> Autorisations  
  Nécessite l’autorisation **ALTER ANY ROLE** sur la base de données, ou l’autorisation **ALTER** sur le rôle, ou l’appartenance au rôle **db_securityadmin**.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour ajouter un membre à un rôle serveur fixe  
+#### <a name="to-add-a-member-to-a-fixed-server-role"></a>Pour ajouter un membre à un rôle serveur fixe  
   
 1.  Dans l'Explorateur d'objets, développez le serveur sur lequel vous souhaitez modifier un rôle serveur fixe.  
   
@@ -75,13 +79,13 @@ caps.handback.revision: 13
   
 4.  Cliquez avec le bouton droit sur le rôle à modifier, puis sélectionnez **Propriétés**.  
   
-5.  Dans la boîte de dialogue **Propriétés du rôle de serveur -***nom_rôle_serveur*, dans la page **Membres**, cliquez sur **Ajouter**.  
+5.  Dans la boîte de dialogue **Propriétés du rôle de serveur -***nom_rôle_serveur* , dans la page **Membres** , cliquez sur **Ajouter**.  
   
-6.  Dans la boîte de dialogue **Sélectionner la connexion au serveur ou le rôle de serveur**, sous **Entrez les noms des objets à sélectionner (exemples)**, entrez la connexion ou le rôle serveur à ajouter à ce rôle serveur. Ou bien, cliquez sur **Parcourir…** et sélectionnez tout ou partie des objets disponibles dans la boîte de dialogue **Rechercher des objets** . Cliquez sur **OK** pour revenir à la boîte de dialogue **Propriétés du rôle de serveur – ***nom_rôle_serveur*.  
+6.  Dans la boîte de dialogue **Sélectionner la connexion au serveur ou le rôle de serveur** , sous **Entrez les noms des objets à sélectionner (exemples)**, entrez la connexion ou le rôle serveur à ajouter à ce rôle serveur. Ou bien, cliquez sur **Parcourir…** et sélectionnez tout ou partie des objets disponibles dans la boîte de dialogue **Rechercher des objets** . Cliquez sur **OK** pour revenir à la boîte de dialogue **Propriétés du rôle de serveur –***nom_rôle_serveur* .  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-#### Pour ajouter un membre à un rôle de base de données défini par l'utilisateur  
+#### <a name="to-add-a-member-to-a-user-defined-database-role"></a>Pour ajouter un membre à un rôle de base de données défini par l'utilisateur  
   
 1.  Dans l'Explorateur d'objets, développez le serveur sur lequel vous souhaitez modifier un rôle de base de données défini par l'utilisateur.  
   
@@ -97,15 +101,15 @@ caps.handback.revision: 13
   
 7.  Cliquez avec le bouton droit sur le rôle à modifier, puis sélectionnez **Propriétés**.  
   
-8.  Dans la boîte de dialogue **Propriétés du rôle de base de données – ***nom_rôle_base de données*, dans la page **Général**, cliquez sur **Ajouter**.  
+8.  Dans la boîte de dialogue **Propriétés du rôle de base de données –***nom_rôle_base de données* , dans la page **Général** , cliquez sur **Ajouter**.  
   
-9. Dans la boîte de dialogue **Sélectionner l’utilisateur ou le rôle de la base de données**, sous **Entrez les noms des objets à sélectionner (exemples)**, entrez la connexion ou le rôle de base de données à ajouter à ce rôle de base de données. Ou bien, cliquez sur **Parcourir…** et sélectionnez tout ou partie des objets disponibles dans la boîte de dialogue **Rechercher des objets** . Cliquez sur **OK** pour revenir à la boîte de dialogue **Propriétés du rôle de base de données – ***nom_rôle_base de données*.  
+9. Dans la boîte de dialogue **Sélectionner l’utilisateur ou le rôle de la base de données** , sous **Entrez les noms des objets à sélectionner (exemples)**, entrez la connexion ou le rôle de base de données à ajouter à ce rôle de base de données. Ou bien, cliquez sur **Parcourir…** et sélectionnez tout ou partie des objets disponibles dans la boîte de dialogue **Rechercher des objets** . Cliquez sur **OK** pour revenir à la boîte de dialogue **Propriétés du rôle de base de données –***nom_rôle_base de données* .  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour ajouter un membre à un rôle serveur fixe  
+#### <a name="to-add-a-member-to-a-fixed-server-role"></a>Pour ajouter un membre à un rôle serveur fixe  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -120,9 +124,9 @@ caps.handback.revision: 13
   
  Pour plus d’informations, consultez [ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md).  
   
-#### Pour ajouter un membre à un rôle de base de données défini par l'utilisateur  
+#### <a name="to-add-a-member-to-a-user-defined-database-role"></a>Pour ajouter un membre à un rôle de base de données défini par l'utilisateur  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -135,9 +139,10 @@ caps.handback.revision: 13
   
  Pour plus d’informations, consultez [sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Rôles de niveau serveur](../../../relational-databases/security/authentication-access/server-level-roles.md)   
  [Rôles au niveau de la base de données](../../../relational-databases/security/authentication-access/database-level-roles.md)   
  [Rôles d'applications](../../../relational-databases/security/authentication-access/application-roles.md)  
   
   
+

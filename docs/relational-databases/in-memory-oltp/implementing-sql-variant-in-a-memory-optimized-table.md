@@ -1,22 +1,26 @@
 ---
-title: "Impl&#233;mentation de SQL_VARIANT dans un tableau m&#233;moire optimis&#233; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Implémentation de SQL_VARIANT dans une table optimisée en mémoire | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
 caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3726302ad367aea494b75ec1562732d367800925
+ms.lasthandoff: 04/11/2017
+
 ---
-# Impl&#233;mentation de SQL_VARIANT dans un tableau m&#233;moire optimis&#233;
+# <a name="implementing-sqlvariant-in-a-memory-optimized-table"></a>Implémentation de SQL_VARIANT dans une table optimisée en mémoire
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Considérons un exemple de table avec une colonne **SQL_VARIANT** :  
@@ -25,7 +29,7 @@ caps.handback.revision: 9
 CREATE TABLE [dbo].[T1]([Key] [sql_variant] NOT NULL)  
 ```  
   
- Supposons que la colonne clé peut être de type **BIGINT** ou **NVARCHAR(300)**. Modélisez cette table comme suit :  
+ Supposons que la colonne clé peut être de type **BIGINT** ou **NVARCHAR(300)**. Modélisez cette table comme suit :  
   
 ```tsql  
 -- original disk-based table  
@@ -65,7 +69,7 @@ select [Key],
 from dbo.T1_inmem  
 ```  
   
- Chargez à présent des données dans [T1_HK] à partir de T1 en ouvrant un curseur sur T1 :  
+ Chargez à présent des données dans [T1_HK] à partir de T1 en ouvrant un curseur sur T1 :  
   
 ```tsql  
 DECLARE T1_rows_cursor CURSOR FOR    
@@ -121,7 +125,7 @@ case [Key_enum] when 1 then convert(sql_variant, [Key_bi])
                        end  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Migration vers OLTP en mémoire](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

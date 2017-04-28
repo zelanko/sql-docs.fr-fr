@@ -1,23 +1,27 @@
 ---
-title: "Synth&#232;se des fonctionnalit&#233;s des index columnstore en fonction des versions | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Index columnStore - Nouveautés | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1fe5ea05-5b19-45a4-9b7a-8ae5ca367897
 caps.latest.revision: 28
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 8dc55e28462cd04a90274ada860fd418bcc54775
+ms.lasthandoff: 04/11/2017
+
 ---
-# Synth&#232;se des fonctionnalit&#233;s des index columnstore en fonction des versions
+# <a name="columnstore-indexes---what39s-new"></a>Index columnstore - Nouveautés
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Synthèse des fonctionnalités columnstore disponibles pour chaque version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et les dernières versions d’Azure SQL Database Édition Premium, Azure SQL Data Warehouse et Parallel Data Warehouse.  
@@ -44,7 +48,7 @@ caps.handback.revision: 27
 |Index btree supplémentaires autorisés sur un segment de mémoire ou btree ayant un index columnstore non cluster|oui|oui|oui|oui|oui|  
 |Index columnstore cluster actualisable||oui|oui|oui|oui|  
 |Index Btree sur un index columnstore cluster|||oui|oui|oui|  
-|Index columnstore sur une table mémoire optimisée|||oui|oui|oui|  
+|Index columnstore sur une table optimisée en mémoire|||oui|oui|oui|  
 |Définition d’index columnstore non cluster prenant en charge l’utilisation d’une condition filtrée|||oui|oui|oui|  
 |Option de temporisation de la compression pour les index columnstore dans CREATE TABLE et ALTER TABLE|||oui|oui|oui|   
   
@@ -89,13 +93,13 @@ caps.handback.revision: 27
   
     -   Fonctions d’agrégation Window : COUNT, COUNT_BIG, SUM, AVG, MIN, MAX et CLR.  
   
-    -   Agrégats définis par l’utilisateur Windows : CHECKSUM_AGG, STDEV, STDEVP, VAR, VARP et GROUPING.  
+    -   Agrégats définis par l’utilisateur Windows : CHECKSUM_AGG, STDEV, STDEVP, VAR, VARP et GROUPING.  
   
-    -   Fonctions analytiques d’agrégation Windows :  LAG< LEAD, FIRST_VALUE, LAST_VALUE, PERCENTILE_CONT, PERCENTILE_DISC, CUME_DIST et PERCENT_RANK.  
+    -   Fonctions analytiques d’agrégation Windows :  LAG< LEAD, FIRST_VALUE, LAST_VALUE, PERCENTILE_CONT, PERCENTILE_DISC, CUME_DIST et PERCENT_RANK.  
   
--   Les requêtes monothread s’exécutant sous MAXDOP 1 ou avec un plan de requête série s’exécutent en mode batch. Auparavant, seules les requêtes multithread s’exécutaient en mode batch.  
+-   Les requêtes monothread s’exécutant sous MAXDOP 1 ou avec un plan de requête série s’exécutent en mode batch. Auparavant, seules les requêtes multithread s’exécutaient en mode batch.  
   
--   Les requêtes de table mémoire optimisée peuvent avoir des plans parallèles en mode SQL InterOp lors de l’accès aux données dans rowstore ou dans les index columnstore.  
+-   Les requêtes de table optimisée en mémoire peuvent avoir des plans parallèles en mode SQL InterOp lors de l’accès aux données dans rowstore ou dans les index columnstore.  
   
 ### <a name="supportability"></a>Prise en charge  
  Ces vues système sont nouvelles pour columnstore :  
@@ -161,11 +165,12 @@ caps.handback.revision: 27
 -   Le traitement par lots offre des performances de requête au moins deux fois supérieures, mais il n’est disponible que pour l’exécution de requêtes parallèles.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide des index columnstore](../Topic/Columnstore%20Indexes%20Guide.md)   
- [Chargement de données d’index columnstore](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
+ Guide des index columnstore   
+ Chargement de données d’index columnstore   
  [Performances des requêtes d’index columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Prise en main de columnstore pour l’analytique opérationnelle en temps réel](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [Index columnstore pour l’entreposage des données](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)   
+ Index columnstore pour l’entreposage des données   
  [Défragmentation des index columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+

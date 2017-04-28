@@ -1,34 +1,38 @@
 ---
-title: "Recherche des GUID du jeu de propri&#233;t&#233;s et des ID d&#39;entier de propri&#233;t&#233;s pour les propri&#233;t&#233;s de recherche | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "recherche en texte intégral [SQL Server], listes de propriétés de recherche"
-  - "listes de propriétés de recherche [SQL Server], configuration"
+title: "Recherche des GUID du jeu de propriétés et des ID d’entier de propriétés pour les propriétés de recherche | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text search [SQL Server], search property lists
+- search property lists [SQL Server], configuring
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d234dc5d1d44c11c50483505898586ab5e845a77
+ms.lasthandoff: 04/11/2017
+
 ---
-# Recherche des GUID du jeu de propri&#233;t&#233;s et des ID d&#39;entier de propri&#233;t&#233;s pour les propri&#233;t&#233;s de recherche
+# <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Recherche des GUID du jeu de propriétés et des ID d'entier de propriétés pour les propriétés de recherche
   Cette rubrique explique comment extraire les valeurs requises avant d'ajouter une propriété à une liste de propriétés de recherche et les rendre détectables par la recherche en texte intégral. Ces valeurs incluent le GUID du jeu de propriétés et l'identificateur entier d'une propriété de document.  
   
- Les propriétés de document qui sont extraites par IFilters à partir des données binaires, c’est-à-dire les données stockées dans un type de colonne de données **varbinary**, **varbinary(max)** (y compris **FILESTREAM**) ou **image**, peuvent être rendues disponibles pour la recherche en texte intégral. Pour rendre une propriété extraite détectable, la propriété doit être ajoutée manuellement à une liste de propriétés de recherche. La liste des propriétés de recherche doit également être associée à un ou plusieurs index de recherche en texte intégral. Pour plus d’informations, consultez [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
+ Les propriétés de document qui sont extraites par IFilters à partir des données binaires, c’est-à-dire les données stockées dans un type de colonne de données **varbinary**, **varbinary(max)** (y compris **FILESTREAM**) ou **image** , peuvent être rendues disponibles pour la recherche en texte intégral. Pour rendre une propriété extraite détectable, la propriété doit être ajoutée manuellement à une liste de propriétés de recherche. La liste des propriétés de recherche doit également être associée à un ou plusieurs index de recherche en texte intégral. Pour plus d’informations, consultez [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
- Avant d'ajouter une propriété disponible à une liste de propriétés, vous devez obtenir deux informations sur la propriété :  
+ Avant d'ajouter une propriété disponible à une liste de propriétés, vous devez obtenir deux informations sur la propriété :  
   
--   le GUID du jeu de propriétés de la propriété ;  
+-   le GUID du jeu de propriétés de la propriété ;  
   
--   l'ID d'entier de la propriété ;  
+-   l'ID d'entier de la propriété ;  
   
  (Lorsque vous ajoutez une propriété à une liste de propriétés, vous devez également fournir un nom et une description. Toutefois vous ne devez pas utiliser le nom canonique et la description de la propriété.)  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 32
   
  Pour favoriser la cohérence parmi les formats de fichier, Microsoft a identifié des sous-ensembles de propriétés du document fréquemment utilisées et prioritaires pour plusieurs catégories de documents. Celles-ci incluent des communications, des contacts, des documents, des fichiers de musique, des images et des vidéos. Pour plus d’informations sur les propriétés principales de chaque catégorie, consultez [Propriétés définies par le système pour les formats de fichiers personnalisés](http://go.microsoft.com/fwlink/?LinkId=144336) dans la documentation Windows Search.  
   
- Un format de fichier spécifique peut implémenter des propriétés de trois types :  
+ Un format de fichier spécifique peut implémenter des propriétés de trois types :  
   
 -   Propriétés génériques définies par [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
@@ -55,7 +59,7 @@ caps.handback.revision: 32
 -   Propriétés personnalisées, spécifiques à l'application définies par le fournisseur de logiciels.  
   
 ##  <a name="filtdump"></a> Recherche d'informations sur les propriétés disponibles à l'aide de FILTDUMP.EXE  
- Pour savoir quelles propriétés sont détectées et extraites, le cas échéant, par un IFilter installé, vous pouvez installer et exécuter l’utilitaire **filtdump.exe**, qui fait partie du Kit de développement logiciel (SDK) [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+ Pour savoir quelles propriétés sont détectées et extraites, le cas échéant, par un IFilter installé, vous pouvez installer et exécuter l’utilitaire **filtdump.exe** , qui fait partie du Kit de développement logiciel (SDK) [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  Exécutez **filtdump.exe** à partir de l’invite de commandes et fournissez un argument unique. Cet argument est le nom d'un fichier individuel dont le type de fichier correspond à un IFilter installé. L'utilitaire affiche une liste de toutes les propriétés identifiées par l'IFilter dans le document, avec leurs GUID de jeu de propriétés, leurs ID d'entier et des informations supplémentaires.  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 32
 ##  <a name="propdesc"></a> Recherche de valeurs pour une propriété de recherche à partir d'une description de la propriété Windows  
  Pour une propriété de recherche Windows connue, vous pouvez obtenir ces informations à partir des attributs **formatID** et **propID** de la description de la propriété (**propertyDescription**).  
   
- L'exemple suivant montre la partie pertinente d'une description de propriété Microsoft typique, dans ce cas, la propriété `System.Author`. L'attribut `formatID` spécifie le GUID du jeu de propriétés, `F29F85E0-4FF9-1068-AB91-08002B27B3D9` et l'attribut `propID` spécifie l'ID entier de propriété `4.`. Remarquez que l'attribut `name` spécifie le nom canonique Windows de la propriété `System.Author`. (Cet exemple omet les parties de la description de la propriété qui ne sont pas appropriées.)  
+ L'exemple suivant montre la partie pertinente d'une description de propriété Microsoft typique, dans ce cas, la propriété `System.Author` . L'attribut `formatID` spécifie le GUID du jeu de propriétés, `F29F85E0-4FF9-1068-AB91-08002B27B3D9`et l'attribut `propID` spécifie l'ID entier de propriété `4.` . Remarquez que l'attribut `name` spécifie le nom canonique Windows de la propriété `System.Author`. (Cet exemple omet les parties de la description de la propriété qui ne sont pas appropriées.)  
   
 ```  
 .  
@@ -82,7 +86,7 @@ propID = 4
   
  Pour obtenir la description complète de cette propriété, consultez [System.Author](http://go.microsoft.com/fwlink/?LinkId=144337) dans la documentation Windows Search.  
   
- Pour obtenir une liste complète des propriétés Windows, consultez [Propriétés Windows](http://go.microsoft.com/fwlink/?LinkId=215013) et aussi la documentation Windows Search.  
+ Pour obtenir une liste complète des propriétés Windows, consultez [Propriétés Windows](http://go.microsoft.com/fwlink/?LinkId=215013)et aussi la documentation Windows Search.  
   
 ##  <a name="examples"></a> Ajout d'une propriété à une liste de propriétés de recherche  
  L'exemple suivant indique comment ajouter une propriété à une liste de propriétés de recherche. L’exemple utilise une instruction [ALTER SEARCH PROPERTY LIST](../../t-sql/statements/alter-search-property-list-transact-sql.md) pour ajouter la propriété `System.Author` à une liste de propriétés de recherche nommée `PropertyList1`, et fournit un nom convivial à la propriété, `Author`.  
@@ -100,8 +104,8 @@ GO
   
  Pour plus d’informations sur la création d’une liste de propriétés de recherche et son association à un index de recherche en texte intégral, consultez [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
-## Voir aussi  
- [Rechercher les propriétés du document à l'aide des listes de propriétés de recherche](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [Configurer et gérer des filtres pour la recherche](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   
   

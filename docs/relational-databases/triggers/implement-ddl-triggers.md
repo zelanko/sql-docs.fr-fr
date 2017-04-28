@@ -1,27 +1,31 @@
 ---
-title: "Impl&#233;menter des d&#233;clencheurs DDL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "déclencheurs DDL, implémentation"
+title: "Implémenter des déclencheurs DDL | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DDL triggers, implementing
 ms.assetid: f44e5340-1d18-40e9-828e-0ffcca091ae3
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ebeb270725abbb10a2bcb86c3248d71cdd3f15b1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Impl&#233;menter des d&#233;clencheurs DDL
+# <a name="implement-ddl-triggers"></a>Implémenter des déclencheurs DDL
   Cette rubrique fournit des informations pour vous aider à créer, modifier, désactiver ou supprimer des déclencheurs DDL.  
   
-## Création de déclencheurs DDL  
+## <a name="creating-ddl-triggers"></a>Création de déclencheurs DDL  
  Les déclencheurs DDL sont créés à l'aide de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TRIGGER pour les déclencheurs DDL.  
   
  **Pour créer un déclencheur DDL**  
@@ -29,9 +33,9 @@ caps.handback.revision: 32
 -   [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
   
 > [!IMPORTANT]  
->  La fonctionnalité de renvoi des jeux de résultats à partir de déclencheurs sera éliminée dans une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les déclencheurs qui renvoient des jeux de résultats peuvent provoquer un comportement inattendu des applications qui ne sont pas conçues pour interagir avec eux. Évitez de renvoyer des jeux de résultats provenant de déclencheurs dans un nouveau travail de développement et prévoyez la modification des applications qui y recourent actuellement. Pour empêcher les déclencheurs de retourner des jeux de résultats dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], définissez l’option d’[interdiction des résultats des déclencheurs](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md) sur 1. Le paramètre par défaut de cette option sera 1 dans une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  La fonctionnalité de renvoi des jeux de résultats à partir de déclencheurs sera éliminée dans une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les déclencheurs qui renvoient des jeux de résultats peuvent provoquer un comportement inattendu des applications qui ne sont pas conçues pour interagir avec eux. Évitez de renvoyer des jeux de résultats provenant de déclencheurs dans un nouveau travail de développement et prévoyez la modification des applications qui y recourent actuellement. Pour empêcher les déclencheurs de retourner des jeux de résultats dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], définissez l’option d’ [interdiction des résultats des déclencheurs](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md) sur 1. Le paramètre par défaut de cette option sera 1 dans une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## Modification de déclencheurs DDL  
+## <a name="modifying-ddl-triggers"></a>Modification de déclencheurs DDL  
  Si vous devez modifier la définition d'un déclencheur DDL, vous pouvez soit l'annuler, puis le recréer, soit redéfinir le déclencheur existant en une seule opération.  
   
  Si vous changez le nom d'un objet référencé par un déclencheur DDL, vous devez modifier le déclencheur pour que sa définition se réfère au nouveau nom de l'objet. Par conséquent, avant de renommer un objet, affichez les dépendances de l'objet pour savoir si des déclencheurs peuvent être concernés par la modification projetée.  
@@ -50,7 +54,7 @@ caps.handback.revision: 32
   
 -   [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   
-## Désactivation et suppression de déclencheurs DDL  
+## <a name="disabling-and-dropping-ddl-triggers"></a>Désactivation et suppression de déclencheurs DDL  
  Vous pouvez désactiver ou supprimer un déclencheur DDL s'il ne vous est plus utile.  
   
  La désactivation d'un déclencheur DDL n'entraîne pas sa suppression. Le déclencheur existe toujours en tant qu'objet dans la base de données actuelle. Cependant, il ne se déclenchera pas lorsque des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] sur lesquelles il a été programmé seront exécutées. Tout déclencheur DDL désactivé peut être réactivé. Quand un déclencheur est réactivé, il se déclenche de la même manière que lors de sa création. Les déclencheurs sont activés par défaut au moment de leur création.  

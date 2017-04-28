@@ -1,32 +1,36 @@
 ---
-title: "Retour de donn&#233;es &#224; partir d&#39;une proc&#233;dure stock&#233;e | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "procédures stockées [SQL Server], retour des données"
-  - "retour de données à partir d'une procédure stockée"
+title: "Retour de données à partir d’une procédure stockée | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- stored procedures [SQL Server], returning data
+- returning data from stored procedure
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 02f8701f04f1f19c12c6ed31e9fd0e2f0f8f6e83
+ms.lasthandoff: 04/11/2017
+
 ---
-# Retour de donn&#233;es &#224; partir d&#39;une proc&#233;dure stock&#233;e
-  Il existe deux méthodes permettant de retourner des jeux de résultats ou des données d'une procédure vers un programme appelant : les paramètres de sortie et les codes de retour. Cette rubrique fournit des informations sur ces deux approches.  
+# <a name="return-data-from-a-stored-procedure"></a>Retour de données à partir d'une procédure stockée
+  Il existe deux méthodes permettant de retourner des jeux de résultats ou des données d'une procédure vers un programme appelant : les paramètres de sortie et les codes de retour. Cette rubrique fournit des informations sur ces deux approches.  
   
-## Retour de données à l'aide d'un paramètre de sortie  
+## <a name="returning-data-using-an-output-parameter"></a>Retour de données à l'aide d'un paramètre de sortie  
  Si vous spécifiez le mot clé OUTPUT pour un paramètre dans la définition de procédure, la procédure peut retourner la valeur actuelle du paramètre au programme appelant lors de la sortie de la procédure. Pour enregistrer la valeur du paramètre dans une variable afin que le programme appelant puisse l'utiliser, ce dernier doit inclure le mot clé OUTPUT lorsqu'il exécute la procédure. Pour plus d’informations sur les types de données qui peuvent être utilisés comme paramètres de sortie, consultez [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
   
-### Exemples de paramètre de sortie  
- L'exemple ci-dessous illustre une procédure avec un paramètre d'entrée et un paramètre de sortie. Le paramètre `@SalesPerson` doit recevoir une valeur d'entrée spécifiée par le programme appelant. L’instruction SELECT utilise la valeur passée dans le paramètre d’entrée pour obtenir la valeur `SalesYTD` correcte. L’instruction SELECT affecte également la valeur au paramètre de sortie `@SalesYTD`, qui retourne la valeur au programme appelant quand la procédure se termine.  
+### <a name="examples-of-output-parameter"></a>Exemples de paramètre de sortie  
+ L'exemple ci-dessous illustre une procédure avec un paramètre d'entrée et un paramètre de sortie. Le paramètre `@SalesPerson` doit recevoir une valeur d'entrée spécifiée par le programme appelant. L’instruction SELECT utilise la valeur passée dans le paramètre d’entrée pour obtenir la valeur `SalesYTD` correcte. L’instruction SELECT affecte également la valeur au paramètre de sortie `@SalesYTD` , qui retourne la valeur au programme appelant quand la procédure se termine.  
   
 ```  
 USE AdventureWorks2012;  
@@ -49,7 +53,7 @@ GO
   
 ```  
   
- L’exemple suivant appelle la procédure créée dans le premier exemple et enregistre la valeur de sortie retournée par la procédure appelée dans la variable `@SalesYTD`, qui est locale pour le programme appelant.  
+ L’exemple suivant appelle la procédure créée dans le premier exemple et enregistre la valeur de sortie retournée par la procédure appelée dans la variable `@SalesYTD` , qui est locale pour le programme appelant.  
   
 ```  
 -- Declare the variable to receive the output value of the procedure.  
@@ -65,22 +69,22 @@ GO
   
 ```  
   
- Des valeurs d'entrée peuvent également être définies pour les paramètres OUTPUT lorsque la procédure est exécutée. Ainsi, la procédure peut recevoir une valeur du programme appelant, la modifier ou l'utiliser pour exécuter des opérations, puis retourner la nouvelle valeur au programme appelant. Dans l’exemple précédent, la variable `@SalesYTDBySalesPerson` peut recevoir une valeur avant que le programme appelle la procédure `Sales.uspGetEmployeeSalesYTD`. L’instruction d’exécution passe alors la valeur de la variable `@SalesYTDBySalesPerson` au paramètre OUTPUT `@SalesYTD`. Ensuite, dans le corps de la procédure, la valeur peut être utilisée pour des calculs qui génèrent une nouvelle valeur. La nouvelle valeur est repassée hors de la procédure par le paramètre OUTPUT, mettant à jour la valeur dans la variable `@SalesYTDBySalesPerson` quand la procédure se termine. Ce mécanisme est souvent appelé « capacité de passage par référence ».  
+ Des valeurs d'entrée peuvent également être définies pour les paramètres OUTPUT lorsque la procédure est exécutée. Ainsi, la procédure peut recevoir une valeur du programme appelant, la modifier ou l'utiliser pour exécuter des opérations, puis retourner la nouvelle valeur au programme appelant. Dans l’exemple précédent, la variable `@SalesYTDBySalesPerson` peut recevoir une valeur avant que le programme appelle la procédure `Sales.uspGetEmployeeSalesYTD` . L’instruction d’exécution passe alors la valeur de la variable `@SalesYTDBySalesPerson` au paramètre OUTPUT `@SalesYTD` . Ensuite, dans le corps de la procédure, la valeur peut être utilisée pour des calculs qui génèrent une nouvelle valeur. La nouvelle valeur est repassée hors de la procédure par le paramètre OUTPUT, mettant à jour la valeur dans la variable `@SalesYTDBySalesPerson` quand la procédure se termine. Ce mécanisme est souvent appelé « capacité de passage par référence ».  
   
  Si vous spécifiez OUTPUT pour un paramètre lorsque vous appelez une procédure alors que le paramètre n'est pas défini avec OUTPUT dans la définition de la procédure, vous obtiendrez un message d'erreur. Il est néanmoins possible d'exécuter une procédure avec des paramètres output et de ne pas spécifier OUTPUT lors de l'exécution de la procédure. Aucune erreur n'est retournée, mais vous ne pouvez pas utiliser la valeur de sortie dans le programme appelant.  
   
-### Utilisation du type de données Cursor dans des paramètres OUTPUT  
+### <a name="using-the-cursor-data-type-in-output-parameters"></a>Utilisation du type de données Cursor dans des paramètres OUTPUT  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] Les procédures ne peuvent utiliser le type de données **cursor** que pour les paramètres OUTPUT. Si le type de données **cursor** est spécifié pour un paramètre, les mots clés VARYING et OUTPUT doivent être spécifiés pour ce paramètre dans la définition de la procédure. Un paramètre peut être spécifié comme OUTPUT uniquement, mais si le mot clé VARYING est spécifié dans la déclaration du paramètre, le type de données doit obligatoirement être **cursor** et vous devez également préciser le mot clé OUTPUT.  
   
 > [!NOTE]  
->  Le type de données **cursor** ne peut pas être lié à des variables d’application par l’intermédiaire des API de base de données, telles que OLE DB, ODBC, ADO et DB-Library. Les paramètres OUTPUT devant être liés avant qu’une application puisse exécuter une procédure, les procédures qui contiennent des paramètres OUTPUT de type **cursor** ne peuvent pas être appelées à partir des API de base de données. Ces procédures peuvent être appelées à partir de traitements, procédures ou déclencheurs [!INCLUDE[tsql](../../includes/tsql-md.md)] seulement quand la variable OUTPUT de type **cursor** est affectée à une variable [!INCLUDE[tsql](../../includes/tsql-md.md)] locale de type **cursor**.  
+>  Le type de données **cursor** ne peut pas être lié à des variables d’application par l’intermédiaire des API de base de données, telles que OLE DB, ODBC, ADO et DB-Library. Les paramètres OUTPUT devant être liés avant qu’une application puisse exécuter une procédure, les procédures qui contiennent des paramètres OUTPUT de type **cursor** ne peuvent pas être appelées à partir des API de base de données. Ces procédures peuvent être appelées à partir de traitements, procédures ou déclencheurs [!INCLUDE[tsql](../../includes/tsql-md.md)] seulement quand la variable OUTPUT de type **cursor** est affectée à une variable [!INCLUDE[tsql](../../includes/tsql-md.md)] locale de type **cursor** .  
   
-### Règles pour les paramètres de sortie de curseur  
+### <a name="rules-for-cursor-output-parameters"></a>Règles pour les paramètres de sortie de curseur  
  Les règles suivantes régissent les paramètres de sortie de type **cursor** lors de l’exécution de la procédure :  
   
--   Dans le cas d'un curseur avant uniquement, les lignes renvoyées dans le jeu de résultats du curseur sont seulement celles situées au niveau de la position du curseur ou au-delà de celui-ci, à la fin de la procédure, par exemple :  
+-   Dans le cas d'un curseur avant uniquement, les lignes renvoyées dans le jeu de résultats du curseur sont seulement celles situées au niveau de la position du curseur ou au-delà de celui-ci, à la fin de la procédure, par exemple :  
   
-    -   Un curseur ne permettant pas le défilement est ouvert dans une procédure, dans un jeu de résultats de 100 lignes, appelé RS.  
+    -   Un curseur ne permettant pas le défilement est ouvert dans une procédure, dans un jeu de résultats de 100 lignes, appelé RS.  
   
     -   La procédure extrait les 5 premières lignes du jeu de résultats RS.  
   
@@ -102,8 +106,8 @@ GO
     > [!NOTE]  
     >  L'état fermé n'a d'importance qu'au moment du retour. Par exemple, vous pouvez fermer un curseur au cours de l'exécution de la procédure, le rouvrir plus tard dans la procédure et renvoyer le jeu de résultats de ce curseur au traitement d'instructions, à la procédure ou au déclencheur appelant.  
   
-### Exemples de paramètres de sortie de curseur  
- L’exemple ci-dessous crée une procédure avec un paramètre de sortie `@currency`_`cursor` utilisant le type de données **cursor**. La procédure stockée est ensuite appelée dans un traitement.  
+### <a name="examples-of-cursor-output-parameters"></a>Exemples de paramètres de sortie de curseur  
+ L’exemple ci-dessous crée une procédure avec un paramètre de sortie `@currency`_`cursor` utilisant le type de données **cursor** . La procédure stockée est ensuite appelée dans un traitement.  
   
  Commencez par créer la procédure qui déclare puis ouvre un curseur dans la table Currency.  
   
@@ -143,17 +147,17 @@ GO
   
 ```  
   
-## Renvoi de données au moyen d'un code de retour  
- Une procédure peut retourner une valeur entière appelée « code de retour » pour indiquer l'état d'exécution d'une procédure. Le code de retour d'une procédure se définit au moyen de l'instruction RETURN. Comme dans le cas des paramètres OUTPUT, vous devez enregistrer le code de retour dans une variable lors de l'exécution de la procédure afin de pouvoir utiliser sa valeur dans le programme appelant. Par exemple, la variable d’attribution `@result`, de type de données **int**, sert à stocker le code de retour de la procédure `my_proc`, de sorte que :  
+## <a name="returning-data-using-a-return-code"></a>Renvoi de données au moyen d'un code de retour  
+ Une procédure peut retourner une valeur entière appelée « code de retour » pour indiquer l'état d'exécution d'une procédure. Le code de retour d'une procédure se définit au moyen de l'instruction RETURN. Comme dans le cas des paramètres OUTPUT, vous devez enregistrer le code de retour dans une variable lors de l'exécution de la procédure afin de pouvoir utiliser sa valeur dans le programme appelant. Par exemple, la variable d’attribution `@result` , de type de données **int** , sert à stocker le code de retour de la procédure `my_proc`, de sorte que :  
   
 ```  
 DECLARE @result int;  
 EXECUTE @result = my_proc;  
 ```  
   
- Les codes de retour sont couramment utilisés dans les blocs de contrôle de flux des procédures pour définir la valeur du code de retour pour chaque situation d'erreur possible. Vous pouvez utiliser la fonction @@ERROR après une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] pour détecter si une erreur s'est produite pendant l'exécution de l'instruction.  
+ Les codes de retour sont couramment utilisés dans les blocs de contrôle de flux des procédures pour définir la valeur du code de retour pour chaque situation d'erreur possible. Vous pouvez utiliser la fonction @@ERROR après une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] pour détecter si une erreur s’est produite pendant l’exécution de l’instruction.  
   
-### Exemples de codes de retour  
+### <a name="examples-of-return-codes"></a>Exemples de codes de retour  
  L'exemple suivant illustre la procédure `usp_GetSalesYTD` de gestion d'erreurs qui définit les valeurs du code de retour pour diverses erreurs. Le tableau suivant montre la valeur entière attribuée par la procédure à chaque erreur possible, et la signification correspondante pour chaque valeur.  
   
 |Valeur du code de retour|Signification|  
@@ -222,7 +226,7 @@ PRINT N'Year-to-date sales for this employee is ' +
   
 ```  
   
- L'exemple suivant crée un programme chargé de gérer les codes de retour retournés par la procédure `usp_GetSalesYTD`.  
+ L'exemple suivant crée un programme chargé de gérer les codes de retour retournés par la procédure `usp_GetSalesYTD` .  
   
 ```  
 -- Declare the variables to receive the output value and return code   
@@ -252,7 +256,7 @@ GO
   
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
  [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)   

@@ -1,28 +1,32 @@
 ---
-title: "Objet SQL Server:Broker Statistics | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:Broker Statistics"
-  - "objet Statistiques de SQL"
+title: Objet SQL Server:Broker Statistics | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Broker Statistics
+- Broker Statistics object
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6f2372e2cc641919957f14145a1e7ff0c96bb74a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Objet SQL Server:Broker Statistics
-  L'objet de performance SQLServer : Statistiques de Service Broker contient des compteurs de performance qui rendent compte d'informations générales sur [!INCLUDE[ssSB](../../includes/sssb-md.md)] pour l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Le tableau ci-dessous répertorie les compteurs que cet objet contient.  
+# <a name="sql-server-broker-statistics-object"></a>Objet SQL Server:Broker Statistics
+  L'objet de performance SQLServer : Statistiques de Service Broker contient des compteurs de performance qui rendent compte d'informations générales sur [!INCLUDE[ssSB](../../includes/sssb-md.md)] pour l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Le tableau ci-dessous répertorie les compteurs que cet objet contient.  
   
-|Compteurs statistiques de Service Broker de SQL Server|Description|  
+|Compteurs statistiques de Service Broker de SQL Server|Description|  
 |-------------------------------------------|-----------------|  
 |**Total des erreurs d'activation**|Nombre de fois où une procédure stockée d'activation de [!INCLUDE[ssSB](../../includes/sssb-md.md)] s'est terminée avec une erreur.|  
 |**Restaurations de transactions Service Broker**|Nombre de transactions restaurées qui contenaient des instructions de type DML relatives à [!INCLUDE[ssSB](../../includes/sssb-md.md)], comme SEND et RECEIVE.|  
@@ -34,16 +38,16 @@ caps.handback.revision: 32
 |**Messages locaux empilés/s**|Nombre de messages placés dans les files d'attente de l'instance par seconde, en ne prenant en compte que les messages non arrivés sur le réseau.|  
 |**Total des messages empilés**|Nombre total de messages ayant été mis dans les files d'attente de l'instance.|  
 |**Messages empilés/s**|Nombre de messages ayant été mis dans les files d'attente de l'instance par seconde. Cela inclut les messages de tous les niveaux de priorité.|  
-|**Messages P1 empilés/s**|Nombre de messages de priorité 1 ayant été mis dans les files d’attente de l’instance par seconde.|  
-|**Messages P2 empilés/s**|Nombre de messages de priorité 2 ayant été mis dans les files d’attente de l’instance par seconde.|  
-|**Messages P3 empilés/s**|Nombre de messages de priorité 3 ayant été mis dans les files d’attente de l’instance par seconde.|  
-|**Messages P4 empilés/s**|Nombre de messages de priorité 4 ayant été mis dans les files d’attente de l’instance par seconde.|  
-|**Messages P5 empilés/s**|Nombre de messages de priorité 5 ayant été mis dans les files d’attente de l’instance par seconde.|  
-|**Messages P6 empilés/s**|Nombre de messages de priorité 6 ayant été mis dans les files d’attente de l’instance par seconde.|  
-|**Messages P7 empilés/s**|Nombre de messages de priorité 7 ayant été mis dans les files d’attente de l’instance par seconde.|  
-|**Messages P8 empilés/s**|Nombre de messages de priorité 8 ayant été mis dans les files d’attente de l’instance par seconde.|  
-|**Messages P9 empilés/s**|Nombre de messages de priorité 9 ayant été mis dans les files d’attente de l’instance par seconde.|  
-|**Messages P10 empilés/s**|Nombre de messages de priorité 10 ayant été mis dans les files d'attente de l'instance par seconde.|  
+|**Messages P1 empilés/s**|Nombre de messages de priorité 1 ayant été mis dans les files d’attente de l’instance par seconde.|  
+|**Messages P2 empilés/s**|Nombre de messages de priorité 2 ayant été mis dans les files d’attente de l’instance par seconde.|  
+|**Messages P3 empilés/s**|Nombre de messages de priorité 3 ayant été mis dans les files d’attente de l’instance par seconde.|  
+|**Messages P4 empilés/s**|Nombre de messages de priorité 4 ayant été mis dans les files d’attente de l’instance par seconde.|  
+|**Messages P5 empilés/s**|Nombre de messages de priorité 5 ayant été mis dans les files d’attente de l’instance par seconde.|  
+|**Messages P6 empilés/s**|Nombre de messages de priorité 6 ayant été mis dans les files d’attente de l’instance par seconde.|  
+|**Messages P7 empilés/s**|Nombre de messages de priorité 7 ayant été mis dans les files d’attente de l’instance par seconde.|  
+|**Messages P8 empilés/s**|Nombre de messages de priorité 8 ayant été mis dans les files d’attente de l’instance par seconde.|  
+|**Messages P9 empilés/s**|Nombre de messages de priorité 9 ayant été mis dans les files d’attente de l’instance par seconde.|  
+|**Messages P10 empilés/s**|Nombre de messages de priorité 10 ayant été mis dans les files d'attente de l'instance par seconde.|  
 |**Messages TransmissionQ empilés/s**|Nombre de messages placés dans la file d'attente des transmissions du [!INCLUDE[ssSB](../../includes/sssb-md.md)] par seconde.|  
 |**Total des fragments de message du transport empilés**|Nombre de fragments de messages placés dans les files d'attente de l'instance, en ne prenant en compte que les messages arrivés sur le réseau.|  
 |**Fragments de message du transport empilés/s**|Nombre de fragments de messages ayant été mis dans les files d'attente de l'instance par seconde.|  
@@ -62,7 +66,7 @@ caps.handback.revision: 32
 |**Total SQL SEND**|Nombre total d'instructions SEND [!INCLUDE[tsql](../../includes/tsql-md.md)] exécutées.|  
 |**SQL SEND/s**|Nombre d'instructions SEND [!INCLUDE[tsql](../../includes/tsql-md.md)] exécutées par seconde.|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   

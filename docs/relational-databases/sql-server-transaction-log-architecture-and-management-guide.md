@@ -1,24 +1,29 @@
 ---
-title: "Architecture et gestion du journal des transactions SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Architecture du journal des transactions"
+title: "Guide d’architecture et gestion du journal des transactions SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 10/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transaction log architecture guide
+- guide, transaction log architecture
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 caps.latest.revision: 3
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5486c08226959ecb96431659ce2b865160d20680
+ms.lasthandoff: 04/11/2017
+
 ---
-# Architecture et gestion du journal des transactions SQL Server
+# <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guide d’architecture et gestion du journal des transactions SQL Server
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Chaque base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] possède un journal des transactions qui enregistre toutes les transactions et les modifications apportées par chacune d'entre elles. Le journal des transactions est un composant essentiel de la base de données et, en cas de défaillance du système, vous pouvez en avoir besoin pour rétablir la cohérence de la base de données. Ce guide contient des informations sur l'architecture physique et logique du journal des transactions. Ces informations pourront vous aider à gérer plus efficacement les journaux des transactions.  
@@ -29,7 +34,7 @@ caps.handback.revision: 3
   
  Les enregistrements de journal relatifs aux modifications de données consignent soit l'opération logique effectuée, soit les images avant/après des données modifiées. L'image avant est une copie des données avant que l'opération n'ait été effectuée, tandis que l'image après est une copie des données après que l'opération a été effectuée.  
   
- Les étapes pour récupérer une opération dépendent du type de journal d'enregistrement :  
+ Les étapes pour récupérer une opération dépendent du type de journal d'enregistrement :  
   
 -   Opération logique enregistrée  
   
@@ -43,11 +48,11 @@ caps.handback.revision: 3
   
     -   Si vous annulez l'opération, l'image avant est appliquée.  
   
- De nombreux types d'opérations sont enregistrés dans le journal des transactions. Ces opérations comprennent :  
+ De nombreux types d'opérations sont enregistrés dans le journal des transactions. Ces opérations comprennent :  
   
 -   Le début et la fin de chaque transaction.  
   
--   Chaque modification de données (insertion, mise à jour ou suppression). Il s'agit des modifications apportées aux tables, y compris les tables système, par les procédures stockées système ou les instructions DDL (Data Definition Language).  
+-   Chaque modification de données (insertion, mise à jour ou suppression). Il s'agit des modifications apportées aux tables, y compris les tables système, par les procédures stockées système ou les instructions DDL (Data Definition Language).  
   
 -   Chaque allocation ou désallocation de page et d'étendue.  
   
@@ -62,9 +67,9 @@ caps.handback.revision: 3
   
  Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] divise chaque fichier journal physique en un certain nombre de fichiers journaux virtuels. La taille et le nombre de ces fichiers journaux virtuels sont variables. Le [!INCLUDE[ssDE](../includes/ssde-md.md)] choisit dynamiquement la taille des fichiers journaux virtuels en créant ou en étendant des fichiers journaux. Le [!INCLUDE[ssDE](../includes/ssde-md.md)] essaie de ne conserver qu’un petit nombre de fichiers virtuels. Après une extension du fichier journal, la taille des fichiers virtuels est la somme de la taille du journal existant et de la taille du nouvel incrément de fichier. La taille et le nombre des fichiers journaux virtuels ne peuvent être ni configurés, ni définis par les administrateurs.  
   
- Le seul moment où les fichiers journaux virtuels ont une incidence sur les performances du système est lorsque les valeurs *size* et *growth_increment* des fichiers journaux physiques sont faibles. La valeur *size* correspond à la taille initiale du fichier journal et la valeur *growth_increment* correspond à la quantité d’espace ajoutée au fichier chaque fois qu’un espace supplémentaire s’avère nécessaire. Si la taille des fichiers journaux s'accroît par de petits incréments, de nombreux fichiers journaux virtuels vont être créés, ce qui peut ralentir le démarrage de la base de données ainsi que les opérations de sauvegarde et de restauration. Il est conseillé d’affecter aux fichiers journaux une valeur *size* proche de la taille finale souhaitée et une valeur *growth_increment* relativement importante. Pour plus d’informations sur ces paramètres, consultez [Options de fichiers et de groupes de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20(Transact-SQL).md).  
+ Le seul moment où les fichiers journaux virtuels ont une incidence sur les performances du système est lorsque les valeurs *size* et *growth_increment* des fichiers journaux physiques sont faibles. La valeur *size* correspond à la taille initiale du fichier journal et la valeur *growth_increment* correspond à la quantité d’espace ajoutée au fichier chaque fois qu’un espace supplémentaire s’avère nécessaire. Si la taille des fichiers journaux s'accroît par de petits incréments, de nombreux fichiers journaux virtuels vont être créés, ce qui peut ralentir le démarrage de la base de données ainsi que les opérations de sauvegarde et de restauration. Il est conseillé d’affecter aux fichiers journaux une valeur *size* proche de la taille finale souhaitée et une valeur *growth_increment* relativement importante. Pour plus d’informations sur ces paramètres, consultez [Options de fichiers et de groupes de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
- Le journal des transactions est un fichier cumulatif. Considérons, par exemple, une base de données possédant un fichier journal physique divisé en quatre fichiers journaux virtuels. Lors de la création de la base de données, le fichier journal logique commence au début du fichier journal physique. Les nouveaux enregistrements du journal sont ajoutés à la fin du journal logique, qui s'étend vers la fin du journal physique. Le fait de tronquer le journal permet de libérer tous les journaux virtuels dont les enregistrements précèdent tous le MinLSN (numéro séquentiel dans le journal minimum). Le *MinLSN* est le numéro séquentiel dans le journal du plus ancien enregistrement du journal requis pour une opération de restauration réussie de l’ensemble de la base de données. Le journal des transactions de la base de données exemple ressemblerait à celui de l'illustration suivante :  
+ Le journal des transactions est un fichier cumulatif. Considérons, par exemple, une base de données possédant un fichier journal physique divisé en quatre fichiers journaux virtuels. Lors de la création de la base de données, le fichier journal logique commence au début du fichier journal physique. Les nouveaux enregistrements du journal sont ajoutés à la fin du journal logique, qui s'étend vers la fin du journal physique. Le fait de tronquer le journal permet de libérer tous les journaux virtuels dont les enregistrements précèdent tous le MinLSN (numéro séquentiel dans le journal minimum). Le *MinLSN* est le numéro séquentiel dans le journal du plus ancien enregistrement du journal requis pour une opération de restauration réussie de l’ensemble de la base de données. Le journal des transactions de la base de données exemple ressemblerait à celui de l'illustration suivante :  
   
  ![tranlog3](../relational-databases/media/tranlog3.gif)  
   
@@ -72,26 +77,26 @@ caps.handback.revision: 3
   
 ![tranlog4](../relational-databases/media/tranlog4.gif)   
   
- Le cycle se répète indéfiniment tant que la fin du journal logique n'a pas atteint le début du journal logique. Si les anciens enregistrements du journal sont tronqués suffisamment souvent pour laisser de la place à tous les nouveaux enregistrements créées jusqu'au point de contrôle suivant, le journal ne se remplit jamais. Si la fin du journal logique atteint le début du journal logique, l'une ou l'autre des situations suivantes se produit :  
+ Le cycle se répète indéfiniment tant que la fin du journal logique n'a pas atteint le début du journal logique. Si les anciens enregistrements du journal sont tronqués suffisamment souvent pour laisser de la place à tous les nouveaux enregistrements créées jusqu'au point de contrôle suivant, le journal ne se remplit jamais. Si la fin du journal logique atteint le début du journal logique, l'une ou l'autre des situations suivantes se produit :  
   
--   Si le paramètre FILEGROWTH est activé pour le journal et que l’espace disque est suffisant, le fichier s’étend en fonction de la taille spécifiée dans le paramètre *growth_increment*, les nouveaux enregistrements du journal étant ajoutés à l’extension. Pour plus d’informations sur le paramètre FILEGROWTH, consultez [Options de fichiers et de groupes de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20(Transact-SQL).md).  
+-   Si le paramètre FILEGROWTH est activé pour le journal et que l’espace disque est suffisant, le fichier s’étend en fonction de la taille spécifiée dans le paramètre *growth_increment*, les nouveaux enregistrements du journal étant ajoutés à l’extension. Pour plus d’informations sur le paramètre FILEGROWTH, consultez [Options de fichiers et de groupes de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
 -   Si le paramètre FILEGROWTH n’est pas activé ou si l’espace disque réservé au fichier journal est inférieur à la taille spécifiée dans le paramètre *growth_increment*, l’erreur 9002 est générée.  
   
  Si le journal contient plusieurs fichiers journaux physiques, le journal logique va se déplacer dans tous les fichiers journaux physiques avant de revenir au début du premier fichier journal physique.  
   
-### Troncation de journal  
- La troncation du journal est essentielle pour empêcher que le journal se remplisse. La troncation du journal supprime les fichiers journaux virtuels inactifs du journal des transactions logique d'une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ce qui libère de l'espace dans le journal logique de façon à ce qu'il soit réutilisé par le journal des transactions physique. Si un journal des transactions n'était jamais tronqué, il finirait par occuper tout l'espace disque alloué à ses fichiers journaux physiques. Toutefois, une opération de point de contrôle est requise avant que le journal des transactions puisse être tronqué. Un point de contrôle écrit les pages modifiées en mémoire actuelles (appelées pages de modifications) et les informations du journal des transactions de la mémoire vers le disque. Lorsque le point de contrôle est créé, la partie inactive du journal des transactions est marquée comme réutilisable. Après cela, elle peut être libérée par troncation du journal. Pour plus d’informations sur les points de contrôle, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
+### <a name="log-truncation"></a>Troncation de journal  
+ La troncation du journal est essentielle pour empêcher que le journal se remplisse. La troncation du journal supprime les fichiers journaux virtuels inactifs du journal des transactions logique d'une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , ce qui libère de l'espace dans le journal logique de façon à ce qu'il soit réutilisé par le journal des transactions physique. Si un journal des transactions n'était jamais tronqué, il finirait par occuper tout l'espace disque alloué à ses fichiers journaux physiques. Toutefois, une opération de point de contrôle est requise avant que le journal des transactions puisse être tronqué. Un point de contrôle écrit les pages modifiées en mémoire actuelles (appelées pages de modifications) et les informations du journal des transactions de la mémoire vers le disque. Lorsque le point de contrôle est créé, la partie inactive du journal des transactions est marquée comme réutilisable. Après cela, elle peut être libérée par troncation du journal. Pour plus d’informations sur les points de contrôle, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
   
- Les illustrations suivantes montrent un journal des transactions avant et après une troncation. La première illustration montre un journal des transactions qui n'a jamais été tronqué. Actuellement, quatre fichiers journaux virtuels sont utilisés par le journal logique. Le journal logique commence avant le premier fichier journal virtuel et se termine au journal virtuel 4. L'enregistrement NSEmin se trouve dans le journal virtuel 3. Les journaux virtuels 1 et 2 contiennent uniquement des enregistrements de journal inactifs. Ces enregistrements peuvent être tronqués. Le journal virtuel 5 est encore inutilisé et ne fait pas partie du journal logique actuel.  
+ Les illustrations suivantes montrent un journal des transactions avant et après une troncation. La première illustration montre un journal des transactions qui n'a jamais été tronqué. Actuellement, quatre fichiers journaux virtuels sont utilisés par le journal logique. Le journal logique commence avant le premier fichier journal virtuel et se termine au journal virtuel 4. L'enregistrement NSEmin se trouve dans le journal virtuel 3. Les journaux virtuels 1 et 2 contiennent uniquement des enregistrements de journal inactifs. Ces enregistrements peuvent être tronqués. Le journal virtuel 5 est encore inutilisé et ne fait pas partie du journal logique actuel.  
   
 ![tranlog2](../relational-databases/media/tranlog2.gif)  
   
- La deuxième illustration montre le journal après sa troncation. Les journaux virtuels 1 et 2 ont été libérés en vue de leur réutilisation. Le journal logique commence désormais au début du journal virtuel 3. Le journal virtuel 5 est encore inutilisé et ne fait pas partie du journal logique actuel.  
+ La deuxième illustration montre le journal après sa troncation. Les journaux virtuels 1 et 2 ont été libérés en vue de leur réutilisation. Le journal logique commence désormais au début du journal virtuel 3. Le journal virtuel 5 est encore inutilisé et ne fait pas partie du journal logique actuel.  
   
 ![tranlog3](../relational-databases/media/tranlog3.gif)  
   
- La troncation du journal se produit automatiquement après les événements suivants, à moins qu'elle ne soit retardée pour une raison quelconque :  
+ La troncation du journal se produit automatiquement après les événements suivants, à moins qu'elle ne soit retardée pour une raison quelconque :  
   
 -   En mode de récupération simple, après un point de contrôle.  
   
@@ -100,7 +105,7 @@ caps.handback.revision: 3
  La troncation du journal peut être retardée pour différents motifs. En cas de retard prolongé de la troncation du journal, le journal des transactions peut se remplir complètement. Pour plus d’informations, consultez [Facteurs pouvant retarder la troncation du journal](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation) et [Résoudre les problèmes liés à un journal des transactions saturé &#40;erreur SQL Server 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
 ##  <a name="WAL"></a> Journal des transactions à écriture anticipée  
- Cette section décrit le rôle que joue le journal des transactions à écriture anticipée (journal WAL) au niveau de l'enregistrement sur disque des modifications apportées aux données. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise un journal WAL (write-ahead log) qui garantit qu’aucune modification de données n’est écrite sur le disque avant l’écriture du journal associé sur celui-ci. Ainsi, les propriétés ACID (Atomicité, Cohérence, Isolation et Durabilité) d'une transaction sont conservées.  
+ Cette section décrit le rôle que joue le journal des transactions à écriture anticipée (journal WAL) au niveau de l'enregistrement sur disque des modifications apportées aux données. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise un journal WAL (write-ahead log) qui garantit qu’aucune modification de données n’est écrite sur le disque avant l’écriture du journal associé sur celui-ci. Ainsi, les propriétés ACID (Atomicité, Cohérence, Isolation et Durabilité) d'une transaction sont conservées.  
   
  Pour comprendre le fonctionnement du journal à écriture anticipée, il est important que vous sachiez comment les données modifiées sont écrites sur le disque. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gère un cache des tampons dans lequel il lit les pages de données lorsque celles-ci doivent être extraites. Lorsqu’une page est modifiée dans le cache des tampons, elle n’est pas réécrite immédiatement sur le disque, mais elle est marquée comme *erronée*. Une page peut avoir plusieurs écritures logiques avant son écriture physique sur le disque. Pour chaque écriture logique, un enregistrement du journal des transactions est inséré dans le cache du journal qui enregistre la modification. L'enregistrement doit être écrit sur le disque avant que la page de modifications associée n'ait été supprimée du cache et écrite sur le disque. Le processus de point de contrôle analyse régulièrement le cache à la recherche de tampons contenant des pages issues d'une base de données spécifiée et écrit toutes les pages de modifications sur le disque. Les points de contrôle permettent une récupération ultérieure du système en créant un point où toutes les pages de modifications sont effectivement écrites sur le disque.  
   
@@ -115,32 +120,32 @@ caps.handback.revision: 3
   
  Pour limiter le nombre des sauvegardes de fichiers journaux à restaurer, il est essentiel de sauvegarder vos données régulièrement. Vous pouvez, par exemple, planifier une sauvegarde complète hebdomadaire et des sauvegardes différentielles quotidiennes de la base de données.  
   
-### Séquence de journaux de transactions consécutifs  
+### <a name="the-log-chain"></a>Séquence de journaux de transactions consécutifs  
  Une séquence continue de sauvegardes de journaux s’appelle une *séquence de journaux de transactions consécutifs*. Une séquence de journaux de transactions consécutifs commence par une sauvegarde complète de la base de données. Généralement, une nouvelle séquence de journaux de transactions consécutifs ne démarre que lorsque la base de données est sauvegardée pour la première fois ou après que le mode de récupération simple est remplacé par le mode de récupération complète ou le mode de récupération utilisant les journaux de transactions. Si vous ne choisissez pas de remplacer les jeux de sauvegarde existants lors de la création d'une sauvegarde complète de base de données, la séquence de journaux de transactions consécutifs existante reste intacte. Grâce à la séquence de journaux de transactions consécutifs intacte, vous pouvez restaurer votre base de données à partir d'une sauvegarde complète de base de données du support de sauvegarde, suivie de toutes les sauvegardes de fichiers journaux suivantes jusqu'à votre point de récupération. Le point de récupération peut être la fin de la dernière sauvegarde de fichier journal ou un point de récupération spécifique dans chacune des sauvegardes de fichiers journaux. Pour plus d’informations, consultez [Sauvegardes du journal des transactions &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
- Pour restaurer une base de données jusqu'au point d'échec, la séquence de journaux de transactions consécutifs doit être intacte. Autrement dit, la séquence ininterrompue des sauvegardes des journaux de transactions doit aller jusqu'au point de défaillance. Le point de commencement de cette séquence du journal dépend du type des sauvegardes de données que vous restaurez : base de données, partielle ou fichiers. Pour une sauvegarde partielle ou de base de données, la séquence des sauvegardes des journaux doit s'étendre à partir de la fin d'une sauvegarde partielle ou de base de données. Pour un jeu de sauvegardes de fichiers, la séquence des sauvegardes des journaux doit s'étendre à partir du début d'un jeu complet de sauvegardes de fichiers. Pour plus d’informations, consultez [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
+ Pour restaurer une base de données jusqu'au point d'échec, la séquence de journaux de transactions consécutifs doit être intacte. Autrement dit, la séquence ininterrompue des sauvegardes des journaux de transactions doit aller jusqu'au point de défaillance. Le point de commencement de cette séquence du journal dépend du type des sauvegardes de données que vous restaurez : base de données, partielle ou fichiers. Pour une sauvegarde partielle ou de base de données, la séquence des sauvegardes des journaux doit s'étendre à partir de la fin d'une sauvegarde partielle ou de base de données. Pour un jeu de sauvegardes de fichiers, la séquence des sauvegardes des journaux doit s'étendre à partir du début d'un jeu complet de sauvegardes de fichiers. Pour plus d’informations, consultez [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-### Restaurer des sauvegardes du journal  
+### <a name="restore-log-backups"></a>Restaurer des sauvegardes du journal  
  La restauration d'une sauvegarde de journal restaure par progression les modifications enregistrées dans le journal des transactions, afin de recréer l'état exact de la base de données qui existait au début de la sauvegarde du journal. Lorsque vous restaurez une base de données, vous devez restaurer les sauvegardes des journaux créées à la suite de la sauvegarde complète de base de données que vous restaurez ou à partir de la première sauvegarde de fichiers que vous restaurez. En règle générale, vous devez restaurer une série de sauvegardes de journaux jusqu'au point de récupération, après avoir restauré les données les plus récentes ou une sauvegarde différentielle. Ensuite, vous récupérez la base de données. Cette opération restaure toutes les transactions qui n'étaient pas terminées au début de la récupération et place la base de données en ligne. Une fois la base de données récupérée, vous ne pouvez plus restaurer des sauvegardes. Pour plus d’informations, consultez [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
 
-## Points de contrôle et partie active du journal  
+## <a name="checkpoints-and-the-active-portion-of-the-log"></a>Points de contrôle et partie active du journal  
 
-Les points de contrôle vident les pages de données incorrectes de la mémoire cache de la base de données active sur le disque, ce qui réduit la partie active du journal devant être traitée durant une récupération complète d'une base de données. Au cours d'une récupération complète, les types d'actions suivants sont effectués :
+Les points de contrôle vident les pages de données incorrectes de la mémoire cache de la base de données active sur le disque, ce qui réduit la partie active du journal devant être traitée durant une récupération complète d'une base de données. Au cours d'une récupération complète, les types d'actions suivants sont effectués :
 
 * Les enregistrements de journal concernant des modifications qui n'ont pas été vidées sur le disque avant l'arrêt du système sont restaurés par progression.
 * Toutes les modifications associées à des transactions incomplètes (telles que les transactions pour lesquelles il n'existe pas d'enregistrement de journal COMMIT ou ROLLBACK) sont restaurées.
 
-### Opération de point de contrôle
+### <a name="checkpoint-operation"></a>Opération de point de contrôle
 
-Un point de contrôle effectue les processus suivants dans la base de données :
+Un point de contrôle effectue les processus suivants dans la base de données :
 
 * Écrit un enregistrement dans le fichier journal qui marque le début du point de contrôle.
 * Stocke les informations enregistrées pour le point de contrôle dans une chaîne d'enregistrements de journal des points de contrôle.  
  
-    L'une des informations consignées dans le point de contrôle est le numéro séquentiel dans le journal du premier enregistrement de journal qui doit être présent pour permettre une restauration à l'échelle de la base de données. Ce NSE porte le nom de NSE de récupération minimum (NSEmin). Le NSEmin est le minimum de : 
+    L'une des informations consignées dans le point de contrôle est le numéro séquentiel dans le journal du premier enregistrement de journal qui doit être présent pour permettre une restauration à l'échelle de la base de données. Ce NSE porte le nom de NSE de récupération minimum (NSEmin). Le NSEmin est le minimum de : 
 
-    * NSE du début du point de contrôle ;
-    * NSE du début de la transaction active la plus ancienne ;
+    * NSE du début du point de contrôle ;
+    * NSE du début de la transaction active la plus ancienne ;
     * NSE du début de la transaction de réplication la plus ancienne qui n'a pas encore été transmise à la base de données de distribution. 
 
     Les enregistrements de point de contrôle contiennent également une liste de toutes les transactions actives qui ont modifié la base de données.
@@ -150,43 +155,43 @@ Un point de contrôle effectue les processus suivants dans la base de données 
 * Écrit un enregistrement marquant la fin du point de contrôle dans le fichier journal.
 * Écrit le numéro LSN du début de cette chaîne dans la page de démarrage de la base de données.
 
-#### Activités entraînant un point de contrôle
+#### <a name="activities-that-cause-a-checkpoint"></a>Activités entraînant un point de contrôle
 
-Des points de contrôle interviennent dans les situations suivantes :
+Des points de contrôle interviennent dans les situations suivantes :
 
 * Une instruction CHECKPOINT est exécutée explicitement. Un point de contrôle intervient dans la base de données active pour la connexion.
-* Une opération journalisée minimale est effectuée dans la base de données ; par exemple, une opération de copie en bloc est réalisée sur une base de données qui se sert du mode de récupération utilisant les journaux de transactions. 
+* Une opération journalisée minimale est effectuée dans la base de données ; par exemple, une opération de copie en bloc est réalisée sur une base de données qui se sert du mode de récupération utilisant les journaux de transactions. 
 * Des fichiers de base de données ont été ajoutés ou supprimés à l'aide de l'instruction ALTER DATABASE.
 * Une instance de SQL Server est arrêtée par une instruction SHUTDOWN ou via l’arrêt du service SQL Server (MSSQLSERVER). Ces opérations provoquent la création d’un point de contrôle dans chaque base de données dans l’instance de SQL Server.
 * Une instance de SQL Server génère régulièrement des points de contrôle automatiques dans chaque base de données, afin de réduire la durée nécessaire à l’instance pour récupérer la base de données.
 * Une sauvegarde de la base de données est effectuée.
 * Une activité nécessitant l'arrêt de la base de données est effectuée. Par exemple, la valeur ON est attribuée à AUTO_CLOSE et la dernière connexion utilisateur à la base de données est fermée, ou une modification d'une option de base de données nécessitant un redémarrage de la base de données est effectuée.
 
-### Points de contrôle automatiques
+### <a name="automatic-checkpoints"></a>Points de contrôle automatiques
 
 Le moteur de base de données SQL Server génère des points de contrôle automatiques. L'intervalle entre les points de contrôle automatiques est basé sur la quantité d'espace de journal utilisée et la durée écoulée depuis le dernier point de contrôle. Cet intervalle de temps entre les points de contrôle automatiques peut varier fortement et être long si les modifications apportées à la base de données sont peu nombreuses. Inversement, les points de contrôle automatiques peuvent être fréquents si les données modifiées sont nombreuses.
 
-Utilisez l’option de configuration de serveur **intervalle de récupération** pour calculer l’intervalle pour toutes les bases de données sur une instance de serveur. Cette option spécifie la durée maximale que le moteur de base de données doit utiliser pour récupérer une base de données durant un redémarrage du système. Le moteur de base de données estime le nombre d’enregistrements de journal qu’il peut traiter au cours de l’**intervalle de récupération** durant une opération de récupération. 
+Utilisez l’option de configuration de serveur **intervalle de récupération** pour calculer l’intervalle pour toutes les bases de données sur une instance de serveur. Cette option spécifie la durée maximale que le moteur de base de données doit utiliser pour récupérer une base de données durant un redémarrage du système. Le moteur de base de données estime le nombre d’enregistrements de journal qu’il peut traiter au cours de l’ **intervalle de récupération** durant une opération de récupération. 
 
-L'intervalle entre les points de contrôle automatiques dépend également du mode de récupération :
+L'intervalle entre les points de contrôle automatiques dépend également du mode de récupération :
 
 * Si la base de données utilise le mode de restauration complète ou le mode de récupération utilisant les journaux de transactions, un point de contrôle automatique est généré chaque fois que le nombre d’enregistrements du journal atteint une valeur que le moteur de base de données estime pouvoir traiter pendant la durée spécifiée dans l’option intervalle de récupération.
-* Si la base de données utilise le mode de récupération simple, un point de contrôle automatique est généré chaque fois que le nombre des enregistrements de journal atteint la plus faible de ces deux valeurs : 
+* Si la base de données utilise le mode de récupération simple, un point de contrôle automatique est généré chaque fois que le nombre des enregistrements de journal atteint la plus faible de ces deux valeurs : 
 
-    * Le journal est saturé à 70 %.
+    * Le journal est saturé à 70 %.
     * Le nombre d’enregistrements de journal atteint le nombre que le moteur de base de données estime pouvoir traiter au cours de la durée spécifiée dans l’option intervalle de récupération.
 
 Pour plus d’informations sur la configuration de l’intervalle de récupération, consultez [Configurer l’option de configuration du serveur recovery interval](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).
 
 > [!TIP]  
->  L’option d’installation avancée -k de SQL Server permet à un administrateur de base de données de limiter le comportement d’E/S de point de contrôle en fonction du débit du sous-système d’E/S pour certains types de points de contrôle. L’option d’installation -k s’applique aux points de contrôle automatiques, ainsi qu’à tous les points de contrôle non accélérés. 
+>  L’option d’installation avancée -k de SQL Server permet à un administrateur de base de données de limiter le comportement d’E/S de point de contrôle en fonction du débit du sous-système d’E/S pour certains types de points de contrôle. L’option d’installation -k s’applique aux points de contrôle automatiques, ainsi qu’à tous les points de contrôle non accélérés. 
  
 Les points de contrôle automatiques tronquent la section inutilisée du journal des transactions si la base de données utilise le mode de récupération simple. Cependant, ils ne tronquent pas le journal si la base de données utilise le mode de récupération complète ou le mode de récupération utilisant les journaux de transactions. Pour plus d’informations, consultez [Journal des transactions](../relational-databases/logs/the-transaction-log-sql-server.md). 
 
 L’instruction CHECKPOINT fournit désormais un argument checkpoint_duration facultatif qui spécifie la durée demandée, en secondes, permettant aux points de contrôle de terminer leurs tâches. Pour plus d’informations, consultez [CHECKPOINT](../t-sql/language-elements/checkpoint-transact-sql.md).
 
 
-### Journal actif
+### <a name="active-log"></a>journal actif
 
 La section du fichier journal comprise entre le MinLSN et le dernier enregistrement de journal écrit s’appelle la partie active du journal, ou journal actif. Cette section est indispensable pour procéder à une récupération complète de la base de données. Aucune partie de ce journal actif ne peut être tronquée. Tous les enregistrements de journal doivent être tronqués à partir des parties du journal situées avant le MinLSN.
 
@@ -194,21 +199,21 @@ L'illustration ci-dessous présente une version simplifiée de la fin d'un journ
 
 ![active_log](../relational-databases/media/active-log.gif) 
 
-LSN 148 est le dernier enregistrement du journal des transactions. Au moment où le point de contrôle enregistré au numéro LSN 147 était traité, Tran 1 avait été validée et Tran 2 était la seule transaction active. Ainsi, le premier enregistrement de Tran 2 est l'enregistrement de journal le plus ancien pour une transaction active au moment du dernier point de contrôle. Par ailleurs, le numéro LSN 142 est l'enregistrement du début de la transaction pour Tran 2, la valeur MinLSN.
+LSN 148 est le dernier enregistrement du journal des transactions. Au moment où le point de contrôle enregistré au numéro LSN 147 était traité, Tran 1 avait été validée et Tran 2 était la seule transaction active. Ainsi, le premier enregistrement de Tran 2 est l'enregistrement de journal le plus ancien pour une transaction active au moment du dernier point de contrôle. Par ailleurs, le numéro LSN 142 est l'enregistrement du début de la transaction pour Tran 2, la valeur MinLSN.
 
-### Transactions de longue durée
+### <a name="long-running-transactions"></a>Transactions de longue durée
 
-Le journal actif doit contenir chaque partie de toutes les transactions non validées. Une application qui démarre une transaction et qui ne la valide pas ou ne la restaure pas empêche le moteur de base de données de faire progresser le MinLSN. Ceci peut provoquer deux types de problèmes :
+Le journal actif doit contenir chaque partie de toutes les transactions non validées. Une application qui démarre une transaction et qui ne la valide pas ou ne la restaure pas empêche le moteur de base de données de faire progresser le MinLSN. Ceci peut provoquer deux types de problèmes :
 
-* Si le système est arrêté après que la transaction a effectué de nombreuses modifications non validées, la phase de récupération lors du démarrage ultérieur peut être beaucoup plus longue que la durée spécifiée dans l’option **intervalle de récupération**.
+* Si le système est arrêté après que la transaction a effectué de nombreuses modifications non validées, la phase de récupération lors du démarrage ultérieur peut être beaucoup plus longue que la durée spécifiée dans l’option **intervalle de récupération** .
 * Le journal peut devenir très volumineux parce qu'il ne peut pas être tronqué au-delà du MinLSN. Cela se produit même si la base de données utilise le modèle de récupération simple, dans lequel le journal des transactions est généralement tronqué sur chaque point de contrôle automatique.
 
-### Transactions de réplication
+### <a name="replication-transactions"></a>Transactions de réplication
 
 L'Agent de lecture du journal surveille le journal des transactions de chaque base de données configurée pour la réplication transactionnelle et copie les transactions devant être répliquées à partir du journal des transactions dans la base de données de distribution. Le journal actif doit contenir toutes les transactions qui sont marquées pour la réplication mais qui n'ont pas encore été transmises à la base de données de distribution. Si ces transactions ne sont pas répliquées à temps, elles peuvent empêcher la troncature du journal. Pour plus d’informations, consultez [Réplication transactionnelle](../relational-databases/replication/transactional/transactional-replication.md).
 
   
-## Lecture supplémentaire  
+## <a name="additional-reading"></a>Lecture supplémentaire  
  Pour plus d'informations sur le journal des transactions, nous vous recommandons de lire les articles et les ouvrages suivants.  
   
  [Fonctionnement de la journalisation et de la récupération dans SQL Server de Paul Randall](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
@@ -216,3 +221,4 @@ L'Agent de lecture du journal surveille le journal des transactions de chaque ba
  [Gestion du journal des transactions SQL Server de Tony Davis et Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   
+
