@@ -1,35 +1,39 @@
 ---
-title: "Accorder des autorisations sur une collection de sch&#233;mas XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "octroi d’autorisations [SQL Server], collections de schémas XML"
-  - "ALTER, autorisation"
+title: "Accorder des autorisations sur une collection de schémas XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- granting permissions [SQL Server], XML schema collections
+- ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7c89c6a8322e8922a7d0a2d59ea686a2d703947a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Accorder des autorisations sur une collection de sch&#233;mas XML
+# <a name="grant-permissions-on-an-xml-schema-collection"></a>Accorder des autorisations sur une collection de schémas XML
   Vous pouvez attribuer des autorisations de création d'une collection de schémas XML et accorder des autorisations sur un objet collection de schémas XML.  
   
-## Attribution d'autorisations de création d'une collection de schémas XML  
- Pour créer une collection de schémas XML, les autorisations d'accès suivantes sont requises :  
+## <a name="granting-permission-to-create-an-xml-schema-collection"></a>Attribution d'autorisations de création d'une collection de schémas XML  
+ Pour créer une collection de schémas XML, les autorisations d'accès suivantes sont requises :  
   
 -   Le principal requiert l'autorisation CREATE XML SCHEMA COLLECTION au niveau base de données.  
   
 -   Les collections de schéma XML étant étendues aux schémas relationnels, le principal doit également disposer de l'autorisation ALTER sur le schéma relationnel.  
   
- Les autorisations suivantes permettent à un principal de créer une collection de schémas XML dans un schéma relationnel d'une base de données hébergée sur un serveur :  
+ Les autorisations suivantes permettent à un principal de créer une collection de schémas XML dans un schéma relationnel d'une base de données hébergée sur un serveur :  
   
 -   Autorisation CONTROL sur le serveur  
   
@@ -47,8 +51,8 @@ caps.handback.revision: 32
   
  Le propriétaire du schéma relationnel devient propriétaire de la collection de schémas XML créée dans ce schéma. Il bénéficie d'un contrôle complet sur la collection en question. Il peut ainsi modifier la collection de schémas XML, typer une colonne xml ou supprimer la collection.  
   
-## Attribution d'autorisations sur l'objet collection de schémas XML  
- Les autorisations suivantes peuvent s'attribuer sur la collection de schémas XML :  
+## <a name="granting-permissions-on-an-xml-schema-collection-object"></a>Attribution d'autorisations sur l'objet collection de schémas XML  
+ Les autorisations suivantes peuvent s'attribuer sur la collection de schémas XML :  
   
 -   L'autorisation ALTER est nécessaire pour modifier le contenu d'une collection de schémas XML existante par le biais de l'instruction ALTER XML SCHEMA COLLECTION.  
   
@@ -60,12 +64,12 @@ caps.handback.revision: 32
   
 -   L'autorisation VIEW DEFINITION permet au principal d'interroger le contenu de la collection de schémas XML par le biais de XML_SCHEMA_NAMESPACE ou des affichages catalogue, à condition que ce principal dispose également de l'une des autorisations ALTER, REFERENCES ou CONTROL sur la collection.  
   
--   L’autorisation EXECUTE est nécessaire pour valider les valeurs insérées ou mises à jour par le principal par rapport à la collection de schémas XML qui type ou contraint les colonnes, les variables et les paramètres de type **xml**. Vous devez également disposer de cette autorisation pour interroger le contenu XML stocké dans ces colonnes et ces variables.  
+-   L’autorisation EXECUTE est nécessaire pour valider les valeurs insérées ou mises à jour par le principal par rapport à la collection de schémas XML qui type ou contraint les colonnes, les variables et les paramètres de type **xml** . Vous devez également disposer de cette autorisation pour interroger le contenu XML stocké dans ces colonnes et ces variables.  
   
-## Exemples  
+## <a name="examples"></a>Exemples  
  Les scénarios proposés dans les exemples suivants illustrent le fonctionnement des autorisations sur les schémas XML. Chaque exemple crée la base de données de test, les schémas relationnels et les connexions nécessaires. Ces connexions reçoivent les autorisations nécessaires sur la collection de schémas XML. Chaque exemple effectue le nettoyage nécessaire à la fin.  
   
-### A. Attribution d'autorisations de création d'une collection de schémas XML  
+### <a name="a-granting-permissions-to-create-an-xml-schema-collection"></a>A. Attribution d'autorisations de création d'une collection de schémas XML  
  L'exemple suivant montre comment accorder des autorisations pour qu'un principal puisse créer une collection de schémas XML. Il crée un exemple de base de données et un utilisateur de test, `TestLogin1`. `TestLogin1` reçoit l’autorisation `ALTER` sur le schéma relationnel et l’autorisation `CREATE XML SCHEMA COLLECTION` sur la base de données. Avec ces autorisations, `TestLogin1` réussit à créer un exemple de collection de schémas XML.  
   
 ```  
@@ -119,7 +123,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### B. Attribution d'autorisations pour utiliser une collection de schémas XML existante  
+### <a name="b-granting-permission-to-use-an-existing-xml-schema-collection"></a>B. Attribution d'autorisations pour utiliser une collection de schémas XML existante  
  L'exemple suivant montre plus en détail le modèle d'autorisations pour la collection de schémas XML. Il montre les différentes autorisations nécessaires à la création et à l'utilisation de la collection de schémas XML.  
   
  Cet exemple crée une base de données de test et un utilisateur, `TestLogin1`. `TestLogin1` crée une collection de schémas XML dans la base de données. La connexion crée ensuite une table et utilise la collection de schémas XML pour créer une colonne xml typée. L'utilisateur insère ensuite les données et les interroge. Toutes ces étapes nécessitent les autorisations de schéma nécessaires, comme illustré dans le code.  
@@ -236,8 +240,8 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### C. Attribution de l'autorisation ALTER sur une collection de schémas XML  
- Un utilisateur doit avoir l'autorisation ALTER pour modifier une collection de schémas XML existante dans la base de données. L'exemple suivant indique comment accorder l'autorisation `ALTER`.  
+### <a name="c-granting-alter-permission-on-an-xml-schema-collection"></a>C. Attribution de l'autorisation ALTER sur une collection de schémas XML  
+ Un utilisateur doit avoir l'autorisation ALTER pour modifier une collection de schémas XML existante dans la base de données. L'exemple suivant indique comment accorder l'autorisation `ALTER` .  
   
 ```  
 SETUSER  
@@ -311,16 +315,16 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### D. Attribution de l'autorisation TAKE OWNERSHIP sur une collection de schémas XML  
+### <a name="d-granting-take-ownership-permission-on-an-xml-schema-collection"></a>D. Attribution de l'autorisation TAKE OWNERSHIP sur une collection de schémas XML  
  L'exemple suivant montre comment transférer la propriété des schémas XML d'un utilisateur à un autre. Pour rendre cet exemple plus intéressant, les utilisateurs manipulent différents schémas relationnels par défaut.  
   
- L'exemple réalise les actions suivantes :  
+ L'exemple réalise les actions suivantes :  
   
 -   Il crée une base de données contenant deux schémas relationnels, `dbo` et `myOtherDBSchema`).  
   
--   Il crée deux utilisateurs, `TestLogin1` et `TestLogin2`. `TestLogin2` devient propriétaire du schéma relationnel `myOtherDBSchema`.  
+-   Il crée deux utilisateurs, `TestLogin1` et `TestLogin2`. `TestLogin2` devient propriétaire du schéma relationnel `myOtherDBSchema` .  
   
--   `TestLogin1` crée une collection de schémas XML dans le schéma relationnel `dbo`.  
+-   `TestLogin1` crée une collection de schémas XML dans le schéma relationnel `dbo` .  
   
 -   `TestLogin1` accorde ensuite l’autorisation `TAKE OWNERSHIP` sur la collection de schémas XML à `TestLogin2`.  
   
@@ -429,7 +433,7 @@ DROP LOGIN TestLogin2
 go   
 ```  
   
-### E. Attribution de l'autorisation VIEW DEFINITION sur une collection de schémas XML  
+### <a name="e-granting-view-definition-permission-on-an-xml-schema-collection"></a>E. Attribution de l'autorisation VIEW DEFINITION sur une collection de schémas XML  
  L'exemple suivant indique comment accorder des autorisations VIEW DEFINITION pour une collection de schémas XML.  
   
 ```  
@@ -501,7 +505,7 @@ SELECT XML_SCHEMA_NAMESPACE(N'dbo',N'MySC')
 GO  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Données XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Collections de schémas XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)   

@@ -1,30 +1,34 @@
 ---
-title: "D&#233;placer une base de donn&#233;es compatible FILESTREAM | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], déplacement d’une base de données compatible FILESTREAM"
+title: "Déplacer une base de données compatible FILESTREAM | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server], moving a FILESTREAM-enabled database
 ms.assetid: dd4d270d-9283-431a-aa6b-e571fced1893
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7af3800a6e604289944a340cee7f469654c495e2
+ms.lasthandoff: 04/11/2017
+
 ---
-# D&#233;placer une base de donn&#233;es compatible FILESTREAM
+# <a name="move-a-filestream-enabled-database"></a>Déplacer une base de données compatible FILESTREAM
   Cette rubrique montre comment déplacer une base de données compatible FILESTREAM.  
   
 > [!NOTE]  
 >  Les exemples de cette rubrique exigent la base de données Archive créée dans [Créer une base de données compatible FILESTREAM](../../relational-databases/blob/create-a-filestream-enabled-database.md).  
   
-### Pour déplacer une base de données compatible FILESTREAM  
+### <a name="to-move-a-filestream-enabled-database"></a>Pour déplacer une base de données compatible FILESTREAM  
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], cliquez sur **Nouvelle requête** pour ouvrir l’Éditeur de requête.  
   
@@ -44,7 +48,7 @@ caps.handback.revision: 11
     GO  
     ```  
   
-4.  Créez le dossier `C:\moved_location` dans lequel vous allez placer les fichiers et les dossiers listés à l'étape 2.  
+4.  Créez le dossier `C:\moved_location`dans lequel vous allez placer les fichiers et les dossiers listés à l'étape 2.  
   
 5.  Copiez le script [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant dans l’Éditeur de requête, puis cliquez sur **Exécuter**. Ce script met la base de données `Archive` en ligne.  
   
@@ -60,7 +64,7 @@ caps.handback.revision: 11
     GO  
     ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
   
   

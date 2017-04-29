@@ -1,34 +1,38 @@
 ---
-title: "Classe d&#39;&#233;v&#233;nements SQL:StmtCompleted | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL:StmtCompleted (classe d'événements)"
+title: "SQL:StmtCompleted, classe d’événements | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL:StmtCompleted event class
 ms.assetid: a55f005d-e020-423c-8940-c24ea1b20104
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 99a9d763386ecea12b12e9ddd6d597f00ff6b172
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe d&#39;&#233;v&#233;nements SQL:StmtCompleted
+# <a name="sqlstmtcompleted-event-class"></a>SQL:StmtCompleted (classe d'événements)
   La classe d'événements SQL:StmtCompleted indique qu'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] a été exécutée.  
   
-## Colonnes de la classe d'événements SQL:StmtCompleted  
+## <a name="sqlstmtcompleted-event-class-data-columns"></a>Colonnes de la classe d'événements SQL:StmtCompleted  
   
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette colonne est remplie avec les valeurs passées par l'application plutôt que par le nom affiché du programme.|10|Oui|  
-|ClientProcessID|**int**|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
+|ClientProcessID|**int**|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
 |Unité centrale|**int**|Temps processeur (en millisecondes) utilisé par l'événement.|18|Oui|  
-|DatabaseID|**Int**|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
+|DatabaseID|**int**|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |DatabaseName|**nvarchar**|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |Duration|**bigint**|Temps (en microsecondes) pris par l'événement.|13|Oui|  
 |EndTime|**datetime**|Heure de fin de l'événement.|15|Oui|  
@@ -40,13 +44,13 @@ caps.handback.revision: 32
 |IntegerData2|**int**|Décalage de fin (en octets) de l'instruction en cours d'exécution.|55|Oui|  
 |IsSystem|**int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Oui|  
 |LineNumber|**int**|Nombre de lignes de l'instruction en cours d'exécution.|5|Oui|  
-|LoginName|**nvarchar**|Nom de la connexion de l'utilisateur (soit la connexion de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], soit les informations d'identification de connexion [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows au format DOMAINE\nom_utilisateur).|11|Oui|  
+|LoginName|**nvarchar**|Nom de la connexion de l'utilisateur (soit la connexion de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , soit les informations d'identification de connexion [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows au format DOMAINE\nom_utilisateur).|11|Oui|  
 |LoginSid|**image**|Numéro d'identification de sécurité (SID) de l'utilisateur connecté. Vous pouvez trouver ces informations dans l'affichage catalogue sys.server_principals. Chaque connexion possède un SID unique au niveau du serveur.|41|Oui|  
 |NestLevel|**int**|Niveau d'imbrication de la procédure stockée si l'instruction a été exécutée dans une procédure stockée.|29|Oui|  
 |NTDomainName|**nvarchar**|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
 |NTUserName|**nvarchar**|Nom d'utilisateur Windows.|6|Oui|  
-|Offset|**int**|Décalage de départ de l'instruction dans la procédure stockée ou le lot.|61|Oui|  
-|Reads|**bigint**|Nombre de lectures de pages émises par l'instruction SQL.|16|Oui|  
+|Offset|**Int**|Décalage de départ de l'instruction dans la procédure stockée ou le lot.|61|Oui|  
+|Reads|**bigint**|Nombre de lectures de pages émises par l'instruction SQL.|16|Oui|  
 |RequestID|**int**|ID de la demande contenant l'instruction.|49|Oui|  
 |RowCounts|**bigint**|Nombre de lignes affectées par un événement.|48|Oui|  
 |ServerName|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
@@ -55,10 +59,10 @@ caps.handback.revision: 32
 |StartTime|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
 |TextData|**ntext**|Texte de l'instruction exécutée.|1|Oui|  
 |TransactionID|**bigint**|ID de la transaction si l'instruction a été exécutée dans une transaction.|4|Oui|  
-|Writes|**bigint**|Nombre d'écritures de pages émises par l'instruction SQL.|17|Oui|  
+|Writes|**bigint**|Nombre d'écritures de pages émises par l'instruction SQL.|17|Oui|  
 |XactSequence|**bigint**|Jeton qui décrit la transaction en cours.|50|Oui|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

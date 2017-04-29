@@ -1,27 +1,31 @@
 ---
-title: "Cible du suivi d&#39;&#233;v&#233;nements pour Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "suivi d'événements pour cible Windows"
-  - "cible ETW"
-  - "cibles [événements étendus SQL Server], suivi d’événements pour cible Windows"
+title: "Suivi d’événements pour Windows en cible | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event tracing for windows target
+- ETW target
+- targets [SQL Server extended events], event tracing for windows target
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d69eb01f34774812aeaafbddcaa08b17f22ac097
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cible du suivi d&#39;&#233;v&#233;nements pour Windows
+# <a name="event-tracing-for-windows-target"></a>suivi d'événements pour cible Windows
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Avant d'utiliser le suivi d'événements pour Windows (ETW) comme cible, il est recommandé d'avoir une connaissance pratique du Suivi d'événements pour Windows. Le suivi ETW est utilisé conjointement avec les Événements étendus ou en tant que consommateur d'événements des Événements étendus. Les liens externes suivants fournissent un point de départ pour obtenir des informations générales sur le suivi ETW :  
@@ -43,7 +47,7 @@ caps.handback.revision: 13
   
  La cible ETW prend en charge la publication synchrone d'événements sur le thread qui déclenche l'événement. Cependant, la cible ETW ne prend pas en charge la publication asynchrone d'événements.  
   
- La cible ETW ne prend pas en charge le contrôle à partir de contrôleurs ETW externes tels que Logman.exe. Pour produire des traces ETW, une session d'événements doit être créée avec la cible ETW. Pour plus d’informations, consultez [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).  
+ La cible ETW ne prend pas en charge le contrôle à partir de contrôleurs ETW externes tels que Logman.exe. Pour produire des traces ETW, une session d'événements doit être créée avec la cible ETW. Pour plus d’informations, consultez [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).  
   
 > [!NOTE]  
 >  L'activation de la cible ETW crée une session ETW nommée XE_DEFAULT_ETW_SESSION. Si une session XE_DEFAULT_ETW_SESSION existe déjà, elle est utilisée sans modifier la moindre propriété de la session existante. La session XE_DEFAULT_ETW_SESSION est partagée entre toutes les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Après avoir démarré XE_DEFAULT_ETW_SESSION, vous devez l'arrêter à l'aide d'un contrôleur ETW, tel que l'outil Logman. Par exemple, vous pouvez exécuter la commande suivante à l’invite de commandes : **logman stop XE_DEFAULT_ETW_SESSION -ets**.  
@@ -52,15 +56,15 @@ caps.handback.revision: 13
   
 |Option|Valeurs autorisées|Description|  
 |------------|--------------------|-----------------|  
-|default_xe_session_name|Toute chaîne incluant jusqu'à 256 caractères. Cette valeur est facultative.|Nom de la session Événements étendus. Par défaut, il s'agit de la session XE_DEFAULT_ETW_SESSION.|  
-|default_etw_session_logfile_path|Toute chaîne incluant jusqu'à 256 caractères. Cette valeur est facultative.|Chemin d'accès du fichier journal pour la session Événements étendus. Par défaut, il s'agit de %TEMP%\ XEEtw.etl.|  
-|default_etw_session_logfile_size_mb|Entier quelconque non signé. Cette valeur est facultative.|Taille du fichier journal, en mégaoctets (Mo), de la session Événements étendus. La valeur par défaut est 20 Mo.|  
-|default_etw_session_buffer_size_kb|Entier quelconque non signé. Cette valeur est facultative.|Taille des tampons en mémoire, en kilo-octets (Ko), pour la session Événements étendus. La valeur par défaut est 128 Ko.|  
-|retries|Entier quelconque non signé.|Nombre de nouvelles tentatives de publication de l'événement dans le sous-système ETW avant la suppression de l'événement. La valeur par défaut est 0.|  
+|default_xe_session_name|Toute chaîne incluant jusqu'à 256 caractères. Cette valeur est facultative.|Nom de la session Événements étendus. Par défaut, il s'agit de la session XE_DEFAULT_ETW_SESSION.|  
+|default_etw_session_logfile_path|Toute chaîne incluant jusqu'à 256 caractères. Cette valeur est facultative.|Chemin d'accès du fichier journal pour la session Événements étendus. Par défaut, il s'agit de %TEMP%\ XEEtw.etl.|  
+|default_etw_session_logfile_size_mb|Entier quelconque non signé. Cette valeur est facultative.|Taille du fichier journal, en mégaoctets (Mo), de la session Événements étendus. La valeur par défaut est 20 Mo.|  
+|default_etw_session_buffer_size_kb|Entier quelconque non signé. Cette valeur est facultative.|Taille des tampons en mémoire, en kilo-octets (Ko), pour la session Événements étendus. La valeur par défaut est 128 Ko.|  
+|retries|Entier quelconque non signé.|Nombre de nouvelles tentatives de publication de l'événement dans le sous-système ETW avant la suppression de l'événement. La valeur par défaut est 0.|  
   
  La configuration de ces paramètres est facultative. La cible ETW utilise les valeurs par défaut de ces paramètres.  
   
- La cible ETW est chargée des opérations suivantes :  
+ La cible ETW est chargée des opérations suivantes :  
   
 -   Création de la session ETW par défaut.  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 13
   
 -   Conservation des packages des Événements étendus activés à tout instant.  
   
- Les emplacements de fichier par défaut suivants sont utilisés par ETW :  
+ Les emplacements de fichier par défaut suivants sont utilisés par ETW :  
   
 -   Le fichier de sortie ETW se trouve dans %TEMP%\XEEtw.etl.  
   
@@ -79,8 +83,8 @@ caps.handback.revision: 13
   
 -   Les fichiers MOF (Managed Object Format) se trouvent dans le dossier *\<chemin de votre installation>*\Microsoft SQL Server\Shared. Pour plus d'informations, consultez [Format d'objet managé](http://go.microsoft.com/fwlink/?LinkId=92851) sur MSDN.  
   
-## Ajout de la cible à une session  
- Pour ajouter la cible ETW à une session Événements étendus lorsque vous créez ou modifiez une session d'événements, vous devez inclure l'instruction suivante :  
+## <a name="adding-the-target-to-a-session"></a>Ajout de la cible à une session  
+ Pour ajouter la cible ETW à une session Événements étendus lorsque vous créez ou modifiez une session d'événements, vous devez inclure l'instruction suivante :  
   
 ```  
 ADD TARGET package0.etw_classic_sync_target  
@@ -88,8 +92,8 @@ ADD TARGET package0.etw_classic_sync_target
   
  Pour plus d’informations et pour obtenir un exemple complet qui montre comment utiliser la cible ETW (et notamment comment afficher les données), consultez [Surveiller l’activité système à l’aide d’événements étendus](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
   
-## Voir aussi  
- [Cibles des Événements étendus SQL Server](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Cibles des Événements étendus SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)  

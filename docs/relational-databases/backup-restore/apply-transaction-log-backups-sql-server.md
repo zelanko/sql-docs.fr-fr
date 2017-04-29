@@ -1,28 +1,32 @@
 ---
-title: "Appliquer les sauvegardes du journal de transactions (SQL&#160;Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/13/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restauration [SQL Server], sauvegardes de journaux"
-  - "sauvegardes de journaux des transactions [SQL Server], application de sauvegardes"
-  - "restaurations en ligne [SQL Server], sauvegardes de journaux"
-  - "sauvegardes de journaux des transactions [SQL Server], quantité requise pour une séquence de restauration"
-  - "sauvegardes [SQL Server], sauvegardes de journaux"
+title: Appliquer les sauvegardes du journal de transactions (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 08/13/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring [SQL Server], log backups
+- transaction log backups [SQL Server], applying backups
+- online restores [SQL Server], log backups
+- transaction log backups [SQL Server], quantity needed for restore sequence
+- backups [SQL Server], log backups
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 60f9ef5bcf12be3b4a16f6ed56a21da2a2b54501
+ms.lasthandoff: 04/11/2017
+
 ---
-# Appliquer les sauvegardes du journal de transactions (SQL&#160;Server)
+# <a name="apply-transaction-log-backups-sql-server"></a>Appliquer les sauvegardes du journal de transactions (SQL Server)
   Cette rubrique concerne uniquement le mode de récupération complète ou le mode de récupération utilisant les journaux de transactions.  
   
  Cette rubrique décrit l'application de sauvegardes du journal des transaction dans le cadre de la restauration d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -60,25 +64,25 @@ caps.handback.revision: 38
   
 > **REMARQUE :** Pour une explication de cet exemple de cette séquence de sauvegardes, consultez [Sauvegardes des journaux de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
- Pour restaurer la base de données à son état à 21:45 (point d'échec), les autres procédures suivantes peuvent être utilisées :  
+ Pour restaurer la base de données à son état à 21:45 (point d'échec), les autres procédures suivantes peuvent être utilisées :  
   
- **Solution 1 : restaurer la base de données en utilisant la sauvegarde complète de base de données la plus récente**  
-  
-1.  Créez une sauvegarde de la fin du journal du journal des transactions actuellement actif comme point d'échec.  
-  
-2.  Ne restaurez pas la sauvegarde complète de base de données de 18h00. Restaurez plutôt la sauvegarde complète de base de données la plus récente de 18h00, puis appliquez la sauvegarde du journal de 20h00 et la sauvegarde de la fin du journal.  
-  
- **Solution 2 : restaurer la base de données en utilisant une sauvegarde complète de base de données antérieure**  
-  
-> **REMARQUE :** Cette autre solution est utile si un problème vous empêche d’utiliser la sauvegarde complète de base de données de 18h00. Ce processus prend plus de temps que la restauration de la sauvegarde complète de base de données de 18h00.  
+ **Solution 1 : restaurer la base de données en utilisant la sauvegarde complète de base de données la plus récente**  
   
 1.  Créez une sauvegarde de la fin du journal du journal des transactions actuellement actif comme point d'échec.  
   
-2.  Restaurez la sauvegarde complète de base de données de 8h00, puis restaurez dans l'ordre les quatre sauvegardes du journal des transactions. Cette procédure restaure par progression toutes les transactions achevées jusqu'à 21h45.  
+2.  Ne restaurez pas la sauvegarde complète de base de données de 18h00. Restaurez plutôt la sauvegarde complète de base de données la plus récente de 18h00, puis appliquez la sauvegarde du journal de 20h00 et la sauvegarde de la fin du journal.  
+  
+ **Solution 2 : restaurer la base de données en utilisant une sauvegarde complète de base de données antérieure**  
+  
+> **REMARQUE :** Cette autre solution est utile si un problème vous empêche d’utiliser la sauvegarde complète de base de données de 18h00. Ce processus prend plus de temps que la restauration de la sauvegarde complète de base de données de 18h00.  
+  
+1.  Créez une sauvegarde de la fin du journal du journal des transactions actuellement actif comme point d'échec.  
+  
+2.  Restaurez la sauvegarde complète de base de données de 8h00, puis restaurez dans l'ordre les quatre sauvegardes du journal des transactions. Cette procédure restaure par progression toutes les transactions achevées jusqu'à 21h45.  
   
      Cette solution souligne la sécurité redondante offerte par le maintien d'une séquence de sauvegardes de journaux de transactions dans une série de sauvegardes complètes de base de données.  
   
-> **REMARQUE :** Dans certains cas, vous pouvez utiliser des journaux de transactions pour restaurer une base de données à un point spécifique dans le temps. Pour plus d’informations, consultez [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;Mode de récupération complète&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+> **REMARQUE :** Dans certains cas, vous pouvez utiliser des journaux de transactions pour restaurer une base de données à un point spécifique dans le temps. Pour plus d’informations, consultez [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
  **Pour appliquer une sauvegarde du journal des transactions**  
@@ -87,7 +91,7 @@ caps.handback.revision: 38
   
  **Pour effectuer une restauration au point de récupération**  
   
--   [Restaurer une base de données jusqu’au point d’échec en mode de récupération complète &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [Restaurer une base de données jusqu’au point d’échec en mode de récupération complète &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
@@ -101,7 +105,8 @@ caps.handback.revision: 38
   
 -   [Récupérer une base de données sans restaurer les données &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   
+

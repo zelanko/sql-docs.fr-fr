@@ -1,31 +1,35 @@
 ---
-title: "Codes de retour OLE Automation et informations sur les erreurs | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ole"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "codes de retour [SQL Server]"
-  - "OLE Automation [SQL Server], codes de retour"
-  - "OLE Automation [SQL Server], erreurs"
+title: Codes de retour OLE Automation et informations sur les erreurs| Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ole
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- return codes [SQL Server]
+- OLE Automation [SQL Server], return codes
+- OLE Automation [SQL Server], errors
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b1a64e9ca8e9999411edf97c76c50f577790af27
+ms.lasthandoff: 04/11/2017
+
 ---
-# Codes de retour OLE Automation et informations sur les erreurs
-  Les procédures stockées du système OLE Automation retournent un code de retour de type **int** qui équivaut au HRESULT retourné par l’opération OLE Automation sous-jacente. Une valeur HRESULT égale à 0 indique que l'opération a réussi. Une valeur HRESULT différente de 0 est un code d’erreur OLE de forme hexadécimale 0x800*nnnnn* qui est retourné comme une valeur **int** dans un code de retour de procédure stockée qui est de forme 214*nnnnnnn*.  
+# <a name="ole-automation-return-codes-and-error-information"></a>Codes de retour OLE Automation et informations sur les erreurs
+  Les procédures stockées du système OLE Automation retournent un code de retour de type **int** qui équivaut au HRESULT retourné par l’opération OLE Automation sous-jacente. Une valeur HRESULT égale à 0 indique que l'opération a réussi. Une valeur HRESULT différente de 0 est un code d’erreur OLE de forme hexadécimale 0x800*nnnnn*qui est retourné comme une valeur **int** dans un code de retour de procédure stockée qui est de forme 214*nnnnnnn*.  
   
  Par exemple, le passage d’un nom d’objet non valide (comme SQLDMO.Xyzzy) dans la procédure stockée sp_OACreate provoque le retour d’un HRESULT **int** de 2147221005, ce qui correspond à 0x800401f3 en hexadécimal.  
   
- Vous pouvez utiliser `CONVERT(binary(4), @hresult)` pour convertir un HRESULT **int** en une valeur **binary**. Toutefois, l'utilisation de `CONVERT(char(10), CONVERT(binary(4), @hresult))` produit une chaîne illisible, car chaque octet du HRESULT est converti en un seul caractère ASCII. Vous pouvez utiliser l’exemple suivant de procédure stockée sp_hexadecimal pour convertir un HRESULT **int** en une valeur **char** qui contient une chaîne hexadécimale lisible.  
+ Vous pouvez utiliser `CONVERT(binary(4), @hresult)` pour convertir un HRESULT **int** en une valeur **binary** . Toutefois, l'utilisation de `CONVERT(char(10), CONVERT(binary(4), @hresult))` produit une chaîne illisible, car chaque octet du HRESULT est converti en un seul caractère ASCII. Vous pouvez utiliser l’exemple suivant de procédure stockée sp_hexadecimal pour convertir un HRESULT **int** en une valeur **char** qui contient une chaîne hexadécimale lisible.  
   
 ```  
 USE AdventureWorks2012;  
@@ -111,7 +115,7 @@ AS
 GO  
 ```  
   
-## Contenu connexe  
+## <a name="related-content"></a>Contenu connexe  
  [sp_OAGetErrorInfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oageterrorinfo-transact-sql.md)  
   
   

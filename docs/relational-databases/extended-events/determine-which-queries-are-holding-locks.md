@@ -1,29 +1,33 @@
 ---
-title: "D&#233;terminer quelles requ&#234;tes d&#233;tiennent des verrous | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "requêtes [SQL Server], événements étendus"
-  - "requêtes [SQL Server], détention de verrous"
-  - "xe"
-  - "événements étendus [SQL Server], verrous"
-  - "événements étendus [SQL Server], détention de verrous"
+title: "Déterminer quelles requêtes détiennent des verrous | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [SQL Server], extended events
+- queries [SQL Server], holding locks
+- xe
+- extended events [SQL Server], locks
+- extended events [SQL Server], holding locks
 ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 291043a0e143f876db5091a18c655bcd78a9857f
+ms.lasthandoff: 04/11/2017
+
 ---
-# D&#233;terminer quelles requ&#234;tes d&#233;tiennent des verrous
+# <a name="determine-which-queries-are-holding-locks"></a>Déterminer quelles requêtes détiennent des verrous
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Les administrateurs de base de données ont souvent besoin d’identifier la source des verrous qui entravent les performances d’une base de données.  
@@ -39,7 +43,7 @@ caps.handback.revision: 15
 > [!NOTE]  
 >  Cet exemple utilise la base de données AdventureWorks.  
   
-### Pour déterminer quelles requêtes détiennent des verrous  
+### <a name="to-determine-which-queries-are-holding-locks"></a>Pour déterminer quelles requêtes détiennent des verrous  
   
 1.  Dans l'éditeur de requêtes, émettez les instructions suivantes.  
   
@@ -153,7 +157,7 @@ caps.handback.revision: 15
     DROP EVENT SESSION FindBlockers ON SERVER  
     ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   

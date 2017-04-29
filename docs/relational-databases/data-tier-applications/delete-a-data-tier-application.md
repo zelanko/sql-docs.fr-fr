@@ -1,39 +1,43 @@
 ---
-title: "Supprimer une application de couche Donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.deletedacwizard.deletedac.f1"
-  - "sql13.swb.deletedacwizard.summary.f1"
-  - "sql13.swb.deletedacwizard.introduction.f1"
-  - "sql13.swb.deletedacwizard.choosemethod.f1"
-helpviewer_keywords: 
-  - "procédure [DAC], suppression"
-  - "application de la couche Données [SQL Server], suppression"
-  - "Assistant [DAC], suppression"
-  - "supprimer la DAC"
+title: "Supprimer une application de la couche Données | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.deletedacwizard.deletedac.f1
+- sql13.swb.deletedacwizard.summary.f1
+- sql13.swb.deletedacwizard.introduction.f1
+- sql13.swb.deletedacwizard.choosemethod.f1
+helpviewer_keywords:
+- How to [DAC], delete
+- data-tier application [SQL Server], delete
+- wizard [DAC], delete
+- delete DAC
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: a6c69a8bbd4fa63a427658ddc7b8fdbd79b0af3b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Supprimer une application de couche Donn&#233;es
+# <a name="delete-a-data-tier-application"></a>Supprimer une application de la couche Données
   Vous pouvez supprimer une application de la couche Données à l'aide de l'Assistant Supprimer l'application de la couche Données ou d'un script Windows PowerShell. Vous pouvez spécifier si la base de données associée doit être conservée, détachée ou supprimée.  
   
--   **Avant de commencer :**  [Limitations et restrictions](#LimitationsRestrictions), [Autorisations](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Pour mettre à niveau une DAC, en utilisant : **  [L’Assistant Inscrire l’application de la couche Données](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
+-   **To upgrade a DAC, using:**  [The Register Data-tier Application Wizard](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
   
-## Avant de commencer  
+## <a name="before-you-begin"></a>Avant de commencer  
  Lorsque vous supprimez une instance d'application de la couche Données (DAC), vous choisissez l'une des trois options qui spécifient le mode de traitement de la base de données associée à l'application de la couche Données. Les trois options suppriment les métadonnées de définition de la DAC. Les options diffèrent de par ce qu'elles font de la base de données associée à l'application de couche Données. L'Assistant ne supprime aucun des objets au niveau de l'instance associés à la DAC ou base de données, tels que les connexions.  
   
 |Option|Actions de base de données|  
@@ -48,7 +52,7 @@ caps.handback.revision: 16
 |Option|Comment reconstruire l'instance de la DAC|  
 |------------|-------------------------------------|  
 |Supprimer l'inscription|Enregistrez une DAC de la base de données laissée en place.|  
-|Détacher la base de données|Rattachez la base de données à l’aide de **sp_attachdb[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de **, puis enregistrez une nouvelle instance de la DAC à partir de la base de données.|  
+|Détacher la base de données|Rattachez la base de données à l'aide de **sp_attachdb** ou de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puis enregistrez une nouvelle instance de la DAC à partir de la base de données.|  
 |Supprimer la base de données|Restaurez la base de données à partir d'une sauvegarde complète effectuée avant que la DAC ait été supprimée, puis enregistrez une nouvelle instance de la DAC à partir de la base de données.|  
   
 > [!WARNING]  
@@ -64,11 +68,11 @@ caps.handback.revision: 16
   
 2.  Développez le nœud **Gestion** .  
   
-3.  Développez le nœud **Applications de la couche Données**.  
+3.  Développez le nœud **Applications de la couche Données** .  
   
 4.  Cliquez avec le bouton droit sur la DAC à supprimer et sélectionnez **Supprimer une application de la couche Données**.  
   
-5.  Renseignez les boîtes de dialogue de l'Assistant :  
+5.  Renseignez les boîtes de dialogue de l'Assistant :  
   
     1.  [Introduction](#Introduction)  
   
@@ -102,7 +106,7 @@ caps.handback.revision: 16
   
  Les données et fichiers journaux pour la base de données sont supprimés définitivement.  
   
- **\< Précédent** : renvoie à la page **Introduction**.  
+ **< Précédent** : renvoie à la page **Introduction**.  
   
  **Suivant >** : passe à la page **Résumé**.  
   
@@ -115,7 +119,7 @@ caps.handback.revision: 16
   
  **Examinez le résumé de vos sélections** : examinez la DAC, la base de données et la méthode de suppression affichées dans la fenêtre. Si les informations sont correctes, sélectionnez **Suivant** ou **Terminer** pour supprimer la DAC. Si la DAC et les informations sur la base de données ne sont pas correctes, sélectionnez **Annuler** , puis la DAC appropriée. Si la méthode de suppression n'est pas correcte, sélectionnez **Précédent** pour retourner à la page **Choisir une méthode** et sélectionner une méthode différente.  
   
- **\< Précédent** : renvoie à la page **Choisir une méthode** pour choisir une méthode de suppression différente.  
+ **< Précédent** : renvoie à la page **Choisir une méthode** pour choisir une méthode de suppression différente.  
   
  **Suivant >** : supprime l’instance de la DAC en utilisant la méthode que vous avez choisie à la page précédente, puis passe à la page **Supprimer une application de couche Données**.  
   
@@ -145,15 +149,15 @@ caps.handback.revision: 16
   
 4.  Spécifiez la DAC à supprimer.  
   
-5.  Utilisez l'un des trois jeux de codes, en fonction de l'option de suppression qui convient le mieux :  
+5.  Utilisez l'un des trois jeux de codes, en fonction de l'option de suppression qui convient le mieux :  
   
-    -   Pour supprimer l’inscription de la DAC, mais laisser la base de données intacte, utilisez la méthode **Unmanage()**.  
+    -   Pour supprimer l’inscription de la DAC, mais laisser la base de données intacte, utilisez la méthode **Unmanage()** .  
   
     -   Pour supprimer l’inscription de la DAC et détacher la base de données, utilisez la méthode **Uninstall()** et spécifiez **DetachDatabase**.  
   
     -   Pour supprimer l’inscription de la DAC et supprimer la base de données, utilisez la méthode **Uninstall()** et spécifiez **DropDatabase**.  
   
-### Exemple de suppression de la DAC mais en laissant la base de données (PowerShell)  
+### <a name="example-deleting-the-dac-but-leaving-the-database-powershell"></a>Exemple de suppression de la DAC mais en laissant la base de données (PowerShell)  
  L’exemple suivant supprime une DAC nommée MyApplication à l’aide de la méthode **Unmanage()** pour supprimer la DAC, mais laisser la base de données intacte.  
   
 ```  
@@ -179,7 +183,7 @@ $dacstore.Unmanage($dacName)
   
  [Supprimer une DAC à l'aide de PowerShell](#DeleteDACPowerShell)  
   
-### Exemple de suppression de la DAC en détachant la base de données (PowerShell)  
+### <a name="example-deleting-the-dac-and-detaching-the-database-powershell"></a>Exemple de suppression de la DAC en détachant la base de données (PowerShell)  
  L’exemple suivant supprime une DAC nommée MyApplication à l’aide de la méthode **Uninstall()** pour supprimer la DAC et détacher la base de données.  
   
 ```  
@@ -205,7 +209,7 @@ $dacstore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMo
   
  [Supprimer une DAC à l'aide de PowerShell](#DeleteDACPowerShell)  
   
-### Exemple de suppression de la DAC en supprimant la base de données (PowerShell)  
+### <a name="example-deleting-the-dac-and-dropping-the-database-powershell"></a>Exemple de suppression de la DAC en supprimant la base de données (PowerShell)  
  L’exemple suivant supprime une DAC nommée MyApplication à l’aide de la méthode **Uninstall()** pour supprimer la DAC et supprimer la base de données.  
   
 ```  
@@ -231,7 +235,7 @@ $dacName  = "MyApplication"
   
  [Supprimer une DAC à l'aide de PowerShell](#DeleteDACPowerShell)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Déployer une application de la couche Données](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
@@ -240,3 +244,4 @@ $dacName  = "MyApplication"
  [Attacher et détacher une base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
   
   
+

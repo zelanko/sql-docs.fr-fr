@@ -1,27 +1,31 @@
 ---
-title: "Transactions diff&#233;r&#233;es (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "E/S [SQL Server], récupération de base de données"
-  - "restauration de pages [SQL Server]"
-  - "transactions différées"
-  - "modification de l'état de transaction différée"
+title: "Transactions différées (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- I/O [SQL Server], database recovery
+- restoring pages [SQL Server]
+- deferred transactions
+- modifying transaction deferred state
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ee31af10105103d0bccb8c1ff7b48a73086f44d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Transactions diff&#233;r&#233;es (SQL Server)
+# <a name="deferred-transactions-sql-server"></a>Transactions différées (SQL Server)
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise, une transaction endommagée est différée si les données requises par la restauration (annulation) sont hors connexion durant le démarrage de la base de données. Une *transaction différée* est une transaction qui n’est pas validée lorsque la phase de restauration par progression s’achève et dont la restauration ne peut pas être annulée en raison d’une erreur. Si la transaction ne peut pas être annulée, elle est différée.  
   
 > [!NOTE]  
@@ -37,26 +41,26 @@ caps.handback.revision: 45
   
 |Action|Résolution (en cas de problèmes d'E/S ou de données requises hors connexion)|  
 |------------|-----------------------------------------------------------------------|  
-|Démarrage du serveur|Transaction différée|  
-|Restore|Transaction différée|  
+|Démarrage du serveur|transaction différée|  
+|Restore|transaction différée|  
 |Attacher|Échec de l'attachement|  
-|Redémarrage automatique|Transaction différée|  
+|Redémarrage automatique|transaction différée|  
 |Création d'une base de données ou d'un instantané de base de données|Échec de la création|  
-|Restauration par progression sur mise en miroir de bases de données|Transaction différée|  
-|Groupe de fichiers hors connexion|Transaction différée|  
+|Restauration par progression sur mise en miroir de bases de données|transaction différée|  
+|Groupe de fichiers hors connexion|transaction différée|  
   
-## Mise d'une transaction hors de l'état DEFERRED  
+## <a name="moving-a-transaction-out-of-the-deferred-state"></a>Mise d'une transaction hors de l'état DEFERRED  
   
 > [!IMPORTANT]  
 >  Une transaction différée maintient actif le journal des transactions. Un fichier journal virtuel qui contient des transactions différées ne peut pas être tronquées tant que ces transactions n'ont pas quitté l'état différé. Pour plus d’informations sur la troncation de journal, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
- Pour que la transaction ne soit plus dans un état différé, la base de données doit démarrer correctement sans erreurs d'E/S. Si des transactions différées existent, vous devez corriger la source des erreurs d'E/S. Les solutions possibles sont répertoriées ci-dessous dans l'ordre dans lequel elles sont essayées habituellement :  
+ Pour que la transaction ne soit plus dans un état différé, la base de données doit démarrer correctement sans erreurs d'E/S. Si des transactions différées existent, vous devez corriger la source des erreurs d'E/S. Les solutions possibles sont répertoriées ci-dessous dans l'ordre dans lequel elles sont essayées habituellement :  
   
 -   Redémarrez la base de données. Si le problème était temporaire, la base de données devrait démarrer sans transactions différées.  
   
 -   Si les transactions ont été différées parce qu'un groupe de fichiers se trouvait hors connexion, placez le groupe de fichiers en ligne.  
   
-     Pour remettre en ligne un groupe de fichiers hors connexion, utilisez l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante :  
+     Pour remettre en ligne un groupe de fichiers hors connexion, utilisez l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante :  
   
     ```  
     RESTORE DATABASE database_name FILEGROUP=<filegroup_name>  
@@ -73,9 +77,9 @@ caps.handback.revision: 45
   
      Pour plus d’informations, consultez [Supprimer des groupes de fichiers obsolètes &#40;SQL Server&#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md).  
   
--   Si les transactions ont été différées en raison d'une page erronée et s'il n'existe pas de bonne sauvegarde de la base de données, procédez comme suit pour réparer la base de données :  
+-   Si les transactions ont été différées en raison d'une page erronée et s'il n'existe pas de bonne sauvegarde de la base de données, procédez comme suit pour réparer la base de données :  
   
-    -   Commencez par mettre la base de données en mode urgence en exécutant l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante :  
+    -   Commencez par mettre la base de données en mode urgence en exécutant l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante :  
   
         ```  
         ALTER DATABASE <database_name> SET EMERGENCY  
@@ -83,11 +87,11 @@ caps.handback.revision: 45
   
          Pour plus d’informations sur le mode urgence, consultez [États d’une base de données](../../relational-databases/databases/database-states.md).  
   
-    -   Ensuite, réparez la base de données à l’aide de l’option DBCC REPAIR_ALLOW_DATA_LOSS dans l’une des instructions DBCC suivantes : [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) ou [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).  
+    -   Ensuite, réparez la base de données à l’aide de l’option DBCC REPAIR_ALLOW_DATA_LOSS dans l’une des instructions DBCC suivantes : [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)ou [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).  
   
-         Lorsque la commande DBCC rencontre la page erronée, elle la désalloue et répare les éventuelles erreurs associées. Cette approche permet de remettre en ligne la base de données dans un état physique cohérent. Il se peut néanmoins que d'autres données soient perdues ; c'est pourquoi cette approche ne doit être adoptée qu'en dernier recours.  
+         Lorsque la commande DBCC rencontre la page erronée, elle la désalloue et répare les éventuelles erreurs associées. Cette approche permet de remettre en ligne la base de données dans un état physique cohérent. Il se peut néanmoins que d'autres données soient perdues ; c'est pourquoi cette approche ne doit être adoptée qu'en dernier recours.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la restauration et de la récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Supprimer des groupes de fichiers obsolètes &#40;SQL Server&#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)   
  [Restaurations de fichiers &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
@@ -95,6 +99,6 @@ caps.handback.revision: 45
  [Restaurer des pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [Restaurations fragmentaires &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

@@ -1,26 +1,30 @@
 ---
-title: "Prise en charge d&#39;OLTP en m&#233;moire par SQL Server | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Prise en charge d’OLTP en mémoire par SQL Server | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f4525df0-a186-44e5-bba6-5d8123a0f965
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e07fbf3e86ba92f4de8c165cb37b85dbd0091035
+ms.lasthandoff: 04/11/2017
+
 ---
-# Prise en charge d&#39;OLTP en m&#233;moire par SQL Server
+# <a name="sql-server-support-for-in-memory-oltp"></a>Prise en charge d'OLTP en mémoire par SQL Server
   Cette section traite des nouveautés et des mises à jour en matière de syntaxe et de fonctionnalités prenant en charge les tables optimisées en mémoire.  
   
--   [Fonctionnalités SQL Server non prises en charge pour l’OLTP en mémoire](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)  
+-   [Fonctionnalités SQL Server non prises en charge pour l’OLTP en mémoire](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)  
   
 -   [Prise en charge SQL Server Management Objects pour OLTP en mémoire](../../relational-databases/in-memory-oltp/sql-server-management-objects-support-for-in-memory-oltp.md)  
   
@@ -32,7 +36,7 @@ caps.handback.revision: 18
   
 -   [Prise en charge d'OLTP en mémoire par Transact-SQL](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [OLTP en mémoire &#40;Optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

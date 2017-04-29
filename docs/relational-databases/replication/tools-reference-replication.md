@@ -1,28 +1,32 @@
 ---
-title: "R&#233;f&#233;rences relatives aux outils (r&#233;plication) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "réplication [SQL Server], outils"
-  - "outils [réplication SQL Server]"
+title: "Références relatives aux outils (réplication) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- replication [SQL Server], tools
+- tools [SQL Server replication]
 ms.assetid: 41921d45-8a3c-4b69-b397-4b02b3b62160
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7893b1dad863356ed767debe84759448ace6f359
+ms.lasthandoff: 04/11/2017
+
 ---
-# R&#233;f&#233;rences relatives aux outils (r&#233;plication)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit plusieurs outils pour l’implémentation, administration et résolution des problèmes de réplication. Ceux-ci incluent [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], interfaces de programmation et autres [!INCLUDE[msCoName](../../includes/msconame-md.md)] des composants Windows.  
+# <a name="tools-reference-replication"></a>Références relatives aux outils (réplication)
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit plusieurs outils pour implémenter, administrer et dépanner la réplication. Il s'agit notamment de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], d'interfaces de programmation et d'autres composants [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
-## Voir aussi  
- [Référence technique & #40 ; Réplication & #41 ;](../../relational-databases/replication/technical-reference-replication.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Informations techniques de référence &#40;réplication&#41;](../../relational-databases/replication/technical-reference-replication.md)  
   
   

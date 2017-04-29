@@ -1,38 +1,42 @@
 ---
-title: "Base de donn&#233;es master | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "base de données MASTER [SQL Server], à propos de"
-  - "base de données master [SQL Server]"
+title: "Base de données master | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- master database [SQL Server], about
+- master database [SQL Server]
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 caps.latest.revision: 50
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 778915dbe6c89b17520ca44b6d437862a882b078
+ms.lasthandoff: 04/11/2017
+
 ---
-# Base de donn&#233;es master
-  La base de données **master** contient l’intégralité des informations système relatives à un système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cela inclut les métadonnées relatives à l'instance, dont les comptes d'ouverture de session, les points de terminaison, les serveurs liés et les paramètres de configuration du système. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les objets système ne sont plus stockés dans la base de données **master** , mais dans la [base de données des ressources](../../relational-databases/databases/resource-database.md). La base de données **master** enregistre également l'existence de toutes les bases de données et l'emplacement de leurs fichiers, et contient les informations d'initialisation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par conséquent, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas démarrer si la base de données **master** n'est pas disponible.  
+# <a name="master-database"></a>Base de données master
+  La base de données **master** contient l’intégralité des informations système relatives à un système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cela inclut les métadonnées relatives à l'instance, dont les comptes d'ouverture de session, les points de terminaison, les serveurs liés et les paramètres de configuration du système. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les objets système ne sont plus stockés dans la base de données **master** , mais dans la [base de données des ressources](../../relational-databases/databases/resource-database.md). La base de données **master** enregistre également l'existence de toutes les bases de données et l'emplacement de leurs fichiers, et contient les informations d'initialisation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par conséquent, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas démarrer si la base de données **master** n'est pas disponible.  
   
-## Propriétés physiques de la base de données master  
+## <a name="physical-properties-of-master"></a>Propriétés physiques de la base de données master  
  Le tableau suivant énumère les valeurs de configuration initiales des données et des journaux de la base de données **master** . La taille de ces fichiers peut varier légèrement en fonction des éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Fichier|Nom logique|Nom physique|Croissance du fichier|  
 |----------|------------------|-------------------|-----------------|  
-|Données primaires|master|master.mdf|Croissance automatique de 10 % jusqu'à saturation du disque.|  
-|Journal|mastlog|mastlog.ldf|Croissance automatique de 10 % jusqu'à un maximum de 2 téraoctets.|  
+|Données primaires|master|master.mdf|Croissance automatique de 10 % jusqu'à saturation du disque.|  
+|Journal|mastlog|mastlog.ldf|Croissance automatique de 10 % jusqu'à un maximum de 2 téraoctets.|  
   
- Pour plus d’informations sur la manière de déplacer les données et les fichiers journaux **master**, consultez [Déplacer des bases de données système](../../relational-databases/databases/move-system-databases.md).  
+ Pour plus d’informations sur la manière de déplacer les données et les fichiers journaux **master** , consultez [Déplacer des bases de données système](../../relational-databases/databases/move-system-databases.md).  
   
-### Options de base de données  
+### <a name="database-options"></a>Options de base de données  
  Le tableau suivant indique la valeur par défaut pour chaque option de la base de données **master** et si cette option peut être modifiée. Pour afficher les valeurs actuelles de ces options, utilisez l'affichage catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
   
 |Option de base de données|Valeur par défaut|Peut être modifiée|  
@@ -69,7 +73,7 @@ caps.handback.revision: 50
   
  Pour obtenir une description de ces options de base de données, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
-## Restrictions  
+## <a name="restrictions"></a>Restrictions  
  Les opérations suivantes ne peuvent pas être effectuées sur la base de données **master** :  
   
 -   ajout de groupes de fichiers ou de fichiers ;  
@@ -78,9 +82,9 @@ caps.handback.revision: 50
   
 -   Modification du propriétaire de la base de données. La base de données**master** appartient à **sa**.  
   
--   création d'un catalogue ou d'un index de texte intégral ;  
+-   création d'un catalogue ou d'un index de texte intégral ;  
   
--   création de déclencheurs sur les tables système de la base de données ;  
+-   création de déclencheurs sur les tables système de la base de données ;  
   
 -   Suppression de la base de données  
   
@@ -98,7 +102,7 @@ caps.handback.revision: 50
   
 -   Affectation de la valeur READ_ONLY à la base de données ou au groupe de fichiers primaire  
   
-## Recommandations  
+## <a name="recommendations"></a>Recommandations  
  Lorsque vous travaillez avec la base de données **master** , tenez compte des recommandations suivantes :  
   
 -   Ayez toujours une sauvegarde actuelle de la base de données **master** .  
@@ -107,7 +111,7 @@ caps.handback.revision: 50
   
     -   création, modification ou suppression d'une base de données quelconque ;  
   
-    -   modification des valeurs de configuration de la base de données ou du serveur ;  
+    -   modification des valeurs de configuration de la base de données ou du serveur ;  
   
     -   modification ou ajout de comptes d'ouverture de session.  
   
@@ -115,7 +119,7 @@ caps.handback.revision: 50
   
 -   N'attribuez pas la valeur ON à l'option TRUSTWORTHY pour la base de données **master** .  
   
-## Procédure à suivre si la base de données master devient inutilisable  
+## <a name="what-to-do-if-master-becomes-unusable"></a>Procédure à suivre si la base de données master devient inutilisable  
  Si la base de données **master** devient inutilisable, vous pouvez la ramener à un état utilisable de deux manières :  
   
 -   en restaurant la base de données **master** depuis une sauvegarde actuelle.  
@@ -127,9 +131,9 @@ caps.handback.revision: 50
      Si la base de données **master** est gravement endommagée et ne vous permet pas de démarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez recréer la base de données **master**. Pour plus d’informations, consultez [Reconstruire des bases de données système](../../relational-databases/databases/rebuild-system-databases.md).  
   
     > [!IMPORTANT]  
-    >  Lorsque vous recréez la base de données **master**, vous recréez toutes les bases de données système.  
+    >  Lorsque vous recréez la base de données **master** , vous recréez toutes les bases de données système.  
   
-## Contenu connexe  
+## <a name="related-content"></a>Contenu connexe  
  [Reconstruire des bases de données système](../../relational-databases/databases/rebuild-system-databases.md)  
   
  [Bases de données système](../../relational-databases/databases/system-databases.md)  
@@ -141,3 +145,4 @@ caps.handback.revision: 50
  [Déplacer des fichiers de bases de données](../../relational-databases/databases/move-database-files.md)  
   
   
+

@@ -1,35 +1,39 @@
 ---
-title: "Cr&#233;er des variables et des colonnes de type de donn&#233;es XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "type de données xml [SQL Server], variables"
-  - "type de données xml [SQL Server], colonnes"
+title: "Créer des variables et des colonnes de type de données XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xml data type [SQL Server], variables
+- xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 751fccc2a458239715c187a1925046cdf74de98a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er des variables et des colonnes de type de donn&#233;es XML
+# <a name="create-xml-data-type-variables-and-columns"></a>Créer des variables et des colonnes de type de données XML
   Le type de données **xml** est intégré dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et s’apparente à certains égards à d’autres types intégrés, tels que **int** et **varchar**. À l’image des autres types intégrés, vous pouvez utiliser le type de données **xml** comme type de colonne lorsque vous créez une table en tant que type de variable, de paramètre, de retour de fonction ou dans [CAST et CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-## Création de variables et de colonnes  
- Pour créer une colonne de type `xml` dans le cadre d’une table, utilisez une instruction `CREATE TABLE`, comme illustré dans l’exemple suivant :  
+## <a name="creating-columns-and-variables"></a>Création de variables et de colonnes  
+ Pour créer une colonne de type `xml` dans le cadre d’une table, utilisez une instruction `CREATE TABLE` , comme illustré dans l’exemple suivant :  
   
 ```  
 CREATE TABLE T1(Col1 int primary key, Col2 xml)   
 ```  
   
- Vous pouvez utiliser une `DECLARE statement` pour créer une variable de type `xml`, comme le montre l’exemple suivant.  
+ Vous pouvez utiliser une `DECLARE statement` pour créer une variable de type `xml` , comme le montre l’exemple suivant.  
   
 ```  
 DECLARE @x xml   
@@ -41,7 +45,7 @@ DECLARE @x xml
 DECLARE @x xml (Sales.StoreSurveySchemaCollection)  
 ```  
   
- Pour passer un paramètre de type `xml` à une procédure stockée, utilisez une instruction `CREATE PROCEDURE`, comme illustré dans l’exemple suivant.  
+ Pour passer un paramètre de type `xml` à une procédure stockée, utilisez une instruction `CREATE PROCEDURE` , comme illustré dans l’exemple suivant.  
   
 ```  
 CREATE PROCEDURE SampleProc(@XmlDoc xml) AS ...   
@@ -49,10 +53,10 @@ CREATE PROCEDURE SampleProc(@XmlDoc xml) AS ...
   
  Vous pouvez utiliser XQuery pour interroger des instances XML stockées dans des colonnes, paramètres ou variables. Vous pouvez également utiliser le langage de manipulation de données XML pour appliquer des mises à jour aux instances XML. Le développement du standard XQuery n’ayant pas donné lieu à la définition d’une syntaxe DML XQuery, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] introduit des extensions [DML XML (XML Data Modification Language)](../../t-sql/xml/xml-data-modification-language-xml-dml.md) dans XQuery. Ces extensions vous permettent de réaliser des opérations d'insertion, de mise à jour et de suppression.  
   
-## Affectation de valeurs par défaut  
- Dans une table, vous pouvez affecter une instance XML par défaut à une colonne de type **xml**. Vous pouvez fournir le XML par défaut de deux manières : en utilisant une constante XML ou en utilisant un cast explicite au type **xml**.  
+## <a name="assigning-defaults"></a>Affectation de valeurs par défaut  
+ Dans une table, vous pouvez affecter une instance XML par défaut à une colonne de type **xml** . Vous pouvez fournir le XML par défaut de deux manières : en utilisant une constante XML ou en utilisant un cast explicite au type **xml** .  
   
- Pour fournir le XML par défaut en tant que constante XML, utilisez la syntaxe comme illustré dans l'exemple suivant. Notez que la chaîne est convertie implicitement au type **xml**.  
+ Pour fournir le XML par défaut en tant que constante XML, utilisez la syntaxe comme illustré dans l'exemple suivant. Notez que la chaîne est convertie implicitement au type **xml** .  
   
 ```  
 CREATE TABLE T (XmlColumn xml default N'<element1/><element2/>')  
@@ -65,18 +69,18 @@ CREATE TABLE T (XmlColumn xml
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend également en charge les contraintes NULL et NOT NULL sur des colonnes de type **xml**. Par exemple :  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend également en charge les contraintes NULL et NOT NULL sur des colonnes de type **xml** . Par exemple :  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  
 ```  
   
-## Spécification de contraintes  
- Quand vous créez des colonnes de type **xml**, vous pouvez définir des contraintes de niveau colonne ou de niveau table. Utilisez les contraintes dans les cas suivants :  
+## <a name="specifying-constraints"></a>Spécification de contraintes  
+ Quand vous créez des colonnes de type **xml** , vous pouvez définir des contraintes de niveau colonne ou de niveau table. Utilisez les contraintes dans les cas suivants :  
   
--   Vos règles d'entreprise ne peuvent pas être exprimées dans les schémas XML. Par exemple, l'adresse de livraison d'un fleuriste doit se trouver à 80 km du magasin. Cela peut faire l'objet d'une contrainte dans la colonne XML. La contrainte peut impliquer des méthodes de type de données **xml**.  
+-   Vos règles d'entreprise ne peuvent pas être exprimées dans les schémas XML. Par exemple, l'adresse de livraison d'un fleuriste doit se trouver à 80 km du magasin. Cela peut faire l'objet d'une contrainte dans la colonne XML. La contrainte peut impliquer des méthodes de type de données **xml** .  
   
--   Votre contrainte implique d'autres colonnes XML ou non XML de la table. Vous pourriez, par exemple, vouloir absolument que l'ID d'un client (`/Customer/@CustId`) figurant dans une instance XML corresponde à la valeur d'une colonne relationnelle CustomerID.  
+-   Votre contrainte implique d'autres colonnes XML ou non XML de la table. Vous pourriez, par exemple, vouloir absolument que l'ID d'un client (`/Customer/@CustId`) figurant dans une instance XML corresponde à la valeur d'une colonne relationnelle CustomerID.  
   
  Vous pouvez spécifier des contraintes pour les colonnes de type de données **xml** typées ou non typées. Toutefois, vous ne pouvez pas utiliser les [méthodes de type de données xm](../../t-sql/xml/xml-data-type-methods.md) lorsque vous spécifiez des contraintes. Notez également que le type de données **xml** ne prend pas en charge les contraintes de colonne et de table suivantes :  
   
@@ -92,7 +96,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
  Une alternative à l’utilisation de contraintes consiste à créer une fonction wrapper définie par l’utilisateur permettant d’inclure la méthode de type de données **xml** et à spécifier cette fonction dans la contrainte de validation, comme le montre l’exemple ci-dessous.  
   
- Dans l'exemple suivant, la contrainte sur `Col2` spécifie que chaque instance XML stockée dans cette colonne doit posséder un élément `<ProductDescription>` doté d'un attribut `ProductID`. Cette contrainte est appliquée par cette fonction définie par l'utilisateur :  
+ Dans l'exemple suivant, la contrainte sur `Col2` spécifie que chaque instance XML stockée dans cette colonne doit posséder un élément `<ProductDescription>` doté d'un attribut `ProductID` . Cette contrainte est appliquée par cette fonction définie par l'utilisateur :  
   
 ```  
 CREATE FUNCTION my_udf(@var xml) returns bit  
@@ -102,9 +106,9 @@ END
 GO  
 ```  
   
- La méthode `exist()` du type de données `xml` renvoie `1` si l'élément `<ProductDescription>` de l'instance contient l'attribut `ProductID`. Sinon, `0` est retourné.  
+ La méthode `exist()` du type de données `xml` renvoie `1` si l'élément `<ProductDescription>` de l'instance contient l'attribut `ProductID` . Sinon, `0`est retourné.  
   
- Maintenant, vous pouvez créer une table dotée d'une contrainte de niveau colonne, comme suit :  
+ Maintenant, vous pouvez créer une table dotée d'une contrainte de niveau colonne, comme suit :  
   
 ```  
 CREATE TABLE T (  
@@ -113,31 +117,31 @@ CREATE TABLE T (
 GO  
 ```  
   
- L'insertion suivante réussit :  
+ L'insertion suivante réussit :  
   
 ```  
 INSERT INTO T values(1,'<ProductDescription ProductID="1" />')  
 ```  
   
- La contrainte fait échouer l'insertion suivante :  
+ La contrainte fait échouer l'insertion suivante :  
   
 ```  
 INSERT INTO T values(1,'<Product />')  
 ```  
   
-## Table identique ou différente  
+## <a name="same-or-different-table"></a>Table identique ou différente  
  Une colonne de type **xml** peut être créée dans une table qui contient d’autres colonnes relationnelles ou dans une table distincte dotée d’une relation de clé étrangère avec une table principale.  
   
  Créez une colonne de type **xml** dans la même table si l’une des conditions suivantes est remplie :  
   
--   Votre application récupère les données dans la colonne XML sans exiger qu'un index XML existe dans la colonne XML.  
+-   Votre application récupère les données dans la colonne XML sans exiger qu'un index XML existe dans la colonne XML.  
   
 -   Vous voulez créer un index XML sur la colonne de type **xml** et la clé primaire de la table principale est identique à sa clé de clustering. Pour plus d’informations, consultez [Index XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
  Créez la colonne de type **xml** dans une table distincte si les conditions suivantes sont remplies :  
   
--   Vous voulez créer un index XML sur la colonne de type **xml**, mais la clé primaire de la table principale est différente de sa clé de clustering, ou la table principale n’a pas de clé primaire, ou la table principale est un segment (sans clé de clustering). Cela peut se produire si la table principale existe déjà.  
+-   Vous voulez créer un index XML sur la colonne de type **xml** , mais la clé primaire de la table principale est différente de sa clé de clustering, ou la table principale n’a pas de clé primaire, ou la table principale est un segment (sans clé de clustering). Cela peut se produire si la table principale existe déjà.  
   
--   Vous ne voulez pas voir les analyses de la table ralentir suite à la présence d'une colonne XML dans la table. La quantité d'espace utilisée varie selon que le stockage se fait en ligne ou hors ligne.  
+-   Vous ne voulez pas voir les analyses de la table ralentir suite à la présence d'une colonne XML dans la table. La quantité d'espace utilisée varie selon que le stockage se fait en ligne ou hors ligne.  
   
   

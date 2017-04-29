@@ -1,36 +1,40 @@
 ---
-title: "&#201;crire des &#233;v&#233;nements d&#39;audit SQL Server dans le journal de s&#233;curit&#233; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "journaux [SQL Server], journal de sécurité"
-  - "audit de serveur [SQL Server]"
-  - "audits [SQL Server], écrire dans le journal de sécurité"
-  - "journaux de sécurité [SQL Server]"
+title: "Écrire des événements d’audit SQL Server dans le journal de sécurité | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [SQL Server], Security Log
+- server audit [SQL Server]
+- audits [SQL Server], writing to Security Log
+- security logs [SQL Server]
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 268f1fbd8ea57db8626c84999a3454e4c4459511
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#201;crire des &#233;v&#233;nements d&#39;audit SQL Server dans le journal de s&#233;curit&#233;
+# <a name="write-sql-server-audit-events-to-the-security-log"></a>Écrire des événements d'audit SQL Server dans le journal de sécurité
   Dans un environnement extrêmement sécurisé, le journal de sécurité Windows est l'emplacement approprié pour consigner des événements d'accès aux objets. D'autres emplacements d'audit sont pris en charge mais ils sont plus exposés au risque de falsification.  
   
  L'écriture des audits du serveur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans le journal de sécurité Windows est soumise à deux conditions clés :  
   
--   Le paramètre Auditer l'accès aux objets doit être configuré pour capturer les événements. L’outil de stratégie d’audit (`auditpol.exe`) expose différents paramètres de sous-stratégies dans la catégorie **Auditer l’accès aux objets**. Pour permettre à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d'auditer l'accès aux objets, configurez le paramètre **généré par une application** .  
+-   Le paramètre Auditer l'accès aux objets doit être configuré pour capturer les événements. L’outil de stratégie d’audit (`auditpol.exe`) expose différents paramètres de sous-stratégies dans la catégorie **Auditer l’accès aux objets** . Pour permettre à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d'auditer l'accès aux objets, configurez le paramètre **généré par une application** .  
   
 -   Le compte sous lequel le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est exécuté doit posséder l’autorisation **Générer des audits de sécurité** pour écrire dans le journal de sécurité Windows. Par défaut, les comptes Service local et Service réseau disposent de cette autorisation. Cette étape n'est pas requise si [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'exécute sous l'un de ces comptes.  
   
- La stratégie d'audit Windows peut affecter l'audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'il est configuré pour écrire dans le journal de sécurité Windows, avec la possibilité de perdre des événements si la stratégie d'audit est configurée incorrectement. En général, le journal de sécurité Windows est configuré pour remplacer les événements les plus anciens. Les événements les plus récents sont ainsi préservés. Toutefois, si le journal de sécurité Windows n'est pas configuré pour remplacer les événements les plus anciens, et si le journal de sécurité est plein, le système publie alors l'événement Windows 1104 (le journal est plein). À ce stade :  
+ La stratégie d'audit Windows peut affecter l'audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'il est configuré pour écrire dans le journal de sécurité Windows, avec la possibilité de perdre des événements si la stratégie d'audit est configurée incorrectement. En général, le journal de sécurité Windows est configuré pour remplacer les événements les plus anciens. Les événements les plus récents sont ainsi préservés. Toutefois, si le journal de sécurité Windows n'est pas configuré pour remplacer les événements les plus anciens, et si le journal de sécurité est plein, le système publie alors l'événement Windows 1104 (le journal est plein). À ce stade :  
   
 -   Plus aucun événement de sécurité supplémentaire n'est consigné  
   
@@ -40,13 +44,13 @@ caps.handback.revision: 19
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour écrire des événements d'audit SQL Server dans le journal de sécurité :**  
+-   **Pour écrire des événements d'audit SQL Server dans le journal de sécurité :**  
   
      [Configurer le paramètre Auditer l'accès aux objets dans Windows à l'aide de l'outil auditpol](#auditpolAccess)  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 19
   
 1.  Ouvrez une invite de commandes avec des autorisations d'administrateur.  
   
-    1.  Dans le menu **Démarrer**, pointez sur **Tous les programmes**, sur **Accessoires**, cliquez avec le bouton droit sur **Invite de commandes**, puis cliquez sur **Exécuter en tant qu’administrateur**.  
+    1.  Dans le menu **Démarrer** , pointez sur **Tous les programmes**, sur **Accessoires**, cliquez avec le bouton droit sur **Invite de commandes**, puis cliquez sur **Exécuter en tant qu’administrateur**.  
   
     2.  Si la boîte de dialogue **Contrôle de compte d'utilisateur** s'ouvre, cliquez sur **Continuer**.  
   
@@ -92,7 +96,7 @@ caps.handback.revision: 19
   
 5.  Sous l'onglet **Paramètre de sécurité locale** , cliquez sur **Ajouter un utilisateur ou un groupe**.  
   
-6.  Dans la boîte de dialogue **Sélectionnez les utilisateurs, les ordinateurs ou les groupes**, tapez le nom du compte d’utilisateur, tel que **domaine1\utilisateur1** , puis cliquez sur **OK**, ou cliquez sur **Avancé** et recherchez le compte.  
+6.  Dans la boîte de dialogue **Sélectionnez les utilisateurs, les ordinateurs ou les groupes** , tapez le nom du compte d’utilisateur, tel que **domaine1\utilisateur1** , puis cliquez sur **OK**, ou cliquez sur **Avancé** et recherchez le compte.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -116,7 +120,7 @@ caps.handback.revision: 19
   
 7.  Fermez l'outil Stratégie de sécurité locale.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server Audit &#40Moteur de base de données&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

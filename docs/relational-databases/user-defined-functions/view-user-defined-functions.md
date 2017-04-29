@@ -1,30 +1,34 @@
 ---
-title: "Afficher les fonctions d&#233;finies par l&#39;utilisateur | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.udfproperties.general.f1"
-  - "sql13.swb.functionproperties.general.f1"
-helpviewer_keywords: 
-  - "affichage des fonctions définies par l'utilisateur"
-  - "visualisation de fonctions définies par l'utilisateur"
-  - "fonctions définies par l’utilisateur [SQL Server], affichage"
-  - "informations d’état [SQL Server], fonctions définies par l’utilisateur"
+title: "Afficher les fonctions définies par l’utilisateur | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.udfproperties.general.f1
+- sql13.swb.functionproperties.general.f1
+helpviewer_keywords:
+- displaying user-defined functions
+- viewing user-defined functions
+- user-defined functions [SQL Server], viewing
+- status information [SQL Server], user-defined functions
 ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 16f1c2ed871db93259f87bc2e26dba634a0602d6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Afficher les fonctions d&#233;finies par l&#39;utilisateur
+# <a name="view-user-defined-functions"></a>Afficher les fonctions définies par l'utilisateur
   Vous pouvez obtenir des informations sur la définition ou les propriétés d'une fonction définie par l'utilisateur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous devrez peut-être examiner la définition de la fonction pour comprendre comment les données de celle-ci sont issues des tables source ou pour connaître les données définies par la fonction.  
   
 > [!IMPORTANT]  
@@ -32,11 +36,11 @@ caps.handback.revision: 30
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour obtenir des informations sur une fonction, utilisez :**  
+-   **Pour obtenir des informations sur une fonction, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -49,15 +53,15 @@ caps.handback.revision: 30
 ####  <a name="Permissions"></a> Autorisations  
  L’utilisation de **sys.sql_expression_dependencies** pour rechercher toutes les dépendances sur une fonction nécessite l’autorisation VIEW DEFINITION sur la base de données et l’autorisation SELECT sur **sys.sql_expression_dependencies** pour la base de données. Les définitions d'objets système, telles que celles retournées dans OBJECT_DEFINITION, sont visibles publiquement.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour afficher les propriétés d'une fonction définies par l'utilisateur  
+#### <a name="to-show-a-user-defined-functions-properties"></a>Pour afficher les propriétés d'une fonction définies par l'utilisateur  
   
 1.  Dans l' **Explorateur d'objets**, cliquez sur le signe plus (+) en regard de la base de données qui contient la fonction dont vous souhaitez afficher les propriétés, puis cliquez sur le signe plus (+) pour développer le dossier **Programmabilité** .  
   
 2.  Cliquez sur le signe plus (+) pour développer le dossier **Fonctions** .  
   
-3.  Cliquez sur le signe plus (+) pour développer le dossier qui contient la fonction dont vous souhaitez afficher les propriétés :  
+3.  Cliquez sur le signe plus (+) pour développer le dossier qui contient la fonction dont vous souhaitez afficher les propriétés :  
   
     -   Fonction table  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 30
   
 4.  Cliquez avec le bouton droit sur la fonction dont vous voulez afficher les propriétés, puis sélectionnez **Propriétés**.  
   
-     Les propriétés suivantes s’affichent dans la boîte de dialogue **Propriétés de la fonction –** *nom_fonction*.  
+     Les propriétés suivantes s’affichent dans la boîte de dialogue **Propriétés de la fonction –** *nom_fonction* .  
   
      **Base de données**  
      Nom de la base de données contenant cette fonction.  
@@ -110,7 +114,7 @@ caps.handback.revision: 30
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour obtenir la définition et les propriétés d'une fonction  
+#### <a name="to-get-the-definition-and-properties-of-a-function"></a>Pour obtenir la définition et les propriétés d'une fonction  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -151,7 +155,7 @@ caps.handback.revision: 30
   
  Pour plus d’informations, consultez [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) et [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md).  
   
-#### Pour obtenir les dépendances d'une fonction  
+#### <a name="to-get-the-dependencies-of-a-function"></a>Pour obtenir les dépendances d'une fonction  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

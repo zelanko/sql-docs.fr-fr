@@ -1,38 +1,42 @@
 ---
-title: "Classe d&#39;&#233;v&#233;nements Broker:Forwarded Message Dropped | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Broker:Forwarded Message Dropped, classe d'événements"
+title: "Broker:Forwarded Message Dropped, classe d’événements | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker:Forwarded Message Dropped event class
 ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8d63f05d5f476dcb03398872759b92e21d04c99c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe d&#39;&#233;v&#233;nements Broker:Forwarded Message Dropped
+# <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped, classe d'événements
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un événement Broker:Forwarded Message Dropped si Service Broker supprime un message prévu pour être transféré.  
   
-## Colonnes de données de la classe d'événements Broker:Forwarded Message Dropped  
+## <a name="brokerforwarded-message-dropped-event-class-data-columns"></a>Colonnes de données de la classe d'événements Broker:Forwarded Message Dropped  
   
 |Colonne de données|Type|Description|Numéro de colonne|Filtrable|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |ApplicationName|**nvarchar**|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette colonne est remplie avec les valeurs passées par l'application plutôt que par le nom affiché du programme.|10|Oui|  
 |BigintData1|**bigint**|Numéro de séquence du message.|52|Non|  
-|ClientProcessID|**int**|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. Cette colonne de données est remplie si l'ID du processus du client est fourni par le client.|9|Oui|  
-|DatabaseID|**int**|ID de la base de données spécifiée par l’instruction USE *database* ou ID de la base de données par défaut si aucune instruction USE *database* n’a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
+|ClientProcessID|**int**|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. Cette colonne de données est remplie si l'ID du processus du client est fourni par le client.|9|Oui|  
+|DatabaseID|**int**|ID de la base de données spécifiée par l’instruction USE *database* ou ID de la base de données par défaut si aucune instruction USE *database*n’a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |DatabaseName|**nvarchar**|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |DBUserName|**nvarchar**|Identifiant de l'instance de Service Broker d'où provient le message.|40|Non|  
 |Erreur|**int**|ID du message dans sys.messages destiné au texte de l'événement.|31|Non|  
-|EventClass|**int**|Type de classe d'événements capturée. Renvoie toujours 191 pour Broker:Forwarded Message Dropped.|27|Non|  
+|EventClass|**int**|Type de classe d'événements capturée. Renvoie toujours 191 pour Broker:Forwarded Message Dropped.|27|Non|  
 |EventSequence|**int**|Numéro de séquence de cet événement.|51|Non|  
 |FileName|**nvarchar**|Nom du service auquel le message est destiné.|36|Non|  
 |GUID|**uniqueidentifier**|ID de conversation du dialogue. Cet identifiant est transmis en tant que partie intégrante du message et est partagé par les deux intervenants de la conversation.|54|Non|  
@@ -45,7 +49,7 @@ caps.handback.revision: 26
 |ObjectId|**int**|Valeur de durée de vie du message transféré.|22|Non|  
 |ObjectName|**nvarchar**|ID du message transféré.|34|Non|  
 |OwnerName|**nvarchar**|Identificateur de l'instance de Service Broker correspondant à la destination du message.|37|Non|  
-|RoleName|**nvarchar**|Rôle du descripteur de conversation. Une des valeurs suivantes :<br /><br /> -Initiateur. Cette instance de Service Broker a lancé la conversation.<br /><br /> -Cible. Cette instance de Service Broker correspond à la cible de la conversation.|38|Non|  
+|RoleName|**nvarchar**|Rôle du descripteur de conversation. Une des valeurs suivantes :<br /><br /> -Initiateur. Cette instance de Service Broker a lancé la conversation.<br /><br /> -Cible. Cette instance de Service Broker correspond à la cible de la conversation.|38|Non|  
 |ServerName|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
 |Severity|**int**|Numéro de gravité du texte de l'événement.|29|Non|  
 |SPID|**int**|ID du processus serveur affecté par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au processus associé au client.|12|Oui|  
@@ -59,7 +63,7 @@ caps.handback.revision: 26
   
  La colonne TextData de cet événement contient une description de la raison pour laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a supprimé le message.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

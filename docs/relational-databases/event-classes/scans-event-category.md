@@ -1,29 +1,33 @@
 ---
-title: "Cat&#233;gorie d&#39;&#233;v&#233;nements Scans | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classes d’événements SQL Server, catégorie d’événement Analyses"
-  - "Catégorie d'événements Analyses"
-  - "classes d’événements [SQL Server], catégorie d’événement Analyses"
+title: "Analyses, catégorie d’événement | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server event classes, Scans event category
+- Scans event category
+- event classes [SQL Server], Scans event category
 ms.assetid: 657aabe4-d3da-475e-87e5-cf9d33c976b1
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d03f4b35bfdd2b4fb2cc1fbf90400099142f1cc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cat&#233;gorie d&#39;&#233;v&#233;nements Scans
+# <a name="scans-event-category"></a>Catégorie d'événements Analyses
   La catégorie d’événements **Scans** contient les événements d’analyse.  
   
-## Dans cette section  
+## <a name="in-this-section"></a>Dans cette section  
   
 |Rubrique|Description|  
 |-----------|-----------------|  

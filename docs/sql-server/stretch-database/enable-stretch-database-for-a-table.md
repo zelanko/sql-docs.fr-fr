@@ -1,27 +1,30 @@
 ---
-title: "Activer Stretch Database pour une table | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Stretch Database, activation de la table"
-  - "activation de la table pour Stretch Database"
+title: Activer Stretch Database pour une table | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stretch
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Stretch Database, enabling table
+- enabling table for Stretch Database
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
 caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 407863b783be38aa9342361778cc22914f805033
+ms.lasthandoff: 04/11/2017
+
 ---
-# Activer Stretch Database pour une table
+# <a name="enable-stretch-database-for-a-table"></a>Activer Stretch Database pour une table
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Pour configurer une table pour Stretch Database, sélectionnez **Stretch | Activer** pour une table dans SQL Server Management Studio afin d’ouvrir l’Assistant **Activer la table pour Stretch**. Vous pouvez également utiliser Transact-SQL pour activer Stretch Database sur une table existante, ou pour créer une table avec Stretch Database.  
@@ -34,7 +37,8 @@ caps.handback.revision: 43
   
  **Les autorisations**. L’activation de Stretch Database sur une table ou une base de données nécessite les autorisations db_owner. L'activation de Stretch Database requiert également des autorisations ALTER sur la table.  
 
- >   [!NOTE] Ultérieurement, n’oubliez pas que la désactivation de Stretch Database pour une table ou une base de données ne supprime pas l’objet distant. Si vous souhaitez supprimer la table distante ou la base de données distante, vous devez la supprimer à l'aide du portail de gestion Azure. Les objets distants continuent d’entraîner des coûts Azure tant qu’ils n’ont pas été supprimés manuellement.
+ >   [!NOTE]
+ > Ultérieurement, n’oubliez pas que la désactivation de Stretch Database pour une table ou une base de données ne supprime pas l’objet distant. Si vous souhaitez supprimer la table distante ou la base de données distante, vous devez la supprimer à l'aide du portail de gestion Azure. Les objets distants continuent d’entraîner des coûts Azure tant qu’ils n’ont pas été supprimés manuellement.
  
 ##  <a name="EnableWizardTable"></a> Utilisation de l’assistant pour activer Stretch Database sur une table  
  **Lancer l'Assistant**  
@@ -65,7 +69,7 @@ caps.handback.revision: 43
 ##  <a name="EnableTSQLTable"></a> Utilisation de Transact-SQL pour activer Stretch Database sur une table  
  Vous pouvez activer Stretch Database pour une table existante ou créer une table avec Stretch Database activée à l'aide de Transact-SQL.  
   
-### Options  
+### <a name="options"></a>Options  
  Utilisez les options suivantes lorsque vous exécutez CREATE TABLE ou ALTER TABLE pour activer Stretch Database sur une table.  
   
 -   Vous pouvez également utiliser la clause `FILTER_PREDICATE = <function>` pour spécifier une fonction afin de sélectionner les lignes à migrer si la table contient des données chaudes et froides. Le prédicat doit appeler une fonction table inline. Pour plus d’informations, consultez [Sélectionner les lignes à migrer à l’aide d’une fonction de filtre](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Si vous ne spécifiez pas de fonction de filtre, la table entière est migrée.  
@@ -75,7 +79,7 @@ caps.handback.revision: 43
   
 -   Spécifiez `MIGRATION_STATE = OUTBOUND` pour démarrer immédiatement la migration des données, ou  `MIGRATION_STATE = PAUSED` pour reporter le lancement de la migration des données.  
   
-### Activer Stretch Database pour une table existante  
+### <a name="enable-stretch-database-for-an-existing-table"></a>Activer Stretch Database pour une table existante  
  Pour configurer une table existante pour Stretch Database, exécutez la commande ALTER TABLE.  
   
  Voici un exemple qui migre la table entière et lance immédiatement la migration des données.  
@@ -102,7 +106,7 @@ ALTER TABLE <table name>
   
  Pour plus d’informations, consultez [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
-### Créer une table avec Stretch Database activée  
+### <a name="create-a-new-table-with-stretch-database-enabled"></a>Créer une table avec Stretch Database activée  
  Pour créer une table avec Stretch Database activée, exécutez la commande CREATE TABLE.  
   
  Voici un exemple qui migre la table entière et lance immédiatement la migration des données.  
@@ -131,8 +135,9 @@ GO
   
  Pour plus d’informations, consultez [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
   
   
+

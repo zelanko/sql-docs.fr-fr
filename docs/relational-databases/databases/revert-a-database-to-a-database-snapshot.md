@@ -1,28 +1,32 @@
 ---
-title: "R&#233;tablir une base de donn&#233;es dans l&#39;&#233;tat d&#39;un instantan&#233; de base de donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "instantanés de base de données [SQL Server], rétablissement"
-  - "restauration de bases de données"
+title: "Rétablir une base de données dans l’état d’un instantané de base de données | Microsoft Docs"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database snapshots [SQL Server], reverting to
+- reverting databases
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 caps.latest.revision: 58
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7af090ce5354c1cf7a255a80d8f2f6ca1da48405
+ms.lasthandoff: 04/11/2017
+
 ---
-# R&#233;tablir une base de donn&#233;es dans l&#39;&#233;tat d&#39;un instantan&#233; de base de donn&#233;es
+# <a name="revert-a-database-to-a-database-snapshot"></a>Rétablir une base de données dans l'état d'un instantané de base de données
   Si les données d'une base de données en ligne sont endommagées, dans certains cas, rétablir la base de données dans l'état d'un instantané précédant le problème peut être une bonne solution plutôt que de restaurer la base de données à partir d'une sauvegarde. Par exemple, rétablir une base de données peut être utile pour annuler une grave erreur de l'utilisateur, telle que la suppression d'une table. Toutefois, toutes les modifications apportées depuis la création de l'instantané sont perdues.  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
@@ -30,12 +34,12 @@ caps.handback.revision: 58
   
      [Sécurité](#Security)  
   
--   **Pour rétablir une base de données dans l’état d’un instantané de base de données à l’aide de :** [Transact-SQL](#TsqlProcedure)  
+-   **To Revert a Database to a Database Snapshot, using:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
- Le rétablissement n'est pas pris en charge dans les conditions suivantes :  
+ Le rétablissement n'est pas pris en charge dans les conditions suivantes :  
   
 -   La base de données doit actuellement posséder un seul instantané de base de données, que vous prévoyez de rétablir.  
   
@@ -43,7 +47,7 @@ caps.handback.revision: 58
   
 -   Des fichiers sont maintenant hors connexion alors qu'ils étaient en ligne lors de la création de l'instantané.  
   
- Avant de rétablir une base de données, tenez compte des limitations suivantes :  
+ Avant de rétablir une base de données, tenez compte des limitations suivantes :  
   
 -   Le rétablissement n'est pas destiné à la récupération des supports. . L'instantané de base de données est une copie incomplète des fichiers de base de données, donc si la base de données ou l'instantané de base de données est endommagé, le rétablissement à partir d'un instantané sera probablement impossible. En outre, même lorsque le rétablissement est possible, il est peu probable qu'il permette de corriger le problème en cas de corruption. Par conséquent, effectuer des sauvegardes régulières et tester votre plan de restauration sont essentiels pour la protection d'une base de données. Pour plus d’informations, consultez [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
@@ -65,8 +69,8 @@ caps.handback.revision: 58
   
 -   Le rétablissement supprime tous les catalogues de texte intégral.  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
- Vérifiez que la base de données source et l'instantané de base de données remplissent les conditions préalables suivantes :  
+###  <a name="Prerequisites"></a> Configuration requise  
+ Vérifiez que la base de données source et l'instantané de base de données remplissent les conditions préalables suivantes :  
   
 -   Vérifiez que la base de données n'a pas été endommagée.  
   
@@ -88,7 +92,7 @@ caps.handback.revision: 58
 > [!NOTE]  
 >  Pour obtenir un exemple de cette procédure, consultez [Exemples (Transact-SQL)](#TsqlExample), plus loin dans cette section.  
   
-1.  Identifiez l'instantané de base de données auquel vous souhaitez restaurer la base de données. Vous pouvez afficher les instantanés sur une base de données dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (consultez [Afficher un instantané de base de données &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)). En outre, vous pouvez identifier la base de données source d’un affichage à partir de la colonne **source_database_id** de l’affichage catalogue [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
+1.  Identifiez l'instantané de base de données auquel vous souhaitez restaurer la base de données. Vous pouvez afficher les instantanés sur une base de données dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (consultez [Afficher un instantané de base de données &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)). En outre, vous pouvez identifier la base de données source d’un affichage à partir de la colonne **source_database_id** de l’affichage catalogue [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
   
 2.  Supprimez tous les autres instantanés de base de données.  
   
@@ -96,16 +100,16 @@ caps.handback.revision: 58
   
 3.  Effectuez l'opération de restauration.  
   
-     Une opération de restauration nécessite des autorisations RESTORE DATABASE sur la base de données source. Pour restaurer la base de données, utilisez l'instruction Transact-SQL suivante :  
+     Une opération de restauration nécessite des autorisations RESTORE DATABASE sur la base de données source. Pour restaurer la base de données, utilisez l'instruction Transact-SQL suivante :  
   
      RESTORE DATABASE *nom_base_de_données* FROM DATABASE_SNAPSHOT **=***nom_instantané_base_de_données*  
   
      Où *nom_base_de_données* est la base de données source et *nom_instantané_base_de_données* le nom de l’instantané auquel vous souhaitez rétablir la base de données. Notez que dans cette instruction, vous devez spécifier un nom d'instantané et non un périphérique de sauvegarde.  
   
-     Pour plus d’informations, consultez [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+     Pour plus d’informations, consultez [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
     > [!NOTE]  
-    >  Pendant l'opération de restauration, l'instantané et la base de données source ne sont pas disponibles. La base de données source et l'instantané sont tous deux signalés « In restore (en restauration) ». Si une erreur se produit pendant l'opération de restauration, cette dernière tentera d'aboutir lors du redémarrage de la base de données.  
+    >  Pendant l'opération de restauration, l'instantané et la base de données source ne sont pas disponibles. La base de données source et l'instantané sont tous deux signalés « In restore (en restauration) ». Si une erreur se produit pendant l'opération de restauration, cette dernière tentera d'aboutir lors du redémarrage de la base de données.  
   
 4.  Si le propriétaire de la base de données a changé depuis la création de l'instantané de base de données, il convient de mettre à jour le propriétaire de la base de données restaurée.  
   
@@ -117,14 +121,14 @@ caps.handback.revision: 58
 6.  En option, sauvegardez la base de données restaurée, notamment si elle utilise le mode de récupération complète (ou utilisant les journaux de transactions). Pour sauvegarder une base de données, consultez [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 ###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
- Cette section présente les exemples suivants de rétablissement d'une base de données à un état antérieur par le biais d'un instantané de base de données :  
+ Cette section présente les exemples suivants de rétablissement d'une base de données à un état antérieur par le biais d'un instantané de base de données :  
   
 -   A. [Rétablissement d'un instantané sur la base de données AdventureWorks](#Reverting_AW)  
   
 -   B. [Rétablissement d'un instantané sur la base de données Sales (Ventes)](#Reverting_Sales)  
   
 ####  <a name="Reverting_AW"></a> A. Rétablissement d'un instantané sur la base de données AdventureWorks  
- L'exemple suivant part du principe qu'un seul instantané existe actuellement sur la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Pour l’exemple qui crée l’instantané auquel la base de données est ici rétablie, consultez [Créer un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
+ L'exemple suivant part du principe qu'un seul instantané existe actuellement sur la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Pour l’exemple qui crée l’instantané auquel la base de données est ici rétablie, consultez [Créer un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 ```  
 USE master;  
@@ -141,7 +145,7 @@ GO
   
 -   Pour la base de données **Sales** et l’instantané **sales_snapshot0600**, consultez « Création d’une base de données avec des groupes de fichiers » et « Création d’un instantané de base de données » dans [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
--   Pour l’instantané **sales_snapshot1200**, consultez « Création d’un instantané de la base de données Sales (Ventes) » dans [Créer un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
+-   Pour la base de données **sales_snapshot1200** , consultez « Création d’un instantané de la base de données Sales (Ventes) » dans [Créer un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 ```  
 --Test to see if sales_snapshot0600 exists and if it   
@@ -164,9 +168,9 @@ GO
   
 -   [Supprimer un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Instantanés de base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [Mise en miroir et instantanés de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   

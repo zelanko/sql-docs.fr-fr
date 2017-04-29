@@ -1,27 +1,31 @@
 ---
-title: "G&#233;rer et surveiller la recherche en texte int&#233;gral pour une instance de serveur | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "recherche en texte intégral [SQL Server], à propos"
-  - "recherche en texte intégral [SQL Server], gestion du serveur"
+title: "Gérer et surveiller la recherche en texte intégral pour une instance de serveur | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text search [SQL Server], about
+- full-text search [SQL Server], server management
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 657d78f548e8368ad2ff4c554fc6f731d7fb27fa
+ms.lasthandoff: 04/11/2017
+
 ---
-# G&#233;rer et surveiller la recherche en texte int&#233;gral pour une instance de serveur
-  L'administration de la recherche en texte intégral pour une instance de serveur comprend :  
+# <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Gérer et surveiller la recherche en texte intégral pour une instance de serveur
+  L'administration de la recherche en texte intégral pour une instance de serveur comprend :  
   
 -   Des tâches de gestion du système telles que la gestion du service du lanceur FDHOST (MSSQLFDLauncher), le redémarrage du processus hôte de démon de filtre si vous modifiez les informations d'identification du compte de service, la configuration des propriétés en texte intégral à l'échelle du serveur et la sauvegarde des catalogues de texte intégral. Au niveau du serveur, par exemple, vous pouvez spécifier une langue de texte intégral par défaut qui diffère de la langue par défaut de l'instance de serveur dans son ensemble.  
   
@@ -32,29 +36,29 @@ caps.handback.revision: 19
 ##  <a name="props"></a> Affichage ou modification des propriétés de serveur pour la recherche en texte intégral  
  Vous pouvez afficher les propriétés de recherche en texte intégral d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-#### Pour afficher et modifier les propriétés de serveur pour la recherche en texte intégral  
+#### <a name="to-view-and-change-server-properties-for-full-text-search"></a>Pour afficher et modifier les propriétés de serveur pour la recherche en texte intégral  
   
 1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur un serveur, puis cliquez sur **Propriétés**.  
   
-2.  Dans la boîte de dialogue **Propriétés du serveur**, cliquez sur la page **Avancé** pour afficher les informations du serveur relatives à la recherche en texte intégral. Les propriétés de recherche en texte intégral sont les suivantes :  
+2.  Dans la boîte de dialogue **Propriétés du serveur** , cliquez sur la page **Avancé** pour afficher les informations du serveur relatives à la recherche en texte intégral. Les propriétés de recherche en texte intégral sont les suivantes :  
   
     -   **Langue de texte intégral par défaut**  
   
-         Spécifie une langue par défaut pour les colonnes de texte intégral indexées. L'analyse linguistique des données de texte intégral indexées dépend de la langue des données. La valeur par défaut de cette option est la langue du serveur. Pour connaître la langue correspondant au paramètre affiché, consultez [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
+         Spécifie une langue par défaut pour les colonnes de texte intégral indexées. L'analyse linguistique des données de texte intégral indexées dépend de la langue des données. La valeur par défaut de cette option est la langue du serveur. Pour connaître le langue correspondant au paramètre affiché, consultez [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
     -   **Option de mise à niveau des index de recherche en texte intégral**  
   
          Cette propriété de serveur contrôle la manière dont les index de recherche en texte intégral sont migrés lors d'une mise à niveau d'une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] vers une version ultérieure. Cette propriété s'applique à la mise à niveau par attachement d'une base de données, restauration d'une sauvegarde de la base de données, restauration d'une sauvegarde de fichiers ou copie de la base de données à l'aide de l'Assistant Copie de base de données.  
   
-         Les alternatives sont les suivantes :  
+         Les alternatives sont les suivantes :  
   
          **Importer**  
-         Les catalogues de texte intégral sont importés. En général, l'importation est considérablement plus rapide que lors d'une reconstruction (rebuild). Par exemple, lorsque vous utilisez un seul processeur, l'importation s'exécute approximativement 10 fois plus vite que lors de la reconstruction. Toutefois, un catalogue de texte intégral importé n'utilise pas les analyseurs lexicaux nouveaux et améliorés introduits dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], ce qui fait que vous pouvez le cas échéant reconstruire vos catalogues de texte intégral au final.  
+         Les catalogues de texte intégral sont importés. En général, l'importation est considérablement plus rapide que lors d'une reconstruction (rebuild). Par exemple, lorsque vous utilisez un seul processeur, l'importation s'exécute approximativement 10 fois plus vite que lors de la reconstruction. Toutefois, un catalogue de texte intégral importé n'utilise pas les analyseurs lexicaux nouveaux et améliorés introduits dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], ce qui fait que vous pouvez le cas échéant reconstruire vos catalogues de texte intégral au final.  
   
         > [!NOTE]  
-        >  Le processus de reconstruction peut s'exécuter en mode multithread, et si plus de 10 processeurs sont disponibles, la reconstruction peut s'effectuer plus vite que l'importation si vous la laissez utiliser tous les processeurs.  
+        >  Le processus de reconstruction peut s'exécuter en mode multithread, et si plus de 10 processeurs sont disponibles, la reconstruction peut s'effectuer plus vite que l'importation si vous la laissez utiliser tous les processeurs.  
   
-         Si aucun catalogue de texte intégral n'est disponible, les index de recherche en texte intégral associés sont reconstruits. Cette option est disponible uniquement pour les bases de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+         Si aucun catalogue de texte intégral n'est disponible, les index de recherche en texte intégral associés sont reconstruits. Cette option est disponible uniquement pour les bases de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
          **Reconstruire**  
          Les catalogues de texte intégral sont reconstruits à l'aide des analyseurs lexicaux nouveaux et améliorés. La reconstruction des index peut prendre du temps, et une quantité importante de ressources en termes d'UC et de mémoire peut être requise après la mise à niveau.  
@@ -62,10 +66,10 @@ caps.handback.revision: 19
          **Réinitialiser**  
          Les catalogues de texte intégral sont réinitialisés. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Les fichiers de catalogue de texte intégral sont supprimés, mais les métadonnées pour les catalogues de texte intégral et les index de recherche en texte intégral sont conservés. Après leur mise à niveau, tous les index de recherche en texte intégral ont le suivi des modifications désactivé et aucune analyse n'est démarrée automatiquement. Le catalogue reste vide tant que vous n'avez pas procédé manuellement à une alimentation complète, au terme de la mise à niveau.  
   
-         Pour plus d’informations sur le choix d’une option de mise à niveau de recherche en texte intégral, consultez [Mise à niveau de la fonction de recherche en texte intégral](../../relational-databases/search/upgrade-full-text-search.md).  
+         Pour plus d’informations sur le choix d’une option de mise à niveau de recherche en texte intégral, consultez[Mise à niveau de la fonction de recherche en texte intégral](../../relational-databases/search/upgrade-full-text-search.md).  
   
         > [!NOTE]  
-        >  Vous pouvez aussi définir l’option de mise à niveau du catalogue de texte intégral à l’aide de l’action [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)**upgrade_option**.  
+        >  Vous pouvez aussi définir l’option de mise à niveau du catalogue de texte intégral à l’aide de l’action [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)**upgrade_option** .  
   
 ##  <a name="metadata"></a> Affichage des propriétés de serveur de texte intégral supplémentaires  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] Les fonctions peuvent être utilisées pour obtenir la valeur de différentes propriétés au niveau du serveur pour la recherche en texte intégral. Ces informations sont utiles pour administrer la recherche en texte intégral et résoudre les problèmes qui la concernent.  

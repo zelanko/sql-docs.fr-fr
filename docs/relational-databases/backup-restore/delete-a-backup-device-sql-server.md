@@ -1,37 +1,41 @@
 ---
-title: "Supprimer une unit&#233; de sauvegarde (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sauvegardes de base de données [SQL Server], suppression d’unités"
-  - "unités de sauvegarde [SQL Server], suppression"
-  - "suppression d'unités de sauvegarde"
-  - "retrait d'unités de sauvegarde"
-  - "sauvegarde de bases de données [SQL Server], unités de sauvegarde"
+title: "Supprimer une unité de sauvegarde (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database backups [SQL Server], deleting devices
+- backup devices [SQL Server], deleting
+- deleting backup devices
+- removing backup devices
+- backing up databases [SQL Server], backup devices
 ms.assetid: 7be62480-ed6a-4262-a071-1feba73b1c02
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3d68cd7bdf48e838c060705166f3714eaa7db581
+ms.lasthandoff: 04/11/2017
+
 ---
-# Supprimer une unit&#233; de sauvegarde (SQL Server)
+# <a name="delete-a-backup-device-sql-server"></a>Supprimer une unité de sauvegarde (SQL Server)
   Cette rubrique explique comment supprimer une unité de sauvegarde dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour supprimer une unité de sauvegarde, utilisez :**  
+-   **Pour supprimer une unité de sauvegarde, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 30
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour supprimer une unité de sauvegarde  
+#### <a name="to-delete-a-backup-device"></a>Pour supprimer une unité de sauvegarde  
   
 1.  Après vous être connecté à l’instance appropriée du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], dans l’Explorateur d’objets, cliquez sur le nom du serveur pour développer son arborescence.  
   
@@ -60,13 +64,13 @@ caps.handback.revision: 30
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour supprimer une unité de sauvegarde  
+#### <a name="to-delete-a-backup-device"></a>Pour supprimer une unité de sauvegarde  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3.  Copiez et collez l'exemple suivant dans la requête. Cet exemple montre comment utiliser [sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md) pour supprimer une unité de sauvegarde. Exécutez le premier exemple afin de créer l’unité de sauvegarde `mybackupdisk` et le nom physique `c:\backup\backup1.bak`. Exécutez **sp_dropdevice** pour supprimer l’unité de sauvegarde `mybackupdisk`. Le paramètre `delfile` supprime le nom physique.  
+3.  Copiez et collez l'exemple suivant dans la requête. Cet exemple montre comment utiliser [sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md) pour supprimer une unité de sauvegarde. Exécutez le premier exemple afin de créer l’unité de sauvegarde `mybackupdisk` et le nom physique `c:\backup\backup1.bak`. Exécutez **sp_dropdevice** pour supprimer l’unité de sauvegarde `mybackupdisk` . Le paramètre `delfile` supprime le nom physique.  
   
 ```tsql  
 --Define a backup device and physical name.   
@@ -82,7 +86,7 @@ GO
   
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Afficher les propriétés et le contenu d’une unité de sauvegarde logique &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)   
  [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   

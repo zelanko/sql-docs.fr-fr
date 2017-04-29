@@ -1,27 +1,31 @@
 ---
-title: "Classe d&#39;&#233;v&#233;nements Server Memory Change | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Server Memory Change (classe d'événements)"
+title: "Server Memory Change, classe d’événements | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Server Memory Change event class
 ms.assetid: c9836484-39c5-4a89-b080-3567783b6fff
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 75214423ace24eecad39a00465d9a4f08693f2b9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe d&#39;&#233;v&#233;nements Server Memory Change
+# <a name="server-memory-change-event-class"></a>Server Memory Change, classe d’événements
   La classe d’événements **Server Memory Change** intervient quand l’utilisation de la mémoire de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a augmenté ou diminué, soit de 1 mégaoctet (Mo), soit de 5 % de la taille maximale de la mémoire du serveur, la plus élevée de ces deux valeurs étant retenue.  
   
-## Colonnes de la classe d'événements Server Memory Change  
+## <a name="server-memory-change-event-class-data-columns"></a>Colonnes de la classe d'événements Server Memory Change  
   
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|Oui|  
 |----------------------|---------------|-----------------|---------------|---------|  
@@ -38,7 +42,7 @@ caps.handback.revision: 29
 |**TransactionID**|**bigint**|ID affecté par le système à la transaction.|4|Oui|  
 |**XactSequence**|**bigint**|Jeton qui décrit la transaction en cours.|50|Oui|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Mémoire du serveur (option de configuration de serveur)](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  

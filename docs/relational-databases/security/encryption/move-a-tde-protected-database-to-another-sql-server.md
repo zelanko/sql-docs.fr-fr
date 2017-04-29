@@ -1,42 +1,46 @@
 ---
-title: "D&#233;placer une base de donn&#233;es prot&#233;g&#233;e par le chiffrement transparent des donn&#233;es vers un autre serveur SQL&#160;Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Chiffrement transparent des données (TDE), déplacement"
-  - "Chiffrement transparent des données, déplacement d'une base de données"
+title: "Déplacer une base de données protégée par le chiffrement transparent des données vers un autre serveur SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transparent Data Encryption, moving
+- TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 61dab0bbd770679206c7eebee438f2fa22807ac2
+ms.lasthandoff: 04/11/2017
+
 ---
-# D&#233;placer une base de donn&#233;es prot&#233;g&#233;e par le chiffrement transparent des donn&#233;es vers un autre serveur SQL&#160;Server
+# <a name="move-a-tde-protected-database-to-another-sql-server"></a>Déplacer une base de données protégée par le chiffrement transparent des données vers un autre serveur SQL Server
   Cette rubrique explique comment protéger une base de données à l'aide du chiffrement transparent des données (TDE), puis la déplacer vers une autre instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Le chiffrement transparent des données effectue le chiffrement et le déchiffrement d'E/S en temps réel des données et des fichiers journaux. Le chiffrement utilise une clé de chiffrement de base de données (DEK), stockée dans l'enregistrement de démarrage de base de données pour être disponible pendant la récupération. La clé de chiffrement de base de données est une clé symétrique sécurisée à l'aide d'un certificat stocké dans la base de données **master** du serveur ou une clé asymétrique protégée par un module de gestion de clés extensible.  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour créer une base de données protégée par le chiffrement transparent des données, utilisez :**  
+-   **Pour créer une base de données protégée par le chiffrement transparent des données, utilisez :**  
   
      [SQL Server Management Studio](#SSMSCreate)  
   
      [Transact-SQL](#TsqlCreate)  
   
--   **Pour déplacer une base de données, utilisez :**  
+-   **Pour déplacer une base de données, utilisez :**  
   
      [SQL Server Management Studio](#SSMSMove)  
   
@@ -74,7 +78,7 @@ caps.handback.revision: 18
   
 4.  Dans la boîte de dialogue **Nouvelle base de données** , dans la zone **Nom de la base de données** , entrez le nom de la nouvelle base de données.  
   
-5.  Dans la zone **Propriétaire** , entrez le nom du propriétaire de la nouvelle base de données. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner le propriétaire de la base de données**. Pour plus d'informations sur la création d'une nouvelle base de données, consultez [Create a Database](../../../relational-databases/databases/create-a-database.md).  
+5.  Dans la zone **Propriétaire** , entrez le nom du propriétaire de la nouvelle base de données. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner le propriétaire de la base de données** . Pour plus d'informations sur la création d'une nouvelle base de données, consultez [Create a Database](../../../relational-databases/databases/create-a-database.md).  
   
 6.  Dans l'Explorateur d'objets, cliquez sur le signe plus pour développer le dossier **Bases de données** .  
   
@@ -142,7 +146,7 @@ caps.handback.revision: 18
     GO  
     ```  
   
- Pour plus d'informations, consultez :  
+ Pour plus d'informations, consultez :  
   
 -   [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)  
   
@@ -158,7 +162,7 @@ caps.handback.revision: 18
   
 ##  <a name="TsqlProcedure"></a> Pour déplacer une base de données  
   
-###  <a name="SSMSMove"></a> Utilisation de SQL Server Management Studio  
+###  <a name="SSMSMove"></a> Utilisation de SQL Server Management Studio  
   
 1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur la base de données que vous avez chiffrée précédemment, pointez sur **Tâches** et sélectionnez **Détacher…**.  
   
@@ -167,7 +171,7 @@ caps.handback.revision: 18
      **Bases de données à détacher**  
      Répertorie les bases de données à détacher.  
   
-     **Nom de la base de données**  
+     **Database Name**  
      Spécifie le nom de la base de données à détacher.  
   
      **Supprimer les connexions**  
@@ -177,10 +181,10 @@ caps.handback.revision: 18
     >  Vous ne pouvez pas détacher une base de données avec des connexions actives.  
   
      **Mettre à jour les statistiques**  
-     Par défaut, l'opération de détachement conserve toutes les statistiques d'optimisation obsolètes avant de procéder au détachement ; pour actualiser les statistiques existantes, activez cette case à cocher.  
+     Par défaut, l'opération de détachement conserve toutes les statistiques d'optimisation obsolètes avant de procéder au détachement ; pour actualiser les statistiques existantes, activez cette case à cocher.  
   
      **Conserver les catalogues de texte intégral**  
-     Par défaut, l'opération de détachement conserve tous les catalogues de texte intégral associés à la base de données. Pour les supprimer, décochez la case **Conserver les catalogues de texte intégral**. Cette option s'affiche uniquement lors de la mise à niveau d'une base de données à partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+     Par défaut, l'opération de détachement conserve tous les catalogues de texte intégral associés à la base de données. Pour les supprimer, décochez la case **Conserver les catalogues de texte intégral** . Cette option s'affiche uniquement lors de la mise à niveau d'une base de données à partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
      **État**  
      Affiche l’un des états suivants : **Prêt** ou **Non prêt**.  
@@ -190,7 +194,7 @@ caps.handback.revision: 18
   
     -   Lorsqu'une base de données est impliquée dans la réplication, l' **État** est **Non prêt** et la colonne **Message** indique **Base de données répliquée**.  
   
-    -   Quand une base de données possède une ou plusieurs connexions actives, l’**État** est **Non prêt** et la colonne **Message** indique *<nombre_de_connexions_actives>***connexion(s) active(s)**, par exemple : **1 connexion(s) active(s)**. Avant de détacher la base de données, vous devez déconnecter toutes les connexions actives en cliquant sur **Supprimer les connexions**.  
+    -   Quand une base de données a une ou plusieurs connexions actives, l’**État** est **Non prêt** et la colonne **Message** indique *<nombre_de_connexions_actives>***connexion(s) active(s)**, par exemple, **1 connexion(s) active(s)**. Avant de détacher la base de données, vous devez déconnecter toutes les connexions actives en cliquant sur **Supprimer les connexions**.  
   
      Pour obtenir plus d'informations sur un message, cliquez sur le texte du lien hypertexte pour ouvrir le Moniteur d'activité.  
   
@@ -204,11 +208,11 @@ caps.handback.revision: 18
   
 6.  Recréez le certificat de serveur à l'aide du fichier de sauvegarde du certificat de serveur d'origine. Pour plus d’informations, consultez **Utilisation de Transact-SQL** ci-dessous.  
   
-7.  Dans l’Explorateur d’objets, dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], cliquez avec le bouton droit sur le dossier **Bases de données**, puis sélectionnez **Attacher…**.  
+7.  Dans l’Explorateur d’objets, dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], cliquez avec le bouton droit sur le dossier **Bases de données** , puis sélectionnez **Attacher…**.  
   
 8.  Dans la boîte de dialogue **Attacher des bases de données** , sous **Bases de données à attacher**, cliquez sur **Ajouter**.  
   
-9. Dans la boîte de dialogue **Rechercher les fichiers de base de données –***nom_serveur*, sélectionnez le fichier de base de données à attacher au nouveau serveur, puis cliquez sur **OK**.  
+9. Dans la boîte de dialogue **Rechercher les fichiers de base de données –***nom_serveur* , sélectionnez le fichier de base de données à attacher au nouveau serveur, puis cliquez sur **OK**.  
   
      Les options suivantes sont disponibles dans la boîte de dialogue **Attacher des bases de données** .  
   
@@ -221,7 +225,7 @@ caps.handback.revision: 18
      **Emplacement du fichier MDF**  
      Affiche le chemin d'accès et le nom du fichier MDF sélectionné.  
   
-     **Nom de la base de données**  
+     **Database Name**  
      Affiche le nom de la base de données.  
   
      **Attacher en tant que**  
@@ -243,15 +247,15 @@ caps.handback.revision: 18
     |Cercle contenant une flèche courbe pointant dans le sens inverse des aiguilles d'une montre|Restauré|L'opération d'attachement a réussi, mais a été restaurée en raison d'une erreur lors de l'attachement d'un autre objet.|  
   
      **Message**  
-     Affiche un message vierge ou un lien hypertexte « Fichier introuvable ».  
+     Affiche un message vierge ou un lien hypertexte « Fichier introuvable ».  
   
      **Ajouter**  
      Permet de rechercher les principaux fichiers de base de données nécessaires. Lorsque l'utilisateur sélectionne un fichier .mdf, les informations applicables sont automatiquement remplies dans les champs respectifs de la grille **Bases de données à attacher** .  
   
      **Supprimer**  
-     Supprime le fichier sélectionné de la grille **Bases de données à attacher**.  
+     Supprime le fichier sélectionné de la grille **Bases de données à attacher** .  
   
-     **"** *<nom_base_de_données>* **" détails de la base de données**  
+     **"** *<database_name>* **»détails de la base de données**  
      Affiche le nom des fichiers à attacher. Pour vérifier ou modifier le nom du chemin d’accès d’un fichier, cliquez sur le bouton **Parcourir** (**…**).  
   
     > [!NOTE]  
@@ -267,7 +271,7 @@ caps.handback.revision: 18
      Affiche le chemin d'accès au fichier de base de données sélectionné. Le chemin d'accès peut être modifié manuellement.  
   
      **Message**  
-     Affiche un message vierge ou un lien hypertexte « **Fichier introuvable** ».  
+     Affiche un message vierge ou un lien hypertexte «**Fichier introuvable**».  
   
 ###  <a name="TsqlMove"></a> Utilisation de Transact-SQL  
   
@@ -310,7 +314,7 @@ caps.handback.revision: 18
     GO  
     ```  
   
- Pour plus d'informations, consultez :  
+ Pour plus d'informations, consultez :  
   
 -   [sp_detach_db &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
   
@@ -320,7 +324,7 @@ caps.handback.revision: 18
   
 -   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Attacher et détacher une base de données &#40;SQL Server&#41;](../../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [Chiffrement transparent des données avec Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md)  
   

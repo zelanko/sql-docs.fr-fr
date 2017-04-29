@@ -1,42 +1,46 @@
 ---
-title: "Analyse des performances et surveillance de l&#39;activit&#233; du serveur | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "surveillance de l'activité [SQL Server]"
-  - "traces [SQL Server], rubriques de procédures"
-  - "analyse des performances des serveurs [SQL Server], analyse des activités"
-  - "procédures stockées [SQL Server], traces"
-  - "performances [SQL Server], serveurs"
-  - "serveurs [SQL Server], performances"
-  - "SQL Server Profiler, rubriques de procédures"
-  - "SQL Server Management Studio [SQL Server], système d’analyse"
-  - "Profiler [SQL Server Profiler], rubriques de procédures"
+title: "Analyse des performances et surveillance de l’activité du serveur | Microsoft Docs"
+ms.custom: 
+ms.date: 08/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- activity monitoring [SQL Server]
+- traces [SQL Server], how-to topics
+- monitoring server performance [SQL Server], activity monitoring
+- stored procedures [SQL Server], traces
+- performance [SQL Server], servers
+- servers [SQL Server], performance
+- SQL Server Profiler, how-to topics
+- SQL Server Management Studio [SQL Server], monitoring system
+- Profiler [SQL Server Profiler], how-to topics
 ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a3f71afe41528eca49f37d5f81e30d3defa0d21
+ms.lasthandoff: 04/11/2017
+
 ---
-# Analyse des performances et surveillance de l&#39;activit&#233; du serveur
+# <a name="server-performance-and-activity-monitoring"></a>Analyse des performances et surveillance de l'activité du serveur
   Le but de la surveillance des bases de données est d'évaluer le fonctionnement d'un serveur. Une surveillance efficace implique la prise d'instantanés périodiques des performances actuelles afin d'isoler les processus à l’origine des problèmes, ainsi que la collecte de données en continu pour suivre de près les tendances des performances. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le système d'exploitation [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows fournissent des utilitaires qui permettent de contrôler les conditions actuelles de la base de données et de suivre l'évolution des performances en fonction de l’évolution de ces conditions.  
   
- La section suivante contient des rubriques qui décrivent comment utiliser les outils d'analyse des performances et de l'activité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et de Windows. Elle contient les rubriques suivantes :  
+ La section suivante contient des rubriques qui décrivent comment utiliser les outils d'analyse des performances et de l'activité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et de Windows. Elle contient les rubriques suivantes :  
   
-## Dans cette section  
+## <a name="in-this-section"></a>Dans cette section  
  **Pour effectuer une analyse des tâches à l'aide des outils Windows**  
   
 -   [Démarrer le Moniteur système &#40;Windows&#41;](../../relational-databases/performance/start-system-monitor-windows.md)  
   
--   [Afficher le journal des applications Windows &#40;Windows&#41;](../../relational-databases/performance/view-the-windows-application-log-windows.md)  
+-   [Afficher le journal des applications Windows &#40;Windows&#41;](../../relational-databases/performance/view-the-windows-application-log-windows-10.md)  
   
  **Pour créer des alertes de base de données SQL Server à l'aide des outils Windows**  
   
@@ -167,3 +171,4 @@ caps.handback.revision: 18
 -   [Corréler une trace aux données du journal de performances Windows &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
   
   
+

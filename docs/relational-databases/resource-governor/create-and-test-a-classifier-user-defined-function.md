@@ -1,32 +1,36 @@
 ---
-title: "Cr&#233;er et tester une fonction classifieur d&#233;finie par l&#39;utilisateur | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Resource Governor, création de la fonction classifieur"
-  - "fonction classifieur [SQL Server], test"
-  - "fonction classifieur [SQL Server], création"
-  - "Resource Governor, test de la fonction classifieur"
+title: "Créer et tester une fonction classifieur définie par l’utilisateur | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, classifier function create
+- classifier function [SQL Server], test
+- classifier function [SQL Server], create
+- Resource Governor, classifier function test
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 097b7e93a82b8f1cc20767c57788eebe8162729a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er et tester une fonction classifieur d&#233;finie par l&#39;utilisateur
-  Cette rubrique indique comment créer et tester une fonction définie par l'utilisateur classifieur (UDF). Les étapes impliquent l’exécution d’instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans l’Éditeur de requêtes [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+# <a name="create-and-test-a-classifier-user-defined-function"></a>Créer et tester une fonction classifieur définie par l'utilisateur
+  Cette rubrique indique comment créer et tester une fonction définie par l'utilisateur classifieur (UDF). Les étapes impliquent l’exécution d’instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans l’Éditeur de requêtes [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
  L'exemple de la procédure suivante illustre les possibilités de création d'une fonction définie par l'utilisateur classifieur assez complexe.  
   
- Dans notre exemple :  
+ Dans notre exemple :  
   
 -   Un pool de ressources (pProductionProcessing) et un groupe de charges de travail (gProductionProcessing) sont créés pour le traitement de la production pendant une plage temporelle spécifiée.  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 25
   
  La fonction classifieur étend le temps de connexion. Une fonction trop complexe peut provoquer l'expiration des délais d'attente de connexion ou ralentir les connexions rapides.  
   
-### Pour créer la fonction classifieur définie par l'utilisateur  
+### <a name="to-create-the-classifier-user-defined-function"></a>Pour créer la fonction classifieur définie par l'utilisateur  
   
 1.  Créez et configurez les nouveaux pools de ressources et groupes de charges de travail. Affectez chaque groupe de charge de travail au pool de ressources approprié.  
   
@@ -114,7 +118,7 @@ caps.handback.revision: 25
     go  
     ```  
   
-4.  Créez la fonction classifieur qui utilise des fonctions d'heure et des valeurs qui peuvent être évaluées par rapport aux heures figurant dans la table de recherche. Pour plus d'informations sur l'utilisation des tables de recherche dans une fonction classifieur, consultez la section « Meilleures pratiques recommandées pour l'utilisation de tables de recherche dans une fonction classifieur » dans cette rubrique.  
+4.  Créez la fonction classifieur qui utilise des fonctions d'heure et des valeurs qui peuvent être évaluées par rapport aux heures figurant dans la table de recherche. Pour plus d'informations sur l'utilisation des tables de recherche dans une fonction classifieur, consultez la section « Meilleures pratiques recommandées pour l'utilisation de tables de recherche dans une fonction classifieur » dans cette rubrique.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduit un jeu étendu de types de données et de fonctions de date et d’heure. Pour plus d’informations, consultez [Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
@@ -150,7 +154,7 @@ caps.handback.revision: 25
     GO  
     ```  
   
-### Pour vérifier les pools de ressources, les groupes de charges de travail et la fonction définie par l'utilisateur classifieur  
+### <a name="to-verify-the-resource-pools-workload-groups-and-the-classifier-user-defined-function"></a>Pour vérifier les pools de ressources, les groupes de charges de travail et la fonction définie par l'utilisateur classifieur  
   
 1.  Obtenez la configuration de pool de ressources et de groupe de charges de travail à l'aide de la requête suivante.  
   
@@ -228,13 +232,13 @@ caps.handback.revision: 25
     GO  
     ```  
   
-### Meilleures pratiques recommandées pour l'utilisation de tables de recherche dans une fonction classifieur  
+### <a name="best-practices-for-using-lookup-tables-in-a-classifier-function"></a>Meilleures pratiques recommandées pour l'utilisation de tables de recherche dans une fonction classifieur  
   
-1.  N'utilisez pas de table de recherche sauf en cas d'absolue nécessité. Si vous devez utiliser une table de recherche, vous pouvez la coder de façon irréversible dans la fonction elle-même ; toutefois, cette action doit être équilibrée avec la complexité et les modifications dynamiques de la fonction classifieur.  
+1.  N'utilisez pas de table de recherche sauf en cas d'absolue nécessité. Si vous devez utiliser une table de recherche, vous pouvez la coder de façon irréversible dans la fonction elle-même ; toutefois, cette action doit être équilibrée avec la complexité et les modifications dynamiques de la fonction classifieur.  
   
 2.  Limitez les E/S effectuées pour les tables de recherche.  
   
-    1.  Utilisez TOP 1 pour ne retourner qu'une seule ligne.  
+    1.  Utilisez TOP 1 pour ne retourner qu'une seule ligne.  
   
     2.  Réduisez le nombre de lignes présentes dans la table.  
   
@@ -246,7 +250,7 @@ caps.handback.revision: 25
   
 3.  Empêchez tout blocage sur la table de recherche.  
   
-    1.  Utilisez l'indicateur `NOLOCK` pour empêcher tout blocage ou utilisez `SET LOCK_TIMEOUT` dans la fonction avec une valeur maximale de 1 000 millisecondes.  
+    1.  Utilisez l'indicateur `NOLOCK` pour empêcher tout blocage ou utilisez `SET LOCK_TIMEOUT` dans la fonction avec une valeur maximale de 1 000 millisecondes.  
   
     2.  Les tables doivent exister dans la base de données master. (La base de données master est la seule base de données dont la récupération est garantie lorsque les ordinateurs clients essaient de se connecter.)  
   
@@ -261,7 +265,7 @@ caps.handback.revision: 25
         > [!WARNING]  
         >  Nous vous recommandons vivement d'appliquer ces meilleures pratiques. Si des problèmes vous empêchent de les mettre en œuvre, nous vous recommandons de contacter le suport technique de Microsoft afin de d'éviter d'éventuels problèmes futurs.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Activer Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Pool de ressources de Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

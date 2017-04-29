@@ -1,38 +1,42 @@
 ---
-title: "Copier des colonnes d&#39;une table vers une autre (Moteur de base de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "copie de colonnes"
-  - "colonnes [SQL Server], copie"
+title: "Copier des colonnes d’une table vers une autre (moteur de base de données) | Microsoft Docs"
+ms.custom: 
+ms.date: 09/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- copying columns
+- columns [SQL Server], copying
 ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 27f2f6ae3af99a9c76934ab4c875d3c2c9746f40
+ms.lasthandoff: 04/11/2017
+
 ---
-# Copier des colonnes d&#39;une table vers une autre (Moteur de base de donn&#233;es)
+# <a name="copy-columns-from-one-table-to-another-database-engine"></a>Copier des colonnes d'une table vers une autre (Moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Cette rubrique explique comment copier des colonnes d'une table vers une autre, en copiant uniquement la définition de la colonne ou la définition et les données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour copier des colonnes à l'aide de :**  
+-   **Pour copier des colonnes à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -48,9 +52,9 @@ caps.handback.revision: 23
 ####  <a name="Permissions"></a> Autorisations  
  Requiert une autorisation ALTER sur la table.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour copier des définitions de colonne d'une table vers une autre  
+#### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Pour copier des définitions de colonne d'une table vers une autre  
   
 1.  Ouvrez la table contenant les colonnes à copier et celle dans laquelle vous souhaitez les copier en cliquant avec le bouton droit sur les tables, puis cliquez sur **Conception**.  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 23
   
 5.  Sélectionnez la colonne qui doit suivre les colonnes insérées, puis cliquez sur **Coller** dans le menu **Edition**.  
   
-#### Pour copier des données d'une table vers une autre  
+#### <a name="to-copy-data-from-one-table-to-another"></a>Pour copier des données d'une table vers une autre  
   
 1.  Conformez-vous aux instructions relatives à la copie des définitions de colonne ci-dessus.  
   
@@ -73,11 +77,11 @@ caps.handback.revision: 23
 
 3.  Cliquez avec le bouton droit sur l’éditeur de requête, puis cliquez sur **Concevoir une requête dans l’éditeur**. 
 
-4.  Dans la boîte de dialogue **Ajouter une table**, sélectionnez la table source et de destination, cliquez sur **Ajouter**, puis fermez la boîte de dialogue **Ajouter une table**. 
+4.  Dans la boîte de dialogue **Ajouter une table** , sélectionnez la table source et de destination, cliquez sur **Ajouter**, puis fermez la boîte de dialogue **Ajouter une table** . 
 
 5.  Cliquez avez le bouton droit dans une zone ouverte de l’éditeur de requête, pointez sur **Modifier le type**, puis cliquez sur **Insérer les résultats**.  
 
-6.  Dans la boîte de dialogue **Choisir la table cible pour la requête Insérer les résultats**, sélectionnez la table de destination. 
+6.  Dans la boîte de dialogue **Choisir la table cible pour la requête Insérer les résultats** , sélectionnez la table de destination. 
 
 7.  Dans la partie supérieure du concepteur de requêtes, cliquez sur la colonne source de la table source.
 
@@ -88,11 +92,11 @@ caps.handback.revision: 23
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour copier des définitions de colonne d'une table vers une autre  
+#### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Pour copier des définitions de colonne d'une table vers une autre  
   
-1.  Vous ne pouvez pas copier des colonnes individuelles d'une table dans une autre table existante à l'aide d'instructions Transact-SQL. Toutefois, vous pouvez créer une table dans le groupe de fichiers par défaut et y insère les lignes résultant de la requête à l'aide de SELECT INTO. Pour plus d’informations, consultez [Clause INTO &#40;Transact-SQL&#41;](../Topic/INTO%20Clause%20\(Transact-SQL\).md).  
+1.  Vous ne pouvez pas copier des colonnes individuelles d'une table dans une autre table existante à l'aide d'instructions Transact-SQL. Toutefois, vous pouvez créer une table dans le groupe de fichiers par défaut et y insère les lignes résultant de la requête à l'aide de SELECT INTO. Pour plus d’informations, consultez [Clause INTO &#40;Transact-SQL&#41;](../../t-sql/queries/select-into-clause-transact-sql.md).  
   
-#### Pour copier des données d'une table vers une autre  
+#### <a name="to-copy-data-from-one-table-to-another"></a>Pour copier des données d'une table vers une autre  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -115,3 +119,4 @@ caps.handback.revision: 23
     ```  
   
   
+

@@ -1,25 +1,29 @@
 ---
-title: "Ajouter la logique m&#233;tier aux donn&#233;es XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "logique métier [XML]"
+title: "Ajouter la logique métier aux données XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fcb398dc1cd451f55446efee763d7d33891b7ca4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ajouter la logique m&#233;tier aux donn&#233;es XML
-  Votre logique métier peut être ajoutée aux données XML de plusieurs manières :  
+# <a name="add-business-logic-to-xml-data"></a>Ajouter la logique métier aux données XML
+  Votre logique métier peut être ajoutée aux données XML de plusieurs manières :  
   
 -   Vous pouvez écrire des contraintes sur les lignes ou les colonnes de façon à imposer des contraintes propres à un domaine lors de l'insertion et de la modification des données XML.  
   
@@ -29,8 +33,8 @@ caps.handback.revision: 18
   
 -   Vous pouvez écrire des procédures stockées et des fonctions Transact-SQL pour lancer le traitement sur la colonne XML en fonction de vos besoins.  
   
-## Exemple : application XSLT  
- Prenez l’exemple d’une fonction CLR **TransformXml()** qui accepte une instance de type de données **xml** et une transformation XSL stockée dans un fichier, applique la transformation aux données XML, puis retourne les données XML transformées dans le résultat. Le code suivant est un squelette de fonction écrit en C# :  
+## <a name="example-applying-xsl-transformation"></a>Exemple : application XSLT  
+ Prenez l’exemple d’une fonction CLR **TransformXml()** qui accepte une instance de type de données **xml** et une transformation XSL stockée dans un fichier, applique la transformation aux données XML, puis retourne les données XML transformées dans le résultat. Le code suivant est un squelette de fonction écrit en C# :  
   
 ```  
 public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {  

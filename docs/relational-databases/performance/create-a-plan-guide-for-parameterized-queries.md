@@ -1,25 +1,29 @@
 ---
-title: "Cr&#233;er un rep&#232;re de plan pour les requ&#234;tes param&#233;trables | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "requêtes paramétrables, repères de plan"
-  - "repères de plan [SQL Server], requêtes paramétrables"
+title: "Créer un repère de plan pour les requêtes paramétrables | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parameterized queries, plan guides for
+- plan guides [SQL Server], parameterized queries
 ms.assetid: b532ae16-66e7-4641-9bc8-b0d805853477
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3d5c980047d9c84a1eea6e48d6070ca704377a9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er un rep&#232;re de plan pour les requ&#234;tes param&#233;trables
+# <a name="create-a-plan-guide-for-parameterized-queries"></a>Créer un repère de plan pour les requêtes paramétrables
   Un repère de plan TEMPLATE correspond à des requêtes autonomes paramétrables au format spécifié.  
   
  L'exemple suivant crée un repère de plan correspondant à la requête qui paramètre selon une forme donnée, et commande à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'imposer le paramétrage de la requête. La syntaxe des deux requêtes suivantes est équivalente, seules leurs valeurs littérales constantes diffèrent.  
@@ -36,7 +40,7 @@ INNER JOIN AdventureWorks2012.Sales.SalesOrderDetail AS d
 WHERE h.SalesOrderID = 45640;  
 ```  
   
- Voici le repère de plan pour la forme paramétrable de la requête :  
+ Voici le repère de plan pour la forme paramétrable de la requête :  
   
 ```  
 EXEC sp_create_plan_guide   

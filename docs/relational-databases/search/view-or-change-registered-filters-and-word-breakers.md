@@ -1,46 +1,50 @@
 ---
-title: "Afficher ou modifier des filtres et des analyseurs lexicaux inscrits | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "recherche en texte intégral [SQL Server], analyseurs lexicaux"
-  - "recherche en texte intégral [SQL Server], filtres"
-  - "filtres [recherche en texte intégral]"
-  - "analyseurs lexicaux [recherche en texte intégral]"
+title: Afficher ou modifier des filtres et des analyseurs lexicaux inscrits | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text search [SQL Server], word breakers
+- full-text search [SQL Server], filters
+- filters [full-text search]
+- word breakers [full-text search]
 ms.assetid: f88c54df-b1aa-4701-807f-dc92c32363fd
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2032d8aaaa75352d64aa4ed19ec53670afe6d8a7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Afficher ou modifier des filtres et des analyseurs lexicaux inscrits
+# <a name="view-or-change-registered-filters-and-word-breakers"></a>Afficher ou modifier des filtres et des analyseurs lexicaux inscrits
   Après l'installation ou la désinstallation des analyseurs lexicaux ou des filtres sur un système, les modifications n'entrent pas automatiquement en vigueur sur les instances de serveur. Cette rubrique explique comment afficher les analyseurs lexicaux ou les filtres actuellement inscrits et comment inscrire les analyseurs lexicaux et les filtres récemment installés sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### Pour afficher la liste des langues dont les analyseurs lexicaux sont actuellement inscrits  
+### <a name="to-view-a-list-of-languages-whose-word-breakers-are-currently-registered"></a>Pour afficher la liste des langues dont les analyseurs lexicaux sont actuellement inscrits  
   
-1.  Utilisez la vue de catalogue [sys.fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md), comme suit :  
+1.  Utilisez la vue de catalogue [sys.fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) , comme suit :  
   
     ```  
     SELECT * FROM sys.fulltext_languages;   
     ```  
   
-### Pour afficher la liste des filtres actuellement inscrits  
+### <a name="to-view-a-list-of-the-filters-that-are-currently-registered"></a>Pour afficher la liste des filtres actuellement inscrits  
   
-1.  Utilisez la procédure stockée système [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md), comme suit :  
+1.  Utilisez la procédure stockée système [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) , comme suit :  
   
     ```  
     EXEC sp_help_fulltext_system_components 'filter';    
     ```  
   
-### Pour inscrire les analyseurs lexicaux et les filtres récemment installés  
+### <a name="to-register-newly-installed-word-breakers-and-filters"></a>Pour inscrire les analyseurs lexicaux et les filtres récemment installés  
   
 1.  Utilisez la procédure stockée système [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md) pour mettre à jour la liste des langues, comme suit :  
   
@@ -48,7 +52,7 @@ caps.handback.revision: 22
     exec sp_fulltext_service 'update_languages';   
     ```  
   
-### Pour annuler l'inscription des analyseurs lexicaux et des filtres désinstallés  
+### <a name="to-unregister-uninstalled-word-breakers-and-filters"></a>Pour annuler l'inscription des analyseurs lexicaux et des filtres désinstallés  
   
 1.  Utilisez **sp_fulltext_service** pour mettre à jour la liste des langues, comme suit :  
   
@@ -62,11 +66,11 @@ caps.handback.revision: 22
     exec sp_fulltext_service 'restart_all_fdhosts';  
     ```  
   
-### Pour remplacer les analyseurs lexicaux ou les filtres existants et en installer de nouveaux  
+### <a name="to-replace-existing-word-breakers-or-filters-when-installing-new-ones"></a>Pour remplacer les analyseurs lexicaux ou les filtres existants et en installer de nouveaux  
   
 1.  Lorsque vous préparez l'installation d'un fichier DLL qui contient de nouveaux analyseurs lexicaux ou filtres, assurez-vous que son nom est différent des noms de fichiers DLL existants installés sur votre instance de serveur.  
   
-2.  Copiez le nouveau fichier .dll dans le répertoire qui contient les fichiers DDL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] standard pour l'instance de serveur. L'emplacement par défaut est :  
+2.  Copiez le nouveau fichier .dll dans le répertoire qui contient les fichiers DDL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] standard pour l'instance de serveur. L'emplacement par défaut est :  
   
      C:\Program Files\Microsoft SQL Server\MSSQL13.*nom_instance*\MSSQL\Binn  
   
@@ -91,13 +95,13 @@ caps.handback.revision: 22
     EXEC sp_fulltext_service 'update_languages';  
     ```  
   
-6.  Redémarrez les processus hôtes de démon de filtre (fdhost.exe) à l’aide de **sp_fulltext_service**, comme suit :  
+6.  Redémarrez les processus hôtes de démon de filtre (fdhost.exe) à l’aide de **sp_fulltext_service** , comme suit :  
   
     ```  
     EXEC sp_fulltext_service 'restart_all_fdhosts';   
     ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Définir le compte du service du Lanceur de démon de filtre de texte intégral](../../relational-databases/search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [Configurer et gérer des filtres pour la recherche](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
  [Configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)  

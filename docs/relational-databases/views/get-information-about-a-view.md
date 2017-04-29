@@ -1,33 +1,37 @@
 ---
-title: "Obtenir des informations au sujet d&#39;une vue | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.viewproperties.general.f1"
-helpviewer_keywords: 
-  - "vues [SQL Server], informations d'état"
-  - "métadonnées [SQL Server], vues"
-  - "dépendances [SQL Server], vues"
-  - "affichage d'informations sur les vues"
-  - "vues [SQL Server], métadonnées"
-  - "visualisation d'informations sur les vues"
-  - "informations d'état [SQL Server], vues"
-  - "afficher les dépendances"
+title: "Obtenir des informations au sujet d’une vue | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.viewproperties.general.f1
+helpviewer_keywords:
+- views [SQL Server], status information
+- metadata [SQL Server], views
+- dependencies [SQL Server], views
+- displaying view information
+- views [SQL Server], metadata
+- viewing view information
+- status information [SQL Server], views
+- view dependencies
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f2a981d28720713387dd5b593f037662b9b6b654
+ms.lasthandoff: 04/11/2017
+
 ---
-# Obtenir des informations au sujet d&#39;une vue
+# <a name="get-information-about-a-view"></a>Obtenir des informations au sujet d'une vue
   Vous pouvez obtenir des informations sur la définition ou les propriétés d'une vue dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en utilisant [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous devrez peut-être examiner la définition de la vue pour comprendre comment les données de celle-ci sont issues des tables source ou pour connaître les données définies par la vue.  
   
 > [!IMPORTANT]  
@@ -35,11 +39,11 @@ caps.handback.revision: 30
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour obtenir des informations sur une vue, utilisez :**  
+-   **Pour obtenir des informations sur une vue, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -52,9 +56,9 @@ caps.handback.revision: 30
 ####  <a name="Permissions"></a> Autorisations  
  L'utilisation de `sp_helptext` pour retourner la définition d'une vue nécessite l'appartenance au rôle **public** . L'utilisation de `sys.sql_expression_dependencies` pour rechercher toutes les dépendances d'une vue nécessite l'autorisation VIEW DEFINITION sur la base de données et l'autorisation SELECT sur `sys.sql_expression_dependencies` pour la base de données. Les définitions d'objets système, telles que celles retournées dans SELECT OBJECT_DEFINITION, sont visibles publiquement.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Obtenir les propriétés de vue à l'aide de l'Explorateur d'objets  
+#### <a name="get-view-properties-by-using-object-explorer"></a>Obtenir les propriétés de vue à l'aide de l'Explorateur d'objets  
   
 1.  Dans l' **Explorateur d'objets**, cliquez sur le signe plus (+) en regard de la base de données qui contient la vue dont vous souhaitez afficher les propriétés, puis cliquez sur le signe plus (+) pour développer le dossier **Vues** .  
   
@@ -74,7 +78,7 @@ caps.handback.revision: 30
      **Date de création**  
      Affiche la date de création de la vue.  
   
-     **Nom   **  
+     **Nom**  
      Nom de la vue actuelle.  
   
      **Schéma**  
@@ -95,7 +99,7 @@ caps.handback.revision: 30
      **Lié(e) au schéma**  
      Indique si la vue est liée au schéma. Les valeurs sont True et False. Pour plus d’informations sur les vues liées au schéma, consultez la partie SCHEMABINDING de [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
-#### Obtention des propriétés d'une vue à l'aide de l'outil Concepteur de vues  
+#### <a name="getting-view-properties-by-using-the-view-designer-tool"></a>Obtention des propriétés d'une vue à l'aide de l'outil Concepteur de vues  
   
 1.  Dans l' **Explorateur d'objets**, développez la base de données qui contient la vue dont vous souhaitez afficher les propriétés, puis développez le dossier **Vues** .  
   
@@ -139,7 +143,7 @@ caps.handback.revision: 30
      Affiche une description des instructions SQL. Pour afficher l’intégralité de la description, ou la modifier, cliquez sur la description, puis sur le bouton de sélection **(...)** situé à droite de la propriété. Vos commentaires peuvent contenir les noms des utilisateurs de la vue et le moment d'utilisation.  
   
      **Spécification Top**  
-     Se développe pour afficher les propriétés **Top**, **Expression**, **Pourcentage** et **With Ties**.  
+     Se développe pour afficher les propriétés **Top**, **Expression**, **Pourcentage**et **With Ties** .  
   
      **(Top)**  
      Indique que la vue doit contenir une clause TOP, qui ne retourne que les n premières lignes ou n premiers pour cent des lignes du jeu de résultats. Par défaut, la vue retourne les 10 premières lignes dans le jeu de résultats. Utilisez cette option pour modifier le nombre de lignes à retourner ou pour spécifier un autre pourcentage.  
@@ -148,13 +152,13 @@ caps.handback.revision: 30
      Affiche le pourcentage (si **Pourcentage** a la valeur **Oui**) ou les enregistrements (si **Pourcentage** a la valeur **Non**) que la vue retourne.  
   
      **Pourcentage**  
-     Indique que la requête doit contenir une clause **TOP**, qui ne retourne que les n premiers pour cent des lignes du jeu de résultats.  
+     Indique que la requête doit contenir une clause **TOP** , qui ne retourne que les n premiers pour cent des lignes du jeu de résultats.  
   
      **With Ties**  
-     Spécifie que la vue inclura une clause **WITH TIES**. **WITH TIES** est utile si une vue inclut une clause **ORDER BY** et une clause **TOP** basée sur un pourcentage. Si cette option est activée et si le pourcentage s'arrête au milieu d'un groupe de lignes auxquelles correspondent des valeurs identiques dans la clause **ORDER BY** , la vue est agrandie de façon à inclure ces lignes.  
+     Spécifie que la vue inclura une clause **WITH TIES** . **WITH TIES** est utile si une vue inclut une clause **ORDER BY** et une clause **TOP** basée sur un pourcentage. Si cette option est activée et si le pourcentage s'arrête au milieu d'un groupe de lignes auxquelles correspondent des valeurs identiques dans la clause **ORDER BY** , la vue est agrandie de façon à inclure ces lignes.  
   
      **Spécification de mise à jour**  
-     Se développe pour afficher les propriétés des propriétés **Mettre à jour en utilisant les règles de vue** et **Option Vérifier**.  
+     Se développe pour afficher les propriétés des propriétés **Mettre à jour en utilisant les règles de vue** et **Option Vérifier** .  
   
      **(Mettre à jour en utilisant les règles de vue)**  
      Indique que toutes les mises à jour et insertions apportées à la vue seront traduites par Microsoft Data Access Components (MDAC) en instructions SQL qui font référence à la vue, plutôt qu'en instructions SQL qui font directement référence aux tables de base de la vue.  
@@ -162,9 +166,9 @@ caps.handback.revision: 30
      Dans certains cas, les manifestes MDAC considèrent les opérations de mise à jour et d'insertion dans une vue comme des mises à jour et des insertions dans les tables de base sous-jacentes de la vue. En sélectionnant **Mettre à jour en utilisant les règles de vue**, vous pouvez vous assurer que MDAC génère les opérations de mise à jour et d'insertion sur la vue proprement dite.  
   
      **Option Vérifier**  
-     Indique que quand vous ouvrez cette vue et modifiez le volet de **Résultats**, la source de données vérifie si les données ajoutées ou modifiées respectent la clause **WHERE** de la définition de la vue. Si votre modification ne respecte pas la clause **WHERE** , un message d'erreur contenant des informations supplémentaires s'affiche.  
+     Indique que quand vous ouvrez cette vue et modifiez le volet de **Résultats** , la source de données vérifie si les données ajoutées ou modifiées respectent la clause **WHERE** de la définition de la vue. Si votre modification ne respecte pas la clause **WHERE** , un message d'erreur contenant des informations supplémentaires s'affiche.  
   
-#### Pour obtenir les dépendances de la vue  
+#### <a name="to-get-dependencies-on-the-view"></a>Pour obtenir les dépendances de la vue  
   
 1.  Dans l' **Explorateur d'objets**, développez la base de données qui contient la vue dont vous souhaitez afficher les propriétés, puis développez le dossier **Vues** .  
   
@@ -176,7 +180,7 @@ caps.handback.revision: 30
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour obtenir la définition et les propriétés d'une vue  
+#### <a name="to-get-the-definition-and-properties-of-a-view"></a>Pour obtenir la définition et les propriétés d'une vue  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -206,7 +210,7 @@ caps.handback.revision: 30
   
  Pour plus d’informations, consultez [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md), [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md) et [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md).  
   
-#### Pour obtenir les dépendances d'une vue  
+#### <a name="to-get-the-dependencies-of-a-view"></a>Pour obtenir les dépendances d'une vue  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

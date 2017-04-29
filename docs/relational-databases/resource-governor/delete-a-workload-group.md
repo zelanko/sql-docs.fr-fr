@@ -1,36 +1,40 @@
 ---
-title: "Supprimer un groupe de charge de travail | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "groupes de charge de travail [SQL Server], suppression"
-  - "Resource Governor, suppression de groupe de charge de travail"
+title: Supprimer un groupe de charge de travail | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- workload groups [SQL Server], delete
+- Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 498058e4186851b78bf67795828f1a7562794a72
+ms.lasthandoff: 04/11/2017
+
 ---
-# Supprimer un groupe de charge de travail
+# <a name="delete-a-workload-group"></a>Supprimer un groupe de charge de travail
   Vous pouvez supprimer un groupe de charge de travail ou un pool de ressources à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de Transact-SQL.  
   
--   **Avant de commencer :**  [Limitations et restrictions](#LimitationsRestrictions), [Autorisations](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Pour supprimer un groupe de charge de travail, utilisez : ** [Explorateur d’objets](#DelWGObjEx), [Propriétés de Resource Governor](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
+-   **To delete a workload group, using:**  [Object Explorer](#DelWGObjEx), [Resource Governor Properties](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  Vous ne pouvez pas supprimer un groupe de charge de travail s'il contient des sessions actives.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitations et restrictions  
- Si un groupe de charge de travail contient des sessions actives, sa suppression ou son déplacement vers un pool de ressources différent échoue lorsque l'instruction ALTER RESOURCE GOVERNOR RECONFIGURE est appelée pour appliquer la modification. Pour éviter ce problème, vous pouvez suivre l'une des actions suivantes :  
+ Si un groupe de charge de travail contient des sessions actives, sa suppression ou son déplacement vers un pool de ressources différent échoue lorsque l'instruction ALTER RESOURCE GOVERNOR RECONFIGURE est appelée pour appliquer la modification. Pour éviter ce problème, vous pouvez suivre l'une des actions suivantes :  
   
 -   Attendez la déconnexion de toutes les sessions du groupe affecté, puis réexécutez l'instruction ALTER RESOURCE GOVERNOR RECONFIGURE.  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 19
   
 2.  Cliquez avec le bouton droit sur le pool de ressources qui contient le groupe de charge de travail à supprimer, puis cliquez sur **Propriétés**. Cette procédure ouvre la page **Propriétés de Resource Governor** .  
   
-3.  Dans la fenêtre **Groupes de charge de travail pour le pool de ressources**, cliquez sur la ligne du groupe de charge de travail à supprimer, puis cliquez avec le bouton droit sur la flèche droite à gauche de la ligne et sélectionnez **Supprimer**.  
+3.  Dans la fenêtre **Groupes de charge de travail pour le pool de ressources** , cliquez sur la ligne du groupe de charge de travail à supprimer, puis cliquez avec le bouton droit sur la flèche droite à gauche de la ligne et sélectionnez **Supprimer**.  
   
 4.  Pour supprimer le groupe de charge de travail, cliquez sur **OK**.  
   
@@ -76,11 +80,11 @@ caps.handback.revision: 19
   
     -   Redémarrez le serveur. Le groupe de charge de travail ne sera pas recréé.  
   
-    -   Dans un scénario dans lequel vous publiez l’instruction **DROP WORKLOAD GROUP**, mais décidez que vous ne souhaitez pas arrêter explicitement des sessions pour appliquer la modification, vous pouvez recréer le groupe en utilisant le nom qu’il portait avant l’émission de l’instruction DROP, puis déplacer le groupe dans le pool de ressources d’origine.  
+    -   Dans un scénario dans lequel vous publiez l’instruction **DROP WORKLOAD GROUP** , mais décidez que vous ne souhaitez pas arrêter explicitement des sessions pour appliquer la modification, vous pouvez recréer le groupe en utilisant le nom qu’il portait avant l’émission de l’instruction DROP, puis déplacer le groupe dans le pool de ressources d’origine.  
   
 3.  Exécutez l'instruction **ALTER RESOURCE GOVERNOR RECONFIGURE** .  
   
-### Exemple (Transact-SQL)  
+### <a name="example-transact-sql"></a>Exemple (Transact-SQL)  
  L'exemple suivant supprime un groupe de charge de travail nommé `groupAdhoc`.  
   
 ```  
@@ -90,7 +94,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Créer un pool de ressources](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [Créer un groupe de charge de travail](../../relational-databases/resource-governor/create-a-workload-group.md)   

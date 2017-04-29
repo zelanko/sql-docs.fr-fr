@@ -1,33 +1,37 @@
 ---
-title: "Supprimer des fonctions d&#233;finies par l&#39;utilisateur | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Supprimer des fonctions définies par l’utilisateur | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: db1d668a-23b7-4757-a9c5-1bd848ba7f6d
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7731c5fd8d7bc5c62cd7ced03f3ebd638e68e58e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Supprimer des fonctions d&#233;finies par l&#39;utilisateur
+# <a name="delete-user-defined-functions"></a>Supprimer des fonctions définies par l'utilisateur
   Vous pouvez supprimer des fonctions définies par l’utilisateur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour supprimer une fonction définie par l'utilisateur, utilisez :**  
+-   **Pour supprimer une fonction définie par l'utilisateur, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -46,15 +50,15 @@ caps.handback.revision: 7
 ####  <a name="Permissions"></a> Autorisations  
  Exige l'autorisation ALTER sur le schéma auquel la fonction appartient, ou l'autorisation CONTROL sur la fonction.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour supprimer une fonction définie par l'utilisateur  
+#### <a name="to-delete-a-user-defined-function"></a>Pour supprimer une fonction définie par l'utilisateur  
   
 1.  Cliquez sur le signe plus (+° en regard de la base de données qui contient la fonction à modifier.  
   
 2.  Cliquez sur le signe plus en regard du dossier **Programmabilité** .  
   
-3.  Cliquez sur le signe plus en regard du dossier qui contient la fonction à modifier :  
+3.  Cliquez sur le signe plus en regard du dossier qui contient la fonction à modifier :  
   
     -   Fonction table  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 7
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour supprimer une fonction définie par l'utilisateur  
+#### <a name="to-delete-a-user-defined-function"></a>Pour supprimer une fonction définie par l'utilisateur  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

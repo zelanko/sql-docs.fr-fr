@@ -1,36 +1,40 @@
 ---
-title: "Syntaxe Transact-SQL prise en charge par IntelliSense | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "Transact-SQL IntelliSense"
-  - "IntelliSense [SQL Server], syntaxe Transact-SQL"
+title: Syntaxe Transact-SQL prise en charge par IntelliSense | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Transact-SQL IntelliSense
+- IntelliSense [SQL Server], Transact-SQL syntax
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 328ed60693a51b4bd081b1089e39e4805124f042
+ms.lasthandoff: 04/11/2017
+
 ---
-# Syntaxe Transact-SQL prise en charge par IntelliSense
+# <a name="transact-sql-syntax-supported-by-intellisense"></a>Syntaxe Transact-SQL prise en charge par IntelliSense
   Cette rubrique décrit les instructions et les éléments syntaxiques [!INCLUDE[tsql](../../includes/tsql-md.md)] pris en charge par IntelliSense dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## Instructions prises en charge par IntelliSense  
- Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], IntelliSense prend uniquement en charge les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] les plus couramment utilisées. Certaines conditions générales de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] peuvent nuire au bon fonctionnement d’IntelliSense. Pour plus d’informations, consultez [Résolution des problèmes liés à IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/troubleshooting-intellisense-sql-server-management-studio.md).  
+## <a name="statements-supported-by-intellisense"></a>Instructions prises en charge par IntelliSense  
+ Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], IntelliSense prend uniquement en charge les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] les plus couramment utilisées. Certaines conditions générales de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] peuvent nuire au bon fonctionnement d’IntelliSense. Pour plus d’informations, consultez [Résolution des problèmes liés à IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/troubleshooting-intellisense.md).  
   
 > [!NOTE]  
 >  IntelliSense n'est pas disponible pour les objets de base de données chiffrés, tels que les procédures stockées ou les fonctions définies par l'utilisateur chiffrées. L'aide et les infos express sur les paramètres ne sont pas disponibles pour les paramètres de procédures stockées étendues et les types définis par l'utilisateur de l'intégration du CLR.  
   
-### Instruction SELECT  
+### <a name="select-statement"></a>Instruction SELECT  
  L’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] fournit la prise en charge IntelliSense pour les éléments syntaxiques suivants de l’instruction SELECT :  
   
 |||  
@@ -41,12 +45,12 @@ caps.handback.revision: 28
 |FOR|GROUP BY|  
 |Haut de la page|OPTION (conseil)|  
   
-### Instructions Transact-SQL supplémentaires prises en charge  
+### <a name="additional-transact-sql-statements-that-are-supported"></a>Instructions Transact-SQL supplémentaires prises en charge  
  L’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] fournit également la prise en charge IntelliSense pour les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] répertoriées dans le tableau suivant.  
   
 |Instruction Transact-SQL|Syntaxe prise en charge|Exceptions|  
 |-----------------------------|----------------------|----------------|  
-|[INSERT](../../t-sql/statements/insert-transact-sql.md)|Toute la syntaxe, sauf la clause *execute_statement*.|Aucune|  
+|[INSERT](../../t-sql/statements/insert-transact-sql.md)|Toute la syntaxe, sauf la clause *execute_statement* .|Aucune|  
 |[UPDATE](../../t-sql/queries/update-transact-sql.md)|Toute la syntaxe.|Aucune|  
 |[DELETE](../../t-sql/statements/delete-transact-sql.md)|Toute la syntaxe.|Aucune|  
 |[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|Toute la syntaxe.|Aucune|  
@@ -58,14 +62,14 @@ caps.handback.revision: 28
 |[ALTER PROCEDURE](../../t-sql/statements/alter-procedure-transact-sql.md)|Toute la syntaxe.|Il n'existe aucune prise en charge IntelliSense pour la clause EXTERNAL NAME.<br /><br /> Dans la clause AS, IntelliSense prend uniquement en charge les instructions et la syntaxe répertoriées dans cette rubrique.|  
 |[USE](../../t-sql/language-elements/use-transact-sql.md)|Toute la syntaxe.|Aucune|  
   
-## IntelliSense dans les instructions prises en charge  
+## <a name="intellisense-in-supported-statements"></a>IntelliSense dans les instructions prises en charge  
  IntelliSense dans l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] prend en charge les éléments syntaxiques suivants quand ils sont utilisés dans l’une des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] prises en charge :  
   
 -   Tous les types de jointure, y compris APPLY.  
   
 -   PIVOT et UNPIVOT.  
   
--   Références aux objets de base de données suivants :  
+-   Références aux objets de base de données suivants :  
   
     -   Bases de données et schémas  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 28
   
     -   Expressions de table communes  
   
--   Objets de base de données référencés uniquement dans une instruction CREATE ou ALTER du script ou du lot, mais qui n'existent pas dans la base de données parce que le script ou le lot n'a pas encore été exécuté. Ces objets sont les suivants :  
+-   Objets de base de données référencés uniquement dans une instruction CREATE ou ALTER du script ou du lot, mais qui n'existent pas dans la base de données parce que le script ou le lot n'a pas encore été exécuté. Ces objets sont les suivants :  
   
     -   Tables et procédures spécifiées dans une instruction CREATE TABLE ou CREATE PROCEDURE du script ou du lot.  
   
@@ -92,7 +96,7 @@ caps.handback.revision: 28
   
  IntelliSense n'est pas fourni pour les éléments précédemment répertoriés lorsqu'ils sont utilisés dans d'autres instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] . Par exemple, il existe une prise en charge IntelliSense pour les noms de colonne utilisés dans une instruction SELECT, mais pas pour les colonnes utilisées dans l'instruction CREATE FUNCTION.  
   
-## Exemples  
+## <a name="examples"></a>Exemples  
  Dans un script ou lot [!INCLUDE[tsql](../../includes/tsql-md.md)] , IntelliSense dans l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] prend uniquement en charge les instructions et la syntaxe répertoriées dans cette rubrique. Les exemples de code [!INCLUDE[tsql](../../includes/tsql-md.md)] suivants indiquent les instructions et les éléments syntaxiques pris en charge par IntelliSense. Par exemple, dans le lot suivant, IntelliSense est disponible pour l'instruction `SELECT` lorsqu'elle est codée seule, mais pas lorsque `SELECT` est contenue dans une instruction `CREATE FUNCTION`  
   
 ```  

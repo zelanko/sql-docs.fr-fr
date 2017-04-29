@@ -1,32 +1,36 @@
 ---
-title: "D&#233;placer un groupe de charge de travail | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.rg.properties_moveworkloadgroup.f1"
-helpviewer_keywords: 
-  - "groupes de charge de travail [SQL Server], déplacement"
-  - "Resource Governor, déplacement de groupe de charge de travail"
+title: "Déplacer un groupe de charge de travail | Microsoft Docs"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.rg.properties_moveworkloadgroup.f1
+helpviewer_keywords:
+- workload groups [SQL Server], move
+- Resource Governor, workload group move
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2e74236a254493b554c34b5f7c729e8cb91868a0
+ms.lasthandoff: 04/11/2017
+
 ---
-# D&#233;placer un groupe de charge de travail
+# <a name="move-a-workload-group"></a>Déplacer un groupe de charge de travail
   Vous pouvez déplacer un groupe de charge de travail de Resource Governor vers un pool de ressources différent à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de Transact-SQL.  
   
--   **Avant de commencer :**  [Limitations et restrictions](#LimitationsRestrictions), [Autorisations](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Pour déplacer un groupe de charge de travail, utilisez : ** [SQL Server Management Studio](#MoveWGSSMS), [Transact-SQL](#MoveWGTSQL)  
+-   **To move a workload group, using:**  [SQL Server Management Studio](#MoveWGSSMS), [Transact-SQL](#MoveWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  Vous ne pouvez pas déplacer un groupe de charge de travail s'il existe une opération en attente de configuration de Resource Governor.  
@@ -42,11 +46,11 @@ caps.handback.revision: 12
   
 1.  Dans l'Explorateur d'objets, développez de manière récursive le nœud **Gestion** vers le bas jusqu'à **Resource Governor**.  
   
-2.  Cliquez avec le bouton droit sur **Resource Governor**, puis sélectionnez **Propriétés** afin d’ouvrir la page **Propriétés de Resource Governor**.  
+2.  Cliquez avec le bouton droit sur **Resource Governor** , puis sélectionnez **Propriétés**afin d’ouvrir la page **Propriétés de Resource Governor** .  
   
 3.  Dans la fenêtre **Pools de ressources** , cliquez sur pool de ressources qui contient le groupe de charge de travail à déplacer. La fenêtre **Groupes de charge de travail** répertorie maintenant les groupes de charge de travail de ce pool de ressources.  
   
-4.  Dans la fenêtre **Groupes de charge de travail**, cliquez avec le bouton droit sur la flèche vers la droite à gauche du groupe de charge de travail à déplacer, puis sélectionnez **Déplacer vers**. Cela affiche une fenêtre **Déplacer le groupe de charge de travail** .  
+4.  Dans la fenêtre **Groupes de charge de travail** , cliquez avec le bouton droit sur la flèche vers la droite à gauche du groupe de charge de travail à déplacer, puis sélectionnez **Déplacer vers**. Cela affiche une fenêtre **Déplacer le groupe de charge de travail** .  
   
 5.  Les pools de ressources disponibles sont affichés dans la fenêtre. Cliquez sur le nom du pool de ressources vers lequel vous souhaitez déplacer le groupe de charge de travail, puis cliquez sur **OK** pour effectuer cette action.  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 12
   
 2.  Exécutez l'instruction **ALTER RESOURCE GOVERNOR RECONFIGURE** .  
   
-### Exemple (Transact-SQL)  
+### <a name="example-transact-sql"></a>Exemple (Transact-SQL)  
  L'exemple suivant déplace un groupe de charge de travail nommé `groupAdhoc` vers le pool de ressources par défaut.  
   
 ```  
@@ -72,7 +76,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Activer Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Créer un pool de ressources](../../relational-databases/resource-governor/create-a-resource-pool.md)   

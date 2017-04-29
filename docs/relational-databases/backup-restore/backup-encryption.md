@@ -1,44 +1,31 @@
 ---
-title: "Chiffrement de sauvegarde | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Chiffrement de sauvegarde | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 30654c4f7950f188cf08608cf946f4fe42e6d3e4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Chiffrement de sauvegarde
+# <a name="backup-encryption"></a>Chiffrement de sauvegarde
   Cette rubrique fournit une présentation des options de chiffrement pour les sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Elle contient des informations détaillées sur l'utilisation, les avantages et les méthodes recommandées de chiffrement pendant la sauvegarde.  
   
- **Dans cette rubrique :**  
-  
--   [Vue d'ensemble](../../relational-databases/backup-restore/backup-encryption.md#Overview)  
-  
--   [Avantages](#Benefits)  
-  
--   [Conditions préalables](../../relational-databases/backup-restore/backup-encryption.md#Prerequisites)  
-  
--   [Restrictions](#Restrictions)  
-  
--   [Autorisations](../../relational-databases/backup-restore/backup-encryption.md#Permissions)  
-  
--   [Méthodes de chiffrement des sauvegardes](../../relational-databases/backup-restore/backup-encryption.md#Methods)  
-  
--   [Méthodes recommandées](../../relational-databases/backup-restore/backup-encryption.md#RecommendedPractices)  
-  
--   [Tâches associées](#RelatedTasks)  
   
 ##  <a name="Overview"></a> Vue d'ensemble  
- À compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SQL Server a la possibilité de chiffrer les données lors de la création d'une sauvegarde. En spécifiant l'algorithme de chiffrement et le chiffreur (un certificat ou une clé asymétrique) lors de la création d'une sauvegarde, vous créez un fichier de sauvegarde chiffré. Toutes les destinations de stockage : le stockage local et Windows Azure sont pris en charge. Par ailleurs, les options de chiffrement peuvent être configurées pour les opérations de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], une nouvelle fonctionnalité introduite dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+ À compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SQL Server a la possibilité de chiffrer les données lors de la création d'une sauvegarde. En spécifiant l'algorithme de chiffrement et le chiffreur (un certificat ou une clé asymétrique) lors de la création d'une sauvegarde, vous créez un fichier de sauvegarde chiffré. Toutes les destinations de stockage : le stockage local et Windows Azure sont pris en charge. Par ailleurs, les options de chiffrement peuvent être configurées pour les opérations de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] , une nouvelle fonctionnalité introduite dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
  Pour chiffrer pendant la sauvegarde, vous devez spécifier un algorithme de chiffrement, et un chiffreur pour sécuriser la clé de chiffrement. Les options de chiffrement suivantes sont prises en charge :  
   
@@ -55,20 +42,19 @@ caps.handback.revision: 16
   
 ##  <a name="Benefits"></a> Avantages  
   
-1.  Le chiffrement des sauvegardes de base de données vous aide à protéger les données : SQL Server fournit l'option permettant de chiffrer les données de sauvegarde lors de la création d'une sauvegarde.  
+1.  Le chiffrement des sauvegardes de base de données vous aide à protéger les données : SQL Server fournit l'option permettant de chiffrer les données de sauvegarde lors de la création d'une sauvegarde.  
   
 2.  Le chiffrement sert également pour les bases de données qui sont chiffrées à l'aide du chiffrement transparent des données.  
   
 3.  Le chiffrement est pris en charge pour les sauvegardes effectuées par [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], qui procure une sécurité supplémentaire pour les sauvegardes hors site.  
   
-4.  Cette fonctionnalité prend en charge plusieurs algorithmes de chiffrement jusqu'à AES 256 bits. Cela vous permet de sélectionner un algorithme qui s'aligne avec vos besoins.  
+4.  Cette fonctionnalité prend en charge plusieurs algorithmes de chiffrement jusqu'à AES 256 bits. Cela vous permet de sélectionner un algorithme qui s'aligne avec vos besoins.  
   
 5.  Vous pouvez intégrer des clés de chiffrement avec les fournisseurs EKM (Gestion de clés extensible).  
   
- [&#91;Haut&#93;](#Top)  
   
 ##  <a name="Prerequisites"></a> Conditions préalables  
- Voici les conditions requises pour chiffrer une sauvegarde :  
+ Voici les conditions requises pour chiffrer une sauvegarde :  
   
 1.  **Créez une clé principale de base de données pour la base de données master :** la clé principale de base de données est une clé symétrique qui permet de protéger les clés privées des certificats et des clés asymétriques présentes dans la base de données. Pour plus d’informations, consultez [SQL Server et clés de chiffrement de base de données &#40;moteur de base de données&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
   
@@ -78,7 +64,7 @@ caps.handback.revision: 16
     >  Seules les clés asymétriques résidant dans la gestion de clés extensible (EKM) sont prises en charge.  
   
 ##  <a name="Restrictions"></a> Restrictions  
- Les restrictions suivantes s'appliquent aux options de chiffrement :  
+ Les restrictions suivantes s'appliquent aux options de chiffrement :  
   
 -   Si vous utilisez une clé asymétrique pour chiffrer les données de sauvegarde, seules les clés asymétriques résidant dans le fournisseur EKM sont prises en charge.  
   
@@ -88,7 +74,6 @@ caps.handback.revision: 16
   
 -   L'option Ajouter au jeu de sauvegarde existant n'est pas prise en charge pour les sauvegardes chiffrées.  
   
- [&#91;Haut&#93;](#Top)  
   
 ##  <a name="Permissions"></a> Autorisations  
  **Pour chiffrer une sauvegarde ou restaurer à partir d'une sauvegarde chiffrée :**  
@@ -101,14 +86,14 @@ caps.handback.revision: 16
 ##  <a name="Methods"></a> Méthodes de chiffrement des sauvegardes  
  Les sections ci-dessous fournissent une brève introduction aux étapes de chiffrement des données pendant la sauvegarde. Pour une procédure pas à pas complète des différentes étapes de chiffrement de votre sauvegarde à l’aide de Transact-SQL, consultez [Créer une sauvegarde chiffrée](../../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
-### Utilisation de SQL Server Management Studio  
+### <a name="using-sql-server-management-studio"></a>Utilisation de SQL Server Management Studio  
  Chiffrez une sauvegarde lors de la création de la sauvegarde d'une base de données dans l'une des boîtes de dialogue suivantes :  
   
 1.  [Sauvegarder la base de données &#40;page Options de sauvegarde&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md) Dans la page **Options de sauvegarde**, sélectionnez **Chiffrement**, ainsi que l’algorithme de chiffrement et le certificat ou la clé asymétrique à utiliser pour le chiffrement.  
   
 2.  [Utilisation de l’Assistant Plan de maintenance](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) Lorsque vous sélectionnez une tâche de sauvegarde, sous l’onglet **Options** de la page **Définir la tâche Sauvegarder**, sélectionnez **Chiffrement de sauvegarde**, puis indiquez l’algorithme de chiffrement et le certificat ou la clé à utiliser pour le chiffrement.  
   
-### Utilisation de Transact-SQL  
+### <a name="using-transact-sql"></a>Utilisation de Transact-SQL  
  Voici un exemple d'instruction Transact-SQL pour chiffrer le fichier de sauvegarde :  
   
 ```  
@@ -128,7 +113,7 @@ GO
   
  Pour connaître la syntaxe complète de l’instruction Transact-SQL, consultez [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   
-### Utilisation de PowerShell  
+### <a name="using-powershell"></a>Utilisation de PowerShell  
  Cet exemple crée les options de chiffrement et les utilise en tant que valeur de paramètre dans **Backup-SqlDatabase** pour créer une sauvegarde chiffrée.  
   
 ```  
@@ -155,7 +140,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
 |[Créer une sauvegarde chiffrée](../../relational-databases/backup-restore/create-an-encrypted-backup.md)|Décrit les étapes de base requises pour créer une sauvegarde chiffrée.|  
 |[Gestion de clés extensible à l’aide d’Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Fournit un exemple de création d'une sauvegarde chiffrée protégée par des clés dans le coffre de clés Azure.|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)  
   
   

@@ -1,37 +1,41 @@
 ---
-title: "Exemple&#160;: restauration fragmentaire de quelques groupes de fichiers uniquement (mode de r&#233;cup&#233;ration simple) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restaurations fragmentaires [SQL Server], mode de récupération simple"
-  - "séquences de restauration [SQL Server], fragmentaires"
-  - "mode de récupération simple [SQL Server], exemples RESTORE"
+title: "Exemple : restauration fragmentaire de quelques groupes de fichiers (mode de récupération simple) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- piecemeal restores [SQL Server], simple recovery model
+- restore sequences [SQL Server], piecemeal
+- simple recovery model [SQL Server], RESTORE examples
 ms.assetid: d7ad026c-5355-4308-9560-0dc843940d4f
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fdc0ea6d5523f397a2e3b38d021b046260c32d0c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exemple&#160;: restauration fragmentaire de quelques groupes de fichiers uniquement (mode de r&#233;cup&#233;ration simple)
+# <a name="example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model"></a>Exemple : restauration fragmentaire de quelques groupes de fichiers uniquement (mode de récupération simple)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique concerne les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] obéissant au mode de récupération simple et contenant un groupe de fichiers en lecture seule.  
   
  Une séquence de restauration fragmentaire restaure et récupère une base de données par étapes au niveau des groupes de fichiers, en commençant par le groupe de fichiers primaire et tous les groupes de fichiers secondaires en lecture-écriture.  
   
- Dans cet exemple, une base de données appelée `adb` qui utilise le mode de récupération simple, contient trois groupes de fichiers. Le groupe de fichiers `A` est en lecture-écriture, et les groupes de fichiers `B` et `C` sont en lecture seule. Au départ, tous les groupes de fichiers sont en ligne.  
+ Dans cet exemple, une base de données appelée `adb`qui utilise le mode de récupération simple, contient trois groupes de fichiers. Le groupe de fichiers `A` est en lecture-écriture, et les groupes de fichiers `B` et `C` sont en lecture seule. Au départ, tous les groupes de fichiers sont en ligne.  
   
- Le groupe de fichiers primaire et le groupe de fichiers `B` de la base de données `adb` s'avèrent endommagés. L'administrateur de la base de données décide donc de les restaurer à l'aide d'une séquence de restauration fragmentaire. En mode de récupération simple, tous les groupes de fichiers en lecture-écriture doivent être restaurés à partir de la même sauvegarde partielle. Même si le groupe de fichiers `A` est intact, celui-ci doit être restauré avec le groupe de fichiers primaire pour s'assurer de sa cohérence (la base de données sera restaurée à un point dans le temps défini à la fin de la dernière sauvegarde partielle). Le groupe de fichiers `C` est intact, mais il doit être récupéré pour être mis en ligne. Bien que le groupe de fichiers `B` soit endommagé, il contient des données moins critiques que le groupe de fichiers `C`. Par conséquent, `B` sera restauré en dernier.  
+ Le groupe de fichiers primaire et le groupe de fichiers `B` de la base de données `adb` s'avèrent endommagés. L'administrateur de la base de données décide donc de les restaurer à l'aide d'une séquence de restauration fragmentaire. En mode de récupération simple, tous les groupes de fichiers en lecture-écriture doivent être restaurés à partir de la même sauvegarde partielle. Même si le groupe de fichiers `A` est intact, celui-ci doit être restauré avec le groupe de fichiers primaire pour s'assurer de sa cohérence (la base de données sera restaurée à un point dans le temps défini à la fin de la dernière sauvegarde partielle). Le groupe de fichiers `C` est intact, mais il doit être récupéré pour être mis en ligne. Bien que le groupe de fichiers `B`soit endommagé, il contient des données moins critiques que le groupe de fichiers `C`. Par conséquent, `B` sera restauré en dernier.  
   
-## Séquences de restauration  
+## <a name="restore-sequences"></a>Séquences de restauration  
   
 > [!NOTE]  
 >  La syntaxe pour une séquence de restauration en ligne est la même que pour une séquence de restauration hors connexion.  
@@ -57,7 +61,7 @@ caps.handback.revision: 28
   
 3.  Restauration en ligne du groupe de fichiers `B.`  
   
-     Les fichiers du groupe de fichiers `B` doivent être restaurés. L'administrateur de la base de données restaure la sauvegarde du groupe de fichiers `B` effectuée après que ce groupe de fichiers `B` est passé en lecture seule et avant la sauvegarde partielle.  
+     Les fichiers du groupe de fichiers `B` doivent être restaurés. L'administrateur de la base de données restaure la sauvegarde du groupe de fichiers `B` effectuée après que ce groupe de fichiers `B` est passé en lecture seule et avant la sauvegarde partielle.  
   
     ```  
     RESTORE DATABASE adb FILEGROUP='B' FROM backup   
@@ -66,7 +70,7 @@ caps.handback.revision: 28
   
      Tous les groupes de fichiers sont maintenant en ligne.  
   
-## Autres exemples  
+## <a name="additional-examples"></a>Autres exemples  
   
 -   [Exemple : restauration fragmentaire d’une base de données &#40;mode de récupération simple&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
@@ -80,10 +84,10 @@ caps.handback.revision: 28
   
 -   [Exemple : restauration en ligne d’un fichier en lecture seule &#40;mode de restauration complète&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Restauration en ligne &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restaurations fragmentaires &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
   
   

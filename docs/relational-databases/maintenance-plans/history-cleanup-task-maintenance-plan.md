@@ -1,31 +1,35 @@
 ---
-title: "T&#226;che de nettoyage d&#39;historique (Plan de maintenance) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.historycleanup.f1"
-helpviewer_keywords: 
-  - "Tâche de nettoyage d'historique (boîte de dialogue)"
+title: "Tâche de nettoyage d’historique (Plan de maintenance) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.historycleanup.f1
+helpviewer_keywords:
+- History Cleanup Task dialog box
 ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fbf4cfd2254dbe3e5f482e603ca7535682102d80
+ms.lasthandoff: 04/11/2017
+
 ---
-# T&#226;che de nettoyage d&#39;historique (Plan de maintenance)
+# <a name="history-cleanup-task-maintenance-plan"></a>Tâche de nettoyage d'historique (Plan de maintenance)
   La boîte de dialogue **Tâche de nettoyage d'historique** vous permet de supprimer les informations d'historique anciennes des tables de la base de données msdb. Cette tâche prend en charge la suppression de l'historique de sauvegarde et de restauration, l'historique des travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l'historique du plan de maintenance.  
   
- Cette instruction utilise les instructions **sp_purge_jobhistory** et **sp_delete_backuphistory**.  
+ Cette instruction utilise les instructions **sp_purge_jobhistory** et **sp_delete_backuphistory** .  
   
-## Liste des éléments de l'interface utilisateur  
+## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
  **Connexion**  
  Sélectionnez la connexion serveur à utiliser pour exécuter la tâche.  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 21
  **Sauvegarder et restaurer l'historique**  
  La conservation des enregistrements indiquant à quel moment des sauvegardes récentes ont été créées peut aider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à créer un plan de récupération lorsque vous souhaitez restaurer une base de données. La période de rétention doit être au moins égale à la fréquence des sauvegardes complètes de base de données.  
   
- **Historique des travaux de SQL Server Agent**  
+ **Historique des travaux de SQL Server Agent**  
  Cet historique vous permet de résoudre les problèmes des travaux ayant échoué ou de déterminer la raison pour laquelle des actions se sont produites.  
   
  **Historique du plan de maintenance**  
@@ -50,7 +54,7 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  Si le nombre d'objets impliqués est élevé, l'affichage des instructions peut prendre un temps considérable.  
   
-## Boîte de dialogue Nouvelle connexion  
+## <a name="new-connection-dialog-box"></a>Boîte de dialogue Nouvelle connexion  
  **Nom de la connexion**  
  Entrez un nom pour la nouvelle connexion.  
   
@@ -75,7 +79,7 @@ caps.handback.revision: 21
  **Mot de passe**  
  Fournit un mot de passe à utiliser pour l'authentification. Cette option n'est pas disponible.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sp_purge_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
  [sp_delete_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)  
   

@@ -1,38 +1,42 @@
 ---
-title: "Cr&#233;er un type de donn&#233;es d&#39;alias d&#233;fini par l&#39;utilisateur | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.userdefineddatatype.general.f1"
-  - "sql13.swb.new.datatype.properties.general.f1"
-helpviewer_keywords: 
-  - "types de données d’alias [SQL Server], création"
+title: "Créer un type de données d’alias défini par l’utilisateur | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.userdefineddatatype.general.f1
+- sql13.swb.new.datatype.properties.general.f1
+helpviewer_keywords:
+- alias data types [SQL Server], creating
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9646e838fa2d1c8e7f22fd8b53287060a871a686
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er un type de donn&#233;es d&#39;alias d&#233;fini par l&#39;utilisateur
+# <a name="create-a-user-defined-data-type-alias"></a>Créer un type de données d'alias défini par l'utilisateur
   Cette rubrique explique comment créer un nouvel alias de type de données défini par l'utilisateur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour créer un alias de type de données défini par l'utilisateur, utilisez :**  
+-   **Pour créer un alias de type de données défini par l'utilisateur, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -49,11 +53,11 @@ caps.handback.revision: 27
 ####  <a name="Permissions"></a> Autorisations  
  Nécessite l’autorisation CREATE TYPE dans la base de données actuelle et l’autorisation ALTER sur *schema_name*. Si *schema_name* n’est pas spécifié, les règles de résolution de noms par défaut pour la détermination du schéma de l’utilisateur actuel s’appliquent.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour créer un type de données défini par l'utilisateur  
+#### <a name="to-create-a-user-defined-data-type"></a>Pour créer un type de données défini par l'utilisateur  
   
-1.  Dans l’Explorateur d’objets, développez successivement **Bases de données**, une base de données, **Programmabilité** et **Types**, cliquez avec le bouton droit sur **Types de données définis par l’utilisateur**, puis cliquez sur **Nouveau type de données défini par l’utilisateur**.  
+1.  Dans l’Explorateur d’objets, développez successivement **Bases de données**, une base de données, **Programmabilité**et **Types**, cliquez avec le bouton droit sur **Types de données définis par l’utilisateur**, puis cliquez sur **Nouveau type de données défini par l’utilisateur**.  
   
      **Autoriser les valeurs NULL**  
      Spécifiez si le type de données défini par l'utilisateur accepte les valeurs NULL. L'acceptation de valeurs Null par un type de données défini par l'utilisateur existant n'est pas modifiable.  
@@ -67,7 +71,7 @@ caps.handback.revision: 27
      **Longueur/Précision**  
      Affiche la longueur ou la précision du type de données. **Longueur** s’applique aux types de données définis par l’utilisateur basés sur les caractères ; **Précision** s’applique uniquement aux types de données définis par l’utilisateur qui sont numériques. Le nom change en fonction du type de données sélectionné précédemment. Cette zone ne peut pas être modifiée si la longueur ou la précision du type de données sélectionné est fixe.  
   
-     La longueur n’est pas affichée pour les types de données **nvarchar(max)**, **varchar(max)** ou **varbinary(max)**.  
+     La longueur n’est pas affichée pour les types de données **nvarchar(max)**, **varchar(max)**ou **varbinary(max)** .  
   
      **Nom**  
      Si vous créez un nouvel alias de type de données défini par l'utilisateur, tapez un nom unique à utiliser dans la base de données pour représenter le type de données défini par l'utilisateur. Le nombre maximal de caractères doit correspondre au type de données système **sysname** . Le nom d'un alias de type de données défini par l'utilisateur existant n'est pas modifiable.  
@@ -93,9 +97,9 @@ caps.handback.revision: 27
   
      Pour les types de données **nchar** et **nvarchar** , la valeur de stockage équivaut toujours au double de la valeur contenue dans **Longueur**.  
   
-     Le stockage n’est pas affiché pour les types de données **nvarchar(max)**, **varchar(max)** ou **varbinary(max)**.  
+     Le stockage n’est pas affiché pour les types de données **nvarchar(max)**, **varchar(max)**ou **varbinary(max)** .  
   
-2.  Dans la boîte de dialogue **Nouveau type de données défini par l’utilisateur**, dans la zone **Schéma**, entrez le schéma qui doit détenir cet alias de type de données ou utilisez le bouton Parcourir pour sélectionner le schéma.  
+2.  Dans la boîte de dialogue **Nouveau type de données défini par l’utilisateur** , dans la zone **Schéma** , entrez le schéma qui doit détenir cet alias de type de données ou utilisez le bouton Parcourir pour sélectionner le schéma.  
   
 3.  Dans la zone **Nom** , entrez le nom du nouvel alias de type de données.  
   
@@ -109,20 +113,20 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour créer un alias de type de données défini par l'utilisateur  
+#### <a name="to-create-a-user-defined-data-type-alias"></a>Pour créer un alias de type de données défini par l'utilisateur  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple crée un alias de type de données basé sur le type de données `varchar` fourni par le système. L'alias de type de données `ssn` est utilisé pour les colonnes comportant des numéros de sécurité sociale à 11 chiffres (999-99-9999). Cette colonne ne peut pas avoir la valeur NULL.  
+3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple crée un alias de type de données basé sur le type de données `varchar` fourni par le système. L'alias de type de données `ssn` est utilisé pour les colonnes comportant des numéros de sécurité sociale à 11 chiffres (999-99-9999). Cette colonne ne peut pas avoir la valeur NULL.  
   
 ```tsql  
 CREATE TYPE ssn  
 FROM varchar(11) NOT NULL ;  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Identificateur de la base de données](../../relational-databases/databases/database-identifiers.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)  
   

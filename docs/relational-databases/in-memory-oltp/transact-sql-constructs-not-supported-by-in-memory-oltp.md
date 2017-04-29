@@ -1,22 +1,26 @@
 ---
-title: "Les constructions Transact-SQL ne sont pas prises en charge par l&#39;OLTP en m&#233;moire | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Constructions Transact-SQL non prises en charge par l’OLTP en mémoire | Microsoft Docs"
+ms.custom: 
+ms.date: 12/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 caps.latest.revision: 51
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a3539b07a27be375ebfe58e16a4792d9095fce0c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Les constructions Transact-SQL ne sont pas prises en charge par l&#39;OLTP en m&#233;moire
+# <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Constructions Transact-SQL non prises en charge par l’OLTP en mémoire
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Les tables optimisées en mémoire, les procédures stockées compilées en mode natif et les fonctions définies par l’utilisateur ne prennent pas en charge la totalité de la surface d’exposition [!INCLUDE[tsql](../../includes/tsql-md.md)] qui est prise en charge par les tables sur disque, les procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)] interprétées et les fonctions définies par l’utilisateur. Lorsque vous tentez d'utiliser une des fonctionnalités non prises en charge, le serveur retourne une erreur.  
@@ -51,7 +55,7 @@ caps.handback.revision: 51
 |----------|----------|----------------|  
 |Fonctionnalité|ON|Les tables optimisées en mémoire ne peuvent pas être placées sur un groupe de fichiers ou un schéma de partition. Supprimez la clause ON de l'instruction **CREATE TABLE** .<br /><br /> Toutes les tables optimisées en mémoire sont associées à un groupe de fichiers/données optimisé en mémoire.|  
 |Type de données|*Nom du type de données*|Le type de données spécifié n'est pas pris en charge. Remplacez le type par un des types de données pris en charge. Pour plus d’informations, consultez [Types de données pris en charge pour l’OLTP en mémoire](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).|  
-|Fonctionnalité|Colonnes calculées|Les colonnes calculées ne sont pas prises en charge pour les tables mémoire optimisées. Supprimez les colonnes calculées de l'instruction **CREATE TABLE** .<br/><br/>**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, les colonnes calculées sont prises en charge dans les tables optimisées en mémoire et les index.|  
+|Fonctionnalité|Colonnes calculées|Les colonnes calculées ne sont pas prises en charge pour les tables mémoire optimisées. Supprimez les colonnes calculées de l'instruction **CREATE TABLE** .<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, les colonnes calculées sont prises en charge dans les tables optimisées en mémoire et les index.|  
 |Fonctionnalité|Réplication|La réplication n'est pas pris en charge avec les tables mémoire optimisées.|  
 |Fonctionnalité|FILESTREAM|Le stockage FILESTREAM n'est pas pris en charge pour les colonnes de tables mémoire optimisées. Supprimez le mot clé **FILESTREAM** de la définition de colonne.|  
 |Fonctionnalité|SPARSE|Les colonnes de tables mémoire optimisées ne peuvent pas être définies comme SPARSE. Supprimez le mot clé **SPARSE** de la définition de colonne.|  
@@ -136,7 +140,7 @@ caps.handback.revision: 51
 |Opérateur|OFFSET|Cet opérateur n'est pas pris en charge. Supprimez **OFFSET** de la procédure stockée compilée en mode natif.|  
 |Opérateur|INTERSECT|Cet opérateur n'est pas pris en charge. Supprimez **INTERSECT** de la procédure stockée compilée en mode natif. Dans certain cas, INNER JOIN permet d'obtenir le même résultat.|  
 |Opérateur|EXCEPT|Cet opérateur n'est pas pris en charge. Supprimez **EXCEPT** de la procédure stockée compilée en mode natif.|  
-|Opérateur|APPLY|Cet opérateur n'est pas pris en charge. Supprimez **APPLY** de la procédure stockée compilée en mode natif.<br/><br/>**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, l’opérateur APPLY est pris en charge dans les modules compilés en mode natif.|  
+|Opérateur|APPLY|Cet opérateur n'est pas pris en charge. Supprimez **APPLY** de la procédure stockée compilée en mode natif.<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, l’opérateur APPLY est pris en charge dans les modules compilés en mode natif.|  
 |Opérateur|PIVOT|Cet opérateur n'est pas pris en charge. Supprimez **PIVOT** de la procédure stockée compilée en mode natif.|  
 |Opérateur|UNPIVOT|Cet opérateur n'est pas pris en charge. Supprimez **UNPIVOT** de la procédure stockée compilée en mode natif.|  
 |Opérateur|CONTAINS|Cet opérateur n'est pas pris en charge. Supprimez **CONTAINS** de la procédure stockée compilée en mode natif.|  
@@ -152,20 +156,20 @@ caps.handback.revision: 51
 |Option|FOR XML|Cette option n'est pas prise en charge. Supprimez **FOR XML** de la procédure stockée compilée en mode natif.|  
 |Option|FOR BROWSE|Cette option n'est pas prise en charge. Supprimez **FOR BROWSE** de la procédure stockée compilée en mode natif.|  
 |Indicateur de jointure|HASH, MERGE|Les procédures stockées compilées en mode natif ne prennent en charge que les jointures de boucles imbriquées. Les jointures de hachage et de fusion ne sont pas prises en charge. Supprimez l'indicateur de jointure.|  
-|Indicateur de requête|*Indicateur de requête*|Cet indicateur de requête n'est pas pris en charge dans les procédures stockées compilées en mode natif. Pour obtenir les indicateurs de requête pris en charge, consultez [Indicateurs de requête &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md).|  
+|Indicateur de requête|*Indicateur de requête*|Cet indicateur de requête n'est pas pris en charge dans les procédures stockées compilées en mode natif. Pour obtenir les indicateurs de requête pris en charge, consultez [Indicateurs de requête &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).|  
 |Option|PERCENT|Cette option n'est pas prise en charge avec les clauses **TOP** . Supprimez **PERCENT** de la requête dans la procédure stockée compilée en mode natif.|  
 |Option|WITH TIES|Cette option n'est pas prise en charge avec les clauses **TOP** . Supprimez **WITH TIES** de la requête dans la procédure stockée compilée en mode natif.|  
 |Fonction d'agrégation|*Fonction d’agrégation*|Cette clause n'est pas prise en charge. Pour plus d'informations sur les fonctions d'agrégation dans les procédures stockées compilées en mode natif, consultez [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Fonction de classement|*Fonction de classement*|Les fonctions de classement ne sont pas prises en charge dans les procédures stockées compilées en mode natif. Supprimez-les de la définition de procédure.|  
 |Fonction|*Fonction*|Cette fonction n'est pas prise en charge. Supprimez-la de la procédure stockée compilée en mode natif.|  
-|Instruction|*Instruction*|Cette instruction n'est pas prise en charge. Supprimez-la de la procédure stockée compilée en mode natif.|  
+|.|*Instruction*|Cette instruction n'est pas prise en charge. Supprimez-la de la procédure stockée compilée en mode natif.|  
 |Fonctionnalité|MIN et MAX utilisé avec des chaînes binaires et de caractères|Les fonctions d'agrégation **MIN** et **MAX** ne peuvent pas être utilisées pour les valeurs de chaîne de caractère et binaire dans les procédures stockées compilées en mode natif.|  
 |Fonctionnalité|GROUP BY ALL|ALL ne peut pas être utilisé avec les clauses GROUP BY dans des procédures stockées compilées en mode natif. Supprimez ALL de la clause GROUP BY.|  
 |Fonctionnalité|GROUP BY ()|Le regroupement par une liste vide n'est pas pris en charge. Supprimez la clause GROUP BY, ou incluez des colonnes dans la liste de regroupement.|  
 |Fonctionnalité|ROLLUP|**ROLLUP** ne peut pas être utilisé avec les clauses **GROUP BY** dans des procédures stockées compilées en mode natif. Supprimez **ROLLUP** de la définition de procédure.|  
 |Fonctionnalité|CUBE|**CUBE** ne peut pas être utilisé avec les clauses **GROUP BY** dans des procédures stockées compilées en mode natif. Supprimez **CUBE** de la définition de procédure.|  
 |Fonctionnalité|GROUPING SETS|**GROUPING SETS** ne peut pas être utilisé avec les clauses **GROUP BY** dans des procédures stockées compilées en mode natif. Supprimez **GROUPING SETS** de la définition de procédure.|  
-|Fonctionnalité|BEGIN TRANSACTION, COMMIT TRANSACTION et ROLLBACK TRANSACTION|Utilisez des blocs ATOMIC pour contrôler les transactions et la gestion des erreurs. Pour plus d’informations, consultez [Atomic Blocks](../../relational-databases/in-memory-oltp/blocs-atomiques-dans-des-procédures-en-mode-natif.md).|  
+|Fonctionnalité|BEGIN TRANSACTION, COMMIT TRANSACTION et ROLLBACK TRANSACTION|Utilisez des blocs ATOMIC pour contrôler les transactions et la gestion des erreurs. Pour plus d’informations, consultez [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).|  
 |Fonctionnalité|Déclarations de variables de table inline.|Les variables de table doivent référencer les types de tables mémoire optimisées définis. Vous devez créer un type de table mémoire optimisée et utiliser ce type pour la déclaration de variable, plutôt que spécifier le type inline.|  
 |Fonctionnalité|Tables sur disque|Les tables sur disque ne sont pas accessibles à partir de procédures stockées compilées en mode natif. Supprimez les références aux tables sur disque dans les procédures stockées compilées en mode natif. Sinon, migrez les tables sur disques vers des tables mémoire optimisées.|  
 |Fonctionnalité|Vues|Les vues ne sont pas accessibles à partir de procédures stockées compilées en mode natif. Au lieu d'utiliser des vues, référencez les tables de base sous-jacentes.|  
@@ -187,3 +191,4 @@ caps.handback.revision: 51
  [Migration vers OLTP en mémoire](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+

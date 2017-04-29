@@ -1,32 +1,36 @@
 ---
-title: "D&#233;bogueur Transact-SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "débogueur Transact-SQL, présentation"
+title: "Débogueur Transact-SQL | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transact-SQL debugger, introduction
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f9b4dc899901f4306d011838a694381a41fcaf7
+ms.lasthandoff: 04/11/2017
+
 ---
-# D&#233;bogueur Transact-SQL
-  Le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] vous permet de détecter les erreurs dans le code [!INCLUDE[tsql](../../includes/tsql-md.md)] en étudiant le comportement du code au moment de l'exécution. Après avoir défini la fenêtre de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] en mode débogage, vous pouvez suspendre l'exécution du code au niveau de lignes spécifiques et inspecter les informations et les données qui sont utilisées ou retournées par ces instructions [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+# <a name="transact-sql-debugger"></a>Débogueur Transact-SQL
+  Le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] vous permet de détecter les erreurs dans le code [!INCLUDE[tsql](../../includes/tsql-md.md)] en étudiant le comportement du code au moment de l'exécution. Après avoir défini la fenêtre de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] en mode débogage, vous pouvez suspendre l'exécution du code au niveau de lignes spécifiques et inspecter les informations et les données qui sont utilisées ou retournées par ces instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-## Exécution pas à pas du code Transact-SQL  
+## <a name="stepping-through-transact-sql-code"></a>Exécution pas à pas du code Transact-SQL  
  Les options suivantes fournies par le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] vous permettent de parcourir le code [!INCLUDE[tsql](../../includes/tsql-md.md)] lorsque la fenêtre de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est en mode débogage :  
   
 -   Définir des points d'arrêt sur des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] individuelles.  
   
-     Un point d'arrêt spécifie un point auquel vous voulez interrompre l'exécution afin de pouvoir examiner les données. Lorsque vous démarrez le débogueur, celui-ci s'arrête à la première ligne de code dans la fenêtre de l'éditeur de requête. Pour exécuter le code jusqu’au premier point d’arrêt que vous avez défini, vous pouvez utiliser la fonctionnalité **Continuer**. Vous pouvez également utiliser la fonctionnalité **Continuer** pour exécuter le code à partir de l’emplacement où la fenêtre est actuellement arrêtée, quel qu’il soit, jusqu’au prochain point d’arrêt. Vous pouvez modifier les points d’arrêt pour spécifier des actions telles que les conditions dans lesquelles l’exécution doit être interrompue, les informations à imprimer dans la fenêtre **Sortie**, de même que vous pouvez modifier l’emplacement des points d’arrêt.  
+     Un point d'arrêt spécifie un point auquel vous voulez interrompre l'exécution afin de pouvoir examiner les données. Lorsque vous démarrez le débogueur, celui-ci s'arrête à la première ligne de code dans la fenêtre de l'éditeur de requête. Pour exécuter le code jusqu’au premier point d’arrêt que vous avez défini, vous pouvez utiliser la fonctionnalité **Continuer** . Vous pouvez également utiliser la fonctionnalité **Continuer** pour exécuter le code à partir de l’emplacement où la fenêtre est actuellement arrêtée, quel qu’il soit, jusqu’au prochain point d’arrêt. Vous pouvez modifier les points d’arrêt pour spécifier des actions telles que les conditions dans lesquelles l’exécution doit être interrompue, les informations à imprimer dans la fenêtre **Sortie** , de même que vous pouvez modifier l’emplacement des points d’arrêt.  
   
 -   Effectuer un pas à pas détaillé dans l'instruction suivante.  
   
@@ -40,12 +44,12 @@ caps.handback.revision: 16
   
  Pour plus d’informations sur les différentes façons dont vous pouvez parcourir le code avec le débogueur, consultez [Exécuter pas à pas du code Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md).  
   
-## Affichage des informations du débogueur  
- Chaque fois que le débogueur suspend l'exécution du code à une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifique, vous pouvez utiliser les fenêtres suivantes du débogueur pour afficher l'état d'exécution actuel :  
+## <a name="viewing-debugger-information"></a>Affichage des informations du débogueur  
+ Chaque fois que le débogueur suspend l'exécution du code à une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifique, vous pouvez utiliser les fenêtres suivantes du débogueur pour afficher l'état d'exécution actuel :  
   
--   **Variables locales** et **Espion**. Ces fenêtres affichent les expressions [!INCLUDE[tsql](../../includes/tsql-md.md)] actuellement allouées. Les expressions sont des clauses [!INCLUDE[tsql](../../includes/tsql-md.md)] qui ont pour valeur une expression scalaire unique. Le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] prend en charge l’affichage d’expressions qui font référence à des variables et à des paramètres [!INCLUDE[tsql](../../includes/tsql-md.md)], ou les fonctions intégrées dont le nom commence par @@. Ces fenêtres affichent également les valeurs de données qui sont actuellement attribuées aux expressions.  
+-   **Locals** and **Watch.** Ces fenêtres affichent les expressions [!INCLUDE[tsql](../../includes/tsql-md.md)] actuellement allouées. Les expressions sont des clauses [!INCLUDE[tsql](../../includes/tsql-md.md)] qui ont pour valeur une expression scalaire unique. Le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] prend en charge l’affichage d’expressions qui font référence à des variables et à des paramètres [!INCLUDE[tsql](../../includes/tsql-md.md)], ou les fonctions intégrées dont le nom commence par @@. Ces fenêtres affichent également les valeurs de données qui sont actuellement attribuées aux expressions.  
   
--   **Espion express.** Cette fenêtre affiche la valeur d’une expression [!INCLUDE[tsql](../../includes/tsql-md.md)] et vous permet d’enregistrer cette expression dans une fenêtre **Espion**.  
+-   **Espion express.** Cette fenêtre affiche la valeur d’une expression [!INCLUDE[tsql](../../includes/tsql-md.md)] et vous permet d’enregistrer cette expression dans une fenêtre **Espion** .  
   
 -   **Points d’arrêt.** Cette fenêtre affiche les points d'arrêt actuellement définis et vous permet de les gérer.  
   
@@ -55,7 +59,7 @@ caps.handback.revision: 16
   
 -   **Résultats** et **Messages.** Ces onglets de la fenêtre de l'éditeur de requête affichent les résultats des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] exécutées précédemment.  
   
-## Tâches du débogueur Transact-SQL  
+## <a name="transact-sql-debugger-tasks"></a>Tâches du débogueur Transact-SQL  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
@@ -64,7 +68,7 @@ caps.handback.revision: 16
 |Décrit comment utiliser le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] pour parcourir le code.|[Exécuter pas à pas du code Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
 |Décrit comment utiliser le débogueur pour afficher des données [!INCLUDE[tsql](../../includes/tsql-md.md)] (telles que des paramètres et des variables) et des informations système.|[Informations du débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

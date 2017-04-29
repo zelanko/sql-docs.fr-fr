@@ -1,33 +1,37 @@
 ---
-title: "Tutorial: Ownership Chains and Context Switching | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "context switching [SQL Server], tutorials"
-  - "ownership chains [SQL Server]"
+title: "Didacticiel : chaînes de propriétés et changement de contexte | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- context switching [SQL Server], tutorials
+- ownership chains [SQL Server]
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 858ca3c26c6d5297de86e5b0710a3b464ed4ce18
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tutorial: Ownership Chains and Context Switching
+# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 Ce didacticiel explore en se fondant sur un scénario les concepts de sécurité de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] impliquant les chaînes de propriétés et le changement de contexte utilisateur.  
   
 > [!NOTE]  
 > Pour exécuter le code de ce didacticiel, vous devez à la fois configurer la sécurité en mode mixte et installer la base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Pour plus d’informations sur la sécurité en mode mixte, consultez [Choisir un mode d’authentification](../relational-databases/security/choose-an-authentication-mode.md).  
   
-## Scénario  
+## <a name="scenario"></a>Scénario  
 Dans ce scénario, deux utilisateurs ont besoin de comptes leur permettant d'accéder aux données des bons de commande stockées dans la base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Les exigences requises sont les suivantes :  
   
 -   Le premier compte (TestManagerUser) doit être en mesure de dévoiler toutes les données détaillées dans chaque bon de commande.  
@@ -48,7 +52,7 @@ Pour répondre aux exigences de ce scénario, l'exemple est divisé en quatre pa
   
 Chaque bloc de code dans cet exemple est présenté sous forme de lignes. Pour copier l'exemple tout entier, consultez la section [Exemple complet](#CompleteExample) à la fin de ce didacticiel.  
   
-## 1. Configurez l'environnement  
+## <a name="1-configure-the-environment"></a>1. Configurez l'environnement  
 Utilisez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et le code ci-dessous pour ouvrir la base de données `AdventureWorks2012` ; ensuite, à l'aide de l'instruction `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)], vérifiez que l'utilisateur dbo est affiché dans le contexte.  
   
 ```  
@@ -81,7 +85,7 @@ GO
   
 Pour plus d’informations sur l’instruction CREATE USER, consultez [CREATE USER &#40;Transact-SQL&#41;](../t-sql/statements/create-user-transact-sql.md). Pour plus d’informations sur l’instruction CREATE LOGIN, consultez [CREATE LOGIN &#40;Transact-SQL&#41;](../t-sql/statements/create-login-transact-sql.md).  
   
-Utilisez le code suivant pour modifier la propriété du schéma `Purchasing` du compte `TestManagerUser` . Le compte peut alors exploiter l'accès à toutes les instructions DML (Data Manipulation Language, langage de manipulation de données), notamment les autorisations `SELECT` et `INSERT`, sur les objets qu'il contient. `TestManagerUser` se voit également octroyer la possibilité de créer des procédures stockées.  
+Utilisez le code suivant pour modifier la propriété du schéma `Purchasing` du compte `TestManagerUser` . Le compte peut alors exploiter l'accès à toutes les instructions DML (Data Manipulation Language, langage de manipulation de données), notamment les autorisations `SELECT` et `INSERT` , sur les objets qu'il contient. `TestManagerUser` se voit également octroyer la possibilité de créer des procédures stockées.  
   
 ```  
 /* Change owner of the Purchasing Schema to TestManagerUser */  
@@ -98,7 +102,7 @@ GO
   
 Pour plus d’informations sur l’instruction GRANT, consultez [GRANT &#40;Transact-SQL&#41;](../t-sql/statements/grant-transact-sql.md). Pour plus d’informations sur les procédures stockées, consultez [Procédures stockées &#40;moteur de base de données&#41;](../relational-databases/stored-procedures/stored-procedures-database-engine.md). Pour obtenir un graphique de toutes les autorisations du [!INCLUDE[ssDE](../includes/ssde-md.md)], consultez [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
   
-## 2. Créer une procédure stockée pour accéder aux données  
+## <a name="2-create-a-stored-procedure-to-access-data"></a>2. Créer une procédure stockée pour accéder aux données  
 Pour basculer le contexte dans une base de données, utilisez l’instruction EXECUTE AS. EXECUTE AS nécessite des autorisations IMPERSONATE.  
   
 Utilisez l'instruction `EXECUTE AS` dans le code ci-après pour modifier le contexte et le redéfinir à `TestManagerUser` et pour créer une procédure stockée affichant uniquement les données requises par `TestEmployeeUser`. Pour répondre aux exigences, la procédure stockée accepte une variable pour le numéro de bon de commande et n'affiche pas de données financières. De même, la clause WHERE limite les résultats aux expéditions partielles.  
@@ -125,7 +129,7 @@ END
 GO  
 ```  
   
-Actuellement, `TestEmployeeUser` n'a accès à aucun objet de base de données. Le code suivant (toujours dans le contexte `TestManagerUser`) accorde au compte de l'utilisateur la possibilité d'interroger les informations des tables de base par l'intermédiaire de la procédure stockée.  
+Actuellement, `TestEmployeeUser` n'a accès à aucun objet de base de données. Le code suivant (toujours dans le contexte `TestManagerUser` ) accorde au compte de l'utilisateur la possibilité d'interroger les informations des tables de base par l'intermédiaire de la procédure stockée.  
   
 ```  
 GRANT EXECUTE  
@@ -156,7 +160,7 @@ GO
   
 Pour plus d’informations sur l’instruction REVERT, consultez [REVERT &#40;Transact-SQL&#41;](../t-sql/statements/revert-transact-sql.md).  
   
-## 3. Accéder aux données par le biais de la procédure stockée  
+## <a name="3-access-data-through-the-stored-procedure"></a>3. Accéder aux données par le biais de la procédure stockée  
 `TestEmployeeUser` ne dispose d’aucune autorisation pour les objets de la base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] en dehors d’une connexion et des droits attribués au rôle de base de données public. Le code suivant retourne une erreur lorsque `TestEmployeeUser` tente d'accéder aux tables de base.  
   
 ```  
@@ -180,7 +184,7 @@ EXEC Purchasing.usp_ShowWaitingItems 952
 GO  
 ```  
   
-## 4. Réinitialisez l'environnement  
+## <a name="4-reset-the-environment"></a>4. Réinitialisez l'environnement  
 Le code ci-dessous exploite la commande `REVERT` pour retourner le contexte du compte actuel à `dbo`, puis réinitialise l'environnement.  
   
 ```  
@@ -322,8 +326,9 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
   
+

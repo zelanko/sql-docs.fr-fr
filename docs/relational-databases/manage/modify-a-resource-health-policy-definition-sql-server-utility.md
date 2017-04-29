@@ -1,31 +1,35 @@
 ---
-title: "Modifier une d&#233;finition de la strat&#233;gie de contr&#244;le d&#39;int&#233;grit&#233; des ressources (utilitaire SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.SWB.UE.UTILITY.ADMINISTRATION.F1"
+title: "Modifier une définition de la stratégie de contrôle d’intégrité des ressources (utilitaire SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.SWB.UE.UTILITY.ADMINISTRATION.F1
 ms.assetid: 27bec0b6-92e9-448e-8c70-fe36802cf128
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: df3ba2fe80e7e6cb2f1a9a7834dc6d64b2e0cf42
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modifier une d&#233;finition de la strat&#233;gie de contr&#244;le d&#39;int&#233;grit&#233; des ressources (utilitaire SQL Server)
-  Cette rubrique explique comment modifier une définition de stratégie de contrôle d'intégrité des ressources dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Avant de modifier une stratégie d'utilisation des ressources dans votre utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez créer un point de contrôle de l'utilitaire (UCP). Pour plus d’informations, consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
+# <a name="modify-a-resource-health-policy-definition-sql-server-utility"></a>Modifier une définition de la stratégie de contrôle d'intégrité des ressources (utilitaire SQL Server)
+  Cette rubrique explique comment modifier une définition de stratégie de contrôle d'intégrité des ressources dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Avant de modifier une stratégie d'utilisation des ressources dans votre utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez créer un point de contrôle de l'utilitaire (UCP). Pour plus d’informations, consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les stratégies d’utilisation des ressources de l’utilitaire peuvent être configurées pour des applications de la couche Données et des instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les stratégies d’utilisation des ressources peuvent être définies globalement pour toutes les applications de la couche Données et toutes les instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elles peuvent également être définies individuellement pour chaque application de la couche Données et chaque instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez également implémenter des stratégies globales et configurer des applications de la couche Données ou des instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] individuelles avec leurs propres définitions de stratégie.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les stratégies d’utilisation des ressources de l’utilitaire peuvent être configurées pour des applications de la couche Données et des instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les stratégies d’utilisation des ressources peuvent être définies globalement pour toutes les applications de la couche Données et toutes les instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Elles peuvent également être définies individuellement pour chaque application de la couche Données et chaque instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez également implémenter des stratégies globales et configurer des applications de la couche Données ou des instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] individuelles avec leurs propres définitions de stratégie.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Modifier des stratégies globales d'utilisation des ressources dans un utilitaire SQL Server.  
+#### <a name="modify-global-resource-utilization-policies-in-a-sql-server-utility"></a>Modifier des stratégies globales d'utilisation des ressources dans un utilitaire SQL Server.  
   
 1.  Connectez-vous à l'UCP dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
@@ -39,13 +43,13 @@ caps.handback.revision: 9
   
 6.  Pour actualiser les données, cliquez avec le bouton droit sur le nœud **Administration de l’utilitaire** dans le volet de navigation Explorateur de l’utilitaire et sélectionnez **Actualiser**.  
   
-#### Modifier les définitions de la stratégie de contrôle d'intégrité des ressources pour une application de la couche Données individuelle ou une instance gérée individuelle de SQL Server dans un utilitaire SQL Server  
+#### <a name="modify-resource-health-policy-definitions-for-an-individual-data-tier-application-or-an-individual-managed-instance-of-sql-server-in-a-sql-server-utility"></a>Modifier les définitions de la stratégie de contrôle d'intégrité des ressources pour une application de la couche Données individuelle ou une instance gérée individuelle de SQL Server dans un utilitaire SQL Server  
   
 1.  Connectez-vous à l'UCP dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-2.  Dans le volet de navigation Explorateur de l’utilitaire, cliquez sur **Applications de la couche Données déployées** ou sur **Instances gérées** pour afficher ou modifier des stratégies de surveillance pour une application de la couche Données ou une instance gérée individuelle.  
+2.  Dans le volet de navigation Explorateur de l’utilitaire, cliquez sur **Applications de la couche Données déployées**ou sur **Instances gérées**pour afficher ou modifier des stratégies de surveillance pour une application de la couche Données ou une instance gérée individuelle.  
   
-3.  En mode Liste du volet de contenu de l’Explorateur de l’utilitaire, cliquez sur l’application de la couche Données ou sur le nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dont vous souhaitez modifier les stratégies, puis cliquez sur l’onglet **Détails de stratégie**.  
+3.  En mode Liste du volet de contenu de l’Explorateur de l’utilitaire, cliquez sur l’application de la couche Données ou sur le nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dont vous souhaitez modifier les stratégies, puis cliquez sur l’onglet **Détails de stratégie** .  
   
 4.  Sélectionnez la stratégie à afficher ou à modifier en cliquant sur la flèche ou sur la description de la stratégie. Les stratégies globales sont sélectionnées par défaut.  
   
@@ -57,8 +61,8 @@ caps.handback.revision: 9
   
 8.  Pour actualiser les données, cliquez avec le bouton droit sur le nœud **Applications de la couche Données déployées** dans le volet de navigation de l’Explorateur de l’utilitaire et sélectionnez **Actualiser**.  
   
-## Voir aussi  
- [Fonctionnalités et tâches de l'utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Fonctionnalités et tâches de l’utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Consulter les résultats d’une stratégie de contrôle d’intégrité des ressources &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/view-resource-health-policy-results-sql-server-utility.md)  
   
   

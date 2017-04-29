@@ -1,29 +1,33 @@
 ---
-title: "Cat&#233;gorie d&#39;&#233;v&#233;nement OLEDB | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "catégorie d'événements OLEDB"
-  - "classes d’événements SQL Server, catégorie d’événement OLEDB"
-  - "classes d’événements [SQL Server], catégorie d’événement OLEDB"
+title: "OLEDB, catégorie d’événement | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLEDB event category
+- SQL Server event classes, OLEDB event category
+- event classes [SQL Server], OLEDB event category
 ms.assetid: cf93e424-3dac-462d-b3da-92e7d0b064d4
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1a1d7b2818f05ba73fc97f3a4aaf1c6d01d4f334
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cat&#233;gorie d&#39;&#233;v&#233;nement OLEDB
+# <a name="oledb-event-category"></a>catégorie d'événements OLEDB
   La catégorie d’événement **OLEDB** contient des événements OLEDB généraux.  
   
-## Dans cette section  
+## <a name="in-this-section"></a>Dans cette section  
   
 |Rubrique|Description|  
 |-----------|-----------------|  
@@ -33,7 +37,7 @@ caps.handback.revision: 26
 |[Classe d'événements OLEDB Provider Information](../../relational-databases/event-classes/oledb-provider-information-event-class.md)|Indique qu'une requête distribuée s'est exécutée et a recueilli des informations qui correspondent à la connexion du fournisseur.|  
 |[Classe d'événements OLEDB QueryInterface](../../relational-databases/event-classes/oledb-queryinterface-event-class.md)|Indique que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a émis un appel OLE DB **QueryInterface** pour des requêtes distribuées et des procédures stockées distantes.|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)  
   
   

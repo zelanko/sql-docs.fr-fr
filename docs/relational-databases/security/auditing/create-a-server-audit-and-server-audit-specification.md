@@ -1,40 +1,44 @@
 ---
-title: "Cr&#233;er un audit du serveur et une sp&#233;cification d&#39;audit du serveur | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.SWB.SQLAUDIT.FILTER.F1"
-  - "sql13.swb.sqlaudit.general.f1"
-  - "sql13.swb.sqlaudit.srvaudit.general.f1"
-helpviewer_keywords: 
-  - "audit de serveur [SQL Server]"
-  - "audits [SQL Server], spécification"
+title: "Créer un audit du serveur et une spécification d’audit du serveur | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.SWB.SQLAUDIT.FILTER.F1
+- sql13.swb.sqlaudit.general.f1
+- sql13.swb.sqlaudit.srvaudit.general.f1
+helpviewer_keywords:
+- server audit [SQL Server]
+- audits [SQL Server], specification
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e33a4ff076039b03c399a0f7868bf697ca1cd8d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er un audit du serveur et une sp&#233;cification d&#39;audit du serveur
-  Cette rubrique explique comment créer un audit de serveur et une spécification d'audit de serveur dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. L'*audit* d'une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou d'une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implique le suivi et l'enregistrement des événements qui se produisent sur le système. L’objet *Audit SQL Server* recueille une seule instance des actions et des groupes d’actions au niveau du serveur ou de la base de données à surveiller. L'audit s'effectue au niveau de l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Vous pouvez exécuter plusieurs audits par instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L'objet *Spécification de l'audit du serveur* appartient à un audit. Vous pouvez créer une spécification d'audit de serveur par audit, car tous deux sont créés au niveau de la portée de l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [SQL Server Audit &#40moteur de base de données&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+# <a name="create-a-server-audit-and-server-audit-specification"></a>Créer un audit du serveur et une spécification d'audit du serveur
+  Cette rubrique explique comment créer un audit de serveur et une spécification d'audit de serveur dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. L'*audit* d'une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou d'une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implique le suivi et l'enregistrement des événements qui se produisent sur le système. L’objet *Audit SQL Server* recueille une seule instance des actions et des groupes d’actions au niveau du serveur ou de la base de données à surveiller. L'audit s'effectue au niveau de l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Vous pouvez exécuter plusieurs audits par instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L'objet *Spécification de l'audit du serveur* appartient à un audit. Vous pouvez créer une spécification d'audit de serveur par audit, car tous deux sont créés au niveau de la portée de l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [SQL Server Audit &#40moteur de base de données&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour créer un audit de serveur et une spécification d'audit de serveur, utilisez :**  
+-   **Pour créer un audit de serveur et une spécification d'audit de serveur, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -58,9 +62,9 @@ caps.handback.revision: 21
   
 -   Une fois qu’une spécification d’audit du serveur est créée, elle peut être affichée par des principaux disposant des autorisations CONTROL SERVER ou ALTER ANY SERVER AUDIT, du compte sysadmin ou de principaux ayant un accès explicite à l’audit.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour créer un audit de serveur  
+#### <a name="to-create-a-server-audit"></a>Pour créer un audit de serveur  
   
 1.  Dans l'Explorateur d'objets, développez le dossier **Sécurité** .  
   
@@ -72,9 +76,9 @@ caps.handback.revision: 21
      Nom de l'audit. Il est généré automatiquement lorsque vous créez un audit, mais il est modifiable.  
   
      **Délai de file d'attente (en millisecondes)**  
-     Spécifie la durée (en millisecondes) qui peut s'écouler avant que le traitement des actions d'audit ne soit forcé.  Une valeur de 0 indique la remise synchrone. La valeur minimale par défaut est **1000** (1 seconde). Le maximum est 2 147 483 647 (2 147 483,647 secondes ou 24 jours, 20 heures, 31 minutes, 23,647 secondes).  
+     Spécifie la durée (en millisecondes) qui peut s'écouler avant que le traitement des actions d'audit ne soit forcé.  Une valeur de 0 indique la remise synchrone. La valeur minimale par défaut est **1000** (1 seconde). Le maximum est 2 147 483 647 (2 147 483,647 secondes ou 24 jours, 20 heures, 31 minutes, 23,647 secondes).  
   
-     **En cas de défaillance du journal d'audit :**  
+     **En cas de défaillance du journal d'audit :**  
      **Continuer**  
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Les opérations continuent. Les enregistrements d'audit ne sont pas conservés. L'audit poursuit sa tentative de consignation des événements et reprend les opérations d'enregistrement une fois la défaillance résolue. La sélection de l'option **Continuer** peut permettre l'exécution d'une activité non auditée susceptible d'enfreindre vos stratégies de sécurité. Sélectionnez cette option quand la poursuite de l’opération du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] est plus importante que la conservation d’un audit complet. Il s'agit de la sélection par défaut.  
   
@@ -87,7 +91,7 @@ caps.handback.revision: 21
     > [!IMPORTANT]  
     >  Lorsque l'audit est en état d'échec, la connexion administrateur dédiée peut continuer à exécuter des événements audités.  
   
-     Liste **Destination de l’audit**  
+     Liste**Destination de l’audit**   
      Spécifie la cible pour l'audit des données. Les options disponibles sont un fichier binaire, le journal des applications Windows ou le journal de sécurité Windows. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne peut pas écrire dans le journal de sécurité Windows sans configurer d'autres paramètres dans Windows. Pour plus d’informations, consultez [Écrire des événements d’audit SQL Server dans le journal de sécurité](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md).  
   
      **Chemins d'accès au fichier**  
@@ -96,34 +100,34 @@ caps.handback.revision: 21
      **Points de suspension (…)**  
      Ouvre la boîte de dialogue **Rechercher un dossier –***nom_serveur* qui permet de spécifier un chemin de fichier ou de créer un dossier dans lequel écrire le fichier d’audit.  
   
-     **Limites maximales du fichier d'audit :**  
+     **Limites maximales du fichier d'audit :**  
      **Fichiers de substitution maximale**  
      Spécifie que, lorsque le nombre maximal de fichiers d'audit est atteint, les fichiers d'audit les plus anciens sont remplacés par les nouveaux fichiers.  
   
      **Nombre maximal de fichiers**  
      Spécifie que, lorsque le nombre maximal de fichiers d'audit est atteint, toute action qui entraîne la génération d'événements d'audit supplémentaires échoue et provoque une erreur.  
   
-     Case à cocher **Illimité**  
+     Case à cocher**Illimité**   
      Lorsque la case **Illimité** sous **Nombre maximal de fichiers de substitution** est cochée, aucune limite n’est imposée sur le nombre de fichiers d’audit qui seront créés. La case à cocher **Illimité** est sélectionnée par défaut et s'applique aux sélections **Nombre maximal de fichiers de substitution** et **Nombre maximal de fichiers** .  
   
-     Zone **Nombre de fichiers**  
-     Spécifie le nombre de fichiers d'audit à créer, jusqu'à 2 147 483 647. Cette option est disponible uniquement si **Illimité** est désactivé.  
+     Zone**Nombre de fichiers**   
+     Spécifie le nombre de fichiers d'audit à créer, jusqu'à 2 147 483 647. Cette option est disponible uniquement si **Illimité** est désactivé.  
   
      **Taille de fichier maximale**  
-     Spécifie la taille maximale d'un fichier d'audit, en mégaoctets (MB), en gigaoctets (GB) ou en téraoctets (TB). Vous pouvez spécifier une valeur comprise entre 1 024 Mo et 2 147 483 647 To. L'activation de la case à cocher **Illimité** ne fixe pas de limite quant à la taille du fichier. La spécification d'une valeur inférieure à 1 024 Mo échoue et génère une erreur. La case à cocher **Illimité** est sélectionnée par défaut.  
+     Spécifie la taille maximale d'un fichier d'audit, en mégaoctets (MB), en gigaoctets (GB) ou en téraoctets (TB). Vous pouvez spécifier une valeur comprise entre 1 024 Mo et 2 147 483 647 To. L'activation de la case à cocher **Illimité** ne fixe pas de limite quant à la taille du fichier. La spécification d'une valeur inférieure à 1 024 Mo échoue et génère une erreur. La case à cocher **Illimité** est sélectionnée par défaut.  
   
-     Case à cocher **Réserver l’espace disque**  
+     Case à cocher**Réserver l’espace disque**   
      Spécifie qu'une quantité d'espace disque égale à la taille de fichier maximale spécifiée doit être pré-allouée. Ce paramètre ne peut être utilisé que si la case à cocher **Illimité** sous **Taille de fichier maximale** n'est pas sélectionnée. Cette case à cocher n'est pas activée par défaut.  
   
 3.  Éventuellement, sur la page **Filtre** , entrez un prédicat, ou la clause `WHERE` , pour l'audit de serveur afin de définir des options supplémentaires qui ne sont pas disponibles sur la page **Général** . Mettez le prédicat entre parenthèses ; par exemple : `(object_name = 'EmployeesTable')`.  
   
 4.  Lorsque vous avez fini de sélectionner les options, cliquez sur **OK**.  
   
-#### Pour créer une spécification d'audit de serveur  
+#### <a name="to-create-a-server-audit-specification"></a>Pour créer une spécification d'audit de serveur  
   
 1.  Dans l'Explorateur d'objets, cliquez sur le signe plus pour développer le dossier **Sécurité** .  
   
-2.  Cliquez avec le bouton droit sur le dossier **Spécifications de l’audit du serveur**, puis sélectionnez **Nouvelle spécification de l’audit du serveur**.  
+2.  Cliquez avec le bouton droit sur le dossier **Spécifications de l’audit du serveur** , puis sélectionnez **Nouvelle spécification de l’audit du serveur**.  
   
      Les options suivantes sont disponibles dans la boîte de dialogue **Créer la spécification de l'audit du serveur** .  
   
@@ -137,10 +141,10 @@ caps.handback.revision: 21
      Spécifie les groupes d'actions d'audit de niveau serveur et les actions d'audit à capturer. Pour obtenir la liste d’actions d’audit et de groupes d’actions d’audit de niveau serveur, ainsi qu’une description des événements qu’ils contiennent, consultez [Actions et groupes d’actions SQL Server Audit](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  
   
      **Schéma d'objet**  
-     Affiche le schéma du **Nom de l’objet** spécifié.  
+     Affiche le schéma du **Nom de l’objet**spécifié.  
   
-     **Nom de l'objet**  
-     Nom de l'objet à auditer. Disponible uniquement pour les actions d'audit ; ne s'applique pas aux groupes d'audit.  
+     **Nom de l’objet**  
+     Nom de l'objet à auditer. Disponible uniquement pour les actions d'audit ; ne s'applique pas aux groupes d'audit.  
   
      **Points de suspension (…)**  
      Ouvre la boîte de dialogue **Sélectionner des objets** permettant de rechercher et sélectionner un objet disponible, en fonction du **Type d'action de l'audit**spécifié.  
@@ -155,7 +159,7 @@ caps.handback.revision: 21
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour créer un audit de serveur  
+#### <a name="to-create-a-server-audit"></a>Pour créer un audit de serveur  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -169,7 +173,7 @@ caps.handback.revision: 21
         TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
     ```  
   
-#### Pour créer une spécification d'audit de serveur  
+#### <a name="to-create-a-server-audit-specification"></a>Pour créer une spécification d'audit de serveur  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

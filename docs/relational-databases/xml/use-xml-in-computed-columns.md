@@ -1,41 +1,45 @@
 ---
-title: "Utiliser des donn&#233;es XML dans les colonnes calcul&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "colonnes calculées, XML"
-  - "XML [SQL Server], colonnes calculées"
+title: "Utiliser des données XML dans les colonnes calculées | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- computed columns, XML
+- XML [SQL Server], computed columns
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f156afc96d002d1db972fb3060676c7043563a25
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utiliser des donn&#233;es XML dans les colonnes calcul&#233;es
+# <a name="use-xml-in-computed-columns"></a>Utiliser des données XML dans les colonnes calculées
   Une instance XML peut faire office de source ou de type de colonne calculée. Les exemples dans cette rubrique indiquent comment utiliser des données XML avec des colonnes calculées.  
   
-## Création de colonnes calculées à partir de colonnes XML  
- Dans l'instruction `CREATE TABLE` suivante, une colonne de type `xml` (`col2`) est calculée à partir de `col1` :  
+## <a name="creating-computed-columns-from-xml-columns"></a>Création de colonnes calculées à partir de colonnes XML  
+ Dans l'instruction `CREATE TABLE` suivante, une colonne de type `xml` (`col2`) est calculée à partir de `col1`:  
   
 ```  
 CREATE TABLE T(col1 varchar(max), col2 AS CAST(col1 AS xml) )    
 ```  
   
- Le type de données `xml` peut également faire office de source pour la création d'une colonne calculée, comme le montre l'instruction `CREATE TABLE` suivante :  
+ Le type de données `xml` peut également faire office de source pour la création d'une colonne calculée, comme le montre l'instruction `CREATE TABLE` suivante :  
   
 ```  
 CREATE TABLE T (col1 xml, col2 as cast(col1 as varchar(1000) ))   
 ```  
   
- Vous pouvez créer une colonne calculée en extrayant une valeur d'une colonne de type `xml`, comme le montre l'exemple ci-après. Étant donné que les méthodes de type de données **xml** ne peuvent pas être directement utilisées pour créer des colonnes calculées, l’exemple définit d’abord une fonction (`my_udf`) qui retourne une valeur d’une instance XML. La fonction inclut la méthode `value()` du type `xml`. Le nom de la fonction est ensuite spécifié dans l'instruction `CREATE TABLE` de la colonne calculée.  
+ Vous pouvez créer une colonne calculée en extrayant une valeur d'une colonne de type `xml` , comme le montre l'exemple ci-après. Étant donné que les méthodes de type de données **xml** ne peuvent pas être directement utilisées pour créer des colonnes calculées, l’exemple définit d’abord une fonction (`my_udf`) qui retourne une valeur d’une instance XML. La fonction inclut la méthode `value()` du type `xml` . Le nom de la fonction est ensuite spécifié dans l'instruction `CREATE TABLE` de la colonne calculée.  
   
 ```  
 CREATE FUNCTION my_udf(@var xml) returns int  
@@ -55,7 +59,7 @@ FROM T
   
 ```  
   
- Comme l’exemple précédent, l’exemple suivant définit une fonction pour retourner une instance de type **xml** pour une colonne calculée. Dans la fonction, la méthode `query()` du type de données `xml` extrait une valeur d'un paramètre de type `xml`.  
+ Comme l’exemple précédent, l’exemple suivant définit une fonction pour retourner une instance de type **xml** pour une colonne calculée. Dans la fonction, la méthode `query()` du type de données `xml` extrait une valeur d'un paramètre de type `xml` .  
   
 ```  
 CREATE FUNCTION my_udf(@var xml)   
@@ -65,7 +69,7 @@ BEGIN
 END  
 ```  
   
- Dans l'instruction `CREATE TABLE` suivante, `Col2` est une colonne calculée qui utilise les données XML (élément `<Features>`) renvoyées par la fonction :  
+ Dans l'instruction `CREATE TABLE` suivante, `Col2` est une colonne calculée qui utilise les données XML (élément`<Features>` ) renvoyées par la fonction :  
   
 ```  
 CREATE TABLE T (Col1 xml, Col2 as dbo.my_udf(Col1) )  
@@ -82,7 +86,7 @@ SELECT *
 FROM T  
 ```  
   
-### Dans cette section  
+### <a name="in-this-section"></a>Dans cette section  
   
 |Rubrique|Description|  
 |-----------|-----------------|  

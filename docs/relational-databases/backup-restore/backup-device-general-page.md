@@ -1,24 +1,28 @@
 ---
-title: "Unit&#233; de sauvegarde (page G&#233;n&#233;ral) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.backupdevice.general.f1"
+title: "Unité de sauvegarde (page Général) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.backupdevice.general.f1
 ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4cca5d50abc9aad1babf20cdbb8566e437aa9236
+ms.lasthandoff: 04/11/2017
+
 ---
-# Unit&#233; de sauvegarde (page G&#233;n&#233;ral)
+# <a name="backup-device-general-page"></a>Unité de sauvegarde (page Général)
   Utilisez la page **Général** pour spécifier ou afficher les propriétés générales d'une unité logique de sauvegarde.  
   
  **Pour utiliser SQL Server Management Studio pour afficher le contenu d'une unité de sauvegarde**  
@@ -27,12 +31,12 @@ caps.handback.revision: 34
   
 -   [Afficher les propriétés et le contenu d’une unité de sauvegarde logique &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## Options  
+## <a name="options"></a>Options  
  **Nom du périphérique**  
  Permet d'afficher le nom d'une unité logique de sauvegarde existante ou de spécifier le nom d'une nouvelle unité logique de sauvegarde.  
   
  **Bande**  
- Permet d’afficher ou de sélectionner l’unité à bande de destination dans la liste **Bande**. Cette option est disponible uniquement si un lecteur de bande est connecté à l'ordinateur qui exécute l'instance du moteur de base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+ Permet d’afficher ou de sélectionner l’unité à bande de destination dans la liste **Bande** . Cette option est disponible uniquement si un lecteur de bande est connecté à l'ordinateur qui exécute l'instance du moteur de base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 > [!NOTE]  
 >  Les unités de sauvegarde sur bande situées sur des ordinateurs distants ne sont pas des destinations de sauvegarde valides.  
@@ -49,9 +53,9 @@ caps.handback.revision: 34
      Vous pouvez également modifier le champ **Fichier** manuellement pour remplacer le chemin d'accès, le nom de fichier et l'extension par défaut. Pour spécifier un fichier distant en tant que destination de sauvegarde, tapez son nom complet UNC (Universal Naming Convention). Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
     > [!IMPORTANT]  
-    >  Étant donné que la sauvegarde de données sur un réseau peut faire l'objet d'erreurs réseau, nous vous recommandons de vérifier l'opération de sauvegarde lorsqu'elle est terminée. Pour plus d’informations, consultez [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md).  
+    >  Étant donné que la sauvegarde de données sur un réseau peut faire l'objet d'erreurs réseau, nous vous recommandons de vérifier l'opération de sauvegarde lorsqu'elle est terminée. Pour plus d’informations, consultez [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Les sauvegardes sur un jeu comprenant une ou plusieurs unités de sauvegarde constituent un seul jeu de supports. Un *support de sauvegarde* est un ensemble ordonné de supports de sauvegarde (bandes ou fichiers disques) sur lequel une ou plusieurs opérations de sauvegarde ont été écrites en utilisant un type et un nombre fixes d'unités de sauvegarde. Pour plus d’informations sur les supports de sauvegarde, consultez [Jeux de supports, familles de supports et jeux de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
  L'unité physique de sauvegarde correspondant à une unité logique de sauvegarde est initialisée lorsque la première sauvegarde sur support de sauvegarde est écrite sur l'unité logique de sauvegarde. Si l'unité physique de sauvegarde est un fichier qui n'existe pas déjà, il est créé à ce moment-là.  
@@ -76,7 +80,7 @@ caps.handback.revision: 34
   
 -   [Restaurer une sauvegarde à partir d’une unité &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Jeux de supports, familles de supports et jeux de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

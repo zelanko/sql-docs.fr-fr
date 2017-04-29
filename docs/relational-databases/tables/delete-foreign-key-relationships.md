@@ -1,37 +1,41 @@
 ---
-title: "Supprimer les relations entre les cl&#233;s &#233;trang&#232;res | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clés étrangères [SQL Server], suppression"
-  - "retrait de clés étrangères"
-  - "suppression de clés étrangères"
+title: "Supprimer les relations entre les clés étrangères | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- foreign keys [SQL Server], deleting
+- removing foreign keys
+- deleting foreign keys
 ms.assetid: 9c9e9ae4-9e03-4137-acb6-b18928a0c4ca
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3187794a4854ed3fa298d8b72d8aae57a8bf21c0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Supprimer les relations entre les cl&#233;s &#233;trang&#232;res
+# <a name="delete-foreign-key-relationships"></a>Supprimer les relations entre les clés étrangères
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Vous pouvez supprimer une contrainte de clé étrangère dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La suppression d'une contrainte de clé étrangère supprime l'obligation d'appliquer l'intégrité référentielle.  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour supprimer une contrainte de clé étrangère, utilisez :**  
+-   **Pour supprimer une contrainte de clé étrangère, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -44,9 +48,9 @@ caps.handback.revision: 15
 ####  <a name="Permissions"></a> Autorisations  
  Requiert une autorisation ALTER sur la table.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour supprimer une contrainte de clé étrangère  
+#### <a name="to-delete-a-foreign-key-constraint"></a>Pour supprimer une contrainte de clé étrangère  
   
 1.  Dans l' **Explorateur d'objets**, développez la table avec la contrainte, puis développez **Clés**.  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 15
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour supprimer une contrainte de clé étrangère  
+#### <a name="to-delete-a-foreign-key-constraint"></a>Pour supprimer une contrainte de clé étrangère  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

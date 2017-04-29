@@ -1,26 +1,30 @@
 ---
-title: "Afficher les propri&#233;t&#233;s de Resource Governor | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.rg.properties.f1"
-helpviewer_keywords: 
-  - "Resource Governor, propriétés"
+title: "Afficher les propriétés de Resource Governor | Microsoft Docs"
+ms.custom: 
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.rg.properties.f1
+helpviewer_keywords:
+- Resource Governor, properties
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e856286b6048e320481b5983685fbfcd4e838c1d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Afficher les propri&#233;t&#233;s de Resource Governor
+# <a name="view-resource-governor-properties"></a>Afficher les propriétés de Resource Governor
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Vous pouvez créer ou configurer des entités de Resource Governor, telles que des pools de ressources et des groupes de charge de travail, en utilisant la page Propriétés de Resource Governor dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -56,13 +60,13 @@ caps.handback.revision: 28
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ouvrez l'Explorateur d'objets et développez de manière récursive le nœud **Gestion** jusqu'au **Resource Governor**.  
   
-2.  Cliquez avec le bouton droit sur **Resource Governor**, puis sélectionnez **Propriétés** afin d’ouvrir la page **Propriétés de Resource Governor**.  
+2.  Cliquez avec le bouton droit sur **Resource Governor** , puis sélectionnez **Propriétés**afin d’ouvrir la page **Propriétés de Resource Governor** .  
   
 3.  Pour obtenir les descriptions des champs de la page, consultez [Propriétés de Resource Governor](#RGProp).  
   
 4.  Cliquez sur **OK**pour enregistrer les éventuelles modifications.  
   
-##  <a name="RGProp"></a> Propriétés de Resource Governor  
+##  <a name="RGProp"></a> Resource Governor properties  
  **Nom de la fonction classifieur**  
  Spécifiez la fonction classifieur en la sélectionnant dans la liste.  
   
@@ -70,27 +74,27 @@ caps.handback.revision: 28
  Activez ou désactivez Resource Governor en activant ou désactivant la case à cocher.  
   
  **Pools de ressources**  
- Créez ou modifiez la configuration des pools de ressources et des pools de ressources externes à l’aide de la grille fournie. Cette grille est remplie à l'aide des informations des pools internes et par défaut prédéfinis. Sélectionnez un pool à utiliser en cliquant sur la première colonne de la ligne du pool. Pour créer un pool de ressources, cliquez sur la ligne comportant le préfixe **\*** (astérisque).  
+ Créez ou modifiez la configuration des pools de ressources et des pools de ressources externes à l’aide de la grille fournie. Cette grille est remplie à l'aide des informations des pools internes et par défaut prédéfinis. Sélectionnez un pool à utiliser en cliquant sur la première colonne de la ligne du pool. Pour créer un pool de ressources, cliquez sur la ligne comportant le préfixe**\***(astérisque).  
   
  **Nom**  
  Spécifiez le nom du pool de ressources.  
   
- **% processeur minimal**  
- Spécifiez la bande passante de l'UC moyenne garantie pour toutes les demandes dans le pool de ressources en cas de contention de l'UC. La plage est comprise entre 0 et 100.  
+ **% processeur minimal**  
+ Spécifiez la bande passante de l'UC moyenne garantie pour toutes les demandes dans le pool de ressources en cas de contention de l'UC. La plage est comprise entre 0 et 100.  
   
- **% processeur maximal**  
- Spécifiez la bande passante de l'UC moyenne maximale que toutes les demandes dans ce pool de ressources recevront en cas de contention de l'UC. La plage est comprise entre 0 et 100. La valeur par défaut est 100.  
+ **% processeur maximal**  
+ Spécifiez la bande passante de l'UC moyenne maximale que toutes les demandes dans ce pool de ressources recevront en cas de contention de l'UC. La plage est comprise entre 0 et 100. La valeur par défaut est 100.  
   
- **% mémoire minimal**  
- Spécifiez la quantité de mémoire minimale réservée à ce pool de ressources qui ne peut pas être partagée avec d'autres pools de ressources. La plage est comprise entre 0 et 100.  
+ **% mémoire minimal**  
+ Spécifiez la quantité de mémoire minimale réservée à ce pool de ressources qui ne peut pas être partagée avec d'autres pools de ressources. La plage est comprise entre 0 et 100.  
   
- **% mémoire maximal**  
- Spécifiez la mémoire totale du serveur qui peut être utilisée par les demandes dans ce pool de ressources. La plage est comprise entre 0 et 100. La valeur par défaut est 100.  
+ **% mémoire maximal**  
+ Spécifiez la mémoire totale du serveur qui peut être utilisée par les demandes dans ce pool de ressources. La plage est comprise entre 0 et 100. La valeur par défaut est 100.  
   
  Pour plus d’informations, consultez [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md) et [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md).  
   
  **Groupes de charge de travail pour le pool de ressources**  
- Créez ou modifiez la configuration du groupe de charges de travail à l'aide de la grille fournie. Cette grille est remplie à l'aide des informations des groupes internes et par défaut prédéfinis. Sélectionnez un groupe à utiliser en cliquant sur la première colonne de la ligne du pool. Pour créer un groupe de charges de travail, cliquez sur la ligne comportant le préfixe **\*** (astérisque).  
+ Créez ou modifiez la configuration du groupe de charges de travail à l'aide de la grille fournie. Cette grille est remplie à l'aide des informations des groupes internes et par défaut prédéfinis. Sélectionnez un groupe à utiliser en cliquant sur la première colonne de la ligne du pool. Pour créer un groupe de charges de travail, cliquez sur la ligne comportant le préfixe**\***(astérisque).  
   
  **Nom**  
  Spécifiez le nom du groupe de charges de travail.  
@@ -104,8 +108,8 @@ caps.handback.revision: 28
  **Temps processeur (s)**  
  Spécifiez la quantité de temps maximale de temps processeur qu'une demande peut utiliser. Doit être égal à 0 ou un entier positif. Si 0, le temps est illimité.  
   
- **% allocation mémoire**  
- Spécifiez la quantité de mémoire maximale qu'une demande unique peut prendre du pool. La plage est comprise entre 0 et 100.  
+ **% allocation mémoire**  
+ Spécifiez la quantité de mémoire maximale qu'une demande unique peut prendre du pool. La plage est comprise entre 0 et 100.  
   
  **Délai d'expiration de l'allocation (s)**  
  Spécifiez le délai maximal pendant lequel une requête peut attendre qu'une ressource devienne disponible avant d'échouer. Doit être égal à 0 ou un entier positif.  
@@ -115,14 +119,14 @@ caps.handback.revision: 28
   
  Pour plus d’informations, consultez [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md).  
   
-## Afficher les propriétés de Resource Governor à l’aide de Transact-SQL  
+## <a name="view-resource-governor-properties-using-transact-sql"></a>Afficher les propriétés de Resource Governor à l’aide de Transact-SQL  
  **Afficher les propriétés de Resource Governor à l'aide de Transact-SQL**  
   
 1.  Pour afficher les définitions des entités de Resource Governor, utilisez les [Affichages catalogue de Resource Governor &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md).  
   
 2.  Pour consulter la configuration actuelle des entités de Resource Governor, utilisez les [Vues de gestion dynamique liées à Resource Governor &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).  
   
-## Informations complémentaires
+## <a name="more-information"></a>Informations complémentaires
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Activer Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Pool de ressources de Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
@@ -130,3 +134,4 @@ caps.handback.revision: 28
  [Fonction classifieur de Resource Governor](../../relational-databases/resource-governor/resource-governor-classifier-function.md)  
   
   
+

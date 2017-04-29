@@ -1,36 +1,40 @@
 ---
-title: "Renommer des statistiques | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "renommer des statistiques"
-  - "statistiques [SQL Server], affectation d’un nouveau nom"
+title: Renommer des statistiques | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-statistics
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- renaming statistics
+- statistics [SQL Server], renaming
 ms.assetid: a3bed7b7-3dc5-4b33-b1c6-67c27f573764
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 00d72d7a3fc3d152cd5b05056812ba93041be67d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Renommer des statistiques
+# <a name="rename-statistics"></a>Renommer des statistiques
   Vous pouvez renommer un objet de statistiques dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour renommer un objet de statistiques, utilisez :**  
+-   **Pour renommer un objet de statistiques, utilisez :**  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -48,7 +52,7 @@ caps.handback.revision: 11
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour renommer un objet de statistiques  
+#### <a name="to-rename-a-statistics-object"></a>Pour renommer un objet de statistiques  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

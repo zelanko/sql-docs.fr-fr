@@ -1,38 +1,42 @@
 ---
-title: "R&#233;duire un fichier | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.shrinkfile.f1"
-helpviewer_keywords: 
-  - "réduction des fichiers"
-  - "diminution de la taille de fichier"
-  - "bases de données [SQL Server], réduction"
-  - "réduction de la taille de fichier"
-  - "taille [SQL Server], fichiers"
-  - "taille du fichier [SQL Server]"
+title: "Réduire un fichier | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.shrinkfile.f1
+helpviewer_keywords:
+- shrinking files
+- decreasing file size
+- databases [SQL Server], shrinking
+- reducing file size
+- size [SQL Server], files
+- file size [SQL Server]
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aaa485184202b4edb301d3c2429f09625e854771
+ms.lasthandoff: 04/11/2017
+
 ---
-# R&#233;duire un fichier
+# <a name="shrink-a-file"></a>Réduire un fichier
   Cette rubrique explique comment réduire un fichier de données ou un fichier journal dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  La réduction des fichiers de données permet de récupérer de l'espace en déplaçant des pages de données de la fin du fichier vers un espace inoccupé plus proche de l'avant du fichier. Lorsqu'une quantité d'espace libre suffisante est créée à la fin du fichier, des pages de données à la fin du fichier peuvent être désallouées et retournées au système de fichiers.  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 25
   
      [Sécurité](#Security)  
   
--   **Pour réduire un fichier de données ou un fichier journal, utilisez :**  
+-   **Pour réduire un fichier de données ou un fichier journal, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -59,15 +63,15 @@ caps.handback.revision: 25
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Nécessite l’appartenance au rôle de serveur fixe **sysadmin** ou au rôle de base de données fixe **db_owner**.  
+ Nécessite l’appartenance au rôle de serveur fixe **sysadmin** ou au rôle de base de données fixe **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour réduire un fichier de données ou un fichier journal  
+#### <a name="to-shrink-a-data-or-log-file"></a>Pour réduire un fichier de données ou un fichier journal  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et développez-la.  
   
-2.  Développez **Bases de données**, puis cliquez avec le bouton droit sur la base de données à réduire.  
+2.  Développez **Bases de données** , puis cliquez avec le bouton droit sur la base de données à réduire.  
   
 3.  Dans le menu **Tâches**, pointez sur **Réduire**, puis cliquez sur **Fichiers**.  
   
@@ -124,7 +128,7 @@ caps.handback.revision: 25
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour réduire un fichier de données ou un fichier journal  
+#### <a name="to-shrink-a-data-or-log-file"></a>Pour réduire un fichier de données ou un fichier journal  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -134,7 +138,7 @@ caps.handback.revision: 25
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../relational-databases/databases/codesnippet/tsql/shrink-a-file_1.sql)]  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)   
  [Réduire une base de données](../../relational-databases/databases/shrink-a-database.md)   
  [Supprimer des fichiers de données ou des fichiers journaux d'une base de données](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)   

@@ -1,23 +1,27 @@
 ---
-title: "Utilisation des tables temporelles avec contr&#244;le de version du syst&#232;me &#224; m&#233;moire optimis&#233;e | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "05/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Utilisation des tables temporelles avec contrôle de version du système à mémoire optimisée | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 05/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 691d4f80-6754-43f5-8b43-d4facf08f6fc
 caps.latest.revision: 12
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc6120bdfcead0939218958888ca3a223a8c1385
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utilisation des tables temporelles avec contr&#244;le de version du syst&#232;me &#224; m&#233;moire optimis&#233;e
+# <a name="working-with-memory-optimized-system-versioned-temporal-tables"></a>Utilisation des tables temporelles avec contrôle de version du système à mémoire optimisée
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Cette rubrique décrit la façon dont l’utilisation d’une table temporelle avec contrôle de version du système à mémoire optimisée diffère de celle d’une table temporelle avec contrôle de version du système sur disque.  
@@ -25,7 +29,7 @@ caps.handback.revision: 12
 > [!NOTE]  
 >  L’utilisation de la technologie Temporal avec des tables optimisées en mémoire s’applique uniquement à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et ne s’applique pas à [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
-## Découverte des métadonnées  
+## <a name="discovering-metadata"></a>Découverte des métadonnées  
  Pour découvrir les métadonnées relatives à une table temporelle avec version gérée par le système et optimisée en mémoire, vous devez combiner les informations de [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) et [sys.internal_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md). Une table temporelle avec contrôle de version du système est présentée en tant que parent_object_id de la table de l’historique en mémoire interne.  
   
  Cet exemple indique comment exécuter une requête sur ces tables et joindre ces dernières.  
@@ -46,7 +50,7 @@ WHERE T1.is_memory_optimized  = 1 AND T1.temporal_type = 2
   
 ```  
   
-## Modification de données  
+## <a name="modifying-data"></a>Modification de données  
  Les tables temporelles mémoire optimisées avec contrôle de version du système sont modifiables par le biais de procédures stockées compilées en mode natif, ce qui vous permet de convertir des tables mémoire optimisées non temporelles en tables avec contrôle de version du système et de conserver les procédures stockées en mode natif existantes.  
   
  Cet exemple indique la façon dont une table créée précédemment peut être modifiée dans un module compilé en mode natif.  
@@ -72,10 +76,10 @@ GO ;
   
 ```  
   
-## Cet article vous a-t-il été utile ? Nous sommes à votre écoute  
- Quels renseignements souhaitez-vous obtenir ? Avez-vous trouvé ce que vous cherchiez ? Nous tenons compte de vos commentaires pour améliorer le contenu de nos articles. Envoyez vos commentaires à l’adresse [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Working%20with%20Memory-Optimized%20System-Versioned%20Temporal%20Tables%20page).  
+## <a name="did-this-article-help-you-were-listening"></a>Cet article vous a-t-il été utile ? Nous sommes à votre écoute  
+ Quels renseignements souhaitez-vous obtenir ? Avez-vous trouvé ce que vous cherchiez ? Nous tenons compte de vos commentaires pour améliorer le contenu de nos articles. Envoyez vos commentaires à l’adresse [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Working%20with%20Memory-Optimized%20System-Versioned%20Temporal%20Tables%20page)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tables temporelles à système par version avec tables optimisées en mémoire](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
  [Création d’une table temporelle de contrôle de version du système à mémoire optimisée](../../relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md)   
  [Surveillance des tables temporelles avec contrôle de version du système à mémoire optimisée](../../relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md)   
@@ -86,3 +90,4 @@ GO ;
  [Vues et fonctions de métadonnées de table temporelle](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

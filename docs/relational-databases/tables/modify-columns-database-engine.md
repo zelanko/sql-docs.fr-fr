@@ -1,26 +1,30 @@
 ---
-title: "Modifier des colonnes (moteur de base de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modification de types de données"
-  - "types de données de colonne [SQL Server]"
-  - "types de données [SQL Server], colonnes"
+title: "Modifier des colonnes (moteur de base de données) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying data types
+- column data types [SQL Server]
+- data types [SQL Server], columns
 ms.assetid: b67b95c5-61ef-4bd8-9a3e-1640eb7583ac
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 736b83dffa241040cf08e7f7d9410eaab80649af
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modifier des colonnes (moteur de base de donn&#233;es)
+# <a name="modify-columns-database-engine"></a>Modifier des colonnes (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Vous pouvez modifier le type de données d'une colonne dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -30,11 +34,11 @@ caps.handback.revision: 16
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour modifier le type de données d'une colonne à l'aide de :**  
+-   **Pour modifier le type de données d'une colonne à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -47,17 +51,17 @@ caps.handback.revision: 16
 ####  <a name="Permissions"></a> Autorisations  
  Requiert une autorisation ALTER sur la table.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour modifier le type de données d'une colonne  
+#### <a name="to-modify-the-data-type-of-a-column"></a>Pour modifier le type de données d'une colonne  
   
 1.  Dans **l’Explorateur d’objets**, cliquez avec le bouton droit sur la table contenant les colonnes dont vous souhaitez modifier l’échelle et cliquez sur **Conception**.  
   
 2.  Sélectionnez la colonne pour laquelle vous souhaitez modifier le type de données.  
   
-3.  Sous l’onglet **Propriétés des colonnes**, cliquez sur la cellule de grille correspondant à la propriété **Type de données** et choisissez un nouveau type de données dans la liste déroulante.  
+3.  Sous l’onglet **Propriétés des colonnes** , cliquez sur la cellule de grille correspondant à la propriété **Type de données** et choisissez un nouveau type de données dans la liste déroulante.  
   
-4.  Dans le menu **Fichier**, cliquez sur **Enregistrer***nom_table*.  
+4.  Dans le menu **Fichier** , cliquez sur **Enregistrer***nom_table*.  
   
 > [!NOTE]  
 >  Lorsque vous modifiez le type de données d'une colonne, le Concepteur de tables applique la longueur par défaut du type de données que vous avez sélectionné, même si vous en avez déjà spécifié une autre. Affectez toujours la valeur souhaitée comme longueur de type de données après avoir spécifié le type de données.  
@@ -67,7 +71,7 @@ caps.handback.revision: 16
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour modifier le type de données d'une colonne  
+#### <a name="to-modify-the-data-type-of-a-column"></a>Pour modifier le type de données d'une colonne  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

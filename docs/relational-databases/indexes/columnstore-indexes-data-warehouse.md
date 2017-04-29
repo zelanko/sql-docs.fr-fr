@@ -1,22 +1,26 @@
 ---
-title: "Index columnstore pour l’entreposage des donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/27/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Index columnstore - Entrepôt de données | Microsoft Docs"
+ms.custom: 
+ms.date: 01/27/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 caps.latest.revision: 15
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: ba866cdea9d6158affc31e74572bb9610ab94489
+ms.lasthandoff: 04/11/2017
+
 ---
-# Index columnstore pour l’entreposage des donn&#233;es
+# <a name="columnstore-indexes---data-warehouse"></a>Index columnstore - Entrepôt de données
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Les index columnstore, conjointement avec le partitionnement, sont essentiels pour générer un entrepôt de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -137,11 +141,12 @@ END TRAN
  Utilisez l’isolement d’instantané (SI) pour garantir la cohérence transactionnelle et les isolements d’instantanés de lecture validée (RCSI) pour garantir la cohérence au niveau de l’instruction des requêtes sur les index columnstore. Ainsi, les requêtes s’exécutent sans bloquer les enregistreurs de données. Ce comportement non bloquant réduit également sensiblement la probabilité de blocages pour les transactions complexes. Pour plus d’informations, consultez [Isolement d’instantané dans SQL Server](http://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) sur MSDN.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide des index columnstore](../Topic/Columnstore%20Indexes%20Guide.md)   
- [Chargement de données d’index columnstore](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
- [Synthèse des fonctionnalités des index columnstore en fonction des versions](../Topic/Columnstore%20Indexes%20Versioned%20Feature%20Summary.md)   
+ Guide des index columnstore   
+ Chargement de données d’index columnstore   
+ Synthèse des fonctionnalités des index columnstore en fonction des versions   
  [Performances des requêtes d’index columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Prise en main de columnstore pour l’analytique opérationnelle en temps réel](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
  [Défragmentation des index columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+

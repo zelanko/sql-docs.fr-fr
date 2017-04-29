@@ -1,41 +1,45 @@
 ---
-title: "Modifier des relations de cl&#233; &#233;trang&#232;re | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vdtsql.chm:65538"
-  - "vdt.ppg.relationships"
-helpviewer_keywords: 
-  - "clés étrangères [SQL Server], modification"
-  - "modification des clés étrangères"
+title: "Modifier des relations de clé étrangère | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vdtsql.chm:65538
+- vdt.ppg.relationships
+helpviewer_keywords:
+- foreign keys [SQL Server], modifying
+- modifying foreign keys
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d938937ff7d4009ec874ebc9bbd33b2e87960def
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modifier des relations de cl&#233; &#233;trang&#232;re
+# <a name="modify-foreign-key-relationships"></a>Modifier des relations de clé étrangère
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Vous pouvez modifier le côté clé étrangère d'une relation dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La modification de la clé étrangère d'une table modifie les colonnes liées aux colonnes figurant dans la table de clé primaire.  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour modifier une clé étrangère, utilisez :**  
+-   **Pour modifier une clé étrangère, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -57,9 +61,9 @@ caps.handback.revision: 20
 ####  <a name="Permissions"></a> Autorisations  
  Requiert une autorisation ALTER sur la table.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour modifier une clé étrangère  
+#### <a name="to-modify-a-foreign-key"></a>Pour modifier une clé étrangère  
   
 1.  Dans l' **Explorateur d'objets**, développez la table avec la clé étrangère, puis développez **Clés**.  
   
@@ -74,12 +78,12 @@ caps.handback.revision: 20
      Crée une nouvelle relation. Une relation valide exige que la **Spécification de tables et colonnes** soit définie.  
   
      **Delete**  
-     Supprime la relation sélectionnée dans la liste **Relation sélectionnée**. Pour annuler l'ajout d'une relation, supprimez la relation à l'aide de ce bouton.  
+     Supprime la relation sélectionnée dans la liste **Relation sélectionnée** . Pour annuler l'ajout d'une relation, supprimez la relation à l'aide de ce bouton.  
   
      **Catégorie Général**  
      Se développe pour afficher **Vérifier les données existantes à la création ou à la réactivation** et **Spécification de tables et colonnes**.  
   
-     **Vérifier les données existantes à la création ou à la réactivation**  
+     **Check Existing Data on Creation or Re-Enabling**  
      Vérifie en fonction de la contrainte, toutes les données qui existaient dans la table avant la création ou la réactivation de la contrainte.  
   
      **Catégorie Spécification de tables et colonnes**  
@@ -104,12 +108,12 @@ caps.handback.revision: 20
      Indique le nom de la relation. Lorsqu'une nouvelle relation est créée, elle obtient un nom par défaut basé sur la table affichée dans la fenêtre active du **Concepteur de tables**. Vous pouvez modifier le nom à tout moment.  
   
      **Description**  
-     Décrit la relation. Pour écrire une description plus détaillée, cliquez sur **Description**, puis sur le bouton de sélection **(...)** qui apparaît à droite du champ de propriété. Vous obtiendrez une zone d'écriture plus large.  
+     Décrit la relation. Pour écrire une description plus détaillée, cliquez sur **Description** , puis sur le bouton de sélection **(...)** qui apparaît à droite du champ de propriété. Vous obtiendrez une zone d'écriture plus large.  
   
      **Catégorie Concepteur de tables**  
      Se développe pour afficher des informations relatives aux options **Vérifier les données existantes à la création ou à la réactivation** et **Appliquer la réplication**.  
   
-     **Appliquer la réplication**  
+     **Enforce For Replication**  
      Indique si la contrainte doit être appliquée lorsqu'un Agent de réplication effectue une requête Insert, Update ou Delete sur cette table.  
   
      **Appliquer la contrainte de clé étrangère**  
@@ -130,7 +134,7 @@ caps.handback.revision: 20
     -   **Définir la valeur par défaut** Définit la valeur par défaut définie pour la colonne si toutes les colonnes clés étrangères de la table ont des valeurs par défaut définies.  
   
      **Règle de mise à jour**  
-     Spécifie ce qui se produit si un utilisateur tente de mettre à jour une ligne contenant des données impliquées dans une relation de clé étrangère :  
+     Spécifie ce qui se produit si un utilisateur tente de mettre à jour une ligne contenant des données impliquées dans une relation de clé étrangère :  
   
     -   **Aucune action** Un message d'erreur indique à l'utilisateur que la mise à jour n'est pas autorisée et la commande UPDATE est annulée.  
   
@@ -140,11 +144,11 @@ caps.handback.revision: 20
   
     -   **Définir la valeur par défaut** Affecte la valeur par défaut définie pour la colonne si toutes les colonnes clés étrangères de la table ont des valeurs par défaut définies.  
   
-4.  Dans le menu **Fichier**, cliquez sur **Enregistrer***nom_table*.  
+4.  Dans le menu **Fichier** , cliquez sur **Enregistrer***nom_table*.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour modifier une clé étrangère**  
   
- Pour modifier une contrainte FOREIGN KEY à l'aide de Transact-SQL, vous devez d'abord supprimer la contrainte FOREIGN KEY existante, puis la recréer avec sa nouvelle définition. Pour plus d'informations, consultez [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) et [Create Foreign Key Relationships](../../relational-databases/tables/créer-les-relations-entre-les-clés-étrangères.md).  
+ Pour modifier une contrainte FOREIGN KEY à l'aide de Transact-SQL, vous devez d'abord supprimer la contrainte FOREIGN KEY existante, puis la recréer avec sa nouvelle définition. Pour plus d'informations, consultez [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) et [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md).  
   
 ###  <a name="TsqlExample"></a>  

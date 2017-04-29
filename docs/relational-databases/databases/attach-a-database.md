@@ -1,27 +1,31 @@
 ---
-title: "Attacher une base de donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.attachdatabase.f1"
-helpviewer_keywords: 
-  - "attachement de base de données [SQL Server]"
-  - "attachement de bases de données [SQL Server]"
+title: "Attacher une base de données | Microsoft Docs"
+ms.custom: 
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.attachdatabase.f1
+helpviewer_keywords:
+- database attaching [SQL Server]
+- attaching databases [SQL Server]
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 50e55a131e303a5303059a51797730f8bfab2581
+ms.lasthandoff: 04/11/2017
+
 ---
-# Attacher une base de donn&#233;es
+# <a name="attach-a-database"></a>Attacher une base de données
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique explique comment attacher une base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous pouvez utiliser cette fonctionnalité pour copier, déplacer, ou mettre à niveau une base de données SQL Server.  
@@ -36,7 +40,7 @@ caps.handback.revision: 52
   
 -   Au moment d’attacher une base de données, si les fichiers MDF et LDF se trouvent dans des répertoires différents et qu’un des chemins contient \\\\?\GlobalRoot, l’opération échoue.  
   
-###  <a name="Recommendations"></a> La commande Attacher est-elle le meilleur choix ?  
+###  <a name="Recommendations"></a> La commande Attacher est-elle le meilleur choix ?  
  Nous vous recommandons de déplacer les bases de données à l’aide de la procédure de déplacement planifié ALTER DATABASE, plutôt qu’à l’aide des opérations de détachement et d’attachement, lorsque vous déplacez des fichiers de base de données dans la même instance. Pour plus d’informations, consultez [Déplacer des bases de données utilisateur](../../relational-databases/databases/move-user-databases.md). 
  
 Nous ne recommandons pas l’utilisation des opérations de détachement et d’attachement pour la sauvegarde et la récupération. Il n’existe aucune sauvegarde du journal des transactions et il est possible de supprimer accidentellement des fichiers.
@@ -51,9 +55,9 @@ Nous ne recommandons pas l’utilisation des opérations de détachement et d’
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour attacher une base de données  
+#### <a name="to-attach-a-database"></a>Pour attacher une base de données  
   
-1.  Dans l’Explorateur d’objets [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], puis cliquez pour développer cette vue d’instance dans SSMS.  
+1.  Dans l’Explorateur d’objets [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], puis cliquez pour développer cette vue d’instance dans SSMS.  
   
 2.  Cliquez avec le bouton droit sur **Bases de données** , puis cliquez sur **Attacher**.  
   
@@ -73,7 +77,7 @@ Nous ne recommandons pas l’utilisation des opérations de détachement et d’
      **Emplacement du fichier MDF**  
      Affiche le chemin d'accès et le nom du fichier MDF sélectionné.  
   
-     **Nom de la base de données**  
+     **Database Name**  
      Affiche le nom de la base de données.  
   
      **Attacher en tant que**  
@@ -123,7 +127,7 @@ Nous ne recommandons pas l’utilisation des opérations de détachement et d’
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour attacher une base de données  
+#### <a name="to-attach-a-database"></a>Pour attacher une base de données  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -147,7 +151,7 @@ Nous ne recommandons pas l’utilisation des opérations de détachement et d’
 ##  <a name="FollowUp"></a> Suivi : Après la mise à niveau d'une base de données SQL Server  
  Après avoir mis à niveau une base de données à l'aide de la méthode par attachement, cette base de données est immédiatement disponible et est automatiquement mise à niveau. Si la base de données comprend des index de recherche en texte intégral, la mise à niveau les importe, les réinitialise ou les reconstruit, selon le paramètre de la propriété de serveur **Option de mise à niveau du catalogue de texte intégral** . Si l’option de mise à niveau est définie sur **Importer** ou **Reconstruire**, les index de recherche en texte intégral ne seront pas disponibles pendant la mise à niveau. Selon le volume de données indexé, l'importation peut prendre plusieurs heures et la reconstruction jusqu'à dix fois plus longtemps. Notez aussi que lorsque l’option de mise à niveau est définie sur **Importer**, si aucun catalogue de texte intégral n’est disponible, les index de recherche en texte intégral associés sont reconstruits.  
   
- Si le niveau de compatibilité d'une base de données utilisateur est à 100 ou supérieur avant la mise à niveau, il reste le même après la mise à niveau. Si le niveau de compatibilité était à 90 avant la mise à niveau, dans la base de données mise à niveau, le niveau de compatibilité est défini à 100, ce qui correspond au niveau de compatibilité le plus bas pris en charge dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+ Si le niveau de compatibilité d'une base de données utilisateur est à 100 ou supérieur avant la mise à niveau, il reste le même après la mise à niveau. Si le niveau de compatibilité était à 90 avant la mise à niveau, dans la base de données mise à niveau, le niveau de compatibilité est défini à 100, ce qui correspond au niveau de compatibilité le plus bas pris en charge dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
   > [!NOTE]
   > Si vous attachez une base de données située sur une instance qui exécute SQL Server 2014 ou antérieur, et sur laquelle la capture de données modifiées est activée, vous devez également exécuter la commande suivante pour mettre à niveau les métadonnées de la capture de données modifiées.
@@ -156,8 +160,9 @@ Nous ne recommandons pas l’utilisation des opérations de détachement et d’
   EXEC sys.sp_cdc_vupgrade  
   ``` 
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Détacher une base de données](../../relational-databases/databases/detach-a-database.md)  
   
   
+

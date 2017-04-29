@@ -1,39 +1,43 @@
 ---
-title: "Renommer des colonnes (moteur de base de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "colonnes [SQL Server], noms"
-  - "affectation d'un nouveau nom aux colonnes"
-  - "noms des colonnes [SQL Server]"
+title: "Renommer des colonnes (moteur de base de données) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [SQL Server], names
+- renaming columns
+- column names [SQL Server]
 ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e02a5d26a0a04d5afa1c4ddfcc9c06c503b6bd2c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Renommer des colonnes (moteur de base de donn&#233;es)
+# <a name="rename-columns-database-engine"></a>Renommer des colonnes (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Vous pouvez renommer une colonne de table dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour renommer des colonnes, utilisez :**  
+-   **Pour renommer des colonnes, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -49,9 +53,9 @@ caps.handback.revision: 17
 ####  <a name="Permissions"></a> Autorisations  
  Requiert une autorisation ALTER sur l'objet.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour renommer une colonne à l'aide de l'Explorateur d'objets  
+#### <a name="to-rename-a-column-using-object-explorer"></a>Pour renommer une colonne à l'aide de l'Explorateur d'objets  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -59,13 +63,13 @@ caps.handback.revision: 17
   
 3.  Tapez une nouvelle colonne.  
   
-#### Pour renommer une colonne à l'aide du Concepteur de tables  
+#### <a name="to-rename-a-column-using-table-designer"></a>Pour renommer une colonne à l'aide du Concepteur de tables  
   
 1.  Dans **l’Explorateur d’objets**, cliquez avec le bouton droit sur la table dans laquelle vous souhaitez renommer des colonnes et choisissez **Conception**.  
   
 2.  Sous **Nom de la colonne**, sélectionnez le nom que vous souhaitez modifier et tapez-en un nouveau.  
   
-3.  Dans le menu **Fichier**, cliquez sur **Enregistrer***nom_table*.  
+3.  Dans le menu **Fichier** , cliquez sur **Enregistrer***nom_table*.  
   
 > [!NOTE]  
 >  Vous pouvez également modifier le nom d'une colonne sous l'onglet **Propriétés des colonnes** . Sélectionnez la colonne dont vous souhaitez modifier le nom et tapez une nouvelle valeur pour **Nom**.  
@@ -73,9 +77,9 @@ caps.handback.revision: 17
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour renommer une colonne**  
   
-#### Pour renommer une colonne  
+#### <a name="to-rename-a-column"></a>Pour renommer une colonne  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

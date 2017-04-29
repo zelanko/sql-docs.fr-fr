@@ -1,24 +1,28 @@
 ---
-title: "Exemple&#160;: sp&#233;cification de la directive ELEMENTXSINIL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ELEMENTXSINIL, directive"
+title: "Exemple : spécification de la directive ELEMENTXSINIL | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ELEMENTXSINIL directive
 ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 42f40e0a22457f365e27a6f1560bd2f496366294
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exemple&#160;: sp&#233;cification de la directive ELEMENTXSINIL
+# <a name="example-specifying-the-elementxsinil-directive"></a>Exemple : spécification de la directive ELEMENTXSINIL
   Lorsque vous spécifiez la directive ELEMENT pour extraire un document XML centré sur l'élément et que la colonne possède une valeur NULL, l'élément correspondant n'est pas généré par le mode EXPLICIT. Vous pouvez éventuellement spécifier la directive ELEMENTXSINIL pour demander l'élément généré dans le cas des valeurs NULL dont l'attribut **xsi:nil** a pour valeur TRUE.  
   
  La requête suivante construit un document XML qui comprend une adresse d'employé. Pour les colonnes `AddressLine2` et `City` , les noms de colonnes spécifient la directive `ELEMENTXSINIL` . Celle-ci génère l'élément pour les valeurs NULL des colonnes `AddressLine2` et `City` de l'ensemble de lignes.  
@@ -56,7 +60,7 @@ ORDER BY [Employee!1!EmpID],[Address!2!AddressID]
 FOR XML EXPLICIT;  
 ```  
   
- Voici le résultat partiel :  
+ Voici le résultat partiel :  
   
  `<Employee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"`  
   
@@ -76,7 +80,7 @@ FOR XML EXPLICIT;
   
  `...`  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser le mode EXPLICIT avec FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

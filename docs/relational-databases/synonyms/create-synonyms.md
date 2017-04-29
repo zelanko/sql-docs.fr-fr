@@ -1,36 +1,40 @@
 ---
-title: "Cr&#233;er des synonymes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-f1_keywords: 
-  - "sql13.swb.synonym.general.f1"
-helpviewer_keywords: 
-  - "création de synonymes"
-  - "synonymes [SQL Server], création"
+title: "Créer des synonymes | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+f1_keywords:
+- sql13.swb.synonym.general.f1
+helpviewer_keywords:
+- creating synonyms
+- synonyms [SQL Server], creating
 ms.assetid: fedfa7a5-d0b6-4e2b-90f4-a08122958e33
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a3180e86333a329e2f86a45f2728630ce6cf526
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er des synonymes
+# <a name="create-synonyms"></a>Créer des synonymes
   Cette rubrique explique comment créer un synonyme dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour créer un synonyme à l'aide de :**  
+-   **Pour créer un synonyme à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -43,13 +47,13 @@ caps.handback.revision: 7
   
 ####  <a name="Permissions"></a> Autorisations  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour créer un synonyme  
+#### <a name="to-create-a-synonym"></a>Pour créer un synonyme  
   
 1.  Dans l' **Explorateur d'objets**, développez la base de données dans laquelle vous souhaitez créer votre nouvelle vue.  
   
-2.  Cliquez avec le bouton droit sur le dossier **Synonymes**, puis cliquez sur **Nouveau synonyme…**.  
+2.  Cliquez avec le bouton droit sur le dossier **Synonymes** , puis cliquez sur **Nouveau synonyme…**.  
   
 3.  Dans la boîte de dialogue **Ajouter un synonyme** , entrez les informations suivantes.  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 7
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour créer un synonyme  
+#### <a name="to-create-a-synonym"></a>Pour créer un synonyme  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -85,7 +89,7 @@ caps.handback.revision: 7
 3.  Copiez et collez les exemples suivants dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
 ###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
- L'exemple suivant crée un synonyme pour une table existante dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Le synonyme est ensuite utilisé dans les exemples suivants.  
+ L'exemple suivant crée un synonyme pour une table existante dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Le synonyme est ensuite utilisé dans les exemples suivants.  
   
 ```  
 USE tempdb;  

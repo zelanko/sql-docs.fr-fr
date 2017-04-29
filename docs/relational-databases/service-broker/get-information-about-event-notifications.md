@@ -1,26 +1,30 @@
 ---
-title: "Obtenir des informations concernant les notifications d&#39;&#233;v&#233;nements | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "notifications d'événements [SQL Server], métadonnées"
-  - "informations d’état [SQL Server], notifications d’événements"
-  - "métadonnées [SQL Server], notifications d’événements"
+title: "Obtenir des informations concernant les notifications d’événements | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event notifications [SQL Server], metadata
+- status information [SQL Server], event notifications
+- metadata [SQL Server], event notifications
 ms.assetid: 8bc10867-66d6-4f57-ac32-a6c29f3327cd
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6e41d81ae5f32fd8d78e1515f17a9229129348df
+ms.lasthandoff: 04/11/2017
+
 ---
-# Obtenir des informations concernant les notifications d&#39;&#233;v&#233;nements
+# <a name="get-information-about-event-notifications"></a>Obtenir des informations concernant les notifications d'événements
   Les affichages catalogue suivants vous permettent d'interroger les métadonnées concernant les notifications d'événements.  
   
  **Pour obtenir des informations sur les notifications d'événements qui ne se produisent pas au niveau du serveur**  
@@ -44,7 +48,7 @@ caps.handback.revision: 22
 > [!NOTE]  
 >  Cette vue de catalogue ne retourne pas de groupes d'événements.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Notifications d'événements](../../relational-databases/service-broker/event-notifications.md)  
   
   

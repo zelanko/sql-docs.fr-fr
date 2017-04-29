@@ -1,48 +1,52 @@
 ---
-title: "D&#233;sactiver les index et contraintes | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.disableindexes.f1"
-helpviewer_keywords: 
-  - "index désactivés [SQL Server], opérations d’index"
-  - "index non cluster [SQL Server], désactivation"
-  - "index désactivés [SQL Server], instructions"
-  - "index cluster, désactivation"
-  - "contraintes [SQL Server], désactivation"
-  - "index désactivés [SQL Server], affichage"
-  - "contraintes FOREIGN KEY, désactivation"
-  - "informations statistiques [SQL Server], index"
-  - "désactivation de l'index [SQL Server]"
-  - "vues indexées [SQL Server], index désactivés"
+title: "Désactiver les index et contraintes | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.disableindexes.f1
+helpviewer_keywords:
+- disabled indexes [SQL Server], index operations
+- nonclustered indexes [SQL Server], disabling
+- disabled indexes [SQL Server], guidelines
+- clustered indexes, disabling
+- constraints [SQL Server], disabling
+- disabled indexes [SQL Server], viewing
+- FOREIGN KEY constraints, disabling
+- statistical information [SQL Server], indexes
+- index disabling [SQL Server]
+- indexed views [SQL Server], disabled indexes
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 02ec61b5f3342ba8c5abd6e5044cd9f6863f6145
+ms.lasthandoff: 04/11/2017
+
 ---
-# D&#233;sactiver les index et contraintes
+# <a name="disable-indexes-and-constraints"></a>Désactiver les index et contraintes
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Cette rubrique explique comment désactiver un index ou des contraintes dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La désactivation d'un index empêche l'accès des utilisateurs à celui-ci et, s'il s'agit d'un index cluster, aux données de la table sous-jacente. La définition de l'index reste présente dans les métadonnées et les statistiques sont conservées sur les index non cluster. La désactivation d'un index, qu'il soit non cluster ou cluster, sur une vue supprime physiquement les données de l'index. La désactivation d'un index cluster sur une table empêche l'accès aux données de celle-ci ; ces dernières existent toujours dans la table, mais les opérations de langage de manipulation de données (DML) ne peuvent pas les utiliser tant que l'index n'est pas supprimé ou reconstruit.  
+  Cette rubrique explique comment désactiver un index ou des contraintes dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La désactivation d'un index empêche l'accès des utilisateurs à celui-ci et, s'il s'agit d'un index cluster, aux données de la table sous-jacente. La définition de l'index reste présente dans les métadonnées et les statistiques sont conservées sur les index non cluster. La désactivation d'un index, qu'il soit non cluster ou cluster, sur une vue supprime physiquement les données de l'index. La désactivation d'un index cluster sur une table empêche l'accès aux données de celle-ci ; ces dernières existent toujours dans la table, mais les opérations de langage de manipulation de données (DML) ne peuvent pas les utiliser tant que l'index n'est pas supprimé ou reconstruit.  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour désactiver un index, utilisez :**  
+-   **Pour désactiver un index, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -74,7 +78,7 @@ caps.handback.revision: 28
   
 -   L'instruction CREATE STATISTICS ne peut pas être correctement exécutée sur une table qui possède un index cluster désactivé.  
   
--   L'option de base de données AUTO_CREATE_STATISTICS crée de nouvelles statistiques sur une colonne lorsque l'index est désactivé et que les conditions suivantes sont réunies :  
+-   L'option de base de données AUTO_CREATE_STATISTICS crée de nouvelles statistiques sur une colonne lorsque l'index est désactivé et que les conditions suivantes sont réunies :  
   
     -   AUTO_CREATE_STATISTICS a pour valeur ON.  
   
@@ -91,9 +95,9 @@ caps.handback.revision: 28
 ####  <a name="Permissions"></a> Autorisations  
  Pour pouvoir exécuter l'instruction ALTER INDEX, vous devez obligatoirement bénéficier au minimum d'autorisations nécessaires pour exécuter les instructions ALTER sur la table ou la vue.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour désactiver un index  
+#### <a name="to-disable-an-index"></a>Pour désactiver un index  
   
 1.  Dans l'Explorateur d'objets, cliquez sur le signe plus (+) pour développer la base de données qui contient la table sur laquelle vous souhaitez désactiver un index.  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 28
   
 6.  Dans la boîte de dialogue **Désactiver des index** , vérifiez que l'index correct figure dans la grille **Index à désactiver** et cliquez sur **OK**.  
   
-#### Pour désactiver tous les index d'une table  
+#### <a name="to-disable-all-indexes-on-a-table"></a>Pour désactiver tous les index d'une table  
   
 1.  Dans l'Explorateur d'objets, cliquez sur le signe plus (+) pour développer la base de données qui contient la table sur laquelle vous souhaitez désactiver les index.  
   
@@ -128,10 +132,10 @@ caps.handback.revision: 28
  Affiche le nom de la table ou de la vue sur laquelle l'index a été créé.  
   
  **Type d'index**  
- Affiche le type d’index : **Cluster**, **Non-cluster**, **Spatial** ou **XML**.  
+ Affiche le type d’index : **Cluster**, **Non-cluster**, **Spatial**ou **XML**.  
   
  **État**  
- Affiche l'état de l'opération de désactivation. Les valeurs possibles après l'exécution sont les suivantes :  
+ Affiche l'état de l'opération de désactivation. Les valeurs possibles après l'exécution sont les suivantes :  
   
 -   Vide  
   
@@ -162,7 +166,7 @@ caps.handback.revision: 28
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour désactiver un index  
+#### <a name="to-disable-an-index"></a>Pour désactiver un index  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -179,7 +183,7 @@ caps.handback.revision: 28
     DISABLE;  
     ```  
   
-#### Pour désactiver tous les index d'une table  
+#### <a name="to-disable-all-indexes-on-a-table"></a>Pour désactiver tous les index d'une table  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -198,3 +202,4 @@ caps.handback.revision: 28
  Pour plus d’informations, consultez [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
   
+

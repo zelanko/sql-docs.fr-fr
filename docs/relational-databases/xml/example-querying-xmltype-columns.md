@@ -1,27 +1,31 @@
 ---
-title: "Exemple: interrogation de colonnes de type XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mode RAW, exemple d’interrogation XML"
+title: "Exemple : interrogation de colonnes de type XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RAW mode, querying XML example
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4c4b6c214f3097fce58d3f2ac131642503c62641
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exemple: interrogation de colonnes de type XML
-  La requête ci-dessous inclut des colonnes de type **xml**. Elle extrait l’ID de modèle de produit, le nom et les étapes de fabrication dans le premier emplacement à partir de la colonne `Instructions` de type **xml**.  
+# <a name="example-querying-xmltype-columns"></a>Exemple: interrogation de colonnes de type XML
+  La requête ci-dessous inclut des colonnes de type **xml** . Elle extrait l’ID de modèle de produit, le nom et les étapes de fabrication dans le premier emplacement à partir de la colonne `Instructions` de type **xml** .  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 USE AdventureWorks2012;  
@@ -62,7 +66,7 @@ FOR XML RAW ('ProductModelData')
 go  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <ProductModelData ProductModelID="5" Name="HL Mountain Frame" />  
@@ -75,7 +79,7 @@ go
 </ProductModelData>  
 ```  
   
- La requête suivante spécifie la directive `ELEMENTS`. Par conséquent, le résultat retourné est centré sur les éléments. L'option `XSINIL` spécifiée avec la directive `ELEMENTS` retourne les éléments <`ManuSteps`>, même si la colonne correspondante dans l'ensemble de lignes est NULL.  
+ La requête suivante spécifie la directive `ELEMENTS` . Par conséquent, le résultat retourné est centré sur les éléments. L'option `XSINIL` spécifiée avec la directive `ELEMENTS` retourne les éléments <`ManuSteps`>, même si la colonne correspondante dans l'ensemble de lignes est NULL.  
   
 ```  
 USE AdventureWorks2012;  
@@ -112,7 +116,7 @@ go
 </MyRoot>  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser le mode RAW avec FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

@@ -1,37 +1,41 @@
 ---
-title: "Cr&#233;er des index XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "index [XML dans SQL Server]"
-  - "index XML [SQL Server], création"
+title: "Créer des index XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexes [XML in SQL Server]
+- XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e7dbb0a712f1edbe0234a68e2481915b76bec90a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er des index XML
+# <a name="create-xml-indexes"></a>Créer des index XML
   Cette rubrique décrit comment créer des index XML primaires et secondaires.  
   
-## Création d'un index XML primaire  
+## <a name="creating-a-primary-xml-index"></a>Création d'un index XML primaire  
  Pour créer un index XML primaire, utilisez l’instruction DDL [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)]. Les options disponibles pour les index non XML ne sont pas toutes prises en charge pour les index XML.  
   
- Lorsque vous créez un index XML, prenez les points suivants en considération :  
+ Lorsque vous créez un index XML, prenez les points suivants en considération :  
   
 -   Pour créer un index XML primaire, la table contenant la colonne XML en cours d'indexation, appelée table de base, doit posséder un index cluster portant sur la clé primaire. Ceci permet de s'assurer que, si la table de base est partitionnée, l'index XML primaire peut être partitionné grâce au même schéma de partitionnement et à la même fonction de partitionnement.  
   
 -   Si un index XML existe, la clé primaire mise en cluster de la table ne peut alors pas être modifiée. Vous devez dans ce cas supprimer tous les index XML de la table avant de pouvoir modifier la clé primaire.  
   
--   Un index XML primaire portant sur une seule colonne de type **xml** peut être créé. Aucun autre type d'index relatif à la colonne de type XML ne peut être créé en tant que colonne clé. Vous pouvez cependant inclure la colonne de type **xml** dans un index non XML. Chaque colonne de type **xml** d’une table peut présenter son propre index XML primaire. Ceci dit, un seul index XML primaire est autorisé par colonne de type **xml**.  
+-   Un index XML primaire portant sur une seule colonne de type **xml** peut être créé. Aucun autre type d'index relatif à la colonne de type XML ne peut être créé en tant que colonne clé. Vous pouvez cependant inclure la colonne de type **xml** dans un index non XML. Chaque colonne de type **xml** d’une table peut présenter son propre index XML primaire. Ceci dit, un seul index XML primaire est autorisé par colonne de type **xml** .  
   
 -   Les index XML existent dans le même espace de noms que les index non XML. Vous ne pouvez par conséquent pas avoir un index XML et un index non XML portant tous deux le même nom pour une même table.  
   
@@ -43,7 +47,7 @@ caps.handback.revision: 19
   
 -   Les noms s'appliquant aux index XML primaires sont soumis aux mêmes restrictions que les noms de vues.  
   
- Vous ne pouvez donc pas créer d’index XML portant sur une colonne de type **xml** dans une vue, sur une variable affectée d’une valeur de type **table** et possédant des colonnes de type **xml** ou encore des variables de type **xml**.  
+ Vous ne pouvez donc pas créer d’index XML portant sur une colonne de type **xml** dans une vue, sur une variable affectée d’une valeur de type **table** et possédant des colonnes de type **xml** ou encore des variables de type **xml** .  
   
 -   Pour modifier une colonne de type **xml** non typé en XML typé ou vice versa par le biais de l’option ALTER TABLE ALTER COLUMN, assurez-vous qu’aucun index XML portant sur la colonne n’existe. Si c'est le cas, il doit être supprimé avant de pouvoir tenter de modifier le type de colonne.  
   
@@ -54,8 +58,8 @@ caps.handback.revision: 19
   
  Lors de la création ou de la recréation d’un index XML primaire sur une colonne de type de données XML qui contient des valeurs des types de schémas XML **xs:date** ou **xs:dateTime** (ou tout sous-type de ces types) dont l’année est inférieure à 1, la création de l’index échoue dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Ces valeurs étaient autorisées, ce problème peut donc se produire lors de la création d’index dans une base de données générée dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Pour plus d’informations, consultez [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
-### Exemple : création d'un index XML primaire  
- La table T (pk INT PRIMARY KEY, xCol XML) avec une colonne XML non typée est utilisée dans la plupart des exemples. Cette syntaxe peut très aisément s'adapter à du code XML typé. Par souci de clarté, les requêtes sont décrites pour des instances de données XML, comme le montre l'exemple qui suit :  
+### <a name="example-creating-a-primary-xml-index"></a>Exemple : création d'un index XML primaire  
+ La table T (pk INT PRIMARY KEY, xCol XML) avec une colonne XML non typée est utilisée dans la plupart des exemples. Cette syntaxe peut très aisément s'adapter à du code XML typé. Par souci de clarté, les requêtes sont décrites pour des instances de données XML, comme le montre l'exemple qui suit :  
   
 ```  
 <book genre="security" publicationdate="2002" ISBN="0-7356-1588-2">  
@@ -72,13 +76,13 @@ caps.handback.revision: 19
 </book>  
 ```  
   
- L'instruction suivante crée un index XML, appelé idx_xCol, sur la colonne XML xCol de la table T :  
+ L'instruction suivante crée un index XML, appelé idx_xCol, sur la colonne XML xCol de la table T :  
   
 ```  
 CREATE PRIMARY XML INDEX idx_xCol on T (xCol)  
 ```  
   
-## Création d'un index XML secondaire  
+## <a name="creating-a-secondary-xml-index"></a>Création d'un index XML secondaire  
  Utilisez l’instruction DDL [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] pour créer des index XML secondaires et préciser leur type.  
   
  Lorsque vous créez un index XML secondaire, prenez les points suivants en considération :  
@@ -98,7 +102,7 @@ FROM    sys.xml_indexes;
   
  Les valeurs retournées dans la colonne **secondary_type_desc** peuvent être NULL, PATH, VALUE ou PROPERTY. Pour l'index XML primaire, la valeur renvoyée correspond à NULL.  
   
-### Exemple: création d'index XML secondaires  
+### <a name="example-creating-secondary-xml-indexes"></a>Exemple: création d'index XML secondaires  
  L'exemple suivant illustre le mode de création d'index XML secondaires. Il montre également les informations relatives aux index XML que vous avez créés.  
   
 ```  
@@ -198,7 +202,7 @@ DROP TABLE T;
 Go  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Index XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)   
  [Données XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   

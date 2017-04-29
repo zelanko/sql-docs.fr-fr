@@ -1,37 +1,41 @@
 ---
-title: "Supprimer des cl&#233;s primaires | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "retrait des clés primaires"
-  - "suppression des clés primaires"
-  - "clés primaires [SQL Server], suppression"
+title: "Supprimer des clés primaires | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing primary keys
+- deleting primary keys
+- primary keys [SQL Server], deleting
 ms.assetid: c472e465-7bdd-4d74-8fc9-e47fca007ccb
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1dbc3eb4968f27665df80e414a590f8b4e3df7b4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Supprimer des cl&#233;s primaires
+# <a name="delete-primary-keys"></a>Supprimer des clés primaires
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Vous pouvez supprimer une clé primaire dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Lorsque la clé primaire est supprimée, l'index correspondant l'est également.  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour supprimer une clé primaire à l'aide de :**  
+-   **Pour supprimer une clé primaire à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -44,9 +48,9 @@ caps.handback.revision: 15
 ####  <a name="Permissions"></a> Autorisations  
  Requiert une autorisation ALTER sur la table.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour supprimer une contrainte de clé primaire à l'aide de l'Explorateur d'objets  
+#### <a name="to-delete-a-primary-key-constraint-using-object-explorer"></a>Pour supprimer une contrainte de clé primaire à l'aide de l'Explorateur d'objets  
   
 1.  Dans l'Explorateur d'objets, développez la table qui contient la clé primaire, puis développez **Clés**.  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 15
   
 3.  Dans la boîte de dialogue **Supprimer un objet** , vérifiez que la clé correcte est spécifiée et cliquez sur **OK**.  
   
-#### Pour supprimer une contrainte de clé primaire à l'aide du Concepteur de tables  
+#### <a name="to-delete-a-primary-key-constraint-using-table-designer"></a>Pour supprimer une contrainte de clé primaire à l'aide du Concepteur de tables  
   
 1.  Dans l’Explorateur d'objets, cliquez avec le bouton droit sur la table avec la clé primaire, puis cliquez sur **Conception**.  
   
@@ -63,11 +67,11 @@ caps.handback.revision: 15
     > [!NOTE]  
     >  Pour annuler cette action, fermez la table sans enregistrer les modifications. La suppression d'une clé primaire ne peut pas être annulée sans perdre toutes les autres modifications apportées à la table.  
   
-3.  Dans le menu **Fichier**, cliquez sur **Enregistrer***nom de la table*.  
+3.  Dans le menu **Fichier** , cliquez sur **Enregistrer***nom de la table*.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour supprimer une contrainte de clé primaire  
+#### <a name="to-delete-a-primary-key-constraint"></a>Pour supprimer une contrainte de clé primaire  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

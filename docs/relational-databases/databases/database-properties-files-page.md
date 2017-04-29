@@ -1,27 +1,31 @@
 ---
-title: "Propri&#233;t&#233;s de la base de donn&#233;es (page Fichiers) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.files.f1"
+title: "Propriétés de la base de données (page Fichiers) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.files.f1
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 96e789d47140459475bdd3b6f36500d0d24492ce
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propri&#233;t&#233;s de la base de donn&#233;es (page Fichiers)
+# <a name="database-properties-files-page"></a>Propriétés de la base de données (page Fichiers)
   Cette page vous permet de créer une nouvelle base de données, ainsi que d'afficher et de modifier les propriétés de la base de données sélectionnée. Cette rubrique s’applique aux **Propriétés de la base de données (page Fichiers)** pour les bases de données existantes et à la **Nouvelle base de données (page Général)**.  
   
-## Liste des éléments de l'interface utilisateur  
+## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
  **Nom de la base de données**  
  Ajoutez ou affichez le nom de la base de données.  
   
@@ -32,32 +36,32 @@ caps.handback.revision: 42
  Cette case à cocher est activée et grisée, car l'indexation de texte intégral est toujours activée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations, consultez [Recherche en texte intégral](../../relational-databases/search/full-text-search.md).  
   
  **Fichiers de base de données**  
- Ajoutez, affichez, modifiez ou supprimez les fichiers de base de données de la base de données associée. Les fichiers de base de données ont les propriétés suivantes :  
+ Ajoutez, affichez, modifiez ou supprimez les fichiers de base de données de la base de données associée. Les fichiers de base de données ont les propriétés suivantes :  
   
  **Nom logique**  
  Entrez ou modifiez le nom du fichier.  
   
  **Type de fichier**  
- Sélectionnez le type de fichier dans la liste. Le type de fichier peut être **Données**, **Journal** ou **Données Filestream**. Vous ne pouvez pas modifier le type de fichier d'un fichier existant.  
+ Sélectionnez le type de fichier dans la liste. Le type de fichier peut être **Données**, **Journal**ou **Données Filestream**. Vous ne pouvez pas modifier le type de fichier d'un fichier existant.  
   
  Sélectionnez **Données Filestream** si vous ajoutez des fichiers (conteneurs) à un groupe de fichiers optimisé en mémoire.  
   
- Pour ajouter des fichiers (conteneurs) à un groupe de fichiers de données Filestream, FILESTREAM doit être activé. Vous pouvez activer FILESTREAM à l’aide de la boîte de dialogue [Propriétés du serveur (page Avancé)](../../database-engine/configure-windows/server-properties-advanced-page.md).  
+ Pour ajouter des fichiers (conteneurs) à un groupe de fichiers de données Filestream, FILESTREAM doit être activé. Vous pouvez activer FILESTREAM à l’aide de la boîte de dialogue [Propriétés du serveur (page Avancé)](../../database-engine/configure-windows/server-properties-advanced-page.md) .  
   
  **Groupe de fichiers**  
- Sélectionnez le groupe de fichiers du fichier dans la liste. Par défaut, le groupe de fichiers est PRIMARY. Vous pouvez créer un groupe de fichiers en sélectionnant **<nouveau groupe de fichiers>\>**, puis en entrant les informations sur le groupe de fichiers dans la boîte de dialogue **Nouveau groupe de fichiers**. Il est également possible de créer un groupe de fichiers dans la page **Groupe de fichiers**. Vous ne pouvez pas modifier le groupe de fichiers d'un fichier existant.  
+ Sélectionnez le groupe de fichiers du fichier dans la liste. Par défaut, le groupe de fichiers est PRIMARY. Vous pouvez créer un groupe de fichiers en sélectionnant **\<nouveau groupe de fichiers>**, puis en entrant les informations sur le groupe de fichiers dans la boîte de dialogue **Nouveau groupe de fichiers**. Il est également possible de créer un groupe de fichiers dans la page **Groupe de fichiers** . Vous ne pouvez pas modifier le groupe de fichiers d'un fichier existant.  
   
  Lors de l’ajout de fichiers (conteneurs) à un groupe de fichiers optimisé en mémoire, le champ **Groupe de fichiers** est rempli avec le nom du groupe de fichiers optimisé en mémoire de la base de données.  
   
  **Taille initiale**  
- Entrez ou modifiez la taille initiale du fichier en mégaoctets. Par défaut, il s’agit de la valeur de la base de données **model**.  
+ Entrez ou modifiez la taille initiale du fichier en mégaoctets. Par défaut, il s’agit de la valeur de la base de données **model** .  
   
  Ce champ n'est pas valide pour les fichiers FILESTREAM.  
   
  Pour les fichiers des groupes de fichiers optimisés en mémoire, ce champ ne peut pas être modifié.  
   
  **Croissance automatique**  
- Sélectionnez ou affichez les propriétés de croissance automatique du fichier. Ces propriétés contrôlent la manière dont le fichier croît une fois qu'il a atteint sa taille maximale. Pour modifier les valeurs de croissance automatique, cliquez sur le bouton Modifier en regard des propriétés de croissance automatique du fichier de votre choix, puis modifiez les valeurs dans la boîte de dialogue **Modifier la croissance automatique**. Par défaut, il s’agit des valeurs de la base de données **model**.  
+ Sélectionnez ou affichez les propriétés de croissance automatique du fichier. Ces propriétés contrôlent la manière dont le fichier croît une fois qu'il a atteint sa taille maximale. Pour modifier les valeurs de croissance automatique, cliquez sur le bouton Modifier en regard des propriétés de croissance automatique du fichier de votre choix, puis modifiez les valeurs dans la boîte de dialogue **Modifier la croissance automatique** . Par défaut, il s’agit des valeurs de la base de données **model** .  
   
  Ce champ n'est pas valide pour les fichiers FILESTREAM.  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 42
   
  Pour plus d’informations sur les fichiers, consultez [Groupes de fichiers et fichiers de base de données](../../relational-databases/databases/database-files-and-filegroups.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

@@ -1,25 +1,29 @@
 ---
-title: "Restauration en ligne (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restaurations en ligne [SQL Server]"
-  - "restaurations en ligne [SQL Server], à propos des restaurations en ligne"
+title: Restauration en ligne (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- online restores [SQL Server]
+- online restores [SQL Server], about online restores
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 66c1f5169f8978d05f34b19536af54964c3057d9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restauration en ligne (SQL Server)
+# <a name="online-restore-sql-server"></a>Restauration en ligne (SQL Server)
   La restauration en ligne est prise en charge uniquement dans l'édition [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. Par défaut, une restauration fragmentaire, de fichiers ou de pages est en ligne dans cette édition. Cette rubrique concerne les bases de données qui contiennent plusieurs fichiers ou groupes de fichiers et, en mode de récupération simple, seulement des groupes de fichiers en lecture seule.  
   
  Le processus de restauration des données lorsque la base de données est en ligne est appelé *restauration en ligne*. Une base de données est considérée en ligne lorsque le groupe de fichiers primaire est en ligne, même si un ou plusieurs de ses groupes de fichiers secondaires sont hors connexion. Quel que soit le mode de récupération, vous pouvez restaurer un fichier qui est hors connexion quand la base de données est en ligne. En mode de restauration complète, vous pouvez aussi restaurer les pages quand la base de données est en ligne.  
@@ -29,7 +33,7 @@ caps.handback.revision: 45
   
  Au cours d'une restauration de fichiers en ligne, les fichiers en cours de restauration et leurs groupes de fichiers sont hors connexion. Si ces fichiers sont en ligne au démarrage d'une restauration en ligne, la première instruction de restauration met le groupe de fichiers du fichier hors connexion. À l'inverse, au cours d'une restauration de pages en ligne, seule la page est hors connexion.  
   
- Chaque scénario de restauration en ligne comprend les étapes de base suivantes :  
+ Chaque scénario de restauration en ligne comprend les étapes de base suivantes :  
   
 1.  Restaurer les données.  
   
@@ -46,10 +50,10 @@ caps.handback.revision: 45
 > [!CAUTION]  
 >  Lorsque vous utilisez des sauvegardes de captures instantanées, vous ne pouvez pas effectuer de **restauration en ligne**. Pour plus d’informations sur la **sauvegarde de captures instantanées**, consultez [Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
-## Sauvegardes de journal pour une restauration en ligne  
+## <a name="log-backups-for-online-restore"></a>Sauvegardes de journal pour une restauration en ligne  
  Pour une restauration en ligne, le point de récupération est le point où les données en cours de restauration ont été mises hors connexion ou mises en lecture seule pour la dernière fois. Les sauvegardes des journaux de transactions jusqu'à ce point de récupération compris doivent toutes être disponibles. Généralement, une sauvegarde de fichier journal est requise après ce point pour couvrir le point de récupération du fichier. La seule exception concerne une restauration en ligne de données en lecture seule à partir une sauvegarde de données effectuée après la mise en lecture seule des données. Dans ce cas, vous n'avez pas besoin d'une sauvegarde de journal.  
   
- En général, vous pouvez effectuer des sauvegardes des journaux de transactions pendant que la base de données est en ligne, même après le début de la séquence de restauration. Le moment de la dernière sauvegarde de journal dépend des propriétés du fichier en cours de restauration :  
+ En général, vous pouvez effectuer des sauvegardes des journaux de transactions pendant que la base de données est en ligne, même après le début de la séquence de restauration. Le moment de la dernière sauvegarde de journal dépend des propriétés du fichier en cours de restauration :  
   
 -   Pour un fichier en lecture seule en ligne, vous pouvez effectuer la dernière sauvegarde de journal nécessaire à la récupération avant ou pendant la première séquence de restauration. Un groupe de fichiers en lecture seule peut se passer de sauvegardes de journal si une sauvegarde de données ou différentielle a été effectuée après la mise en lecture seule du groupe de fichiers.  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 45
 -   Un cas particulier concerne un fichier en lecture-écriture qui était en ligne lorsque la première instruction de restauration a été envoyée, et qui a ensuite été mis automatiquement hors ligne par cette instruction de restauration. Dans ce cas, vous devez effectuer une sauvegarde de journal pendant la première *séquence de restauration* (la séquence d’une ou plusieurs instructions RESTORE qui restaurent, restaurent par progression et récupèrent les données). En règle générale, cette sauvegarde de journal doit avoir lieu après la restauration de toutes les sauvegardes complètes et avant la récupération des données. Toutefois, dans le cas de plusieurs sauvegardes de fichiers pour un groupe de fichiers spécifique, le point minimal de la sauvegarde de journal est le moment après la mise hors connexion du groupe de fichiers. Cette sauvegarde de journal après restauration des données capture le point où le fichier a été mis hors connexion. La sauvegarde de journal après restauration des données est nécessaire car le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ne peut pas exploiter le journal en ligne pour une restauration en ligne.  
   
     > [!NOTE]  
-    >  D'une autre manière, vous pouvez mettre manuellement le fichier hors connexion avant la séquence de restauration. Pour plus d'informations, consultez « Mise hors connexion d'une base de données ou d'un fichier », plus loin dans cette rubrique.  
+    >  D'une autre manière, vous pouvez mettre manuellement le fichier hors connexion avant la séquence de restauration. Pour plus d'informations, consultez « Mise hors connexion d'une base de données ou d'un fichier », plus loin dans cette rubrique.  
   
 ##  <a name="taking_db_or_file_offline"></a> Mise hors connexion d'une base de données ou d'un fichier  
  Si vous ne souhaitez pas utiliser la restauration en ligne, mettez la base de données hors connexion avant de démarrer la séquence de restauration au moyen de l'une des méthodes suivantes :  
@@ -74,7 +78,7 @@ caps.handback.revision: 45
   
  Tant qu'une base de données demeure hors connexion, toutes les restaurations sont des restaurations hors connexion.  
   
-## Exemples  
+## <a name="examples"></a>Exemples  
   
 > [!NOTE]  
 >  La syntaxe pour une séquence de restauration en ligne est la même que pour une séquence de restauration hors connexion.  
@@ -83,7 +87,7 @@ caps.handback.revision: 45
   
 -   [Exemple : restauration fragmentaire de quelques groupes de fichiers uniquement &#40;mode de récupération simple&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
--   [Exemple : restauration en ligne d’un fichier en lecture seule &#40;mode de récupération simple&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [Exemple : restauration en ligne d’un fichier en lecture seule &#40;Mode de récupération simple&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
 -   [Exemple : restauration fragmentaire d’une base de données &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
   
@@ -105,7 +109,7 @@ caps.handback.revision: 45
   
 -   [Supprimer des groupes de fichiers obsolètes &#40;SQL Server&#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Restaurations de fichiers &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
  [Restaurations de fichiers &#40;mode de récupération simple&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [Restaurer des pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   

@@ -1,37 +1,41 @@
 ---
-title: "Refuser des autorisations sur une collection de sch&#233;mas XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "refus d’autorisations [SQL Server], collections de serveurs XML"
+title: "Refuser des autorisations sur une collection de schémas XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- denying permissions [SQL Server], XML server collections
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 803150cde12790eefbeea8c8f4ef0ad32dc350fe
+ms.lasthandoff: 04/11/2017
+
 ---
-# Refuser des autorisations sur une collection de sch&#233;mas XML
+# <a name="deny-permissions-on-an-xml-schema-collection"></a>Refuser des autorisations sur une collection de schémas XML
   Les autorisations de créer une collection de schémas XML ou d'en utiliser qui existe déjà peuvent être refusées.  
   
-## Refus de l'autorisation de créer une collection de schémas XML  
- Vous pouvez refuser l'autorisation de créer une collection de schémas XML en suivant l'une des méthodes suivantes :  
+## <a name="denying-permission-to-create-an-xml-schema-collection"></a>Refus de l'autorisation de créer une collection de schémas XML  
+ Vous pouvez refuser l'autorisation de créer une collection de schémas XML en suivant l'une des méthodes suivantes :  
   
--   en refusant l'autorisation ALTER sur le schéma relationnel ;  
+-   en refusant l'autorisation ALTER sur le schéma relationnel ;  
   
--   en refusant l'autorisation CONTROL sur le schéma relationnel pour refuser toute autorisation sur le schéma relationnel et les objets qu'il contient ;  
+-   en refusant l'autorisation CONTROL sur le schéma relationnel pour refuser toute autorisation sur le schéma relationnel et les objets qu'il contient ;  
   
 -   en refusant l'autorisation ALTER ANY SCHEMA sur la base de données. Dans ce cas, le principal ne peut créer de collection de schémas XML nulle part dans la base de données. Il est important de savoir que refuser les autorisations ALTER ou CONTROL sur la base de données revient à refuser toutes les autorisations sur tous les objets de la base de données.  
   
-## Refus d'autorisations sur un objet de collection de schémas XML  
- Nous vous présentons maintenant les autorisations qui peuvent être refusées sur une collection de schémas XML existante, ainsi que les conséquences d'un tel refus :  
+## <a name="denying-permissions-on-an-xml-schema-collection-object"></a>Refus d'autorisations sur un objet de collection de schémas XML  
+ Nous vous présentons maintenant les autorisations qui peuvent être refusées sur une collection de schémas XML existante, ainsi que les conséquences d'un tel refus :  
   
 -   Le refus de l'autorisation ALTER empêche le principal de modifier le contenu de la collection de schémas XML.  
   
@@ -43,13 +47,13 @@ caps.handback.revision: 34
   
 -   Le refus de l'autorisation EXECUTE empêche le principal d'insérer ou de mettre à jour les valeurs des colonnes, des variables et des paramètres typés ou contraints par la collection de schémas XML. Le principal perd également la faculté de d'interroger les valeurs de ces mêmes colonnes et variables de type xml.  
   
-## Exemples  
+## <a name="examples"></a>Exemples  
  Les scénarios proposés dans les exemples suivants montrent le fonctionnement des autorisations sur les schémas XML. Chaque exemple crée la base de données de test, les schémas relationnels et les connexions nécessaires. Ces connexions reçoivent les autorisations nécessaires sur la collection de schémas XML. Chaque exemple procède au nettoyage qui s'impose à la fin de la procédure.  
   
-### A. Scénario pour empêcher un utilisateur de créer une collection de schémas XML  
+### <a name="a-preventing-a-user-from-creating-an-xml-schema-collection"></a>A. Scénario pour empêcher un utilisateur de créer une collection de schémas XML  
  Une des méthodes pour empêcher un utilisateur de créer une collection de schémas XML consiste à lui refuser l'autorisation ALTER sur un schéma relationnel. Cela est illustré par l'exemple suivant.  
   
- Cet exemple crée un utilisateur `TestLogin1` et une base de données. Il crée également un schéma relationnel, en plus du schéma `dbo`, dans la base de données. L'autorisation `CREATE XML SCHEMA` de départ permet à l'utilisateur de créer une collection de schémas n'importe où dans la base de données. L'exemple refuse ensuite l'autorisation `ALTER` à l'utilisateur sur l'un des schémas relationnels. L'utilisateur ne peut donc plus créer de collection de schémas XML dans ce schéma relationnel.  
+ Cet exemple crée un utilisateur `TestLogin1`et une base de données. Il crée également un schéma relationnel, en plus du schéma `dbo` , dans la base de données. L'autorisation `CREATE XML SCHEMA` de départ permet à l'utilisateur de créer une collection de schémas n'importe où dans la base de données. L'exemple refuse ensuite l'autorisation `ALTER` à l'utilisateur sur l'un des schémas relationnels. L'utilisateur ne peut donc plus créer de collection de schémas XML dans ce schéma relationnel.  
   
 ```  
 CREATE LOGIN TestLogin1 WITH password='SQLSvrPwd1'  
@@ -108,10 +112,10 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### B. Refus d'autorisations sur une collection de schémas XML  
+### <a name="b-denying-permissions-on-an-xml-schema-collection"></a>B. Refus d'autorisations sur une collection de schémas XML  
  L'exemple suivant montre comment une autorisation spécifique sur une collection de schémas XML existante peut être refusée à une connexion. Dans cet exemple, une connexion de test se voit refuser l'autorisation REFERENCES sur une collection de schémas XML existante.  
   
- Cet exemple crée un utilisateur `TestLogin1` et une base de données. Il crée également un schéma relationnel, en plus du schéma `dbo`, dans la base de données. L'autorisation `CREATE XML SCHEMA` de départ permet à l'utilisateur de créer une collection de schémas n'importe où dans la base de données.  
+ Cet exemple crée un utilisateur `TestLogin1`et une base de données. Il crée également un schéma relationnel, en plus du schéma `dbo` , dans la base de données. L'autorisation `CREATE XML SCHEMA` de départ permet à l'utilisateur de créer une collection de schémas n'importe où dans la base de données.  
   
  L'autorisation `REFERENCES` sur la collection de schémas XML permet à `TestLogin1` d'utiliser le schéma lors de la création d'une colonne `xml` typée dans une table. Si l'autorisation `REFERENCES` sur la collection de schémas XML est refusée, elle empêche `TestLogin1` de faire appel à la collection de schémas XML.  
   
@@ -187,7 +191,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Collections de schémas XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)   
  [Spécifications et limitations relatives aux collections de schémas XML sur le serveur](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)   

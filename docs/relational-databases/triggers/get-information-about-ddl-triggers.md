@@ -1,29 +1,33 @@
 ---
-title: "Obtenir des informations sur les d&#233;clencheurs DDL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "métadonnées [SQL Server], déclencheurs"
-  - "informations d’état [SQL Server], déclencheurs DDL"
-  - "Déclencheurs DDL, métadonnées"
+title: "Obtenir des informations sur les déclencheurs DDL | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- metadata [SQL Server], triggers
+- status information [SQL Server], DDL triggers
+- DDL triggers, metadata
 ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a0ce4e36a1b396311938b8d57c6d44bf922ca56
+ms.lasthandoff: 04/11/2017
+
 ---
-# Obtenir des informations sur les d&#233;clencheurs DDL
-  Les affichages catalogue répertoriés dans cette section permettent d'obtenir des informations sur les déclencheurs DDL.  
+# <a name="get-information-about-ddl-triggers"></a>Obtenir des informations sur les déclencheurs DDL
+  Les affichages catalogue répertoriés dans cette section permettent d'obtenir des informations sur les déclencheurs DDL.  
   
- **Pour obtenir des informations sur les événements ou groupes d'événements sur lesquels un déclencheur DDL peut être activé.**  
+ **Pour obtenir des informations sur les événements ou groupes d'événements sur lesquels un déclencheur DDL peut être activé.**  
   
 -   [sys.trigger_event_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trigger-event-types-transact-sql.md)  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 31
   
 -   [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   
-## Déclencheurs DDL d'étendue de base de données  
+## <a name="database-scoped-ddl-triggers"></a>Déclencheurs DDL d'étendue de base de données  
  **Pour obtenir des informations sur les déclencheurs d'étendue de base de données**  
   
 -   [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)  
@@ -52,7 +56,7 @@ caps.handback.revision: 31
   
 -   [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)  
   
-## Déclencheurs DDL d'étendue de serveur  
+## <a name="server-scoped-ddl-triggers"></a>Déclencheurs DDL d'étendue de serveur  
  **Pour obtenir des informations sur les déclencheurs d'étendue de serveur**  
   
 -   [sys.server_triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)  
@@ -69,7 +73,7 @@ caps.handback.revision: 31
   
 -   [sys.server_assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql.md)  
   
-## Voir aussi  
- [Déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md)  
   
   

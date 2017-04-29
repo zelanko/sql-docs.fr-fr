@@ -1,35 +1,39 @@
 ---
-title: "Afficher ou modifier le niveau de compatibilit&#233; d&#39;une base de donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "niveaux de compatibilité [SQL Server], affichage"
-  - "compatibilité [SQL Server], bases de données"
-  - "niveaux de compatibilité [SQL Server], modification"
+title: "Afficher ou modifier le niveau de compatibilité d’une base de données | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- compatibility levels [SQL Server], viewing
+- compatibility [SQL Server], databases
+- compatibility levels [SQL Server], changing
 ms.assetid: 579867ec-57cb-4cb8-af35-9688c1e9e15d
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fa6785003c2e66f446cdc3a41960c5e3d18fad69
+ms.lasthandoff: 04/11/2017
+
 ---
-# Afficher ou modifier le niveau de compatibilit&#233; d&#39;une base de donn&#233;es
-  Cette rubrique explique comment afficher ou modifier le niveau de compatibilité d'une base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Avant de modifier le niveau de compatibilité d'une base de données, vous devez comprendre l'impact de cette modification sur vos applications. Pour plus d’informations, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+# <a name="view-or-change-the-compatibility-level-of-a-database"></a>Afficher ou modifier le niveau de compatibilité d'une base de données
+  Cette rubrique explique comment afficher ou modifier le niveau de compatibilité d'une base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Avant de modifier le niveau de compatibilité d'une base de données, vous devez comprendre l'impact de cette modification sur vos applications. Pour plus d’informations, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour afficher ou modifier le niveau de compatibilité d'une base de données, utilisez :**  
+-   **Pour afficher ou modifier le niveau de compatibilité d'une base de données, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -42,9 +46,9 @@ caps.handback.revision: 20
 ####  <a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation ALTER sur la base de données.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour afficher ou modifier le niveau de compatibilité d'une base de données  
+#### <a name="to-view-or-change-the-compatibility-level-of-a-database"></a>Pour afficher ou modifier le niveau de compatibilité d'une base de données  
   
 1.  Après la connexion à l'instance appropriée du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], cliquez sur le nom du serveur dans l'Explorateur d'objets.  
   
@@ -58,11 +62,11 @@ caps.handback.revision: 20
   
      Le niveau de compatibilité actuel apparaît dans la zone de liste **Niveau de compatibilité** .  
   
-5.  Pour modifier le niveau de compatibilité, sélectionnez une option différente dans la liste. Les choix sont **SQL Server 2008 (100)**, **SQL Server 2012 (110)** ou **SQL Server 2014 (120)**.  
+5.  Pour modifier le niveau de compatibilité, sélectionnez une option différente dans la liste. Les choix sont **SQL Server 2008 (100)**, **SQL Server 2012 (110)**ou **SQL Server 2014 (120)**.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour afficher le niveau de compatibilité d'une base de données  
+#### <a name="to-view-the-compatibility-level-of-a-database"></a>Pour afficher le niveau de compatibilité d'une base de données  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -79,7 +83,7 @@ GO
   
 ```  
   
-#### Pour modifier le niveau de compatibilité d'une base de données  
+#### <a name="to-change-the-compatibility-level-of-a-database"></a>Pour modifier le niveau de compatibilité d'une base de données  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

@@ -1,22 +1,26 @@
 ---
-title: "Mod&#232;le d&#39;application pour partitionner des tables m&#233;moire optimis&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Modèle d’application pour partitionner des tables mémoire optimisées | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 30bcdf16b27cf4f85fca86c8daeeeec210798c07
+ms.lasthandoff: 04/11/2017
+
 ---
-# Mod&#232;le d&#39;application pour partitionner des tables m&#233;moire optimis&#233;es
+# <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Modèle d'application pour partitionner des tables mémoire optimisées
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] prend en charge un modèle selon lequel une quantité limitée de données actives est conservée dans une table optimisée en mémoire, tandis que les données auxquelles on accède moins fréquemment sont traitées sur le disque. En général, c'est un scénario où les données sont stockées en fonction d'une clé **datetime** .  
@@ -25,7 +29,7 @@ caps.handback.revision: 20
   
  Une application qui sait que les données actives sont dans une table mémoire optimisée peut utiliser des procédures stockées compilées en mode natif pour accéder aux données. Les opérations qui doivent accéder à la plage de données complète, ou qui peuvent ne pas savoir quelle table contient les données appropriées, utilisent le langage [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété pour joindre la table mémoire optimisée à la table partitionnée.  
   
- Ce basculement de partition s'effectue comme suit :  
+ Ce basculement de partition s'effectue comme suit :  
   
 -   Insérez des données de la table de l'OLTP en mémoire dans une table de mise en lots, en utilisant si possible une date de coupure.  
   
@@ -35,14 +39,14 @@ caps.handback.revision: 20
   
 -   Ajoutez la partition active.  
   
- ![Basculement de partition.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Basculement de partition.")  
+ ![Basculement de partition](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Partition switch.")  
 Maintenance de données actives  
   
  Les actions qui commencent par Deleting ActiveOrders doivent être effectuées pendant une période de maintenance pour éviter des requêtes sans données pendant l'intervalle entre la suppression des données et le basculement dans la table de mise en lots.  
   
  Pour obtenir un exemple, consultez [Partitionnement au niveau de l’application](../../relational-databases/in-memory-oltp/application-level-partitioning.md).  
   
-## Exemple de code  
+## <a name="code-sample"></a>Exemple de code  
  L'exemple suivant montre comment utiliser une table mémoire optimisée avec une table sur disque partitionnée. Les données couramment utilisées sont stockées en mémoire. Pour enregistrer les données sur le disque, créez une partition et copiez les données dans la table partitionnée.  
   
  La première partie de cet exemple permet de créer la base de données et les objets nécessaires. La deuxième partie de l'exemple montre comment déplacer des données d'une table mémoire optimisée dans une table partitionnée.  
@@ -210,7 +214,7 @@ SELECT OBJECT_NAME( object_id) , partition_number , row_count  FROM sys.dm_db_pa
   WHERE object_id = OBJECT_ID( 'dbo.SalesOrders_cold') AND index_id = 1;  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tables optimisées en mémoire](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

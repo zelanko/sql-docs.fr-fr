@@ -1,36 +1,40 @@
 ---
-title: "Choisir un algorithme de chiffrement | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "chiffrement [SQL Server], algorithmes"
-  - "chiffrement [SQL Server], algorithmes"
-  - "sécurité [SQL Server], chiffrement"
-  - "algorithmes (chiffrement SQL Server)"
+title: Choisir un algorithme de chiffrement | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cryptography [SQL Server], algorithms
+- encryption [SQL Server], algorithms
+- security [SQL Server], encryption
+- algorithms [SQL Server encryption]
 ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a3cb1a59db35025eda9cf6ea68f0897aaecc9caf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Choisir un algorithme de chiffrement
+# <a name="choose-an-encryption-algorithm"></a>Choisir un algorithme de chiffrement
   Le chiffrement est l'une des mesures préventives à la disposition des administrateurs qui souhaitent sécuriser une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Les algorithmes de chiffrement définissent les transformations de données qui ne peuvent pas être facilement inversées par les utilisateurs non autorisés. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permet aux administrateurs et aux développeurs de choisir entre plusieurs algorithmes, notamment DES, Triple DES, TRIPLE_DES_3KEY, RC2, RC4, RC4 128 bits, DESX, AES 128 bits, AES 192 bits et AES 256 bits.  
   
 > [!NOTE]  
->  À partir de [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], tous les algorithmes autres que AES_128, AES_192 et AES_256 sont déconseillés. Pour utiliser des algorithmes plus anciens (ce qui n’est pas recommandé), vous devez affecter le niveau de compatibilité 120 ou un niveau inférieur à la base de données.  
+>  À partir de [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], tous les algorithmes autres que AES_128, AES_192 et AES_256 sont déconseillés. Pour utiliser des algorithmes plus anciens (ce qui n’est pas recommandé), vous devez affecter le niveau de compatibilité 120 ou un niveau inférieur à la base de données.  
   
- Aucun algorithme unique ne convient pour toutes les situations et l'appréciation des avantages de chaque algorithme dépasse le cadre de la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Cependant, les principes suivants s'appliquent :  
+ Aucun algorithme unique ne convient pour toutes les situations et l'appréciation des avantages de chaque algorithme dépasse le cadre de la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Cependant, les principes suivants s'appliquent :  
   
 -   Un chiffrement renforcé consomme en général davantage de ressources processeur qu'un chiffrement plus faible.  
   
@@ -55,13 +59,13 @@ caps.handback.revision: 36
   
  **Éclaircissement concernant les algorithmes DES :**  
   
--   DESX a été nommé incorrectement. Les clés symétriques créées avec ALGORITHM = DESX utilisent en fait le chiffrement TRIPLE DES avec une clé de 192 bits. L'algorithme DESX n'est pas fourni. [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
+-   DESX a été nommé incorrectement. Les clés symétriques créées avec ALGORITHM = DESX utilisent en fait le chiffrement TRIPLE DES avec une clé de 192 bits. L'algorithme DESX n'est pas fourni. [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
--   Les clés symétriques créées avec ALGORITHM = TRIPLE_DES_3KEY utilisent TRIPLE DES avec une clé de 192 bits.  
+-   Les clés symétriques créées avec ALGORITHM = TRIPLE_DES_3KEY utilisent TRIPLE DES avec une clé de 192 bits.  
   
--   Les clés symétriques créées avec ALGORITHM = TRIPLE_DES utilisent TRIPLE DES avec une clé de 128 bits.  
+-   Les clés symétriques créées avec ALGORITHM = TRIPLE_DES utilisent TRIPLE DES avec une clé de 128 bits.  
   
-## Tâches associées  
+## <a name="related-tasks"></a>Tâches associées  
   
 |||  
 |-|-|  
@@ -71,8 +75,9 @@ caps.handback.revision: 36
 |Chiffrement de fichiers de base de données à l'aide du chiffrement transparent des données.|[Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)|  
 |Comment chiffrer une colonne d'une table.|[Chiffrer une colonne de données](../../../relational-databases/security/encryption/encrypt-a-column-of-data.md)|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Chiffrement SQL Server](../../../relational-databases/security/encryption/sql-server-encryption.md)   
  [Hiérarchie de chiffrement](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
+

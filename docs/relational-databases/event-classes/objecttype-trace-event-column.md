@@ -1,30 +1,34 @@
 ---
-title: "Colonne d&#39;&#233;v&#233;nements de trace ObjectType | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classes d’événements SQL Server, valeurs de la colonne Object Type"
-  - "événements [SQL Server], valeurs de la colonne Object Type"
-  - "classes d’événements [SQL Server], valeurs de la colonne Object Type"
-  - "valeurs de la colonne Object Type [SQL Server]"
+title: "ObjectType, colonne d’événements de trace | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server event classes, Object Type column values
+- events [SQL Server], Object Type column values
+- event classes [SQL Server], Object Type column values
+- Object Type column values [SQL Server]
 ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f4870fdd355f03c7f1e5c4fee15cf410f5794411
+ms.lasthandoff: 04/11/2017
+
 ---
-# Colonne d&#39;&#233;v&#233;nements de trace ObjectType
+# <a name="objecttype-trace-event-column"></a>Colonne d'événements de trace ObjectType
   La colonne d'événements de trace Object Type est utilisée dans divers événements de trace. Cette rubrique décrit les valeurs admises dans cette colonne, ainsi que leur définition associée.  
   
-## Valeurs de la colonne Object Type  
+## <a name="object-type-column-values"></a>Valeurs de la colonne Object Type  
   
 |Valeur|Définition|  
 |-----------|----------------|  
@@ -100,7 +104,7 @@ caps.handback.revision: 17
 |22611|XMLSchema|  
 |22868|Type|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

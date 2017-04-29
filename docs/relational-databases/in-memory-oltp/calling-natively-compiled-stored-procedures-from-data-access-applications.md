@@ -1,22 +1,26 @@
 ---
-title: "Appeler des proc&#233;dures stock&#233;es compil&#233;es en mode natif &#224; partir d&#39;applications d&#39;acc&#232;s aux donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Appel de procédures stockées compilées en mode natif à partir d’applications d’accès aux données | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0fce8ff8377ee7da4ff7c9d9e57ec01872702abc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Appeler des proc&#233;dures stock&#233;es compil&#233;es en mode natif &#224; partir d&#39;applications d&#39;acc&#232;s aux donn&#233;es
+# <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Appeler des procédures stockées compilées en mode natif à partir d'applications d'accès aux données
   Cette rubrique fournit des instructions pour appeler des procédures stockées compilées en mode natif à partir d'applications d'accès aux données.  
   
  Les curseurs ne peuvent pas effectuer une itération au sein d'une procédure stockée compilée en mode natif.  
@@ -24,7 +28,7 @@ caps.handback.revision: 10
  L'appel de procédures stockées compilées en mode natif n'est pas pris en charge à partir des modules CLR avec connexion contextuelle.  
   
  SqlClient  
- Pour SqlClient, il n'y a aucune distinction entre l'exécution directe et préparée. Pour exécuter les procédures stockées avec SqlCommand, utilisez CommandType = CommandType.StoredProcedure.  
+ Pour SqlClient, il n'y a aucune distinction entre l'exécution directe et préparée. Pour exécuter les procédures stockées avec SqlCommand, utilisez CommandType = CommandType.StoredProcedure.  
   
  SqlClient ne prend pas en charge les appels de procédure RPC préparés.  
   
@@ -35,9 +39,9 @@ caps.handback.revision: 10
   
  Les recommandations suivantes s'appliquent aux appels de procédures stockées compilées en mode natif à l'aide du pilote ODBC dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- Pour appeler une procédure stockée une seule fois, la meilleure méthode est d’émettre un appel RPC direct avec **SQLExecDirect** et les clauses ODBC CALL. N’utilisez pas l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]**EXECUTE**. Si une procédure stockée doit être appelée plusieurs fois, l'exécution préparée est plus efficace.  
+ Pour appeler une procédure stockée une seule fois, la meilleure méthode est d’émettre un appel RPC direct avec **SQLExecDirect** et les clauses ODBC CALL. N’utilisez pas l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]**EXECUTE** . Si une procédure stockée doit être appelée plusieurs fois, l'exécution préparée est plus efficace.  
   
- Il est recommandé d'utiliser des appels de procédure RPC préparés pour appeler la même procédure stockée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] plusieurs fois. Les appels RPC préparés sont mis en œuvre comme suit à l'aide du pilote ODBC dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client :  
+ Il est recommandé d'utiliser des appels de procédure RPC préparés pour appeler la même procédure stockée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] plusieurs fois. Les appels RPC préparés sont mis en œuvre comme suit à l'aide du pilote ODBC dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client :  
   
 -   Ouvrez une connexion à la base de données.  
   
@@ -79,10 +83,10 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
 }  
 ```  
   
-## Utilisation du pilote ODBC pour exécuter une procédure stockée compilée en mode natif  
+## <a name="using-odbc-to-execute-a-natively-compiled-stored-procedure"></a>Utilisation du pilote ODBC pour exécuter une procédure stockée compilée en mode natif  
  Cet exemple montre comment lier des paramètres et exécuter des procédures stockées à l'aide du pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  Il est compilé en une application console qui insère une seule commande à l'aide d'une exécution directe et insère les détails de la commande à l'aide d'une exécution préparée.  
   
- Pour exécuter cet exemple :  
+ Pour exécuter cet exemple :  
   
 1.  Créez une base de données d'exemple avec un groupe de fichiers de données mémoire optimisé. Pour plus d’informations sur la création d’une base de données avec un groupe de fichiers de données optimisées en mémoire, consultez [Création d’une table optimisée en mémoire et d’une procédure stockée compilée en mode natif](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
@@ -92,7 +96,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
   
 4.  Compilez et exécutez l'exemple.  
   
-5.  Vérifiez l'exécution du programme en exécutant une requête sur le contenu des tables :  
+5.  Vérifiez l'exécution du programme en exécutant une requête sur le contenu des tables :  
   
     ```  
     SELECT * FROM dbo.Ord  
@@ -102,7 +106,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
     SELECT * FROM dbo.Item  
     ```  
   
- Voici l'intégralité du code [!INCLUDE[tsql](../../includes/tsql-md.md)] qui crée les objets de base de données mémoire optimisés :  
+ Voici l'intégralité du code [!INCLUDE[tsql](../../includes/tsql-md.md)] qui crée les objets de base de données mémoire optimisés :  
   
 ```  
 IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID=OBJECT_ID('dbo.OrderInsert'))  
@@ -157,7 +161,7 @@ END
 GO  
 ```  
   
- Voici l'intégralité du code C :  
+ Voici l'intégralité du code C :  
   
 ```  
 // compile with: user32.lib odbc32.lib  
@@ -391,7 +395,7 @@ int _tmain() {
 }  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

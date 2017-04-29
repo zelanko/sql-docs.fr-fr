@@ -1,61 +1,65 @@
 ---
-title: "Assistant G&#233;n&#233;rer et publier des scripts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql9.swb.generatescriptswizard.chooseviews.f1"
-  - "sql13.swb.generatescriptswizard.manageproviders.f1"
-  - "sql9.swb.generatescriptswizard.scriptwizarddescription.f1"
-  - "sql9.swb.generatescriptswizard.choosedefaults.f1"
-  - "sql13.swb.generatescriptswizard.summarypage.f1"
-  - "sql13.swb.generatescriptswizard.providerconfiguration.f1"
-  - "sql9.swb.generatescriptswizard.chooseuddt.f1"
-  - "sql9.swb.generatescriptswizard.chooserules.f1"
-  - "sql13.swb.generatescriptswizard.introduction.f1"
-  - "sql13.swb.generatescriptswizard.setscriptingoptions.f1"
-  - "sql13.swb.generatescriptswizard.saveorpublishscripts.f1"
-  - "sql9.swb.generatescriptswizard.progress.f1"
-  - "sql9.swb.generatescriptswizard.chooseobjects.f1"
-  - "sql9.swb.generatescriptswizard.welcome.f1"
-  - "sql9.swb.generatescriptswizard.scriptfileoption.f1"
-  - "sql13.swb.generatescriptswizard.chooseobjects.f1"
-  - "sql13.swb.generatescriptswizard.advancedpublishingoptions.f1"
-  - "sql9.swb.generatescriptswizard.selectdatabase.f1"
-  - "sql9.swb.generatescriptswizard.choosetables.f1"
-  - "sql9.swb.generatescriptswizard.choosestoredprocedures.f1"
-  - "sql9.swb.generatescriptswizard.chooseobjecttypes.f1"
-  - "sql13.swb.generatescriptswizard.advancedscriptingoptions.f1"
-  - "sql9.swb.generatescriptswizard.choosescriptoptions.f1"
-  - "sql9.swb.generatescriptswizard.chooseudf.f1"
-helpviewer_keywords: 
-  - "bases de données [SQL Server], publication"
-  - "publication de bases de données"
-  - "scripts [SQL Server], génération"
-  - "scripts [SQL Server], publication"
-  - "bases de données [SQL Server], génération de scripts"
-  - "Publication de base de données (Assistant)"
+title: "Assistant Générer et publier des scripts | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql9.swb.generatescriptswizard.chooseviews.f1
+- sql13.swb.generatescriptswizard.manageproviders.f1
+- sql9.swb.generatescriptswizard.scriptwizarddescription.f1
+- sql9.swb.generatescriptswizard.choosedefaults.f1
+- sql13.swb.generatescriptswizard.summarypage.f1
+- sql13.swb.generatescriptswizard.providerconfiguration.f1
+- sql9.swb.generatescriptswizard.chooseuddt.f1
+- sql9.swb.generatescriptswizard.chooserules.f1
+- sql13.swb.generatescriptswizard.introduction.f1
+- sql13.swb.generatescriptswizard.setscriptingoptions.f1
+- sql13.swb.generatescriptswizard.saveorpublishscripts.f1
+- sql9.swb.generatescriptswizard.progress.f1
+- sql9.swb.generatescriptswizard.chooseobjects.f1
+- sql9.swb.generatescriptswizard.welcome.f1
+- sql9.swb.generatescriptswizard.scriptfileoption.f1
+- sql13.swb.generatescriptswizard.chooseobjects.f1
+- sql13.swb.generatescriptswizard.advancedpublishingoptions.f1
+- sql9.swb.generatescriptswizard.selectdatabase.f1
+- sql9.swb.generatescriptswizard.choosetables.f1
+- sql9.swb.generatescriptswizard.choosestoredprocedures.f1
+- sql9.swb.generatescriptswizard.chooseobjecttypes.f1
+- sql13.swb.generatescriptswizard.advancedscriptingoptions.f1
+- sql9.swb.generatescriptswizard.choosescriptoptions.f1
+- sql9.swb.generatescriptswizard.chooseudf.f1
+helpviewer_keywords:
+- databases [SQL Server], publishing
+- publishing databases
+- scripts [SQL Server], generating
+- scripts [SQL Server], publishing
+- databases [SQL Server], generating scripts
+- Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4632b3a980608ca8feb63436d4120759e7a1e756
+ms.lasthandoff: 04/11/2017
+
 ---
-# Assistant G&#233;n&#233;rer et publier des scripts
-  Vous pouvez utiliser l’**Assistant Générer et publier des scripts** pour créer des scripts afin de transférer une base de données d’une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] vers une autre. Vous pouvez générer des scripts pour une base de données sur une instance du moteur de base de données dans votre réseau local ou à partir de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Les scripts générés peuvent être exécutés sur une autre instance du moteur de base de données ou [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Vous pouvez également utiliser l'Assistant pour publier directement le contenu d'une base de données sur un service Web créé à l'aide des Services de publication de base de données. Vous pouvez créer des scripts pour une base de données entière ou les limiter à des objets spécifiques.  
+# <a name="generate-and-publish-scripts-wizard"></a>Assistant Générer et publier des scripts
+  Vous pouvez utiliser l’ **Assistant Générer et publier des scripts** pour créer des scripts afin de transférer une base de données d’une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]vers une autre. Vous pouvez générer des scripts pour une base de données sur une instance du moteur de base de données dans votre réseau local ou à partir de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Les scripts générés peuvent être exécutés sur une autre instance du moteur de base de données ou [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Vous pouvez également utiliser l'Assistant pour publier directement le contenu d'une base de données sur un service Web créé à l'aide des Services de publication de base de données. Vous pouvez créer des scripts pour une base de données entière ou les limiter à des objets spécifiques.  
   
-1.  **Avant de commencer :**  [Publication sur un service hébergé](#PubHostSvc), [Autorisations](#Permissions)  
+1.  **Before you begin:**  [Publishing to a Hosted Service](#PubHostSvc), [Permissions](#Permissions)  
   
-2.  **Pour générer ou publier un script, à l'aide de :**  [L'Assistant Générer et publier des scripts](#GenPubScriptWiz)  
+2.  **To generate or publish a script, using:**  [The Generate and Publish Scripts Wizard](#GenPubScriptWiz)  
   
-## Avant de commencer  
+## <a name="before-you-begin"></a>Avant de commencer  
  Les bases de données source et cible peuvent se trouver sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou sur une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui exécute [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou une version ultérieure.  
   
 ###  <a name="PubHostSvc"></a> Publication sur un service hébergé  
@@ -126,7 +130,7 @@ caps.handback.revision: 45
   
 -   **Avancé** - Permet d’afficher la boîte de dialogue **Options de script avancées** dans laquelle vous pouvez sélectionner des options avancées pour générer des scripts.  
   
--   **Enregistrer dans le fichier** - Permet d’enregistrer le script dans un ou plusieurs fichiers .sql. Cliquez sur le bouton **Parcourir** pour spécifier le nom et l’emplacement du fichier. Activez la case à cocher **Remplacer le fichier existant** pour remplacer le fichier s'il en existe déjà un du même nom. Cliquez sur **Fichier unique** ou **Fichier unique par objet** pour spécifier comment les scripts doivent être générés. Cliquez sur **Texte Unicode** ou **Texte ANSI** pour spécifier le type de texte qui doit être utilisé dans le script.  
+-   **Enregistrer dans le fichier** - Permet d’enregistrer le script dans un ou plusieurs fichiers .sql. Cliquez sur le bouton**Parcourir**pour spécifier le nom et l’emplacement du fichier. Activez la case à cocher **Remplacer le fichier existant** pour remplacer le fichier s'il en existe déjà un du même nom. Cliquez sur **Fichier unique** ou **Fichier unique par objet** pour spécifier comment les scripts doivent être générés. Cliquez sur **Texte Unicode** ou **Texte ANSI** pour spécifier le type de texte qui doit être utilisé dans le script.  
   
 -   **Enregistrer dans le Presse-papiers** - Permet d’enregistrer le script Transact-SQL dans le Presse-papiers.  
   
@@ -134,7 +138,7 @@ caps.handback.revision: 45
   
  **Publier sur le service Web** - Permet de publier les objets que vous avez sélectionnés sur un service d’hébergement web distant pour lequel vous avez configuré un fournisseur.  
   
--   **Gérer les fournisseurs** - Permet d’afficher la boîte de dialogue **Gérer les fournisseurs**. Utilisez la boîte de dialogue **Gérer les fournisseurs** pour ajouter, modifier et supprimer des fournisseurs d'hébergement. Chaque fournisseur spécifie les informations de connexion à un service d'hébergement Web, ainsi que les bases de données cibles sur ce service.  
+-   **Gérer les fournisseurs** - Permet d’afficher la boîte de dialogue **Gérer les fournisseurs** . Utilisez la boîte de dialogue **Gérer les fournisseurs** pour ajouter, modifier et supprimer des fournisseurs d'hébergement. Chaque fournisseur spécifie les informations de connexion à un service d'hébergement Web, ainsi que les bases de données cibles sur ce service.  
   
 -   **Avancé** - Permet d’afficher la boîte de dialogue **Options de publication avancées** dans laquelle vous pouvez sélectionner des options avancées pour publier des scripts.  
   
@@ -151,7 +155,7 @@ caps.handback.revision: 45
   
 -   **Remplissage ANSI** - Inclut **ANSI PADDING ON** dans le script. La valeur par défaut est **True**.  
   
--   **Ajouter au fichier** - Lorsque cette option a la valeur **True**, ce script est ajouté au bas d’un script existant, spécifié sur la page **Définir les options de script**. Lorsqu'elle a la valeur **False**, le nouveau script remplace un script précédent. La valeur par défaut est **False**.  
+-   **Ajouter au fichier** - Lorsque cette option a la valeur **True**, ce script est ajouté au bas d’un script existant, spécifié sur la page **Définir les options de script** . Lorsqu'elle a la valeur **False**, le nouveau script remplace un script précédent. La valeur par défaut est **False**.  
   
 -   **Continuer l’exécution du script en cas d’erreur** - Lorsque cette option a la valeur **True**, l’exécution du script s’arrête en cas d’erreur. Lorsqu'elle a la valeur **False**, l'exécution du script continue. La valeur par défaut est **False**.  
   
@@ -211,7 +215,7 @@ caps.handback.revision: 45
   
 -   **Générer un script pour les déclencheurs** - Génère un script pour la création de déclencheurs DML sur les tables. La valeur par défaut est **False**. Un déclencheur DML est une action programmée pour s'exécuter lorsqu'un événement de langage de manipulation de données (DML, Data Manipulation Language) se produit sur le serveur de base de données. Pour plus d'informations, consultez [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
   
--   **Générer un script pour les clés uniques** - Génère un script pour la création de clés uniques sur les tables. Les clés uniques empêchent l'entrée de données dupliquées. La valeur par défaut est **True**. Pour plus d'informations, consultez [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
+-   **Générer un script pour les clés uniques** - Génère un script pour la création de clés uniques sur les tables. Les clés uniques empêchent l'entrée de données dupliquées. La valeur par défaut est **True**. Pour plus d’informations, consultez [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
 ###  <a name="MgProviders"></a> Page Gérer les fournisseurs  
  Utilisez cette boîte de dialogue pour afficher, ajouter, modifier, supprimer ou tester les connexions des fournisseurs d'hébergement. Un fournisseur d'hébergement spécifie les informations de connexion pour un service Web créé à l'aide du projet de Service de publication de base de données dans le SQL Server Hosting Toolkit sur CodePlex.  
@@ -226,9 +230,9 @@ caps.handback.revision: 45
   
  **Test** - Teste la connexion à un service d’hébergement à l’aide des informations du fournisseur sélectionné.  
   
- **OK** - Enregistre toutes les modifications que vous avez apportées dans la boîte de dialogue **Fournisseur d’hébergement**.  
+ **OK** - Enregistre toutes les modifications que vous avez apportées dans la boîte de dialogue **Fournisseur d’hébergement** .  
   
- **Annuler** - Annule toutes les modifications que vous avez apportées dans la boîte de dialogue **Fournisseur d’hébergement**.  
+ **Annuler** - Annule toutes les modifications que vous avez apportées dans la boîte de dialogue **Fournisseur d’hébergement** .  
   
 ###  <a name="AdvPubOpts"></a> Page Options de publication avancées  
  Utilisez cette page pour spécifier la façon dont vous souhaitez que cet Assistant publie une base de données. De nombreuses options sont disponibles. Les options sont grisées si elles ne sont pas prises en charge par la version de SQL Server ou [!INCLUDE[ssSDS](../../includes/sssds-md.md)] spécifiée dans **Type de moteur de base de données**.  
@@ -286,11 +290,11 @@ caps.handback.revision: 45
 9. **Publier les options de compression de données** - Inclut les options de compression de données dans le processus de publication, si elles sont configurées sur la base de données d’origine ou sur des tables dans la base de données d’origine. La valeur par défaut est **True**. Pour plus d’informations, consultez [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
 ###  <a name="ProvConfig"></a> Page Configuration du fournisseur  
- Utilisez cette boîte de dialogue pour afficher ou modifier des paramètres de fournisseur d'hébergement. Cette boîte de dialogue permet d'effectuer les opérations suivantes :  
+ Utilisez cette boîte de dialogue pour afficher ou modifier des paramètres de fournisseur d'hébergement. Cette boîte de dialogue permet d'effectuer les opérations suivantes :  
   
--   afficher, ajouter ou modifier les informations de connexion d'un fournisseur d'hébergement ;  
+-   afficher, ajouter ou modifier les informations de connexion d'un fournisseur d'hébergement ;  
   
--   afficher, ajouter, modifier ou supprimer une base de données pour une connexion de fournisseur ;  
+-   afficher, ajouter, modifier ou supprimer une base de données pour une connexion de fournisseur ;  
   
 -   configurer automatiquement des bases de données pour un fournisseur d'hébergement.  
   
@@ -334,35 +338,35 @@ caps.handback.revision: 45
   
  **Terminer** - Ferme l’Assistant une fois le traitement terminé ou si une erreur se produit.  
  
-## Génération de scripts dans Azure SQL Data Warehouse  
+## <a name="generating-scripts-on-azure-sql-data-warehouse"></a>Génération de scripts dans Azure SQL Data Warehouse  
 
 Si la syntaxe générée lors de l’utilisation de « Script comme » ne ressemble pas à la syntaxe [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] ou si vous recevez un message d’erreur, vous devrez peut-être définir vos options de script dans SQL Server Management Studio sur [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
 
-### Comment définir les options de script par défaut sur SQL Data Warehouse  
+### <a name="how-to-set-default-scripting-options-to-sql-data-warehouse"></a>Comment définir les options de script par défaut sur SQL Data Warehouse  
 
-Pour générer des scripts sur des objets avec la syntaxe [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], définissez l’option de script par défaut sur [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] comme suit :  
+Pour générer des scripts sur des objets avec la syntaxe [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] , définissez l’option de script par défaut sur [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] comme suit :  
 
-1. Cliquez sur **outils**, puis **Options**.  
-2. Sous **Options de script générales**, définissez :  
+1. Cliquez sur **outils** , puis **Options**.  
+2. Sous **Options de script générales** , définissez :  
     1. Script pour le type de moteur de base de données : **Base de données SQL Microsoft Azure**.  
     2. Script pour l’édition de moteur de base de données : **Édition Microsoft Azure SQL Data Warehouse**.  
 3. Cliquez sur **OK**.
 
-### Comment générer des scripts pour SQL Data Warehouse quand il ne s’agit pas de l’option de script par défaut  
+### <a name="how-to-generate-scripts-for-sql-data-warehouse-when-it-is-not-the-default-scripting-option"></a>Comment générer des scripts pour SQL Data Warehouse quand il ne s’agit pas de l’option de script par défaut  
 
-Si vous définissez [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] en tant qu’option de script par défaut, comme indiqué ci-dessus, vous pouvez ignorer ces instructions. Mais, si vous choisissez d’utiliser d’autres options de script par défaut, vous risquez de rencontrer une erreur. Pour éviter les erreurs, procédez comme suit pour générer et publier des scripts pour [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] :  
+Si vous définissez [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] en tant qu’option de script par défaut, comme indiqué ci-dessus, vous pouvez ignorer ces instructions. Mais, si vous choisissez d’utiliser d’autres options de script par défaut, vous risquez de rencontrer une erreur. Pour éviter les erreurs, procédez comme suit pour générer et publier des scripts pour [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]:  
 
 1. Cliquez avec le bouton droit sur votre base de données SQL Data Warehouse.  
 2. Sélectionnez **Générer des scripts**.  
 3. Sélectionnez les objets pour lesquels vous voulez générer des scripts.  
-4. Dans **Options de script**, cliquez sur **Avancé**. Sous **Général**, définissez :  
+4. Dans **Options de script**, cliquez sur **Avancé**. Sous **Général** , définissez :  
     1. Script pour le type de moteur de base de données : **Base de données SQL Microsoft Azure**.  
     2. Script pour l’édition de moteur de base de données : **Édition Microsoft Azure SQL Data Warehouse**.  
-5. Cliquez sur **Enregistrer ou publier des scripts**, puis sur **Terminer**.  
+5. Cliquez sur **Enregistrer ou publier des scripts** , puis sur **Terminer**.  
 
 Les options définies à l’étape 4 ne seront pas mémorisées. Si vous préférez qu’elles le soient, suivez les instructions données dans **Comment définir les options de script par défaut sur SQL Data Warehouse**.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Installation de SMO](../../relational-databases/server-management-objects-smo/installing-smo.md)   
  [Copier des bases de données sur d'autres serveurs](../../relational-databases/databases/copy-databases-to-other-servers.md)  
   

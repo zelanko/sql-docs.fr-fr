@@ -1,36 +1,40 @@
 ---
-title: "Modifier des cl&#233;s primaires | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modification de clés primaires"
-  - "clés primaires [SQL Server], modification"
+title: "Modifier des clés primaires | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying primary keys
+- primary keys [SQL Server], modifying
 ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8e3c601f497bd6abf4a27a6ce8dd5f0762687526
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modifier des cl&#233;s primaires
+# <a name="modify-primary-keys"></a>Modifier des clés primaires
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Vous pouvez modifier une clé primaire dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous pouvez modifier la clé primaire d'une table en changeant l'ordre des colonnes, le nom de l'index, l'option clustered ou le facteur de remplissage.  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour modifier une clé primaire à l'aide de :**  
+-   **Pour modifier une clé primaire à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -43,24 +47,24 @@ caps.handback.revision: 15
 ####  <a name="Permissions"></a> Autorisations  
  Requiert une autorisation ALTER sur la table.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour modifier une clé primaire  
+#### <a name="to-modify-a-primary-key"></a>Pour modifier une clé primaire  
   
 1.  Ouvrez le Concepteur de tables pour la table dont vous souhaitez modifier la clé primaire, cliquez avec le bouton droit dans le Concepteur de tables, puis cliquez sur **Index/Clés** dans le menu contextuel.  
   
-2.  Dans la boîte de dialogue **Index/Clés**, sélectionnez l’index de clé primaire dans la liste **Index ou clé unique/primaire sélectionné(e)**.  
+2.  Dans la boîte de dialogue **Index/Clés** , sélectionnez l’index de clé primaire dans la liste **Index ou clé unique/primaire sélectionné(e)** .  
   
-3.  Effectuez l'une des actions décrites dans le tableau suivant :  
+3.  Effectuez l'une des actions décrites dans le tableau suivant :  
   
     |Pour|Procédez comme suit|  
     |--------|------------------------|  
-    |Renommer la clé primaire|Tapez un nouveau nom dans la zone **Nom** . Assurez-vous que le nouveau nom n’existe pas déjà dans la liste **Index ou clé unique/primaire sélectionné(e)**.|  
+    |Renommer la clé primaire|Tapez un nouveau nom dans la zone **Nom** . Assurez-vous que le nouveau nom n’existe pas déjà dans la liste **Index ou clé unique/primaire sélectionné(e)** .|  
     |Définir l'option clustered|Pour créer un index cluster pour la clé primaire, sélectionnez **Créer comme CLUSTERED**, puis sélectionnez l’option dans la zone de liste déroulante. Il ne peut exister qu'un seul index cluster par table. Si cette option n'est pas disponible pour votre index, désactivez d'abord ce paramètre sur l'index cluster existant.<br /><br /> Si cette option n'est pas sélectionnée, un index non-cluster unique est créé.|  
     |Définir un taux de remplissage|Développez la catégorie **Spécification du remplissage** et tapez un entier compris entre 0 et 100 dans la zone **Taux de remplissage** . Pour plus d’informations sur les facteurs de remplissage et leurs utilisations, consultez [Spécifier un facteur de remplissage pour un index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).|  
     |Changer l'ordre des colonnes|Sélectionnez **Colonnes**, puis cliquez sur le bouton de sélection **(…)** situé à droite de la propriété. Dans la boîte de dialogue  **Colonnes d'index** , supprimez les colonnes de la clé primaire. Rajoutez-les ensuite dans l'ordre voulu. Pour supprimer une colonne clé, retirez simplement le nom de la colonne de la liste **Nom de la colonne** .|  
   
-4.  Dans le menu **Fichier**, cliquez sur **Enregistrer***nom de la table*.  
+4.  Dans le menu **Fichier** , cliquez sur **Enregistrer***nom de la table*.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour modifier une clé primaire**  

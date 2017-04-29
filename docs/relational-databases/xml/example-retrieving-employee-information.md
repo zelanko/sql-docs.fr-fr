@@ -1,27 +1,31 @@
 ---
-title: "Exemple&#160;: extraction d&#39;informations sur les employ&#233;s | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "EXPLICIT, mode"
+title: "Exemple : extraction d’informations sur les employés | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01f3d95b92757ba51a7e8466a9c8d9d535a0a773
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exemple&#160;: extraction d&#39;informations sur les employ&#233;s
-  Cet exemple extrait un ID et un nom pour chaque employé. Dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], les ID des employés se trouvent dans la colonne BusinessEntityID de la table Employee. Les noms des employés figurent dans la table Person. La colonne BusinessEntityID peut être utilisée pour joindre les tables.  
+# <a name="example-retrieving-employee-information"></a>Exemple : extraction d'informations sur les employés
+  Cet exemple extrait un ID et un nom pour chaque employé. Dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , les ID des employés se trouvent dans la colonne BusinessEntityID de la table Employee. Les noms des employés figurent dans la table Person. La colonne BusinessEntityID peut être utilisée pour joindre les tables.  
   
- Supposons que vous souhaitez générer un document XML à l'aide de la transformation FOR XML EXPLICIT comme suit :  
+ Supposons que vous souhaitez générer un document XML à l'aide de la transformation FOR XML EXPLICIT comme suit :  
   
 ```  
 <Employee EmpID="1" >  
@@ -58,7 +62,7 @@ ON  E.BusinessEntityID = P.BusinessEntityID;
   
  Vous combinez ces requêtes avec `UNION AL`L, appliquez `FOR XML EXPLICIT` et spécifiez la clause `ORDER BY` requise. Vous devez trier l'ensemble de lignes par `BusinessEntityID` puis par nom afin que les valeurs NULL du nom apparaissent en premier. En exécutant la requête suivante sans la clause FOR XML, vous pouvez visualiser la table universelle générée.  
   
- Voici la requête finale :  
+ Voici la requête finale :  
   
 ```  
 SELECT 1    as Tag,  
@@ -82,7 +86,7 @@ ORDER BY [Employee!1!EmpID],[Name!2!FName]
 FOR XML EXPLICIT;  
 ```  
   
- Voici le résultat partiel :  
+ Voici le résultat partiel :  
   
  `<Employee EmpID="1">`  
   
@@ -120,7 +124,7 @@ FOR XML EXPLICIT;
   
  `...`  
   
- Les lignes de la table universelle sont traitées comme suit pour générer l'arborescence XML obtenue :  
+ Les lignes de la table universelle sont traitées comme suit pour générer l'arborescence XML obtenue :  
   
  La première ligne identifie la valeur `Tag` `1`. Par conséquent, le groupe de colonnes qui a la valeur `Tag``1` est identifié, `Employee!1!EmpID`. Cette colonne identifie `Employee` en tant que nom d'élément. Un élément <`Employee`> possédant les attributs `EmpID` est ensuite créé. Les valeurs de colonnes correspondantes sont affectées à ces attributs.  
   
@@ -128,7 +132,7 @@ FOR XML EXPLICIT;
   
  Ce processus est répété pour le reste des lignes de l'ensemble de lignes. Notez l'importance du tri des lignes dans la table universelle pour que FOR XML EXPLICIT puisse traiter l'ensemble de lignes dans l'ordre et générer le document XML souhaité.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser le mode EXPLICIT avec FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

@@ -1,25 +1,29 @@
 ---
-title: "Surveiller les composants SQL&#160;Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Surveiller les composants SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c3d789288a8963a1f80bc560ab9e80fe5339d29b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Surveiller les composants SQL&#160;Server
+# <a name="monitor-sql-server-components"></a>Surveiller les composants SQL Server
   La surveillance est importante car [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un service dans un environnement dynamique. Les données dans l'application sont fluctuantes. Le type d'accès requis par les utilisateurs peut changer. Le mode de connexion des utilisateurs change. Les types des applications accédant à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent même changer, mais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère automatiquement les ressources de niveau système, telles que la mémoire et l’espace disque, pour minimiser les paramétrages manuels nécessaires au niveau système. La surveillance permet aux administrateurs d'identifier les tendances de performances afin de déterminer si des modifications s'imposent.  
   
- Pour surveiller efficacement un composant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
+ Pour surveiller efficacement un composant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 1.  Déterminer vos objectifs en matière de surveillance.  
   
@@ -35,8 +39,8 @@ caps.handback.revision: 8
   
  Chacune de ces étapes est décrite ci-après.  
   
-## Déterminer vos objectifs en matière de surveillance  
- Pour surveiller efficacement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez identifier clairement les motifs de surveillance. Ces motifs peuvent être les suivants :  
+## <a name="determine-your-monitoring-goals"></a>Déterminer vos objectifs en matière de surveillance  
+ Pour surveiller efficacement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez identifier clairement les motifs de surveillance. Ces motifs peuvent être les suivants :  
   
 -   Établir un niveau de référence des performances.  
   
@@ -60,20 +64,20 @@ caps.handback.revision: 8
   
 -   Déterminer le moment où il convient de modifier votre configuration matérielle.  
   
-## Sélectionner l'outil approprié  
- Une fois que vous avez identifié les motifs de la surveillance, vous devez sélectionner les outils correspondant à ce type de surveillance. Le système d'exploitation Windows et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportent un jeu complet d'outils permettant de surveiller les serveurs dans des environnements riches en transactions. Ces outils révèlent clairement la condition d'une instance du moteur de base de données SQL Server ou d'une instance de SQL Server Analysis Services.  
+## <a name="select-the-appropriate-tool"></a>Sélectionner l'outil approprié  
+ Une fois que vous avez identifié les motifs de la surveillance, vous devez sélectionner les outils correspondant à ce type de surveillance. Le système d'exploitation Windows et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportent un jeu complet d'outils permettant de surveiller les serveurs dans des environnements riches en transactions. Ces outils révèlent clairement la condition d'une instance du moteur de base de données SQL Server ou d'une instance de SQL Server Analysis Services.  
   
- Windows fournit les outils suivants pour la surveillance d'applications s'exécutant sur un serveur :  
+ Windows fournit les outils suivants pour la surveillance d'applications s'exécutant sur un serveur :  
   
--   Moniteur système, qui permet de collecter et d'afficher des données en temps réel sur des activités, telles que l'utilisation de la mémoire, du disque et du processeur ;  
+-   Moniteur système, qui permet de collecter et d'afficher des données en temps réel sur des activités, telles que l'utilisation de la mémoire, du disque et du processeur ;  
   
--   Journaux et alertes de performance ;  
+-   Journaux et alertes de performance ;  
   
 -   Gestionnaire des tâches  
   
  Pour plus d'informations sur les outils Windows ou Windows Server, consultez la documentation Windows.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit les outils suivants pour la surveillance des composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit les outils suivants pour la surveillance des composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   Trace SQL  
   
@@ -87,24 +91,24 @@ caps.handback.revision: 8
   
 -   Procédures stockées  
   
--   Commandes DBCC (Database Console Commands)  
+-   Commandes DBCC (Database Console Commands)  
   
 -   Fonctions intégrées  
   
 -   Indicateurs de trace  
   
- Pour plus d’informations sur les outils de surveillance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Outils d’analyse et de paramétrage des performances](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md).  
+ Pour plus d’informations sur les outils de surveillance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Outils d’analyse et de paramétrage des performances](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md).  
   
-## Identifier les composants à surveiller  
+## <a name="identify-the-components-to-monitor"></a>Identifier les composants à surveiller  
  La troisième étape dans la surveillance d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste à identifier les composants à surveiller. Par exemple, si vous utilisez [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour tracer un serveur, vous définir la trace de sorte à collecter des données concernant des événements spécifiques. Vous pouvez également exclure des événements qui ne s'appliquent pas à votre situation.  
   
-## Sélectionner les éléments de mesure pour les composants surveillés  
+## <a name="select-metrics-for-monitored-components"></a>Sélectionner les éléments de mesure pour les composants surveillés  
  Après l'identification des composants à surveiller, déterminez les éléments de mesure à utiliser pour la surveillance. Par exemple, après avoir sélectionné les événements à inclure dans une trace, vous pouvez choisir d'inclure uniquement des données spécifiques concernant ces événements. La limitation de la trace aux données pertinentes permet de réduire la quantité de ressources système requise pour effectuer le suivi.  
   
-## Surveiller le serveur  
+## <a name="monitor-the-server"></a>Surveiller le serveur  
  Pour surveiller le serveur, exécutez l'outil de surveillance que vous avez configuré pour collecter des données. Par exemple, après avoir défini une trace, vous pouvez l’exécuter pour recueillir des données concernant les événements qui se sont produits sur le serveur.  
   
-## Analyser les données  
+## <a name="analyze-the-data"></a>Analyser les données  
  Une fois le suivi terminé, analysez les données pour vérifier si vous avez atteint votre objectif de surveillance. Si ce n’est pas le cas, modifiez les composants ou les éléments de mesure utilisés pour surveiller le serveur.  
   
  Le processus de capture de données d’événement et de leur exploitation est décrit ci-dessous.  
@@ -115,11 +119,11 @@ caps.handback.revision: 8
   
 2.  Surveiller (capturer) les événements.  
   
-     Dès qu'elle est activée, la surveillance active capture des données à partir de l'application, de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou du système d'exploitation spécifié. Par exemple, lorsque l'activité du disque est analysée à l'aide du Moniteur système, ce dernier capture les données d'événement, notamment les lectures et les écritures sur le disque et les affiche sur l'écran. Pour plus d’informations, consultez [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md).  
+     Dès qu'elle est activée, la surveillance active capture des données à partir de l'application, de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou du système d'exploitation spécifié. Par exemple, lorsque l'activité du disque est analysée à l'aide du Moniteur système, ce dernier capture les données d'événement, notamment les lectures et les écritures sur le disque et les affiche sur l'écran. Pour plus d’informations, consultez [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md).  
   
 3.  Enregistrer les données d'événement capturées.  
   
-     L'enregistrement des données d'événement capturées vous permet de les analyser ultérieurement, voire de les relire avec Distributed Replay Utility ou le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Les données d'événement capturées sont enregistrées dans un fichier pouvant être rechargé dans l'outil qui l'a créé à l'origine pour analyse. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permet d’enregistrer les données d’événement dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'enregistrement des données d'événement capturées est essentiel lors de la création d'un niveau de référence des performances. Les données du niveau de référence des performances sont enregistrées et utilisées lors de la comparaison des données d'événement récemment capturées afin de déterminer si les performances sont optimales. Pour plus d’informations, consultez [Modèles et autorisations du générateur de SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md).  
+     L'enregistrement des données d'événement capturées vous permet de les analyser ultérieurement, voire de les relire avec Distributed Replay Utility ou le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Les données d'événement capturées sont enregistrées dans un fichier pouvant être rechargé dans l'outil qui l'a créé à l'origine pour analyse. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permet d’enregistrer les données d’événement dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'enregistrement des données d'événement capturées est essentiel lors de la création d'un niveau de référence des performances. Les données du niveau de référence des performances sont enregistrées et utilisées lors de la comparaison des données d'événement récemment capturées afin de déterminer si les performances sont optimales. Pour plus d’informations, consultez [Modèles et autorisations du générateur de SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md).  
   
 4.  Créer des modèles de trace contenant les paramètres spécifiés pour capturer les événements.  
   

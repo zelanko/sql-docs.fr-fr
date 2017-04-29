@@ -1,32 +1,36 @@
 ---
-title: "Cr&#233;er une sauvegarde diff&#233;rentielle de base de donn&#233;es (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sauvegardes différentielles complètes [SQL Server]"
-  - "sauvegardes de bases de données [SQL Server], sauvegardes différentielles complètes"
-  - "sauvegarde de bases de données [SQL Server], sauvegardes différentielles complètes"
-  - "sauvegardes [SQL Server], création"
+title: "Créer une sauvegarde différentielle de base de données (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full differential backups [SQL Server]
+- database backups [SQL Server], full differential backups
+- backing up databases [SQL Server], full differential backups
+- backups [SQL Server], creating
 ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 72e15006bdae1d2ae6d33a9780b62f17fd88a69b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er une sauvegarde diff&#233;rentielle de base de donn&#233;es (SQL Server)
+# <a name="create-a-differential-database-backup-sql-server"></a>Créer une sauvegarde différentielle de base de données (SQL Server)
   Créez une sauvegarde différentielle de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , en utilisant [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Sections de cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 34
   
      [Sécurité](#Security)  
   
--   **Pour créer une sauvegarde différentielle de base de données, utilisez :**  
+-   **Pour créer une sauvegarde différentielle de base de données, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -44,7 +48,7 @@ caps.handback.revision: 34
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="Restrictions"></a> Limitations and restrictions  
   
 -   L'instruction BACKUP n'est pas autorisée dans une transaction explicite ou implicite.  
   
@@ -59,13 +63,13 @@ caps.handback.revision: 34
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Vérifiez d’abord les autorisations dont vous bénéficiez.  
- Les autorisations BACKUP DATABASE et BACKUP LOG reviennent par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_backupoperator**.  
+ Les autorisations BACKUP DATABASE et BACKUP LOG reviennent par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_backupoperator** .  
   
  Des problèmes de propriété et d’autorisations portant sur le fichier physique de l’unité de sauvegarde sont susceptibles de perturber une opération de sauvegarde. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être en mesure de lire et d’écrire des données sur l’unité ; le compte sous lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute doit disposer d’autorisations d’écriture. Toutefois, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), qui ajoute une entrée pour une unité de sauvegarde dans les tables système, ne vérifie **pas** les autorisations d’accès au fichier. Les problèmes relatifs aux autorisations portant sur le fichier physique de l’unité de sauvegarde n’apparaissent clairement qu’un fois la ressource physique sollicitée lorsque vous tentez une sauvegarde ou une restauration.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio  
   
-#### Créer une sauvegarde différentielle de base de données  
+#### <a name="create-a-differential-database-backup"></a>Créer une sauvegarde différentielle de base de données  
   
 1.  Après la connexion à l'instance appropriée du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], dans l'Explorateur d'objets, cliquez sur le nom du serveur pour développer son arborescence.  
   
@@ -80,7 +84,7 @@ caps.handback.revision: 34
 5.  Dans la zone de liste **Type de sauvegarde** , sélectionnez **Différentielle**.  
   
     > [!IMPORTANT]  
-    >  Lorsque l’option **Différentielle** est sélectionnée, vérifiez que la case **Sauvegarde de copie uniquement** est décochée.  
+    >  Lorsque l’option**Différentielle** est sélectionnée, vérifiez que la case **Sauvegarde de copie uniquement** est décochée.  
   
 6.  Pour l'option **Composant de sauvegarde**, cliquez sur **Base de données**.  
   
@@ -88,11 +92,11 @@ caps.handback.revision: 34
   
 8.  Dans la zone de texte **Description** , vous avez la possibilité de saisir une description du jeu de sauvegarde.  
   
-9. Indiquez quand le jeu de sauvegarde arrivera à expiration :  
+9. Indiquez quand le jeu de sauvegarde arrivera à expiration :  
   
-    -   Pour que le jeu de sauvegarde expire au bout d’un nombre de jours spécifique, cliquez sur **Après** (option par défaut) et entrez le nombre de jours souhaité pour l’expiration du jeu après sa création. Cette valeur doit être comprise entre 0 et 99 999 jours ; une valeur de 0 signifie que le jeu de sauvegarde n’expirera jamais.  
+    -   Pour que le jeu de sauvegarde expire au bout d’un nombre de jours spécifique, cliquez sur **Après** (option par défaut) et entrez le nombre de jours souhaité pour l’expiration du jeu après sa création. Cette valeur doit être comprise entre 0 et 99 999 jours ; une valeur de 0 signifie que le jeu de sauvegarde n’expirera jamais.  
   
-         La valeur par défaut est définie dans l’option **Délai de rétention par défaut du support de sauvegarde (jours)** de la boîte de dialogue **Propriétés du serveur** (page **Paramètres de base de données**). Pour y accéder, cliquez avec le bouton droit sur le nom du serveur dans l’Explorateur d’objets et sélectionnez les propriétés. Ensuite, sélectionnez la page **Paramètres de base de données**.  
+         La valeur par défaut est définie dans l’option **Délai de rétention par défaut du support de sauvegarde (jours)** de la boîte de dialogue **Propriétés du serveur** (page**Paramètres de base de données** ). Pour y accéder, cliquez avec le bouton droit sur le nom du serveur dans l’Explorateur d’objets et sélectionnez les propriétés. Ensuite, sélectionnez la page **Paramètres de base de données** .  
   
     -   Pour que le jeu de sauvegarde expire à une date spécifique, cliquez sur **Le**et entrez la date d'expiration souhaitée.  
   
@@ -123,9 +127,9 @@ caps.handback.revision: 34
 14. Si vous effectuez la sauvegarde sur un lecteur de bande (spécifié dans la section **Destination** de la page **Général**), l’option **Décharger la bande après la sauvegarde** est active. Vous pouvez cliquer sur cette option pour activer l'option **Rembobiner la bande avant de décharger** .  
   
     > [!NOTE]  
-    >  Les options de la section **Journal des transactions** sont inactives, à moins que vous ne sauvegardiez un journal des transactions (comme spécifié dans la section **Type de sauvegarde** de la page **Général**).  
+    >  Les options de la section **Journal des transactions** sont inactives, à moins que vous ne sauvegardiez un journal des transactions (comme spécifié dans la section **Type de sauvegarde** de la page **Général** ).  
   
-15. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] et versions ultérieures prennent en charge la [compression de la sauvegarde](../../relational-databases/backup-restore/backup-compression-sql-server.md). Par défaut, la compression d’une sauvegarde dépend de la valeur de l’option de configuration de serveur **Compression par défaut des sauvegardes**. Toutefois, quelle que soit la valeur par défaut actuelle au niveau du serveur, vous pouvez compresser une sauvegarde en activant **Compresser la sauvegarde**, et vous pouvez empêcher la compression en activant **Ne pas compresser la sauvegarde**.  
+15. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] et versions ultérieures prennent en charge la [compression de la sauvegarde](../../relational-databases/backup-restore/backup-compression-sql-server.md). Par défaut, la compression d’une sauvegarde dépend de la valeur de l’option de configuration de serveur **Compression par défaut des sauvegardes** . Toutefois, quelle que soit la valeur par défaut actuelle au niveau du serveur, vous pouvez compresser une sauvegarde en activant **Compresser la sauvegarde**, et vous pouvez empêcher la compression en activant **Ne pas compresser la sauvegarde**.  
   
      **Pour consulter la valeur par défaut de compression de la sauvegarde actuelle**  
   
@@ -136,22 +140,22 @@ caps.handback.revision: 34
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL  
   
-#### Créer une sauvegarde différentielle de base de données  
+#### <a name="create-a-differential-database-backup"></a>Créer une sauvegarde différentielle de base de données  
   
-1.  Exécutez l'instruction BACKUP DATABASE pour créer une sauvegarde différentielle de base de données, en spécifiant les éléments suivants :  
+1.  Exécutez l'instruction BACKUP DATABASE pour créer une sauvegarde différentielle de base de données, en spécifiant les éléments suivants :  
   
-    -   le nom de la base de données à sauvegarder ;  
+    -   le nom de la base de données à sauvegarder ;  
   
     -   l'unité de sauvegarde où est écrite la sauvegarde complète de la base de données.  
   
-    -   la clause DIFFERENTIAL afin de préciser que seules les parties de la base de données qui ont été modifiées après la création de la dernière sauvegarde complète de la base de données sont sauvegardées.  
+    -   la clause DIFFERENTIAL afin de préciser que seules les parties de la base de données qui ont été modifiées après la création de la dernière sauvegarde complète de la base de données sont sauvegardées.  
   
      La syntaxe requise est la suivante :  
   
      BACKUP DATABASE *nom_base_de_données* TO <appareil_sauvegarde> WITH DIFFERENTIAL  
   
 ###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
- Cet exemple crée une sauvegarde complète et différentielle de la base de données `MyAdvWorks`.  
+ Cet exemple crée une sauvegarde complète et différentielle de la base de données `MyAdvWorks` .  
   
 ```tsql  
 -- Create a full database backup first.  
@@ -168,7 +172,7 @@ BACKUP DATABASE MyAdvWorks
 GO  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Sauvegardes différentielles &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)   
  [Sauvegarder des fichiers et des groupes de fichiers &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   

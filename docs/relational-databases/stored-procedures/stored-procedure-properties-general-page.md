@@ -1,28 +1,32 @@
 ---
-title: "Propri&#233;t&#233;s de la proc&#233;dure stock&#233;e (page G&#233;n&#233;ral) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.spassistededitor.storedprocedure.f1"
-  - "sql13.swb.spproperties.general.f1"
+title: "Propriétés de la procédure stockée (page Général) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.spassistededitor.storedprocedure.f1
+- sql13.swb.spproperties.general.f1
 ms.assetid: 8ee433b6-3931-47e8-b1cf-332806f71161
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cc478edecbc7f64655d9fefe0943e99080b3ebde
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propri&#233;t&#233;s de la proc&#233;dure stock&#233;e (page G&#233;n&#233;ral)
+# <a name="stored-procedure-properties-general-page"></a>Propriétés de la procédure stockée (page Général)
   Affiche des informations sur une procédure stockée. Toutes les informations sont en lecture seule.  
   
-## Options  
+## <a name="options"></a>Options  
  **Base de données**  
  Nom de la base de données contenant cette procédure stockée.  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 13
  **Recompiler**  
  Indique si l'objet a été créé avec l'option RECOMPILE.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Procédures stockées &#40;moteur de base de données&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)  

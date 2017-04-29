@@ -1,38 +1,42 @@
 ---
-title: "Modifier des contraintes CHECK | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "contraintes CHECK, modification"
-  - "modification des contraintes"
-  - "contraintes [SQL Server], validation"
-  - "contraintes [SQL Server], modification"
+title: "Modifier des contraintes de validation | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CHECK constraints, modifying
+- modifying constraints
+- constraints [SQL Server], check
+- constraints [SQL Server], modifying
 ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56805de308b7824cbfb948de432131c139db9df0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modifier des contraintes CHECK
+# <a name="modify-check-constraints"></a>Modifier des contraintes de validation
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Vous pouvez modifier une contrainte de validation dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] lorsque vous voulez changer l'expression de contrainte ou les options qui activent ou désactivent la contrainte pour des conditions spécifiques.  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour modifier une contrainte de validation à l'aide de :**  
+-   **Pour modifier une contrainte de validation à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -45,15 +49,15 @@ caps.handback.revision: 18
 ####  <a name="Permissions"></a> Autorisations  
  Requiert une autorisation ALTER sur la table.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour modifier une contrainte de validation  
+#### <a name="to-modify-a-check-constraint"></a>Pour modifier une contrainte de validation  
   
-1.  Dans l’**Explorateur d’objets**, cliquez avec le bouton droit sur la table contenant la contrainte de validation, puis sélectionnez **Conception**.  
+1.  Dans l’ **Explorateur d’objets**, cliquez avec le bouton droit sur la table contenant la contrainte de validation, puis sélectionnez **Conception**.  
   
 2.  Dans le menu **Concepteur de tables** , cliquez sur **Vérifier les contraintes...**.  
   
-3.  Sélectionnez dans la liste **Contrainte de validation sélectionnée** de la boîte de dialogue **Contraintes de validation**la la contrainte que vous souhaitez modifier.  
+3.  Sélectionnez dans la liste **Contrainte de validation sélectionnée** de la boîte de dialogue **Contraintes de validation** la contrainte que vous souhaitez modifier.  
   
 4.  Effectuez l'une des actions décrites dans le tableau suivant :  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 18
   
 5.  Cliquez sur **Fermer**.  
   
-6.  Dans le menu **Fichier**, cliquez sur **Enregistrer***nom_table*.  
+6.  Dans le menu **Fichier** , cliquez sur **Enregistrer***nom_table*.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour modifier une contrainte de validation**  

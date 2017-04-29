@@ -1,47 +1,51 @@
 ---
-title: "Solutions haute disponibilit&#233; (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "haute disponibilité [SQL Server], solutions"
-  - "moteur de base de données [SQL Server], disponibilité"
-  - "disponibilité des bases de données [SQL Server]"
-  - "disponibilité [SQL Server]"
-  - "disponibilité des serveurs [SQL Server]"
+title: "Solutions haute disponibilité (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- high availability [SQL Server], solutions
+- Database Engine [SQL Server], availability
+- database availability [SQL Server]
+- availability [SQL Server]
+- server availability [SQL Server]
 ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
 caps.latest.revision: 84
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 84
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: dd78349c495ceb9b653ae3b44915da327c489152
+ms.lasthandoff: 04/11/2017
+
 ---
-# Solutions haute disponibilit&#233; (SQL Server)
+# <a name="high-availability-solutions-sql-server"></a>Solutions haute disponibilité (SQL Server)
   Cette rubrique présente plusieurs solutions haute disponibilité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui améliorent la disponibilité des serveurs ou des bases de données. Une solution à haute disponibilité masque l'impact d'une défaillance matérielle ou logicielle et gère la disponibilité des applications pour réduire au maximum le temps mort que perçoit l'utilisateur.    
     
    
->  **Remarque :** vous voulez savoir quelles éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prennent en charge une solution haute disponibilité donnée ? Consultez la section « Haute disponibilité (Always On) » de l’article [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).    
+>  **Remarque :** vous voulez savoir quelles éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prennent en charge une solution haute disponibilité donnée ? Consultez la section « Haute disponibilité (Always On) » de l’article [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).    
      
     
 ##  <a name="TermsAndDefinitions"></a> Présentation des solutions haute disponibilité SQL Server    
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit plusieurs options permettant de garantir un haut niveau de disponibilité pour un serveur ou une base de données. Les options de haute disponibilité sont les suivantes :    
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit plusieurs options permettant de garantir un haut niveau de disponibilité pour un serveur ou une base de données. Les options de haute disponibilité sont les suivantes :    
     
 *  Instances de cluster de basculement Always On    
  Dans le cadre de l’offre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Always On, les instances de cluster de basculement Always On exploitent la fonctionnalité de clustering de basculement Windows Server (WSFC) pour fournir une haute disponibilité locale grâce à la redondance au niveau de l’instance de serveur, une *instance de cluster de basculement* (FCI). Une instance FCI est une instance unique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installée sur plusieurs nœuds WSFC (clustering de basculement Windows Server) et, éventuellement, sur plusieurs sous-réseaux. Sur le réseau, une instance de cluster de basculement FCI apparaît en tant qu'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécutant sur un ordinateur unique, mais elle permet le basculement d'un nœud WSFC vers un autre en cas d'indisponibilité du nœud actuel.    
     
- Pour plus d'informations, consultez [Instances de cluster de basculement Always On &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)    
+ Pour plus d’informations, consultez [Instances de cluster de basculement Always On &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).    
     
 *  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]    
  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] est une solution haute disponibilité et de récupération d’urgence au niveau de l’entreprise introduite dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] pour vous permettre d’optimiser la disponibilité d’une ou de plusieurs bases de données utilisateur. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] exige que les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] résident sur des nœuds de clustering de basculement Windows Server (WSFC). Pour plus d’informations, consultez [Groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).    
     
   
->  **Remarque :** Une instance FCI peut tirer parti de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] pour permettre une récupération d'urgence à distance au niveau de la base de données. Pour plus d’informations, consultez [Clustering de basculement et groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).    
+>  **Remarque** Une instance FCI peut tirer parti de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] pour permettre une récupération d'urgence à distance au niveau de la base de données. Pour plus d’informations, consultez [Clustering de basculement et groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).    
     
 *  Mise en miroir de bases de données. **Remarque :** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Nous vous recommandons d'utiliser [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] à la place.     
 La mise en miroir de base de données est une solution qui permet d'optimiser la disponibilité d'une base de données en utilisant presque instantanément le basculement. La mise en miroir de base de données peut être utilisée pour gérer une base de données de secours ou une *base de données miroir*pour une base de données de production correspondante désignée sous le nom de *base de données principale*. Pour plus d’informations, consultez [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).    
@@ -56,11 +60,13 @@ La mise en miroir de base de données est une solution qui permet d'optimiser la
     
 -   Pour la protection des données via [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nous vous recommandons d'utiliser [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].    
     
-       >  Nous vous recommandons d’utiliser la copie des journaux de transaction si vous exécutez une édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ne prend pas en charge [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].. Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prennent en charge [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], consultez la section « Haute disponibilité (Always On) » de l’article [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).    
+       >  Nous vous recommandons d’utiliser la copie des journaux de transaction si vous exécutez une édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ne prend pas en charge [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prennent en charge [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], consultez la section « Haute disponibilité (Always On) » de l’article [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).    
     
-## Voir aussi    
+## <a name="see-also"></a>Voir aussi    
  [Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)     
  [Mise en miroir de bases de données : interopérabilité et coexistence &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)     
- [Fonctionnalités du moteur de base de données déconseillées dans SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)    
+ [Fonctionnalités du moteur de base de données déconseillées dans SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)    
     
   
+
+

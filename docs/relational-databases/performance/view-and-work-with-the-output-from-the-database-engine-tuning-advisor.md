@@ -1,38 +1,42 @@
 ---
-title: "Afficher et utiliser la sortie de l&#39;Assistant Param&#233;trage du moteur de base de donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dta.sessionmonitor.f1"
-  - "sql13.dta.reports.f1"
-  - "sql13.dta.recommendations.f1"
-  - "sql13.dta.applyrecommendations.f1"
-helpviewer_keywords: 
-  - "affichage des journaux"
-  - "recommandations [Database Engine Tuning Advisor]"
-  - "informations sur le paramétrage du résumé [SQL Server]"
-  - "Assistant Paramétrage du moteur de base de données [SQL Server], recommandations"
-  - "Assistant Paramétrage du moteur de base de données [SQL Server], journaux"
-  - "Assistant Paramétrage du moteur de base de données [SQL Server], affichage de la sortie"
-  - "Assistant Paramétrage du moteur de base de données [SQL Server], rapports"
-  - "journaux [SQL Server], paramétrage"
-  - "rapports [SQL Server], paramétrage"
-  - "consultation des résultats du paramétrage"
+title: "Afficher et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dta.sessionmonitor.f1
+- sql13.dta.reports.f1
+- sql13.dta.recommendations.f1
+- sql13.dta.applyrecommendations.f1
+helpviewer_keywords:
+- viewing logs
+- recommendations [Database Engine Tuning Advisor]
+- summary tuning information [SQL Server]
+- Database Engine Tuning Advisor [SQL Server], recommendations
+- Database Engine Tuning Advisor [SQL Server], logs
+- Database Engine Tuning Advisor [SQL Server], viewing output
+- Database Engine Tuning Advisor [SQL Server], reports
+- logs [SQL Server], tuning
+- reports [SQL Server], tuning
+- viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ce827e3df11e103bced1b62afb2329db9c81e0f4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Afficher et utiliser la sortie de l&#39;Assistant Param&#233;trage du moteur de base de donn&#233;es
+# <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Afficher et utiliser la sortie de l'Assistant Paramétrage du moteur de base de données
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Lorsque l'Assistant Paramétrage du moteur de base de données paramètre des bases de données, il génère des résumés, des recommandations, des rapports et des journaux de paramétrage. Vous pouvez utiliser les résultats affichés dans le journal de paramétrage pour résoudre les problèmes liés aux sessions de l'Assistant Paramétrage du moteur de base de données. Vous pouvez vous aider des résumés, des recommandations et des rapports pour déterminer si les recommandations de paramétrage doivent être implémentées ou si le paramétrage doit se poursuivre afin d'atteindre un niveau de performance des requêtes répondant aux critères définis pour votre installation [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d'informations sur l'utilisation de l'Assistant Paramétrage de base de données pour créer des charges de travail et paramétrer une base de données, consultez [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
@@ -40,14 +44,14 @@ caps.handback.revision: 34
 ##  <a name="View"></a> Afficher les résultats d'un paramétrage  
  Les procédures suivantes indiquent comment afficher les recommandations, les résumés, les rapports et les journaux de paramétrage dans l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données. Pour plus d'informations sur les options de l'interface utilisateur, consultez [Descriptions de l'interface utilisateur](#UI) plus loin dans cette rubrique.  
   
- Cette interface permet en outre d’afficher les résultats du paramétrage générés par l’utilitaire de ligne de commande **dta**.  
+ Cette interface permet en outre d’afficher les résultats du paramétrage générés par l’utilitaire de ligne de commande **dta** .  
   
 > [!NOTE]  
->  Si vous utilisez l’utilitaire de ligne de commande **dta** et précisez que les résultats doivent être écrits dans un fichier XML par le biais de l’argument **-ox**, vous pouvez ouvrir et consulter le fichier de sortie XML en cliquant sur **Ouvrir un fichier** dans le menu **Fichier** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Use SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md). Pour plus d’informations sur l’utilitaire de ligne de commande **dta**, consultez [Utilitaire dta](../../tools/dta/dta-utility.md).  
+>  Si vous utilisez l’utilitaire de ligne de commande **dta** et précisez que les résultats doivent être écrits dans un fichier XML par le biais de l’argument **-ox** , vous pouvez ouvrir et consulter le fichier de sortie XML en cliquant sur **Ouvrir un fichier** dans le menu **Fichier** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be). Pour plus d’informations sur l’utilitaire de ligne de commande **dta** , consultez [Utilitaire dta](../../tools/dta/dta-utility.md).  
   
-#### Pour afficher les recommandations de paramétrage dans l'interface de l'Assistant Paramétrage du moteur de base de données  
+#### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>Pour afficher les recommandations de paramétrage dans l'interface de l'Assistant Paramétrage du moteur de base de données  
   
-1.  Paramétrez une base de données dans l’interface utilisateur graphique de l’Assistant Paramétrage du moteur de base de données ou dans l’utilitaire de ligne de commande **dta**. Pour plus d’informations, consultez [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Si vous souhaitez utiliser une session de paramétrage existante, ignorez cette étape et passez directement à l'étape 2.  
+1.  Paramétrez une base de données dans l’interface utilisateur graphique de l’Assistant Paramétrage du moteur de base de données ou dans l’utilitaire de ligne de commande **dta** . Pour plus d’informations, consultez [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Si vous souhaitez utiliser une session de paramétrage existante, ignorez cette étape et passez directement à l'étape 2.  
   
 2.  Démarrez l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données. Pour plus d’informations, consultez [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Si vous souhaitez consulter les recommandations de paramétrage relatives à une session de paramétrage existante, ouvrez-la en double-cliquant sur son nom dans la fenêtre **Moniteur de session**.  
   
@@ -61,9 +65,9 @@ caps.handback.revision: 34
   
 6.  Si vous souhaitez enregistrer dans un fichier de script l'ensemble des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] qui créent ou suppriment les objets de base de données mentionnés dans cette recommandation, cliquez sur **Enregistrer les recommandations** dans le menu **Actions** .  
   
-#### Pour afficher le résumé et les rapports de paramétrage dans l'interface graphique de l'Assistant Paramétrage du moteur de base de données  
+#### <a name="to-view-the-tuning-summary-and-reports-with-the-database-engine-tuning-advisor-gui"></a>Pour afficher le résumé et les rapports de paramétrage dans l'interface graphique de l'Assistant Paramétrage du moteur de base de données  
   
-1.  Paramétrez une base de données dans l’interface utilisateur graphique de l’Assistant Paramétrage du moteur de base de données ou dans l’utilitaire de ligne de commande **dta**. Pour plus d’informations, consultez [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Si vous souhaitez utiliser une session de paramétrage existante, ignorez cette étape et passez directement à l'étape 2.  
+1.  Paramétrez une base de données dans l’interface utilisateur graphique de l’Assistant Paramétrage du moteur de base de données ou dans l’utilitaire de ligne de commande **dta** . Pour plus d’informations, consultez [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Si vous souhaitez utiliser une session de paramétrage existante, ignorez cette étape et passez directement à l'étape 2.  
   
 2.  Démarrez l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données. Pour plus d’informations, consultez [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Si vous souhaitez consulter les résumés et les rapports de paramétrage relatifs à une session de paramétrage existante, ouvrez-la en double-cliquant sur son nom dans la fenêtre **Moniteur de session**.  
   
@@ -73,20 +77,20 @@ caps.handback.revision: 34
   
 5.  Dans le volet **Rapports de paramétrage** , cliquez sur **Sélectionnez un rapport** pour choisir le rapport de paramétrage à afficher.  
   
-#### Pour afficher les journaux de paramétrage dans l'interface graphique de l'Assistant Paramétrage du moteur de base de données  
+#### <a name="to-view-tuning-logs-with-the-database-engine-tuning-advisor-gui"></a>Pour afficher les journaux de paramétrage dans l'interface graphique de l'Assistant Paramétrage du moteur de base de données  
   
-1.  Paramétrez une base de données dans l’interface utilisateur graphique de l’Assistant Paramétrage du moteur de base de données ou dans l’utilitaire de ligne de commande **dta**. N'oubliez pas d'activer **Enregistrer le journal de paramétrage** dans l'onglet **Général** lorsque vous paramétrez la charge de travail. Si vous souhaitez utiliser une session de paramétrage existante, ignorez cette étape et passez directement à l'étape 2.  
+1.  Paramétrez une base de données dans l’interface utilisateur graphique de l’Assistant Paramétrage du moteur de base de données ou dans l’utilitaire de ligne de commande **dta** . N'oubliez pas d'activer **Enregistrer le journal de paramétrage** dans l'onglet **Général** lorsque vous paramétrez la charge de travail. Si vous souhaitez utiliser une session de paramétrage existante, ignorez cette étape et passez directement à l'étape 2.  
   
-2.  Démarrez l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données. Pour plus d’informations, consultez [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Si vous souhaitez consulter les résumés et les rapports de paramétrage relatifs à une session de paramétrage existante, ouvrez-la en double-cliquant sur son nom dans la fenêtre **Moniteur de session**.  
+2.  Démarrez l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données. Pour plus d’informations, consultez [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Si vous souhaitez consulter les résumés et les rapports de paramétrage relatifs à une session de paramétrage existante, ouvrez-la en double-cliquant sur son nom dans la fenêtre **Moniteur de session** .  
   
 3.  Une fois la nouvelle session de paramétrage terminée ou à l'issue du chargement de la session existante par l'outil, cliquez sur l'onglet **Progression** . Le volet **Journal de paramétrage** présente le contenu du journal. Le journal contient des informations sur les événements de charge de travail que l'Assistant Paramétrage du moteur de base de données n'a pas pu analyser.  
   
      Si l'ensemble des événements de la session de paramétrage ont été analysés par l'Assistant Paramétrage du moteur de base de données, vous obtenez un message indiquant que le journal de paramétrage est vide pour la session. Si la case à cocher **Enregistrer le journal de paramétrage** n'a pas été activée sous l'onglet **Général** au moment de l'exécution effective de la session de paramétrage, un message vous en informe.  
   
 ##  <a name="Implement"></a> Mettre en œuvre des recommandations de paramétrage  
- Les recommandations de l'Assistant Paramétrage du moteur de base de données peuvent être mises en œuvre soit manuellement, soit automatiquement dans le cadre d'une session de paramétrage. Pour examiner les résultats du paramétrage avant de les mettre en œuvre, utilisez l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données. Vous pouvez ensuite utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour exécuter manuellement les scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] que l'Assistant Paramétrage du moteur de base de données génère suite à l'analyse d'une charge de travail afin d'appliquer les recommandations. Si vous n’avez pas besoin d’examiner les résultats avant leur mise en œuvre, vous pouvez utiliser l’option **-a** avec l’utilitaire d’invite de commandes **dta**. Cela a pour effet l'implémentation automatique par l'utilitaire des recommandations de paramétrage après l'analyse de votre charge de travail. Les procédures suivantes expliquent comment utiliser les interfaces de l'Assistant Paramétrage du moteur de base de données afin de mettre en œuvre les recommandations de paramétrage.  
+ Les recommandations de l'Assistant Paramétrage du moteur de base de données peuvent être mises en œuvre soit manuellement, soit automatiquement dans le cadre d'une session de paramétrage. Pour examiner les résultats du paramétrage avant de les mettre en œuvre, utilisez l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données. Vous pouvez ensuite utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour exécuter manuellement les scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] que l'Assistant Paramétrage du moteur de base de données génère suite à l'analyse d'une charge de travail afin d'appliquer les recommandations. Si vous n’avez pas besoin d’examiner les résultats avant leur mise en œuvre, vous pouvez utiliser l’option **-a** avec l’utilitaire d’invite de commandes **dta** . Cela a pour effet l'implémentation automatique par l'utilitaire des recommandations de paramétrage après l'analyse de votre charge de travail. Les procédures suivantes expliquent comment utiliser les interfaces de l'Assistant Paramétrage du moteur de base de données afin de mettre en œuvre les recommandations de paramétrage.  
   
-#### Pour mettre en œuvre manuellement les recommandations au moyen de l'interface de l'Assistant Paramétrage du moteur de base de données  
+#### <a name="to-manually-implement-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>Pour mettre en œuvre manuellement les recommandations au moyen de l'interface de l'Assistant Paramétrage du moteur de base de données  
   
 1.  Paramétrez une base de données à l’aide de l’interface utilisateur graphique de l’Assistant Paramétrage du moteur de base de données ou de l’utilitaire d’invite de commandes **dta** . Pour plus d’informations, consultez [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Si vous souhaitez utiliser une session de paramétrage existante, ignorez cette étape et passez directement à l'étape 2.  
   
@@ -98,17 +102,17 @@ caps.handback.revision: 34
   
 5.  Cliquez sur **OK** pour appliquer les recommandations.  
   
-#### Pour mettre en œuvre automatiquement les recommandations de paramétrage au moyen de l'utilitaire d'invite de commandes dta  
+#### <a name="to-automatically-implement-tuning-recommendations-using-the-dta-command-prompt-utility"></a>Pour mettre en œuvre automatiquement les recommandations de paramétrage au moyen de l'utilitaire d'invite de commandes dta  
   
 1.  Déterminez les fonctionnalités de base de données (index, vues indexées, partitionnement) que l'Assistant Paramétrage du moteur de base de données doit ajouter, supprimer ou conserver pendant l'analyse.  
   
-     Gardez les éléments suivants à l'esprit avant de commencer à paramétrer :  
+     Gardez les éléments suivants à l'esprit avant de commencer à paramétrer :  
   
     -   Lors de l'utilisation d'une table de trace comme charge de travail, cette table doit exister sur le même serveur que celui où l'Assistant Paramétrage du moteur de base de données effectue le paramétrage. Si vous créez la table de trace sur un autre serveur, déplacez-la sur le serveur où a lieu le paramétrage par l'Assistant Paramétrage du moteur de base de données.  
   
     -   Si une session de paramétrage est plus longue que prévu, appuyez sur CTRL+C pour y mettre fin. Dans ce cas, cette combinaison de touches oblige **dta** à produire la meilleure recommandation possible en fonction de la quantité de charge de travail consommée, sans perdre le temps déjà utilisé par l’outil pour paramétrer la charge de travail.  
   
-2.  À partir d'une invite de commandes, saisissez la commande suivante :  
+2.  À partir d'une invite de commandes, saisissez la commande suivante :  
   
     ```  
     dta -E -D DatabaseName -if WorkloadFile -s SessionName -a  
@@ -125,10 +129,10 @@ caps.handback.revision: 34
   
  Les procédures suivantes expliquent comment utiliser la fonction de configuration spécifiée par l'utilisateur avec l'interface des deux outils.  
   
-### Utilisation de l'interface utilisateur de l'Assistant Paramétrage du moteur de base de données pour évaluer les recommandations de paramétrage  
- La procédure suivante décrit comment évaluer une recommandation générée par l'Assistant Paramétrage du moteur de base de données. L'interface utilisateur ne vous permet cependant pas de spécifier de nouvelles structures PDS à des fins d'évaluation.  
+### <a name="using-database-engine-tuning-advisor-gui-to-evaluate-tuning-recommendations"></a>Utilisation de l'interface utilisateur de l'Assistant Paramétrage du moteur de base de données pour évaluer les recommandations de paramétrage  
+ La procédure suivante décrit comment évaluer une recommandation générée par l'Assistant Paramétrage du moteur de base de données. L'interface utilisateur ne vous permet cependant pas de spécifier de nouvelles structures PDS à des fins d'évaluation.  
   
-##### Pour évaluer les recommandations de paramétrage à l'aide de l'interface utilisateur de l'Assistant Paramétrage du moteur de base de données  
+##### <a name="to-evaluate-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>Pour évaluer les recommandations de paramétrage à l'aide de l'interface utilisateur de l'Assistant Paramétrage du moteur de base de données  
   
 1.  Utilisez l'interface utilisateur de l'Assistant Paramétrage du moteur de base de données pour paramétrer une base de données. Pour plus d’informations, consultez [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Pour évaluer une session de paramétrage existante, double-cliquez dessus dans **Moniteur de session**.  
   
@@ -140,25 +144,25 @@ caps.handback.revision: 34
   
 5.  Dans la barre d'outils, cliquez sur le bouton **Démarrer l'analyse** . Lorsque l'Assistant Paramétrage du moteur de base de données a terminé, vous pouvez afficher les résultats sous l'onglet **Recommandations** .  
   
-### Utilisation de l'interface utilisateur de l'Assistant Paramétrage du moteur de base de données pour exporter les résultats de la session de paramétrage pour l'analyse du paramétrage d'un scénario  
- La procédure suivante décrit comment exporter les résultats d’une session de paramétrage de l’Assistant Paramétrage du moteur de base de données vers un fichier XML, que vous pouvez modifier, pour ensuite le paramétrer avec l’utilitaire de ligne de commande **dta**. Ceci vous permet d'effectuer une analyse de paramétrage sur de nouvelles structures PDS hypothétiques, sans engager de charge supplémentaire de mise en œuvre dans votre base de données avant d'avoir déterminé si elles produisent les améliorations de performances recherchées. L’utilisation, dans un premier temps, de l’interface utilisateur graphique de l’Assistant Paramétrage du moteur de base de données pour paramétrer votre base de données, puis l’exportation de ses résultats vers un fichier **.xml**, constitue une bonne méthode pour les utilisateurs non familiers du langage XML, qui peuvent ainsi exploiter la flexibilité du schéma XML de l’Assistant Paramétrage du moteur de base de données pour effectuer des analyses de scénarios.  
+### <a name="using-database-engine-tuning-advisor-gui-to-export-tuning-session-results-for-what-if-tuning-analysis"></a>Utilisation de l'interface utilisateur de l'Assistant Paramétrage du moteur de base de données pour exporter les résultats de la session de paramétrage pour l'analyse du paramétrage d'un scénario  
+ La procédure suivante décrit comment exporter les résultats d’une session de paramétrage de l’Assistant Paramétrage du moteur de base de données vers un fichier XML, que vous pouvez modifier, pour ensuite le paramétrer avec l’utilitaire de ligne de commande **dta** . Ceci vous permet d'effectuer une analyse de paramétrage sur de nouvelles structures PDS hypothétiques, sans engager de charge supplémentaire de mise en œuvre dans votre base de données avant d'avoir déterminé si elles produisent les améliorations de performances recherchées. L’utilisation, dans un premier temps, de l’interface utilisateur graphique de l’Assistant Paramétrage du moteur de base de données pour paramétrer votre base de données, puis l’exportation de ses résultats vers un fichier **.xml** , constitue une bonne méthode pour les utilisateurs non familiers du langage XML, qui peuvent ainsi exploiter la flexibilité du schéma XML de l’Assistant Paramétrage du moteur de base de données pour effectuer des analyses de scénarios.  
   
-##### Pour exporter les résultats de la session de paramétrage de l'interface utilisateur de l'Assistant Paramétrage du moteur de base de données pour une analyse de scénario à l'aide de l'utilitaire de ligne de commande dta  
+##### <a name="to-export-tuning-session-results-from-the-database-engine-tuning-advisor-gui-for-what-if-analysis-with-the-dta-command-line-utility"></a>Pour exporter les résultats de la session de paramétrage de l'interface utilisateur de l'Assistant Paramétrage du moteur de base de données pour une analyse de scénario à l'aide de l'utilitaire de ligne de commande dta  
   
 1.  Utilisez l'interface utilisateur de l'Assistant Paramétrage du moteur de base de données pour paramétrer une base de données. Pour plus d’informations, consultez [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Pour évaluer une session de paramétrage existante, double-cliquez dessus dans **Moniteur de session**.  
   
 2.  Dans le menu **Fichier** , cliquez sur **Exporter les résultats de la session** et enregistrez-la en tant que fichier XML.  
   
-3.  Ouvrez le fichier XML créé à l'étape 2 dans l'éditeur XML ou de texte de votre choix ou dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Faites défiler jusqu'à l'élément **Configuration** . Copiez et collez la section de l'élément **Configuration** dans un modèle de fichier d'entrée XML après l'élément **TuningOptions** . Enregistrez ce fichier d'entrée XML.  
+3.  Ouvrez le fichier XML créé à l'étape 2 dans l'éditeur XML ou de texte de votre choix ou dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Faites défiler jusqu'à l'élément **Configuration** . Copiez et collez la section de l'élément **Configuration** dans un modèle de fichier d'entrée XML après l'élément **TuningOptions** . Enregistrez ce fichier d'entrée XML.  
   
 4.  Dans le nouveau fichier d’entrée XML créé à l’étape 3, spécifiez les options de paramétrage voulues dans l’élément **TuningOptions**, modifiez la section de l’élément **Configuration** (en ajoutant ou en supprimant les structures PDS comme approprié pour votre analyse), enregistrez le fichier et validez-le par rapport au schéma XML de l’Assistant Paramétrage du moteur de base de données. Pour plus d’informations sur la modification de ce fichier XML, consultez [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 5.  Utilisez le fichier XML créé à l’étape 4 en tant qu’entrée dans l’utilitaire de ligne de commandes **dta** . Pour plus d'informations sur l'utilisation de fichiers d'entrée XML avec cet outil, consultez la section « Paramétrer une base de données à l'aide de l'utilitaire dta » dans [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-### Utilisation de la fonction de configuration spécifiée par l'utilisateur avec l'utilitaire de ligne de commande dta  
- Si vous êtes un développeur XML expérimenté, vous pouvez créer un fichier d'entrée XML d'Assistant Paramétrage du moteur de base de données, dans lequel vous pouvez spécifier une charge de travail et une configuration hypothétique de structures PDS, telles que des index, des vues indexées ou un partitionnement. Vous pouvez ensuite recourir à l’utilitaire de ligne de commande **dta** pour analyser les effets de cette configuration hypothétique sur les performances des requêtes pour votre base de données. La procédure suivante détaille ce processus :  
+### <a name="using-the-user-specified-configuration-feature-with-the-dta-command-line-utility"></a>Utilisation de la fonction de configuration spécifiée par l'utilisateur avec l'utilitaire de ligne de commande dta  
+ Si vous êtes un développeur XML expérimenté, vous pouvez créer un fichier d'entrée XML d'Assistant Paramétrage du moteur de base de données, dans lequel vous pouvez spécifier une charge de travail et une configuration hypothétique de structures PDS, telles que des index, des vues indexées ou un partitionnement. Vous pouvez ensuite recourir à l’utilitaire de ligne de commande **dta** pour analyser les effets de cette configuration hypothétique sur les performances des requêtes pour votre base de données. La procédure suivante détaille ce processus :  
   
-##### Pour utiliser la fonction de configuration spécifiée par l'utilisateur avec l'utilitaire de ligne de commande dta  
+##### <a name="to-use-the-user-specified-configuration-feature-with-the-dta-command-line-utility"></a>Pour utiliser la fonction de configuration spécifiée par l'utilisateur avec l'utilitaire de ligne de commande dta  
   
 1.  Créez une charge de travail de paramétrage. Pour plus d'informations sur l'exécution de cette tâche, consultez [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
@@ -180,17 +184,17 @@ caps.handback.revision: 34
   
      Une fois le paramétrage terminé, utilisez l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données pour afficher les rapports de paramétrage, ou bien ouvrez le fichier de sortie XML pour afficher les éléments **TuningSummary** et **Configuration** , ainsi que les recommandations de l'Assistant Paramétrage du moteur de base de données. Pour plus d'informations sur l'affichage des résultats de votre session de paramétrage, consultez [Afficher les résultats d'un paramétrage](#View) plus haut dans cette rubrique. Notez également que le fichier de sortie XML peut contenir des rapports d'analyse de l'Assistant Paramétrage du moteur de base de données.  
   
-7.  Répétez les étapes 6 et 7 jusqu'à ce que vous ayez créé la configuration hypothétique qui produit l'amélioration des performances de requête recherchée. Vous pouvez alors mettre en œuvre la nouvelle configuration. Pour plus d'informations, consultez [Mettre en œuvre des recommandations de paramétrage](#Implement) plus haut dans cette rubrique.  
+7.  Répétez les étapes 6 et 7 jusqu'à ce que vous ayez créé la configuration hypothétique qui produit l'amélioration des performances de requête recherchée. Vous pouvez alors mettre en œuvre la nouvelle configuration. Pour plus d'informations, consultez [Mettre en œuvre des recommandations de paramétrage](#Implement) plus haut dans cette rubrique.  
   
 ##  <a name="ReviewEvaluateClone"></a> Examiner, évaluer et cloner les sessions de paramétrage  
  L'Assistant Paramétrage du moteur de base de données crée une nouvelle session de paramétrage chaque fois que vous le démarrez pour analyser les effets d'une charge de travail sur votre ou vos bases de données. Vous pouvez utiliser le **Moniteur de session** de l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données pour afficher ou recharger toutes les sessions de paramétrage qui ont été exécutées sur une instance donnée de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le fait de pouvoir examiner l'ensemble des sessions de paramétrage existantes facilite : le clonage de sessions, l'édition de recommandations de paramétrage existantes et l'utilisation de l'Assistant Paramétrage du moteur de base de données pour évaluer la session éditée, ou la réalisation régulière d'opérations de paramétrage afin de surveiller le modèle physique de vos bases de données. Par exemple, vous pouvez être amené à planifier l'analyse mensuelle d'une base de données.  
   
  Avant de pouvoir examiner une session de paramétrage d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez créer des sessions de paramétrage sur l'instance serveur, en analysant des charges de travail via l'Assistant Paramétrage du moteur de base de données. Pour plus d’informations, consultez [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-### Examiner les sessions de paramétrage existantes  
+### <a name="review-existing-tuning-sessions"></a>Examiner les sessions de paramétrage existantes  
  Suivez les étapes ci-dessous pour parcourir les sessions de paramétrage existantes d'une instance donnée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##### Pour examiner des sessions de paramétrage existantes  
+##### <a name="to-review-existing-tuning-sessions"></a>Pour examiner des sessions de paramétrage existantes  
   
 1.  Démarrez l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données. Pour plus d’informations, consultez [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
@@ -200,10 +204,10 @@ caps.handback.revision: 34
   
 4.  Double cliquez sur le nom d'une session de paramétrage pour charger ses données dans l'Assistant Paramétrage du moteur de base de données. Une fois les données de la session chargées, vous pouvez sélectionner n'importe quel onglet afin d'afficher les informations relatives à cette session de paramétrage.  
   
-### Évaluer des sessions de paramétrage existantes en tant que configurations hypothétiques  
- Suivez les étapes suivantes pour évaluer une session de paramétrage existante. L'évaluation d'une session de paramétrage existante implique l'examen et l'édition de ses recommandations, puis le reparamétrage. Par exemple, si vous décidez que vous voulez uniquement créer des index sur la **table1**, vous pouvez supprimer la création des vues indexées et du partitionnement d'une recommandation de paramétrage existante. L'Assistant Paramétrage du moteur de base de données crée alors une nouvelle session de paramétrage et ajuste la charge de travail de vos bases de données au moyen des recommandations éditées, envisagées en tant que configuration hypothétique. Cela signifie que l'Assistant Paramétrage du moteur de base de données ajuste la charge de travail des bases de données comme si les recommandations éditées avaient été mises en œuvre, ce qui vous permet de réaliser une analyse de simulation limitée. Il s'agit d'une analyse de simulation limitée dans la mesure où, lorsque vous utilisez le GUI de l'Assistant Paramétrage du moteur de base de données, vous ne pouvez choisir qu'un sous-ensemble d'une recommandation existante. Pour réaliser une analyse complète de scénarios spécifiant une configuration hypothétique entièrement nouvelle, non basée sur un sous-ensemble d’une session précédente de paramétrage, vous devez utiliser le fichier d’entrée XML de l’Assistant Paramétrage du moteur de base de données avec l’utilitaire de ligne de commande **dta**.  
+### <a name="evaluate-existing-tuning-sessions-as-hypothetical-configurations"></a>Évaluer des sessions de paramétrage existantes en tant que configurations hypothétiques  
+ Suivez les étapes suivantes pour évaluer une session de paramétrage existante. L'évaluation d'une session de paramétrage existante implique l'examen et l'édition de ses recommandations, puis le reparamétrage. Par exemple, si vous décidez que vous voulez uniquement créer des index sur la **table1**, vous pouvez supprimer la création des vues indexées et du partitionnement d'une recommandation de paramétrage existante. L'Assistant Paramétrage du moteur de base de données crée alors une nouvelle session de paramétrage et ajuste la charge de travail de vos bases de données au moyen des recommandations éditées, envisagées en tant que configuration hypothétique. Cela signifie que l'Assistant Paramétrage du moteur de base de données ajuste la charge de travail des bases de données comme si les recommandations éditées avaient été mises en œuvre, ce qui vous permet de réaliser une analyse de simulation limitée. Il s'agit d'une analyse de simulation limitée dans la mesure où, lorsque vous utilisez le GUI de l'Assistant Paramétrage du moteur de base de données, vous ne pouvez choisir qu'un sous-ensemble d'une recommandation existante. Pour réaliser une analyse complète de scénarios spécifiant une configuration hypothétique entièrement nouvelle, non basée sur un sous-ensemble d’une session précédente de paramétrage, vous devez utiliser le fichier d’entrée XML de l’Assistant Paramétrage du moteur de base de données avec l’utilitaire de ligne de commande **dta** .  
   
-##### Pour évaluer une session de paramétrage existante  
+##### <a name="to-evaluate-an-existing-tuning-session"></a>Pour évaluer une session de paramétrage existante  
   
 1.  Après avoir démarré l’Assistant Paramétrage du moteur de base de données, double cliquez sur une session de paramétrage dans la moitié supérieure du **Moniteur de session**, ce qui charge les données de la session dans l’Assistant Paramétrage du moteur de base de données.  
   
@@ -223,10 +227,10 @@ caps.handback.revision: 34
   
 9. Dans la barre d'outils, cliquez sur le bouton **Démarrer l'analyse** . L'Assistant Paramétrage du moteur de base de données commence à analyser les bases de données au moyen de la configuration hypothétique. Lorsque l'Assistant Paramétrage du moteur de base de données se termine, vous pouvez consulter les résultats de cette session comme vous le feriez normalement pour toute session.  
   
-### Cloner des sessions de paramétrage existantes  
+### <a name="clone-existing-tuning-sessions"></a>Cloner des sessions de paramétrage existantes  
  Vous pouvez créer de nouvelles sessions de paramétrage basées sur des sessions existantes en choisissant l'option clonage de l'Assistant Paramétrage du moteur de base de données. Lorsque vous utilisez l'option clonage, vous basez une nouvelle session de paramétrage sur une session existante. Vous pouvez alors changer les options de paramétrage de la nouvelle session si nécessaire. Lorsque vous évaluez une session existante comme décrit dans la procédure précédente, l'Assistant Paramétrage du moteur de base de données crée également une nouvelle session de paramétrage, mais vous ne pouvez en modifier les options.  
   
-##### Pour créer de nouvelles sessions de paramétrage en clonant des sessions existantes  
+##### <a name="to-create-new-tuning-sessions-by-cloning-existing-sessions"></a>Pour créer de nouvelles sessions de paramétrage en clonant des sessions existantes  
   
 1.  Après avoir démarré l’Assistant Paramétrage du moteur de base de données, double cliquez sur une session de paramétrage dans la moitié supérieure du **Moniteur de session**, ce qui charge les données de la session dans l’Assistant Paramétrage du moteur de base de données.  
   
@@ -242,15 +246,15 @@ caps.handback.revision: 34
   
 ##  <a name="UI"></a> Descriptions de l'interface utilisateur  
   
-### Moniteur de sessions  
+### <a name="sessions-monitor"></a>Moniteur de sessions  
  Le**Moniteur de session** affiche des informations sur les sessions ouvertes dans l'Assistant Paramétrage du moteur de base de données. Pour afficher des informations sur la session dans la fenêtre des propriétés, sélectionnez un nom de session dans le **Moniteur de session**.  
   
-### Onglet Recommandations  
+### <a name="recommendations-tab"></a>Onglet Recommandations  
  L'onglet **Recommandations** apparaît une fois que l'Assistant Paramétrage du moteur de base de données a terminé l'analyse d'une charge de travail. Cette grille contient les recommandations pour chaque objet pris en compte. Le cas échéant, les recommandations relatives aux partitions sont présentées dans la grille supérieure tandis que les recommandations relatives aux index sont présentées dans la grille inférieure. Les grilles ne s'affichent pas s'il n'existe aucune recommandation.  
   
  La colonne **Définition** contient la définition de la partition ou de l'index recommandés sous forme de lien hypertexte. Cette colonne est généralement trop étroite pour pouvoir voir la définition en entier. Cliquez sur le lien hypertexte pour ouvrir une boîte de dialogue contenant l'intégralité de la définition et le bouton **Copier dans le Presse-papiers** .  
   
-#### Recommandations relatives aux partitions  
+#### <a name="partition-recommendations"></a>Recommandations de partition  
  **Nom de la base de données**  
  Base de données contenant les objets dont la modification est recommandée.  
   
@@ -263,13 +267,13 @@ caps.handback.revision: 34
  **Détails**  
  Description de la **Cible de recommandation**. Les valeurs possibles incluent une plage pour les fonctions de partition ou une valeur vide pour les schémas de partition.  
   
- **Non. de partitions**  
+ **Nombre de partitions**  
  Le nombre de partitions définies par les fonctions de partitionnement recommandées. Lorsque cette fonction est utilisée avec un schéma et appliquée ensuite à une table, les données de la table sont divisées selon ce nombre de partitions.  
   
  **Définition**  
  Définition de la **Cible de recommandation**. Cliquez sur la colonne pour ouvrir la boîte de dialogue Aperçu de script SQL qui contient un script pour l'action recommandée.  
   
-##### Recommandations relatives aux index  
+##### <a name="index-recommendations"></a>Recommandations d'index  
  **Nom de la base de données**  
  Base de données contenant les objets dont la modification est recommandée.  
   
@@ -300,7 +304,7 @@ caps.handback.revision: 34
  **Afficher les rapports sur la taille des objets**  
  Sélectionnez cette option pour afficher des rapports qui indiquent la taille des objets existants dans la grille des recommandations.  
   
-### Options du menu Actions/Appliquer les recommandations  
+### <a name="actions-menuapply-recommendations-options"></a>Options du menu Actions/Appliquer les recommandations  
  Lorsqu'une charge de travail a été analysée et que des recommandations ont été formulées, cliquez sur **Appliquer les recommandations** dans le menu **Actions** pour ouvrir la boîte de dialogue **Appliquer les recommandations** .  
   
  **Appliquer maintenant**  
@@ -315,7 +319,7 @@ caps.handback.revision: 34
  **Time**  
  Spécifiez l'heure à laquelle vous voulez exécuter le travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin d'appliquer les recommandations.  
   
-### Options de l'onglet Rapports  
+### <a name="reports-tab-options"></a>Options de l'onglet Rapports  
  L'onglet **Rapports** apparaît une fois que l'Assistant Paramétrage du moteur de base de données a terminé l'analyse d'une charge de travail.  
   
  **Résumé de paramétrage**  
@@ -337,7 +341,7 @@ caps.handback.revision: 34
  Apparaît lorsque la charge de travail est un fichier.  
   
  **Table de charge de travail**  
- Apparaît lorsque la charge de travail est une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Apparaît lorsque la charge de travail est une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Charge de travail**  
  Apparaît lorsque la charge de travail a été importée à partir de l'éditeur de requête de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -384,11 +388,11 @@ caps.handback.revision: 34
  **Nombre de statistiques à créer recommandé**  
  Le nombre recommandé de statistiques à créer pour la base de données analysée. Apparaît uniquement si les statistiques font partie des recommandations.  
   
- **Sélectionner le rapport**  
+ **Select Report**  
  Affiche les détails du rapport sélectionné. Les colonnes de la grille varient en fonction du rapport.  
   
-## Voir aussi  
- [Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
  [Utilitaire dta](../../tools/dta/dta-utility.md)  
   
   

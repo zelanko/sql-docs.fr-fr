@@ -1,32 +1,36 @@
 ---
-title: "Administrer des serveurs &#224; l&#39;aide de la Gestion bas&#233;e sur des strat&#233;gies | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "facette Voir facettes"
-  - "Declarative Management Framework Voir Gestion basée sur des stratégie"
-  - "configuration de la surface d’exposition [SQL Server], gestion basée sur des stratégies"
-  - "Gestion basée sur des stratégies"
-  - "facettes [Gestion basée sur des stratégies]"
-  - "gestion basée sur des stratégies, administration"
-  - "conditions [Gestion basée sur des stratégies]"
-  - "facettes [gestion basée sur des stratégies], à propos des facettes"
-  - "PolicyAdministratorRole, rôle"
+title: "Administrer des serveurs à l’aide de la Gestion basée sur des stratégies | Microsoft Docs"
+ms.custom: 
+ms.date: 08/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- facet See facets
+- Declarative Management Framework See Policy-Based Management
+- surface area configuration [SQL Server], Policy-Based Management
+- Policy-Based Management
+- facets [Policy-Based Management]
+- Policy-Based Management, administering
+- conditions [Policy-Based Management]
+- facets [Policy-Based Management], about facets
+- PolicyAdministratorRole role
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 caps.latest.revision: 76
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 76
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc3d3e94cd6d5993b9647a394338649fe357f021
+ms.lasthandoff: 04/11/2017
+
 ---
-# Administrer des serveurs &#224; l&#39;aide de la Gestion bas&#233;e sur des strat&#233;gies
+# <a name="administer-servers-by-using-policy-based-management"></a>Administrer des serveurs à l'aide de la Gestion basée sur des stratégies
    La Gestion basée sur des stratégies est un système de stratégies permettant de gérer une ou plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez la Gestion basée sur des stratégies pour créer des conditions qui contiennent des expressions de condition. Ensuite, créez des stratégies qui appliquent les conditions à des objets cibles de base de données.  
 
 Par exemple, en tant qu’administrateur de la base de données, vous souhaiterez peut-être vous assurer que la messagerie de base de données n’est pas activée sur certains serveurs afin de créer une condition et une stratégie qui définit cette option de serveur. 
@@ -47,8 +51,8 @@ Par exemple, en tant qu’administrateur de la base de données, vous souhaitere
   
 > **REMARQUE :** lorsque le système calcule le jeu d’objets pour une stratégie, les objets système sont exclus par défaut.  Par exemple, si le jeu d'objets de la stratégie fait référence à toutes les tables, la stratégie ne s'applique pas aux tables système. Si les utilisateurs souhaitent évaluer une stratégie sur les objets système, ils peuvent les ajouter explicitement au jeu d'objets. Toutefois, bien que toutes les stratégies soient prises en charge pour le mode d'évaluation **vérifier la planification** , pour des raisons de performances, toutes les stratégies comportant des jeux d'objets arbitraires ne sont pas prises en charge pour le mode d'évaluation **vérifier la planification** . Pour plus d’informations, consultez [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
-## Trois composants de la Gestion basée sur des stratégies  
- La Gestion basée sur des stratégies a trois composants :  
+## <a name="three-policy-based-management-components"></a>Trois composants de la Gestion basée sur des stratégies  
+ La Gestion basée sur des stratégies a trois composants :  
   
 -   Gestion de la stratégie. Les administrateurs de stratégie créent des stratégies.  
   
@@ -68,7 +72,7 @@ Par exemple, en tant qu’administrateur de la base de données, vous souhaitere
   
      Lorsque les stratégies automatisées ne sont pas activées, la Gestion basée sur des stratégies n'affecte pas les performances système.  
   
-## Termes  
+## <a name="terms"></a>Termes  
  **Cible gérée de la Gestion basée sur des stratégies** 
  Entités gérées par la Gestion basée sur des stratégies, telles qu’une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], une base de données, une table ou un index. Toutes les cibles dans une instance de serveur forment une hiérarchie cible. Un jeu de cibles est l'ensemble des cibles qui résulte de l'application d'un jeu de filtres cibles à la hiérarchie cible, par exemple toutes les tables de la base de données détenues par le schéma HumanResources.  
   
@@ -82,7 +86,7 @@ Ensemble de propriétés logiques qui modèlent le comportement ou les caractér
  Condition de la Gestion basée sur des stratégies et comportement attendu, par exemple mode d'évaluation, filtres de cibles et planification. Une stratégie ne peut contenir qu'une seule condition. Les stratégies peuvent être activées ou désactivées. Les stratégies sont stockées dans la base de données msdb.  
   
  **Catégorie de la stratégie de la Gestion basée sur des stratégies**  
- Catégorie définie par l'utilisateur afin d'aider à gérer les stratégies. Les utilisateurs peuvent classifier les stratégies en différentes catégories de stratégies. Une stratégie appartient à une seule catégorie de stratégie. Les catégories de stratégies s'appliquent aux bases de données et aux serveurs. Au niveau de la base de données, les conditions suivantes s'appliquent :  
+ Catégorie définie par l'utilisateur afin d'aider à gérer les stratégies. Les utilisateurs peuvent classifier les stratégies en différentes catégories de stratégies. Une stratégie appartient à une seule catégorie de stratégie. Les catégories de stratégies s'appliquent aux bases de données et aux serveurs. Au niveau de la base de données, les conditions suivantes s'appliquent :  
   
 -   Les propriétaires de base de données peuvent abonner une base de données à un jeu de catégories de stratégies.  
   
@@ -93,7 +97,7 @@ Ensemble de propriétés logiques qui modèlent le comportement ou les caractér
  Au niveau du serveur, les catégories de stratégies peuvent être appliquées à toutes les bases de données.  
   
  **Stratégie actuelle**  
- Les stratégies actuelles d'une cible sont celles qui gouvernent cette cible. Une stratégie est actuelle en ce qui concerne une cible uniquement si toutes les conditions suivantes sont remplies :  
+ Les stratégies actuelles d'une cible sont celles qui gouvernent cette cible. Une stratégie est actuelle en ce qui concerne une cible uniquement si toutes les conditions suivantes sont remplies :  
   
 -   La stratégie est activée.  
   
@@ -101,7 +105,7 @@ Ensemble de propriétés logiques qui modèlent le comportement ou les caractér
   
 -   La cible ou l'un de ses ancêtres s'abonne au groupe de stratégies qui contient cette stratégie.  
   
-## Liens vers des tâches spécifiques 
+## <a name="links-to-specific-tasks"></a>Liens vers des tâches spécifiques 
 
  - [Stocker des stratégies de Gestion basée sur des stratégies.](https://msdn.microsoft.com/library/hh213476.aspx)|  
  - [Configurer des alertes afin d'informer les administrateurs de stratégie en cas d'échec de stratégie](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
@@ -115,10 +119,11 @@ Ensemble de propriétés logiques qui modèlent le comportement ou les caractér
  - [Contrôler et appliquer les meilleures pratiques à l’aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)
 
   
- ## Exemples
+ ## <a name="examples"></a>Exemples
  - [Créer la stratégie Désactivé par défaut](https://msdn.microsoft.com/library/bb500172.aspx)
   - [Configurer un serveur pour exécuter la stratégie Désactivé par défaut](https://msdn.microsoft.com/library/bb522470.aspx)
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vues de la Gestion basée sur des stratégies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   
+

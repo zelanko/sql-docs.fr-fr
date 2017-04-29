@@ -1,34 +1,38 @@
 ---
-title: "Estimer la taille d&#39;une base de donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "allocation d’espace [SQL Server], taille de base de données"
-  - "calcul de taille de base de données"
-  - "augmentation de la taille de base de données"
-  - "taille de base de données [SQL Server], estimation"
-  - "prévision de taille de base de données"
-  - "taille [SQL Server], bases de données"
-  - "estimation de taille de base de données"
-  - "conception des bases de données [SQL Server], estimation de la taille"
+title: "Estimer la taille d’une base de données | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- space allocation [SQL Server], database size
+- calculating database size
+- increasing database size
+- database size [SQL Server], estimating
+- predicting database size
+- size [SQL Server], databases
+- estimating database size
+- designing databases [SQL Server], estimating size
 ms.assetid: 5b240161-eba4-44b0-946c-61a8fc00fc8c
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d2d986d7e899e630429f431f040addb9076f081a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Estimer la taille d&#39;une base de donn&#233;es
-  Lorsque vous concevez une base de données, il peut être utile d'estimer quelle taille elle aura une fois remplie. Cette estimation peut vous aider à déterminer la configuration matérielle dont vous aurez besoin pour :  
+# <a name="estimate-the-size-of-a-database"></a>Estimer la taille d'une base de données
+  Lorsque vous concevez une base de données, il peut être utile d'estimer quelle taille elle aura une fois remplie. Cette estimation peut vous aider à déterminer la configuration matérielle dont vous aurez besoin pour :  
   
--   atteindre le niveau de performances requis par vos applications ;  
+-   atteindre le niveau de performances requis par vos applications ;  
   
 -   garantir la quantité d'espace disque physique nécessaire pour stocker les données et les index.  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 20
   
  Pour estimer la taille d'une base de données, faites une estimation pour chaque table, puis additionnez les valeurs trouvées. La taille d'une table dépend de la présence ou non d'index et, le cas échéant, de leur type.  
   
-## Dans cette section  
+## <a name="in-this-section"></a>Dans cette section  
   
 |Rubrique|Description|  
 |-----------|-----------------|  

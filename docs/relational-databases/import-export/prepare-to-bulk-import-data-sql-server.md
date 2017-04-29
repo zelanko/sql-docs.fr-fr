@@ -1,36 +1,40 @@
 ---
-title: "Pr&#233;parer l&#39;importation de donn&#233;es en bloc (SQL&#160;Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "importation en bloc [SQL Server], à propos de l’importation en bloc"
-  - "instruction BULK INSERT, recommandations"
-  - "instruction BULK INSERT, restrictions"
-  - "utilitaire bcp [SQL Server], recommandations"
-  - "utilitaire bcp [SQL Server], restrictions"
-  - "caractères masqués"
-  - "fonction OPENROWSET, recommandations de BCP"
+title: "Préparer l’importation de données en bloc (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bulk importing [SQL Server], about bulk importing
+- BULK INSERT statement, guidelines
+- BULK INSERT statement, restrictions
+- bcp utility [SQL Server], guidelines
+- bcp utility [SQL Server], restrictions
+- hidden characters
+- OPENROWSET function, BCP guidelines
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e797c303dff0eef613024752c2788a6480f047ac
+ms.lasthandoff: 04/11/2017
+
 ---
-# Pr&#233;parer l&#39;importation de donn&#233;es en bloc (SQL&#160;Server)
+# <a name="prepare-to-bulk-import-data-sql-server"></a>Préparer l'importation de données en bloc (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Vous pouvez exécuter la commande **bcp**, l’instruction BULK INSERT ou la fonction OPENROWSET(BULK) pour importer des données en bloc uniquement à partir d’un fichier de données.  
+  Vous pouvez exécuter la commande **bcp** , l’instruction BULK INSERT ou la fonction OPENROWSET(BULK) pour importer des données en bloc uniquement à partir d’un fichier de données.  
   
 > [!NOTE]  
->  Il est possible d'écrire une application personnalisée qui importe des données en bloc à partir d'objets autres qu'un fichier texte. Pour importer des données en bloc à partir de mémoires tampons, utilisez les extensions bcp de l’interface de programmation d’applications (API) (ODBC) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ou l’interface OLE DB **IRowsetFastLoad**.  Pour importer des données en bloc à partir d’une table de données C#, utilisez l’API de copie en bloc ADO.NET, **SqlBulkCopy**.  
+>  Il est possible d'écrire une application personnalisée qui importe des données en bloc à partir d'objets autres qu'un fichier texte. Pour importer des données en bloc à partir de mémoires tampons, utilisez les extensions bcp de l’interface de programmation d’applications (API) (ODBC) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ou l’interface OLE DB **IRowsetFastLoad** .  Pour importer des données en bloc à partir d’une table de données C#, utilisez l’API de copie en bloc ADO.NET, **SqlBulkCopy**.  
   
 > [!NOTE]  
 >  L'importation de données en bloc dans une table distante n'est pas prise en charge.  
@@ -65,9 +69,9 @@ caps.handback.revision: 34
   
 -   Recherchez et supprimez les caractères masqués dans le fichier de données.  
   
-     De nombreux utilitaires et éditeurs de texte affichent les caractères masqués qui figurent généralement à la fin du fichier de données. Durant une opération d'importation en bloc, les caractères masqués d'un fichier de données ASCII peuvent causer des problèmes qui génèrent une erreur de type « une valeur NULL inattendue a été trouvée ». Il suffit en général de rechercher et de supprimer les caractères masqués pour éviter ce problème.  
+     De nombreux utilitaires et éditeurs de texte affichent les caractères masqués qui figurent généralement à la fin du fichier de données. Durant une opération d'importation en bloc, les caractères masqués d'un fichier de données ASCII peuvent causer des problèmes qui génèrent une erreur de type « une valeur NULL inattendue a été trouvée ». Il suffit en général de rechercher et de supprimer les caractères masqués pour éviter ce problème.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Importer et exporter des données en bloc à l’aide de l’utilitaire bcp &#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
  [Importer des données en bloc à l’aide de BULK INSERT ou OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
  [Utilitaire bcp](../../tools/bcp-utility.md)   

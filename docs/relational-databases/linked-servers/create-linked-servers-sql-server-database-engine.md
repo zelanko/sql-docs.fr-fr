@@ -1,52 +1,56 @@
 ---
-title: "Cr&#233;er des serveurs li&#233;s (moteur de base de donn&#233;es SQL Server) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/20/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.linkedserver.properties.general.f1"
-  - "sql13.swb.linkedserver.properties.security.f1"
-  - "sql13.swb.linkedserver.properties.provider.f1"
-  - "sql13.swb.linkedserver.properties.options.f1"
-helpviewer_keywords: 
-  - "serveurs liés [SQL Server], création"
+title: "Créer des serveurs liés (moteur de base de données SQL Server) | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/20/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.linkedserver.properties.general.f1
+- sql13.swb.linkedserver.properties.security.f1
+- sql13.swb.linkedserver.properties.provider.f1
+- sql13.swb.linkedserver.properties.options.f1
+helpviewer_keywords:
+- linked servers [SQL Server], creating
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 219a32bb6296fac9ec50f78899a31fe52475095c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er des serveurs li&#233;s (moteur de base de donn&#233;es SQL Server)
+# <a name="create-linked-servers-sql-server-database-engine"></a>Créer des serveurs liés (moteur de base de données SQL Server)
   Cette rubrique indique comment créer un serveur lié et accéder aux données provenant d'un autre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. En créant un serveur lié, vous pouvez utiliser des données provenant de plusieurs sources. Il n'est pas nécessaire que le serveur lié soit une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais il s'agit d'un scénario courant.  
   
 ##  <a name="Background"></a> Arrière-plan  
- Un serveur lié autorise l'accès à des sources de données OLE DB par l'intermédiaire de requêtes distribuées et hétérogènes. Une fois qu'un serveur lié a été créé, il est possible d'exécuter des requêtes distribuées sur ce serveur, et les requêtes peuvent joindre des tables de plusieurs sources de données. Si le serveur lié est défini comme une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les procédures stockées distantes peuvent être exécutées.  
+ Un serveur lié autorise l'accès à des sources de données OLE DB par l'intermédiaire de requêtes distribuées et hétérogènes. Une fois qu'un serveur lié a été créé, il est possible d'exécuter des requêtes distribuées sur ce serveur, et les requêtes peuvent joindre des tables de plusieurs sources de données. Si le serveur lié est défini comme une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les procédures stockées distantes peuvent être exécutées.  
   
  Les fonctions et les arguments requis du serveur lié peuvent considérablement varier. Cette rubrique fournit des exemples typiques, mais toutes les options ne sont pas décrites. Pour plus d’informations, consultez [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
 ##  <a name="Security"></a> Sécurité  
   
-### Autorisations  
- Quand vous utilisez des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)], vous avez besoin de l’autorisation **ALTER ANY LINKED SERVER** sur le serveur ou de l’appartenance au rôle serveur fixe **setupadmin**. Quand vous utilisez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vous avez besoin de l’autorisation **CONTROL SERVER** ou de l’appartenance au rôle serveur fixe **sysadmin**.  
+### <a name="permissions"></a>Autorisations  
+ Quand vous utilisez des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] , vous avez besoin de l’autorisation **ALTER ANY LINKED SERVER** sur le serveur ou de l’appartenance au rôle serveur fixe **setupadmin** . Quand vous utilisez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , vous avez besoin de l’autorisation **CONTROL SERVER** ou de l’appartenance au rôle serveur fixe **sysadmin** .  
   
 ##  <a name="Procedures"></a> Comment créer un serveur lié  
- Vous pouvez utiliser l'une des options suivantes :  
+ Vous pouvez utiliser l'une des options suivantes :  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+###  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-##### Pour créer un serveur lié à une autre instance de Serveur SQL à l'aide de SQL Server Management Studio  
+##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-sql-server-management-studio"></a>Pour créer un serveur lié à une autre instance de Serveur SQL à l'aide de SQL Server Management Studio  
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ouvrez l’Explorateur d’objets, développez **Objets serveur**, cliquez avec le bouton droit sur **Serveurs liés**, puis cliquez sur **Nouveau serveur lié**.  
   
@@ -62,16 +66,16 @@ caps.handback.revision: 18
      Sélectionnez une source de données OLE DB dans la zone de liste. Le fournisseur OLE DB est inscrit avec le PROGID donné dans le Registre.  
   
      **Nom de produit**  
-     Tapez le nom de produit de la source de données OLE DB à ajouter en tant que serveur lié.  
+     Tapez le nom de produit de la source de données OLE DB à ajouter en tant que serveur lié.  
   
      **Source de données**  
-     Tapez le nom de la source de données tel qu'il est interprété par le fournisseur OLE DB. Si vous vous connectez à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], spécifiez le nom d'instance.  
+     Tapez le nom de la source de données tel qu'il est interprété par le fournisseur OLE DB. Si vous vous connectez à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], spécifiez le nom d'instance.  
   
      **Chaîne du fournisseur**  
-     Tapez l'identificateur de programme unique (PROGID) du fournisseur OLE DB qui correspond à la source de données. Pour obtenir des exemples de chaînes de fournisseur valides, consultez [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
+     Tapez l'identificateur de programme unique (PROGID) du fournisseur OLE DB qui correspond à la source de données. Pour obtenir des exemples de chaînes de fournisseur valides, consultez [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
      **Emplacement**  
-     Tapez l'emplacement de la base de données tel qu'il est interprété par le fournisseur OLE DB.  
+     Tapez l'emplacement de la base de données tel qu'il est interprété par le fournisseur OLE DB.  
   
      **Catalogue**  
      Tapez le nom du catalogue à utiliser lors de la connexion au fournisseur OLE DB.  
@@ -89,7 +93,7 @@ caps.handback.revision: 18
      Affiche la connexion locale qui peut se connecter au serveur lié. La connexion locale peut être une connexion utilisant l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une connexion utilisant l'authentification Windows. Utilisez cette liste pour restreindre la connexion à des connexions spécifiques ou pour autoriser certaines connexions à se connecter sous une connexion différente.  
   
      **Impersonate**  
-     Permet de transmettre le nom d'utilisateur et le mot de passe de la connexion locale au serveur lié. Pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une connexion possédant un nom et un mot de passe identiques doit exister sur le serveur distant. Pour les connexions Windows, la connexion doit être une connexion valide sur le serveur lié.  
+     Permet de transmettre le nom d'utilisateur et le mot de passe de la connexion locale au serveur lié. Pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , une connexion possédant un nom et un mot de passe identiques doit exister sur le serveur distant. Pour les connexions Windows, la connexion doit être une connexion valide sur le serveur lié.  
   
      Pour utiliser l'emprunt d'identité, la configuration doit se conformer aux exigences relatives à la délégation.  
   
@@ -136,33 +140,33 @@ caps.handback.revision: 18
      **Utiliser le classement distant**  
      Détermine si le classement d'une colonne distante ou d'un serveur local doit être utilisé.  
   
-     Si la valeur est true, le classement des colonnes distantes est utilisé pour les sources de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tandis que le classement spécifié dans collation name (Nom du classement) est utilisé pour les sources de données autres que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Si la valeur est true, le classement des colonnes distantes est utilisé pour les sources de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tandis que le classement spécifié dans collation name (Nom du classement) est utilisé pour les sources de données autres que[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     Si la valeur est false, les requêtes distribuées utilisent toujours le classement par défaut du serveur local, tandis que collation name et le classement des colonnes distantes sont ignorés. La valeur par défaut est false.  
+     Si la valeur est false, les requêtes distribuées utilisent toujours le classement par défaut du serveur local, tandis que collation name et le classement des colonnes distantes sont ignorés. La valeur par défaut est false.  
   
      **Nom du classement**  
-     Spécifie le nom du classement utilisé par la source de données distante si use remote collation (Utiliser le classement distant) a la valeur true et si la source de données n'est pas une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le nom doit être l'un des classements pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Spécifie le nom du classement utilisé par la source de données distante si use remote collation (Utiliser le classement distant) a la valeur true et si la source de données n'est pas une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le nom doit être l'un des classements pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      Utilisez cette option lors d'un accès à une source de données OLE DB autre que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais dont le classement correspond à l'un des classements de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     Le serveur lié doit prendre en charge un classement unique utilisable pour toutes les colonnes du serveur. Ne définissez pas cette option si le serveur lié prend en charge plusieurs classements dans une source de données unique ou si le classement du serveur lié ne correspond peut-être pas à l'un des classements de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Le serveur lié doit prendre en charge un classement unique utilisable pour toutes les colonnes du serveur. Ne définissez pas cette option si le serveur lié prend en charge plusieurs classements dans une source de données unique ou si le classement du serveur lié ne correspond peut-être pas à l'un des classements de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      **Délai de connexion**  
      Valeur du délai d'expiration (en secondes) de la connexion à un serveur lié.  
   
-     Si la valeur est 0, utilisez la valeur d’option **sp_configure** par défaut [remote login timeout](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md).  
+     Si la valeur est 0, utilisez la valeur d’option **sp_configure** par défaut [remote login timeout](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md) .  
   
      **Délai de requête**  
      Valeur du délai d'expiration, en secondes, des requêtes par rapport à un serveur lié.  
   
-     Si la valeur est 0, utilisez la valeur d’option **sp_configure** par défaut [remote query timeout](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md).  
+     Si la valeur est 0, utilisez la valeur d’option **sp_configure** par défaut [remote query timeout](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md) .  
   
      **Activer la promotion des transactions distribuées**  
-     Cette option permet de protéger les actions d'une procédure de serveur à serveur par le biais d'une transaction MS DTC ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator). Lorsque cette option a la valeur TRUE, l'appel d'une procédure stockée distante démarre une transaction distribuée et inscrit la transaction avec MS DTC. Pour plus d’informations, consultez [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).  
+     Cette option permet de protéger les actions d'une procédure de serveur à serveur par le biais d'une transaction MS DTC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator). Lorsque cette option a la valeur TRUE, l'appel d'une procédure stockée distante démarre une transaction distribuée et inscrit la transaction avec MS DTC. Pour plus d’informations, consultez [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).  
   
 6.  Cliquez sur **OK**.  
   
-##### Pour afficher les options du fournisseur  
+##### <a name="to-view-the-provider-options"></a>Pour afficher les options du fournisseur  
   
 -   Pour afficher les options que le fournisseur met à disposition, cliquez sur la page **Options de fournisseurs** .  
   
@@ -172,13 +176,13 @@ caps.handback.revision: 18
      Indique que le fournisseur autorise la syntaxe de marqueur de paramètre '?' pour les requêtes paramétrables. Définissez cette option uniquement si le fournisseur prend en charge l'interface **ICommandWithParameters** et accepte le point d'interrogation en tant que marqueur de paramètre. La configuration de cette option permet à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'exécuter des requêtes paramétrables sur le fournisseur. Cette possibilité peut améliorer les performances de certaines requêtes.  
   
      **Requêtes imbriquées**  
-     Indique que le fournisseur autorise les instructions`SELECT` imbriquées dans la clause FROM. La configuration de cette option permet à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de déléguer au fournisseur certaines requêtes nécessitant l'imbrication des instructions SELECT dans la clause FROM.  
+     Indique que le fournisseur autorise les instructions `SELECT` imbriquées dans la clause FROM. La configuration de cette option permet à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de déléguer au fournisseur certaines requêtes nécessitant l'imbrication des instructions SELECT dans la clause FROM.  
   
      **Uniquement niveau zéro**  
-     Seules les interfaces OLE DB de niveau 0 sont invoquées pour le fournisseur.  
+     Seules les interfaces OLE DB de niveau 0 sont invoquées pour le fournisseur.  
   
      **Autoriser inprocess**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise l’instanciation du fournisseur en tant que serveur in-process. Lorsque cette option n'est pas définie, le comportement par défaut consiste à instancier le fournisseur en dehors du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'instanciation du fournisseur en dehors du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] protège le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des erreurs contenues dans le fournisseur. Lorsque le fournisseur est instancié en dehors du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les mises à jour ou insertions faisant référence à des colonnes longues (**text**, **ntext** ou **image**) ne sont pas autorisées.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise l’instanciation du fournisseur en tant que serveur in-process. Lorsque cette option n'est pas définie, le comportement par défaut consiste à instancier le fournisseur en dehors du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'instanciation du fournisseur en dehors du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] protège le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des erreurs contenues dans le fournisseur. Lorsque le fournisseur est instancié en dehors du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les mises à jour ou insertions faisant référence à des colonnes longues (**text**, **ntext**ou **image**) ne sont pas autorisées.  
   
      **Mises à jour non transactionnelles**  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise les mises à jour, même si **ITransactionLocal** n’est pas disponible. Si cette option est activée, les mises à jour du fournisseur ne sont pas récupérables puisque celui-ci ne prend pas en charge les transactions.  
@@ -195,9 +199,9 @@ caps.handback.revision: 18
 ###  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Pour créer un serveur lié à l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)], utilisez les instructions [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md), [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md) et [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md).  
   
-##### Pour créer un serveur lié à une autre instance de SQL Server à l'aide de Transact-SQL  
+##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-transact-sql"></a>Pour créer un serveur lié à une autre instance de SQL Server à l'aide de Transact-SQL  
   
-1.  Dans l'éditeur de requête, entrez la commande [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante pour créer une liaison avec une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nommée `SRVR002\ACCTG` :  
+1.  Dans l'éditeur de requête, entrez la commande [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante pour créer une liaison avec une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nommée `SRVR002\ACCTG`:  
   
     ```tsql  
     USE [master]  
@@ -220,9 +224,9 @@ caps.handback.revision: 18
   
     ```  
   
-##  <a name="FollowUp"></a> Suivi : mesures à prendre après avoir créé un serveur lié  
+##  <a name="FollowUp"></a> Suivi : mesures à prendre après avoir créé un serveur lié  
   
-#### Pour tester le serveur lié  
+#### <a name="to-test-the-linked-server"></a>Pour tester le serveur lié  
   
 -   Exécutez le code suivant pour tester la connexion au serveur lié. Cet exemple retourne les noms des bases de données sur le serveur lié.  
   
@@ -232,7 +236,7 @@ caps.handback.revision: 18
   
     ```  
   
-#### Écriture d'une requête qui joint les tables d'un serveur lié  
+#### <a name="writing-a-query-that-joins-tables-from-a-linked-server"></a>Écriture d'une requête qui joint les tables d'un serveur lié  
   
 -   Utilisez des noms en quatre parties pour faire référence à un objet sur un serveur lié. Exécutez le code suivant pour retourner une liste de toutes les connexions sur le serveur local avec leurs connexions correspondantes sur le serveur lié.  
   
@@ -246,9 +250,10 @@ caps.handback.revision: 18
   
      Lorsque NULL est retourné pour la connexion au serveur lié, cela indique que la connexion n'existe pas sur le serveur lié. Ces connexions ne seront pas en mesure d'utiliser le serveur lié, à moins que le serveur lié ne soit configuré pour passer un contexte de sécurité différent ou que le serveur lié accepte des connexions anonymes.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Serveurs liés &#40;moteur de base de données&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)  
   
   
+

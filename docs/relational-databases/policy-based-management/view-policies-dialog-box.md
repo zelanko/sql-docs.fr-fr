@@ -1,27 +1,31 @@
 ---
-title: "Bo&#238;te de dialogue Afficher les strat&#233;gies | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.managepolicies.general.f1"
+title: "Boîte de dialogue Afficher les stratégies | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.managepolicies.general.f1
 ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e92832844968d82686efdcc696294c9ce8ff75f2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Bo&#238;te de dialogue Afficher les strat&#233;gies
+# <a name="view-policies-dialog-box"></a>Boîte de dialogue Afficher les stratégies
   Utilisez cette boîte de dialogue pour afficher les stratégies en vigueur pour cette cible. Cette boîte de dialogue répertorie les stratégies pertinentes, leurs catégories de stratégie et des informations à propos des stratégies.  
   
-## Options  
+## <a name="options"></a>Options  
  **État d'intégrité de la stratégie**  
  Indique l'état de la stratégie en ce qui concerne cette cible. Reste vierge lorsque l'état est inconnu.  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 26
  **Dernière exécution**  
  Date et heure de la dernière exécution de la stratégie.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

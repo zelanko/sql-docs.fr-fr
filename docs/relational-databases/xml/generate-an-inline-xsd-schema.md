@@ -1,33 +1,37 @@
 ---
-title: "G&#233;n&#233;rer un sch&#233;ma XSD en ligne | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "schémas XSD [SQL Server]"
-  - "XMLSCHEMA, option"
-  - "schémas [SQL Server], XML"
-  - "XDR, schémas"
-  - "clause FOR XML, génération de schéma XSD en ligne"
-  - "génération de schéma XSD en ligne [SQL Server]"
-  - "XMLDATA, option"
+title: "Générer un schéma XSD en ligne | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XSD schemas [SQL Server]
+- XMLSCHEMA option
+- schemas [SQL Server], XML
+- XDR schemas
+- FOR XML clause, inline XSD schema generation
+- inline XSD schema generation [SQL Server]
+- XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8290d7fe8b7900291d4afe3c944564d8f2aef608
+ms.lasthandoff: 04/11/2017
+
 ---
-# G&#233;n&#233;rer un sch&#233;ma XSD en ligne
+# <a name="generate-an-inline-xsd-schema"></a>Générer un schéma XSD en ligne
   Dans une clause FOR XML, vous pouvez demander que votre requête retourne un schéma en ligne avec les résultats de la requête. Pour obtenir un schéma XDR, utilisez le mot clé XMLDATA dans la clause FOR XML. Pour obtenir un schéma XSD, utilisez le mot clé XMLSCHEMA.  
   
- Cette rubrique décrit le mot clé XMLSCHEMA et explique la structure du schéma XSD en ligne résultant. Les limites suivantes sont à respecter lorsque vous demandez des schémas en ligne :  
+ Cette rubrique décrit le mot clé XMLSCHEMA et explique la structure du schéma XSD en ligne résultant. Les limites suivantes sont à respecter lorsque vous demandez des schémas en ligne :  
   
 -   Vous pouvez spécifier XMLSCHEMA seulement en mode RAW et AUTO, pas en mode EXPLICIT.  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 34
   
  Lorsque vous spécifiez XMLSCHEMA dans une requête FOR XML, vous recevez à la fois un schéma et des données XML, le résultat de la requête. Chaque élément de niveau supérieur des données fait référence au schéma précédent en utilisant une déclaration d'espace de noms qui, à son tour, fait référence à l'espace de noms cible du schéma en ligne.  
   
- Exemple :  
+ Exemple :  
   
 ```  
 <xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
@@ -58,7 +62,7 @@ caps.handback.revision: 34
   
  Le résultat inclut un schéma XML et le résultat XML. L'élément de niveau supérieur <`ProductModel`> dans le résultat fait référence au schéma en utilisant la déclaration d'espace de noms par défaut, xmlns="urn:schemas-microsoft-com:sql:SqlRowSet1" .  
   
- La partie schéma du résultat peut contenir plusieurs documents de schéma qui décrivent plusieurs espaces de noms. Au minimum, le deux documents de schéma ci-dessous sont retournés :  
+ La partie schéma du résultat peut contenir plusieurs documents de schéma qui décrivent plusieurs espaces de noms. Au minimum, le deux documents de schéma ci-dessous sont retournés :  
   
 -   Un document de schéma pour l’espace de noms **Sqltypes** et pour lequel les types SQL de base sont retournés.  
   
@@ -81,10 +85,10 @@ WHERE ProductModelID=1
 FOR XML AUTO, XMLSCHEMA ('MyURI')  
 ```  
   
-## Éléments d'entité  
+## <a name="entity-elements"></a>Éléments d'entité  
  Pour pouvoir analyser les détails de la structure de schéma XSD générée pour le résultat de la requête, l'élément d'entité doit être décrit au préalable  
   
- Un élément d'entité dans les données XML retournées par une requête FOR XML est un élément généré à partir d'une table et non pas à partir d'une colonne. Par exemple, la requête FOR XML ci-dessous retourne des informations de contact à partir de la table `Person` dans la base de données `AdventureWorks2012`.  
+ Un élément d'entité dans les données XML retournées par une requête FOR XML est un élément généré à partir d'une table et non pas à partir d'une colonne. Par exemple, la requête FOR XML ci-dessous retourne des informations de contact à partir de la table `Person` dans la base de données `AdventureWorks2012` .  
   
 ```  
 SELECT BusinessEntityID, FirstName  
@@ -113,7 +117,7 @@ AND     SalesOrderHeader.SalesOrderID=5001
 FOR XML AUTO, ELEMENTS, XMLSCHEMA  
 ```  
   
- Comme la requête spécifie la directive ELEMENTS, les données XML résultantes sont centrées sur les éléments. La requête spécifie également la directive XMLSCHEMA. Par conséquent, un schéma XSD en ligne est retourné. Voici le résultat obtenu :  
+ Comme la requête spécifie la directive ELEMENTS, les données XML résultantes sont centrées sur les éléments. La requête spécifie également la directive XMLSCHEMA. Par conséquent, un schéma XSD en ligne est retourné. Voici le résultat obtenu :  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
@@ -159,8 +163,8 @@ FOR XML AUTO, ELEMENTS, XMLSCHEMA
   
 -   <`SalesOrderID`>, <`ProductID`> et <`OrderQty`> ne sont pas des éléments d'entité, car ils sont mappés avec des colonnes. Les données de colonne sont retournées en tant qu'éléments dans les données XML, en raison de la directive ELEMENTS. Elles sont mappées avec les éléments locaux du type complexe de l'élément d'entité. Notez que si la directive ELEMENTS n'est pas spécifiée, les valeurs `SalesOrderID`, `ProductID` et `OrderQty` sont mappées avec les attributs locaux du type complexe de l'élément d'entité correspondant.  
   
-## Conflits de noms d'attributs  
- La discussion suivante est basée sur les tables `CustOrder` et `CustOrderDetail`. Pour tester les exemples suivants, créez ces tables et ajoutez vos propres données d'exemple :  
+## <a name="attribute-name-clashes"></a>Conflits de noms d'attributs  
+ La discussion suivante est basée sur les tables `CustOrder` et `CustOrderDetail` . Pour tester les exemples suivants, créez ces tables et ajoutez vos propres données d'exemple :  
   
 ```  
 CREATE TABLE CustOrder (OrderID int primary key, CustomerID int)  
@@ -180,7 +184,7 @@ WHERE  CustOrder.OrderID = CustOrderDetail.OrderID
 FOR XML RAW, XMLSCHEMA  
 ```  
   
- Toutefois, comme il est possible de disposer de deux éléments du même nom, vous pouvez éliminer le problème en ajoutant la directive ELEMENTS :  
+ Toutefois, comme il est possible de disposer de deux éléments du même nom, vous pouvez éliminer le problème en ajoutant la directive ELEMENTS :  
   
 ```  
 SELECT CustOrder.OrderID,  
@@ -191,7 +195,7 @@ where  CustOrder.OrderID = CustOrderDetail.OrderID
 FOR XML RAW, XMLSCHEMA, ELEMENTS  
 ```  
   
- Voici l'ensemble de résultats. Notez dans le schéma XSD en ligne que l'élément OrderID est défini deux fois. Dans une des déclarations, minOccurs a la valeur 0, ce qui correspond à l'OrderID de la table CustOrderDetail, et l'autre déclaration est mappée avec la colonne clé primaire OrderID de la table `CustOrder` où minOccurs a la valeur 1 par défaut.  
+ Voici l'ensemble de résultats. Notez dans le schéma XSD en ligne que l'élément OrderID est défini deux fois. Dans une des déclarations, minOccurs a la valeur 0, ce qui correspond à l'OrderID de la table CustOrderDetail, et l'autre déclaration est mappée avec la colonne clé primaire OrderID de la table `CustOrder` où minOccurs a la valeur 1 par défaut.  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
@@ -217,10 +221,10 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
   
  `</xsd:schema>`  
   
-## Conflits de noms d'éléments  
+## <a name="element-name-clashes"></a>Conflits de noms d'éléments  
  Dans FOR XML, le même nom peut être utilisé pour indiquer deux sous-éléments. Par exemple, la requête ci-dessous récupère les valeurs ListPrice et DealerPrice des produits, mais la requête spécifie le même alias, Price, pour ces deux colonnes. Par conséquent, l'ensemble de lignes résultant possèdera deux colonnes du même nom.  
   
-### Cas 1 : les deux sous-éléments sont des colonnes non-clés du même type et ils acceptent la valeur NULL  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>Cas 1 : les deux sous-éléments sont des colonnes non-clés du même type et ils acceptent la valeur NULL  
  Dans la requête ci-dessous, les deux sous-éléments sont des colonnes non-clés du même type et ils acceptent la valeur NULL.  
   
 ```  
@@ -236,7 +240,7 @@ FROM   T
 for    XML RAW, ELEMENTS, XMLSCHEMA  
 ```  
   
- Ceci représente le schéma XML correspondant généré. Seule une fraction du schéma XSD en ligne est indiquée :  
+ Ceci représente le schéma XML correspondant généré. Seule une fraction du schéma XSD en ligne est indiquée :  
   
  `…`  
   
@@ -270,7 +274,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
- Notez les éléments suivants dans le schéma XSD en ligne :  
+ Notez les éléments suivants dans le schéma XSD en ligne :  
   
 -   ListPrice et DealerPrice sont du même type, `money`, et les deux acceptent la valeur NULL dans la table. Par conséquent, comme ils peuvent ne pas être retournés dans les données XML résultantes, il existe un seul élément enfant <`Price`> dans la déclaration de type complexe de l'élément <`row`> pour lequel minOccurs=0 et maxOccurs=2.  
   
@@ -312,7 +316,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### Cas 2 : une colonne clé et une colonne non-clé du même type  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>Cas 2 : une colonne clé et une colonne non-clé du même type  
  La requête ci-dessous illustre une colonne clé et une colonne non-clé du même type.  
   
 ```  
@@ -390,8 +394,8 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  Notez dans le schéma XSD en ligne que l'élément <`Col`> correspondant à Col2 a une valeur minOccurs égale à 0.  
   
-### Cas 3 : les deux éléments sont de types différents et les colonnes correspondantes acceptent la valeur NULL  
- La requête ci-dessous est spécifiée sur l'exemple de table défini dans le cas 2 :  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Cas 3 : les deux éléments sont de types différents et les colonnes correspondantes acceptent la valeur NULL  
+ La requête ci-dessous est spécifiée sur l'exemple de table défini dans le cas 2 :  
   
 ```  
 SELECT Col1, Col2 as Col, Col3 as Col  

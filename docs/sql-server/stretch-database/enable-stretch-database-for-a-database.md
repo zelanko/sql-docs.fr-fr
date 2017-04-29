@@ -1,27 +1,30 @@
 ---
-title: "Activer Stretch Database pour une base de donn&#233;es | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Stretch Database, activation de la base de données"
-  - "activation de la base de données pour Stretch Database"
+title: "Activer Stretch Database pour une base de données | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stretch
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Stretch Database, enabling database
+- enabling database for Stretch Database
 ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
 caps.latest.revision: 70
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 69
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 15d9caa3c474d5cbe2e16e158e6f2fcfe7959ed6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Activer Stretch Database pour une base de donn&#233;es
+# <a name="enable-stretch-database-for-a-database"></a>Activer Stretch Database pour une base de données
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Pour configurer une base de données existante pour Stretch Database, sélectionnez **Tâches | Stretch | Activer** pour une base de données dans SQL Server Management Studio afin d’ouvrir l’Assistant **Activer la base de données pour Stretch**. Vous pouvez également utiliser Transact-SQL pour activer Stretch Database pour une base de données.  
@@ -30,11 +33,12 @@ caps.handback.revision: 69
   
  L’activation de Stretch Database sur une table ou une base de données nécessite les autorisations db_owner. L’activation de Stretch Database sur une base de données nécessite également les autorisations CONTROL DATABASE.  
 
- >   [!NOTE] Ultérieurement, n’oubliez pas que la désactivation de Stretch Database pour une table ou une base de données ne supprime pas l’objet distant. Si vous souhaitez supprimer la table distante ou la base de données distante, vous devez la supprimer à l'aide du portail de gestion Azure. Les objets distants continuent d’entraîner des coûts Azure tant qu’ils n’ont pas été supprimés manuellement. 
+ >   [!NOTE]
+ > Ultérieurement, n’oubliez pas que la désactivation de Stretch Database pour une table ou une base de données ne supprime pas l’objet distant. Si vous souhaitez supprimer la table distante ou la base de données distante, vous devez la supprimer à l'aide du portail de gestion Azure. Les objets distants continuent d’entraîner des coûts Azure tant qu’ils n’ont pas été supprimés manuellement. 
  
-## Avant de commencer  
+## <a name="before-you-get-started"></a>Avant de commencer  
   
--   Avant de configurer une base de données pour Stretch, nous vous recommandons d’exécuter l’Assistant Stretch Database pour identifier les bases de données et les tables qui sont éligibles pour Stretch. L’Assistant Stretch Database identifie également les problèmes de blocage. Pour plus d’informations, consultez [Identifier des bases de données et tables pour Stretch Database en exécutant Stretch Database Advisor](../../sql-server/stretch-database/stretch database databases and tables - stretch database advisor.md).  
+-   Avant de configurer une base de données pour Stretch, nous vous recommandons d’exécuter l’Assistant Stretch Database pour identifier les bases de données et les tables qui sont éligibles pour Stretch. L’Assistant Stretch Database identifie également les problèmes de blocage. Pour plus d’informations, consultez [Identifier des bases de données et tables pour Stretch Database en exécutant Stretch Database Advisor](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md).  
   
 -   Consultez [Limitations concernant Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md).  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 69
   
 -   Si vous n’avez pas les autorisations nécessaires, un administrateur doit activer l’option manuellement en exécutant **sp_configure** avant que vous n’exécutiez l’Assistant ou un administrateur doit exécuter lui-même l’Assistant.  
   
- Pour activer Stretch Database sur le serveur manuellement, exécutez **sp_configure** et activez l’option **Archive de données distante**. L’exemple suivant active l’option **remote data archive** en définissant sa valeur sur 1.  
+ Pour activer Stretch Database sur le serveur manuellement, exécutez **sp_configure** et activez l’option **Archive de données distante** . L’exemple suivant active l’option **remote data archive** en définissant sa valeur sur 1.  
   
 ```  
 EXEC sp_configure 'remote data archive' , '1';  
@@ -108,7 +112,7 @@ GO
 
     -   Vous pouvez utiliser un compte de service fédéré pour que le serveur SQL Server communique avec le serveur Azure distant lorsque les conditions suivantes sont toutes vraies.  
   
-        -   Le compte de service sous lequel l’instance de SQL Server s’exécute est un compte de domaine.  
+        -   Le compte de service sous lequel l’instance de SQL Server s’exécute est un compte de domaine.  
   
         -   Le compte de domaine appartient à un domaine dont Active Directory est fédéré avec Azure Active Directory.  
   
@@ -132,7 +136,7 @@ GO
     GO
     ```  
   
-## Étapes suivantes  
+## <a name="next-steps"></a>Étapes suivantes  
 -   [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) pour activer des tables supplémentaires.  
   
 -   Pour connaître l’état de la migration de données, consultez [Surveiller et résoudre les problèmes de migration de données &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).  
@@ -145,8 +149,9 @@ GO
   
 -   [Restaurer des bases de données Stretch](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
   
-## Voir aussi  
- [Identifier des bases de données et tables pour Stretch Database en exécutant Stretch Database Advisor](../../sql-server/stretch-database/stretch database databases and tables - stretch database advisor.md)   
- [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)  
+## <a name="see-also"></a>Voir aussi  
+ [Identifier des bases de données et tables pour Stretch Database en exécutant Stretch Database Advisor](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
+ [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
   
+

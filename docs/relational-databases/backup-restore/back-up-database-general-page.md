@@ -1,24 +1,28 @@
 ---
-title: "Sauvegarder la base de donn&#233;es (page G&#233;n&#233;ral) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.backupdatabase.general.f1"
+title: "Sauvegarder la base de données (page Général) | Microsoft Docs"
+ms.custom: 
+ms.date: 07/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 caps.latest.revision: 64
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 64
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 038fa003ad819d89d8739f8cfaac53582f93932a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sauvegarder la base de donn&#233;es (page G&#233;n&#233;ral)
+# <a name="back-up-database-general-page"></a>Sauvegarder la base de données (page Général)
   La page **Général** de la boîte de dialogue **Sauvegarder la base de données** vous permet d'afficher ou de modifier les paramètres d'une opération de sauvegarde de base de données.  
   
  Pour plus d’informations sur les concepts de base de la sauvegarde, consultez [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
@@ -26,7 +30,7 @@ caps.handback.revision: 64
 > [!NOTE]  
 >  Quand vous spécifiez une tâche de sauvegarde à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous pouvez générer le script [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) correspondant en cliquant sur le bouton **Script** et en sélectionnant une destination pour le script.  
   
- **Pour créer une sauvegarde à l'aide de SQL Server Management Studio**  
+ **Pour créer une sauvegarde à l'aide de SQL Server Management Studio**  
   
 -   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
@@ -39,9 +43,9 @@ caps.handback.revision: 64
   
 -   Pour créer une sauvegarde partielle, vous devez utiliser l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) avec l'option PARTIAL.  
   
-## Options  
+## <a name="options"></a>Options  
   
-### Source  
+### <a name="source"></a>Source  
  Les options du volet **Source** identifient la base de données et spécifient le type de sauvegarde et le composant pour l'opération de sauvegarde.  
   
  **Base de données**  
@@ -75,7 +79,7 @@ caps.handback.revision: 64
 |**Base de données**|Indique que l'intégralité de la base de données doit être sauvegardée.|  
 |**Fichiers et groupes de fichiers**|Indique que les fichiers et/ou groupes de fichiers spécifiés doivent être sauvegardés.<br /><br /> La sélection de cette option provoque l'affichage de la boîte de dialogue **Sélection de fichiers et de groupes de fichiers** . Une fois que vous avez sélectionné les fichiers ou groupes de fichiers à sauvegarder et cliqué sur **OK**, vos sélections apparaissent dans la zone **Fichiers et groupes de fichiers** .|  
   
-### Destination  
+### <a name="destination"></a>Destination  
  Les options du volet **Destination** vous permettent de spécifier le type d'unité de sauvegarde pour l'opération de sauvegarde et de rechercher une unité de sauvegarde logique ou physique.  
   
 > [!NOTE]  
@@ -93,17 +97,17 @@ caps.handback.revision: 64
  L'affichage des options suivantes dépend du type de destination sélectionné. Si vous sélectionnez Disque ou Bande, les options suivantes s'affichent.  
   
  **Ajouter**  
- Permet d’ajouter un fichier ou une unité à la liste **Sauvegarde sur**. Vous pouvez sauvegarder jusqu'à 64 unités simultanément sur un disque local ou distant. Pour spécifier un fichier sur un disque distant, utilisez le nom complet UNC (Universal Naming Convention). Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
+ Permet d’ajouter un fichier ou une unité à la liste **Sauvegarde sur** . Vous pouvez sauvegarder jusqu'à 64 unités simultanément sur un disque local ou distant. Pour spécifier un fichier sur un disque distant, utilisez le nom complet UNC (Universal Naming Convention). Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
  
  
   
  **Supprimer**  
- Permet de supprimer une ou plusieurs unités sélectionnées de la liste **Sauvegarde sur**.  
+ Permet de supprimer une ou plusieurs unités sélectionnées de la liste **Sauvegarde sur** .  
   
  **Sommaire**  
 Permet d’afficher le contenu du support pour l’unité sélectionnée, s’il existe.  Le bouton n’exécute pas de fonction quand une **URL** est spécifiée. 
    
-Boîte de dialogue **Sélectionner la destination de la sauvegarde** La boîte de dialogue **Sélectionner la destination de la sauvegarde** s’affiche quand vous sélectionnez **Ajouter**.   L’ensemble d’options qui s’affiche dépend du type de destination sélectionné. 
+Boîte de dialogue**Sélectionner la destination de la sauvegarde** La boîte de dialogue **Sélectionner la destination de la sauvegarde** s’affiche quand vous sélectionnez **Ajouter**.   L’ensemble d’options qui s’affiche dépend du type de destination sélectionné. 
 
 Si vous avez sélectionné **Disque** ou **Bande** comme destination de la sauvegarde, l’option suivante s’affiche.  
 
@@ -113,7 +117,7 @@ Si vous avez sélectionné **Disque** ou **Bande** comme destination de la sauve
 
 Si vous avez sélectionné **URL** comme destination de la sauvegarde, les options suivantes s’affichent :
 *
-  **Conteneur de stockage Windows Azure**  
+  **Conteneur de stockage Windows Azure**  
   Nom du conteneur de stockage Microsoft Azure pour stocker les fichiers de sauvegarde. 
    
 *
@@ -128,7 +132,7 @@ Si vous avez sélectionné **URL** comme destination de la sauvegarde, les optio
   **Nouveau conteneur :**  
 Permet d’enregistrer un conteneur existant pour lequel vous n’avez pas de signature d’accès partagé.  Consultez [Se connecter à un abonnement Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Sauvegarder des fichiers et des groupes de fichiers &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
  [Définir une unité de sauvegarde logique pour un fichier de disque &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
@@ -136,3 +140,4 @@ Permet d’enregistrer un conteneur existant pour lequel vous n’avez pas de si
  [Modes de récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
+

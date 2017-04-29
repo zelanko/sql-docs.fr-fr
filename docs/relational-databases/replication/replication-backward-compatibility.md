@@ -1,39 +1,44 @@
 ---
-title: "Compatibilit&#233; descendante de la r&#233;plication | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "réplication transactionnelle, compatibilité descendante"
-  - "compatibilité ascendante [réplication SQL Server]"
-  - "compatibilité ascendante de la réplication de fusion [réplication SQL Server]"
-  - "réplication [SQL Server], compatibilité descendante"
-  - "compatibilité descendante [SQL Server], réplication"
-  - "réplication de capture instantanée [SQL Server], compatibilité descendante"
-  - "compatibilité [réplication SQL Server]"
+title: "Compatibilité descendante de la réplication | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transactional replication, backward compatibility
+- backward compatibility [SQL Server replication]
+- merge replication backward compatibility [SQL Server replication]
+- replication [SQL Server], backward compatibility
+- backward compatibility [SQL Server], replication
+- snapshot replication [SQL Server], backward compatibility
+- compatibility [SQL Server replication]
 ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 caps.latest.revision: 56
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 56
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1ee90e038146d4e313d1efefa8b08bf67649d60c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Compatibilit&#233; descendante de la r&#233;plication
-  Rubriques de la section compatibilité descendante décrivent les changements de comportement entre les versions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la réplication. Il est important de comprendre la compatibilité descendante si vous effectuez une mise à niveau ou si vous avez plusieurs versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une topologie de réplication.  
+# <a name="replication-backward-compatibility"></a>Compatibilité descendante de la réplication
+  Les rubriques de la section consacrée à la compatibilité descendante décrivent les changements de comportement entre les différentes versions de la réplication de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il est important de comprendre la compatibilité descendante si vous effectuez une mise à niveau ou si vous avez plusieurs versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une topologie de réplication.  
   
- [Fonctionnalités déconseillées dans la réplication SQL Server](../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)  
- Fonctionnalités de réplication qui ont été conservées dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pour la compatibilité descendante, mais qui sera supprimé dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Fonctionnalités dépréciées dans la réplication SQL Server](../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)  
+ Fonctionnalités de réplication qui ont été conservées dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pour permettre une compatibilité descendante, mais qui seront supprimées dans une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Dernières modifications dans la réplication SQL Server](../../relational-databases/replication/breaking-changes-in-sql-server-replication.md)  
  Modifications des fonctionnalités de réplication qui peuvent imposer des modifications dans les applications.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mettre à niveau des bases de données répliquées](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
   
+

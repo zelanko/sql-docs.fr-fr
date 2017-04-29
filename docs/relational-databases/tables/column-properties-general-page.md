@@ -1,31 +1,35 @@
 ---
-title: "Propri&#233;t&#233;s de la colonne (page G&#233;n&#233;ral) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.columnproperties.general.f1"
+title: "Propriétés de la colonne (page Général) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.columnproperties.general.f1
 ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 478dc0e10767f9e4e10c5c3ede74aec5ddaddef4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propri&#233;t&#233;s de la colonne (page G&#233;n&#233;ral)
+# <a name="column-properties-general-page"></a>Propriétés de la colonne (page Général)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Utilisez cette page pour afficher les propriétés de la colonne sélectionnée.  
   
- Les informations de cette page sont en lecture seule. Pour modifier la colonne, fermez la boîte de dialogue **Propriétés de la colonne**, développez la table et les colonnes dans l’Explorateur d’objets, cliquez avec le bouton droit sur la colonne, puis cliquez sur **Conception**.  
+ Les informations de cette page sont en lecture seule. Pour modifier la colonne, fermez la boîte de dialogue **Propriétés de la colonne** , développez la table et les colonnes dans l’Explorateur d’objets, cliquez avec le bouton droit sur la colonne, puis cliquez sur **Conception**.  
   
-## Options  
+## <a name="options"></a>Options  
  **Nom**  
  Nom de la colonne.  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 27
  Type de données susceptibles d'être contenues dans la colonne. S'il s'agit d'un type de données système, il est affiché. S'il s'agit d'un type de données défini par l'utilisateur, le type de données système qui le constitue est affiché.  
   
  **Clé primaire**  
- Indique si la colonne est une clé primaire. Les valeurs possibles sont **True** et **False**.  
+ Indique si la colonne est une clé primaire. Les valeurs possibles sont **True**et **False**.  
   
  **Null autorisé**  
  Indique si la colonne autorise les valeurs NULL. Les valeurs possibles sont **True** et **False**.  

@@ -1,27 +1,31 @@
 ---
-title: "Supprimer des tables (moteur de base de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "suppressions de table [SQL Server]"
-  - "suppression de tables"
-  - "effacement de tables"
-  - "élimination de tables"
+title: "Supprimer des tables (moteur de base de données) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table deletions [SQL Server]
+- deleting tables
+- removing tables
+- dropping tables
 ms.assetid: ca6aa3e9-9885-44c3-bafc-aec441fd97ec
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff85fc5a39fbb4c64bd934c98c235c69a2eff514
+ms.lasthandoff: 04/11/2017
+
 ---
-# Supprimer des tables (moteur de base de donn&#233;es)
+# <a name="delete-tables-database-engine"></a>Supprimer des tables (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Vous pouvez supprimer une table de votre base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -31,13 +35,13 @@ caps.handback.revision: 19
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour supprimer une table à l'aide de :**  
+-   **Pour supprimer une table à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -60,15 +64,15 @@ caps.handback.revision: 19
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Nécessite l’autorisation ALTER sur le schéma auquel appartient la table, l’autorisation CONTROL sur la table ou l’appartenance au rôle de base de données fixe **db_ddladmin**.  
+ Nécessite l’autorisation ALTER sur le schéma auquel appartient la table, l’autorisation CONTROL sur la table ou l’appartenance au rôle de base de données fixe **db_ddladmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour supprimer une table de la base de données  
+#### <a name="to-delete-a-table-from-the-database"></a>Pour supprimer une table de la base de données  
   
 1.  Dans l'Explorateur d'objets, sélectionnez la table à supprimer.  
   
-2.  Cliquez avec le bouton droit sur la table puis, dans le menu contextuel, cliquez sur **Supprimer**.  
+2.  Cliquez avec le bouton droit sur la table puis, dans le menu contextuel, cliquez sur **Supprimer** .  
   
 3.  Un message vous demande de confirmer la suppression. Cliquez sur **Oui**.  
   
@@ -77,7 +81,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour supprimer une table dans l'éditeur de requête  
+#### <a name="to-delete-a-table-in-query-editor"></a>Pour supprimer une table dans l'éditeur de requête  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

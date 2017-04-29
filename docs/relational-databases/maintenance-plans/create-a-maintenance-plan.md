@@ -1,29 +1,33 @@
 ---
-title: "Cr&#233;er un plan de maintenance | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "plans de maintenance [SQL Server], création"
+title: "Créer un plan de maintenance | Microsoft Docs"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- maintenance plans [SQL Server], creating
 ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: adab1fc3a3a009a4a6fe74ddbe9ee97f8c128bdf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er un plan de maintenance
+# <a name="create-a-maintenance-plan"></a>Créer un plan de maintenance
   Cette rubrique explique comment créer un plan de serveur ou de maintenance multiserveur unique dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Avec [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vous pouvez créer ces plans de maintenance de deux manières : avec l'Assistant Plan de maintenance ou au moyen de l'aire de conception. L'Assistant est conseillé pour créer des plans de maintenance de base, tandis que la zone de conception permet d'utiliser un flux de travail optimisé.  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
      
@@ -31,7 +35,7 @@ caps.handback.revision: 31
   
      [Sécurité](#Security)  
   
--   **Pour créer un plan de maintenance à l'aide de :**  
+-   **Pour créer un plan de maintenance à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -43,7 +47,7 @@ caps.handback.revision: 31
  Pour créer un plan de maintenance multiserveurs, vous devez configurer un environnement multiserveurs contenant un serveur maître et un ou plusieurs serveurs cibles. Les plans de maintenance multiserveurs doivent être créés et conservés sur le serveur maître. Ces plans peuvent être consultés mais ne peuvent pas être conservés sur les serveurs cibles. 
  
 ###  <a name="Prerequisite"></a> Condition préalable  
-Vous devez activer [Agent XPs (option de configuration de serveur)](../../database-engine/configure-windows/agent-xps-server-configuration-option.md).
+Vous devez activer [Agent XPs (option de configuration de serveur)](../../database-engine/configure-windows/agent-xps-server-configuration-option.md) .
   
 ###  <a name="Security"></a> Sécurité  
   
@@ -52,7 +56,7 @@ Vous devez activer [Agent XPs (option de configuration de serveur)](../../databa
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour créer un plan de maintenance à l'aide de l'Assistant Plan de Maintenance  
+#### <a name="to-create-a-maintenance-plan-using-the-maintenance-plan-wizard"></a>Pour créer un plan de maintenance à l'aide de l'Assistant Plan de Maintenance  
   
 1.  Dans l'Explorateur d'objets, cliquez sur le signe plus (+) pour développer le serveur sur lequel vous souhaitez créer un plan de maintenance.  
   
@@ -62,7 +66,7 @@ Vous devez activer [Agent XPs (option de configuration de serveur)](../../databa
   
 4.  Suivez les procédures indiquées par l'Assistant pour créer un plan de maintenance. Pour plus d’informations, consultez [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md).  
   
-#### Pour créer un plan de maintenance à l'aide de la surface de dessin  
+#### <a name="to-create-a-maintenance-plan-using-the-design-surface"></a>Pour créer un plan de maintenance à l'aide de la surface de dessin  
   
 1.  Dans l'Explorateur d'objets, cliquez sur le signe plus (+) pour développer le serveur sur lequel vous souhaitez créer un plan de maintenance.  
   
@@ -74,7 +78,7 @@ Vous devez activer [Agent XPs (option de configuration de serveur)](../../databa
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour créer un plan de maintenance  
+#### <a name="to-create-a-maintenance-plan"></a>Pour créer un plan de maintenance  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -139,7 +143,7 @@ Vous devez activer [Agent XPs (option de configuration de serveur)](../../databa
   
     ```  
   
- Pour plus d'informations, consultez :  
+ Pour plus d'informations, consultez :  
   
 -   [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)  
   
@@ -150,3 +154,4 @@ Vous devez activer [Agent XPs (option de configuration de serveur)](../../databa
 -   [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   
+

@@ -1,25 +1,29 @@
 ---
-title: "Ouvrir la Visionneuse du fichier journal | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Visionneuse du fichier journal, ouverture"
+title: Ouvrir la Visionneuse du fichier journal | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Log File Viewer, opening
 ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 902e26657bb71799af5e006c9a1842edda4f783d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ouvrir la Visionneuse du fichier journal
-  Vous pouvez utiliser la Visionneuse du fichier journal dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour accéder aux informations sur les erreurs et événements capturés dans les journaux suivants :  
+# <a name="open-log-file-viewer"></a>Ouvrir la Visionneuse du fichier journal
+  Vous pouvez utiliser la Visionneuse du fichier journal dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour accéder aux informations sur les erreurs et événements capturés dans les journaux suivants :  
   
 -   Collection d'audits  
   
@@ -44,60 +48,60 @@ caps.handback.revision: 29
   
  L’accès aux fichiers journaux des instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hors connexion requiert un accès en lecture à l’espace de noms WMI **Root\Microsoft\SqlServer\ComputerManagement10** et au dossier où sont stockés les fichiers journaux. Pour plus d’informations, consultez la section Sécurité de la rubrique [Afficher les fichiers journaux hors connexion](../../relational-databases/logs/view-offline-log-files.md).  
   
-### Sécurité  
+### <a name="security"></a>Sécurité  
  Nécessite l'appartenance en tant que membre au rôle serveur fixe securityadmin.  
   
-### Afficher les fichiers journaux  
+### <a name="view-log-files"></a>Afficher les fichiers journaux  
   
-##### Pour afficher les journaux relatifs à l'activité générale de SQL Server  
+##### <a name="to-view-logs-that-are-related-to-general-sql-server-activity"></a>Pour afficher les journaux relatifs à l'activité générale de SQL Server  
   
 1.  Dans l’Explorateur d’objets, développez **Gestion**.  
   
-2.  Effectuez l'une des opérations suivantes :  
+2.  Effectuez l'une des opérations suivantes :  
   
     -   Cliquez avec le bouton droit sur **Journaux SQL Server**, pointez sur **Afficher**, puis cliquez sur **Journal SQL Server** ou sur **Journal de SQL Server et de Windows**.  
   
     -   Développez **Journaux SQL Server**, cliquez avec le bouton droit sur un fichier journal, puis cliquez sur **Afficher le journal SQL Server**. Vous pouvez également double-cliquer sur un fichier journal.  
   
-     Les journaux incluent **Messagerie de base de données**, **SQL Server**, **SQL Server Agent** et **Windows NT**.  
+     Les journaux incluent **Messagerie de base de données**, **SQL Server**, **SQL Server Agent**et **Windows NT**.  
   
-##### Pour afficher les journaux relatifs aux travaux  
+##### <a name="to-view-logs-that-are-related-to-jobs"></a>Pour afficher les journaux relatifs aux travaux  
   
 -   Dans l’Explorateur d’objets, développez **SQL Server Agent**, cliquez avec le bouton droit sur **Travaux**, puis cliquez sur **Afficher l’historique**.  
   
-     Les journaux incluent **Messagerie de base de données**, **Historique des travaux** et **SQL Server Agent**.  
+     Les journaux incluent **Messagerie de base de données**, **Historique des travaux**et **SQL Server Agent**.  
   
-##### Pour afficher les journaux relatifs aux plans de maintenance  
+##### <a name="to-view-logs-that-are-related-to-maintenance-plans"></a>Pour afficher les journaux relatifs aux plans de maintenance  
   
 -   Dans l’Explorateur d’objets, développez **Gestion**, cliquez avec le bouton droit sur **Plans de maintenance**, puis cliquez sur **Afficher l’historique**.  
   
-     Les journaux incluent **Messagerie de base de données**, **Historique du travail**, **Plans de maintenance**, **Plans de maintenance distants** et **SQL Server Agent**.  
+     Les journaux incluent **Messagerie de base de données**, **Historique du travail**, **Plans de maintenance**, **Plans de maintenance distants**et **SQL Server Agent**.  
   
-##### Pour afficher les journaux relatifs à la collecte de données  
+##### <a name="to-view-logs-that-are-related-to-data-collection"></a>Pour afficher les journaux relatifs à la collecte de données  
   
 -   Dans l’Explorateur d’objets, développez **Gestion**, cliquez avec le bouton droit sur **Collecte de données**, puis cliquez sur **Afficher les journaux**.  
   
-     Les journaux incluent **Collecte de données**, **Historique du travail** et **SQL Server Agent**.  
+     Les journaux incluent **Collecte de données**, **Historique du travail**et **SQL Server Agent**.  
   
-##### Pour afficher les journaux relatifs à la messagerie de base de données  
+##### <a name="to-view-logs-that-are-related-to-database-mail"></a>Pour afficher les journaux relatifs à la messagerie de base de données  
   
 -   Dans l’Explorateur d’objets, développez **Gestion**, cliquez avec le bouton droit sur **Messagerie de base de données**, puis cliquez sur **Afficher le journal de la messagerie de base de données**.  
   
-     Les journaux incluent **Messagerie de base de données, Historique du travail**, **Plans de maintenance**, **Plans de maintenance distants**, **SQL Server**, **SQL Server Agent** et **Windows NT**.  
+     Les journaux incluent **Messagerie de base de données, Historique du travail**, **Plans de maintenance**, **Plans de maintenance distants**, **SQL Server**, **SQL Server Agent**et **Windows NT**.  
   
-##### Pour afficher les journaux relatifs aux collections d'audits  
+##### <a name="to-view-logs-that-are-related-to-audits-collections"></a>Pour afficher les journaux relatifs aux collections d'audits  
   
--   Dans l’Explorateur d’objets, développez **Sécurité** et **Audits**, cliquez avec le bouton droit sur un audit, puis sélectionnez **Afficher les journaux d’audit**.  
-  
-     Les journaux incluent **Collection d’audits** et **Windows NT**.  
-  
-##### Pour afficher les journaux relatifs aux collections d'audits  
-  
--   Dans l’Explorateur d’objets, développez **Sécurité** et **Audits**, cliquez avec le bouton droit sur un audit, puis sélectionnez **Afficher les journaux d’audit**.  
+-   Dans l’Explorateur d’objets, développez **Sécurité**et **Audits**, cliquez avec le bouton droit sur un audit, puis sélectionnez **Afficher les journaux d’audit**.  
   
      Les journaux incluent **Collection d’audits** et **Windows NT**.  
   
-## Voir aussi  
+##### <a name="to-view-logs-that-are-related-to-audits-collections"></a>Pour afficher les journaux relatifs aux collections d'audits  
+  
+-   Dans l’Explorateur d’objets, développez **Sécurité**et **Audits**, cliquez avec le bouton droit sur un audit, puis sélectionnez **Afficher les journaux d’audit**.  
+  
+     Les journaux incluent **Collection d’audits** et **Windows NT**.  
+  
+## <a name="see-also"></a>Voir aussi  
  [Visionneuse du fichier journal](../../relational-databases/logs/log-file-viewer.md)   
  [SQL Server Audit &#40moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
  [Afficher les fichiers journaux hors connexion](../../relational-databases/logs/view-offline-log-files.md)  

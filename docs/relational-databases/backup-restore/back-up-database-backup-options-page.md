@@ -1,25 +1,29 @@
 ---
-title: "Sauvegarder la base de donn&#233;es (page Options de sauvegarde) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.backupdatabase.options.f1"
-  - "swb.backupdatabase.options.f1"
+title: "Sauvegarder la base de données (page Options de sauvegarde) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.backupdatabase.options.f1
+- swb.backupdatabase.options.f1
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 caps.latest.revision: 62
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 62
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 593d725942bb3c049bb71a0a8f1ad8975863c3fb
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sauvegarder la base de donn&#233;es (page Options de sauvegarde)
+# <a name="back-up-database-backup-options-page"></a>Sauvegarder la base de données (page Options de sauvegarde)
   Utilisez la page  **Options de sauvegarde** de la boîte de dialogue **Sauvegarder la base de données** pour afficher ou modifier les options de sauvegarde de la base de données.  
   
  **Pour créer une sauvegarde à l'aide de SQL Server Management Studio**  
@@ -34,9 +38,9 @@ caps.handback.revision: 62
 > [!NOTE]  
 >  Quand vous spécifiez une tâche de sauvegarde à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous pouvez générer le script [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) correspondant en cliquant sur le bouton **Script** et en sélectionnant une destination pour le script.  
   
-## Options  
+## <a name="options"></a>Options  
   
-### Jeu de sauvegarde  
+### <a name="backup-set"></a>Jeu de sauvegarde  
  Les options du volet **Jeu de sauvegarde** vous permettent de spécifier des informations facultatives concernant le jeu de sauvegarde créé par l'opération de sauvegarde.  
   
  **Nom**  
@@ -52,27 +56,27 @@ caps.handback.revision: 62
   
 |||  
 |-|-|  
-|**After**|Spécifiez le nombre de jours qui doivent s'écouler avant que le jeu de sauvegarde expire et puisse être écrasé. Cette valeur doit être comprise entre 0 et 99999 jours ; une valeur de 0 jour signifie que le jeu de sauvegarde n'expirera jamais.<br /><br /> La valeur par défaut d’expiration de sauvegarde correspond à la valeur définie dans l’option **Délai de rétention par défaut du support de sauvegarde (jours)**. Pour accéder à cette option, cliquez avec le bouton droit sur le nom du serveur dans l’Explorateur d’objets et cliquez sur **Propriétés** ; ensuite, cliquez sur la page **Paramètres de base de données** de la boîte de dialogue **Propriétés du serveur**.|  
+|**After**|Spécifiez le nombre de jours qui doivent s'écouler avant que le jeu de sauvegarde expire et puisse être écrasé. Cette valeur doit être comprise entre 0 et 99999 jours ; une valeur de 0 jour signifie que le jeu de sauvegarde n'expirera jamais.<br /><br /> La valeur par défaut d’expiration de sauvegarde correspond à la valeur définie dans l’option **Délai de rétention par défaut du support de sauvegarde (jours)** . Pour accéder à cette option, cliquez avec le bouton droit sur le nom du serveur dans l’Explorateur d’objets et cliquez sur **Propriétés**; ensuite, cliquez sur la page **Paramètres de base de données** de la boîte de dialogue **Propriétés du serveur** .|  
 |**Actif**|Spécifiez une date spécifique à laquelle le jeu de sauvegarde expire et peut être écrasé.|  
   
-### Compression  
+### <a name="compression"></a>Compression  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou une version ultérieure) prend en charge la [compression de sauvegarde](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
  **Définir la compression de la sauvegarde**  
- Dans [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou version ultérieure), sélectionnez l'une des valeurs de compression de la sauvegarde suivantes :  
+ Dans [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou version ultérieure), sélectionnez l'une des valeurs de compression de la sauvegarde suivantes :  
   
 |||  
 |-|-|  
-|**Utiliser le paramètre du serveur par défaut**|Cliquez sur cette option pour utiliser la valeur par défaut au niveau du serveur.<br /><br /> Cette valeur par défaut est définie par l’option de configuration de serveur **Compression par défaut des sauvegardes**. Pour plus d’informations sur l’affichage du paramétrage actuel de cette option, consultez [Afficher ou configurer l’option de configuration du serveur valeur par défaut de compression de la sauvegarde](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
-|**Compresser la sauvegarde**|Cliquez sur cette option pour compresser la sauvegarde, indépendamment de la valeur par défaut au niveau du serveur.<br /><br /> **\*\* Important \*\*** Par défaut, la compression augmente considérablement l’utilisation de l’UC et l’UC supplémentaire consommée par le processus de compression peut avoir un impact néfaste sur les opérations simultanées. Il peut donc être préférable, dans une session où l’utilisation de l’UC est limitée, de créer une sauvegarde compressée de priorité basse à l’aide de [Resource Governor](../../relational-databases/resource-governor/resource-governor.md). Pour plus d’informations, consultez [Utiliser Resource Governor pour limiter l’utilisation de l’UC par compression de la sauvegarde &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
+|**Utiliser le paramètre du serveur par défaut**|Cliquez sur cette option pour utiliser la valeur par défaut au niveau du serveur.<br /><br /> Cette valeur par défaut est définie par l’option de configuration de serveur **Compression par défaut des sauvegardes** . Pour plus d’informations sur l’affichage du paramétrage actuel de cette option, consultez [Afficher ou configurer l’option de configuration du serveur valeur par défaut de compression de la sauvegarde](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
+|**Compresser la sauvegarde**|Cliquez sur cette option pour compresser la sauvegarde, indépendamment de la valeur par défaut au niveau du serveur.<br /><br /> **\*\* Important \*\*** Par défaut, la compression augmente considérablement l’utilisation de l’UC et l’UC supplémentaire consommée par le processus de compression peut avoir un impact néfaste sur les opérations simultanées. Par conséquent, il peut être préférable de créer une sauvegarde compressée de priorité basse dans une session où l’utilisation de l’UC est limitée par [Resource Governor](../../relational-databases/resource-governor/resource-governor.md). Pour plus d'informations, consultez [Utiliser Resource Governor pour limiter l’utilisation de l’UC par compression de la sauvegarde &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
 |**Ne pas compresser la sauvegarde**|Cliquez sur cette option pour créer une sauvegarde non compressée, indépendamment de la valeur par défaut au niveau du serveur.|  
   
-### Chiffrement  
- Pour créer une sauvegarde chiffrée, activez la case à cocher **Chiffrer le fichier de sauvegarde** . Sélectionnez l'algorithme de chiffrement à utiliser pour l'étape de chiffrement et fournissez un certificat ou une clé asymétrique dans la liste des certificats ou clés numériques existants. Les algorithmes disponibles pour le chiffrement sont :  
+### <a name="encryption"></a>Chiffrement  
+ Pour créer une sauvegarde chiffrée, activez la case à cocher **Chiffrer le fichier de sauvegarde** . Sélectionnez l'algorithme de chiffrement à utiliser pour l'étape de chiffrement et fournissez un certificat ou une clé asymétrique dans la liste des certificats ou clés numériques existants. Les algorithmes disponibles pour le chiffrement sont :  
   
--   AES 128  
+-   AES 128  
   
--   AES 192  
+-   AES 192  
   
 -   AES 256  
   
@@ -85,10 +89,10 @@ caps.handback.revision: 62
 >   
 >  Seules les clés résidant dans la gestion de clés extensible (EKM) sont prises en charge.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Sauvegarder des fichiers et des groupes de fichiers &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
- [Sauvegarder le journal des transactions quand la base de données est endommagée &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
+ [Sauvegarder le journal des transactions lorsque la base de données est endommagée &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   
   

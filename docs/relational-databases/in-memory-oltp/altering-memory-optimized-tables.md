@@ -1,30 +1,34 @@
 ---
-title: "Modification des tables optimis&#233;es en m&#233;moire | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Modification des tables optimisées en mémoire | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 10/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e4a8b3f4dabec4d46813c570e1a04fd469075a66
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modification des tables optimis&#233;es en m&#233;moire
+# <a name="altering-memory-optimized-tables"></a>Modification des tables optimisées en mémoire
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Vous pouvez effectuer des modifications de schéma et d’index sur les tables optimisées en mémoire en utilisant l’instruction ALTER TABLE. Dans le cadre de cette modification, l’application de base de données peut continuer à s’exécuter, mais toute opération accédant à la table est bloquée jusqu’à la fin du processus de modification.  
   
-## ALTER TABLE  
+## <a name="alter-table"></a>ALTER TABLE  
  
-La syntaxe ALTER TABLE permet d’apporter des modifications au schéma de la table, et d’ajouter, de supprimer et de régénérer des index. Les index sont considérés comme faisant partie intégrante de la définition de table :  
+La syntaxe ALTER TABLE permet d’apporter des modifications au schéma de la table, et d’ajouter, de supprimer et de régénérer des index. Les index sont considérés comme faisant partie intégrante de la définition de table :  
   
 -   La syntaxe ALTER TABLE … ADD/DROP/ALTER INDEX est uniquement prise en charge pour les tables optimisées en mémoire.  
   
@@ -63,24 +67,24 @@ La syntaxe ALTER TABLE permet d’apporter des modifications au schéma de la ta
 }  
 ```  
   
- Les types de modifications pris en charge sont les suivants :  
+ Les types de modifications pris en charge sont les suivants :  
   
--   modification du nombre de compartiments ;  
+-   modification du nombre de compartiments ;  
   
--   ajout et suppression d’un index ;  
+-   ajout et suppression d’un index ;  
   
--   modification, ajout et suppression d’une colonne ;  
+-   modification, ajout et suppression d’une colonne ;  
   
 -   ajout et suppression d’une contrainte.  
   
  Pour plus d’informations sur la fonctionnalité ALTER TABLE et sur la syntaxe complète, consultez [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
-## Dépendance liée au schéma  
+## <a name="schema-bound-dependency"></a>Dépendance liée au schéma  
  Les procédures stockées compilées en mode natif doivent être liées au schéma, ce qui signifie qu’elles ont une dépendance liée au schéma vis-à-vis des tables optimisées en mémoire auxquelles elles accèdent et des colonnes qu’elles référencent. Une dépendance liée au schéma est une relation entre deux entités qui empêche l’entité référencée d’être supprimée ou modifiée de façon incompatible tant que l’entité de référence existe.  
   
  Par exemple, si une procédure stockée compilée en mode natif et liée au schéma fait référence à une colonne *c1* de la table *mytable*, la colonne *c1* ne peut pas être supprimée. De même, s’il existe une telle procédure avec une instruction INSERT sans liste de colonnes (par exemple, `INSERT INTO dbo.mytable VALUES (...)`), alors aucune colonne de la table ne peut être supprimée.  
   
-## Exemples  
+## <a name="examples"></a>Exemples  
  L’exemple ci-après modifie le nombre de compartiments d’un index de hachage existant. Cette opération régénère l’index de hachage avec le nouveau nombre de compartiments, tandis que les autres propriétés de l’index de hachage restent identiques.  
   
 ```tsql
@@ -145,14 +149,14 @@ GO
 
 <a name="logging-of-alter-table-on-memory-optimized-tables-124"></a>
 
-## Journalisation de l’instruction ALTER TABLE sur des tables optimisées en mémoire
+## <a name="logging-of-alter-table-on-memory-optimized-tables"></a>Journalisation de l’instruction ALTER TABLE sur des tables optimisées en mémoire
 
 
 Sur une table optimisée en mémoire, la plupart des scénarios ALTER TABLE s’exécutent désormais en parallèle, d’où une optimisation des écritures dans le journal des transactions. L’optimisation vient du fait que seules les modifications apportées aux métadonnées sont écrites dans le journal des transactions. Cependant, les opérations ALTER TABLE suivantes sont effectuées en mode à thread unique et ne sont pas optimisées pour la journalisation.
 
-Les opérations à thread unique exigent que le contenu de la table modifiée soit entièrement écrit dans le journal. Voici la liste des opérations à thread unique :
+Les opérations à thread unique exigent que le contenu de la table modifiée soit entièrement écrit dans le journal. Voici la liste des opérations à thread unique :
 
-- Modifier ou ajouter une colonne pour utiliser un type d’objet volumineux (LOB) : nvarchar(max), varchar(max) ou varbinary(max).
+- Modifier ou ajouter une colonne pour utiliser un type d’objet volumineux (LOB) : nvarchar(max), varchar(max) ou varbinary(max).
 
 - Ajouter ou supprimer un index COLUMNSTORE.
 
@@ -167,7 +171,9 @@ Les opérations à thread unique exigent que le contenu de la table modifiée so
     - *Exception :* l’allongement d’une colonne déjà hors ligne est journalisé de la manière optimisée.
 
 
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 
 [Tables optimisées en mémoire](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
+
+

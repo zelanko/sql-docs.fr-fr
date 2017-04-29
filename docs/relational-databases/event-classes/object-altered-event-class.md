@@ -1,37 +1,41 @@
 ---
-title: "Classe d&#39;&#233;v&#233;nements&#160;: Object:Altered | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Object:Altered (classe d'événements)"
+title: "Object:Altered, classe d’événements | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Object:Altered event class
 ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5e2fbbd9cb3f63bd1b4c360a9081440990cc43ec
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe d&#39;&#233;v&#233;nements&#160;: Object:Altered
-  La classe d'événements Object:Altered indique qu'un objet a été modifié ; par exemple, à l'aide d'une instruction ALTER INDEX, ALTER TABLE, ou d'une instruction ALTER DATABASE. Cette classe d'événements peut être utilisée pour déterminer si des objets sont modifiés ; par exemple, par les applications ODBC, qui créent souvent des procédures stockées temporaires.  
+# <a name="objectaltered-event-class"></a>Object:Altered (classe d'événements)
+  La classe d'événements Object:Altered indique qu'un objet a été modifié ; par exemple, à l'aide d'une instruction ALTER INDEX, ALTER TABLE, ou d'une instruction ALTER DATABASE. Cette classe d'événements peut être utilisée pour déterminer si des objets sont modifiés ; par exemple, par les applications ODBC, qui créent souvent des procédures stockées temporaires.  
   
  La classe d'événements Object:Altered se produit toujours sous forme de deux événements. Le premier événement indique la phase Begin. Le second événement indique la phase Rollback ou Commit.  
   
  En surveillant les colonnes de données LoginName et NTUserName, vous pouvez déterminer le nom de l'utilisateur qui est en train de créer, supprimer ou modifier des objets.  
   
-## Colonnes de données de la classe d'événements Object:Altered  
+## <a name="objectaltered-event-class-data-columns"></a>Colonnes de données de la classe d'événements Object:Altered  
   
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette colonne est remplie avec les valeurs passées par l'application plutôt que par le nom affiché du programme.|10|Oui|  
-|ClientProcessID|**int**|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
-|DatabaseID|**Int**|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
+|ClientProcessID|**int**|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
+|DatabaseID|**int**|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |DatabaseName|**nvarchar**|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |EventClass|**int**|Type d’événement = 164.|27|Non|  
 |EventSequence|**int**|Séquence d'un événement donné au sein de la demande.|51|Non|  
@@ -40,8 +44,8 @@ caps.handback.revision: 23
 |HostName|**nvarchar**|Nom de l'ordinateur sur lequel le client est exécuté. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |IndexID|**int**|ID de l'index de l'objet affecté par l'événement. Pour déterminer l'ID d'index d'un objet, utilisez la colonne index_id de l'affichage catalogue sys.indexes.|24|Oui|  
 |IntegerData|**int**|Numéro d'ordre d'événement par rapport à l'événement Begin correspondant. Cette colonne n'est disponible que pour le type Commit ou Rollback de sous-classe d'événements.|25|Oui|  
-|IsSystem|**int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, NULL = utilisateur.|60|Oui|  
-|LoginName|**nvarchar**|Nom de la connexion de l'utilisateur (soit la connexion de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], soit les informations d'identification de connexion [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows au format DOMAINE\nom_utilisateur).|11|Oui|  
+|IsSystem|**int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, NULL = utilisateur.|60|Oui|  
+|LoginName|**nvarchar**|Nom de la connexion de l'utilisateur (soit la connexion de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , soit les informations d'identification de connexion [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows au format DOMAINE\nom_utilisateur).|11|Oui|  
 |LoginSid|**image**|Numéro d'identification de sécurité (SID) de l'utilisateur connecté. Vous pouvez trouver ces informations dans l'affichage catalogue sys.server_principals. Chaque connexion possède un SID unique au niveau du serveur.|41|Oui|  
 |NTDomainName|**nvarchar**|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
 |NTUserName|**nvarchar**|Nom d'utilisateur Windows.|6|Oui|  
@@ -57,7 +61,7 @@ caps.handback.revision: 23
 |TransactionID|**bigint**|ID affecté par le système à la transaction.|4|Oui|  
 |XactSequence|**bigint**|Jeton qui décrit la transaction en cours.|50|Oui|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

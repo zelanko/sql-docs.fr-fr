@@ -1,26 +1,30 @@
 ---
-title: "Modifier les donn&#233;es par l&#39;interm&#233;diaire d&#39;une vue | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modifications des données [SQL Server], vues"
-  - "vues [SQL Server], modification des données via"
-  - "modification des données [SQL Server], vues"
+title: "Modifier les données par l’intermédiaire d’une vue | Microsoft Docs"
+ms.custom: 
+ms.date: 10/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data modifications [SQL Server], views
+- views [SQL Server], modifying data through
+- modifying data [SQL Server], views
 ms.assetid: 410e2812-4ebe-48b2-b95f-c7784f1c4336
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 360ab52b8f6f8889311ccbb0fd820493ca01b9a8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modifier les donn&#233;es par l&#39;interm&#233;diaire d&#39;une vue
+# <a name="modify-data-through-a-view"></a>Modifier les données par l'intermédiaire d'une vue
   Vous pouvez modifier les données d'une table de base sous-jacente dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
   
@@ -31,12 +35,12 @@ caps.handback.revision: 35
 -   Consultez la section « Vues pouvant être mises à jour » dans [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorisations  
  Nécessite des autorisations UPDATE, INSERT ou DELETE sur la table cible, selon l'action effectuée.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour modifier les données de table par le biais d'une vue  
+#### <a name="to-modify-table-data-through-a-view"></a>Pour modifier les données de table par le biais d'une vue  
   
 1.  Dans l' **Explorateur d'objets**, développez la base de données qui contient la vue, puis développez **Vues**.  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 35
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour mettre à jour les données de table par le biais d'une vue  
+#### <a name="to-update-table-data-through-a-view"></a>Pour mettre à jour les données de table par le biais d'une vue  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 35
   
  Pour plus d’informations, consultez [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md).  
   
-#### Pour insérer des données de table par le biais d'une vue  
+#### <a name="to-insert-table-data-through-a-view"></a>Pour insérer des données de table par le biais d'une vue  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -92,3 +96,4 @@ caps.handback.revision: 35
  Pour plus d’informations, consultez [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
   
   
+

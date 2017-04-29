@@ -1,32 +1,36 @@
 ---
-title: "D&#233;sactiver Resource Governor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Resource Governor, désactivation"
+title: "Désactiver Resource Governor | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, disabling
 ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 47091df9ec1318e7bb66ef1a32346c7445b4abd6
+ms.lasthandoff: 04/11/2017
+
 ---
-# D&#233;sactiver Resource Governor
+# <a name="disable-resource-governor"></a>Désactiver Resource Governor
   Vous pouvez désactiver Resource Governor à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de Transact-SQL.  
   
--   **Avant de commencer :**  [Limitations et restrictions](#LimitationsRestrictions), [Autorisations](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Pour désactiver Resource Governor, utilisez : **  [Explorateur d’objets](#RGOffObjEx), [Propriétés de Resource Governor](#RGOffProp), [Transact-SQL](#RGOffTSQL)  
+-   **To disable Resource Governorn, using:**  [Object Explorer](#RGOffObjEx), [Resource Governor Properties](#RGOffProp), [Transact-SQL](#RGOffTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
- La désactivation de Resource Governor entraîne les résultats suivants :  
+ La désactivation de Resource Governor entraîne les résultats suivants :  
   
 -   La fonction classifieur n'est pas exécutée.  
   
@@ -60,7 +64,7 @@ caps.handback.revision: 7
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ouvrez l'Explorateur d'objets et développez de manière récursive le nœud **Gestion** jusqu'à **Resource Governor**.  
   
-2.  Cliquez avec le bouton droit sur **Resource Governor**, puis sélectionnez **Propriétés** afin d’ouvrir la page **Propriétés de Resource Governor**.  
+2.  Cliquez avec le bouton droit sur **Resource Governor** , puis sélectionnez **Propriétés**afin d’ouvrir la page **Propriétés de Resource Governor** .  
   
 3.  Activez la case à cocher **Activer Resource Governor** , vérifiez que la case à cocher n'est pas sélectionnée, puis cliquez sur **OK**.  
   
@@ -69,7 +73,7 @@ caps.handback.revision: 7
   
 1.  Exécutez l'instruction **ALTER RESOURCE GOVERNOR DISABLE** .  
   
-### Exemple (Transact-SQL)  
+### <a name="example-transact-sql"></a>Exemple (Transact-SQL)  
  L'exemple suivant active Resource Governor.  
   
 ```  
@@ -77,7 +81,7 @@ ALTER RESOURCE GOVERNOR DISABLE;
 GO  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Activer Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Pool de ressources de Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

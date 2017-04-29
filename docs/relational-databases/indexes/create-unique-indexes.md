@@ -1,29 +1,33 @@
 ---
-title: "Cr&#233;er des index uniques | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "index uniques"
-  - "conception d’index [SQL Server], uniques"
-  - "index cluster, uniques"
-  - "index [SQL Server], uniques"
-  - "index non cluster [SQL Server], uniques"
-  - "index uniques, instructions de conception"
+title: "Créer des vues uniques | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- unique indexes
+- designing indexes [SQL Server], unique
+- clustered indexes, unique
+- indexes [SQL Server], unique
+- nonclustered indexes [SQL Server], unique
+- unique indexes, design guidelines
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ad915ae7f113e7080f3fe5b7dbd9bb1c233f8bb4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er des index uniques
+# <a name="create-unique-indexes"></a>Créer des index uniques
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Cette rubrique explique comment créer un index unique sur une table dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un index unique garantit que la clé d'index ne contient aucune valeur dupliquée et que, par conséquent, chaque ligne de la table est unique d'une certaine manière. Il n'existe pas de différence notable entre la création d'une contrainte UNIQUE et la création d'un index unique indépendant de toute contrainte. La validation des données se produit d'une manière similaire et l'optimiseur de requête ne fait aucune distinction entre un index unique créé à partir d'une contrainte et un index unique créé manuellement. Toutefois, la création d'une contrainte UNIQUE sur la colonne permet de clarifier l'objectif de l'index. Pour plus d'informations sur les contraintes UNIQUE, consultez [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
@@ -35,7 +39,7 @@ caps.handback.revision: 29
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Avantages d'un index unique](#Benefits)  
   
@@ -45,7 +49,7 @@ caps.handback.revision: 29
   
      [Sécurité](#Security)  
   
--   **Pour créer un index unique sur une table, utilisez :**  
+-   **Pour créer un index unique sur une table, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 29
 -   Les index uniques fournissent des informations supplémentaires utiles à l'optimiseur de requête qui peut produire des plans d'exécution plus efficaces.  
   
 ###  <a name="Implementations"></a> Implémentations types  
- Les index uniques sont implémentés à l'aide des méthodes suivantes :  
+ Les index uniques sont implémentés à l'aide des méthodes suivantes :  
   
 -   **Contrainte PRIMARY KEY ou UNIQUE**  
   
@@ -93,11 +97,11 @@ caps.handback.revision: 29
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner**.  
+ Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour créer un index unique à l'aide du Concepteur de tables  
+#### <a name="to-create-a-unique-index-by-using-the-table-designer"></a>Pour créer un index unique à l'aide du Concepteur de tables  
   
 1.  Dans l'Explorateur d'objets, développez la base de données qui contient la table sur laquelle vous souhaitez créer un index unique.  
   
@@ -105,11 +109,11 @@ caps.handback.revision: 29
   
 3.  Cliquez avec le bouton droit sur la table sur laquelle vous souhaitez créer un index unique, puis sélectionnez **Conception**.  
   
-4.  Dans le menu **Concepteur de tables**, sélectionnez **Index/Clés**.  
+4.  Dans le menu **Concepteur de tables** , sélectionnez **Index/Clés**.  
   
-5.  Dans la boîte de dialogue **Index/Clés**, cliquez sur **Ajouter**.  
+5.  Dans la boîte de dialogue **Index/Clés** , cliquez sur **Ajouter**.  
   
-6.  Sélectionnez le nouvel index dans la zone de texte **Index ou clé unique/primaire sélectionné(e)**.  
+6.  Sélectionnez le nouvel index dans la zone de texte **Index ou clé unique/primaire sélectionné(e)** .  
   
 7.  Dans la grille principale, sous **(Général)**, sélectionnez **Type** puis choisissez **Index** dans la liste.  
   
@@ -119,15 +123,15 @@ caps.handback.revision: 29
   
 10. Lorsque toutes les colonnes sont sélectionnées pour l'index, cliquez sur **OK**.  
   
-11. Dans la grille, sous **(Général)**, sélectionnez **Est unique**, puis choisissez **Oui** dans la liste.  
+11. Dans la grille, sous **(Général)**, sélectionnez **Est unique** , puis choisissez **Oui** dans la liste.  
   
 12. Facultatif : Dans la grille principale, sous **Concepteur de tables**, sélectionnez **Ignorer les clés dupliquées** , puis choisissez **Oui** dans la liste. Effectuez cette opération si vous souhaitez ignorer les tentatives d'ajout de données qui créeraient une clé dupliquée dans l'index unique.  
   
 13. Cliquez sur **Fermer**.  
   
-14. Dans le menu **Fichier**, cliquez sur **Enregistrer***nom_table*.  
+14. Dans le menu **Fichier** , cliquez sur **Enregistrer***nom_table*.  
   
-#### Créer un index unique à l'aide de l'Explorateur d'objets  
+#### <a name="create-a-unique-index-by-using-object-explorer"></a>Créer un index unique à l'aide de l'Explorateur d'objets  
   
 1.  Dans l'Explorateur d'objets, développez la base de données qui contient la table sur laquelle vous souhaitez créer un index unique.  
   
@@ -135,7 +139,7 @@ caps.handback.revision: 29
   
 3.  Développez la table sur laquelle vous souhaitez créer un index unique.  
   
-4.  Cliquez avec le bouton droit sur le dossier **Index**, pointez sur **Nouvel index**, puis sélectionnez **Index non cluster**.  
+4.  Cliquez avec le bouton droit sur le dossier **Index** , pointez sur **Nouvel index**, puis sélectionnez **Index non cluster**.  
   
 5.  Dans la boîte de dialogue **Nouvel index** , sur la page **Général** , entrez le nom du nouvel index dans la zone **Nom de l'index** .  
   
@@ -143,7 +147,7 @@ caps.handback.revision: 29
   
 7.  Sous **Colonnes clés d'index**, cliquez sur **Ajouter…**.  
   
-8.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table*, cochez les cases correspondant aux colonnes de table à ajouter à l’index unique.  
+8.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table* , cochez les cases correspondant aux colonnes de table à ajouter à l’index unique.  
   
 9. Cliquez sur **OK**.  
   
@@ -151,7 +155,7 @@ caps.handback.revision: 29
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour créer un index unique sur une table  
+#### <a name="to-create-a-unique-index-on-a-table"></a>Pour créer un index unique sur une table  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -177,3 +181,4 @@ caps.handback.revision: 29
  Pour plus d’informations, consultez [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
   
+

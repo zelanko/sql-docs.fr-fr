@@ -1,28 +1,32 @@
 ---
-title: "SQLServer, objet Statistiques des pools de ressources | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Objet Statistiques des pools de ressources"
-  - "SQLServer : objet Statistiques des pools de ressources"
+title: SQL Server, objet Resource Pool Stats | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reosurce Pool Stats object
+- 'SQLServer: Resource Pool Stats object'
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1ccd649e92cd416ff086758005f3b5df728dfe1d
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQLServer, objet Statistiques des pools de ressources
+# <a name="sql-server-resource-pool-stats-object"></a>SQLServer, objet Statistiques des pools de ressources
   L'objet SQLServer:Resource Pool Stat contient des compteurs de performance qui créent des rapports d'information sur les statistiques du pool des ressources de Resource Governor.  
   
- Chaque pool de ressources actif crée une instance de l'objet de performance SQLServer : Statistiques des pools de ressources (SQLServer:Resource Pool Stats) ayant le même nom d'instance que le nom du pool de ressources de Resource Governor. Le tableau suivant décrit les compteurs pris en charge sur cette instance.  
+ Chaque pool de ressources actif crée une instance de l'objet de performance SQLServer : Statistiques des pools de ressources (SQLServer:Resource Pool Stats) ayant le même nom d'instance que le nom du pool de ressources de Resource Governor. Le tableau suivant décrit les compteurs pris en charge sur cette instance.  
   
 |Nom du compteur|Description|  
 |------------------|-----------------|  
@@ -58,7 +62,7 @@ caps.handback.revision: 14
 |**Mémoire utilisée (Ko)**|Quantité de mémoire utilisée, en kilo-octets (Ko), pour le pool de ressources.|  
 
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQLServer, objet Statistiques des groupes de charges de travail](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)   
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  

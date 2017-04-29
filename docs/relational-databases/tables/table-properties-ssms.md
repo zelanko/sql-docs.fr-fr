@@ -1,28 +1,32 @@
 ---
-title: "Table Properties - SSMS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.tableproperties.storage.f1"
-  - "sql13.swb.tableproperties.changetracking.f1"
-  - "sql13.swb.tableproperties.general.f1"
-  - "sql12.SWB.SELECTCOLUMNS.F1"
-  - "sql13.swb.tableproperties.filetable.f1"
+title: "Propriétés de la table - SSMS | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.tableproperties.storage.f1
+- sql13.swb.tableproperties.changetracking.f1
+- sql13.swb.tableproperties.general.f1
+- sql12.SWB.SELECTCOLUMNS.F1
+- sql13.swb.tableproperties.filetable.f1
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e1bc425e913f88fe7becd220f2275bacf6b21340
+ms.lasthandoff: 04/11/2017
+
 ---
-# Table Properties - SSMS
+# <a name="table-properties---ssms"></a>Propriétés de la table - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Cette rubrique décrit les propriétés de table qui sont affichées dans la boîte de dialogue Propriétés d'une table dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations sur la façon d’afficher ces propriétés, consultez [Afficher la définition de table](../../relational-databases/tables/view-the-table-definition.md).  
@@ -50,7 +54,7 @@ caps.handback.revision: 43
  **Date de création**  
  Date et heure de création de la table.  
   
- **Nom   **  
+ **Nom**  
  Nom de la table.  
   
  **Schéma**  
@@ -66,7 +70,7 @@ caps.handback.revision: 43
  Indique si l'objet a été créé avec l'option d'identificateur entre guillemets activée (ON). Pour plus d’informations, consultez [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  **Escalade de verrous**  
- Indique la granularité de l'escalade de verrous de la table. Pour plus d'informations sur le verrouillage dans le moteur de base de données, consultez [Guide du verrouillage des transactions et du contrôle de version de ligne SQL Server](http://msdn.microsoft.com/library/jj856598.aspx). Les valeurs possibles sont :  
+ Indique la granularité de l'escalade de verrous de la table. Pour plus d'informations sur le verrouillage dans le moteur de base de données, consultez [Guide du verrouillage des transactions et du contrôle de version de ligne SQL Server](http://msdn.microsoft.com/library/jj856598.aspx). Les valeurs possibles sont :  
   
  AUTO  
  Cette option permet au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] de sélectionner la granularité de l'escalade de verrous appropriée pour le schéma de la table.  
@@ -82,7 +86,7 @@ caps.handback.revision: 43
  Empêche l'escalade de verrous dans la plupart des cas. Les verrous de niveau table ne sont pas totalement interdits. Par exemple, lorsque vous analysez une table ne contenant aucun index cluster sous le niveau d'isolement sérialisable, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit prendre un verrou de table pour protéger l'intégrité des données.  
   
  **Table répliquée**  
- Indique lorsqu'une table est répliquée vers une autre base de données à l'aide de la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les valeurs possibles sont **True** et **False**.  
+ Indique lorsqu'une table est répliquée vers une autre base de données à l'aide de la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les valeurs possibles sont **True** et **False**.  
   
 ##  <a name="ChangeTracking"></a> Page de suivi des modifications  
  **Suivi des modifications**  
@@ -112,7 +116,7 @@ caps.handback.revision: 43
 ##  <a name="Storage"></a> Page de stockage  
  Affiche les propriétés de stockage de la table sélectionnée.  
   
-### Compression  
+### <a name="compression"></a>Compression  
  **Type de compression**  
  Type de compression de la table. Cette propriété est disponible uniquement pour les tables qui ne sont pas partitionnées. Pour plus d’informations, consultez [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
@@ -125,7 +129,7 @@ caps.handback.revision: 43
  **Partitions utilisant la compression de ligne**  
  Numéros des partitions qui utilisent la compression de ligne. Cette propriété est disponible uniquement pour les tables partitionnées.  
   
-### Groupe de fichiers  
+### <a name="filegroup"></a>Groupe de fichiers  
  **Groupe de fichiers de texte**  
  Nom du groupe de fichiers qui contient les données texte de la table.  
   
@@ -140,12 +144,12 @@ caps.handback.revision: 43
   
  Si la table ne contient pas de données FILESTREAM, ce champ est vierge.  
   
-### Général  
+### <a name="general"></a>Général  
  **Le format de stockage VarDecimal est activé**  
  Quand elle est égale à **True**, cette valeur en lecture seule indique que les types de données **decimal** et **numeric** sont stockés selon le format de stockage vardecimal. Pour modifier cette option, utilisez l’option de **format de stockage VarDecimal** de [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Le format de stockage vardecimal est déconseillé. Utilisez plutôt la compression ROW.  
   
  **Espace d'index**  
- Quantité d'espace occupée par les index dans la table, en mégaoctets. Cette valeur n'inclut pas l'utilisation de l'espace des index XML pour la table. Si les index XML appartiennent à la table, utilisez plutôt [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md).  
+ Quantité d'espace occupée par les index dans la table, en mégaoctets. Cette valeur n'inclut pas l'utilisation de l'espace des index XML pour la table. Si les index XML appartiennent à la table, utilisez plutôt [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) .  
   
  **Nombre de lignes**  
  Nombre de lignes dans la table.  
@@ -153,7 +157,7 @@ caps.handback.revision: 43
  **Espace de données**  
  Quantité d'espace occupée par les données dans la table, en mégaoctets.  
   
-### Partitionnement  
+### <a name="partitioning"></a>Partitionnement  
  Cette section est disponible uniquement si la table est partitionnée. Pour plus d’informations, consultez [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  **Colonne de partition**  
@@ -170,7 +174,7 @@ caps.handback.revision: 43
   
  Le schéma de partition FILESTREAM doit être symétrique avec le schéma spécifié dans l'option **Schéma de partition** .  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Afficher la définition de table](../../relational-databases/tables/view-the-table-definition.md)   
  [Modifier des colonnes &#40;moteur de base de données&#41;](../../relational-databases/tables/modify-columns-database-engine.md)  
   

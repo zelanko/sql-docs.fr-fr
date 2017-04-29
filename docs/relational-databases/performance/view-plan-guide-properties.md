@@ -1,36 +1,40 @@
 ---
-title: "Afficher les propri&#233;t&#233;s du rep&#232;re de plan | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.planguideprop.general.f1"
-helpviewer_keywords: 
-  - "repères de plan [SQL Server], affichage des propriétés du repère de plan"
-  - "affichage des propriétés du repère de plan"
+title: "Afficher les propriétés du repère de plan | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.planguideprop.general.f1
+helpviewer_keywords:
+- plan guides [SQL Server], view plan guide properties
+- viewing plan guide properties
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a68f0e1e0c15000f40de408f41ce4c40f281900e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Afficher les propri&#233;t&#233;s du rep&#232;re de plan
+# <a name="view-plan-guide-properties"></a>Afficher les propriétés du repère de plan
   Vous pouvez afficher les propriétés des repères de plan dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour afficher les propriétés des repères de plan, utilisez :**  
+-   **Pour afficher les propriétés des repères de plan, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -43,9 +47,9 @@ caps.handback.revision: 19
 ####  <a name="Permissions"></a> Autorisations  
  La visibilité des métadonnées dans les affichages catalogue est limitée aux éléments sécurisables qu'un utilisateur détient ou pour lesquels des autorisations lui ont été accordées.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour afficher les propriétés d'un repère de plan  
+#### <a name="to-view-the-properties-of-a-plan-guide"></a>Pour afficher les propriétés d'un repère de plan  
   
 1.  Cliquez sur le signe plus (+) pour développer la base de données dans laquelle vous souhaitez afficher les propriétés d'un repère de plan, puis cliquez sur le signe plus (+) pour développer le dossier **Programmabilité** .  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 19
      Les propriétés suivantes s'affichent dans la boîte de dialogue **Propriétés du repère de plan** .  
   
      **Indicateurs**  
-     Affiche les indicateurs de requête ou le plan de requête à appliquer à l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]. Lorsqu'un plan de requête est spécifié en tant qu'indicateur, la sortie du plan d'exécution XML s'affiche.  
+     Affiche les indicateurs de requête ou le plan de requête à appliquer à l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] . Lorsqu'un plan de requête est spécifié en tant qu'indicateur, la sortie du plan d'exécution XML s'affiche.  
   
      **Est désactivé**  
      Affiche l'état du repère de plan. Les valeurs possibles sont **True** et **False**.  
@@ -65,13 +69,13 @@ caps.handback.revision: 19
      Affiche le nom du repère de plan.  
   
      **Paramètres**  
-     Lorsque le type de portée est SQL ou TEMPLATE, affiche le nom et le type de données de tous les paramètres incorporés dans l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+     Lorsque le type de portée est SQL ou TEMPLATE, affiche le nom et le type de données de tous les paramètres incorporés dans l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
      **Lot de la portée**  
      Affiche le texte du lot dans lequel l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] apparaît.  
   
      **Nom d'objet de la portée**  
-     Lorsque le type de portée est OBJECT, affiche le nom de la procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)], la fonction scalaire définie par l'utilisateur, la fonction table à instructions multiples ou le déclencheur DML dans lequel l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] apparaît.  
+     Lorsque le type de portée est OBJECT, affiche le nom de la procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] , la fonction scalaire définie par l'utilisateur, la fonction table à instructions multiples ou le déclencheur DML dans lequel l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] apparaît.  
   
      **Nom de schéma de la portée**  
      Lorsque le type de portée est OBJECT, affiche le nom du schéma dans lequel l'objet est contenu.  
@@ -86,7 +90,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour afficher les propriétés d'un repère de plan  
+#### <a name="to-view-the-properties-of-a-plan-guide"></a>Pour afficher les propriétés d'un repère de plan  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

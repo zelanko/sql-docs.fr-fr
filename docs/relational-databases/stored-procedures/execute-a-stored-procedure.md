@@ -1,38 +1,42 @@
 ---
-title: "Ex&#233;cuter une proc&#233;dure stock&#233;e | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.executeprocedure.general.f1"
-  - "sql13.swb.executeprocedure.f1"
-helpviewer_keywords: 
-  - "procédures stockées [SQL Server], paramètres"
-  - "procédures stockées étendues [SQL Server], exécution"
-  - "procédures stockées système [SQL Server], exécution"
-  - "procédures stockées [SQL Server], exécution"
-  - "procédures stockées définies par l'utilisateur [SQL Server]"
+title: "Exécuter une procédure stockée | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.executeprocedure.general.f1
+- sql13.swb.executeprocedure.f1
+helpviewer_keywords:
+- stored procedures [SQL Server], parameters
+- extended stored procedures [SQL Server], executing
+- system stored procedures [SQL Server], executing
+- stored procedures [SQL Server], executing
+- user-defined stored procedures [SQL Server]
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c1e76212425f01aba20c8a0d0fdb548415559be1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ex&#233;cuter une proc&#233;dure stock&#233;e
+# <a name="execute-a-stored-procedure"></a>Exécuter une procédure stockée
   Cette rubrique explique comment exécuter une procédure stockée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Il existe deux façons différentes d'exécuter une procédure stockée. La première approche, et aussi la plus courante, est qu'une application ou un utilisateur appelle la procédure. La deuxième méthode consiste à définir la procédure pour qu'elle s'exécute automatiquement lorsqu'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] démarre. Lorsqu'une procédure est appelée par une application ou un utilisateur, le mot clé [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE ou EXEC est explicitement établi dans l'appel. Sinon, la procédure peut être appelée et exécutée sans le mot clé si elle est la première instruction dans le traitement [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 38
   
      [Sécurité](#Security)  
   
--   **Pour exécuter une procédure stockée à l'aide de :**  
+-   **Pour exécuter une procédure stockée à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -50,13 +54,13 @@ caps.handback.revision: 38
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
   
--   Le classement de la base de données d'appel est utilisé pour mettre en correspondance les noms des procédures système. Par conséquent, utilisez systématiquement la casse exacte des noms des procédures système dans vos appels de procédure. Par exemple, le code suivant ne fonctionnera pas s'il est exécuté dans le contexte d'une base de données dotée d'un classement qui respecte la casse :  
+-   Le classement de la base de données d'appel est utilisé pour mettre en correspondance les noms des procédures système. Par conséquent, utilisez systématiquement la casse exacte des noms des procédures système dans vos appels de procédure. Par exemple, le code suivant ne fonctionnera pas s'il est exécuté dans le contexte d'une base de données dotée d'un classement qui respecte la casse :  
   
     ```tsql  
     EXEC SP_heLP; -- Will fail to resolve because SP_heLP does not equal sp_help  
     ```  
   
-     Pour afficher les noms exacts des procédures système, interrogez les affichages catalogue [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) et [sys.system_parameters](../../relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md).  
+     Pour afficher les noms exacts des procédures système, interrogez les affichages catalogue [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) et [sys.system_parameters](../../relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md) .  
   
 -   Si une procédure définie par l'utilisateur a le même nom qu'une procédure système, elle peut ne jamais s'exécuter.  
   
@@ -82,14 +86,14 @@ caps.handback.revision: 38
     EXEC dbo.uspGetEmployeeManagers @BusinessEntityID = 50;  
     ```  
   
-     - Ou -  
+     - Ou -  
   
     ```tsql  
     EXEC AdventureWorks2012.dbo.uspGetEmployeeManagers 50;  
     GO  
     ```  
   
-     Si une procédure non qualifiée définie par l'utilisateur est spécifiée, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] la recherche dans l'ordre suivant :  
+     Si une procédure non qualifiée définie par l'utilisateur est spécifiée, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] la recherche dans l'ordre suivant :  
   
     1.  Schéma **sys** de la base de données active.  
   
@@ -99,7 +103,7 @@ caps.handback.revision: 38
   
 -   Exécution automatique des procédures stockées  
   
-     Les procédures marquées pour l'exécution automatique sont exécutées à chaque fois que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] démarre et que la base de données **master** est récupérée pendant le processus de démarrage. Configurer des procédures pour qu'elles s'exécutent automatiquement peut être utile pour effectuer des opérations de maintenance de base de données ou pour exécuter les procédures en continu en tant que processus d'arrière-plan. Cette solution revêt également de l'importance dans le cas de procédures exécutant des tâches système ou de maintenance dans **tempdb**, par exemple la création d'une table temporaire globale. De cette façon, la table temporaire existe toujours après que **tempdb** est recréée durant le démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Les procédures marquées pour l'exécution automatique sont exécutées à chaque fois que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] démarre et que la base de données **master** est récupérée pendant le processus de démarrage. Configurer des procédures pour qu'elles s'exécutent automatiquement peut être utile pour effectuer des opérations de maintenance de base de données ou pour exécuter les procédures en continu en tant que processus d'arrière-plan. Cette solution revêt également de l'importance dans le cas de procédures exécutant des tâches système ou de maintenance dans **tempdb**, par exemple la création d'une table temporaire globale. De cette façon, la table temporaire existe toujours après que **tempdb** est recréée durant le démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      Une procédure exécutée automatiquement opère avec les mêmes droits que les membres du rôle de serveur **sysadmin** . Les messages d'erreur produits par une procédure sont enregistrés dans le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -114,7 +118,7 @@ caps.handback.revision: 38
   
      Utilisez [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) pour :  
   
-    1.  désigner une procédure existante comme procédure de démarrage ;  
+    1.  désigner une procédure existante comme procédure de démarrage ;  
   
     2.  supprimer l'exécution automatique d'une procédure au démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -122,11 +126,11 @@ caps.handback.revision: 38
  Pour plus d’informations, consultez [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md) et [Clause EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
 ####  <a name="Permissions"></a> Autorisations  
- Pour plus d’informations, consultez la section « Autorisations » dans [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)..  
+ Pour plus d’informations, consultez la section « Autorisations » dans [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour exécuter une procédure stockée  
+#### <a name="to-execute-a-stored-procedure"></a>Pour exécuter une procédure stockée  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], développez cette instance, puis développez **Bases de données**.  
   
@@ -155,7 +159,7 @@ caps.handback.revision: 38
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour exécuter une procédure stockée  
+#### <a name="to-execute-a-stored-procedure"></a>Pour exécuter une procédure stockée  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -170,7 +174,7 @@ EXEC dbo.uspGetEmployeeManagers 6;
 GO  
 ```  
   
-#### Pour valider ou désactiver l'exécution automatique d'une procédure  
+#### <a name="to-set-or-clear-a-procedure-for-executing-automatically"></a>Pour valider ou désactiver l'exécution automatique d'une procédure  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -186,7 +190,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
     , @OptionValue = 'on';  
 ```  
   
-#### Pour arrêter l'exécution automatique d'une procédure  
+#### <a name="to-stop-a-procedure-from-executing-automatically"></a>Pour arrêter l'exécution automatique d'une procédure  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -203,7 +207,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 ###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Spécifier les paramètres](../../relational-databases/stored-procedures/specify-parameters.md)   
  [Configurer l'option de configuration du serveur scan for startup procs](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

@@ -1,29 +1,33 @@
 ---
-title: "DDL, fonctions, proc&#233;dures stock&#233;es et vues de recherche s&#233;mantique | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "recherche sémantique [SQL Server], objets de base de données"
+title: "DDL, fonctions, procédures stockées et vues de recherche sémantique | Microsoft Docs"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- semantic search [SQL Server], database objects
 ms.assetid: 182f395f-3168-48a4-b723-ef4403544f9f
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 326f645ff1c214623b5c46fbaa4f86f08066e64b
+ms.lasthandoff: 04/11/2017
+
 ---
-# DDL, fonctions, proc&#233;dures stock&#233;es et vues de recherche s&#233;mantique
+# <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>DDL, fonctions, procédures stockées et vues de recherche sémantique
   Répertorie les instructions Transact-SQL et les objets de base de données qui prennent en charge la recherche sémantique statistique dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Pour obtenir la liste des objets de base de données qui prennent en charge la recherche en texte intégral, consultez [DDL, fonctions, procédures stockées et vues de recherche en texte intégral](../../relational-databases/search/full-text-search-ddl-functions-stored-procedures-and-views.md).  
   
-##  <a name="ddl"></a> Instructions DDL (Data Definition Language, langage de définition de données) Transact-SQL  
+##  <a name="ddl"></a> Instructions DDL (Data Definition Language)  
   
 |Objet|Informations supplémentaires|  
 |------------|----------------------|  
@@ -56,7 +60,7 @@ caps.handback.revision: 13
 |[sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql.md)|[Installer et configurer la recherche sémantique](../../relational-databases/search/install-and-configure-semantic-search.md)|  
 |[sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql.md)|[Installer et configurer la recherche sémantique](../../relational-databases/search/install-and-configure-semantic-search.md)|  
   
-##  <a name="cv"></a> Vues du système – Affichages catalogue  
+##  <a name="cv"></a> Affichages catalogue  
   
 |Objet|Informations supplémentaires|  
 |------------|----------------------|  
@@ -64,7 +68,7 @@ caps.handback.revision: 13
 |[sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)|[Installer et configurer la recherche sémantique](../../relational-databases/search/install-and-configure-semantic-search.md)|  
 |[sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)|[Installer et configurer la recherche sémantique](../../relational-databases/search/install-and-configure-semantic-search.md)|  
   
-##  <a name="dmv"></a> Vues du système – Vues de gestion dynamique  
+##  <a name="dmv"></a> Vues de gestion dynamique  
   
 |Objet|Informations supplémentaires|  
 |------------|----------------------|  
@@ -72,7 +76,7 @@ caps.handback.revision: 13
 |[sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)|[Gérer et surveiller la recherche sémantique](../../relational-databases/search/manage-and-monitor-semantic-search.md)|  
 |[sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)|[Gérer et surveiller la recherche sémantique](../../relational-databases/search/manage-and-monitor-semantic-search.md)|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gérer et surveiller la recherche sémantique](../../relational-databases/search/manage-and-monitor-semantic-search.md)  
   
   

@@ -1,31 +1,35 @@
 ---
-title: "Modification des donn&#233;es dans une table temporelle avec syst&#232;me par version | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Modification des données dans une table temporelle avec système par version | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 caps.latest.revision: 8
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b3f59affdbe29e3dddf777b22322a5503e69caa1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modification des donn&#233;es dans une table temporelle avec syst&#232;me par version
+# <a name="modifying-data-in-a-system-versioned-temporal-table"></a>Modification des données dans une table temporelle avec système par version
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Les données d'une table temporelle avec système par version sont modifiées à l'aide d’instructions DML régulières avec une différence importante : les données de la colonne de période ne peuvent pas être directement modifiées. Lorsque des données sont mises à jour, des versions sont générées, et la version précédente de chaque ligne mise à jour est insérée dans la table d'historique. Lorsque des données sont supprimées, la suppression est logique : la ligne est déplacée dans la table d'historique à partir de la table actuelle et n'est pas définitivement supprimée.  
   
-## Insertion de données  
+## <a name="inserting-data"></a>Insertion de données  
  Lorsque vous insérez de nouvelles données, vous devez prendre en compte les colonnes **PERIOD** si elles ne sont pas **HIDDEN**. Vous pouvez également utiliser un basculement de partition avec des tables temporelles avec système par version.  
   
-### Insérer de nouvelles données avec des colonnes de période visibles  
+### <a name="insert-new-data-with-visible-period-columns"></a>Insérer de nouvelles données avec des colonnes de période visibles  
  Vous pouvez construire votre instruction **INSERT** si vous utilisez des colonnes **PERIOD** visibles afin de prendre en compte les nouvelles colonnes **PERIOD** :  
   
 -   Si vous spécifiez la liste des colonnes dans votre instruction **INSERT** , vous pouvez omettre les colonnes **PERIOD** car le système générera automatiquement des valeurs pour ces colonnes.  
@@ -54,7 +58,7 @@ caps.handback.revision: 8
   
     ```  
   
-### Insérer des données dans une table avec des colonnes de période HIDDEN (masquées)  
+### <a name="insert-data-into-a-table-with-hidden-period-columns"></a>Insérer des données dans une table avec des colonnes de période HIDDEN (masquées)  
  Si des colonnes **PERIOD** sont spécifiées comme étant HIDDEN (masquées), il vous suffit de spécifier les valeurs des colonnes visibles lorsque vous utiliser l’instruction INSERT sans spécifier la liste des colonnes. Vous n'avez pas besoin de tenir compte des nouvelles colonnes **PERIOD** dans votre instruction **INSERT** . Ce comportement garantit que vos applications héritées continuent de fonctionner lorsque vous activez le contrôle de version système sur des tables qui bénéficieront de ce contrôle.  
   
 ```  
@@ -74,7 +78,7 @@ VALUES  ('Headquarters', 'New York');
   
 ```  
   
-### Insertion de données à l'aide du COMMUTATEUR DE PARTITION  
+### <a name="inserting-data-using-partition-switch"></a>Insertion de données à l'aide du COMMUTATEUR DE PARTITION  
  Si la table actuelle est partitionnée, vous pouvez utiliser le basculement de partition comme un mécanisme efficace pour charger les données dans une partition vide ou dans plusieurs partitions en parallèle.   
 La table intermédiaire utilisée dans l’instruction **PARTITION SWITCH IN** avec une table temporelle avec système par version doit avoir une valeur **SYSTEM_TIME PERIOD** définie, mais elle ne doit pas être une table temporelle avec système par version.    
 Cela garantit que des vérifications de cohérence temporelle sont effectuées lorsque des données sont insérées dans une table intermédiaire ou qu’une période SYSTEM_TIME est ajoutée à une table intermédiaire préremplie.  
@@ -121,11 +125,11 @@ SWITCH TO [dbo].[Department] PARTITION 2;
   
  Si vous essayez d'effectuer un BASCULEMENT DE PARTITION à partir d'une table sans définition de période, vous obtiendrez le message d'erreur : `Msg 13577, Level 16, State 1, Line 25    ALTER TABLE SWITCH statement failed on table 'MyDB.dbo.Staging_Department_2015_09_26' because target table has SYSTEM_TIME PERIOD while source table does not have it.`  
   
-## mise à jour des données  
+## <a name="updating-data"></a>mise à jour des données  
  Vous mettez à jour les données de la table actuelle avec une instruction **UPDATE** normale. Vous pouvez mettre à jour les données de la table actuelle à partir de la table d'historique pour le scénario « Désolé ». Toutefois, vous ne pouvez pas mettre à jour les colonnes **PERIOD** et que vous ne pouvez pas directement mettre à jour les données de la table d’historique si **SYSTEM_VERSIONING = ON**.   
 Définissez **SYSTEM_VERSIONING = OFF** et mettez à jour les lignes de la table actuelle et de la table d’historique, mais n’oubliez pas qu’avec cette procédure, le système ne conserve pas l’historique des modifications.  
   
-### Mise à jour de la table actuelle  
+### <a name="updating-the-current-table"></a>Mise à jour de la table actuelle  
  Dans cet exemple, la colonne ManagerID est mise à jour pour chaque ligne où DeptID = 10. Les colonnes **PERIOD** ne sont référencées d’aucune façon.  
   
 ```  
@@ -144,7 +148,7 @@ Cannot update GENERATED ALWAYS columns in table 'TmpDev.dbo.Department'.
   
 ```  
   
-### Mise à jour de la table actuelle à partir de la table d'historique  
+### <a name="updating-the-current-table-from-the-history-table"></a>Mise à jour de la table actuelle à partir de la table d'historique  
  Vous pouvez utiliser **UPDATE** sur la table actuelle pour rétablir l’état réel de la ligne à un état valide à point précis dans le passé (retour à la « dernière bonne version de ligne connue »). L'exemple suivant montre un retour des valeurs dans la table d'historique en date du 2015-04-25 où DeptID = 10.  
   
 ```  
@@ -157,13 +161,13 @@ AND Department.DeptID = 10 ;
   
 ```  
   
-## Effacement de données  
+## <a name="deleting-data"></a>Effacement de données  
  Vous supprimez les données de la table actuelle avec une instruction **DELETE** normale. La colonne de période de fin des lignes supprimées contiendra l'heure de début de la transaction sous-jacente.   
 Vous ne pouvez pas directement supprimer des lignes d’une table d’historique si **SYSTEM_VERSIONING = ON**.   
 Définissez **SYSTEM_VERSIONING = OFF** et supprimez les lignes de la table actuelle et de la table d’historique, mais n’oubliez pas qu’avec cette procédure, le système ne conserve pas l’historique des modifications.   
 **TRUNCATE**, **SWITCH PARTITION OUT** de la table en cours et **SWITCH PARTITION IN** de la table d’historique ne sont pas pris en charge si **SYSTEM_VERSIONING = ON**.  
   
-## Utilisation de MERGE pour modifier les données d’une table temporelle  
+## <a name="using-merge-to-modify-data-in-temporal-table"></a>Utilisation de MERGE pour modifier les données d’une table temporelle  
  L’opération**MERGE** est prise en charge avec les mêmes limitations que celles que les instructions **INSERT** et **UPDATE** ont concernant les colonnes **PERIOD** .  
   
 ```  
@@ -185,10 +189,10 @@ WHEN NOT MATCHED THEN
   
 ```  
   
-## Cet article vous a-t-il été utile ? Nous sommes à votre écoute  
- Quels renseignements souhaitez-vous obtenir ? Avez-vous trouvé ce que vous cherchiez ? Nous tenons compte de vos commentaires pour améliorer le contenu de nos articles. Veuillez envoyer vos commentaires à l’adresse suivante : [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Modifying%20Data%20in%20a%20System-Versioned%20Temporal%20Table%20page).  
+## <a name="did-this-article-help-you-were-listening"></a>Cet article vous a-t-il été utile ? Nous sommes à votre écoute  
+ Quels renseignements souhaitez-vous obtenir ? Avez-vous trouvé ce que vous cherchiez ? Nous tenons compte de vos commentaires pour améliorer le contenu de nos articles. Veuillez envoyer vos commentaires à l’adresse suivante : [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Modifying%20Data%20in%20a%20System-Versioned%20Temporal%20Table%20page)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tables temporelles](../../relational-databases/tables/temporal-tables.md)   
  [Création d’une table temporelle avec contrôle de version du système](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)   
  [Interrogation des données dans une table temporelle avec système par version](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)   
@@ -196,3 +200,4 @@ WHEN NOT MATCHED THEN
  [Arrêt du contrôle de version par le système sur une table temporelle à version contrôlée par le système](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
+

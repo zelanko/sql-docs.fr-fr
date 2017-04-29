@@ -1,29 +1,33 @@
 ---
-title: "D&#233;terminer si un tableau ou une proc&#233;dure stock&#233;e doit &#234;tre d&#233;plac&#233;e vers l&#39;OLTP en m&#233;moire | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Analyse, migration, rapport"
-  - "AMR"
+title: "Déterminer si une procédure stockée ou une table doit être déplacée vers l’OLTP en mémoire | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Analyze, Migrate, Report
+- AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 caps.latest.revision: 39
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a6f70a5be224219a572df858e37ecbfe5f9fde07
+ms.lasthandoff: 04/11/2017
+
 ---
-# D&#233;terminer si un tableau ou une proc&#233;dure stock&#233;e doit &#234;tre d&#233;plac&#233;e vers l&#39;OLTP en m&#233;moire
+# <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Déterminer si un tableau ou une procédure stockée doit être déplacée vers l'OLTP en mémoire
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Le rapport d’analyse des performances de transaction de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vous aide à déterminer si l’OLTP en mémoire améliore les performances de votre application de base de données. Il vous indique également le volume de travail nécessaire pour activer l'OLTP en mémoire dans votre application. Après avoir identifié une table sur disque pour la fonctionnalité OLTP en mémoire, utilisez le [Conseiller d’optimisation de la mémoire](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) pour migrer la table. De même, le [Conseiller de compilation native](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) vous aide à déplacer une procédure stockée vers une procédure stockée compilée en mode natif. Pour plus d’informations sur les méthodologies de migration, consultez [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx) (OLTP en mémoire – Modèles de charge de travail courants et considérations relatives à la migration).  
+  Le rapport d’analyse des performances de transaction de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vous aide à déterminer si l’OLTP en mémoire améliore les performances de votre application de base de données. Il vous indique également le volume de travail nécessaire pour activer l'OLTP en mémoire dans votre application. Après avoir identifié une table sur disque pour la fonctionnalité OLTP en mémoire, utilisez le [Conseiller d’optimisation de la mémoire](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)pour migrer la table. De même, le [Conseiller de compilation native](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) vous aide à déplacer une procédure stockée vers une procédure stockée compilée en mode natif. Pour plus d’informations sur les méthodologies de migration, consultez [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)(OLTP en mémoire – Modèles de charge de travail courants et considérations relatives à la migration).  
   
  Le rapport d’analyse des performances de transaction est exécuté directement sur la base de données de production ou sur une base de données test avec une charge de travail active similaire à la charge de travail de production.  
   
@@ -40,14 +44,14 @@ caps.handback.revision: 39
   
  Le rapport d’analyse des performances de transaction et les conseillers de migration sont installés en même temps que SQL Server Management Studio (SSMS) quand vous sélectionnez **Outils de gestion — De base** ou **Outils de gestion — Avancés** au moment d’installer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ou quand vous [téléchargez SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx).  
   
-## Rapports d’analyse des performances de transaction  
- Vous pouvez générer des rapports d’analyse des performances de transaction dans l’**Explorateur d’objets** en cliquant avec le bouton droit sur la base de données, en sélectionnant **Rapports**, **Rapports standard**, puis **Présentation de l’analyse des performances des transactions**. La base de données doit avoir une charge de travail active ou une exécution récente d’une charge de travail pour pouvoir générer un rapport d'analyse explicite.  
+## <a name="transaction-performance-analysis-reports"></a>Rapports d’analyse des performances de transaction  
+ Vous pouvez générer des rapports d’analyse des performances de transaction dans l’ **Explorateur d’objets** en cliquant avec le bouton droit sur la base de données, en sélectionnant **Rapports**, **Rapports standard**, puis **Présentation de l’analyse des performances des transactions**. La base de données doit avoir une charge de travail active ou une exécution récente d’une charge de travail pour pouvoir générer un rapport d'analyse explicite.  
   
- Le rapport détaillé d'une table comprend trois sections :  
+ Le rapport détaillé d'une table comprend trois sections :  
   
 -   Section des statistiques d'analyse  
   
-     Cette section comprend une seule table contenant les statistiques collectées à propos des analyses sur la table de base de données. Les colonnes sont les suivantes :  
+     Cette section comprend une seule table contenant les statistiques collectées à propos des analyses sur la table de base de données. Les colonnes sont les suivantes :  
   
     -   Pourcentage du total des accès. Pourcentage des analyses et des recherches sur cette table, par rapport à l'activité de la base de données totale. Plus ce pourcentage est élevé, plus la table est sollicitée par rapport aux autres tables de la base de données.  
   
@@ -57,7 +61,7 @@ caps.handback.revision: 39
   
 -   Section des statistiques de contention  
   
-     Cette section comprend un tableau indiquant la contention sur la table de base de données. Pour plus d'informations sur les verrous internes et les verrous de base de données, consultez Architecture du verrouillage Les colonnes sont les suivantes :  
+     Cette section comprend un tableau indiquant la contention sur la table de base de données. Pour plus d'informations sur les verrous internes et les verrous de base de données, consultez Architecture du verrouillage Les colonnes sont les suivantes :  
   
     -   Pourcentage du total des attentes. Pourcentage des attentes attribuables à un verrou interne et un verrou sur cette table de base de données par rapport à l'activité de la base de données. Plus ce pourcentage est élevé, plus la table est sollicitée par rapport aux autres tables de la base de données.  
   
@@ -73,11 +77,11 @@ caps.handback.revision: 39
   
  Une procédure stockée avec un rapport élevé temps UC/temps écoulé est un candidat pour la migration. Le rapport affiche toutes les références de table, car les procédures stockées compilées en mode natif ne peuvent référencer que les tables mémoire optimisées, ce qui augmente le coût de migration.  
   
- Le rapport détaillé d'une procédure stockée comprend deux sections :  
+ Le rapport détaillé d'une procédure stockée comprend deux sections :  
   
 -   Section des statistiques d'exécution  
   
-     Cette section comprend un tableau contenant les statistiques collectées à propos des exécutions de la procédure stockée. Les colonnes sont les suivantes :  
+     Cette section comprend un tableau contenant les statistiques collectées à propos des exécutions de la procédure stockée. Les colonnes sont les suivantes :  
   
     -   Heure de mise en cache. Heure à laquelle ce plan d'exécution est mis en cache. Si la procédure stockée supprime le cache du plan et recommence, il y aura des heures pour chaque cache.  
   
@@ -97,16 +101,16 @@ caps.handback.revision: 39
   
  Pour afficher les détails sur la conversion d'une procédure stockée en procédure stockée compilée en mode natif, utilisez le Conseiller de compilation native.  
   
-## Génération des listes de contrôle de migration OLTP en mémoire  
+## <a name="generating-in-memory-oltp-migration-checklists"></a>Génération des listes de contrôle de migration OLTP en mémoire  
  Les listes de contrôle de migration identifient les fonctionnalités de table ou de procédure stockée non prises en charge avec les tables optimisées en mémoire ou les procédures stockées et compilées en mode natif. L'optimisation de la mémoire et les conseillers de compilation native peuvent générer une liste de contrôle pour une unique table sur disque ou une procédure stockée T-SQL interprétée. Il est également possible de générer des listes de contrôle de migration pour plusieurs tables et procédures stockées dans une base de données.  
   
  Vous pouvez générer une liste de contrôle de migration dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] à l’aide de la commande **Générer des listes de contrôle de migration OLTP en mémoire** ou de PowerShell.  
   
  **Pour générer une liste de contrôle de migration à l'aide de la commande de l'interface utilisateur**  
   
-1.  Dans l’**Explorateur d’objets**, cliquez avec le bouton droit sur une base de données autre que la base de données système, cliquez sur **Tâches**, puis sur **Générer des listes de contrôle de migration OLTP en mémoire**.  
+1.  Dans l’ **Explorateur d’objets**, cliquez avec le bouton droit sur une base de données autre que la base de données système, cliquez sur **Tâches**, puis sur **Générer des listes de contrôle de migration OLTP en mémoire**.  
   
-2.  Dans la boîte de dialogue Générer des listes de contrôle de migration OLTP en mémoire, cliquez sur Suivant pour accéder à la page **Configurer les options de génération de listes de contrôle**. Sur cette page, procédez comme suit.  
+2.  Dans la boîte de dialogue Générer des listes de contrôle de migration OLTP en mémoire, cliquez sur Suivant pour accéder à la page **Configurer les options de génération de listes de contrôle** . Sur cette page, procédez comme suit.  
   
     1.  Entrez un chemin d'accès au dossier dans la zone **Enregistrer la liste de contrôle sous** .  
   
@@ -169,7 +173,7 @@ caps.handback.revision: 39
   
     -   Un rapport de liste de contrôle de migration pour <object_name> est le seul rapport figurant dans l'emplacement spécifié par folder_path2.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Migration vers OLTP en mémoire](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

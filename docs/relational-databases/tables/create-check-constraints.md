@@ -1,39 +1,43 @@
 ---
-title: "Cr&#233;er des contraintes de validation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "contraintes de table [SQL Server]"
-  - "attachement de contraintes de validation"
-  - "colonnes [SQL Server], contraintes"
-  - "contraintes [SQL Server], validation"
-  - "contraintes de validation, attachement"
+title: "Créer des contraintes de validation | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table constraints [SQL Server]
+- attaching check constraints
+- columns [SQL Server], constraints
+- constraints [SQL Server], check
+- CHECK constraints, attaching
 ms.assetid: b8756304-9454-4d39-996a-64516831b7df
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a7d6d12e6a2673fd38c8c7341c4703dd7588501
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er des contraintes de validation
+# <a name="create-check-constraints"></a>Créer des contraintes de validation
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Vous pouvez créer une contrainte de validation dans une table pour spécifier les valeurs de données admises dans une ou plusieurs colonnes dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour créer une nouvelle contrainte de validation à l'aide de :**  
+-   **Pour créer une nouvelle contrainte de validation à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -46,13 +50,13 @@ caps.handback.revision: 17
 ####  <a name="Permissions"></a> Autorisations  
  Requiert des autorisations ALTER sur la table.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour créer une nouvelle contrainte de validation  
+#### <a name="to-create-a-new-check-constraint"></a>Pour créer une nouvelle contrainte de validation  
   
-1.  Dans **l’Explorateur d’objets**, développez la table à laquelle vous souhaitez ajouter une contrainte de validation, cliquez avec le bouton droit sur **Contraintes**, puis cliquez sur **Nouvelle contrainte**.  
+1.  Dans **l’Explorateur d’objets**, développez la table à laquelle vous souhaitez ajouter une contrainte de validation, cliquez avec le bouton droit sur **Contraintes** , puis cliquez sur **Nouvelle contrainte**.  
   
-2.  Dans la boîte de dialogue **Vérifier les contraintes**, cliquez dans le champ **Expression**, puis cliquez sur le bouton de sélection **(…)**.  
+2.  Dans la boîte de dialogue **Vérifier les contraintes** , cliquez dans le champ **Expression** , puis cliquez sur le bouton de sélection **(…)**.  
   
 3.  Dans la boîte de dialogue **Expression de contrainte de validation** , tapez l'expression SQL de la contrainte de validation. Par exemple, pour limiter les entrées dans la colonne `SellEndDate` de la table `Product` à une valeur supérieure ou égale à la date de la colonne `SellStartDate` ou à la valeur NULL, tapez :  
   
@@ -71,11 +75,11 @@ caps.handback.revision: 17
   
 4.  Cliquez sur **OK**.  
   
-5.  Dans la catégorie **Identity**, vous pouvez modifier le nom de la contrainte de validation et ajouter une description (propriété étendue) pour la contrainte.  
+5.  Dans la catégorie **Identity** , vous pouvez modifier le nom de la contrainte de validation et ajouter une description (propriété étendue) pour la contrainte.  
   
 6.  Dans la catégorie **Concepteur de tables** , vous pouvez définir le moment où la contrainte est appliquée.  
   
-    |**S'applique à :**|**Sélectionnez Oui dans les champs suivants :**|  
+    |**S'applique à :**|**Sélectionnez Oui dans les champs suivants :**|  
     |-------------|---------------------------------------------|  
     |Tester la contrainte sur les données qui existaient avant d'avoir créé la contrainte|**Vérifier les données existantes à la création ou à l'activation**|  
     |Appliquer la contrainte lorsqu'une opération de réplication se produit sur cette table|**Appliquer la réplication**|  
@@ -85,7 +89,7 @@ caps.handback.revision: 17
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour créer une nouvelle contrainte de validation  
+#### <a name="to-create-a-new-check-constraint"></a>Pour créer une nouvelle contrainte de validation  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

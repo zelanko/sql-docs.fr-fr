@@ -1,45 +1,49 @@
 ---
-title: "Classe d&#39;&#233;v&#233;nements Broker:Message Drop | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Broker:Message Drop, classe d'événements"
+title: "Broker:Message Drop, classe d’événements | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker:Message Drop event class
 ms.assetid: f532b7c9-ca34-4bac-8dc3-53f9895fd6af
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 47fd82b02e3d808d2609e5c9830099d11627795f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe d&#39;&#233;v&#233;nements Broker:Message Drop
+# <a name="brokermessage-drop-event-class"></a>Broker:Message Drop, classe d'événements
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un événement **Broker:Message Drop** si le Service Broker ne peut pas conserver un message reçu censé avoir été livré à un service de cette instance. Dans le cas de messages censés avoir été transmis, consultez [Classe d’événements Broker:Forwarded Message Dropped](../../relational-databases/event-classes/broker-forwarded-message-dropped-event-class.md).  
   
-## Colonnes de données de la classe d'événements Broker:Message Drop  
+## <a name="brokermessage-drop-event-class-data-columns"></a>Colonnes de données de la classe d'événements Broker:Message Drop  
   
 |Colonne de données|Type|Description|Numéro de colonne|Filtrable|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**Application Name**|**nvarchar**|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette colonne est remplie avec les valeurs passées par l'application plutôt que par le nom affiché du programme.|10|Oui|  
 |**BigintData1**|**bigint**|Numéro de séquence du message supprimé.|52|Non|  
 |**BigintData2**|**bigint**|Numéro de séquence du dernier message ayant été pris en considération.|53|Non|  
-|**ClientProcessID**|**int**|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. Cette colonne de données est remplie si l'ID du processus du client est fourni par le client.|9|Oui|  
-|**DatabaseID**|**int**|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données **ServerName** du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
+|**ClientProcessID**|**int**|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. Cette colonne de données est remplie si l'ID du processus du client est fourni par le client.|9|Oui|  
+|**DatabaseID**|**int**|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données **ServerName** du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |**Erreur**|**int**|ID du message dans **sys.messages** destiné au texte de l’événement.|31|Non|  
 |**EventClass**|**int**|Type de classe d'événements capturée. Renvoie toujours **160** pour **Broker:MessageDrop**.|27|Non|  
 |**EventSequence**|**int**|Numéro de séquence de cet événement.|51|Non|  
-|**EventSubClass**|**nvarchar**|Indique si le message supprimé correspondait à un message tiré d'une séquence. Prend l'une des deux valeurs :<br /><br /> **Message en séquence**. Le message supprimé correspondait donc à un message en séquence.<br /><br /> **Message sans séquence**. Le message supprimé ne correspondait pas à un message en séquence.|21|Oui|  
+|**EventSubClass**|**nvarchar**|Indique si le message supprimé correspondait à un message tiré d'une séquence. Prend l'une des deux valeurs :<br /><br /> **Message en séquence**. Le message supprimé correspondait donc à un message en séquence.<br /><br /> **Message sans séquence**. Le message supprimé ne correspondait pas à un message en séquence.|21|Oui|  
 |**GUID**|**uniqueidentifier**|ID de la conversation à laquelle le message supprimé appartient. Cet identifiant est transmis en tant que partie intégrante du message et est partagé par les deux intervenants de la conversation.|54|Non|  
 |**HostName**|**nvarchar**|Nom de l'ordinateur sur lequel s'exécute le client. Cette colonne de données est remplie si le nom de l'hôte est fourni par le client. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |**IntegerData**|**int**|Numéro de séquence du message supprimé.|25|Non|  
 |**IntegerData2**|**int**|Numéro du fragment de message que le message supprimé était en train de prendre en compte.|55|Non|  
 |**IsSystem**|**int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Non|  
-|**LoginName**|**nvarchar**|Nom de la connexion de l'utilisateur (soit la connexion de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], soit les informations d'identification de connexion Windows au format DOMAINE\nom_utilisateur).|11|Non|  
+|**LoginName**|**nvarchar**|Nom de la connexion de l'utilisateur (soit la connexion de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , soit les informations d'identification de connexion Windows au format DOMAINE\nom_utilisateur).|11|Non|  
 |**LoginSid**|**image**|Numéro d'identification de sécurité (SID) de l'utilisateur connecté. Chaque connexion possède un SID unique au niveau du serveur.|41|Oui|  
 |**NTDomainName**|**nvarchar**|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
 |**NTUserName**|**nvarchar**|Nom de l'utilisateur propriétaire de la connexion ayant généré l'événement.|6|Oui|  
@@ -53,7 +57,7 @@ caps.handback.revision: 25
 |**TextData**|**ntext**|Raison pour laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a supprimé le message.|1|Oui|  
 |**TransactionID**|**bigint**|ID affecté à la transaction par le système.|4|Non|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

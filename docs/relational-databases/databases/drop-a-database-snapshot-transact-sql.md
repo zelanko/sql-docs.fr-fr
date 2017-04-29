@@ -1,29 +1,33 @@
 ---
-title: "supprimer un instantan&#233; de base de donn&#233;es (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "retrait d'instantanés de base de données"
-  - "suppression d'instantanés de base de données"
-  - "Instantanés de base de données [SQL Server], suppression"
+title: "Supprimer un instantané de base de données (Transact-SQL) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing database snapshots
+- deleting database snapshots
+- database snapshots [SQL Server], deleting
 ms.assetid: ad70ec97-d5fb-41aa-b72a-915e74b61b76
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9dc2993da01eb4c68f24c4077ea79ff045a8106a
+ms.lasthandoff: 04/11/2017
+
 ---
-# supprimer un instantan&#233; de base de donn&#233;es (Transact-SQL)
-  La suppression d'un instantané de base de données entraîne la suppression de l'instantané de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ainsi que celle des fichiers partiellement alloués utilisés par l'instantané. Lorsque vous supprimez un instantané de base de données, toutes ses connexions utilisateur sont terminées.  
+# <a name="drop-a-database-snapshot-transact-sql"></a>supprimer un instantané de base de données (Transact-SQL)
+  La suppression d'un instantané de base de données entraîne la suppression de l'instantané de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ainsi que celle des fichiers partiellement alloués utilisés par l'instantané. Lorsque vous supprimez un instantané de base de données, toutes ses connexions utilisateur sont terminées.  
   
-## Sécurité  
+## <a name="security"></a>Sécurité  
   
 ###  <a name="Permissions"></a> Autorisations  
  Tout utilisateur doté des autorisations DROP DATABASE peut supprimer un instantané de base de données.  
@@ -33,7 +37,7 @@ caps.handback.revision: 35
   
 1.  Identifiez l'instantané à supprimer. Vous pouvez afficher les instantanés d'une base de données dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Afficher un instantané de base de données &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md).  
   
-2.  Exécutez l’instruction [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) en définissant le nom de l’instantané de base de données à supprimer. La syntaxe de base est la suivante :  
+2.  Exécutez l’instruction [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) en définissant le nom de l’instantané de base de données à supprimer. La syntaxe de base est la suivante :  
   
      DROP DATABASE *nom_instantané_base_de_données* [ **,**...*n* ]  
   
@@ -59,9 +63,8 @@ DROP DATABASE SalesSnapshot0600 ;
   
 -   [Rétablir une base de données dans l'état d'un instantané de base de données](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [&#91;Haut&#93;](#Top)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
  [Instantanés de base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
   

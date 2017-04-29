@@ -1,24 +1,28 @@
 ---
-title: "Unit&#233; de sauvegarde (page Contenu du support) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.backupdevice.contents.f1"
+title: "Unité de sauvegarde (page Contenu du support) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.backupdevice.contents.f1
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4bfa385cab6527c16e62e2e631b9ffa1b96e0d10
+ms.lasthandoff: 04/11/2017
+
 ---
-# Unit&#233; de sauvegarde (page Contenu du support)
+# <a name="backup-device-media-contents-page"></a>Unité de sauvegarde (page Contenu du support)
   La boîte de dialogue **Unité de sauvegarde** vous permet  d'afficher les informations de sauvegarde. Ces informations décrivent le périphérique, le support, le jeu de supports, ainsi que le ou les jeux de sauvegarde.  
   
  **Pour utiliser SQL Server Management Studio pour afficher le contenu d'une unité de sauvegarde**  
@@ -27,14 +31,14 @@ caps.handback.revision: 38
   
 -   [Afficher les propriétés et le contenu d’une unité de sauvegarde logique &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## Options  
+## <a name="options"></a>Options  
  Affichez des informations sur le support individuel, le support de sauvegarde et les jeux de sauvegarde.  
   
  **Support**  
  Disque ou jeu de bandes sur lequel sont stockées les informations de sauvegarde.  
   
  **Séquence du support**  
- Répertorie le numéro de séquence du support, le numéro de séquence de la famille et, le cas échéant, l'identificateur du support miroir. Chaque support de sauvegarde physique est associé à un numéro de séquence de support indiquant l'ordre d'utilisation des supports. Le support de sauvegarde initial est référencé par le chiffre 1, le deuxième support (la première bande de continuation) par le chiffre 2 et ainsi de suite. Lorsque le jeu de sauvegarde est restauré, ces numéros de séquence de support garantissent que l'opérateur qui effectue la restauration monte le support approprié dans l'ordre correct.  
+ Répertorie le numéro de séquence du support, le numéro de séquence de la famille et, le cas échéant, l'identificateur du support miroir. Chaque support de sauvegarde physique est associé à un numéro de séquence de support indiquant l'ordre d'utilisation des supports. Le support de sauvegarde initial est référencé par le chiffre 1, le deuxième support (la première bande de continuation) par le chiffre 2 et ainsi de suite. Lorsque le jeu de sauvegarde est restauré, ces numéros de séquence de support garantissent que l'opérateur qui effectue la restauration monte le support approprié dans l'ordre correct.  
   
  **Créé le**  
  Indique la date et l'heure de création du support de sauvegarde.  
@@ -49,7 +53,7 @@ caps.handback.revision: 38
  Indique la description du support de sauvegarde, s'il existe.  
   
  **Nombre de familles de supports**  
- Indique le nombre de familles dans le support de sauvegarde. Chaque support de sauvegarde est une collection comprenant une ou plusieurs familles de supports. Toutes les opérations effectuées sur une unité de sauvegarde donnée (ou sur un groupe d'unités de sauvegarde miroir) constituent une seule famille de supports. Chaque support de sauvegarde contient une famille de supports par unité distincte (ou groupe d'unités en miroir) ; par exemple, si un support de sauvegarde utilise deux unités de sauvegarde non mises en miroir, il contient deux familles de supports.  
+ Indique le nombre de familles dans le support de sauvegarde. Chaque support de sauvegarde est une collection comprenant une ou plusieurs familles de supports. Toutes les opérations effectuées sur une unité de sauvegarde donnée (ou sur un groupe d'unités de sauvegarde miroir) constituent une seule famille de supports. Chaque support de sauvegarde contient une famille de supports par unité distincte (ou groupe d'unités en miroir) ; par exemple, si un support de sauvegarde utilise deux unités de sauvegarde non mises en miroir, il contient deux familles de supports.  
   
  **Jeux de sauvegarde**  
  Affiche les informations relatives au(x) jeu(x) de sauvegarde contenus dans les supports. Un jeu de sauvegarde est le résultat d'une opération de sauvegarde réussie, dont le contenu est distribué entre les supports d'un ensemble d'unités de sauvegarde.  
@@ -58,7 +62,7 @@ caps.handback.revision: 38
 |------------|------------|  
 |**Nom**|Nom du jeu de sauvegarde.|  
 |**Type**|Objet sauvegardé : Base de données, Fichier ou *\<vide>* (pour les journaux des transactions).|  
-|**Composant**|Type de sauvegarde effectué : Complète, Différentielle ou Journal des transactions.|  
+|**Composant**|Type de sauvegarde effectué : Complète, Différentielle ou Journal des transactions.|  
 |**Server**|Nom de l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui a effectué l'opération de sauvegarde.|  
 |**Base de données**|Le nom de la base de données qui a été sauvegardée.|  
 |**Position**|La position du jeu de sauvegarde dans le volume.|  
@@ -87,7 +91,7 @@ caps.handback.revision: 38
   
 -   [Restaurer une sauvegarde à partir d’une unité &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Jeux de supports, familles de supports et jeux de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

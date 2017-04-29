@@ -1,25 +1,29 @@
 ---
-title: "Propri&#233;t&#233;s de la base de donn&#233;es (page Groupes de fichiers) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.filegroups.f1"
+title: "Propriétés de la base de données (page Groupes de fichiers) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.filegroups.f1
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 977464bddc01eaa5559962808e9cee4b39651b8f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propri&#233;t&#233;s de la base de donn&#233;es (page Groupes de fichiers)
-  Cette page vous permet d'afficher les groupes de fichiers existants ou d'ajouter un nouveau groupe de fichiers à la base de données sélectionnée. Il existe trois types de groupes de fichiers : les groupes de fichiers de *ligne*, les groupes de fichiers de données FILESTREAM et les groupes de fichiers optimisés en mémoire.  
+# <a name="database-properties-filegroups-page"></a>Propriétés de la base de données (page Groupes de fichiers)
+  Cette page vous permet d'afficher les groupes de fichiers existants ou d'ajouter un nouveau groupe de fichiers à la base de données sélectionnée. Il existe trois types de groupes de fichiers : les groupes de fichiers de *ligne* , les groupes de fichiers de données FILESTREAM et les groupes de fichiers optimisés en mémoire.  
   
  Les groupes de fichiers de ligne contiennent des données régulières et des fichiers journaux. Les groupes de fichiers de données FILESTREAM contiennent des fichiers de données FILESTREAM. Ces fichiers de données comportent des informations sur la manière dont les données des objets BLOB (Binary Large Objects) sont stockées sur le système de fichiers lorsque vous utilisez le stockage FILESTREAM. Les deux types de groupes de fichiers disposent des mêmes options.  
   
@@ -29,8 +33,8 @@ caps.handback.revision: 31
   
  Les groupes de fichiers optimisés en mémoire sont nécessaires pour toute base de données devant contenir une ou plusieurs tables optimisées en mémoire.  
   
-## Options des groupes de fichiers de ligne et de données FILESTREAM  
- **Nom   **  
+## <a name="row-and-filestream-data-filegroup-options"></a>Options des groupes de fichiers de ligne et de données FILESTREAM  
+ **Nom**  
  Entrez le nom du groupe de fichiers.  
   
  **Fichiers**  
@@ -48,8 +52,8 @@ caps.handback.revision: 31
  **Supprimer**  
  Supprime la ligne sélectionnée des groupes de fichiers de la grille.  
   
-## Options des groupes de fichiers optimisés en mémoire  
- **Nom   **  
+## <a name="memory-optimized-data-filegroup-options"></a>Options des groupes de fichiers optimisés en mémoire  
+ **Nom**  
  Entrez le nom du groupe de fichiers optimisé en mémoire.  
   
  **Fichiers FILESTREAM**  
@@ -61,7 +65,7 @@ caps.handback.revision: 31
  **Supprimer**  
  Supprime la ligne sélectionnée des groupes de fichiers de la grille.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

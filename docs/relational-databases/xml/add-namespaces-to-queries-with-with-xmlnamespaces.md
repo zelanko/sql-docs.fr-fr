@@ -1,41 +1,45 @@
 ---
-title: "Ajouter des espaces de noms aux requ&#234;tes avec WITH XMLNAMESPACES | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ELEMENTS XSINIL, directive"
-  - "espaces de noms, ajout"
-  - "XSINIL, directive"
-  - "espaces de noms par défaut"
-  - "requêtes [XML dans SQL Server], clause WITH XMLNAMESPACES"
-  - "espaces de noms prédéfinis [XML dans SQL Server]"
-  - "Clause FOR XML, clause WITH XMLNAMESPACES"
-  - "espaces de noms [XML dans SQL Server]"
-  - "type de données xml [SQL Server], clause WITH XMLNAMESPACES"
-  - "WITH XMLNAMESPACES, clause"
+title: "Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ELEMENTS XSINIL directive
+- adding namespaces
+- XSINIL directive
+- default namespaces
+- queries [XML in SQL Server], WITH XMLNAMESPACES clause
+- predefined namespaces [XML in SQL Server]
+- FOR XML clause, WITH XMLNAMESPACES clause
+- namespaces [XML in SQL Server]
+- xml data type [SQL Server], WITH XMLNAMESPACES clause
+- WITH XMLNAMESPACES clause
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 63cc371d0a4b1c19971fe7f9e614f10d5c04765f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ajouter des espaces de noms aux requ&#234;tes avec WITH XMLNAMESPACES
-  [WITH XMLNAMESPACES (Transact-SQL)](../Topic/WITH%20XMLNAMESPACES%20\(Transact-SQL\).md) fournit une prise en charge des URI d’espace de noms de la manière suivante :  
+# <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES
+  [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md) fournit une prise en charge des URI d’espace de noms de la manière suivante :  
   
--   Il rend le préfixe de l’espace de noms associé au mappage d’URI disponible lors de la [Construction de données XML à l’aide de requêtes FOR XML](../../relational-databases/xml/for-xml-sql-server.md).  
+-   Il rend le préfixe de l’espace de noms associé au mappage d’URI disponible lors de la [Construction de données XML à l’aide de requêtes FOR XML](../../relational-databases/xml/for-xml-sql-server.md) .  
   
 -   Il met l’espace de noms associé au mappage d’URI à la disposition du contexte d’espace de noms statique des [méthodes de type de données xml](../../t-sql/xml/xml-data-type-methods.md).  
   
-## Utilisation de WITH XMLNAMESPACES dans les requêtes FOR XML  
- WITH XMLNAMESPACES vous permet d'inclure des espaces de noms XML dans des requêtes FOR XML. Examinons, par exemple, la requête FOR XML suivante :  
+## <a name="using-with-xmlnamespaces-in-the-for-xml-queries"></a>Utilisation de WITH XMLNAMESPACES dans les requêtes FOR XML  
+ WITH XMLNAMESPACES vous permet d'inclure des espaces de noms XML dans des requêtes FOR XML. Examinons, par exemple, la requête FOR XML suivante :  
   
 ```  
 SELECT ProductID, Name, Color  
@@ -44,7 +48,7 @@ WHERE  ProductID=316 or ProductID=317
 FOR XML RAW  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <row ProductID="316" Name="Blade" />  
@@ -65,7 +69,7 @@ FOR XML RAW ('ns1:Prod'), ELEMENTS
   
 ```  
   
- Le résultat XML inclut les préfixes d'espace de noms :  
+ Le résultat XML inclut les préfixes d'espace de noms :  
   
 ```  
 <ns1:Prod xmlns:ns1="uri">  
@@ -80,11 +84,11 @@ FOR XML RAW ('ns1:Prod'), ELEMENTS
   
 ```  
   
- Ce qui suit s'applique à la clause WITH XMLNAMESPACES :  
+ Ce qui suit s'applique à la clause WITH XMLNAMESPACES :  
   
 -   Cela est pris en charge uniquement sur les modes RAW, AUTO et PATH des requêtes FOR XML. Le mode EXPLICIT n'est pas pris en charge.  
   
--   Il affecte uniquement les préfixes d’espace de noms des requêtes FOR XML et les méthodes de type de données **xml**, mais pas l’analyseur XML. Par exemple, la requête ci-dessous retourne une erreur, car le document XML ne possède pas de déclaration d'espace de noms pour le préfixe myNS.  
+-   Il affecte uniquement les préfixes d’espace de noms des requêtes FOR XML et les méthodes de type de données **xml** , mais pas l’analyseur XML. Par exemple, la requête ci-dessous retourne une erreur, car le document XML ne possède pas de déclaration d'espace de noms pour le préfixe myNS.  
   
 -   Les directives FOR XML, XMLSCHEMA et XMLDATA ne peuvent pas être utilisées lorsqu'une clause WITH XMLNAMESPACES est utilisée.  
   
@@ -95,7 +99,7 @@ FOR XML RAW ('ns1:Prod'), ELEMENTS
     INSERT INTO T VALUES('<myNS:root/>')  
     ```  
   
-## Utilisation de la directive XSINIL  
+## <a name="using-the-xsinil-directive"></a>Utilisation de la directive XSINIL  
  Vous ne pouvez pas définir le préfixe xsi dans la clause WITH XMLNAMESPACES si vous utilisez la directive ELEMENTS XSINIL. À la place, il est ajouté automatiquement lorsque vous utilisez ELEMENTS XSINIL. La requête ci-dessous utilise ELEMENTS XSINIL qui génère des données XML centrées sur les éléments, dans lesquelles les valeurs Null sont mappées sur les éléments dont l’attribut **xsi:nil** a la valeur True.  
   
 ```  
@@ -108,7 +112,7 @@ WHERE ProductID=316
 FOR XML RAW, ELEMENTS XSINIL  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="uri">  
@@ -118,7 +122,7 @@ FOR XML RAW, ELEMENTS XSINIL
 </row>  
 ```  
   
-## Spécification d'espaces de noms par défaut  
+## <a name="specifying-default-namespaces"></a>Spécification d'espaces de noms par défaut  
  Au lieu de déclarer un préfixe d'espace de noms, vous pouvez déclarer un espace de noms par défaut en utilisant un mot clé DEFAULT. Dans la requête FOR XML, il liera l'espace de noms par défaut aux nœuds XML dans les données XML résultantes. Dans l'exemple ci-dessous, WITH XMLNAMESPACES définit deux préfixes d'espaces de noms qui sont définis ensemble à l'aide d'un espace de noms par défaut.  
   
 ```  
@@ -161,7 +165,7 @@ WHERE ProductID=316 or ProductID=317
 FOR XML AUTO, ROOT('ns2:root'), ELEMENTS  
 ```  
   
-## Utilisation d'espaces de noms prédéfinis  
+## <a name="using-predefined-namespaces"></a>Utilisation d'espaces de noms prédéfinis  
  Lorsque vous utilisez des espaces de noms prédéfinis, à l'exception des espaces de noms xml et xsi lorsque ELEMENTS XSINIL est utilisé, vous devez spécifier explicitement la liaison avec les espaces de noms à l'aide de WITH XMLNAMESPACES. La requête ci-dessous définit explicitement le préfixe d'espace de noms associé à la liaison d'URI pour l'espace de noms prédéfini (`urn:schemas-microsoft-com:xml-sql`).  
   
 ```  
@@ -189,9 +193,9 @@ FOR XML PATH ('Translation')
 go  
 ```  
   
- Les attributs @xml:lang utilisent l'espace de noms xml prédéfini. Comme XML version 1.0 ne requiert pas la déclaration explicite de la liaison d'espace de noms xml, le résultat n'inclut pas de déclaration explicite de la liaison d'espace de noms.  
+ Les attributs @xml:lang utilisent l’espace de noms xml prédéfini. Comme XML version 1.0 ne requiert pas la déclaration explicite de la liaison d'espace de noms xml, le résultat n'inclut pas de déclaration explicite de la liaison d'espace de noms.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Translation>  
@@ -200,8 +204,8 @@ go
 </Translation>  
 ```  
   
-## Utilisation de WITH XMLNAMESPACES avec les méthodes de type de données xml  
- Les [méthodes de type de données xml](../../t-sql/xml/xml-data-type-methods.md) spécifiées dans une requête SELECT, ou dans UPDATE quand il s’agit de la méthode **modify()**, doivent toutes répéter la déclaration d’espace de noms dans leur prologue. Ceci peut prendre du temps. Par exemple, la requête ci-dessous récupère les identificateurs des modèles de produits dont les descriptions de catalogue incluent une spécification. À savoir que l'élément <`Specifications`> existe.  
+## <a name="using-with-xmlnamespaces-with-the-xml-data-type-methods"></a>Utilisation de WITH XMLNAMESPACES avec les méthodes de type de données xml  
+ Les [méthodes de type de données xml](../../t-sql/xml/xml-data-type-methods.md) spécifiées dans une requête SELECT, ou dans UPDATE quand il s’agit de la méthode **modify()** , doivent toutes répéter la déclaration d’espace de noms dans leur prologue. Ceci peut prendre du temps. Par exemple, la requête ci-dessous récupère les identificateurs des modèles de produits dont les descriptions de catalogue incluent une spécification. À savoir que l'élément <`Specifications`> existe.  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -217,7 +221,7 @@ WHERE CatalogDescription.exist('
     ) = 1  
 ```  
   
- Dans la requête précédente, les deux méthodes **query()** et **exist()** déclarent le même espace de noms dans leur prologue. Par exemple :  
+ Dans la requête précédente, les deux méthodes **query()** et **exist()** déclarent le même espace de noms dans leur prologue. Par exemple :  
   
 ```  
 declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
@@ -241,10 +245,10 @@ Go
   
  Notez qu'une déclaration explicite dans le prologue XQuery remplace le préfixe d'espace de noms et l'espace de noms d'élément par défaut qui sont définis dans la clause WITH.  
   
-## Voir aussi  
- [Méthodes des types de données xml](../../t-sql/xml/xml-data-type-methods.md)   
+## <a name="see-also"></a>Voir aussi  
+ [méthodes de type de données xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Références relatives au langage Xquery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)   
- [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../Topic/WITH%20XMLNAMESPACES%20\(Transact-SQL\).md)   
+ [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)   
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

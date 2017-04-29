@@ -1,33 +1,37 @@
 ---
-title: "Cr&#233;er des index filtr&#233;s | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "index filtrés [SQL Server], à propos des index filtrés"
-  - "conception d’index [SQL Server], filtrés"
-  - "index filtrés [SQL Server]"
-  - "index non cluster [SQL Server], filtrés"
-  - "index [SQL Server], filtrés"
+title: "Créer des index filtrés | Microsoft Docs"
+ms.custom: 
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filtered indexes [SQL Server], about filtered indexes
+- designing indexes [SQL Server], filtered
+- filtered indexes [SQL Server]
+- nonclustered indexes [SQL Server], filtered
+- indexes [SQL Server], filtered
 ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
 caps.latest.revision: 73
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 73
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de8d5ce869856d289b70b028ede2bc1009220a38
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er des index filtr&#233;s
+# <a name="create-filtered-indexes"></a>Créer des index filtrés
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Cette rubrique explique comment créer un index filtré dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un index filtré est un index non cluster optimisé convenant tout particulièrement aux requêtes qui effectuent des sélections dans un sous-ensemble de données bien défini. Il utilise un prédicat de filtre pour indexer une partie des lignes de la table. Un index filtré bien conçu peut améliorer les performances des requêtes et réduire les coûts de maintenance et de stockage des index par rapport aux index de table entière.  
   
- Les index filtrés peuvent présenter les avantages suivants par rapport aux index de table entière :  
+ Les index filtrés peuvent présenter les avantages suivants par rapport aux index de table entière :  
   
 -   **Meilleures performances des requêtes et qualité de plan améliorée**  
   
@@ -43,7 +47,7 @@ caps.handback.revision: 73
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Remarques sur la conception](#Design)  
   
@@ -51,7 +55,7 @@ caps.handback.revision: 73
   
      [Sécurité](#Security)  
   
--   **Pour créer un index filtré, utilisez :**  
+-   **Pour créer un index filtré, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -69,7 +73,7 @@ caps.handback.revision: 73
   
 -   Vous ne pouvez pas créer un index filtré sur une vue. Toutefois, l'optimiseur de requête peut tirer parti d'un index filtré défini sur une table référencée dans une vue. L'optimiseur de requête prend en considération un index filtré pour une requête qui effectue des sélections dans une vue si les résultats de la requête sont corrects.  
   
--   Les index filtrés présentent les avantages suivants par rapport aux vues indexées :  
+-   Les index filtrés présentent les avantages suivants par rapport aux vues indexées :  
   
     -   Coûts réduits de maintenance des index. Par exemple, le processeur de requêtes utilise moins de ressources processeur pour mettre à jour un index filtré qu'une vue indexée.  
   
@@ -96,11 +100,11 @@ caps.handback.revision: 73
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner**. Pour modifier l'expression d'index filtré, utilisez CREATE INDEX WITH DROP_EXISTING.  
+ Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** . Pour modifier l'expression d'index filtré, utilisez CREATE INDEX WITH DROP_EXISTING.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour créer un index filtré  
+#### <a name="to-create-a-filtered-index"></a>Pour créer un index filtré  
   
 1.  Dans l'Explorateur d'objets, cliquez sur le signe plus (+) pour développer la base de données qui contient la table sur laquelle vous souhaitez créer un index filtré.  
   
@@ -108,13 +112,13 @@ caps.handback.revision: 73
   
 3.  Cliquez sur le signe plus (+) pour développer la table sur laquelle vous souhaitez créer un index filtré.  
   
-4.  Cliquez avec le bouton droit sur le dossier **Index**, pointez sur **Nouvel index**, puis sélectionnez **Index non cluster**.  
+4.  Cliquez avec le bouton droit sur le dossier **Index** , pointez sur **Nouvel index**, puis sélectionnez **Index non cluster**.  
   
 5.  Dans la boîte de dialogue **Nouvel index** , sur la page **Général** , entrez le nom du nouvel index dans la zone **Nom de l'index** .  
   
 6.  Sous **Colonnes clés d'index**, cliquez sur **Ajouter…**.  
   
-7.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table*, cochez la ou les cases correspondant à la ou aux colonnes de table à ajouter à l’index unique.  
+7.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table* , cochez les cases correspondant aux colonnes de table à ajouter à l’index unique.  
   
 8.  Cliquez sur **OK**.  
   
@@ -124,7 +128,7 @@ caps.handback.revision: 73
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour créer un index filtré  
+#### <a name="to-create-a-filtered-index"></a>Pour créer un index filtré  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -166,7 +170,7 @@ caps.handback.revision: 73
     GO  
     ```  
   
-#### Pour vous assurer qu'un index filtré est utilisé dans une requête SQL  
+#### <a name="to-ensure-that-a-filtered-index-is-used-in-a-sql-query"></a>Pour vous assurer qu'un index filtré est utilisé dans une requête SQL  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -186,3 +190,4 @@ caps.handback.revision: 73
  Pour plus d’informations, consultez [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
   
+

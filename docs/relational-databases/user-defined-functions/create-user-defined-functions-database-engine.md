@@ -1,28 +1,32 @@
 ---
-title: "Cr&#233;er des fonctions d&#233;finies par l&#39;utilisateur (moteur de base de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clause SCHEMABINDING"
-  - "fonctions liées au schéma [SQL Server]"
-  - "fonctions définies par l’utilisateur [SQL Server], création"
-  - "CREATE FUNCTION, instruction"
-  - "instructions valides [SQL Server]"
+title: "Créer des fonctions définies par l’utilisateur (moteur de base de données) | Microsoft Docs"
+ms.custom: 
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SCHEMABINDING clause
+- schema-bound functions [SQL Server]
+- user-defined functions [SQL Server], creating
+- CREATE FUNCTION statement
+- valid statements [SQL Server]
 ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d4ea2a247e4d8a55cd3467510f19115cc3163bc2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er des fonctions d&#233;finies par l&#39;utilisateur (moteur de base de donn&#233;es)
+# <a name="create-user-defined-functions-database-engine"></a>Créer des fonctions définies par l'utilisateur (moteur de base de données)
   Cette rubrique décrit comment créer une fonction définie par l’utilisateur (UDF) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
   
@@ -36,7 +40,7 @@ caps.handback.revision: 38
   
 -   Les fonctions définies par l'utilisateur ne peuvent pas renvoyer plusieurs jeux de résultats. Utilisez une procédure stockée si vous devez renvoyer plusieurs jeux de résultats.  
   
--   La gestion des erreurs est restreinte dans une fonction définie par l'utilisateur. Une fonction définie par l'utilisateur ne prend pas en charge TRY…CATCH, @ERROR ou RAISERROR.  
+-   La gestion des erreurs est restreinte dans une fonction définie par l'utilisateur. Une fonction définie par l’utilisateur ne prend pas en charge TRY…CATCH, @ERROR ou RAISERROR.  
   
 -   Les fonctions définies par l'utilisateur ne peuvent pas appeler une procédure stockée, mais elles peuvent appeler une procédure stockée étendue.  
   
@@ -130,7 +134,7 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
   
 ```  
   
- L'exemple suivant crée une fonction table dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . À partir d'un paramètre d'entrée unique, `EmployeeID` , la fonction retourne la liste de tous les employés qui sont sous la responsabilité directe ou indirecte de l'employé spécifié. La fonction est ensuite appelée en spécifiant l'ID d'employé 19.  
+ L'exemple suivant crée une fonction table dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . À partir d'un paramètre d'entrée unique, `EmployeeID` , la fonction retourne la liste de tous les employés qui sont sous la responsabilité directe ou indirecte de l'employé spécifié. La fonction est ensuite appelée en spécifiant l’ID d’employé 109.  
   
 ```  
 IF OBJECT_ID (N'dbo.ufn_FindReports', N'TF') IS NOT NULL  
@@ -177,7 +181,7 @@ FROM dbo.ufn_FindReports(1);
   
 ```  
   
-## Plus d'exemples  
+## <a name="more-examples"></a>Plus d'exemples  
  - [Fonctions définies par l'utilisateur](../../relational-databases/user-defined-functions/user-defined-functions.md)   
  - [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md) 
   - [ALTER FUNCTION (Transact SQL)](https://msdn.microsoft.com/library/ms173799.aspx) 
@@ -185,3 +189,4 @@ FROM dbo.ufn_FindReports(1);
  - [DROP PARTITION FUNCTION (Transact-SQL)](https://msdn.microsoft.com/library/ms187759(SQL.130).aspx)
  - Plus d’exemples dans la [communauté](https://www.bing.com/search?q=user%20defined%20function%20%22sql%20server%202016%22%20examples&qs=n&form=QBRE&pq=user%20defined%20function%20%22sql%20server%202016%22%20examples&sc=0-48&sp=-1&sk=&cvid=C3AD337125A840AD9EEFA3AAC36A3712)
   
+

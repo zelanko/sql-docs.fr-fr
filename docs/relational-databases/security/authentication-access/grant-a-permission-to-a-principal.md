@@ -1,35 +1,39 @@
 ---
-title: "Accorder une autorisation &#224; un principal | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Accorder une autorisation à un principal"
+title: "Accorder une autorisation à un principal | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Grant permission to a principal
 ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 969f70df2cdb72c1fa47e645580ae723fb519864
+ms.lasthandoff: 04/11/2017
+
 ---
-# Accorder une autorisation &#224; un principal
+# <a name="grant-a-permission-to-a-principal"></a>Accorder une autorisation à un principal
   Cette rubrique explique comment accorder une autorisation à un principal dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour accorder une autorisation à un principal, utilisez :**  
+-   **Pour accorder une autorisation à un principal, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -47,11 +51,11 @@ caps.handback.revision: 12
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Le fournisseur d'autorisations (ou le principal spécifié avec l'option AS) doit posséder l'autorisation elle-même avec l'option GRANT OPTION ou une autorisation plus élevée qui implique l'autorisation accordée. Les membres du rôle serveur fixe **sysadmin** peuvent accorder toutes les autorisations.  
+ Le fournisseur d'autorisations (ou le principal spécifié avec l'option AS) doit posséder l'autorisation elle-même avec l'option GRANT OPTION ou une autorisation plus élevée qui implique l'autorisation accordée. Les membres du rôle serveur fixe **sysadmin** peuvent accorder toutes les autorisations.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour accorder une autorisation à un principal  
+#### <a name="to-grant-permission-to-a-principal"></a>Pour accorder une autorisation à un principal  
   
 1.  Dans l'Explorateur d'objets, développez la base de données qui contient l'objet auquel vous souhaitez octroyer des autorisations.  
   
@@ -64,13 +68,13 @@ caps.handback.revision: 12
   
 4.  Cliquez avec le bouton droit sur une procédure stockée, puis sélectionnez **Propriétés**.  
   
-5.  Dans la boîte de dialogue **Propriétés de la procédure stockée - ***nom_procédure_stockée*, sous Sélectionner une page, sélectionnez **Autorisations**. Utilisez cette page pour ajouter des utilisateurs ou des rôles à la procédure stockée et spécifier les autorisations dont disposeront ces utilisateurs ou rôles.  
+5.  Dans la boîte de dialogue **Propriétés de la procédure stockée -***nom_procédure_stockée* , sous Sélectionner une page, sélectionnez **Autorisations**. Utilisez cette page pour ajouter des utilisateurs ou des rôles à la procédure stockée et spécifier les autorisations dont disposeront ces utilisateurs ou rôles.  
   
 6.  Lorsque vous avez terminé, cliquez sur **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour accorder une autorisation à un principal  
+#### <a name="to-grant-permission-to-a-principal"></a>Pour accorder une autorisation à un principal  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -89,7 +93,7 @@ caps.handback.revision: 12
   
  Pour plus d’informations, consultez [GRANT &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-transact-sql.md) et [Octroi d’autorisations d’objet &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-object-permissions-transact-sql.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Principaux &#40;moteur de base de données&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

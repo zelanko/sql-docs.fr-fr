@@ -1,23 +1,27 @@
 ---
-title: "Restauration fragmentaire de bases de donn&#233;es avec des tables m&#233;moire optimis&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Restauration fragmentaire de bases de données avec des tables mémoire optimisées | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b540d4b491980a57ec88d7a7717821a4e38b76a9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restauration fragmentaire de bases de donn&#233;es avec des tables m&#233;moire optimis&#233;es
-  La restauration fragmentaire est prise en charge sur les bases de données avec des tables mémoire optimisées, à l'exception d'une restriction décrite ci-dessous. Pour plus d’informations sur la sauvegarde et restauration fragmentaires, consultez [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md) et [Restaurations fragmentaires &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
+# <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>Restauration fragmentaire de bases de données avec des tables mémoire optimisées
+  La restauration fragmentaire est prise en charge sur les bases de données avec des tables mémoire optimisées, à l'exception d'une restriction décrite ci-dessous. Pour plus d’informations sur la sauvegarde et restauration fragmentaires, consultez [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) et [Restaurations fragmentaires &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
   
  Un groupe de fichiers mémoire optimisé doit être sauvegardé et restauré avec le groupe de fichiers principal.  
   
@@ -27,9 +31,9 @@ caps.handback.revision: 16
   
  Principaux scénarios de sauvegarde et de restauration fragmentaires  
   
--   La sauvegarde fragmentaire vous permet de réduire la taille de la sauvegarde. Exemples :  
+-   La sauvegarde fragmentaire vous permet de réduire la taille de la sauvegarde. Exemples :  
   
-    -   Configurez la sauvegarde de base de données de façon à ce qu'elle se produise à différentes heures ou différents jours pour réduire l'impact sur la charge de travail. Par exemple, une base de données très volumineuse (de plus de 1 To) où une sauvegarde complète de la base de données ne peut pas être effectuée dans le temps alloué pour la maintenance de la base de données. Dans ce cas, utilisez une sauvegarde fragmentaire pour sauvegarder la base de données complète en plusieurs sauvegardes fragmentaires.  
+    -   Configurez la sauvegarde de base de données de façon à ce qu'elle se produise à différentes heures ou différents jours pour réduire l'impact sur la charge de travail. Par exemple, une base de données très volumineuse (de plus de 1 To) où une sauvegarde complète de la base de données ne peut pas être effectuée dans le temps alloué pour la maintenance de la base de données. Dans ce cas, utilisez une sauvegarde fragmentaire pour sauvegarder la base de données complète en plusieurs sauvegardes fragmentaires.  
   
     -   Si un groupe de fichiers est indiqué comme étant en lecture seule, il ne nécessite pas de sauvegarde du journal des transactions après qu'il a été marqué en lecture seule. Vous pouvez choisir de sauvegarder le groupe de fichiers une seule fois après son marquage en lecture seule.  
   
@@ -39,8 +43,8 @@ caps.handback.revision: 16
   
     -   Utilisez la réparation de page pour résoudre l'altération de page lors de la restauration spécifique de la page. Pour plus d’informations, consultez [Restaurer des pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md).  
   
-## Exemples  
- Les exemples utilisent le schéma suivant :  
+## <a name="samples"></a>Exemples  
+ Les exemples utilisent le schéma suivant :  
   
 ```  
 CREATE DATABASE imoltp  
@@ -61,7 +65,7 @@ ALTER DATABASE imoltp ADD FILE (name='imoltp_mod2', filename='c:\data\imoltp_mod
 GO  
 ```  
   
-### Sauvegarde  
+### <a name="backup"></a>Sauvegarde  
  Cet exemple montre comment sauvegarder le groupe de fichiers principal et le groupe de fichiers mémoire optimisé. Vous devez spécifier le groupe de fichiers principal et le groupe de fichiers mémoire optimisé.  
   
 ```  
@@ -74,7 +78,7 @@ backup database imoltp filegroup='primary', filegroup='imoltp_mod' to disk='c:\d
 backup database imoltp filegroup='imoltp_secondary' to disk='c:\data\imoltp_secondary.dmp' with init  
 ```  
   
-### Restore  
+### <a name="restore"></a>Restore  
  Cet exemple montre comment restaurer le groupe de fichiers principal et le groupe de fichiers mémoire optimisé ensemble.  
   
 ```  
@@ -94,7 +98,7 @@ FROM  DISK = N'c:\data\imoltp_secondary.dmp' WITH  FILE = 1,  RECOVERY,  NOUNLOA
 GO  
 ```  
   
-## Voir aussi  
- [Sauvegarder, restaurer et récupérer des tables optimisées en mémoire](../Topic/Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Sauvegarder, restaurer et récupérer des tables optimisées en mémoire](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

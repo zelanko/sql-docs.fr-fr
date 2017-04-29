@@ -1,29 +1,33 @@
 ---
-title: "Afficher le contenu d&#39;un fichier ou d&#39;une bande de sauvegarde (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "unités de sauvegarde [SQL Server], bandes"
-  - "affichage du contenu de la sauvegarde"
-  - "visualisation du contenu de la sauvegarde"
-  - "unités de sauvegarde sur bande, affichage du contenu"
-  - "sauvegardes de bases de données [SQL Server], affichage du contenu"
-  - "sauvegarde de bases de données [SQL Server], affichage du contenu"
+title: "Afficher le contenu d’un fichier ou d’une bande de sauvegarde (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup devices [SQL Server], tapes
+- displaying backup content
+- viewing backup content
+- tape backup devices, viewing contents
+- database backups [SQL Server], viewing content
+- backing up databases [SQL Server], viewing content
 ms.assetid: cd6674a2-ca55-4b5a-a971-878ba001821e
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 34519d1441326239b039c0a22ea4dad4cdcd2b35
+ms.lasthandoff: 04/11/2017
+
 ---
-# Afficher le contenu d&#39;un fichier ou d&#39;une bande de sauvegarde (SQL Server)
+# <a name="view-the-contents-of-a-backup-tape-or-file-sql-server"></a>Afficher le contenu d'un fichier ou d'une bande de sauvegarde (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique explique comment afficher le contenu d'un fichier ou d'une bande de sauvegarde dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -33,11 +37,11 @@ caps.handback.revision: 31
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour afficher le contenu d'un fichier ou d'une bande de sauvegarde, utilisez :**  
+-   **Pour afficher le contenu d'un fichier ou d'une bande de sauvegarde, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -46,14 +50,14 @@ caps.handback.revision: 31
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Security"></a> Sécurité  
- Pour plus d’informations sur la sécurité, consultez [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md).  
+ Pour plus d’informations sur la sécurité, consultez [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).  
   
 ####  <a name="Permissions"></a> Autorisations  
  Dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures, l'obtention d'informations relatives à un jeu de sauvegarde ou une unité de sauvegarde requiert l'autorisation CREATE DATABASE. Pour plus d’informations, consultez [GRANT – octroi d’autorisations de base de données &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour afficher le contenu d'un fichier ou d'une bande de sauvegarde  
+#### <a name="to-view-the-content-of-a-backup-tape-or-file"></a>Pour afficher le contenu d'un fichier ou d'une bande de sauvegarde  
   
 1.  Après la connexion à l'instance appropriée du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], dans l'Explorateur d'objets, cliquez sur le nom du serveur pour développer son arborescence.  
   
@@ -63,21 +67,21 @@ caps.handback.revision: 31
   
 4.  Dans la section **Destination** de la page **Général** , cliquez sur **Disque** ou sur **Bande**. Dans la zone de liste **Sauvegarde sur** , recherchez le fichier disque ou la bande souhaitée.  
   
-     Si le fichier disque ou la bande ne figure pas dans la zone de liste, cliquez sur **Ajouter**. Sélectionnez un nom de fichier ou un lecteur de bande. Pour l’ajouter à la zone de liste **Sauvegarde sur**, cliquez sur **OK**.  
+     Si le fichier disque ou la bande ne figure pas dans la zone de liste, cliquez sur **Ajouter**. Sélectionnez un nom de fichier ou un lecteur de bande. Pour l’ajouter à la zone de liste **Sauvegarde sur** , cliquez sur **OK**.  
   
-5.  Dans la zone de liste **Sauvegarde sur**, sélectionnez le chemin d’accès au disque ou au lecteur de bande que vous souhaitez afficher et cliquez sur **Sommaire**. La boîte de dialogue **Contenu de l'unité** s'ouvre.  
+5.  Dans la zone de liste **Sauvegarde sur** , sélectionnez le chemin d’accès au disque ou au lecteur de bande que vous souhaitez afficher et cliquez sur **Sommaire**. La boîte de dialogue **Contenu de l'unité** s'ouvre.  
   
 6.  Le volet droit affiche des informations relatives au support de sauvegarde et aux jeux de sauvegarde sur la bande ou le fichier sélectionné.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour afficher le contenu d'un fichier ou d'une bande de sauvegarde  
+#### <a name="to-view-the-content-of-a-backup-tape-or-file"></a>Pour afficher le contenu d'un fichier ou d'une bande de sauvegarde  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3.  Utilisez l'instruction [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md) . Cet exemple retourne des informations de base sur le fichier nommé `AdventureWorks2012-FullBackup.bak`.  
+3.  Utilisez l'instruction [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) . Cet exemple retourne des informations de base sur le fichier nommé `AdventureWorks2012-FullBackup.bak`.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -86,7 +90,7 @@ FROM DISK = N'C:\AdventureWorks2012-FullBackup.bak' ;
 GO  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   

@@ -1,29 +1,33 @@
 ---
-title: "Param&#232;tres du moniteur d&#39;envoi des journaux | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.logshipping.settings.monitor.f1"
+title: "Paramètres du moniteur d’envoi des journaux | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.logshipping.settings.monitor.f1
 ms.assetid: 45e2ba7d-b3aa-4643-9451-bcb991572314
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e93dde0e413ab7f7303d0f8404cdc4311edf8aa7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Param&#232;tres du moniteur d&#39;envoi des journaux
+# <a name="log-shipping-monitor-settings"></a>Paramètres du moniteur d'envoi des journaux
   Cette page vous permet de configurer et de modifier les propriétés du serveur moniteur d'envoi des journaux.  
   
  Pour obtenir des explications sur les concepts de copie des journaux de transaction, consultez [À propos de la copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-## Options  
+## <a name="options"></a>Options  
  **Instance du serveur moniteur**  
  Affiche le nom de l'instance du serveur actuellement configurée comme serveur moniteur dans la configuration d'envoi des journaux.  
   

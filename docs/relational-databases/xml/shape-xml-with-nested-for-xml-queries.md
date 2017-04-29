@@ -1,30 +1,34 @@
 ---
-title: "Fa&#231;onner des donn&#233;es XML avec des requ&#234;tes FOR XML imbriqu&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML, requête"
-  - "requêtes [XML dans SQL Server], FOR XML imbriquée"
-  - "XML [SQL Server], requêtes FOR XML"
+title: "Façonner des données XML avec des requêtes FOR XML imbriquées | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML query
+- queries [XML in SQL Server], nested FOR XML
+- XML [SQL Server], FOR XML queries
 ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9dd8e345930a2e4ed7d036e9969ec8600f85853e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Fa&#231;onner des donn&#233;es XML avec des requ&#234;tes FOR XML imbriqu&#233;es
+# <a name="shape-xml-with-nested-for-xml-queries"></a>Façonner des données XML avec des requêtes FOR XML imbriquées
   L'exemple suivant interroge la table `Production.Product` pour extraire les valeurs `ListPrice` et `StandardCost` d'un produit spécifique. Pour rendre la requête intéressante, les deux prix sont renvoyés dans un élément <`Price`> et chaque élément <`Price`> possède un attribut `PriceType`.  
   
-## Exemple  
- Voici la forme attendue du document XML :  
+## <a name="example"></a>Exemple  
+ Voici la forme attendue du document XML :  
   
 ```  
 <xsd:schema xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet2" elementFormDefault="qualified">  
@@ -37,7 +41,7 @@ caps.handback.revision: 11
 </Production.Product>  
 ```  
   
- Voici la requête FOR XML imbriquée :  
+ Voici la requête FOR XML imbriquée :  
   
 ```  
 USE AdventureWorks2012;  
@@ -66,7 +70,7 @@ for XML AUTO, TYPE, XMLSCHEMA
   
 -   La directive XMLSCHEMA figurant dans l'instruction SELECT externe génère le schéma XSD en ligne qui décrit la forme du document XML obtenu.  
   
- Pour rendre la requête intéressante, vous pouvez écrire la requête FOR XML puis écrire une requête XQuery par rapport au résultat afin de redéfinir la forme du document XML, comme le montre la requête suivante :  
+ Pour rendre la requête intéressante, vous pouvez écrire la requête FOR XML puis écrire une requête XQuery par rapport au résultat afin de redéfinir la forme du document XML, comme le montre la requête suivante :  
   
 ```  
 SELECT ProductID,   
@@ -87,7 +91,7 @@ FOR XML AUTO, TYPE
   
  L’exemple précédent utilise la méthode **query()** du type de données **xml** pour interroger le document XML renvoyé par la requête FOR XML interne et construire le résultat attendu.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Production.Product ProductID="520">  
@@ -96,7 +100,7 @@ FOR XML AUTO, TYPE
 </Production.Product>  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser des requêtes FOR XML imbriquées](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

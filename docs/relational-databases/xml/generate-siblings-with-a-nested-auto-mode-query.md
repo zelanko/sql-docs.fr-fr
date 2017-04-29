@@ -1,33 +1,37 @@
 ---
-title: "G&#233;n&#233;rer des fr&#232;res &#224; l&#39;aide d&#39;une requ&#234;te imbriqu&#233;e en mode AUTO | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "requêtes [XML dans SQL Server], mode AUTO imbriqué"
-  - "requête imbriquée en mode AUTO"
+title: "Générer des frères à l’aide d’une requête imbriquée en mode AUTO | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [XML in SQL Server], nested AUTO mode
+- nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d85a1b59656222cf07338d2eb98925e30a5c658
+ms.lasthandoff: 04/11/2017
+
 ---
-# G&#233;n&#233;rer des fr&#232;res &#224; l&#39;aide d&#39;une requ&#234;te imbriqu&#233;e en mode AUTO
+# <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Générer des frères à l'aide d'une requête imbriquée en mode AUTO
   L'exemple suivant indique comment générer des frères à l'aide d'une requête imbriquée en mode AUTO. La seule autre façon de générer ce type de document XML consiste à utiliser le mode EXPLICIT. Toutefois, cette méthode peut s'avérer lourde.  
   
-## Exemple  
- Cette requête construit le document XML qui fournit les informations sur les commandes. Notamment :  
+## <a name="example"></a>Exemple  
+ Cette requête construit le document XML qui fournit les informations sur les commandes. Notamment :  
   
--   Les informations sur les en-têtes des commandes, `SalesOrderID`, `SalesPersonID` et `OrderDate`. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] stocke ces informations dans la table `SalesOrderHeader`.  
+-   Les informations sur les en-têtes des commandes, `SalesOrderID`, `SalesPersonID`et `OrderDate`. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] stocke ces informations dans la table `SalesOrderHeader` .  
   
--   Les informations sur les détails des commandes. Elles indiquent un ou plusieurs produits commandés, le prix unitaire et la quantité commandée. Ces informations sont stockées dans la table `SalesOrderDetail`.  
+-   Les informations sur les détails des commandes. Elles indiquent un ou plusieurs produits commandés, le prix unitaire et la quantité commandée. Ces informations sont stockées dans la table `SalesOrderDetail` .  
   
 -   Les informations sur le vendeur. Il s'agit du vendeur qui a traité la commande. La table `SalesPerson` fournit le `SalesPersonID`. Pour cette requête, vous devez joindre cette table à la table `Employee` afin de rechercher le nom du vendeur.  
   
@@ -65,13 +69,13 @@ FOR XML AUTO, TYPE
   
 -   Elle interroge l'ensemble de lignes `SalesOrder`, spécifié dans la clause `FROM`. Le résultat est un document XML possédant un ou plusieurs éléments <`SalesOrder`>.  
   
--   Spécifie le mode `AUTO` et la directive `TYPE`. `AUTO` Ce mode transforme le résultat de la requête en XML, tandis que la directive `TYPE` renvoie les résultats sous forme de type **xml**.  
+-   Spécifie le mode `AUTO` et la directive `TYPE` . `AUTO` Ce mode transforme le résultat de la requête en XML, tandis que la directive `TYPE` renvoie les résultats sous forme de type **xml** .  
   
 -   Elle inclut deux instructions `SELECT` imbriquées séparées par une virgule. La première instruction `SELECT` imbriquée extrait les informations sur la commande, l'en-tête et les détails, tandis que la seconde instruction `SELECT` imbriquée extrait les informations sur le vendeur.  
   
-    -   L'instruction `SELECT` qui extrait `SalesOrderID`, `SalesPersonID` et `CustomerID` inclut elle-même une autre instruction imbriquée `SELECT ... FOR XML` (avec le mode `AUTO` et la directive `TYPE`) qui retourne des informations sur les détails des commandes.  
+    -   L'instruction `SELECT` qui extrait `SalesOrderID`, `SalesPersonID`et `CustomerID` inclut elle-même une autre instruction imbriquée `SELECT ... FOR XML` (avec le mode `AUTO` et la directive `TYPE` ) qui retourne des informations sur les détails des commandes.  
   
- L'instruction `SELECT` qui extrait les informations sur le vendeur interroge un ensemble de lignes, `SalesPerson`, créé dans la clause `FROM`. Pour que les requêtes `FOR XML` fonctionnent, vous devez fournir un nom pour l'ensemble de lignes anonyme généré dans la clause `FROM`. Dans ce cas, le nom fourni est `SalesPerson`.  
+ L'instruction `SELECT` qui extrait les informations sur le vendeur interroge un ensemble de lignes, `SalesPerson`, créé dans la clause `FROM` . Pour que les requêtes `FOR XML` fonctionnent, vous devez fournir un nom pour l'ensemble de lignes anonyme généré dans la clause `FROM` . Dans ce cas, le nom fourni est `SalesPerson`.  
   
  Voici le résultat partiel :  
   
@@ -123,7 +127,7 @@ WHERE SalesOrderID=43659 or SalesOrderID=43660
 FOR XML AUTO, TYPE  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Sales.SalesOrderHeader SalesOrderID="43659" SalesPersonID="279" CustomerID="676">  
@@ -139,11 +143,11 @@ FOR XML AUTO, TYPE
 </Sales.SalesOrderHeader>  
 ```  
   
- Étant donné que la directive `TYPE` renvoie un résultat de requête de type **xml**, vous pouvez recourir à différentes méthodes de type de données **xml** pour interroger le document XML obtenu. Pour plus d’informations, consultez [Méthodes de données de type xml](../../t-sql/xml/xml-data-type-methods.md). Dans la requête suivante, notez ce qui suit :  
+ Étant donné que la directive `TYPE` renvoie un résultat de requête de type **xml** , vous pouvez recourir à différentes méthodes de type de données **xml** pour interroger le document XML obtenu. Pour plus d’informations, consultez [Méthodes de données de type xml](../../t-sql/xml/xml-data-type-methods.md). Dans la requête suivante, notez ce qui suit :  
   
--   La requête précédente est ajoutée à la clause `FROM`. Les résultats de la requête sont renvoyés sous la forme d'une table. Notez l'ajout de l'alias `XmlCol`.  
+-   La requête précédente est ajoutée à la clause `FROM` . Les résultats de la requête sont renvoyés sous la forme d'une table. Notez l'ajout de l'alias `XmlCol` .  
   
--   La clause `SELECT` définit une requête XQuery par rapport à l'alias `XmlCol` renvoyé dans la clause `FROM`. La méthode **query()** du type de données **xml** permet de spécifier la requête XQuery. Pour plus d’informations, consultez [Méthode query&#40;&#41; &#40;type de données xml&#41;](../../t-sql/xml/query-method-xml-data-type.md).  
+-   La clause `SELECT` définit une requête XQuery par rapport à l'alias `XmlCol` renvoyé dans la clause `FROM` . La méthode **query()** du type de données **xml** permet de spécifier la requête XQuery. Pour plus d’informations, consultez [Méthode query&#40;&#41; &#40;type de données xml&#41;](../../t-sql/xml/query-method-xml-data-type.md).  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  
@@ -164,7 +168,7 @@ FOR XML AUTO, TYPE
     FOR XML AUTO, TYPE ) as T(XmlCol)  
     ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser des requêtes FOR XML imbriquées](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

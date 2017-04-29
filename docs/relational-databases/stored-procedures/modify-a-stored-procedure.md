@@ -1,32 +1,36 @@
 ---
-title: "Modifier une proc&#233;dure stock&#233;e | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modification des procédures stockées"
-  - "modification des procédures stockées"
-  - "procédures stockées [SQL Server], modification"
+title: "Modifier une procédure stockée | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying stored procedures
+- editing stored procedures
+- stored procedures [SQL Server], modifying
 ms.assetid: 13396239-6100-48ce-aa34-461358d99c92
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6eb24cf562396f61af07735fa741e50d447a4b50
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modifier une proc&#233;dure stock&#233;e
+# <a name="modify-a-stored-procedure"></a>Modifier une procédure stockée
     
 ##  <a name="Top"></a> Cette rubrique explique comment modifier une procédure stockée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [Sécurité](#Security)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
   
--   **Pour modifier une procédure, à l’aide de :** [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **To alter a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -41,13 +45,13 @@ caps.handback.revision: 30
  Nécessite l'autorisation ALTER PROCEDURE sur la procédure.  
   
 ##  <a name="Procedures"></a> Pour modifier une procédure stockée  
- Vous pouvez utiliser l'un des éléments suivants :  
+ Vous pouvez utiliser l'un des éléments suivants :  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+###  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour modifier une procédure dans Management Studio**  
   
 1.  Dans l’Explorateur d’objets, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et développez-la.  
@@ -145,7 +149,7 @@ caps.handback.revision: 30
   
     ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)  
   
   

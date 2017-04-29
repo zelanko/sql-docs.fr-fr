@@ -1,46 +1,50 @@
 ---
-title: "Arr&#234;t du contr&#244;le de version par le syst&#232;me sur une table temporelle &#224; version contr&#244;l&#233;e par le syst&#232;me | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/11/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Arrêt du contrôle de version du système sur une table temporelle avec contrôle de version par le système | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 10/11/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dddd707e-bfb1-44ff-937b-a84c5e5d1a94
 caps.latest.revision: 10
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bf65c939ca66fa2805e23b98570223f5fb703bc6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Arr&#234;t du contr&#244;le de version par le syst&#232;me sur une table temporelle &#224; version contr&#244;l&#233;e par le syst&#232;me
+# <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>Arrêt du contrôle de version par le système sur une table temporelle à version contrôlée par le système
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Vous pouvez interrompre le contrôle des versions sur votre table temporelle temporairement ou définitivement.   
 Pour ce faire, vous pouvez affecter à la clause **SYSTEM_VERSIONING** la valeur **OFF**.  
   
-## Configuration de SYSTEM_VERSIONING = OFF  
- Arrêtez le contrôle de version par le système si vous souhaitez effectuer des opérations de maintenance spécifiques sur la table temporelle ou si vous n’avez plus besoin une table avec version. Suite à cette opération, vous obtiendrez deux tables indépendantes :  
+## <a name="setting-systemversioning--off"></a>Configuration de SYSTEM_VERSIONING = OFF  
+ Arrêtez le contrôle de version par le système si vous souhaitez effectuer des opérations de maintenance spécifiques sur la table temporelle ou si vous n’avez plus besoin une table avec version. Suite à cette opération, vous obtiendrez deux tables indépendantes :  
   
 -   La table actuelle avec définition de la période  
   
 -   Une table historique sous la forme d’une table normale  
   
-### Remarques importantes  
+### <a name="important-remarks"></a>Remarques importantes  
   
--   Aucune perte de données ne se produit quand vous définissez **SYSTEM_VERSIONING = OFF** ou supprimez la période **SYSTEM_TIME**.  
+-   Aucune perte de données ne se produit quand vous définissez  **SYSTEM_VERSIONING = OFF** ou supprimez la période **SYSTEM_TIME** .  
   
--   Quand vous définissez **SYSTEM_VERSIONING = OFF** sans supprimer la période **SYSTEM_TIME**, le système continue à mettre à jour les colonnes de période pour chaque opération d’insertion et de mise à jour. Les suppressions effectuées sur la table actuelle sont définitives.  
+-   Quand vous définissez **SYSTEM_VERSIONING = OFF** sans supprimer la période **SYSTEM_TIME** , le système continue à mettre à jour les colonnes de période pour chaque opération d’insertion et de mise à jour. Les suppressions effectuées sur la table actuelle sont définitives.  
   
 -   Supprimez la période **SYSTEM_TIME** pour supprimer les colonnes de période définitivement.  
   
 -   Quand vous définissez **SYSTEM_VERSIONING = OFF**, tous les utilisateurs disposant des autorisations suffisantes peuvent modifier le schéma et le contenu de la table historique, et même supprimer définitivement la table historique.  
   
-### Supprimer définitivement SYSTEM_VERSIONING  
+### <a name="permanently-remove-systemversioning"></a>Supprimer définitivement SYSTEM_VERSIONING  
  Cet exemple supprime définitivement SYSTEM_VERSIONING et complètement les colonnes de période. La suppression des colonnes de période est facultative.  
   
 ```  
@@ -51,8 +55,8 @@ DROP PERIOD FOR SYSTEM_TIME;
   
 ```  
   
-### Supprimer temporairement SYSTEM_VERSIONING  
- Voici la liste des opérations qui nécessitent la définition du contrôle de version par le système avec la valeur **OFF** :  
+### <a name="temporarily-remove-systemversioning"></a>Supprimer temporairement SYSTEM_VERSIONING  
+ Voici la liste des opérations qui nécessitent la définition du contrôle de version par le système avec la valeur **OFF**:  
   
 -   Suppression des données superflues de l’historique (**DELETE** ou **TRUNCATE**)  
   
@@ -77,10 +81,10 @@ COMMIT ;
   
 ```  
   
-## Cet article vous a-t-il été utile ? Nous sommes à votre écoute  
- Quels renseignements souhaitez-vous obtenir ? Avez-vous trouvé ce que vous cherchiez ? Nous tenons compte de vos commentaires pour améliorer le contenu de nos articles. Veuillez envoyer vos commentaires à [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Stopping%20System-Versioning%20on%20a%20System-Version%20Temporal%20Table%20page)  
+## <a name="did-this-article-help-you-were-listening"></a>Cet article vous a-t-il été utile ? Nous sommes à votre écoute  
+ Quels renseignements souhaitez-vous obtenir ? Avez-vous trouvé ce que vous cherchiez ? Nous tenons compte de vos commentaires pour améliorer le contenu de nos articles. Veuillez envoyer vos commentaires à [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Stopping%20System-Versioning%20on%20a%20System-Version%20Temporal%20Table%20page)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tables temporelles](../../relational-databases/tables/temporal-tables.md)   
  [Prise en main des tables temporelles de contrôle de version du système](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Gérer la rétention des données d’historique dans les tables temporelles avec version gérée par le système](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)   
@@ -91,3 +95,4 @@ COMMIT ;
  [Modification du schéma d’une table temporelle à version contrôlée par le système](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md)  
   
   
+

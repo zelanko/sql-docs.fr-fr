@@ -1,30 +1,34 @@
 ---
-title: "DDL pris en charge pour les modules T-SQL compil&#233;s en mode natif | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "DDL pris en charge pour les modules T-SQL compilés en mode natif | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6b21f47e-bceb-4054-8b3c-9d39bb9583c0
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e6468568f12555425cb038ce6293f8777e0a3689
+ms.lasthandoff: 04/11/2017
+
 ---
-# DDL pris en charge pour les modules T-SQL compil&#233;s en mode natif
+# <a name="supported-ddl-for-natively-compiled-t-sql-modules"></a>DDL pris en charge pour les modules T-SQL compilés en mode natif
   Cette rubrique répertorie les constructions DDL (langage de définition de données) prises en charge pour les modules T-SQL compilés en mode natif, telles que les procédures stockées, les fonctions définies par l’utilisateur (UDF) scalaires, les Fonctions table (TVF) inline et les déclencheurs.  
   
  Pour plus d’informations sur les fonctionnalités et la surface d’exposition de T-SQL qui peut être utilisée dans des modules de T-SQL compilés en mode natif, consultez [Fonctionnalités prises en charge pour les modules T-SQL compilés en mode natif](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
  Pour plus d’informations sur les constructions non prises en charge, consultez [Constructions Transact-SQL non prises en charge par l’OLTP en mémoire](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
- Les constructions suivantes sont admises :  
+ Les constructions suivantes sont admises :  
   
 -   [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
@@ -42,7 +46,7 @@ caps.handback.revision: 12
   
      Pour plus d’informations, voir [Native Compilation of Tables and Stored Procedures](../../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md).  
   
--   Les paramètres et les variables peuvent être déclarés comme NOT NULL (uniquement disponibles pour les modules compilés en mode natif : procédures stockées compilées en mode natif et fonctions définies par l’utilisateur scalaires compilées en mode natif).  
+-   Les paramètres et les variables peuvent être déclarés comme NOT NULL (uniquement disponibles pour les modules compilés en mode natif : procédures stockées compilées en mode natif et fonctions définies par l’utilisateur scalaires compilées en mode natif).  
   
 -   Paramètres table.  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 12
   
      Pour plus d’informations, consultez [Autorisations d’objet GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md) et [Autorisations d’objet DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

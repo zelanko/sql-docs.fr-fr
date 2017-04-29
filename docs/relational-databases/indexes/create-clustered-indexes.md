@@ -1,35 +1,39 @@
 ---
-title: "Cr&#233;er des index cluster | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "création d’index [SQL Server], index cluster"
-  - "index cluster, création"
-  - "index cluster, contrainte PRIMARY KEY"
-  - "index cluster, contrainte UNIQUE"
-  - "index [SQL Server], cluster"
+title: "Créer des index cluster | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index creation [SQL Server], clustered indexes
+- clustered indexes, creating
+- clustered indexes, PRIMARY KEY constraint
+- clustered indexes, UNIQUE constraint
+- indexes [SQL Server], clustered
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 309d0fa2603bfa14dc305b73036867c084eab683
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er des index cluster
+# <a name="create-clustered-indexes"></a>Créer des index cluster
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Vous pouvez créer des index cluster sur les tables dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. À quelques exceptions près, chaque table doit posséder un index cluster. Outre le fait qu'il améliore les performances des requêtes, un index cluster peut être reconstruit ou réorganisé à la demande pour contrôler la fragmentation de la table. Un index cluster peut également être créé sur une vue. (Les index cluster sont définis dans la rubrique [Description des index cluster et non-cluster](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md).)  
+  Vous pouvez créer des index cluster sur les tables à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. À quelques exceptions près, chaque table doit posséder un index cluster. Outre le fait qu'il améliore les performances des requêtes, un index cluster peut être reconstruit ou réorganisé à la demande pour contrôler la fragmentation de la table. Un index cluster peut également être créé sur une vue. (Les index cluster sont définis dans la rubrique [Description des index cluster et non-cluster](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md).)  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Implémentations types](#Implementations)  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 32
   
      [Sécurité](#Security)  
   
--   **Pour créer un index cluster sur une table à l'aide de :**  
+-   **Pour créer un index cluster sur une table à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 32
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Implementations"></a> Implémentations types  
- Les index cluster sont implémentés des manières suivantes :  
+ Les index cluster sont implémentés des manières suivantes :  
   
 -   **Contraintes PRIMARY KEY et UNIQUE**  
   
@@ -73,27 +77,27 @@ caps.handback.revision: 32
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner**.  
+ Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour créer un index cluster à l'aide de l'Explorateur d'objets  
+#### <a name="to-create-a-clustered-index-by-using-object-explorer"></a>Pour créer un index cluster à l'aide de l'Explorateur d'objets  
   
 1.  Dans l'Explorateur d'objets, développez la table sur laquelle vous souhaitez créer un index cluster.  
   
-2.  Cliquez avec le bouton droit sur le dossier **Index**, pointez sur **Nouvel index**, puis sélectionnez **Index cluster...**.  
+2.  Cliquez avec le bouton droit sur le dossier **Index** , pointez sur **Nouvel index**, puis sélectionnez **Index cluster...**.  
   
 3.  Dans la boîte de dialogue **Nouvel index** , sur la page **Général** , entrez le nom du nouvel index dans la zone **Nom de l'index** .  
   
 4.  Sous **Colonnes clés d'index**, cliquez sur **Ajouter…**.  
   
-5.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table*, cochez la case de la colonne de la table à ajouter à l’index cluster.  
+5.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table* , cochez la case de la colonne de la table à ajouter à l’index cluster.  
   
 6.  Cliquez sur **OK**.  
   
 7.  Dans la boîte de dialogue **Nouvel index** , cliquez sur **OK**.  
   
-#### Pour créer un index cluster à l'aide du Concepteur de tables  
+#### <a name="to-create-a-clustered-index-by-using-the-table-designer"></a>Pour créer un index cluster à l'aide du Concepteur de tables  
   
 1.  Dans l'Explorateur d'objets, développez la base de données sur laquelle vous souhaitez créer une table avec un index cluster.  
   
@@ -103,21 +107,21 @@ caps.handback.revision: 32
   
 4.  Cliquez avec le bouton droit sur la nouvelle table créée ci-dessus, puis sélectionnez **Conception**.  
   
-5.  Dans le menu **Concepteur de tables**, cliquez sur **Index/Clés**.  
+5.  Dans le menu **Concepteur de tables** , cliquez sur **Index/Clés**.  
   
-6.  Dans la boîte de dialogue **Index/Clés**, cliquez sur **Ajouter**.  
+6.  Dans la boîte de dialogue **Index/Clés** , cliquez sur **Ajouter**.  
   
-7.  Sélectionnez le nouvel index dans la zone de texte **Index ou clé unique/primaire sélectionné(e)**.  
+7.  Sélectionnez le nouvel index dans la zone de texte **Index ou clé unique/primaire sélectionné(e)** .  
   
-8.  Dans la grille, sélectionnez **Créer comme Clustered** et choisissez **Oui** dans la liste déroulante à droite de la propriété.  
+8.  Dans la grille, sélectionnez **Créer comme Clustered**et choisissez **Oui** dans la liste déroulante à droite de la propriété.  
   
 9. Cliquez sur **Fermer**.  
   
-10. Dans le menu **Fichier**, cliquez sur **Enregistrer***nom_table*.  
+10. Dans le menu **Fichier** , cliquez sur **Enregistrer***nom_table*.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour créer un index cluster  
+#### <a name="to-create-a-clustered-index"></a>Pour créer un index cluster  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -143,8 +147,9 @@ caps.handback.revision: 32
   
  Pour plus d’informations, consultez [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer des clés primaires](../../relational-databases/tables/create-primary-keys.md)   
  [Créer des contraintes uniques](../../relational-databases/tables/create-unique-constraints.md)  
   
   
+

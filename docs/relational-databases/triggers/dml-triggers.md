@@ -1,29 +1,33 @@
 ---
-title: "D&#233;clencheurs&#160;DML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "déclencheurs [SQL Server], à propos des déclencheurs"
-  - "Déclencheurs DML, à propos des déclencheurs DML"
-  - "déclencheurs [SQL Server]"
+title: "Déclencheurs DML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- triggers [SQL Server], about triggers
+- DML triggers, about DML triggers
+- triggers [SQL Server]
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 49e88050bea0405d8801a5b53faafcb644a6b62d
+ms.lasthandoff: 04/11/2017
+
 ---
-# D&#233;clencheurs&#160;DML
+# <a name="dml-triggers"></a>Déclencheurs DML
   Un déclencheur DML est un type spécial de procédure stockée qui entre automatiquement en vigueur lorsqu'un événement de langage de manipulation de données (DML, ou Data Manipulation Language) qui affecte la table ou la vue définie dans le déclencheur se produit. Les événements DML incluent les instructions INSERT, UPDATE ou DELETE. Les déclencheurs DML peuvent être utilisés pour appliquer des règles d'entreprise et l'intégrité des données, interroger d'autres tables et inclure des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] complexes. Le déclencheur et l'instruction qui le déclenche sont traités comme une unique transaction qui peut être annulée (par une opération de restauration) à partir du déclencheur. Si une erreur grave est détectée (par exemple un espace disque insuffisant), toute la transaction est automatiquement annulée.  
   
-## Avantages des déclencheurs DML  
+## <a name="dml-trigger-benefits"></a>Avantages des déclencheurs DML  
  Les déclencheurs DML sont semblables aux contraintes en ce sens qu'ils peuvent appliquer l'intégrité d'entité ou l'intégrité de domaine. En général, l'intégrité d'entité doit toujours être appliquée au niveau le plus bas par des index qui font partie des contraintes PRIMARY KEY et UNIQUE, ou qui sont créés indépendamment des contraintes. L'intégrité de domaine doit être appliquée au moyen de contraintes CHECK, et l'intégrité référentielle au moyen de contraintes FOREIGN KEY. Les déclencheurs DML sont particulièrement utiles lorsque les fonctionnalités prises en charge par les contraintes ne peuvent pas répondre aux besoins fonctionnels de l'application.  
   
  La liste suivante compare les déclencheurs DML aux contraintes et identifie les situations dans lesquelles les déclencheurs DML présentent plus d’avantages.  
@@ -44,7 +48,7 @@ caps.handback.revision: 27
   
 -   Si des contraintes existent sur la table du déclencheur, elles sont vérifiées après l'exécution du déclencheur INSTEAD OF mais avant celle du déclencheur AFTER. Si les contraintes sont violées, les actions du déclencheur INSTEAD OF sont restaurées et le déclencheur AFTER n'est pas exécuté.  
   
-## Types de déclencheurs DML  
+## <a name="types-of-dml-triggers"></a>Types de déclencheurs DML  
  Déclencheur AFTER  
  Les déclencheurs AFTER sont exécutés après l'action associée à une instruction INSERT, UPDATE, MERGE ou DELETE. Les déclencheurs AFTER ne sont jamais exécutés en cas de violation de contrainte et ne peuvent donc pas être utilisés pour tout traitement susceptible d'éviter les violations de contrainte. Pour chaque instruction INSERT, UPDATE ou DELETE spécifiée dans une instruction MERGE, le déclencheur correspondant est exécuté pour chaque opération DML.  
   
@@ -58,15 +62,15 @@ caps.handback.revision: 27
 |Applicabilité|Tables|Tables et vues|  
 |Quantité par table ou vue|Plusieurs par action de déclenchement (UPDATE, DELETE et INSERT)|Un par action de déclenchement (UPDATE, DELETE et INSERT)|  
 |Références en cascade|Aucune restriction|Les déclencheurs INSTEAD OF UPDATE et DELETE ne sont pas autorisés sur des tables qui sont des cibles de contraintes d'intégrité référentielle en cascade.|  
-|Exécution|Après :<br /><br /> Traitement des contraintes<br /><br /> Actions référentielles déclaratives<br /><br /> Création de tables **inserted** et **deleted**<br /><br /> L'action de déclenchement|Avant : Traitement des contraintes<br /><br /> Au lieu de : L’action de déclenchement<br /><br /> Après : Création de tables **inserted** et **deleted**|  
+|Exécution|Après :<br /><br /> Traitement des contraintes<br /><br /> Actions référentielles déclaratives<br /><br /> Création de tables**inserted** et **deleted** <br /><br /> L'action de déclenchement|Avant : Traitement des contraintes<br /><br /> Au lieu de : L’action de déclenchement<br /><br /> Après : Création de tables  **inserted** et **deleted**|  
 |Ordre d'exécution|La première et la dernière exécution peuvent être spécifiées|Non applicable|  
-|Références de colonnes **varchar(max)**, **nvarchar(max)** et **varbinary(max)** dans des tables **inserted** et **deleted**|Autorisé|Autorisé|  
-|Références de colonnes **text**, **ntext** et **image** dans des tables **inserted** et **deleted**|Non autorisées|Autorisé|  
+|Références de colonnes**varchar(max)**, **nvarchar(max)**et **varbinary(max)** dans des  **inserted** et **deleted** |Autorisé|Autorisé|  
+|Références de colonnes**text**, **ntext**et **image** dans des  **inserted** et **deleted** |Non autorisées|Autorisé|  
   
- Déclencheurs CLR  
- Un déclencheur CLR peut être un déclencheur AFTER ou INSTEAD OF. Il peut également s'agir d'un déclencheur DDL. Au lieu d'exécuter une procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)], un déclencheur CLR exécute une ou plusieurs méthodes écrites en code managé que les membres d'un assembly ont créées dans .NET Framework et téléchargées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Déclencheurs CLR  
+ Un déclencheur CLR peut être un déclencheur AFTER ou INSTEAD OF. Il peut également s'agir d'un déclencheur DDL. Au lieu d'exécuter une procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] , un déclencheur CLR exécute une ou plusieurs méthodes écrites en code managé que les membres d'un assembly ont créées dans .NET Framework et téléchargées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## Tâches associées  
+## <a name="related-tasks"></a>Tâches associées  
   
 |Tâche|Rubrique|  
 |----------|-----------|  
@@ -81,7 +85,7 @@ caps.handback.revision: 27
 |Décrit comment supprimer ou désactiver les déclencheurs DML.|[Supprimer ou désactiver les déclencheurs DML](../../relational-databases/triggers/delete-or-disable-dml-triggers.md)|  
 |Décrit comment gérer la sécurité du déclencheur.|[Gérer la sécurité des déclencheurs](../../relational-databases/triggers/manage-trigger-security.md)|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

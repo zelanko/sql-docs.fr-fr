@@ -1,31 +1,35 @@
 ---
-title: "Modifier ou renommer les d&#233;clencheurs DML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "changement des noms de déclencheurs"
-  - "modification de déclencheurs"
-  - "déclencheurs DML, modification"
+title: "Modifier ou renommer les déclencheurs DML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- renaming triggers
+- modifying triggers
+- DML triggers, modifying
 ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ac7956829213d52669a3408a9a64c597cafa03d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modifier ou renommer les d&#233;clencheurs DML
+# <a name="modify-or-rename-dml-triggers"></a>Modifier ou renommer les déclencheurs DML
   Cette rubrique explique comment modifier ou renommer un déclencheur DML dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
@@ -33,7 +37,7 @@ caps.handback.revision: 29
   
      [Sécurité](#Security)  
   
--   **Pour modifier ou renommer un déclencheur DML à l'aide de :**  
+-   **Pour modifier ou renommer un déclencheur DML à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -47,13 +51,13 @@ caps.handback.revision: 29
   
 ###  <a name="Recommendations"></a> Recommandations  
   
--   Nous vous recommandons de ne pas utiliser la procédure stockée [sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md) pour renommer un déclencheur. La modification d'une partie du nom de l'objet peut provoquer des problèmes dans des scripts et des procédures stockées. Le fait de renommer un déclencheur ne modifie pas le nom de l’objet correspondant dans la colonne de définition de l’affichage catalogue [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md). Nous vous recommandons plutôt de supprimer et de recréer le déclencheur.  
+-   Nous vous recommandons de ne pas utiliser la procédure stockée [sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md) pour renommer un déclencheur. La modification d'une partie du nom de l'objet peut provoquer des problèmes dans des scripts et des procédures stockées. Le fait de renommer un déclencheur ne modifie pas le nom de l’objet correspondant dans la colonne de définition de l’affichage catalogue [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) . Nous vous recommandons plutôt de supprimer et de recréer le déclencheur.  
   
 -   Si vous changez le nom d'un objet référencé par un déclencheur DML, vous devez modifier le déclencheur pour que sa définition se réfère au nouveau nom de l'objet. Par conséquent, avant de renommer un objet, affichez les dépendances de l'objet pour savoir si des déclencheurs peuvent être concernés par la modification projetée.  
   
 -   Un déclencheur DML peut aussi être modifié pour en chiffrer la définition.  
   
--   Pour afficher les dépendances d'un déclencheur, vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou la fonction et les affichages catalogue suivants :  
+-   Pour afficher les dépendances d'un déclencheur, vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou la fonction et les affichages catalogue suivants :  
   
     -   [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   
@@ -66,9 +70,9 @@ caps.handback.revision: 29
 ####  <a name="Permissions"></a> Autorisations  
  La modification d'un déclencheur DML nécessite une autorisation ALTER sur la table ou la vue sur laquelle le déclencheur est défini.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour modifier un déclencheur DML  
+#### <a name="to-modify-a-dml-trigger"></a>Pour modifier un déclencheur DML  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et développez-la.  
   
@@ -78,21 +82,21 @@ caps.handback.revision: 29
   
 4.  Modifiez le déclencheur, puis sélectionnez **Exécuter**.  
   
-#### Pour renommer un déclencheur DML  
+#### <a name="to-rename-a-dml-trigger"></a>Pour renommer un déclencheur DML  
   
 1.  [Supprimez le déclencheur](../../relational-databases/triggers/delete-or-disable-dml-triggers.md) que vous souhaitez renommer.  
   
-2.  [Recréez le déclencheur](../../relational-databases/triggers/create-dml-triggers.md) en spécifiant un nouveau nom.  
+2.  [Recréez le déclencheur](../../relational-databases/triggers/create-dml-triggers.md)en spécifiant un nouveau nom.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour modifier un déclencheur à l'aide de ALTER TRIGGER  
+#### <a name="to-modify-a-trigger-using-alter-trigger"></a>Pour modifier un déclencheur à l'aide de ALTER TRIGGER  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3.  Copiez et collez les exemples suivants dans le volet de requête. Exécutez le premier exemple pour créer un déclencheur DML qui envoie un message défini par l'utilisateur au client lorsqu'un utilisateur tente d'ajouter ou de modifier les données de la table `SalesPersonQuotaHistory`. Exécutez l'instruction [ALTER TRIGGER](../../t-sql/statements/alter-trigger-transact-sql.md) pour modifier le déclencheur afin qu'il s'active uniquement sur des activités `INSERT` . Ce déclencheur est utile car il rappelle à l'utilisateur qui met à jour ou insère des lignes dans cette table de notifier également le département `Compensation` .  
+3.  Copiez et collez les exemples suivants dans le volet de requête. Exécutez le premier exemple pour créer un déclencheur DML qui envoie un message défini par l'utilisateur au client lorsqu'un utilisateur tente d'ajouter ou de modifier les données de la table `SalesPersonQuotaHistory` . Exécutez l'instruction [ALTER TRIGGER](../../t-sql/statements/alter-trigger-transact-sql.md) pour modifier le déclencheur afin qu'il s'active uniquement sur des activités `INSERT` . Ce déclencheur est utile car il rappelle à l'utilisateur qui met à jour ou insère des lignes dans cette table de notifier également le département `Compensation` .  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -120,7 +124,7 @@ GO
   
 ```  
   
-#### Pour renommer un déclencheur à l'aide de DROP TRIGGER et ALTER TRIGGER  
+#### <a name="to-rename-a-trigger-using-drop-trigger-and-alter-trigger"></a>Pour renommer un déclencheur à l'aide de DROP TRIGGER et ALTER TRIGGER  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -143,7 +147,7 @@ GO
   
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   

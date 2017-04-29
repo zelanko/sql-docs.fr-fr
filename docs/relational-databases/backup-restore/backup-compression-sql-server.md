@@ -1,30 +1,34 @@
 ---
-title: "Compression de sauvegardes (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "copie des journaux de transaction [SQL Server], compression de la sauvegarde"
-  - "compression de la sauvegarde [SQL Server], description"
-  - "compression [SQL Server], compression de la sauvegarde"
-  - "sauvegardes [SQL Server], compression"
-  - "sauvegarde [SQL Server], compression de la sauvegarde"
-  - "compression de sauvegarde [SQL Server]"
+title: Compression des sauvegardes (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], backup compression
+- backup compression [SQL Server], about backup compression
+- compression [SQL Server], backup compression
+- backups [SQL Server], compression
+- backing up [SQL Server], backup compression
+- backup compression [SQL Server]
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 caps.latest.revision: 51
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08936c44013d5494c72500f3230a1c90da1e4325
+ms.lasthandoff: 04/11/2017
+
 ---
-# Compression de sauvegardes (SQL Server)
-  Cette rubrique décrit la compression des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], notamment les restrictions, les compromis en termes de performances pour la compression des sauvegardes, la configuration pour la compression des sauvegardes et le taux de compression.  La compression de sauvegarde est prise en charge sur les éditions [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] : Entreprise, Standard et Développeur.  Chaque édition de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et ultérieure peut restaurer une sauvegarde compressée. 
+# <a name="backup-compression-sql-server"></a>Compression de sauvegardes (SQL Server)
+  Cette rubrique décrit la compression des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , notamment les restrictions, les compromis en termes de performances pour la compression des sauvegardes, la configuration pour la compression des sauvegardes et le taux de compression.  La compression de sauvegarde est prise en charge sur les éditions [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] : Entreprise, Standard et Développeur.  Chaque édition de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et ultérieure peut restaurer une sauvegarde compressée. 
  
   
 ##  <a name="Benefits"></a> Avantages  
@@ -35,7 +39,7 @@ caps.handback.revision: 51
   
   
 ##  <a name="Restrictions"></a> Restrictions  
- Les restrictions suivantes s'appliquent aux sauvegardes compressées :  
+ Les restrictions suivantes s'appliquent aux sauvegardes compressées :  
   
 -   Les sauvegardes compressées et non compressées ne peuvent pas co-exister dans un support de sauvegardes.  
   
@@ -45,9 +49,9 @@ caps.handback.revision: 51
   
   
 ##  <a name="PerfImpact"></a> Impact sur les performances de la compression des sauvegardes  
- Par défaut, la compression augmente considérablement l'utilisation de l'UC et l'UC supplémentaire consommée par le processus de compression peut avoir un impact néfaste sur les opérations simultanées. Ainsi, dans une session où l’utilisation de l’UC est limitée, il peut être préférable de créer une sauvegarde compressée de priorité basse à l’aide de [Resource Governor](../../relational-databases/resource-governor/resource-governor.md). Pour plus d’informations, consultez [Utiliser Resource Governor pour limiter l’utilisation de l’UC par compression de la sauvegarde &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).  
+ Par défaut, la compression augmente considérablement l'utilisation de l'UC et l'UC supplémentaire consommée par le processus de compression peut avoir un impact néfaste sur les opérations simultanées. Ainsi, dans une session où l’utilisation de l’UC est limitée, il peut être préférable de créer une sauvegarde compressée de priorité basse à l’aide de[Resource Governor](../../relational-databases/resource-governor/resource-governor.md). Pour plus d'informations, consultez [Utiliser Resource Governor pour limiter l’utilisation de l’UC par compression de la sauvegarde &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).  
   
- Pour obtenir une bonne image de vos performances d'E/S de sauvegarde, vous pouvez isoler l'E/S de sauvegarde en direction ou depuis des unités en évaluant les types suivants de compteurs de performance :  
+ Pour obtenir une bonne image de vos performances d'E/S de sauvegarde, vous pouvez isoler l'E/S de sauvegarde en direction ou depuis des unités en évaluant les types suivants de compteurs de performance :  
   
 -   Compteurs de performance d'E/S Windows, tels que les compteurs de disque physique  
   
@@ -59,17 +63,17 @@ caps.handback.revision: 51
   
    
 ##  <a name="CompressionRatio"></a> Calculer le taux de compression d'une sauvegarde compressée  
- Pour calculer le taux de compression d’une sauvegarde, utilisez les valeurs pour la sauvegarde dans les colonnes **backup_size** et **compressed_backup_size** de la table de l’historique [backupset](../../relational-databases/system-tables/backupset-transact-sql.md), comme suit :  
+ Pour calculer le taux de compression d’une sauvegarde, utilisez les valeurs pour la sauvegarde dans les colonnes **backup_size** et **compressed_backup_size** de la table de l’historique [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) , comme suit :  
   
  **backup_size**:**compressed_backup_size**  
   
- Par exemple, un taux de compression 3:1 indique que vous économisez environ 66 % de l'espace disque. Pour effectuer une requête sur ces colonnes, vous pouvez utiliser l'instruction Transact-SQL suivante :  
+ Par exemple, un taux de compression 3:1 indique que vous économisez environ 66 % de l'espace disque. Pour effectuer une requête sur ces colonnes, vous pouvez utiliser l'instruction Transact-SQL suivante :  
   
 ```  
 SELECT backup_size/compressed_backup_size FROM msdb..backupset;  
 ```  
   
- Le taux de compression d'une sauvegarde compressée dépend des données compressées. Divers facteurs peuvent avoir une incidence sur le taux de compression obtenu. Les facteurs majeurs sont :  
+ Le taux de compression d'une sauvegarde compressée dépend des données compressées. Divers facteurs peuvent avoir une incidence sur le taux de compression obtenu. Les facteurs majeurs sont :  
   
 -   Le type des données.  
   
@@ -91,7 +95,7 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
 ##  <a name="Allocation"></a> Allocation d'espace pour le fichier de sauvegarde  
  Pour les sauvegardes compressées, la taille du fichier de sauvegarde final dépend de la capacité de compression des données. Or, celle-ci n'est pas connue avant la fin de l'opération de sauvegarde.  Par conséquent, par défaut, lors de la sauvegarde d'une base de données faisant appel à la compression, le moteur de base de données utilise un algorithme de préallocation pour le fichier de sauvegarde. Cette algorithme préalloue un pourcentage prédéfini de la taille de la base de données pour le fichier de sauvegarde. Si davantage d'espace est requis au cours de l'opération de sauvegarde, le moteur de base de données augmente la taille du fichier. Si la taille finale est inférieure à l'espace alloué, à la fin de l'opération de sauvegarde, le moteur de base de données réduit le fichier à la taille finale réelle de la sauvegarde.  
   
- Pour permettre au fichier de sauvegarde de croître autant que nécessaire uniquement afin d'atteindre sa taille définitive, utilisez l'indicateur de trace 3042. L'indicateur de trace 3042 permet à l'opération de sauvegarde de contourner l'algorithme de préallocation de la compression de sauvegarde par défaut. Cet indicateur de trace est utile si vous devez économiser de l'espace en allouant uniquement la taille réelle requise pour la sauvegarde compressée. Toutefois, le recours à cet indicateur de trace peut entraîner une légère baisse des performances (augmentation possible de la durée de l'opération de sauvegarde).  
+ Pour permettre au fichier de sauvegarde de croître autant que nécessaire uniquement afin d'atteindre sa taille définitive, utilisez l'indicateur de trace 3042. L'indicateur de trace 3042 permet à l'opération de sauvegarde de contourner l'algorithme de préallocation de la compression de sauvegarde par défaut. Cet indicateur de trace est utile si vous devez économiser de l'espace en allouant uniquement la taille réelle requise pour la sauvegarde compressée. Toutefois, le recours à cet indicateur de trace peut entraîner une légère baisse des performances (augmentation possible de la durée de l'opération de sauvegarde).  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   
@@ -105,8 +109,9 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
 -   [DBCC TRACEOFF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
- [Indicateurs de trace &#40;Transact-SQL&#41;](../Topic/Trace%20Flags%20\(Transact-SQL\).md)  
+ [Indicateurs de trace &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   
   
+

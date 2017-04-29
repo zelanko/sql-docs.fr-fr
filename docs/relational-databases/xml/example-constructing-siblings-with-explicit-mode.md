@@ -1,24 +1,28 @@
 ---
-title: "Exemple&#160;: construction de fr&#232;res &#224; l&#39;aide du mode EXPLICIT | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "EXPLICIT FOR XML, mode"
+title: "Exemple : construction de frères à l’aide du mode EXPLICIT | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- EXPLICIT FOR XML mode
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9ada54a0e85cc9e03441ef008372d0df59a4030f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exemple&#160;: construction de fr&#232;res &#224; l&#39;aide du mode EXPLICIT
+# <a name="example-constructing-siblings-with-explicit-mode"></a>Exemple : construction de frères à l'aide du mode EXPLICIT
   Supposons que vous souhaitiez construire un document XML qui fournit des informations sur les commandes. Les éléments <`SalesPerson`> et <`OrderDetail`> sont frères. Chaque commande possède un élément <`OrderHeader`>, un élément <`SalesPerson`> ainsi qu'un ou plusieurs éléments <`OrderDetail`>.  
   
 ```  
@@ -108,7 +112,7 @@ FOR XML EXPLICIT;
   
  `</OrderHeader>`  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser le mode EXPLICIT avec FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

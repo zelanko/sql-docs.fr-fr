@@ -1,41 +1,45 @@
 ---
-title: "Cr&#233;ez des index non-cluster | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "création d’index [SQL Server], index non cluster"
-  - "index non cluster [SQL Server], création"
-  - "index non cluster [SQL Server], contrainte UNIQUE"
-  - "index [SQL Server], non cluster"
-  - "index non cluster [SQL Server], contrainte PRIMARY KEY"
+title: "Créer des index non cluster | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index creation [SQL Server], nonclustered indexes
+- nonclustered indexes [SQL Server], creating
+- nonclustered indexes [SQL Server], UNIQUE constraint
+- indexes [SQL Server], nonclustered
+- nonclustered indexes [SQL Server], PRIMARY KEY constraint
 ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38b54a03706cbb44f0c4001d00d5505201940be6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;ez des index non-cluster
+# <a name="create-nonclustered-indexes"></a>Créer des index non cluster
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Vous pouvez créer des index non-cluster dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un index non-cluster est une structure d'index séparé des données stockées dans une table qui réorganise une ou plusieurs colonnes sélectionnées. Les index non-cluster peuvent vous aider à trouver plus rapidement les données au lieu de rechercher dans la table sous-jacente. Il est parfois possible de répondre entièrement aux requêtes selon les données dans l'index non-cluster, ou l'index non-cluster peut indiquer au [!INCLUDE[ssDE](../../includes/ssde-md.md)] les lignes dans la table sous-jacente. En général, les index non-cluster sont créés pour améliorer les performances des requêtes fréquemment utilisées qui ne sont pas couvertes par l'index cluster ou pour rechercher des lignes dans une table sans index cluster (ce qui s'appelle un « segment »). Vous pouvez créer plusieurs index non cluster sur une table ou une vue indexée.  
+  Vous pouvez créer des index non-cluster dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un index non-cluster est une structure d'index séparé des données stockées dans une table qui réorganise une ou plusieurs colonnes sélectionnées. Les index non-cluster peuvent vous aider à trouver plus rapidement les données au lieu de rechercher dans la table sous-jacente. Il est parfois possible de répondre entièrement aux requêtes selon les données dans l'index non-cluster, ou l'index non-cluster peut indiquer au [!INCLUDE[ssDE](../../includes/ssde-md.md)] les lignes dans la table sous-jacente. En général, les index non-cluster sont créés pour améliorer les performances des requêtes fréquemment utilisées qui ne sont pas couvertes par l'index cluster ou pour rechercher des lignes dans une table sans index cluster (ce qui s'appelle un « segment »). Vous pouvez créer plusieurs index non cluster sur une table ou une vue indexée.  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Implémentations types](#Implementations)  
   
      [Sécurité](#Security)  
   
--   **Pour créer un index non-cluster à l'aide de :**  
+-   **Pour créer un index non-cluster à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -44,7 +48,7 @@ caps.handback.revision: 41
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Implementations"></a> Implémentations types  
- Les index non-cluster sont implémentés comme ceci :  
+ Les index non-cluster sont implémentés comme ceci :  
   
 -   **Contraintes UNIQUE**  
   
@@ -52,7 +56,7 @@ caps.handback.revision: 41
   
 -   **Index indépendant d'une contrainte**  
   
-     Par défaut, un index non-cluster est créé si l'option CLUSTERED n'est pas spécifiée. Le nombre maximal d'index non cluster pouvant être créés par table est de 999. Cela inclut tous les index créés par des contraintes PRIMARY KEY ou UNIQUE, mais pas les index XML.  
+     Par défaut, un index non-cluster est créé si l'option CLUSTERED n'est pas spécifiée. Le nombre maximal d'index non cluster pouvant être créés par table est de 999. Cela inclut tous les index créés par des contraintes PRIMARY KEY ou UNIQUE, mais pas les index XML.  
   
 -   **Index non-cluster sur une vue indexée**  
   
@@ -61,11 +65,11 @@ caps.handback.revision: 41
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner**.  
+ Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour créer un index non-cluster à l'aide du Concepteur de tables  
+#### <a name="to-create-a-nonclustered-index-by-using-the-table-designer"></a>Pour créer un index non-cluster à l'aide du Concepteur de tables  
   
 1.  Dans l'Explorateur d'objets, développez la base de données qui contient la table sur laquelle vous souhaitez créer un index non-cluster.  
   
@@ -73,19 +77,19 @@ caps.handback.revision: 41
   
 3.  Cliquez avec le bouton droit sur la table sur laquelle vous souhaitez créer un index non-cluster, puis sélectionnez **Conception**.  
   
-4.  Dans le menu **Concepteur de tables**, cliquez sur **Index/Clés**.  
+4.  Dans le menu **Concepteur de tables** , cliquez sur **Index/Clés**.  
   
-5.  Dans la boîte de dialogue **Index/Clés**, cliquez sur **Ajouter**.  
+5.  Dans la boîte de dialogue **Index/Clés** , cliquez sur **Ajouter**.  
   
-6.  Sélectionnez le nouvel index dans la zone de texte **Clé ou index Primary/Unique sélectionné**.  
+6.  Sélectionnez le nouvel index dans la zone de texte **Clé ou index Primary/Unique sélectionné** .  
   
-7.  Dans la grille, sélectionnez **Créer comme Clustered** et choisissez **Non** dans la liste déroulante à droite de la propriété.  
+7.  Dans la grille, sélectionnez **Créer comme Clustered**et choisissez **Non** dans la liste déroulante à droite de la propriété.  
   
 8.  Cliquez sur **Fermer**.  
   
-9. Dans le menu **Fichier**, cliquez sur **Enregistrer***nom_table*.  
+9. Dans le menu **Fichier** , cliquez sur **Enregistrer***nom_table*.  
   
-#### Pour créer un index non-cluster à l'aide de l'Explorateur d'objets  
+#### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>Pour créer un index non-cluster à l'aide de l'Explorateur d'objets  
   
 1.  Dans l'Explorateur d'objets, développez la base de données qui contient la table sur laquelle vous souhaitez créer un index non-cluster.  
   
@@ -93,13 +97,13 @@ caps.handback.revision: 41
   
 3.  Développez la table sur laquelle vous souhaitez créer un index non-cluster.  
   
-4.  Cliquez avec le bouton droit sur le dossier **Index**, pointez sur **Nouvel index**, puis sélectionnez **Index non cluster…**.  
+4.  Cliquez avec le bouton droit sur le dossier **Index** , pointez sur **Nouvel index**, puis sélectionnez **Index non cluster…**.  
   
 5.  Dans la boîte de dialogue **Nouvel index** , sur la page **Général** , entrez le nom du nouvel index dans la zone **Nom de l'index** .  
   
 6.  Sous **Colonnes clés d'index**, cliquez sur **Ajouter…**.  
   
-7.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table*, cochez la ou les cases de la ou des colonnes de table à ajouter à l’index non cluster.  
+7.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table* , cochez la ou les cases de la ou des colonnes de table à ajouter à l’index non cluster.  
   
 8.  Cliquez sur **OK**.  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 41
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour créer un index non-cluster sur une table  
+#### <a name="to-create-a-nonclustered-index-on-a-table"></a>Pour créer un index non-cluster sur une table  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -133,3 +137,4 @@ caps.handback.revision: 41
  Pour plus d’informations, consultez [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
   
+

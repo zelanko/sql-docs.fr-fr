@@ -1,27 +1,31 @@
 ---
-title: "Base de donn&#233;es msdb | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Agent SQL Server, base de données msdb"
-  - "alertes [SQL Server], base de données msdb"
-  - "travaux [SQL Server], base de données msdb"
-  - "base de données msdb [SQL Server]"
+title: "msdb, base de données | Microsoft Docs"
+ms.custom: 
+ms.date: 11/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Agent, msdb database
+- alerts [SQL Server], msdb database
+- jobs [SQL Server], msdb database
+- msdb database [SQL Server]
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3ea8b1e63f5cc458130e3dd7deeed99be7f53e9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Base de donn&#233;es msdb
+# <a name="msdb-database"></a>Base de données msdb
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   La base de données **msdb** est utilisée par l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour planifier des alertes et des travaux, ainsi que par d’autres fonctionnalités telles que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSB](../../includes/sssb-md.md)] et la messagerie de base de données.  
@@ -115,3 +119,4 @@ caps.handback.revision: 46
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   
+

@@ -1,32 +1,36 @@
 ---
-title: "T&#226;che de nettoyage de maintenance (Plan de maintenance) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.cleanup.f1"
-helpviewer_keywords: 
-  - "Tâche de nettoyage de maintenance (boîte de dialogue)"
+title: "Tâche de nettoyage de maintenance (Plan de maintenance) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.cleanup.f1
+helpviewer_keywords:
+- Maintenance Cleanup Task dialog box
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 47b569e7d8c486de044d9784af2cb6adbab50b4f
+ms.lasthandoff: 04/11/2017
+
 ---
-# T&#226;che de nettoyage de maintenance (Plan de maintenance)
+# <a name="maintenance-cleanup-task-maintenance-plan"></a>Tâche de nettoyage de maintenance (Plan de maintenance)
   Utilisez la **Tâche de nettoyage de maintenance** pour supprimer les anciens fichiers associés à des plans de maintenance, notamment les rapports texte créés par les plans de maintenance et les fichiers de sauvegarde de base de données.  
   
 > [!NOTE]  
 >  La tâche de nettoyage de maintenance ne supprime pas automatiquement les fichiers dans les sous-dossiers du répertoire spécifié. Cette fonctionnalité réduit la possibilité d'une attaque malveillante qui utilise la tâche de nettoyage de maintenance pour supprimer des fichiers. Pour supprimer des fichiers dans les sous-dossiers de premier niveau, vous devez sélectionner **Inclure les sous-dossiers de premier niveau**.  
   
-## Options  
+## <a name="options"></a>Options  
  **Connexion**  
  Affiche la connexion active.  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 26
  Supprimez les rapports texte des plans de maintenance exécutés précédemment.  
   
  **Supprimer un fichier spécifique**  
- Supprimez le fichier spécifié dans la zone **Nom de fichier**.  
+ Supprimez le fichier spécifié dans la zone **Nom de fichier** .  
   
  **Nom de fichier**  
  Chemin d'accès et nom du fichier à supprimer.  
@@ -55,10 +59,10 @@ caps.handback.revision: 26
  Spécifiez l'extension de fichier des fichiers à supprimer.  
   
  **Inclure les sous-dossiers de premier niveau**  
- Supprimez les fichiers portant l’extension spécifiée pour l’option **Extension de fichier**, des sous-dossiers de premier niveau situés dans le dossier défini dans l’option **Dossier**.  
+ Supprimez les fichiers portant l’extension spécifiée pour l’option **Extension de fichier** , des sous-dossiers de premier niveau situés dans le dossier défini dans l’option **Dossier**.  
   
  **Supprimer les fichiers en fonction de l'ancienneté du fichier au moment de l'exécution de la tâche**  
- Spécifiez l’ancienneté minimale des fichiers à supprimer en entrant un chiffre et une unité de temps dans la zone **Supprimer les fichiers antérieurs à**.  
+ Spécifiez l’ancienneté minimale des fichiers à supprimer en entrant un chiffre et une unité de temps dans la zone **Supprimer les fichiers antérieurs à** .  
   
  **Supprimer les fichiers antérieurs à**  
  Spécifiez l'ancienneté minimale des fichiers à supprimer en fournissant un chiffre et une unité de temps (Jour, Semaine, Mois ou Année). Les fichiers antérieurs au délai spécifié seront supprimés.  
@@ -69,7 +73,7 @@ caps.handback.revision: 26
 > [!NOTE]  
 >  Si le nombre d'objets impliqués est élevé, l'affichage des instructions peut prendre un temps considérable.  
   
-## Boîte de dialogue Nouvelle connexion  
+## <a name="new-connection-dialog-box"></a>Boîte de dialogue Nouvelle connexion  
  **Nom de la connexion**  
  Entrez un nom pour la nouvelle connexion.  
   
@@ -94,7 +98,7 @@ caps.handback.revision: 26
  **Mot de passe**  
  Fournit un mot de passe à utiliser pour l'authentification. Cette option n'est pas disponible.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Plans de maintenance](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

@@ -1,29 +1,33 @@
 ---
-title: "Cat&#233;gorie d&#39;&#233;v&#233;nements Sessions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Sessions (catégorie d'événement) [SQL Server]"
-  - "classes d’événements SQL Server, catégorie d’événement Sessions"
-  - "classes d’événements [SQL Server], catégorie d’événement Sessions"
+title: "Sessions, catégorie d’événement | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Sessions event category [SQL Server]
+- SQL Server event classes, Sessions event category
+- event classes [SQL Server], Sessions event category
 ms.assetid: 61881d22-381d-407e-8c43-a07ba94389f6
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bad5ad9148bdfd89a6d73bcc359b236491a73dfa
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cat&#233;gorie d&#39;&#233;v&#233;nements Sessions
-  La catégorie d’événements **Sessions** contient la classe d’événements **ExistingConnection**.  
+# <a name="sessions-event-category"></a>Catégorie d'événements Sessions
+  La catégorie d’événements **Sessions** contient la classe d’événements **ExistingConnection** .  
   
-## Dans cette section  
+## <a name="in-this-section"></a>Dans cette section  
   
 |Rubrique|Description|  
 |-----------|-----------------|  

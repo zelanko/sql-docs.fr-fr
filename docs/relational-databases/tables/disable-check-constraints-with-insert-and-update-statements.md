@@ -1,38 +1,42 @@
 ---
-title: "D&#233;sactiver des contraintes de validation avec des instructions INSERT et UPDATE | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Contraintes CHECK, désactivation"
-  - "contraintes [SQL Server], désactivation"
-  - "désactivation des contraintes"
-  - "contraintes [SQL Server], validation"
+title: "Désactiver des contraintes de validation avec des instructions INSERT et UPDATE | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CHECK constraints, disabling
+- constraints [SQL Server], disabling
+- disabling constraints
+- constraints [SQL Server], check
 ms.assetid: c7287ad1-50d2-4e80-bc0c-b5570f7e5f69
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d1f8fd216f5e23f958e2913ffd35f091844cac3f
+ms.lasthandoff: 04/11/2017
+
 ---
-# D&#233;sactiver des contraintes de validation avec des instructions INSERT et UPDATE
+# <a name="disable-check-constraints-with-insert-and-update-statements"></a>Désactiver des contraintes de validation avec des instructions INSERT et UPDATE
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Vous pouvez désactiver une contrainte de validation pour des transactions INSERT et UPDATE dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Une fois les contraintes de validation désactivées, les insertions ou les mises à jour ultérieures sur la colonne ne sont pas validées par rapport aux conditions de la contrainte. Utilisez cette option si vous savez que de nouvelles données violeront la contrainte existante ou si la contrainte s'applique uniquement aux données déjà dans la base de données.  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour désactiver une contrainte de validation pour les instructions INSERT et UPDATE à l'aide de :**  
+-   **Pour désactiver une contrainte de validation pour les instructions INSERT et UPDATE à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -45,9 +49,9 @@ caps.handback.revision: 17
 ####  <a name="Permissions"></a> Autorisations  
  Requiert une autorisation ALTER sur la table.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour désactiver une contrainte de validation pour les instructions INSERT et UPDATE  
+#### <a name="to-disable-a-check-constraint-for-insert-and-update-statements"></a>Pour désactiver une contrainte de validation pour les instructions INSERT et UPDATE  
   
 1.  Dans l' **Explorateur d'objets**, développez la table avec la contrainte, puis développez le dossier **Contraintes** .  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 17
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour désactiver une contrainte de validation pour les instructions INSERT et UPDATE  
+#### <a name="to-disable-a-check-constraint-for-insert-and-update-statements"></a>Pour désactiver une contrainte de validation pour les instructions INSERT et UPDATE  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

@@ -1,34 +1,39 @@
 ---
-title: "Requ&#234;tes de bases de donn&#233;es crois&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Requêtes de bases de données croisées | Microsoft Docs"
+ms.custom: 
+ms.date: 08/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
 caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 41b00b196f6cfad66ae0e26bbb1516da2641d9b7
+ms.openlocfilehash: 8289b02c3e15f1b299196c343503c9cb87387c6c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Requ&#234;tes de bases de donn&#233;es crois&#233;es
+# <a name="cross-database-queries"></a>Requêtes de bases de données croisées
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   À partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], les tables mémoire optimisées ne prennent pas en charge les transactions entre bases de données. Vous ne pouvez pas accéder à une autre base de données à partir de la même transaction ou de la même requête qui accède également à une table mémoire optimisée. Vous ne pouvez pas facilement copier les données d'une table d'une base de données, à une table mémoire optimisée d'une autre base de données.  
   
  Les variables de table ne sont pas transactionnelles. Par conséquent, les variables des tables mémoire optimisées peuvent être utilisées dans des requêtes de bases de données croisées, et peuvent donc faciliter le déplacement des données d'une base de données dans des tables mémoire optimisées dans une autre base de données. Vous pouvez utiliser deux transactions. Dans la première transaction, insérez les données de la table distante dans la variable. Dans la seconde transaction, insérez les données dans la table mémoire optimisée locale depuis la variable.  Pour plus d’informations sur les variables de table mémoire optimisée, consultez [Table temporaire et variable de table plus rapides à l’aide de l’optimisation de la mémoire](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
   
-##  Exemple
+## <a name="example"></a>Exemple
 Cet exemple illustre une méthode pour transférer des données d’une base de données à une table optimisée en mémoire dans une autre base de données.
 
 1. Créez des objets de test.  Exécutez l’instruction suivante [!INCLUDE[tsql](../../includes/tsql-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
 
     ```tsql
+
     USE master;
     GO
     
@@ -51,13 +56,12 @@ Cet exemple illustre une méthode pour transférer des données d’une base de 
     VALUES (1, N'Bob'),
         (2, N'Susan');
     GO
-    ---------------------------------------------------------------
-
 
     -- Create a database with a MEMORY_OPTIMIZED_DATA filegroup
+
     CREATE DATABASE DestinationDatabase
      ON  PRIMARY 
-    ( NAME = N'DestinationDatabase_Data', FILENAME = N'D:\DATA\DestinationDatabase_Data.mdf',   SIZE = 8MB), 
+    ( NAME = N'DestinationDatabase_Data', FILENAME = N'D:\DATA\DestinationDatabase_Data.mdf',    SIZE = 8MB), 
      FILEGROUP [DestinationDatabase_mod] CONTAINS MEMORY_OPTIMIZED_DATA  DEFAULT
     ( NAME = N'DestinationDatabase_mod', FILENAME = N'D:\DATA\DestinationDatabase_mod', MAXSIZE = UNLIMITED)
      LOG ON 
@@ -119,7 +123,8 @@ Cet exemple illustre une méthode pour transférer des données d’une base de 
     GO 
     ```
    
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Migration vers OLTP en mémoire](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+

@@ -1,32 +1,36 @@
 ---
-title: "Groupes d&#39;&#233;v&#233;nements DDL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "groupes d'événements"
-  - "groupes d'événements DDL"
-  - "Déclencheurs DDL, groupes d’événements"
+title: "Groupes d’événements DDL | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event groups
+- DDL event groups
+- DDL triggers, event groups
 ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccd63253ce183861e0aef4caafe00179bf00051a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Groupes d&#39;&#233;v&#233;nements DDL
+# <a name="ddl-event-groups"></a>groupes d'événements DDL
   Les tableaux suivants répertorient les groupes d'événements DDL qui peuvent être utilisés pour exécuter un déclencheur DDL ou une notification d'événement ainsi que les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qu'ils couvrent. Notez la nature inclusive des groupes d'événements. Par exemple, un déclencheur DDL ou une notification d'événement qui spécifie FOR DDL_TABLE_EVENTS (10018) couvre les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE et DROP TABLE. Un déclencheur DDL ou une notification d'événement qui spécifie FOR DDL_TABLE_VIEW_EVENTS (10017) couvre toutes les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] sous les types DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS et DDL_STATISTICS_EVENTS.  
   
 > [!NOTE]  
 >  Certaines procédures stockées système qui exécutent des opérations de type DDL peuvent également exécuter des déclencheurs DDL ou déclencher des notifications d'événements. Testez vos déclencheurs et notifications d'événements DDL afin de déterminer leur réponse aux procédures stockées système qui sont exécutées. Par exemple, l’instruction CREATE TYPE et la procédure stockée **sp_addtype** activent toutes les deux un déclencheur ou une notification d’événements DDL créés sur un événement CREATE_TYPE.  
   
-## Événements  
+## <a name="events"></a>Événements  
  Les événements répertoriés sous DDL_DATABASE_LEVEL_EVENTS sont exécutés au niveau du serveur (instance) ou de la base de données. Les événements répertoriés sous DDL_SERVER_LEVEL_EVENTS sont exécutés uniquement au niveau du serveur.  
   
 ||||  
@@ -314,9 +318,9 @@ FROM DirectReports
 ORDER BY sort;  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Notifications d'événements](../../relational-databases/service-broker/event-notifications.md)   
- [Déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md)   
+ [Déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md)   
  [Événements DDL](../../relational-databases/triggers/ddl-events.md)  
   
   

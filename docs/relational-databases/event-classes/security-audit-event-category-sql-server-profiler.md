@@ -1,29 +1,33 @@
 ---
-title: "Cat&#233;gorie d&#39;&#233;v&#233;nements d&#39;audit de s&#233;curit&#233; (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "catégorie d'événement Audit de sécurité [SQL Server]"
-  - "classes d’événements [SQL Server], catégorie d’événement d’audit de sécurité"
-  - "classes d’événements SQL Server, catégorie d’événement d’audit de sécurité"
+title: "Audit de sécurité, catégorie d’événements (SQL Server Profiler) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Security Audit event category [SQL Server]
+- event classes [SQL Server], Security Audit event category
+- SQL Server event classes, Security Audit event category
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eb5a25cf31ddd1581f2e0954d4b7fb78689fa115
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cat&#233;gorie d&#39;&#233;v&#233;nements d&#39;audit de s&#233;curit&#233; (SQL Server Profiler)
-  La catégorie d’événements d’**audit de sécurité** contient, comme son nom l’indique, les événements liés à l’activité d’audit de la sécurité.  
+# <a name="security-audit-event-category-sql-server-profiler"></a>Audit de sécurité, catégorie d'événements (SQL Server Profiler)
+  La catégorie d’événements **Audit de sécurité** contient, comme son nom l’indique, les événements liés à l’activité d’audit de la sécurité.  
   
-## Dans cette section  
+## <a name="in-this-section"></a>Dans cette section  
   
 |Rubrique|Description|  
 |-----------|-----------------|  
@@ -33,7 +37,7 @@ caps.handback.revision: 36
 |[Classe d'événements Audit Add Role](../../relational-databases/event-classes/audit-add-role-event-class.md)|Indique qu'un rôle de base de données a été ajouté à une base de données ou en a été supprimé.|  
 |[Classe d'événements Audit Addlogin](../../relational-databases/event-classes/audit-addlogin-event-class.md)|Indique qu'une connexion a été ajoutée ou supprimée.|  
 |[Classe d'événements Audit App Role Change Password](../../relational-databases/event-classes/audit-app-role-change-password-event-class.md)|Indique qu'un mot de passe a été modifié pour un rôle d'application.|  
-|[Classe d’événements Audit Backup/Restore](../../relational-databases/event-classes/audit-backup-and-restore-event-class.md)|Indique qu'une instruction de sauvegarde ou de restauration a été émise.|  
+|[Audit Backup/Restore, classe d’événements](../../relational-databases/event-classes/audit-backup-and-restore-event-class.md)|Indique qu'une instruction de sauvegarde ou de restauration a été émise.|  
 |[Classe d'événement Audit Broker Conversation](../../relational-databases/event-classes/audit-broker-conversation-event-class.md)|Crée un rapport de messages d'audit associés à la sécurité de boîte de dialogue Service Broker.|  
 |[Classe d'événements Audit Broker Login](../../relational-databases/event-classes/audit-broker-login-event-class.md)|Crée un rapport de messages d'audit associés à la sécurité de transport Service Broker.|  
 |[Classe d'événements Audit Change Audit](../../relational-databases/event-classes/audit-change-audit-event-class.md)|Indique qu'une modification de trace d'audit a été effectuée.|  
@@ -50,8 +54,8 @@ caps.handback.revision: 36
 |[Classe d'événements Audit Database Scope GDR](../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md)|Indique qu’un événement GRANT, REVOKE ou DENY a été émis pour une autorisation relative aux instructions par un utilisateur dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Classe d'événements Audit DBCC](../../relational-databases/event-classes/audit-dbcc-event-class.md)|Indique qu'une commande DBCC a été émise.|  
 |[Audit Fulltext, classe d'événements](../../relational-databases/event-classes/audit-fulltext-event-class.md)|Indique qu'un événement de texte intégral s'est produit.|  
-|[Classe d'événements Audit Login Change Password](../../relational-databases/event-classes/audit-login-change-password-event-class.md)|Indique qu'un utilisateur a modifié son mot de passe d'ouverture de session [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[Classe d'événements Audit Login Change Property](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|Indique que la procédure **sp_defaultdb**, **sp_defaultlanguage** ou ALTER LOGIN a été utilisée pour modifier une propriété d’une connexion.|  
+|[Classe d'événements Audit Login Change Password](../../relational-databases/event-classes/audit-login-change-password-event-class.md)|Indique qu'un utilisateur a modifié son mot de passe d'ouverture de session [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[Classe d'événements Audit Login Change Property](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|Indique que la procédure **sp_defaultdb**, **sp_defaultlanguage**ou ALTER LOGIN a été utilisée pour modifier une propriété d’une connexion.|  
 |[Classe d'événements Audit Login](../../relational-databases/event-classes/audit-login-event-class.md)|Indique qu'un utilisateur s'est connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Classe d'événements Audit Login Failed](../../relational-databases/event-classes/audit-login-failed-event-class.md)|Indique qu'un utilisateur a tenté de se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et a échoué.|  
 |[Classe d'événements Audit Login GDR](../../relational-databases/event-classes/audit-login-gdr-event-class.md)|Indique qu'un droit de connexion [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows a été ajouté ou supprimé.|  
@@ -72,7 +76,7 @@ caps.handback.revision: 36
 |[Classe d'événements Audit Server Starts and Stops](../../relational-databases/event-classes/audit-server-starts-and-stops-event-class.md)|Indique que l'état du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été modifié.|  
 |[Classe d'événements Audit Statement Permission](../../relational-databases/event-classes/audit-statement-permission-event-class.md)|Indique qu'une autorisation relative aux instructions a été utilisée.|  
   
-## Contenu connexe  
+## <a name="related-content"></a>Contenu connexe  
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)  
   
   

@@ -1,42 +1,46 @@
 ---
-title: "Consid&#233;rations sur la s&#233;curit&#233; pour une installation SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "systèmes pare-feu [SQL Server]"
-  - "blocs SMB [SQL Server]"
-  - "désactivation des protocoles"
-  - "sécurité [SQL Server], installations"
-  - "protocoles [SQL Server], désactivation"
-  - "NetBIOS [SQL Server]"
-  - "services [SQL Server], sécurité"
-  - "SMB [SQL Server]"
-  - "isolation de services [SQL Server]"
-  - "programme d’installation [SQL Server], sécurité"
-  - "privilèges d'installation de SQL Server de bas niveau"
-  - "NTFS [SQL Server]"
-  - "sécurité physique [SQL Server]"
-  - "sécurité du système de fichiers [SQL Server]"
-  - "installation de SQL Server, sécurité"
+title: "Considérations sur la sécurité pour une installation SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- firewall systems [SQL Server]
+- server message blocks [SQL Server]
+- disabling protocols
+- security [SQL Server], installations
+- protocols [SQL Server], disabling
+- NetBIOS [SQL Server]
+- services [SQL Server], security
+- SMB [SQL Server]
+- isolating services [SQL Server]
+- Setup [SQL Server], security
+- low SQL Server installation privileges
+- NTFS [SQL Server]
+- physical security [SQL Server]
+- file system security [SQL Server]
+- installing SQL Server, security
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
 caps.latest.revision: 48
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: af11eb46f2c213e85f0b1bbff80e98e5eeb436c0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Consid&#233;rations sur la s&#233;curit&#233; pour une installation SQL Server
+# <a name="security-considerations-for-a-sql-server-installation"></a>Considérations sur la sécurité pour une installation SQL Server
   La sécurité est importante pour chaque produit et chaque activité. En respectant les recommandations les plus simples, vous pouvez éviter de nombreuses failles de sécurité. Cette rubrique traite des recommandations qu'il est conseillé de prendre en considération en matière de sécurité avant d'installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et après l'avoir installé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Des conseils en matière de sécurité concernant des fonctionnalités spécifiques sont inclus dans les rubriques de référence de ces fonctionnalités.  
   
-## Avant d’effectuer l’installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Suivez ces recommandations lors de la définition de l'environnement du serveur :  
+## <a name="before-installing-includessnoversionincludesssnoversion-mdmd"></a>Avant d’effectuer l’installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ Suivez ces recommandations lors de la définition de l'environnement du serveur :  
   
 -   [Renforcez la sécurité physique.](#physical_security)  
   
@@ -50,8 +54,8 @@ caps.handback.revision: 48
   
 -   [Installation de SQL Server sur un contrôleur de domaine](../../sql-server/install/security-considerations-for-a-sql-server-installation.md#Install_DC)  
   
-###  <a name="physical_security"></a> Renforcement de la sécurité physique  
- L'isolement au niveau physique et logique est à la base de la sécurité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour améliorer la sécurité de l'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au niveau physique, procédez comme suit :  
+###  <a name="physical_security"></a> Enhance Physical Security  
+ L'isolement au niveau physique et logique est à la base de la sécurité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour améliorer la sécurité de l'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au niveau physique, procédez comme suit :  
   
 -   Placez le serveur dans une pièce à laquelle seules les personnes autorisées peuvent accéder.  
   
@@ -61,8 +65,8 @@ caps.handback.revision: 48
   
 -   Sauvegardez régulièrement toutes les données et conservez les copies de sauvegarde dans un lieu sécurisé situé en dehors de l'entreprise.  
   
-###  <a name="firewalls"></a> Utilisation de pare-feu  
- Les pare-feu sont importants afin d'aider à sécuriser l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les pare-feu seront d'autant plus efficaces que vous suivrez ces directives :  
+###  <a name="firewalls"></a> Use Firewalls  
+ Les pare-feu sont importants afin d'aider à sécuriser l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les pare-feu seront d'autant plus efficaces que vous suivrez ces directives :  
   
 -   Placez un pare-feu entre le serveur et Internet. Activez votre pare-feu. Si votre pare-feu est désactivé, activez-le. Si votre pare-feu est activé, ne le désactivez pas.  
   
@@ -72,29 +76,29 @@ caps.handback.revision: 48
   
 -   Lorsque vous installez le serveur à l'intérieur d'un domaine Windows, configurez des pare-feu internes pour autoriser l'authentification Windows.  
   
--   Si votre application utilise des transactions distribuées, vous devrez éventuellement configurer le pare-feu pour autoriser le trafic MS DTC ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator) entre des instances MS DTC distinctes. Vous devrez configurer également le pare-feu afin de permettre au trafic de s'écouler entre les instances MS DTC et les gestionnaires des ressources tels que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Si votre application utilise des transactions distribuées, vous devrez éventuellement configurer le pare-feu pour autoriser le trafic MS DTC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator) entre des instances MS DTC distinctes. Vous devrez configurer également le pare-feu afin de permettre au trafic de s'écouler entre les instances MS DTC et les gestionnaires des ressources tels que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Pour plus d’informations sur les paramètres par défaut du Pare-feu Windows et pour obtenir une description des ports TCP qui affectent le [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consultez [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
+ Pour plus d’informations sur les paramètres par défaut du Pare-feu Windows et pour obtenir une description des ports TCP qui affectent le [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]et [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consultez [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-###  <a name="isolated_services"></a> Isolement des services  
- Le fait d'isoler les services réduit le risque qu'un service compromis soit utilisé pour en compromettre d'autres. Pour isoler des services, tenez compte des consignes suivantes :  
+###  <a name="isolated_services"></a> Isolate Services  
+ Le fait d'isoler les services réduit le risque qu'un service compromis soit utilisé pour en compromettre d'autres. Pour isoler des services, tenez compte des consignes suivantes :  
   
--   Exécutez chaque service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous des comptes Windows distincts. Si possible, utilisez des comptes d'utilisateurs locaux ou Windows distincts et à faibles droits pour chaque service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+-   Exécutez chaque service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous des comptes Windows distincts. Si possible, utilisez des comptes d'utilisateurs locaux ou Windows distincts et à faibles droits pour chaque service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-###  <a name="sa_with_least_privileges"></a> Configurer un système de fichiers sécurisé  
- L'utilisation du système de fichiers correct accroît la sécurité. Pour les installations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez effectuer les tâches suivantes :  
+###  <a name="sa_with_least_privileges"></a> Configure a Secure File System  
+ L'utilisation du système de fichiers correct accroît la sécurité. Pour les installations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez effectuer les tâches suivantes :  
   
--   Utiliser le système de fichiers NTFS.  NTFS est le système de fichiers par défaut pour les installations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] car il est plus stable et récupérable que les systèmes de fichiers FAT. NTFS active également des options de sécurité telles que les listes de contrôle d'accès de fichiers et de répertoires et le chiffrement de fichiers EFS (Encrypting File System). Pendant l'installation, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définit les listes de contrôle d'accès appropriées sur les clés de Registre et les fichiers s'il détecte NTFS. Ces autorisations ne doivent pas être modifiées. Il se peut que les versions futures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prennent pas en charge l'installation sur des ordinateurs dotés de systèmes de fichiers FAT.  
+-   Utiliser le système de fichiers NTFS. NTFS est le système de fichiers par défaut pour les installations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] car il est plus stable et récupérable que les systèmes de fichiers FAT. NTFS active également des options de sécurité telles que les listes de contrôle d'accès de fichiers et de répertoires et le chiffrement de fichiers EFS (Encrypting File System). Pendant l'installation, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définit les listes de contrôle d'accès appropriées sur les clés de Registre et les fichiers s'il détecte NTFS. Ces autorisations ne doivent pas être modifiées. Il se peut que les versions futures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prennent pas en charge l'installation sur des ordinateurs dotés de systèmes de fichiers FAT.  
   
     > [!NOTE]  
     >  Si vous utilisez le chiffrement EFS, les fichiers de base de données seront chiffrés sous l'identité du compte qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Seul ce compte sera en mesure de déchiffrer les fichiers. Si vous devez modifier le compte qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez d'abord déchiffrer les fichiers sous l'ancien compte, puis les rechiffrer sous le nouveau compte.  
   
 -   Utilisez la technologie RAID pour les fichiers de données critiques.  
   
-###  <a name="disabled_protocols"></a> Désactivez les protocoles NetBIOS et SMB (Server Message Block)  
+###  <a name="disabled_protocols"></a> Disable NetBIOS and Server Message Block  
  Les protocoles non nécessaires doivent tous être désactivés sur les serveurs du réseau de périmètre, y compris les protocoles NetBIOS et SMB.  
   
- Le protocole NetBIOS utilise les ports suivants :  
+ Le protocole NetBIOS utilise les ports suivants :  
   
 -   UDP/137 (service de noms NetBIOS)  
   
@@ -102,13 +106,13 @@ caps.handback.revision: 48
   
 -   TCP/139 (service de sessions NetBIOS)  
   
- Le protocole SMB utilise les ports suivants :  
+ Le protocole SMB utilise les ports suivants :  
   
 -   TCP/139  
   
 -   TCP/445  
   
- Les serveurs Web et les serveurs DNS (Domain Name System) ne nécessitent pas l'utilisation du protocole NetBIOS ou SMB. Désactivez ces protocoles sur ces serveurs afin de réduire le risque lié à l'énumération utilisateur.  
+ Les serveurs Web et les serveurs DNS (Domain Name System) ne nécessitent pas l'utilisation du protocole NetBIOS ou SMB. Désactivez ces protocoles sur ces serveurs afin de réduire le risque lié à l'énumération utilisateur.  
   
 ###  <a name="Install_DC"></a> Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un contrôleur de domaine  
  Pour des raisons de sécurité, nous recommandons de ne pas installer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sur un contrôleur de domaine. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne bloquera pas l'installation sur un ordinateur qui est contrôleur de domaine, mais les limitations suivantes s'appliquent :  
@@ -123,8 +127,8 @@ caps.handback.revision: 48
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le programme d’installation ne peut pas créer de groupes de sécurité ni configurer de comptes de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un contrôleur de domaine en lecture seule. Dans ce scénario, le programme d'installation échoue.  
   
-## Pendant ou après l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Après l'installation, vous pouvez renforcer la sécurité de l'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en suivant les recommandations suivantes pour les comptes et les modes d'authentification :  
+## <a name="during-or-after-installation-of-includessnoversionincludesssnoversion-mdmd"></a>Pendant ou après l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ Après l'installation, vous pouvez renforcer la sécurité de l'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en suivant les recommandations suivantes pour les comptes et les modes d'authentification :  
   
  **Comptes de service**  
   
@@ -142,17 +146,17 @@ caps.handback.revision: 48
   
  **Mots de passe forts**  
   
--   Affectez toujours un mot de passe fort au compte **sa**.  
+-   Affectez toujours un mot de passe fort au compte **sa** .  
   
 -   Toujours activez la vérification de la stratégie de mot de passe pour vérifier la robustesse et l'expiration du mot de passe.  
   
--   Utilisez toujours des mots de passe forts pour toutes les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Utilisez toujours des mots de passe forts pour toutes les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  Lors de l'installation de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] une connexion est ajoutée pour le groupe BUILTIN\Users. Cela permet à tous les utilisateurs authentifiés sur l'ordinateur d'accéder à l'instance de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] en tant que membres du rôle public. La connexion BUILTIN\Users peut être supprimée sans risque pour restreindre l'accès au [!INCLUDE[ssDE](../../includes/ssde-md.md)] aux utilisateurs de l'ordinateur qui disposent de connexions ou qui sont membres d'autres groupes Windows avec des connexions.  
   
-## Voir aussi  
- [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Protocoles réseau et bibliothèques réseau](../../sql-server/install/network-protocols-and-network-libraries.md)   
  [Inscrire un nom de principal du service pour les connexions Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
   

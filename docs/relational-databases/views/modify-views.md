@@ -1,38 +1,42 @@
 ---
-title: "Modifier des vues | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "vues [SQL Server], affectation d’un nouveau nom"
-  - "vues [SQL Server], modification"
-  - "modification des vues"
-  - "affectation d'un nouveau nom aux vues"
+title: "Modifier des vues | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- views [SQL Server], renaming
+- views [SQL Server], modifying
+- modifying views
+- renaming views
 ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 242d7b946699560cf24c59a262e3a14a5c08b8d9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modifier des vues
+# <a name="modify-views"></a>Modifier des vues
   Après avoir défini une vue, vous pouvez modifier sa définition dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sans la supprimer ni être obligé de la recréer à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour modifier une vue, utilisez :**  
+-   **Pour modifier une vue, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -53,27 +57,27 @@ caps.handback.revision: 22
 ####  <a name="Permissions"></a> Autorisations  
  Pour exécuter l'instruction ALTER VIEW, il est nécessaire de disposer au minimum de l'autorisation ALTER sur OBJECT.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour modifier une vue  
+#### <a name="to-modify-a-view"></a>Pour modifier une vue  
   
 1.  Dans l' **Explorateur d'objets**, cliquez sur le signe plus (+) en regard de la base de données dans laquelle votre vue se trouve, puis cliquez sur le signe plus (+) en regard du dossier **Vues** .  
   
 2.  Cliquez avec le bouton droit sur la vue à modifier, puis sélectionnez **Conception**.  
   
-3.  Dans le volet Diagramme du Concepteur de requêtes, apportez les modifications à la vue à l'aide d'une ou de plusieurs des méthodes suivantes :  
+3.  Dans le volet Diagramme du Concepteur de requêtes, apportez les modifications à la vue à l'aide d'une ou de plusieurs des méthodes suivantes :  
   
     1.  Activez ou désactivez les cases à cocher des éléments à ajouter ou supprimer.  
   
-    2.  Cliquez avec le bouton droit dans le volet Schéma, sélectionnez **Ajouter une table…**, puis les colonnes supplémentaires à ajouter à la vue dans la boîte de dialogue **Ajouter une table**.  
+    2.  Cliquez avec le bouton droit dans le volet Schéma, sélectionnez **Ajouter une table…**, puis les colonnes supplémentaires à ajouter à la vue dans la boîte de dialogue **Ajouter une table** .  
   
     3.  Cliquez avec le bouton droit sur la barre de titre de la table que vous souhaitez supprimer et sélectionnez **Supprimer**.  
   
-4.  Dans le menu **Fichier**, cliquez sur **Enregistrer***nom de la vue*.  
+4.  Dans le menu **Fichier** , cliquez sur **Enregistrer***nom de la vue*.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour modifier une vue  
+#### <a name="to-modify-a-view"></a>Pour modifier une vue  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

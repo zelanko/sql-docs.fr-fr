@@ -1,29 +1,33 @@
 ---
-title: "Cat&#233;gorie d&#39;&#233;v&#233;nement Configurables par l&#39;utilisateur | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Classes d’événements SQL Server, catégorie d’événement configurable par l’utilisateur"
-  - "classes d’événements [SQL Server], catégorie d’événement configurable par l’utilisateur"
-  - "catégorie d'événement Configurables par l'utilisateur [SQL Server]"
+title: "Configurables par l’utilisateur, catégorie d’événement | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server event classes, User-Configurable event category
+- event classes [SQL Server], User-Configurable event category
+- User-Configurable event category [SQL Server]
 ms.assetid: 1791785b-d67d-4cab-8acc-b3cf13af7a1f
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 63ce89349141934c2e4d5cfd5a8507b7d28e2650
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cat&#233;gorie d&#39;&#233;v&#233;nement Configurables par l&#39;utilisateur
-  La catégorie d’événement **Configurables par l’utilisateur** contient les classes d’événements **configurables par l’utilisateur**.  
+# <a name="user-configurable-event-category"></a>Configurables par l’utilisateur, catégorie d’événement
+  La catégorie d’événement **Configurables par l’utilisateur** contient les classes d’événements **configurables par l’utilisateur** .  
   
-## Dans cette section  
+## <a name="in-this-section"></a>Dans cette section  
   
 |Rubrique|Description|  
 |-----------|-----------------|  

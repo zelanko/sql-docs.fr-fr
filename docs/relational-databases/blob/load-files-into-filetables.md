@@ -1,26 +1,30 @@
 ---
-title: "Charger des fichiers dans FileTables | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], migration de fichiers"
-  - "FileTables [SQL Server], chargement en masse"
-  - "FileTables [SQL Server], chargement de fichiers"
+title: Charger des fichiers dans FileTables | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], migrating files
+- FileTables [SQL Server], bulk loading
+- FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aea5bf6d2bbdb455735c589d46ac76f0e587cda3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Charger des fichiers dans FileTables
+# <a name="load-files-into-filetables"></a>Charger des fichiers dans FileTables
   Explique comment charger ou migrer des fichiers dans FileTables.  
   
 ##  <a name="BasicsLoadNew"></a> Chargement ou migration de fichiers dans un FileTable  
@@ -32,7 +36,7 @@ caps.handback.revision: 23
 |Les fichiers sont actuellement stockés dans le système de fichiers.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient une table de métadonnées qui contient des pointeurs sur les fichiers.|La première étape consiste à déplacer ou à copier les fichiers à l'aide de l'une des méthodes indiquées ci-dessus.<br /><br /> La deuxième étape consiste à mettre à jour la table de métadonnées existante de sorte qu'elle pointe sur le nouvel emplacement des fichiers.<br /><br /> Pour plus d'informations, consultez [Exemple : migration de fichiers à partir du système de fichiers dans un FileTable](#HowToMigrateFiles) dans cette rubrique.|  
   
 ###  <a name="HowToLoadNew"></a> Procédure : charger des fichiers dans un FileTable  
- Voici quelques-unes des méthodes que vous pouvez appliquer pour charger des fichiers dans un FileTable :  
+ Voici quelques-unes des méthodes que vous pouvez appliquer pour charger des fichiers dans un FileTable :  
   
 -   Faites glisser et déplacez des fichiers depuis les dossiers source vers le nouveau dossier FileTable dans l'Explorateur Windows.  
   
@@ -40,12 +44,12 @@ caps.handback.revision: 23
   
 -   Écrivez une application personnalisée en C# ou Visual Basic.NET qui utilise des méthodes de l’espace de noms **System.IO** pour déplacer ou copier les fichiers.  
   
-###  <a name="HowToMigrateFiles"></a> Exemple : migration de fichiers à partir du système de fichiers dans un FileTable  
+###  <a name="HowToMigrateFiles"></a> Exemple : migration de fichiers à partir du système de fichiers dans un FileTable  
  Dans ce scénario, vos fichiers sont stockés dans le système de fichiers et vous disposez d'une table de métadonnées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui contient des pointeurs sur les fichiers. Vous souhaitez déplacer les fichiers dans un FileTable, puis remplacer le chemin UNC d'origine pour chaque fichier dans les métadonnées par le chemin UNC de FileTable. La fonction [GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md) vous aide à accomplir cet objectif.  
   
  Pour cet exemple, supposez qu'il existe une table de base de données nommée **PhotoMetadata**qui contient des données relatives à des photographies. Cette table comprend une colonne **UNCPath** du type **varchar**(512) qui contient le chemin UNC réel à un fichier .jpg.  
   
- Pour migrer les fichiers image du système de fichiers vers un FileTable, vous devez effectuer les opérations suivantes :  
+ Pour migrer les fichiers image du système de fichiers vers un FileTable, vous devez effectuer les opérations suivantes :  
   
 1.  Créez un nouveau FileTable pour contenir les fichiers. Cet exemple utilise le nom de la table, **dbo.PhotoTable**, mais ne fournit pas le code permettant de créer la table.  
   
@@ -80,7 +84,7 @@ UPDATE PhotoMetadata
   
  Un FileTable a des contraintes définies par le système qui garantissent le maintien de l'intégrité de l'espace de noms de fichier/répertoire. Ces contraintes doivent être vérifiées sur le volume de données chargé dans le FileTable. Puisque certaines opérations d'insertion en masse permettent d'ignorer les contraintes de table, les conditions requises suivantes sont appliquées.  
   
--   Les opérations de chargement en masse qui appliquent des contraintes peuvent être exécutées sur un FileTable comme sur toute autre table. Cette catégorie comprend les opérations suivantes :  
+-   Les opérations de chargement en masse qui appliquent des contraintes peuvent être exécutées sur un FileTable comme sur toute autre table. Cette catégorie comprend les opérations suivantes :  
   
     -   bcp avec clause CHECK_CONSTRAINTS.  
   
@@ -88,7 +92,7 @@ UPDATE PhotoMetadata
   
     -   INSERT INTO … SELECT * FROM OPENROWSET(BULK …) sans clause IGNORE_CONSTRAINTS.  
   
--   Les opérations de chargement en masse qui n'imposent pas de contraintes échouent à moins que les contraintes de FileTable définies par le système aient été désactivées. Cette catégorie comprend les opérations suivantes :  
+-   Les opérations de chargement en masse qui n'imposent pas de contraintes échouent à moins que les contraintes de FileTable définies par le système aient été désactivées. Cette catégorie comprend les opérations suivantes :  
   
     -   bcp sans clause CHECK_CONSTRAINTS.  
   
@@ -96,33 +100,33 @@ UPDATE PhotoMetadata
   
     -   INSERT INTO … SELECT * FROM OPENROWSET(BULK …) avec clause IGNORE_CONSTRAINTS.  
   
-###  <a name="HowToBulkLoad"></a> Procédure : charger des fichiers en masse dans un FileTable  
- Vous pouvez faire appel à différentes méthodes pour charger en masse des fichiers dans un FileTable :  
+###  <a name="HowToBulkLoad"></a> Procédure : charger des fichiers en masse dans un FileTable  
+ Vous pouvez faire appel à différentes méthodes pour charger en masse des fichiers dans un FileTable :  
   
 -   **bcp**  
   
-    -   Effectuez un appel avec la clause **CHECK_CONSTRAINTS**.  
+    -   Effectuez un appel avec la clause **CHECK_CONSTRAINTS** .  
   
-    -   Désactivez l’espace de noms FileTable et effectuez un appel sans la clause **CHECK_CONSTRAINTS**. Ensuite, réactivez l'espace de noms FileTable.  
+    -   Désactivez l’espace de noms FileTable et effectuez un appel sans la clause **CHECK_CONSTRAINTS** . Ensuite, réactivez l'espace de noms FileTable.  
   
 -   **BULK INSERT**  
   
-    -   Effectuez un appel avec la clause **CHECK_CONSTRAINTS**.  
+    -   Effectuez un appel avec la clause **CHECK_CONSTRAINTS** .  
   
-    -   Désactivez l’espace de noms FileTable et effectuez un appel sans la clause **CHECK_CONSTRAINTS**. Ensuite, réactivez l'espace de noms FileTable.  
+    -   Désactivez l’espace de noms FileTable et effectuez un appel sans la clause **CHECK_CONSTRAINTS** . Ensuite, réactivez l'espace de noms FileTable.  
   
 -   **INSERT INTO … SELECT \* FROM OPENROWSET(BULK …)**  
   
-    -   Effectuez un appel avec la clause **IGNORE_CONSTRAINTS**.  
+    -   Effectuez un appel avec la clause **IGNORE_CONSTRAINTS** .  
   
-    -   Désactivez l’espace de noms FileTable et effectuez un appel sans la clause **IGNORE_CONSTRAINTS**. Ensuite, réactivez l'espace de noms FileTable.  
+    -   Désactivez l’espace de noms FileTable et effectuez un appel sans la clause **IGNORE_CONSTRAINTS** . Ensuite, réactivez l'espace de noms FileTable.  
   
  Pour plus d’informations sur la désactivation des contraintes FileTable, consultez [Gérer des FileTables](../../relational-databases/blob/manage-filetables.md).  
   
-###  <a name="disabling"></a> Procédure : désactiver les contraintes de FileTable pour le chargement en masse  
+###  <a name="disabling"></a> Procédure : désactiver les contraintes de FileTable pour le chargement en masse  
  Pour charger en masse des fichiers dans un FileTable sans la surcharge liée à l'application des contraintes définies par le système, vous pouvez désactiver temporairement les contraintes. Pour plus d’informations, consultez [Gérer des FileTables](../../relational-databases/blob/manage-filetables.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Accéder aux FileTables avec Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [Accéder aux FileTables avec des API d’entrée-sortie de fichier](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   

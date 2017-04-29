@@ -1,32 +1,36 @@
 ---
-title: "Espace disque du journal des transactions pour les op&#233;rations d&#39;index | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "espace disque des index [SQL Server]"
-  - "espace [SQL Server], index"
-  - "journaux des transactions [SQL Server], espace disque"
-  - "espace disque [SQL Server], journaux des transactions"
-  - "espace [SQL Server], journaux de transactions"
+title: "Espace disque du journal des transactions pour les opérations d’index | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index disk space [SQL Server]
+- space [SQL Server], indexes
+- transaction logs [SQL Server], disk space
+- disk space [SQL Server], transaction logs
+- space [SQL Server], transaction logs
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a1d06fd19479d11e1705e6c21ed7e1698a89896a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Espace disque du journal des transactions pour les op&#233;rations d&#39;index
-  Les opérations d'index à grande échelle peuvent générer des chargements de données volumineux susceptibles de saturer le journal des transactions rapidement. Pour que l'opération d'index puisse être restaurée, le journal des transactions ne peut pas être tronqué avant la fin de celle-ci ; toutefois, il peut être sauvegardé pendant l'opération d'index. Par conséquent, le journal des transactions doit posséder suffisamment de place pour stocker les transactions de l'opération d'index et toutes les transactions utilisateur concurrentes qui interviennent pendant celle-ci. Cela concerne à la fois les opérations d'index hors ligne et les opérations d'index en ligne. Étant donné que les tables sous-jacentes sont inaccessibles pendant une opération d'index hors ligne, le nombre de transactions utilisateur peut être faible et le journal ne peut pas croître rapidement. Les opérations d'index en ligne n'empêchent pas l'activité utilisateur concurrente ; par conséquent, les opérations d'index en ligne à grande échelle combinées à des transactions utilisateur concurrentes significatives peuvent provoquer une croissance continue du journal des transactions en l'absence d'option permettant de le tronquer.  
+# <a name="transaction-log-disk-space-for-index-operations"></a>Espace disque du journal des transactions pour les opérations d'index
+  Les opérations d'index à grande échelle peuvent générer des chargements de données volumineux susceptibles de saturer le journal des transactions rapidement. Pour que l'opération d'index puisse être restaurée, le journal des transactions ne peut pas être tronqué avant la fin de celle-ci ; toutefois, il peut être sauvegardé pendant l'opération d'index. Par conséquent, le journal des transactions doit posséder suffisamment de place pour stocker les transactions de l'opération d'index et toutes les transactions utilisateur concurrentes qui interviennent pendant celle-ci. Cela concerne à la fois les opérations d'index hors ligne et les opérations d'index en ligne. Étant donné que les tables sous-jacentes sont inaccessibles pendant une opération d'index hors ligne, le nombre de transactions utilisateur peut être faible et le journal ne peut pas croître rapidement. Les opérations d'index en ligne n'empêchent pas l'activité utilisateur concurrente ; par conséquent, les opérations d'index en ligne à grande échelle combinées à des transactions utilisateur concurrentes significatives peuvent provoquer une croissance continue du journal des transactions en l'absence d'option permettant de le tronquer.  
   
-## Recommandations  
- Lorsque vous exécutez des opérations d'index à grande échelle, tenez compte des recommandations suivantes :  
+## <a name="recommendations"></a>Recommandations  
+ Lorsque vous exécutez des opérations d'index à grande échelle, tenez compte des recommandations suivantes :  
   
 1.  Assurez-vous que le journal des transactions a été sauvegardé et tronqué avant d'exécuter des opérations d'index à grande échelle en ligne et qu'il possède suffisamment d'espace pour stocker l'index et les transactions utilisateur projetés.  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 17
   
 4.  N'exécutez pas l'opération d'index en ligne dans une transaction explicite. Le journal n'est pas tronqué avant la fin de la transaction explicite.  
   
-## Contenu connexe  
+## <a name="related-content"></a>Contenu connexe  
  [Espace disque nécessaire pour les opérations DDL d'index](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   
  [Exemple d'espace disque d'un index](../../relational-databases/indexes/index-disk-space-example.md)  

@@ -1,26 +1,30 @@
 ---
-title: "Cr&#233;er une sauvegarde chiffr&#233;e | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Créer une sauvegarde chiffrée | Microsoft Docs"
+ms.custom: 
+ms.date: 08/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 42b2038121e0bf9179fefafc89a7b17e3c1585c7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er une sauvegarde chiffr&#233;e
+# <a name="create-an-encrypted-backup"></a>Créer une sauvegarde chiffrée
   Cette rubrique décrit les étapes nécessaires pour créer une sauvegarde chiffrée à l'aide de Transact-SQL.  Par exemple, à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consultez [Créer une sauvegarde complète de base de données (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md). 
   
-## Sauvegarde sur disque avec chiffrement  
- **Configuration requise :**  
+## <a name="backup-to-disk-with-encryption"></a>Sauvegarde sur disque avec chiffrement  
+ **Configuration requise :**  
   
 -   Accès à un disque local ou à un stockage disposant de l'espace approprié pour créer une sauvegarde de la base de données.  
   
@@ -70,12 +74,12 @@ caps.handback.revision: 17
   
  Pour obtenir un exemple de chiffrement d’une sauvegarde protégée par une gestion de clés extensible, consultez [Gestion de clés extensible à l’aide d’Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
-### Sauvegarder dans le stockage Windows Azure avec chiffrement  
+### <a name="backup-to-windows-azure-storage-with-encryption"></a>Sauvegarder dans le stockage Windows Azure avec chiffrement  
  Si vous créez une sauvegarde dans le stockage Windows Azure à l'aide de l'option **Sauvegarde SQL Server vers une URL** , les étapes de chiffrement sont identiques, mais vous devez utiliser l'URL de destination et les informations d'identification SQL pour l'authentification dans le stockage Windows Azure. Si vous voulez configurer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] avec les options de chiffrement, consultez [Activation de la sauvegarde managée SQL Server sur Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
- **Configuration requise :**  
+ **Configuration requise :**  
   
--   Un compte de stockage Windows et un conteneur. Pour plus d'informations, consultez [Lesson 1: Create Windows Azure Storage Objects](../Topic/Lesson%201:%20Create%20Windows%20Azure%20Storage%20Objects.md).  
+-   Un compte de stockage Windows et un conteneur. Pour plus d'informations, consultez [Lesson 1: Create Windows Azure Storage Objects](http://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5).  
   
 -   Une clé principale de base de données pour la base de données master, et un certificat ou une clé asymétrique sur l'instance de SQL Server. Pour les conditions et les autorisations de chiffrement, consultez [Backup Encryption](../../relational-databases/backup-restore/backup-encryption.md).  
   
@@ -129,3 +133,4 @@ caps.handback.revision: 17
     ```  
   
   
+

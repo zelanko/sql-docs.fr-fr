@@ -1,33 +1,37 @@
 ---
-title: "Ex&#233;cuter pas &#224; pas du code Transact-SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "débogueur Transact-SQL, débogage de code"
-  - "débogueur Transact-SQL, pas à pas principal"
-  - "débogueur Transact-SQL, pas à pas sortant"
-  - "débogueur Transact-SQL, pas à pas détaillé"
+title: "Exécuter pas à pas du code Transact-SQL | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transact-SQL debugger, debugging code
+- Transact-SQL debugger, step over
+- Transact-SQL debugger, step out
+- Transact-SQL debugger, step into
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 68bc53fbfbe4db76e44042936642ad8541784b36
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ex&#233;cuter pas &#224; pas du code Transact-SQL
+# <a name="step-through-transact-sql-code"></a>Exécuter pas à pas du code Transact-SQL
   Le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] vous permet de contrôler les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui sont exécutées dans une fenêtre de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Vous pouvez suspendre le débogueur au niveau d'instructions individuelles, puis afficher l'état des éléments de code à ce stade.  
   
-## Points d'arrêt  
- Un point d'arrêt indique au débogueur de suspendre l'exécution à une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifique. Pour plus d'informations sur les points d'arrêt, consultez Utilisation de points d'arrêt Transact-SQL.  
+## <a name="breakpoints"></a>Points d'arrêt  
+ Un point d'arrêt indique au débogueur de suspendre l'exécution à une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifique. Pour plus d’informations sur les points d’arrêt, consultez [Utilisation de points d’arrêt Transact-SQL](../../relational-databases/scripting/transact-sql-breakpoints.md).  
   
-## Contrôle de l'exécution d'instructions  
+## <a name="controlling-statement-execution"></a>Contrôle de l'exécution d'instructions  
  Dans le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] , vous pouvez spécifier les options suivantes pour exécuter le code [!INCLUDE[tsql](../../includes/tsql-md.md)] à partir de l'instruction actuelle :  
   
 -   Exécuter le code jusqu'au point d'arrêt suivant.  
@@ -48,7 +52,7 @@ caps.handback.revision: 18
   
  Le tableau suivant répertorie les différentes façons dont vous pouvez contrôler l'exécution des instructions dans le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-|Action|Action à effectuer :|  
+|Action|Action à effectuer :|  
 |------------|---------------------|  
 |Exécuter toutes les instructions à partir de l'instruction actuelle jusqu'au point d'arrêt suivant|Cliquez sur **Continuer** dans le menu **Déboguer** .<br /><br /> Cliquez sur le bouton **Continuer** dans la barre d’outils **Déboguer** .|  
 |Effectuer un pas à pas détaillé dans l'instruction ou le module suivant|Cliquez sur **Pas à pas détaillé** dans le menu **Déboguer** .<br /><br /> Cliquez sur le bouton **Pas à pas détaillé** dans la barre d’outils **Déboguer** .<br /><br /> Appuyez sur F11.|  
@@ -56,7 +60,7 @@ caps.handback.revision: 18
 |Effectuer un pas à pas sortant dans un module|Cliquez sur **Pas à pas sortant** dans le menu **Déboguer** .<br /><br /> Cliquez sur le bouton **Pas à pas sortant** dans la barre d’outils **Déboguer** .<br /><br /> Appuyez sur Maj+F11.|  
 |Exécuter le code jusqu'à l'emplacement du curseur actuel|Cliquez avec le bouton droit dans la fenêtre de l’éditeur de requête, puis cliquez sur **Exécuter jusqu’au curseur**.<br /><br /> Appuyez sur Ctrl+F10.|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Informations du débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)  
   
   

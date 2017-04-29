@@ -1,46 +1,50 @@
 ---
-title: "Polygone | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sous-types géométriques [SQL Server]"
-  - "Polygon, sous-type géométrique [SQL Server]"
+title: "Polygon | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- geometry subtypes [SQL Server]
+- Polygon geometry subtype [SQL Server]
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08b68a58ad6d835349031de2dcf5c2dea215d188
+ms.lasthandoff: 04/11/2017
+
 ---
-# Polygone
+# <a name="polygon"></a>Polygon
   Un **polygone** est une surface à deux dimensions stockée en tant que séquence de points définissant un anneau englobant extérieur et zéro ou plusieurs anneaux intérieurs.  
   
-## Instances Polygon  
+## <a name="polygon-instances"></a>Instances Polygon  
  Une instance **Polygon** peut être formée à partir d’un anneau qui possède au moins trois points distincts. Une instance **Polygon** peut également être vide.  
   
  Les anneaux extérieurs et intérieurs d’un **polygone** définissent sa limite. L’espace dans les anneaux définit l’intérieur du **polygone**.  
   
- L’illustration suivante montre des exemples d’instances **Polygon**.  
+ L’illustration suivante montre des exemples d’instances **Polygon** .  
   
- ![Exemples d'instances Polygon géométriques](../../relational-databases/spatial/media/polygon.png "Exemples d'instances Polygon géométriques")  
+ ![Exemples d’instances Polygon géométriques](../../relational-databases/spatial/media/polygon.gif "Exemples d’instances Polygon géométriques")  
   
- Comme indiqué par l'illustration :  
+ Comme indiqué par l'illustration :  
   
 1.  La Figure 1 est une instance **Polygon** dont la limite est définie par un anneau extérieur.  
   
-2.  La Figure 2 est une instance **Polygon** dont la limite est définie par un anneau extérieur et deux anneaux intérieurs. La zone à l’intérieur des anneaux intérieurs fait partie de l’extérieur de l’instance **Polygon**.  
+2.  La Figure 2 est une instance **Polygon** dont la limite est définie par un anneau extérieur et deux anneaux intérieurs. La zone à l’intérieur des anneaux intérieurs fait partie de l’extérieur de l’instance **Polygon** .  
   
 3.  La Figure 3 est une instance **Polygon** valide, car ses anneaux intérieurs se croisent à un point tangent unique.  
   
-### Instances acceptées  
+### <a name="accepted-instances"></a>Instances acceptées  
  Les instances **Polygon** acceptées sont des instances qui peuvent être stockées dans une variable **geometry** ou **geography** sans lever d’exception. Les instances **Polygon** suivantes sont acceptées :  
   
 -   Instance **Polygon** vide  
@@ -65,7 +69,7 @@ DECLARE @g4 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(3 0, 6 0, 6 3, 
 DECLARE @g5 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';  
 ```  
   
- Comme le montrent `@g4` et `@g5`, une instance **Polygon** acceptée peut ne pas être une instance **Polygon** valide. `@g5` montre également qu’une instance Polygon doit contenir uniquement un anneau avec quatre points quelconques à accepter.  
+ Comme le montrent `@g4` et `@g5` , une instance **Polygon** acceptée peut ne pas être une instance **Polygon** valide. `@g5` montre également qu’une instance Polygon doit contenir uniquement un anneau avec quatre points quelconques à accepter.  
   
  Les exemples suivants lèvent une `System.FormatException` parce que les instances **Polygon** ne sont pas acceptées.  
   
@@ -80,7 +84,7 @@ DECLARE @g2 geometry = 'POLYGON((1 1, 3 3, 3 1, 1 5))';
 DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))';  
 ```  
   
-### Instances valides  
+### <a name="valid-instances"></a>Instances valides  
  Les anneaux intérieurs d’un **Polygon** peuvent se toucher eux-mêmes et l’un l’autre à des points tangents uniques, mais si les anneaux intérieurs d’un **Polygon** se croisent, l’instance n’est pas valide.  
   
  L’exemple suivant montre des instances **Polygon** valides.  
@@ -106,7 +110,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.S
   
  `@g1` n’est pas valide, car la boucle interne touche l’anneau intérieur à deux endroits. `@g2` n’est pas valide, car le deuxième anneau intérieur est à l’intérieur du premier anneau intérieur. `@g3` n’est pas valide, car les deux anneaux intérieurs se touchent au niveau de plusieurs points consécutifs. `@g4` n’est pas valide, car les parties intérieures des deux anneaux intérieurs se chevauchent. `@g5` n’est pas valide, car l’anneau extérieur n’est pas le premier anneau. `@g6` n’est pas valide, car la boucle n’a pas au moins trois points distincts.  
   
-## Exemples  
+## <a name="examples"></a>Exemples  
  L’exemple suivant crée une instance `geometry``Polygon` simple avec un trou et un SRID 10.  
   
 ```  
@@ -134,7 +138,7 @@ SELECT @g.ToString();
 MULTIPOLYGON (((2 0, 3 1, 2 2, 1.5 1.5, 2 1, 1.5 0.5, 2 0)), ((1 0, 1.5 0.5, 1 1, 1.5 1.5, 1 2, 0 1, 1 0)))  
 ```  
   
- Voici un autre exemple de conversion d'une instance non valide en instance geometry valide. Dans l'exemple suivant, l'instance `Polygon` a été créée à l'aide de trois points qui sont exactement les mêmes :  
+ Voici un autre exemple de conversion d'une instance non valide en instance geometry valide. Dans l'exemple suivant, l'instance `Polygon` a été créée à l'aide de trois points qui sont exactement les mêmes :  
   
 ```tsql  
 DECLARE @g geometry  
@@ -143,9 +147,9 @@ SET @g = @g.MakeValid();
 SELECT @g.ToString()  
 ```  
   
- L'instance geometry retourné ci-dessus est un `Point(1 3)`.  Si le `Polygon` donné est `POLYGON((1 3, 1 5, 1 3, 1 3))`, alors `MakeValid()` retourne `LINESTRING(1 3, 1 5)`.  
+ L'instance geometry retourné ci-dessus est un `Point(1 3)`.  Si le `Polygon` donné est `POLYGON((1 3, 1 5, 1 3, 1 3))` , alors `MakeValid()` retourne `LINESTRING(1 3, 1 5)`.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [STArea &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   
  [STExteriorRing &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stexteriorring-geometry-data-type.md)   
  [STNumInteriorRing &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stnuminteriorring-geometry-data-type.md)   

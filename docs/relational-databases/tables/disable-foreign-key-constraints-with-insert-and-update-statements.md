@@ -1,41 +1,45 @@
 ---
-title: "D&#233;sactiver les contraintes de cl&#233; &#233;trang&#232;re avec des instructions INSERT et UPDATE | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "contraintes [SQL Server], clés étrangères"
-  - "clés étrangères [SQL Server], désactivation des contraintes"
-  - "désactivation des contraintes"
-  - "instruction UPDATE [SQL Server], contraintes de clé étrangère"
-  - "instruction INSERT [SQL Server], contraintes de clé étrangère"
+title: "Désactiver les contraintes de clé étrangère avec des instructions INSERT et UPDATE | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- constraints [SQL Server], foreign keys
+- foreign keys [SQL Server], disabling constraints
+- disabling constraints
+- UPDATE statement [SQL Server], foreign key constraints
+- INSERT statement [SQL Server], foreign key constraints
 ms.assetid: 029168d7-085e-4b13-9b86-5644b67c6e24
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a72cfad873d2fe891c9f10c3c5f8c0ede3a68ff2
+ms.lasthandoff: 04/11/2017
+
 ---
-# D&#233;sactiver les contraintes de cl&#233; &#233;trang&#232;re avec des instructions INSERT et UPDATE
+# <a name="disable-foreign-key-constraints-with-insert-and-update-statements"></a>Désactiver les contraintes de clé étrangère avec des instructions INSERT et UPDATE
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Vous pouvez désactiver une contrainte de clé étrangère pendant les transactions INSERT et UPDATE dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Utilisez cette option si vous savez que de nouvelles données violeront la contrainte existante ou si la contrainte s'applique uniquement aux données déjà dans la base de données.  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour désactiver une contrainte de clé étrangère pour les instructions INSERT et UPDATE, utilisez :**  
+-   **Pour désactiver une contrainte de clé étrangère pour les instructions INSERT et UPDATE, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -51,9 +55,9 @@ caps.handback.revision: 18
 ####  <a name="Permissions"></a> Autorisations  
  Requiert une autorisation ALTER sur la table.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour désactiver une contrainte de clé étrangère avec les instructions INSERT et UPDATE  
+#### <a name="to-disable-a-foreign-key-constraint-for-insert-and-update-statements"></a>Pour désactiver une contrainte de clé étrangère avec les instructions INSERT et UPDATE  
   
 1.  Dans l' **Explorateur d'objets**, développez la table avec la contrainte, puis développez le dossier **Clés** .  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 18
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour désactiver une contrainte de clé étrangère avec les instructions INSERT et UPDATE  
+#### <a name="to-disable-a-foreign-key-constraint-for-insert-and-update-statements"></a>Pour désactiver une contrainte de clé étrangère avec les instructions INSERT et UPDATE  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

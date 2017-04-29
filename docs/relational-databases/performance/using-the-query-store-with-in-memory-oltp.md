@@ -1,25 +1,29 @@
 ---
-title: "Utilisation du magasin de requ&#234;tes avec l&#39;OLTP en m&#233;moire | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Magasin de requêtes, en mémoire"
+title: "Utilisation du magasin de requêtes avec OLTP en mémoire | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Store, in-memory
 ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 31483a4450089f194241f19df0bd0072b5026375
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utilisation du magasin de requ&#234;tes avec l&#39;OLTP en m&#233;moire
+# <a name="using-the-query-store-with-in-memory-oltp"></a>Utilisation du magasin de requêtes avec l'OLTP en mémoire
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le magasin de requêtes vous permet de surveiller les performances du code compilé en mode natif pour les charges de travail exécutant l’OLTP en mémoire.  
@@ -32,7 +36,7 @@ Toutefois, il existe quelques aspects spécifiques que les utilisateurs doivent 
   
 -   Lorsque le magasin de requêtes est activé, les requêtes, les plans et les statistiques de compilation sont collectées par défaut. Toutefois, la collecte de statistiques d’exécution n’est pas activée, sauf si vous l’activez explicitement avec [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  
   
--   Lorsque vous attribuez la valeur 0 à *@new_collection_value*, le magasin de requêtes arrête de collecter les statistiques d’exécution pour la procédure concernée ou pour l’intégralité de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Lorsque vous attribuez la valeur 0 à *@new_collection_value* , le magasin de requêtes arrête de collecter les statistiques d’exécution pour la procédure concernée ou pour l’intégralité de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   La valeur configurée avec [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) n’est pas rendue persistante. Veillez à vérifier et configurer à nouveau la collecte de statistiques après le redémarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -52,7 +56,7 @@ Toutefois, il existe quelques aspects spécifiques que les utilisateurs doivent 
   
 -   Les métriques d’allocation de mémoire au sein de [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md) ne sont pas renseignées pour les requêtes compilées en mode natif. Elles ont toujours la valeur 0. Les colonnes d’allocation de mémoire sont les suivantes : avg_query_max_used_memory, last_query_max_used_memory, min_query_max_used_memory, max_query_max_used_memory et stdev_query_max_used_memory.  
   
-## Activation et utilisation du magasin de requêtes avec l'OLTP en mémoire  
+## <a name="enabling-and-using-query-store-with-in-memory-oltp"></a>Activation et utilisation du magasin de requêtes avec l'OLTP en mémoire  
  L'exemple simple suivant illustre l'utilisation du magasin de requêtes avec l'OLTP en mémoire dans un scénario utilisateur de bout en bout. Dans cet exemple, nous supposons qu’une base de données (`MemoryOLTP`) est activée pour l’OLTP en mémoire.  
     Pour plus d’informations sur la configuration requise des tables optimisées en mémoire, consultez [Création d’une table optimisée en mémoire et d’une procédure stockée compilée en mode natif](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
@@ -133,11 +137,12 @@ JOIN sys.query_store_runtime_stats_interval AS rsi
 WHERE q.object_id = OBJECT_ID('dbo.OrderInsert');  
 ```  
   
-## Voir aussi  
- [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Création d'une table mémoire optimisée et d'une procédure stockée compilée en mode natif](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [Création d’une table optimisée en mémoire et d’une procédure stockée compilée en mode natif](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)   
  [Bonnes pratiques relatives au magasin de requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Procédures stockées du magasin de requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Affichages catalogue du magasin de requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   
+

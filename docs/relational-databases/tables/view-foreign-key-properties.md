@@ -1,37 +1,41 @@
 ---
-title: "Afficher les propri&#233;t&#233;s de cl&#233;s &#233;trang&#232;res | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clés étrangères [SQL Server], attributs"
-  - "affichage des attributs de clés étrangères"
-  - "visualisation des attributs de clés étrangères"
+title: "Afficher les propriétés de clés étrangères | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- foreign keys [SQL Server], attributes
+- displaying foreign keys attributes
+- viewing foreign keys attributes
 ms.assetid: b0e57cb7-9b26-4b96-b76a-1f59f5f498c5
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4081168a8ebdec83d68669eec6543886ee525262
+ms.lasthandoff: 04/11/2017
+
 ---
-# Afficher les propri&#233;t&#233;s de cl&#233;s &#233;trang&#232;res
+# <a name="view-foreign-key-properties"></a>Afficher les propriétés de clés étrangères
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Vous pouvez consulter les attributs de clé étrangère d'une relation dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour consulter les attributs de clé étrangère d'une table spécifique, utilisez :**  
+-   **Pour consulter les attributs de clé étrangère d'une table spécifique, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -44,11 +48,11 @@ caps.handback.revision: 16
 ####  <a name="Permissions"></a> Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour consulter les attributs de clé étrangère d'une relation dans une table spécifique  
+#### <a name="to-view-the-foreign-key-attributes-of-a-relationship-in-a-specific-table"></a>Pour consulter les attributs de clé étrangère d'une relation dans une table spécifique  
   
-1.  Ouvrez le Concepteur de tables pour la table contenant la clé étrangère que vous souhaitez afficher, cliquez avec le bouton droit dans le Concepteur de tables puis, dans le menu contextuel, choisissez **Relations**.  
+1.  Ouvrez le Concepteur de tables pour la table contenant la clé étrangère que vous souhaitez afficher, cliquez avec le bouton droit dans le Concepteur de tables puis, dans le menu contextuel, choisissez **Relations** .  
   
 2.  Dans la boîte de dialogue **Relations de clé étrangère** , sélectionnez la relation possédant les propriétés à afficher.  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 16
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour consulter les attributs de clé étrangère d'une relation dans une table spécifique  
+#### <a name="to-view-the-foreign-key-attributes-of-a-relationship-in-a-specific-table"></a>Pour consulter les attributs de clé étrangère d'une relation dans une table spécifique  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

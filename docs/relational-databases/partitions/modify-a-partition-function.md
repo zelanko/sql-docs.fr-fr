@@ -1,22 +1,26 @@
 ---
-title: "Modifier une fonction de partition | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-partition"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Modifier une fonction de partition | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-partition
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2b55aa8c92aaf469aa2ef7945a84068301124641
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modifier une fonction de partition
+# <a name="modify-a-partition-function"></a>Modifier une fonction de partition
   Vous pouvez modifier le partitionnement d'une table ou d'un index dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en ajoutant ou supprimant le nombre de partitions spécifié (par incréments de 1) dans la fonction de partition de la table ou de l'index à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Lorsque vous ajoutez une partition, vous fractionnez une partition existante en deux partitions dont vous redéfinissez les limites. Lorsque vous supprimez une partition, vous fusionnez les limites de deux partitions pour n'en définir qu'une. Cette action a pour effet de remplir à nouveau une partition et de laisser l'autre non affectée.  
   
 > [!CAUTION]  
@@ -24,13 +28,13 @@ caps.handback.revision: 11
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour modifier une fonction de partition à l'aide de :**  
+-   **Pour modifier une fonction de partition à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -60,20 +64,20 @@ caps.handback.revision: 11
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- L'instruction ALTER PARTITION FUNCTION peut être exécutée avec les autorisations suivantes :  
+ L'instruction ALTER PARTITION FUNCTION peut être exécutée avec les autorisations suivantes :  
   
--   Autorisation ALTER ANY DATASPACE. Cette autorisation est attribuée par défaut aux membres du rôle de serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_ddladmin**.  
+-   Autorisation ALTER ANY DATASPACE. Cette autorisation est attribuée par défaut aux membres du rôle de serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_ddladmin** .  
   
 -   Autorisation CONTROL ou ALTER sur la base de données dans laquelle la fonction de partition a été créée.  
   
 -   Autorisation CONTROL SERVER ou ALTER ANY DATABASE sur le serveur de la base de données dans laquelle la fonction de partition a été créée.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- **Pour modifier une fonction de partition :**  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+ **Pour modifier une fonction de partition :**  
   
  Cette action spécifique ne peut pas être exécutée à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Afin de modifier une fonction de partition, vous devez d'abord supprimer la fonction puis en créer une nouvelle avec les propriétés souhaitées à l'aide de l'Assistant Création de partition. Pour plus d'informations, consultez  
   
-#### Pour supprimer une fonction de partition  
+#### <a name="to-delete-a-partition-function"></a>Pour supprimer une fonction de partition  
   
 1.  Développez la base de données dans laquelle vous souhaitez supprimer la fonction de partition, puis développer le dossier **Stockage** .  
   
@@ -85,7 +89,7 @@ caps.handback.revision: 11
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour fractionner une partition unique en deux partitions  
+#### <a name="to-split-a-single-partition-into-two-partitions"></a>Pour fractionner une partition unique en deux partitions  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -110,7 +114,7 @@ caps.handback.revision: 11
     SPLIT RANGE (500);  
     ```  
   
-#### Pour fusionner deux partitions dans une partition  
+#### <a name="to-merge-two-partitions-into-one-partition"></a>Pour fusionner deux partitions dans une partition  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

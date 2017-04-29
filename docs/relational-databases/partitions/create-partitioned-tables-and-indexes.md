@@ -1,43 +1,47 @@
 ---
-title: "Cr&#233;er des tables et des index partitionn&#233;s | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-partition"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.createpartition.progress.f1"
-  - "sql13.swb.createpartition.partitioncolumn.f1"
-  - "sql13.swb.createpartition.createjob.f1"
-  - "sql13.swb.createpartition.finish.f1"
-  - "sql13.swb.createpartition.selectoutput.f1"
-  - "sql13.swb.createpartition.partitionfunction.f1"
-  - "sql13.swb.createpartition.partitionscheme.f1"
-  - "sql13.swb.createpartition.getstart.f1"
-  - "sql13.swb.createpartition.mappartition.f1"
-  - "sql13.swb.createpartition.summary.f1"
-helpviewer_keywords: 
-  - "index partitionnés [SQL Server], création"
-  - "schémas de partition [SQL Server], création"
-  - "fonctions de partition [SQL Server], création"
-  - "tables partitionnées [SQL Server], création"
-  - "fonctions de partition [SQL Server]"
-  - "schémas de partition [SQL Server]"
+title: "Créer des tables et des index partitionnés | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-partition
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.createpartition.progress.f1
+- sql13.swb.createpartition.partitioncolumn.f1
+- sql13.swb.createpartition.createjob.f1
+- sql13.swb.createpartition.finish.f1
+- sql13.swb.createpartition.selectoutput.f1
+- sql13.swb.createpartition.partitionfunction.f1
+- sql13.swb.createpartition.partitionscheme.f1
+- sql13.swb.createpartition.getstart.f1
+- sql13.swb.createpartition.mappartition.f1
+- sql13.swb.createpartition.summary.f1
+helpviewer_keywords:
+- partitioned indexes [SQL Server], creating
+- partition schemes [SQL Server], creating
+- partition functions [SQL Server], creating
+- partitioned tables [SQL Server], creating
+- partition functions [SQL Server]
+- partition schemes [SQL Server]
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 453f7ed733752453c8de05053fb37527c75d6612
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er des tables et des index partitionn&#233;s
+# <a name="create-partitioned-tables-and-indexes"></a>Créer des tables et des index partitionnés
   Vous pouvez créer une table ou un index partitionné(e) dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Les données contenues dans des tables et des index partitionnés sont divisées horizontalement en unités qui peuvent être réparties sur plusieurs groupes de fichiers d'une base de données. Le partitionnement permet de rendre des tables et des index volumineux plus gérables et plus évolutifs.  
   
- La création d'une table ou d'un index partitionné(e) se produit généralement en quatre étapes :  
+ La création d'une table ou d'un index partitionné(e) se produit généralement en quatre étapes :  
   
 1.  Créez un ou plusieurs groupes de fichiers et les fichiers correspondants qui contiendront les partitions spécifiées par le schéma de partition.  
   
@@ -49,13 +53,13 @@ caps.handback.revision: 35
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour créer une table ou un index partitionné(e), utilisez :**  
+-   **Pour créer une table ou un index partitionné(e), utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -72,22 +76,22 @@ caps.handback.revision: 35
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- La création d'une table partitionnée nécessite une autorisation CREATE TABLE dans la base de données et une autorisation ALTER pour le schéma dans lequel la table est créée. La création d'un index partitionné nécessite l'autorisation ALTER sur la table ou la vue dans laquelle l'index est créé. La création d'une table ou d'un index partitionné(e) nécessite l'une des autorisations supplémentaires suivantes :  
+ La création d'une table partitionnée nécessite une autorisation CREATE TABLE dans la base de données et une autorisation ALTER pour le schéma dans lequel la table est créée. La création d'un index partitionné nécessite l'autorisation ALTER sur la table ou la vue dans laquelle l'index est créé. La création d'une table ou d'un index partitionné(e) nécessite l'une des autorisations supplémentaires suivantes :  
   
--   Autorisation ALTER ANY DATASPACE. Cette autorisation est attribuée par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_ddladmin**.  
+-   Autorisation ALTER ANY DATASPACE. Cette autorisation est attribuée par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_ddladmin** .  
   
 -   Autorisation CONTROL ou ALTER sur la base de données dans laquelle la fonction de partition et le schéma de partition sont créés.  
   
 -   Autorisation CONTROL SERVER ou ALTER ANY DATABASE sur le serveur de la base de données dans laquelle la fonction de partition et le schéma de partition sont créés.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Suivez les étapes de cette procédure pour créer un ou plusieurs groupes de fichiers, les fichiers correspondants et une table. Vous référencerez ces objets dans la procédure suivante lorsque vous créerez la table partitionnée.  
   
-#### Pour créer de nouveaux groupes de fichiers pour une table partitionnée  
+#### <a name="to-create-new-filegroups-for-a-partitioned-table"></a>Pour créer de nouveaux groupes de fichiers pour une table partitionnée  
   
 1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur la base de données dans laquelle vous souhaitez créer une table partitionnée et sélectionnez **Propriétés**.  
   
-2.  Dans la boîte de dialogue **Propriétés de la base de données –** *nom_base_de_données*, sous **Sélectionner une page**, sélectionnez **Groupes de fichiers**.  
+2.  Dans la boîte de dialogue **Propriétés de la base de données –** *nom_base_de_données* , sous **Sélectionner une page**, sélectionnez **Groupes de fichiers**.  
   
 3.  Sous **Lignes**, cliquez sur **Ajouter**. Dans la nouvelle ligne, entrez le nom du groupe de fichiers.  
   
@@ -106,7 +110,7 @@ caps.handback.revision: 35
   
 9. Développez le dossier **Tables** et créez une table selon la procédure habituelle. Pour plus d’informations, consultez [Créer des tables &#40;moteur de base de données&#41;](../../relational-databases/tables/create-tables-database-engine.md). Vous pouvez éventuellement spécifier une table existante dans la procédure suivante.  
   
-#### Pour créer une table partitionnée  
+#### <a name="to-create-a-partitioned-table"></a>Pour créer une table partitionnée  
   
 1.  Cliquez avec le bouton droit sur la table à partitionner, pointez sur **Stockage**, puis cliquez sur **Créer une partition**.  
   
@@ -116,7 +120,7 @@ caps.handback.revision: 35
   
      Le degré avec lequel vous pouvez regrouper les données de façon logique déterminent les options dont vous disposez pour définir la colonne de partitionnement et la plage de valeurs. Par exemple, vous pouvez choisir de diviser vos données en regroupements logiques par mois ou trimestres d'une année. Les requêtes que vous projetez d'exécuter sur vos données détermineront si ce regroupement logique est adéquat pour gérer vos partitions de table. Tous les types de données sont utilisables comme colonnes de partitionnement, à l’exception de **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, des types de données d’alias ou des types de données CLR définis par l’utilisateur.  
   
-     Les options supplémentaires suivantes sont disponibles sur cette page :  
+     Les options supplémentaires suivantes sont disponibles sur cette page :  
   
      **Colocaliser cette table avec la table partitionnée sélectionnée**  
      Permet de sélectionner une table partitionnée qui contient les données connexes à joindre à cette table sur la colonne de partitionnement. Les requêtes portant sur des tables présentant des partitions jointes sur les colonnes de partitionnement sont généralement plus efficaces.  
@@ -138,7 +142,7 @@ caps.handback.revision: 35
   
      Dans la grille **Sélectionnez les groupes de fichiers et spécifiez les valeurs limites** , sous **Groupe de fichiers**, sélectionnez le groupe de fichiers dans lequel vous souhaitez partitionner vos données. Sous **Limite**, entrez la valeur limite pour chaque groupe de fichiers. Si la valeur limite reste vide, la fonction de partition mappe la totalité de la table ou de l'index en une seule partition en utilisant le nom de la fonction de partition.  
   
-     Les options supplémentaires suivantes sont disponibles sur cette page :  
+     Les options supplémentaires suivantes sont disponibles sur cette page :  
   
      **Définir les limites**  
      Ouvre la boîte de dialogue **Définir les valeurs limites** pour sélectionner les valeurs limites et les plages de dates voulues pour vos partitions. Cette option est disponible uniquement quand vous avez sélectionné une colonne de partitionnement qui contient l’un des types de données suivants : **date**, **datetime**, **smalldatetime**, **datetime2**ou **datetimeoffset**.  
@@ -152,7 +156,7 @@ caps.handback.revision: 35
      Sélectionne la date de début pour les valeurs de plages de vos partitions.  
   
      **Date de fin**  
-     Sélectionne la date de fin pour les valeurs de plages de vos partitions. Si vous avez sélectionné l’option **Limite gauche** dans la page **Associer les partitions**, cette date est la dernière valeur de chaque groupe de fichiers/partition. Si vous avez sélectionné l’option **Limite droite** dans la page **Associer les partitions**, cette date est la première valeur du prochain groupe de fichiers.  
+     Sélectionne la date de fin pour les valeurs de plages de vos partitions. Si vous avez sélectionné l’option **Limite gauche** dans la page **Associer les partitions** , cette date est la dernière valeur de chaque groupe de fichiers/partition. Si vous avez sélectionné l’option **Limite droite** dans la page **Associer les partitions** , cette date est la première valeur du prochain groupe de fichiers.  
   
      **Plage de dates**  
      Sélectionne la granularité de date ou l'incrément de valeur de plage qui vous intéresse pour chaque partition.  
@@ -200,19 +204,19 @@ caps.handback.revision: 35
   
                 -   Si vous sélectionnez **Jour**, entrez la date du mois à laquelle vous souhaitez que la planification du travail s'exécute, ainsi que la fréquence de répétition de la planification du travail en mois. Par exemple, si vous souhaitez que la planification du travail s'exécute le 15 du mois un mois sur deux, sélectionnez **Jour** , puis entrez « 15 » dans la première zone et « 2 » dans la deuxième zone. Notez également que le nombre maximum autorisé dans la deuxième zone est « 99 ».  
   
-                -   Si vous sélectionnez **Le**, sélectionnez le jour spécifique de la semaine et du mois pendant lequel vous voulez que la planification du travail s'exécute et la fréquence à laquelle la planification du travail doit se répéter en mois. Par exemple, si vous souhaitez que la planification du travail s'exécute le dernier jour de la semaine un mois sur deux, sélectionnez **Jour**, puis **dernier** dans la première liste, **jour ouvrable** dans la deuxième liste et « 2 » dans la dernière zone. Vous pouvez également sélectionner **premier**, **deuxième**, **troisième** ou **quatrième**, ainsi que des jours de la semaine spécifiques (par exemple, dimanche ou mercredi) dans les deux premières listes. Notez également que le nombre maximum autorisé dans la dernière zone est « 99 ».  
+                -   Si vous sélectionnez **Le**, sélectionnez le jour spécifique de la semaine et du mois pendant lequel vous voulez que la planification du travail s'exécute et la fréquence à laquelle la planification du travail doit se répéter en mois. Par exemple, si vous souhaitez que la planification du travail s'exécute le dernier jour de la semaine un mois sur deux, sélectionnez **Jour**, puis **dernier** dans la première liste, **jour ouvrable** dans la deuxième liste et « 2 » dans la dernière zone. Vous pouvez également sélectionner **premier**, **deuxième**, **troisième**ou **quatrième**, ainsi que des jours de la semaine spécifiques (par exemple, dimanche ou mercredi) dans les deux premières listes. Notez également que le nombre maximum autorisé dans la dernière zone est « 99 ».  
   
         2.  Sous **Fréquence quotidienne**, spécifiez la fréquence à laquelle la planification du travail se répète le jour de son exécution :  
   
             -   Si vous sélectionnez **Une fois à**, entrez l'heure spécifique à laquelle la planification du travail doit s'exécuter dans la zone **Une fois à** . Entrez l'heure, les minutes et les secondes du jour, ainsi que AM ou PM.  
   
-            -   Si vous sélectionnez **Toutes les**, spécifiez la fréquence à laquelle la planification du travail s'exécute pendant la journée choisie sous **Fréquence**. Par exemple, si vous souhaitez que la planification du travail se répète toutes les 2 heures le jour d’exécution de la planification du travail, sélectionnez **Toutes les**, entrez « 2 » dans la première zone, puis sélectionnez **heure(s)** dans la liste. Dans cette liste, vous pouvez également sélectionner **minute(s)** et **seconde(s)**. Notez également que le nombre maximum autorisé dans la première zone est « 100 ».  
+            -   Si vous sélectionnez **Toutes les**, spécifiez la fréquence à laquelle la planification du travail s'exécute pendant la journée choisie sous **Fréquence**. Par exemple, si vous souhaitez que la planification du travail se répète toutes les 2 heures le jour d’exécution de la planification du travail, sélectionnez **Toutes les**, entrez « 2 » dans la première zone, puis sélectionnez **heure(s)** dans la liste. Dans cette liste, vous pouvez également sélectionner **minute(s)** et **seconde(s)**. Notez également que le nombre maximum autorisé dans la première zone est « 100 ».  
   
                  Dans la zone **Début** , entrez l'heure à laquelle l'exécution de la planification du travail doit démarrer. Dans la zone **Fin** , entrez l'heure à laquelle la planification du travail doit s'arrêter. Entrez l'heure, les minutes et les secondes du jour, ainsi que AM ou PM.  
   
         3.  Sous **Durée**, dans la zone **Date de début**, entrez la date à laquelle vous souhaitez que l'exécution de la planification du travail commence. Sélectionnez **Date de fin** ou **Aucune date de fin** pour indiquer à quel moment l'exécution de la planification du travail doit s'arrêter. Si vous sélectionnez **Date de fin**, entrez la date à laquelle l'exécution de la planification du travail doit s'arrêter.  
   
-    5.  Si vous sélectionnez **Une fois** sous **Une seule occurrence**, dans la zone **Date**, entrez la date à laquelle la planification du travail sera exécutée. Dans la zone **Heure** , entrez l'heure à laquelle la planification du travail sera exécutée. Entrez l'heure, les minutes et les secondes du jour, ainsi que AM ou PM.  
+    5.  Si vous sélectionnez **Une fois**sous **Une seule occurrence**, dans la zone **Date** , entrez la date à laquelle la planification du travail est exécutée. Dans la zone **Heure** , entrez l'heure à laquelle la planification du travail sera exécutée. Entrez l'heure, les minutes et les secondes du jour, ainsi que AM ou PM.  
   
     6.  Sous **Résumé**, dans **Description**, vérifiez que tous les paramètres de planification du travail sont corrects.  
   
@@ -242,10 +246,10 @@ caps.handback.revision: 35
      Crée un rapport qui contient les résultats de l'Assistant Création de partition. Les options sont **Afficher le rapport**, **Enregistrer le rapport dans un fichier**, **Copier le rapport dans le Presse-papiers**et **Envoyer le rapport sous forme de courrier électronique**.  
   
      **Afficher le rapport**  
-     Ouvre la boîte de dialogue **Afficher le rapport**, qui contient un rapport au format texte de la progression de l’Assistant Création de partition.  
+     Ouvre la boîte de dialogue **Afficher le rapport** , qui contient un rapport au format texte de la progression de l’Assistant Création de partition.  
   
      **Enregistrer le rapport dans un fichier**  
-     Ouvre la boîte de dialogue **Enregistrer le rapport sous**.  
+     Ouvre la boîte de dialogue **Enregistrer le rapport sous** .  
   
      **Copier le rapport dans le Presse-papiers**  
      Copie les résultats du rapport de progression de l'Assistant dans le presse-papiers.  
@@ -259,7 +263,7 @@ caps.handback.revision: 35
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour créer une table partitionnée  
+#### <a name="to-create-a-partitioned-table"></a>Pour créer une table partitionnée  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -342,7 +346,7 @@ caps.handback.revision: 35
     GO  
     ```  
   
-#### Pour déterminer si une table est partitionnée  
+#### <a name="to-determine-if-a-table-is-partitioned"></a>Pour déterminer si une table est partitionnée  
   
 1.  La requête suivante renvoie une ou plusieurs lignes si la table `PartitionTable` est partitionnée. Si la table n'est pas partitionnée, aucune ligne n'est retournée.  
   
@@ -358,7 +362,7 @@ caps.handback.revision: 35
     GO  
     ```  
   
-#### Pour déterminer les valeurs limites pour une table partitionnée  
+#### <a name="to-determine-the-boundary-values-for-a-partitioned-table"></a>Pour déterminer les valeurs limites pour une table partitionnée  
   
 1.  La requête suivante renvoie les valeurs limites pour chaque partition de la table `PartitionTable` .  
   
@@ -379,7 +383,7 @@ caps.handback.revision: 35
     ORDER BY p.partition_number;  
     ```  
   
-#### Pour déterminer la colonne de partition pour une table partitionnée  
+#### <a name="to-determine-the-partition-column-for-a-partitioned-table"></a>Pour déterminer la colonne de partition pour une table partitionnée  
   
 1.  La requête suivante renvoie le nom de la colonne de partitionnement pour une table. `PartitionTable`.  
   
@@ -406,9 +410,9 @@ caps.handback.revision: 35
     GO  
     ```  
   
- Pour plus d'informations, consultez :  
+ Pour plus d'informations, consultez :  
   
--   [Options de fichiers et de groupes de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20\(Transact-SQL\).md)  
+-   [Options de fichiers et de groupes de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
   
 -   [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)  
   

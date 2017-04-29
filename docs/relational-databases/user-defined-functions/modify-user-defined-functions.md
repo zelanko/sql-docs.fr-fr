@@ -1,33 +1,37 @@
 ---
-title: "Modifier les fonctions d&#233;finies par l&#39;utilisateur | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Modifier les fonctions définies par l’utilisateur | Microsoft Docs"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ab838367ccbe310bbb57220fdec695a46fd849c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modifier les fonctions d&#233;finies par l&#39;utilisateur
+# <a name="modify-user-defined-functions"></a>Modifier les fonctions définies par l'utilisateur
   Vous pouvez modifier les fonctions définies par l'utilisateur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le fait de modifier des fonctions définies par l'utilisateur comme décrit ci-dessous n'affecte pas les autorisations des fonctions et n'a aucune incidence sur les fonctions, les procédures stockées et les déclencheurs qui en dépendent.  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour modifier une fonction définie par l'utilisateur à l'aide de :**  
+-   **Pour modifier une fonction définie par l'utilisateur à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 7
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
- ALTER FUNCTION ne peut pas être utilisé pour effectuer les actions suivantes :  
+ ALTER FUNCTION ne peut pas être utilisé pour effectuer les actions suivantes :  
   
 -   Convertir une fonction scalaire en fonction table, et inversement.  
   
@@ -49,15 +53,15 @@ caps.handback.revision: 7
 ####  <a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation ALTER sur la fonction ou sur le schéma. Si la fonction spécifie un type défini par l'utilisateur, elle requiert l'autorisation EXECUTE sur le type.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour modifier une fonction définie par l'utilisateur  
+#### <a name="to-modify-a-user-defined-function"></a>Pour modifier une fonction définie par l'utilisateur  
   
 1.  Cliquez sur le signe plus (+° en regard de la base de données qui contient la fonction à modifier.  
   
 2.  Cliquez sur le signe plus en regard du dossier **Programmabilité** .  
   
-3.  Cliquez sur le signe plus en regard du dossier qui contient la fonction à modifier :  
+3.  Cliquez sur le signe plus en regard du dossier qui contient la fonction à modifier :  
   
     -   Fonction table  
   
@@ -69,11 +73,11 @@ caps.handback.revision: 7
   
 5.  Dans la fenêtre de requête, apportez les modifications nécessaires à l'instruction ALTER FUNCTION.  
   
-6.  Dans le menu **Fichier**, cliquez sur **Enregistrer***nom_fonction*.  
+6.  Dans le menu **Fichier** , cliquez sur **Enregistrer***nom_fonction*.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour modifier une fonction définie par l'utilisateur  
+#### <a name="to-modify-a-user-defined-function"></a>Pour modifier une fonction définie par l'utilisateur  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

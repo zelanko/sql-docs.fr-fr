@@ -1,27 +1,31 @@
 ---
-title: "Exemples&#160;: utilisation du mode PATH | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mode PATH FOR XML, exemples"
+title: "Exemples : utilisation du mode PATH | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01caa2a86cde9fc2d8e857f1fd04486008d5886c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exemples&#160;: utilisation du mode PATH
+# <a name="examples-using-path-mode"></a>Exemples : utilisation du mode PATH
   Les exemples suivants montrent comment utiliser le mode PATH pour générer un document XML à partir d'une requête SELECT. Nombre de ces requêtes sont spécifiées par rapport aux documents XML des instructions de fabrication de bicyclettes stockés dans la colonne Instructions de la table ProductModel.  
   
-## Spécification d'une requête simple en mode PATH  
+## <a name="specifying-a-simple-path-mode-query"></a>Spécification d'une requête simple en mode PATH  
  Cette requête spécifie un mode FOR XML PATH.  
   
 ```  
@@ -110,7 +114,7 @@ FOR XML PATH ('');
 GO  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  `<ProductModelID>122</ProductModelID>`  
   
@@ -120,7 +124,7 @@ GO
   
  `<Name>Bike Wash</Name>`  
   
-## Spécification de noms de colonnes de type XPath  
+## <a name="specifying-xpath-like-column-names"></a>Spécification de noms de colonnes de type XPath  
  Dans la requête suivante, le nom de colonne `ProductModelID` spécifié commence par « @ » et ne contient pas de barre oblique (/). Par conséquent, un attribut de l'élément <`row`> ayant la valeur de colonne correspondante est créé dans le document XML obtenu.  
   
 ```  
@@ -159,7 +163,7 @@ FOR XML PATH ('ProductModelData'), root ('Root');
 GO  
 ```  
   
- Pour générer une hiérarchie, vous pouvez inclure une syntaxe de type PATH. Par exemple, remplacez le nom de la colonne `Name` par « SomeChild/ModelName » afin d'obtenir un document XML avec hiérarchie, comme le montre le résultat suivant :  
+ Pour générer une hiérarchie, vous pouvez inclure une syntaxe de type PATH. Par exemple, remplacez le nom de la colonne `Name` par « SomeChild/ModelName » afin d'obtenir un document XML avec hiérarchie, comme le montre le résultat suivant :  
   
  `<Root>`  
   
@@ -185,7 +189,7 @@ GO
   
  `</Root>`  
   
- Outre l'ID et le nom du modèle de produit, la requête suivante extrait les emplacements des instructions de fabrication du modèle. Étant donné que la colonne Instructions est de type **xml**, la méthode **query()** de type de données **xml** est spécifiée pour extraire l’emplacement.  
+ Outre l'ID et le nom du modèle de produit, la requête suivante extrait les emplacements des instructions de fabrication du modèle. Étant donné que la colonne Instructions est de type **xml** , la méthode **query()** de type de données **xml** est spécifiée pour extraire l’emplacement.  
   
 ```  
 SELECT ProductModelID AS "@id",  
@@ -243,7 +247,7 @@ FOR XML PATH ('ns2:ProductInfo'), root('ns1:root');
 GO  
 ```  
   
- Notez que le préfixe `MI` est également défini dans `WITH XMLNAMESPACES`. Ainsi, la méthode **query()** du type **xml** spécifié ne définit pas le préfixe dans le prologue de la requête. Voici le résultat obtenu :  
+ Notez que le préfixe `MI` est également défini dans `WITH XMLNAMESPACES`. Ainsi, la méthode **query()** du type **xml** spécifié ne définit pas le préfixe dans le prologue de la requête. Voici le résultat obtenu :  
   
  `<ns1:root xmlns:MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
   
@@ -273,7 +277,7 @@ GO
   
  `</ns1:root>`  
   
-## Génération d'une liste de valeurs à l'aide du mode PATH  
+## <a name="generating-a-value-list-using-path-mode"></a>Génération d'une liste de valeurs à l'aide du mode PATH  
  Pour chaque modèle de produit, cette requête construit une liste de valeurs d'ID de produit. Pour chaque ID de produit, la requête construit également des éléments imbriqués <`ProductName`>, comme le montre le fragment XML suivant :  
   
  `<ProductModelData ProductModelID="7" ProductModelName="..."`  
@@ -310,9 +314,9 @@ WHERE  ProductModelID= 7 or ProductModelID=9
 FOR XML PATH('ProductModelData');  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
--   La première clause `SELECT` imbriquée renvoie une liste d'identificateurs ProductID en utilisant `data()` comme nom de colonne. Étant donné que la requête spécifie une chaîne vide comme nom d'élément de ligne dans `FOR XML PATH`, aucun élément n'est généré. À la place, la liste de valeurs est affectée à l'attribut `ProductID`.  
+-   La première clause `SELECT` imbriquée renvoie une liste d'identificateurs ProductID en utilisant `data()` comme nom de colonne. Étant donné que la requête spécifie une chaîne vide comme nom d'élément de ligne dans `FOR XML PATH`, aucun élément n'est généré. À la place, la liste de valeurs est affectée à l'attribut `ProductID` .  
   
 -   La seconde clause `SELECT` imbriquée extrait les noms des produits du modèle concerné. Elle génère des éléments <`ProductName`> qui sont renvoyés inclus dans l'élément <`ProductNames`>, car la requête spécifie `ProductNames` comme nom de colonne.  
   
@@ -380,7 +384,7 @@ WHERE ProductModelID= 7 OR ProductModelID=9
 FOR XML PATH('ProductModelData');  
 ```  
   
-## Ajout d'espaces de noms au document XML obtenu  
+## <a name="adding-namespaces-in-the-resulting-xml"></a>Ajout d'espaces de noms au document XML obtenu  
  Comme l’explique la rubrique [Ajout d’espaces de noms à l’aide de WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md), vous pouvez utiliser WITH XMLNAMESPACES pour inclure des espaces de noms dans les requêtes en mode PATH. Par exemple, les noms spécifiés dans la clause SELECT comprennent des préfixes d'espace de noms. La requête en mode `PATH` suivante construit un document XML avec des espaces de noms.  
   
 ```  
@@ -404,7 +408,7 @@ GO
   
  `</Translation>`  
   
- La requête suivante est similaire à l'exemple C, sauf qu'elle utilise `WITH XMLNAMESPACES` pour inclure des espaces de noms dans le résultat XML. Pour plus d’informations, consultez [Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
+ La requête suivante est similaire à l'exemple C, sauf qu'elle utilise `WITH XMLNAMESPACES` pour inclure des espaces de noms dans le résultat XML. Pour plus d’informations, consultez [Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
   
 ```  
 USE AdventureWorks2012;  
@@ -431,7 +435,7 @@ WHERE ProductModelID= 7 OR ProductModelID=9
 FOR XML PATH('ProductModelData'), root('root');  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  `<root xmlns="uri2" xmlns:ns1="uri1">`  
   
@@ -463,7 +467,7 @@ FOR XML PATH('ProductModelData'), root('root');
   
  `</root>`  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser le mode PATH avec FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

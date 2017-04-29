@@ -1,29 +1,33 @@
 ---
-title: "Ex&#233;cuter les fonctions d&#233;finies par l&#39;utilisateur | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "appel de fonctions définies par l'utilisateur"
-  - "fonctions définies par l’utilisateur [SQL Server], exécution"
+title: "Exécuter des fonctions définies par l’utilisateur | Microsoft Docs"
+ms.custom: 
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- invoking user-defined functions
+- user-defined functions [SQL Server], executing
 ms.assetid: 0de7744d-9b73-463f-ae80-e31a020004b5
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08287922d15adabd1128da2edbb1caa65bc3f85f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ex&#233;cuter les fonctions d&#233;finies par l&#39;utilisateur
+# <a name="execute-user-defined-functions"></a>Exécuter des fonctions définies par l’utilisateur
   Exécuter une fonction définie par l’utilisateur à l’aide de Transact-SQL
   
 
-> **Remarque :** Consultez la rubrique de la [fonction définie par l’utilisateur](https://msdn.microsoft.com/library/ms191007.aspx) et [Créer une fonction (Transact SQL)](https://msdn.microsoft.com/library/ms186755.aspx) pour en savoir plus sur les fonctions définies par l’utilisateur. 
+> **Remarque :** Consultez la rubrique de la  [fonction définie par l’utilisateur](https://msdn.microsoft.com/library/ms191007.aspx) et [Créer une fonction (Transact SQL)](https://msdn.microsoft.com/library/ms186755.aspx) pour en savoir plus sur les fonctions définies par l’utilisateur. 
   
  
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
@@ -33,13 +37,13 @@ caps.handback.revision: 35
   
 ###  <a name="Security"></a> Sécurité  
   
- Aucune autorisation n’est requise pour exécuter l’instruction [EXECUTE](https://msdn.microsoft.com/library/ms188332.aspx). Cependant, des autorisations **sont requises** sur les éléments sécurisables référencés dans la chaîne EXECUTE. Par exemple, si la chaîne contient une instruction [INSERT](https://msdn.microsoft.com/library/ms174335.aspx), l’appelant de l’instruction EXECUTE doit posséder l’autorisation INSERT sur la table cible. Les autorisations sont vérifiées au moment où l'instruction EXECUTE est rencontrée, même si celle-ci est incluse dans un module. Pour plus d’informations, consultez [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
+ Aucune autorisation n’est requise pour exécuter l’instruction [EXECUTE](https://msdn.microsoft.com/library/ms188332.aspx) . Cependant, des autorisations **sont requises** sur les éléments sécurisables référencés dans la chaîne EXECUTE. Par exemple, si la chaîne contient une instruction [INSERT](https://msdn.microsoft.com/library/ms174335.aspx) , l’appelant de l’instruction EXECUTE doit posséder l’autorisation INSERT sur la table cible. Les autorisations sont vérifiées au moment où l'instruction EXECUTE est rencontrée, même si celle-ci est incluse dans un module. Pour plus d’informations, consultez [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-### Exemple 
+### <a name="example"></a>Exemple 
   
-Cet exemple utilise la fonction scalaire `ufnGetSalesOrderStatusText` disponible dans la plupart des éditions de `AdventureWorks`.  L’objectif de la fonction est de retourner une valeur de texte pour l’état des ventes à partir d’un entier donné.  Faites varier l’exemple en passant des nombres entiers de 1 à 7 au paramètre **\@Status**.
+Cet exemple utilise la fonction scalaire `ufnGetSalesOrderStatusText` disponible dans la plupart des éditions de `AdventureWorks`.  L’objectif de la fonction est de retourner une valeur de texte pour l’état des ventes à partir d’un entier donné.  Faites varier l’exemple en passant des nombres entiers de 1 à 7 au paramètre **\@Status** .
   
 ~~~tsql
 USE [AdventureWorks2016CTP3]
@@ -61,3 +65,4 @@ SELECT N'Order Status: ' + @ret;
   
   
   
+

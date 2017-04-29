@@ -1,34 +1,38 @@
 ---
-title: "Valider un package&#160;DAC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "application de la couche Données [SQL Server], valider"
-  - "application de la couche Données [SQL Server], comparer"
-  - "valider une DAC"
-  - "comparer des DAC"
-  - "application de la couche Données [SQL Server], afficher"
-  - "afficher une DAC"
+title: Valider un package DAC | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data-tier application [SQL Server], validate
+- data-tier application [SQL Server], compare
+- validate DAC
+- compare DACs
+- data-tier application [SQL Server], view
+- view DAC
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 036df2b92a90337202eb84adb6284169a8f54f76
+ms.lasthandoff: 04/11/2017
+
 ---
-# Valider un package&#160;DAC
+# <a name="validate-a-dac-package"></a>Valider un package DAC
   Il est conseillé d'examiner le contenu d'un package DAC avant de le déployer en production et de valider les actions de mise à niveau avant de mettre à niveau une DAC existante. Ceci tout particulièrement lors du déploiement de packages qui n'ont pas été développés dans votre organisation.  
   
-1.  **Avant de commencer :**  [Conditions préalables](#Prerequisites)  
+1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
   
-2.  **Pour mettre à niveau une DAC, à l'aide de :**  [Afficher le contenu d'une DAC](#ViewDACContents), [Afficher les modifications de base de données](#ViewDBChanges), [Afficher les actions de mise à niveau](#ViewUpgradeActions), [Comparer des DAC](#CompareDACs)  
+2.  **To upgrade a DAC, using:**  [View the Contents of a DAC](#ViewDACContents), [View Database Changes](#ViewDBChanges), [View Upgrade Actions](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> Conditions préalables  
  Nous vous recommandons de ne pas déployer un package DAC provenant de sources inconnues ou non approuvées. Ces DAC peuvent contenir du code malveillant susceptible d'exécuter un code [!INCLUDE[tsql](../../includes/tsql-md.md)] indésirable ou de provoquer des erreurs en modifiant le schéma. Avant d’utiliser une DAC provenant d’une source inconnue ou non approuvée, déployez-la sur une instance de test isolée de [!INCLUDE[ssDE](../../includes/ssde-md.md)], exécutez [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sur la base de données sur un serveur autre qu’un serveur de production et examinez également le code (par exemple les procédures stockées ou tout autre code défini par l’utilisateur) contenu dans la base de données.  
@@ -44,11 +48,11 @@ caps.handback.revision: 17
   
 3.  Dans l' **Explorateur de solutions**, cliquez avec le bouton droit sur le nœud de projet, puis sélectionnez **Propriétés**.  
   
-4.  Sous l’onglet **Paramètres du projet**, dans la section **Type de sortie**, cochez la case **Application de la couche Données (fichier .dacpac)**, puis fermez la boîte de dialogue de propriétés.  
+4.  Sous l’onglet **Paramètres du projet** , dans la section **Type de sortie** , cochez la case **Application de la couche Données (fichier .dacpac)** , puis fermez la boîte de dialogue de propriétés.  
   
-5.  Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le nœud du projet et sélectionnez **Importer une application de la couche Données**.  
+5.  Dans l’ **Explorateur de solutions**, cliquez avec le bouton droit sur le nœud du projet et sélectionnez **Importer une application de la couche Données**.  
   
-6.  Utilisez l’**Explorateur de solutions** pour ouvrir tous les fichiers de la DAC, tels que la stratégie de sélection du serveur et les scripts de pré- et post-déploiement.  
+6.  Utilisez l’ **Explorateur de solutions** pour ouvrir tous les fichiers de la DAC, tels que la stratégie de sélection du serveur et les scripts de pré- et post-déploiement.  
   
 7.  Utilisez le **Mode schéma** pour examiner tous les objets du schéma, en particulier le code des objets, comme les fonctions ou les procédures stockées.  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 17
   
  **Afficher les modifications de base de données à l'aide d'un Assistant**  
   
-1.  Exécutez l’Assistant **Mettre à niveau une application de la couche Données**, en spécifiant la DAC actuellement déployée et le package DAC qui contient la nouvelle version de la DAC.  
+1.  Exécutez l’Assistant **Mettre à niveau une application de la couche Données** , en spécifiant la DAC actuellement déployée et le package DAC qui contient la nouvelle version de la DAC.  
   
 2.  Sur la page de **Détecter les modifications** , examinez le rapport des modifications apportées à la base de données.  
   
@@ -81,9 +85,9 @@ caps.handback.revision: 17
   
 3.  Spécifiez le nom de la DAC dans une variable.  
   
-4.  Utilisez la méthode **GetDatabaseChanges()** pour récupérer un objet **ChangeResults**, et redirigez l’objet vers un fichier texte pour générer un rapport simple des objets nouveaux, supprimés et modifiés.  
+4.  Utilisez la méthode **GetDatabaseChanges()** pour récupérer un objet **ChangeResults** , et redirigez l’objet vers un fichier texte pour générer un rapport simple des objets nouveaux, supprimés et modifiés.  
   
-### Afficher une exemple de modifications de base de données (PowerShell)  
+### <a name="view-database-changes-example-powershell"></a>Afficher une exemple de modifications de base de données (PowerShell)  
  **Afficher une exemple de modifications de base de données (PowerShell)**  
   
  L'exemple suivant signale toutes les modifications de base de données qui ont été apportées dans une DAC déployée nommée MyApplication.  
@@ -110,7 +114,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
  **Signaler les actions de mise à niveau à l'aide d'un Assistant**  
   
-1.  Exécutez l’Assistant **Mettre à niveau une application de la couche Données**, en spécifiant la DAC actuellement déployée et le package DAC qui contient la nouvelle version de la DAC.  
+1.  Exécutez l’Assistant **Mettre à niveau une application de la couche Données** , en spécifiant la DAC actuellement déployée et le package DAC qui contient la nouvelle version de la DAC.  
   
 2.  Sur la page **Résumé** , examinez le rapport des actions de mise à niveau.  
   
@@ -132,7 +136,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 6.  Fermez le flux de fichier utilisé pour lire le fichier de package DAC.  
   
-### Afficher un exemple d'actions de mise à niveau (PowerShell)  
+### <a name="view-upgrade-actions-example-powershell"></a>Afficher un exemple d'actions de mise à niveau (PowerShell)  
  **Afficher un exemple d'actions de mise à niveau (PowerShell)**  
   
  L'exemple suivant signale les instructions Transact-SQL qui seraient exécutées pour mettre à niveau une DAC nommée MyApplication vers le schéma défini dans un fichier MyApplicationVNext.dacpac.  
@@ -162,14 +166,14 @@ $dacstore.GetIncrementalUpgradeScript($dacName, $dacType) | Out-File -Filepath C
 $fileStream.Close()  
 ```  
   
-##  <a name="CompareDACs"></a> Comparer des DAC  
+##  <a name="CompareDACs"></a> Compare DACs  
  Avant de mettre à niveau une DAC, il est conseillé d'examiner les différences dans la base de données et les objets au niveau de l'instance entre les DAC actuelles et nouvelles. Si vous ne disposez pas d'une copie du package de la DAC actuelle, vous pouvez extraire un package de la base de données actuelle.  
   
  Si vous importez les deux packages DAC dans des projets DAC dans les outils de développement de SQL Server, vous pouvez utiliser l'outil Comparaison de schémas pour analyser les différences entre les deux DAC.  
   
  Ou bien, décompressez les DAC dans des dossiers distincts. Vous pouvez ensuite utiliser un outil de comparaison, tel que l'utilitaire WinDiff, pour analyser les différences.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Déployer une application de la couche Données](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
  [Mettre à niveau une application de la couche Données](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  

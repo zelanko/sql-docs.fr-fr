@@ -1,26 +1,30 @@
 ---
-title: "Cr&#233;er des informations d&#39;identification | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "informations d’identification [SQL Server], création"
-  - "authentification [SQL Server], informations d’identification"
-  - "connexions [SQL Server], informations d’identification"
+title: "Création des informations d’identification | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- credentials [SQL Server], creating
+- authentication [SQL Server], credentials
+- logins [SQL Server], credentials
 ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 80dba3f156735179c0fb016e39f3065acd6f5ac1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er des informations d&#39;identification
+# <a name="create-a-credential"></a>Créer des informations d'identification
   Cette rubrique explique comment créer des informations d'identification dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  Les informations d'identification fournissent un moyen d'autoriser les utilisateurs de l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à avoir une identité en dehors de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ceci sert principalement à exécuter du code dans des assemblys avec le jeu d'autorisations EXTERNAL_ACCESS. Les informations d'identification peuvent également être utilisées lorsqu'un utilisateur de l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a besoin d'accéder à une ressource du domaine, par exemple à un emplacement de fichier pour y stocker une sauvegarde.  
@@ -29,13 +33,13 @@ caps.handback.revision: 17
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour créer des informations d'identification, utilisez :**  
+-   **Pour créer des informations d'identification, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -54,9 +58,9 @@ caps.handback.revision: 17
 ####  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER ANY CREDENTIAL pour créer ou modifier des informations d'identification et une autorisation ALTER ANY LOGIN pour mapper une connexion à des informations d'identification.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour créer les informations d'identification  
+#### <a name="to-create-a-credential"></a>Pour créer les informations d'identification  
   
 1.  Dans l’Explorateur d’objets, développez le dossier **Sécurité** .  
   
@@ -64,9 +68,9 @@ caps.handback.revision: 17
   
 3.  Dans la boîte de dialogue **Nouvelles informations d'identification** , saisissez le nom des information d'identification dans la zone **Nom d'identification** .  
   
-4.  Dans la zone **Identité**, tapez le nom du compte utilisé pour les connexions sortantes (en quittant le contexte de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). En général, il s'agit d'un compte d'utilisateur Windows, mais l'identité peut être un autre type de compte.  
+4.  Dans la zone **Identité** , tapez le nom du compte utilisé pour les connexions sortantes (en quittant le contexte de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). En général, il s'agit d'un compte d'utilisateur Windows, mais l'identité peut être un autre type de compte.  
   
-     Vous pouvez aussi cliquer sur les points de suspension **(...)** pour ouvrir la boîte de dialogue **Sélectionner l’utilisateur ou le groupe**.  
+     Vous pouvez aussi cliquer sur les points de suspension **(...)** pour ouvrir la boîte de dialogue **Sélectionner l’utilisateur ou le groupe** .  
   
 5.  Dans les zones **Mot de passe** et **Confirmer le mot de passe** , tapez le mot de passe du compte indiqué dans la zone **Identité** . Si **Identité** correspond à un compte d'utilisateur Windows, il s'agit du mot de passe Windows. Si le mot de passe n'est pas requis, la zone **Mot de passe** peut être vide.  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 17
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour créer les informations d'identification  
+#### <a name="to-create-a-credential"></a>Pour créer les informations d'identification  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

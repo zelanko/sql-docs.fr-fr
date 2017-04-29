@@ -1,33 +1,37 @@
 ---
-title: "Modifier un sch&#233;ma de partition | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-partition"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Modifier un schéma de partition | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-partition
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 685eb349ecbd054ed37b77e6a8472ee47db78e0b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modifier un sch&#233;ma de partition
+# <a name="modify-a-partition-scheme"></a>Modifier un schéma de partition
   Vous pouvez modifier un schéma de partition dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en désignant un groupe de fichiers destiné à contenir la prochaine partition ajoutée à une table partitionnée à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour ce faire, vous affectez la propriété NEXT USED au groupe de fichiers en question. Vous pouvez affecter la propriété NEXT USED à un groupe de fichiers vide ou à un groupe de fichiers qui contient déjà une partition. Autrement dit, un groupe de fichiers peut contenir plusieurs partitions.  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour créer une table ou un index partitionné(e), utilisez :**  
+-   **Pour créer une table ou un index partitionné(e), utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -41,20 +45,20 @@ caps.handback.revision: 10
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Les autorisations suivantes peuvent être utilisées pour exécuter ALTER PARTITION SCHEME :  
+ Les autorisations suivantes peuvent être utilisées pour exécuter ALTER PARTITION SCHEME :  
   
--   Autorisation ALTER ANY DATASPACE. Cette autorisation est attribuée par défaut aux membres du rôle de serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_ddladmin**.  
+-   Autorisation ALTER ANY DATASPACE. Cette autorisation est attribuée par défaut aux membres du rôle de serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_ddladmin** .  
   
 -   Autorisation CONTROL ou ALTER sur la base de données dans laquelle le schéma de partition a été créé.  
   
 -   Autorisation CONTROL SERVER ou ALTER ANY DATABASE sur le serveur de la base de données dans laquelle le schéma de partition a été créé.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- **Pour modifier un schéma de partition :**  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+ **Pour modifier un schéma de partition :**  
   
  Cette action spécifique ne peut pas être exécutée à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Afin de modifier un schéma de partition, vous devez d'abord le supprimer puis en créer un nouveau avec les propriétés souhaitées à l'aide de l'Assistant Création de partition. Pour plus d'informations, consultez la section [Create Partitioned Tables and Indexes](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md)[Using SQL Server Management Studio](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md#SSMSProcedure) sous **Créer des tables et des index partitionnés**.  
   
-#### Pour supprimer un schéma de partition  
+#### <a name="to-delete-a-partition-scheme"></a>Pour supprimer un schéma de partition  
   
 1.  Cliquez sur le signe plus (+) pour développer la base de données contenant le schéma de partition à supprimer.  
   
@@ -68,9 +72,9 @@ caps.handback.revision: 10
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour modifier un schéma de partition  
+#### <a name="to-modify-a-partition-scheme"></a>Pour modifier un schéma de partition  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

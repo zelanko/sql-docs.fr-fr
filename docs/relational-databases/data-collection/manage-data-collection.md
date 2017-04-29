@@ -1,32 +1,36 @@
 ---
-title: "G&#233;rer la collecte de donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "Collecte de données"
-helpviewer_keywords: 
-  - "collecte de données [SQL Server]"
-  - "collecteur de données [SQL Server], Transact-SQL"
-  - "collecteur de données [SQL Server], SQL Server Management Studio"
+title: "Gérer la collecte de données | Microsoft Docs"
+ms.custom: 
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- "Collecte de données"
+helpviewer_keywords:
+- data collection [SQL Server]
+- data collector [SQL Server], Transact-SQL
+- data collector [SQL Server], SQL Server Management Studio
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3501375e366cd5c84dd4544d4af0c11f00f2dbb1
+ms.lasthandoff: 04/11/2017
+
 ---
-# G&#233;rer la collecte de donn&#233;es
+# <a name="manage-data-collection"></a>Gérer la collecte de données
  Vous pouvez utiliser les fonctions et les procédures stockées [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] pour gérer différents aspects de la collecte de données, tels que l’activation ou la désactivation de la collecte de données, la modification de la configuration d’un jeu d’éléments de collecte ou la consultation des données dans l’entrepôt de données de gestion.  
   
-## Gérer la collecte de données à l’aide de SSMS  
- Vous pouvez effectuer les tâches suivantes liées au collecteur de données en utilisant l’Explorateur d’objets dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] :  
+## <a name="manage-data-collection-using-ssms"></a>Gérer la collecte de données à l’aide de SSMS  
+ Vous pouvez effectuer les tâches suivantes liées au collecteur de données en utilisant l’Explorateur d’objets dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
 -   [Configurer l’entrepôt de données de gestion &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md)  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 26
   
 -   [Démarrer ou arrêter un jeu d'éléments de collecte](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
   
--   [Utiliser SQL Server Profiler pour créer un jeu d’éléments de collecte Trace SQL &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/use sql server profiler to create a sql trace collection set.md)  
+-   [Utiliser SQL Server Profiler pour créer un jeu d’éléments de collecte Trace SQL &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)  
   
 -   [Afficher les journaux de jeu d’éléments de collecte &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-collection-set-logs-sql-server-management-studio.md)  
   
@@ -44,8 +48,8 @@ caps.handback.revision: 26
   
 -   [Afficher un rapport de jeu d’éléments de collecte &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md)  
   
-## Gérer la collecte de données à l’aide de Transact-SQL  
- Le collecteur de données fournit une collection complète de procédures stockées qui vous permettent d'effectuer n'importe quelle tâche du collecteur de données. Par exemple, vous pouvez effectuer les tâches suivantes à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
+## <a name="manage-data-collection-using-transact-sql"></a>Gérer la collecte de données à l’aide de Transact-SQL  
+ Le collecteur de données fournit une collection complète de procédures stockées qui vous permettent d'effectuer n'importe quelle tâche du collecteur de données. Par exemple, vous pouvez effectuer les tâches suivantes à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
 -   [Configurer des paramètres de collecte de données &#40;Transact-SQL&#41;](../../relational-databases/data-collection/configure-data-collection-parameters-transact-sql.md)  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 26
   
 -   [Démarrer ou arrêter un jeu d'éléments de collecte](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
   
--   [Créer un jeu d’éléments de collecte personnalisé qui utilise le type de collecteur Requête T-SQL générique &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create custom collection set - generic t-sql query collector type.md)  
+-   [Créer un jeu d’éléments de collecte personnalisé qui utilise le type de collecteur Requête T-SQL générique &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)  
   
 -   [Ajouter un élément de collecte à un jeu d’éléments de collecte &#40;Transact-SQL&#41;](../../relational-databases/data-collection/add-a-collection-item-to-a-collection-set-transact-sql.md)  
   
@@ -63,9 +67,9 @@ caps.handback.revision: 26
   
 >**IMPORTANT** Contrairement aux procédures stockées standard, les procédures stockées du collecteur de données utilisent des paramètres de type strict et elles ne prennent pas en charge la conversion automatique de type de données. Si ces paramètres ne sont pas appelés à l'aide des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée retourne une erreur.  
   
- Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour créer et exécuter les exemples de code qui sont fournis. Pour plus d’informations, consultez [Explorateur d’objets](../../ssms/object/object-explorer.md). Vous pouvez également créer la requête dans n'importe quel éditeur et l'enregistrer dans un fichier texte avec une extension de nom de fichier .sql. Vous pouvez exécuter la requête à partir de l’invite de commandes Windows, à l’aide de l’utilitaire **sqlcmd**. Pour plus d’informations, consultez [Utiliser l’utilitaire sqlcmd](../../relational-databases/scripting/use-the-sqlcmd-utility.md).  
+ Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour créer et exécuter les exemples de code qui sont fournis. Pour plus d’informations, consultez [Explorateur d’objets](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2). Vous pouvez également créer la requête dans n'importe quel éditeur et l'enregistrer dans un fichier texte avec une extension de nom de fichier .sql. Vous pouvez exécuter la requête à partir de l’invite de commandes Windows, à l’aide de l’utilitaire **sqlcmd** . Pour plus d’informations, consultez [Utiliser l’utilitaire sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
   
-### Procédures stockées et vues  
+### <a name="stored-procedures-and-views"></a>Procédures stockées et vues  
  **Utilisation du collecteur de données**  
   
  Le tableau suivant décrit les procédures stockées que vous pouvez utiliser avec le collecteur de données.  
@@ -161,7 +165,7 @@ caps.handback.revision: 26
 |--------------------|-----------------|  
 |[sp_syscollector_delete_execution_log_tree &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-execution-log-tree-transact-sql.md)|Supprimer des entrées de jeu de collections du journal des exécutions.|  
   
-### Fonctions  
+### <a name="functions"></a>Fonctions  
  Le tableau suivant décrit les fonctions que vous pouvez utiliser pour obtenir des informations d'exécution et de trace.  
   
 |Nom de la fonction|Description|  
@@ -170,9 +174,10 @@ caps.handback.revision: 26
 |[fn_syscollector_get_execution_stats &#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|Obtenir les statistiques d'exécution d'un jeu d'éléments de collecte ou d'un package. Ces informations incluent les erreurs enregistrées.|  
 |[snapshots.fn_trace_getdata &#40;Transact-SQL&#41;](../../relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql.md)|Obtenir les événements enregistrés lorsque le type de collecteur Trace SQL générique est utilisé pour collecter des données.|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Exécuter une procédure stockée](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)   
- [Utiliser SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)   
+ [Utiliser SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
  [Collecte de données](../../relational-databases/data-collection/data-collection.md)  
   
   
+

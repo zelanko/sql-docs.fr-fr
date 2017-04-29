@@ -1,29 +1,33 @@
 ---
-title: "Propri&#233;t&#233;s de la base de donn&#233;es (page Envoi des journaux de transactions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.logshipping.f1"
+title: "Propriétés de la base de données (page Envoi des journaux de transactions) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.logshipping.f1
 ms.assetid: 72c4e539-fe11-4d57-b977-65b418d5916f
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 11d0b9d1cde11ab1f3a0944c313d4d800e5039b0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propri&#233;t&#233;s de la base de donn&#233;es (page Envoi des journaux de transactions)
+# <a name="database-properties-transaction-log-shipping-page"></a>Propriétés de la base de données (page Envoi des journaux de transactions)
   Cette page vous permet de configurer et de modifier les propriétés de copie des journaux de transactions d'une base de données.  
   
  Pour obtenir des explications sur les concepts de copie des journaux de transaction, consultez [À propos de la copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-## Options  
+## <a name="options"></a>Options  
  **Activer en tant que base de données primaire dans une configuration de la copie des journaux de transactions**  
  Active la base de données comme base de données primaire de copie des journaux de transactions. Activez cette option, puis configurez les options restantes dans cette page. Si vous désactivez cette case à cocher, la configuration de copie des journaux de transactions est supprimée pour la base de données.  
   
@@ -60,7 +64,7 @@ caps.handback.revision: 21
 > [!IMPORTANT]  
 >  Avant de créer un script des paramètres pour une base de données secondaire, vous devez appeler la boîte de dialogue **Paramètres de base de données secondaire** . L'appel de cette boîte de dialogue vous connecte au serveur secondaire et récupère les paramètres actuels de la base de données secondaire, nécessaires pour générer le script.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de copie des journaux de transaction &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/log-shipping-stored-procedures-transact-sql.md)   
  [Tables de copie des journaux de transaction &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)  
   

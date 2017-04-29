@@ -1,30 +1,34 @@
 ---
-title: "Cr&#233;er, modifier ou supprimer des index XML s&#233;lectifs | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Créer, modifier ou supprimer des index XML sélectifs | Microsoft Docs"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c398f396-f630-4a2d-a264-f243c5346de1
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: cff16890d58c610a08e7bbe0d5958de2e821b0a5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er, modifier ou supprimer des index XML s&#233;lectifs
+# <a name="create-alter-and-drop-selective-xml-indexes"></a>Créer, modifier ou supprimer des index XML sélectifs
   Décrit la procédure de création d'un index XML sélectif, ou de modification ou de suppression d'un index XML sélectif existant.  
   
  Pour plus d’informations sur les index XML sélectifs, consultez [Index XML sélectifs &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
 ##  <a name="create"></a> Création d'un index XML sélectif  
   
-### Procédure : créer un index XML sélectif  
- **Créer un index XML sélectif à l'aide de Transact-SQL**  
+### <a name="how-to-create-a-selective-xml-index"></a>Procédure : créer un index XML sélectif  
+ **Créer un index XML sélectif à l'aide de Transact-SQL**  
  Créez un index XML sélectif en appelant l'instruction CREATE SELECTIVE XML INDEX. Pour plus d’informations, consultez [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
   
  **Exemple**  
@@ -43,12 +47,11 @@ FOR(
 )  
 ```  
   
- [Dans cette rubrique](#top)  
   
 ##  <a name="alter"></a> Modification d'un index XML sélectif  
   
-### Procédure : modifier un index XML sélectif  
- **Modifier un index XML sélectif à l'aide de Transact-SQL**  
+### <a name="how-to-alter-a-selective-xml-index"></a>Procédure : modifier un index XML sélectif  
+ **Modifier un index XML sélectif à l'aide de Transact-SQL**  
  Modifiez un index XML sélectif existant en appelant l'instruction ALTER INDEX. Pour plus d’informations, consultez [ALTER INDEX &#40;index XML sélectifs&#41;](../../t-sql/statements/alter-index-selective-xml-indexes.md).  
   
  **Exemple**  
@@ -65,12 +68,11 @@ FOR
 )  
 ```  
   
- [Dans cette rubrique](#top)  
   
 ##  <a name="drop"></a> Suppression d'un index XML sélectif  
   
-### Procédure : supprimer un index XML sélectif  
- **Supprimer un index XML sélectif à l'aide de Transact-SQL**  
+### <a name="how-to-drop-a-selective-xml-index"></a>Procédure : supprimer un index XML sélectif  
+ **Supprimer un index XML sélectif à l'aide de Transact-SQL**  
  Supprimez un index XML sélectif en appelant l'instruction DROP INDEX. Pour plus d’informations, consultez [DROP INDEX &#40;index XML sélectifs&#41;](../../t-sql/statements/drop-index-selective-xml-indexes.md).  
   
  **Exemple**  
@@ -81,6 +83,5 @@ FOR
 DROP INDEX sxi_index ON tbl  
 ```  
   
- [Dans cette rubrique](#top)  
   
   

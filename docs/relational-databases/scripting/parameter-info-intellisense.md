@@ -1,32 +1,36 @@
 ---
-title: "Information sur les param&#232;tres (IntelliSense) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Information sur les paramètres (option) [IntelliSense]"
-  - "renseignement des paramètres des fonctions stockées [Intellisense]"
-  - "références du langage [SQL Server]"
-  - "IntelliSense [SQL Server], option Informations sur les paramètres"
+title: "Information sur les paramètres (IntelliSense) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Parameter Info option [IntelliSense]
+- stored function parameter completion [Intellisense]
+- language references [SQL Server]
+- IntelliSense [SQL Server], Parameter Info option
 ms.assetid: 56c2aac9-c65c-4679-b62c-d9f689876dde
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b76a63705473437b283e104414f3729166ce2338
+ms.lasthandoff: 04/11/2017
+
 ---
-# Information sur les param&#232;tres (IntelliSense)
-  L’option **Informations sur les paramètres** de [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense ouvre une liste de paramètres qui fournit des informations sur le nombre, le nom et le type des paramètres requis par une fonction ou une procédure stockée. Le paramètre en gras indique le prochain paramètre requis lorsque vous tapez une fonction ou une procédure stockée.  
+# <a name="parameter-info-intellisense"></a>Information sur les paramètres (IntelliSense)
+  L’option [!INCLUDE[msCoName](../../includes/msconame-md.md)] Informations sur les paramètres **de** IntelliSense ouvre une liste de paramètres qui fournit des informations sur le nombre, le nom et le type des paramètres requis par une fonction ou une procédure stockée. Le paramètre en gras indique le prochain paramètre requis lorsque vous tapez une fonction ou une procédure stockée.  
   
  La liste des paramètres est également affichée pour les fonctions imbriquées. Si vous tapez une fonction comme paramètre d'une autre fonction, la liste affiche dans un premier temps les paramètres de la fonction interne. Dans un second temps, la liste affiche les paramètres de la fonction externe.  
   
-#### Pour afficher l'option Informations sur les paramètres pour les fonctions ou les procédures stockées  
+#### <a name="to-view-parameter-info-for-functions-or-stored-procedures"></a>Pour afficher l'option Informations sur les paramètres pour les fonctions ou les procédures stockées  
   
 1.  À la suite du nom de la fonction, tapez une parenthèse ouvrante comme vous le feriez normalement pour ouvrir une liste de paramètres. Après avoir tapé le nom d'une procédure stockée, tapez un espace comme vous le feriez normalement pour obtenir des informations à propos des paramètres d'une procédure.  
   
@@ -38,9 +42,9 @@ caps.handback.revision: 33
   
      Dans le cas d'une fonction, si vous tapez la parenthèse fermante, vous fermez également la liste des paramètres.  
   
-#### Pour démarrer manuellement l'option Informations sur les paramètres  
+#### <a name="to-manually-start-parameter-info"></a>Pour démarrer manuellement l'option Informations sur les paramètres  
   
-1.  Dans le menu **Edition**, sélectionnez **IntelliSense**, puis **Informations sur les paramètres**.  
+1.  Dans le menu **Edition** , sélectionnez **IntelliSense** , puis **Informations sur les paramètres**.  
   
 2.  Utilisez le raccourci clavier CTRL+MAJ+ESPACE.  
   

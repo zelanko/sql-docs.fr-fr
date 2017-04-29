@@ -1,35 +1,39 @@
 ---
-title: "Afficher le journal des erreurs SQL&#160;Server (SQL&#160;Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "affichage des journaux"
-  - "affichage des journaux"
-  - "erreurs [SQL Server], journaux"
-  - "journaux [SQL Server], journaux d'erreurs SQL Server"
-  - "journaux [SQL Server], affichage"
+title: Afficher le journal des erreurs SQL Server (SQL Server Management Studio) | Microsoft Docs
+ms.custom: 
+ms.date: 07/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- viewing logs
+- displaying logs
+- errors [SQL Server], logs
+- logs [SQL Server], SQL Server error logs
+- logs [SQL Server], viewing
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4acdc87a3317c38b5b19235dae681bce426244e3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Afficher le journal des erreurs SQL&#160;Server (SQL&#160;Server Management Studio)
+# <a name="view-the-sql-server-error-log-sql-server-management-studio"></a>Afficher le journal des erreurs SQL Server (SQL Server Management Studio)
   Le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient des événements définis par l’utilisateur et certains événements système utiles pour la résolution des problèmes. 
   
 
-  ## Comment afficher les journaux
+  ## <a name="how-to-view-the-logs"></a>Comment afficher les journaux
 1.  Dans SSMS, sélectionnez **Explorateur d’objets**.
 
->Pour **ouvrir** l’Explorateur d’objets, vous pouvez utiliser le raccourci clavier **F8** ou cliquer sur Affichage > Explorateur d’objets dans le menu supérieur.![Explorateur d’objets](../../relational-databases/performance/media/object-explorer.png) 
+>Pour **ouvrir** l’Explorateur d’objets, vous pouvez utiliser le raccourci clavier **F8** ou cliquer sur Affichage &gt; Explorateur d’objets dans le menu supérieur. ![Explorateur d’objets](../../relational-databases/performance/media/object-explorer.png) 
 
 
 2.  Dans **l’Explorateur d’objets**, connectez-vous à une instance de SQL Server et développez-la.
@@ -41,6 +45,7 @@ caps.handback.revision: 14
  
 5.  La visionneuse du fichier journal s’affiche (l’opération peut prendre une minute) avec une liste des journaux consultables.
   
-6. Plusieurs personnes ont recommandé un billet utile de [MSSQLTips.com](https://www.mssqltips.com/), [Identify location of the SQL Server Error Log file](https://www.mssqltips.com/sqlservertip/2506/identify-location-of-the-sql-server-error-log-file/) (Identifier l’emplacement du fichier journal des erreurs de SQL Server). Ce site regorge d’excellentes informations formidables. Nous ne pouvons que vous conseiller d’aller y jeter un œil !
+6. Plusieurs personnes ont recommandé un billet utile de [MSSQLTips.com](https://www.mssqltips.com/) , [Identify location of the SQL Server Error Log file](https://www.mssqltips.com/sqlservertip/2506/identify-location-of-the-sql-server-error-log-file/)(Identifier l’emplacement du fichier journal des erreurs de SQL Server). Ce site regorge d’excellentes informations formidables. Nous ne pouvons que vous conseiller d’aller y jeter un œil !
   
   
+

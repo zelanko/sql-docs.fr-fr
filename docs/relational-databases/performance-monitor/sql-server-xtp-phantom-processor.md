@@ -1,27 +1,31 @@
 ---
-title: "Processeur fant&#244;me XTP de SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Processeur fantôme XTP de SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0f691b3d-a8fd-4459-ad21-2cfc8574a8c0
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 722137db4fdddd79f8ed4bfe8d5a7c3ed4531738
+ms.lasthandoff: 04/11/2017
+
 ---
-# Processeur fant&#244;me XTP de SQL Server
+# <a name="sql-server-xtp-phantom-processor"></a>Processeur fantôme XTP de SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   L’objet de performance Processeur fantôme XTP SQL Server contient des compteurs connexes au sous-système de traitement fantôme du moteur OLTP en mémoire. Ce composant est chargé de la détection des lignes fantômes dans les transactions exécutées dans le niveau d’isolation SERIALIZABLE, et de la validation de la contrainte dans les scénarios de concurrence  
   
- Ce tableau décrit les compteurs **Processeur fantôme XTP SQL Server**.  
+ Ce tableau décrit les compteurs **Processeur fantôme XTP SQL Server** .  
   
 |Compteur|Description|  
 |-------------|-----------------|  
@@ -32,7 +36,7 @@ caps.handback.revision: 7
 |**Lignes fantômes touchées par seconde**|Nombre de lignes touchées par les analyses fantômes (en moyenne), par seconde.|  
 |**Analyses fantômes démarrées par seconde**|Nombre d'analyses fantômes démarrées (en moyenne), par seconde.|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server XTP &#40;OLTP en mémoire&#41;, compteurs de performances](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
   
   

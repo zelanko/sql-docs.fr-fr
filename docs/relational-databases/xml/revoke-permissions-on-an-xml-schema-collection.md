@@ -1,34 +1,38 @@
 ---
-title: "R&#233;voquer des autorisations sur une collection de sch&#233;mas XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "révocation des autorisations [SQL Server]"
+title: "Révoquer des autorisations sur une collection de schémas XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- revoking permissions [SQL Server]
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a3f0db25e7283b594357638bd832c982de0569e0
+ms.lasthandoff: 04/11/2017
+
 ---
-# R&#233;voquer des autorisations sur une collection de sch&#233;mas XML
-  Il est possible de retirer l'autorisation de créer une collection de schémas XML de l'une des façons suivantes :  
+# <a name="revoke-permissions-on-an-xml-schema-collection"></a>Révoquer des autorisations sur une collection de schémas XML
+  Il est possible de retirer l'autorisation de créer une collection de schémas XML de l'une des façons suivantes :  
   
 -   Retrait de l'autorisation ALTER pour le schéma relationnel. Ainsi, le principal ne peut pas créer de collection de schémas XML dans le schéma relationnel. Toutefois, le principal reste en mesure de le faire dans d'autres schémas relationnels de la même base de données.  
   
 -   Retrait de l'autorisation ALTER ANY SCHEMA sur la base de données pour le principal. Dans ce cas, le principal ne peut pas créer de collection de schémas XML dans la base de données.  
   
--   Retrait des autorisations CREATE XML SCHEMA COLLECTION ou ALTER XML SCHEMA COLLECTION sur la base de données pour le principal. Le principal est ainsi empêché d'importer une collection de schémas XML dans la base de données. Le retrait des autorisations ALTER ou CONTROL sur la base de données a le même effet.  
+-   Retrait des autorisations CREATE XML SCHEMA COLLECTION ou ALTER XML SCHEMA COLLECTION sur la base de données pour le principal. Le principal est ainsi empêché d'importer une collection de schémas XML dans la base de données. Le retrait des autorisations ALTER ou CONTROL sur la base de données a le même effet.  
   
-## Retrait des autorisations sur un objet Collection de schémas XML existant  
- Voici les autorisations qu'il est possible de retirer sur une collection de schémas XML, ainsi que les résultats qui en découlent :  
+## <a name="revoking-permissions-on-an-existing-xml-schema-collection-object"></a>Retrait des autorisations sur un objet Collection de schémas XML existant  
+ Voici les autorisations qu'il est possible de retirer sur une collection de schémas XML, ainsi que les résultats qui en découlent :  
   
 -   En cas de retrait de l'autorisation ALTER, un principal n'a plus le droit de modifier le contenu de la collection de schémas XML.  
   
@@ -40,10 +44,10 @@ caps.handback.revision: 25
   
 -   En cas de retrait de l'autorisation EXECUTE, un principal n'a plus le droit d'insérer ni de mettre à jour des valeurs dans des colonnes, des variables et des paramètres typés ou contraints par la collection XML. De plus, elle n'a plus la possibilité de lancer une requête sur ces colonnes, variables ou paramètres de type **xml** .  
   
-## Exemples  
+## <a name="examples"></a>Exemples  
  Les scénarios proposés dans les exemples suivants illustrent le fonctionnement des autorisations sur les schémas XML. Chaque exemple crée la base de données de test, les schémas relationnels et les connexions nécessaires. Ces connexions reçoivent les autorisations nécessaires sur la collection de schémas XML. Chaque exemple procède au nettoyage qui s'impose à la fin de la procédure.  
   
-### A. Retrait des autorisations de créer une collection de schémas XML  
+### <a name="a-revoking-permissions-to-create-an-xml-schema-collection"></a>A. Retrait des autorisations de créer une collection de schémas XML  
  Cet exemple crée une connexion et un exemple de base de données. Il ajoute également un schéma relationnel à la base de données. Au départ, la connexion bénéficie d'une autorisation ALTER sur les deux schémas relationnels et des autorisations voulues pour créer des collections de schémas XML. Ensuite, l'exemple retire l'autorisation ALTER sur l'un des schémas relationnels de la base de données de façon à empêcher la connexion de créer une collection de schémas XML.  
   
 ```  
@@ -140,7 +144,7 @@ DROP LOGIN TestLogin1
 Go  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Données XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Collections de schémas XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)   

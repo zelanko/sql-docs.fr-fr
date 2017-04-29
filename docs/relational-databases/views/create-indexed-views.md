@@ -1,33 +1,37 @@
 ---
-title: "Cr&#233;er des vues index&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "vues indexées [SQL Server], création"
-  - "index cluster, vues"
-  - "CREATE INDEX, instruction"
-  - "option large_value_types_out_of_row"
-  - "vues indexées [SQL Server]"
-  - "vues [SQL Server], vues indexées"
+title: "Créer des vues indexées | Microsoft Docs"
+ms.custom: 
+ms.date: 05/27/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexed views [SQL Server], creating
+- clustered indexes, views
+- CREATE INDEX statement
+- large_value_types_out_of_row option
+- indexed views [SQL Server]
+- views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 caps.latest.revision: 79
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 79
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 24b4e22249ec7a175dc3ae239dea329c4d18208f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er des vues index&#233;es
+# <a name="create-indexed-views"></a>Créer des vues indexées
   Cette rubrique explique comment créer une vue indexée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le premier index créé sur une vue doit être un index cluster unique. Après avoir créé l'index cluster unique, vous pouvez créer davantage d'index non cluster. La création d'un index cluster unique sur une vue améliore les performances des requêtes, car la vue est stockée dans la base de données au même titre qu'une table avec un index cluster. L'optimiseur de requête peut utiliser des vues indexées pour accélérer l'exécution des requêtes. Il n'est pas nécessaire de référencer la vue dans la requête pour que l'optimiseur envisage d'utiliser cette vue.  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
- Les étapes suivantes de création d'une vue indexée sont essentielles à la réussite de l'implémentation de la vue indexée :  
+ Les étapes suivantes de création d'une vue indexée sont essentielles à la réussite de l'implémentation de la vue indexée :  
   
 1.  Vérifiez que les options SET sont correctes pour toutes les tables existantes qui seront référencées dans la vue.  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 79
 5.  Créez l'index cluster unique sur la vue.  
   
 ###  <a name="Restrictions"></a> Options SET requises pour les vues indexées  
- L'évaluation de la même expression peut produire des résultats différents dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] si des options SET différentes sont actives lors de l'exécution de la requête. Par exemple, si l’option SET CONCAT_NULL_YIELDS_NULL est activée (ON), l’expression **« **abc** »** + NULL retourne la valeur Null. Cependant, si l’option CONCAT_NULL_YIEDS_NULL est désactivée (OFF), la même expression retourne **« **abc** »**.  
+ L'évaluation de la même expression peut produire des résultats différents dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] si des options SET différentes sont actives lors de l'exécution de la requête. Par exemple, si l’option SET CONCAT_NULL_YIELDS_NULL est activée (ON), l’expression **«**abc**»** + NULL retourne la valeur Null. Cependant, si l’option CONCAT_NULL_YIEDS_NULL est désactivée (OFF), la même expression retourne **«**abc**»**.  
   
  Pour pouvoir gérer correctement les vues et retourner des résultats cohérents, les vues indexées nécessitent des valeurs fixes pour plusieurs options SET. Les options SET répertoriées dans le tableau ci-dessous doivent être définies avec les valeurs indiquées dans la colonne **Valeur requise** chaque fois que les conditions suivantes sont réunies :  
   
@@ -52,7 +56,7 @@ caps.handback.revision: 79
   
 -   L'optimiseur de requête utilise la vue indexée pour générer le plan de requête.  
   
-    |Options SET|Valeur requise|Valeur de serveur par défaut|Valeur par défaut<br /><br /> Valeur OLE DB et ODBC|Valeur par défaut<br /><br /> Valeur DB-Library|  
+    |Options SET|Valeur requise|Valeur de serveur par défaut|Valeur par défaut<br /><br /> Valeur OLE DB et ODBC|Valeur par défaut<br /><br /> Valeur DB-Library|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -64,12 +68,12 @@ caps.handback.revision: 79
   
      *En définissant ANSI_WARNINGS sur ON, vous définissez implicitement ARITHABORT sur ON.  
   
- Si vous utilisez une connexion serveur OLE DB ou ODBC, la seule valeur qui doit être modifiée est ARITHABORT. Toutes les valeurs DB-Library doivent être définies correctement au niveau du serveur à l’aide de **sp_configure**, ou dans l’application à l’aide de la commande SET.  
+ Si vous utilisez une connexion serveur OLE DB ou ODBC, la seule valeur qui doit être modifiée est ARITHABORT. Toutes les valeurs DB-Library doivent être définies correctement au niveau du serveur à l’aide de **sp_configure** , ou dans l’application à l’aide de la commande SET.  
   
 > [!IMPORTANT]  
 >  Il est vivement conseillé d'affecter la valeur ON à l'option utilisateur ARITHABORT sur le serveur dès la création de la première vue indexée ou du premier index sur une colonne calculée dans une base de données du serveur.  
   
-### Vues déterministes  
+### <a name="deterministic-views"></a>Vues déterministes  
  La définition d'une vue indexée doit être déterministe. Une vue est déterministe si toutes les expressions de la liste de sélection ainsi que les clauses WHERE et GROUP BY sont déterministes. Les expressions déterministes retournent toujours le même résultat chaque fois qu'elles sont évaluées avec un groupe de valeurs d'entrée spécifiques. Seules les fonctions déterministes peuvent participer à des expressions déterministes. Par exemple, la fonction DATEADD est déterministe, car elle retourne toujours le même résultat pour un groupe donné de valeurs d'arguments pour ses trois paramètres. La fonction GETDATE n'est pas déterministe, car elle est toujours appelée avec le même argument, mais la valeur qu'elle retourne change chaque fois qu'elle est exécutée.  
   
  Pour déterminer si une colonne de vue est déterministe, utilisez la propriété **IsDeterministic** de la fonction [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) . Pour déterminer si une colonne déterministe d'une vue avec une liaison de schéma est précise, utilisez la propriété **IsPrecise** de la fonction COLUMNPROPERTY. COLUMNPROPERTY retourne 1 pour TRUE, 0 pour FALSE et NULL pour une entrée non valide. Cela signifie que la colonne n'est pas déterministe ou pas précise.  
@@ -77,16 +81,16 @@ caps.handback.revision: 79
  Même si une expression est déterministe, si elle contient des expressions flottantes, le résultat exact dépend de l'architecture du processeur ou de la version du microcode. Pour garantir l'intégrité des données, ces expressions peuvent participer seulement sous forme de colonnes non clés de vues indexées. Les expressions déterministes qui ne contiennent pas d'expressions flottantes s'appellent des expressions précises. Seules les expressions déterministes précises peuvent participer à des colonnes clés et dans les clauses WHERE et GROUP BY des vues indexées.  
   
 > [!NOTE]  
->  Les vues indexées ne sont pas prises en charge sur les requêtes temporelles (requêtes qui utilisent la clause **FOR SYSTEM_TIME**).  
+>  Les vues indexées ne sont pas prises en charge sur les requêtes temporelles (requêtes qui utilisent la clause **FOR SYSTEM_TIME** ).  
   
-### Autres conditions requises  
- Outre les options SET et les conditions requises pour les fonctions déterministes, les conditions suivantes doivent être satisfaites :  
+### <a name="additional-requirements"></a>Autres conditions requises  
+ Outre les options SET et les conditions requises pour les fonctions déterministes, les conditions suivantes doivent être satisfaites :  
   
 -   L'utilisateur qui exécute CREATE INDEX doit être le propriétaire de la vue.  
   
 -   Lorsque vous créez l'index, l'option IGNORE_DUP_KEY doit avoir la valeur OFF (valeur par défaut).  
   
--   Les tables doivent être référencées par des noms en deux parties, *schéma***.***nom_table*, dans la définition de la vue.  
+-   Les tables doivent être référencées par des noms en deux parties, *schéma***.***nom_table* , dans la définition de la vue.  
   
 -   Les fonctions définies par l'utilisateur référencées dans la vue doivent avoir été créées avec l'option WITH SCHEMABINDING.  
   
@@ -109,22 +113,22 @@ caps.handback.revision: 79
   
 -   La vue doit référencer seulement des tables de base qui sont dans la même base de données que la vue. La vue ne peut pas faire référence à d'autres vues.  
   
--   L'instruction SELECT de la définition de la vue ne doit pas contenir les éléments Transact-SQL suivants :  
+-   L'instruction SELECT de la définition de la vue ne doit pas contenir les éléments Transact-SQL suivants :  
   
     ||||  
     |-|-|-|  
     |COUNT|Fonctions ROWSET (OPENDATASOURCE, OPENQUERY, OPENROWSET, AND OPENXML)|Jointures OUTER (LEFT, RIGHT ou FULL)|  
     |Table dérivée (définie en spécifiant une instruction SELECT dans la clause FROM)|Jointures réflexives|Spécification des colonnes à l’aide de SELECT \* ou de SELECT *nom_table*.*|  
     |DISTINCT|STDEV, STDEVP, VAR, VARP ou AVG|Expression de table commune (CTE)|  
-    |Colonnes **float**\*, **text**, **ntext**, **image**, **XML** ou **filestream**|Sous-requête|Clause OVER, qui inclut des fonctions de classement ou d'agrégation de fenêtre|  
+    |**float**\*, **text**, **ntext**, **image**, **XML**ou **filestream** |Sous-requête|Clause OVER, qui inclut des fonctions de classement ou d'agrégation de fenêtre|  
     |Prédicats de texte intégral (CONTAIN, FREETEXT)|Fonction SUM qui référence une expression acceptant les valeurs NULL|ORDER BY|  
     |Fonction d'agrégation CLR définie par l'utilisateur|Haut de la page|Opérateurs CUBE, ROLLUP ou GROUPING SETS|  
     |MIN, MAX|Opérateurs UNION, EXCEPT ou INTERSECT|TABLESAMPLE|  
-    |les variables de tables ;|OUTER APPLY ou CROSS APPLY|PIVOT, UNPIVOT|  
+    |les variables de tables ;|OUTER APPLY ou CROSS APPLY|PIVOT, UNPIVOT|  
     |Jeux de colonnes éparses|Fonctions Inline ou table à instructions multiples|OFFSET|  
     |CHECKSUM_AGG|||  
   
-     \*La vue indexée peut contenir des colonnes **float**, mais ces colonnes ne peuvent pas être incluses dans la clé d’index cluster.  
+     \*La vue indexée peut contenir des colonnes **float** , mais ces colonnes ne peuvent pas être incluses dans la clé d’index cluster.  
   
 -   Si la clause GROUP BY est présente, la définition VIEW doit contenir COUNT_BIG(*), mais pas HAVING. Ces restrictions de GROUP BY sont applicables seulement à la définition de la vue indexée. Une requête peut utiliser une vue indexée dans son plan d'exécution, même si elle ne répond pas à ces restrictions de GROUP BY.  
   
@@ -136,7 +140,7 @@ caps.handback.revision: 79
  La conversion implicite de données caractères non-Unicode entre les classements est également considérée comme non déterministe.  
   
 ###  <a name="Considerations"></a> Observations  
- La valeur de l’option **large_value_types_out_of_row** des colonnes contenues dans une vue indexée est héritée de la valeur de la colonne correspondante dans la table de base. Cette valeur est définie à l’aide de [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). La valeur par défaut des colonnes constituées à partir d'expressions est 0. Cela signifie que les types de valeurs élevées sont stockés dans la ligne.  
+ La valeur de l’option **large_value_types_out_of_row** des colonnes contenues dans une vue indexée est héritée de la valeur de la colonne correspondante dans la table de base. Cette valeur est définie à l’aide de [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). La valeur par défaut des colonnes constituées à partir d'expressions est 0. Cela signifie que les types de valeurs élevées sont stockés dans la ligne.  
   
  Des vues indexées peuvent être créées sur une table partitionnée, et elles peuvent elles-mêmes être partitionnées.  
   
@@ -153,7 +157,7 @@ caps.handback.revision: 79
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour créer une vue indexée  
+#### <a name="to-create-an-indexed-view"></a>Pour créer une vue indexée  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -210,7 +214,7 @@ caps.handback.revision: 79
   
  Pour plus d’informations, consultez [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
@@ -221,3 +225,4 @@ caps.handback.revision: 79
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)  
   
   
+

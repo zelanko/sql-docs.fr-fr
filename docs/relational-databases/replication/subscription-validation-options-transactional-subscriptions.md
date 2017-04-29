@@ -1,29 +1,33 @@
 ---
-title: "Options de validation d&#39;abonnement (abonnements transactionnels) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.validate.options.f1"
-helpviewer_keywords: 
-  - "boîte de dialogue Options de validation d'abonnement"
+title: "Options de validation d’abonnement (abonnements transactionnels) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.validate.options.f1
+helpviewer_keywords:
+- Subscription Validation Options dialog box
 ms.assetid: fd66ad1f-df01-4240-9e89-8f41bff12c1e
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: da21a38bf0797bf5368ddba1d1c2a47824bad369
+ms.lasthandoff: 04/11/2017
+
 ---
-# Options de validation d&#39;abonnement (abonnements transactionnels)
+# <a name="subscription-validation-options-transactional-subscriptions"></a>Options de validation d'abonnement (abonnements transactionnels)
   Utilisez la boîte de dialogue **Options de validation d'abonnement** pour spécifier si la validation doit utiliser uniquement un nombre de lignes ou un nombre de lignes et une somme de contrôle binaire.  
   
-## Options  
+## <a name="options"></a>Options  
  **Vérifiez si l'abonné possède le même nombre de lignes de données répliquées que le serveur de publication**  
  Sélectionnez le type de validation du nombre de lignes à effectuer. Pour les publications Oracle, la seule option proposée est **Calculer le nombre réel de lignes en interrogeant directement les tables**.  
   
@@ -33,8 +37,8 @@ caps.handback.revision: 18
  **Arrêter l'Agent de distribution une fois la validation terminée**  
  Par défaut, l'Agent de distribution s'exécute en permanence. Sélectionnez cette option pour arrêter l'agent lorsque la validation est terminée. Cela permet de vérifier que la validation a réussi avant de continuer à répliquer des données vers l'Abonné.  
   
-## Voir aussi  
- [Valider des données sur l'Abonné](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Valider des données sur l’abonné](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [Valider des données répliquées](../../relational-databases/replication/validate-replicated-data.md)  
   
   

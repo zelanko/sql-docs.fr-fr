@@ -1,31 +1,35 @@
 ---
-title: "Cr&#233;er un abonnement pouvant &#234;tre mis &#224; jour sur une publication transactionnelle &#224; l’aide de Transact-SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "abonnements transactionnels pouvant être mis à jour, T-SQL"
+title: "Créer un abonnement pouvant être mis à jour pour une publication transactionnelle | Microsoft Docs"
+ms.custom: 
+ms.date: 07/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- updateable transactional subscriptions, T-SQL
 ms.assetid: a6e80857-0a69-4867-b6b7-f3629d00c312
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7e21ddca2057879f3f9cde2bf5decf3c97944269
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er un abonnement pouvant &#234;tre mis &#224; jour sur une publication transactionnelle &#224; l’aide de Transact-SQL
+# <a name="create-updatable-subscription-to-transactional-publication"></a>Créer un abonnement pouvant être mis à jour pour une publication transactionnelle
 
 > [!NOTE]  
 >  Cette fonctionnalité reste prise en charge dans les versions de [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] (2012 à 2016).  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
  
 La réplication transactionnelle permet de propager sur le serveur de publication les modifications apportées au niveau d'un Abonné en utilisant des abonnements avec mise à jour immédiate ou mise à jour en file d'attente. Vous pouvez créer par programme un abonnement avec mise à jour en utilisant des procédures stockées de réplication. (Voir également [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle (Management Studio)](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md).) 
 
-## Pour créer un abonnement par extraction avec mise à jour immédiate ##
+## <a name="to-create-an-immediate-updating-pull-subscription"></a>Pour créer un abonnement par extraction avec mise à jour immédiate ##
 
 1. Sur le serveur de publication, vérifiez que la publication prend en charge les abonnements avec mise à jour immédiate en exécutant [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). 
 
@@ -37,9 +41,9 @@ La réplication transactionnelle permet de propager sur le serveur de publicatio
 
     * Si la valeur de `allow_pull` dans le jeu de résultats est `1`, la publication prend en charge les abonnements par extraction.
 
-    * Si la valeur de `allow_pull` est `0`, exécutez [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), en spécifiant `allow_pull` pour `@property`, et `true` pour `@value`. 
+    * Si la valeur de `allow_pull` est `0`, exécutez [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), en spécifiant `allow_pull` pour `@property` , et `true` pour `@value`. 
 
-3. Sur l’Abonné, exécutez [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Spécifiez `@publisher` et `@publication`, et l’une des valeurs suivantes pour `@update_mode` :
+3. Sur l’Abonné, exécutez [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Spécifiez `@publisher` et `@publication`, et l’une des valeurs suivantes pour `@update_mode`:
 
     * `sync tran` - active l’abonnement pour la mise à jour immédiate.
 
@@ -50,7 +54,7 @@ La réplication transactionnelle permet de propager sur le serveur de publicatio
  
 4. Sur l’Abonné, exécutez [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Spécifiez les éléments suivants :
 
-    * Les paramètres `@publisher`, `@publisher_db` et `@publication`. 
+    * Les paramètres `@publisher`, `@publisher_db`et `@publication` . 
 
     * Les informations d’identification Microsoft Windows sous lesquelles l’Agent de distribution est exécuté sur l’abonné pour `@job_login` et `@job_password`. 
 
@@ -61,7 +65,7 @@ La réplication transactionnelle permet de propager sur le serveur de publicatio
 
     * Planification du travail de l'Agent de distribution pour cet abonnement. 
 
-5. Dans la base de données d’abonnement de l’Abonné, exécutez [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Spécifiez `@publisher`, `@publication`, le nom de la base de données de publication pour `@publisher_db`, et l’une des valeurs suivantes pour `@security_mode` : 
+5. Dans la base de données d’abonnement de l’Abonné, exécutez [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Spécifiez `@publisher`, `@publication`, le nom de la base de données de publication pour `@publisher_db`, et l’une des valeurs suivantes pour `@security_mode`: 
 
     * `0` - Utiliser l’authentification SQL Server pour effectuer des mises à jour sur le serveur de publication. Avec cette option, vous devez spécifier une connexion valide sur le serveur de publication pour `@login` et `@password`.
 
@@ -74,7 +78,7 @@ La réplication transactionnelle permet de propager sur le serveur de publicatio
 L'abonnement par extraction est alors inscrit sur le serveur de publication. 
 
 
-## Pour créer un abonnement par émission de données avec mise à jour immédiate ##
+## <a name="to-create-an-immediate-updating-push-subscription"></a>Pour créer un abonnement par émission de données avec mise à jour immédiate ##
 
 1. Sur le serveur de publication, vérifiez que la publication prend en charge les abonnements avec mise à jour immédiate en exécutant [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). 
 
@@ -86,9 +90,9 @@ L'abonnement par extraction est alors inscrit sur le serveur de publication.
 
     * Si la valeur de `allow_push` dans le jeu de résultats est `1`, la publication prend en charge les abonnements par émission de données.
 
-    * Si la valeur de `allow_push` est `0`, exécutez [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), en spécifiant `allow_push` pour `@property`, et `true` pour `@value`. 
+    * Si la valeur de `allow_push` est `0`, exécutez [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), en spécifiant `allow_push` pour `@property` , et `true` pour `@value`. 
 
-3. Sur le serveur de publication, exécutez [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Spécifiez `@publication`, `@subscriber`, `@destination_db`, et l’une des valeurs suivantes pour `@update_mode` :
+3. Sur le serveur de publication, exécutez [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Spécifiez `@publication`, `@subscriber`, `@destination_db`, et l’une des valeurs suivantes pour `@update_mode`:
 
     * `sync tran` - active la prise en charge de la mise à jour immédiate.
 
@@ -99,7 +103,7 @@ L'abonnement par extraction est alors inscrit sur le serveur de publication.
  
 4. Sur le serveur de publication, exécutez [sp_addpushsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Spécifiez les paramètres suivants :
 
-    * `@subscriber`, `@subscriber_db` et `@publication`. 
+    * `@subscriber`, `@subscriber_db`et `@publication`. 
 
     * Informations d’identification Windows sous lesquelles l’Agent de distribution s’exécute sur le serveur de distribution pour `@job_login` et `@job_password`. 
 
@@ -110,7 +114,7 @@ L'abonnement par extraction est alors inscrit sur le serveur de publication.
 
     * Planification du travail de l'Agent de distribution pour cet abonnement.
 
-5. Dans la base de données d’abonnement de l’Abonné, exécutez [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Spécifiez `@publisher`, `@publication`, le nom de la base de données de publication pour `@publisher_db`, et l’une des valeurs suivantes pour `@security_mode` : 
+5. Dans la base de données d’abonnement de l’Abonné, exécutez [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Spécifiez `@publisher`, `@publication`, le nom de la base de données de publication pour `@publisher_db`, et l’une des valeurs suivantes pour `@security_mode`: 
 
      * `0` - Utiliser l’authentification SQL Server pour effectuer des mises à jour sur le serveur de publication. Avec cette option, vous devez spécifier une connexion valide sur le serveur de publication pour `@login` et `@password`.
 
@@ -119,7 +123,7 @@ L'abonnement par extraction est alors inscrit sur le serveur de publication.
      * `2` - Utiliser une connexion de serveur lié existante, définie par l’utilisateur, créée à l’aide de [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).
 
 
-## Pour créer un abonnement par extraction avec mise à jour en file d'attente ##
+## <a name="to-create-a-queued-updating-pull-subscription"></a>Pour créer un abonnement par extraction avec mise à jour en file d'attente ##
 
 1. Sur le serveur de publication, vérifiez que la publication prend en charge les abonnements avec mise à jour en file d’attente en exécutant [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). 
 
@@ -131,9 +135,9 @@ L'abonnement par extraction est alors inscrit sur le serveur de publication.
 
     * Si la valeur de `allow_pull` dans le jeu de résultats est `1`, la publication prend en charge les abonnements par extraction.
 
-    * Si la valeur de `allow_pull` est `0`, exécutez [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), en spécifiant `allow_pull` pour `@property`, et `true` pour `@value`. 
+    * Si la valeur de `allow_pull` est `0`, exécutez [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), en spécifiant `allow_pull` pour `@property` , et `true` pour `@value`. 
 
-3. Sur l’Abonné, exécutez [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Spécifiez `@publisher` et `@publication`, et l’une des valeurs suivantes pour `@update_mode` :
+3. Sur l’Abonné, exécutez [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Spécifiez `@publisher` et `@publication`, et l’une des valeurs suivantes pour `@update_mode`:
 
     * `queued tran` - active l’abonnement pour la mise à jour en attente.
 
@@ -144,7 +148,7 @@ L'abonnement par extraction est alors inscrit sur le serveur de publication.
  
 4. Sur l’Abonné, exécutez [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Spécifiez les paramètres suivants :
 
-    * @publisher, `@publisher_db` et `@publication`. 
+    * @publisher, `@publisher_db`et `@publication`. 
 
     * Les informations d’identification Windows sous lesquelles l’Agent de distribution est exécuté sur l’abonné pour `@job_login` et `@job_password`. 
 
@@ -160,7 +164,7 @@ L'abonnement par extraction est alors inscrit sur le serveur de publication.
 L'abonnement par extraction est alors inscrit sur le serveur de publication. 
 
 
-## Pour créer un abonnement par émission de données avec mise à jour en file d'attente ##
+## <a name="to-create-a-queued-updating-push-subscription"></a>Pour créer un abonnement par émission de données avec mise à jour en file d'attente ##
 
 1. Sur le serveur de publication, vérifiez que la publication prend en charge les abonnements avec mise à jour en file d’attente en exécutant [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). 
 
@@ -172,9 +176,9 @@ L'abonnement par extraction est alors inscrit sur le serveur de publication.
 
     * Si la valeur de `allow_push` dans le jeu de résultats est `1`, la publication prend en charge les abonnements par émission de données.
 
-    * Si la valeur de `allow_push` est `0`, exécutez [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), en spécifiant allow_push pour `@property`, et `true` pour `@value`. 
+    * Si la valeur de `allow_push` est `0`, exécutez [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), en spécifiant allow_push pour `@property` , et `true` pour `@value`. 
 
-3. Sur le serveur de publication, exécutez [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Spécifiez `@publication`, `@subscriber`, `@destination_db`, et l’une des valeurs suivantes pour `@update_mode` :
+3. Sur le serveur de publication, exécutez [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Spécifiez `@publication`, `@subscriber`, `@destination_db`, et l’une des valeurs suivantes pour `@update_mode`:
 
     * `queued tran` - active l’abonnement pour la mise à jour en attente.
 
@@ -185,7 +189,7 @@ L'abonnement par extraction est alors inscrit sur le serveur de publication.
 
 4. Sur le serveur de publication, exécutez [sp_addpushsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Spécifiez les paramètres suivants :
 
-    * `@subscriber`, `@subscriber_db` et `@publication`. 
+    * `@subscriber`, `@subscriber_db`et `@publication`. 
 
     * Informations d’identification Windows sous lesquelles l’Agent de distribution s’exécute sur le serveur de distribution pour `@job_login` et `@job_password`. 
 
@@ -197,7 +201,7 @@ L'abonnement par extraction est alors inscrit sur le serveur de publication.
     * Planification du travail de l'Agent de distribution pour cet abonnement.
 
 
-##  Exemple ##
+## <a name="example"></a>Exemple ##
 
 Cet exemple crée un abonnement par extraction avec mise à jour immédiate à une publication qui prend en charge les abonnements avec mise à jour immédiate. Les valeurs de connexion et le mot de passe sont fournis lors de l'exécution à l'aide des variables de script sqlcmd.
 
@@ -268,10 +272,12 @@ EXEC sp_addsubscription
 GO
 ```
 
-## Voir aussi ##
+## <a name="see-also"></a>Voir aussi ##
 
 [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
 
-[Utiliser sqlcmd avec des variables de script](../../../relational-databases/scripting/use-sqlcmd-with-scripting-variables.md)
+[Utiliser sqlcmd avec des variables de script](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)
 
-[(Créer un abonnement pouvant être mis à jour pour une publication transactionnelle (Management Studio)](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)
+[Créer un abonnement pouvant être mis à jour pour une publication transactionnelle (Management Studio)](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)
+
+

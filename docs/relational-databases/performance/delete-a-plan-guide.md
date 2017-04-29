@@ -1,33 +1,37 @@
 ---
-title: "Supprimer un rep&#232;re de plan | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "repères de plan [SQL Server], suppression"
+title: "Supprimer un repère de plan | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- plan guides [SQL Server], deleting
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08b43f5dd7f042bc559cede3b6043d737fb71a11
+ms.lasthandoff: 04/11/2017
+
 ---
-# Supprimer un rep&#232;re de plan
+# <a name="delete-a-plan-guide"></a>Supprimer un repère de plan
   Vous pouvez supprimer (éliminer) un repère de plan dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Avec [!INCLUDE[tsql](../../includes/tsql-md.md)], vous pouvez également supprimer tous les repères de plan dans une base de données.  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour supprimer un repère de plan, à l'aide de :**  
+-   **Pour supprimer un repère de plan, à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -38,11 +42,11 @@ caps.handback.revision: 7
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- La suppression d'un repère de plan OBJECT nécessite l'autorisation ALTER sur l'objet (par exemple : fonction, procédure stockée) qui est référencé par le repère de plan. Tous les autres repères de plan nécessitent l'autorisation ALTER DATABASE.  
+ La suppression d'un repère de plan OBJECT nécessite l'autorisation ALTER sur l'objet (par exemple : fonction, procédure stockée) qui est référencé par le repère de plan. Tous les autres repères de plan nécessitent l'autorisation ALTER DATABASE.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour supprimer un repère de plan  
+#### <a name="to-delete-a-plan-guide"></a>Pour supprimer un repère de plan  
   
 1.  Cliquez sur le signe plus pour développer la base de données dans laquelle vous souhaitez supprimer un repère de plan, puis cliquez sur le signe plus pour développer le dossier **Programmabilité** .  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 7
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour supprimer un repère de plan unique  
+#### <a name="to-delete-a-single-plan-guide"></a>Pour supprimer un repère de plan unique  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -95,7 +99,7 @@ caps.handback.revision: 7
     GO  
     ```  
   
-#### Pour supprimer tous les repères de plan dans une base de données  
+#### <a name="to-delete-all-plan-guides-in-a-database"></a>Pour supprimer tous les repères de plan dans une base de données  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

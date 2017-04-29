@@ -1,29 +1,33 @@
 ---
-title: "Partitionnement au niveau de l&#39;application | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Partitionnement au niveau de l’application | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f5e08e0a4d222cf98a7eb997019734d386f79fd4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Partitionnement au niveau de l&#39;application
+# <a name="application-level-partitioning"></a>Partitionnement au niveau de l'application
   Cette application traite les commandes. Il y a beaucoup de traitement sur les commandes récentes. Il n'y a beaucoup de traitement sur les commandes plus anciennes. Les commandes récentes sont dans une table mémoire optimisée. Les commandes plus anciennes sont dans une table sur disque. Toutes les commandes après le *hotDate* sont dans une table optimisée en mémoire. Toutes les commandes avant le *hotDate* sont dans une table sur disque. Supposez une charge de travail OLTP extrême avec de nombreuses transactions simultanées. Cette règle métier (commandes récentes dans une table optimisée en mémoire) doit être appliquée même si plusieurs transactions simultanées tentent de modifier *hotDate*.  
   
  Cet exemple n'utilise pas une table partitionnée pour la table sur disque, mais effectue le suivi d'un point de fractionnement explicite entre les deux tables, à l'aide d'une troisième table. Le point de fractionnement peut être utilisé pour vous assurer que les données récemment insérées sont toujours insérées dans la table appropriées en fonction de la date. Il peut également être utilisé pour déterminer l'emplacement de recherche des données. Les données qui arrivent en retard sont insérées dans la table appropriée.  
   
  Pour obtenir un exemple, consultez [Modèle d’application pour partitionner des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md).  
   
-## Intégralité du code  
+## <a name="code-listing"></a>Intégralité du code  
   
 ```tsql  
 USE MASTER  
@@ -213,7 +217,7 @@ select * from hot order by orderDate desc
 select * from cold order by orderDate desc  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Exemples de code OLTP en mémoire](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
   
   

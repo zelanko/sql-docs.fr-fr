@@ -1,32 +1,36 @@
 ---
-title: "V&#233;rifications de coh&#233;rence syst&#232;me des tables temporelles | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/07/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Vérifications de cohérence système des tables temporelles | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/07/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ec081d42-57e4-43c7-9e1c-317ba8f23437
 caps.latest.revision: 10
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cb67454080657b99983e33e4c46858124b735433
+ms.lasthandoff: 04/11/2017
+
 ---
-# V&#233;rifications de coh&#233;rence syst&#232;me des tables temporelles
+# <a name="temporal-table-system-consistency-checks"></a>Vérifications de cohérence système des tables temporelles
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Lorsque vous utilisez des tables temporelles, le système exécute un nombre de vérifications de cohérence pour s’assurer que le schéma est conforme aux exigences pour Temporal et que les données sont cohérentes et restent cohérentes. En outre, les vérifications temporelles ont été ajoutées à l’instruction **DBCC CHECKCONSTRAINTS** .  
   
-## Vérifications de cohérence système  
+## <a name="system-consistency-checks"></a>Vérifications de cohérence système  
  Avant que **SYSTEM_VERSIONING** soit défini sur **ON**, un ensemble de vérifications sont effectuées sur la table de l’historique et sur la table en cours. Ces vérifications sont regroupées en contrôles de schémas et contrôles de données (si la table de l’historique n’est pas vide). En outre, le système effectue également une vérification de cohérence du runtime.  
   
-### Contrôle du schéma  
- Lorsque vous créez ou modifiez une table en table temporelle, le système vérifie que les conditions sont remplies :  
+### <a name="schema-check"></a>Contrôle du schéma  
+ Lorsque vous créez ou modifiez une table en table temporelle, le système vérifie que les conditions sont remplies :  
   
 1.  Les noms et le nombre de colonnes est le même dans la table en cours et dans la table de l’historique.  
   
@@ -48,21 +52,21 @@ caps.handback.revision: 10
   
 10. La table de l’historique n’est pas configurée pour le suivi des modifications ou la capture des modifications de données.  
   
-### Vérification de cohérence des données  
- Avant que **SYSTEM_VERSIONING** soit défini sur **ON** et dans le cadre d’une opération DML, le système effectue la vérification suivante : **SysEndTime** ≥**SysStartTime**  
+### <a name="data-consistency-check"></a>Vérification de cohérence des données  
+ Avant que **SYSTEM_VERSIONING** soit défini sur **ON** et dans le cadre d’une opération DML, le système effectue la vérification suivante : **SysEndTime** ≥**SysStartTime**  
   
  Lorsque vous créez un lien vers une table de l’historique existante, vous pouvez choisir d’effectuer une vérification de cohérence des données. Cette vérification de cohérence des données garantit que les enregistrements existants ne se chevauchent pas et que les spécifications temporelles sont satisfaites pour chaque enregistrement individuel. La vérification de cohérence des données est effectuée par défaut. En général, l’exécution de la vérification de cohérence des données est recommandée chaque fois que les données des tables en cours et des tables de l’historique risquent d’être désynchronisées, comme lorsque vous incorporez une table de l’historique existante remplie avec des données d’historique.  
   
 > [!WARNING]  
 >  Les changements manuels de l’horloge système provoquent l’échec inattendu du système car les vérifications de cohérence des données du runtime mises en place pour éviter les conditions de chevauchement (c’est-à-dire que l’heure de fin d’un enregistrement ne doit pas être antérieure à l’heure de début) échouent.  
   
-## DBCC CHECKCONSTRAINTS  
+## <a name="dbcc-checkconstraints"></a>DBCC CHECKCONSTRAINTS  
  La commande **DBCC CHECKCONSTRAINTS** inclut des vérifications de cohérence des données temporelles. Pour plus d’informations, consultez [DBCC CHECKCONSTRAINTS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md).  
   
-## Cet article vous a-t-il été utile ? Nous sommes à votre écoute  
- Quels renseignements souhaitez-vous obtenir ? Avez-vous trouvé ce que vous cherchiez ? Nous tenons compte de vos commentaires pour améliorer le contenu de nos articles. Veuillez envoyer vos commentaires à l’adresse suivante : [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Table%20System%20Consistency%20Checks%20page)  
+## <a name="did-this-article-help-you-were-listening"></a>Cet article vous a-t-il été utile ? Nous sommes à votre écoute  
+ Quels renseignements souhaitez-vous obtenir ? Avez-vous trouvé ce que vous cherchiez ? Nous tenons compte de vos commentaires pour améliorer le contenu de nos articles. Veuillez envoyer vos commentaires à l’adresse suivante : [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Table%20System%20Consistency%20Checks%20page)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tables temporelles](../../relational-databases/tables/temporal-tables.md)   
  [Prise en main des tables temporelles de contrôle de version du système](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Partitionnement des tables temporelles](../../relational-databases/tables/partitioning-with-temporal-tables.md)   
@@ -73,3 +77,4 @@ caps.handback.revision: 10
  [Vues et fonctions de métadonnées de table temporelle](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

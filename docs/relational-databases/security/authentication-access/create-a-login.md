@@ -1,65 +1,69 @@
 ---
-title: "Cr&#233;er un compte de connexion | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.login.status.f1"
-  - "sql13.swb.login.effectivepermissions.f1"
-  - "sql13.swb.login.general.f1"
-  - "sql13.swb.login.databaseaccess.f1"
-  - "sql13.swb.login.serverroles.f1"
-helpviewer_keywords: 
-  - "authentification [SQL Server], connexions"
-  - "connexions [SQL Server], création"
-  - "création de connexions à l'aide de Management Studio"
-  - "Create login [SQL Server]"
-  - "comptes de connexion SQL Server"
+title: "Créer un compte de connexion | Microsoft Docs"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.login.status.f1
+- sql13.swb.login.effectivepermissions.f1
+- sql13.swb.login.general.f1
+- sql13.swb.login.databaseaccess.f1
+- sql13.swb.login.serverroles.f1
+helpviewer_keywords:
+- authentication [SQL Server], logins
+- logins [SQL Server], creating
+- creating logins with Management Studio
+- Create login [SQL Server]
+- SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 297b1f20843f16a1885676e4428331f75ced8cd6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er un compte de connexion
+# <a name="create-a-login"></a>Créer un compte de connexion
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Cette rubrique explique comment créer un compte de connexion dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ou [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Un compte de connexion est l'identité de la personne ou du processus qui se connecte à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ##  <a name="Background"></a> Arrière-plan  
- Un compte de connexion est un principal de sécurité, ou une entité qui peut être authentifiée par un système sécurisé. Pour se connecter à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les utilisateurs doivent disposer d'un compte de connexion. Vous pouvez créer un compte de connexion basé sur un principal Windows (tel qu'un utilisateur de domaine ou un groupe de domaines Windows) ou créer un compte de connexion qui n'est pas basé sur un principal Windows (tel qu'un compte de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
+ Un compte de connexion est un principal de sécurité, ou une entité qui peut être authentifiée par un système sécurisé. Pour se connecter à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les utilisateurs doivent disposer d'un compte de connexion. Vous pouvez créer un compte de connexion basé sur un principal Windows (tel qu'un utilisateur de domaine ou un groupe de domaines Windows) ou créer un compte de connexion qui n'est pas basé sur un principal Windows (tel qu'un compte de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
   
-> **REMARQUE :** pour utiliser l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] doit utiliser une authentification en mode mixte. Pour plus d’informations, consultez [Choisir un mode d’authentification](../../../relational-databases/security/choose-an-authentication-mode.md).  
+> **REMARQUE :** pour utiliser l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] doit utiliser une authentification en mode mixte. Pour plus d’informations, consultez [Choisir un mode d’authentification](../../../relational-databases/security/choose-an-authentication-mode.md).  
   
- En tant que principal de sécurité, il est possible d'accorder des autorisations à des comptes de connexion. L'étendue d'un compte de connexion est l'intégralité du [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Pour se connecter à une base de données spécifique sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un compte de connexion doit être mappé à un utilisateur de base de données. Les autorisations dans la base de données sont accordées et refusées à l'utilisateur de la base de données, pas au compte de connexion. Les autorisations dont l’étendue englobe la totalité de l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (par exemple, l’autorisation **CREATE ENDPOINT**) peuvent être accordées à un compte de connexion.  
+ En tant que principal de sécurité, il est possible d'accorder des autorisations à des comptes de connexion. L'étendue d'un compte de connexion est l'intégralité du [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Pour se connecter à une base de données spécifique sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un compte de connexion doit être mappé à un utilisateur de base de données. Les autorisations dans la base de données sont accordées et refusées à l'utilisateur de la base de données, pas au compte de connexion. Les autorisations dont l’étendue englobe la totalité de l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (par exemple, l’autorisation **CREATE ENDPOINT** ) peuvent être accordées à un compte de connexion.  
   
-> **REMARQUE :** lors d’une connexion à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l’identité est validée sur la base de données MASTER. Faites appel à des utilisateurs de base de données à relation contenant-contenu pour authentifier les connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]r et [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] au niveau de la base de données. Aucune connexion n’est nécessaire pour les utilisateurs de base de données à relation contenant-contenu. Une base de données à relation contenant-contenu est une base de données qui est isolée d'autres bases de données et de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (et la base de données MASTER) qui héberge la base de données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les utilisateurs de base de données pour Windows et l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si vous utilisez [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], associez les utilisateurs de base de données à relation contenant-contenu à des règles de pare-feu au niveau de la base de données. Pour plus d’informations, consultez [Utilisateurs de base de données à relation contenant-contenu - Rendre votre base de données portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+> **REMARQUE :** lors d’une connexion à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , l’identité est validée sur la base de données MASTER. Faites appel à des utilisateurs de base de données à relation contenant-contenu pour authentifier les connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]r et [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] au niveau de la base de données. Aucune connexion n’est nécessaire pour les utilisateurs de base de données à relation contenant-contenu. Une base de données à relation contenant-contenu est une base de données qui est isolée d'autres bases de données et de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (et la base de données MASTER) qui héberge la base de données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les utilisateurs de base de données pour Windows et l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si vous utilisez [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], associez les utilisateurs de base de données à relation contenant-contenu à des règles de pare-feu au niveau de la base de données. Pour plus d’informations, consultez [Utilisateurs de base de données à relation contenant-contenu - Rendre votre base de données portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ##  <a name="Security"></a> Sécurité  
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requiert l’autorisation **ALTER ANY LOGIN** ou **ALTER LOGIN** sur le serveur.  
   
- [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] nécessite l’appartenance au rôle **loginmanager**.  
+ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] nécessite l’appartenance au rôle **loginmanager** .  
   
 ##  <a name="SSMSProcedure"></a> Créer une connexion à l’aide de SSMS  
   
   
 1.  Dans l'Explorateur d'objets, développez le dossier de l'instance du serveur où vous souhaitez créer le compte de connexion.  
   
-2.  Cliquez avec le bouton droit sur le dossier **Sécurité**, pointez sur **Nouveau**, puis sélectionnez **Connexion…**.  
+2.  Cliquez avec le bouton droit sur le dossier **Sécurité** , pointez sur **Nouveau**, puis sélectionnez **Connexion…**.  
   
 3.  Dans la boîte de dialogue **Nouvelle connexion** , sur la page **Général** , entrez le nom d'un utilisateur dans la zone **Nom de la connexion** . Vous pouvez également cliquer sur **Rechercher…** pour ouvrir la boîte de dialogue **Sélectionner l'utilisateur ou le groupe** .  
   
      Si vous cliquez sur **Rechercher…**:  
   
-    1.  Sous **Sélectionner ce type d'objet**, cliquez sur **Types d'objets…** pour ouvrir la boîte de dialogue **Types d’objets** et sélectionnez tout ou partie des éléments suivants : **Principaux de sécurité intégrés**, **Groupes** et **Utilisateurs**. Les options **Principaux de sécurité intégrés** et **Utilisateurs** sont sélectionnées par défaut. Lorsque vous avez terminé, cliquez sur **OK**.  
+    1.  Sous **Sélectionner ce type d'objet**, cliquez sur **Types d'objets…** pour ouvrir la boîte de dialogue **Types d’objets** et sélectionnez tout ou partie des éléments suivants : **Principaux de sécurité intégrés**, **Groupes**et **Utilisateurs**. Les options**Principaux de sécurité intégrés** et **Utilisateurs** sont sélectionnées par défaut. Lorsque vous avez terminé, cliquez sur **OK**.  
   
     2.  Sous **À partir de cet emplacement**, cliquez sur **Emplacements…** pour ouvrir la boîte de dialogue **Emplacements** et sélectionner un des emplacements de serveur disponibles. Lorsque vous avez terminé, cliquez sur **OK**.  
   
@@ -83,9 +87,9 @@ caps.handback.revision: 29
   
     5.  Pour forcer l'utilisateur à créer un nouveau mot de passe après la première utilisation du compte de connexion, sélectionnez **L'utilisateur doit changer de mot de passe à la prochaine connexion**. L'option**Conserver l'expiration du mot de passe** doit être sélectionnée pour activer cette case à cocher. Il s'agit d'une option par défaut lorsque **Authentification SQL Server** est sélectionné.  
   
-6.  Pour associer le compte de connexion à un certificat de sécurité autonome, sélectionnez **Mappé au certificat**, puis sélectionnez le nom d’un certificat existant dans la liste.  
+6.  Pour associer le compte de connexion à un certificat de sécurité autonome, sélectionnez **Mappé au certificat** , puis sélectionnez le nom d’un certificat existant dans la liste.  
   
-7.  Pour associer le compte de connexion à une clé asymétrique autonome, sélectionnez **Mappé à la clé asymétrique**, puis sélectionnez le nom d’une clé existante dans la liste.  
+7.  Pour associer le compte de connexion à une clé asymétrique autonome, sélectionnez **Mappé à la clé asymétrique** , puis sélectionnez le nom d’une clé existante dans la liste.  
   
 8.  Pour associer le compte de connexion à des informations d'identification de sécurité, activez la case à cocher **Mappé aux informations d'identification** , puis sélectionnez des informations d'identification existantes dans la liste ou cliquez sur **Ajouter** pour créer de nouvelles informations d'identification. Pour supprimer du compte de connexion un mappage à des informations d'identification de sécurité, sélectionnez les informations d'identification dans **Informations d'identification mappées** et cliquez sur **Supprimer**. Pour plus d’informations sur les informations d’identification en général, consultez [Informations d’identification &#40;moteur de base de données&#41;](../../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
@@ -95,44 +99,44 @@ caps.handback.revision: 29
   
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### Options supplémentaires  
+### <a name="additional-options"></a>Options supplémentaires  
  La boîte de dialogue **Nouvelle connexion** offre également des options sur quatre pages supplémentaires : **Rôles de serveur**, **Mappage de l'utilisateur**, **Éléments sécurisables**et **État**.  
   
-### Rôles de serveur  
- La page **Rôles de serveur** répertorie tous les rôles possibles qui peuvent être affectés au nouveau compte de connexion. Les options suivantes sont disponibles :  
+### <a name="server-roles"></a>Rôles de serveur  
+ La page **Rôles de serveur** répertorie tous les rôles possibles qui peuvent être affectés au nouveau compte de connexion. Les options suivantes sont disponibles :  
   
- Case à cocher **bulkadmin**  
+ Case à cocher**bulkadmin**   
  Les membres du rôle serveur fixe **bulkadmin** peuvent exécuter l’instruction BULK INSERT.  
   
- Case à cocher **dbcreator**  
+ Case à cocher**dbcreator**   
  Les membres du rôle serveur fixe **dbcreator** peuvent créer, modifier, supprimer et restaurer n’importe quelle base de données.  
   
- Case à cocher **diskadmin**  
+ Case à cocher**diskadmin**   
  Les membres du rôle serveur fixe **diskadmin** peuvent gérer les fichiers de disque.  
   
- Case à cocher **processadmin**  
+ Case à cocher**processadmin**   
  Les membres du rôle serveur fixe **processadmin** peuvent arrêter les processus en cours d’exécution dans une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
- Case à cocher **public**  
+ Case à cocher**public**   
  Tous les utilisateurs, groupes et rôles SQL Server appartiennent au rôle serveur fixe **public** par défaut.  
   
- Case à cocher **securityadmin**  
- Les membres du rôle serveur fixe **securityadmin** gèrent les connexions et leurs propriétés. Ils peuvent assigner des autorisations GRANT, DENY et REVOKE au niveau du serveur. Ils peuvent aussi assigner des autorisations GRANT, DENY et REVOKE au niveau de la base de données. En outre, ils peuvent réinitialiser les mots de passe pour les connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Case à cocher**securityadmin**   
+ Les membres du rôle serveur fixe **securityadmin** gèrent les connexions et leurs propriétés. Ils peuvent assigner des autorisations GRANT, DENY et REVOKE au niveau du serveur. Ils peuvent aussi assigner des autorisations GRANT, DENY et REVOKE au niveau de la base de données. En outre, ils peuvent réinitialiser les mots de passe pour les connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- Case à cocher **serveradmin**  
+ Case à cocher**serveradmin**   
  Les membres du rôle serveur fixe **serveradmin** peuvent modifier les options de configuration à l’échelle du serveur et arrêter le serveur.  
   
- Case à cocher **setupadmin**  
+ Case à cocher**setupadmin**   
  Les membres du rôle serveur fixe **setupadmin** peuvent ajouter et supprimer des serveurs liés et exécuter certaines procédures stockées du système.  
   
- Case à cocher **sysadmin**  
+ Case à cocher**sysadmin**   
  Les membres du rôle serveur fixe **sysadmin** peuvent exécuter n’importe quelle activité dans le [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-### Mappage de l'utilisateur  
- La page **Mappage de l'utilisateur** répertorie toutes les bases de données possibles et les appartenances de rôle de base de données sur ces bases de données qui peuvent être appliquées à la connexion. Les bases de données sélectionnées déterminent les appartenances aux rôles disponibles pour la connexion. Les options suivantes sont disponibles sur cette page :  
+### <a name="user-mapping"></a>Mappage de l'utilisateur  
+ La page **Mappage de l'utilisateur** répertorie toutes les bases de données possibles et les appartenances de rôle de base de données sur ces bases de données qui peuvent être appliquées à la connexion. Les bases de données sélectionnées déterminent les appartenances aux rôles disponibles pour la connexion. Les options suivantes sont disponibles sur cette page :  
   
  **Utilisateurs mappés à cette connexion**  
- Sélectionnez les bases de données auxquelles cette connexion peut accéder. Lorsque vous sélectionnez une base de données, ses rôles de base de données valides s’affichent dans le volet **Appartenance au rôle de base de données pour :** *nom_base_de_données*.  
+ Sélectionnez les bases de données auxquelles cette connexion peut accéder. Lorsque vous sélectionnez une base de données, ses rôles de base de données valides s’affichent dans le volet **Appartenance au rôle de base de données pour :** *nom_base_de_données* .  
   
  **Carte**  
  Autorise la connexion à accéder aux bases de données répertoriées au-dessous.  
@@ -146,14 +150,14 @@ caps.handback.revision: 29
  **Schéma par défaut**  
  Spécifie le schéma par défaut de l'utilisateur. Lors de la création d'un utilisateur, son schéma par défaut est **dbo**. Il est possible de spécifier un schéma par défaut qui n'existe pas encore. Vous ne pouvez pas spécifier de schéma par défaut pour un utilisateur mappé sur un groupe Windows, un certificat ou une clé asymétrique.  
   
- **Compte Invité activé pour :**  *nom_base_de_données*  
+ **Guest account enabled for:**  *database_name*  
  Attribut en lecture seule indiquant si le compte Invité est activé sur la base de données sélectionnée. Utilisez la page **État** de la boîte de dialogue **Propriétés de la connexion** du compte Invité pour activer ou désactiver le compte Invité.  
   
- **Appartenance au rôle de base de données :**  *nom_base_de_données*  
+ **Database role membership for:**  *database_name*  
  Sélectionnez les rôles pour l'utilisateur dans la base de données spécifiée. Tous les utilisateurs sont membres du rôle **public** de chaque base de données et ne peuvent pas être supprimés. Pour plus d’informations sur les rôles de base de données, consultez [Rôles au niveau de la base de données](../../../relational-databases/security/authentication-access/database-level-roles.md).  
   
-### Éléments sécurisables  
- La page **Éléments sécurisables** répertorie tous les éléments sécurisables possibles et les autorisations sur ces éléments sécurisables qui peuvent être accordées à la connexion. Les options suivantes sont disponibles sur cette page :  
+### <a name="securables"></a>Éléments sécurisables  
+ La page **Éléments sécurisables** répertorie tous les éléments sécurisables possibles et les autorisations sur ces éléments sécurisables qui peuvent être accordées à la connexion. Les options suivantes sont disponibles sur cette page :  
   
  **Grille supérieure**  
  Contient un ou plusieurs éléments pour lesquels des autorisations peuvent être définies. Les colonnes affichées dans la grille supérieure varient selon le principal ou l'élément sécurisable.  
@@ -204,10 +208,10 @@ caps.handback.revision: 29
  **Refuser**  
  Sélectionnez cette option pour refuser cette autorisation à la connexion. Désactivez-la pour révoquer cette autorisation.  
   
-### État  
+### <a name="status"></a>État  
  La page **État** répertorie certaines des options d'authentification et d'autorisation qui peuvent être configurées sur la connexion sélectionnée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- Les options suivantes sont disponibles sur cette page :  
+ Les options suivantes sont disponibles sur cette page :  
   
  **Autorisation de se connecter au moteur de base de données**  
  Lorsque vous travaillez avec ce paramètre, vous devez considérer la connexion sélectionnée comme un principal auquel une autorisation sur un élément sécurisable peut être accordée ou refusée.  
@@ -221,13 +225,13 @@ caps.handback.revision: 29
   
  Sélectionnez cette option pour activer ou désactiver cette connexion. Cette option utilise l'instruction ALTER LOGIN avec l'option ENABLE ou DISABLE.  
   
- **Authentification SQL Server**  
+ **SQL Server Authentication**  
  La case à cocher **La connexion est verrouillée** est disponible uniquement si la connexion sélectionnée se connecte à l’aide de l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et qu’elle a été verrouillée. Ce paramètre est en lecture seule. Pour déverrouiller une connexion verrouillée, exécutez ALTER LOGIN avec l'option UNLOCK.  
   
 ##  <a name="TsqlProcedure"></a> Créer une connexion à l’aide de l’authentification Windows à l’aide de T-SQL  
   
  
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -241,9 +245,9 @@ caps.handback.revision: 29
   
     ```  
   
-## Créer une connexion via l’authentification SQL Server avec SSMS  
+## <a name="create-a-login-using-sql-server-authentication-with-ssms"></a>Créer une connexion via l’authentification SQL Server avec SSMS  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -261,7 +265,7 @@ caps.handback.revision: 29
   
  Pour plus d’informations, consultez [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md).  
   
-##  <a name="FollowUp"></a> Suivi : Mesures à prendre après avoir créé un compte de connexion  
+##  <a name="FollowUp"></a> Suivi : Mesures à prendre après avoir créé un compte de connexion  
  Une fois le compte de connexion créé, celui-ci peut se connecter à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mais il ne dispose pas nécessairement des autorisations suffisantes pour effectuer des tâches utiles. La liste suivante fournit des liens vers des actions de compte de connexion courantes.  
   
 -   Pour effectuer une jointure entre le compte de connexion et un rôle de base de données, consultez [Attacher un rôle](../../../relational-databases/security/authentication-access/join-a-role.md).  
@@ -270,7 +274,8 @@ caps.handback.revision: 29
   
 -   Pour accorder une autorisation à un compte de connexion, consultez [Accorder une autorisation à un principal](../../../relational-databases/security/authentication-access/grant-a-permission-to-a-principal.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
+

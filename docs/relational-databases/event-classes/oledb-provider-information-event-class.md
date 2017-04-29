@@ -1,27 +1,31 @@
 ---
-title: "Classe d&#39;&#233;v&#233;nements OLEDB Provider Information | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "OLEDB Provider Information (classe d'événements)"
+title: "OLEDB Provider Information, classe d’événements | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLEDB Provider Information event class
 ms.assetid: a0316c4e-4b8c-4754-8a35-222f3c0907d1
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 60ff0c896be635089acd38d9ade6ec731d526250
+ms.lasthandoff: 04/11/2017
+
 ---
-# Classe d&#39;&#233;v&#233;nements OLEDB Provider Information
+# <a name="oledb-provider-information-event-class"></a>OLEDB Provider Information (classe d'événements)
   La classe d’événements **OLEDB Provider Information** intervient quand une requête distribuée est exécutée et recueille des informations correspondant à la connexion du fournisseur.  
   
- Cette classe d'événements contient toutes les propriétés qui sont recueillies à partir du fournisseur distant à l'aide de divers jeux de propriétés, notamment :  
+ Cette classe d'événements contient toutes les propriétés qui sont recueillies à partir du fournisseur distant à l'aide de divers jeux de propriétés, notamment :  
   
 -   DBPROPSET_DATASOURCEINFO  
   
@@ -35,15 +39,15 @@ caps.handback.revision: 22
   
 -   Interface IDBInfo  
   
- Ces propriétés, ainsi que les métadonnées disponibles, sont utilisées par l'optimiseur de requête pour choisir le plan d'exécution optimal de la requête. Ces informations sont utiles pour tracer l'exécution des événements et des appels OLE DB (et pour les analyser) dans les traces du Générateur de profils pour les requêtes distribuées.  
+ Ces propriétés, ainsi que les métadonnées disponibles, sont utilisées par l'optimiseur de requête pour choisir le plan d'exécution optimal de la requête. Ces informations sont utiles pour tracer l'exécution des événements et des appels OLE DB (et pour les analyser) dans les traces du Générateur de profils pour les requêtes distribuées.  
   
-## Colonnes de la classe d'événements OLEDB Provider Information  
+## <a name="oledb-provider-information-event-class-data-columns"></a>Colonnes de la classe d'événements OLEDB Provider Information  
   
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette colonne est remplie avec les valeurs passées par l'application plutôt que par le nom affiché du programme.|10|Oui|  
-|**ClientProcessID**|**int**|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
-|**DatabaseID**|**int**|ID de la base de données spécifiée par l’instruction USE *database* ou celui de la *base de données* par défaut si aucune instruction USE database n’a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données **ServerName** du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
+|**ClientProcessID**|**int**|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
+|**DatabaseID**|**int**|ID de la base de données spécifiée par l’instruction USE *database* ou celui de la *base de données* par défaut si aucune instruction USE database n’a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données **ServerName** du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |**DatabaseName**|**nvarchar**|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |**EventClass**|**int**|Type d’événement = 194.|27|Non|  
 |**EventSequence**|**int**|Séquence d'un événement donné au sein de la demande.|51|Non|  
@@ -51,8 +55,8 @@ caps.handback.revision: 22
 |**HostName**|**nvarchar**|Nom de l'ordinateur sur lequel le client est exécuté. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |**IsSystem**|**int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Oui|  
 |**LinkedServerName**|**nvarchar**|Nom du serveur lié.|45|Oui|  
-|**LoginName**|**nvarchar**|Nom de la connexion de l'utilisateur (soit la connexion de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], soit les informations d'identification Windows sous la forme DOMAINE\Nomutilisateur).|11|Oui|  
-|**LoginSid**|**image**|Identificateur de sécurité (SID) de l'utilisateur connecté. Vous pouvez trouver ces informations dans l’affichage catalogue **sys.server_principals**. Chaque connexion possède un SID unique au niveau du serveur.|41|Oui|  
+|**LoginName**|**nvarchar**|Nom de la connexion de l'utilisateur (soit la connexion de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , soit les informations d'identification Windows sous la forme DOMAINE\Nomutilisateur).|11|Oui|  
+|**LoginSid**|**image**|Identificateur de sécurité (SID) de l'utilisateur connecté. Vous trouverez ces informations dans l’affichage catalogue **sys.server_principals** . Chaque connexion possède un SID unique au niveau du serveur.|41|Oui|  
 |**NTDomainName**|**nvarchar**|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
 |**NTUserName**|**nvarchar**|Nom d'utilisateur Windows.|6|Oui|  
 |**ProviderName**|**nvarchar**|Nom du fournisseur OLE DB.|46|Oui|  
@@ -63,7 +67,7 @@ caps.handback.revision: 22
 |**TextData**|**ntext**|Valeur texte qui dépend de la classe d'événements capturée dans la trace.|1|Oui|  
 |**TransactionID**|**bigint**|ID affecté par le système à la transaction.|4|Oui|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Objets OLE Automation dans Transact-SQL](../../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md)  

@@ -1,22 +1,26 @@
 ---
-title: "Permuter des cl&#233;s Always Encrypted &#224; l’aide de PowerShell | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Permuter des clés Always Encrypted à l’aide de PowerShell | Microsoft Docs"
+ms.custom: 
+ms.date: 11/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-security
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5117b4fd-c8d3-48d5-87c9-756800769f31
 caps.latest.revision: 19
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ffa9047c43a263ceae52550b65d3d147a8c9928
+ms.lasthandoff: 04/11/2017
+
 ---
-# Permuter des cl&#233;s Always Encrypted &#224; l’aide de PowerShell
+# <a name="rotate-always-encrypted-keys-using-powershell"></a>Permuter des clés Always Encrypted à l’aide de PowerShell
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Cet article fournit les étapes permettant de permuter des clés Always Encrypted à l’aide du module SqlServer PowerShell. Pour plus d’informations sur l’utilisation du module SqlServer PowerShell pour Always Encrypted, consultez [Configurer Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
@@ -369,3 +373,5 @@ Remove-SqlColumnEncryptionKey -Name $oldCekName -InputObject $database
 - [Configurer Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)    
 - [Always Encrypted (moteur de base de données)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Blog sur Always Encrypted](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
+
+

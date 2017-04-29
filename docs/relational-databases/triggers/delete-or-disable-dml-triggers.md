@@ -1,40 +1,44 @@
 ---
-title: "Supprimer ou d&#233;sactiver les d&#233;clencheurs DML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "déclencheurs DML, désactivation"
-  - "suppression de déclencheurs DML"
-  - "désactivation de déclencheurs DML"
-  - "suppression de déclencheurs DML"
-  - "suppression de déclencheurs DML"
-  - "déclencheurs DML, suppression"
+title: "Supprimer ou désactiver des déclencheurs DML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DML triggers, disabling
+- removing DML triggers
+- disabling DML triggers
+- dropping DML triggers
+- deleting DML triggers
+- DML triggers, removing
 ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0fe807c194c057f2109bb40b13a8f8918c0cc75f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Supprimer ou d&#233;sactiver les d&#233;clencheurs DML
+# <a name="delete-or-disable-dml-triggers"></a>Supprimer ou désactiver les déclencheurs DML
   Cette rubrique explique comment supprimer ou désactiver un déclencheur DML dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Recommandations](#Recommendations)  
   
      [Sécurité](#Security)  
   
--   **Pour supprimer ou désactiver un déclencheur DML à l'aide de :**  
+-   **Pour supprimer ou désactiver un déclencheur DML à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -57,9 +61,9 @@ caps.handback.revision: 27
   
  Pour désactiver ou activer un déclencheur DML, un utilisateur doit avoir au minimum l'autorisation ALTER pour la table ou la vue sur laquelle le déclencheur a été créé.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour supprimer un déclencheur DML  
+#### <a name="to-delete-a-dml-trigger"></a>Pour supprimer un déclencheur DML  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et développez-la.  
   
@@ -69,7 +73,7 @@ caps.handback.revision: 27
   
 4.  Dans la boîte de dialogue **Supprimer un objet** , vérifiez que le déclencheur correct est spécifié et cliquez sur **OK**.  
   
-#### Pour désactiver et activer un déclencheur DML  
+#### <a name="to-disable-and-enable-a-dml-trigger"></a>Pour désactiver et activer un déclencheur DML  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et développez-la.  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour supprimer un déclencheur DML  
+#### <a name="to-delete-a-dml-trigger"></a>Pour supprimer un déclencheur DML  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -115,7 +119,7 @@ GO
   
 ```  
   
-#### Pour désactiver et activer un déclencheur DML  
+#### <a name="to-disable-and-enable-a-dml-trigger"></a>Pour désactiver et activer un déclencheur DML  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -156,7 +160,7 @@ ENABLE TRIGGER Sales.bonus_reminder ON Sales.SalesPersonQuotaHistory;
 GO  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

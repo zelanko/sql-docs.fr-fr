@@ -1,33 +1,37 @@
 ---
-title: "Propri&#233;t&#233;s de s&#233;quence (page G&#233;n&#233;ral) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.sequence.general.f1"
+title: "Propriétés de séquence (page Général) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.sequence.general.f1
 ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 46ce2a01967b75aa0fec969d24cf6ad320932ace
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propri&#233;t&#233;s de s&#233;quence (page G&#233;n&#233;ral)
+# <a name="sequence-properties-general-page"></a>Propriétés de séquence (page Général)
   Crée un objet séquence et spécifie ses propriétés. Une séquence est un objet lié par schéma défini par l'utilisateur qui génère une séquence de valeurs numériques d'après la spécification avec laquelle la séquence a été créée. La séquence de valeurs numériques est générée dans un ordre croissant ou décroissant à un intervalle défini et peut être configurée pour redémarrer (cycle) lorsque épuisée. Les séquences, contrairement aux colonnes d'identité, ne sont pas associées aux tables spécifiques. Les applications font référence à un objet séquence pour extraire sa valeur suivante. La relation entre les séquences et les tables est contrôlée par l'application. Les applications utilisateur peuvent référencer un objet séquence et coordonner les valeurs sur plusieurs lignes et tables.  
   
  Contrairement aux valeurs des colonnes d’identité générées au moment de l’insertion, une application peut obtenir le numéro séquentiel suivant sans insérer la ligne en appelant la [fonction NEXT VALUE FOR](../../t-sql/functions/next-value-for-transact-sql.md). Utilisez [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) pour obtenir plusieurs numéros séquentiels à la fois.  
   
- Pour obtenir des informations et des scénarios qui utilisent à la fois **CREATE SEQUENCE** et la fonction **NEXT VALUE FOR**, consultez [Numéros de séquence](../../relational-databases/sequence-numbers/sequence-numbers.md).  
+ Pour obtenir des informations et des scénarios qui utilisent à la fois **CREATE SEQUENCE** et la fonction **NEXT VALUE FOR** , consultez [Numéros de séquence](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
  Cette page est accessible de deux manières : soit en cliquant avec le bouton droit sur **Séquences** dans l’Explorateur d’objets et en sélectionnant **Nouvelle séquence**, soit en cliquant avec le bouton droit sur une séquence existante et en sélectionnant **Propriétés**. Quand vous cliquez avec le bouton droit sur une séquence et que vous choisissez **Propriétés**, les options ne sont pas modifiables. Pour modifier les options de séquence, utilisez l’instruction [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md) ou supprimez et recréez l’objet séquence.  
   
-## Options  
+## <a name="options"></a>Options  
  **Nom de la séquence**  
  Entrez ici le nom de la séquence.  
   
@@ -35,27 +39,27 @@ caps.handback.revision: 10
  Spécifiez le schéma qui détiendra cette séquence.  
   
  **Type de données**  
- Une séquence peut être définie comme tout type entier. Cela inclut :  
+ Une séquence peut être définie comme tout type entier. Cela inclut :  
   
 |Type de données|Plage|  
 |---------------|-----------|  
 |**tinyint**|0 à 255|  
-|**smallint**|-32 768 à 32 767|  
-|**int**|-2 147 483 648 à 2 147 483 647|  
-|**bigint**|-9 223 372 036 854 775 808 à 9 223 372 036 854 775 807|  
+|**smallint**|-32 768 à 32 767|  
+|**int**|-2 147 483 648 à 2 147 483 647|  
+|**bigint**|-9 223 372 036 854 775 808 à 9 223 372 036 854 775 807|  
   
 -   **décimal** ou **numérique** avec une échelle de 0.  
   
 -   Tout type de données défini par l'utilisateur (type d'alias) basé sur l'un de ces types.  
   
  **Précision**  
- Pour les types de données **décimal** ou **numérique**, spécifiez la précision. (L'échelle est toujours 0.)  
+ Pour les types de données **décimal** ou **numérique** , spécifiez la précision. (L'échelle est toujours 0.)  
   
  **Démarrer avec la valeur**  
  Première valeur qui sera retournée par l'objet séquence. La valeur **START** doit être une valeur inférieure ou égale à la valeur maximale, et supérieure ou égale à la valeur minimale de l’objet séquence. La valeur de début par défaut d'un nouvel objet séquence correspond à la valeur minimale pour un objet séquence croissant et à la valeur maximale pour un objet séquence décroissant.  
   
  **Incrémenter de**  
- Valeur utilisée pour incrémenter (ou décrémenter en cas de valeurs négatives) la valeur de l’objet séquence pour chaque appel à la fonction **NEXT VALUE FOR**. Si l'incrément est une valeur négative, l'objet séquence décroît ; sinon, il augmente. L'incrément ne peut pas avoir la valeur 0.  
+ Valeur utilisée pour incrémenter (ou décrémenter en cas de valeurs négatives) la valeur de l’objet séquence pour chaque appel à la fonction **NEXT VALUE FOR** . Si l'incrément est une valeur négative, l'objet séquence décroît ; sinon, il augmente. L'incrément ne peut pas avoir la valeur 0.  
   
  **Valeur minimale**  
  Spécifie les limites de l'objet séquence. La valeur minimale par défaut d'un nouvel objet séquence correspond à la valeur minimale du type de données de l'objet séquence. Il s’agit de zéro pour le type de données **tinyint** et d’un nombre négatif pour tous les autres types de données.  
@@ -82,10 +86,10 @@ caps.handback.revision: 10
   
  Pour plus d’informations sur les options de création de séquence, consultez [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md).  
   
-## Autorisations  
- Nécessite l’autorisation **CREATE SEQUENCE**, **ALTER** ou **CONTROL** sur le SCHEMA.  
+## <a name="permissions"></a>Autorisations  
+ Nécessite l’autorisation **CREATE SEQUENCE**, **ALTER**ou **CONTROL** sur le SCHEMA.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sys.sequences &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)  
   
   

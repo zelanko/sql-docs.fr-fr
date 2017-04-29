@@ -1,34 +1,38 @@
 ---
-title: "Chiffrer une colonne de donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "chiffrement [SQL Server], colonnes"
-  - "chiffrement [SQL Server], colonnes"
-  - "chiffrement au niveau colonne"
-  - "chiffrement au niveau cellule"
+title: "Chiffrer une colonne de données | Microsoft Docs"
+ms.custom: 
+ms.date: 03/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [SQL Server], columns
+- cryptography [SQL Server], columns
+- column level encryption
+- cell level encryption
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1451071485e8994dd90ea447e28d9b32e511dd1a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Chiffrer une colonne de donn&#233;es
+# <a name="encrypt-a-column-of-data"></a>Chiffrer une colonne de données
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Cette rubrique explique comment chiffrer une colonne de données à l'aide du chiffrement symétrique dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] avec [!INCLUDE[tsql](../../../includes/tsql-md.md)]. On parle parfois de chiffrement au niveau colonne ou au niveau cellule.  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 27
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Les autorisations suivantes sont nécessaires pour effectuer les étapes ci-dessous :  
+ Les autorisations suivantes sont nécessaires pour effectuer les étapes ci-dessous :  
   
 -   Autorisation CONTROL sur la base de données.  
   
@@ -51,7 +55,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour chiffrer une colonne de données à l'aide d'un chiffrement symétrique simple  
+#### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Pour chiffrer une colonne de données à l'aide d'un chiffrement symétrique simple  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -114,7 +118,7 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### Pour chiffrer une colonne de données à l'aide du chiffrement symétrique qui inclut un authentificateur  
+#### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>Pour chiffrer une colonne de données à l'aide du chiffrement symétrique qui inclut un authentificateur  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -177,7 +181,7 @@ caps.handback.revision: 27
     GO  
     ```  
   
- Pour plus d'informations, consultez les documents suivants :  
+ Pour plus d'informations, consultez les documents suivants :  
   
 -   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-certificate-transact-sql.md)  
   
@@ -188,3 +192,4 @@ caps.handback.revision: 27
 -   [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-symmetric-key-transact-sql.md)  
   
   
+

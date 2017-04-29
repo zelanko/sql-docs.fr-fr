@@ -1,26 +1,30 @@
 ---
-title: "&#201;v&#233;nements DDL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DDL (événements)"
-  - "Déclencheurs DDL, événements"
-  - "événements [SQL Server], DDL"
+title: "Événements DDL | Microsoft Docs"
+ms.custom: 
+ms.date: 11/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DDL events
+- DDL triggers, events
+- events [SQL Server], DDL
 ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 411eb6c824b073818fbda216ba801d34ee5bcf0b
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#201;v&#233;nements DDL
+# <a name="ddl-events"></a>Événements DDL
   Les tableaux suivants répertorient les événements DDL qui peuvent être utilisés pour activer une notification d'événements ou un déclencheur DDL. Notez que chaque événement correspond à une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] ou à une procédure stockée, la syntaxe de l'instruction étant modifiée pour inclure un trait de soulignement (_) entre les mots clés.  
   
 > [!IMPORTANT]  
@@ -117,3 +121,4 @@ caps.handback.revision: 29
  [Groupes d’événements DDL](../../relational-databases/triggers/ddl-event-groups.md)  
   
   
+

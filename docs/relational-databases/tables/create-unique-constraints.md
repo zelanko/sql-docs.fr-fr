@@ -1,39 +1,43 @@
 ---
-title: "Cr&#233;er des contraintes uniques | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "UNIQUE_TSQL"
-helpviewer_keywords: 
-  - "contraintes UNIQUE [SQL Server], création"
-  - "contraintes [SQL Server], création"
-  - "contraintes [SQL Server], uniques"
+title: "Créer des contraintes uniques | Microsoft Docs"
+ms.custom: 
+ms.date: 10/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- UNIQUE_TSQL
+helpviewer_keywords:
+- UNIQUE constraints [SQL Server], creating
+- constraints [SQL Server], creating
+- constraints [SQL Server], unique
 ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8721056ce88631e4f86c71d8e557e0badcf13c48
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er des contraintes uniques
+# <a name="create-unique-constraints"></a>Créer des contraintes uniques
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Vous pouvez créer une contrainte unique dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] pour interdire l'entrée de doublons dans des colonnes spécifiques qui ne participent pas à une clé primaire. La création d'une contrainte unique crée automatiquement un index unique correspondant.  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour créer une contrainte unique à l'aide de :**  
+-   **Pour créer une contrainte unique à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -46,23 +50,23 @@ caps.handback.revision: 18
 ####  <a name="Permissions"></a> Autorisations  
  Requiert une autorisation ALTER sur la table.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour créer une contrainte unique  
+#### <a name="to-create-a-unique-constraint"></a>Pour créer une contrainte unique  
   
 1.  Dans **l’Explorateur d’objets**, cliquez avec le bouton droit sur la table à laquelle vous souhaitez ajouter une contrainte unique et cliquez sur **Conception**.  
   
-2.  Dans le menu **Concepteur de tables**, cliquez sur **Index/Clés**.  
+2.  Dans le menu **Concepteur de tables** , cliquez sur **Index/Clés**.  
   
-3.  Dans la boîte de dialogue **Index/Clés**, cliquez sur **Ajouter**.  
+3.  Dans la boîte de dialogue **Index/Clés** , cliquez sur **Ajouter**.  
   
 4.  Dans la grille sous **Général**, cliquez sur **Type** et choisissez **Clé unique** dans la zone de liste déroulante située à droite de la propriété.  
   
-5.  Dans le menu **Fichier**, cliquez sur **Enregistrer***nom de la table*.  
+5.  Dans le menu **Fichier** , cliquez sur **Enregistrer***nom de la table*.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour créer une contrainte unique  
+#### <a name="to-create-a-unique-constraint"></a>Pour créer une contrainte unique  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -82,7 +86,7 @@ caps.handback.revision: 18
   
     ```  
   
-#### Pour créer une contrainte unique sur une table existante  
+#### <a name="to-create-a-unique-constraint-on-an-existing-table"></a>Pour créer une contrainte unique sur une table existante  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -99,7 +103,7 @@ caps.handback.revision: 18
   
     ```  
   
-#### Pour créer une contrainte unique sur une nouvelle table  
+#### <a name="to-create-a-unique-constraint-in-an-new-table"></a>Pour créer une contrainte unique sur une nouvelle table  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -119,6 +123,7 @@ caps.handback.revision: 18
   
     ```  
   
-     Pour plus d’informations, consultez [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md), [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) et [table_constraint &#40;Transact-SQL&#41;](../Topic/table_constraint%20\(Transact-SQL\).md).  
+     Pour plus d’informations, consultez [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md), [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) et [table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md).  
   
 ###  <a name="TsqlExample"></a>  
+

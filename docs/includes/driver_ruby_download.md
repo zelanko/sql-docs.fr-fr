@@ -1,0 +1,1 @@
+![Télécharger](../ssdt/media/download.png)[Installer le pilote Ruby](http://msdn.microsoft.com/library/mt711041.aspx)

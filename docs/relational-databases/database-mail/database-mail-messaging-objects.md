@@ -1,27 +1,31 @@
 ---
-title: "Objets de messagerie de base de donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "messagerie de base de données [SQL Server], bases de données hôtes"
-  - "messagerie de base de données [SQL Server], objets de messagerie"
-  - "bases de données hôtes de messagerie [SQL Server]"
-  - "bases de données hôtes [messagerie de base de données]"
+title: "Objets de messagerie de base de données | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Database Mail [SQL Server], host databases
+- Database Mail [SQL Server], messaging objects
+- mail host databases [SQL Server]
+- host databases [Database Mail]
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0ac02628b0b385841805994ec17dd121d84d7399
+ms.lasthandoff: 04/11/2017
+
 ---
-# Objets de messagerie de base de donn&#233;es
+# <a name="database-mail-messaging-objects"></a>Objets de messagerie de base de données
   La base de données **msdb** est la base de données hôte de messagerie de base de données. Elle contient les procédures stockées et les objets de messagerie de la messagerie de base de données. Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] contient l'Assistant Configuration de la messagerie de base de données qui permet d'activer la messagerie de base de données, de créer et de gérer les profils et les comptes, et de configurer les options de la messagerie de base de données.  
   
 ##  <a name="ComponentsAndConcepts"></a> Objets dans la base de données **msdb**  
@@ -31,7 +35,7 @@ caps.handback.revision: 31
   
  Ces objets sont l'interface de la messagerie de base de données au sein de la base de données hôte de messagerie. D'autres objets sont installés pour implémenter les fonctions proposées par les objets répertoriés ci-dessus. Cependant, ces objets sont réservés à une utilisation interne.  
   
-|Nom   |Type|Description|  
+|Nom|Type|Description|  
 |----------|----------|-----------------|  
 |[sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)|**Affichage**|Liste tous les messages soumis à la messagerie de base de données.|  
 |[sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|**Affichage**|Liste les messages sur le comportement du [Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md).|  
@@ -46,9 +50,8 @@ caps.handback.revision: 31
 |[sysmail_start_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|**Procédure stockée**|Démarre les objets Service Broker utilisés par le programme externe. Ces objets sont démarrés par défaut.|  
 |[sysmail_stop_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|**Procédure stockée**|Arrête les objets Service Broker utilisés par le programme externe.|  
   
- [&#91;Haut&#93;](#Top)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   

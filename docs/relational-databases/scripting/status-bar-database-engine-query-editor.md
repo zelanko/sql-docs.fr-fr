@@ -1,29 +1,33 @@
 ---
-title: "Barre d&#39;&#233;tat (&#233;diteur de requ&#234;te du moteur de base de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Barre d’état (éditeur de requête du moteur de base de données) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 34d7a9bfaf04f1ea7d201083201aa3c8a3895061
+ms.lasthandoff: 04/11/2017
+
 ---
-# Barre d&#39;&#233;tat (&#233;diteur de requ&#234;te du moteur de base de donn&#233;es)
+# <a name="status-bar-database-engine-query-editor"></a>Barre d'état (éditeur de requête du moteur de base de données)
   La barre d'état des fenêtres de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut être codée par couleur pour indiquer l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] auquel chaque fenêtre est connectée.  
   
-1.  **Avant de commencer :**  [Couleurs de la barre d'état](#StatusBarColors)  
+1.  **Before you begin:**  [Status Bar Colors](#StatusBarColors)  
   
-2.  **Pour définir une couleur d'état du serveur dans :**  [Explorateur d'objets](#SetOEServerColor), [Serveur inscrit](#SetRegServerColor)  
+2.  **To set a server status color in:**  [Object Explorer](#SetOEServerColor), [Registered Server](#SetRegServerColor)  
   
-3.  **Pour utiliser une couleur d'état :**  [Ouvrir un Éditeur de requête à l'aide d'une couleur de serveur](#OpenServerColor), [Ouvrir un Éditeur de requête en spécifiant une couleur d'état](#OpenSpecColor)  
+3.  **To use a status color:**  [Open Query Editor Using a Server Color](#OpenServerColor), [Open a Query Editor Specifying a Status Color](#OpenSpecColor)  
   
 ##  <a name="StatusBarColors"></a> Couleurs de la barre d'état  
  Vous pouvez associer une couleur de barre d'état à un nœud serveur spécifique dans l' **Explorateur d'objets** ou dans **Serveurs inscrits**. Les couleurs peuvent être spécifiées uniquement pour des nœuds serveurs connectés à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)], et non pour des nœuds serveurs pour d'autres technologies SQL Server. Vous pouvez également spécifier une couleur de barre d'état personnalisée chaque fois que vous connectez une nouvelle fenêtre de l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Vous pouvez ensuite ouvrir une fenêtre d'Éditeur de requête soit en utilisant la couleur d'état définie pour le nœud serveur, soit en spécifiant une couleur unique pour cette fenêtre d'éditeur.  
@@ -63,7 +67,7 @@ caps.handback.revision: 7
 ##  <a name="OpenServerColor"></a> Ouvrir un éditeur à l'aide d'une couleur de serveur  
  **Pour ouvrir une fenêtre d'éditeur à l'aide d'une couleur de serveur**  
   
--   Cliquez avec le bouton droit sur un nœud serveur dans l’**Explorateur d’objets** ou dans **Serveurs inscrits**, puis sélectionnez **Nouvelle requête**.  
+-   Cliquez avec le bouton droit sur un nœud serveur dans l’ **Explorateur d’objets** ou dans **Serveurs inscrits**, puis sélectionnez **Nouvelle requête**.  
   
 -   En guise d'alternative, mettez en surbrillance un nœud serveur, puis sélectionnez le bouton **Nouvelle requête** dans la barre d'outils.  
   
@@ -84,7 +88,7 @@ caps.handback.revision: 7
   
 -   Remplissez le reste des informations de connexion, puis cliquez sur le bouton **Se connecter** .  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

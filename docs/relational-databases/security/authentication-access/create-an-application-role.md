@@ -1,26 +1,30 @@
 ---
-title: "Cr&#233;er un r&#244;le d&#39;application | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.approle.general.f1"
-helpviewer_keywords: 
-  - "rôles des applications [SQL Server], création"
+title: "Créer un rôle d’application | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.approle.general.f1
+helpviewer_keywords:
+- application roles [SQL Server], creating
 ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0778c9ac00e6d9c06161ccc8429e0eb9ae4d846d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er un r&#244;le d&#39;application
+# <a name="create-an-application-role"></a>Créer un rôle d'application
   Cette rubrique explique comment créer un rôle d'application dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Les rôles d'application limitent l'accès utilisateur à une base de données sauf via des applications spécifiques. Les rôles d'application ne possèdent pas d'utilisateurs, de sorte que la liste **Membres du rôle** n'est pas affichée lorsque l'option **Rôle d'application** est sélectionnée.  
   
 > [!IMPORTANT]  
@@ -28,11 +32,11 @@ caps.handback.revision: 27
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour créer un rôle d'application, utilisez :**  
+-   **Pour créer un rôle d'application, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -45,9 +49,9 @@ caps.handback.revision: 27
 ####  <a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation ALTER ANY APPLICATION ROLE sur la base de données.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-##### Pour créer un rôle d'application  
+##### <a name="to-create-an-application-role"></a>Pour créer un rôle d'application  
   
 1.  Dans l'Explorateur d'objets, développez la base de données dans laquelle vous souhaitez créer un rôle d'application.  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 27
   
 5.  Dans la boîte de dialogue **Rôle d'application - Nouveau** , sur la **Page générale**, entrez le nouveau nom du nouvel rôle d'application dans la zone **Nom du rôle** .  
   
-6.  Dans la zone **Schéma par défaut** , spécifiez le schéma qui possédera les objets créés par ce rôle en entrant les noms d'objet. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Localiser le schéma**.  
+6.  Dans la zone **Schéma par défaut** , spécifiez le schéma qui possédera les objets créés par ce rôle en entrant les noms d'objet. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Localiser le schéma** .  
   
 7.  Dans la zone **Mot de passe** , entrez un mot de passe pour le nouveau rôle. Entrez à nouveau ce mot de passe dans la zone **Confirmer le mot de passe** .  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 27
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### Options supplémentaires  
+### <a name="additional-options"></a>Options supplémentaires  
  La boîte de dialogue **Rôle d'application - Nouveau** offre également des options sur deux pages supplémentaires : **Éléments sécurisables** et **Propriétés étendues**.  
   
 -   La page **Éléments sécurisables** répertorie tous les éléments sécurisables possibles et les autorisations sur ces éléments sécurisables qui peuvent être accordées à la connexion.  
@@ -76,7 +80,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour créer un rôle d'application  
+#### <a name="to-create-an-application-role"></a>Pour créer un rôle d'application  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

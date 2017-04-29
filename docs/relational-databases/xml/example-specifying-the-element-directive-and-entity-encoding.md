@@ -1,28 +1,32 @@
 ---
-title: "Exemple : sp&#233;cification de la directive ELEMENT et de l&#39;encodage d&#39;entit&#233; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ELEMENT, directive"
-  - "encodage d'entité [XML]"
+title: "Exemple : spécification de la directive ELEMENT et de l’encodage d’entité | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ELEMENT directive
+- entity encoding [XML]
 ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d2ddb67aee711a217bd9f75b62ef14067e4aac55
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exemple : sp&#233;cification de la directive ELEMENT et de l&#39;encodage d&#39;entit&#233;
+# <a name="example-specifying-the-element-directive-and-entity-encoding"></a>Exemple : spécification de la directive ELEMENT et de l'encodage d'entité
   Cet exemple illustre la différence entre les directives **ELEMENT** et **XML** . La directive **ELEMENT** décompose les données en entités, contrairement à la directive **XML** . L’élément \<Summary> reçoit des données XML, `<Summary>This is summary description</Summary>`, dans la requête.  
   
- Prenons par exemple la requête suivante :  
+ Prenons par exemple la requête suivante :  
   
 ```  
 USE AdventureWorks2012;  
@@ -67,7 +71,7 @@ FOR XML EXPLICIT
 </ProductModel>  
 ```  
   
- Au lieu d’affecter une valeur XML statique, la requête suivante utilise la méthode **query()** du type **xml** pour extraire la description résumée des modèles de produit de la colonne CatalogDescription de type **xml**. Le résultat étant de type **xml** , aucune décomposition en entités n'est appliquée.  
+ Au lieu d’affecter une valeur XML statique, la requête suivante utilise la méthode **query()** du type **xml** pour extraire la description résumée des modèles de produit de la colonne CatalogDescription de type **xml** . Le résultat étant de type **xml** , aucune décomposition en entités n'est appliquée.  
   
 ```  
 SELECT  1 as Tag,  
@@ -91,7 +95,7 @@ ORDER BY [ProductModel!1!ProdModelID],Tag
 FOR XML EXPLICIT  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser le mode EXPLICIT avec FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

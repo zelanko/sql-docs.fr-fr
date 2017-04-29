@@ -1,35 +1,39 @@
 ---
-title: "Publier une base de donn&#233;es (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Publier une base de données (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b86537401dc8866f271472e7fa6c1b4eb33d8827
+ms.lasthandoff: 04/11/2017
+
 ---
-# Publier une base de donn&#233;es (SQL Server Management Studio)
+# <a name="publish-a-database-sql-server-management-studio"></a>Publier une base de données (SQL Server Management Studio)
   Vous pouvez utiliser l' **Assistant Générer et publier des scripts** pour publier une base de données entière ou des objets de base de données individuels sur un fournisseur d'hébergement Web.  
   
 > [!NOTE]  
 >  Les fonctionnalités décrites dans cette rubrique étaient fournies par l'Assistant Publication de base de données. La fonctionnalité de publication a été ajoutée à l'Assistant Générer et publier des scripts, et l'Assistant Publication de base de données a été supprimé.  
   
-## Assistant Générer et publier des scripts  
+## <a name="generate-and-publish-scripts-wizard"></a>Assistant Générer et publier des scripts  
  L'Assistant Générer et publier des scripts peut être utilisé pour publier une base de données ou des objets de base de données sélectionnés sur un fournisseur d'hébergement Web. Un fournisseur d'hébergement Web SQL Server est une interface de connectivité vers un service Web. Le service Web est créé à l'aide du projet Database Publishing Services depuis le SQL Server Hosting Toolkit sur CodePlex. Le service Web permet aux clients de l'hébergeur Web de publier plus facilement leurs bases de données sur le service à l'aide de l'Assistant Générer et publier des scripts. Pour plus d'informations sur le téléchargement du SQL Server Hosting Toolkit, consultez [SQL Server Database Publishing Services](http://go.microsoft.com/fwlink/?LinkId=142025)(en anglais).  
   
  L'Assistant Générer et publier des scripts peut également être utilisé pour créer un script pour le transfert d'une base de données.  
   
-#### Pour publier une base de données sur un service Web  
+#### <a name="to-publish-a-database-to-a-web-service"></a>Pour publier une base de données sur un service Web  
   
-1.  Dans l’Explorateur d’objets, développez **Bases de données**, cliquez avec le bouton droit sur une base de données, pointez sur **Tâches** et cliquez sur **Générer et publier des scripts**. Exécutez les étapes de l'Assistant pour générer un script pour la publication des objets de la base de données.  
+1.  Dans l’Explorateur d’objets, développez **Bases de données**, cliquez avec le bouton droit sur une base de données, pointez sur **Tâches**et cliquez sur **Générer et publier des scripts**. Exécutez les étapes de l'Assistant pour générer un script pour la publication des objets de la base de données.  
   
 2.  Dans la page **Sélectionner les objets** , sélectionnez les objets à publier sur le service d'hébergement Web.  
   
@@ -43,7 +47,7 @@ caps.handback.revision: 10
   
 5.  Dans la page **Enregistrer ou publier des scripts** , surveillez la progression de la publication.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Générer des scripts &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)   
  [Copier des bases de données sur d'autres serveurs](../../relational-databases/databases/copy-databases-to-other-servers.md)  
   

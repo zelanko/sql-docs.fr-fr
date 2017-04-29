@@ -1,33 +1,37 @@
 ---
-title: "Supprimer une condition de gestion bas&#233;e sur des strat&#233;gies. | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gestion basée sur des stratégies, suppression des conditions de stratégie"
+title: "Supprimer une condition de gestion basée sur des stratégies | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, delete policy conditions
 ms.assetid: e04148b8-f6dd-4c50-a5ef-c650b71dbf4d
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c4760109e6bd360e008dc962639880091d916ec3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Supprimer une condition de gestion bas&#233;e sur des strat&#233;gies.
+# <a name="delete-a-policy-based-management-condition"></a>Supprimer une condition de gestion basée sur des stratégies
   Cette rubrique explique comment supprimer une condition de gestion basée sur des stratégies dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour supprimer une condition à l'aide de :**  
+-   **Pour supprimer une condition à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -38,9 +42,9 @@ caps.handback.revision: 9
 ####  <a name="Permissions"></a> Autorisations  
  Nécessite l'appartenance au rôle PolicyAdministratorRole dans la base de données msdb.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour supprimer une condition  
+#### <a name="to-delete-a-condition"></a>Pour supprimer une condition  
   
 1.  Dans l' **Explorateur d'objets**, cliquez sur le signe plus (+) pour développer le serveur qui contient la condition que vous souhaitez supprimer.  
   

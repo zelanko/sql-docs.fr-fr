@@ -1,25 +1,29 @@
 ---
-title: "Objet SQLServer:SQL Errors | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Errors (objet)"
-  - "SQLServer:SQL Errors"
+title: SQL Server, objet SQL Errors | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Errors object
+- SQLServer:SQL Errors
 ms.assetid: 6e5273ca-29cb-4618-88a2-70b9b8d6cf76
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8cde07237e3794e4643f117e12f531d25ef5bf8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Objet SQLServer:SQL Errors
+# <a name="sql-server-sql-errors-object"></a>Objet SQLServer:SQL Errors
   L'objet **SQLServer:SQL Errors** de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des compteurs qui permettent de surveiller les **Erreurs SQL**.  
   
  Le tableau suivant décrit les compteurs d' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Erreurs SQL** .  
@@ -28,7 +32,7 @@ caps.handback.revision: 14
 |------------------------------------|-----------------|  
 |**Erreurs/s**|Nombre d'erreurs par seconde.|  
   
- Chaque compteur de l'objet contient les instances suivantes :  
+ Chaque compteur de l'objet contient les instances suivantes :  
   
 |Élément|Définition|  
 |----------|----------------|  
@@ -38,7 +42,7 @@ caps.handback.revision: 14
 |**Kill Connection Errors**|Effectue le suivi des erreurs graves qui amènent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à mettre fin à la connexion actuelle.|  
 |**User Errors**|Informations relatives aux erreurs utilisateur.|  
   
-## Voir aussi  
- [Surveiller l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

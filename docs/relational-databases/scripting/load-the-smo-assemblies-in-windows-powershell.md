@@ -1,35 +1,39 @@
 ---
-title: "Charger les assemblys SMO dans Windows PowerShell | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Charger les assemblys SMO dans Windows PowerShell | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8ca42b69-da5a-47f4-9085-34e443f0e389
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 149ba0be18c46dbf2171f7a1fac0641ae81d3515
+ms.lasthandoff: 04/11/2017
+
 ---
-# Charger les assemblys SMO dans Windows PowerShell
+# <a name="load-the-smo-assemblies-in-windows-powershell"></a>Charger les assemblys SMO dans Windows PowerShell
   Cette rubrique décrit comment charger les assemblys SMO (SQL Server Management Object) dans des scripts Windows PowerShell qui n'utilisent pas le fournisseur SQL Server PowerShell.  
   
-## Avant de commencer  
+## <a name="before-you-begin"></a>Avant de commencer  
  Le mécanisme recommandé pour le chargement des assemblys SMO consiste à charger le module **sqlps** . Le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclus dans le module charge automatiquement les assemblys SMO et implémente des fonctionnalités qui étendent l'utilité des objets SMO dans les scripts PowerShell.  Pour plus d’informations, consultez [Importer le module SQLPS](../../relational-databases/scripting/import-the-sqlps-module.md).
   
- Il existe deux cas dans lesquels vous pouvez être amené à charger les assemblys SMO directement :  
+ Il existe deux cas dans lesquels vous pouvez être amené à charger les assemblys SMO directement :  
   
--   Votre script fait référence à un objet SMO avant la première commande faisant référence au fournisseur ou aux applets de commande des composants logiciels enfichables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Votre script fait référence à un objet SMO avant la première commande faisant référence au fournisseur ou aux applets de commande des composants logiciels enfichables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Vous souhaitez porter du code SMO à partir d'un autre langage, par exemple C# ou Visual Basic, qui n'utilise pas le fournisseur ou les applets de commande.  
   
-## Exemple : chargement d'objets SMO (SQL Server Management Object)  
- Le code suivant charge les assemblys SMO :  
+## <a name="example-loading-the-sql-server-management-objects"></a>Exemple : chargement d'objets SMO (SQL Server Management Object)  
+ Le code suivant charge les assemblys SMO :  
   
 ```  
 #  
@@ -84,7 +88,7 @@ update-FormatData -prependpath SQLProvider.Format.ps1xml
 Pop-Location  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   
   

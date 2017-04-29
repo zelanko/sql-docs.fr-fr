@@ -1,22 +1,26 @@
 ---
-title: "DDL, fonctions, proc&#233;dures stock&#233;es et vues de recherche en texte int&#233;gral | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "DDL, fonctions, procédures stockées et vues de la recherche en texte intégral | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 98c36715-4195-482e-a4a3-d93ff65b75f1
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d632e025a0a9fe18dbf42d773ff0e943263f4851
+ms.lasthandoff: 04/11/2017
+
 ---
-# DDL, fonctions, proc&#233;dures stock&#233;es et vues de recherche en texte int&#233;gral
+# <a name="full-text-search-ddl-functions-stored-procedures-and-views"></a>DDL, fonctions, procédures stockées et vues de recherche en texte intégral
   Répertorie les instructions Transact-SQL et les objets de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prennent en charge la recherche en texte intégral, y compris la fonctionnalité de recherche de propriété.  
   
  Cette liste n'inclut pas les objets déconseillés.  

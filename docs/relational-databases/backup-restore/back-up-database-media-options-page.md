@@ -1,26 +1,30 @@
 ---
-title: "Sauvegarder la base de donn&#233;es (page Options de support) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "swb.backupdatabase.mediaoptions.f1"
-  - "sql13.swb.backupdatabase.mediaoptions.f1"
+title: "Sauvegarder la base de données (page Options de support) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- swb.backupdatabase.mediaoptions.f1
+- sql13.swb.backupdatabase.mediaoptions.f1
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e1fd480768d75f33793f7260eb2652a25c1cc77
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sauvegarder la base de donn&#233;es (page Options de support)
-  Utilisez la page **Options de support** de la boîte de dialogue **Sauvegarder la base de données** pour afficher ou modifier les options de sauvegarde de la base de données.  
+# <a name="back-up-database-media-options-page"></a>Sauvegarder la base de données (page Options de support)
+  Utilisez la page  **Options de support** de la boîte de dialogue **Sauvegarder la base de données** pour afficher ou modifier les options de sauvegarde de la base de données.  
   
  **Pour créer une sauvegarde à l'aide de SQL Server Management Studio**  
   
@@ -34,10 +38,10 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  Quand vous spécifiez une tâche de sauvegarde à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous pouvez générer le script [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) correspondant en cliquant sur le bouton **Script** et en sélectionnant une destination pour le script.  
   
-## Options  
+## <a name="options"></a>Options  
   
-### Remplacer le support  
- Les options du volet **Remplacer le support** contrôlent la façon dont la sauvegarde est écrite sur le support. Si vous avez sélectionné l'URL (Stockage Windows Azure) comme destination de la sauvegarde dans la page Général de la boîte de dialogue Sauvegarder la base de données, les options sous la section Remplacer le support sont désactivées. Pour remplacer une sauvegarde, utilisez l’instruction Transact-SQL **BACKUP TO URL.. WITH FORMAT**. Pour plus d’informations, consultez [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+### <a name="overwrite-media"></a>Remplacer le support  
+ Les options du volet **Remplacer le support** contrôlent la façon dont la sauvegarde est écrite sur le support. Si vous avez sélectionné l'URL (Stockage Windows Azure) comme destination de la sauvegarde dans la page Général de la boîte de dialogue Sauvegarder la base de données, les options sous la section Remplacer le support sont désactivées. Pour remplacer une sauvegarde, utilisez l’instruction Transact-SQL **BACKUP TO URL. WITH FORMAT**. Pour plus d’informations, consultez [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
  Seule l’option **Sauvegarder sur un nouveau support de sauvegarde et effacer tous les jeux de sauvegarde existants** est prise en charge avec les options de chiffrement. Si vous sélectionnez les options sous la section **Sauvegarder sur le support de sauvegarde existant**, les options de chiffrements sur la page **Options de sauvegarde** sont désactivées.  
   
@@ -47,7 +51,7 @@ caps.handback.revision: 7
  **Sauvegarder sur le support de sauvegarde existant**  
  Sauvegarde la base de données sur le support de sauvegarde existant. L'activation de cette case d'option active trois options.  
   
- Choisissez l'une des options suivantes :  
+ Choisissez l'une des options suivantes :  
   
  **Ajouter au jeu de sauvegarde existant**  
  Ajoute le jeu de sauvegarde au support de sauvegarde existant, tout en préservant les sauvegardes antérieures.  
@@ -64,7 +68,7 @@ caps.handback.revision: 7
  **Sauvegarder sur un nouveau support de sauvegarde et effacer tous les jeux de sauvegarde existants**  
  Utilise un nouveau support de sauvegarde et efface tous les jeux de sauvegarde antérieurs s'y trouvant.  
   
- Si vous cliquez sur cette option, les options suivantes sont activées :  
+ Si vous cliquez sur cette option, les options suivantes sont activées :  
   
  **Nouveau nom du support de sauvegarde**  
  Éventuellement, entrez un nouveau nom pour le support de sauvegarde.  
@@ -72,7 +76,7 @@ caps.handback.revision: 7
  **Description du nouveau support de sauvegarde**  
  Éventuellement, entrez une description significative pour le support de sauvegarde. Cette description doit être suffisamment explicite pour indiquer avec précision le contenu du support.  
   
-### Fiabilité  
+### <a name="reliability"></a>Fiabilité  
  Les options du volet **Journal des transactions** contrôlent la gestion des erreurs par l’opération de sauvegarde.  
   
  **Vérifier la sauvegarde en fin d'opération**  
@@ -84,7 +88,7 @@ caps.handback.revision: 7
  **Continuer lors d'erreurs**  
  La sauvegarde se poursuit même si une ou plusieurs erreurs sont rencontrées.  
   
-### Journal des transactions  
+### <a name="transaction-log"></a>Journal des transactions  
  Les options du volet **Journal des transactions** contrôlent le comportement d’une sauvegarde de journal des transactions. Ces options concernent uniquement le mode de récupération complète ou le mode de récupération utilisant les journaux de transactions. Elles sont activées uniquement si **Journal des transactions** a été sélectionné dans le champ **Type de sauvegarde** de la page [Général](../../relational-databases/backup-restore/back-up-database-general-page.md) de la boîte de dialogue **Sauvegarder la base de données**.  
   
 > [!NOTE]  
@@ -98,7 +102,7 @@ caps.handback.revision: 7
   
  La sélection de cette option revient à spécifier WITH NO_TRUNCATE, NORECOVERY dans une instruction [BACKUP](../../t-sql/statements/backup-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]). Pour plus d’informations, consultez [Sauvegardes de la fin du journal &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
-### Lecteur de bande  
+### <a name="tape-drive"></a>Lecteur de bande  
  Les options du volet **Lecteur de bande** contrôlent la gestion des bandes durant l’opération de sauvegarde. Ces options sont activées uniquement si **Bande** a été sélectionné dans le volet **Destination** de la page [Général](../../relational-databases/backup-restore/back-up-database-general-page.md) de la boîte de dialogue **Sauvegarder la base de données**.  
   
 > [!NOTE]  
@@ -110,7 +114,7 @@ caps.handback.revision: 7
  **Rembobiner la bande avant de décharger**  
  La bande est automatiquement libérée et rembobinée avant d'être déchargée. Cette option est activée uniquement si **Décharger la bande après la sauvegarde** est sélectionné.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Sauvegarder des fichiers et des groupes de fichiers &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   

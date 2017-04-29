@@ -1,34 +1,38 @@
 ---
-title: "Exemple&#160;: restauration fragmentaire d&#39;une base de donn&#233;es (Mode de restauration compl&#232;te) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mode de récupération complète [SQL Server], exemple RESTORE"
-  - "restaurations fragmentaires [SQL Server], mode de récupération complète"
-  - "séquences de restauration [SQL Server], fragmentaires"
+title: "Exemple : restauration fragmentaire d’une base de données (Mode de restauration complète) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full recovery model [SQL Server], RESTORE example
+- piecemeal restores [SQL Server], full recovery model
+- restore sequences [SQL Server], piecemeal
 ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a939ad4e9e5313961f681c06f896a9f53a906e8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exemple&#160;: restauration fragmentaire d&#39;une base de donn&#233;es (Mode de restauration compl&#232;te)
+# <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>Exemple : restauration fragmentaire d'une base de données (Mode de restauration complète)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Une séquence de restauration fragmentaire restaure et récupère une base de données par étape au niveau des groupes de fichiers, en commençant par le groupe de fichiers primaire, suivi des groupes fichiers secondaires en lecture-écriture.  
   
- Dans cet exemple, la base de données `adb` est restaurée sur un nouvel ordinateur après un problème grave. La base de données utilise le mode de restauration complète ; par conséquent, avant le début de la restauration, il convient d'effectuer une sauvegarde de la fin du journal sur la base de données. Avant le sinistre, tous les groupes de fichiers sont en ligne. Groupe de fichiers `B` en lecture seule. Tous les groupes de fichiers secondaires doivent être restaurés, mais dans l'ordre de priorité suivant : `A` (le plus élevé), `C` et enfin `B` Dans cet exemple, il y a quatre sauvegardes de journal, dont la sauvegarde de la fin du journal.  
+ Dans cet exemple, la base de données `adb` est restaurée sur un nouvel ordinateur après un problème grave. La base de données utilise le mode de restauration complète ; par conséquent, avant le début de la restauration, il convient d'effectuer une sauvegarde de la fin du journal sur la base de données. Avant le sinistre, tous les groupes de fichiers sont en ligne. Groupe de fichiers `B` en lecture seule. Tous les groupes de fichiers secondaires doivent être restaurés, mais dans l'ordre de priorité suivant : `A` (le plus élevé), `C`et enfin `B` Dans cet exemple, il y a quatre sauvegardes de journal, dont la sauvegarde de la fin du journal.  
   
-## Sauvegarde de la fin du journal  
- Avant de restaurer la base de données, l'administrateur de la base de données doit sauvegarder la fin du journal. La base de données étant endommagée, la création de la sauvegarde de la fin du journal requiert l'utilisation de l'option NO_TRUNCATE :  
+## <a name="tail-log-backup"></a>Sauvegarde de la fin du journal  
+ Avant de restaurer la base de données, l'administrateur de la base de données doit sauvegarder la fin du journal. La base de données étant endommagée, la création de la sauvegarde de la fin du journal requiert l'utilisation de l'option NO_TRUNCATE :  
   
 ```  
 BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE  
@@ -36,12 +40,12 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
  La sauvegarde de la fin du journal est la dernière sauvegarde appliquée dans les séquences de restauration qui suivent.  
   
-## Séquences de restauration  
+## <a name="restore-sequences"></a>Séquences de restauration  
   
 > [!NOTE]  
 >  La syntaxe pour une séquence de restauration en ligne est la même que pour une séquence de restauration hors connexion.  
   
-1.  Restauration partielle du groupe de fichiers primaire et secondaire `A`.  
+1.  Restauration partielle du groupe de fichiers primaire et secondaire `A`.  
   
     ```  
     RESTORE DATABASE adb FILEGROUP='Primary' FROM backup1   
@@ -58,9 +62,9 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
      À ce stade, le groupe de fichiers primaire et le groupe de fichiers secondaire `A` sont en ligne. Tous les fichiers dans les groupes de fichiers `B` et `C` sont en attente de récupération, et les groupes de fichiers sont hors connexion.  
   
-     Les messages de la dernière instruction `RESTORE LOG` (étape 1) indiquent que la restauration des transactions impliquant le groupe de fichiers `C` a été différée parce que ce groupe de fichiers n'est pas disponible. Les opérations courantes peuvent continuer, mais des verrous sont détenus par ces transactions et la troncation du fichier journal ne peut pas avoir lieu tant que la restauration n'est pas terminée.  
+     Les messages de la dernière instruction `RESTORE LOG` (étape 1) indiquent que la restauration des transactions impliquant le groupe de fichiers `C` a été différée parce que ce groupe de fichiers n'est pas disponible. Les opérations courantes peuvent continuer, mais des verrous sont détenus par ces transactions et la troncation du fichier journal ne peut pas avoir lieu tant que la restauration n'est pas terminée.  
   
-     Dans la deuxième séquence de restauration, l'administrateur de base de données restaure le groupe de fichiers `C` :  
+     Dans la deuxième séquence de restauration, l'administrateur de base de données restaure le groupe de fichiers `C`:  
   
     ```  
     RESTORE DATABASE adb FILEGROUP='C' FROM backup2a WITH NORECOVERY  
@@ -74,7 +78,7 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
 3.  Restauration en ligne du groupe de fichiers `B`.  
   
-     Dans la troisième séquence de restauration, l'administrateur de base de données restaure le groupe de fichiers `B`. La sauvegarde du groupe de fichiers `B` a été effectuée après que le groupe de fichiers soit passé en lecture seule ; ces fichiers n'ont donc pas besoin d'être restaurés par progression au cours de la récupération.  
+     Dans la troisième séquence de restauration, l'administrateur de base de données restaure le groupe de fichiers `B`. La sauvegarde du groupe de fichiers `B` a été effectuée après que le groupe de fichiers soit passé en lecture seule ; ces fichiers n'ont donc pas besoin d'être restaurés par progression au cours de la récupération.  
   
     ```  
     RESTORE DATABASE adb FILEGROUP='B' FROM backup2b WITH RECOVERY  
@@ -82,9 +86,9 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
      Tous les groupes de fichiers sont maintenant en ligne.  
   
-## Autres exemples  
+## <a name="additional-examples"></a>Autres exemples  
   
--   [Exemple : restauration fragmentaire d’une base de données &#40;mode de récupération simple&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Exemple : restauration fragmentaire d’une base de données &#40;Mode de récupération simple&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
 -   [Exemple : restauration fragmentaire de quelques groupes de fichiers uniquement &#40;mode de récupération simple&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
@@ -96,11 +100,11 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
 -   [Exemple : restauration en ligne d’un fichier en lecture seule &#40;mode de restauration complète&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Restauration en ligne &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restaurations fragmentaires &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
   
   

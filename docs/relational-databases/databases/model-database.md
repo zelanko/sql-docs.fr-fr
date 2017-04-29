@@ -1,26 +1,30 @@
 ---
-title: "Base de donn&#233;es model | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "bases de données modèles [SQL Server]"
-  - "bases de données model [SQL Server], à propos"
-  - "base de données model [SQL Server]"
+title: "model, base de données | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- template databases [SQL Server]
+- model database [SQL Server], about model databases
+- model database [SQL Server]
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 caps.latest.revision: 52
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a05d89ba953bf683a992a087be8e3c87777ae9c4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Base de donn&#233;es model
+# <a name="model-database"></a>model, base de données
   La base de données **model** fait office de modèle pour toutes les bases de données créées sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Étant donné que la base de données **tempdb** est créée chaque fois que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est démarré, la base de données **model** doit toujours exister sur un système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Tout le contenu de la base de données **model** , y compris ses options, est copié dans la nouvelle base de données. Certains paramètres de **model** sont également utilisés pour la création d'une nouvelle base de données **tempdb** au démarrage, de sorte que la base de données **model** doit toujours exister sur un système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Les bases de données utilisateur récemment créées utilisent le même [mode de récupération](../../relational-databases/backup-restore/recovery-models-sql-server.md) que la base de données model. Le mode par défaut est configurable par l'utilisateur. Pour connaître le mode de récupération actuel du modèle, consultez [Afficher ou modifier le mode de récupération d’une base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
@@ -28,24 +32,24 @@ caps.handback.revision: 52
 > [!IMPORTANT]  
 >  Si vous modifiez la base de données **model** avec des informations de modèle propres à l’utilisateur, nous vous recommandons de sauvegarder **model**. Pour plus d’informations, consultez [Sauvegarder et restaurer des bases de données système &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
-## Utilisation de la base de données model  
+## <a name="model-usage"></a>Utilisation de la base de données model  
  Lorsqu'une instruction CREATE DATABASE est émise, le système crée la première partie de la base de données en copiant le contenu de la base de données **model** . Le reste de la nouvelle base de données est ensuite rempli de pages vides.  
   
  Si vous modifiez la base de données **model** , toutes les bases de données créées ultérieurement héritent des modifications apportées. Par exemple, vous pouvez définir des autorisations ou des options de base de données, ou bien ajouter des objets tels que des tables, des fonctions ou des procédures stockées. Les propriétés de fichier de la base de données **model** sont une exception et sont ignorées, à l'exception de la taille initiale du fichier de données. La taille initiale par défaut des fichiers journaux et des fichiers de données de base de données model est de 8 Mo.  
   
-## Propriétés physiques de la base de données model  
+## <a name="physical-properties-of-model"></a>Propriétés physiques de la base de données model  
  Le tableau ci-dessous répertorie les valeurs de configuration initiales des fichiers journaux et de données **model** .  
   
 |Fichier|Nom logique|Nom physique|Croissance du fichier|  
 |----------|------------------|-------------------|-----------------|  
-|Données primaires|modeldev|model.mdf|Croissance automatique de 64 Mo jusqu’à saturation du disque.|  
-|Journal|modellog|modellog.ldf|Croissance automatique de 64 Mo jusqu’à un maximum de 2 téraoctets.|  
+|Données primaires|modeldev|model.mdf|Croissance automatique de 64 Mo jusqu’à saturation du disque.|  
+|Journal|modellog|modellog.ldf|Croissance automatique de 64 Mo jusqu’à un maximum de 2 téraoctets.|  
   
- Pour les versions antérieures à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], consultez [Base de données model](https://msdn.microsoft.com/library/ms186388\(v=sql.120\).aspx) pour découvrir les valeurs de croissance de fichier par défaut.  
+ Pour les versions antérieures à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], consultez [Base de données model](https://msdn.microsoft.com/library/ms186388\(v=sql.120\).aspx)pour découvrir les valeurs de croissance de fichier par défaut.  
   
  Pour déplacer la base de données **model** ou les fichiers journaux, consultez [Déplacer des bases de données système](../../relational-databases/databases/move-system-databases.md).  
   
-### Options de base de données  
+### <a name="database-options"></a>Options de base de données  
  Le tableau ci-dessous indique la valeur par défaut de chaque option de la base de données **model** et précise si cette option est modifiable. Pour afficher les valeurs actuelles de ces options, utilisez l'affichage catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
   
 |Option de base de données|Valeur par défaut|Peut être modifiée|  
@@ -75,7 +79,7 @@ caps.handback.revision: 52
 |PARAMETERIZATION|SIMPLE|Oui|  
 |QUOTED_IDENTIFIER|OFF|Oui|  
 |READ_COMMITTED_SNAPSHOT|OFF|Oui|  
-|RECOVERY|Dépend de l’édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*|Oui|  
+|RECOVERY|Dépend de l’édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *|Oui|  
 |RECURSIVE_TRIGGERS|OFF|Oui|  
 |Options de Service Broker|DISABLE_BROKER|Non|  
 |TRUSTWORTHY|OFF|Non|  
@@ -84,7 +88,7 @@ caps.handback.revision: 52
   
  Pour obtenir une description de ces options de base de données, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
-## Restrictions  
+## <a name="restrictions"></a>Restrictions  
  Les opérations suivantes ne peuvent pas être effectuées sur la base de données **model** :  
   
 -   ajout de groupes de fichiers ou de fichiers ;  
@@ -111,7 +115,7 @@ caps.handback.revision: 52
   
 -   Création de procédures, de vues ou de déclencheurs à l'aide de l'option WITH ENCRYPTION. La clé de chiffrement est liée à la base de données dans laquelle l'objet est créé. Les objets chiffrés créés dans la base de données **model** peuvent être utilisés uniquement dans **model**.  
   
-## Contenu connexe  
+## <a name="related-content"></a>Contenu connexe  
  [Bases de données système](../../relational-databases/databases/system-databases.md)  
   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
@@ -121,3 +125,4 @@ caps.handback.revision: 52
  [Déplacer des fichiers de bases de données](../../relational-databases/databases/move-database-files.md)  
   
   
+
