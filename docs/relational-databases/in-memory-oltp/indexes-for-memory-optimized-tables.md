@@ -1,44 +1,48 @@
 ---
-title: "Index pour les tables optimis&#233;es en m&#233;moire | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Index pour les tables optimisées en mémoire | Microsoft Docs"
+ms.custom:
+- MSDN content
+- MSDN - SQL DB
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.service: sql-database
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f55708bc9eaf8e94cf33ead19cf62cbc319e8e63
+ms.lasthandoff: 04/11/2017
+
 ---
-# Index pour les tables optimis&#233;es en m&#233;moire
+# <a name="indexes-for-memory-optimized-tables"></a>Index pour les tables optimisées en mémoire
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   
-Cet article décrit les types d’index qui sont disponibles pour une table optimisée en mémoire. L’article :  
+Cet article décrit les types d’index qui sont disponibles pour une table optimisée en mémoire. L’article :  
   
-- fournit de courts exemples de code pour illustrer la syntaxe Transact-SQL ;  
+- fournit de courts exemples de code pour illustrer la syntaxe Transact-SQL ;  
 - décrit comment les index optimisés en mémoire diffèrent des index sur disque classiques ;  
 - décrit les conditions optimales pour chaque type d’index optimisé en mémoire.  
   
   
-Les index de *hachage* sont abordés plus en détail dans un [article spécifique](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md).  
+Les index de*hachage* sont abordés plus en détail dans un [article spécifique](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md).  
   
   
-Les index *columnstore* sont abordés dans un [autre article](Columnstore%20Indexes%20Guide.xml).  
+Les index*columnstore* sont abordés dans un [autre article](~/relational-databases/indexes/columnstore-indexes-overview.md).  
   
   
-## A. Syntaxe des index optimisés en mémoire  
+## <a name="a-syntax-for-memory-optimized-indexes"></a>A. Syntaxe des index optimisés en mémoire  
   
-Chaque instruction CREATE TABLE pour une table optimisée en mémoire doit inclure entre 1 et 8 clauses pour déclarer des index. Le type d’index doit être l’un des suivants :  
+Chaque instruction CREATE TABLE pour une table optimisée en mémoire doit inclure entre 1 et 8 clauses pour déclarer des index. Le type d’index doit être l’un des suivants :  
   
 - Index de hachage.  
 - Index non cluster, ce qui désigne la structure interne par défaut d’un arbre B (B-tree).  
@@ -63,9 +67,9 @@ Pour être déclarée avec DURABILITY = SCHEMA_AND_DATA (paramètre par défaut)
   
   
   
-### A.1 Exemple de code pour la syntaxe  
+### <a name="a1-code-sample-for-syntax"></a>A.1 Exemple de code pour la syntaxe  
   
-Cette sous-section contient un bloc de code Transact-SQL qui illustre la syntaxe pour créer plusieurs index sur une table optimisée en mémoire. Le code illustre les opérations suivantes :  
+Cette sous-section contient un bloc de code Transact-SQL qui illustre la syntaxe pour créer plusieurs index sur une table optimisée en mémoire. Le code illustre les opérations suivantes :  
   
   
 1. Créer une table optimisée en mémoire.  
@@ -118,7 +122,7 @@ Cette sous-section contient un bloc de code Transact-SQL qui illustre la syntaxe
   
   
   
-## B. Nature des index optimisés en mémoire  
+## <a name="b-nature-of-memory-optimized-indexes"></a>B. Nature des index optimisés en mémoire  
   
 Sur une table optimisée en mémoire, chaque index est également optimisé en mémoire. Il existe plusieurs différences entre un index sur un index optimisé en mémoire et un index classique sur une table sur disque.  
   
@@ -139,7 +143,7 @@ Les index optimisés en mémoire n’ont aucune page fixe contrairement aux inde
   
 - Ne contribuant pas au type traditionnel de fragmentation dans une page, ils ne présentent aucun facteur de remplissage.  
   
-## C. Valeurs de clé d’index dupliquées
+## <a name="c-duplicate-index-key-values"></a>C. Valeurs de clé d’index dupliquées
 
 Les valeurs de clés d’index dupliquées peuvent affecter les performances des opérations sur les tables optimisées en mémoire. Un nombre élevé de doublons (par exemple, 100 et au-delà) rend inefficace la tâche de maintenance des index, car les chaînes en double doivent être parcourues pour la plupart des opérations d’index. L’impact peut être observé dans les opérations INSERT, UPDATE et DELETE sur les tables optimisées en mémoire. Ce problème est plus visible dans le cas des index de hachage, en raison du coût par opération inférieur pour les index de hachage et de l’interférence des chaînes en double volumineuses avec la chaîne de collision de hachage. Pour réduire la duplication dans un index, utilisez un index non cluster et ajoutez des colonnes (par exemple à partir de la clé primaire) à la fin de la clé d’index pour réduire le nombre de doublons.
 
@@ -156,7 +160,7 @@ La requête suivante affiche le nombre moyen d’index de doublons de valeurs de
 
 Pour évaluer le nombre moyen de doublons de clé d’index de votre propre table et de votre propre index, remplacez `Sales.Customers` par votre nom de table et remplacez `CustomerCategoryID` par la liste de colonnes de clé d’index.
 
-## D. Comparaison des utilisations de chaque type d’index  
+## <a name="d-comparing-when-to-use-each-index-type"></a>D. Comparaison des utilisations de chaque type d’index  
   
   
 La nature de vos requêtes particulières détermine le type d’index le mieux approprié.  
@@ -164,14 +168,14 @@ La nature de vos requêtes particulières détermine le type d’index le mieux 
 Quand vous implémentez des tables optimisées en mémoire dans une application existante, la recommandation générale consiste à commencer avec des index non cluster, dont les fonctionnalités rappellent celles des index cluster et non cluster traditionnels sur les tables sur disque. 
   
   
-### D.1 Avantages des index non cluster  
+### <a name="d1-strengths-of-nonclustered-indexes"></a>D.1 Avantages des index non cluster  
   
   
-Un index non cluster est préférable à un index de hachage dans les cas suivants :  
+Un index non cluster est préférable à un index de hachage dans les cas suivants :  
   
 - Les requêtes ont une clause ORDER BY sur la colonne indexée.  
 - Requêtes où seule(s) la (les) colonne(s) de début d’un index sur plusieurs colonnes est (sont) testée(s).  
-- Les requêtes testent la colonne indexée à l’aide d’une clause WHERE avec :  
+- Les requêtes testent la colonne indexée à l’aide d’une clause WHERE avec :  
   - Une inégalité : *WHERE StatusCode != 'Done'*  
   - Une plage de valeurs : *WHERE Quantity >= 100*  
   
@@ -196,7 +200,7 @@ Dans toutes les instructions SELECT suivantes, un index non cluster est préfér
   
   
   
-### D.2 Avantages des index de hachage  
+### <a name="d2-strengths-of-hash-indexes"></a>D.2 Avantages des index de hachage  
   
   
 Un [index de hachage](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) est préférable à un index non cluster dans les cas suivants :  
@@ -210,7 +214,7 @@ Un [index de hachage](../../relational-databases/in-memory-oltp/hash-indexes-for
   
   
   
-### D.3 Tableau de synthèse pour comparer les avantages des différents index  
+### <a name="d3-summary-table-to-compare-index-strengths"></a>D.3 Tableau de synthèse pour comparer les avantages des différents index  
   
   
 Le tableau suivant répertorie toutes les opérations qui sont prises en charge par les différents types d’index.  
@@ -248,3 +252,6 @@ GeneMi  ,  2016-05-05  Thursday  17:25pm  (Hash content moved to new child artic
   
   
   
+
+
+

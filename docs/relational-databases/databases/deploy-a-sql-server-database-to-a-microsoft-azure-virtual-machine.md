@@ -1,46 +1,50 @@
 ---
-title: "D&#233;ployer une base de donn&#233;es SQL Server sur une machine virtuelle Microsoft Azure | Microsoft Docs"
-ms.date: "07/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.deploymentwizard.deploymentsettings.f1"
-  - "sql13.swb.deploymentwizard.sourcesettings.f1"
-  - "sql13.swb.deploymentwizard.summary.f1"
-  - "sql13.swb.agdashboard.agp9virtualnw.issues.f1"
-  - "sql13.swb.deploymentwizard.f1"
-  - "sql13.swb.deploymentwizard.progress.f1"
-  - "sql13.swb.usevmdialog.f1"
-  - "sql13.swb.newvmdialog.f1"
-  - "sql13.swb.sqlvmdialog.f1"
-  - "sql13.swb.deploymentwizard.results.f1"
-  - "sql13.swb.deploymentwizard.azuresignin.f1"
-helpviewer_keywords: 
-  - "Déployer une base de données"
-  - "Déployer à ordinateur virtuel Windows Azure"
-  - "Migrer à Sql Azure"
-  - "Ordinateur virtuel Windows Azure"
-  - "Migrer vers une machine virtuelle Windows Azure"
-  - "Migrer vers le cloud"
-  - "SQL Server Management Studio"
-  - "SSMS"
-  - "Assistant Déploiement de base de données"
-  - "Déployer une base de données SQL Server sur Windows Azure"
-  - "Ordinateur virtuel Windows Azure"
+title: "Déployer une base de données SQL Server sur une machine virtuelle Microsoft Azure | Microsoft Docs"
+ms.date: 07/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.deploymentwizard.deploymentsettings.f1
+- sql13.swb.deploymentwizard.sourcesettings.f1
+- sql13.swb.deploymentwizard.summary.f1
+- sql13.swb.agdashboard.agp9virtualnw.issues.f1
+- sql13.swb.deploymentwizard.f1
+- sql13.swb.deploymentwizard.progress.f1
+- sql13.swb.usevmdialog.f1
+- sql13.swb.newvmdialog.f1
+- sql13.swb.sqlvmdialog.f1
+- sql13.swb.deploymentwizard.results.f1
+- sql13.swb.deploymentwizard.azuresignin.f1
+helpviewer_keywords:
+- Deploy a database
+- Deploy to Azure VM
+- Migrate to Azure
+- Windows Azure virtual machine
+- Migrate to Azure VM
+- Migrate to the cloud
+- SQL Server Management Studio
+- SSMS
+- Deploy database wizard
+- Deploy a SQL Server database to Azure
+- Azure VM
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2aca87c0050dd501c73bb4da8953a93bf40c0c8e
+ms.lasthandoff: 04/11/2017
+
 ---
-# D&#233;ployer une base de donn&#233;es SQL Server sur une machine virtuelle Microsoft Azure
-  Utilisez l’Assistant **Déployer une base de données sur un ordinateur virtuel Microsoft Azure** pour déployer une base de données d’une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une machine virtuelle Microsoft Azure. L’Assistant utilise une sauvegarde complète de la base de données ; par conséquent, il copie toujours le schéma complet de la base de données et les données d’une base de données utilisateur SQL Server. L'Assistant effectue également toutes les configurations de machine virtuelle Windows Azure pour vous ; par conséquent, aucune configuration préalable de machine virtuelle n'est requise.  
+# <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Déployer une base de données SQL Server sur une machine virtuelle Microsoft Azure
+  Utilisez l’Assistant **Déployer une base de données sur un ordinateur virtuel Microsoft Azure** pour déployer une base de données d’une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une machine virtuelle Microsoft Azure. L’Assistant utilise une sauvegarde complète de la base de données ; par conséquent, il copie toujours le schéma complet de la base de données et les données d’une base de données utilisateur SQL Server. L'Assistant effectue également toutes les configurations de machine virtuelle Windows Azure pour vous ; par conséquent, aucune configuration préalable de machine virtuelle n'est requise.  
   
  Vous ne pouvez pas utiliser l’Assistant pour effectuer des sauvegardes différentielles. L’Assistant ne remplacera pas une base de données existante qui porte le même nom de base de données. Pour remplacer une base de données existante sur la machine virtuelle, vous devez d'abord supprimer la base de données existante ou modifier le nom de la base de données. S'il existe un conflit de noms entre le nom de la base de données d'une opération de déploiement en cours et d'une base de données existante sur la machine virtuelle, l'Assistant suggère un nom de base de données avec suffixe pour la base de données en cours pour vous permettre d'effectuer cette opération.  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 30
 >  Pour obtenir des instructions détaillées sur l’exécution de cet Assistant, consultez [Migrer une base de données SQL Server vers SQL Server dans une machine virtuelle Azure](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-migrate-onpremises-database/).  
   
 ##  <a name="before_you_begin"></a> Avant de commencer  
- Pour exécuter cet Assistant, vous devez être en mesure de fournir les informations suivantes et avoir défini ces paramètres de configuration :  
+ Pour exécuter cet Assistant, vous devez être en mesure de fournir les informations suivantes et avoir défini ces paramètres de configuration :  
   
 -   Informations de compte Microsoft associées à l'abonnement Windows Azure.  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 30
     > [!CAUTION]  
     >  SQL Server prend actuellement en charge la version 2.0 du profil de publication. Pour télécharger la version prise en charge du profil de publication, consultez [Télécharger le profil de publication 2.0](http://go.microsoft.com/fwlink/?LinkId=396421).  
   
--   Certificat de gestion téléchargé dans votre abonnement Microsoft Azure.  Créez le certificat de gestion à l’aide de l’applet de commande Powershell [New-SelfSignedCertificate](https://technet.microsoft.com/library/hh848633(v=wps.630)).  Ensuite, téléchargez le certificat de gestion dans votre abonnement Microsoft Azure.  Pour plus d’informations sur le téléchargement d’un certificat de gestion, consultez [Téléchargement d’un certificat de gestion API dans Azure Management](https://azure.microsoft.com/en-us/documentation/articles/azure-api-management-certs/).  Exemple de syntaxe pour la création d’un certificat de gestion tiré de l’article [Vue d’ensemble des certificats pour Azure Cloud Services](https://azure.microsoft.com/en-us/documentation/articles/cloud-services-certs-create/) : 
+-   Certificat de gestion téléchargé dans votre abonnement Microsoft Azure.  Créez le certificat de gestion à l’aide de l’applet de commande Powershell [New-SelfSignedCertificate](https://technet.microsoft.com/library/hh848633(v=wps.630)).  Ensuite, téléchargez le certificat de gestion dans votre abonnement Microsoft Azure.  Pour plus d’informations sur le téléchargement d’un certificat de gestion, consultez [Téléchargement d’un certificat de gestion API dans Azure Management](https://azure.microsoft.com/en-us/documentation/articles/azure-api-management-certs/).  Exemple de syntaxe pour la création d’un certificat de gestion tiré de l’article [Vue d’ensemble des certificats pour Azure Cloud Services](https://azure.microsoft.com/en-us/documentation/articles/cloud-services-certs-create/): 
 
     ```powershell  
     $cert = New-SelfSignedCertificate -DnsName yourdomain.cloudapp.net -CertStoreLocation "cert:\LocalMachine\My"
@@ -90,11 +94,11 @@ caps.handback.revision: 30
   
 -   Si vous déployez la base de données sur un ordinateur virtuel existant, l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être configurée pour écouter sur un port TCP/IP.  
   
--   [L’adaptateur de cloud pour SQL Server](Cloud%20Adapter%20for%20SQL%20Server.md) doit être configuré et en cours d’exécution sur l’image de machine virtuelle Microsoft Azure ou de galerie que vous prévoyez d’utiliser pour créer la machine virtuelle.  
+-   [L’adaptateur de cloud pour SQL Server](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877) doit être configuré et en cours d’exécution sur l’image de machine virtuelle Microsoft Azure ou de galerie que vous prévoyez d’utiliser pour créer la machine virtuelle.  
   
--   Vous devez configurer un point de terminaison ouvert pour votre [adaptateur de cloud pour SQL Server](Cloud%20Adapter%20for%20SQL%20Server.md) sur la passerelle Microsoft Azure avec le port privé 11435.  
+-   Vous devez configurer un point de terminaison ouvert pour votre [adaptateur de cloud pour SQL Server](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877) sur la passerelle Microsoft Azure avec le port privé 11435.  
   
- De plus, si vous projetez de déployer votre base de données dans un ordinateur virtuel Windows Azure existant, vous devez également fournir :  
+ De plus, si vous projetez de déployer votre base de données dans un ordinateur virtuel Windows Azure existant, vous devez également fournir :  
   
 -   Nom DNS du service de cloud computing qui héberge votre ordinateur virtuel.  
   
@@ -113,29 +117,29 @@ caps.handback.revision: 30
 ###  <a name="limitations"></a> Limitations et restrictions  
 Cette fonctionnalité de déploiement ne peut être utilisée qu’avec un compte de stockage Azure créé par le biais du modèle de déploiement de gestion des services (Classic). Pour plus d’informations sur les modèles de déploiement Azure, consultez [Déploiement Azure Resource Manager et déploiement classique](https://azure.microsoft.com/en-us/documentation/articles/resource-manager-deployment-model/).
 
- La limite de taille de la base de données pour cette opération est 1 To.  
+ La limite de taille de la base de données pour cette opération est 1 To.  
   
  Cette fonctionnalité de déploiement est disponible dans SQL Server Management Studio pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
- Cette fonctionnalité de déploiement sert uniquement avec les bases de données utilisateur ; le déploiement de bases de données système n'est pas pris en charge.  
+ Cette fonctionnalité de déploiement sert uniquement avec les bases de données utilisateur ; le déploiement de bases de données système n'est pas pris en charge.  
   
  La fonctionnalité de déploiement ne prend pas en charge les services hébergés qui sont associés à un groupe d'affinités. Par exemple, les comptes de stockage associés à un groupe d'affinités ne peuvent pas être sélectionnés pour être utilisés sur la page **Paramètres de déploiement** de cet Assistant.  
   
  Versions de la base de données SQL Server qui peuvent être déployées sur une machine virtuelle Windows Azure à l'aide de cet Assistant :  
   
--   SQL Server 2008  
+-   SQL Server 2008  
   
--   SQL Server 2008 R2  
+-   SQL Server 2008 R2  
   
--   SQL Server 2012  
+-   SQL Server 2012  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
 
 - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- Les versions de base de données SQL Server exécutées dans une machine virtuelle Windows Azure peuvent être déployées dans :  
+ Les versions de base de données SQL Server exécutées dans une machine virtuelle Windows Azure peuvent être déployées dans :  
   
--   SQL Server 2012  
+-   SQL Server 2012  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
 
@@ -144,14 +148,14 @@ Cette fonctionnalité de déploiement ne peut être utilisée qu’avec un compt
  S'il existe un conflit de noms entre le nom de la base de données d'une opération de déploiement en cours et d'une base de données existante sur la machine virtuelle, l'Assistant suggère un nom de base de données avec suffixe pour la base de données en cours pour vous permettre d'effectuer cette opération.  
   
 ###  <a name="filestream"></a> Éléments à prendre en considération pour déployer une base de données FILESTREAM sur des machines virtuelles Windows Azure  
- Tenez compte des instructions et des restrictions suivantes lorsque vous déployez des bases de données possédant des objets blob stockés dans des objets FILESTREAM :  
+ Tenez compte des instructions et des restrictions suivantes lorsque vous déployez des bases de données possédant des objets blob stockés dans des objets FILESTREAM :  
   
 -   La fonctionnalité de déploiement ne peut pas déployer une base de données FILESTREAM dans de nouvelles machines virtuelles. Si FILESTREAM n'est pas activé dans la machine virtuelle avant d'exécuter l'Assistant, l'opération de restauration de base de données échouera et l'Assistant ne pourra pas achever l'opération. Pour déployer correctement une base de données qui utilise FILESTREAM, activez FILESTREAM dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur la machine virtuelle hôte avant de lancer l'Assistant. Pour plus d’informations, consultez [FILESTREAM (SQL Server)](http://msdn.microsoft.com/library/gg471497.aspx).  
   
 -   Si votre base de données utilise l'OLTP en mémoire, déployez la base de données sur une machine virtuelle Azure sans aucune modification à la base de données. Pour plus d’informations, consultez [OLTP en mémoire (optimisation en mémoire)](http://msdn.microsoft.com/library/dn133186\(SQL.120\).aspx).  
   
 ###  <a name="geography"></a> Éléments à prendre en considération pour la répartition géographique des actifs  
- Notez que les actifs suivants doivent se trouver dans la même région géographique :  
+ Notez que les actifs suivants doivent se trouver dans la même région géographique :  
   
 -   Service de cloud computing  
   
@@ -196,7 +200,7 @@ Cette fonctionnalité de déploiement ne peut être utilisée qu’avec un compt
  La base de données déployée doit avoir un état normal, doit être accessible au compte d'utilisateur qui exécute l'Assistant, et le compte d'utilisateur doit avoir les autorisations requises pour exécuter une opération de sauvegarde.  
   
 ##  <a name="launch_wizard"></a> Utilisation de l’Assistant Déployer une base de données sur un ordinateur virtuel Microsoft Azure  
- **Pour lancer l'Assistant, suivez les étapes suivantes :**  
+ **Pour lancer l'Assistant, suivez les étapes suivantes :**  
   
 1.  Utilisez SQL Server Management Studio pour vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec la base de données que vous souhaitez déployer.  
   
@@ -220,13 +224,13 @@ Cette fonctionnalité de déploiement ne peut être utilisée qu’avec un compt
 -   [Résultats](#Results)  
   
 ##  <a name="Introduction"></a> Introduction 
- Cette page décrit l’Assistant **Déployer une base de données sur un ordinateur virtuel Microsoft Azure**.  
+ Cette page décrit l’Assistant **Déployer une base de données sur un ordinateur virtuel Microsoft Azure** .  
   
 -   **Ne plus afficher cette page.**  
   Activez cette case à cocher pour ne plus afficher la page Introduction à l’avenir.  
   
 -   **Suivant**  
-Passer à la page **Paramètres de la source**.  
+Passer à la page **Paramètres de la source** .  
   
 -   **Annuler**  
   Annuler l’opération et fermer l’Assistant.  
@@ -246,8 +250,8 @@ Utilisez la liste déroulante pour spécifier la base de données à déployer.
 -   **Autres paramètres**  
 Dans le champ, spécifiez un dossier partagé qui sera accessible au service de machine virtuelle Microsoft Azure.  
   
-##  <a name="Azure_sign-in"></a> Connexion à Microsoft Azure  
- Connectez-vous à Microsoft Azure avec votre compte Microsoft ou votre compte professionnel ou scolaire. Votre compte Microsoft ou compte professionnel ou scolaire se présente sous la forme d’une adresse e-mail, par exemple : patc@contoso.com. Pour en savoir plus sur les informations d’identification Azure, consultez les rubriques suivantes : [Microsoft Account for Organizations FAQ (FAQ sur les comptes Microsoft pour les organisations)](http://technet.microsoft.com/jj592903) et [Résolution des problèmes](https://technet.microsoft.com/dn197220).  
+##  <a name="Azure_sign-in"></a> Connexion à Microsoft Azure  
+ Connectez-vous à Microsoft Azure avec votre compte Microsoft ou votre compte professionnel ou scolaire. Votre compte Microsoft ou compte professionnel ou scolaire se présente sous la forme d’une adresse e-mail, telle que patc@contoso.com. Pour en savoir plus sur les informations d’identification Azure, consultez les rubriques suivantes : [Microsoft Account for Organizations FAQ (FAQ sur les comptes Microsoft pour les organisations)](http://technet.microsoft.com/jj592903) et [Résolution des problèmes](https://technet.microsoft.com/dn197220).  
   
 ##  <a name="Deployment_settings"></a> Paramètres de déploiement
  Utilisez cette page pour spécifier le serveur de destination et fournir des détails sur votre nouvelle base de données.  
@@ -274,7 +278,7 @@ Informations de connexion du serveur.
 Spécifiez ou confirmez le nom d’une nouvelle base de données. Si le nom de la base de données existe déjà sur l'instance SQL Server de destination, modifiez le nom.  
   
 ##  <a name="Summary"></a> Résumé
- Utilisez cette page pour passer en revue les paramètres spécifiés pour l'opération. Pour terminer le déploiement à l'aide des paramètres spécifiés, cliquez sur **Terminer**. Pour annuler le déploiement et quitter l'Assistant, cliquez sur **Annuler**.  Lorsque vous cliquez sur **Terminer**, la page **État d’avancement du déploiement** s’ouvre.  Vous pouvez également afficher l’avancement à partir du fichier journal situé dans `"%LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM"`.
+ Utilisez cette page pour passer en revue les paramètres spécifiés pour l'opération. Pour terminer le déploiement à l'aide des paramètres spécifiés, cliquez sur **Terminer**. Pour annuler le déploiement et quitter l'Assistant, cliquez sur **Annuler**.  Lorsque vous cliquez sur **Terminer** , la page **État d’avancement du déploiement** s’ouvre.  Vous pouvez également afficher l’avancement à partir du fichier journal situé dans `"%LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM"`.
   
  Des étapes manuelles peuvent être nécessaires pour déployer les détails de la base de données sur la base de données SQL Server dans un ordinateur virtuel Windows Azure. Ces étapes seront décrites de façon détaillée.  
   
@@ -283,13 +287,14 @@ Spécifiez ou confirmez le nom d’une nouvelle base de données. Si le nom de l
   
  Cliquez sur **Terminer** pour fermer l'Assistant.  
   
-## Voir aussi  
- [Adaptateur de cloud pour SQL Server](../Topic/Cloud%20Adapter%20for%20SQL%20Server.md)   
+## <a name="see-also"></a>Voir aussi  
+ [L’adaptateur de cloud pour SQL Server](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877)   
  [Gestion du cycle de vie de base de données](../../relational-databases/database-lifecycle-management.md)   
  [Exporter une application de la couche Données](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [Importer un fichier BACPAC pour créer une nouvelle base de données utilisateur](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   
- [Sauvegarde et restauration Base de données SQL Azure](https://msdn.microsoft.com/library/azure/jj650016.aspx)   
+ [Sauvegarde et restauration Azure SQL Database](https://msdn.microsoft.com/library/azure/jj650016.aspx)   
  [Déploiement de SQL Server dans Windows Azure Virtual Machines](http://msdn.microsoft.com/library/dn133141.aspx)   
  [Préparation à la migration vers SQL Server dans Windows Azure Virtual Machines](http://msdn.microsoft.com/library/dn133142.aspx)  
   
   
+

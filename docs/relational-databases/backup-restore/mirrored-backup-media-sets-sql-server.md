@@ -1,30 +1,34 @@
 ---
-title: "Jeux de supports de sauvegarde en miroir (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "récupération [SQL Server], sauvegardes en miroir"
-  - "supports de sauvegarde miroir [SQL Server]"
-  - "miroirs de sauvegarde [SQL Server]"
-  - "copies de sauvegarde en double"
-  - "copies de sauvegarde interchangeables [SQL Server]"
-  - "supports de sauvegarde [SQL Server], supports de sauvegarde en miroir"
-  - "supports de sauvegarde [SQL Server], supports miroir"
+title: "Jeux de supports de sauvegarde en miroir (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recovery [SQL Server], mirrored backups
+- mirrored media sets [SQL Server]
+- backup mirrors [SQL Server]
+- duplicate backup copies
+- interchangeable backup copies [SQL Server]
+- media sets [SQL Server], mirrored backup media sets
+- backup media [SQL Server], mirrored media
 ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5c6bd8f73f549b7869f30576a03f9d90e874398a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Jeux de supports de sauvegarde en miroir (SQL Server)
+# <a name="mirrored-backup-media-sets-sql-server"></a>Jeux de supports de sauvegarde en miroir (SQL Server)
     
 > [!NOTE]  
 >  Les jeux de supports de sauvegarde en miroir sont uniquement pris en charge dans l'édition Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -34,7 +38,7 @@ caps.handback.revision: 38
 > [!NOTE]  
 >  Pour plus d’informations sur les supports de sauvegarde en général, consultez [Jeux de supports, familles de supports et jeux de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   [Vue d'ensemble des jeux de supports mis en miroir](#OverviewofMirroredMediaSets)  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 38
   
  La figure ci-dessous montre un exemple d'un support de sauvegarde miroir composé de deux familles de supports avec deux miroirs. Chaque famille de supports contient trois volumes de supports qui sont sauvegardés une fois par miroir.  
   
- ![Jeu de supports en miroir : deux familles avec deux miroirs](../../relational-databases/backup-restore/media/bnr-backup-media-mirror.gif "Jeu de supports en miroir : deux familles avec deux miroirs")  
+ ![Support de sauvegarde miroir : familles avec deux miroirs](../../relational-databases/backup-restore/media/bnr-backup-media-mirror.gif "Support de sauvegarde miroir : familles avec deux miroirs")  
   
  Les volumes correspondants sur les miroirs possèdent un contenu identique. Il sont donc interchangeables en cas de restauration. Par exemple, dans la figure précédente, le troisième volume de tape2 est interchangeable avec le troisième volume de tape0.  
   
@@ -63,16 +67,16 @@ caps.handback.revision: 38
 ##  <a name="HardwareReqs"></a> Configuration matérielle requise pour les miroirs de sauvegarde  
  La mise en miroir s'applique aussi bien aux disques qu'aux bandes (les disques ne prennent pas en charge les bandes consécutives). Toutes les unités de sauvegarde pour une simple opération de sauvegarde ou de restauration doivent être du même type (disque ou bande).  
   
- Ensuite, vous devez utiliser des unités similaires qui ont les mêmes propriétés. Le non-respect de cette règle entraîne l'affichage du message d'erreur 3212. Pour éviter le risque d'une discordance d'unités, utilisez des unités entièrement équivalentes, comme des lecteurs ayant le même numéro de modèle et provenant du même fabricant.  
+ Ensuite, vous devez utiliser des unités similaires qui ont les mêmes propriétés. Le non-respect de cette règle entraîne l'affichage du message d'erreur 3212. Pour éviter le risque d'une discordance d'unités, utilisez des unités entièrement équivalentes, comme des lecteurs ayant le même numéro de modèle et provenant du même fabricant.  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
  **Pour effectuer une sauvegarde sur une unité de sauvegarde mise en miroir**  
   
 -   [Sauvegarder sur un support de sauvegarde miroir &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Erreurs de support possibles pendant les opérations de sauvegarde et de restauration &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
- [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)   
+ [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
  [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Jeux de supports, familles de supports et jeux de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

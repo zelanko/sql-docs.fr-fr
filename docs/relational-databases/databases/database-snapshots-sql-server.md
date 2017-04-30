@@ -1,30 +1,34 @@
 ---
-title: "Instantan&#233;s de base de donn&#233;es (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "vues de base de données statiques"
-  - "instantanés [SQL Server database snapshots]"
-  - "bases de données sources [SQL Server]"
-  - "instantanés [instantanés de base de données SQL Server], à propos des instantanés de base de données"
-  - "instantanés de base de données [SQL Server]"
-  - "vues de base de données en lecture seule"
-  - "instantanés de base de données [SQL Server], à propos des instantanés de base de données"
+title: "Instantanés de base de données (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- static database views
+- snapshots [SQL Server database snapshots]
+- source databases [SQL Server]
+- snapshots [SQL Server database snapshots], about database snapshots
+- database snapshots [SQL Server]
+- read-only database views
+- database snapshots [SQL Server], about database snapshots
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1087898fae9896722e795f2c6c68c5df20d0f3aa
+ms.lasthandoff: 04/11/2017
+
 ---
-# Instantan&#233;s de base de donn&#233;es (SQL Server)
+# <a name="database-snapshots-sql-server"></a>Instantanés de base de données (SQL Server)
   Une capture instantanée de base de données est une vue statique en lecture seule d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (la *base de données source*). Au moment de sa création, l'instantané de base de données est cohérent au niveau transactionnel avec la base de données source. Un instantané de base de données réside toujours sur la même instance de serveur que sa base de données source. Lorsque la base de données source est mise à jour, l'instantané de base de données est mis à jour. Par conséquent, plus l'existence d'un instantané de base de données est longue, plus la probabilité qu'il épuise son espace disque disponible est élevée.  
   
  Plusieurs instantanés peuvent exister sur une base de données source donnée. Chaque instantané de base de données existe jusqu'à ce qu'il soit explicitement supprimé par le propriétaire de la base de données.  
@@ -32,7 +36,7 @@ caps.handback.revision: 54
 > [!NOTE]  
 >  Les instantanés de base de données n'ont aucun rapport avec les sauvegardes d'instantanés, les instantanés liés à l'isolation des transactions ou la réplication d'instantanés.  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   [Vue d'ensemble des fonctionnalités](#FeatureOverview)  
   
@@ -47,9 +51,9 @@ caps.handback.revision: 54
 ##  <a name="FeatureOverview"></a> Vue d'ensemble des fonctionnalités  
  Les instantanés de base de données fonctionnent au niveau de la page de données. Toute page de la base de données source qui n'a pas encore été modifiée est copiée de la base de données source vers l'instantané. L'instantané stocke la page d'origine, conservant ainsi les enregistrements de données tels qu'ils étaient lorsque l'instantané a été créé. Le même processus se répète chaque fois qu'une page est modifiée pour la première fois. Pour l'utilisateur, un instantané de base de données semble ne jamais changer, car les opérations de lecture dans un instantané de base de données accèdent toujours aux pages de données d'origine, quel que soit leur emplacement.  
   
- Pour stocker les pages d'origine copiées, l'instantané utilise un ou plusieurs *fichiers partiellement alloués*. Initialement, un fichier partiellement alloué est un fichier essentiellement vide qui ne contient pas de données d'utilisateur et qui ne dispose pas encore d'espace disque alloué à cet effet. À mesure que le nombre de pages mises à jour augmente dans la base de données source, le fichier devient de plus en plus volumineux. La figure suivante illustre les effets de deux schémas de mise à jour distincts sur la taille d'un instantané. Le schéma de mise à jour A représente un environnement dans lequel seules 30% des pages d'origine sont mises à jour pendant la durée d'existence de l'instantané. Le schéma de mise à jour B correspond à un environnement dans lequel 80 % des pages d'origine sont mises à jour pendant la durée d'existence de l'instantané.  
+ Pour stocker les pages d'origine copiées, l'instantané utilise un ou plusieurs *fichiers partiellement alloués*. Initialement, un fichier partiellement alloué est un fichier essentiellement vide qui ne contient pas de données d'utilisateur et qui ne dispose pas encore d'espace disque alloué à cet effet. À mesure que le nombre de pages mises à jour augmente dans la base de données source, le fichier devient de plus en plus volumineux. La figure suivante illustre les effets de deux schémas de mise à jour distincts sur la taille d'un instantané. Le schéma de mise à jour A représente un environnement dans lequel seules 30% des pages d'origine sont mises à jour pendant la durée d'existence de l'instantané. Le schéma de mise à jour B correspond à un environnement dans lequel 80 % des pages d'origine sont mises à jour pendant la durée d'existence de l'instantané.  
   
- ![Autres modèles de mise à jour et taille d'instantané](../../relational-databases/databases/media/dbview-04.gif "Autres modèles de mise à jour et taille d'instantané")  
+ ![Autres modèles de mise à jour et taille d’instantané](../../relational-databases/databases/media/dbview-04.gif "Autres modèles de mise à jour et taille d’instantané")  
   
 ##  <a name="Benefits"></a> Avantages des instantanés de base de données  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 54
   
 -   Protection des données contre les erreurs des utilisateurs.  
   
-     En créant régulièrement des instantanés, vous pouvez réparer les dégâts liés à certaines erreurs commises par les utilisateurs, comme la suppression d'une table. Pour encore plus de protection, vous pouvez créer une série d'instantanés couvrant une période suffisamment importante pour identifier et réagir à la plupart des erreurs commises par les utilisateurs. Par exemple, vous pourriez maintenir un roulement de 6 à 12 instantanés couvrant une période de 24 heures en fonction de l'espace disponible sur vos disques. Chaque fois qu'un instantané est créé, l'instantané le plus ancien est supprimé.  
+     En créant régulièrement des instantanés, vous pouvez réparer les dégâts liés à certaines erreurs commises par les utilisateurs, comme la suppression d'une table. Pour encore plus de protection, vous pouvez créer une série d'instantanés couvrant une période suffisamment importante pour identifier et réagir à la plupart des erreurs commises par les utilisateurs. Par exemple, vous pourriez maintenir un roulement de 6 à 12 instantanés couvrant une période de 24 heures en fonction de l'espace disponible sur vos disques. Chaque fois qu'un instantané est créé, l'instantané le plus ancien est supprimé.  
   
     -   Pour récupérer après une erreur, vous pouvez rétablir la base de données telle qu'elle était juste avant l'erreur. Ce retour à un état précédent de la base de données est potentiellement plus rapide que la restauration à partir d'une sauvegarde. En revanche, la restauration par progression ne sera plus possible par la suite.  
   
@@ -103,7 +107,7 @@ caps.handback.revision: 54
  Fichier fourni par le système de fichiers NTFS requérant beaucoup moins d'espace disque qu'il n'en serait requis autrement. Un fichier partiellement alloué est utilisé pour stocker les pages copiées dans un instantané de base de données. À sa création, un fichier partiellement alloué occupe très peu d'espace disque. Lorsque des données sont écrites dans un instantané de base de données, NTFS alloue de l'espace disque progressivement au fichier partiellement alloué correspondant.  
   
 ##  <a name="LimitationsRequirements"></a> Conditions préalables et limitations relatives aux instantanés de base de données  
- **Dans cette section :**  
+ **Dans cette section :**  
   
 -   [Configuration requise](#Prerequisites)  
   
@@ -116,9 +120,9 @@ caps.handback.revision: 54
 -   [Instantanés de base de données avec des groupes de fichiers hors ligne](#OfflineFGs)  
   
 ###  <a name="Prerequisites"></a> Configuration requise  
- La base de données source, qui peut utiliser n'importe quel mode de récupération, doit respecter les conditions préalables suivantes :  
+ La base de données source, qui peut utiliser n'importe quel mode de récupération, doit respecter les conditions préalables suivantes :  
   
--   L'instance de serveur doit s'exécuter sur une édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prend en charge les instantanés de base de données. Pour plus d’informations, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   L'instance de serveur doit s'exécuter sur une édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prend en charge les instantanés de base de données. Pour plus d’informations, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   La base de données source doit être en ligne, à moins que la base de données soit une base de données miroir au sein d'une session de mise en miroir de bases de données.  
   
@@ -138,19 +142,19 @@ caps.handback.revision: 54
 >  Tous les modes de récupération prennent en charge les instantanés de base de données.  
   
 ###  <a name="LimitsOnSourceDb"></a> Limitations relatives à la base de données source  
- Dans la mesure où il existe un instantané de base de données, les limitations suivantes s'appliquent à la base de données source de l'instantané :  
+ Dans la mesure où il existe un instantané de base de données, les limitations suivantes s'appliquent à la base de données source de l'instantané :  
   
 -   La base de données ne peut pas être supprimée, détachée ou restaurée.  
   
     > [!NOTE]  
-    >  La sauvegarde de la base de données source fonctionne normalement ; elle n'est pas affectée par les instantanés de base de données.  
+    >  La sauvegarde de la base de données source fonctionne normalement ; elle n'est pas affectée par les instantanés de base de données.  
   
 -   Les performances sont réduites, en raison du nombre accru d'entrées/sorties sur la base de données source suite à une opération de copie lors d'une écriture sur l'instantané chaque fois qu'une page est mise à jour.  
   
 -   Les fichiers ne peuvent pas être supprimés de la base de données source ni des instantanés.  
   
 ###  <a name="LimitsOnDbSS"></a> Limitations relatives aux instantanés de base de données  
- Les limitations suivantes s'appliquent aux instantanés de base de données :  
+ Les limitations suivantes s'appliquent aux instantanés de base de données :  
   
 -   Un instantané de base de données doit être créé et demeurer sur la même instance de serveur que la base de données source.  
   
@@ -178,7 +182,7 @@ caps.handback.revision: 54
   
 -   Un instantané hérite des contraintes de sécurité de sa base de données source au moment de la création de l'instantané. Compte tenu que les instantanés sont en lecture seule, les autorisations héritées ne peuvent pas être modifiées, et les modifications d'autorisations apportées à la source ne seront pas répercutées dans les instantanés existants.  
   
--   Un instantané reflète toujours l'état de groupes de fichiers au moment de la création de l'instantané : les groupes de fichiers en ligne demeurent en ligne et les groupes de fichiers hors connexion demeurent hors connexion. Pour plus d'informations, consultez « Instantanés de base de données avec des groupes de fichiers hors ligne », plus loin dans cette rubrique.  
+-   Un instantané reflète toujours l'état de groupes de fichiers au moment de la création de l'instantané : les groupes de fichiers en ligne demeurent en ligne et les groupes de fichiers hors connexion demeurent hors connexion. Pour plus d'informations, consultez « Instantanés de base de données avec des groupes de fichiers hors ligne », plus loin dans cette rubrique.  
   
 -   Si une base de données source se voit affecter l'état RECOVERY_PENDING, ses instantanés peuvent devenir inaccessibles. Toutefois, lorsque le problème affectant la base de données source a été résolu, ses instantanés sont à nouveau accessibles.  
   
@@ -191,12 +195,12 @@ caps.handback.revision: 54
 -   Les groupes de fichiers FILESTREAM ne sont pas pris en charge par les instantanés de base de données. S'il existe des groupes de fichiers FILESTREAM dans une base de données source, ils sont marqués comme hors connexion dans ses instantanés de base de données et les instantanés de base de données ne peuvent pas être utilisés pour restaurer la base de données.  
   
     > [!NOTE]  
-    >  Une instruction SELECT exécutée sur un instantané de base de données ne doit pas spécifier de colonne FILESTREAM ; autrement, le message d'erreur suivant est retourné : `Could not continue scan with NOLOCK due to data movement.`  
+    >  Une instruction SELECT exécutée sur un instantané de base de données ne doit pas spécifier de colonne FILESTREAM ; autrement, le message d'erreur suivant est retourné : `Could not continue scan with NOLOCK due to data movement.`  
   
 -   Quand les statistiques sur une capture instantanée en lecture seule sont absentes ou obsolètes, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] crée et gère les statistiques temporaires dans tempdb. Pour plus d'informations, consultez [Statistics](../../relational-databases/statistics/statistics.md).  
   
 ###  <a name="DiskSpace"></a> Espace disque nécessaire  
- Les instantanés de base de données consomment une grande quantité d'espace disque. Si un instantané de base de données ne dispose plus de suffisamment d'espace disque, il est signalé comme suspect et doit être supprimé. (Toutefois, la base de données source n'est pas affectée ; les opérations sur cette base de données se poursuivent normalement.) Par rapport à une copie complète d'une base de données, les instantanés utilisent beaucoup moins d'espace disque. Un instantané nécessite uniquement un espace de stockage adapté aux pages qui changent au cours de sa durée de vie. En général, les instantanés sont conservés pour une courte durée ; par conséquent, leur taille n'est pas une préoccupation importante.  
+ Les instantanés de base de données consomment une grande quantité d'espace disque. Si un instantané de base de données ne dispose plus de suffisamment d'espace disque, il est signalé comme suspect et doit être supprimé. (Toutefois, la base de données source n'est pas affectée ; les opérations sur cette base de données se poursuivent normalement.) Par rapport à une copie complète d'une base de données, les instantanés utilisent beaucoup moins d'espace disque. Un instantané nécessite uniquement un espace de stockage adapté aux pages qui changent au cours de sa durée de vie. En général, les instantanés sont conservés pour une courte durée ; par conséquent, leur taille n'est pas une préoccupation importante.  
   
  Plus la durée de conservation d'un instantané est longue, plus l'instantané épuisera la quantité d'espace disponible. La taille maximale que peut atteindre un fichier partiellement alloué correspond à la taille du fichier de base de données source correspondant, au moment de la création de l'instantané. Si un instantané de base de données ne dispose plus de suffisamment d'espace disque, il doit être supprimé.  
   
@@ -204,7 +208,7 @@ caps.handback.revision: 54
 >  À l'exception de l'espace de fichier, un instantané de base de données consomme grossièrement autant de ressources qu'une base de données.  
   
 ###  <a name="OfflineFGs"></a> Instantanés de base de données avec des groupes de fichiers hors ligne  
- Les groupes de fichiers hors ligne dans la base de données source ont une incidence sur les instantanés de base de données lorsque vous tentez d'effectuer les opérations suivantes :  
+ Les groupes de fichiers hors ligne dans la base de données source ont une incidence sur les instantanés de base de données lorsque vous tentez d'effectuer les opérations suivantes :  
   
 -   Créer un instantané  
   
@@ -234,7 +238,9 @@ caps.handback.revision: 54
   
 -   [Supprimer un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mise en miroir et instantanés de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
   
+
+

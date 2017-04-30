@@ -1,44 +1,48 @@
 ---
-title: "Cr&#233;er une proc&#233;dure stock&#233;e | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "nouvelles procédures stockées"
-  - "procédures stockées [SQL Server], création"
-  - "création de procédures stockées"
+title: "Créer une procédure stockée | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- new stored procedures
+- stored procedures [SQL Server], creating
+- creating stored procedures
 ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c0095707730da9b840ebf444bdf7500cb634ad3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er une proc&#233;dure stock&#233;e
+# <a name="create-a-stored-procedure"></a>Créer une procédure stockée
   Cette rubrique explique comment créer une procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE PROCEDURE.  
   
 ##  <a name="Top"></a>   
--   **Avant de commencer :**  [Autorisations](#Permissions)  
+-   **Avant de commencer :**  [Permissions](#Permissions)  
   
--   **Pour créer une procédure, utilisez :** [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Pour créer une procédure, utilisez :**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation CREATE PROCEDURE dans la base de données et l'autorisation ALTER sur le schéma dans lequel la procédure est créée.  
   
 ##  <a name="Procedures"></a> Comment créer une procédure stockée  
- Vous pouvez utiliser l'un des éléments suivants :  
+ Vous pouvez utiliser l'un des éléments suivants :  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+###  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour créer une procédure dans l'Explorateur d'objets**  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et développez-la.  
@@ -83,7 +87,7 @@ caps.handback.revision: 37
   
 11. Pour exécuter la procédure, dans l’Explorateur d’objets, cliquez avec le bouton droit sur le nom de la procédure stockée **HumanResources.uspGetEmployeesTest** et sélectionnez **Exécuter la procédure stockée**.  
   
-12. Dans la fenêtre **Exécuter la procédure**, entrez Margheim comme valeur pour le paramètre @LastName et entrez la valeur Diane comme valeur pour le paramètre @FirstName.  
+12. Dans la fenêtre **Exécuter la procédure** , entrez Margheim comme valeur pour le paramètre @LastName et entrez la valeur Diane comme valeur pour le paramètre @FirstName.  
   
 > [!WARNING]  
 >  Validez toutes les entrées utilisateur. Ne concaténez pas les entrées utilisateur avant de les avoir validées. N'exécutez jamais une commande élaborée à partir d'une entrée utilisateur non validée.  
@@ -128,7 +132,7 @@ caps.handback.revision: 37
     ```  
   
 ##  <a name="PowerShellProcedure"></a>   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   

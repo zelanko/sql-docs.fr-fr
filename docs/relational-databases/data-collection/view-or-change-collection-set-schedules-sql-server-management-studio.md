@@ -1,31 +1,35 @@
 ---
-title: "Afficher ou modifier des planifications de jeu d&#39;&#233;l&#233;ments de collecte (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dc.collectionsetprop.uploads.f1"
-  - "sql13.swb.dc.collectionsetprop.description.f1"
-  - "sql13.swb.dc.collectionsetprop.general.f1"
-helpviewer_keywords: 
-  - "jeu d’éléments de collecte [SQL Server], modification des planifications"
-  - "planifications [SQL Server], modification du jeu d’éléments de collecte"
-  - "jeux d’éléments de collecte [SQL Server], affichage des planifications"
-  - "planifications [SQL Server], affichage du jeu d’éléments de collecte"
+title: "Afficher ou modifier des planifications de jeu d’éléments de collecte (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dc.collectionsetprop.uploads.f1
+- sql13.swb.dc.collectionsetprop.description.f1
+- sql13.swb.dc.collectionsetprop.general.f1
+helpviewer_keywords:
+- collection sets [SQL Server], changing schedules
+- schedules [SQL Server], changing collection set
+- collection sets [SQL Server], viewing schedules
+- schedules [SQL Server], viewing collection set
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b882c8e5f82beb7d467d1063695fa032ed562ca0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Afficher ou modifier des planifications de jeu d&#39;&#233;l&#233;ments de collecte (SQL Server Management Studio)
+# <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Afficher ou modifier des planifications de jeu d'éléments de collecte (SQL Server Management Studio)
   Vous pouvez afficher ou modifier des planifications de jeu d'éléments de collecte à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Le mode de collecte, avec ou sans mise en cache, détermine la manière dont vous pouvez apporter des modifications à une planification. Le mode avec mise en cache utilise des planifications distinctes pour la collecte et le téléchargement. Le mode sans mise en cache utilise la même planification pour la collecte et le téléchargement. Le type de mode de collecte pour chacun des jeux d’éléments de collecte de données système est comme suit :  
@@ -36,21 +40,21 @@ caps.handback.revision: 26
   
 -   **Activité du serveur** utilise le mode de collecte avec mise en cache.  
   
-### Pour afficher des planifications de jeu d'éléments de collecte  
+### <a name="to-view-collection-set-schedules"></a>Pour afficher des planifications de jeu d'éléments de collecte  
   
 1.  Dans l'Explorateur d'objets, développez le nœud **Gestion** et développez **Collecte de données**, puis **Jeux d'éléments de collecte de données système**.  
   
-2.  Cliquez avec le bouton droit sur un nom de jeu d’éléments de collecte, puis sélectionnez **Propriétés** pour ouvrir la boîte de dialogue [Propriétés du jeu d’éléments de collecte de données](#CollectionSet).  
+2.  Cliquez avec le bouton droit sur un nom de jeu d’éléments de collecte, puis sélectionnez **Propriétés** pour ouvrir la boîte de dialogue [Propriétés du jeu d’éléments de collecte de données](#CollectionSet) .  
   
-### Pour modifier les planifications d'un jeu d'éléments de collecte en mode avec mise en cache  
+### <a name="to-change-the-schedules-for-a-cached-mode-collection-set"></a>Pour modifier les planifications d'un jeu d'éléments de collecte en mode avec mise en cache  
   
 1.  Dans l'Explorateur d'objets, développez le nœud **Gestion** et développez **Collecte de données**, puis **Jeux d'éléments de collecte de données système**.  
   
-2.  Cliquez avec le bouton droit sur un jeu d’éléments de collecte qui utilise le mode avec mise en cache, tel que **Statistiques sur les requêtes**, puis sélectionnez **Propriétés** pour ouvrir la boîte de dialogue [Propriétés du jeu d’éléments de collecte de données](#CollectionSet).  
+2.  Cliquez avec le bouton droit sur un jeu d’éléments de collecte qui utilise le mode avec mise en cache, tel que **Statistiques sur les requêtes**, puis sélectionnez **Propriétés** pour ouvrir la boîte de dialogue [Propriétés du jeu d’éléments de collecte de données](#CollectionSet) .  
   
-3.  Vous pouvez modifier la fréquence de collecte sur la page **Général** . Pour cela, procédez comme suit :  
+3.  Vous pouvez modifier la fréquence de collecte sur la page **Général** . Pour cela, procédez comme suit :  
   
-    1.  Dans le volet d’informations, double-cliquez sur le nombre qui s’affiche pour la colonne **Fréquence de collecte (s)** de la table **Éléments de collecte**.  
+    1.  Dans le volet d’informations, double-cliquez sur le nombre qui s’affiche pour la colonne **Fréquence de collecte (s)** de la table **Éléments de collecte** .  
   
     2.  Pour augmenter ou diminuer la fréquence de collecte, tapez un nombre inférieur ou supérieur, puis appuyez sur Entrée pour stocker la nouvelle valeur.  
   
@@ -75,11 +79,11 @@ caps.handback.revision: 26
   
 5.  Cliquez sur **OK** pour enregistrer les modifications de fréquence de collecte et de planification des téléchargements, ainsi que pour fermer la boîte de dialogue **Propriétés du jeu d'éléments de collecte de données** .  
   
-### Pour modifier la planification pour un jeu d'éléments de collecte en mode sans mise en cache  
+### <a name="to-change-the-schedule-for-a-non-cached-mode-collection-set"></a>Pour modifier la planification pour un jeu d'éléments de collecte en mode sans mise en cache  
   
 1.  Dans l'Explorateur d'objets, développez le nœud **Gestion** et développez **Collecte de données**, puis **Jeux d'éléments de collecte de données système**.  
   
-2.  Cliquez avec le bouton droit sur un jeu d’éléments de collecte qui utilise le mode sans mise en cache, tel que **Utilisation du disque**, puis sélectionnez **Propriétés** pour ouvrir la boîte de dialogue [Propriétés du jeu d’éléments de collecte de données](#CollectionSet).  
+2.  Cliquez avec le bouton droit sur un jeu d’éléments de collecte qui utilise le mode sans mise en cache, tel que **Utilisation du disque**, puis sélectionnez **Propriétés** pour ouvrir la boîte de dialogue [Propriétés du jeu d’éléments de collecte de données](#CollectionSet) .  
   
      La boîte de dialogue **Propriétés du jeu d'éléments de collecte de données** affiche une vue avec pages des propriétés du jeu d'éléments de collecte.  
   
@@ -111,11 +115,11 @@ caps.handback.revision: 26
   
 |||  
 |-|-|  
-|**Aucune mise en cache. La collecte et le téléchargement de données sont sur la même planification.**|Lorsque vous sélectionnez cette option, spécifiez l'un des éléments suivants :<br /><br /> **Planification**. Les données sont collectées et téléchargées selon une planification. Cliquez sur **Choisir** pour faire votre sélection dans une liste prédéfinie de planifications ou sur **Nouvelle** pour créer une planification.<br /><br /> **À la demande**. Les données sont collectées et téléchargées à la demande.|  
-|**Mise en cache. Collecter les données et les mettre en cache selon des fréquences de collecte. Télécharger les données mises en cache sur une planification distincte.**|Les données sont collectées et mises en cache à une fréquence de collecte spécifiée. Les données collectées sont téléchargées selon une planification séparée.|  
+|**Aucune mise en cache. Collecte et chargement de données sur la même planification.**|Lorsque vous sélectionnez cette option, spécifiez l'un des éléments suivants :<br /><br /> **Planification**. Les données sont collectées et téléchargées selon une planification. Cliquez sur **Choisir** pour faire votre sélection dans une liste prédéfinie de planifications ou sur **Nouvelle** pour créer une planification.<br /><br /> **À la demande**. Les données sont collectées et téléchargées à la demande.|  
+|**Mise en cache. Collecter les données et les mettre en cache selon des fréquences de collecte. Charger les données mises en cache sur une planification distincte.**|Les données sont collectées et mises en cache à une fréquence de collecte spécifiée. Les données collectées sont téléchargées selon une planification séparée.|  
   
  **Éléments de collecte**  
- Affiche les éléments de collecte dans le jeu d'éléments de collecte. Les informations suivantes sont fournies pour chaque élément de collecte :  
+ Affiche les éléments de collecte dans le jeu d'éléments de collecte. Les informations suivantes sont fournies pour chaque élément de collecte :  
   
 -   **Nom**  
   
@@ -127,14 +131,14 @@ caps.handback.revision: 26
  Affiche les paramètres d'entrée utilisés pour le jeu d'éléments de collecte.  
   
  **Exécuter en tant que**  
- Spécifie le compte utilisé pour exécuter le jeu d'éléments de collecte. Par défaut, il s'agit du compte de service Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si des comptes proxy sont définis, cette liste inclut les noms des comptes proxy disponibles.  
+ Spécifie le compte utilisé pour exécuter le jeu d'éléments de collecte. Par défaut, il s'agit du compte de service Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si des comptes proxy sont définis, cette liste inclut les noms des comptes proxy disponibles.  
   
  **Spécifier la durée pendant laquelle les données doivent être conservées dans l'entrepôt de données de gestion.**  
  Spécifie la période de rétention des données collectées. Choisissez l'une des options suivantes.  
   
 |||  
 |-|-|  
-|**Conserver les données pendant**|Cette option est sélectionnée par défaut, et la période de rétention par défaut est de 14 jours.|  
+|**Conserver les données pendant**|Cette option est sélectionnée par défaut, et la période de rétention par défaut est de 14 jours.|  
 |**Conserver les données indéfiniment**|Il n'y a aucune limite sur la période de rétention des données.|  
   
  **Page Téléchargements**  
@@ -160,7 +164,7 @@ caps.handback.revision: 26
   
  Utilisez cette page pour consulter une description du jeu d'éléments de collecte auquel cette page de propriétés fait référence.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gérer la collecte de données](../../relational-databases/data-collection/manage-data-collection.md)   
  [Collecte de données](../../relational-databases/data-collection/data-collection.md)  
   

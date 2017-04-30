@@ -1,39 +1,43 @@
 ---
-title: "PolyBase Queries | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-polybase"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "PolyBase"
-helpviewer_keywords: 
-  - "PolyBase, importation et exportation"
-  - "Hadoop, importation avec PolyBase"
-  - "Hadoop, exportation avec PolyBase"
-  - "Stockage d’objets blob Azure, importation avec PolyBase"
-  - "Stockage d’objets blob Azure, exportation avec PolyBase"
+title: "Requêtes PolyBase | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-polybase
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- PolyBase
+helpviewer_keywords:
+- PolyBase, import and export
+- Hadoop, import with PolyBase
+- Hadoop, export with PolyBase
+- Azure blob storage, import with PolyBase
+- Azure blob storage, export with PolyBase
 ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
 caps.latest.revision: 18
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: d6cc1b4523bdb0b48cfc22b34b205e15613fb290
+ms.lasthandoff: 04/11/2017
+
 ---
-# PolyBase Queries
+# <a name="polybase-queries"></a>Requêtes PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Voici des exemples de requêtes utilisant la fonctionnalité [Guide de PolyBase](../../relational-databases/polybase/polybase-guide.md) de SQL Server 2016. Avant d’utiliser ces exemples, vous devez également comprendre les instructions T-SQL nécessaires pour installer PolyBase (consultez [Objets T-SQL PolyBase](../../relational-databases/polybase/polybase-t-sql-objects.md)).  
   
-## Requêtes  
+## <a name="queries"></a>Requêtes  
  Exécutez des instructions Transact-SQL sur les tables externes ou utilisez des outils d’aide à la décision pour interroger des tables externes.  
   
-## Requête SELECT sur une table externe  
+## <a name="select-from-external-table"></a>Requête SELECT sur une table externe  
  Requête simple qui retourne des données à partir d’une table externe définie.  
   
 ```tsql  
@@ -47,7 +51,7 @@ SELECT * FROM [dbo].[SensorData]
 WHERE Speed > 65;   
 ```  
   
-## Jointure de tables externes à des tables locales avec JOIN  
+## <a name="join-external-tables-with-local-tables"></a>Jointure de tables externes à des tables locales avec JOIN  
   
 ```  
 SELECT InsuranceCustomers.FirstName,   
@@ -60,10 +64,10 @@ ORDER BY SensorData.Speed DESC
   
 ```  
   
-## Calcul de poussée vers le bas dans Hadoop  
+## <a name="pushdown-computation-to-hadoop"></a>Calcul de poussée vers le bas dans Hadoop  
  Des variations de poussée vers le bas sont affichées ici.  
   
-### Poussée vers le bas pour sélectionner un sous-ensemble de lignes  
+### <a name="pushdown-for-selecting-a-subset-of-rows"></a>Poussée vers le bas pour sélectionner un sous-ensemble de lignes  
  Utilisez une poussée vers le bas de prédicat pour améliorer les performances d’une requête qui sélectionne un sous-ensemble de lignes d’une table externe.  
   
  SQL Server 2016 lance ici une tâche Map/Reduce pour récupérer les lignes qui correspondent au prédicat customer.account_balance < 200000 sur Hadoop. Comme la requête peut s’effectuer correctement sans analyser toutes les lignes de la table, seules les lignes qui répondent aux critères de prédicat sont copiées vers SQL Server. Cette opération permet de gagner un temps considérable et nécessite moins d’espace de stockage temporaire quand le nombre de soldes clients inférieur à < 200000 est faible par rapport au nombre de clients ayant des soldes de compte supérieurs à 200000.  
@@ -74,7 +78,7 @@ SELECT * FROM customer WHERE customer.account_balance < 200000.
 SELECT * FROM SensorData WHERE Speed > 65;  
 ```  
   
-### Poussée vers le bas pour sélectionner un sous-ensemble de colonnes  
+### <a name="pushdown-for-selecting-a-subset-of-columns"></a>Poussée vers le bas pour sélectionner un sous-ensemble de colonnes  
  Utilisez une poussée vers le bas de prédicat pour améliorer les performances d’une requête qui sélectionne un sous-ensemble de colonnes d’une table externe.  
   
  Dans cette requête, SQL Server lance une tâche Map/Reduce pour prétraiter le fichier texte délimité Hadoop afin que seules les données pour les deux colonnes, customer.name et customer.zip_code, soient copiées dans SQL Server PDW.  
@@ -84,10 +88,10 @@ SELECT customer.name, customer.zip_code FROM customer WHERE customer.account_bal
   
 ```  
   
-### Poussée vers le bas pour les opérateurs et expressions de base  
+### <a name="pushdown-for-basic-expressions-and-operators"></a>Poussée vers le bas pour les opérateurs et expressions de base  
  SQL Server autorise les opérateurs et expressions de base suivants pour une poussée vers le bas de prédicat.  
   
--   Opérateurs de comparaison binaire (\<, >, =, !=, <>, >=, <=) pour les valeurs d’heure, de date et numériques.  
+-   Opérateurs de comparaison binaire (\<, >, =, !=, <>, >=, <=) pour les valeurs numériques, d’heure et de date.  
   
 -   Opérateurs arithmétiques (+, -, *, /, %).  
   
@@ -106,7 +110,7 @@ SELECT * FROM customer WHERE customer.account_balance <= 200000 AND customer.zip
   
 ```  
   
-### Forcer la poussée vers le bas  
+### <a name="force-pushdown"></a>Forcer la poussée vers le bas  
   
 ```  
 SELECT * FROM [dbo].[SensorData]   
@@ -114,7 +118,7 @@ WHERE Speed > 65
 OPTION (FORCE EXTERNALPUSHDOWN);   
 ```  
   
-### Désactiver la poussée vers le bas  
+### <a name="disable-pushdown"></a>Désactiver la poussée vers le bas  
   
 ```  
 SELECT * FROM [dbo].[SensorData]   
@@ -122,8 +126,8 @@ WHERE Speed > 65
 OPTION (DISABLE EXTERNALPUSHDOWN);  
 ```  
   
-## Importer des données  
- Importez des données de Hadoop ou d’Azure Storage dans SQL Server à des fins de stockage permanent. Utilisez SELECT INTO pour importer des données référencées par une table externe en vue de leur stockage permanent dans SQL Server. Créez une table relationnelle à la volée, puis créez un index column-store en plus de la table.  
+## <a name="import-data"></a>Importer des données  
+ Importez des données de Hadoop ou de Stockage Azure dans SQL Server à des fins de stockage permanent. Utilisez SELECT INTO pour importer des données référencées par une table externe en vue de leur stockage permanent dans SQL Server. Créez une table relationnelle à la volée, puis créez un index column-store en plus de la table.  
   
 ```sql  
 -- PolyBase Scenario 2: Import external data into SQL Server.  
@@ -143,8 +147,8 @@ ORDER BY YearlyIncome
 CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;  
 ```  
   
-## Exporter des données  
-Exportez des données de SQL Server vers Hadoop ou Azure Storage. Tout d’abord, activez la fonctionnalité d’exportation en définissant la valeur sp_configure de l’option « autoriser l’exportation polybase » sur 1. Créez ensuite une table externe pointant vers le répertoire de destination. Puis, utilisez INSERT INTO pour exporter les données d’une table SQL Server locale dans une source de données externe. L’instruction INSERT INTO crée le répertoire de destination s’il n’existe pas, et les résultats de l’instruction SELECT sont exportés à l’emplacement et au format spécifiés. Les fichiers externes sont nommés *QueryID_date_time_ID.format*, où *ID* est un identificateur incrémentiel et *format* est le format des données exportées. Par exemple, QID776_20160130_182739_0.orc.  
+## <a name="export-data"></a>Exporter des données  
+Exportez des données de SQL Server vers Hadoop ou Stockage Azure. Tout d’abord, activez la fonctionnalité d’exportation en définissant la valeur sp_configure de l’option « autoriser l’exportation polybase » sur 1. Créez ensuite une table externe pointant vers le répertoire de destination. Puis, utilisez INSERT INTO pour exporter les données d’une table SQL Server locale dans une source de données externe. L’instruction INSERT INTO crée le répertoire de destination s’il n’existe pas, et les résultats de l’instruction SELECT sont exportés à l’emplacement et au format spécifiés. Les fichiers externes sont nommés *QueryID_date_time_ID.format*, où *ID* est un identificateur incrémentiel et *format* est le format des données exportées. Par exemple, QID776_20160130_182739_0.orc.  
   
 ```sql  
 -- PolyBase Scenario 3: Export data from SQL Server to Hadoop.  
@@ -170,7 +174,7 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
   
-## Nouveaux affichages catalogue  
+## <a name="new-catalog-views"></a>Nouveaux affichages catalogue  
  Les nouveaux affichages catalogue suivants montrent des ressources externes.  
   
 ```sql  
@@ -185,7 +189,8 @@ SELECT * FROM sys.external_tables;
 SELECT name, type, is_external FROM sys.tables WHERE name='myTableName'   
 ```  
   
-## Étapes suivantes  
- Pour en savoir plus sur la résolution des problèmes, consultez [Résolution des problèmes de Polybase](../../relational-databases/polybase/polybase-troubleshooting.md).  
+## <a name="next-steps"></a>Étapes suivantes  
+ Pour en savoir plus sur la résolution des problèmes, consultez [Résolution des problèmes de PolyBase](../../relational-databases/polybase/polybase-troubleshooting.md).  
   
   
+

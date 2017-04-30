@@ -1,41 +1,45 @@
 ---
-title: "Configurer l&#39;entrep&#244;t de donn&#233;es de gestion (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dc.datacollection.wizard_completecfg.f1"
-  - "sql13.swb.dc.datacollection.wizard_config.f1"
-  - "sql13.swb.dc.datacollection.wizard_finish.f1"
-  - "sql13.swb.dc.datacollection.wizard_maploginuser.f1"
-  - "sql13.swb.dc.datacollection.wizard_choosemdw.f1"
-  - "sql13.swb.dc.datacollection.wizard_welcome.f1"
-  - "sql13.swb.dc.datacollection.wizard_createmdw.f1"
-helpviewer_keywords: 
-  - "entrepôt de données [SQL Server], plusieurs instances"
-  - "entrepôt de données [SQL Server], configuration"
-  - "Assistant Configuration de l'entrepôt de données de gestion"
-  - "entrepôt de données de gestion, configuration"
+title: "Configurer l’entrepôt de données de gestion (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dc.datacollection.wizard_completecfg.f1
+- sql13.swb.dc.datacollection.wizard_config.f1
+- sql13.swb.dc.datacollection.wizard_finish.f1
+- sql13.swb.dc.datacollection.wizard_maploginuser.f1
+- sql13.swb.dc.datacollection.wizard_choosemdw.f1
+- sql13.swb.dc.datacollection.wizard_welcome.f1
+- sql13.swb.dc.datacollection.wizard_createmdw.f1
+helpviewer_keywords:
+- data warehouse [SQL Server], multiple instances
+- data warehouse [SQL Server], configuring
+- Configure Management Data Warehouse Wizard
+- management data warehouse, configuring
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0be7c28ff6d9359ae858902f7b2d07cee6f353f6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurer l&#39;entrep&#244;t de donn&#233;es de gestion (SQL Server Management Studio)
+# <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurer l'entrepôt de données de gestion (SQL Server Management Studio)
   Cette rubrique explique comment configurer l'entrepôt de données de gestion pour prendre en charge le stockage des données sur une instance unique ou plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui utilisent le collecteur de données. Ces instances peuvent se trouver sur le même serveur ou sur différents serveurs. Cette rubrique fournit également des descriptions de l'interface utilisateur pour la boîte de dialogue [Assistant Configuration de l'entrepôt de gestion des données](#Wizard) . Pour plus d'informations sur la configuration d'un collecteur de données, consultez [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md).  
   
 > [!NOTE]  
 >  Si l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour s'exécuter à l'aide de l'un des comptes de service système (système local, service réseau ou service local) et que l'entrepôt de données de gestion est créé sur une instance différente du collecteur de données, vous devez configurer les jeux d'éléments de collecte de sorte qu'ils utilisent un proxy pour télécharger les données vers l'entrepôt de données de gestion.  
   
-### Configurer l'entrepôt de données de gestion sur une instance unique ou plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>Configurer l'entrepôt de données de gestion sur une instance unique ou plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Vérifiez que l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute.  
   
@@ -45,12 +49,12 @@ caps.handback.revision: 28
   
 4.  Utilisez l' [Assistant Configuration de l'entrepôt de données de gestion](#Wizard) pour créer un entrepôt de données de gestion, configurer des connexions, activer la collecte de données et démarrer les **jeux d'éléments de collecte de données système**.  
   
-     Pour configurer plusieurs instances, passez à l'étape 5.  
+     Pour configurer plusieurs instances, passez à l'étape 5.  
   
     > [!NOTE]  
-    >  L'utilisation de proxys dans les déploiements où le collecteur de données est installé sur plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui utilisent le même entrepôt de données de gestion est considérée comme étant la meilleure pratique.  
+    >  L'utilisation de proxys dans les déploiements où le collecteur de données est installé sur plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui utilisent le même entrepôt de données de gestion est considérée comme étant la bonne pratique.  
   
-5.  Ouvrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sur une autre instance et procédez de l'une des manières suivantes :  
+5.  Ouvrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sur une autre instance et procédez de l'une des manières suivantes :  
   
     -   Utilisez l'Assistant Configuration de l'entrepôt de données de gestion pour configurer la collecte de données pour l'entrepôt de données de gestion existant.  
   
@@ -92,8 +96,8 @@ caps.handback.revision: 28
   
  Spécifiez une connexion en activant la case à cocher **Mappage** pour la connexion.  
   
- **Appartenance au rôle de base de données :**  *\<nom_entrepôt_données>*  
- Sélectionnez le rôle d'entrepôt de données de gestion auquel la connexion est mappée en cliquant sur une ou plusieurs cases à cocher en regard des options suivantes :  
+ **Appartenance au rôle de base de données pour :** *\<nom_entrepôt_données*  
+ Sélectionnez le rôle d'entrepôt de données de gestion auquel la connexion est mappée en cliquant sur une ou plusieurs cases à cocher en regard des options suivantes :  
   
 -   **mdw_admin**  
   
@@ -113,13 +117,13 @@ caps.handback.revision: 28
  Utilisez cette page pour consulter les résultats de chaque étape de configuration.  
   
  **Détails**  
- Affiche chaque étape de configuration sous la forme d’une ligne dans la grille **Détails**. Chaque ligne contient une colonne **Action** qui décrit l'étape et une colonne **État** qui indique la réussite ou l'échec de l'étape. En cas d'erreur, un message s'affiche dans la colonne **Message** .  
+ Affiche chaque étape de configuration sous la forme d’une ligne dans la grille **Détails** . Chaque ligne contient une colonne **Action** qui décrit l'étape et une colonne **État** qui indique la réussite ou l'échec de l'étape. En cas d'erreur, un message s'affiche dans la colonne **Message** .  
   
  **Arrêter**  
  Arrête le traitement de l'Assistant.  
   
  **Rapport**  
- Affiche un rapport de la configuration de la collecte de données. Les options de rapport suivantes sont fournies :  
+ Affiche un rapport de la configuration de la collecte de données. Les options de rapport suivantes sont fournies :  
   
 -   Afficher le rapport  
   
@@ -132,7 +136,7 @@ caps.handback.revision: 28
  **Fermer**  
  Ferme l'Assistant.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sp_syscollector_enable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
  [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
  [Collecte de données](../../relational-databases/data-collection/data-collection.md)   

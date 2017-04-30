@@ -1,24 +1,28 @@
 ---
-title: "Informations sur le serveur de publication, Agents | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.publisherinfo.commonjobs.f1"
+title: "Informations sur le serveur de publication, Agents | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.publisherinfo.commonjobs.f1
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 78e8493ca92ce2877d5fb6cb29fa46c6287dd56a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Informations sur le serveur de publication, Agents
+# <a name="publisher-information-agents"></a>Informations sur le serveur de publication, Agents
   L'onglet **Agents** affiche des informations sur les agents et les travaux de maintenance associés au serveur de publication :  
   
 -   Agent d'instantané, affiché pour toutes les publications  
@@ -41,10 +45,10 @@ caps.handback.revision: 26
   
     -   Nettoyage de l'abonnement expiré  
   
- Pour plus d’informations sur ces tâches, consultez la page [Administration de l’Agent de réplication](../../relational-databases/replication/agents/replication-agent-administration.md).  
+ Pour plus d’informations sur ces travaux, consultez [Administration de l’Agent de réplication](../../relational-databases/replication/agents/replication-agent-administration.md).  
   
-## Options  
- Pour afficher des informations sur un travail ou de l’agent, sélectionnez à partir de la **l’Agent et les Types de tâches** menu déroulant. Pour des informations plus détaillées et obtenir des tâches en relation avec un Agent ou un travail, cliquez avec le bouton droit sur la ligne correspondant à cet Agent ou à ce travail, puis cliquez sur une option dans le menu contextuel. Pour modifier la façon dont la grille affiche les données, cliquez avec le bouton droit sur la grille, puis cliquez sur l'une des options suivantes :  
+## <a name="options"></a>Options  
+ Pour afficher des informations sur un agent ou un travail, sélectionnez l'option de votre choix dans le menu déroulant **Types d'agents et de travaux** . Pour des informations plus détaillées et obtenir des tâches en relation avec un Agent ou un travail, cliquez avec le bouton droit sur la ligne correspondant à cet Agent ou à ce travail, puis cliquez sur une option dans le menu contextuel. Pour modifier la façon dont la grille affiche les données, cliquez avec le bouton droit sur la grille, puis cliquez sur l'une des options suivantes :  
   
 -   **Trier**: cette option vous permet d'effectuer un tri sur ou plusieurs colonnes dans la boîte de dialogue **Trier les colonnes** .  
   
@@ -58,9 +62,9 @@ caps.handback.revision: 26
   
  Les sections suivantes décrivent les données qui sont affichées sous cet onglet pour chaque agent ou travail.  
   
-### Agent d'instantané  
+### <a name="snapshot-agent"></a>Agent d'instantané  
  **État**  
- État de l'Agent. La liste ci-dessous indique les valeurs d'état possibles :  
+ État de l'Agent. La liste ci-dessous indique les valeurs d'état possibles :  
   
 -   Erreur  
   
@@ -88,12 +92,12 @@ caps.handback.revision: 26
  **#Trans**  
  Nombre de transactions validées dans la base de données de distribution lors de la dernière exécution de l'Agent.  
   
- **#Commandes livrées**  
+ **#Cmds**  
  Nombre de commandes validées dans la base de données de distribution lors de la dernière exécution de l'Agent. Une commande est équivalente à une modification des données, par exemple une mise à jour.  
   
-### l'Agent de lecture du journal ;  
+### <a name="log-reader-agent"></a>l'Agent de lecture du journal ;  
  **État**  
- État de l'Agent. La liste ci-dessous indique les valeurs d'état possibles :  
+ État de l'Agent. La liste ci-dessous indique les valeurs d'état possibles :  
   
 -   Erreur  
   
@@ -124,15 +128,15 @@ caps.handback.revision: 26
  **#Trans**  
  Nombre de transactions validées dans la base de données de distribution lors de la dernière exécution de l'Agent.  
   
- **#Commandes livrées**  
+ **#Cmds**  
  Nombre de commandes validées dans la base de données de distribution lors de la dernière exécution de l'Agent. Une commande est équivalente à une modification des données, par exemple une mise à jour.  
   
- **Nombre moyen #Commandes livrées**  
+ **Nb moy. de #Cmds**  
  Nombre moyen de commandes par transaction lors de la dernière exécution de l'Agent.  
   
-### Agent de lecture de la file d'attente  
+### <a name="queue-reader-agent"></a>Agent de lecture de la file d'attente  
  **État**  
- État de l'Agent. La liste ci-dessous indique les valeurs d'état possibles :  
+ État de l'Agent. La liste ci-dessous indique les valeurs d'état possibles :  
   
 -   Erreur  
   
@@ -163,15 +167,15 @@ caps.handback.revision: 26
  **#Trans**  
  Nombre de transactions validées dans la base de données de publication lors de la dernière exécution de l'Agent.  
   
- **#Commandes livrées**  
+ **#Cmds**  
  Nombre de commandes validées dans la base de données de publication lors de la dernière exécution de l'Agent. Une commande est équivalente à une modification des données, par exemple une mise à jour.  
   
- **Nombre moyen #Commandes livrées**  
+ **Nb moy. de #Cmds**  
  Nombre moyen de commandes par transaction lors de la dernière exécution de l'Agent.  
   
-### Travaux de maintenance  
+### <a name="maintenance-jobs"></a>Travaux de maintenance  
  **État**  
- État de chaque travail. La liste ci-dessous indique les valeurs d'état possibles :  
+ État de chaque travail. La liste ci-dessous indique les valeurs d'état possibles :  
   
 -   Erreur  
   
@@ -193,10 +197,10 @@ caps.handback.revision: 26
  **Dernière action**  
  Dernière action effectuée lors de la dernière exécution du travail.  
   
-## Voir aussi  
- [Démarrer le Moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Afficher des informations et effectuer des tâches pour un serveur de publication & #40 ; Moniteur de réplication & #41 ;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [Afficher des informations et effectuer des tâches pour les Agents associés à une Publication & #40 ; Moniteur de réplication & #41 ;](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)   
- [Surveillance de la réplication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Démarrer le moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
+ [Afficher des informations et exécuter des tâches pour un serveur de publication &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [Afficher des informations et effectuer des tâches pour les agents associés à une publication &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
+ [Moniteur de réplication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

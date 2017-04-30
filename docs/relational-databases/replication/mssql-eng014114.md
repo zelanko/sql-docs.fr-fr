@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG014114 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSSQL_ENG014114 (erreur)"
+title: MSSQL_ENG014114 | Microsoft Docs
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG014114 error
 ms.assetid: f5f04590-e1c6-40d8-ab2b-98c791a0fc44
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e2f6a83763be1e01adfb8ed08147cc1fb4905d2
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG014114
+# <a name="mssqleng014114"></a>MSSQL_ENG014114
     
-## Détails du message  
+## <a name="message-details"></a>Détails du message  
   
 |||  
 |-|-|  
@@ -31,17 +35,17 @@ caps.handback.revision: 18
 |Nom symbolique||  
 |Texte du message|'%1!' n'est pas configuré en tant que distributeur.|  
   
-## Explication  
+## <a name="explanation"></a>Explication  
  Si le message d'erreur spécifie une instance particulière autre que 'null', l'instance spécifiée n'a pas été correctement configurée pour être reconnue comme serveur de distribution.  
   
- Si le message spécifie 'null' comme serveur de distribution, il n’y a pas d’entrée pour le serveur local dans la base de données **master**, ou bien l’entrée est incorrecte (peut-être parce que l’ordinateur a été renommé). La réplication exige que tous les serveurs d’une topologie soient enregistrés avec le nom d’ordinateur et un nom d’instance facultatif (dans le cas d’une instance cluster, le nom du serveur virtuel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le nom d’instance facultatif). Pour que la réplication fonctionne correctement, la valeur renvoyée par `SELECT @@SERVERNAME` pour chaque serveur de la topologie doit correspondre au nom d'ordinateur ou au nom de serveur virtuel avec le nom d'instance facultatif.  
+ Si le message spécifie 'null' comme serveur de distribution, il n'y a pas d'entrée pour le serveur local dans la base de données **master** , ou bien l'entrée est incorrecte (peut-être parce que l'ordinateur a été renommé). La réplication requiert que tous les serveurs d'une topologie soient enregistrés avec le nom d'ordinateur et un nom d'instance facultatif (dans le cas d'une instance cluster, le nom du serveur virtuel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le nom d'instance facultatif). Pour que la réplication fonctionne correctement, la valeur renvoyée par `SELECT @@SERVERNAME` pour chaque serveur de la topologie doit correspondre au nom d'ordinateur ou au nom de serveur virtuel avec le nom d'instance facultatif.  
   
  La réplication n'est pas prise en charge si vous avez inscrit une des instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par adresse IP ou par nom de domaine pleinement qualifié (FQDN). Si vous aviez une des instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inscrites par adresse IP ou par nom de domaine pleinement qualifié dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] quand vous avez configuré la réplication, cette erreur a pu se produire.  
   
-## Action de l'utilisateur  
+## <a name="user-action"></a>Action de l'utilisateur  
  Si le message d'erreur spécifie une instance particulière, configurez le serveur comme serveur de distribution. Pour plus d’informations, consultez [Configurer la distribution](../../relational-databases/replication/configure-distribution.md).  
   
- Si le message d'erreur ne spécifie pas d'instance particulière ('null'), vérifiez que l'instance du serveur de distribution est inscrit correctement. Si le nom réseau de l'ordinateur et le nom de l'instance SQL Server diffèrent, effectuez une des actions suivantes :  
+ Si le message d'erreur ne spécifie pas d'instance particulière ('null'), vérifiez que l'instance du serveur de distribution est inscrit correctement. Si le nom réseau de l'ordinateur et le nom de l'instance SQL Server diffèrent, effectuez une des actions suivantes :  
   
 -   Ajoutez le nom de l'instance SQL Server comme nom réseau valide. Pour définir un autre nom réseau, une méthode possible consiste à l'ajouter au fichier hosts local. Le fichier hosts local est installé par défaut dans le répertoire WINDOWS\system32\drivers\etc ou WINNT\system32\drivers\etc. Pour plus d'informations, consultez la documentation Windows.  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 18
   
      10.193.17.129 inst1  
   
--   Désactivez la distribution, inscrivez l'instance puis réactivez la distribution. Si la valeur de @@SERVERNAME n'est pas correcte pour une instance non cluster, suivez ces étapes :  
+-   Désactivez la distribution, inscrivez l'instance puis réactivez la distribution. Si la valeur de @@SERVERNAME n’est pas correcte pour une instance non cluster, procédez comme suit :  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  
@@ -60,9 +64,10 @@ caps.handback.revision: 18
   
      Après avoir exécuté la procédure stockée [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md), vous devez redémarrer le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour que la modification apportée à @@SERVERNAME soit prise en compte.  
   
-     Si la valeur de @@SERVERNAME n'est pas correcte pour une instance cluster, vous devez modifier le nom à l'aide de l'administrateur de cluster. Pour plus d’informations, consultez [toujours sur les Instances de Cluster basculement (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+     Si la valeur de @@SERVERNAME n’est pas correcte pour une instance cluster, vous devez changer le nom à l’aide de l’administrateur de cluster. Pour plus d’informations, consultez [Instances de cluster de basculement Always On (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des événements &#40;réplication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   
+

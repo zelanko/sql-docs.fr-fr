@@ -1,36 +1,40 @@
 ---
-title: "Cr&#233;ation d&#39;une table m&#233;moire optimis&#233;e et d&#39;une proc&#233;dure stock&#233;e compil&#233;e en mode natif | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Création d’une table optimisée en mémoire et d’une procédure stockée compilée en mode natif | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cf291b900f61590446776dab273d2fcc14509234
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;ation d&#39;une table m&#233;moire optimis&#233;e et d&#39;une proc&#233;dure stock&#233;e compil&#233;e en mode natif
+# <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>Création d'une table optimisée en mémoire et d'une procédure stockée compilée en mode natif
   Cette rubrique contient un exemple qui présente la syntaxe de l'OLTP en mémoire.  
   
- Pour permettre à une application d'utiliser l'OLTP en mémoire, effectuez les tâches suivantes :  
+ Pour permettre à une application d'utiliser l'OLTP en mémoire, effectuez les tâches suivantes :  
   
--   Créez un groupe de fichiers de données mémoire optimisé et ajoutez un conteneur au groupe de fichiers.  
+-   Créez un groupe de fichiers de données optimisé en mémoire et ajoutez un conteneur au groupe de fichiers.  
   
--   Créez des tables et des index mémoire optimisés. Pour plus d’informations, consultez [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
+-   Créez des tables et des index optimisés en mémoire. Pour plus d’informations, consultez [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
--   Chargez les données dans la table mémoire optimisée et mettez à jour les statistiques après le chargement des données et avant de créer les procédures stockées compilées. Pour plus d’informations, consultez [Statistiques pour les tables optimisées en mémoire](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md).  
+-   Chargez les données dans la table optimisée en mémoire et mettez à jour les statistiques après le chargement des données et avant de créer les procédures stockées compilées. Pour plus d’informations, consultez [Statistiques pour les tables optimisées en mémoire](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md).  
   
--   Créez des procédures stockées compilées en mode natif pour accéder aux données des tables mémoire optimisées. Pour plus d’informations, consultez [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md). Vous pouvez également utiliser un [!INCLUDE[tsql](../../includes/tsql-md.md)] traditionnel et interprète pour accéder aux données dans les tables mémoire optimisées.  
+-   Créez des procédures stockées compilées en mode natif pour accéder aux données des tables optimisée en mémoire. Pour plus d’informations, consultez [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md). Vous pouvez également utiliser un [!INCLUDE[tsql](../../includes/tsql-md.md)] traditionnel et interprète pour accéder aux données dans les tables optimisées en mémoire.  
   
--   Le cas échéant, effectuez la migration des données de tables existantes vers des tables mémoire optimisées.  
+-   Le cas échéant, effectuez la migration des données de tables existantes vers des tables optimisées en mémoire.  
   
  Pour plus d’informations sur l’utilisation de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour créer des tables optimisées en mémoire, consultez [Prise en charge de SQL Server Management Studio pour l’OLTP en mémoire](../../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md).  
   
@@ -233,7 +237,7 @@ ORDER BY so.so_id, sod.lineitem_id
   
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Exemples de code OLTP en mémoire](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
   
   

@@ -1,40 +1,44 @@
 ---
-title: "Script pour l&#39;attribution d&#39;autorisations Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "publication Oracle [réplication SQL Server] Oracle, script pour accorder des autorisations"
+title: "Script pour l’attribution d’autorisations Oracle | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], script to grant permissions
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dd6d7d2d41813cd3a6748aa6e8bb31e2a09363a7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Script pour l&#39;attribution d&#39;autorisations Oracle
-  Le script fourni dans cette rubrique est utilisé lors de la configuration de base de données Oracle qui publiera les données à l’aide [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la réplication. Ce script est également disponible dans le répertoire suivant après l’installation : *\< lecteur>*:\\\Program Files\Microsoft SQL Server\\*\< nom_instance>*\MSSQL\Install\oracleadmin.sql. Pour plus d’informations sur la configuration de la base de données Oracle, consultez [configurer un serveur de publication Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
+# <a name="script-to-grant-oracle-permissions"></a>Script pour l'attribution d'autorisations Oracle
+  Le script fourni dans cette rubrique est utilisé lors de la configuration d'une base de données Oracle qui publiera des données à l'aide de la réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Ce script est également disponible dans le répertoire suivant après l’installation : *\<lecteur>*:\\\Program Files\Microsoft SQL Server\\*\<Nom_Instance>*\MSSQL\Install\oracleadmin.sql. Pour plus d’informations sur la configuration de la base de données Oracle, consultez [Configurer un serveur de publication Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
 > [!NOTE]  
 >  Ce script contient l'instruction `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`, qui est requise pour les déclencheurs utilisés par la réplication transactionnelle. Si vous allez utiliser seulement la réplication d'instantané, supprimez cette ligne du script.  
   
- **Pour exécuter le script à partir d’Oracle SQL\*ainsi que de l’utilitaire**  
+ **Pour exécuter le script à partir de l’utilitaire Oracle SQL\*Plus**  
   
 1.  Dans le serveur de distribution SQL Server, ouvrez une fenêtre d'invite de commandes.  
   
-2.  Pour utiliser SQL*PLUS pour vous connecter à la base de données Oracle et exécuter les scripts oracleadmin.sql à partir de son répertoire d'installation par défaut, tapez la syntaxe suivante :  
+2.  Pour utiliser SQL*PLUS pour vous connecter à la base de données Oracle et exécuter les scripts oracleadmin.sql à partir de son répertoire d'installation par défaut, tapez la syntaxe suivante :  
   
     ```  
     sqlplus system/P@$$W0rd@orcl @"c:\Program Files\Microsoft SQL Server\<InstanceName>\MSSQL\Install\oracleadmin.sql"  
     ```  
   
-     Dans cet exemple, le compte Oracle intégré **système** est utilisé pour se connecter à une base de données Oracle avec le nom réseau « orcl ».  
+     Dans cet exemple, le compte Oracle intégré **system** est utilisé pour vous connecter à une base de données Oracle ayant « orcl » comme nom de réseau.  
   
 3.  Lorsque vous y êtes invité, spécifiez le nom d'utilisateur, le mot de passe utilisateur et l'espace de la table par défaut.  
   
@@ -123,7 +127,7 @@ GRANT CREATE VIEW TO &&ReplLogin;
 GRANT CREATE ANY TRIGGER TO &&ReplLogin;  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configurer un serveur de publication Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)  
   
   

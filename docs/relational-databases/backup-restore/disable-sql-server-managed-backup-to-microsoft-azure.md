@@ -1,28 +1,32 @@
 ---
-title: "D&#233;sactivation de la sauvegarde manag&#233;e SQL Server sur Microsoft Azure | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Désactiver la gestion de sauvegarde de SQL Server sur Microsoft Azure | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
 caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: caf1e311db9cc0844294417dfd06e4a384265a4b
+ms.lasthandoff: 04/11/2017
+
 ---
-# D&#233;sactivation de la sauvegarde manag&#233;e SQL Server sur Microsoft Azure
+# <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>Désactiver la gestion de sauvegarde de SQL Server sur Microsoft Azure
   Cette rubrique explique comment activer ou suspendre [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] au niveau base de données et instance.  
   
 ##  <a name="DatabaseDisable"></a> Désactiver la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour une base de données  
- Vous pouvez désactiver les paramètres de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] à l’aide de la procédure stockée système, [managed_backup.sp_backup_config_basic &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md). Le paramètre *@enable_backup* sert à activer et désactiver les configurations de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour une base de données spécifique ; la valeur 1 active les paramètres de configuration, et la valeur 0 les désactive.  
+ Vous pouvez désactiver les paramètres de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] à l’aide de la procédure stockée système, [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md). Le paramètre *@enable_backup* sert à activer et désactiver les configurations de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour une base de données spécifique ; la valeur 1 active les paramètres de configuration, et la valeur 0 les désactive.  
   
-#### Pour désactiver la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour une base de données spécifique :  
+#### <a name="to-disable-includesssmartbackupincludesss-smartbackup-mdmd-for-a-specific-database"></a>Pour désactiver la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour une base de données spécifique :  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -41,7 +45,7 @@ GO
 ##  <a name="DatabaseAllDisable"></a> Désactiver la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour toutes les bases de données sur l'instance  
  La procédure suivante désactive les paramètres de configuration de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] sur toutes les bases de données où la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est actuellement activée sur l'instance.  Les paramètres de configuration tels que l’URL de stockage, la rétention et les informations d’identification SQL restent dans les métadonnées et peuvent être utilisés si la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est activée ultérieurement pour la base de données. Si vous souhaitez simplement interrompre temporairement les services de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] , vous pouvez utiliser le commutateur principal abordé dans les sections suivantes de cette rubrique.  
   
-#### Pour désactiver la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour toutes les bases de données :  
+#### <a name="to-disable-includesssmartbackupincludesss-smartbackup-mdmd-for-all-the-databases"></a>Pour désactiver la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour toutes les bases de données :  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -95,7 +99,7 @@ SELECT db_name
        END  
 ```  
   
- Pour passer en revue les paramètres de configuration de toutes les bases de données sur l'instance, utilisez la requête suivante :  
+ Pour passer en revue les paramètres de configuration de toutes les bases de données sur l'instance, utilisez la requête suivante :  
   
 ```  
 Use msdb;  
@@ -106,9 +110,9 @@ GO
 ```  
   
 ##  <a name="InstanceDisable"></a> Désactiver les paramètres de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] par défaut pour l'instance  
- Les paramètres par défaut au niveau de l'instance sont appliqués à toutes les nouvelles bases de données créées sur cette instance.  Si vous n’avez plus besoin des paramètres par défaut, vous pouvez désactiver cette configuration à l’aide de la procédure stockée système **managed_backup.sp_backup_config_basic**, en affectant la valeur Null au paramètre *@database_name*. La désactivation ne supprime pas les autres paramètres de configuration, comme l'URL de stockage, le paramètre de rétention ou le nom de l'objet contenant les informations d'identification SQL. Ces paramètres seront utilisés si la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est activée sur l'instance ultérieurement.  
+ Les paramètres par défaut au niveau de l'instance sont appliqués à toutes les nouvelles bases de données créées sur cette instance.  Si vous n’avez plus besoin des paramètres par défaut, vous pouvez désactiver cette configuration à l’aide de la procédure stockée système **managed_backup.sp_backup_config_basic** , en affectant la valeur Null au paramètre *@database_name* . La désactivation ne supprime pas les autres paramètres de configuration, comme l'URL de stockage, le paramètre de rétention ou le nom de l'objet contenant les informations d'identification SQL. Ces paramètres seront utilisés si la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est activée sur l'instance ultérieurement.  
   
-#### Pour désactiver les paramètres de configuration par défaut de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :  
+#### <a name="to-disable-includesssmartbackupincludesss-smartbackup-mdmd-default-configuration-settings"></a>Pour désactiver les paramètres de configuration par défaut de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -125,9 +129,9 @@ GO
     ```  
   
 ##  <a name="InstancePause"></a> Interrompre la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] au niveau de l'instance  
- Dans certains cas, vous pouvez souhaiter interrompre les services de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour une courte période.  La procédure stockée système **managed_backup.sp_backup_master_switch** vous permet de désactiver le service de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] au niveau de l’instance.  La même procédure est utilisée pour reprendre la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Le paramètre @state est utilisé pour détérminer si la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] doit être désactivée ou activée.  
+ Dans certains cas, vous pouvez souhaiter interrompre les services de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour une courte période.  La procédure stockée système **managed_backup.sp_backup_master_switch** vous permet de désactiver le service de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] au niveau de l’instance.  La même procédure est utilisée pour reprendre la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Le paramètre @state est utilisé pour déterminer si la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] doit être désactivée ou activée.  
   
-#### Pour interrompre les services de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] à l'aide de Transact-SQL :  
+#### <a name="to-pause-includesssmartbackupincludesss-smartbackup-mdmd-services-using-transact-sql"></a>Pour interrompre les services de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] à l'aide de Transact-SQL :  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -143,7 +147,7 @@ Go
   
 ```  
   
-#### Pour reprendre la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] à l'aide de Transact-SQL  
+#### <a name="to-resume-includesssmartbackupincludesss-smartbackup-mdmd-using-transact-sql"></a>Pour reprendre la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] à l'aide de Transact-SQL  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -159,7 +163,7 @@ GO
   
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Activation de la sauvegarde managée SQL Server sur Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)  
   
   

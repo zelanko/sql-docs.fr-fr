@@ -1,29 +1,33 @@
 ---
-title: "Cr&#233;er un plan de maintenance (aire de conception de plan de maintenance) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Aire de conception de plan de maintenance"
+title: "Créer un plan de maintenance (aire de conception de plan de maintenance) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Maintenance Plan Design Surface
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 616b2d7d823d8a273b3ac260339bb76fba65dd00
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er un plan de maintenance (aire de conception de plan de maintenance)
+# <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Créer un plan de maintenance (aire de conception de plan de maintenance)
   Cette rubrique explique comment créer un plan de maintenance de serveur unique ou multiserveur à l'aide de l'aire de conception de plan de maintenance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. L' **Assistant Plan de maintenance** est conseillé pour créer des plans de maintenance de base, tandis que l'aire de conception permet d'utiliser un flux de travail optimisé.  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 10
   
 -   Pour créer un plan de maintenance multiserveurs, vous devez configurer un environnement multiserveurs contenant un serveur maître et un ou plusieurs serveurs cibles. Les plans de maintenance multiserveurs doivent être créés et conservés sur le serveur maître. Ces plans peuvent être consultés mais ne peuvent pas être conservés sur les serveurs cibles.  
   
--   Les membres du rôle **db_ssisadmin** et du rôle **dc_admin** peuvent être en mesure d’élever leurs privilèges à **sysadmin**. Cette élévation de privilège est possible, car ces rôles peuvent modifier les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , qui sont exécutables par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le contexte de sécurité **sysadmin** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour empêcher cette élévation de privilège lors de l’exécution de plans de maintenance, de jeux d’éléments de collecte de données et d’autres packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], configurez les travaux de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent qui exécutent des packages de façon à utiliser un compte proxy doté de privilèges limités ou ajoutez uniquement des membres **sysadmin** aux rôles **db_ssisadmin** et **dc_admin**.  
+-   Les membres du rôle **db_ssisadmin** et du rôle **dc_admin** peuvent être en mesure d’élever leurs privilèges à **sysadmin**. Cette élévation de privilège est possible, car ces rôles peuvent modifier les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , qui sont exécutables par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le contexte de sécurité **sysadmin** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour empêcher cette élévation de privilège lors de l’exécution de plans de maintenance, de jeux d’éléments de collecte de données et d’autres packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configurez les travaux de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent qui exécutent des packages de façon à utiliser un compte proxy doté de privilèges limités ou ajoutez uniquement des membres **sysadmin** aux rôles **db_ssisadmin** et **dc_admin** .  
   
 ###  <a name="Security"></a> Sécurité  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 10
   
 ##  <a name="SSMSProcedure"></a> Utilisation de l'aire de conception de plan de maintenance  
   
-#### Pour créer un plan de maintenance  
+#### <a name="to-create-a-maintenance-plan"></a>Pour créer un plan de maintenance  
   
 1.  Dans l'Explorateur d'objets, cliquez sur le signe plus (+) pour développer le serveur sur lequel vous souhaitez créer un plan de maintenance.  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 10
      Ajoute un sous-plan que vous pouvez configurer.  
   
      **Propriétés du sous-plan**  
-     Affiche la boîte de dialogue **Propriétés du sous-plan** du sous-plan sélectionné dans la grille principale. Vous pouvez également double-cliquer sur un sous-plan dans la grille pour afficher la boîte de dialogue **Propriétés du sous-plan**. Pour plus d'informations sur cette boîte de dialogue, voir ci-dessous.  
+     Affiche la boîte de dialogue **Propriétés du sous-plan** du sous-plan sélectionné dans la grille principale. Vous pouvez également double-cliquer sur un sous-plan dans la grille pour afficher la boîte de dialogue **Propriétés du sous-plan** . Pour plus d'informations sur cette boîte de dialogue, voir ci-dessous.  
   
      **Supprimer le sous-plan sélectionné**  
      Supprime le sous-plan sélectionné.  
@@ -74,26 +78,26 @@ caps.handback.revision: 10
      Supprime une planification du sous-plan sélectionné.  
   
      **Gérer les connexion**  
-     Affiche la boîte de dialogue **Gérer les connexions**. Permet d'ajouter des connexions d'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supplémentaires au plan de maintenance. Pour plus d'informations sur cette boîte de dialogue, voir ci-dessous.  
+     Affiche la boîte de dialogue **Gérer les connexions** . Permet d'ajouter des connexions d'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supplémentaires au plan de maintenance. Pour plus d'informations sur cette boîte de dialogue, voir ci-dessous.  
   
      **Création de rapport et enregistrement**  
-     Affiche la boîte de dialogue **Création de rapport et enregistrement**. Pour plus d'informations sur cette boîte de dialogue, voir ci-dessous.  
+     Affiche la boîte de dialogue **Création de rapport et enregistrement** . Pour plus d'informations sur cette boîte de dialogue, voir ci-dessous.  
   
      **Serveurs**  
-     Affichez la boîte de dialogue **Serveurs** qui permet de sélectionner les serveurs où sont exécutées les tâches du sous-plan. Cette option est activée uniquement sur des serveurs maîtres dans des environnements multiserveurs. Pour plus d’informations, consultez [Créer un environnement multiserveur](../../ssms/agent/create-a-multiserver-environment.md) et [Plan de maintenance &#40;Serveurs&#41;](../../relational-databases/maintenance-plans/maintenance-plan-servers.md).  
+     Affichez la boîte de dialogue **Serveurs** qui permet de sélectionner les serveurs où sont exécutées les tâches du sous-plan. Cette option est activée uniquement sur des serveurs maîtres dans des environnements multiserveurs. Pour plus d’informations, consultez [Créer un environnement multiserveur](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6) et [Plan de maintenance &#40;Serveurs&#41;](../../relational-databases/maintenance-plans/maintenance-plan-servers.md).  
   
      **Nom**  
      Affichez le nom du plan de maintenance. Pour les nouveaux plans de maintenance, le nom est spécifié dans une boîte de dialogue avant l'ouverture du concepteur de plan de maintenance. Pour renommer un plan de maintenance, cliquez dessus avec le bouton droit dans l’Explorateur d’objets, puis cliquez sur **Renommer**.  
   
      **Description**  
-     Permet d'afficher ou de spécifier une description du plan de maintenance. La longueur maximale de la description est 512 caractères.  
+     Permet d'afficher ou de spécifier une description du plan de maintenance. La longueur maximale de la description est 512 caractères.  
   
      **Aire du concepteur**  
      Conception et entretien des plans de maintenance. Utilisez l'aire du concepteur pour ajouter des tâches de maintenance à un plan, supprimer des tâches d'un plan, spécifier des liens de précédence entre des tâches et indiquer les branchements et le parallélisme des tâches.  
   
      Un lien de précédence entre deux tâches établit une relation entre ces tâches. La seconde tâche (la *tâche dépendante*) s’exécute seulement si le résultat d’exécution de la première tâche (la *tâche prioritaire*) correspond aux critères spécifiés. En général, le résultat d'exécution spécifié est **Succès**, **Échec**ou **À l'achèvement**. Pour plus d'informations, consultez l'étape **8** ci-dessous.  
   
-5.  Dans l’en-tête de l’aire de conception, double-cliquez sur **Sous-plan_1** et entrez un nom et une description pour le sous-plan dans la boîte de dialogue **Propriétés du sous-plan**.  
+5.  Dans l’en-tête de l’aire de conception, double-cliquez sur **Sous-plan_1** et entrez un nom et une description pour le sous-plan dans la boîte de dialogue **Propriétés du sous-plan** .  
   
      Les options suivantes sont disponibles dans la boîte de dialogue **Propriétés du sous-plan** .  
   
@@ -106,7 +110,7 @@ caps.handback.revision: 10
      **Planifier**  
      Indique pour quelle planification le sous-plan sera exécuté. Cliquez sur **Planification du sous-plan** pour ouvrir la boîte de dialogue **Nouvelle planification du travail** . Cliquez sur **Supprimer la planification** pour supprimer la planification du sous-plan.  
   
-     Liste **Exécuter en tant que**  
+     Liste**Exécuter en tant que**   
      Sélectionnez le compte à utiliser pour exécuter cette sous-tâche.  
   
 6.  Cliquez sur l'icône **Planification du sous-plan** pour entrer les informations de la planification dans la boîte de dialogue **Nouvelle planification du travail** .  
@@ -145,7 +149,7 @@ caps.handback.revision: 10
   
      Les tâches de plan de maintenance que vous ajoutez à la **Boîte à outils** sont également disponibles dans l' **Assistant Plan de maintenance**. Pour plus d’informations sur les différentes tâches présentées ci-dessus, consultez [Utilisation de l’Assistant Plan de maintenance](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) sous **Démarrer l’Assistant Plan de maintenance**.  
   
-8.  Pour définir un flux de travail entre les tâches :  
+8.  Pour définir un flux de travail entre les tâches :  
   
     1.  Cliquez avec le bouton droit sur la tâche prioritaire et sélectionnez **Ajouter une contrainte de précédence**.  
   
@@ -158,17 +162,17 @@ caps.handback.revision: 10
          **Option de contrainte**  
          Définit la manière dont une contrainte fonctionne entre deux tâches.  
   
-         Liste **Opération d’évaluation**  
+         Liste**Opération d’évaluation**    
          Spécifiez l'opération d'évaluation utilisée par la contrainte de précédence. Les opérations disponibles sont : **Contrainte**, **Expression**, **Expression et contrainte**et **Expression ou contrainte**.  
   
-         Liste **Valeur**  
-         Spécifiez la valeur de contrainte : **Réussite**, **Échec** ou **À l’achèvement**. **Réussite** est la valeur par défaut.  
+         Liste**Valeur**   
+         Spécifiez la valeur de contrainte : **Réussite**, **Échec**ou **À l’achèvement**. **Réussite** est la valeur par défaut.  
   
         > [!NOTE]  
-        >  La ligne de contrainte de précédence est verte pour **Réussite**, rouge pour **Échec** et bleue pour **À l’achèvement**.  
+        >  La ligne de contrainte de précédence est verte pour **Réussite**, rouge pour **Échec**et bleue pour **À l’achèvement**.  
   
          **Expression**  
-         Si vous utilisez les opérations **Expression**, **Expression et contrainte** ou **Expression ou contrainte**, tapez une expression. L'expression doit prendre une valeur de type Boolean.  
+         Si vous utilisez les opérations **Expression**, **Expression et contrainte**ou **Expression ou contrainte**, tapez une expression. L'expression doit prendre une valeur de type Boolean.  
   
          **Test**  
          Validez l'expression.  
@@ -198,7 +202,7 @@ caps.handback.revision: 10
   
     3.  Dans la boîte de dialogue **Propriétés de connexion** , dans la zone **Nom de la connexion** , entrez le nom de la connexion que vous créez.  
   
-    4.  Sous **Spécifiez les éléments suivants pour vous connecter aux données de SQL Server**, dans la zone **Sélectionnez un serveur ou entrez un nom de serveur**, entrez le nom du serveur SQL à utiliser ou cliquez sur le bouton de sélection **(…)** et sélectionnez un serveur dans la boîte de dialogue **SQL Server**. Si vous sélectionnez un serveur dans la boîte de dialogue **SQL Server** , cliquez sur **OK**.  
+    4.  Sous **Spécifiez les éléments suivants pour vous connecter aux données de SQL Server**, dans la zone **Sélectionnez un serveur ou entrez un nom de serveur** , entrez le nom du serveur SQL à utiliser ou cliquez sur le bouton de sélection **(…)** et sélectionnez un serveur dans la boîte de dialogue **SQL Server** . Si vous sélectionnez un serveur dans la boîte de dialogue **SQL Server** , cliquez sur **OK**.  
   
     5.  Sous **Entrez des informations pour vous connecter au serveur**, sélectionnez **Utiliser la sécurité intégrée de Windows NT** ou **Utiliser un nom d'utilisateur et un mot de passe spécifiques**. Si vous choisissez d'utiliser un nom d'utilisateur et un mot de passe spécifiques, entrez ces informations dans les zones **Nom d'utilisateur** et **Mot de passe** , respectivement.  
   
@@ -214,7 +218,7 @@ caps.handback.revision: 10
   
         1.  Si vous sélectionnez **Générer un rapport de fichier texte**, sélectionnez **Créer un nouveau fichier** ou **Ajouter au fichier**.  
   
-        2.  En fonction de la sélection ci-dessus, entrez le nom et le chemin complet du nouveau fichier ou du fichier à ajouter dans les zones **Dossier** ou **Nom de fichier** . Vous pouvez également cliquer sur le bouton de sélection **(…)**, puis sélectionner le chemin d’accès au dossier ou le nom de fichier dans les boîtes de dialogue **Localiser le dossier –***nom_serveur* ou **Rechercher les fichiers de base de données –***nom_serveur*.  
+        2.  En fonction de la sélection ci-dessus, entrez le nom et le chemin complet du nouveau fichier ou du fichier à ajouter dans les zones **Dossier** ou **Nom de fichier** . Vous pouvez également cliquer sur le bouton de sélection **(…)** , puis sélectionner le chemin d’accès au dossier ou le nom de fichier dans les boîtes de dialogue **Localiser le dossier –***nom_serveur* ou **Rechercher les fichiers de base de données –***nom_serveur* .  
   
         3.  Si vous sélectionnez **Envoyer le rapport à un destinataire de messagerie**, dans la liste **Opérateur d'agent** , sélectionnez le destinataire du rapport envoyé par messagerie électronique.  
   
@@ -229,7 +233,7 @@ caps.handback.revision: 10
   
 12. Pour consulter les résultats dans la visionneuse du fichier journal, dans **l’Explorateur d’objets**, cliquez avec le bouton droit sur le dossier **Plans de maintenance** ou sur le plan de maintenance spécifique et sélectionnez **Afficher l’historique**.  
   
-     Les options suivantes sont disponibles dans la boîte de dialogue **Visionneuse du fichier journal –***nom_serveur*.  
+     Les options suivantes sont disponibles dans la boîte de dialogue **Visionneuse du fichier journal –***nom_serveur* .  
   
      **Charger le journal**  
      Ouvre une boîte de dialogue dans laquelle vous pouvez spécifier un fichier journal à charger.  
@@ -241,7 +245,7 @@ caps.handback.revision: 10
      Actualise l'affichage des journaux sélectionnés. Le bouton **Actualiser** permet de relire les journaux sélectionnés à partir du serveur cible lors de l'application des paramètres de filtre.  
   
      **Filtre**  
-     Ouvre une boîte de dialogue qui vous permet de spécifier les paramètres utilisés pour filtrer le fichier journal, notamment **Connexion**, **Date** ou d’autres critères de filtre **Général**.  
+     Ouvre une boîte de dialogue qui vous permet de spécifier les paramètres utilisés pour filtrer le fichier journal, notamment **Connexion**, **Date**ou d’autres critères de filtre **Général** .  
   
      **Recherche**  
      Permet de rechercher un texte spécifique dans le fichier journal. La recherche des caractères génériques n'est pas prise en charge.  

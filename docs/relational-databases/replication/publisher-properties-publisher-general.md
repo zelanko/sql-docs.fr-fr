@@ -1,34 +1,38 @@
 ---
-title: "Propri&#233;t&#233;s du serveur de publication - Serveur de publication, G&#233;n&#233;ral | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.configdistwizard.pubproperties.general.f1"
-helpviewer_keywords: 
-  - "Propriétés du serveur de publication (boîte de dialogue)"
+title: "Propriétés du serveur de publication - Serveur de publication, Général | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.configdistwizard.pubproperties.general.f1
+helpviewer_keywords:
+- Publisher Properties dialog box
 ms.assetid: 9055bd4a-89cc-4059-9474-e213d7bcc36d
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e89be707eb083de0af4c724433695f9ef0511602
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propri&#233;t&#233;s du serveur de publication - Serveur de publication, G&#233;n&#233;ral
-  Le **Général** page de le **Propriétés de l’éditeur** boîte de dialogue affiche des informations en lecture seule sur la base de données de distribution et de distribution qui utilise le serveur de publication. Pour changer le serveur de distribution ou la base de données de distribution d'un serveur de publication :  
+# <a name="publisher-properties---publisher-general"></a>Propriétés du serveur de publication - Serveur de publication, Général
+  La page **Général** de la boîte de dialogue **Propriétés du serveur de publication** contient des informations en lecture seule sur le serveur de distribution et la base de données de distribution qu'utilise le serveur de publication. Pour changer le serveur de distribution ou la base de données de distribution d'un serveur de publication :  
   
-1.  Désactivez la publication sur le serveur de publication. Pour plus d’informations, consultez [désactiver la publication et Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md).  
+1.  Désactivez la publication sur le serveur de publication. Pour plus d’informations, consultez [Désactiver la publication et la distribution](../../relational-databases/replication/disable-publishing-and-distribution.md).  
   
-2.  Reconfigurez la publication et la distribution. Pour plus d’informations, consultez [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md).  
+2.  Reconfigurez la publication et la distribution. Pour plus d’informations, consultez [Configurer la publication et la distribution](../../relational-databases/replication/configure-publishing-and-distribution.md).  
   
-## Voir aussi  
- [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Référence des propriétés de & #40 ; Réplication & #41 ;](../../relational-databases/replication/properties-reference-replication.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Afficher et modifier les propriétés d’un serveur de distribution ou d’un serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [Référence des propriétés &#40;réplication&#41;](../../relational-databases/replication/properties-reference-replication.md)  
   
   

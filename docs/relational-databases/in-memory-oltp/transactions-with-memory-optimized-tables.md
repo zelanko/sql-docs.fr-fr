@@ -1,25 +1,29 @@
 ---
-title: "Transactions with Memory-Optimized Tables | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
-ms.date: "08/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Transactions avec tables optimisées en mémoire | Microsoft Docs"
+ms.custom:
+- MSDN content
+- MSDN - SQL DB
+ms.date: 08/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.service: sql-database
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aaa888f18eae1c5d49eb3bcff13424a4cbfc6ec6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Transactions with Memory-Optimized Tables
+# <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   
@@ -33,7 +37,7 @@ Pour des informations générales, consultez [SET TRANSACTION ISOLATION LEVEL (T
   
   
   
-#### Sections de cet article :  
+#### <a name="sections-in-this-article"></a>Sections de cet article :  
   
 - [Approches pessimiste et optimiste](#pessvoptim22ni)  
 - [Modes d’initiation de la transaction](#txninitmodes24ni)  
@@ -52,48 +56,48 @@ Pour des informations générales, consultez [SET TRANSACTION ISOLATION LEVEL (T
   
 <a name="pessvoptim22ni"/>  
   
-## Approches pessimiste et optimiste  
+## <a name="pessimistic-versus-optimistic"></a>Approches pessimiste et optimiste  
   
-Les différences fonctionnelles sont dues à la différence entre les approches pessimiste et optimiste pour l’intégrité de la transaction. Les tables optimisées en mémoire utilisent l’approche optimiste :  
+Les différences fonctionnelles sont dues à la différence entre les approches pessimiste et optimiste pour l’intégrité de la transaction. Les tables optimisées en mémoire utilisent l’approche optimiste :  
   
 - L’approche pessimiste utilise des verrous pour bloquer les conflits potentiels avant qu’ils surviennent. Les verrous sont appliqués lorsque l’instruction est exécutée et ouverts lorsque la transaction est validée.  
   
 - L’approche optimiste détecte les conflits à mesure qu’ils se produisent et effectue les vérifications au moment de la validation.  
-  - Erreur 1205, un interblocage ne peut pas se produire pour une table optimisée en mémoire.  
+  - Erreur 1205, un interblocage ne peut pas se produire pour une table optimisée en mémoire.  
   
 L’approche optimiste est moins lourde et souvent plus efficace, en partie parce que les conflits de transaction sont rares dans la plupart des applications. La principale différence d’ordre fonctionnel entre ces deux approches se situe au niveau des conflits. Avec l’approche pessimiste, vous attendez, alors qu’avec l’approche optimiste, l’une des transactions échoue et doit être retentée par le client. Les différences fonctionnelles sont plus grandes lorsque le niveau d’isolation REPEATABLE READ est appliqué et sont encore plus importantes pour le niveau SERIALIZABLE.  
   
 <a name="txninitmodes24ni"/>  
   
-## Modes d’initiation de la transaction  
+## <a name="transaction-initiation-modes"></a>Modes d’initiation de la transaction  
   
-SQL Server dispose des modes suivants pour l’initiation de la transaction :  
+SQL Server dispose des modes suivants pour l’initiation de la transaction :  
   
 - **Validation automatique** : le début d’une requête simple ou d’une instruction DML ouvre implicitement une transaction, et la fin d’une instruction valide implicitement la transaction. Il s'agit du paramètre par défaut.  
   - En mode Validation automatique, vous n’êtes généralement pas obligé de coder un indicateur de table à propos du niveau d’isolation de la transaction sur la table optimisée en mémoire dans la clause FROM.  
   
-- **Explicite** : votre instruction Transact-SQL contient le code BEGIN TRANSACTION, et éventuellement COMMIT TRANSACTION. Plusieurs instructions peuvent être rassemblées dans une même transaction.  
+- **Explicite** : votre instruction Transact-SQL contient le code BEGIN TRANSACTION, et éventuellement COMMIT TRANSACTION. Plusieurs instructions peuvent être rassemblées dans une même transaction.  
   - En mode Explicite, vous devez utiliser l’option de base de données MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT ou coder un indicateur de table à propos du niveau d’isolation de la transaction sur la table optimisée en mémoire dans la clause FROM.  
   
-- **Implicite** : lorsque SET IMPLICIT_TRANSACTION ON est appliqué. Le nom IMPLICIT_BEGIN_TRANSACTION aurait sans doute été plus approprié, car cette option ne fait qu’appliquer implicitement l’équivalent d’une instruction BEGIN TRANSACTION explicite avant chaque instruction UPDATE si 0 = @@trancount. Par conséquent, c’est à votre code T-SQL d’émettre finalement une instruction COMMIT TRANSACTION explicite.   
+- **Implicite** : lorsque SET IMPLICIT_TRANSACTION ON est appliqué. Le nom IMPLICIT_BEGIN_TRANSACTION aurait sans doute été plus approprié, car cette option ne fait qu’appliquer implicitement l’équivalent d’une instruction BEGIN TRANSACTION explicite avant chaque instruction UPDATE si 0 = @@trancount. Par conséquent, c’est à votre code T-SQL d’émettre finalement une instruction COMMIT TRANSACTION explicite.   
   
 - **Bloc atomique** : toutes les instructions des blocs atomiques, qui sont nécessaires avec des procédures stockées compilées en mode natif, s’exécutent toujours dans le cadre d’une transaction unique. Soit les actions de l’ensemble du bloc atomique sont validées, soit elles sont toutes annulées en cas d’échec.  
   
 <a name="codeexamexpmode25ni"/>  
   
-### Exemple de code avec le mode Explicite  
+### <a name="code-example-with-explicit-mode"></a>Exemple de code avec le mode Explicite  
   
-Le script Transact-SQL interprété suivant utilise :  
+Le script Transact-SQL interprété suivant utilise :  
   
-- une transaction explicite ;  
+- une transaction explicite ;  
   
-- une table optimisée en mémoire, nommée dbo.Order_mo ;  
+- une table optimisée en mémoire, nommée dbo.Order_mo ;  
   
 - le contexte de niveau d’isolation de la transaction READ COMMITTED.  
   
-Par conséquent, il est nécessaire d’avoir un indicateur de table sur la table optimisée en mémoire. L’indicateur doit être pour SNAPSHOT ou un niveau d’isolation supérieur. Dans le cas de l’exemple de code, l’indicateur est WITH (SNAPSHOT). Si cet indicateur est supprimé, le script rencontre une erreur 41368, pour laquelle une nouvelle tentative automatique n’est pas adaptée :  
+Par conséquent, il est nécessaire d’avoir un indicateur de table sur la table optimisée en mémoire. L’indicateur doit être pour SNAPSHOT ou un niveau d’isolation supérieur. Dans le cas de l’exemple de code, l’indicateur est WITH (SNAPSHOT). Si cet indicateur est supprimé, le script rencontre une erreur 41368, pour laquelle une nouvelle tentative automatique n’est pas adaptée :  
   
-- 41368 : L’accès aux tables optimisées en mémoire selon le niveau d’isolation READ COMMITTED est pris en charge uniquement pour les transactions validées automatiquement. Cela n'est pas pris en charge pour les transactions explicites ou implicites. Spécifiez un niveau d’isolation pris en charge pour la table optimisée en mémoire à l’aide d’un indicateur de table, comme WITH (SNAPSHOT).  
+- 41368 : L’accès aux tables optimisées en mémoire selon le niveau d’isolation READ COMMITTED est pris en charge uniquement pour les transactions validées automatiquement. Cela n'est pas pris en charge pour les transactions explicites ou implicites. Spécifiez un niveau d’isolation pris en charge pour la table optimisée en mémoire à l’aide d’un indicateur de table, comme WITH (SNAPSHOT).  
   
   
   
@@ -116,7 +120,7 @@ Notez que l’utilisation d’un indicateur `WITH (SNAPSHOT)` peut être évité
   
 <a name="rowver28ni"/>  
   
-## Contrôle de version de ligne  
+## <a name="row-versioning"></a>Contrôle de version de ligne  
   
 Les tables optimisées en mémoire utilisent un système de contrôle de version de ligne très sophistiqué qui rend l’approche optimiste efficace, même au niveau d’isolation le plus strict de SERIALIZABLE. Pour en savoir plus, consultez [Introduction aux tables optimisées en mémoire](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
@@ -124,7 +128,7 @@ Les tables sur disque disposent indirectement d’un système de contrôle de ve
   
 <a name="confdegreeiso30ni"/>  
   
-## Niveaux d’isolation 
+## <a name="isolation-levels"></a>Niveaux d’isolation 
   
 La table suivante répertorie les niveaux d’isolation des transactions possibles, du plus faible au plus élevé. Pour plus d’informations sur les conflits qui peuvent se produire et la logique de nouvelles tentatives permettant de résoudre ces conflits, consultez [Détection des conflits et logique des nouvelles tentatives](#confdetretry34ni). 
   
@@ -141,7 +145,7 @@ La table suivante répertorie les niveaux d’isolation des transactions possibl
 
 <a name="txnphaslife32ni"/>  
   
-## Durée de vie et phases de la transaction  
+## <a name="transaction-phases-and-lifetime"></a>Durée de vie et phases de la transaction  
   
 Lorsqu’une table optimisée en mémoire est impliquée, la durée de vie d’une transaction passe par les phases décrites dans l’image suivante.  
   
@@ -149,17 +153,17 @@ Lorsqu’une table optimisée en mémoire est impliquée, la durée de vie d’u
   
 Voici une description des phases.  
   
-#### Traitement normal : phase 1 (sur 3)  
+#### <a name="regular-processing-phase-1-of-3"></a>Traitement normal : phase 1 (sur 3)  
   
 - Cette phase se compose de l’exécution de toutes les requêtes et des instructions DML de la requête.  
 - Pendant cette phase, les instructions voient la version des tables optimisées en mémoire comme l’heure de début logique de la transaction.  
   
-#### Validation : phase 2 (sur 3)  
+#### <a name="validation-phase-2-of-3"></a>Validation : phase 2 (sur 3)  
   
 - La phase de validation commence par l’assignation d’une heure de fin et donc le marquage d’une transaction comme logiquement terminée. Toutes les modifications de la transaction deviennent visibles pour les autres transactions, qui deviennent alors dépendantes de cette transaction et ne peuvent pas être validées tant que cette transaction n’a pas été validée. En outre, les transactions qui contiennent ces dépendances ne sont pas autorisées à retourner des jeux de résultats au client. De cette manière, le client voit uniquement les données qui ont été correctement validées dans la base de données.  
 - Cette phase comprend les validations REPEATABLE READ et SERIALIZABLE. La validation REPEATABLE READ vérifie si des lignes lues par la transaction ont été mises à jour. La validation SERIALIZABLE vérifie si une ligne a été insérée dans une plage de données analysée par cette transaction. Notez que, selon le tableau de la section [Niveaux d’isolation](#confdegreeiso30ni), les validations REPEATABLE READ et SERIALIZABLE peuvent avoir lieu lorsque vous utilisez l’isolation SNAPSHOT pour valider la cohérence des contraintes de clés étrangères et uniques.  
   
-#### Traitement de validation : phase 3 (sur 3)  
+#### <a name="commit-processing-phase-3-of-3"></a>Traitement de validation : phase 3 (sur 3)  
   
 - Durant la phase de validation, les modifications apportées aux tables durables sont écrites dans le journal, et le journal est écrit sur le disque. Le contrôle est ensuite rendu au client.  
 - Une fois le traitement de validation terminé, toutes les transactions dépendantes sont informées qu’elles peuvent être validées.  
@@ -168,7 +172,7 @@ Comme toujours, nous vous recommandons d’utiliser des unités transactionnelle
   
 <a name="confdetretry34ni"/>  
   
-## Détection des conflits et logique des nouvelles tentatives 
+## <a name="conflict-detection-and-retry-logic"></a>Détection des conflits et logique des nouvelles tentatives 
 
 Il existe deux types de conditions d’erreur qui peuvent causer l’échec et l’annulation d’une transaction. Dans la plupart des cas, lorsqu’un tel échec se produit, la transaction doit être retentée, comme dans le cas d’un blocage.
 - Conflits entre plusieurs transactions simultanées. Il s’agit là de conflits de mise à jour et d’échecs de validation qui peuvent être dus à une violation du niveau d’isolation des transactions ou à une violation des contraintes.
@@ -185,7 +189,7 @@ Voici les conditions d’erreur qui peuvent entraîner l’échec des transactio
 | **41839** | Le nombre maximal de dépendances de validation d’une transaction a été dépassé. | Le nombre de transactions sur lesquelles dépend une transaction donnée (Tx1) est limité : ce sont les dépendances sortantes. De plus, le nombre de transactions pouvant dépendre d’une transaction donnée (Tx1) est limité : il s’agit des dépendances sortantes. La limite pour les deux est de 8 transactions. <br/><br/> Le plus souvent, cet échec est dû au fait qu’un nombre très important de transactions de lecture accède aux données écrites par une seule transaction d’écriture. La probabilité de cette erreur augmente si les opérations de lecture effectuent toutes une analyse importante des mêmes données et si la validation ou le traitement de validation de la transaction d’écriture sont longs, par exemple, si la transaction d’écriture effectue des analyses importantes avec un niveau d’isolation SERIALIZABLE (augmentation de la durée de la phase de validation) ou si le journal des transactions est placé sur un périphérique d’E/S de journal lent (augmentation de la durée de traitement de la validation). Si les transactions de lecture effectuent des analyses importantes et si elles sont censées n’accéder qu’à quelques lignes, cela peut indiquer qu’un index est manquant. De même, si la transaction d’écriture effectue des analyses importantes avec le niveau d’isolation SERIALIZABLE, mais qu’elle n’est censée accéder qu’à quelques lignes, cela peut également indiquer qu’un index est manquant. <br/><br/> Le nombre maximal de dépendances de validation peut être augmenté à l’aide de l’indicateur de trace **9926**. Utilisez cet indicateur de trace uniquement si vous obtenez cette erreur après avoir vérifié qu’aucun index n’est manquant, car cela pourrait masquer ces problèmes dans les cas mentionnés ci-dessus. Gardez également à l’esprit que la complexité des graphiques de dépendances, où chaque transaction comprend un grand nombre de dépendances entrantes et sortantes, ainsi que de nombreuses couches de dépendances, peut rendre le système inefficace.  |
  
   
-### Logique des nouvelles tentatives 
+### <a name="retry-logic"></a>Logique des nouvelles tentatives 
 
 Lorsqu’une transaction échoue en raison de l’une des conditions mentionnées ci-dessus, la transaction doit être retentée.
   
@@ -193,7 +197,7 @@ La logique des nouvelles tentatives peut être implémentée côté client ou c�
   
 <a name="retrytsqlcodeexam35ni"/>  
   
-#### Exemple de code T-SQL de nouvelle tentative  
+#### <a name="retry-t-sql-code-example"></a>Exemple de code T-SQL de nouvelle tentative  
   
 La logique des nouvelles tentatives côté serveur avec T-SQL doit être utilisée uniquement pour les transactions qui ne retournent pas de jeux de résultats au client, puisque les nouvelles tentatives peuvent retourner des jeux de résultats supplémentaires au client sans que cela ne puisse être anticipé.  
   
@@ -254,19 +258,19 @@ Le script T-SQL interprété suivant illustre l’apparence de la logique de nou
   
 <a name="crossconttxn38ni"/>  
   
-## Transaction entre conteneurs  
+## <a name="cross-container-transaction"></a>Transaction entre conteneurs  
   
   
-Une transaction est appelée transaction entre conteneurs si :  
+Une transaction est appelée transaction entre conteneurs si :  
   
-- elle accède à une table optimisée en mémoire à partir du code Transact-SQL interprété ; ou  
+- elle accède à une table optimisée en mémoire à partir du code Transact-SQL interprété ; ou  
 - Exécute une procédure native alors qu’une transaction est déjà ouverte (XACT_STATE() = 1).  
   
 Le qualificatif « entre conteneurs » signifie que la transaction s’exécute sur les deux conteneurs de gestion de transactions, celui pour les tables sur disque et celui pour les tables optimisées en mémoire.  
   
 Dans une transaction entre conteneurs, différents niveaux d’isolation permettent d’accéder aux tables sur disque et optimisées en mémoire. Cette différence est exprimée par le biais des indicateurs de table explicites comme WITH (SERIALIZABLE) ou l’option de base de données MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT, qui élève implicitement le niveau d’isolation de la table optimisée en mémoire vers le niveau SNAPSHOT si TRANSACTION ISOLATION LEVEL est configuré en tant que READ COMMITTED ou READ UNCOMMITTED.  
   
-Dans l’exemple de code Transact-SQL suivant :  
+Dans l’exemple de code Transact-SQL suivant :  
   
 - L’accès à la table sur disque (Table_D1) se fait à l’aide du niveau d’isolation READ COMMITTED.  
 - L’accès à la table optimisée en mémoire (Table_MO7) se fait à l’aide du niveau d’isolation SERIALIZABLE. La Table_MO6 n’a pas de niveau d’isolation spécifique, dans la mesure où les insertions sont toujours cohérentes et sont exécutées essentiellement avec un niveau d’isolation SERIALIZABLE.  
@@ -278,7 +282,7 @@ Dans l’exemple de code Transact-SQL suivant :
       -- within one explicit transaction.  
   
     SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
-    go  
+    GO  
   
     BEGIN TRANSACTION;  
   
@@ -296,16 +300,16 @@ Dans l’exemple de code Transact-SQL suivant :
   
   
     COMMIT TRANSACTION;  
-    go  
+    GO  
   
   
   
 <a name="limitations40ni"/>  
   
-## Limitations  
+## <a name="limitations"></a>Limitations  
   
   
-- Les transactions entre bases de données ne sont pas prises en charge avec les tables optimisées en mémoire. Si une transaction accède à une table optimisée en mémoire, elle ne peut pas accéder à une autre base de données, à l’exception de :  
+- Les transactions entre bases de données ne sont pas prises en charge avec les tables optimisées en mémoire. Si une transaction accède à une table optimisée en mémoire, elle ne peut pas accéder à une autre base de données, à l’exception de :  
   - base de données tempdb  
   - lecture seule à partir de la base de données MASTER.  
   
@@ -314,9 +318,9 @@ Dans l’exemple de code Transact-SQL suivant :
   
 <a name="natcompstorprocs42ni"/>  
   
-## Procédures stockées compilées en mode natif  
+## <a name="natively-compiled-stored-procedures"></a>Procédures stockées compilées en mode natif  
   
-- Dans une procédure native, le bloc ATOMIQUE doit déclarer le niveau d’isolation de la transaction pour l’ensemble du bloc, par exemple :  
+- Dans une procédure native, le bloc ATOMIQUE doit déclarer le niveau d’isolation de la transaction pour l’ensemble du bloc, par exemple :  
   - `... BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, ...) ...`  
   
 - Les instructions de contrôle de transaction explicite ne sont pas autorisées dans le corps d’une procédure native. Les instructions BEGIN TRANSACTION, ROLLBACK TRANSACTION, etc. sont toutes interdites.  
@@ -325,7 +329,7 @@ Dans l’exemple de code Transact-SQL suivant :
   
 <a name="othertxnlinks44ni"/>  
   
-## Autres liens de transaction  
+## <a name="other-transaction-links"></a>Autres liens de transaction  
   
 - [SET IMPLICIT_TRANSACTIONS](../../t-sql/statements/set-implicit-transactions-transact-sql.md)  
   
@@ -336,23 +340,23 @@ Dans l’exemple de code Transact-SQL suivant :
 - [Contrôler la durabilité d'une transaction](../../relational-databases/logs/control-transaction-durability.md)   
   
 \<!--  
-Link Guids:  
-016fb05e-a702-484b-bd2a-a6eabd0d76fd , ms173763.aspx , "SET TRANSACTION ISOLATION LEVEL (Transact-SQL)"  
+GUID de lien :  
+016fb05e-a702-484b-bd2a-a6eabd0d76fd , ms173763.aspx , « SET TRANSACTION ISOLATION LEVEL (Transact-SQL) »  
   
-ef1cc7de-63be-4fa3-a622-6d93b440e3ac , dn511014(v=sql.130,d=robot).aspx , "Introduction to Memory-Optimized Tables"  
+ef1cc7de-63be-4fa3-a622-6d93b440e3ac , dn511014(v=sql.130,d=robot).aspx , « Introduction aux tables optimisées en mémoire »  
   
-a300ac43-e4c0-4329-8b79-a1a05e63370a , ms187807.aspx , "SET IMPLICIT_TRANSACTIONS (Transact-SQL)"  
+a300ac43-e4c0-4329-8b79-a1a05e63370a , ms187807.aspx , « SET IMPLICIT_TRANSACTIONS (Transact-SQL) »  
   
-e1e85908-9f31-47cf-8af6-88c77e6f24c9 , ms189823.aspx , "sp_getapplock (Transact-SQL)"  
+e1e85908-9f31-47cf-8af6-88c77e6f24c9 , ms189823.aspx , « sp_getapplock (Transact-SQL) »  
   
-3ac93b28-cac7-483e-a8ab-ac44e1cc1c76 , dn449490.aspx , "Control Transaction Durability"  
+3ac93b28-cac7-483e-a8ab-ac44e1cc1c76 , dn449490.aspx , « Contrôler la durabilité d’une transaction »  
   
-Image: 'hekaton_transactions' , e9c5eb2f-c9a3-4625-8ae4-ac91447db42f  
-See also XMetal articles: dn133169.aspx , "Transaction Lifetime"  
+Image : 'hekaton_transactions' , e9c5eb2f-c9a3-4625-8ae4-ac91447db42f  
+Consultez également les articles XMetal : dn133169.aspx , « Durée de vie des transactions »  
   
-Transactions with In-Memory Tables and Procedures  
+Transactions avec des tables et des procédures en mémoire  
 {ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5} , dn479429.aspx  
-Maybe replaces: 06075248-705e-4563-9371-b64cd609793c , dn479429.aspx , "Understanding Transactions on Memory-Optimized Tables"  
+Remplace peut-être : 06075248-705e-4563-9371-b64cd609793c , dn479429.aspx , « Comprendre les transactions sur les tables optimisées en mémoire »  
   
 GeneMi , 2016-03-28 11:40am  
 -->  
@@ -360,3 +364,5 @@ GeneMi , 2016-03-28 11:40am
   
   
   
+
+

@@ -1,27 +1,31 @@
 ---
-title: "R&#233;capitulatif des fonctionnalit&#233;s de version PolyBase | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/13/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Récapitulatif des fonctionnalités avec version PolyBase | Microsoft Docs"
+ms.custom: 
+ms.date: 04/13/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
 caps.latest.revision: 10
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2da0c759864e746414f8bf17388463c9a4bfdf88
+ms.lasthandoff: 04/11/2017
+
 ---
-# R&#233;capitulatif des fonctionnalit&#233;s de version PolyBase
+# <a name="polybase-versioned-feature-summary"></a>Récapitulatif des fonctionnalités avec version PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Récapitulatif des fonctionnalités PolyBase disponibles pour les services et produits SQL Server.  
   
-## Synthèse des fonctionnalités pour les versions du produit  
+## <a name="feature-summary-for-product-releases"></a>Synthèse des fonctionnalités pour les versions du produit  
  Ce tableau récapitule les principales fonctionnalités de PolyBase et des produits dans lesquels elles sont disponibles.  
   
 ### [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
@@ -33,9 +37,11 @@ caps.handback.revision: 8
 |Interroger des données Hadoop avec [!INCLUDE[tsql](../../includes/tsql-md.md)]|oui|  
 |Interroger le stockage d’objets blob Azure avec [!INCLUDE[tsql](../../includes/tsql-md.md)]|oui|  
 |Importer des données depuis Hadoop|oui|  
-|Importer des données depuis le stockage d’objets blob Azure|oui|  
+|Importer des données depuis le stockage d’objets blob Azure|Oui| 
+|Importer des données depuis Azure Data Lake Store|non|   
 |Exporter des données vers Hadoop|oui|  
-|Exporter des données vers le stockage d’objets blob Azure|oui|  
+|Exporter des données vers le stockage d’objets blob Azure|Oui|  
+|Exporter des données depuis Azure Data Lake Store|non|
 |Exécuter des requêtes PolyBase à partir des outils décisionnels de Microsoft|oui|  
 |Transmettre des calculs de requête à Hadoop|oui|  
   
@@ -48,9 +54,11 @@ caps.handback.revision: 8
 |Interroger des données Hadoop avec [!INCLUDE[tsql](../../includes/tsql-md.md)]|non|  
 |Interroger le stockage d’objets blob Azure avec [!INCLUDE[tsql](../../includes/tsql-md.md)]|oui|  
 |Importer des données depuis Hadoop|non|  
-|Importer des données depuis le stockage d’objets blob Azure|oui|  
+|Importer des données depuis le stockage d’objets blob Azure|Oui|
+|Importer des données depuis Azure Data Lake Store|Oui|     
 |Exporter des données vers Hadoop|non|  
-|Exporter des données vers le stockage d’objets blob Azure|oui|  
+|Exporter des données vers le stockage d’objets blob Azure|Oui|  
+|Exporter des données vers Azure Data Lake Store|Oui|
 |Exécuter des requêtes PolyBase à partir des outils décisionnels de Microsoft|oui|  
 |Transmettre des calculs de requête à Hadoop|non|  
   
@@ -63,13 +71,16 @@ caps.handback.revision: 8
 |Interroger des données Hadoop avec [!INCLUDE[tsql](../../includes/tsql-md.md)]|oui|  
 |Interroger le stockage d’objets blob Azure avec [!INCLUDE[tsql](../../includes/tsql-md.md)]|oui|  
 |Importer des données depuis Hadoop|oui|  
-|Importer des données depuis le stockage d’objets blob Azure|oui|  
+|Importer des données depuis le stockage d’objets blob Azure|Oui|  
+|Importer des données depuis Azure Data Lake Store|non|   
 |Exporter des données vers Hadoop|oui|  
-|Exporter des données vers le stockage d’objets blob Azure|oui|  
+|Exporter des données vers le stockage d’objets blob Azure|Oui|  
+|Exporter des données vers Azure Data Lake Store|non|
 |Exécuter des requêtes PolyBase à partir des outils décisionnels de Microsoft|oui|  
 |Transmettre des calculs de requête à Hadoop|oui|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Guide de PolyBase](../../relational-databases/polybase/polybase-guide.md)  
   
   
+

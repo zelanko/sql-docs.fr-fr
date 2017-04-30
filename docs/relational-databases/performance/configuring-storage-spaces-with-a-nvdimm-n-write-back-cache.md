@@ -1,27 +1,31 @@
 ---
-title: "Configuration des espaces de stockage avec un cache en &#233;criture diff&#233;r&#233;e NVDIMM-N | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Configuration des espaces de stockage avec un cache en écriture différée NVDIMM-N | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a0a115eba3fbd1afe52c211fe0f93362a989fc2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configuration des espaces de stockage avec un cache en &#233;criture diff&#233;r&#233;e NVDIMM-N
+# <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>Configuration des espaces de stockage avec un cache en écriture différée NVDIMM-N
   Windows Server 2016 prend en charge les périphériques NVDIMM-N qui permettent des opérations d’entrée/sortie (E/S) extrêmement rapides. Une façon intéressante d’utiliser ces périphériques consiste à en faire un cache en écriture différée pour obtenir des latences d’écriture faibles. Cette rubrique explique comment configurer un espace de stockage mis en miroir avec un cache en écriture différée NVDIMM-N mis en miroir en tant que lecteur virtuel pour stocker le journal des transactions SQL Server. Si vous cherchez à l’utiliser pour également stocker des tables de données ou d’autres données, vous pouvez inclure davantage de disques dans le pool de stockage, ou créer plusieurs pools, si l’isolation est importante.  
   
  Pour visualiser une vidéo Channel 9 qui utilise cette technique, consultez [Utilisation de la mémoire non volatile (NVDIMM-N) en tant que stockage de bloc dans Windows Server 2016](https://channel9.msdn.com/Events/Build/2016/P466).  
   
-## Identification des disques adéquats  
+## <a name="identifying-the-right-disks"></a>Identification des disques adéquats  
  L’installation des espaces de stockage dans Windows Server 2016, surtout avec des fonctionnalités avancées, telles que les caches en écriture différée, se réalise très facilement via PowerShell. La première étape consiste à identifier les disques devant faire partie du pool d’espaces de stockage à partir duquel sera créé le disque virtuel. Les NVDIMM-N ont un type de support et un type de bus SCM (Storage Class Memory, mémoire de classe de stockage), qui peut être interrogé via l’applet de commande PowerShell Get-PhysicalDisk.  
   
 ```  
@@ -47,7 +51,7 @@ $pd | Select FriendlyName, MediaType, BusType
   
  ![Select FriendlyName](../../relational-databases/performance/media/select-friendlyname.png "Select FriendlyName")  
   
-## Création du pool de stockage  
+## <a name="creating-the-storage-pool"></a>Création du pool de stockage  
  À l’aide de la variable $pd contenant les disques physiques, il est facile de créer le pool de stockage en utilisant l’applet de commande PowerShell New-StoragePool.  
   
 ```  
@@ -56,7 +60,7 @@ New-StoragePool –StorageSubSystemFriendlyName “Windows Storage*” –Friend
   
  ![New-StoragePool](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
   
-## Création du disque virtuel et du volume  
+## <a name="creating-the-virtual-disk-and-volume"></a>Création du disque virtuel et du volume  
  Maintenant qu’un pool a été créé, l’étape suivante consiste à extraire un disque virtuel et à le formater. Ici, un seul disque virtuel est créé et l’applet de commande PowerShell New-Volume peut servir à rationaliser ce processus :  
   
 ```  
@@ -65,7 +69,7 @@ New-Volume –StoragePool (Get-StoragePool –FriendlyName NVDIMM_Pool) –Frien
   
  ![New-Volume](../../relational-databases/performance/media/new-volume.png "New-Volume")  
   
- Le disque virtuel est créé, initialisé et formaté avec NTFS. La capture d’écran ci-dessous montre que sa taille s’élève à 300 Go et que celle de son cache d’écriture s’élève à 1 Go, le tout hébergé sur les NVDIMM-N.  
+ Le disque virtuel est créé, initialisé et formaté avec NTFS. La capture d’écran ci-dessous montre que sa taille s’élève à 300 Go et que celle de son cache d’écriture s’élève à 1 Go, le tout hébergé sur les NVDIMM-N.  
   
  ![Get-VirtualDisk](../../relational-databases/performance/media/get-virtualdisk.png "Get-VirtualDisk")  
   
@@ -73,10 +77,10 @@ New-Volume –StoragePool (Get-StoragePool –FriendlyName NVDIMM_Pool) –Frien
   
  ![Log_Space Drive](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Espaces de stockage Windows dans Windows 10](http://windows.microsoft.com/en-us/windows-10/storage-spaces-windows-10)   
  [Espaces de stockage Windows dans Windows 2012 R2](https://technet.microsoft.com/en-us/library/hh831739.aspx)   
  [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
- [Afficher ou modifier les emplacements par défaut des fichiers de données et des fichiers journaux &#40;SQL Server Management Studio&#41;](../../database-engine/configure-windows/view or change the default locations for data and log files.md)  
+ [Afficher ou modifier les emplacements par défaut des fichiers de données et des fichiers journaux &#40;SQL Server Management Studio&#41;](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md)  
   
   

@@ -1,37 +1,41 @@
 ---
-title: "Ex&#233;cuter la logique m&#233;tier lors de la synchronisation de fusion | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "résolution d'erreur personnalisée [réplication SQL Server]"
-  - "gestion personnalisée des modifications [réplication SQL Server]"
-  - "erreurs [réplication SQL Server], gestionnaires de logique métier"
-  - "gestionnaires de logique métier de réplication de fusion [réplication SQL Server]"
-  - "résolution des conflits [réplication SQL Server], réplication de fusion"
-  - "gestionnaires de logique métier [réplication SQL Server]"
+title: "Exécuter la logique métier pendant la synchronisation de fusion | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom error resolution [SQL Server replication]
+- custom change handling [SQL Server replication]
+- errors [SQL Server replication], business logic handlers
+- merge replication business logic handlers [SQL Server replication]
+- conflict resolution [SQL Server replication], merge replication
+- business logic handlers [SQL Server replication]
 ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a165253bc79d9fe6c958a9d0e8ec83e73cf58c7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ex&#233;cuter la logique m&#233;tier lors de la synchronisation de fusion
-  L'infrastructure de gestion de logique métier permet d'écrire un assembly de code managé qui est appelé pendant le processus de synchronisation de fusion. L'assembly comprend une logique métier qui peut répondre à un certain nombre de conditions au cours de la synchronisation : les modifications de données, les conflits et les erreurs. L'infrastructure de gestionnaires de logique métier propose un modèle de programmation simple et les données fournies par le processus de fusion à votre assembly se présentent sous la forme d'un dataset ADO.NET, de sorte que vous pouvez tirer parti de la connaissance d'ADO.NET au lieu d'apprendre une interface propriétaire. Pour plus d'informations sur la programmation de gestionnaires de logique métier, consultez :  
+# <a name="execute-business-logic-during-merge-synchronization"></a>Exécuter la logique métier lors de la synchronisation de fusion
+  L'infrastructure de gestion de logique métier permet d'écrire un assembly de code managé qui est appelé pendant le processus de synchronisation de fusion. L'assembly comprend une logique métier qui peut répondre à un certain nombre de conditions au cours de la synchronisation : les modifications de données, les conflits et les erreurs. L'infrastructure de gestionnaires de logique métier propose un modèle de programmation simple et les données fournies par le processus de fusion à votre assembly se présentent sous la forme d'un dataset ADO.NET, de sorte que vous pouvez tirer parti de la connaissance d'ADO.NET au lieu d'apprendre une interface propriétaire. Pour plus d'informations sur la programmation de gestionnaires de logique métier, consultez :  
   
--   L’application programming interface (API), référence : <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
+-   Référence de l’interface de programmation d’application (API) : <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
--   Obtenir des instructions sur la façon d’implémenter un gestionnaire de logique métier : [implémenter un gestionnaire de logique métier pour un Article de fusion](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+-   Instructions sur l’implémentation d’un gestionnaire de logique métier : [Implémenter un gestionnaire de logique métier pour un article de fusion](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
-## Utilisations des gestionnaires de logique métier  
- Le processus de synchronisation de fusion peut appeler les gestionnaires de logique métier pour effectuer les opérations suivantes :  
+## <a name="uses-for-business-logic-handlers"></a>Utilisations des gestionnaires de logique métier  
+ Le processus de synchronisation de fusion peut appeler les gestionnaires de logique métier pour effectuer les opérations suivantes :  
   
 -   Gestion personnalisée des modifications  
   
@@ -42,8 +46,8 @@ caps.handback.revision: 31
 > [!NOTE]  
 >  Le gestionnaire de logique métier que vous spécifiez est exécuté pour chaque ligne faisant l'objet d'une synchronisation. Une logique complexe et des appels à d'autres applications ou services réseau peuvent avoir une incidence sur les performances.  
   
-### Gestion personnalisée des modifications  
- Le gestionnaire de logique métier peut être appelé au cours du traitement de modifications de données non conflictuelles et peut effectuer l'une des trois actions suivantes :  
+### <a name="custom-change-handling"></a>Gestion personnalisée des modifications  
+ Le gestionnaire de logique métier peut être appelé au cours du traitement de modifications de données non conflictuelles et peut effectuer l'une des trois actions suivantes :  
   
 -   Refuser les données  
   
@@ -55,10 +59,10 @@ caps.handback.revision: 31
   
 -   Appliquer des données personnalisées  
   
-     Cette option est utile pour les applications qui doivent substituer des opérations ou des valeurs de données spécifiques. Par exemple, une application peut transformer une suppression de ligne dans une mise à jour spécial qui définit un **état** colonne dans la ligne à la valeur « supprimé » et puis effectue le suivi de l’identité du client à l’origine de la suppression. Cela peut s'avérer utile pour l'audit ou le flux de travail.  
+     Cette option est utile pour les applications qui doivent substituer des opérations ou des valeurs de données spécifiques. Par exemple, une application peut transformer une suppression de ligne en mise à jour spéciale qui affecte la valeur « supprimé » à une colonne **status** de la ligne puis effectue un suivi du client à l'origine de la suppression. Cela peut s'avérer utile pour l'audit ou le flux de travail.  
   
-### Résolution personnalisée des conflits  
- La réplication de fusion offre des fonctionnalités de résolution ou de détection de conflits. Vous pouvez accepter une stratégie de résolution par défaut ou opter pour une résolution personnalisée des conflits. Pour plus d’informations, consultez [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md). Le gestionnaire de logique métier peut être appelé au cours du traitement de modifications de données conflictuelles et effectuer l'une des deux actions suivantes :  
+### <a name="custom-conflict-resolution"></a>Résolution personnalisée des conflits  
+ La réplication de fusion offre des fonctionnalités de résolution ou de détection de conflits. Vous pouvez accepter une stratégie de résolution par défaut ou opter pour une résolution personnalisée des conflits. Pour plus d'informations, voir [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md). Le gestionnaire de logique métier peut être appelé au cours du traitement de modifications de données conflictuelles et effectuer l'une des deux actions suivantes :  
   
 -   Accepter la résolution par défaut  
   
@@ -68,8 +72,8 @@ caps.handback.revision: 31
   
      Cette option est utile pour les applications qui ont besoin de sélectionner des valeurs de données spécifiques à leur logique métier et fournir le processus de synchronisation avec ce dataset personnalisé. Ainsi, une application peut fournir une nouvelle version de la ligne qui prime en cas de conflit en combinant des valeurs des datasets du serveur de publication et de l'Abonné.  
   
-### Résolution personnalisée des erreurs  
- La logique métier peut être appelée au cours de la propagation des modifications qui génèrent des erreurs. La logique peut effectuer l'une des deux actions suivantes :  
+### <a name="custom-error-resolution"></a>Résolution personnalisée des erreurs  
+ La logique métier peut être appelée au cours de la propagation des modifications qui génèrent des erreurs. La logique peut effectuer l'une des deux actions suivantes :  
   
 -   Accepter la résolution d'erreur par défaut  
   
@@ -79,8 +83,8 @@ caps.handback.revision: 31
   
      Cette option est utile pour les applications qui ont besoin de sélectionner des valeurs de données spécifiques à leur logique métier et fournir le processus de synchronisation avec ce dataset personnalisé. Si, par exemple, le processus de réplication rencontre une violation de clé dupliquée, le gestionnaire de logique métier peut fournir une nouvelle version de la modification de données dans laquelle le conflit de clé est éliminé. Les modifications apportées au serveur de publication et à l'Abonné peuvent alors être conservées dans la base de données et le processus de réplication n'a plus à compenser l'échec d'insertion par une suppression.  
   
-## Scénarios de déploiement des gestionnaires de logique métier  
- Les gestionnaires de logique métier peuvent être déployés sur les serveurs suivants :  
+## <a name="deployment-scenarios-for-business-logic-handlers"></a>Scénarios de déploiement des gestionnaires de logique métier  
+ Les gestionnaires de logique métier peuvent être déployés sur les serveurs suivants :  
   
 -   Le serveur de distribution. Utilisez un abonnement envoyé afin que la logique métier soit exécutée sur le serveur de distribution.  
   
@@ -88,10 +92,10 @@ caps.handback.revision: 31
   
 -   Serveur IIS (Internet Information Services) en cas d'utilisation de la synchronisation Web. Utilisez un abonnement extrait synchronisé avec la synchronisation Web et le gestionnaire de logique métier s'exécutera sur le serveur IIS.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Réplication de fusion](../../../relational-databases/replication/merge/merge-replication.md)   
- [S'abonner à des publications](../../../relational-databases/replication/subscribe-to-publications.md)   
- [Synchronisez les données](../../../relational-databases/replication/synchronize-data.md)   
- [Synchronisation Web pour la réplication de fusion](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
+ [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)   
+ [Synchroniser les données](../../../relational-databases/replication/synchronize-data.md)   
+ [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

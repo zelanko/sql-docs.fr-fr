@@ -1,38 +1,42 @@
 ---
-title: "Obtenir des informations sur les d&#233;clencheurs DML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "métadonnées [SQL Server], déclencheurs"
-  - "affichage de déclencheurs DML"
-  - "déclencheurs DML, métadonnées"
-  - "affichage de déclencheurs DML"
-  - "informations d’état [SQL Server], déclencheurs"
-  - "déclencheurs DML, affichage"
+title: "Obtenir des informations sur les déclencheurs DML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- metadata [SQL Server], triggers
+- viewing DML triggers
+- DML triggers, metadata
+- displaying DML triggers
+- status information [SQL Server], triggers
+- DML triggers, viewing
 ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a8583bd2597f5107398a65df65dbe7f7eef53f4d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Obtenir des informations sur les d&#233;clencheurs DML
+# <a name="get-information-about-dml-triggers"></a>Obtenir des informations sur les déclencheurs DML
   Cette rubrique explique comment obtenir des informations sur les déclencheurs DML dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ces informations peuvent inclure les types de déclencheurs existant sur une table, ainsi que leur nom, leur propriétaire et la date de leur création ou modification. Si le déclencheur n'a pas été chiffré lors de sa création, vous obtenez la définition du déclencheur. Vous pouvez utiliser la définition pour vous aider à comprendre comment un déclencheur affecte la table sur laquelle il est défini. En outre, vous pouvez déterminer les objets qu'un déclencheur spécifique utilise. Avec ces informations, vous pouvez identifier les objets dont l'éventuelle suppression ou modification aurait une répercussion sur le déclencheur.  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour obtenir des informations sur les déclencheurs DML, utilisez :**  
+-   **Pour obtenir des informations sur les déclencheurs DML, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -47,14 +51,14 @@ caps.handback.revision: 31
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
  OBJECT_DEFINITION, OBJECTPROPERTY, **sp_helptext**  
- Nécessite l'appartenance au rôle **public** . La définition des objets utilisateur est visible par le propriétaire de l'objet ou les bénéficiaires de l'une des autorisations suivantes : ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Ces autorisations sont implicitement détenues par des membres des rôles de base de données fixes **db_owner**, **db_ddladmin** et **db_securityadmin**.  
+ Nécessite l'appartenance au rôle **public** . La définition des objets utilisateur est visible par le propriétaire de l'objet ou les bénéficiaires de l'une des autorisations suivantes : ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Ces autorisations sont implicitement détenues par des membres des rôles de base de données fixes **db_owner**, **db_ddladmin**et **db_securityadmin** .  
   
  **sys.sql_expression_dependencies**  
- Requiert l’autorisation VIEW DEFINITION sur la base de données et l’autorisation SELECT sur **sys.sql_expression_dependencies** pour la base de données. Par défaut, l’autorisation SELECT est accordée uniquement aux membres du rôle de base de données fixe **db_owner**. Lorsque les autorisations SELECT et VIEW DEFINITION sont accordées à un autre utilisateur, le bénéficiaire peut consulter toutes les dépendances dans la base de données.  
+ Requiert l’autorisation VIEW DEFINITION sur la base de données et l’autorisation SELECT sur **sys.sql_expression_dependencies** pour la base de données. Par défaut, l’autorisation SELECT est accordée uniquement aux membres du rôle de base de données fixe **db_owner** . Lorsque les autorisations SELECT et VIEW DEFINITION sont accordées à un autre utilisateur, le bénéficiaire peut consulter toutes les dépendances dans la base de données.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour voir la définition d'un déclencheur DML  
+#### <a name="to-view-the-definition-of-a-dml-trigger"></a>Pour voir la définition d'un déclencheur DML  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et développez-la.  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 31
   
 3.  Développez **Déclencheurs**, cliquez avec le bouton droit sur le déclencheur de votre choix, puis cliquez sur **Modifier**. La définition du déclencheur DML s'affiche dans la fenêtre de requête.  
   
-#### Pour afficher les dépendances d'un déclencheur DML  
+#### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>Pour afficher les dépendances d'un déclencheur DML  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et développez-la.  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 31
   
 3.  Développez **Déclencheurs**, cliquez avec le bouton droit sur le déclencheur de votre choix, puis cliquez sur **Afficher les dépendances**.  
   
-4.  Dans la fenêtre **Dépendances d’objets**, pour afficher les objets qui dépendent du déclencheur DML, sélectionnez **Objets dépendants de \<nom du déclencheur DML>**. Les objets apparaissent dans la zone **Dépendances** .  
+4.  Dans la fenêtre **Dépendances d’objets**, sélectionnez **Objets dépendants de \<nom du déclencheur DML>** pour afficher les objets qui dépendent du déclencheur DML. Les objets apparaissent dans la zone **Dépendances** .  
   
      Pour afficher les objets dont dépend le déclencheur DML, sélectionnez **Objets dont dépend \<nom du déclencheur DML>**. Les objets apparaissent dans la zone **Dépendances** . Développez chaque nœud pour voir tous les objets.  
   
@@ -80,7 +84,7 @@ caps.handback.revision: 31
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour voir la définition d'un déclencheur DML  
+#### <a name="to-view-the-definition-of-a-dml-trigger"></a>Pour voir la définition d'un déclencheur DML  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -113,7 +117,7 @@ GO
   
 ```  
   
-#### Pour afficher les dépendances d'un déclencheur DML  
+#### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>Pour afficher les dépendances d'un déclencheur DML  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -139,7 +143,7 @@ GO
   
 ```  
   
-#### Pour afficher les informations sur les déclencheurs DML dans la base de données  
+#### <a name="to-view-information-about-dml-triggers-in-the-database"></a>Pour afficher les informations sur les déclencheurs DML dans la base de données  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -175,13 +179,13 @@ GO
   
 ```  
   
-#### Pour afficher les informations sur les événements qui activent un déclencheur DML  
+#### <a name="to-view-information-about-events-that-fire-a-dml-trigger"></a>Pour afficher les informations sur les événements qui activent un déclencheur DML  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3.  Copiez et collez l'un des exemples suivants dans la fenêtre de requête, puis cliquez sur **Exécuter**. Chaque exemple montre comment afficher les événements qui déclenchent le déclencheur `iuPerson`.  
+3.  Copiez et collez l'un des exemples suivants dans la fenêtre de requête, puis cliquez sur **Exécuter**. Chaque exemple montre comment afficher les événements qui déclenchent le déclencheur `iuPerson` .  
   
 ```tsql  
 USE AdventureWorks2012;   
@@ -201,7 +205,7 @@ WHERE object_id = OBJECT_ID('Person.iuPerson');
 GO  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   

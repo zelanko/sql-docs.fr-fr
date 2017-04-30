@@ -1,25 +1,29 @@
 ---
-title: "Le&#231;on 3 : Sauvegarder une base de donn&#233;es dans une URL | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Leçon 3 : Sauvegarder une base de données vers une URL | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 83414948fcd1f8db58f2e6a66f948a5427d0c999
+ms.lasthandoff: 04/11/2017
+
 ---
-# Le&#231;on 3 : Sauvegarder une base de donn&#233;es dans une URL
+# <a name="lesson-3-database-backup-to-url"></a>Leçon 3 : Sauvegarder une base de données vers une URL
 Dans cette leçon, vous sauvegardez la base de données AdventureWorks2014 de votre instance SQL Server 2016 locale dans le conteneur Azure que vous avez créé à la [Leçon 1 : Créer une stratégie d’accès stockée et une signature d’accès partagé sur un conteneur Azure](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
   
 > [!NOTE]  
@@ -50,9 +54,10 @@ Pour sauvegarder une base de données dans un stockage Blob, procédez comme sui
   
 5.  Développez Conteneurs, développez le conteneur que vous avez créé à la Leçon 1 et vérifiez que la sauvegarde de l’étape 3 ci-dessus s’affiche dans ce conteneur.  
   
-    ![On-premises backup file appears as blob in Azure container](../relational-databases/media/0d060e51-012f-4c61-ab8d-16d461d0ffad.JPG "On-premises backup file appears as blob in Azure container")  
+    ![Le fichier de sauvegarde local s’affiche sous la forme d’un objet blob dans le conteneur Azure local](../relational-databases/media/0d060e51-012f-4c61-ab8d-16d461d0ffad.JPG "Le fichier de sauvegarde local s’affiche sous la forme d’un objet blob dans le conteneur Azure local")  
   
 **Leçon suivante :**  
   
 [Leçon 4 : Restaurer une base de données sur une machine virtuelle à partir d’une URL](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
   
+

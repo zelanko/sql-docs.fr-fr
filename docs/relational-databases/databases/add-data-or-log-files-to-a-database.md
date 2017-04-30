@@ -1,41 +1,45 @@
 ---
-title: "Ajouter des fichiers de donn&#233;es ou journaux &#224; une base de donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "journaux [SQL Server], fichiers"
-  - "ajout de fichiers de données"
-  - "fichiers, ajout"
-  - "ajout de fichiers journaux"
-  - "ajouts de fichiers [SQL Server], étapes"
-  - "fichiers [SQL Server], ajout"
-  - "ajouts de données [SQL Server]"
+title: "Ajouter des fichiers de données ou des fichiers journaux à une base de données | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [SQL Server], files
+- adding data files
+- adding files
+- adding log files
+- file additions [SQL Server], steps
+- files [SQL Server], adding
+- data additions [SQL Server]
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 760d6803511284da837b02f8b1474029edd5830c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ajouter des fichiers de donn&#233;es ou journaux &#224; une base de donn&#233;es
+# <a name="add-data-or-log-files-to-a-database"></a>Ajouter des fichiers de données ou journaux à une base de données
   Cette rubrique explique comment ajouter des fichiers de données ou des fichiers journaux à une base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour ajouter des fichiers de données ou des fichiers journaux à une base de données, utilisez :**  
+-   **Pour ajouter des fichiers de données ou des fichiers journaux à une base de données, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -47,16 +51,16 @@ caps.handback.revision: 25
   
 -   Vous ne pouvez pas ajouter ou supprimer de fichier tant qu'une instruction BACKUP est en cours d'exécution.  
   
--   Un maximum de 32 767 fichiers et 32 767 groupes de fichiers peut être spécifié pour chaque base de données.  
+-   Un maximum de 32 767 fichiers et 32 767 groupes de fichiers peut être spécifié pour chaque base de données.  
   
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation ALTER sur la base de données.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour ajouter des fichiers de données ou journaux à une base de données  
+#### <a name="to-add-data-or-log-files-to-a-database"></a>Pour ajouter des fichiers de données ou journaux à une base de données  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et développez-la.  
   
@@ -68,13 +72,13 @@ caps.handback.revision: 25
   
 5.  Dans la grille **Fichiers de la base de données** , tapez le nom logique du fichier. Ce nom doit être unique dans la base de données.  
   
-6.  Sélectionnez le type de fichier : données ou journal.  
+6.  Sélectionnez le type de fichier : données ou journal.  
   
-7.  Pour un fichier de données, sélectionnez le groupe de fichiers dans lequel le fichier doit être inclus dans la liste, ou sélectionnez **<nouveau_groupe_de_fichiers>\>** pour créer un groupe de fichiers. Les journaux des transactions ne peuvent pas être placés dans des groupes de fichiers.  
+7.  Pour un fichier de données, sélectionnez le groupe de fichiers dans lequel le fichier doit être inclus dans la liste, ou sélectionnez **\<nouveau_groupe_de_fichiers>** pour créer un groupe de fichiers. Les journaux des transactions ne peuvent pas être placés dans des groupes de fichiers.  
   
 8.  Spécifiez la taille initiale du fichier. Attribuez aux fichiers de données un maximum d'espace en tenant compte du volume maximal de données qu'est censée contenir la base de données.  
   
-9. Pour spécifier la manière dont la taille du fichier doit augmenter, cliquez sur (**...**) dans la colonne **Croissance automatique**. Sélectionnez l'une des options suivantes :  
+9. Pour spécifier la manière dont la taille du fichier doit augmenter, cliquez sur (**...**) dans la colonne **Croissance automatique** . Sélectionnez l'une des options suivantes :  
   
     1.  Pour autoriser la croissance du fichier sélectionné au fur et à mesure que l'espace requis pour les données augmente, activez la case à cocher **Activer la croissance automatique** , puis sélectionnez l'une des options suivantes :  
   
@@ -82,13 +86,13 @@ caps.handback.revision: 25
   
     3.  Pour spécifier que le fichier doit grandir d'un pourcentage de sa taille actuelle, cliquez sur **En pourcentage** et spécifiez une valeur.  
   
-10. Pour spécifier la taille limite du fichier, choisissez l'une des options suivantes :  
+10. Pour spécifier la taille limite du fichier, choisissez l'une des options suivantes :  
   
     1.  Pour spécifier la taille maximale que le fichier peut atteindre, cliquez sur **Restreindre la croissance des fichiers (Mo)** et spécifiez une valeur.  
   
     2.  Pour permettre au fichier d'augmenter de taille en fonction des besoins, cliquez sur **Croissance des fichiers illimitée**.  
   
-    3.  Pour empêcher toute croissance du fichier, désactivez la case à cocher **Activer la croissance automatique** . La taille du fichier ne dépassera jamais la valeur spécifiée dans la colonne **Taille initiale (Mo)**.  
+    3.  Pour empêcher toute croissance du fichier, désactivez la case à cocher **Activer la croissance automatique** . La taille du fichier ne dépassera jamais la valeur spécifiée dans la colonne **Taille initiale (Mo)** .  
   
     > [!NOTE]  
     >  La taille maximale de la base de données est déterminée par la quantité d'espace disponible sur le disque et par les limites de licences fixées par la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez.  
@@ -102,20 +106,20 @@ caps.handback.revision: 25
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour ajouter des fichiers de données ou journaux à une base de données  
+#### <a name="to-add-data-or-log-files-to-a-database"></a>Pour ajouter des fichiers de données ou journaux à une base de données  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. L'exemple ajoute un groupe de deux fichiers à une base de données. L'exemple crée le groupe de fichiers `Test1FG1` dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] et ajoute deux fichiers de 5 Mo au groupe de fichiers.  
+3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. L'exemple ajoute un groupe de deux fichiers à une base de données. L'exemple crée le groupe de fichiers `Test1FG1` dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] et ajoute deux fichiers de 5 Mo au groupe de fichiers.  
   
  [!code-sql[DatabaseDDL#AlterDatabase2](../../relational-databases/databases/codesnippet/tsql/add-data-or-log-files-to_1.sql)]  
   
- Pour plus d’exemples, consultez [Options de fichiers et de groupes de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20\(Transact-SQL\).md).  
+ Pour plus d’exemples, consultez [Options de fichiers et de groupes de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
-## Voir aussi  
- [Groupes de fichiers et fichiers de base de données](../../relational-databases/databases/database-files-and-filegroups.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  [Supprimer des fichiers de données ou des fichiers journaux d'une base de données](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)   
  [Augmenter la taille d'une base de données](../../relational-databases/databases/increase-the-size-of-a-database.md)  
   

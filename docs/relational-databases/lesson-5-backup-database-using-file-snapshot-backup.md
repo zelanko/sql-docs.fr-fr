@@ -1,25 +1,29 @@
 ---
-title: "Le&#231;on 5 : Sauvegarder une base de donn&#233;es &#224; l’aide d’une sauvegarde d’instantan&#233;s de fichiers | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Leçon 5 : Sauvegarder une base de données à l’aide d’une sauvegarde d’instantanés de fichiers | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 caps.latest.revision: 19
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: dd3226cf6bf52151c94853d87b4de28e54b5d2df
+ms.lasthandoff: 04/11/2017
+
 ---
-# Le&#231;on 5 : Sauvegarder une base de donn&#233;es &#224; l’aide d’une sauvegarde d’instantan&#233;s de fichiers
+# <a name="lesson-5-backup-database-using-file-snapshot-backup"></a>Leçon 5 : Sauvegarder une base de données à l’aide d’une sauvegarde d’instantanés de fichiers
 Dans cette leçon, vous sauvegardez la base de données AdventureWorks2014 sur votre machine virtuelle Azure à l’aide de la sauvegarde d’instantanés de fichiers pour effectuer une sauvegarde quasi instantanée au moyen d’instantanés Azure. Pour plus d’informations sur les sauvegardes d’instantanés de fichiers, consultez [Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
   
 Pour sauvegarder la base de données AdventureWorks2014 à l’aide de la sauvegarde d’instantanés de fichiers, procédez comme suit :  
@@ -48,7 +52,7 @@ Pour sauvegarder la base de données AdventureWorks2014 à l’aide de la sauveg
   
     ```  
   
-    ![results pane showing file snapshots of each database file](../relational-databases/media/2a9320e0-067a-485a-8e0e-636660005e5c.JPG "results pane showing file snapshots of each database file")  
+    ![Volet de résultats affichant des captures instantanées de fichiers pour chaque fichier de base de données](../relational-databases/media/2a9320e0-067a-485a-8e0e-636660005e5c.JPG "Volet de résultats affichant des captures instantanées de fichiers pour chaque fichier de base de données")  
   
 5.  Après avoir vérifié que le script de l’étape 4 a été correctement exécuté, réexécutez le script suivant. Notez que l’opération de sauvegarde d’instantanés de fichiers de l’étape 4 a généré des instantanés de fichiers des données et du fichier journal.  
   
@@ -59,7 +63,7 @@ Pour sauvegarder la base de données AdventureWorks2014 à l’aide de la sauveg
   
     ```  
   
-    ![results of the sys.fn_db_backup_file_snapshots function showing 2 snapshots](../relational-databases/media/fca1436e-9607-4432-97ee-f66ac2f2108d.JPG "results of the sys.fn_db_backup_file_snapshots function showing 2 snapshots")  
+    ![Résultats de la fonction sys.fn_db_backup_file_snapshots affichant des 2 instantanés](../relational-databases/media/fca1436e-9607-4432-97ee-f66ac2f2108d.JPG "Résultats de la fonction sys.fn_db_backup_file_snapshots affichant des 2 instantanés")  
   
 6.  Dans l’Explorateur d’objets, dans l’instance SQL Server 2016 sur votre machine virtuelle Azure, développez le nœud Bases de données et vérifiez que la base de données AdventureWorks2014 a été restaurée dans cette instance (actualisez le nœud si nécessaire).  
   
@@ -67,15 +71,16 @@ Pour sauvegarder la base de données AdventureWorks2014 à l’aide de la sauveg
   
 8.  Développez Conteneurs, développez le conteneur que vous avez créé dans la Leçon 1 et vérifiez que le fichier AdventureWorks2014_Azure.bak de l’étape 4 ci-dessus s’affiche dans ce conteneur, ainsi que le fichier de sauvegarde de la leçon 3 et les fichiers de base de données de la leçon 4 (actualisez le nœud si nécessaire).  
   
-    ![File snapshot backup appears in the Azure container](../relational-databases/media/181bc970-4af7-4272-a9ae-4bef674f2e02.JPG "File snapshot backup appears in the Azure container")  
+    ![La sauvegarde d’instantanés de fichiers s’affiche dans le conteneur Azure](../relational-databases/media/181bc970-4af7-4272-a9ae-4bef674f2e02.JPG "La sauvegarde d’instantanés de fichiers s’affiche dans le conteneur Azure")  
   
 **Leçon suivante :**  
   
 [Leçon 6 : Générer un journal d’activité et de sauvegarde à l’aide d’une sauvegarde d’instantanés de fichiers](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)  
   
   
   
+

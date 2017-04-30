@@ -1,28 +1,32 @@
 ---
-title: "R&#233;plication transactionnelle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "transactional replication, about transactional replication"
-  - "réplication transactionnelle"
+title: "Réplication transactionnelle | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transactional replication, about transactional replication
+- transactional replication
 ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c496335127a2f2d8acbacec53efa8ecdae697cfc
+ms.lasthandoff: 04/11/2017
+
 ---
-# R&#233;plication transactionnelle
-  La réplication transactionnelle commence en général avec l'instantané des objets et des données de la base de données de publication. Dès que l'instantané initial est effectué, les changements de données et les modifications de schémas effectués ensuite au niveau du serveur de publication sont en général transmis à l'Abonné à mesure qu'ils se produisent (presque en temps réel). Les changements de données sont appliqués à l'Abonné dans le même ordre et dans les mêmes limites de transaction que sur le serveur de publication ; c'est pourquoi, dans une publication, la cohérence des transactions est garantie.  
+# <a name="transactional-replication"></a>Réplication transactionnelle
+  La réplication transactionnelle commence en général avec l'instantané des objets et des données de la base de données de publication. Dès que l'instantané initial est effectué, les changements de données et les modifications de schémas effectués ensuite au niveau du serveur de publication sont en général transmis à l'Abonné à mesure qu'ils se produisent (presque en temps réel). Les changements de données sont appliqués à l'Abonné dans le même ordre et dans les mêmes limites de transaction que sur le serveur de publication ; c'est pourquoi, dans une publication, la cohérence des transactions est garantie.  
   
- La réplication transactionnelle est en général utilisée dans les environnements serveur à serveur, et convient pour chacun des cas suivants :  
+ La réplication transactionnelle est en général utilisée dans les environnements serveur à serveur, et convient pour chacun des cas suivants :  
   
 -   Vous souhaitez propager les modifications incrémentielles vers les abonnés, au fur et à mesure qu'elles s'exécutent.  
   
@@ -32,7 +36,7 @@ caps.handback.revision: 38
   
 -   Le serveur de publication a un volume très élevé d'activités d'insertion, de mise à jour et de suppression.  
   
--   Le serveur de publication ou l'Abonné est une base de données non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle par exemple.  
+-   Le serveur de publication ou l'Abonné est une base de données non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , Oracle par exemple.  
   
  Par défaut, les Abonnés à des publications transactionnelles doivent être traités en lecture seule, parce que les changements ne sont pas propagés vers le serveur de publication. Cependant, la réplication transactionnelle n'offre pas d'options qui permettent des mises à jour sur l'Abonné.  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 38
   
  La distribution et l'application des instantanés ne concernent que les Abonnés qui attendent un instantané initial. Les autres Abonnés de cette publication (déjà initialisés) ne sont pas concernés.  
   
-## Traitement simultané d'instantanés  
+## <a name="concurrent-snapshot-processing"></a>Traitement simultané d'instantanés  
  La réplication d'instantanés place des verrous partagés sur toutes les tables publiées dans le cadre de la réplication pour toute la durée du processus de génération d'instantanés. Cela peut empêcher la mise à jour des tables de publication. Le traitement simultané d'instantanés, qui constitue l'option par défaut de la réplication transactionnelle, ne maintient pas les verrous en place tout au long de la phase de génération d'instantané, de sorte que les utilisateurs peuvent continuer à travailler sans interruption pendant que la réplication crée les fichiers d'instantanés initiaux.  
   
 ##  <a name="SnapshotAgent"></a> Agent d'instantané  
@@ -73,9 +77,9 @@ caps.handback.revision: 38
  Une fois les fichiers d'instantanés générés, vous pouvez les visualiser dans le dossier d'instantanés à l'aide de l'Explorateur Windows [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
   
 ##  <a name="LogReaderAgent"></a> Modification des données et de l'Agent de lecture du journal  
- L'Agent de lecture du journal s'exécute sur le serveur de distribution, très souvent en continu mais parfois aussi en fonction d'une planification établie. Lorsqu'il s'exécute, l'Agent de lecture du journal lit d'abord le journal des transactions de publication (le même journal de base de données utilisé pour le suivi et la récupération des transactions lors des opérations normales du moteur de base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) et identifie les instructions INSERT, UPDATE et DELETE, ainsi que toute autre modification apportée aux données dans les transactions marquées pour réplication. Ensuite, l'Agent copie ces transactions dans des traitements dans la base de données de distribution du serveur de distribution. L’Agent de lecture du journal utilise la procédure stockée interne **sp_replcmds** pour obtenir l’ensemble suivant de commandes marquées pour la réplication à partir du journal. La base de données de distribution devient ensuite une file d'attente où les modifications sont stockées puis transférées aux Abonnés. Seules les transactions validées sont envoyées à la base de données de distribution.  
+ L'Agent de lecture du journal s'exécute sur le serveur de distribution, très souvent en continu mais parfois aussi en fonction d'une planification établie. Lorsqu'il s'exécute, l'Agent de lecture du journal lit d'abord le journal des transactions de publication (le même journal de base de données utilisé pour le suivi et la récupération des transactions lors des opérations normales du moteur de base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ) et identifie les instructions INSERT, UPDATE et DELETE, ainsi que toute autre modification apportée aux données dans les transactions marquées pour réplication. Ensuite, l'Agent copie ces transactions dans des traitements dans la base de données de distribution du serveur de distribution. L'Agent de lecture du journal utilise la procédure stockée interne **sp_replcmds** pour obtenir le jeu de commandes suivant marqué pour réplication à partir du journal. La base de données de distribution devient ensuite une file d'attente où les modifications sont stockées puis transférées aux Abonnés. Seules les transactions validées sont envoyées à la base de données de distribution.  
   
- Une fois que la totalité du traitement des transactions a été écrit correctement dans la base de données de distribution, il est validé. Après la validation de chaque lot de commandes sur le serveur de distribution, l’Agent de lecture du journal appelle **sp_repldone** pour marquer où s’est terminée la réplication. Enfin, l'Agent marque les lignes du journal de transactions qui sont prêtes à être définitivement supprimées. Les lignes en attente de réplication ne le sont pas.  
+ Une fois que la totalité du traitement des transactions a été écrit correctement dans la base de données de distribution, il est validé. Après la validation de chaque traitement de commandes sur le serveur de distribution, l'Agent de lecture du journal appelle **sp_repldone** pour marquer l'endroit où s'est terminée la réplication. Enfin, l'Agent marque les lignes du journal de transactions qui sont prêtes à être définitivement supprimées. Les lignes en attente de réplication ne le sont pas.  
   
  Les commandes de transaction sont stockées dans la base de données de distribution jusqu'à ce qu'elles aient été propagées à tous les Abonnés ou jusqu'à l'expiration de la période de rétention de distribution maximale. Les Abonnés reçoivent les transactions dans le même ordre que celui de leur application sur le serveur de publication.  
   

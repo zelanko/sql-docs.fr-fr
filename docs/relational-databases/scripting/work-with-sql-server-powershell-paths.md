@@ -1,30 +1,34 @@
 ---
-title: "Utiliser des chemins d&#39;acc&#232;s PowerShell SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Utiliser des chemins PowerShell SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee981bee7832202a85186216a21f6f3129dfdc0a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utiliser des chemins d&#39;acc&#232;s PowerShell SQL Server
+# <a name="work-with-sql-server-powershell-paths"></a>Utiliser des chemins d'accès PowerShell SQL Server
   Après avoir accédé à un nœud dans un chemin d'accès de fournisseur du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , vous pouvez effectuer des opérations ou récupérer des informations à l'aide des méthodes et propriétés de l'objet de gestion du [!INCLUDE[ssDE](../../includes/ssde-md.md)] associé au nœud.  
   
 1.  [Avant de commencer](#BeforeYouBegin)  
   
-2.  **Pour travailler sur un nœud de chemin d'accès :**  [Affichage de la liste des méthodes et des propriétés](#ListPropMeth), [Utilisation des méthodes et des propriétés](#UsePropMeth)  
+2.  **To work on a path node:**  [Listing Methods and Properties](#ListPropMeth), [Using Methods and Properties](#UsePropMeth)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
- Après avoir accédé à un nœud dans un chemin d'accès de fournisseur du [!INCLUDE[ssDE](../../includes/ssde-md.md)], vous pouvez effectuer deux types d'actions :  
+ Après avoir accédé à un nœud dans un chemin d'accès de fournisseur du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , vous pouvez effectuer deux types d'actions :  
   
 -   Vous pouvez exécuter des applets de commande Windows PowerShell qui s’appliquent à des nœuds, telles que **Rename-Item**.  
   
@@ -35,10 +39,10 @@ caps.handback.revision: 11
 ##  <a name="ListPropMeth"></a> Affichage de la liste des méthodes et des propriétés  
  **Affichage de la liste des méthodes et des propriétés**  
   
- Pour afficher les méthodes et propriétés disponibles pour des objets ou classes d’objets spécifiques, utilisez l’applet de commande **Get-Member**.  
+ Pour afficher les méthodes et propriétés disponibles pour des objets ou classes d’objets spécifiques, utilisez l’applet de commande **Get-Member** .  
   
-### Exemples : affichage de la liste des méthodes et des propriétés  
- Cet exemple affecte à une variable Windows PowerShell la classe <xref:Microsoft.SqlServer.Management.Smo.Database> SMO et répertorie les méthodes et les propriétés :  
+### <a name="examples-listing-methods-and-properties"></a>Exemples : affichage de la liste des méthodes et des propriétés  
+ Cet exemple affecte à une variable Windows PowerShell la classe <xref:Microsoft.SqlServer.Management.Smo.Database> SMO et répertorie les méthodes et les propriétés :  
   
 ```  
 $MyDBVar = New-Object Microsoft.SqlServer.Management.SMO.Database  
@@ -48,14 +52,14 @@ $MyDBVar | Get-Member -Type Properties
   
  Vous pouvez également utiliser **Get-Member** pour répertorier les méthodes et les propriétés associées au nœud de fin d’un chemin d’accès Windows PowerShell.  
   
- L'exemple suivant accède au nœud Databases d'un chemin d'accès SQLSERVER: et répertorie les propriétés de collection :  
+ L'exemple suivant accède au nœud Databases d'un chemin d'accès SQLSERVER: et répertorie les propriétés de collection :  
   
 ```  
 Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases  
 Get-Item . | Get-Member -Type Properties  
 ```  
   
- Cet exemple accède au nœud AdventureWorks2012 d'un chemin d'accès SQLSERVER: et répertorie les propriétés d'objet :  
+ Cet exemple accède au nœud AdventureWorks2012 d'un chemin d'accès SQLSERVER: et répertorie les propriétés d'objet :  
   
 ```  
 Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012  
@@ -67,7 +71,7 @@ Get-Item . | Get-Member -Type Properties
   
  Pour effectuer un travail sur les objets d'un chemin d'accès de fournisseur du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , vous pouvez utiliser les méthodes et les propriétés SMO.  
   
-### Exemples : utilisation de méthodes et propriétés  
+### <a name="examples-using-methods-and-properties"></a>Exemples : utilisation de méthodes et propriétés  
  L’exemple suivant utilise la propriété SMO **Schema** pour obtenir la liste des tables du schéma Sales dans AdventureWorks2012 :  
   
 ```  
@@ -94,10 +98,10 @@ $MyDBVar.Create()
 $MyDBVar.State  
 ```  
   
-## Voir aussi  
- [fournisseur PowerShell SQL Server](../../relational-databases/scripting/sql-server-powershell-provider.md)   
+## <a name="see-also"></a>Voir aussi  
+ [fournisseur PowerShell SQL Server](../../relational-databases/scripting/sql-server-powershell-provider.md)   
  [Parcourir les chemins d'accès PowerShell SQL Server](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md)   
- [Convertir des URN en chemins d'accès de fournisseur SQL Server](../../relational-databases/scripting/convert-urns-to-sql-server-provider-paths.md)   
+ [Convertir des URN en chemins d'accès de fournisseur SQL Server](../../relational-databases/scripting/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   
   

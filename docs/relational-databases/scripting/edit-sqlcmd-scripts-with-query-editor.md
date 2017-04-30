@@ -1,54 +1,58 @@
 ---
-title: "Modifier des scripts SQLCMD &#224; l&#39;aide de l&#39;&#201;diteur de requ&#234;te | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "scripts [SQL Server], scripts SQLCMD"
-  - "scripts SQLCMD"
-  - "modification de scripts"
-  - "éditeur de requête [Moteur de base de données], scripts SQLCMD"
-  - "scripts [SQL Server], SQL Server Management Studio"
+title: "Modifier des scripts SQLCMD à l’aide de l’Éditeur de requête | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- scripts [SQL Server], SQLCMD scripts
+- SQLCMD scripts
+- modifying scripts
+- Query Editor [Database Engine], SQLCMD scripts
+- scripts [SQL Server], SQL Server Management Studio
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1bee07ba4b378dca877f7c204d9f764e666171d8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modifier des scripts SQLCMD &#224; l&#39;aide de l&#39;&#201;diteur de requ&#234;te
+# <a name="edit-sqlcmd-scripts-with-query-editor"></a>Modifier des scripts SQLCMD à l'aide de l'Éditeur de requête
   Grâce à l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , vous pouvez écrire et modifier des requêtes en tant que scripts SQLCMD. Vous utilisez des scripts SQLCMD lorsque vous devez traiter des commandes Windows System et des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans le même script.  
   
-## Mode SQLCMD  
+## <a name="sqlcmd-mode"></a>Mode SQLCMD  
  Pour utiliser l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] moteur de base de données afin d'écrire ou de modifier des scripts SQLCMD, vous devez activer le mode de script SQLCMD. Par défaut, il n'est pas activé dans l'Éditeur de requête. Vous pouvez l'activer en cliquant sur l'icône **Mode SQLCMD** dans la barre d'outils ou en sélectionnant **Mode SQLCMD** dans le menu **Requête** .  
   
 > [!NOTE]  
->  L'activation du mode SQLCMD désactive IntelliSense et le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  L'activation du mode SQLCMD désactive IntelliSense et le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
- Dans l'Éditeur de requête, les scripts SQLCMD peuvent utiliser les mêmes fonctionnalités que tous les scripts [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ces fonctionnalités incluent les suivantes :  
+ Dans l'Éditeur de requête, les scripts SQLCMD peuvent utiliser les mêmes fonctionnalités que tous les scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] . Ces fonctionnalités incluent les suivantes :  
   
--   codage en couleurs ;  
+-   codage en couleurs ;  
   
--   exécution des scripts ;  
+-   exécution des scripts ;  
   
--   contrôle de code source ;  
+-   contrôle de code source ;  
   
--   analyse des scripts ;  
+-   analyse des scripts ;  
   
 -   Showplan  
   
-## Activation des scripts SQLCMD dans l'Éditeur de requête  
+## <a name="enable-sqlcmd-scripting-in-query-editor"></a>Activation des scripts SQLCMD dans l'Éditeur de requête  
  Pour activer le script SQLCMD pour une fenêtre active de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] moteur de base de données, utilisez la procédure suivante.  
   
-#### Pour basculer l'Éditeur de requête du moteur de base de données en mode SQLCMD  
+#### <a name="to-switch-a-database-engine-query-editor-window-to-sqlcmd-mode"></a>Pour basculer l'Éditeur de requête du moteur de base de données en mode SQLCMD  
   
-1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur le serveur et choisissez **Nouvelle requête** pour ouvrir une nouvelle fenêtre de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur le serveur et choisissez **Nouvelle requête**pour ouvrir une nouvelle fenêtre de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 2.  Dans le menu **Requête** , cliquez sur **Mode SQLCMD**.  
   
@@ -67,13 +71,13 @@ caps.handback.revision: 42
     GO  
     ```  
   
-5.  Appuyez sur F5 pour exécuter toute la section d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] et MS-DOS.  
+5.  Appuyez sur F5 pour exécuter toute la section d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] et MS-DOS.  
   
      Consultez les deux volets de résultats SQL générés par la première et la troisième instruction.  
   
 6.  Dans le volet **Résultats** , cliquez sur l'onglet **Messages** pour afficher les messages des trois instructions :  
   
-    -   (6 lignes affectées)  
+    -   (6 lignes affectées)  
   
     -   \<Informations sur le répertoire>  
   
@@ -84,11 +88,11 @@ caps.handback.revision: 42
   
  Pour plus d'informations sur l'exécution de SQLCMD, consultez [sqlcmd Utility](../../tools/sqlcmd-utility.md)ou suivez le didacticiel qui lui est consacré.  
   
-## Activation des scripts SQLCMD par défaut  
+## <a name="enable-sqlcmd-scripting-by-default"></a>Activation des scripts SQLCMD par défaut  
  Pour activer les scripts SQLCMD par défaut, dans le menu **Outils** , sélectionnez **Options**, développez **Exécution de la requête**, **SQL Server**, cliquez sur la page **Général** , puis activez la case à cocher **Par défaut, ouvrir les nouvelles requêtes en mode SQLCMD** .  
   
-## Écriture et modification de scripts SQLCMD  
- Une fois le mode de scripts activé, vous pouvez écrire des commandes SQLCMD et des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] . Les règles suivantes s'appliquent :  
+## <a name="writing-and-editing-sqlcmd-scripts"></a>Écriture et modification de scripts SQLCMD  
+ Une fois le mode de scripts activé, vous pouvez écrire des commandes SQLCMD et des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] . Les règles suivantes s'appliquent :  
   
 -   Les commandes SQLCMD doivent être la première instruction d'une ligne.  
   
@@ -100,18 +104,18 @@ caps.handback.revision: 42
   
 -   Les caractères de commentaires d'une seule ligne sont deux tirets (`--)` qui doivent être placés au début d'une ligne.  
   
--   Les commandes du système d'exploitation doivent être précédées de deux points d'exclamation (`!!`). La commande avec deux points d'exclamation entraîne l'exécution de l'instruction qui suit les points d'exclamation avec le processeur de commandes `cmd.exe`. Le texte situé après `!!` est transmis en tant que paramètre à `cmd.exe`. La ligne de commande finale s'exécute donc en tant que : `"%SystemRoot%\system32\cmd.exe /c <text after !!>"`.  
+-   Les commandes du système d'exploitation doivent être précédées de deux points d'exclamation (`!!`). La commande avec deux points d'exclamation entraîne l'exécution de l'instruction qui suit les points d'exclamation avec le processeur de commandes `cmd.exe` . Le texte situé après `!!` est transmis en tant que paramètre à `cmd.exe`. La ligne de commande finale s'exécute donc en tant que : `"%SystemRoot%\system32\cmd.exe /c <text after !!>"`.  
   
 -   Pour distinguer clairement les commandes SQLCMD des commandes [!INCLUDE[tsql](../../includes/tsql-md.md)], toutes les commandes SQLCMD doivent être précédées d'un symbole deux-points (`:`).  
   
 -   La commande `GO` peut être utilisée sans préfixe, ou bien précédée de `!!:`  
   
--   L’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] prend en charge les variables d’environnement et les variables définies dans un script SQLCMD, mais il ne prend pas en charge les variables SQLCMD intégrées ni les variables **osql**. Le traitement SQLCMD de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] respecte la casse pour les variables. Par exemple, PRINT '$ (COMPUTERNAME)' génère le bon résultat et PRINT '$ (ComputerName)' retourne une erreur.  
+-   L’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] prend en charge les variables d’environnement et les variables définies dans un script SQLCMD, mais il ne prend pas en charge les variables SQLCMD intégrées ni les variables **osql** . Le traitement SQLCMD de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] respecte la casse pour les variables. Par exemple, PRINT '$ (COMPUTERNAME)' génère le bon résultat et PRINT '$ (ComputerName)' retourne une erreur.  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] utilise [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient pour les exécutions en mode normal et SQLCMD. Lorsqu'il est exécuté à partir de la ligne de commande, SQLCMD utilise le fournisseur OLE DB. Dans la mesure où des options par défaut peuvent s'appliquer, il est possible d'obtenir un comportement différent pendant l'exécution de la même requête en mode SQLCMD [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et dans l'utilitaire SQLCMD.  
   
-## Syntaxe SQLCMD prise en charge  
+## <a name="supported-sqlcmd-syntax"></a>Syntaxe SQLCMD prise en charge  
  L'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] prend en charge les mots clés de script SQLCMD suivants :  
   
  `[!!:]GO[count]`  
@@ -137,16 +141,16 @@ caps.handback.revision: 42
 > [!NOTE]  
 >  Pour `:error` et `:out`, `stderr` et `stdout` envoient la sortie dans l'onglet des messages.  
   
- Les commandes SQLCMD qui ne sont pas répertoriées ci-dessus ne sont pas prises en charge dans l'Éditeur de requête. Quand un script contenant des mots clés SQLCMD non pris en charge est exécuté, l’éditeur de requête envoie un message « Commande *\<commande ignorée*> ignorée » à la destination pour chaque mot clé non pris en charge. Le script s'exécute correctement mais les commandes non prises en charge sont ignorées.  
+ Les commandes SQLCMD qui ne sont pas répertoriées ci-dessus ne sont pas prises en charge dans l'Éditeur de requête. Quand un script contenant des mots clés SQLCMD non pris en charge est exécuté, l’éditeur de requête envoie un message « Commande *\<commande ignorée*> ignorée » à la destination pour chaque mot clé non pris en charge. Le script s'exécute correctement mais les commandes non prises en charge sont ignorées.  
   
 > [!CAUTION]  
 >  Étant donné que vous ne démarrez pas SQLCMD à partir de la ligne de commande, l'exécution de l'Éditeur de requête en mode SQLCMD est quelque peu limitée. Vous ne pouvez pas transmettre des paramètres de ligne de commande tels que des variables, et, comme l'éditeur de requête n'a pas la possibilité de répondre aux invites du système d'exploitation, vous ne devez pas exécuter d'instructions interactives.  
   
-## Codage en couleurs dans les scripts SQLCMD  
+## <a name="color-coding-in-sqlcmd-scripts"></a>Codage en couleurs dans les scripts SQLCMD  
  Lorsque les scripts SQLCMD sont activés, les scripts sont codés en couleurs. Le codage en couleurs des mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)] reste inchangé. Les commandes SQLCMD sont présentées avec un arrière-plan ombré.  
   
-## Exemple  
- L’exemple ci-après utilise une instruction **sqlcmd** pour créer un fichier de sortie nommé testoutput.txt et exécute deux instructions SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] ainsi qu’une commande du système d’exploitation (pour imprimer le répertoire actuel). Le fichier résultant contient la sortie du message provenant de l'instruction `DIR`, suivie des résultats des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+## <a name="example"></a>Exemple  
+ L’exemple ci-après utilise une instruction **sqlcmd** pour créer un fichier de sortie nommé testoutput.txt et exécute deux instructions SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] ainsi qu’une commande du système d’exploitation (pour imprimer le répertoire actuel). Le fichier résultant contient la sortie du message provenant de l'instruction `DIR` , suivie des résultats des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ```  
 :out C:\testoutput.txt  
@@ -157,7 +161,7 @@ SELECT @@SERVERNAME AS 'Server Name'
 GO  
 ```  
   
-## Voir aussi  
- [Utilitaire sqlcmd](../../tools/sqlcmd-utility.md)  
+## <a name="see-also"></a>Voir aussi  
+ [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
   
   

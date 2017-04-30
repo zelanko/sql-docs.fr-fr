@@ -1,42 +1,46 @@
 ---
-title: "R&#233;organiser et reconstruire des index | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.index.rebuild.f1"
-  - "sql13.swb.indexproperties.fragmentation.f1"
-  - "sql13.swb.index.reorg.f1"
-helpviewer_keywords: 
-  - "défragmentation des grands objets"
-  - "index [SQL Server], réorganisation"
-  - "réorganisation de l'index [SQL Server]"
-  - "réorganisation des index"
-  - "défragmentation des types de données de grands objets"
-  - "fragmentation d'index [SQL Server]"
-  - "reconstruction d'index [SQL Server]"
-  - "reconstruction des index"
-  - "index [SQL Server], reconstruction"
-  - "défragmentation des index"
-  - "index non cluster [SQL Server], défragmentation"
-  - "fragmentation [SQL Server]"
-  - "défragmentation d'index [SQL Server]"
-  - "données LOB [SQL Server], défragmentation"
-  - "index cluster, défragmentation"
+title: "Réorganiser et reconstruire des index | Microsoft Docs"
+ms.custom: 
+ms.date: 04/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.index.rebuild.f1
+- sql13.swb.indexproperties.fragmentation.f1
+- sql13.swb.index.reorg.f1
+helpviewer_keywords:
+- large object defragmenting
+- indexes [SQL Server], reorganizing
+- index reorganization [SQL Server]
+- reorganizing indexes
+- defragmenting large object data types
+- index fragmentation [SQL Server]
+- index rebuilding [SQL Server]
+- rebuilding indexes
+- indexes [SQL Server], rebuilding
+- defragmenting indexes
+- nonclustered indexes [SQL Server], defragmenting
+- fragmentation [SQL Server]
+- index defragmenting [SQL Server]
+- LOB data [SQL Server], defragmenting
+- clustered indexes, defragmenting
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 caps.latest.revision: 70
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 70
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 3c0adf0cb598d11b8bf07d31281c63561fd8db43
+ms.lasthandoff: 04/11/2017
+
 ---
-# R&#233;organiser et reconstruire des index
+# <a name="reorganize-and-rebuild-indexes"></a>Réorganiser et reconstruire des index
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Cette rubrique explique comment réorganiser ou reconstruire un index fragmenté dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] gère automatiquement des index lorsque des opérations d'insertion, de mise à jour ou de suppression sont effectuées sur les données sous-jacentes. Au fil des modifications, les informations figurant dans l'index sont éparpillées dans la base de données (fragmentée). La fragmentation intervient lorsque des index possèdent des pages dans lesquelles l'organisation logique (reposant sur la valeur de la clé) ne correspond pas à l'organisation physique dans le fichier de données. Une fragmentation importante des index peut diminuer les performances des requêtes et ralentir la vitesse de réponse de votre application.  
@@ -45,7 +49,7 @@ caps.handback.revision: 70
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Détection de la fragmentation](#Fragmentation)  
   
@@ -53,13 +57,13 @@ caps.handback.revision: 70
   
      [Sécurité](#Security)  
   
--   **Pour vérifier la fragmentation d'un index, à l'aide de :**  
+-   **Pour vérifier la fragmentation d'un index, à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedureFrag)  
   
      [Transact-SQL](#TsqlProcedureFrag)  
   
--   **Pour réorganiser ou reconstruire un index, à l'aide de :**  
+-   **Pour réorganiser ou reconstruire un index, à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedureReorg)  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 70
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Fragmentation"></a> Détection de la fragmentation  
- Lorsque vous déterminez la méthode de défragmentation à adopter, la première étape consiste à analyser l'index pour évaluer son degré de fragmentation. La fonction système [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) vous permet de détecter la fragmentation dans un index spécifique, dans tous les index d’une table ou d’une vue indexée, dans tous les index d’une base de données ou dans tous les index de l’ensemble des bases de données. Pour les index partitionnés, **sys.dm_db_index_physical_stats** procure aussi des informations de fragmentation pour chaque partition.  
+ Lorsque vous déterminez la méthode de défragmentation à adopter, la première étape consiste à analyser l'index pour évaluer son degré de fragmentation. La fonction système [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)vous permet de détecter la fragmentation dans un index spécifique, dans tous les index d’une table ou d’une vue indexée, dans tous les index d’une base de données ou dans tous les index de l’ensemble des bases de données. Pour les index partitionnés, **sys.dm_db_index_physical_stats** procure aussi des informations de fragmentation pour chaque partition.  
   
  Le jeu de résultats retourné par la fonction **sys.dm_db_index_physical_stats** inclut les colonnes suivantes.  
   
@@ -80,27 +84,27 @@ caps.handback.revision: 70
   
  Une fois le degré de fragmentation connu, utilisez le tableau suivant pour déterminer la méthode la mieux adaptée pour corriger la fragmentation.  
   
-|Valeur **avg_fragmentation_in_percent**|Instruction corrective|  
+|Valeur**avg_fragmentation_in_percent** |Instruction corrective|  
 |-----------------------------------------------|--------------------------|  
-|> 5 % et \< = 30 %|ALTER INDEX REORGANIZE|  
+|> 5 % et < = 30 %|ALTER INDEX REORGANIZE|  
 |> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON)*|  
   
  \* La reconstruction d’un index peut être exécutée en ligne ou hors connexion. La réorganisation d'un index s'effectue toujours en ligne. Pour obtenir le même niveau de disponibilité qu'avec l'option de réorganisation, vous devez reconstruire les index en ligne.  
   
- Ces valeurs fournissent des directives grossières pour déterminer le point auquel vous devez basculer entre ALTER INDEX REORGANIZE et ALTER INDEX REBUILD. Toutefois, les valeurs réelles peuvent varier d'un cas à l'autre. Il est important que vous fassiez des essais pour déterminer le meilleur seuil pour votre environnement. Des niveaux très bas de fragmentation (inférieurs à 5 %) ne doivent pas être pris en compte par ces commandes, car l'avantage de la suppression d'un volume de fragmentation aussi réduit est quasiment toujours largement compensé par le coût de la réorganisation ou de la reconstruction de l'index.  
+ Ces valeurs fournissent des directives grossières pour déterminer le point auquel vous devez basculer entre ALTER INDEX REORGANIZE et ALTER INDEX REBUILD. Toutefois, les valeurs réelles peuvent varier d'un cas à l'autre. Il est important que vous fassiez des essais pour déterminer le meilleur seuil pour votre environnement. Des niveaux très bas de fragmentation (inférieurs à 5 %) ne doivent pas être pris en compte par ces commandes, car l'avantage de la suppression d'un volume de fragmentation aussi réduit est quasiment toujours largement compensé par le coût de la réorganisation ou de la reconstruction de l'index.  
   
 > [!NOTE]
->  En général, la fragmentation sur les petits index n'est pas contrôlable. Les pages de petits index sont parfois stockées sur des extensions mixtes. Les extensions mixtes sont partagées par huit objets maximum ; par conséquent, la fragmentation dans un petit index peut ne pas être réduite après la réorganisation ou la reconstruction de l'index.
+>  En général, la fragmentation sur les petits index n'est pas contrôlable. Les pages de petits index sont parfois stockées sur des extensions mixtes. Les extensions mixtes sont partagées par huit objets maximum ; par conséquent, la fragmentation dans un petit index peut ne pas être réduite après la réorganisation ou la reconstruction de l'index.
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
   
--   Les index possédant plus de 128 extensions sont reconstruits en deux phases distinctes : une phase logique et une phase physique. Dans la phase logique, les unités d'allocation utilisées par l'index sont signalées comme devant être désallouées, les lignes de données sont copiées et triées, puis elles sont déplacées vers les nouvelles unités d'allocation ayant été créées pour stocker l'index reconstruit. Dans la phase physique, les unités d'allocation préalablement signalées pour être désallouées sont supprimées physiquement dans des transactions courtes qui interviennent en arrière-plan et nécessitent peu de verrous.  
+-   Les index possédant plus de 128 extensions sont reconstruits en deux phases distinctes : une phase logique et une phase physique. Dans la phase logique, les unités d'allocation utilisées par l'index sont signalées comme devant être désallouées, les lignes de données sont copiées et triées, puis elles sont déplacées vers les nouvelles unités d'allocation ayant été créées pour stocker l'index reconstruit. Dans la phase physique, les unités d'allocation préalablement signalées pour être désallouées sont supprimées physiquement dans des transactions courtes qui interviennent en arrière-plan et nécessitent peu de verrous.  
   
 -   Vous ne pouvez pas spécifier des options d'index lors de la réorganisation d'un index.  
   
--   L’instruction `ALTER INDEX REORGANIZE` a besoin du fichier de données contenant l’index pour disposer d’espace, car l’opération peut uniquement allouer des pages de travail temporaires à un même fichier, mais pas à un autre fichier du groupe de fichiers.  De ce fait, même si le groupe de fichiers a des pages libres, l’utilisateur peut toujours rencontrer l’erreur 1105 « Impossible d’allouer de l’espace pour l’objet \<nom_index>.\<nom_table> dans la base de données \<nom_base_données>, car le groupe de fichiers « PRIMARY » est plein ».
+-   L’instruction `ALTER INDEX REORGANIZE` a besoin du fichier de données contenant l’index pour disposer d’espace, car l’opération peut uniquement allouer des pages de travail temporaires à un même fichier, mais pas à un autre fichier du groupe de fichiers.  De ce fait, même si le groupe de fichiers a des pages libres, l’utilisateur peut toujours rencontrer l’erreur 1105 « Impossible d’allouer de l’espace pour l’objet \<nom_index>.\<nom_table> dans la base de données \<nom_base_données>, car le groupe de fichiers 'PRIMARY' est plein ».
   
--   La création et la reconstruction des index non alignés sur une table contenant plus de 1 000 partitions sont possibles, mais ne sont pas prises en charge. Ces opérations peuvent entraîner une dégradation des performances ou une consommation de mémoire excessive.
+-   La création et la reconstruction des index non alignés sur une table contenant plus de 1 000 partitions sont possibles, mais ne sont pas prises en charge. Ces opérations peuvent entraîner une dégradation des performances ou une consommation de mémoire excessive.
   
 > [!NOTE]
 >  À partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les statistiques ne sont pas créées en analysant toutes les lignes de la table quand un index partitionné est créé ou reconstruit. Au lieu de cela, l'optimiseur de requête utilise l'algorithme d'échantillonnage par défaut pour générer des statistiques. Pour obtenir des statistiques sur les index partitionnés en analysant toutes les lignes de la table, utilisez CREATE STATISTICS ou UPDATE STATISTICS avec la clause FULLSCAN.
@@ -108,11 +112,11 @@ caps.handback.revision: 70
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner**.  
+ Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
-##  <a name="SSMSProcedureFrag"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedureFrag"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour vérifier la fragmentation d'un index  
+#### <a name="to-check-the-fragmentation-of-an-index"></a>Pour vérifier la fragmentation d'un index  
   
 1.  Dans l'Explorateur d'objets, développez la base de données qui contient la table sur laquelle vous souhaitez vérifier une fragmentation d'index.  
   
@@ -169,7 +173,7 @@ caps.handback.revision: 70
   
 ##  <a name="TsqlProcedureFrag"></a> Utilisation de Transact-SQL  
   
-#### Pour vérifier la fragmentation d'un index  
+#### <a name="to-check-the-fragmentation-of-an-index"></a>Pour vérifier la fragmentation d'un index  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -205,9 +209,9 @@ caps.handback.revision: 70
   
  Pour plus d’informations, consultez [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).  
   
-##  <a name="SSMSProcedureReorg"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedureReorg"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour réorganiser ou reconstruire un index  
+#### <a name="to-reorganize-or-rebuild-an-index"></a>Pour réorganiser ou reconstruire un index  
   
 1.  Dans l'Explorateur d'objets, développez la base de données qui contient la table sur laquelle vous souhaitez réorganiser un index.  
   
@@ -225,7 +229,7 @@ caps.handback.revision: 70
   
 8.  Cliquez sur **OK.**  
   
-#### Pour réorganiser tous les index d'une table  
+#### <a name="to-reorganize-all-indexes-in-a-table"></a>Pour réorganiser tous les index d'une table  
   
 1.  Dans l'Explorateur d'objets, développez la base de données qui contient la table sur laquelle vous souhaitez réorganiser les index.  
   
@@ -233,7 +237,7 @@ caps.handback.revision: 70
   
 3.  Développez la table sur laquelle vous souhaitez réorganiser les index.  
   
-4.  Cliquez avec le bouton droit sur le dossier **Index**, puis sélectionnez **Réorganiser tout**.  
+4.  Cliquez avec le bouton droit sur le dossier **Index** , puis sélectionnez **Réorganiser tout**.  
   
 5.  Dans la boîte de dialogue **Réorganiser les index** , vérifiez que les index corrects sont dans **Index à réorganiser**. Pour supprimer un index de la grille **Index à réorganiser** , sélectionnez l'index et appuyez sur la touche SUPPR.  
   
@@ -241,7 +245,7 @@ caps.handback.revision: 70
   
 7.  Cliquez sur **OK.**  
   
-#### Pour reconstruire un index  
+#### <a name="to-rebuild-an-index"></a>Pour reconstruire un index  
   
 1.  Dans l'Explorateur d'objets, développez la base de données qui contient la table sur laquelle vous souhaitez réorganiser un index.  
   
@@ -261,7 +265,7 @@ caps.handback.revision: 70
   
 ##  <a name="TsqlProcedureReorg"></a> Utilisation de Transact-SQL  
   
-#### Pour réorganiser un index défragmenté  
+#### <a name="to-reorganize-a-defragmented-index"></a>Pour réorganiser un index défragmenté  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -279,7 +283,7 @@ caps.handback.revision: 70
     GO  
     ```  
   
-#### Pour réorganiser tous les index d'une table  
+#### <a name="to-reorganize-all-indexes-in-a-table"></a>Pour réorganiser tous les index d'une table  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -296,7 +300,7 @@ caps.handback.revision: 70
     GO  
     ```  
   
-#### Pour reconstruire un index défragmenté  
+#### <a name="to-rebuild-a-defragmented-index"></a>Pour reconstruire un index défragmenté  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -306,7 +310,7 @@ caps.handback.revision: 70
   
      [!code-sql[IndexDDL#AlterIndex1](../../relational-databases/indexes/codesnippet/tsql/reorganize-and-rebuild-i_1.sql)]  
   
-#### Pour reconstruire tous les index d'une table  
+#### <a name="to-rebuild-all-indexes-in-a-table"></a>Pour reconstruire tous les index d'une table  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -318,7 +322,8 @@ caps.handback.revision: 70
   
  Pour plus d’informations, consultez [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Meilleures pratiques de défragmentation d'index Microsoft SQL Server 2000](http://technet.microsoft.com/library/cc966523.aspx)  
   
   
+

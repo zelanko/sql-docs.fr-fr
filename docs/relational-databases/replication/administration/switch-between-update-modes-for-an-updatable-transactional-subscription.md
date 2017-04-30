@@ -1,31 +1,35 @@
 ---
-title: "Basculer entre les modes de mise &#224; jour d&#39;un abonnement transactionnel pouvant &#234;tre mis &#224; jour | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "réplication transactionnelle, abonnements pouvant être mis à jour"
-  - "abonnements pouvant être mis à jour, modes de mise à jour"
-  - "abonnements [réplication SQL Server], abonnements pouvant être mis à jour"
+title: "Basculer entre les modes de mise à jour d’un abonnement transactionnel pouvant être mis à jour | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transactional replication, updatable subscriptions
+- updatable subscriptions, update modes
+- subscriptions [SQL Server replication], updatable
 ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 271b9ff4060284d50e66130f8bbd4b8d5b288912
+ms.lasthandoff: 04/11/2017
+
 ---
-# Basculer entre les modes de mise &#224; jour d&#39;un abonnement transactionnel pouvant &#234;tre mis &#224; jour
-  Cette rubrique explique comment basculer entre les modes de mise à jour d'un abonnement transactionnel pouvant être mis à jour dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Spécifiez le mode des abonnements pouvant être mis à jour à l'aide de l'Assistant Nouvel abonnement. Pour plus d’informations sur la définition du mode lors de l’utilisation de cet Assistant, consultez [Afficher et modifier les propriétés d’abonnement extrait](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+# <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>Basculer entre les modes de mise à jour d'un abonnement transactionnel pouvant être mis à jour
+  Cette rubrique explique comment basculer entre les modes de mise à jour d'un abonnement transactionnel pouvant être mis à jour dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Spécifiez le mode des abonnements pouvant être mis à jour à l'aide de l'Assistant Nouvel abonnement. Pour plus d’informations sur la définition de ce mode lors de l’utilisation de cet Assistant, consultez [Afficher et modifier les propriétés d’un abonnement par extraction](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
@@ -45,46 +49,46 @@ caps.handback.revision: 38
   
 ###  <a name="Recommendations"></a> Recommandations  
   
--   Lorsqu'un abonnement avec mise à jour à une publication transactionnelle prend en charge le basculement d'un mode de mise à jour vers un autre, vous pouvez basculer par programmation les modes de mise à jour pour gérer les situations où la connectivité change pendant une courte période de temps. Le mode de mise à jour peut être défini par programmation et à la demande à l'aide de procédures stockées de réplication. Pour plus d’informations, consultez la page [à des abonnements pour la réplication transactionnelle](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
+-   Lorsqu'un abonnement avec mise à jour à une publication transactionnelle prend en charge le basculement d'un mode de mise à jour vers un autre, vous pouvez basculer par programmation les modes de mise à jour pour gérer les situations où la connectivité change pendant une courte période de temps. Le mode de mise à jour peut être défini par programmation et à la demande à l'aide de procédures stockées de réplication. Pour plus d’informations, consultez [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 > [!NOTE]  
->  Pour modifier le mode de mise à jour une fois l’abonnement est créé, le **update_mode** propriété doit être définie sur **basculement** (ce qui permet à un commutateur à partir de la mise à jour immédiate à la file d’attente mise à jour) ou **en file d’attente de basculement** (ce qui permet à un commutateur à partir de la mise à jour en file d’attente de mise à jour immédiate) lorsque l’abonnement est créé. Ces propriétés sont automatiquement définies dans l'Assistant Nouvel abonnement.  
+>  Pour modifier le mode de mise à jour après que l'abonnement a été créé, vous devez affecter à la propriété **update_mode** la valeur **failover** (qui permet de basculer de la mise à jour immédiate vers la mise à jour en attente) ou **queued failover** (qui permet de basculer de la mise à jour en attente vers la mise à jour immédiate) lors de la création de l'abonnement. Ces propriétés sont automatiquement définies dans l'Assistant Nouvel abonnement.  
   
-#### Pour définir le mode de mise à jour d'un abonnement envoyé  
+#### <a name="to-set-the-updating-mode-for-a-push-subscription"></a>Pour définir le mode de mise à jour d'un abonnement envoyé  
   
 1.  Connectez-vous à l'Abonné dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], puis développez le nœud du serveur.  
   
 2.  Développez le dossier **Réplication** , puis développez le dossier **Abonnements locaux** .  
   
-3.  Cliquez sur l’abonnement pour lequel vous souhaitez définir le mode de mise à jour, puis cliquez sur **définir la méthode de mise à jour**.  
+3.  Cliquez avec le bouton droit sur l'abonnement dont vous voulez définir le mode de mise à jour puis cliquez sur **Définir la méthode de mise à jour**.  
   
-4.  Dans la **définir la méthode de mise à jour - \< abonné>: \< BasededonnéesAbonnement>** boîte de dialogue, sélectionnez **mise à jour immédiate** ou **la mise à jour en file d’attente**.  
+4.  Dans la boîte de dialogue **Définir la méthode de mise à jour - \<Abonné> : \<Base_de_données_d’abonnement>**, sélectionnez **Mise à jour immédiate** ou **Mise à jour en attente**.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-#### Pour définir le mode de mise à jour d'un abonnement extrait  
+#### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>Pour définir le mode de mise à jour d'un abonnement extrait  
   
-1.  Dans la **Propriétés de l’abonnement - \< Publisher>: \< Basedonnéespublication>** boîte de dialogue, sélectionnez la valeur **répliquer les modifications immédiatement** ou **modifications en file d’attente** pour la **méthode de mise à jour d’abonnés** option.  
+1.  Dans la boîte de dialogue **Propriétés de l’abonnement - \<Serveur_de_publication> : \<Base_de_données_de_publication>**, sélectionnez une valeur **Répliquer les modifications immédiatement** ou **Mettre les modifications en file d’attente** pour l’option **Méthode de mise à jour de l’Abonné**.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- Pour plus d’informations sur l’accès à la **Propriétés de l’abonnement - \< serveur de publication>: \< Basedonnéespublication>** boîte de dialogue, consultez [Afficher et modifier les propriétés d’abonnement extrait](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+ Pour plus d’informations sur l’accès à la boîte de dialogue **Propriétés de l’abonnement - \<Serveur_de_publication>: \<Base_de_données_de_publication>**, consultez [Afficher et modifier les propriétés d’un abonnement par extraction](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour basculer d'un mode de mise à jour vers un autre  
+#### <a name="to-switch-between-update-modes"></a>Pour basculer d'un mode de mise à jour vers un autre  
   
-1.  Vérifiez que l’abonnement prend en charge le basculement en exécutant [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md) pour un abonnement extrait ou [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) pour un abonnement envoyé. Si la valeur de **mode de mise à jour** dans le jeu de résultats est **3** ou **4**, le basculement est pris en charge.  
+1.  Vérifiez que l'abonnement prend en charge le basculement en exécutant [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md) pour un abonnement par extraction ou [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) pour un abonnement par émission de données. Si la valeur de **mode de mise à jour** dans le jeu de résultats est **3** ou **4**, le basculement est pris en charge.  
   
-2.  Sur la base de données d’abonnement de l’abonné, exécutez [sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md). Spécifiez **@publisher**, **@publisher_db**, **@publication**, et une de ces valeurs pour **@failover_mode**:  
+2.  Sur l'Abonné de la base de données d'abonnement, exécutez [sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md). Spécifiez **@publisher**, **@publisher_db**, **@publication**, et l'une des valeurs suivantes pour **@failover_mode**:  
   
-    -   **la file d’attente** -basculer la mise à jour en file d’attente lors de la connexion a été perdue temporairement.  
+    -   **mis en file d'attente** - basculement sur la mise à jour en attente lorsque la connectivité a été perdue temporairement.  
   
-    -   **immédiate** -Basculer vers une mise à jour immédiate lorsque la connectivité a été rétablie.  
+    -   **immédiat** - basculement sur la mise à jour immédiate lorsque la connectivité a été restaurée.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

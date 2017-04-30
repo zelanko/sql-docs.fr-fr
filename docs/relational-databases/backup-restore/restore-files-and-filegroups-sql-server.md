@@ -1,42 +1,46 @@
 ---
-title: "Restaurer des fichiers et des groupes de fichiers (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restorefilesandfilegrps.general.f1"
-  - "sql13.swb.bselectfilegrpsfiles.f1"
-  - "sql13.swb.restorefilesandfilegrps.options.f1"
-helpviewer_keywords: 
-  - "SQL Server Management Studio [SQL Server], restauration de fichiers et de groupes de fichiers"
-  - "restauration [SQL Server], fichiers"
+title: Restaurer des fichiers et des groupes de fichiers (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restorefilesandfilegrps.general.f1
+- sql13.swb.bselectfilegrpsfiles.f1
+- sql13.swb.restorefilesandfilegrps.options.f1
+helpviewer_keywords:
+- SQL Server Management Studio [SQL Server], restoring files and filegroups
+- restoring [SQL Server], files
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0bc8f28aa966b39b9b5c78d681458d6bf25f84f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaurer des fichiers et des groupes de fichiers (SQL Server)
+# <a name="restore-files-and-filegroups-sql-server"></a>Restaurer des fichiers et des groupes de fichiers (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique explique comment restaurer des fichiers et des groupes de fichiers dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
 -   [Sécurité](#Security)  
   
--   **Pour restaurer des fichiers et des groupes de fichiers, utilisez :**  
+-   **Pour restaurer des fichiers et des groupes de fichiers, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -48,7 +52,7 @@ caps.handback.revision: 25
   
 -   L’administrateur système restaurant les fichiers et groupes de fichiers doit être la seule personne utilisant la base de données à restaurer.  
   
--   La commande RESTORE n'est pas autorisée dans une transaction explicite ou implicite.  
+-   La commande RESTORE n'est pas autorisée dans une transaction explicite ou implicite.  
   
 -   En mode de récupération simple, le fichier doit appartenir à un groupe de fichiers en lecture seule.  
   
@@ -59,13 +63,13 @@ caps.handback.revision: 25
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Si la base de données restaurée n'existe pas, l'utilisateur doit posséder les autorisations CREATE DATABASE afin de pouvoir exécuter RESTORE. Si la base de données existe, les autorisations RESTORE reviennent par défaut aux membres des rôles serveur fixe **sysadmin** et **dbcreator** et au propriétaire (**dbo**) de la base de données (pour l’option FROM DATABASE_SNAPSHOT, la base de données existe toujours).  
+ Si la base de données restaurée n'existe pas, l'utilisateur doit posséder les autorisations CREATE DATABASE afin de pouvoir exécuter RESTORE. Si la base de données existe, les autorisations RESTORE reviennent par défaut aux membres des rôles serveur fixes **sysadmin** et **dbcreator** et au propriétaire (**dbo**) de la base de données (pour l’option FROM DATABASE_SNAPSHOT, la base de données existe toujours).  
   
- Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas quand RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
+ Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que lorsque la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas quand RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour restaurer des fichiers et des groupes de fichiers  
+#### <a name="to-restore-files-and-filegroups"></a>Pour restaurer des fichiers et des groupes de fichiers  
   
 1.  Après vous être connecté à l’instance appropriée du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], dans l’Explorateur d’objets, cliquez sur le nom du serveur pour développer son arborescence.  
   
@@ -93,9 +97,9 @@ caps.handback.revision: 25
   
     |En-tête de colonne|Valeurs|  
     |-----------------|------------|  
-    |**Restore**|Les cases à cocher sélectionnées correspondent aux jeux de sauvegarde à restaurer.|  
+    |**Restaurer**|Les cases à cocher sélectionnées correspondent aux jeux de sauvegarde à restaurer.|  
     |**Nom**|Nom du jeu de sauvegarde.|  
-    |**Type de fichier**|Spécifie le type de données de la sauvegarde : **Données**, **Journal**ou **Données Filestream**. Les données qui sont contenues dans les tables sont dans les fichiers **Données** . Les données du journal des transactions sont dans les fichiers **Journaux** . Les données des objets BLOB (Binary Large Object) qui sont stockées dans le système de fichiers se trouvent dans des fichiers **Données Filestream**.|  
+    |**Type de fichier**|Spécifie le type de données de la sauvegarde : **Données**, **Journal**ou **Données Filestream**. Les données qui sont contenues dans les tables sont dans les fichiers **Données** . Les données du journal des transactions sont dans les fichiers **Journaux** . Les données des objets BLOB (Binary Large Object) qui sont stockées dans le système de fichiers se trouvent dans des fichiers **Données Filestream** .|  
     |**Type**|Type de sauvegarde effectué : **Complète**, **Différentielle**ou **Journal des transactions**.|  
     |**Server**|Nom de l'instance Base de données-Moteur ayant effectué l'opération de sauvegarde.|  
     |**Nom logique du fichier**|Comme son nom l'indique.|  
@@ -115,7 +119,7 @@ caps.handback.revision: 25
      **Remplacer la base de données existante**  
      Indique que la restauration doit remplacer les bases de données existantes et leurs fichiers associés, même si une autre base de données ou un autre fichier existant porte le même nom.  
   
-     L'activation de cette option revient à utiliser l'option REPLACE dans une instruction RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+     L'activation de cette option revient à utiliser l'option REPLACE dans une instruction RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
      **Demander confirmation avant chaque restauration de sauvegarde**  
      Demande une confirmation avant la restauration de chaque jeu de sauvegarde.  
@@ -123,7 +127,7 @@ caps.handback.revision: 25
      Cette option est particulièrement utile lorsque vous devez permuter des jeux de supports différents, lorsque, par exemple, le serveur n'a qu'un seul périphérique à bandes.  
   
      **Restreindre l'accès à la base de données restaurée**  
-     Limite l’accès à la base de données restaurée aux membres de **db_owner**, **dbcreator** ou **sysadmin**.  
+     Limite l’accès à la base de données restaurée aux membres de **db_owner**, **dbcreator**ou **sysadmin**.  
   
      La sélection de cette option équivaut à utiliser l'option RESTRICTED_USER dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE.  
   
@@ -132,7 +136,7 @@ caps.handback.revision: 25
     |En-tête de colonne|Valeurs|  
     |-----------------|------------|  
     |**Nom du fichier d'origine**|Chemin d'accès complet d'un fichier de sauvegarde source.|  
-    |**Type de fichier**|Spécifie le type de données de la sauvegarde : **Données**, **Journal**ou **Données Filestream**. Les données qui sont contenues dans les tables sont dans les fichiers **Données** . Les données du journal des transactions sont dans les fichiers **Journaux** . Les données des objets BLOB (Binary Large Object) qui sont stockées dans le système de fichiers se trouvent dans des fichiers **Données Filestream**.|  
+    |**Type de fichier**|Spécifie le type de données de la sauvegarde : **Données**, **Journal**ou **Données Filestream**. Les données qui sont contenues dans les tables sont dans les fichiers **Données** . Les données du journal des transactions sont dans les fichiers **Journaux** . Les données des objets BLOB (Binary Large Object) qui sont stockées dans le système de fichiers se trouvent dans des fichiers **Données Filestream** .|  
     |**Restaurer sous**|Chemin d'accès complet du fichier de base de données à restaurer. Pour définir un nouveau fichier de restauration, cliquez sur la zone de texte et modifiez le chemin d'accès et le nom de fichier proposés. La modification du chemin d'accès ou du nom de fichier dans la colonne **Restaurer sous** équivaut à utiliser l'option MOVE dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE.|  
   
 11. Le volet **État de récupération** détermine l'état de la base de données à l'issue de l'opération de restauration.  
@@ -141,27 +145,27 @@ caps.handback.revision: 25
      Récupère la base de données. Il s'agit du comportement par défaut. Ne choisissez cette option que si vous restaurez toutes les sauvegardes nécessaires maintenant. Cette option revient à spécifier WITH RECOVERY dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE.  
   
      **Laisser la base de données non opérationnelle, et ne pas restaurer les transactions non validées. Les journaux des transactions supplémentaires peuvent être restaurés. (RESTORE WITH NORECOVERY)**  
-     Laisse la base de données en état de restauration. Pour restaurer la base de données, vous devez exécuter une autre restauration en utilisant l'option RESTORE WITH RECOVERY précédente (voir ci-dessus). Cette option revient à spécifier WITH NORECOVERY dans une instruction RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+     Laisse la base de données en état de restauration. Pour restaurer la base de données, vous devez exécuter une autre restauration en utilisant l'option RESTORE WITH RECOVERY précédente (voir ci-dessus). Cette option revient à spécifier WITH NORECOVERY dans une instruction RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
      Si vous sélectionnez cette option, l'option **Conserver les paramètres de réplication** n'est pas disponible.  
   
      **Laisser la base de données en lecture seule. Annulez les transactions non validées, mais enregistrez l'opération d'annulation dans un fichier pour pouvoir annuler les effets de la restauration. (RESTORE WITH STANDBY)**  
-     Laisse la base de données dans un état de secours. Cette option revient à spécifier WITH STANDBY dans une instruction RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+     Laisse la base de données dans un état de secours. Cette option revient à spécifier WITH STANDBY dans une instruction RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
      Cette option nécessite de définir un fichier d'annulation.  
   
      **Fichier journal des annulations de la restauration**  
-     Définissez un fichier d’annulation dans la zone de texte **Fichier journal des annulations de la restauration**. Cette option est nécessaire si vous laissez la base de données en lecture seule (RESTORE WITH STANDBY).  
+     Définissez un fichier d’annulation dans la zone de texte **Fichier journal des annulations de la restauration** . Cette option est nécessaire si vous laissez la base de données en lecture seule (RESTORE WITH STANDBY).  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour restaurer des fichiers et des groupes de fichiers  
+#### <a name="to-restore-files-and-filegroups"></a>Pour restaurer des fichiers et des groupes de fichiers  
   
-1.  Exécutez l’instruction RESTORE DATABASE pour restaurer la sauvegarde du fichier ou du groupe de fichiers, en spécifiant :  
+1.  Exécutez l’instruction RESTORE DATABASE pour restaurer la sauvegarde du fichier ou du groupe de fichiers, en spécifiant :  
   
-    -   le nom de la base de données à restaurer ;  
+    -   le nom de la base de données à restaurer ;  
   
-    -   l'unité de sauvegarde à partir de laquelle sera restaurée la sauvegarde complète de la base de données ;  
+    -   l'unité de sauvegarde à partir de laquelle sera restaurée la sauvegarde complète de la base de données ;  
   
     -   La clause FILE pour chaque fichier à restaurer.  
   
@@ -169,18 +173,18 @@ caps.handback.revision: 25
   
     -   la clause NORECOVERY. Si les fichiers n'ont pas été modifiés depuis la création de la sauvegarde, spécifiez la clause RECOVERY.  
   
-2.  Si les fichiers ont été modifiés depuis la création de la sauvegarde du fichier, exécutez l'instruction RESTORE LOG pour appliquer la sauvegarde du journal des transactions, en spécifiant :  
+2.  Si les fichiers ont été modifiés depuis la création de la sauvegarde du fichier, exécutez l'instruction RESTORE LOG pour appliquer la sauvegarde du journal des transactions, en spécifiant :  
   
-    -   le nom de la base de données à laquelle sera appliqué le journal des transactions ;  
+    -   le nom de la base de données à laquelle sera appliqué le journal des transactions ;  
   
-    -   l'unité de sauvegarde à partir de laquelle sera restaurée la sauvegarde du journal des transactions ;  
+    -   l'unité de sauvegarde à partir de laquelle sera restaurée la sauvegarde du journal des transactions ;  
   
     -   la clause NORECOVERY si vous devez appliquer une autre sauvegarde du journal des transactions après la sauvegarde en cours. Dans les autres cas, spécifiez la clause RECOVERY.  
   
          Les sauvegardes du journal des transactions, lorsqu'elles sont appliquées, doivent couvrir la période de sauvegarde des fichiers et groupes de fichiers jusqu'à la fin du journal (sauf si TOUS les fichiers de base de données sont restaurés).  
   
 ###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
- Cet exemple restaure les fichiers et les groupes de fichiers pour la base de données `MyDatabase`. Pour restaurer la base de données à l'heure actuelle, deux journaux de transactions sont appliqués.  
+ Cet exemple restaure les fichiers et les groupes de fichiers pour la base de données `MyDatabase` . Pour restaurer la base de données à l'heure actuelle, deux journaux de transactions sont appliqués.  
   
 ```tsql  
 USE master;  
@@ -206,12 +210,12 @@ RESTORE LOG MyDatabase
 GO  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Restaurer une sauvegarde de base de données à l’aide de SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
  [Sauvegarder des fichiers et des groupes de fichiers &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
  [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)   
  [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Restaurer une sauvegarde de journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

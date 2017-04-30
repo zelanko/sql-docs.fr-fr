@@ -1,22 +1,26 @@
 ---
-title: "Fonctionnalit&#233;s prises en charge pour les modules T-SQL compil&#233;s en mode natif | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Fonctionnalités prises en charge pour les modules T-SQL compilés en mode natif | Microsoft Docs"
+ms.custom: 
+ms.date: 12/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 caps.latest.revision: 44
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 16f09bada7bbf3ae964ecfa09aa33208aa2f3acf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Fonctionnalit&#233;s prises en charge pour les modules T-SQL compil&#233;s en mode natif
+# <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Fonctionnalités prises en charge pour les modules T-SQL compilés en mode natif
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -42,7 +46,7 @@ caps.handback.revision: 44
 
  Pour plus d’informations sur les constructions qui ne sont pas prises en charge et sur la manière de contourner certaines des fonctionnalités non prises en charge dans les modules compilés en mode natif, consultez [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md). Pour plus d’informations sur les fonctionnalités non prises en charge, consultez [Les constructions Transact-SQL ne sont pas prises en charge par l’OLTP en mémoire](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
 
-##  <a name="a-nameqsancspa-query-surface-area-in-native-modules"></a><a name="qsancsp"></a> Surface d’exposition de requête dans les modules natifs  
+##  <a name="qsancsp"></a> Surface d’exposition de requête dans les modules natifs  
 
 Les constructions de requête suivantes sont prises en charge :  
 
@@ -79,19 +83,19 @@ Clause WHERE :
 -   AND, OR, NOT, IN, EXISTS, BETWEEN  
 
 
-Clause[GROUP BY](../Topic/GROUP%20BY%20%28Transact-SQL%29.md) :
+Clause[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) :
 
 - Fonctions d’agrégation AVG, COUNT, COUNT_BIG, MIN, MAX et SUM.  
 
 - MIN et MAX ne sont pas pris en charge pour les types nvarchar, char, varchar, varchar, varbinary, et binary.  
 
-Clause[ORDER BY](../Topic/ORDER%20BY%20Clause%20%28Transact-SQL%29.md) :
+Clause[ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md) :
 
 
 - Il n’existe aucune prise en charge de **DISTINCT** dans la clause **ORDER BY** .
 
 
-- Est pris en charge avec [GROUP BY &#40;Transact-SQL&#41;](../Topic/GROUP%20BY%20\(Transact-SQL\).md) si une expression dans la liste ORDER BY apparaît de façon textuelle dans la liste GROUP BY.
+- Est pris en charge avec [GROUP BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-group-by-transact-sql.md) si une expression dans la liste ORDER BY apparaît de façon textuelle dans la liste GROUP BY.
   - Par exemple, GROUP BY a + b ORDER BY a + b est pris en charge, mais GROUP BY a, b ORDER BY a + b n'est pas pris en charge.  
 
 
@@ -123,7 +127,7 @@ Cependant, l'utilisation d'une constante dans la clause **TOP** donne de meilleu
 Ces limitations sur [!INCLUDE[tsql](../../includes/tsql-md.md)] compilé en mode natif ne s’appliquent pas à l’accès [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété sur les tables optimisées en mémoire.  
 
 
-##  <a name="a-namedmla-data-modification"></a><a name="dml"></a> Modification de données  
+##  <a name="dml"></a> Modification de données  
 
 Les instructions DML suivantes sont prises en charge.  
 
@@ -135,7 +139,7 @@ Les instructions DML suivantes sont prises en charge.
 
 -   La clause WHERE est prise en charge avec les instructions UPDATE et DELETE.  
 
-##  <a name="a-namecofa-control-of-flow-language"></a><a name="cof"></a> Langage de contrôle de flux  
+##  <a name="cof"></a> Langage de contrôle de flux  
  Les constructions de langage de contrôle de flux suivantes sont prises en charge.  
 
 -   [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
@@ -154,12 +158,12 @@ Les instructions DML suivantes sont prises en charge.
 
 -   [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)  
 
--   BEGIN ATOMIC (à l’extérieur de la procédure stockée). Pour plus d’informations, consultez [Atomic Blocks](../../relational-databases/in-memory-oltp/blocs-atomiques-dans-des-procédures-en-mode-natif.md).  
+-   BEGIN ATOMIC (à l’extérieur de la procédure stockée). Pour plus d’informations, consultez [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).  
 
-##  <a name="a-namesoa-supported-operators"></a><a name="so"></a> Opérateurs pris en charge  
+##  <a name="so"></a> Opérateurs pris en charge  
  Les opérateurs suivants sont pris en charge :  
 
--   [Opérateurs de comparaison &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) (par exemple >, \<, >= et <=)  
+-   [Opérateurs de comparaison &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) (par exemple >, \<, >= et <=)  
 
 -   Opérateurs unaires (+, -).  
 
@@ -172,10 +176,10 @@ Les instructions DML suivantes sont prises en charge.
 -   Opérateurs au niveau du bit ~, &, |, et ^  
 
 -   APPLY (opérateur)
-    - **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, l’opérateur APPLY est pris en charge dans les modules compilés en mode natif.
 
-##  <a name="a-namebfncspa-built-in-functions-in-natively-compiled-modules"></a><a name="bfncsp"></a> Fonctions intégrées dans les modules compilés en mode natif  
+##  <a name="bfncsp"></a> Fonctions intégrées dans les modules compilés en mode natif  
  Les fonctions suivantes sont prises en charge dans les contraintes sur les tables optimisées en mémoire et dans les modules T-SQL compilés en mode natif.  
 
 -   Toutes les [Fonctions mathématiques &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
@@ -183,7 +187,7 @@ Les instructions DML suivantes sont prises en charge.
 -   Fonctions de date : CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME et YEAR.  
 
 -   Fonctions de chaîne : LEN, LTRIM, RTRIM et SUBSTRING.  
-    - **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       À compter de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, les fonctions intégrées suivantes sont également prises en charge : TRIM, TRANSLATE et CONCAT_WS.  
 
 -   Fonction d’identité : SCOPE_IDENTITY  
@@ -193,26 +197,26 @@ Les instructions DML suivantes sont prises en charge.
 -   Fonctions Uniqueidentifier : NEWID et NEWSEQUENTIALID  
 
 -   Fonctions JSON  
-    - **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, les fonctions JSON sont prises en charge dans les modules compilés en mode natif.
 
 -   Fonctions d’erreur : ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY et ERROR_STATE  
 
--   Fonctions système : @@rowcount. Les instructions dans les procédures stockées compilées en mode natif mettent à jour @@rowcount et vous pouvez utiliser @@rowcount dans une procédure stockée compilée en mode natif pour déterminer le nombre de lignes affectées par la dernière instruction exécutée dans cette procédure stockée compilée en mode natif. Cependant, @@rowcount est réinitialisé à 0 au début et à la fin de l’exécution d’une procédure stockée compilée en mode natif.  
+-   Fonctions système : @@rowcount. Les instructions dans les procédures stockées compilées en mode natif mettent à jour @@rowcount et vous pouvez utiliser @@rowcount dans une procédure stockée compilée en mode natif pour déterminer le nombre de lignes affectées par la dernière instruction exécutée dans cette procédure stockée compilée en mode natif. Cependant, @@rowcount est réinitialisé à 0 au début et à la fin de l’exécution d’une procédure stockée compilée en mode natif.  
 
 -   Fonctions de sécurité : IS_MEMBER({'group' | 'role'}), IS_ROLEMEMBER ('role' [, 'database_principal’]), IS_SRVROLEMEMBER ('role' [, 'login’]), ORIGINAL_LOGIN(), SESSION_USER, CURRENT_USER, SUSER_ID(['login’]), SUSER_SID(['login’] [, Param2]), SUSER_SNAME([server_user_sid]), SYSTEM_USER, SUSER_NAME, USER, USER_ID(['user']), USER_NAME([id]), CONTEXT_INFO().
 
 -   Les exécutions de modules natifs peuvent être imbriquées.
 
-##  <a name="a-nameauditinga-auditing"></a><a name="auditing"></a> Audit  
+##  <a name="auditing"></a> Audit  
  L'audit au niveau de la procédure est pris en charge dans les procédures stockées compilées en mode natif.  
 
  Pour plus d'informations sur l'audit, consultez [Create a Server Audit and Database Audit Specification](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
 
-##  <a name="a-nametqha-table-and-query-hints"></a><a name="tqh"></a> Indicateurs de requête et de table  
+##  <a name="tqh"></a> Indicateurs de requête et de table  
  Les constructions suivantes sont admises :  
 
--   Indicateurs INDEX, FORCESCAN et FORCESEEK, dans la syntaxe des indicateurs de table ou dans la [Clause OPTION &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md) de la requête. Pour plus d’informations, consultez [Indicateurs de table &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md).  
+-   Indicateurs INDEX, FORCESCAN et FORCESEEK, dans la syntaxe des indicateurs de table ou dans la [Clause OPTION &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md) de la requête. Pour plus d’informations, consultez [Indicateurs de table &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
 
 -   FORCE ORDER  
 
@@ -220,12 +224,12 @@ Les instructions DML suivantes sont prises en charge.
 
 -   OPTIMIZE FOR  
 
- Pour plus d’informations, consultez [Indicateurs de requête &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md).  
+ Pour plus d’informations, consultez [Indicateurs de requête &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
 
-##  <a name="a-namelosa-limitations-on-sorting"></a><a name="los"></a> Limitations sur le tri  
- Vous pouvez trier plus de 8000 lignes dans une requête qui utilise [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) et une [Clause ORDER BY &#40;Transact-SQL&#41;](../Topic/ORDER%20BY%20Clause%20\(Transact-SQL\).md). Toutefois, sans [Clause ORDER BY &#40;Transact-SQL&#41;](../Topic/ORDER%20BY%20Clause%20\(Transact-SQL\).md), [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) peut trier jusqu’à 8000 lignes (moins s’il existe des jointures).  
+##  <a name="los"></a> Limitations sur le tri  
+ Vous pouvez trier plus de 8000 lignes dans une requête qui utilise [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) et une [Clause ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md). Toutefois, sans [Clause ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) peut trier jusqu’à 8000 lignes (moins s’il existe des jointures).  
 
- Si votre requête utilise à la fois l’opérateur [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) et une [Clause ORDER BY&#40;Transact-SQL&#41;](../Topic/ORDER%20BY%20Clause%20\(Transact-SQL\).md), vous pouvez spécifier jusqu’à 8192 lignes pour l’opérateur TOP. Si vous spécifiez plus de 8192 lignes, le message d’erreur suivant est généré : **Message 41398, Niveau 16, État 1, Procédure *<nom_procédure>\>*, Ligne *<numéro_ligne>\>* L’opérateur TOP retourne au plus 8192 lignes ; *\<nombre>* demandé.**  
+ Si votre requête utilise à la fois l’opérateur [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) et une [Clause ORDER BY&#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), vous pouvez spécifier jusqu’à 8192 lignes pour l’opérateur TOP. Si vous spécifiez plus de 8 192 lignes, le message d’erreur suivant s’affiche : **Message 41398, Niveau 16, État 1, Procédure *\<nom_procédure>*, Ligne *\<numéro_ligne>* L’opérateur TOP peut retourner au maximum 8 192 lignes ; *\<nombre* demandé.**  
 
  Si vous n'avez pas de clause TOP, triez les lignes avec ORDER BY.  
 
@@ -284,4 +288,6 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
  [Problèmes de migration pour les procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
+
+
 

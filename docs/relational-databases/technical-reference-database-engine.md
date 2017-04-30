@@ -1,35 +1,39 @@
 ---
-title: "R&#233;f&#233;rences techniques (moteur de base de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Références techniques [moteur de base de données SQL Serve]"
-  - "moteur de base de données [SQL Server], obtention d’aide"
+title: "Informations techniques de référence (moteur de base de données) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- technical reference [SQL Server Database Engine]
+- Database Engine [SQL Server], getting assistance
 ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9149c0ca25b016449a1fb9f6315ae4acda691420
+ms.lasthandoff: 04/11/2017
+
 ---
-# R&#233;f&#233;rences techniques (moteur de base de donn&#233;es)
+# <a name="technical-reference-database-engine"></a>Informations techniques de référence (moteur de base de données)
   Trouvez la documentation de référence de programmation relative aux outils, langages et à l'administration pour le [!INCLUDE[ssDE](../includes/ssde-md.md)] dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
- ![Petite icône de dossier de fichiers](../analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Références relatives aux fonctions**  
+ ![Petite icône de dossier de fichiers](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Informations de référence sur les fonctionnalités**  
  [Serveurs inscrits – Aide (F1)](../tools/sql-server-management-studio/registered-servers-f1-help.md)  
   
- [Aide de SQL Server Management Studio](../ssms/menu-help/sql-server-management-studio-menu-help.md)  
+ [Aide de SQL Server Management Studio](http://msdn.microsoft.com/library/5b8b2e45-bee6-42c8-93d6-31432f4d5699)  
   
- [Aide (F1) de Visual Database Tools](../ssms/visual-db-tools/visual-database-tools-f1-help.md)  
+ [Aide (F1) de Visual Database Tools](http://msdn.microsoft.com/library/79d15b47-6759-4f48-b9ac-2c86a3cd9980)  
   
- ![Petite icône de dossier de fichiers](../analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Référence de service d'invite de commandes**  
+ ![Petite icône de dossier de fichiers](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Informations de référence sur l’utilitaire d’invite de commandes**  
  [Utilitaire bcp](../tools/bcp-utility.md)  
   
  [Utilitaire dta](../tools/dta/dta-utility.md)  
@@ -38,15 +42,15 @@ caps.handback.revision: 32
   
  [Plus…](../tools/command-prompt-utility-reference-database-engine.md)  
   
- ![Petite icône de dossier de fichiers](../analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Applets de commande PowerShell (Moteur de base de données)**  
+ ![Petite icône de dossier de fichiers](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Applets de commande PowerShell du moteur de base de données**  
  [Invoke-PolicyEvaluation (applet de commande)](../powershell/invoke-policyevaluation-cmdlet.md)  
   
  [Invoke-Sqlcmd (applet de commande)](../powershell/invoke-sqlcmd-cmdlet.md)  
   
- ![Petite icône de dossier de fichiers](../analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Guide de référence des erreurs et des événements**  
+ ![Petite icône de dossier de fichiers](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Informations de référence sur les erreurs et événements**  
  [Erreurs et événements du moteur de base de données](../relational-databases/errors-events/database-engine-events-and-errors.md)  
   
- ![Petite icône de dossier de fichiers](../analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Guide de référence des opérateurs Showplan logiques et physiques**  
+ ![Informations de référence sur ](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Informations de référence sur les opérateurs Showplan logiques et physiques**  
  [Guide de référence des opérateurs Showplan logiques et physiques](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
   
   

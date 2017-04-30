@@ -1,25 +1,29 @@
 ---
-title: "Le&#231;on 8. Restaurer une base de donn&#233;es en tant que nouvelle base de donn&#233;es &#224; partir de la sauvegarde de journal | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Leçon 8. Restaurer une base de données sous la forme d’une nouvelle base de données à partir de la sauvegarde de journal | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 281259fb737bbc41885a61e62a4fcc83b3001119
+ms.lasthandoff: 04/11/2017
+
 ---
-# Le&#231;on 8. Restaurer une base de donn&#233;es en tant que nouvelle base de donn&#233;es &#224; partir de la sauvegarde de journal
+# <a name="lesson-8-restore-as-new-database-from-log-backup"></a>Leçon 8. Restaurer une base de données sous la forme d’une nouvelle base de données à partir de la sauvegarde de journal
 Dans cette leçon, vous allez restaurer la base de données AdventureWorks2014 en tant que nouvelle base de données à partir d’une sauvegarde de journal des transactions d’instantanés de fichiers.  
   
 Dans ce scénario, vous effectuez une restauration vers une instance de SQL Server sur une machine virtuelle différente à des fins d’analyse des activités et de création de rapports. La restauration vers une autre instance sur une autre machine virtuelle permet de déplacer la charge de travail vers une machine virtuelle dédiée et dimensionnée à cet effet, et dont les besoins en ressources n’affectent pas le système transactionnel.  
@@ -55,9 +59,10 @@ Pour restaurer une base de données dans une nouvelle base de données à partir
   
 6.  Développez Conteneurs, développez le conteneur que vous avez créé à la leçon 1 (actualisez si nécessaire) et vérifiez que les nouveaux fichiers journaux et de données apparaissent dans le conteneur, ainsi que les objets blob issus des leçons précédentes.  
   
-    ![Azure container showing the data and log files for the new database](../relational-databases/media/e9705083-86bc-4309-a0bf-92c15f174c0a.JPG "Azure container showing the data and log files for the new database")  
+    ![Conteneur Azure affichant les données et les fichiers journaux de la nouvelle base de données](../relational-databases/media/e9705083-86bc-4309-a0bf-92c15f174c0a.JPG "Conteneur Azure affichant les fichiers de données et les fichiers journaux de la nouvelle base de données")  
   
 [Leçon 9 : Gérer des jeux de sauvegarde et des sauvegardes d’instantanés de fichiers](../relational-databases/lesson-9-manage-backup-sets-and-file-snapshot-backups.md)  
   
   
   
+

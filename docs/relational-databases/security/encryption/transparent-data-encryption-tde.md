@@ -1,39 +1,43 @@
 ---
-title: "Chiffrement transparent des donn&#233;es (TDE) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "chiffrement transparent des données"
-  - "clé de chiffrement de base de données, à propos de la"
-  - "Chiffrement transparent des données"
-  - "clé de chiffrement de base de données"
-  - "TDE, à propos de"
-  - "chiffrement transparent des données, à propos du"
-  - "chiffrement [SQL Server], chiffrement transparent des données"
+title: "Chiffrement TDE (Transparent Data Encryption) | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transparent Data Encryption
+- database encryption key, about
+- TDE
+- database encryption key
+- TDE, about
+- Transparent Data Encryption, about
+- encryption [SQL Server], transparent data encryption
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 caps.latest.revision: 75
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 74
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 65839223470c8e73e9dfbf27f3fe62b3d127daf2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Chiffrement transparent des donn&#233;es (TDE)
+# <a name="transparent-data-encryption-tde"></a>Chiffrement TDE (Transparent Data Encryption)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Le *chiffrement transparent des données* (TDE) chiffre les fichiers de données de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] et [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)] (processus appelé chiffrement des données au repos). Vous pouvez prendre plusieurs précautions pour mieux sécuriser la base de données comme par exemple concevoir un système sécurisé, chiffrer les ressources confidentielles et créer un pare-feu autour des serveurs de base de données. Toutefois, dans un scénario où le support physique (tel que des lecteurs ou des bandes de sauvegarde) est dérobé, une personne malveillante peut simplement restaurer ou attacher la base de données et parcourir les données. Une solution consiste à chiffrer les données sensibles dans la base de données et à protéger les clés utilisées pour chiffrer les données avec un certificat. Cela empêche toute personne qui ne dispose pas des clés d'utiliser les données, mais ce type de protection doit être planifié à l'avance.  
+  Le*chiffrement transparent des données* (TDE) chiffre les fichiers de données de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]et [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)] (processus appelé chiffrement des données au repos). Vous pouvez prendre plusieurs précautions pour mieux sécuriser la base de données comme par exemple concevoir un système sécurisé, chiffrer les ressources confidentielles et créer un pare-feu autour des serveurs de base de données. Toutefois, dans un scénario où le support physique (tel que des lecteurs ou des bandes de sauvegarde) est dérobé, une personne malveillante peut simplement restaurer ou attacher la base de données et parcourir les données. Une solution consiste à chiffrer les données sensibles dans la base de données et à protéger les clés utilisées pour chiffrer les données avec un certificat. Cela empêche toute personne qui ne dispose pas des clés d'utiliser les données, mais ce type de protection doit être planifié à l'avance.  
   
  Le chiffrement transparent des données effectue le chiffrement et le déchiffrement d'E/S en temps réel des données et des fichiers journaux. Le chiffrement utilise une clé de chiffrement de base de données (DEK), stockée dans l'enregistrement de démarrage de base de données pour être disponible pendant la récupération. La clé de chiffrement de base de données est une clé symétrique sécurisée à l'aide d'un certificat stocké dans la base de données MASTER du serveur ou une clé asymétrique protégée par un module EKM. Le chiffrement transparent des données protège les données « au repos », autrement dit les fichiers de données et les fichiers journaux. Il permet de se conformer à de nombreuses lois, règles et instructions établies dans différents secteurs professionnels. Cela permet aux développeurs de logiciels de chiffrer des données à l'aide des algorithmes de chiffrement AES et 3DES sans modifier les applications existantes.  
   
 > [!IMPORTANT]  
->  Le chiffrement transparent des données ne permet pas le chiffrement via des canaux de communication. Pour plus d’informations sur le chiffrement des données sur les canaux de communication, consultez [Activer les connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable encrypted connections to the database engine.md).  
+>  Le chiffrement transparent des données ne permet pas le chiffrement via des canaux de communication. Pour plus d’informations sur le chiffrement des données sur les canaux de communication, consultez [Activer les connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
 >   
 >  **Rubriques connexes :**  
 >   
@@ -50,7 +54,7 @@ caps.handback.revision: 74
   
  **Informations applicables à [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**  
   
- Quand vous utilisez le chiffrement transparent des données avec [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12, le certificat de niveau serveur stocké dans la base de données master est automatiquement créé par [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Pour déplacer une base de données avec chiffrement transparent des données sur [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], vous devez déchiffrer la base de données, la déplacer, puis réactiver le chiffrement transparent des données sur la [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] de destination. Pour obtenir des instructions pas à pas pour le chiffrement transparent des données sur [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], consultez [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md).  
+ Quand vous utilisez le chiffrement transparent des données avec [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12, le certificat de niveau serveur stocké dans la base de données master est automatiquement créé par [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Pour déplacer une base de données avec chiffrement transparent des données sur [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] , vous devez déchiffrer la base de données, la déplacer, puis réactiver le chiffrement transparent des données sur la [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]de destination. Pour obtenir des instructions pas à pas pour le chiffrement transparent des données sur [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], consultez [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md).  
   
  **Informations applicables à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 74
   
  L'illustration ci-dessous montre l'architecture du chiffrement TDE. Seuls les éléments de niveau base de données (la clé de chiffrement de base de données et les parties ALTER DATABASE) sont configurables par l'utilisateur lors de l'utilisation du chiffrement transparent des données sur la [!INCLUDE[ssSDS](../../../includes/sssds-md.md)].  
   
- ![Affiche la hiérarchie décrite dans cette rubrique.](../../../relational-databases/security/encryption/media/tde-architecture.gif "Affiche la hiérarchie décrite dans cette rubrique.")  
+ ![Affiche la hiérarchie décrite dans cette rubrique.] (../../../relational-databases/security/encryption/media/tde-architecture.gif "Affiche la hiérarchie décrite dans cette rubrique.")  
   
 ## <a name="using-transparent-data-encryption"></a>Utilisation du chiffrement transparent des données  
  Pour utiliser le chiffrement transparent des données, procédez comme suit :  
@@ -117,7 +121,7 @@ GO
 |[CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-database-encryption-key-transact-sql.md)|Crée une clé permettant de chiffrer une base de données.|  
 |[ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Modifie la clé qui permet de chiffrer une base de données.|  
 |[DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Supprime la clé qui était utilisée pour chiffrer une base de données.|  
-|[ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)|Présente l'option **ALTER DATABASE** qui est utilisée pour activer le chiffrement transparent des données.|  
+|[ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql-set-options.md)|Présente l'option **ALTER DATABASE** qui est utilisée pour activer le chiffrement transparent des données.|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>Affichages catalogue et vues de gestion dynamique  
  Le tableau suivant indique les affichages catalogue et les vues de gestion dynamique du chiffrement transparent des données.  
@@ -144,7 +148,9 @@ GO
   
 > [!IMPORTANT]  
 >  Les index de recherche en texte intégral sont chiffrés dès lors qu’une base de données est définie pour le chiffrement. Les index de recherche en texte intégral créés avant SQL Server 2008 sont importés dans la base de données durant la mise à niveau vers SQL Server 2008 ou version supérieure pour ensuite être chiffrés par le chiffrement transparent des données.  
-  
+
+> [!TIP]  
+>  Pour surveiller les changements de l’état de TDE d’une base de données, utilisez SQL Server Audit ou l’audit SQL Database. Pour SQL Server, le chiffrement TDE est suivi sous le groupe d’actions d’audit DATABASE_CHANGE_GROUP qui se trouve dans [Actions et groupes d’actions SQL Server Audit ](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).
   
 ### <a name="restrictions"></a>Restrictions  
  Les opérations suivantes ne sont pas autorisées au cours du chiffrement initial de la base de données, de la modification d'une clé ou du déchiffrement de la base de données :  
@@ -221,7 +227,7 @@ GO
  La base de données système tempdb est chiffrée si toute autre base de données sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est chiffrée à l'aide du chiffrement transparent des données. Cela peut avoir un impact sur les performances des bases de données non chiffrées situées sur la même instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la base de données système tempdb, consultez [Base de données tempdb](../../../relational-databases/databases/tempdb-database.md).  
   
 ### <a name="transparent-data-encryption-and-replication"></a>Chiffrement transparent des données et réplication  
- La réplication ne réplique pas automatiquement sous forme chiffrée les données d'une base sur laquelle le chiffrement transparent des données est activé. Vous devez activer séparément le chiffrement transparent des données si vous souhaitez protéger les bases de données de distribution et d'abonné. La réplication d'instantané, ainsi que la distribution initiale de données pour la réplication transactionnelle et la réplication de fusion, peut stocker des données dans des fichiers intermédiaires non chiffrés, par exemple, des fichiers bcp.  Au cours de la réplication transactionnelle ou de la réplication de fusion, le chiffrement peut être activé pour protéger le canal de communication. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable encrypted connections to the database engine.md).  
+ La réplication ne réplique pas automatiquement sous forme chiffrée les données d'une base sur laquelle le chiffrement transparent des données est activé. Vous devez activer séparément le chiffrement transparent des données si vous souhaitez protéger les bases de données de distribution et d'abonné. La réplication d'instantané, ainsi que la distribution initiale de données pour la réplication transactionnelle et la réplication de fusion, peut stocker des données dans des fichiers intermédiaires non chiffrés, par exemple, des fichiers bcp.  Au cours de la réplication transactionnelle ou de la réplication de fusion, le chiffrement peut être activé pour protéger le canal de communication. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ### <a name="transparent-data-encryption-and-filestream-data"></a>Chiffrement transparent des données et données FILESTREAM  
  Les données FILESTREAM ne sont pas chiffrées même si le chiffrement transparent des données est activé.  
@@ -230,7 +236,7 @@ GO
  Les fichiers associés à l'extension du pool de mémoires tampons ne sont pas chiffrés lorsque la base de données est chiffrée à l'aide du chiffrement transparent des données. Vous devez utiliser les outils de chiffrement au niveau du système de fichiers tels que Bitlocker ou EFS pour les fichiers associés à l'extension du pool de mémoires tampons.  
   
 ## <a name="transparent-data-encryption-and-in-memory-oltp"></a>Chiffrement transparent des données et OLTP en mémoire  
- Le chiffrement transparent des données (TDE) peut être activé sur une base de données contenant des objets de l'OLTP en mémoire. Dans [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] et [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], les enregistrements de journal et les données de l’OLTP en mémoire sont chiffrés si le chiffrement transparent des données (TDE) est activé. Dans [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], les enregistrements de journal de l’OLTP en mémoire sont chiffrés si le chiffrement transparent des données (TDE) est activé, mais les fichiers dans le groupe de fichiers MEMORY_OPTIMIZED_DATA ne sont pas chiffrés.  
+ Le chiffrement transparent des données (TDE) peut être activé sur une base de données contenant des objets de l'OLTP en mémoire. Dans [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] et [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] , les enregistrements de journal et les données de l’OLTP en mémoire sont chiffrés si le chiffrement transparent des données (TDE) est activé. Dans [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] , les enregistrements de journal de l’OLTP en mémoire sont chiffrés si le chiffrement transparent des données (TDE) est activé, mais les fichiers dans le groupe de fichiers MEMORY_OPTIMIZED_DATA ne sont pas chiffrés.  
   
 ## <a name="related-tasks"></a>Tâches associées  
  [Déplacer une base de données protégée par le chiffrement transparent des données vers un autre serveur SQL Server](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)  
@@ -244,7 +250,8 @@ GO
  [SQL Server et clés de chiffrement de base de données &#40;moteur de base de données&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
    
 ## <a name="see-also"></a>Voir aussi  
- [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
+ [Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md)  
   
   
+

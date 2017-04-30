@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG014010 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSSQL_ENG014010 (erreur)"
+title: MSSQL_ENG014010 | Microsoft Docs
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG014010 error
 ms.assetid: 6ea84f2f-e7a2-4028-9ea9-af0d2eba660e
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 82df494fef69095800b93252dd6f474be0566c95
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG014010
+# <a name="mssqleng014010"></a>MSSQL_ENG014010
     
-## Détails du message  
+## <a name="message-details"></a>Détails du message  
   
 |||  
 |-|-|  
@@ -31,13 +35,13 @@ caps.handback.revision: 18
 |Nom symbolique||  
 |Texte du message|Le serveur '%s' n'est pas défini comme serveur d'abonnements.|  
   
-## Explication  
- La réplication exige que tous les serveurs d’une topologie soient enregistrés avec le nom d’ordinateur et un nom d’instance facultatif (dans le cas d’une instance cluster, le nom du serveur virtuel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le nom d’instance facultatif). Pour que la réplication fonctionne correctement, la valeur renvoyée par `SELECT @@SERVERNAME` pour chaque serveur de la topologie doit correspondre au nom d'ordinateur ou au nom de serveur virtuel avec le nom d'instance facultatif.  
+## <a name="explanation"></a>Explication  
+ La réplication requiert que tous les serveurs d'une topologie soient enregistrés avec le nom d'ordinateur et un nom d'instance facultatif (dans le cas d'une instance cluster, le nom du serveur virtuel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le nom d'instance facultatif). Pour que la réplication fonctionne correctement, la valeur renvoyée par `SELECT @@SERVERNAME` pour chaque serveur de la topologie doit correspondre au nom d'ordinateur ou au nom de serveur virtuel avec le nom d'instance facultatif.  
   
  La réplication n'est pas prise en charge si vous avez inscrit une des instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par adresse IP ou par nom de domaine pleinement qualifié (FQDN). Cette erreur peut se produire si vous avez une des instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inscrite par adresse IP ou par nom complet de domaine (FQDN) dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] lorsque vous avez configuré la réplication.  
   
-## Action de l'utilisateur  
- Vérifiez que toutes les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la topologie sont inscrites correctement. Si le nom réseau de l'ordinateur et le nom de l'instance SQL Server diffèrent, effectuez une des actions suivantes :  
+## <a name="user-action"></a>Action de l'utilisateur  
+ Vérifiez que toutes les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la topologie sont inscrites correctement. Si le nom réseau de l'ordinateur et le nom de l'instance SQL Server diffèrent, effectuez une des actions suivantes :  
   
 -   Ajoutez le nom de l'instance SQL Server comme nom réseau valide. Pour définir un autre nom réseau, une méthode possible consiste à l'ajouter au fichier hosts local. Le fichier hosts local est installé par défaut dans le répertoire WINDOWS\system32\drivers\etc ou WINNT\system32\drivers\etc. Pour plus d'informations, consultez la documentation Windows.  
   
@@ -45,7 +49,7 @@ caps.handback.revision: 18
   
      10.193.17.129 inst1  
   
--   Supprimez la réplication, inscrivez chaque instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puis rétablissez la réplication. Si la valeur de @@SERVERNAME n'est pas correcte pour une instance non cluster, suivez ces étapes :  
+-   Supprimez la réplication, inscrivez chaque instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puis rétablissez la réplication. Si la valeur de @@SERVERNAME n’est pas correcte pour une instance non cluster, procédez comme suit :  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  
@@ -56,10 +60,11 @@ caps.handback.revision: 18
   
      Après avoir exécuté la procédure stockée [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md), vous devez redémarrer le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour que la modification apportée à @@SERVERNAME soit prise en compte.  
   
-     Si la valeur de @@SERVERNAME n'est pas correcte pour une instance cluster, vous devez modifier le nom à l'aide de l'administrateur de cluster. Pour plus d'informations, consultez [Instances de cluster de basculement Always On &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+     Si la valeur de @@SERVERNAME n’est pas correcte pour une instance cluster, vous devez changer le nom à l’aide de l’administrateur de cluster. Pour plus d’informations, consultez [Instances de cluster de basculement Always On &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [@@SERVERNAME &#40;Transact-SQL&#41;](../../t-sql/functions/servername-transact-sql.md)   
  [Guide de référence des erreurs et des événements &#40;réplication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   
+

@@ -1,22 +1,26 @@
 ---
-title: "Affichage avanc&#233; des donn&#233;es cibles d’&#233;v&#233;nements &#233;tendus dans SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/04/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Affichage avancé des données cibles d’événements étendus dans SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 10/04/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 caps.latest.revision: 4
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 4
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9d7fcf086b0eb18db72c2d710c061ccee9c01aaf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Affichage avanc&#233; des donn&#233;es cibles d’&#233;v&#233;nements &#233;tendus dans SQL Server
+# <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Affichage avancé des données cibles d’événements étendus dans SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -29,7 +33,7 @@ Cet article explique comment vous pouvez utiliser les fonctionnalités avancées
 
 
 
-### Conditions préalables
+### <a name="prerequisites"></a>Conditions préalables
 
 Cet article considère que vous savez déjà créer et démarrer une session d’événements. Des instructions sur la façon de créer une session d’événements sont fournies au début de l’article suivant :
 
@@ -42,44 +46,44 @@ Cet article considère aussi que vous avez installé une version mensuelle très
 
 
 
-### Différences par rapport à la Base de données SQL Azure
+### <a name="differences-with-azure-sql-database"></a>Différences par rapport à Azure SQL Database
 
 
-Il existe un fort degré de similitude dans l’implémentation et les fonctionnalités des événements étendus dans les deux produits Microsoft SQL Server et Base de données SQL Azure. Mais il existe aussi quelques différences qui affectent l’interface utilisateur de SSMS.
+Il existe un fort degré de similitude dans l’implémentation et les fonctionnalités des événements étendus dans les deux produits Microsoft SQL Server et Azure SQL Database. Mais il existe aussi quelques différences qui affectent l’interface utilisateur de SSMS.
 
 
-- Pour la Base de données SQL, la cible package0.event_file ne peut pas être un fichier du disque dur local. Au lieu de cela, vous devez utiliser un conteneur de stockage Azure. Par conséquent, quand vous êtes connecté à la Base de données SQL, l’interface utilisateur de SSMS réclame un conteneur de stockage, et non un chemin et un nom de fichier locaux.
+- Pour SQL Database, la cible package0.event_file ne peut pas être un fichier du disque dur local. Au lieu de cela, vous devez utiliser un conteneur de stockage Azure. Par conséquent, quand vous êtes connecté à SQL Database, l’interface utilisateur de SSMS réclame un conteneur de stockage, et non un chemin et un nom de fichier locaux.
 
 
 - Si dans l’interface utilisateur de SSMS, vous constatez que la case à cocher **Observer les données actives** est grisée et désactivée, c’est que cette fonctionnalité n’est pas disponible pour la Base de données SQL.
 
 
-- Quelques événements étendus sont installés avec SQL Server. Sous le nœud **Sessions** figure l’événement **AlwaysOn_health** plus quelques autres. Ceux-ci ne sont pas visibles quand vous êtes connecté à la Base de données SQL, car ils n’existent pas pour ce produit.
+- Quelques événements étendus sont installés avec SQL Server. Sous le nœud **Sessions** figure l’événement **AlwaysOn_health** plus quelques autres. Ceux-ci ne sont pas visibles quand vous êtes connecté à SQL Database, car ils n’existent pas pour ce produit.
 
 
 Cet article a été rédigé du point de vue de SQL Server. Il utilise la cible event_file, qui constitue l’une des différences. Par la suite, seules les différences importantes ou non évidentes sont mentionnées.
 
 
-Pour plus d’informations sur les événements étendus propres à la Base de données SQL Azure, consultez :
+Pour plus d’informations sur les événements étendus propres à Azure SQL Database, consultez :
 
-- [Événements étendus dans la Base de données SQL Azure](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)
+- [Événements étendus dans Azure SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)
 
 
 
-## A. Options générales
+## <a name="a-general-options"></a>A. Options générales
 
 
 En général, les différents modes d’accès aux options avancées sont les suivants :
 
 
 - Menu standard **Fichier** > **Ouvrir** > **Fichier**.
-- Clics droits dans l’**Explorateur d’objets** sous **Gestion** > **Événements étendus**.
-- Menu spécial **Événements étendus** et barre d’outils spéciale pour les événements étendus.
+- Clics droits dans l’ **Explorateur d’objets** sous **Gestion** > **Événements étendus**.
+- Menu spécial **Événements étendus**et barre d’outils spéciale pour les événements étendus.
 - Clics droits dans le volet à onglets qui présente les données cibles.
 
 
 
-## B. Importer les données cibles dans SSMS pour consultation
+## <a name="b-bring-target-data-into-ssms-for-display"></a>B. Importer les données cibles dans SSMS pour consultation
 
 
 Il existe différentes façons d’importer des données cibles event_file dans l’interface utilisateur de SSMS. Quand vous spécifiez une cible event_file, vous définissez son chemin et nom de fichier :
@@ -112,7 +116,7 @@ SSMS peut afficher les données de n’importe quelle cible. Cependant, leur aff
 
 
 
-### B.1 Ouvrir un fichier .XEL via le menu Fichier > Ouvrir > Fichier
+### <a name="b1-open-xel-with-menu-file--open--file"></a>B.1 Ouvrir un fichier .XEL via le menu Fichier > Ouvrir > Fichier
 
 
 Vous pouvez ouvrir un fichier .XEL via le menu standard **Fichier** > **Ouvrir** > **Fichier**.
@@ -121,13 +125,13 @@ Vous pouvez aussi glisser-déplacer un fichier .XEL dans la barre d’onglets de
 
 
 
-### B.2 Afficher des données cibles
+### <a name="b2-view-target-data"></a>B.2 Afficher des données cibles
 
 
 L’option **Afficher les données cibles** affiche les données qui ont été capturées jusque-là.
 
 
-Dans le volet **Explorateur d’objets**, vous pouvez développer les nœuds et cliquer ensuite avec le bouton droit sur :
+Dans le volet **Explorateur d’objets** , vous pouvez développer les nœuds et cliquer ensuite avec le bouton droit sur :
 
 - **Gestion** > **Événements étendus** > **Sessions** > *[votre-session]* > *[votre-nœud-cible]* > **Afficher les données cibles**.
 
@@ -138,11 +142,12 @@ Les données cibles s’affichent dans un volet à onglets dans SSMS. Ceci est i
 ![votre cible > Afficher les données cibles](../../relational-databases/extended-events/media/xevents-ssms-ui20-viewtargetdata.png)
 
 
-> [AZURE.NOTE] **Afficher les données cibles** affiche les *données cumulées de plusieurs fichiers .XEL* d’une session d’événements donnée. Chaque cycle de **démarrage**-**arrêt** donne lieu à la création d’un fichier dont le nom incorpore un entier dérivé d’une heure ultérieure, mais chaque fichier partage le même nom racine.
+> [!NOTE] 
+> **Afficher les données cibles** affiche les *données cumulées de plusieurs fichiers .XEL* d’une session d’événements donnée. Chaque cycle de **démarrage**-**arrêt** donne lieu à la création d’un fichier dont le nom incorpore un entier dérivé d’une heure ultérieure, mais chaque fichier partage le même nom racine.
 
 
 
-#### B.3 Surveiller les données actives
+#### <a name="b3-watch-live-data"></a>B.3 Surveiller les données actives
 
 
 Quand votre session d’événements est active, vous pouvez souhaiter surveiller les données d’événements en temps réel, à mesure que la cible les reçoit.
@@ -160,7 +165,7 @@ L’affichage des données est mis à jour à intervalles réguliers que vous po
 
 
 
-### B.4 Affichage d’un fichier .XEL à l’aide de la fonction sys.fn_xe_file_target_read_file
+### <a name="b4-view-xel-with-sysfnxefiletargetreadfile-function"></a>B.4 Affichage d’un fichier .XEL à l’aide de la fonction sys.fn_xe_file_target_read_file
 
 
 Pour un traitement par lots, la fonction système suivante permet de générer du code XML pour les enregistrements contenus dans un fichier XEL :
@@ -169,7 +174,7 @@ Pour un traitement par lots, la fonction système suivante permet de générer d
 
 
 
-## C. Exporter les données cibles
+## <a name="c-export-the-target-data"></a>C. Exporter les données cibles
 
 
 Une fois les données cibles dans SSMS, vous pouvez exporter les données dans différents formats en procédant comme suit :
@@ -185,21 +190,21 @@ Une fois les données cibles dans SSMS, vous pouvez exporter les données dans d
 
 
 
-## D. Manipuler les données dans l’affichage
+## <a name="d-manipulate-data-in-the-display"></a>D. Manipuler les données dans l’affichage
 
 
 Au-delà de la simple consultation des données telles quelles, l’interface utilisateur de SSMS vous permet de manipuler les données de différentes manières.
 
 
 
-### D.1 Menus contextuels dans l’affichage de données
+### <a name="d1-context-menus-in-the-data-display"></a>D.1 Menus contextuels dans l’affichage de données
 
 
 Les menus contextuels proposés dans l’affichage de données varient en fonction de l’endroit où vous cliquez avec le bouton droit.
 
 
 
-#### D.1.1 Clic droit dans une cellule de données
+#### <a name="d11-right-click-a-data-cell"></a>D.1.1 Clic droit dans une cellule de données
 
 
 La capture d’écran suivante montre le menu de contenu que vous obtenez quand vous cliquez avec le bouton droit dans une cellule de l’affichage de données. La capture d’écran montre également le menu **Copier** développé.
@@ -209,10 +214,10 @@ La capture d’écran suivante montre le menu de contenu que vous obtenez quand 
 
 
 
-#### D.1.2 Clic droit dans un en-tête de colonne
+#### <a name="d12-right-click-a-column-header"></a>D.1.2 Clic droit dans un en-tête de colonne
 
 
-La capture d’écran suivante montre le menu contextuel qui s’affiche après un clic droit dans l’en-tête **timestamp**.
+La capture d’écran suivante montre le menu contextuel qui s’affiche après un clic droit dans l’en-tête **timestamp** .
 
 
 ![Clic droit dans une cellule, dans l’affichage de données avec la grille de détails.](../../relational-databases/extended-events/media/xevents-ssms-ui40-toolbar.png)
@@ -222,7 +227,7 @@ La capture d’écran précédente montre aussi la barre d’outils spéciale po
 
 
 
-### D.2 Choisir les colonnes, Fusionner les colonnes
+### <a name="d2-choose-columns-merge-columns"></a>D.2 Choisir les colonnes, Fusionner les colonnes
 
 
 L’option **Choisir les colonnes** vous permet de contrôler l’affichage des colonnes de données. Vous pouvez trouver l’élément de menu **Choisir les colonnes** à plusieurs endroits :
@@ -239,7 +244,7 @@ Quand vous cliquez sur **Choisir les colonnes**, la boîte de dialogue du même 
 
 
 
-#### D.2.1 Fusionner les colonnes
+#### <a name="d21-merge-columns"></a>D.2.1 Fusionner les colonnes
 
 
 La boîte de dialogue **Choisir les colonnes** comporte une section consacrée à la fusion de plusieurs colonnes en une seule, et ce aux fins suivantes :
@@ -249,7 +254,7 @@ La boîte de dialogue **Choisir les colonnes** comporte une section consacrée �
 
 
 
-### D.3 Filtres
+### <a name="d3-filters"></a>D.3 Filtres
 
 
 Dans le domaine des événements étendus, vous pouvez spécifier deux types de filtres principaux :
@@ -261,25 +266,25 @@ Dans le domaine des événements étendus, vous pouvez spécifier deux types de 
 
 Les filtres de l’affichage SSMS sont les suivants :
 
-- un filtre d’*intervalle de temps*, qui examine la colonne **timestamp** ;
-- un filtre de *valeurs de colonne*.
+- un filtre d’ *intervalle de temps* , qui examine la colonne **timestamp** ;
+- un filtre de *valeurs de colonne* .
 
 
-La relation entre les filtres de temps et de colonne est une valeur booléenne « *AND* ».
+La relation entre les filtres de temps et de colonne est une valeur booléenne «*AND*».
 
 
 ![Filtres d’intervalle de temps et de colonne, dans la boîte de dialogue Filtres](../../relational-databases/extended-events/media/xevents-ssms-ui45-filters.png)
 
 
 
-### D.4 Regroupement et agrégation
+### <a name="d4-grouping-and-aggregation"></a>D.4 Regroupement et agrégation
 
 
 Regrouper des lignes par la mise en correspondance des valeurs d’une colonne donnée est la première étape de l’agrégation synthétique de données.
 
 
 
-#### D.4.1 Regroupement
+#### <a name="d41-grouping"></a>D.4.1 Regroupement
 
 
 Dans la barre d’outils des événements étendus, le bouton **Regroupement** donne accès à une boîte de dialogue dans laquelle vous pouvez regrouper les données affichées par une colonne donnée. La capture d’écran suivante montre une boîte de dialogue qui permet d’effectuer un regroupement en fonction de la colonne *nom*.
@@ -292,7 +297,7 @@ Dans la barre d’outils des événements étendus, le bouton **Regroupement** d
 
 
 
-#### D.4.2 Agrégation
+#### <a name="d42-aggregation"></a>D.4.2 Agrégation
 
 
 Une fois que les données affichées ont été regroupées, vous pouvez poursuivre en agrégeant les données dans d’autres colonnes.  La capture d’écran suivante illustre l’agrégation des données regroupées par nombre (*count*).
@@ -305,11 +310,13 @@ Une fois que les données affichées ont été regroupées, vous pouvez poursuiv
 
 
 
-### D.5 Afficher le plan de requête au moment de l’exécution
+### <a name="d5-view-run-time-query-plan"></a>D.5 Afficher le plan de requête au moment de l’exécution
 
 
-L’événement **query_post_execution_showplan** vous permet d’afficher le plan de requête réel dans l’interface utilisateur de SSMS. Quand le volet **Détails** est visible, vous pouvez voir un graphique du plan de requête sous l’onglet **Plan de requête**. En plaçant le curseur sur un nœud du plan de requête, vous pouvez voir la liste des noms et des valeurs des propriétés du nœud.
+L’événement **query_post_execution_showplan** vous permet d’afficher le plan de requête réel dans l’interface utilisateur de SSMS. Quand le volet **Détails** est visible, vous pouvez voir un graphique du plan de requête sous l’onglet **Plan de requête** . En plaçant le curseur sur un nœud du plan de requête, vous pouvez voir la liste des noms et des valeurs des propriétés du nœud.
 
 
 ![Plan de requête, avec la liste des propriétés d’un nœud](../../relational-databases/extended-events/media/xevents-ssms-ui60-showplangraph.png)
+
+
 

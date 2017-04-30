@@ -1,49 +1,53 @@
 ---
-title: "S&#233;curit&#233; de l&#39;Agent de distribution | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.security.DA.f1"
-helpviewer_keywords: 
-  - "boîte de dialogue Sécurité de l'Agent de distribution"
+title: "Sécurité de l’Agent de distribution | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.security.DA.f1
+helpviewer_keywords:
+- Distribution Agent Security dialog box
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 44bbfd608ad2511c95a872f07eac657ae7616e6d
+ms.lasthandoff: 04/11/2017
+
 ---
-# S&#233;curit&#233; de l&#39;Agent de distribution
+# <a name="distribution-agent-security"></a>Sécurité de l'Agent de distribution
   La boîte de dialogue **Sécurité de l'Agent de distribution** permet de spécifier le compte Windows sous lequel s'exécute l'Agent de distribution. Cet agent s'exécute généralement sur le serveur de distribution pour les abonnements par envoi de données et sur l'Abonné pour les abonnements par extraction. Le compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows est également baptisé *compte de processus*du fait que le processus agent s'exécute sous ce compte. La boîte de dialogue propose des options supplémentaires en fonction de la façon d'y accéder :  
   
 -   Si vous accédez à la boîte de dialogue à partir de l'Assistant Nouvel abonnement, elle permet de spécifier le contexte dans lequel l'Agent de distribution établit les connexions avec l'Abonné (pour les abonnements par envoi de données) ou avec le serveur de distribution (pour les abonnements par extraction). La connexion peut avoir lieu en empruntant l'identité du compte Windows ou dans le contexte d'un compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous spécifiez.  
   
--   Si la boîte de dialogue est accessible à partir du **Propriétés d’un abonnement** boîte de dialogue, spécifiez le contexte dans lequel l’Agent de Distribution établit les connexions en cliquant sur le bouton des propriétés (**...**) dans le **connexion de l’abonné** ou **connexion du serveur de distribution** ligne de cette boîte de dialogue. Pour plus d’informations sur l’accès à la **Propriétés d’un abonnement** boîte de dialogue, consultez [Afficher et modifier les propriétés d’abonnement Push](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) et comment : [Afficher et modifier les propriétés d’abonnement extrait](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+-   Si vous accédez à la boîte de dialogue à partir de la boîte de dialogue **Propriétés de l'abonnement** , spécifiez le contexte dans lequel l'Agent de distribution établit les connexions en cliquant sur le bouton des propriétés (**...**) dans **Connexion de l'Abonné** ou sur la ligne **Connexion du serveur de distribution** de cette boîte de dialogue. Pour plus d’informations sur l’accès à la boîte de dialogue **Propriétés de l’abonnement**, consultez [Afficher et modifier les propriétés d’un abonnement par émission de données](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) et la procédure indiquant comment [Afficher et modifier les propriétés d’un abonnement par extraction](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
  Tous les comptes doivent être valides, le mot de passe correct étant spécifié pour chaque compte. Les comptes et les mots de passe ne sont pas validés tant qu'un agent ne s'exécute pas.  
   
-## Options  
- **Compte de processus**  
- Entrez un compte Windows sous lequel l'Agent de distribution s'exécute :  
+## <a name="options"></a>Options  
+ **Process Account**  
+ Entrez un compte Windows sous lequel l'Agent de distribution s'exécute :  
   
 -   Pour les abonnements par envoi de données, le compte doit :  
   
-    -   Au moins être membre du **db_owner** rôle fixe de base de données dans la base de données de distribution.  
+    -   être au moins un membre du rôle de base de données fixe **db_owner** dans la base de données de distribution ;  
   
-    -   être membre de la liste d'accès à la publication (PAL) ;  
+    -   être membre de la liste d'accès à la publication (PAL) ;  
   
     -   avoir les autorisations de lecture sur le partage des fichiers d'instantanés.  
   
-    -   avoir les autorisations de lecture dans le répertoire d'installation du fournisseur OLE DB de l'Abonné si l'abonnement concerne un Abonné non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    -   avoir les autorisations de lecture dans le répertoire d'installation du fournisseur OLE DB de l'Abonné si l'abonnement concerne un Abonné non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Pour les abonnements extraits, le compte doit au minimum être membre de la **db_owner** rôle fixe de base de données dans la base de données d’abonnement.  
+-   Pour les abonnements par extraction, le compte doit être au moins un membre du rôle de base de données fixe **db_owner** dans la base de données d'abonnement.  
   
  Des autorisations supplémentaires sont indispensables si l'identité du compte de processus est empruntée lorsque les connexions sont établies. Voir les paragraphes **Se connecter au serveur de distribution** et **Connexion à l'Abonné** ci-dessous.  
   
@@ -53,12 +57,12 @@ caps.handback.revision: 25
  Entrez le mot de passe du compte Windows.  
   
  **Se connecter au serveur de distribution**  
- Pour les abonnements envoyés, les connexions au serveur de distribution sont toujours établies en imitant le compte spécifié dans le **compte de processus** zone de texte.  
+ Pour les abonnements par envoi de données, les connexions au serveur de distribution ont toujours lieu en empruntant l'identité du compte spécifié dans la zone de texte **Compte de processus** .  
   
  Pour les abonnements par extraction, choisissez si l'Agent de distribution doit établir les connexions avec le serveur de distribution en empruntant l'identité du compte spécifié dans la zone de texte **Compte de processus** ou en utilisant un compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous choisissez d'utiliser un compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , entrez un nom de connexion et un mot de passe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  Il est recommandé de choisir d'emprunter l'identité du compte Windows plutôt que d'utiliser un compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Il est recommandé de choisir d'emprunter l'identité du compte Windows plutôt que d'utiliser un compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Le compte Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisé pour la connexion doit :  
   
@@ -67,21 +71,21 @@ caps.handback.revision: 25
 -   avoir les autorisations de lecture sur le partage des fichiers d'instantanés.  
   
  **Connexion à l'Abonné**  
- Pour les abonnements par extraction de données, les connexions à l’abonné sont toujours établies en imitant le compte spécifié dans le **compte de processus** zone de texte.  
+ Pour les abonnements par extraction, les connexions à l'Abonné ont toujours lieu en empruntant l'identité du compte spécifié dans la zone de texte **Compte de processus** .  
   
- Pour les abonnements par envoi de données, les options sont différentes pour les Abonnés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
+ Pour les abonnements par envoi de données, les options sont différentes pour les Abonnés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   Pour les Abonnés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : choisissez si l'Agent de distribution doit établir les connexions avec l'Abonné en empruntant l'identité du compte spécifié dans la zone de texte **Compte de processus** ou en utilisant un compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous choisissez d'utiliser un compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , entrez un nom de connexion et un mot de passe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
     > [!NOTE]  
-    >  Il est recommandé de choisir d'emprunter l'identité du compte Windows plutôt que d'utiliser un compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    >  Il est recommandé de choisir d'emprunter l'identité du compte Windows plutôt que d'utiliser un compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     Le compte Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte utilisé pour la connexion à l’abonné doit au minimum être membre de la **db_owner** rôle fixe de base de données dans la base de données d’abonnement.  
+     Le compte Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisé pour la connexion avec l'abonné doit être au moins un membre du rôle de base de données fixe **db_owner** dans la base de données d'abonnement.  
   
--   Pour les Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], spécifiez la connexion avec la base de données qui doit être utilisée lorsque l'Agent de distribution se connecte à l'Abonné. La connexion doit avoir les autorisations suffisantes pour créer des objets dans la base de données d'abonnement. Pour plus d’informations sur la configuration non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés, consultez [créer un abonnement pour un abonné Non SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+-   Pour les Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , spécifiez la connexion avec la base de données qui doit être utilisée lorsque l'Agent de distribution se connecte à l'Abonné. La connexion doit avoir les autorisations suffisantes pour créer des objets dans la base de données d'abonnement. Pour plus d’informations sur la configuration d’abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Créer un abonnement pour un abonné non-SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
  **Options de connexion supplémentaires**  
- Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uniquement. Spécifiez les options de connexion de l'Abonné sous forme d'une chaîne de connexion (Oracle n'exige pas d'option supplémentaire). Chaque option doit être délimitée par un point-virgule. Trouvez ci-dessous un exemple d'une chaîne de connexion IBM DB2 (les sauts de lignes facilitent la lecture) :  
+ Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uniquement. Spécifiez les options de connexion de l'Abonné sous forme d'une chaîne de connexion (Oracle n'exige pas d'option supplémentaire). Chaque option doit être délimitée par un point-virgule. Trouvez ci-dessous un exemple d'une chaîne de connexion IBM DB2 (les sauts de lignes facilitent la lecture) :  
   
 ```  
 Provider=DB2OLEDB;Initial Catalog=MY_SUBSCRIBER_DB;Network Transport Library=TCP;Host CCSID=1252;  
@@ -90,13 +94,13 @@ Default Schema=MY_SCHEMA;Process Binary as Character=False;Units of Work=RUW;DBM
 Persist Security Info=False;Connection Pooling=True;  
 ```  
   
- La plupart des options de cette chaîne sont spécifiques du serveur DB2 que vous configurez, mais vous devez attribuer à l'option **Traiter les données binaires comme des caractères** la valeur **False**. Une valeur est exigée de façon que l'option **Catalogue initial** identifie la base de données d'abonnement. Pour plus d'informations, consultez [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
+ La plupart des options de cette chaîne sont spécifiques du serveur DB2 que vous configurez, mais vous devez attribuer à l'option **Traiter les données binaires comme des caractères** la valeur **False**. Une valeur est exigée de façon que l'option **Catalogue initial** identifie la base de données d'abonnement. Pour plus d’informations, voir [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gérer les connexions et les mots de passe dans la réplication](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
- [Modèle de sécurité de l'Agent de réplication](../../relational-databases/replication/security/replication-agent-security-model.md)   
- [Présentation des Agents de réplication](../../relational-databases/replication/agents/replication-agents-overview.md)   
- [Méthodes préconisées en matière de sécurité de réplication](../../relational-databases/replication/security/replication-security-best-practices.md)   
- [S'abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md)  
+ [Modèle de sécurité de l’Agent de réplication](../../relational-databases/replication/security/replication-agent-security-model.md)   
+ [Vue d’ensemble des agents de réplication](../../relational-databases/replication/agents/replication-agents-overview.md)   
+ [Bonnes pratiques en matière de sécurité de la réplication](../../relational-databases/replication/security/replication-security-best-practices.md)   
+ [S’abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

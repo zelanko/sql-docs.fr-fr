@@ -1,42 +1,46 @@
 ---
-title: "D&#233;finir la s&#233;rialisation des donn&#233;es XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "création d'entités de règles [XML dans SQL Server]"
-  - "sérialisation"
-  - "nouvelle analyse des structures XML sérialisées"
-  - "encodage [XML dans SQL Server]"
-  - "XML [SQL Server], sérialisation"
-  - "type de données XML [SQL Server], sérialisation"
-  - "XML typé"
+title: "Définir la sérialisation des données XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- entitization rules [XML in SQL Server]
+- serialization
+- reparsing serialized XML structures
+- encoding [XML in SQL Server]
+- XML [SQL Server], serialization
+- xml data type [SQL Server], serialization
+- typed XML
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01e295b33ebd66543f2b431661799570bbe419b9
+ms.lasthandoff: 04/11/2017
+
 ---
-# D&#233;finir la s&#233;rialisation des donn&#233;es XML
+# <a name="define-the-serialization-of-xml-data"></a>Définir la sérialisation des données XML
   Lors de la conversion explicite ou implicite du type de données xml en données SQL de type chaîne ou binaire, le contenu des données de type xml sera sérialisé conformément aux règles présentées dans cette rubrique.  
   
-## Encodage de la sérialisation  
+## <a name="serialization-encoding"></a>Encodage de la sérialisation  
  Si le type cible SQL est VARBINARY, le résultat est sérialisé au format UTF-16 avec une marque d'ordre d'octet UTF-16 au début, mais sans déclaration XML. Si le type cible est trop petit, une erreur est générée.  
   
- Exemple :  
+ Exemple :  
   
 ```  
 select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 0xFFFE3C0094032F003E00  
@@ -44,13 +48,13 @@ select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))
   
  Si le type cible SQL est NVARCHAR ou NCHAR, le résultat est sérialisé au format UTF-16 sans marque d'ordre d'octet au début ni déclaration XML. Si le type cible est trop petit, une erreur est générée.  
   
- Exemple :  
+ Exemple :  
   
 ```  
 select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Δ/>  
@@ -58,7 +62,7 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
   
  Si le type cible SQL est VARCHAR ou NCHAR, le résultat est sérialisé dans l'encodage correspondant à la page de codes du classement de la base de données sans marque d'ordre d'octet ni déclaration XML. Si le type cible est trop petit ou s'il est impossible de faire correspondre la valeur à la page de codes du classement de la cible, une erreur est générée.  
   
- Exemple :  
+ Exemple :  
   
 ```  
 select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
@@ -68,13 +72,13 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
   
  Lors du renvoi des résultats XML côté client, les données seront transmises en UTF-16. Le fournisseur côté client exposera ensuite les données d'après les règles de son API.  
   
-## Sérialisation des structures XML  
+## <a name="serialization-of-the-xml-structures"></a>Sérialisation des structures XML  
  Le contenu d’un type de données **xml** est sérialisé de manière habituelle. Plus précisément, les nœuds d'élément sont mappés au balisage d'élément et les nœuds de texte sont mappés au contenu texte. Les circonstances dans lesquelles les caractères sont décomposés en entités et la façon dont les valeurs atomiques typées sont sérialisées sont décrites dans les sections suivantes.  
   
-## Codage d'entité des caractères XML au cours de la sérialisation  
- Chaque structure XML sérialisée doit pouvoir subir une nouvelle analyse. C’est pourquoi certains caractères doivent être sérialisés à l’aide du codage d’entité de façon à autoriser les accès répétés aux caractères, tout au long de la phase de normalisation de l’analyseur XML. Il s'avère aussi nécessaire de spécifier le codage d'entité de certains caractères afin d'assurer la bonne formation du document et son analyse. Voici les règles de codage d'entité qui s'appliquent au cours de la sérialisation :  
+## <a name="entitization-of-xml-characters-during-serialization"></a>Codage d'entité des caractères XML au cours de la sérialisation  
+ Chaque structure XML sérialisée doit pouvoir subir une nouvelle analyse. C’est pourquoi certains caractères doivent être sérialisés à l’aide du codage d’entité de façon à autoriser les accès répétés aux caractères, tout au long de la phase de normalisation de l’analyseur XML. Il s'avère aussi nécessaire de spécifier le codage d'entité de certains caractères afin d'assurer la bonne formation du document et son analyse. Voici les règles de codage d'entité qui s'appliquent au cours de la sérialisation :  
   
--   Les caractères &, \< et > sont toujours codés sous la forme &amp;, &lt; et &gt; respectivement, s’ils se trouvent dans la valeur d’un attribut ou dans le contenu d’un élément.  
+-   Les caractères &, \< et > sont toujours codés sous la forme &amp;, &lt; et &gt;, respectivement, s’ils se trouvent dans la valeur d’un attribut ou dans le contenu d’un élément.  
   
 -   Étant donné que SQL Server utilise les guillemets (U+0022) pour délimiter les valeurs des attributs, le guillemet des valeurs de l’attribut est codé par &quot;.  
   
@@ -86,7 +90,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
   
 -   Pour protéger les nœuds de texte contenant des espaces, l'un des espaces (généralement le dernier) est codé par sa référence de caractère numérique. De cette façon, l'analyse préserve le nœud de texte contenant des espaces, quel que soit le mode de traitement choisi pour les espaces au cours de l'analyse.  
   
- Exemple :  
+ Exemple :  
   
 ```  
 declare @u NVARCHAR(50)  
@@ -95,7 +99,7 @@ set @u = N'<a a="
 select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <a a="  
@@ -103,13 +107,13 @@ select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))
 </a>  
 ```  
   
- Si vous ne voulez pas appliquer la règle de protection du dernier espace, vous pouvez utiliser explicitement l’option 1 de CONVERT lors de la conversion de **xml** en type chaîne ou binaire. Par exemple, vous pouvez éviter le codage d'entité en procédant ainsi :  
+ Si vous ne voulez pas appliquer la règle de protection du dernier espace, vous pouvez utiliser explicitement l’option 1 de CONVERT lors de la conversion de **xml** en type chaîne ou binaire. Par exemple, vous pouvez éviter le codage d'entité en procédant ainsi :  
   
 ```  
 select CONVERT(NVARCHAR(50), CONVERT(XML, '<a>   </a>', 1), 1)  
 ```  
   
- Remarquez que la [méthode query() (type de données xml)](../../t-sql/xml/query-method-xml-data-type.md) génère une instance de type xml. Ainsi, tout résultat de la méthode **query()** converti en type chaîne ou binaire a recours au codage d’entité conformément aux règles précédemment décrites. Si vous souhaitez obtenir les valeurs de chaîne sans conversion en entité, utilisez la [méthode value() (type de données xml)](../../t-sql/xml/value-method-xml-data-type.md). L’exemple suivant montre comment utiliser la méthode **query()** :  
+ Remarquez que la [méthode query() (type de données xml)](../../t-sql/xml/query-method-xml-data-type.md) génère une instance de type xml. Ainsi, tout résultat de la méthode **query()** converti en type chaîne ou binaire a recours au codage d’entité conformément aux règles précédemment décrites. Si vous souhaitez obtenir les valeurs de chaîne sans conversion en entité, utilisez la [méthode value() (type de données xml)](../../t-sql/xml/value-method-xml-data-type.md) . L’exemple suivant montre comment utiliser la méthode **query()** :  
   
 ```  
 declare @x xml  
@@ -117,7 +121,7 @@ set @x = N'<a>This example contains an entitized char: <.</a>'
 select @x.query('/a/text()')  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 This example contains an entitized char: <.  
@@ -129,16 +133,16 @@ This example contains an entitized char: <.
 select @x.value('(/a/text())[1]', 'nvarchar(100)')  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 This example contains an entitized char: <.  
 ```  
   
-## Sérialisation de données typées XML  
+## <a name="serializing-a-typed-xml-data-type"></a>Sérialisation de données typées XML  
  Une instance typée **xml** contient des valeurs qui sont typées en fonction de leurs types de schémas XML. Ces valeurs sont sérialisées selon leur type de schéma XML au format que produit la conversion XQuery vers xs:string. Pour plus d’informations, consultez [Règles de conversion de types dans XQuery](../../xquery/type-casting-rules-in-xquery.md).  
   
- Par exemple, la valeur xs:double 1.34e1 est sérialisée en 13.4 comme le montre l'exemple suivant :  
+ Par exemple, la valeur xs:double 1.34e1 est sérialisée en 13.4 comme le montre l'exemple suivant :  
   
 ```  
 declare @x xml  
@@ -148,7 +152,7 @@ select CAST(@x.query('1.34e1') as nvarchar(50))
   
  Cela renvoie la valeur de chaîne 13.4.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Règles de conversion de types dans XQuery](../../xquery/type-casting-rules-in-xquery.md)   
  [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   

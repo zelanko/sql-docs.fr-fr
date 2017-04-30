@@ -1,35 +1,39 @@
 ---
-title: "Ajouter un filtre ou Modifier le filtre | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.newpubwizard.addeditfilter.f1"
+title: Ajouter un filtre ou Modifier le filtre | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.newpubwizard.addeditfilter.f1
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7647baaaf9e567ada31eb468b6c48844676659f2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ajouter un filtre ou Modifier le filtre
+# <a name="add-or-edit-filter"></a>Ajouter un filtre ou Modifier le filtre
   Les boîtes de dialogue **Ajouter un filtre** et **Modifier le filtre** permettent d'ajouter et de modifier des filtres de lignes statiques ou paramétrés.  
   
 > [!NOTE]  
->  Pour pouvoir modifier un filtre dans une publication existante, vous devez procéder au préalable à un nouvel instantané de la publication. Si cette dernière dispose d'abonnements, ces abonnements doivent alors être réinitialisés. Pour plus d’informations sur les modifications de propriété, consultez [Publication de modification et les propriétés de l’Article](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+>  Pour pouvoir modifier un filtre dans une publication existante, vous devez procéder au préalable à un nouvel instantané de la publication. Si cette dernière dispose d'abonnements, ces abonnements doivent alors être réinitialisés. Pour plus d’informations sur les modifications de propriétés, consultez [Changer des propriétés de publication et d’article](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
- Les types de publication incluent notamment les filtres statiques. Les publications de fusion comptent également parmi elles les filtres paramétrés. Un filtre statique s'évalue lors de la création de la publication : tous les Abonnés de la publication reçoivent les mêmes données. Un filtre paramétrable s'évalue, lui, lors d'une synchronisation de réplication : chaque Abonné peut effectivement recevoir différentes partitions de données selon ses informations de connexion ou d'après le nom de son ordinateur. Cliquez sur le lien intitulé **Exemples d'instructions** dans la boîte de dialogue afin de consulter les exemples pour chaque type de filtre. Pour plus d’informations sur les options de filtrage, consultez [filtrer les données publiées](../../relational-databases/replication/publish/filter-published-data.md).  
+ Les types de publication incluent notamment les filtres statiques. Les publications de fusion comptent également parmi elles les filtres paramétrés. Un filtre statique s'évalue lors de la création de la publication : tous les Abonnés de la publication reçoivent les mêmes données. Un filtre paramétrable s'évalue, lui, lors d'une synchronisation de réplication : chaque Abonné peut effectivement recevoir différentes partitions de données selon ses informations de connexion ou d'après le nom de son ordinateur. Cliquez sur le lien intitulé **Exemples d'instructions** dans la boîte de dialogue afin de consulter les exemples pour chaque type de filtre. Pour plus d’informations sur les options de filtrage, consultez [Filtrer des données publiées](../../relational-databases/replication/publish/filter-published-data.md).  
   
  Les filtres de lignes permettent de spécifier un sous-ensemble de lignes à publier à partir d'une table. Les filtres de lignes peuvent être utilisés pour éliminer des lignes que les utilisateurs n'ont pas besoin de voir (parce qu'elles contiennent par exemple des informations sensibles ou confidentielles) ou pour créer des partitions de données destinées à des abonnés différents. La publication de partitions de données différentes à des abonnés différents peut également contribuer à éviter les conflits qu'entraîne la mise à jour des mêmes valeurs de données par plusieurs abonnés.  
   
-## Options  
- Cette boîte de dialogue lance un processus en deux étapes pour les publications transactionnelles et d'instantané d'une part et un processus en trois étapes dans le cas des publications de fusion d'autre part. Quel que soit le type de publication choisi, vous devez choisir une table à filtrer ainsi qu'une ou plusieurs colonnes à ajouter au filtre ; le filtre est défini en tant que clause WHERE standard.  
+## <a name="options"></a>Options  
+ Cette boîte de dialogue lance un processus en deux étapes pour les publications transactionnelles et d'instantané d'une part et un processus en trois étapes dans le cas des publications de fusion d'autre part. Quel que soit le type de publication choisi, vous devez choisir une table à filtrer ainsi qu'une ou plusieurs colonnes à ajouter au filtre ; le filtre est défini en tant que clause WHERE standard.  
   
 1.  **Sélectionnez la table à filtrer**  
   
@@ -50,20 +54,20 @@ caps.handback.revision: 27
      Ce texte ne peut pas être modifié. Saisissez dans ce cas la clause de filtrage après le mot clé WHERE en suivant la syntaxe standard [!INCLUDE[tsql](../../includes/tsql-md.md)] . Si le serveur de publication est un serveur Oracle, cette clause doit satisfaire les critères de syntaxe des requêtes Oracle. Évitez les filtres complexes autant que possible. En effet, aussi bien les filtres statiques que les filtres paramétrés rallongent le temps de traitement des publications ; essayez par conséquent de simplifier le plus possible vos instructions de filtrage.  
   
     > [!IMPORTANT]  
-    >  Pour optimiser les performances, nous vous recommandons de ne pas appliquer de fonctions aux noms de colonnes dans des clauses de filtre de lignes paramétrés pour des publications de fusion, comme `LEFT([MyColumn]) = SUSER_SNAME()`. Si vous utilisez HOST_NAME dans une clause de filtrage puis en remplacez la valeur, il peut s'avérer judicieux de convertir les types de données avec la fonction CONVERT. Pour plus d’informations sur les meilleures pratiques dans ce cas, consultez la section « Substitution de la valeur de HOST_NAME() » dans la rubrique [filtres de lignes paramétrable](../../relational-databases/replication/merge/parameterized-row-filters.md).  
+    >  Pour optimiser les performances, nous vous recommandons de ne pas appliquer de fonctions aux noms de colonnes dans des clauses de filtre de lignes paramétrés pour des publications de fusion, comme `LEFT([MyColumn]) = SUSER_SNAME()`. Si vous utilisez HOST_NAME dans une clause de filtrage puis en remplacez la valeur, il peut s'avérer judicieux de convertir les types de données avec la fonction CONVERT. Pour plus d'informations sur la conduite à adopter dans cette situation, consultez la section « Substitution de la valeur de HOST_NAME » de la rubrique [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 3.  **Spécifiez combien d'abonnements recevront des données de cette table**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Réplication de fusion uniquement. La réplication de fusion vous permet d'indiquer le type de partitions répondant au mieux à vos données et votre application. Si vous sélectionnez **Une ligne de cette table ira à un seul abonnement**, la réplication de fusion définit l'option de non-chevauchement des partitions. Cette option, qui fonctionne avec les partitions précalculées pour améliorer les performances, permet de réduire au minimum le coût de téléchargement associé aux partitions précalculées. Le gain de performances lié au non-chevauchement des partitions est plus flagrant lorsque les filtres paramétrés et les filtres de jointure utilisés sont plus complexes. Si vous sélectionnez cette option, vous devez veiller à ce que les données soient partitionnées de telle sorte qu'une ligne ne puisse pas être répliquée vers plusieurs abonnés. Pour plus d'informations, consultez la section « Définition de « partition options » » dans la rubrique [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-row-filters.md).  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only; merge replication only. La réplication de fusion vous permet d'indiquer le type de partitions répondant au mieux à vos données et votre application. Si vous sélectionnez **Une ligne de cette table ira à un seul abonnement**, la réplication de fusion définit l'option de non-chevauchement des partitions. Cette option, qui fonctionne avec les partitions précalculées pour améliorer les performances, permet de réduire au minimum le coût de téléchargement associé aux partitions précalculées. Le gain de performances lié au non-chevauchement des partitions est plus flagrant lorsque les filtres paramétrés et les filtres de jointure utilisés sont plus complexes. Si vous sélectionnez cette option, vous devez veiller à ce que les données soient partitionnées de telle sorte qu'une ligne ne puisse pas être répliquée vers plusieurs abonnés. Pour plus d'informations, consultez la section « Définition de « partition options » » dans la rubrique [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  Après avoir ajouté ou modifié un filtre, cliquez sur **OK** pour enregistrer les modifications et fermer ainsi la boîte de dialogue. Le filtre que vous spécifiez est ensuite analysé et exécuté sur la table indiquée dans la clause SELECT. Si l'instruction de filtrage contient des erreurs de syntaxe ou rencontre tout autre problème, vous en êtes alors informé pour vous donner la possibilité de modifier l'instruction de filtrage.  
   
-## Voir aussi  
- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [Afficher et modifier les propriétés d'une publication](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Créer une publication](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Afficher et modifier les propriétés d’une publication](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Filtrer des données publiées](../../relational-databases/replication/publish/filter-published-data.md)   
  [Filtres de jointure](../../relational-databases/replication/merge/join-filters.md)   
- [Filtres de lignes paramétrés](../../relational-databases/replication/merge/parameterized-row-filters.md)   
+ [Filtres de lignes paramétrables](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Publier des données et des objets de base de données](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

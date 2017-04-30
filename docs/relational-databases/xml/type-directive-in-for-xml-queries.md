@@ -1,35 +1,39 @@
 ---
-title: "Directive TYPE dans les requ&#234;tes FOR XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Clause FOR XML, directive TYPE"
-  - "TYPE, directive"
+title: "Directive TYPE dans les requêtes FOR XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, TYPE directive
+- TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1e060f93c4aa26d86fbd6683099a66821c38e9b2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Directive TYPE dans les requ&#234;tes FOR XML
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la prise en charge de [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) vous permet éventuellement de demander que le résultat d’une requête FOR XML soit renvoyé en tant que type de données **xml** en spécifiant la directive TYPE. Cela vous permet de traiter le résultat d'une requête FOR XML sur le serveur. Par exemple, vous pouvez spécifier une requête XQuery par rapport au résultat, affecter le résultat à une variable de type **xml** ou écrire des [requêtes FOR XML imbriquées](../../relational-databases/xml/use-nested-for-xml-queries.md).  
+# <a name="type-directive-in-for-xml-queries"></a>Directive TYPE dans les requêtes FOR XML
+  La prise en charge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) vous permet éventuellement de demander que le résultat d’une requête FOR XML soit renvoyé en tant que type de données **xml** en spécifiant la directive TYPE. Cela vous permet de traiter le résultat d'une requête FOR XML sur le serveur. Par exemple, vous pouvez spécifier une requête XQuery par rapport au résultat, affecter le résultat à une variable de type **xml** ou écrire des [requêtes FOR XML imbriquées](../../relational-databases/xml/use-nested-for-xml-queries.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne des données d’instance de type de données XML au client en résultat de différentes constructions de serveur telles que des requêtes FOR XML qui utilisent la directive TYPE ou dans lesquelles le type de données **xml** permet de renvoyer des valeurs de données d’instance XML à partir de paramètres de sortie et de colonnes de table SQL. Dans le code de l'application cliente, le fournisseur ADO.NET demande à ce que ces informations de type de données XML soient envoyées dans un encodage binaire à partir du serveur. Toutefois, si vous utilisez FOR XML sans la directive TYPE, les données XML reviennent en tant que type chaîne. Dans tous les cas, le fournisseur client est toujours en mesure de gérer toute forme XML. Notez qu'une clause FOR XML de premier niveau sans directive TYPE ne peut pas être utilisée avec les curseurs.  
   
-## Exemples  
+## <a name="examples"></a>Exemples  
  Les exemples suivants illustrent l'utilisation de la directive TYPE avec des requêtes FOR XML.  
   
-### Extraction des résultats de la requête FOR XML en tant que type xml  
- La requête suivante extrait des informations de contact client de la table `Contacts`. Étant donné que la directive `TYPE` est spécifiée dans `FOR XML`, le résultat est retourné en tant que type **xml**.  
+### <a name="retrieving-for-xml-query-results-as-xml-type"></a>Extraction des résultats de la requête FOR XML en tant que type xml  
+ La requête suivante extrait des informations de contact client de la table `Contacts` . Étant donné que la directive `TYPE` est spécifiée dans `FOR XML`, le résultat est retourné en tant que type **xml** .  
   
 ```  
 USE AdventureWorks2012;  
@@ -40,7 +44,7 @@ ORDER BY BusinessEntityID
 FOR XML AUTO, TYPE;  
 ```  
   
- Voici le résultat partiel :  
+ Voici le résultat partiel :  
   
  `<Person.Person BusinessEntityID="1" FirstName="Ken" LastName="Sánchez"/>`  
   
@@ -48,7 +52,7 @@ FOR XML AUTO, TYPE;
   
  `...`  
   
-### Affectation des résultats de la requête FOR XML à une variable de type xml  
+### <a name="assigning-for-xml-query-results-to-an-xml-type-variable"></a>Affectation des résultats de la requête FOR XML à une variable de type xml  
  Dans l’exemple suivant, un résultat FOR XML est affecté à une variable de type **xml**, `@x`. La requête récupère les informations de contact, telles que `BusinessEntityID`, `FirstName`, `LastName` et des numéros de téléphone supplémentaires, à partir de la colonne `AdditionalContactInfo` de `TYPE` **xml**. Sachant que la clause `FOR XML` spécifie la directive `TYPE`, le résultat XML est retourné en tant que type **xml** et affecté à une variable.  
   
 ```  
@@ -69,8 +73,8 @@ SELECT @x;
 GO  
 ```  
   
-### Interrogation des résultats d'une requête FOR XML  
- Les requêtes FOR XML renvoient des données XML. Par conséquent, vous pouvez appliquer des méthodes de type **xml**, telles que **query()** et **value()**, au résultat XML retourné par des requêtes FOR XML.  
+### <a name="querying-results-of-a-for-xml-query"></a>Interrogation des résultats d'une requête FOR XML  
+ Les requêtes FOR XML renvoient des données XML. Par conséquent, vous pouvez appliquer des méthodes de type **xml** , telles que **query()** et **value()**, au résultat XML retourné par des requêtes FOR XML.  
   
  Dans la requête suivante, la méthode `query()` du type de données **xml** permet d’interroger le résultat de la requête `FOR XML`. Pour plus d’informations, consultez [Méthode query&#40;&#41; &#40;type de données xml&#41;](../../t-sql/xml/query-method-xml-data-type.md).  
   
@@ -88,7 +92,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  La requête `SELECT … FOR XML` interne retourne un résultat de type **xml** auquel la clause `SELECT` externe applique la méthode `query()` au type **xml**. Notez la directive `TYPE` spécifiée.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  `<Person.Person BusinessEntityID="1" FirstName="Ken" LastName="Sánchez">`  
   
@@ -127,8 +131,8 @@ SELECT @FirstPhoneFromAdditionalContactInfo;
 > [!NOTE]  
 >  Si la directive TYPE n’est pas spécifiée, le résultat de la requête FOR XML est retourné en tant que type **nvarchar(max)**.  
   
-### Utilisation des résultats de la requête FOR XML dans INSERT, UPDATE et DELETE (Transact-SQL DML)  
- L'exemple suivant montre comment des requêtes FOR XML peuvent être utilisées dans des instructions DML (Data Manipulation Language, langage de manipulation de données). Dans l’exemple, la requête `FOR XML` retourne une instance de type **xml**. L'instruction `INSERT` insère ce document XML dans une table.  
+### <a name="using-for-xml-query-results-in-insert-update-and-delete-transact-sql-dml"></a>Utilisation des résultats de la requête FOR XML dans INSERT, UPDATE et DELETE (Transact-SQL DML)  
+ L'exemple suivant montre comment des requêtes FOR XML peuvent être utilisées dans des instructions DML (Data Manipulation Language, langage de manipulation de données). Dans l’exemple, la requête `FOR XML` retourne une instance de type **xml** . L'instruction `INSERT` insère ce document XML dans une table.  
   
 ```  
 CREATE TABLE T1(intCol int, XmlCol xml);  
@@ -146,7 +150,7 @@ SELECT (SELECT XmlCol.query('/Root')
 GO  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

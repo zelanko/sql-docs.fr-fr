@@ -1,34 +1,38 @@
 ---
-title: "Initialiser un abonnement transactionnel sans instantan&#233; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "réplication transactionnelle, initialisation"
-  - "réplication [SQL Server], initialisation"
-  - "initialisation d’abonnements [réplication SQL Server], sans captures instantanées"
+title: "Initialiser un abonnement transactionnel sans instantané | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transactional replication, initializing
+- replication [SQL Server], initializing
+- initializing subscriptions [SQL Server replication], without snapshots
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4b4c95296d12ba08582ecf6929c5c13dd02b2bae
+ms.lasthandoff: 04/11/2017
+
 ---
-# Initialiser un abonnement transactionnel sans instantan&#233;
-  Par défaut, un abonnement à une publication transactionnelle est initialisé avec un instantané, lequel est généré par l'Agent d'instantané et appliqué par l'Agent de distribution. Dans certains scénarios, comme ceux impliquant de volumineux datasets initiaux, il est préférable d'initialiser un abonnement à l'aide d'une autre méthode. Autres méthodes d'initialisation d'un abonné :  
+# <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Initialiser un abonnement transactionnel sans instantané
+  Par défaut, un abonnement à une publication transactionnelle est initialisé avec un instantané, lequel est généré par l'Agent d'instantané et appliqué par l'Agent de distribution. Dans certains scénarios, comme ceux impliquant de volumineux datasets initiaux, il est préférable d'initialiser un abonnement à l'aide d'une autre méthode. Autres méthodes d'initialisation d'un abonné :  
   
 -   Spécifier une sauvegarde. Restaurez la sauvegarde sur l'Abonné, l'Agent de distribution copie ensuite toutes les métadonnées de réplication et procédures système requises. L'initialisation avec une sauvegarde est le moyen le plus rapide pour remettre les données sur l'Abonné, c'est également un moyen pratique, car vous pouvez utiliser n'importe quelle sauvegarde récente si celle-ci a été effectuée après que la publication ait été activée pour l'initialisation avec une sauvegarde.  
   
 -   Copier un dataset initial sur l'Abonné par un autre mécanisme, comme l'attachement d'une base de données. Vous devez vous assurer que les données et schéma corrects se trouvent sur l'Abonné, l'Agent de distribution copie ensuite toutes les métadonnées et procédures système requises.  
   
-## Initialisation d'un abonnement avec une sauvegarde  
- Une sauvegarde contient une base de données complète ; de ce fait, chaque base de données d'abonnement contiendra une copie complète de la base de données de publication lorsqu'elle est est initialisée :  
+## <a name="initializing-a-subscription-with-a-backup"></a>Initialisation d'un abonnement avec une sauvegarde  
+ Une sauvegarde contient une base de données complète ; de ce fait, chaque base de données d'abonnement contiendra une copie complète de la base de données de publication lorsqu'elle est est initialisée :  
   
 -   La sauvegarde inclut des tables n'étant pas spécifiées comme des articles pour la publication.  
   
@@ -43,36 +47,36 @@ caps.handback.revision: 37
   
  Pour initialiser un abonnement avec une sauvegarde, vous devez d'abord activer l'option lorsque vous créez une publication, puis spécifier des valeurs pour plusieurs options lorsque vous créez un abonnement. Les publications peuvent être activées par le biais de l'Assistant Nouvelle publication ou par programme. Cependant, les valeurs requises pour les options d'abonnement ne peuvent être spécifiées que par programme.  
   
--   [! INCLURE [ssManStudioFull] (.. / Token/ssManStudioFull_md.md)]: [Enable Initialization with a Backup for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable initialization with backup for transactional publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Enable Initialization with a Backup for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md)  
   
--   Programmation Transact-SQL de la réplication : [initialiser un abonnement transactionnel à partir d’une sauvegarde & #40 ; Programmation de Transact-SQL de réplication & #41 ;](../../relational-databases/replication/initialize a transactional subscription from a backup.md)  
+-   Programmation Transact-SQL de la réplication : [Initialiser un abonnement transactionnel à partir d’une sauvegarde &#40;programmation Transact-SQL de la réplication&#41;](../../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md)  
   
 > [!NOTE]  
->  Si un abonnement est initialisé sans utiliser un instantané, le compte sous lequel fonctionne le service SQL Server sur le serveur de publication doit disposer d'autorisations d'écriture sur le dossier d'instantanés sur le serveur de distribution. Pour plus d’informations sur les autorisations, consultez [modèle de sécurité de l’Agent de réplication](../../relational-databases/replication/security/replication-agent-security-model.md).  
+>  Si un abonnement est initialisé sans utiliser un instantané, le compte sous lequel fonctionne le service SQL Server sur le serveur de publication doit disposer d'autorisations d'écriture sur le dossier d'instantanés sur le serveur de distribution. Pour plus d'informations sur les autorisations, consultez [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-### Vérification de la pertinence d'une sauvegarde  
+### <a name="ensuring-the-suitability-of-a-backup"></a>Vérification de la pertinence d'une sauvegarde  
  Une sauvegarde est appropriée à l'initialisation d'un abonné si toutes les transactions se produisant après avoir effectué la sauvegarde sont stockées sur le serveur de distribution. La réplication affichera un message d'erreur si la sauvegarde n'est pas appropriée.  
   
- Afin de vous assurer que l'utilisation d'une sauvegarde est appropriée, suivez les instructions suivantes :  
+ Afin de vous assurer que l'utilisation d'une sauvegarde est appropriée, suivez les instructions suivantes :  
   
--   Utilisez la dernière sauvegarde disponible, et si elle est plus ancienne que la période de rétention de distribution maximale, créez une nouvelle sauvegarde avant de tenter d'initialiser un abonnement avec une sauvegarde. Pour plus d’informations sur la période de rétention, consultez [Expiration de l’abonnement et de désactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
+-   Utilisez la dernière sauvegarde disponible, et si elle est plus ancienne que la période de rétention de distribution maximale, créez une nouvelle sauvegarde avant de tenter d'initialiser un abonnement avec une sauvegarde. Pour plus d'informations sur la période de rétention, consultez [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
--   Par défaut, les travaux de nettoyage de la distribution effacent les transactions de plus de 72 heures de la base de données de distribution. Le nettoyage est basé sur la période de rétention définie pour la publication. Lors de la synchronisation avec d'anciennes sauvegardes, envisagez de désactiver temporairement le travail avant la sauvegarde que vous souhaitez restaurer, puis de le réactiver une fois l'abonnement créé avec succès. Cela évite la suppression de transactions de la base de données de distribution pouvant s'avérer nécessaires à la réussite de la synchronisation à partir de la sauvegarde. Pour plus d’informations sur l’exécution des travaux de nettoyage, consultez [exécuter des tâches de Maintenance réplication & #40 ; SQL Server Management Studio & #41 ;](../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md).  
+-   Par défaut, les travaux de nettoyage de la distribution effacent les transactions de plus de 72 heures de la base de données de distribution. Le nettoyage est basé sur la période de rétention définie pour la publication. Lors de la synchronisation avec d'anciennes sauvegardes, envisagez de désactiver temporairement le travail avant la sauvegarde que vous souhaitez restaurer, puis de le réactiver une fois l'abonnement créé avec succès. Cela évite la suppression de transactions de la base de données de distribution pouvant s'avérer nécessaires à la réussite de la synchronisation à partir de la sauvegarde. Pour obtenir des informations sur l’exécution des travaux de maintenance, consultez [Exécuter des travaux de maintenance de réplication &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md).  
   
  Dans certains cas, vous devez effectuer manuellement des personnalisations dans la base de données restaurée de l'Abonné après avoir configuré des abonnements initialisés par une sauvegarde. En général, les modifications manuelles sur la base de données restaurée de l'Abonné sont nécessaires, si la publication est définie de telle sorte que le contenu de la base de données de l'Abonné est supposé être différent du contenu de la base de données du serveur de publication.  
   
 -   Les vues indexées sur la base de données restaurée doivent être converties en tables si elles sont publiées en tant qu'articles de la vue indexée sur la table basés sur un journal  
   
--   Les colonnes de type timestamp abonnées à la base de données restaurée doivent être convertis en **Binary (8)** colonnes : copie le contenu des tables contenant des colonnes d’horodatage à de nouvelles tables avec des schémas correspondants, sauf ayant **Binary (8)** colonnes, les colonnes timestamp, supprimer les tables d’origine et renommez les nouvelles tables avec les mêmes noms que les tables d’origine.  
+-   Les colonnes de type timestamp abonnées à la base de données restaurée doivent être converties en colonnes **binary(8)** : copiez le contenu des tables contenant les colonnes timestamp vers de nouvelles tables avec des schémas correspondants, sauf pour les colonnes timestamp qui sont remplacées par les colonnes **binary(8)** , supprimez les tables d'origine, et renommez les nouvelles tables avec les mêmes noms que les tables d'origine.  
   
-## Initialisation d'un abonnement avec une méthode de remplacement  
+## <a name="initializing-a-subscription-with-an-alternative-method"></a>Initialisation d'un abonnement avec une méthode de remplacement  
  Il est possible d'initialiser un abonnement à l'aide de n'importe quelle méthode vous autorisant à copier le schéma de la base de données de publication et les données sur l'Abonné, comme [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Lorsque vous utilisez une méthode de remplacement pour initialiser l'Abonné, les objets de prise en charge de la réplication sont copiés sur l'Abonné.  
   
  Contrairement à l'initialisation avec une sauvegarde, vous, ou votre application, devez vous assurer que les données et le schéma sont correctement synchronisés au moment d'ajouter l'abonnement. Si par exemple il y a une activité sur le serveur de publication entre le moment où les données et le schéma sont copiés vers l'Abonné et le moment auquel l'abonnement est ajouté, les modifications résultant de cette activité peuvent ne pas être répliquées vers l'Abonné.  
   
- Pour initialiser un abonnement avec une autre méthode, consultez [initialiser manuellement un abonnement](../../relational-databases/replication/initialize-a-subscription-manually.md).  
+ Pour initialiser un abonnement avec une méthode de remplacement, consultez [Initialize a Subscription Manually](../../relational-databases/replication/initialize-a-subscription-manually.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Initialiser un abonnement](../../relational-databases/replication/initialize-a-subscription.md)  
   
   

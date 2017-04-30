@@ -1,35 +1,39 @@
 ---
-title: "Fonctionnement des op&#233;rations d&#39;index en ligne | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "opérations en ligne sur l'index"
-  - "index sources [SQL Server]"
-  - "index préexistants [SQL Server]"
-  - "index cibles [SQL Server]"
-  - "mappage temporaire d'index [SQL Server]"
-  - "mappages temporaires d'index [SQL Server]"
+title: "Fonctionnement des opérations d’index en ligne | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- online index operations
+- source indexes [SQL Server]
+- preexisting indexes [SQL Server]
+- target indexes [SQL Server]
+- temporary mapping index [SQL Server]
+- index temporary mappings [SQL Server]
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 838a02643b47162d767e8f3b4191e5e3796adf57
+ms.lasthandoff: 04/11/2017
+
 ---
-# Fonctionnement des op&#233;rations d&#39;index en ligne
+# <a name="how-online-index-operations-work"></a>Fonctionnement des opérations d'index en ligne
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Cette rubrique définit les structures qui existent pendant une opération d'index en ligne et illustre les activités qui y sont associées.  
   
-## Structures d'index en ligne  
- Pour permettre des activités d'utilisateurs simultanées lors d'une opération du langage de définition de données (DDL) d'index, les structures suivantes sont utilisées pendant l'opération d'index en ligne : index source et préexistants, cibles et, pour reconstruire un segment de mémoire ou supprimer un index cluster en ligne, un index de mappage temporaire.  
+## <a name="online-index-structures"></a>Structures d'index en ligne  
+ Pour permettre des activités d'utilisateurs simultanées lors d'une opération du langage de définition de données (DDL) d'index, les structures suivantes sont utilisées pendant l'opération d'index en ligne : index source et préexistants, cibles et, pour reconstruire un segment de mémoire ou supprimer un index cluster en ligne, un index de mappage temporaire.  
   
 -   **Index sources et préexistants**  
   
@@ -47,14 +51,14 @@ caps.handback.revision: 28
   
      Les opérations d'index en ligne qui créent, suppriment ou régénèrent un index cluster exigent également un index de mappage temporaire. Cet index temporaire est utilisé par les transactions simultanées pour déterminer les enregistrements à supprimer dans les nouveaux index en cours de génération lorsque des lignes de la table sous-jacente sont mises à jour ou supprimées. Cet index non-cluster est créé au cours de la même étape que le nouvel index (ou segment de mémoire) cluster et n'exige aucune opération de tri distincte. Les transactions simultanées gèrent également l'index de mappage temporaire dans toutes leurs opérations d'insertion, de mise à jour et de suppression.  
   
-## Activités d'index en ligne  
- Pendant une opération d'index en ligne simple, telle que la création d'un index cluster sur une table (ou un segment de mémoire) non indexée, la source et la cible passent par trois phases : la phase de préparation, la phase de génération et la phase finale.  
+## <a name="online-index-activities"></a>Activités d'index en ligne  
+ Pendant une opération d'index en ligne simple, telle que la création d'un index cluster sur une table (ou un segment de mémoire) non indexée, la source et la cible passent par trois phases : la phase de préparation, la phase de génération et la phase finale.  
   
- L'illustration suivante représente le processus de création d'un index cluster initial en ligne. L'objet source (le segment) ne possède aucun autre index. Les activités des structures sources et cibles sont représentées pour chaque phase ; les opérations de sélection, d'insertion, de mise à jour et de suppression des utilisateurs simultanés sont également indiquées. Les phases de préparation, de génération et finale sont affichées avec les modes de verrouillage utilisés dans chacune d'elles.  
+ L'illustration suivante représente le processus de création d'un index cluster initial en ligne. L'objet source (le segment) ne possède aucun autre index. Les activités des structures sources et cibles sont représentées pour chaque phase ; les opérations de sélection, d'insertion, de mise à jour et de suppression des utilisateurs simultanés sont également indiquées. Les phases de préparation, de génération et finale sont affichées avec les modes de verrouillage utilisés dans chacune d'elles.  
   
- ![Activités effectuées au cours d'une opération d'index en ligne](../../relational-databases/indexes/media/online-index.gif "Activités effectuées au cours d'une opération d'index en ligne")  
+ ![Activités effectuées au cours d’une opération d’index en ligne](../../relational-databases/indexes/media/online-index.gif "Activités effectuées au cours d’une opération d’index en ligne")  
   
-## Activités des structures sources  
+## <a name="source-structure-activities"></a>Activités des structures sources  
  Le tableau suivant répertorie les activités impliquant les structures sources lors de chaque phase de l'opération d'index ainsi que la stratégie de verrouillage correspondante.  
   
 |Phase|Activité de la source|Verrous de la source|  
@@ -69,7 +73,7 @@ caps.handback.revision: 28
   
  La table précédente représente un verrou partagé (S) unique acquis lors de la phase de génération d'une opération d'index en ligne impliquant un index unique. Lorsque des index cluster et non cluster sont générés ou régénérés au cours d'une opération d'index en ligne unique (par exemple, pendant la création d'un index cluster initial sur une table contenant un ou plusieurs index non cluster), deux verrous S à court terme sont acquis au cours de la phase de génération, suivis par des verrous de partage intentionnel (IS) à long terme. Un verrou S est d'abord acquis pour la création de l'index cluster et lorsque la création de l'index cluster est terminée, un deuxième verrou S à court terme est acquis pour la création des index non-cluster. Une fois les index non-cluster créés, le verrou S redevient un verrou IS jusqu'à la phase finale de l'opération d'index en ligne.  
   
-### Activités des structures cibles  
+### <a name="target-structure-activities"></a>Activités des structures cibles  
  Le tableau suivant répertorie les activités impliquant la structure cible lors de chaque phase de l'opération d'index ainsi que la stratégie de verrouillage correspondante.  
   
 |Phase|Activité de la cible|Verrous de la cible|  
@@ -84,9 +88,10 @@ caps.handback.revision: 28
   
  La durée de vie d'un curseur déclaré sur une table impliquée dans une opération d'index en ligne est limitée par les phases de l'index en ligne. Les curseurs de mise à jour sont invalidés à chaque phase. Les curseurs en lecture seule ne sont invalidés qu'après la phase finale.  
   
-## Contenu connexe  
+## <a name="related-content"></a>Contenu connexe  
  [Exécuter des opérations en ligne sur les index](../../relational-databases/indexes/perform-index-operations-online.md)  
   
  [Instructions pour les opérations d'index en ligne](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
   
   
+

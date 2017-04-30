@@ -1,25 +1,29 @@
 ---
-title: "Prise en charge SQL Server Management Objects pour OLTP en m&#233;moire | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Prise en charge d’OLTP en mémoire par SQL Server Management Objects | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8c0ed45fbf5da5c1c521ad52e25553a21c068a08
+ms.lasthandoff: 04/11/2017
+
 ---
-# Prise en charge SQL Server Management Objects pour OLTP en m&#233;moire
+# <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>Prise en charge SQL Server Management Objects pour OLTP en mémoire
   Cette rubrique décrit les modifications de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) pour l'OLTP en mémoire.  
   
- Les types et membres suivants prennent en charge l'OLTP en mémoire :  
+ Les types et membres suivants prennent en charge l'OLTP en mémoire :  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.DurabilityType>  
   
@@ -47,20 +51,20 @@ caps.handback.revision: 28
   
 -   <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>  
   
-## Exemple de code  
- L'exemple réalise les actions suivantes :  
+## <a name="code-sample"></a>Exemple de code  
+ L'exemple réalise les actions suivantes :  
   
--   Crée une base de données avec le groupe de fichiers mémoire optimisé et le fichier mémoire optimisé.  
+-   Crée une base de données avec le groupe de fichiers optimisé en mémoire et le fichier optimisé en mémoire.  
   
--   Crée une table mémoire optimisée durable avec une clé primaire, un index non cluster et un index de hachage non cluster.  
+-   Crée une table optimisée en mémoire durable avec une clé primaire, un index non cluster et un index de hachage non cluster.  
   
 -   Crée des colonnes et des index.  
   
--   Crée un type de table mémoire optimisée, définie par l'utilisateur.  
+-   Crée un type de table optimisée en mémoire définie par l'utilisateur.  
   
 -   Crée une procédure stockée compilée en mode natif.  
   
- Cet exemple doit faire référence aux assemblys suivants :  
+ Cet exemple doit faire référence aux assemblys suivants :  
   
 -   Microsoft.SqlServer.Smo.dll  
   
@@ -164,7 +168,7 @@ public class A {
 }  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge d'OLTP en mémoire par SQL Server](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
   
   

@@ -1,31 +1,35 @@
 ---
-title: "Pr&#233;traiter un sch&#233;ma pour fusionner des sch&#233;mas inclus | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "test de l'outil du préprocesseur"
-  - "xsd:include"
-  - "Collections de schémas XML [SQL Server], outil du préprocesseur"
-  - "include, élément"
-  - "Schémas XML [SQL Server], prétraitement"
-  - "collections de schémas [SQL Server], outil du préprocesseur"
-  - "préprocesseur pour les schémas XML, outil"
-  - "schémas XML [SQL Server]"
+title: "Prétraiter un schéma pour fusionner des schémas inclus | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- testing preprocessor tool
+- xsd:include
+- XML schema collections [SQL Server], preprocessor tool
+- include element
+- XML schemas [SQL Server], preprocessing
+- schema collections [SQL Server], preprocessor tool
+- preprocessor tool [XML schemas]
+- XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73bb2043bf3e0cb0d8a076a07b4d9c33366c1cf7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Pr&#233;traiter un sch&#233;ma pour fusionner des sch&#233;mas inclus
+# <a name="preprocess-a-schema-to-merge-included-schemas"></a>Prétraiter un schéma pour fusionner des schémas inclus
   L’élément W3C XSD **include** assure la prise en charge de la modularité des schémas, selon laquelle un schéma XML peut être partitionné en plusieurs fichiers physiques. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge cet élément. Les schémas XML incluant cet élément seront rejetés par le serveur.  
   
  En guise de solution, les schémas XML comportant la directive \<xsd:include> peuvent être prétraités de façon à copier et à fusionner le contenu de tous les schémas inclus en un seul et unique schéma à télécharger vers le serveur. Vous pouvez utiliser le code C# suivant pour le prétraitement. Les commentaires dans la première partie du code fournissent des informations sur son utilisation.  
@@ -186,10 +190,10 @@ public class XmlSchemaIncludeNormalizer
 }  
 ```  
   
-## Test de l'outil du préprocesseur  
- Vous pouvez utiliser les schémas XSD suivants pour tester l'outil du préprocesseur :  
+## <a name="testing-the-preprocessor-tool"></a>Test de l'outil du préprocesseur  
+ Vous pouvez utiliser les schémas XSD suivants pour tester l'outil du préprocesseur :  
   
-### books_common.xsd  
+### <a name="bookscommonxsd"></a>books_common.xsd  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -199,7 +203,7 @@ public class XmlSchemaIncludeNormalizer
 </xsd:schema>  
 ```  
   
-### books.xsd  
+### <a name="booksxsd"></a>books.xsd  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -211,7 +215,7 @@ public class XmlSchemaIncludeNormalizer
 </xsd:schema>  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Collections de schémas XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

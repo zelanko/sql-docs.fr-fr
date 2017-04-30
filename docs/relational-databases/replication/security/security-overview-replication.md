@@ -1,44 +1,48 @@
 ---
-title: "Vue d&#39;ensemble de la s&#233;curit&#233; (r&#233;plication) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "autorisation [réplication SQL Server]"
-  - "cryptographie [réplication SQL Server]"
-  - "chiffrement [réplication SQL Server]"
-  - "sécurité [réplication SQL Server], à propos de la sécurité"
-  - "authentification [réplication SQL Server]"
+title: "Vue d’ensemble de la sécurité (réplication) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- authorization [SQL Server replication]
+- cryptography [SQL Server replication]
+- encryption [SQL Server replication]
+- security [SQL Server replication], about security
+- authentication [SQL Server replication]
 ms.assetid: 27828fe4-3b54-4c33-886e-08e8279e34b5
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d459a80eb15947743a846ce64cfe0013f718320d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Vue d&#39;ensemble de la s&#233;curit&#233; (r&#233;plication)
-  Pour l'essentiel, sécuriser l'environnement de réplication revient à comprendre les différentes options d'authentification et d'autorisation, à utiliser de façon appropriée les fonctionnalités de filtrage de la réplication et à se familiariser avec les diverses mesures de sécurisation possibles des différentes parties d'un environnement de réplication. L'environnement de réplication inclut le serveur de distribution, le serveur de publication, les abonnés et le dossier d'instantanés. Ce chapitre traite de la sécurité de réplication, mais la sécurité de réplication repose sur la sécurité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et la sécurité Windows. Par conséquent, vous devez comprendre les fondements et les caractéristiques de sécurité de la réplication. Pour plus d’informations sur la sécurité, consultez [Considérations de sécurité pour une Installation SQL Server](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md). Pour plus d’informations sur les considérations de sécurité pour la publication Oracle, consultez la section « Modèle de sécurité de réplication » dans la rubrique [Considérations et Limitations pour les serveurs de publication Oracle](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
+# <a name="security-overview-replication"></a>Vue d'ensemble de la sécurité (réplication)
+  Pour l'essentiel, sécuriser l'environnement de réplication revient à comprendre les différentes options d'authentification et d'autorisation, à utiliser de façon appropriée les fonctionnalités de filtrage de la réplication et à se familiariser avec les diverses mesures de sécurisation possibles des différentes parties d'un environnement de réplication. L'environnement de réplication inclut le serveur de distribution, le serveur de publication, les abonnés et le dossier d'instantanés. Ce chapitre traite de la sécurité de réplication, mais la sécurité de réplication repose sur la sécurité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et la sécurité Windows. Par conséquent, vous devez comprendre les fondements et les caractéristiques de la sécurité de réplication. Pour plus d’informations sur la sécurité, consultez [Considérations de sécurité pour une installation SQL Server](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md). Pour plus d'informations sur les questions de sécurité à prendre en compte pour la publication dans Oracle, consultez la section « Modèle de sécurité de réplication » dans la rubrique [Design Considerations and Limitations for Oracle Publishers](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
   
-## Dans cette section  
- [Menaces et les risques de vulnérabilité & #40 ; Réplication & #41 ;](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md)  
+## <a name="in-this-section"></a>Dans cette section  
+ [Limitation des menaces et des risques de vulnérabilité &#40;réplication&#41;](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md)  
  Discute des menaces potentielles auxquelles est exposée la topologie de réplication et décrit des solutions réduire ces menaces.  
   
- [Identité et contrôle d’accès & #40 ; Réplication & #41 ;](../../../relational-databases/replication/security/identity-and-access-control-replication.md)  
+ [Identité et contrôle d’accès &#40;réplication&#41;](../../../relational-databases/replication/security/identity-and-access-control-replication.md)  
  Décrit comment utiliser l'authentification, l'autorisation et le filtrage pour aider à sécuriser une topologie de réplication.  
   
- [Sécuriser le développement & #40 ; Réplication & #41 ;](../../../relational-databases/replication/security/secure-development-replication.md)  
+ [Développement sécurisé &#40;réplication&#41;](../../../relational-databases/replication/security/secure-development-replication.md)  
  Décrit le comportement de la sécurité de réplication, les méthodes recommandées e les autorisations minimales pour la réplication.  
   
- [Sécuriser le déploiement & #40 ; Réplication & #41 ;](../../../relational-databases/replication/security/secure-deployment-replication.md)  
+ [Déploiement sécurisé &#40;réplication&#41;](../../../relational-databases/replication/security/secure-deployment-replication.md)  
  Décrit comment sécuriser au mieux tous les composants d'une topologie de réplication.  
   
-## Voir aussi  
- [Sécurité et Protection & #40 ; Réplication & #41 ;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Sécurité et protection &#40;réplication&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
   
   

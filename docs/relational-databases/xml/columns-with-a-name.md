@@ -1,25 +1,29 @@
 ---
-title: "Colonnes avec nom | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "noms [SQL Server], colonnes avec"
+title: "Colonnes avec nom | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3cda571a6e30387ccf1764e94fe6e6a3f1625262
+ms.lasthandoff: 04/11/2017
+
 ---
-# Colonnes avec nom
-  Les conditions suivantes sont celles dans lesquelles les colonnes de l'ensemble de lignes avec nom sont mappées, avec respect de la casse, au document XML obtenu :  
+# <a name="columns-with-a-name"></a>Colonnes avec nom
+  Les conditions suivantes sont celles dans lesquelles les colonnes de l'ensemble de lignes avec nom sont mappées, avec respect de la casse, au document XML obtenu :  
   
 -   Le nom de colonne commence par un arobase (@).  
   
@@ -31,7 +35,7 @@ caps.handback.revision: 8
   
 -   Une colonne porte un nom différent.  
   
-## Le nom de colonne commence par un arobase (@)  
+## <a name="column-name-starts-with-an-at-sign-"></a>Le nom de colonne commence par un arobase (@)  
  Si le nom de colonne commence par un arobase (@) et qu'il ne contient pas de barre oblique (/), un attribut de l'élément <`row`> possédant la valeur de colonne correspondante est créé. Par exemple, la requête suivante renvoie un ensemble de lignes de deux colonnes (@PmId, Name). Dans le document XML obtenu, un attribut **PmId** est ajouté à l’élément <`row`> correspondant et une valeur de ProductModelID lui est affectée.  
   
 ```  
@@ -53,7 +57,7 @@ go
 </row>  
 ```  
   
- À un niveau donné, les attributs doivent précéder tous les autres types de nœuds, tels que les nœuds d'élément et les nœuds de texte. La requête suivante renvoie une erreur :  
+ À un niveau donné, les attributs doivent précéder tous les autres types de nœuds, tels que les nœuds d'élément et les nœuds de texte. La requête suivante renvoie une erreur :  
   
 ```  
 SELECT Name,  
@@ -64,7 +68,7 @@ FOR XML PATH
 go  
 ```  
   
-## Le nom de colonne ne commence pas par un arobase (@)  
+## <a name="column-name-does-not-start-with-an-at-sign-"></a>Le nom de colonne ne commence pas par un arobase (@)  
  Si le nom de colonne ne commence pas par un arobase (@), qu'il n'est pas l'un des tests de nœud XPath et qu'il ne contient pas de barre oblique (/), un élément XML sous-élément de l'élément de ligne, par défaut <`row`>, est créé.  
   
  La requête suivante spécifie le nom de colonne, qui est le résultat. Par conséquent, un élément enfant <`result`> est ajouté à l'élément <`row`>.  
@@ -111,8 +115,8 @@ go
 </row>  
 ```  
   
-## Le nom de colonne ne commence pas par un arobase (@) et contient une barre oblique (/)  
- Si le nom de colonne ne commence pas par un arobase (@) mais qu'il contient une barre oblique (/), il indique une hiérarchie XML. Par exemple, si le nom de colonne est « Name1/Name2/Name3.../Name***n*** », chaque partie Name***i*** représente un nom d’élément imbriqué dans l’élément de ligne actuel (avec i égal à 1) ou situé sous l’élément nommé Name***i-1***. Si la partie Name***n*** commence par « @ », elle est mappée à un attribut de Name***n-1***.  
+## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>Le nom de colonne ne commence pas par un arobase (@) et contient une barre oblique (/)  
+ Si le nom de colonne ne commence pas par un arobase (@) mais qu'il contient une barre oblique (/), il indique une hiérarchie XML. Par exemple, si le nom de colonne est « Name1/Name2/Name3.../Name***n*** », chaque partie Name***i*** représente un nom d’élément imbriqué dans l’élément de ligne actuel (avec i égal à 1) ou situé sous l’élément nommé Name***i-1***. Si la partie Name***n*** commence par « @ », elle est mappée à un attribut de Name***n-1*** .  
   
  Par exemple, la requête suivante renvoie un ID et un nom d'employé représentés sous la forme d'un élément complexe EmpName qui contient un prénom (First), un deuxième prénom (Middle) et un nom de famille (Last).  
   
@@ -151,7 +155,7 @@ AND    E.EmployeeID=1
 FOR XML PATH, ELEMENTS XSINIL  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
@@ -198,10 +202,10 @@ FOR XML PATH
 </row>  
 ```  
   
-## Plusieurs colonnes partagent le même préfixe de chemin d'accès  
+## <a name="several-columns-share-the-same-path-prefix"></a>Plusieurs colonnes partagent le même préfixe de chemin d'accès  
  Si plusieurs colonnes partagent le même préfixe de chemin d'accès, elles sont regroupées sous le même nom. Si différents préfixes d'espace de noms sont utilisés alors qu'ils sont liés au même espace de noms, un chemin d'accès est considéré comme différent. Dans la requête précédente, les colonnes FirstName, MiddleName et LastName partagent le même préfixe EmpName. Par conséquent, elles sont ajoutées en tant qu'enfants de l'élément <`EmpName`>. Cela était également le cas lors de la création de l'élément <`Address`> dans l'exemple précédent.  
   
-## Une colonne porte un nom différent  
+## <a name="one-column-has-a-different-name"></a>Une colonne porte un nom différent  
  Si une colonne intermédiaire et portant un nom différent apparaît, elle rompt le regroupement, comme le montre la requête modifiée suivante. La requête rompt le regroupement de FirstName, MiddleName et LastName, tel que spécifié dans la requête précédente, en ajoutant des colonnes d'adresse entre les colonnes FirstName et MiddleName.  
   
 ```  
@@ -238,7 +242,7 @@ FOR XML PATH
 </row>  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser le mode PATH avec FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

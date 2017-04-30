@@ -1,41 +1,45 @@
 ---
-title: "D&#233;placer un index existant dans un autre groupe de fichiers | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "déplacement de tables"
-  - "basculement de groupes de fichiers pour l'index"
-  - "déplacement d'index"
-  - "index [SQL Server], déplacement"
-  - "groupes de fichiers [SQL Server], basculement"
+title: "Déplacer un index existant dans un autre groupe de fichiers | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- moving tables
+- switching filegroups for index
+- moving indexes
+- indexes [SQL Server], moving
+- filegroups [SQL Server], switching
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: cfc19f15cee7ca1185a2a9177474510c368b56bf
+ms.lasthandoff: 04/11/2017
+
 ---
-# D&#233;placer un index existant dans un autre groupe de fichiers
+# <a name="move-an-existing-index-to-a-different-filegroup"></a>Déplacer un index existant dans un autre groupe de fichiers
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique explique comment déplacer un index existant d'un groupe de fichiers à un autre à l'aide de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en utilisant [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour placer un index existant dans un autre groupe de fichiers à l'aide de :**  
+-   **Pour placer un index existant dans un autre groupe de fichiers à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -52,11 +56,11 @@ caps.handback.revision: 44
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner**.  
+ Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour placer un index existant dans un autre groupe de fichiers à l'aide du Concepteur de tables  
+#### <a name="to-move-an-existing-index-to-a-different-filegroup-using-table-designer"></a>Pour placer un index existant dans un autre groupe de fichiers à l'aide du Concepteur de tables  
   
 1.  Dans l'Explorateur d'objets, cliquez sur le signe plus (+) pour développer la base de données qui contient la table avec l'index que vous souhaitez déplacer.  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 44
   
 3.  Cliquez avec le bouton droit sur la table avec l’index que vous souhaitez déplacer et sélectionnez **Conception**.  
   
-4.  Dans le menu **Concepteur de tables**, cliquez sur **Index/Clés**.  
+4.  Dans le menu **Concepteur de tables** , cliquez sur **Index/Clés**.  
   
 5.  Sélectionnez l'index à déplacer.  
   
@@ -74,9 +78,9 @@ caps.handback.revision: 44
   
 8.  Cliquez sur **Fermer**.  
   
-9. Dans le menu **Fichier**, sélectionnez **Enregistrer***nom_table*.  
+9. Dans le menu **Fichier** , sélectionnez **Enregistrer***nom_table*.  
   
-#### Pour placer un index existant dans un autre groupe de fichiers dans l'Explorateur d'objets  
+#### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>Pour placer un index existant dans un autre groupe de fichiers dans l'Explorateur d'objets  
   
 1.  Dans l'Explorateur d'objets, cliquez sur le signe plus (+) pour développer la base de données qui contient la table avec l'index que vous souhaitez déplacer.  
   
@@ -96,7 +100,7 @@ caps.handback.revision: 44
   
      Si vous déplacez un index cluster, vous pouvez procéder en ligne. Le traitement en ligne autorise l'accès des utilisateurs aux données sous-jacentes et aux index non cluster pendant l'opération sur l'index. Pour plus d'informations, consultez [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
   
-     Sur les ordinateurs multiprocesseurs qui utilisent [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez configurer le nombre de processeurs utilisés pour exécuter l'instruction sur l'index en spécifiant un degré maximal de parallélisme. La fonctionnalité permettant les opérations d'index parallèles ne sont pas disponibles dans toutes les édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par l’édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md). Pour plus d’informations sur les opérations d’index parallèles, consultez [Configurer des opérations d’index parallèles](../../relational-databases/indexes/configure-parallel-index-operations.md).  
+     Sur les ordinateurs multiprocesseurs qui utilisent [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez configurer le nombre de processeurs utilisés pour exécuter l'instruction sur l'index en spécifiant un degré maximal de parallélisme. La fonctionnalité permettant les opérations d'index parallèles ne sont pas disponibles dans toutes les édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez les fonctionnalités prises en charge par les éditions de SQL Server 2016. Pour plus d’informations sur les opérations d’index parallèles, consultez [Configurer des opérations d’index parallèles](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 8.  Cliquez sur **OK**.  
   
@@ -128,7 +132,7 @@ caps.handback.revision: 44
  Affiche des informations sur les types de données figurant dans la colonne.  
   
 > [!NOTE]  
->  Si la colonne de table est une colonne calculée, **Type de données de la colonne** contient la mention « colonne calculée ».  
+>  Si la colonne de table est une colonne calculée, **Type de données de la colonne** a la valeur « colonne calculée ».  
   
  **Autoriser le traitement en ligne des instructions DML lors du déplacement de l'index**  
  Permet aux utilisateurs d'accéder à la table sous-jacente ou aux données des index cluster et à tous les index non-cluster associés pendant l'opération d'index.  
@@ -144,7 +148,7 @@ caps.handback.revision: 44
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour placer un index existant dans un autre groupe de fichiers  
+#### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>Pour placer un index existant dans un autre groupe de fichiers  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -185,3 +189,4 @@ caps.handback.revision: 44
  Pour plus d’informations, consultez [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
   
+

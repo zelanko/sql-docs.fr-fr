@@ -1,25 +1,29 @@
 ---
-title: "Le&#231;on 6 : G&#233;n&#233;rer un journal d’activit&#233; et de sauvegarde &#224; l’aide d’une sauvegarde d’instantan&#233;s de fichiers | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Leçon 6 : Générer un journal d’activité et de sauvegarde à l’aide d’une sauvegarde d’instantanés de fichiers | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 8f3ea59fb612ea692b52ab46bb342d8c4031fb71
+ms.lasthandoff: 04/11/2017
+
 ---
-# Le&#231;on 6 : G&#233;n&#233;rer un journal d’activit&#233; et de sauvegarde &#224; l’aide d’une sauvegarde d’instantan&#233;s de fichiers
+# <a name="lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup"></a>Leçon 6 : Générer un journal d’activité et de sauvegarde à l’aide d’une sauvegarde d’instantanés de fichiers
 Dans cette leçon, vous allez générer une activité dans la base de données AdventureWorks2014 et créer régulièrement des sauvegardes du journal des transactions à l’aide de sauvegardes d’instantanés de fichiers. Pour plus d’informations sur l’utilisation de sauvegardes d’instantanés de fichiers, consultez [Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
 Pour générer une activité dans la base de données AdventureWorks2014 et créer régulièrement des sauvegardes du journal des transactions à l’aide de sauvegardes d’instantanés de fichiers, procédez comme suit :  
@@ -77,21 +81,21 @@ Pour générer une activité dans la base de données AdventureWorks2014 et cré
   
 5.  Examinez la sortie du premier script ; le nombre de lignes final est désormais 29 939.  
   
-    ![Row count of 29,939 is displayed](../relational-databases/media/5e2f4229-1970-49c9-89b3-e96b6f7fde83.JPG "Row count of 29,939 is displayed")  
+    ![Un nombre de lignes de 29 939 est affiché](../relational-databases/media/5e2f4229-1970-49c9-89b3-e96b6f7fde83.JPG "Un nombre de lignes de 29 939 est affiché")  
   
 6.  Examinez la sortie du deuxième script ; chaque fois que l’instruction BACKUP LOG est exécutée, deux instantanés de fichiers sont créés, à savoir un instantané de fichier du fichier journal et un instantané de fichier du fichier de données, soit un total de deux instantanés de fichiers par fichier de base de données. Une fois le deuxième script terminé, il existe un total de 16 instantanés de fichiers, à raison de 8 par fichier de base de données (un issu de l’instruction BACKUP DATABASE et un pour chaque exécution de l’instruction BACKUP LOG).  
   
-    ![results pane showing file snapshots of both data and log file when log backup is taken](../relational-databases/media/acd213b8-895e-425c-bd72-2bf10e65a5ba.JPG "results pane showing file snapshots of both data and log file when log backup is taken")  
+    ![volet de résultats affichant les captures instantanées de fichier des fichiers de données et journal lors de la sauvegarde du journal](../relational-databases/media/acd213b8-895e-425c-bd72-2bf10e65a5ba.JPG "volet de résultats affichant les captures instantanées de fichier des fichiers de données et journal lors de la sauvegarde du journal")  
   
-    ![four file snapshots are displayed](../relational-databases/media/e7eff77d-85b9-4e52-abd8-e49952c8118a.JPG "four file snapshots are displayed")  
+    ![quatre captures instantanées de fichier sont affichées](../relational-databases/media/e7eff77d-85b9-4e52-abd8-e49952c8118a.JPG "quatre captures instantanées de fichier sont affichées")  
   
-    ![results pane showing a total of 16 file snapshots](../relational-databases/media/c3ddff17-a83c-4bf0-a670-a38834f9c922.JPG "results pane showing a total of 16 file snapshots")  
+    ![volet de résultats montrant un total de 16 captures instantanées de fichier](../relational-databases/media/c3ddff17-a83c-4bf0-a670-a38834f9c922.JPG "volet de résultats montrant un total de 16 captures instantanées de fichier")  
   
 7.  Dans l’Explorateur d’objets, connectez-vous au stockage Azure.  
   
 8.  Développez Conteneurs, développez le conteneur que vous avez créé à la leçon 1 et vérifiez que 7 nouveaux fichiers de sauvegarde apparaissent, ainsi que les objets blob issus des leçons précédentes (actualisez le nœud si nécessaire).  
   
-    ![Azure container showing 7 log backup blobs](../relational-databases/media/cfa5a326-87a2-4202-9a04-38bf577d2d0b.JPG "Azure container showing 7 log backup blobs")  
+    ![Conteneur Azure montrant 7 objets blob de sauvegarde de journal](../relational-databases/media/cfa5a326-87a2-4202-9a04-38bf577d2d0b.JPG "Conteneur Azure montrant 7 objets blob de sauvegarde de journal")  
   
 **Leçon suivante :**  
   
@@ -99,3 +103,4 @@ Pour générer une activité dans la base de données AdventureWorks2014 et cré
   
   
   
+

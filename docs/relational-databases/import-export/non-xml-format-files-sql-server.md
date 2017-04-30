@@ -1,29 +1,33 @@
 ---
-title: "Fichiers de format non-XML (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "fichiers de format non-XML"
-  - "fichiers de format [SQL Server], fichiers de format non-XML"
-  - "importation en bloc [SQL Server], fichiers de format"
+title: "Fichiers de format non-XML (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- non-XML format files
+- format files [SQL Server], non-XML format files
+- bulk importing [SQL Server], format files
 ms.assetid: f566db3e-0a3b-4a61-9c84-49f8d42f5760
 caps.latest.revision: 63
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 63
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7593a0015328cba74de239f55575217687ff5193
+ms.lasthandoff: 04/11/2017
+
 ---
-# Fichiers de format non-XML (SQL Server)
+# <a name="non-xml-format-files-sql-server"></a>Fichiers de format non-XML (SQL Server)
   Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], deux types de fichiers de format sont pris en charge pour l’exportation et l’importation en bloc : les *fichiers de format non XML* et les *fichiers de format XML*.  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   [Avantages](#Benefits)  
   
@@ -33,9 +37,9 @@ caps.handback.revision: 63
   
 -   [Tâches associées](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Avantages des fichiers de format non XML  
+##  <a name="Benefits"></a> Avantages des fichiers de format non XML  
   
--   Vous pouvez créer automatiquement un fichier de format non XML en spécifiant l’option **format** dans une commande **bcp**.  
+-   Vous pouvez créer automatiquement un fichier de format non XML en spécifiant l’option **format** dans une commande **bcp** .  
   
 -   Lorsque vous spécifiez un fichier de format existant dans une commande **bcp** , cette dernière utilise les valeurs enregistrées dans un fichier de format et elle ne vous demande pas le type de stockage dans le fichier, la longueur du préfixe, la longueur des champs, ni l’indicateur de fin de champ.  
   
@@ -51,7 +55,7 @@ caps.handback.revision: 63
   
  L'exemple suivant présente les champs de fichier de format d'un fichier de format non XML.  
   
- ![Identifie les champs d'un fichier de format non XML](../../relational-databases/import-export/media/mydepart-fmt-ident-c.gif "Identifie les champs d'un fichier de format non XML")  
+ ![Identifie les champs d’un fichier de format non-XML](../../relational-databases/import-export/media/mydepart-fmt-ident-c.gif "Identifie les champs d’un fichier de format non-XML")  
   
  Les champs **Version** et **Nombre de colonnes** n'apparaissent qu'une seule fois. Leurs significations sont décrites dans le tableau suivant.  
   
@@ -64,12 +68,12 @@ caps.handback.revision: 63
   
 |Champ du fichier de format|Description|  
 |------------------------|-----------------|  
-|**Ordre des champs du fichier hôte**|Nombre indiquant la position de chaque champ dans le fichier de données. Le premier champ de la ligne correspond à la valeur 1, etc.|  
+|**Ordre des champs du fichier hôte**|Nombre indiquant la position de chaque champ dans le fichier de données. Le premier champ de la ligne correspond à la valeur 1, etc.|  
 |**Type de données du fichier hôte**|Indique que le type de données est stocké dans un champ précis du fichier de données. Dans le cas des fichiers de données ASCII, utilisez SQLCHAR ; pour les fichiers de données au format natif, utilisez les types de données par défaut. Pour plus d’informations, consultez [Spécifier le type de stockage de fichiers à l’aide de bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md).|  
-|**Longueur de préfixe**|Nombre de caractères du préfixe de longueur pour le champ. Les longueurs de préfixe valides sont 0, 1, 2, 4 et 8. Pour éviter de spécifier le préfixe de longueur, définissez la valeur 0. Un préfixe de longueur doit être spécifié si le champ contient des valeurs de données NULL. Pour plus d’informations, consultez [Spécifier une longueur de préfixe dans des fichiers de données à l’aide de bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md).|  
-|**Longueur des données du fichier hôte**|Longueur maximale, en octets, du type des données stockées dans le champ particulier du fichier de données.<br /><br /> Si vous créez un fichier de format non XML pour un fichier texte délimité, vous pouvez spécifier 0 pour la longueur des données du fichier hôte de chaque champ de données. Lors de l'importation d'un fichier de texte délimité ayant un indicateur de fin et une longueur de préfixe de 0, la valeur de longueur de champ est ignorée, car l'espace de stockage utilisé par le champ est égal à la longueur des données plus le terminateur.<br /><br /> Pour plus d’informations, consultez [Spécifier la longueur des champs au moyen de bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md).|  
+|**Longueur de préfixe**|Nombre de caractères du préfixe de longueur pour le champ. Les longueurs de préfixe valides sont 0, 1, 2, 4 et 8. Pour éviter de spécifier le préfixe de longueur, définissez la valeur 0. Un préfixe de longueur doit être spécifié si le champ contient des valeurs de données NULL. Pour plus d’informations, consultez [Spécifier une longueur de préfixe dans des fichiers de données à l’aide de bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md).|  
+|**Longueur des données du fichier hôte**|Longueur maximale, en octets, du type des données stockées dans le champ particulier du fichier de données.<br /><br /> Si vous créez un fichier de format non XML pour un fichier texte délimité, vous pouvez spécifier 0 pour la longueur des données du fichier hôte de chaque champ de données. Lors de l'importation d'un fichier de texte délimité ayant un indicateur de fin et une longueur de préfixe de 0, la valeur de longueur de champ est ignorée, car l'espace de stockage utilisé par le champ est égal à la longueur des données plus le terminateur.<br /><br /> Pour plus d’informations, consultez [Spécifier la longueur des champs au moyen de bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md).|  
 |**Indicateur de fin**|Caractère de séparation utilisé pour délimiter les champs dans un fichier de données. Les indicateurs de fin communs sont la virgule (,), la tabulation (\t) et la fin de ligne (\r\n). Pour plus d’informations, consultez [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).|  
-|**Ordre des colonnes du serveur**|Ordre dans lequel les colonnes apparaissent dans la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par exemple, si le quatrième champ du fichier de données est mappé sur la sixième colonne d'une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'ordre de la colonne sur le serveur correspondant au quatrième champ est défini sur 6.<br /><br /> Pour éviter qu'une colonne d'une table reçoive des données d'un fichier de données, définissez l'ordre de colonne sur le serveur sur 0.|  
+|**Ordre des colonnes du serveur**|Ordre dans lequel les colonnes apparaissent dans la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par exemple, si le quatrième champ du fichier de données est mappé sur la sixième colonne d'une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'ordre de la colonne sur le serveur correspondant au quatrième champ est défini sur 6.<br /><br /> Pour éviter qu'une colonne d'une table reçoive des données d'un fichier de données, définissez l'ordre de colonne sur le serveur sur 0.|  
 |**Nom de colonne du serveur**|Nom de la colonne pris de la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il n'est pas indispensable d'utiliser le nom réel du champ, mais le champ ne doit pas être vide dans le fichier de format.|  
 |**Classement par colonnes**|Classement utilisé pour stocker des caractères et des données Unicode dans le fichier de données.|  
   
@@ -77,9 +81,9 @@ caps.handback.revision: 63
 >  Vous pouvez modifier un fichier de format afin de pouvoir importer des données en bloc à partir d'un fichier de données dans lequel le nombre et/ou l'ordre des champs diffèrent du nombre ou de l'ordre des colonnes de la table. Pour plus d'informations, consultez la liste [Tâches associées](#RelatedTasks) , plus loin dans cette rubrique.  
   
 ##  <a name="Examples"></a> Exemple de fichier de format non XML  
- L'exemple suivant affiche un fichier de format non XML créé précédemment (`myDepartmentIdentical-f-c.fmt`). Ce fichier décrit un champ de données de type caractère pour chaque colonne de la table `HumanResources.Department` dans la base de données exemple `AdventureWorks2012`.  
+ L'exemple suivant affiche un fichier de format non XML créé précédemment (`myDepartmentIdentical-f-c.fmt`). Ce fichier décrit un champ de données de type caractère pour chaque colonne de la table `HumanResources.Department` dans la base de données exemple `AdventureWorks2012` .  
   
- Le fichier de format généré, `myDepartmentIdentical-f-c.fmt`, contient les informations suivantes :  
+ Le fichier de format généré, `myDepartmentIdentical-f-c.fmt`, contient les informations suivantes :  
   
 ```  
 12.0  
@@ -105,7 +109,7 @@ caps.handback.revision: 63
   
 -   [Utiliser un fichier de format pour mapper les colonnes d’une table aux champs d’un fichier de données &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utilitaire bcp](../../tools/bcp-utility.md)   
  [Créer un fichier de format &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)   
  [Fichiers de format XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)   

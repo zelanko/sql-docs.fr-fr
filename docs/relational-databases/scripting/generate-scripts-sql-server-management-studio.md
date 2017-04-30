@@ -1,29 +1,33 @@
 ---
-title: "G&#233;n&#233;rer des scripts (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Générer des scripts (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1bf73031c7e2e302d6174e6f21a005c3106f4cb2
+ms.lasthandoff: 04/11/2017
+
 ---
-# G&#233;n&#233;rer des scripts (SQL Server Management Studio)
+# <a name="generate-scripts-sql-server-management-studio"></a>Générer des scripts (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit deux mécanismes pour générer des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] . Vous pouvez créer des scripts pour plusieurs objets au moyen de l' **Assistant Générer et publier des scripts**. Vous pouvez également générer un script pour des objets individuels ou plusieurs objets à l'aide du menu **Script en tant que** dans l' **Explorateur d'objets**.  
   
-1.  **Choisissez une méthode :**  [Assistant Générer et publier des scripts](#GenPubScriptWiz), [Menu Script en tant que de l'Explorateur d'objets](#OEScriptAsMenu)  
+1.  **Choose a method:**  [Generate and Publish Scripts Wizard](#GenPubScriptWiz), [Object Explorer Script As Menu](#OEScriptAsMenu)  
   
-2.  **Pour utiliser le menu Script en tant que :**  [Générer un script d'un objet unique](#ScriptSingleObject), [Générer un script de deux objets à l'aide de l'Explorateur d'objets](#ScriptTwoObjectsOE), [Générer un script de deux objets à l'aide de la page Détails de l'Explorateur d'objets](#ScriptTwoObjectsOED)  
+2.  **To use the Script As menu:**  [Script a Single Object](#ScriptSingleObject), [Script Two Objects Using Object Explorer](#ScriptTwoObjectsOE), [Script Two Objects Using Object Explorer Details](#ScriptTwoObjectsOED)  
   
-## Avant de commencer  
+## <a name="before-you-begin"></a>Avant de commencer  
  Choisissez le mécanisme qui correspond le mieux à vos besoins.  
   
 ###  <a name="GenPubScriptWiz"></a> Assistant Générer et publier des scripts  

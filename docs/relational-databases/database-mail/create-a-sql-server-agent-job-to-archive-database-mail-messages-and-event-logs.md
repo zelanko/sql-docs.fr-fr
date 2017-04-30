@@ -1,43 +1,47 @@
 ---
-title: "Cr&#233;er un travail d&#39;Agent SQL Server pour archiver les messages et les journaux d&#39;&#233;v&#233;nements de la messagerie de base de donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "archivage des messages électroniques et des pièces jointes [SQL Server]"
-  - "suppression des messages électroniques et des pièces jointes"
-  - "messagerie de base de données [SQL Server], archivage"
-  - "enregistrement des messages électroniques et des pièces jointes"
+title: "Créer un travail de SQL Server Agent pour archiver les messages et les journaux d’événements de la messagerie de base de données | Microsoft Docs"
+ms.custom: 
+ms.date: 08/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- archiving mail messages and attachments [SQL Server]
+- removing mail messages and attachements
+- Database Mail [SQL Server], archiving
+- saving mail messages and attachments
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bfba800ce9266e7a27c6e27e8e3ea9dfc2f2b08e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cr&#233;er un travail d&#39;Agent SQL Server pour archiver les messages et les journaux d&#39;&#233;v&#233;nements de la messagerie de base de donn&#233;es
+# <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Créer un travail d'Agent SQL Server pour archiver les messages et les journaux d'événements de la messagerie de base de données
   Des copies des messages de la messagerie de base de données et de leurs pièces jointes sont conservées dans les tables **msdb** avec le journal d'événements de la messagerie de base de données. Il peut être utile d'archiver périodiquement les messages et les événements dont vous n'avez plus besoin afin de réduire la taille des tables. Les procédures suivantes permettent de créer un travail de l'Agent SQL Server pour automatiser le processus.  
   
 -   **Avant de commencer :**  , [Conditions préalables](#Prerequisites), [Recommandations](#Recommendations), [Autorisations](#Permissions)  
   
--   **Pour archiver les messages et les journaux de la messagerie de base de données à l'aide de :**  [Agent SQL Server](#Process_Overview)  
+-   **To Archive Database Mail messages and logs using :**  [SQL Server Agent](#Process_Overview)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Configuration requise  
+###  <a name="Prerequisites"></a> Conditions préalables  
  Les nouvelles tables de stockage des données d'archive peuvent se trouver dans une base de données d'archive spéciale. Vous pouvez également exporter les lignes vers un fichier texte.  
    
 ###  <a name="Recommendations"></a> Recommandations  
  Dans votre environnement de production, vous pouvez ajouter des fonctionnalités supplémentaires de vérification des erreurs et faire envoyer un message électronique aux opérateurs en cas d'échec du travail.  
   
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorisations  
  Vous devez être membre du rôle serveur fixe **sysadmin** pour pouvoir exécuter les procédures stockées décrites dans cette rubrique.  
   
   
@@ -58,9 +62,9 @@ caps.handback.revision: 19
 -   Planifiez une exécution périodique du travail.  
   
   
-## Pour créer un travail de l'Agent SQL Server  
+## <a name="to-create-a-sql-server-agent-job"></a>Pour créer un travail de l'Agent SQL Server  
   
-1.  Dans l’Explorateur d’objets, développez l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cliquez avec le bouton droit sur **Travaux**, puis cliquez sur **Nouveau travail**.  
+1.  Dans l’Explorateur d’objets, développez l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cliquez avec le bouton droit sur **Travaux**, puis cliquez sur **Nouveau travail**.  
   
 2.  Dans la boîte de dialogue **Nouveau travail** , dans la zone **Nom** , tapez **Archiver la messagerie de base de données**.  
   
@@ -72,13 +76,13 @@ caps.handback.revision: 19
   
  [Vue d'ensemble](#Process_Overview)  
   
-## Pour créer une étape permettant d'archiver les messages de la messagerie de base de données  
+## <a name="to-create-a-step-to-archive-the-database-mail-messages"></a>Pour créer une étape permettant d'archiver les messages de la messagerie de base de données  
   
 1.  Dans la page **Étapes** , cliquez sur **Nouveau**.  
   
 2.  Dans la zone **Nom de l'étape** , tapez **Copier les éléments de la messagerie de base de données**.  
   
-3.  Dans la zone **Type**, sélectionnez **Script Transact-SQL (T-SQL)**.  
+3.  Dans la zone **Type** , sélectionnez **Script Transact-SQL (T-SQL)**.  
   
 4.  Dans la zone **Base de données** , sélectionnez **msdb**.  
   
@@ -98,13 +102,13 @@ caps.handback.revision: 19
   
  [Vue d'ensemble](#Process_Overview)  
   
-## Pour créer une étape permettant d'archiver les pièces jointes de la messagerie de base de données  
+## <a name="to-create-a-step-to-archive-the-database-mail-attachments"></a>Pour créer une étape permettant d'archiver les pièces jointes de la messagerie de base de données  
   
 1.  Dans la page **Étapes** , cliquez sur **Nouveau**.  
   
 2.  Dans la zone **Nom de l'étape** , tapez **Copier les pièces jointes de la messagerie de base de données**.  
   
-3.  Dans la zone **Type**, sélectionnez **Script Transact-SQL (T-SQL)**.  
+3.  Dans la zone **Type** , sélectionnez **Script Transact-SQL (T-SQL)**.  
   
 4.  Dans la zone **Base de données** , sélectionnez **msdb**.  
   
@@ -125,13 +129,13 @@ caps.handback.revision: 19
   
  [Vue d'ensemble](#Process_Overview)  
   
-## Pour créer une étape permettant d'archiver le journal de la messagerie de base de données  
+## <a name="to-create-a-step-to-archive-the-database-mail-log"></a>Pour créer une étape permettant d'archiver le journal de la messagerie de base de données  
   
 1.  Dans la page **Étapes** , cliquez sur **Nouveau**.  
   
 2.  Dans la zone **Nom de l'étape** , tapez **Copier le journal de la messagerie de base de données**.  
   
-3.  Dans la zone **Type**, sélectionnez **Script Transact-SQL (T-SQL)**.  
+3.  Dans la zone **Type** , sélectionnez **Script Transact-SQL (T-SQL)**.  
   
 4.  Dans la zone **Base de données** , sélectionnez **msdb**.  
   
@@ -152,13 +156,13 @@ caps.handback.revision: 19
   
  [Vue d'ensemble](#Process_Overview)  
   
-## Pour créer une étape permettant de supprimer les lignes archivées du journal de la messagerie de base de données  
+## <a name="to-create-a-step-to-remove-the-archived-rows-from-database-mail"></a>Pour créer une étape permettant de supprimer les lignes archivées du journal de la messagerie de base de données  
   
 1.  Dans la page **Étapes** , cliquez sur **Nouveau**.  
   
 2.  Dans la zone **Nom de l'étape** , tapez **Supprimer les lignes de la messagerie de base de données**.  
   
-3.  Dans la zone **Type**, sélectionnez **Script Transact-SQL (T-SQL)**.  
+3.  Dans la zone **Type** , sélectionnez **Script Transact-SQL (T-SQL)**.  
   
 4.  Dans la zone **Base de données** , sélectionnez **msdb**.  
   
@@ -174,13 +178,13 @@ caps.handback.revision: 19
   
  [Vue d'ensemble](#Process_Overview)  
   
-## Pour créer une étape permettant de supprimer les éléments archivés du journal des événements de la messagerie de base de données  
+## <a name="to-create-a-step-to-remove-the-archived-items-from-database-mail-event-log"></a>Pour créer une étape permettant de supprimer les éléments archivés du journal des événements de la messagerie de base de données  
   
 1.  Dans la page **Étapes** , cliquez sur **Nouveau**.  
   
 2.  Dans la zone **Nom de l'étape** , tapez **Supprimer les lignes du journal des événements de la messagerie de base de données**.  
   
-3.  Dans la zone **Type**, sélectionnez **Script Transact-SQL (T-SQL)**.  
+3.  Dans la zone **Type** , sélectionnez **Script Transact-SQL (T-SQL)**.  
   
 4.  Dans la zone **Commande** , tapez l'instruction suivante pour supprimer du journal des événements de la messagerie de base de données les lignes antérieures au mois actuel :  
   
@@ -194,7 +198,7 @@ caps.handback.revision: 19
   
  [Vue d'ensemble](#Process_Overview)  
   
-## Pour planifier une exécution périodique du travail  
+## <a name="to-schedule-the-job-to-run-periodically"></a>Pour planifier une exécution périodique du travail  
   
 1.  Dans la boîte de dialogue **Nouveau travail** , cliquez sur **Planifications**.  
   
@@ -215,3 +219,4 @@ caps.handback.revision: 19
  [Vue d'ensemble](#Process_Overview)  
   
   
+

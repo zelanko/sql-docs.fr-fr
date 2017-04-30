@@ -1,23 +1,27 @@
 ---
-title: "G&#233;rer les sessions d&#39;&#233;v&#233;nements dans l&#39;Explorateur d&#39;objets | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Gérer les sessions d’événements dans l’Explorateur d’objets | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e1bfecba6078a80485bfcd9448c8be19d0c69328
+ms.lasthandoff: 04/11/2017
+
 ---
-# G&#233;rer les sessions d&#39;&#233;v&#233;nements dans l&#39;Explorateur d&#39;objets
+# <a name="manage-event-sessions-in-the-object-explorer"></a>Gérer les sessions d'événements dans l'Explorateur d'objets
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Cette rubrique décrit les actions effectuées dans l' **Explorateur d'objets** qui affectent les événements étendus :  
@@ -34,10 +38,10 @@ caps.handback.revision: 10
   
 -   Supprimer une session d'événements étendus  
   
-## Créer une session d'événements étendus  
- Pour plus d'informations sur la création d'une session d'événements étendus, consultez [Create an Extended Events Session](../Topic/Create%20an%20Extended%20Events%20Session.md).  
+## <a name="create-an-extended-events-session"></a>Créer une session d'événements étendus  
+ Pour plus d'informations sur la création d'une session d'événements étendus, consultez [Create an Extended Events Session](http://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74).  
   
-## Démarrer ou arrêter une session d'événements étendus  
+## <a name="starting-or-stopping-an-extended-events-session"></a>Démarrer ou arrêter une session d'événements étendus  
  Vous pouvez démarrer ou arrêter une session d'événements étendus via l' **Éditeur de requête** en utilisant l'instruction **ALTER EVENT SESSION** , ou en utilisant le nœud **Événements étendus** de l' **Explorateur d'objets**.  
   
  Quand vous arrêtez une session d’événements, la session n’apparaît plus comme une session active dans la vue de gestion dynamique sys.dm_xe_sessions. Toutefois, la définition de session reste intacte, et vous pouvez redémarrer la session. Pour supprimer complètement une définition de session, vous devez supprimer la session.  
@@ -46,7 +50,7 @@ caps.handback.revision: 10
   
  Quand vous arrêtez une session qui utilise une cible en mémoire, telle que la cible de mémoire tampon en anneau, la cible de création de compartiments, la cible d’appariement d’événements ou la cible de compteur d’événements synchrone, toutes les informations stockées dans la mémoire tampon de la session (colonne target_data de la vue de gestion dynamique sys.dm_xe_session_targets) sont perdues. Pour accéder aux données d'un événement après avoir interrompu une session, vous devez enregistrer les données avant de mettre fin à la session ou configurer la session pour pouvoir utiliser un fichier cible.  
   
-### Démarrer ou arrêter une session d'événements étendus à l'aide de l'Éditeur de requête  
+### <a name="start-or-stop-an-extended-events-session-using-query-editor"></a>Démarrer ou arrêter une session d'événements étendus à l'aide de l'Éditeur de requête  
  Pour démarrer une session, émettez les instructions suivantes, en remplaçant *session_name* par le nom de la session d’événements étendus :  
   
 ```  
@@ -63,10 +67,10 @@ ON SERVER
 STATE = STOP  
 ```  
   
-### Démarrer ou arrêter une session d'événements étendus dans l'Explorateur d'objets  
+### <a name="start-or-stop-an-extended-events-session-in-object-explorer"></a>Démarrer ou arrêter une session d'événements étendus dans l'Explorateur d'objets  
  Pour démarrer ou arrêter une session d'événements étendus dans l' **Explorateur d'objets**, développez **Gestion**, **Événements étendus**, puis les nœuds **Sessions** ; cliquez ensuite avec le bouton droit sur une session, puis cliquez sur **Démarrer la session** ou sur **Arrêter la session**.  
   
-## Exporter un modèle de session d'événements étendus  
+## <a name="export-an-extended-events-session-template"></a>Exporter un modèle de session d'événements étendus  
  Vous pouvez exporter une session d'événements étendus à l'aide de l' **Explorateur d'objets**, puis l'enregistrer en tant que fichier modèle .xml. Par exemple, vous pouvez exporter une session, puis appliquer le modèle à une nouvelle session d'événements à l'aide de l' **Assistant Nouvelle session** ou de l'interface **Nouvelle session** .  
   
  Lorsque vous exportez une session, assurez-vous d'enregistrer le fichier modèle à un emplacement qui utilise le système de fichiers NTFS, et que vous limitez l'accès aux utilisateurs autorisés à afficher les informations.  
@@ -81,7 +85,7 @@ STATE = STOP
   
      Si vous enregistrez le fichier à l'emplacement de modèle par défaut [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , le modèle s'affiche dans la liste déroulante des modèles prédéfinis lorsque vous utilisez l' **Assistant Nouvelle session** et la boîte de dialogue **Nouvelle session** .  
   
-## Importer un modèle de session d'événements étendus  
+## <a name="import-an-extended-events-session-template"></a>Importer un modèle de session d'événements étendus  
  À l'aide de l' **Explorateur d'objets**, vous pouvez importer un modèle pour une session d'événements étendus. Par exemple, vous pouvez souhaiter procéder ainsi pour créer une session a partir d'un modèle qui a été exporté à partir d'une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Pour importer une session d'événements étendus, vous devez disposer des autorisations **ALTER ANY EVENT SESSION** nécessaires.  
@@ -98,11 +102,11 @@ STATE = STOP
   
 4.  Développez la zone déroulante **Modèle** .  
   
-5.  Cliquez sur **\<File From …>Open** et recherchez la session (fichier XML) à importer.  
+5.  Cliquez sur **\<File From…> Open**, puis recherchez la session (fichier XML) à importer.  
   
  La session apparaît sous le nœud **Sessions** . Par défaut, la session n'est pas démarrée.  
   
-## Modifier une session d'événements étendus  
+## <a name="edit-an-extended-events-session"></a>Modifier une session d'événements étendus  
  Vous pouvez modifier une session d'événements étendus dans l'Explorateur d'objets.  
   
  Pour modifier une session d'événements étendus :  
@@ -115,12 +119,12 @@ STATE = STOP
   
 4.  Après avoir modifié la session d'événements, cliquez sur **OK**.  
   
-## Générer le script d'une définition de session d'événements à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+## <a name="script-an-event-session-definition-using-includetsqlincludestsql-mdmd"></a>Générer le script d'une définition de session d'événements à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  L'Assistant Nouvelle session et la boîte de dialogue Nouvelle session comprennent une option qui génère un script [!INCLUDE[tsql](../../includes/tsql-md.md)] définissant la session événements étendus.  
   
  Vous pouvez accéder à [!INCLUDE[tsql](../../includes/tsql-md.md)] pour une session d'événements étendus existante en cliquant sur le nom de la session, en sélectionnant **Générer un script de la session en tant que**, puis sélectionnant **Créer vers**.  
   
-## Supprimer une session d'événements étendus  
+## <a name="delete-an-extended-events-session"></a>Supprimer une session d'événements étendus  
  Vous pouvez supprimer une session d'événements étendus :  
   
 -   Dans l'Éditeur de requête, à l'aide de **DROP EVENT SESSION**.  
@@ -130,7 +134,7 @@ STATE = STOP
  Quand vous supprimez une session d’événements, toutes les informations de configuration sont supprimées, et la définition de session ne s’affiche plus dans l’affichage catalogue sys.server_event_sessions.  
   
 > [!NOTE]  
->  system_health et Always On_health sont fournies avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; ne les supprimez pas. system_health est activée par défaut (pour plus d’informations, consultez [Utiliser la session system_health](../../relational-databases/extended-events/use-the-system-health-session.md)). Always On_health est désactivée par défaut. Ces sessions collectent des données qui peuvent être utiles pour le diagnostic des problèmes de performances.  
+>  system_health et Always On_health sont fournies avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; ne les supprimez pas. system_health est activée par défaut (pour plus d’informations, consultez [Utiliser la session system_health](../../relational-databases/extended-events/use-the-system-health-session.md)). Always On_health est désactivée par défaut. Ces sessions collectent des données qui peuvent être utiles pour le diagnostic des problèmes de performances.  
   
  Pour supprimer une session d'événements étendus, vous devez disposer de l'autorisation ALTER ANY EVENT SESSION.  
   
@@ -144,7 +148,7 @@ STATE = STOP
   
 4.  Après avoir modifié la session d'événements, cliquez sur **OK**.  
   
- Pour supprimer une session d’événements étendus dans l’**Éditeur de requête**, émettez les instructions suivantes en remplaçant *session_name* par le nom de la session d’événements étendus à supprimer :  
+ Pour supprimer une session d’événements étendus dans l’ **Éditeur de requête**, émettez les instructions suivantes en remplaçant *session_name* par le nom de la session d’événements étendus à supprimer :  
   
 ```  
 DROP EVENT SESSION [session_name]  

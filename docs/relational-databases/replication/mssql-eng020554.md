@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG020554 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSSQL_ENG020554 (erreur)"
+title: MSSQL_ENG020554 | Microsoft Docs
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG020554 error
 ms.assetid: ef1a1b88-b2ab-43e8-99cd-163a973262d6
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e3c5e6ae34945bda4ec27846f242a5c4bfd73daa
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG020554
+# <a name="mssqleng020554"></a>MSSQL_ENG020554
     
-## Détails du message  
+## <a name="message-details"></a>Détails du message  
   
 |||  
 |-|-|  
@@ -31,10 +35,10 @@ caps.handback.revision: 16
 |Nom symbolique||  
 |Texte du message|L'agent de réplication n'a enregistré aucun message d'état d'avancement en %ld minutes. Il se peut que l'agent ne réponde pas ou que l'activité du système soit élevée. Vérifiez que les enregistrements sont répliqués vers la destination et que les connexions à l'Abonné, au serveur de publication et au serveur de distribution sont toujours actives.|  
   
-## Explication  
- Le **contrôle des agents de réplication** tâche s’exécute à intervalles réguliers (10 minutes par défaut) pour vérifier l’état de chaque agent de réplication. Si un agent n'a consigné aucun message d'avancement depuis la dernière fois où le travail de vérification des agents s'est exécuté, une erreur MSSQL_ENG020554 peut être signalée. L'agent est supposé consigner au moins des messages d'historique, même si aucune autre activité de réplication ne se produit. Même si l'agent de réplication ne répond pas comme attendu, il n'est pas nécessairement arrêté ou en échec (si un agent a échoué, l'erreur MSSQL_ENG020536 est normalement signalée).  
+## <a name="explanation"></a>Explication  
+ Le travail **Vérification des agents de réplication** s'exécute à des intervalles spécifiés (10 minutes par défaut) pour vérifier l'état de chaque agent de réplication. Si un agent n'a consigné aucun message d'avancement depuis la dernière fois où le travail de vérification des agents s'est exécuté, une erreur MSSQL_ENG020554 peut être signalée. L'agent est supposé consigner au moins des messages d'historique, même si aucune autre activité de réplication ne se produit. Même si l'agent de réplication ne répond pas comme attendu, il n'est pas nécessairement arrêté ou en échec (si un agent a échoué, l'erreur MSSQL_ENG020536 est normalement signalée).  
   
- Les problèmes suivants peuvent provoquer l'apparition de l'erreur MSSQL_ENG020554 :  
+ Les problèmes suivants peuvent provoquer l'apparition de l'erreur MSSQL_ENG020554 :  
   
 -   L’Agent est occupé.  
   
@@ -42,42 +46,42 @@ caps.handback.revision: 16
   
 -   L'agent ne peut pas se connecter à un des ordinateurs de la topologie.  
   
-     Tous les agents ont un paramètre **- LoginTimeOut** (défini sur 15 secondes par défaut), qui détermine la durée pendant laquelle un agent tente de se connecter à un nœud de réplication, telles que l’Agent de fusion se connecter au serveur de publication. Si le **- LoginTimeOut** a la valeur supérieure à l’intervalle auquel le travail de vérification de l’agent de réplication s’exécute, un problème de connexion peut être la cause de l’erreur : erreur MSSQL_ENG020554 est déclenché avant que l’agent est en mesure de déclencher une erreur plus spécifique.  
+     Tous les agents comportent un paramètre **-LoginTimeOut** (défini sur 15 secondes par défaut), qui détermine la durée pendant laquelle un agent tente de se connecter à un nœud de réplication, par exemple l’Agent de fusion qui se connecte au serveur de publication. Si **-LoginTimeOut** est défini sur une valeur supérieure à celle de l’intervalle auquel le travail de vérification des agents de réplication s’exécute, un problème de connexion peut être la cause principale de l'erreur : l’erreur MSSQL_ENG020554 est alors générée avant que l’agent puisse signaler une erreur plus spécifique.  
   
-## Action de l'utilisateur  
+## <a name="user-action"></a>Action de l'utilisateur  
  L'action requise dépend de la cause de l'erreur :  
   
 -   Dans tous les cas où cette erreur est signalée :  
   
      Vérifiez les détails de l'erreur dans le moniteur de réplication, puis redémarrez l'agent s'il s'est arrêté. Les détails de l'erreur devraient fournir des informations supplémentaires sur la raison pour laquelle l'agent ne fonctionnait pas correctement. Si l'agent ne fonctionne pas, n'arrêtez pas et ne redémarrez pas l'agent car cela peut aggraver le problème. Pour des informations sur l'affichage de l'état et des informations détaillées des erreurs des agents dans le moniteur de réplication, consultez les rubriques suivantes :  
   
-    -   Pour l’Agent de capture instantanée, Agent de lecture du journal et l’Agent de lecture de file d’attente, consultez la page [afficher des informations et effectuer des tâches pour les Agents associés à une Publication & #40 ; Moniteur de réplication & #41 ;](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md).  
+    -   Pour l’Agent d’instantané, l’Agent de lecture du journal et l’Agent de lecture de la file d’attente, consultez [Afficher des informations et effectuer des tâches pour les agents associés à une publication &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
   
-    -   Pour l’Agent de Distribution et l’Agent de fusion, consultez [afficher des informations et effectuer des tâches pour les Agents associés à un abonnement & #40 ; Moniteur de réplication & #41 ;](../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md).  
+    -   Pour l’Agent de distribution et l’Agent de fusion, consultez [Afficher des informations et effectuer des tâches pour les agents associés à un abonnement &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
 -   Si l'erreur est signalée fréquemment parce que l'agent est occupé :  
   
      Il peut être nécessaire de reconcevoir l'application de façon à ce que les traitements effectués par l'agent soient moins longs.  
   
-     Vous pouvez augmenter l'intervalle auquel l'état de l'agent est vérifié à l'aide de la boîte de dialogue **Propriétés du travail** . Pour plus d’informations sur l’accès à cette boîte de dialogue pour les tâches de réplication, consultez [afficher des informations et effectuer des tâches pour un serveur de publication & #40 ; Moniteur de réplication & #41 ;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md).  
+     Vous pouvez augmenter l'intervalle auquel l'état de l'agent est vérifié à l'aide de la boîte de dialogue **Propriétés du travail** . Pour obtenir des informations sur l’accès à cette boîte de dialogue pour les tâches de réplication, consultez [Afficher des informations et exécuter des tâches pour un serveur de publication &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md).  
   
 -   Si un agent ne peut pas se connecter à un des ordinateurs de la topologie :  
   
-     Il est recommandé que le **- LoginTimeOut** valeur inférieure à la fréquence à laquelle le travail de vérification de l’agent de réplication s’exécute. Dans certains cas, la valeur de **- LoginTimeOut** est défini plus haut en raison de problèmes de réseau qui provoquent des connexions à un délai d’attente. Si le **- LoginTimeOut** est défini, la réplication peut signaler des erreurs plus spécifiques, ce qui vous permet de résoudre les problèmes de connexion qui peut être dû à des autorisations, des problèmes de réseau ou d’autres problèmes. Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez :  
+     Il est recommandé de définir **-LoginTimeOut** sur une valeur inférieure à celle de l’intervalle auquel le travail de vérification des agents de réplication s’exécute. Dans certains cas, **-LoginTimeOut** est défini sur une valeur supérieure en raison de problèmes réseau entraînant l’expiration du délai d’attente des connexions. Si **-LoginTimeOut** est défini sur une valeur inférieure, la réplication peut signaler des erreurs plus spécifiques, ce qui vous permet de résoudre des problèmes de connexion pouvant eux-mêmes découler de problèmes d’autorisations, réseau ou autres. Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez :  
   
-    -   [Work with Replication Agent Profiles](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
+    -   [Utiliser des profils d’agent de réplication](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
-    -   [Afficher et modifier les paramètres d’invite de l’Agent de réplication & #40 ; SQL Server Management Studio & #41 ;](../../relational-databases/replication/agents/view and modify replication agent command prompt parameters.md)  
+    -   [Afficher et modifier des paramètres d’invite de commandes d’un Agent de réplication &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Concepts des exécutables de l’Agent réplication](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
+    -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-## Voir aussi  
- [Administration de l'Agent de réplication](../../relational-databases/replication/agents/replication-agent-administration.md)   
- [Erreurs et événements référence & #40 ; Réplication & #41 ;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Administration de l’Agent de réplication](../../relational-databases/replication/agents/replication-agent-administration.md)   
+ [Guide de référence des erreurs et des événements &#40;réplication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [Agent de distribution de réplication](../../relational-databases/replication/agents/replication-distribution-agent.md)   
- [Agent de lecture du journal des réplications](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
+ [Agent de lecture du journal de réplication](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [Agent de fusion de réplication](../../relational-databases/replication/agents/replication-merge-agent.md)   
- [Agent de lecture de la file d'attente de réplication](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [Agent d'instantané de réplication](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+ [Agent de lecture de la file d’attente de réplication](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
+ [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
   

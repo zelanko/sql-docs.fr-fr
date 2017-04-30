@@ -1,33 +1,37 @@
 ---
-title: "Informations d&#39;identification (moteur de base de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/27/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "principaux [SQL Server], informations d’identification"
-  - "schémas [SQL Server], informations d’identification"
-  - "autorisations [SQL Server], informations d’identification"
-  - "groupes [SQL Server], informations d’identification"
-  - "ALTER ANY CREDENTIAL (autorisation)"
-  - "sécurité [SQL Server], informations d’identification"
-  - "authentification [SQL Server], informations d’identification"
-  - "utilisateurs [SQL Server], informations d’identification"
-  - "informations d’identification [SQL Server], à propos des informations d’identification"
-  - "informations d'identification [SQL Server]"
+title: "Informations d’identification (moteur de base de données) | Microsoft Docs"
+ms.custom: 
+ms.date: 02/27/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- principals [SQL Server], credentials
+- schemas [SQL Server], credentials
+- permissions [SQL Server], credentials
+- groups [SQL Server], credentials
+- ALTER ANY CREDENTIAL permission
+- security [SQL Server], credentials
+- authentication [SQL Server], credentials
+- users [SQL Server], credentials
+- credentials [SQL Server], about credentials
+- credentials [SQL Server]
 ms.assetid: c8df6022-e0b4-46b8-9670-3f86938d3177
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 6c1e49cf402cf944e912e4297f6a315a570f27e8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Informations d&#39;identification (moteur de base de donn&#233;es)
+# <a name="credentials-database-engine"></a>Informations d'identification (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Les informations d'identification correspondent à un enregistrement qui contient les informations d'authentification requises pour la connexion à une ressource en dehors de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ces informations sont utilisées en interne par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La plupart des informations d'identification contiennent un nom d'utilisateur et un mot de passe Windows.  
@@ -38,11 +42,13 @@ caps.handback.revision: 30
   
  Les informations d'identification système sont créées automatiquement et sont associées à des points de terminaison spécifiques. Le nom de ces informations d'identification système commence par deux signes dièse (##).  
   
- Pour plus d’informations sur les informations d’identification, consultez les affichages catalogue [sys.credentials](../../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md) et [sys.database_credentials &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-credentials-transact-sql.md).  
+ Pour plus d’informations sur les informations d’identification, consultez les affichages catalogue [sys.credentials](../../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md) et [sys.database_scoped_credentials](../../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md).  
   
-## Contenu connexe  
- [Créer des informations d’identification](../../../relational-databases/security/authentication-access/create-a-credential.md) [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../../t-sql/statements/create-credential-transact-sql.md) [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
+## <a name="related-content"></a>Contenu associé  
+ [Créer des informations d’identification](../../../relational-databases/security/authentication-access/create-a-credential.md)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../../t-sql/statements/create-credential-transact-sql.md)   
+ [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
+ [Sécurisation de SQL Server](../../../relational-databases/security/securing-sql-server.md)  
   
- [Sécurisation de SQL Server](../../../relational-databases/security/securing-sql-server.md)  
   
-  
+

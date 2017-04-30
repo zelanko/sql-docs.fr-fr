@@ -1,40 +1,44 @@
 ---
-title: "fournisseur PowerShell SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PowerShell [SQL Server], fournisseur"
-  - "PowerShell [SQL Server], fournisseur PowerShell SQL Server"
-  - "fournisseurs [PowerShell]"
-  - "SMO [SQL Server], PowerShell"
-  - "PowerShell [SQL Server], SMO"
-  - "SQL Server Management Objects, PowerShell"
+title: "Fournisseur PowerShell SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PowerShell [SQL Server], provider
+- PowerShell [SQL Server], SQL Server PowerShell Provider
+- Providers [PowerShell]
+- SMO [SQL Server], PowerShell
+- PowerShell [SQL Server], SMO
+- SQL Server Management Objects, PowerShell
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 caps.latest.revision: 61
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 40b88611b6d25c2908a679b84f73ccad5b12cfbe
+ms.lasthandoff: 04/11/2017
+
 ---
-# fournisseur PowerShell SQL Server
+# <a name="sql-server-powershell-provider"></a>fournisseur PowerShell SQL Server
   Le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour Windows PowerShell présente la hiérarchie des objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans des chemins d'accès semblables aux chemins d'accès de système de fichiers. Vous pouvez utiliser les chemins pour localiser un objet, puis utiliser des méthodes des modèles SMO [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour effectuer des actions sur les objets.  
   
-## Avantages du fournisseur PowerShell SQL Server  
+## <a name="benefits-of-the-sql-server-powershell-provider"></a>Avantages du fournisseur PowerShell SQL Server  
  Les chemins d'accès implémentés par le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permettent de vérifier facilement et de manière interactive tous les objets dans une instance de SQL Server. Vous pouvez parcourir les chemins d'accès à l'aide d'alias Windows PowerShell semblables aux commandes que vous utilisez généralement pour parcourir les chemins d'accès du système de fichiers.  
   
-## Hiérarchie PowerShell SQL Server  
+## <a name="the-sql-server-powershell-hierarchy"></a>Hiérarchie PowerShell SQL Server  
  Les produits dont les données ou modèles objets peuvent être représentés dans une hiérarchie utilisent des fournisseurs Windows PowerShell pour exposer les hiérarchies. La hiérarchie est exposée à l'aide d'une structure de chemin d'accès semblable à celle utilisée par le système de fichiers Windows.  
   
  Chaque fournisseur Windows PowerShell implémente un ou plusieurs lecteurs. Chaque lecteur est le nœud racine d'une hiérarchie d'objets connexes. Le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implémente un lecteur SQLSERVER:. Le fournisseur définit également un jeu de dossiers principaux pour le lecteur SQLSERVER:. Chaque dossier et ses sous-dossiers représentent l'ensemble d'objets auxquels il est possible d'accéder à l'aide d'un modèle SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object). Si vous vous trouvez au niveau d'un sous-dossier dans un chemin d'accès qui commence par l'un de ces dossiers principaux, vous pouvez utiliser les méthodes du modèle objet associé pour effectuer des actions sur l'objet représenté par ce nœud. Les dossiers Windows PowerShell implémentés par le fournisseur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sont répertoriés dans le tableau suivant.  
   
-|Dossier|Espace de noms du modèle objet SQL Server|Objets|  
+|Dossier|Espace de noms du modèle objet SQL Server|Objets|  
 |------------|---------------------------------------|-------------|  
 |SQLSERVER:\SQL|<xref:Microsoft.SqlServer.Management.Smo><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Agent><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Broker><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Mail>|Objets de base de données, tels que les tables, les vues et les procédures stockées.|  
 |SQLSERVER:\SQLPolicy|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|Objets de la Gestion basée sur des stratégies, tels que les stratégies et les facettes.|  
@@ -62,16 +66,16 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |SQLSERVER:\SQL\MyComputer\DEFAULT\Databases|<xref:Microsoft.SqlServer.Management.Smo.DatabaseCollection>|  
 |SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012|<xref:Microsoft.SqlServer.Management.Smo.Database>|  
   
-## Tâches de fournisseur SQL Server  
+## <a name="sql-server-provider-tasks"></a>Tâches de fournisseur SQL Server  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
 |Explique comment utiliser des applets de commande Windows PowerShell pour parcourir les nœuds dans un chemin d'accès et obtenir la liste des objets au niveau de chaque nœud.|[Parcourir les chemins d'accès PowerShell SQL Server](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md)|  
 |Explique comment utiliser les méthodes et les propriétés SMO pour signaler et effectuer un travail sur l'objet représenté par un nœud dans un chemin d'accès. Explique également comment obtenir la liste des méthodes et des propriétés SMO pour ce nœud.|[Utiliser des chemins d'accès PowerShell SQL Server](../../relational-databases/scripting/work-with-sql-server-powershell-paths.md)|  
-|Explique comment convertir une valeur URN (Uniform Resource Name) SMO en chemin d'accès de fournisseur SQL Server.|[Convertir des URN en chemins d'accès de fournisseur SQL Server](../../relational-databases/scripting/convert-urns-to-sql-server-provider-paths.md)|  
-|Explique comment ouvrir des connexions d'authentification SQL Server à l'aide du fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par défaut, le fournisseur utilise des connexions via l'authentification Windows établies à l'aide des informations d'identification du compte Windows qui exécute la session Windows PowerShell.|[Gérer l'authentification dans le moteur de base de données PowerShell](../../relational-databases/scripting/manage-authentication-in-database-engine-powershell.md)|  
+|Explique comment convertir une valeur URN (Uniform Resource Name) SMO en chemin d'accès de fournisseur SQL Server.|[Convertir des URN en chemins d'accès de fournisseur SQL Server](../../relational-databases/scripting/convert-urns-to-sql-server-provider-paths.md)|  
+|Explique comment ouvrir des connexions d'authentification SQL Server à l'aide du fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par défaut, le fournisseur utilise des connexions via l'authentification Windows établies à l'aide des informations d'identification du compte Windows qui exécute la session Windows PowerShell.|[Gérer l'authentification dans le moteur de base de données PowerShell](../../relational-databases/scripting/manage-authentication-in-database-engine-powershell.md)|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   
   

@@ -1,30 +1,34 @@
 ---
-title: "d&#233;finir des options de r&#233;solution des conflits de mise &#224; jour en attente (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "résolution des conflits [réplication SQL Server], abonnements avec mise à jour en attente"
-  - "abonnements mis à jour en attente [SQL Server replication]"
+title: "Définir des options de résolution des conflits de mise à jour en attente (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- conflict resolution [SQL Server replication], queued updating subscriptions
+- queued updating subscriptions [SQL Server replication]
 ms.assetid: bb6b6c71-42c7-421a-a0fa-d5594d27e35d
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee3af1a65573f04bce7f414638b052fdd38c4777
+ms.lasthandoff: 04/11/2017
+
 ---
-# d&#233;finir des options de r&#233;solution des conflits de mise &#224; jour en attente (SQL Server Management Studio)
-  Définir des conflits pour les publications en file d’attente de prise en charge des abonnements mis à jour sur les options de résolution de la **Options d’abonnement** page de le **Propriétés de la Publication - \< Publication>** boîte de dialogue. Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+# <a name="set-queued-updating-conflict-resolution-options-sql-server-management-studio"></a>définir des options de résolution des conflits de mise à jour en attente (SQL Server Management Studio)
+  Définissez les options de résolution des conflits pour les publications qui prennent en charge les abonnements avec mise à jour en attente, sur la page **Options d’abonnement** de la boîte de dialogue **Propriétés de la publication - \<Publication>**. Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-### Pour définir les options de résolution des conflits de mise à jour en attente  
+### <a name="to-set-queued-updating-conflict-resolution-options"></a>Pour définir les options de résolution des conflits de mise à jour en attente  
   
-1.  Sur le **Options d’abonnement** page de le **Propriétés de la Publication - \< Publication>** boîte de dialogue, sélectionnez une de ces valeurs pour le **la stratégie de résolution de conflit** option :  
+1.  Sur la page **Options d’abonnement** de la boîte de dialogue **Propriétés de la publication - \<Publication>**, sélectionnez l’une des valeurs ci-après pour l’option **Stratégie de résolution de conflit** :  
   
     -   **Conserver la modification apportée au serveur de publication**  
   
@@ -34,8 +38,8 @@ caps.handback.revision: 34
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-## Voir aussi  
- [Enable Updating Subscriptions for Transactional Publications](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)   
- [Détection et résolution des conflits de mise à jour en attente](../../../relational-databases/replication/transactional/queued-updating-conflict-detection-and-resolution.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Activer les abonnements de mise à jour pour les publications transactionnelles](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)   
+ [Queued Updating Conflict Detection and Resolution](../../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
   
   

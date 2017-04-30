@@ -1,38 +1,42 @@
 ---
-title: "Backup Overview (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tables [SQL Server], sauvegarde de données"
-  - "sauvegardes [SQL Server]"
-  - "sauvegardes de bases de données [SQL Server]"
-  - "types de sauvegarde [SQL Server]"
-  - "sauvegardes de données [SQL Server]"
-  - "sauvegarde de tables [SQL Server]"
-  - "restaurations de base de données [SQL Server], sauvegardes"
-  - "sauvegardes [SQL Server], à propos de la sauvegarde"
-  - "restauration [SQL Server], types de sauvegarde"
-  - "sauvegardes [SQL Server], à propos de"
-  - "backups [SQL Server], table-level backups unsupported"
+title: "Vue d’ensemble de la sauvegarde (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 07/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tables [SQL Server], backing up data
+- backups [SQL Server]
+- database backups [SQL Server]
+- backup types [SQL Server]
+- data backups [SQL Server]
+- backing up tables [SQL Server]
+- database restores [SQL Server], backups
+- backing up [SQL Server], about backing up
+- restoring [SQL Server], backup types
+- backups [SQL Server], about
+- backups [SQL Server], table-level backups unsupported
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 caps.latest.revision: 84
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 84
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 6839d0474f1062f5dc0e247e9bb1fdbbf492c9c9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backup Overview (SQL Server)
-  Cette rubrique présente le composant de sauvegarde de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La sauvegarde de votre base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est essentielle pour protéger vos données. Cette discussion couvre les types de sauvegardes et les restrictions liées aux sauvegardes. La rubrique présente également les unités et les supports de sauvegarde de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+# <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
+  Cette rubrique présente le composant de sauvegarde de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La sauvegarde de votre base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est essentielle pour protéger vos données. Cette discussion couvre les types de sauvegardes et les restrictions liées aux sauvegardes. La rubrique présente également les unités et les supports de sauvegarde de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   
-## Termes
+## <a name="terms"></a>Termes
  
  **sauvegarder [verbe]**  
  Copie les données ou les enregistrements de journal d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de son journal des transactions sur une unité de sauvegarde, telle qu'un disque, pour créer une sauvegarde de données ou de journal.  
@@ -41,15 +45,15 @@ caps.handback.revision: 84
  Copie de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui peut être utilisée pour restaurer et récupérer les données après une défaillance. Une sauvegarde des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est créée au niveau d'une base de données, ou d'un ou de plusieurs de ses fichiers ou groupes de fichiers. Vous ne pouvez pas créer de sauvegardes au niveau des tables. Outre les sauvegardes de données, le mode de récupération complète nécessite la création de sauvegardes du journal des transactions.  
   
 **[mode de récupération](../../relational-databases/backup-restore/recovery-models-sql-server.md)**  
- Propriété de base de données qui contrôle la maintenance du journal des transactions sur une base de données. Il existe trois modes de récupération : simple, complète et utilisant les journaux de transactions. Le mode de récupération de base de données détermine les spécifications de sauvegarde et de restauration.  
+ Propriété de base de données qui contrôle la maintenance du journal des transactions sur une base de données. Il existe trois modes de récupération : simple, complète et utilisant les journaux de transactions. Le mode de récupération de base de données détermine les spécifications de sauvegarde et de restauration.  
   
  **[restauration](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)**  
  Processus à plusieurs phases qui copie toutes les données et les pages des journaux à partir d'une sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifiée dans une base de données spécifiée, puis restaure toutes les transactions journalisées dans la sauvegarde en appliquant les modifications journalisées pour rétablir un état ultérieur des données.  
   
- ## Types de sauvegardes  
+ ## <a name="types-of-backups"></a>Types de sauvegardes  
   
  **[Sauvegarde de copie uniquement](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)**  
- Sauvegarde d'utilisation particulière qui est indépendante de la séquence normale des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Sauvegarde d'utilisation particulière qui est indépendante de la séquence normale des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 **sauvegarde de données**   
  Sauvegarde de données dans une base de données complète (sauvegarde de base de données), une base de données partielle (sauvegarde partielle) ou un ensemble de fichiers ou groupes de fichiers (sauvegarde de fichiers).  
@@ -58,7 +62,7 @@ caps.handback.revision: 84
  Sauvegarde d'une base de données. Les sauvegardes complètes de base de données représentent l'intégralité de la base de données à l'issue de l'opération de sauvegarde. Les sauvegardes différentielles contiennent uniquement les modifications apportées à la base de données depuis sa plus récente sauvegarde complète de base de données.  
   
  **[sauvegarde différentielle](../../relational-databases/backup-restore/full-database-backups-sql-server.md)**  
- Sauvegarde de données basée sur la dernière sauvegarde complète d’une base de données complète ou partielle ou d’un ensemble de fichiers de données ou de groupes de fichiers (*base différentielle*) et qui contient uniquement les extensions de données ayant changé depuis la base différentielle.  
+ Sauvegarde de données basée sur la dernière sauvegarde complète d’une base de données complète ou partielle ou d’un ensemble de fichiers de données ou de groupes de fichiers ( *base différentielle*) et qui contient uniquement les extensions de données ayant changé depuis la base différentielle.  
   
  Une sauvegarde différentielle partielle n'enregistre que les extensions de données qui ont changé dans les groupes de fichiers depuis la sauvegarde partielle précédente, appelée la base de la sauvegarde différentielle.  
   
@@ -74,10 +78,10 @@ caps.handback.revision: 84
  **[sauvegarde partielle](../../relational-databases/backup-restore/partial-backups-sql-server.md)**  
  Contient des données provenant uniquement de certains des groupes de fichiers dans une base de données, y compris les données du groupe de fichiers primaire, de chaque groupe de fichiers en lecture-écriture, ainsi que, éventuellement, de tout fichier spécifié en lecture seule.  
   
-## Termes et définitions des supports de sauvegarde  
+## <a name="backup-media-terms-and-definitions"></a>Termes et définitions des supports de sauvegarde  
   
  **[unité de sauvegarde](../../relational-databases/backup-restore/backup-devices-sql-server.md)**  
- Unité de disque ou de bande sur laquelle les sauvegardes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont écrites et à partir de laquelle elles peuvent être restaurées. Les sauvegardes SQL Server peuvent également être écrites dans un service Microsoft Azure Blob Storage, et le format d’ **URL** est utilisé pour spécifier la destination et le nom du fichier de sauvegarde. Pour plus d’informations, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Unité de disque ou de bande sur laquelle les sauvegardes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont écrites et à partir de laquelle elles peuvent être restaurées. Les sauvegardes SQL Server peuvent également être écrites dans un service Stockage Blob Microsoft Azure, et le format d’ **URL** est utilisé pour spécifier la destination et le nom du fichier de sauvegarde. Pour plus d’informations, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  **[support de sauvegarde](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)**  
  Une ou plusieurs bandes ou un ou plusieurs fichiers disque sur lesquels une ou plusieurs sauvegardes ont été écrites.  
@@ -100,8 +104,8 @@ caps.handback.revision: 84
 ##  <a name="Restrictions"></a>  Restrictions des opérations de sauvegarde 
  La sauvegarde peut être effectuée si la base de données est en ligne et en cours d'utilisation. Cependant, les restrictions suivantes existent.  
   
-### Impossible de sauvegarder des données hors connexion  
- Toute sauvegarde qui fait implicitement ou explicitement référence à des données hors connexion échoue. Voici quelques exemples classiques de cette situation :  
+### <a name="cannot-back-up-offline-data"></a>Impossible de sauvegarder des données hors connexion  
+ Toute sauvegarde qui fait implicitement ou explicitement référence à des données hors connexion échoue. Voici quelques exemples classiques de cette situation :  
   
 -   Vous demandez une sauvegarde complète de la base de données, mais un groupe de fichiers de la base de données est hors connexion. Comme tous les groupes de fichiers sont implicitement inclus dans une sauvegarde complète de base de données, cette opération échoue.  
   
@@ -113,10 +117,10 @@ caps.handback.revision: 84
   
  En règle générale, une sauvegarde de journal aboutit même si un ou plusieurs fichiers de données ne sont pas disponibles. Cependant, si un fichier contient des modifications journalisées en bloc et effectuées en mode de récupération utilisant les journaux de transactions, tous les fichiers doivent être en ligne pour que la sauvegarde aboutisse.  
   
-### Restrictions d’accès concurrentiel   
+### <a name="concurrency-restrictions"></a>Restrictions d’accès concurrentiel   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recourt à un processus de sauvegarde en ligne pour permettre qu'une base de données soit sauvegardée alors qu'elle est encore utilisée. Lors d'une sauvegarde, la plupart des opérations sont possibles ; par exemple, les instructions INSERT, UPDATE et DELETE sont autorisées. Cependant, si vous tentez une opération de sauvegarde pendant qu'un fichier de base de données est en cours de création ou de suppression, l'opération de sauvegarde attend que la création ou la suppression soit terminée ou que le délai d'attente de la sauvegarde expire.  
   
- Parmi les opérations qui ne peuvent pas être effectuées lors d'une sauvegarde de base de données ou d'une sauvegarde du journal des transactions, citons :  
+ Parmi les opérations qui ne peuvent pas être effectuées lors d'une sauvegarde de base de données ou d'une sauvegarde du journal des transactions, citons :  
   
 -   Les opérations de gestion des fichiers telles que l'instruction ALTER DATABASE employées avec l'option ADD FILE ou REMOVE FILE.  
   
@@ -147,12 +151,12 @@ caps.handback.revision: 84
   
 -   [Restaurer une sauvegarde à partir d’une unité &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
--   [Didacticiel : Sauvegarde et restauration SQL Server dans le service de stockage d'objets blob Windows Azure](../Topic/Tutorial:%20SQL%20Server%20Backup%20and%20Restore%20to%20Windows%20Azure%20Blob%20Storage%20Service.md)  
+-   [Didacticiel : Sauvegarde et restauration SQL Server dans le service de stockage d’objets blob Windows Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **Créer une sauvegarde**  
   
 > [!NOTE]  
->  Pour réaliser des sauvegardes partielles ou de copie uniquement, vous devez utiliser l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) avec l’option PARTIAL ou COPY_ONLY, respectivement.  
+>  Pour réaliser des sauvegardes partielles ou de copie uniquement, vous devez utiliser l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) avec l’option PARTIAL ou COPY_ONLY, respectivement.  
   
 -   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
@@ -166,13 +170,13 @@ caps.handback.revision: 84
   
 -   [Activer ou désactiver des sommes de contrôle de sauvegarde au cours d’opérations de sauvegarde ou de restauration &#40;SQL Server&#41;](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
   
--   [Spécifier si une opération de sauvegarde ou de restauration continue ou s’arrête après la survenue d’une erreur &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify if backup or restore continues or stops after error.md)  
+-   [Spécifier si une opération de sauvegarde ou de restauration continue ou s’arrête après la survenue d’une erreur &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
 -   [Utiliser Resource Governor pour limiter l’utilisation de l’UC par compression de la sauvegarde &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Didacticiel : Sauvegarde et restauration SQL Server dans le service de stockage d'objets blob Windows Azure](../Topic/Tutorial:%20SQL%20Server%20Backup%20and%20Restore%20to%20Windows%20Azure%20Blob%20Storage%20Service.md)  
+-   [Didacticiel : Sauvegarde et restauration SQL Server dans le service Stockage Blob Microsoft Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## Et plus encore 
+## <a name="and-more"></a>Et plus encore 
  [Sauvegarde et restauration des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Vue d’ensemble de la restauration et de la récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Plans de maintenance](../../relational-databases/maintenance-plans/maintenance-plans.md)   
@@ -180,3 +184,4 @@ caps.handback.revision: 84
  [Modes de récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
+

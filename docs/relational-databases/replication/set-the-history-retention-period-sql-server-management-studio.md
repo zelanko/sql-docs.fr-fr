@@ -1,36 +1,40 @@
 ---
-title: "d&#233;finir la p&#233;riode de r&#233;tention de l&#39;historique (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "périodes de rétention de l'historique [réplication SQL Server]"
-  - "périodes de rétention [SQL Server replication]"
+title: "Définir la période de rétention de l’historique (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- history retention periods [SQL Server replication]
+- retention periods [SQL Server replication]
 ms.assetid: c288daab-5181-4d4b-ba2a-8a147098e758
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de2fe8c9ae6ed5d286b089a17a94d45432066163
+ms.lasthandoff: 04/11/2017
+
 ---
-# d&#233;finir la p&#233;riode de r&#233;tention de l&#39;historique (SQL Server Management Studio)
-  Spécifiez la période de rétention de l’historique sur le **Général** page de le **Propriétés de base de données de Distribution - \< DistributionDatabase>** boîte de dialogue. Ce paramètre contrôle la durée de stockage de l'historique de l'Agent de réplication. Cette page est disponible à partir de la **Général** page de le **Propriétés du serveur de distribution - \< serveur de distribution>** boîte de dialogue. Pour plus d’informations sur l’accès à cette boîte de dialogue, consultez [Afficher et de modifier le serveur de distribution et de propriétés de l’éditeur](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
+# <a name="set-the-history-retention-period-sql-server-management-studio"></a>définir la période de rétention de l'historique (SQL Server Management Studio)
+  Spécifiez la période de rétention de l’historique sur la page **Général** de la boîte de dialogue **Propriétés de la base de données de distribution - \<BasededonnéesDistribution>**. Ce paramètre contrôle la durée de stockage de l'historique de l'Agent de réplication. Vous pouvez accéder à cette page via la page **Général** de la boîte de dialogue **Propriétés du serveur de distribution - \<Serveurdedistribution>**. Pour plus d’informations sur l’accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de distribution ou d’un serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
-### Pour spécifier la période de rétention de l'historique  
+### <a name="to-specify-the-history-retention-period"></a>Pour spécifier la période de rétention de l'historique  
   
-1.  Sur le **Général** page de le **Propriétés du serveur de distribution - \< serveur de distribution>** boîte de dialogue, cliquez sur le bouton des propriétés (**...**) pour la base de données de distribution.  
+1.  Dans la page **Général** de la boîte de dialogue **Propriétés du serveur de distribution - \<Serveurdedistribution>**, cliquez sur le bouton des propriétés (**…**) de la base de données de distribution.  
   
 2.  Entrez une valeur dans la zone **Stocker l'historique des performances de réplication au moins chaque** .  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configurer la distribution](../../relational-databases/replication/configure-distribution.md)  
   
   

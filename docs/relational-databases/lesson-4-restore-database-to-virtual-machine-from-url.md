@@ -1,25 +1,29 @@
 ---
-title: "Le&#231;on 4 : Restaurer une base de donn&#233;es sur une machine virtuelle &#224; partir d’une URL | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Leçon 4 : Restaurer une base de données sur une machine virtuelle à partir d’une URL | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: ba793c8f-665a-4c46-b68d-f558a37906b2
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 31d30195b648f48b149021a7bf80aba2543a14ea
+ms.lasthandoff: 04/11/2017
+
 ---
-# Le&#231;on 4 : Restaurer une base de donn&#233;es sur une machine virtuelle &#224; partir d’une URL
+# <a name="lesson-4-restore-database-to-virtual-machine-from-url"></a>Leçon 4 : Restaurer une base de données sur une machine virtuelle à partir d’une URL
 Dans cette leçon, vous restaurez la base de données AdventureWorks2014 sur votre instance de SQL Server 2016 sur votre machine virtuelle Azure.  
   
 > [!NOTE]  
@@ -49,19 +53,19 @@ Pour restaurer la base de données SQL Server 2014 à partir d’un stockage Blo
   
 5.  Dans l’Explorateur d’objets, développez le nœud Bases de données et vérifiez que la base de données AdventureWorks2014 a été restaurée (actualisez le nœud si nécessaire).  
   
-    ![Adventure Works 2014 database restored to SQL Server 2016 in virtual machine](../relational-databases/media/311f69a6-8443-4df5-8f30-3103c2472300.JPG "Adventure Works 2014 database restored to SQL Server 2016 in virtual machine")  
+    ![Base de données Adventure Works 2014 restaurée dans SQL Server 2016 sur la machine virtuelle](../relational-databases/media/311f69a6-8443-4df5-8f30-3103c2472300.JPG "Base de données Adventure Works 2014 restaurée dans SQL Server 2016 sur la machine virtuelle")  
   
 6.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur AdventureWorks2014, puis cliquez sur Propriétés (cliquez sur Annuler une fois terminé).  
   
 7.  Cliquez sur Fichiers et vérifiez que le chemin des deux fichiers de base de données sont des URL qui pointent sur des objets blob dans votre conteneur d’objets blob Azure.  
   
-    ![database properties showing file path of logical data files as URL](../relational-databases/media/cfeee576-6319-460e-9fa2-f0922e02ee23.JPG "database properties showing file path of logical data files as URL")  
+    ![Propriétés affichant le chemin d’accès des fichiers de données logique en tant qu’URL de base de données](../relational-databases/media/cfeee576-6319-460e-9fa2-f0922e02ee23.JPG "propriétés affichant le chemin d’accès des fichiers de données logique en tant qu’URL de base de données")  
   
 8.  Dans l’Explorateur d’objets, connectez-vous au stockage Azure.  
   
 9. Développez Conteneurs, développez le conteneur que vous avez créé à la Leçon 1 et vérifiez que les fichiers AdventureWorks2014_Data.mdf et AdventureWorks2014_Log.ldf de l’étape 3 ci-dessus s’affichent dans ce conteneur, ainsi que le fichier de sauvegarde de la Leçon 3 (actualisez le nœud si nécessaire).  
   
-    ![Adventure Works 2014 data and log file appear as blobs in Azure container](../relational-databases/media/156c7d73-44be-4754-9653-04cccb6c3066.JPG "Adventure Works 2014 data and log file appear as blobs in Azure container")  
+    ![Les données et le fichier journal Adventure Works 2014 s’affichent sous la forme d’objets BLOB dans le conteneur Azure](../relational-databases/media/156c7d73-44be-4754-9653-04cccb6c3066.JPG "Les données et le fichier journal Adventure Works 2014 s’affichent sous la forme d’objets BLOB dans le conteneur Azure")  
   
 **Leçon suivante :**  
   
@@ -69,3 +73,4 @@ Pour restaurer la base de données SQL Server 2014 à partir d’un stockage Blo
   
   
   
+
