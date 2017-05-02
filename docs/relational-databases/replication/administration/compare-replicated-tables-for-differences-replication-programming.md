@@ -1,77 +1,81 @@
 ---
-title: "Comparer des tables r&#233;pliqu&#233;es pour identifier les diff&#233;rences (programmation de r&#233;plication) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "tablediff (utilitaire)"
-  - "comparaison des tables répliquées"
+title: "Comparer des tables répliquées pour identifier les différences (programmation de réplication) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- tablediff utility
+- comparing replicated tables
 ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f53c21103cf05d606ab9a8543606577df097a353
+ms.lasthandoff: 04/11/2017
+
 ---
-# Comparer des tables r&#233;pliqu&#233;es pour identifier les diff&#233;rences (programmation de r&#233;plication)
-  La validation d'article est utilisée pour déterminer si les données publiées pour les articles de table sur le serveur de publication et sur l'Abonné ne sont pas identiques, ce qui peut indiquer une non-convergence. Pour plus d’informations, consultez [valider les données répliquées](../../../relational-databases/replication/validate-replicated-data.md). Toutefois, la validation retourne uniquement des informations de succès ou d'échec et ne fournit pas d'informations sur les différences entre les tables sources et les tables cibles. Le **tablediff** retourne utilitaire de ligne de commande détaillées sur les différences entre deux tables d’informations et peut même générer un [!INCLUDE[tsql](../../../includes/tsql-md.md)] script pour l’abonnement en convergence avec les données du serveur de publication.  
+# <a name="compare-replicated-tables-for-differences-replication-programming"></a>Comparer des tables répliquées pour identifier les différences (programmation de réplication)
+  La validation d'article est utilisée pour déterminer si les données publiées pour les articles de table sur le serveur de publication et sur l'Abonné ne sont pas identiques, ce qui peut indiquer une non-convergence. Pour plus d’informations, consultez [Valider des données répliquées](../../../relational-databases/replication/validate-replicated-data.md). Toutefois, la validation retourne uniquement des informations de succès ou d'échec et ne fournit pas d'informations sur les différences entre les tables sources et les tables cibles. L’utilitaire d’invite de commandes **tablediff** retourne des informations détaillées sur les différences entre les deux tables et peut même générer un script [!INCLUDE[tsql](../../../includes/tsql-md.md)] pour établir la convergence de l’abonnement avec les données sur le serveur de publication.  
   
 > [!NOTE]  
->  Le **tablediff** utilitaire est uniquement pris en charge pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] serveurs.  
+>  L’utilitaire **tablediff** est pris en charge uniquement pour les serveurs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-### Pour comparer les différences des tables répliquées à l'aide de tablediff  
+### <a name="to-compare-replicated-tables-for-differences-using-tablediff"></a>Pour comparer les différences des tables répliquées à l'aide de tablediff  
   
-1.  À partir de l’invite de commandes n’importe quel serveur dans une topologie de réplication, exécutez la [utilitaire tablediff](../../../tools/tablediff-utility.md). Spécifiez les paramètres suivants :  
+1.  À partir de l'invite de commandes sur un serveur quelconque d'une topologie de réplication, exécutez l' [tablediff Utility](../../../tools/tablediff-utility.md). Spécifiez les paramètres suivants :  
   
-    -   **-sourceserver** - nom du serveur sur lequel les données sont connues soit correct, généralement le serveur de publication.  
+    -   **-sourceserver** - nom du serveur sur lequel les données sont reconnues comme correctes, habituellement le serveur de publication.  
   
     -   **-sourcedatabase** - nom de la base de données contenant les données correctes.  
   
-    -   **-sourcetable** - nom de la table source pour l’article en cours de comparaison.  
+    -   **-sourcetable** - nom de la table source pour l'article comparé.  
   
-    -   (Facultatif) **-sourceschema** -propriétaire du schéma de la table source, si ce n’est pas le schéma par défaut.  
+    -   (Facultatif) **-sourceschema** - propriétaire du schéma de la table source, sinon le schéma par défaut.  
   
-    -   (Facultatif) **-sourceuser** et **- sourcepassword** lors de l’utilisation de l’authentification SQL Server pour se connecter au serveur de publication.  
-  
-        > [!IMPORTANT]  
-        >  Lorsque c'est possible, utilisez l'authentification Windows. Si vous devez utiliser l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], invitez les utilisateurs à entrer les informations d'identification de sécurité pendant l'exécution. Si vous devez enregistrer les informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher un accès non autorisé.  
-  
-    -   **-destinationserver** - nom du serveur sur lequel les données sont comparées, habituellement un abonné.  
-  
-    -   **-destinationdatabase** - nom d’une la base de données en cours de comparaison.  
-  
-    -   **-destinationtable** - nom de la table en cours de comparaison.  
-  
-    -   (Facultatif) **-destinationschema** -propriétaire du schéma de la table de destination, si ce n’est pas le schéma par défaut.  
-  
-    -   (Facultatif) **-destinationuser** et **- destinationpassword** lors de l’utilisation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l’authentification pour se connecter à l’abonné.  
+    -   (Facultatif) **-sourceuser** et **-sourcepassword** en cas d'utilisation de l'authentification SQL Server pour se connecter au serveur de publication.  
   
         > [!IMPORTANT]  
-        >  Lorsque c'est possible, utilisez l'authentification Windows. Si vous devez utiliser l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], invitez les utilisateurs à entrer les informations d'identification de sécurité pendant l'exécution. Si vous devez enregistrer les informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher un accès non autorisé.  
+        >  Lorsque c'est possible, utilisez l'authentification Windows. Si vous devez utiliser l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , invitez les utilisateurs à entrer les informations d'identification de sécurité pendant l'exécution. Si vous devez enregistrer les informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher un accès non autorisé.  
   
-    -   (Facultatif) Utilisez **- c** pour effectuer une comparaison au niveau des colonnes.  
+    -   **-destinationserver** - nom du serveur sur lequel les données sont comparées, habituellement un Abonné.  
   
-    -   (Facultatif) Utilisez **- q** pour faire rapidement, ligne comparaison count - et schéma uniquement.  
+    -   **-destinationdatabase** - nom de la base de données en cours de comparaison.  
   
-    -   (Facultatif) Spécifiez un nom de fichier et le chemin d’accès pour **-o** pour enregistrer les résultats dans un fichier.  
+    -   **-destinationtable** - nom de la table qui est comparée.  
   
-    -   (Facultatif) Spécifier une table dans la base de données d’abonnement dans lequel insérer les résultats de **et -**. Si la table existe déjà, spécifiez **-dt** tout d’abord supprimer la table.  
+    -   (Facultatif) **-destinationschema** - propriétaire du schéma de la table cible, sinon le schéma par défaut.  
   
-    -   (Facultatif) Utilisez **-f** pour générer un [!INCLUDE[tsql](../../../includes/tsql-md.md)] fichier et corriger les données sur l’abonné afin qu’elles correspondent à celles du serveur de publication. Utilisez **-df** pour spécifier le nombre de [!INCLUDE[tsql](../../../includes/tsql-md.md)] instructions dans chaque fichier.  
+    -   (Facultatif) **-destinationuser** et **-destinationpassword** en cas d'utilisation de l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour se connecter à l'Abonné.  
   
-    -   (Facultatif) Utilisez **-rc** et **-ri** pour spécifier le nombre de tentatives pour relancer une opération et l’intervalle de nouvelle tentative.  
+        > [!IMPORTANT]  
+        >  Lorsque c'est possible, utilisez l'authentification Windows. Si vous devez utiliser l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , invitez les utilisateurs à entrer les informations d'identification de sécurité pendant l'exécution. Si vous devez enregistrer les informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher un accès non autorisé.  
   
-    -   (Facultatif) Utilisez **-strict** pour appliquer la comparaison stricte de schéma entre les tables source et de destination.  
+    -   (Facultatif) Utilisez **-c** pour faire une comparaison au niveau des colonnes.  
   
-## Voir aussi  
- [Valider des données sur l'Abonné](../../../relational-databases/replication/validate-data-at-the-subscriber.md)  
+    -   (Facultatif) Utilisez **- q** pour faire une comparaison rapide du nombre de lignes et du schéma uniquement.  
+  
+    -   (Facultatif) Spécifiez un nom de fichier et un chemin d'accès pour **-o** pour générer la sortie des résultats dans un fichier.  
+  
+    -   (Facultatif) Spécifiez une table de la base de données d'abonnement dans laquelle insérer les résultats pour **-et**. Si la table existe déjà, spécifiez **-dt** pour supprimer d'abord la table.  
+  
+    -   (Facultatif) Utilisez **-f** pour générer un fichier [!INCLUDE[tsql](../../../includes/tsql-md.md)] et corriger les données sur l'Abonné afin qu'elles correspondent à celles du serveur de publication. Utilisez **-df** pour spécifier le nombre d'instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] dans chaque fichier.  
+  
+    -   (Facultatif) Utilisez **-rc** et **-ri** pour spécifier le nombre de tentatives autorisées pour une opération et l'intervalle avant chaque nouvelle tentative.  
+  
+    -   (Facultatif) Utilisez **-strict** pour mettre en vigueur la comparaison stricte de schémas entre les tables sources et les tables cibles.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Valider des données sur l’abonné](../../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

@@ -1,33 +1,37 @@
 ---
-title: "Actions et groupes d&#39;actions SQL Server Audit | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "audit"
-helpviewer_keywords: 
-  - "actions d'audit [SQL Server]"
-  - "audits [SQL Server], groupes"
-  - "actions d'audit au niveau serveur [SQL Server]"
-  - "SQL Server Audit"
-  - "actions d'audit au niveau de l'audit [SQL Server]"
-  - "actions d'audit au niveau base de données [SQL Server]"
-  - "groupes d'actions d'audit [SQL Server]"
-  - "audits [SQL Server], actions"
+title: "Actions et groupes d’actions SQL Server Audit | Microsoft Docs"
+ms.custom: 
+ms.date: 10/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- audit
+helpviewer_keywords:
+- audit actions [SQL Server]
+- audits [SQL Server], groups
+- server-level audit actions [SQL Server]
+- SQL Server Audit
+- audit-level audit actions [SQL Server]
+- database-level audit actions [SQL Server]
+- audit action groups [SQL Server]
+- audits [SQL Server], actions
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3eb276c9571a168a746e0e422adf426292cfad2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Actions et groupes d&#39;actions SQL Server Audit
+# <a name="sql-server-audit-action-groups-and-actions"></a>Actions et groupes d’actions SQL Server Audit
   La fonctionnalité Audit de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vous permet d’effectuer l’audit d’événements et de groupes d’événements au niveau du serveur et au niveau de la base de données. Pour plus d’informations, consultez [SQL Server Audit &#40moteur de base de données&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont constitués de zéro ou plusieurs éléments d'action d'audit. Ces éléments d'action d'audit peuvent être un groupe d'actions, tel que Server_Object_Change_Group, ou des actions individuelles telles que des opérations SELECT sur une table.  
@@ -65,7 +69,7 @@ caps.handback.revision: 46
   
  Tous les audits sont désactivés lors de leur création initiale.  
   
-## Groupes d'actions d'audit de niveau serveur  
+## <a name="server-level-audit-action-groups"></a>Groupes d'actions d'audit de niveau serveur  
  Les groupes d’actions d’audit de niveau serveur sont des actions semblables aux classes d’événements d’audit de sécurité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d'informations, consultez [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Le tableau suivant décrit les groupes d'actions d'audit de niveau serveur et fournit la classe d'événements SQL Server équivalente, le cas échéant.  
@@ -87,7 +91,7 @@ caps.handback.revision: 46
 |DATABASE_OWNERSHIP_CHANGE_GROUP|Cet événement est déclenché lorsque vous utilisez l'instruction ALTER AUTHORIZATION pour changer le propriétaire d'une base de données et que les autorisations requises à cet effet sont activées. Cet événement est déclenché pour toute modification du propriétaire de la base de données sur une base de données sur le serveur. Équivaut à la [classe d’événements Audit Change Database Owner](../../../relational-databases/event-classes/audit-change-database-owner-event-class.md).|  
 |DATABASE_PERMISSION_CHANGE_GROUP|Cet événement est déclenché chaque fois qu’une instruction GRANT, REVOKE ou DENY est émise pour une autorisation d’instruction par un principal dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (cela s’applique aux événements de base de données uniquement, tels que l’accord d’autorisations sur une base de données).<br /><br /> Cet événement est déclenché pour toute modification d'autorisation de base de données pour une base de données dans le serveur. Équivaut à la [classe d’événements Audit Database Scope GDR](../../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md).|  
 |DATABASE_PRINCIPAL_CHANGE_GROUP|Cet événement est déclenché lorsque des principaux, tels que des utilisateurs, sont créés, modifiés ou supprimés d'une base de données. Équivaut à la [classe d’événements Audit Database Principal Management](../../../relational-databases/event-classes/audit-database-principal-management-event-class.md). (Également équivalent à la Classe d'événements d'audit Add DB Principal, qui se produit sur les procédures stockées déconseillées sp_grantdbaccess, sp_revokedbaccess, sp_addPrincipal et sp_dropPrincipal.)<br /><br /> Cet événement est déclenché chaque fois qu'un rôle de base de données est ajouté ou supprimé à l'aide des procédures stockées sp_addrole et sp_droprole. Cet événement est déclenché lorsque des principaux de base de données sont créés, modifiés ou supprimés d'une base de données. Équivaut à la [classe d’événements Audit Add Role](../../../relational-databases/event-classes/audit-add-role-event-class.md).|  
-|DATABASE_PRINCIPAL_IMPERSONATION_GROUP|Cet événement est déclenché en cas d’opération emprunt d’identité dans la portée de la base de données, telle que EXECUTE AS \<principal> ou SETPRINCIPAL. Cet événement est déclenché pour les emprunts d'identité effectués dans une base de données. Équivaut à la [classe d’événements Audit Database Principal Impersonation](../../../relational-databases/event-classes/audit-database-principal-impersonation-event-class.md).|  
+|DATABASE_PRINCIPAL_IMPERSONATION_GROUP|Cet événement est déclenché en cas d’opération d’emprunt d’identité dans la portée de la base de données, telle que EXECUTE AS \<principal> ou SETPRINCIPAL. Cet événement est déclenché pour les emprunts d'identité effectués dans une base de données. Équivaut à la [classe d’événements Audit Database Principal Impersonation](../../../relational-databases/event-classes/audit-database-principal-impersonation-event-class.md).|  
 |DATABASE_ROLE_MEMBER_CHANGE_GROUP|Cet événement est déclenché chaque fois qu'une connexion est ajoutée à un rôle de base de données ou en est supprimée. Cette classe d'événements est déclenchée pour les procédures stockées sp_addrolemember, sp_changegroup et sp_droprolemember. Cet événement est déclenché en cas de modification d'un membre de rôle Base de données dans toute base de données. Équivaut à la [classe d’événements Audit Add Member to DB Role](../../../relational-databases/event-classes/audit-add-member-to-db-role-event-class.md).|  
 |DBCC_GROUP|Cet événement est déclenché chaque fois qu'un principal émet une commande DBCC. Équivaut à la [classe d’événements Audit DBCC](../../../relational-databases/event-classes/audit-dbcc-event-class.md).|  
 |FAILED_DATABASE_AUTHENTICATION_GROUP|Indique qu'un principal a tenté de se connecter à une base de données à relation contenant-contenu et a échoué. Les événements de cette classe sont déclenchés par de nouvelles connexions ou par des connexions réutilisées depuis un groupement de connexions. Équivaut à la [classe d’événements Audit Login Failed](../../../relational-databases/event-classes/audit-login-failed-event-class.md).|  
@@ -115,12 +119,12 @@ caps.handback.revision: 46
 |USER_CHANGE_PASSWORD_GROUP|Cet événement est déclenché chaque fois que le mot de passe d'un utilisateur de base de données à relation contenant-contenu est modifié à l'aide de l'instruction ALTER USER.|  
 |USER_DEFINED_AUDIT_GROUP|Ce groupe surveille les événements déclenchés à l’aide de [sp_audit_write &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). En règle générale, les déclencheurs ou procédures stockées incluent des appels à **sp_audit_write** pour activer l’audit d’événements importants.|  
   
-### Observations  
+### <a name="considerations"></a>Observations  
  Les groupes d'actions de niveau serveur couvrent les actions sur toute une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Par exemple, toute vérification d'accès à un objet de schéma dans une base de données est enregistrée si le groupe d'actions approprié est ajouté à une spécification de l'audit du serveur. Dans une spécification d'audit de la base de données, seuls les accès aux objets de schéma dans cette base de données sont enregistrés.  
   
  Les actions de niveau serveur ne permettent pas un filtrage détaillé des actions au niveau de la base de données. Un audit de niveau base de données, tel que l'audit d'actions SELECT sur la table Customers pour les connexions dans le groupe Employee est requis pour implémenter le filtrage d'action détaillé. N'incluez pas d'objets dans l'étendue du serveur, tels que les vues système, dans une spécification d'audit de base de données utilisateur.  
   
-## Groupes d'actions d'audit de niveau base de données  
+## <a name="database-level-audit-action-groups"></a>Groupes d'actions d'audit de niveau base de données  
  Les groupes d’actions d’audit de niveau base de données sont des actions semblables aux classes d’événements d’audit de sécurité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d'informations sur les classes d'événements, consultez [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Le tableau suivant décrit les groupes d'actions d'audit de niveau base de données et fournit leur Classe d'événements SQL Server équivalente le cas échéant.  
@@ -140,7 +144,7 @@ caps.handback.revision: 46
 |DATABASE_OWNERSHIP_CHANGE_GROUP|Cet événement est déclenché lorsque vous utilisez l'instruction ALTER AUTHORIZATION pour changer le propriétaire d'une base de données et que les autorisations requises à cet effet sont activées. Équivaut à la [classe d’événements Audit Change Database Owner](../../../relational-databases/event-classes/audit-change-database-owner-event-class.md).|  
 |DATABASE_PERMISSION_CHANGE_GROUP|Cet événement est déclenché chaque fois qu'une instruction GRANT, REVOKE ou DENY est émise pour une autorisation d'instruction par tout utilisateur dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour les événements de base de données uniquement, tels que l'accord d'autorisations sur une base de données. Équivaut à la [classe d’événements Audit Database Scope GDR](../../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md).|  
 |DATABASE_PRINCIPAL_CHANGE_GROUP|Cet événement est déclenché lorsque des principaux, tels que des utilisateurs, sont créés, modifiés ou supprimés d'une base de données. Équivaut à la [classe d’événements Audit Database Principal Management](../../../relational-databases/event-classes/audit-database-principal-management-event-class.md). Équivaut également à la [classe d’événements Audit Add DB User](../../../relational-databases/event-classes/audit-add-db-user-event-class.md), qui se produit sur les procédures stockées déconseillées sp_grantdbaccess, sp_revokedbaccess, sp_adduser et sp_dropuser.<br /><br /> Cet événement est déclenché chaque fois qu'un rôle de base de données est ajouté ou supprimé à l'aide des procédures stockées sp_addrole et sp_droprole déconseillées. Équivaut à la [classe d’événements Audit Add Role](../../../relational-databases/event-classes/audit-add-role-event-class.md).|  
-|DATABASE_PRINCIPAL_IMPERSONATION_GROUP|Cet événement est déclenché en cas d’emprunt d’identité dans l’étendue de la base de données, par exemple EXECUTE AS \<utilisateur>. Équivaut à la [classe d’événements Audit Database Principal Impersonation](../../../relational-databases/event-classes/audit-database-principal-impersonation-event-class.md).|  
+|DATABASE_PRINCIPAL_IMPERSONATION_GROUP|Cet événement est déclenché en cas d’emprunt d’identité dans la portée de la base de données, par exemple EXECUTE AS \<utilisateur>. Équivaut à la [classe d’événements Audit Database Principal Impersonation](../../../relational-databases/event-classes/audit-database-principal-impersonation-event-class.md).|  
 |DATABASE_ROLE_MEMBER_CHANGE_GROUP|Cet événement est déclenché chaque fois qu'une connexion est ajoutée à un rôle de base de données ou en est supprimée. Cette classe d’événements est utilisée avec les procédures stockées sp_addrolemember, sp_changegroup et sp_droprolemember. Équivaut à la [classe d’événements Audit Add Member to DB Role](../../../relational-databases/event-classes/audit-add-member-to-db-role-event-class.md)|  
 |DBCC_GROUP|Cet événement est déclenché chaque fois qu'un principal émet une commande DBCC. Équivaut à la [classe d’événements Audit DBCC](../../../relational-databases/event-classes/audit-dbcc-event-class.md).|  
 |FAILED_DATABASE_AUTHENTICATION_GROUP|Indique qu'un principal a tenté de se connecter à une base de données à relation contenant-contenu et a échoué. Les événements de cette classe sont déclenchés par de nouvelles connexions ou par des connexions réutilisées depuis un groupement de connexions. Cet événement est déclenché.|  
@@ -152,7 +156,7 @@ caps.handback.revision: 46
 |USER_CHANGE_PASSWORD_GROUP|Cet événement est déclenché chaque fois que le mot de passe d'un utilisateur de base de données à relation contenant-contenu est modifié à l'aide de l'instruction ALTER USER.|  
 |USER_DEFINED_AUDIT_GROUP|Ce groupe surveille les événements déclenchés à l’aide de [sp_audit_write &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
   
-## Actions d'audit de niveau base de données  
+## <a name="database-level-audit-actions"></a>Actions d'audit de niveau base de données  
  Les actions de niveau base de données prennent en charge l'audit d'actions spécifiques directement sur le schéma de base de données et sur les objets de schéma, tels que les tables, les vues, les procédures stockées, les fonctions, les procédures stockées étendues, les files d'attente, les synonymes. Les types, les collections de schémas XML, les bases de données et les schémas ne sont pas audités. L'audit d'objets de schéma peut être configuré sur le schéma et la base de données, ce qui signifie que les événements de tous les objets de schéma contenus dans le schéma ou la base de données spécifié seront audités. Le tableau suivant décrit les actions d'audit de niveau base de données.  
   
 |Action|Description|  
@@ -165,21 +169,21 @@ caps.handback.revision: 46
 |RECEIVE|Cet événement est déclenché chaque fois qu'une instruction RECEIVE est exécutée.|  
 |REFERENCES|Cet événement est déclenché chaque fois qu'une autorisation REFERENCES est vérifiée.|  
   
-### Observations  
+### <a name="considerations"></a>Observations  
 *  Les actions d'audit de niveau base de données ne s'appliquent pas aux colonnes.  
   
 *  Lorsque le processeur de requêtes paramètre la requête, le paramètre peut apparaître dans le journal des événements d'audit au lieu des valeurs de colonnes de la requête. 
  
 *  Les instructions RPC ne sont pas enregistrées. 
   
-## Groupes d'actions d'audit de niveau audit  
+## <a name="audit-level-audit-action-groups"></a>Groupes d'actions d'audit de niveau audit  
  Vous pouvez également auditer les actions dans le processus d'audit. Ce peut être dans la portée du serveur ou dans la portée de la base de données. Dans la portée de la base de données, cela se produit seulement pour les spécifications d'audit de la base de données. Le tableau suivant décrit les groupes d'actions d'audit de niveau audit.  
   
 |Nom du groupe d'actions|Description|  
 |-----------------------|-----------------|  
 |AUDIT_CHANGE_GROUP|Cet événement est déclenché chaque fois que l'une des commandes suivantes est exécutée :<br /><br /> CREATE SERVER AUDIT<br /><br /> ALTER SERVER AUDIT<br /><br /> DROP SERVER AUDIT<br /><br /> CREATE SERVER AUDIT SPECIFICATION<br /><br /> ALTER SERVER AUDIT SPECIFICATION<br /><br /> DROP SERVER AUDIT SPECIFICATION<br /><br /> CREATE DATABASE AUDIT SPECIFICATION<br /><br /> ALTER DATABASE AUDIT SPECIFICATION<br /><br /> DROP DATABASE AUDIT SPECIFICATION|  
   
-## Contenu connexe  
+## <a name="related-content"></a>Contenu connexe  
  [Créer un audit du serveur et une spécification d'audit du serveur](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
  [Créer une spécification de l'audit du serveur et de la base de données](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)  
@@ -225,3 +229,4 @@ caps.handback.revision: 46
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)  
   
   
+

@@ -1,29 +1,33 @@
 ---
-title: "Enregistrer les &#233;v&#233;nements Deadlock Graph (G&#233;n&#233;rateur de profils SQL&#160;Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "blocages [SQL Server], enregistrement des graphiques de blocage"
-  - "graphiques [SQL Server]"
-  - "enregistrement des graphiques de blocage"
+title: "Enregistrer des graphiques d’interblocage (SQL Server Profiler) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deadlocks [SQL Server], saving deadlock graphs
+- graphs [SQL Server]
+- saving deadlock graphs
 ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c89c0ed24b52d89c36fb1f1cce29717988a0d798
+ms.lasthandoff: 04/11/2017
+
 ---
-# Enregistrer les &#233;v&#233;nements Deadlock Graph (G&#233;n&#233;rateur de profils SQL&#160;Server)
-  Cette rubrique décrit comment enregistrer un événement Deadlock Graph à l'aide du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Les événements Deadlock Graph sont enregistrés sous forme de fichiers XML.  
+# <a name="save-deadlock-graphs-sql-server-profiler"></a>Enregistrer les événements Deadlock Graph (Générateur de profils SQL Server)
+  Cette rubrique décrit comment enregistrer un événement Deadlock Graph à l'aide du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Les événements Deadlock Graph sont enregistrés sous forme de fichiers XML.  
   
-### Pour enregistrer séparément les événements Deadlock Graph  
+### <a name="to-save-deadlock-graph-events-separately"></a>Pour enregistrer séparément les événements Deadlock Graph  
   
 1.  Dans le menu **Fichier** , cliquez sur **Nouvelle trace**, puis connectez-vous à une instance de SQL Server.  
   
@@ -52,7 +56,7 @@ caps.handback.revision: 26
   
 7.  Dans la liste **Événements,**développez la catégorie d’événements **Verrous**et sélectionnez la case à cocher **Deadlock graph**. Si la catégorie d'événements Verrous n'est pas disponible, activez la case à cocher **Afficher tous les événements** pour l'afficher.  
   
-     La boîte de dialogue **Paramètres d’extraction des événements** est ajoutée à la boîte de dialogue **Propriétés de la trace**.  
+     La boîte de dialogue **Paramètres d’extraction des événements**est ajoutée à la boîte de dialogue **Propriétés de la trace**.  
   
 8.  Dans le menu **Paramètres d’extraction des événements**cliquez sur **Enregistrer les événements Deadlock XML séparément**.  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 26
   
  Après avoir enregistré le fichier Deadlock, vous pouvez l'ouvrir dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Procédure : Ouvrir, afficher et imprimer un fichier d’interblocage &#40;SQL Server Management Studio&#41;](../../relational-databases/performance/open-view-and-print-a-deadlock-file-sql-server-management-studio.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Analyser des blocages à l'aide de SQL Server Profiler](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)  
   
   

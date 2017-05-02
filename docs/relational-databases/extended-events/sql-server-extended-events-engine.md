@@ -1,34 +1,38 @@
 ---
-title: "Moteur des &#201;v&#233;nements &#233;tendus SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "événements étendus [SQL Server], moteur"
+title: "Moteur des Événements étendus SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extended events [SQL Server], engine
 ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e11bf82e65be3b127ca7ee6c4f43ab2b60531b71
+ms.lasthandoff: 04/11/2017
+
 ---
-# Moteur des &#201;v&#233;nements &#233;tendus SQL Server
+# <a name="sql-server-extended-events-engine"></a>Moteur des Événements étendus SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Le moteur des Événements étendus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est une collection de services et d'objets qui :  
+  Le moteur des Événements étendus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est une collection de services et d'objets qui :  
   
--   activent la définition d'événements ;  
+-   activent la définition d'événements ;  
   
--   activent les données d'événement de traitement ;  
+-   activent les données d'événement de traitement ;  
   
--   gèrent les services et objets des Événements étendus dans le système ;  
+-   gèrent les services et objets des Événements étendus dans le système ;  
   
 -   tiennent à jour une liste de sessions Événements étendus et gèrent l'accès à cette liste.  
   
@@ -38,11 +42,11 @@ caps.handback.revision: 14
   
  ![Architecture détaillée des événements étendus](../../relational-databases/extended-events/media/xearchitecturedetailed.gif "Architecture détaillée des événements étendus")  
   
- Notez les points suivants :  
+ Notez les points suivants :  
   
 -   Chaque processus Windows peut avoir un ou plusieurs modules (**processus Win32**, **module Win32**). Ils sont également appelés *binaires* ou *modules exécutables*.  
   
--   Chaque module de processus Windows peut contenir un ou plusieurs packages des Événements étendus (**Package**), qui contiennent un ou plusieurs objets des Événements étendus (**Type**, **Cible**, **Action**, **Mappage**, **Prédicat** et **Événement**).  
+-   Chaque module de processus Windows peut contenir un ou plusieurs packages des Événements étendus (**Package**), qui contiennent un ou plusieurs objets des Événements étendus (**Type**, **Cible**, **Action**, **Mappage**, **Prédicat**et **Événement**).  
   
 -   Au sein d’un processus hôte, il ne peut exister qu’une seule instance du moteur des Événements étendus (**Moteur des Événements étendus**), qui effectue les opérations suivantes :  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 14
   
     -   lorsque les mémoires tampons sont pleines, elles sont distribuées aux cibles.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)  
   
   

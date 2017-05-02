@@ -1,32 +1,36 @@
 ---
-title: "S&#233;curit&#233; au niveau des lignes | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/29/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "prédicats de contrôle d'accès"
-  - "sécurité au niveau des lignes"
-  - "sécurité [SQL Server], contrôle d'accès basé sur un prédicat"
-  - "description de la sécurité au niveau des lignes"
-  - "sécurité basée sur un prédicat"
+title: "Sécurité au niveau des lignes | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/29/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- access control predicates
+- row level security
+- security [SQL Server], predicate based access control
+- row level security described
+- predicate based security
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0141c681779c12bf63162751f93dcd6495fb1a94
+ms.lasthandoff: 04/11/2017
+
 ---
-# S&#233;curit&#233; au niveau des lignes
+# <a name="row-level-security"></a>Sécurité au niveau des lignes
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  ![Row level security graphic](../../relational-databases/security/media/row-level-security-graphic.png "Row level security graphic")  
+  ![Graphique de sécurité au niveau des lignes](../../relational-databases/security/media/row-level-security-graphic.png "Graphique de sécurité au niveau des lignes")  
   
  La sécurité au niveau des lignes permet aux clients de contrôler l'accès aux lignes d'une table de base de données en fonction des caractéristiques de l'utilisateur exécutant une requête (appartenance à un groupe ou contexte d'exécution, par exemple).  
   
@@ -36,30 +40,9 @@ caps.handback.revision: 47
   
  Implémentez une sécurité au niveau des lignes à l’aide de l’instruction [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] , et de prédicats créés en tant que [fonctions table incluses](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
-||  
-|-|  
-|**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Obtenez-le](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Obtenez-le](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
-##  <a name="Top"></a> Dans cette rubrique  
-  
--   [Description](#Description)  
-  
--   [Cas d'usage](#UseCases)  
-  
--   [Autorisations](#Permissions)  
-  
--   [Bonnes pratiques](#Best)  
-  
--   [Note de sécurité : Attaques côté canal](#SecNote)  
-  
--   [Compatibilité entre fonctionnalités](#Limitations)  
-  
--   [Exemples de code](#CodeExamples)  
-  
-    -   [A. Scénario pour les utilisateurs connectés directement](#Typical)  
-  
-    -   [B. Scénario d'application de couche intermédiaire](#MidTier)  
-  
+
 ##  <a name="Description"></a> Description  
  La sécurité au niveau des lignes prend en charge deux types de prédicats de sécurité.  
   
@@ -77,7 +60,7 @@ caps.handback.revision: 47
   
 -   Les prédicats BEFORE DELETE peuvent bloquer les opérations de suppression.  
   
- Les prédicats de filtre et BLOCK, ainsi que les stratégies de sécurité, se comportent comme suit :  
+ Les prédicats de filtre et BLOCK, ainsi que les stratégies de sécurité, se comportent comme suit :  
   
 -   Vous pouvez définir une fonction de prédicat qui crée une jointure avec une autre table et/ou appelle une fonction. Si la stratégie de sécurité est créée avec `SCHEMABINDING = ON`, alors la jointure ou la fonction est accessible à partir de la requête et fonctionne comme prévu, sans aucun contrôle d’autorisation supplémentaire. Si la stratégie de sécurité est créée avec `SCHEMABINDING = OFF`, alors les utilisateurs ont besoin d’autorisations **SELECT** ou **EXECUTE** sur ces tables et fonctions supplémentaires pour interroger la table cible.  
   
@@ -85,7 +68,7 @@ caps.handback.revision: 47
   
 -   Vous pouvez émettre une requête sur une table pour laquelle un prédicat de sécurité est défini, mais désactivé. Les lignes qui auraient été filtrées ou bloquées ne sont pas affectées.  
   
--   Si l’utilisateur dbo, membre du rôle **db_owner**, ou le propriétaire de la table interrogent une table pour laquelle une stratégie de sécurité est définie et activée, les lignes sont filtrées ou bloquées conformément à celle-ci.  
+-   Si l’utilisateur dbo, membre du rôle **db_owner** , ou le propriétaire de la table interrogent une table pour laquelle une stratégie de sécurité est définie et activée, les lignes sont filtrées ou bloquées conformément à celle-ci.  
   
 -   Toute tentative de modification du schéma d’une table liée par une stratégie de sécurité liée au schéma génère une erreur. En revanche, les colonnes non référencées par le prédicat peuvent être modifiées.  
   
@@ -95,7 +78,7 @@ caps.handback.revision: 47
   
 -   La définition de plusieurs stratégies de sécurité actives contenant des prédicats sans chevauchement réussit.  
   
- Les prédicats de filtre se comportent comme suit :  
+ Les prédicats de filtre se comportent comme suit :  
   
 -   Définir une stratégie de sécurité qui filtre les lignes d'une table. L'application ignore que des lignes ont été filtrées pour les opérations **SELECT**, **UPDATE**et **DELETE** , y compris dans les cas où la totalité des lignes a été filtrée. L'application peut **INSERT** toutes les lignes, qu'elles soient ou non filtrées lors de toute autre opération.  
   
@@ -103,14 +86,13 @@ caps.handback.revision: 47
   
 -   Les prédicats BLOCK pour l’opération UPDATE sont divisés en opérations distinctes pour BEFORE et AFTER. Vous ne pouvez donc pas, par exemple, bloquer des utilisateurs en les empêchant de mettre à jour une ligne pour obtenir une valeur supérieure à la valeur actuelle. Si ce type de logique est requis, vous devez utiliser des déclencheurs avec les tables intermédiaires DELETED et INSERTED pour référencer ensemble les valeurs anciennes et nouvelles.  
   
--   L’optimiseur ne vérifie pas un prédicat BLOCK AFTER UPDATE si aucune des colonnes utilisées par la fonction de prédicat n’a été modifiée. Par exemple : Alice ne doit pas pouvoir modifier un salaire en lui attribuant une valeur supérieure à 100 000, mais elle pouvoir modifier l’adresse d’un employé dont le salaire est déjà supérieur à 100 000 (et viole donc déjà le prédicat).  
+-   L’optimiseur ne vérifie pas un prédicat BLOCK AFTER UPDATE si aucune des colonnes utilisées par la fonction de prédicat n’a été modifiée. Par exemple : Alice ne doit pas pouvoir modifier un salaire en lui attribuant une valeur supérieure à 100 000, mais elle pouvoir modifier l’adresse d’un employé dont le salaire est déjà supérieur à 100 000 (et viole donc déjà le prédicat).  
   
 -   Aucune modification n’a été apportée aux API bulk, y compris à BULK INSERT. Cela signifie que les prédicats BLOCK AFTER INSERT s’appliquent aux opérations d’insertion en bloc comme s’il s’agissait d’opérations d’insertion standard.  
   
- [Haut](#Top)  
   
 ##  <a name="UseCases"></a> Cas d'usage  
- Voici des exemples d'utilisation de la sécurité au niveau des lignes :  
+ Voici des exemples d'utilisation de la sécurité au niveau des lignes :  
   
 -   Un hôpital peut créer une stratégie de sécurité qui autorise les infirmières à n'afficher les lignes de données que pour leurs propres patients.  
   
@@ -122,7 +104,6 @@ caps.handback.revision: 47
   
  En termes plus formels, la sécurité au niveau des lignes introduit le contrôle d'accès basé sur le prédicat. Elle propose une évaluation flexible, centralisée et basée sur le prédicat, qui peut prendre en compte les métadonnées ou tout autre critère que l'administrateur détermine comme approprié. Le prédicat est utilisé comme critère pour déterminer si l'utilisateur a l'accès approprié aux données en fonction de ses propres attributs. Le contrôle d'accès basé sur l'étiquette peut être implémenté à l'aide du contrôle d'accès basé sur le prédicat.  
   
- [Haut](#Top)  
   
 ##  <a name="Permissions"></a> Autorisations  
  La création, modification ou suppression des stratégies de sécurité nécessite l'autorisation **ALTER ANY SECURITY POLICY** . La création ou suppression d'une stratégie de sécurité nécessite l'autorisation **ALTER** sur le schéma.  
@@ -137,11 +118,10 @@ caps.handback.revision: 47
   
  Les stratégies de sécurité s'appliquent à tous les utilisateurs, y compris les utilisateurs dbo de la base de données. Les utilisateurs dbo peuvent modifier ou supprimer les stratégies de sécurité, mais leurs modifications des stratégies de sécurité peuvent être auditées. Si des utilisateurs à privilèges élevés (par exemple, sysadmin ou db_owner) doivent voir toutes les lignes afin de dépanner ou de valider des données, la stratégie de sécurité doit être écrite pour le permettre.  
   
- Si une stratégie de sécurité est créée avec `SCHEMABINDING = OFF`, alors pour interroger la table cible, les utilisateurs doivent avoir des autorisations **SELECT** ou **EXECUTE** sur la fonction de prédicat et toutes les autres tables, vues ou fonctions utilisées au sein de la fonction de prédicat. Si une stratégie de sécurité est créée avec `SCHEMABINDING = ON` (valeur par défaut), alors ces contrôles d’autorisations sont ignorés quand les utilisateurs interrogent la table cible.  
+ Si une stratégie de sécurité est créée avec `SCHEMABINDING = OFF`, alors pour interroger la table cible, les utilisateurs doivent avoir des autorisations  **SELECT** ou **EXECUTE** sur la fonction de prédicat et toutes les autres tables, vues ou fonctions utilisées au sein de la fonction de prédicat. Si une stratégie de sécurité est créée avec `SCHEMABINDING = ON` (valeur par défaut), alors ces contrôles d’autorisations sont ignorés quand les utilisateurs interrogent la table cible.  
   
- [Haut](#Top)  
   
-##  <a name="Best"></a> Meilleures pratiques  
+##  <a name="Best"></a> Bonnes pratiques  
   
 -   Il est fortement recommandé de créer un schéma distinct pour les objets de la sécurité au niveau des lignes (fonction de prédicat et stratégie de sécurité).  
   
@@ -153,7 +133,7 @@ caps.handback.revision: 47
   
 -   Évitez d'utiliser les jointures de table excessives dans les fonctions de prédicat pour optimiser les performances.  
   
- Évitez toute logique de prédicat dépendant d’[options SET](../../t-sql/statements/set-statements-transact-sql.md) spécifiques de la session : s’il est peu probable qu’elles soient utilisées dans des applications pratiques, les fonctions de prédicat dont la logique dépend de certaines options **SET** spécifiques de la session peuvent entraîner des fuites d’informations si des utilisateurs sont en mesure d’exécuter des requêtes arbitraires. Par exemple, une fonction de prédicat qui convertit implicitement une chaîne en **datetime** pourrait filtrer des lignes différentes, selon l’option **SET DATEFORMAT** définie pour la session active. En règle générale, les fonctions de prédicat doivent respecter les règles suivantes :  
+ Évitez toute logique de prédicat dépendant d’ [options SET](../../t-sql/statements/set-statements-transact-sql.md)spécifiques de la session : s’il est peu probable qu’elles soient utilisées dans des applications pratiques, les fonctions de prédicat dont la logique dépend de certaines options **SET** spécifiques de la session peuvent entraîner des fuites d’informations si des utilisateurs sont en mesure d’exécuter des requêtes arbitraires. Par exemple, une fonction de prédicat qui convertit implicitement une chaîne en **datetime** pourrait filtrer des lignes différentes, selon l’option **SET DATEFORMAT** définie pour la session active. En règle générale, les fonctions de prédicat doivent respecter les règles suivantes :  
   
 -   Les fonctions de prédicat ne doivent pas convertir implicitement des chaînes de caractères en **date**, **smalldatetime**, **datetime**, **datetime2** ou **datetimeoffset**, ou inversement, car ces conversions sont affectées par les options [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md) et [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md). Utilisez plutôt la fonction **CONVERT** , et spécifiez explicitement le paramètre de style.  
   
@@ -162,15 +142,13 @@ caps.handback.revision: 47
 -   Les fonctions de prédicat ne doivent pas dépendre d’expressions arithmétiques ou d’agrégation retournant **NULL** en cas d’erreur (telle qu’un dépassement ou une division par zéro), car ce comportement est affecté par les options [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md), [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md) et [SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md).  
   
 -   Les fonctions de prédicat ne doivent pas comparer des chaînes concaténées à **NULL**, car ce comportement est affecté par l’option [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).  
-  
- [Haut](#Top)  
+   
   
 ##  <a name="SecNote"></a> Note de sécurité : Attaques côté canal  
  **Gestionnaire de stratégie de sécurité malveillant :** il est important d’observer qu’un gestionnaire de stratégie de sécurité malveillant, disposant d’autorisations suffisantes pour créer une stratégie de sécurité sur une colonne sensible, et qui est autorisé à créer ou à modifier des fonctions table incluses, pourrait agir en collusion avec un autre utilisateur ayant des autorisations select sur une table pour effectuer une exfiltration de données en créant à des fins malveillantes des fonctions table incluses destinées à utiliser des attaques côté canal pour inférer des données. Ces attaques nécessitent une collusion (ou des autorisations excessives accordées à un utilisateur malveillant) et probablement plusieurs itérations de modification de la stratégie (nécessitant l'autorisation de supprimer le prédicat pour rompre la liaison de schéma), de modification des fonctions table inline et d'exécution répétée d'instructions select sur la table cible. Il est fortement recommandé de limiter les autorisations au strict nécessaire et de surveiller toute activité suspecte, telle que la modification permanente des stratégies et des fonctions table inline associées à la sécurité au niveau des lignes.  
   
  **Requêtes élaborées avec soin :** il est possible de provoquer des fuites d’informations via l’utilisation de requêtes élaborées avec soin. Par exemple, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` permettrait à un utilisateur malveillant de savoir que le salaire de John Doe est 100 000 $. Même s'il existe un prédicat de sécurité en vigueur pour empêcher un utilisateur malveillant d'interroger directement le salaire d'autres personnes, l'utilisateur peut déterminer si la requête retourne une exception de division par zéro.  
-  
- [Haut](#Top)  
+   
   
 ##  <a name="Limitations"></a> Compatibilité entre fonctionnalités  
  En général, la sécurité au niveau des lignes fonctionne comme prévu pour les fonctionnalités. Il existe cependant quelques exceptions. Cette section contient plusieurs remarques et avertissements concernant l’utilisation de la sécurité au niveau des lignes avec certaines autres fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -181,7 +159,7 @@ caps.handback.revision: 47
   
 -   **Polybase** La sécurité au niveau des lignes est incompatible avec Polybase.  
   
--   **Tables optimisées en mémoire** La fonction table incluse utilisée comme prédicat de sécurité sur une table optimisée en mémoire doit être définie avec l’option `WITH NATIVE_COMPILATION`. Avec cette option, les fonctionnalités de langue non prises en charge par les tables optimisées en mémoire sont interdites, et l’erreur appropriée est au moment de la création. Pour plus d’informations, consultez la section **Sécurité au niveau des lignes dans les tables optimisées en mémoire** dans [Introduction aux tables optimisées en mémoire](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
+-   **Tables optimisées en mémoire**La fonction table incluse utilisée comme prédicat de sécurité sur une table optimisée en mémoire doit être définie avec l’option `WITH NATIVE_COMPILATION` . Avec cette option, les fonctionnalités de langue non prises en charge par les tables optimisées en mémoire sont interdites, et l’erreur appropriée est au moment de la création. Pour plus d’informations, consultez la section **Sécurité au niveau des lignes dans les tables optimisées en mémoire** dans [Introduction aux tables optimisées en mémoire](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
 -   **Vues indexées** En général, des stratégies de sécurité peuvent être créées sur des vues, et des vues créées sur des tables liées par des stratégies de sécurité. En revanche, des vues indexées ne peuvent pas être créées sur des tables ayant une stratégie de sécurité, car les recherches de ligne via l’index contourneraient la stratégie.  
   
@@ -195,9 +173,8 @@ caps.handback.revision: 47
   
 -   **Vues partitionnées** Les prédicats BLOCK ne peuvent pas être définis sur des vues partitionnées, et celles-ci ne peuvent pas être créées sur des tables qui utilisent des prédicats BLOCK. Les prédicats de filtre sont compatibles avec les vues partitionnées.  
   
--   Les **tables temporelles** sont compatibles avec la fonction de sécurité au niveau des lignes. Toutefois, les prédicats de sécurité sur la table actuelle ne sont pas automatiquement répliqués dans la table de l’historique. Pour appliquer une stratégie de sécurité aux tables actuelle et de l’historique, vous devez ajouter un prédicat de sécurité à chaque table.  
+-   Les**tables temporelles** sont compatibles avec la fonction de sécurité au niveau des lignes. Toutefois, les prédicats de sécurité sur la table actuelle ne sont pas automatiquement répliqués dans la table de l’historique. Pour appliquer une stratégie de sécurité aux tables actuelle et de l’historique, vous devez ajouter un prédicat de sécurité à chaque table.  
   
- [Haut](#Top)  
   
 ##  <a name="CodeExamples"></a> Exemples  
   
@@ -206,7 +183,7 @@ caps.handback.revision: 47
   
  Créez trois comptes d'utilisateur qui illustrent différentes fonctionnalités d'accès.  
   
-```  
+```sql  
 CREATE USER Manager WITHOUT LOGIN;  
 CREATE USER Sales1 WITHOUT LOGIN;  
 CREATE USER Sales2 WITHOUT LOGIN;  
@@ -246,7 +223,7 @@ GRANT SELECT ON Sales TO Sales1;
 GRANT SELECT ON Sales TO Sales2;  
 ```  
   
- Créez un schéma et une fonction table inline. La fonction renvoie 1 lorsqu'une ligne de la colonne SalesRep est identique à l'utilisateur exécutant la requête (`@SalesRep = USER_NAME()`) ou si l'utilisateur exécutant la requête est l'utilisateur Manager (`USER_NAME() = 'Manager'`).  
+ Créez un schéma et une fonction table inline. La fonction renvoie 1 lorsqu'une ligne de la colonne SalesRep est identique à l'utilisateur exécutant la requête (`@SalesRep = USER_NAME()`) ou si l'utilisateur exécutant la requête est l'utilisateur Manager (`USER_NAME() = 'Manager'`).  
   
 ```  
 CREATE SCHEMA Security;  
@@ -296,7 +273,6 @@ WITH (STATE = OFF);
   
  Les utilisateurs Sales1 et Sales2 peuvent maintenant voir l'ensemble des 6 lignes.  
   
- [Haut](#Top)  
   
 ###  <a name="MidTier"></a> B. Scénario pour les utilisateurs qui se connectent à la base de données via une application intermédiaire  
  Cet exemple montre comment une application de couche intermédiaire peut implémenter le filtrage des connexions, lorsque les utilisateurs (ou locataires) d'application partagent le même utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (l'application). L’application définit l’ID d’utilisateur d’application actuel dans [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) après la connexion à la base de données, puis les stratégies de sécurité filtrent en toute transparence les lignes qui ne devraient pas être visibles par cet ID, et empêchent l’utilisateur d’insérer des lignes pour l’ID d’utilisateur incorrect. Aucune autre modification de l’application n’est nécessaire.  
@@ -363,7 +339,7 @@ CREATE SECURITY POLICY Security.SalesFilter
     WITH (STATE = ON);  
 ```  
   
- À présent, nous pouvons simuler le filtrage des connexions en opérant une sélection dans la table `Sales`, après avoir défini différents ID d’utilisateur dans **SESSION_CONTEXT**. Dans la pratique, l’application est chargée de définir l’ID d’utilisateur actuel dans **SESSION_CONTEXT** après l’ouverture d’une connexion.  
+ À présent, nous pouvons simuler le filtrage des connexions en opérant une sélection dans la table `Sales` , après avoir défini différents ID d’utilisateur dans **SESSION_CONTEXT**. Dans la pratique, l’application est chargée de définir l’ID d’utilisateur actuel dans **SESSION_CONTEXT** après l’ouverture d’une connexion.  
   
 ```  
 EXECUTE AS USER = 'AppUser';  
@@ -385,7 +361,7 @@ REVERT;
 GO  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [ALTER SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   
@@ -397,3 +373,4 @@ GO
  [Créer des fonctions définies par l’utilisateur &#40;moteur de base de données&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)  
   
   
+

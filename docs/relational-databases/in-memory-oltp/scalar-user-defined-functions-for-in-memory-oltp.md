@@ -1,32 +1,36 @@
 ---
-title: "Fonctions scalaires d&#233;finies par l’utilisateur pour l’OLTP en m&#233;moire | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Fonctions scalaires définies par l’utilisateur pour l’OLTP en mémoire | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d2546e40-fdfc-414b-8196-76ed1f124bf5
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: d6ed803c39e37a43b3db6c78f7416272954d1692
+ms.lasthandoff: 04/11/2017
+
 ---
-# Fonctions scalaires d&#233;finies par l’utilisateur pour l’OLTP en m&#233;moire
+# <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>Fonctions scalaires définies par l’utilisateur pour l’OLTP en mémoire
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous pouvez créer et supprimer des fonctions scalaires définies par l’utilisateur compilées en mode natif. Vous pouvez également modifier ces fonctions définies par l'utilisateur : La compilation native améliore les performances de l’évaluation de fonctions définies par l’utilisateur dans une instruction Transact-SQL.  
+  Dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous pouvez créer et supprimer des fonctions scalaires définies par l’utilisateur compilées en mode natif. Vous pouvez également modifier ces fonctions définies par l'utilisateur : La compilation native améliore les performances de l’évaluation de fonctions définies par l’utilisateur dans une instruction Transact-SQL.  
   
  Lorsque vous modifiez une fonction scalaire définie par l’utilisateur compilées en mode natif, l’application reste disponible pendant que l’opération est en cours d’exécution et que la nouvelle version de la fonction est en cours de compilation.  
   
  Pour les constructions T-SQL prises en charge, consultez [Fonctionnalités prises en charge pour les modules T-SQL compilés en mode natif](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
-## Création, suppression et modification de fonctions définies par l'utilisateur  
+## <a name="creating-dropping-and-altering-user-defined-functions"></a>Création, suppression et modification de fonctions définies par l'utilisateur  
  La fonction CREATE vous permet de créer la fonction scalaire définie par l’utilisateur compilée en mode natif, la fonction DROP de supprimer la fonction définie par l’utilisateur et la fonction ALTER de la modifier. BEGIN ATOMIC WITH est requis pour les fonctions définies par l’utilisateur.  
   
  Pour plus d’informations sur la syntaxe prise en charge et les restrictions, consultez les rubriques suivantes.  
@@ -67,41 +71,42 @@ BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE = N'English'
 END  
 ```  
   
-## Appel de fonctions définies par l'utilisateur  
+## <a name="calling-user-defined-functions"></a>Appel de fonctions définies par l'utilisateur  
  Les fonctions scalaires définies par l’utilisateur compilées en mode natif sont utilisables dans des expressions, au même titre que des fonctions scalaires intégrées et des fonctions scalaires définies par l’utilisateur interprétées. Les fonctions scalaires définies par l’utilisateur compilées en mode natif peuvent également être utilisées avec l’instruction EXECUTE, dans une instruction Transact-SQL et une procédure stockée compilée en mode natif.  
   
  Vous pouvez utiliser ces fonctions scalaires définies par l’utilisateur dans des procédures stockées compilées en mode natif et des fonctions définies par l’utilisateur compilées en mode natif et dans les cas où les fonctions intégrées sont autorisées. Vous pouvez également utiliser des fonctions scalaires définies par l’utilisateur compilées en mode natif dans des modules Transact-SQL traditionnels.  
   
- Vous pouvez utiliser ces fonctions scalaires définies par l’utilisateur en mode interop dans les cas où une fonction scalaire définie par l’utilisateur interprétée peut être utilisée. Cependant, des limitations de transaction entre conteneurs s’appliquent, comme décrit dans la section **Niveaux d’isolation pris en charge pour les transactions entre conteneurs** dans [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md) (Transactions avec des tables optimisées en mémoire). Pour plus d’informations sur le mode interop, consultez [Accéder aux tables mémoire optimisées à l’aide du Transact-SQL interprété](../../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md).  
+ Vous pouvez utiliser ces fonctions scalaires définies par l’utilisateur en mode interop dans les cas où une fonction scalaire définie par l’utilisateur interprétée peut être utilisée. Cependant, des limitations de transaction entre conteneurs s’appliquent, comme décrit dans la section **Niveaux d’isolation pris en charge pour les transactions entre conteneurs** dans [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)(Transactions avec des tables optimisées en mémoire). Pour plus d’informations sur le mode interop, consultez [Accéder aux tables optimisées en mémoire à l’aide du Transact-SQL interprété](../../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md).  
   
  Les fonctions scalaires définies par l’utilisateur compilées en mode natif nécessitent un contexte d’exécution explicite. Pour plus d’informations, consultez [Clause EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md). EXECUTE AS CALLER n’est pas pris en charge. Pour plus d’informations, consultez [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
  Pour plus d’informations sur la syntaxe prise en charge pour les instructions Transact-SQL Execute et les fonctions scalaires définies par l’utilisateur compilées en mode natif, consultez [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md). Pour plus d’informations sur la syntaxe prise en charge pour l’exécution de fonctions définies par l’utilisateur dans une procédure stockée compilée en mode natif, consultez [Fonctionnalités prises en charge pour les modules T-SQL compilés en mode natif](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
-## Indicateurs et paramètres  
+## <a name="hints-and-parameters"></a>Indicateurs et paramètres  
  La prise en charge d’une table, d’une jonction et d’indicateurs de requête dans des fonctions scalaires définies par l’utilisateur compilées en mode natif est la même que la prise en charge de ces indicateurs dans des procédures stockées compilées en mode natif. Comme pour les fonctions scalaires définies par l’utilisateur interprétées, les indicateurs de requête inclus dans une requête Transact-SQL qui font référence à une fonction scalaire définie par l’utilisateur compilée en mode natif n’impactent pas le plan de requête pour cette fonction définie par l’utilisateur.  
   
  Les paramètres pris en charge pour les fonctions scalaires définies par l’utilisateur compilées en mode natif sont tous les paramètres pris en charge pour les procédures stockées compilées en mode natif, tant que les paramètres sont autorisés pour les fonctions scalaires définies par l’utilisateur. Le paramètre table est un exemple de paramètre pris en charge.  
   
-## Fonction liée à un schéma  
+## <a name="schema-bound"></a>Fonction liée à un schéma  
  Les remarques suivantes s’appliquent aux fonctions scalaires définies par l'utilisateur compilées en mode natif  
   
 -   Elles doivent être liées au schéma, à l’aide de l’argument WITH SCHEMABINDING dans les fonctions CREATE et ALTER.  
   
 -   Elles ne peuvent pas être supprimées ou modifiées si elles sont référencées par une procédure stockée liée à un schéma ou par une fonction définie par l’utilisateur.  
   
-## SHOWPLAN_XML  
+## <a name="showplanxml"></a>SHOWPLAN_XML  
  Les fonctions scalaires définies par l'utilisateur compilées en mode natif prennent en charge SHOWPLAN_XML. Elles sont conformes au schéma SHOWPLAN_XML générales, comme les procédures stockées compilées en mode natif. L’élément de base des fonctions définies par l’utilisateur est `<UDF>`.  
   
  STATISTICS XML n’est pas pris en charge pour les fonctions scalaires définies par l’utilisateur compilées en mode natif. Lorsque vous exécutez une requête faisant référence à la fonction définie par l’utilisateur avec STATISTICS XML activé, le contenu XML est retourné sans la partie de la fonction définie par l’utilisateur.  
   
-## Autorisations  
+## <a name="permissions"></a>Autorisations  
  Comme avec les procédures stockées compilées en mode natif, les autorisations pour les objets référencés à partir d’une fonction scalaire définie par l’utilisateur compilée en mode natif sont vérifiées à la création de la fonction. La fonction CREATE échoue si l’utilisateur représenté ne dispose pas des autorisations appropriées. Si l’utilisateur représenté ne dispose plus des autorisations appropriées en raison d’une modification des autorisations, les exécutions ultérieures de la fonction définie par l’utilisateur échouent.  
   
  Lorsque vous utilisez une fonction scalaire définie par l’utilisateur compilée en mode natif dans une procédure stockée compilée en mode natif, les autorisations d’exécution de la fonction définie par l’utilisateur sont vérifiées à la création de la procédure externe. Si l’utilisateur représenté par la procédure externe ne dispose pas d’autorisations d’exécution de la fonction définie par l’utilisateur, la création de la procédure stockée échoue. Si l’utilisateur ne dispose plus des autorisations d’exécution en raison d’une modification des autorisations, l’exécution de la procédure externe échoue.  
   
-## Voir aussi  
- [Fonctions intégrées &#40;Transact-SQL&#41;](../Topic/Built-in%20Functions%20\(Transact-SQL\).md)   
- [Enregistrer un plan d'exécution au format XML](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
+ [Enregistrer un plan d'exécution au format XML](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
   
   
+

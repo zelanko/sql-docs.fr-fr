@@ -1,40 +1,44 @@
 ---
-title: "Restaurer des pages (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restorepage.general.f1"
-helpviewer_keywords: 
-  - "restauration de pages [SQL Server]"
-  - "pages [SQL Server], restauration"
-  - "bases de données [SQL Server], endommagées"
-  - "restaurations de pages [SQL Server]"
-  - "pages [SQL Server], endommagées"
-  - "restauration [SQL Server], pages"
+title: Restaurer des pages (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restorepage.general.f1
+helpviewer_keywords:
+- restoring pages [SQL Server]
+- pages [SQL Server], restoring
+- databases [SQL Server], damaged
+- page restores [SQL Server]
+- pages [SQL Server], damaged
+- restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 caps.latest.revision: 67
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 67
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1cdf13c937ecdaa54c31831625dc6fc41b35be70
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaurer des pages (SQL Server)
+# <a name="restore-pages-sql-server"></a>Restaurer des pages (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Cette rubrique explique comment restaurer des pages dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Dans la restauration de pages, l'objectif est de restaurer une ou plusieurs pages endommagées sans restaurer toute la base de données. Généralement, les pages candidates à la restauration ont été marquées « suspectes » en raison d'une erreur rencontrée lors de l'accès à la page. Les pages suspectes sont identifiées dans la table [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) dans la base de données **msdb**.  
+  Cette rubrique explique comment restaurer des pages dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Dans la restauration de pages, l'objectif est de restaurer une ou plusieurs pages endommagées sans restaurer toute la base de données. Généralement, les pages candidates à la restauration ont été marquées « suspectes » en raison d'une erreur rencontrée lors de l'accès à la page. Les pages suspectes sont identifiées dans la table [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) dans la base de données **msdb** .  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
-     [Quand une restauration de pages est-elle utile ?](#WhenUseful)  
+     [Quand une restauration de pages est-elle utile ?](#WhenUseful)  
   
      [Limitations et restrictions](#Restrictions)  
   
@@ -42,7 +46,7 @@ caps.handback.revision: 67
   
      [Sécurité](#Security)  
   
--   **Pour restaurer des pages, utilisez :**  
+-   **Pour restaurer des pages, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -50,20 +54,20 @@ caps.handback.revision: 67
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="WhenUseful"></a> Quand une restauration de pages est-elle utile ?  
+###  <a name="WhenUseful"></a> Quand une restauration de pages est-elle utile ?  
  La restauration de pages permet de réparer des pages endommagées. La restauration et la récupération de quelques pages individuelles peuvent être plus rapides qu'une restauration de fichiers, ce qui réduit le nombre de données qui restent hors ligne pendant l'opération. Toutefois, si vous avez besoin de restaurer un plus grand nombre de pages d'un fichier, il est généralement plus efficace de restaurer l'ensemble du fichier. Par exemple, si de nombreuses pages sur une unité indiquent une défaillance possible de l'unité, envisagez de restaurer le fichier éventuellement dans un emplacement différent et de réparer l'unité.  
   
- En outre, toutes les erreurs de page n'exigent pas une restauration. Il peut arriver qu'un problème survenant dans les données en cache, dans un index secondaire par exemple, ne puisse pas être résolu en recalculant les données. Par exemple, si l’administrateur de la base de données supprime un index secondaire et le reconstruit, les données endommagées, bien qu’ayant été corrigées, ne sont pas indiquées comme telles dans la table [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md).  
+ En outre, toutes les erreurs de page n'exigent pas une restauration. Il peut arriver qu'un problème survenant dans les données en cache, dans un index secondaire par exemple, ne puisse pas être résolu en recalculant les données. Par exemple, si l’administrateur de la base de données supprime un index secondaire et le reconstruit, les données endommagées, bien qu’ayant été corrigées, ne sont pas indiquées comme telles dans la table [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) .  
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
   
 -   La restauration de pages s'applique aux bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui utilisent les modes de récupération complète ou de récupération utilisant les journaux de transactions. La restauration de pages n'est prise en charge que pour les groupes de fichiers en lecture-écriture.  
   
--   Seules les pages de bases de données peuvent être restaurées. La restauration de pages ne peut pas être utilisée pour restaurer les éléments suivants :  
+-   Seules les pages de bases de données peuvent être restaurées. La restauration de pages ne peut pas être utilisée pour restaurer les éléments suivants :  
   
     -   Journal des transactions  
   
-    -   Pages d'allocation : pages GAM (Global Allocation Map), pages SGAM(Shared Global Allocation Map) et pages PFS (Page Free Space).  
+    -   Pages d'allocation : pages GAM (Global Allocation Map), pages SGAM(Shared Global Allocation Map) et pages PFS (Page Free Space).  
   
     -   Page 0 de tous les fichiers de données (page de démarrage des fichiers)  
   
@@ -83,7 +87,7 @@ caps.handback.revision: 67
   
 ###  <a name="Recommendations"></a> Recommandations  
   
--   Scénarios de restauration de pages :  
+-   Scénarios de restauration de pages :  
   
      Restauration de pages hors connexion  
      Toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prennent en charge la restauration des pages lorsque la base de données est hors connexion. Dans une restauration de pages hors connexion, la base de données est hors connexion pendant que les pages endommagées sont restaurées. À la fin de la séquence de restauration, la base de données est mise en ligne.  
@@ -101,29 +105,29 @@ caps.handback.revision: 67
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Si la base de données restaurée n'existe pas, l'utilisateur doit posséder les autorisations CREATE DATABASE afin de pouvoir exécuter RESTORE. Si la base de données existe, les autorisations RESTORE reviennent par défaut aux membres des rôles serveur fixe **sysadmin** et **dbcreator** et au propriétaire (**dbo**) de la base de données (pour l’option FROM DATABASE_SNAPSHOT, la base de données existe toujours).  
+ Si la base de données restaurée n'existe pas, l'utilisateur doit posséder les autorisations CREATE DATABASE afin de pouvoir exécuter RESTORE. Si la base de données existe, les autorisations RESTORE reviennent par défaut aux membres des rôles serveur fixes **sysadmin** et **dbcreator** et au propriétaire (**dbo**) de la base de données (pour l’option FROM DATABASE_SNAPSHOT, la base de données existe toujours).  
   
- Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas quand RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
+ Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que lorsque la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas quand RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  À compter de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] prend en charge les restaurations de pages.  
   
-#### Pour restaurer des pages  
+#### <a name="to-restore-pages"></a>Pour restaurer des pages  
   
 1.  Connectez-vous à l'instance appropriée du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], puis dans l'Explorateur d'objets, cliquez sur le nom du serveur pour développer son arborescence.  
   
 2.  Développez **Bases de données**. Selon la base de données, sélectionnez une base de données utilisateur ou développez **Bases de données système**et sélectionnez une base de données système.  
   
-3.  Cliquez avec le bouton droit sur la base de données, pointez sur **Tâches**, pointez sur **Restaurer**, puis cliquez sur **Page**, pour ouvrir la boîte de dialogue **Restaurer la page**.  
+3.  Cliquez avec le bouton droit sur la base de données, pointez sur **Tâches**, pointez sur **Restaurer**, puis cliquez sur **Page**, pour ouvrir la boîte de dialogue **Restaurer la page** .  
   
-     **Restore**  
+     **Restaurer**  
      Cette section effectue la même fonction que **Restaurer sur** dans la page [Restaurer la base de données (page Général)](../../relational-databases/backup-restore/restore-database-general-page.md).  
   
      **Base de données**  
      Spécifie la base de données à restaurer. Vous pouvez saisir le nom d'une nouvelle base de données ou en sélectionner une existante dans la liste déroulante. La liste comprend toutes les bases de données se trouvant sur le serveur, à l'exception des bases de données système **master** et **tempdb**.  
   
     > [!WARNING]  
-    >  Pour restaurer une sauvegarde protégée par mot de passe, vous devez utiliser l’instruction [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md).  
+    >  Pour restaurer une sauvegarde protégée par mot de passe, vous devez utiliser l’instruction [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) .  
   
      **Sauvegarde de la fin du journal**  
      Entrez ou sélectionnez un nom de fichier dans **Unité de sauvegarde** où la sauvegarde de la fin du journal sera stockée pour la base de données.  
@@ -154,11 +158,11 @@ caps.handback.revision: 67
 4.  Pour identifier les pages endommagées, avec la base de données correcte sélectionnée dans la zone **Base de données** , cliquez sur **Vérifier les pages de la base de données**. Cette opération est longue.  
   
     > [!WARNING]  
-    >  Pour restaurer les pages spécifiques qui ne sont pas endommagées, cliquez sur **Ajouter** et entrez l’**ID de fichier** et l’**ID de page** des pages à restaurer.  
+    >  Pour restaurer les pages spécifiques qui ne sont pas endommagées, cliquez sur **Ajouter** et entrez l’ **ID de fichier** et l’ **ID de page** des pages à restaurer.  
   
-5.  La grille de pages est utilisée pour identifier les pages à restaurer. Initialement, cette grille est remplie à partir de la table système [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md). Pour ajouter ou supprimer des pages de la grille, cliquez sur **Ajouter** ou **Supprimer**. Pour plus d’informations, consultez [Gérer la table suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md).  
+5.  La grille de pages est utilisée pour identifier les pages à restaurer. Initialement, cette grille est remplie à partir de la table système [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) . Pour ajouter ou supprimer des pages de la grille, cliquez sur **Ajouter** ou **Supprimer**. Pour plus d’informations, consultez [Gérer la table suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md).  
   
-6.  La grille **Jeux de sauvegarde** répertorie les jeux de sauvegarde dans le plan de restauration par défaut. Éventuellement, cliquez sur **Vérifier** pour vérifier que les sauvegardes sont lisibles et que les jeux de sauvegarde sont complets, sans les restaurer. Pour plus d’informations, consultez [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md).  
+6.  La grille **Jeux de sauvegarde** répertorie les jeux de sauvegarde dans le plan de restauration par défaut. Éventuellement, cliquez sur **Vérifier** pour vérifier que les sauvegardes sont lisibles et que les jeux de sauvegarde sont complets, sans les restaurer. Pour plus d’informations, consultez [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
      **Pages**  
   
@@ -175,9 +179,9 @@ caps.handback.revision: 67
   
  `WITH NORECOVERY`  
   
- Pour plus d’informations sur les paramètres de l’option PAGE, consultez [Arguments RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md). Pour plus d’informations sur la syntaxe de RESTORE DATABASE, consultez [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+ Pour plus d’informations sur les paramètres de l’option PAGE, consultez [Arguments RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md). Pour plus d’informations sur la syntaxe de RESTORE DATABASE, consultez [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
-#### Pour restaurer des pages  
+#### <a name="to-restore-pages"></a>Pour restaurer des pages  
   
 1.  Obtenez les ID des pages endommagées à restaurer. Une somme de contrôle ou une erreur d'écriture renvoie un ID de page fournissant les informations nécessaires pour la spécification des pages. Pour rechercher l'ID de page d'une page endommagée, utilisez une des sources suivantes.  
   
@@ -185,7 +189,7 @@ caps.handback.revision: 67
     |-----------------------|-----------|  
     |**msdb..suspect_pages**|[Gérer la table suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)|  
     |Journal des erreurs|[Afficher le journal des erreurs SQL Server &#40;SQL Server Management Studio&#41;](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)|  
-    |Traces d'événements|[Surveiller et répondre aux événements](../../ssms/agent/monitor-and-respond-to-events.md)|  
+    |Traces d'événements|[Surveiller et répondre aux événements](http://msdn.microsoft.com/library/f7fbe155-5b68-4777-bc71-a47637471f32)|  
     |DBCC|[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)|  
     |Fournisseur WMI|[Fournisseur WMI pour les concepts des événements de serveur](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)|  
   
@@ -218,8 +222,8 @@ RESTORE LOG <database> FROM <new_log_backup> WITH RECOVERY;
 GO  
 ```  
   
-## Voir aussi  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Voir aussi  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [Gérer la table suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
  [Sauvegarde et restauration des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  

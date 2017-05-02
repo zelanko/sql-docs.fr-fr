@@ -1,30 +1,34 @@
 ---
-title: "SQL Server, objet Wait Statistics | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Wait Statistics (objet)"
-  - "SQLServer:Wait Statistics"
+title: SQL Server, objet Wait Statistics | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Wait Statistics object
+- SQLServer:Wait Statistics
 ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e81641439bc17a678f7713e6b8088495b09db618
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, objet Wait Statistics
+# <a name="sql-server-wait-statistics-object"></a>SQL Server, objet Wait Statistics
   L'objet de performance **SQLServer:Wait Statistics** contient des compteurs de performances qui créent des rapports d'information sur l'état d'attente.  
   
  Le tableau ci-dessous répertorie les compteurs contenus dans l'objet Wait Statistics.  
   
-|Compteurs Statistiques d'attente de SQL Server|Description|  
+|Compteurs Statistiques d'attente de SQL Server|Description|  
 |-----------------------------------------|-----------------|  
 |**Attente de verrouillage**|Statistiques des processus attendant un verrou.|  
 |**Attente accès tampon journal**|Statistiques des processus attendant qu'un tampon journal soit disponible.|  
@@ -39,7 +43,7 @@ caps.handback.revision: 15
 |**Attente du thread de travail**|Statistiques relatives aux processus en attente d'accès à un thread de travail.|  
 |**Attente de synchronisation d'espace de travail**|Statistiques relatives aux processus de synchronisation d'accès à un espace de travail.|  
   
- Chaque compteur de l'objet contient les instances suivantes :  
+ Chaque compteur de l'objet contient les instances suivantes :  
   
 |Élément|Description|  
 |----------|-----------------|  
@@ -48,7 +52,7 @@ caps.handback.revision: 15
 |**Attentes en cours**|Nombre de processus en cours d'attente du type suivant.|  
 |**Attentes démarrées par seconde**|Nombre d'attentes démarrées par seconde pour le type d'attente sélectionné.|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

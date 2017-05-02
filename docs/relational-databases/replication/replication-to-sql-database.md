@@ -1,33 +1,37 @@
 ---
-title: "R&#233;plication vers une base de donn&#233;es SQL | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "06/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Réplication de base de données SQL"
-  - "réplication, base de données SQL"
+title: "Réplication vers une base de données SQL | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 06/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Database replication
+- replication, SQL Database
 ms.assetid: e8484da7-495f-4dac-b38e-bcdc4691f9fa
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1beb8c0334078c7710568a40339daf05ed0b69e1
+ms.lasthandoff: 04/11/2017
+
 ---
-# R&#233;plication vers une base de donn&#233;es SQL
+# <a name="replication-to-sql-database"></a>Réplication vers une base de données SQL
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la réplication peut être configurée pour [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+  Vous pouvez configurer une réplication de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
  **Configurations prises en charge :**  
   
--   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cours d’exécution en local ou à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cours d’exécution dans une machine virtuelle dans le cloud. Pour plus d’informations, consultez [Vue d’ensemble de SQL Server sur les machines virtuelles Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/).  
+-   La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécutée localement ou une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécutée dans une machine virtuelle Azure dans le cloud. Pour plus d’informations, consultez [Vue d’ensemble de SQL Server sur les machines virtuelles Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/).  
   
 -   [!INCLUDE[ssSDS](../../includes/sssds-md.md)] doit être un abonné par émission de données d’un serveur de publication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 15
   
 -   Seules les réplications d’instantané et les réplications transactionnelles monodirectionnelles sont prises en charge. Les réplications transactionnelles d’égal à égal et les réplications de fusion ne sont pas prises en charge.  
   
-## Versions  
+## <a name="versions"></a>Versions  
  Le serveur de publication et le serveur de distribution doivent exécuter l’une des versions suivantes ou une version ultérieure :  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
@@ -48,13 +52,13 @@ caps.handback.revision: 15
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] attendu pour SP3  
   
- Tente de configurer la réplication à l’aide d’une version antérieure peut provoquer erreur numéro MSSQL_REPL20084 (le processus pas pu se connecter à l’abonné.) et MSSQL_REPL40532 (Impossible d’ouvrir le serveur \< nom> demandée par la connexion. The login failed. (Impossible d’ouvrir le serveur <nom> requis pour la connexion. La connexion a échoué.)).  
+ Une tentative de configuration de la réplication à l’aide d’une version antérieure peut entraîner les erreurs MSSQL_REPL20084 (Le processus n’a pas pu se connecter à l’abonné.) et MSSQL_REPL40532 (Impossible d’ouvrir le serveur \<nom> requis pour la connexion. La connexion a échoué.).  
   
  l’abonné [!INCLUDE[ssSDS](../../includes/sssds-md.md)] doit exécuter la version V12 ou une version ultérieure et peut être situé dans n’importe quelle région.  
   
- Pour utiliser toutes les fonctionnalités de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] vous devez utiliser les dernières versions de [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) et [SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx).  
+ Pour utiliser toutes les fonctionnalités de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vous devez utiliser les dernières versions de [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) et [SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx).  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  La réplication peut être configurée à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou en exécutant des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] sur le serveur de publication. Vous ne pouvez pas configurer la réplication à l’aide du portail [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .  
   
  La réplication peut uniquement utiliser des connexions d’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour se connecter à [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -63,38 +67,38 @@ caps.handback.revision: 15
   
  Vous devez disposer d’un abonnement Azure et de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12.  
   
- Une seule publication sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut prendre en charge à la fois [!INCLUDE[ssSDS](../../includes/sssds-md.md)] et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (local et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une machine virtuelle) abonnés.  
+ Une seule publication sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut prendre en charge à la fois des abonnés [!INCLUDE[ssSDS](../../includes/sssds-md.md)] et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (instance exécutée localement et instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécutée dans une machine virtuelle Azure).  
   
- Gestion de la réplication, surveillance et résolution des problèmes doivent être effectuée à partir du site [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Les opérations de gestion, de surveillance et de dépannage de la réplication doivent être effectuées à partir de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]exécutée localement.  
   
  Seuls les abonnements par émission de données à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] sont pris en charge.  
   
- Seulement `@subscriber_type = 0` est pris en charge dans **sp_addsubscription** pour la base de données SQL.  
+ Seul `@subscriber_type = 0` est pris en charge dans **sp_addsubscription** pour la base de données SQL.  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ne prend pas en charge la réplication bidirectionnelle, immédiate, mettre à jour ou pair à pair.  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ne prend pas en charge la réplication bidirectionnelle, immédiate, pouvant être mise à jour ou d’égal à égal.  
   
-## Architecture de réplication  
+## <a name="replication-architecture"></a>Architecture de réplication  
  ![replication-to-sql-database](../../relational-databases/replication/media/replication-to-sql-database.png "replication-to-sql-database")  
   
-## Scénarios  
+## <a name="scenarios"></a>Scénarios  
   
-#### Scénario de réplication classique  
+#### <a name="typical-replication-scenario"></a>Scénario de réplication classique  
   
-1.  Créer une publication de réplication transactionnelle dans un local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données.  
+1.  Créez une publication de réplication transactionnelle sur une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale.  
   
-2.  Dans les locaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliser le **Assistant Nouvel abonnement** ou [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions pour créer une campagne d’abonnement [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+2.  Dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale, utilisez l’ **Assistant Nouvel abonnement** ou des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] pour créer un abonnement par émission de données à [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-3.  Le jeu de données initial est généralement un instantané créé par l’Agent d’instantané puis distribué et appliqué par l’Agent de distribution. Le jeu de données initial peut être fourni par une sauvegarde ou un autre moyen, par exemple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+3.  Le jeu de données initial est généralement un instantané créé par l’Agent d’instantané puis distribué et appliqué par l’Agent de distribution. The initial data set can also be supplied through a backup or other means, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-#### Scénario de migration de données  
+#### <a name="data-migration-scenario"></a>Scénario de migration de données  
   
-1.  Utilisez la réplication transactionnelle pour répliquer des données depuis un site local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] une base de données [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+1.  Utilisez la réplication transactionnelle pour répliquer des données depuis une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale vers [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-2.  Rediriger les applications clientes ou de niveau intermédiaire pour mettre à jour le [!INCLUDE[ssSDS](../../includes/sssds-md.md)] copie.  
+2.  Redirigez les applications clientes ou de couche intermédiaire pour mettre à jour la copie [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .  
   
 3.  Arrêtez la mise à jour de la version [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la table et supprimez la publication.  
   
-## Limitations  
+## <a name="limitations"></a>Limitations  
  Les options suivantes ne sont pas prises en charge pour les abonnements [!INCLUDE[ssSDS](../../includes/sssds-md.md)] :  
   
 -   Copier l’association de groupes de fichiers  
@@ -141,18 +145,19 @@ caps.handback.revision: 15
   
 -   Exécution de la procédure stockée dans une transaction sérialisée  
   
-## Exemples  
+## <a name="examples"></a>Exemples  
  Créer une publication et un abonnement par émission de données. Pour plus d'informations, consultez :  
   
--   [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)  
+-   [Créer une publication](../../relational-databases/replication/publish/create-a-publication.md)  
   
--   [Créer un abonnement Push](../../relational-databases/replication/create-a-push-subscription.md) à l’aide de la [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] nom du serveur logique en tant que l’abonné (par exemple **N'azuresqldbdns.database.windows.net'**) et le [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nom de la base de données de destination (par exemple **AdventureWorks**).  
+-   [Créer un abonnement par extraction](../../relational-databases/replication/create-a-push-subscription.md) en utilisant le nom de serveur logique [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] comme abonné (par exemple, **N’azuresqldbdns.database.windows.net’**) et le nom [!INCLUDE[ssSDS](../../includes/sssds-md.md)] comme base de données de destination (par exemple, **AdventureWorks**).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Types de réplication](../../relational-databases/replication/types-of-replication.md)   
- [Analyse & #40 ; Réplication & #41 ;](../../relational-databases/replication/monitor/monitoring-replication.md)   
+ [Types of Replication](../../relational-databases/replication/types-of-replication.md)   
+ [Surveillance &#40;réplication&#41;](../../relational-databases/replication/monitor/monitoring-replication.md)   
  [Initialiser un abonnement](../../relational-databases/replication/initialize-a-subscription.md)  
   
   
+

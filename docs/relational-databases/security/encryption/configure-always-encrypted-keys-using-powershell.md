@@ -1,22 +1,26 @@
 ---
-title: "Configurer des cl&#233;s Always Encrypted &#224; l’aide de PowerShell | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Configurer des clés Always Encrypted à l’aide de PowerShell | Microsoft Docs"
+ms.custom: 
+ms.date: 09/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-security
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3bdf8629-738c-489f-959b-2f5afdaf7d61
 caps.latest.revision: 27
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a66c8c05c1c56c11e1992b70f84a8a1878bc95d5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurer des cl&#233;s Always Encrypted &#224; l’aide de PowerShell
+# <a name="configure-always-encrypted-keys-using-powershell"></a>Configurer des clés Always Encrypted à l’aide de PowerShell
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
     
@@ -35,16 +39,16 @@ Avant d’exécuter des étapes qui impliquent l’accès aux clés en texte cla
 
 Tâche  |Article  |Accède au magasin de clés/aux clés en texte clair  |Accède à la base de données   
 ---------|---------|---------|---------
-Étape 1. Créer une clé principale de colonne dans un magasin de clés.<br><br>**Remarque :** Le module SqlServer PowerShell ne prend pas en charge cette étape. Pour accomplir cette tâche à partir d’une ligne de commande, utilisez les outils qui sont spécifiques à votre magasin de clés sélectionné. |[Créer et stocker des clés principales de colonne (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | Oui | Non     
-Étape 2.  Démarrer un environnement PowerShell et importer le module SqlServer PowerShell.  |   [Configurer Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   |    Non    | Non         
-Étape 3.  Se connecter à votre serveur et à la base de données.     |     [Se connecter à une base de données](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase)    |    Non     | Oui         
-Étape 4.  Créer un objet *SqlColumnMasterKeySettings* qui contient des informations sur l’emplacement de votre clé principale de colonne. SqlColumnMasterKeySettings est un objet qui existe en mémoire (dans PowerShell). Utilisez l’applet de commande qui est spécifique à votre magasin de clés.   |     [New-SqlAzureKeyVaultColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759795.aspx)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759816.aspx)<br><br>[New-SqlCngColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759818.aspx)<br><br>[New-SqlCspColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759784.aspx)        |   Non      | Non         
-Étape 5.  Créer les métadonnées relatives à la clé principale de colonne dans votre base de données.      |    [New-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759813.aspx)<br><br>**Remarque :** En arrière-plan, l’applet de commande émet l’instruction [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) pour créer des métadonnées de clé.|    Non     |    Oui
-Étape 6.  S’authentifier auprès d’Azure, si votre clé principale de colonne est stockée dans Azure Key Vault. | [Add-SqlAzureAuthenticationContext](https://msdn.microsoft.com/library/mt759815.aspx)    |  Oui   | Non         
-Étape 7.  Générer une clé de chiffrement de colonne, la chiffrer avec la clé principale de colonne et créer les métadonnées de clé de chiffrement de colonne dans la base de données.     |    [New-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759808.aspx)<br><br>**Remarque :** Utilisez une variation de l’applet de commande qui génère et chiffre en interne une clé de chiffrement de colonne.<br><br>**Remarque :** En arrière-plan, l’applet de commande émet l’instruction [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) pour créer des métadonnées de clé.  | Oui | Oui
+Étape 1. Créer une clé principale de colonne dans un magasin de clés.<br><br>**Remarque :** Le module SqlServer PowerShell ne prend pas en charge cette étape. Pour accomplir cette tâche à partir d’une ligne de commande, utilisez les outils qui sont spécifiques à votre magasin de clés sélectionné. |[Créer et stocker des clés principales de colonne (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | Oui | Non     
+Étape 2.  Démarrer un environnement PowerShell et importer le module SqlServer PowerShell.  |   [Configurer Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   |    Non    | Non         
+Étape 3.  Se connecter à votre serveur et à la base de données.     |     [Se connecter à une base de données](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase)    |    Non     | Oui         
+Étape 4.  Créer un objet *SqlColumnMasterKeySettings* qui contient des informations sur l’emplacement de votre clé principale de colonne. SqlColumnMasterKeySettings est un objet qui existe en mémoire (dans PowerShell). Utilisez l’applet de commande qui est spécifique à votre magasin de clés.   |     [New-SqlAzureKeyVaultColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759795.aspx)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759816.aspx)<br><br>[New-SqlCngColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759818.aspx)<br><br>[New-SqlCspColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759784.aspx)        |   Non      | Non         
+Étape 5.  Créer les métadonnées relatives à la clé principale de colonne dans votre base de données.      |    [New-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759813.aspx)<br><br>**Remarque :** En arrière-plan, l’applet de commande émet l’instruction [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) pour créer des métadonnées de clé.|    Non     |    Oui
+Étape 6.  S’authentifier auprès d’Azure, si votre clé principale de colonne est stockée dans Azure Key Vault. | [Add-SqlAzureAuthenticationContext](https://msdn.microsoft.com/library/mt759815.aspx)    |  Oui   | Non         
+Étape 7.  Générer une clé de chiffrement de colonne, la chiffrer avec la clé principale de colonne et créer les métadonnées de clé de chiffrement de colonne dans la base de données.     |    [New-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759808.aspx)<br><br>**Remarque :** Utilisez une variation de l’applet de commande qui génère et chiffre en interne une clé de chiffrement de colonne.<br><br>**Remarque :** En arrière-plan, l’applet de commande émet l’instruction [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) pour créer des métadonnées de clé.  | Oui | Oui
   
 
-## Magasin de certificats Windows sans séparation des rôles (exemple)
+## <a name="windows-certificate-store-without-role-separation-example"></a>Magasin de certificats Windows sans séparation des rôles (exemple)
 
 Ce script est un exemple de bout en bout de génération d’une clé principale de colonne qui est un certificat dans le magasin de certificats Windows, de génération et de chiffrement d’une clé de chiffrement de colonne, et de création de métadonnées de clé dans une base de données SQL Server.
 
@@ -79,7 +83,7 @@ $cekName = "CEK1"
 New-SqlColumnEncryptionKey -Name $cekName  -InputObject $database -ColumnMasterKey $cmkName
 ```
 
-## Azure Key Vault sans séparation des rôles (exemple)
+## <a name="azure-key-vault-without-role-separation-example"></a>Azure Key Vault sans séparation des rôles (exemple)
 
 Ce script est un exemple de bout en bout de mise en service et de configuration d’Azure Key Vault, de génération d’une clé principale de colonne dans le coffre, de génération et de chiffrement d’une clé de chiffrement de colonne, et de création de métadonnées de clé dans une base de données SQL Azure.
 
@@ -126,7 +130,7 @@ $cekName = "CEK1"
 New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName
 ```
 
-## CNG/KSP sans séparation des rôles (exemple)
+## <a name="cngksp-without-role-separation-example"></a>CNG/KSP sans séparation des rôles (exemple)
 
 Le script ci-dessous est un exemple de bout en bout de génération d’une clé principale de colonne dans un magasin de clés qui implémente l’API CNG (Cryptography Next Generation), de génération et de chiffrement d’une clé de chiffrement de colonne, et de création de métadonnées de clé dans une base de données SQL Server.
 
@@ -178,7 +182,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 Cette section présente les étapes de la configuration du chiffrement où les administrateurs de la sécurité n’ont pas accès à la base de données et les administrateurs de bases de données n’ont pas accès au magasin de clés ni aux clés en texte clair.
 
 
-### Administrateur de la sécurité
+### <a name="security-administrator"></a>Administrateur de la sécurité
 
 Avant d’exécuter des étapes qui impliquent l’accès aux clés en texte clair ou au magasin de clés (identifiées dans la colonne **Accède au magasin de clés/aux clés en texte clair** dans le tableau ci-dessous), vérifiez les points suivants :
 1.  L’environnement PowerShell s’exécute sur une machine sécurisée qui est différente d’un ordinateur qui héberge votre base de données.
@@ -189,29 +193,29 @@ Pour plus d’informations, consultez [Considérations en matière de sécurité
 
 Tâche  |Article  |Accède au magasin de clés/aux clés en texte clair  |Accède à la base de données  
 ---------|---------|---------|---------
-Étape 1. Créer une clé principale de colonne dans un magasin de clés.<br><br>**Remarque :** Le module SqlServer ne prend pas en charge cette étape. Pour accomplir cette tâche à partir d’une ligne de commande, vous devez utiliser les outils qui sont spécifiques au type de votre magasin de clés.     | [Créer et stocker des clés principales de colonne (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)  |    Oui    | Non 
-Étape 2.  Démarrer une session PowerShell et importer le module SqlServer.      |     [Importer le module SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule)     | Non | Non         
-Étape 3.  Créer un objet *SqlColumnMasterKeySettings* qui contient des informations sur l’emplacement de votre clé principale de colonne. *SqlColumnMasterKeySettings* est un objet qui existe en mémoire (dans PowerShell). Utilisez l’applet de commande qui est spécifique à votre magasin de clés. |      [New-SqlAzureKeyVaultColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759795.aspx)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759816.aspx)<br><br>[New-SqlCngColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759818.aspx)<br><br>[New-SqlCspColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759784.aspx)   | Non         | Non         
-Étape 4.  S’authentifier auprès d’Azure, si votre clé principale de colonne est stockée dans Azure Key Vault |    [Add-SqlAzureAuthenticationContext](https://msdn.microsoft.com/library/mt759815.aspx)    |Oui|Non         
-Étape 5.  Générer une clé de chiffrement de colonne, la chiffrer avec la clé principale de colonne pour produire une valeur chiffrée de la clé de chiffrement de colonne.     |   [New-SqlColumnEncryptionKeyEncryptedValue](https://msdn.microsoft.com/library/mt759794.aspx)     |    Oui    | Non        
-Étape 6.  Fournir l’emplacement de la clé principale de colonne (nom du fournisseur et chemin d’accès à la clé principale de colonne) et une valeur chiffrée de la clé de chiffrement de colonne à l’administrateur de base de données.  | Consultez les exemples ci-dessous.        |   Non      | Non         
+Étape 1. Créer une clé principale de colonne dans un magasin de clés.<br><br>**Remarque :** Le module SqlServer ne prend pas en charge cette étape. Pour accomplir cette tâche à partir d’une ligne de commande, vous devez utiliser les outils qui sont spécifiques au type de votre magasin de clés.     | [Créer et stocker des clés principales de colonne (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)  |    Oui    | Non 
+Étape 2.  Démarrer une session PowerShell et importer le module SqlServer.      |     [Importer le module SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule)     | Non | Non         
+Étape 3.  Créer un objet *SqlColumnMasterKeySettings* qui contient des informations sur l’emplacement de votre clé principale de colonne. *SqlColumnMasterKeySettings* est un objet qui existe en mémoire (dans PowerShell). Utilisez l’applet de commande qui est spécifique à votre magasin de clés. |      [New-SqlAzureKeyVaultColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759795.aspx)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759816.aspx)<br><br>[New-SqlCngColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759818.aspx)<br><br>[New-SqlCspColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759784.aspx)   | Non         | Non         
+Étape 4.  S’authentifier auprès d’Azure, si votre clé principale de colonne est stockée dans Azure Key Vault |    [Add-SqlAzureAuthenticationContext](https://msdn.microsoft.com/library/mt759815.aspx)    |Oui|Non         
+Étape 5.  Générer une clé de chiffrement de colonne, la chiffrer avec la clé principale de colonne pour produire une valeur chiffrée de la clé de chiffrement de colonne.     |   [New-SqlColumnEncryptionKeyEncryptedValue](https://msdn.microsoft.com/library/mt759794.aspx)     |    Oui    | Non        
+Étape 6.  Fournir l’emplacement de la clé principale de colonne (nom du fournisseur et chemin d’accès à la clé principale de colonne) et une valeur chiffrée de la clé de chiffrement de colonne à l’administrateur de base de données.  | Consultez les exemples ci-dessous.        |   Non      | Non         
 
-### Administrateur de base de données 
+### <a name="dba"></a>Administrateur de base de données 
 
 Les administrateurs de bases de données utilisent les informations qu’ils reçoivent de l’administrateur de la sécurité (étape 6 ci-dessus) pour créer et gérer les métadonnées de clé Always Encrypted dans la base de données.
 
 Tâche  |Article  |Accède aux clés en texte clair  |Accède à la base de données   
 ---------|---------|---------|---------
-Étape 1.  Obtenir l’emplacement de la clé principale de colonne et la valeur chiffrée de la clé de chiffrement de colonne de votre administrateur de la sécurité. |Consultez les exemples ci-dessous. | Non | Non
-Étape 2.  Démarrer un environnement PowerShell et importer le module SqlServer.  | [Configurer Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)  | Non | Non
-Étape 3.  Se connecter à votre serveur et à une base de données. | [Se connecter à une base de données](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | Non | Oui
-Étape 4.  Créer un objet SqlColumnMasterKeySettings qui contient des informations sur l’emplacement de votre clé principale de colonne. SqlColumnMasterKeySettings est un objet qui existe en mémoire. | New-SqlColumnMasterKeySettings | Non | Non
-Étape 5. Créer les métadonnées relatives à la clé principale de colonne dans votre base de données | [New-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759813.aspx)<br>**Remarque :** En arrière-plan, l’applet de commande émet l’instruction [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) pour créer des métadonnées de clé principale de colonne. | Non | Oui
-Étape 6. Créer les métadonnées de clé de chiffrement de colonne dans la base de données. | New-SqlColumnEncryptionKey<br>**Remarque :** Les administrateurs de bases de données utilisent une variation de l’applet de commande qui crée uniquement des métadonnées de clé de chiffrement de colonne.<br>En arrière-plan, l’applet de commande émet l’instruction [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) pour créer des métadonnées de clé de chiffrement de colonne. | Non | Oui
+Étape 1.  Obtenir l’emplacement de la clé principale de colonne et la valeur chiffrée de la clé de chiffrement de colonne de votre administrateur de la sécurité. |Consultez les exemples ci-dessous. | Non | Non
+Étape 2.  Démarrer un environnement PowerShell et importer le module SqlServer.  | [Configurer Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)  | Non | Non
+Étape 3.  Se connecter à votre serveur et à une base de données. | [Se connecter à une base de données](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | Non | Oui
+Étape 4.  Créer un objet SqlColumnMasterKeySettings qui contient des informations sur l’emplacement de votre clé principale de colonne. SqlColumnMasterKeySettings est un objet qui existe en mémoire. | New-SqlColumnMasterKeySettings | Non | Non
+Étape 5. Créer les métadonnées relatives à la clé principale de colonne dans votre base de données | [New-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759813.aspx)<br>**Remarque :** En arrière-plan, l’applet de commande émet l’instruction [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) pour créer des métadonnées de clé principale de colonne. | Non | Oui
+Étape 6. Créer les métadonnées de clé de chiffrement de colonne dans la base de données. | New-SqlColumnEncryptionKey<br>**Remarque :** Les administrateurs de bases de données utilisent une variation de l’applet de commande qui crée uniquement des métadonnées de clé de chiffrement de colonne.<br>En arrière-plan, l’applet de commande émet l’instruction [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) pour créer des métadonnées de clé de chiffrement de colonne. | Non | Oui
   
-## Magasin de certificats Windows avec séparation des rôles (exemple)
+## <a name="windows-certificate-store-with-role-separation-example"></a>Magasin de certificats Windows avec séparation des rôles (exemple)
 
-### Administrateur de la sécurité
+### <a name="security-administrator"></a>Administrateur de la sécurité
 
 
 ```
@@ -241,7 +245,7 @@ $keyData.KeyPath
 $keyData.EncryptedValue 
 ```
 
-### Administrateur de base de données
+### <a name="dba"></a>Administrateur de base de données
 
 ```
 # Obtain the location of the column master key and the encrypted value of the column encryption key from your Security Administrator, via a CSV file on a share drive.
@@ -273,15 +277,17 @@ $cekName = "CEK1"
 New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName -EncryptedValue $keyData.EncryptedValue
 ```  
  
-## Étapes suivantes    
+## <a name="next-steps"></a>Étapes suivantes    
 
 - [Configurer le chiffrement de colonne à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md)    
 - [Permuter des clés Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
     
-## Ressources supplémentaires    
+## <a name="additional-resources"></a>Ressources supplémentaires    
     
 - [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [Configurer Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
 - [Always Encrypted (moteur de base de données)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted (développement client)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 - [Blog sur Always Encrypted](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
+
+

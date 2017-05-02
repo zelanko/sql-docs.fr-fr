@@ -1,31 +1,35 @@
 ---
-title: "Sauvegardes de fichiers compl&#232;tes (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sauvegardes complètes [SQL Server]"
-  - "sauvegarde [SQL Server], fichiers ou groupes de fichiers"
-  - "sauvegardes [SQL Server], fichiers ou groupes de fichiers"
-  - "mode de récupération complète [SQL Server], sauvegardes de fichiers complètes"
-  - "sauvegardes de fichiers [SQL Server], complètes"
-  - "fichiers [SQL Server], sauvegarde"
-  - "groupes de fichiers [SQL Server], sauvegarde"
-  - "sauvegardes de fichiers [SQL Server]"
+title: "Sauvegardes de fichiers complètes (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full backups [SQL Server]
+- backing up [SQL Server], files or filegroups
+- backups [SQL Server], files or filegroups
+- full recovery model [SQL Server], full file backups
+- file backups [SQL Server], full
+- files [SQL Server], backing up
+- filegroups [SQL Server], backing up
+- file backups [SQL Server]
 ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 caps.latest.revision: 62
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 62
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 10cdcff6b30fc1c71943cca5c0675473ea81d0ae
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sauvegardes de fichiers compl&#232;tes (SQL Server)
+# <a name="full-file-backups-sql-server"></a>Sauvegardes de fichiers complètes (SQL Server)
   Cette rubrique concerne les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui contiennent plusieurs fichiers ou groupes de fichiers.  
   
  Les fichiers d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être sauvegardés et restaurés individuellement. De plus, vous pouvez spécifier un groupe de fichiers entier au lieu de spécifier chaque fichier constitutif individuellement. Notez que si un fichier dans un groupe de fichiers est hors connexion (par exemple parce que le fichier est en cours de restauration), la totalité du groupe de fichiers est hors connexion et ne peut être sauvegardée.  
@@ -37,7 +41,7 @@ caps.handback.revision: 62
 > [!NOTE]  
 >  Les sauvegardes complètes de fichiers sont généralement appelées *sauvegardes de fichiers*, sauf quand elles sont comparées explicitement à des *sauvegardes différentielles de fichiers*.  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   [Avantages des sauvegardes de fichiers](#Benefits)  
   
@@ -48,7 +52,7 @@ caps.handback.revision: 62
 -   [Tâches associées](#RelatedTasks)  
   
 ##  <a name="Benefits"></a> Avantages des sauvegardes de fichiers  
- Les sauvegardes de fichiers présentent les avantages suivants par rapport aux sauvegardes de base de données :  
+ Les sauvegardes de fichiers présentent les avantages suivants par rapport aux sauvegardes de base de données :  
   
 -   L'utilisation de sauvegardes de fichiers peut augmenter la vitesse de récupération, car elle vous permet de restaurer uniquement les fichiers endommagés sans restaurer le reste de la base de données.  
   
@@ -72,10 +76,10 @@ caps.handback.revision: 62
 > [!NOTE]  
 >  Les fichiers individuels peuvent être restaurés à partir d'une sauvegarde de base de données. Toutefois, la localisation et la restauration d'un fichier à partir d'une sauvegarde de base de données prennent plus de temps qu'à partir d'une sauvegarde de fichiers.  
   
-### Sauvegardes de fichiers et le mode de récupération simple  
+### <a name="file-backups-and-the-simple-recovery-model"></a>Sauvegardes de fichiers et le mode de récupération simple  
  En mode de récupération simple, vous devez sauvegarder conjointement tous les fichiers en lecture-écriture. Vous pouvez ainsi garantir que la base de données peut être restaurée dans un état cohérent dans le temps. Plutôt que de spécifier individuellement chaque fichier ou groupe de fichier en lecture-écriture, utilisez l'option READ_WRITE_FILEGROUPS. Cette option sauvegarde tous les groupes de fichiers en lecture-écriture dans la base de données. Une sauvegarde qui est créée en spécifiant READ_WRITE_FILEGROUPS est appelée une « sauvegarde partielle ». Pour plus d’informations, consultez [Sauvegardes partielles &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md).  
   
-### Sauvegardes de fichiers et mode de récupération complète  
+### <a name="file-backups-and-the-full-recovery-model"></a>Sauvegardes de fichiers et mode de récupération complète  
  En mode de récupération complète, vous devez sauvegarder le journal des transactions, sans tenir compte du reste de votre stratégie de sauvegarde. Un jeu complet de sauvegardes complètes de fichiers associé à un nombre suffisant de sauvegardes de journaux pour couvrir toutes les sauvegardes de fichiers à partir de la première sauvegarde de fichiers, est équivalent à une sauvegarde complète de la base de données.  
   
  La restauration d'une base de données à l'aide seulement de sauvegardes de journaux et de fichiers peut être complexe. Aussi, dans la mesure du possible, il est recommandé d'effectuer une sauvegarde complète de base de données et de commencer les sauvegardes des journaux avant la première sauvegarde de fichiers. La figure ci-dessous illustre une stratégie dans laquelle une sauvegarde complète de base de données est effectuée (à l'instant t1) peu après la création de la base de données (à l'instant t0). Cette première sauvegarde de base de données permet aux sauvegardes des journaux de transactions de démarrer. Les sauvegardes des journaux de transactions sont planifiées à intervalles définis. Les sauvegardes de fichiers sont effectuées à l'intervalle qui répond au mieux aux besoins de l'entreprise concernant la base de données. Cette figure montre la sauvegarde individuelle de chacun des quatre groupes de fichiers. L'ordre de leur sauvegarde (A, C, B, A) correspond aux besoins de l'entreprise concernant la base de données.  
@@ -95,7 +99,7 @@ caps.handback.revision: 62
 > [!NOTE]  
 >  Les sauvegardes de fichiers ne sont pas prises en charge par l'Assistant Plan de maintenance.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Sauvegarde et restauration : interopérabilité et coexistence &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   

@@ -1,22 +1,26 @@
 ---
-title: "Introduction aux tables optimis&#233;es en m&#233;moire | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Introduction aux tables optimisées en mémoire | Microsoft Docs"
+ms.custom: 
+ms.date: 12/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 caps.latest.revision: 22
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 74eceb20d68e928663d35de10d92866c77e6aa25
+ms.lasthandoff: 04/11/2017
+
 ---
-# Introduction aux tables optimis&#233;es en m&#233;moire
+# <a name="introduction-to-memory-optimized-tables"></a>Introduction aux tables optimisées en mémoire
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Les tables optimisées en mémoire sont des tables créées à l’aide de [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
@@ -25,7 +29,7 @@ caps.handback.revision: 22
  
 À compter de SQL Server 2016 et dans Azure SQL Database, il n’existe aucune limite relative aux [classements ni pages de codes](../../relational-databases/collations/collation-and-unicode-support.md) qui sont spécifiques à OLTP en mémoire.
   
- Le magasin principal des tables mémoire optimisées est la mémoire principale ; les tables mémoire optimisées résident dans la mémoire. Les lignes de la table sont lues et écrites dans la mémoire. L'ensemble de la table réside dans la mémoire. Une deuxième copie des données de la table est conservée sur le disque, mais uniquement pour la durabilité. Consultez [Création et gestion du stockage des objets mémoire optimisés](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md) Pour plus d’informations sur les tables durables. Les données des tables mémoire optimisées sont uniquement lues à partir du disque lors de la récupération d'une base de données. Par exemple, après le redémarrage d'un serveur.  
+ Le magasin principal des tables optimisées en mémoire est la mémoire principale ; les tables optimisées en mémoire résident dans la mémoire. Les lignes de la table sont lues et écrites dans la mémoire. L'ensemble de la table réside dans la mémoire. Une deuxième copie des données de la table est conservée sur le disque, mais uniquement pour la durabilité. Consultez [Création et gestion du stockage des objets optimisés en mémoire](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md) pour plus d’informations sur les tables durables. Les données des tables optimisées en mémoire sont uniquement lues à partir du disque lors de la récupération d'une base de données. Par exemple, après le redémarrage d'un serveur.  
   
  Pour des gains de performance encore accrus, l'OLTP en mémoire prend en charge les tables durables avec des transactions à durabilité retardée. Les transactions durables retardées sont enregistrées sur le disque peu après qu'elles ont été validées et que le contrôle a été retourné au client. En revanche, les transactions validées qui n'ont pas été enregistrées sur le disque sont perdues en cas de défaillance ou de basculement du serveur.  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 22
   
  La figure ci-dessous illustre les contrôles de version multiples. Elle représente une table de trois lignes ayant chacune plusieurs versions.  
   
-![Contrôles de version multiples.](../../relational-databases/in-memory-oltp/media/hekaton-tables-1.png "Contrôles de version multiples.")  
+![Multi-versioning.](../../relational-databases/in-memory-oltp/media/hekaton-tables-1.gif "Multi-versioning.")  
   
  La table a trois lignes : r1, r2 et r3. r1 a trois versions, r2 a deux versions, et r3 a quatre versions. Notez que les différentes versions de la même ligne n'occupent pas nécessairement des emplacements de mémoire consécutifs. Les différentes versions de ligne peuvent être dispersées dans l'ensemble de la structure de données de la table.  
   
@@ -57,8 +61,8 @@ Les tables optimisées en mémoire sont plus efficacement accessibles à partir 
   
 |Fonctionnalité|Accès à l'aide d'une procédure stockée compilée en mode natif|Accès en [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété|Accès CLR|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
-|Table mémoire optimisée|Oui|Oui|Non*|  
-|Type de table mémoire optimisée|Oui|Oui|Non|  
+|Table optimisée en mémoire|Oui|Oui|Non*|  
+|Type de table optimisée en mémoire|Oui|Oui|Non|  
 |Procédure stockée compilée en mode natif|L’imbrication de procédures stockées compilées en mode natif est désormais prise en charge. Vous pouvez utiliser la syntaxe EXECUTE à l’intérieur des procédures stockées, à condition que la procédure référencée soit également compilée en mode natif.|Oui|Non*|  
   
  *Vous ne pouvez pas accéder à une table optimisée en mémoire ou à une procédure stockée compilée en mode natif à partir de la connexion contextuelle (connexion à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moment de l’exécution d’un module CLR). Cependant, vous pouvez créer et ouvrir une autre connexion à partir de laquelle vous accédez aux tables optimisées en mémoire et aux procédures stockées compilées en mode natif.  
@@ -89,7 +93,7 @@ Le tableau suivant répertorie les problèmes de performance et d'extensibilité
 |Performance<br /><br /> Utilisation importante des ressources (UC, E/S, réseau ou mémoire).|Unité centrale<br /> Les procédures stockées compilées en mode natif peuvent réduire de façon significative l'utilisation de l'UC, car elles nécessitent moins d'instructions pour exécuter une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] que les procédures stockées interprétées.<br /><br /> L'OLTP en mémoire peut vous aider à réduire l'investissement en matériel dans des charges de travail avec montée en puissance parallèle, car un serveur peut assurer à lui seul le débit de cinq à dix serveurs.<br /><br /> E/S<br /> Si vous observez un goulot d'étranglement des E/S à partir du traitement des données ou des pages d'index, l'OLTP en mémoire peut l'atténuer. En outre, les points de contrôle des objets OLTP en mémoire sont continus et n'entraînent pas une hausse soudaine des opérations d'E/S. Toutefois, si la plage de travail des tables critiques pour les performances ne tient pas en mémoire, l'OLTP en mémoire n'améliore pas les performances, car il nécessite que les données résident en mémoire. Si vous observez un goulot d'étranglement des E/S lors de la journalisation, l'OLTP en mémoire l'atténue, car il nécessite moins d'opérations de journalisation. Si une ou plusieurs tables optimisées en mémoire sont configurées en tant que tables non durables, supprimez la journalisation des données.<br /><br /> Mémoire<br /> L'OLTP en mémoire ne procure aucun gain de performance. Il peut en effet solliciter davantage la mémoire, car les objets doivent résider en mémoire.<br /><br /> Réseau<br /> L'OLTP en mémoire ne procure aucun gain de performance. Les données doivent être communiquées de la couche Données à la couche Application.|  
 |Extensibilité<br /><br /> La plupart des problèmes de mise à l'échelle dans les applications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont dus à des problèmes d'accès concurrentiel tels que la contention dans les verrous, les verrous internes et les verrouillages tournants.|Contention de verrous internes<br /> Un scénario typique est la contention dans la dernière page d'un index lors de l'insertion simultanée de lignes dans l'ordre des clés. Étant donné que l'OLTP en mémoire ne prend pas de verrou interne lors de l'accès aux données, il n'y a plus de problèmes d'extensibilité liés à la contention de verrous internes.<br /><br /> Contention de verrouillage tournant<br /> Étant donné que l'OLTP en mémoire ne prend pas de verrou interne lors de l'accès aux données, il n'y a plus de problèmes d'extensibilité liés à la contention de verrouillage tournant.<br /><br /> Contention liée au verrouillage<br /> Si votre application de base de données rencontre des problèmes de blocage entre les opérations de lecture et d'écriture, l'OLTP en mémoire les supprime, car il utilise une nouvelle forme de contrôle d'accès concurrentiel optimiste pour implémenter tous les niveaux d'isolation des transactions. L'OLTP en mémoire n'utilise pas TempDB pour stocker les versions de ligne.<br /><br /> Si le problème de mise à l'échelle est provoqué par un conflit entre deux opérations d'écriture, telles que deux transactions simultanées tentant de mettre à jour la même ligne, l'OLTP en mémoire laisse une transaction aboutir et fait échouer l'autre. La transaction en échec doit être retentée par un nouvel envoi explicite ou implicite. Dans les deux cas, vous devez apporter des modifications à l'application.<br /><br /> Si votre application crée des conflits fréquents entre deux opérations d'écriture, la valeur du verrouillage optimiste est diminuée. L'application ne convient pas pour l'OLTP en mémoire. La plupart des applications OLTP ne connaissent pas de conflits d'écriture à moins que le conflit ne soit induit par une escalade de verrous.|  
   
-##  <a name="a-namerlsa-row-level-security-in-memory-optimized-tables"></a><a name="rls"></a> Sécurité de niveau ligne dans les tables optimisées en mémoire  
+##  <a name="rls"></a> Row-Level Security in Memory-Optimized Tables  
 
 [Sécurité au niveau des lignes](../../relational-databases/security/row-level-security.md) La sécurité au niveau des lignes est prise en charge pour les tables optimisées en mémoire. La procédure d’application de stratégies de sécurité de niveau ligne à des tables optimisées en mémoire est globalement identique à celle qui concerne les tables sur disque, à une exception près : les Fonctions table incluses qui sont utilisées comme prédicats de sécurité doivent être compilées en mode natif (créées avec l’option WITH NATIVE_COMPILATION). Pour plus d’informations, consultez la section [Compatibilité entre fonctionnalités](../../relational-databases/security/row-level-security.md#Limitations) dans la rubrique [Sécurité au niveau des lignes](../../relational-databases/security/row-level-security.md) .  
   
@@ -107,3 +111,4 @@ Pour découvrir une brève description des scénarios types dans lesquels [!INCL
 [OLTP en mémoire &#40;Optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+

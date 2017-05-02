@@ -1,25 +1,29 @@
 ---
-title: "Utiliser des jeux de colonnes | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/30/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "colonnes éparses, jeux de colonnes"
-  - "jeux de colonnes"
+title: Utiliser des jeux de colonnes | Microsoft Docs
+ms.custom: 
+ms.date: 07/30/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sparse columns, column sets
+- column sets
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ae01121fcb9c3cfaf67297fee281979a7ee8627
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utiliser des jeux de colonnes
+# <a name="use-column-sets"></a>Utiliser des jeux de colonnes
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Les tables qui utilisent des colonnes éparses peuvent désigner un jeu de colonnes pour retourner toutes les colonnes éparses dans la table. Un jeu de colonnes est une représentation XML non typée qui combine toutes les colonnes éparses d'une table dans une sortie structurée. Un jeu de colonnes est semblable à une colonne calculée, dans la mesure où le jeu de colonnes n'est pas stocké physiquement dans la table. Un jeu de colonnes diffère d'une colonne calculée, dans le sens où le jeu de colonnes est peut être mis à jour directement.  
@@ -28,8 +32,8 @@ caps.handback.revision: 28
   
  Pour définir un jeu de colonnes, utilisez les mots clés *<nom_jeu_colonnes>* FOR ALL_SPARSE_COLUMNS dans les instructions [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) ou [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
-## Indications pour utiliser des jeux de colonnes  
- Lorsque vous utilisez des jeux de colonnes, considérez les indications suivantes :  
+## <a name="guidelines-for-using-column-sets"></a>Indications pour utiliser des jeux de colonnes  
+ Lorsque vous utilisez des jeux de colonnes, considérez les indications suivantes :  
   
 -   Les colonnes éparses et un jeu de colonnes peuvent être ajoutés dans le cadre de la même instruction.  
   
@@ -65,12 +69,12 @@ caps.handback.revision: 28
   
 -   Les notifications de requêtes qui renvoient à des jeux de colonnes ne sont pas autorisées.  
   
--   Les données XML ont une limite de taille de 2 Go. Si les données combinées de toutes les colonnes éparses non nulles dans une ligne dépassent cette limite, la requête ou opération DML génère une erreur.  
+-   Les données XML ont une limite de taille de 2 Go. Si les données combinées de toutes les colonnes éparses non nulles dans une ligne dépassent cette limite, la requête ou opération DML génère une erreur.  
   
 -   Pour plus d’informations sur les données retournées par la fonction COLUMNS_UPDATED, consultez [Utiliser des colonnes éparses](../../relational-databases/tables/use-sparse-columns.md).  
   
-## Indications pour la sélection de données dans un jeu de colonnes  
- Considérez les indications suivantes lors de la sélection de données dans un jeu de colonnes :  
+## <a name="guidelines-for-selecting-data-from-a-column-set"></a>Indications pour la sélection de données dans un jeu de colonnes  
+ Considérez les indications suivantes lors de la sélection de données dans un jeu de colonnes :  
   
 -   D'un point de vue conceptuel, un jeu de colonnes est un type de colonne XML calculé pouvant être mis à jour, qui regroupe un jeu de colonnes relationnelles sous-jacentes dans une représentation XML unique. Le jeu de colonnes prend en charge uniquement la propriété ALL_SPARSE_COLUMNS. Cette propriété est utilisée pour regrouper toutes les valeurs non nulles de toutes les colonnes éparses pour une ligne particulière.  
   
@@ -80,7 +84,7 @@ caps.handback.revision: 28
     <column_name_1>value1</column_name_1><column_name_2>value2</column_name_2>...  
     ```  
   
-     Voici quelques exemples de valeurs de jeu de colonnes :  
+     Voici quelques exemples de valeurs de jeu de colonnes :  
   
     -   `<sparseProp1>10</sparseProp1><sparseProp3>20</sparseProp3>`  
   
@@ -91,7 +95,7 @@ caps.handback.revision: 28
 > [!WARNING]  
 >  L'ajout d'un jeu de colonnes modifie le comportement des requêtes SELECT *. La requête retournera le jeu de colonnes sous forme de colonne XML et ne retournera pas les colonnes éparses individuelles. Les concepteurs de schémas et développeurs de logiciels doivent prendre soin de ne pas arrêter les applications existantes.  
   
-## Insertion ou modification de données dans un jeu de colonnes  
+## <a name="inserting-or-modifying-data-in-a-column-set"></a>Insertion ou modification de données dans un jeu de colonnes  
  La manipulation des données d'une colonne éparse peut s'effectuer en utilisant le nom de chaque colonne ou en faisant référence au nom du jeu de colonnes et en spécifiant les valeurs du jeu de colonnes à l'aide du format XML du jeu de colonnes. Les colonnes éparses peuvent apparaître dans n'importe quel ordre dans la colonne XML.  
   
  Lorsque des valeurs de colonnes éparses sont insérées ou mises à jour à l'aide du jeu de colonnes XML, les valeurs insérées dans les colonnes éparses sous-jacentes sont converties implicitement à partir du type de données **xml** . Dans le cas des colonnes numériques, une valeur vierge dans le XML pour la colonne numérique est convertie en chaîne vide. Cela provoque l'insertion d'un zéro dans la colonne numérique, comme illustré dans l'exemple suivant.  
@@ -105,10 +109,10 @@ SELECT i FROM t;
 GO  
 ```  
   
- Dans cet exemple, aucune valeur n'a été spécifiée pour le `i` de colonne, mais la valeur `0` a été insérée.  
+ Dans cet exemple, aucune valeur n'a été spécifiée pour le `i`de colonne, mais la valeur `0` a été insérée.  
   
-## Utilisation du Type de données sql_variant  
- Le type de données **sql_variant** peut stocker plusieurs types de données différents, tels que **int**, **char** et **date**. Les jeux de colonnes retournent les informations de type de données telles que l’échelle, la précision et les informations relatives aux paramètres régionaux associées à une valeur **sql_variant** sous la forme d’attributs dans la colonne XML générée. Si vous essayez de fournir ces attributs dans une instruction XML générée de manière personnalisée en tant qu'entrée pour une opération d'insertion ou de mise à jour sur un jeu de colonnes, certains de ces attributs sont requis et une valeur par défaut est assignée à certains d'entre eux. Le tableau suivant répertorie les types de données et les valeurs par défaut générées par le serveur lorsque la valeur n'est pas fournie.  
+## <a name="using-the-sqlvariant-data-type"></a>Utilisation du Type de données sql_variant  
+ Le type de données **sql_variant** peut stocker plusieurs types de données différents, tels que **int**, **char**et **date**. Les jeux de colonnes retournent les informations de type de données telles que l’échelle, la précision et les informations relatives aux paramètres régionaux associées à une valeur **sql_variant** sous la forme d’attributs dans la colonne XML générée. Si vous essayez de fournir ces attributs dans une instruction XML générée de manière personnalisée en tant qu'entrée pour une opération d'insertion ou de mise à jour sur un jeu de colonnes, certains de ces attributs sont requis et une valeur par défaut est assignée à certains d'entre eux. Le tableau suivant répertorie les types de données et les valeurs par défaut générées par le serveur lorsque la valeur n'est pas fournie.  
   
 |Type de données|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Longueur maximale|Précision|Échelle|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
@@ -126,8 +130,8 @@ GO
   
  ** Non applicable = Aucune valeur n’est sortie pour ces attributs durant une opération de sélection sur le jeu de colonnes. Génère une erreur lorsqu'une valeur est spécifiée pour cet attribut par l'appelant dans la représentation XML fournie pour un jeu de colonnes dans une opération d'insertion ou de mise à jour.  
   
-## Sécurité  
- Le modèle de sécurité pour un jeu de colonnes fonctionne de manière semblable au modèle de sécurité qui existe entre la table et les colonnes. Les jeux de colonnes peuvent être visualisés comme une minitable et une opération de sélection est semblable à uneopération SELECT * sur cette minitable. Mais la relation entre le jeu de colonnes et les colonnes éparses est une relation de regroupement plutôt qu'un conteneur strict. Le modèle de sécurité vérifie la sécurité sur la colonne de jeu de colonnes et honore les opérations DENY sur les colonnes éparses sous-jacentes. Les caractéristiques supplémentaires du modèle de sécurité sont les suivantes :  
+## <a name="security"></a>Sécurité  
+ Le modèle de sécurité pour un jeu de colonnes fonctionne de manière semblable au modèle de sécurité qui existe entre la table et les colonnes. Les jeux de colonnes peuvent être visualisés comme une minitable et une opération de sélection est semblable à uneopération SELECT * sur cette minitable. Mais la relation entre le jeu de colonnes et les colonnes éparses est une relation de regroupement plutôt qu'un conteneur strict. Le modèle de sécurité vérifie la sécurité sur la colonne de jeu de colonnes et honore les opérations DENY sur les colonnes éparses sous-jacentes. Les caractéristiques supplémentaires du modèle de sécurité sont les suivantes :  
   
 -   Des autorisations de sécurité peuvent être accordées et révoquées pour la colonne de jeu de colonnes, comme pour toute autre colonne dans la table.  
   
@@ -137,10 +141,10 @@ GO
   
 -   L'exécution d'une instruction REVOKE sur une colonne éparse ou un jeu de colonnes provoque l'application par défaut de la sécurité à leur objet parent.  
   
-## Exemples  
+## <a name="examples"></a>Exemples  
  Dans les exemples suivants, une table de documents contient le jeu de colonnes commun `DocID` et `Title`. Le groupe Production souhaite avoir une colonne `ProductionSpecification` et `ProductionLocation` pour tous les documents de production. Le groupe Marketing souhaite avoir une colonne `MarketingSurveyGroup` pour les documents de marketing.  
   
-### A. Création d'une table qui a un jeu de colonnes  
+### <a name="a-creating-a-table-that-has-a-column-set"></a>A. Création d'une table qui a un jeu de colonnes  
  L'exemple suivant crée la table qui utilise des colonnes éparses et inclut le jeu de colonnes `SpecialPurposeColumns`. L'exemple insère deux lignes dans la table, puis sélectionne des données de la table.  
   
 > [!NOTE]  
@@ -161,7 +165,7 @@ CREATE TABLE DocumentStoreWithColumnSet
 GO  
 ```  
   
-### B. Insertion de données dans une table en utilisant les noms des colonnes éparses  
+### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>B. Insertion de données dans une table en utilisant les noms des colonnes éparses  
  Les exemples suivants insèrent deux lignes dans la table créée dans l'exemple A. Les exemples utilisent les noms des colonnes éparses et ne font pas référence au jeu de colonnes.  
   
 ```  
@@ -174,7 +178,7 @@ VALUES (2, 'Survey 2142', 'Men 25 - 35');
 GO  
 ```  
   
-### C. Insertion de données dans une table en utilisant le nom du jeu de colonnes  
+### <a name="c-inserting-data-to-a-table-by-using-the-name-of-the-column-set"></a>C. Insertion de données dans une table en utilisant le nom du jeu de colonnes  
  L'exemple suivant insère une troisième ligne dans la table créée dans l'exemple A. Cette fois, les noms des colonnes éparses ne sont pas utilisés. Au lieu de cela, le nom du jeu de colonnes est utilisé et l'insertion fournit les valeurs pour deux des quatre colonnes éparses au format XML.  
   
 ```  
@@ -183,7 +187,7 @@ VALUES (3, 'Tire Spec 2', '<ProductionSpecification>AXW9R411</ProductionSpecific
 GO  
 ```  
   
-### D. Observation des résultats d'un jeu de colonnes lorsque SELECT * est utilisé  
+### <a name="d-observing-the-results-of-a-column-set-when-select--is-used"></a>D. Observation des résultats d'un jeu de colonnes lorsque SELECT * est utilisé  
  L'exemple suivant sélectionne toutes les colonnes de la table qui contient un jeu de colonnes. Il retourne une colonne XML avec les valeurs combinées des colonnes éparses. Il ne retourne pas les colonnes éparses individuellement.  
   
 ```  
@@ -200,7 +204,7 @@ SELECT DocID, Title, SpecialPurposeColumns FROM DocumentStoreWithColumnSet ;
   
  `3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
   
-### E. Observation des résultats de la sélection du jeu de colonnes par nom  
+### <a name="e-observing-the-results-of-selecting-the-column-set-by-name"></a>E. Observation des résultats de la sélection du jeu de colonnes par nom  
  Le département Production ne s'intéressant pas aux données de marketing, cet exemple ajoute une clause `WHERE` afin de restreindre la sortie. L'exemple utilise le nom du jeu de colonnes.  
   
 ```  
@@ -217,7 +221,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `3     Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
   
-### F. Observation des résultats de la sélection des colonnes éparses par nom  
+### <a name="f-observing-the-results-of-selecting-sparse-columns-by-name"></a>F. Observation des résultats de la sélection des colonnes éparses par nom  
  Lorsqu'une table contient un jeu de colonnes, vous pouvez tout de même interroger la table en utilisant les noms de colonnes individuellement, comme illustré dans l'exemple suivant.  
   
 ```  
@@ -234,7 +238,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `3     Tire Spec 2  AXW9R411                38`  
   
-### G. Mise à jour d'une table en utilisant un jeu de colonnes  
+### <a name="g-updating-a-table-by-using-a-column-set"></a>G. Mise à jour d'une table en utilisant un jeu de colonnes  
  L'exemple suivant met à jour le troisième enregistrement avec les nouvelles valeurs pour les deux colonnes éparses utilisées par cette ligne.  
   
 ```  
@@ -256,7 +260,8 @@ WHERE DocID = 3 ;
 GO  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser des colonnes éparses](../../relational-databases/tables/use-sparse-columns.md)  
   
   
+

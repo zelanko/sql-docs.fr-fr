@@ -1,39 +1,43 @@
 ---
-title: "Sessions &#201;v&#233;nements &#233;tendus SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "xe"
-  - "sessions"
-  - "événements étendus [SQL Server]"
+title: "Sessions Événements étendus SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xe
+- sessions
+- extend events [SQL Server]
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff9ce12cc98171946715d16f18d15885d7098c4f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sessions &#201;v&#233;nements &#233;tendus SQL Server
+# <a name="sql-server-extended-events-sessions"></a>Sessions Événements étendus SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Une session Événements étendus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est créée dans le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge le moteur des Événements étendus. Les aspects suivants d'une session Événements étendus fournissent le contexte nécessaire pour comprendre l'infrastructure des Événements étendus et le processus global qui est en cours :  
+  Une session Événements étendus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est créée dans le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge le moteur des Événements étendus. Les aspects suivants d'une session Événements étendus fournissent le contexte nécessaire pour comprendre l'infrastructure des Événements étendus et le processus global qui est en cours :  
   
 -   États de la session. Les différents états dans lesquels peut se trouver une session Événements étendus lorsque des instructions CREATE EVENT SESSION et ALTER EVENT SESSION sont exécutées.  
   
 -   Contenu et caractéristiques de la session. Le contenu d'une session Événements étendus, tel que les cibles et les événements, et comment ces objets sont liés dans une session ou entre des sessions.  
   
-## États de la session  
+## <a name="session-states"></a>États de la session  
  L'illustration ci-dessous indique les divers états d'une session Événements étendus.  
   
- ![État de session d'événements étendus](../../relational-databases/extended-events/media/xesessionstate.gif "État de session d'événements étendus")  
+ ![État de session d’événements étendus](../../relational-databases/extended-events/media/xesessionstate.gif "État de session d’événements étendus")  
   
  En vous référant à l'illustration précédente, notez que l'état de la session change au fur et à mesure que les commandes DDL sont exécutées pour une session d'événements. Ces changements d'état sont décrits dans le tableau ci-dessous.  
   
@@ -47,22 +51,22 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  Les deux instructions ALTER EVENT SESSION et DROP EVENT SESSION peuvent être appliquées aux métadonnées ou à une session active et aux métadonnées.  
   
-## Contenu et caractéristiques de la session  
+## <a name="session-content-and-characteristics"></a>Contenu et caractéristiques de la session  
  Les sessions d'événements étendus sont soumises à des limites implicites dans la mesure où la configuration d'une session ne doit pas modifier la configuration d'une autre session. Toutefois, ces limites n'empêchent pas l'utilisation d'un événement ou d'une cible dans plusieurs sessions.  
   
  La figure ci-dessous montre le contenu de la session et la relation entre packages et sessions.  
   
- ![Coexistence et partage d'objets dans des sessions.](../../relational-databases/extended-events/media/xesessions.gif "Coexistence et partage d'objets dans des sessions.")  
+ ![Coexistence et partage d’objets dans des sessions.](../../relational-databases/extended-events/media/xesessions.gif "Coexistence et partage d’objets dans des sessions.")  
   
- Faisant référence à l'illustration précédente, notez les points suivants :  
+ Faisant référence à l'illustration précédente, notez les points suivants :  
   
 -   Le mappage entre des objets de packages et des sessions est de type plusieurs-à-plusieurs, ce qui signifie qu'un objet peut apparaître dans plusieurs sessions et qu'une session peut contenir plusieurs objets.  
   
--   Un même événement (Événement 1) ou une même cible (Cible 1) peuvent être activés dans plusieurs sessions.  
+-   Un même événement (Événement 1) ou une même cible (Cible 1) peuvent être activés dans plusieurs sessions.  
   
- Les sessions présentent les caractéristiques suivantes :  
+ Les sessions présentent les caractéristiques suivantes :  
   
--   Les actions et les prédicats sont liés aux événements session par session. Si l'événement Événement 1 dans la session Session A est lié à l'action Action 1 et au prédicat Prédicat Z, cela n'affecte en aucune façon la possibilité que l'événement Événement 1 dans la session Session B soit lié aux actions Action 2 et Action 3 sans prédicat.  
+-   Les actions et les prédicats sont liés aux événements session par session. Si l'événement Événement 1 dans la session Session A est lié à l'action Action 1 et au prédicat Prédicat Z, cela n'affecte en aucune façon la possibilité que l'événement Événement 1 dans la session Session B soit lié aux actions Action 2 et Action 3 sans prédicat.  
   
 -   Les stratégies sont jointes aux sessions pour gérer la mise en mémoire tampon et la distribution, ainsi que le suivi de causalité.  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 20
   
  L'architecture des Événements étendus fournit un système flexible qui permet d'utiliser conjointement divers objets pour résoudre des problèmes spécifiques.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)  
   
   

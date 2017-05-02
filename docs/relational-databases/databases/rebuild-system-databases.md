@@ -1,32 +1,36 @@
 ---
-title: "Reconstruire des bases de donn&#233;es syst&#232;me | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/06/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "base de données MASTER [SQL Server], reconstruction"
-  - "REBUILDDATABASE (paramètre)"
-  - "reconstruction des bases de données, MASTER"
-  - "bases de données système [SQL Server], reconstruction"
+title: "Reconstruire des bases de données système | Microsoft Docs"
+ms.custom: 
+ms.date: 06/06/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- master database [SQL Server], rebuilding
+- REBUILDDATABASE parameter
+- rebuilding databases, master
+- system databases [SQL Server], rebuilding
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 116b8352b27400cf9d57d01e4d1c0a0f8a3a89d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Reconstruire des bases de donn&#233;es syst&#232;me
-  Les bases de données système doivent être reconstruites pour résoudre des problèmes d’altération dans les bases de données système [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md) ou [resource](../../relational-databases/databases/resource-database.md) ou pour modifier le classement au niveau du serveur par défaut. Cette rubrique fournit des instructions détaillées sur la reconstruction des bases de données système dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+# <a name="rebuild-system-databases"></a>Reconstruire des bases de données système
+  Les bases de données système doivent être reconstruites pour résoudre des problèmes d’altération dans les bases de données système [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md)ou [resource](../../relational-databases/databases/resource-database.md) ou pour modifier le classement au niveau du serveur par défaut. Cette rubrique fournit des instructions détaillées sur la reconstruction des bases de données système dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
@@ -88,9 +92,9 @@ caps.handback.revision: 39
 ##  <a name="RebuildProcedure"></a> Reconstruire des bases de données système  
  La procédure suivante reconstruit les bases de données système master, model, msdb et tempdb. Vous ne pouvez pas spécifier les bases de données système à reconstruire. Pour les instances cluster, cette procédure doit être effectuée sur le nœud actif et la ressource [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le groupe d'applications cluster correspondant doit être en mode hors connexion avant d'effectuer la procédure.  
   
- Cette procédure ne reconstruit pas la base de données resource. Consultez la section « Procédure de reconstruction de la base de données resource », plus loin dans cette rubrique.  
+ Cette procédure ne reconstruit pas la base de données resource. Consultez la section « Procédure de reconstruction de la base de données resource », plus loin dans cette rubrique.  
   
-#### Pour reconstruire les bases de données système pour une instance de SQL Server :  
+#### <a name="to-rebuild-system-databases-for-an-instance-of-sql-server"></a>Pour reconstruire les bases de données système pour une instance de SQL Server :  
   
 1.  Insérez le média d'installation [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dans le lecteur de disque ou, à partir d'une invite de commandes, changez de répertoire pour accéder à l'emplacement du fichier setup.exe situé sur le serveur local. L’emplacement par défaut sur le serveur est C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\SQLServer2016.  
   
@@ -104,29 +108,29 @@ caps.handback.revision: 39
     |/ACTION=REBUILDDATABASE|Spécifie que le programme d'installation doit recréer les bases de données système.|  
     |/INSTANCENAME=*Nom_Instance*|Représente le nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour l'instance par défaut, entrez MSSQLSERVER.|  
     |/SQLSYSADMINACCOUNTS=*comptes*|Spécifie les comptes de groupes Windows ou les comptes individuels à ajouter au rôle serveur fixe **sysadmin** . Lorsque vous spécifiez plusieurs comptes, utilisez l'espace comme séparateur. Par exemple, entrez **BUILTIN\Administrateurs MonDomaine\MonUtilisateur**. Lorsque vous spécifiez un compte qui contient un espace vide dans son nom, placez le compte entre guillemets doubles. Par exemple, entrez **NT AUTHORITY\SYSTEM**.|  
-    |[ /SAPWD=*MotDePasseFort* ]|Spécifie le mot de passe du compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** . Ce paramètre est requis si l’instance utilise le mode Authentification mixte (authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows).<br /><br /> **\*\* Remarque sur la sécurité \*\***Le compte **sa** est un compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bien connu qui est souvent la cible d’utilisateurs malveillants. Il est par conséquent essentiel d'utiliser un mot de passe fort pour la connexion **sa** .<br /><br /> Ne spécifiez pas ce paramètre pour le mode Authentification Windows.|  
+    |[ /SAPWD=*MotDePasseFort* ]|Spécifie le mot de passe du compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** . Ce paramètre est requis si l’instance utilise le mode Authentification mixte (authentification[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows).<br /><br /> **\*\* Remarque sur la sécurité \*\***Le compte **sa** est un compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bien connu qui est souvent la cible d’utilisateurs malveillants. Il est par conséquent essentiel d'utiliser un mot de passe fort pour la connexion **sa** .<br /><br /> Ne spécifiez pas ce paramètre pour le mode Authentification Windows.|  
     |[ /SQLCOLLATION=*NomClassement* ]|Spécifie un nouveau classement au niveau du serveur. Ce paramètre est facultatif. S'il n'est pas spécifié, c'est le classement actuel du serveur qui est utilisé.<br /><br /> **\*\* Important \*\***La modification du classement de niveau serveur ne modifie pas le classement des bases de données utilisateur existantes. En revanche, les bases de données utilisateur qui seront créées utiliseront le nouveau classement par défaut.<br /><br /> Pour plus d’informations, consultez [Définir ou modifier le classement du serveur](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|Spécifie le nombre de fichiers de données tempdb Cette valeur peut être augmentée jusqu’à 8 ou jusqu’au nombre de cœurs, la valeur la plus élevée étant applicable.<br /><br /> Valeur par défaut : 8 ou le nombre de cœurs (la plus petite valeur des deux).|  
     |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|Spécifie la taille initiale en Mo de chaque fichier de données tempdb. Le programme d’installation autorise la taille maximale de 1 024 Mo.<br /><br /> Valeur par défaut : 8|  
-    |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|Spécifie l’incrément de croissance de chaque fichier de données tempdb en Mo. La valeur 0 indique que la croissance automatique est désactivée et qu'aucun espace supplémentaire n'est autorisé. Le programme d’installation autorise la taille maximale de 1 024 Mo.<br /><br /> Valeur par défaut : 64|  
+    |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|Spécifie l’incrément de croissance de chaque fichier de données tempdb en Mo. La valeur 0 indique que la croissance automatique est désactivée et qu'aucun espace supplémentaire n'est autorisé. Le programme d’installation autorise la taille maximale de 1024 Mo.<br /><br /> Valeur par défaut : 64|  
     |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|Spécifie la taille initiale en Mo du fichier journal tempdb. Le programme d’installation autorise la taille maximale de 1 024 Mo.<br /><br /> Valeur par défaut : 8<br /><br /> Plage autorisée : Min = 8, Max = 1024|  
-    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|Spécifie l’incrément de croissance en Mo du fichier journal tempdb. La valeur 0 indique que la croissance automatique est désactivée et qu'aucun espace supplémentaire n'est autorisé. Le programme d’installation autorise la taille maximale de 1 024 Mo.<br /><br /> Valeur par défaut : 64<br /><br /> Plage autorisée : Min = 8, Max = 1024|  
-    |[ /SQLTEMPDBDIR=Directories ]|Spécifie les répertoires des fichiers de données tempdb. Lorsque vous spécifiez plusieurs répertoires, utilisez l’espace comme séparateur. Si plusieurs répertoires sont spécifiés, les fichiers de données tempdb sont répartis entre les répertoires selon le principe du tourniquet (round robin).<br /><br /> Valeur par défaut : Répertoire des données système.|  
-    |[ /SQLTEMPDBLOGDIR=Directory ]|Spécifie le répertoire pour les fichiers journaux tempdb.<br /><br /> Valeur par défaut : Répertoire des données système.|  
+    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|Spécifie l’incrément de croissance en Mo du fichier journal tempdb. La valeur 0 indique que la croissance automatique est désactivée et qu'aucun espace supplémentaire n'est autorisé. Le programme d’installation autorise la taille maximale de 1024 Mo.<br /><br /> Valeur par défaut : 64<br /><br /> Plage autorisée : Min = 8, Max = 1024|  
+    |[ /SQLTEMPDBDIR=Directories ]|Spécifie les répertoires des fichiers de données tempdb. Lorsque vous spécifiez plusieurs répertoires, utilisez l’espace comme séparateur. Si plusieurs répertoires sont spécifiés, les fichiers de données tempdb sont répartis entre les répertoires selon le principe du tourniquet (round robin).<br /><br /> Valeur par défaut : Répertoire des données système.|  
+    |[ /SQLTEMPDBLOGDIR=Directory ]|Spécifie le répertoire pour les fichiers journaux tempdb.<br /><br /> Valeur par défaut : Répertoire des données système.|  
   
 3.  Lorsque le programme d'installation a terminé la reconstruction des bases de données système, il revient à l'invite de commandes sans afficher de message. Examinez le fichier journal Summary.txt pour vérifier que le processus s'est correctement déroulé. Ce fichier se trouve à l’emplacement C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Logs.  
   
 4.  Le scénario RebuildDatabase supprime les bases de données système et les installe à nouveau à l’état propre. Étant donné que le paramètre du nombre de fichiers tempdb n’est pas conservé, la valeur du nombre de fichiers tempdb n’est pas connue lors de l’installation. Par conséquent, le scénario RebuildDatabase ne connaît pas le nombre de fichiers tempdb à ajouter à nouveau. Vous pouvez fournir à nouveau la valeur du nombre de fichiers tempdb avec le paramètre SQLTEMPDBFILECOUNT. Si le paramètre n’est pas fourni, RebuildDatabase ajoute un numéro par défaut des fichiers tempdb, c’est-à-dire autant de fichiers tempdb que le nombre de en tant que le nombre de processeurs ou 8, la valeur la plus petite étant applicable.  
   
-## Tâches à effectuer après la reconstruction  
- Après avoir reconstruit la base de données, vous devrez peut-être effectuer les tâches supplémentaires suivantes :  
+## <a name="post-rebuild-tasks"></a>Tâches à effectuer après la reconstruction  
+ Après avoir reconstruit la base de données, vous devrez peut-être effectuer les tâches supplémentaires suivantes :  
   
 -   Restaurer vos sauvegardes complètes les plus récentes des bases de données master, model et msdb. Pour plus d’informations, consultez [Sauvegarder et restaurer des bases de données système &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
     > [!IMPORTANT]  
     >  Si vous avez modifié le classement du serveur, ne restaurez pas les bases de données système. Cette opération remplacerait le nouveau classement par le paramétrage de classement précédent.  
   
-     Si une sauvegarde n'est pas disponible ou si la sauvegarde restaurée n'est pas actuelle, recréez toutes les entrées manquantes. Par exemple, recréez toutes les entrées manquantes pour vos bases de données utilisateur, unités de sauvegarde, connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], points de terminaison, et ainsi de suite. Le meilleur moyen de recréer des entrées est d'exécuter les scripts d'origine qui les ont créées.  
+     Si une sauvegarde n'est pas disponible ou si la sauvegarde restaurée n'est pas actuelle, recréez toutes les entrées manquantes. Par exemple, recréez toutes les entrées manquantes pour vos bases de données utilisateur, unités de sauvegarde, connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , points de terminaison, et ainsi de suite. Le meilleur moyen de recréer des entrées est d'exécuter les scripts d'origine qui les ont créées.  
   
 > [!IMPORTANT]  
 >  Nous vous conseillons de protéger vos scripts et de les conserver en lieu sûr pour éviter que des personnes non autorisées ne les modifient.  
@@ -140,7 +144,7 @@ caps.handback.revision: 39
 ##  <a name="Resource"></a> Reconstruire la base de données resource  
  La procédure suivante reconstruit la base de données système resource. La reconstruction de la base de données resource entraîne la perte de tous les Service Packs et correctifs logiciels, qui devront par conséquent être réappliqués.  
   
-#### Pour reconstruire la base de données système resource :  
+#### <a name="to-rebuild-the-resource-system-database"></a>Pour reconstruire la base de données système resource :  
   
 1.  Lancez le programme d'installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (setup.exe) à partir du média de distribution.  
   
@@ -160,17 +164,17 @@ caps.handback.revision: 39
 > [!WARNING]  
 >  La reconstruction de la base de données **msdb** à l’aide du script **instmsdb** élimine toutes les informations stockées dans **msdb** telles que les travaux, l’alerte, les opérateurs, les plans de maintenance, l’historique de sauvegarde, les paramètres de gestion basée sur des stratégies, la messagerie de base de données, l’entrepôt de données des performances, etc.  
   
-1.  Arrêtez tous les services qui établissent des connexions au [!INCLUDE[ssDE](../../includes/ssde-md.md)], dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, [!INCLUDE[ssRS](../../includes/ssrs-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)] et toutes les applications qui utilisent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en tant que banque de données.  
+1.  Arrêtez tous les services qui établissent des connexions au [!INCLUDE[ssDE](../../includes/ssde-md.md)], dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, [!INCLUDE[ssRS](../../includes/ssrs-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)]et toutes les applications qui utilisent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en tant que banque de données.  
   
 2.  Démarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de la ligne de commande à l'aide de la commande : `NET START MSSQLSERVER /T3608`  
   
-     Pour plus d'informations, consultez [Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser](../../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md).  
+     Pour plus d'informations, consultez [Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
-3.  Dans une autre fenêtre de ligne de commande, détachez la base de données **msdb** à l’aide de la commande suivante, en remplaçant *\<nom_serveur>* par l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
+3.  Dans une autre fenêtre de ligne de commande, détachez la base de données **msdb** à l’aide de la commande suivante, en remplaçant *\<nom_serveur>* par l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
-4.  À l'aide de l'Explorateur Windows, renommez les fichiers de la base de données **msdb** . Par défaut, ils se trouvent dans le sous-dossier DATA de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+4.  À l'aide de l'Explorateur Windows, renommez les fichiers de la base de données **msdb** . Par défaut, ils se trouvent dans le sous-dossier DATA de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-5.  À l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], arrêtez et redémarrez le service [!INCLUDE[ssDE](../../includes/ssde-md.md)] normalement.  
+5.  À l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , arrêtez et redémarrez le service [!INCLUDE[ssDE](../../includes/ssde-md.md)] normalement.  
   
 6.  Dans une fenêtre de ligne de commande, connectez-vous à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et exécutez la commande : `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o" C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
   
@@ -185,7 +189,7 @@ caps.handback.revision: 39
 10. Sauvegardez la base de données **msdb** .  
   
 ##  <a name="Troubleshoot"></a> Corriger les erreurs liées à la reconstruction  
- Les erreurs de syntaxe et autres erreurs d'exécution sont affichées dans la fenêtre d'invite de commandes. Vérifiez que l'instruction Setup ne comporte pas les erreurs de syntaxe suivantes :  
+ Les erreurs de syntaxe et autres erreurs d'exécution sont affichées dans la fenêtre d'invite de commandes. Vérifiez que l'instruction Setup ne comporte pas les erreurs de syntaxe suivantes :  
   
 -   Barre oblique (/) manquante devant chaque nom de paramètre.  
   
@@ -197,7 +201,8 @@ caps.handback.revision: 39
   
  Une fois l'opération de reconstruction terminée, examinez les journaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour vérifier s'ils contiennent des erreurs. L’emplacement par défaut des journaux est C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Logs. Pour localiser le fichier journal qui contient les résultats du processus de reconstruction, accédez au dossier Logs à partir d'une invite de commandes, puis exécutez `findstr /s RebuildDatabase summary*.*`. Cette recherche vous dirige vers les fichiers journaux qui contiennent les résultats de la reconstruction des bases de données système. Ouvrez les fichiers journaux et recherchez les messages d'erreur pertinents.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Bases de données système](../../relational-databases/databases/system-databases.md)  
   
   
+

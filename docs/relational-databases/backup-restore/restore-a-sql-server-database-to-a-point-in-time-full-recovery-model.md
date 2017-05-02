@@ -1,26 +1,30 @@
 ---
-title: "Restaurer une base de donn&#233;es SQL Server jusqu&#39;&#224; une limite dans le temps (mode de r&#233;cup&#233;ration compl&#232;te) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "STOPAT, clause [instruction RESTORE LOG]"
-  - "récupération jusqu'à une date et heure [SQL Server]"
-  - "restauration des bases de données [SQL Server], point dans le temps"
+title: "Restaurer une base de données SQL Server jusqu’à une limite dans le temps (mode de récupération complète) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- STOPAT clause [RESTORE LOG statement]
+- point in time recovery [SQL Server]
+- restoring databases [SQL Server], point in time
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 caps.latest.revision: 50
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d20f1dbfd5cb21920ff323f8a09f33a9650c16a4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaurer une base de donn&#233;es SQL Server jusqu&#39;&#224; une limite dans le temps (mode de r&#233;cup&#233;ration compl&#232;te)
+# <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Restaurer une base de données SQL Server jusqu'à une limite dans le temps (mode de récupération complète)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique explique comment restaurer une base de données à un point précis dans le temps dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cette rubrique s'applique uniquement aux bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisant le mode de restauration complète ou de récupération utilisant les journaux de transactions.  
@@ -51,11 +55,11 @@ caps.handback.revision: 50
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Si la base de données restaurée n'existe pas, l'utilisateur doit posséder les autorisations CREATE DATABASE afin de pouvoir exécuter RESTORE. Si la base de données existe, les autorisations RESTORE reviennent par défaut aux membres des rôles serveur fixes **sysadmin** et **dbcreator** et au propriétaire (**dbo**) de la base de données (pour l’option FROM DATABASE_SNAPSHOT, la base de données existe toujours).  
+ Si la base de données restaurée n'existe pas, l'utilisateur doit posséder les autorisations CREATE DATABASE afin de pouvoir exécuter RESTORE. Si la base de données existe, les autorisations RESTORE reviennent par défaut aux membres des rôles serveur fixes **sysadmin** et **dbcreator** et au propriétaire (**dbo**) de la base de données (pour l’option FROM DATABASE_SNAPSHOT, la base de données existe toujours).  
   
- Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas lorsque RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
+ Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que lorsque la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas quand RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour restaurer une base de données à un point dans le temps**  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance appropriée du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], puis développez l'arborescence du serveur.  
@@ -75,7 +79,7 @@ caps.handback.revision: 50
   
     -   **Unité**  
   
-         Cliquez sur le bouton Parcourir (**...**) pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde**. Dans la zone **Type du média de sauvegarde** , sélectionnez l'un des types d'unités proposés. Pour sélectionner une ou plusieurs unités pour la zone **Support de sauvegarde** , cliquez sur **Ajouter**.  
+         Cliquez sur le bouton Parcourir (**...**) pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde** . Dans la zone **Type du média de sauvegarde** , sélectionnez l'un des types d'unités proposés. Pour sélectionner une ou plusieurs unités pour la zone **Support de sauvegarde** , cliquez sur **Ajouter**.  
   
          Après avoir ajouté les unités souhaitées à la zone de liste **Support de sauvegarde** , cliquez sur **OK** pour revenir à la page **Général** .  
   
@@ -125,11 +129,11 @@ caps.handback.revision: 50
 14. Sélectionnez **Demander confirmation avant chaque restauration de sauvegarde** si vous souhaitez être invité entre chaque opération de restauration. Cela n'est généralement pas nécessaire à moins que la base de données ne soit volumineuse et que vous ne souhaitiez surveiller l'état de l'opération de restauration.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
- **Avant de commencer**  
+ **Before you begin**  
   
  La restauration d'une heure spécifiée est toujours effectuée à partir d'une sauvegarde de fichier journal. Dans chaque instruction RESTORE LOG de la séquence de restauration, vous devez spécifier votre heure cible ou votre transaction dans une clause STOPAT identique. Comme condition préalable dans une restauration limitée dans le temps, vous devez restaurer une sauvegarde complète de base de données dont le point d'arrêt est antérieur à votre heure de restauration cible. Cette sauvegarde complète de base de données peut être plus ancienne que la sauvegarde complète de base de données la plus récente dans la mesure où vous restaurez ensuite chaque sauvegarde de fichier journal suivante jusqu'à la sauvegarde de fichier journal (comprise) contenant votre limite dans le temps cible.  
   
- Pour vous aider à identifier la sauvegarde de base à restaurer, vous pouvez éventuellement spécifier votre clause WITH STOPAT dans l'instruction RESTORE DATABASE afin de générer une erreur lorsqu'une sauvegarde de données est trop récente pour l'heure cible spécifiée. La sauvegarde de données complète est toujours restaurée, même si elle contient l'heure cible.  
+ Pour vous aider à identifier la sauvegarde de base à restaurer, vous pouvez éventuellement spécifier votre clause WITH STOPAT dans l'instruction RESTORE DATABASE afin de générer une erreur lorsqu'une sauvegarde de données est trop récente pour l'heure cible spécifiée. La sauvegarde de données complète est toujours restaurée, même si elle contient l'heure cible.  
   
  **Syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] de base**  
   
@@ -149,7 +153,7 @@ caps.handback.revision: 50
 2.  Exécutez l'instruction RESTORE DATABASE à l'aide de l'option NORECOVERY.  
   
     > [!NOTE]  
-    >  Si une séquence de restauration partielle exclut tout groupe de fichiers [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md), la limite de restauration dans le temps n’est pas prise en charge. Vous pouvez forcer la séquence de restauration à continuer. Cependant, les groupes de fichiers FILESTREAM omis de l'instruction RESTORE ne peuvent jamais être restaurés. Pour forcer une limite de restauration dans le temps, spécifiez l'option CONTINUE_AFTER_ERROR avec l'option STOPAT, STOPATMARK ou STOPBEFOREMARKx, que vous devez également spécifier dans vos instructions RESTORE LOG suivantes. Si vous spécifiez l'option CONTINUE_AFTER_ERROR, la séquence de restauration partielle réussit et le groupe de fichiers FILESTREAM devient irrécupérable.  
+    >  Si une séquence de restauration partielle exclut tout groupe de fichiers [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) , la limite de restauration dans le temps n’est pas prise en charge. Vous pouvez forcer la séquence de restauration à continuer. Cependant, les groupes de fichiers FILESTREAM omis de l'instruction RESTORE ne peuvent jamais être restaurés. Pour forcer une limite de restauration dans le temps, spécifiez l'option CONTINUE_AFTER_ERROR avec l'option STOPAT, STOPATMARK ou STOPBEFOREMARKx, que vous devez également spécifier dans vos instructions RESTORE LOG suivantes. Si vous spécifiez l'option CONTINUE_AFTER_ERROR, la séquence de restauration partielle réussit et le groupe de fichiers FILESTREAM devient irrécupérable.  
   
 3.  Restaurez la dernière sauvegarde différentielle de base de données, si elle existe, sans récupérer la base de données (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
@@ -187,7 +191,7 @@ GO
   
 -   [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
--   [Restaurer une base de données jusqu’au point d’échec en mode de récupération complète &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [Restaurer une base de données jusqu’au point d’échec en mode de récupération complète &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [Restaurer une base de données jusqu’à une transaction marquée &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
@@ -195,9 +199,9 @@ GO
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> (SMO)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
   

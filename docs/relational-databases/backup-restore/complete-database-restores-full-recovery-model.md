@@ -1,29 +1,33 @@
 ---
-title: "Restaurations compl&#232;tes de bases de donn&#233;es (mode de restauration compl&#232;te) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restaurations complètes de base de données"
-  - "restaurations de bases de données [SQL Server], base de données complète"
-  - "restauration des bases de données [SQL Server], base de données complète"
-  - "restauration [SQL Server], base de données"
-  - "modèle de récupération complète [SQL Server], exécution de restaurations"
-  - "sauvegardes de journaux [SQL Server]"
+title: "Restaurations complètes de bases de données (mode de récupération complète) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- complete database restores
+- database restores [SQL Server], complete database
+- restoring databases [SQL Server], complete database
+- restoring [SQL Server], database
+- full recovery model [SQL Server], performing restores
+- log backups [SQL Server[
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 caps.latest.revision: 77
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 77
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8b2fe04099e9ec76ea157b1428fa0a4896ad8e78
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaurations compl&#232;tes de bases de donn&#233;es (mode de restauration compl&#232;te)
+# <a name="complete-database-restores-full-recovery-model"></a>Restaurations complètes de bases de données (mode de récupération complète)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Lors d'une restauration complète de base de données, le but est de restaurer la totalité de la base de données. L'ensemble de la base de données est hors ligne pendant la durée de la restauration. Avant qu'une partie quelconque de la base de données ne puisse être mise en ligne, toutes les données sont récupérées dans un état cohérent où toutes les parties de la base de données sont chronologiquement synchronisées et aucune transaction non validée n'existe.  
@@ -35,7 +39,7 @@ caps.handback.revision: 77
 > [!IMPORTANT]  
 >  Nous vous recommandons de ne pas attacher ni restaurer de bases de données provenant de sources inconnues ou non approuvées. Ces bases de données peuvent contenir du code malveillant qui peut exécuter du code [!INCLUDE[tsql](../../includes/tsql-md.md)] imprévisible ou causer des erreurs en modifiant le schéma ou la structure physique de la base de données. Avant d’utiliser une base de données issue d’une source inconnue ou non approuvée, exécutez [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sur la base de données sur un serveur autre qu’un serveur de production et examinez également le code, notamment les procédures stockées ou tout autre code défini par l’utilisateur, de la base de données.  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   [Restauration d'une base de données jusqu'au point de défaillance](#PointOfFailure)  
   
@@ -44,10 +48,10 @@ caps.handback.revision: 77
 -   [Tâches associées](#RelatedTasks)  
   
 > [!NOTE]  
->  Pour plus d’informations sur la prise en charge de sauvegardes provenant de versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez la section « Prise en charge de la compatibilité » de [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+>  Pour plus d’informations sur la prise en charge de sauvegardes provenant de versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez la section « Prise en charge de la compatibilité » de [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 ##  <a name="PointOfFailure"></a> Restauration d'une base de données jusqu'au point de défaillance  
- Généralement, la récupération d'une base de données jusqu'au point de défaillance comprend les étapes de base suivantes :  
+ Généralement, la récupération d'une base de données jusqu'au point de défaillance comprend les étapes de base suivantes :  
   
 1.  Sauvegardez le journal des transactions actives (connu sous le nom de fin du journal). Cela entraîne la création d'une sauvegarde de la fin du journal. Si le journal des transactions actives n'est pas disponible, toutes les transactions contenues dans cette partie du journal sont perdues.  
   
@@ -66,15 +70,15 @@ caps.handback.revision: 77
   
 5.  Récupérez la base de données (RESTORE DATABASE *nom_base_de_données* WITH RECOVERY). Cette étape peut également être combinée avec la restauration de la dernière sauvegarde du journal.  
   
- L'illustration suivante montre cette séquence de restauration. Après une défaillance (1), une sauvegarde de la fin du journal est créée (2). Ensuite, la base de données est restaurée jusqu'au point de défaillance. Cela implique la restauration d'une sauvegarde de base de données suivie d'une sauvegarde différentielle, ainsi que de chaque sauvegarde de journal effectuée après la sauvegarde différentielle, y compris la sauvegarde de la fin du journal.  
+ L'illustration suivante montre cette séquence de restauration. Après une défaillance (1), une sauvegarde de la fin du journal est créée (2). Ensuite, la base de données est restaurée jusqu'au point de défaillance. Cela implique la restauration d'une sauvegarde de base de données suivie d'une sauvegarde différentielle, ainsi que de chaque sauvegarde de journal effectuée après la sauvegarde différentielle, y compris la sauvegarde de la fin du journal.  
   
- ![Restauration de base de données complète au moment d'une défaillance](../../relational-databases/backup-restore/media/bnrr-rmfull1-db-failure-pt.gif "Restauration de base de données complète au moment d'une défaillance")  
+ ![Restauration de base de données complète au moment d’une défaillance](../../relational-databases/backup-restore/media/bnrr-rmfull1-db-failure-pt.gif "Restauration de base de données complète au moment d’une défaillance")  
   
 > [!NOTE]  
 >  Quand vous restaurez une sauvegarde de base de données sur une instance de serveur différente, consultez [Copier des bases de données avec la sauvegarde et la restauration](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
 ###  <a name="TsqlSyntax"></a> Syntaxe de base de l'instruction Transact-SQL RESTORE  
- La syntaxe [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md)[!INCLUDE[tsql](../../includes/tsql-md.md)] de base pour la séquence de restauration dans l’illustration précédente est la suivante :  
+ La syntaxe [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] de base pour la séquence de restauration dans l’illustration précédente est la suivante :  
   
 1.  RESTORE DATABASE *database* FROM *full database backup* WITH NORECOVERY;  
   
@@ -86,7 +90,7 @@ caps.handback.revision: 77
   
 4.  RESTORE DATABASE *database* WITH RECOVERY;  
   
-###  <a name="ExampleToPoFTsql"></a> Exemple : récupération jusqu'au point de défaillance (Transact-SQL)  
+###  <a name="ExampleToPoFTsql"></a> Exemple : récupération jusqu'au point de défaillance (Transact-SQL)  
  L'exemple [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant indique les principales options d'une séquence de restauration qui restaure la base de données jusqu'au point de défaillance. L'exemple crée une sauvegarde de la fin du journal de la base de données. Ensuite, il restaure une sauvegarde complète de base de données et une sauvegarde de fichier journal, puis restaure la sauvegarde de la fin du journal. L'exemple récupère la base de données dans une dernière étape séparée.  
   
 > [!NOTE]  
@@ -125,8 +129,8 @@ GO
 ##  <a name="PointWithinBackup"></a> Restauration d'une base de données jusqu'à un point dans une sauvegarde de fichier journal  
  En mode de récupération complète, une restauration complète de base de données peut généralement être récupérée jusqu'à une date et une heure, une transaction marquée ou un LSN dans une sauvegarde de fichier journal. Cependant, en mode de récupération utilisant les journaux des transactions, si la sauvegarde du journal contient des modifications journalisées en bloc, la récupération jusqu'à une date et heure est impossible.  
   
-### Exemples de scénarios de restauration jusqu'à une date et heure  
- L'exemple suivant suppose un système de bases de données critique pour lequel une sauvegarde complète est créée chaque nuit à minuit, une sauvegarde différentielle chaque heure tous les jours du lundi au samedi et une sauvegarde du journal des transactions toutes les 10 minutes pendant la journée. Pour restaurer la base de données telle qu'elle était à 5h19 mercredi : Vous devez effectuer les opérations suivantes :  
+### <a name="sample-point-in-time-restore-scenarios"></a>Exemples de scénarios de restauration jusqu'à une date et heure  
+ L'exemple suivant suppose un système de bases de données critique pour lequel une sauvegarde complète est créée chaque nuit à minuit, une sauvegarde différentielle chaque heure tous les jours du lundi au samedi et une sauvegarde du journal des transactions toutes les 10 minutes pendant la journée. Pour restaurer la base de données telle qu'elle était à 5h19 mercredi : Vous devez effectuer les opérations suivantes :  
   
 1.  Restaurez la sauvegarde complète de la base de données créée mardi à minuit.  
   
@@ -136,7 +140,7 @@ GO
   
 4.  Appliquez la sauvegarde de journal des transactions qui a été créée à 5h20 mercredi, en précisant que la procédure de récupération ne s'applique qu'aux transactions ayant eu lieu avant 5h19.  
   
- Puis, si la base de données doit être restaurée à son état initial à 3h04 le jeudi matin, mais que la sauvegarde différentielle créée le jeudi à 3h00 n'est pas disponible, effectuez les opérations suivantes :  
+ Puis, si la base de données doit être restaurée à son état initial à 3h04 le jeudi matin, mais que la sauvegarde différentielle créée le jeudi à 3h00 n'est pas disponible, effectuez les opérations suivantes :  
   
 1.  Restaurez la sauvegarde de base de données qui a été créée mercredi à minuit.  
   
@@ -176,8 +180,8 @@ GO
   
 -   [Récupérer un numéro séquentiel dans le journal &#40;SQL Server&#41;](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md)  
   
-## Voir aussi  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Voir aussi  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Appliquer les sauvegardes du journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   

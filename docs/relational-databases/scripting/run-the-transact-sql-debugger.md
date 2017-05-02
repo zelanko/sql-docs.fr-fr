@@ -1,37 +1,41 @@
 ---
-title: "Ex&#233;cuter le d&#233;bogueur Transact-SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "débogueur Transact-SQL, configuration sysadmin requise"
-  - "débogueur Transact-SQL, versions prises en charge"
-  - "éditeur de requête [moteur de base de données], menu contextuel"
-  - "débogage [SQL Server], débogueur T-SQL"
-  - "débogueur Transact-SQL, menu contextuel de l’éditeur de requête"
-  - "débogueur Transact-SQL, arrêt"
-  - "débogueur Transact-SQL, menu Débogage"
-  - "débogage [SQL Server]"
-  - "débogueur Transact-SQL, barre d’outils Débogage"
-  - "débogueur Transact-SQL, raccourcis clavier"
-  - "débogueur Transact-SQL, démarrage"
+title: "Exécuter le débogueur Transact-SQL | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transact-SQL debugger, sysadmin requirement
+- Transact-SQL debugger, supported versions
+- Query Editor [Database Engine], right-click menu
+- debugging [SQL Server], T-SQL debugger
+- Transact-SQL debugger, Query Editor shortcut menu
+- Transact-SQL debugger, stopping
+- Transact-SQL debugger, Debug menu
+- debugging [SQL Server]
+- Transact-SQL debugger, Debug toolbar
+- Transact-SQL debugger, keyboard shortcuts
+- Transact-SQL debugger, starting
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2a9c2a6c57d74122ff0294bdf0bdccd2193447f8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ex&#233;cuter le d&#233;bogueur Transact-SQL
+# <a name="run-the-transact-sql-debugger"></a>Exécuter le débogueur Transact-SQL
   Vous pouvez démarrer le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] après avoir ouvert une fenêtre de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Vous pouvez ensuite exécuter votre code [!INCLUDE[tsql](../../includes/tsql-md.md)] en mode débogage jusqu'à ce que vous arrêtiez le débogueur. Vous pouvez définir des options permettant de personnaliser la façon dont le débogueur s'exécute.  
   
-## Démarrage et arrêt du débogueur  
+## <a name="starting-and-stopping-the-debugger"></a>Démarrage et arrêt du débogueur  
  La configuration requise pour démarrer le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] est la suivante :  
   
 -   Si votre éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est connecté à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur un autre ordinateur, vous avez dû configurer le débogueur de façon qu’il accepte le débogage distant. Pour plus d’informations, consultez [Configurer des règles de pare-feu avant d’exécuter le débogueur TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).  
@@ -40,13 +44,13 @@ caps.handback.revision: 8
   
 -   La fenêtre de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être connectée à l’aide d’une connexion via l’authentification Windows ou l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est un membre du rôle serveur fixe sysadmin.  
   
--   La fenêtre de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être connectée à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) ou version ultérieure. Vous ne pouvez pas exécuter le débogueur lorsque la fenêtre de l'éditeur de requête est connectée à une instance en mode mono-utilisateur.  
+-   La fenêtre de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être connectée à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) ou version ultérieure. Vous ne pouvez pas exécuter le débogueur lorsque la fenêtre de l'éditeur de requête est connectée à une instance en mode mono-utilisateur.  
   
- Nous vous recommandons de déboguer le code [!INCLUDE[tsql](../../includes/tsql-md.md)] sur un serveur test, et non sur un serveur de production, pour les raisons suivantes :  
+ Nous vous recommandons de déboguer le code [!INCLUDE[tsql](../../includes/tsql-md.md)] sur un serveur test, et non sur un serveur de production, pour les raisons suivantes :  
   
 -   Le débogage est une opération hautement privilégiée. Par conséquent, seuls les membres du rôle serveur fixe sysadmin sont autorisés à déboguer dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Les sessions de débogage s'exécutent en général assez longtemps lorsque vous étudiez les opérations de plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. Les verrous, tels que les verrous de mise à jour, qui sont acquis par la session peuvent être appliqués pendant des périodes prolongées, jusqu'à ce que la session soit terminée ou jusqu'à ce que la transaction soit validée ou restaurée.  
+-   Les sessions de débogage s'exécutent en général assez longtemps lorsque vous étudiez les opérations de plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] . Les verrous, tels que les verrous de mise à jour, qui sont acquis par la session peuvent être appliqués pendant des périodes prolongées, jusqu'à ce que la session soit terminée ou jusqu'à ce que la transaction soit validée ou restaurée.  
   
  Au démarrage du débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] , la fenêtre de l'éditeur de requête passe en mode débogage. Lorsque la fenêtre de l'éditeur de requête entre en mode débogage, le débogueur s'arrête à la première ligne de code. Vous pouvez ensuite parcourir le code, suspendre l'exécution au niveau d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifiques et utiliser les fenêtres du débogueur pour examiner l'état d'exécution actuel. Vous pouvez démarrer le débogueur en cliquant sur le bouton **Déboguer** dans la barre d'outils **Requête** ou en cliquant sur **Démarrer le débogage** dans le menu **Déboguer** .  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 8
   
  Vous pouvez également arrêter le mode débogage et laisser l'exécution des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] restantes se terminer en cliquant sur **Détacher tout** dans le menu **Déboguer** .  
   
-## Contrôle du débogueur  
+## <a name="controlling-the-debugger"></a>Contrôle du débogueur  
  Vous pouvez contrôler le mode de fonctionnement du débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] à l'aide des commandes de menu, des barres d'outils et des raccourcis suivants :  
   
 -   Menu **Déboguer** et barre d'outils **Déboguer** . Le menu **Déboguer** et la barre d'outils **Déboguer** sont inactifs tant que le focus ne se trouve pas sur une fenêtre ouverte de l'éditeur de requête. Ils restent actifs jusqu'à la fermeture du projet actif.  
@@ -78,16 +82,16 @@ caps.handback.revision: 8
 |Commande du menu Déboguer|Commande de raccourci de l'éditeur|Bouton de la barre d'outils|Raccourci clavier|Action|  
 |------------------------|-----------------------------|--------------------|-----------------------|------------|  
 |**Fenêtres/Points d'arrêt**|Non disponible|**Points d'arrêt**|Ctrl+Alt+B|Affiche la fenêtre **Points d'arrêt** , dans laquelle vous pouvez afficher et gérer les points d'arrêt.|  
-|**Fenêtres/Espion/Espion 1**|Non disponible|**Points d'arrêt/Espion/Espion 1**|Ctrl+Alt+W, 1|Affiche la fenêtre **Espion 1** .|  
-|**Fenêtres/Espion/Espion 2**|Non disponible|**Points d'arrêt/Espion/Espion 2**|Ctrl+Alt+W, 2|Affiche la fenêtre **Espion 2** .|  
-|**Fenêtres/Espion/Espion 3**|Non disponible|**Points d'arrêt/Espion/Espion 3**|Ctrl+Alt+W, 3|Affiche la fenêtre **Espion 3** .|  
-|**Fenêtres/Espion/Espion 4**|Non disponible|**Points d'arrêt/Espion/Espion 4**|Ctrl+Alt+W, 4|Affiche la fenêtre **Espion 4** .|  
+|**Fenêtres/Espion/Espion 1**|Non disponible|**Points d'arrêt/Espion/Espion 1**|Ctrl+Alt+W, 1|Affiche la fenêtre **Espion 1** .|  
+|**Fenêtres/Espion/Espion 2**|Non disponible|**Points d'arrêt/Espion/Espion 2**|Ctrl+Alt+W, 2|Affiche la fenêtre **Espion 2** .|  
+|**Fenêtres/Espion/Espion 3**|Non disponible|**Points d'arrêt/Espion/Espion 3**|Ctrl+Alt+W, 3|Affiche la fenêtre **Espion 3** .|  
+|**Fenêtres/Espion/Espion 4**|Non disponible|**Points d'arrêt/Espion/Espion 4**|Ctrl+Alt+W, 4|Affiche la fenêtre **Espion 4** .|  
 |**Fenêtres/Variables locales**|Non disponible|**Points d'arrêt/Variables locales**|Ctrl+Alt+V, L|Affiche la fenêtre **Variables locales** .|  
 |**Fenêtres/Pile des appels**|Non disponible|**Points d'arrêt/Pile des appels**|Ctrl+Alt+C|Affiche la fenêtre **Pile des appels** .|  
 |**Fenêtres/Threads**|Non disponible|**Points d'arrêt/Threads**|Ctrl+Alt+H|Affiche la fenêtre **Threads** .|  
 |**Continuer**|Non disponible|**Continuer**|Alt+F5|Exécuter le code jusqu'au point d'arrêt suivant. **Continuer** est inactif tant que le focus ne se trouve pas sur une fenêtre de l'éditeur de requête en mode débogage.|  
 |**Démarrer le débogage**|Non disponible|**Démarrer le débogage**|Alt+F5|Fait passer une fenêtre de l'éditeur de requête en mode débogage et exécute le code jusqu'au premier point d'arrêt. Si le focus se trouve sur une fenêtre de l'éditeur de requête en mode débogage, **Démarrer le débogage** est remplacé par **Continuer**.|  
-|**Interrompre tout**|Non disponible|**Interrompre tout**|Ctrl+Alt+Pause|Cette fonctionnalité n'est pas utilisée par le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
+|**Interrompre tout**|Non disponible|**Interrompre tout**|Ctrl+Alt+Pause|Cette fonctionnalité n'est pas utilisée par le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
 |**Arrêter le débogage**|Non disponible|**Arrêter le débogage**|Maj+F5|Fait sortir une fenêtre de l'éditeur de requête du mode débogage et restaure le mode normal.|  
 |**Détacher tout**|Non disponible|Non disponible|Non disponible|Arrête le mode débogage, mais exécute les instructions restantes dans la fenêtre de l'éditeur de requête.|  
 |**Pas à pas détaillé**|Non disponible|**Pas à pas détaillé**|F11|Exécute l'instruction suivante et ouvre une nouvelle fenêtre de l'éditeur de requête en mode débogage si l'instruction suivante exécute une procédure stockée, un déclencheur ou une fonction.|  
@@ -103,7 +107,7 @@ caps.handback.revision: 8
 |**Désactiver tous les points d'arrêt**|Non disponible|Non disponible|Non disponible|Désactive tous les points d'arrêt.|  
 |Non disponible|**Ajouter un espion**|Non disponible|Non disponible|Ajoute l'expression sélectionnée à la fenêtre **Espion** .|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Exécuter pas à pas du code Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)   
  [Informations du débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)   

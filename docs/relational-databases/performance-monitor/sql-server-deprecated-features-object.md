@@ -1,30 +1,34 @@
 ---
-title: "Objet SQL Server Fonctionnalit&#233;s d&#233;conseill&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server : Fonctionnalités déconseillées"
-  - "compteurs de performances [SQL Server], fonctionnalités déconseillées"
-  - "désapprobation [SQL Server], compteurs de performances"
-  - "objet Fonctionnalités déconseillées"
+title: SQL Server, objet Deprecated Features | Microsoft Docs
+ms.custom: 
+ms.date: 05/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Deprecated Features
+- performance counters [SQL Server], deprecated features
+- deprecation [SQL Server], performance counters
+- Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: 61
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1cbdf2dde41142d1b674e71df3a34756e8fcce99
+ms.lasthandoff: 04/11/2017
+
 ---
-# Objet SQL Server Fonctionnalit&#233;s d&#233;conseill&#233;es
+# <a name="sql-server-deprecated-features-object"></a>SQL Server, objet Deprecated Features
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  L'objet SQLServer : Fonctionnalités déconseillées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un compteur permettant de contrôler les fonctionnalités désignées comme déconseillées. Dans tous les cas, le compteur fournit un nombre d'utilisations indiquant combien de fois la fonctionnalité déconseillée a été rencontrée depuis le dernier démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  L'objet SQLServer:Deprecated Features de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un compteur permettant de contrôler les fonctionnalités désignées comme dépréciées. Dans tous les cas, le compteur fournit un nombre d'utilisations indiquant combien de fois la fonctionnalité dépréciée a été rencontrée depuis le dernier démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  La valeur de ces compteurs est également disponible en exécutant l’instruction suivante :  
   
@@ -33,20 +37,20 @@ SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name = 'SQLServer:Deprecated Features';  
 ```  
 
-Le tableau suivant décrit l’objet de performance **Fonctionnalités déconseillées**.
+Le tableau suivant décrit l’objet de performance **Deprecated Features** .
 
-|**Compteur de l’objet SQL Server Fonctionnalités déconseillées**|Description|  
+|**Compteur de l’objet SQL Server Deprecated Features**|Description|  
 |-------------|-----------------|  
 |**Utilisation**|Utilisation des fonctionnalités depuis le dernier démarrage de SQL Server.|
   
- Le tableau suivant décrit les instances du compteur de l'objet SQL Server : Fonctionnalités déconseillées.  
+ Le tableau suivant décrit les instances du compteur de l'objet SQL Server Deprecated Features.  
   
-|Instances du compteur de l'objet SQL Server : Fonctionnalités déconseillées|Description|  
+|Instances du compteur de l'objet SQL Server Deprecated Features|Description|  
 |------------------------------------------------------|-----------------|  
-|'#' et '##' comme nom des tables temporaires et procédures stockées|Un identifiant ne contenant pas d'autres caractères que # a été rencontré. Utilisez au moins un caractère supplémentaire. Se produit une fois par compilation.|  
+|'#' et '##' comme nom des tables temporaires et procédures stockées|Un identifiant ne contenant pas d'autres caractères que # a été rencontré. Utilisez au moins un caractère supplémentaire. Se produit une fois par compilation.|  
 |Syntaxe d'appel de fonction '::'|La syntaxe d'appel de fonction :: a été rencontrée pour une fonction table. Remplacez par `SELECT column_list FROM` *<nom_fonction>*`()`. Par exemple, remplacez `SELECT * FROM ::fn_virtualfilestats(2,1)` par `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produit une fois par compilation.|  
 |'@' et noms commençant par '@@' comme identificateurs [!INCLUDE[tsql](../../includes/tsql-md.md)]|Un identificateur commençant par @ ou @@ a été rencontré. N'utilisez pas @, @@ ou des noms commençant par @@ comme identificateurs. Se produit une fois par compilation.|  
-|ADDING TAPE DEVICE|La fonctionnalité déconseillée sp_addumpdevice’**bande**’ a été rencontrée. Utilisez à la place sp_addumpdevice’**disque**’. Se produit une fois par utilisation.|  
+|ADDING TAPE DEVICE|La fonctionnalité dépréciée sp_addumpdevice'**bande**' a été rencontrée. Utilisez à la place sp_addumpdevice'**disque**'. Se produit une fois par utilisation.|  
 |Autorisation ALL|Nombre total de fois où la syntaxe GRANT ALL, DENY ALL ou REVOKE ALL a été rencontrée. Modifiez la syntaxe pour refuser des autorisations spécifiques. Se produit une fois par requête.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Nombre total d'utilisations de l'option TORN_PAGE_DETECTION de la fonctionnalité déconseillée ALTER DATABASE depuis le démarrage de l'instance du serveur. Utilisez à la place la syntaxe PAGE_VERIFY. Se produit une fois par utilisation dans une instruction DDL.|  
 |ALTER LOGIN WITH SET CREDENTIAL|La syntaxe de fonctionnalité déconseillée ALTER LOGIN WITH SET CREDENTIAL ou ALTER LOGIN WITH NO CREDENTIAL a été rencontrée. Utilisez à la place la syntaxe ADD ou DROP CREDENTIAL. Se produit une fois par compilation.|  
@@ -60,8 +64,8 @@ Le tableau suivant décrit l’objet de performance **Fonctionnalités déconsei
 |CREATE TRIGGER WITH APPEND|Une instruction CREATE TRIGGER avec la clause WITH APPEND a été rencontrée. Recréez à la place le déclencheur entier. Se produit une fois par utilisation dans une instruction DDL.|  
 |CREATE_DROP_DEFAULT|La syntaxe CREATE DEFAULT ou DROP DEFAULT a été rencontrée. Réécrivez la commande en utilisant l'option DEFAULT de CREATE TABLE ou ALTER TABLE. Se produit une fois par compilation.|  
 |CREATE_DROP_RULE|La syntaxe CREATE RULE a été rencontrée. Réécrivez la commande en utilisant des contraintes. Se produit une fois par compilation.|  
-|Types de données text, ntext ou image|Un type de données **text**, **ntext**ou **image** a été rencontré. Réécrivez les applications de manière à utiliser le type de données **varchar(max)** et à supprimer la syntaxe des types de données **text**, **ntext** et **image**. Se produit une fois par requête.|  
-||Nombre total de fois où le niveau de compatibilité 80 a été appliqué à une base de données. Projetez de mettre à niveau la base de données et l'application avant la prochaine version. Se produit également lorsqu’une base de données présentant le niveau de compatibilité 80 est démarrée.|  
+|Types de données text, ntext ou image|Un type de données **text**, **ntext**ou **image** a été rencontré. Réécrivez les applications de manière à utiliser le type de données **varchar(max)** et à supprimer la syntaxe des types de données **text**, **ntext**et **image** . Se produit une fois par requête.|  
+||Nombre total de fois où le niveau de compatibilité 80 a été appliqué à une base de données. Projetez de mettre à niveau la base de données et l'application avant la prochaine version. Se produit également lorsqu’une base de données présentant le niveau de compatibilité 80 est démarrée.|  
 |Niveau de compatibilité de base de données 100, 110, 120|Nombre total de fois où le niveau de compatibilité d’une base de données a été modifié. Projetez de mettre à niveau la base de données et l'application avant la prochaine version. Se produit également lorsqu’une base de données ayant un niveau de compatibilité déconseillé est démarrée.|  
 |DATABASE_MIRRORING|Des références à la fonctionnalité de mise en miroir de bases de données ont été rencontrées. Prévoyez d’effectuer une mise à niveau vers des groupes de disponibilité Always On, ou si vous exécutez une édition de SQL Server qui ne prend pas en charge les groupes de disponibilité Always On, planifiez une migration vers la copie des journaux de transaction.|  
 |database_principal_aliases|Des références à la fonctionnalité déconseillée sys.database_principal_aliases ont été rencontrées. Utilisez des rôles à la place d'alias. Se produit une fois par compilation.|  
@@ -75,7 +79,7 @@ Le tableau suivant décrit l’objet de performance **Fonctionnalités déconsei
 |Algorithme de chiffrement déconseillé|L'algorithme de chiffrement RC4 déconseillé sera supprimé dans la prochaine version de SQL Server. Évitez d'utiliser cette fonctionnalité dans tout nouveau travail de développement et prévoyez de modifier les applications qui l'utilisent. L'algorithme RC4 est faible et uniquement pris en charge pour des raisons de compatibilité descendante. Le nouveau matériel ne peut être chiffré à l'aide de RC4 ou de RC4_128 que lorsque la base de données se trouve dans le niveau de compatibilité 90 ou 100. (Non recommandé.) Utilisez à la place un algorithme plus récent, tel qu'un des algorithmes AES. Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et version ultérieure, le matériel chiffré à l'aide de RC4 ou de RC4_128 peut être déchiffré dans n'importe quel niveau de compatibilité.|  
 |Algorithme de hachage déconseillé|Utilisation des algorithmes MD2, MD4, MD5, SHA ou SHA1.|  
 |Algorithme DESX|Une syntaxe qui utilise l'algorithme de chiffrement DESX a été rencontrée. Utilisez un autre algorithme pour le chiffrement. Se produit une fois par compilation.|  
-|dm_fts_active_catalogs|Le compteur dm_fts_active_catalogs reste toujours à 0 car certaines colonnes de la vue sys.dm_fts_active_catalogs ne sont pas déconseillées. Pour surveiller une colonne déconseillée, utilisez le compteur spécifique à la colonne ; par exemple, dm_fts_active_catalogs.is_paused.|  
+|dm_fts_active_catalogs|Le compteur dm_fts_active_catalogs reste toujours à 0 car certaines colonnes de la vue sys.dm_fts_active_catalogs ne sont pas déconseillées. Pour surveiller une colonne déconseillée, utilisez le compteur spécifique à la colonne ; par exemple, dm_fts_active_catalogs.is_paused.|  
 |dm_fts_active_catalogs.is_paused|La colonne is_paused de la vue de gestion dynamique [sys.dm_fts_active_catalogs](../../relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql.md) a été rencontrée. Évitez d'utiliser cette colonne. Se produit chaque fois que l'instance du serveur détecte une référence à la colonne.|  
 |dm_fts_active_catalogs.previous_status|La colonne previous_status de la vue de gestion dynamique sys.dm_fts_active_catalogs a été rencontrée. Évitez d'utiliser cette colonne. Se produit chaque fois que l'instance du serveur détecte une référence à la colonne.|  
 |dm_fts_active_catalogs.previous_status_description|La colonne previous_status_description de la vue de gestion dynamique sys.dm_fts_active_catalogs a été rencontrée. Évitez d'utiliser cette colonne. Se produit chaque fois que l'instance du serveur détecte une référence à la colonne.|  
@@ -83,9 +87,9 @@ Le tableau suivant décrit l’objet de performance **Fonctionnalités déconsei
 |dm_fts_active_catalogs.status|La colonne status de la vue de gestion dynamique sys.dm_fts_active_catalogs a été rencontrée. Évitez d'utiliser cette colonne. Se produit chaque fois que l'instance du serveur détecte une référence à la colonne.|  
 |dm_fts_active_catalogs.status_description|La colonne status_description de la vue de gestion dynamique sys.dm_fts_active_catalogs a été rencontrée. Évitez d'utiliser cette colonne. Se produit chaque fois que l'instance du serveur détecte une référence à la colonne.|  
 |dm_fts_active_catalogs.worker_count|La colonne worker_count de la vue de gestion dynamique sys.dm_fts_active_catalogs a été rencontrée. Évitez d'utiliser cette colonne. Se produit chaque fois que l'instance du serveur détecte une référence à la colonne.|  
-|dm_fts_memory_buffers|Le compteur dm_fts_memory_buffers reste toujours à 0 car la plupart des colonnes de la vue sys.dm_fts_memory_buffers ne sont pas déconseillées. Pour surveiller la colonne déconseillée, utilisez le compteur spécifique à la colonne : dm_fts_memory_buffers.row_count.|  
+|dm_fts_memory_buffers|Le compteur dm_fts_memory_buffers reste toujours à 0 car la plupart des colonnes de la vue sys.dm_fts_memory_buffers ne sont pas déconseillées. Pour surveiller la colonne déconseillée, utilisez le compteur spécifique à la colonne : dm_fts_memory_buffers.row_count.|  
 |dm_fts_memory_buffers.row_count|La colonne row_count de la vue de gestion dynamique [sys.dm_fts_memory_buffers](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md) a été rencontrée. Évitez d'utiliser cette colonne. Se produit chaque fois que l'instance du serveur détecte une référence à la colonne.|  
-|DROP INDEX avec nom en deux parties|DROP INDEX contient une syntaxe au format *nom_table.nom_index*. Remplacez-la par la syntaxe *nom_index* ON *nom_table* dans l’instruction DROP INDEX. Se produit une fois par compilation.|  
+|DROP INDEX avec nom en deux parties|DROP INDEX contient une syntaxe au format *nom_table.nom_index* . Remplacez-la par la syntaxe *nom_index* ON *nom_table* dans l’instruction DROP INDEX. Se produit une fois par compilation.|  
 |EXT_CREATE_ALTER_SOAP_ENDPOINT|L'instruction CREATE ou ALTER ENDPOINT avec l'option FOR SOAP a été rencontrée. Les services Web XML natifs sont déconseillés. Utilisez à la place WFC (Windows Communications Foundation) ou ASP.NET.|  
 |EXT_endpoint_webmethods|sys.endpoint_webmethods a été rencontré. Les services Web XML natifs sont déconseillés. Utilisez à la place WFC (Windows Communications Foundation) ou ASP.NET.|  
 |EXT_soap_endpoints|sys.soap_endpoints a été rencontré. Les services Web XML natifs sont déconseillés. Utilisez à la place WFC (Windows Communications Foundation) ou ASP.NET.|  
@@ -96,7 +100,7 @@ Le tableau suivant décrit l’objet de performance **Fonctionnalités déconsei
 |fn_get_sql|La fonction fn_get_sql a été compilée. Utilisez sys.dm_exec_sql_text à la place. Se produit une fois par compilation.|  
 |fn_servershareddrives|La fonction fn_servershareddrives a été compilée. Utilisez à la place sys.dm_io_cluster_shared_drives. Se produit une fois par compilation.|  
 |fn_virtualservernodes|La fonction fn_virtualservernodes a été compilée. Utilisez à la place sys.dm_os_cluster_nodes. Se produit une fois par compilation.|  
-|fulltext_catalogs|Le compteur fulltext_catalogs reste toujours à 0 car certaines colonnes de la vue sys.fulltext_catalogs ne sont pas déconseillées. Pour surveiller une colonne déconseillée, utilisez le compteur spécifique à la colonne ; par exemple, fulltext_catalogs.data_space_id. Se produit chaque fois que l'instance du serveur détecte une référence à la colonne.|  
+|fulltext_catalogs|Le compteur fulltext_catalogs reste toujours à 0 car certaines colonnes de la vue sys.fulltext_catalogs ne sont pas déconseillées. Pour surveiller une colonne déconseillée, utilisez le compteur spécifique à la colonne ; par exemple, fulltext_catalogs.data_space_id. Se produit chaque fois que l'instance du serveur détecte une référence à la colonne.|  
 |fulltext_catalogs.data_space_id|La colonne data_space_id de la vue de catalogue [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) a été rencontrée. N'utilisez pas cette colonne. Se produit chaque fois que l'instance du serveur détecte une référence à la colonne.|  
 |fulltext_catalogs.file_id|La colonne file_id de l'affichage catalogue sys.fulltext_catalogs a été rencontrée. N'utilisez pas cette colonne. Se produit chaque fois que l'instance du serveur détecte une référence à la colonne.|  
 |fulltext_catalogs.path|La colonne path de l'affichage catalogue sys.fulltext_catalogs a été rencontrée. N'utilisez pas cette colonne. Se produit chaque fois que l'instance du serveur détecte une référence à la colonne.|  
@@ -120,18 +124,18 @@ Le tableau suivant décrit l’objet de performance **Fonctionnalités déconsei
 |Macedonian|L'événement se produit une fois par démarrage de base de données et une fois par utilisation de classement. Prévoyez de modifier les applications qui utilisent ce classement. Utilisez à la place Macedonian_FYROM_90.|  
 |MODIFY FILEGROUP READONLY|La syntaxe MODIFY FILEGROUP READONLY a été rencontrée. Réécrivez les instructions de manière à utiliser la syntaxe READ_ONLY. Se produit une fois par compilation.|  
 |MODIFY FILEGROUP READWRITE|La syntaxe MODIFY FILEGROUP READWRITE a été rencontrée. Réécrivez les instructions de manière à utiliser la syntaxe READ_WRITE. Se produit une fois par compilation.|  
-|Nom de la colonne à plus de deux parties|Une requête a utilisé un nom en 3 ou 4 parties dans la liste de colonnes. Modifiez la requête de manière à utiliser des noms en 2 parties conformes au standard. Se produit une fois par compilation.|  
+|Nom de la colonne à plus de deux parties|Une requête a utilisé un nom en 3 ou 4 parties dans la liste de colonnes. Modifiez la requête de manière à utiliser des noms en 2 parties conformes au standard. Se produit une fois par compilation.|  
 |Indicateurs de table multiples sans virgule|Un espace a été utilisé comme séparateur des indicateurs de table. Utilisez à la place une virgule. Se produit une fois par compilation.|  
 |NOLOCK ou READUNCOMMITTED dans UPDATE ou DELETE|NOLOCK ou READUNCOMMITTED a été rencontré dans la clause FROM d'une instruction UPDATE ou DELETE. Supprimez les indicateurs de table NOLOCK ou READUNCOMMITTED de la clause FROM.|  
 |Opérateurs de jointure externe non-ANSI *= ou =\*|Une instruction qui utilise la syntaxe de jointure *= ou =\* a été rencontrée. Réécrivez l'instruction de manière à utiliser la syntaxe de jointure ANSI. Se produit une fois par compilation.|  
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Des références à la fonctionnalité déconseillée sys.numbered_procedure_parameters ont été rencontrées. Ne pas utiliser. Se produit une fois par compilation.|  
 |numbered_procedures|Des références à la fonctionnalité déconseillée sys.numbered_procedures ont été rencontrées. Ne pas utiliser. Se produit une fois par compilation.|  
-|Ancien style RAISEERROR|La syntaxe RAISERROR déconseillée (Format : RAISERROR entier chaîne) a été rencontrée. Réécrivez l'instruction en utilisant la syntaxe RAISERROR actuelle. Se produit une fois par compilation.|  
+|Ancien style RAISEERROR|La syntaxe RAISERROR déconseillée (Format : RAISERROR entier chaîne) a été rencontrée. Réécrivez l'instruction en utilisant la syntaxe RAISERROR actuelle. Se produit une fois par compilation.|  
 |OLEDB pour les connexions ad hoc|Le fournisseur SQLOLEDB n'est pas pris en charge. Utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client pour les connexions ad hoc.|  
 |PERMISSIONS|Des références à la fonction intrinsèque PERMISSIONS ont été rencontrées. Interrogez à la place sys.fn_my_permissions. Se produit une fois par requête.|  
 |ProcNums|La syntaxe déconseillée ProcNums a été rencontrée. Réécrivez les instructions de manière à supprimer ces références. Se produit une fois par compilation.|  
-|READTEXT|La syntaxe READTEXT a été rencontrée. Réécrivez les applications de manière à utiliser le type de données **varchar(max)** et à supprimer la syntaxe du type de données **text**. Se produit une fois par requête.|  
+|READTEXT|La syntaxe READTEXT a été rencontrée. Réécrivez les applications de manière à utiliser le type de données **varchar(max)** et à supprimer la syntaxe du type de données **text** . Se produit une fois par requête.|  
 |RESTORE DATABASE ou LOG WITH DBO_ONLY|La syntaxe RESTORE … WITH DBO_ONLY a été rencontrée. Utilisez plutôt RESTORE … RESTRICTED_USER.|  
 |RESTORE DATABASE ou LOG WITH MEDIAPASSWORD|La syntaxe RESTORE … WITH MEDIAPASSWORD a été rencontrée. WITH MEDIAPASSWORD fournit un faible niveau de sécurité et doit être supprimé.|  
 |RESTORE DATABASE ou LOG WITH PASSWORD|La syntaxe RESTORE … WITH PASSWORD a été rencontrée. WITH PASSWORD fournit un faible niveau de sécurité et doit être supprimé.|  
@@ -164,7 +168,7 @@ Le tableau suivant décrit l’objet de performance **Fonctionnalités déconsei
 |sp_changeobjectowner|La procédure sp_changeobjectowner a été rencontrée. Utilisez à la place ALTER SCHEMA ou ALTER AUTHORIZATION. Se produit une fois par requête.|  
 |sp_change_users_login|La procédure sp_change_users_login a été rencontrée. Utilisez à la place ALTER USER. Se produit une fois par requête.|  
 |sp_configure allow updates'|L'option allow updates de sp_configure a été rencontrée. Les tables système ne peuvent plus être mises à jour. Ne pas utiliser. Se produit une fois par requête.|  
-|sp_configure 'disallow results from triggers'|L'option disallow result sets from triggers de sp_configure a été rencontrée. Pour désactiver les jeux de résultats provenant des déclencheurs, utilisez sp_configure pour affecter la valeur 1 à cette option. Se produit une fois par requête.|  
+|sp_configure 'disallow results from triggers'|L'option disallow result sets from triggers de sp_configure a été rencontrée. Pour désactiver les jeux de résultats provenant des déclencheurs, utilisez sp_configure pour affecter la valeur 1 à cette option. Se produit une fois par requête.|  
 |sp_configure 'ft crawl bandwidth (max)'|L'option ft crawl bandwidth (max) de sp_configure a été rencontrée. Ne pas utiliser. Se produit une fois par requête.|  
 |sp_configure 'ft crawl bandwidth (min)'|L'option ft crawl bandwidth (min) de sp_configure a été rencontrée. Ne pas utiliser. Se produit une fois par requête.|  
 |sp_configure 'ft notify bandwidth (max)'|L'option ft notify bandwidth (max) de sp_configure a été rencontrée. Ne pas utiliser. Se produit une fois par requête.|  
@@ -185,7 +189,7 @@ Le tableau suivant décrit l’objet de performance **Fonctionnalités déconsei
 |sp_defaultlanguage|La procédure sp_defaultlanguage a été rencontrée. Utilisez à la place ALTER LOGIN. Se produit une fois par compilation.|  
 |sp_denylogin|La procédure sp_denylogin a été rencontrée. Utilisez à la place ALTER LOGIN DISABLE. Se produit une fois par requête.|  
 |sp_depends|La procédure sp_depends a été rencontrée. Utilisez à la place sys.dm_sql_referencing_entities et sys.dm_sql_referenced_entities. Se produit une fois par requête.|  
-|sp_detach_db @keepfulltextindexfile|L'argument @keepfulltextindexfile a été rencontré dans une instruction sp_detach_db. N'utilisez pas cet argument.|  
+|sp_detach_db @keepfulltextindexfile|L’argument @keepfulltextindexfile a été rencontré dans une instruction sp_detach_db. N'utilisez pas cet argument.|  
 |sp_dropalias|La procédure sp_dropalias a été rencontrée. Remplacez les alias par une combinaison de comptes d'utilisateurs et de rôles de base de données. Utilisez sp_dropalias pour supprimer les alias dans les bases de données mises à niveau. Se produit une fois par compilation.|  
 |sp_dropapprole|La procédure sp_dropapprole a été rencontrée. Utilisez à la place DROP APPLICATION ROLE. Se produit une fois par requête.|  
 |sp_dropextendedproc|La procédure sp_dropextendedproc a été rencontrée. Utilisez à la place CLR. Se produit une fois par compilation.|  
@@ -264,10 +268,10 @@ Le tableau suivant décrit l’objet de performance **Fonctionnalités déconsei
 |sysusers|Des références à sysusers ont été rencontrées. Utilisez à la place sys.database_principals. Se produit une fois par compilation.|  
 |Indicateur de table sans WITH|Une instruction utilisant des indicateurs de table sans le mot clé WITH a été rencontrée. Modifiez les instructions de manière à inclure le mot clé WITH. Se produit une fois par compilation.|  
 |Option de table text in row|Des références à l'option de table 'text in row' ont été rencontrées. Utilisez à la place sp_tableoption 'large value types out of row'. Se produit une fois par requête.|  
-|TEXTPTR|Des références à la fonction TEXTPTR ont été rencontrées. Réécrivez les applications de manière à utiliser le type de données **varchar(max)** et à supprimer la syntaxe des types de données **text**, **ntext** et **image**. Se produit une fois par requête.|  
-|TEXTVALID|Des références à la fonction TEXTVALID ont été rencontrées. Réécrivez les applications de manière à utiliser le type de données **varchar(max)** et à supprimer la syntaxe des types de données **text**, **ntext** et **image**. Se produit une fois par requête.|  
+|TEXTPTR|Des références à la fonction TEXTPTR ont été rencontrées. Réécrivez les applications de manière à utiliser le type de données **varchar(max)** et à supprimer la syntaxe des types de données **text**, **ntext**et **image** . Se produit une fois par requête.|  
+|TEXTVALID|Des références à la fonction TEXTVALID ont été rencontrées. Réécrivez les applications de manière à utiliser le type de données **varchar(max)** et à supprimer la syntaxe des types de données **text**, **ntext**et **image** . Se produit une fois par requête.|  
 |TIMESTAMP|Nombre total des fois où le type de données **timestamp** déconseillé a été rencontré dans une instruction DDL. Utilisez à la place le type de données **rowversion** .|  
-|UPDATETEXT ou WRITETEXT|L'instruction UPDATETEXT ou WRITETEXT a été rencontrée. Réécrivez les applications de manière à utiliser le type de données **varchar(max)** et à supprimer la syntaxe des types de données **text**, **ntext** et **image**. Se produit une fois par requête.|  
+|UPDATETEXT ou WRITETEXT|L'instruction UPDATETEXT ou WRITETEXT a été rencontrée. Réécrivez les applications de manière à utiliser le type de données **varchar(max)** et à supprimer la syntaxe des types de données **text**, **ntext**et **image** . Se produit une fois par requête.|  
 |USER_ID|Des références à la fonction USER_ID ont été rencontrées. Utilisez à la place la fonction DATABASE_PRINCIPAL_ID. Se produit une fois par compilation.|  
 |Utilisation d'OLEDB pour les serveurs liés||  
 |Format de stockage vardecimal|Le format de stockage **vardecimal** a été rencontré. Utilisez à la place la compression de données.|  
@@ -277,13 +281,14 @@ Le tableau suivant décrit l’objet de performance **Fonctionnalités déconsei
 |xp_loginconfig|La procédure xp_loginconfig a été rencontrée. Utilisez à la place l'argument IsIntegratedSecurityOnly de SERVERPROPERTY. Se produit une fois par requête.|  
 |xp_revokelogin|La procédure xp_revokelogin a été rencontrée. Utilisez à la place ALTER LOGIN DISABLE ou DROP LOGIN. Se produit une fois par compilation.|  
   
-## Voir aussi  
- [Fonctionnalités du moteur de base de données déconseillées dans SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
- [Fonctionnalités de recherche en texte intégral déconseillées dans SQL Server 2016](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Fonctionnalités du moteur de base de données déconseillées dans SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
+ [Fonctionnalités de recherche en texte intégral déconseillées dans SQL Server 2016](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Classe d'événements Deprecation Announcement](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
  [Classe d'événements Deprecation Final Support](../../relational-databases/event-classes/deprecation-final-support-event-class.md)   
- [Fonctionnalités du moteur de base de données supprimées dans SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [Fonctionnalités de recherche en texte intégral abandonnées dans SQL Server 2016](../Topic/Discontinued%20Full-Text%20Search%20Features%20in%20SQL%20Server%202016.md)   
- [Utiliser des objets SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
+ [Fonctionnalités du moteur de base de données supprimées dans SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ [Fonctionnalités de recherche en texte intégral abandonnées dans SQL Server 2016](http://msdn.microsoft.com/library/70587b3c-cc77-4681-924d-a1df7cdf1517)   
+ [Utiliser des objets SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   
+

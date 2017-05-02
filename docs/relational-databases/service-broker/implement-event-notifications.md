@@ -1,33 +1,37 @@
 ---
-title: "Impl&#233;menter des notifications d&#39;&#233;v&#233;nements | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "notifications d’événements [SQL Server], service cible"
-  - "service cible [SQL Server]"
-  - "notifications d’événements [SQL Server], création"
+title: "Implémenter des notifications d’événements | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event notifications [SQL Server], target service
+- target service [SQL Server]
+- event notifications [SQL Server], creating
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eac9804c15bfcafbb5581875258d4499df130db9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Impl&#233;menter des notifications d&#39;&#233;v&#233;nements
+# <a name="implement-event-notifications"></a>Implémenter des notifications d'événements
   Pour implémenter une notification d'événement, vous devez créer un service cible destiné à recevoir les notifications d'événements avant de créer la notification d'événement.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSB](../../includes/sssb-md.md)] doit être configurée pour les notifications d'événements qui envoient des messages à un Service Broker résidant sur un serveur distant. La sécurité du dialogue doit être configurée manuellement conformément au modèle de sécurité totale.  
   
-## Création du service cible  
- Il n'est pas nécessaire que vous créiez un service d'initialisation de [!INCLUDE[ssSB](../../includes/sssb-md.md)], car [!INCLUDE[ssSB](../../includes/sssb-md.md)] inclut le type de message et le contrat de notifications d'événements suivants :  
+## <a name="creating-the-target-service"></a>Création du service cible  
+ Il n'est pas nécessaire que vous créiez un service d'initialisation de [!INCLUDE[ssSB](../../includes/sssb-md.md)], car [!INCLUDE[ssSB](../../includes/sssb-md.md)] inclut le type de message et le contrat de notifications d'événements suivants :  
   
 ```  
 http://schemas.microsoft.com/SQL/Notifications/PostEventNotification  
@@ -35,12 +39,12 @@ http://schemas.microsoft.com/SQL/Notifications/PostEventNotification
   
  Le service cible qui reçoit les notifications d'événements doit respecter ce contrat préexistant.  
   
- **Pour créer un service cible** :  
+ **Pour créer un service cible**:  
   
 1.  Créez une file d'attente pour recevoir les messages.  
   
     > [!NOTE]  
-    >  Cette file d'attente reçoit le type de message suivant : `http://schemas.microsoft.com/SQL/Notifications/QueryNotification`.  
+    >  Cette file d'attente reçoit le type de message suivant : `http://schemas.microsoft.com/SQL/Notifications/QueryNotification`.  
   
 2.  Créez un service dans la file d'attente qui fasse référence au contrat de notification d'événement.  
   
@@ -66,7 +70,7 @@ ADDRESS = 'LOCAL';
 GO  
 ```  
   
-## Création de la notification d'événement  
+## <a name="creating-the-event-notification"></a>Création de la notification d'événement  
  Les notifications d'événements sont créées à l'aide de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE EVENT NOTIFICATION et supprimées à l'aide de l'instruction DROP EVENT NOTIFICATION. Pour modifier une notification d'événement, vous devez la supprimer et la recréer.  
   
  L'exemple suivant crée la notification d'événement `CreateDatabaseNotification`. Cette notification envoie un message à propos de tout événement `CREATE_DATABASE` qui se produit sur le serveur au service `NotifyService` précédemment créé.  
@@ -95,7 +99,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
   
 -   [DROP EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-notification-transact-sql.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Obtenir des informations concernant les notifications d'événements](../../relational-databases/service-broker/get-information-about-event-notifications.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

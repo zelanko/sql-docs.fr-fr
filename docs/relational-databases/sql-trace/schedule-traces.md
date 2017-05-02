@@ -1,41 +1,45 @@
 ---
-title: "Planifier les traces | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "filtres [SQL Server], événements"
-  - "traces [SQL Server]"
-  - "traces [SQL Server], arrêt"
-  - "événements [SQL Server], filtres"
-  - "planification des traces [SQL Server]"
-  - "traces [SQL Server], planification"
-  - "arrêt de traces"
+title: Planifier les traces | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filters [SQL Server], events
+- traces [SQL Server]
+- traces [SQL Server], stopping
+- events [SQL Server], filters
+- scheduling traces [SQL Server]
+- traces [SQL Server], scheduling
+- stopping traces
 ms.assetid: 620b79db-924b-4502-8af3-39efcfca245d
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8bbb42de736fd7c330c87380dc7203198062f3da
+ms.lasthandoff: 04/11/2017
+
 ---
-# Planifier les traces
-  Vous pouvez planifier les traces de deux façons dans Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez :  
+# <a name="schedule-traces"></a>Planifier les traces
+  Vous pouvez planifier les traces de deux façons dans Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez :  
   
 -   Activer une heure d'arrêt de la trace.  
   
 -   Utiliser l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour planifier la trace.  
   
-## Spécification d'une heure d'arrêt  
+## <a name="specifying-a-stop-time"></a>Spécification d'une heure d'arrêt  
  Vous pouvez spécifier une heure d'arrêt de la trace si vous utilisez des procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)] ou si vous utilisez [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Vous devez définir l'heure d'arrêt lorsque vous configurez initialement la trace.  
   
-## Planification des traces à l'aide de l'Agent SQL Server  
- La meilleure façon de planifier les traces consiste à utiliser l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour démarrer la trace, puis à spécifier une heure d’arrêt de la trace à l’aide de la procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_trace_setstatus** ou du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+## <a name="scheduling-traces-by-using-sql-server-agent"></a>Planification des traces à l'aide de l'Agent SQL Server  
+ La meilleure façon de planifier les traces consiste à utiliser l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour démarrer la trace, puis à spécifier une heure d’arrêt de la trace à l’aide de la procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_trace_setstatus**ou du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
  **Pour définir un filtre d'heure de fin pour une trace**  
   
@@ -43,7 +47,7 @@ caps.handback.revision: 24
   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)  
   
-## Voir aussi  
- [Tâches d’administration automatisée &#40;SQL Server Agent&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Tâches d’administration automatisée &#40;SQL Server Agent&#41;](http://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)  
   
   

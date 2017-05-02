@@ -1,35 +1,39 @@
 ---
-title: "Configurer les propri&#233;t&#233;s g&#233;n&#233;rales de la gestion bas&#233;e sur des strat&#233;gies | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.PolicyManagement.f1"
-helpviewer_keywords: 
-  - "gestion basée sur des stratégies, configuration des propriétés"
+title: "Configurer les propriétés générales de la gestion basée sur des stratégies | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.PolicyManagement.f1
+helpviewer_keywords:
+- Policy-Based Management, configure properties
 ms.assetid: 6d1e0e37-29ea-408a-a055-384984d884be
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7f7103ab22a01f6dcb60c31d7ad7fdcc503746db
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurer les propri&#233;t&#233;s g&#233;n&#233;rales de la gestion bas&#233;e sur des strat&#233;gies
+# <a name="configure-the-general-properties-of-policy-based-management"></a>Configurer les propriétés générales de la gestion basée sur des stratégies
   Cette rubrique explique comment configurer les propriétés de la gestion basée sur des stratégies dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour configurer la gestion basée sur des stratégies à l'aide de :**  
+-   **Pour configurer la gestion basée sur des stratégies à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -42,15 +46,15 @@ caps.handback.revision: 8
 ####  <a name="Permissions"></a> Autorisations  
  Nécessite l'appartenance au rôle de base de données fixe PolicyAdministratorRole.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour configurer la Gestion basée sur des stratégies  
+#### <a name="to-configure-policy-based-management"></a>Pour configurer la Gestion basée sur des stratégies  
   
-1.  Dans l’**Explorateur d’objets**, cliquez sur le signe plus (+) pour développer le serveur sur lequel vous voulez configurer les propriétés de la gestion basée sur des stratégies.  
+1.  Dans l’ **Explorateur d’objets**, cliquez sur le signe plus (+) pour développer le serveur sur lequel vous voulez configurer les propriétés de la gestion basée sur des stratégies.  
   
 2.  Cliquez sur le signe plus (+) pour développer le dossier **Gestion** .  
   
-3.  Cliquez avec le bouton droit sur **Gestion de la stratégie**, puis sélectionnez **Propriétés**.  
+3.  Cliquez avec le bouton droit sur **Gestion de la stratégie** , puis sélectionnez **Propriétés**.  
   
      Les options suivantes sont disponibles dans la boîte de dialogue **Propriétés de gestion de la stratégie** .  
   
@@ -58,12 +62,12 @@ caps.handback.revision: 8
      Spécifie si la Gestion basée sur des stratégies est activée.  
   
      **HistoryRetentionInDays**  
-     Spécifie le nombre de jours pendant lesquels l'historique des évaluations de stratégies doit être conservé. Si cette valeur est 0 (valeur par défaut), l'historique n'est pas supprimé automatiquement.  
+     Spécifie le nombre de jours pendant lesquels l'historique des évaluations de stratégies doit être conservé. Si cette valeur est 0 (valeur par défaut), l'historique n'est pas supprimé automatiquement.  
   
      **LogOnSuccess**  
      Spécifie si la Gestion basée sur des stratégies consigne les évaluations de stratégies réussies.  
   
-    -   Lorsque cette valeur est False (valeur par défaut), seules les évaluations de stratégies qui ont échoué sont consignées.  
+    -   Lorsque cette valeur est False (valeur par défaut), seules les évaluations de stratégies qui ont échoué sont consignées.  
   
     -   Lorsque cette valeur est True, les réussites et les échecs des évaluations de stratégies sont enregistrés.  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 8
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour configurer la Gestion basée sur des stratégies  
+#### <a name="to-configure-policy-based-management"></a>Pour configurer la Gestion basée sur des stratégies  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

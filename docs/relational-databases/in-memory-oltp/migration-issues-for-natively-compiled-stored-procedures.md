@@ -1,23 +1,27 @@
 ---
-title: "Probl&#232;mes de migration pour les proc&#233;dures stock&#233;es compil&#233;es en mode natif | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Problèmes de migration pour les procédures stockées compilées en mode natif | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f43faad4-2182-4b43-a76a-0e3b405816d1
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bec2e3337ff41756a7a23ba63627d420056d11fe
+ms.lasthandoff: 04/11/2017
+
 ---
-# Probl&#232;mes de migration pour les proc&#233;dures stock&#233;es compil&#233;es en mode natif
+# <a name="migration-issues-for-natively-compiled-stored-procedures"></a>Problèmes de migration pour les procédures stockées compilées en mode natif
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Cette section présente plusieurs problèmes liés à la création de procédures stockées compilées en mode natif.  
@@ -36,7 +40,7 @@ caps.handback.revision: 12
   
 -   [Implémentation d'une jointure externe](../../relational-databases/in-memory-oltp/implementing-an-outer-join.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Migration vers OLTP en mémoire](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

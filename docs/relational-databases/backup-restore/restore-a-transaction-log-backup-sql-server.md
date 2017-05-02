@@ -1,44 +1,48 @@
 ---
-title: "Restaurer une sauvegarde de journal des transactions (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restoretlog.general.f1"
-  - "sql13.swb.restoretlog.options.f1"
-helpviewer_keywords: 
-  - "restaurer un journal"
-  - "sauvegarde des journaux des transactions [SQL Server], restauration"
-  - "sauvegardes de journal des transactions [SQL Server], restauration"
-  - "restauration des journaux des transactions [SQL Server], restauration des sauvegardes"
-  - "restaurations du journal des transactions [SQL Server], SQL Server Management Studio"
+title: Restaurer une sauvegarde du journal des transactions (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restoretlog.general.f1
+- sql13.swb.restoretlog.options.f1
+helpviewer_keywords:
+- restore log
+- backing up transaction logs [SQL Server], restoring
+- transaction log backups [SQL Server], restoring
+- restoring transaction logs [SQL Server], restoring backups
+- transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58f0b1ab65e812e778d630a2a95db8539e1b47eb
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaurer une sauvegarde de journal des transactions (SQL Server)
+# <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurer une sauvegarde de journal des transactions (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique explique comment restaurer une sauvegarde du journal des transactions dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Conditions préalables](#Prerequisites)  
   
      [Sécurité](#Security)  
   
--   **Pour restaurer une sauvegarde de journal des transactions à l'aide de :**  
+-   **Pour restaurer une sauvegarde de journal des transactions à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -61,27 +65,27 @@ caps.handback.revision: 36
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas quand RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
+ Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que lorsque la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas quand RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 > [!WARNING]  
 >  La procédure de restauration normale consiste à sélectionner les sauvegardes des journaux dans la boîte de dialogue **Restaurer la base de données** en même temps que les sauvegardes de données et les sauvegardes différentielles.  
   
-#### Pour restaurer une sauvegarde de journal des transactions  
+#### <a name="to-restore-a-transaction-log-backup"></a>Pour restaurer une sauvegarde de journal des transactions  
   
 1.  Après la connexion à l'instance appropriée du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], dans l'Explorateur d'objets, cliquez sur le nom du serveur pour développer son arborescence.  
   
 2.  Développez **Bases de données**puis, selon la base de données, sélectionnez une base de données utilisateur ou développez **Bases de données système** et sélectionnez une base de données système.  
   
-3.  Cliquez avec le bouton droit sur la base de données, pointez sur **Tâches**, pointez sur **Restaurer**, puis cliquez sur **Journal des transactions**, pour ouvrir la boîte de dialogue **Restaurer le journal des transactions**.  
+3.  Cliquez avec le bouton droit sur la base de données, pointez sur **Tâches**, pointez sur **Restaurer**, puis cliquez sur **Journal des transactions**, pour ouvrir la boîte de dialogue **Restaurer le journal des transactions** .  
   
     > [!NOTE]  
     >  Si **Journal des transactions** est grisé, dans un premier temps, vous devrez peut-être restaurer une sauvegarde complète ou différentielle. Utilisez la boîte de dialogue **Sauvegarde de la base de données** .  
   
 4.  Dans la zone de liste **Base de données** de la page **Général** , sélectionnez le nom d'une base de données. Seules les bases de données en état de restauration sont répertoriées.  
   
-5.  Pour préciser la source et l'emplacement des jeux de sauvegarde à restaurer, cliquez sur l'une des options suivantes :  
+5.  Pour préciser la source et l'emplacement des jeux de sauvegarde à restaurer, cliquez sur l'une des options suivantes :  
   
     -   **À partir de sauvegardes précédentes de la base de données**  
   
@@ -89,7 +93,7 @@ caps.handback.revision: 36
   
     -   **À partir d'un fichier ou d'une bande**  
   
-         Cliquez sur le bouton Parcourir (**...**) pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde**. Dans la zone **Type du média de sauvegarde** , sélectionnez l'un des types d'unités proposés. Pour sélectionner une ou plusieurs unités pour la zone **Support de sauvegarde** , cliquez sur **Ajouter**.  
+         Cliquez sur le bouton Parcourir (**...**) pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde** . Dans la zone **Type du média de sauvegarde** , sélectionnez l'un des types d'unités proposés. Pour sélectionner une ou plusieurs unités pour la zone **Support de sauvegarde** , cliquez sur **Ajouter**.  
   
          Après avoir ajouté les unités souhaitées à la zone de liste **Support de sauvegarde** , cliquez sur **OK** pour revenir à la page **Général** .  
   
@@ -99,9 +103,9 @@ caps.handback.revision: 36
   
     |En-tête|Valeur|  
     |------------|-----------|  
-    |**Restore**|Les cases à cocher indiquent les jeux de sauvegarde à restaurer.|  
+    |**Restaurer**|Les cases à cocher indiquent les jeux de sauvegarde à restaurer.|  
     |**Nom**|Nom du jeu de sauvegardes.|  
-    |**Composant**|Composant sauvegardé : **Base de données**, **Fichier** ou \<vide> (pour les journaux des transactions).|  
+    |**Composant**|Composant sauvegardé : **Base de données**, **Fichier** ou \<vide> (pour les journaux des transactions).|  
     |**Base de données**|Nom de la base de données impliquée dans la sauvegarde.|  
     |**Date de début**|Date et heure de début de la sauvegarde, d'après les paramètres régionaux du client.|  
     |**Date de fin**|Date et heure de fin de la sauvegarde, d'après les paramètres régionaux du client.|  
@@ -115,11 +119,11 @@ caps.handback.revision: 36
     |**Position**|Position du jeu de sauvegarde dans le volume|  
     |**Expiration**|Date et heure d'expiration du jeu de sauvegardes.|  
   
-7.  Sélectionnez l'une des options suivantes :  
+7.  Sélectionnez l'une des options suivantes :  
   
     -   **Limite dans le temps**  
   
-         Conservez la valeur par défaut (**Le plus récent possible**) ou sélectionnez une date et une heure données en cliquant sur le bouton d’exploration pour ouvrir la boîte de dialogue **Limite de restauration dans le temps**.  
+         Conservez la valeur par défaut (**Le plus récent possible**) ou sélectionnez une date et une heure données en cliquant sur le bouton d’exploration pour ouvrir la boîte de dialogue **Limite de restauration dans le temps** .  
   
     -   **Transaction marquée**  
   
@@ -133,7 +137,7 @@ caps.handback.revision: 36
         |------------|-----------|  
         |\<vide>|Affiche une case à cocher pour la sélection de la marque.|  
         |**Marque de transaction**|Nom de la transaction marquée spécifiée par l'utilisateur lors de la validation de la transaction.|  
-        |**Date**|Date et heure de la validation de la transaction. La date et l’heure sont affichées telles qu’enregistrées dans la table **msdbgmarkhistory**, et non dans l’option Date et heure de l’ordinateur client.|  
+        |**Date**|Date et heure de la validation de la transaction. La date et l’heure de la transaction sont affichées telles qu’enregistrées dans la table **msdbgmarkhistory** , et non dans l’option Date et heure de l’ordinateur client.|  
         |**Description**|Description de la transaction marquée spécifiée par l'utilisateur lorsque la transaction a été validée (le cas échéant).|  
         |**LSN**|Numéro séquentiel dans le journal de la transaction marquée.|  
         |**Base de données**|Nom de la base de données où la transaction marquée a été validée.|  
@@ -147,9 +151,9 @@ caps.handback.revision: 36
   
          Conserve les paramètres de réplication lors de la restauration d'une base de données publiée sur un serveur autre que celui sur lequel la base de données a été créée.  
   
-         Cette option est disponible uniquement avec l’option **Laisser la base de données opérationnelle en restaurant les transactions non validées** (décrite plus loin). Cela équivaut à la restauration d’une base de données avec l’option **RECOVERY**.  
+         Cette option est disponible uniquement avec l’option **Laisser la base de données opérationnelle en restaurant les transactions non validées** (décrite plus loin). Cela équivaut à la restauration d’une base de données avec l’option **RECOVERY** .  
   
-         L’activation de cette option revient à utiliser l’option **KEEP_REPLICATION** dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE**.  
+         L’activation de cette option revient à utiliser l’option **KEEP_REPLICATION** dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE** .  
   
     -   **Demander confirmation avant chaque restauration de sauvegarde**  
   
@@ -161,9 +165,9 @@ caps.handback.revision: 36
   
     -   **Restreindre l'accès à la base de données restaurée (WITH RESTRICTED_USER)**  
   
-         Limite l’accès à la base de données restaurée aux membres de **db_owner**, **dbcreator** ou **sysadmin**.  
+         Limite l’accès à la base de données restaurée aux membres de **db_owner**, **dbcreator**ou **sysadmin**.  
   
-         L’activation de cette option revient à utiliser l’option **RESTRICTED_USER** dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE**.  
+         L’activation de cette option revient à utiliser l’option **RESTRICTED_USER** dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE** .  
   
 10. Pour les options **État de récupération** , spécifiez l'état de la base de données après la restauration.  
   
@@ -195,13 +199,13 @@ caps.handback.revision: 36
 > [!IMPORTANT]  
 >  Nous vous recommandons de toujours préciser de façon claire WITH NORECOVERY ou WITH RECOVERY dans chaque instruction RESTORE pour éliminer toute ambiguïté. Cela est particulièrement important lors de l'écriture de scripts.  
   
-#### Pour restaurer une sauvegarde de journal des transactions  
+#### <a name="to-restore-a-transaction-log-backup"></a>Pour restaurer une sauvegarde de journal des transactions  
   
-1.  Exécutez l'instruction RESTORE LOG pour appliquer la sauvegarde du journal des transactions, en spécifiant :  
+1.  Exécutez l'instruction RESTORE LOG pour appliquer la sauvegarde du journal des transactions, en spécifiant :  
   
-    -   le nom de la base de données à laquelle sera appliqué le journal des transactions ;  
+    -   le nom de la base de données à laquelle sera appliqué le journal des transactions ;  
   
-    -   l'unité de sauvegarde à partir de laquelle sera restaurée la sauvegarde du journal des transactions ;  
+    -   l'unité de sauvegarde à partir de laquelle sera restaurée la sauvegarde du journal des transactions ;  
   
     -   la clause NORECOVERY.  
   
@@ -213,16 +217,16 @@ caps.handback.revision: 36
   
 2.  Répétez l'étape 1 pour chaque sauvegarde du journal des transactions à appliquer.  
   
-3.  Après avoir restauré la dernière sauvegarde de votre séquence de restauration, utilisez l'une des instructions ci-dessous :  
+3.  Après avoir restauré la dernière sauvegarde de votre séquence de restauration, utilisez l'une des instructions ci-dessous :  
   
-    -   Récupérer la base de données dans le cadre de la dernière instruction RESTORE LOG :  
+    -   Récupérer la base de données dans le cadre de la dernière instruction RESTORE LOG :  
   
         ```  
         RESTORE LOG <database_name> FROM <backup_device> WITH RECOVERY;  
         GO  
         ```  
   
-    -   attendre de récupérer la base de données à l'aide d'une instruction séparée RESTORE DATABASE :  
+    -   attendre de récupérer la base de données à l'aide d'une instruction séparée RESTORE DATABASE :  
   
         ```  
         RESTORE LOG <database_name> FROM <backup_device> WITH NORECOVERY;   
@@ -236,13 +240,13 @@ caps.handback.revision: 36
     >  Si vous créez une base de données miroir, omettez l'étape de récupération. Une base de données miroir doit rester dans l'état RESTORING.  
   
 ###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
- Par défaut, la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] utilise le mode de récupération simple. Les exemples suivants nécessitent la modification de la base de données pour utiliser le mode de restauration complète, comme suit :  
+ Par défaut, la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] utilise le mode de récupération simple. Les exemples suivants nécessitent la modification de la base de données pour utiliser le mode de restauration complète, comme suit :  
   
 ```tsql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
-#### A. Application d'une sauvegarde unique du journal des transactions  
+#### <a name="a-applying-a-single-transaction-log-backup"></a>A. Application d'une sauvegarde unique du journal des transactions  
  Dans cet exemple, nous commençons par restaurer la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] à l'aide d'une sauvegarde complète de base de données qui réside sur une unité de sauvegarde nommée `AdventureWorks2012_1`. Nous appliquons ensuite la première sauvegarde du journal des transactions qui réside sur une unité de sauvegarde nommée `AdventureWorks2012_log`. Enfin, nous récupérons la base de données.  
   
 ```tsql  
@@ -260,7 +264,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-#### B. Application de plusieurs sauvegardes du journal des transactions  
+#### <a name="b-applying-multiple-transaction-log-backups"></a>B. Application de plusieurs sauvegardes du journal des transactions  
  Dans cet exemple, nous commençons par restaurer la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] à l'aide d'une sauvegarde complète de base de données qui réside sur une unité de sauvegarde nommée `AdventureWorks2012_1`. Nous appliquons ensuite, successivement, les premières sauvegardes du journal des transactions qui résident sur une unité de sauvegarde nommée `AdventureWorks2012_log`. Enfin, nous récupérons la base de données.  
   
 ```tsql  
@@ -294,14 +298,14 @@ GO
   
 -   [Restaurer une sauvegarde de base de données à l’aide de SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
--   [Restaurer une base de données jusqu’au point d’échec en mode de récupération complète &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [Restaurer une base de données jusqu’au point d’échec en mode de récupération complète &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 -   [Restaurer une base de données jusqu’à une transaction marquée &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
-## Voir aussi  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Voir aussi  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
   
   

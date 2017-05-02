@@ -1,24 +1,28 @@
 ---
-title: "Bases de donn&#233;es SQL Server XTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Bases de données SQL Server 2016 XTP"
+title: "Bases de données SQL Server XTP | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server 2016 XTP Databases
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 caps.latest.revision: 3
-author: "dagiro"
-ms.author: "v-dagir"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: dagiro
+ms.author: v-dagir
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e2839d276956db1b82bf6b1f236ceae74b973477
+ms.lasthandoff: 04/11/2017
+
 ---
-# Bases de donn&#233;es SQL Server XTP
+# <a name="sql-server-xtp-databases"></a>Bases de données SQL Server XTP
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 l’objet de performances **Bases de données SQL Server XTP** fournit des compteurs spécifiques de base de données de performance fournit des compteurs spécifiques de base de données OLTP en mémoire.
@@ -26,7 +30,7 @@ l’objet de performances **Bases de données SQL Server XTP** fournit des compt
 > [!NOTE]
 >  Les compteurs de bases de données SQL Server XTP ne sont pas actuellement visibles à partir de sys.dm_os_performance_counters.  Les compteurs sont visibles depuis le [Moniteur système](../../relational-databases/performance/start-system-monitor-windows.md).
 
-Le tableau suivant décrit les compteurs **Bases de données SQL Server XTP**.
+Le tableau suivant décrit les compteurs **Bases de données SQL Server XTP** .
 
 |Compteur|Description| 
 |-------------|-----------------|  
@@ -64,5 +68,5 @@ Le tableau suivant décrit les compteurs **Bases de données SQL Server XTP**.
 |**Nombre maximal de pages de fin du cache**|Nombre maximal de pages allouées en fin de cache. Il s'agit d'un compteur de très bas niveau, non destiné au client.|
 
 
-## Voir aussi  
-[Compteurs de performances SQL Server XTP &#40;OLTP en mémoire&#41;](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)
+## <a name="see-also"></a>Voir aussi  
+[SQL Server XTP &#40;OLTP en mémoire&#41;, compteurs de performances](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)

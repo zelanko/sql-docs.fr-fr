@@ -1,27 +1,31 @@
 ---
-title: "Migrer vers une base de donn&#233;es partiellement &#224; relation contenant-contenu | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "base de données à relation contenant-contenu, migration vers"
+title: "Migrer vers une base de données partiellement à relation contenant-contenu | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- contained database, migrating to
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7d2228b3a1baf08376e1cb5ec862bf89f8a4e2d8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Migrer vers une base de donn&#233;es partiellement &#224; relation contenant-contenu
+# <a name="migrate-to-a-partially-contained-database"></a>Migrer vers une base de données partiellement à relation contenant-contenu
   Cette rubrique explique comment se préparer à passer au modèle de base de données partiellement à relation contenant-contenu, puis indique la procédure de migration.  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   [Préparation de la migration d'une base de données](#prepare)  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 17
 ##  <a name="enable"></a> Activer les bases de données à relation contenant-contenu  
  Les bases de données à relation contenant-contenu doivent être activées sur l'instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], avant que les bases de données à relation contenant-contenu puissent être créées.  
   
-### Activation de bases de données à relation contenant-contenu à l'aide de Transact-SQL  
+### <a name="enabling-contained-databases-using-transact-sql"></a>Activation de bases de données à relation contenant-contenu à l'aide de Transact-SQL  
  L'exemple suivant active des bases de données à relation contenant-contenu sur l'instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 ```tsql  
@@ -59,19 +63,19 @@ RECONFIGURE ;
 GO  
 ```  
   
-#### Activation de bases de données à relation contenant-contenu à l'aide de Management Studio  
+#### <a name="enabling-contained-databases-using-management-studio"></a>Activation de bases de données à relation contenant-contenu à l'aide de Management Studio  
  L'exemple suivant active des bases de données à relation contenant-contenu sur l'instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur le nom du serveur, puis sélectionnez **Propriétés**.  
   
-2.  Dans la page **Avancé**, dans la section **Relation contenant-contenu**, affectez à l’option **Activer les bases de données à relation contenant-contenu** la valeur **True**.  
+2.  Dans la page **Avancé** , dans la section **Relation contenant-contenu** , affectez à l’option **Activer les bases de données à relation contenant-contenu** la valeur **True**.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ##  <a name="convert"></a> Conversion d'une base de données au modèle partiellement à relation contenant-contenu  
- Une base de données est convertie en base de données à relation contenant-contenu en modifiant l’option **CONTAINMENT**.  
+ Une base de données est convertie en base de données à relation contenant-contenu en modifiant l’option **CONTAINMENT** .  
   
-### Conversion d'une base de données au modèle partiellement à relation contenant-contenu à l'aide de Transact-SQL  
+### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>Conversion d'une base de données au modèle partiellement à relation contenant-contenu à l'aide de Transact-SQL  
  L'exemple suivant convertit une base de données nommée `Accounting` en base de données partiellement à relation contenant-contenu.  
   
 ```tsql  
@@ -81,12 +85,12 @@ ALTER DATABASE [Accounting] SET CONTAINMENT = PARTIAL
 GO  
 ```  
   
-### Conversion d'une base de données au modèle partiellement à relation contenant-contenu à l'aide de Management Studio  
+### <a name="converting-a-database-to-partially-contained-using-management-studio"></a>Conversion d'une base de données au modèle partiellement à relation contenant-contenu à l'aide de Management Studio  
  L'exemple suivant convertit une base de données en base de données partiellement à relation contenant-contenu.  
   
 1.  Dans Explorateur d’objets, développez **Bases de données**, cliquez avec le bouton droit sur la base de données à convertir, puis sélectionnez **Propriétés**.  
   
-2.  Dans la page **Options**, modifiez l’option **Type de relation contenant-contenu** en **Partiel**.  
+2.  Dans la page **Options** , modifiez l’option **Type de relation contenant-contenu** en **Partiel**.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -116,8 +120,8 @@ CLOSE user_cursor ;
 DEALLOCATE user_cursor ;  
 ```  
   
-## Voir aussi  
- [Bases de données à relation contenant-contenu](../../relational-databases/databases/contained-databases.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Contained Databases](../../relational-databases/databases/contained-databases.md)   
  [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)   
  [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)  
   

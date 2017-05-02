@@ -1,30 +1,34 @@
 ---
-title: "D&#233;marrer ou arr&#234;ter un jeu d&#39;&#233;l&#233;ments de collecte | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "jeux d'éléments de collecte [SQL Server], arrêt"
-  - "jeux d'éléments de collecte [SQL Server], démarrage"
+title: "Démarrer ou arrêter un jeu d’éléments de collecte | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collection sets [SQL Server], stopping
+- collection sets [SQL Server], starting
 ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 91f96d4ac8b7403e0d214625925403950e386dc2
+ms.lasthandoff: 04/11/2017
+
 ---
-# D&#233;marrer ou arr&#234;ter un jeu d&#39;&#233;l&#233;ments de collecte
+# <a name="start-or-stop-a-collection-set"></a>Démarrer ou arrêter un jeu d'éléments de collecte
   Cette rubrique explique comment démarrer ou arrêter un jeu d'éléments de collecte dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
@@ -34,7 +38,7 @@ caps.handback.revision: 20
   
      [Sécurité](#Security)  
   
--   **Pour démarrer ou arrêter un jeu d'éléments de collecte, utilisez :**  
+-   **Pour démarrer ou arrêter un jeu d'éléments de collecte, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -48,22 +52,22 @@ caps.handback.revision: 20
   
 -   Contrairement aux procédures stockées standard, les procédures stockées du collecteur de données utilisent des paramètres de type strict qui ne prennent pas en charge la conversion automatique de type de données. Si ces paramètres ne sont pas appelés à l'aide des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée retourne une erreur.  
   
-###  <a name="Prerequisites"></a> Configuration requise  
+###  <a name="Prerequisites"></a> Conditions préalables  
   
--   L'Agent SQL Server doit être démarré.  
+-   L'Agent SQL Server doit être démarré.  
   
 ###  <a name="Recommendations"></a> Recommandations  
   
--   Pour obtenir des informations sur les jeux d’éléments de collecte, interrogez l’affichage catalogue[syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md).  
+-   Pour obtenir des informations sur les jeux d’éléments de collecte, interrogez l’affichage catalogue [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) .  
   
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Nécessite l’appartenance au rôle de base de données fixe **dc_operator**. Si le jeu d'éléments de collecte n'a pas de compte proxy, l'appartenance au rôle serveur fixe **sysadmin** est requise. Exemples  
+ Nécessite l’appartenance au rôle de base de données fixe **dc_operator** . Si le jeu d'éléments de collecte n'a pas de compte proxy, l'appartenance au rôle serveur fixe **sysadmin** est requise. Exemples  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour démarrer un jeu d'éléments de collecte  
+#### <a name="to-start-a-collection-set"></a>Pour démarrer un jeu d'éléments de collecte  
   
 1.  Dans l'Explorateur d'objets, développez le nœud **Gestion** et développez **Collecte de données**, puis **Jeux d'éléments de collecte de données système**.  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 20
   
      Une zone de message affiche les résultats de cette action et une flèche verte sur l'icône du jeu d'éléments de collecte indique que celui-ci a démarré.  
   
-#### Pour arrêter un jeu d'éléments de collecte  
+#### <a name="to-stop-a-collection-set"></a>Pour arrêter un jeu d'éléments de collecte  
   
 1.  Dans l'Explorateur d'objets, développez le nœud **Gestion** et développez **Collecte de données**, puis **Jeux d'éléments de collecte de données système**.  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 20
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour démarrer un jeu d'éléments de collecte  
+#### <a name="to-start-a-collection-set"></a>Pour démarrer un jeu d'éléments de collecte  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -95,7 +99,7 @@ GO
 EXEC sp_syscollector_start_collection_set @collection_set_id = 1;  
 ```  
   
-#### Pour arrêter un jeu d'éléments de collecte  
+#### <a name="to-stop-a-collection-set"></a>Pour arrêter un jeu d'éléments de collecte  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -109,7 +113,7 @@ GO
 EXEC sp_syscollector_stop_collection_set @collection_set_id = 1;  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vues du collecteur de données &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [Collecte de données](../../relational-databases/data-collection/data-collection.md)  
   

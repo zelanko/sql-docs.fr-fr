@@ -1,40 +1,44 @@
 ---
-title: "Pool de ressources du gouverneur de ressources | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gouverneur de ressources, pool de ressources"
-  - "pool de ressources [SQL Server], présentation"
-  - "pool de ressources [SQL Server]"
+title: Pool de ressources du gouverneur de ressources | Microsoft Docs
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, resource pool
+- resource pool [SQL Server], overview
+- resource pool [SQL Server]
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 10b74a185e59a6b2973ea17fb4c68b61e781953f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Pool de ressources du gouverneur de ressources
+# <a name="resource-governor-resource-pool"></a>Pool de ressources du gouverneur de ressources
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Dans le gouverneur de ressources [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , un pool de ressources représente un sous-ensemble des ressources physiques d'une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Le gouverneur de ressources vous permet de spécifier des limites sur la quantité d'UC, les E/S physiques et la mémoire que les demandes d'application entrantes peuvent utiliser avec le pool de ressources. Chaque pool de ressources peut contenir un ou plusieurs groupes de charges de travail. Lorsqu'une session est démarrée, le classifieur du gouverneur de ressources affecte la session à un groupe de charges de travail spécifique, et la session doit s'exécuter à l'aide des ressources attribuées au groupe de charges de travail.  
   
-## Concepts relatifs au pool de ressources  
- Un pool de ressources, ou pool, représente les ressources physiques du serveur. Vous pouvez envisager un pool comme une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] virtuelle dans une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un pool a deux parties. Une partie ne se chevauche pas avec les autres pools, ce qui permet de conserver un minimum de ressources. L'autre partie est partagée avec d'autres pools et prend en charge la consommation maximale de ressources possible. Les ressources de pool sont définies en spécifiant un ou plusieurs des paramètres suivants pour chaque ressource (UC, E/S physiques et mémoire) :  
+## <a name="resource-pool-concepts"></a>Concepts relatifs au pool de ressources  
+ Un pool de ressources, ou pool, représente les ressources physiques du serveur. Vous pouvez envisager un pool comme une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] virtuelle dans une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un pool a deux parties. Une partie ne se chevauche pas avec les autres pools, ce qui permet de conserver un minimum de ressources. L'autre partie est partagée avec d'autres pools et prend en charge la consommation maximale de ressources possible. Les ressources de pool sont définies en spécifiant un ou plusieurs des paramètres suivants pour chaque ressource (UC, E/S physiques et mémoire) :  
   
 -   **MIN_CPU_PERCENT et MAX_CPU_PERCENT**  
   
-     Ces paramètres correspondent aux valeurs minimale et maximale garanties de la bande passante moyenne du processeur pour toutes les demandes dans le pool de ressources en cas de contention du processeur. Vous pouvez utiliser ces paramètres afin de déterminer l'utilisation prédictible des ressources du processeur pour plusieurs charges de travail, en fonction des besoins de chaque charge de travail. Supposons, par exemple, que les services des ventes et marketing d'une entreprise partagent la même base de données. Le service des ventes présente une charge de travail gourmande en ressources du processeur, avec des requêtes de priorité élevée. Le service marketing présente également une charge de travail gourmande en ressources du processeur, mais avec des requêtes de priorité plus faible. En créant un pool de ressources distinct pour chaque service, vous pouvez affecter un pourcentage *minimal* d'utilisation de l'UC de 70 pour le pool de ressources des ventes et un pourcentage *maximal* d'utilisation de l'UC de 30 pour le pool de ressources marketing. Cela garantit que la charge de travail Ventes reçoit les ressources du processeur dont elle a besoin et que la charge de travail Marketing est isolée des demandes d'UC de la charge de travail Ventes. Notez que le pourcentage maximal d'utilisation de l'UC est un maximum opportuniste. S'il existe une capacité de processeur disponible, la charge de travail l'utilise jusqu'à 100 %. La valeur maximale s'applique uniquement en cas de contention des ressources du processeur. Dans cet exemple, si la charge de travail Ventes est désactivée, la charge de travail Marketing peut utiliser 100 % de l'UC, si nécessaire.  
+     Ces paramètres correspondent aux valeurs minimale et maximale garanties de la bande passante moyenne du processeur pour toutes les demandes dans le pool de ressources en cas de contention du processeur. Vous pouvez utiliser ces paramètres afin de déterminer l'utilisation prédictible des ressources du processeur pour plusieurs charges de travail, en fonction des besoins de chaque charge de travail. Supposons, par exemple, que les services des ventes et marketing d'une entreprise partagent la même base de données. Le service des ventes présente une charge de travail gourmande en ressources du processeur, avec des requêtes de priorité élevée. Le service marketing présente également une charge de travail gourmande en ressources du processeur, mais avec des requêtes de priorité plus faible. En créant un pool de ressources distinct pour chaque service, vous pouvez affecter un pourcentage *minimal* d'utilisation de l'UC de 70 pour le pool de ressources des ventes et un pourcentage *maximal* d'utilisation de l'UC de 30 pour le pool de ressources marketing. Cela garantit que la charge de travail Ventes reçoit les ressources du processeur dont elle a besoin et que la charge de travail Marketing est isolée des demandes d'UC de la charge de travail Ventes. Notez que le pourcentage maximal d'utilisation de l'UC est un maximum opportuniste. S'il existe une capacité de processeur disponible, la charge de travail l'utilise jusqu'à 100 %. La valeur maximale s'applique uniquement en cas de contention des ressources du processeur. Dans cet exemple, si la charge de travail Ventes est désactivée, la charge de travail Marketing peut utiliser 100 % de l'UC, si nécessaire.  
   
 -   **CAP_CPU_PERCENT**  
   
-     Ce paramètre définit une limite maximale inconditionnelle d'utilisation de la bande passante de l'UC pour toutes les demandes exécutées dans le pool de ressources. Les charges de travail associées au pool peuvent utiliser la capacité de l'UC au-delà de la valeur de MAX_CPU_PERCENT si elle est disponible, mais pas au-delà de la valeur de CAP_CPU_PERCENT. En reprenant l'exemple ci-dessus, supposons que le service marketing soit facturé en fonction de son utilisation des ressources. Il souhaite une facturation prédictible et ne veut pas payer pour plus de 30 % de l'UC. Pour garantir cette exigence, il suffit de définir CAP_CPU_PERCENT à 30 pour le pool de ressources marketing.  
+     Ce paramètre définit une limite maximale inconditionnelle d'utilisation de la bande passante de l'UC pour toutes les demandes exécutées dans le pool de ressources. Les charges de travail associées au pool peuvent utiliser la capacité de l'UC au-delà de la valeur de MAX_CPU_PERCENT si elle est disponible, mais pas au-delà de la valeur de CAP_CPU_PERCENT. En reprenant l'exemple ci-dessus, supposons que le service marketing soit facturé en fonction de son utilisation des ressources. Il souhaite une facturation prédictible et ne veut pas payer pour plus de 30 % de l'UC. Pour garantir cette exigence, il suffit de définir CAP_CPU_PERCENT à 30 pour le pool de ressources marketing.  
   
 -   **MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT**  
   
@@ -42,50 +46,50 @@ caps.handback.revision: 17
   
 -   **AFFINITY**  
   
-     Ce paramètre permet de définir l'affinité d'un pool de ressources en fonction d'un ou de plusieurs planificateurs ou nœuds NUMA pour un niveau d'isolation supérieur des ressources du processeur. Dans le scénario précédemment décrit, nous supposons que le service des ventes a besoin d'un environnement mieux isolé et souhaite disposer en permanence de 100 % d'un cœur d'UC. L'option AFFINITY permet de planifier les charges de travail Ventes et Marketing sur différentes UC. En supposant que la limite CAP_CPU_PERCENT est encore appliquée sur le pool marketing, la charge de travail Marketing continue à utiliser jusqu'à 30 % d'un cœur, tandis que la charge de travail Ventes utilise 100 % de l'autre cœur. Les charges de travail Ventes et Marketing s'exécutent sur deux ordinateurs isolés.  
+     Ce paramètre permet de définir l'affinité d'un pool de ressources en fonction d'un ou de plusieurs planificateurs ou nœuds NUMA pour un niveau d'isolation supérieur des ressources du processeur. Dans le scénario précédemment décrit, nous supposons que le service des ventes a besoin d'un environnement mieux isolé et souhaite disposer en permanence de 100 % d'un cœur d'UC. L'option AFFINITY permet de planifier les charges de travail Ventes et Marketing sur différentes UC. En supposant que la limite CAP_CPU_PERCENT est encore appliquée sur le pool marketing, la charge de travail Marketing continue à utiliser jusqu'à 30 % d'un cœur, tandis que la charge de travail Ventes utilise 100 % de l'autre cœur. Les charges de travail Ventes et Marketing s'exécutent sur deux ordinateurs isolés.  
   
 -   **MIN_IOPS_PER_VOLUME et MAX_IOPS_PER_VOLUME**  
   
-     Ces paramètres correspondent aux valeurs minimale et maximale d'opérations d'E/S physiques par seconde (IOPS) par volume disque pour un pool de ressources. Vous pouvez utiliser ces paramètres pour contrôler les entrées/sorties physiques pour les threads utilisateur d'un pool de ressources donné. Par exemple, le service des ventes génère plusieurs rapports de fin de mois par lots de grande taille. Les requêtes de ces lots peuvent générer des E/S susceptibles de saturer le volume disque et avoir un impact sur les performances d'autres charges de travail de priorité plus élevée dans la base de données. Pour isoler cette charge de travail, MIN_IOPS_PER_VOLUME est défini sur la valeur 20, tandis que MAX_IOPS_PER_VOLUME est défini sur la valeur 100 pour le pool de ressources du service des ventes, qui contrôle le niveau d'entrées/sorties qui est émis pour la charge de travail.  
+     Ces paramètres correspondent aux valeurs minimale et maximale d'opérations d'E/S physiques par seconde (IOPS) par volume disque pour un pool de ressources. Vous pouvez utiliser ces paramètres pour contrôler les entrées/sorties physiques pour les threads utilisateur d'un pool de ressources donné. Par exemple, le service des ventes génère plusieurs rapports de fin de mois par lots de grande taille. Les requêtes de ces lots peuvent générer des E/S susceptibles de saturer le volume disque et avoir un impact sur les performances d'autres charges de travail de priorité plus élevée dans la base de données. Pour isoler cette charge de travail, MIN_IOPS_PER_VOLUME est défini sur la valeur 20, tandis que MAX_IOPS_PER_VOLUME est défini sur la valeur 100 pour le pool de ressources du service des ventes, qui contrôle le niveau d'entrées/sorties qui est émis pour la charge de travail.  
   
- Lors de la configuration de l'UC ou de la mémoire, la somme des valeurs MIN pour l'ensemble des pools ne peut pas dépasser 100 pour cent des ressources de serveur. En outre, les valeurs MAX et CAP définies doivent être comprises entre MIN et 100 % inclus.  
+ Lors de la configuration de l'UC ou de la mémoire, la somme des valeurs MIN pour l'ensemble des pools ne peut pas dépasser 100 pour cent des ressources de serveur. En outre, les valeurs MAX et CAP définies doivent être comprises entre MIN et 100 % inclus.  
   
- Si un pool est défini avec une valeur MIN différente de zéro, la valeur MAX effective des autres pools est réajustée. La valeur minimale de la valeur MAX d'un pool et de la somme des valeurs MIN des autres pools est soustraite de 100 %.  
+ Si un pool est défini avec une valeur MIN différente de zéro, la valeur MAX effective des autres pools est réajustée. La valeur minimale de la valeur MAX d'un pool et de la somme des valeurs MIN des autres pools est soustraite de 100 %.  
   
- Le tableau suivant illustre quelques-uns des concepts précédents. Le tableau présente les paramètres définis pour le pool interne, le pool par défaut et deux pools définis par l'utilisateur. Les formules suivantes calculent le pourcentage MAX (% MAX) effectif et le pourcentage (%) partagé.  
+ Le tableau suivant illustre quelques-uns des concepts précédents. Le tableau présente les paramètres définis pour le pool interne, le pool par défaut et deux pools définis par l'utilisateur. Les formules suivantes calculent le pourcentage MAX (% MAX) effectif et le pourcentage (%) partagé.  
   
 -   Min(X,Y) représente la valeur plus petite de X et Y.  
   
--   Sum(X) représente la somme de la valeur X pour tous les pools.  
+-   Sum(X) représente la somme de la valeur X pour tous les pools.  
   
--   Total % partagé = 100 - sum(MIN %).  
+-   Total % partagé = 100 - sum(MIN %).  
   
--   % MAX effectif = min(X,Y).  
+-   % MAX effectif = min(X,Y).  
   
--   % partagé = % MAX effectif - % MIN.  
-  
-|Nom du pool|Paramètre % MIN|Paramètre % MAX|% MAX effectif calculé|% partagé calculé|Commentaire|  
-|---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
-|interne|0|100|100|0|Les valeurs % MAX effectif et % partagé ne sont pas applicables au pool interne.|  
-|par défaut|0|100|30|30|La valeur MAX effectif est calculée comme suit : min(100,100-(20+50)) = 30. Le % partagé est calculé comme suit : MAX effectif - MIN = 30.|  
-|Pool 1|20|100|50|30|La valeur MAX effectif est calculée comme suit : min(100,100-50) = 50. Le % partagé est calculé comme suit : MAX effectif - MIN = 30.|  
-|Pool 2|50|70|70|20|La valeur MAX effectif est calculée comme suit : min(70,100-20) = 70. Le % partagé est calculé comme suit : MAX effectif - MIN = 20.|  
-  
- Sur la base du tableau précédent donné en exemple, détaillons les ajustements qui sont effectués à la création d'un pool supplémentaire. Ce pool (Pool 3) a un paramètre % MIN égal à 5.  
+-   % partagé = % MAX effectif - % MIN.  
   
 |Nom du pool|Paramètre % MIN|Paramètre % MAX|% MAX effectif calculé|% partagé calculé|Commentaire|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
-|interne|0|100|100|0|Les valeurs % MAX effectif et % partagé ne sont pas applicables au pool interne.|  
-|par défaut|0|100|25|25|La valeur MAX effectif est calculée comme suit : min(100,100-(20+50+5)) = 25. Le % partagé est calculé comme suit : MAX effectif - MIN = 25.|  
-|Pool 1|20|100|45|25|La valeur MAX effectif est calculée comme suit : min(100,100-55) = 45. Le % partagé est calculé comme suit : MAX effectif - MIN = 25.|  
-|Pool 2|50|70|70|20|La valeur MAX effectif est calculée comme suit : min(70,100-25) = 70. Le % partagé est calculé comme suit : MAX effectif - MIN = 20.|  
-|Pool 3|5|100|30|25|La valeur MAX effectif est calculée comme suit : min(100,100-70) = 30. Le % partagé est calculé comme suit : MAX effectif - MIN = 25.|  
+|interne|0|100|100|0|Les valeurs % MAX effectif et % partagé ne sont pas applicables au pool interne.|  
+|par défaut|0|100|30|30|La valeur MAX effectif est calculée comme suit : min(100,100-(20+50)) = 30. Le % partagé est calculé comme suit : MAX effectif - MIN = 30.|  
+|Pool 1|20|100|50|30|La valeur MAX effectif est calculée comme suit : min(100,100-50) = 50. Le % partagé est calculé comme suit : MAX effectif - MIN = 30.|  
+|Pool 2|50|70|70|20|La valeur MAX effectif est calculée comme suit : min(70,100-20) = 70. Le % partagé est calculé comme suit : MAX effectif - MIN = 20.|  
+  
+ Sur la base du tableau précédent donné en exemple, détaillons les ajustements qui sont effectués à la création d'un pool supplémentaire. Ce pool (Pool 3) a un paramètre % MIN égal à 5.  
+  
+|Nom du pool|Paramètre % MIN|Paramètre % MAX|% MAX effectif calculé|% partagé calculé|Commentaire|  
+|---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
+|interne|0|100|100|0|Les valeurs % MAX effectif et % partagé ne sont pas applicables au pool interne.|  
+|par défaut|0|100|25|25|La valeur MAX effectif est calculée comme suit : min(100,100-(20+50+5)) = 25. Le % partagé est calculé comme suit : MAX effectif - MIN = 25.|  
+|Pool 1|20|100|45|25|La valeur MAX effectif est calculée comme suit : min(100,100-55) = 45. Le % partagé est calculé comme suit : MAX effectif - MIN = 25.|  
+|Pool 2|50|70|70|20|La valeur MAX effectif est calculée comme suit : min(70,100-25) = 70. Le % partagé est calculé comme suit : MAX effectif - MIN = 20.|  
+|Pool 3|5|100|30|25|La valeur MAX effectif est calculée comme suit : min(100,100-70) = 30. Le % partagé est calculé comme suit : MAX effectif - MIN = 25.|  
   
  La partie partagée du pool est utilisée pour indiquer la destination des ressources disponibles si des ressources sont disponibles. Toutefois, lorsque les ressources sont consommées, elles sont acheminées vers le pool spécifié et ne sont pas partagées. Cette procédure peut améliorer l'utilisation des ressources en l'absence de demandes dans un pool donné et elle permet de libérer les ressources configurées du pool pour d'autres pools.  
   
- Dans certains cas extrêmes, les pools peuvent être configurés comme ci-dessous :  
+ Dans certains cas extrêmes, les pools peuvent être configurés comme ci-dessous :  
   
--   Tous les pools sont définis avec des valeurs minimales qui représentent au total 100 pour cent des ressources de serveur. Dans ce cas, les valeurs maximales effectives sont égales aux valeurs minimales. Cela revient à diviser les ressources de serveur en portions qui ne se chevauchent pas, indépendamment des ressources consommées dans chaque pool.  
+-   Tous les pools sont définis avec des valeurs minimales qui représentent au total 100 pour cent des ressources de serveur. Dans ce cas, les valeurs maximales effectives sont égales aux valeurs minimales. Cela revient à diviser les ressources de serveur en portions qui ne se chevauchent pas, indépendamment des ressources consommées dans chaque pool.  
   
 -   Tous les pools ont des valeurs minimales nulles. Tous les pools sont en concurrence pour les ressources disponibles et leurs tailles finales sont basées sur la consommation des ressources dans chaque pool. D'autres facteurs tels que les stratégies jouent un rôle dans la définition de la taille finale du pool.  
   
@@ -113,7 +117,7 @@ caps.handback.revision: 17
   
  Les pools de ressources définis par l'utilisateur sont ceux que vous créez pour les charges de travail spécifiques dans votre environnement. Le gouverneur de ressources fournit des instructions DDL pour créer, modifier et supprimer des pools de ressources.  
   
-## Tâches du pool de ressources  
+## <a name="resource-pool-tasks"></a>Tâches du pool de ressources  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
@@ -121,7 +125,7 @@ caps.handback.revision: 17
 |Décrit comment modifier les paramètres du pool de ressources.|[Modifier les paramètres de pool de ressources](../../relational-databases/resource-governor/change-resource-pool-settings.md)|  
 |Décrit comment supprimer un pool de ressources.|[Supprimer un pool de ressources](../../relational-databases/resource-governor/delete-a-resource-pool.md)|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [gouverneur de ressources](../../relational-databases/resource-governor/resource-governor.md)   
  [Groupe de charge de travail du gouverneur de ressources](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
  [Fonction classifieur du gouverneur de ressources](../../relational-databases/resource-governor/resource-governor-classifier-function.md)   
@@ -129,3 +133,4 @@ caps.handback.revision: 17
  [Afficher les propriétés du gouverneur de ressources](../../relational-databases/resource-governor/view-resource-governor-properties.md)  
   
   
+

@@ -1,35 +1,39 @@
 ---
-title: "Sp&#233;cifier les param&#232;tres | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "paramètres [SQL Server], procédures stockées"
-  - "procédures stockées [SQL Server], paramètres"
-  - "paramètres de sortie [SQL Server]"
-  - "paramètres d'entrée [SQL Server]"
+title: "Spécifier les paramètres | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parameters [SQL Server], stored procedures
+- stored procedures [SQL Server], parameters
+- output parameters [SQL Server]
+- input parameters [SQL Server]
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9bd44a94f0025524ede2abf189f0dec6944090dc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sp&#233;cifier les param&#232;tres
+# <a name="specify-parameters"></a>Spécifier les paramètres
   En spécifiant les paramètres de la procédure, les programmes appelants peuvent passer des valeurs dans le corps de la procédure. Ces valeurs peuvent être utilisées à plusieurs fins pendant l'exécution de la procédure. Les paramètres de la procédure peuvent également retourner des valeurs au programme appelant si le paramètre est marqué comme paramètre OUTPUT.  
   
- Une procédure peut contenir jusqu'à 2100 paramètres ; chacun ayant un nom, un type de données et une direction. Éventuellement, les paramètres peuvent avoir des valeurs par défaut.  
+ Une procédure peut contenir jusqu'à 2100 paramètres ; chacun ayant un nom, un type de données et une direction. Éventuellement, les paramètres peuvent avoir des valeurs par défaut.  
   
  La section suivante fournit des informations sur la transmission des valeurs dans les paramètres et sur la façon dont chacun des attributs de paramètre est utilisé lors d'un appel de procédure.  
   
-## Transmission de valeurs dans les paramètres  
- Les valeurs des paramètres fournies avec un appel de procédure doivent être des constantes ou une variable ; un nom de fonction ne peut pas être utilisé comme valeur de paramètre. Les variables peuvent être des variables système ou des variables définies par l'utilisateur, telles que @@spid.  
+## <a name="passing-values-into-parameters"></a>Transmission de valeurs dans les paramètres  
+ Les valeurs des paramètres fournies avec un appel de procédure doivent être des constantes ou une variable ; un nom de fonction ne peut pas être utilisé comme valeur de paramètre. Les variables peuvent être des variables système ou des variables définies par l’utilisateur, telles que @@spid.  
   
  Les exemples suivants illustrent la transmission de valeurs de paramètres à la procédure `uspGetWhereUsedProductID`. Ils indiquent comment transmettre des paramètres sous forme de constantes et de variables. Ils décrivent également comment utiliser une variable pour transmettre la valeur d'une fonction.  
   
@@ -56,24 +60,24 @@ EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;
 GO  
 ```  
   
-## Spécification des noms de paramètres  
+## <a name="specifying-parameter-names"></a>Spécification des noms de paramètres  
  Lors de la création d'une procédure et de la déclaration d'un nom de paramètre, le nom doit commencer par un seul caractère @ et être unique dans l'étendue de la procédure.  
   
- En nommant explicitement les paramètres et en attribuant les valeurs appropriées à chaque paramètre dans un appel de procédure, il est possible de fournir les paramètres dans n'importe quel ordre. Par exemple, si la procédure **my_proc** attend trois paramètres nommés **@first**, **@second** et **@third**, les valeurs qui lui sont transmises peuvent être assignées aux noms de paramètres de la façon suivante : `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
+ En nommant explicitement les paramètres et en attribuant les valeurs appropriées à chaque paramètre dans un appel de procédure, il est possible de fournir les paramètres dans n'importe quel ordre. Par exemple, si la procédure **my_proc** attend trois paramètres nommés **@first**, **@second**et **@third**, les valeurs qui lui sont transmises peuvent être assignées aux noms de paramètres de la façon suivante : `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]  
 >  Si une valeur de paramètre est fournie sous la forme **@parameter =***value*, tous les paramètres suivants doivent être fournis de cette manière. Si les valeurs des paramètres ne sont pas transmises sous la forme **@parameter =***value*, elles doivent être fournies dans le même ordre (de gauche à droite) que les paramètres répertoriés dans l’instruction CREATE PROCEDURE.  
   
 > [!WARNING]  
->  Un paramètre transmis sous la forme **@parameter =***value*, mais mal orthographié, générera une erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et empêchera l’exécution de la procédure.  
+>  Un paramètre transmis sous la forme **@parameter =***value*, mais mal orthographié, génère une erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et empêche l’exécution de la procédure.  
   
-## Spécification des types de données de paramètre  
+## <a name="specifying-parameter-data-types"></a>Spécification des types de données de paramètre  
  Les paramètres doivent être définis avec un type de données lorsqu'ils sont déclarés dans une instruction CREATE PROCEDURE. Le type de données d'un paramètre détermine le type et la plage de valeurs admis pour le paramètre lorsque la procédure est appelée. Par exemple, si vous définissez un paramètre avec le type de données **tinyint** , seules les valeurs numériques comprises entre 0 et 255 sont acceptées lorsqu'elles sont passées à ce paramètre. Une erreur est renvoyée lorsqu'une procédure est exécutée avec une valeur incompatible avec le type de données.  
   
-## Spécification des valeurs de paramètres par défaut  
+## <a name="specifying-parameter-default-values"></a>Spécification des valeurs de paramètres par défaut  
  Un paramètre est considéré comme facultatif si une valeur par défaut est spécifiée lorsqu'il est déclaré. Il n'est pas nécessaire de fournir une valeur pour un paramètre optionnel dans un appel de procédure.  
   
- La valeur par défaut d'un paramètre est utilisée lorsque :  
+ La valeur par défaut d'un paramètre est utilisée lorsque :  
   
 -   Aucune valeur n'est spécifiée pour le paramètre dans l'appel de procédure.  
   
@@ -127,7 +131,7 @@ GO
   
  Bien que vous puissiez omettre des paramètres ayant des valeurs par défaut, la liste des paramètres peut seulement être tronquée. Par exemple, si une procédure a cinq paramètres, le quatrième et le cinquième peuvent être omis. Toutefois, le quatrième ne peut pas être ignoré tant que le cinquième est inclus, sauf si les paramètres sont fournis sous la forme **@parameter =***value*.  
   
-## Spécification de la direction du paramètre  
+## <a name="specifying-parameter-direction"></a>Spécification de la direction du paramètre  
  La direction d'un paramètre peut être une entrée (une valeur passée dans le corps de la procédure) ou une sortie (la procédure retourne une valeur au programme appelant). La valeur par défaut est un paramètre d'entrée.  
   
  Pour spécifier un paramètre de sortie, vous devez indiquer le mot clé OUTPUT dans la définition du paramètre contenue dans l'instruction CREATE PROCEDURE. La procédure retourne la valeur actuelle du paramètre de sortie au programme appelant lorsqu'elle se termine. Le programme appelant doit également utiliser le mot clé OUTPUT lorsqu'il exécute la procédure pour enregistrer la valeur du paramètre dans une variable, qu'il pourra ensuite utiliser.  
@@ -163,7 +167,7 @@ GO
   
 ```  
   
- Exécutez `usp_GetList` afin de retourner la liste des produits [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] (vélos) qui coûtent moins de 700 $. Les paramètres OUTPUT **@cost** et **@compareprices** sont utilisés en conjonction avec un langage de contrôle de flux afin de retourner un message dans la fenêtre **Messages**.  
+ Exécutez `usp_GetList` afin de retourner la liste des produits [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] (vélos) qui coûtent moins de 700 $. Les paramètres OUTPUT **@cost** et **@compareprices** sont utilisés en conjonction avec un langage de contrôle de flux afin de retourner un message dans la fenêtre **Messages** .  
   
 > [!NOTE]  
 >  La variable OUTPUT doit être définie pendant la création de la procédure et pendant l'utilisation de la variable. Le nom du paramètre et celui de la variable ne doivent pas nécessairement correspondre. En revanche, le type de données et la position du paramètre doivent correspondre (sauf si vous utilisez **@listprice=** *variable*).  
@@ -184,7 +188,7 @@ ELSE
   
 ```  
   
- Voici le jeu de résultats partiel :  
+ Voici le jeu de résultats partiel :  
   
 ```  
 Product                                            List Price  
@@ -201,7 +205,7 @@ Road-750 Black, 52                                 539.99
 These items can be purchased for less than $700.00.  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   

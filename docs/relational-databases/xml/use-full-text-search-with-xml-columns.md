@@ -1,39 +1,43 @@
 ---
-title: "Utiliser la recherche en texte int&#233;gral avec des colonnes XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "xml, colonnes [recherche en texte intégral]"
-  - "index [recherche en texte intégral]"
+title: "Utiliser la recherche en texte intégral avec des colonnes XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xml columns [full-text search]
+- indexes [full-text search]
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 41e91aaf7977fe44a268bccf71dd386d7c0b993a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utiliser la recherche en texte int&#233;gral avec des colonnes XML
-  Vous pouvez créer un index de texte intégral sur des colonnes XML de façon à indexer le contenu des valeurs XML tout en ignorant le balisage XML. Des balises d'éléments sont utilisées comme limites de jeton. Les éléments suivants sont indexés :  
+# <a name="use-full-text-search-with-xml-columns"></a>Utiliser la recherche en texte intégral avec des colonnes XML
+  Vous pouvez créer un index de texte intégral sur des colonnes XML de façon à indexer le contenu des valeurs XML tout en ignorant le balisage XML. Des balises d'éléments sont utilisées comme limites de jeton. Les éléments suivants sont indexés :  
   
 -   Contenu des éléments XML.  
   
--   Contenu des attributs XML de l'élément de premier niveau uniquement, à moins qu'il ne s'agisse de valeurs numériques.  
+-   Contenu des attributs XML de l'élément de premier niveau uniquement, à moins qu'il ne s'agisse de valeurs numériques.  
   
- Lorsque cela est possible, vous pouvez associer une recherche en texte intégral et un index XML. Pour cela, procédez comme suit :  
+ Lorsque cela est possible, vous pouvez associer une recherche en texte intégral et un index XML. Pour cela, procédez comme suit :  
   
 1.  Tout d'abord, filtrez les valeurs XML pertinentes à l'aide d'une recherche en texte intégral SQL.  
   
 2.  Ensuite, interrogez les valeurs XML pour lesquelles il existe un index XML sur la colonne XML.  
   
-## Exemple : association d'une recherche en texte intégral avec une requête XML  
- Une fois l'index de texte intégral créé sur la colonne XML, la requête suivante recherche une valeur XML contenant le mot « custom » dans le titre d'un livre :  
+## <a name="example-combining-full-text-search-with-xml-querying"></a>Exemple : association d'une recherche en texte intégral avec une requête XML  
+ Une fois l'index de texte intégral créé sur la colonne XML, la requête suivante recherche une valeur XML contenant le mot « custom » dans le titre d'un livre :  
   
 ```  
 SELECT *   
@@ -48,8 +52,8 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
   
  De plus, la recherche en texte intégral se sert de l’extraction de radical tandis que la fonction XQuery **contains()** attend une correspondance littérale. Cette différence est expliquée dans l'exemple suivant.  
   
-## Exemple : recherche en texte intégral sur des valeurs XML à l'aide de l'extraction de radical  
- La vérification XQuery **contains()** exécutée dans l’exemple précédent ne peut généralement pas être éliminée. Prenons par exemple la requête suivante :  
+## <a name="example-full-text-search-on-xml-values-using-stemming"></a>Exemple : recherche en texte intégral sur des valeurs XML à l'aide de l'extraction de radical  
+ La vérification XQuery **contains()** exécutée dans l’exemple précédent ne peut généralement pas être éliminée. Prenons par exemple la requête suivante :  
   
 ```  
 SELECT *   
@@ -57,11 +61,11 @@ FROM   T
 WHERE  CONTAINS(xCol,'run')   
 ```  
   
- Le mot « ran » du document correspond aux critères de recherche du fait de l'extraction de radical. De plus, le contexte de recherche n'est pas vérifié à l'aide de XQuery.  
+ Le mot « ran » du document correspond aux critères de recherche du fait de l'extraction de radical. De plus, le contexte de recherche n'est pas vérifié à l'aide de XQuery.  
   
  Lorsque le code XML est décomposé, à l'aide de AXSD, dans des colonnes relationnelles indexées en texte intégral, les requêtes XPath qui portent sur la vue XML ne lancent pas une recherche en texte intégral sur les tables sous-jacentes.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Index XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
   

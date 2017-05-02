@@ -1,29 +1,33 @@
 ---
-title: "Param&#232;tres de base de donn&#233;es secondaire | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.logshipping.settings.dest.f1"
+title: "Paramètres de base de données secondaire | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.logshipping.settings.dest.f1
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ec30a94c58a94d2afad050eab06ecc60432c7b1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Param&#232;tres de base de donn&#233;es secondaire
+# <a name="secondary-database-settings"></a>Paramètres de base de données secondaire
   Utilisez cette boîte de dialogue pour configurer et modifier les propriétés d'une base de données secondaire dans la configuration de la copie des journaux de transaction.  
   
  Pour obtenir des explications sur les concepts de copie des journaux de transaction, consultez [À propos de la copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-## Options  
+## <a name="options"></a>Options  
  **Instance du serveur secondaire**  
  Affiche le nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actuellement configurée comme serveur secondaire dans la configuration de la copie des journaux de transaction.  
   
@@ -34,7 +38,7 @@ caps.handback.revision: 32
  Se connecte à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurée comme serveur secondaire dans la configuration de la copie des journaux de transaction. Le compte utilisé pour se connecter doit être membre du rôle serveur fixe sysadmin sur l'instance de serveur secondaire.  
   
  **Onglet Initialiser**  
- Les options disponibles sont les suivantes :  
+ Les options disponibles sont les suivantes :  
   
  **Oui, générer une sauvegarde complète de la base de données primaire et la restaurer dans la base de données secondaire**  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] configurera la base de données secondaire en sauvegardant la base de données primaire et en la restaurant sur le serveur secondaire. Si vous avez spécifié le nom d'une nouvelle base de données dans la zone **Base de données secondaire** , la base de données sera créée dans le cadre de l'opération de restauration.  
@@ -61,7 +65,7 @@ caps.handback.revision: 32
  Indique que la base de données secondaire est déjà initialisée et prête à accepter les sauvegardes de journaux des transactions de la base de données primaire. Cette option n'est pas disponible si vous avez tapé le nom d'une nouvelle base de données dans la zone **Base de données secondaire** .  
   
  **Onglet Copier les fichiers**  
- Les options disponibles sont les suivantes :  
+ Les options disponibles sont les suivantes :  
   
  **Dossier de destination des fichiers copiés**  
  Tapez le chemin d'accès dans lequel les sauvegardes de journaux des transactions doivent être copiés en vue de la restauration de la base de données secondaire. Ce chemin est en général un chemin d'accès local situé sur le serveur secondaire. Si le dossier se trouve sur un autre serveur, vous devez saisir un chemin UNC vers ce dossier. Le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de l'instance de serveur secondaire doit disposer des autorisations d'accès en lecture sur ce dossier. Vous devez en outre accorder des autorisations d'accès en lecture et en écriture sur ce partage réseau aux comptes proxy sous lesquels seront exécutés les travaux de copie et de restauration sur les instances de serveur secondaire. Par défaut, il s'agit du compte de service SQL Server Agent de l'instance de serveur secondaire, mais un administrateur système (sysadmin) peut choisir d'autres comptes proxy pour ces travaux.  
@@ -82,7 +86,7 @@ caps.handback.revision: 32
  Interrompt le travail de copie de l'Agent SQL Server.  
   
  **Onglet Restaurer le journal des transactions**  
- Les options disponibles sont les suivantes :  
+ Les options disponibles sont les suivantes :  
   
  **Déconnecter les utilisateurs de la base de données lors de la restauration des sauvegardes**  
  Les utilisateurs sont automatiquement déconnectés de la base de données secondaire pendant que les sauvegardes du journal des transactions sont restaurées.  
@@ -114,7 +118,7 @@ caps.handback.revision: 32
  **Désactiver ce travail**  
  Interrompt les opérations de restauration dans la base de données secondaire.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Sauvegarde et restauration des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [À propos de la copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

@@ -1,28 +1,32 @@
 ---
-title: "Comparaison de la requ&#234;te FOR XML et de la requ&#234;te FOR XML imbriqu&#233;e | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML, requête"
-  - "requêtes [XML dans SQL Server], comparaison des types de requêtes"
+title: "Comparaison de la requête FOR XML et de la requête FOR XML imbriquée | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML query
+- queries [XML in SQL Server], comparing query types
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2e83d836d3cf5e736847c5ebbb1934e8cde5374a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Comparaison de la requ&#234;te FOR XML et de la requ&#234;te FOR XML imbriqu&#233;e
+# <a name="for-xml-query-compared-to-nested-for-xml-query"></a>Comparaison de la requête FOR XML et de la requête FOR XML imbriquée
   Cette rubrique compare une requête FOR XML d'un seul niveau à une requête FOR XML imbriquée. L'un des avantages liés à l'utilisation des requêtes FOR XML imbriquées est que vous pouvez spécifier une combinaison de données XML centrées sur l'attribut et centrées sur l'élément pour les résultats de requête. L'exemple suivant en offre une illustration.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  La requête `SELECT` suivante extrait de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] des informations sur les catégories et les sous-catégories de produits. La requête ne contient aucune clause FOR XML imbriquée.  
   
 ```  
@@ -39,7 +43,7 @@ FOR XML AUTO, TYPE
 GO  
 ```  
   
- Voici le résultat partiel :  
+ Voici le résultat partiel :  
   
 ```  
 <ProductCategory ProductCategoryID="1" CategoryName="Bike">  
@@ -50,7 +54,7 @@ GO
 ...  
 ```  
   
- Si vous spécifiez la directive `ELEMENTS` dans la requête, vous recevez un résultat centré sur l'élément, comme le montre le fragment de résultat suivant :  
+ Si vous spécifiez la directive `ELEMENTS` dans la requête, vous recevez un résultat centré sur l'élément, comme le montre le fragment de résultat suivant :  
   
 ```  
 <ProductCategory>  
@@ -66,7 +70,7 @@ GO
 </ProductCategory>  
 ```  
   
- Ensuite, supposons que vous souhaitez générer une hiérarchie XML qui combine des données XML centrées sur l'attribut et centrées sur l'élément, comme le montre le fragment suivant :  
+ Ensuite, supposons que vous souhaitez générer une hiérarchie XML qui combine des données XML centrées sur l'attribut et centrées sur l'élément, comme le montre le fragment suivant :  
   
 ```  
 <ProductCategory ProductCategoryID="1" CategoryName="Bike">  
@@ -117,11 +121,11 @@ FOR XML AUTO, TYPE
   
 -   La requête `FOR XML` interne extrait des informations sur les sous-catégories de produits. La directive `ELEMENTS` est ajoutée à la requête `FOR XML` interne pour générer des données XML centrées sur l'élément, qui sont ajoutées aux données XML créées par la requête externe. Par défaut, la requête externe génère des données XML centrées sur l'attribut.  
   
--   Dans la requête interne, la directive `TYPE` est spécifiée de manière que le résultat soit de type **xml**. Si vous ne spécifiez pas la directive `TYPE`, le résultat est de type **nvarchar(max)** et les données XML sont retournées sous la forme d’entités.  
+-   Dans la requête interne, la directive `TYPE` est spécifiée de manière que le résultat soit de type **xml** . Si vous ne spécifiez pas la directive `TYPE` , le résultat est de type **nvarchar(max)** et les données XML sont retournées sous la forme d’entités.  
   
--   La requête externe spécifie également la directive `TYPE`. Ainsi, le résultat de cette requête retourné au client est de type **xml**.  
+-   La requête externe spécifie également la directive `TYPE` . Ainsi, le résultat de cette requête retourné au client est de type **xml** .  
   
- Voici le résultat partiel :  
+ Voici le résultat partiel :  
   
 ```  
 <ProductCategory ProductCategoryID="1" CategoryName="Bike">  
@@ -135,7 +139,7 @@ FOR XML AUTO, TYPE
 </ProductCategory>  
 ```  
   
- La requête suivante est simplement une extension de la requête précédente. Elle montre la hiérarchie complète des produits stockés dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Notamment :  
+ La requête suivante est simplement une extension de la requête précédente. Elle montre la hiérarchie complète des produits stockés dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Notamment :  
   
 -   Les catégories de produits  
   
@@ -145,7 +149,7 @@ FOR XML AUTO, TYPE
   
 -   Les produits dans chaque modèle  
   
- La requête suivante peut s'avérer utile pour comprendre la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] :  
+ La requête suivante peut s'avérer utile pour comprendre la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] :  
   
 ```  
 SELECT ProductCategoryID, Name as CategoryName,  
@@ -178,7 +182,7 @@ ORDER BY ProductCategoryID
 FOR XML AUTO, TYPE  
 ```  
   
- Voici le résultat partiel :  
+ Voici le résultat partiel :  
   
 ```  
 <Production.ProductCategory ProductCategoryID="1" CategoryName="Bikes">  
@@ -199,7 +203,7 @@ FOR XML AUTO, TYPE
   
  Si vous supprimez la directive `ELEMENTS` de la requête `FOR XML` imbriquée qui génère les sous-catégories de produits, la totalité du résultat est centrée sur l'attribut. Vous pouvez ensuite écrire cette requête sans imbrication. L'ajout de la directive `ELEMENTS` aboutit à un document XML en partie centré sur l'attribut et en partie centré sur l'élément. Ce résultat ne peut pas être généré par une requête FOR XML d'un seul niveau.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser des requêtes FOR XML imbriquées](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

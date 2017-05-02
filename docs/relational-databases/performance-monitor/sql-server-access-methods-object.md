@@ -1,28 +1,32 @@
 ---
-title: "SQL Server - Objet Access Methods | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Access Methods (objet)"
-  - "SQLServer:Access Methods"
+title: SQL Server - Objet Access Methods | Microsoft Docs
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Access Methods object
+- SQLServer:Access Methods
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 19dcb59cbc63c0c956604fb5745f8446da067642
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server - Objet Access Methods
+# <a name="sql-server-access-methods-object"></a>SQL Server - Objet Access Methods
   L'objet **Access Methods** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des compteurs permettant de surveiller l'accès aux données logiques de la base de données. Les compteurs **Gestionnaire de tampons** permettent de surveiller l'accès physique aux pages de bases de données sur le disque. La surveillance des méthodes d'accès aux données de la base de données permet de déterminer s'il est possible d'améliorer les performances des requêtes en ajoutant ou en modifiant des index, en ajoutant ou en déplaçant des partitions, en ajoutant des fichiers ou des groupes de fichiers, en défragmentant des index ou en réécrivant des requêtes. Il est également possible d'utiliser les compteurs **Méthodes d'accès** pour surveiller le volume des données, les index ou l'espace libre dans la base de données. Ils indiquent ainsi le volume des données et leur fragmentation pour chaque instance du serveur. Une fragmentation excessive des index peut nuire aux performances.  
   
- Pour des informations détaillées sur le volume, la fragmentation et l'utilisation des données, utilisez les vues de gestion dynamique suivantes :  
+ Pour des informations détaillées sur le volume, la fragmentation et l'utilisation des données, utilisez les vues de gestion dynamique suivantes :  
   
 -   [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)  
   
@@ -85,11 +89,11 @@ caps.handback.revision: 36
 |**Utilisation du cookie de page feuille**|Nombre de fois où un cookie de page feuille a été utilisé pendant une recherche d'index depuis qu'aucune modification n'est intervenue sur la page feuille. Le cookie accélère la recherche d'index.|  
 |**Utilisation du cookie de page d'arborescence**|Nombre de fois où un cookie de page d'arborescence a été utilisé pendant une recherche d'index depuis qu'aucune modification n'est intervenue sur la page d'arborescence. Le cookie accélère la recherche d'index.|  
 |**Fichiers de travail créés/s**|Nombre de fichiers de travail créés par seconde. Par exemple, il est possible d'utiliser des fichiers de travail pour enregistrer des résultats temporaires de jointures et d'agrégats de hachage.|  
-|**Tables de travail créées/s**|Nombre de tables de travail créées par seconde. Par exemple, il est possible d'utiliser des tables de travail pour enregistrer des résultats temporaires de mise en attente de requêtes, de variables XML et de curseurs.|  
+|**Tables de travail créées/s**|Nombre de tables de travail créées par seconde. Par exemple, il est possible d'utiliser des tables de travail pour enregistrer des résultats temporaires de mise en attente de requêtes, de variables XML et de curseurs.|  
 |**Tables de travail à partir du cache de base**|À usage interne uniquement|  
-|**Taux de tables de travail à partir du cache**|Pourcentage de tables de travail créées lorsque les deux premières pages de la table de travail n'étaient pas allouées mais étaient immédiatement disponibles dans la mémoire cache de la table de travail. (Lorsqu'une table de travail est supprimée, deux pages peuvent rester allouées : elles sont placées dans la mémoire cache de la table de travail pour augmenter les performances).|  
+|**Taux de tables de travail à partir du cache**|Pourcentage de tables de travail créées lorsque les deux premières pages de la table de travail n'étaient pas allouées mais étaient immédiatement disponibles dans la mémoire cache de la table de travail. (Lorsqu'une table de travail est supprimée, deux pages peuvent rester allouées : elles sont placées dans la mémoire cache de la table de travail pour augmenter les performances).|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

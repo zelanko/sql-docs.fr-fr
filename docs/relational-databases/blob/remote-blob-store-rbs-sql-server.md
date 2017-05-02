@@ -1,28 +1,32 @@
 ---
-title: "Magasin d&#39;objets blob distants (RBS) (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "magasin d'objets blob distants (RBS) [SQL Server]"
-  - "RBS (magasin d'objets blob distants) [SQL Server]"
+title: "Magasin d’objets blob distants (RBS) (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Remote Blob Store (RBS) [SQL Server]
+- RBS (Remote Blob Store) [SQL Server]
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5dd24af4232914ff6b86e036827364f1cb8c16a1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Magasin d&#39;objets blob distants (RBS) (SQL Server)
+# <a name="remote-blob-store-rbs-sql-server"></a>Magasin d'objets blob distants (RBS) (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Le magasin d'objets blob distants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un composant additionnel facultatif qui permet aux administrateurs de base de données de stocker des objets blob dans des solutions de stockage de marchandises au lieu de les stocker directement sur le serveur de base de données principal.  
+  Le magasin d'objets blob distants[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un composant additionnel facultatif qui permet aux administrateurs de base de données de stocker des objets blob dans des solutions de stockage de marchandises au lieu de les stocker directement sur le serveur de base de données principal.  
   
  RBS est inclus dans le CD d'installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , mais n'est pas installé par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -61,18 +65,18 @@ caps.handback.revision: 19
 ### <a name="credential-store-symmetric-key"></a>Clé symétrique du magasin d'informations d'identification  
  Si un fournisseur demande l'installation et l'utilisation d'une clé secrète stockée dans le magasin d'informations d'identification, RBS utilise une clé symétrique pour chiffrer les clés secrètes du fournisseur qu’un client peut utiliser pour obtenir l'autorisation d’accès au magasin d'objets blob du fournisseur.  
   
--   RBS 2016 utilise une clé symétrique **AES_128**. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] n’autorise pas la création de nouvelles clés **TRIPLE_DES**, sauf pour des raisons de compatibilité descendante. Pour plus d’informations, consultez [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md).  
+-   RBS 2016 utilise une clé symétrique **AES_128** . [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] n’autorise pas la création de nouvelles clés **TRIPLE_DES**, sauf pour des raisons de compatibilité descendante. Pour plus d’informations, consultez [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md).  
   
--   RBS 2014 et les versions antérieures utilisent un magasin d’informations d’identification qui maintient le chiffrement des clés secrètes à l’aide de l’algorithme de clé symétrique **TRIPLE_DES**, obsolète. Si vous utilisez **TRIPLE_DES**[!INCLUDE[msCoName](../../includes/msconame-md.md)], nous vous recommandons d’améliorer votre sécurité en suivant les étapes décrites dans cette rubrique pour permuter votre clé vers une méthode de chiffrement plus forte.  
+-   RBS 2014 et les versions antérieures utilisent un magasin d’informations d’identification qui maintient le chiffrement des clés secrètes à l’aide de l’algorithme de clé symétrique **TRIPLE_DES**, obsolète. Si vous utilisez **TRIPLE_DES**[!INCLUDE[msCoName](../../includes/msconame-md.md)] , nous vous recommandons d’améliorer votre sécurité en suivant les étapes décrites dans cette rubrique pour permuter votre clé vers une méthode de chiffrement plus forte.  
   
  Pour déterminer les propriétés des clés symétriques du magasin d’informations d’identification RBS, vous pouvez exécuter l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante dans la base de données RBS :   
-`SELECT * FROM sys.symmetric_keys WHERE name = 'mssqlrbs_encryption_skey';`Si la sortie de cette instruction indique que **TRIPLE_DES** est toujours utilisé, vous devez permuter cette clé.  
+`SELECT * FROM sys.symmetric_keys WHERE name = 'mssqlrbs_encryption_skey';` Si la sortie de cette instruction indique que **TRIPLE_DES** est toujours utilisé, vous devez permuter cette clé.  
   
 ### <a name="rotating-the-symmetric-key"></a>Rotation de la clé symétrique  
  Lorsque vous utilisez RBS, la clé symétrique du magasin d'informations d'identification doit régulièrement faire l’objet d’une rotation. Il s'agit d’une meilleure pratique de sécurité courante permettant de suivre les stratégies de sécurité de l'organisation.  Pour effectuer la rotation de la clé symétrique du magasin d’informations d'identification RBS, il est possible d’utiliser le [script ci-dessous](#Key_rotation) dans la base de données RBS.  Vous pouvez également utiliser ce script pour migrer vers des propriétés de chiffrement plus fortes, notamment la longueur de l'algorithme ou de la clé. Sauvegardez votre base de données avant d’effectuer la rotation de la clé.  Le script comprend à la fin quelques étapes de vérification.  
 Si vos stratégies de sécurité nécessitent d’autres propriétés de clé (par exemple, la longueur de l’algorithme ou de la clé) que celles qui sont fournies, le script peut être utilisé comme modèle. Modifiez les propriétés de la clé à deux endroits : 1) la création de la clé temporaire 2) la création de la clé permanente.  
   
-##  <a name="a-namerbsresourcesa-rbs-resources"></a><a name="rbsresources"></a> Ressources RBS  
+##  <a name="rbsresources"></a> RBS resources  
   
  **Exemples RBS**  
  Les exemples de magasins d'objets blob distants (RBS) disponibles sur le site [CodePlex](http://go.microsoft.com/fwlink/?LinkId=210190) montrent comment développer une application RBS et comment développer et installer un fournisseur RBS personnalisé.  
@@ -80,7 +84,7 @@ Si vos stratégies de sécurité nécessitent d’autres propriétés de clé (p
  **Blog RBS**  
  Le [blog du magasin d'objets blob distants (RBS)](http://go.microsoft.com/fwlink/?LinkId=210315) fournit des informations supplémentaires qui vous aideront à mieux comprendre, déployer et gérer les magasins d'objets blob distants.  
   
-##  <a name="a-namekeyrotationa-key-rotation-script"></a><a name="Key_rotation"></a> Script de permutation des clés  
+##  <a name="Key_rotation"></a> Key rotation script  
  Cet exemple crée une procédure stockée nommée `sp_rotate_rbs_symmetric_credential_key` pour remplacer la clé symétrique du magasin d’informations d’identification RBS actuellement utilisée  
 par celle de votre choix.  Ce remplacement est préférable s’il existe une stratégie de sécurité qui exige   
 une permutation des clés régulière ou si des algorithmes spécifiques le précisent.  
@@ -232,3 +236,4 @@ SELECT * FROM sys.symmetric_keys WHERE name = 'mssqlrbs_encryption_skey';
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)  
   
   
+

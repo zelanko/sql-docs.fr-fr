@@ -1,30 +1,34 @@
 ---
-title: "Utiliser des requ&#234;tes FOR XML imbriqu&#233;es dans ASP.NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clause FOR XML, requêtes FOR XML imbriquées"
-  - "requêtes [XML dans SQL Server], ASP.NET et"
-  - "requêtes FOR XML imbriquées dans ASP.NET"
-  - "ASP.NET [SQL Server]"
+title: "Utiliser des requêtes FOR XML imbriquées dans ASP.NET | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, nested FOR XML queries
+- queries [XML in SQL Server], ASP.NET and
+- nested FOR XML queries in ASP.NET
+- ASP.NET [SQL Server]
 ms.assetid: 691ac7dd-afc5-4760-932c-2b1dcd9394ed
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3ecd3e1bd26780c54fa4ab24d48526f12398445b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utiliser des requ&#234;tes FOR XML imbriqu&#233;es dans ASP.NET
+# <a name="use-nested-for-xml-queries-in-aspnet"></a>Utiliser des requêtes FOR XML imbriquées dans ASP.NET
   Dans cet exemple, une application ASP.NET retourne des données XML à un navigateur en exécutant une procédure stockée dans SQL Server. La procédure stockée génère des données XML à l'aide de requêtes imbriquées. Une instruction SELECT similaire est présentée dans la rubrique [Génération de frères à l’aide d’une requête imbriquée en mode AUTO](../../relational-databases/xml/generate-siblings-with-a-nested-auto-mode-query.md). Cet exemple illustre une façon d'utiliser des requêtes FOR XML imbriquées pour générer des données XML centrées sur l'élément dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 CREATE PROC GetSalesOrderInfo AS  
@@ -52,7 +56,7 @@ FOR XML AUTO, TYPE
 GO  
 ```  
   
- Voici l'application .aspx. Elle exécute la procédure stockée et renvoie les données XML dans le navigateur :  
+ Voici l'application .aspx. Elle exécute la procédure stockée et renvoie les données XML dans le navigateur :  
   
 ```  
 <%@LANGUAGE=C# Debug=true %>  
@@ -83,15 +87,15 @@ using(System.Data.SqlClient.SqlCommand cmd = c.CreateCommand())
 %>  
 ```  
   
-##### Pour tester l'application  
+##### <a name="to-test-the-application"></a>Pour tester l'application  
   
-1.  Créez la procédure stockée dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+1.  Créez la procédure stockée dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 2.  Enregistrez l'application .aspx dans le répertoire c:\inetpub\wwwroot (GetSalesOrderInfo.aspx).  
   
 3.  Exécutez l'application ((http://server/GetSalesOrderInfo.aspx).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser des requêtes FOR XML imbriquées](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

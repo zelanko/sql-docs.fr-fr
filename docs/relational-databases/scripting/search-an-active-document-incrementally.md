@@ -1,37 +1,41 @@
 ---
-title: "Effectuer une recherche incr&#233;mentielle dans un document actif | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "recherches [SQL Server Management Studio], incrémentielles"
-  - "Éditeur de requête [SQL Server Management Studio], recherche incrémentielle"
-  - "recherches incrémentielles [SQL Server Management Studio]"
+title: "Effectuer une recherche incrémentielle dans un document actif | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- searches [SQL Server Management Studio], incremental
+- Query Editor [SQL Server Management Studio], incremental search
+- incremental searches [SQL Server Management Studio]
 ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b3d3c79129936f6764261ec3f0ac1e0d54daf03d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Effectuer une recherche incr&#233;mentielle dans un document actif
+# <a name="search-an-active-document-incrementally"></a>Effectuer une recherche incrémentielle dans un document actif
   Vous pouvez effectuer une recherche incrémentielle dans un document ou une fenêtre unique en entrant du texte. L'opération de recherche met en surbrillance le premier ensemble de caractères qui correspond aux caractères entrés pendant la recherche incrémentielle dans le document ou la fenêtre. La recherche incrémentielle recherche automatiquement l'ensemble du texte dans un document ou une fenêtre, à l'exception du texte caché.  
   
  Quand l’option **Respecter la casse** est activée, la recherche incrémentielle utilise les critères de votre recherche précédente. Par exemple, si vous avez effectué une recherche dans plusieurs fichiers à l’aide de la boîte de dialogue **Rechercher dans les fichiers** et que vous avez sélectionné l’option **Respecter la casse**, la prochaine recherche incrémentielle respecte la casse.  
   
-### Pour effectuer une recherche incrémentielle  
+### <a name="to-search-incrementally"></a>Pour effectuer une recherche incrémentielle  
   
 1.  Ouvrez le fichier ou la fenêtre dans laquelle vous souhaitez effectuer la recherche.  
   
-2.  Dans le menu **Edition**, pointez sur **Avancée**, puis cliquez sur **Recherche incrémentielle**.  
+2.  Dans le menu **Edition** , pointez sur **Avancée**, puis cliquez sur **Recherche incrémentielle**.  
   
-     L'icône du curseur se transforme en jumelles avec une flèche qui indique le sens de la recherche et la barre d'état affiche le texte « Recherche incrémentielle ».  
+     L'icône du curseur se transforme en jumelles avec une flèche qui indique le sens de la recherche et la barre d'état affiche le texte « Recherche incrémentielle ».  
   
 3.  Commencez à taper la chaîne de texte à rechercher.  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 24
 > [!NOTE]  
 >  Pour obtenir la liste complète des touches de raccourci clavier, consultez [Raccourcis clavier dans SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Recherche et remplacement](../../relational-databases/scripting/search-and-replace.md)   
  [Effectuer une recherche de façon interactive dans des documents](../../relational-databases/scripting/search-documents-interactively.md)   
  [Effectuer une recherche dans des documents à l'aide des listes de résultats](../../relational-databases/scripting/search-documents-using-results-lists.md)   

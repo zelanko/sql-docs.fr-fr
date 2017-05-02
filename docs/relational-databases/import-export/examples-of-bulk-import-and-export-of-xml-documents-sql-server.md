@@ -1,30 +1,34 @@
 ---
-title: "Exemples d&#39;importation et d&#39;exportation en bloc de documents XML (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "indicateurs de fin de champ [SQL Server]"
-  - "importation en bloc [SQL Server], formats de données"
-  - "indicateurs de fin de ligne [SQL Server]"
-  - "fonction OPENROWSET, chargement en masse XML"
-  - "indicateurs de fin [SQL Server]"
-  - "exportation en bloc [SQL Server], formats de données"
-  - "chargement en masse XML [SQL Server]"
+title: "Exemples d’importation et d’exportation en bloc de documents XML (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- field terminators [SQL Server]
+- bulk importing [SQL Server], data formats
+- row terminators [SQL Server]
+- OPENROWSET function, XML bulk load
+- terminators [SQL Server]
+- bulk exporting [SQL Server], data formats
+- XML bulk load [SQL Server]
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 caps.latest.revision: 65
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 17f350c10f32dbd230d7c372820178a3dde081d2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exemples d&#39;importation et d&#39;exportation en bloc de documents XML (SQL Server)
+# <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Exemples d'importation et d'exportation en bloc de documents XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
     
@@ -46,23 +50,23 @@ caps.handback.revision: 65
     - [Comment importer XML dans SQL Server avec le composant de chargement en masse XML.](https://support.microsoft.com/en-us/kb/316005)
      - [Collections de schémas XML (SQL Server)](https://msdn.microsoft.com/library/ms187856.aspx)
   
-## Exemples  
+## <a name="examples"></a>Exemples  
  Voici les exemples :  
   
--  [A. Importation en bloc de données XML sous forme de flux d'octets binaires](#binary_byte_stream)  
+-  [A. Importation en bloc de données XML sous forme de flux d’octets binaires](#binary_byte_stream)  
   
 -  [B. Importation en bloc de données XML dans une ligne existante](#existing_row)  
   
--  [C. Importation en bloc de données XML à partir d'un fichier contenant une DTD](#file_contains_dtd)  
+-  [C. Importation en bloc de données XML à partir d’un fichier contenant une DTD](#file_contains_dtd)  
   
-- [D. Spécification explicite de la marque de fin de champ à l'aide d'un fichier de format](#field_terminator_in_format_file)  
+- [D. Spécification explicite de la marque de fin de champ à l’aide d’un fichier de format](#field_terminator_in_format_file)  
   
 -  [E. Exportation en bloc de données XML](#bulk_export_xml_data)  
   
 ## <a name="binary_byte_stream"></a>Importation en bloc de données XML sous forme de flux d'octets binaires  
  Si vous importez en bloc des données XML à partir d'un fichier contenant la déclaration d'encodage à appliquer, spécifiez l'option SINGLE_BLOB dans la clause OPENROWSET(BULK…). Cette option permet à l’analyseur XML de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’importer les données conformément au schéma d’encodage spécifié dans la déclaration XML.  
   
-#### Exemple de table  
+#### <a name="sample-table"></a>Exemple de table  
  Pour tester l’exemple A ci-dessous, créez l’exemple de table `T`.  
   
 ```  
@@ -71,11 +75,11 @@ CREATE TABLE T (IntCol int, XmlCol xml);
 GO  
 ```  
   
-#### Fichier de données d'exemple  
+#### <a name="sample-data-file"></a>Fichier de données d'exemple  
  Avant de pouvoir exécuter l’exemple A, vous devez créer un fichier encodé en UTF-8 (`C:\SampleFolder\SampleData3.txt`) : ce dernier contient l’instance d’exemple suivante qui spécifie le schéma d’encodage `UTF-8` .  
   
 ```  
-<?xml version="1.0" encoding="UTF-8"?>  
+\<?xml version="1.0" encoding="UTF-8"?>  
 <Root>  
           <ProductDescription ProductModelID="5">  
              <Summary>Some Text</Summary>  
@@ -83,7 +87,7 @@ GO
 </Root>  
 ```  
   
-#### Exemple A  
+#### <a name="example-a"></a>Exemple A  
  Cet exemple utilise l'option `SINGLE_BLOB` dans une instruction `INSERT ... SELECT * FROM OPENROWSET(BULK...)` pour importer des données à partir d'un fichier nommé `SampleData3.txt` et insérer une instance XML dans la table de colonne unique, la table d'exemple `T`.  
   
 ```  
@@ -93,7 +97,7 @@ SELECT * FROM OPENROWSET(
    SINGLE_BLOB) AS x;  
 ```  
   
-#### Notes  
+#### <a name="remarks"></a>Notes  
  En utilisant SINGLE_BLOB dans ce cas, vous évitez toute discordance entre l'encodage du document XML (tel qu'il est spécifié par la déclaration d'encodage XML) et la page de codes de type chaîne inhérente au serveur.  
   
  Si vous utilisez les types de données NCLOB ou CLOB et que vous rencontrez un conflit de pages de codes ou d'encodage, effectuez l'une des opérations suivantes :  
@@ -112,7 +116,7 @@ SELECT * FROM OPENROWSET(
 > [!NOTE]  
 >  Pour exécuter cet exemple, vous devez d'abord terminer le script de test de l'exemple A. Cet exemple crée la table `tempdb.dbo.T` et importe des données en bloc à partir de `SampleData3.txt`.  
   
-#### Fichier de données d'exemple  
+#### <a name="sample-data-file"></a>Fichier de données d'exemple  
  L'exemple B utilise une version modifiée du fichier de données d'exemple `SampleData3.txt` à partir de l'exemple précédent. Pour exécuter cet exemple, modifiez le contenu de ce fichier comme suit :  
   
 ```  
@@ -123,7 +127,7 @@ SELECT * FROM OPENROWSET(
 </Root>  
 ```  
   
-#### Exemple B  
+#### <a name="example-b"></a>Exemple B  
   
 ```  
 -- Query before update shows initial state of XmlCol values.  
@@ -158,14 +162,14 @@ GO
   
  `INSERT ... SELECT CONVERT(…) FROM OPENROWSET(BULK...)`  
   
-#### Fichier de données d'exemple  
+#### <a name="sample-data-file"></a>Fichier de données d'exemple  
  Avant de pouvoir tester cet exemple d’importation en bloc, créez un fichier (`C:\temp\Dtdfile.xml`) qui contient l’instance d’exemple suivant :  
   
 ```  
 <!DOCTYPE DOC [<!ATTLIST elem1 attr1 CDATA "defVal1">]><elem1>January</elem1>  
 ```  
   
-#### Exemple de table  
+#### <a name="sample-table"></a>Exemple de table  
  L'exemple C utilise la table d'exemple `T1` créée par l'instruction `CREATE TABLE` suivante :  
   
 ```  
@@ -174,7 +178,7 @@ CREATE TABLE T1(XmlCol xml);
 GO  
 ```  
   
-#### Exemple C  
+#### <a name="example-c"></a>Exemple C  
  Cet exemple utilise `OPENROWSET(BULK...)` et spécifie l'option `CONVERT` dans la clause `SELECT` pour importer les données XML à partir du fichier `Dtdfile.xml` dans la table d'exemple `T1`.  
   
 ```  
@@ -183,30 +187,30 @@ INSERT T1
     OPENROWSET(Bulk 'c:\temp\Dtdfile.xml', SINGLE_BLOB) [rowsetresults];  
 ```  
   
- Une fois l'instruction `INSERT` exécutée, la DTD est supprimée du code XML, puis stockée dans la table `T1`.  
+ Une fois l'instruction `INSERT` exécutée, la DTD est supprimée du code XML, puis stockée dans la table `T1` .  
   
  [&#91;Haut&#93;](#top)  
   
 ## <a name="field_terminator_in_format_file"></a> Spécification explicite de la marque de fin de champ à l'aide d'un fichier de format  
  L'exemple suivant montre l'importation en bloc du document XML suivant, `Xmltable.dat`.  
   
-#### Fichier de données d'exemple  
+#### <a name="sample-data-file"></a>Fichier de données d'exemple  
  Le document dans le fichier `Xmltable.dat` contient deux valeurs XML, une pour chaque ligne. La première valeur XML est encodée en UTF-16, et la seconde en UTF-8.  
   
  Le contenu de ce fichier de données est présenté dans le vidage hexadécimal suivant :  
   
 ```  
-FF FE 3C 00 3F 00 78 00-6D 00 6C 00 20 00 76 00  *..<.?.x.m.l. .v.*  
+FF FE 3C 00 3F 00 78 00-6D 00 6C 00 20 00 76 00  *..\<.?.x.m.l. .v.*  
 65 00 72 00 73 00 69 00-6F 00 6E 00 3D 00 22 00  *e.r.s.i.o.n.=.".*  
 31 00 2E 00 30 00 22 00-20 00 65 00 6E 00 63 00  *1...0.". .e.n.c.*  
 6F 00 64 00 69 00 6E 00-67 00 3D 00 22 00 75 00  *o.d.i.n.g.=.".u.*  
 74 00 66 00 2D 00 31 00-36 00 22 00 3F 00 3E 00  *t.f.-.1.6.".?.>.*  
-3C 00 72 00 6F 00 6F 00-74 00 3E 00 A2 4F 9C 76  *<.r.o.o.t.>..O.v*  
+3C 00 72 00 6F 00 6F 00-74 00 3E 00 A2 4F 9C 76  *\<.r.o.o.t.>..O.v*  
 0C FA 77 E4 80 00 89 00-00 06 90 06 91 2E 9B 2E  *..w.............*  
 99 34 A2 34 86 00 83 02-92 20 7F 02 4E C5 E4 A3  *.4.4..... ..N...*  
-34 B2 B7 B3 B7 FE F8 FF-F8 00 3C 00 2F 00 72 00  *4.........<./.r.*  
+34 B2 B7 B3 B7 FE F8 FF-F8 00 3C 00 2F 00 72 00  *4.........\<./.r.*  
 6F 00 6F 00 74 00 3E 00-00 00 00 00 7A EF BB BF  *o.o.t.>.....z...*  
-3C 3F 78 6D 6C 20 76 65-72 73 69 6F 6E 3D 22 31  *<?xml version="1*  
+3C 3F 78 6D 6C 20 76 65-72 73 69 6F 6E 3D 22 31  *\<?xml version="1*  
 2E 30 22 20 65 6E 63 6F-64 69 6E 67 3D 22 75 74  *.0" encoding="ut*  
 66 2D 38 22 3F 3E 3C 72-6F 6F 74 3E E4 BE A2 E7  *f-8"?><root>....*  
 9A 9C EF A8 8C EE 91 B7-C2 80 C2 89 D8 80 DA 90  *................*  
@@ -216,7 +220,7 @@ B7 EF BA B7 EF BF B8 C3-B8 3C 2F 72 6F 6F 74 3E  *.........</root>*
 00 00 00 00 7A                                   *....z*  
 ```  
   
-#### Exemple de table  
+#### <a name="sample-table"></a>Exemple de table  
  Durant une importation ou une exportation en bloc d’un document XML, vous devez utiliser une [marque de fin de champ](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md) qu’il est impossible de trouver dans les documents ; par exemple, une série de quatre valeurs Null (`\0`) suivie de la lettre `z`: `\0\0\0\0z`.  
   
  Cet exemple illustre l'utilisation de cette marque de fin de champ pour la table d'exemple `xTable` . Pour créer cette table d'exemple, utilisez les instructions `CREATE TABLE` suivantes :  
@@ -227,7 +231,7 @@ CREATE TABLE xTable (xCol xml);
 GO  
 ```  
   
-#### Fichier de format d'exemple  
+#### <a name="sample-format-file"></a>Fichier de format d'exemple  
  Le délimiteur de fin de champ doit être spécifié dans le fichier de format. L'exemple D utilise un fichier de format non XML intitulé `Xmltable.fmt` qui contient le code suivant :  
   
 ```  
@@ -238,7 +242,7 @@ GO
   
  Vous pouvez utiliser ce fichier de format pour importer en bloc des documents XML dans la table `xTable` à l'aide d'une commande `bcp` ou d'une instruction `BULK INSERT` ou `INSERT ... SELECT * FROM OPENROWSET(BULK...)` .  
   
-#### Exemple D  
+#### <a name="example-d"></a>Exemple D  
  Cet exemple utilise le fichier de format `Xmltable.fmt` dans une instruction `BULK INSERT` pour importer le contenu d'un fichier de données XML intitulé `Xmltable.dat`.  
   
 ```  
@@ -261,7 +265,7 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'enregistre pas l'encodage XML lorsque les données XML sont conservées dans la base de données. Par conséquent, l'encodage original des champs XML n'est pas disponible lorsque les données XML sont exportées. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise l’encodage UTF-16 durant l’exportation de données XML.  
   
 
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [Clause SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-clause-transact-sql.md)   
  [Utilitaire bcp](../../tools/bcp-utility.md)   
@@ -270,3 +274,4 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)  
   
   
+

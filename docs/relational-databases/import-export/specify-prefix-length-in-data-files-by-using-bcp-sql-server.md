@@ -1,31 +1,35 @@
 ---
-title: "Sp&#233;cifier une longueur de pr&#233;fixe dans des fichiers de donn&#233;es &#224; l&#39;aide de bcp (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "utilitaire bcp [SQL Server], longueur de préfixe"
-  - "longueur de préfixe [SQL Server]"
-  - "longueurs [SQL Server], caractères de préfixe"
-  - "formats de données [SQL Server], longueur de préfixe"
+title: "Spécifier une longueur de préfixe dans des fichiers de données à l’aide de bcp (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 07/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bcp utility [SQL Server], prefix length
+- prefix length [SQL Server]
+- lengths [SQL Server], prefix characters
+- data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 62007ed26bf44480b40af09b40dbb8636de4a242
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sp&#233;cifier une longueur de pr&#233;fixe dans des fichiers de donn&#233;es &#224; l&#39;aide de bcp (SQL Server)
+# <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Spécifier une longueur de préfixe dans des fichiers de données à l'aide de bcp (SQL Server)
   Pour un stockage de fichier plus compact lors de l’exportation en bloc de données au format natif vers un fichier de données, la commande **bcp** ajoute devant chaque champ un ou plusieurs caractères indiquant la longueur du champ. Ces caractères portent le nom de *caractères de préfixe de longueur*.  
   
-## Demande de longueur de préfixe par la commande bcp  
- Si une commande **bcp** interactive contient l’option **in** ou **out** sans commutateur de fichier de format (**-f**) ou sans commutateur de format de données (**-n**, **-c**, **-w** ou **-N**), la commande demande la longueur de préfixe de chaque champ de données, comme suit :  
+## <a name="the-bcp-prompt-for-prefix-length"></a>Demande de longueur de préfixe par la commande bcp  
+ Si une commande **bcp** interactive contient l’option **in** ou **out** sans commutateur de fichier de format (**-f**) ou sans commutateur de format de données (**-n**, **-c**, **-w**ou **-N**), la commande demande la longueur de préfixe de chaque champ de données, comme suit :  
   
  `Enter prefix length of field <field_name> [<default>]:`  
   
@@ -34,18 +38,18 @@ caps.handback.revision: 30
 > [!NOTE]  
 >  Après avoir indiqué de façon interactive tous les champs d’une commande **bcp**, cette dernière vous demande de sauvegarder vos réponses dans un fichier de format autre que XML pour chacun des champs fournis. Pour plus d’informations sur les fichiers de format non-XML, consultez [Fichiers de format non-XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
-## Présentation de la longueur de préfixe  
+## <a name="overview-of-prefix-length"></a>Présentation de la longueur de préfixe  
  Pour stocker la longueur de préfixe d'un champ, vous avez besoin d'un nombre suffisant d'octets pour représenter la longueur maximale du champ. Le nombre d'octets requis dépend également du type de stockage de fichier, de la possibilité de valeurs Null d'une colonne et de ce que les données sont stockées dans le fichier de données au format natif ou au format caractère. Ainsi, un type de données **text** ou **image** nécessite quatre caractères de préfixe pour stocker la longueur du champ, alors qu'un type de données **varchar** n'en utilise que deux. Dans le fichier de données, ces caractères sont stockés au format de données binaire interne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  Lorsque vous utilisez le format natif, préférez les préfixes de longueur aux indicateurs de fin de champ. Les données au format natif peuvent entrer en conflit avec les indicateurs de fin, car ces fichiers sont au format de données binaire interne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Lorsque vous utilisez le format natif, préférez les préfixes de longueur aux indicateurs de fin de champ. Les données au format natif peuvent entrer en conflit avec les indicateurs de fin, car ces fichiers sont au format de données binaire interne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="PrefixLengthsExport"></a> Longueurs de préfixe pour l'exportation en bloc  
   
 > [!NOTE]  
 >  La valeur par défaut fournie lors de la demande de longueur de préfixe lorsque vous exportez un champ indique la longueur de champ la plus efficace pour le champ.  
   
- Les valeurs NULL sont représentées comme un champ vide. Pour indiquer que le champ est vide (représente NULL), le préfixe de champ contient la valeur -1, signifiant qu'il nécessite au moins 1 octet. Notez que si une colonne de table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise les valeurs NULL, la colonne requiert une longueur de préfixe de 1 ou plus, selon le type de stockage du fichier.  
+ Les valeurs NULL sont représentées comme un champ vide. Pour indiquer que le champ est vide (représente NULL), le préfixe de champ contient la valeur -1, signifiant qu'il nécessite au moins 1 octet. Notez que si une colonne de table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise les valeurs NULL, la colonne requiert une longueur de préfixe de 1 ou plus, selon le type de stockage du fichier.  
   
  Lorsque vous exportez des données en bloc et que vous les stockez dans un format avec des types de données natifs ou au format caractère, utilisez les longueurs de préfixe répertoriées dans le tableau suivant.  
   
@@ -55,7 +59,7 @@ caps.handback.revision: 30
 |**varchar**|2|2|2|2|  
 |**nchar**|2|2|2|2|  
 |**nvarchar**|2|2|2|2|  
-|**texte***|4|4|4|4|  
+|**text***|4|4|4|4|  
 |**ntext***|4|4|4|4|  
 |**binaire**|2|2|2|2|  
 |**varbinary**|2|2|2|2|  
@@ -81,7 +85,7 @@ caps.handback.revision: 30
 |**XML**|8|8|8|8|  
 |**sql_variant**|8|8|8|8|  
   
- \*Les types de données **ntext**, **text** et **image** seront supprimés dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ces types de données dans un nouveau développement. Prévoyez de modifier les applications qui les utilisent actuellement. Utilisez plutôt les types de données **nvarchar(max)**, **varchar(max)** et **varbinary(max)**.  
+ \*Les types de données **ntext**, **text**et **image** seront supprimés dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ces types de données dans un nouveau développement. Prévoyez de modifier les applications qui les utilisent actuellement. Utilisez plutôt les types de données **nvarchar(max)**, **varchar(max)**et **varbinary(max)** .  
   
 ##  <a name="PrefixLengthsImport"></a> Longueurs de préfixe pour l'importation en bloc  
  Lorsque vous importez des données en bloc, la longueur de préfixe correspond à la valeur spécifiée lors de la création du fichier de données. Si le fichier de données n’a pas été créé à l’aide d’une commande **bcp** , il n’existe probablement pas de caractères de longueur de préfixe. Dans ce cas, vous devez préciser la valeur 0 comme longueur de préfixe.  
@@ -89,7 +93,7 @@ caps.handback.revision: 30
 > [!NOTE]  
 >  Pour spécifier une longueur de préfixe dans un fichier de données qui n’a pas été créé à l’aide de **bcp**, utilisez les longueurs indiquées dans [Longueurs de préfixe pour l’exportation en bloc](#PrefixLengthsExport), plus haut dans cette rubrique.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utilitaire bcp](../../tools/bcp-utility.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Spécifier la longueur des champs au moyen de bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   
@@ -97,3 +101,4 @@ caps.handback.revision: 30
  [Spécifier le type de stockage de fichiers à l’aide de bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   
+

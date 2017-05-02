@@ -1,23 +1,27 @@
 ---
-title: "Compilation en mode natif de tables et de proc&#233;dures stock&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Compilation en mode natif de tables et de procédures stockées | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 caps.latest.revision: 23
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f2f56574dacf58e5c79e79e5540ce20ec83846a4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Compilation en mode natif de tables et de proc&#233;dures stock&#233;es
-  L'OLTP en mémoire introduit le concept de compilation native. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut compiler en mode natif des procédures stockées qui accèdent aux tables optimisées en mémoire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut également compiler en mode natif des tables optimisées en mémoire. La compilation native permet un accès aux données plus rapide et une exécution des requêtes plus efficace que le [!INCLUDE[tsql](../../includes/tsql-md.md)] (traditionnel) interprété. La compilation en mode natif de tables et de procédures stockées produit des DLL.  
+# <a name="native-compilation-of-tables-and-stored-procedures"></a>Compilation en mode natif de tables et de procédures stockées
+  L'OLTP en mémoire introduit le concept de compilation native. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut compiler en mode natif des procédures stockées qui accèdent aux tables optimisées en mémoire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut également compiler en mode natif des tables optimisées en mémoire. La compilation native permet un accès aux données plus rapide et une exécution des requêtes plus efficace que le [!INCLUDE[tsql](../../includes/tsql-md.md)](traditionnel) interprété. La compilation en mode natif de tables et de procédures stockées produit des DLL.  
   
  La compilation en mode natif des types de table optimisée en mémoire est également prise en charge. Pour plus d’informations, consultez [Table temporaire et variable de table plus rapides à l’aide de l’optimisation de la mémoire](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).  
   
@@ -28,8 +32,8 @@ caps.handback.revision: 23
 > [!NOTE]  
 >  Les tables optimisées en mémoire sont recompilées lors d'un redémarrage du serveur. Pour accélérer la récupération de la base de données, les procédures stockées compilées en mode natif ne sont pas recompilées lors d'un redémarrage du serveur. Elles sont compilées au moment de la première exécution. En conséquence de cette compilation différée, les procédures stockées compilées en mode natif n’apparaissent que lors de l’appel de [sys.dm_os_loaded_modules &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-loaded-modules-transact-sql.md) après la première exécution.  
   
-## Maintenance des DLL de l'OLTP en mémoire  
- La requête suivante affiche toutes les DLL de tables et de procédures stockées ayant été chargées en mémoire sur le serveur :  
+## <a name="maintenance-of-in-memory-oltp-dlls"></a>Maintenance des DLL de l'OLTP en mémoire  
+ La requête suivante affiche toutes les DLL de tables et de procédures stockées ayant été chargées en mémoire sur le serveur :  
   
 ```tsql  
 SELECT name, description FROM sys.dm_os_loaded_modules  
@@ -42,12 +46,12 @@ where description = 'XTP Native DLL'
 >  Si la compilation échoue ou est interrompue, certains fichiers générés ne sont pas supprimés. Ces fichiers sont intentionnellement conservés pour la prise en charge et sont supprimés lorsque la base de données est supprimée.  
   
 > [!NOTE]  
->  SQL Server compile les DLL de toutes les tables nécessaires à la récupération de la base de données. Si une table a été supprimée juste avant un redémarrage de la base de données, il peut y avoir des restes de la table dans les fichiers de point de contrôle ou dans le journal des transactions : la DLL de la table doit alors être recompilée lors du démarrage de la base de données. Après le redémarrage, la DLL est déchargée et les fichiers supprimés par le processus de nettoyage normal.  
+>  SQL Server compile les DLL de toutes les tables nécessaires à la récupération de la base de données. Si une table a été supprimée juste avant un redémarrage de la base de données, il peut y avoir des restes de la table dans les fichiers de point de contrôle ou dans le journal des transactions : la DLL de la table doit alors être recompilée lors du démarrage de la base de données. Après le redémarrage, la DLL est déchargée et les fichiers supprimés par le processus de nettoyage normal.  
   
-## Compilation native des tables  
+## <a name="native-compilation-of-tables"></a>Compilation native des tables  
  La création d’une table optimisée en mémoire à l’aide de l’instruction **CREATE TABLE** entraîne l’écriture des informations de la table dans les métadonnées de la base de données et la création des structures de table et d’index en mémoire. La table sera également compilée dans une DLL.  
   
- Consultez l'exemple de script suivant, qui crée une base de données et une table optimisée en mémoire :  
+ Consultez l'exemple de script suivant, qui crée une base de données et une table optimisée en mémoire :  
   
 ```tsql  
 use master  
@@ -76,12 +80,12 @@ go
   
  La DLL de table comprend les structures d'index et le format de ligne de la table. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise la DLL pour parcourir les index, extraire des lignes et enregistrer le contenu des lignes.  
   
-## Procédures stockées compilées en mode natif  
+## <a name="native-compilation-of-stored-procedures"></a>Procédures stockées compilées en mode natif  
  Les procédures stockées qui sont identifiées par NATIVE_COMPILATION sont compilées en mode natif. Cela signifie que toutes les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] de la procédure sont compilées en code natif en vue d'accélérer l'exécution de la logique métier critique pour les performances.  
   
  Pour plus d'informations sur les procédures stockées compilées en mode natif, consultez [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
- Prenons l'exemple de procédure stockée suivant, qui insère des lignes dans la table t1 de l'exemple précédent :  
+ Prenons l'exemple de procédure stockée suivant, qui insère des lignes dans la table t1 de l'exemple précédent :  
   
 ```tsql  
 create procedure dbo.native_sp  
@@ -108,18 +112,18 @@ go
   
  La DLL de native_sp peut interagir directement avec la DLL de t1, ainsi que le moteur de stockage de l'OLTP en mémoire, pour insérer les lignes le plus rapidement possible.  
   
- Le compilateur de l'OLTP en mémoire tire parti de l'optimiseur de requête pour créer un plan d'exécution efficace pour chacune des requêtes dans la procédure stockée. Notez que les procédures stockées compilées en mode natif ne sont pas automatiquement recompilées si les données de la table sont modifiées. Pour plus d’informations sur la gestion des statistiques et des procédures stockées avec l’OLTP en mémoire, consultez [Statistiques pour les tables mémoire optimisées](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md).  
+ Le compilateur de l'OLTP en mémoire tire parti de l'optimiseur de requête pour créer un plan d'exécution efficace pour chacune des requêtes dans la procédure stockée. Notez que les procédures stockées compilées en mode natif ne sont pas automatiquement recompilées si les données de la table sont modifiées. Pour plus d’informations sur la gestion des statistiques et des procédures stockées avec l’OLTP en mémoire, consultez [Statistiques pour les tables optimisées en mémoire](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md).  
   
-## Considérations sur la sécurité à prendre en compte pour une compilation native  
+## <a name="security-considerations-for-native-compilation"></a>Considérations sur la sécurité à prendre en compte pour une compilation native  
  La compilation native des tables et des procédures stockées utilise le compilateur de l'OLTP en mémoire. Ce compilateur génère des fichiers qui sont écrits sur le disque et chargés en mémoire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise les mécanismes suivants pour restreindre l'accès à ces fichiers.  
   
-### Compilateur natif  
+### <a name="native-compiler"></a>Compilateur natif  
  Le fichier exécutable du compilateur, ainsi que les fichiers binaires et les fichiers d'en-tête nécessaires pour la compilation native, sont installés dans le cadre de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le dossier MSSQL\Binn\Xtp. Ainsi, si l’instance par défaut est installée dans le dossier C:\Program Files, les fichiers du compilateur sont installés dans le dossier C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.MSSQLSERVER\MSSQL\Binn\Xtp.  
   
  Pour limiter l'accès au compilateur, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des listes de contrôle d'accès (ACL) qui permettent de restreindre l'accès aux fichiers binaires. Tous les fichiers binaires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont protégés contre la modification ou la falsification via des listes de contrôle d'accès. Les listes de contrôle d'accès du compilateur natif limitent également l'utilisation du compilateur ; seuls le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les administrateurs système disposent des autorisations de lecture et d'exécution des fichiers du compilateur natif.  
   
-### Fichiers générés par une compilation native  
- Les fichiers créés lorsqu'une table ou une procédure stockée est compilée sont les fichiers DLL et les fichiers intermédiaires, notamment les fichiers portant les extensions suivantes : .c, .obj, .xml et .pdb. Les fichiers générés sont enregistrés dans un sous-dossier du dossier de données par défaut. Le sous-dossier est appelé Xtp. Quand vous installez l’instance par défaut avec le dossier de données par défaut, les fichiers générés sont placés dans C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.MSSQLSERVER\MSSQL\DATA\Xtp.  
+### <a name="files-generated-by-a-native-compilation"></a>Fichiers générés par une compilation native  
+ Les fichiers créés lorsqu'une table ou une procédure stockée est compilée sont les fichiers DLL et les fichiers intermédiaires, notamment les fichiers portant les extensions suivantes : .c, .obj, .xml et .pdb. Les fichiers générés sont enregistrés dans un sous-dossier du dossier de données par défaut. Le sous-dossier est appelé Xtp. Quand vous installez l’instance par défaut avec le dossier de données par défaut, les fichiers générés sont placés dans C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.MSSQLSERVER\MSSQL\DATA\Xtp.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] empêche la falsification avec les DLL générées de trois manières :  
   
@@ -131,8 +135,8 @@ go
   
  Aucune intervention de l'utilisateur n'est nécessaire pour gérer ces fichiers. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée et supprime les fichiers, le cas échéant.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tables optimisées en mémoire](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
- [Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
+ [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

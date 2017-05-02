@@ -1,39 +1,34 @@
 ---
-title: "Fichiers de format pour l&#39;importation ou l&#39;exportation de donn&#233;es (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "exportation en bloc [SQL Server], fichiers de format"
-  - "importation en bloc [SQL Server], fichiers de format"
-  - "fichiers de format [SQL Server]"
+title: "Fichiers de format pour l’importation ou l’exportation de données (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bulk exporting [SQL Server], format files
+- bulk importing [SQL Server], format files
+- format files [SQL Server]
 ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: c7cb16d7e4aebb8844c175d98b73daaf8b34ede4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Fichiers de format pour l&#39;importation ou l&#39;exportation de donn&#233;es (SQL Server)
+# <a name="format-files-for-importing-or-exporting-data-sql-server"></a>Fichiers de format pour l'importation ou l'exportation de données (SQL Server)
   Lorsque vous importez en bloc des données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou exportez en bloc des données depuis une table, utilisez un *fichier de format* pour stocker toutes les informations de format nécessaires à l'exportation ou l'importation en bloc des données. Cela inclut les informations de format pour chaque champ dans un fichier de données relatif à cette table.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge deux types de fichiers de format : XML et non XML. Les fichiers de format XML et non-XML contiennent la description de chacun des champs d'un fichier de données, et les fichiers de format XML contiennent également des descriptions des colonnes de table correspondantes. En règle générale, les fichiers de format XML et non-XML sont interchangeables. Toutefois, nous recommandons d'utiliser la syntaxe XML pour les nouveaux fichiers de format, car elle offre plusieurs avantages par rapport aux fichiers de format non-XML. Pour plus d’informations, consultez [Fichiers de format XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
- **Dans cette rubrique :**  
-  
--   [Avantages des fichiers de format](#Benefits)  
-  
--   [Exemples de fichiers de format](#ExamplesOfFFs)  
-  
--   [Quand faut-il utiliser un format de fichier ?](#WhenFFrequired)  
-  
--   [Tâches associées](#RelatedTasks)  
   
 ##  <a name="Benefits"></a> Avantages des fichiers de format  
   
@@ -42,13 +37,13 @@ caps.handback.revision: 39
 -   Vous permet d'importer les données en bloc sans avoir à ajouter ou supprimer des données inutiles ou à réorganiser les données du fichier de données. Les fichiers de format sont particulièrement utiles lorsqu'il existe des différences entre les champs du fichier de données et les colonnes dans la table.  
   
 ##  <a name="ExamplesOfFFs"></a> Exemples de fichiers de format  
- Les exemples suivants illustrent la structure d'un fichier de format XML et non XML. Ces fichiers de format correspondent à la table `HumanResources.myTeam` dans l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Cette table contient quatre colonnes : `EmployeeID`, `Name`, `Title` et `ModifiedDate`.  
+ Les exemples suivants illustrent la structure d'un fichier de format XML et non XML. Ces fichiers de format correspondent à la table `HumanResources.myTeam` dans l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Cette table contient quatre colonnes : `EmployeeID`, `Name`, `Title` et `ModifiedDate`.  
   
 > [!NOTE]  
 >  Pour plus d’informations sur cette table et la manière de la créer, consultez [Exemple de table HumanResources.myTeam &#40;SQL Server&#41;](../../relational-databases/import-export/humanresources-myteam-sample-table-sql-server.md).  
   
-### A. Utilisation d'un fichier de format non-XML  
- Le fichier de format non XML suivant utilise le format de données natif [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la table `HumanResources.myTeam`. Ce fichier de format a été créé à l'aide de la commande `bcp` suivante.  
+### <a name="a-using-a-non-xml-format-file"></a>A. Utilisation d'un fichier de format non-XML  
+ Le fichier de format non XML suivant utilise le format de données natif [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la table `HumanResources.myTeam` . Ce fichier de format a été créé à l'aide de la commande `bcp` suivante.  
   
 ```  
 bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Fmt -n -T   
@@ -62,16 +57,15 @@ The contents of this format file are as follows: 9.0
   
  Pour plus d’informations, consultez [Fichiers de format non-XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
- [&#91;Haut&#93;](#Top)  
   
-### B. Utilisation d'un fichier de format XML  
+### <a name="b-using-an-xml-format-file"></a>B. Utilisation d'un fichier de format XML  
  Le fichier de format XML suivant utilise le format de données natif [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la table `HumanResources.myTeam` . Ce fichier de format a été créé à l'aide de la commande `bcp` suivante.  
   
 ```  
 bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T   
 ```  
   
- Le fichier de format contient :  
+ Le fichier de format contient :  
   
 ```  
  <?xml version="1.0"?>  
@@ -93,18 +87,17 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
  Pour plus d’informations, consultez [Fichiers de format XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
- [&#91;Haut&#93;](#Top)  
   
-##  <a name="WhenFFrequired"></a> Quand faut-il utiliser un format de fichier ?  
+##  <a name="WhenFFrequired"></a> Quand faut-il utiliser un format de fichier ?  
  Une instruction INSERT ... SELECT * FROM OPENROWSET(BULK...) nécessite toujours un fichier de format.  
   
 -   Pour **bcp** ou BULK INSERT, dans les cas simples, l’utilisation d’un fichier de format est facultative et rarement nécessaire. Toutefois, pour les importations en bloc complexes, un fichier de format est souvent nécessaire.  
   
- Des fichiers de format sont nécessaires dans les cas suivants :  
+ Des fichiers de format sont nécessaires dans les cas suivants :  
   
 -   Le même fichier de données est utilisé comme source pour plusieurs tables possédant des schémas différents.  
   
--   Le fichier de données contient un nombre de champs différent du nombre de colonnes dans la table cible. Par exemple :  
+-   Le fichier de données contient un nombre de champs différent du nombre de colonnes dans la table cible. Par exemple :  
   
     -   La table cible contient au moins une colonne pour laquelle une valeur par défaut est définie ou une valeur NULL est autorisée.  
   
@@ -117,9 +110,8 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 -   Les caractères de fin ou les longueurs de préfixes sont différents dans les colonnes du fichier de données.  
   
 > [!NOTE]  
->  S’il n’existe pas de fichier de format et si une commande **bcp** définit un commutateur de format de données (**-n**, **-c**, **-w** ou **-N**) ou si une opération BULK INSERT définit l’option DATAFILETYPE, le format de données défini est utilisé comme méthode par défaut pour interpréter les champs du fichier de données.  
+>  S’il n’existe pas de fichier de format et si une commande **bcp** définit un commutateur de format de données (**-n**, **-c**, **-w**ou **-N**) ou si une opération BULK INSERT définit l’option DATAFILETYPE, le format de données défini est utilisé comme méthode par défaut pour interpréter les champs du fichier de données.  
   
- [&#91;Haut&#93;](#Top)  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   
@@ -133,9 +125,8 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
 -   [Utiliser un fichier de format pour mapper les colonnes d’une table aux champs d’un fichier de données &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
- [&#91;Haut&#93;](#Top)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fichiers de format non-XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   
  [Fichiers de format XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)   
  [Formats de données pour l’importation ou l’exportation en bloc &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)  

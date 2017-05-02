@@ -1,34 +1,38 @@
 ---
-title: "Activer ou d&#233;sactiver la collecte de donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "collecteur de données [SQL Server], désactivation"
-  - "collecteur de données [SQL Server], activation"
+title: "Activer ou désactiver la collecte de données | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data collector [SQL Server], disabling
+- data collector [SQL Server], enabling
 ms.assetid: 0137971b-fb48-4a3e-822a-3df2b9bb09d7
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a69e9cee1b62ec953b3be3c984cc712a3f0e55d2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Activer ou d&#233;sactiver la collecte de donn&#233;es
+# <a name="enable-or-disable-data-collection"></a>Activer ou désactiver la collecte de données
   Cette rubrique explique comment activer ou désactiver la collecte de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour activer ou désactiver la collecte de données, utilisez :**  
+-   **Pour activer ou désactiver la collecte de données, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -41,15 +45,15 @@ caps.handback.revision: 18
 ####  <a name="Permissions"></a> Autorisations  
  Nécessite l’appartenance au rôle de base de données fixe **dc_admin** ou **dc_operator** (avec l’autorisation EXECUTE) pour exécuter cette procédure.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour activer le collecteur de données  
+#### <a name="to-enable-the-data-collector"></a>Pour activer le collecteur de données  
   
 1.  Dans l'Explorateur d'objets, développez le nœud **Gestion** .  
   
 2.  Cliquez avec le bouton droit sur **Collecte de données**, puis cliquez sur **Activer la collecte de données**.  
   
-#### Pour désactiver le collecteur de données  
+#### <a name="to-disable-the-data-collector"></a>Pour désactiver le collecteur de données  
   
 1.  Dans l'Explorateur d'objets, développez le nœud **Gestion** .  
   
@@ -57,7 +61,7 @@ caps.handback.revision: 18
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour activer le collecteur de données  
+#### <a name="to-enable-the-data-collector"></a>Pour activer le collecteur de données  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -71,7 +75,7 @@ GO
 EXEC dbo.sp_syscollector_enable_collector ;  
 ```  
   
-#### Pour désactiver le collecteur de données  
+#### <a name="to-disable-the-data-collector"></a>Pour désactiver le collecteur de données  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -85,7 +89,7 @@ GO
 EXEC dbo.sp_syscollector_disable_collector;  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Collecte de données](../../relational-databases/data-collection/data-collection.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

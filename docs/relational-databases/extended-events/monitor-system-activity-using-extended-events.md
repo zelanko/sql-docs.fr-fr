@@ -1,33 +1,37 @@
 ---
-title: "Surveiller l&#39;activit&#233; syst&#232;me &#224; l’aide d’&#233;v&#233;nements &#233;tendus | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "xe"
-  - "événements étendus [SQL Server], surveillance de l’activité du système"
+title: "Surveiller l’activité système à l’aide d’événements étendus | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xe
+- extended events [SQL Server], monitoring system activity
 ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b586a05981139acd687aaf712f01665f1650ac59
+ms.lasthandoff: 04/11/2017
+
 ---
-# Surveiller l&#39;activit&#233; syst&#232;me &#224; l’aide d’&#233;v&#233;nements &#233;tendus
+# <a name="monitor-system-activity-using-extended-events"></a>Surveiller l'activité système à l’aide d’événements étendus
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Cette procédure illustre l’utilisation des événements étendus avec le suivi d'événements pour Windows (ETW) pour surveiller l’activité système. Elle indique également comment utiliser les instructions CREATE EVENT SESSION, ALTER EVENT SESSION et DROP EVENT SESSION.  
   
  L’utilisation de l'éditeur de requête de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est nécessaire pour effectuer la procédure suivante. Cette dernière nécessite également l'utilisation de l'invite de commandes pour exécuter des commandes ETW.  
   
-### Pour surveiller l'activité système à l’aide d’événements étendus  
+### <a name="to-monitor-system-activity-using-extended-events"></a>Pour surveiller l'activité système à l’aide d’événements étendus  
   
 1.  Dans l’éditeur de requêtes, émettez les instructions suivantes afin de créer une session d'événement et d’y ajouter deux événements. Ces événements, checkpoint_begin et checkpoint_end, se déclenchent au début et à la fin d'un point de contrôle de base de données.  
   
@@ -93,10 +97,10 @@ caps.handback.revision: 20
     go  
     ```  
   
-7.  À l'invite de commandes, émettez les commandes suivantes pour afficher les données ETW.  
+7.  À l'invite de commandes, émettez les commandes suivantes pour afficher les données ETW.  
   
     > [!NOTE]  
-    >  Pour obtenir de l’aide sur la commande **tracerpt**, entrez `tracerpt /?` à l’invite de commandes.  
+    >  Pour obtenir de l’aide sur la commande **tracerpt** , entrez `tracerpt /?`à l’invite de commandes.  
   
     ```  
     logman query -ets --- List the ETW sessions. This is optional.  
@@ -117,12 +121,12 @@ caps.handback.revision: 20
     go  
     ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   
  [Affichages catalogue des événements étendus &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Vues de gestion dynamique des Événements étendus](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
- [Cibles des Événements étendus SQL Server](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)  
+ [Cibles des Événements étendus SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

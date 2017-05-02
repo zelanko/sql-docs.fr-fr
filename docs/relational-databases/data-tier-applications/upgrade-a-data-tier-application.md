@@ -1,47 +1,51 @@
 ---
-title: "Mettre &#224; niveau une application de la couche Donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.upgradedacwizard.summary.f1"
-  - "sql13.swb.upgradedacwizard.reviewplan.f1"
-  - "sql13.swb.upgradedacwizard.upgradedac.f1"
-  - "sql13.swb.upgradedacwizard.selectpackage.f1"
-  - "sql13.swb.upgradedacwizard.reviewpolicy.f1"
-  - "sql13.swb.upgradedacwizard.selectoptions.f1"
-  - "sql13.swb.upgradedacwizard.checkdrift.f1"
-  - "sql13.swb.upgradedacwizard.introduction.f1"
-helpviewer_keywords: 
-  - "mise à niveau d'une DAC"
-  - "application de la couche Données [SQL Server], mise à niveau"
-  - "assistant [DAC], mise à niveau"
-  - "procédure [DAC], mise à niveau"
+title: "Mettre à niveau une application de la couche Données | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.upgradedacwizard.summary.f1
+- sql13.swb.upgradedacwizard.reviewplan.f1
+- sql13.swb.upgradedacwizard.upgradedac.f1
+- sql13.swb.upgradedacwizard.selectpackage.f1
+- sql13.swb.upgradedacwizard.reviewpolicy.f1
+- sql13.swb.upgradedacwizard.selectoptions.f1
+- sql13.swb.upgradedacwizard.checkdrift.f1
+- sql13.swb.upgradedacwizard.introduction.f1
+helpviewer_keywords:
+- upgrade DAC
+- data-tier application [SQL Server], upgrade
+- wizard [DAC], upgrade
+- How to [DAC], upgrade
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7989f6c7fa8ff85ceb5cb5ed06d989343edb46a2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Mettre &#224; niveau une application de la couche Donn&#233;es
+# <a name="upgrade-a-data-tier-application"></a>Mettre à niveau une application de la couche Données
   Utilisez l'Assistant Mise à niveau de l'application de la couche Données ou bien un script Windows PowerShell pour modifier le schéma et les propriétés d'une application de la couche Données (DAC) actuellement déployée pour qu'ils correspondent à ceux définis dans la nouvelle version de la DAC.  
   
--   **Avant de commencer :**  [Choix des options de mise à niveau de la DAC](#ChoseDACUpgOptions), [Limitations et restrictions](#LimitationsRestrictions), [Conditions préalables](#Prerequisites), [Sécurité](#Security), [Autorisations](#Permissions)  
+-   **Before you begin:**  [Choosing DAC Upgrade Options](#ChoseDACUpgOptions), [Limitations and Restrictions](#LimitationsRestrictions), [Prerequisites](#Prerequisites), [Security](#Security), [Permissions](#Permissions)  
   
--   **Pour mettre à niveau une DAC en utilisant :**  [L’Assistant Mise à niveau de l’application de la couche Données](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
+-   **To upgrade a DAC, using:**  [The Upgrade Data-tier Application Wizard](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  La mise à niveau d'une DAC est un processus sur place qui modifie le schéma de la base de données existante de manière à ce qu'il corresponde au schéma défini dans une nouvelle version de la DAC. La nouvelle version de la DAC est fournie dans un fichier de package DAC. Pour plus d’informations sur la création d’un package DAC, consultez [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md).  
   
 ###  <a name="ChoseDACUpgOptions"></a> Choix des options de mise à niveau de la DAC  
- Il existe quatre options de mise à niveau dans le cadre d'une mise à niveau sur place :  
+ Il existe quatre options de mise à niveau dans le cadre d'une mise à niveau sur place :  
   
 -   **Ignorer les pertes de données** - Si sa valeur est **True**, la mise à niveau est effectuée, même si certaines opérations mènent à une perte des données. Si sa valeur est **False**, ces opérations mettent fin à la mise à niveau. Par exemple, si l’une des tables de la base de données actuelle n’est pas présente dans le schéma de la nouvelle DAC, la table est supprimée si la valeur **True** est spécifiée. Le paramètre par défaut est **True**.  
   
@@ -52,7 +56,7 @@ caps.handback.revision: 35
 -   **Ignorer la validation de la stratégie** - Si la valeur est **True**, la stratégie de sélection du serveur de DAC n’est pas évaluée. Si la valeur est **False**, la stratégie est évaluée et la mise à niveau s’arrête en cas d’erreur de validation. Le paramètre par défaut est **False**.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitations et restrictions  
- Les mises à niveau d'une DAC ne peuvent être effectuées que dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ou dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou version ultérieure.  
+ Les mises à niveau d'une DAC ne peuvent être effectuées que dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou version ultérieure.  
   
 ###  <a name="Prerequisites"></a> Conditions préalables  
  Par mesure de prudence, il est recommandé d'effectuer une sauvegarde complète de la base de données avant de la mettre à niveau. Si une erreur se produit lors d'une mise à niveau et que toutes ses modifications ne peuvent pas être restaurées, vous devrez peut-être restaurer la sauvegarde.  
@@ -70,7 +74,7 @@ caps.handback.revision: 35
  Vérifiez que le journal des transactions contient suffisamment d'espace pour enregistrer toutes les modifications.  
   
 ###  <a name="Security"></a> Sécurité  
- Pour améliorer la sécurité, les connexions d'authentification SQL Server sont stockées dans un package DAC sans mot de passe. Lorsque le package est déployé ou mis à niveau, la connexion est créée en tant que connexion désactivée avec un mot de passe généré. Pour activer les connexions, connectez-vous à l'aide d'une connexion qui possède l'autorisation ALTER ANY LOGIN et utilisez ALTER LOGIN pour activer la connexion et affecter un nouveau mot de passe pouvant être communiqué à l'utilisateur. Cela n'est pas nécessaire pour les connexions d'authentification Windows car leurs mots de passe ne sont pas gérés par SQL Server.  
+ Pour améliorer la sécurité, les connexions d'authentification SQL Server sont stockées dans un package DAC sans mot de passe. Lorsque le package est déployé ou mis à niveau, la connexion est créée en tant que connexion désactivée avec un mot de passe généré. Pour activer les connexions, connectez-vous à l'aide d'une connexion qui possède l'autorisation ALTER ANY LOGIN et utilisez ALTER LOGIN pour activer la connexion et affecter un nouveau mot de passe pouvant être communiqué à l'utilisateur. Cela n'est pas nécessaire pour les connexions d'authentification Windows car leurs mots de passe ne sont pas gérés par SQL Server.  
   
 ####  <a name="Permissions"></a> Autorisations  
  Une DAC ne peut être mise à niveau que par les membres des rôles serveur fixes **sysadmin** ou **serveradmin** , ou par les connexions situées dans le rôle serveur fixe **dbcreator** et disposant d'autorisations ALTER ANY LOGIN. La connexion doit être propriétaire de la base de données existante. Le compte d’administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intégré nommé **sa** peut aussi mettre à niveau une DAC.  
@@ -80,11 +84,11 @@ caps.handback.revision: 35
   
 1.  Dans l' **Explorateur d'objets**, développez le nœud pour l'instance qui contient la DAC à mettre à niveau.  
   
-2.  Développez le nœud **Gestion**, puis le nœud **Applications de la couche Données**.  
+2.  Développez le nœud **Gestion** , puis le nœud **Applications de la couche Données** .  
   
 3.  Cliquez avec le bouton droit sur le nœud de la DAC à mettre à niveau, puis sélectionnez **Mettre à niveau l’application de la couche Données…**.  
   
-4.  Renseignez les boîtes de dialogue de l'Assistant :  
+4.  Renseignez les boîtes de dialogue de l'Assistant :  
   
     1.  [Page Introduction](#Introduction)  
   
@@ -112,7 +116,7 @@ caps.handback.revision: 35
 ##  <a name="Select_dac_package"></a> Page Sélectionner un package  
  Utilisez cette page pour spécifier le package DAC qui contient la nouvelle version de l'application de couche Données. La page passe par deux états.  
   
-### Sélectionner le package DAC  
+### <a name="select-the-dac-package"></a>Sélectionner le package DAC  
  Utilisez l'état initial de la page pour choisir le package DAC à déployer. Le package de la DAC doit être un fichier de package de DAC valide et doit avoir une extension .dacpac. Le nom d'application de la DAC dans le package de DAC doit être le même que le nom d'application de la DAC actuelle.  
   
  **Package de DAC** : spécifie le chemin et le nom de fichier du package DAC qui contient la nouvelle version de l’application de couche Données. Vous pouvez sélectionner le bouton **Parcourir** à droite de la zone pour accéder à l'emplacement du package de DAC.  
@@ -123,18 +127,18 @@ caps.handback.revision: 35
   
  **Description** : zone en lecture seule qui affiche la description écrite au moment où la DAC a été créée ou extraite d’une base de données.  
   
- **\< Précédent** : renvoie à la page **Introduction**.  
+ **< Précédent** : renvoie à la page **Introduction**.  
   
  **Suivant >** : affiche une barre de progression dès que l’Assistant confirme que le fichier sélectionné est un package DAC valide.  
   
  **Annuler** : met fin à l’Assistant sans mettre à niveau la DAC.  
   
-### Validation du package DAC  
+### <a name="validating-the-dac-package"></a>Validation du package DAC  
  Affiche une barre de progression quand l'Assistant confirme que le fichier sélectionné est un package DAC valide. Si le package de DAC est validé, l'Assistant passe à la page **Vérifier la stratégie** . Si le fichier n'est pas un package DAC valide, l'Assistant reste sur la page **Sélectionner un package DAC** . Sélectionnez un autre package DAC valide ou annulez l'Assistant et générez un nouveau package DAC.  
   
  **Validation du contenu de la DAC** : barre de progression qui indique l’état actuel de la validation.  
   
- **\< Précédent** : retourne à l’état initial de la page **Sélectionner un package**.  
+ **< Précédent** : retourne à l’état initial de la page **Sélectionner un package**.  
   
  **Suivant >** : passe à la dernière version de la page **Sélectionner un package**.  
   
@@ -147,7 +151,7 @@ caps.handback.revision: 35
   
  **Ignorez les violations de stratégie** : utilisez cette case à cocher pour poursuivre la mise à niveau en cas d’échec d’une ou plusieurs conditions de stratégie. Ne sélectionnez cette option que si vous êtes sûr que toutes les conditions qui ont échoué n'empêcheront pas l'opération de la DAC de réussir.  
   
- **\< Précédent** : renvoie à la page **Sélectionner un package**.  
+ **< Précédent** : renvoie à la page **Sélectionner un package**.  
   
  **Suivant >** : passe à la page **Détecter les modifications**.  
   
@@ -168,20 +172,20 @@ caps.handback.revision: 35
   
  **Enregistrer le rapport** : cliquez sur ce bouton pour enregistrer un rapport des modifications détectées par l’Assistant entre les objets de la base de données et leurs équivalents dans la définition de la DAC. Vous pouvez ensuite vérifier le rapport pour déterminer si vous devez prendre des mesures, une fois la mise à niveau terminée, pour incorporer dans la nouvelle base de données tout ou partie des objets répertoriés dans le rapport.  
   
- **\< Précédent** : renvoie à la page **Sélectionner le package DAC**.  
+ **< Précédent** : renvoie à la page **Sélectionner le package DAC**.  
   
  **Suivant >** : passe à la page **Options**.  
   
  **Annuler** : met fin à l’Assistant sans déployer la DAC.  
   
-## Page Options  
+## <a name="options-page"></a>Page Options  
  Utilisez cette page pour sélectionner l'option de restauration en cas de échec de la mise à niveau.  
   
  **Restauration en cas d'échec** - Sélectionnez cette option pour inclure la mise à niveau dans une transaction que l'Assistant peut tenter de restaurer en cas de erreur. Pour plus d'informations sur l'option, consultez [Choix des options de mise à niveau de la DAC](#ChoseDACUpgOptions).  
   
  **Paramètres par défaut** : rétablit la valeur par défaut (False) de l’option.  
   
- **\< Précédent** : renvoie à la page **Détecter les modifications**.  
+ **< Précédent** : renvoie à la page **Détecter les modifications**.  
   
  **Suivant >** : passe à la page **Vérifier le plan de mise à niveau**.  
   
@@ -202,7 +206,7 @@ caps.handback.revision: 35
   
  **Paramètres par défaut** : rétablit la valeur par défaut (False) de l’option.  
   
- **\< Précédent** : renvoie à la page **Détecter les modifications**.  
+ **< Précédent** : renvoie à la page **Détecter les modifications**.  
   
  **Suivant >** : passe à la page **Résumé**.  
   
@@ -213,7 +217,7 @@ caps.handback.revision: 35
   
  **Les paramètres suivants seront utilisés pour mettre à niveau votre DAC.** - Vérifiez les informations affichées pour vous assurer que les actions prises seront correctes. La fenêtre affiche la DAC que vous avez sélectionnée pour être mise à niveau, et le package de DAC qui contient la nouvelle version de la DAC. La fenêtre s'affiche également si la version actuelle de la base de données est identique à la définition de la DAC actuelle, ou si la base de données a été modifiée.  
   
- **\< Précédent** : vous renvoie à la page **Vérifier le plan de mise à niveau**.  
+ **< Précédent** : vous renvoie à la page **Vérifier le plan de mise à niveau**.  
   
  **Suivant >** : déploie la DAC et affiche les résultats dans la page **Mettre à niveau la DAC**.  
   
@@ -224,7 +228,7 @@ caps.handback.revision: 35
   
  **Mise à niveau de la DAC** : signale la réussite ou l’échec de chaque action entreprise pour mettre à niveau la DAC. Examinez les informations pour déterminer la réussite ou l'échec de chaque action. Toute action pour laquelle une erreur s'est produite aura un lien dans la colonne **Résultat** . Sélectionnez le lien pour consulter le rapport de d'erreur de cette action.  
   
- **Enregistrer le rapport** : sélectionnez ce bouton pour enregistrer le rapport de mise à niveau dans un fichier HTML. Le fichier signale l'état de chaque action, notamment toutes les erreurs générées par chacune des actions. Le dossier par défaut est un dossier SQL Server Management Studio\DAC Packages dans le dossier Documents de votre compte Windows.  
+ **Enregistrer le rapport** : sélectionnez ce bouton pour enregistrer le rapport de mise à niveau dans un fichier HTML. Le fichier signale l'état de chaque action, notamment toutes les erreurs générées par chacune des actions. Le dossier par défaut est un dossier SQL Server Management Studio\DAC Packages dans le dossier Documents de votre compte Windows.  
   
  **Terminer** : met fin à l’Assistant.  
   
@@ -245,8 +249,8 @@ caps.handback.revision: 35
   
 7.  Fermez le flux de fichier utilisé pour lire le fichier de package DAC.  
   
-### Exemple (PowerShell)  
- L'exemple suivant met à niveau la DAC nommée MyApplication sur une instance par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)] en utilisant une nouvelle version de DAC dans un package MyApplicationVNext.dacpac.  
+### <a name="example-powershell"></a>Exemple (PowerShell)  
+ L'exemple suivant met à niveau la DAC nommée MyApplication sur une instance par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)]en utilisant une nouvelle version de DAC dans un package MyApplicationVNext.dacpac.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -283,8 +287,9 @@ $dacstore.IncrementalUpgrade($dacName, $dacType, $upgradeProperties)
 $fileStream.Close()  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   
   
+

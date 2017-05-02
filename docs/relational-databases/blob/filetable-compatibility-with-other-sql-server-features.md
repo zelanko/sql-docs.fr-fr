@@ -1,28 +1,32 @@
 ---
-title: "Compatibilit&#233; de FileTable avec d&#39;autres fonctionnalit&#233;s SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], utilisation avec d’autres fonctionnalités"
+title: "Compatibilité de FileTable avec d’autres fonctionnalités SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], using with other features
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f6dc92bd0a4af006b914a6f7af7e898c84c5957b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Compatibilit&#233; de FileTable avec d&#39;autres fonctionnalit&#233;s SQL Server
+# <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilité de FileTable avec d'autres fonctionnalités SQL Server
   Décrit le fonctionnement des FileTables avec d'autres fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="alwayson"></a> Groupes de disponibilité AlwaysOn et FileTables  
- Lorsque la base de données qui contient des données FILESTREAM ou FileTable appartient à un groupe de disponibilité AlwaysOn :  
+ Lorsque la base de données qui contient des données FILESTREAM ou FileTable appartient à un groupe de disponibilité AlwaysOn :  
   
 -   La fonctionnalité FileTable n'est prise en charge que partiellement par [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Après un basculement, les données FileTable sont accessibles sur le réplica principal, mais pas sur les réplicas secondaires avec accès en lecture.  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 19
   
 ##  <a name="OtherIsolation"></a> Sémantique de transaction et FileTables  
  **applications Windows**  
- Les applications Windows ne reconnaissent pas les transactions de base de données ; par conséquent, les opérations d'écriture Windows ne fournissent pas les propriétés ACID d'une transaction de base de données. De ce fait, la récupération et les restaurations transactionnelles ne sont pas possibles avec les opérations de mise à jour Windows.  
+ Les applications Windows ne reconnaissent pas les transactions de base de données ; par conséquent, les opérations d'écriture Windows ne fournissent pas les propriétés ACID d'une transaction de base de données. De ce fait, la récupération et les restaurations transactionnelles ne sont pas possibles avec les opérations de mise à jour Windows.  
   
  **Applications Transact-SQL**  
  Pour les applications TSQL opérant sur la colonne FILESTREAM(file_stream) d'un FileTable, la sémantique d'isolation est la même qu'avec le type de données FILESTREAM dans une table utilisateur standard.  
@@ -69,7 +73,7 @@ caps.handback.revision: 19
   
 -   Pour les opérations de mise à jour non transactionnelles via le système de fichiers, SQL Server crée une transaction interne pour capturer l'opération CloseHandle et les éventuels déclencheurs DML définis peuvent être activés dans le cadre de cette transaction. Une restauration, telle qu'une transaction dans le corps du déclencheur, si elle n'est pas empêchée, ne restaure pas pour autant les modifications apportées au FILESTREAM.  Cette restauration peut également empêcher l'activation des déclencheurs de mise à jour, bien que le contenu FILESTREAM soit modifié.  
   
--   En plus de ces impacts, les déclencheurs sur les FileTables doivent gérer quelques comportements supplémentaires :  
+-   En plus de ces impacts, les déclencheurs sur les FileTables doivent gérer quelques comportements supplémentaires :  
   
     -   En cas d'opérations de mise à jour non transactionnelles sur le FileTable via le système de fichiers, il est possible que le contenu FILESTREAM soit verrouillé exclusivement par d'autres opérations Win32 et ne puisse pas être accessible en lecture/écriture via le corps du déclencheur. Dans ce cas, toute tentative d'accès au contenu FILESTREAM dans le corps du déclencheur peut provoquer une erreur de violation de partage. Les déclencheurs doivent être conçus pour gérer ces erreurs convenablement.  
   
@@ -79,13 +83,13 @@ caps.handback.revision: 19
   
 ##  <a name="OtherViews"></a> Vues et FileTables  
  **Vues**  
- Une vue peut être créée sur un FileTable comme sur toute autre table. Toutefois, les considérations suivantes s'appliquent à une vue créée sur un FileTable :  
+ Une vue peut être créée sur un FileTable comme sur toute autre table. Toutefois, les considérations suivantes s'appliquent à une vue créée sur un FileTable :  
   
 -   La vue n'aura pas de sémantique FileTable. autrement dit les colonnes de l’affichage (notamment les colonnes d’attributs de fichier) se comportent comme des colonnes d’affichage normales sans sémantique spéciale. Ceci est également vrai pour les lignes qui représentent des fichiers/répertoires.  
   
--   La vue peut être modifiable selon la sémantique de la « vue modifiable », mais les contraintes de table sous-jacentes peuvent refuser les mises à jour comme dans la table.  
+-   La vue peut être modifiable selon la sémantique de la « vue modifiable », mais les contraintes de table sous-jacentes peuvent refuser les mises à jour comme dans la table.  
   
--   Le chemin d'accès à un fichier peut être visualisé dans la vue en l'ajoutant en tant que colonne explicite dans la vue. Par exemple :  
+-   Le chemin d'accès à un fichier peut être visualisé dans la vue en l'ajoutant en tant que colonne explicite dans la vue. Par exemple :  
   
      `CREATE VIEW MP3FILES AS SELECT column1, column2, …, GetFileNamespacePath() AS PATH, column3,…  FROM Documents`  
   
@@ -93,11 +97,11 @@ caps.handback.revision: 19
  Actuellement, les vues indexées ne peuvent pas inclure de colonnes FILESTREAM ni de colonnes calculées/calculées persistantes qui dépendent des colonnes FILESTREAM. Ce comportement reste également inchangé avec les vues définies sur le FileTable.  
   
 ##  <a name="OtherSnapshots"></a> Isolement de capture instantanée et FileTables  
- L'isolement de capture instantanée de lecture validée (RCSI) et l'isolement de capture instantanée (SI) comptent sur la possibilité d'avoir un instantané des données disponible pour les lecteurs même lorsque des opérations de mise à jour se produisent sur les données. Cependant, les FileTables autorisent l'accès en écriture non transactionnel aux données FILESTREAM. Par conséquent, les restrictions suivantes s'appliquent à l'utilisation de ces fonctionnalités dans les bases de données qui contiennent des FileTables :  
+ L'isolement de capture instantanée de lecture validée (RCSI) et l'isolement de capture instantanée (SI) comptent sur la possibilité d'avoir un instantané des données disponible pour les lecteurs même lorsque des opérations de mise à jour se produisent sur les données. Cependant, les FileTables autorisent l'accès en écriture non transactionnel aux données FILESTREAM. Par conséquent, les restrictions suivantes s'appliquent à l'utilisation de ces fonctionnalités dans les bases de données qui contiennent des FileTables :  
   
 -   Une base de données qui contient des FileTables peut être modifiée pour activer l'isolement RCSI/SI.  
   
--   Lorsque l'accès non_transactional est défini sur FULL pour la base de données, une transaction s'exécutant sous RCSI ou SI a le comportement suivant :  
+-   Lorsque l'accès non_transactional est défini sur FULL pour la base de données, une transaction s'exécutant sous RCSI ou SI a le comportement suivant :  
   
     -   Toute lecture [!INCLUDE[tsql](../../includes/tsql-md.md)] de la colonne file_stream du FileTable échoue. Toute opération INSERT et UPDATE sur la colonne aboutit tant qu'elle n'effectue pas de lecture depuis la colonne file_stream.  
   
@@ -117,7 +121,8 @@ caps.handback.revision: 19
   
  Vous pouvez définir la relation contenant-contenu de la base de données sur PARTIAL si vous souhaitez utiliser certaines fonctionnalités des bases de données à relation contenant-contenu, telles que les utilisateurs contenus. Dans ce cas, toutefois, vous devez savoir qu'une partie des paramètres de la base de données ne sont pas contenus dans la base de données et ne sont pas automatiquement déplacés avec celle-ci.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gérer des FileTables](../../relational-databases/blob/manage-filetables.md)  
   
   
+

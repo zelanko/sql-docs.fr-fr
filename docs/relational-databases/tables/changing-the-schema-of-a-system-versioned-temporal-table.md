@@ -1,28 +1,32 @@
 ---
-title: "Modification du sch&#233;ma d’une table temporelle &#224; version contr&#244;l&#233;e par le syst&#232;me | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Modification du schéma d’une table temporelle à version contrôlée par le système | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
 caps.latest.revision: 13
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 97eadf63fb8332ef55d8ccb699241a5e5f0e19d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modification du sch&#233;ma d’une table temporelle &#224; version contr&#244;l&#233;e par le syst&#232;me
+# <a name="changing-the-schema-of-a-system-versioned-temporal-table"></a>Modification du schéma d’une table temporelle à version contrôlée par le système
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Utilisez l’instruction **ALTER TABLE** pour ajouter, modifier ou supprimer une colonne.  
   
-## Exemples  
+## <a name="examples"></a>Exemples  
  Voici quelques exemples illustrant comment modifier le schéma d’une table temporelle.  
   
 ```  
@@ -52,7 +56,7 @@ ALTER TABLE dbo.Department
   
 ```  
   
-### Remarques importantes  
+### <a name="important-remarks"></a>Remarques importantes  
   
 -   L’autorisation**CONTROL** sur les tables actuelles et historiques est nécessaire pour modifier le schéma de la table temporelle.  
   
@@ -78,13 +82,13 @@ ALTER TABLE dbo.Department
   
     -   Ajout d’une colonne **IDENTITY**  
   
-    -   Ajout d’une colonne **SPARSE** ou modification d’une colonne en **SPARSE** lorsque la table historique est configurée avec **DATA_COMPRESSION = PAGE** ou **DATA_COMPRESSION = ROW**, qui est la valeur par défaut pour la table historique.  
+    -   Ajout d’une colonne **SPARSE** ou modification d’une colonne en **SPARSE**lorsque la table historique est configurée avec **DATA_COMPRESSION = PAGE** ou **DATA_COMPRESSION = ROW**, qui est la valeur par défaut pour la table historique.  
   
     -   Ajout d’un **COLUMN_SET**  
   
     -   Ajout d’une colonne **ROWGUIDCOL** ou modification d’une colonne en **ROWGUIDCOL**  
   
-         L’exemple suivant illustre la modification du schéma où le paramètre **SYSTEM_VERSIONING = OFF** est toujours requis (ajout de la colonne **IDENTITY**).   
+         L’exemple suivant illustre la modification du schéma où le paramètre **SYSTEM_VERSIONING = OFF** est toujours requis (ajout de la colonne **IDENTITY** ).   
         Notez que cet exemple désactive la vérification de la cohérence des données. Cette vérification n’est pas nécessaire lorsque la modification du schéma s’effectue dans une transaction, car aucune modification simultanée de données n’est possible.  
   
         ```  
@@ -101,10 +105,10 @@ ALTER TABLE dbo.Department
   
         ```  
   
-## Cet article vous a-t-il été utile ? Nous sommes à votre écoute  
- Quels renseignements souhaitez-vous obtenir ? Avez-vous trouvé ce que vous cherchiez ? Nous tenons compte de vos commentaires pour améliorer le contenu de nos articles. Veuillez envoyer vos commentaires à l’adresse suivante : [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Changing%20the%20Schema%20of%20a%20System-Versioned%20Temporal%20Table%20page).  
+## <a name="did-this-article-help-you-were-listening"></a>Cet article vous a-t-il été utile ? Nous sommes à votre écoute  
+ Quels renseignements souhaitez-vous obtenir ? Avez-vous trouvé ce que vous cherchiez ? Nous tenons compte de vos commentaires pour améliorer le contenu de nos articles. Veuillez envoyer vos commentaires à l’adresse suivante : [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Changing%20the%20Schema%20of%20a%20System-Versioned%20Temporal%20Table%20page)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tables temporelles](../../relational-databases/tables/temporal-tables.md)   
  [Prise en main des tables temporelles de contrôle de version du système](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Gérer la rétention des données d’historique dans les tables temporelles avec version gérée par le système](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)   
@@ -116,3 +120,4 @@ ALTER TABLE dbo.Department
  [Arrêt du contrôle de version par le système sur une table temporelle à version contrôlée par le système](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
+

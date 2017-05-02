@@ -1,31 +1,35 @@
 ---
-title: "R&#233;plication d&#39;instantan&#233; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "snapshot replication [SQL Server], about snapshot replication"
-  - "réplication d'instantané [SQL Server]"
+title: "Réplication d’instantané | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- snapshot replication [SQL Server], about snapshot replication
+- snapshot replication [SQL Server]
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6c99d91ab0209eb08c04488ce27043b2ad714781
+ms.lasthandoff: 04/11/2017
+
 ---
-# R&#233;plication d&#39;instantan&#233;
+# <a name="snapshot-replication"></a>Réplication d'instantané
   La réplication d'instantané transmet les données telles qu'elles apparaissent à un moment précis, sans contrôler les mises à jour des données. Lors de la synchronisation, l'intégralité de l'instantané est générée et envoyée aux abonnés.  
   
 > [!NOTE]  
 >  La réplication d'instantané peut être utilisée seule, mais le processus d'instantané (qui crée une copie de tous les objets et données spécifiés par une publication) est également couramment utilisé pour fournir le jeu initial de données et d'objets de base de données pour les publications transactionnelles et de fusion.  
   
- L'utilisation de la réplication d'instantané seule est la plus appropriée quand une ou plusieurs des conditions suivantes sont remplies :  
+ L'utilisation de la réplication d'instantané seule est la plus appropriée quand une ou plusieurs des conditions suivantes sont remplies :  
   
 -   Les données changent peu fréquemment.  
   
@@ -56,10 +60,10 @@ caps.handback.revision: 34
   
  L'illustration suivante montre les principaux composants de la réplication d'instantané.  
   
- ![Composants et flux de données de réplication d'instantané](../../relational-databases/replication/media/snapshot.gif "Composants et flux de données de réplication d'instantané")  
+ ![Composants et flux de données de réplication d’instantané](../../relational-databases/replication/media/snapshot.gif "Composants et flux de données de réplication d’instantané")  
   
 ##  <a name="SnapshotAgent"></a> Agent d'instantané  
- Pour la réplication de fusion, un instantané est généré à chaque exécution de l'Agent d'instantané. Pour la réplication transactionnelle, génération d’instantané dépend de la valeur de la propriété de publication **immediate_sync**. Si la propriété est définie avec la valeur TRUE (valeur par défaut lors de l'utilisation de l'Assistant Nouvelle publication), un instantané est généré à chaque exécution de l'Agent d'instantané, et peut être appliqué à un abonné à tout moment. Si la propriété est définie sur FALSE (la valeur par défaut lorsque vous utilisez **sp_addpublication**), l’instantané est généré uniquement si un nouvel abonnement a été ajouté depuis le dernier Agent de capture instantanée est exécuté ; Les abonnés doivent attendre l’Agent de capture instantanée à compléter avant de pouvoir se synchroniser.  
+ Pour la réplication de fusion, un instantané est généré à chaque exécution de l'Agent d'instantané. Pour la réplication transactionnelle, la génération d'instantané dépend du paramétrage de la propriété de publication **immediate_sync**. Si la propriété est définie avec la valeur TRUE (valeur par défaut lors de l'utilisation de l'Assistant Nouvelle publication), un instantané est généré à chaque exécution de l'Agent d'instantané, et peut être appliqué à un abonné à tout moment. Si la propriété est définie avec la valeur FALSE (valeur par défaut lors de l'utilisation de **sp_addpublication**), l'instantané est généré uniquement si un nouvel abonnement a été ajouté depuis la dernière exécution de l'Agent d'instantané ; les abonnés doivent attendre que l'Agent d'instantané se termine avant de pouvoir se synchroniser.  
   
  L'Agent d'instantané exécute les étapes suivantes :  
   
@@ -75,7 +79,7 @@ caps.handback.revision: 34
   
 3.  Il copie les données à partir de la table publiée sur le serveur de publication et enregistre les données dans le dossier d'instantanés. L'instantané est généré comme un ensemble de fichiers programme de copie en bloc (BCP).  
   
-4.  Pour les publications transactionnelles et de capture instantanée, l’Agent d’instantané ajoute des lignes à la **MSrepl_commands** et **MSrepl_transactions** tables dans la base de données de distribution. Les entrées dans la **MSrepl_commands** table sont des commandes indiquant l’emplacement des fichiers .sch et .bcp, tous les fichiers de capture instantanée et des références à tous les scripts avant ou après l’instantané. Les entrées dans la **MSrepl_transactions** table sont des commandes concernant la synchronisation de l’abonné.  
+4.  Pour les publications d'instantané et transactionnelle, l'Agent d'instantané ajoute des lignes aux tables **MSrepl_commands** et **MSrepl_transactions** dans la base de données de distribution. Les entrées de la table **MSrepl_commands** sont des commandes indiquant l'emplacement des fichiers .sch et .bcp, des autres fichiers d'instantanés, et des références à tout script d'avant ou après l'instantané. Les entrées de la table **MSrepl_transactions** sont des commandes concernant la synchronisation de l'Abonné.  
   
      Pour les publications de fusion, l'Agent d'instantané effectue des étapes supplémentaires.  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 34
   
 1.  Il établit une connexion au serveur de distribution.  
   
-2.  Examine les **MSrepl_commands** et **MSrepl_transactions** tables dans la base de données de distribution sur le serveur de distribution. L'Agent lit l'emplacement des fichiers d'instantanés dans la première table et les commandes de synchronisation de l'Abonné dans les deux tables.  
+2.  Il examine les tables **MSrepl_commands** et **MSrepl_transactions** de la base de données de distribution sur le serveur de distribution. L'Agent lit l'emplacement des fichiers d'instantanés dans la première table et les commandes de synchronisation de l'Abonné dans les deux tables.  
   
 3.  Il applique le schéma et les commandes à la base de données d'abonnement.  
   

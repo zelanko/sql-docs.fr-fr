@@ -1,28 +1,32 @@
 ---
-title: "Utiliser la session system_health | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "événements étendus [SQL Server], session d’intégrité système"
-  - "événements étendus [SQL Server], session intégrité_système"
-  - "session system_health [événements étendus SQL Server]"
-  - "session d'intégrité système [événements étendus SQL Server]"
+title: Utiliser la session system_health | Microsoft Docs
+ms.custom: 
+ms.date: 06/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extended events [SQL Server], system health session
+- extended events [SQL Server], system_health session
+- system_health session [SQL Server extended events]
+- system health session [SQL Server extended events]
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 caps.latest.revision: 17
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c64a0a128576a4bbf38f10b70514dbc4def84d11
+ms.lasthandoff: 04/11/2017
+
 ---
-# Utiliser la session system_health
+# <a name="use-the-systemhealth-session"></a>Utiliser la session system_health
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   La session system_health est une session Événements étendus incluse par défaut avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette session démarre automatiquement en même temps que le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et s’exécute sans effet notable sur les performances. Elle recueille des données système qui peuvent vous aider à résoudre des problèmes de performances dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Il est donc déconseillé de l'arrêter ou de la supprimer.  
@@ -57,8 +61,8 @@ caps.handback.revision: 17
   
 -   Erreurs de sécurité avec security_error_ring_buffer_recorded.  
   
-## Consultation des données de session  
- La session utilise la cible de mémoire tampon en anneau pour stocker les données. Pour consulter les données de session, utilisez la requête suivante :  
+## <a name="viewing-the-session-data"></a>Consultation des données de session  
+ La session utilise la cible de mémoire tampon en anneau pour stocker les données. Pour consulter les données de session, utilisez la requête suivante :  
   
 ```  
 SELECT CAST(xet.target_data as xml) FROM sys.dm_xe_session_targets xet  
@@ -69,14 +73,15 @@ WHERE xe.name = 'system_health'
   
 Pour afficher les données de session depuis les fichier d'événements, utilisez l'interface utilisateur Événements étendus disponible dans Management Studio. Pour plus d’informations, consultez [Affichage avancé des données cibles à partir d’événements étendus dans SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md).
   
-## Restauration de la session system_health  
- Si vous supprimez la session system_health, vous pouvez la restaurer en exécutant le fichier **u_tables.sql** dans l’Éditeur de requête. Ce fichier se trouve dans le dossier suivant, où C: représente le lecteur sur lequel vous avez installé les fichiers du programme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
+## <a name="restoring-the-systemhealth-session"></a>Restauration de la session system_health  
+ Si vous supprimez la session system_health, vous pouvez la restaurer en exécutant le fichier **u_tables.sql** dans l’Éditeur de requête. Ce fichier se trouve dans le dossier suivant, où C: représente le lecteur sur lequel vous avez installé les fichiers du programme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
  C:\Program Files\Microsoft SQL Server\MSSQL13.\<*ID_instance*>\MSSQL\Install  
   
- Sachez qu’après avoir restauré la session, vous devez la démarrer en utilisant l’instruction ALTER EVENT SESSION ou en utilisant le nœud **Événements étendus** dans l’Explorateur d’objets. Sinon, la session démarre automatiquement la prochaine fois que vous redémarrerez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Sachez qu’après avoir restauré la session, vous devez la démarrer en utilisant l’instruction ALTER EVENT SESSION ou en utilisant le nœud **Événements étendus** dans l’Explorateur d’objets. Sinon, la session démarre automatiquement la prochaine fois que vous redémarrerez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Outils associés aux événements étendus](../../relational-databases/extended-events/extended-events-tools.md)  
   
   
+

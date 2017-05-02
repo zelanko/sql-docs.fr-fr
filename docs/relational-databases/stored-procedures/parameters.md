@@ -1,32 +1,36 @@
 ---
-title: "Param&#232;tres | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "server-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "procédures stockées [SQL Server], paramètres"
-  - "fonctions définies par l’utilisateur [SQL Server], paramètres"
+title: "Paramètres | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- server-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- stored procedures [SQL Server], parameters
+- user-defined functions [SQL Server], parameters
 ms.assetid: c1f9bd93-3271-4098-a23b-7bd7a19ab65b
 caps.latest.revision: 2
-author: "pmasl"
-ms.author: "pelopes"
-manager: "jhubbard"
-caps.handback.revision: 2
+author: pmasl
+ms.author: pelopes
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 64617ddd4922e7217ac905e92e5d9dfd6ffff7e4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Param&#232;tres
-Les paramètres sont utilisés pour échanger des données entre d'une part une procédure stockée ou une fonction et d'autre part, l'application ou l'outil ayant appelé la procédure stockée ou la fonction : 
+# <a name="parameters"></a>Paramètres
+Les paramètres sont utilisés pour échanger des données entre d'une part une procédure stockée ou une fonction et d'autre part, l'application ou l'outil ayant appelé la procédure stockée ou la fonction : 
 
 *  Les paramètres d'entrée permettent à l'appelant de faire passer une valeur de donnée à la procédure stockée ou à la fonction.
 *  Les paramètres de sortie permettent à la procédure stockée de faire passer en retour une valeur de donnée à l'appelant. Les fonctions définies par l'utilisateur ne peuvent pas définir de paramètres de sortie.
 *  Chaque procédure stockée renvoie un code de retour de type entier à l'appelant. Si la procédure stockée ne définit pas explicitement la valeur du code de retour, la valeur de ce code est 0.
 
-La procédure stockée suivante utilise un paramètre d'entrée, un paramètre de sortie et un code de retour :
+La procédure stockée suivante utilise un paramètre d'entrée, un paramètre de sortie et un code de retour :
 ```
 -- Create a procedure that takes one input parameter and returns one output parameter and a return code.
 CREATE PROCEDURE SampleProcedure @EmployeeIDParm INT,

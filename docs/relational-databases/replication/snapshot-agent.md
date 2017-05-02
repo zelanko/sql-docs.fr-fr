@@ -1,36 +1,40 @@
 ---
-title: "Agent d&#39;instantan&#233; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.snapshotagent.f1"
-helpviewer_keywords: 
-  - "boîte de dialogue Agent d'instantané"
+title: "Agent d’instantané | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.snapshotagent.f1
+helpviewer_keywords:
+- Snapshot Agent dialog box
 ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 77d1972719748124aedd5eb15cb7c0822745dc76
+ms.lasthandoff: 04/11/2017
+
 ---
-# Agent d&#39;instantan&#233;
+# <a name="snapshot-agent"></a>Agent d'instantané
   La boîte de dialogue **Agent d'instantané** affiche des informations détaillées concernant l'Agent d'instantané, notamment son état, son historique, des messages d'information ainsi que tout message d'erreur s'y rapportant.  
   
-## Options  
+## <a name="options"></a>Options  
  Sélectionnez les sessions de l'Agent d'instantané à afficher à partir du menu **Affichage** , puis sélectionnez une session particulière dans la grille **Sessions de l'Agent d'instantané**. Des informations détaillées sur cette session s'affichent dans la grille étiquetée **Actions dans la session sélectionnée**. Si la session sélectionnée s'est terminée sur une erreur, la zone de texte étiquetée **Détails de l'erreur ou message de la session sélectionnée** s'affiche également.  
   
  **Affichage**  
  Permet de sélectionner les sessions de l'Agent d'instantané à afficher.  
   
  **État**  
- État de l'Agent d'instantané. La liste ci-dessous indique les valeurs d'état possibles :  
+ État de l'Agent d'instantané. La liste ci-dessous indique les valeurs d'état possibles :  
   
 -   Erreur  
   
@@ -56,15 +60,15 @@ caps.handback.revision: 20
  Correspond à tous les messages d'information et d'erreur que l'Agent d'instantané a consignés dans le journal lors de la session sélectionnée.  
   
  **Heure de l'action**  
- L’heure à laquelle l’action décrite dans le **Message d’Action** de colonne a été effectuée.  
+ Heure à laquelle l'action décrite dans la colonne **Message d'action** s'est déroulée.  
   
  **Détails de l'erreur ou message de la session sélectionnée**  
- S’affiche uniquement si la session sélectionnée affiche une valeur **erreur** dans les **état** colonne. La zone de texte affiche des informations d'erreur détaillées, ainsi que la commande émise au moment de l'erreur. Elle comporte également des liens vers des informations supplémentaires à propos de l'erreur.  
+ S'affiche uniquement si la session sélectionnée affiche une valeur **Erreur** dans la colonne **État** . La zone de texte affiche des informations d'erreur détaillées, ainsi que la commande émise au moment de l'erreur. Elle comporte également des liens vers des informations supplémentaires à propos de l'erreur.  
   
-## Voir aussi  
- [Démarrer le Moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Afficher des informations et effectuer des tâches pour les Agents associés à une Publication & #40 ; Moniteur de réplication & #41 ;](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Démarrer le moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
+ [Afficher des informations et effectuer des tâches pour les agents associés à une publication &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [Surveillance de la réplication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Présentation des Agents de réplication](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   
