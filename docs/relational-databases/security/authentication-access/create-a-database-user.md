@@ -1,47 +1,52 @@
 ---
-title: "Cr&#233;er un utilisateur de base de donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.user.securables.f1"
-  - "SQL13.SWB.DATABASEUSER.GENERAL.F1"
-helpviewer_keywords: 
-  - "utilisateurs de la base de données, création"
-  - "création d'utilisateurs à l'aide de Management Studio"
-  - "mappage d'utilisateurs"
-  - "utilisateurs [SQL Server], création"
-  - "ajout d'utilisateurs de base de données [SQL Server]"
-  - "utilisateurs de base de données, mappage"
-  - "CREATE USER [Management Studio]"
-  - "utilisateurs [SQL Server], ajout"
-  - "mappage des utilisateurs de base de données"
+title: "Créer un utilisateur de base de données | Microsoft Docs"
+ms.custom: 
+ms.date: 04/24/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.user.securables.f1
+- SQL13.SWB.DATABASEUSER.GENERAL.F1
+helpviewer_keywords:
+- database users, creating
+- creating users with Management Studio
+- mapping users
+- users [SQL Server], creating
+- database user additions [SQL Server]
+- database users, mapping
+- CREATE USER [Management Studio]
+- users [SQL Server], adding
+- mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
----
-# Cr&#233;er un utilisateur de base de donn&#233;es
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 29621ffb4694c725024b6fee7220f6b2e76d305a
+ms.lasthandoff: 05/03/2017
+
+---   
+
+# <a name="create-a-database-user"></a>Créer un utilisateur de base de données
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Cette rubrique décrit comment créer les types courants d'utilisateurs de base de données. On dénombre onze types d'utilisateurs. La liste complète est fournie dans la rubrique [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). Tous les types de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prennent en charge les utilisateurs de base de données, mais pas nécessairement tous les types d'utilisateurs.  
   
  Vous pouvez créer un utilisateur de base de données à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-##  <a name="Understanding"></a> Présentation des types d'utilisateurs  
- [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] présente 6 options de création d'un utilisateur de base de données. L’image suivante montre les 6 options dans la zone verte et indique ce qu'elles représentent.  
+##  <a name="Understanding"></a> Présentation des types d’utilisateurs  
+ [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] présente 6 options de création d’un utilisateur de base de données. L’image suivante montre les 6 options dans la zone verte et indique ce qu'elles représentent.  
   
- ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
+ ![Types_utilisateurs](../../../relational-databases/security/authentication-access/media/typesofusers.png "Types_utilisateurs")  
   
-### Sélectionnez le type d'utilisateur  
+### <a name="selecting-the-type-of-user"></a>Sélectionnez le type d'utilisateur  
  **Connexion ou utilisateur non mappé à une connexion**  
   
  Si vous ne connaissez pas encore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], il peut être difficile de déterminer quel type d'utilisateur vous souhaitez créer. Tout d'abord, posez-vous la question suivante : la personne ou le groupe qui doit accéder à la base de données dispose-t-elle d’une connexion ? Dans la base de données MASTER, les connexions sont courantes pour les personnes qui gèrent le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et celles qui doivent accéder à plusieurs ou l'ensemble des bases de données sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Dans ce cas, vous allez créer un **utilisateur SQL avec connexion**. L'utilisateur de base de données est l'identité du compte de connexion lorsqu'il est connecté à la base de données. Il peut utiliser le même nom que celui du compte de connexion, mais cela n'est pas obligatoire. Cette rubrique part du principe qu'il existe déjà un compte de connexion dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la création d’un compte de connexion, consultez [Créer un compte de connexion](../../../relational-databases/security/authentication-access/create-a-login.md).  
@@ -52,7 +57,7 @@ caps.handback.revision: 31
   
  Sélectionnez **utilisateur SQL avec mot de passe** ou **utilisateur SQL avec connexion** avec **connexion d'authentification SQL Server**, lorsque la personne qui se connecte ne peut pas s'authentifier avec Windows. Ceci est courant lorsque des personnes extérieures à votre organisation (par exemple des clients) se connectent à votre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-> **ASTUCE !** Pour les personnes internes à votre organisation, l'authentification Windows est un meilleur choix, parce qu’elles n'auront pas à mémoriser un mot de passe supplémentaire et que l'authentification Windows offre des fonctionnalités de sécurité supplémentaires, notamment Kerberos.  
+> **ASTUCE** Pour les personnes internes à votre organisation, l'authentification Windows est un meilleur choix, parce qu’elles n'auront pas à mémoriser un mot de passe supplémentaire et que l'authentification Windows offre des fonctionnalités de sécurité supplémentaires, notamment Kerberos.  
   
 ##  <a name="Restrictions"></a> Arrière-plan  
  Un utilisateur est un principal de sécurité au niveau de la base de données. Les comptes de connexion doivent être mappés à un utilisateur de base de données pour permettre la connexion à une base de données. Un compte de connexion peut être mappé à différentes bases de données en tant qu'utilisateurs différents, mais il ne peut être mappé que comme utilisateur unique dans chaque base de données. Dans une base de données partiellement à relation contenant-contenu, il est possible de créer un utilisateur qui ne dispose pas de compte de connexion. Pour plus d’informations sur les utilisateurs de base de données à relation contenant-contenu, consultez [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). Lorsque l'utilisateur invité d'une base de données est activé, un compte de connexion non mappé à un utilisateur de base de données peut accéder à la base de données en tant qu'utilisateur invité.  
@@ -75,7 +80,7 @@ caps.handback.revision: 31
   
 4.  Dans la boîte de dialogue **Utilisateur de base de données – Nouveau** , sur la page **Général** , sélectionnez un des types d'utilisateur suivants à partir de la liste **type d’utilisateur** :  
   
-    -   **utilisateur SQL avec connexion**  
+    -   **Utilisateur SQL avec connexion**  
   
     -   **Utilisateur SQL avec mot de passe**  
   
@@ -92,7 +97,7 @@ caps.handback.revision: 31
      **Nom d'utilisateur**  
      Entrez le nom du nouvel utilisateur. Si vous avez choisi **Utilisateur Windows** dans la liste **Type d’utilisateur**, vous pouvez également cliquer sur les points de suspension **(...)** pour ouvrir la boîte de dialogue **Sélectionner l’utilisateur ou le groupe**.  
   
-     **Nom d'accès**  
+     **Nom d’accès**  
      Entrez le nom de connexion de l'utilisateur. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner la connexion**. **Nom de connexion** est disponible si vous sélectionnez **Utilisateur SQL avec connexion** ou **Utilisateur Windows** dans la liste **Type d'utilisateur** .  
   
      **Mot de passe** et **Confirmer le mot de passe**  
@@ -112,7 +117,7 @@ caps.handback.revision: 31
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### Options supplémentaires  
+### <a name="additional-options"></a>Options supplémentaires  
  La boîte de dialogue **Nouvel utilisateur de base de données** offre également des options sur quatre pages supplémentaires : **Schémas appartenant à un rôle**, **Appartenance**, **Éléments sécurisables**et **Propriétés étendues**.  
   
 -   La page **Schémas appartenant à un rôle** répertorie tous les schémas possibles qui peuvent être détenus par le nouvel utilisateur de base de données. Pour ajouter des schémas à un utilisateur de base de données ou lui en supprimer, sous **Schémas appartenant à cet utilisateur**, activez ou désactivez les cases à cocher en regard de ces schémas.  
@@ -133,14 +138,14 @@ caps.handback.revision: 31
      Affiche ou spécifie les propriétés étendues de l'objet. Chaque propriété étendue est constituée d'une paire nom/valeur de métadonnées associées à l'objet.  
   
      **Points de suspension (…)**  
-     Cliquez sur les points de suspension **(…)** figurant après **Valeur** pour ouvrir la boîte de dialogue **Valeur de la propriété étendue**. Tapez ou affichez la valeur de la propriété étendue dans cet emplacement de plus grande taille. Pour plus d'informations, consultez [Boîte de dialogue Valeur de la propriété étendue](http://msdn.microsoft.com/library/ms189353.aspx).  
+     Cliquez sur les points de suspension **(…)** figurant après **Valeur** pour ouvrir la boîte de dialogue **Valeur de la propriété étendue** . Tapez ou affichez la valeur de la propriété étendue dans cet emplacement de plus grande taille. Pour plus d'informations, consultez [Boîte de dialogue Valeur de la propriété étendue](http://msdn.microsoft.com/library/ms189353.aspx).  
   
-     **Delete**  
+     **Supprimer**  
      Supprime la propriété étendue sélectionnée.  
   
 ##  <a name="TsqlProcedure"></a> Créer un utilisateur à l’aide de T-SQL  
     
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils **Standard** , cliquez sur **Nouvelle requête**.  
   
@@ -159,9 +164,10 @@ caps.handback.revision: 31
   
  Pour plus d’informations, consultez [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md) qui contient beaucoup d’autres exemples [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Principaux &#40;moteur de base de données&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Créer un compte de connexion](../../../relational-databases/security/authentication-access/create-a-login.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)  
   
   
+
