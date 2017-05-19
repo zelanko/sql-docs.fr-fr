@@ -24,9 +24,10 @@ caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 352901fe01e191aa43e48c4d7978f271b189f4e1
+ms.contentlocale: fr-fr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -160,7 +161,7 @@ SET @publisher = $(DistPubServer);
 ```  
   
 ### <a name="using-the-sqlcmd-utility-from-the-command-line"></a>Utilisation de l'utilitaire sqlcmd à partir de la ligne de commande  
- L’exemple suivant montre comment la ligne de commande est utilisée pour exécuter le fichier de script `instdistpub.sql` à l’aide de l’[](../../../tools/sqlcmd-utility.md) :  
+ L’exemple suivant montre comment la ligne de commande est utilisée pour exécuter le fichier de script `instdistpub.sql` à l’aide de l’[utilitaire sqlcmd](../../../tools/sqlcmd-utility.md):  
   
 ```  
 sqlcmd.exe -E -S sqlserverinstance -i C:\instdistpub.sql -o C:\output.log -v DistPubServer="N'MyDistributorAndPublisher'"  
