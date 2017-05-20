@@ -38,8 +38,8 @@
 4. Créez le cluster. Pour ce faire, exécutez la commande suivante :
 
    ```bash
-   sudo pcs cluster auth <nodeName1> <nodeName2…> -u hacluster -p <password for hacluster>
-   sudo pcs cluster setup --name <clusterName> <nodeName1> <nodeName2…> 
+   sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
+   sudo pcs cluster setup --name <clusterName> <node1> <node2> <node3> 
    sudo pcs cluster start --all
    ```
    
