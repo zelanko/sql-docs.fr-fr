@@ -22,9 +22,10 @@ caps.latest.revision: 45
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3e37e75379dc4fd1722dd660b2c6145c9540732e
+ms.contentlocale: fr-fr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -75,7 +76,7 @@ ms.lasthandoff: 04/11/2017
   
          Si vous spécifiez qu'un autre serveur doit jouer le rôle de serveur de distribution, vous devez entrer un mot de passe dans la page **Mot de passe d'administration** pour les connexions effectuées du serveur de publication sur le serveur de distribution. Ce mot de passe doit correspondre à celui qui a été spécifié lorsque le serveur de publication a été activé sur le serveur de distribution distant.  
   
-         Pour plus d'informations, voir [Configure Distribution](../../../relational-databases/replication/configure-distribution.md).  
+         Pour plus d’informations, consultez [Configurer la distribution](../../../relational-databases/replication/configure-distribution.md).  
   
     -   Choisissez une base de données de publication.  
   
@@ -95,22 +96,22 @@ ms.lasthandoff: 04/11/2017
   
          \- Agent de lecture de la file d’attente pour les publications transactionnelles acceptant les abonnements avec mise à jour.  
   
-         Pour plus d'informations, consultez [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md) et [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md).  
+         Pour plus d'informations, consultez [Modèle de sécurité de l'Agent de réplication](../../../relational-databases/replication/security/replication-agent-security-model.md) et [Méthodes préconisées en matière de sécurité de réplication](../../../relational-databases/replication/security/replication-security-best-practices.md).  
   
-    -   En option, scriptez la publication. Pour plus d'informations, voir [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
+    -   En option, scriptez la publication. Pour plus d'informations, voir [Réplication de script](../../../relational-databases/replication/scripting-replication.md).  
   
     -   Spécifiez le nom de la publication.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
- Une fois une publication créée, des articles peuvent être créés par programme en utilisant des procédures stockées de réplication. Les procédures stockées utilisées pour créer un article dépendent du type de publication pour laquelle l'article est défini. Pour plus d'informations, voir [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+ Une fois une publication créée, des articles peuvent être créés par programme en utilisant des procédures stockées de réplication. Les procédures stockées utilisées pour créer un article dépendent du type de publication pour laquelle l'article est défini. Pour plus d’informations, consultez [créer une Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 #### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>Pour définir un article pour une publication transactionnelle ou d'instantané  
   
 1.  Exécutez [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication à laquelle l'article appartient pour **@publication**, le nom de l'article pour **@article**, l'objet de base de données qui est publié pour **@source_object**et tout autre paramètre optionnel. Utilisez **@source_owner** pour spécifier la propriété de schéma de l'objet, s'il ne s'agit pas de **dbo**. Si l’article n’est pas un article de table basé sur un journal, spécifiez le type d’article pour **@type**. Pour plus d’informations, consultez [Spécifier les types d’articles &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md).  
   
-2.  Pour filtrer horizontalement les lignes d'une table ou pour afficher un article, utilisez [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) pour définir la clause du filtre. Pour plus d'informations, voir [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
+2.  Pour filtrer horizontalement les lignes d'une table ou pour afficher un article, utilisez [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) pour définir la clause du filtre. Pour plus d'informations, voir [Définir et modifier un filtre de lignes statiques](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
-3.  Pour filtrer verticalement les colonnes d'une table ou afficher un article, utilisez [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md). Pour plus d'informations, voir [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
+3.  Pour filtrer verticalement les colonnes d'une table ou afficher un article, utilisez [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md). Pour plus d'informations, voir [Définir et modifier un filtre de colonne](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
 4.  Exécutez [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) si l'article est filtré.  
   
@@ -123,11 +124,11 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-define-an-article-for-a-merge-publication"></a>Pour définir un article pour une publication de fusion  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Spécifiez le nom de la publication pour **@publication**, le nom de l'article pour **@article**et l'objet qui est publié pour **@source_object**. Pour filtrer horizontalement les lignes d'une table, spécifiez une valeur pour **@subset_filterclause**. Pour plus d'informations, consultez [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) et [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md). Si l'article n'est pas un article de table, spécifiez le type d'article pour **@type**. Pour plus d’informations, consultez [Spécifier les types d’articles &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md).  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Spécifiez le nom de la publication pour **@publication**, le nom de l'article pour **@article**et l'objet qui est publié pour **@source_object**. Pour filtrer horizontalement les lignes d'une table, spécifiez une valeur pour **@subset_filterclause**. Pour plus d'informations, consultez [Définir et modifier un filtre de lignes paramétrable pour un article de fusion](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) et [Définir et modifier un filtre de lignes statiques](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md). Si l'article n'est pas un article de table, spécifiez le type d'article pour **@type**. Pour plus d’informations, consultez [Spécifier les types d’articles &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md).  
   
-2.  (Facultatif) Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) pour définir un filtre de jointure entre deux articles. Pour plus d'informations, voir [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+2.  (Facultatif) Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) pour définir un filtre de jointure entre deux articles. Pour plus d'informations, voir [Définir et modifier un filtre de jointure entre des articles de fusion](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
-3.  (Facultatif) Dans la base de données de publication sur le serveur de publication, exécutez [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) pour filtrer les colonnes d'une table. Pour plus d'informations, voir [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
+3.  (Facultatif) Dans la base de données de publication sur le serveur de publication, exécutez [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) pour filtrer les colonnes d'une table. Pour plus d'informations, voir [Définir et modifier un filtre de colonne](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
 ###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
  Cet exemple définit un article basé sur la table `Product` pour une publication transactionnelle, où l'article est filtré à la fois horizontalement et verticalement.  
@@ -155,12 +156,12 @@ ms.lasthandoff: 04/11/2017
  [!code-vb[HowTo#rmo_vb_CreateMergeArticles](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergearticles)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)   
- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+ [Créer une publication](../../../relational-databases/replication/publish/create-a-publication.md)   
+ [Concepts liés aux procédures stockées système de réplication](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Ajouter et supprimer des articles de publications existantes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
  [Filtrer des données publiées](../../../relational-databases/replication/publish/filter-published-data.md)   
  [Publier des données et des objets de base de données](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
+ [Concepts liés aux procédures stockées système de réplication](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
   
   
 
