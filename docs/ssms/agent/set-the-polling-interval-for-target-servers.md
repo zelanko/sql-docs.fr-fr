@@ -18,9 +18,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 98961d875eaef7e6c941212780ddcb60b44d57ac
+ms.contentlocale: fr-fr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -38,7 +39,7 @@ Chaque serveur cible peut exécuter une instance du même travail au même momen
 > Si le serveur maître est accessible lorsque le serveur cible tente de charger l'état du travail, ce dernier est mis en attente dans le spouleur jusqu'à ce que le serveur maître soit accessible.  
   
 ### <a name="Security"></a>Sécurité  
-Pour plus d'informations, consultez [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md) et [Choose the Right SQL Server Agent Service Account for Multiserver Environments](../../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md).  
+Pour plus d'informations, consultez [Implémenter la sécurité de l'Agent SQL Server](../../ssms/agent/implement-sql-server-agent-security.md) et [Choisir le compte de service SQL Server Agent correct pour les environnements multiserveurs](../../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md).  
   
 ## <a name="SSMS"></a>Utilisation de SQL Server Management Studio  
 **Pour définir l'intervalle d'interrogation pour les serveurs cibles**  

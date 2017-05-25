@@ -21,9 +21,10 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 502bbf9e763ffc8132e741a33ebe0ec4d0cad499
+ms.contentlocale: fr-fr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -125,7 +126,7 @@ GO
   
   
 ### <a name="xml"></a>XML  
- Un document XML est une arborescence. Par conséquent, une instance de type de données XML unique peut représenter la totalité d'une hiérarchie. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] when an XML dedex is created, **hierarchyid** values are used deternally to represent the position de the hierarchy.  
+ Un document XML est une arborescence. Par conséquent, une instance de type de données XML unique peut représenter la totalité d'une hiérarchie. Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], lorsqu'un index XML est créé, les valeurs **hierarchyid** sont utilisées en interne pour représenter la position dans la hiérarchie.  
   
  Il peut être préférable d'utiliser le type de données XML lorsque les conditions suivantes sont réunies :  
   

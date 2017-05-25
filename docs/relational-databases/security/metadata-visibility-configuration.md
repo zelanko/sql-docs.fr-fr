@@ -23,9 +23,10 @@ caps.latest.revision: 51
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9381b69a605ed7928851a18e64d7054d43fcb65c
+ms.contentlocale: fr-fr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -66,7 +67,7 @@ GO
   
 -   Les fonctions intégrées émettant des métadonnées telles que OBJECTPROPERTYEX peuvent renvoyer une valeur NULL.  
   
--   Les procédures stockées [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** stored procedures might return only a subset of rows, or NULL.  
+-   Les procédures stockées [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** peuvent retourner uniquement un sous-ensemble de lignes ou la valeur NULL.  
   
  Les modules SQL, tels que les procédures stockées et les déclencheurs, fonctionnent dans le contexte de sécurité de l'appelant et, par conséquent, auront un accès limité aux métadonnées. Dans le code suivant par exemple, lorsque la procédure stockée tente d'accéder aux métadonnées de la table `myTable` pour laquelle l'appelant n'a aucune autorisation, un jeu de résultats vide est renvoyé. Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une ligne est renvoyée.  
   

@@ -19,18 +19,19 @@ caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bffe545296432d465fd744092519c9882ccc04c1
+ms.contentlocale: fr-fr
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>Ajouter des dépendances à une ressource SQL Server
   Cette rubrique explique comment ajouter des dépendances à une ressource d’instance de cluster de basculement (FCI) Always On à l’aide du composant logiciel enfichable Gestionnaire du cluster de basculement. Le composant logiciel enfichable Gestionnaire du cluster de basculement est l'application de gestion du service de cluster de basculement Windows Server (WSFC).  
   
--   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Prerequisites](#Prerequisites)  
+-   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [Conditions préalables requises](#Prerequisites)  
   
--   **To add a dependency to a SQL Server resource, using:** [Windows Failover Cluster Manager](#WinClusManager)  
+-   **Pour ajouter une dépendance à une ressource SQL Server à l'aide du** [Gestionnaire du cluster de basculement Windows](#WinClusManager)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
