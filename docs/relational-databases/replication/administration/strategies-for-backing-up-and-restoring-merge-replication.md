@@ -19,9 +19,10 @@ caps.latest.revision: 48
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b518488e5ac42e28487f984bfd65ca196dfbe723
+ms.contentlocale: fr-fr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -64,16 +65,16 @@ ms.lasthandoff: 04/11/2017
   
  Si vous effectuez une synchronisation avec un Abonné qui exécute une version de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieure à [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l'abonnement ne peut pas être anonyme ; il doit être un abonnement client ou un abonnement serveur (qui s'appelaient « abonnement local » et « abonnement global » dans les versions antérieures).  
   
- Pour synchroniser un abonnement, consultez [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) et [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+ Pour synchroniser un abonnement, consultez [Synchroniser un abonnement par émission (push)](../../../relational-databases/replication/synchronize-a-push-subscription.md) et [Synchroniser un abonnement par extraction (pull)](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 ### <a name="reinitializing-all-subscriptions"></a>Réinitialisation de tous les abonnements  
  La réinitialisation de tous les abonnements garantit que tous les Abonnés sont dans un état cohérent avec la base de données de publication restaurée. Cette approche doit être utilisée si vous voulez replacer une topologie entière à l'état précédent représenté par une sauvegarde donnée de la base de données d'abonnement. Par exemple, vous pouvez souhaiter réinitialiser tous les abonnements si vous effectuez la restauration d'une base de données de publication à un point antérieur dans le temps, dans le but de récupérer d'une opération de traitement effectuée incorrectement.  
   
  Si vous choisissez cette option, générez un nouvel instantané en vue de la communiquer aux Abonnés réinitialisés dès la fin de la restauration de la base de données de publication.  
   
- Pour réinitialiser un abonnement, consultez [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md).  
+ Pour réinitialiser un abonnement, consultez [Réinitialiser un abonnement](../../../relational-databases/replication/reinitialize-a-subscription.md).  
   
- Pour créer et appliquer un instantané, consultez [Create et Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) et [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+ Pour créer et appliquer un instantané, consultez [Créer et appliquer l'instantané initial](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) et [Créer un instantané d'une publication de fusion avec des filtres paramétrés](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="backing-up-and-restoring-the-distribution-database"></a>Sauvegarde et restauration de la base de données de distribution  
  Avec la réplication de fusion, la base de données de distribution doit être sauvegardée régulièrement, et peut être restaurée sans considérations particulières aussi longtemps que la sauvegarde n'est pas plus ancienne que la période de rétention la plus courte de tous les abonnements qui utilisent le serveur de distribution. Par exemple, s'il y a trois publications avec des périodes de rétention de 10, 20 et 30 jours respectivement, la sauvegarde utilisée pour restaurer la base de données ne doit pas être vieille de plus de 10 jours. La base de données de distribution a un rôle limité dans la réplication de fusion : elle ne stocke aucune donnée utilisée dans le suivi des modifications et ne constitue pas un support de stockage temporaire pour les modifications de réplication de fusion destinées aux bases de données d'abonnement (comme elle le fait dans la réplication transactionnelle).  
@@ -89,7 +90,7 @@ ms.lasthandoff: 04/11/2017
   
  Pour définir la période de rétention de publication, consultez [Définir la période d’expiration des abonnements](../../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md).  
   
- Pour synchroniser un abonnement, consultez [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) et [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+ Pour synchroniser un abonnement, consultez [Synchroniser un abonnement par émission (push)](../../../relational-databases/replication/synchronize-a-push-subscription.md) et [Synchroniser un abonnement par extraction (pull)](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 ## <a name="backing-up-and-restoring-a-republishing-database"></a>Sauvegarde et restauration d'une base de données de réédition  
  Une base de données de réédition désigne une base de données qui s'abonne à des données auprès d'un éditeur et qui, à son tour, diffuse ces données à d'autres bases de données d'abonnement. Lorsque vous restaurez une base de données de réédition, suivez les recommandations données dans les sections « Sauvegarde et restauration d'une base de données de publication » et « Sauvegarde et restauration d'une base de données d'abonnement » de cette rubrique.  

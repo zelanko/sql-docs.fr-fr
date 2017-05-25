@@ -16,9 +16,10 @@ caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: cf6a2042a33da89c453c278b1beb1950bfb96e61
+ms.contentlocale: fr-fr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/11/2017
 > [!IMPORTANT]  
 >  L'indexation sémantique et de texte intégral doit être activée pour les colonnes que vous ciblez.  
   
-###  <a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
+###  <a name="HowToIdentifySimilar"></a> Exemple : rechercher les documents de niveau supérieur qui sont similaires à un autre document  
  L'exemple suivant récupère les 10 premiers candidats similaires au candidat spécifié par *@CandidateID* dans la table HumanResources.JobCandidate de l'exemple de base de données AdventureWorks2012.  
   
 ```scr  
@@ -62,7 +63,7 @@ GO
 > [!IMPORTANT]  
 >  L'indexation sémantique et de texte intégral doit être activée pour les colonnes que vous ciblez.  
   
-###  <a name="HowToSimilarPhrases"></a> Example: Find the top key phrases that are similar between documents  
+###  <a name="HowToSimilarPhrases"></a> Exemple : rechercher les expressions de niveau supérieur qui sont similaires entre des documents  
  L'exemple suivant récupère les 5 expressions clés qui ont le score de similarité le plus élevé parmi les candidats spécifiés dans la table **HumanResources.JobCandidate** de l'exemple de base de données AdventureWorks2012.  
   
 ```tsql  
