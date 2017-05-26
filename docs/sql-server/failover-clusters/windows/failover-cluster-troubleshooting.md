@@ -19,9 +19,10 @@ caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0cc4118a2cfc722ad89ca4b66a6afe403c2967d4
+ms.contentlocale: fr-fr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -92,11 +93,11 @@ Le clustering de basculement est proposé avec une sécurité intégrée pour em
  **Solution 1**: Utilisez le commutateur **/qb** à la place du commutateur **/qn** . Si vous utilisez le commutateur **/qb** , l’interface utilisateur de base s’affichera à chaque étape, ainsi que les messages d’erreur.  
   
 ### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>Problème : SQL Server ne peut pas se connecter au réseau après avoir fait l'objet d'une migration vers un autre nœud  
- **Issue 1:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service accounts are unable to contact a domain controller.  
+ **Erreur 1 :** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne sont pas en mesure de contacter un contrôleur de domaine.  
   
  **Solution 1**: dans les journaux d'événements, recherchez des signes indiquant l'existence de problèmes réseau, tels que des défaillances d'adaptateur ou des problèmes affectant le service DNS. Vérifiez que vous pouvez exécuter une commande ping sur le contrôleur de domaine.  
   
- **Issue 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account passwords are not identical on all cluster nodes, or the node does not restart a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service that has migrated from a failed node.  
+ **Erreur 2 :** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne sont pas identiques sur tous les nœuds du cluster ou le nœud ne redémarre pas un service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui a fait l'objet d'une migration depuis un nœud défaillant.  
   
  **Solution 2 :** modifiez les mots de passe des comptes de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si vous n'effectuez pas cette opération et que vous modifiez les mots de passe des comptes de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur un nœud, vous devez également modifier les mots de passe sur tous les autres nœuds. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] effectue cette opération automatiquement.  
   
@@ -126,7 +127,7 @@ Le clustering de basculement est proposé avec une sécurité intégrée pour em
   
  **Solution 2 :** utilisez NBTSTAT pour rechercher le nom en double, puis résolvez le problème.  
   
- **Issue 3:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is not connecting using Named Pipes.  
+ **Erreur 3 :** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne se connecte pas à l'aide de canaux nommés.  
   
  **Solution 3 :** pour vous connecter à l'aide de canaux nommés, créez un alias avec le Gestionnaire de configuration de SQL Server pour vous connecter à l'ordinateur approprié. Par exemple, si vous disposez d’un cluster à deux nœuds (**Node A** et **Node B**) et d’une instance de cluster de basculement (**Virtsql**) avec une instance par défaut, vous pouvez vous connecter au serveur dont la ressource de nom réseau est hors connexion, en procédant comme suit :  
   
