@@ -20,9 +20,10 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 666ad0200e8429c470772fc68110d14a7809d12a
+ms.contentlocale: fr-fr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/11/2017
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
   
--   Programmation Transact-SQL de la réplication : [Enable Updating Subscriptions for Transactional Publications](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   Programmation Transact-SQL de la réplication : [Activer les abonnements pouvant être mis à jour pour les publications transactionnelles](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
  **Pour afficher les conflits de données**  
   
@@ -81,6 +82,6 @@ ms.lasthandoff: 04/11/2017
  La détection de conflit d'après la stratégie " L'abonné gagne " signifie que la dernière transaction de l'abonné destinée à mettre à jour l'éditeur l'emporte. Dans ce cas, en cas de détection de conflit, la transaction envoyée par l'abonné est utilisée et l'éditeur est mis à jour. Cette stratégie s'adresse aux applications où de telles modifications ne compromettent pas l'intégrité des données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
+ [Abonnements pouvant être mis à jour pour la réplication transactionnelle](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

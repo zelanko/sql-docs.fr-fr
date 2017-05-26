@@ -18,9 +18,10 @@ caps.latest.revision: 5
 author: sabotta
 ms.author: carlasab
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3fa6bfbd54ce249a79bd916fae1df4fc39550e0a
+ms.contentlocale: fr-fr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -35,4 +36,4 @@ ms.lasthandoff: 04/11/2017
   
 **S’applique à :** SQL Server 2016  
   
-Pour consulter le document, téléchargez le document Word [Install SQL Server Master Data Services on an AlwaysOn Availability Group Environment](http://download.microsoft.com/download/D/A/3/DA37CE24-AF86-49C6-A9C9-6428B0795F42/Install%20SQL%20Server%20Master%20Data%20Service%20on%20an%20AlwaysOn%20Availability%20Group%20environment.docx) .   
+Pour consulter le document, téléchargez le document Word [installer SQL Server Master Data Services dans un environnement de groupe de disponibilité AlwaysOn](http://download.microsoft.com/download/D/A/3/DA37CE24-AF86-49C6-A9C9-6428B0795F42/Install%20SQL%20Server%20Master%20Data%20Service%20on%20an%20AlwaysOn%20Availability%20Group%20environment.docx)   

@@ -31,7 +31,7 @@ ms.lasthandoff: 04/11/2017
 Quand vous avez exécuté une requête dans le **Concepteur de requêtes et de vues**, vous pouvez effacer le volet Résultats. Cette procédure s’applique aux requêtes créées à l’aide de l’option **Ouvrir la vue** ou **Ouvrir la table** de l’Explorateur d’objets. Dans[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], après l’exécution d’une requête dans l’Éditeur de requête, le volet Résultats ne peut être effacé qu’en fermant la fenêtre Éditeur de requête ou en exécutant une autre requête.  
   
 > [!NOTE]  
-> Cela n'annule pas les modifications que vous avez apportées à la base de données. Pour plus d’informations sur le fonctionnement du volet des résultats, consultez [Work with Data in the Results Pane &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md).  
+> Cela n'annule pas les modifications que vous avez apportées à la base de données. Pour plus d’informations sur le fonctionnement du volet des résultats, consultez [Utiliser des données du volet de résultats &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md).  
   
 ### <a name="to-clear-query-results-of-a-view"></a>Pour effacer les résultats de requête d'une vue  
   
@@ -42,6 +42,6 @@ Quand vous avez exécuté une requête dans le **Concepteur de requêtes et de v
 ## <a name="see-also"></a>Voir aussi  
 [Exécuter des requêtes &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
 [Arrêter une requête &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/stop-a-query-visual-database-tools.md)  
-[Utiliser des données du volet de résultats &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[Utiliser des données du volet de résultats &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   
 
