@@ -112,7 +112,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  Définissez le filtrage pour l'article auquel s'effectue la jointure, qui est également connu comme l'article parent.  
   
-    -   Pour un article filtré à l'aide d'un filtre de lignes paramétrable, consultez [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+    -   Pour un article filtré à l'aide d'un filtre de lignes paramétrable, consultez [Définir et modifier un filtre de lignes paramétrable pour un article de fusion](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
     -   Pour un article filtré à l'aide d'un filtre de lignes statique, consultez [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
@@ -139,8 +139,8 @@ ms.lasthandoff: 04/11/2017
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-join_2.sql)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Join Filters](../../../relational-databases/replication/merge/join-filters.md)   
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
+ [Filtres de jointure](../../../relational-databases/replication/merge/join-filters.md)   
+ [Filtres de lignes paramétrés](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Changer les propriétés des publications et des articles](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Filtrer des données publiées en vue de la réplication de fusion](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
  [Procédure : définir et modifier un filtre de jointure entre des articles de fusion (SQL Server Management Studio)](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
