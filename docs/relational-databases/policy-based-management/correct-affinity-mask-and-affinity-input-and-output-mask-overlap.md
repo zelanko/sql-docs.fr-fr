@@ -23,7 +23,7 @@ ms.contentlocale: fr-fr
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="correct-affinity-mask-and-affinity-input-and-output-mask-overlap"></a>Correct Affinity Mask and Affinity Input and Output Mask Overlap
+# <a name="correct-affinity-mask-and-affinity-input-and-output-mask-overlap"></a>Corriger le chevauchement des options Masque d’affinité et Masque d’affinité d’E/S
   Cette règle vérifie si l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un ou plusieurs processeurs prévus pour être utilisés à la fois avec l'option affinity mask (masque d'affinité) et l'option affinity I/O mask (masque d'affinité d'E/S). Sur un ordinateur doté de plusieurs processeurs, les options affinity mask et affinity I/O mask sont utilisées pour désigner quels processeurs sont utilisés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'activation d'un processeur à la fois dans affinity mask et dans affinity I/O mask peut ralentir les performances en forçant l'utilisation excessive du processeur.  
   
 ## <a name="best-practices-recommendations"></a>Meilleures pratiques recommandées  
