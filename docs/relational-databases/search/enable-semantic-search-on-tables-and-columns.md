@@ -30,7 +30,7 @@ ms.lasthandoff: 04/11/2017
   
 ##  <a name="BasicEnabling"></a> Créer un index sémantique  
   
-###  <a name="reqenable"></a> Requirements and restrictions for creating a semantic index  
+###  <a name="reqenable"></a> Exigences et restrictions concernant la création d'un index sémantique  
   
 -   Vous pouvez créer un index sur des objets de base de données pris en charge pour l'indexation de texte intégral, notamment les tables et les vues indexées.  
   
@@ -151,7 +151,7 @@ GO
 
 ## <a name="alter-a-semantic-index"></a>Modifier un index sémantique
   
-###  <a name="addreq"></a> Requirements and restrictions for altering an existing index  
+###  <a name="addreq"></a> Exigences et restrictions concernant la modification d'un index existant  
   
 -   Vous ne pouvez pas modifier un index existant pendant que le remplissage de l'index est en cours. Pour plus d’informations sur la surveillance de la progression du remplissage d’index, consultez [Gérer et surveiller la recherche sémantique](../../relational-databases/search/manage-and-monitor-semantic-search.md).  
   
@@ -188,7 +188,7 @@ GO
  ### <a name="drop-a-semantic-index-by-using-sql-server-management-studio"></a>Supprimer un index sémantique à l'aide de SQL Server Management Studio  
  Vous pouvez modifier les colonnes activées pour l’indexation de texte intégral et sémantique dans la page **Colonnes d’index de recherche en texte intégral** de la boîte de dialogue **Propriétés d’index de recherche en texte intégral** . Pour plus d’informations, consultez [Gérer les index de recherche en texte intégral](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
   
-###  <a name="dropreq"></a> Requirements and restrictions for dropping a semantic index  
+###  <a name="dropreq"></a> Exigences et restrictions concernant la création d'un index sémantique  
   
 -   Vous ne pouvez pas supprimer l'indexation de texte intégral d'une colonne tout en conservant l'indexation sémantique. L'indexation sémantique dépend de l'indexation de texte intégral pour les résultats de ressemblance de document.  
   
@@ -277,7 +277,7 @@ GO
   
  Si le type de document que vous souhaitez indexer ne figure pas dans la liste des types pris en charge, vous devrez peut-être rechercher, télécharger et installer des filtres supplémentaires. Pour plus d’informations, consultez [View or Change Registered Filters and Word Breakers](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
-##  <a name="BestPracticeFilegroup"></a> Best practice: Consider creating a separate filegroup for the full-text and semantic indexes  
+##  <a name="BestPracticeFilegroup"></a> Meilleure pratique : créer un groupe de fichiers distinct pour les index sémantiques et de recherche en texte intégral  
  Créez un groupe de fichiers séparé pour les index sémantiques et de recherche en texte intégral si l'allocation d'espace disque pose problème. Les index sémantiques sont créés dans le même groupe de fichiers que l'index de recherche en texte intégral. Un index sémantique entièrement rempli peut contenir un grand nombre de données.  
  
 ##  <a name="IssueNoResults"></a> Problème : La recherche sur une colonne spécifique ne retourne aucun résultat  
