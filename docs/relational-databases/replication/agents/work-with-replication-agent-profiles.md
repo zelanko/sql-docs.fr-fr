@@ -19,9 +19,10 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d47140507a42084ddf60fa9c54ef6abe43c6f8b6
+ms.contentlocale: fr-fr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -173,12 +174,12 @@ ms.lasthandoff: 04/11/2017
   
 2.  Sur le serveur de distribution, exécutez [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md). Spécifiez l'identificateur de profil de l'étape 1 pour **@profile_id**. Tous les paramètres du profil sont alors retournés. Notez le nom de tous les paramètres à modifier ou à supprimer du profil.  
   
-3.  Pour modifier la valeur d’un paramètre dans un profil, exécutez [sp_change_agent_profile & #40 ; Transact-SQL &#41;](../../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md). Spécifiez l'identificateur de profil de l'étape 1 pour **@profile_id**, le nom du paramètre à changer pour **@property**, et une nouvelle valeur pour le paramètre de **@value**.  
+3.  Pour modifier la valeur d’un paramètre dans un profil, exécutez [sp_change_agent_profile &#40; Transact-SQL &#41;](../../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md). Spécifiez l'identificateur de profil de l'étape 1 pour **@profile_id**, le nom du paramètre à changer pour **@property**, et une nouvelle valeur pour le paramètre de **@value**.  
   
     > [!NOTE]  
     >  Vous ne pouvez pas modifier un profil d'agent existant pour qu'il devienne le profil par défaut d'un agent. Vous devez créer à la place un nouveau profil comme profil par défaut, comme illustré dans la procédure précédente.  
   
-4.  Pour supprimer un paramètre d’un profil, exécutez [sp_drop_agent_parameter & #40 ; Transact-SQL &#41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md). Spécifiez l'identificateur de profil de l'étape 1 pour **@profile_id** et le nom du paramètre à supprimer pour **@parameter_name**.  
+4.  Pour supprimer un paramètre d’un profil, exécutez [sp_drop_agent_parameter &#40; Transact-SQL &#41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md). Spécifiez l'identificateur de profil de l'étape 1 pour **@profile_id** et le nom du paramètre à supprimer pour **@parameter_name**.  
   
 5.  Pour ajouter un nouveau paramètre à un profil, vous devez effectuer les opérations suivantes :  
   
