@@ -27,11 +27,11 @@ ms.lasthandoff: 04/11/2017
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Forcer un cluster WSFC à démarrer sans quorum
   Cette rubrique explique comment forcer un nœud de cluster de clustering de basculement Windows Server (WSFC) à démarrer sans quorum.  Cela peut être nécessaire dans les scénarios de récupération d'urgence et de sous-réseaux multiples pour récupérer des données et pour rétablir entièrement la haute disponibilité pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et les instances de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   **Before you start:**  [Recommendations](#Recommendations), [Security](#Security)  
+-   **Avant de commencer :**  [Recommandations](#Recommendations), [Sécurité](#Security)  
   
--   **To force a cluster to start without a quorum using:**  [Using Failover Cluster Manager](#FailoverClusterManagerProcedure), [Using Powershell](#PowerShellProcedure), [Using Net.exe](#CommandPromptProcedure)  
+-   **Pour forcer un cluster à démarrer sans quorum :**  [Gestionnaire du Cluster de basculement à l’aide de](#FailoverClusterManagerProcedure), [à l’aide de Powershell](#PowerShellProcedure), [à l’aide de Net.exe](#CommandPromptProcedure)  
   
--   **Follow up:**  [Follow Up: After Forcing Cluster to Start without a Quorum](#FollowUp)  
+-   **Suivi :**  [Suivi : après avoir forcé le cluster à démarrer sans quorum](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
