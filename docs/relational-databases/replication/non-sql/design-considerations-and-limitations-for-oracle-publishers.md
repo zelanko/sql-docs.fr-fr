@@ -153,7 +153,7 @@ ms.lasthandoff: 04/11/2017
   
 -   Le compte utilisé par l'Agent d'instantané et l'Agent de lecture du journal pour connecter le serveur de distribution au serveur de publication est spécifié à l'aide de l'une des méthodes suivantes :  
   
-    -   Le paramètre  **@security_mode**  de [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) (vous spécifiez également les valeurs de  **@login**  et ** @password ** si l’authentification Oracle est utilisée)  
+    -   Le paramètre  **@security_mode**  de [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) (vous spécifiez également les valeurs de  **@login**  et  **@password**  si l’authentification Oracle est utilisée)  
   
     -   Dans la boîte de dialogue **Se connecter au serveur** de SQL Server Management Studio, que vous utilisez lorsque vous configurez le serveur de publication Oracle sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
