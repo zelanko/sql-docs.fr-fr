@@ -42,7 +42,7 @@ La clause FOR JSON PATH utilise l’alias de colonne ou le nom de colonne pour d
 
  **Requête**  
   
-```tsql  
+```sql  
 SELECT TOP 5   
        BusinessEntityID As Id,  
        FirstName, LastName,  
@@ -93,7 +93,7 @@ SELECT TOP 5
   
  **Requête**  
   
-```tsql  
+```sql  
 SELECT TOP 2 SalesOrderNumber AS 'Order.Number',  
         OrderDate AS 'Order.Date',  
         UnitPrice AS 'Product.Price',  

@@ -48,7 +48,7 @@ Chaque propriété de l’objet JSON, ou chaque élément du tableau, est retour
 L’exemple ci-dessous utilise **OPENJSON** avec le schéma par défaut et retourne une ligne pour chaque propriété de l’objet JSON.  
  
 **Exemple**
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 
 SET @json='{"name":"John","surname":"Doe","age":45,"skills":["SQL","C#","MVC"]}';
@@ -80,7 +80,7 @@ Voici un exemple rapide qui utilise **OPENJSON** avec un schéma pour les résul
   
 **Exemple**
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 SET @json =   
   N'[  

@@ -72,7 +72,7 @@ ms.lasthandoff: 04/11/2017
   
  **Requête**  
   
-```tsql  
+```sql  
 SELECT TOP 5   
        BusinessEntityID As Id,  
        FirstName, LastName,  
