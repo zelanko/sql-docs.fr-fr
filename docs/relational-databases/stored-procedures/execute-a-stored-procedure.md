@@ -24,13 +24,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c1e76212425f01aba20c8a0d0fdb548415559be1
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: 75e4f9647c7d19c82fd74caa15775fc3d8a97b12
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="execute-a-stored-procedure"></a>Exécuter une procédure stockée
+
+ > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Exécuter une procédure stockée](https://msdn.microsoft.com/en-US/library/ms189915(SQL.120).aspx).
+
   Cette rubrique explique comment exécuter une procédure stockée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Il existe deux façons différentes d'exécuter une procédure stockée. La première approche, et aussi la plus courante, est qu'une application ou un utilisateur appelle la procédure. La deuxième méthode consiste à définir la procédure pour qu'elle s'exécute automatiquement lorsqu'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] démarre. Lorsqu'une procédure est appelée par une application ou un utilisateur, le mot clé [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE ou EXEC est explicitement établi dans l'appel. Sinon, la procédure peut être appelée et exécutée sans le mot clé si elle est la première instruction dans le traitement [!INCLUDE[tsql](../../includes/tsql-md.md)] .  

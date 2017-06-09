@@ -1,7 +1,7 @@
 ---
 title: "Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server | Microsoft Docs"
 ms.custom: 
-ms.date: 05/13/2016
+ms.date: 05/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -28,18 +28,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fb4cb189914d6636b76816490e9d38f9f4240101
+ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
+ms.openlocfilehash: 5849c0c3d38756795a7aef83b04e95eb0ffcc305
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Les systèmes de pare-feu empêchent les accès non autorisés aux ressources de l'ordinateur. Si un pare-feu est activé alors qu'il n'est pas configuré correctement, les tentatives de connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être bloquées.  
+ > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](https://msdn.microsoft.com/en-US/library/cc646023(SQL.120).aspx).
+
+Les systèmes de pare-feu empêchent les accès non autorisés aux ressources de l'ordinateur. Si un pare-feu est activé alors qu'il n'est pas configuré correctement, les tentatives de connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être bloquées.  
   
- Pour accéder à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais d'un pare-feu, vous devez configurer le pare-feu sur l'ordinateur exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour autoriser l'accès. Le pare-feu est un composant de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Vous pouvez également installer un pare-feu d'une autre société. Cette rubrique explique comment configurer le Pare-feu Windows, mais les principes de base s'appliquent à d'autres programmes de pare-feu.  
+Pour accéder à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais d’un pare-feu, vous devez configurer le pare-feu sur l’ordinateur exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le pare-feu est un composant de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Vous pouvez également installer un pare-feu d'une autre société. Cette rubrique explique comment configurer le Pare-feu Windows, mais les principes de base s'appliquent à d'autres programmes de pare-feu.  
   
 > [!NOTE]  
 >  Cette rubrique fournit une vue d'ensemble de la configuration du pare-feu et résume les informations présentant un intérêt pour un administrateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d'informations sur le pare-feu et pour des informations rigoureuses sur le pare-feu, consultez la documentation de pare-feu, par exemple [Pare-feu Windows avec fonctions avancées de sécurité et IPsec](http://go.microsoft.com/fwlink/?LinkID=116904).  
@@ -51,35 +53,6 @@ ms.lasthandoff: 04/11/2017
 -   [Configurer le pare-feu Windows pour autoriser l'accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
 -   [Configurer un pare-feu pour accéder au serveur de rapports](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
-  
-## <a name="in-this-topic"></a>Dans cette rubrique  
- Cette rubrique contient les sections suivantes :  
-  
- [Informations de base sur le pare-feu](#BKMK_basic)  
-  
- [Paramètres du pare-feu par défaut](#BKMK_default)  
-  
- [Programmes pour configurer le pare-feu](#BKMK_programs)  
-  
- [Ports utilisés par le moteur de base de données](#BKMK_ssde)  
-  
- [Ports utilisés par Analysis Services](#BKMK_ssas)  
-  
- [Ports utilisés par Reporting Services](#BKMK_ssrs)  
-  
- [Ports utilisés par Integration Services](#BKMK_ssis)  
-  
- [Ports et services supplémentaires](#BKMK_additional_ports)  
-  
- [Interaction avec d'autres règles de pare-feu](#BKMK_other_rules)  
-  
- [Vue d'ensemble des profils de pare-feu](#BKMK_profiles)  
-  
- [Paramètres de pare-feu supplémentaires utilisant l'élément Pare-feu Windows dans le Panneau de configuration](#BKMK_additional_settings)  
-  
- [Utilisation du composant logiciel enfichable Pare-feu Windows avec fonctions avancées de sécurité](#BKMK_WF_msc)  
-  
- [Résolution des problèmes liés aux paramètres du pare-feu](#BKMK_troubleshooting)  
   
 ##  <a name="BKMK_basic"></a> Informations de base sur le pare-feu  
  Les pare-feu fonctionnent en examinant les paquets entrants, et en les comparant à un jeu de règles. Si les règles autorisent le paquet, le pare-feu passe le paquet au protocole TCP/IP pour traitement supplémentaire. Si les règles n'autorisent pas le paquet, le pare-feu ignore le paquet et, si la journalisation est activée, crée une entrée dans le fichier journal du pare-feu.  
@@ -105,34 +78,9 @@ ms.lasthandoff: 04/11/2017
 >  L'activation du pare-feu affectera d'autres programmes qui accèdent à cet ordinateur, comme le partage de fichiers et d'imprimantes, ainsi que les connexions Bureau à distance. Les administrateurs doivent tenir compte de toutes les applications qui s'exécutent sur l'ordinateur avant de définir les paramètres du pare-feu.  
   
 ##  <a name="BKMK_programs"></a> Programmes pour configurer le pare-feu  
- Il existe trois façons de configurer les paramètres du Pare-feu Windows.  
-  
--   **Élément du Pare-feu Windows dans le Panneau de configuration**  
-  
-     Le composant **Pare-feu Windows** peut être ouvert à partir du Panneau de configuration.  
-  
-    > [!IMPORTANT]  
-    >  Les modifications effectuées dans le **Pare-feu Windows** dans le Panneau de configuration affectent seulement le profil actuel. Les appareils mobiles, par exemple un ordinateur portable, ne doivent pas utiliser le **Pare-feu Windows** dans le Panneau de configuration car le profil peut changer lorsqu'il est connecté dans une configuration différente. Le profil configuré précédemment ne sera alors pas appliqué. Pour plus d'informations sur les profils, consultez le [Guide de prise en main du Pare-feu Windows avec fonctions avancées de sécurité](http://go.microsoft.com/fwlink/?LinkId=116080).  
-  
-     L'élément **Pare-feu Windows** dans le Panneau de configuration vous permet de configurer des options de base. Ces options en question sont les suivantes :  
-  
-    -   Activation ou désactivation du **Pare-feu Windows** dans le Panneau de configuration  
-  
-    -   Règles d'activation et de désactivation  
-  
-    -   Octroi d'exceptions pour les ports et les programmes  
-  
-    -   Définition de restrictions d'étendue  
-  
-     L'option **Pare-feu Windows** du Panneau de configuration est très appropriée pour les utilisateurs qui ne sont pas familiarisés avec la configuration du pare-feu, et qui configurent les options de base du pare-feu de base pour les ordinateurs qui ne sont pas mobiles. Vous pouvez également ouvrir le **Pare-feu Windows** dans le Panneau de configuration à partir de la commande **run** en utilisant la procédure suivante :  
-  
-    #### <a name="to-open-the-windows-firewall-item"></a>Pour ouvrir le Pare-feu Windows  
-  
-    1.  Dans le menu **Démarrer** , cliquez sur **Exécuter**, puis tapez `firewall.cpl`.  
-  
-    2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
--   **Microsoft Management Console (MMC)**  
+Configurez les paramètres du Pare-feu Windows avec **Microsoft Management Console** ou **netsh**.  
+
+-  **Microsoft Management Console (MMC)**  
   
      Le composant logiciel enfichable MMC du Pare-feu Windows avec fonctions avancées de sécurité vous permet de configurer des paramètres du pare-feu plus avancés. Ce composant logiciel enfichable présente la plupart des options de pare-feu de façon simple et expose tous les profils de pare-feu. Pour plus d’informations, consultez [Utilisation du composant logiciel Pare-feu Windows avec fonctions avancées de sécurité](#BKMK_WF_msc) , plus loin dans cette rubrique.  
   
@@ -185,18 +133,29 @@ ms.lasthandoff: 04/11/2017
   
  L’alternative à la configuration d’une instance nommée pour l’écoute sur un port fixe est de créer une exception dans le pare-feu pour un programme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tel que **sqlservr.exe** (pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)]). Cette approche peut être pratique, mais le numéro de port n’apparaît pas dans la colonne **Port local** de la page **Règles de trafic entrant** quand vous utilisez le composant logiciel enfichable MMC du Pare-feu Windows avec fonctions avancées de sécurité. Cela peut rendre plus difficile le fait d'auditer quels ports sont ouverts. Un autre élément à prendre en compte est qu’un Service Pack ou une mise à jour cumulative peut modifier le chemin vers le fichier exécutable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ce qui risque d’invalider la règle de pare-feu.  
   
-> [!NOTE]  
->  La procédure suivante utilise l'élément **Pare-feu Windows** dans le Panneau de configuration. Le composant logiciel enfichable MMC du Pare-feu Windows avec fonctions avancées de sécurité peut configurer une règle plus complexe. Cela inclut la configuration d'une exception de service qui peut être utile pour assurer une défense en profondeur. Consultez ci-dessous [Utilisation du composant logiciel enfichable Pare-feu Windows avec fonctions avancées de sécurité](#BKMK_WF_msc) .  
+##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-firewall-with-advanced-security"></a>Pour ajouter une exception de programme au pare-feu à l’aide du Pare-feu Windows avec fonctions avancées de sécurité
   
-###### <a name="to-add-a-program-exception-to-the-firewall-using-the-windows-firewall-item-in-control-panel"></a>Pour ajouter une exception de programme au pare-feu à l'aide de l'élément Pare-feu Windows du Panneau de configuration.  
-  
-1.  Sous l'onglet **Exceptions** de l'élément du **Pare-feu Windows** dans Panneau de configuration, cliquez sur **Ajouter un programme**.  
-  
-2.  Accédez à l’emplacement de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous souhaitez autoriser via le pare-feu, par exemple **C:\Program Files\Microsoft SQL Server\MSSQL13.<nom_instance>\MSSQL\Binn**, sélectionnez **sqlservr.exe**, puis cliquez sur **Ouvrir**.  
-  
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
- Pour plus d’informations sur les points de terminaison, consultez [Configurer le moteur de base de données de manière à écouter sur plusieurs ports TCP](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) et [Affichages catalogue de points de terminaison &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md).  
+1. Dans le menu Démarrer, tapez *wf.msc*. Cliquez sur **Pare-feu Windows avec fonctions avancées de sécurité**.
+
+1. Dans le volet gauche, cliquez sur **Règles de trafic entrant**.
+
+1. Dans le volet droit, sous **Actions**, cliquez sur **Nouvelle règle**. L’**Assistant Nouvelle règle de trafic entrant** s’ouvre.
+
+1. Dans **Type de règle**, cliquez sur **Programme**. Cliquez sur **Suivant**.
+
+1. Dans **Programme**, cliquez sur **Ce chemin d’accès de programme**. Cliquez sur **Parcourir** pour localiser votre instance de SQL Server. Le programme se nomme sqlservr.exe. Il se trouve normalement à l’emplacement suivant :
+
+   `C:\Program Files\Microsoft SQL Server\MSSQL13.<InstanceName>\MSSQL\Binn\sqlservr.exe`
+
+   Cliquez sur **Suivant**.
+
+1. Dans **Action**, cliquez sur **Autoriser la connexion**.  
+
+1. Dans Profil, incluez les trois profils. Cliquez sur **Suivant**.
+
+1. Dans **Nom**, tapez un nom pour la règle. Cliquez sur **Terminer**.
+
+Pour plus d’informations sur les points de terminaison, consultez [Configurer le moteur de base de données de manière à écouter sur plusieurs ports TCP](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) et [Affichages catalogue de points de terminaison &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md). 
   
 ###  <a name="BKMK_ssas"></a> Ports utilisés par Analysis Services  
  Le tableau suivant répertorie les ports qui sont fréquemment utilisés par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -213,14 +172,14 @@ ms.lasthandoff: 04/11/2017
  Pour obtenir des instructions détaillées sur la manière de configurer le Pare-feu Windows pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 ###  <a name="BKMK_ssrs"></a> Ports utilisés par Reporting Services  
- Le tableau suivant répertorie les ports qui sont fréquemment utilisés par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+Le tableau suivant répertorie les ports qui sont fréquemment utilisés par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 |Fonctionnalité|Port|Commentaires|  
 |-------------|----------|--------------|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Services Web|Port TCP 80|Utilisé pour une connexion HTTP à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] via une URL. Nous vous recommandons de ne pas utiliser la règle préconfigurée **Services World Wide Web (HTTP)**. Pour plus d'informations, consultez ci-dessous la section [Interaction avec d'autres règles de pare-feu](#BKMK_other_rules) .|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuré pour une utilisation via HTTPS|Port TCP 443|Utilisé pour une connexion HTTPS via une URL. HTTPS est une connexion HTTP qui utilise SSL (Secure Sockets Layer). Nous vous recommandons de ne pas utiliser la règle préconfigurée **Services World Wide Web sécurisés (HTTPS)**. Pour plus d'informations, consultez ci-dessous la section [Interaction avec d'autres règles de pare-feu](#BKMK_other_rules) .|  
   
- Lorsque [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se connecte à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous devez également ouvrir les ports appropriés pour ces services. Pour obtenir des instructions détaillées sur la manière de configurer le Pare-feu Windows pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Configurer un pare-feu pour accéder au serveur de rapports](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
+Lorsque [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se connecte à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous devez également ouvrir les ports appropriés pour ces services. Pour obtenir des instructions détaillées sur la manière de configurer le Pare-feu Windows pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Configurer un pare-feu pour accéder au serveur de rapports](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
 ###  <a name="BKMK_ssis"></a> Ports utilisés par Integration Services  
  Le tableau suivant répertorie les ports qui sont utilisés par le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -229,10 +188,10 @@ ms.lasthandoff: 04/11/2017
 |-------------|----------|--------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Appels de procédure distante (MS RPC)<br /><br /> Utilisé par le runtime [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|Port TCP 135<br /><br /> Consultez [Considérations spéciales relatives au port 135](#BKMK_port_135)|Le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise DCOM sur le port 135. Le Gestionnaire de contrôle des services utilise le port 135 pour effectuer des tâches telles que le démarrage et l'arrêt du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ainsi que la transmission des demandes de contrôle au service en exécution. Le numéro de port ne peut pas être modifié.<br /><br /> Ce port ne doit être ouvert que si vous vous connectez à une instance distante du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à partir de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou d'une application personnalisée.|  
   
- Pour obtenir des instructions pas à pas pour configurer le Pare-feu Windows pour [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consultez [Service Integration Services &#40;service SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
+Pour obtenir des instructions pas à pas pour configurer le Pare-feu Windows pour [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consultez [Service Integration Services &#40;service SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
   
 ###  <a name="BKMK_additional_ports"></a> Ports et services supplémentaires  
- Le tableau suivant répertorie les ports et services dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut dépendre.  
+Le tableau suivant répertorie les ports et services dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut dépendre.  
   
 |Scénario|Port|Commentaires|  
 |--------------|----------|--------------|  
@@ -289,7 +248,7 @@ ms.lasthandoff: 04/11/2017
 > [!NOTE]  
 >  L’utilisation de l’élément **Pare-feu Windows** dans le Panneau de configuration configure seulement le profil de pare-feu actuel.  
   
-#### <a name="to-change-the-scope-of-a-firewall-exception-using-the-windows-firewall-item-in-control-panel"></a>Pour modifier l'étendue d'une exception de pare-feu à l'aide de l'élément Pare-feu Windows dans le Panneau de configuration  
+### <a name="to-change-the-scope-of-a-firewall-exception-using-the-windows-firewall-item-in-control-panel"></a>Pour modifier l'étendue d'une exception de pare-feu à l'aide de l'élément Pare-feu Windows dans le Panneau de configuration  
   
 1.  Dans **Pare-feu Windows** du Panneau de configuration, sélectionnez un programme ou un port sous l'onglet **Exceptions** , puis cliquez sur **Propriétés** ou **Modifier**.  
   
@@ -328,7 +287,7 @@ ms.lasthandoff: 04/11/2017
   
 -   Présence nécessaire d'IPsec pour les connexions entrantes  
   
-#### <a name="to-create-a-new-firewall-rule-using-the-new-rule-wizard"></a>Pour créer une règle de pare-feu à l'aide de l'Assistant Nouvelle règle  
+### <a name="to-create-a-new-firewall-rule-using-the-new-rule-wizard"></a>Pour créer une règle de pare-feu à l'aide de l'Assistant Nouvelle règle  
   
 1.  Dans le menu Démarrer, cliquez sur **Exécuter**, tapez **WF.msc**, puis cliquez sur **OK**.  
   
@@ -351,7 +310,7 @@ ms.lasthandoff: 04/11/2017
   
     2.  À l’invite de commandes, tapez **netstat -n -a**.  
   
-         Le commutateur **-n** demande à **netstat** d’afficher l’adresse numérique et le numéro de port des connexions TCP actives. Le commutateur **-a** demande à **netstat** d’afficher les ports TCP et UDP écoutés par l’ordinateur.  
+         Le commutateur **-n** fait en sorte que **netstat** affiche l’adresse et le numéro de port des connexions TCP actives. Le commutateur **-a** demande à **netstat** d’afficher les ports TCP et UDP écoutés par l’ordinateur.  
   
 -   L’utilitaire **PortQry** peut être utilisé pour signaler l’état des ports TCP/IP comme à l’écoute, pas à l’écoute ou filtré. (Lorsque l'état est filtré, le port peut être à l'écoute ou non ; cet état indique que l'utilitaire n'a pas reçu de réponse du port.) l’utilitaire **PortQry** peut être téléchargé à partir du [Centre de téléchargement Microsoft](http://go.microsoft.com/fwlink/?LinkId=28590).  
   

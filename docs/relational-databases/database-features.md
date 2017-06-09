@@ -1,7 +1,7 @@
 ---
 title: "Fonctionnalités de base de données | Microsoft Docs"
 ms.custom: 
-ms.date: 03/15/2017
+ms.date: 05/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,49 +15,23 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f00c5db3574f21010e682f964d06f3c2b61a1d09
-ms.openlocfilehash: ece9880006acba925cd10acf8d17e96be8607d84
+ms.sourcegitcommit: 137216ed7cf120a8a53fe00b5f1111c9b013c2c9
+ms.openlocfilehash: 54aaac5cb67f00547ea785df9371fb2395f297e7
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 06/05/2017
 
 ---
-# <a name="database-features"></a>Fonctionnalités de base de données
-  Cette section contient les fonctionnalités et les tâches associées aux bases de données, aux objets de base de données, aux types de données, ainsi que les mécanismes pour utiliser ou pour gérer des données.  
+# <a name="database-features"></a>Fonctionnalités de base de données  
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
+
+  Cette section contient les fonctionnalités et les tâches associées aux bases de données, aux objets de base de données, aux types de données, ainsi que les mécanismes pour utiliser ou pour gérer des données. Ces informations sont communes à la plupart des versions du [!INCLUDE[ssdenoversion_md](../includes/ssdenoversion_md.md)]. Les rubriques peuvent indiquer que certaines fonctionnalités sont limitées à certaines plateformes. Pour plus d’informations sur une plateforme spécifique, consultez les liens suivants : 
   
-## <a name="in-this-section"></a>Dans cette section  
-  
-[Sauvegarde et restauration des bases de données SQL Server](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
-[Données d’objet BLOB &#40;Binary Large Object&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
-[Importation et exportation en bloc de données](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)  
-[Curseurs](../relational-databases/cursors.md)    
-[Bases de données](../relational-databases/databases/databases.md)  
-[Points de contrôle de base de données](../relational-databases/logs/database-checkpoints-sql-server.md)  
-[Compression de données](../relational-databases/data-compression/data-compression.md)    
-[Applications de la couche Données](../relational-databases/data-tier-applications/data-tier-applications.md)  
-[Déclencheurs DDL](../relational-databases/triggers/ddl-triggers.md)  
-[Déclencheurs DML](../relational-databases/triggers/dml-triggers.md)  
-[Notifications d'événements](../relational-databases/service-broker/event-notifications.md)  
-[Recherche en texte intégral](../relational-databases/search/full-text-search.md)  
-[OLTP en mémoire &#40;optimisation en mémoire&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-[Index](../relational-databases/indexes/indexes.md)  
-[Données JSON](../relational-databases/json/json-data-sql-server.md)    
-[Surveiller et régler les performances](../relational-databases/performance/monitor-and-tune-for-performance.md)  
-[Objets OLE Automation dans Transact-SQL](../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md)  
-[Tables et index partitionnés](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
-[Repères de plan](../relational-databases/performance/plan-guides.md)  
-[PolyBase](../relational-databases/polybase/polybase-guide.md)  
-[Recherche sémantique](../relational-databases/search/semantic-search-sql-server.md)  
-[Numéros de séquence](../relational-databases/sequence-numbers/sequence-numbers.md)  
-[Données spatiales](../relational-databases/spatial/spatial-data-sql-server.md)  
-[Statistiques](../relational-databases/statistics/statistics.md)  
-[Procédures stockées &#40;moteur de base de données &#41;](../relational-databases/stored-procedures/stored-procedures-database-engine.md)  
-[Stretch Database](../sql-server/stretch-database/stretch-database.md)  
-[Synonymes &#40;moteur de base de données &#41;](../relational-databases/synonyms/synonyms-database-engine.md)  
-[Tables](../relational-databases/tables/tables.md)  
-[Tables temporelles](../relational-databases/tables/temporal-tables.md)  
-[Journal des transactions](../relational-databases/logs/the-transaction-log-sql-server.md)  
-[Fonctions définies par l'utilisateur](../relational-databases/user-defined-functions/user-defined-functions.md)  
-[Vues](../relational-databases/views/views.md)  
-[Données XML](../relational-databases/xml/xml-data-sql-server.md)  
+- [SQL Server local](../database-engine/sql-server-database-engine-backward-compatibility.md) et [Configuration de SQL Server](../database-engine/configure-windows/sql-server-database-engine.md)  
+- [Documentation de SQL Server sur Linux](../linux/sql-server-linux-overview.md)  
+- [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)  
+- [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/)  
+- [Parallel Data Warehouse](https://www.microsoft.com/en-us/download/details.aspx?id=51610)  
+
   
   
+

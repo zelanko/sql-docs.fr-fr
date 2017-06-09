@@ -28,7 +28,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c16383cadde524f23f8a6b94a14c282666856780
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtres paramétrés - Filtres de lignes paramétrés
@@ -104,14 +104,14 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
  Utilisez l'une des méthodes suivantes pour substituer la valeur de HOST_NAME() :  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: specify a value on the **HOST\_NAME\(\) Values** page of the New Subscription Wizard. For more information about creating subscriptions, see [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md).  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] : spécifiez une valeur dans la page **Valeurs de HOST\_NAME\(\)** de l’Assistant Nouvel abonnement. Pour plus d’informations sur la création d’abonnements, consultez [S’abonner à des publications](../../../relational-databases/replication/subscribe-to-publications.md).  
   
 -   Programmation [!INCLUDE[tsql](../../../includes/tsql-md.md)] de réplication : spécifiez une valeur pour le paramètre **@hostname** de [sp_addmergesubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) (pour les abonnements par émission de données) ou de [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (pour les abonnements par extraction).  
   
 -   Agent de fusion : spécifiez une valeur pour le paramètre **-Hostname** dans la ligne de commande ou par l’intermédiaire d’un profil d’Agent. Pour plus d'informations sur l'Agent de fusion, consultez [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md). Pour plus d'informations sur les profils d'Agent, consultez [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
 ## <a name="initializing-a-subscription-to-a-publication-with-parameterized-filters"></a>Initialisation d'un abonnement à une publication avec des filtres paramétrés  
- Lorsque vous utilisez des filtres de lignes paramétrés dans les publications de fusion, la réplication initialise chaque abonnement avec un instantané en deux parties. Pour plus d’informations, voir [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+ Lorsque vous utilisez des filtres de lignes paramétrés dans les publications de fusion, la réplication initialise chaque abonnement avec un instantané en deux parties. Pour plus d’informations, voir [Instantanés des publications de fusion avec des filtres paramétrés](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
   
 ## <a name="using-the-appropriate-filtering-options"></a>Utilisation des options de filtrage appropriées  
  Vous contrôlez essentiellement deux processus lorsque vous utilisez les filtres paramétrés :  
