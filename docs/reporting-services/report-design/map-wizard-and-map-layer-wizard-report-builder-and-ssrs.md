@@ -1,34 +1,39 @@
 ---
-title: "Assistant Carte et Assistant Couche (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.mapandlayerwizard.f1"
-  - "10542"
-  - "MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME"
+title: "Assistant carte et Assistant couche (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- sql13.rtp.rptdesigner.mapandlayerwizard.f1
+- "10542"
+- MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 8eb09925e1f1b1e1f79cc9e9b7e3fdd56d7ed165
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Assistant Carte et Assistant Couche (G&#233;n&#233;rateur de rapports et SSRS)
- Dans les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], l’Assistant Carte et l’Assistant Couche automatisent la tâche de création d’une carte, d’ajout d’une couche ou de modification des options de couche sur une couche existante.  
+# <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Assistant Carte et Assistant Couche (Générateur de rapports et SSRS)
+ Dans les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , l’Assistant Carte et l’Assistant Couche automatisent la tâche de création d’une carte, d’ajout d’une couche ou de modification des options de couche sur une couche existante.  
   
  Avant d’ajouter une carte à un rapport ou une couche à une carte, recueillez les informations suivantes :  
   
 -   **Source de données spatiales.** Emplacement ou connexion à une source qui fournit des données spatiales, par exemple le nom d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et d’une base de données contenant des données spatiales, ou celui d’un fichier de forme ESRI (Environmental Systems Research Institute)  
   
--   **.** Champ de la source de données spatiales contenant des jeux de coordonnées qui spécifient des emplacements.  
+-   **Spatial data.** Champ de la source de données spatiales contenant des jeux de coordonnées qui spécifient des emplacements.  
   
 -   **Données analytiques.** Données analytiques utilisées pour modifier l'affichage du carte, par exemple, les chiffres de ventes annuels des magasins.  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 11
   
     -   Choisir la visualisation de la carte : Points  
   
-4.  Choisir une connexion à une source de données avec choix de la visualisation de la carte : points. Choisissez une connexion à une source de données ou créez-en une à une source de données externe qui contient des données analytiques à afficher sur la carte.  
+4.  Choisir une connexion à une source de données avec choix de la visualisation de la carte : points. Choisissez une connexion à une source de données ou créez-en une à une source de données externe qui contient des données analytiques à afficher sur la carte.  
   
 5.  Créer une requête. Générez une requête qui spécifie les données analytiques.  
   
@@ -90,11 +95,11 @@ caps.handback.revision: 11
   
     -   [Qu'est-ce qu'un champ de correspondance ?](#MatchFields)  
   
-8.  [Choisir un thème de couleurs et une visualisation des données](#ThemeandVisualization). Pour spécifier comment visualiser vos données sur l'arrière-plan de la carte, spécifiez le thème de la carte, les champs à visualiser et les éléments à varier : couleur, taille ou type de marqueur.  
+8.  [Choisir un thème de couleurs et une visualisation des données](#ThemeandVisualization). Pour spécifier comment visualiser vos données sur l'arrière-plan de la carte, spécifiez le thème de la carte, les champs à visualiser et les éléments à varier : couleur, taille ou type de marqueur.  
   
-    -   [Quelle est la fonction du thème ?](#Theme)  
+    -   [Quelle est la fonction du thème ?](#Theme)  
   
-    -   [À quoi servent les légendes et les échelles dans l'aperçu de la carte ?](#Legends)  
+    -   [À quoi servent les légendes et les échelles dans l'aperçu de la carte ?](#Legends)  
   
     -   [Qu'est-ce que des règles ?](#Rules)  
   
@@ -112,7 +117,7 @@ caps.handback.revision: 11
   
  Pour plus d'informations, consultez la documentation pour le type de données spatiales que vous utilisez.  
   
-###  <a name="MapGallery"></a> Qu'est-ce que la bibliothèque de cartes ?  
+###  <a name="MapGallery"></a>Nouveautés de la bibliothèque de cartes ?  
  La bibliothèque de cartes contient des cartes de rapports stockés dans le dossier Bibliothèque de cartes pour l'environnement de création de rapports. Les cartes de la bibliothèque fournissent un point de départ pratique pour ajouter rapidement une carte à votre rapport. Les cartes prédéfinies de la bibliothèque sont fournies par un fournisseur de cartes.  
   
 > [!NOTE]  
@@ -120,8 +125,8 @@ caps.handback.revision: 11
   
  Pour étendre la bibliothèque de cartes, vous pouvez ajouter ou supprimer des rapports du répertoire de la bibliothèque de cartes et ajouter des dossiers pour organiser les cartes. Pour plus d’informations, consultez [Cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
-###  <a name="Shapefile"></a> Qu'est-ce qu'un fichier de forme ESRI ?  
- Un fichier de forme ESRI est un ensemble de fichiers contenant des données conformes au format de données spatiales de l'ESRI . Le jeu de fichiers inclut en général le fichier *\<nom_fichier>*.shp qui contient les données spatiales, ainsi qu’un fichier de support, *\<nom_fichier>*.dbf.  
+###  <a name="Shapefile"></a>Qu’est un fichier de forme ESRI ?  
+ Un fichier de forme ESRI est un ensemble de fichiers contenant des données conformes au format de données spatiales de l'ESRI . L’ensemble de fichiers inclut généralement la  *\<filename >*fichier .shp qui contient les données spatiales et un fichier de support, * \<filename >*.dbf.  
   
  Lorsque vous spécifiez un fichier de forme en tant que source de données spatiales et que ce fichier se trouve sur votre ordinateur local, les données spatiales sont incorporées automatiquement dans le rapport. Pour utiliser dynamiquement des données spatiales d'un fichier ESRI, vous devez effectuer les opérations suivantes :  
   
@@ -130,13 +135,13 @@ caps.handback.revision: 11
  Dans le Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ajoutez le fichier .shp et le fichier .dbf au projet de rapport, puis spécifiez le nom du fichier .shp comme source de données spatiales.  
   
 ###  <a name="GetShapefiles"></a> Où puis-je obtenir des fichiers de forme ESRI ?  
- Les fichiers de forme ESRI sont disponibles sur le Web. Pour plus d’informations, consultez [Find ESRI Shapefiles for a SQL Server 2008 R2 Reporting Services Map (SSRS)](http://go.microsoft.com/fwlink/?linkid=178814) (Rechercher des fichiers de forme ESRI pour une carte SQL Server 2008 R2 Reporting Services).  
+ Les fichiers de forme ESRI sont disponibles sur le Web. Pour plus d’informations, consultez [Find ESRI Shapefiles for a SQL Server 2008 R2 Reporting Services Map (SSRS)](http://go.microsoft.com/fwlink/?linkid=178814)(Rechercher des fichiers de forme ESRI pour une carte SQL Server 2008 R2 Reporting Services).  
   
 ###  <a name="SqlServerSpatial"></a> Qu'est-ce qu'une requête spatiale SQL Server ?  
  Une requête spatiale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est une requête de dataset qui spécifie des données de type SQLGeometry ou SQLGeography d'une base de données relationnelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  Lorsque vous définissez une source de données dans l'Assistant, vous remarquerez que la page Créer une requête contient différents concepteurs de requêtes, selon le type de la source de données à laquelle vous vous connectez. Pour plus d’informations, consultez [Concepteurs de requêtes &#40;Générateur de rapports&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md).  
+>  Lorsque vous définissez une source de données dans l'Assistant, vous remarquerez que la page Créer une requête contient différents concepteurs de requêtes, selon le type de la source de données à laquelle vous vous connectez. Pour plus d’informations, consultez [Concepteurs de requêtes &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
   
  Lorsque vous exécutez la requête dans le concepteur de requêtes, le jeu de résultats affiche une colonne avec des données spatiales affichées sous forme de texte. Par exemple, une ligne peut contenir des données spatiales qui sont un point unique et la ligne suivante peut contenir des données spatiales qui définissent un jeu de points. Chaque ligne devient un élément cartographique. Vous pouvez varier l'affichage de chaque élément cartographique en tant qu'unité indivisible.  
   
@@ -185,7 +190,7 @@ caps.handback.revision: 11
   
 -   **Hybride.** Affichez la combinaison des vues **Route** et **Aérien** .  
   
- Pour plus d'informations sur les mosaïques, consultez le [système de mosaïques Bing](http://go.microsoft.com/fwlink/?LinkId=147315). Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](http://go.microsoft.com/fwlink/?LinkId=151371) et [Déclaration de confidentialité](http://go.microsoft.com/fwlink/?LinkId=151372)(éventuellement en anglais).  
+ Pour plus d'informations sur les mosaïques, consultez le [système de mosaïques Bing](http://go.microsoft.com/fwlink/?LinkId=147315). Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](http://go.microsoft.com/fwlink/?LinkId=151371).  
   
  Pour afficher un arrière-plan de mosaïques en mode Création, vous devez disposer d'un accès Internet. Pour afficher l'arrière-plan de mosaïques dans l'aperçu d'un rapport sur un serveur de rapports, le serveur de rapports doit être configuré pour prendre en charge les mosaïques Bing. Pour plus d’informations, consultez [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) et [Planifier un rapport cartographique](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   
@@ -210,7 +215,7 @@ caps.handback.revision: 11
   
  Pour afficher vos données de rapport ou toutes autres données analytiques sur l'arrière-plan de la carte, vous devez spécifier où sont les données et comment elles sont reliées aux données spatiales. Vos données peuvent provenir d'un dataset de rapport existant ou d'un nouveau dataset pour lequel vous générez une requête. Les données analytiques existantes peuvent être incluses dans le fichier de forme ESRI qui contient les données spatiales.  
   
-###  <a name="Diff"></a> Quelle est la différence entre les données spatiales et les données analytiques ?  
+###  <a name="Diff"></a> Quelle est la différence entre les données spatiales et les données analytiques ?  
  Les données spatiales consistent en des jeux de coordonnées spécifiant des points, des lignes et des polygones. Les éléments cartographiques sont basés sur les données spatiales.  
   
  Les données analytiques sont des données numériques ou catégoriques que vous souhaitez utiliser pour modifier l'apparence de la carte. Elles peuvent provenir d'un dataset du rapport ou être incluses avec les données spatiales d'une carte de la bibliothèque de cartes ou d'un fichier de forme ESRI.  
@@ -222,9 +227,9 @@ caps.handback.revision: 11
  Les champs de correspondance permettent au processeur de rapports de créer une relation entre les données analytiques et les données spatiales. Les champs de correspondance spécifient des valeurs uniques dans les données analytiques. Par exemple, le nom du magasin peut ne pas être unique dans les données et vous pourriez donc spécifier à la fois la ville et le nom du magasin.  
   
 ##  <a name="ThemeandVisualization"></a> Choisir un thème de couleurs et une visualisation des données  
- Dans cette page, spécifiez comment visualiser vos données sur l'arrière-plan de la carte, spécifiez le thème de la carte, les champs à visualiser et les éléments à varier : couleur, taille et/ou type de marqueur.  
+ Dans cette page, spécifiez comment visualiser vos données sur l'arrière-plan de la carte, spécifiez le thème de la carte, les champs à visualiser et les éléments à varier : couleur, taille et/ou type de marqueur.  
   
-###  <a name="Theme"></a> Quelle est la fonction du thème ?  
+###  <a name="Theme"></a> Quelle est la fonction du thème ?  
  Le thème que vous choisissez définit des valeurs par défaut pour la couleur, la bordure et la police. Vous pouvez modifier ces options après avoir terminé l'Assistant.  
   
 ###  <a name="Legends"></a> À quoi servent les légendes et les échelles dans l'aperçu de la carte ?  
@@ -236,7 +241,7 @@ caps.handback.revision: 11
   
 -   **Légende.** La légende fournit des indications permettant d'interpréter les couleurs, les tailles et les types de marqueur sur une carte. Par défaut, toutes les règles pour toutes les couches affichent des intervalles de données dans la première légende. Vous pouvez personnaliser cette légende et ajouter des légendes après avoir ajouté la carte au rapport.  
   
-###  <a name="Rules"></a> Qu'est-ce que des règles ?  
+###  <a name="Rules"></a> Qu'est-ce que des règles ?  
  Les règles sont des calculs utilisés par le processeur de rapports pour diviser des données analytiques en plages. Vous pouvez spécifier des règles différentes pour chaque couche. Le type de règles vous pouvez spécifier dépend du type de données spatiales sur la couche :  
   
 -   **Polygones.** Vous pouvez spécifier des règles de couleur.  
@@ -247,9 +252,9 @@ caps.handback.revision: 11
   
 -   **Points.** Vous pouvez spécifier des règles de couleur, de taille et de type de marqueur.  
   
- Le processeur de rapports applique les règles que vous définissez et détermine automatiquement la liste d'éléments à afficher dans une légende. Par défaut, les résultats de toutes les règles pour toutes les couches sont affichés dans la première légende. Vous pouvez modifier ce paramètre après avoir terminé l'Assistant. Pour plus d’informations, consultez [Modifier l’affichage des polygones, des lignes et des points à l’aide de règles et de données analytiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md).  
+ Le processeur de rapports applique les règles que vous définissez et détermine automatiquement la liste d'éléments à afficher dans une légende. Par défaut, les résultats de toutes les règles pour toutes les couches sont affichés dans la première légende. Vous pouvez modifier ce paramètre après avoir terminé l'Assistant. Pour plus d’informations, consultez [Modifier l’affichage des polygones, des lignes et des points à l’aide de règles et de données analytiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Planifier un rapport cartographique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
  [Cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  

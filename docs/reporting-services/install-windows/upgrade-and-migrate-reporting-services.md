@@ -1,59 +1,64 @@
 ---
-title: "Mettre &#224; niveau et migrer Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SSRS, mise à niveau"
-  - "Reporting Services, mises à niveau"
-  - "SQL Server Reporting Services, mise à niveau"
-  - "mettre à niveau Reporting Services"
+title: "Mise à niveau et migrer Reporting Services | Documents Microsoft"
+ms.custom: 
+ms.date: 05/25/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SSRS, upgrading
+- Reporting Services, upgrades
+- SQL Server Reporting Services, upgrading
+- upgrading Reporting Services
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 caps.latest.revision: 92
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 91
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: e7144b243b14ea3f65d912552ce8e6cdd736ab59
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Mettre &#224; niveau et migrer Reporting Services
-  Cette rubrique fournit une vue d’ensemble des options de mise à niveau et de migration pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Il existe deux approches générales liées à la mise à niveau d'un déploiement de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
+
+# <a name="upgrade-and-migrate-reporting-services"></a>Mettre à niveau et migrer Reporting Services
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../../includes/ssrs-appliesto-sql2016-xpreview.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+  Cette rubrique est une vue d’ensemble des options de mise à niveau et migration pour SQL Server Reporting Services. Il existe deux approches générales pour la mise à niveau un déploiement de SQL Server Reporting Services :  
   
--   **Mise à niveau :** vous mettez à niveau les composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur les serveurs et instances où ils sont installés. Cela s'appelle communément une mise à niveau « sur place ». La mise à niveau sur place n'est pas prise en charge d'un mode de serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à un autre. Par exemple, vous ne pouvez pas mettre à niveau un serveur de rapports en mode natif vers un serveur de rapports en mode SharePoint. vous pouvez migrer vos éléments de rapport d'un mode à l'autre. Pour plus d'informations, consultez la section « Migration du mode natif au mode SharePoint » plus loin dans ce document.  
+-   **Mise à niveau :** vous mettez à niveau les composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur les serveurs et instances où ils sont installés. Cela s'appelle communément une mise à niveau « sur place ». La mise à niveau sur place n'est pas prise en charge d'un mode de serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à un autre. Par exemple, vous ne pouvez pas mettre à niveau un serveur de rapports en mode natif vers un serveur de rapports en mode SharePoint. vous pouvez migrer vos éléments de rapport d'un mode à l'autre. Pour plus d'informations, consultez la section « Migration du mode natif au mode SharePoint » plus loin dans ce document.  
   
 -   **Migration**: vous installez et configurez un nouvel environnement SharePoint, copiez vos éléments de rapport et ressources dans le nouvel environnement et configurez le nouvel environnement de façon à utiliser le contenu existant. une forme de migration de niveau inférieur consiste à copier les bases de données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], les fichiers de configuration, et si vous utilisez le mode SharePoint, les bases de données de contenu SharePoint.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint|  
+    
+> **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint
   
 ##  <a name="bkmk_known_issues"></a> Problèmes connus de mise à niveau et meilleures pratiques  
  Pour obtenir la liste des éditions et versions prises en charge que vous pouvez mettre à niveau, consultez [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
 > [!TIP]  
->  Pour obtenir les dernières informations concernant les problèmes avec [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consultez les ressources suivantes :  
+>  Pour plus d’informations concernant les problèmes avec SQL Server, consultez les rubriques suivantes :  
 >   
 >  -   [Notes de publication de SQL Server 2016](http://go.microsoft.com/fwlink/?LinkID=398124).  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Dans cette rubrique :](#bkmk_top)  
   
 ##  <a name="bkmk_side_by_side"></a> Installations côte à côte  
- [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] Le mode natif peut être installé côte à côte avec un déploiement [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] en mode natif.  
+ En mode natif SQL Server Reporting Services peut être installé côte à côte avec un [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] déploiement en mode natif.  
   
- Il n'existe aucune prise en charge des déploiements côte à côte du mode SharePoint [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] et des versions antérieures des composants du mode SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ Il n’existe aucune prise en charge pour les déploiements côte à côte de SQL Server Reporting Services en mode SharePoint et les versions antérieures de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] les composants en mode SharePoint.  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Dans cette rubrique :](#bkmk_top)  
   
 ##  <a name="bkmk_inplace_upgrade"></a> Mise à niveau sur place  
- La mise à niveau est effectuée par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être utilisé pour mettre à niveau tout ou partie des composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], y compris [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Le programme d'installation détecte les instances existantes et vous invite à procéder à la mise à niveau. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] L'installation fournit des options de mise à niveau que vous pouvez spécifier comme argument de ligne de commande ou dans l'Assistant Installation.  
+ La mise à niveau est effectuée par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être utilisé pour mettre à niveau tout ou partie des composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , y compris [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Le programme d'installation détecte les instances existantes et vous invite à procéder à la mise à niveau. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] L'installation fournit des options de mise à niveau que vous pouvez spécifier comme argument de ligne de commande ou dans l'Assistant Installation.  
   
- Lorsque vous exécutez le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sélectionnez l'option de mise à niveau de l'une des versions suivantes ou installez une nouvelle instance de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] qui s'exécute côte à côte avec les installations existantes :  
+ Lorsque vous exécutez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le programme d’installation, vous pouvez sélectionner l’option de mise à niveau à partir d’une des versions suivantes ou vous pouvez installer une nouvelle instance de SQL Server Reporting Services qui s’exécute côte à côte des installations existantes :  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
@@ -63,38 +68,34 @@ caps.handback.revision: 91
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
- Pour plus d'informations sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez les documents suivants :  
+ Pour plus d'informations sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez les documents suivants :  
+
+* [Mettre à niveau vers SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)
+* [Effectuer une mise à niveau vers SQL Server 2016 à l’aide de l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
+* [Installer SQL Server 2016 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)
   
-||  
-|-|  
-|[Mettre à niveau vers SQL Server 2016](../../database-engine/install-windows/upgrade-to-sql-server-2016.md)|  
-|[Effectuer une mise à niveau vers SQL Server 2016 à l’aide de l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/upgrade-to-sql-server-2016-using-the-installation-wizard-setup.md)|  
-|[Installer SQL Server 2016 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)|  
-  
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Dans cette rubrique :](#bkmk_top)  
   
 ##  <a name="bkmk_upgrade_checklist"></a> Liste de contrôle préalable à la mise à niveau  
- Avant d'effectuer la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consultez les rubriques suivantes :  
+ Avant la mise à niveau vers SQL Server Reporting Services, passez en revue les éléments suivants :  
   
--   Passez en revue la configuration requise afin de déterminer si votre matériel et vos logiciels peuvent prendre en charge [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. Pour plus d’informations, consultez [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md).  
+-   Passez en revue la configuration requise afin de déterminer si votre matériel et vos logiciels peuvent prendre en charge [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. Pour plus d’informations, consultez [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
--   Utilisez l'outil d'analyse de configuration système (SCC, System Configuration Checker) pour analyser le serveur de rapports afin d'y déceler d'éventuels défauts pouvant empêcher une installation réussie de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d'informations, consultez [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md).  
+-   Outil d’analyse de Configuration système (SCC) permet d’analyser le serveur de rapports pour toutes les conditions qui peuvent empêcher une installation réussie de SQL Server Reporting Services. Pour plus d'informations, consultez [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md).  
   
 -   Prenez connaissance des meilleures pratiques recommandées et de l'aide pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
--   Sauvegardez votre clé symétrique. Pour plus d’informations, consultez [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/back-up-and-restore-reporting-services-encryption-keys.md).  
+-   Sauvegardez votre clé symétrique. Pour plus d’informations, consultez [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
 -   Sauvegardez les fichiers de configuration et bases de données du serveur de rapports. Pour plus d'informations, consultez [Backup and Restore Operations for Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md).  
   
 -   Sauvegardez toutes les personnalisations effectuées dans les répertoires virtuels [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans IIS.  
   
--   Supprimez les certificats SSL non valides.  Cela inclut les certificats expirés et que vous ne projetez pas de mettre à jour avant la mise à niveau de Reporting Services.  Les certificats non valides provoquent l’échec de la mise à niveau et un message d’erreur semblable au suivant est ajouté au fichier journal de Reporting Services : **Microsoft.ReportingServices.WmiProvider.WMIProviderException : Un certificat SSL (Secure Sockets Layer) n’est pas configuré sur le site web.**.  
+-   Supprimez les certificats SSL non valides.  Cela inclut les certificats expirés et que vous ne projetez pas de mettre à jour avant la mise à niveau de Reporting Services.  Les certificats non valides provoqueront l'échec de la mise à niveau et l'écriture d'un message d'erreur dans le fichier journal Reporting Services similaire au message suivant : **Microsoft.ReportingServices.WmiProvider.WMIProviderException: A Secure Sockets Layer (SSL) certificate is not configured on the Web site**.  
   
  Avant de mettre à niveau un environnement de production, veillez à toujours exécuter une mise à niveau de test dans un environnement de préproduction qui a la même configuration que votre environnement de production.  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Dans cette rubrique :](#bkmk_top)  
   
-## Présentation des scénarios de migration  
+## <a name="overview-of-migration-scenarios"></a>Présentation des scénarios de migration  
  Si vous effectuez une mise à niveau à partir d'une version prise en charge de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous exécutez généralement l'Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour mettre à niveau les fichiers programme du serveur de rapports, la base de données et toutes les données d'application.  
   
  Toutefois, la **migration** manuelle d'une installation du serveur de rapports est requise si vous rencontrez l'une des conditions suivantes :  
@@ -105,7 +106,6 @@ caps.handback.revision: 91
   
 -   Vous souhaitez migrer un déploiement SharePoint 2010 de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vers SharePoint 2013/2016. SharePoint 2013/2016 ne prend pas en charge la mise à niveau sur place à partir de SharePoint 2010. Pour plus d’informations, consultez [Migrer une installation Reporting Services &#40;mode SharePoint&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Dans cette rubrique :](#bkmk_top)  
   
 ##  <a name="bkmk_native_scenarios"></a> Scénarios de mise à niveau et de migration en mode natif  
  **Mise à niveau** : la mise à niveau sur place pour le mode natif est identique pour chacune des versions prises en charge répertoriées plus haut dans cette rubrique. Exécutez l'Assistant Installation de SQL Server ou une installation à partir de la ligne de commande. L'installation suivante dans la base de données du serveur de rapports effectuera automatiquement la mise à niveau vers le nouveau schéma de base de données du serveur de rapports. Pour plus d’informations, consultez la section [Mise à niveau sur place](#bkmk_inplace_upgrade) de cette rubrique.  
@@ -114,13 +114,13 @@ caps.handback.revision: 91
   
 1.  Si la base de données de serveur de rapports se trouve sur un ordinateur distant et que vous n'avez pas l'autorisation de mettre à jour cette base de données, le programme d'installation vous invite à fournir les informations d'identification pour mettre à jour la base de données de serveur de rapports distante. Soyez sûr de fournir les informations d'identification qui ont **sysadmin** ou les autorisations de mise à jour de la base de données.  
   
-2.  L'installation vérifie les conditions ou paramètres qui empêchent la mise à niveau et lit les paramètres de configuration. Les exemples incluent les extensions personnalisées déployées sur le serveur de rapports. Si la mise à niveau est bloquée, vous devez modifier votre installation afin qu'elle ne le soit plus, ou migrer vers une nouvelle instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Pour plus d'informations, consultez la documentation relative au Conseiller de mise à niveau.  
+2.  L'installation vérifie les conditions ou paramètres qui empêchent la mise à niveau et lit les paramètres de configuration. Les exemples incluent les extensions personnalisées déployées sur le serveur de rapports. Si la mise à niveau est bloquée, vous devez soit modifier votre installation afin que la mise à niveau n’est plus bloqué, ou migrer vers une nouvelle instance de SQL Server Reporting Services. Pour plus d'informations, consultez la documentation relative au Conseiller de mise à niveau.  
   
 3.  Si la mise à niveau peut se poursuivre, le programme d'installation vous invite à la continuer.  
   
-4.  Le programme d'installation crée de nouveaux dossiers pour les fichiers programme de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Les dossiers de programme relatifs à une installation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluent MSRS13.\<*nom instance*>.  
+4.  Le programme d’installation crée de nouveaux dossiers pour les fichiers programme de SQL Server Reporting Services. Les dossiers de programme pour un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation incluent MSRS13.\< *nom de l’instance*>.  
   
-5.  L'installation ajoute les fichiers programme du serveur de rapports [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , les outils de configuration et les utilitaires de ligne de commande qui font partie des fonctionnalités du serveur de rapports.  
+5.  Le programme d’installation ajoute les fichiers de programme du serveur de rapports SQL Server Reporting Services, les outils de configuration et les utilitaires de ligne de commande qui font partie de la fonctionnalité de serveur de rapports.  
   
     1.  Les fichiers programme de la version antérieure sont supprimés.  
   
@@ -130,31 +130,30 @@ caps.handback.revision: 91
   
     4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] est disponible en téléchargement séparé. Pour plus d’informations, consultez [SQL Server Data Tools dans Visual Studio 2015](https://msdn.microsoft.com/mt186501).  
   
-6.  Le programme d'installation réutilise l'entrée de service du gestionnaire de services de contrôle pour le service Report Server de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Cette entrée de service inclut le compte de service Windows Report Server.  
+6.  Le programme d’installation réutilise l’entrée de service dans le Gestionnaire de contrôle de Service pour le service de serveur de rapports SQL Server Reporting Services. Cette entrée de service inclut le compte de service Windows Report Server.  
   
 7.  L'installation réserve les nouvelles URL en fonction des paramètres de répertoire virtuel existants dans IIS. Comme le programme d'installation ne supprime pas toujours les répertoires virtuels dans IIS, veillez à les supprimer manuellement après la mise à niveau.  
   
 8.  L'installation fusionne les paramètres dans les fichiers de configuration. En utilisant comme base les fichiers de configuration de l'installation actuelle, les nouvelles entrées sont ajoutées. Les entrées obsolètes ne sont pas supprimées, mais ne seront plus lues après la mise à niveau par le serveur de rapports. La mise à niveau ne supprime pas les anciens fichiers journaux, le fichier RSWebApplication.config obsolète ou les paramètres de répertoire virtuel dans IIS. La mise à niveau ne supprime pas les anciennes versions du Concepteur de rapports, de Management Studio ou d’autres outils clients. Si vous n'en avez plus besoin, veillez à supprimer ces fichiers et outils après la mise à niveau.  
   
- **Migration :** la migration à partir d’une version précédente d’une installation en mode natif vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est identique à celle de toutes les versions prises en charge répertoriées plus haut dans cette rubrique. Pour plus d’informations, consultez [Migrer une installation Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
+ **Migration :** migration d’une version précédente d’une installation en mode natif à SQL Server Reporting Services est identique à celle de toutes les versions prises en charge répertoriées plus haut dans cette rubrique. Pour plus d’informations, consultez [Migrer une installation Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Dans cette rubrique :](#bkmk_top)  
   
 ##  <a name="bkmk_native_scaleout"></a> Mettre à niveau un déploiement par montée en puissance parallèle en mode natif Reporting Services  
  Voici un récapitulatif de la procédure de mise à niveau d'un déploiement en mode natif de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] avec montée en puissance parallèle sur plusieurs serveurs de rapports. Ce processus implique des temps morts du déploiement de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
 1.  Sauvegardez les bases de données et les clés de chiffrement du serveur de rapports. Pour plus d’informations, consultez [Opérations de sauvegarde et de restauration pour Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) et [Ajouter et supprimer des clés de chiffrement pour un déploiement évolutif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
   
-2.  Utilisez le gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour supprimer tous les serveurs de rapports du déploiement avec montée en puissance parallèle. Pour plus d’informations, consultez [Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure a native mode report server scale-out deployment.md).  
+2.  Utilisez le gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour supprimer tous les serveurs de rapports du déploiement avec montée en puissance parallèle. Pour plus d’informations, consultez [Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
-3.  Mettez à niveau un des serveurs de rapports vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+3.  Mettre à niveau un des serveurs de rapports SQL Server Reporting Services.  
   
-4.  Utilisez le gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour rajouter les serveurs de rapports au déploiement avec montée en puissance parallèle. Pour plus d’informations, consultez [Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure a native mode report server scale-out deployment.md).  
+4.  Utilisez le gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour rajouter les serveurs de rapports au déploiement avec montée en puissance parallèle. Pour plus d’informations, consultez [Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
      Pour chaque serveur, répétez les étapes de mise à niveau et montée en puissance parallèle.  
   
 ##  <a name="bkmk_sharePoint_scenarios"></a> Scénarios de mise à niveau et de migration en mode SharePoint  
- Les sections suivantes décrivent les problèmes et les étapes de base nécessaires pour mettre à niveau ou migrer des versions spécifiques du mode SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vers le mode SharePoint [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ Les sections suivantes décrivent les problèmes et les étapes de base nécessaires pour mettre à niveau ou migrer des versions spécifiques du [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mode SharePoint vers SQL Server Reporting Services [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint.  
   
  Il existe deux composants d'installation pour mettre à niveau un déploiement en mode SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -170,76 +169,73 @@ caps.handback.revision: 91
 > [!IMPORTANT]  
 >  Certains des scénarios suivants requièrent l'arrêt de l'environnement SharePoint en raison des différentes technologies devant être mises à niveau. Si votre situation ne permet pas de temps d'arrêt, vous devez effectuer une migration complète au lieu d'une mise à niveau sur place.  
   
-### [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+### <a name="includesssql14includessssql14-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]pour SQL Server Reporting Services  
  **Environnement de départ :** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1, SharePoint 2010 ou SharePoint 2013.  
   
- **Environnement final :** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], SharePoint 2013 ou SharePoint 2016.   
+ **Environnement final :** SQL Server Reporting Services, SharePoint 2013 ou SharePoint 2016.   
   
--   **SharePoint 2013/2016** : SharePoint 2013/2016 ne prend pas en charge la mise à niveau sur place de SharePoint 2010. Cependant, la procédure de **mise à niveau avec liaison des bases de données est prise en charge**.
+-   **SharePoint 2013/2016** : SharePoint 2013/2016 ne prend pas en charge la mise à niveau sur place de SharePoint 2010. Cependant, la procédure de **mise à niveau avec liaison des bases de données est prise en charge**  .
   
-     Si vous avez une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée à SharePoint 2010, vous ne pouvez pas effectuer une mise à niveau sur place du serveur SharePoint. Toutefois, vous pouvez migrer les bases de données de contenu et les bases de données d’application de service de la batterie de serveurs SharePoint 2010 vers une batterie de serveurs SharePoint 2013/2016.  
+     Si vous avez une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée à SharePoint 2010, vous ne pouvez pas effectuer une mise à niveau sur place du serveur SharePoint. Toutefois, vous pouvez migrer les bases de données de contenu et les bases de données d’application de service de la batterie de serveurs SharePoint 2010 vers une batterie de serveurs SharePoint 2013/2016.  
   
-### [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+### <a name="includesssql11includessssql11-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]pour SQL Server Reporting Services  
  **Environnement de départ :** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)], SharePoint 2010.  
   
- **Environnement final :** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], SharePoint 2013 ou SharePoint 2016.   
+ **Environnement final :** SQL Server Reporting Services, SharePoint 2013 ou SharePoint 2016.   
   
--   **SharePoint 2013/2016** : SharePoint 2013/2016 ne prend pas en charge la mise à niveau sur place de SharePoint 2010. Cependant, la procédure de **mise à niveau avec liaison des bases de données est prise en charge**.
+-   **SharePoint 2013/2016** : SharePoint 2013/2016 ne prend pas en charge la mise à niveau sur place de SharePoint 2010. Cependant, la procédure de **mise à niveau avec liaison des bases de données est prise en charge**  .
   
-     Si vous avez une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée à SharePoint 2010, vous ne pouvez pas effectuer une mise à niveau sur place du serveur SharePoint. Toutefois, vous pouvez migrer les bases de données de contenu et les bases de données d’application de service de la batterie de serveurs SharePoint 2010 vers une batterie de serveurs SharePoint 2013/2016.  
+     Si vous avez une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée à SharePoint 2010, vous ne pouvez pas effectuer une mise à niveau sur place du serveur SharePoint. Toutefois, vous pouvez migrer les bases de données de contenu et les bases de données d’application de service de la batterie de serveurs SharePoint 2010 vers une batterie de serveurs SharePoint 2013/2016.  
   
-### [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
- **Environnement de départ :** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], SharePoint 2010.  
+### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]pour SQL Server Reporting Services  
+ **Starting environment:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], SharePoint 2010.  
   
- **Environnement final :** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], SharePoint 2013 ou SharePoint 2016.  
+ **Environnement final :** SQL Server Reporting Services, SharePoint 2013 ou SharePoint 2016.  
  
--   **SharePoint 2013/2016** : SharePoint 2013/2016 ne prend pas en charge la mise à niveau sur place de SharePoint 2010. Cependant, la procédure de **mise à niveau avec liaison des bases de données est prise en charge**.
+-   **SharePoint 2013/2016** : SharePoint 2013/2016 ne prend pas en charge la mise à niveau sur place de SharePoint 2010. Cependant, la procédure de **mise à niveau avec liaison des bases de données est prise en charge**  .
 
     SharePoint doit être migré avant de pouvoir mettre à niveau Reporting Services.
   
--   Installez la version [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] du complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour SharePoint sur chaque serveur Web frontal dans la batterie de serveurs. Vous pouvez installer le complément à l'aide de l'Assistant Installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou en le téléchargeant.  
+-   Installez la version de SQL Server Reporting Services de la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] complément pour SharePoint sur chaque serveur web frontal de la batterie de serveurs. Vous pouvez installer le complément à l’aide de l’Assistant installation de SQL Server Reporting Services ou en téléchargeant le complément.  
   
--   Exécutez l’installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pour mettre à niveau le mode SharePoint pour chaque serveur de rapports. L’Assistant installation de SQL Server installe le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et crée une nouvelle application Service. 
+-   Exécutez l’installation de SQL Server Reporting Services pour mettre à niveau le mode SharePoint pour chaque serveur de rapports. L’Assistant installation de SQL Server installe le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et crée une nouvelle application Service. 
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Dans cette rubrique :](#bkmk_top)
   
 ##  <a name="bkmk_migration_considerations"></a> Considérations relatives à une migration  
- Lorsque vous déplacez des données d'application, tenez compte des problèmes et restrictions suivants :  
+ Lorsque vous déplacez des données d'application, tenez compte des problèmes et restrictions suivants :  
   
 -   La protection de la clé de chiffrement inclut un hachage qui incorpore l'identité de l'ordinateur.  
   
 -   Les noms de bases de données du serveur de rapports sont fixes et ne peuvent pas être renommés sur le nouvel ordinateur.  
   
-### Considérations sur la clé de chiffrement  
+### <a name="encryption-key-considerations"></a>Considérations sur la clé de chiffrement  
  Effectuez toujours une sauvegarde des clés de chiffrement avant de déplacer une base de données du serveur de rapports vers un nouvel ordinateur.  
   
  Le déplacement d'une installation du serveur de rapports vers un autre ordinateur invalidera le hachage qui protège les clés de chiffrement utilisées pour aider à sécuriser des données sensibles stockées dans la base de données du serveur de rapports. Chaque instance du serveur de rapports qui utilise la base de données a sa copie de la clé de chiffrement, laquelle est chiffrée avec l'identité du compte de service telle qu'elle est définie sur l'ordinateur actuel. Si vous changez d'ordinateurs, le service n'aura plus accès à sa clé, même si vous utilisez le même nom de compte sur le nouvel ordinateur.  
   
- Pour rétablir le chiffrement réversible sur le nouveau serveur de rapports, vous devez restaurer la clé que vous avez précédemment sauvegardée. L'ensemble complet de clés qui est stocké dans la base de données du serveur de rapports est composé d'une valeur de clé symétrique ainsi que des informations d'identité de service utilisées pour restreindre l'accès à la clé afin qu'elle puisse être utilisée uniquement par l'instance du serveur de rapports qui l'a stockée. Pendant la restauration de la clé, le serveur de rapports remplace les copies existantes de la clé par les nouvelles versions. La nouvelle version inclut les valeurs d'identité du service et de l'ordinateur, telles que définies sur l'ordinateur actuel. Pour plus d'informations, consultez les rubriques suivantes :  
+ Pour rétablir le chiffrement réversible sur le nouveau serveur de rapports, vous devez restaurer la clé que vous avez précédemment sauvegardée. L'ensemble complet de clés qui est stocké dans la base de données du serveur de rapports est composé d'une valeur de clé symétrique ainsi que des informations d'identité de service utilisées pour restreindre l'accès à la clé afin qu'elle puisse être utilisée uniquement par l'instance du serveur de rapports qui l'a stockée. Pendant la restauration de la clé, le serveur de rapports remplace les copies existantes de la clé par les nouvelles versions. La nouvelle version inclut les valeurs d'identité du service et de l'ordinateur, telles que définies sur l'ordinateur actuel. Pour plus d'informations, consultez les rubriques suivantes :  
   
 -   Mode SharePoint : Consultez la section « Gestion des clés » de la rubrique [Gérer une application de service SharePoint Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
   
--   Mode natif : Consultez [Sauvegarder et restaurer les clés de chiffrement Reporting Services](../../reporting-services/install-windows/back-up-and-restore-reporting-services-encryption-keys.md)  
+-   Mode natif : Consultez [Sauvegarder et restaurer les clés de chiffrement Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Dans cette rubrique :](#bkmk_top)  
   
-### Nom de base de données fixe  
+### <a name="fixed-database-name"></a>Nom de base de données fixe  
  Vous ne pouvez pas renommer la base de données du serveur de rapports. L'identité de la base de données est enregistrée dans des procédures stockées du serveur de rapports lors de la création de la base de données. Renommer les bases de données primaires ou temporaires du serveur de rapports provoquera des erreurs lors de l'exécution des procédures, invalidant alors votre installation du serveur de rapports.  
   
- Si le nom de la base de données de l'installation existante ne convient pas pour la nouvelle installation, vous devez envisager de créer une base de données portant le nom souhaité, puis de charger les données d'application existantes à l'aide des techniques énumérées ci-dessous :  
+ Si le nom de la base de données de l'installation existante ne convient pas pour la nouvelle installation, vous devez envisager de créer une base de données portant le nom souhaité, puis de charger les données d'application existantes à l'aide des techniques énumérées ci-dessous :  
   
 -   Écrivez un script [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] qui appelle des méthodes SOAP du service Web Report Server pour copier des données entre des bases de données. Vous pouvez utiliser l'utilitaire RS.exe pour exécuter le script. Pour plus d’informations sur cette approche, consultez [Scripts et PowerShell avec Reporting Services](../../reporting-services/tools/scripting-and-powershell-with-reporting-services.md).  
   
--   Écrivez du code qui appelle le fournisseur WMI pour copier des données entre des bases de données. Pour plus d’informations sur cette approche, consultez [Accès au fournisseur WMI de Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
+-   Écrivez du code qui appelle le fournisseur WMI pour copier des données entre des bases de données. Pour plus d’informations sur cette approche, consultez [Accès au fournisseur WMI de Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
 -   Si vous avez seulement quelques éléments, vous pouvez publier de nouveau les rapports, les modèles de rapport et les sources de données partagées du Concepteur de rapports, du Générateur de modèles et du Générateur de rapports sur le nouveau serveur de rapports. Vous devez recréer les attributions de rôles, les abonnements, les planifications partagées, les planifications d'instantanés de rapports, les propriétés personnalisées que vous définissez sur les rapports ou d'autres éléments, la sécurité des éléments de modèle et les propriétés que vous définissez sur le serveur de rapports. L'historique de rapport et les données du journal des exécutions des rapports seront perdus.  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Dans cette rubrique :](#bkmk_top)  
   
 ##  <a name="bkmk_additional_resources"></a> Ressources supplémentaires  
   
 > [!NOTE]  
->  Pour plus d'informations sur la mise à niveau avec liaison des bases de données SharePoint, consultez les rubriques suivantes :  
+>  Pour plus d'informations sur la mise à niveau avec liaison des bases de données SharePoint, consultez les rubriques suivantes :  
   
 -   [Présentation de la procédure de mise à niveau vers SharePoint 2016](https://technet.microsoft.com/library/cc262483\(v=office.16\)).
 
@@ -250,11 +246,10 @@ caps.handback.revision: 91
 -   [Mettre à niveau les bases de données de SharePoint 2013 vers SharePoint 2016](https://technet.microsoft.com/library/cc303436\(v=office.16\)).
 
 -   [Mettre à niveau les bases de données de SharePoint 2010 vers SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690).  
-  
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Dans cette rubrique :](#bkmk_top)  
-  
-## Voir aussi  
- [Rapports de mise à niveau](../../reporting-services/install-windows/upgrade-reports.md)   
- [Effectuer une mise à niveau vers SQL Server 2016 à l’aide de l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/upgrade-to-sql-server-2016-using-the-installation-wizard-setup.md)  
-  
-  
+
+## <a name="next-steps"></a>Étapes suivantes
+
+[Rapports de mise à niveau](../../reporting-services/install-windows/upgrade-reports.md)   
+[Effectuer une mise à niveau vers SQL Server 2016 à l’aide de l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
+
+D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,133 +1,99 @@
 ---
-title: "Fichier de configuration RSReportServer.config | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Fichier de Configuration RsReportServer.config | Documents Microsoft
+ms.custom: 
+ms.date: 06/12/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 caps.latest.revision: 20
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 16
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 64cab4cc760ee1af2c3777bca88be2663d8039a4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Fichier de configuration RSReportServer.config
-  Le fichier [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** stocke les paramètres utilisés par le Gestionnaire de rapports, le service web Report Server et le traitement en arrière-plan. Toutes les applications [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] s'exécutent au sein d'un processus unique qui lit les paramètres de configuration stockés dans le fichier RSReportServer.config. Les serveurs de rapports en mode natif et en mode SharePoint utilisent le fichier RSReportServer.config. Toutefois, les deux modes n'utilisent pas les mêmes paramètres dans le fichier de configuration. La version en mode SharePoint du fichier est moins volumineuse car de nombreux paramètres du mode SharePoint sont stockés dans des bases de données de configuration SharePoint plutôt que dans le fichier. Cette rubrique décrit le fichier de configuration par défaut installé en mode natif ou en mode SharePoint, et certains paramètres et comportements importants qui sont contrôlés par le fichier de configuration.  
-  
- En mode SharePoint, le fichier de configuration contient les paramètres qui s'appliquent à toutes les instances d'application de service exécutées sur cet ordinateur. La base de données de configuration SharePoint contient les paramètres de configuration qui s'appliquent aux applications de service spécifiques. Les paramètres qui sont stockés dans la base de données de configuration et qui sont gérés par les pages de gestion SharePoint, peuvent être différents pour chaque application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+# <a name="rsreportserverconfig-configuration-file"></a>Fichier de configuration RSReportServer.config
+Le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **RsReportServer.config** fichier stocke les paramètres qui sont utilisés par le service Web Report Server et le traitement en arrière-plan. Toutes les applications [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] s'exécutent au sein d'un processus unique qui lit les paramètres de configuration stockés dans le fichier RSReportServer.config. Les serveurs de rapports en mode natif et en mode SharePoint utilisent le fichier RSReportServer.config. Toutefois, les deux modes n'utilisent pas les mêmes paramètres dans le fichier de configuration. La version en mode SharePoint du fichier est moins volumineuse car de nombreux paramètres du mode SharePoint sont stockés dans des bases de données de configuration SharePoint plutôt que dans le fichier. Cette rubrique décrit le fichier de configuration par défaut installé en mode natif ou en mode SharePoint, et certains paramètres et comportements importants qui sont contrôlés par le fichier de configuration.  
+
+En mode SharePoint, le fichier de configuration contient les paramètres qui s'appliquent à toutes les instances d'application de service exécutées sur cet ordinateur. La base de données de configuration SharePoint contient les paramètres de configuration qui s'appliquent aux applications de service spécifiques. Les paramètres qui sont stockés dans la base de données de configuration et qui sont gérés par les pages de gestion SharePoint, peuvent être différents pour chaque application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Les paramètres sont présentés ci-dessous dans l'ordre dans lequel ils apparaissent dans le fichier de configuration qui est installé par défaut. Pour obtenir des instructions sur la modification de ce fichier, consultez [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
- **Dans cette rubrique :**  
-  
--   [Emplacement du fichier](#bkmk_file_location)  
-  
--   [Paramètres de configuration généraux (rsreportserver.config)](#bkmk_generalconfiguration)  
-  
--   [URLReservations (fichier RSReportServer.config)](#bkmk_URLReservations)  
-  
--   [Authentication (fichier RSReportServer.config)](#bkmk_Authentication)  
-  
--   [Service (fichier RSReportServer.config)](#bkmk_service)  
-  
--   [Configuration générale des extensions de l'interface utilisateur de remise](#bkmk_ui)  
-  
--   [Extensions (fichier RSReportServer.config) en mode natif](#bkmk_extensions)  
-  
-    -   [Configuration générale des extensions de remise](#bkmk_extensionsgeneral)  
-  
-        -   [Paramètres de configuration spécifiques à l'extension de remise par partage de fichiers](#bkmk_fileshare_extension)  
-  
-        -   [Paramètres de configuration de l'extension de messagerie électronique du serveur de rapports](#bkmk_email_extension)  
-  
-        -   [Configuration de l'extension de bibliothèque de documents SharePoint du serveur de rapports](#bkmk_documentlibrary_extension)  
-  
-        -   [Configuration de l'extension de remise Null](#bkmk_null_extension)  
-  
-    -   [Configuration générale des extensions de l'interface utilisateur de remise](#bkmk_ui)  
-  
-    -   [Configuration générale des extensions de rendu](#bkmk_rendering)  
-  
-    -   [Configuration générale des extensions de données](#bkmk_data)  
-  
-    -   [Configuration générale des extensions de requêtes sémantiques](#bkmk_semantic)  
-  
-    -   [Configuration de la génération de modèle](#bkmk_model)  
-  
-    -   [Configuration de l'extension de sécurité](#bkmk_security)  
-  
-    -   [Configuration de l'extension d'authentification](#bkmk_authentication)  
-  
-    -   [Traitement des événements](#bkmk_eventprocessing)  
-  
-    -   [Personnalisation de la définition de rapport](#bkmk_reportdefinition)  
-  
-    -   [RDLSandboxing](#bkmk_rdlsandboxing)  
-  
--   [MapTileServerConfiguration (fichier RSReportServer.config)](#bkmk_MapTileServer)  
-  
--   [Fichier de configuration par défaut d'un serveur de rapports en mode natif](#bkmk_nativedefaultfile)  
-  
--   [Fichier de configuration par défaut d'un serveur de rapports en mode SharePoint](#bkmk_sharepointdefaultfile)  
-  
+ 
 ##  <a name="bkmk_file_location"></a> Emplacement du fichier  
+
+RSReportServer.config se trouve dans les dossiers suivants, selon le mode du serveur de rapports :  
+
+
   
--   RSReportServer.config se trouve dans les dossiers suivants, selon le mode du serveur de rapports :  
+### <a name="native-mode-report-server"></a>Serveur de rapports en mode natif  
+
+ 
+**[!INCLUDE[applies](../../includes/applies-md.md)]**  SQL Server 2016
+```  
+C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  
+```
+
+**[!INCLUDE[applies](../../includes/applies-md.md)]** Version d’évaluation technique de janvier 2017 des rapports Power BI de SQL Server Reporting Services
+```  
+C:\Program Files\Microsoft SQL Server Reporting Services\RSServer\ReportServer
+```  
   
-     **Serveur de rapports en mode natif :**  
+### <a name="sharepoint-mode-report-server"></a>Serveur de rapports en mode SharePoint
+
+> [!NOTE]
+> En mode intégré SharePoint n’est pas disponible avec le janvier 2017 Aperçu technique de Power BI les rapports dans SQL Server Reporting Services.
   
-    ```  
-    C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\ReportServer  
-    ```  
-  
--   **Serveur de rapports en mode SharePoint :**  
-  
-    ```  
-    C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting  
-    ```  
-  
- Pour plus d’informations sur la modification du fichier, consultez [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
+```  
+C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting  
+```  
+ 
+Pour plus d’informations sur la modification du fichier, consultez [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 ##  <a name="bkmk_generalconfiguration"></a> Paramètres de configuration généraux (rsreportserver.config)  
- Le tableau suivant fournit des informations sur les paramètres de configuration généraux qui apparaissent dans la première partie du fichier. Les paramètres sont présentés dans l'ordre dans lequel ils apparaissent dans le fichier de configuration. La dernière colonne du tableau indique si le paramètre s’applique à un serveur de rapports en mode natif **(N)**, à un serveur de rapports en mode SharePoint **(S)** ou aux deux.  
+ Le tableau suivant fournit des informations sur les paramètres de configuration généraux qui apparaissent dans la première partie du fichier. Les paramètres sont présentés dans l'ordre dans lequel ils apparaissent dans le fichier de configuration. La dernière colonne du tableau indique si le paramètre s’applique à un serveur de rapports en mode natif **(N)** , à un serveur de rapports en mode SharePoint **(S)** ou aux deux.  
   
 > [!NOTE]  
->  Dans cette rubrique, « entier maximal » désigne la valeur INT_MAX de 2147483647.  Pour plus d’informations, consultez [Limites relatives aux entiers](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (http://msdn.microsoft.com/fr-fr/library/296az74e(v=vs.110).aspx).  
+>  Dans cette rubrique, « entier maximal » désigne la valeur INT_MAX de 2147483647.  Pour plus d’informations, consultez [Limites relatives aux entiers](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (http://msdn.microsoft.com/fr-fr/library/296az74e(v=vs.110).aspx).  
   
 |Paramètre|Description|Mode|  
 |-------------|-----------------|----------|  
 |**Dsn**|Spécifie la chaîne de connexion au serveur de base de données qui héberge la base de données du serveur de rapports. Cette valeur est chiffrée et ajoutée au fichier de configuration lorsque vous créez la base de données du serveur de rapports. Pour SharePoint, les informations de connexion de la base de données sont issues de la base de données de configuration SharePoint.|N,S|  
 |**ConnectionType**|Détermine le type d'informations d'identification utilisé par le serveur de rapports pour se connecter à la base de données de serveur de rapports. Les valeurs possibles sont **Default** et **Impersonate**. **Default** est spécifiée si le serveur de rapports est configuré pour utiliser un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le compte de service pour se connecter à la base de données du serveur de rapports. **Impersonate** est spécifiée si le serveur de rapports utilise un compte Windows pour se connecter à la base de données du serveur de rapports.|N|  
 |**LogonUser, LogonDomain, LogonCred**|Stocke le domaine, le nom d'utilisateur et le mot de passe d'un compte de domaine utilisé par un serveur de rapports pour se connecter à une base de données du serveur de rapports. Des valeurs sont créées pour **LogonUser**, **LogonDomain**et **LogonCred** quand la configuration de la connexion du serveur de rapports prévoit l’utilisation d’un compte de domaine. Pour plus d’informations sur la connexion d’une base de données à un serveur de rapports, consultez [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).|N|  
-|**InstanceID**|Identificateur de l'instance du serveur de rapports. Les noms des instances du serveur de rapports sont basés sur les noms des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette valeur indique un nom d'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par défaut, cette valeur est **MSRS12***\<nom_instance>*. Ne modifiez pas ce paramètre. Voici un exemple de la valeur complète : `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> Voici un exemple en mode SharePoint :<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
+|**InstanceID**|Identificateur de l'instance du serveur de rapports. Les noms des instances du serveur de rapports sont basés sur les noms des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette valeur indique un nom d'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par défaut, cette valeur est **MSRS12***\<instancename >*. Ne modifiez pas ce paramètre. Voici un exemple de la valeur complète : `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> Voici un exemple en mode SharePoint :<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
 |**InstallationID**|Identificateur de l'installation du serveur de rapports que crée le programme d'installation. Cette valeur est définie sur un GUID. Ne modifiez pas ce paramètre.|N|  
-|**SecureConnectionLevel**|Spécifie le degré auquel les appels de service Web doivent utiliser le protocole SSL (Secure Sockets Layer). Ce paramètre est utilisé à la fois pour le service Web Report Server et le Gestionnaire de rapports. Cette valeur est définie lorsque vous configurez une URL pour utiliser le protocole HTTP ou HTTPS dans l'outil de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . La plage des valeurs valides s'étend de 0 (niveau le plus faible) à 3. Pour plus d’informations, consultez [Utilisation des méthodes de service Web sécurisées](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md) et [Configurer des connexions SSL sur un serveur de rapports en mode natif](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|N,S|  
+|**SecureConnectionLevel**|Spécifie le degré auquel les appels de service Web doivent utiliser le protocole SSL (Secure Sockets Layer). Ce paramètre est utilisé pour le service Web Report Server et le portail web. Cette valeur est définie lorsque vous configurez une URL pour utiliser le protocole HTTP ou HTTPS dans l'outil de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . La plage des valeurs valides s'étend de 0 (niveau le plus faible) à 3. Pour plus d’informations, consultez [Utilisation des méthodes de service Web sécurisées](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md) et [Configurer des connexions SSL sur un serveur de rapports en mode natif](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|N,S|  
 |**DisableSecureFormsAuthenticationCookie**|La valeur par défaut est False.<br /><br /> Spécifie s'il faut désactiver l'utilisation forcée du cookie employé pour que l'authentification par formulaire et personnalisée soit considérée comme sécurisée. Depuis SQL Server 2012, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] marque automatiquement les cookies d'authentification par formulaire utilisés avec les extensions d'authentification personnalisée comme cookies sécurisés lors de l'envoi au client. En modifiant cette propriété, les administrateurs de serveurs de rapports et les auteurs d'extensions de sécurité personnalisées peuvent revenir au comportement précédent, lequel autorise l'auteur d'une extension de sécurité personnalisée à déterminer s'il faut marquer le cookie en tant que cookie sécurisé. Il est recommandé d'utiliser des cookies sécurisés pour l'authentification par formulaire afin d'éviter les attaques par relecture et les renifleurs réseau.|N|  
 |**CleanupCycleMinutes**|Spécifie au bout de combien de minutes les anciennes sessions et les instantanés expirés sont supprimés des bases de données du serveur de rapports. La plage de valeurs valides s'étend de 0 à un entier maximal. La valeur par défaut est 10. La valeur 0 désactive le processus de nettoyage de la base de données.|N,S|  
-|**MaxActiveReqForOneUser**|Spécifie le nombre maximal de rapports qu'un utilisateur peut traiter en même temps. Une fois la limite atteinte, les demandes de traitement de rapport supplémentaires sont refusées. Les valeurs valides vont de 1 à un entier maximal. La valeur par défaut est 20.<br /><br /> Notez que le traitement de la plupart des requêtes étant extrêmement rapide, il est très improbable qu'un seul utilisateur puisse cumuler plus de 20 connexions ouvertes à un moment donné. Si les utilisateurs ouvrent simultanément plus de 15 rapports nécessitant un traitement intensif, vous serez amené à augmenter cette valeur.<br /><br /> Ce paramètre est ignoré pour les serveurs de rapports qui s'exécutent en mode intégré SharePoint.|N,S|  
+|**MaxActiveReqForOneUser**|Spécifie le nombre maximal de rapports qu'un utilisateur peut traiter en même temps. Une fois la limite atteinte, les demandes de traitement de rapport supplémentaires sont refusées. Les valeurs valides vont de 1 à un entier maximal. La valeur par défaut est 20.<br /><br /> Notez que le traitement de la plupart des requêtes étant extrêmement rapide, il est très improbable qu'un seul utilisateur puisse cumuler plus de 20 connexions ouvertes à un moment donné. Si les utilisateurs ouvrent simultanément plus de 15 rapports nécessitant un traitement intensif, vous serez amené à augmenter cette valeur.<br /><br /> Ce paramètre est ignoré pour les serveurs de rapports qui s'exécutent en mode intégré SharePoint.|N,S|  
 |**DatabaseQueryTimeout**|Spécifie au bout de combien de secondes une connexion à la base de données du serveur de rapports expire. Cette valeur est transmise à la propriété System.Data.SQLClient.SQLCommand.CommandTimeout. Les valeurs valides sont comprises entre 0 et 2147483647. La valeur par défaut est 120. La valeur 0 spécifie un temps d'attente illimité et, par conséquent, n'est pas recommandée.|N|  
 |**AlertingCleanupCycleMinutes**|La valeur par défaut est 20.<br /><br /> Détermine la fréquence à laquelle le nettoyage des données temporaires stockées dans la base de données d'alertes doit avoir lieu.|S|  
 |**AlertingDataCleanupMinutes**|La valeur par défaut est 360.<br /><br /> Détermine la durée pendant laquelle les données de session utilisées pour la création et la modification d'une définition d'alerte sont conservées dans la base de données d'alerte. L'intervalle par défaut est de 6 heures.|S|  
 |**AlertingExecutionLogCleanup**Minutes|La valeur par défaut est 10080.<br /><br /> Détermine la durée de conservation des valeurs du journal d'exécution des alertes. La valeur par défaut est 7 jours.|S|  
 |**AlertingMaxDataRetentionDays**|La valeur par défaut est 180.<br /><br /> Détermine la durée de conservation des données d'alerte requises pour éviter les messages d'alerte dupliqués lorsque les données de l'alerte n'ont pas changé.|S|  
 |**RunningRequestsScavengerCycle**|Spécifie la fréquence à laquelle sont annulées les demandes orphelines et expirées. Cette valeur est exprimée en secondes. La plage de valeurs valides s'étend de 0 à un entier maximal. La valeur par défaut est 60.|N,S|  
-|**RunningRequestsDbCycle**|Spécifie d'une part la fréquence d'évaluation des travaux en cours par le serveur de rapports (qui vérifie si les délais d'exécution prévus pour les rapports ont été dépassés) et d'autre part le moment auquel les informations sur les travaux en cours doivent être présentées dans la page Gérer les travaux du Gestionnaire de rapports. Cette valeur est exprimée en secondes. Les valeurs valides sont comprises entre 0 et 2147483647. La valeur par défaut est 60.|N,S|  
+|**RunningRequestsDbCycle**|Spécifie la fréquence à laquelle le serveur de rapports évalue les travaux en cours d’exécution pour vérifier si ils ont dépassé les délais d’exécution de rapport et lorsque afin de présenter des informations travail en cours d’exécution dans la page Gérer les travaux du portail web. Cette valeur est exprimée en secondes. Les valeurs valides sont comprises entre 0 et 2147483647. La valeur par défaut est 60.|N,S|  
 |**RunningRequestsAge**|Spécifie l'intervalle en secondes au bout duquel l'état d'un travail en cours d'exécution passe de l'état Nouveau à En cours d'exécution. Les valeurs valides sont comprises entre 0 et 2147483647. La valeur par défaut est 30.|N,S|  
 |**MaxScheduleWait**|Spécifie la durée en secondes pendant laquelle le service Windows Report Server attend que le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ait mis à jour une planification lorsque l' **Heure de la prochaine exécution** est demandée. Les valeurs valides sont comprises entre 1 et 60.<br /><br /> Dans le fichier de configuration par défaut, MaxScheduleWait a la valeur **5**.<br /><br /> Si le serveur de rapports ne trouve pas ou n'arrive pas à lire le fichier de configuration, le serveur attribue à MaxScheduleWait la valeur par défaut « 1 ».|N,S|  
 |**DisplayErrorLink**|Indique si un lien vers le site Aide et support de [!INCLUDE[msCoName](../../includes/msconame-md.md)] s'affiche en cas d'erreur. Ce lien apparaît dans les messages d'erreur. Les utilisateurs peuvent cliquer sur le lien afin d'afficher le contenu mis à jour du message d'erreur sur le site. Les valeurs valides sont **True** (valeur par défaut) et **False**.|N,S|  
 |**WebServiceuseFileShareStorage**|Indique si les instantanés temporaires et les rapports mis en cache (créés par le service Web Report Server pour la durée d'une session utilisateur) doivent être stockés dans le système de fichiers. Les valeurs possibles sont **True** et **False** (valeur par défaut). Si la valeur est false, les données temporaires sont stockées dans la base de données reportservertempdb.|N,S|  
-|**WatsonFlags**|Précise la quantité d'informations consignées dans un journal pour les conditions d'erreur signalées à [!INCLUDE[msCoName](../../includes/msconame-md.md)].<br /><br /> 0x0430 = vidage complet<br /><br /> 0x0428 = vidage minimal<br /><br /> 0x0002 = aucun vidage|N,S|  
+|**WatsonFlags**|Précise la quantité d'informations consignées dans un journal pour les conditions d'erreur signalées à [!INCLUDE[msCoName](../../includes/msconame-md.md)].<br /><br /> 0x0430 = vidage complet<br /><br /> 0x0428 = vidage minimal<br /><br /> 0x0002 = aucun vidage|N,S|  
 |**WatsonDumpOnExceptions**|Spécifie une liste des exceptions que vous souhaitez signaler dans un journal des erreurs. Cela est utile lorsque vous avez un problème récurrent et que vous souhaitez créer un vidage avec des informations à envoyer à [!INCLUDE[msCoName](../../includes/msconame-md.md)] à des fins d'analyse. La création de vidages affecte les performances ; vous devez donc modifier ce paramètre uniquement lorsque vous diagnostiquez un problème.|N,S|  
 |**WatsonDumpExcludeIfContainsExceptions**|Spécifie une liste des exceptions que vous ne souhaitez pas signaler dans un journal des erreurs. Cela est utile lorsque vous diagnostiquez un problème et que vous ne souhaitez pas que le serveur crée des vidages pour une exception spécifique.|N,S|  
   
 ##  <a name="bkmk_URLReservations"></a> URLReservations (fichier RSReportServer.config)  
- **URLReservations** définit l’accès HTTP au service Web Report Server et au Gestionnaire de rapports pour l’instance actuelle. Les URL sont réservées et stockées dans HTTP.SYS lorsque vous configurez le serveur de rapports.  
+ **URLReservations** définit l’accès HTTP au service Web Report Server et du portail web de l’instance actuelle. Les URL sont réservées et stockées dans HTTP.SYS lorsque vous configurez le serveur de rapports.  
   
 > [!WARNING]  
 >  Pour le mode SharePoint, les réservations d'URL sont configurées dans l'Administration centrale de SharePoint. Pour plus d’informations, consultez [Configurer le mappage des accès de substitution (http://technet.microsoft.com/fr-fr/library/cc263208(office.12).aspx)](http://technet.microsoft.com/library/cc263208\(office.12\).aspx).  
@@ -193,31 +159,31 @@ caps.handback.revision: 16
 |**IsNotificationService**|Spécifie si le serveur de rapports traite les notifications et les remises. Les valeurs valides sont **True** (valeur par défaut) et **False**. Quand la valeur est **False**, les abonnements ne sont pas remis.<br /><br /> Ce paramètre est affecté quand vous activez ou désactivez les fonctionnalités [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à l’aide de la facette Configuration de la surface d’exposition pour Reporting Services de la Gestion basée sur des stratégies. Pour plus d’informations, consultez [Démarrer et arrêter le service Report Server](../../reporting-services/report-server/start-and-stop-the-report-server-service.md).|N,S|  
 |**IsEventService**|Spécifie si le service traite les événements de la file d'attente des événements. Les valeurs valides sont **True** (valeur par défaut) et **False**. Quand la valeur est **False**, le serveur de rapports n’effectue pas d’opérations pour les planifications ni les abonnements.<br /><br /> Ce paramètre est affecté quand vous activez ou désactivez les fonctionnalités [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à l’aide de la facette Configuration de la surface d’exposition pour Reporting Services de la Gestion basée sur des stratégies. Pour plus d’informations, consultez [Démarrer et arrêter le service Report Server](../../reporting-services/report-server/start-and-stop-the-report-server-service.md).|N,S|  
 |**IsAlertingService**|La valeur par défaut est **True**.|S|  
-|**PollingInterval**|Spécifie l'intervalle, en secondes, entre deux interrogations de la table d'événements par le serveur de rapports. La plage de valeurs valides s'étend de 0 à un entier maximal. La valeur par défaut est 10.|N,S|  
+|**PollingInterval**|Spécifie l'intervalle, en secondes, entre deux interrogations de la table d'événements par le serveur de rapports. La plage de valeurs valides s'étend de 0 à un entier maximal. La valeur par défaut est 10.|N,S|  
 |**WindowsServiceUseFileShareStorage**|Indique si les instantanés temporaires et les rapports mis en cache (créés par le service Report Server pour la durée d'une session utilisateur) doivent être stockés dans le système de fichiers. Les valeurs possibles sont **True** et **False** (valeur par défaut).|N,S|  
 |**MemorySafetyMargin**|Spécifie un pourcentage de **WorkingSetMaximum** qui définit la limite entre les scénarios correspondant à une sollicitation moyenne et basse. La valeur par défaut est 80. Pour plus d’informations sur **WorkingSetMaximum** et la configuration de la mémoire disponible, consultez [Configurer la mémoire disponible pour les applications du serveur de rapports](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).|N,S|  
 |**MemoryThreshold**|Spécifie un pourcentage de **WorkingSetMaximum** qui définit la limite entre les scénarios correspondant à une sollicitation élevée et moyenne. La valeur par défaut est **90**. Elle doit être supérieure à la valeur définie pour **MemorySafetyMargin**. Pour plus d’informations, consultez [Configurer la mémoire disponible pour les applications du serveur de rapports](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).|N,S|  
-|**RecycleTime**|Spécifie une durée de recyclage, en minutes, pour le domaine d'application. La plage de valeurs valides s'étend de 0 à un entier maximal. La valeur par défaut est 720.|N,S|  
+|**RecycleTime**|Spécifie une durée de recyclage, en minutes, pour le domaine d'application. La plage de valeurs valides s'étend de 0 à un entier maximal. La valeur par défaut est 720.|N,S|  
 |**MaxAppDomainUnloadTime**|Spécifie un intervalle pendant lequel le domaine d'application est autorisé à se décharger au cours d'une opération de recyclage. Si le recyclage n'est pas achevé à la fin du temps alloué, tout le traitement dans le domaine d'application est arrêté. Pour plus d'informations, consultez [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md).<br /><br /> Cette valeur est exprimée en minutes. La plage de valeurs valides s'étend de 0 à un entier maximal. La valeur par défaut est **30**.|N,S|  
 |**MaxQueueThreads**|Spécifie le nombre de threads utilisés par le service Windows Report Server pour le traitement simultané des abonnements et des notifications. La plage de valeurs valides s'étend de 0 à un entier maximal. La valeur par défaut est 0. Si vous choisissez 0, le serveur de rapports détermine le nombre maximal de threads. Si vous spécifiez un nombre entier, la valeur que vous spécifiez définit la limite maximale sur les threads pouvant être créés simultanément. Pour plus d'informations sur la manière dont le service Windows Report Server gère la mémoire pour les processus en cours d’exécution, consultez [Configurer la mémoire disponible pour les applications du serveur de rapports](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).|N,S|  
 |**UrlRoot**|Utilisé par les extensions de remise de serveur de rapports pour composer les URL utilisées par les rapports remis dans les abonnements de partage de fichiers et de messagerie électronique. La valeur doit être une adresse URL valide menant au serveur de rapports qui permet d'accéder au rapport publié. Utilisé par le serveur de rapports pour générer des URL pour l'accès hors connexion ou sans assistance. Ces URL sont utilisées dans les rapports exportés et par les extensions de remise pour composer une URL incluse dans les messages de remise tels que les liens dans les messages électroniques. Le serveur de rapports détermine les URL dans les rapports selon le comportement suivant :<br /><br /> Quand **UrlRoot** est vide (par défaut) et qu’il y a des réservations d’URL, le serveur de rapports détermine automatiquement les URL de la même façon que les URL sont générées pour la méthode ListReportServerUrls. La première URL retournée par la méthode ListReportServerUrls est utilisée. Ou, si SecureConnectionLevel est supérieur à zéro (0), la première URL SSL est utilisée.<br /><br /> Lorsque **UrlRoot** est défini sur une valeur spécifique, la valeur explicite est utilisée.<br /><br /> Quand **UrlRoot** est vide et qu’aucune réservation d’URL n’est configurée, les URL dans les rapports affichés et dans les liens de messagerie électronique sont incorrectes.|N,S|  
 |**UnattendedExecutionAccount**|Spécifie un nom d'utilisateur, un mot de passe et un domaine utilisés par le serveur de rapports pour exécuter un rapport. Ces valeurs sont chiffrées. Utilisez l’outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou l’utilitaire **rsconfig** pour définir ces valeurs. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).<br /><br /> Pour le mode SharePoint, vous définissez le compte d'exécution d'une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à l'aide de l'Administration centrale de SharePoint. Pour plus d’informations, consultez [Gérer une application de service SharePoint Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).|N|  
 |**PolicyLevel**|Spécifie le fichier de configuration de la stratégie de sécurité. La valeur valide est Rssrvrpolicy.config. Pour plus d'informations, consultez [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|N,S|  
 |**IsWebServiceEnabled**|Spécifie si le service Web Report Server répond aux demandes d'accès URL et SOAP. Cette valeur est définie lorsque vous activez ou désactivez le service à l'aide de la facette Configuration de la surface d'exposition pour Reporting Services de la Gestion basée sur des stratégies.|N,S|  
-|**IsReportManagerEnabled**|Spécifie si l'application du Gestionnaire de rapports est disponible sur le serveur de rapports. Les valeurs possibles sont **True** (par défaut) et **False**. Si la valeur définie est **True**, le Gestionnaire de rapports est disponible. Notez que vous devez tout de même configurer une réservation d'URL pour le Gestionnaire de rapports avant de pouvoir l'utiliser.|N|  
+|**IsReportManagerEnabled**|Ce paramètre est déconseillé à compter de SQL Server 2016 Reporting Services Cumulative Update 2. Le portail web est toujours activé.|N|  
 |**FileShareStorageLocation**|Indique un dossier de stockage unique pour les instantanés temporaires dans le système de fichiers. Même s'il est possible de spécifier un chemin d'accès UNC pour ce dossier, il est déconseillé de faire ce choix. La valeur par défaut est vide.<br /><br /> `<FileShareStorageLocation>`<br /><br /> `<Path>`<br /><br /> `</Path>`<br /><br /> `</FileShareStorageLocation>`|N,S|  
 |**IsRdceEnabled**|Spécifie si l'extension RDCE (Report Definition Customization Extension) est activée. Les valeurs valides sont **True** et **False**.|N,S|  
   
 ##  <a name="bkmk_UI"></a> UI (fichier RSReportServer.config)  
- **UI** spécifie des paramètres de configuration qui s’appliquent à l’application du Gestionnaire de rapports.  
+ **L’interface utilisateur** spécifie les paramètres de configuration qui s’appliquent à l’application de portail web.  
   
  La dernière colonne du tableau suivant indique si le paramètre s'applique à un serveur de rapports en mode natif (N), à un serveur de rapports en mode SharePoint (S) ou aux deux cas de figure.  
   
 |Paramètre|Description|Mode|  
 |-------------|-----------------|----------|  
-|**ReportServerUrl**|Spécifie l'URL du serveur de rapports auquel se connecte le Gestionnaire de rapports. Ne modifiez cette valeur que si vous configurez le Gestionnaire de rapports afin qu'il se connecte à un serveur de rapports dans une autre instance ou sur un ordinateur distant. Pour plus d’informations, consultez [Configurer le Gestionnaire de rapports &#40;mode natif&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md).|N,S|  
-|**ReportBuilderTrustLevel**|Ne modifiez pas cette valeur ; elle n'est pas configurable. Dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et versions ultérieures, le Générateur de rapports s’exécute uniquement en **FullTrust**. Pour plus d’informations, consultez [Configurer l’accès au Générateur de rapports](../../reporting-services/report-server/configure-report-builder-access.md). Pour plus d’informations sur la suppression du mode de confiance partielle, consultez [Fonctionnalités supprimées de SQL Server Reporting Services dans SQL Server 2016](../Topic/Discontinued%20Functionality%20to%20SQL%20Server%20Reporting%20Services%20in%20SQL%20Server%202016.md).|N,S|  
-|**PageCountMode**|Pour le Gestionnaire de rapports uniquement, ce paramètre spécifie si le serveur de rapports calcule le nombre de pages avant le rendu du rapport ou pendant l'affichage de ce dernier. Les valeurs possibles sont **Estimate** (par défaut) et **Actual**. Utilisez **Estimate** pour calculer le nombre de pages du rapport pendant que l’utilisateur le consulte. Initialement, le nombre de pages est défini à 2 (pour la page actuelle plus une page supplémentaire), mais cette valeur s'ajuste au fur et à mesure que l'utilisateur navigue parmi les pages du rapport. Utilisez **Actual** si vous souhaitez calculer le nombre de pages à l’avance avant que le rapport ne s’affiche. **Actual** est fourni pour la compatibilité descendante. Notez que, si vous affectez **Actual** à **PageCountMode**, le rapport entier doit être traité pour permettre l’obtention d’un nombre de pages valide, ce qui accroît le temps d’attente avant que le rapport ne soit affiché.|N,S|  
+|**ReportServerUrl**|Spécifie l’URL du serveur de rapports qui se connecte le portail web. Ne modifiez cette valeur si vous configurez le portail web pour se connecter à un serveur de rapports dans une autre instance ou sur un ordinateur distant.|N,S|  
+|**ReportBuilderTrustLevel**|Ne modifiez pas cette valeur ; elle n'est pas configurable. Dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et versions ultérieures, le Générateur de rapports s’exécute uniquement en **FullTrust**. Pour plus d’informations, consultez [Configurer l’accès au Générateur de rapports](../../reporting-services/report-server/configure-report-builder-access.md) . Pour plus d’informations sur la suppression du mode de confiance partielle, consultez [Fonctionnalités supprimées de SQL Server Reporting Services dans SQL Server 2016](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md).|N,S|  
+|**PageCountMode**|Pour le portail web uniquement, ce paramètre spécifie si le serveur de rapports calcule une valeur de nombre de page avant le rendu du rapport, ou que le rapport est affiché. Les valeurs possibles sont **Estimate** (par défaut) et **Actual**. Utilisez **Estimate** pour calculer le nombre de pages du rapport pendant que l’utilisateur le consulte. Initialement, le nombre de pages est défini à 2 (pour la page actuelle plus une page supplémentaire), mais cette valeur s'ajuste au fur et à mesure que l'utilisateur navigue parmi les pages du rapport. Utilisez **Actual** si vous souhaitez calculer le nombre de pages à l’avance avant que le rapport ne s’affiche. **Actual** est fourni pour la compatibilité descendante. Notez que, si vous affectez **Actual** à **PageCountMode**, le rapport entier doit être traité pour permettre l’obtention d’un nombre de pages valide, ce qui accroît le temps d’attente avant que le rapport ne soit affiché.|N,S|  
   
 ##  <a name="bkmk_extensions"></a> Extensions (fichier RSReportServer.config) en mode natif  
  La section Extensions apparaît dans le fichier rsreportserver.config **uniquement pour les serveurs de rapports en mode natif** . Les informations relatives aux extensions des serveurs de rapports en mode SharePoint sont stockées dans la base de données de configuration SharePoint et sont configurées en fonction de chaque application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -247,11 +213,11 @@ caps.handback.revision: 16
  Quelques-unes de ces extensions sont à usage strictement interne par le serveur de rapports. Les paramètres de configuration pour les extensions à usage interne uniquement ne sont pas documentés. Les sections suivantes décrivent les paramètres de configuration des extensions par défaut. Si vous utilisez un serveur de rapports qui a des extensions personnalisées, vos fichiers de configuration peuvent contenir des paramètres qui ne sont pas décrits ici. Cette section liste les extensions dans l'ordre dans lequel elles apparaissent. Les paramètres qui se répètent pour plusieurs instances du même type d'extension ne sont décrits qu'une seule fois.  
   
 ###  <a name="bkmk_extensionsgeneral"></a> Configuration générale des extensions de remise  
- Spécifie les extensions de remise par défaut (et éventuellement personnalisée) qui sont utilisées pour remettre les rapports par le biais des abonnements. Le fichier RSReportServer.config inclut des paramètres d'application pour quatre extensions de remise :  
+ Spécifie les extensions de remise par défaut (et éventuellement personnalisée) qui sont utilisées pour remettre les rapports par le biais des abonnements. Le fichier RSReportServer.config inclut des paramètres d'application pour quatre extensions de remise :  
   
-1.  messagerie électronique du serveur de rapports ;  
+1.  messagerie électronique du serveur de rapports ;  
   
-2.  remise par partage de fichiers ;  
+2.  remise par partage de fichiers ;  
   
 3.  bibliothèque de documents du serveur de rapports utilisée pour un serveur de rapports s'exécutant en mode intégré SharePoint ;  
   
@@ -276,7 +242,7 @@ caps.handback.revision: 16
 |**ExcludedRenderFormats**, **RenderingExtension**|Ces paramètres sont utilisés pour exclure volontairement les formats d'exportation qui ne fonctionnent pas correctement avec la remise par partage de fichiers. Ces formats sont utilisés en général pour la création de rapports interactifs, l'aperçu ou le préchargement du cache de rapports. Ils ne produisent pas de fichiers d'application qui peuvent être affichés facilement à partir d'une application bureautique.<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> Null|  
   
 ####  <a name="bkmk_email_extension"></a> Paramètres de configuration de l'extension de messagerie électronique du serveur de rapports  
- La messagerie électronique Report Server utilise un périphérique réseau SMTP pour envoyer des rapports à des adresses de messagerie. Cette extension de remise doit être configurée avant de pouvoir être utilisée. Pour plus d’informations, consultez [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](http://msdn.microsoft.com/fr-fr/b838f970-d11a-4239-b164-8d11f4581d83) et [Remise par courrier électronique dans Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
+ La messagerie électronique Report Server utilise un périphérique réseau SMTP pour envoyer des rapports à des adresses de messagerie. Cette extension de remise doit être configurée avant de pouvoir être utilisée. Pour plus d’informations, consultez [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83) et [Remise par courrier électronique dans Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 |Paramètre|Description|  
 |-------------|-----------------|  
@@ -285,15 +251,15 @@ caps.handback.revision: 16
 |**SMTPAccountName**|Contient une valeur de chaîne qui désigne le nom du compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook Express. Vous pouvez définir cette valeur si votre serveur SMTP est configuré de manière à l'utiliser d'une manière ou d'une autre. Si tel n'est pas le cas, vous pouvez la laisser vide. Utilisez **From** pour spécifier le compte de messagerie utilisé pour envoyer les rapports.|  
 |**SMTPConnectionTimeout**|Spécifie une valeur d'entier indiquant le nombre de secondes d'attente d'une connexion de sockets valide avec le service SMTP avant l'expiration du délai. La valeur par défaut est 30 secondes, mais elle est ignorée si la valeur de **SendUsing** est 2.|  
 |**SMTPServerPickupDirectory**|Spécifie une valeur de chaîne indiquant le répertoire de collecte pour le service SMTP local. Cette valeur doit être un chemin d'accès complet à un dossier local (par exemple, d:\rs-emails).|  
-|**SMTPUseSSL**|Spécifie une valeur booléenne pouvant être définie pour utiliser SSL (Secure Sockets Layer) en cas d'envoi de message SMTP via le réseau. La valeur par défaut est 0 (ou False). Ce paramètre peut être utilisé lorsque l'élément **SendUsing** est défini sur 2.|  
-|**SendUsing**|Spécifie quelle méthode utiliser pour envoyer des messages. Les valeurs valides sont :<br /><br /> 1= Envoie un message à partir du répertoire de collecte du service SMTP local.<br /><br /> 2= Envoie le message à partir du service SMTP du réseau.|  
-|**SMTPAuthenticate**|Spécifie une valeur d'entier qui indique quel type d'authentification utiliser lorsque vous envoyez des messages à un service SMTP via une connexion TCP/IP. Les valeurs valides sont :<br /><br /> 0= Pas d'authentification.<br /><br /> 1= (Non pris en charge.)<br /><br /> 2= Authentification NTLM (NT LanMan). Le contexte de sécurité du service Windows Report Server est utilisé pour la connexion au serveur SMTP du réseau.|  
-|**From**|Spécifie l’adresse de messagerie électronique d’où sont envoyés les rapports au format *abc@hôte.xyz*. L’adresse apparaît dans la ligne **De** d’un message électronique sortant. Cette valeur est obligatoire si vous utilisez un serveur SMTP distant. Elle doit correspondre à un compte de messagerie valide ayant l'autorisation d'envoyer des messages.|  
+|**SMTPUseSSL**|Spécifie une valeur booléenne pouvant être définie pour utiliser SSL (Secure Sockets Layer) en cas d'envoi de message SMTP via le réseau. La valeur par défaut est 0 (ou False). Ce paramètre peut être utilisé lorsque l'élément **SendUsing** est défini sur 2.|  
+|**SendUsing**|Spécifie quelle méthode utiliser pour envoyer des messages. Les valeurs valides sont :<br /><br /> 1= Envoie un message à partir du répertoire de collecte du service SMTP local.<br /><br /> 2= Envoie le message à partir du service SMTP du réseau.|  
+|**SMTPAuthenticate**|Spécifie une valeur d'entier qui indique quel type d'authentification utiliser lorsque vous envoyez des messages à un service SMTP via une connexion TCP/IP. Les valeurs valides sont :<br /><br /> 0= Pas d'authentification.<br /><br /> 1= (Non pris en charge.)<br /><br /> 2= Authentification NTLM (NT LanMan). Le contexte de sécurité du service Windows Report Server est utilisé pour la connexion au serveur SMTP du réseau.|  
+|**From**|Spécifie l’adresse de messagerie électronique d’où sont envoyés les rapports au format *abc@host.xyz*. L’adresse apparaît dans la ligne **De** d’un message électronique sortant. Cette valeur est obligatoire si vous utilisez un serveur SMTP distant. Elle doit correspondre à un compte de messagerie valide ayant l'autorisation d'envoyer des messages.|  
 |**EmbeddedRenderFormats, RenderingExtension**|Spécifie le format de rendu utilisé pour encapsuler un rapport dans le corps d'un message électronique. Les images du rapport sont ensuite incorporées dans le rapport. Les valeurs valides sont MHTML et HTML4.0.|  
 |**PrivilegedUserRenderFormats**|Spécifie les formats de rendu que l'utilisateur peut sélectionner pour un abonnement de rapport lorsque l'option d'abonnement est activée au moyen de la tâche « Gérer tous les abonnements ». Si cette valeur n'est pas définie, tous les formats de rendu qui ne sont pas spécifiquement exclus peuvent être sélectionnés.|  
-|**ExcludedRenderFormats, RenderingExtension**|Exclut spécifiquement les formats qui ne fonctionnent pas bien avec une extension de remise donnée. Vous ne pouvez pas exclure plusieurs instances de la même extension de rendu. L'exclusion de plusieurs instances entraîne une erreur lorsque le serveur de rapports lit le fichier de configuration. Par défaut, les extensions suivantes sont exclues de la remise par messagerie électronique :<br /><br /> HTMLOWC<br /><br /> Null<br /><br /> RGDI|  
-|**SendEmailToUserAlias**|Cette valeur fonctionne avec **DefaultHostName**.<br /><br /> Quand l’option **SendEmailToUserAlias** a la valeur **True**, les utilisateurs qui définissent des abonnements individuels sont automatiquement spécifiés comme destinataires du rapport. Le champ **À** est masqué. Si cette valeur est **False**, le champ **À** est visible. Choisissez la valeur **True** si vous voulez un contrôle maximal de la distribution des rapports. Les valeurs valides sont les suivantes :<br /><br /> **True** = l’adresse de messagerie de l’utilisateur qui crée l’abonnement est utilisée. Ceci est la valeur par défaut.<br /><br /> **False**= n’importe quelle adresse de messagerie peut être spécifiée.|  
-|**DefaultHostName**|Cette valeur fonctionne avec **SendEmailToUserAlias**.<br /><br /> Spécifie une valeur de chaîne indiquant le nom d'hôte à ajouter à l'alias d'utilisateur lorsque l'option **SendEmailToUserAlias** est définie sur true (vrai). Cette valeur peut être un nom DNS (Domain Name System) ou une adresse IP.|  
+|**ExcludedRenderFormats, RenderingExtension**|Exclut spécifiquement les formats qui ne fonctionnent pas bien avec une extension de remise donnée. Vous ne pouvez pas exclure plusieurs instances de la même extension de rendu. L'exclusion de plusieurs instances entraîne une erreur lorsque le serveur de rapports lit le fichier de configuration. Par défaut, les extensions suivantes sont exclues de la remise par messagerie électronique :<br /><br /> HTMLOWC<br /><br /> Null<br /><br /> RGDI|  
+|**SendEmailToUserAlias**|Cette valeur fonctionne avec **DefaultHostName**.<br /><br /> Quand l’option **SendEmailToUserAlias** a la valeur **True**, les utilisateurs qui définissent des abonnements individuels sont automatiquement spécifiés comme destinataires du rapport. Le champ **À** est masqué. Si cette valeur est **False**, le champ **À** est visible. Choisissez la valeur **True** si vous voulez un contrôle maximal de la distribution des rapports. Les valeurs valides sont les suivantes :<br /><br /> **True**= l’adresse de messagerie de l’utilisateur qui crée l’abonnement est utilisée. Ceci est la valeur par défaut.<br /><br /> **False**= n’importe quelle adresse de messagerie peut être spécifiée.|  
+|**DefaultHostName**|Cette valeur fonctionne avec **SendEmailToUserAlias**.<br /><br /> Spécifie une valeur de chaîne indiquant le nom d'hôte à ajouter à l'alias d'utilisateur lorsque l'option **SendEmailToUserAlias** est définie sur true (vrai). Cette valeur peut être un nom DNS (Domain Name System) ou une adresse IP.|  
 |**PermittedHosts**|Limite la distribution des rapports en spécifiant quels hôtes peuvent recevoir la livraison de courriers électroniques. Dans l'option **PermittedHosts**, chaque hôte est spécifié en tant qu'élément **HostName** , sachant que la valeur est soit une adresse IP, soit un nom DNS.<br /><br /> Seuls les comptes de messagerie définis pour l'hôte sont des destinataires valides. Si vous avez spécifié l'option **DefaultHostName**, assurez-vous d'inclure cet hôte en tant qu'élément **HostName** de l'option **PermittedHosts**. Cette valeur doit correspondre à un ou plusieurs noms DNS ou adresses IP. Par défaut, cette valeur n'est pas définie. Si la valeur n'est pas définie, il n'y a aucune restriction en matière de réception des rapports envoyés par messagerie.|  
   
 ####  <a name="bkmk_documentlibrary_extension"></a> Configuration de l'extension de bibliothèque de documents SharePoint du serveur de rapports  
@@ -307,7 +273,7 @@ caps.handback.revision: 16
  Le fournisseur de remise NULL sert à précharger le cache avec les rapports générés au préalable pour des utilisateurs spécifiques. Il n'y a pas de paramètres de configuration pour cette extension de remise. Pour plus d’informations, consultez [Mise en cache de rapports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
   
 ###  <a name="bkmk_ui"></a> Configuration générale des extensions de l'interface utilisateur de remise  
- Spécifie les extensions de remise qui contiennent un composant d'interface utilisateur apparaissant dans les pages de définition d'abonnement ; ces dernières permettent de définir des abonnements individuels dans le Gestionnaire de rapports. Si vous créez et déployez une extension de remise personnalisée qui dispose d'options définies par l'utilisateur et que vous souhaitez utiliser le Gestionnaire de rapports, vous devez inscrire l'extension de remise dans cette section. Par défaut, il existe des paramètres de configuration pour la messagerie électronique Report Server et le partage de fichiers Report Server. Les extensions de remise utilisées uniquement dans les abonnements pilotés par les données ou les pages d'application SharePoint n'ont pas de paramètres dans cette section.  
+ Spécifie les extensions de remise qui contiennent un composant d’interface utilisateur qui apparaît dans les pages de définition d’abonnement utilisés lors de la définition des abonnements individuels dans le portail web. Si vous créez et déployez une extension de remise personnalisée qui a les options définies par l’utilisateur et vous souhaitez utiliser le portail web, vous devez enregistrer l’extension de remise dans cette section. Par défaut, il existe des paramètres de configuration pour la messagerie électronique Report Server et le partage de fichiers Report Server. Les extensions de remise utilisées uniquement dans les abonnements pilotés par les données ou les pages d'application SharePoint n'ont pas de paramètres dans cette section.  
   
 |Paramètre|Description|  
 |-------------|-----------------|  
@@ -356,16 +322,16 @@ caps.handback.revision: 16
   
 -   [Paramètres d’informations de périphérique pour les extensions de rendu &#40;Reporting Services&#41;](../../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)  
   
- Pour plus d’informations sur les attributs de l’élément **\<Extension>** enfant sous **\<Render>**, consultez les rubriques suivantes :  
+ Pour plus d’informations sur les attributs de l’enfant  **\<Extension >** élément sous ** \<restituer >**, consultez les rubriques suivantes :  
   
 -   [Personnaliser les paramètres d'extension de rendu dans RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
 -   [Déploiement d'une extension de rendu](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)  
   
- Ne modifiez pas cette section sauf si vous déployez une extension de rendu personnalisée. Pour plus d'informations, consultez [Implémentation d’une extension de rendu](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md).  
+ Ne modifiez pas cette section sauf si vous déployez une extension de rendu personnalisée. Pour plus d’informations, consultez [Implémentation d’une extension de rendu](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md).  
   
 ###  <a name="bkmk_data"></a> Configuration générale des extensions de données  
- Spécifie les extensions pour le traitement des données par défaut (et éventuellement personnalisé) utilisées pour traiter les requêtes. Les extensions de traitement de données par défaut sont les suivantes :  
+ Spécifie les extensions pour le traitement des données par défaut (et éventuellement personnalisé) utilisées pour traiter les requêtes. Les extensions de traitement de données par défaut sont les suivantes :  
   
 -   SQL  
   
@@ -421,22 +387,347 @@ caps.handback.revision: 16
 |-------------|-----------------|  
 |**MaxConnections**|Spécifie le nombre maximal de connexions aux services Web Bing Maps.|  
 |**Délai d'expiration**|Spécifie le délai d'attente, en secondes, d'une réponse des services Web Bing Maps.|  
-|**AppID**|Spécifie l'identificateur d'application (AppID) à utiliser pour les services Web Bing Maps. **(Default)** spécifie l’AppID par défaut de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](http://go.microsoft.com/fwlink/?LinkId=151371) et [Déclaration de confidentialité](http://go.microsoft.com/fwlink/?LinkId=151372)(éventuellement en anglais).<br /><br /> Ne modifiez pas cette valeur sauf si vous devez spécifier un AppID personnalisé pour votre propre contrat de licence Bing Maps. Lorsque vous modifiez l'AppID, vous n'avez pas à redémarrer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour que la modification prenne effet.|  
+|**AppID**|Spécifie l'identificateur d'application (AppID) à utiliser pour les services Web Bing Maps. **(Default)** spécifie l’AppID par défaut de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](http://go.microsoft.com/fwlink/?LinkId=151371).<br /><br /> Ne modifiez pas cette valeur sauf si vous devez spécifier un AppID personnalisé pour votre propre contrat de licence Bing Maps. Lorsque vous modifiez l'AppID, vous n'avez pas à redémarrer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour que la modification prenne effet.|  
 |**CacheLevel**|Spécifie une valeur de l'énumération HttpRequestCacheLevel de System.Net.Cache. La valeur par défaut est **Default**. Pour plus d'informations, consultez [HttpRequestCacheLevel, énumération](http://go.microsoft.com/fwlink/?LinkId=153353).|  
   
 ##  <a name="bkmk_nativedefaultfile"></a> Fichier de configuration par défaut d'un serveur de rapports en mode natif  
- Le fichier rsreportserver.config est installé à l'emplacement par défaut suivant :  
+ Le fichier rsreportserver.config est installé à l'emplacement par défaut suivant :  
   
- **C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\ReportServer**  
+ **C:\Program Files\Microsoft SQL Server\MSRS13. MSSQLSERVER\Reporting Services\ReportServer**  
   
 ```  
-<Configuration>     <Dsn>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAoyfT3iJKS0qxG3ibhRCYhAQAAAAiAAAAUgBlAHAAbwByAHQAaQBuAGcAIABTAGUAcgB2AGUAcgAAAANmAADAAAAAEAAAADMnIAaBwxRDy2mu4yg0zKAAAAAABIAAAKAAAAAQAAAAX+0WIyZTGyyEE7R8rtmmZegAAAByz0h1aXSAggJLDnVfd1eyGlLqTln9cCff3DQ25pcNBccP2rsLkwokUrS9kcee4up6UOawgKQuQjqWbLXfpqY9Dp/ueDTcF8h+VlSWNCmcH/OlDo7Pt2S6FestlnrmFrUXImx+XPZoeDYQelDUTgy8cHUAgUlD/wW8beboXXcS04QB0uTy2mwtUl5/xAPOGXFOKkXp6w8wqnxkEdVd60WyyppOu7djRf25OBSZn3I4T5dwaORHqPGVJmVGzcagoG5u0hDqtEf2RD4FnJgcAAIRHcqxj+jqOV+ZCVvmDcdBWCsbg5OdvIBEFAAAABi/yAmdbbA2emMyOAFIQ1k0His4</Dsn>     <ConnectionType>Default</ConnectionType>     <LogonUser></LogonUser>     <LogonDomain></LogonDomain>     <LogonCred></LogonCred>     <InstanceId>MSRS13.MSSQLSERVER</InstanceId>     <InstallationID>{6af9ea4c-2593-4dd8-8e2b-6315014c1a52}</InstallationID>     <Add Key="SecureConnectionLevel" Value="0"/>     <Add Key="DisableSecureFormsAuthenticationCookie" Value="false"/>     <Add Key="CleanupCycleMinutes" Value="10"/>     <Add Key="MaxActiveReqForOneUser" Value="20"/>     <Add Key="DatabaseQueryTimeout" Value="120"/>     <Add Key="RunningRequestsScavengerCycle" Value="60"/>     <Add Key="RunningRequestsDbCycle" Value="60"/>     <Add Key="RunningRequestsAge" Value="30"/>     <Add Key="MaxScheduleWait" Value="5"/>     <Add Key="DisplayErrorLink" Value="true"/>     <Add Key="WebServiceUseFileShareStorage" Value="false"/>     <!--  <Add Key="ProcessTimeout" Value="150" /> -->     <!--  <Add Key="ProcessTimeoutGcExtension" Value="30" /> -->     <!--  <Add Key="WatsonFlags" Value="0x0430" /> full dump-->     <!--  <Add Key="WatsonFlags" Value="0x0428" /> minidump -->     <!--  <Add Key="WatsonFlags" Value="0x0002" /> no dump-->     <Add Key="WatsonFlags" Value="0x0428"/>     <Add Key="WatsonDumpOnExceptions" Value="Microsoft.ReportingServices.Diagnostics.Utilities.InternalCatalogException,Microsoft.ReportingServices.Modeling.InternalModelingException,Microsoft.ReportingServices.ReportProcessing.UnhandledReportRenderingException"/>     <Add Key="WatsonDumpExcludeIfContainsExceptions" Value="System.Threading.ThreadAbortException,System.Web.UI.ViewStateException,System.OutOfMemoryException,System.Web.HttpException,System.IO.IOException,System.IO.FileLoadException,Microsoft.SharePoint.SPException,Microsoft.ReportingServices.WmiProvider.WMIProviderException"/>     <URLReservations>          <Application>               <Name>ReportServerWebService</Name>               <VirtualDirectory>ReportServer</VirtualDirectory>               <URLs>                    <URL>                         <UrlString>http://+:80</UrlString>                         <AccountSid>S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051</AccountSid>                         <AccountName>NT Service\ReportServer</AccountName>                    </URL>               </URLs>          </Application>          <Application>               <Name>ReportManager</Name>               <VirtualDirectory>Reports</VirtualDirectory>               <URLs>                    <URL>                         <UrlString>http://+:80</UrlString>                         <AccountSid>S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051</AccountSid>                         <AccountName>NT Service\ReportServer</AccountName>                    </URL>               </URLs>          </Application>     </URLReservations>     <Authentication>          <AuthenticationTypes>               <RSWindowsNTLM/>          </AuthenticationTypes>          <RSWindowsExtendedProtectionLevel>Off</RSWindowsExtendedProtectionLevel>          <RSWindowsExtendedProtectionScenario>Proxy</RSWindowsExtendedProtectionScenario>          <EnableAuthPersistence>true</EnableAuthPersistence>     </Authentication>     <Service>          <IsSchedulingService>True</IsSchedulingService>          <IsNotificationService>True</IsNotificationService>          <IsEventService>True</IsEventService>          <PollingInterval>10</PollingInterval>          <WindowsServiceUseFileShareStorage>False</WindowsServiceUseFileShareStorage>          <MemorySafetyMargin>80</MemorySafetyMargin>          <MemoryThreshold>90</MemoryThreshold>          <RecycleTime>720</RecycleTime>          <MaxAppDomainUnloadTime>30</MaxAppDomainUnloadTime>          <MaxQueueThreads>0</MaxQueueThreads>          <UrlRoot>          </UrlRoot>          <UnattendedExecutionAccount>               <UserName></UserName>               <Password></Password>               <Domain></Domain>          </UnattendedExecutionAccount>          <PolicyLevel>rssrvpolicy.config</PolicyLevel>          <IsWebServiceEnabled>True</IsWebServiceEnabled>          <IsReportManagerEnabled>True</IsReportManagerEnabled>          <FileShareStorageLocation>               <Path>               </Path>          </FileShareStorageLocation>     </Service>     <UI>          <ReportServerUrl>          </ReportServerUrl>          <PageCountMode>Estimate</PageCountMode>     </UI>     <Extensions>          <Delivery>               <Extension Name="Report Server FileShare" Type="Microsoft.ReportingServices.FileShareDeliveryProvider.FileShareProvider,ReportingServicesFileShareDeliveryProvider">                    <MaxRetries>3</MaxRetries>                    <SecondsBeforeRetry>900</SecondsBeforeRetry>                    <Configuration>                         <FileShareConfiguration>                              <ExcludedRenderFormats>                                   <RenderingExtension>HTMLOWC</RenderingExtension>                                   <RenderingExtension>NULL</RenderingExtension>                                   <RenderingExtension>RGDI</RenderingExtension>                              </ExcludedRenderFormats>                         </FileShareConfiguration>                    </Configuration>               </Extension>               <Extension Name="Report Server Email" Type="Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider,ReportingServicesEmailDeliveryProvider">                    <MaxRetries>3</MaxRetries>                    <SecondsBeforeRetry>900</SecondsBeforeRetry>                    <Configuration>                         <RSEmailDPConfiguration>                              <SMTPServer></SMTPServer>                              <SMTPServerPort>                              </SMTPServerPort>                              <SMTPAccountName>                              </SMTPAccountName>                              <SMTPConnectionTimeout>                              </SMTPConnectionTimeout>                              <SMTPServerPickupDirectory>                              </SMTPServerPickupDirectory>                              <SMTPUseSSL>                              </SMTPUseSSL>                              <SendUsing>2</SendUsing>                              <SMTPAuthenticate>                              </SMTPAuthenticate>                              <From></From>                              <EmbeddedRenderFormats>                                   <RenderingExtension>MHTML</RenderingExtension>                              </EmbeddedRenderFormats>                              <PrivilegedUserRenderFormats>                              </PrivilegedUserRenderFormats>                              <ExcludedRenderFormats>                                   <RenderingExtension>HTMLOWC</RenderingExtension>                                   <RenderingExtension>NULL</RenderingExtension>                                   <RenderingExtension>RGDI</RenderingExtension>                              </ExcludedRenderFormats>                              <SendEmailToUserAlias>True</SendEmailToUserAlias>                              <DefaultHostName>                              </DefaultHostName>                              <PermittedHosts>                              </PermittedHosts>                         </RSEmailDPConfiguration>                    </Configuration>               </Extension>               <Extension Name="Report Server DocumentLibrary" Type="Microsoft.ReportingServices.SharePoint.SharePointDeliveryExtension.DocumentLibraryProvider,ReportingServicesSharePointDeliveryExtension">                    <MaxRetries>3</MaxRetries>                    <SecondsBeforeRetry>900</SecondsBeforeRetry>                    <Configuration>                         <DocumentLibraryConfiguration>                              <ExcludedRenderFormats>                                   <RenderingExtension>HTMLOWC</RenderingExtension>                                   <RenderingExtension>NULL</RenderingExtension>                                   <RenderingExtension>RGDI</RenderingExtension>                              </ExcludedRenderFormats>                         </DocumentLibraryConfiguration>                    </Configuration>               </Extension>               <Extension Name="NULL" Type="Microsoft.ReportingServices.NullDeliveryProvider.NullProvider,ReportingServicesNullDeliveryProvider"/>          </Delivery>          <DeliveryUI>               <Extension Name="Report Server Email" Type="Microsoft.ReportingServices.EmailDeliveryProvider.EmailDeliveryProviderControl,ReportingServicesEmailDeliveryProvider">                    <DefaultDeliveryExtension>True</DefaultDeliveryExtension>                    <Configuration>                         <RSEmailDPConfiguration>                              <DefaultRenderingExtension>MHTML</DefaultRenderingExtension>                         </RSEmailDPConfiguration>                    </Configuration>               </Extension>               <Extension Name="Report Server FileShare" Type="Microsoft.ReportingServices.FileShareDeliveryProvider.FileShareUIControl,ReportingServicesFileShareDeliveryProvider"/>          </DeliveryUI>          <Render>               <Extension Name="XML" Type="Microsoft.ReportingServices.Rendering.DataRenderer.XmlDataReport,Microsoft.ReportingServices.DataRendering"/>               <Extension Name="NULL" Type="Microsoft.ReportingServices.Rendering.NullRenderer.NullReport,Microsoft.ReportingServices.NullRendering" Visible="false"/>               <Extension Name="CSV" Type="Microsoft.ReportingServices.Rendering.DataRenderer.CsvReport,Microsoft.ReportingServices.DataRendering"/>               <Extension Name="ATOM" Type="Microsoft.ReportingServices.Rendering.DataRenderer.AtomDataReport,Microsoft.ReportingServices.DataRendering" Visible="false"/>               <Extension Name="PDF" Type="Microsoft.ReportingServices.Rendering.ImageRenderer.PDFRenderer,Microsoft.ReportingServices.ImageRendering"/>               <Extension Name="RGDI" Type="Microsoft.ReportingServices.Rendering.ImageRenderer.RGDIRenderer,Microsoft.ReportingServices.ImageRendering" Visible="false"/>               <Extension Name="HTML4.0" Type="Microsoft.ReportingServices.Rendering.HtmlRenderer.Html40RenderingExtension,Microsoft.ReportingServices.HtmlRendering" Visible="false">                    <Configuration>                         <DeviceInfo>                              <DataVisualizationFitSizing>Approximate</DataVisualizationFitSizing>                         </DeviceInfo>                    </Configuration>               </Extension>               <Extension Name="MHTML" Type="Microsoft.ReportingServices.Rendering.HtmlRenderer.MHtmlRenderingExtension,Microsoft.ReportingServices.HtmlRendering">                    <Configuration>                         <DeviceInfo>                              <DataVisualizationFitSizing>Approximate</DataVisualizationFitSizing>                         </DeviceInfo>                    </Configuration>               </Extension>               <Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>               <Extension Name="EXCELOPENXML" Type="Microsoft.ReportingServices.Rendering.ExcelOpenXmlRenderer.ExcelOpenXmlRenderer,Microsoft.ReportingServices.ExcelRendering"/>               <Extension Name="RPL" Type="Microsoft.ReportingServices.Rendering.RPLRendering.RPLRenderer,Microsoft.ReportingServices.RPLRendering" Visible="false" LogAllExecutionRequests="false"/>               <Extension Name="IMAGE" Type="Microsoft.ReportingServices.Rendering.ImageRenderer.ImageRenderer,Microsoft.ReportingServices.ImageRendering"/>               <Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>               <Extension Name="WORDOPENXML" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordOpenXmlRenderer.WordOpenXmlDocumentRenderer,Microsoft.ReportingServices.WordRendering"/>          </Render>          <Data>               <Extension Name="SQL" Type="Microsoft.ReportingServices.DataExtensions.SqlConnectionWrapper,Microsoft.ReportingServices.DataExtensions"/>               <Extension Name="SQLAZURE" Type="Microsoft.ReportingServices.DataExtensions.SqlAzureConnectionWrapper,Microsoft.ReportingServices.DataExtensions"/>               <Extension Name="SQLPDW" Type="Microsoft.ReportingServices.DataExtensions.SqlDwConnectionWrapper,Microsoft.ReportingServices.DataExtensions"/>               <Extension Name="OLEDB" Type="Microsoft.ReportingServices.DataExtensions.OleDbConnectionWrapper,Microsoft.ReportingServices.DataExtensions"/>               <Extension Name="OLEDB-MD" Type="Microsoft.ReportingServices.DataExtensions.AdoMdConnection,Microsoft.ReportingServices.DataExtensions"/>               <Extension Name="ORACLE" Type="Microsoft.ReportingServices.DataExtensions.OracleClientConnectionWrapper,Microsoft.ReportingServices.DataExtensions"/>               <Extension Name="ODBC" Type="Microsoft.ReportingServices.DataExtensions.OdbcConnectionWrapper,Microsoft.ReportingServices.DataExtensions"/>               <Extension Name="XML" Type="Microsoft.ReportingServices.DataExtensions.XmlDPConnection,Microsoft.ReportingServices.DataExtensions"/>               <Extension Name="SHAREPOINTLIST" Type="Microsoft.ReportingServices.DataExtensions.SharePointList.SPListConnection,Microsoft.ReportingServices.DataExtensions"/>               <Extension Name="SAPBW" Type="Microsoft.ReportingServices.DataExtensions.SapBw.SapBwConnection,Microsoft.ReportingServices.DataExtensions.SapBw"/>               <Extension Name="ESSBASE" Type="Microsoft.ReportingServices.DataExtensions.Essbase.EssbaseConnection,Microsoft.ReportingServices.DataExtensions.Essbase"/>               <Extension Name="TERADATA" Type="Microsoft.ReportingServices.DataExtensions.TeradataConnectionWrapper,Microsoft.ReportingServices.DataExtensions"/>          </Data>          <SemanticQuery>               <Extension Name="SQL" Type="Microsoft.ReportingServices.SemanticQueryEngine.Sql.MSSQL.MSSqlSQCommand,Microsoft.ReportingServices.SemanticQueryEngine">                    <Configuration>                         <EnableMathOpCasting>False</EnableMathOpCasting>                    </Configuration>               </Extension>               <Extension Name="SQLAZURE" Type="Microsoft.ReportingServices.SemanticQueryEngine.Sql.MSSQL.MSSqlSQCommand,Microsoft.ReportingServices.SemanticQueryEngine">                    <Configuration>                         <EnableMathOpCasting>False</EnableMathOpCasting>                    </Configuration>               </Extension>               <Extension Name="SQLPDW" Type="Microsoft.ReportingServices.SemanticQueryEngine.Sql.MSSQLADW.MSSqlAdwSQCommand,Microsoft.ReportingServices.SemanticQueryEngine">                    <Configuration>                         <EnableMathOpCasting>False</EnableMathOpCasting>                    </Configuration>               </Extension>               <Extension Name="ORACLE" Type="Microsoft.ReportingServices.SemanticQueryEngine.Sql.Oracle.OraSqlSQCommand,Microsoft.ReportingServices.SemanticQueryEngine">                    <Configuration>                         <EnableMathOpCasting>True</EnableMathOpCasting>                         <DisableNO_MERGEInLeftOuters>False</DisableNO_MERGEInLeftOuters>                         <EnableUnistr>False</EnableUnistr>                         <DisableTSTruncation>False</DisableTSTruncation>                    </Configuration>               </Extension>               <Extension Name="TERADATA" Type="Microsoft.ReportingServices.SemanticQueryEngine.Sql.Teradata.TdSqlSQCommand,Microsoft.ReportingServices.SemanticQueryEngine">                    <Configuration>                         <EnableMathOpCasting>True</EnableMathOpCasting>                         <ReplaceFunctionName>oREPLACE</ReplaceFunctionName>                    </Configuration>               </Extension>               <Extension Name="OLEDB-MD" Type="Microsoft.AnalysisServices.Modeling.QueryExecution.ASSemanticQueryCommand,Microsoft.AnalysisServices.Modeling"/>          </SemanticQuery>          <ModelGeneration>               <Extension Name="SQL" Type="Microsoft.ReportingServices.SemanticQueryEngine.Sql.MSSQL.MsSqlModelGenerator,Microsoft.ReportingServices.SemanticQueryEngine"/>               <Extension Name="SQLAZURE" Type="Microsoft.ReportingServices.SemanticQueryEngine.Sql.MSSQL.MsSqlModelGenerator,Microsoft.ReportingServices.SemanticQueryEngine"/>               <Extension Name="ORACLE" Type="Microsoft.ReportingServices.SemanticQueryEngine.Sql.Oracle.OraSqlModelGenerator,Microsoft.ReportingServices.SemanticQueryEngine"/>               <Extension Name="TERADATA" Type="Microsoft.ReportingServices.SemanticQueryEngine.Sql.Teradata.TdSqlModelGenerator,Microsoft.ReportingServices.SemanticQueryEngine"/>               <Extension Name="OLEDB-MD" Type="Microsoft.AnalysisServices.Modeling.Generation.ModelGeneratorExtention,Microsoft.AnalysisServices.Modeling"/>          </ModelGeneration>          <Security>               <Extension Name="Windows" Type="Microsoft.ReportingServices.Authorization.WindowsAuthorization, Microsoft.ReportingServices.Authorization"/>          </Security>          <Authentication>               <Extension Name="Windows" Type="Microsoft.ReportingServices.Authentication.WindowsAuthentication, Microsoft.ReportingServices.Authorization"/>          </Authentication>          <EventProcessing>               <Extension Name="SnapShot Extension" Type="Microsoft.ReportingServices.Library.HistorySnapShotCreatedHandler,ReportingServicesLibrary">                    <Event>                         <Type>ReportHistorySnapshotCreated</Type>                    </Event>               </Extension>               <Extension Name="Timed Subscription Extension" Type="Microsoft.ReportingServices.Library.TimedSubscriptionHandler,ReportingServicesLibrary">                    <Event>                         <Type>TimedSubscription</Type>                    </Event>               </Extension>               <Extension Name="Cache Refresh Plan Extension" Type="Microsoft.ReportingServices.Library.CacheRefreshPlanHandler,ReportingServicesLibrary">                    <Event>                         <Type>RefreshCache</Type>                    </Event>               </Extension>               <Extension Name="Cache Update Extension" Type="Microsoft.ReportingServices.Library.ReportExecutionSnapshotUpdateEventHandler,ReportingServicesLibrary">                    <Event>                         <Type>SnapshotUpdated</Type>                    </Event>               </Extension>          </EventProcessing>     </Extensions>     <MapTileServerConfiguration>          <MaxConnections>2</MaxConnections>          <Timeout>10</Timeout>          <AppID>(Default)</AppID>          <CacheLevel>Default</CacheLevel>     </MapTileServerConfiguration></Configuration>  
+<Configuration>
+    <Dsn>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAR58DMGebHUeMvyR6HR04kQQAAAAiAAAAUgBlAHAAbwBy
+AHQAaQBuAGcAIABTAGUAcgB2AGUAcgAAAANmAADAAAAAEAAAADczfLRgZ4GF44iBHkLrKY4AAAAA
+BIAAAKAAAAAQAAAAJ9wQOmDNauH+LS30rboJ2OAAAAAp0kiFFBrc3r3ypKaldZJtjCORX9LTZRzt
+0/JCSVIZc4GXx0peGKqd+f85UyrY/KOyUSHogOC/XoBp9Ppxv6ITbdunsS/LXEcMUBVqEdQD4ylh
+x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
+/rqHibNNyvYbP/2uiqvgC0tQl6u8VkVbXpWrkvO+bFCqxlaJlCoDc2f3rIO321SZEvoFbsYNgPLd
++mIAkSCnH3Z3gm/bI8bqVkFaHblKyQuSfFsi6RQAAACb87b26dV0GjHmMJnE0Tk8CzNmhg==</Dsn>
+    <ConnectionType>Default</ConnectionType>
+    <LogonUser></LogonUser>
+    <LogonDomain></LogonDomain>
+    <LogonCred></LogonCred>
+    <InstanceId>MSRS13.MSSQLSERVER</InstanceId>
+    <InstallationID>{cd920604-a5c7-4554-b2a0-aadc04312fe5}</InstallationID>
+    <Add Key="SecureConnectionLevel" Value="0"/>
+    <Add Key="DisableSecureFormsAuthenticationCookie" Value="false"/>
+    <Add Key="CleanupCycleMinutes" Value="10"/>
+    <Add Key="MaxActiveReqForOneUser" Value="20"/>
+    <Add Key="DatabaseQueryTimeout" Value="120"/>
+    <Add Key="RunningRequestsScavengerCycle" Value="60"/>
+    <Add Key="RunningRequestsDbCycle" Value="60"/>
+    <Add Key="RunningRequestsAge" Value="30"/>
+    <Add Key="MaxScheduleWait" Value="5"/>
+    <Add Key="DisplayErrorLink" Value="true"/>
+    <Add Key="WebServiceUseFileShareStorage" Value="false"/>
+    <!--  <Add Key="ProcessTimeout" Value="150" /> -->
+    <!--  <Add Key="ProcessTimeoutGcExtension" Value="30" /> -->
+    <!--  <Add Key="WatsonFlags" Value="0x0430" /> full dump-->
+    <!--  <Add Key="WatsonFlags" Value="0x0428" /> minidump -->
+    <!--  <Add Key="WatsonFlags" Value="0x0002" /> no dump-->
+    <Add Key="WatsonFlags" Value="0x0428"/>
+    <Add Key="WatsonDumpOnExceptions" Value="Microsoft.ReportingServices.Diagnostics.Utilities.InternalCatalogException,Microsoft.ReportingServices.Modeling.InternalModelingException,Microsoft.ReportingServices.ReportProcessing.UnhandledReportRenderingException"/>
+    <Add Key="WatsonDumpExcludeIfContainsExceptions" Value="System.Threading.ThreadAbortException,System.Web.UI.ViewStateException,System.OutOfMemoryException,System.Web.HttpException,System.IO.IOException,System.IO.FileLoadException,Microsoft.SharePoint.SPException,Microsoft.ReportingServices.WmiProvider.WMIProviderException,System.AppDomainUnloadedException"/>
+    <URLReservations>
+        <Application>
+            <Name>ReportServerWebService</Name>
+            <VirtualDirectory>ReportServer</VirtualDirectory>
+            <URLs>
+                <URL>
+                    <UrlString>http://+:80</UrlString>
+                    <AccountSid>S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051</AccountSid>
+                    <AccountName>NT SERVICE\ReportServer</AccountName>
+                </URL>
+            </URLs>
+        </Application>
+        <Application>
+            <Name>ReportServerWebApp</Name>
+            <VirtualDirectory>Reports</VirtualDirectory>
+            <URLs>
+                <URL>
+                    <UrlString>http://+:80</UrlString>
+                    <AccountSid>S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051</AccountSid>
+                    <AccountName>NT SERVICE\ReportServer</AccountName>
+                </URL>
+            </URLs>
+        </Application>
+    </URLReservations>
+    <Authentication>
+        <AuthenticationTypes>
+            <RSWindowsNTLM/>
+        </AuthenticationTypes>
+        <RSWindowsExtendedProtectionLevel>Off</RSWindowsExtendedProtectionLevel>
+        <RSWindowsExtendedProtectionScenario>Proxy</RSWindowsExtendedProtectionScenario>
+        <EnableAuthPersistence>true</EnableAuthPersistence>
+    </Authentication>
+    <Service>
+        <IsSchedulingService>True</IsSchedulingService>
+        <IsNotificationService>True</IsNotificationService>
+        <IsEventService>True</IsEventService>
+        <PollingInterval>10</PollingInterval>
+        <WindowsServiceUseFileShareStorage>False</WindowsServiceUseFileShareStorage>
+        <MemorySafetyMargin>80</MemorySafetyMargin>
+        <MemoryThreshold>90</MemoryThreshold>
+        <RecycleTime>720</RecycleTime>
+        <MaxAppDomainUnloadTime>30</MaxAppDomainUnloadTime>
+        <MaxQueueThreads>0</MaxQueueThreads>
+        <UrlRoot>
+        </UrlRoot>
+        <UnattendedExecutionAccount>
+            <UserName></UserName>
+            <Password></Password>
+            <Domain></Domain>
+        </UnattendedExecutionAccount>
+        <PolicyLevel>rssrvpolicy.config</PolicyLevel>
+        <IsWebServiceEnabled>True</IsWebServiceEnabled>
+        <IsReportManagerEnabled>True</IsReportManagerEnabled>
+        <FileShareStorageLocation>
+            <Path>
+            </Path>
+        </FileShareStorageLocation>
+        <DefaultFileShareAccount>
+            <Domain></Domain>
+            <UserName></UserName>
+            <Password></Password>
+        </DefaultFileShareAccount>
+    </Service>
+    <UI>
+        <ReportServerUrl>
+        </ReportServerUrl>
+        <PageCountMode>Estimate</PageCountMode>
+    </UI>
+    <Extensions>
+        <Delivery>
+            <Extension Name="Report Server FileShare" Type="Microsoft.ReportingServices.FileShareDeliveryProvider.FileShareProvider,ReportingServicesFileShareDeliveryProvider">
+                <MaxRetries>3</MaxRetries>
+                <SecondsBeforeRetry>900</SecondsBeforeRetry>
+                <Configuration>
+                    <FileShareConfiguration>
+                        <ExcludedRenderFormats>
+                            <RenderingExtension>HTMLOWC</RenderingExtension>
+                            <RenderingExtension>NULL</RenderingExtension>
+                            <RenderingExtension>RGDI</RenderingExtension>
+                        </ExcludedRenderFormats>
+                    </FileShareConfiguration>
+                </Configuration>
+            </Extension>
+            <Extension Name="Report Server Email" Type="Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider,ReportingServicesEmailDeliveryProvider">
+                <MaxRetries>3</MaxRetries>
+                <SecondsBeforeRetry>900</SecondsBeforeRetry>
+                <Configuration>
+                    <RSEmailDPConfiguration>
+                        <SMTPServer></SMTPServer>
+                        <SMTPServerPort>
+                        </SMTPServerPort>
+                        <SMTPAccountName>
+                        </SMTPAccountName>
+                        <SMTPConnectionTimeout>
+                        </SMTPConnectionTimeout>
+                        <SMTPServerPickupDirectory>
+                        </SMTPServerPickupDirectory>
+                        <SMTPUseSSL>False</SMTPUseSSL>
+                        <SendUsing>2</SendUsing>
+                        <SMTPAuthenticate>0</SMTPAuthenticate>
+                        <SendUserName></SendUserName>
+                        <SendPassword></SendPassword>
+                        <From></From>
+                        <EmbeddedRenderFormats>
+                            <RenderingExtension>MHTML</RenderingExtension>
+                        </EmbeddedRenderFormats>
+                        <PrivilegedUserRenderFormats>
+                        </PrivilegedUserRenderFormats>
+                        <ExcludedRenderFormats>
+                            <RenderingExtension>HTMLOWC</RenderingExtension>
+                            <RenderingExtension>NULL</RenderingExtension>
+                            <RenderingExtension>RGDI</RenderingExtension>
+                        </ExcludedRenderFormats>
+                        <SendEmailToUserAlias>True</SendEmailToUserAlias>
+                        <DefaultHostName>
+                        </DefaultHostName>
+                        <PermittedHosts>
+                        </PermittedHosts>
+                    </RSEmailDPConfiguration>
+                </Configuration>
+            </Extension>
+            <Extension Name="Report Server DocumentLibrary" Type="Microsoft.ReportingServices.SharePoint.SharePointDeliveryExtension.DocumentLibraryProvider,ReportingServicesSharePointDeliveryExtension">
+                <MaxRetries>3</MaxRetries>
+                <SecondsBeforeRetry>900</SecondsBeforeRetry>
+                <Configuration>
+                    <DocumentLibraryConfiguration>
+                        <ExcludedRenderFormats>
+                            <RenderingExtension>HTMLOWC</RenderingExtension>
+                            <RenderingExtension>NULL</RenderingExtension>
+                            <RenderingExtension>RGDI</RenderingExtension>
+                        </ExcludedRenderFormats>
+                    </DocumentLibraryConfiguration>
+                </Configuration>
+            </Extension>
+            <Extension Name="NULL" Type="Microsoft.ReportingServices.NullDeliveryProvider.NullProvider,ReportingServicesNullDeliveryProvider"/>
+            <Extension Name="Report Server PowerBI" Type="Microsoft.ReportingServices.PowerBIDeliveryProvider.PowerBIDeliveryProvider,ReportingServicesPowerBIDeliveryProvider">
+                <MaxRetries>3</MaxRetries>
+                <SecondsBeforeRetry>900</SecondsBeforeRetry>
+                <Configuration>
+                    <PowerBIDeliveryConfiguration>
+                    </PowerBIDeliveryConfiguration>
+                </Configuration>
+            </Extension>
+        </Delivery>
+        <DeliveryUI>
+            <Extension Name="Report Server Email" Type="Microsoft.ReportingServices.EmailDeliveryProvider.EmailDeliveryProviderControl,ReportingServicesEmailDeliveryProvider">
+                <DefaultDeliveryExtension>True</DefaultDeliveryExtension>
+                <Configuration>
+                    <RSEmailDPConfiguration>
+                        <DefaultRenderingExtension>MHTML</DefaultRenderingExtension>
+                    </RSEmailDPConfiguration>
+                </Configuration>
+            </Extension>
+            <Extension Name="Report Server FileShare" Type="Microsoft.ReportingServices.FileShareDeliveryProvider.FileShareUIControl,ReportingServicesFileShareDeliveryProvider"/>
+            <Extension Name="Report Server PowerBI" Type="Microsoft.ReportingServices.PowerBIDeliveryProvider.PowerBIDeliveryUIControl,ReportingServicesPowerBIDeliveryProvider"/>
+        </DeliveryUI>
+        <Render>
+            <Extension Name="WORDOPENXML" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordOpenXmlRenderer.WordOpenXmlDocumentRenderer,Microsoft.ReportingServices.WordRendering"/>
+            <Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>
+            <Extension Name="EXCELOPENXML" Type="Microsoft.ReportingServices.Rendering.ExcelOpenXmlRenderer.ExcelOpenXmlRenderer,Microsoft.ReportingServices.ExcelRendering"/>
+            <Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>
+            <Extension Name="PPTX" Type="Microsoft.ReportingServices.Rendering.PowerPointRendering.PptxRenderingExtension,Microsoft.ReportingServices.PowerPointRendering"/>
+            <Extension Name="PDF" Type="Microsoft.ReportingServices.Rendering.ImageRenderer.PDFRenderer,Microsoft.ReportingServices.ImageRendering"/>
+            <Extension Name="IMAGE" Type="Microsoft.ReportingServices.Rendering.ImageRenderer.ImageRenderer,Microsoft.ReportingServices.ImageRendering"/>
+            <Extension Name="MHTML" Type="Microsoft.ReportingServices.Rendering.HtmlRenderer.MHtmlRenderingExtension,Microsoft.ReportingServices.HtmlRendering">
+                <Configuration>
+                    <DeviceInfo>
+                        <DataVisualizationFitSizing>Approximate</DataVisualizationFitSizing>
+                    </DeviceInfo>
+                </Configuration>
+            </Extension>
+            <Extension Name="CSV" Type="Microsoft.ReportingServices.Rendering.DataRenderer.CsvReport,Microsoft.ReportingServices.DataRendering"/>
+            <Extension Name="XML" Type="Microsoft.ReportingServices.Rendering.DataRenderer.XmlDataReport,Microsoft.ReportingServices.DataRendering"/>
+            <Extension Name="ATOM" Type="Microsoft.ReportingServices.Rendering.DataRenderer.AtomDataReport,Microsoft.ReportingServices.DataRendering"/>
+            <Extension Name="NULL" Type="Microsoft.ReportingServices.Rendering.NullRenderer.NullReport,Microsoft.ReportingServices.NullRendering" Visible="false"/>
+            <Extension Name="RGDI" Type="Microsoft.ReportingServices.Rendering.ImageRenderer.RGDIRenderer,Microsoft.ReportingServices.ImageRendering" Visible="false"/>
+            <Extension Name="HTML4.0" Type="Microsoft.ReportingServices.Rendering.HtmlRenderer.Html40RenderingExtension,Microsoft.ReportingServices.HtmlRendering" Visible="false">
+                <Configuration>
+                    <DeviceInfo>
+                        <DataVisualizationFitSizing>Approximate</DataVisualizationFitSizing>
+                    </DeviceInfo>
+                </Configuration>
+            </Extension>
+            <Extension Name="HTML5" Type="Microsoft.ReportingServices.Rendering.HtmlRenderer.Html5RenderingExtension,Microsoft.ReportingServices.HtmlRendering" Visible="false">
+                <Configuration>
+                    <DeviceInfo>
+                        <DataVisualizationFitSizing>Approximate</DataVisualizationFitSizing>
+                    </DeviceInfo>
+                </Configuration>
+            </Extension>
+            <Extension Name="RPL" Type="Microsoft.ReportingServices.Rendering.RPLRendering.RPLRenderer,Microsoft.ReportingServices.RPLRendering" Visible="false" LogAllExecutionRequests="false"/>
+        </Render>
+        <!--
+        For the SQLPDW extension to work, install the SQL Server PDW Client Tools on the report server.
+        NOTE: The SQLPDW extension is deprecated. It supports old versions of SQL Server Parallel Data Warehouse (PDW).        
+        To connect to Analytics Platform System, use the SQL (SQL Server) extension.        
+        For the ORACLE extension to work, install the Oracle Data Provider for NET (ODP.NET) on the report server.
+        For TERADATA extension to work, install the .NET Provider for Teradata on the report server.
+      -->
+        <Data>
+            <Extension Name="SQL" Type="Microsoft.ReportingServices.DataExtensions.SqlConnectionWrapper,Microsoft.ReportingServices.DataExtensions"/>
+            <Extension Name="SQLAZURE" Type="Microsoft.ReportingServices.DataExtensions.SqlAzureConnectionWrapper,Microsoft.ReportingServices.DataExtensions"/>
+            <Extension Name="SQLPDW" Type="Microsoft.ReportingServices.DataExtensions.SqlDwConnectionWrapper,Microsoft.ReportingServices.DataExtensions"/>
+            <Extension Name="OLEDB-MD" Type="Microsoft.ReportingServices.DataExtensions.AdoMdConnection,Microsoft.ReportingServices.DataExtensions"/>
+            <Extension Name="SHAREPOINTLIST" Type="Microsoft.ReportingServices.DataExtensions.SharePointList.SPListConnection,Microsoft.ReportingServices.DataExtensions"/>
+            <Extension Name="ORACLE" Type="Microsoft.ReportingServices.DataExtensions.OracleClientConnectionWrapper,Microsoft.ReportingServices.DataExtensions"/>
+            <Extension Name="ESSBASE" Type="Microsoft.ReportingServices.DataExtensions.Essbase.EssbaseConnection,Microsoft.ReportingServices.DataExtensions.Essbase"/>
+            <Extension Name="SAPBW" Type="Microsoft.ReportingServices.DataExtensions.SapBw.SapBwConnection,Microsoft.ReportingServices.DataExtensions.SapBw"/>
+            <Extension Name="TERADATA" Type="Microsoft.ReportingServices.DataExtensions.TeradataConnectionWrapper,Microsoft.ReportingServices.DataExtensions"/>
+            <Extension Name="OLEDB" Type="Microsoft.ReportingServices.DataExtensions.OleDbConnectionWrapper,Microsoft.ReportingServices.DataExtensions"/>
+            <Extension Name="ODBC" Type="Microsoft.ReportingServices.DataExtensions.OdbcConnectionWrapper,Microsoft.ReportingServices.DataExtensions"/>
+            <Extension Name="XML" Type="Microsoft.ReportingServices.DataExtensions.XmlDPConnection,Microsoft.ReportingServices.DataExtensions"/>
+        </Data>
+        <SemanticQuery>
+            <Extension Name="SQL" Type="Microsoft.ReportingServices.SemanticQueryEngine.Sql.MSSQL.MSSqlSQCommand,Microsoft.ReportingServices.SemanticQueryEngine">
+                <Configuration>
+                    <EnableMathOpCasting>False</EnableMathOpCasting>
+                </Configuration>
+            </Extension>
+            <Extension Name="SQLAZURE" Type="Microsoft.ReportingServices.SemanticQueryEngine.Sql.MSSQL.MSSqlSQCommand,Microsoft.ReportingServices.SemanticQueryEngine">
+                <Configuration>
+                    <EnableMathOpCasting>False</EnableMathOpCasting>
+                </Configuration>
+            </Extension>
+            <Extension Name="SQLPDW" Type="Microsoft.ReportingServices.SemanticQueryEngine.Sql.MSSQLADW.MSSqlAdwSQCommand,Microsoft.ReportingServices.SemanticQueryEngine">
+                <Configuration>
+                    <EnableMathOpCasting>False</EnableMathOpCasting>
+                </Configuration>
+            </Extension>
+            <Extension Name="ORACLE" Type="Microsoft.ReportingServices.SemanticQueryEngine.Sql.Oracle.OraSqlSQCommand,Microsoft.ReportingServices.SemanticQueryEngine">
+                <Configuration>
+                    <EnableMathOpCasting>True</EnableMathOpCasting>
+                    <DisableNO_MERGEInLeftOuters>False</DisableNO_MERGEInLeftOuters>
+                    <EnableUnistr>False</EnableUnistr>
+                    <DisableTSTruncation>False</DisableTSTruncation>
+                </Configuration>
+            </Extension>
+            <Extension Name="TERADATA" Type="Microsoft.ReportingServices.SemanticQueryEngine.Sql.Teradata.TdSqlSQCommand,Microsoft.ReportingServices.SemanticQueryEngine">
+                <Configuration>
+                    <EnableMathOpCasting>True</EnableMathOpCasting>
+                    <ReplaceFunctionName>oREPLACE</ReplaceFunctionName>
+                </Configuration>
+            </Extension>
+            <Extension Name="OLEDB-MD" Type="Microsoft.AnalysisServices.Modeling.QueryExecution.ASSemanticQueryCommand,Microsoft.AnalysisServices.Modeling"/>
+        </SemanticQuery>
+        <ModelGeneration>
+            <Extension Name="SQL" Type="Microsoft.ReportingServices.SemanticQueryEngine.Sql.MSSQL.MsSqlModelGenerator,Microsoft.ReportingServices.SemanticQueryEngine"/>
+            <Extension Name="SQLAZURE" Type="Microsoft.ReportingServices.SemanticQueryEngine.Sql.MSSQL.MsSqlModelGenerator,Microsoft.ReportingServices.SemanticQueryEngine"/>
+            <Extension Name="ORACLE" Type="Microsoft.ReportingServices.SemanticQueryEngine.Sql.Oracle.OraSqlModelGenerator,Microsoft.ReportingServices.SemanticQueryEngine"/>
+            <Extension Name="TERADATA" Type="Microsoft.ReportingServices.SemanticQueryEngine.Sql.Teradata.TdSqlModelGenerator,Microsoft.ReportingServices.SemanticQueryEngine"/>
+            <Extension Name="OLEDB-MD" Type="Microsoft.AnalysisServices.Modeling.Generation.ModelGeneratorExtention,Microsoft.AnalysisServices.Modeling"/>
+        </ModelGeneration>
+        <Security>
+            <Extension Name="Windows" Type="Microsoft.ReportingServices.Authorization.WindowsAuthorization, Microsoft.ReportingServices.Authorization"/>
+        </Security>
+        <Authentication>
+            <Extension Name="Windows" Type="Microsoft.ReportingServices.Authentication.WindowsAuthentication, Microsoft.ReportingServices.Authorization"/>
+        </Authentication>
+        <EventProcessing>
+            <Extension Name="SnapShot Extension" Type="Microsoft.ReportingServices.Library.HistorySnapShotCreatedHandler,ReportingServicesLibrary">
+                <Event>
+                    <Type>ReportHistorySnapshotCreated</Type>
+                </Event>
+            </Extension>
+            <Extension Name="Timed Subscription Extension" Type="Microsoft.ReportingServices.Library.TimedSubscriptionHandler,ReportingServicesLibrary">
+                <Event>
+                    <Type>TimedSubscription</Type>
+                </Event>
+            </Extension>
+            <Extension Name="Cache Refresh Plan Extension" Type="Microsoft.ReportingServices.Library.CacheRefreshPlanHandler,ReportingServicesLibrary">
+                <Event>
+                    <Type>RefreshCache</Type>
+                </Event>
+            </Extension>
+            <Extension Name="Shared Dataset Cache Update Extension" Type="Microsoft.ReportingServices.Library.SharedDatasetCacheUpdatePlanHandler,ReportingServicesLibrary">
+                <Event>
+                    <Type>SharedDatasetCacheUpdate</Type>
+                </Event>
+            </Extension>
+            <Extension Name="Cache Update Extension" Type="Microsoft.ReportingServices.Library.ReportExecutionSnapshotUpdateEventHandler,ReportingServicesLibrary">
+                <Event>
+                    <Type>SnapshotUpdated</Type>
+                </Event>
+            </Extension>
+        </EventProcessing>
+    </Extensions>
+    <MapTileServerConfiguration>
+        <MaxConnections>2</MaxConnections>
+        <Timeout>10</Timeout>
+        <AppID>(Default)</AppID>
+        <CacheLevel>Default</CacheLevel>
+    </MapTileServerConfiguration>
+</Configuration> 
 ```  
   
 ##  <a name="bkmk_sharepointdefaultfile"></a> Fichier de configuration par défaut d'un serveur de rapports en mode SharePoint  
- Le fichier rsreportserver.config est installé à l'emplacement par défaut suivant :  
+ Le fichier rsreportserver.config est installé à l'emplacement par défaut suivant :  
   
- **C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\WebServices\Reporting**  
+ **C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting**  
   
 ```  
 <Configuration>  
@@ -528,8 +819,7 @@ caps.handback.revision: 16
     <UrlRoot>  
     </UrlRoot>  
     <PolicyLevel>rssrvpolicy.config</PolicyLevel>  
-    <IsWebServiceEnabled>True</IsWebServiceEnabled>  
-    <IsReportManagerEnabled>True</IsReportManagerEnabled>  
+    <IsWebServiceEnabled>True</IsWebServiceEnabled>    
     <FileShareStorageLocation>  
       <Path>  
       </Path>  
@@ -549,13 +839,14 @@ caps.handback.revision: 16
 </Configuration>  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Configurer la mémoire disponible pour les applications du serveur de rapports](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
- [Personnaliser des feuilles de style pour la visionneuse HTML et pour le Gestionnaire de rapports](../Topic/Customize%20Style%20Sheets%20for%20HTML%20Viewer%20and%20Report%20Manager.md)   
  [Fichiers de configuration de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Initialiser un serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/initialize-a-report-server-ssrs-configuration-manager.md)   
- [Stocker des données chiffrées du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/store-encrypted-report-server-data-ssrs-configuration-manager.md)   
+ [Initialiser un serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [Stocker des données chiffrées du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ D’autres questions ? [Essayez le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
+

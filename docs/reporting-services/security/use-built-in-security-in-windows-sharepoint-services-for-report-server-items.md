@@ -1,31 +1,36 @@
 ---
-title: "Utiliser la s&#233;curit&#233; int&#233;gr&#233;e dans Windows SharePoint Services pour les &#233;l&#233;ments de serveur de rapports | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "autorisations [Reporting Services], mode intégré SharePoint"
-  - "intégration SharePoint [Reporting Services], autorisations"
-  - "sécurité [Reporting Services], mode intégré SharePoint"
+title: "Utiliser la sécurité intégrée de Windows SharePoint Services pour les éléments de serveur de rapports | Documents Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Reporting Services], SharePoint integrated mode
+- SharePoint integration [Reporting Services], permissions
+- security [Reporting Services], SharePoint integrated mode
 ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
 caps.latest.revision: 14
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 14
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: becc8fac740023906166f8a9545139300c233a51
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Utiliser la s&#233;curit&#233; int&#233;gr&#233;e dans Windows SharePoint Services pour les &#233;l&#233;ments de serveur de rapports
-  SharePoint fournit des fonctionnalités de sécurité intégrée qui vous permettent d'accéder aux éléments d'un serveur de rapports à partir de sites et de bibliothèques SharePoint. Si vous avez déjà affecté des autorisations de site et de listes aux utilisateurs, ces derniers auront accès aux éléments et opérations de serveur de rapports dès que vous aurez configuré les paramètres d'intégration entre SharePoint et un serveur de rapports.  
+# <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>Utiliser la sécurité intégrée dans Windows SharePoint Services pour les éléments de serveur de rapports
+  SharePoint fournit des fonctionnalités de sécurité intégrée qui vous permettent d'accéder aux éléments d'un serveur de rapports à partir de sites et de bibliothèques SharePoint. Si vous avez déjà affecté des autorisations de site et de listes aux utilisateurs, ces derniers auront accès aux éléments et opérations de serveur de rapports dès que vous aurez configuré les paramètres d'intégration entre SharePoint et un serveur de rapports.  
   
-## Éléments sécurisables  
- Les autorisations définies sur le site ou la bibliothèque permettent d'accorder l'accès aux éléments d'un serveur de rapports. Toutefois, si vous souhaitez sécuriser des éléments individuels, vous pouvez définir des autorisations sur les types de contenu suivants :  
+## <a name="securable-items"></a>Éléments sécurisables  
+ Les autorisations définies sur le site ou la bibliothèque permettent d'accorder l'accès aux éléments d'un serveur de rapports. Toutefois, si vous souhaitez sécuriser des éléments individuels, vous pouvez définir des autorisations sur les types de contenu suivants :  
   
 |Type de fichier|Description|  
 |---------------|-----------------|  
@@ -35,11 +40,11 @@ caps.handback.revision: 14
 |.rsc|Fichier de partie de rapport qui définit la disposition et la structure d'un élément de rapport ou d'une région de données. Il permet de publier la partie de rapport sur un serveur afin que l'élément puisse être réutilisé par d'autres auteurs de rapports de la Bibliothèque de parties de rapports.|  
 |.rsd|Fichier de dataset partagé qui définit la syntaxe et les propriétés de requête pour un dataset. Les datasets partagés peuvent être partagés, stockés, traités et mis en cache à l'extérieur d'un rapport.|  
   
- Les planifications, les abonnements et l'historique de rapport ne sont pas des éléments sécurisables. Vous pouvez définir des autorisations sur le site ou la bibliothèque afin de déterminer si un utilisateur peut créer ou utiliser les planifications, les abonnements et l'historique de rapport ; toutefois, vous ne pouvez pas sécuriser ces éléments directement.  
+ Les planifications, les abonnements et l'historique de rapport ne sont pas des éléments sécurisables. Vous pouvez définir des autorisations sur le site ou la bibliothèque afin de déterminer si un utilisateur peut créer ou utiliser les planifications, les abonnements et l'historique de rapport ; toutefois, vous ne pouvez pas sécuriser ces éléments directement.  
   
- Pour sécuriser des éléments individuels, sélectionnez l’élément dans la bibliothèque, cliquez sur la flèche orientée vers le bas, puis sélectionnez **Gérer les autorisations**. Dans le menu **Actions**, sélectionnez **Modifier les autorisations**.  
+ Pour sécuriser des éléments individuels, sélectionnez l’élément dans la bibliothèque, cliquez sur la flèche orientée vers le bas, puis sélectionnez **Gérer les autorisations**. Dans le menu **Actions** , sélectionnez **Modifier les autorisations**.  
   
-## Utilisation de groupes et de niveaux d'autorisation prédéfinis pour accéder aux éléments d'un serveur de rapports  
+## <a name="using-built-in-groups-and-permission-levels-to-access-report-server-items"></a>Utilisation de groupes et de niveaux d'autorisation prédéfinis pour accéder aux éléments d'un serveur de rapports  
  Lorsque vous utilisez l'héritage des autorisations et les groupes SharePoint standard, vous pouvez accéder à la plupart des opérations de serveur de rapports immédiatement après avoir configuré les paramètres d'intégration du serveur de rapports et des instances SharePoint.  
   
  SharePoint fournit des groupes standard associés à des niveaux d'autorisation prédéfinis qui déterminent votre mode d'accès aux documents et pages d'un site SharePoint. Si vous utilisez des groupes standard et les niveaux d’autorisation par défaut, et si vos sites sont configurés pour l’héritage des autorisations, vous pouvez utiliser les fonctionnalités de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] comme suit :  
@@ -50,12 +55,12 @@ caps.handback.revision: 14
 |**Membres**|Collaboration|Les membres peuvent créer des éléments, publier les rapports et les modèles correspondants à partir d'outils de conception dans une bibliothèque SharePoint.|Ajoutez des rapports et autres éléments à des bibliothèques. Modifiez les propriétés d'éléments des rapports et autres documents. Supprimez les rapports et autres éléments. Affichez les rapports, y compris ceux qui reposent sur des modèles de rapports pour l'exploration de données. Affichez les versions antérieures d'un document, y compris les instantanés d'historique de rapport (l'utilisateur doit disposer également de l'autorisation nécessaire pour ouvrir le rapport dont l'historique de rapport a été créé). Définissez les paramètres des rapports. Définissez les options de traitement d'un rapport. Générez des modèles de rapports. Créez des rapports dans le Générateur de rapports. Créez et gérez des sources de données partagées. Créez, modifiez et supprimez les abonnements détenus par l'utilisateur. Utilisez des planifications partagées avec un abonnement. Créez et gérez les versions d'un document, y compris l'historique de rapport. Téléchargez le fichier source d'une définition de rapport ou d'un modèle de rapport. Remplacez une définition de rapport, un modèle de rapport, une source de données partagée ou une ressource (en conservant les autorisations et les propriétés d'éléments).|  
 |**Visiteurs** et **visionneuses**|Lecture|Les visiteurs peuvent afficher les rapports|Affichez les rapports, y compris ceux qui reposent sur des modèles de rapports pour l'exploration de données.|  
   
- Si vous n'utilisez pas les groupes et les niveaux d'autorisation prédéfinis, vous devez inclure des autorisations spécifiques pour l'accès aux fonctionnalités de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Pour plus d’informations, consultez [Définir des autorisations pour les opérations de serveur de rapports dans une application web SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md).  
+ Si vous n'utilisez pas les groupes et les niveaux d'autorisation prédéfinis, vous devez inclure des autorisations spécifiques pour l'accès aux fonctionnalités de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [Définir des autorisations pour les opérations de serveur de rapports dans une application web SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
- [Définir des autorisations pour les opérations de serveur de rapports dans une application Web SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
+ [Définir des autorisations pour les opérations de serveur de rapports dans une application web SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

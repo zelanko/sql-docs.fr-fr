@@ -1,1 +1,1 @@
-SQL Server vNext
+SQL Server 2017

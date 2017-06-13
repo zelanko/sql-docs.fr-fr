@@ -1,27 +1,32 @@
 ---
-title: "R&#233;f&#233;rence de param&#232;tre d&#39;acc&#232;s URL | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/09/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "rapports [Reporting Services], options d’affichage"
-  - "Accès URL [Reporting Services], paramètres d’affichage des rapports"
+title: "Référence de paramètre d’accès URL | Documents Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 09/09/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- reports [Reporting Services], display options
+- URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 caps.latest.revision: 48
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 48
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e79341b1988e43d27ac35d46fcba482de0ab371
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# R&#233;f&#233;rence de param&#232;tre d&#39;acc&#232;s URL
+# <a name="url-access-parameter-reference"></a>Référence de paramètre d'accès URL
   Vous pouvez utiliser les paramètres suivants dans une URL afin de configurer l’apparence de vos rapports [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Les paramètres les plus courants sont répertoriés dans cette section. Les paramètres ne sont pas sensibles à la casse et commencent par le préfixe de paramètre *rs:* s’ils sont dirigés vers le serveur de rapports ou par *rc:* s’ils sont dirigés vers une visionneuse HTML. Vous pouvez également spécifier des paramètres spécifiques aux périphériques ou des extensions de rendu. Pour plus d’informations sur les paramètres spécifiques au périphérique, consultez [Spécifier les paramètres d’informations de périphérique dans une URL](../reporting-services/specify-device-information-settings-in-a-url.md).  
   
 > [!IMPORTANT]  
@@ -60,7 +65,7 @@ caps.handback.revision: 48
     http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Parameters=Collapsed  
     ```  
   
--   *Zoom* : définit la valeur de zoom du rapport sous la forme d’un pourcentage entier ou d’une constante de chaîne. Les valeurs de chaîne standard incluent les valeurs **Page Width** et **Whole Page**. Ce paramètre est ignoré par les versions d’Internet Explorer antérieures à la version 5.0 et par tous les navigateurs non [!INCLUDE[msCoName](../includes/msconame-md.md)]. La valeur par défaut de ce paramètre est **100**.  
+-   *Zoom* : définit la valeur de zoom du rapport sous la forme d’un pourcentage entier ou d’une constante de chaîne. Les valeurs de chaîne standard incluent les valeurs **Page Width** et **Whole Page**. Ce paramètre est ignoré par les versions d’Internet Explorer antérieures à la version 5.0 et par tous les navigateurs non[!INCLUDE[msCoName](../includes/msconame-md.md)] . La valeur par défaut de ce paramètre est **100**.  
   
      Par exemple, en mode **Native** :  
   
@@ -120,13 +125,13 @@ caps.handback.revision: 48
   
 -   *Stylesheet*: spécifie une feuille de style à appliquer à la visionneuse HTML.  
   
--   Paramètre d’informations de périphérique : spécifie un paramètre d’informations de périphérique sous la forme `rc:tag=value`, où *tag* est le nom d’un ensemble de paramètres d’informations de périphérique spécifique à l’extension de rendu actuellement utilisée (consultez la description du paramètre *Format*). Par exemple, vous pouvez utiliser le paramètre d’informations de périphérique *OutputFormat* pour que l’extension de rendu IMAGE restitue le rapport sous la forme d’une image JPEG à l’aide des paramètres suivants dans la chaîne d’accès URL : `…&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Pour plus d’informations sur tous les paramètres d’informations de périphérique spécifiques aux extensions, consultez [Paramètres d’informations de périphérique pour les extensions de rendu &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
+-   Paramètre d’informations de périphérique : spécifie un paramètre d’informations de périphérique sous la forme `rc:tag=value`, où *tag* est le nom d’un ensemble de paramètres d’informations de périphérique spécifique à l’extension de rendu actuellement utilisée (consultez la description du paramètre *Format* ). Par exemple, vous pouvez utiliser le paramètre d’informations de périphérique *OutputFormat* pour que l’extension de rendu IMAGE restitue le rapport sous la forme d’une image JPEG à l’aide des paramètres suivants dans la chaîne d’accès URL : `…&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Pour plus d’informations sur tous les paramètres d’informations de périphérique spécifiques aux extensions, consultez [Paramètres d’informations de périphérique pour les extensions de rendu &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
   
 ##  <a name="bkmk_reportserver"></a> Commandes du serveur de rapports (rs:)  
  Les commandes de serveur de rapports sont précédées de *rs:* et sont utilisées pour cibler le serveur de rapports :  
   
--   *Command* :  
-                  Exécute une action sur un élément de catalogue, selon son type d'élément. La valeur par défaut est déterminée par le type de l'élément de catalogue référencé dans la chaîne d'accès URL. Les valeurs valides sont :  
+-   *Command*:  
+                  Exécute une action sur un élément de catalogue, selon son type d'élément. La valeur par défaut est déterminée par le type de l'élément de catalogue référencé dans la chaîne d'accès URL. Les valeurs valides sont :  
   
     -   **ListChildren** et **GetChildren** affichent le contenu d'un dossier. Les éléments du dossier sont affichés dans une page générique de navigation des éléments.  
   
@@ -227,7 +232,7 @@ caps.handback.revision: 48
   
      La valeur par défaut est **HTML5**. Pour plus d’informations, consultez [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md).  
   
-     Pour obtenir une liste complète, consultez la section relative à l’extension **\<Render>** du fichier rsreportserver.config du serveur de rapports.  Pour plus d’informations sur l’emplacement du fichier, consultez [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
+     Pour obtenir la liste complète, consultez la  **\<restituer >** section d’extension de fichier rsreportserver.config de serveur de rapports.  Pour plus d’informations sur l’emplacement du fichier, consultez [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
      Par exemple, pour obtenir directement une copie PDF d’un rapport à partir d’un serveur de rapports en mode **Native** :  
   
@@ -241,10 +246,10 @@ caps.handback.revision: 48
     http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
     ```  
   
--   *ParameterLanguage* :  
+-   *ParameterLanguage*:  
                   Fournit une langue indépendante de la langue du navigateur pour les paramètres passés dans une URL. La valeur par défaut est la langue du navigateur. La valeur peut être une valeur de culture, telle que **en-us** ou **de-de**.  
   
-     Par exemple, en mode **Native**, pour remplacer la langue du navigateur et spécifier la valeur de culture fr-FR :  
+     Par exemple, en mode **Native** , pour remplacer la langue du navigateur et spécifier la valeur de culture fr-FR :  
   
     ```  
     http://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
@@ -252,30 +257,30 @@ caps.handback.revision: 48
   
 -   *Snapshot* : génère un rapport à partir d’un instantané d’historique de rapport. Pour plus d’informations, consultez [Rendre un instantané d’historique de rapport à l’aide de l’accès URL](../reporting-services/render-a-report-history-snapshot-using-url-access.md).  
   
-     Par exemple, en mode **Native**, récupérez un instantané d’historique de rapport en date du 04/07/2003 avec un horodateur de 13:40:02 :  
+     Par exemple, en mode **Native** , récupérez un instantané d’historique de rapport en date du 04/07/2003 avec un horodateur de 13:40:02 :  
   
     ```  
     http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
     ```  
   
--   *PersistStreams* :  
+-   *PersistStreams*:  
                   Effectue le rendu d'un flux de données persistant distinct. Ce paramètre est repris par le convertisseur d'image pour transmettre le rapport segment par segment. Après avoir utilisé ce paramètre dans une chaîne d'accès à l'URL, utilisez cette même chaîne avec le paramètre *GetNextStream* au lieu du paramètre *PersistStreams* pour obtenir le segment suivant dans le flux de données persistant. Cette URL permet d'obtenir un flux de 0 octets. Il désigne la fin du flux persistent. La valeur par défaut est **false**.  
   
--   *GetNextStream* :  
-                  Permet d’obtenir le bloc de données suivant dans un flux persistant auquel vous accédez à l’aide du paramètre *PersistStreams*. Pour plus d'informations, consultez la description de *PersistStreams*. La valeur par défaut est **false**.  
+-   *GetNextStream*:  
+                  Permet d’obtenir le bloc de données suivant dans un flux persistant auquel vous accédez à l’aide du paramètre *PersistStreams* . Pour plus d'informations, consultez la description de *PersistStreams*. La valeur par défaut est **false**.  
   
--   *SessionID* :  
+-   *SessionID*:  
                   Spécifie une session de rapport active établie entre l'application cliente et le serveur de rapports. La valeur de ce paramètre est l'identificateur de session.  
   
      Vous pouvez spécifier l'ID de session en tant que cookie ou dans le cadre de l'URL. Lorsque le serveur de rapports a été configuré de manière à ne pas utiliser de cookies de session, la première demande sans un ID de session spécifié provoque une redirection avec un ID de session. Pour plus d'informations sur les sessions de serveur de rapports, consultez [Identifying Execution State](../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).  
   
--   *ClearSession* :  
+-   *ClearSession*:  
                   La valeur **true** indique au serveur de rapports de supprimer un rapport d’une session de rapport. Toutes les instances de rapport associées à un utilisateur authentifié sont supprimées de la session de rapport. (Par définition, une instance de rapport est un rapport identique exécuté plusieurs fois avec des valeurs de paramètre de rapport différentes.) La valeur par défaut est **false**.  
   
 -   *ResetSession* :  
                   La valeur **true** indique au serveur de rapports de réinitialiser la session de rapport en supprimant l’association de la session de rapport à tous les instantanés de rapport. La valeur par défaut est **false**.  
   
--   *ShowHideToggle* :  
+-   *ShowHideToggle*:  
                   Bascule de l'état afficher à masquer d'une section du rapport. Spécifiez un entier positif pour représenter la section à basculer.  
   
 ##  <a name="bkmk_webpart"></a> Commandes de composant WebPart Visionneuse de rapports (rv:)  
@@ -299,11 +304,11 @@ caps.handback.revision: 48
   
     -   **Full**: affiche l'en-tête complet.  
   
-    -   **BreadCrumbsOnly** : affiche uniquement l’exploration à l’aide de la barre de navigation dans l’en-tête pour indiquer à l’utilisateur où il se trouve dans l’application.  
+    -   **BreadCrumbsOnly**: affiche uniquement l’exploration à l’aide de la barre de navigation dans l’en-tête pour indiquer à l’utilisateur où il se trouve dans l’application.  
   
     -   **None**: n'affiche pas l'en-tête.  
   
-     Par exemple, en mode **SharePoint**, pour afficher uniquement l’exploration à l’aide de la barre de navigation dans l’en-tête.  
+     Par exemple, en mode **SharePoint** , pour afficher uniquement l’exploration à l’aide de la barre de navigation dans l’en-tête.  
   
     ```  
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly  
@@ -313,7 +318,7 @@ caps.handback.revision: 48
   
 -   *AsyncRender*: spécifie si un rapport doit être ou non généré de façon asynchrone. La valeur par défaut est **true**; cette valeur indique un rendu de rapport asynchrone. La valeur doit être une valeur booléenne **true** ou **false**.  
   
--   *ParamMode*: contrôle la manière dont est affichée la zone de message de paramètre du composant WebPart Visionneuse de rapports en mode pleine page. La valeur par défaut est **Full**. Les valeurs valides sont :  
+-   *ParamMode*: contrôle la manière dont est affichée la zone de message de paramètre du composant WebPart Visionneuse de rapports en mode pleine page. La valeur par défaut est **Full**. Les valeurs valides sont :  
   
     -   **Full**: afficher la zone de message du paramètre.  
   
@@ -327,7 +332,7 @@ caps.handback.revision: 48
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
     ```  
   
--   *DocMapMode* : contrôle la manière dont est affichée la zone de l’explorateur de documents du composant WebPart Visionneuse de rapports en mode pleine page. La valeur par défaut est **Full**. Les valeurs valides sont :  
+-   *DocMapMode*: contrôle la manière dont est affichée la zone de l’explorateur de documents du composant WebPart Visionneuse de rapports en mode pleine page. La valeur par défaut est **Full**. Les valeurs valides sont :  
   
     -   **Full**: afficher la zone d'explorateur de documents.  
   
@@ -343,15 +348,15 @@ caps.handback.revision: 48
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
     ```  
   
--   *ToolBarItemsDisplayMode*: détermine les éléments de la barre d’outils à afficher. Il s'agit d'une valeur d'énumération de bits. Pour inclure un élément de la barre d'outils, ajoutez la valeur de l'élément à la valeur totale. Par exemple : pour aucun menu Actions, utilisez rv : ToolBarItemsDisplayMode=63 (ou 0x3F), qui est 1+2+4+8+16+32 ; pour les éléments du menu Actions uniquement, utilisez rv : ToolBarItemsDisplayMode=960 (ou 0x3C0). La valeur par défaut, qui inclut tous les éléments de la barre d’outils, est **-1**. Les valeurs valides sont :  
+-   *ToolBarItemsDisplayMode*: détermine les éléments de la barre d’outils à afficher. Il s'agit d'une valeur d'énumération de bits. Pour inclure un élément de la barre d'outils, ajoutez la valeur de l'élément à la valeur totale. Par exemple : pour aucun menu Actions, utilisez rv : ToolBarItemsDisplayMode=63 (ou 0x3F), qui est 1+2+4+8+16+32 ; pour les éléments du menu Actions uniquement, utilisez rv : ToolBarItemsDisplayMode=960 (ou 0x3C0). La valeur par défaut, qui inclut tous les éléments de la barre d’outils, est **-1**. Les valeurs valides sont :  
   
     -   1 (0x1) : le bouton **Retour**  
   
-    -   2 (0x2) : les contrôles de recherche de texte  
+    -   2 (0x2) : les contrôles de recherche de texte  
   
-    -   4 (0x4) : les contrôles de navigation entre les pages  
+    -   4 (0x4) : les contrôles de navigation entre les pages  
   
-    -   8 (0x8) : le bouton **Actualiser**  
+    -   8 (0x8) : le bouton **Actualiser**  
   
     -   16 (0x10) : la zone de liste **Zoom**  
   
@@ -373,8 +378,9 @@ caps.handback.revision: 48
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
     ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Accès URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [Exporter un rapport à l'aide de l'accès URL](../reporting-services/export-a-report-using-url-access.md)  
+ [Exporter un rapport à l’aide de l’accès URL](../reporting-services/export-a-report-using-url-access.md)  
   
   
+

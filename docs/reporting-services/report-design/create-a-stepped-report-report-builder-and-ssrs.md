@@ -1,26 +1,31 @@
 ---
-title: "Cr&#233;er un rapport en escalier (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Créer un rapport en escalier (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 232b8e03dc8e5e2130d127408f356ba2dc0492d5
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Cr&#233;er un rapport en escalier (G&#233;n&#233;rateur de rapports et SSRS)
-Un rapport en escalier est un type de rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui affiche des lignes de détails ou des groupes enfants mis en retrait sous un groupe parent dans la même colonne, comme l’illustre l’exemple ci-dessous :  
+# <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Créer un rapport en escalier (Générateur de rapports et SSRS)
+Un rapport en escalier est un type de rapport paginé  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui affiche des lignes de détails ou des groupes enfants mis en retrait sous un groupe parent dans la même colonne, comme l’illustre l’exemple ci-dessous :  
   
- ![Rapport par palier rendu](../../reporting-services/report-design/media/steppedreportrendered.gif "Rapport par palier rendu")  
+ ![Rapport par palier rendu](../../reporting-services/report-design/media/steppedreportrendered.gif "rendu en retrait de rapport")  
   
  Les rapports traditionnels sous forme de table placent le groupe parent dans une colonne adjacente dans le rapport. La nouvelle région de données de tableau matriciel vous permet d’ajouter un groupe et des lignes de détails ou des groupes enfants à la même colonne. Pour différencier les lignes de groupe des lignes de détails ou de groupes enfants, vous pouvez appliquer une mise en forme telle qu'une couleur de police ou vous pouvez mettre en retrait les lignes de détails.  
   
@@ -32,7 +37,7 @@ Un rapport en escalier est un type de rapport paginé [!INCLUDE[ssRSnoversion](.
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Pour créer un rapport en escalier  
+## <a name="to-create-a-stepped-report"></a>Pour créer un rapport en escalier  
   
 1.  Créez un rapport de table. Par exemple, insérez une région de données de tableau matriciel et ajoutez des champs à la ligne de données.  
   
@@ -42,21 +47,21 @@ Un rapport en escalier est un type de rapport paginé [!INCLUDE[ssRSnoversion](.
   
     2.  Dans le volet de regroupement, cliquez avec le bouton droit sur le groupe de détails, pointez sur **Ajouter un groupe**, puis cliquez sur **Groupe parent**.  
   
-    3.  Dans la boîte de dialogue **Groupe de tableau matriciel**, indiquez un nom pour le groupe et tapez ou sélectionnez une expression de groupe dans la liste déroulante. La liste déroulante affiche les expressions de champ simples qui sont disponibles dans le volet des données de rapport. Par exemple, [PostalCode] est une expression de champ simple pour le champ PostalCode d'un dataset.  
+    3.  Dans la boîte de dialogue **Groupe de tableau matriciel** , indiquez un nom pour le groupe et tapez ou sélectionnez une expression de groupe dans la liste déroulante. La liste déroulante affiche les expressions de champ simples qui sont disponibles dans le volet des données de rapport. Par exemple, [PostalCode] est une expression de champ simple pour le champ PostalCode d'un dataset.  
   
     4.  Sélectionnez **Ajouter l’en-tête du groupe**. Cette option ajoute une ligne statique au-dessus du groupe pour l'étiquette et les totaux du groupe. De la même manière, vous pouvez sélectionner **Ajouter le pied de page du groupe** pour ajouter une ligne statique au-dessous du groupe. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      Vous disposez maintenant d'un rapport tabulaire de base. Lorsqu'il est rendu, une colonne s'affiche avec la valeur d'instance de groupe, et une ou plusieurs colonnes avec les données de détail groupées. L'illustration suivante montre l'apparence de la région de données sur l'aire de conception.  
   
-     ![Région de données de table avec groupe](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "Région de données de table avec groupe")  
+     ![Région de données de table avec groupe](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "région de données de Table avec groupe")  
   
      L'illustration suivante montre l'apparence de la région de données rendue lorsque vous affichez le rapport.  
   
-     ![Rapport groupé rendu](../../reporting-services/report-design/media/tablereportrendered.gif "Rapport groupé rendu")  
+     ![Rapport groupé rendu](../../reporting-services/report-design/media/tablereportrendered.gif "état groupé de rendu")  
   
 3.  Pour un rapport par palier, vous n'avez pas besoin de la première colonne qui affiche l'instance de groupe. À la place, copiez la valeur de la cellule d'en-tête de groupe, supprimez la colonne de groupe et collez la valeur dans la première zone de texte de la ligne d'en-tête de groupe. Pour supprimer la colonne de groupe, cliquez avec le bouton droit sur la colonne de groupe ou sur la cellule, puis cliquez sur **Supprimer les colonnes**. L'illustration suivante montre l'apparence de la région de données sur l'aire de conception.  
   
-     ![Région de données avec ligne d'en-tête de groupe](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "Région de données avec ligne d'en-tête de groupe")  
+     ![Région de données avec ligne d’en-tête de groupe](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "région de données avec ligne d’en-tête de groupe")  
   
 4.  Pour mettre en retrait les lignes de détails sous la ligne d'en-tête de groupe dans la même colonne, modifiez la marge intérieure de la cellule de données de détail.  
   
@@ -64,9 +69,9 @@ Un rapport en escalier est un type de rapport paginé [!INCLUDE[ssRSnoversion](.
   
     2.  Dans le volet Propriétés, sous **Alignement**, développez les propriétés pour **Marge intérieure**.  
   
-    3.  Pour **Gauche**, tapez une nouvelle valeur de marge intérieure, telle que **0,5 in**. La marge intérieure met en retrait le texte de la cellule selon la valeur que vous avez spécifiée. La valeur par défaut de la marge intérieure est égale à 2 points. Les valeurs valides pour les propriétés Padding sont zéro ou une valeur positive, suivis d'un indicateur de taille.  
+    3.  Pour **Gauche**, tapez une nouvelle valeur de marge intérieure, telle que **0,5 in**. La marge intérieure met en retrait le texte de la cellule selon la valeur que vous avez spécifiée. La valeur par défaut de la marge intérieure est égale à 2 points. Les valeurs valides pour les propriétés Padding sont zéro ou une valeur positive, suivis d'un indicateur de taille.  
   
-         Les indicateurs de taille sont :  
+         Les indicateurs de taille sont :  
   
         |||  
         |-|-|  
@@ -76,15 +81,15 @@ Un rapport en escalier est un type de rapport paginé [!INCLUDE[ssRSnoversion](.
         |**pt**|Points (1 point = 1/72 pouce)|  
         |**pc**|Picas (1 pica = 12 points)|  
   
-     Votre région de données doit ressembler à l'exemple suivant :  
+     Votre région de données doit ressembler à l'exemple suivant :  
   
-     ![Région de données pour un rapport par palier](../../reporting-services/report-design/media/steppedreportdataregion.gif "Région de données pour un rapport par palier")  
+     ![Région de données de rapport en escalier](../../reporting-services/report-design/media/steppedreportdataregion.gif "région de données de rapport en escalier")  
   
      **Région de données pour une mise en page de rapport en escalier**  
   
-     Sous l’onglet **Accueil**, cliquez sur **Exécuter**. Le rapport affiche le groupe avec des niveaux en retrait pour les valeurs des groupes enfants.  
+     Sous l’onglet **Accueil** , cliquez sur **Exécuter**. Le rapport affiche le groupe avec des niveaux en retrait pour les valeurs des groupes enfants.  
   
-## Pour créer un rapport par palier avec plusieurs groupes  
+## <a name="to-create-a-stepped-report-with-multiple-groups"></a>Pour créer un rapport par palier avec plusieurs groupes  
   
 1.  Créez un rapport selon les indications de la procédure précédente.  
   
@@ -97,13 +102,13 @@ Un rapport en escalier est un type de rapport paginé [!INCLUDE[ssRSnoversion](.
   
     2.  Dans la boîte de dialogue **Groupe de tableaux matriciels**, tapez un nom.  
   
-    3.  Dans **Expression Groupe**, tapez une expression ou sélectionnez le champ de dataset sur lequel effectuer le regroupement. Pour créer une expression, cliquez sur le bouton d’expression (**fx**) pour ouvrir la boîte de dialogue **Expression**.  
+    3.  Dans **Expression Groupe**, tapez une expression ou sélectionnez le champ de dataset sur lequel effectuer le regroupement. Pour créer une expression, cliquez sur le bouton d’expression (**fx**) pour ouvrir la boîte de dialogue **Expression** .  
   
     4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  Modifiez la marge intérieure de la cellule qui affiche les données du groupe.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [En-têtes et pieds de page &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Mise en forme des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   

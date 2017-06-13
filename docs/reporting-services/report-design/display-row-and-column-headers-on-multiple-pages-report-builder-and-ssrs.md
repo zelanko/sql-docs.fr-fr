@@ -1,34 +1,39 @@
 ---
-title: "Afficher des en-t&#234;tes de ligne et de colonne sur plusieurs pages (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Afficher des en-têtes de ligne et colonne sur plusieurs Pages (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 97fe2b81898c3172db4d387afbac3be4086fac11
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Afficher des en-t&#234;tes de ligne et de colonne sur plusieurs pages (G&#233;n&#233;rateur de rapports et SSRS)
+# <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Afficher des en-têtes de ligne et de colonne sur plusieurs pages (Générateur de rapports et SSRS)
   Vous pouvez décider de répéter les en-têtes de ligne et de colonne sur chaque page d’un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] pour une région de données de tableau matriciel (une table, une matrice ou une liste) qui s’étend sur plusieurs pages.
   
  La façon dont vous contrôlez les lignes et les colonnes varie selon que la région de données de tableau matriciel possède ou non des en-têtes de groupes. Lorsque vous cliquez dans une région de données du tableau matriciel qui possède des en-têtes de groupes, une ligne pointillée indique les zones de tableau matriciel, comme illustré sur la figure suivante :  
   
- ![Zones de région de données de tableau matriciel](../../reporting-services/report-design/media/rs-tablixareas.gif "Zones de région de données de tableau matriciel")  
+ ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
   
  Les en-têtes de groupe de lignes et de colonnes sont créés automatiquement lorsque vous ajoutez des groupes à l'aide de l'Assistant Nouveau tableau ou nouvelle matrice ou de l'Assistant Nouveau graphique, en ajoutant des champs au volet Regroupement ou à l'aide des menus contextuels. Si la région de données de tableau matriciel ne possède qu'un corps de tableau matriciel et aucun en-tête de groupe, les lignes et colonnes sont des membres du tableau matriciel.  
   
  Pour les membres statiques, vous pouvez afficher les lignes supérieures adjacentes ou les colonnes latérales adjacentes sur plusieurs pages.  
   
-## Pour afficher les en-têtes de ligne sur plusieurs pages  
+## <a name="to-display-row-headers-on-multiple-pages"></a>Pour afficher les en-têtes de ligne sur plusieurs pages  
   
 1.  Cliquez avec le bouton droit sur la ligne, la colonne ou la poignée d’angle d’une région de données de tableau matriciel, puis sélectionnez **Propriétés du tableau matriciel**.  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 8
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Pour afficher les en-têtes de colonne sur plusieurs pages  
+## <a name="to-display-column-headers-on-multiple-pages"></a>Pour afficher les en-têtes de colonne sur plusieurs pages  
   
 1.  Cliquez avec le bouton droit sur la ligne, la colonne ou la poignée d’angle d’une région de données de tableau matriciel, puis sélectionnez **Propriétés du tableau matriciel**.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 8
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Pour afficher une liste ou une colonne sur plusieurs pages  
+## <a name="to-display-a-static-row-or-column-on-multiple-pages"></a>Pour afficher une liste ou une colonne sur plusieurs pages  
   
 1.  Dans l'aire de conception, cliquez sur la poignée de ligne ou de colonne de la région de données du tableau matriciel pour la sélectionner. Le volet Regroupement affiche les groupes de lignes et de colonnes.  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 8
   
  En consultant chacune des pages du rapport sur lesquelles la région de données du tableau matriciel s'étend, vous pouvez constater que les membres statiques du tableau matriciel se répètent sur chaque page.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Contrôle des sauts de page, des en-têtes, des colonnes et des lignes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   

@@ -1,83 +1,69 @@
 ---
-title: "Didacticiel&#160;: ajout d&#39;un indicateur de performance cl&#233; &#224; un rapport (G&#233;n&#233;rateur de rapports) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Didacticiel : Ajout d’un indicateur de performance clé à votre rapport (Générateur de rapports) | Documents Microsoft"
+ms.custom: 
+ms.date: 06/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 6ff993552c5c5b8a3e48c672a29f6567107f2331
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Didacticiel&#160;: ajout d&#39;un indicateur de performance cl&#233; &#224; un rapport (G&#233;n&#233;rateur de rapports)
-Dans ce didacticiel [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)], vous ajoutez un indicateur de performance clé (KPI) à un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].  
+# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Didacticiel : ajout d'un indicateur de performance clé à un rapport (Générateur de rapports)
+Dans ce didacticiel [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] , vous ajoutez un indicateur de performance clé (KPI) à un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .  
 
 Les indicateurs de performance clés sont des valeurs mesurables qui revêtent une importance significative pour l’entreprise. Dans ce scénario, le récapitulatif des ventes par sous-catégories de produits est l'indicateur de performance clé. L’état actuel de l’indicateur de performance clé est indiqué avec des couleurs, des jauges et des indicateurs.
   
 L’illustration suivante est similaire au rapport que vous allez créer.  
   
 ![report-builder-kpi-report](../reporting-services/media/report-builder-kpi-report.png)
-  
-## <a name="BackToTop"></a>Contenu du didacticiel  
-Dans ce didacticiel, vous allez apprendre à ajouter un indicateur de performance clé en définissant la couleur d’arrière-plan des cellules de tableau selon la valeur de la cellule. Vous apprendrez également à ajouter et configurer une jauge et un indicateur. Vous apprendrez également à écrire l'expression qui définit la couleur d'arrière-plan des cellules de tableau.  
-  
-Ce didacticiel contient les procédures suivantes :  
-  
-1.  [Créer un rapport de tableau et un dataset à partir de l'Assistant Tableau ou matrice](#Table)  
-  
-2.  [Organiser les données et choisir la disposition dans l’Assistant Tableau ou matrice](#CompleteWizard)  
-  
-3.  [Utiliser les couleurs d'arrière-plan pour afficher un indicateur de performance clé](#BackgroundColors)  
-  
-4.  [Afficher un indicateur de performance clé à l'aide d'une jauge](#Gauge)  
-  
-5.  [Afficher un indicateur de performance clé à l'aide d'un indicateur](#Indicator)  
-  
-6.  [Ajouter un titre de rapport](#Title)  
-  
-7.  [Enregistrer le rapport](#Save)  
-  
+    
 > [!NOTE]  
 > Dans ce didacticiel, les étapes de l'Assistant sont consolidées sous forme de deux procédures : l'une pour créer le dataset, et l'autre pour créer une table. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, le choix d’une source de données, la création d’un dataset et l’exécution de l’Assistant, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Durée estimée pour effectuer ce didacticiel : 15 minutes.  
   
-## Spécifications  
+## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="Table"></a>1. Créer un rapport de tableau et un dataset à partir de l'Assistant Tableau ou matrice  
 Dans cette section, vous choisissez une source de données partagée, créez un dataset incorporé et affichez les données dans un tableau.  
  
-### Pour créer un tableau avec un dataset incorporé  
+### <a name="to-create-a-table-with-an-embedded-dataset"></a>Pour créer un tableau avec un dataset incorporé  
   
 1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) depuis votre ordinateur, depuis le portail web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou en mode intégré SharePoint.  
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
-    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
+    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou Dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
 3.  Dans le volet droit, cliquez sur **Assistant Tableau ou matrice**.  
   
-4.  Dans la page **Choisir un dataset**, cliquez sur **Créer un dataset**.  
+4.  Dans la page **Choisir un dataset** , cliquez sur **Créer un dataset**.  
   
 5.  Cliquez sur **Suivant**.  
   
-6.  Dans la page **Choisir une connexion à une source de données**, sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n’est disponible ou que vous n’avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d’informations, consultez [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n’est disponible ou que vous n’avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d’informations, consultez [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Cliquez sur **Suivant**.  
   
-8.  Dans la page **Créer une requête**, cliquez sur **Modifier en tant que texte**.  
+8.  Dans la page **Créer une requête** , cliquez sur **Modifier en tant que texte**.  
   
 9. Copiez et collez la requête suivante dans le volet de requête :  
 
@@ -124,7 +110,7 @@ Dans cette section, vous choisissez une source de données partagée, créez un 
 ## <a name="CompleteWizard"></a>2. Organiser les données et choisir la disposition dans l’Assistant  
 L’Assistant Tableau ou matrice propose une conception initiale pour l’affichage les données. Le volet de visualisation de l'Assistant vous aide à visualiser le résultat du regroupement des données avant de terminer la conception de la table ou de la matrice.  
   
-### Pour organiser les données en groupes et choisir une disposition 
+### <a name="to-organize-data-into-groups-and-choose-a-layout"></a>Pour organiser les données en groupes et choisir une disposition 
   
 1.  Dans la page Organiser les champs, faites glisser Product vers **Valeurs**.  
   
@@ -134,13 +120,13 @@ L’Assistant Tableau ou matrice propose une conception initiale pour l’affich
   
 3.  Faites glisser Sales vers **Valeurs** et placez-le sous Quantity.  
   
-    Les étapes 1, 2 et 3 spécifient les données à afficher dans le tableau.  
+    Les étapes 1, 2 et 3 spécifient les données à afficher dans le tableau.  
   
 4.  Faites glisser SalesDate vers **Groupes de lignes**.  
   
 5.  Faites glisser Subcategory vers **Groupes de lignes** et placez-le sous SalesDate.  
   
-    Les étapes 4 et 5 organisent les valeurs des champs par date, puis par l'ensemble des ventes pour chaque date.  
+    Les étapes 4 et 5 organisent les valeurs des champs par date, puis par l'ensemble des ventes pour chaque date.  
   
 6.  Cliquez sur **Suivant**.  
   
@@ -158,7 +144,7 @@ L’Assistant Tableau ou matrice propose une conception initiale pour l’affich
   
 11. Cliquez sur **Terminer**.  
   
-      Le tableau est ajouté à l'aire de conception. Le tableau possède cinq colonnes et cinq lignes. Le volet Groupes de lignes affiche trois lignes : SalesDate, Subcategory et Details. Les données de détail sont toutes les données récupérées par la requête de dataset. Le volet Groupes de colonnes est vide.  
+      Le tableau est ajouté à l'aire de conception. Le tableau possède cinq colonnes et cinq lignes. Le volet Groupes de lignes affiche trois lignes : SalesDate, Subcategory et Details. Les données de détail sont toutes les données récupérées par la requête de dataset. Le volet Groupes de colonnes est vide.  
       
       ![report-builder-kpi-row-groups](../reporting-services/media/report-builder-kpi-row-groups.png)
   
@@ -168,7 +154,7 @@ Pour chaque produit vendu à une date spécifique, le tableau affiche le nom du 
 
 ![report-builder-kpi-basic-table](../reporting-services/media/report-builder-kpi-basic-table.png)
     
-### Mettre en forme les dates et des devises
+### <a name="format-dates-and-currency"></a>Mettre en forme les dates et des devises
 Élargissons les colonnes et définissons le format des dates et des devises.
 
 1. Cliquez sur **Conception** pour rebasculer en mode Conception.
@@ -177,13 +163,13 @@ Pour chaque produit vendu à une date spécifique, le tableau affiche le nom du 
 
 3. Appuyez sur la touche Ctrl, puis sélectionnez les quatre cellules contenant [Sum(Sales)].
 
-4. Sous l’onglet **Accueil** > **Nombre** > **Devise**. Les cellules changent pour afficher le format de devise.
+4. On the **Home** tab > **Number** > **Currency**. Les cellules changent pour afficher le format de devise.
 
-   Si votre paramètre régional est Anglais (États-Unis), le texte d’exemple par défaut est [$12,345.00]. Si vous ne voyez pas s’afficher d’exemple de valeur monétaire, dans le groupe **Nombres**, cliquez sur **Styles des espaces réservés** > **Valeurs d’aperçu**.
+   Si votre paramètre régional est Anglais (États-Unis), le texte d’exemple par défaut est [$12,345.00]. Si vous ne voyez pas s’afficher d’exemple de valeur monétaire, dans le groupe **Nombres** , cliquez sur **Styles des espaces réservés** > **Valeurs d’aperçu**.
     
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
 
-5. (Facultatif) Sous l’onglet **Accueil**, dans le groupe **Nombre**, cliquez sur le bouton **Réduire les décimales** à deux reprises, pour afficher les valeurs en dollars sans indication de centimes.
+5. (Facultatif) Sous l’onglet **Accueil** , dans le groupe **Nombre** , cliquez sur le bouton **Réduire les décimales** à deux reprises, pour afficher les valeurs en dollars sans indication de centimes.
 
 6. Cliquez sur la cellule qui contient [SalesDate].
 
@@ -198,7 +184,7 @@ Pour chaque produit vendu à une date spécifique, le tableau affiche le nom du 
 ## <a name="BackgroundColors"></a>3. Utiliser les couleurs d'arrière-plan pour afficher un indicateur de performance clé  
 Les couleurs d'arrière-plan peuvent avoir la valeur d'une expression qui est évaluée lorsque vous exécutez le rapport.  
   
-### Pour afficher l'état actuel d'un KPI en utilisant des couleurs d'arrière-plan  
+### <a name="to-display-the-present-state-of-a-kpi-by-using-background-colors"></a>Pour afficher l'état actuel d'un KPI en utilisant des couleurs d'arrière-plan  
   
 1.  Dans le tableau, cliquez avec le bouton droit sur la deuxième cellule `[Sum(Sales)]` (ligne de sous-total qui affiche les ventes d’une sous-catégorie), puis cliquez sur **Propriétés de la zone de texte**. 
 
@@ -206,11 +192,11 @@ Les couleurs d'arrière-plan peuvent avoir la valeur d'une expression qui est é
     
     ![report-builder-text-box-properties](../reporting-services/media/report-builder-text-box-properties.png)
   
-2.  Sous l’onglet **Remplissage**, cliquez sur le bouton **fx** en regard de **Couleur de remplissage**, puis entrez l’expression suivante dans le champ **Définir l’expression pour : BackgroundColor** :  
+2.  Sous l’onglet **Remplissage** , cliquez sur le bouton **fx** en regard de **Couleur de remplissage** , puis entrez l’expression suivante dans le champ **Définir l’expression pour : BackgroundColor** :  
   
     `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   
-     Cette expression fait passer la couleur d’arrière-plan au tilleul foncé pour chaque cellule qui contient une somme agrégée supérieure ou égale à 5000 pour l’élément `[Sum(Sales)]`. Les valeurs de `[Sum(Sales)]` entre 2500 et 5000 apparaissent sur fond jaune. Les valeurs inférieures à 2500 apparaissent sur fond rouge.  
+     Cette expression fait passer la couleur d’arrière-plan au tilleul foncé pour chaque cellule qui contient une somme agrégée supérieure ou égale à 5000 pour l’élément `[Sum(Sales)]` . Les valeurs de `[Sum(Sales)]` entre 2500 et 5000 apparaissent sur fond jaune. Les valeurs inférieures à 2500 apparaissent sur fond rouge.  
   
 1.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -223,7 +209,7 @@ Dans la ligne de sous-total qui affiche les ventes d'une sous-catégorie, la cou
 ## <a name="Gauge"></a>4. Afficher un indicateur de performance clé à l'aide d'une jauge  
 Une jauge représente une valeur unique dans un dataset. Ce didacticiel utilise une jauge linéaire horizontale, car sa forme et sa simplicité la rendent facile à lire, même quand elle est petite et qu’elle se trouve utilisée dans une cellule de tableau. Pour plus d’informations, consultez [Jauges &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
-### Pour afficher l'état présent d'un KPI à l'aide d'une jauge  
+### <a name="to-display-the-present-state-of-a-kpi-using-a-gauge"></a>Pour afficher l'état présent d'un KPI à l'aide d'une jauge  
   
 1.  Rebasculez en mode Conception.  
   
@@ -260,11 +246,11 @@ Une jauge représente une valeur unique dans un dataset. Ce didacticiel utilise 
     > [!NOTE]  
     > Au lieu d’une constante comme 25000, vous pouvez utiliser une expression pour calculer dynamiquement la valeur de l’option **Maximum**. L'expression utilise alors la fonctionnalité d'agrégation et est semblable à l'expression `=Max(Sum(Fields!Sales.value), "Tablix1")`.  
 
-14. Sous onglet, **Étiquettes**, cochez **Masquer les étiquettes de l’échelle**.
+14. Sous onglet, **Étiquettes** , cochez **Masquer les étiquettes de l’échelle**.
 
 15. Cliquez sur **OK**.
   
-14. Faites glisser la jauge dans le tableau jusqu’à la deuxième cellule vide de la colonne Linear KPI, dans la ligne qui affiche le sous-total des ventes pour le champ `Subcategory`, en regard du champ où vous avez ajouté la formule de couleur d’arrière-plan.  
+14. Faites glisser la jauge dans le tableau jusqu’à la deuxième cellule vide de la colonne Linear KPI, dans la ligne qui affiche le sous-total des ventes pour le champ `Subcategory` , en regard du champ où vous avez ajouté la formule de couleur d’arrière-plan.  
   
     > [!NOTE]  
     > Vous devrez peut-être redimensionner la colonne afin que la jauge linéaire horizontale s’ajuste à la taille des cellules. Pour redimensionner la colonne, sélectionnez le tableau et faites glisser les poignées de colonne. L’aire de conception de rapport est redimensionnée pour s’ajuster au tableau.  
@@ -278,7 +264,7 @@ Une jauge représente une valeur unique dans un dataset. Ce didacticiel utilise 
 ## <a name="Indicator"></a>5. Afficher un indicateur de performance clé à l'aide d'un indicateur  
 Les indicateurs sont de petites jauges simples qui permettent d'obtenir en un coup d'œil des valeurs de données. En raison de leur taille et de leur simplicité, les indicateurs sont souvent utilisés dans les tableaux et les matrices. Pour plus d’informations, consultez [Indicateurs &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
-### Pour afficher l'état présent d'un KPI à l'aide d'un indicateur  
+### <a name="to-display-the-present-state-of-a-kpi-using-an-indicator"></a>Pour afficher l'état présent d'un KPI à l'aide d'un indicateur  
   
 1.  Basculez en mode Conception.  
   
@@ -298,9 +284,9 @@ Les indicateurs sont de petites jauges simples qui permettent d'obtenir en un co
   
 8.  Cliquez avec le bouton droit sur l’indicateur, puis cliquez sur **Propriétés de l’indicateur**.  
   
-9. Sous l’onglet **Valeur et états**, dans la zone **Valeur**, sélectionnez **[SUM (Sales)]**. Ne modifiez pas les autres options.  
+9. Sous l’onglet **Valeur et états** , dans la zone **Valeur** , sélectionnez **[SUM (Sales)]**. Ne modifiez pas les autres options.  
   
-    Par défaut, la synchronisation des données se produit au niveau de la région de données et vous voyez s’afficher la valeur **Tablix1**, le nom de la région de données de table dans le rapport, dans la zone **Étendue de synchronisation**.  
+    Par défaut, la synchronisation des données se produit au niveau de la région de données et vous voyez s’afficher la valeur **Tablix1**, le nom de la région de données de table dans le rapport, dans la zone **Étendue de synchronisation** .  
   
     Dans ce rapport, vous pouvez également modifier l'étendue d'un indicateur placé dans la cellule du sous-total de la sous-catégorie pour synchroniser le champ SalesDate.  
   
@@ -315,7 +301,7 @@ Un titre de rapport s'affiche dans la partie supérieure du rapport. Vous pouvez
   
 Vous pouvez améliorer le texte en appliquant différents types de styles de police, de tailles et de couleurs à des expressions et des caractères spécifiques. Pour plus d’informations, consultez [Mettre en forme du texte dans une zone de texte &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
-### Pour ajouter un titre de rapport  
+### <a name="to-add-a-report-title"></a>Pour ajouter un titre de rapport  
   
 1.  Dans l'aire de conception, cliquez sur **Cliquez pour ajouter un titre**.  
   
@@ -328,7 +314,7 @@ Vous pouvez améliorer le texte en appliquant différents types de styles de pol
 ## <a name="Save"></a>7. Enregistrer le rapport  
 Enregistrez le rapport sur un serveur de rapports ou sur votre ordinateur. Si vous n'enregistrez pas le rapport sur le serveur de rapports, plusieurs fonctionnalités de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] telles que les parties de rapports et les sous-rapports ne sont pas disponibles.  
   
-### Pour enregistrer le rapport sur un serveur de rapports  
+### <a name="to-save-the-report-on-a-report-server"></a>Pour enregistrer le rapport sur un serveur de rapports  
   
 1.  À partir du bouton **Générateur de rapports** , cliquez sur **Enregistrer sous**.  
   
@@ -344,25 +330,27 @@ Enregistrez le rapport sur un serveur de rapports ou sur votre ordinateur. Si vo
   
 Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapports auquel vous êtes connecté est indiqué dans la barre d'état située au bas de la fenêtre.  
   
-### Pour enregistrer le rapport sur votre ordinateur  
+### <a name="to-save-the-report-on-your-computer"></a>Pour enregistrer le rapport sur votre ordinateur  
   
 1.  À partir du bouton **Générateur de rapports** , cliquez sur **Enregistrer sous**.  
   
-2.  Cliquez sur **Bureau**, **Mes documents** ou **Poste de travail**, puis naviguez jusqu’au dossier où vous souhaitez enregistrer le rapport.  
+2.  Cliquez sur **Bureau**, **Mes documents**ou **Poste de travail**, puis naviguez jusqu’au dossier où vous souhaitez enregistrer le rapport.  
   
 > [!NOTE]  
-> Si vous n’avez pas accès à un serveur de rapports, cliquez sur **Bureau**, **Mes documents** ou **Poste de travail** et enregistrez le rapport sur votre ordinateur.  
+> Si vous n’avez pas accès à un serveur de rapports, cliquez sur **Bureau**, **Mes documents**ou **Poste de travail** et enregistrez le rapport sur votre ordinateur.  
   
 1.  Dans **Nom**, remplacez le nom par défaut par **Product Sales KPI**.  
   
 2.  Cliquez sur **Enregistrer**.  
   
-## Étapes suivantes  
-Vous avez terminé le didacticiel d'ajout d'un indicateur de performance clé à votre rapport. Pour plus d'informations, consultez :
+## <a name="next-steps"></a>Étapes suivantes  
+Vous avez terminé le didacticiel d'ajout d'un indicateur de performance clé à votre rapport. Pour plus d'informations, consultez :
 *  [Jauges](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
 * [Indicateurs](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 * [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)
 * [Générateur de rapports dans SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

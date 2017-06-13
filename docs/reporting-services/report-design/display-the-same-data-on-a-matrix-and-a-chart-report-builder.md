@@ -1,43 +1,48 @@
 ---
-title: "Afficher les m&#234;mes donn&#233;es dans une matrice et sur un graphique (G&#233;n&#233;rateur de rapports) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Afficher les mêmes données sur une matrice et un graphique (Générateur de rapports) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bf125e2438d3d79662920c8fbc93faab8e8024d4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Afficher les m&#234;mes donn&#233;es dans une matrice et sur un graphique (G&#233;n&#233;rateur de rapports)
+# <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>Afficher les mêmes données dans une matrice et sur un graphique (Générateur de rapports)
   Pour afficher les mêmes données dans une matrice et sur un graphique, vous devez définir des propriétés sur ces deux régions de données afin de spécifier le même dataset, ainsi que les mêmes expressions pour les filtres, les groupes, les tris et les données.  
   
  Étant donné que les deux régions de données auront le même ancêtre de données (à savoir le dataset du rapport), vous pouvez ajouter à la matrice un bouton de tri interactif qui permettra aux utilisateurs de modifier l'ordre de tri à la fois pour la matrice et le graphique. Pour plus d’informations, consultez [Ajouter un tri interactif à une table ou une matrice &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   
  Pour utiliser les valeurs de groupe de colonnes de matrice comme légende pour le graphique, vous devez spécifier les couleurs des données de série sur le graphique, puis utiliser les mêmes couleurs que les couleurs de remplissage pour l'arrière-plan des zones de texte de la cellule de matrice qui affiche les valeurs de groupe. Pour plus d’informations, consultez [Spécifier des couleurs cohérentes pour plusieurs graphiques à base de formes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md).  
   
- Au moment de l'exécution, votre rapport peut paraître surchargé s'il contient un trop grand nombre de valeurs de groupe pour vos définitions de groupe. Il peut s'avérer nécessaire de filtrer des valeurs, de combiner des groupes ou d'ajuster le seuil pour que le graphique combine les groupes à votre place. Pour plus d’informations, consultez [Liaison de plusieurs régions de données à un même dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
+ Au moment de l'exécution, votre rapport peut paraître surchargé s'il contient un trop grand nombre de valeurs de groupe pour vos définitions de groupe. Il peut s'avérer nécessaire de filtrer des valeurs, de combiner des groupes ou d'ajuster le seuil pour que le graphique combine les groupes à votre place. Pour plus d’informations, consultez [Liaison de plusieurs régions de données à un même dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Pour ajouter une matrice et un graphique affichant les mêmes données  
+### <a name="to-add-a-matrix-and-chart-to-display-the-same-data"></a>Pour ajouter une matrice et un graphique affichant les mêmes données  
   
 1.  Ouvrez un rapport en mode Conception.  
   
-2.  Sous l’onglet **Insérer**, dans le groupe **Régions de données**, cliquez sur **Matrice**, puis cliquez dans le corps du rapport ou dans un rectangle du corps du rapport. Une matrice est ajoutée au rapport.  
+2.  Sous l’onglet **Insérer** , dans le groupe **Régions de données** , cliquez sur **Matrice**, puis cliquez dans le corps du rapport ou dans un rectangle du corps du rapport. Une matrice est ajoutée au rapport.  
   
-3.  Sous l’onglet **Insérer**, dans le groupe **Régions de données**, cliquez sur **Graphique**, puis sélectionnez le type de graphique. Un graphique est ajouté au rapport.  
+3.  Sous l’onglet **Insérer** , dans le groupe **Régions de données** , cliquez sur **Graphique**, puis sélectionnez le type de graphique. Un graphique est ajouté au rapport.  
   
-4.  (Facultatif) Sous l’onglet **Insérer**, dans le groupe **Éléments de rapport**, cliquez sur **Rectangle**, puis cliquez sur le rapport. Un rectangle est ajouté au rapport. Faites glisser la matrice et le graphique des étapes 2 et 3 dans le rectangle.  
+4.  (Facultatif) Sous l’onglet **Insérer** , dans le groupe **Éléments de rapport** , cliquez sur **Rectangle**, puis cliquez sur le rapport. Un rectangle est ajouté au rapport. Faites glisser la matrice et le graphique des étapes 2 et 3 dans le rectangle.  
   
      Le fait de placer plusieurs régions de données dans le conteneur rectangle vous permet de contrôler plus facilement le rendu de la matrice et du graphique lors de la visualisation du rapport.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 6
   
 8.  Faites glisser le même champ de dataset que celui sélectionné à l’étape 3 vers la zone **Valeurs** sur le graphique.  
   
-9. Sur le graphique, cliquez avec le bouton droit sur l’axe Y, cliquez sur **Propriétés de l’axe**, puis sur **Nombre**. Choisissez pour les données le même format que celui sélectionné à l'étape 4.  
+9. Sur le graphique, cliquez avec le bouton droit sur l’axe Y, cliquez sur **Propriétés de l’axe**, puis sur **Nombre**. Choisissez pour les données le même format que celui sélectionné à l'étape 4.  
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -65,7 +70,7 @@ caps.handback.revision: 6
   
 12. Faites glisser le même champ de dataset que celui utilisé à l’étape 9 vers la zone **Groupes de séries** du graphique.  
   
-13. Cliquez avec le bouton droit sur le groupe dans la zone **Groupes de séries**, puis sélectionnez **Propriétés du groupe de séries**.  
+13. Cliquez avec le bouton droit sur le groupe dans la zone **Groupes de séries** , puis sélectionnez **Propriétés du groupe de séries**.  
   
 14. Cliquez sur **Tri**.  
   
@@ -83,7 +88,7 @@ caps.handback.revision: 6
   
 19. Faites glisser le même champ de dataset que celui utilisé à l’étape 16 vers la zone **Groupes de catégories** du graphique.  
   
-20. Cliquez avec le bouton droit sur le groupe dans la zone **Groupes de catégories**, puis cliquez sur **Propriétés du groupe de catégories**.  
+20. Cliquez avec le bouton droit sur le groupe dans la zone **Groupes de catégories** , puis cliquez sur **Propriétés du groupe de catégories**.  
   
 21. Cliquez sur **Tri**.  
   
@@ -95,9 +100,9 @@ caps.handback.revision: 6
   
 25. Affichez un aperçu du résultat. Les groupes de lignes et de colonnes de la matrice affichent les mêmes données que les groupes de catégories et de séries du graphique.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Liaison de plusieurs régions de données à un même dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add dataset filters, data region filters, and group filters.md)   
+ [Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   

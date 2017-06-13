@@ -1,24 +1,29 @@
 ---
-title: "Ajouter un lien hypertexte &#224; une URL (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/07/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ajouter un lien hypertexte vers une URL (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 09/07/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c4d66e7d74d06cbad20351f80a312be95cc253c0
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Ajouter un lien hypertexte &#224; une URL (G&#233;n&#233;rateur de rapports et SSRS)
-Découvrez comment ajouter des actions de lien hypertexte à des zones de texte, des images, des graphiques et des jauges aux rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]. Les liens peuvent mener à d’autres rapports, aux signets d’un rapport ou à des URL dynamiques ou statiques. 
+# <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Ajouter un lien hypertexte à une URL (Générateur de rapports et SSRS)
+Découvrez comment ajouter des actions de lien hypertexte à des zones de texte, des images, des graphiques et des jauges aux rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  . Les liens peuvent mener à d’autres rapports, aux signets d’un rapport ou à des URL dynamiques ou statiques. 
 
  Vous pouvez ajouter une action de lien hypertexte à un élément doté d’une propriété **Action** , par exemple une zone de texte, une image ou une série calculée dans un graphique. Lorsque l'utilisateur clique sur l'élément de rapport en question, l'action que vous définissez est exécutée.  
   
@@ -33,15 +38,15 @@ Essayez d’ajouter des liens hypertexte avec des exemples de données dans [Did
 > [!NOTE]  
 >  Les liens qui sont associés à des champs de dataset peuvent être vulnérables à des opérations de falsification à des fins malveillantes. Pour plus d’informations, consultez [Sécuriser des rapports et des ressources](../../reporting-services/security/secure-reports-and-resources.md).  
   
-## Pour ajouter un lien hypertexte et...   
+## <a name="to-add-a-hyperlink-and"></a>Pour ajouter un lien hypertexte et...   
   
 1.  En mode Création de rapport, cliquez avec le bouton droit sur la zone de texte, l’image ou le graphique auquel vous voulez ajouter un lien, puis cliquez sur **Propriétés**.  
   
-2.  Dans la boîte de dialogue Propriétés, cliquez sur l’onglet **Action**. Lisez la suite pour plus d’informations sur les options.  
+2.  Dans la boîte de dialogue Propriétés, cliquez sur l’onglet **Action** . Lisez la suite pour plus d’informations sur les options.  
 
-## ... ajouter l’extraction à un autre rapport
+## <a name="-add-drillthrough-to-another-report"></a>... ajouter l’extraction à un autre rapport
 
-1. Dans l’onglet **Action**, sélectionnez **Atteindre le rapport**. 
+1. Dans l’onglet **Action** , sélectionnez **Atteindre le rapport**. 
 
 2. Spécifiez les paramètres et le rapport cible que vous souhaitez utiliser. Les noms des paramètres doivent correspondre aux paramètres définis pour le rapport cible. 
 
@@ -51,15 +56,15 @@ Essayez d’ajouter des liens hypertexte avec des exemples de données dans [Did
 
 5. Sélectionnez **Omettre** pour empêcher le paramètre de s’exécuter. Par défaut, cette case à cocher est désactivée et n'est pas active. Pour cocher la case, cliquez sur le bouton Expression (fx) et tapez True ou créez une expression. La case est cochée quand vous cliquez sur **OK** dans la boîte de dialogue Expression.
   
-   Pour plus d’informations, consultez [Ajouter une action d’extraction à un rapport (Générateur de rapports et SSRS)](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md). 
+   Pour plus d’informations, consultez [Ajouter une action d’extraction à un rapport (Générateur de rapports et SSRS)](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md) . 
    
 6. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
    
-## ...ajouter un signet
+## <a name="-add-a-bookmark"></a>...ajouter un signet
 
-Vous pouvez définir un lien vers des signets menant à un emplacement du rapport actuel. Pour définir un lien vers un signet, vous devez d’abord définir la propriété de **signet** d’un élément de rapport. Pour définir la propriété de **signet**, sélectionnez un élément de rapport et, dans le volet Propriétés, tapez une valeur ou expression pour l’identificateur du signet, par exemple, SalesChart ou 5TopSales.
+Vous pouvez définir un lien vers des signets menant à un emplacement du rapport actuel. Pour définir un lien vers un signet, vous devez d’abord définir la propriété de **signet** d’un élément de rapport. Pour définir la propriété de **signet** , sélectionnez un élément de rapport et, dans le volet Propriétés, tapez une valeur ou expression pour l’identificateur du signet, par exemple, SalesChart ou 5TopSales.
 
-1. Dans l’onglet **Action**, sélectionnez **Atteindre le signet**. 
+1. Dans l’onglet **Action** , sélectionnez **Atteindre le signet**. 
 
 2. Tapez ou sélectionnez l’identificateur de signet du rapport à atteindre. Cliquez sur le bouton Expression (fx) pour modifier l'expression. 
 
@@ -69,9 +74,9 @@ Vous pouvez définir un lien vers des signets menant à un emplacement du rappor
    
 3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-## ...ajouter un lien hypertexte 
+## <a name="-add-a-hyperlink"></a>...ajouter un lien hypertexte 
   
-1. Dans l’onglet **Action**, sélectionnez **Atteindre l’URL**. Une section supplémentaire apparaît dans la boîte de dialogue pour cette option.  
+1. Dans l’onglet **Action** , sélectionnez **Atteindre l’URL**. Une section supplémentaire apparaît dans la boîte de dialogue pour cette option.  
   
 4.  Dans **Sélectionner une URL**, entrez ou sélectionnez une URL ou une expression qui prend la valeur d’une URL, ou cliquez sur la flèche déroulante et cliquez sur le nom d’un champ qui contient une URL. 
 
@@ -81,14 +86,15 @@ Vous pouvez définir un lien vers des signets menant à un emplacement du rappor
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-## Après avoir ajouté un lien hypertexte
+## <a name="after-you-add-a-hyperlink"></a>Après avoir ajouté un lien hypertexte
   
 1.  (Facultatif) Le texte n'est pas mis en forme automatiquement en tant que lien. Pour le texte, il est utile de modifier la couleur et l'effet du texte pour indiquer qu'il s'agit d'un lien. Par exemple, changez la couleur en bleu et l'effet en soulignement dans la section **Police** sous l'onglet Accueil du ruban.  
   
 7.  Pour tester le lien, cliquez sur **Exécuter** afin d'afficher l'aperçu du rapport, puis cliquez sur l'élément de rapport sur lequel vous avez défini ce lien.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tri interactif, Explorateurs de documents et liens &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Créer un explorateur de documents &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
   
   
+

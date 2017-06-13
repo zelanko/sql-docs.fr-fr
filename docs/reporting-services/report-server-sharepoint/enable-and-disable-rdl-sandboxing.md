@@ -1,24 +1,29 @@
 ---
-title: "Activer et d&#233;sactiver sandboxing RDL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Activer et désactiver Sandboxing RDL | Documents Microsoft"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2a435c6f6b5dc2d9df676f504837393d448820a4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Activer et d&#233;sactiver sandboxing RDL
-  La fonctionnalité Sandboxing RDL (Report Definition Language) vous permet de détecter et restreindre l'utilisation de types spécifiques de ressources, par les locataires individuels, dans un environnement où plusieurs locataires utilisent une batterie de serveurs Web unique de serveurs de rapports. Citons pour exemple un scénario de services d'hébergement où vous pouvez maintenir une batterie de serveurs Web uniques de serveurs de rapports utilisés par plusieurs locataires, et peut-être différentes sociétés. En tant qu'administrateur de serveur de rapports, vous pouvez activer cette fonctionnalité pour aider à accomplir les objectifs suivants :  
+# <a name="enable-and-disable-rdl-sandboxing"></a>Activer et désactiver sandboxing RDL
+  La fonctionnalité Sandboxing RDL (Report Definition Language) vous permet de détecter et restreindre l'utilisation de types spécifiques de ressources, par les locataires individuels, dans un environnement où plusieurs locataires utilisent une batterie de serveurs Web unique de serveurs de rapports. Citons pour exemple un scénario de services d'hébergement où vous pouvez maintenir une batterie de serveurs Web uniques de serveurs de rapports utilisés par plusieurs locataires, et peut-être différentes sociétés. En tant qu'administrateur de serveur de rapports, vous pouvez activer cette fonctionnalité pour aider à accomplir les objectifs suivants :  
   
 -   Restreindre la taille des ressources externes. Les ressources externes incluent les images, fichiers .xslt et données cartographiques.  
   
@@ -26,18 +31,18 @@ caps.handback.revision: 9
   
 -   Lors du traitement des rapports, limiter la longueur du texte et la taille de la valeur de retour pour les expressions.  
   
- Lorsque le Sandboxing RDL est activé, les fonctionnalités suivantes sont désactivées :  
+ Lorsque le Sandboxing RDL est activé, les fonctionnalités suivantes sont désactivées :  
   
--   Code personnalisé dans l’élément **\<Code>** d’une définition de rapport.  
+-   Code personnalisé dans le  **\<Code >** élément d’une définition de rapport.  
   
--   Mode de compatibilité descendante RDL pour les éléments de rapport personnalisé [!INCLUDE[ssRSversion2005](../../includes/ssrsversion2005-md.md)].  
+-   Mode de compatibilité descendante RDL pour les éléments de rapport personnalisé [!INCLUDE[ssRSversion2005](../../includes/ssrsversion2005-md.md)] .  
   
 -   Paramètres nommés dans les expressions  
   
- Cette rubrique décrit chaque élément de l’élément \<**RDLSandboxing**> dans le fichier RSReportServer.Config. Pour plus d’informations sur la modification de ce fichier, consultez [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Un journal des traces de serveur enregistre l'activité liée à la fonctionnalité Sandboxing RDL. Pour plus d’informations sur les fichiers des traces, consultez [Journal des traces du service Report Server](../../reporting-services/report-server/report-server-service-trace-log.md).  
+ Cette rubrique décrit chaque élément de la \< **RDLSandboxing**> élément dans le fichier RSReportServer.Config. Pour plus d’informations sur la modification de ce fichier, consultez [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Un journal des traces de serveur enregistre l'activité liée à la fonctionnalité Sandboxing RDL. Pour plus d’informations sur les fichiers des traces, consultez [Journal des traces du service Report Server](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
-## Exemple de configuration  
- L’exemple suivant montre les paramètres et des exemples de valeurs pour l’élément \<**RDLSandboxing**> dans le fichier RSReportServer.Config.  
+## <a name="example-configuration"></a>Exemple de configuration  
+ L’exemple suivant montre les paramètres et les exemples de valeurs pour le \< **RDLSandboxing**> élément dans le fichier RSReportServer.Config.  
   
 ```  
 <RDLSandboxing>  
@@ -56,25 +61,25 @@ caps.handback.revision: 9
 </RDLSandboxing>  
 ```  
   
-## Paramètres de configuration  
+## <a name="configuration-settings"></a>Paramètres de configuration  
  Le tableau suivant contient des informations sur les paramètres de configuration. Les paramètres sont présentés dans l'ordre dans lequel ils apparaissent dans le fichier de configuration.  
   
 |Paramètre|Description|  
 |-------------|-----------------|  
-|**MaxExpressionLength**|Quantité maximale de caractères autorisés dans les expressions RDL.<br /><br /> Par défaut : 1000|  
-|**MaxResourceSize**|Quantité maximale de Ko autorisés pour une ressource externe.<br /><br /> Valeur par défaut : 100|  
-|**MaxStringResultLength**|Quantité maximale de caractères autorisés dans une valeur de retour pour une expression RDL.<br /><br /> Par défaut : 1000|  
-|**MaxArrayResultLength**|Quantité maximale d'éléments autorisés dans un tableau de valeurs retourné pour une expression RDL.<br /><br /> Valeur par défaut : 100|  
+|**MaxExpressionLength**|Quantité maximale de caractères autorisés dans les expressions RDL.<br /><br /> Par défaut : 1000|  
+|**MaxResourceSize**|Quantité maximale de Ko autorisés pour une ressource externe.<br /><br /> Valeur par défaut : 100|  
+|**MaxStringResultLength**|Quantité maximale de caractères autorisés dans une valeur de retour pour une expression RDL.<br /><br /> Par défaut : 1000|  
+|**MaxArrayResultLength**|Quantité maximale d'éléments autorisés dans un tableau de valeurs retourné pour une expression RDL.<br /><br /> Valeur par défaut : 100|  
 |**Types**|Liste des membres à autoriser dans les expressions RDL.|  
 |**Allow**|Type ou jeu de types à autoriser dans les expressions RDL.|  
 |**Espace de noms**|Attribut pour **Allow** qui est l’espace de noms contenant un ou plusieurs types qui s’appliquent à Valeur. Cette propriété n'est pas sensible à la casse.|  
-|**AllowNew**|Attribut booléen pour **Allow** qui contrôle si la création de nouvelles instances du type est autorisée dans les expressions RDL ou dans un élément **\<Class>** RDL.<br /><br /> Remarque : Quand **RDLSandboxing** est activé, de nouveaux tableaux ne peuvent pas être créés dans les expressions RDL, indépendamment de la valeur de **AllowNew**.|  
+|**AllowNew**|Attribut booléen pour **autoriser** qui contrôle si les nouvelles instances du type sont autorisés à être créée dans les expressions RDL ou dans un fichier RDL  **\<classe >** élément.<br /><br /> Remarque : Quand **RDLSandboxing** est activé, de nouveaux tableaux ne peuvent pas être créés dans les expressions RDL, indépendamment de la valeur de **AllowNew**.|  
 |**Value**|Valeur pour **Allow** qui est le nom du type à autoriser dans les expressions RDL. La valeur **\*** indique que tous les types dans l’espace de noms sont autorisés. Cette propriété n'est pas sensible à la casse.|  
-|**Membres**|Pour la liste des types qui sont inclus dans l’élément **\<Types>**, la liste des noms de membres qui ne sont pas autorisés dans les expressions RDL.|  
+|**Membres**|Pour obtenir la liste des types qui sont inclus dans le  **\<Types >** élément, la liste des noms de membres qui ne sont pas autorisés dans les expressions RDL.|  
 |**Refuser**|Nom d'un membre qui n'est pas autorisé dans les expressions RDL. Cette propriété n'est pas sensible à la casse.<br /><br /> Remarque : Quand **Deny** est spécifié pour un membre, tous les membres portant ce nom pour tous les types ne sont pas autorisés.|  
   
-## Utilisation des expressions lorsque le Sandboxing RDL est activé  
- Vous pouvez modifier la fonctionnalité Sandboxing RDL afin d'aider à gérer les ressources utilisées par une expression des manières suivantes :  
+## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>Utilisation des expressions lorsque le Sandboxing RDL est activé  
+ Vous pouvez modifier la fonctionnalité Sandboxing RDL afin d'aider à gérer les ressources utilisées par une expression des manières suivantes :  
   
 -   Limitez le nombre de caractères utilisés pour une expression.  
   
@@ -91,18 +96,18 @@ caps.handback.revision: 9
   
  Les résultats d'expression RDL sont vérifiés au moment de l'exécution. Les expressions RDL sont vérifiées dans la définition de rapport lorsque le rapport est publié. Contrôlez le journal des traces du serveur de rapports afin de détecter toute violation. Pour plus d’informations, consultez [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
-### Utilisation des types  
- Lorsque vous ajoutez un type à la liste verte, vous contrôlez les points d'entrée suivants pour accéder aux expressions RDL :  
+### <a name="working-with-types"></a>Utilisation des types  
+ Lorsque vous ajoutez un type à la liste verte, vous contrôlez les points d'entrée suivants pour accéder aux expressions RDL :  
   
 -   Membres statiques d'un type.  
   
--   Nouvelle méthode [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **New**.  
+-   Nouvelle méthode [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **New** .  
   
--   Élément **\<Classes>** dans la définition de rapport.  
+-   Le  **\<Classes >** élément dans la définition de rapport.  
   
 -   Membres que vous avez ajoutés à la liste rouge pour un type dans la liste verte.  
   
- La liste verte ne contrôle pas les points d'entrée suivants :  
+ La liste verte ne contrôle pas les points d'entrée suivants :  
   
 -   Datasets du rapport. Les champs dans les datasets de rapport retournés à partir de requêtes peuvent contenir tout type RDL valide.  
   
@@ -110,9 +115,9 @@ caps.handback.revision: 9
   
 -   Membres d'un type actif qui ne sont pas dans la liste rouge. Par défaut, tous les membres de tous les types dans la liste verte sont activés. Lorsque vous ajoutez un nom de membre à la liste rouge, vous refusez tous les membres avec ce nom parmi tous les types figurant dans la liste verte.  
   
- Pour activer un membre d'un type mais refuser un membre avec le même nom pour un type différent, vous devez effectuer les opérations suivantes :  
+ Pour activer un membre d'un type mais refuser un membre avec le même nom pour un type différent, vous devez effectuer les opérations suivantes :  
   
--   Ajouter un élément **\<Deny>** pour le nom de membre.  
+-   Ajouter un  **\<Deny >** , élément pour le nom du membre.  
   
 -   Créer un membre de proxy avec un nom différent sur une classe dans un assembly personnalisé pour le membre que vous souhaitez activer.  
   
@@ -120,7 +125,7 @@ caps.handback.revision: 9
   
  Pour ajouter des fonctions [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework à la liste autorisée, ajoutez les types correspondants de l’espace de noms Microsoft.VisualBasic à cette liste.  
   
- Pour ajouter des mots clés du type [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework à la liste verte, ajoutez le type CLR correspondant à la liste verte. Par exemple, pour utiliser le mot clé [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework **Integer**, ajoutez le fragment XML suivant à l’élément **\<RDLSandboxing>** :  
+ Pour ajouter des mots clés du type [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework à la liste verte, ajoutez le type CLR correspondant à la liste verte. Par exemple, pour utiliser le [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] (mot clé) de .NET Framework **entier**, ajoutez le fragment XML suivant à la  **\<RDLSandboxing >** élément :  
   
 ```  
 <Allow Namespace="System">Int32</Allow>  
@@ -134,8 +139,8 @@ caps.handback.revision: 9
   
  L'ajout d'un type d'un assembly personnalisé à la liste verte n'accorde pas implicitement l'autorisation Exécuter sur l'assembly. Vous devez modifier spécifiquement le fichier de sécurité d'accès du code et fournir l'autorisation Exécuter à votre assembly. Pour plus d’informations, consultez [Sécurité d’accès du code dans Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md).  
   
-#### Maintenance de la liste de membres \<Deny>  
- Lorsque vous ajoutez un nouveau type à la liste verte, vous utilisez la liste suivante pour déterminer quand vous devrez peut-être mettre à jour la liste rouge de membres :  
+#### <a name="maintaining-the-deny-list-of-members"></a>En conservant le \<refuser > liste de membres  
+ Lorsque vous ajoutez un nouveau type à la liste verte, vous utilisez la liste suivante pour déterminer quand vous devrez peut-être mettre à jour la liste rouge de membres :  
   
 -   Lorsque vous mettez à jour un assembly personnalisé avec une version qui introduit de nouveaux types.  
   
@@ -147,10 +152,10 @@ caps.handback.revision: 9
   
 -   Lorsque vous mettez à jour un serveur de rapports pour gérer un schéma RDL ultérieur, car de nouveaux membres ont pu être ajoutés aux types RDL.  
   
-### Utilisation des opérateurs et de New  
- Par défaut, les opérateurs de langage [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework, à l’exception de **New**, sont toujours autorisés. L’opérateur **New** est contrôlé par l’attribut **AllowNew** sur l’élément **\<Allow>**. Les autres opérateurs de langage, comme l’opérateur d’accesseur de collection par défaut **!** et les macros de conversion de type de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework, comme **CInt**, sont toujours autorisés.  
+### <a name="working-with-operators-and-new"></a>Utilisation des opérateurs et de New  
+ Par défaut, les opérateurs de langage [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework, à l’exception de **New**, sont toujours autorisés. Le **nouveau** opérateur est contrôlée par le **AllowNew** de l’attribut le  **\<Autoriser >** élément. Les autres opérateurs de langage, comme l’opérateur d’accesseur de collection par défaut **!** et les macros de conversion de type de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework, comme **CInt**, sont toujours autorisés.  
   
- L'ajout d'opérateurs à une liste rouge, y compris des opérateurs personnalisés, n'est pas pris en charge. Pour exclure des opérateurs pour un type, vous devez effectuer les opérations suivantes :  
+ L'ajout d'opérateurs à une liste rouge, y compris des opérateurs personnalisés, n'est pas pris en charge. Pour exclure des opérateurs pour un type, vous devez effectuer les opérations suivantes :  
   
 -   Créer un type de proxy qui n'implémente pas les opérateurs que vous souhaitez exclure.  
   
@@ -158,14 +163,14 @@ caps.handback.revision: 9
   
  Pour créer un tableau dans une expression RDL, créez le tableau dans une méthode sur une classe que vous définissez et ajoutez cette classe à la liste verte.  
   
- Pour créer un tableau dans une expression RDL, vous devez effectuer les opérations suivantes :  
+ Pour créer un tableau dans une expression RDL, vous devez effectuer les opérations suivantes :  
   
 -   Définir une nouvelle classe et créer le tableau dans une méthode sur cette classe.  
   
 -   Ajouter la classe à la liste verte.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fichier de configuration RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)  
+ [Journal des traces du service Report Server](../../reporting-services/report-server/report-server-service-trace-log.md)  
   
   

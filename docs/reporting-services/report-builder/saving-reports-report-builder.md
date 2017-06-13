@@ -1,24 +1,29 @@
 ---
-title: "Enregistrement des rapports (G&#233;n&#233;rateur de rapports) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Enregistrement des rapports (Générateur de rapports) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c5d4f5efbe000946f543fd9b22b5a45f48e06050
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Enregistrement des rapports (G&#233;n&#233;rateur de rapports)
-  Dans le Générateur de rapports, vous avez la possibilité d’enregistrer un rapport paginé sur un serveur de rapports [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], une bibliothèque SharePoint, un partage de fichiers sur lequel vous disposez d’une autorisation d’accès en écriture, ou sur votre ordinateur. 
+# <a name="saving-reports-report-builder"></a>Enregistrement des rapports (Générateur de rapports)
+  Dans le Générateur de rapports, vous avez la possibilité d’enregistrer un rapport paginé sur un serveur de rapports [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , une bibliothèque SharePoint, un partage de fichiers sur lequel vous disposez d’une autorisation d’accès en écriture, ou sur votre ordinateur. 
   
 Lorsque vous enregistrez un rapport, vous enregistrez en fait la définition de rapport, laquelle décrit la disposition du rapport. Les données ne sont pas enregistrées. Chaque fois que vous exécutez le rapport, les données de rapport sont actualisées et peuvent être différentes de celles obtenues lors de la dernière exécution du rapport.  
   
@@ -37,7 +42,7 @@ Lorsque vous enregistrez un rapport, vous enregistrez en fait la définition de 
   
 -   Les rapports sont mis à la disposition des autres utilisateurs qui sont autorisés à accéder au dossier dans lequel vous avez enregistré le rapport.  
   
--   Les rapports peuvent être gérés et affichés sur le portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   Les rapports peuvent être gérés et affichés sur le portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 -   Les ressources de rapport, telles que les sources de données, les images et les sous-rapports, sont stockées à un seul et même endroit pour un accès plus facile.  
   
@@ -62,9 +67,9 @@ Lorsque vous enregistrez un rapport, vous enregistrez en fait la définition de 
   
 -   [Enregistrer un rapport dans une bibliothèque SharePoint &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
    
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Rapports, parties de rapports et définitions de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Installer et désinstaller le Générateur de rapports](../Topic/Install%20and%20Uninstall%20Report%20Builder.md)   
+ [Installer et désinstaller le Générateur de rapports](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Imprimer des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  

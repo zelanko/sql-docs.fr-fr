@@ -1,23 +1,28 @@
 ---
-title: "Applications de service SharePoint de sauvegarde et de restauration Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Sauvegarde et de restauration Reporting Services SharePoint Service Applications | Documents Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
 caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 11
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: a4f320a1e806dce3411137abc74f2fe07bab7217
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Applications de service SharePoint de sauvegarde et de restauration Reporting Services
+# <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Applications de service SharePoint de sauvegarde et de restauration Reporting Services
   Cette rubrique explique comment sauvegarder et restaurer une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à l'aide de l'Administration centrale de SharePoint ou PowerShell. La rubrique contient :  
   
 -   [Limitations et restrictions](#bkmk_Restrictions)  
@@ -33,7 +38,7 @@ caps.handback.revision: 11
 ###  <a name="bkmk_Restrictions"></a> Limitations et restrictions  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent partiellement être sauvegardées et restaurées à l'aide de la fonctionnalité de sauvegarde et de restauration SharePoint. **Des étapes supplémentaires sont nécessaires** ; celles-ci sont documentées dans cette rubrique. Actuellement, le processus de sauvegarde **ne permet pas** de sauvegarder les clés de chiffrement et les informations d’identification pour les comptes d’exécution sans assistance (UEA) ou l’authentification Windows à la base de données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent partiellement être sauvegardées et restaurées à l'aide de la fonctionnalité de sauvegarde et de restauration SharePoint. **Des étapes supplémentaires sont nécessaires** ; celles-ci sont documentées dans cette rubrique. Actuellement, le processus de sauvegarde **ne permet pas** de sauvegarder les clés de chiffrement et les informations d’identification pour les comptes d’exécution sans assistance (UEA) ou l’authentification Windows à la base de données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ###  <a name="bkmk_recommendations"></a> Recommandations  
   
@@ -52,8 +57,8 @@ caps.handback.revision: 11
   
 3.  Vérifiez si votre application de service utilise un compte UEA ou l'authentification Windows pour l'accès aux bases de données. Si c'est le cas, notez les informations d'identification afin de pouvoir les utiliser pour configurer l'application de service après sa restauration.  
   
-### Sauvegarder les clés de chiffrement à l'aide de l'Administration centrale  
- Pour plus d’informations sur la sauvegarde des clés de chiffrement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez la section « Clés de chiffrement » dans [Gérer une application de service SharePoint Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
+### <a name="backup-the-encryption-keys-using-central-administration"></a>Sauvegarder les clés de chiffrement à l'aide de l'Administration centrale  
+ Pour plus d’informations sur la sauvegarde des clés de chiffrement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , consultez la section « Clés de chiffrement » dans [Gérer une application de service SharePoint Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
   
 ###  <a name="bkmk_centraladmin"></a> Sauvegarde de l'application de service à l'aide de l'Administration centrale de SharePoint  
  Pour sauvegarder l'application de service, procédez comme suit :  
@@ -72,9 +77,9 @@ caps.handback.revision: 11
   
  [Enregistrer une application de service (SharePoint Foundation 2010) dans la documentation SharePoint](http://msdn.microsoft.com/library/ee748601.aspx).  
   
- [Enregistrer une application de service (SharePoint Server 2010)](http://technet.microsoft.com/library/ee428318.aspx)  
+ [Enregistrer une application de service (SharePoint Server 2010)](http://technet.microsoft.com/library/ee428318.aspx)  
   
-### Vérifier le compte d'exécution et l'authentification de la base de données  
+### <a name="verify-execution-account-and-database-authentication"></a>Vérifier le compte d'exécution et l'authentification de la base de données  
  **Compte d'exécution :** pour vérifier si votre application de service utilise un compte d'exécution :  
   
 1.  Dans l'Administration Centrale de SharePoint, sous le groupe **Gestion des applications** , cliquez sur **Gérer les applications de service** .  
@@ -91,7 +96,7 @@ caps.handback.revision: 11
   
 2.  Cliquez sur le nom de votre application de service et cliquez sur **Propriétés** dans le ruban SharePoint.  
   
-3.  Consultez la section **Base de données de service SQL Server Reporting Services (SSRS)**.  
+3.  Consultez la section **Base de données de service SQL Server Reporting Services (SSRS)** .  
   
 4.  Si l'authentification Windows est configurée, vous devez connaître les informations d'identification pour que vous puissiez configurer l'application de service après l'avoir restaurée. N'effectuez pas la procédure de sauvegarde et restauration avant de connaître les informations d'identification correctes.  
   
@@ -104,7 +109,7 @@ caps.handback.revision: 11
   
 3.  Si votre application de service utilisait un compte d'exécution ou une authentification Windows pour l'accès aux bases de données, configurez les informations d'identification.  
   
-### Restaurer l'application de service à l'aide de l'Administration centrale de SharePoint  
+### <a name="restore-the-service-application-using-sharepoint-central-administration"></a>Restaurer l'application de service à l'aide de l'Administration centrale de SharePoint  
   
 1.  Dans l'Administration centrale de SharePoint, cliquez sur **Restauration à partir d’une sauvegarde** dans le groupe **Sauvegarde et restauration** .  
   
@@ -124,12 +129,12 @@ caps.handback.revision: 11
   
  [Restaurer une application de service (SharePoint Foundation 2010)](http://msdn.microsoft.com/library/ee748615.aspx).  
   
- [Restaurer une application de service (SharePoint Server 2010)](ttp://technet.microsoft.com/library/ee428305.aspx).  
+ [Restaurer une application de service (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx).  
   
-### Restaurer les clés de chiffrement à l'aide de l'Administration centrale  
- Pour plus d’informations sur la restauration des clés de chiffrement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez la section « Clés de chiffrement » dans [Gérer une application de service SharePoint Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
+### <a name="restore-the-encryption-keys-using-central-administration"></a>Restaurer les clés de chiffrement à l'aide de l'Administration centrale  
+ Pour plus d’informations sur la restauration des clés de chiffrement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , consultez la section « Clés de chiffrement » dans [Gérer une application de service SharePoint Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
   
-### Configurer le compte d'exécution et l'authentification de base de données  
+### <a name="configure-the-execution-account-and-database-authentication"></a>Configurer le compte d'exécution et l'authentification de base de données  
  **Compte d'exécution :** si votre application de service utilisait un compte d'exécution, procédez comme suit pour le configurer :  
   
 1.  Dans l'Administration Centrale de SharePoint, sous le groupe **Gestion des applications** , cliquez sur **Gérer les applications de service** .  
@@ -148,7 +153,7 @@ caps.handback.revision: 11
   
 2.  Cliquez sur le nom de votre application de service et cliquez sur **Propriétés** dans le ruban SharePoint.  
   
-3.  Consultez la section **Base de données de service SQL Server Reporting Services (SSRS)**.  
+3.  Consultez la section **Base de données de service SQL Server Reporting Services (SSRS)** .  
   
 4.  Sélectionnez **Authentification Windows**.  
   

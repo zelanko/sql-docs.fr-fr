@@ -1,24 +1,29 @@
 ---
-title: "Comportements de rendu (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Comportement de rendu (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 518b74abc3238fcebee1e8b5356315e49f35db01
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Comportements de rendu (G&#233;n&#233;rateur de rapports et SSRS)
-  En fonction du convertisseur que vous sélectionnez, certaines règles sont appliquées au corps du rapport et à son contenu lors du rendu d'un rapport. La combinaison de ces facteurs détermine la façon dont les éléments du rapport s'ajustent sur la page :  
+# <a name="rendering-behaviors-report-builder--and-ssrs"></a>Comportements de rendu (Générateur de rapports et SSRS)
+  En fonction du convertisseur que vous sélectionnez, certaines règles sont appliquées au corps du rapport et à son contenu lors du rendu d'un rapport. La combinaison de ces facteurs détermine la façon dont les éléments du rapport s'ajustent sur la page :  
   
 -   les règles de rendu ;  
   
@@ -26,7 +31,7 @@ caps.handback.revision: 7
   
 -   la taille du corps du rapport ;  
   
--   la largeur et la hauteur de la page ;  
+-   la largeur et la hauteur de la page ;  
   
 -   la prise en charge de la pagination spécifique au convertisseur.  
   
@@ -35,13 +40,13 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Comportements généraux pour HTML, MHTML, Word et Excel (convertisseurs de sauts de page conditionnels)  
+## <a name="general-behaviors-for-html-mhtml-word-and-excel-soft-page-break-renderers"></a>Comportements généraux pour HTML, MHTML, Word et Excel (convertisseurs de sauts de page conditionnels)  
  Les rapports exportés à l'aide des formats HTML et MHTML sont optimisés pour un affichage sur un écran d'ordinateur sur lequel les pages peuvent avoir différentes longueurs. Les sauts de page sont insérés verticalement à des emplacements approximatifs au sein du corps du rapport. Ces emplacements sont déterminés par le paramètre de hauteur interactif du volet Propriétés. Par exemple, la hauteur interactive est définie à 5 pouces. Lorsque le rapport est rendu, la hauteur de page est d'environ 5 pouces. Word et Excel paginent en fonction des sauts de page logiques et ignorent le paramètre de hauteur interactive.  
   
 > [!NOTE]  
 >  Pour déterminer comment un rapport s'affichera dans un convertisseur de saut de page conditionnellele, utilisez l'Aperçu de rapport. Le rapport s'affiche exactement comme au format HTML, MHTML, Word ou Excel.  
   
- Lors de l'exportation d'un rapport en HTML, MHTML, dans Word ou dans Excel, les règles générales suivantes s'appliquent :  
+ Lors de l'exportation d'un rapport en HTML, MHTML, dans Word ou dans Excel, les règles générales suivantes s'appliquent :  
   
 -   Les sauts de page logiques, les sauts de page que vous insérez explicitement, sont appliqués aux éléments de rapport. Par exemple, si vous insérez un saut de page entre chaque groupe, ils s'appliquent lorsque le rapport est rendu.  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 7
   
 -   Les marges de page ne sont pas appliquées.  
   
-## Comportements généraux pour PDF, Image et Impression (Convertisseurs de sauts de page manuels)  
+## <a name="general-behaviors-for-pdf-image-and-print-hard-page-break-renderers"></a>Comportements généraux pour PDF, Image et Impression (Convertisseurs de sauts de page manuels)  
  Les rapports exportés au format PDF et Image sont optimisés pour un affichage sous forme de livre ou pour l'impression avec des pages de taille identique. Les sauts de page sont insérés verticalement et horizontalement à des emplacements spécifiques au sein du corps du rapport. Ces emplacements spécifiques sont déterminés par les paramètres de largeur et de hauteur de la page.  
   
 > [!NOTE]  
@@ -79,12 +84,12 @@ caps.handback.revision: 7
     > [!NOTE]  
     >  Le paramètre de largeur interactive n'est pas utilisé dans les convertisseurs de saut de page manuel.  
   
-## Espacement minimum entre éléments de rapport  
+## <a name="minimum-spacing-between-report-items"></a>Espacement minimum entre éléments de rapport  
  Les éléments de rapport grandissent au sein du corps du rapport pour s'ajuster à leur contenu. Par exemple, une région de données de matrice s'agrandit en largeur et en hauteur sur la page lorsque le rapport est rendu et la hauteur d'une zone de texte s'ajuste en fonction des données rendues à partir d'une expression.  
   
  Les convertisseurs conservent un espace minimum entre les éléments de rapport que vous définissez dans la mise en page du rapport. Lorsque vous placez un élément de rapport à côté d'un autre sur la mise en page du rapport, la distance entre les éléments de rapport correspond à la distance minimum qui doit être conservée au fur et à mesure que le rapport s'agrandit horizontalement ou verticalement. Par exemple, si vous ajoutez une région de données de matrice à un rapport puis ajoutez un rectangle de 0,25 pouces à droite de la matrice, cet espace est conservé lorsque la matrice s'agrandit. Chaque élément est déplacé vers la droite pour conserver l'espace minimal entre les éléments qui se terminent à gauche de l'élément.  
   
-## En-têtes et pieds de page  
+## <a name="page-headers-and-footers"></a>En-têtes et pieds de page  
  Les en-têtes et pieds de page apparaissent au haut et en bas de chaque page rendue. Vous pouvez mettre en forme l'en-tête et le pied de page en définissant une couleur de bordure, un style de bordure et une largeur de bordure. Vous pouvez également ajouter une couleur d'arrière-plan ou une image d'arrière-plan. Ces options de mise en forme sont toutes rendues, en fonction du format que vous choisissez.  
   
  Les règles suivantes s'appliquent aux en-têtes et pieds de page lorsqu'ils sont rendus au format HTML ou MHTML :  
@@ -98,7 +103,7 @@ caps.handback.revision: 7
   
 -   Si le contenu de l'en-tête ou du pied de page grandit au delà des limites de l'en-tête ou du pied de page, la taille de l'en-tête ou du pied de page augmente pour s'ajuster au contenu.  
   
- Les règles suivantes s'appliquent aux en-têtes et aux pieds de page lorsqu'ils sont rendus au format PDF ou Image :  
+ Les règles suivantes s'appliquent aux en-têtes et aux pieds de page lorsqu'ils sont rendus au format PDF ou Image :  
   
 -   L'en-tête et le pied de page sont rendus au haut et en bas de chaque page au sein de la zone de page utilisable.  
   
@@ -112,10 +117,10 @@ caps.handback.revision: 7
   
 -   Les en-têtes et les pieds de page définis dans le fichier RDL d'origine ne sont pas rendus lorsque le rapport est rendu sous la forme d'un sous-rapport.  
   
-## Sauts de page logiques  
+## <a name="logical-page-breaks"></a>Sauts de page logiques  
  Les sauts de page logiques sont des sauts de page que vous insérez avant ou après les éléments ou groupes de rapport. Les sauts de page permettent de déterminer la façon d'ajuster le contenu sur une page de rapport pour un affichage optimal lors du rendu ou de l'exportation du rapport.  
   
- Les règles suivantes s'appliquent lors du rendu des sauts de page logiques :  
+ Les règles suivantes s'appliquent lors du rendu des sauts de page logiques :  
   
 -   Les sauts de page logiques sont ignorés pour les éléments de rapport masqués et pour les éléments de rapport où la visibilité est contrôlée en cliquant sur un autre élément de rapport.  
   
@@ -127,8 +132,8 @@ caps.handback.revision: 7
   
 -   Les sauts de page logiques définis sur les éléments de cellules de tableau ou de matrice ne sont pas conservés. Cela ne s'applique pas aux éléments de listes.  
   
-## Voir aussi  
- [Fonctionnalité interactive des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Fonctionnalité interactive des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendu au format HTML &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
  [Mise en page et rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   

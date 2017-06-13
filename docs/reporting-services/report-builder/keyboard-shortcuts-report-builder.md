@@ -1,26 +1,31 @@
 ---
-title: "Raccourcis clavier (G&#233;n&#233;rateur de rapports) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "raccourcis clavier"
-  - "raccourcis"
+title: "Raccourcis (Générateur de rapports) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- keyboard shortcuts
+- shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 caps.latest.revision: 20
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 20
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a9b6a8f5eb6238fac6b0588ecf6c79227e9ec7d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Raccourcis clavier (G&#233;n&#233;rateur de rapports)
+# <a name="keyboard-shortcuts-report-builder"></a>Raccourcis clavier (Générateur de rapports)
   Quand vous créez et modifiez des rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans le Générateur de rapports, vous avez accès à toutes les touches de raccourci de navigation fournies par l’environnement Windows. Vous pouvez sélectionner l'un des différents schémas de configuration du clavier standard.  
   
  Vous pouvez naviguer par le biais de la fenêtre Générateur de rapports ou sélectionner et modifier les options des boîtes de dialogue sans utiliser la souris.  
@@ -30,7 +35,7 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  Les raccourcis clavier peuvent contenir les touches Maj, Alt et/ou Ctrl associées à des lettres ou utiliser des touches de fonction. Par exemple, F1 ouvre le fichier d'aide du Générateur de rapports.  
   
-## Raccourcis clavier dans le Générateur de rapports  
+## <a name="keyboard-shortcuts-in-report-builder"></a>Raccourcis clavier dans le Générateur de rapports  
   
 |Description|Combinaison de touches|  
 |-----------------|---------------------|  
@@ -91,7 +96,7 @@ caps.handback.revision: 20
 |Effectuer un zoom arrière sur la zone de la vue cartographique lorsqu'un point de vue de la carte est sélectionné.|Ctrl+Signe moins (-)|  
 |Mode d'accélérateur pour les fonctions de panoramique et de zoom avant sur la zone de la vue cartographique lorsqu'un point de vue de la carte est sélectionné.|Ctrl+clic gauche|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Générateur de rapports dans SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Mode Conception de rapport &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [Glossaire &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/glossary-report-builder.md)  

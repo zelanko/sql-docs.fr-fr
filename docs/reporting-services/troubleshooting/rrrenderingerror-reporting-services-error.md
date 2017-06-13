@@ -1,27 +1,32 @@
 ---
-title: "rrRenderingError - Erreur Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "rrRenderingError"
+title: rrRenderingError - erreur Reporting Services | Documents Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- rrRenderingError
 ms.assetid: 0751efc3-b81b-44ee-8aac-8560f86ca322
 caps.latest.revision: 26
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 26
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1acdcb76215bc8f7a3ae1017649a3e3a2cbcdc94
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# rrRenderingError - Erreur Reporting Services
+# <a name="rrrenderingerror---reporting-services-error"></a>rrRenderingError - Erreur Reporting Services
     
-## Détails  
+## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
@@ -31,14 +36,14 @@ caps.handback.revision: 26
 |Composant|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |Texte du message|Une erreur s'est produite lors du rendu du rapport. (rrRenderingError) %1|  
   
-## Explication  
+## <a name="explanation"></a>Explication  
  Ce message s'affiche lorsque [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne peut pas restituer ou exporter le rapport.  
   
  Un message indiquant que la taille n'est pas prise en charge est généralement dû à une taille de page RDL non valide spécifiée. Spécifiez une taille de page RDL valide puis réessayez.  
   
  Un message indiquant qu'une mesure de taille RDL n'est pas prise en charge est en général provoqué par la spécification d'un type d'unité non pris en charge. Les types d'unités valides sont cm, in, mm, pc et pt. Spécifiez un type d'unité valide puis réessayez.  
   
- Un message indiquant qu'une taille négative n'est pas prise en charge est en général provoqué par la spécification d'une mesure négative pour la taille de la page, par exemple -5 cm. Spécifiez un nombre positif comme taille de page puis réessayez.  
+ Un message indiquant qu'une taille négative n'est pas prise en charge est en général provoqué par la spécification d'une mesure négative pour la taille de la page, par exemple -5 cm. Spécifiez un nombre positif comme taille de page puis réessayez.  
   
  Un message indiquant qu'une taille RDL hors limites a été spécifiée est en général provoqué par une mesure de taille de page qui dépasse la taille de marge de page valide. Spécifiez une mesure pour la taille de page comprise entre les tailles de marge de page valides.  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 26
   
  Un message indiquant que le nombre de colonnes dépasse le nombre maximal de colonnes possibles par feuille est en général dû au dépassement de ce nombre de colonnes dans une feuille de calcul Excel.  
   
-## Action de l'utilisateur  
+## <a name="user-action"></a>Action de l'utilisateur  
   
-## Interne uniquement  
+## <a name="internal-only"></a>Interne uniquement  
   

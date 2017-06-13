@@ -1,28 +1,33 @@
 ---
-title: "S&#233;curit&#233; (G&#233;n&#233;rateur de rapports) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Sécurité (Générateur de rapports) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 7e6f09ff050246777e307f73280c764dd6da3ad7
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# S&#233;curit&#233; (G&#233;n&#233;rateur de rapports)
+# <a name="security-report-builder"></a>Sécurité (Générateur de rapports)
   Le Générateur de rapports est une application cliente de création de rapports conçue pour être utilisée conjointement avec un serveur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Le serveur de rapports peut être configuré pour être utilisé en mode natif en tant que serveur autonome ou en mode intégré SharePoint afin de prendre en charge les rapports sur un site SharePoint.  
   
  Dans le Générateur de rapports, vous pouvez créer des rapports, des datasets partagés et des parties de rapports réutilisables. À partir d'un serveur de rapports ou d'un site SharePoint, vous pouvez modifier des rapports et ajouter des sources de données partagées, des datasets partagés et des parties de rapports partagées.  
   
- Pour créer, publier et utiliser des rapports et des éléments liés aux rapports, vous devez comprendre l'importance des fonctionnalités de sécurité en ce qui concerne les aspects suivants :  
+ Pour créer, publier et utiliser des rapports et des éléments liés aux rapports, vous devez comprendre l'importance des fonctionnalités de sécurité en ce qui concerne les aspects suivants :  
   
 -   **Serveur de rapports ou site SharePoint de publication des rapports** Ces fonctionnalités sont gérées par l'administrateur du serveur de rapports ou l'administrateur de site SharePoint.  
   
@@ -55,7 +60,6 @@ caps.handback.revision: 10
   
      Si vous ne pouvez pas vous connecter ou accéder à un site ou sous-site SharePoint, contactez l'administrateur du site SharePoint.  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
 ##  <a name="Reports"></a> Fonctionnement de la sécurité des rapports publiés et des éléments liés aux rapports  
  La sécurité des rapports et des éléments liés aux rapports est gérée par l'administrateur du serveur de rapports. Les éléments liés aux rapports comprennent les sources de données incorporées et partagées, ainsi que les informations d'identification, les datasets partagés, les paramètres, les parties de rapports et les modèles.  
@@ -74,16 +78,15 @@ caps.handback.revision: 10
   
 -   [Gérer des datasets partagés](../../reporting-services/report-data/manage-shared-datasets.md)  
   
-### Notifications de mise à jour pour les parties de rapports  
+### <a name="update-notifications-for-report-parts"></a>Notifications de mise à jour pour les parties de rapports  
  Les parties de rapports sont publiées sur un serveur de rapports afin d'être partagées avec d'autres utilisateurs. Par défaut, vous spécifiez l'emplacement de publication des parties de rapports.  
   
  Les utilisateurs qui incluent des parties de rapports dans leurs rapports peuvent activer la fonctionnalité de mise à jour. Si cette fonctionnalité est activée, les utilisateurs reçoivent des notifications lors de la modification des parties de rapports sur le serveur de rapports.  
   
  Si des parties de rapports ne se trouvent plus à leur emplacement d'origine, la notification de mise à jour inclut à la fois l'emplacement actuel et l'emplacement précédent de la partie de rapport concernée. Acceptez uniquement les mises à jour d'emplacements approuvés.  
   
- Pour plus d’informations, consultez [Parties de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
+ Pour plus d’informations, consultez [Publication de parties de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
 ##  <a name="Data"></a> Fonctionnement de la sécurité des données de rapport et des sources de données externes  
  Pour accéder aux données de chaque source de données externe dans un rapport, vous devez créer une source de données incorporée ou ajouter une référence à une source de données partagée ou un dataset partagé dans votre rapport.  
@@ -92,22 +95,20 @@ caps.handback.revision: 10
   
  Les informations d'identification ne sont pas enregistrées dans la définition de rapport. Elles sont gérées indépendamment du rapport sur le serveur de rapports ou le site SharePoint, ainsi que sur le client de création de rapports.  
   
- Au moment de la conception du rapport, les informations d'identification sont utilisées pour exécuter les requêtes de dataset et afficher l'aperçu du rapport. Au moment de l'exécution, les informations d'identification sont utilisées pour exécuter le rapport et mettre en cache les résultats des requêtes. Vous pouvez également mettre en cache les résultats des requêtes de dataset partagé de manière indépendante. Les informations d'identification peuvent différer au moment de la conception et au moment de l'exécution. Pour plus d’informations, consultez [Spécifier des informations d’identification dans le Générateur de rapports](../Topic/Specify%20Credentials%20in%20Report%20Builder.md).  
+ Au moment de la conception du rapport, les informations d'identification sont utilisées pour exécuter les requêtes de dataset et afficher l'aperçu du rapport. Au moment de l'exécution, les informations d'identification sont utilisées pour exécuter le rapport et mettre en cache les résultats des requêtes. Vous pouvez également mettre en cache les résultats des requêtes de dataset partagé de manière indépendante. Les informations d'identification peuvent différer au moment de la conception et au moment de l'exécution. Pour plus d’informations, consultez [Spécifier des informations d’identification dans le Générateur de rapports](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
  Pour plus d'informations sur la sécurisation des données, consultez la rubrique suivante dans la documentation relative à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
- Pour plus d’informations sur les sources de données, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md).  
+ Pour plus d’informations sur les sources de données, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
 ##  <a name="Models"></a> Fonctionnement des modèles et des filtres de sécurité  
  Lorsque des données sont récupérées à partir d'un modèle de rapport basé sur des données externes, vous pouvez appliquer des filtres de sécurité dans le modèle. Il s'agit d'un bon moyen pour sécuriser les données afin que chaque utilisateur qui exécute un rapport puisse consulter uniquement les données auxquelles il a l'autorisation d'accéder.  
   
- Les paramètres de rapport ne sont pas utilisés pour la sécurité au niveau des lignes ; ils n'empêchent pas des utilisateurs ou des groupes d'utilisateurs de visualiser des lignes de données spécifiques. Pour appliquer la sécurité aux données affichées dans un rapport, vous devez utiliser des filtres de sécurité ou la sécurité des éléments de modèle.  
+ Les paramètres de rapport ne sont pas utilisés pour la sécurité au niveau des lignes ; ils n'empêchent pas des utilisateurs ou des groupes d'utilisateurs de visualiser des lignes de données spécifiques. Pour appliquer la sécurité aux données affichées dans un rapport, vous devez utiliser des filtres de sécurité ou la sécurité des éléments de modèle.  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
 ##  <a name="Interactive"></a> Fonctionnement de la sécurité en matière de création de rapports pour les fonctionnalités interactives  
  Les rapports comportent fréquemment des paramètres pour permettre à l'utilisateur de personnaliser de manière interactive l'affichage d'un rapport. Utilisez les conseils suivants pour concevoir des rapports basés sur les meilleures pratiques :  
@@ -118,10 +119,9 @@ caps.handback.revision: 10
   
  Une fois les éléments publiés sur un serveur de rapports, l'administrateur du serveur de rapports peut contribuer à les sécuriser à l'aide d'une sécurité basée sur les rôles ou d'une sécurité au niveau des éléments et des dossiers. Pour plus d’informations, consultez [Sécuriser des rapports et des ressources](../../reporting-services/security/secure-reports-and-resources.md) dans la documentation relative à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la [documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](http://go.microsoft.com/fwlink/?linkid=121312).  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
-## Voir aussi  
- [Installer et désinstaller le Générateur de rapports](../Topic/Install%20and%20Uninstall%20Report%20Builder.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Installer et désinstaller le Générateur de rapports](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

@@ -1,34 +1,41 @@
 ---
-title: "Didacticiel : comment localiser et d&#233;marrer les outils Reporting Services (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Reporting Services, didacticiels"
-  - "Reporting Services, outils"
-  - "Outil de configuration de Reporting Services"
-  - "Business Intelligence Development Studio, localisation et démarrage de l’outil"
-  - "Générateur de modèles [Reporting Services], localisation et démarrage de l’outil"
-  - "Générateur de rapports [Reporting Services], didacticiels"
-  - "outils [Reporting Services]"
-  - "didacticiels [Reporting Services]"
-  - "Générateur de rapports"
+title: "Didacticiel : Comment localiser et démarrer la création de rapports outils Services (SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reporting Services, tutorials
+- Reporting Services, tools
+- Reporting Services Configuration tool
+- Business Intelligence Development Studio, locating and starting tool
+- Model Designer [Reporting Services], locating and starting tool
+- Report Designer [Reporting Services], tutorials
+- tools [Reporting Services]
+- tutorials [Reporting Services]
+- Report Builder
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 caps.latest.revision: 63
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 60
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ebec450636a6a0342421da7dff862481bb1da55a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Didacticiel : comment localiser et d&#233;marrer les outils Reporting Services (SSRS)
-  Ce didacticiel présente les outils permettant de configurer un serveur de rapports, de gérer le contenu et les opérations d’un serveur de rapports, et de créer et publier des rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginés et mobiles. Si vous connaissez déjà les différents outils, vous pouvez passer aux autres didacticiels pour savoir comment tirer pleinement parti de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Pour obtenir d’autres didacticiels, consultez [Reporting Services Tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md).  
+
+# <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Didacticiel : comment localiser et démarrer les outils Reporting Services (SSRS)
+
+  Ce didacticiel présente les outils permettant de configurer un serveur de rapports, de gérer le contenu et les opérations d’un serveur de rapports, et de créer et publier des rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginés et mobiles. Si vous connaissez déjà les différents outils, vous pouvez passer aux autres didacticiels pour savoir comment tirer pleinement parti de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Pour obtenir d’autres didacticiels, consultez [Didacticiels sur Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md).  
   
   
 ##  <a name="bkmk_configuration_manager"></a> Gestionnaire de configurations de Reporting Services (mode natif)  
@@ -41,15 +48,15 @@ caps.handback.revision: 60
 -   Gérez les clés de chiffrement.  
 -   Configurez le traitement des rapports sans assistance et la remise de rapports par courrier électronique.  
   
- **Installation :** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est installé en même temps que le mode natif de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [Installer le serveur de rapports Reporting Services en mode natif](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4).  
+ **Installation:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager is installed when you install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode. Pour plus d’informations, consultez [Installer le serveur de rapports Reporting Services en mode natif](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4).  
   
-### Pour démarrer le Gestionnaire de configuration de Reporting Services  
+### <a name="to-start-the-reporting-services-configuration-manager"></a>Pour démarrer le Gestionnaire de configuration de Reporting Services  
   
 1.  Dans l’écran de démarrage de Windows, tapez **reporting** et dans les résultats de la recherche **Applications** , cliquez sur **Gestionnaire de configuration de Reporting Services**.  
   
-     ![Gestionnaire de configuration de Reporting Services au cours du démarrage](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "Gestionnaire de configuration de Reporting Services au cours du démarrage")  
+     ![Gestionnaire de configuration au démarrage de Reporting services](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "Gestionnaire de configuration au démarrage de reporting services")  
   
-     **ou**  
+     **Or**  
   
      Cliquez sur **Démarrer**, puis sur **Programmes**, sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], sur **Outils de configuration**, puis sur **Gestionnaire de configuration de Reporting Services**.  
   
@@ -59,43 +66,43 @@ caps.handback.revision: 60
   
      Si vous spécifiez un ordinateur distant, cliquez sur **Rechercher** pour établir une connexion. Le serveur de rapports doit être configuré à l'avance pour l'administration à distance. Pour plus d’informations, consultez [Configurer un serveur de rapports pour l’administration à distance](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).  
   
-3.  Dans **Dansstance Name**, choisissez l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que vous souhaitez configurer. Seules les instances de serveur de rapports [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] figurent dans la liste. Vous ne pouvez pas configurer d'instances de versions antérieures de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+3.  Dans **Dansstance Name**, choisissez l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que vous souhaitez configurer. Uniquement SQL Server 2008 et versions ultérieures instances de serveur de rapports s’affichent dans la liste. Vous ne pouvez pas configurer d'instances de versions antérieures de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 4.  Cliquez sur **Se connecter**.  
   
 5.  Pour vérifier si l'outil a été lancé, comparez vos résultats à l'image suivante :  
   
-     ![Outil de configuration de Reporting Services](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "Outil de configuration de Reporting Services")  
+     ![Outil de Configuration des Services de création de rapports](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "outil de Configuration de Reporting Services")  
   
  **Étapes suivantes :** [Configurer et administrer un serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) et [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
-##  Portail web (mode natif)  
- Utilisez le [portail web (mode natif SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md) pour définir les autorisations, gérer les abonnements et les planifications, et travailler sur les rapports. Vous pouvez également utiliser le portail web pour afficher les rapports.  
+##  <a name="web-portal-native-mode"></a>Portail web (mode natif)  
+ Utilisez le [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md) pour définir les autorisations, gérer les abonnements et les planifications, et travailler sur les rapports. Vous pouvez également utiliser le portail web pour afficher les rapports.  
   
  **Installation :** Le portail web est installé quand vous installez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif : [Installer le serveur de rapports Reporting Services en mode natif](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4).  
   
  Avant de pouvoir ouvrir le portail web, vous devez avoir les autorisations suffisantes (initialement, seuls les membres du groupe local Administrateurs ont les autorisations nécessaires pour accéder aux fonctionnalités du portail web). Le portail web propose des pages et options différentes en fonctions des attributions de rôle de l’utilisateur en cours. Les utilisateurs qui ne bénéficient pas d'autorisations obtiennent une page vide. Les utilisateurs avec l'autorisation d'afficher les rapports obtiennent des liens sur lesquels ils peuvent cliquer pour ouvrir les rapports. Pour en savoir plus sur les autorisations, consultez [Rôles et autorisations &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
   
-### Pour démarrer le portail web  
+### <a name="to-start-the-web-portal"></a>Pour démarrer le portail web  
   
 1.  Ouvrez votre navigateur. Pour plus d’informations sur les versions et les navigateurs pris en charge, consultez [Planification de la prise en charge des navigateurs pour Reporting Services et Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
-2.  Dans la barre d’adresses du navigateur web, tapez l’URL du portail web. Par défaut, l’URL est **http://\<nom_serveur>/reports**. Vous pouvez utiliser l'outil de configuration de Reporting Services pour confirmer le nom du serveur et l'URL. Pour plus d’informations sur les URL utilisées dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
+2.  Dans la barre d’adresses du navigateur web, tapez l’URL du portail web. Par défaut, l'URL est `http://<serverName>/reports`. Vous pouvez utiliser l'outil de configuration de Reporting Services pour confirmer le nom du serveur et l'URL. Pour plus d’informations sur les URL utilisées dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
   
 3.  Le portail web s’ouvre dans la fenêtre du navigateur. La page de démarrage est constituée du dossier Home. En fonction des autorisations, vous verrez au sein de la page de démarrage des dossiers supplémentaires, des liens vers les rapports et des fichiers de ressources. Il se peut aussi que la barre d'outils contienne des commandes et des boutons supplémentaires.  
   
 4.  Si vous exécutez le portail web sur le serveur de rapports local, consultez [Configurer un serveur de rapports en mode natif pour l’administration locale &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
    
 ##  <a name="bkmk_managements_studio"></a> Management Studio  
- Les administrateurs du serveur de rapports peuvent utiliser [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour gérer le serveur de rapports en même temps que d'autres composants serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Use SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md).  
+ Les administrateurs du serveur de rapports peuvent utiliser [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour gérer le serveur de rapports en même temps que d'autres composants serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be).  
   
-### Pour démarrer SQL Server Management Studio  
+### <a name="to-start-sql-server-management-studio"></a>Pour démarrer SQL Server Management Studio  
   
 1.  Dans l’écran de démarrage de Windows, tapez **sql server** et dans les résultats de la recherche **Applications** , cliquez sur **SQL Server Management Studio**.  
   
-     ![Management Studio sur l'écran de démarrage de Windows](../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif "Management Studio sur l'écran de démarrage de Windows")  
+     ![écran de démarrage de Management studio à partir de windows](../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif "écran de démarrage de management studio à partir de windows")  
   
-     **ou**  
+     **Or**  
   
      Cliquez sur **Démarrer**, puis sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]et sur **SQL Server Management Studio**. La boîte de dialogue **Se connecter au serveur** s'ouvre.  
   
@@ -114,7 +121,7 @@ caps.handback.revision: 60
  
 Téléchargez [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714).  
   
-### Pour démarrer le Concepteur de rapports  
+### <a name="to-start-report-designer"></a>Pour démarrer le Concepteur de rapports  
   
 1.  Ouvrez **SQL Server Data Tools**.  
   
@@ -124,7 +131,7 @@ Téléchargez [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616
   
 4.  Dans la liste **Modèles** , cliquez sur **Projet Report Server**. Le schéma suivant montre comment les modèles de projet s'affichent dans la boîte de dialogue :  
   
-     ![Boîte de dialogue Nouveau modèle de projet](../../reporting-services/tools/media/rs-ui-newrsproject.gif "Boîte de dialogue Nouveau modèle de projet")  
+     ![Boîte de dialogue Nouveau projet modèle](../../reporting-services/tools/media/rs-ui-newrsproject.gif "boîte de dialogue Nouveau projet modèle")  
   
 5.  Tapez un nom et un emplacement pour le projet. Vous pouvez également cliquer sur **Parcourir** , puis sélectionner un emplacement.  
   
@@ -137,13 +144,13 @@ Téléchargez [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616
   
  [Téléchargez le Générateur de rapports](http://go.microsoft.com/fwlink/?LinkID=219138) depuis le Centre de téléchargement Microsoft.  
   
-### Pour démarrer le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
+### <a name="to-start-includessrbnoversionincludesssrbnoversion-mdmd"></a>Pour démarrer le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
   
 1.  Dans le portail web de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cliquez sur le menu  **Nouveau** , puis sélectionnez **Rapport paginé**.  
   
      ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png "PBI_SSMRP_NewMenu")  
   
-2.  Si [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] n’est pas encore installé sur cet ordinateur, sélectionnez **Obtenir le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]**.  
+2.  Si [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] n’est pas encore installé sur cet ordinateur, sélectionnez **Obtenir l’[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]**.  
   
      ou  
   
@@ -152,11 +159,11 @@ Téléchargez [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616
 3.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] s’ouvre et vous pouvez créer ou ouvrir un rapport paginé.  
   
 ##  <a name="bkmk_mobile_report_pub"></a> [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]  
- Utilisez [l’Éditeur de rapports mobiles SQL Server](../Topic/SQL%20Server%20Mobile%20Report%20Publisher.md) pour créer des rapports mobiles consultables dans le portail web de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et sur des appareils mobiles tels que des iPad et des iPhone.   Vous pouvez l’installer depuis le portail web de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le Centre de téléchargement Microsoft.  
+ Utilisez [l’Éditeur de rapports mobiles SQL Server](http://msdn.microsoft.com/library/e23cf095-cb9a-4631-ab46-10413d8e3a7c) pour créer des rapports mobiles consultables dans le portail web de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et sur des appareils mobiles tels que des iPad et des iPhone.   Vous pouvez l’installer depuis le portail web de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le Centre de téléchargement Microsoft.  
   
  [Téléchargez l’Éditeur de rapports mobiles SQL Server](http://go.microsoft.com/fwlink/?LinkID=733527) depuis le Centre de téléchargement Microsoft.  
   
-### Pour démarrer le [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)]  
+### <a name="to-start-includessmobilereptpubshortincludesss-mobilereptpub-short-mdmd"></a>Pour démarrer le [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)]  
   
 1.  Dans le portail web de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cliquez sur le menu  **Nouveau** , puis sélectionnez **Rapport mobile**.  
   
@@ -169,14 +176,15 @@ Téléchargez [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616
      [Téléchargez l’Éditeur de rapports mobiles SQL Server](http://go.microsoft.com/fwlink/?LinkID=733527) depuis le Centre de téléchargement Microsoft.  
   
 3.  [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)] s’ouvre et vous pouvez créer ou ouvrir un rapport mobile.  
-  
-## Voir aussi  
-*  [Téléchargez l’Éditeur de rapports mobiles SQL Server](http://go.microsoft.com/fwlink/?LinkID=733527)   
-*  [Téléchargez le Générateur de rapports](http://go.microsoft.com/fwlink/?LinkID=219138)  
-*  [Télécharger SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714) 
-*  [Installer le mode SharePoint de Reporting Services](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
-*  [Serveur de rapports Reporting Services](../../reporting-services/report-server-sharepoint/serveur-de-rapports-reporting-services.md)   
-*  [Outils de création de requêtes &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
-*  [Didacticiels sur Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
-  
-  
+
+## <a name="next-steps"></a>Étapes suivantes
+
+[Télécharger SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkID=733527)   
+[Téléchargez le Générateur de rapports](http://go.microsoft.com/fwlink/?LinkID=219138)  
+[Télécharger SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714) 
+[installer Reporting Services en Mode SharePoint](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
+[Serveur de rapports Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
+[Outils de conception de requête](../../reporting-services/report-data/query-design-tools-ssrs.md)   
+[Didacticiels de Reporting Services](../../reporting-services/reporting-services-tutorials-ssrs.md)  
+
+D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

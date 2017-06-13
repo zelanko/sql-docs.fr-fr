@@ -1,25 +1,30 @@
 ---
-title: "Maps in Reporting Services mobile reports | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Cartes dans les rapports Reporting Services mobiles | Documents Microsoft
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: dcac784ffea9845be91f35f03fb45e2ca6a6e530
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Maps in Reporting Services mobile reports
+# <a name="maps-in-reporting-services-mobile-reports"></a>Maps in Reporting Services mobile reports
 Les cartes sont un excellent moyen de visualiser des données géographiques. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] offre trois types de visualisation de carte, et des cartes intégrées pour les continents ainsi qu’un certain nombre de pays. Vous pouvez également [télécharger et utiliser des cartes personnalisées](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   
   
-## Types de cartes  
+## <a name="types-of-maps"></a>Types de cartes  
   
 Les rapports mobiles SQL Server offrent trois types de cartes, utiles dans différents cas.  
   
@@ -31,7 +36,7 @@ Les rapports mobiles SQL Server offrent trois types de cartes, utiles dans diff�
   
 Les**Cartes thermiques des arrêts de plage** indiquent une valeur par rapport à une cible. La propriété **Cibles** détermine l’écart entre un champ Comparaison et le champ Valeurs. L’écart résultant détermine la couleur qui remplit la région associée sur la carte, du vert au rouge en passant par le jaune. Vous pouvez définir si les valeurs les plus élevées ou les plus faibles sont vertes dans la zone **Sens des valeurs** .  
   
-## Sélection du type de carte et de la région  
+## <a name="select-the-map-type-and-region"></a>Sélection du type de carte et de la région  
   
 1. Dans l’onglet **Disposition**, sélectionnez un type de carte, déplacez-le sur l’aire de conception et donnez-lui la taille de votre choix.  
   
@@ -43,7 +48,7 @@ Les**Cartes thermiques des arrêts de plage** indiquent une valeur par rapport �
   
 7. Pour les cartes à bulles, sous **Propriétés visuelles** , définissez **Utiliser des couleurs différentes** sur **ON** ou **OFF** pour que les bulles soient de la même couleur ou qu’elles aient des couleurs différentes.  
   
-## Sélection des données cartographiques  
+## <a name="select-the-map-data"></a>Sélection des données cartographiques  
 Lorsque vous ajoutez une carte à votre rapport, [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] la remplit avec des données géographiques simulées.  
   
 ![SSMRP_MapsData](../../reporting-services/mobile-reports/media/ssmrp-mapsdata.png)  
@@ -53,13 +58,13 @@ Pour afficher des données réelles sur votre carte, vous devez définir des val
 * La propriété **Valeurs** est un champ numérique dans la même table que le champ de clés sélectionné. Ces valeurs sont représentées différemment selon la carte. La **Carte Dégradé** utilise ces valeurs pour colorer chaque région avec des nuances différentes en se basant sur une plage de valeurs. Le **Carte à bulles** base la taille de bulle de chaque région sur la propriété Valeur.   
 * Pour les cartes thermiques des arrêts de plage, vous devez également définir la propriété **Cibles** .  
   
-### Définition des propriétés des données de carte  
+### <a name="set-map-data-properties"></a>Définition des propriétés des données de carte  
   
 1. Sélectionnez l’onglet **Données** dans le coin supérieur gauche.  
   
-2. Sélectionnez **Ajouter des données**, puis **Excel local** ou **Serveur SSRS**.  
+2. Sélectionnez **ajouter des données**, puis **Excel Local** ou **serveur SSRS**.  
   
-   > **Conseil** : Vérifiez que les [données sont dans un format compatible pour les rapports mobiles](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md).  
+   > **Conseil**: Vérifiez que les [données sont dans un format compatible pour les rapports mobiles](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md).  
   
 3. Sélectionnez les feuilles de calcul souhaitées et sélectionnez **importer**.  
    Vos données s’affichent dans le [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)].  
@@ -78,8 +83,9 @@ Pour afficher des données réelles sur votre carte, vous devez définir des val
      
 8. Sélectionnez l’icône **Enregistrer** dans le coin supérieur gauche et **Enregistrer localement** sur votre ordinateur, ou **Enregistrer sur le serveur**.  
   
-### Voir aussi  
+### <a name="see-also"></a>Voir aussi  
 -  [Custom maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
-- [Créer et publier des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
+- [Créer et publier des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   
+

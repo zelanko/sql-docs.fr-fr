@@ -1,26 +1,31 @@
 ---
-title: "Mise en forme des &#233;chelles sur une jauge (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Mise en forme des échelles sur une jauge (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4a25ea1cb8702758096118371c4261e8189c2e91
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Mise en forme des &#233;chelles sur une jauge (G&#233;n&#233;rateur de rapports et SSRS)
-  Dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], une échelle de jauge correspond à la plage de nombres, limités par une valeur minimale et une valeur maximale, indiqués sur une jauge. En général, une échelle de jauge contient des étiquettes et des graduations qui permettent de lire avec précision la valeur indiquée par le pointeur de la jauge. Une échelle de jauge est la plupart du temps associée à un ou plusieurs pointeurs de jauge. Plusieurs échelles sont possibles sur une même jauge.  
+# <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Mise en forme des échelles sur une jauge (Générateur de rapports et SSRS)
+  Dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , une échelle de jauge correspond à la plage de nombres, limités par une valeur minimale et une valeur maximale, indiqués sur une jauge. En général, une échelle de jauge contient des étiquettes et des graduations qui permettent de lire avec précision la valeur indiquée par le pointeur de la jauge. Une échelle de jauge est la plupart du temps associée à un ou plusieurs pointeurs de jauge. Plusieurs échelles sont possibles sur une même jauge.  
   
- ![Vue d'ensemble d'éléments sur une échelle de jauge](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "Vue d'ensemble d'éléments sur une échelle de jauge")  
+ ![Vue d’ensemble des éléments sur une échelle de jauge](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "vue d’ensemble des éléments sur une échelle de jauge")  
   
  Contrairement au graphique sur lequel plusieurs groupes sont définis, la jauge affiche seulement une valeur. Vous devez définir les valeurs minimale et maximale de l'échelle. Les intervalles sont calculés automatiquement en fonction des valeurs spécifiées pour le minimum et le maximum.  
   
@@ -65,20 +70,20 @@ caps.handback.revision: 8
   
  Le rayon de l'échelle correspond à la distance qui sépare le centre de la jauge du milieu de la barre de l'échelle. La valeur du rayon de l'échelle est mesurée en pourcentage du diamètre de la jauge. La valeur du rayon de l'échelle doit, de préférence, être inférieure à 35. Si vous spécifiez une valeur supérieure à 35, l'échelle risque d'être représentée à l'extérieur des limites de la jauge. L'illustration suivante montre comment le rayon de l'échelle est mesuré, par rapport au diamètre de la jauge, sur la barre de l'échelle.  
   
- ![Rayon de l'échelle par rapport au diamètre de la jauge](../../reporting-services/report-design/media/scaleradiusdiagram.gif "Rayon de l'échelle par rapport au diamètre de la jauge")  
+ ![Rayon de l’échelle par rapport à diamètre de la jauge](../../reporting-services/report-design/media/scaleradiusdiagram.gif "rayon relatif au diamètre de la jauge")  
   
- L'angle de début correspond à l'angle de rotation, entre 0 et 360, auquel l'échelle commencera. La position zéro (0) se trouve en bas de la jauge et l'angle de début pivote dans le sens des aiguilles d'une montre. Par exemple, l'échelle commence à la position 9 heures avec un angle de début de 90 degrés.  
+ L'angle de début correspond à l'angle de rotation, entre 0 et 360, auquel l'échelle commencera. La position zéro (0) se trouve en bas de la jauge et l'angle de début pivote dans le sens des aiguilles d'une montre. Par exemple, l'échelle commence à la position 9 heures avec un angle de début de 90 degrés.  
   
  L'angle de balayage correspond au nombre de degrés, entre 0 et 360, que l'échelle balaiera dans un cercle. Avec un angle de balayage de 360 degrés, une échelle représente un cercle complet. Cela peut s'avérer utile si vous souhaitez concevoir une jauge ressemblant à une horloge.  
   
 ##  <a name="PositioningLabels"></a> Positionnement des étiquettes sur une échelle linéaire ou radiale  
  Il existe deux propriétés qui déterminent la position des étiquettes. La propriété de placement des étiquettes spécifie si les étiquettes sont affichées à l'intérieur, à l'extérieur ou en travers de la barre de l'échelle. La propriété de distance définit la distance qui sépare les étiquettes de l'échelle, à partir de la barre de l'échelle. Si vous souhaitez positionner les étiquettes à l'intérieur de la barre de l'échelle, spécifiez un nombre négatif. Par exemple, si les étiquettes se trouvent à l'extérieur de l'échelle et que vous avez défini une distance de 10 entre les étiquettes et l'échelle, les étiquettes s'afficheront à 10 unités à l'extérieur de l'emplacement où les étiquettes se trouveraient normalement, où 1 unité correspond à :  
   
--   1 % du diamètre de la jauge sur une jauge radiale, ou  
+-   1 % du diamètre de la jauge sur une jauge radiale, ou  
   
 -   1 % de la plus petite valeur de la hauteur ou de la largeur de la jauge sur une jauge linéaire.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mise en forme de plages sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [Mise en forme des pointeurs sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Mettre en forme les étiquettes des axes en tant que dates ou devises &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   

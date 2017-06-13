@@ -1,23 +1,28 @@
 ---
-title: "Afficher les num&#233;ros de page ou d&#39;autres propri&#233;t&#233;s de rapport (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Afficher les numéros de Page ou d’autres propriétés de rapport (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0f2fc7a28d8c8b0a66e706a9518290d0ca56c876
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Afficher les num&#233;ros de page ou d&#39;autres propri&#233;t&#233;s de rapport (G&#233;n&#233;rateur de rapports et SSRS)
+# <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Afficher les numéros de page ou d'autres propriétés de rapport (Générateur de rapports et SSRS)
   Vous pouvez facilement ajouter des numéros de page, un titre de rapport, un nom de fichier, et d'autres propriétés de rapport aux en-têtes ou pieds de page de votre rapport. Ces propriétés sont stockées en tant que champs dans le dossier Champs prédéfinis du volet Données du rapport.  
   
 -   Durée d’exécution  
@@ -36,7 +41,7 @@ caps.handback.revision: 7
   
 -   Langage  
   
- Pour un numéro de page, vous pouvez ajouter le mot « Page » avant le numéro. Vous pouvez également indiquer le nombre total de pages.  
+ Pour un numéro de page, vous pouvez ajouter le mot « Page » avant le numéro. Vous pouvez également indiquer le nombre total de pages.  
   
 > [!NOTE]  
 >  Le fait d'ajouter le nombre total de pages au pied de page peut ralentir les performances lors de l'exécution ou de l'affichage de votre rapport.  
@@ -44,12 +49,12 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Pour ajouter un numéro de page ou d'autres propriétés de rapport  
+### <a name="to-add-a-page-number-or-other-report-properties"></a>Pour ajouter un numéro de page ou d'autres propriétés de rapport  
   
 1.  Dans le volet Données du rapport, développez le dossier Champs prédéfinis.  
   
     > [!NOTE]  
-    >  Si le volet des données de rapport n’est pas visible, cochez **Données du rapport** sous l’onglet Affichage.  
+    >  Si le volet des données de rapport n’est pas visible, cochez **Données du rapport**sous l’onglet Affichage.  
   
 2.  Faites glisser le champ **Numéro de page** du volet des données de rapport vers l’en-tête ou le pied de page du rapport.  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 7
     >   
     >  Une zone de texte qui contient l'expression simple [&PageNumber] est ajoutée.  
   
-### Pour ajouter le mot « Page » avant le numéro de page  
+### <a name="to-add-the-word-page-before-the-page-number"></a>Pour ajouter le mot « Page » avant le numéro de page  
   
 1.  Cliquez avec le bouton droit sur la zone de texte qui contient [&PageNumber] et cliquez sur **Expressions**.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 7
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Pour ajouter le nombre total de pages après le numéro de page  
+### <a name="to-add-total-number-of-pages-after-the-page-number"></a>Pour ajouter le nombre total de pages après le numéro de page  
   
 1.  Cliquez avec le bouton droit sur la zone de texte comportant l’expression et cliquez sur **Expressions**.  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 7
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [En-têtes et pieds de page &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Mettre en forme du texte dans une zone de texte &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
   

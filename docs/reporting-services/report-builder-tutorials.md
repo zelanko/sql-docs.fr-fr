@@ -1,28 +1,36 @@
 ---
-title: "Didacticiels du G&#233;n&#233;rateur de rapports | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Didacticiels du Générateur de rapports | Documents Microsoft"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 0db221b65dff8a531893657c47c776dc350c4aef
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Didacticiels du G&#233;n&#233;rateur de rapports
+# <a name="report-builder-tutorials"></a>Didacticiels du Générateur de rapports
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
 Utilisez les didacticiels suivants relatifs au Générateur de rapports pour apprendre à créer des rapports paginés [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] de base.  
   
 [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)  
-Pour utiliser ces didacticiels, vous devez disposer d’un accès en lecture seule à une base de données [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] et d’autorisations d’accès à un serveur de rapports [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
+Pour utiliser ces didacticiels, doit avoir un accès en lecture seule pour une base de données SQL Server et les autorisations d’accès à un [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] serveur de rapports.  
   
 Pour obtenir de l'aide sur ces conditions préalables, contactez l'administrateur de votre serveur de rapports.  
   
@@ -65,13 +73,13 @@ Suivez les étapes de ce didacticiel pour apprendre à personnaliser l’apparen
 [Didacticiel : Création d’un rapport principal et d’un rapport d’extraction &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
 Suivez les étapes de ce didacticiel pour apprendre à créer des rapports pour un scénario d'extraction basé sur un cube Analysis Services. Vous allez créer le rapport principal et l'activer en vue de l'extraction, ainsi que le rapport cible de l'action d'extraction.  
   
-[Didacticiel : introduction aux expressions](../reporting-services/tutorial-introducing-expressions.md)  
+[Didacticiel : introduction aux expressions](../reporting-services/tutorial-introducing-expressions.md)  
 Suivez les étapes de ce didacticiel pour apprendre à utiliser des expressions pour concaténer, calculer et rechercher des valeurs de champs et les afficher dans un rapport. Vous apprendrez également à afficher de manière conditionnelle différents états d'image et d'indicateur à l'aide d'expressions.  
-  
-## Voir aussi  
-[Mode Conception de rapport &#40;Générateur de rapports&#41;](../reporting-services/report-builder/report-design-view-report-builder.md)  
+
+## <a name="next-steps"></a>Étapes suivantes
+
+[Mode de création de rapports](../reporting-services/report-builder/report-design-view-report-builder.md)  
 [Générateur de rapports dans SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-[Didacticiel : Créer un rapport de graphique rapide en mode hors connexion &#40;Générateur de rapports&#41;](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
-  
-  
-  
+[Didacticiel : Créer un rapport de graphique rapide en mode hors connexion](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+
+D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,29 +1,34 @@
 ---
-title: "Modify a Reporting Services Configuration File (RSreportserver.config) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Modifier un fichier de Configuration de Reporting Services (RSreportserver.config) | Documents Microsoft
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: f5862f4faec4784aac678d578c155ac5992a55f6
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Modify a Reporting Services Configuration File (RSreportserver.config)
+# <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modifier un fichier de configuration Reporting Services (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stocke les paramètres des applications dans un jeu de fichiers de configuration. Le programme d'installation crée les fichiers de configuration de chaque instance du serveur de rapports que vous installez. Dans chaque fichier, les valeurs sont définies soit pendant l'installation, soit lorsque vous utilisez des outils et des applications pour configurer un serveur. Dans certains cas, vous devez modifier directement un fichier pour ajouter ou configurer des paramètres avancés. Les paramètres de configuration sont spécifiés soit comme des éléments, soit comme des attributs XML. Si le langage XML et les fichiers de configuration vous sont familiers, vous pouvez modifier les paramètres définissables par l'utilisateur dans un éditeur de texte ou de code.  
   
  Certains paramètres de configuration peuvent être définis uniquement à l'aide d'un outil. Les paramètres qui contiennent des valeurs chiffrées doivent être modifiés à l'aide de l'outil de configuration de Reporting Services, du programme d'installation ou de l'utilitaire de ligne de commande **rsconfig** . Vous devez être membre du groupe Administrateurs local pour exécuter ces outils.  
   
 > [!IMPORTANT]  
->  Soyez prudent lorsque vous modifiez les fichiers de configuration. Si vous modifiez un paramètre réservé à un usage interne, vous risquez de désactiver votre installation. En règle générale, il est déconseillé de modifier les paramètres de configuration, sauf pour essayer de résoudre un problème spécifique. Pour plus d’informations sur les paramètres qui peuvent être modifiés en toute sécurité, consultez [Fichier de configuration RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) ou [Fichier de configuration RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md). Pour plus d’informations sur les fichiers de configuration, consultez la documentation du produit [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+>  Soyez prudent lorsque vous modifiez les fichiers de configuration. Si vous modifiez un paramètre réservé à un usage interne, vous risquez de désactiver votre installation. En règle générale, il est déconseillé de modifier les paramètres de configuration, sauf pour essayer de résoudre un problème spécifique. Pour plus d’informations sur les paramètres qui peuvent être modifiés en toute sécurité, consultez [Fichier de configuration RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) ou [Fichier de configuration RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md). Pour plus d’informations sur les fichiers de configuration, consultez la documentation du produit [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
  Dans cette rubrique :  
   
@@ -59,13 +64,24 @@ caps.handback.revision: 7
     -   **RSReportServer.config** se trouve dans le répertoire suivant :  
   
         ```  
-        C:\Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\ReportServer  
+        C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  
         ```  
+        
+        ||  
+        |-|  
+        |**[!INCLUDE[applies](../../includes/applies-md.md)]** Version d’évaluation technique de janvier 2017 des rapports Power BI de SQL Server Reporting Services|
+        
+        ```  
+        C:\Program Files\Microsoft SQL Server Reporting Services\RSServer\ReportServer
+        ```
   
     -   **RSReportServerServices.exe.config** se trouve dans le répertoire suivant :  
+    
+        > [!NOTE] 
+        > Cela n’est pas disponible avec le janvier 2017 Aperçu technique de Power BI les rapports dans SQL Server Reporting Services.
   
         ```  
-        C:\Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\ReportServer\bin  
+        C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer\bin  
         ```  
   
     -   **RSReportDesigner.config** se trouve dans le répertoire suivant :  
@@ -82,22 +98,22 @@ caps.handback.revision: 7
   
     -   [Authentification avec le serveur de rapports](../../reporting-services/security/authentication-with-the-report-server.md)  
   
-    -   [Configurer le Gestionnaire de rapports pour passer des cookies d'authentification personnalisée](../Topic/Configure%20Report%20Manager%20to%20Pass%20Custom%20Authentication%20Cookies.md)  
+    -   [Configurer le portail Web pour passer des Cookies d’authentification personnalisée](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
   
     -   [Personnaliser les paramètres d'extension de rendu dans RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
 5.  Enregistrez le fichier.  
   
-6.  Consultez les fichiers journaux des traces pour vous assurer qu'aucune erreur ne s'est produite. Si vous trouvez une erreur, cela signifie qu'un paramètre ou sa valeur ont été spécifiés de manière incorrecte. Consultez l’article [Fichier de configuration RSReportServer](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) pour connaître les valeurs valides du paramètre à l’origine de l’erreur. Pour plus d’informations sur l’affichage du journal des traces, consultez [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md) (Journal des traces du service Report Server).  
+6.  Consultez les fichiers journaux des traces pour vous assurer qu'aucune erreur ne s'est produite. Si vous trouvez une erreur, cela signifie qu'un paramètre ou sa valeur ont été spécifiés de manière incorrecte. Consultez l’article [Fichier de configuration RSReportServer](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) pour connaître les valeurs valides du paramètre à l’origine de l’erreur. Pour plus d’informations sur l’affichage du journal des traces, consultez [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)(Journal des traces du service Report Server).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fichier de configuration RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Fichier de configuration ReportingServicesService](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)   
  [Fichier de configuration RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
  [Déploiement d'une extension pour le traitement des données](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Déploiement d'une extension de remise](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [Déploiement d'une extension de rendu](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)   
- [Procédure : déployer un élément de rapport personnalisé](../Topic/How%20to:%20Deploy%20a%20Custom%20Report%20Item.md)   
  [Fichiers de configuration de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)  
   
   
+

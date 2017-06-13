@@ -1,30 +1,35 @@
 ---
-title: "Mettre &#224; jour les informations d&#39;identification dans les sources de donn&#233;es de rapport &#224; partir d&#39;un site SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Mettre à jour les informations d’identification dans les Sources de données de rapport à partir d’un Site SharePoint | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
 caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 12
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 85652be59a369ff3b571f8858a744962b5b3f619
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Mettre &#224; jour les informations d&#39;identification dans les sources de donn&#233;es de rapport &#224; partir d&#39;un site SharePoint
+# <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>Mettre à jour les informations d'identification dans les sources de données de rapport à partir d'un site SharePoint
   Cette rubrique explique comment mettre à jour les sources de données incorporées dans les rapports et les sources de données partagées enregistrées dans une bibliothèque de documents SharePoint.  
   
  Plusieurs de vos rapports peuvent inclure des sources de données ou utiliser des sources de données partagées configurées pour utiliser l'authentification Windows. Dans certaines circonstances, comme lors de la création d'alertes de données sur les rapports enregistrés dans une bibliothèque de documents SharePoint, vous devez mettre à jour les informations d'identification de la source de données avec les informations d'identification stockées, ou bien vous pouvez choisir de ne configurer aucune information d'identification.  
   
  Pour utiliser les informations d'identification stockées dans les rapports, vous pouvez décider de créer et utiliser un nouveau compte de connexion SQL Server. Pour plus d’informations, consultez [Créer un compte de connexion](../../relational-databases/security/authentication-access/create-a-login.md).  
   
-### Pour mettre à jour une source de données incorporée et utiliser les informations d'identification stockées  
+### <a name="to-update-an-embedded-data-source-to-use-stored-credentials"></a>Pour mettre à jour une source de données incorporée et utiliser les informations d'identification stockées  
   
 1.  Allez à la bibliothèque de documents SharePoint où vous avez enregistré le rapport.  
   
@@ -32,7 +37,7 @@ caps.handback.revision: 12
   
      La page de gestion des sources de données s'ouvre.  
   
-3.  Dans la colonne **Nom**, cliquez sur la source de données.  
+3.  Dans la colonne **Nom** , cliquez sur la source de données.  
   
 4.  Pour **Type de connexion** vérifiez que l’option **Source de données personnalisée** est sélectionnée.  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 12
   
 7.  Tapez un nom d'utilisateur et un mot de passe.  
   
-    -   Si le compte est un compte d’utilisateur de domaine Windows, spécifiez-le en respectant le format suivant : \<domaine>\\<compte\>, puis sélectionnez **Utiliser comme informations d’identification Windows lors de la connexion à la source de données**.  
+    -   Si le compte est un compte d’utilisateur de domaine Windows, spécifiez-le dans ce format : \<domaine >\\< compte\>, puis sélectionnez **utiliser comme informations d’identification Windows lors de la connexion à la source de données**.  
   
     -   Si le nom d'utilisateur et le mot de passe sont des informations d'identification de base de données, ne sélectionnez pas **Utiliser comme informations d'identification Windows lors de la connexion à la source de données**. Si le serveur de base de données prend en charge l'emprunt d'identité ou la délégation, vous pouvez sélectionner **Définir le contexte d'exécution pour ce compte**.  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 12
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Pour mettre à jour une source de données partagée et utiliser les informations d'identification stockées  
+### <a name="to-update-a-shared-data-source-to-use-stored-credentials"></a>Pour mettre à jour une source de données partagée et utiliser les informations d'identification stockées  
   
 1.  Accédez à la bibliothèque de documents SharePoint où vous avez enregistré la source de données partagée.  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 12
   
 5.  Tapez un nom d'utilisateur et un mot de passe.  
   
-    -   Si le compte est un compte d’utilisateur de domaine Windows, spécifiez-le en respectant le format suivant : \<domaine>\\<compte\>, puis sélectionnez **Utiliser comme informations d’identification Windows lors de la connexion à la source de données**.  
+    -   Si le compte est un compte d’utilisateur de domaine Windows, spécifiez-le dans ce format : \<domaine >\\< compte\>, puis sélectionnez **utiliser comme informations d’identification Windows lors de la connexion à la source de données.**  
   
     -   Si le nom d'utilisateur et le mot de passe sont des informations d'identification de base de données, ne sélectionnez pas **Utiliser comme informations d'identification Windows lors de la connexion à la source de données**. Si le serveur de base de données prend en charge l'emprunt d'identité ou la délégation, vous pouvez sélectionner **Définir le contexte d'exécution pour ce compte**.  
   
@@ -84,7 +89,7 @@ caps.handback.revision: 12
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Télécharger des documents vers une bibliothèque SharePoint &#40;Reporting Services en mode SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
   
   

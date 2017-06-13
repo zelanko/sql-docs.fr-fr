@@ -1,60 +1,65 @@
 ---
-title: "Le&#231;on&#160;8&#160;: cr&#233;er un filtre de donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Leçon 8 : Créer un filtre de données | Documents Microsoft"
+ms.custom: 
+ms.date: 05/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ea0e116101c9599268b3fc2f3cd556d2149433c8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Le&#231;on&#160;8&#160;: cr&#233;er un filtre de donn&#233;es
+# <a name="lesson-8-create-a-data-filter"></a>Leçon 8 : créer un filtre de données
 Après avoir ajouté une action d'extraction dans le rapport parent, l'étape suivante consiste à créer un filtre de données pour la table de données que vous avez définie pour le rapport enfant.  
   
 Vous pouvez créer un filtre de table **ou** un filtre de requête pour le rapport d’extraction. Cette leçon contient des instructions pour ces deux options.  
   
-## Filtre de table  
+## <a name="table-based-filter"></a>Filtre de table  
 Vous devez effectuer les tâches suivantes pour implémenter un filtre de table.  
   
 -   Ajoutez une expression de filtre dans le tableau matriciel du rapport enfant.  
   
--   Créez une fonction qui sélectionne les données non filtrées dans la table **PurchaseOrderDetail**.  
+-   Créez une fonction qui sélectionne les données non filtrées dans la table **PurchaseOrderDetail** .  
   
 -   Ajoutez un gestionnaire d’événements qui lie l’objet DataTable **PurchaseOrderDetail** au rapport enfant.  
   
-### Pour ajouter une expression de filtre dans le tableau matriciel du rapport enfant  
+### <a name="to-add-a-filter-expression-to-the-tablix-in-the-child-report"></a>Pour ajouter une expression de filtre dans le tableau matriciel du rapport enfant  
   
 1.  Ouvrez le rapport enfant.  
   
 2.  Sélectionnez un en-tête de colonne dans le tableau matriciel, cliquez avec le bouton droit sur la cellule grise qui apparaît au-dessus de l’en-tête de colonne, puis sélectionnez **Propriétés du tableau matriciel**.  
   
-3.  Sélectionnez la page **Filtres**, puis **Ajouter**.  
+3.  Sélectionnez la page **Filtres** , puis **Ajouter**.  
   
-4.  Dans le champ **Expression**, sélectionnez **ProductID** dans la liste déroulante. Il s'agit de la colonne à laquelle vous appliquez le filtre.  
+4.  Dans le champ **Expression** , sélectionnez **ProductID** dans la liste déroulante. Il s'agit de la colonne à laquelle vous appliquez le filtre.  
   
-5.  Sélectionnez l’opérateur égal (**=**) dans la liste déroulante **Opérateur**.  
+5.  Sélectionnez l’opérateur égal (**=**) dans la liste déroulante **Opérateur** .  
   
-6.  Sélectionnez le bouton d’expression situé en regard du champ **Valeur**, sélectionnez **Paramètres** dans la zone **Catégorie**, puis double-cliquez sur **productid** dans la zone **Valeurs**. Le champ **Définir l’expression pour : Valeur** doit maintenant contenir une expression semblable à **=Parameters!productid.Value**.  
+6.  Sélectionnez le bouton d’expression situé en regard du champ **Valeur** , sélectionnez **Paramètres** dans la zone **Catégorie** , puis double-cliquez sur **productid** dans la zone **Valeurs** . Le champ **Définir l’expression pour : Valeur** doit maintenant contenir une expression semblable à **=Parameters!productid.Value**.  
   
-7.  Sélectionnez **OK**, puis à nouveau **OK** dans la boîte de dialogue **Propriétés du tableau matriciel**.  
+7.  Sélectionnez **OK** , puis à nouveau **OK** dans la boîte de dialogue **Propriétés du tableau matriciel** .  
   
-8.  Enregistrez le fichier .rdlc.  
+8.  Enregistrez le fichier .rdlc.  
   
-### Pour créer une fonction qui sélectionne les données non filtrées dans la table PurchaseOrdeDetail  
+### <a name="to-create-a-function-that-selects-unfiltered-data-from-the-purchaseordedetail-table"></a>Pour créer une fonction qui sélectionne les données non filtrées dans la table PurchaseOrdeDetail  
   
 1.  Dans l'Explorateur de solutions, développez Default.aspx, puis double-cliquez sur Default.aspx.cs.  
   
-2.  Créez une fonction qui accepte un paramètre, **productid**, de type entier et retourne un objet **datatable**, puis procédez comme suit.  
+2.  Créez une fonction qui accepte un paramètre, **productid**, de type entier et retourne un objet **datatable** , puis procédez comme suit.  
   
     1.  Crée une instance du dataset, **DataSet2**, qui a été créé à l’étape 2 de la [Leçon 4 : Définir une connexion de données et une table de données pour le rapport enfant](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
@@ -64,7 +69,7 @@ Vous devez effectuer les tâches suivantes pour implémenter un filtre de table.
   
     4.  Remplissez l'instance de DataSet avec des données non filtrées en exécutant la requête.  
   
-    5.  Retourne la table de données **PurchaseOrderDetail**.  
+    5.  Retourne la table de données **PurchaseOrderDetail** .  
   
         La fonction doit ressembler à celle ci-dessous. (Pour référence uniquement. Vous pouvez suivre le modèle de votre choix pour extraire les données nécessaires pour le rapport enfant.)  
   
@@ -102,15 +107,15 @@ Vous devez effectuer les tâches suivantes pour implémenter un filtre de table.
             }  
         ```  
   
-### Pour ajouter un gestionnaire d'événements qui lie l'objet DataTable PurchaseOrderDetail au rapport enfant  
+### <a name="to-add-an-event-handler-that-binds-the-purchaseorderdetail-datatable-to-the-child-report"></a>Pour ajouter un gestionnaire d'événements qui lie l'objet DataTable PurchaseOrderDetail au rapport enfant  
   
 1.  Ouvrez Default.aspx en mode concepteur.  
   
 2.  Cliquez avec le bouton droit sur le contrôle ReportViewer et sélectionnez **Propriétés**.  
   
-3.  Dans la page **Propriétés**, sélectionnez l’icône **Événements**.  
+3.  Dans la page **Propriétés** , sélectionnez l’icône **Événements** .  
   
-4.  Double-cliquez sur l’événement **Extraction**.  
+4.  Double-cliquez sur l’événement **Extraction** .  
   
     Cette opération permet d'ajouter une section du gestionnaire d'événements dans le code, qui doit ressembler au bloc ci-dessous.  
   
@@ -122,7 +127,7 @@ Vous devez effectuer les tâches suivantes pour implémenter un filtre de table.
   
 5.  Terminez l'exécution du gestionnaire d'événements. Il doit inclure les fonctionnalités suivantes.  
   
-    1.  Extraire la référence d’objet de rapport enfant du paramètre *DrillthroughEventArgs*.  
+    1.  Extraire la référence d’objet de rapport enfant du paramètre *DrillthroughEventArgs* .  
   
     2.  Appeler la fonction **GetPurchaseOrderDetail**.  
   
@@ -153,18 +158,18 @@ Vous devez effectuer les tâches suivantes pour implémenter un filtre de table.
   
 6.  Enregistrez le fichier.  
   
-## Filtre de requête  
+## <a name="query-filter"></a>Filtre de requête  
 Vous devez effectuer les tâches suivantes pour implémenter un filtre de requête.  
   
--   Créez une fonction qui sélectionne les données filtrées dans la table **PurchaseOrderDetail**.  
+-   Créez une fonction qui sélectionne les données filtrées dans la table **PurchaseOrderDetail** .  
   
 -   Ajoutez un gestionnaire d’événements qui extrait les valeurs de paramètre et lie l’objet DataTable **PurchaseOrdeDetail** au rapport enfant.  
   
-### Pour créer une fonction qui sélectionne les données filtrées dans la table PurchaseOrderDetail  
+### <a name="to-create-a-function-that-selects-filtered-data-from-the-purchaseorderdetail-table"></a>Pour créer une fonction qui sélectionne les données filtrées dans la table PurchaseOrderDetail  
   
 1.  Dans l'Explorateur de solutions, développez Default.aspx, puis double-cliquez sur Default.aspx.cs.  
   
-2.  Créez une fonction qui accepte un paramètre, **productid**, de type entier et retourne un objet **datatable**, puis procédez comme suit.  
+2.  Créez une fonction qui accepte un paramètre, **productid**, de type entier et retourne un objet **datatable** , puis procédez comme suit.  
   
     1.  Crée une instance du dataset, **DataSet2**, qui a été créé à l’étape 2 de la [Leçon 4 : Définir une connexion de données et une table de données pour le rapport enfant](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
@@ -174,7 +179,7 @@ Vous devez effectuer les tâches suivantes pour implémenter un filtre de requê
   
     4.  Remplissez l'instance de DataSet avec les données filtrées en exécutant la requête.  
   
-    5.  Retourne la table de données **PurchaseOrderDetail**.  
+    5.  Retourne la table de données **PurchaseOrderDetail** .  
   
         La fonction doit ressembler à celle ci-dessous. (Pour référence uniquement. Vous pouvez suivre le modèle de votre choix pour extraire les données nécessaires pour le rapport enfant.)  
   
@@ -218,15 +223,15 @@ Vous devez effectuer les tâches suivantes pour implémenter un filtre de requê
             }  
         ```  
   
-### Pour ajouter un gestionnaire d'événements qui extrait les valeurs de paramètre et lie l'objet DataTable PurchaseOrderDetail au rapport enfant  
+### <a name="to-add-an-event-handler-that-retrieves-parameter-values-and-binds-the-purchaseordedetail-datatable-to-the-child-report"></a>Pour ajouter un gestionnaire d'événements qui extrait les valeurs de paramètre et lie l'objet DataTable PurchaseOrderDetail au rapport enfant  
   
 1.  Ouvrez Default.aspx en mode concepteur.  
   
 2.  Cliquez avec le bouton droit sur le contrôle ReportViewer et sélectionnez **Propriétés**.  
   
-3.  Dans le volet **Propriétés**, sélectionnez l’icône **Événements**.  
+3.  Dans le volet **Propriétés** , sélectionnez l’icône **Événements** .  
   
-4.  Double-cliquez sur l’événement **Extraction**.  
+4.  Double-cliquez sur l’événement **Extraction** .  
   
     Cette opération permet d'ajouter une section du gestionnaire d'événements dans le code, qui doit ressembler à ce qui suit.  
   
@@ -238,7 +243,7 @@ Vous devez effectuer les tâches suivantes pour implémenter un filtre de requê
   
 5.  Terminez l'exécution du gestionnaire d'événements. Il doit inclure la fonctionnalité suivante.  
   
-    1.  Extraire la référence d’objet de rapport enfant du paramètre *DrillthroughEventArgs*.  
+    1.  Extraire la référence d’objet de rapport enfant du paramètre *DrillthroughEventArgs* .  
   
     2.  Obtenez la liste des paramètres de rapport enfant de l'objet de rapport enfant extrait.  
   
@@ -289,8 +294,10 @@ Vous devez effectuer les tâches suivantes pour implémenter un filtre de requê
   
 6.  Enregistrez le fichier.  
   
-## Tâche suivante  
+## <a name="next-task"></a>Tâche suivante  
 Vous venez de créer un filtre de données pour la table de données que vous avez définie pour le rapport enfant. Vous allez à présent générer et exécuter l'application de site Web. Consultez [Leçon 9 : Générer et exécuter l’application](../reporting-services/lesson-9-build-and-run-the-application.md).  
   
   
   
+
+

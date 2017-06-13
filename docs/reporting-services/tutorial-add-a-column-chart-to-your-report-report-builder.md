@@ -1,29 +1,34 @@
 ---
-title: "Didacticiel&#160;: ajouter un histogramme &#224; un rapport (G&#233;n&#233;rateur de rapports) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Didacticiel : Ajouter un histogramme à votre rapport (Générateur de rapports) | Documents Microsoft"
+ms.custom: 
+ms.date: 09/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c231648deb4920a3e36a594271d1c9c199313668
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Didacticiel&#160;: ajouter un histogramme &#224; un rapport (G&#233;n&#233;rateur de rapports)
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un histogramme à un rapport (Générateur de rapports)
 Dans ce didacticiel, vous allez créer un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] avec un histogramme affichant une série sous la forme d’un ensemble de barres verticales regroupées par catégorie. 
 
 Les histogrammes sont utiles pour :  
   
--   montrer l'évolution des données sur une période ;  
+-   montrer l'évolution des données sur une période ;  
 -   comparer la valeur relative de plusieurs séries.  
 -   afficher une moyenne mobile pour montrer les tendances.  
   
@@ -35,7 +40,7 @@ L'illustration suivante montre l'histogramme que vous allez créer, avec une moy
   
 Durée estimée pour effectuer ce didacticiel : 15 minutes.  
   
-## Spécifications  
+## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="Chart"></a>1. Créer un rapport de graphique à partir de l'Assistant Graphique  
@@ -44,9 +49,9 @@ Dans cette section, vous utilisez l’Assistant Graphique pour créer un dataset
 > [!NOTE]  
 > La requête dans ce didacticiel contenant les valeurs de données, aucune source de données externe n’est nécessaire. Cela rend la requête assez longue. Dans un environnement métier, une requête ne contient pas les données. Ceci est nécessaire à des fins de formation uniquement.  
   
-### Pour créer un rapport de graphique  
+### <a name="to-create-a-chart-report"></a>Pour créer un rapport de graphique  
   
-1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) à partir de votre ordinateur, du portail web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)], ou en mode intégré SharePoint.  
+1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) à partir de votre ordinateur, du portail web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , ou en mode intégré SharePoint.  
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
@@ -58,7 +63,7 @@ Dans cette section, vous utilisez l’Assistant Graphique pour créer un dataset
   
 4.  Dans la page **Choisir un dataset**, cliquez sur **Créer un dataset**, puis sur **Suivant**.  
   
-5.  Dans la page **Choisir une connexion à une source de données**, sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, sélectionnez une source de données, puis cliquez sur **Suivant**. Vous devrez peut-être entrer un nom d'utilisateur et un mot de passe.  
+5.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, sélectionnez une source de données, puis cliquez sur **Suivant**. Vous devrez peut-être entrer un nom d'utilisateur et un mot de passe.  
   
     > [!NOTE]  
     > La source de données que vous choisissez n'a pas d'importance, tant que vous disposez des autorisations appropriées. Vous n'allez pas récupérer de données à partir de la source de données. Pour plus d’informations, consultez [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -93,11 +98,11 @@ Dans cette section, vous utilisez l’Assistant Graphique pour créer un dataset
 ## <a name="ChartType"></a>2. Choisir le type de graphique  
 Vous pouvez choisir parmi plusieurs types de graphiques prédéfinis, puis modifier le graphique après avoir terminé l’Assistant.  
   
-### Pour ajouter un histogramme  
+### <a name="to-add-a-column-chart"></a>Pour ajouter un histogramme  
   
-1.  Dans la page **Choisir un type de graphique**, l’histogramme est le type de graphique par défaut. Cliquez sur **Suivant**.  
+1.  Dans la page **Choisir un type de graphique** , l’histogramme est le type de graphique par défaut. Cliquez sur **Suivant**.  
   
-2.  Dans la page **Organiser les champs du graphique**, faites glisser le champ SalesDate vers **Catégories**. Les catégories s'affichent sur l'axe horizontal.  
+2.  Dans la page **Organiser les champs du graphique** , faites glisser le champ SalesDate vers **Catégories**. Les catégories s'affichent sur l'axe horizontal.  
   
 3.  Faites glisser le champ Sales vers **Valeurs**. La zone **Valeurs** affiche Sum(Sales), car la somme de la valeur totale des ventes est agrégée pour chaque date. Les valeurs s'affichent sur l'axe vertical.  
   
@@ -126,7 +131,7 @@ Par défaut, l'axe horizontal affiche les valeurs dans un format général qui e
   
 3.  Sous l’onglet **Nombre**, dans **Catégorie**, sélectionnez **Date**.  
   
-5.  Dans la zone **Type**, sélectionnez **31 Jan 2000**.  
+5.  Dans la zone **Type** , sélectionnez **31 Jan 2000**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -138,7 +143,7 @@ La date s'affiche dans le format de date que vous avez sélectionné. Le graphiq
   
 Vous pouvez personnaliser l'affichage des étiquettes en les faisant pivoter et en spécifiant l'intervalle.  
   
-## 4. Faire pivoter les étiquettes d’axes sur l’axe horizontal  
+## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4. Faire pivoter les étiquettes d’axes sur l’axe horizontal  
   
 1.  Basculez en mode création de rapport.  
   
@@ -152,7 +157,7 @@ Vous pouvez personnaliser l'affichage des étiquettes en les faisant pivoter et 
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    L'exemple de texte de l'axe horizontal pivote de 90 degrés.  
+    L'exemple de texte de l'axe horizontal pivote de 90 degrés.  
     
     ![report-builder-column-chart-rotate-x-axis](../reporting-services/media/report-builder-column-chart-rotate-x-axis.png)
   
@@ -171,7 +176,7 @@ La légende est créée automatiquement à partir des données de catégories et
   
 3.  Sous **Mise en page et position**, sélectionnez une autre position. Par exemple, sélectionnez l’option en bas au milieu.  
   
-    Lorsque la légende est placée en haut ou en bas d'un graphique, la disposition de la légende change de vertical à horizontal. Vous pouvez sélectionner une disposition différente dans la zone **Disposition**.  
+    Lorsque la légende est placée en haut ou en bas d'un graphique, la disposition de la légende change de vertical à horizontal. Vous pouvez sélectionner une disposition différente dans la zone **Disposition** .  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -218,7 +223,7 @@ Par défaut, l'axe vertical affiche les valeurs dans un format général qui est
 
     ![report-builder-column-chart-format-y-axis](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
     
-## 8. Afficher toutes les étiquettes sur l’axe horizontal (x)
+## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. Afficher toutes les étiquettes sur l’axe horizontal (x)
 
 Vous remarquerez que seuls certaines des étiquettes sur l’axe x sont affichées. Dans cette section, vous allez définir une propriété dans le volet Propriétés pour les afficher toutes.
 
@@ -244,9 +249,9 @@ Une moyenne mobile est une moyenne des données de votre série, calculée au fi
   
 1.  Basculez en mode création de rapport.  
   
-2.  Double-cliquez sur le graphique pour afficher le volet **Données du graphique**.  
+2.  Double-cliquez sur le graphique pour afficher le volet **Données du graphique** .  
   
-3.  Cliquez avec le bouton droit sur le champ **[Sum(Sales)]** dans la zone **Valeurs**, puis cliquez sur **Ajouter une série calculée**.  
+3.  Cliquez avec le bouton droit sur le champ **[Sum(Sales)]** dans la zone **Valeurs** , puis cliquez sur **Ajouter une série calculée**.  
 
      ![report-builder-column-chart-add-calculated-series](../reporting-services/media/report-builder-column-chart-add-calculated-series.png)
   
@@ -254,7 +259,7 @@ Une moyenne mobile est une moyenne des données de votre série, calculée au fi
   
 5.  Dans **Définir les paramètres de la formule**, pour **Période**, sélectionnez **4**.  
   
-6.  Sous l’onglet **Bordure**, dans **Largeur de ligne**, sélectionnez **3pt**.  
+6.  Sous l’onglet **Bordure** , dans **Largeur de ligne**, sélectionnez **3pt**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -270,7 +275,7 @@ Le graphique présente une ligne qui indique la moyenne mobile pour le total des
   
 2.  Dans l'aire de conception, cliquez sur **Cliquez pour ajouter un titre**.  
   
-3.  Tapez **Graphique sur les ventes**, appuyez sur Entrée, puis tapez **Janvier à décembre 2015** pour obtenir ce qui suit :  
+3.  Tapez **Graphique sur les ventes**, appuyez sur Entrée, puis tapez **Janvier à décembre 2015**pour obtenir ce qui suit :  
   
     **Graphique sur les ventes**  
   
@@ -288,7 +293,7 @@ Le graphique présente une ligne qui indique la moyenne mobile pour le total des
   
 ## <a name="Save"></a>11. Enregistrer le rapport  
   
-### Pour enregistrer le rapport  
+### <a name="to-save-the-report"></a>Pour enregistrer le rapport  
   
 1.  Basculez en mode création de rapport.  
   
@@ -300,10 +305,12 @@ Le graphique présente une ligne qui indique la moyenne mobile pour le total des
   
 4.  Cliquez sur **Enregistrer**.  
   
-## Étapes suivantes  
+## <a name="next-steps"></a>Étapes suivantes  
 Vous avez terminé le didacticiel Ajout d'un histogramme à un rapport. Pour en savoir plus sur les graphiques, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) et [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 -    [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md) 
 -    [Générateur de rapports dans SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

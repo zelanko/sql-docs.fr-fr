@@ -1,30 +1,35 @@
 ---
-title: "Gestion du contenu du serveur de rapports (SSRS en mode natif) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "administration de Reporting Services"
-  - "rapports publiés [Reporting Services], gestion"
-  - "serveurs de rapports [Reporting Services], gestion de contenu"
-  - "gestion du contenu [Reporting Services]"
+title: Rapports de gestion de contenu de serveur (SSRS en Mode natif) | Documents Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- administering Reporting Services
+- published reports [Reporting Services], managing
+- report servers [Reporting Services], content management
+- content management [Reporting Services]
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 caps.latest.revision: 50
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 50
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2289f62499f876cc296d6c939c4d9e70ccfe4c3f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Gestion du contenu du serveur de rapports (SSRS en mode natif)
-  Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la gestion de contenu fait référence à la gestion des éléments du serveur de rapports. Tous les éléments peuvent être gérés indépendamment les uns des autres via des propriétés et des paramètres de sécurité. Chaque élément peut être déplacé dans l'espace de noms de dossier du serveur de rapports. Pour gérer ces éléments de façon efficace, vous devez connaître les tâches effectuées par un gestionnaire de contenu. À compter de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2, le portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est disponible. Cet article détaille le Gestionnaire de rapports et l’utilisation du nouveau portail web.  
+# <a name="report-server-content-management-ssrs-native-mode"></a>Gestion du contenu du serveur de rapports (SSRS en mode natif)
+  Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la gestion de contenu fait référence à la gestion des éléments du serveur de rapports. Tous les éléments peuvent être gérés indépendamment les uns des autres via des propriétés et des paramètres de sécurité. Chaque élément peut être déplacé dans l'espace de noms de dossier du serveur de rapports. Pour gérer ces éléments de façon efficace, vous devez connaître les tâches effectuées par un gestionnaire de contenu. À compter de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2, le portail web  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est disponible. Cet article détaille le Gestionnaire de rapports et l’utilisation du nouveau portail web.  
   
 > [!NOTE]  
 >  La gestion de contenu est différente de l'administration d'un serveur de rapports. Pour plus d’informations sur la gestion de l’environnement d’exécution d’un serveur de rapports, consultez [Serveur de rapports Reporting Services &#40;mode natif&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
@@ -39,7 +44,7 @@ caps.handback.revision: 50
   
 -   Création d'éléments de sources de données partagées qui peuvent être utilisés à la place des connexions aux source de données spécifiques aux rapports. Un éditeur ou un gestionnaire de contenu peut sélectionner une source de données différente de celle initialement définie pour un rapport, par exemple, pour remplacer une référence à une base de données de test par une référence à une base de données de production.  
   
--   Création de planifications partagées qui peuvent être utilisées en remplacement des planifications spécifiques aux rapports et aux abonnements ; cela permet de simplifier la maintenance des informations de planification dans le temps.  
+-   Création de planifications partagées qui peuvent être utilisées en remplacement des planifications spécifiques aux rapports et aux abonnements ; cela permet de simplifier la maintenance des informations de planification dans le temps.  
   
 -   Création d’abonnements pilotés par des données qui génèrent des listes de destinataires par extraction de données d’une banque de données.  
   
@@ -61,14 +66,14 @@ caps.handback.revision: 50
   
 |Icône|Élément pouvant être déplacé|  
 |----------|-------------------|  
-|![Icône de rapport](../../reporting-services/report-server/media/hlp-16doc.png "Icône de rapport")|Rapport|  
-|![Icône Rapport lié](../../reporting-services/report-server/media/hlp-16linked.png "Icône Rapport lié")|Rapport lié|  
-|![Icône Dossier](../../reporting-services/report-server/media/hlp-16folder.png "Icône Dossier")|Dossier|  
-|![icône de ressource générique](../../reporting-services/report-server/media/hlp-16file.png "icône de ressource générique")|Ressource générique|  
-|![Icône de source de données partagée](../../reporting-services/report-data/media/hlp-16datasource.png "Icône de source de données partagée")|Source de données partagée|  
+|![Icône de rapport](../../reporting-services/report-server/media/hlp-16doc.gif "icône de rapport")|Rapport|  
+|![Icône de rapport lié](../../reporting-services/report-server/media/hlp-16linked.gif "icône de rapport lié")|Rapport lié|  
+|![Icône de dossier](../../reporting-services/report-server/media/hlp-16folder.gif "icône de dossier")|Dossier|  
+|![icône de ressource générique](../../reporting-services/report-server/media/hlp-16file.gif "icône de ressource générique")|Ressource générique|  
+|![Icône de source de données partagée](../../reporting-services/report-data/media/hlp-16datasource.png "icône de source de données partagée")|Source de données partagée|  
 ||Dataset partagé|  
   
- Les éléments avec lesquels vous travaillez ne peuvent pas tous être déplacés. Par exemple, il n'est pas possible de déplacer les éléments qui sont associés à un rapport, comme les abonnements ou l'historique de rapport. Ces éléments se déplacent avec leurs rapports associés. Il n'est pas non plus possible de déplacer des éléments, comme les planifications partagées, qui existent à l'extérieur de l'arborescence des dossiers. Vous ne pouvez pas déplacer des éléments si vous n'avez pas l'autorisation de le faire. L'autorisation pour déplacer un élément est transmise lorsque les tâches suivantes sont sélectionnées dans votre attribution de rôle pour l'élément considéré : « Gérer les rapports », « Gérer les modèles », « Gérer les dossiers » et « Gérer les sources de données ».  
+ Les éléments avec lesquels vous travaillez ne peuvent pas tous être déplacés. Par exemple, il n'est pas possible de déplacer les éléments qui sont associés à un rapport, comme les abonnements ou l'historique de rapport. Ces éléments se déplacent avec leurs rapports associés. Il n'est pas non plus possible de déplacer des éléments, comme les planifications partagées, qui existent à l'extérieur de l'arborescence des dossiers. Vous ne pouvez pas déplacer des éléments si vous n'avez pas l'autorisation de le faire. L'autorisation pour déplacer un élément est transmise lorsque les tâches suivantes sont sélectionnées dans votre attribution de rôle pour l'élément considéré : « Gérer les rapports », « Gérer les modèles », « Gérer les dossiers » et « Gérer les sources de données ».  
   
 ##  <a name="bkmk_Folders"></a> Dossiers  
  Une hiérarchie de dossiers est utilisée pour l'adressage des éléments stockés et gérés par un serveur de rapports.  Par défaut, la structure des dossiers comporte un nœud racine nommé Accueil et des dossiers réservés qui prennent en charge la fonctionnalité optionnelle Mes rapports. Les dossiers supplémentaires sont définis par l'utilisateur. Les dossiers du serveur de rapports sont utiles si vous souhaitez accorder le même niveau d'accès à plusieurs éléments. Les autorisations que vous définissez sur le dossier peuvent être héritées par les éléments dans le dossier et par les dossiers supplémentaires qui dépendent de ce dossier. Par exemple, vous pouvez créer un jeu de dossiers sous le dossier de base, affecter des autorisations d'équipe à chaque dossier, puis laisser les membres de l'équipe personnaliser les dossiers sous le dossier d'équipe, si nécessaire.  
@@ -79,7 +84,7 @@ caps.handback.revision: 50
   
  La façon dont vous travaillez avec des dossiers dépend des tâches faisant partie de votre attribution de rôle. Si vous utilisez la sécurité par défaut, les utilisateurs disposant des rôles Gestionnaire de contenu et Serveur de publication peuvent créer et gérer des dossiers. Si vous utilisez des attributions de rôle personnalisées, l'attribution de rôle doit inclure les tâches prenant en charge la gestion de dossiers. Pour plus d’informations sur l’attribution des rôles et les tâches, consultez [Octroi d’autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) et [Tâches et autorisations](../../reporting-services/security/tasks-and-permissions.md).  
   
- Les dossiers du serveur de rapports peuvent contenir les éléments suivants :  
+ Les dossiers du serveur de rapports peuvent contenir les éléments suivants :  
   
 -   Rapports  
   
@@ -97,26 +102,26 @@ caps.handback.revision: 50
   
 -   Autres dossiers  
   
-### Dossiers réservés  
- Les dossiers prédéfinis sont réservés par Reporting Services ; ils ne peuvent être déplacés, renommés ou supprimés. Ces dossiers représentent tous les dossiers créés par un utilisateur ou un administrateur du serveur de rapports ayant l'autorisation d'ajouter des éléments à un dossier.  
+### <a name="reserved-folders"></a>Dossiers réservés  
+ Les dossiers prédéfinis sont réservés par Reporting Services ; ils ne peuvent être déplacés, renommés ou supprimés. Ces dossiers représentent tous les dossiers créés par un utilisateur ou un administrateur du serveur de rapports ayant l'autorisation d'ajouter des éléments à un dossier.  
   
  Le tableau ci-dessous décrit les dossiers prédéfinis qui sont ancrés dans l'arborescence des dossiers et qui fournissent un environnement pour plusieurs fonctionnalités.  
   
 |Dossier|Fonction|  
 |------------|-------------|  
 |Dossier de base|Nœud racine de l'arborescence des dossiers|  
-|Utilisateurs|Ce dossier s'affiche lorsque vous activez la fonctionnalité Mes Rapports. Il contient les sous-dossiers de tous les utilisateurs qui utilisent la fonctionnalité Mes rapports ; l'accès à ces dossiers est limité exclusivement aux administrateurs du serveur de rapports. Chaque nom de sous-dossier correspond au nom de l'utilisateur.|  
+|Utilisateurs|Ce dossier s'affiche lorsque vous activez la fonctionnalité Mes Rapports. Il contient les sous-dossiers de tous les utilisateurs qui utilisent la fonctionnalité Mes rapports ; l'accès à ces dossiers est limité exclusivement aux administrateurs du serveur de rapports. Chaque nom de sous-dossier correspond au nom de l'utilisateur.|  
 |Mes rapports|Offre un espace de noms personnel pour chaque utilisateur.|  
   
-### Création de dossiers  
+### <a name="creating-folders"></a>Création de dossiers  
  Vous pouvez créer un dossier dans n'importe quel dossier disponible dans l'arborescence.  
   
  Si vous créez des dossiers en vue de restreindre l'accès à des rapports et des modèles spécifiques, spécifiez des attributions de rôles qui permettent aux utilisateurs de parcourir les dossiers parents situés dans le chemin d'accès, mais pas d'en afficher le contenu.  
   
-### Modification des propriétés d'un dossier  
+### <a name="modifying-folder-properties"></a>Modification des propriétés d'un dossier  
  Après avoir créé un dossier, vous pouvez modifier ses propriétés pour le renommer, ajouter ou modifier sa description ou le déplacer vers un autre emplacement. Ces propriétés sont disponibles dans la page Propriétés générales du dossier. Pour plus d’informations sur la définition des propriétés accordant l’accès à un dossier, consultez [Dossiers sécurisés](../../reporting-services/security/secure-folders.md).  
   
-### Suppression de dossiers et de contenus de dossiers  
+### <a name="deleting-folders-and-folder-contents"></a>Suppression de dossiers et de contenus de dossiers  
  Lorsque vous supprimez un dossier, vous supprimez tous les éléments qu'il contient. Avant de supprimer un dossier, vous devez examiner son contenu afin de déterminer s'il contient des éléments qui peuvent faire l'objet de références ou être utilisés par des éléments d'une autre partie de la hiérarchie des dossiers. Les éléments référencés sont les définitions de rapports prenant en charge les rapports liés, les sources de données partagées et les ressources.  
   
  Si vous supprimez un rapport ayant un ou plusieurs rapports liés qui lui font référence, les rapports liés deviendront non valides une fois le rapport supprimé. Vous ne pouvez pas déterminer à l'avance les rapports liés qui seront affectés car un rapport ne conserve pas d'informations sur les rapports qui lui sont liés. Vous pouvez toutefois consulter les propriétés d'un rapport lié afin d'identifier le rapport sur lequel il est basé. En revanche, les éléments de sources de données partagées indiquent tous les rapports qui utilisent l'élément afin que vous puissiez déterminer aisément si les informations de connexion sont utilisées. Pour plus d’informations, consultez [Créer, modifier, puis supprimer des sources de données partagées &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md). Enfin, les ressources utilisées par les rapports ne permettent pas d'identifier ces rapports.  
@@ -128,7 +133,7 @@ caps.handback.revision: 50
 ##  <a name="bkmk_Resources"></a> Ressources  
  Une ressource est un élément géré qui est stocké sur un serveur de rapports, mais qui n'est pas traité sur ce dernier. En règle générale, une ressource fournit du contenu externe aux utilisateurs des rapports. Il peut s'agir, par exemple, d'une image dans un fichier .jpg, d'un fichier de forme ESRI qui contient des données spatiales ou d'un fichier HTML qui décrit les règles d'entreprise utilisées dans un rapport. Le fichier JPG, SHP ou HTML est stocké sur le serveur de rapports ; toutefois, le serveur de rapports passe ce fichier directement au navigateur au lieu de le traiter en premier. Pour plus d’informations, consultez [Images &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md) et la section « Ajout de données à une carte » dans [Cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
-### Ajout et affichage d'une ressource  
+### <a name="adding-and-viewing-a-resource"></a>Ajout et affichage d'une ressource  
  Pour ajouter une ressource à un serveur de rapports, vous devez télécharger ou publier un fichier :  
   
 |Opération|Type de fichier|  
@@ -140,10 +145,10 @@ caps.handback.revision: 50
   
  La visualisation ou non d'une ressource par les utilisateurs d'un rapport dépend des possibilités d'affichage du navigateur. Dans la mesure où les ressources ne sont pas traitées par le serveur de rapports, le navigateur doit fournir la fonctionnalité d'affichage qui permet d'obtenir le rendu d'un type MIME spécifique. Si le navigateur ne peut pas effectuer le rendu du contenu, les utilisateurs qui affichent la ressource ne voient que ses propriétés générales.  
   
-### Sécurisation et gestion d'une ressource  
+### <a name="securing-and-managing-a-resource"></a>Sécurisation et gestion d'une ressource  
  Les ressources coexistent avec les rapports, les sources de données partagées, les planifications partagées et les dossiers en tant qu'éléments nommés dans l'arborescence des dossiers du serveur de rapports. Vous pouvez rechercher, afficher, sécuriser et définir des propriétés sur les ressources à l'instar de n'importe quel autre élément stocké sur un serveur de rapports. Pour afficher ou gérer une ressource, vous devez disposer des tâches Afficher les ressources ou Gérer les ressources dans le rôle qui vous est attribué.  
   
-### Référencement d'une ressource image à partir d'un rapport  
+### <a name="referencing-an-image-resource-from-a-report"></a>Référencement d'une ressource image à partir d'un rapport  
  Les ressources peuvent contenir une image que vous référencez dans un rapport. Si les spécifications d'un rapport incluent l'utilisation d'images externes, prenez en considération les avantages suivants liés au stockage de l'image en tant que ressource :  
   
 -   Stockage centralisé dans la base de données du serveur de rapports. Si vous déplacez la base de données du serveur de rapports et son contenu vers un autre ordinateur, l'image externe reste avec le rapport. Vous n'avez pas à effectuer le suivi des fichiers image stockés sur les disques de différents ordinateurs.  
@@ -159,7 +164,7 @@ caps.handback.revision: 50
   
  Techniquement, Mes Rapports associe le nom d'un dossier virtuel que voit chaque utilisateur (Mes Rapports) à un dossier principal Dossiers des utilisateurs et à un sous-dossier unique basé sur le nom de l'utilisateur. Lorsqu'un utilisateur accède à son dossier Mes Rapports, il est en réalité redirigé vers son sous-dossier dans Dossiers des utilisateurs. Chaque sous-dossier assure le stockage des rapports et des éléments que l'utilisateur ajoute à son dossier Mes Rapports. Dans le portail web, vous ne verrez pas Mes rapports au niveau racine. Vous devez accéder au dossier Utilisateurs.  
   
- Le dossier Dossiers des utilisateurs est créé lors de l'installation du serveur de rapports. Les sous-dossiers d'utilisateurs sont ensuite créés lorsqu'un utilisateur ouvre Mes Rapports pour la première fois (par exemple, en cliquant sur Mes Rapports dans le Gestionnaire de rapports). Chaque nom de dossier respecte le format suivant :  
+ Le dossier Dossiers des utilisateurs est créé lors de l'installation du serveur de rapports. Les sous-dossiers d'utilisateurs sont ensuite créés lorsqu'un utilisateur ouvre Mes Rapports pour la première fois (par exemple, en cliquant sur Mes Rapports dans le Gestionnaire de rapports). Chaque nom de dossier respecte le format suivant :  
   
 ```  
 /Users Folders/<username>/My Reports  
@@ -177,7 +182,7 @@ caps.handback.revision: 50
   
  La fonctionnalité Mes Rapports est facultative. Lorsque vous installez un serveur de rapports, la fonctionnalité Mes Rapports est désactivée par défaut. Pour plus d’informations sur l’activation de cette fonctionnalité, consultez [Activer et désactiver Mes rapports](../../reporting-services/report-server/enable-and-disable-my-reports.md). Pour plus d’informations, consultez [Sécuriser Mes Rapports](../../reporting-services/security/secure-my-reports.md).  
   
-## Tâches  
+## <a name="tasks"></a>Tâches  
  [Télécharger des fichiers dans un dossier](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
  [Création, suppression ou modification d’un dossier &#40;Gestionnaire de rapports&#41;](../../reporting-services/report-server/create-delete-or-modify-a-folder-report-manager.md)  
@@ -186,7 +191,7 @@ caps.handback.revision: 50
   
  [Télécharger des fichiers dans un dossier](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Outils de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Rôles et autorisations &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)   
  [Rapports Reporting Services &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)  

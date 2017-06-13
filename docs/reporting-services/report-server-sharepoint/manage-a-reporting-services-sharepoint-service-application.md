@@ -1,23 +1,28 @@
 ---
-title: "G&#233;rer une application de service SharePoint Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Gérer une Application de Service SharePoint Reporting Services | Documents Microsoft"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
 caps.latest.revision: 18
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 18
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0930c8f5d3b0af4460c3deac2b8aa780e1f2568
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# G&#233;rer une application de service SharePoint Reporting Services
+# <a name="manage-a-reporting-services-sharepoint-service-application"></a>Gérer une application de service SharePoint Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sont gérées à partir de l'Administration centrale de SharePoint. Les pages de gestion et des propriétés vous permettent de mettre à jour la configuration de l'application de service ainsi que les tâches d'administration courantes.  
   
  Cette rubrique fournit les informations suivantes :  
@@ -36,7 +41,7 @@ caps.handback.revision: 18
   
 -   [Configurer les abonnements et les alertes](#bkmk_provisionsubscriptions)  
   
-## Pour ouvrir la page des propriétés de l'application de service  
+## <a name="to-open-service-application-properties-page"></a>Pour ouvrir la page des propriétés de l'application de service  
  Pour ouvrir la page des propriétés pour une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , procédez comme suit :  
   
 1.  Dans l'Administration Centrale, sous le groupe Gestion des applications, cliquez sur **Gérer les applications de service**.  
@@ -84,7 +89,7 @@ caps.handback.revision: 18
 |-------------|--------------|  
 |Délai d'expiration de session|La valeur par défaut est 600 secondes.|  
 |Utiliser des cookies de session|La valeur par défaut est TRUE.|  
-|Délai d'attente de rapport d'EDLX|La valeur par défaut est 1800 secondes.|  
+|Délai d'attente de rapport d'EDLX|La valeur par défaut est 1800 secondes.|  
   
 ###  <a name="bkmk_logging_settings_section"></a> Paramètres système pour la journalisation  
   
@@ -93,7 +98,7 @@ caps.handback.revision: 18
 |Activer la journalisation des exécutions|La valeur par défaut est TRUE.<br /><br /> Vous pouvez spécifier si le serveur de rapports génère des journaux de traces et le nombre de jours pendant lesquels ces journaux sont conservés. . Les journaux sont stockés sur l'ordinateur serveur de rapports dans le dossier \Microsoft SQL Server\MSSQL.n\ReportServer\Log. Un nouveau fichier journal est démarré chaque fois que le service est démarré. Pour plus d'informations sur les fichiers journaux, consultez [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
 |Nombre de jours de conservation dans le journal des exécutions|La valeur par défaut est 60 jours.|  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge la journalisation ULS SharePoint.  Pour plus d’informations, consultez [Activer des événements Reporting Services pour le journal des traces SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge la journalisation ULS SharePoint.  Pour plus d’informations, consultez [Activer des événements Reporting Services pour le journal des traces SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
 ###  <a name="bkmk_security_settings_section"></a> Paramètres de sécurité  
   
@@ -109,7 +114,7 @@ caps.handback.revision: 18
 |Paramètre|Commentaires|  
 |-------------|--------------|  
 |Activer le téléchargement du Générateur de rapports|La valeur par défaut est TRUE.<br /><br /> Spécifie si les clients peuvent voir le bouton de téléchargement de l'application du générateur de rapports.|  
-|URL de lancement du Générateur de rapports|Spécifie une URL personnalisée lorsque le serveur de rapports n'utilise pas l'URL par défaut du Générateur de rapports. Ce paramètre est facultatif. Si vous ne spécifiez pas de valeur, l'URL par défaut est utilisée, laquelle lance le Générateur de rapports. Pour lancer le Générateur de rapports version 3.0 comme une application en un clic, entrez la valeur suivante : http://\<nom_ordinateur>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
+|URL de lancement du Générateur de rapports|Spécifie une URL personnalisée lorsque le serveur de rapports n'utilise pas l'URL par défaut du Générateur de rapports. Ce paramètre est facultatif. Si vous ne spécifiez pas de valeur, l'URL par défaut est utilisée, laquelle lance le Générateur de rapports. Pour lancer le Générateur de rapports version 3.0 à un clic-application, entrez la valeur suivante : http://\<nom_ordinateur > / ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
 |Activer l'impression cliente|La valeur par défaut est TRUE.<br /><br /> Spécifie si les utilisateurs peuvent télécharger le contrôle côté client, qui fournit des options d'impression.|  
 |Modifier le délai d'expiration de la session|La valeur par défaut est 7200 secondes.|  
 |Modifier la limite du cache de sessions|La valeur par défaut est 5.|  
@@ -117,7 +122,7 @@ caps.handback.revision: 18
 ##  <a name="bkmk_managejobs"></a> Gérer les travaux  
  Vous pouvez afficher et supprimer les travaux en cours de exécution, par exemple les travaux qui sont créés par les abonnements aux rapports et les abonnements pilotés par les données. Cette page ne permet pas de gérer les abonnements, mais les travaux qui sont déclenchés par un abonnement. Par exemple, un abonnement qui est planifié pour s'exécuter une fois par heure génère un travail une fois par heure, lequel apparaît sur la page **Gérer les travaux** .  
   
- ![gérer les travaux en cours d'exécution](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "gérer les travaux en cours d'exécution")  
+ ![gérer les travaux en cours d’exécution](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "gérer les travaux en cours d’exécution")  
   
 ##  <a name="bkmk_keymgt"></a> Gestion de clés  
  Le tableau suivant résume les pages de gestion des clés  
@@ -127,15 +132,15 @@ caps.handback.revision: 18
   
 |Radiomessagerie|Description|  
 |----------|-----------------|  
-|Sauvegarder la clé de chiffrement|1) Tapez un mot de passe dans les zones **Mot de passe** et **Confirmer le mot de passe**, puis cliquez sur **Exporter**. Vous obtiendrez un avertissement si le mot de passe que vous avez tapé ne répond pas aux exigences de complexité de la stratégie de domaine.<br /><br /> 2) Vous serez invité à saisir un emplacement où enregistrer le fichier de clé. Il est conseillé de stocker le fichier de clé sur un ordinateur différent de celui qui exécute [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Le nom du fichier par défaut est le même que celui de l'application de service.|  
-|Restaurer la clé de chiffrement|1) Tapez le fichier de clé ou accédez-y dans la zone **Emplacement du fichier**.<br /><br /> 2) Dans la zone **Mot de passe**, tapez le mot de passe utilisé pour sauvegarder le fichier de chiffrement.<br /><br /> 3) Cliquez sur **OK**.|  
+|Sauvegarder la clé de chiffrement|1) Tapez un mot de passe dans les zones **Mot de passe** et **Confirmer le mot de passe** , puis cliquez sur **Exporter**. Vous obtiendrez un avertissement si le mot de passe que vous avez tapé ne répond pas aux exigences de complexité de la stratégie de domaine.<br /><br /> 2) Vous serez invité à saisir un emplacement où enregistrer le fichier de clé. Il est conseillé de stocker le fichier de clé sur un ordinateur différent de celui qui exécute [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Le nom du fichier par défaut est le même que celui de l'application de service.|  
+|Restaurer la clé de chiffrement|1) Tapez le fichier de clé ou accédez-y dans la zone **Emplacement du fichier** .<br /><br /> 2) Dans la zone **Mot de passe** , tapez le mot de passe utilisé pour sauvegarder le fichier de chiffrement.<br /><br /> 3) Cliquez sur **OK**.|  
 |Modifier la clé de chiffrement|Cette opération crée une nouvelle clé et re-chiffre votre contenu chiffré. Si vous avez beaucoup de contenus, cette opération peut prendre plusieurs heures.<br /><br /> Lorsque l'opération de modification de la clé de chiffrement est terminée, il est recommandé d'enregistrer une copie de sauvegarde de votre nouvelle clé.|  
 |Contenu chiffré supprimé|Le contenu supprimé ne peut pas être extrait.<br /><br /> **\*\* Important \*\*** La suppression de la clé symétrique ou la création d’une nouvelle clé ne peut être ni inversée ni annulée. La suppression de la clé symétrique ou la création d'une nouvelle clé peut avoir d'importantes conséquences sur votre installation actuelle. Si vous supprimez la clé, toute donnée existante chiffrée par la clé symétrique sera également supprimée. Les données supprimées incluent les chaînes de connexion aux sources de données de rapport externes, les chaînes de connexion stockées et certaines informations d'abonnement.|  
   
 ##  <a name="bkmk_executionaccount"></a> Compte d'exécution  
  Utilisez cette page pour configurer un compte à utiliser pour le traitement sans assistance. Ce compte est utilisé dans des circonstances particulières lorsque d'autres sources d'informations d'identification ne sont pas disponibles :  
   
--   lorsque le serveur de rapports se connecte à une source de données qui n'exige pas d'informations d'identification ; les documents XML et certaines applications de base de données côté client sont des exemples de sources de données qui n'ont pas nécessairement besoin d'informations d'identification.  
+-   lorsque le serveur de rapports se connecte à une source de données qui n'exige pas d'informations d'identification ; les documents XML et certaines applications de base de données côté client sont des exemples de sources de données qui n'ont pas nécessairement besoin d'informations d'identification.  
   
 -   lorsque le serveur de rapports se connecte à un autre serveur pour extraire des fichiers image externes ou d'autres ressources référencées dans un rapport.  
   
@@ -145,7 +150,7 @@ caps.handback.revision: 18
   
  Vous pouvez utiliser n'importe quel compte d'utilisateur Windows. Pour optimiser les résultats, choisissez un compte possédant des autorisations en lecture et des autorisations de connexion réseau afin de prendre en charge les connexions à d'autres ordinateurs. Il doit posséder des autorisations en lecture sur un fichier de données ou image externe que vous voulez utiliser dans un rapport. Ne spécifiez pas un compte local sauf si toutes les images externes et les sources de données de rapport sont stockées sur l'ordinateur du serveur de rapports. Utilisez le compte uniquement pour le traitement sans assistance des rapports.  
   
- ![Contenu relatif à PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.png "Contenu relatif à PowerShell")  
+ ![Contenu relatif à PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "contenu relatif à PowerShell")  
   
  L'exemple suivant est une commande PowerShell qui retourne la liste des applications de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] avec la propriété UEAccount :  
   
@@ -155,12 +160,12 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
   
  Pour plus d’informations, consultez [Applets de commande PowerShell pour le mode SharePoint de Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
-### Options  
+### <a name="options"></a>Options  
  **Spécifier un compte d'exécution**  
  Sélectionnez un compte.  
   
  **Compte**  
- Entrez un compte d'utilisateur de domaine Windows. Utilisez le format suivant : *\<domaine>\\<compte_utilisateur\>*.  
+ Entrez un compte d'utilisateur de domaine Windows. Utilisez ce format :  *\<domaine >\\< compte d’utilisateur\>*.  
   
  **Mot de passe**  
  Tapez le mot de passe.  
@@ -169,9 +174,9 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  Tapez de nouveau le mot de passe.  
   
 ##  <a name="bkmk_email"></a> Paramètres de messagerie  
- Utilisez cette page pour spécifier les paramètres du protocole SMTP (Simple Mail Transfer Protocol) qui activent la remise du courrier électronique à partir du serveur de rapports. Vous pouvez utiliser l'extension de remise du courrier électronique Report Server pour distribuer des rapports ou des notifications de traitement de rapport par le biais d'abonnements à la messagerie. L'extension de remise par messagerie Report Server nécessite un serveur SMTP et une adresse de messagerie à utiliser dans le champ De :.  
+ Utilisez cette page pour spécifier les paramètres du protocole SMTP (Simple Mail Transfer Protocol) qui activent la remise du courrier électronique à partir du serveur de rapports. Vous pouvez utiliser l'extension de remise du courrier électronique Report Server pour distribuer des rapports ou des notifications de traitement de rapport par le biais d'abonnements à la messagerie. L'extension de remise par messagerie Report Server nécessite un serveur SMTP et une adresse de messagerie à utiliser dans le champ De :.  
   
-### Options  
+### <a name="options"></a>Options  
  **Utiliser le serveur SMTP**  
  Spécifie que le message du serveur de rapports est acheminé par le biais d'un serveur SMTP.  
   
@@ -179,12 +184,12 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  Spécifiez le serveur ou la passerelle SMTP à utiliser. Vous pouvez utiliser un serveur local ou un serveur SMTP sur votre réseau.  
   
  **Adresse d'expéditeur**  
- Spécifie l'adresse de messagerie à utiliser dans le champ De : d'un message généré. Vous devez spécifier un compte d'utilisateur qui a l'autorisation d'envoyer du courrier depuis le serveur SMTP.  
+ Spécifie l'adresse de messagerie à utiliser dans le champ De : d'un message généré. Vous devez spécifier un compte d'utilisateur qui a l'autorisation d'envoyer du courrier depuis le serveur SMTP.  
   
 ##  <a name="bkmk_provisionsubscriptions"></a> Configurer les abonnements et les alertes  
  Utilisez cette page pour vérifier si SQL Server Agent s'exécute et pour mettre en service un accès permettant à Reporting Services de l'utiliser. SQL Server Agent est requis pour les abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , les planifications et les alertes de données. [Configurer les abonnements et les alertes pour les applications de service de SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
-## Association de proxy  
+## <a name="proxy-association"></a>Association de proxy  
  Lorsque vous avez créé l'application de service Reporting Services, vous avez sélectionné l'application Web pour associer et mettre en service les autorisations d'accès de celle-ci. Si vous choisissez de ne pas les associer ou si vous souhaitez modifier l'association, suivez les étapes suivantes.  
   
 1.  Dans l'Administration Centrale de SharePoint, sous Gestion des applications, cliquez sur **Configurer les associations des applications de service**.  

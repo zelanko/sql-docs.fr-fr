@@ -1,28 +1,33 @@
 ---
-title: "Ajouter des graphiques sparkline et des barres de donn&#233;es (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ajouter des graphiques sparkline et barres de données (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0b297c2e-d48b-41b0-aabd-29680cdcdb05
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a9f084fc55a0f3011a40c6f2d8a2cfcdf61dc9f2
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Ajouter des graphiques sparkline et des barres de donn&#233;es (G&#233;n&#233;rateur de rapports et SSRS)
+# <a name="add-sparklines-and-data-bars-report-builder-and-ssrs"></a>Ajouter des graphiques sparkline et des barres de données (Générateur de rapports et SSRS)
   Les graphiques sparkline et les barres de données sont des graphiques de petite taille qui communiquent beaucoup d'informations avec peu de détails superflus. Pour plus d’informations sur ces graphiques, consultez [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
  Dans [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], les graphiques sparkline et les barres de données sont généralement placés dans les cellules d’une table ou d’une matrice. Les graphiques sparkline affichent habituellement une seule série chacun. Les barres de données peuvent contenir un ou plusieurs points de données. Les graphiques sparkline et barres de données tirent tous deux leur impact de la répétition des informations de série pour chaque ligne dans la table ou la matrice.  
   
-## Pour ajouter un graphique sparkline ou une barre de données à une table ou une matrice  
+## <a name="to-add-a-sparkline-or-data-bar-to-a-table-or-matrix"></a>Pour ajouter un graphique sparkline ou une barre de données à une table ou une matrice  
   
 1.  Si vous ne l’avez pas encore fait, créez une [table](../../reporting-services/report-design/tables-report-builder-and-ssrs.md) ou une [matrice](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) avec les données que vous voulez afficher.  
   
@@ -33,19 +38,19 @@ caps.handback.revision: 8
     > [!NOTE]  
     >  Vous ne pouvez pas insérer de graphiques sparkline dans un groupe de détails dans une table. Ils doivent entrer dans une cellule associée à un groupe.  
   
-4.  Dans la boîte de dialogue **Changer le type de graphique sparkline/Changer le type de barre de données**, cliquez sur le type de graphique sparkline ou de barre de données de votre choix, puis sur **OK**.  
+4.  Dans la boîte de dialogue **Changer le type de graphique sparkline/Changer le type de barre de données** , cliquez sur le type de graphique sparkline ou de barre de données de votre choix, puis sur **OK**.  
   
 5.  Cliquez sur le graphique sparkline ou la barre de données.  
   
      Le volet **Données du graphique** s’ouvre.  
   
-6.  Dans la zone **Valeurs**, cliquez sur le signe plus (**+**) **Ajouter des champs**, puis sur le champ dont vous voulez représenter les valeurs graphiquement.  
+6.  Dans la zone **Valeurs** , cliquez sur le signe plus ( **)** Ajouter des champs**+**, puis sur le champ dont vous voulez représenter les valeurs graphiquement.  
   
-7.  Dans la zone **Groupes de catégories**, cliquez sur le signe plus (**+**) **Ajouter des champs**, puis sur le champ selon lequel vous voulez regrouper les valeurs.  
+7.  Dans la zone **Groupes de catégories** , cliquez sur le signe plus ( **)** Ajouter des champs**+**, puis sur le champ selon lequel vous voulez regrouper les valeurs.  
   
      En général, pour les graphiques sparkline et les barres de données, vous n’ajoutez pas de champ à la zone **Groupes de séries** car vous voulez une seule série pour chaque ligne.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Aligner les données d’un graphique dans une table ou une matrice &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
   

@@ -1,25 +1,30 @@
 ---
-title: "Didacticiel : Rapport cartographique (G&#233;n&#233;rateur de rapports) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/31/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Didacticiel : Mapper des rapports (Générateur de rapports) | Documents Microsoft"
+ms.custom: 
+ms.date: 08/31/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 caps.latest.revision: 18
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 18
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: efe91a2e1e8ca7b0744639ed718d63b70e3adc5c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Didacticiel : Rapport cartographique (G&#233;n&#233;rateur de rapports)
-Dans ce didacticiel [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)], vous allez découvrir les fonctionnalités cartographiques que vous pouvez utiliser pour afficher des données sur un arrière-plan géographique d’un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]. 
+# <a name="tutorial-map-report-report-builder"></a>Didacticiel : Rapport cartographique (Générateur de rapports)
+Dans ce didacticiel [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] , vous allez découvrir les fonctionnalités cartographiques que vous pouvez utiliser pour afficher des données sur un arrière-plan géographique d’un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
   
 Les cartes sont basées sur des données spatiales qui comportent en général des points, des lignes et des polygones. Par exemple, un polygone peut représenter le contour d'un comté, une ligne peut représenter une route, et un point peut représenter l'emplacement d'une ville. Chaque type de données spatiales est affiché sur une couche séparée sous la forme d'un jeu d'éléments cartographiques.  
   
@@ -34,15 +39,15 @@ Dans ce didacticiel, vous créez un rapport cartographique qui affiche les empla
   
 Durée estimée pour effectuer ce didacticiel : 30 minutes.  
   
-## Spécifications  
-Pour ce didacticiel, le serveur de rapports doit être configuré pour prendre en charge les cartes Bing comme arrière-plan. Pour plus d’informations, consultez [Planifier la prise en charge de rapport cartographique](http://msdn.microsoft.com/fr-fr/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
+## <a name="requirements"></a>Spécifications  
+Pour ce didacticiel, le serveur de rapports doit être configuré pour prendre en charge les cartes Bing comme arrière-plan. Pour plus d’informations, consultez [Planifier la prise en charge de rapport cartographique](http://msdn.microsoft.com/en-us/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
 
 Pour plus d’informations sur les autres spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="Map"></a>1. Créer une carte avec une couche de polygones à partir de l'Assistant Carte  
 Dans cette section, vous ajoutez une carte à votre rapport à partir de la bibliothèque de cartes. La carte a une couche qui affiche les comtés de l'État de New York. La forme de chaque comté est un polygone basé sur les données spatiales incorporées dans la carte de la bibliothèque de cartes.  
   
-### Pour ajouter une carte dans un nouveau rapport à l'aide de l'Assistant Carte  
+### <a name="to-add-a-map-with-the-map-wizard-in-a-new-report"></a>Pour ajouter une carte dans un nouveau rapport à l'aide de l'Assistant Carte  
   
 1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) depuis votre ordinateur, depuis le portail web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou depuis le mode intégré SharePoint.  
   
@@ -54,7 +59,7 @@ Dans cette section, vous ajoutez une carte à votre rapport à partir de la bibl
   
 3.  Dans le volet droit, cliquez sur **Assistant Carte**.  
   
-4.  Dans la page **Choisir une source de données spatiales**, vérifiez que **Bibliothèque de cartes** est sélectionné.  
+4.  Dans la page **Choisir une source de données spatiales** , vérifiez que **Bibliothèque de cartes** est sélectionné.  
   
 6.  Dans la zone Bibliothèque de cartes, développez **States by County** sous **USA**, puis cliquez sur **New York**.  
   
@@ -64,7 +69,7 @@ Dans cette section, vous ajoutez une carte à votre rapport à partir de la bibl
   
 7.  Cliquez sur **Suivant**.  
   
-8.  Dans la page **Choisir des options de vue cartographique et de données spatiales**, acceptez les valeurs par défaut et cliquez sur **Suivant**. 
+8.  Dans la page **Choisir des options de vue cartographique et de données spatiales** , acceptez les valeurs par défaut et cliquez sur **Suivant**. 
  
     Par défaut, les éléments cartographiques d’une bibliothèque de cartes sont incorporés automatiquement dans la définition de rapport.  
   
@@ -74,7 +79,7 @@ Dans cette section, vous ajoutez une carte à votre rapport à partir de la bibl
   
 12. Si elle est activée, désactivez l'option **Carte unicolore** .  
   
-13. Dans la liste déroulante **Champ de données**, cliquez sur **#COUNTYNAME**. Le volet Aperçu de la carte de l'Assistant affiche les éléments suivants :  
+13. Dans la liste déroulante **Champ de données** , cliquez sur **#COUNTYNAME**. Le volet Aperçu de la carte de l'Assistant affiche les éléments suivants :  
   
     -   un titre avec le texte **Titre de la carte**;  
   
@@ -82,7 +87,7 @@ Dans cette section, vous ajoutez une carte à votre rapport à partir de la bibl
   
     -   une légende contenant un titre et une liste d'éléments de 1 à 5 ;  
   
-    -   une échelle de couleurs contenant les valeurs de 0 à 160 et la valeur Aucune couleur ;  
+    -   une échelle de couleurs contenant les valeurs de 0 à 160 et la valeur Aucune couleur ;  
   
     -   une échelle des distances qui affiche les kilomètres (km) et les miles (mi).  
     
@@ -97,7 +102,7 @@ Dans cette section, vous ajoutez une carte à votre rapport à partir de la bibl
 15. Double-cliquez sur la carte pour afficher le volet **Couches**. Le volet **Couches** affiche une seule couche de polygones, PolygonLayer1, du type de couche **Incorporé**. Chaque comté est un élément cartographique incorporé sur cette couche.  
   
     > [!NOTE]  
-    > Si vous ne voyez pas le volet **Couches**, celui-ci se trouve peut-être à l’extérieur de votre vue actuelle. Utilisez la barre de défilement au bas de la fenêtre du mode Conception pour changer votre vue. Sinon, sous l’onglet **Affichage**, désactivez l’option **Données du rapport** pour disposer d’une plus grande aire de conception.   
+    > Si vous ne voyez pas le volet **Couches** , celui-ci se trouve peut-être à l’extérieur de votre vue actuelle. Utilisez la barre de défilement au bas de la fenêtre du mode Conception pour changer votre vue. Sinon, sous l’onglet **Affichage**, désactivez l’option **Données du rapport** pour disposer d’une plus grande aire de conception.   
 
 15. Cliquez sur la flèche en regard de PolygonLayer1 > **Propriétés des polygones**.
 
@@ -115,19 +120,19 @@ La légende de la carte et l'échelle de couleurs n'apparaissent pas encore, car
 Dans cette section, vous utilisez l’Assistant Couche pour ajouter une couche de points qui affiche les emplacements des magasins.  
   
 > [!NOTE]  
-> Dans ce didacticiel, la requête contient les valeurs des données : elle n’a donc pas besoin d’une source de données externe. Cela rend la requête assez longue. Dans un environnement d’entreprise, une requête ne contiendra pas les données. Ceci est nécessaire à des fins de formation uniquement.  
+> Dans ce didacticiel, la requête contient les valeurs des données : elle n’a donc pas besoin d’une source de données externe. Cela rend la requête assez longue. Dans un environnement métier, une requête ne contient pas les données. Ceci est nécessaire à des fins de formation uniquement.  
   
-### Pour ajouter une couche de points basée sur une requête spatiale SQL Server  
+### <a name="to-add-a-point-layer-based-on-a-sql-server-spatial-query"></a>Pour ajouter une couche de points basée sur une requête spatiale SQL Server  
   
 1.  Sous l’onglet **Exécuter** > **Conception** pour rebasculer en mode Conception.  
   
-2.  Double-cliquez sur la carte pour afficher le volet **Couches**. Dans la barre d’outils, cliquez sur le bouton **Assistant Nouvelle couche** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.png "rs_IconMapLayerWizard"). 
+2.  Double-cliquez sur la carte pour afficher le volet **Couches** . Dans la barre d’outils, cliquez sur le **Assistant Nouvelle couche** bouton ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"). 
 
     ![report-builder-map-new-layer-wizard-icon](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
   
 3.  Dans la page **Choisir une source de données spatiales** , sélectionnez **Requête spatiale SQL Server**et cliquez sur **Suivant**.  
   
-4.  Dans la page **Choisir un dataset avec des données spatiales SQL Server**, cliquez sur **Ajouter un nouveau dataset avec des données spatiales SQL Server**  > **Suivant**.  
+4.  Dans la page **Choisir un dataset avec des données spatiales SQL Server** , cliquez sur **Ajouter un nouveau dataset avec des données spatiales SQL Server** > **Suivant**.  
   
 5.  Dans la page **Choisir une connexion à une source de données spatiales SQL Server** , sélectionnez une source de données existante ou naviguez jusqu'au serveur de rapports, puis sélectionnez une source de données.  
 
@@ -172,13 +177,13 @@ Dans cette section, vous utilisez l’Assistant Couche pour ajouter une couche d
 9. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** (**!**).  
   
     Le jeu de résultats contient sept colonnes représentant un ensemble de magasins dans l’état de New York qui vendent des biens de consommation. Voici une liste, avec des explications pour les éléments qui ne sont peut-être pas évidents : 
-    *   **StoreKey** : identificateur de magasin.  
+    *   **StoreKey**: identificateur de magasin.  
     *   **StoreName**.
-    *   **SellingArea** : zone disponible pour l’affichage des produits, comprise entre 455 pieds carrés et 1125 pieds carrés.
+    *   **SellingArea**: zone disponible pour l’affichage des produits, comprise entre 455 pieds carrés et 1125 pieds carrés.
     *   **City**.
     *   **County**.
-    *   **Sales** : total des ventes. 
-    *   **SpatialLocation** : emplacement en longitude et latitude. 
+    *   **Sales**: total des ventes. 
+    *   **SpatialLocation**: emplacement en longitude et latitude. 
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
   
@@ -194,19 +199,19 @@ Dans cette section, vous utilisez l’Assistant Couche pour ajouter une couche d
   
 13. Dans la page Choisir la visualisation de la carte, cliquez sur **Carte à bulles** pour un type de carte affichant des marqueurs dont la taille varie en fonction des données. Cliquez sur **Suivant**.  
   
-14. Dans la page **Choisir le dataset analytique**, cliquez sur DataSet1, puis sur **Suivant**. Ce dataset contient à la fois les données analytiques et les données spatiales à afficher sur la nouvelle couche de points.   
+14. Dans la page **Choisir le dataset analytique** , cliquez sur DataSet1, puis sur **Suivant**. Ce dataset contient à la fois les données analytiques et les données spatiales à afficher sur la nouvelle couche de points.   
   
-16. Dans la page **Choisir le thème de couleurs et la visualisation des données**, sélectionnez **Utiliser les tailles de bulle pour visualiser les données**.  
+16. Dans la page **Choisir le thème de couleurs et la visualisation des données** , sélectionnez **Utiliser les tailles de bulle pour visualiser les données**.  
   
 17. Dans **Champ de données**, sélectionnez `[Sum(SellingArea)]` pour adapter la taille des bulles en fonction de la taille qu’un magasin réserve à l’affichage des produits.  
   
-18. Sélectionnez **Afficher les étiquettes** et dans **Champ de données**, sélectionnez `[City]`.
+18. Sélectionnez **Afficher les étiquettes**et dans **Champ de données**, sélectionnez `[City]`.
 
 18. Cliquez sur **Terminer**.  
   
     La couche est ajoutée au rapport. La légende affiche les tailles des bulles en fonction des valeurs de SellingArea.  
   
- 19. Double-cliquez sur la carte pour afficher le volet **Couches**. Le volet **Couche** affiche une nouvelle couche, PointLayer1, avec comme type de source de données spatiales **DataRegion**.  
+ 19. Double-cliquez sur la carte pour afficher le volet **Couches** . Le volet **Couche** affiche une nouvelle couche, PointLayer1, avec comme type de source de données spatiales **DataRegion**.  
   
 19. Ajoutez un titre de légende. Dans la légende, sélectionnez le texte **Title**, tapez **Display Area (sq. ft.)** et appuyez sur Entrée.  
   
@@ -214,11 +219,11 @@ Dans cette section, vous utilisez l’Assistant Couche pour ajouter une couche d
 
     ![report-builder-map-point-properties](../reporting-services/media/report-builder-map-point-properties.png)
   
-22. Sous l’onglet **Police**, changez le style en **Gras** et la taille en **10pt**.
+22. Sous l’onglet **Police** , changez le style en **Gras** et la taille en **10pt**.
 
     ![report-builder-map-point-properties-font](../reporting-services/media/report-builder-map-point-properties-font.png)
   
-23. Sous l’onglet **Général**, sélectionnez **Bas** pour **Placement**.
+23. Sous l’onglet **Général** , sélectionnez **Bas** pour **Placement**.
 
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -233,11 +238,11 @@ Dans cette section, vous utilisez l’Assistant Couche pour ajouter une couche d
 ## <a name="LineLayer"></a>3. Ajouter une couche de lignes pour afficher un itinéraire  
 Utilisez l'Assistant Couche pour ajouter une couche qui affiche un itinéraire entre deux magasins. Dans ce didacticiel, l'itinéraire est créé à partir de trois emplacements de magasin. Dans une application d'entreprise, l'itinéraire choisi peut être le meilleur itinéraire entre des magasins.  
   
-### Pour ajouter une couche de lignes à une carte  
+### <a name="to-add-a-line-layer-to-map"></a>Pour ajouter une couche de lignes à une carte  
   
 1.  Basculez en mode Conception.  
   
-2.  Double-cliquez sur la carte pour afficher le volet **Couches**. Dans la barre d’outils, cliquez sur le bouton **Assistant Nouvelle couche** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.png "rs_IconMapLayerWizard").  
+2.  Double-cliquez sur la carte pour afficher le volet **Couches** . Dans la barre d’outils, cliquez sur le **Assistant Nouvelle couche** bouton ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard").  
   
 3.  Dans la page **Choisir une source de données spatiales** , sélectionnez **Requête spatiale SQL Server** et cliquez sur **Suivant**.  
   
@@ -276,12 +281,12 @@ Utilisez l'Assistant Couche pour ajouter une couche qui affiche un itinéraire e
 
     ![report-builder-map-line](../reporting-services/media/report-builder-map-line.png)
   
-     La carte affiche une nouvelle couche de lignes avec **DataRegion** comme type de source de données spatiales. Dans cet exemple, les données spatiales proviennent d'un dataset mais aucune donnée analytique n'est associée à la ligne.  
+     La carte affiche une nouvelle couche de lignes avec **DataRegion**comme type de source de données spatiales. Dans cet exemple, les données spatiales proviennent d'un dataset mais aucune donnée analytique n'est associée à la ligne.  
 
-## Ajuster le zoom
-1. Si vous ne voyez pas entièrement l’État de New York, vous pouvez ajuster le zoom. Avec le mappage sélectionné, dans le volet Propriétés, vous voyez les propriétés de **MapViewport**. 
+## <a name="adjust-the-zoom"></a>Ajuster le zoom
+1. Si vous ne voyez pas entièrement l’État de New York, vous pouvez ajuster le zoom. Avec le mappage sélectionné, dans le volet Propriétés, vous voyez les propriétés de **MapViewport** . 
 
-15. Développez la section **Affichage**, puis développez **Affichage** pour voir la propriété **Zoom**. Définissez-la sur **125**. 
+15. Développez la section **Affichage** , puis développez **Affichage** pour voir la propriété **Zoom** . Définissez-la sur **125**. 
 
     ![report-builder-map-zoom](../reporting-services/media/report-builder-map-zoom.png)
 
@@ -292,7 +297,7 @@ Dans cette section, vous ajoutez une couche qui affiche un arrière-plan de mosa
   
 1.  Basculez en mode Conception.  
   
-2.  Double-cliquez sur la carte pour afficher le volet **Couches**. Dans la barre d’outils, cliquez sur **Ajouter une couche**![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.png "rs_IconMapAddLayer").  
+2.  Double-cliquez sur la carte pour afficher le volet **Couches** . Dans la barre d’outils, cliquez sur **ajouter une couche** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer").  
   
 3.  Dans la liste déroulante, cliquez sur **Couche de mosaïques**.  
   
@@ -316,7 +321,7 @@ Dans cette section, pour permettre aux éléments d’une couche de laisser tran
   
 3.  Cliquez sur la flèche en regard de PolygonLayer1 > **Données de couche**. La boîte de dialogue **Propriétés des couches de polygones de la carte** s'ouvre.  
   
-4.  Sous l’onglet **Visibilité**, sous **Transparence (pourcentage)**, tapez **30**.  
+4.  Sous l’onglet **Visibilité** , sous **Transparence (pourcentage)**, tapez **30**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -334,11 +339,11 @@ Pour faire varier les formes de comté par couleur en fonction des données anal
   
 1.  Basculez en mode Conception.  
   
-2.  Double-cliquez sur la carte pour afficher le volet **Couches**.  
+2.  Double-cliquez sur la carte pour afficher le volet **Couches** .  
   
 3.  Cliquez sur la flèche en regard de PolygonLayer1, puis cliquez sur **Données de couche**. La boîte de dialogue **Propriétés des couches de polygones de la carte** s'ouvre.  
   
-4.  Sous l’onglet **Données analytiques**, sous **Dataset analytique**, sélectionnez DataSet1. Ce dataset a été créé par l’Assistant quand vous avez créé la requête de données spatiales pour les comtés.  
+4.  Sous l’onglet **Données analytiques** , sous **Dataset analytique**, sélectionnez DataSet1. Ce dataset a été créé par l’Assistant quand vous avez créé la requête de données spatiales pour les comtés.  
   
 6.  Sous **Champs à mettre en correspondance**, cliquez sur **Ajouter**. Une nouvelle ligne est ajoutée.  
   
@@ -361,7 +366,7 @@ Chaque comté qui contient un magasin a une couleur basée sur la palette de cou
 ### <a name="ColorRules"></a>6b. Spécifier des règles de couleur pour les polygones  
 Pour créer une règle qui fait varier la couleur de chaque comté en fonction des ventes des magasins, vous devez spécifier les valeurs de plage, le nombre de divisions dans la plage que vous souhaitez afficher, ainsi que les couleurs à utiliser.  
   
-#### Pour spécifier des règles de couleur pour tous les polygones ayant des données associées  
+#### <a name="to-specify-color-rules-for-all-polygons-that-have-associated-data"></a>Pour spécifier des règles de couleur pour tous les polygones ayant des données associées  
   
 1.  Basculez en mode Conception.  
   
@@ -429,11 +434,11 @@ Les comtés qui ont des magasins et des ventes associés s'affichent en fonction
 ### <a name="NoData"></a>6f. Modifier la couleur des comtés sans données  
 Vous pouvez définir les options d'affichage par défaut pour tous les éléments cartographiques d'une couche. Les règles de couleur ont priorité sur ces options d'affichage.  
   
-#### Pour définir les propriétés d'affichage de tous les éléments d'une couche  
+#### <a name="to-set-the-display-properties-for-all-elements-on-a-layer"></a>Pour définir les propriétés d'affichage de tous les éléments d'une couche  
   
 1.  Basculez en mode Conception.  
   
-2.  Double-cliquez sur la carte pour afficher le volet **Couches**.  
+2.  Double-cliquez sur la carte pour afficher le volet **Couches** .  
   
 3.  Cliquez sur la flèche bas sur PolygonLayer1, puis sur **Propriétés des polygones**. 
 
@@ -456,7 +461,7 @@ Pour représenter un nouveau magasin qui n’a pas encore été mis en place, da
   
 1.  Basculez en mode Conception.  
   
-2.  Double-cliquez sur la carte pour afficher le volet **Couches**. Dans la barre d’outils, cliquez sur **Ajouter une couche**  ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.png "rs_IconMapAddLayer"), puis cliquez sur **Couche de points**.  
+2.  Double-cliquez sur la carte pour afficher le volet **Couches** . Dans la barre d’outils, cliquez sur **ajouter une couche**![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer"), puis cliquez sur **couche de points**.    
   
     Une nouvelle couche de points est ajoutée à la carte. Par défaut, le type de données spatiales de la couche de points est **Incorporé**.  
   
@@ -474,15 +479,15 @@ Pour représenter un nouveau magasin qui n’a pas encore été mis en place, da
 
     ![report-builder-map-custom-point-general](../reporting-services/media/report-builder-map-custom-point-general.png)
   
-8.  Sous l’onglet **Marqueur**, pour **Type de marqueur**, sélectionnez **Étoile**.  
+8.  Sous l’onglet **Marqueur** , pour **Type de marqueur**, sélectionnez **Étoile**.  
 
 10. Changez **Taille du marqueur** en **18pt**.
   
-3.  Sous l’onglet **Étiquettes**, dans **Texte de l’étiquette**, tapez **New Store**.  
+3.  Sous l’onglet **Étiquettes** , dans **Texte de l’étiquette**, tapez **New Store**.  
   
 5.  Dans **Emplacement**, cliquez sur **Haut**.  
 
-13. Sous l’onglet **Police**, changez la taille de la police en **10pt** et en **Gras**.
+13. Sous l’onglet **Police** , changez la taille de la police en **10pt** et en **Gras**.
 
     ![report-builder-map-custom-point-font](../reporting-services/media/report-builder-map-custom-point-font.png)
   
@@ -501,7 +506,7 @@ Dans cette section, vous changez le centre de la carte et vous utilisez une autr
 
 1.  Sélectionnez la carte, puis cliquez avec le bouton droit et cliquez sur **Propriétés de la fenêtre d’affichage**.  
   
-2.  Sous l’onglet **Centrer et zoomer**, vérifiez que **Définir un centre d’affichage et un niveau de zoom** est sélectionné.  
+2.  Sous l’onglet **Centrer et zoomer** , vérifiez que **Définir un centre d’affichage et un niveau de zoom** est sélectionné.  
 
 4. Définissez **Niveau de zoom (pourcentage)** sur **125**.
   
@@ -531,7 +536,7 @@ Ce titre s'affiche alors dans la partie supérieure du rapport. En l'absence d'e
  
 3.  Dans **Nom**, tapez **Ventes des magasins de New York**.  
 
-3. Enregistrez-le sur votre ordinateur local ou sur un serveur [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].
+3. Enregistrez-le sur votre ordinateur local ou sur un serveur [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .
   
 4. Cliquez sur **Enregistrer**. 
 
@@ -539,14 +544,16 @@ Si vous l’enregistrez sur un serveur de rapports, vous pouvez le voir ici.
 
 ![report-builder-map-in-portal](../reporting-services/media/report-builder-map-in-portal.png) 
   
-## Étapes suivantes  
+## <a name="next-steps"></a>Étapes suivantes  
 Ceci conclut la procédure pas à pas décrivant comment ajouter une carte à votre rapport.  
   
 Pour plus d’informations, consultez [Cartes &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)  
 [Générateur de rapports dans SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 [Assistant Carte et Assistant Couche &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
-[Modifier l’affichage des polygones, des lignes et des points à l’aide de règles et de données analytiques &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md)  
+[Modifier l’affichage des polygones, des lignes et des points à l’aide de règles et de données analytiques &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
+
+

@@ -1,33 +1,38 @@
 ---
-title: "Aper&#231;u des rapports dans le G&#233;n&#233;rateur de rapports | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Aperçu des rapports dans le Générateur de rapports | Documents Microsoft"
+ms.custom: 
+ms.date: 01/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 1635c00223ae559c703a56e528f8e4f74f5a67ef
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Aper&#231;u des rapports dans le G&#233;n&#233;rateur de rapports
-  Quand vous créez un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], il est utile d’afficher fréquemment un aperçu du rapport pour vérifier qu’il s’affiche comme vous le souhaitez. Cliquez sur **Exécuter**pour afficher un aperçu du rapport. Le rapport est restitué en mode Aperçu.  
+# <a name="previewing-reports-in-report-builder"></a>Aperçu des rapports dans le Générateur de rapports
+  Quand vous créez un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , il est utile d’afficher fréquemment un aperçu du rapport pour vérifier qu’il s’affiche comme vous le souhaitez. Cliquez sur **Exécuter**pour afficher un aperçu du rapport. Le rapport est restitué en mode Aperçu.  
   
  Le Générateur de rapports améliore l'expérience des utilisateurs en termes d'affichage de l'aperçu en utilisant des sessions d'édition lorsqu'il est connecté à un serveur de rapports. La session d'édition crée un cache de données et rend les datasets du cache disponibles pour afficher régulièrement un aperçu du rapport. Une session d'édition n'est pas une fonctionnalité avec laquelle vous interagissez directement, mais la compréhension du mécanisme d'actualisation du dataset mis en cache vous aidera à améliorer les performances de rendu du rapport lors de son affichage.  
   
  D'autres avantages des sessions d'édition sont la capacité de modifier des rapports qui utilisent des sources de données incorporées ou de faire référence à des éléments tels que des images ou des sous-rapports stockés sur le serveur de rapports.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+> Il existe certaines différences entre l’aperçu du Générateur de rapports et l’affichage dans un navigateur. Par exemple, un contrôle de calendrier, qui est ajouté à un rapport lorsque vous spécifiez un paramètre de type Date/heure, est différent dans le Générateur de rapports et dans un navigateur. 
   
-## Amélioration de la performance d'aperçu  
+## <a name="improving-preview-performance"></a>Amélioration de la performance d'aperçu  
  Le mode de création et de mise à jour d'un rapport affecte la rapidité de rendu de l'aperçu du rapport. La première fois que vous affichez un aperçu d'un rapport qui repose sur une référence de serveur, une session d'édition est créée pour vous et les données utilisées lorsque le rapport est exécuté sont ajoutées à un cache de données stocké sur le serveur de rapports. Lorsque vous apportez des modifications au rapport qui n'affectent pas les données, la copie mise en cache des données est utilisée par le rapport. Cela signifie que vous ne verrez pas vos données changer chaque fois que vous afficherez un aperçu du rapport. Si vous souhaitez afficher les nouvelles données, cliquez sur le bouton **Actualiser** sur le ruban.  
   
  Les actions suivantes provoquent l'actualisation du cache et ralentiront le rendu lors du prochain affichage de l'aperçu du rapport :  
@@ -63,19 +68,19 @@ caps.handback.revision: 7
   
 -   Modifiez les sauts de page.  
   
- La session d'édition est créée la première fois que vous affichez l'aperçu d'un rapport. Par défaut, une session d'édition dure 7 200 secondes (2 heures). La session est réinitialisée à deux heures chaque fois que vous exécutez le rapport. Lorsque la session d'édition expire, le cache de données est supprimé. Si la session d'édition expire, une autre session est créée automatiquement la prochaine fois que vous affichez un aperçu du rapport. La durée d'expiration des sessions d'édition est configurable. Si la valeur par défaut de deux heures est trop longue ou trop courte pour vos besoins, contactez l'administrateur du serveur de rapports.  
+ La session d'édition est créée la première fois que vous affichez l'aperçu d'un rapport. Par défaut, une session d'édition dure 7 200 secondes (2 heures). La session est réinitialisée à deux heures chaque fois que vous exécutez le rapport. Lorsque la session d'édition expire, le cache de données est supprimé. Si la session d'édition expire, une autre session est créée automatiquement la prochaine fois que vous affichez un aperçu du rapport. La durée d'expiration des sessions d'édition est configurable. Si la valeur par défaut de deux heures est trop longue ou trop courte pour vos besoins, contactez l'administrateur du serveur de rapports.  
   
  Par défaut, le cache de données peut contenir jusqu'à cinq datasets. Si vous utilisez de nombreuses combinaisons différentes de valeurs de paramètres, le rapport peut nécessiter plus de données. Ceci requiert l'actualisation du cache et le rendu du rapport sera plus lent lors du prochain aperçu. Le nombre d'entrées dans le cache est configurable par l'administrateur du serveur de rapports.  
   
-## Concurrence de mises à jour de rapport  
+## <a name="concurrency-of-report-updates"></a>Concurrence de mises à jour de rapport  
  Fréquemment, l'affichage d'un aperçu d'un rapport constitue une étape de la mise à jour avant l'enregistrement du rapport sur un serveur de rapports. Lorsque vous mettez à jour un rapport, il est possible qu'une autre personne le mette à jour et l'enregistre au même moment. Le rapport enregistré en dernier représente la version de rapport qu'il est possible d'afficher et de mettre à jour ultérieurement. Cela signifie que la version du rapport dont vous avez affiché l'aperçu n'est peut-être pas la version que vous rouvrez. Vous disposez de l'option d'enregistrer le rapport sous un nouveau nom à l'aide de l'option **Enregistrer sous** du menu du Générateur de rapports.  
   
-## Éléments de rapport externes  
+## <a name="external-report-items"></a>Éléments de rapport externes  
  Votre rapport peut inclure des éléments tels que des sources de données partagées, des images externes et des sous-rapports stockés séparément du rapport. Étant donné que les éléments sont stockés séparément, il est possible qu'ils soient déplacés vers un emplacement différent du serveur de rapports ou supprimés. Si cela se produit, il est possible que vous ne puissiez pas afficher un aperçu de votre rapport. Vous pouvez soit mettre à jour le rapport pour indiquer l'emplacement mis à jour de l'élément ou, si l'élément a été supprimé, le remplacer par un élément existant, soit supprimer la référence à l'élément dans le rapport.  
   
  Si un sous-rapport utilisé par votre rapport est modifié après la création de votre session d'édition, le rendu du rapport échouera dans l'aperçu. Pour afficher un aperçu du rapport avec succès, vous devez enregistrer le rapport ou cliquer sur **Actualiser** pour obtenir de nouvelles données.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Mise en forme des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
@@ -84,3 +89,4 @@ caps.handback.revision: 7
  [Enregistrement des rapports &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
   
   
+

@@ -1,23 +1,28 @@
 ---
-title: "Ajouter ou supprimer un en-t&#234;te ou un pied de page (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ajouter ou supprimer un en-tête de Page ou le pied de page (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 88e933ca66ab9f8f6e90237ef045b12927fab40c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Ajouter ou supprimer un en-t&#234;te ou un pied de page (G&#233;n&#233;rateur de rapports et SSRS)
+# <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Ajouter ou supprimer un en-tête ou un pied de page (Générateur de rapports et SSRS)
   Vous pouvez ajouter du texte statique, des images, des lignes, des rectangles et des bordures aux en-têtes ou aux pieds de page. Vous pouvez placer des expressions et des images liées aux données dans une zone de texte si vous souhaitez qu'un en-tête ou pied de page contienne des données variables ou calculées.  
   
 > [!NOTE]  
@@ -26,7 +31,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Pour ajouter un en-tête ou pied de page  
+### <a name="to-add-a-page-header-or-footer"></a>Pour ajouter un en-tête ou pied de page  
   
 1.  Ouvrez un rapport.  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  Les options **En-tête** et **Pied de page** s’affichent uniquement si aucun en-tête ou pied de page ne fait encore partie du rapport.  
   
-### Pour configurer un en-tête ou un pied de page  
+### <a name="to-configure-a-page-header-or-footer"></a>Pour configurer un en-tête ou un pied de page  
   
 1.  Dans l'aire de conception, cliquez avec le bouton droit sur l'en-tête ou le pied de page.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 6
   
 4.  Cliquez avec le bouton droit sur le pied de page, puis cliquez sur **Propriétés du pied de page** pour ajouter des bordures, des images ou des couleurs d’arrière-plan ou pour ajuster la largeur du pied de page. Cliquez ensuite sur **OK**.  
   
-### Pour supprimer un en-tête ou pied de page  
+### <a name="to-remove-a-page-header-or-footer"></a>Pour supprimer un en-tête ou pied de page  
   
 1.  Ouvrez un rapport.  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  La suppression d'un en-tête ou d'un pied de page entraîne sa suppression du rapport. Les éléments que vous avez précédemment ajoutés à l'en-tête ou au pied de page ne réapparaissent pas si vous le rajoutez.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [En-têtes et pieds de page &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
   
   

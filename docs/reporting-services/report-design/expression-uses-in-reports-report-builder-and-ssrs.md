@@ -1,30 +1,35 @@
 ---
-title: "Utilisation d&#39;expressions dans les rapports (G&#233;n&#233;rateur de rapport et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "expressions [Reporting Services], à propos des expressions"
+title: "Expression utilise dans les rapports (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 caps.latest.revision: 59
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 59
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 546817a006d06b1acbea5962cc1a3230867e111e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Utilisation d&#39;expressions dans les rapports (G&#233;n&#233;rateur de rapport et SSRS)
-Dans les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], les expressions sont utilisées dans la définition des rapports pour spécifier ou calculer les valeurs des paramètres, requêtes, filtres, propriétés d’éléments de rapport, définitions de groupe et de tri, propriétés de zone de texte, signets, explorateurs de documents, contenu d’en-tête et de pied de page dynamique, images et définitions de source de données dynamiques. Cette rubrique fournit des exemples des nombreux emplacements où vous pouvez utiliser des expressions pour varier le contenu ou l'apparence d'un rapport. Cette liste n'est pas exhaustive. Vous pouvez définir une expression pour toute propriété dans une boîte de dialogue qui affiche le bouton d’expression (**fx**) ou dans une liste déroulante qui affiche **\<Expression...>**.  
+# <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Utilisation d'expressions dans les rapports (Générateur de rapport et SSRS)
+Dans les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , les expressions sont utilisées dans la définition des rapports pour spécifier ou calculer les valeurs des paramètres, requêtes, filtres, propriétés d’éléments de rapport, définitions de groupe et de tri, propriétés de zone de texte, signets, explorateurs de documents, contenu d’en-tête et de pied de page dynamique, images et définitions de source de données dynamiques. Cette rubrique fournit des exemples des nombreux emplacements où vous pouvez utiliser des expressions pour varier le contenu ou l'apparence d'un rapport. Cette liste n'est pas exhaustive. Vous pouvez définir une expression pour n’importe quelle propriété dans une boîte de dialogue qui affiche l’expression (**fx**) bouton ou dans une liste déroulante qui affiche  **\<Expression... >**.  
   
- Les expressions peuvent être simples ou complexes. Les *expressions simples* contiennent une référence à un champ de dataset, paramètre ou champ intégré unique. Les expressions complexes peuvent contenir plusieurs références intégrées, opérateurs et appels de fonction. Par exemple, une expression complexe peut inclure la fonction Sum appliquée au champ Sales.  
+ Les expressions peuvent être simples ou complexes. Les*expressions simples* contiennent une référence à un champ de dataset, paramètre ou champ intégré unique. Les expressions complexes peuvent contenir plusieurs références intégrées, opérateurs et appels de fonction. Par exemple, une expression complexe peut inclure la fonction Sum appliquée au champ Sales.  
   
- Les expressions sont écrites en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Une expression commence par un signe égal (=) suivi d'une combinaison de références à des collections intégrées, telles que des paramètres et champs de dataset, constantes, fonctions et opérateurs.  
+ Les expressions sont écrites en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Une expression commence par un signe égal (=) suivi d'une combinaison de références à des collections intégrées, telles que des paramètres et champs de dataset, constantes, fonctions et opérateurs.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -59,7 +64,7 @@ Dans les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnovers
 |Mettre en forme des données dans une zone de texte selon la valeur.|Propriété Color d’un espace réservé à l’intérieur d’une zone de texte sur la ligne Détails d’un tableau matriciel. Utilisez la **boîte de dialogue Propriétés de la zone de texte, Police**.|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |Calculer une valeur une fois pour s'y reporter dans tout le rapport.|Propriété Value d’une variable de rapport. Utilisez la **boîte de dialogue Propriétés du rapport, Variables**.|`=Variables!MyCalculation.Value`|  
 |Inclure des valeurs spécifiques pour plusieurs champs d'un dataset.|Équation de filtre pour un groupe dans un tableau matriciel. Utilisez la **boîte de dialogue Propriétés du tableau matriciel, Filtres**.|Pour le type de données, sélectionnez **Booléen**.<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
-|Masquer une zone de texte sur l'aire de conception, qui peut être activée ou désactivée par l'utilisateur à l'aide d'un paramètre booléen nommé *Show*.|Propriété masquée dans une zone de texte. Utilisez la **boîte de dialogue Propriétés de la zone de texte, Visibilité**.|`=Not Parameters!` *Show\<boolean parameter>* `.Value`|  
+|Masquer une zone de texte sur l'aire de conception, qui peut être activée ou désactivée par l'utilisateur à l'aide d'un paramètre booléen nommé *Show*.|Propriété masquée dans une zone de texte. Utilisez la **boîte de dialogue Propriétés de la zone de texte, Visibilité**.|`=Not Parameters!`*Afficher\<paramètre booléen >*`.Value`|  
 |Spécifier un contenu dynamique de l'en-tête de page ou du pied de page.|Valeur d’un espace réservé à l’intérieur d’une zone de texte placée dans l’en-tête ou le pied de page.|`="Page " & Globals!PageNumber & " of "  & Globals!TotalPages`|  
 |Spécifier une source de données de façon dynamique à l'aide d'un paramètre.|Chaîne de connexion sur la source de données. Utilisez la **boîte de dialogue Propriétés de la source de données, Général**.|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2012"`|  
 |Identifier toutes les valeurs pour un paramètre à valeurs multiples choisi par l'utilisateur.|Valeur d’un espace réservé à l’intérieur d’une zone de texte. Utilisez la **boîte de dialogue Propriétés du tableau matriciel, Filtres**.|`=Join(Parameters!MyMultivalueParameter.Value,", ")`|  
@@ -68,7 +73,7 @@ Dans les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnovers
 |Spécifier une date mise en forme pour une culture spécifique.|Valeur d’un espace réservé à l’intérieur d’une zone de texte dans une région de données. Utilisez la **boîte de dialogue Propriétés de la zone de texte, Général**.|`=Fields!OrderDate.Value.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("de-DE"))`|  
 |Concaténer une chaîne et un nombre mis en forme comme un pourcentage à deux décimales.|Valeur d’un espace réservé à l’intérieur d’une zone de texte dans une région de données. Utilisez la **boîte de dialogue Propriétés de la zone de texte, Général**.|`="Growth Percent: " & Format(Fields!Growth.Value,"p2")`|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   

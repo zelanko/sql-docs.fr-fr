@@ -1,25 +1,30 @@
 ---
-title: "Didacticiel&#160;: introduction aux expressions | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Didacticiel : Introduction aux Expressions | Documents Microsoft"
+ms.custom: 
+ms.date: 09/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 caps.latest.revision: 14
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 14
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 97b19aaffd06a196d3cbd39e44b49c971a146edf
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Didacticiel&#160;: introduction aux expressions
-Dans ce didacticiel [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)], vous utilisez des expressions avec des opérateurs et des fonctions communes pour créer des rapports paginés [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] puissants et flexibles. 
+# <a name="tutorial-introducing-expressions"></a>Didacticiel : introduction aux expressions
+Dans ce didacticiel [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] , vous utilisez des expressions avec des opérateurs et des fonctions communes pour créer des rapports paginés [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] puissants et flexibles. 
 
 Vous allez écrire des expressions qui concatènent des valeurs de noms, qui recherchent des valeurs dans un autre dataset, qui affichent différentes couleurs en fonction des valeurs de champ, etc.  
   
@@ -31,7 +36,7 @@ Cette illustration montre un rapport similaire à celui que vous allez créer.
   
 Durée estimée pour effectuer ce didacticiel : 30 minutes.  
   
-## Spécifications  
+## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="Setup"></a>1. Créer un rapport de tableau et un dataset à partir de l'Assistant Tableau ou matrice  
@@ -40,7 +45,7 @@ Dans cette section, vous allez créer un rapport de tableau, une source de donn�
 > [!NOTE]  
 > Dans ce didacticiel, la requête contient les valeurs des données : elle n’a donc pas besoin d’une source de données externe. Cela rend la requête assez longue. Dans un environnement métier, une requête ne contient pas les données. Ceci est nécessaire à des fins de formation uniquement.  
   
-### Pour créer un rapport tabulaire  
+### <a name="to-create-a-table-report"></a>Pour créer un rapport tabulaire  
   
 1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) depuis votre ordinateur, depuis le portail web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou en mode intégré SharePoint.  
   
@@ -52,9 +57,9 @@ Dans cette section, vous allez créer un rapport de tableau, une source de donn�
   
 3.  Dans le volet droit, cliquez sur **Assistant Tableau ou matrice**.  
   
-4.  Dans la page **Choisir un dataset**, cliquez sur **Créer un dataset** > **Suivant**.  
+4.  Dans la page **Choisir un dataset** , cliquez sur **Créer un dataset** > **Suivant**.  
   
-6.  Dans la page **Choisir une connexion à une source de données**, sélectionnez une source de données de type **SQL Server**. Sélectionnez une source de données dans la liste ou naviguez jusqu'au serveur de rapports pour en sélectionner une.  
+6.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données de type **SQL Server**. Sélectionnez une source de données dans la liste ou naviguez jusqu'au serveur de rapports pour en sélectionner une.  
 
     > [!NOTE]  
     > La source de données que vous choisissez n’a pas d’importance tant que vous disposez des autorisations appropriées. Vous n'allez pas récupérer de données à partir de la source de données. Pour plus d’informations, consultez [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -92,13 +97,13 @@ Dans cette section, vous allez créer un rapport de tableau, une source de donn�
     ```  
 
   
-10. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** (**!**). Le jeu de résultats affiche 23 lignes de données dans les colonnes suivantes : FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurcharse et LastPurchase.  
+10. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** (**!**). Le jeu de résultats affiche 23 lignes de données dans les colonnes suivantes : FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurcharse et LastPurchase.  
 
     ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
 11. Cliquez sur **Suivant**.  
   
-12. Dans la page **Organiser les champs**, faites glisser les champs suivants, dans l’ordre spécifié, de la liste **Champs disponibles** vers la liste **Valeurs**.  
+12. Dans la page **Organiser les champs** , faites glisser les champs suivants, dans l’ordre spécifié, de la liste **Champs disponibles** vers la liste **Valeurs** .  
   
     -   StateProvince   
     -   CountryRegionID  
@@ -107,11 +112,11 @@ Dans cette section, vous allez créer un rapport de tableau, une source de donn�
   
     Étant donné que les champs CountryRegionID et YTDPurchase contiennent des données numériques, l’agrégat SUM est appliqué par défaut. Cependant, vous ne voulez pas que ces données soient des sommes.  
    
-13. Dans la liste **Valeurs**, cliquez avec le bouton droit sur **CountryRegionID**, puis décochez la case **Sum**.  
+13. Dans la liste **Valeurs** , cliquez avec le bouton droit sur **CountryRegionID** , puis décochez la case **Sum** .  
   
     L'agrégat Sum n'est plus appliqué à CountryRegionID.  
   
-14. Dans la liste **Valeurs**, cliquez avec le bouton droit sur **YTDPurchase** et cliquez sur l’option **Sum**.  
+14. Dans la liste **Valeurs** , cliquez avec le bouton droit sur **YTDPurchase** et cliquez sur l’option **Sum** .  
   
     L'agrégat Sum n'est plus appliqué à YTDPurchase.  
     
@@ -119,7 +124,7 @@ Dans cette section, vous allez créer un rapport de tableau, une source de donn�
   
 15. Cliquez sur **Suivant**.  
   
-16. Dans la page **Choisir la disposition**, conservez tous les paramètres par défaut, puis cliquez sur **Suivant**.  
+16. Dans la page **Choisir la disposition** , conservez tous les paramètres par défaut, puis cliquez sur **Suivant**.  
 
     ![report-builder-expression-tutorial-choose-layout](../reporting-services/media/report-builder-expression-tutorial-choose-layout.png)
   
@@ -127,34 +132,34 @@ Dans cette section, vous allez créer un rapport de tableau, une source de donn�
   
 ## <a name="UpdateNames"></a>2. Mettre à jour les noms par défaut de la source de données et du dataset  
   
-### Pour mettre à jour le nom par défaut de la source de données  
+### <a name="to-update-the-default-name-of-the-data-source"></a>Pour mettre à jour le nom par défaut de la source de données  
   
-1.  Dans le volet Données du rapport, développez le dossier **Sources de données**.  
+1.  Dans le volet Données du rapport, développez le dossier **Sources de données** .  
   
 2.  Cliquez avec le bouton droit sur **DataSource1** et cliquez sur **Propriétés de la source de données**.  
   
-3.  Dans la zone **Nom**, tapez **ExpressionsDataSource**.  
+3.  Dans la zone **Nom** , tapez **ExpressionsDataSource**.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### Pour mettre à jour le nom par défaut du dataset  
+### <a name="to-update-the-default-name-of-the-dataset"></a>Pour mettre à jour le nom par défaut du dataset  
   
-1.  Dans le volet Données du rapport, développez le dossier **Datasets**.  
+1.  Dans le volet Données du rapport, développez le dossier **Datasets** .  
   
 2.  Cliquez avec le bouton droit sur le **Dataset1** et cliquez sur **Propriétés du dataset**.  
 
     ![report-builder-expression-tutorial-rename-dataset](../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png)
   
-3.  Dans la zone **Nom**, tapez **Expressions**.  
+3.  Dans la zone **Nom** , tapez **Expressions**.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="Concatenate"></a>3. Afficher la première initiale et le nom de famille  
-Dans cette section, vous allez utiliser la fonction **Left** et l’opérateur **Concaténer** (**&**) dans une expression dont la valeur est un nom qui comprend une initiale et un nom. Vous pouvez générer l’expression pas à pas ou avancer dans la procédure et copier/coller l’expression à partir du didacticiel dans la boîte de dialogue **Expression**.   
+Dans cette section, vous allez utiliser la fonction **Left** et l’opérateur **Concaténer** (**&**) dans une expression dont la valeur est un nom qui comprend une initiale et un nom. Vous pouvez générer l’expression pas à pas ou avancer dans la procédure et copier/coller l’expression à partir du didacticiel dans la boîte de dialogue **Expression** .   
   
-1.  Cliquez avec le bouton droit sur la colonne **StateProvince**, pointez sur **Insérer une colonne** et cliquez sur **Gauche**.  
+1.  Cliquez avec le bouton droit sur la colonne **StateProvince** , pointez sur **Insérer une colonne**et cliquez sur **Gauche**.  
   
-    Une nouvelle colonne est ajoutée à gauche de la colonne **StateProvince**. 
+    Une nouvelle colonne est ajoutée à gauche de la colonne **StateProvince** . 
     
     ![report-builder-expression-tutorial-insert-column](../reporting-services/media/report-builder-expression-tutorial-insert-column.png) 
   
@@ -164,17 +169,17 @@ Dans cette section, vous allez utiliser la fonction **Left** et l’opérateur *
 
     ![report-builder-expression-tutorial-insert-expression](../reporting-services/media/report-builder-expression-tutorial-insert-expression.png)
   
-4.  Dans la boîte de dialogue **Expression**, développez **Fonctions communes**, puis cliquez sur **Texte**.  
+4.  Dans la boîte de dialogue **Expression** , développez **Fonctions communes**, puis cliquez sur **Texte**.  
   
-5.  Dans la liste **Élément**, double-cliquez sur **Left**.  
+5.  Dans la liste **Élément** , double-cliquez sur **Left**.  
   
     La fonction **Left** est ajoutée à l’expression.  
     
     ![report-builder-expression-tutorial-left-function](../reporting-services/media/report-builder-expression-tutorial-left-function.png)
   
-6.  Dans la liste **Catégorie**, cliquez sur **Champs (Expressions)**.  
+6.  Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)**.  
   
-7.  Dans la liste **Valeurs**, double-cliquez sur **FirstName**.  
+7.  Dans la liste **Valeurs** , double-cliquez sur **FirstName**.  
   
 8.  Tapez **, 1)**  
   
@@ -184,9 +189,9 @@ Dans cette section, vous allez utiliser la fonction **Left** et l’opérateur *
 
     Un point et un espace sont ajoutés après l’expression.
   
-10. Dans la liste **Valeurs**, double-cliquez sur **LastName**.  
+10. Dans la liste **Valeurs** , double-cliquez sur **LastName**.  
   
-    L’expression complétée est la suivante : `=Left(Fields!FirstName.Value, 1) &". "& Fields!LastName.Value`  
+    L’expression complétée est la suivante : `=Left(Fields!FirstName.Value, 1) &". "& Fields!LastName.Value`  
     
     ![report-builder-expression-tutorial-complete-name-expression](../reporting-services/media/report-builder-expression-tutorial-complete-name-expression.png)
   
@@ -197,7 +202,7 @@ Dans cette section, vous allez utiliser la fonction **Left** et l’opérateur *
 ## <a name="DateFormat"></a>(facultatif) Mettre en forme les colonnes de date et de devise, et la ligne d’en-tête  
 Dans cette section, vous allez mettre en forme la colonne **Last Purchase** qui contient des dates et la colonne YTDPurchase qui contient des devises. Vous allez également mettre en forme la ligne d’en-tête.  
   
-### Pour formater la colonne de date  
+### <a name="to-format-the-date-column"></a>Pour formater la colonne de date  
   
 1.  Cliquez sur **Conception** pour repasser en mode Conception.  
   
@@ -205,17 +210,17 @@ Dans cette section, vous allez mettre en forme la colonne **Last Purchase** qui 
 
     ![report-builder-expression-tutorial-date-format](../reporting-services/media/report-builder-expression-tutorial-date-format.png)
   
-3.  Ensuite, dans la section **Nombre**, cliquez sur la flèche en regard de **Styles des espaces réservés**, puis sélectionnez **Valeurs d’aperçu**. 
+3.  Ensuite, dans la section **Nombre** , cliquez sur la flèche en regard de **Styles des espaces réservés** , puis sélectionnez **Valeurs d’aperçu**. 
 
     ![report-builder-expression-tutorial-sample-values](../reporting-services/media/report-builder-expression-tutorial-sample-values.png)
 
     Vous pouvez maintenant voir un exemple de la mise en forme que vous avez sélectionnée. 
   
-### Pour mettre en forme des valeurs monétaires
+### <a name="to-format-the-currency-column"></a>Pour mettre en forme des valeurs monétaires
 
-- Sélectionnez la cellule de données dans la colonne **YTDPurchase**, puis dans la section **Nombre**, sélectionnez **Symbole monétaire**.
+- Sélectionnez la cellule de données dans la colonne **YTDPurchase** , puis dans la section **Nombre** , sélectionnez **Symbole monétaire**.
  
-### Pour mettre en forme des en-têtes de colonnes
+### <a name="to-format-the-column-headers"></a>Pour mettre en forme des en-têtes de colonnes
 
 1. Sélectionnez la ligne des en-têtes de colonnes.
 
@@ -236,17 +241,17 @@ Dans cette section, vous allez ajouter des couleurs pour afficher le sexe d’un
 Pour conserver la couleur que vous avez appliquée dans cette cellule de table lorsque vous transformez le rapport en rapport à bandes, ajoutez un rectangle, puis ajoutez la couleur d’arrière-plan au rectangle.  
     
  
-### Pour ajouter une colonne M/F  
+### <a name="to-add-an-mf-column"></a>Pour ajouter une colonne M/F  
   
-1.  Cliquez avec le bouton droit sur la colonne **Name**, pointez sur **Insérer une colonne**, puis cliquez sur **Gauche**.  
+1.  Cliquez avec le bouton droit sur la colonne **Name** , pointez sur **Insérer une colonne**, puis cliquez sur **Gauche**.  
   
-    Une nouvelle colonne est ajoutée à gauche de la colonne **Name**.  
+    Une nouvelle colonne est ajoutée à gauche de la colonne **Name** .  
   
 2.  Cliquez sur l’en-tête de la nouvelle colonne, puis tapez **M/F**.  
   
-### Pour ajouter un rectangle  
+### <a name="to-add-a-rectangle"></a>Pour ajouter un rectangle  
   
-1.   Sous l’onglet **Insérer**, cliquez sur **Rectangle**, puis cliquez sur la cellule de données de la colonne **M/F**.  
+1.   Sous l’onglet **Insérer** , cliquez sur **Rectangle** , puis cliquez sur la cellule de données de la colonne **M/F** .  
   
      Un rectangle est ajouté à la cellule.  
      
@@ -256,7 +261,7 @@ Pour conserver la couleur que vous avez appliquée dans cette cellule de table l
 
     ![report-builder-expression-tutorial-narrow-column](../reporting-services/media/report-builder-expression-tutorial-narrow-column.png)
   
-### Pour utiliser des couleurs pour afficher le sexe  
+### <a name="to-use-color-to-show-gender"></a>Pour utiliser des couleurs pour afficher le sexe  
   
 1.  Cliquez avec le bouton droit sur le rectangle dans la cellule de données de la colonne **M/F**, puis cliquez sur **Propriétés du rectangle**.  
   
@@ -264,43 +269,43 @@ Pour conserver la couleur que vous avez appliquée dans cette cellule de table l
   
 3.  Dans la boîte de dialogue **Expression**, développez **Fonctions communes** et cliquez sur **Flux de programme**.  
   
-4.  Dans la liste **Élément**, double-cliquez sur **Switch**.  
+4.  Dans la liste **Élément** , double-cliquez sur **Switch**.  
   
-5.  Dans la liste **Catégorie**, cliquez sur **Champs (Expressions)**.  
+5.  Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)**.  
   
-6.  Dans la liste **Valeurs**, double-cliquez sur **Gender**.  
+6.  Dans la liste **Valeurs** , double-cliquez sur **Gender**.  
   
-7.  Tapez **= « Masculin »,** (y compris la virgule).
+7.  Tapez **= « Masculin »,** (y compris la virgule).
 
-8. Dans la liste **Catégorie**, cliquez sur **Constantes**, et dans la zone **Valeurs**, cliquez sur **Bleuet**.
+8. Dans la liste **Catégorie** , cliquez sur **Constantes**, et dans la zone **Valeurs** , cliquez sur **Bleuet**.
 
     ![report-builder-expression-tutorial-color-expression-cornflower-blue](../reporting-services/media/report-builder-expression-tutorial-color-expression-cornflower-blue.png)
 
-9. Ajoutez une virgule après « Bleuet ». 
+9. Ajoutez une virgule après « Bleuet ». 
   
-5.  Dans la liste **Catégorie**, cliquez sur **Champs (Expressions)**, puis, dans la liste **Valeurs**, double-cliquez de nouveau sur **Gender**.  
+5.  Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)**, puis, dans la liste **Valeurs** , double-cliquez de nouveau sur **Gender** .  
   
-7.  Tapez **= « Féminin »,** (y compris la virgule). 
+7.  Tapez **= « Féminin »,** (y compris la virgule). 
 
-8. Dans la liste **Catégorie**, cliquez sur **Constantes**, et dans la zone **Valeurs**, cliquez sur **Tomate**.
+8. Dans la liste **Catégorie** , cliquez sur **Constantes**, et dans la zone **Valeurs** , cliquez sur **Tomate**.
 
-13. Ajoutez une parenthèse fermante **)** après « Tomate ». 
+13. Ajoutez une parenthèse fermante **)** après « Tomate ». 
   
-    L’expression complétée est la suivante : `=Switch(Fields!Gender.Value ="Male", "CornflowerBlue",Fields!Gender.Value ="Female","Tomato")`  
+    L’expression complétée est la suivante : `=Switch(Fields!Gender.Value ="Male", "CornflowerBlue",Fields!Gender.Value ="Female","Tomato")`  
     
     ![report-builder-expression-tutorial-color-expression-complete](../reporting-services/media/report-builder-expression-tutorial-color-expression-complete.png)
   
-12. Cliquez sur **OK**, puis de nouveau sur **OK** pour fermer la boîte de dialogue **Propriétés du rectangle**.  
+12. Cliquez sur **OK**, puis de nouveau sur **OK** pour fermer la boîte de dialogue **Propriétés du rectangle** .  
   
 14. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
 
     ![report-builder-expression-tutorial-preview-m-f-column](../reporting-services/media/report-builder-expression-tutorial-preview-m-f-column.png)
 
-### Pour mettre en forme les rectangles de couleur
+### <a name="to-format-the-color-rectangles"></a>Pour mettre en forme les rectangles de couleur
 
 1. Cliquez sur **Conception** pour repasser en mode Conception.  
 
-16. Sélectionnez le rectangle dans la colonne **M/F**. Dans le volet Propriétés, dans la section Bordure, définissez ces propriétés :
+16. Sélectionnez le rectangle dans la colonne **M/F** . Dans le volet Propriétés, dans la section Bordure, définissez ces propriétés :
 
     - BorderColor = White
     - BorderStyle = Solid
@@ -315,17 +320,17 @@ Pour conserver la couleur que vous avez appliquée dans cette cellule de table l
 ## <a name="Lookup"></a>5. Rechercher un nom de CountryRegion  
 Dans cette section, vous allez créer le dataset CountryRegion et utiliser la fonction **Lookup** pour afficher le nom d’un pays/d’une région au lieu de l’identifiant de pays/région.  
   
-### Pour créer le dataset CountryRegion  
+### <a name="to-create-the-countryregion-dataset"></a>Pour créer le dataset CountryRegion  
   
 1.  Cliquez sur **Conception** pour repasser en mode Conception.  
   
-2.  Dans le volet des données de rapport, cliquez sur **Nouveau**, puis sur **Dataset**.  
+2.  Dans le volet des données de rapport, cliquez sur **Nouveau** , puis sur **Dataset**.  
   
-3.  Dans **Propriétés du dataset, cliquez sur **Utiliser un dataset incorporé dans mon rapport**.  
+3.  Dans ** Propriétés du Dataset, cliquez sur **utiliser un dataset incorporé dans mon rapport**.  
   
-4.  Dans la liste **Source de données**, sélectionnez ExpressionsDataSource.  
+4.  Dans la liste **Source de données** , sélectionnez ExpressionsDataSource.  
   
-5.  Dans la zone **Nom**, tapez **CountryRegion**.  
+5.  Dans la zone **Nom** , tapez **CountryRegion**.  
   
 6.  Vérifiez que le type de requête **Texte** est sélectionné et cliquez sur **Concepteur de requêtes**.  
   
@@ -354,13 +359,13 @@ Dans cette section, vous allez créer le dataset CountryRegion et utiliser la fo
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-11. Recliquez sur **OK** pour fermer la boîte de dialogue **Propriétés du dataset**.  
+11. Recliquez sur **OK** pour fermer la boîte de dialogue **Propriétés du dataset** .  
 
-     À présent, vous avez un deuxième dataset dans la colonne **Report Data**.
+     À présent, vous avez un deuxième dataset dans la colonne **Report Data** .
   
-### Pour rechercher des valeurs dans le dataset CountryRegion  
+### <a name="to-look-up-values-in-the-countryregion-dataset"></a>Pour rechercher des valeurs dans le dataset CountryRegion  
   
-1.  Cliquez sur l’en-tête de colonne **Country Region ID**, puis supprimez **ID** pour que le nom de l’en-tête devienne **Country Region**.  
+1.  Cliquez sur l’en-tête de colonne **Country Region ID** , puis supprimez **ID**pour que le nom de l’en-tête devienne **Country Region**.  
   
 2.  Cliquez avec le bouton droit sur la cellule de données pour la colonne **Country Region** et cliquez sur **Expression**.  
   
@@ -368,9 +373,9 @@ Dans cette section, vous allez créer le dataset CountryRegion et utiliser la fo
   
     L’expression restante est : `=`  
   
-4.  Dans la boîte de dialogue **Expression**, développez **Fonctions communes** et cliquez sur **Divers**. Ensuite, dans la liste **Élément**, double-cliquez sur **Lookup**.  
+4.  Dans la boîte de dialogue **Expression** , développez **Fonctions communes** et cliquez sur **Divers**. Ensuite, dans la liste **Élément** , double-cliquez sur **Lookup**.  
   
-6.  Dans la liste **Catégorie**, cliquez sur **Champs (Expressions)**, puis dans la liste **Valeurs**, double-cliquez sur **CountryRegionID**.  
+6.  Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)**, puis dans la liste **Valeurs** , double-cliquez sur **CountryRegionID**.  
   
 8.  Placez le curseur immédiatement après `CountryRegionID.Value`, puis tapez **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")**  
   
@@ -385,13 +390,13 @@ Dans cette section, vous allez créer le dataset CountryRegion et utiliser la fo
 ## <a name="Count"></a>6. Compter les jours depuis le dernier achat  
 Dans cette section, vous allez ajouter une colonne, puis utiliser la fonction **Now** ou la variable globale intégrée `ExecutionTime` pour calculer le nombre de jours écoulés depuis les derniers achats d’un client.  
   
-### Pour ajouter la colonne Days Ago  
+### <a name="to-add-the-days-ago-column"></a>Pour ajouter la colonne Days Ago  
   
 1.  Cliquez sur **Conception** pour repasser en mode Conception.  
   
-2.  Cliquez avec le bouton droit sur la colonne **Last Purchase**, pointez sur **Insérer une colonne** et cliquez sur **Droite**.  
+2.  Cliquez avec le bouton droit sur la colonne **Last Purchase** , pointez sur **Insérer une colonne**et cliquez sur **Droite**.  
   
-    Une nouvelle colonne est ajoutée à droite de la colonne **Last Purchase**.  
+    Une nouvelle colonne est ajoutée à droite de la colonne **Last Purchase** .  
   
 3.  Dans l’en-tête de colonne, tapez **Days Ago**.  
   
@@ -403,18 +408,18 @@ Dans cette section, vous allez ajouter une colonne, puis utiliser la fonction **
   
 7.  Immédiatement après `DateDiff(`, tapez **"d",** (y compris les guillemets "" et la virgule). 
   
-9. Dans la liste **Catégorie**, cliquez sur **Champs (Expressions)**, puis dans la liste **Valeurs**, double-cliquez sur **LastPurchase**.  
+9. Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)**, puis dans la liste **Valeurs** , double-cliquez sur **LastPurchase**.  
   
 11. Immédiatement après `Fields!LastPurchase.Value`, tapez **,** (virgule). 
   
 13. Dans la liste **Catégorie**, cliquez de nouveau sur **Date et heure**, puis dans la liste **Élément**, double-cliquez sur **Now**.  
   
     > [!WARNING]  
-    > Dans les rapports de production, vous ne devez pas utiliser la fonction **Now** dans les expressions évaluées plusieurs fois pendant la génération du rapport (par exemple, dans les lignes de détails d’un rapport). La valeur de **Now** change de ligne en ligne et les différentes valeurs affectent les résultats de l’évaluation des expressions, ce qui entraîne des résultats légèrement incohérents. Utilisez à la place la variable globale `ExecutionTime` fournie par [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+    > Dans les rapports de production, vous ne devez pas utiliser la fonction **Now** dans les expressions évaluées plusieurs fois pendant la génération du rapport (par exemple, dans les lignes de détails d’un rapport). La valeur de **Now** change de ligne en ligne et les différentes valeurs affectent les résultats de l’évaluation des expressions, ce qui entraîne des résultats légèrement incohérents. Utilisez à la place la variable globale `ExecutionTime` fournie par [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
 15. Supprimez la parenthèse de gauche après `Now(`, puis tapez une parenthèse fermante **)**.  
   
-    L’expression complétée est la suivante : `=DateDiff("d", Fields!LastPurchase.Value, Now)`  
+    L’expression complétée est la suivante : `=DateDiff("d", Fields!LastPurchase.Value, Now)`  
     
     ![report-builder-expression-tutorial-date-since-last-purchase](../reporting-services/media/report-builder-expression-tutorial-date-since-last-purchase.png)
   
@@ -425,19 +430,19 @@ Dans cette section, vous allez ajouter une colonne, puis utiliser la fonction **
 ## <a name="Indicator"></a>7. Utiliser un indicateur pour afficher la comparaison des ventes  
 Dans cette section, vous allez ajouter une nouvelle colonne et utiliser un indicateur pour afficher si les achats de l’année en cours à ce jour (YTD) d’une personne sont au-dessus ou en-dessous de la moyenne des achats YTD. La fonction **Round** supprime les décimales des valeurs.  
   
-La configuration de l’indicateur et de ses états s’effectue en plusieurs étapes. Si vous le souhaitez, vous pouvez avancer dans la procédure « Pour configurer l’indicateur » et copier-coller les expressions complétées à partir de ce didacticiel dans la boîte de dialogue **Expression**.  
+La configuration de l’indicateur et de ses états s’effectue en plusieurs étapes. Si vous le souhaitez, vous pouvez avancer dans la procédure « Pour configurer l’indicateur » et copier-coller les expressions complétées à partir de ce didacticiel dans la boîte de dialogue **Expression** .  
   
-### Pour ajouter la colonne + or - AVG Sales  
+### <a name="to-add-the--or---avg-sales-column"></a>Pour ajouter la colonne + or - AVG Sales  
   
-1.  Cliquez avec le bouton droit sur la colonne **YTD Purchase**, pointez sur **Insérer une colonne** et cliquez sur **Droite**.  
+1.  Cliquez avec le bouton droit sur la colonne **YTD Purchase** , pointez sur **Insérer une colonne**et cliquez sur **Droite**.  
   
-    Une nouvelle colonne est ajoutée à droite de la colonne **YTD Purchase**.  
+    Une nouvelle colonne est ajoutée à droite de la colonne **YTD Purchase** .  
   
 2.  Cliquez sur l’en-tête de la colonne, puis tapez **+ or - AVG Sales**.  
   
-### Pour ajouter un indicateur  
+### <a name="to-add-an-indicator"></a>Pour ajouter un indicateur  
   
-1.  Sous l’onglet **Insérer**, cliquez sur **Indicateur** et cliquez sur la cellule de données de la colonne **+ or - AVG Sales**.  
+1.  Sous l’onglet **Insérer** , cliquez sur **Indicateur**et cliquez sur la cellule de données de la colonne **+ or - AVG Sales** .  
   
     La boîte de dialogue **Sélectionner un type d’indicateur** s’ouvre.  
   
@@ -447,45 +452,45 @@ La configuration de l’indicateur et de ses états s’effectue en plusieurs é
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### Pour configurer l'indicateur  
+### <a name="to-configure-the-indicator"></a>Pour configurer l'indicateur  
   
 1.  Cliquez avec le bouton droit sur l’indicateur, cliquez sur **Propriétés de l’indicateur**, puis sur **Valeur et états**.  
   
-2.  Cliquez sur le bouton d’expression **fx** situé à côté de la zone de texte **Valeur**.  
+2.  Cliquez sur le bouton d’expression **fx** situé à côté de la zone de texte **Valeur** .  
   
-3.  Dans la boîte de dialogue **Expression**, développez **Fonctions communes**, puis cliquez sur **Math**.  
+3.  Dans la boîte de dialogue **Expression** , développez **Fonctions communes**, puis cliquez sur **Math**.  
   
-4.  Dans la liste **Élément**, double-cliquez sur **Round**.  
+4.  Dans la liste **Élément** , double-cliquez sur **Round**.  
   
-5.  Dans la liste **Catégorie**, cliquez sur **Champs (Expressions)**, puis dans la liste **Valeurs**, double-cliquez sur **YTDPurchase**.  
+5.  Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)**, puis dans la liste **Valeurs** , double-cliquez sur **YTDPurchase**.  
   
-7.  Immédiatement après `Fields!YTDPurchase.Value`, tapez **-** (signe moins). 
+7.  Immédiatement après `Fields!YTDPurchase.Value`, tapez  **-** (signe moins). 
   
-9. Développez à nouveau **Fonctions communes**, cliquez sur **Agrégat**, puis dans la liste **Élément**, double-cliquez sur **Avg**.  
+9. Développez à nouveau **Fonctions communes** , cliquez sur **Agrégat**, puis dans la liste **Élément** , double-cliquez sur **Avg**.  
   
-11. Dans la liste **Catégorie**, cliquez sur **Champs (Expressions)**, puis dans la liste **Valeurs**, double-cliquez sur **YTDPurchase**.  
+11. Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)**, puis dans la liste **Valeurs** , double-cliquez sur **YTDPurchase**.  
   
 13. Immédiatement après `Fields!YTDPurchase.Value`, tapez **, "Expressions"))**.  
   
-    L’expression complétée est la suivante : `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions"))`  
+    L’expression complétée est la suivante : `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions"))`  
   
 15. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-16. Dans la zone **Unité de mesure des états**, sélectionnez **Numérique**.  
+16. Dans la zone **Unité de mesure des états** , sélectionnez **Numérique**.  
   
-17. Dans la ligne contenant la flèche pointant vers le bas, cliquez sur le bouton **fx** situé à droite de la zone de texte pour la valeur **Démarrer**.  
+17. Dans la ligne contenant la flèche pointant vers le bas, cliquez sur le bouton **fx** situé à droite de la zone de texte pour la valeur **Démarrer** .  
 
     ![report-builder-expression-tutorial-indicator-start](../reporting-services/media/report-builder-expression-tutorial-indicator-start.png)
   
-18. Dans la boîte de dialogue **Expression**, développez **Fonctions communes**, puis cliquez sur **Math**.  
+18. Dans la boîte de dialogue **Expression** , développez **Fonctions communes**, puis cliquez sur **Math**.  
   
-19. Dans la liste **Élément**, double-cliquez sur **Round**.  
+19. Dans la liste **Élément** , double-cliquez sur **Round**.  
   
-20. Dans la liste **Catégorie**, cliquez sur **Champs (Expressions)**, puis dans la liste **Valeurs**, double-cliquez sur **YTDPurchase**.  
+20. Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)**, puis dans la liste **Valeurs** , double-cliquez sur **YTDPurchase**.  
   
-22. Immédiatement après `Fields!YTDPurchase.Value`, tapez **-** (signe moins). 
+22. Immédiatement après `Fields!YTDPurchase.Value`, tapez  **-** (signe moins). 
   
-24. Développez à nouveau **Fonctions communes**, cliquez sur **Agrégat**, puis dans la liste **Élément**, double-cliquez sur **Avg**.  
+24. Développez à nouveau **Fonctions communes** , cliquez sur **Agrégat**, puis dans la liste **Élément** , double-cliquez sur **Avg**.  
   
 26. Dans la liste **Catégorie**, cliquez sur **Champs (Expressions)**, puis dans la liste **Valeurs**, double-cliquez sur **YTDPurchase**.  
   
@@ -495,7 +500,7 @@ La configuration de l’indicateur et de ses états s’effectue en plusieurs é
   
 30. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-31. Dans la zone de texte de la valeur **Fin**, tapez **0**  
+31. Dans la zone de texte de la valeur **Fin** , tapez **0**  
   
 32. Cliquez sur la ligne contenant la flèche pointant à l’horizontale et cliquez sur **Supprimer**.  
 
@@ -503,15 +508,15 @@ La configuration de l’indicateur et de ses états s’effectue en plusieurs é
     
     À présent, vous n’avez plus que deux flèches, vers le haut et vers le bas.
   
-33. Dans la ligne contenant la flèche pointant vers le haut, dans la zone **Démarrer**, tapez **0**  
+33. Dans la ligne contenant la flèche pointant vers le haut, dans la zone **Démarrer** , tapez **0**  
   
-34. Cliquez sur le bouton **fx** situé à droite de la zone de texte pour la valeur **Fin**.  
+34. Cliquez sur le bouton **fx** situé à droite de la zone de texte pour la valeur **Fin** .  
   
-35. Dans la boîte de dialogue **Expression**, supprimez **100**, puis créez l’expression : `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
+35. Dans la boîte de dialogue **Expression** , supprimez **100** , puis créez l’expression : `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
   
 36. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-37. Cliquez sur **OK** à nouveau pour fermer la boîte de dialogue **Propriétés de l’indicateur**.  
+37. Cliquez sur **OK** à nouveau pour fermer la boîte de dialogue **Propriétés de l’indicateur** .  
   
 38. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
 
@@ -520,11 +525,11 @@ La configuration de l’indicateur et de ses états s’effectue en plusieurs é
 ## <a name="GreenBar"></a>8. Créer un rapport à bandes  
 Créez un paramètre pour que les lecteurs du rapport puissent spécifier la couleur à appliquer aux lignes alternées dans le rapport, pour en faire un rapport à bandes.  
   
-### Pour ajouter un paramètre  
+### <a name="to-add-a-parameter"></a>Pour ajouter un paramètre  
   
 1.  Cliquez sur **Conception** pour repasser en mode Conception.  
   
-2.  Dans le volet **Données du rapport**, cliquez avec le bouton droit sur **Paramètres** et cliquez sur **Ajouter un paramètre**.  
+2.  Dans le volet **Données du rapport** , cliquez avec le bouton droit sur **Paramètres** et cliquez sur **Ajouter un paramètre**.  
 
     ![report-builder-expression-tutorial-add-parameter](../reporting-services/media/report-builder-expression-tutorial-add-parameter.png)
   
@@ -534,77 +539,77 @@ Créez un paramètre pour que les lecteurs du rapport puissent spécifier la cou
   
 4.  Dans la zone **Nom**, tapez **RowColor**.  
   
-5.  Dans la page **Valeurs disponibles**, sélectionnez **Spécifier les valeurs**.  
+5.  Dans la page **Valeurs disponibles** , sélectionnez **Spécifier les valeurs**.  
   
 7.  Cliquez sur **Ajouter**.  
   
-8.  Dans la zone **Étiquette**, tapez **Yellow**.  
+8.  Dans la zone **Étiquette** , tapez **Yellow**.  
   
-9. Dans la zone **Valeur**, tapez **Yellow**.  
+9. Dans la zone **Valeur** , tapez **Yellow**.  
   
 10. Cliquez sur **Ajouter**.  
   
-11. Dans la zone **Étiquette**, tapez **Green**.  
+11. Dans la zone **Étiquette** , tapez **Green**.  
   
-12. Dans la zone **Valeur**, tapez **PaleGreen**.  
+12. Dans la zone **Valeur** , tapez **PaleGreen**.  
   
 13. Cliquez sur **Ajouter**.  
   
-14. Dans la zone **Étiquette**, tapez **Blue**.  
+14. Dans la zone **Étiquette** , tapez **Blue**.  
   
-15. Dans la zone **Valeur**, tapez **LightBlue**.  
+15. Dans la zone **Valeur** , tapez **LightBlue**.  
   
 16. Cliquez sur **Ajouter**.  
   
-17. Dans la zone **Étiquette**, tapez **Pink**.  
+17. Dans la zone **Étiquette** , tapez **Pink**.  
   
-18. Dans la zone **Valeur**, tapez **Pink**.  
+18. Dans la zone **Valeur** , tapez **Pink**.  
 
     ![report-builder-expression-tutorial-parameter-available](../reporting-services/media/report-builder-expression-tutorial-parameter-available.png)
   
 19. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### Pour appliquer des couleurs alternées aux lignes de détails  
+### <a name="to-apply-alternating-colors-to-detail-rows"></a>Pour appliquer des couleurs alternées aux lignes de détails  
   
-1.   Sélectionnez toutes les cellules de la ligne de données, à l’exception de la cellule de la colonne **M/F**, qui a sa propre couleur d’arrière-plan.  
+1.   Sélectionnez toutes les cellules de la ligne de données, à l’exception de la cellule de la colonne **M/F** , qui a sa propre couleur d’arrière-plan.  
 
      ![report-builder-expression-tutorial-select-banded](../reporting-services/media/report-builder-expression-tutorial-select-banded.png)
   
 4.  Dans le volet Propriétés, cliquez sur **BackgroundColor**. 
 
-     Si le volet Propriétés n’est pas ouvert, sous l’onglet **Affichage**, cochez la case **Propriétés**.  
+     Si le volet Propriétés n’est pas ouvert, sous l’onglet **Affichage** , cochez la case **Propriétés** .  
   
-    Si les propriétés sont classées par catégorie dans le volet Propriétés, **BackgroundColor** est classé sous la catégorie **Divers**.  
+    Si les propriétés sont classées par catégorie dans le volet Propriétés, **BackgroundColor** est classé sous la catégorie **Divers** .  
   
 5.  Cliquez sur la flèche pointant vers le bas, puis sur **Expression**.  
 
     ![report-builder-expression-tutorial-banded-color-property](../reporting-services/media/report-builder-expression-tutorial-banded-color-property.png)
   
-6.  Dans la boîte de dialogue **Expression**, développez **Fonctions communes** puis cliquez sur **Flux de programme**.  
+6.  Dans la boîte de dialogue **Expression** , développez **Fonctions communes**puis cliquez sur **Flux de programme**.  
   
-7.  Dans la liste **Élément**, double-cliquez sur **IIf**.  
+7.  Dans la liste **Élément** , double-cliquez sur **IIf**.  
   
-8.  Sous **Fonctions communes**, cliquez sur **Divers**, puis dans la liste **Élément**, double-cliquez sur **RowNumber**.  
+8.  Sous **Fonctions communes**, cliquez sur **Divers**, puis dans la liste **Élément** , double-cliquez sur **RowNumber**.  
 
 9. Immédiatement après **RowNumber (** tapez **Nothing) MOD 2,**
   
-8. Cliquez sur **Paramètres** et dans la liste **Valeurs**, double-cliquez sur **RowColor**.  
+8. Cliquez sur **Paramètres** et dans la liste **Valeurs** , double-cliquez sur **RowColor**.  
   
 22. Immédiatement après `Parameters!RowColor.Value`, tapez **, “White”)**  
   
-    L’expression complétée est la suivante : `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, “White”)`  
+    L’expression complétée est la suivante : `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, “White”)`  
     
     ![report-builder-expression-tutorial-banded-color-expressn](../reporting-services/media/report-builder-expression-tutorial-banded-color-expressn.png)
   
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### Exécuter le rapport  
+### <a name="run-the-report"></a>Exécuter le rapport  
   
-1.  Sous l’onglet **Accueil**, cliquez sur **Exécuter**.  
+1.  Sous l’onglet **Accueil** , cliquez sur **Exécuter**.  
 
     Vous ne voyez pas le rapport tant que vous n’avez pas choisi une couleur pour les bandes non blanches.
   
-3.  Dans la liste **Choisir une couleur**, sélectionnez une couleur pour les bandes non blanches du rapport.  
+3.  Dans la liste **Choisir une couleur** , sélectionnez une couleur pour les bandes non blanches du rapport.  
     
     ![report-builder-expression-tutorial-select-color](../reporting-services/media/report-builder-expression-tutorial-select-color.png)
   
@@ -617,19 +622,19 @@ Créez un paramètre pour que les lecteurs du rapport puissent spécifier la cou
 ## <a name="Title"></a>(facultatif) Ajouter un titre au rapport  
 Ajoutez un titre au rapport.  
   
-### Pour ajouter un titre de rapport  
+### <a name="to-add-a-report-title"></a>Pour ajouter un titre de rapport  
   
 1.  Dans l'aire de conception, cliquez sur **Cliquez pour ajouter un titre**.  
   
 2.  Tapez **Sales Comparison Summary**, puis sélectionnez le texte.  
   
-3.  Sous l’onglet **Accueil**, dans la zone **Police**, définissez :
+3.  Sous l’onglet **Accueil** , dans la zone **Police** , définissez :
 
     -  Taille = 18
     -  Couleur = Gris
     -  Gras
   
-4.  Sous l’onglet **Accueil**, cliquez sur **Exécuter**.  
+4.  Sous l’onglet **Accueil** , cliquez sur **Exécuter**.  
   
 3.  Sélectionnez une couleur pour les bandes non blanches du rapport, puis cliquez sur **Afficher le rapport**.  
   
@@ -638,7 +643,7 @@ Vous pouvez enregistrer les rapports sur un serveur de rapports, dans une biblio
   
 Dans ce didacticiel, vous allez enregistrer le rapport sur un serveur de rapports. Si vous n'avez pas accès à un serveur de rapports, enregistrez le rapport sur votre ordinateur.  
   
-### Pour enregistrer le rapport sur un serveur de rapports  
+### <a name="to-save-the-report-to-a-report-server"></a>Pour enregistrer le rapport sur un serveur de rapports  
   
 1.  Dans le menu **Fichier**, cliquez sur **Enregistrer sous**.  
   
@@ -652,12 +657,12 @@ Dans ce didacticiel, vous allez enregistrer le rapport sur un serveur de rapport
   
 Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapports auquel vous êtes connecté est indiqué dans la barre d'état située au bas de la fenêtre.
 
-À présent, les lecteurs de votre rapport peuvent afficher votre rapport dans le portail web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].
+À présent, les lecteurs de votre rapport peuvent afficher votre rapport dans le portail web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .
 
 ![report-builder-expression-tutorial-final-in-browser](../reporting-services/media/report-builder-expression-tutorial-final-in-browser.png)
 
    
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Expressions &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
 [Indicateurs &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
@@ -667,3 +672,5 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
   
   
   
+
+

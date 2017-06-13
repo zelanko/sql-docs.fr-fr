@@ -1,30 +1,35 @@
 ---
-title: "Ajouter des types de contenus Reporting Services &#224; une biblioth&#232;que SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ajouter Reporting Services les Types de contenu dans une bibliothèque SharePoint | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ecb38b65092e15139b0a7c969903105c88a88aa
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Ajouter des types de contenus Reporting Services &#224; une biblioth&#232;que SharePoint
+# <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Ajouter des types de contenus Reporting Services à une bibliothèque SharePoint
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des types de contenu prédéfinis SharePoint qui sont utilisés pour gérer les fichiers de sources de données partagées (.rsds), les modèles de rapports (.smdl) et les fichiers de définitions de rapports (.rdl) du Générateur de rapports. L'ajout à une bibliothèque des types de contenu **Rapport du Générateur de rapports**, **Modèle de rapport**et **Source de données du rapport** active la commande **Nouveau** , qui permet de créer de nouveaux documents de ce type.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode  
   
  Pour ajouter des types de contenu à une bibliothèque, vous devez être administrateur de site ou bénéficier du niveau d'autorisation Contrôle total.  
   
- Les types de contenu et la gestion des types de contenu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] seront automatiquement activés dans toutes les bibliothèques de documents pour les collections de sites existantes créées à partir des types de modèle de site suivants :  
+ Les types de contenu et la gestion des types de contenu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] seront automatiquement activés dans toutes les bibliothèques de documents pour les collections de sites existantes créées à partir des types de modèle de site suivants :  
   
 -   **Business Intelligence Center**  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 7
   
  **Brève vidéo :** [(SSRS) Enabling Content Types in SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w).  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   [Activer les types de contenu dans toutes les bibliothèques de documents dans un BI center existant](#bkmk_enable_all)  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 7
   
 2.  Allez à **Paramètres du site**.  
   
-    -   Dans SharePoint 2013, cliquez sur l'icône **Paramètres** . ![Paramètres SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.png "Paramètres SharePoint")  
+    -   Dans SharePoint 2013, cliquez sur l'icône **Paramètres** . ![Les paramètres SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "paramètres SharePoint")  
   
     -   Dans SharePoint 2010, cliquez sur **Actions du site**, puis sur **Paramètre du site**.  
   
@@ -108,7 +113,7 @@ caps.handback.revision: 7
 8.  Lorsque vous avez terminé d'ajouter les types de contenu, cliquez sur **OK**.  
   
 9. > [!NOTE]  
-    >  Si le groupe de types de contenu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Types de contenu SQL Server Reporting Services** n’est pas visible dans la page **Ajouter des types de contenu**, l’une des conditions suivantes est remplie :  
+    >  Si le groupe de types de contenu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Types de contenu SQL Server Reporting Services** n’est pas visible dans la page **Ajouter des types de contenu** , l’une des conditions suivantes est remplie :  
   
     -   Le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint n'est pas installé. Pour plus d’informations, consultez [Installer ou désinstaller le complément Reporting Services pour SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). Cette rubrique contient des informations sur l'installation du complément et les étapes de l'installation uniquement des fichiers du complément afin de contourner les problèmes.  
   
@@ -154,7 +159,7 @@ caps.handback.revision: 7
   
 1.  Pour les serveurs de rapports SQL Server Reporting Services 2008 et 2008 R2, vous pouvez activer les types de contenu et la gestion du contenu pour plusieurs sites Business Intelligence Center :  
   
-2.  Dans Administration centrale de SharePoint, cliquez sur **Paramètres généraux de l'application**. Dans la section **SQL Server Reporting Services (2008 et 2008 R2)**, cliquez sur **Intégration de Reporting Services**.  
+2.  Dans Administration centrale de SharePoint, cliquez sur **Paramètres généraux de l'application**. Dans la section **SQL Server Reporting Services (2008 et 2008 R2)** , cliquez sur **Intégration de Reporting Services**.  
   
      ![rs_general_app_settings](../../reporting-services/report-server-sharepoint/media/rs-general-app-settings.gif "rs_general_app_settings")  
   
@@ -164,7 +169,7 @@ caps.handback.revision: 7
   
 4.  Cliquez sur **OK**.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Article de référence sur les autorisations de site SharePoint et de listes pour les éléments de serveur de rapports](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [Démarrer le Générateur de rapports](../../reporting-services/report-builder/start-report-builder.md)  
   

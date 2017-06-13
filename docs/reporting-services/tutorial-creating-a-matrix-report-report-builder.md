@@ -1,56 +1,38 @@
 ---
-title: "Didacticiel&#160;: cr&#233;ation d&#39;un rapport de matrice (G&#233;n&#233;rateur de rapports) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Didacticiel : Création d’un rapport de matrice (Générateur de rapports) | Documents Microsoft"
+ms.custom: 
+ms.date: 06/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 caps.latest.revision: 15
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 14
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ee55d7f9499b638828a6312761dd1b7480a7816c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Didacticiel&#160;: cr&#233;ation d&#39;un rapport de matrice (G&#233;n&#233;rateur de rapports)
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Didacticiel : création d'un rapport de matrice (Générateur de rapports)
 Ce didacticiel vous montre comment créer un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] avec une matrice d’exemples de données de ventes dans des groupes de lignes et de colonnes imbriqués. 
 
 Vous créez également un groupe de colonnes adjacentes, vous mettez en forme les colonnes et vous faites pivoter du texte. L'illustration suivante montre un rapport similaire à celui que vous allez créer.  
   
 ![report-builder-matrix-tutorial](../reporting-services/media/report-builder-matrix-tutorial.png)
-  
-## <a name="BackToTop"></a>Contenu du didacticiel  
-Dans ce didacticiel, vous apprenez à :  
-  
-1.  [Créer un rapport de matrice et un dataset à partir de l'Assistant Nouveau tableau ou nouvelle matrice](#CreateMatrix)  
-  
-2.  [Organiser les données et choisir la mise en page à partir de l’Assistant Nouveau tableau ou nouvelle matrice](#Groups)  
-  
-3.  [Mettre en forme les données](#FormatData)  
-  
-4.  [Ajouter un groupe de colonnes adjacent](#AdjacentGroup)  
-  
-5.  [Modifier la largeur des colonnes](#Width)  
-  
-6.  [Fusionner des cellules de matrice](#MergeCells)  
-  
-7.  [Ajouter un en-tête de rapport et un titre de rapport](#HeaderTitle)  
-  
-8.  [Enregistrer le rapport](#Save)  
-  
-### Étape facultative  
-  
-1.  [Faire pivoter la zone de texte de 270 degrés](#RotateTextBox)  
-  
+   
 Durée estimée pour effectuer le didacticiel : 20 minutes.  
   
-## Spécifications  
+## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels](../reporting-services/prerequisites-for-tutorials-report-builder.md). 
   
 ## <a name="CreateMatrix"></a>1. Créer un rapport de matrice et un dataset à partir de l'Assistant Nouveau tableau ou nouvelle matrice  
@@ -59,7 +41,7 @@ Dans cette section, vous choisissez une source de données partagée, vous crée
 > [!NOTE]  
 > Dans ce didacticiel, la requête contient déjà les valeurs de données, afin qu'il ne soit pas nécessaire de disposer d'une source de données externe. Cela rend la requête assez longue. Dans un environnement métier, une requête ne contient pas les données. Ceci est nécessaire à des fins de formation uniquement.  
   
-### Pour créer une matrice  
+### <a name="to-create-a-matrix"></a>Pour créer une matrice  
   
 1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) depuis votre ordinateur, depuis le portail web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou depuis le mode intégré SharePoint.  
   
@@ -71,15 +53,15 @@ Dans cette section, vous choisissez une source de données partagée, vous crée
   
 3.  Dans le volet droit, cliquez sur **Assistant Tableau ou matrice**.  
   
-4.  Dans la page **Choisir un dataset**, cliquez sur **Créer un dataset**.  
+4.  Dans la page **Choisir un dataset** , cliquez sur **Créer un dataset**.  
   
 5.  Cliquez sur **Suivant**.  
   
-6.  Dans la page **Choisir une connexion à une source de données**, sélectionnez une source de données existante ou accédez au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n'est disponible ou si vous n'avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d’informations sur la création d’une source de données incorporée, consultez [Didacticiel : Création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données existante ou accédez au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n'est disponible ou si vous n'avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d’informations sur la création d’une source de données incorporée, consultez [Didacticiel : Création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Cliquez sur **Suivant**.  
   
-8.  Dans la page **Créer une requête**, cliquez sur **Modifier en tant que texte**.  
+8.  Dans la page **Créer une requête** , cliquez sur **Modifier en tant que texte**.  
   
 9. Copiez et collez la requête suivante dans le volet de requête :  
   
@@ -123,17 +105,17 @@ Dans cette section, vous choisissez une source de données partagée, vous crée
 ## <a name="Groups"></a>2. Organiser les données et choisir la mise en page à partir de l’Assistant Nouveau tableau ou nouvelle matrice  
 Utilisez l'Assistant pour obtenir une conception initiale dans laquelle afficher les données. Le volet de visualisation de l'Assistant vous aide à visualiser le résultat du regroupement des données avant de terminer la conception de la matrice.  
   
-1.  Dans la page **Organiser les champs**, faites glisser Territory de **Champs disponibles** vers **Groupes de lignes**.  
+1.  Dans la page **Organiser les champs** , faites glisser Territory de **Champs disponibles** vers **Groupes de lignes**.  
   
 2.  Faites glisser SalesDate vers **Groupes de lignes** et placez-le sous Territory.  
   
-    L’ordre dans lequel les champs sont répertoriés dans **Groupes de lignes** définit la hiérarchie des groupes. Les étapes 1 et 2 organisent les valeurs des champs par secteur de vente (Territory), puis par date de vente (SalesDate).  
+    L’ordre dans lequel les champs sont répertoriés dans **Groupes de lignes** définit la hiérarchie des groupes. Les étapes 1 et 2 organisent les valeurs des champs par secteur de vente (Territory), puis par date de vente (SalesDate).  
   
 3.  Faites glisser Subcategory vers **Groupes de colonnes**.  
   
-4.  Faites glisser Product vers **Groupes de colonnes**, puis placez-le sous Subcategory.  
+4.  Faites glisser Product vers **Groupes de colonnes** , puis placez-le sous Subcategory.  
   
-    À nouveau, l’ordre dans lequel les champs sont énumérés dans **Groupes de colonnes** définit la hiérarchie des groupes. Les étapes 3 et 4 organisent les valeurs des champs par sous-catégorie (SubCategory), puis par produit (Product).  
+    À nouveau, l’ordre dans lequel les champs sont énumérés dans **Groupes de colonnes** définit la hiérarchie des groupes. Les étapes 3 et 4 organisent les valeurs des champs par sous-catégorie (SubCategory), puis par produit (Product).  
   
 5.  Faites glisser Sales vers **Valeurs**.  
   
@@ -143,7 +125,7 @@ Utilisez l'Assistant pour obtenir une conception initiale dans laquelle afficher
   
     Quantity est synthétisé à l'aide de la fonction Sum.  
   
-    Les étapes 5 et 6 spécifient les données à afficher dans les cellules de données de la matrice.
+    Les étapes 5 et 6 spécifient les données à afficher dans les cellules de données de la matrice.
     
     ![report-builder-arrange-fields-report-wizard](../reporting-services/media/report-builder-arrange-fields-report-wizard.png)  
   
@@ -159,7 +141,7 @@ Utilisez l'Assistant pour obtenir une conception initiale dans laquelle afficher
   
 13. Cliquez sur **Terminer**.  
   
-    La matrice est ajoutée à l'aire de conception. Le volet Groupes de lignes affiche deux groupes de lignes : Territory et SalesDate. Le volet Groupes de colonnes affiche deux groupes de colonnes : Subcategory et Product. Les données de détail sont toutes les données récupérées par la requête de dataset.  
+    La matrice est ajoutée à l'aire de conception. Le volet Groupes de lignes affiche deux groupes de lignes : Territory et SalesDate. Le volet Groupes de colonnes affiche deux groupes de colonnes : Subcategory et Product. Les données de détail sont toutes les données récupérées par la requête de dataset.  
     
     ![report-builder-row-and-column-groups](../reporting-services/media/report-builder-row-and-column-groups.png)
   
@@ -174,15 +156,15 @@ Utilisez l'Assistant pour obtenir une conception initiale dans laquelle afficher
 ## <a name="FormatData"></a>3. Mettre en forme les données  
 Par défaut, les données de synthèse du champ Sales affichent un nombre général et le champ SalesDate affiche des informations de date et d'heure. Dans cette section, vous mettez en forme le champ Sales de façon à afficher le nombre sous forme de devise et le champ SalesDate afin qu’il n’affiche que la date. Activez/désactivez **Styles des espaces réservés** pour afficher les zones de texte mises en forme et le texte de l’espace réservé comme exemples de valeurs.  
   
-### Pour mettre en forme les champs  
+### <a name="to-format-fields"></a>Pour mettre en forme les champs  
   
 1.  Cliquez sur **Conception** pour basculer en mode Conception.  
   
 2.  Appuyez sur la touche Ctrl, puis sélectionnez les neuf cellules contenant `[Sum(Sales)]`.  
   
-3.  Sous l’onglet **Accueil** > **Nombre** > **Devise**. Les cellules changent pour afficher le format de devise.  
+3.  On the **Home** tab > **Number** > **Currency**. Les cellules changent pour afficher le format de devise.  
   
-    Si vos paramètres régionaux sont Anglais (États-Unis), le texte de l’exemple par défaut est [**$12,345.00**]. Si vous ne voyez pas s’afficher d’exemple de valeur monétaire, dans le groupe **Nombres**, cliquez sur **Styles des espaces réservés** > **Valeurs d’aperçu**.  
+    Si vos paramètres régionaux sont Anglais (États-Unis), le texte de l’exemple par défaut est [**$12,345.00**]. Si vous ne voyez pas s’afficher d’exemple de valeur monétaire, dans le groupe **Nombres** , cliquez sur **Styles des espaces réservés** > **Valeurs d’aperçu**.  
     
     ![report-builder-placeholder-value](../reporting-services/media/report-builder-placeholder-value.png)
   
@@ -190,7 +172,7 @@ Par défaut, les données de synthèse du champ Sales affichent un nombre géné
   
 5.  Dans le groupe **Nombre** > **Date**.  
   
-    La cellule affiche l’exemple de date **[1/31/2000]**. Si vous ne voyez pas s’afficher d’exemple de date, cliquez sur **Styles des espaces réservés** dans le groupe **Nombres**, puis cliquez sur **Valeurs d’aperçu**.  
+    La cellule affiche l’exemple de date **[1/31/2000]**. Si vous ne voyez pas s’afficher d’exemple de date, cliquez sur **Styles des espaces réservés** dans le groupe **Nombres** , puis cliquez sur **Valeurs d’aperçu**.  
   
 6.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
@@ -201,7 +183,7 @@ Vous pouvez imbriquer des groupes de lignes et de colonnes dans des relations pa
   
 Dans cette section, vous ajoutez un groupe de colonnes adjacent au groupe de colonnes Subcategory, vous copiez les cellules pour remplir le nouveau groupe de colonnes, puis vous utilisez une expression pour créer la valeur de l’en-tête de groupe de colonnes.  
   
-### Pour ajouter un groupe de colonnes adjacent  
+### <a name="to-add-an-adjacent-column-group"></a>Pour ajouter un groupe de colonnes adjacent  
   
 1.  Cliquez sur **Conception** pour repasser en mode Conception.  
   
@@ -209,11 +191,11 @@ Dans cette section, vous ajoutez un groupe de colonnes adjacent au groupe de col
   
     La boîte de dialogue **Groupe de tableaux matriciels** s'affiche.  
   
-3.  Dans la liste **Regrouper par**, sélectionnez SalesDate, puis cliquez sur **OK**.  
+3.  Dans la liste **Regrouper par** , sélectionnez SalesDate, puis cliquez sur **OK**.  
   
     Un nouveau groupe de colonnes est ajouté à droite du groupe de colonnes Subcategory.  
   
-4.  Cliquez avec le bouton droit sur la cellule du nouveau groupe de colonnes qui contient `[SalesDate],`, puis cliquez sur **Expression**.  
+4.  Cliquez avec le bouton droit sur la cellule du nouveau groupe de colonnes qui contient `[SalesDate],` , puis cliquez sur **Expression**.  
   
 5.  Copiez l’expression suivante dans la zone Expression.  
   
@@ -240,12 +222,12 @@ Le rapport inclut des colonnes nommées Monday et Tuesday. Le dataset contient u
 ![report-builder-matrix-weekdays](../reporting-services/media/report-builder-matrix-weekdays.png)
   
 > [!NOTE]  
-> Si les données avaient inclus d'autres jours, le rapport aurait également inclus des colonnes pour ces jours. Chaque colonne a l’en-tête de colonne **Sales** et les totaux des ventes par secteur.  
+> Si les données avaient inclus d'autres jours, le rapport aurait également inclus des colonnes pour ces jours. Chaque colonne a l’en-tête de colonne **Sales**et les totaux des ventes par secteur.  
   
 ## <a name="Width"></a>5. Modifier la largeur des colonnes  
 Un rapport qui inclut une matrice s'étend généralement horizontalement et verticalement lorsqu'il s'exécute. Le contrôle de l'expansion horizontale est particulièrement important si vous projetez d'exporter le rapport vers des formats tels que Microsoft Word ou Adobe PDF qui sont utilisés pour imprimer les rapports. Si le rapport s'étend horizontalement sur plusieurs pages, le rapport imprimé est difficile à comprendre. Pour réduire l'expansion horizontale, vous pouvez redimensionner les colonnes afin qu'elles ne soient pas plus larges que nécessaire pour afficher les données sans renvoi à la ligne. Vous pouvez également renommer les colonnes afin que leur titre soit ajusté à la largeur nécessaire pour afficher les données.  
   
-### Pour renommer et redimensionner les colonnes  
+### <a name="to-rename-and-resize-the-columns"></a>Pour renommer et redimensionner les colonnes  
   
 1.  Cliquez sur **Conception** pour repasser en mode Conception.  
   
@@ -274,7 +256,7 @@ Les colonnes qui contiennent des quantités sont maintenant plus étroites et so
 ## <a name="MergeCells"></a>6. Fusionner des cellules de matrice  
 La zone d'angle se trouve dans le coin supérieur gauche de la matrice. Selon le nombre de groupes de lignes et de colonnes dans la matrice, le nombre de cellules de la zone d'angle varie. La matrice générée dans ce didacticiel comporte quatre cellules dans sa zone d'angle. Les cellules sont disposées en deux lignes et deux colonnes, ce qui reflète la profondeur des hiérarchies de groupes de lignes et de colonnes. Les quatre cellules ne sont pas utilisées dans ce rapport et vous allez les fusionner en une seule.  
   
-### Pour fusionner des cellules de matrice  
+### <a name="to-merge-matrix-cells"></a>Pour fusionner des cellules de matrice  
   
 1.  Cliquez sur **Conception** pour repasser en mode Conception.  
   
@@ -286,7 +268,7 @@ La zone d'angle se trouve dans le coin supérieur gauche de la matrice. Selon le
   
 5.  Cliquez avec le bouton droit dans la cellule fusionnée, puis cliquez sur **Propriétés de la zone de texte**.  
   
-6.  Sous l’onglet **Bordure** > **Valeurs prédéfinies** > **Aucun**.
+6.  On the **Border** tab > **Presets** > **None**.
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -297,7 +279,7 @@ La cellule dans le coin supérieur de la matrice n’est plus visible.
 ## <a name="HeaderTitle"></a>7. Ajouter un en-tête de rapport et un titre de rapport  
 Un titre de rapport s'affiche dans la partie supérieure du rapport. Vous pouvez placer le titre du rapport dans un en-tête de rapport, ou si le rapport n'en utilise pas, dans une zone de texte située en haut du corps du rapport. Dans ce didacticiel, vous allez supprimer la zone de texte au haut du rapport et ajouter un titre à l'en-tête.  
   
-### Pour ajouter un en-tête de rapport et un titre de rapport  
+### <a name="to-add-a-report-header-and-report-title"></a>Pour ajouter un en-tête de rapport et un titre de rapport  
   
 1.  Cliquez sur **Conception** pour repasser en mode Conception.  
   
@@ -307,7 +289,7 @@ Un titre de rapport s'affiche dans la partie supérieure du rapport. Vous pouvez
   
     Un en-tête est ajouté en haut du corps du rapport.  
   
-4.  Sous l’onglet **Insérer**, cliquez sur **Zone de texte**, puis faites glisser une zone de texte à l’intérieur de l’en-tête du rapport. Définissez sa taille sur environ 6 pouces de long et 0,75 pouce de haut et placez-la sur le côté gauche de l'en-tête de rapport.  
+4.  Sous l’onglet **Insérer** , cliquez sur **Zone de texte**, puis faites glisser une zone de texte à l’intérieur de l’en-tête du rapport. Définissez sa taille sur environ 6 pouces de long et 0,75 pouce de haut et placez-la sur le côté gauche de l'en-tête de rapport.  
   
 5.  Dans la zone de texte, tapez **Sales by Territory, Subcategory, and Day**.  
   
@@ -324,7 +306,7 @@ Vous pouvez enregistrer les rapports sur un serveur de rapports, dans une biblio
   
 Dans ce didacticiel, enregistrez le rapport sur un serveur de rapports. Si vous n'avez pas accès à un serveur de rapports, enregistrez le rapport sur votre ordinateur.  
   
-### Pour enregistrer le rapport sur un serveur de rapports  
+### <a name="to-save-the-report-on-a-report-server"></a>Pour enregistrer le rapport sur un serveur de rapports  
   
 1.  À partir du bouton **Générateur de rapports** , cliquez sur **Enregistrer sous**.  
   
@@ -340,7 +322,7 @@ Dans ce didacticiel, enregistrez le rapport sur un serveur de rapports. Si vous 
   
 Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapports auquel vous êtes connecté est indiqué dans la barre d'état située au bas de la fenêtre.  
   
-#### Pour enregistrer le rapport sur votre ordinateur  
+#### <a name="to-save-the-report-on-your-computer"></a>Pour enregistrer le rapport sur votre ordinateur  
   
 1.  À partir du bouton **Générateur de rapports** , cliquez sur **Enregistrer sous**.  
   
@@ -351,17 +333,17 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
 4.  Cliquez sur **Enregistrer**.  
   
 ## <a name="RotateTextBox"></a>9. (Facultatif) Faire pivoter la zone de texte de 270 degrés  
-Un rapport avec des matrices peut s'étendre horizontalement et verticalement lorsqu'il s'exécute. En faisant pivoter les zones de texte verticalement, ou de 270 degrés, vous pouvez gagner de l'espace horizontal. Le rapport rendu sera alors plus étroit, et s'il est exporté dans un format tel que Microsoft Word, il rentrera plus facilement sur une page imprimée.  
+Un rapport avec des matrices peut s'étendre horizontalement et verticalement lorsqu'il s'exécute. En faisant pivoter les zones de texte verticalement, ou de 270 degrés, vous pouvez gagner de l'espace horizontal. Le rapport rendu sera alors plus étroit, et s'il est exporté dans un format tel que Microsoft Word, il rentrera plus facilement sur une page imprimée.  
   
 Une zone de texte peut également afficher du texte horizontal dans le sens vertical (de haut en bas). Pour plus d’informations, consultez [Zones de texte &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
   
-### Pour faire pivoter la zone de texte de 270 degrés  
+### <a name="to-rotate-text-box-270-degrees"></a>Pour faire pivoter la zone de texte de 270 degrés  
   
 1.  Cliquez sur **Conception** pour repasser en mode Conception.  
   
 2.  Sélectionnez la cellule qui contient `[Territory].` 
 
-    >**Remarque** : Sélectionnez la cellule, et non pas le texte. La propriété WritingMode est disponible seulement pour la cellule.
+    >**Remarque**: Sélectionnez la cellule, et non pas le texte. La propriété WritingMode est disponible seulement pour la cellule.
     
      ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
   
@@ -378,14 +360,16 @@ Une zone de texte peut également afficher du texte horizontal dans le sens vert
   
 Le nom du secteur est écrit verticalement, de bas en haut. La hauteur du groupe de lignes Territory varie en fonction de la longueur du nom du secteur.  
   
-## Étapes suivantes  
+## <a name="next-steps"></a>Étapes suivantes  
 Ainsi s'achève le didacticiel de création d'un rapport de matrice. Pour plus d’informations sur les matrices, consultez : 
 -    [Tables, matrices et listes](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
 -    [Créer une matrice](../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)
 -    [Zones de région de données de tableau matriciel](../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md) 
 -    [Cellules, lignes et colonnes de région de données de tableau matriciel](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)  
 [Générateur de rapports dans SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

@@ -1,23 +1,28 @@
 ---
-title: "Placer des &#233;tiquettes dans un graphique (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Positionner des étiquettes dans un graphique (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 53f0d4b0c6aed30746af82de7d5f1caf5e42721c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Placer des &#233;tiquettes dans un graphique (G&#233;n&#233;rateur de rapports et SSRS)
+# <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>Placer des étiquettes dans un graphique (Générateur de rapports et SSRS)
   Chaque type de graphique figurant dans un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ayant une forme différente, les étiquettes de point de données sont positionnées de manière optimale de façon à ne pas interférer sur le graphique. La position par défaut des étiquettes varie en fonction du type de graphique :  
   
 -   Sur les graphiques empilés, les étiquettes peuvent être uniquement être positionnées à l'intérieur de la série.  
@@ -33,7 +38,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Pour modifier la position des étiquettes de point dans un graphique à secteurs  
+## <a name="to-change-the-position-of-point-labels-in-a-pie-chart"></a>Pour modifier la position des étiquettes de point dans un graphique à secteurs  
   
 1.  Créez un graphique à secteurs.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 8
   
 6.  Sélectionnez une valeur pour la propriété PieLabelStyle.  
   
-## Pour modifier la position des étiquettes de point dans un graphique en entonnoir ou en pyramide  
+## <a name="to-change-the-position-of-point-labels-in-a-funnel-or-pyramid-chart"></a>Pour modifier la position des étiquettes de point dans un graphique en entonnoir ou en pyramide  
   
 1.  Créez un graphique en entonnoir ou en pyramide.  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 8
     > [!NOTE]  
     >  Quand cette propriété a une valeur **OutsideInColumn**, les étiquettes sont dessinées dans une colonne verticale. Il est impossible de modifier la position de la colonne.  
   
-## Pour modifier la position des étiquettes de point dans un graphique à barres  
+## <a name="to-change-the-position-of-point-labels-in-a-bar-chart"></a>Pour modifier la position des étiquettes de point dans un graphique à barres  
   
 1.  Créez un graphique à barres.  
   
@@ -80,7 +85,7 @@ caps.handback.revision: 8
   
  Quand le style de l’étiquette de la barre a la valeur **Outside**, les étiquettes sont placées en dehors de la barre, dans la mesure où elles s’ajustent à la zone du graphique. Si l'étiquette ne peut pas être placée en dehors de barre mais dans la zone du graphique, elle est placée à l'intérieur de la barre à la position la plus proche de l'extrémité de la barre.  
   
-## Pour modifier la position des étiquettes de point dans un graphique à secteurs, un histogramme, un graphique en courbes ou un graphique à nuage de points  
+## <a name="to-change-the-position-of-point-labels-in-an-area-column-line-or-scatter-chart"></a>Pour modifier la position des étiquettes de point dans un graphique à secteurs, un histogramme, un graphique en courbes ou un graphique à nuage de points  
   
 1.  Créez un graphique à secteurs, un histogramme, un graphique en courbes ou un graphique à nuage de points.  
   
@@ -94,7 +99,7 @@ caps.handback.revision: 8
   
 6.  Sélectionnez une valeur pour la propriété Position.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Graphiques à secteurs &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
  [Graphiques à barres &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
  [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   

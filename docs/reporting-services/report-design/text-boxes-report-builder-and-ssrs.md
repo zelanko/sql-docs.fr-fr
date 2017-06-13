@@ -1,28 +1,33 @@
 ---
-title: "Zones de texte (G&#233;n&#233;rateur de rapport et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10134"
-  - "10120"
-  - "sql13.rtp.rptdesigner.textproperties.general.f1"
-  - "sql13.rtp.rptdesigner.textboxproperties.general.f1"
+title: "Zones de texte (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10134"
+- "10120"
+- sql13.rtp.rptdesigner.textproperties.general.f1
+- sql13.rtp.rptdesigner.textboxproperties.general.f1
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee30a42b69f4bd3079fe6345df619abde413e588
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Zones de texte (G&#233;n&#233;rateur de rapport et SSRS)
+# <a name="text-boxes-report-builder-and-ssrs"></a>Zones de texte (Générateur de rapport et SSRS)
   Pour vous, une zone de texte désigne probablement une zone autonome qui contient du texte sur une surface comme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. Les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] utilisent des zones de texte de ce type pour afficher le texte statique des titres, des descriptions et des étiquettes, ou le texte dynamique basé sur des expressions. Toutefois, chaque cellule d’une table ou d’une matrice (région de données de tableau matriciel) contient également une zone de texte, que vous pouvez mettre en forme de la même manière que les zones de texte autonomes de votre rapport.  
   
 > [!NOTE]  
@@ -42,8 +47,8 @@ caps.handback.revision: 8
 ##  <a name="GrowShrinkTextBox"></a> Agrandissement et réduction d'une zone de texte  
  Par défaut, les zones de texte ont une taille fixe. Vous pouvez autoriser la réduction ou l'agrandissement d'une zone de texte de manière verticale en fonction de son contenu. Pour plus d’informations, consultez [Autoriser l’agrandissement ou la réduction d’une zone de texte &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md).  
   
-## Rotation d’une zone de texte  
- La rotation des zones de texte peut vous aider à améliorer la lisibilité de vos rapports, à prendre en charge l’orientation de texte spécifique aux paramètres régionaux, à ajuster plus de colonnes dans un rapport imprimé ayant une taille de page fixe et à créer des rapports avec un contenu plus graphique. Une zone de texte peut être pivotée dans différentes directions : horizontalement, verticalement (avec une rotation de 90 degrés) ou selon une rotation de 270 degrés. L'option verticale est utilisée le plus communément pour les langues asiatiques qui sont écrites de haut en bas. Dans la plupart des convertisseurs, l’option verticale gère correctement la propriété de rotation du glyphe pour que le texte soit écrit de haut en bas, mais les caractères ne figurent pas sur leurs côtés. Pour d'autres langues, le texte orienté verticalement et selon une rotation à 270 degrés est écrit obliquement.  
+## <a name="rotating-a-text-box"></a>Rotation d’une zone de texte  
+ La rotation des zones de texte peut vous aider à améliorer la lisibilité de vos rapports, à prendre en charge l’orientation de texte spécifique aux paramètres régionaux, à ajuster plus de colonnes dans un rapport imprimé ayant une taille de page fixe et à créer des rapports avec un contenu plus graphique. Une zone de texte peut être pivotée dans différentes directions : horizontalement, verticalement (avec une rotation de 90 degrés) ou selon une rotation de 270 degrés. L'option verticale est utilisée le plus communément pour les langues asiatiques qui sont écrites de haut en bas. Dans la plupart des convertisseurs, l’option verticale gère correctement la propriété de rotation du glyphe pour que le texte soit écrit de haut en bas, mais les caractères ne figurent pas sur leurs côtés. Pour d'autres langues, le texte orienté verticalement et selon une rotation à 270 degrés est écrit obliquement.  
   
  Vous pouvez faire pivoter des zones de texte qui contiennent du texte statique, des champs d’un dataset de rapport ou des données calculées. La zone de texte peut être autonome dans le corps d’un rapport, dans une table ou une matrice, ou dans un en-tête ou pied de page de rapport.  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 8
   
  [Autoriser l’agrandissement ou la réduction d’une zone de texte &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mise en forme du texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Mise en forme des nombres et des dates &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   

@@ -1,23 +1,28 @@
 ---
-title: "Laisser les en-t&#234;tes visibles lors du d&#233;filement d&#39;un rapport (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Laisser les en-têtes visibles lors du défilement d’un rapport (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f2fac57fe0e898a1ccbfbe33fb271eae76da1389
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Laisser les en-t&#234;tes visibles lors du d&#233;filement d&#39;un rapport (G&#233;n&#233;rateur de rapports et SSRS)
+# <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>Laisser les en-têtes visibles lors du défilement d'un rapport (Générateur de rapports et SSRS)
   Pour empêcher les étiquettes de lignes et de colonnes de disparaître de l'écran après le rendu d'un rapport, vous pouvez figer les en-têtes de lignes ou de colonnes.  
   
  La façon de contrôler les lignes et les colonnes varie selon que vous disposez d'une table ou d'une matrice. Si vous avez une table, vous configurez les membres statiques (en-têtes de colonnes et de lignes) pour qu'ils restent visibles. Si vous avez une matrice, vous configurez les en-têtes de groupes de colonnes et de lignes pour qu'ils restent visibles.  
@@ -33,12 +38,12 @@ caps.handback.revision: 10
   
  L'image suivante illustre une matrice.  
   
- ![Matrice](../../reporting-services/report-design/media/matrix.png "Matrice")  
+ ![Matrice](../../reporting-services/report-design/media/matrix.png "matrice")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Pour garder les en-têtes de groupes de matrice visibles pendant le défilement  
+### <a name="to-keep-matrix-group-headers-visible-while-scrolling"></a>Pour garder les en-têtes de groupes de matrice visibles pendant le défilement  
   
 1.  Cliquez avec le bouton droit sur la ligne, la colonne ou la poignée d’angle d’une région de données de tableau matriciel, puis cliquez sur **Propriétés du tableau matriciel**.  
   
@@ -46,11 +51,11 @@ caps.handback.revision: 10
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Pour laisser un membre de tableau matriciel statique (ligne ou colonne) visible pendant le défilement  
+### <a name="to-keep-a-static-tablix-member-row-or-column-visible-while-scrolling"></a>Pour laisser un membre de tableau matriciel statique (ligne ou colonne) visible pendant le défilement  
   
 1.  Sur l'aire de conception, cliquez n'importe où dans la table pour afficher les membres statiques, ainsi que les groupes, dans le volet de regroupement.  
   
-     ![Volet de regroupement](../../reporting-services/report-design/media/grouppane-updated.png "Volet de regroupement")  
+     ![Volet de regroupement](../../reporting-services/report-design/media/grouppane-updated.png "volet de regroupement")  
   
      Le volet Groupes de lignes affiche les membres statiques et dynamiques hiérarchiques pour la hiérarchie de groupes de lignes, et le volet Groupes de colonnes affiche une vue semblable pour la hiérarchie de groupes de colonnes.  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 10
   
 3.  Cliquez sur le membre statique (ligne ou colonne) que vous souhaitez laisser visible pendant le défilement. Le volet Propriétés affiche les propriétés du **membre du tableau matriciel** .  
   
-     ![Propriétés du membre du tableau matriciel](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "Propriétés du membre du tableau matriciel")  
+     ![Propriétés de membre de tableau matriciel](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "propriétés de membre de tableau matriciel")  
   
 4.  Dans le volet Propriétés, affectez à **FixedData** la valeur **True**.  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 10
   
  Lorsque vous faites défiler un rapport verticalement ou horizontalement, les membres de tableau matriciel statiques restent visibles.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   

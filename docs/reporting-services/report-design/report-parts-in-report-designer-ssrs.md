@@ -1,33 +1,40 @@
 ---
-title: "Parties de rapport dans le Concepteur de rapports (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.components.f1"
+title: Parties de rapports dans le Concepteur de rapports (SSRS) | Documents Microsoft
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 66d5312047b516176e8aa1b331b36745bcdb20d9
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Parties de rapport dans le Concepteur de rapports (SSRS)
+
+# <a name="report-parts-in-report-designer-ssrs"></a>Parties de rapport dans le Concepteur de rapports (SSRS)
+
   Dans le Concepteur de rapports, une fois que vous avez créé des tables, graphiques et autres éléments de rapport paginé dans un projet, vous pouvez les publier comme des *parties de rapport* sur un serveur de rapports ou sur le site SharePoint intégré avec un serveur de rapports afin que vous et d’autres personnes puissiez les réutiliser dans d’autres rapports.  
   
  En général, les parties de rapport fonctionnent de la même façon dans le Concepteur de rapports et dans le Générateur de rapports. Pour en savoir plus sur les fonctionnalités de base, consultez [Parties de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
- Il existe des différences fondamentales dans la façon dont les parties de rapport fonctionnent dans le Concepteur de rapports. Le flux de travail représente une différence notable. Le Générateur de rapports permet la création combinée : je crée une partie de rapport et le publie. Vous pouvez la réutiliser, la modifier et la republier. Dans le Concepteur de rapports, la publication est unidirectionnelle : je peux publier une partie de rapport à partir du Concepteur de rapports et vous pouvez la réutiliser. Mais je ne peux pas réutiliser une partie de rapport existante dans un rapport dans le Concepteur de rapports. Cette rubrique présente ces différences, après une vue d'ensemble rapide des parties de rapports.  
+ Il existe des différences fondamentales dans la façon dont les parties de rapport fonctionnent dans le Concepteur de rapports. Le flux de travail représente une différence notable. Le Générateur de rapports permet la création combinée : je crée une partie de rapport et le publie. Vous pouvez la réutiliser, la modifier et la republier. Dans le Concepteur de rapports, la publication est unidirectionnelle : je peux publier une partie de rapport à partir du Concepteur de rapports et vous pouvez la réutiliser. Mais je ne peux pas réutiliser une partie de rapport existante dans un rapport dans le Concepteur de rapports. Cette rubrique présente ces différences, après une vue d'ensemble rapide des parties de rapports.  
   
 ##  <a name="ComponentWorkflow"></a> Publication du cycle de vie d'une partie de rapport  
- ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.png "rs_ComponentCreation")  
+ ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  
   
 1.  Dans le Concepteur de rapports, une personne A crée un projet qui contient un rapport avec un graphique dépendant d'un dataset incorporé.  
   
@@ -35,7 +42,7 @@ caps.handback.revision: 11
   
 3.  Une personne B crée un rapport vide dans le Générateur de rapports et lui ajoute le graphique. Le graphique fait maintenant partie du rapport de la personne B, avec le dataset incorporé. La personne B peut modifier les instances du graphique et du dataset qui sont dans le rapport. Cela n'aura aucun effet sur les instances du graphique et du dataset sur le serveur de rapports et ne rompra pas non plus la relation entre les instances dans le rapport et sur le serveur de rapports.  
   
-     ![rs_BIDScomponentupdate](../../reporting-services/report-design/media/rs-bidscomponentupdate.png "rs_BIDScomponentupdate")  
+     ![rs_BIDScomponentupdate](../../reporting-services/report-design/media/rs-bidscomponentupdate.gif "rs_BIDScomponentupdate")  
   
 4.  Dans le Concepteur de rapports, la personne A modifie le graphique dans le rapport d'origine.  
   
@@ -68,15 +75,14 @@ caps.handback.revision: 11
   
  Si vous publiez une partie de rapport qui affiche des données, telles qu'une table, une matrice ou un graphique, vous pouvez la baser sur un dataset partagé ; sinon, lorsque vous publiez la partie de rapport, le dataset dont elle dépend est enregistré en tant que dataset incorporé. Les datasets incorporés peuvent être basés sur les sources de données incorporées, mais les informations d'identification ne sont pas stockées dans les sources de données incorporées. Par conséquent, si votre partie de rapport dépend d'un dataset incorporé qui utilise une source de données incorporée, toute personne qui réutilise cette partie de rapport devra fournir les informations d'identification pour la source de données incorporée. Pour éviter cela, basez vos datasets incorporés et partagés sur les sources de données partagées avec les informations d'identification stockées. Pour plus d’informations, consultez [Parties de rapports et datasets dans le Générateur de rapports](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md).  
   
- La publication d'une partie de rapport dans le Concepteur de rapports comporte deux étapes :  
+ La publication d'une partie de rapport dans le Concepteur de rapports comporte deux étapes :  
   
 1.  Signalez les éléments de rapport que vous voulez publier dans la boîte de dialogue **Publier les parties de rapport** .  
   
 2.  Déployez le rapport.  
   
- Lorsque vous déployez le rapport, la partie de rapport est publiée sur un site SharePoint ou un serveur de rapports, et d'autres personnes peuvent la réutiliser. Pour publier une partie de rapport, vous devez disposer d'une connexion et d'autorisations suffisantes pour accéder à un serveur de rapports [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] lorsque vous déployez le rapport.  
+ Lorsque vous déployez le rapport, la partie de rapport est publiée sur un site SharePoint ou un serveur de rapports, et d'autres personnes peuvent la réutiliser. Pour publier une partie de rapport, vous devez disposer une connexion et autorisations suffisantes sur un serveur de rapports lorsque vous déployez le rapport.  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
 ##  <a name="SearchReuseComponents"></a> Réutilisation de parties de rapport  
  Contrairement à ce qui se produit dans le Générateur de rapports, vous ne pouvez pas rechercher et réutiliser une partie de rapport dans un projet autre que celui dans lequel il a été créé.  
@@ -89,10 +95,9 @@ caps.handback.revision: 11
  Vous pouvez modifier puis republier la partie de rapport sur le site ou le serveur. Les auteurs de rapports du Générateur de rapports qui ont ajouté cette partie de rapport à un rapport sont informés de la modification la prochaine fois qu'ils ouvrent ce rapport. Ils peuvent choisir d'accepter ou non vos modifications.  
   
  Vous pouvez également choisir de publier en tant que nouveau rapport un rapport que vous avez déjà publié. Dans la boîte de dialogue Publier les parties de rapports, cliquez sur Publier en tant que nouvelle partie de rapport. Cette nouvelle partie de rapport a un nouvel ID unique et aucune relation avec l'ancienne partie de rapport.  
-  
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
-  
-## Voir aussi  
- [Gestion de parties de rapport](../../reporting-services/report-design/managing-report-parts.md)  
-  
-  
+
+## <a name="next-steps"></a>Étapes suivantes
+
+[La gestion des parties de rapport](../../reporting-services/report-design/managing-report-parts.md)  
+
+D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

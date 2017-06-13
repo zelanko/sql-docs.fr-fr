@@ -1,29 +1,34 @@
 ---
-title: "&#201;l&#233;ments s&#233;curisables | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "éléments sécurisables [Reporting Services]"
-  - "rôles [Reporting Services], éléments sécurisables"
-  - "sécurité [Reporting Services], liste des éléments sécurisables"
-  - "sécurité basée sur les rôles [Reporting Services], éléments sécurisables"
+title: "Éléments sécurisables | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- securable items [Reporting Services]
+- roles [Reporting Services], securable items
+- security [Reporting Services], securable items listed
+- role-based security [Reporting Services], securable items
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
 caps.latest.revision: 45
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 45
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b1c11b204b5a48e4324f49e05467cc3ac96e7fa4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# &#201;l&#233;ments s&#233;curisables
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise la sécurité basée sur les rôles pour contrôler l’accès aux éléments stockés sur un serveur de rapports. Lorsque vous accordez à un utilisateur l'accès à un serveur de rapports, vous le faites en général en créant une paire d'attributions de rôle :  
+# <a name="securable-items"></a>Éléments sécurisables
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise la sécurité basée sur les rôles pour contrôler l’accès aux éléments stockés sur un serveur de rapports. Lorsque vous accordez à un utilisateur l'accès à un serveur de rapports, vous le faites en général en créant une paire d'attributions de rôle :  
   
 -   Au niveau du site  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 45
   
  La sécurité est héritée au sein de la hiérarchie des dossiers du serveur de rapports. La création d'attributions de rôle au niveau du site et sur le dossier de base définit l'héritage des autorisations qui s'étend à tous les éléments et opérations sur un serveur de rapports.  
   
- Vous pouvez ignorer l'héritage des autorisations en définissant la sécurité des éléments individuels. Les éléments que vous pouvez sécuriser individuellement incluent :  
+ Vous pouvez ignorer l'héritage des autorisations en définissant la sécurité des éléments individuels. Les éléments que vous pouvez sécuriser individuellement incluent :  
   
 -   Dossiers  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 45
   
  D'autres constructions, telles que les planifications et les abonnements, ne sont pas explicitement sécurisées. Les planifications et les abonnements fonctionnent dans la sécurité d'un rapport.  
   
-## Description des éléments  
+## <a name="item-descriptions"></a>Description des éléments  
  Le tableau suivant répertorie les éléments sécurisables et décrit leurs caractéristiques.  
   
 |Élément|Caractéristiques|  
@@ -59,10 +64,10 @@ caps.handback.revision: 45
 |Sources de données partagées|Vous pouvez sécuriser les sources de données partagées afin de limiter l'accès à l'élément et aux pages de ses propriétés. Pour plus d’informations, consultez [Sécuriser les éléments de source de données partagée](../../reporting-services/security/secure-shared-data-source-items.md).|  
 |Datasets partagés|Les datasets partagés peuvent être sécurisés pour contrôler la plage d'actions que les utilisateurs peuvent effectuer, telles que l'affichage ou la modification de la définition, ou la modification des propriétés d'un dataset partagé donné.<br /><br /> Pour plus d’informations, consultez [Sécuriser les éléments de dataset partagés](../../reporting-services/security/secure-shared-dataset-items.md).|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](../../reporting-services/security/create-delete-or-modify-a-role-management-studio.md)   
+ [Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
  [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Modifier ou supprimer une affectation de rôle &#40;Gestionnaire de rapports&#41;](../../reporting-services/security/modify-or-delete-a-role-assignment-report-manager.md)  
+ [Modifier ou supprimer une affectation de rôle &#40;Gestionnaire de rapports&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
   
   

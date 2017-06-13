@@ -1,27 +1,32 @@
 ---
-title: "Journal des ex&#233;cutions du serveur de rapports et vue ExecutionLog3 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "journaux [Reporting Services], exécution"
-  - "journaux d'exécution [Reporting Services]"
+title: Rapports de serveur et vue ExecutionLog3 | Documents Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [Reporting Services], execution
+- execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 caps.latest.revision: 41
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 41
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f54e9b1c9aa0a17634048f91932c4aad2d69888b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Journal des ex&#233;cutions du serveur de rapports et vue ExecutionLog3
-  Le journal des exécutions du serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contient des informations sur les rapports qui sont exécutés sur le serveur ou sur plusieurs serveurs dans le cadre d’un déploiement évolutif en mode natif ou sur une batterie de serveurs SharePoint. Vous pouvez l'utiliser pour connaître la fréquence de demande d'un rapport, les formats de sortie les plus utilisés et le nombre de millisecondes de traitement consacré à chaque phrase du traitement. Le journal contient des informations sur le temps passé pour l'exécution d'une requête de dataset dans un rapport et le temps passé pour le traitement des données. Si vous êtes administrateur de serveur de rapports, vous pouvez passer en revue les informations du journal, identifier les tâches longues et faire des suggestions aux auteurs de rapports pour améliorer des zones du rapport (dataset ou traitement).  
+# <a name="report-server-executionlog-and-the-executionlog3-view"></a>Journal des exécutions du serveur de rapports et vue ExecutionLog3
+  Le journal des exécutions du serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]contient des informations sur les rapports qui sont exécutés sur le serveur ou sur plusieurs serveurs dans le cadre d’un déploiement évolutif en mode natif ou sur une batterie de serveurs SharePoint. Vous pouvez l'utiliser pour connaître la fréquence de demande d'un rapport, les formats de sortie les plus utilisés et le nombre de millisecondes de traitement consacré à chaque phrase du traitement. Le journal contient des informations sur le temps passé pour l'exécution d'une requête de dataset dans un rapport et le temps passé pour le traitement des données. Si vous êtes administrateur de serveur de rapports, vous pouvez passer en revue les informations du journal, identifier les tâches longues et faire des suggestions aux auteurs de rapports pour améliorer des zones du rapport (dataset ou traitement).  
   
  Les serveurs de rapports configurés pour le mode SharePoint peuvent également utiliser les journaux ULS de SharePoint. Pour plus d’informations, consultez [Activer des événements Reporting Services pour le journal des traces SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
@@ -30,7 +35,7 @@ caps.handback.revision: 41
   
  Le journal d'exécution des rapports est stocké dans la base de données du serveur de rapports nommée par défaut **ReportServer**. Les vues SQL fournissent les informations associées au journal d'exécution. Les vues « 2 » et « 3 » ont été ajoutées dans les dernières versions et contiennent de nouveaux champs ou des champs avec des noms plus conviviaux que dans les versions précédentes. Les anciennes vues sont toujours présentes dans le produit de sorte que les applications personnalisées qui dépendent d'elles ne sont pas impactées. Si vous n'avez pas de dépendance sur une vue plus ancienne, par exemple ExecutionLog, il est recommandé d'utiliser la vue la plus récente, soit ExecutionLog**3**.  
   
- Dans cette rubrique :  
+ Dans cette rubrique :  
   
 -   [Paramètres de configuration d'un serveur de rapports en mode SharePoint](#bkmk_sharepoint)  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 41
   
  Vous devez activer la journalisation comme décrit dans les étapes précédentes, puis effectuer les opérations suivantes :  
   
-1.  Dans la page **Paramètres système** de votre application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], recherchez la section **Défini par l’utilisateur**.  
+1.  Dans la page **Paramètres système** de votre application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , recherchez la section **Défini par l’utilisateur** .  
   
 2.  Modifiez **ExecutionLogLevel** en **verbose**. Ce champ est un champ d'entrée de texte et les deux valeurs possibles sont **verbose** et **normal**.  
   
@@ -80,7 +85,7 @@ caps.handback.revision: 41
   
  **Pour activer la journalisation des exécutions :**  
   
-1.  Ouvrez SQL Server Management Studio avec des privilèges d'administrateur. Par exemple, cliquez avec le bouton droit sur l'icône de Management Studio et sélectionnez « Exécuter en tant qu'administrateur ».  
+1.  Ouvrez SQL Server Management Studio avec des privilèges d'administrateur. Par exemple, cliquez avec le bouton droit sur l'icône de Management Studio et sélectionnez « Exécuter en tant qu'administrateur ».  
   
 2.  Connectez-vous au serveur de rapports souhaité.  
   
@@ -96,7 +101,7 @@ caps.handback.revision: 41
   
 1.  Dans la boîte de dialogue **Propriétés du serveur** , cliquez sur la page **Avancé** .  
   
-2.  Dans la section **Défini par l’utilisateur**, modifiez **ExecutionLogLevel** sur **verbose**. Ce champ est un champ d'entrée de texte et les deux valeurs possibles sont **verbose** et **normal**.  
+2.  Dans la section **Défini par l’utilisateur** , modifiez **ExecutionLogLevel** sur **verbose**. Ce champ est un champ d'entrée de texte et les deux valeurs possibles sont **verbose** et **normal**.  
   
 ##  <a name="bkmk_executionlog3"></a> Champs de journalisation (ExecutionLog3)  
  Dans cette vue, un nœud de diagnostic de performances supplémentaire est ajouté dans la colonne **AdditionalInfo** basée sur XML. La colonne AdditionalInfo contient une structure XML comportant de 1 à plusieurs champs d'informations supplémentaires. Voici un exemple d'instruction Transact SQL pour extraire des lignes de la vue ExecutionLog3. L'exemple suppose que la base de données du serveur de rapports est nommée **ReportServer**:  
@@ -114,7 +119,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |ItemPath|Chemin de stockage d'un rapport ou d'un élément de rapport|  
 |UserName|Identificateur de l'utilisateur.|  
 |ExecutionID|Identificateur interne associé à une requête. Les requêtes sur les mêmes sessions utilisateur partagent le même ID d'exécution.|  
-|RequestType|Valeurs possibles :<br /><br /> Interactif<br /><br /> Abonnement<br /><br /> <br /><br /> L'analyse des données de journal filtrées par RequestType=Subscription et triées par TimeStart peut identifier des périodes d'utilisation importante des abonnements ; si vous le souhaitez, il est par la suite possible de modifier l'heure de certains abonnements aux rapports.|  
+|RequestType|Valeurs possibles :<br /><br /> Interactif<br /><br /> Abonnement<br /><br /> <br /><br /> L'analyse des données de journal filtrées par RequestType=Subscription et triées par TimeStart peut identifier des périodes d'utilisation importante des abonnements ; si vous le souhaitez, il est par la suite possible de modifier l'heure de certains abonnements aux rapports.|  
 |Format|Format de rendu.|  
 |Paramètres|Valeurs des paramètres utilisées pour une exécution de rapport.|  
 |ItemAction|Valeurs possibles :<br /><br /> Render<br /><br /> Trier<br /><br /> BookMarkNavigation<br /><br /> DocumentNavigation<br /><br /> GetDocumentMap<br /><br /> Findstring<br /><br /> Execute<br /><br /> RenderEdit|  
@@ -226,7 +231,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 -   **ProcessingEngine**  
   
-     1=SQL Server 2005, 2=Nouveau moteur de traitement à la demande. Si la plupart de vos rapports affichent toujours la valeur 1, vous pouvez envisager de les reconcevoir afin qu'ils utilisent le nouveau moteur de traitement à la demande, plus efficace.  
+     1=SQL Server 2005, 2=Nouveau moteur de traitement à la demande. Si la plupart de vos rapports affichent toujours la valeur 1, vous pouvez envisager de les reconcevoir afin qu'ils utilisent le nouveau moteur de traitement à la demande, plus efficace.  
   
      `<ProcessingEngine>2</ProcessingEngine>`  
   
@@ -326,7 +331,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |Colonne|Description|  
 |------------|-----------------|  
 |InstanceName|Nom de l'instance du serveur de rapports qui a géré la demande.|  
-|ReportPath|Structure du chemin d'accès au rapport.  Par exemple un rapport nommé « test » qui se trouve dans le dossier racine du gestionnaire de rapports, aura un ReportPath « /test ».<br /><br /> Un rapport nommé « test » qui est enregistré dans le dossier « samples » du gestionnaire de rapports, aura un ReportPath « /Samples/test/ »|  
+|ReportPath|Structure du chemin d'accès au rapport.  Par exemple un rapport nommé « test » qui se trouve dans le dossier racine du gestionnaire de rapports, aura un ReportPath « /test ».<br /><br /> Un rapport nommé « test » qui est enregistré dans le dossier « samples » du gestionnaire de rapports, aura un ReportPath « /Samples/test/ »|  
 |UserName|Identificateur de l'utilisateur.|  
 |ExecutionID||  
 |RequestType|Type de demande (utilisateur ou système).|  
@@ -368,12 +373,12 @@ select * from ExecutionLog order by TimeStart DESC
 |TimeDataRetrieval|Nombre de millisecondes consacré à la récupération des données, au traitement du rapport et au rendu du rapport.|  
 |TimeProcessing||  
 |TimeRendering||  
-|Source|Source d'exécution du rapport. Valeurs possibles : (1=Actif, 2=Cache, 3=Instantané, 4=Historique, 5=Adhoc, 6=Session, 7=RDCE).|  
+|Source|Source d'exécution du rapport. Valeurs possibles : (1=Actif, 2=Cache, 3=Instantané, 4=Historique, 5=Adhoc, 6=Session, 7=RDCE).|  
 |État|Valeurs possibles : rsSuccess, rsProcessingAborted, ou un code d'erreur. Si plusieurs erreurs se produisent, seule la première erreur est enregistrée.|  
 |ByteCount|Taille en octets des rapports rendus.|  
 |RowCount|Nombre de lignes retournées par les requêtes.|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Activer des événements Reporting Services pour le journal des traces SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Guide de référence des erreurs et des événements &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

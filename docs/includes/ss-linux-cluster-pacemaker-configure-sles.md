@@ -1,4 +1,4 @@
-2. Sur les deux nœuds du cluster, créez un fichier pour stocker le nom d’utilisateur et le mot de passe SQL Server du compte de connexion Pacemaker. La commande suivante a pour effet de créer et remplir ce fichier :
+2. Sur tous les nœuds de cluster, créez un fichier pour stocker le nom d’utilisateur SQL Server et le mot de passe pour la connexion STIMULATEUR. La commande suivante a pour effet de créer et remplir ce fichier :
 
    ```bash
    sudo touch /var/opt/mssql/secrets/passwd
@@ -8,7 +8,7 @@
    sudo chmod 600 /var/opt/mssql/secrets/passwd    
    ```
 
-3. Sur les deux nœuds de cluster, ouvrez les ports de pare-feu Pacemaker. Pour ouvrir ces ports avec `firewalld`, exécutez la commande suivante :
+3. Tous les nœuds de cluster, ouvrez les ports du pare-feu STIMULATEUR. Pour ouvrir ces ports avec `firewalld`, exécutez la commande suivante :
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability
@@ -28,7 +28,7 @@
 
    
 
-2. Définissez le mot de passe pour l’utilisateur par défaut qui est créé pendant l’installation des packages Pacemaker et Corosync. Utilisez le même mot de passe sur les deux nœuds. 
+2. Définissez le mot de passe pour l’utilisateur par défaut qui est créé pendant l’installation des packages Pacemaker et Corosync. Utilisez le même mot de passe sur tous les nœuds. 
 
    ```bash
    sudo passwd hacluster
@@ -36,7 +36,7 @@
 
    
 
-3. Activez et démarrez le service `pcsd` et Pacemaker. Cela permettra aux nœuds de rejoindre le cluster après le redémarrage. Exécutez la commande suivante sur les deux nœuds.
+3. Activez et démarrez le service `pcsd` et Pacemaker. Cela permettra aux nœuds de rejoindre le cluster après le redémarrage. Exécutez la commande suivante sur tous les nœuds.
 
    ```bash
    sudo systemctl enable pcsd
@@ -44,7 +44,7 @@
    sudo systemctl enable pacemaker
    ```
 
-4. Installez l’agent de ressources FCI pour SQL Server. Exécutez les commandes suivantes sur les deux nœuds. 
+4. Installez l’agent de ressources FCI pour SQL Server. Exécutez les commandes suivantes sur tous les nœuds. 
 
    ```bash
    sudo yum install mssql-server-ha

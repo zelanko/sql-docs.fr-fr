@@ -1,32 +1,37 @@
 ---
-title: "Mise en forme des nombres et des dates (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.placeholderproperties.number.f1"
-  - "10127"
-  - "sql13.rtp.rptdesigner.textboxproperties.number.f1"
-  - "10130"
-  - "10286"
-  - "sql13.rtp.rptdesigner.serieslabelproperties.number.f1"
-  - "10285"
-  - "sql13.rtp.rptdesigner.axisproperties.number.f1"
+title: "Mise en forme des nombres et des Dates (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.placeholderproperties.number.f1
+- "10127"
+- sql13.rtp.rptdesigner.textboxproperties.number.f1
+- "10130"
+- "10286"
+- sql13.rtp.rptdesigner.serieslabelproperties.number.f1
+- "10285"
+- sql13.rtp.rptdesigner.axisproperties.number.f1
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 186bb0bab4abac91ea95d397f379986cac9d2f0f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Mise en forme des nombres et des dates (G&#233;n&#233;rateur de rapports et SSRS)
+# <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Mise en forme des nombres et des dates (Générateur de rapports et SSRS)
   Vous pouvez mettre en forme les nombres et les dates dans les régions de données en sélectionnant un format dans la page **Nombre** de la boîte de dialogue **Propriétés** de la région de données correspondante.  
   
  Pour spécifier des chaînes de format dans un élément de rapport de zone de texte, sélectionnez l’élément que vous souhaitez mettre en forme, cliquez dessus avec le bouton droit, sélectionnez **Propriétés de la zone de texte**, puis cliquez sur **Nombre**. En procédant de la même manière, vous pouvez mettre en forme des cellules individuelles d'une région de données de table ou de matrice, car ces cellules sont des zones de texte individuelles.  
@@ -41,7 +46,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Éléments à prendre en considération pour mettre en forme des nombres et des dates  
+## <a name="considerations-for-formatting-numbers-and-dates"></a>Éléments à prendre en considération pour mettre en forme des nombres et des dates  
  Avant de mettre en forme des nombres et des dates dans votre rapport, prenez en considération les éléments suivants :  
   
 -   Par défaut, les nombres sont mis en forme de manière à refléter les paramètres culturels de l'ordinateur client. Utilisez des chaînes de mise en forme pour spécifier l'affichage des nombres, de sorte que la mise en forme soit cohérente quel que soit l'endroit où se trouve la personne qui consulte le rapport.  
@@ -56,7 +61,7 @@ caps.handback.revision: 6
   
 -   Si vous sélectionnez **Devise** sous **Catégorie** et si vous activez **Afficher les valeurs en**, vous pouvez sélectionner **Milliers**, **Millions**ou **Milliards** pour afficher les nombres au format financier. Par exemple, si la valeur du champ est 1 789 905 394, que vous sélectionnez **Milliards** et spécifiez 2 comme nombre de décimales, la valeur affichée dans le rapport est 1,78.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mise en forme du texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Mise en forme des lignes, couleurs et images &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
  [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   

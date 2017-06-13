@@ -1,31 +1,36 @@
 ---
-title: "Cartes (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10508"
-  - "MICROSOFT.REPORTDESIGNER.MAPBINDINGFIELDPAIR.FIELDNAME"
-  - "sql13.rtp.rptdesigner.mapproperties.general.f1"
-  - "MICROSOFT.REPORTDESIGNER.MAPPOLYGON.CENTERPOINTTEMPLATE"
-  - "10500"
-  - "sql13.rtp.rptdesigner.maptitleproperties.general.f1"
+title: "Cartes (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10508"
+- MICROSOFT.REPORTDESIGNER.MAPBINDINGFIELDPAIR.FIELDNAME
+- sql13.rtp.rptdesigner.mapproperties.general.f1
+- MICROSOFT.REPORTDESIGNER.MAPPOLYGON.CENTERPOINTTEMPLATE
+- "10500"
+- sql13.rtp.rptdesigner.maptitleproperties.general.f1
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 caps.latest.revision: 30
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 29
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 64fd4ab25d7328a649e6629d16c88538c6bee6e6
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Cartes (G&#233;n&#233;rateur de rapports et SSRS)
-  Pour visualiser des données métier sur un arrière-plan géographique, vous pouvez ajouter une carte à votre rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]. Le type de carte que vous sélectionnez dépend des informations que vous souhaitez communiquer dans votre rapport. Vous pouvez ajouter une carte qui affiche uniquement des emplacements géographiques, ou une carte à bulles dans laquelle la taille des bulles varie en fonction du nombre de ménages habitant dans une zone, ou une carte à marqueurs faisant varier le style de marqueur en fonction du produit ayant le plus gros chiffre d'affaires pour chaque magasin, ou encore une carte linéaire pour afficher des itinéraires entre des magasins.  
+# <a name="maps-report-builder-and-ssrs"></a>Cartes (Générateur de rapports et SSRS)
+  Pour visualiser des données métier sur un arrière-plan géographique, vous pouvez ajouter une carte à votre rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Le type de carte que vous sélectionnez dépend des informations que vous souhaitez communiquer dans votre rapport. Vous pouvez ajouter une carte qui affiche uniquement des emplacements géographiques, ou une carte à bulles dans laquelle la taille des bulles varie en fonction du nombre de ménages habitant dans une zone, ou une carte à marqueurs faisant varier le style de marqueur en fonction du produit ayant le plus gros chiffre d'affaires pour chaque magasin, ou encore une carte linéaire pour afficher des itinéraires entre des magasins.  
   
  Une carte contient un titre, une fenêtre d'affichage qui spécifie le point central d'affichage et l'échelle, un arrière-plan facultatif de mosaïques Bing pour la fenêtre d'affichage, une ou plusieurs couches affichant des données spatiales, ainsi que diverses légendes pour aider les utilisateurs à interpréter les visualisations des données. L'illustration ci-dessous montre les parties principales d'une carte.  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 29
   
  Pour visualiser des données sur une carte, les données analytiques et les données spatiales doivent être en relation. Lorsque les données spatiales et les données analytiques proviennent de la même source, la relation est connue. Lorsqu'elles proviennent de sources différentes, vous devez spécifier des champs de correspondance pour les mettre en relation.  
   
-### Données spatiales  
+### <a name="spatial-data"></a>Données spatiales  
  Les données spatiales consistent en des jeux de coordonnées. Les données spatiales d'une source de données peuvent être un point unique, plusieurs points, une ligne unique, plusieurs lignes ou un jeu de polygones. Chaque jeu de coordonnées définit un *élément cartographique*, par exemple un polygone représentant la carte d'un district, une ligne représentant une route ou un point représentant l'emplacement d'une ville.  
   
  Les données spatiales sont basées sur l'un des systèmes de coordonnées suivants :  
@@ -69,23 +74,23 @@ caps.handback.revision: 29
   
  Chaque couche affiche un type de données spatiales : polygones, lignes ou points. Pour afficher plusieurs types de données spatiales, ajoutez plusieurs couches à la carte. Vous pouvez également ajouter une couche de mosaïques Microsoft Bing. La couche de mosaïques ne dépend pas des données spatiales. Elle affiche des mosaïques d'images correspondant aux coordonnées du point de vue de la carte.  
   
-#### Sources de données spatiales  
+#### <a name="sources-of-spatial-data"></a>Sources de données spatiales  
  Les sources de données spatiales suivantes sont prises en charge :  
   
--   **Rapports de la bibliothèque de cartes.** Les données spatiales sont incorporées dans les rapports situés dans la bibliothèque de cartes. Par défaut, la bibliothèque de cartes est située dans *\<lecteur>*:\\Program Files\Microsoft SQL Server\Report Builder\MapGallery.  
+-   **Rapports de la bibliothèque de cartes.** Les données spatiales sont incorporées dans les rapports situés dans la bibliothèque de cartes. Par défaut, la bibliothèque de cartes est installée dans  *\<lecteur >*: \Program Files\Microsoft SQL Server\Report \MapGallery.  
   
     > [!NOTE]  
     >  Cette fonctionnalité de cartographie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise des données de fichiers de forme TIGER/Line gracieusement fournis par le Bureau de recensement des États-Unis ([http://www.census.gov/](http://www.census.gov/)). Les fichiers de forme TIGER/Line sont un extrait d'informations géographiques et cartographiques sélectionnées de la base de données MAF/TIGER du Bureau de recensement. Ces fichiers sont mis à disposition gratuitement par le Bureau de recensement. Pour plus d’informations sur les fichiers de forme TIGER/Line, consultez [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). Les informations de frontières dans les fichiers de forme TIGER/Line sont fournies à des fins de collecte et de tabulation de données statistiques uniquement ; leur description et leur désignation pour des objectifs statistiques ne constituent pas une détermination d'autorité juridictionnelle ou de droits de propriété et les informations ne constituent pas des descriptions juridiquement valables. Census TIGER et TIGER/Line sont des marques déposées du Bureau de recensement des États-Unis.  
   
 -   **Fichiers de forme ESRI.** Les fichiers de forme ESRI contiennent des données conformes au format de données spatiales ESRI (Environmental Systems Research Institute, Inc.). Les fichiers de forme ESRI font référence à un jeu de fichiers. Les données enregistrées dans le fichier .shp spécifient des formes géographiques ou géométriques. Les données du fichier .dbf fournissent des attributs pour ces formes. Pour afficher un plan en mode Conception ou pour exécuter un plan à partir du serveur de rapports, les deux fichiers doivent être dans le même dossier. Lorsque vous ajoutez des données spatiales d'un fichier .shp sur votre système de fichiers local, les données spatiales sont incorporées dans votre rapport. Pour récupérer dynamiquement des données spatiales au moment de l'exécution, téléchargez les fichiers de forme sur votre serveur de rapports, puis spécifiez-les comme source pour les données spatiales. Pour plus d’informations, consultez [Rechercher des fichiers de forme ESRI pour une carte](http://go.microsoft.com/fwlink/?linkid=178814).  
   
--   **Données spatiales SQL Server stockées dans une base de données.** Vous pouvez utiliser une requête qui spécifie les types de données **SQLGeometry** ou **SQLGeography** dans une base de données relationnelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Présentation des types de données spatiales](../../relational-databases/spatial/spatial-data-types-overview.md) dans la [documentation en ligne de SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
+-   **Données spatiales SQL Server stockées dans une base de données.** Vous pouvez utiliser une requête qui spécifie les types de données **SQLGeometry** ou **SQLGeography** dans une base de données relationnelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Présentation des types de données spatiales](../../relational-databases/spatial/spatial-data-types-overview.md) dans la [documentation en ligne de SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
   
      Dans le jeu de résultats affiché dans le concepteur de requêtes, chaque ligne de données spatiales est traitée comme une unité et stockée dans un élément cartographique unique. Par exemple, si plusieurs points sont définis dans une ligne dans le jeu de résultats, les propriétés d'affichage s'appliquent à tous les points de cet élément cartographique.  
   
 -   **Emplacements personnalisés que vous créez.** Vous pouvez ajouter manuellement des emplacements en tant que points incorporés à une couche de points incorporés. Pour plus d’informations, consultez [Ajouter des emplacements personnalisés à une carte &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md).  
   
-#### Données spatiales en mode Conception  
+#### <a name="spatial-data-in-design-view"></a>Données spatiales en mode Conception  
  En mode Conception, le processeur de rapports affiche des exemples de données spatiales pour vous aider à concevoir la couche. Les données affichées dépendent de la disponibilité des données spatiales :  
   
 -   **Données incorporées.** Les exemples de données sont récupérés d'éléments cartographiques incorporés dans les couches de votre rapport.  
@@ -94,17 +99,17 @@ caps.handback.revision: 29
   
 -   **Données spatiales SQL Server.** Si la source de données est disponible et que les informations d'identification sont valides, les exemples de données sont chargés à partir des données spatiales dans la base de données. Dans le cas contraire, le processeur de rapports génère les exemples de données et affiche le message **Absence de données spatiales disponibles**.  
   
-#### Données spatiales incorporées dans la définition de rapport  
+#### <a name="embedding-spatial-data-in-the-report-definition"></a>Données spatiales incorporées dans la définition de rapport  
  Contrairement aux données analytiques, vous avez l'option d'incorporer des données spatiales pour une couche dans la définition de rapport. Lorsque vous incorporez des données spatiales, vous incorporez des éléments cartographiques utilisés dans la couche.  
   
  Les éléments incorporés augmentent la taille de la définition de rapport, mais garantissent que les données spatiales sont toujours disponibles lors de l'exécution du rapport, que ce soit dans l'aperçu ou sur le serveur de rapports. Un volume plus important de données signifie plus de stockage et des temps de traitement plus longs. Il est toujours recommandé de limiter les données spatiales, comme les autres données du rapport, aux informations nécessaires pour votre rapport.  
   
-#### Contrôle de la résolution de la carte à l'exécution  
+#### <a name="controlling-map-resolution-at-run-time"></a>Contrôle de la résolution de la carte à l'exécution  
  Lorsque vous modifiez la résolution des données spatiales, vous spécifiez le niveau de détail des lignes dessinées sur la carte. Par exemple, pour une région, avez-vous besoin d'une granularité jusqu'à cent mètres de la surface du sol, ou un kilomètre est-il suffisant ?  
   
  Si les données spatiales sont incorporées dans le rapport, la résolution utilisée affecte le nombre d'éléments cartographiques inclus dans la définition de rapport. Une résolution plus élevée augmente le nombre d'éléments nécessaires pour dessiner des bordures à cette résolution. Si les données spatiales ne sont pas incorporées dans le rapport, le serveur de rapports calcule les lignes nécessaires pour dessiner les bordures à cette résolution chaque fois que vous affichez le rapport. Pour concevoir un rapport offrant un compromis entre la résolution de l'affichage et un temps de rendu acceptable, simplifiez la résolution de la carte au niveau de détail dont vous avez besoin dans votre rapport pour visualiser vos données analytiques.  
   
-### Données analytiques  
+### <a name="analytical-data"></a>Données analytiques  
  Les données analytiques sont les données que vous souhaitez visualiser sur la carte, par exemple la population d'une ville ou le total des ventes d'un magasin. Les données analytiques peuvent provenir de l'une des sources suivantes :  
   
 -   **Champ de dataset.** Un champ d'un dataset dans le volet des données de rapport.  
@@ -113,9 +118,9 @@ caps.handback.revision: 29
   
 -   **Données incorporées pour un élément cartographique.** Après avoir incorporé des polygones, des lignes ou des points dans un rapport, vous pouvez remplacer les champs de données d'éléments cartographiques individuels et définir des valeurs personnalisées.  
   
- Quand vous spécifiez des règles pour une couche et que vous sélectionnez le champ de données analytiques, si le type de données est numérique, le processeur de rapports utilise automatiquement la fonction par défaut Sum pour calculer des valeurs agrégées pour l’élément cartographique. Si le champ n’est pas numérique, aucune fonction d’agrégation n’est spécifiée et la fonction d’agrégation First implicite est utilisée. Pour modifier l'expression par défaut, modifiez les options des règles de cette couche. Pour plus d’informations, consultez [Modifier l’affichage des polygones, des lignes et des points à l’aide de règles et de données analytiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md).  
+ Quand vous spécifiez des règles pour une couche et que vous sélectionnez le champ de données analytiques, si le type de données est numérique, le processeur de rapports utilise automatiquement la fonction par défaut Sum pour calculer des valeurs agrégées pour l’élément cartographique. Si le champ n’est pas numérique, aucune fonction d’agrégation n’est spécifiée et la fonction d’agrégation First implicite est utilisée. Pour modifier l'expression par défaut, modifiez les options des règles de cette couche. Pour plus d’informations, consultez [Modifier l’affichage des polygones, des lignes et des points à l’aide de règles et de données analytiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
-### Champs de correspondance  
+### <a name="match-fields"></a>Champs de correspondance  
  Pour mettre en relation des données analytiques avec des éléments cartographiques d'une couche, vous devez spécifier des *champs de correspondance*. Les champs de correspondance sont utilisés pour générer une relation entre les éléments cartographiques et les données analytiques. Vous pouvez utiliser un ou plusieurs champs pour la correspondance, à condition qu'ils spécifient une valeur analytique unique pour chaque emplacement spatial.  
   
  Par exemple, les données suivantes sont requises pour une carte à bulles qui fait varier la taille des bulles en fonction de la population des villes :  
@@ -162,7 +167,7 @@ caps.handback.revision: 29
   
  Pour obtenir des instructions détaillées, consultez [Ajouter, modifier ou supprimer une carte ou une couche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Pour plus d'informations sur les mosaïques, consultez [Système de mosaïques Bing Maps](http://go.microsoft.com/fwlink/?linkid=147315)(éventuellement en anglais). Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](http://go.microsoft.com/fwlink/?LinkId=151371) et [Déclaration de confidentialité](http://go.microsoft.com/fwlink/?LinkId=151372)(éventuellement en anglais).  
+ Pour plus d'informations sur les mosaïques, consultez [Système de mosaïques Bing Maps](http://go.microsoft.com/fwlink/?linkid=147315)(éventuellement en anglais). Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](http://go.microsoft.com/fwlink/?LinkId=151371).  
   
 ##  <a name="MapLayers"></a> Fonctionnement des couches et des éléments cartographiques  
  Une carte peut avoir plusieurs couches. Il existe trois types de couches. Chaque couche affiche un type de données spatiales :  
@@ -185,7 +190,7 @@ caps.handback.revision: 29
   
  Pour plus d’informations sur les couches, consultez [Ajouter, modifier ou supprimer une carte ou une couche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
-### Modification des propriétés d'affichage des points, des lignes et des polygones  
+### <a name="varying-display-properties-for-points-lines-and-polygons"></a>Modification des propriétés d'affichage des points, des lignes et des polygones  
  Les options d'affichage d'un élément cartographique peuvent être définies au niveau de la couche, à l'aide de règles pour la couche ou pour des éléments individuels. Par exemple, vous pouvez définir des propriétés d'affichage pour tous les points d'une couche, ou définir des règles qui contrôlent les propriétés d'affichage pour tous les points d'une couche, qu'ils soient incorporés ou non, ou remplacer des paramètres des propriétés d'affichage pour des points incorporés spécifiques.  
   
  Lorsque vous affichez un rapport, les valeurs d'affichage sont contrôlées par la hiérarchie suivante, répertoriée en ordre de priorité croissant. Les numéros les plus élevés sont prioritaires :  
@@ -198,7 +203,7 @@ caps.handback.revision: 29
   
 4.  **Option de remplacement pour les propriétés des polygones, lignes ou points incorporés**. Pour les éléments cartographiques incorporés, vous pouvez sélectionner l'option de remplacement et modifier une propriété ou une valeur de données. Toute modification effectuée pour remplacer des règles pour des éléments individuels est irréversible. Par exemple, vous pouvez mettre en évidence un magasin spécifique à l'aide d'un marqueur de punaise.  
   
- Pour plus d’informations, consultez [Modifier l’affichage des polygones, des lignes et des points à l’aide de règles et de données analytiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md).  
+ Pour plus d’informations, consultez [Modifier l’affichage des polygones, des lignes et des points à l’aide de règles et de données analytiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
  En plus de faire varier l'apparence d'éléments cartographiques, vous pouvez ajouter des fonctionnalités d'interactivité aux points, aux lignes et aux polygones ou aux couches en appliquant les méthodes suivantes :  
   
@@ -244,7 +249,7 @@ caps.handback.revision: 29
   
  [Personnaliser des données et l’affichage d’une carte ou d’une couche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
- [Modifier l’affichage des polygones, des lignes et des points à l’aide de règles et de données analytiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md)  
+ [Modifier l’affichage des polygones, des lignes et des points à l’aide de règles et de données analytiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
  [Ajouter, modifier ou supprimer une carte ou une couche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   

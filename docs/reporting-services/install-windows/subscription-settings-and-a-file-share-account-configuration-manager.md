@@ -1,24 +1,29 @@
 ---
-title: "Param&#232;tres d&#39;abonnement et compte de partage de fichiers (Gestionnaire de configuration) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/31/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SQL13.rsconfigtool.subscriptionsettings.F1"
+title: "Paramètres d’abonnement et un partage de fichiers compte (Gestionnaire de Configuration) | Documents Microsoft"
+ms.custom: 
+ms.date: 05/31/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SQL13.rsconfigtool.subscriptionsettings.F1
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 12
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 804f6b3bb0ee6b5d65c7990fb3eb92fc0b369446
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Param&#232;tres d&#39;abonnement et compte de partage de fichiers (Gestionnaire de configuration)
+# <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>Paramètres d'abonnement et compte de partage de fichiers (Gestionnaire de configuration)
   Utilisez la page **Paramètres d'abonnement** du Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] afin de configurer un compte de partage de fichiers pour les serveurs de rapports en mode natif et les abonnements de partage de fichiers. Le compte de partage de fichiers vous permet d'utiliser un jeu unique d'informations d'identification dans plusieurs abonnements qui fournissent des rapports à un partage de fichiers. Au moment de modifier les informations d'identification, vous configurez la modification pour le compte de partage de fichiers et vous n'avez pas besoin de mettre à jour chaque abonnement individuel.  
   
  Les abonnements de partage de fichiers [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluent deux flux de travail :  
@@ -31,22 +36,23 @@ caps.handback.revision: 12
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif.  
   
-## Spécifier un compte de partage de fichiers  
+## <a name="specify-a-file-share-account"></a>Spécifier un compte de partage de fichiers  
  Si cette option est sélectionnée, vous pouvez fournir un compte pour accéder aux partages de fichiers à partir du serveur de rapports. Si vous configurez le compte de partage de fichiers, tous les utilisateurs peuvent sélectionner le compte pour tous les abonnements configurés pour envoyer des rapports à un partage de fichiers. Si cette option n'est pas sélectionnée, le compte de partage de fichiers n’est disponible sur **aucun** abonnement.  
   
  Notez que vous devez vérifier que le compte que vous configurez comme compte de partage de fichiers dispose de droits d’accès en lecture et en écriture sur tous les partages de fichiers dont les utilisateurs se serviront pour la remise par partage de fichiers.  
   
  L'illustration suivante montre ce que voient les utilisateurs dans les abonnements configurés pour la remise par partage de fichiers. L’option **Utiliser le compte Partage de fichiers** est désactivée si aucun compte de partage de fichiers n’a été configuré.  
   
- ![configuration manager file share account](../../reporting-services/install-windows/media/ssrs-fileshare-account.png "configuration manager file share account")  
+ ![compte de partage de fichiers configuration manager](../../reporting-services/install-windows/media/ssrs-fileshare-account.png "compte de partage de fichiers configuration manager")  
   
-## Empêcher l’escalade des privilèges ou des privilèges élevés  
+## <a name="prevent-privilege-escalation-or-elevated-privileges"></a>Empêcher l’escalade des privilèges ou des privilèges élevés  
   
-> [!IMPORTANT] Le compte de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contrôle la remise des abonnements et interagit avec le compte utilisé pour les abonnements de partage de fichiers. Les fonctionnalités de sécurité Windows limitent les combinaisons 1) du compte de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et 2) du compte utilisé pour les comptes de partage de fichiers. Par exemple, si un compte de système d’exploitation intégré est utilisé comme compte de partage de fichiers, le compte de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] doit être un autre compte de service avec des autorisations d’emprunt d’identité. Si un compte de partage de fichiers explicite et un mot de passe sont configurés, le compte de partage de fichiers nécessite un droit d'ouverture de session sur l'ordinateur exécutant le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si le compte de partage de fichiers n'a pas les autorisations requises, les abonnements qui utilisent le compte de partage de fichiers échouent et un message d'erreur semblable à ce qui suit s’affiche :  
+> [!IMPORTANT]
+> Le compte de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contrôle la remise des abonnements et interagit avec le compte utilisé pour les abonnements de partage de fichiers. Les fonctionnalités de sécurité Windows limitent les combinaisons 1) du compte de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et 2) du compte utilisé pour les comptes de partage de fichiers. Par exemple, si un compte de système d’exploitation intégré est utilisé comme compte de partage de fichiers, le compte de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] doit être un autre compte de service avec des autorisations d’emprunt d’identité. Si un compte de partage de fichiers explicite et un mot de passe sont configurés, le compte de partage de fichiers nécessite un droit d'ouverture de session sur l'ordinateur exécutant le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si le compte de partage de fichiers n'a pas les autorisations requises, les abonnements qui utilisent le compte de partage de fichiers échouent et un message d'erreur semblable à ce qui suit s’affiche :  
 >   
 >  `“Failure writing file {file} : An impersonation error occurred using the security context of the current user.”`  
   
-## Exemple PowerShell pour l’audit de l'utilisation du compte de partage de fichiers  
+## <a name="powershell-sample-to-audit-use-of-the-file-share-account"></a>Exemple PowerShell pour l’audit de l'utilisation du compte de partage de fichiers  
  Exécutez le script Windows PowerShell suivant pour répertorier tous les abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurés pour utiliser le **compte de partage de fichiers**. Mettez à jour `SERVERNAME` à l’aide d’une valeur appropriée pour votre serveur de rapports.  
   
 ```  
@@ -95,8 +101,9 @@ $subscriptions | extensionSettingFilter | select report, owner, status, lastexec
   
  `Aworks_sales_by_territory DOMAIN\UserName Disabled 10/5/2014 1:04:04 PM e843bc2b-023e-45a3-ba23-22f9dc9a0934`  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Remise par partage de fichiers dans Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
  [Créer et gérer des abonnements pour les serveurs de rapports en mode natif](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
   
   
+

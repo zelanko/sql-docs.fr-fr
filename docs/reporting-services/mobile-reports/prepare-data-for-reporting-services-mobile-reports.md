@@ -1,27 +1,32 @@
 ---
-title: "Prepare data for Reporting Services mobile reports | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "02/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Préparer les données pour les rapports mobiles Reporting Services | Documents Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 02/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
 caps.latest.revision: 15
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 15
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bfde173f8848326fba857808e15448385f8c8322
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Prepare data for Reporting Services mobile reports
+# <a name="prepare-data-for-reporting-services-mobile-reports"></a>Prepare data for Reporting Services mobile reports
   
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] prend en charge un nombre d’opérations de données complexes, dont le filtrage, l’agrégation et le découpage temporel. Cet article présente certains points à prendre en compte lors de la préparation des données. La pré-agrégation des données peut optimiser la création et l’utilisation de rapports mobiles. Certains modèles de rapport mobile l’exigent même.   
   
-## Formats de date et d’heure 
+## <a name="date-and-time-formats"></a>Formats de date et d’heure 
 Lorsque vous traitez des intervalles de date et d’heure en vue d’une utilisation dans un rapport mobile, en particulier avec TimeNavigator, il est important de formater correctement la colonne date/heure afin que l’ [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] puisse l’identifier en tant que tel. Voici quelques exemples de formats d’horodatage valides :  
   
     05/01/2009    
@@ -35,9 +40,9 @@ Lorsque vous traitez des intervalles de date et d’heure en vue d’une utilisa
   
 La plupart du temps, les jeux de données horodatées peuvent être décrits par un ou plusieurs intervalles de temps (horaire, quotidien, mensuel, trimestriel et annuel). [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] peut combiner plusieurs tables de granularité différente et les afficher dans le même rapport mobile. Toutefois, gardez à l’esprit les intervalles appropriés au(x) jeu(x) de données d’origine, car ils permettent de décider quelles options de filtre d’horodatage afficher à l’utilisateur dans le rapport mobile final.  
 
-Les champs de date [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] dans les modèles multidimensionnels et tabulaires peuvent perdre leur mise en forme de date dans les datasets partagés. Pour une solution qui préserve leur mise en forme, consultez [Conserver la mise en forme des dates pour Analysis Services dans les rapports mobiles](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md).
+Les champs de date [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] dans les modèles multidimensionnels et tabulaires peuvent perdre leur mise en forme de date dans les datasets partagés. Pour une solution qui préserve leur mise en forme, consultez [Conserver la mise en forme des dates pour Analysis Services dans les rapports mobiles](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md) .
   
-## Préparer les données du filtre ##  
+## <a name="preparing-filter-data"></a>Préparer les données du filtre ##  
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] peut filtrer les données en fonction des champs d’horodatage et des champs clés. Les champs clés peuvent être numériques, mais dans la plupart des cas, ils contiennent un ID ou une valeur de type chaîne. Pour préparer un champ de filtre à utiliser avec un élément de navigateur tel qu’une liste de sélection, la clé du filtre doit être une colonne unique de la table de données. Ainsi, vous pouvez regrouper les lignes de la table en fonction de la valeur dans la colonne du filtre. Le fait que plusieurs colonnes contiennent différentes clés de filtre (ou critères de filtrage) permet d’utiliser des rapports mobiles avec plusieurs navigateurs de filtre ensemble hiérarchique ou individuellement.  
   
 | Secteur  | Pays   | Région    |  
@@ -83,10 +88,12 @@ Dans cette table, les éléments ParentKey sont d’abord répertoriés dans la 
 | Équipements et matériels technologiques   | Technologies de l’information |  
 | Services de télécommunication |Technologies de l’information |  
   
-### Voir aussi  
+### <a name="see-also"></a>Voir aussi  
 - [Préparer les données Excel pour les rapports mobiles Reporting Services](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)  
 - [Conserver la mise en forme des dates pour Analysis Services dans les rapports mobiles](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md)
-- [Créer des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)
+- [Créer des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)
   
   
   
+
+

@@ -1,35 +1,40 @@
 ---
-title: "Mise en cache de rapports (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "propriétés relatives à l'exécution des rapports [Reporting Services]"
-  - "cache [Reporting Services]"
-  - "traitement des rapports [Reporting Services], mise en cache"
-  - "instances mises en cache [Reporting Services]"
-  - "actualisation du cache"
-  - "rapports mis en cache [Reporting Services]"
-  - "préchargement du cache"
-  - "rapports mis en cache non valides [Reporting Services]"
-  - "performances [Reporting Services]"
-  - "expiration [Reporting Services]"
-  - "captures instantanées [Reporting Services], mise en cache"
+title: Mise en cache de rapports (SSRS) | Documents Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- report execution properties [Reporting Services]
+- cache [Reporting Services]
+- report processing [Reporting Services], caching
+- cached instances [Reporting Services]
+- refreshing cache
+- cached reports [Reporting Services]
+- preloading cache
+- invalid cached reports [Reporting Services]
+- performance [Reporting Services]
+- expiration [Reporting Services]
+- snapshots [Reporting Services], caching
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 caps.latest.revision: 44
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 44
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 799f6c8803852baf8b4c2262d85826167f55ed5c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Mise en cache de rapports (SSRS)
+# <a name="caching-reports-ssrs"></a>Mise en cache de rapports (SSRS)
   Un serveur de rapports peut mettre en mémoire cache la copie d'un rapport traité et retourner cette copie lorsqu'un utilisateur ouvre le rapport. Pour cet utilisateur, la date et l'heure de l'exécution du rapport sont les seules informations qui lui permettent de savoir que ce rapport est une copie en cache. Si la date ou l'heure n'est pas celle en cours et que le rapport n'est pas un instantané, ceci signifie que le rapport a été extrait du cache.  
   
  La mise en cache peut raccourcir le temps nécessaire à la récupération d'un rapport si celui-ci est volumineux ou fréquemment consulté. Si le serveur est redémarré, toutes les instances mises en cache sont réintégrées lorsque le service Web Report Server revient en ligne.  
@@ -39,22 +44,22 @@ caps.handback.revision: 44
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stocke les fichiers temporaires dans une base de données afin de prendre en charge les sessions utilisateur et le traitement des rapports. Ces fichiers sont mis en cache pour être utilisés en interne et pour assurer un affichage constant durant une même session de navigateur. Pour plus d’informations sur la façon dont les fichiers temporaires à usage interne sont mis en cache, consultez [Base de données du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md).  
   
-## Instances mises en cache  
+## <a name="cached-instances"></a>Instances mises en cache  
  L'instance mise en cache d'un rapport est basée sur le format intermédiaire d'un rapport. Le serveur de rapports met généralement en cache l'instance d'un rapport sur la base du nom du rapport. Si toutefois un rapport peut contenir des données différentes basées sur des paramètres de requête, plusieurs versions du rapport peuvent être mises en cache à un moment donné. Supposons, par exemple, que vous disposez d'un rapport paramétrable qui prend un code de région en tant que valeur de paramètre. Si quatre utilisateurs différents spécifient quatre codes de région différents, quatre copies mises en cache sont créées.  
   
  Le premier utilisateur qui exécute le rapport avec un code de région unique crée un rapport mis en cache contenant des données pour cette région. Les utilisateurs suivants qui demandent le rapport en utilisant le même code de région obtiennent la copie mise en cache.  
   
  Les rapports ne peuvent pas tous être mis en cache. Par exemple, les rapports qui contiennent des données tributaires de l'utilisateur, ceux qui nécessitent la saisie d'informations d'identification par l'utilisateur ou encore ceux qui utilisent l'authentification Windows.  
   
-## Actualisation du cache  
- La nouvelle version d'un rapport est substituée à l'exemplaire mis en cache lorsqu'un utilisateur sélectionne le rapport après l'expiration de la copie précédemment chargée dans la mémoire. Les rapports configurés pour s'exécuter en tant qu'instances en cache sont supprimés du cache à intervalles réguliers, conformément aux paramètres d'expiration définis. Vous pouvez choisir le mode d'expiration d'un rapport, en minutes ou à une heure planifiée, selon les conditions dictées par le caractère urgent des données. Vous ne pouvez pas supprimer directement un rapport du cache, à moins d'utiliser l'interface API SOAP.  
+## <a name="refreshing-the-cache"></a>Actualisation du cache  
+ La nouvelle version d'un rapport est substituée à l'exemplaire mis en cache lorsqu'un utilisateur sélectionne le rapport après l'expiration de la copie précédemment chargée dans la mémoire. Les rapports configurés pour s'exécuter en tant qu'instances en cache sont supprimés du cache à intervalles réguliers, conformément aux paramètres d'expiration définis. Vous pouvez choisir le mode d'expiration d'un rapport, en minutes ou à une heure planifiée, selon les conditions dictées par le caractère urgent des données. Vous ne pouvez pas supprimer directement un rapport du cache, à moins d'utiliser l'interface API SOAP.  
   
  Pour configurer l'expiration du cache, utilisez une planification partagée ou propre au rapport. Si vous utilisez une planification partagée qui est suspendue, le cache n'arrive pas à expiration tant que la planification n'est pas active. Si la planification partagée est supprimée, une copie des paramètres de planification est enregistrée en tant que planification propre au rapport.  
   
  Si une planification arrive à expiration ou si le moteur de planification n'est pas disponible à la date d'expiration du cache, le serveur de rapports exécute un rapport en direct jusqu'à ce que les opérations planifiées puissent reprendre (soit en étendant la planification, soit en démarrant le service de planification).  
   
-## Préchargement du cache  
- Pour améliorer les performances d'un serveur, préchargez le cache. Vous pouvez précharger le cache avec une collection d'instances de rapport paramétrable de deux façons :  
+## <a name="preloading-the-cache"></a>Préchargement du cache  
+ Pour améliorer les performances d'un serveur, préchargez le cache. Vous pouvez précharger le cache avec une collection d'instances de rapport paramétrable de deux façons :  
   
 1.  Créez un plan d'actualisation du cache. Lorsque vous créez un plan d'actualisation, vous pouvez spécifier une planification pour un rapport unique ou spécifier une planification partagée.  
   
@@ -64,18 +69,18 @@ caps.handback.revision: 44
   
  Lorsque vous spécifiez une planification ou créez l'abonnement piloté par les données, vous devez planifier la fréquence de remise de ces rapports dans le cache. Ces copies de rapports doivent avoir expiré pour que de nouveaux exemplaires les remplacent dans le cache. Ainsi, les propriétés d'exécution du rapport doivent être configurées pour englober les paramètres d'expiration du cache. Les valeurs de ces paramètres doivent tenir compte de la planification de l'abonnement que vous définissez. De fait, si vous créez un abonnement qui s'exécute chaque nuit, le cache doit également expirer chaque nuit, avant l'heure d'exécution de l'abonnement. Si les propriétés d'exécution n'incluent aucune limite d'expiration, les remises plus récentes sont ignorées. Pour plus d’informations sur les plans d’actualisation du cache, consultez [Planifications](../../reporting-services/subscriptions/schedules.md). Pour plus d’informations sur la définition des propriétés, consultez [Définir les propriétés de traitement d’un rapport](../../reporting-services/report-server/set-report-processing-properties.md). Pour plus d’informations sur l’utilisation des abonnements pilotés par les données, consultez [Abonnements pilotés par les données](../../reporting-services/subscriptions/data-driven-subscriptions.md).  
   
-## Conditions entraînant l’expiration du cache  
- Un rapport mis en cache peut être invalidé si les événements suivants se produisent : la définition du rapport est modifiée, les paramètres de rapport sont modifiés, les informations d'identification de la source de données sont modifiées ou les options d'exécution du rapport sont modifiées. Si vous supprimez un rapport stocké dans le cache, la version mise en cache disparaît également.  
+## <a name="conditions-that-cause-cache-expiration"></a>Conditions entraînant l’expiration du cache  
+ Un rapport mis en cache peut être invalidé si les événements suivants se produisent : la définition du rapport est modifiée, les paramètres de rapport sont modifiés, les informations d'identification de la source de données sont modifiées ou les options d'exécution du rapport sont modifiées. Si vous supprimez un rapport stocké dans le cache, la version mise en cache disparaît également.  
   
  Si un rapport ne peut pas faire l'objet d'un rendu à partir d'une instance mise en cache pour une raison quelconque (par exemple, si les valeurs de paramètres spécifiées par un utilisateur sont différentes de celles utilisées pour produire le rapport mis en cache), le serveur de rapports réexécute le rapport.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Définir les options de traitement &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Définir les propriétés de traitement d'un rapport](../../reporting-services/report-server/set-report-processing-properties.md)   
+ [Définir les propriétés de traitement d’un rapport](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Concepts de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
  [Précharger le cache &#40;Gestionnaire de rapports&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
  [Planifications](../../reporting-services/subscriptions/schedules.md)   
  [Mettre en cache les datasets partagés &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
- [Options d’actualisation du cache &#40;Gestionnaire de rapports&#41;](../Topic/Cache%20Refresh%20Options%20\(Report%20Manager\).md)  
+ [Options d’actualisation du cache &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
   
   

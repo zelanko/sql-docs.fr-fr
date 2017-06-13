@@ -1,27 +1,32 @@
 ---
-title: "Activer les erreurs distantes (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "source de données distante [Reporting Services]"
-  - "propriété du serveur EnableRemoteError"
+title: Activez les erreurs distantes (Reporting Services) | Documents Microsoft
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- remote data source [Reporting Services]
+- EnableRemoteError server property
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 12
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20adc5eb8b830b960fe07d39f3717279abca3f23
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Activer les erreurs distantes (Reporting Services)
-  Vous pouvez définir des propriétés de serveur sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de façon à retourner des informations supplémentaires concernant les conditions d'erreur qui se produisent sur des serveurs distants. Si un message d'erreur contient le texte « Pour obtenir plus d'informations sur cette erreur, accédez au serveur de rapports sur le serveur local ou activez les erreurs distantes », vous pouvez définir la propriété **EnableRemoteErrors** de façon à accéder à des informations supplémentaires qui peuvent vous aider à résoudre le problème. Pour plus d’informations, consultez [Propriétés système de Report Server](../Topic/Report%20Server%20System%20Properties.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+# <a name="enable-remote-errors-reporting-services"></a>Activer les erreurs distantes (Reporting Services)
+  Vous pouvez définir des propriétés de serveur sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de façon à retourner des informations supplémentaires concernant les conditions d'erreur qui se produisent sur des serveurs distants. Si un message d'erreur contient le texte « Pour obtenir plus d'informations sur cette erreur, accédez au serveur de rapports sur le serveur local ou activez les erreurs distantes », vous pouvez définir la propriété **EnableRemoteErrors** de façon à accéder à des informations supplémentaires qui peuvent vous aider à résoudre le problème. Pour plus d’informations, consultez [Propriétés système de Report Server](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Dans cette rubrique :  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 12
 ##  <a name="bkmk_sharepoint"></a> Activer les erreurs distantes pour le mode SharePoint  
  Il existe deux procédures différentes pour activer les erreurs distantes pour le mode SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . La procédure est différente pour les deux architectures différentes de serveur de rapports. La dernière architecture basée sur un service SharePoint qui a été introduite dans la version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] utilise un paramètre qui peut être configuré pour chaque application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . L'architecture plus ancienne utilise un paramètre de niveau de site unique.  
   
-#### Activer les erreurs distantes pour une application de service Reporting Services  
+#### <a name="enable-remote-errors-for-a-reporting-services-service-application"></a>Activer les erreurs distantes pour une application de service Reporting Services  
   
 1.  Pour un serveur de rapports en mode SharePoint installé avec [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou une version plus récente de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], activez le paramètre d'application de service **Activer les erreurs distantes**. Le paramètre peut être configuré pour chaque application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 12
   
 6.  Cliquez sur **OK**.  
   
-#### Activer les erreurs distantes pour un site SharePoint  
+#### <a name="enable-remote-errors-for-a-sharepoint-site"></a>Activer les erreurs distantes pour un site SharePoint  
   
 1.  Pour un serveur de rapports en mode SharePoint installé avec une version de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] avant [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], activez le paramètre de site **Activer les erreurs distantes en mode local**.  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 12
   
 ##  <a name="bkmk_mgtStudio"></a> Activer les erreurs distantes au moyen de SQL Server Management Studio (mode natif)  
   
-1.  Démarrez Management Studio et connectez-vous à une instance du serveur de rapports. Pour plus d’informations, consultez [Se connecter à un serveur de rapports dans Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Démarrez Management Studio et connectez-vous à une instance du serveur de rapports. Pour plus d’informations, consultez [Se connecter à un serveur de rapports dans Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 2.  Cliquez avec le bouton droit sur le nœud du serveur de rapports, puis sélectionnez **Propriétés**.  
   

@@ -1,24 +1,29 @@
 ---
-title: "Conseils de cr&#233;ation de rapport (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Rapport des conseils de conception (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d30cf6d4ad8e2a4903172230469f1ba41bab360
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Conseils de cr&#233;ation de rapport (G&#233;n&#233;rateur de rapports et SSRS)
-  Utilisez les conseils suivants pour concevoir vos rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+# <a name="report-design-tips-report-builder-and-ssrs"></a>Conseils de création de rapport (Générateur de rapports et SSRS)
+  Utilisez les conseils suivants pour concevoir vos rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -55,7 +60,7 @@ caps.handback.revision: 12
   
         2.  **Région de données en tant que flux de données.** Avec les autorisations appropriées, un lecteur du rapport peut créer un flux de données ATOM d'une région de données.  
   
--   Utilisez des traits de soulignement à la place des espaces dans les noms de rapports. Si vous téléchargez un rapport à partir d’un portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], les espaces sont remplacés par les traits de soulignement. Si vous utilisez la fonctionnalité de téléchargement pour enregistrer des rapports en local, puis les incluez dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l'utilisation de traits de soulignement permet d'assurer l'exactitude des dépendances de rapports pour les sous-rapports et liens d'extraction.  
+-   Utilisez des traits de soulignement à la place des espaces dans les noms de rapports. Si vous téléchargez un rapport à partir d’un portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , les espaces sont remplacés par les traits de soulignement. Si vous utilisez la fonctionnalité de téléchargement pour enregistrer des rapports en local, puis les incluez dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l'utilisation de traits de soulignement permet d'assurer l'exactitude des dépendances de rapports pour les sous-rapports et liens d'extraction.  
   
 ##  <a name="Data"></a> Utilisation des données  
   
@@ -133,7 +138,7 @@ caps.handback.revision: 12
   
     -   Lorsque vous positionnez un élément dans la page de rapport, la distance entre l'élément et tous les éléments qui commencent à sa droite devient la distance minimale qui doit être maintenue lorsqu'un élément de rapport s'agrandit horizontalement. De la même façon, la distance entre un élément et l'élément au-dessus de lui devient une distance minimale qui doit être maintenue lorsque l'élément du haut s'agrandit verticalement.  
   
-    -   Un élément dans un rapport s'agrandit pour contenir ses données et pousse les éléments homologues (éléments dans le même conteneur parent) en appliquant les règles suivantes :  
+    -   Un élément dans un rapport s'agrandit pour contenir ses données et pousse les éléments homologues (éléments dans le même conteneur parent) en appliquant les règles suivantes :  
   
     -   Chaque élément est déplacé vers le bas pour conserver l'espace minimal entre lui-même et les éléments qui se terminent au-dessus de lui.  
   
@@ -157,7 +162,7 @@ caps.handback.revision: 12
   
  La combinaison de ce comportement, des propriétés de hauteur et de largeur des éléments de rapport, de la taille du corps du rapport, de la définition de hauteur de page et de largeur de page, des paramètres de marge du rapport parent, ainsi que de la prise en charge de la pagination spécifique au convertisseur détermine quels éléments du rapport s'ajustent dans une page rendue. Pour plus d’informations, consultez [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Générateur de rapports dans SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Didacticiels sur Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Didacticiels du Générateur de rapports](../../reporting-services/report-builder-tutorials.md)  

@@ -1,29 +1,34 @@
 ---
-title: "Rendu des &#233;l&#233;ments de rapport (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Rendu des éléments de rapport (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3a254c48e1639c95b1d93f180f1fdd00326a79ae
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Rendu des &#233;l&#233;ments de rapport (G&#233;n&#233;rateur de rapports et SSRS)
+# <a name="rendering-report-items-report-builder-and-ssrs"></a>Rendu des éléments de rapport (Générateur de rapports et SSRS)
   Le nombre, la taille et l'emplacement des éléments de rapport affectent la façon dont les convertisseurs mettent en page le corps du rapport. Vous trouverez ci-dessous une description de la façon dont les éléments de rapport sont rendus.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Éléments de rapport qui se chevauchent  
+## <a name="overlapping-report-items"></a>Éléments de rapport qui se chevauchent  
  Les éléments de rapport qui se chevauchent ne sont pas pris en charge en HTML, MHTML, dans Word, dans Excel, en mode Aperçu ou dans la Visionneuse de rapports. Si des éléments se chevauchent, ils sont déplacés. Les règles suivantes sont appliquées aux éléments de rapport qui se chevauchent :  
   
 -   Si le chevauchement vertical d'éléments de rapport est plus grand, l'un des éléments qui se chevauchent est déplacé vers la droite. L'élément le plus de gauche reste à sa place.  
@@ -36,7 +41,7 @@ caps.handback.revision: 7
   
  Les éléments de rapport qui se chevauchent sont pris en charge dans les formats de saut de page manuel, notamment l'impression.  
   
-## Visibilité et éléments de rapport  
+## <a name="visibility-and-report-items"></a>Visibilité et éléments de rapport  
  Les éléments de rapport peuvent être masqués ou affichés par défaut ou de façon conditionnelle à l'aide d'expressions. La visibilité peut également être basculée en cliquant sur un autre élément de rapport.  
   
  Les règles de visibilité suivantes s'appliquent lors du rendu des éléments de rapport :  
@@ -47,7 +52,7 @@ caps.handback.revision: 7
   
 -   Si la visibilité d'un élément de rapport et son contenu peuvent être basculés en cliquant sur un autre élément de rapport, alors la pagination change pour accommoder l'élément de rapport et son contenu uniquement lorsqu'il est affiché au début.  
   
-## Conserver les éléments de rapport ensemble sur une page unique  
+## <a name="keeping-report-items-together-on-a-single-page"></a>Conserver les éléments de rapport ensemble sur une page unique  
  De nombreux éléments de rapport au sein d'un rapport peuvent être conservés ensemble sur une page de façon implicite ou explicite en définissant les propriétés KeepWithGroup ou KeepTogether. Les éléments de rapport sont toujours rendus sur la même page si l'élément de rapport ne comporte pas de sauts de page logiques et est plus petit que la taille de la zone de page utilisable. Si un élément de rapport ne s'ajuste pas totalement dans la page sur laquelle il commence, un saut de page manuel est inséré avant l'élément de rapport, ce qui le force à passer sur la page suivante. Pour les convertisseurs de saut de page conditionnellele, la page est agrandie pour accommoder l'élément de rapport.  
   
  Lorsque l'élément de rapport est toujours masqué, les règles pour conserver les éléments ensemble sont ignorées.  
@@ -68,7 +73,7 @@ caps.handback.revision: 7
   
 -   Les éléments de rapport qui peuvent être basculés dans une région de données de tableau matriciel.  
   
-### Ordre de priorité  
+### <a name="priority-order"></a>Ordre de priorité  
  En raison des limitations de taille de la page, des conflits peuvent se produire entre les règles de conservation des éléments de rapport sur la même page. Lorsque des conflits se produisent, l'ordre de priorité suivant est utilisé pour conserver les éléments sur la même page lors du rendu :  
   
 -   Les lignes, les graphiques et les images.  
@@ -85,7 +90,7 @@ caps.handback.revision: 7
   
 -   Les régions de données de tableau matriciel assortis d’une propriété KeepTogether explicite ayant la valeur **true**.  
   
-### Sous-rapports  
+### <a name="subreports"></a>Sous-rapports  
  Un sous-rapport est rendu sous la forme d'un rectangle qui contient un autre rapport défini dans un fichier rapport .rdl séparé. Le fichier de sous-rapport doit être publié sur un serveur de rapports avant qu'il soit accessible au rapport parent.  
   
  Les règles suivantes s'appliquent lors du rendu de sous-rapports :  
@@ -104,10 +109,10 @@ caps.handback.revision: 7
   
  Pour plus d’informations sur les sous-rapports, consultez [Sous-rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Fonctionnalité interactive des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [Fonctionnalité interactive des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

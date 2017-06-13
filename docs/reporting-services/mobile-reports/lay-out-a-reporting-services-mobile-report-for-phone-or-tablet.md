@@ -1,22 +1,27 @@
 ---
-title: "Concevoir un rapport mobile Reporting Services pour t&#233;l&#233;phone ou tablette | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Créer un rapport mobile Reporting Services pour le téléphone ou tablette | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f8632816-068f-4a87-b15a-779387f3d3a3
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 283c93958b4cb8bedc890e8af942db3bc3c13a41
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Concevoir un rapport mobile Reporting Services pour t&#233;l&#233;phone ou tablette
+# <a name="lay-out-a-reporting-services-mobile-report-for-phone-or-tablet"></a>Concevoir un rapport mobile Reporting Services pour téléphone ou tablette
 Le [rapport mobile Reporting Services étant créé](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md) dans [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-long.md)], vous pouvez en concevoir une version pour téléphone et tablette.  
   
 ![SSMRP_SalesTrendRptLayout](../../reporting-services/mobile-reports/media/ssmrp-salestrendrptlayout.png)   
@@ -26,7 +31,7 @@ Le [rapport mobile Reporting Services étant créé](../../reporting-services/mo
   
    ![SSMRP_LayoutMenu](../../reporting-services/mobile-reports/media/ssmrp-layoutmenu.png)  
      
-   La disposition pour téléphone s’ouvre. Toutes les visualisations se trouvent sous l’onglet **Disposition**.  
+   La disposition pour téléphone s’ouvre. Toutes les visualisations se trouvent sous l’onglet **Disposition** .  
      
    ![SSMRP_LayoutGrid](../../reporting-services/mobile-reports/media/ssmrp-layoutgrid.png)  
      
@@ -38,7 +43,8 @@ Le [rapport mobile Reporting Services étant créé](../../reporting-services/mo
   
    ![SSMRP_PhonePreview](../../reporting-services/mobile-reports/media/ssmrp-phonepreview.png)  
   
-### Voir aussi  
+### <a name="see-also"></a>Voir aussi  
 - [Créer et publier des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   
+

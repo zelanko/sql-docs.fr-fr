@@ -1,23 +1,28 @@
 ---
-title: "R&#233;gions de donn&#233;es imbriqu&#233;es (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Régions de données (Générateur de rapports et SSRS) imbriquées | Documents Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3a2829591b4024a9423c83b057ed1462c6762255
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# R&#233;gions de donn&#233;es imbriqu&#233;es (G&#233;n&#233;rateur de rapports et SSRS)
+# <a name="nested-data-regions-report-builder-and-ssrs"></a>Régions de données imbriquées (Générateur de rapports et SSRS)
   En règle générale, vous pouvez imbriquer une région de données (par exemple un graphique) dans une autre région de données (par exemple une matrice) pour afficher des synthèses de données de façon concise ou pour proposer une représentation visuelle, ainsi qu'un tableau ou une matrice.  
   
  Par exemple, pour une matrice (également appelée *tableau matriciel*) qui contient des commandes client regroupées par magasin sur les lignes et par trimestre sur les colonnes, vous pouvez ajouter un tableau ou un graphique à la cellule d’angle pour synthétiser les ventes de tous les magasins ou ajouter un graphique à un en-tête de colonne de matrice pour afficher la part des ventes des données figurant dans la colonne sous la forme d’un pourcentage de l’ensemble des ventes.  
@@ -26,27 +31,27 @@ caps.handback.revision: 8
   
  Dans cette illustration, le graphique à secteurs de la cellule d'angle et les graphiques sparkline des lignes sont des régions de données imbriquées.  
   
- Par définition, les régions de données imbriquées reposent sur le même dataset de rapport. Vous ne pouvez pas imbriquer des régions de données qui reposent sur des dataset différents. Pour afficher des données de dataset différents, envisagez d'utiliser des rapports d'extraction ou des sous-rapports. Pour plus d’informations, consultez [Extraction, exploration, sous-rapports et régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/drillthrough, drilldown, subreports, and nested data regions.md).  
+ Par définition, les régions de données imbriquées reposent sur le même dataset de rapport. Vous ne pouvez pas imbriquer des régions de données qui reposent sur des dataset différents. Pour afficher des données de dataset différents, envisagez d'utiliser des rapports d'extraction ou des sous-rapports. Pour plus d’informations, consultez [Extraction, exploration, sous-rapports et régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Présentation de l'étendue d'une région de données imbriquée  
- L'étendue des données d'une région de données imbriquée est automatiquement définie par son positionnement dans la région de données parente. Par exemple, l'étendue des données d'un graphique imbriqué dans une cellule d'angle de tableau matriciel correspond aux données du dataset lié à la région de données de tableau matriciel une fois que les filtres ont été appliqués au dataset, à la région de données de tableau matriciel et à la région de données de graphique. L'étendue d'un tableau matriciel imbriqué dans une cellule de tableau matriciel est la même que l'étendue de la cellule d'angle, tout en s'étendant jusqu'aux membres des groupes de lignes et de colonnes de la cellule dans laquelle elle est imbriquée, une fois les filtres de groupe correspondants appliqués. Pour plus d’informations sur l’étendue, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression scope for totals, aggregates, and built-in collections.md).  
+## <a name="understanding-scope-for-a-nested-data-region"></a>Présentation de l'étendue d'une région de données imbriquée  
+ L'étendue des données d'une région de données imbriquée est automatiquement définie par son positionnement dans la région de données parente. Par exemple, l'étendue des données d'un graphique imbriqué dans une cellule d'angle de tableau matriciel correspond aux données du dataset lié à la région de données de tableau matriciel une fois que les filtres ont été appliqués au dataset, à la région de données de tableau matriciel et à la région de données de graphique. L'étendue d'un tableau matriciel imbriqué dans une cellule de tableau matriciel est la même que l'étendue de la cellule d'angle, tout en s'étendant jusqu'aux membres des groupes de lignes et de colonnes de la cellule dans laquelle elle est imbriquée, une fois les filtres de groupe correspondants appliqués. Pour plus d’informations sur l’étendue, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
  L'étendue des cellules des zones de tableau matriciel suivantes est décrite dans la liste ci-dessous :  
   
--   **Angle de tableau matriciel**L’étendue correspond aux données de la région de données liée à la région de données de tableau matriciel, une fois les expressions de filtre et de tri appliquées au dataset et au tableau matriciel externe.  
+-   **Angle de tableau matriciel** L’étendue correspond aux données de la région de données liée à la région de données de tableau matriciel, une fois les expressions de filtre et de tri appliquées au dataset et au tableau matriciel externe.  
   
--   **Groupe de colonnes de tableau matriciel**Données figurant dans le groupe de colonnes le plus profond, une fois les expressions de filtre et de tri appliquées au dataset, au tableau matriciel externe et aux groupes de colonnes.  
+-   **Groupe de colonnes de tableau matriciel** Données figurant dans le groupe de colonnes le plus profond, une fois les expressions de filtre et de tri appliquées au dataset, au tableau matriciel externe et aux groupes de colonnes.  
   
--   **Groupe de lignes de tableau matriciel**Données figurant dans le groupe de lignes le plus profond, une fois les expressions de filtre et de tri appliquées au dataset, au tableau matriciel externe et aux groupes de lignes.  
+-   **Groupe de lignes de tableau matriciel** Données figurant dans le groupe de lignes le plus profond, une fois les expressions de filtre et de tri appliquées au dataset, au tableau matriciel externe et aux groupes de lignes.  
   
 -   **Corps de tableau matriciel**Données figurant dans le groupe le plus profond représenté par l’intersection des groupes de lignes et des groupes de colonnes, une fois les expressions de filtre et de tri appliquées au dataset, au tableau matriciel externe et aux groupes de lignes et de colonnes.  
   
  Pour plus d’informations, consultez [Zones de région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
-## Imbrication d'un graphique, d'un graphique sparkline ou d'une barre de données dans un tableau matriciel  
+## <a name="nesting-a-chart-sparkline-or-data-bar-in-a-tablix"></a>Imbrication d'un graphique, d'un graphique sparkline ou d'une barre de données dans un tableau matriciel  
  Lorsque vous ajoutez un graphique (y compris un graphique sparkline ou une barre de données) à une ligne de pied de groupe ou d'en-tête de groupe de colonnes de tableau matriciel ou à une cellule de corps de tableau matriciel, les données transmises au graphique s'étendent jusqu'au sous-ensemble de données de cette cellule. Par défaut, lorsque vous ajoutez un graphique à une cellule de tableau matriciel, les dimensions du graphique se développent pour remplir la cellule.  
   
 > [!NOTE]  
@@ -54,11 +59,11 @@ caps.handback.revision: 8
   
  Par défaut, les couleurs de légende du graphique sont déterminées par la couleur des points de données qui figurent dans la série du graphique. Pour contrôler les couleurs de telle sorte que les régions de données de graphique imbriquées utilisent toutes la même couleur pour la même catégorie de données, vous devez utiliser des couleurs personnalisées et définir des expressions de tri pour les données. Pour plus d’informations, consultez [Spécifier des couleurs cohérentes pour plusieurs graphiques à base de formes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)[Trier des données dans une région de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
   
-## Imbrication d'une jauge ou d'un indicateur dans un tableau matriciel  
+## <a name="nesting-a-gauge-or-an-indicator-in-a-tablix"></a>Imbrication d'une jauge ou d'un indicateur dans un tableau matriciel  
  Vous pouvez imbriquer une jauge ou un indicateur dans un tableau, une matrice ou une liste pour afficher un indicateur de performance clé. Lorsque vous placez une jauge ou un indicateur dans un tableau, la jauge ou l'indicateur s'affiche pour chaque ligne du tableau matriciel. Pour plus d’informations sur l’ajout d’indicateurs à un tableau matriciel, consultez [Indicateurs &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
-### Ajout d'une jauge à un tableau matriciel  
- Vous pouvez ajouter une jauge à une région de données de tableau matriciel de deux façons différentes :  
+### <a name="adding-a-gauge-to-a-tablix"></a>Ajout d'une jauge à un tableau matriciel  
+ Vous pouvez ajouter une jauge à une région de données de tableau matriciel de deux façons différentes :  
   
 -   Cliquez à l'intérieur de la cellule de tableau matriciel et insérez une jauge. La boîte de dialogue **Sélectionner le type de jauge** s’affiche. Une fois le type de jauge sélectionné, la région de données Jauge est placée dans la cellule de tableau matriciel sélectionnée. Vous devrez vraisemblablement redimensionner le tableau matriciel pour mettre en forme la jauge.  
   
@@ -72,7 +77,7 @@ caps.handback.revision: 8
   
  Si les données deviennent trop nombreuses sur la jauge, envisagez d'utiliser un multiplicateur d'échelle pour réduire la quantité de chiffres affichés. Pour spécifier un multiplicateur, vous pouvez cliquer avec le bouton droit sur l’échelle, puis sélectionner **Propriétés de l’échelle**. Quand la boîte de dialogue **Propriétés de l’échelle** s’ouvre, spécifiez une valeur pour **Multiplicateur**.  
   
-## Imbrication d'un tableau ou d'une matrice et d'un graphique dans une liste  
+## <a name="nesting-a-table-or-matrix-and-a-chart-in-a-list"></a>Imbrication d'un tableau ou d'une matrice et d'un graphique dans une liste  
  Pour imbriquer plusieurs régions de données dans une liste, commencez par ajouter un rectangle, puis ajoutez les régions de données au rectangle.  
   
  Vous pouvez définir un groupe pour une région de données de type Liste et ajouter ensuite un tableau matriciel et un graphique pour proposer des vues différentes des mêmes données. Pour obtenir cet effet, vous devez définir des expressions de groupe et de tri identiques pour le tableau matriciel et le graphique incorporés. Par définition, le tableau matriciel et le graphique utilisent les données du dataset de la région de données de liste parente.  
@@ -82,7 +87,7 @@ caps.handback.revision: 8
   
  Pour plus d’informations, consultez [Fonctionnement des groupes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md) et [Ajouter, déplacer ou supprimer une table, une matrice ou une liste &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   

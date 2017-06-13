@@ -1,44 +1,49 @@
 ---
-title: "Exemples d&#39;expressions (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "sauts de page [Reporting Services], expressions"
-  - "rapports bicolores [Reporting Services]"
-  - "Visual Basic [Reporting Services]"
-  - "fonctions [Reporting Services], exemples"
-  - "code personnalisé [Reporting Services]"
-  - "apparence de rapports"
-  - "mise en forme des rapports [Reporting Services], expressions"
-  - "affichage/masquage [Reporting Services]"
-  - "paramètres [Reporting Services], expressions"
-  - "visibilité [Reporting Services], expressions"
-  - "en-têtes de page [Reporting Services]"
-  - "pieds de page [Reporting Services]"
-  - "dates [Reporting Services], expressions"
-  - "expressions [Reporting Services], exemples"
+title: "Exemples d’expressions (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 04/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- page breaks [Reporting Services], expressions
+- green-bar reports [Reporting Services]
+- Visual Basic [Reporting Services]
+- functions [Reporting Services], examples
+- custom code [Reporting Services]
+- appearance of reports
+- formatting reports [Reporting Services], expressions
+- show/hide [Reporting Services]
+- parameters [Reporting Services], expressions
+- visibility [Reporting Services], expressions
+- page headers [Reporting Services]
+- page footers [Reporting Services]
+- dates [Reporting Services], expressions
+- expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 caps.latest.revision: 101
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 101
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 6cf3c3d62250f84184adc53d66d9ec274a2a1b3d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Exemples d&#39;expressions (G&#233;n&#233;rateur de rapports et SSRS)
+# <a name="expression-examples-report-builder-and-ssrs"></a>Exemples d'expressions (Générateur de rapports et SSRS)
 Les expressions sont fréquemment utilisées dans les rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour en contrôler le contenu et l’apparence. Les expressions sont écrites en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], et peuvent utiliser des fonctions intégrées, du code personnalisé, des variables de rapport et de groupe, et des variables définies par l’utilisateur. Les expressions commencent par un signe égal (=). Pour plus d’informations sur l’éditeur d’expressions et les types de références que vous pouvez inclure, consultez [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md), et [Ajouter une expression &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
   
 > [!IMPORTANT]  
 >  Lorsque le sandboxing RDL est activé, seuls certains types et membres peuvent être utilisés dans le texte de l'expression au moment de la publication des rapports. Pour plus d’informations, consultez [Enable and Disable RDL Sandboxing](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md).  
   
- Cette rubrique propose des exemples d'expressions qu'il est possible d'utiliser pour des tâches courantes dans un rapport.  
+Cette rubrique propose des exemples d'expressions qu'il est possible d'utiliser pour des tâches courantes dans un rapport.  
   
 -   [Fonctions Visual Basic](#VisualBasicFunctions) Exemples pour les fonctions [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] de date, de chaîne, de conversion et conditionnelles.  
   
@@ -52,7 +57,7 @@ Les expressions sont fréquemment utilisées dans les rapports paginés [!INCLUD
   
 -   [Code personnalisé](#CustomCode) Exemples de code personnalisé incorporé.  
   
- Pour obtenir des exemples d'expressions pour des utilisations spécifiques, consultez les rubriques suivantes :  
+Pour obtenir des exemples d'expressions pour des utilisations spécifiques, consultez les rubriques suivantes :  
   
 -   [Exemples d’expressions de groupe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
   
@@ -60,26 +65,22 @@ Les expressions sont fréquemment utilisées dans les rapports paginés [!INCLUD
   
 -   [Filtres couramment utilisés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)  
   
--   [Références à des collections de variables de rapport et de groupe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-and-group-variables-collections-references-report-builder-and-ssrs.md)  
+-   [Références à des collections de variables de rapport et de groupe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
   
- Pour plus d’informations sur les expressions simples et complexes, l’endroit où vous pouvez utiliser des expressions et les types de références que vous pouvez inclure dans une expression, consultez les rubriques sous [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md). Pour plus d’informations sur le contexte dans lequel les expressions sont évaluées pour calculer des agrégats, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression scope for totals, aggregates, and built-in collections.md).  
+Pour plus d’informations sur les expressions simples et complexes, l’endroit où vous pouvez utiliser des expressions et les types de références que vous pouvez inclure dans une expression, consultez les rubriques sous [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md). Pour plus d’informations sur le contexte dans lequel les expressions sont évaluées pour calculer des agrégats, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
- Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et opérateurs également utilisés par les exemples d'expressions de cette rubrique, mais dans le contexte de la rédaction d'un rapport, consultez [Tutorial: Introducing Expressions](../../reporting-services/tutorial-introducing-expressions.md).  
+Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et opérateurs également utilisés par les exemples d'expressions de cette rubrique, mais dans le contexte de la rédaction d'un rapport, consultez [Tutorial: Introducing Expressions](../../reporting-services/tutorial-introducing-expressions.md).  
+
   
- Si vous vous servez du concepteur de requêtes de modèle de rapport pour concevoir une requête de dataset qui utilise un modèle de rapport en tant que source de données, vous devez utiliser des formules au lieu d'expressions. Ces formules aident à spécifier les données de rapport à l'aide de calculs personnalisés intégrés dans la requête qui spécifie les données à retourner à partir de la source de données de modèle de rapport. Pour plus d’informations, consultez [Formules dans les requêtes de modèle de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formulas-in-report-model-queries-report-builder-and-ssrs.md).  
+## <a name="functions"></a>Fonctions  
+ Dans un rapport, beaucoup d'expressions contiennent des fonctions. Vous pouvez mettre en forme des données, appliquer une logique et accéder aux métadonnées du rapport en utilisant ces fonctions. Vous pouvez écrire des expressions qui utilisent des fonctions à partir de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] bibliothèque Runtime et à partir de la <xref:System.Convert> et <xref:System.Math> espaces de noms. Vous pouvez ajouter des références à des fonctions issues d'autres assemblys ou du code personnalisé. Vous pouvez également utiliser les classes de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], y compris <xref:System.Text.RegularExpressions>.  
   
-> [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
-  
-## Fonctions  
- Dans un rapport, beaucoup d'expressions contiennent des fonctions. Vous pouvez mettre en forme des données, appliquer une logique et accéder aux métadonnées du rapport en utilisant ces fonctions. Vous pouvez écrire des expressions qui utilisent des fonctions de la bibliothèque [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] Runtime et des fonctions des espaces de noms <xref:System.Convert> et <xref:System.Math>. Vous pouvez ajouter des références à des fonctions issues d'autres assemblys ou du code personnalisé. Vous pouvez également utiliser des classes à partir de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], y compris <xref:System.Text.RegularExpressions>.  
-  
-###  <a name="VisualBasicFunctions"></a> Fonctions Visual Basic  
+##  <a name="VisualBasicFunctions"></a> Fonctions Visual Basic  
  Vous pouvez utiliser des fonctions [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] pour manipuler les données affichées dans des zones de texte ou utilisées pour des paramètres, des propriétés et d'autres zones du rapport. Cette section fournit des exemples décrivant certaines de ces fonctions. Pour plus d'informations, consultez [Membres de la bibliothèque runtime Visual Basic](http://go.microsoft.com/fwlink/?LinkId=198941) sur MSDN.  
   
  Le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] offre de nombreuses options de formats personnalisés, par exemple pour des formats de date spécifiques. Pour plus d'informations, consultez [Mise en forme des types](http://go.microsoft.com/fwlink/?LinkId=112024) sur MSDN.  
   
-#### Fonctions mathématiques  
+### <a name="math-functions"></a>Fonctions mathématiques  
   
 -   La fonction **Round** permet d'arrondir des nombres à l'entier le plus proche. L'expression suivante arrondit 1,3 à 1 :  
   
@@ -87,18 +88,37 @@ Les expressions sont fréquemment utilisées dans les rapports paginés [!INCLUD
     = Round(1.3)  
     ```  
   
-     Vous pouvez également écrire une expression pour arrondir une valeur à un multiple de votre choix, de manière semblable à la fonction **MRound** dans Excel. Multipliez la valeur par un facteur qui crée un entier, arrondissez le nombre, puis divisez-le par le même facteur. Par exemple, pour arrondir 1,3 au multiple le plus proche de 0,2 (1,4), utilisez l'expression suivante :  
+     Vous pouvez également écrire une expression pour arrondir une valeur à un multiple de votre choix, de manière semblable à la fonction **MRound** dans Excel. Multipliez la valeur par un facteur qui crée un entier, arrondissez le nombre, puis divisez-le par le même facteur. Par exemple, pour arrondir 1,3 au multiple le plus proche de 0,2 (1,4), utilisez l'expression suivante :  
   
     ```  
     = Round(1.3*5)/5  
     ```  
   
-####  <a name="DateFunctions"></a> Fonctions de date  
+###  <a name="DateFunctions"></a> Fonctions de date  
   
 -   La fonction **Today** fournit la date actuelle. Cette expression peut être utilisée dans une zone de texte pour afficher la date sur le rapport ou bien, dans un paramètre pour filtrer les données basées sur la date actuelle.  
   
     ```  
     =Today()  
+    ```  
+  
+-   Utilisez le **DateInterval** fonction pour extraire une partie spécifique d’une date. Voici certaines valide **DateInterval** paramètres :
+
+    -   DateInterval.Second
+    -   DateInterval.Minute
+    -   DateInterval.Hour
+    -   DateInterval.Weekday
+    -   DateInterval.Day
+    -   DateInterval.DayOfYear
+    -   DateInterval.WeekOfYear
+    -   DateInterval.Month
+    -   DateInterval.Quarter
+    -   DateInterval.Year
+
+    Par exemple, cette expression affiche le numéro de la semaine dans l’année en cours pour la date du jour :
+  
+    ```  
+    =DatePart(DateInterval.WeekOfYear, today()) 
     ```  
   
 -   La fonction **DateAdd** est utile pour fournir une plage de dates basées sur un seul paramètre. L'expression ci-dessous indique une date qui se situe six mois après la date provenant du paramètre nommé *StartDate*.  
@@ -113,7 +133,7 @@ Les expressions sont fréquemment utilisées dans les rapports paginés [!INCLUD
     =Year(Fields!OrderDate.Value)  
     ```  
   
--   Vous pouvez combiner des fonctions dans une expression pour personnaliser le format. L'expression suivante modifie le format d'une date écrite sous la forme mois-jour-année en mois-semaine-numéro de semaine. Par exemple, 12/23/2009 est remplacé par December Week 3 (Décembre Semaine 3) :  
+-   Vous pouvez combiner des fonctions dans une expression pour personnaliser le format. L'expression suivante modifie le format d'une date écrite sous la forme mois-jour-année en mois-semaine-numéro de semaine. Par exemple, 12/23/2009 est remplacé par December Week 3 (Décembre Semaine 3) :  
   
     ```  
     =Format(Fields!MyDate.Value, "MMMM") & " Week " &   
@@ -149,7 +169,7 @@ Les expressions sont fréquemment utilisées dans les rapports paginés [!INCLUD
     =DateAdd(DateInterval.Month,DateDiff(DateInterval.Month,CDate("01/01/1900"),Now())-1,CDate("01/01/1900"))  
     ```  
   
--   L'expression suivante génère des années d'intervalle entre SellStartDate et LastReceiptDate. Ces champs sont compris dans deux datasets différents, DataSet1 et DataSet2. La [fonction First &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/first-function-report-builder-and-ssrs.md), qui est une fonction d’agrégation, renvoie la première valeur de SellStartDate dans DataSet1 et la première valeur de LastReceiptDate dans DataSet2.  
+-   L'expression suivante génère des années d'intervalle entre SellStartDate et LastReceiptDate. Ces champs sont compris dans deux datasets différents, DataSet1 et DataSet2. La [fonction First &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md), qui est une fonction d’agrégation, renvoie la première valeur de SellStartDate dans DataSet1 et la première valeur de LastReceiptDate dans DataSet2.  
   
     ```  
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
@@ -179,7 +199,7 @@ Les expressions sont fréquemment utilisées dans les rapports paginés [!INCLUD
 |Il y a un an|`=DateSerial(Year(Parameters!TodaysDate.Value)-1,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
 |Il y a deux ans|`=DateSerial(Year(Parameters!TodaysDate.Value)-2,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
   
-####  <a name="StringFunctions"></a> Fonctions de chaîne  
+###  <a name="StringFunctions"></a> Fonctions de chaîne  
   
 -   Vous pouvez combiner plusieurs champs en utilisant des opérateurs de concaténation et des constantes [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . L'expression suivante retourne deux champs, chacun sur une ligne séparée dans la même zone de texte :  
   
@@ -195,13 +215,13 @@ Les expressions sont fréquemment utilisées dans les rapports paginés [!INCLUD
   
      Si la zone de texte contient uniquement une date ou un nombre, utilisez plutôt la propriété Format de la zone de texte pour appliquer la mise en forme, plutôt que la fonction **Format** dans la zone de texte.  
   
--   Les fonctions **Right**, **Len** et **InStr** sont utiles pour renvoyer une sous-chaîne, par exemple en réduisant *DOMAINE*\\*nom d’utilisateur* au seul nom d’utilisateur. L’expression suivante retourne la partie de la chaîne à droite de la barre oblique inverse (\\) à partir d’un paramètre nommé *User* :  
+-   Les fonctions **Right**, **Len**et **InStr** sont utiles pour renvoyer une sous-chaîne, par exemple en réduisant *DOMAINE*\\*nom d’utilisateur* au seul nom d’utilisateur. L’expression suivante retourne la partie de la chaîne à droite de la barre oblique inverse (\\) à partir d’un paramètre nommé *User*:  
   
     ```  
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
     ```  
   
-     L’expression suivante retourne la même valeur que précédemment, en utilisant des membres de la classe [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> au lieu des fonctions [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] :  
+     Résultats de l’expression suivante dans la même valeur que précédemment, à l’aide des membres de la [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> classe au lieu de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] fonctions :  
   
     ```  
     =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
@@ -220,24 +240,24 @@ Les expressions sont fréquemment utilisées dans les rapports paginés [!INCLUD
   
     ```  
   
--   Les fonctions **Regex** de l’espace de noms [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> sont utiles si vous souhaitez modifier le format de chaînes existantes (par exemple, le format d’un numéro de téléphone). L’expression suivante utilise la fonction **Replace** pour modifier dans un champ le format d’un numéro de téléphone à dix chiffres et le faire passer du format "*nnn*-*nnn*-*nnnn*" au format "(*nnn*) *nnn*-*nnnn*" :  
+-   Le **Regex** fonctions à partir de la [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> sont utiles pour modifier le format de chaînes existantes, par exemple, un numéro de téléphone de la mise en forme. The following expression uses the **Replace** function to change the format of a ten-digit telephone number in a field from "*nnn*-*nnn*-*nnnn*" to "(*nnn*) *nnn*-*nnnn*":  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
     ```  
   
     > [!NOTE]  
-    >  Vérifiez que la valeur de Fields!Phone.Value n’a pas d’espaces supplémentaires et est de type <xref:System.String>.  
+    >  Vérifiez que la valeur de Fields!Phone.Value n'a pas d'espaces supplémentaires et est de type <xref:System.String>.  
   
-#### Lookup  
+### <a name="lookup"></a>Lookup  
   
--   En spécifiant un champ clé, vous pouvez utiliser la fonction **Lookup** pour récupérer une valeur à partir d’un dataset pour une relation un-à-un, par exemple une paire clé-valeur. L'expression suivante affiche le nom de produit d'un dataset (« Product »), étant donné l'identificateur de produit sur lequel effectuer une correspondance :  
+-   En spécifiant un champ clé, vous pouvez utiliser la fonction **Lookup** pour récupérer une valeur à partir d’un dataset pour une relation un-à-un, par exemple une paire clé-valeur. L'expression suivante affiche le nom de produit d'un dataset (« Product »), étant donné l'identificateur de produit sur lequel effectuer une correspondance :  
   
     ```  
     =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
     ```  
   
-#### LookupSet  
+### <a name="lookupset"></a>LookupSet  
   
 -   En spécifiant un champ clé, vous pouvez utiliser la fonction **LookupSet** pour récupérer un jeu de valeurs à partir d’un dataset pour une relation un-à-plusieurs. Par exemple, une personne peut avoir plusieurs numéros de téléphone. Dans l'exemple suivant, supposons que le dataset PhoneList contient un identificateur de personne et un numéro de téléphone sur chaque ligne. **LookupSet** retourne un tableau de valeurs. L'expression suivante combine les valeurs de retour dans une chaîne unique et affiche la liste des numéros de téléphone de la personne spécifiée par ContactID :  
   
@@ -245,7 +265,7 @@ Les expressions sont fréquemment utilisées dans les rapports paginés [!INCLUD
     =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
     ```  
   
-####  <a name="ConversionFunctions"></a> Fonctions de conversion  
+###  <a name="ConversionFunctions"></a> Fonctions de conversion  
  Vous pouvez utiliser des fonctions [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] pour convertir un champ en un type de données différent de celui qu'il avait au départ. Les fonctions de conversion peuvent être utilisées pour convertir le type de données par défaut d'un champ en type qui sera nécessaire pour certains calculs ou pour combiner du texte.  
   
 -   L’expression suivante convertit la constante 500 en type Decimal pour la comparer à un type de données money [!INCLUDE[tsql](../../includes/tsql-md.md)] dans le champ Value d’une expression de filtre.  
@@ -260,7 +280,7 @@ Les expressions sont fréquemment utilisées dans les rapports paginés [!INCLUD
     =CStr(Parameters!MySelection.Count)  
     ```  
   
-####  <a name="DecisionFunctions"></a> Fonctions de décision  
+###  <a name="DecisionFunctions"></a> Fonctions de décision  
   
 -   La fonction **Iif** retourne une valeur sur les deux possibles, laquelle dépend du fait que l'expression est vraie ou fausse. L’expression ci-dessous utilise la fonction **Iif** pour retourner la valeur booléenne **True** si la valeur de `LineTotal` est supérieure à 100. Sinon, elle retourne **False**:  
   
@@ -279,7 +299,7 @@ Les expressions sont fréquemment utilisées dans les rapports paginés [!INCLUD
 -   Une autre méthode pour obtenir la même fonctionnalité consiste à utiliser la fonction **Switch** . La fonction **Switch** est utile lorsque vous avez au moins trois conditions à tester. La fonction **Switch** retourne la valeur associée à la première expression d'une série qui remplit la condition :  
   
     ```  
-    =Switch(Fields!PctComplete.Value >= 10, "Green", Fields!PctComplete.Value >= 1, "Blue", Fields!PctComplete.Value = 1, "Yellow", Fields!PctComplete.Value <= 0, "Red",)  
+    =Switch(Fields!PctComplete.Value >= 10, "Green", Fields!PctComplete.Value >= 1, "Blue", Fields!PctComplete.Value = 1, "Yellow", Fields!PctComplete.Value <= 0, "Red")  
     ```  
   
      Les valeurs supérieures ou égales à 10 s'affichent avec un arrière-plan vert, celles qui sont comprises entre 1 et 9 avec un arrière-plan bleu, les valeurs égales à 1 s'affichent avec un arrière-plan jaune et celles qui sont égales ou inférieures à 0 avec un arrière-plan rouge.  
@@ -315,10 +335,10 @@ Les expressions sont fréquemment utilisées dans les rapports paginés [!INCLUD
   
     ```  
   
-###  <a name="ReportFunctions"></a> Fonctions de rapport  
- Dans une expression, vous pouvez ajouter une référence à des fonctions supplémentaires de rapport qui manipulent les données dans un rapport. Cette section fournit des exemples pour deux de ces fonctions. Pour plus d’informations sur les fonctions et les exemples de rapport, consultez [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/aggregate-functions-reference-report-builder-and-ssrs.md).  
+##  <a name="ReportFunctions"></a> Fonctions de rapport  
+ Dans une expression, vous pouvez ajouter une référence à des fonctions supplémentaires de rapport qui manipulent les données dans un rapport. Cette section fournit des exemples pour deux de ces fonctions. Pour plus d’informations sur les fonctions et les exemples de rapport, consultez [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
-#####  <a name="Sum"></a> Sum  
+###  <a name="Sum"></a> Sum  
   
 -   La fonction **Sum** peut additionner les valeurs dans un groupe ou une région de données. Cette fonction peut être utile dans l'en-tête ou le pied de page d'un groupe. L'expression suivante affiche la somme des données dans la région de données ou le groupe Order :  
   
@@ -332,7 +352,7 @@ Les expressions sont fréquemment utilisées dans les rapports paginés [!INCLUD
     =Sum(IIF(Fields!State.Value = "Finished", 1, 0))  
     ```  
   
-#####  <a name="RowNumber"></a> RowNumber  
+###  <a name="RowNumber"></a> RowNumber  
   
 -   La fonction **RowNumber** , quand elle est utilisée dans une zone de texte au sein d'une région de données, affiche le numéro de ligne de chaque instance de la zone de texte dans laquelle l'expression apparaît. Cette fonction peut être utile pour numéroter les lignes dans un tableau. Elle peut également servir à l'accomplissement de tâches plus complexes, telles que l'insertion de sauts de page en fonction du nombre de lignes. Pour plus d'informations, consultez [Sauts de page](#PageBreaks) , plus loin dans cette rubrique.  
   
@@ -432,7 +452,7 @@ Les expressions sont fréquemment utilisées dans les rapports paginés [!INCLUD
 > [!NOTE]  
 >  Les couleurs disponibles proviennent de l’énumération [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] KnownColor.  
   
-### Couleurs du graphique  
+### <a name="chart-colors"></a>Couleurs du graphique  
  Pour spécifier les couleurs d'un graphique à base de formes, vous pouvez utiliser du code personnalisé pour contrôler l'ordre dans lequel les couleurs sont mappées aux valeurs de point de données. Cela vous permet d'utiliser des couleurs cohérentes dans le cadre de plusieurs graphiques possédant les mêmes groupes de catégories. Pour plus d’informations, consultez [Spécifier des couleurs cohérentes pour plusieurs graphiques à base de formes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md).  
   
 ###  <a name="Visibility"></a> Visibilité  
@@ -500,13 +520,13 @@ Les expressions sont fréquemment utilisées dans les rapports paginés [!INCLUD
 ##  <a name="CustomCode"></a> Code personnalisé  
  L'usage de code personnalisé au sein d'un rapport est possible. Le code personnalisé est soit incorporé au rapport, soit stocké dans un assembly personnalisé utilisé au sein du rapport. Pour plus d’informations sur le code personnalisé, consultez [Code personnalisé et références d’assembly dans les expressions du Concepteur de rapports &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
-### Utilisation de variables de groupe pour une agrégation personnalisée  
+### <a name="using-group-variables-for-custom-aggregation"></a>Utilisation de variables de groupe pour une agrégation personnalisée  
  Vous pouvez initialiser la valeur pour une variable de groupe qui est locale à une étendue de groupe particulière, puis inclure une référence à cette variable dans les expressions. L'une des façons d'utiliser une variable de groupe avec du code personnalisé consiste à implémenter un agrégat personnalisé. Pour plus d'informations, consultez [Using Group Variables in Reporting Services 2008 for Custom Aggregation](http://go.microsoft.com/fwlink/?LinkId=128714)(en anglais).  
   
- Pour plus d’informations sur les variables, consultez [Références à des collections de variables de rapport et de groupe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-and-group-variables-collections-references-report-builder-and-ssrs.md).  
+ Pour plus d’informations sur les variables, consultez [Références à des collections de variables de rapport et de groupe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md).  
   
-## Suppression de valeurs Null ou zéro au moment de l'exécution  
- Certaines valeurs d'une expression peuvent prendre la valeur Null ou une valeur indéfinie au moment du traitement du rapport. Des erreurs d’exécution peuvent alors se produire et provoquer l’affichage de **#Erreur** au lieu de l’expression évaluée dans la zone de texte. La fonction **IIF** est particulièrement sensible à ce comportement, car, contrairement à une instruction If-Then-Else, chaque partie de l’instruction **IIF** est évaluée (y compris les appels de fonction) avant d’être passée à la routine de test **true** ou **false**. L’instruction `=IIF(Fields!Sales.Value is NOTHING, 0, Fields!Sales.Value)` génère**#Erreur** dans le rapport rendu si `Fields!Sales.Value` a la valeur NOTHING.  
+## <a name="suppressing-null-or-zero-values-at-run-time"></a>Suppression de valeurs Null ou zéro au moment de l'exécution  
+ Certaines valeurs d'une expression peuvent prendre la valeur Null ou une valeur indéfinie au moment du traitement du rapport. Des erreurs d’exécution peuvent alors se produire et provoquer l’affichage de **#Erreur** au lieu de l’expression évaluée dans la zone de texte. La fonction **IIF** est particulièrement sensible à ce comportement, car, contrairement à une instruction If-Then-Else, chaque partie de l’instruction **IIF** est évaluée (y compris les appels de fonction) avant d’être passée à la routine de test **true** ou **false**. L’instruction `=IIF(Fields!Sales.Value is NOTHING, 0, Fields!Sales.Value)` génère **#Erreur** dans le rapport rendu si `Fields!Sales.Value` a la valeur NOTHING.  
   
  Pour éviter de vous trouver dans cette situation, utilisez l'une des stratégies qui suivent :  
   
@@ -530,7 +550,7 @@ Les expressions sont fréquemment utilisées dans les rapports paginés [!INCLUD
     End Function  
     ```  
   
-     L'expression suivante montre comment appeler ce code personnalisé depuis une zone de texte, pour le conteneur « ColumnGroupByYear » (groupe ou région de données).  
+     L'expression suivante montre comment appeler ce code personnalisé depuis une zone de texte, pour le conteneur « ColumnGroupByYear » (groupe ou région de données).  
   
     ```  
     =Code.GetDeltaPercentage(Previous(Sum(Fields!Sales.Value),"ColumnGroupByYear"), Sum(Fields!Sales.Value))  
@@ -538,7 +558,7 @@ Les expressions sont fréquemment utilisées dans les rapports paginés [!INCLUD
   
      Cela permet d'éviter les exceptions d'exécution. Vous pouvez maintenant utiliser une expression comme `=IIF(Me.Value < 0, "red", "black")` dans la propriété **Color** de la zone de texte pour afficher de manière conditionnelle un texte selon que les valeurs sont supérieures ou inférieures à 0.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Exemples d’équations de filtre &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [Exemples d’expressions de groupe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
@@ -546,3 +566,4 @@ Les expressions sont fréquemment utilisées dans les rapports paginés [!INCLUD
  [Filtres couramment utilisés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)  
   
   
+

@@ -1,23 +1,28 @@
 ---
-title: "Exportation vers un fichier CSV (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Exportation vers un fichier CSV (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 60c8d93cd6901e6a18337212f8906ccbbf0f5522
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Exportation vers un fichier CSV (G&#233;n&#233;rateur de rapports et SSRS)
+# <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportation vers un fichier CSV (Générateur de rapports et SSRS)
   L’extension de rendu CSV (valeurs séparées par des virgules) permet de rendre les rapports paginés sous la forme d’une représentation aplatie des données d’un rapport dans un format standardisé, texte brut qui peut être facilement lu et échangé avec de nombreuses applications.  
   
  L'extension de rendu CSV utilise un caractère en tant que délimiteur de chaîne pour dissocier les champs et les lignes. Le délimiteur peut être configuré pour être un caractère autre que la virgule. Le fichier résultant peut être ouvert dans un tableur comme [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ou utilisé comme format d'importation pour d'autres programmes. Le rapport exporté devient un fichier .csv et retourne un type MIME **texte/csv**.  
@@ -30,14 +35,14 @@ caps.handback.revision: 8
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ##  <a name="CSVRendering"></a> Rendu CSV  
- Si un rapport CSV est rendu avec les paramètres par défaut, il présente les caractéristiques suivantes :  
+ Si un rapport CSV est rendu avec les paramètres par défaut, il présente les caractéristiques suivantes :  
   
 -   La chaîne séparateur de champs par défaut est la virgule (,).  
   
     > [!NOTE]  
     >  Vous pouvez changer de séparateur de champs et utiliser n'importe quel caractère voulu, y compris TABULATION, ce en modifiant les paramètres d'informations de périphérique. Pour plus d'informations, consultez [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md).  
   
--   La chaîne séparateur des enregistrements est le retour chariot suivi du saut de ligne (\<cr>\<lf>).  
+-   La chaîne de délimiteur d’enregistrement est le retour chariot et saut de ligne (\<cr >\<lf >).  
   
 -   La chaîne d'identificateur de texte est le guillemet double (").  
   
@@ -65,7 +70,7 @@ caps.handback.revision: 8
   
  Les autres éléments de rapport sont triés, de haut en bas, puis de gauche à droite. Chaque élément est ensuite rendu dans une colonne. Si le rapport comporte des éléments de données imbriqués comme des listes ou des tableaux, les éléments parents sont répétés dans chaque enregistrement.  
   
- Le tableau suivant indique l'apparence des éléments de rapport lors du rendu :  
+ Le tableau suivant indique l'apparence des éléments de rapport lors du rendu :  
   
 |Élément|Comportement de rendu|  
 |----------|------------------------|  
@@ -81,27 +86,26 @@ caps.handback.revision: 8
 |Indicateur|Effectue le rendu en tant qu'enregistrement unique avec le nom de l'état actif, les états disponibles et la valeur de données.|  
 |Carte|Restitue une ligne avec les étiquettes et valeurs de chaque membre cartographique d'une couche.<br /><br /> Si la carte comporte plusieurs couches, les valeurs dans les lignes varient selon que les couches utilisent des régions de données cartographiques identiques ou différentes. Si plusieurs couches utilisent la même région de données, les lignes contiennent des données de toutes les couches.|  
   
-### Données hiérarchiques et groupées  
+### <a name="hierarchical-and-grouped-data"></a>Données hiérarchiques et groupées  
  Les données hiérarchiques et groupées doivent être aplaties pour être représentées au format CSV.  
   
  L'extension de rendu aplatit le rapport en arborescence qui représente les groupes imbriqués dans la région de données. Pour aplatir le rapport :  
   
 -   Une hiérarchie de ligne est aplatie avant une hiérarchie de colonne.  
   
--   Les colonnes sont ordonnées comme suit : zones de texte dans le corps ordonnées de gauche à droite et de haut en bas, suivies des régions de données ordonnées de gauche à droite et de haut en bas.  
+-   Les colonnes sont ordonnées comme suit : zones de texte dans le corps ordonnées de gauche à droite et de haut en bas, suivies des régions de données ordonnées de gauche à droite et de haut en bas.  
   
 -   Dans une région de données, les colonnes sont ordonnées comme suit : membres d'angle, membres de hiérarchie de ligne, membres de hiérarchie de colonne et enfin cellules.  
   
 -   Les régions de données d'homologue sont des régions de données ou des groupes dynamiques qui partagent une région de données commune ou un ancêtre dynamique commun. Les données d'homologue sont identifiées par une création de branche au niveau de l'arborescence aplatie.  
   
- Pour plus d’informations, consultez [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
+ Pour plus d'informations, consultez [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
 ##  <a name="RenderingModes"></a> Modes du convertisseur  
- L'extension de rendu CSV peut fonctionner dans deux modes : l'un est optimisé pour Excel, l'autre pour les applications tierces qui requièrent une conformité stricte à la spécification CSV décrite dans le document RFC 4180. Selon le mode que vous utilisez, les régions de données d'homologue sont gérées différemment.  
+ L'extension de rendu CSV peut fonctionner dans deux modes : l'un est optimisé pour Excel, l'autre pour les applications tierces qui requièrent une conformité stricte à la spécification CSV décrite dans le document RFC 4180. Selon le mode que vous utilisez, les régions de données d'homologue sont gérées différemment.  
   
-### Mode par défaut  
+### <a name="default-mode"></a>Mode par défaut  
  Le mode par défaut est optimisé pour Excel. En cas de rendu en mode par défaut, le rapport est rendu sous la forme d'un fichier CSV contenant plusieurs sections de données avec rendu CSV. Chaque région de données d'homologue est délimitée par une ligne vide. Les régions de données d'homologue situées dans le corps du rapport sont rendues sous la forme de blocs de données distincts dans le fichier CSV. Le résultat est un fichier CSV dans lequel :  
   
 -   Les zones de texte individuelles situées dans le corps du rapport sont rendues une fois en tant que premier bloc de données dans le fichier CSV.  
@@ -110,16 +114,16 @@ caps.handback.revision: 8
   
 -   Les régions de données imbriquées sont rendues en diagonale dans le même bloc de données.  
   
-#### Mise en forme  
+#### <a name="formatting"></a>Mise en forme  
  Les valeurs numériques sont rendues dans leur état mis en forme. Excel peut reconnaître les valeurs numériques mises en forme, telles que la devise, le pourcentage et la date, et met en forme les cellules de façon appropriée lors de l'importation du fichier CSV.  
   
-### Mode conforme  
+### <a name="compliant-mode"></a>Mode conforme  
  Le mode conforme est optimisé pour les applications tierces.  
   
-#### Régions de données  
+#### <a name="data-regions"></a>Régions de données  
  Seule la première ligne du fichier contient les en-têtes de colonne et chaque ligne contient le même nombre de colonnes.  
   
-#### Mise en forme  
+#### <a name="formatting"></a>Mise en forme  
  Les valeurs sont dépourvues de mise en forme.  
   
 ##  <a name="Interactivity"></a> Interactivité  
@@ -139,17 +143,15 @@ caps.handback.revision: 8
   
 -   Signets  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
 ##  <a name="DeviceInfo"></a> Paramètres d'informations de périphérique  
  Vous pouvez modifier certains paramètres par défaut de ce convertisseur, notamment le mode de rendu, les caractères à utiliser comme séparateurs et ceux à utiliser comme chaîne par défaut d'identificateur de texte, ce en modifiant les paramètres d'informations de périphérique. Pour plus d'informations, consultez [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md).  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Fonctionnalité interactive des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendu des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

@@ -1,35 +1,40 @@
 ---
-title: "pr&#233;chargement du cache (Gestionnaire de rapports) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cache [Reporting Services]"
-  - "préchargement du cache"
+title: "Précharger le Cache (Gestionnaire de rapports) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cache [Reporting Services]
+- preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 caps.latest.revision: 35
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 35
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c5543c648289dee007a2249299ecb006d41f6b98
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# pr&#233;chargement du cache (Gestionnaire de rapports)
+# <a name="preload-the-cache-report-manager"></a>préchargement du cache (Gestionnaire de rapports)
   Vous pouvez précharger le cache pour un dataset partagé en créant un plan d'actualisation du cache pour le dataset partagé.  
   
- Vous pouvez précharger le cache pour un rapport de deux façons :  
+ Vous pouvez précharger le cache pour un rapport de deux façons :  
   
 1.  Créer un plan d'actualisation du cache pour le rapport. Cette méthode est recommandée.  
   
 2.  Utilisez l'abonnement piloté par les données pour précharger des instances de rapports paramétrables dans le cache. Cette méthode était la seule permettant de précharger le cache dans les versions de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] antérieures à [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Pour plus d’informations, consultez [Mise en cache de rapports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
   
- Les conditions suivantes doivent être réunies avant de pouvoir mettre en cache un rapport ou un dataset partagé :  
+ Les conditions suivantes doivent être réunies avant de pouvoir mettre en cache un rapport ou un dataset partagé :  
   
 -   La mise en cache doit être activée pour le dataset partagé ou le rapport.  
   
@@ -37,15 +42,15 @@ caps.handback.revision: 35
   
 -   Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent doit être en cours d’exécution.  
   
-### Pour précharger le cache en créant un plan d'actualisation du cache  
+### <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>Pour précharger le cache en créant un plan d'actualisation du cache  
   
-1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Dans le Gestionnaire de rapports, accédez à la page **Contenu**, puis à l’élément que vous voulez mettre en cache.  
   
 3.  Pointez sur l’élément, cliquez sur la liste déroulante, puis cliquez sur **Gérer**.  
   
-4.  Cliquez sur l’onglet **Options d’actualisation du cache**.  
+4.  Cliquez sur l’onglet **Options d’actualisation du cache** .  
   
 5.  Dans la barre d’outils, cliquez sur **Nouveau plan d’actualisation du cache**.  
   
@@ -64,21 +69,21 @@ caps.handback.revision: 35
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Pour précharger le cache avec un rapport spécifique à l'utilisateur en utilisant un abonnement piloté par les données  
+### <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>Pour précharger le cache avec un rapport spécifique à l'utilisateur en utilisant un abonnement piloté par les données  
   
-1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Dans le Gestionnaire de rapports, accédez à la page **Contenu**, puis au rapport pour lequel vous voulez créer un abonnement.  
   
-3.  Cliquez successivement sur le rapport, sur l’onglet **Abonnements**, puis sur **Nouvel abonnement piloté par les données**.  
+3.  Cliquez successivement sur le rapport, sur l’onglet **Abonnements** , puis sur **Nouvel abonnement piloté par les données**.  
   
 4.  Tapez éventuellement une description pour l'abonnement.  
   
-5.  Dans la liste **Spécifiez le mode de notification des destinataires**, sélectionnez **Fournisseur de remise Null**.  
+5.  Dans la liste **Spécifiez le mode de notification des destinataires** , sélectionnez **Fournisseur de remise Null**.  
   
 6.  Spécifiez un type de source de données, puis cliquez sur **Suivant** pour configurer la source de données.  
   
-7.  Spécifiez le type de connexion, la chaîne de connexion et les informations d'identification pour accéder à la source de données contenant les données des abonnés. L'exemple suivant illustre une chaîne de connexion à la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appelée Subscribers :  
+7.  Spécifiez le type de connexion, la chaîne de connexion et les informations d'identification pour accéder à la source de données contenant les données des abonnés. L'exemple suivant illustre une chaîne de connexion à la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appelée Subscribers :  
   
     ```  
     data source=<servername>; initial catalog=Subscribers  
@@ -86,7 +91,7 @@ caps.handback.revision: 35
   
 8.  Cliquez sur **Suivant**.  
   
-9. Spécifiez la requête ou la commande qui permet de récupérer les données des abonnés. Augmentez éventuellement le délai d'attente des requêtes dont le traitement est long. Par exemple :  
+9. Spécifiez la requête ou la commande qui permet de récupérer les données des abonnés. Augmentez éventuellement le délai d'attente des requêtes dont le traitement est long. Par exemple :  
   
     ```  
     Select * from UserInfo  
@@ -100,14 +105,14 @@ caps.handback.revision: 35
   
 13. Précisez le moment où l'abonnement doit être traité. Ne choisissez pas l’option **Lorsque les données du rapport sont mises à jour sur le serveur de rapports**. Elle est réservée exclusivement aux instantanés. Si vous voulez utiliser une planification préexistante, sélectionnez **Suivant une planification partagée**.  
   
-     Ou, pour créer une planification personnalisée, cliquez sur **Suivant une planification créée pour cet abonnement**, puis sur **Suivant**. Configurez la planification, puis cliquez sur **Terminer**.  
+     Ou, pour créer une planification personnalisée, cliquez sur **Suivant une planification créée pour cet abonnement** , puis sur **Suivant**. Configurez la planification, puis cliquez sur **Terminer**.  
   
     > [!NOTE]  
-    >  Pour que les abonnés reçoivent la version du rapport la plus récente, la planification que vous configurez doit être chronologiquement cohérente par rapport à la planification de la remise du rapport que vous avez définie pour les abonnés. Pour plus d’informations, consultez [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+    >  Pour que les abonnés reçoivent la version du rapport la plus récente, la planification que vous configurez doit être chronologiquement cohérente par rapport à la planification de la remise du rapport que vous avez définie pour les abonnés. Pour plus d’informations, consultez [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
-14. Configurez les options d'exécution du rapport comme suit. Dans la page du rapport, cliquez sur l’onglet **Propriétés**.  
+14. Configurez les options d'exécution du rapport comme suit. Dans la page du rapport, cliquez sur l’onglet **Propriétés** .  
   
-15. Dans le cadre de gauche, cliquez sur l’onglet **Exécution**.  
+15. Dans le cadre de gauche, cliquez sur l’onglet **Exécution** .  
   
 16. Dans la page qui s’affiche, sélectionnez **Effectuer le rendu de ce rapport avec les données les plus récentes**.  
   
@@ -119,7 +124,7 @@ caps.handback.revision: 35
   
 18. Cliquez sur **Appliquer**.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Abonnements pilotés par les données](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Performances, instantanés, mise en cache &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   

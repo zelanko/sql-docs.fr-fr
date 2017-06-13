@@ -1,30 +1,35 @@
 ---
-title: "Interface utilisateur du Concepteur de requ&#234;tes relationnelles (G&#233;n&#233;rateur de rapports) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10012"
-helpviewer_keywords: 
-  - "concepteurs de requêtes"
-  - "accès aux données, concepteur de requêtes"
-  - "concepteur de requêtes relationnelles"
+title: "Interface utilisateur du Concepteur de requêtes relationnelles (Générateur de rapports) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10012"
+helpviewer_keywords:
+- query designers
+- accessing data, query designer
+- relational query designer
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 caps.latest.revision: 23
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 23
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd44bb279b61785784ce6ebe443ad78d30b4fc82
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Interface utilisateur du Concepteur de requ&#234;tes relationnelles (G&#233;n&#233;rateur de rapports)
-  Le Générateur de rapports et le Concepteur de rapports de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fournissent un concepteur de requêtes graphique et un concepteur de requêtes textuel qui permettent de créer une requête spécifiant les données à récupérer auprès de bases de données relationnelles [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)], et de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] pour un dataset de rapport. Utilisez le Concepteur de requêtes graphique pour explorer les métadonnées, créer une requête de manière interactive et afficher les résultats de votre requête. Utilisez le Concepteur de requêtes textuel pour afficher la requête créée par le Concepteur de requêtes graphique ou pour modifier une requête. Vous pouvez également importer une requête existante à partir d'un fichier ou d'un rapport.  
+# <a name="relational-query-designer-user-interface-report-builder"></a>Interface utilisateur du Concepteur de requêtes relationnelles (Générateur de rapports)
+  Le Générateur de rapports et le Concepteur de rapports de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]fournissent un concepteur de requêtes graphique et un concepteur de requêtes textuel qui permettent de créer une requête spécifiant les données à récupérer auprès de bases de données relationnelles [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] pour un dataset de rapport. Utilisez le Concepteur de requêtes graphique pour explorer les métadonnées, créer une requête de manière interactive et afficher les résultats de votre requête. Utilisez le Concepteur de requêtes textuel pour afficher la requête créée par le Concepteur de requêtes graphique ou pour modifier une requête. Vous pouvez également importer une requête existante à partir d'un fichier ou d'un rapport.  
   
 > [!NOTE]  
 >  Dans le Générateur de rapports, vous devez utiliser le Concepteur de requêtes textuel pour spécifier une requête pour les types de source de données Oracle, OLE DB, ODBC et Teradata. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes textuel &#40;Générateur de rapports&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
@@ -32,7 +37,7 @@ caps.handback.revision: 23
 > [!IMPORTANT]  
 >  Les utilisateurs accèdent aux sources de données lorsqu'ils créent et exécutent des requêtes. Vous devez accorder des autorisations minimales sur les sources de données, telles que des autorisations en lecture seule.  
   
-## Concepteur de requêtes graphique  
+## <a name="graphical-query-designer"></a>Concepteur de requêtes graphique  
  Le Concepteur de requêtes graphique vous permet d'explorer les tables et vues de base de données et de générer de manière interactive l'instruction SQL SELECT qui spécifie les tables et colonnes de base de données à partir desquelles récupérer les données pour un dataset. Vous choisissez les champs à inclure dans le dataset et spécifiez éventuellement les filtres qui limitent les données dans le dataset. Vous pouvez spécifier que les filtres soient utilisés comme paramètres et fournir la valeur du filtre au moment de l'exécution. Si vous choisissez plusieurs tables associées, le Concepteur de requêtes décrit la relation entre les jeux de deux tables.  
   
  Le concepteur de requêtes graphique est divisé en trois zones. La présentation du concepteur de requêtes varie selon que la requête utilise des tables/vues ou des fonctions table/procédures stockées.  
@@ -42,11 +47,11 @@ caps.handback.revision: 23
   
  La figure suivante illustre le Concepteur de requêtes graphique lorsqu'il est utilisé avec des tables ou des vues.  
   
- ![Concepteur graphique pour les requêtes](../../reporting-services/report-data/media/rsqd-relational-graphical.gif "Concepteur graphique pour les requêtes")  
+ ![Concepteur graphique pour les requêtes](../../reporting-services/report-data/media/rsqd-relational-graphical.gif "concepteur graphique pour les requêtes")  
   
  La figure suivante illustre le concepteur de requêtes graphique lorsqu'il est utilisé avec des procédures stockées ou des fonctions table.  
   
- ![Procédure stockée dans le concepteur de requêtes graphique](../../reporting-services/report-data/media/rs-relational-graphical-sp.gif "Procédure stockée dans le concepteur de requêtes graphique")  
+ ![Procédure stockée dans le Concepteur de requêtes graphique](../../reporting-services/report-data/media/rs-relational-graphical-sp.gif "procédure stockée dans le Concepteur de requêtes graphique")  
   
  Le tableau ci-dessous décrit la fonction de chaque volet.  
   
@@ -84,12 +89,12 @@ caps.handback.revision: 23
   
 -   **Supprimer le champ** Supprime le champ sélectionné.  
   
-#### Groupe et agrégat  
+#### <a name="group-and-aggregate"></a>Groupe et agrégat  
  Les requêtes exécutées sur les bases de données qui comportent une grande table peuvent retourner un nombre de lignes de données trop volumineux pour pouvoir être utile dans un rapport, ce qui a un impact sur les performances du réseau chargé de transporter cette grande quantité de données et du serveur de rapports qui traite le rapport. Pour limiter le nombre de lignes de données, la requête peut inclure des agrégats SQL qui synthétisent les données sur le serveur de base de données. Les agrégats SQL sont différents des agrégats côté client, appliqués lorsque le rapport est rendu.  
   
  Les agrégats fournissent des synthèses de données, lesquelles sont regroupées pour prendre en charge l'agrégat qui remet les données de synthèse. Lorsque vous utilisez un agrégat dans la requête, les autres champs retournés par la requête sont regroupés automatiquement ; par ailleurs, la requête inclut la clause SQL GROUP BY. Vous pouvez synthétiser les données sans ajouter d'agrégat en utilisant uniquement l'option **Regroupement par** de la liste **Groupe et agrégat** . De nombreux agrégats incluent une version qui utilise le mot clé DISTINCT. L'inclusion de DISTINCT élimine les valeurs dupliquées.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise [!INCLUDE[tsql](../../includes/tsql-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] utilise [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Les deux dialectes du langage SQL prennent en charge la clause, le mot clé et les agrégats fournis par le Concepteur de requêtes.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses [!INCLUDE[tsql](../../includes/tsql-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] uses [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Les deux dialectes du langage SQL prennent en charge la clause, le mot clé et les agrégats fournis par le Concepteur de requêtes.  
   
  Pour plus d’informations sur [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Informations de référence sur Transact-SQL &#40;moteur de base de données&#41;](../../t-sql/transact-sql-reference-database-engine.md) dans la [documentation en ligne](http://go.microsoft.com/fwlink/?LinkId=141687) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur msdn.microsoft.com.  
   
@@ -99,7 +104,7 @@ caps.handback.revision: 23
 |---------------|-----------------|  
 |Avg|Retourne la moyenne des valeurs d'un groupe. Implémente l'agrégat SQL AVG.|  
 |Compter|Retourne le nombre d'éléments figurant dans un groupe. Implémente l'agrégat SQL COUNT.|  
-|Count Big|Retourne le nombre d'éléments figurant dans un groupe. Représente l'agrégat SQL COUNT_BIG. La différence entre COUNT et COUNT_BIG est que COUNT_BIG retourne toujours une valeur dont le type de données est **bigint**.|  
+|Count Big|Retourne le nombre d'éléments figurant dans un groupe. Représente l'agrégat SQL COUNT_BIG. La différence entre COUNT et COUNT_BIG est que COUNT_BIG retourne toujours une valeur dont le type de données est **bigint** .|  
 |Min|Renvoie la valeur minimale figurant dans un groupe. Implémente l'agrégat SQL MIN.|  
 |Max|Renvoie la valeur maximale figurant dans un groupe. Implémente l'agrégat SQL MAX.|  
 |StDev|Retourne l'écart type statistique de toutes les valeurs d'un groupe. Implémente l'agrégat SQL STDEV.|  
@@ -181,7 +186,7 @@ caps.handback.revision: 23
   
  L'ordre de tri dans le jeu de résultats est déterminé par l'ordre dans lequel les données sont récupérées à partir de la source de données. Vous pouvez modifier l'ordre de tri en modifiant la requête ou une fois les données récupérées du rapport.  
   
-### Barre d'outils du concepteur de requêtes graphique  
+### <a name="graphical-query-designer-toolbar"></a>Barre d'outils du concepteur de requêtes graphique  
  La barre d'outils du concepteur de requêtes relationnelles fournit les boutons suivants pour vous permettre de spécifier ou d'afficher les résultats d'une requête.  
   
 |Bouton|Description|  
@@ -190,13 +195,13 @@ caps.handback.revision: 23
 |**Importer**|Importe une requête existante à partir d'un fichier ou d'un rapport. Les types de fichiers .sql et .rdl sont pris en charge.|  
 |**Exécuter la requête**|Exécute la requête. Le volet Résultats de la requête affiche le jeu de résultats.|  
   
-## Présentation des requêtes générées automatiquement  
+## <a name="understanding-automatically-generated-queries"></a>Présentation des requêtes générées automatiquement  
  Lorsque vous sélectionnez des tables et des colonnes ou des procédures stockées et des vues dans le volet Vue de base de données, le Concepteur de requêtes récupère les relations de clé primaire et de clé étrangère sous-jacentes du schéma de la base de données. En analysant ces relations, le Concepteur de requêtes détecte des relations entre deux tables et ajoute des jointures à la requête. Vous pouvez modifier ensuite la requête en ajoutant des groupes et des agrégats, en ajoutant ou en modifiant des relations, et en ajoutant des filtres. Pour afficher le texte de requête qui montre les colonnes à partir desquelles les données doivent être récupérées, les jointures entre les tables, ainsi que tous les groupes ou agrégats, cliquez sur **Modifier en tant que texte**.  
   
-## Concepteur de requêtes textuel  
- Pour bénéficier d'un contrôle optimal sur votre requête, utilisez le Concepteur de requêtes textuel. Pour basculer vers le Concepteur de requêtes textuel, cliquez sur **Modifier en tant que texte** dans la barre d’outils. Une fois que vous avez modifié une requête dans le Concepteur de requêtes textuel, vous ne pouvez plus utiliser le Concepteur de requêtes relationnelles. La requête sera ensuite toujours ouverte dans le Concepteur de requêtes textuel. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes textuel &#40;Générateur de rapports&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+## <a name="text-based-query-designer"></a>Concepteur de requêtes textuel  
+ Pour bénéficier d'un contrôle optimal sur votre requête, utilisez le Concepteur de requêtes textuel. Pour basculer vers le Concepteur de requêtes textuel, cliquez sur **Modifier en tant que texte**dans la barre d’outils. Une fois que vous avez modifié une requête dans le Concepteur de requêtes textuel, vous ne pouvez plus utiliser le Concepteur de requêtes relationnelles. La requête sera ensuite toujours ouverte dans le Concepteur de requêtes textuel. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes textuel &#40;Générateur de rapports&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
-## Voir aussi  
- [Concepteurs de requêtes &#40;Générateur de rapports&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md)  
+## <a name="see-also"></a>Voir aussi  
+ [Concepteurs de requêtes &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

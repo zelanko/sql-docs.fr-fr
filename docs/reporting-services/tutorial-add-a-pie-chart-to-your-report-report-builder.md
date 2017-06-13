@@ -1,24 +1,29 @@
 ---
-title: "Didacticiel&#160;: ajouter un graphique &#224; secteurs &#224; un rapport (G&#233;n&#233;rateur de rapports) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Didacticiel : Ajouter un graphique à secteurs à votre rapport (Générateur de rapports) | Documents Microsoft"
+ms.custom: 
+ms.date: 06/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 caps.latest.revision: 14
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: e28719a7ee1f1610e8e673711958592837198046
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Didacticiel&#160;: ajouter un graphique &#224; secteurs &#224; un rapport (G&#233;n&#233;rateur de rapports)
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un graphique à secteurs à un rapport (Générateur de rapports)
 Dans ce didacticiel, vous créez un graphique à secteurs dans un rapport paginé Reporting Services. Vous ajoutez des pourcentages et combinez de petits secteurs en un seul secteur.
 
 Les graphiques à secteurs et en anneau affichent des données sous la forme d’une proportion de la totalité. Ils n’ont pas d’axe. Quand vous ajoutez un champ numérique à un graphique à secteurs, le graphique calcule le pourcentage de chaque valeur par rapport au total.  
@@ -28,30 +33,13 @@ Cette illustration montre le graphique à secteurs que vous allez créer.
 ![report-builder-pie-chart-final](../reporting-services/media/report-builder-pie-chart-final.png)
   
 Lorsqu'un graphique à secteurs comporte trop de points de données, vos étiquettes de points de données peuvent devenir illisibles. Dans ce cas, envisagez de combiner plusieurs petits secteurs en un secteur plus grand. Les graphiques à secteurs gagnent en lisibilité quand vos données sont agrégées en quelques points de données.  
-  
-## <a name="BackToTop"></a>Contenu du didacticiel  
-Dans ce didacticiel, vous apprenez à :  
-  
-1.  [Créer un graphique à secteurs à partir de l'Assistant Graphique](#Chart)  
-  
-2.  [Choisir le type de graphique](#ChartType)  
-  
-3.  [Afficher des pourcentages dans chaque secteur](#Percentages)  
-  
-4.  [Combiner de petits secteurs en un secteur](#CombineSlices)  
-  
-5.  [Faire démarrer les valeurs de graphique à secteurs à partir du haut](#DrawingEffect)  
-  
-6.  [Ajouter un titre de rapport](#Title)  
-  
-7.  [Enregistrer le rapport](#Save)  
-  
+ 
 > [!NOTE]  
 > Dans ce didacticiel, les étapes de l'Assistant sont consolidées en deux procédures. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, l’ajout d’une source de données et l’ajout d’un dataset, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Durée estimée pour effectuer le didacticiel : 10 minutes.  
   
-## Spécifications  
+## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="Chart"></a>1. Créer un graphique à secteurs à partir de l'Assistant Graphique  
@@ -62,7 +50,7 @@ Dans cette section, vous utilisez l’Assistant Graphique pour créer un dataset
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
-    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
+    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou Dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
@@ -103,9 +91,9 @@ Vous avez le choix entre plusieurs types de graphiques prédéfinis.
   
 1.  Dans la page **Choisir un type de graphique** , cliquez sur **Secteurs**, puis sur **Suivant**. La page **Organiser les champs du graphique** s’affiche.  
   
-    Dans la page **Organiser les champs du graphique**, faites glisser le champ Product vers le volet **Catégories**. Les catégories définissent le nombre de secteurs du graphique à secteurs. Dans cet exemple, il y a huit secteurs, un pour chaque produit.  
+    Dans la page **Organiser les champs du graphique** , faites glisser le champ Product vers le volet **Catégories** . Les catégories définissent le nombre de secteurs du graphique à secteurs. Dans cet exemple, il y a huit secteurs, un pour chaque produit.  
   
-2.  Faites glisser le champ Sales vers le volet **Valeurs**. Le champ Sales représente le montant des ventes réalisées pour la sous-catégorie. Le volet **Valeurs** affiche `[Sum(Sales)]`, car le graphique affiche l’agrégat pour chaque produit.  
+2.  Faites glisser le champ Sales vers le volet **Valeurs** . Le champ Sales représente le montant des ventes réalisées pour la sous-catégorie. Le volet **Valeurs** affiche `[Sum(Sales)]` , car le graphique affiche l’agrégat pour chaque produit.  
   
 3.  Cliquez sur **Suivant** pour afficher un aperçu.  
   
@@ -133,14 +121,14 @@ Sur chaque secteur du graphique, vous pouvez afficher le pourcentage de ce secte
   
 3.  Cliquez avec le bouton droit sur une étiquette, puis cliquez sur **Propriétés de l’étiquette de la série**.  
   
-4.  Dans la zone **Données de l’étiquette**, sélectionnez **#PERCENT**.  
+4.  Dans la zone **Données de l’étiquette** , sélectionnez **#PERCENT**.  
     
-5.  (Facultatif) Pour indiquer le nombre de décimales affichées sur l’étiquette, dans la zone **Données de l’étiquette** après **#PERCENT**, tapez **{Pn}**, où *n* correspond au nombre de décimales à afficher. Par exemple, pour ne pas afficher de décimale, tapez **#PERCENT{P0}**.  
+5.  (Facultatif) Pour spécifier le nombre de décimales l’étiquette affiche, dans le **étiqueter des données** zone après **#PERCENT**, type **{Pn}** où  *n*  est le nombre de décimales à afficher. Par exemple, pour ne pas afficher de décimale, tapez **#PERCENT{P0}**.  
 
-6.  Pour afficher les valeurs sous forme de pourcentages, la propriété UseValueAsLabel doit avoir la valeur false. Si vous êtes invité à définir cette valeur dans la boîte de dialogue **Confirmer l’action**, cliquez sur **Oui**.  
+6.  Pour afficher les valeurs sous forme de pourcentages, la propriété UseValueAsLabel doit avoir la valeur false. Si vous êtes invité à définir cette valeur dans la boîte de dialogue **Confirmer l’action** , cliquez sur **Oui**.  
   
     > [!NOTE]  
-    > L’option **Format de nombre** de la boîte de dialogue **Propriétés de l’étiquette de la série** n’a aucun effet quand vous mettez en forme des pourcentages. Elle met uniquement en forme les étiquettes sous forme de pourcentages, mais ne calcule pas le pourcentage représenté par chaque secteur du graphique à secteurs.  
+    > L’option**Format de nombre** de la boîte de dialogue **Propriétés de l’étiquette de la série** n’a aucun effet quand vous mettez en forme des pourcentages. Elle met uniquement en forme les étiquettes sous forme de pourcentages, mais ne calcule pas le pourcentage représenté par chaque secteur du graphique à secteurs.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -169,9 +157,9 @@ Trois des secteurs du graphique à secteurs sont assez petits. Vous pouvez combi
   
 7.  Vérifiez que la propriété **CollectedThresholdUsePercent** a la valeur **True**.  
   
-8.  Sous l’onglet **Dossier de base**, cliquez sur **Exécuter** pour afficher l’aperçu du rapport.  
+8.  Sous l’onglet **Dossier de base** , cliquez sur **Exécuter** pour afficher l’aperçu du rapport.  
   
-Dans la légende, vous pouvez désormais voir la catégorie « Autre ». Le nouveau secteur regroupe tous les secteurs de moins de 5 % dans un seul secteur qui représente 6 % de l'ensemble.  
+Dans la légende, vous pouvez désormais voir la catégorie « Autre ». Le nouveau secteur regroupe tous les secteurs de moins de 5 % dans un seul secteur qui représente 6 % de l'ensemble.  
 
 ![report-builder-pie-chart-start-at-90](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
  
@@ -203,7 +191,7 @@ Le graphique à secteurs étant la seule visualisation dans le rapport, il n’a
   
 2.  Tapez **Ventes d’appareils photo et de caméscopes**, appuyez sur Entrée, puis tapez **En pourcentage du total des ventes**, afin d’obtenir ce qui suit :  
   
-    **Ventes d'appareils photo et de caméscopes**  
+    **Ventes d’appareils photo et de caméscopes**  
   
     **En pourcentage du total des ventes**  
   
@@ -219,11 +207,11 @@ Le graphique à secteurs étant la seule visualisation dans le rapport, il n’a
   
 ## <a name="Save"></a>7. Enregistrer le rapport  
   
-### Pour enregistrer le rapport  
+### <a name="to-save-the-report"></a>Pour enregistrer le rapport  
   
 1.  Basculez en mode création de rapport.  
   
-2.  Dans le menu **Fichier**, cliquez sur **Enregistrer **.  
+2.  Dans le menu **Fichier** , cliquez sur **Enregistrer**.  
   
 3.  Dans **Nom**, tapez **Graphique à secteurs des ventes**.  
   
@@ -231,10 +219,12 @@ Le graphique à secteurs étant la seule visualisation dans le rapport, il n’a
   
 Votre rapport est enregistré sur le serveur de rapports.  
   
-## Étapes suivantes  
+## <a name="next-steps"></a>Étapes suivantes  
 Vous avez terminé le didacticiel d'ajout d'un graphique à secteurs à votre rapport. Pour en savoir plus sur les graphiques, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) et [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)  
 [Générateur de rapports dans SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

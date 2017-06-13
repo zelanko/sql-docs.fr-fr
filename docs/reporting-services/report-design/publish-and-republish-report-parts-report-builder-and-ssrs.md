@@ -1,30 +1,35 @@
 ---
-title: "Publier et republier des parties de rapports (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Publier et republier des parties de rapport (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 03b06d981e4ff824fbdca3f598271fce666237af
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Publier et republier des parties de rapports (G&#233;n&#233;rateur de rapports et SSRS)
+# <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>Publier et republier des parties de rapports (Générateur de rapports et SSRS)
   Les parties de rapports sont des éléments de rapports paginés qui ont été publiés séparément sur un serveur de rapports et qui peuvent être réutilisés dans d’autres rapports paginés. Vous pouvez publier une partie de rapport avec des paramètres par défaut à un emplacement par défaut, ou vous pouvez modifier des métadonnées de partie de rapport, telles que le nom et la description, puis les enregistrer ailleurs sur un serveur de rapports. Vous pouvez également les enregistrer sur un site SharePoint intégré avec un serveur de rapports si vous avez les autorisations appropriées.  
   
  Vous pouvez publier uniquement la partie de rapport, avec le dataset duquel elle dépend incorporé, ou vous pouvez publier le dataset séparément. Si vous publiez le dataset séparément, il devient un dataset partagé et la partie de rapport est liée à celui-ci. Pour plus d’informations, consultez [Parties de rapports et datasets dans le Générateur de rapports](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md).  
   
  Vous pouvez republier une partie de rapport existante. Si vous avez les autorisations, vous pouvez enregistrer sur l'instance d'origine de la partie de rapport sur le serveur, même si vous ne l'avez pas créée. Vous pouvez également la publier comme une nouvelle partie de rapport et l'enregistrer au même emplacement ou à un endroit différent.  
   
-## Pour publier une partie de rapport  
+## <a name="to-publish-a-report-part"></a>Pour publier une partie de rapport  
   
 1.  Dans le menu du Générateur de rapports, cliquez sur **Publier les parties de rapport**.  
   
@@ -37,9 +42,9 @@ caps.handback.revision: 9
 3.  Modifiez le nom et la description de la partie de rapport : double-cliquez sur le nom pour le modifier et cliquez dans le champ **Description** pour ajouter une description.  
   
     > [!NOTE]  
-    >  Il est judicieux de donner un nom et une description à la partie de rapport pour aider les personnes à l'identifier lors de la recherche. La longueur maximale du nom d'une partie de rapport est de 260 caractères pour le chemin d'accès entier, y compris les noms des dossiers sur le serveur, suivi par le nom réel de la partie de rapport.  
+    >  Il est judicieux de donner un nom et une description à la partie de rapport pour aider les personnes à l'identifier lors de la recherche. La longueur maximale du nom d'une partie de rapport est de 260 caractères pour le chemin d'accès entier, y compris les noms des dossiers sur le serveur, suivi par le nom réel de la partie de rapport.  
   
-4.  Pour enregistrer votre partie de rapport dans un dossier autre que celui par défaut, cliquez sur le bouton **Parcourir**.  
+4.  Pour enregistrer votre partie de rapport dans un dossier autre que celui par défaut, cliquez sur le bouton **Parcourir** .  
   
 5.  Quand vous avez défini les options pour toutes les parties de rapports du rapport, cliquez sur **Publier**.  
   
@@ -47,20 +52,20 @@ caps.handback.revision: 9
   
 6.  Cliquez sur **Fermer**.  
   
-## Pour republier une partie de rapport  
+## <a name="to-republish-a-report-part"></a>Pour republier une partie de rapport  
   
 1.  Suivez la procédure précédente pour la publication d'une partie de rapport.  
   
-2.  Dans la boîte de dialogue **Publier les parties de rapport**, si vous cliquez sur **Publier en tant que nouvelle copie de la partie de rapport**, le Générateur de rapports n’enregistre pas sur la partie de rapport existante sur le serveur, mais crée à la place une autre partie de rapport.  
+2.  Dans la boîte de dialogue **Publier les parties de rapport** , si vous cliquez sur **Publier en tant que nouvelle copie de la partie de rapport**, le Générateur de rapports n’enregistre pas sur la partie de rapport existante sur le serveur, mais crée à la place une autre partie de rapport.  
   
 > [!NOTE]  
 >  Si vous la publiez en tant que nouvelle partie de rapport, elle aura un nouvel ID unique. Elle ne recevra plus les mises à jour si la partie de rapport d'origine est modifiée.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Publication de parties de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
  [Parties de rapports et datasets dans le Générateur de rapports](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Résoudre les problèmes liés aux parties de rapports (Générateur de rapports et SSRS)](http://msdn.microsoft.com/fr-fr/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Vérifier la présence de mises à jour ou désactiver les mises à jour (Générateur de rapports et SSRS)](http://msdn.microsoft.com/fr-fr/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
+ [Résoudre les problèmes liés aux parties de rapports (Générateur de rapports et SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [Vérifier la présence de mises à jour ou désactiver les mises à jour (Générateur de rapports et SSRS)](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
  [Rechercher des parties de rapports et définir un dossier par défaut &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
   

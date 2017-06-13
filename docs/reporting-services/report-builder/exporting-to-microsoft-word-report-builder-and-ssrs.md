@@ -1,24 +1,31 @@
 ---
-title: "Exportation vers Microsoft Word (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Exportation vers Microsoft Word (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 caps.latest.revision: 23
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 23
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 7c537a08d262bfadf686e1c6555d1ce221f5aef7
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Exportation vers Microsoft Word (G&#233;n&#233;rateur de rapports et SSRS)
-  L’extension de rendu Word effectue le rendu des rapports paginés au format [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx). Il s'agit du format Office Open XML.  
+
+# <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportation vers Microsoft Word (Générateur de rapports et SSRS)
+
+  L’extension de rendu Word effectue le rendu des rapports paginés au format  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx). Il s'agit du format Office Open XML.  
   
  Le type de contenu des fichiers générés par ce convertisseur est **application/vnd.openxmlformats-officedocument.wordprocessingml.document** et l’extension de fichier est .docx.  
   
@@ -41,10 +48,10 @@ caps.handback.revision: 23
   
  Ce convertisseur ne prend en charge que les sauts de page logiques.  
   
-### Dimensionnement de page  
+### <a name="page-sizing"></a>Dimensionnement de page  
  Lorsque le rapport est rendu, la hauteur et la largeur de page Word sont définies par les propriétés RDL suivantes : hauteur et largeur du format de papier, marges de page gauche et droite, ainsi que marges de page supérieure et inférieure.  
   
-### Largeur de page  
+### <a name="page-width"></a>Largeur de page  
  Word prend en charge des largeurs de page allant jusqu'à 22 pouces. Si le rapport dépasse cette largeur, le convertisseur rendra tout de même le rapport. Toutefois, Word n'affichera pas le contenu du rapport en mode Impression ou Lecture. Pour afficher les données, passez en mode Normal ou Web. Dans ces modes, Word réduit la quantité d'espaces et affiche par conséquent une part plus importante du contenu du rapport.  
   
  Au moment du rendu, le rapport s'élargit autant que nécessaire, jusqu'à la limite de 22 pouces, pour afficher le contenu. La largeur minimale du rapport se base sur la propriété RDL Width dans le volet Propriétés.  
@@ -80,34 +87,34 @@ caps.handback.revision: 23
 ##  <a name="Interactivity"></a> Interactivité  
  Certains éléments interactifs sont pris en charge dans Word. Vous trouverez ci-dessous une description de comportements spécifiques.  
   
-### Afficher et masquer  
+### <a name="show-and-hide"></a>Afficher et masquer  
  Le convertisseur Word rend les éléments de rapport en fonction de leur état au moment du rendu. Si l'état d'un élément de rapport est masqué, l'élément de rapport n'est pas rendu dans le document Word. Si l'état d'un élément de rapport est affiché, l'élément de rapport est rendu dans le document Word. La fonctionnalité d'activation et de désactivation n'est pas prise en charge dans Word.  
   
-### Explorateur de documents  
+### <a name="document-map"></a>Explorateur de documents  
  S'il existe des étiquettes Explorateur de documents dans le rapport, elles sont rendues sous la forme d'étiquettes de table des matières Word sur les éléments de rapport et groupes respectifs. L'étiquette Explorateur de documents est utilisée comme texte d'étiquette pour les étiquettes de table des matières. Le lien cible est positionné près de l'élément sur lequel l'étiquette est définie. La table des matières n'est pas créée pour vous dans le document Word, mais vous pouvez générer votre propre table des matières à l'aide des étiquettes Explorateur de documents rendues dans le rapport.  
   
-### Liens hypertexte et liens d'extraction  
+### <a name="hyperlink-and-drillthrough-links"></a>Liens hypertexte et liens d'extraction  
  Les liens hypertexte et liens d'extraction dans les éléments de rapport de type zone de texte et image sont rendus sous la forme de liens hypertexte dans le document Word. Lorsque vous cliquez sur le lien hypertexte, le navigateur Web par défaut s'ouvre et accède à l'URL. Lorsque vous cliquez sur le lien hypertexte d'extraction, un accès est effectué au serveur de rapports d'origine.  
   
-### Tri interactif  
+### <a name="interactive-sorting"></a>Tri interactif  
  Le contenu du rapport est rendu en fonction du mode de tri actuel dans la région des données de rapport. Word ne prend pas en charge le tri interactif. Une fois le rapport rendu, vous pouvez appliquer un tri de table dans Word.  
   
-### Signets  
- Les signets du rapport sont rendus sous la forme de signets Word. Les liens de signet sont rendus sous la forme de liens hypertexte qui se connectent aux étiquettes de signet dans le document. Les étiquettes de signet ne doivent pas comporter plus de 40 caractères. Le seul caractère spécial pouvant être utilisé dans une étiquette de signet est le trait de soulignement (_). Les caractères spéciaux non pris en charge sont supprimés du nom d'étiquette de signet. Par ailleurs, si le nom dépasse 40 caractères, il est tronqué. Si des noms de signet sont en double dans le rapport, les signets ne sont pas rendus dans Word.  
+### <a name="bookmarks"></a>Signets  
+ Les signets du rapport sont rendus sous la forme de signets Word. Les liens de signet sont rendus sous la forme de liens hypertexte qui se connectent aux étiquettes de signet dans le document. Les étiquettes de signet ne doivent pas comporter plus de 40 caractères. Le seul caractère spécial pouvant être utilisé dans une étiquette de signet est le trait de soulignement (_). Les caractères spéciaux non pris en charge sont supprimés du nom d'étiquette de signet. Par ailleurs, si le nom dépasse 40 caractères, il est tronqué. Si des noms de signet sont en double dans le rapport, les signets ne sont pas rendus dans Word.  
   
 ##  <a name="WordStyleRendering"></a> Rendu des styles Word  
  Voici une description succincte du rendu des styles dans Word.  
   
-### Palette de couleurs  
+### <a name="color-palette"></a>Palette de couleurs  
  Les couleurs rendues dans le rapport sont rendues dans le document Word.  
   
-### Bordure  
+### <a name="border"></a>Bordure  
  Les bordures des éléments de rapport autres que les bordures de page sont rendues sous la forme de bordures de cellule de tableau Word.  
   
 ##  <a name="SquigglyLines"></a> Traits ondulés dans les rapports exportés  
  Lorsqu'elles sont exportées et affichées dans Word, les données ou les constantes de rapport peuvent être soulignées par des traits ondulés rouges ou verts. Les traits rouges ondulés identifient les erreurs d'orthographe. Les traits verts ondulés identifient les erreurs de grammaire. Cela se produit lorsque le rapport comprend des mots non conformes à la vérification linguistique (orthographe et grammaire) de la langue d'édition spécifiée dans Word. Par exemple, les titres des colonnes de rapport en anglais seront probablement soulignés par des traits rouges ondulés si le rapport est rendu dans une version espagnole de Word. Les erreurs d'orthographe sont plus courantes dans les rapports que les erreurs de grammaire car les rapports comprennent généralement uniquement du texte court, des phrases ou des paragraphes incomplets.  
   
- La présence de traits ondulés dans les rapports implique que le rapport comporte des erreurs, ce qui n'est probablement pas le cas. Vous pouvez supprimer les lignes ondulées en modifiant la langue de vérification du rapport. Pour modifier la langue de vérification, sélectionnez le contenu du rapport et spécifiez la langue appropriée. Vous pouvez sélectionner tout ou seulement une partie du contenu. Dans Word, l’option de langue **Définir la langue de la vérification** se trouve dans la zone **Langue** de l’onglet **Révision**. Après avoir mis à jour le contenu, vous devez réenregistrer le document.  
+ La présence de traits ondulés dans les rapports implique que le rapport comporte des erreurs, ce qui n'est probablement pas le cas. Vous pouvez supprimer les lignes ondulées en modifiant la langue de vérification du rapport. Pour modifier la langue de vérification, sélectionnez le contenu du rapport et spécifiez la langue appropriée. Vous pouvez sélectionner tout ou seulement une partie du contenu. Dans Word, l’option de langue **Définir la langue de la vérification** se trouve dans la zone **Langue** de l’onglet **Révision** . Après avoir mis à jour le contenu, vous devez réenregistrer le document.  
   
  En fonction de la version de la langue de votre programme Office, les outils de vérification linguistique (par exemple, dictionnaire) de la langue choisie sont inclus dans le programme ou fournis dans un pack linguistique [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office dont vous faites l'acquisition.  
   
@@ -140,7 +147,7 @@ caps.handback.revision: 23
 ##  <a name="WordBenefits"></a> Avantages de l'utilisation du convertisseur Word  
  En plus de rendre les nouvelles fonctions des fichiers .docx [!INCLUDE[ofprword](../../includes/ofprword-md.md)] disponibles dans les rapports exportés, les fichiers *.docx des rapports exportés ont tendance à être plus petits. Les rapports exportés à l'aide du convertisseur Word sont généralement beaucoup plus petits que les mêmes rapports exportés à l'aide du convertisseur Word 2003.  
   
-## Compatibilité descendante des rapports exportés  
+## <a name="backward-compatibility-of-exported-reports"></a>Compatibilité descendante des rapports exportés  
  Vous pouvez sélectionner un mode de compatibilité Word et définir les options de compatibilité. Le convertisseur Word crée des documents avec le mode de compatibilité activé. En enregistrant de nouveau les documents avec le mode de compatibilité désactivé, il est possible que la mise en page du document soit modifiée.  
   
  Si vous désactivez le mode de compatibilité, puis enregistrez de nouveau un rapport, la mise en page du rapport peut être modifiée de façon inattendue.  
@@ -148,19 +155,19 @@ caps.handback.revision: 23
 ##  <a name="AvailabilityWord"></a> Le convertisseur Word 2003  
   
 > [!IMPORTANT]  
->  L’extension de rendu [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) est déconseillée. Pour plus d’informations, consultez [Fonctions déconseillées de SQL Server Reporting Services dans SQL Server 2016](../Topic/Deprecated%20Features%20in%20SQL%20Server%20Reporting%20Services%20in%20SQL%20Server%202016.md).  
+>  L’extension de rendu [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) est déconseillée. Pour plus d’informations, consultez [Fonctions déconseillées de SQL Server Reporting Services dans SQL Server 2016](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
  Le convertisseur Word est compatible avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 moyennant l’installation préalable du Module de compatibilité [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office pour les formats de fichiers Word, Excel et PowerPoint. Pour plus d'informations, consultez [Module de compatibilité pour formats de fichiers Microsoft Office Word, Excel et PowerPoint](http://go.microsoft.com/fwlink/?LinkID=205622).  
   
  La version précédente de l'extension de rendu Word, compatible avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, est renommée Word 2003. Seule l'extension de rendu Word est disponible par défaut. Vous devez mettre à jour les fichiers de configuration Reporting Services pour rendre l'extension de rendu Word 2003 disponible. Le type de contenu des fichiers générés par le convertisseur Word 2003 est **application/vnd.ms-word** et l’extension des noms de fichiers est .doc.  
   
- Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], le convertisseur Word par défaut est la version qui assure un rendu au format [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx). Il s’agit de l’option **Word** listée dans les menus **Exporter** dans un portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et une liste SharePoint. La version antérieure, compatible uniquement avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, est maintenant nommée Word 2003 et est listée dans les menus sous ce nom. L'option de menu **Word 2003** n'est pas visible par défaut ; toutefois, un administrateur peut la rendre visible en mettant à jour le fichier de configuration RSReportServer. Pour exporter des rapports à partir de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] à l'aide du convertisseur Word 2003, vous devez mettre à jour le fichier de configuration RSReportDesigner. Toutefois, le fait de rendre le convertisseur Word 2003 visible ne permet pas d'en disposer dans tous les scénarios. Dans la mesure où le fichier de configuration RSReportServer réside sur le serveur de rapports, les outils ou produits à partir desquels vous exportez les rapports doivent être connectés à un serveur de rapports pour permettre la lecture du fichier de configuration. Si vous utilisez des outils ou produits en mode déconnecté ou en mode local, le fait de rendre le convertisseur Word 2003 visible n'a aucun effet. L'option de menu **Word 2003** demeure inaccessible. Si vous rendez le convertisseur Word 2003 visible dans le fichier de configuration RSReportDesigner, l'option de menu **Word 2003** est toujours disponible dans l'aperçu de rapport [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
+ Dans SQL Server Reporting Services, le convertisseur Word par défaut est la version qui assure un rendu dans les [!INCLUDE[ofprword](../../includes/ofprword-md.md)] format (.docx). Il s’agit de l’option **Word** listée dans les menus **Exporter** dans un portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et une liste SharePoint. La version antérieure, compatible uniquement avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, est maintenant nommée Word 2003 et est listée dans les menus sous ce nom. L'option de menu **Word 2003** n'est pas visible par défaut ; toutefois, un administrateur peut la rendre visible en mettant à jour le fichier de configuration RSReportServer. Pour exporter des rapports à partir de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] à l'aide du convertisseur Word 2003, vous devez mettre à jour le fichier de configuration RSReportDesigner. Toutefois, le fait de rendre le convertisseur Word 2003 visible ne permet pas d'en disposer dans tous les scénarios. Dans la mesure où le fichier de configuration RSReportServer réside sur le serveur de rapports, les outils ou produits à partir desquels vous exportez les rapports doivent être connectés à un serveur de rapports pour permettre la lecture du fichier de configuration. Si vous utilisez des outils ou produits en mode déconnecté ou en mode local, le fait de rendre le convertisseur Word 2003 visible n'a aucun effet. L'option de menu **Word 2003** demeure inaccessible. Si vous rendez le convertisseur Word 2003 visible dans le fichier de configuration RSReportDesigner, l'option de menu **Word 2003** est toujours disponible dans l'aperçu de rapport [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
  L'option de menu **Word 2003** n'est jamais visible dans les scénarios suivants :  
   
 -   Utilisation du Générateur de rapports en mode déconnecté et affichage de l'aperçu d'un rapport dans le Générateur de rapports.  
   
--   Utilisation du composant WebPart Visionneuse de rapports en mode local alors que la batterie de serveurs SharePoint n'est pas intégrée à un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [Rapports en mode local et rapports en mode connecté dans la Visionneuse de rapports &#40;Reporting Services en mode SharePoint&#41;](../../reporting-services/report-server-sharepoint/local mode vs. connected mode reports in the report viewer.md)  
+-   Utilisation du composant WebPart Visionneuse de rapports en mode local alors que la batterie de serveurs SharePoint n'est pas intégrée à un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [Rapports en mode local et rapports en mode connecté dans la Visionneuse de rapports &#40;Reporting Services en mode SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  Si le convertisseur **Word 2003** est configuré pour être visible, les options de menu **Word** et **Word 2003** sont disponibles dans les scénarios suivants :  
   
@@ -180,19 +187,20 @@ caps.handback.revision: 23
   
  `<Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>`  
   
- L’extension WORDOPENXML définit le convertisseur Word pour les fichiers .docx [!INCLUDE[ofprword](../../includes/ofprword-md.md)]. L'extension WORD définit la version [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003. `Visible = “false”` indique que le convertisseur Word 2003 est masqué. Pour plus d’informations, consultez [Fichier de configuration RsReportserver.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) et [Fichier de configuration RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
+ L’extension WORDOPENXML définit le convertisseur Word pour les fichiers .docx [!INCLUDE[ofprword](../../includes/ofprword-md.md)] . L'extension WORD définit la version [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003. `Visible = “false”` indique que le convertisseur Word 2003 est masqué. Pour plus d’informations, consultez [Fichier de configuration RsReportserver.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) et [Fichier de configuration RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
   
-### Différences entre les convertisseurs Word et Word 2003  
+### <a name="differences-between-the-word-and-word-2003-renderers"></a>Différences entre les convertisseurs Word et Word 2003  
  Les rapports rendus avec les convertisseurs Word ou Word 2003 peuvent être très facilement confondus. Toutefois, vous pouvez remarquer des différences mineures entre les deux formats Word ou Word 2003.  
   
 ##  <a name="DeviceInfo"></a> Paramètres d'informations de périphérique  
  Vous pouvez modifier certains paramètres par défaut de ce convertisseur, par exemple omettre les liens hypertexte et d'extraction ou développer tous les éléments pouvant être activés/désactivés quel que soit l'état d'origine de l'élément au moment du rendu, ce en modifiant les paramètres d'informations de périphérique. Pour plus d’informations, consultez [Word Device Information Settings](../../reporting-services/word-device-information-settings.md).  
-  
-## Voir aussi  
- [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Fonctionnalité interactive des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
- [Rendu des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
-  
-  
+
+## <a name="next-steps"></a>Étapes suivantes
+
+[Pagination dans Reporting Services](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+[Comportements de rendu](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+[Fonctionnalité interactive des différentes Extensions de rendu de rapport](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+[Rendu des éléments de rapport](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+[Tables, Matrices et listes](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+
+D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

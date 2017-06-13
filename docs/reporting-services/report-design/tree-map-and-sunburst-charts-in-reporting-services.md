@@ -1,23 +1,28 @@
 ---
-title: "Graphiques de compartimentage et en rayons de soleil dans Reporting Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/31/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Arborescence des graphiques de compartimentage et en rayons de soleil dans Reporting Services | Documents Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/31/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: e09afe4634c02db6e74413e7c1c10565450b3559
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Graphiques de compartimentage et en rayons de soleil dans Reporting Services
+# <a name="tree-map-and-sunburst-charts-in-reporting-services"></a>Graphiques de compartimentage et en rayons de soleil dans Reporting Services
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   Les visualisations sous la forme de compartimentage et de rayons de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sont parfaites pour représenter visuellement des données hiérarchiques.   Cette rubrique présente une vue d’ensemble de l’ajout d’un graphique de compartimentage ou d’un graphique en rayon de soleil à un rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Elle inclut également un exemple de requête Adventureworks pour vous aider à commencer.  
@@ -31,12 +36,12 @@ caps.handback.revision: 16
   
  ![ssrs_treemap_example](../../reporting-services/report-design/media/ssrs-treemap-example.png "ssrs_treemap_example")  
   
-### Pour insérer un graphique de compartimentage et configurer l’échantillon de données Adventureworks  
+### <a name="to-insert-a-tree-map-chart-and-configure-for-the-sample-adventureworks-data"></a>Pour insérer un graphique de compartimentage et configurer l’échantillon de données Adventureworks  
  **Remarque :** avant d’ajouter un graphique à votre rapport, créez une source de données et un jeu de données.  Pour des exemples de données et de requête, voir la section [Échantillon de données Adventureworks](#bkmk_sample_data) dans cette rubrique.  
   
-1.  Cliquez avec le bouton droit sur l’aire de conception, cliquez sur **Insérer**, puis sur **Graphique**.  
+1.  Cliquez avec le bouton droit sur l’aire de conception, cliquez sur **Insérer**, puis sur **Graphique** .  
   
-     Sélectionnez Arborescence ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
+     Sélectionnez Tree Map ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
   
      ![ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "ssrs_insert_treemap_sunburst")  
   
@@ -66,7 +71,6 @@ caps.handback.revision: 16
   
 7.  Le nombre de valeurs d’étiquette qui s’affichent est affecté par la taille de la police, la taille de la zone de graphique et la taille des différents rectangles.  Pour afficher d’autres étiquettes, définissez la propriété de police de l’étiquette LineTotal (Total de la ligne) sur 10 pt au lieu de la valeur par défaut de 8 pt.  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Dans cette rubrique](#bkmk_top)  
   
 ##  <a name="bkmk_sunburst_chart"></a> Graphique en rayons de soleil  
  ![ssrs_sunburst_icon](../../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon")  
@@ -75,12 +79,12 @@ caps.handback.revision: 16
   
  ![ssrs_sunburst_example](../../reporting-services/report-design/media/ssrs-sunburst-example.png "ssrs_sunburst_example")  
   
-### Pour insérer un graphique à rayon et configurer l’échantillon de données Adventureworks  
+### <a name="to-insert-a-sunburst-chart-and-configure-for-the-sample-adventureworks-data"></a>Pour insérer un graphique à rayon et configurer l’échantillon de données Adventureworks  
  **Remarque :** avant d’ajouter un graphique à votre rapport, créez une source de données et un jeu de données.  Pour des exemples de données et de requête, voir la section [Échantillon de données Adventureworks](#bkmk_sample_data) dans cette rubrique.  
   
-1.  Cliquez avec le bouton droit sur l’aire de conception, cliquez sur **Insérer**, puis sur **Graphique**.  
+1.  Cliquez avec le bouton droit sur l’aire de conception, cliquez sur **Insérer**, puis sur **Graphique** .  
   
-     Sélectionnez Rayons ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
+     Sélectionnez les rayons ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
   
      ![ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "ssrs_insert_treemap_sunburst")  
   
@@ -104,7 +108,6 @@ caps.handback.revision: 16
   
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Dans cette rubrique](#bkmk_top)  
   
 ##  <a name="bkmk_sample_data"></a> Échantillon de données Adventureworks  
  Cette section présente un exemple de requête et les étapes de base pour la création d’une source de données et d’un jeu de données dans [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. Si votre rapport contient déjà une source de données et le jeu de données, vous pouvez ignorer cette section.  
@@ -119,7 +122,7 @@ caps.handback.revision: 16
   
 2.  **Créer une source de données :**  
   
-    1.  Dans le volet **Données du rapport**, cliquez avec le bouton droit sur **Sources de données**, puis cliquez sur **Ajouter une source de données**.  
+    1.  Dans le volet **Données du rapport** , cliquez avec le bouton droit sur **Sources de données** , puis cliquez sur **Ajouter une source de données**.  
   
     2.  Cliquez sur **Utiliser une connexion incorporée dans mon rapport**.  
   
@@ -137,7 +140,7 @@ caps.handback.revision: 16
   
 3.  **Créer un jeu de données :**  
   
-    -   Dans le volet **Données du rapport**, cliquez avec le bouton droit sur **Datasets**, puis cliquez sur **Ajouter un dataset**.  
+    -   Dans le volet **Données du rapport** , cliquez avec le bouton droit sur **Datasets** , puis cliquez sur **Ajouter un dataset**.  
   
     -   Cliquez sur **Utiliser un dataset incorporé dans mon rapport**.  
   
@@ -172,13 +175,14 @@ caps.handback.revision: 16
   
      Pour plus d’informations sur la création d’un dataset, consultez [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Dans cette rubrique](#bkmk_top)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mode création de dataset partagé &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
  [Afficher des info-bulles dans une série &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)   
- [Tutorial: Treemaps in Power BI (Didacticiel : graphiques de compartimentage dans Power BI)](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)   
- [Treemap: Microsoft Research Data Visualization Apps for Office (Graphique de compartimentage : applications de visualisation de données de Microsoft Research pour Office)](http://research.microsoft.com/en-us/projects/msrdatavis/treemap.aspx)  
+ [Tutorial: Treemaps in Power BI (Didacticiel : graphiques de compartimentage dans Power BI)](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)   
+ [Treemap: Microsoft Research Data Visualization Apps for Office (Graphique de compartimentage : applications de visualisation de données de Microsoft Research pour Office)](http://research.microsoft.com/en-us/projects/msrdatavis/treemap.aspx)  
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
+
+

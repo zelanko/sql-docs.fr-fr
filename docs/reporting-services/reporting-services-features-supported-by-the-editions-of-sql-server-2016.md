@@ -1,32 +1,39 @@
 ---
-title: "Fonctionnalit&#233;s Reporting Services prises en charge par les &#233;ditions de SQL Server 2016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: "Les fonctionnalités prises en charge par les éditions de SQL Server 2016 Reporting Services | Documents Microsoft"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: 39f03d2d-6e48-4b34-a9d3-07f86313b937
 caps.latest.revision: 3
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 3
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ac4f1eeab19ac0a7468c62ac3fa8dfcc33b12f45
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Fonctionnalit&#233;s Reporting Services prises en charge par les &#233;ditions de SQL Server 2016
-Cette rubrique fournit des détails sur les fonctionnalités prises en charge par les différentes éditions de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+
+# <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server 2016
+
+Cette rubrique fournit des détails sur les fonctionnalités prises en charge par les différentes éditions de SQL Server 2016.  
   
  La version d’évaluation de SQL Server est disponible pendant une période d’évaluation de 180 jours.  
   
- Pour obtenir les dernières notes de publication, voir [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md). Pour plus d’informations sur les nouveautés, consultez [Nouveautés de Reporting Services (SSRS)](What's%20New%20in%20Reporting%20Services%20\(SSRS\).md).
+ Pour obtenir les dernières notes de publication, voir [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md). Pour plus d’informations sur les nouveautés, consultez [Nouveautés de Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
     
  **Essayez SQL Server 2016 !**    
     
- > [![Télécharger à partir du Centre d’évaluation](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[ Télécharger SQL Server 2016 à partir du Centre d’évaluation](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
+ > [![Download from Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
 > ![Petite machine virtuelle Azure](../analysis-services/media/azure-virtual-machine-small.png) **[Faites tourner une machine virtuelle sur laquelle SQL Server 2016 est déjà installé](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
 
@@ -34,11 +41,11 @@ Pour les fonctionnalités prises en charge par les éditions Evaluation Edition 
 
 Pour accéder au tableau d’une technologie SQL Server, cliquez sur son lien :  
 
--   [Reporting Services](#SSRS)  
+-   [Reporting Services](#SSRS)  
   
 -   [Clients Business Intelligence](#BIC)  
 
-##  <a name="SSRS"></a> Reporting Services  
+##  <a name="SSRS"></a> Reporting Services  
   
 |Nom de la fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Développeur|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
@@ -61,7 +68,7 @@ Pour accéder au tableau d’une technologie SQL Server, cliquez sur son lien :
 |Bibliothèque de composants partagés|Oui|Oui|||||Oui|  
 |Abonnements et planifications par partage de fichiers et messagerie électronique|Oui|Oui|||||Oui|  
 |Historique de rapport, exécution d'instantanés et mise en cache|Oui|Oui|||||Oui|  
-|Intégration SharePoint|Oui|Oui|||||Oui|  
+|Intégration SharePoint|Oui|Oui|||||Oui|  
 |Prise en charge de sources de données distantes et non-SQL<sup>1</sup>|Oui|Oui|||||Oui|  
 |Source de données, remise et rendu, extensibilité RDCE|Oui|Oui|||||Oui|  
 |Options de personnalisation|Oui||||||Oui|  
@@ -70,11 +77,11 @@ Pour accéder au tableau d’une technologie SQL Server, cliquez sur son lien :
 |Alerte<sup>2</sup>|Oui||||||Oui|  
 |[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|Oui||||||Oui|  
   
- <sup>1</sup> Pour plus d’informations sur les sources de données prises en charge dans SQL Server 2016 Reporting Services SSRS, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ <sup>1</sup> pour plus d’informations sur les sources de données pris en charge dans SQL Server 2016 Reporting Services (SSRS), consultez [des Sources de données prises en charge par Reporting Services &#40; SSRS &#41; ](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
  <sup>2</sup> Exige Reporting Services en mode SharePoint. Pour plus d’informations, consultez [Installer le mode SharePoint de Reporting Services](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
   
-## Conditions requises pour l'édition SQL Server de la base de données du serveur de rapports  
+## <a name="report-server-database-server-edition-requirements"></a>Conditions requises pour l'édition SQL Server de la base de données du serveur de rapports  
  Lors de la création d'une base de données de serveur de rapports, toutes les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne peuvent pas être utilisées pour héberger la base de données. Le tableau suivant répertorie les éditions du [!INCLUDE[ssDE](../includes/ssde-md.md)] que vous pouvez utiliser pour les éditions spécifiques de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 |Pour cette édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services|Utilisez cette édition de l'instance du moteur de base de données pour héberger la base de données|  
@@ -86,7 +93,7 @@ Pour accéder au tableau d’une technologie SQL Server, cliquez sur son lien :
 |Evaluation|Evaluation|  
   
 ##  <a name="BIC"></a> Clients Business Intelligence  
- Les applications logicielles clientes suivantes sont disponibles dans le Centre de téléchargement Microsoft ; elles ont pour but de vous aider à créer des documents décisionnels qui s’exécutent sur une instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Lorsque vous hébergez ces documents dans un environnement serveur, utilisez une édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui prend en charge ce type de document. Le tableau suivant identifie quelle édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contient les fonctionnalités de serveur obligatoires pour héberger les documents créés dans ces applications clientes.  
+ Les applications logicielles clientes suivantes sont disponibles dans le Centre de téléchargement Microsoft ; elles ont pour but de vous aider à créer des documents décisionnels qui s’exécutent sur une instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Lorsque vous hébergez ces documents dans un environnement serveur, utilisez une édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui prend en charge ce type de document. Le tableau suivant identifie quelle édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contient les fonctionnalités de serveur obligatoires pour héberger les documents créés dans ces applications clientes.  
   
 |Nom de l’outil|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Développeur|  
 |---------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
@@ -97,9 +104,12 @@ Pour accéder au tableau d’une technologie SQL Server, cliquez sur son lien :
 > [!NOTE]  
 > 1.  Le tableau ci-dessus identifie les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requises pour activer ces outils clients ; toutefois, ces outils peuvent accéder aux données hébergées sur n’importe quelle édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 > 2.  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] est le seul point de création de rapports mobiles. Connectez-vous à un serveur [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour accéder aux sources de données et créer des rapports. Ensuite, publiez-les sur le serveur [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour que d’autres utilisateurs de l’organisation puissent y accéder, soit sur le serveur, soit sur des appareils mobiles. Vous pouvez également utiliser le [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] autonome avec des sources de données locales.  
-> 3.  Si vous utilisez [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] localement, [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dans le cloud ou les deux pour votre solution de remise de rapports, vous avez besoin d’une seule application mobile pour accéder aux tableaux de bord et aux rapports mobiles sur des appareils mobiles. Les applications [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] sont disponibles au téléchargement à partir des App Store Windows, iOS et Android.  
+> 3.  Si vous utilisez  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] localement, [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dans le cloud ou les deux pour votre solution de remise de rapports, vous avez besoin d’une seule application mobile pour accéder aux tableaux de bord et aux rapports mobiles sur des appareils mobiles. Les applications [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] sont disponibles au téléchargement à partir des App Store Windows, iOS et Android.  
 
-## Voir aussi  
- [Fonctionnalités prises en charge par les éditions de SQL Server 2016](Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)  
- [Spécifications de produit pour SQL Server 2016](../Topic/Product%20Specifications%20for%20SQL%20Server%202016.md)   
- [Installation de SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md) 
+## <a name="next-steps"></a>Étapes suivantes
+
+[Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
+[Spécifications de produit pour SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
+[Installation de SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md) 
+
+D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

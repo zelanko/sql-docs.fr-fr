@@ -1,25 +1,30 @@
 ---
-title: "Propri&#233;t&#233;s de r&#244;le d&#39;utilisateur (Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.reportserver.userroleproperties.f1"
+title: "Propriétés du rôle (Management Studio) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.reportserver.userroleproperties.f1
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
 caps.latest.revision: 27
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 27
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 76bd80e1fc470d9cdb998d23834d0a3473d411fe
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Propri&#233;t&#233;s de r&#244;le d&#39;utilisateur (Management Studio)
+# <a name="user-role-properties-management-studio"></a>Propriétés de rôle d'utilisateur (Management Studio)
   Utilisez cette page pour afficher les tâches qui figurent dans une définition de rôle au niveau élément. Vous pouvez également utiliser cette page pour modifier la liste des tâches ou la description d'un rôle.  
   
  Une définition de rôle au niveau élément est une collection nommée de tâches que les utilisateurs effectuent sur un élément spécifique (c'est-à-dire un dossier, un rapport, une ressource ou une source de données partagée). Les définitions de rôles sont attribuées à un utilisateur ou à un groupe pour créer une attribution de rôle dans le Gestionnaire de rapports. Les tâches contenues dans la définition de rôle décrivent les opérations que peuvent effectuer l'utilisateur ou le groupe.  
@@ -29,7 +34,7 @@ caps.handback.revision: 27
 > [!NOTE]  
 >  Les attributions de rôles d'utilisateur sont utilisées uniquement sur un serveur de rapports qui s'exécute en mode natif. Si le serveur de rapports est configuré pour l'intégration SharePoint, cette page affiche des informations en lecture seule sur les rôles et niveaux d'autorisation définis sur le site SharePoint.  
   
-## Options  
+## <a name="options"></a>Options  
  **Nom**  
  Spécifie le nom de la définition de rôle.  
   
@@ -42,11 +47,11 @@ caps.handback.revision: 27
  **Description de la tâche**  
  Donne des informations sur chaque tâche. Vous ne pouvez pas modifier la description des tâches.  
   
-## Voir aussi  
- [Tâches au niveau élément](../../reporting-services/security/item-level-tasks.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Tâches au niveau élément](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)   
  [Définitions de rôles](../../reporting-services/security/role-definitions.md)   
  [Aide du serveur de rapports dans Management Studio accessible par la touche F1](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Tâches et autorisations](../../reporting-services/security/tasks-and-permissions.md)   
- [Predefined Roles](../../reporting-services/security/predefined-roles.md)  
+ [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)  
   
   

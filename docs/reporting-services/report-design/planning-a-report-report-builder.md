@@ -1,26 +1,31 @@
 ---
-title: "Planification d&#39;un rapport (G&#233;n&#233;rateur de rapports) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mise en route"
-  - "conception d'un rapport"
+title: "Planification d’un rapport (Générateur de rapports) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- getting started
+- report design
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 caps.latest.revision: 19
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 19
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fa6837d82c145d2bb079013238dd67332e512cc6
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Planification d&#39;un rapport (G&#233;n&#233;rateur de rapports)
+# <a name="planning-a-report-report-builder"></a>Planification d'un rapport (Générateur de rapports)
   Le Générateur de rapports vous permet de créer divers types de rapports paginés. Par exemple, vous pouvez créer des rapports qui indiquent des données de ventes récapitulatives ou détaillées, des tendances de ventes et de marketing, ou bien des rapports opérationnels ou des tableaux de bord. Vous pouvez également créer des rapports qui tirent parti de texte enrichi, tels que des commandes clients, des catalogues de produits ou des lettres types. Tous ces rapports sont créés à l'aide de différentes combinaisons des mêmes blocs de construction dans le Générateur de rapports. Pour créer un rapport utile et facilement compréhensible, il est préférable de le planifier au préalable. Voici quelques éléments à prendre en considération avant de commencer :  
   
 -   **Quel format souhaitez-vous affecter au rapport ?**  
@@ -35,9 +40,9 @@ caps.handback.revision: 19
   
      Le Générateur de rapports fournit de nombreux éléments de rapports que vous pouvez ajouter à votre rapport afin d'en faciliter la lecture, de souligner des informations clés, d'aider les utilisateurs à parcourir le rapport, et ainsi de suite. Le fait de savoir quelle apparence vous souhaitez donner au rapport peut déterminer si vous devez utiliser des éléments de rapports tels que des zones de texte, des rectangles, des images ou des lignes. Vous souhaiterez peut-être également afficher ou masquer des éléments, ajouter un explorateur de documents, inclure des rapports ou des sous-rapports d'extraction, ou établir des liaisons vers d'autres rapports. Pour plus d’informations, consultez [Images, zones de texte, rectangles et lignes &#40;&Générateur de rapports et SSRS#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md) et [Tri interactif, Explorateurs de documents et liens &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
   
--   **Quelles données souhaitez-vous présenter aux utilisateurs ? Les données ou le format doivent-ils être filtrés pour différents publics ?**  
+-   **Quelles données souhaitez-vous présenter aux utilisateurs ? Les données ou le format doivent-ils être filtré pour différents publics ?**  
   
-     Vous souhaiterez peut-être réduire l'étendue du rapport à des utilisateurs ou des emplacements spécifiques, ou à une période donnée. Pour filtrer les données du rapport, utilisez des paramètres permettant de récupérer et d'afficher uniquement les données souhaitées. Pour plus d’informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+     Vous souhaiterez peut-être réduire l'étendue du rapport à des utilisateurs ou des emplacements spécifiques, ou à une période donnée. Pour filtrer les données du rapport, utilisez des paramètres permettant de récupérer et d'afficher uniquement les données souhaitées. Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 -   **Avez-vous besoin de créer vos propres calculs ?**  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 19
   
      Vous pouvez enregistrer votre rapport sur votre ordinateur local et continuer à travailler dessus ou l'exécuter localement à des fins d'informations personnelles. Toutefois, pour partager votre rapport avec d'autres personnes, vous devez l'enregistrer sur un serveur de rapports configuré en mode natif, ou sur un serveur de rapports en mode intégré SharePoint. Le fait de l'enregistrer sur un serveur permet à d'autres personnes de l'exécuter lorsqu'elles le souhaitent. En guise d'alternative, l'administrateur du serveur de rapports peut configurer un abonnement au rapport ou la remise du rapport par messagerie électronique à d'autres utilisateurs. Vous pouvez faire remettre le rapport dans un format d'exportation spécifique si vous préférez. Pour plus d’informations, consultez [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Générateur de rapports dans SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Concepts de création de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Didacticiels du Générateur de rapports](../../reporting-services/report-builder-tutorials.md)  

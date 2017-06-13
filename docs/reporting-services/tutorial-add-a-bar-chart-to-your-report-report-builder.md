@@ -1,65 +1,48 @@
 ---
-title: "Didacticiel&#160;: ajouter un graphique &#224; barres &#224; un rapport (G&#233;n&#233;rateur de rapports) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Didacticiel : Ajouter un graphique à barres à votre rapport (Générateur de rapports) | Documents Microsoft"
+ms.custom: 
+ms.date: 06/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 caps.latest.revision: 14
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
----
-# Didacticiel&#160;: ajouter un graphique &#224; barres &#224; un rapport (G&#233;n&#233;rateur de rapports)
-Dans ce didacticiel, vous allez utiliser un Assistant dans [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] pour créer un graphique à barres dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]. Ensuite, vous ajouterez un filtre et améliorerez le graphique. 
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: af11d5fdee9122663431f4f00ef5e40fb765c7b4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
 
-Un graphique à barres représente les données de catégorie horizontalement. Cela peut aider à :  
+---
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un graphique à barres à un rapport (Générateur de rapports)
+Dans ce didacticiel, vous allez utiliser un Assistant dans [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] pour créer un graphique à barres dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . Ensuite, vous ajouterez un filtre et améliorerez le graphique. 
+
+Un graphique à barres représente les données de catégorie horizontalement. Cela peut aider à :  
   
--   améliorer la lisibilité des noms de catégorie longs ;  
--   améliorer la compréhension des heures représentées sous forme de valeurs ;   
+-   améliorer la lisibilité des noms de catégorie longs ;  
+-   améliorer la compréhension des heures représentées sous forme de valeurs ;   
 -   comparer la valeur relative de plusieurs séries.  
   
 L’illustration suivante montre le graphique à barres que vous allez créer, avec les ventes de 2014 et 2015 pour les cinq meilleurs commerciaux, par ordre décroissant de montant des ventes en 2015.  
   
 ![report-builder-bar-chart](../reporting-services/media/report-builder-bar-chart.png) 
   
-## <a name="BackToTop"></a>Contenu du didacticiel  
-Dans ce didacticiel, vous apprendrez à :  
-  
-1.  [Créer un graphique à partir de l'Assistant Graphique](#Chart)  
-  
-2.  [Choisir le type de graphique](#ChartType)  
-  
-3.  [Afficher toutes les valeurs des catégories sur l'axe vertical](#AllValues)  
-  
-4.  [Modifier l’ordre de tri sur l’axe vertical](#Sort)  
-  
-5.  [Déplacer la légende](#Legend)  
-  
-6.  [Intituler le graphique](#ChartTitle)  
-  
-7.  [Mettre en forme et étiqueter l'axe horizontal](#Horizontal)  
-  
-8.  [Ajouter un filtre pour afficher les cinq valeurs supérieures](#Filter)  
-  
-9. [Ajouter un titre de rapport](#Title)  
-  
-10. [Enregistrer le rapport](#Save)  
-  
+ 
 > [!NOTE]  
 > Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, la création d’un dataset et le choix d’une source de données, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Durée estimée pour effectuer ce didacticiel : 15 minutes.  
   
-## Spécifications  
+## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="Chart"></a>1. Créer un rapport de graphique à partir de l'Assistant Graphique  
@@ -68,21 +51,21 @@ Vous allez créer un dataset incorporé, choisir une source de données partagé
 > [!NOTE]  
 > Dans ce didacticiel, la requête contient les valeurs de données. Ainsi, aucune source de données externe n’est nécessaire. Cela rend la requête assez longue. Dans un environnement métier, une requête ne contient pas les données. Ceci est nécessaire à des fins de formation uniquement.  
   
-1.  [Démarrez le Générateur de rapport](../reporting-services/report-builder/start-report-builder.md) à partir du portail web [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], du serveur de rapports en mode intégré SharePoint, ou de votre ordinateur.  
+1.  [Démarrez le Générateur de rapport](../reporting-services/report-builder/start-report-builder.md) à partir du portail web [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , du serveur de rapports en mode intégré SharePoint, ou de votre ordinateur.  
   
      La boîte de dialogue **Mise en route** s'affiche.  
   
-     ![Report Builder Get Started](../reporting-services/media/rb-getstarted.png "Report Builder Get Started")  
+     ![Démarrer le Générateur de rapports](../reporting-services/media/rb-getstarted.png "démarrer le Générateur de rapports")  
   
-     Si vous ne voyez pas la boîte de dialogue **Mise en route**, cliquez sur **Fichier** >**Nouveau**. La boîte de dialogue **Nouveau rapport ou dataset** contient une grande partie des contenus de la boîte de dialogue **Mise en route** . 
+     Si vous ne voyez pas la boîte de dialogue **Mise en route** , cliquez sur **Fichier** >**Nouveau**. La boîte de dialogue **Nouveau rapport ou dataset** contient une grande partie des contenus de la boîte de dialogue **Mise en route** . 
       
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
 3.  Dans le volet droit, cliquez sur **Assistant Graphique**.  
   
-4.  Dans la page **Choisir un dataset**, cliquez sur **Créer un dataset**, puis sur **Suivant**.  
+4.  Dans la page **Choisir un dataset** , cliquez sur **Créer un dataset**, puis sur **Suivant**.  
   
-5.  Dans la page **Choisir une connexion à une source de données**, sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, sélectionnez une source de données, puis cliquez sur **Suivant**. Vous devrez peut-être entrer un nom d'utilisateur et un mot de passe.  
+5.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, sélectionnez une source de données, puis cliquez sur **Suivant**. Vous devrez peut-être entrer un nom d'utilisateur et un mot de passe.  
   
     > [!NOTE]  
     > La source de données que vous choisissez n'a pas d'importance, tant que vous disposez des autorisations appropriées. Vous n'allez pas récupérer de données à partir de la source de données. Pour plus d’informations, consultez [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -118,11 +101,11 @@ Vous allez créer un dataset incorporé, choisir une source de données partagé
   
 2.  Cliquez sur **Barre**, puis sur **Suivant**.  
   
-    Dans la page **Organiser les champs du graphique**, il y a quatre champs dans le volet **Champs disponibles** : FirstName, LastName, SalesYear2015 et SalesYear2014.  
+    Dans la page **Organiser les champs du graphique** , il y a quatre champs dans le volet **Champs disponibles** : FirstName, LastName, SalesYear2015 et SalesYear2014.  
   
 3.  Faites glisser LastName vers le volet Catégories.  
   
-4.  Faites glisser SalesYear2015 vers le volet Valeurs. SalesYear2015 représente le montant des ventes de chaque commercial pour l’année 2015. Le volet Valeurs affiche `[Sum(SalesYear2015)]`, car le graphique affiche l'agrégat pour chaque produit.  
+4.  Faites glisser SalesYear2015 vers le volet Valeurs. SalesYear2015 représente le montant des ventes de chaque commercial pour l’année 2015. Le volet Valeurs affiche `[Sum(SalesYear2015)]` , car le graphique affiche l'agrégat pour chaque produit.  
   
 5.  Faites glisser SalesYear2014 vers le volet Valeurs sous SalesYear2015. SalesYear2014 représente le montant des ventes de chaque commercial pour l’année 2014.  
   
@@ -145,7 +128,7 @@ Par défaut, seules quelques-unes des valeurs de l'axe vertical s'affichent. Vou
   
 2.  Cliquez avec le bouton droit sur l’axe vertical, puis cliquez sur **Propriétés de l’axe vertical**.  
   
-3.  Sous **Plage et intervalle de l’axe**, dans la zone **Intervalle**, tapez **1**.  
+3.  Sous **Plage et intervalle de l’axe**, dans la zone **Intervalle** , tapez **1**.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -159,9 +142,9 @@ Vous pouvez modifier l'expression de catégorie pour inclure le nom suivi du pr�
   
 1.  Basculez en mode création de rapport.  
   
-2.  Double-cliquez sur le graphique pour afficher le volet **Données du graphique**.  
+2.  Double-cliquez sur le graphique pour afficher le volet **Données du graphique** .  
   
-3.  Dans la zone **Groupes de catégories**, cliquez avec le bouton droit sur le champ [LastName], puis cliquez sur **Propriétés du groupe de catégories**.  
+3.  Dans la zone **Groupes de catégories** , cliquez avec le bouton droit sur le champ [LastName], puis cliquez sur **Propriétés du groupe de catégories**.  
   
 4.  Dans Étiquette, cliquez sur le bouton Expression (Fx).  
   
@@ -175,7 +158,7 @@ Vous pouvez modifier l'expression de catégorie pour inclure le nom suivi du pr�
   
 8.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-Si les prénoms n'apparaissent pas lorsque vous exécutez le rapport, vous pouvez actualiser les données manuellement. Toujours en mode Aperçu, sous l’onglet **Exécuter** du groupe **Navigation**, cliquez sur **Actualiser**.  
+Si les prénoms n'apparaissent pas lorsque vous exécutez le rapport, vous pouvez actualiser les données manuellement. Toujours en mode Aperçu, sous l’onglet **Exécuter** du groupe **Navigation** , cliquez sur **Actualiser**.  
   
 > [!NOTE]  
 > Si vous ne parvenez pas à lire les noms des commerciaux sur l'axe vertical, vous pouvez augmenter la taille de votre graphique ou modifier les options de mise en forme des étiquettes d'axe.  
@@ -185,15 +168,15 @@ Lorsque vous triez les données d'un graphique, vous modifiez l'ordre des valeur
   
 1.  Basculez en mode création de rapport.  
   
-2.  Double-cliquez sur le graphique pour afficher le volet **Données du graphique**.  
+2.  Double-cliquez sur le graphique pour afficher le volet **Données du graphique** .  
   
-3.  Dans la zone **Groupes de catégories**, cliquez avec le bouton droit sur le champ [LastName], puis cliquez sur **Propriétés du groupe de catégories**.  
+3.  Dans la zone **Groupes de catégories** , cliquez avec le bouton droit sur le champ [LastName], puis cliquez sur **Propriétés du groupe de catégories**.  
   
 4.  Cliquez sur **Tri**. La page **Modifiez les options de tri** affiche une liste d’expressions de tri. Par défaut, cette liste a une expression de tri identique à l'expression de groupe de la catégorie d'origine.  
   
 5.  Dans **Trier par**, cliquez sur **[SalesYear2015]**.  
   
-6.  Dans la liste **Tri**, sélectionnez **A-Z** pour que les noms apparaissent dans l’ordre décroissant du montant des ventes 2015.
+6.  Dans la liste **Tri** , sélectionnez **A-Z** pour que les noms apparaissent dans l’ordre décroissant du montant des ventes 2015.
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -204,7 +187,7 @@ Les noms sur l’axe horizontal sont triés par ordre décroissant du montant de
 ## <a name="Legend"></a>5. Déplacer la légende  
 Pour améliorer la lisibilité des valeurs du graphique, vous pouvez déplacer la légende du graphique. Par exemple, dans un graphique à barres horizontales, vous pouvez modifier la position de la légende de manière à l'afficher au-dessus ou en dessous de la zone de graphique. Cela permet d'augmenter l'espace horizontal entre les barres.  
   
-#### Pour afficher la légende sous la zone de graphique d'un graphique à barres  
+#### <a name="to-display-the-legend-below-the-chart-area-of-a-bar-chart"></a>Pour afficher la légende sous la zone de graphique d'un graphique à barres  
   
 1.  Basculez en mode création de rapport.  
   
@@ -214,7 +197,7 @@ Pour améliorer la lisibilité des valeurs du graphique, vous pouvez déplacer l
   
 4.  Pour **Position de la légende**, sélectionnez une position différente. Par exemple, choisissez de positionner le graphique en bas au centre.  
   
-    Lorsque la légende est placée en haut ou en bas d'un graphique, la disposition de la légende change de vertical à horizontal. Vous pouvez sélectionner une autre disposition dans la liste déroulante **Disposition**.  
+    Lorsque la légende est placée en haut ou en bas d'un graphique, la disposition de la légende change de vertical à horizontal. Vous pouvez sélectionner une autre disposition dans la liste déroulante **Disposition** .  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -239,17 +222,17 @@ Par défaut, l'axe horizontal affiche les valeurs dans un format général qui e
   
 3.  Sous l’onglet **Accueil** > groupe **Nombre** > **Devise**. Les étiquettes de l'axe horizontal changent et utilisent une devise.  
   
-3.  (Facultatif) Supprimez les chiffres décimaux. Près du bouton **Devise**, cliquez deux fois sur le bouton **Réduire les décimales**.  
+3.  (Facultatif) Supprimez les chiffres décimaux. Près du bouton **Devise** , cliquez deux fois sur le bouton **Réduire les décimales** .  
   
 4.  Cliquez avec le bouton droit sur l’axe horizontal, puis cliquez sur **Propriétés de l’axe horizontal**.  
   
-5.  Sous l’onglet **Nombre**, sélectionnez **Afficher les valeurs en milliers**.  
+5.  Sous l’onglet **Nombre** , sélectionnez **Afficher les valeurs en milliers**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 
 8.  Cliquez avec le bouton droit sur l’axe horizontal, puis sélectionnez **Afficher le titre de l’axe**.
   
-7.  Dans la zone **Titre de l’axe**, tapez **Ventes en milliers** et appuyez sur Entrée.  
+7.  Dans la zone **Titre de l’axe** , tapez **Ventes en milliers** et appuyez sur Entrée.  
 
     >**Remarque :** Pendant que vous tapez, la zone Titre de l’axe apparaît sur l’axe vertical. Quand vous appuyez sur Entrée, elle passe sur l’axe horizontal.
   
@@ -262,15 +245,15 @@ Vous pouvez ajouter un filtre au graphique pour spécifier les données du datas
   
 1.  Basculez en mode création de rapport.  
   
-2.  Double-cliquez sur le graphique pour afficher le volet **Données du graphique**.  
+2.  Double-cliquez sur le graphique pour afficher le volet **Données du graphique** .  
   
-3.  Dans la zone **Groupes de catégories**, cliquez avec le bouton droit sur le champ [LastName], puis cliquez sur **Propriétés du groupe de catégories**.  
+3.  Dans la zone **Groupes de catégories** , cliquez avec le bouton droit sur le champ [LastName], puis cliquez sur **Propriétés du groupe de catégories**.  
   
 4.  Cliquez sur **Filtres**. La page **Modifiez les filtres** peut afficher une liste d’expressions de filtre. Par défaut, cette liste est vide.  
   
 5.  Cliquez sur **Ajouter**. Un nouveau filtre vide apparaît.  
   
-6.  Dans **Expression**, tapez **[Sum(SalesYear2015)]**. Cela crée l’expression sous-jacente `=Sum(Fields!SalesYear2015.Value)`, que vous pouvez afficher en cliquant sur le bouton **fx**.  
+6.  Dans **Expression**, tapez **[Sum(SalesYear2015)]**. Cela crée l’expression sous-jacente `=Sum(Fields!SalesYear2015.Value)`, que vous pouvez afficher en cliquant sur le bouton **fx** .  
   
 7.  Vérifiez que le type de données est **Text**.  
   
@@ -282,7 +265,7 @@ Vous pouvez ajouter un filtre au graphique pour spécifier les données du datas
   
 11. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-Si les résultats ne sont pas filtrés lorsque vous exécutez le rapport, vous pouvez actualiser les données manuellement. Sous l’onglet **Exécuter**, dans le groupe **Navigation**, cliquez sur **Actualiser**.  
+Si les résultats ne sont pas filtrés lorsque vous exécutez le rapport, vous pouvez actualiser les données manuellement. Sous l’onglet **Exécuter** , dans le groupe **Navigation** , cliquez sur **Actualiser**.  
   
 Le graphique affiche les noms des cinq meilleurs commerciaux issus des données de ventes 2015.  
   
@@ -296,13 +279,13 @@ Le graphique affiche les noms des cinq meilleurs commerciaux issus des données 
   
     **Cinq meilleurs vendeurs pour 2015**  
   
-3.  Sélectionnez **Graphique à barres des ventes**, puis cliquez sur le bouton **Gras**.  
+3.  Sélectionnez **Graphique à barres des ventes**, puis cliquez sur le bouton **Gras** .  
   
-4.  Sélectionnez **Cinq meilleurs vendeurs pour 2015** puis, dans la section **Police** de l’onglet **Accueil**, affectez la valeur **10** à la taille de la police.  
+4.  Sélectionnez **Cinq meilleurs vendeurs pour 2015**puis, dans la section **Police** de l’onglet **Accueil** , affectez la valeur **10**à la taille de la police.  
   
 5.  (Facultatif) Vous devrez peut-être agrandir la zone de texte Titre et descendre le haut du graphique à barres pour que les deux lignes de texte soient visibles.  
   
-    Ce titre s'affiche alors dans la partie supérieure du rapport. Quand aucun en-tête de page n’est défini, les éléments situés au-dessus du corps du rapport font office d’en-tête de rapport.  
+    Ce titre s'affiche alors dans la partie supérieure du rapport. En l’absence d’en-tête de page défini, les éléments situés au-dessus du corps du rapport font office d’en-tête de rapport.  
   
 6.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
@@ -318,10 +301,12 @@ Le graphique affiche les noms des cinq meilleurs commerciaux issus des données 
   
 4.  Cliquez sur **Enregistrer**.   
   
-## Étapes suivantes  
+## <a name="next-steps"></a>Étapes suivantes  
 Vous avez réalisé le didacticiel d'ajout d'un graphique à barres à votre rapport. Pour en savoir plus sur les graphiques, consultez [Graphiques](../reporting-services/report-design/charts-report-builder-and-ssrs.md) et [Graphiques à barres](../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)  
 [Générateur de rapports dans SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

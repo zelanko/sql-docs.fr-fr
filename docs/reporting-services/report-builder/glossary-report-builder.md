@@ -1,31 +1,36 @@
 ---
-title: "Glossaire (G&#233;n&#233;rateur de rapports) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Glossaire (Générateur de rapports) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 69a348a8f2f2d44dbe17f5500557db03b95e5b04
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Glossaire (G&#233;n&#233;rateur de rapports)
+# <a name="glossary-report-builder"></a>Glossaire (Générateur de rapports)
   
   
 |Terme|Définition|  
 |----------|----------------|  
-|.NET Framework|Composant Windows intégral qui prend en charge la création, le déploiement et l'exécution de la génération suivante d'applications et de services Web. Il constitue un environnement multilingue hautement productif et reposant sur des standards qui permet d'intégrer les investissements existants à la prochaine génération d'applications et de services, ainsi que de résoudre les problèmes liés au déploiement et au fonctionnement des applications Internet. Le .NET Framework se compose de trois parties principales : le Common Language Runtime (CLR), un ensemble hiérarchique de bibliothèques de classes unifiées et une version d'ASP à base de composants appelée ASP.NET. Voir aussi : ASP.NET, Common Language Runtime, bibliothèque de classes .NET Framework.|  
-|ActiveX Data Objects|Objets COM (Component Object Model) qui fournissent un accès à des sources de données. Cette interface API fournit une couche entre OLE DB et les langages de programmation tels que Visual Basic, Visual Basic pour Applications, Active Server Pages et Microsoft Internet Explorer Visual Basic Scripting.|  
-|rapport ad hoc|Rapport .rdl créé à l'aide du Générateur de rapports version 1.0 qui accède à des modèles de rapport.|  
-|ornement|Zone de contrôle ou d'état qui est attachée au bord d'un volet ou d'une fenêtre ; par exemple, une barre d'outils ou une règle.|  
+|.NET Framework|Composant Windows intégral qui prend en charge la création, le déploiement et l'exécution de la génération suivante d'applications et de services Web. Il constitue un environnement multilingue hautement productif et reposant sur des standards qui permet d'intégrer les investissements existants à la prochaine génération d'applications et de services, ainsi que de résoudre les problèmes liés au déploiement et au fonctionnement des applications Internet. Le .NET Framework se compose de trois parties principales : le Common Language Runtime (CLR), un ensemble hiérarchique de bibliothèques de classes unifiées et une version d'ASP à base de composants appelée ASP.NET. Voir aussi : ASP.NET, Common Language Runtime, bibliothèque de classes .NET Framework.|  
+|ActiveX Data Objects|Objets COM (Component Object Model) qui fournissent un accès à des sources de données. Cette interface API fournit une couche entre OLE DB et les langages de programmation tels que Visual Basic, Visual Basic pour Applications, Active Server Pages et Microsoft Internet Explorer Visual Basic Scripting.|  
+|rapport ad hoc|Rapport .rdl créé à l'aide du Générateur de rapports version 1.0 qui accède à des modèles de rapport.|  
+|ornement|Zone de contrôle ou d'état qui est attachée au bord d'un volet ou d'une fenêtre ; par exemple, une barre d'outils ou une règle.|  
 |agrégat|Valeur résumée composée de plusieurs valeurs individuelles.|  
 |fonction d'agrégation|Fonction qui retourne une valeur résumée unique, calculée à partir de plusieurs valeurs.|  
 |agrégat d'agrégats|Valeur résumée calculée à partir d'agrégats, telle que la valeur maximale d'un ensemble de sommes.|  
@@ -56,7 +61,7 @@ caps.handback.revision: 8
 |membre calculé|Membre d'une dimension dont la valeur est calculée au moment de l'exécution à l'aide d'une expression.|  
 |cardinalité|Définit le nombre d'instances autorisées et/ou requises d'une entité enfant par entité parente.|  
 |paramètres en cascade|Paramètres qui dérivent leurs valeurs disponibles de la sélection d'un paramètre précédent. Les paramètres en cascade sont utilisés pour filtrer un ensemble de valeurs de paramètres.|  
-|axe des abscisses (x)|Axe pour le regroupement des données dans un graphique, en général l'axe horizontal. Exception : Dans les graphiques à barres, les axes sont inversés et l'axe Y affiche le regroupement des données.|  
+|axe des abscisses (x)|Axe pour le regroupement des données dans un graphique, en général l'axe horizontal. Exception : Dans les graphiques à barres, les axes sont inversés et l'axe Y affiche le regroupement des données.|  
 |certificate|Document numérique communément utilisé pour l'authentification et la sécurisation des informations sur un réseau. Un certificat lie une clé publique à une entité qui gère la clé privée correspondante. Les certificats sont signés numériquement par l'autorité de certification qui les délivre ; par ailleurs, ils peuvent être émis pour un utilisateur, un ordinateur ou un service.|  
 |jeu de caractères|Types de caractères reconnus par SQL Server dans les types de données char, varchar et text.|  
 |région de données graphique|Élément de rapport dans une mise en page de rapport qui affiche les données dans un format graphique.|  
@@ -65,7 +70,7 @@ caps.handback.revision: 8
 |rapport généré interactif|Rapport qui indique des données de modèle de rapport liées, lorsque vous cliquez sur des données dans un rapport rendu par le Générateur de rapports.|  
 |application cliente|Application qui extrait les données d'un serveur et effectue une analyse locale et une présentation des données à partir de bases de données relationnelles ou multidimensionnelles.|  
 |curseur client|Curseur qui est implémenté sur le client. La totalité du jeu de résultats est d'abord transférée au client, puis l'API du client implémente la fonctionnalité curseur à partir de ce jeu de résultats mis en cache.|  
-|CLR|Voir le terme : Common Language Runtime|  
+|CLR|Voir le terme : Common Language Runtime|  
 |fonction CLR|Fonction créée par rapport à un assembly SQL Server dont l'implémentation est définie dans un assembly créé dans le CLR (Common Language Runtime) .NET Framework.|  
 |Procédure stockée CLR|Procédure stockée créée par rapport à un assembly SQL Server dont l'implémentation est définie dans un assembly créé dans le langage CLR (Common Language Runtime) de .NET Framework.|  
 |déclencheur CLR|Déclencheur créé par rapport à un assembly SQL Server dont l'implémentation est définie dans un assembly créé dans le langage CLR (Common Language Runtime) de .NET Framework.|  
@@ -76,20 +81,20 @@ caps.handback.revision: 8
 |règles de couleur|Algorithme qui assigne automatiquement des couleurs à chaque élément cartographique sur une couche.|  
 |échelle de couleurs|Type de légende de carte qui permet d'interpréter ce que les couleurs représentent sur une carte.|  
 |Common Language Runtime|Moteur situé au cœur de l'exécution du code managé. Le Runtime fournit du code managé avec des services tels que l'intégration interlangage, la sécurité d'accès du code, la gestion de la durée de vie des objets, ainsi que la prise en charge du débogage et des profils.|  
-|expression complexe|Expression qui ne peut pas être représentée comme référence de champ prédéfini unique et qui s’affiche sur l’aire de conception sous la forme <\<Expr>>.|  
+|expression complexe|Une expression qui ne peut pas être représentée comme une référence de champ prédéfini unique et est affichée sur l’aire de conception en tant que <\<Expr >>.|  
 |Concatenation|Combinaison d'au moins deux expressions ou chaînes de caractères en une seule expression ou chaîne de caractères, ou combinaison d'au moins deux expressions ou chaînes binaires en une seule expression ou chaîne binaire.|  
 |concurrence|Processus permettant à plusieurs utilisateurs d'accéder aux mêmes données en même temps. SQL Server a recours au verrouillage pour permettre à plusieurs utilisateurs d'accéder simultanément à des données partagées et de les modifier sans risque de conflit.|  
-|fichier config|Voir le terme : fichier de configuration|  
+|fichier config|Voir le terme : fichier de configuration|  
 |configuration|En référence à un micro-ordinateur unique, somme des composants internes et externes d'un système, y compris la mémoire, les lecteurs de disques, le clavier, la vidéo et le matériel additionnel habituellement moins critique, tel qu'une souris, un modem ou une imprimante.|  
 |fichier de configuration|Fichier qui contient les spécifications de fonctionnement destinées à l'ordinateur d'un composant matériel ou logiciel, ou qui contient des informations sur un autre fichier ou sur un utilisateur spécifique.|  
 |étendue contenant-contenu|Étendue dans laquelle une expression est évaluée. L'étendue est déterminée par le processeur de rapports lors de la combinaison des données et éléments de disposition.|  
-|informations d'identification|Données utilisées par un principal pour établir l'identité du principal ; par exemple un mot de passe ou un nom d'utilisateur.|  
+|informations d'identification|Données utilisées par un principal pour établir l'identité du principal ; par exemple un mot de passe ou un nom d'utilisateur.|  
 |cube|Jeu de données organisées et synthétisées en une structure multidimensionnelle définie par un ensemble de dimensions et de mesures.|  
 |cursor|Entité qui mappe un jeu de résultats et établit une position sur une ligne unique du jeu de résultats.|  
 |connexion de données|Collection d'informations requises pour accéder à une source de données spécifique. La collection comprend un nom de source de données et des informations de connexion.|  
 |extension de données|Composant de Reporting Services qui est utilisé pour récupérer les données de rapport d'une source de données externe.|  
 |flux|Mécanisme permettant aux utilisateurs de recevoir un flux à partir de sources de données.  Dans Reporting Services, les extensions de rendu Atom génèrent des flux au format Atom à partir de rapports.|  
-|hiérarchie de données|Organisation des données traitées par le processeur de rapports : dataset, région de données, groupe de régions de données, groupe de détails.|  
+|hiérarchie de données|Organisation des données traitées par le processeur de rapports : dataset, région de données, groupe de régions de données, groupe de détails.|  
 |exploration de données|Processus d'analyse de données destiné à identifier des modèles ou des relations.|  
 |point de données|Plus petite entité individuelle sur un graphique.|  
 |extension pour le traitement des données|Composant de Reporting Services qui est utilisé pour récupérer les données de rapport d'une source de données externe.|  
@@ -147,7 +152,7 @@ caps.handback.revision: 8
 |événement|Toute occurrence significative se produisant dans le système ou dans une application, qui doit être signalée aux utilisateurs ou être ajoutée sous forme d'entrée dans un journal.|  
 |gestionnaire d'événements|1. Routine logicielle qui s'exécute en réponse à un événement. 2. Dans Integration Services, flux de contrôle qui s'exécute en réponse à un événement d'exécution.|  
 |expression|1. Dans SQL, combinaison de symboles et d'opérateurs dont l'évaluation aboutit à une valeur de données unique. 2. Dans Integration Services, combinaison de littéraux, de constantes, de fonctions et d'opérateurs dont l'évaluation aboutit à une valeur de données unique.|  
-|champ|1. Zone d'une fenêtre ou d'un enregistrement qui stocke une valeur unique.  2. Dans le Générateur de rapports, les champs de dataset représentent des données numériques ou non numériques d'une connexion de données. À titre d'exemples, citons des chiffres d'affaires, des totaux de ventes, des noms de client, des identificateurs de base de données, des URL, des images et des données spatiales. Un rapport peut comporter trois types de champs : champs de dataset, champs calculés de dataset et champs prédéfinis.|  
+|champ|1. Zone d'une fenêtre ou d'un enregistrement qui stocke une valeur unique.  2. Dans le Générateur de rapports, les champs de dataset représentent des données numériques ou non numériques d'une connexion de données. À titre d'exemples, citons des chiffres d'affaires, des totaux de ventes, des noms de client, des identificateurs de base de données, des URL, des images et des données spatiales. Un rapport peut comporter trois types de champs : champs de dataset, champs calculés de dataset et champs prédéfinis.|  
 |Filter|1. Ensemble de critères qui détermine l'ensemble d'enregistrements retourné comme jeu de résultats.  2. Dans la recherche en texte intégral, en spécifiant une extension de fichier, les filtres permettent d'extraire du texte à partir d'un fichier stocké dans une colonne varbinary(max) ou image.|  
 |expression de filtre|Expression utilisée pour filtrer des données dans l'opérateur Filter.|  
 |fichier plat|Fichier constitué d'enregistrements d'un type d'enregistrement unique, dans lequel il ne figure pas d'informations de structure incorporées qui gouvernent les relations entre les enregistrements.|  
@@ -157,7 +162,7 @@ caps.handback.revision: 8
 |jauge|Une jauge est une région de données qui présente les données sous forme de plage dans laquelle figure un indicateur qui pointe vers une valeur spécifique.|  
 |panneau de jauge|Élément externe englobant qui contient une ou plusieurs jauges radiales et linéaires.  Utilisez le panneau de jauge pour définir les propriétés qui s'appliquent à toutes les jauges d'un panneau de jauge.|  
 |pointeur de jauge|Aiguille, marqueur ou barre qui indique la valeur actuelle de la jauge.  Un pointeur de jauge est toujours lié à une échelle de jauge.|  
-|plage de jauge|Plage colorée qui représente une « zone critique », toujours délimitée par une valeur de début et une valeur de fin, sur l’échelle de jauge.|  
+|plage de jauge|Plage colorée qui représente une « zone critique », toujours délimitée par une valeur de début et une valeur de fin, sur l’échelle de jauge.|  
 |échelle de jauge|Plage de valeurs, délimitée par une valeur minimale et une valeur maximale, indiquée sur la jauge.  En règle générale, une échelle de jauge contient des étiquettes et des graduations qui permettent de lire avec précision la valeur indiquée par le pointeur de la jauge.|  
 |données géodésiques|Données qui spécifient des points, des lignes ou des zones sur une surface courbe.|  
 |données géographiques|Type de données spatiales SQL Server qui représente les données dans un système de coordonnées de monde sphérique, telles que des coordonnées de latitude et de longitude GPS.|  
@@ -168,7 +173,7 @@ caps.handback.revision: 8
 |carte thermique|Type de présentation de carte où l'intensité de couleur pour chaque polygone correspond aux données analytiques connexes. Par exemple, les valeurs basses d'une plage apparaissent en bleu (froid) et les valeurs élevées en rouge (chaud).|  
 |hiérarchie|Structure arborescente logique qui organise les membres d'une dimension de telle sorte que chaque membre possède un membre parent et éventuellement des membres enfants.|  
 |haute disponibilité|État d'une ressource qui reste opérationnelle et utilisable par les clients la plupart du temps, avec un pourcentage très bas d'échecs interrompant le service.|  
-|HTML|Voir le terme : Hypertext Markup Language|  
+|HTML|Voir le terme : Hypertext Markup Language|  
 |Visionneuse HTML|Interface utilisateur constituée d'une barre d'outils Rapport et d'autres éléments de navigation permettant d'utiliser un rapport.|  
 |Hypertext Markup Language|Langage de balisage de texte utilisé pour créer des documents pour le Web. Le langage HTML définit la structure et la mise en page d'un document Web en utilisant divers attributs et balises.|  
 |identificateur|Nom d'un objet dans une base de données.|  
@@ -178,17 +183,17 @@ caps.handback.revision: 8
 |jointure interne|Opération qui récupère des lignes de plusieurs tables sources en comparant les valeurs de colonnes partagées entre ces tables. Une jointure interne exclut les lignes d'une table source qui n'ont pas de lignes correspondantes dans les autres tables sources.|  
 |instance|1. Copie de SQL Server en cours d'exécution sur un ordinateur. 2. Copie spécifique d'un élément de rapport, par exemple une partie de rapport, un sous-rapport, un membre dynamique ou un groupe.|  
 |entier|Catégorie de types de données numérique qui inclut les types de données bigint, int, smallint et tinyint.|  
-|sécurité du protocole Internet|Règles que les ordinateurs suivent pour fournir des communications privées et sécurisées sur des réseaux IP (Internet Protocol), au moyen de services de sécurité de chiffrement.|  
-|IPsec|Voir le terme : sécurité du protocole Internet|  
+|sécurité du protocole Internet|Règles que les ordinateurs suivent pour fournir des communications privées et sécurisées sur des réseaux IP (Internet Protocol), au moyen de services de sécurité de chiffrement.|  
+|IPsec|Voir le terme : sécurité du protocole Internet|  
 |ISO|Un des deux instituts de normalisation internationaux responsables du développement de normes internationales dans le domaine des communications de données. L’Organisation internationale de normalisation (ISO) travaille étroitement avec la Commission Électrotechnique Internationale (CEI) pour définir des standards en informatique. Elles ont publié conjointement la norme ISO/CEI SQL-92 pour SQL.|  
 |attribution de rôle au niveau élément|Stratégie de sécurité qui s'applique à un élément dans le dossier du serveur de rapports.|  
 |définition de rôle au niveau élément|Modèle de sécurité qui définit un rôle utilisé pour contrôler l'accès à un élément ou l'interaction avec un élément dans l'espace de noms de dossier du serveur de rapports.|  
 |indicateur de performance clé|(KPI) Mesure normalisée quantifiable qui reflète une variable professionnelle essentielle (par exemple, une part de marché) mesurée au fil du temps.|  
-|mot clé|Mot réservé dans SQL Server qui assure une fonction spécifique, telle que la définition, la manipulation ou l'accès à des objets de base de données. Par exemple : SELECT, FROM et AND.|  
-|Indicateur de performance clé|Voir le terme : indicateur de performance clé.|  
+|mot clé|Mot réservé dans SQL Server qui assure une fonction spécifique, telle que la définition, la manipulation ou l'accès à des objets de base de données. Par exemple : SELECT, FROM et AND.|  
+|Indicateur de performance clé|Voir le terme : indicateur de performance clé.|  
 |champ d'étiquette|Champ de dataset de rapport qui identifie une étiquette pour un champ clé correspondant. Les paramètres et régions de données peuvent afficher l'étiquette pour un champ clé à la place de la valeur.|  
 |latence|Durée s'écoulant entre l'application d'une modification de données sur un serveur et sa répercussion sur un autre serveur.|  
-|latitude|Coordonnée de latitude sous la forme d'une valeur de degré décimale en données WGS (World Geodetic System) 84. La plage valide se situe entre –90,0 et +90,0.|  
+|latitude|Coordonnée de latitude sous la forme d'une valeur de degré décimale en données WGS (World Geodetic System) 84. La plage valide se situe entre –90,0 et +90,0.|  
 |couche|Dans un élément de rapport cartographique, une couche spécifie le type et la présentation d'un seul type de données spatiales. Un élément de rapport cartographique est un conteneur pour plusieurs couches.|  
 |LCID|Numéro qui identifie un paramètre régional de Windows.|  
 |légende|Dans une région de données de type graphique, carte ou jauge du rapport, élément qui fournit un repère entre la présentation des données et les valeurs des données sous-jacentes.|  
@@ -201,7 +206,7 @@ caps.handback.revision: 8
 |fichier journal|Fichier ou ensemble de fichiers qui contient les enregistrements des modifications apportées à une base de données.|  
 |nom logique|Nom utilisé par SQL Server pour identifier un fichier.|  
 |opérateurs logiques|Opérateurs AND, OR et NOT. Ils servent à combiner des conditions de recherche dans les clauses WHERE.|  
-|longitude|Coordonnée sous la forme d'une valeur de degré décimale en données WGS (World Geodetic System) 84. La plage valide se situe entre –180.0 et +180.0.|  
+|longitude|Coordonnée sous la forme d'une valeur de degré décimale en données WGS (World Geodetic System) 84. La plage valide se situe entre –180.0 et +180.0.|  
 |relation plusieurs à plusieurs|Relation entre deux tables, dans laquelle les lignes de chaque table ont plusieurs correspondances dans la table associée. Par exemple, chaque facture peut contenir plusieurs produits, mais chaque produit peut apparaître sur plusieurs factures.|  
 |relation plusieurs-à-un|Relation entre deux tables, dans laquelle une ligne d'une table peut être associée à plusieurs lignes de l'autre table.|  
 |carte|Élément de rapport qui est un conteneur pour des titres, différents types de légendes et des couches.|  
@@ -212,9 +217,9 @@ caps.handback.revision: 8
 |fichier maître|Fichier installé avec les versions antérieures de SQL Server, utilisé pour stocker les bases de données système master, model et tempdb et les journaux des transactions, ainsi que l'exemple de base de données pubs et le journal des transactions.|  
 |champs de correspondance|Ensemble de champs utilisés pour générer une relation entre des données spatiales et des données analytiques.|  
 |région de données de matrice|Région de données dans une mise en page de rapport qui fournit des fonctionnalités similaires aux analyses croisées et rapports de tableaux croisés dynamiques. À l'exécution, lorsque les données de rapport sont associées aux régions de données, une matrice se développe horizontalement et verticalement sur la page. Les valeurs des cellules de matrice sont des valeurs d'agrégat limitées à l'intersection des groupes de lignes et de colonnes auxquels la cellule appartient.|  
-|MDX|Voir le terme : MDX (Multidimensional Expressions)|  
+|MDX|Voir le terme : MDX (Multidimensional Expressions)|  
 |projection Mercator|Dans un élément de rapport cartographique, projection cartographique cylindrique imaginée par Gerardus Mercator en 1569.|  
-|métadonnées|Informations sur les propriétés de données, telles que le type de données dans une colonne (numérique, texte, etc.) ou la longueur d'une colonne ; informations sur un fichier, telles que son titre, sa description, la date de sa création et la date de la dernière modification ; ou des informations sur la structure des données ou la conception d'objets, tels que des cubes ou des dimensions.|  
+|métadonnées|Informations sur les propriétés de données, telles que le type de données dans une colonne (numérique, texte, etc.) ou la longueur d'une colonne ; informations sur un fichier, telles que son titre, sa description, la date de sa création et la date de la dernière modification ; ou des informations sur la structure des données ou la conception d'objets, tels que des cubes ou des dimensions.|  
 |méthode|Fonction réalisant une action au moyen d'un objet COM, comme dans SQL-DMO, OLE DB et ADO (ActiveX Data Objects).|  
 |type MIME|Format de fichier d'une image, tel que .bmp, .gif ou .jpeg.|  
 |dépendance entre modèles|Relation entre deux modèles ou plus dans laquelle un modèle est dépendant des informations d'un autre modèle.|  
@@ -234,9 +239,9 @@ caps.handback.revision: 8
 |Source de données ODBC|1. Emplacement d'un ensemble de données accessible à l'aide d'un pilote ODBC. 2. Définition stockée qui contient toutes les informations de connexion requises par une application ODBC pour se connecter à la source de données.|  
 |pilote ODBC|Bibliothèque de liens dynamiques (DLL) qu'une application compatible ODBC, telle qu'Excel, peut utiliser pour accéder à une source de données ODBC.|  
 |OGC|Open Geospatial Consortium|  
-|OLAP|Voir le terme : traitement analytique en ligne (OLAP)|  
-|OLE DB|Interface de programmation d'applications (API) COM pour l'accès aux données. OLE DB prend en charge l'accès à des données de tout format pour lesquelles il existe un fournisseur OLE DB.|  
-|OLE DB pour OLAP|Anciennement, spécification particulière d'affectation d'extensions OLAP à OLE DB. Depuis OLE DB 2.0, les extensions OLAP sont intégrées dans la spécification OLE DB.|  
+|OLAP|Voir le terme : traitement analytique en ligne (OLAP)|  
+|OLE DB|Interface de programmation d'applications (API) COM pour l'accès aux données. OLE DB prend en charge l'accès à des données de tout format pour lesquelles il existe un fournisseur OLE DB.|  
+|OLE DB pour OLAP|Anciennement, spécification particulière d'affectation d'extensions OLAP à OLE DB. Depuis OLE DB 2.0, les extensions OLAP sont intégrées dans la spécification OLE DB.|  
 |relation un-à-plusieurs|Dans les bases de données relationnelles, relation entre deux tables selon laquelle une ligne unique de la première table peut être associée à une ou plusieurs lignes de la seconde table, alors qu'une ligne de la seconde table ne peut être associée qu'à une seule ligne de la première table.|  
 |relation un-à-un (1-1)|Dans les bases de données relationnelles, relation entre deux tables dans laquelle une ligne unique de la première table ne peut être reliée qu'à une seule ligne de la seconde table, et une ligne de la seconde table ne peut être reliée qu'à une seule ligne de la première table.|  
 |traitement analytique en ligne (OLAP)|Technologie utilisant les structures multidimensionnelles pour fournir un accès rapide aux données à analyser.|  
@@ -256,14 +261,14 @@ caps.handback.revision: 8
 |couche de polygones|Dans un élément de rapport cartographique, couche qui affiche les données spatiales sous forme de zones, par exemple des régions géographiques comme les comtés.|  
 |precision|Nombre total maximal de chiffres décimaux pouvant être stockés à droite et à gauche de la virgule décimale.|  
 |clé primaire|Colonne ou ensemble de colonnes qui identifie de façon unique toutes les lignes d'une table.|  
-|table primaire|Côté « un » d'une relation un-à-plusieurs impliquant deux tables associées.|  
-|projection|Mappage de données d'un système de coordonnées à N dimensions vers un système de coordonnées à (N-1) dimensions. Par exemple, mappage de données géographiques en trois dimensions vers une surface d'affichage à deux dimensions.|  
+|table primaire|Côté « un » d'une relation un-à-plusieurs impliquant deux tables associées.|  
+|projection|Mappage de données d'un système de coordonnées à N dimensions vers un système de coordonnées à (N-1) dimensions. Par exemple, mappage de données géographiques en trois dimensions vers une surface d'affichage à deux dimensions.|  
 |page de propriétés|Boîte de dialogue qui affiche des informations sur un objet de l'interface.|  
 |propriété|Attribut nommé d'un contrôle, champ ou objet de base de données, définissant l'une des caractéristiques de l'objet, telle que la taille, la couleur ou la position d'affichage à l'écran, ou un aspect de son comportement (par exemple, s'il est masqué ou non).|  
 |protocol|Ensemble normalisé de formats et de procédures qui permettent à des ordinateurs d'échanger des informations.|  
 |fournisseur|1. Fournisseur OLE DB. 2. Bibliothèque de liens dynamiques (DLL) in-process qui permet d'accéder à une base de données.|  
 |paramètres de requête|Paramètres spécifiés dans une requête de dataset, par exemple une requête Transact-SQL.|  
-|RDL|Voir le terme : Report Definition Language (RDL)|  
+|RDL|Voir le terme : Report Definition Language (RDL)|  
 |enregistrement|Groupe de champs (colonnes) associés d'informations, traité comme une unité. Un enregistrement est plus communément appelé ligne dans une base de données relationnelle.|  
 |rectangle|Élément de rapport qui peut être utilisé comme conteneur pour plusieurs éléments de rapport ou comme élément graphique sur un rapport.|  
 |hiérarchie récursive|1. Hiérarchie de données d'un dataset de rapport unique qui inclut plusieurs niveaux hiérarchiques dans une structure de hiérarchie, par exemple la structure de rapports pour les relations entre directeur et employé dans une hiérarchie d'organisation. 2. Dans Master Data Services, hiérarchie dérivée qui comporte une relation récursive. Une relation récursive existe lorsqu'une entité a un attribut basé sur un domaine basé sur l'entité elle-même.|  
@@ -275,7 +280,7 @@ caps.handback.revision: 8
 |extension de rendu|Composant dans Reporting Services qui permet de traiter le format de sortie d'un rapport.|  
 |extension(s) de rendu|Plug-in qui restitue des rapports dans un format spécifique.|  
 |modèle objet de rendu|Modèle objet de rapport utilisé par les extensions de rendu.|  
-|définition de rapport|Fichier .rdl qui est la définition XML d'un rapport et qui est conforme au fichier reportdefinition.xsd de schéma.|  
+|définition de rapport|Fichier .rdl qui est la définition XML d'un rapport et qui est conforme au fichier reportdefinition.xsd de schéma.|  
 |Report Definition Language (RDL)|Ensemble d'instructions qui décrivent les informations de requête et de mise en page d'un rapport.|  
 |instantané d'exécution de rapport|Instantané de rapport qui est mis en cache.|  
 |historique de rapport|Collection d'instantanés de rapport qui sont créés et enregistrés dans le temps.|  
@@ -325,18 +330,18 @@ caps.handback.revision: 8
 |service|Objet Service Broker qui définit un nom pour une tâche ou un jeu de tâches spécifique, ainsi que les contrats que d'autres services peuvent utiliser pour accomplir cette tâche.|  
 |nom de principal du service|Nom par lequel un client identifie de manière unique une instance d'un service.|  
 |source de données partagée|Définition de source de données enregistrée et gérée en tant que fichier sur un serveur de rapports et qui est accessible à plusieurs rapports.|  
-|définition de source de données partagée|Fichier .rsd qui est la définition XML d'une source de données et qui est conforme au fichier shareddatasource.xsd de schéma.|  
-|définition de dataset partagé|Fichier .rcd qui est la définition XML d'un dataset partagé et qui est conforme au fichier shareddatasetdefinition.xsd de schéma.|  
+|définition de source de données partagée|Fichier .rsd qui est la définition XML d'une source de données et qui est conforme au fichier shareddatasource.xsd de schéma.|  
+|définition de dataset partagé|Fichier .rcd qui est la définition XML d'un dataset partagé et qui est conforme au fichier shareddatasetdefinition.xsd de schéma.|  
 |expression simple|Expression qui contient une référence à un champ unique et s'affiche dans la mise en page du rapport entre crochets, par exemple [ProductID].|  
-|référence SKU|Mode d'identification des différentes éditions d'un produit. L'acronyme SKU (Stock Keeping Unit) signifie également « unité de gestion des stocks » dans la terminologie d'entreprise standard.|  
+|référence SKU|Mode d'identification des différentes éditions d'un produit. L'acronyme SKU (Stock Keeping Unit) signifie également « unité de gestion des stocks » dans la terminologie d'entreprise standard.|  
 |coupe|Sous-ensemble des données d'un cube, spécifié par la limitation d'une ou de plusieurs dimensions par des membres de la dimension.|  
-|balise active|Une balise active expose des configurations de clés directement sur l'aire de conception afin d'améliorer la productivité globale lors de la conception dans Visual Studio 2005.|  
-|SMDL|Voir le terme : Semantic Model Definition Language (SMDL)|  
-|snapshot|Voir le terme : instantané de rapport|  
+|balise active|Une balise active expose des configurations de clés directement sur l'aire de conception afin d'améliorer la productivité globale lors de la conception dans Visual Studio 2005.|  
+|SMDL|Voir le terme : Semantic Model Definition Language (SMDL)|  
+|snapshot|Voir le terme : instantané de rapport|  
 |ordre de tri|Ensemble des règles d'un classement qui définissent l'évaluation des caractères dans les opérations de comparaison et l'ordre dans lequel ils sont triés.|  
 |données spatiales|Données qui spécifient les emplacements des objets sur une surface plate ou courbe. Les données spatiales peuvent être des points, lignes ou polygones.|  
 |types de données spatiales|Spécifie des données qui représentent des informations de géométrie (planaires) ou de géographie (géodésiques).|  
-|SQL|Voir le terme : SQL (Structured Query Language)|  
+|SQL|Voir le terme : SQL (Structured Query Language)|  
 |requête SQL|Instruction SQL, telle que SELECT, INSERT, UPDATE, DELETE ou CREATE TABLE.|  
 |Authentification SQL Server|Mécanisme de validation d'une tentative de connexion à une instance de SQL Server en spécifiant un ID de compte de connexion et un mot de passe SQL Server.|  
 |compte de connexion SQL Server|Compte stocké dans SQL Server et qui permet aux utilisateurs de se connecter à SQL Server.|  
@@ -356,20 +361,20 @@ caps.handback.revision: 8
 |tâche|Collection des autorisations qui constituent une tâche (gestion des rapports, gestion des dossiers, etc.)|  
 |Transact-SQL|Langage contenant les commandes utilisées pour administrer les instances de SQL Server, créer et gérer tous les objets d'une instance de SQL Server, ainsi que pour insérer, récupérer, modifier et supprimer toutes les données des tables SQL Server. Transact-SQL est une extension du langage défini dans les normes SQL publiées par les organismes ISO (International Standards Organization) et ANSI (American National Standards Institute).|  
 |instance utilisateur|Instance de SQL Server Express qui est générée par l'instance parente pour le compte d'un utilisateur.|  
-|axe des ordonnées (y)|Axe pour l'affichage de valeurs de données numériques dans un graphique. Il s'agit en général de l'axe vertical. Exception : dans les graphiques à barres, les axes sont inversés et l'axe Y affiche le regroupement des données.|  
+|axe des ordonnées (y)|Axe pour l'affichage de valeurs de données numériques dans un graphique. Il s'agit en général de l'axe vertical. Exception : dans les graphiques à barres, les axes sont inversés et l'axe Y affiche le regroupement des données.|  
 |expression de valeur|Expression MDX (Multidimensional Expressions) qui retourne une valeur. Les expressions de valeur peuvent être exécutées sur des ensembles, des tuples, des membres, des niveaux, des nombres ou des chaînes.|  
-|variable|1. Dans Integration Services, une variable stocke des valeurs qui peuvent être utilisées dans des scripts, des expressions et des expressions de propriété pour définir des valeurs de colonne et les propriétés des objets de package. <br />2. Entités définies auxquelles sont affectées des valeurs. Une variable locale est définie à l'aide d'une instruction DECLARE@variable_locale et reçoit une valeur initiale dans le lot d'instructions où elle est déclarée à l'aide d'une instruction SELECT ou SET@variable_locale.|  
+|variable|1. Dans Integration Services, une variable stocke des valeurs qui peuvent être utilisées dans des scripts, des expressions et des expressions de propriété pour définir des valeurs de colonne et les propriétés des objets de package. <br />2. Entités définies auxquelles sont affectées des valeurs. Une variable locale est définie avec un DECLARE@localvariable instruction et reçoit une valeur initiale dans le lot d’instructions où il est déclaré avec une instruction SELECT ou SET@localvariable instruction.|  
 |intervalle variable|Option sur un graphique Reporting Services qui peut être spécifiée pour calculer automatiquement le nombre optimal d'étiquettes qui peuvent être placées sur un axe, selon la largeur ou la hauteur du graphique.|  
 |visualisation|Dans les cartes, graphiques et jauges, choix d'un utilisateur pour visualiser des données analytiques.|  
 |Service Web|Dans Reporting Services, service qui utilise le protocole SOAP (Simple Object Access Protocol) sur HTTP et agit comme une interface de communication entre les programmes clients et le serveur de rapports.|  
 |Windows Management Instrumentation|Interface qui fournit des informations sur les objets dans un environnement managé.|  
 |WKB|Représentation des données WKB (Well Known Binary) comme spécifié par l'OGC (Open Geospatial Consortium).|  
 |WKT|Représentation des données WKT (Well Known Text) comme spécifié par l'OGC (Open Geospatial Consortium).|  
-|WMI|Voir le terme : Windows Management Instrumentation|  
-|axe X|Voir le terme : axe des abscisses (x)|  
-|axe Y|Voir le terme : axe des ordonnées (y)|  
+|WMI|Voir le terme : Windows Management Instrumentation|  
+|axe X|Voir le terme : axe des abscisses (x)|  
+|axe Y|Voir le terme : axe des ordonnées (y)|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Concepts de création de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

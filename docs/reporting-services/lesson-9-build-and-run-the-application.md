@@ -1,27 +1,32 @@
 ---
-title: "Lesson 9: Build and Run the Application | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Leçon 9 : Générer et exécuter l’Application | Documents Microsoft"
+ms.custom: 
+ms.date: 05/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: f52d3f3a-0b09-4b34-9112-0b3655271587
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c3e9d3ca3b3b708105bf428508ff52c021bd5dd0
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Lesson 9: Build and Run the Application
+# <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
 Après avoir créé un filtre de données pour la table de données, l'étape suivante consiste à générer et à exécuter l'application de site Web.  
   
-### Pour générer et exécuter l'application  
+### <a name="to-build-and-run-the-application"></a>Pour générer et exécuter l'application  
   
 1.  Appuyez sur **CTRL+F5** pour exécuter la page Default.aspx sans débogage, ou appuyez sur F5 pour exécuter la page avec débogage.  
   
@@ -31,11 +36,13 @@ Après avoir créé un filtre de données pour la table de données, l'étape su
   
 2.  Pointez la souris sur l'une des lignes sous la colonne **Nom** . Le curseur de la souris affiche le symbole de main.  
   
-3.  Sélectionnez une valeur dans la colonne **Nom**. Le rapport enfant s'affiche avec les données filtrées correspondantes.  
+3.  Sélectionnez une valeur dans la colonne **Nom** . Le rapport enfant s'affiche avec les données filtrées correspondantes.  
   
-4.  Sélectionnez l’icône **Revenir au rapport parent**, dans la barre d’outils de **ReportViewer** pour revenir au rapport **Parent**.  
+4.  Sélectionnez l’icône **Revenir au rapport parent**, dans la barre d’outils de **ReportViewer** pour revenir au rapport **Parent** .  
   
 5.  Fermez le navigateur.  
   
   
   
+
+

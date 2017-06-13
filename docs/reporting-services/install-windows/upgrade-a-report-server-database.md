@@ -1,34 +1,42 @@
 ---
-title: "Mettre &#224; niveau une base de donn&#233;es du serveur de rapports | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mise à niveau des bases de données"
-  - "base de données du serveur de rapports"
-  - "mettre à niveau Reporting Services"
+title: "Mettre à niveau une base de données du serveur de rapports | Documents Microsoft"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- upgrading databases
+- report server database
+- upgrading Reporting Services
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 caps.latest.revision: 44
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 44
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 89bb5de5f669d033dd18bc63e11ef5bd29644542
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Mettre &#224; niveau une base de donn&#233;es du serveur de rapports
-  La base de données du serveur de rapports offre un espace de stockage pour une ou plusieurs instances du serveur de rapports. Comme le schéma de base de données du serveur de rapports peut changer à chaque nouvelle version de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], il est nécessaire que la version de la base de données corresponde à la version de l'instance du serveur de rapports que vous utilisez. Dans la plupart des cas, une base de données du serveur de rapports peut être mise à niveau automatiquement sans aucune intervention de votre part.  
+
+# <a name="upgrade-a-report-server-database"></a>Mettre à niveau une base de données du serveur de rapports
+
+La base de données du serveur de rapports offre un espace de stockage pour une ou plusieurs instances du serveur de rapports. Comme le schéma de base de données du serveur de rapports peut changer à chaque nouvelle version de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], il est nécessaire que la version de la base de données corresponde à la version de l'instance du serveur de rapports que vous utilisez. Dans la plupart des cas, une base de données du serveur de rapports peut être mise à niveau automatiquement sans aucune intervention de votre part.  
   
  **Mode natif :** En mode natif [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , la base de données de serveur de rapports est composée de deux bases de données portent les noms par défaut « ReportServer et ReportServerTempDB ».  
   
- **Mode SharePoint :** En mode SharePoint [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , la base de données de serveur de rapports est une collection de bases de données créée pour chaque instance de l’application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
-  
-## Méthodes de mise à niveau d'une base de données de serveur de rapports en mode natif  
+ **Mode SharePoint :** en mode SQL Server 2016 Reporting Services SharePoint le rapport de serveur, base de données est une collection de bases de données qui est créée pour chaque instance de la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application de service.  
+
+## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>Méthodes de mise à niveau d'une base de données de serveur de rapports en mode natif
+
  La liste suivante identifie toutes les conditions selon lesquelles une base de données du serveur de rapports est mise à niveau :  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] met à niveau une instance unique d'un serveur de rapports. Le schéma de base de données du serveur de rapports est mis à niveau automatiquement après le démarrage de service et le serveur de rapports détermine que la version du schéma de base de données ne correspond pas à la version du serveur.  
@@ -41,8 +49,8 @@ caps.handback.revision: 44
   
  Une fois le schéma mis à niveau, vous ne pouvez pas restaurer la mise à niveau dans une version antérieure. Pensez toujours à sauvegarder la base de données de serveur de rapports, au cas où vous devriez recréer une précédente installation.  
   
-## Comment le schéma, les métadonnées et le serveur de rapports sont mis à jour  
- La mise à niveau de la base de données de serveur de rapports se déroule en trois étapes :  
+## <a name="how-the-schema-metadata-and-report-server-content-is-updated"></a>Comment le schéma, les métadonnées et le serveur de rapports sont mis à jour  
+ La mise à niveau de la base de données de serveur de rapports se déroule en trois étapes :  
   
 1.  Le schéma est mis à niveau automatiquement après l'installation et le démarrage du service, ou lorsque vous sélectionnez une base de données du serveur de rapports en mode natif [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , qui est une ancienne version. De plus, le service Report Server vérifie la version de la base de données au démarrage. Si le serveur de rapports est connecté à une base de données qui est une version antérieure, il met à jour la base de données lors du démarrage.  
   
@@ -52,7 +60,7 @@ caps.handback.revision: 44
   
  Outre la base de données de serveur de rapports, un serveur de rapports utilise également une base de données temporaire. La base de données temporaire est mise à niveau automatiquement lors de la mise à niveau de la base de données de serveur de rapports.  
   
-## Autorisations obligatoires pour la mise à niveau d'une base de données du serveur de rapports  
+## <a name="permissions-required-to-upgrade-a-report-server-database"></a>Autorisations obligatoires pour la mise à niveau d'une base de données du serveur de rapports  
  Si vous mettez à niveau une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui inclut une base de données de serveur de rapports, vous pouvez obtenir un message d'erreur si la mise à niveau de base de données est effectuée avec des autorisations insuffisantes. Par défaut, le programme d'installation utilise le jeton de sécurité de l'utilisateur qui exécute le programme d'installation pour se connecter à l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] distante et mettre à jour le schéma. Si vous disposez d’autorisations de niveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** sur le serveur de base de données qui héberge les bases de données du serveur de rapports, la mise à niveau de la base de données aboutira. De même, si vous lancez le programme d’installation à partir de l’invite de commandes et spécifiez les arguments RSUPGRADEDATABASEACCOUNT et RSUPGRADEPASSWORD pour un compte qui possède l’autorisation **sysadmin** permettant de modifier le schéma sur l’ordinateur distant, la mise à niveau de la base de données s’effectuera sans problème.  
   
  En revanche, si vous ne bénéficiez pas d’une autorisation **sysadmin** concernant la base de données de l’ordinateur distant, la connexion sera refusée et un message d’erreur s’affichera, indiquant que :  
@@ -61,14 +69,15 @@ caps.handback.revision: 44
   
  À ce stade, les fichiers programme du serveur de rapports sont mis à niveau, mais la base de données du serveur de rapports reste au format de la version précédente. Le serveur de rapports n'est pas disponible tant que vous n'avez pas fini le processus de mise à niveau en mettant à niveau la base de données manuellement.  
   
-#### Pour mettre à niveau une base de données en mode natif avec des scripts  
- Vous pouvez utiliser des scripts WMI pour mettre à niveau une base de données du serveur de rapports. Pour plus d’informations, consultez [méthode GenerateDatabaseUpgradeScript &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/generatedatabaseupgradescript-method-wmi-msreportserver-configurationsetting.md)  
+#### <a name="to-upgrade-a-native-mode-database-with-scripts"></a>Pour mettre à niveau une base de données en mode natif avec des scripts  
+ Vous pouvez utiliser des scripts WMI pour mettre à niveau une base de données du serveur de rapports. Pour plus d’informations, consultez [méthode GenerateDatabaseUpgradeScript &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)  
   
-## Voir aussi  
- [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Créer une base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/create-a-report-server-database-ssrs-configuration-manager.md)   
- [Assistant Modification de base de données &#40;Gestionnaire de configuration&#41;](../Topic/Change%20Database%20Wizard%20\(Configuration%20Manager\).md)   
- [Mettre à niveau et migrer Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
- [Faire migrer une installation Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
-  
-  
+## <a name="next-steps"></a>Étapes suivantes
+
+[Gestionnaire de Configuration de Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[Créer une base de données du serveur de rapports](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+[Assistant Modification de base de données](http://msdn.microsoft.com/library/1a2e8d18-5997-482f-a9c1-87d99f7407b8)   
+[Mettre à niveau et migrer Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+[Migrer une Installation Reporting Services](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+
+D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

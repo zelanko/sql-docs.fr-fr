@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 51e336a22d0c1052c48b8e569330aef26f2af094
+ms.sourcegitcommit: b68d454230d414ff52d90b4f3f71dd68ee65c6bc
+ms.openlocfilehash: 1733a789fb2dc17eea82ab22d4a50614d1fffc3b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/26/2017
 
 ---
 # <a name="sql-server-management-studio----release-notes"></a>SQL Server Management Studio - Notes de publication
@@ -28,44 +28,36 @@ Pour installer la version la plus récente de SQL Server Management Studio, voir
   
 Les problèmes et limitations constatés dans cette version de SQL Server Management Studio sont les suivants :  
 
-1. **Un seul compte Azure Active Directory peut se connecter à une instance SSMS en utilisant l’authentification Active Directory universelle.**  
+1. **Assistant de restauration de base de données génère un modèle de chemin d’accès Incorrect pour l’emplacement de fichier de base de données de destination** 
+    il s’agit d’un problème connu lorsque SSMS est connecté à un serveur Linux. Même si le chemin d’accès semble incorrect/impair, elle est gérée correctement sur le côté serveur, il n’y a aucun problème fonctionnel.
+
+2. **Problèmes de navigateur de fichiers**
+    - Lorsque vous travaillez avec une instance basée sur Windows SQL Server 2017 CTP 2.0, l’interface utilisateur de SSMS Explorateur peut ne pas ouvrir si le serveur possède un lecteur de disquette vide ou un disque dur protégé par Bitlocker installé. 
+    - L’interface utilisateur de l’Explorateur de fichiers ne sont plus prend en charge que les versions de 2017 du serveur SQL avant CTP 2.0.
+    
+
+
+3. **Un seul compte Azure Active Directory peut se connecter à une instance SSMS en utilisant l’authentification Active Directory universelle.**  
     Cette restriction est limitée à l’authentification Active Directory universelle : vous pouvez vous connecter à différents serveurs en utilisant l’authentification Active Directory par mot de passe, l’authentification Active Directory intégrée ou l’authentification SQL Server.
     
     Une solution de contournement consiste à utiliser une autre instance de SSMS pour se connecter sous un autre compte Azure Active Directory. 
     
-2. **Les commandes de Data-Tier Application Framework (DACFx) et le Concepteur de schémas dans SSMS ne prennent pas en charge l’authentification Active Directory universelle.**  
+4. **Les commandes de Data-Tier Application Framework (DACFx) et le Concepteur de schémas dans SSMS ne prennent pas en charge l’authentification Active Directory universelle.**  
     Les commandes qui utilisent DACFx (par exemple, l’importation et l’exportation) et le Concepteur de schémas dans SSMS ne prennent pas actuellement en charge l’authentification Active Directory universelle.
     
     Une solution de contournement consiste à utiliser les autres formes d’authentification fournies dans SSMS : authentification Active Directory par mot de passe, authentification Active Directory intégrée ou authentification SQL Server.
 
-3. **SSMS peut se connecter uniquement à des instances de SQL Server Integrated Services 2016 (SSIS 2016).**  
+5. **SSMS peut se connecter uniquement à des instances de SQL Server Integrated Services 2016 (SSIS 2016).**  
     Il existe une limitation de compatibilité connue avec SQL Server Integration Services, qui empêche la connexion aux versions précédentes.
     
     Une solution de contournement de ce problème consiste à vous connecter à votre instance SQL Server Integration Services à l’aide de la [version de SSMS correspondant à votre instance SSIS.](../ssms/previous-sql-server-management-studio-releases.md) 
   
-4. **SSMS n’enregistre pas les plans de maintenance de SQL Server 2008 R2 et versions antérieures de SQL Server.**  
+5. **SSMS n’enregistre pas les plans de maintenance de SQL Server 2008 R2 et versions antérieures de SQL Server.**  
     Il s’agit d’une limitation connue que nous espérons pouvoir résoudre à l’avenir. En attendant, vous pouvez utiliser la [version SSMS 2014](../ssms/previous-sql-server-management-studio-releases.md) pour enregistrer les plans de maintenance.  
     
 5. **Les installations non anglaises de SSMS peuvent nécessiter l’installation d’un package de sécurité supplémentaire.**  
 Les versions localisées dans des langues autres que l’anglais nécessitent la [mise à jour de sécurité KB 2862966](https://support.microsoft.com/en-us/kb/2862966) si l’installation est effectuée sous Windows 8, Windows 7, Windows Server 2012 et Windows Server 2008 R2.
   
-6. **Le démarrage du module Gestionnaire de configuration SQL Server échoue si aucun serveur SQL Server n’est installé sur l’ordinateur client**  
-    Si SQL Server n’est pas installé sur votre ordinateur client, lorsque vous démarrez le module Gestionnaire de configuration SQL Server, le message d’erreur suivant s’affiche :   
-     `Cannot connect to WMI provider. You do not have permission or the server is unreachable. Note that you can only manage SQL Server 2005 and later servers with SQL Server Configuration Manager. Invalid namespace \[0x8004100e]`,   
-   
-     * Si vous avez ajouté vos instances SQL Server à la liste « Serveurs inscrits » dans SSMS :  
-        1. Accédez à la vue « Serveurs inscrits » dans SSMS.  
-        2. Cliquez avec le bouton droit sur l’instance SQL Server que vous souhaitez configurer.  
-        3. Sélectionnez « Gestionnaire de configuration SQL Server... » dans le menu contextuel.    
-          
-      * Si vous n’avez pas ajouté d’instance SQL Server à la liste « Serveurs inscrits » dans SSMS :  
-        1. Ouvrez une invite de commandes en tant qu’administrateur.  
-        2. Exécutez l’outil Mofcomp à l’aide de la commande suivante :  
-    `mofcomp "%programfiles(x86)%\Microsoft SQL Server\130\Shared\sqlmgmproviderxpsp2up.mof"`  
-        3. Après avoir exécuté l’outil Mofcomp, pour que les modifications prennent effet, redémarrez le service WMI à l’aide de la commande suivante :  
-        `net stop "Windows Management Instrumentation"`  
-        `net start “Windows Management Instrumentation”`  
-
 ## <a name="feedback"></a>Commentaires  
   
 ![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [Forum des outils clients SQL](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Signaler un problème ou faire une suggestion sur Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback).  

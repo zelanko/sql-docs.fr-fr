@@ -1,1 +1,1 @@
-![Oui](media/yes.png)SharePoint 2013![Oui](media/yes.png)SharePoint 2016
+![oui](media/yes.png)mode intégré SharePoint
