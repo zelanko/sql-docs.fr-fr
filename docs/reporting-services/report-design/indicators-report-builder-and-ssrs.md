@@ -1,33 +1,38 @@
 ---
-title: "Indicateurs (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10545"
-  - "10547"
-  - "sql13.rtp.rptdesigner.indicatorproperties.action.f1"
-  - "10546"
-  - "sql13.rtp.rptdesigner.indicatorproperties.validateandstates.f1"
-  - "sql13.rtp.rptdesigner.indicatorproperties.general.f1"
+title: "Indicateurs (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10545"
+- "10547"
+- sql13.rtp.rptdesigner.indicatorproperties.action.f1
+- "10546"
+- sql13.rtp.rptdesigner.indicatorproperties.validateandstates.f1
+- sql13.rtp.rptdesigner.indicatorproperties.general.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7c902fc6195481ab6570612c5ac9012bba33ef79
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Indicateurs (G&#233;n&#233;rateur de rapports et SSRS)
-  Dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], les indicateurs sont de petites jauges qui communiquent en un coup d’œil l’état d’une valeur de donnée unique. Les icônes qui représentent des indicateurs et leurs états sont simples et visuellement efficaces même lorsqu'elles sont utilisées dans les petites tailles.  
+# <a name="indicators-report-builder-and-ssrs"></a>Indicateurs (Générateur de rapports et SSRS)
+  Dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , les indicateurs sont de petites jauges qui communiquent en un coup d’œil l’état d’une valeur de donnée unique. Les icônes qui représentent des indicateurs et leurs états sont simples et visuellement efficaces même lorsqu'elles sont utilisées dans les petites tailles.  
   
- Vous pouvez utiliser des indicateurs d'état dans vos rapports pour afficher les éléments suivants :  
+ Vous pouvez utiliser des indicateurs d'état dans vos rapports pour afficher les éléments suivants :  
   
 -   **Tendances** à l’aide de flèches de tendance à la hausse, horizontale (pas de changement) ou de tendance à la baisse  
   
@@ -64,21 +69,21 @@ caps.handback.revision: 11
   
 |Jeu d'indicateurs|Type d'indicateur|  
 |-------------------|--------------------|  
-|![Rs_DirectionalIcons](../../reporting-services/report-design/media/rs-directionalicons.png "Rs_DirectionalIcons")|Directionnel : indique les tendances à l'aide de flèches vers le haut, horizontale (pas de changement), de tendance à la hausse ou de tendance à la baisse.|  
-|![Rs_SymbolIcons](../../reporting-services/report-design/media/rs-symbolicons.png "Rs_SymbolIcons")|Symboles : indique les états à l'aide de symboles communément reconnus, tels que les coches et points d'exclamation.|  
-|![Rs_ShapeIcons](../../reporting-services/report-design/media/rs-shapeicons.png "Rs_ShapeIcons")|Forme : indique les conditions à l'aide de formes communément reconnues, telles que les panneaux de signalisation et les losanges.|  
-|![rs_RatingIcons](../../reporting-services/report-design/media/rs-ratingicons.png "rs_RatingIcons")|Évaluations : indique les évaluations à l'aide de formes et de symboles communément reconnus qui affichent les valeurs de progression, tels que le nombre de quartiers dans un carré.|  
+|![Rs_DirectionalIcons](../../reporting-services/report-design/media/rs-directionalicons.gif "Rs_DirectionalIcons")|Directionnel : indique les tendances à l'aide de flèches vers le haut, horizontale (pas de changement), de tendance à la hausse ou de tendance à la baisse.|  
+|![Rs_SymbolIcons](../../reporting-services/report-design/media/rs-symbolicons.gif "Rs_SymbolIcons")|Symboles : indique les états à l'aide de symboles communément reconnus, tels que les coches et points d'exclamation.|  
+|![Rs_ShapeIcons](../../reporting-services/report-design/media/rs-shapeicons.gif "Rs_ShapeIcons")|Forme : indique les conditions à l'aide de formes communément reconnues, telles que les panneaux de signalisation et les losanges.|  
+|![rs_RatingIcons](../../reporting-services/report-design/media/rs-ratingicons.gif "rs_RatingIcons")|Évaluations : indique les évaluations à l'aide de formes et de symboles communément reconnus qui affichent les valeurs de progression, tels que le nombre de quartiers dans un carré.|  
   
  Après avoir choisi un jeu d'indicateurs, vous pouvez personnaliser l'apparence de chaque icône d'indicateur dans le jeu en définissant ses propriétés dans les boîtes de dialogue pour les indicateurs ou le volet Propriétés. Vous pouvez utiliser les couleurs, icônes et tailles ou expressions intégrées pour configurer des indicateurs.  
   
 ##  <a name="CustomizingIndicators"></a> Personnalisation des indicateurs  
- Les indicateurs peuvent être personnalisés en fonction de vos besoins. Vous pouvez modifier les jeux d'indicateurs ainsi qu'une icône d'indicateur individuelle dans un jeu des façons suivantes :  
+ Les indicateurs peuvent être personnalisés en fonction de vos besoins. Vous pouvez modifier les jeux d'indicateurs ainsi qu'une icône d'indicateur individuelle dans un jeu des façons suivantes :  
   
 -   Modifiez les couleurs des icônes d'indicateur. Par exemple, vous pouvez choisir un modèle de couleurs monochromatique pour le jeu d'indicateurs ou utiliser des couleurs autres que celles par défaut.  
   
 -   Modifiez l'icône dans le jeu d'indicateurs. Par exemple, vous pouvez utiliser des icônes de type étoile, cercle et carré dans un jeu d'indicateurs.  
   
--   Spécifiez les valeurs de début et de fin pour un indicateur. Par exemple, vous pouvez incliner l'affichage des données en utilisant une icône pour 75 pour cent des valeurs d'indicateur.  
+-   Spécifiez les valeurs de début et de fin pour un indicateur. Par exemple, vous pouvez incliner l'affichage des données en utilisant une icône pour 75 pour cent des valeurs d'indicateur.  
   
 -   Ajoutez des icônes au jeu d'indicateurs. Par exemple, vous pouvez ajouter des icônes supplémentaires aux jeux d'indicateurs pour différencier les valeurs d'indicateur d'une façon plus détaillée.  
   
@@ -89,7 +94,7 @@ caps.handback.revision: 11
 ##  <a name="UsingIndicatorsInTablesMatrices"></a> Utilisation d'indicateurs dans les tables et les matrices  
  Les formes simples des indicateurs les rendent idéaux pour une utilisation dans les tables et les matrices. Les indicateurs sont efficaces même dans les petites tailles. Cela les rend utiles dans les lignes de détails ou de groupes des rapports.  
   
- Le diagramme suivant montre un rapport avec une table qui utilise le jeu d’indicateurs directionnels, **4 flèches (en couleur)**, pour indiquer les ventes. Les icônes d'indicateur dans le rapport sont configurées pour utiliser des nuances de bleu au lieu des couleurs par défaut : rouge, jaune et vert.  
+ Le diagramme suivant montre un rapport avec une table qui utilise le jeu d’indicateurs directionnels, **4 flèches (en couleur)**, pour indiquer les ventes. Les icônes d'indicateur dans le rapport sont configurées pour utiliser des nuances de bleu au lieu des couleurs par défaut : rouge, jaune et vert.  
   
  ![rs_IndicatorReportBlueArrows](../../reporting-services/report-design/media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")  
   
@@ -97,11 +102,11 @@ caps.handback.revision: 11
   
  Lorsque vous ajoutez pour la première fois un indicateur à un rapport, il est configuré pour utiliser les valeurs par défaut. Vous pouvez alors modifier les valeurs afin que l'indicateur représente les données comme vous le souhaitez. Vous pouvez modifier l'apparence des icônes d'indicateur, la façon dont l'indicateur choisit l'icône à utiliser et les icônes utilisées par un jeu d'indicateurs. Pour plus d’informations, consultez [Modifier les icônes d’indicateur et jeux d’indicateurs &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md).  
   
- Par défaut, les indicateurs sont configurés pour utiliser des pourcentages comme unité de mesure et détecter automatiquement les valeurs maximales et minimales des données. Chaque icône du jeu d'indicateurs a une plage de pourcentages. Le nombre de plages de pourcentages dépend du nombre d'icônes dans le jeu d'icônes : toutefois, les plages sont de la même taille et sont séquentielles. Par exemple, si le jeu d'icônes a cinq icônes, il y a cinq plages de pourcentages qui représentent chacune 20 pour cent de la taille totale. La première plage démarre à 0 et se termine à 20, la deuxième plage démarre à 20 et se termine à 40, et ainsi se suite. L'indicateur du rapport utilise l'icône du jeu d'indicateurs qui a une plage de pourcentages dans laquelle figure la valeur des données de l'indicateur. Vous pouvez modifier la plage de pourcentages de chaque icône du jeu. Les valeurs minimales et maximales peuvent être définies explicitement à l'aide d'une valeur ou d'une expression. Vous pouvez modifier l'unité de mesure en la remplaçant par une valeur numérique. Dans ce cas, vous ne spécifiez pas de valeur minimale ou maximale pour les données. À la place, vous fournissez uniquement les valeurs de début et de fin pour chaque icône utilisé par l'indicateur. Pour plus d’informations, consultez [Définir et configurer des unités de mesure &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md).  
+ Par défaut, les indicateurs sont configurés pour utiliser des pourcentages comme unité de mesure et détecter automatiquement les valeurs maximales et minimales des données. Chaque icône du jeu d'indicateurs a une plage de pourcentages. Le nombre de plages de pourcentages dépend du nombre d'icônes dans le jeu d'icônes : toutefois, les plages sont de la même taille et sont séquentielles. Par exemple, si le jeu d'icônes a cinq icônes, il y a cinq plages de pourcentages qui représentent chacune 20 pour cent de la taille totale. La première plage démarre à 0 et se termine à 20, la deuxième plage démarre à 20 et se termine à 40, et ainsi se suite. L'indicateur du rapport utilise l'icône du jeu d'indicateurs qui a une plage de pourcentages dans laquelle figure la valeur des données de l'indicateur. Vous pouvez modifier la plage de pourcentages de chaque icône du jeu. Les valeurs minimales et maximales peuvent être définies explicitement à l'aide d'une valeur ou d'une expression. Vous pouvez modifier l'unité de mesure en la remplaçant par une valeur numérique. Dans ce cas, vous ne spécifiez pas de valeur minimale ou maximale pour les données. À la place, vous fournissez uniquement les valeurs de début et de fin pour chaque icône utilisé par l'indicateur. Pour plus d’informations, consultez [Définir et configurer des unités de mesure &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md).  
   
  Les indicateurs transmettent les valeurs des données en synchronisant des valeurs des données d'indicateur dans une étendue spécifiée. Par défaut, l'étendue est le conteneur parent de l'indicateur, tel que la table ou matrice qui contient l'indicateur. Vous pouvez modifier la synchronisation de l'indicateur en choisissant une étendue différente, selon la disposition de votre rapport. L'indicateur peut omettre la synchronisation. Pour plus d’informations, consultez [Définir l’étendue de synchronisation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md).  
   
- Pour obtenir des informations générales sur le fonctionnement et la définition de l’étendue dans les rapports, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression scope for totals, aggregates, and built-in collections.md).  
+ Pour obtenir des informations générales sur le fonctionnement et la définition de l’étendue dans les rapports, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
  Les indicateurs utilisent uniquement une valeur unique. Si vous devez afficher plusieurs valeurs de données, utilisez un graphique sparkline ou une barre de données au lieu d'un indicateur. Ils peuvent représenter plusieurs valeurs des données mais sont également simples, faciles à comprendre à des petites tailles et fonctionnent correctement dans les tables et les matrices. Pour plus d’informations, consultez [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
@@ -117,7 +122,7 @@ caps.handback.revision: 11
   
  Le diagramme suivant illustre un indicateur côte à côte avec une jauge et dans une jauge.  
   
- ![rs_GaugePanelWithIndicatorAndGauge](../../reporting-services/report-design/media/rs-gaugepanelwithindicatorandgauge.png "rs_GaugePanelWithIndicatorAndGauge")  
+ ![rs_GaugePanelWithIndicatorAndGauge](../../reporting-services/report-design/media/rs-gaugepanelwithindicatorandgauge.gif "rs_GaugePanelWithIndicatorAndGauge")  
   
  Pour plus d’informations, consultez [Inclure des indicateurs et des jauges dans un panneau de jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md).  
   
@@ -128,7 +133,7 @@ caps.handback.revision: 11
   
  Cela peut se produire si vous utilisez l'unité de mesure des états de type pourcentage ou numérique. C'est plus probable si vous utilisez l'unité de mesure numérique car vous fournissez des valeurs spécifiques pour cette mesure. C'est également le cas lorsque vous arrondissez les valeurs des données du rapport car cela a tendance à rendre les valeurs moins discrètes.  
   
- Les scénarios suivants décrivent comment la visualisation des données est affectée quand vous modifiez la séquence des trois états de l’indicateur directionnel **3 flèches (en couleur)**. Par défaut la séquence est :  
+ Les scénarios suivants décrivent comment la visualisation des données est affectée quand vous modifiez la séquence des trois états de l’indicateur directionnel **3 flèches (en couleur)** . Par défaut la séquence est :  
   
 1.  Flèche vers le bas rouge  
   
@@ -189,7 +194,7 @@ caps.handback.revision: 11
   
 -   [Inclure des indicateurs et des jauges dans un panneau de jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Jauges &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  

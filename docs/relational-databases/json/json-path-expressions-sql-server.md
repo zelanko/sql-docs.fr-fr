@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 829f7d57569e55eed5bc50634c5a9baad6f7d8ee
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: 44bfd54aa494dd52174eeed8479e14a99d810af3
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="json-path-expressions-sql-server"></a>Expressions de chemin JSON (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Utilisez les chemins JSON pour référencer les propriétés des objets JSON. Les chemins JSON utilisent une syntaxe similaire à Javascript.  
+ Utiliser des expressions de chemin JSON pour référencer les propriétés d’objets JSON.  
   
  Vous devez fournir une expression de chemin lorsque vous appelez les fonctions suivantes.  
   
@@ -43,16 +43,25 @@ ms.lasthandoff: 04/11/2017
 ## <a name="parts-of-a-path-expression"></a>Parties d’une expression de chemin
  Une expression de chemin comporte deux composants.  
   
-1.  Le [mode PATH](#PATHMODE)facultatif, **lax** ou **strict**.  
+1.  Le paramètre facultatif [mode path](#PATHMODE), avec la valeur **lax** ou **strict**.  
   
 2.  Le [chemin](#PATH) lui-même.  
-  
+
 ##  <a name="PATHMODE"></a> Path mode  
  Au début de l’expression de chemin, vous pouvez éventuellement déclarer le mode PATH en spécifiant le mot clé **lax** ou **strict**. La valeur par défaut est **lax**.  
   
--   En mode **lax** , les fonctions renvoient des valeurs vides si l’expression de chemin contient une erreur. Par exemple, si vous demandez la valeur **$.name**, et que le texte JSON ne contient pas de clé **name** , la fonction renvoie la valeur Null.  
+-   Dans **lax** mode, la fonction retourne des valeurs vides si l’expression de chemin contient une erreur. Par exemple, si vous demandez la valeur **$.name**, et le texte JSON ne contient pas un **nom** clé, la fonction retourne la valeur null, mais ne déclenche pas une erreur.  
   
--   En mode **strict** , les fonctions déclenchent des erreurs si l’expression de chemin contient une erreur.  
+-   Dans **strict** mode, la fonction génère une erreur si l’expression de chemin contient une erreur.  
+
+La requête suivante spécifie explicitement `lax` mode dans l’expression de chemin d’accès.
+
+```sql  
+DECLARE @json NVARCHAR(MAX)
+SET @json=N'{ ... }'
+
+SELECT * FROM OPENJSON(@json, N'lax $.info')
+```  
   
 ##  <a name="PATH"></a> Path  
  Après la déclaration de mode de chemin facultatif, spécifiez le chemin lui-même.  
@@ -65,7 +74,7 @@ ms.lasthandoff: 04/11/2017
   
     -   Éléments du tableau. Par exemple, `$.product[3]`. Les tableaux sont de base zéro.  
   
-    -   L’opérateur point (`.`) indique un membre d’un objet.  
+    -   L’opérateur point (`.`) indique un membre d’un objet. Par exemple, dans `$.people[1].surname`, `surname` est un enfant de `people`.
   
 ## <a name="examples"></a>Exemples  
  Les exemples de cette section font référence au texte JSON suivant.  
@@ -93,15 +102,18 @@ ms.lasthandoff: 04/11/2017
 |$|{ "people": [ { "name": "John",  "surname": "Doe" },<br />   { "name": "Jane",  "surname": null, "active": true } ] }|  
   
 ## <a name="how-built-in-functions-handle-duplicate-paths"></a>Comment les fonctions intégrées gèrent-elles les chemins en double ?  
- Si le texte JSON contient des propriétés en double (par exemple, deux clés portant le même nom sur le même niveau), les fonctions JSON_VALUE et JSON_QUERY retournent la première valeur correspondant au chemin. Pour analyser un objet JSON contenant des clés en doublon, utilisez OPENJSON, comme illustré dans l’exemple suivant.  
+ Si le texte JSON contient des propriétés dupliquées - par exemple, deux clés portant le même nom au même niveau que - le **JSON_VALUE** et **JSON_QUERY** fonctions retournent uniquement la première valeur qui correspond au chemin d’accès. Pour analyser un objet JSON qui contient les clés en double et toutes les valeurs de retour, utilisez **OPENJSON**, comme illustré dans l’exemple suivant.  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 SET @json=N'{"person":{"info":{"name":"John", "name":"Jack"}}}'
 
 SELECT value
 FROM OPENJSON(@json,'$.person.info') 
 ```  
+
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>En savoir plus sur la fonction intégrée prise en charge de JSON dans SQL Server  
+Pour un grand nombre de solutions spécifiques, utilisez des cas et des recommandations, consultez le [billets de blog sur la prise en charge intégrée de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) dans SQL Server et dans la base de données SQL Azure par programme Jovan Popovic Gestionnaire Microsoft.
   
 ## <a name="see-also"></a>Voir aussi  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)   

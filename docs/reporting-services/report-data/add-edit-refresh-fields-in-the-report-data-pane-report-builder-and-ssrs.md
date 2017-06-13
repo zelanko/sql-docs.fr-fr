@@ -1,23 +1,28 @@
 ---
-title: "ajouter, modifier ou actualiser des champs dans le volet des donn&#233;es de rapport (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ajouter, modifier ou actualiser des champs dans le volet de données de rapport (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2e36f0fe-8100-4513-b169-14d611646f81
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b0085b620ed18da8020b4a3960fe6d27eb6ffce7
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# ajouter, modifier ou actualiser des champs dans le volet des donn&#233;es de rapport (G&#233;n&#233;rateur de rapports et SSRS)
+# <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>ajouter, modifier ou actualiser des champs dans le volet des données de rapport (Générateur de rapports et SSRS)
   Les champs de dataset sont la collection intégrée de noms de champs qui représentent les données qui sont retournées lorsqu'une requête de dataset s'exécute sur une source de données externe.  
   
  Pour un dataset incorporé, les champs de dataset sont les champs créés après avoir terminé la génération d'une requête et fermé le volet Concepteur de requêtes, ainsi que les champs calculés que vous créez.  
@@ -29,7 +34,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Pour ajouter un champ de requête  
+### <a name="to-add-a-query-field"></a>Pour ajouter un champ de requête  
   
 1.  Dans le volet des données de rapport, cliquez avec le bouton droit sur le dataset, puis sélectionnez **Ajouter un champ de requête**.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 7
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Pour ajouter un champ calculé  
+### <a name="to-add-a-calculated-field"></a>Pour ajouter un champ calculé  
   
 1.  Dans le volet des données de rapport, cliquez avec le bouton droit sur le dataset, puis cliquez sur **Ajouter un champ calculé**.  
   
@@ -65,7 +70,7 @@ caps.handback.revision: 7
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Pour modifier un champ de requête ou un champ de dataset  
+### <a name="to-edit-a-query-field-or-a-dataset-field"></a>Pour modifier un champ de requête ou un champ de dataset  
   
 1.  Dans le volet des données de rapport, cliquez avec le bouton droit sur le champ, puis cliquez sur **Propriétés du champ**.  
   
@@ -75,13 +80,13 @@ caps.handback.revision: 7
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Pour supprimer un champ de requête ou un champ calculé  
+### <a name="to-delete-a-query-field-or-a-calculated-field"></a>Pour supprimer un champ de requête ou un champ calculé  
   
 1.  Dans le volet des données de rapport, développez le dataset pour afficher la collection de champs.  
   
 2.  Cliquez avec le bouton droit sur le champ à supprimer, puis sélectionnez **Supprimer**.  
   
-### Pour actualiser la collection de champs dans le volet des données de rapport d'un dataset partagé  
+### <a name="to-refresh-the-field-collection-in-the-report-data-pane-for-a-shared-dataset"></a>Pour actualiser la collection de champs dans le volet des données de rapport d'un dataset partagé  
   
 1.  Dans le volet des données de rapport, cliquez avec le bouton droit sur le dataset, puis sélectionnez **Requête**.  
   
@@ -89,11 +94,11 @@ caps.handback.revision: 7
   
      Sur le serveur de rapports, la requête du dataset partagé exécute et retourne la collection de champs actuelle.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Jeux de données du rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Concepteurs de requêtes Reporting Services](../Topic/Reporting%20Services%20Query%20Designers.md)   
- [Concepteurs de requêtes &#40;Générateur de rapports&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md)  
+ [Concepteurs de requêtes Reporting Services](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)   
+ [Concepteurs de requêtes &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

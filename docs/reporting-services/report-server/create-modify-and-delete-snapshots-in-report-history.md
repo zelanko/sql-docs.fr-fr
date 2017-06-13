@@ -1,34 +1,39 @@
 ---
-title: "Cr&#233;er, modifier et supprimer des instantan&#233;s dans l&#39;historique de rapport | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "instantanés [Reporting Services]"
-  - "instantanés de rapport [Reporting Services]"
+title: "Créer, modifier et supprimer les instantanés de l’historique de rapport | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- snapshots [Reporting Services]
+- report snapshots [Reporting Services]
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 caps.latest.revision: 40
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 40
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4c3d0de81994b5a234ead420277718c760f9ddb3
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Cr&#233;er, modifier et supprimer des instantan&#233;s dans l&#39;historique de rapport
+# <a name="create-modify-and-delete-snapshots-in-report-history"></a>Créer, modifier et supprimer des instantanés dans l'historique de rapport
   L'historique de rapport est un ensemble d'instantanés de rapport. Vous pouvez gérer l'historique de rapport en ajoutant et en supprimant des instantanés, ou en modifiant les propriétés qui affectent le stockage de l'historique de rapport. Vous pouvez créer un historique de rapport manuellement ou de manière planifiée.  
   
- Pour créer un historique de rapport, votre attribution de rôle doit inclure la tâche « Gérer l'historique de rapport ». Pour afficher un historique de rapport, votre attribution de rôle doit inclure la tâche « Afficher les rapports ». L'historique de rapport est mis à la disposition de tous les utilisateurs ayant accès au rapport. Vous ne pouvez pas activer ou désactiver sélectivement l'historique de rapport pour un sous-ensemble d'utilisateurs.  
+ Pour créer un historique de rapport, votre attribution de rôle doit inclure la tâche « Gérer l'historique de rapport ». Pour afficher un historique de rapport, votre attribution de rôle doit inclure la tâche « Afficher les rapports ». L'historique de rapport est mis à la disposition de tous les utilisateurs ayant accès au rapport. Vous ne pouvez pas activer ou désactiver sélectivement l'historique de rapport pour un sous-ensemble d'utilisateurs.  
   
  Les instantanés dans l'historique de rapport sont identifiés par la date et l'heure de leur création. La date et l'heure dépendent du moment d'exécution de la requête.  
   
-## Création d'instantanés l'historique de rapport  
- Les instantanés peuvent être créés manuellement ou à intervalles planifiés pour un rapport pouvant s'exécuter de manière automatisée. Pour pouvoir s'exécuter de manière automatisée, le rapport doit utiliser des informations d'identification stockées ou ne pas en utiliser du tout. Par ailleurs, si le rapport utilise des paramètres, vous devez spécifier les valeurs par défaut à utiliser lors de l'exécution du rapport. Vous pouvez spécifier les informations d'identification stockées et les valeurs des paramètres dans les pages des propriétés du rapport. Pour plus d’informations, consultez [Page de propriétés des paramètres &#40;Gestionnaire de rapports&#41;](../Topic/Parameters%20Properties%20Page%20\(Report%20Manager\).md).  
+## <a name="creating-snapshots-in-report-history"></a>Création d'instantanés l'historique de rapport  
+ Les instantanés peuvent être créés manuellement ou à intervalles planifiés pour un rapport pouvant s'exécuter de manière automatisée. Pour pouvoir s'exécuter de manière automatisée, le rapport doit utiliser des informations d'identification stockées ou ne pas en utiliser du tout. Par ailleurs, si le rapport utilise des paramètres, vous devez spécifier les valeurs par défaut à utiliser lors de l'exécution du rapport. Vous pouvez spécifier les informations d'identification stockées et les valeurs des paramètres dans les pages des propriétés du rapport. Pour plus d’informations, consultez [Page de propriétés des paramètres &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/ebb53598-2378-46ae-8935-d5192f8ea49a).  
   
  Lorsque vous créez un instantané de rapport, les éléments suivants sont stockés avec l'instantané de rapport dans la base de données du serveur de rapports :  
   
@@ -44,10 +49,10 @@ caps.handback.revision: 40
   
  Si un rapport produit une erreur, aucun instantané n'est créé. Les rapports qui produisent des avertissements peuvent néanmoins s'exécuter et être utilisés pour générer des instantanés.  
   
-## Modification de propriétés et suppression de l'historique de rapport  
+## <a name="modifying-properties-and-deleting-report-history"></a>Modification de propriétés et suppression de l'historique de rapport  
  Un instantané de rapport existant ne peut pas être modifié. Vous pouvez toutefois modifier les propriétés de manière à supprimer l'historique de rapport.  
   
- Un historique de rapport peut être supprimé des façons suivantes :  
+ Un historique de rapport peut être supprimé des façons suivantes :  
   
 -   Suppression manuelle d'instantanés individuels ou en groupes.  
   
@@ -59,9 +64,9 @@ caps.handback.revision: 40
   
  L'historique de rapport est également supprimé lorsque vous supprimez un rapport. Si, par exemple, vous supprimez un rapport de ventes mensuelles pour le remplacer par une version plus récente, l'ensemble de l'historique de rapport associé au rapport est également supprimé. Cependant, si vous déplacez un rapport, son historique l'accompagne.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer un historique de rapport &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Ajout d’un instantané à un historique de rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Limiter l’historique de rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  

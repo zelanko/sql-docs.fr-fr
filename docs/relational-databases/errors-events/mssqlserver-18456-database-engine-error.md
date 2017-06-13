@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_18456 | Microsoft Docs
 ms.custom: 
-ms.date: 04/04/2017
+ms.date: 06/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8985dc2e2715758797eb253aee8382d68f0f2dd6
+ms.sourcegitcommit: 45f30fa7d1153f4ee70a9cfcb7c7e891bc15fec1
+ms.openlocfilehash: 53733118cf5fcf0b2b29544d64ebac6622425d56
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
@@ -76,6 +76,11 @@ Pour des raisons de sécurité, le message d'erreur retourné au client masque d
 |11|La connexion est valide mais l'accès au serveur a échoué. Cette erreur peut se produire lorsque l'utilisateur Windows a accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en tant que membre du groupe des administrateurs locaux, mais que Windows ne fournit pas d'informations d'identification d'administrateur. Pour vous connecter, démarrez le programme de connexion à l’aide de l’option **Exécuter en tant qu’administrateur**, puis ajoutez l’utilisateur Windows à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en tant que connexion spécifique.|  
 |12|La connexion est valide mais l'accès au serveur a échoué.|  
 |18|Le mot de passe doit être modifié.|  
+|38, 46|Impossible de trouver la base de données demandé par l’utilisateur.|
+|102 - 111|Échec AAD.|
+|122 - 124|Échec de mot de passe ou nom d’utilisateur vide.|
+|126|Base de données demandée par l’utilisateur n’existe pas.|
+|132 - 133|Échec AAD.|
   
 Il existe d'autres états d'erreurs qui signifient une erreur de traitement interne inattendue.  
   

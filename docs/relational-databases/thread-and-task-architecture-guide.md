@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9b66cd3d05632792b851f039aa653c15de18c78b
+ms.sourcegitcommit: 93be3a22ee517f90e65b8c8ba6dcaa8d90ed8515
+ms.openlocfilehash: 3b835536b4f510021f0d966e3214cf1ec5f71f5c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/07/2017
 
 ---
 # <a name="thread-and-task-architecture-guide"></a>guide d’architecture de thread et de tâche
@@ -51,7 +51,6 @@ L'avantage du basculement des contextes de thread n'est pas significatif. La plu
 Ces systèmes peuvent augmenter légèrement leurs performances si la valeur 1 est attribuée à l’option Regroupement léger.
 
 Il n'est pas recommandé d'utiliser la planification du mode fibre pour les opérations courantes. Cela peut réduire les performances en bloquant les avantages habituels du basculement de contexte. Par ailleurs, certains composants de SQL Server ne peuvent pas fonctionner correctement en mode fibre. Pour plus d’informations, consultez Regroupement léger.
-
 
 ## <a name="thread-and-fiber-execution"></a>Exécution de threads et de fibres
 
@@ -94,15 +93,14 @@ Ne comptez pas sur la croissance automatique pour augmenter la taille du fichier
 
 Les performances des opérations d'index telles que la création ou la reconstruction d'index peuvent être améliorées sur les ordinateurs qui possèdent de nombreuses unités centrales en définissant temporairement le mode de récupération de la base de données sur le mode de récupération simple ou de journalisation en bloc. Ces opérations d’index peuvent générer une activité de journal significative et les contentions de journal peuvent affecter le meilleur choix de degré de parallélisme (DOP) effectué par SQL Server.
 
-Par ailleurs, pensez à ajuster le paramètre de degré maximum de parallélisme (MAXDOP) pour ces opérations. Les indications suivantes sont basées sur des tests internes et constituent des recommandations générales. Essayez plusieurs paramètres MAXDOP différents pour déterminer le paramètre optimal pour votre environnement.
+En outre, envisagez d’ajuster le **degré maximal de parallélisme (MAXDOP)** option de configuration de serveur pour ces opérations. Les indications suivantes sont basées sur des tests internes et constituent des recommandations générales. Essayez plusieurs paramètres MAXDOP différents pour déterminer le paramètre optimal pour votre environnement.
 
 * Pour le mode de récupération complète, limitez la valeur de l’option Degré maximal de parallélisme à huit ou une valeur inférieure.   
 * Pour le modèle de journalisation en bloc ou le mode de récupération simple, essayez de définir la valeur de l’option Degré maximal de parallélisme sur une valeur supérieure à huit.   
 * Pour les serveurs pour lesquels des nœuds NUMA sont configurés, le degré maximal de parallélisme ne doit pas dépasser le nombre d'unités centrales attribuées à chaque nœud NUMA. Cela vient du fait que la requête est plus susceptible d'utiliser la mémoire locale d'un nœud NUMA, ce qui peut améliorer le temps d'accès à la mémoire.  
-* Pour les serveurs multithreads et fabriqués en 2009 ou à une date antérieure, la valeur MAXDOP ne doit pas dépasser le nombre de processeurs physiques.  
+* Pour les serveurs qui ont l’hyperthreading activé et ont été fabriqués en 2009 ou une version antérieure (avant que la fonctionnalité de hyper-threading a été améliorée), la valeur MAXDOP ne doit pas dépasser le nombre de processeurs physiques plutôt que de processeurs logiques.
 
-
-Pour plus d’informations sur le degré maximal de parallélisme, consultez [Configurer l’option Degré maximal de parallélisme](../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).
+Pour plus d’informations sur l’option max degree of parallelism, consultez [configurer le degré maximal de parallélisme Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 ### <a name="setting-the-maximum-number-of-worker-threads"></a>Configuration du nombre maximal de threads de travail
 
@@ -120,17 +118,17 @@ En général, le nombre de fichiers de données tempdb doit correspondre au nomb
 
 Le tableau suivant dresse la liste des composants de SQL Server et indique s’ils peuvent utiliser plus de 64 unités centrales.
 
-|Nom du processus    |Programme exécutable    |Utilisation de plus de 64 unités centrales |  
+|Nom du processus   |Programme exécutable |Utilisation de plus de 64 unités centrales |  
 |----------|----------|----------|  
-|Moteur de base de données SQL Server    |Sqlserver.exe    |Oui |  
-|Reporting Services    |Rs.exe    |Non |  
-|Analysis Services    |As.exe    |Non |  
-|Integration Services    |Is.exe    |Non |  
-|Service Broker    |Sb.exe    |Non |  
-|Recherche en texte intégral    |Fts.exe    |Non |  
-|Agent SQL Server    |Sqlagent.exe    |Non |  
-|SQL Server Management Studio    |Ssms.exe    |Non |  
-|Programme d'installation de SQL Server    |Setup.exe    |Non |  
+|Moteur de base de données SQL Server |Sqlserver.exe  |Oui |  
+|Reporting Services |Rs.exe |Non |  
+|Analysis Services  |As.exe |Non |  
+|Integration Services   |Is.exe |Non |  
+|Service Broker |Sb.exe |Non |  
+|Recherche en texte intégral   |Fts.exe    |Non |  
+|Agent SQL Server   |Sqlagent.exe   |Non |  
+|SQL Server Management Studio   |Ssms.exe   |Non |  
+|Programme d'installation de SQL Server   |Setup.exe  |Non |  
 
 
 

@@ -1,57 +1,62 @@
 ---
-title: "D&#233;finir et configurer des unit&#233;s de mesure (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Définir et configurer des unités de mesure (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a15a96c3-7d2c-433e-a440-4ea051e967a9
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 46d639df93661b5cd27810c72a44f698539aac2f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# D&#233;finir et configurer des unit&#233;s de mesure (G&#233;n&#233;rateur de rapports et SSRS)
-  Dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], les indicateurs utilisent une des deux unités de mesure : valeurs en pourcentage ou valeurs numériques.   
+# <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>Définir et configurer des unités de mesure (Générateur de rapports et SSRS)
+  Dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , les indicateurs utilisent une des deux unités de mesure : valeurs en pourcentage ou valeurs numériques.   
     
   Par défaut, les indicateurs sont configurés pour utiliser des pourcentages comme unité de mesure. Cela signifie que les valeurs d'indicateur affectées à chaque icône dans le jeu d'indicateurs sont déterminées par une plage de pourcentages. Les plages de pourcentages sont réparties de façon égale entre les icônes dans le jeu d'indicateurs. Chaque icône représente un état d'indicateur. Vous pouvez modifier les pourcentages pour chaque icône du jeu d'indicateurs en spécifiant différents pourcentages de début et de fin. Les indicateurs détectent également automatiquement les valeurs maximale et minimale des données.  
   
- Vous pouvez remplacer l'unité de mesure par une valeur numérique. Dans ce cas, vous ne spécifiez pas de valeur minimale ou maximale pour les données ; à la place, vous fournissez uniquement les valeurs de début et de fin pour chaque icône utilisée par l'indicateur.  
+ Vous pouvez remplacer l'unité de mesure par une valeur numérique. Dans ce cas, vous ne spécifiez pas de valeur minimale ou maximale pour les données ; à la place, vous fournissez uniquement les valeurs de début et de fin pour chaque icône utilisée par l'indicateur.  
   
  Les options telles que les unités de mesure peuvent être définies à l'aide d'expressions. Pour plus d’informations, consultez [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
-## Pour utiliser l'unité de mesure des états de type numérique  
+## <a name="to-use-the-numeric-state-measurement-unit"></a>Pour utiliser l'unité de mesure des états de type numérique  
   
 1.  Cliquez avec le bouton droit sur l’indicateur à modifier, puis cliquez sur **Propriétés de l’indicateur**.  
   
 2.  Cliquez sur **Valeur et états** dans le volet gauche.  
   
-3.  Dans la liste **Unité de mesure des états**, cliquez sur **Numérique**.  
+3.  Dans la liste **Unité de mesure des états** , cliquez sur **Numérique**.  
   
      Cliquez éventuellement sur le bouton **Expression** (*fx*) pour modifier une expression qui définit la valeur de l’option.  
   
-4.  Pour chaque icône du jeu d’indicateurs, mettez à jour les valeurs dans les zones de texte **Début** et **Fin**.  
+4.  Pour chaque icône du jeu d’indicateurs, mettez à jour les valeurs dans les zones de texte **Début** et **Fin** .  
   
-     Cliquez éventuellement sur le bouton **Expression** (*fx*) pour modifier une expression qui définit les valeurs des options **Début** et **Fin**.  
+     Cliquez éventuellement sur le bouton **Expression** (*fx*) pour modifier une expression qui définit les valeurs des options **Début** et **Fin** .  
   
     > [!NOTE]  
     >  Les valeurs des zones de texte **Début** et **Fin** doivent être numériques.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Pour utiliser l'unité de mesure en pourcentage  
+## <a name="to-use-the-percentage-measurement-unit"></a>Pour utiliser l'unité de mesure en pourcentage  
   
 1.  Cliquez avec le bouton droit sur l’indicateur à modifier, puis cliquez sur **Propriétés de l’indicateur**.  
   
 2.  Cliquez sur **Valeur et états** dans le volet gauche.  
   
-3.  Dans la liste **Unité de mesure des états**, cliquez sur **Pourcentage**.  
+3.  Dans la liste **Unité de mesure des états** , cliquez sur **Pourcentage**.  
   
      Cliquez éventuellement sur le bouton **Expression** (*fx*) pour modifier une expression qui définit la valeur de l’option.  
   
@@ -62,16 +67,16 @@ caps.handback.revision: 8
   
      Cliquez éventuellement sur le bouton **Expression** (*fx*) pour modifier une expression qui définit les valeurs de l’option.  
   
-5.  Pour chaque icône du jeu d’indicateurs, mettez à jour les valeurs dans les zones de texte **Début** et **Fin**.  
+5.  Pour chaque icône du jeu d’indicateurs, mettez à jour les valeurs dans les zones de texte **Début** et **Fin** .  
   
-     Cliquez éventuellement sur le bouton **Expression** (*fx*) pour modifier une expression qui définit les valeurs des options **Début** et **Fin**.  
+     Cliquez éventuellement sur le bouton **Expression** (*fx*) pour modifier une expression qui définit les valeurs des options **Début** et **Fin** .  
   
     > [!NOTE]  
     >  Les valeurs des zones de texte **Début** et **Fin** doivent être numériques.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Indicateurs &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

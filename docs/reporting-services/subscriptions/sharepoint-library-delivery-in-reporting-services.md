@@ -1,27 +1,32 @@
 ---
-title: "Remise &#224; une biblioth&#232;que SharePoint dans Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "intégration SharePoint [Reporting Services], remise de rapports"
-  - "remise des rapports [Reporting Services]"
-  - "abonnements [Reporting Services], remise à une bibliothèque SharePoint"
+title: "Remise de bibliothèque SharePoint dans Reporting Services | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SharePoint integration [Reporting Services], report delivery
+- delivering reports [Reporting Services]
+- subscriptions [Reporting Services], SharePoint library delivery
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 15
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 18312b5d8222cc79b07eb3a33eaf3fb60454b861
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Remise &#224; une biblioth&#232;que SharePoint dans Reporting Services
+# <a name="sharepoint-library-delivery-in-reporting-services"></a>Remise à une bibliothèque SharePoint dans Reporting Services
   Un serveur de rapports configuré en mode intégré SharePoint inclut une extension de remise que vous pouvez utiliser pour envoyer un rapport à une bibliothèque SharePoint.  
   
  Pour utiliser l’extension de remise SharePoint, vous devez créer un abonnement dans une page d’application sur un site SharePoint, puis sélectionner **Bibliothèque de documents SharePoint** comme type de remise. Vous ne pouvez pas utiliser l’extension de remise SharePoint pour des abonnements que vous créez dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou le Gestionnaire de rapports.  
@@ -29,8 +34,8 @@ caps.handback.revision: 15
 > [!NOTE]  
 >  L'extension de remise ne prend pas en charge la remise des rapports à un site SharePoint si le serveur de rapports s'exécute en mode natif. Si vous tentez d’appeler par programmation l’extension de remise pour un serveur de rapports en mode natif, le serveur retourne l’erreur **rsDeliveryExtensionNotFound** et enregistre l’erreur **rsOperationNotSupportedSharePointMode** dans les fichiers journaux du serveur de rapports.  
   
-## Spécifications  
- La configuration requise pour la remise des rapports rendus à une bibliothèque incluent ce qui suit :  
+## <a name="requirements"></a>Spécifications  
+ La configuration requise pour la remise des rapports rendus à une bibliothèque incluent ce qui suit :  
   
 -   Le serveur de rapports doit être configuré pour le mode d'intégration SharePoint.  
   
@@ -44,20 +49,20 @@ caps.handback.revision: 15
   
  Les propriétés et les métadonnées n'appartiennent pas à la remise de rapports. Lorsque le rapport est remis pour la première fois, il hérite des paramètres de sécurité du dossier ou de la liste qui le contient. Si vous modifiez ensuite des paramètres de sécurité ou définissez des propriétés de rapport, ces paramètres sont retenus. L'abonnement actualise simplement le rapport stocké à l'emplacement spécifié.  
   
-## Autorisation SharePoint  
+## <a name="sharepoint-permissions"></a>Autorisation SharePoint  
  Pour créer l'abonnement, vous devez disposer de l'autorisation Afficher des éléments sur le rapport. Pour remettre le rapport, vous devez avoir l'autorisation Ajouter des éléments dans la bibliothèque à laquelle le rapport est remis.  
   
-## Procédure de création, de modification ou de suppression des abonnements.  
+## <a name="how-to-create-modify-and-delete-subscriptions"></a>Procédure de création, de modification ou de suppression des abonnements.  
   
 1.  Accédez au site SharePoint à partir duquel vous accédez au rapport.  
   
 2.  Sélectionnez le rapport, cliquez sur la flèche orientée vers le bas à côté du rapport, puis sélectionnez **Gérer les abonnements**.  
   
-3.  Cliquez sur **Créer**, **Modifier** ou **Supprimer**.  
+3.  Cliquez sur **Créer**, **Modifier**ou **Supprimer**.  
   
  Un message de statut sur la liste de gestion des abonnements affiche des informations actuelles sur l'abonnement, en particulier si celui-ci a abouti ainsi que l'heure et la date du dernier abonnement.  
   
-## Définition des options de remise  
+## <a name="setting-delivery-options"></a>Définition des options de remise  
  Vous pouvez définir les options suivantes de remise sur un abonnement qui remet un rapport à une bibliothèque SharePoint.  
   
  Format de la sortie du rendu  
@@ -68,13 +73,13 @@ caps.handback.revision: 15
  Remarquez que vous ne pouvez pas spécifier des formats de sortie réservés à un usage interne ou qui ne sont pas pris en charge par des serveurs de rapport qui s'exécutent en mode intégré SharePoint. Ces formats sont Null, RGDI et HTMLOWC.  
   
  Nom et extension de fichier  
- Spécifiez le nom et l'extension de fichier du rapport tel que vous souhaitez qu'ils apparaissent dans la bibliothèque cible. Si vous ne spécifiez d'extension de fichier, le serveur de rapports va en créer une basée sur le format de sortie du rapport. Cette valeur est requise. Le nom de fichier ne doit pas inclure les caractères suivants : : \ / * ? " \< > | # { } %  
+ Spécifiez le nom et l'extension de fichier du rapport tel que vous souhaitez qu'ils apparaissent dans la bibliothèque cible. Si vous ne spécifiez d'extension de fichier, le serveur de rapports va en créer une basée sur le format de sortie du rapport. Cette valeur est requise. Le nom de fichier ne doit pas inclure les caractères suivants : : \ / * ? " < > | # { } %  
   
  Titre  
  Spécifie une propriété **Titre** facultative pour le rapport dans la bibliothèque cible. Il s'agit d'une propriété standard pour tous les éléments stockés dans une bibliothèque. Les utilisateurs peuvent choisir de montrer ou de masquer cette propriété lorsqu'ils consultent le contenu de la bibliothèque sur un site SharePoint.  
   
  Chemin d'accès  
- Spécifie une URL complète vers la bibliothèque SharePoint, notamment l'application et le site Web SharePoint. Par exemple : http://mySharePointWeb/MySite/MyDocLib, où « http://mySharePointWeb » indique l'application Web, « MySite » est le site SharePoint et « MyDocLib » est la bibliothèque SharePoint où est remis le rapport.  
+ Spécifie une URL complète vers la bibliothèque SharePoint, notamment l'application et le site Web SharePoint. Par exemple : `http://mySharePointWeb/MySite/MyDocLib`; où `http://mySharePointWeb` indique l’application Web, « MySite » est le site SharePoint, et « MyDocLib » est la bibliothèque SharePoint où le rapport est remis.  
   
  Vous ne pouvez pas spécifier une page, un site ou une liste. Le conteneur cible doit être une bibliothèque dans le même site ou batterie de serveurs.  
   
@@ -84,9 +89,10 @@ caps.handback.revision: 15
  Copie automatique  
  Si vous utilisez cette fonctionnalité pour copier automatiquement la dernière version d’un fichier dans plusieurs emplacements, le fichier est copié si l’option **Remplacer** est activée. Si vous utilisez l’option **Auto-incrément** ou **Aucun**, la remise échoue et l’erreur **rsDeliveryError** se produit.  
   
-## Voir aussi  
- [Create and Manage Subscriptions for SharePoint Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Créer et gérer des abonnements pour des serveurs de rapports en mode SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
+

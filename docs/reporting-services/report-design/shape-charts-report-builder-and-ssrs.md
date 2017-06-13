@@ -1,39 +1,44 @@
 ---
-title: "Graphiques &#224; base de formes (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Mettre en forme des graphiques (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 84ee7a9030bb27725994a33860b26b8754034cd9
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Graphiques &#224; base de formes (G&#233;n&#233;rateur de rapports et SSRS)
+# <a name="shape-charts-report-builder-and-ssrs"></a>Graphiques à base de formes (Générateur de rapports et SSRS)
   Un graphique à base de formes affiche des valeurs sous la forme de pourcentages par rapport à un total. Les graphiques à base de formes sont utilisés en général pour afficher des comparaisons proportionnelles entre des valeurs différentes d'un ensemble. Les catégories sont représentées par les segments individuels de la forme. La taille du segment varie en fonction de la valeur. Les graphiques à base de formes sont semblables aux graphiques en secteurs, sauf qu'ils classent les catégories de la plus grande à la plus petite.  
   
  Un graphique en entonnoir affiche les valeurs comme des proportions qui décroissent progressivement. La taille d'une zone est déterminée par la valeur de la série sous la forme d'un pourcentage du total de toutes les valeurs. Par exemple, vous pouvez utiliser un graphique en entonnoir pour afficher des tendances relatives à la visite d'un site Web. Il est probable que le graphique en entonnoir affichera une large zone en haut, indiquant le nombre de visites sur la page d'accueil et les autres zones seront proportionnellement plus petites. Pour plus d’informations sur l’ajout de données à un graphique en entonnoir, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
  L'illustration suivante montre un exemple de graphique en entonnoir.  
   
- ![Graphique en entonnoir](../../reporting-services/report-design/media/rs-funnelchart.png "Graphique en entonnoir")  
+ ![Graphique en entonnoir](../../reporting-services/report-design/media/rs-funnelchart.gif "graphique en entonnoir")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Variantes  
+## <a name="variations"></a>Variantes  
   
 -   **Pyramide**. Un graphique en pyramide affiche des données proportionnelles afin que le graphique ressemble à une pyramide.  
   
-## Considérations relatives aux données pour les graphiques à base de formes  
+## <a name="data-considerations-for-shape-charts"></a>Considérations relatives aux données pour les graphiques à base de formes  
   
 -   Les graphiques à base de formes sont courants dans les rapports en raison de leur impact visuel. Toutefois, les graphiques à base de formes sont un type de graphique très simplifié qui peut ne pas représenter au mieux vos données. Pensez à utiliser un graphique à base de formes une fois l'agrégation de données en sept points de données maximum terminée. En général, utilisez le graphique à base de formes pour afficher une seule catégorie par région de données.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 8
   
 -   Vous pouvez appliquer des styles de dessin supplémentaires aux graphiques en secteurs et aux graphiques en anneau pour impact visuel amélioré. Pour plus d’informations, consultez [Mise en forme des couleurs des séries d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Points de données vides et Null dans les graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   

@@ -1,30 +1,35 @@
 ---
-title: "D&#233;finir des autorisations pour les op&#233;rations de serveur de rapports dans une application Web SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "autorisations [Reporting Services], mode intégré SharePoint"
-  - "intégration SharePoint [Reporting Services], autorisations"
-  - "intégration SharePoint [Générateur de rapports]"
-  - "sécurité [Reporting Services], mode intégré SharePoint"
-  - "Report Builder 1.0, intégration SharePoint"
-  - "sécurité de l'élément de modèle [Reporting Services]"
+title: "Définir des autorisations pour les opérations de serveur de rapports dans une Application Web SharePoint | Documents Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Reporting Services], SharePoint integrated mode
+- SharePoint integration [Reporting Services], permissions
+- SharePoint integration [Report Builder]
+- security [Reporting Services], SharePoint integrated mode
+- Report Builder 1.0, SharePoint integration
+- model item security [Reporting Services]
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 caps.latest.revision: 17
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 17
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d6d0c434fbac82990ad43e0b631cc7e418e47db8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# D&#233;finir des autorisations pour les op&#233;rations de serveur de rapports dans une application Web SharePoint
+# <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Définir des autorisations pour les opérations de serveur de rapports dans une application Web SharePoint
   Pour un serveur de rapports qui s'exécute en mode intégré SharePoint, les paramètres de sécurité définis sur le site SharePoint déterminent le mode d'affichage et de gestion des rapports, des modèles de rapport et des sources de données partagées. Si vous utilisez les groupes SharePoint par défaut, les niveaux d'autorisation et les attributions d'autorisations, vous pouvez utiliser les rapports et d'autres documents à l'aide des paramètres de sécurité actuels.  
   
  Si les paramètres de sécurité par défaut n'offrent pas le niveau d'accès souhaité, vous pouvez utiliser les informations fournies dans les sections suivantes pour connaître les autorisations nécessaires à des opérations particulières :  
@@ -51,7 +56,7 @@ caps.handback.revision: 17
   
  Si vous utilisez des niveaux d'autorisation prédéfinis, aucune action n'est nécessaire, car les autorisations ci-dessus sont déjà incluses dans Contrôle total, Création, Collaboration, Lecture et Accès limité. Cependant, si vous utilisez des niveaux d'autorisation personnalisés ou si vous modifiez les autorisations attribuées à un utilisateur ou un groupe spécifique, vous devez ajouter cette autorisation manuellement.  
   
- L'autorisation « Parcourir les informations utilisateur » permet au serveur de rapports de retourner des informations sur l'auteur de l'élément et sur l'utilisateur qui l'a modifié en dernier. Sans cette autorisation, le serveur de rapports retourne les erreurs ci-après. Pour les opérations de navigation, l'erreur est : « Report Server a rencontré une erreur SharePoint. ---> System.UnauthorizedAccessException : accès refusé. » Pour les opérations de publication, l’erreur est : « Les autorisations accordées à l’utilisateur '\<domaine>\\<utilisateur\>' sont insuffisantes pour effectuer cette opération ».  
+ L'autorisation « Parcourir les informations utilisateur » permet au serveur de rapports de retourner des informations sur l'auteur de l'élément et sur l'utilisateur qui l'a modifié en dernier. Sans cette autorisation, le serveur de rapports retourne les erreurs ci-après. Pour les opérations de navigation, l'erreur est : « Report Server a rencontré une erreur SharePoint. ---> System.UnauthorizedAccessException : accès refusé. » Pour les opérations de publication, l’erreur est : « les autorisations accordées à l’utilisateur '\<domaine >\\< utilisateur\>' sont insuffisantes pour effectuer cette opération. »  
   
 ##  <a name="permissionReports"></a> Autorisations pour afficher et gérer des rapports  
  Les autorisations de définition de rapport sont définies par l'intermédiaire des autorisations pour les listes sur la bibliothèque contenant le rapport ; vous pouvez toutefois définir des autorisations sur des rapports individuels si vous souhaitez en restreindre l'accès. Le tableau suivant présente une liste de tâches et les autorisations nécessaires pour chacune d'entre elles.  
@@ -114,7 +119,7 @@ caps.handback.revision: 17
 |Créer, modifier ou supprimer un abonnement quelconque d'un site.|**Gérer les alertes** sur le site.|  
   
 ##  <a name="permissionDataSources"></a> Autorisations pour créer et gérer des sources de données partagées et des modèles de rapport  
- Un fichier de source de données partagée (.rsds) contient des informations de connexion à la source de données utilisables par plusieurs rapports et modèles. Pour les rapports standard, l'utilisation d'un fichier .rsds pour spécifier les informations de connexion à la source de données est facultative. Pour les rapports pilotés par un modèle, l'utilisation d'un fichier .rsds est nécessaire. Un modèle de rapport utilise toujours un fichier .rsds pour se connecter à des sources de données externes.  
+ Un fichier de source de données partagée (.rsds) contient des informations de connexion à la source de données utilisables par plusieurs rapports et modèles. Pour les rapports standard, l'utilisation d'un fichier .rsds pour spécifier les informations de connexion à la source de données est facultative. Pour les rapports pilotés par un modèle, l'utilisation d'un fichier .rsds est nécessaire. Un modèle de rapport utilise toujours un fichier .rsds pour se connecter à des sources de données externes.  
   
  Vous pouvez définir des propriétés sur les sources de données partagées qui déterminent si des utilisateurs individuels peuvent afficher ou gérer ces sources de données partagées. Les autorisations pour afficher ou gérer une source de données partagée sont différentes des autorisations pour afficher un rapport ; vous pouvez afficher un rapport utilisant un fichier .rsds sans disposer d'autorisation d'affichage sur le fichier .rsds lui-même.  
   
@@ -131,7 +136,7 @@ caps.handback.revision: 17
 > [!NOTE]  
 >  Il n'existe pas d'autorisation pour modifier des modèles de rapport. Même si vous pouvez créer ou supprimer des modèles de rapport, vous ne pouvez pas les modifier depuis un site SharePoint. La modification de modèles de rapport exige le Générateur de modèles, un outil de création client sur lequel les autorisations définies dans SharePoint sont sans effet.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   

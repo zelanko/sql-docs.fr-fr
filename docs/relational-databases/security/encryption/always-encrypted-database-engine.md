@@ -2,7 +2,7 @@
 title: "Always Encrypted (moteur de base de données) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/13/2017
+ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -22,10 +22,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f848c5ebf1233d6b34dcf00bb7084adcebc95ea1
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (moteur de base de données)
@@ -126,33 +126,32 @@ Utilisez l’ [Assistant Always Encrypted](../../../relational-databases/securit
 
 -   Après avoir modifié la définition d’un objet chiffré, exécutez [sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) pour mettre à jour les métadonnées Always Encrypted de l’objet.
   
- Always Encrypted n’est pas pris en charge pour les colonnes présentant les caractéristiques ci-après (par exemple, la clause *Encrypted WITH* ne peut pas être utilisée dans **CREATE TABLE/ALTER TABLE** pour une colonne à laquelle s’applique l’une des conditions suivante) :  
+Always Encrypted n’est pas pris en charge pour les colonnes présentant les caractéristiques ci-après (par exemple, la clause *Encrypted WITH* ne peut pas être utilisée dans **CREATE TABLE/ALTER TABLE** pour une colonne à laquelle s’applique l’une des conditions suivante) :  
   
 -   Colonnes utilisant l’un des types de données suivants : **xml**, **timestamp**/**rowversion**, **image**, **ntext**, **text**, **sql_variant**, **hierarchyid**, **geography**, **geometry**, alias, types définis par l’utilisateur.  
-  
 - Colonnes FILESTREAM  
-  
-- Colonnes avec la propriété ROWGUIDCOL
-- Colonnes de type chaîne (varchar, char, etc.) avec des classements autres que BIN2.
-- Colonnes qui font office de clés pour les index non ordonnés en clusters utilisant une colonne chiffrée aléatoire comme colonne clé (les colonnes chiffrées déterministes conviennent)
-- Colonnes qui font office de clés pour les index ordonnés en clusters utilisant une colonne chiffrée aléatoire comme colonne clé (les colonnes chiffrées déterministes conviennent)
-- Colonnes qui font office de clés pour les index de texte intégral contenant des colonnes chiffrées aléatoires et déterministes
-- Colonnes référencées par des colonnes calculées (quand l’expression effectue des opérations non prises en charge pour Always Encrypted)
-- Jeu de colonnes éparses
-- Colonnes référencées par les statistiques
-- Colonnes utilisant un type d’alias
-- Colonnes de partitionnement
-- Colonnes avec des contraintes par défaut
-- Colonnes référencées par des contraintes uniques quand vous utilisez le chiffrement aléatoire (le chiffrement déterministe est pris en charge)
-- Colonnes de clé primaire quand vous utilisez le chiffrement aléatoire (le chiffrement déterministe est pris en charge)
-- Colonnes de référence dans les contraintes de clé étrangère quand vous utilisez un chiffrement aléatoire ou déterministe, si les colonnes de référence et référencées recourent à des clés ou algorithmes différents
-- Colonnes référencées par des contraintes de validation
-- Colonnes dans des tables qui utilisent la capture de données modifiées
-- Colonnes de clé primaire sur des tables qui font l’objet d’un suivi des modifications
-- Colonnes masquées (à l’aide du masquage des données dynamiques)
-- Colonnes dans les tables Stretch Database. (Les tables comportant des colonnes chiffrées avec Always Encrypted peuvent être activées pour l’extension.)
-- Colonnes de tables externes (PolyBase) (remarque : l’utilisation de tables externes et de tables comportant des colonnes chiffrées dans la même requête est prise en charge)
-- Les paramètres tabulaires ciblant des colonnes chiffrées ne sont pas pris en charge.
+- Colonnes avec la propriété IDENTITY  
+- Colonnes avec la propriété ROWGUIDCOL  
+- Colonnes de type chaîne (varchar, char, etc.) avec des classements autres que BIN2.  
+- Colonnes qui font office de clés pour les index non ordonnés en clusters utilisant une colonne chiffrée aléatoire comme colonne clé (les colonnes chiffrées déterministes conviennent)  
+- Colonnes qui font office de clés pour les index ordonnés en clusters utilisant une colonne chiffrée aléatoire comme colonne clé (les colonnes chiffrées déterministes conviennent)  
+- Colonnes qui font office de clés pour les index de texte intégral contenant des colonnes chiffrées aléatoires et déterministes  
+- Colonnes référencées par des colonnes calculées (quand l’expression effectue des opérations non prises en charge pour Always Encrypted)  
+- Jeu de colonnes éparses  
+- Colonnes référencées par les statistiques  
+- Colonnes utilisant un type d’alias  
+- Colonnes de partitionnement  
+- Colonnes avec des contraintes par défaut  
+- Colonnes référencées par des contraintes uniques quand vous utilisez le chiffrement aléatoire (le chiffrement déterministe est pris en charge)  
+- Colonnes de clé primaire quand vous utilisez le chiffrement aléatoire (le chiffrement déterministe est pris en charge)  
+- Colonnes de référence dans les contraintes de clé étrangère quand vous utilisez un chiffrement aléatoire ou déterministe, si les colonnes de référence et référencées recourent à des clés ou algorithmes différents  
+- Colonnes référencées par des contraintes de validation  
+- Colonnes dans des tables qui utilisent la capture de données modifiées  
+- Colonnes de clé primaire sur des tables qui font l’objet d’un suivi des modifications  
+- Colonnes masquées (à l’aide du masquage des données dynamiques)  
+- Colonnes dans les tables Stretch Database. (Les tables comportant des colonnes chiffrées avec Always Encrypted peuvent être activées pour l’extension.)  
+- Colonnes de tables externes (PolyBase) (remarque : l’utilisation de tables externes et de tables comportant des colonnes chiffrées dans la même requête est prise en charge)  
+- Les paramètres tabulaires ciblant des colonnes chiffrées ne sont pas pris en charge.  
 
 Vous ne pouvez pas utiliser les clauses suivantes pour les colonnes chiffrées :
 

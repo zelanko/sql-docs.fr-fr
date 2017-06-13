@@ -1,34 +1,39 @@
 ---
-title: "Ajouter un cadre de bordure &#224; un graphique (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ajouter un cadre de bordure à un graphique (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ca0c5040-40bb-4cb7-bc2b-5bcbe73858bb
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7a14ce29863b00c01cb77f837c369256a1096f65
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Ajouter un cadre de bordure &#224; un graphique (G&#233;n&#233;rateur de rapports et SSRS)
+# <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>Ajouter un cadre de bordure à un graphique (Générateur de rapports et SSRS)
   Pour donner un impact plus visuel à un graphique, envisagez d'utiliser un cadre de bordure autour de l'extérieur du graphique. Vous pouvez sélectionner un cadre de bordure à l'aide de la boîte de dialogue **Propriétés du graphique** ou du volet Propriétés. Les cadres de bordure de graphique ne peuvent être appliqués à aucune autre région de données.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Pour appliquer une bordure à un graphique  
+### <a name="to-apply-a-border-to-a-chart"></a>Pour appliquer une bordure à un graphique  
   
 1.  Cliquez avec le bouton droit en un point quelconque du graphique, puis sélectionnez **Propriétés du graphique**.  
   
     > [!NOTE]  
-    >  Si **Propriétés du graphique** n’est pas visible, pointez sur **Graphique** dans le menu contextuel et sélectionnez **Propriétés du graphique**.  
+    >  Si **Propriétés du graphique**n’est pas visible, pointez sur **Graphique** dans le menu contextuel et sélectionnez **Propriétés du graphique**.  
   
 2.  Sélectionnez **Bordure**et cliquez sur le type de bordure à appliquer au graphique.  
   
@@ -37,17 +42,17 @@ caps.handback.revision: 6
 4.  (Facultatif) Spécifiez la couleur de la ligne qui sera dessinée autour du graphique comme bordure.  
   
     > [!NOTE]  
-    >  La liste **Couleur de ligne** contient des couleurs courantes. Si vous souhaitez choisir dans une liste contenant plus de couleurs, cliquez sur **Couleurs supplémentaires** dans la liste ou sur le bouton d’expression (**fx**) à côté de la liste pour afficher l’**Éditeur d’expressions**.  
+    >  La liste **Couleur de ligne** contient des couleurs courantes. Si vous souhaitez choisir dans une liste contenant plus de couleurs, cliquez sur **Couleurs supplémentaires** dans la liste ou sur le bouton d’expression (**fx**) à côté de la liste pour afficher l’ **Éditeur d’expressions** .  
   
-5.  (Facultatif) Spécifiez la largeur de la bordure. Les valeurs valides se situent entre 0,25 et 20 points. Envisagez de définir une taille de bordure entre 1 et 3 points pour un meilleur effet visuel.  
+5.  (Facultatif) Spécifiez la largeur de la bordure. Les valeurs valides se situent entre 0,25 et 20 points. Envisagez de définir une taille de bordure entre 1 et 3 points pour un meilleur effet visuel.  
   
 6.  (Facultatif) Si votre rapport contient une couleur d'arrière-plan autre que blanc, envisagez de définir une couleur de page qui est de la même couleur. La couleur de page est la couleur d'arrière-plan qui figure hors de la ligne de bordure.  
   
 7.  (Facultatif) Si vous choisissez un type de cadre, spécifiez un style et une couleur pour le cadre. La liste **Couleur de remplissage du cadre** contient des couleurs courantes.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Ajouter des styles de biseau, de relief et de textures à un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-bevel-emboss-and-texture-styles-to-a-chart-report-builder-and-ssrs.md)  
+ [Ajouter des styles de biseau, de relief et de textures à un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)  
   
   

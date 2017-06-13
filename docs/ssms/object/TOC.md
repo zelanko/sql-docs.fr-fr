@@ -1,3 +1,4 @@
+# [Explorateur d'objets](object-explorer.md)
 # [Ajouter des étapes à un travail maître SQL Server Agent](add-steps-to-a-sql-server-agent-master-job.md)
 # [Gérer les objets à l’aide de l’Explorateur d’objets](manage-objects-by-using-object-explorer.md)
 # [Utiliser des rapports personnalisés avec les propriétés de nœud de l’Explorateur d’objets](use-custom-reports-with-object-explorer-node-properties.md)
@@ -13,7 +14,6 @@
 # [Options (Explorateur d’objets SQL Server - Page Script)](options-sql-server-object-explorer-scripting-page.md)
 # [Paramètres de filtre (Explorateur d’objets et Explorateur de l’utilitaire)](filter-settings-object-explorer-and-utility-explorer.md)
 # [Supprimer des objets](delete-objects.md)
-# [Explorateur d’objets](object-explorer.md)
 # [Ajouter un rapport personnalisé à Management Studio](add-a-custom-report-to-management-studio.md)
 # [Rapports personnalisés dans Management Studio](custom-reports-in-management-studio.md)
 # [Ajouter des objets](add-objects.md)

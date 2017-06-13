@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f00c5db3574f21010e682f964d06f3c2b61a1d09
-ms.openlocfilehash: 9cd813b72eda096f780ed7140b6691f528251a30
+ms.sourcegitcommit: f9debfb35bdf0458a34dfc5933fd3601e731f037
+ms.openlocfilehash: 3a11180d35ec0a67eed18e03cfe5f0e82d0cc180
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>Bonnes pratiques relatives au magasin de requêtes
@@ -56,7 +56,7 @@ Si les paramètres par défaut sont adaptés pour un démarrage rapide, vous dev
   
  La valeur par défaut (100 Mo) peut ne pas suffire si votre charge de travail génère un grand nombre de requêtes et de plans différents ou si vous souhaitez conserver l’historique de requêtes sur une plus longue période. Suivez l’utilisation d’espace actuelle et augmentez la taille maximale (Mo) pour empêcher le magasin de requêtes de passer en mode lecture seule.  Utilisez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou exécutez le script suivant pour obtenir les dernières informations concernant la taille du magasin de requêtes :  
   
-```  
+```tsql 
 USE [QueryStoreDB];  
 GO  
   
@@ -67,14 +67,14 @@ FROM sys.database_query_store_options;
   
  Le script suivant permet de définir une nouvelle taille maximale (Mo) :  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
   
  **Intervalle de collecte des statistiques :** définit le niveau de granularité des statistiques d’exécution collectées (la valeur par défaut est 1 heure). Envisagez d’utiliser une valeur inférieure si vous avez besoin d’une granularité plus fine ou une durée inférieure pour détecter et atténuer les problèmes, mais gardez à l’esprit que cela a un effet direct sur la taille des données du magasin de requêtes. Pour attribuer une valeur différente au paramètre Intervalle de collecte des statistiques, utilisez SSMS ou Transact-SQL :  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);  
 ```  
   
@@ -83,7 +83,7 @@ Par défaut, le magasin de requêtes est configuré pour conserver les données 
   
  Évitez de conserver les données d’historique que vous ne prévoyez pas d’utiliser. Cela réduira les passages à l’état lecture seule. La taille des données du magasin de requêtes et le temps de détection et d’atténuation des problèmes seront plus prévisibles. Utilisez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou le script suivant pour configurer la stratégie de nettoyage basée sur la durée :  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));  
 ```  
@@ -92,7 +92,7 @@ SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));
   
  Il est vivement recommandé d’activer le nettoyage basée sur la taille de sorte que le magasin de requêtes s’exécute toujours en mode lecture-écriture et collecte les données les plus récentes.  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);  
 ```  
@@ -107,7 +107,7 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  Le script suivant permet de définir le mode de capture de requête sur Auto :  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);  
 ```  
@@ -119,7 +119,7 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
   
  Activez le magasin de requêtes à l’aide de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , comme décrit dans la section précédente, ou exécutez l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante :  
   
-```  
+```tsql  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
 ```  
   
@@ -140,19 +140,30 @@ Les vues du magasin de requêtes de[!INCLUDE[ssManStudio](../../includes/ssmanst
 |Vue SSMS|Scénario|  
 |---------------|--------------|  
 |Requêtes régressées|Identifie les requêtes dont les métriques d’exécution ont récemment régressé (c’est-à-dire, dont l’état s’est aggravé). <br />Utilisez cette vue pour mettre en corrélation les problèmes de performances observés dans votre application avec les requêtes réelles qui ont besoin d’être corrigées ou améliorées.|  
-|Principales requêtes consommatrices de ressources|Choisissez une mesure d’exécution présentant un intérêt et identifiez les requêtes qui ont enregistré les valeurs les plus extrêmes sur un intervalle de temps donné. <br />Utilisez cette vue pour concentrer votre attention sur les requêtes les plus pertinentes, qui ont le plus fort impact sur la consommation en ressources de base de données.|  
-|Requêtes suivies|Suit l’exécution des requêtes les plus importantes en temps réel. En règle générale, vous utilisez cette vue quand certaines de vos requêtes sont soumises à des plans forcés et que vous voulez vérifier que les performances des requêtes sont stables.|  
 |Consommation globale des ressources|Analyse la consommation totale de ressources pour la base de données par rapport à l’une des métriques d’exécution.<br />Utilisez cette vue pour identifier des modèles de ressources (charges de travail diurnes/nocturnes) et optimiser la consommation globale pour votre base de données.|  
+|Principales requêtes consommatrices de ressources|Choisissez une mesure d’exécution présentant un intérêt et identifiez les requêtes qui ont enregistré les valeurs les plus extrêmes sur un intervalle de temps donné. <br />Utilisez cette vue pour concentrer votre attention sur les requêtes les plus pertinentes, qui ont le plus fort impact sur la consommation en ressources de base de données.|  
+|Requêtes avec des Plans forcés|Listes précédemment forcée des plans à l’aide du magasin de requêtes. <br />Utilisez cette vue pour accéder rapidement à tous les plans actuellement forcés.|  
+|Requêtes avec une Variation élevée|Analyser des requêtes avec une variation de l’exécution élevé par rapport à une des dimensions disponibles, notamment l’utilisation de durée, temps UC, e/s et mémoire de l’intervalle souhaité.<br />Utilisez cette vue pour identifier les requêtes avec des performances largement variant qui peuvent être ayant un impact sur expérience utilisateur dans vos applications.|  
+|Requêtes suivies|Suit l’exécution des requêtes les plus importantes en temps réel. En règle générale, vous utilisez cette vue quand certaines de vos requêtes sont soumises à des plans forcés et que vous voulez vérifier que les performances des requêtes sont stables.|
   
 > [!TIP]  
 >  Pour savoir comment identifier les principales requêtes consommatrices de ressources et corriger celles qui ont régressé en raison d’un changement de plan à l’aide de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], consultez les blogs @Azure sur le [magasin de requêtes](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
- Quand vous identifiez une requête dont les performances ne sont pas optimales, votre action dépend de la nature du problème.  
+ Lorsque vous identifiez une requête avec des performances optimales, votre action dépend de la nature du problème.  
   
 -   Si la requête a été exécutée avec plusieurs plans et que le dernier est nettement plus mauvais que le précédent, vous pouvez utiliser le mécanisme de forçage de plan pour forcer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à toujours utiliser le plan optimal pour les exécutions futures.  
   
      ![magasin de requêtes-forcer le plan](../../relational-databases/performance/media/query-store-force-plan.png "magasin de requêtes-forcer le plan")  
-  
+
+> [!NOTE]  
+> Le graphique ci-dessus peut inclure des formes différentes pour les plans de requête spécifique, avec les significations suivantes pour chaque état possible :<br />  
+> |Graphique à base de formes|Signification|  
+> |-------------------|-------------|
+> |Cercle|Requête terminée (exécution normal terminée avec succès)|
+> |Carré|Annulé (Client initié abandonnée de l’exécution)|
+> |Triangle|Échec (exécution de l’Exception abandonnée)|
+> En outre, la taille de la forme reflète le nombre d’exécutions de requête dans l’intervalle de temps spécifié, l’augmentation de taille avec un plus grand nombre d’exécutions.  
+
 -   Vous pouvez en déduire qu’il manque un index à votre requête pour qu’elle s’exécute de façon optimale. Ces informations apparaissent dans le plan d’exécution de requête. Créez l’index manquant et vérifiez les performances de requête en utilisant le magasin de requêtes.  
   
      ![magasin de requêtes-afficher le plan](../../relational-databases/performance/media/query-store-show-plan.png "magasin de requêtes-afficher le plan")  
@@ -166,7 +177,7 @@ Les vues du magasin de requêtes de[!INCLUDE[ssManStudio](../../includes/ssmanst
 ##  <a name="Verify"></a> Verify Query Store is Collecting Query Data Continuously  
  Le magasin de requêtes peut modifier discrètement le mode d’opération. Vous avez donc tout intérêt à surveiller régulièrement l’état du magasin de requêtes pour vérifier qu’il fonctionne bien et prendre des mesures pour éviter des défaillances dont les causes étaient évitables. Exécutez la requête suivante pour déterminer le mode d’opération et afficher les paramètres les plus pertinents :  
   
-```  
+```tsql
 USE [QueryStoreDB];  
 GO  
   
@@ -187,13 +198,13 @@ FROM sys.database_query_store_options;
   
 -   Nettoyez les données du magasin de requêtes à l’aide de l’instruction suivante :  
   
-    ```  
+    ```tsql  
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
  Vous pouvez appliquer une ou deux de ces mesures en exécutant l’instruction suivante qui remet explicitement le mode d’opération en lecture-écriture :  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);  
 ```  
@@ -209,7 +220,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 ### <a name="error-state"></a>État d’erreur  
  Pour récupérer le magasin de requêtes, essayez de définir explicitement le mode lecture-écriture et vérifiez à nouveau l’état réel.  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);    
 GO  
@@ -221,9 +232,13 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
- Si le problème persiste, cela signifie que les données du magasin de requêtes sont altérées sur le disque. Vous devez effacer le contenu du magasin de requêtes avant de demander le mode lecture-écriture.  
+ Si le problème persiste, cela signifie que le magasin de requêtes données sont conservées sur le disque.
+ 
+ Magasin de requêtes peut être récupéré en exécutant **sp_query_store_consistency_check** une procédure stockée dans la base de données concernée.
+ 
+ Si cela n’a pas, vous pouvez essayer d’effacer le magasin de requêtes avant de demander le mode lecture-écriture.  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE CLEAR;  
 GO  
@@ -285,7 +300,7 @@ Par conséquent, votre charge de travail ne fonctionnera pas de façon optimale 
 ##  <a name="CheckForced"></a> Check the Status of Forced Plans Regularly  
  Le forçage de plan est un mécanisme pratique qui permet de corriger les problèmes de performances des requêtes importantes et de les rendre plus prévisibles. Or, comme pour les indicateurs de plan et les repères de plan, forcer un plan n’est pas la garantie qu’il sera utilisé dans les exécutions futures. En règle générale, quand le schéma de base de données change au point que les objets référencés par le plan d’exécution sont modifiés ou supprimés, le forçage de plan échoue. Dans ce cas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a recours à la recompilation des requêtes et la raison réelle de l’échec du forçage apparaît dans [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). La requête suivante retourne des informations sur les plans forcés :  
   
-```  
+```tsql  
 USE [QueryStoreDB];  
 GO  
   
@@ -307,6 +322,5 @@ Si vous renommez une base de données, le forçage de plan échoue, ce qui entra
  [Procédures stockées du magasin de requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Utilisation du magasin de requêtes avec l’OLTP en mémoire](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [Surveillance des performances à l’aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
-  
   
 

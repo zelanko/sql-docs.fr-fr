@@ -1,36 +1,41 @@
 ---
-title: "Code personnalis&#233; et r&#233;f&#233;rences d&#39;assembly dans les expressions du Concepteur de rapports (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "éléments [Reporting Services], expressions"
-  - "données [Reporting Services], expressions"
-  - "expressions [Reporting Services], à propos des expressions"
-  - "expressions [Reporting Services]"
-  - "SSRS, expressions"
-  - "formules [Reporting Services]"
-  - "manipulation de données [Reporting Services]"
-  - "SQL Server Reporting Services, expressions"
+title: "Code personnalisé et références d’Assembly dans les Expressions de rapport du concepteur (SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- items [Reporting Services], expressions
+- data [Reporting Services], expressions
+- expressions [Reporting Services], about expressions
+- expressions [Reporting Services]
+- SSRS, expressions
+- formulas [Reporting Services]
+- data manipulation [Reporting Services]
+- SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 caps.latest.revision: 77
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 77
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dc8491006425de79f8e96be1affb10687a1553f9
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Code personnalis&#233; et r&#233;f&#233;rences d&#39;assembly dans les expressions du Concepteur de rapports (SSRS)
-  Vous pouvez ajouter des références à du code personnalisé incorporé dans un rapport ou à des assemblys personnalisés que vous générez et enregistrez sur votre ordinateur et déployez sur le serveur de rapports. L'incorporation de code convient dans le cas de constantes personnalisées, de fonctions complexes ou de fonctions utilisées plusieurs fois dans un même rapport. Quant aux assemblys personnalisés, il est préférable de les utiliser si vous voulez centraliser du code en un emplacement unique et le partager en vue de son utilisation par plusieurs rapports. Le code personnalisé peut inclure de nouvelles constantes personnalisées, variables, fonctions ou sous-routines. Vous pouvez inclure des références en lecture seule à des collections intégrées, telles que la collection de paramètres. Cependant, les fonctions personnalisées ne peuvent pas recevoir des ensembles de valeurs de données de rapport : les agrégations personnalisées ne sont notamment pas prises en charge.  
+# <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Code personnalisé et références d'assembly dans les expressions du Concepteur de rapports (SSRS)
+  Vous pouvez ajouter des références à du code personnalisé incorporé dans un rapport ou à des assemblys personnalisés que vous générez et enregistrez sur votre ordinateur et déployez sur le serveur de rapports. L'incorporation de code convient dans le cas de constantes personnalisées, de fonctions complexes ou de fonctions utilisées plusieurs fois dans un même rapport. Quant aux assemblys personnalisés, il est préférable de les utiliser si vous voulez centraliser du code en un emplacement unique et le partager en vue de son utilisation par plusieurs rapports. Le code personnalisé peut inclure de nouvelles constantes personnalisées, variables, fonctions ou sous-routines. Vous pouvez inclure des références en lecture seule à des collections intégrées, telles que la collection de paramètres. Cependant, les fonctions personnalisées ne peuvent pas recevoir des ensembles de valeurs de données de rapport : les agrégations personnalisées ne sont notamment pas prises en charge.  
   
 > [!IMPORTANT]  
->  Pour les calculs pour lesquels le temps est important qui sont évalués une fois au moment de l'exécution et qui doivent conserver la même valeur pendant le traitement du rapport, voyez s'il convient d'utiliser une variable de rapport ou une variable de groupe. Pour plus d’informations, consultez [Références à des collections de variables de rapport et de groupe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-and-group-variables-collections-references-report-builder-and-ssrs.md).  
+>  Pour les calculs pour lesquels le temps est important qui sont évalués une fois au moment de l'exécution et qui doivent conserver la même valeur pendant le traitement du rapport, voyez s'il convient d'utiliser une variable de rapport ou une variable de groupe. Pour plus d’informations, consultez [Références à des collections de variables de rapport et de groupe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md).  
   
  Le Concepteur de rapports est l'environnement de création recommandé pour ajouter du code personnalisé à un rapport. Le Générateur de rapports prend en charge le traitement des rapports qui contiennent des expressions valides, ou qui incluent des références à des assemblys personnalisés sur un serveur de rapports. Le Générateur de rapports ne permet pas d'ajouter une référence à un assembly personnalisé.  
   
@@ -50,14 +55,14 @@ caps.handback.revision: 77
 2.  Afficher l'aperçu d'un rapport avec des références aux assemblys personnalisés en mode local.  
   
 ##  <a name="Common"></a> Intégration de références aux fonctions couramment utilisées  
- Utilisez la boîte de dialogue **Expression** pour consulter une liste classée par catégorie de fonctions courantes intégrées à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Lorsque vous développez **Fonctions communes** et cliquez sur une catégorie, le volet **Élément** affiche la liste des fonctions que vous incluez dans une expression. Les fonctions courantes incluent des classes provenant des espaces de noms [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> et <xref:System.Convert> ainsi que des fonctions de la bibliothèque d’exécutables [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Pour plus de commodité, vous pouvez consulter les fonctions le plus communément utilisées dans la boîte de dialogue **Expression** , où elles sont répertoriées par catégorie : Texte, Date et heure, Math, Inspection, Flux de programme, Agrégat, Financier, Conversion et Divers. Les fonctions moins souvent utilisées n'apparaissent pas dans la liste, mais peuvent cependant être utilisées dans une expression.  
+ Utilisez la boîte de dialogue **Expression** pour consulter une liste classée par catégorie de fonctions courantes intégrées à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Lorsque vous développez **Fonctions communes** et cliquez sur une catégorie, le volet **Élément** affiche la liste des fonctions que vous incluez dans une expression. Les fonctions courantes incluent des classes à partir de la [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> et <xref:System.Convert> espaces de noms et [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] les fonctions de bibliothèque Runtime. Pour plus de commodité, vous pouvez consulter les fonctions le plus communément utilisées dans la boîte de dialogue **Expression** , où elles sont répertoriées par catégorie : Texte, Date et heure, Math, Inspection, Flux de programme, Agrégat, Financier, Conversion et Divers. Les fonctions moins souvent utilisées n'apparaissent pas dans la liste, mais peuvent cependant être utilisées dans une expression.  
   
  Pour utiliser une fonction intégrée, double-cliquez sur son nom dans le volet Élément. Une description de la fonction s'affiche dans le volet Description et un exemple de l'appel de la fonction apparaît dans le volet d'exemple. Dans le volet du code, quand vous tapez le nom de la fonction suivi d’une parenthèse ouvrante **(**, l’aide d’IntelliSense affiche chaque syntaxe valide pour l’appel de la fonction. Par exemple, pour calculer la valeur maximale pour un champ nommé `Quantity` dans une table, ajoutez l'expression simple `=Max(` au volet du code, puis utilisez les balises actives pour consulter toutes les syntaxes valides possibles pour l'appel de la fonction. Pour compléter cet exemple, tapez `=Max(Fields!Quantity.Value)`.  
   
- Pour plus d’informations sur chaque fonction, consultez <xref:System.Math>, <xref:System.Convert> et [Membres de la bibliothèque runtime Visual Basic](http://go.microsoft.com/fwlink/?LinkId=198941) sur MSDN.  
+ Pour plus d’informations sur chaque fonction, consultez <xref:System.Math>, <xref:System.Convert>, et [membres de la bibliothèque Runtime Visual Basic](http://go.microsoft.com/fwlink/?LinkId=198941) sur MSDN.  
   
 ##  <a name="NotCommon"></a> Intégration de références aux fonctions moins couramment utilisées  
- Pour inclure une référence à d’autres espaces de noms CLR moins couramment utilisés, vous devez utiliser une référence complète, par exemple <xref:System.Text.StringBuilder>. IntelliSense n'est pas pris en charge dans le volet du code de la boîte de dialogue **Expression** pour ces fonctions moins couramment utilisées.  
+ Pour inclure une référence à d’autres moins couramment utilisées espaces de noms CLR, vous devez utiliser une référence qualifiée complète, par exemple, <xref:System.Text.StringBuilder>. IntelliSense n'est pas pris en charge dans le volet du code de la boîte de dialogue **Expression** pour ces fonctions moins couramment utilisées.  
   
  Pour plus d'informations, consultez [Membres de la bibliothèque runtime Visual Basic](http://go.microsoft.com/fwlink/?LinkId=198941) sur MSDN.  
   
@@ -114,7 +119,7 @@ Public Function FixSpelling(ByVal s As String) As String
 End Function  
 ```  
   
- Pour plus d’informations sur les collections d’objets intégrées et leur initialisation, consultez [Références à des champs Globals et Users prédéfinis &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-globals-and-users-references-report-builder-and-ssrs.md) et [Initialisation d’objets Assembly personnalisés](../../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md).  
+ Pour plus d’informations sur les collections d’objets intégrées et leur initialisation, consultez [Références à des champs Globals et Users prédéfinis &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md) et [Initialisation d’objets Assembly personnalisés](../../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md).  
   
 ##  <a name="Parameters"></a> Intégration de références à des paramètres de code  
  Vous pouvez référencer la collection globale de paramètres via du code personnalisé dans un bloc de code de la définition de rapport ou dans un assembly personnalisé que vous fournissez. La collection de paramètres est en lecture seule et ne possède aucun itérateur public. Vous ne pouvez pas utiliser de construction [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **For Each** pour parcourir la collection. Vous devez connaître le nom du paramètre défini dans la définition de rapport pour pouvoir ensuite le référencer dans votre code. Cependant, vous pouvez effectuer une itération dans toutes les valeurs d’un paramètre à valeurs multiples.  
@@ -180,7 +185,7 @@ End Function
  Pour plus d'informations sur l'accès à votre code, consultez [Accessing Custom Assemblies Through Expressions](../../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md).  
   
 ##  <a name="collections"></a> Passage de collections intégrées dans les assemblys personnalisés  
- Si vous voulez transmettre des collections intégrées, telles que les collections *Globals* ou *Parameters*, dans un assembly personnalisé pour le traitement, vous devez ajouter une référence d’assembly dans votre projet de code au niveau de l’assembly qui définit les collections intégrées, et vous devez accéder à l’espace de noms correct. Selon que vous développez l'assembly personnalisé pour un rapport exécuté sur un serveur de rapports (rapport du serveur) ou un rapport exécuté localement dans une application .NET. (rapport local), l'assembly que vous devez référencer est différent. Voir ci-dessous pour plus de détails.  
+ Si vous voulez transmettre des collections intégrées, telles que les collections *Globals* ou *Parameters* , dans un assembly personnalisé pour le traitement, vous devez ajouter une référence d’assembly dans votre projet de code au niveau de l’assembly qui définit les collections intégrées, et vous devez accéder à l’espace de noms correct. Selon que vous développez l'assembly personnalisé pour un rapport exécuté sur un serveur de rapports (rapport du serveur) ou un rapport exécuté localement dans une application .NET. (rapport local), l'assembly que vous devez référencer est différent. Voir ci-dessous pour plus de détails.  
   
 -   **Espace de noms :** Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
   
@@ -190,9 +195,9 @@ End Function
   
  Comme le contenu des collections *Fields* et *ReportItems* peut changer dynamiquement pendant l’exécution, vous ne devriez pas les conserver entre les appels à l’assembly personnalisé (par exemple, dans une variable membre). La même recommandation s'applique généralement à toutes les collections intégrées.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Ajouter du code à un rapport &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
- [Utilisation d'assemblys personnalisés avec des rapports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [Utilisation d’assemblys personnalisés avec des rapports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Ajouter une référence d’assembly à un rapport &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
  [Didacticiels sur Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   

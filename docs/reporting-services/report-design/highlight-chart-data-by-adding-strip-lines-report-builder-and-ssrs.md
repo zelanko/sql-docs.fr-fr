@@ -1,37 +1,42 @@
 ---
-title: "Mettre en surbrillance des donn&#233;es de graphique en ajoutant des bandes (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Mettez en surbrillance les données du graphique en ajoutant des bandes (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04bc46bc61a1091d715e348e44ac7ee22e4a891d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Mettre en surbrillance des donn&#233;es de graphique en ajoutant des bandes (G&#233;n&#233;rateur de rapports et SSRS)
+# <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>Mettre en surbrillance des données de graphique en ajoutant des bandes (Générateur de rapports et SSRS)
   Les franges sont des plages horizontales ou verticales qui assombrissent l'arrière-plan du graphique à intervalles réguliers ou personnalisés. Vous pouvez utiliser des bandes pour obtenir les résultats suivants :  
   
 -   Améliorer la lisibilité des valeurs individuelles sur le graphique. Spécifiez des bandes à des intervalles réguliers pour séparer les points de données lors de la lecture du graphique.  
   
 -   Mettre en surbrillance les dates qui arrivent à des intervalles réguliers. Par exemple, dans un état des ventes, vous pouvez utiliser des bandes pour identifier les points des données indiquant les week-ends.  
   
--   Mettre en surbrillance une plage clé spécifique. À l'aide de l'exemple précédent, vous pouvez utiliser une bande pour mettre en surbrillance la plage la plus élevée des ventes qui se trouve entre 80 et 100 $.  
+-   Mettre en surbrillance une plage clé spécifique. À l'aide de l'exemple précédent, vous pouvez utiliser une bande pour mettre en surbrillance la plage la plus élevée des ventes qui se trouve entre 80 et 100 $.  
   
  Les bandes ne sont pas applicables aux types de graphiques à base de forme ou polaires.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Pour afficher des franges entrelacées à des intervalles réguliers sur un graphique  
+### <a name="to-display-interlaced-strip-lines-at-regular-intervals-on-a-chart"></a>Pour afficher des franges entrelacées à des intervalles réguliers sur un graphique  
   
 1.  Pour afficher des franges horizontales, cliquez avec le bouton droit sur l’axe vertical du graphique, puis cliquez sur **Propriétés de l’axe vertical**.  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 6
   
 3.  (Facultatif) Spécifiez une couleur pour les franges à l’aide de la liste déroulante **Couleur** adjacente.  
   
-### Pour afficher des franges entrelacées à des intervalles personnalisés sur un graphique  
+### <a name="to-display-interlaced-strip-lines-at-custom-intervals-on-a-chart"></a>Pour afficher des franges entrelacées à des intervalles personnalisés sur un graphique  
   
 1.  Pour afficher des franges horizontales, cliquez avec le bouton droit sur l’axe vertical du graphique, puis cliquez sur **Propriétés de l’axe vertical**.  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  Par défaut, Intervalle a la valeur Auto, ce qui signifie que le graphique ne calculera pas d’intervalle pour les bandes personnalisées. Le graphique ne calcule des intervalles pour les bandes que si une valeur d'intervalle est définie.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Ajouter une moyenne mobile à un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  

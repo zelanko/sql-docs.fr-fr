@@ -1,23 +1,28 @@
 ---
-title: "Exportation vers XML (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Exportation vers XML (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: e3bbe7d68c378bd74e70ceb0c6d219da427db099
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Exportation vers XML (G&#233;n&#233;rateur de rapports et SSRS)
+# <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportation vers XML (Générateur de rapports et SSRS)
   L’extension de rendu XML retourne un rapport paginé au format XML. Le schéma du rapport XML est spécifique du rapport et contient uniquement des données. Les informations de mise en page ne sont pas rendues et la pagination n'est pas conservée par l'extension de rendu XML. La sortie XML générée par cette extension peut être importée dans une base de données, utilisée en tant que message de données XML ou envoyée à une application personnalisée.  
   
 > [!NOTE]  
@@ -53,7 +58,6 @@ caps.handback.revision: 8
   
 -   **Images, lines, and custom report items** sont ignorés.  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
 ##  <a name="DataTypes"></a> Types de données  
  L'élément zone de texte ou attribut se voit affecter un type de données XSD sur la base des valeurs affichées par la zone de texte.  
@@ -62,7 +66,7 @@ caps.handback.revision: 8
 |--------------------------------|---------------------------|  
 |**Int16**, **Int32**, **Int64**, **UInt16**, **UInt32**, **UInt64**, **Byte**, **SByte**|**xsd:integer**|  
 |**Decimal** (ou **Decimal** et tout type de données entier ou octet)|**xsd:decimal**|  
-|**Float**(ou **Decimal** et tout type de données entier ou octet)|**xsd:float**|  
+|**Float** (ou **Decimal** et tout type de données entier ou octet)|**xsd:float**|  
 |**Double** (ou **Decimal** et tout type de données entier ou octet)|**xsd:double**|  
 |**DateTime ou DateTime Offset**|**xsd:dateTime**|  
 |**Time**|**xsd:string**|  
@@ -70,17 +74,16 @@ caps.handback.revision: 8
 |**String**, **Char**|**xsd:string**|  
 |Autres|**xsd:string**|  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
 ##  <a name="XMLSpecificRenderingRules"></a> Règles de rendu spécifiques à XML  
  Les sections suivantes décrivent comment les extensions de rendu XML interprètent les éléments dans le rapport.  
   
-### Corps du rapport  
+### <a name="report-body"></a>Corps du rapport  
  Un rapport est rendu sous la forme de l'élément racine du document XML. Le nom de l’élément provient de la propriété DataElementName définie dans le volet Propriétés.  
   
  Les définitions d'espaces de noms XML et les attributs de référence de schéma sont également inclus dans l'élément de rapport. Les variables sont notées en gras :  
   
- \<**Report** xmlns=”**SchemaName**” xmlns:xsi=”http://www.w3.org/2001/XMLSchema-instance” xsi:**schemaLocation**=”**SchemaNameReportURL**&amp;rc%3aSchema=true” Name=”ReportName”>  
+ <**Rapport** xmlns = »**SchemaName**» xmlns : xsi = « http://www.w3.org/2001/XMLSchema-instance » xsi :**schemaLocation**= «**SchemaNameReportURL**&amp;rc % 3aSchema = true » nom = « ReportName » >  
   
  Les valeurs des variables sont les suivantes :  
   
@@ -91,48 +94,47 @@ caps.handback.revision: 8
 |SchemaName|Report.SchemaName. Si Null, alors Report.Name. Si Report.Name est utilisé, il est d'abord encodé avec XmlConvert.EncodeLocalName.|  
 |ReportName|Nom du rapport.|  
   
-### Zones de texte  
+### <a name="text-boxes"></a>Zones de texte  
  Les zones de texte sont rendues sous la forme d’éléments ou d’attributs en fonction de la propriété RDL DataElementStyle. Le nom de l’élément ou de l’attribut provient de la propriété RDL TextBox.DataElementName.  
   
-### Graphiques, barres de données et graphiques sparkline  
+### <a name="charts-data-bars-and-sparklines"></a>Graphiques, barres de données et graphiques sparkline  
  Les graphiques, les barres de données et les graphiques sparkline sont rendus au format XML. Les données sont structurées.  
   
-### Jauges et indicateurs  
+### <a name="gauges-and-indicators"></a>Jauges et indicateurs  
  Les jauges et les indicateurs sont rendus au format XML. Les données sont structurées.  
   
-### Sous-rapports  
+### <a name="subreports"></a>Sous-rapports  
  Un sous-rapport est rendu sous la forme d'un élément. Le nom de l’élément provient de la propriété RDL DataElementName. Le paramètre de propriété TextBoxesAsElements du rapport remplace celui du sous-rapport. Les attributs d'espace de noms et XSLT ne sont pas ajoutés à l'élément de sous-rapport.  
   
-### Rectangles  
+### <a name="rectangles"></a>Rectangles  
  Un rectangle est rendu sous la forme d'un élément. Le nom de l’élément provient de la propriété RDL DataElementName.  
   
-### Éléments de rapport personnalisés  
+### <a name="custom-report-items"></a>Éléments de rapport personnalisés  
  Les éléments de rapport personnalisés, CustomReportItems (CRI), ne sont pas visibles à l’extension de rendu. Si le rapport contient un élément de rapport personnalisé, l'extension de rendu le rend sous la forme d'un élément de rapport classique.  
   
-### Images  
+### <a name="images"></a>Images  
  Les images ne sont pas rendues.  
   
-### Lignes  
+### <a name="lines"></a>Lignes  
  Les lignes ne sont pas rendues.  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
-### Tables, matrices et listes  
+### <a name="tables-matrices-and-lists"></a>Tables, matrices et listes  
  Les tables, matrices et listes sont rendues sous la forme d'un élément. Le nom de l’élément provient de la propriété RDL DataElementName de tableau matriciel.  
   
-#### Lignes et colonnes  
+#### <a name="rows-and-columns"></a>Lignes et colonnes  
  Les colonnes sont rendues dans des lignes.  
   
-#### Angle de tableau matriciel  
+#### <a name="tablix-corner"></a>Angle de tableau matriciel  
  L'angle n'est pas rendu. Seul le contenu de l'angle est rendu.  
   
-#### Cellules de tableau matriciel  
+#### <a name="tablix-cells"></a>Cellules de tableau matriciel  
  Les cellules de tableau matriciel sont rendues sous la forme d'éléments. Le nom de l’élément provient de la propriété RDL DataElementName de la cellule.  
   
-#### Sous-totaux automatiques  
+#### <a name="automatic-subtotals"></a>Sous-totaux automatiques  
  Les sous-totaux automatiques de tableau matriciel ne sont pas rendus.  
   
-#### Éléments de ligne et de colonne qui ne se répètent pas avec un groupe  
+#### <a name="row-and-column-items-that-do-not-repeat-with-a-group"></a>Éléments de ligne et de colonne qui ne se répètent pas avec un groupe  
  Les éléments qui ne se répètent pas avec un groupe, comme les étiquettes, les sous-totaux et les totaux sont rendus sous la forme d'éléments. Le nom de l’élément provient de la propriété RDL TablixMember.DataElementName.  
   
  La propriété TablixMember.DataElementOutput contrôle si un élément non répétitif est rendu.  
@@ -147,40 +149,36 @@ caps.handback.revision: 8
   
  Si un membre non répétitif n'a aucune cellule de tableau matriciel correspondante, il n'est pas rendu. Cela peut se produire dans le cas d'une cellule de tableau matriciel où il s'étend sur plusieurs colonnes.  
   
-#### Lignes et colonnes qui se répètent avec un groupe  
+#### <a name="rows-and-columns-that-repeat-with-a-group"></a>Lignes et colonnes qui se répètent avec un groupe  
  Les lignes et colonnes qui se répètent dans un groupe sont rendues en fonctions des règles Tablix.DataElementOutput. Le nom de l’élément provient de la propriété DataElementName.  
   
  Chaque valeur unique dans un groupe est rendue sous la forme d'un élément enfant du groupe. Le nom de l’élément provient de la propriété Group.DataElementName.  
   
  Si la valeur de la propriété DataElementOutput est égale à Output, l’en-tête d’un élément répétitif est rendu sous la forme d’un enfant de l’élément de détail.  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
 ##  <a name="CustomFormatsXSLTransformations"></a> Formats personnalisés et XSLT  
  Les fichiers XML générés par l'extension de rendu XML peuvent être convertis dans n'importe quel format à l'aide de XSL Transformations (XSLT). Cette fonctionnalité permet de générer des données dans des formats qui ne sont pas déjà pris en charge par des extensions de rendu existantes. Pensez à utiliser l'extension de rendu XML et XSLT avant de tenter de créer votre propre extension de rendu.  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
 ##  <a name="DuplicateName"></a> Noms en double  
  S'il existe des noms d'élément de données en double dans la même étendue, le convertisseur affiche un message d'erreur.  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
 ##  <a name="XSLTTransformations"></a> Transformations XSLT  
  Le convertisseur XML peut appliquer une transformation XSLT côté serveur aux données XML d'origine. Lorsqu'une transformation XSLT est appliquée, le convertisseur génère en sortie le contenu transformé au lieu des données XML d'origine. La transformation a lieu sur le serveur, et non sur le client.  
   
- La transformation XSLT à appliquer à la sortie est définie dans le fichier de définition de rapport avec la propriété DataTransform du rapport ou avec le paramètre XSLT *DeviceInfo*. Si l'une de ces valeurs est définie, la transformation se produit chaque fois que le convertisseur XML est utilisé. Lors de l’utilisation d’abonnements, la transformation XSLT doit être définie dans la propriété RDL DataTransform.  
+ La transformation XSLT à appliquer à la sortie est définie dans le fichier de définition de rapport avec la propriété DataTransform du rapport ou avec le paramètre XSLT *DeviceInfo* . Si l'une de ces valeurs est définie, la transformation se produit chaque fois que le convertisseur XML est utilisé. Lors de l’utilisation d’abonnements, la transformation XSLT doit être définie dans la propriété RDL DataTransform.  
   
  Si un fichier XSLT est spécifié, à la fois par la propriété de définition DataTransform et par le paramètre d’informations de périphérique, la transformation XSLT spécifiée dans DataTransform a lieu en premier, suivie de celle définie par les paramètres d’informations de périphérique.  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
 ###  <a name="DeviceInfo"></a> Paramètres d'informations de périphérique  
- Vous pouvez modifier certains paramètres par défaut de ce convertisseur en modifiant les paramètres d'informations de périphérique, y compris ceux ci-dessous :  
+ Vous pouvez modifier certains paramètres par défaut de ce convertisseur en modifiant les paramètres d'informations de périphérique, y compris ceux ci-dessous :  
   
--   une transformation (XSLT) à appliquer à la sortie XML ;  
+-   une transformation (XSLT) à appliquer à la sortie XML ;  
   
--   le type MIME du document XML ;  
+-   le type MIME du document XML ;  
   
 -   s'il faut appliquer des chaînes de format aux données ;  
   
@@ -194,12 +192,11 @@ caps.handback.revision: 8
   
  Pour plus d'informations, consultez [XML Device Information Settings](../../reporting-services/xml-device-information-settings.md).  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendu des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

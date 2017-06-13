@@ -28,10 +28,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dd4ac1d2f93c1fa776473cdc7b1b99a07b5f8164
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: 204b0e834db9ad1c5fe7d3f08f507629313e3cad
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Utiliser l'Assistant Indexation de texte intégral
@@ -100,11 +100,11 @@ ms.lasthandoff: 04/11/2017
      Spécifiez le groupe de fichiers sur lequel créer l'index de recherche en texte intégral.  
   
      e. Sélectionner une valeur :  
-    |Valeur|Description|  
-    |-----------|-----------------|
+      |Valeur|Description|  
+      |-----------|-----------------|
       |**<default>**| Si la table ou la vue n'est pas partitionnée, sélectionnez cette option pour utiliser le même groupe de fichiers que la table ou la vue sous-jacente. Si la table ou la vue est partitionnée, le groupe de fichiers primaire est utilisé.|
       |**PRIMARY**|Sélectionnez cette option pour utiliser le groupe de fichiers primaire pour le nouvel index de recherche en texte intégral.|
-             *groupe de fichiers par défaut spécifié par l’utilisateur*|S'il existe une liste de mots vides par défaut définie par l'utilisateur, sélectionnez son nom dans la liste pour utiliser ce groupe de fichiers pour le nouvel index de recherche en texte intégral.|  
+      *groupe de fichiers par défaut spécifié par l’utilisateur*|En cas d’une liste de mots vides par défaut définie par l’utilisateur, sélectionnez son nom dans la liste pour utiliser ce groupe de fichiers pour le nouvel index de recherche en texte intégral.|   
   
      
  11. **Sélectionner la liste de mots vides de texte intégral**  

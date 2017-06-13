@@ -1,32 +1,37 @@
 ---
-title: "Collection de champs de dataset (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Collection de champs de DataSet (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 12
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 271d1b4018890ab23db0254b24cbf7664491b848
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Collection de champs de dataset (G&#233;n&#233;rateur de rapports et SSRS)
+# <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Collection de champs de dataset (Générateur de rapports et SSRS)
   Les champs de dataset représentent les données d'une connexion de données. Un champ peut représenter des données numériques ou non numériques. À titre d'exemples, citons des chiffres d'affaires, des totaux de ventes, des noms de client, des identificateurs de base de données, des URL, des images, des données spatiales et des adresses de messagerie. Sur l'aire de conception, les champs s'affichent sous la forme d'expressions dans les éléments de rapport tels que les zones de texte, les tables et les graphiques.  
   
- Un rapport comporte trois types de champs et les affiche dans le volet des données de rapport : champs de dataset, champs calculés de dataset et champs prédéfinis.  
+ Un rapport comporte trois types de champs et les affiche dans le volet des données de rapport : champs de dataset, champs calculés de dataset et champs prédéfinis.  
   
 -   **Champs de dataset.** Métadonnées qui représentent la collection des champs retournés lorsque la requête de dataset s'exécute sur la source de données.  
   
 -   **Champs calculés de dataset.** Champs supplémentaires que vous créez pour le dataset. Chaque champ calculé est créé en évaluant une expression que vous définissez.  
   
--   **Champs prédéfinis.** Métadonnées qui représentent une collection de champs fournie par le Générateur de rapports qui indique des informations sur le rapport, telles que le nom du rapport ou l'heure de son traitement. Pour plus d’informations, consultez [Références à des champs Globals et Users prédéfinis &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-globals-and-users-references-report-builder-and-ssrs.md).  
+-   **Champs prédéfinis.** Métadonnées qui représentent une collection de champs fournie par le Générateur de rapports qui indique des informations sur le rapport, telles que le nom du rapport ou l'heure de son traitement. Pour plus d’informations, consultez [Références à des champs Globals et Users prédéfinis &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
  Les noms de champ de dataset sont enregistrés dans la définition de dataset du rapport. Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
@@ -42,27 +47,24 @@ caps.handback.revision: 12
   
  Pour plus d’informations, consultez [Ajouter, modifier ou actualiser des champs dans le volet des données de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
-### Champs calculés  
+### <a name="calculated-fields"></a>Champs calculés  
  Vous spécifiez un champ calculé manuellement en créant une expression. Les champs calculés peuvent être utilisés pour créer de nouvelles valeurs qui n'existent pas dans la source de données. Un champ calculé peut, par exemple, représenter une nouvelle valeur, un ordre de tri personnalisé pour un jeu de valeurs de champ ou un champ existant converti en type de données différent.  
   
  Les champs calculés sont définis localement pour un rapport et ne peuvent pas être enregistrés dans le cadre d'un dataset partagé.  
   
  Pour plus d’informations, consultez [Ajouter, modifier ou actualiser des champs dans le volet des données de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
-### Entités et champs d'entité  
+### <a name="entities-and-entity-fields"></a>Entités et champs d'entité  
  Si vous utilisez une source de données de modèle de rapport, spécifiez les entités et les champs d'entité en tant que données de rapport. Dans le concepteur de requêtes d'un modèle de rapport, vous pouvez explorer et sélectionner interactivement des entités associées et choisir les champs que vous souhaitez inclure dans votre dataset de rapport. Une fois la requête créée, vous pouvez consulter l'ensemble d'identificateurs d'entité et de champs d'entité dans le volet des données de rapport. Les identificateurs d'entité sont générés automatiquement par le modèle de rapport et ne sont généralement pas visibles par l'utilisateur final.  
   
-### Utilisation des propriétés de champ étendues  
+### <a name="using-extended-field-properties"></a>Utilisation des propriétés de champ étendues  
  Les sources de données qui prennent en charge des requêtes multidimensionnelles, comme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], prennent en charge les propriétés de champ sur les champs. Les propriétés de champ apparaissent dans le jeu de résultats d'une requête, mais ne sont pas visibles dans le volet **Données du rapport** . Elles sont néanmoins disponibles pour les utiliser dans votre rapport. Pour vous référer à la propriété d'un champ, faites glisser le champ dans le rapport et remplacez la propriété par défaut **Value** par le nom de champ de la propriété souhaitée. Dans un cube [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] par exemple, vous pouvez définir des formats pour les valeurs dans les cellules de cube. La valeur mise en forme est disponible à l'aide de la propriété de champ **FormattedValue**. Pour utiliser directement la valeur au lieu d'utiliser une valeur, puis de définir la propriété de format de la zone de texte, faites glisser le champ vers la zone de texte et remplacez l'expression par défaut `=Fields!FieldName.Value` par `=Fields!FieldName.FormattedValue`.  
   
 > [!NOTE]  
->  Certaines propriétés **Field** ne peuvent pas être utilisées pour toutes les sources de données. Les propriétés **Value** et **IsMissing** sont définies pour toutes les sources de données. D’autres propriétés prédéfinies (comme **Key**, **UniqueName** et **ParentUniqueName** pour les sources de données multidimensionnelles) sont prises en charge uniquement si la source de données les fournit. Certains fournisseurs de données prennent en charge les propriétés personnalisées. Pour plus d’informations, consultez les rubriques spécifiques relatives aux propriétés de champ étendues correspondant à votre type de source de données dans [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). Pour obtenir un exemple pour une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Propriétés de champ étendues pour une base de données Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+>  Certaines propriétés **Field** ne peuvent pas être utilisées pour toutes les sources de données. Les propriétés **Value** et **IsMissing** sont définies pour toutes les sources de données. D’autres propriétés prédéfinies (comme **Key**, **UniqueName**et **ParentUniqueName** pour les sources de données multidimensionnelles) sont prises en charge uniquement si la source de données les fournit. Certains fournisseurs de données prennent en charge les propriétés personnalisées. Pour plus d’informations, consultez les rubriques spécifiques relatives aux propriétés de champ étendues correspondant à votre type de source de données dans [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). Par exemple, pour un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] source de données, consultez [propriétés de champ étendues pour une base de données Analysis Services &#40; SSRS &#41; ](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
 ##  <a name="Defaults"></a> Présentation des expressions par défaut pour les champs  
  Une zone de texte peut correspondre à un élément de rapport de zone de texte dans le corps du rapport ou il peut s'agir d'une zone de texte dans une cellule d'une région de données de tableau matriciel. Lorsque vous liez un champ à une zone de texte, l'emplacement de celle-ci détermine l'expression par défaut pour la référence du champ. Dans le corps du rapport, une expression de valeur de zone de texte doit spécifier un agrégat et un dataset. S'il n'existe qu'un seul dataset dans le rapport, cette expression par défaut est créée à votre place. Pour un champ qui représente une valeur numérique, la fonction d'agrégation par défaut est Sum. Pour un champ qui représente une valeur non numérique, l'agrégat par défaut est First.  
@@ -71,20 +73,19 @@ caps.handback.revision: 12
   
  Pour plus d’informations sur les expressions, consultez [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
 ##  <a name="DataTypes"></a> Types de données de champ  
  Lorsque vous créez un dataset, il se peut que les types de données des champs sur la source de données ne correspondent pas exactement aux types de données utilisés dans un rapport. Les types de données peuvent passer par une ou deux couches de mappage. L'extension pour le traitement des données ou le fournisseur de données peuvent mapper les types de données de la source de données en types de données CLR (Common Language Runtime). Les types de données retournés par les extensions pour le traitement des données sont mappés à un sous-ensemble de types de données CLR (Common Language Runtime) à partir du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
- Dans la source de données, les données sont stockées dans des types de données pris en charge par la source de données. Par exemple, les données d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent correspondre à l’un des types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pris en charge, tels que **nvarchar** ou **datetime**. Lorsque vous récupérez des données à partir de la source de données, celles-ci sont transmises par l'intermédiaire d'une extension pour le traitement des données ou d'un fournisseur de données associé au type de source de données. Selon l'extension pour le traitement des données utilisée, les données peuvent être converties à partir des types de données utilisés par la source de données en types de données pris en charge par l'extension pour le traitement des données. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise des types de données pris en charge par le CLR (Common Language Runtime) installé avec [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Le fournisseur de données mappe chaque colonne contenue dans le jeu de résultats du type de données natif en un type de données CLR (Common Language Runtime) [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+ Dans la source de données, les données sont stockées dans des types de données pris en charge par la source de données. Par exemple, les données d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent correspondre à l’un des types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pris en charge, tels que **nvarchar** ou **datetime**. Lorsque vous récupérez des données à partir de la source de données, celles-ci sont transmises par l'intermédiaire d'une extension pour le traitement des données ou d'un fournisseur de données associé au type de source de données. Selon l'extension pour le traitement des données utilisée, les données peuvent être converties à partir des types de données utilisés par la source de données en types de données pris en charge par l'extension pour le traitement des données. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise des types de données pris en charge par le CLR (Common Language Runtime) installé avec [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Le fournisseur de données mappe chaque colonne contenue dans le jeu de résultats du type de données natif en un type de données CLR (Common Language Runtime) [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
  À chaque étape, les données sont représentées par les types de données comme décrit dans la liste suivante :  
   
 -   **Source de données** Il s'agit des types de données pris en charge par la version du type de source de données à laquelle vous vous connectez.  
   
-     Par exemple, les types de données classiques pour une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluent **int**, **datetime** et **varchar**. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a introduit la prise en charge des types de données **date**, **time**, **datetimetz** et **datetime2**. Pour plus d’informations, consultez [Types de données (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98362).  
+     Par exemple, les types de données classiques pour une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluent **int**, **datetime**et **varchar**. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a introduit la prise en charge des types de données **date**, **time**, **datetimetz**et **datetime2**. Pour plus d’informations, consultez [Types de données (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98362).  
   
--   **Fournisseur de données ou extension pour le traitement des données** Il s'agit des types de données pris en charge par la version du fournisseur de données ou de l'extension pour le traitement des données que vous sélectionnez lorsque vous vous connectez à la source de données. Les fournisseurs de données se basant sur le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] utilisent des types de données pris en charge par le CLR. Pour plus d’informations sur les types de données des fournisseurs de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], consultez [Mappages de types de données (ADO.NET)](http://go.microsoft.com/fwlink/?LinkId=112178) et [Utilisation des types de base](http://go.microsoft.com/fwlink/?LinkId=112177) sur MSDN.  
+-   **Fournisseur de données ou extension pour le traitement des données** Il s'agit des types de données pris en charge par la version du fournisseur de données ou de l'extension pour le traitement des données que vous sélectionnez lorsque vous vous connectez à la source de données. Les fournisseurs de données se basant sur le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] utilisent des types de données pris en charge par le CLR. Pour plus d’informations sur les types de données des fournisseurs de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , consultez [Mappages de types de données (ADO.NET)](http://go.microsoft.com/fwlink/?LinkId=112178) et [Utilisation des types de base](http://go.microsoft.com/fwlink/?LinkId=112177) sur MSDN.  
   
      Les types de données classiques pris en charge par le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] sont **Int32** et **String**, par exemple. Les dates et heures de calendrier sont prises en charge par la structure **DateTime** . [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 Service Pack 1 a introduit la prise en charge de la structure **DateTimeOffset** pour les dates avec un décalage de fuseau horaire.  
   
@@ -106,15 +107,13 @@ caps.handback.revision: 12
   
  Pour plus d’informations sur l’ajout de références dans un champ de dataset à partir d’une expression, consultez [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
 ##  <a name="MissingFields"></a> Détection de champs manquants lors de l'exécution  
- Lorsque le rapport est traité, le jeu de résultats pour un dataset peut ne pas contenir de valeurs pour toutes les colonnes spécifiées, car les colonnes n'existent plus dans la source de données. Vous pouvez utiliser la propriété de champ IsMissing pour détecter si des valeurs ont été retournées pour un champ au moment de l’exécution. Pour plus d’informations, consultez [Référence à une collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/dataset-fields-collection-references-report-builder-and-ssrs.md).  
+ Lorsque le rapport est traité, le jeu de résultats pour un dataset peut ne pas contenir de valeurs pour toutes les colonnes spécifiées, car les colonnes n'existent plus dans la source de données. Vous pouvez utiliser la propriété de champ IsMissing pour détecter si des valeurs ont été retournées pour un champ au moment de l’exécution. Pour plus d’informations, consultez [Références à une collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
-## Voir aussi  
- [Boîte de dialogue Propriétés du dataset, Champs &#40;Générateur de rapports&#41;](../Topic/Dataset%20Properties%20Dialog%20Box,%20Fields%20\(Report%20Builder\).md)   
+## <a name="see-also"></a>Voir aussi  
+ [Boîte de dialogue Propriétés du dataset, Champs &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
  [Parties de rapports et datasets dans le Générateur de rapports](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

@@ -1,26 +1,31 @@
 ---
-title: "Cr&#233;er un dataset partag&#233; ou incorpor&#233; (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Créer un Dataset partagé ou incorporé (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 10/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 25caf057e8d75fd3ed463f4165b3259331d18182
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Cr&#233;er un dataset partag&#233; ou incorpor&#233; (G&#233;n&#233;rateur de rapports et SSRS)
-Les jeux de données incorporés doivent être utilisés dans un seul rapport [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]. Les jeux de données partagés d’un serveur de rapports peuvent être utilisés par plusieurs rapports, mobiles et paginés. Pour créer un jeu de données, vous devez disposer d’une source de données incorporée ou partagée.  
+# <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Créer un dataset partagé ou incorporé (Générateur de rapports et SSRS)
+Les jeux de données incorporés doivent être utilisés dans un seul rapport [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Les jeux de données partagés d’un serveur de rapports peuvent être utilisés par plusieurs rapports, mobiles et paginés. Pour créer un jeu de données, vous devez disposer d’une source de données incorporée ou partagée.  
   
- Utilisez le **Générateur de rapports** pour effectuer les tâches suivantes :  
+ Utilisez le **Générateur de rapports** pour effectuer les tâches suivantes :  
   
 1.  Créez un dataset partagé en mode création de dataset. Les datasets partagés doivent utiliser des sources de données partagées publiées.  
   
@@ -28,7 +33,7 @@ Les jeux de données incorporés doivent être utilisés dans un seul rapport [!
   
 3.   Enregistrez le dataset directement sur le serveur de rapports ou le site SharePoint.  
   
- Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], utilisez le **Concepteur de rapports** pour effectuer les tâches suivantes :  
+ Dans **, utilisez le** Concepteur de rapports [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour effectuer les tâches suivantes :  
   
 1.  Créez un dataset partagé dans l'Explorateur de solutions. Les datasets partagés doivent utiliser les sources de données du dossier Sources de données partagées dans l'Explorateur de solutions.  
   
@@ -41,7 +46,7 @@ Les jeux de données incorporés doivent être utilisés dans un seul rapport [!
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Pour ouvrir le Générateur de rapports et créer un dataset partagé  
+## <a name="to-open-report-builder-and-create-a-shared-dataset"></a>Pour ouvrir le Générateur de rapports et créer un dataset partagé  
   
 1.  Ouvrez le Générateur de rapports. Le volet **Nouveau rapport ou dataset** s'ouvre, comme indiqué dans l'illustration suivante :  
   
@@ -62,7 +67,7 @@ Les jeux de données incorporés doivent être utilisés dans un seul rapport [!
   
 7.  Pour quitter le Générateur de rapports, cliquez sur **Générateur de rapports**, puis sur **Quitter le Générateur de rapports**. Pour utiliser des rapports, cliquez sur **Générateur de rapports**, puis sur **Nouveau** ou **Ouvrir**.  
   
-## Pour définir des options de paramètre de requête  
+## <a name="to-set-query-parameter-options"></a>Pour définir des options de paramètre de requête  
   
 1.  Ouvrez le Générateur de rapports.  
   
@@ -81,7 +86,7 @@ Les jeux de données incorporés doivent être utilisés dans un seul rapport [!
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
   
-## Pour créer un dataset à partir d'une base de données relationnelle SQL Server  
+## <a name="to-create-a-dataset-from-a-sql-server-relational-database"></a>Pour créer un dataset à partir d'une base de données relationnelle SQL Server  
   
 1.  Dans le volet Données du rapport, cliquez avec le bouton droit sur le nom de la source de données, puis cliquez sur **Ajouter un dataset**. La page **Requête** de la boîte de dialogue **Propriétés du dataset** s'ouvre.  
   
@@ -110,11 +115,12 @@ Les jeux de données incorporés doivent être utilisés dans un seul rapport [!
   
      Le dataset et sa collection de champs s'affichent dans le volet des données de rapport sous le nœud de source de données.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)   
+ [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [Datasets incorporés et partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
+

@@ -1,23 +1,28 @@
 ---
-title: "Inclure des indicateurs et des jauges dans un panneau de jauge (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Inclure des indicateurs et des jauges dans un panneau de jauge (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eb8b6569d75891a2922b283fbde37840910213db
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Inclure des indicateurs et des jauges dans un panneau de jauge (G&#233;n&#233;rateur de rapports et SSRS)
+# <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>Inclure des indicateurs et des jauges dans un panneau de jauge (Générateur de rapports et SSRS)
   Le panneau de jauge est le conteneur de niveau supérieur qui contient un ou plusieurs jauges et indicateurs. Les indicateurs peuvent être incorporés dans les jauges ou placés en regard de celles-ci dans le panneau de jauge.  
   
  Si l'indicateur et la jauge sont adjacents dans le panneau de jauge et affichent des données de champs différents, vous pouvez ajouter des étiquettes pour clarifier les données transmises par la jauge et l'indicateur.  
@@ -27,7 +32,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Pour incorporer un indicateur dans une jauge  
+### <a name="to-embed-an-indicator-in-a-gauge"></a>Pour incorporer un indicateur dans une jauge  
   
 1.  Ouvrez un rapport existant ou créez un rapport qui contient une table et une matrice avec les données que vous souhaitez afficher.   
   
@@ -41,23 +46,23 @@ caps.handback.revision: 8
   
 6.  Cliquez sur la jauge. Le volet **Données de la jauge** s’ouvre.  
   
-7.  Dans la zone **Valeurs**, dans la zone de liste **(Non spécifié)**, cliquez sur le champ dont vous souhaitez afficher les valeurs dans la jauge. Vous pouvez également faire glisser le champ à utiliser à partir du dataset du rapport.  
+7.  Dans la zone **Valeurs** , dans la zone de liste **(Non spécifié)** , cliquez sur le champ dont vous souhaitez afficher les valeurs dans la jauge. Vous pouvez également faire glisser le champ à utiliser à partir du dataset du rapport.  
   
 8.  Cliquez avec le bouton droit sur la jauge, cliquez sur **Ajouter un indicateur**, puis sur **Enfant**. La boîte de dialogue **Sélectionner un style d’indicateur** s’ouvre.  
   
-9. Dans la boîte de dialogue **Sélectionner un style d’indicateur**, dans le volet gauche, cliquez sur le type d’indicateur de votre choix, puis sur le jeu d’indicateurs.  
+9. Dans la boîte de dialogue **Sélectionner un style d’indicateur** , dans le volet gauche, cliquez sur le type d’indicateur de votre choix, puis sur le jeu d’indicateurs.  
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 11. Cliquez sur l'indicateur. Le volet **Données de la jauge** s’ouvre.  
   
-12. Dans la zone **Valeurs**, dans la zone de liste **(Non spécifié)**, cliquez sur le champ dont vous souhaitez afficher les valeurs sous la forme d’un indicateur. Vous pouvez également faire glisser le champ à utiliser à partir du dataset du rapport.  
+12. Dans la zone **Valeurs** , dans la zone de liste **(Non spécifié)** , cliquez sur le champ dont vous souhaitez afficher les valeurs sous la forme d’un indicateur. Vous pouvez également faire glisser le champ à utiliser à partir du dataset du rapport.  
   
      Il peut s'agir du même champ que celui que vous utilisez dans la jauge ou d'un champ différent.  
   
 13. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Pour afficher côte à côte un indicateur et une jauge  
+### <a name="to-show-an-indicator-and-gauge-side-by-side"></a>Pour afficher côte à côte un indicateur et une jauge  
   
 1.  Ouvrez un rapport existant ou créez un rapport qui contient une table et une matrice avec les données que vous souhaitez afficher.  
   
@@ -71,17 +76,17 @@ caps.handback.revision: 8
   
 6.  Cliquez sur la jauge. Le volet **Données de la jauge** s’ouvre.  
   
-7.  Dans la zone **Valeurs**, dans la zone de liste **(Non spécifié)**, cliquez sur le champ dont vous souhaitez afficher les valeurs dans la jauge. Vous pouvez également faire glisser le champ à utiliser à partir du dataset du rapport.  
+7.  Dans la zone **Valeurs** , dans la zone de liste **(Non spécifié)** , cliquez sur le champ dont vous souhaitez afficher les valeurs dans la jauge. Vous pouvez également faire glisser le champ à utiliser à partir du dataset du rapport.  
   
 8.  Cliquez avec le bouton droit sur la jauge, cliquez sur **Ajouter un indicateur**, puis sur **Adjacent**. La boîte de dialogue **Sélectionner un style d’indicateur** s’ouvre.  
   
-9. Dans la boîte de dialogue **Sélectionner un style d’indicateur**, dans le volet gauche, cliquez sur le type d’indicateur de votre choix, puis sur le jeu d’indicateurs.  
+9. Dans la boîte de dialogue **Sélectionner un style d’indicateur** , dans le volet gauche, cliquez sur le type d’indicateur de votre choix, puis sur le jeu d’indicateurs.  
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 11. Cliquez sur l'indicateur. Le volet **Données de la jauge** s’ouvre.  
   
-12. Dans la zone **Valeurs**, dans la zone de liste **(Non spécifié)**, cliquez sur le champ dont vous souhaitez afficher les valeurs sous la forme d’un indicateur. Vous pouvez également faire glisser le champ à utiliser à partir du dataset du rapport.  
+12. Dans la zone **Valeurs** , dans la zone de liste **(Non spécifié)** , cliquez sur le champ dont vous souhaitez afficher les valeurs sous la forme d’un indicateur. Vous pouvez également faire glisser le champ à utiliser à partir du dataset du rapport.  
   
      Il peut s'agir du même champ que celui que vous utilisez dans la jauge ou d'un champ différent.  
   
@@ -93,13 +98,13 @@ caps.handback.revision: 8
   
 15. Faites glisser chaque étiquette vers un emplacement près de la jauge ou de l'indicateur.  
   
-16. Cliquez avec le bouton droit sur l’étiquette près de la jauge, cliquez sur **Propriétés de l’étiquette**, puis tapez le texte que vous souhaitez dans la zone **Texte**.  
+16. Cliquez avec le bouton droit sur l’étiquette près de la jauge, cliquez sur **Propriétés de l’étiquette**, puis tapez le texte que vous souhaitez dans la zone **Texte** .  
   
-17. Cliquez avec le bouton droit sur l’étiquette près de l’indicateur, cliquez sur **Propriétés de l’étiquette**, puis tapez le texte que vous souhaitez dans la zone **Texte**.  
+17. Cliquez avec le bouton droit sur l’étiquette près de l’indicateur, cliquez sur **Propriétés de l’étiquette**, puis tapez le texte que vous souhaitez dans la zone **Texte** .  
   
 18. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Indicateurs &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

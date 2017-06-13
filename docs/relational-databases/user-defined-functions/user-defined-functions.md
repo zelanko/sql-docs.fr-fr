@@ -18,10 +18,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f4c8c44b4c07b26676fd424acb36ea7ccce19df3
+ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
+ms.openlocfilehash: 12297570eae81459949b6c910fba26525e27d9ed
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/05/2017
 
 ---
 # <a name="user-defined-functions"></a>Fonctions définies par l'utilisateur
@@ -44,7 +44,8 @@ Pourquoi les utiliser ?
   
      Une opération qui filtre des données en fonction d'une contrainte complexe qui ne peut pas être exprimée dans une même expression scalaire peut être exprimée sous forme de fonction. La fonction peut ensuite être appelée dans la clause WHERE pour réduire le nombre de lignes envoyées aux clients.  
   
-> **REMARQUE :**  [!INCLUDE[tsql](../../includes/tsql-md.md)] les fonctions définies par l’utilisateur figurant dans les requêtes peuvent être exécutées uniquement sur un thread (plan d’exécution en série).  
+> [!NOTE]
+> Les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] définies par l'utilisateur figurant dans les requêtes peuvent être exécutées uniquement sur un thread (plan d'exécution en série).  
   
 ##  <a name="FunctionTypes"></a> Types de fonctions  
 **Fonction scalaire**  
@@ -62,12 +63,13 @@ Pourquoi les utiliser ?
   
  Les instructions contenues dans un bloc BEGIN...END ne peuvent pas avoir d'effets secondaires. Les effets secondaires d'une fonction sont toutes les modifications définitives de l'état d'une ressource dont la portée s'étend hors de la fonction, comme la modification d'une table de base de données. Les instructions d'une fonction ne peuvent modifier que les objets locaux de cette fonction, tels les variables ou les curseurs locaux. Les modifications apportées aux tables de base de données, les opérations portant sur des curseurs non locaux par rapport à la fonction, l'envoi de courrier électronique, les tentatives de modification de catalogue et la génération d'un jeu de résultats retourné à l'utilisateur sont autant d'actions qui ne peuvent pas être exécutées dans une fonction.  
   
-> **REMARQUE :** si une instruction CREATE FUNCTION produit des effets secondaires contre des ressources qui n’existent pas lorsque l’instruction CREATE FUNCTION est publiée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute l’instruction. Toutefois, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'exécute pas la fonction lorsqu'elle est appelée.  
+> [!NOTE]
+> Si une instruction CREATE FUNCTION produit des effets secondaires contre des ressources qui n'existent pas lorsque l'instruction CREATE FUNCTION est publiée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute l'instruction. Toutefois, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'exécute pas la fonction lorsqu'elle est appelée.  
   
  Le nombre d'exécutions effectives d'une fonction spécifiée dans une requête peut varier d'un plan d'exécution de l'optimiseur à l'autre. C'est par exemple le cas d'une fonction invoquée par une sous-requête dans une clause WHERE. Le nombre d'exécutions de la sous-requête et de sa fonction peut varier en fonction du chemin d'accès choisi par l'optimiseur.  
   
 ##  <a name="ValidStatements"></a> Instructions valides dans une fonction  
- Les types d'instructions valides dans une fonction sont les suivants :  
+Les types d'instructions valides dans une fonction sont les suivants :  
   
 -   les instructions DECLARE permettant de définir des curseurs et des variables de données locaux de la fonction ;  
   
@@ -110,7 +112,7 @@ Pourquoi les utiliser ?
 ##  <a name="SchemaBound"></a> Fonctions liées à un schéma  
  L'instruction CREATE FUNCTION prend en charge une clause SCHEMABINDING qui lie la fonction au schéma de tout objet auquel elle fait référence, tel qu'une table, une vue ou une fonction définie par l'utilisateur. Toute tentative de modification (ALTER) ou de suppression (DROP) d'un objet référencé par une fonction liée au schéma est vouée à l'échec.  
   
- Les conditions suivantes doivent être respectées pour que la clause SCHEMABINDING puisse être spécifiée dans [CREATE FUNCTION](https://msdn.microsoft.com/library/ms186755.aspx) :  
+ Les conditions suivantes doivent être respectées pour que la clause SCHEMABINDING puisse être spécifiée dans [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) :  
   
 -   Toutes les vues et fonctions définies par l'utilisateur référencées par la fonction doivent être liées au schéma.  
   
@@ -138,7 +140,4 @@ Pourquoi les utiliser ?
 |Décrit comment afficher la définition d'une fonction définie par l'utilisateur.|[Afficher des fonctions définies par l’utilisateur](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
   
   
-
-
-
 

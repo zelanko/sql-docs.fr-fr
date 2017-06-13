@@ -1,7 +1,7 @@
 ---
 title: "Supprimer des colonnes d’une table | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 04/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20aa31c62de21e9718f504538ae4199395a5dab0
+ms.sourcegitcommit: 621185759462020bca20985c3133c93814a1f333
+ms.openlocfilehash: ef0c4b8b66af5dfc46c836fc8c18734609b1301a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="delete-columns-from-a-table"></a>Supprimer des colonnes d'une table
@@ -64,9 +64,11 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-delete-columns-by-using-object-explorer"></a>Pour supprimer des colonnes à l'aide de l'Explorateur d'objets  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  Dans l’ **Explorateur d’objets**, cliquez avec le bouton droit sur la table dans laquelle vous souhaitez supprimer des colonnes et choisissez **Supprimer**.  
+2.  Dans **l’Explorateur d’objets**, localisez la table à partir de laquelle votre choix supprimer des colonnes, développez afin d’exposer les noms de colonnes. 
+
+3.  Avec le bouton droit de la colonne que vous souhaitez supprimer, puis choisissez **supprimer**.  
   
 3.  Dans la boîte de dialogue **Supprimer un objet** , cliquez sur **OK**.  
   
@@ -101,3 +103,4 @@ ms.lasthandoff: 04/11/2017
  Pour obtenir des exemples supplémentaires, consultez [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ##  <a name="FollowUp"></a>  
+

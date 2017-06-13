@@ -2,7 +2,7 @@
 title: "Considérations et limitations liées aux tables temporelles | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/24/2017
+ms.date: 05/22/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 22bab0bc2c039e68a336ac827a3e2d028ca77c78
+ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
+ms.openlocfilehash: 5ee3aa9223ae8ab832eff23a1da1755278e86d0b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Considérations et limitations liées aux tables temporelles
@@ -57,7 +57,9 @@ ms.lasthandoff: 04/11/2017
   
 -   La modification directe des données dans une table d’historique n’est pas autorisée.  
   
--   **ON DELETE CASCADE** et **ON UPDATE CASCADE** ne sont pas autorisées dans la table actuelle. En d’autres termes, quand la table temporelle fait référence à la table dans la relation de clé étrangère (correspondant à *parent_object_id* dans sys.foreign_keys), les options CASCADE ne sont pas autorisées. Pour contourner cette limitation, utilisez une logique d’application ou des déclencheurs After pour maintenir la cohérence en cas de suppression dans la table de clé primaire (correspondant à  *referenced_object_id* dans sys.foreign_keys). Si la table de clé primaire est temporelle alors que la table de référence ne l’est pas, il n’existe aucune limitation de ce type.  
+-   **ON DELETE CASCADE** et **ON UPDATE CASCADE** ne sont pas autorisées dans la table actuelle. En d’autres termes, quand la table temporelle fait référence à la table dans la relation de clé étrangère (correspondant à *parent_object_id* dans sys.foreign_keys), les options CASCADE ne sont pas autorisées. Pour contourner cette limitation, utilisez une logique d’application ou des déclencheurs After pour maintenir la cohérence en cas de suppression dans la table de clé primaire (correspondant à  *referenced_object_id* dans sys.foreign_keys). Si la table de clé primaire est temporelle alors que la table de référence ne l’est pas, il n’existe aucune limitation de ce type. 
+
+    **Remarque :** cette limitation s’applique uniquement à SQL Server 2016. Les options CASCADE sont pris en charge dans [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] et 2017 du serveur SQL à partir de CTP 2.0.  
   
 -   Les déclencheurs**INSTEAD OF** ne sont pas autorisés sur la table actuelle ou sur la table d’historique pour éviter l’invalidation de la logique DML. Les déclencheurs**AFTER** sont autorisés uniquement dans la table actuelle. Ils sont bloqués dans la table d’historique afin d’éviter l’invalidation de la logique DML.  
   
@@ -99,7 +101,7 @@ ms.lasthandoff: 04/11/2017
 -   Une table d’historique ne peut pas être configurée en tant que table actuelle d’une chaîne de tables d’historique.  
   
 ## <a name="did-this-article-help-you-were-listening"></a>Cet article vous a-t-il été utile ? Nous sommes à votre écoute  
- Quels renseignements souhaitez-vous obtenir ? Avez-vous trouvé ce que vous cherchiez ? Nous tenons compte de vos commentaires pour améliorer le contenu de nos articles. Veuillez envoyer vos commentaires à l’adresse suivante : [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Table%20Considerations%20and%20Limitations%20page)  
+ Quels renseignements souhaitez-vous obtenir ? Avez-vous trouvé ce que vous cherchiez ? Nous tenons compte de vos commentaires pour améliorer le contenu de nos articles. Envoyez vos commentaires à l’adresse [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Table%20Considerations%20and%20Limitations%20page)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables temporelles](../../relational-databases/tables/temporal-tables.md)   

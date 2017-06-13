@@ -1,23 +1,28 @@
 ---
-title: "Mode cr&#233;ation de dataset partag&#233; (G&#233;n&#233;rateur de rapports) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Affichage de création de Dataset (Générateur de rapports) partagé | Documents Microsoft"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: e658d85131921354443cfc80e0c41b0aee3ecac8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Mode cr&#233;ation de dataset partag&#233; (G&#233;n&#233;rateur de rapports)
+# <a name="shared-dataset-design-view-report-builder"></a>Mode création de dataset partagé (Générateur de rapports)
   Dans un rapport, un dataset représente des données de rapport retournées comme résultat de l'exécution d'une requête sur une source de données externe. Les datasets partagés sont publiés sur un serveur de rapports et peuvent être utilisés par plusieurs rapports. Vous pouvez créer des datasets à partager avec d’autres utilisateurs. Dans la fenêtre Dataset partagé, vous pouvez sélectionner une source de données partagée, spécifier des propriétés pour le dataset partagé et créer une requête dans le concepteur de requêtes.  
   
  ![rs_SharedDatasetDesignMode](../../reporting-services/report-builder/media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
@@ -25,18 +30,18 @@ caps.handback.revision: 9
  Pour plus d’informations sur l’utilisation des données dans un rapport, consultez [Jeux de données du rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
 ##  <a name="Ribbon"></a> Ruban  
- Le ruban vous permet de trouver rapidement les commandes dont vous avez besoin pour effectuer une tâche. Les commandes sont organisées selon les groupes logiques suivants : Connexion, Dataset et Concepteur de requêtes.  
+ Le ruban vous permet de trouver rapidement les commandes dont vous avez besoin pour effectuer une tâche. Les commandes sont organisées selon les groupes logiques suivants : Connexion, Dataset et Concepteur de requêtes.  
   
-### Connexion  
+### <a name="connection"></a>Connexion  
  Utilisez le bouton **Sélectionner** dans le groupe Connexion pour sélectionner une source de données partagée dans votre rapport, ou naviguez jusqu’à une source de données partagée sur le serveur de rapports.  
   
 > [!NOTE]  
 >  Un dataset partagé doit être basé sur une source de données partagée. Si la source de données dont vous avez besoin n’est pas disponible, vous devez en créer une sur le serveur de rapports. Pour plus d’informations, consultez [Créer, modifier, puis supprimer des sources de données partagées &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
- Pour plus d'informations, consultez [Data Connections, Data Sources, and Connection Strings in Report Builder](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md).  
+ Pour plus d'informations, consultez [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
-### Dataset  
- Utilisez le bouton **Définir les options** pour définir les propriétés de dataset partagé. Ces options en question sont les suivantes :  
+### <a name="dataset"></a>Dataset  
+ Utilisez le bouton **Définir les options** pour définir les propriétés de dataset partagé. Ces options en question sont les suivantes :  
   
 -   Champs. Vous pouvez ajouter ou modifier un champ dans la collection de champs.  
   
@@ -48,18 +53,17 @@ caps.handback.revision: 9
   
  Les valeurs que vous définissez deviennent partie intégrante de la définition de dataset partagé sur le serveur de rapports. Lorsqu'un auteur de rapport inclut ce dataset partagé dans un rapport, les options que vous spécifiez s'appliquent à cette instance de dataset.  
   
- Après avoir ajouté un dataset partagé à un rapport, un auteur de rapport peut substituer les options suivantes : classement, respect de la casse, respect des accents, respect du jeu de caractères Kana, respect de la largeur, sous-totaux. Il peut également créer des filtres de dataset supplémentaires pour limiter les données du rapport.  
+ Après avoir ajouté un dataset partagé à un rapport, un auteur de rapport peut substituer les options suivantes : classement, respect de la casse, respect des accents, respect du jeu de caractères Kana, respect de la largeur, sous-totaux. Il peut également créer des filtres de dataset supplémentaires pour limiter les données du rapport.  
   
  Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
  Pour plus d’informations sur les plans d’actualisation du cache, consultez [Mettre en cache les datasets partagés &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md).  
   
-### Concepteur de requêtes  
+### <a name="query-designer"></a>Concepteur de requêtes  
  Utilisez la barre d'outils du concepteur de requêtes pour générer une requête qui spécifie les données à récupérer à partir de la connexion de données. La barre d'outils que vous voyez dépend du concepteur de requêtes associé au type de source de données de la connexion de données.  
   
  Pour plus d’informations, consultez la rubrique qui correspond au type de source de données dans [Ajouter des données à partir de sources de données externes &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
 ##  <a name="DesignSurface"></a> Aire du concepteur de requêtes  
  Un concepteur de requêtes vous permet de générer une requête dans la syntaxe requise par la source de données externe.  
@@ -70,7 +74,6 @@ caps.handback.revision: 9
   
  Chaque type de source de données a des besoins spécifiques pour la requête basée sur la source de données externe. Pour plus d’informations, consultez la rubrique qui correspond au type de source de données dans [Ajouter des données à partir de sources de données externes &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) et [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
 ##  <a name="Results"></a> Affichage des résultats de requête  
  En mode création de dataset partagé, vous générez une requête qui doit récupérer des données à partir de la connexion de données, lorsque le rapport est traité.  
@@ -81,21 +84,19 @@ caps.handback.revision: 9
   
  Les informations d'identification que vous utilisez pour exécuter une requête se distinguent des informations d'identification utilisées pour afficher l'aperçu d'un rapport ou pour exécuter un rapport à partir du serveur de rapports. Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
-### Exécution d'un rapport avec des paramètres  
+### <a name="running-a-report-with-parameters"></a>Exécution d'un rapport avec des paramètres  
  Lorsque votre requête inclut des variables de requête, les paramètres de dataset sont créés automatiquement. Ensuite, lorsque vous terminez de générer la requête de dataset, les paramètres de rapport qui ont la valeur des paramètres de dataset sont créés automatiquement.  
   
- Si un rapport contient des paramètres, ils doivent tous avoir des valeurs par défaut pour que le rapport puisse s'exécuter automatiquement. Si un paramètre n’a pas de valeur par défaut, vous devez choisir une valeur pour chaque paramètre lors de l’exécution du rapport, puis cliquer sur **Afficher le rapport** sous l’onglet **Exécuter**.  
+ Si un rapport contient des paramètres, ils doivent tous avoir des valeurs par défaut pour que le rapport puisse s'exécuter automatiquement. Si un paramètre n’a pas de valeur par défaut, vous devez choisir une valeur pour chaque paramètre lors de l’exécution du rapport, puis cliquer sur **Afficher le rapport** sous l’onglet **Exécuter** .  
   
  Pour plus d’informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
 ##  <a name="Save"></a> Enregistrement du dataset partagé  
- Pour enregistrer la requête que vous avez générée, sur le bouton **Générateur de rapports**, cliquez sur **Enregistrer** ou **Enregistrer sous**. Naviguez jusqu'au dossier approprié sur le serveur de rapports, puis enregistrez la définition de dataset partagé. Le dataset partagé n'est pas accessible aux autres utilisateurs tant que vous ne l'avez pas enregistré sur le serveur de rapports.  
+ Pour enregistrer la requête que vous avez générée, sur le bouton **Générateur de rapports** , cliquez sur **Enregistrer** ou **Enregistrer sous**. Naviguez jusqu'au dossier approprié sur le serveur de rapports, puis enregistrez la définition de dataset partagé. Le dataset partagé n'est pas accessible aux autres utilisateurs tant que vous ne l'avez pas enregistré sur le serveur de rapports.  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Retour au début](#BackToTop)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Jeux de données du rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  

@@ -1,37 +1,42 @@
 ---
-title: "Personnaliser des donn&#233;es et l&#39;affichage d&#39;une carte ou d&#39;une couche (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10521"
-  - "sql13.rtp.rptdesigner.mapgroupproperties.filter.f1"
-  - "10515"
-  - "10512"
-  - "10520"
-  - "sql13.rtp.rptdesigner.shared.font.f1"
-  - "10523"
-  - "sql13.rtp.rptdesigner.mapgroupproperties.general.f1"
-  - "sql13.rtp.rptdesigner.shared.number.f1"
-  - "sql13.rtp.rptdesigner.shared.shadowdv.f1"
-  - "sql13.rtp.rptdesigner.mapgroupproperties.variables.f1"
-  - "10507"
+title: "Personnaliser les données et l’affichage d’une carte ou une couche (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10521"
+- sql13.rtp.rptdesigner.mapgroupproperties.filter.f1
+- "10515"
+- "10512"
+- "10520"
+- sql13.rtp.rptdesigner.shared.font.f1
+- "10523"
+- sql13.rtp.rptdesigner.mapgroupproperties.general.f1
+- sql13.rtp.rptdesigner.shared.number.f1
+- sql13.rtp.rptdesigner.shared.shadowdv.f1
+- sql13.rtp.rptdesigner.mapgroupproperties.variables.f1
+- "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a9751ad1f640181db57e4107ff1debfa510d3b0e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Personnaliser des donn&#233;es et l&#39;affichage d&#39;une carte ou d&#39;une couche (G&#233;n&#233;rateur de rapports et SSRS)
-  Après avoir ajouté une carte ou une couche à un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] en utilisant un Assistant, vous pouvez modifier l’apparence de la carte dans le rapport. Vous pouvez apporter des améliorations en considérant les points suivants :  
+# <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personnaliser des données et l'affichage d'une carte ou d'une couche (Générateur de rapports et SSRS)
+  Après avoir ajouté une carte ou une couche à un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] en utilisant un Assistant, vous pouvez modifier l’apparence de la carte dans le rapport. Vous pouvez apporter des améliorations en considérant les points suivants :  
   
 -   Pour aider vos utilisateurs à interpréter l'affichage des données sur une carte, vous pouvez ajouter des légendes et une échelle de couleurs, ainsi que des étiquettes et des info-bulles.  
   
@@ -51,21 +56,21 @@ caps.handback.revision: 13
   
  Les options d'affichage affectent la façon dont une carte ou les parties d'une carte apparaissent lorsque vous consultez le rapport. Certaines options contrôlent l'apparence de la carte, telle que les bordures et polices ou la zone représentée sur la carte. D'autres options contrôlent le contenu de chaque couche, telles que les tailles de bulle, types de marqueur, étiquettes ou info-bulles.  
   
- Un élément de rapport cartographique inclut les parties suivantes : la carte elle-même, un point de vue de la carte, un jeu de titres, un jeu de légendes (légende, échelle de couleurs et échelle des distances), un jeu de couches, un jeu d'éléments cartographiques sur chaque couche (polygones ou lignes ou points). Utilisez les informations des sections suivantes pour identifier la boîte de dialogue de propriétés qui contrôle les options d'affichage pour les différentes parties d'une carte.  
+ Un élément de rapport cartographique inclut les parties suivantes : la carte elle-même, un point de vue de la carte, un jeu de titres, un jeu de légendes (légende, échelle de couleurs et échelle des distances), un jeu de couches, un jeu d'éléments cartographiques sur chaque couche (polygones ou lignes ou points). Utilisez les informations des sections suivantes pour identifier la boîte de dialogue de propriétés qui contrôle les options d'affichage pour les différentes parties d'une carte.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ##  <a name="Map"></a> Modifier les options d'une carte  
- Sur un élément de rapport cartographique, vous pouvez contrôler les éléments suivants :  
+ Sur un élément de rapport cartographique, vous pouvez contrôler les éléments suivants :  
   
--   ajouter plusieurs titres ;  
+-   ajouter plusieurs titres ;  
   
--   ajouter plusieurs légendes. Pour modifier le contenu d'une légende, vous devez créer des légendes supplémentaires, puis modifier les règles pour spécifier dans quelle légende vous devrez entrer les éléments de légende créés par chaque règle ;  
+-   ajouter plusieurs légendes. Pour modifier le contenu d'une légende, vous devez créer des légendes supplémentaires, puis modifier les règles pour spécifier dans quelle légende vous devrez entrer les éléments de légende créés par chaque règle ;  
   
--   ajouter d'autres couches ;  
+-   ajouter d'autres couches ;  
   
--   masquer ou afficher l'échelle des distances ou l'échelle de couleurs ;  
+-   masquer ou afficher l'échelle des distances ou l'échelle de couleurs ;  
   
 -   donner une illusion de profondeur en spécifiant une ombre.  
   
@@ -76,7 +81,7 @@ caps.handback.revision: 13
   
  La source de données spatiales peut fournir une zone plus étendue que celle dont vous avez besoin dans le rapport. Vous pouvez utiliser la fenêtre d'affichage pour définir le centre et le niveau de zoom, et rogner la zone affichée dans la carte.  
   
- Les options suivantes peuvent être définies pour la fenêtre d'affichage :  
+ Les options suivantes peuvent être définies pour la fenêtre d'affichage :  
   
 -   Choisissez le système de coordonnées et, pour un système de coordonnées géographiques, choisissez la projection.  
   
@@ -88,7 +93,7 @@ caps.handback.revision: 13
   
 -   Résolution et simplification. Choisissez un compromis entre le temps de dessin et des plans détaillés pour les lignes et les polygones.  
   
- Pour modifier ces options, cliquez avec le bouton droit sur le point de vue de la carte, utilisez la page [Boîte de dialogue Propriétés du point de vue de la carte, Général](../Topic/Map%20Viewport%20Properties%20Dialog%20Box,%20General.md) et les pages connexes.  
+ Pour modifier ces options, cliquez avec le bouton droit sur le point de vue de la carte, utilisez la page [Boîte de dialogue Propriétés du point de vue de la carte, Général](http://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) et les pages connexes.  
   
 ##  <a name="Legends"></a> Modifier les options des légendes  
  Les légendes aident les utilisateurs à interpréter les données sur une carte.  
@@ -104,15 +109,15 @@ caps.handback.revision: 13
 ##  <a name="Layer"></a> Modifier les options de la couche  
  Pour afficher les couches d'une carte, cliquez sur la carte pour la sélectionner. Le volet Carte s'affiche. Pour modifier des options pour une couche, cliquez avec le bouton droit sur la couche et utilisez le menu contextuel.  
   
- Une couche peut être de trois types, selon les données spatiales retournées par la source de données spatiales : couche de polygones, couche de lignes ou couche de points.  
+ Une couche peut être de trois types, selon les données spatiales retournées par la source de données spatiales : couche de polygones, couche de lignes ou couche de points.  
   
- Les options suivantes peuvent être définies pour la couche :  
+ Les options suivantes peuvent être définies pour la couche :  
   
 -   Données analytiques associées et champs de correspondance. La source des données spatiales apparaît sur le volet Carte sous le nom de la couche. Lorsque la source est incorporée, les éléments cartographiques de la couche font partie de la définition de rapport. Si la source n'est pas incorporée, les données spatiales sont récupérées au moment de l'exécution et le processeur de rapports crée les éléments cartographiques de la couche au moment du traitement du rapport. Pour modifier les options de données sur la couche, utilisez la page Données analytiques dans la boîte de dialogue Couche.  
   
 -   Ordre de dessin des couches. L'ordre dans lequel les couches sont répertoriées dans le volet Carte est l'ordre de dessin inverse des couches. La dernière couche de la liste est dessinée en premier. Par exemple, si vous souhaitez que les points d'une couche de points s'affichent au-dessus des polygones de la couche de polygones, la couche de points doit être en premier et la couche de polygones en deuxième.  
   
--   Visibilité et transparence de la couche. Pour qu'une couche laisse transparaître une autre couche, définissez la transparence sur une valeur supérieure à 0. Une valeur de 100 % signifie que la couche n'est pas visible. Pour travailler sur une couche individuelle, vous pouvez facilement afficher ou masquer chaque couche individuelle en utilisant l’icône **Visibilité** dans le volet Carte. Vous pouvez également définir les options de niveau de zoom pour spécifier quand afficher ou masquer des éléments cartographiques sur la couche en fonction du niveau de zoom.  
+-   Visibilité et transparence de la couche. Pour qu'une couche laisse transparaître une autre couche, définissez la transparence sur une valeur supérieure à 0. Une valeur de 100 % signifie que la couche n'est pas visible. Pour travailler sur une couche individuelle, vous pouvez facilement afficher ou masquer chaque couche individuelle en utilisant l’icône **Visibilité** dans le volet Carte. Vous pouvez également définir les options de niveau de zoom pour spécifier quand afficher ou masquer des éléments cartographiques sur la couche en fonction du niveau de zoom.  
   
 -   Ajoutez une couche de mosaïques Bing pour le centre d'affichage et le niveau de zoom de la fenêtre actuelle. Pour une couche de mosaïques, vous n'avez pas besoin de spécifier de coordonnées géographiques. Les mosaïques sont chargées automatiquement pour correspondre à la zone de fenêtre d'affichage lorsque le système de coordonnées est Géographique, la projection est Mercator, les serveurs Bing Maps sont disponibles et le serveur de rapports a été configuré pour prendre en charge cette fonctionnalité. Pour chaque rapport, vous pouvez spécifier s'il convient d'utiliser une connexion sécurisée pour récupérer des mosaïques.  
   
@@ -121,18 +126,18 @@ caps.handback.revision: 13
 ##  <a name="DataGrouping"></a> Modifier le groupement de données de la couche  
  Vous pouvez personnaliser la façon d'agréger des données spatiales pour vos propres formes. Pour définir les propriétés de groupe pour une couche, sélectionnez la couche dans le volet Carte et, dans le volet Propriétés de la couche, cliquez sur **Groupe**, puis sur les points de suspension (…) pour ouvrir les propriétés du groupe. Dans cette boîte de dialogue, vous pouvez spécifier des expressions de groupe, créer des variables de groupe et filtrer les données utilisées pour le regroupement.  
   
- L'expression de groupe spécifie comment les données analytiques en relation avec les données spatiales sont regroupées pour chaque élément cartographique de la couche. Par défaut, l'expression de groupe est le jeu de champs de correspondance spécifié pour la relation entre les données spatiales et les données analytiques. Par exemple, pour une carte à bulles affichant les villes et la taille de la population d'un pays ou d'une région, les champs de correspondance incluent le nom de ville [Ville] et le nom de région [Région] parce que plusieurs villes peuvent avoir le même nom. L'expression de groupe correspondante inclut deux champs : [Ville] et [Région].  
+ L'expression de groupe spécifie comment les données analytiques en relation avec les données spatiales sont regroupées pour chaque élément cartographique de la couche. Par défaut, l'expression de groupe est le jeu de champs de correspondance spécifié pour la relation entre les données spatiales et les données analytiques. Par exemple, pour une carte à bulles affichant les villes et la taille de la population d'un pays ou d'une région, les champs de correspondance incluent le nom de ville [Ville] et le nom de région [Région] parce que plusieurs villes peuvent avoir le même nom. L'expression de groupe correspondante inclut deux champs : [Ville] et [Région].  
   
  Pour plus d’informations, consultez [Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](http://go.microsoft.com/fwlink/?LinkID=214991).  
   
 ##  <a name="MapElements"></a> Modifier les options des éléments cartographiques sur la couche  
- Les éléments cartographiques sont les points, lignes ou polygones d'une couche basés sur les données spatiales. Pour les éléments cartographiques, les options suivantes peuvent être définies. Ces options s'appliquent à tous les éléments cartographiques de la couche, qu'ils soient incorporés ou non :  
+ Les éléments cartographiques sont les points, lignes ou polygones d'une couche basés sur les données spatiales. Pour les éléments cartographiques, les options suivantes peuvent être définies. Ces options s'appliquent à tous les éléments cartographiques de la couche, qu'ils soient incorporés ou non :  
   
--   étiquettes, visibilité des étiquettes, décalage des étiquettes et mise en forme ;  
+-   étiquettes, visibilité des étiquettes, décalage des étiquettes et mise en forme ;  
   
--   bordures et remplissage ;  
+-   bordures et remplissage ;  
   
--   actions d'extraction ;  
+-   actions d'extraction ;  
   
 -   options d'affichage.  
   
@@ -141,7 +146,7 @@ caps.handback.revision: 13
  Pour modifier ces options, cliquez avec le bouton droit sur l'élément cartographique, utilisez la boîte de dialogue de propriétés incorporées. Par exemple, pour un polygone incorporé, utilisez la boîte de dialogue Propriétés des polygones incorporés, la page Général et les pages associées.  
   
 ##  <a name="Precedence"></a> Ordre de priorité des options d'affichage  
- Pour contrôler l'apparence de l'affichage d'un point, d'une ligne ou d'un polygone sur une couche, vous devez savoir où les options d'affichage peuvent être définies et quelles options ont une priorité plus élevée. Les options d'affichage suivantes sont répertoriées dans l'ordre de priorité de la plus basse à la plus élevée. Les options d'affichage répertoriées plus haut remplacent les options d'affichage plus bas dans cette liste :  
+ Pour contrôler l'apparence de l'affichage d'un point, d'une ligne ou d'un polygone sur une couche, vous devez savoir où les options d'affichage peuvent être définies et quelles options ont une priorité plus élevée. Les options d'affichage suivantes sont répertoriées dans l'ordre de priorité de la plus basse à la plus élevée. Les options d'affichage répertoriées plus haut remplacent les options d'affichage plus bas dans cette liste :  
   
 -   Options relatives aux couches.  
   
@@ -159,9 +164,9 @@ caps.handback.revision: 13
   
 -   Options de remplacement pour des points, lignes ou polygones incorporés individuels sur une couche. Les modifications que vous apportez sont permanentes. Pour annuler ces modifications, vous devez recharger les données de la couche.  
   
- Pour plus d’informations, consultez [Modifier l’affichage des polygones, des lignes et des points à l’aide de règles et de données analytiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md).  
+ Pour plus d’informations, consultez [Modifier l’affichage des polygones, des lignes et des points à l’aide de règles et de données analytiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Assistant Carte et Assistant Couche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [Cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   

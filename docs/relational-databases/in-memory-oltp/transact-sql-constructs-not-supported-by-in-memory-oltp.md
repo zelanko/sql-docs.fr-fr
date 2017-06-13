@@ -1,7 +1,7 @@
 ---
 title: "Constructions Transact-SQL non prises en charge par l’OLTP en mémoire | Microsoft Docs"
 ms.custom: 
-ms.date: 12/16/2016
+ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a3539b07a27be375ebfe58e16a4792d9095fce0c
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 66f9964d94ebcbab021c9dcf69ae50663196a597
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Constructions Transact-SQL non prises en charge par l’OLTP en mémoire
@@ -70,7 +70,7 @@ ms.lasthandoff: 04/11/2017
 |Opération|Mettre à jour les colonnes clés primaires|Les colonnes clés primaires des tables mémoire optimisées et les types de table ne peuvent pas être mis à jour. Si la clé primaire doit être mise à jour, supprimez l'ancienne ligne et insérez la nouvelle ligne avec la clé primaire mise à jour.|  
 |Opération|CREATE INDEX|Les index sur les tables mémoire optimisées doivent être spécifiés avec l’instruction **CREATE TABLE** ou l’instruction **ALTER TABLE** .|  
 |Opération|CREATE FULLTEXT INDEX|Les index de recherche en texte intégral ne sont pas pris en charge pour les tables mémoire optimisées.|  
-|Opération|modification de schéma|Les tables mémoire optimisées et les procédures stockées compilées en mode natif ne prennent pas en charge les modifications de schéma, telles que **sp_rename**.<br /><br /> Toute tentative de modifier le schéma génère l’erreur 12320. Les opérations qui nécessitent une modification de la version du schéma, comme un changement de nom, ne sont pas prises en charge dans les tables optimisées en mémoire.<br /><br /> Certaines modifications de schéma à l’aide de ALTER TABLE et ALTER PROCEDURE sont autorisées.|  
+|Opération|modification de schéma|Les tables mémoire optimisées et les procédures stockées compilées en mode natif ne prennent pas en charge les modifications de schéma, telles que **sp_rename**.<br /><br /> Toute tentative de modifier le schéma génère l’erreur 12320. Les opérations qui nécessitent une modification de la version du schéma, comme un changement de nom, ne sont pas prises en charge dans les tables optimisées en mémoire.<br /><br /> Certaines modifications de schéma à l’aide de ALTER TABLE et ALTER PROCEDURE sont autorisées.<br/><br/>**S’applique à :** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].<br/>À partir de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], sp_rename est pris en charge.| 
 |Opération|TRUNCATE TABLE|L'opération TRUNCATE n'est pas prise en charge pour les tables mémoire optimisées. Pour supprimer toutes les lignes d’une table, supprimez toutes les lignes en utilisant **DELETE FROM***table* ou supprimez la table et recréez-la.|  
 |Opération|ALTER AUTHORIZATION|La modification du propriétaire d'une table mémoire optimisée ou d'une procédure stockée compilée en mode natif existante n'est pas prise en charge. Supprimez ou recréez la table ou la procédure pour modifier la propriété.|  
 |Opération|ALTER SCHEMA|Transfert d’un élément sécurisable d’un schéma à un autre.|  

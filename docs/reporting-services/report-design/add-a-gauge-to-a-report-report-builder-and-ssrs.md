@@ -1,26 +1,31 @@
 ---
-title: "Ajouter une jauge &#224; un rapport (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ajouter une jauge à un rapport (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 45da4fef-2b02-40e1-977c-f8f80d87155e
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de434ef80732d2a845fb41c972f0118fee357d14
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Ajouter une jauge &#224; un rapport (G&#233;n&#233;rateur de rapports et SSRS)
-  Dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], quand vous souhaitez synthétiser des données dans un format visuel, vous pouvez utiliser une région de données de type jauge. Après avoir ajouté une région de données de jauge à l’aire de conception, vous pouvez faire glisser les champs de dataset du rapport vers un volet des données sur la jauge.  
+# <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>Ajouter une jauge à un rapport (Générateur de rapports et SSRS)
+  Dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , quand vous souhaitez synthétiser des données dans un format visuel, vous pouvez utiliser une région de données de type jauge. Après avoir ajouté une région de données de jauge à l’aire de conception, vous pouvez faire glisser les champs de dataset du rapport vers un volet des données sur la jauge.  
   
-## Pour ajouter une jauge à votre rapport  
+## <a name="to-add-a-gauge-to-your-report"></a>Pour ajouter une jauge à votre rapport  
   
 1.  Créez un rapport ou ouvrez-en un qui existe déjà.  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 7
   
      Cliquez avec le bouton droit sur l’échelle de la jauge et sélectionnez **Propriétés de l’échelle**. Tapez la valeur **Minimum** et **Maximum** de l'échelle. Pour plus d’informations, consultez [Définir un minimum ou un maximum sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
  [Jauges &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   

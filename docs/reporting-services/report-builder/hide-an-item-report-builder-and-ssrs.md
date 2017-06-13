@@ -1,26 +1,31 @@
 ---
-title: "Masquer un &#233;l&#233;ment (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.shared.visibility.f1"
-  - "10503"
+title: "Masquer un élément (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.shared.visibility.f1
+- "10503"
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aa3e4553ddeb529ec8565a5599b2ce861f91bc38
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Masquer un &#233;l&#233;ment (G&#233;n&#233;rateur de rapports et SSRS)
+# <a name="hide-an-item-report-builder-and-ssrs"></a>Masquer un élément (Générateur de rapports et SSRS)
   Définissez la visibilité d'un élément de rapport lorsque vous souhaitez masquer de façon conditionnelle un élément en fonction d'un paramètre de rapport ou d'une autre expression que vous spécifiez.  
   
  Vous pouvez également concevoir un rapport afin de permettre aux utilisateurs d'activer ou de désactiver la visibilité des éléments de rapport en fonction de clics sur des zones de texte dans le rapport, par exemple pour un rapport d'exploration. Pour plus d’informations, consultez [Ajouter une action Développer ou Réduire à un élément &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md).  
@@ -30,9 +35,9 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Pour masquer un élément de rapport  
+### <a name="to-hide-a-report-item"></a>Pour masquer un élément de rapport  
   
-1.  En mode création de rapport, cliquez avec le bouton droit sur l’élément de rapport et ouvrez sa page **Propriétés**.  
+1.  En mode création de rapport, cliquez avec le bouton droit sur l’élément de rapport et ouvrez sa page **Propriétés** .  
   
     > [!NOTE]  
     >  Pour sélectionner l’intégralité d’une région de données de table ou de matrice, cliquez dans la région de données pour la sélectionner, cliquez avec le bouton droit sur une ligne, une colonne ou une poignée d’angle, puis cliquez sur **Propriétés du tableau matriciel**.  
@@ -45,31 +50,31 @@ caps.handback.revision: 7
   
     -   Pour masquer l’élément, cliquez sur **Masquer**.  
   
-    -   Pour spécifier une expression qui est évaluée au moment de l’exécution, cliquez sur **Afficher ou masquer en fonction d’une expression**. Tapez l’expression ou cliquez sur le bouton Expression (**fx**) pour créer l’expression dans la boîte de dialogue **Expression**.  
+    -   Pour spécifier une expression qui est évaluée au moment de l’exécution, cliquez sur **Afficher ou masquer en fonction d’une expression**. Tapez l’expression ou cliquez sur le bouton Expression (**fx**) pour créer l’expression dans la boîte de dialogue **Expression** .  
   
         > [!NOTE]  
         >  Quand vous spécifiez une expression de visibilité, vous définissez la propriété Hidden de l’élément de rapport, comment indiqué dans l’image suivante. L'expression évaluée affiche l'élément de rapport lorsque la valeur est False et le masque lorsque la valeur est True.   
-        > ![Boîte de dialogue Properties_Visibility et propriété Hidden](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "Boîte de dialogue Properties_Visibility et propriété Hidden")  
+        > ![Boîte de dialogue visibilité de propriétés et propriété masquée](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "Properties_Visibility dialog and Hidden property")  
   
-4.  Cliquez deux fois sur **OK**.  
+4.  Cliquez deux fois sur **OK** .  
   
-### Pour masquer des lignes statiques dans une table, une matrice ou une liste  
+### <a name="to-hide-static-rows-in-a-table-matrix-or-list"></a>Pour masquer des lignes statiques dans une table, une matrice ou une liste  
   
 1.  En mode création de rapport, cliquez sur la table, la matrice ou la liste afin d'afficher les handles de ligne et de colonne.  
   
 2.  Cliquez avec le bouton droit sur le handle de ligne, puis cliquez sur **Visibilité de ligne**. La boîte de dialogue **Visibilité de ligne** s’ouvre.  
   
-3.  Pour définir la visibilité, effectuez les étapes 3 et 4 de la première procédure.  
+3.  Pour définir la visibilité, effectuez les étapes 3 et 4 de la première procédure.  
   
-### Pour masquer des colonnes statiques dans une table, une matrice ou une liste  
+### <a name="to-hide-static-columns-in-a-table-matrix-or-list"></a>Pour masquer des colonnes statiques dans une table, une matrice ou une liste  
   
 1.  En mode Conception, sélectionnez la table, la matrice ou la liste afin d'afficher les handles de ligne et de colonne.  
   
 2.  Cliquez avec le bouton droit sur le handle de colonne, puis cliquez sur **Visibilité de la colonne**.  
   
-3.  Dans la boîte de dialogue **Visibilité de la colonne**, effectuez les étapes 3 et 4 de la première procédure.  
+3.  Dans la boîte de dialogue **Visibilité de la colonne** , effectuez les étapes 3 et 4 de la première procédure.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Action d’exploration &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
  [Ajouter une action Développer ou Réduire à un élément &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  

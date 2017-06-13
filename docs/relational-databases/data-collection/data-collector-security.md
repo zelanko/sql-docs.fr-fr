@@ -19,10 +19,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d5b90faa09f6185ffe5e273e43707bc9dc2dc1c0
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 62b958f5a1c032e11b5aaef37692b5de21a0bec4
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="data-collector-security"></a>Sécurité du collecteur de données
@@ -96,7 +96,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **db_ssisoperator**  
   
- Pour plus d’informations, consultez [Rôles Integration Services &#40;Service SSIS&#41;](../../integration-services/service/integration-services-roles-ssis-service.md).  
+ Pour plus d’informations, consultez [Rôles Integration Services &#40;Service SSIS&#41;](../../integration-services/security/integration-services-roles-ssis-service.md).  
   
 ### <a name="dcproxy-role"></a>Rôle dc_proxy  
  Les membres du rôle **dc_proxy** disposent d’un accès en lecture aux jeux d’éléments de collecte du collecteur de données et aux propriétés au niveau du collecteur. Les membres de ce rôle peuvent également exécuter les travaux dont ils sont propriétaires, et créer des étapes de travail qui s'exécutent comme un compte proxy existant.  
@@ -115,7 +115,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **db_ssisoperator**  
   
- Pour plus d’informations, consultez [Rôles Integration Services &#40;Service SSIS&#41;](../../integration-services/service/integration-services-roles-ssis-service.md).  
+ Pour plus d’informations, consultez [Rôles Integration Services &#40;Service SSIS&#41;](../../integration-services/security/integration-services-roles-ssis-service.md).  
   
 ## <a name="permissions-for-configuring-and-using-the-management-data-warehouse"></a>Autorisations de configuration et d'utilisation de l'entrepôt de données de gestion  
  En fonction de la tâche, les utilisateurs doivent être membres d'un ou plusieurs des rôles de base de données fixes fournis pour accéder à l'entrepôt de données de gestion. Ces rôles, présentés ici du plus privilégié au moins privilégié en termes d'accès, sont les suivants :  
@@ -149,6 +149,6 @@ ms.lasthandoff: 04/11/2017
  Les membres du rôle **mdw_reader** disposent d’un accès en lecture à l’entrepôt de données de gestion. Comme ce rôle a pour but de prendre en charge la résolution de problèmes en fournissant l'accès aux données historiques, les membres de ce rôle ne peuvent pas consulter les autres éléments du schéma de l'entrepôt de données de gestion.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Implémenter la sécurité de l'Agent SQL Server](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
+ [Implémenter la sécurité de SQL Server Agent](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
   
   

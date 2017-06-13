@@ -3,7 +3,7 @@ title: "Index pour les tables optimisées en mémoire | Microsoft Docs"
 ms.custom:
 - MSDN content
 - MSDN - SQL DB
-ms.date: 10/24/2016
+ms.date: 06/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.service: sql-database
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f55708bc9eaf8e94cf33ead19cf62cbc319e8e63
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b468f44444a9c6cc031ea892f44849db401e0ab7
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="indexes-for-memory-optimized-tables"></a>Index pour les tables optimisées en mémoire
@@ -225,34 +225,10 @@ Le tableau suivant répertorie toutes les opérations qui sont prises en charge 
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
 | Analyse d'index, récupère toutes les lignes de la table. | Oui | Oui | Oui |  
 | Recherche d’index sur les prédicats d’égalité (=). | Oui <br/> (Une clé complète est requise.) | Oui  | Oui |  
-| Recherche d’index sur les prédicats d’inégalité et de plage <br/> (>, <, \<=, >=, BETWEEN). | Non <br/> (Résultats dans une analyse d’index) | Oui | Oui |  
+| Recherche d’index sur les prédicats d’inégalité et de plage <br/> (>, <, <=, >=, BETWEEN). | Non <br/> (Résultats dans une analyse d’index) | Oui | Oui |  
 | Récupérer les lignes selon un ordre de tri qui correspond à la définition d’index. | Non | Oui | Oui |  
 | Récupérer les lignes selon un ordre de tri inverse par rapport à la définition d’index. | Non | Non | Oui |  
   
   
 Dans le tableau, Oui signifie que l’index peut traiter efficacement la demande et Non signifie que l’index ne peut pas traiter efficacement la demande.  
-
-
-  
-  
-\<!--   
-Indexes_for_Memory-Optimized_Tables.md , which is....  
-CAPS guid: {eecc5821-152b-4ed5-888f-7c0e6beffed9}  
-mt670614.aspx  
-  
-Application-Level%20Partitioning.xml , {162d1392-39d2-4436-a4d9-ee5c47864c5a}  
-  
-/Image/hekaton_tables_23d.png , fbc511a0-304c-42f7-807d-d59f3193748f  
-  
-  
-Replaces dn511012.aspx , which is....  
-CAPS guid: {86805eeb-6972-45d8-8369-16ededc535c7}  
-  
-GeneMi  ,  2016-05-05  Thursday  17:25pm  (Hash content moved to new child article, e922cc3a-3d6e-453b-8d32-f4b176e98488.)  
--->  
-  
-  
-  
-
-
 

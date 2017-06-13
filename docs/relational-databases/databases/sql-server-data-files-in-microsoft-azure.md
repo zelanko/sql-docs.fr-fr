@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f04f47c6230a65140c405db039ce737ad3aa7762
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: c105f4fae3b3fffb61ef892cecbbe75754ccfd28
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/15/2017
 
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Fichiers de données SQL Server dans Microsoft Azure
@@ -126,7 +126,7 @@ ON
  Cette section décrit les bibliothèques de référence de programmation et les outils qui peuvent être utilisés lors du stockage de fichiers de données SQL Server dans le stockage Azure.  
   
 ### <a name="powershell-support"></a>Prise en charge de PowerShell  
- Utilisez des applets de commande PowerShell pour stocker des fichiers de données SQL Server dans le service Stockage Blob Azure en référençant un chemin d’URL de stockage d’objets blob à la place d’un chemin de fichier. Accédez aux objets blob avec le format d’URL suivant :`: http://storageaccount.blob.core.windows.net/<container>/<blob>` .  
+ Utilisez des applets de commande PowerShell pour stocker des fichiers de données SQL Server dans le service Stockage Blob Azure en référençant un chemin d’URL de stockage d’objets blob à la place d’un chemin de fichier. Accéder aux objets BLOB à l’aide du format d’URL suivant : `http://storageaccount.blob.core.windows.net/<container>/<blob>` .  
   
 ### <a name="sql-server-object-and-performance-counters-support"></a>Prise en charge des compteurs de performances et des objets SQL Server  
  Depuis SQL Server 2014, un nouvel objet SQL Server a été ajouté pour être utilisé avec la fonctionnalité Fichiers de données SQL Server dans le stockage Azure. Le nouvel objet SQL Server est appelé [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) et il peut être utilisé par le Moniteur système pour surveiller l’activité lors de l’exécution de SQL Server avec Stockage Microsoft Azure.  

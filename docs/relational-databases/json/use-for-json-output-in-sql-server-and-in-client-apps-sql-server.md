@@ -19,28 +19,28 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5331ff00081a7b79756ef14e771ab4a22d3e35ac
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: 9383b62ac3413b0e4dc8780413bdde09bfc04af3
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="use-for-json-output-in-sql-server-and-in-client-apps-sql-server"></a>Utiliser la sortie de FOR JSON dans SQL Server et les applications clientes (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Les exemples suivants montrent comment utiliser la clause **FOR JSON** ou sa sortie dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou les applications clientes.  
+Les exemples suivants illustrent certaines des façons d’utiliser le **FOR JSON** son JSON et la clause output dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou dans les applications clientes.  
   
 ## <a name="use-for-json-output-in-sql-server-variables"></a>Utiliser la sortie de FOR JSON dans des variables SQL Server  
- La sortie de la clause FOR JSON est de type NVARCHAR(MAX). Elle peut donc être affectée à une variable, comme indiqué dans l’exemple suivant.  
+La sortie de la clause FOR JSON est de type nvarchar (max), afin que vous pouvez l’affecter à une variable, comme indiqué dans l’exemple suivant.  
   
-```tsql  
+```sql  
 DECLARE @x NVARCHAR(MAX) = (SELECT TOP 10 * FROM Sales.SalesOrderHeader FOR JSON AUTO)  
 ```  
   
 ## <a name="use-for-json-output-in-sql-server-user-defined-functions"></a>Utiliser la sortie de FOR JSON dans des fonctions SQL Server définies par l’utilisateur  
  Vous pouvez créer des fonctions définies par l’utilisateur qui convertissent les jeux de résultats au format JSON et renvoient cette sortie JSON. l’exemple suivant crée une fonction définie par l’utilisateur, qui extrait certaines lignes de détails de commande et les organise en un tableau JSON.  
   
-```tsql  
+```sql  
 CREATE FUNCTION GetSalesOrderDetails(@salesOrderId int)  
  RETURNS NVARCHAR(MAX)  
 AS  
@@ -54,33 +54,33 @@ END
   
  Vous pouvez utiliser cette fonction dans un lot ou une requête, comme indiqué dans l’exemple suivant.  
   
-```tsql  
-DECLARE @x NVARCHAR(MAX)=dbo.GetSalesOrderDetails(43659)
+```sql  
+DECLARE @x NVARCHAR(MAX) = dbo.GetSalesOrderDetails(43659)
 
 PRINT dbo.GetSalesOrderDetails(43659)
 
 SELECT TOP 10
-  H.*,dbo.GetSalesOrderDetails(H.SalesOrderId) AS Details
+  H.*, dbo.GetSalesOrderDetails(H.SalesOrderId) AS Details
 FROM Sales.SalesOrderHeader H
 ```  
   
 ## <a name="merge-parent-and-child-data-into-a-single-table"></a>Fusionner les données parentes et enfants dans une seule table  
- Dans l’exemple suivant, chaque ensemble de lignes enfants est présenté sous la forme d’un tableau JSON et devient la valeur de la colonne Détails de la table parente.  
+Dans l’exemple suivant, chaque ensemble de lignes enfants est mis en forme comme un tableau JSON. Le tableau JSON devient la valeur de la colonne Détails de la table parente.  
   
-```tsql  
+```sql  
 SELECT TOP 10 SalesOrderId, OrderDate,  
       (SELECT TOP 3 UnitPrice, OrderQty  
          FROM Sales.SalesOrderDetail D  
          WHERE H.SalesOrderId = D.SalesOrderID  
-         FOR JSON AUTO) as Details  
+         FOR JSON AUTO) AS Details  
 INTO SalesOrder  
 FROM Sales.SalesOrderHeader H  
 ```  
   
 ## <a name="update-the-data-in-json-columns"></a>Mettre à jour les données dans les colonnes JSON  
- l’exemple suivant montre comment mettre à jour la valeur des colonnes qui contiennent le texte JSON.  
+ L’exemple suivant montre que vous pouvez mettre à jour la valeur d’une colonne qui contient le texte JSON.  
   
-```tsql  
+```sql  
 UPDATE SalesOrder  
 SET Details =  
      (SELECT TOP 1 UnitPrice, OrderQty  
@@ -90,28 +90,31 @@ SET Details =
 ```  
   
 ## <a name="use-for-json-output-in-a-c-client-app"></a>Utiliser la sortie de FOR JSON dans une application cliente C#  
- l’exemple suivant montre comment récupérer la sortie JSON d’une requête dans un objet StringBuilder d’une application cliente C#. Supposons que la variable queryWithForJson contienne le texte d’une instruction SELECT avec une clause FOR JSON.  
+ l’exemple suivant montre comment récupérer la sortie JSON d’une requête dans un objet StringBuilder d’une application cliente C#. Supposons que la variable `queryWithForJson` contient le texte d’une instruction SELECT avec une clause FOR JSON.  
   
 ```csharp  
-            var queryWithForJson = "SELECT ... FOR JSON";
-            var conn = new SqlConnection("<connection string>");
-            var cmd = new SqlCommand(queryWithForJson, conn);
-            conn.Open();
-            var jsonResult = new StringBuilder();
-            var reader = cmd.ExecuteReader();
-            if (!reader.HasRows)
-            {
-                jsonResult.Append("[]");
-            }
-            else
-            {
-                while (reader.Read())
-                {
-                    jsonResult.Append(reader.GetValue(0).ToString());
-                }
-            }
+var queryWithForJson = "SELECT ... FOR JSON";
+var conn = new SqlConnection("<connection string>");
+var cmd = new SqlCommand(queryWithForJson, conn);
+conn.Open();
+var jsonResult = new StringBuilder();
+var reader = cmd.ExecuteReader();
+if (!reader.HasRows)
+{
+    jsonResult.Append("[]");
+}
+else
+{
+    while (reader.Read())
+    {
+        jsonResult.Append(reader.GetValue(0).ToString());
+    }
+}
 ```  
-  
+
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>En savoir plus sur la fonction intégrée prise en charge de JSON dans SQL Server  
+Pour un grand nombre de solutions spécifiques, utilisez des cas et des recommandations, consultez le [billets de blog sur la prise en charge intégrée de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) dans SQL Server et dans la base de données SQL Azure par programme Jovan Popovic Gestionnaire Microsoft.
+ 
 ## <a name="see-also"></a>Voir aussi  
  [Mettre les résultats de requête au format JSON avec FOR JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)  
   

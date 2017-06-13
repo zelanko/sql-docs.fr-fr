@@ -1,26 +1,31 @@
 ---
-title: "Remise par partage de fichiers dans Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "abonnements [Reporting Services], remise par partage de fichiers"
-  - "remise par partage de fichiers [Reporting Services]"
+title: Remise de partage dans Reporting Services de fichiers | Documents Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subscriptions [Reporting Services], file share delivery
+- file share delivery [Reporting Services]
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 caps.latest.revision: 54
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 54
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5e33585c625c49967304ca36ad91ccc1ebac32f1
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Remise par partage de fichiers dans Reporting Services
+# <a name="file-share-delivery-in-reporting-services"></a>Remise par partage de fichiers dans Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] comprend une extension de remise de partage de fichiers qui vous permet de remettre un rapport dans un dossier. Cette extension est disponible par défaut et elle ne nécessite aucune configuration supplémentaire. Pour que la remise de fichier réussisse, vous devez définir des autorisations d'accès en écriture sur le dossier partagé. Le compte qui requiert des autorisations d’écriture peut être soit des informations d’identification configurées dans l’abonnement, soit un **compte de partage de fichiers** configuré pour le serveur de rapports. Pour plus d’informations sur le compte de partage de fichiers, consultez [Paramètres d’abonnement et compte de partage de fichiers &#40;Gestionnaire de configuration&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). En outre, les utilisateurs qui demandent l'accès aux rapports doivent avoir des autorisations de lecture sur le dossier partagé.  
   
  Pour distribuer un rapport dans un partage de fichiers, vous devez définir un abonnement standard ou piloté par les données. Pour apprendre à utiliser la remise par partage de fichiers pour un abonnement piloté par les données, consultez [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md). Par ailleurs, le compte qui exécute des abonnements de partage de fichiers distants nécessite des droits pour ouvrir une session locale sur l'ordinateur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -43,7 +48,7 @@ caps.handback.revision: 54
   
 -   Contrairement aux rapports qui sont hébergés et gérés par un serveur de rapports, les rapports qui sont remis dans un dossier partagé sont des fichiers statiques.  
   
--   Les fonctionnalités interactives définies pour le rapport **ne fonctionnent pas** pour les rapports qui sont stockés en tant que fichiers dans le système de fichiers. Les fonctionnalités d'interaction sont représentées comme des éléments statiques. Par exemple, si vous remettez un rapport de matrice, le fichier généré offre une vue de niveau supérieur du rapport ; vous ne pouvez pas étendre les lignes et les colonnes pour afficher les données associées.  
+-   Les fonctionnalités interactives définies pour le rapport **ne fonctionnent pas** pour les rapports qui sont stockés en tant que fichiers dans le système de fichiers. Les fonctionnalités d'interaction sont représentées comme des éléments statiques. Par exemple, si vous remettez un rapport de matrice, le fichier généré offre une vue de niveau supérieur du rapport ; vous ne pouvez pas étendre les lignes et les colonnes pour afficher les données associées.  
   
 -   Si le rapport contient des graphiques, la présentation par défaut est utilisée. Si le rapport contient un lien vers un autre rapport, le lien apparaît sous forme de texte statique.  
   
@@ -78,9 +83,9 @@ caps.handback.revision: 54
   
  L’illustration suivante est un exemple de paramètres de fichier correspondant à un abonnement configuré pour la remise de partage de fichiers.  
   
- ![file share subscription](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "file share subscription")  
+ ![abonnement de partage de fichiers](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "abonnement de partage de fichiers")  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer et gérer des abonnements pour les serveurs de rapports en mode natif](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Paramètres d’abonnement et compte de partage de fichiers &#40;Gestionnaire de configuration&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
   

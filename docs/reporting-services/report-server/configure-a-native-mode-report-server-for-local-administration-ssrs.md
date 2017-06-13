@@ -1,31 +1,36 @@
 ---
-title: "Configurer un serveur de rapports en mode natif pour l&#39;administration locale (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UAC"
-  - "installing Reporting Services"
-  - "Windows Vista"
-  - "Localhost"
-  - "windows server 2008"
-  - "Vista"
+title: "Configurer un serveur de rapports en Mode natif pour l’Administration locale (SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UAC
+- installing Reporting Services
+- Windows Vista
+- Localhost
+- windows server 2008
+- Vista
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 caps.latest.revision: 20
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 20
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9939a592288fb5bc031dc53b94ac21c3809d0314
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Configurer un serveur de rapports en mode natif pour l&#39;administration locale (SSRS)
-  Le déploiement d'un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur l'un des systèmes d'exploitation suivants requiert davantage d'étapes de configuration si vous souhaitez administrer l'instance du serveur de rapports localement. Cette rubrique explique comment configurer le serveur de rapports pour l'administration locale. Si vous n’avez pas encore installé ou configuré le serveur de rapports, consultez [Installer SQL Server 2016 avec l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/install-sql-server-2016-from-the-installation-wizard-setup.md) et [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
+# <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurer un serveur de rapports en mode natif pour l'administration locale (SSRS)
+  Le déploiement d'un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur l'un des systèmes d'exploitation suivants requiert davantage d'étapes de configuration si vous souhaitez administrer l'instance du serveur de rapports localement. Cette rubrique explique comment configurer le serveur de rapports pour l'administration locale. Si vous n’avez pas encore installé ou configuré le serveur de rapports, consultez [Installer SQL Server 2016 avec l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) et [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
   
 ||  
 |-|  
@@ -62,7 +67,7 @@ caps.handback.revision: 20
 ##  <a name="bkmk_configuraiton_overview"></a> Présentation des modifications de configuration  
  Les modifications de configuration suivantes configurent le serveur afin d'utiliser des autorisations standard pour gérer le contenu et les opérations du serveur de rapports.  
   
--   Ajoutez les URL [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aux sites approuvés. Par défaut, Internet Explorer est exécuté en **Mode protégé** sur les systèmes d’exploitation répertoriés, une fonctionnalité qui empêche les demandes du navigateur d’atteindre les processus globaux qui s’exécutent sur le même ordinateur. Vous pouvez désactiver le mode protégé pour les applications du serveur de rapports en les ajoutant comme Sites de confiance.  
+-   Ajoutez les URL [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aux sites approuvés. Par défaut, Internet Explorer est exécuté en **Mode protégé**sur les systèmes d’exploitation répertoriés, une fonctionnalité qui empêche les demandes du navigateur d’atteindre les processus globaux qui s’exécutent sur le même ordinateur. Vous pouvez désactiver le mode protégé pour les applications du serveur de rapports en les ajoutant comme Sites de confiance.  
   
 -   Créez les attributions de rôle qui vous accordent en tant qu'administrateur du serveur de rapports l'autorisation de gérer le contenu et les opérations sans devoir utiliser la fonctionnalité **Exécuter en tant qu'administrateur** sur Internet Explorer. En créant des attributions de rôle pour votre compte d'utilisateur Windows, vous accédez à un serveur de rapports avec les autorisations Gestionnaire de contenu et Administrateur système via des attributions de rôle explicites qui remplacent les attributions de rôle prédéfinies et intégrées créées par Reporting Services.  
   
@@ -73,11 +78,11 @@ caps.handback.revision: 20
   
 ###  <a name="bkmk_site_settings"></a> Paramètres du site de confiance dans le navigateur  
   
-1.  Ouvrez une fenêtre du navigateur avec les autorisations Exécuter en tant qu'administrateur. Dans le menu **Démarrer**, cliquez sur **Tous les programmes**, cliquez avec le bouton droit sur **Internet Explorer** et sélectionnez **Exécuter en tant qu’administrateur**.  
+1.  Ouvrez une fenêtre du navigateur avec les autorisations Exécuter en tant qu'administrateur. Dans le menu **Démarrer** , cliquez sur **Tous les programmes**, cliquez avec le bouton droit sur **Internet Explorer**et sélectionnez **Exécuter en tant qu’administrateur**.  
   
 2.  Cliquez sur **Autoriser** pour continuer.  
   
-3.  Dans l'adresse URL, entrez l'URL du Gestionnaire de rapports. Pour obtenir des instructions, consultez [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  Dans l'adresse URL, entrez l'URL du Gestionnaire de rapports. Pour obtenir des instructions, consultez [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 4.  Cliquez sur **Outils**.  
   
@@ -118,7 +123,7 @@ caps.handback.revision: 20
 2.  Cliquez sur **Paramètres du site** dans l'angle supérieur de la page d'accueil.  
   
     > [!TIP]  
-    >  **Remarque :** si vous ne voyez pas l’option **Paramètre du site**, fermez et rouvrez votre navigateur et accédez au gestionnaire de rapports avec des privilèges d’administrateur.  
+    >  **Remarque :** si vous ne voyez pas l’option **Paramètre du site** , fermez et rouvrez votre navigateur et accédez au gestionnaire de rapports avec des privilèges d’administrateur.  
   
 3.  Cliquez sur **Sécurité**.  
   
@@ -139,13 +144,13 @@ caps.handback.revision: 20
   
  **Pour configurer les propriétés et attributions de rôles [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** , vous n'avez donc pas besoin de démarrer [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] avec des autorisations élevées chaque fois :  
   
--   Dans le menu **Démarrer**, cliquez sur **Tous les programmes**, sur **SQL Server 2014**, cliquez avec le bouton droit sur **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**, puis cliquez sur **Exécuter en tant qu’administrateur**.  
+-   Dans le menu **Démarrer** , cliquez sur **Tous les programmes**, sur **SQL Server 2014**, cliquez avec le bouton droit sur **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**, puis cliquez sur **Exécuter en tant qu’administrateur**.  
   
 -   Connectez-vous à votre serveur local [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 -   Dans le nœud **Sécurité** , cliquez sur **Rôles système**.  
   
--   Cliquez avec le bouton droit sur **Administrateur système**, puis cliquez sur **Propriétés**.  
+-   Cliquez avec le bouton droit sur **Administrateur système** , puis cliquez sur **Propriétés**.  
   
 -   Dans la page **Propriétés de rôle système** , sélectionnez **Afficher les propriétés du serveur de rapports**. Sélectionnez toute autre propriété que vous souhaitez associer aux membres du rôle d'administrateur système.  
   
@@ -166,7 +171,7 @@ caps.handback.revision: 20
   
  **Pour exécuter avec des autorisations élevées chaque fois que vous ouvrez SSDT :**  
   
-1.  Dans l’écran de démarrage, tapez **sql server**, puis cliquez avec le bouton droit sur **SQL Server Data Tools**. Cliquez sur **Exécuter en tant qu’administrateur**  
+1.  Dans l’écran de démarrage, tapez **sql server** , puis cliquez avec le bouton droit sur **SQL Server Data Tools**. Cliquez sur **Exécuter en tant qu’administrateur**  
   
 2.  Cliquez sur **Continuer**.  
   
@@ -181,7 +186,7 @@ caps.handback.revision: 20
 ##  <a name="bkmk_addiitonal_informaiton"></a> Informations supplémentaires  
  Une étape de configuration supplémentaire et courante pour l'administration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consiste à ouvrir le port 80 dans le Pare-feu Windows pour autoriser l'accès à l'ordinateur du serveur de rapports. Pour obtenir des instructions, consultez [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
-## Voir aussi  
- [gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   

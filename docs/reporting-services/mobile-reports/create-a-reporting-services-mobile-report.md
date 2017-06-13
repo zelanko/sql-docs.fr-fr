@@ -1,31 +1,36 @@
 ---
-title: "Cr&#233;er un rapport mobile Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Créer un rapport mobile Reporting Services | Documents Microsoft"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 7fce4526bb296113aedb62e5dcf94b50e198210f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Cr&#233;er un rapport mobile Reporting Services
-Avec [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], vous pouvez créer rapidement des rapports mobiles [!INCLUDE[PRODUCT_NAME](../../includes/sscurrent.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] adaptés à la taille de votre écran et sur une aire de conception avec des lignes et des colonnes réglables et des éléments de rapport mobile flexibles.  
+# <a name="create-a-reporting-services-mobile-report"></a>Créer un rapport mobile Reporting Services
+Avec SQL Server Mobile Report Publisher, vous pouvez créer rapidement des rapports mobiles SQL Server 2016 Reporting Services bien adaptés à n’importe quelle taille d’écran, sur une aire de conception avec des lignes de grille réglables et des colonnes et des éléments de rapport mobile flexibles.  
   
-Quand vous créez un rapport mobile pour la première fois, vous pouvez installer [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)] sur votre machine locale à partir du portail web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)]. Vous pouvez aussi l’installer à partir du [Centre de téléchargement Microsoft](http://go.microsoft.com/fwlink/?LinkID=733527). Après cela, vous pouvez le démarrer à partir du portail web ou localement.   
+La première fois que vous créez un rapport mobile, vous pouvez installer SQL Server Mobile Report Publisher sur votre ordinateur local à partir du portail web de Reporting Services. Vous pouvez aussi l’installer à partir du [Centre de téléchargement Microsoft](http://go.microsoft.com/fwlink/?LinkID=733527). Après cela, vous pouvez le démarrer à partir du portail web ou localement.   
     
-1. Dans la barre située en haut du portail web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)], sélectionnez **Nouveau** > **Rapport mobile**.  
+1. Dans la barre supérieure du portail web Reporting Services, sélectionnez **nouveau** > **rapport Mobile**.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
      
-2. Sous l’onglet **Disposition** dans [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)], sélectionnez un navigateur, une jauge, un graphique, une carte ou une grille de données et faites glisser l’élément vers la grille de création.  
+2. Sur le **disposition** dans l’éditeur de rapports mobiles, sélectionnez un navigateur de jauge, graphique ou carte datagrid et faites-le glisser vers la grille de création.  
   
 3. Saisissez le coin inférieur droit de l’élément et redimensionnez-le.  
   
@@ -63,11 +68,11 @@ Quand vous créez un rapport mobile pour la première fois, vous pouvez installe
   
 11. Il est désormais temps d’enregistrer votre rapport. Sélectionnez l’icône Enregistrer dans le coin supérieur gauche, puis **Enregistrer localement** ou **Enregistrer sur le serveur**.  
   
-   Pour l’enregistrer sur un serveur, vous devez avoir accès à un serveur de rapports [!INCLUDE[PRODUCT_NAME](../../includes/sscurrent.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] .  
+   Pour l’enregistrer sur un serveur, vous devez accéder à un serveur de rapports SQL Server 2016 Reporting Services.  
      
-   ### Voir aussi  
+   ### <a name="see-also"></a>Voir aussi  
      
--   [Créer et publier des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
+-   [Créer et publier des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -   [Concevoir un rapport mobile Reporting Services pour téléphone ou tablette](../../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md)  
   
    

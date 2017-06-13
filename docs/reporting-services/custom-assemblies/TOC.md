@@ -1,0 +1,8 @@
+# [Accès aux assemblys personnalisés par des Expressions](accessing-custom-assemblies-through-expressions.md)
+# [Déclaration des autorisations dans les assemblys personnalisés](asserting-permissions-in-custom-assemblies.md)
+# [Déploiement d’un Assembly personnalisé](deploying-a-custom-assembly.md)
+# [Comment : déboguer des assemblys personnalisés](how-to-debug-custom-assemblies.md)
+# [Initialiser des objets de l’Assembly personnalisé](initializing-custom-assembly-objects.md)
+# [Référencement d’assemblys dans un fichier RDL](referencing-assemblies-in-an-rdl-file.md)
+# [Utilisation d’assemblys personnalisés avec des rapports](using-custom-assemblies-with-reports.md)
+# [À l’aide d’un nom fort des assemblys personnalisés](using-strong-named-custom-assemblies.md)

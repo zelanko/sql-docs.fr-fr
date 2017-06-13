@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80239c8fbf3111d0161dece677b369aea30d9060
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: ecc4752f5bf52931df9c7af62b5828b92f8f0123
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/15/2017
 
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Configurer IIS 7 pour la synchronisation web
@@ -286,7 +286,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
     4.  Si un serveur proxy est utilisé, cliquez sur **Utiliser un serveur proxy pour votre réseau local** et **Ne pas utiliser de serveur proxy pour les adresses locales**, puis cliquez sur **OK**.  
   
-2.  Sur l'Abonné, dans Internet Explorer, connectez-vous au serveur en mode de diagnostic en ajoutant `?diag` à l'adresse pour le fichier replisapi.dll. Par exemple : **https://server.domain.com/directory/replisapi.dll?diag**.  
+2.  Sur l'Abonné, dans Internet Explorer, connectez-vous au serveur en mode de diagnostic en ajoutant `?diag` à l'adresse pour le fichier replisapi.dll. Par exemple : `https://server.domain.com/directory/replisapi.dll?diag`.  
   
     > [!NOTE]  
     >  Dans l'exemple ci-dessus, **server.domain.com** doit être remplacé par le nom exact de **Délivré à** répertorié sous la section **Certificats de serveur** dans Gestionnaire des services IIS.  
@@ -313,7 +313,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
     > [!NOTE]  
     >  Les certificats sont installés pour les utilisateurs. Ce processus doit être effectué pour chaque utilisateur qui réalisera des synchronisations avec IIS.  
   
-4.  Dans la boîte de dialogue **Se connecter à \<NomServeur>**, spécifiez l’ID de connexion et le mot de passe que l’Agent de fusion va utiliser pour se connecter à IIS. Ces informations d'identification seront aussi spécifiées dans l'Assistant Nouvel abonnement.  
+4.  Dans la boîte de dialogue **Se connecter à \<NomServeur>**, spécifiez l’ID de connexion et le mot de passe que l’Agent de fusion utilisera pour se connecter à IIS. Ces informations d'identification seront aussi spécifiées dans l'Assistant Nouvel abonnement.  
   
 5.  Dans la fenêtre Internet Explorer relative aux **informations de diagnostic SQL Websync**, vérifiez que la valeur de chaque colonne **État** de la page est **RÉUSSITE**.  
   

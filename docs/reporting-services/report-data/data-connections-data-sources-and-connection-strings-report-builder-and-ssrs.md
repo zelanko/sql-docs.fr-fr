@@ -1,38 +1,42 @@
 ---
-title: "Connexions de donn&#233;es, sources de donn&#233;es et cha&#238;nes de connexion (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "connexions [Reporting Services], sources de données"
-  - "rapports [Reporting Services], données"
-  - "expressions [Reporting Services], sources de données"
-  - "sources de données [Reporting Services], connexions"
-  - "chaînes de connexion [Reporting Services]"
-  - "sources de données partagées [Reporting Services]"
-  - "Reporting Services, sources de données"
-  - "ouvertures de session [Reporting Services]"
+title: "Connexions de données, Sources de données, le Générateur de rapports de chaînes de connexion-SSRS | Documents Microsoft"
+ms.custom: 
+ms.date: 05/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- connections [Reporting Services], data sources
+- reports [Reporting Services], data
+- expressions [Reporting Services], data sources
+- data sources [Reporting Services], connections
+- connection strings [Reporting Services]
+- shared data sources [Reporting Services]
+- Reporting Services, data sources
+- logins [Reporting Services]
 ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 caps.latest.revision: 118
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 116
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 51be2879461864ce67992e12d7cfd95014e03e40
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Connexions de donn&#233;es, sources de donn&#233;es et cha&#238;nes de connexion (G&#233;n&#233;rateur de rapports et SSRS)
-  Pour inclure les données dans des rapports paginés du [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] et  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous devez commencer par créer des *sources de données* et des *jeux de données*. Cette rubrique explique le type des sources de données, comment créer les sources de données et les informations importantes liées aux informations d'identification de source de données. Une source de données inclut le type de source de données, les informations de connexion et le type d'informations d'identification à utiliser. Il existe deux types de sources de données : incorporée et partagée. Une source de données incorporée est définie dans le rapport et utilisée uniquement par ce rapport. Une source de données partagée est définie indépendamment d'un rapport et peut être utilisée par plusieurs rapports. Pour plus d’informations, consultez [Connexions de données ou sources de données incorporées et partagées &#40;Générateur de rapports et SSRS&#41;](../Topic/Embedded%20and%20Shared%20Data%20Connections%20or%20Data%20Sources%20\(Report%20Builder%20and%20SSRS\).md) et [Datasets incorporés et partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] &#124; Mode natif de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Mode SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
-  
+# <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>Connexions de données, sources de données et chaînes de connexion (Générateur de rapports et SSRS)
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)][! INCLUDE [ssrs-appliesto-sharepoint-2013-2016i]... /.. /Includes/SSRS-appliesTo-SharePoint-2013-2016.MD)]
+
+  Pour inclure les données dans des rapports paginés du [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] et  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous devez commencer par créer des *sources de données* et des *jeux de données*. Cette rubrique explique le type des sources de données, comment créer les sources de données et les informations importantes liées aux informations d'identification de source de données. Une source de données inclut le type de source de données, les informations de connexion et le type d'informations d'identification à utiliser. Il existe deux types de sources de données : incorporée et partagée. Une source de données incorporée est définie dans le rapport et utilisée uniquement par ce rapport. Une source de données partagée est définie indépendamment d'un rapport et peut être utilisée par plusieurs rapports. Pour plus d’informations, consultez [Datasets incorporés et partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
+
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
   
@@ -47,24 +51,24 @@ caps.handback.revision: 116
   
      Les administrateurs système peuvent installer et configurer des extensions supplémentaires pour le traitement des données, ainsi que des fournisseurs de données .NET Framework. Pour plus d’informations, consultez [Extensions pour le traitement des données et fournisseurs de données .NET Framework &#40;SSRS&#41;](../../reporting-services/report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md).  
   
-     Les développeurs peuvent utiliser l’API <xref:Microsoft.ReportingServices.DataProcessing> pour créer des extensions pour le traitement des données permettant de prendre en charge d’autres types de sources de données.  
+     Les développeurs peuvent utiliser le <xref:Microsoft.ReportingServices.DataProcessing> API pour créer des extensions de traitement des données pour prendre en charge d’autres types de sources de données.  
   
 -   Dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], accédez à un serveur de rapports ou à un site SharePoint et sélectionnez les sources de données partagées ou créez des sources de données incorporées dans le rapport. Vous ne pouvez pas créer de sources de données partagées dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. Vous ne pouvez pas utiliser les extensions de données personnalisées dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].  
   
  Le tableau ci-après récapitule les différences entre les sources de données incorporées et partagées :  
   
-|Description|Source de données<br /><br /> Source de données|Partagés<br /><br /> Data Source|  
+|Description|Source de données<br /><br /> Source de données|Partagés<br /><br /> Source de données|  
 |-----------------|------------------------------|----------------------------|  
-|La connexion de données est incorporée dans la définition de rapport.|![Disponible](../../reporting-services/report-data/media/greencheck.png "Disponible")||  
-|Le pointeur vers la connexion de données sur le serveur de rapports est incorporé dans la définition de rapport.||![Disponible](../../reporting-services/report-data/media/greencheck.png "Disponible")|  
-|Gestion sur le serveur de rapports|![Disponible](../../reporting-services/report-data/media/greencheck.png "Disponible")|![Disponible](../../reporting-services/report-data/media/greencheck.png "Disponible")|  
-|Obligatoire pour les datasets partagés||![Disponible](../../reporting-services/report-data/media/greencheck.png "Disponible")|  
-|Obligatoire pour les composants||![Disponible](../../reporting-services/report-data/media/greencheck.png "Disponible")|  
+|La connexion de données est incorporée dans la définition de rapport.|![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")||  
+|Le pointeur vers la connexion de données sur le serveur de rapports est incorporé dans la définition de rapport.||![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")|  
+|Gestion sur le serveur de rapports|![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")|![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")|  
+|Obligatoire pour les datasets partagés||![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")|  
+|Obligatoire pour les composants||![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")|  
   
 ##  <a name="bkmk_DataConnections"></a> Extensions de données intégrées  
  Les extensions de données par défaut dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] comprennent les types de connexions de données suivants :  
   
--   Microsoft SQL Server  
+-   Base de données SQL Microsoft SQL Server et Microsoft Azure
   
 -   Microsoft SQL Server Analysis Services  
   
@@ -92,7 +96,7 @@ caps.handback.revision: 116
   
  Pour obtenir la liste complète des sources de données et des versions prises en charge par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
-## Données dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
+## <a name="data-in-includessrbnoversionincludesssrbnoversion-mdmd"></a>Données dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
  ![rs_DataSourcesStory](../../reporting-services/report-data/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
   
 1.  **Sources de données dans le volet des données de rapport** Une source de données s'affiche dans le volet des données de rapport une fois que vous avez créé une source de données incorporée ou que vous avez ajouté une source de données partagée.  
@@ -113,13 +117,12 @@ caps.handback.revision: 116
  > [!NOTE]  
 >  [ConnectionStrings.com](http://www.connectionstrings.com/) est une autre ressource permettant d’obtenir des exemples de chaînes de connexion. 
   
-|**Source de données**|**Exemple**|**Description**|  
+|**Data source**|**Exemple**|**Description**|  
 |---------------------|-----------------|---------------------|  
 |Base de données SQL Server sur le serveur local|`data source="(local)";initial catalog=AdventureWorks`|Définissez **Microsoft SQL Server**comme type de source de données. Pour plus d’informations, consultez [Type de connexion SQL Server &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md).|  
-|Base de données SQL Server sur le serveur local|`data source="(local)";initial catalog=AdventureWorks`|Définissez **Microsoft SQL Server**comme type de source de données.|  
 |Instance SQL Server<br /><br /> database|`Data Source=localhost\MSSQL13.<InstanceName>; Initial Catalog=AdventureWorks`|Définissez **Microsoft SQL Server**comme type de source de données.|  
 |Base de données SQL Server Express|`Data Source=localhost\MSSQL13.SQLEXPRESS; Initial Catalog=AdventureWorks`|Définissez **Microsoft SQL Server**comme type de source de données.|  
-|[!INCLUDE[ssSDS](../../includes/sssds-md.md)] dans le nuage (cloud)|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Définissez **Windows Azure SQL Database**comme type de source de données. Pour plus d’informations, consultez [Type de connexion SQL Azure &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).|  
+|Base de données Azure SQL|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Type de source de données la valeur **Microsoft Azure SQL Database**. Pour plus d’informations, consultez [Type de connexion SQL Azure &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).|  
 |SQL Server Parallel Data Warehouse|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Définissez **Microsoft SQL Server Parallel Data Warehouse**comme type de source de données. Pour plus d’informations, consultez [Type de connexion SQL Server Parallel Data Warehouse &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
 |Base de données Analysis Services sur le serveur local|`data source=localhost;initial catalog=Adventure Works DW`|Définissez **Microsoft SQL Server Analysis Services**comme type de source de données. Pour plus d’informations, consultez [Type de connexion Analysis Services pour MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md) ou [Type de connexion Analysis Services pour DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
 |Base de données de modèles tabulaires Analysis Services avec une perspective Ventes|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales’`|Définissez **Microsoft SQL Server Analysis Services**comme type de source de données. Spécifiez le nom de la perspective dans le paramètre cube=. Pour plus d’informations, consultez [Perspectives &#40;SSAS - Modèle tabulaire&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md).|  
@@ -129,8 +132,8 @@ caps.handback.revision: 116
 |Serveur Oracle|`data source=myserver`|Définissez **Oracle**comme type de source de données. Les outils clients Oracle doivent être installés sur l'ordinateur hébergeant le Concepteur de rapports et sur le serveur de rapports. Pour plus d’informations, consultez [Type de connexion Oracle &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md).|  
 |Source de données SAP NetWeaver BI|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Définissez **SAP NetWeaver BI**comme type de source de données. Pour plus d’informations, consultez [Type de connexion SAP NetWeaver BI &#40;SSRS&#41;](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md).|  
 |Source de données Hyperion Essbase|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Définissez **Hyperion Essbase**comme type de source de données. Pour plus d’informations, consultez [Type de connexion Hyperion Essbase &#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md).|  
-|Source de données Teradata|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|Définissez **Teradata**comme type de source de données. La chaîne de connexion est une adresse IP (Internet Protocol) se présentant sous la forme de quatre champs, chaque champ pouvant comporter de un à trois chiffres. Pour plus d’informations, consultez [Type de connexion Teradata &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md).|  
-|Source de données Teradata|`Database=` *\<nom de la base de données>* `; data source=` *\<NN*N*>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|Définissez **Teradata**, comme type de source de données, comme dans l'exemple précédent. Utilisez uniquement la base de données par défaut spécifiée dans la balise Database, et ne découvrez pas automatiquement les relations entre les données.|  
+|Source de données Teradata|`data source=`\<NNN >. \<NNN >. \<NNN >. \<NNN >`;`|Définissez **Teradata**comme type de source de données. La chaîne de connexion est une adresse IP (Internet Protocol) se présentant sous la forme de quatre champs, chaque champ pouvant comporter de un à trois chiffres. Pour plus d’informations, consultez [Type de connexion Teradata &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md).|  
+|Source de données Teradata|`Database=`*\<database name>* `; data source=` *\<NN*N*>.\< NNN >. \<NNN>. \<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|Définissez **Teradata**, comme type de source de données, comme dans l'exemple précédent. Utilisez uniquement la base de données par défaut spécifiée dans la balise Database, et ne découvrez pas automatiquement les relations entre les données.|  
 |Source de données XML, service Web|`data source=http://adventure-works.com/results.aspx`|Définissez **XML**comme type de source de données. La chaîne de connexion est une URL pour un service Web prenant en charge le langage de définition de services Web (WSDL, Web Services Definition Language). Pour plus d’informations, consultez [Type de connexion XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md).|  
 |Source de données XML, document XML|`http://localhost/XML/Customers.xml`|Définissez **XML**comme type de source de données. La chaîne de connexion est une URL vers le document XML.|  
 |Source de données XML, document XML incorporé|*Vide*|Définissez **XML**comme type de source de données. Les données XML sont incorporées dans la définition de rapport.|  
@@ -141,7 +144,7 @@ caps.handback.revision: 116
  Pour plus d’informations sur les configurations nécessaires pour se connecter à ces types de sources de données, consultez la rubrique spécifique aux connexions de données sous [Ajouter des données à partir de sources de données externes &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) ou [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 ##  <a name="bkmk_special_password_characters"></a> Caractères spéciaux dans un mot de passe  
- Si vous configurez votre source de données ODBC ou SQL de manière à demander un mot de passe ou à inclure le mot de passe dans la chaîne de connexion, et si l'utilisateur entre le mot de passe avec des caractères spéciaux tels que des marques de ponctuation, certains pilotes de sources de données sous-jacents ne peuvent pas valider les caractères spéciaux. Lors du traitement du rapport, le message « Mot de passe non valide » peut s'afficher et signaler ce problème. Si le changement du mot de passe s'avère impossible, vous pouvez demander à votre administrateur de base de données de stocker les informations d'identification appropriées sur le serveur en tant que nom de sources de données (DSN) ODBC. Pour plus d'informations, consultez « OdbcConnection.ConnectionString » dans la documentation du Kit de développement logiciel (SDK) [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
+ Si vous configurez votre source de données ODBC ou SQL de manière à demander un mot de passe ou à inclure le mot de passe dans la chaîne de connexion, et si l'utilisateur entre le mot de passe avec des caractères spéciaux tels que des marques de ponctuation, certains pilotes de sources de données sous-jacents ne peuvent pas valider les caractères spéciaux. Lors du traitement du rapport, le message « Mot de passe non valide » peut s'afficher et signaler ce problème. Si le changement du mot de passe s'avère impossible, vous pouvez demander à votre administrateur de base de données de stocker les informations d'identification appropriées sur le serveur en tant que nom de sources de données (DSN) ODBC. Pour plus d'informations, consultez « OdbcConnection.ConnectionString » dans la documentation du Kit de développement logiciel (SDK) [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
 ##  <a name="bkmk_Expressions_in_connection_strings"></a> Chaînes de connexion basées sur des expressions  
  Les chaînes de connexion basées sur des expressions sont évaluées au moment de l'exécution. Par exemple, vous pouvez spécifier la source de données comme paramètre, inclure la référence de paramètre dans la chaîne de connexion et permettre à l'utilisateur de choisir une source de données pour le rapport. Par exemple, supposons qu'une société multinationale possède des serveurs de données dans plusieurs pays. Grâce à une chaîne de connexion basée sur une expression, un utilisateur peut sélectionner une source de données pour un pays particulier avant d'exécuter un rapport de ventes.  
@@ -165,11 +168,12 @@ caps.handback.revision: 116
 -   Vérifiez que la liste de sources de données partage le même schéma de base de données. Toute conception de rapport commence par les informations relatives au schéma. Si le schéma permettant de définir le rapport ne correspond pas au schéma effectivement utilisé par le rapport au moment de l'exécution, celle-ci peut échouer.  
   
 -   Avant de publier le rapport, remplacez la chaîne de connexion statique par une expression. N'effectuez cette opération qu'une fois la création du rapport achevée. Dès que vous utilisez une expression, vous ne pouvez pas exécuter la requête dans le Concepteur de rapports. De plus, la liste de champs du volet des données de rapport et la liste Paramètres ne sont pas automatiquement mises à jour.  
-  
-## Voir aussi  
- [Créer, modifier, puis supprimer des sources de données partagées &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
- [Créer et modifier des sources de données incorporées](../../reporting-services/report-data/create-and-modify-embedded-data-sources.md)   
- [Définir des propriétés de déploiement &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
- [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
-  
-  
+
+## <a name="next-steps"></a>Étapes suivantes
+
+[Créer, modifier et supprimer des Sources de données partagées](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
+[Créer et modifier des Sources de données incorporées](../../reporting-services/report-data/create-and-modify-embedded-data-sources.md)   
+[Définir les propriétés de déploiement](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
+[Spécifier des informations d'identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+
+D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

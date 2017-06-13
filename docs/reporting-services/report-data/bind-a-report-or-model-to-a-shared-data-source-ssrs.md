@@ -1,32 +1,37 @@
 ---
-title: "Lier un rapport ou un mod&#232;le &#224; une source de donn&#233;es partag&#233;e (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sources de données partagées [Reporting Services]"
-  - "sources de données [Reporting Services], partagées"
+title: "Lier un rapport ou un modèle à une Source de données partagée (SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- shared data sources [Reporting Services]
+- data sources [Reporting Services], shared
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 caps.latest.revision: 11
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 11
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 50893ee7140f33086d432fdc00f660f6371fe282
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Lier un rapport ou un mod&#232;le &#224; une source de donn&#233;es partag&#233;e (SSRS)
+# <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>Lier un rapport ou un modèle à une source de données partagée (SSRS)
   Dans certaines situations, par exemple si vous déplacez un rapport ou un modèle d'un serveur test vers un serveur de production, vous pouvez envisager d'enregistrer le fichier sur votre ordinateur local puis de le télécharger sur un autre serveur de rapports. Si vous téléchargez le rapport ou le modèle sur le nouveau serveur, vous devez le lier de nouveau à une source de données partagée stockée sur le nouveau serveur de rapports. Si vous ne liez pas de nouveau le rapport ou le modèle, celui-ci ne fonctionnera pas correctement en cas d'accès à partir du nouveau serveur de rapports.  
   
 > [!IMPORTANT]  
 >  Avant de procéder à cette opération, la source de données doit déjà exister sur le serveur de rapports ou la bibliothèque SharePoint. Pour plus d’informations sur les sources de données, consultez [Créer, modifier, puis supprimer des sources de données partagées &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
-### Pour lier un rapport ou un modèle à une source de données partagée sur un serveur de rapports s'exécutant en mode natif  
+### <a name="to-bind-a-report-or-model-to-a-shared-data-source-on-a-report-server-running-in-native-mode"></a>Pour lier un rapport ou un modèle à une source de données partagée sur un serveur de rapports s'exécutant en mode natif  
   
 1.  Dans le **Gestionnaire de rapports**, cliquez sur le nom du rapport ou du modèle que vous avez téléchargé sur le serveur.  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 11
   
      Le rapport ou le modèle est désormais lié à une source de données que vous avez sélectionnée.  
   
-### Pour lier un rapport ou un modèle à une source de données partagée sur un serveur de rapports s'exécutant en mode intégré SharePoint  
+### <a name="to-bind-a-report-or-model-to-a-shared-data-source-on-a-report-server-running-in-sharepoint-integrated-mode"></a>Pour lier un rapport ou un modèle à une source de données partagée sur un serveur de rapports s'exécutant en mode intégré SharePoint  
   
 1.  Si la bibliothèque n'est pas déjà ouverte, cliquez sur son nom dans la barre de lancement rapide. Si le nom de la bibliothèque n'est pas visible, cliquez sur **Afficher tout le contenu du site**, puis sur le nom de la bibliothèque.  
   
@@ -52,9 +57,9 @@ caps.handback.revision: 11
   
 4.  Cliquez sur **dataSource1**.  
   
-5.  Dans la zone **Type de connexion**, vérifiez que **Source de données partagée** est activée.  
+5.  Dans la zone **Type de connexion** , vérifiez que **Source de données partagée** est activée.  
   
-6.  Dans la zone **Lien de source de données**, cliquez sur le bouton (...).  
+6.  Dans la zone **Lien de source de données** , cliquez sur le bouton (...).  
   
 7.  Localisez la source de données que vous souhaitez utiliser.  
   
@@ -64,11 +69,11 @@ caps.handback.revision: 11
   
 10. Cliquez sur **Fermer**.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Télécharger un fichier ou un rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)   
  [Télécharger des documents vers une bibliothèque SharePoint &#40;Reporting Services en mode SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
- [Créer et gérer des sources de données partagées &#40;Reporting Services en mode intégré SharePoint&#41;](../Topic/Create%20and%20Manage%20Shared%20Data%20Sources%20\(Reporting%20Services%20in%20SharePoint%20Integrated%20Mode\).md)   
- [Créer, supprimer ou modifier une source de données partagée &#40;Gestionnaire de rapports&#41;](../Topic/Create,%20Delete,%20or%20Modify%20a%20Shared%20Data%20Source%20\(Report%20Manager\).md)   
+ [Créer et gérer des sources de données partagées &#40;Reporting Services en mode intégré SharePoint&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
+ [Créer, supprimer ou modifier une source de données partagée &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
  [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
   

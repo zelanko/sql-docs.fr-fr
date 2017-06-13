@@ -2,7 +2,7 @@
 title: "Scénarios d’utilisation de table temporelle | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/13/2017
+ms.date: 05/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,27 +16,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bb6a2865838df1d66119f68c6d8cd19809a8f86c
+ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
+ms.openlocfilehash: 007b40b36317a67c6b9714b89aac0d3324312f30
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="temporal-table-usage-scenarios"></a>Scénarios d’utilisation de table temporelle
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Les tables temporelles sont généralement utiles dans les scénarios qui exigent un suivi de l’historique des modifications de données.    
-Nous vous recommandons d’envisager les tables temporelles dans les cas d’usage suivants, où elles procurent des avantages substantiels en termes de productivité :  
-  
--   [Audit des données](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_0)  
-  
--   [Analyses à un point dans le temps (voyage dans le temps)](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_1)  
-  
--   [Détection d’anomalie](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_2)  
-  
--   [Dimensions à variation lente](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_3)  
-  
--   [Réparation d’une altération des données au niveau des lignes](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_4)  
+Nous vous recommandons d’envisager des Tables temporelles dans les cas d’usage suivant pour les principaux avantages.  
   
 ## <a name="data-audit"></a>Audit des données  
  Utilisez le contrôle de version système temporel sur les tables qui stockent des informations critiques pour lesquelles vous devez effectuer le suivi de ce qui a changé et des moments où les modifications ont eu lieu, et mener des investigations légales sur les données à tout moment.    

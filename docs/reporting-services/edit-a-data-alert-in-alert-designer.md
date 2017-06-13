@@ -1,37 +1,48 @@
 ---
-title: "Modifier une alerte de donn&#233;es dans le Concepteur d&#39;alertes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modification, alertes de données"
-  - "mise à jour, alertes de données"
-  - "modification, alertes"
-  - "mise à jour, alertes"
+title: "Modifier une alerte de données dans le Concepteur d’alertes | Documents Microsoft"
+ms.custom: 
+ms.date: 05/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- editing, data alerts
+- updating, data alerts
+- editing, alerts
+- updating, alerts
 ms.assetid: dde3664d-90b5-4b12-969e-39152c86e58a
 caps.latest.revision: 11
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 11
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: bb81e52b160296f57916695f71209ce161e7f802
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Modifier une alerte de donn&#233;es dans le Concepteur d&#39;alertes
-  Vous ouvrez la définition d'alerte de données que vous souhaitez modifier dans le Gestionnaire des alertes de données. Uniquement l'utilisateur qui a créé la définition d'alerte peut la modifier. Pour plus d’informations sur l’ouverture du Gestionnaire des alertes de données, consultez [Gérer mes alertes de données dans le Gestionnaire des alertes de données](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
-  
+# <a name="edit-a-data-alert-in-alert-designer"></a>Modifier une alerte de données dans le Concepteur d'alertes
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+Vous ouvrez la définition d'alerte de données que vous souhaitez modifier dans le Gestionnaire des alertes de données. Uniquement l'utilisateur qui a créé la définition d'alerte peut la modifier. Pour plus d’informations sur l’ouverture du Gestionnaire des alertes de données, consultez [Gérer mes alertes de données dans le Gestionnaire des alertes de données](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).
+
+> [!NOTE]
+> Intégration de Reporting Services avec SharePoint n’est plus disponible après SQL Server 2016.
+
  L'image suivante montre le menu contextuel d'une alerte de données dans le Gestionnaire des alertes de données.  
   
- ![Ouvrir le Concepteur d'alertes de données en cliquant sur Modifier](../reporting-services/media/rs-alertmanageriwopendesigner.gif "Ouvrir le Concepteur d'alertes de données en cliquant sur Modifier")  
+ ![Ouvrez le Concepteur d’alertes de données en cliquant sur Modifier](../reporting-services/media/rs-alertmanageriwopendesigner.gif "Concepteur d’alertes de données ouverte en cliquant sur Modifier")  
   
  La procédure suivante décrit les étapes pour ouvrir la définition d'alerte et la modifier dans le Concepteur d'alertes de données du Gestionnaire des alertes de données.  
   
-### Pour modifier une définition d'alerte de données dans le Concepteur d'alertes de données  
+### <a name="to-edit-a-data-alert-definition-in-data-alert-designer"></a>Pour modifier une définition d'alerte de données dans le Concepteur d'alertes de données  
   
 1.  Dans le Gestionnaire des alertes de données, cliquez avec le bouton droit sur la définition d’alerte de données à modifier, puis cliquez sur l’option **Modifier**.  
   
@@ -46,9 +57,10 @@ caps.handback.revision: 11
   
     > [!NOTE]  
     >  Si le rapport a changé et les flux de données générés à partir du rapport ont changé, la définition d'alerte peut ne plus être valide. Ceci se produit lorsqu'une colonne référencée par la définition d'alerte dans ses règles est supprimée du rapport, si le type de ses données change, ou encore, si le rapport est supprimé ou déplacé. Vous pouvez ouvrir une définition d'alerte non valide, mais vous ne pouvez pas l'enregistrer tant qu'elle n'est pas compatible avec la version actuelle du flux de données du rapport sur lequel elle repose. Pour en savoir plus sur la façon dont les flux de données sont générés à partir des rapports, consultez [Génération de flux de données à partir de rapports &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
-  
-## Voir aussi  
- [Gestionnaire des alertes de données pour les administrateurs d'alertes](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
- [Alertes de données Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
-  
-  
+
+## <a name="see-also"></a>Voir aussi
+
+[Gestionnaire des alertes de données pour les administrateurs d'alertes](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[Alertes de données Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
+
+D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

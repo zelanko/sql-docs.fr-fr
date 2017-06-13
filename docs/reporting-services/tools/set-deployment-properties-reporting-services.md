@@ -1,28 +1,33 @@
 ---
-title: "D&#233;finir des propri&#233;t&#233;s de d&#233;ploiement (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "rapports [Reporting Services], déploiement"
-  - "publication de rapports [Reporting Services]"
-  - "propriétés [Reporting Services], déploiement"
-  - "déploiement de rapports [Reporting Services]"
+title: "Définissez les propriétés de déploiement (Reporting Services) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- reports [Reporting Services], deploying
+- publishing reports [Reporting Services]
+- properties [Reporting Services], deployment
+- deploying reports [Reporting Services]
 ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 caps.latest.revision: 44
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 44
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 30d542287f81032aa1bc2540d461a8f8c163b2f9
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# D&#233;finir des propri&#233;t&#233;s de d&#233;ploiement (Reporting Services)
+# <a name="set-deployment-properties-reporting-services"></a>Définir des propriétés de déploiement (Reporting Services)
   Dans[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous devez spécifier le serveur de rapports et éventuellement les dossiers pour les rapports et les sources de données partagées afin de pouvoir publier les éléments dans un projet Report Server sur un serveur de rapports. Les propriétés et valeurs dont [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] a besoin pour générer, visualiser et déployer des rapports sont stockées dans les configurations de projet du projet Report Server. Vous pouvez créer plusieurs jeux nommés pour ces propriétés de projet afin de pouvoir aisément basculer entre les jeux de propriétés. Chaque jeu de propriétés est une configuration. Par exemple, vous pouvez avoir une configuration pour publier des rapports sur un serveur de test et une configuration différente pour publier des rapports sur un serveur de production.  
   
  Utilisez le Gestionnaire de configuration pour créer et gérer des jeux de propriétés de projet dans les configurations de projet. Le Gestionnaire de configuration est une fonctionnalité prise en charge par [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], sur lequel repose [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] .  
@@ -33,16 +38,16 @@ caps.handback.revision: 44
 > [!NOTE]  
 >  Dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], l’action de publier des rapports d’une solution ou d’un projet Report Server est connue sous le nom de *déploiement de rapports*.  
   
-### Pour définir des propriétés de déploiement  
+### <a name="to-set-deployment-properties"></a>Pour définir des propriétés de déploiement  
   
 1.  Cliquez avec le bouton droit sur le projet de rapport, puis cliquez sur **Propriétés**.  
   
-2.  Dans la boîte de dialogue **Pages de propriétés** du projet, sélectionnez une configuration à modifier dans la liste **Configuration** . Les configurations habituelles sont **DebugLocal**, **Debug** et **Release**.  
+2.  Dans la boîte de dialogue **Pages de propriétés** du projet, sélectionnez une configuration à modifier dans la liste **Configuration** . Les configurations habituelles sont **DebugLocal**, **Debug**et **Release**.  
   
     > [!NOTE]  
     >  Vous pouvez utiliser plusieurs configurations pour passer rapidement d'un serveur de rapports ou d'un paramètre à l'autre.  
   
-3.  Dans la zone de texte **OutputPath**, tapez ou collez le chemin dans votre système de fichiers local pour stocker la définition de rapport utilisée dans la vérification de build, le déploiement et l’aperçu de rapports. Le chemin d'accès doit être différent de celui que vous utilisez pour le projet et un chemin d'accès relatif qui est un dossier enfant sous le chemin d'accès du projet.  
+3.  Dans la zone de texte **OutputPath**  , tapez ou collez le chemin dans votre système de fichiers local pour stocker la définition de rapport utilisée dans la vérification de build, le déploiement et l’aperçu de rapports. Le chemin d'accès doit être différent de celui que vous utilisez pour le projet et un chemin d'accès relatif qui est un dossier enfant sous le chemin d'accès du projet.  
   
 4.  Dans la zone de texte **ErrorLevel**  , tapez la gravité des problèmes de génération signalés comme erreurs. Les problèmes qui se produisent lors de la génération de rapports, de sources de données ou d’autres ressources du projet avec des niveaux de gravité inférieurs ou égaux à la valeur de **ErrorLevel**  sont signalés comme erreurs ; sinon, les problèmes sont signalés comme avertissements. Toute erreur provoquera l'échec de la tâche de génération. Les niveaux de gravité valides sont compris entre 0 et 4. La valeur par défaut est 2.  
   
@@ -67,20 +72,20 @@ caps.handback.revision: 44
   
      Lors de la publication sur un serveur de rapports s'exécutant en mode intégré SharePoint, utilisez l'URL d'un site de premier niveau ou d'un sous-site SharePoint. Si vous ne spécifiez pas de site, le site de niveau supérieur par défaut est utilisé (par exemple, http://*nom_serveur*, http://*nom_serveur*/*site* ou http://*nom_serveur*/*site*/*sous-site*).  
   
-### Pour définir les propriétés du Gestionnaire de configuration  
+### <a name="to-set-configuration-manager-properties"></a>Pour définir les propriétés du Gestionnaire de configuration  
   
 1.  Cliquez avec le bouton droit sur le projet de rapport, puis cliquez sur **Propriétés**.  
   
 2.  Dans la boîte de dialogue **Pages de propriétés** du projet, cliquez sur **Gestionnaire de configuration**.  
   
-3.  Dans la boîte de dialogue **Gestionnaire de configuration** , sélectionnez la configuration à modifier. La configuration actuellement active apparaît de la façon suivante : **Active(***\<configuration>***)**.  
+3.  Dans la boîte de dialogue **Gestionnaire de configuration** , sélectionnez la configuration à modifier. La configuration actuellement active s’affiche en tant que **Active (***\<configuration >***)**.  
   
 4.  Dans **Contextes des projets**, pour chaque projet de la solution, sélectionnez ou désélectionnez **Générer** ou **Déployer**.  
   
     > [!NOTE]  
     >  Si l'option **Générer** est sélectionnée, le Gestionnaire de rapports génère le projet de rapport et recherche les éventuelles erreurs avant l'aperçu ou la publication sur un serveur de rapports. Si l'option **Déployer** est sélectionnée, le Gestionnaire de rapports publie les rapports sur le serveur de rapports comme défini dans les propriétés de déploiement. Si l'option **Déployer** n'est pas sélectionnée, le Gestionnaire de rapports affiche le rapport spécifié dans la propriété **StartItem** dans une fenêtre d'aperçu locale.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Publication des sources de données et des rapports](../../reporting-services/reports/publishing-data-sources-and-reports.md)   
  [Aperçu des rapports](../../reporting-services/reports/previewing-reports.md)   
  [Aide sur le Concepteur de rapports via la touche F1](../../reporting-services/tools/report-designer-f1-help.md)   

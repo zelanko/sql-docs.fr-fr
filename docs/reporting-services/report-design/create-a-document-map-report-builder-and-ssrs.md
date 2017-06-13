@@ -1,24 +1,31 @@
 ---
-title: "Cr&#233;er un explorateur de documents (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Créer un Explorateur de documents (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 3abd0b8ce2b463cf793b6b75c908a69308cb68a8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Cr&#233;er un explorateur de documents (G&#233;n&#233;rateur de rapports et SSRS)
-  Un explorateur de documents fournit un ensemble de liens de navigation permettant d'accéder aux éléments de rapport dans un rapport rendu. Lorsque vous visualisez un rapport qui comprend un explorateur de document, un volet latéral distinct apparaît en regard du rapport. L'utilisateur peut cliquer sur les liens de l'explorateur de documents pour accéder à la page du rapport qui affiche l'élément en question. Les sections et les groupes du rapport sont organisés en une hiérarchie de liens. Lorsque vous cliquez sur un de ses éléments, le rapport est actualisé de façon à afficher la zone du rapport correspondant à l'élément sélectionné.  
+
+# <a name="create-a-document-map-report-builder-and-ssrs"></a>Créer un explorateur de documents (Générateur de rapports et SSRS)
+
+Un explorateur de documents fournit un ensemble de liens de navigation permettant d'accéder aux éléments de rapport dans un rapport rendu. Lorsque vous visualisez un rapport qui comprend un explorateur de document, un volet latéral distinct apparaît en regard du rapport. L'utilisateur peut cliquer sur les liens de l'explorateur de documents pour accéder à la page du rapport qui affiche l'élément en question. Les sections et les groupes du rapport sont organisés en une hiérarchie de liens. Lorsque vous cliquez sur un de ses éléments, le rapport est actualisé de façon à afficher la zone du rapport correspondant à l'élément sélectionné.  
   
  Pour ajouter des liens à l'explorateur de documents, vous affectez à la propriété **DocumentMapLabel** de l'élément de rapport du texte que vous créez ou une expression dont le résultat est le texte que vous souhaitez afficher dans l'explorateur de documents. Vous pouvez également ajouter à l'explorateur de documents des valeurs uniques pour un groupe de tables ou de matrices. Par exemple, pour un groupe se basant sur la couleur, chaque couleur unique est un lien vers la page du rapport qui affiche l'instance de groupe correspondant à cette couleur.  
   
@@ -38,10 +45,10 @@ caps.handback.revision: 13
   
 -   Les extensions Atom, TIFF, XML et CSV ignorent les explorateurs de documents.  
   
- Pour plus d’informations, consultez [Fonctionnalité interactive des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md).  
+ Pour plus d’informations, consultez [Fonctionnalité interactive des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md).  
   
 ##  <a name="AddRptItemToMap"></a>   
-#### Pour ajouter un élément de rapport à un explorateur de documents  
+#### <a name="to-add-a-report-item-to-a-document-map"></a>Pour ajouter un élément de rapport à un explorateur de documents  
   
 1.  En mode Conception, sélectionnez l'élément de rapport (par exemple une table, une matrice ou une jauge) que vous souhaitez ajouter à l'explorateur de documents. Les propriétés de l'élément de rapport s'affichent dans le volet Propriétés.  
   
@@ -51,7 +58,7 @@ caps.handback.revision: 13
 2.  Dans le volet Propriétés, tapez le texte devant s'afficher dans l'explorateur de documents dans la propriété **DocumentMapLabel** ou entrez une expression dont le résultat est une étiquette. Par exemple, tapez **Graphique sur les ventes**.  
   
     > [!NOTE]  
-    >  Si le volet Propriétés n’est pas visible, sous l’onglet **Affichage**, dans le groupe **Afficher/Masquer**, sélectionnez **Propriétés**.  
+    >  Si le volet Propriétés n’est pas visible, sous l’onglet **Affichage** , dans le groupe **Afficher/Masquer** , sélectionnez **Propriétés**.  
   
 3.  Répétez les étapes 1 et 2 pour chaque élément de rapport devant apparaître dans l'explorateur de documents.  
   
@@ -59,7 +66,7 @@ caps.handback.revision: 13
 
   
 ##  <a name="AddUniqueValuesToMap"></a>   
-#### Pour ajouter des valeurs de groupe uniques à un explorateur de documents  
+#### <a name="to-add-unique-group-values-to-a-document-map"></a>Pour ajouter des valeurs de groupe uniques à un explorateur de documents  
   
 1.  En mode Conception, sélectionnez la table, la matrice ou la liste qui contient le groupe que vous souhaitez afficher dans l'explorateur de documents. Le volet Regroupement affiche les groupes de lignes et de colonnes.  
   
@@ -71,12 +78,12 @@ caps.handback.revision: 13
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-6.  Répétez les étapes 1 à 4 pour chaque groupe devant apparaître dans l'explorateur de documents.  
+6.  Répétez les étapes 1 à 4 pour chaque groupe devant apparaître dans l'explorateur de documents.  
   
 7.  Cliquez sur **Exécuter**. Le rapport est exécuté et l'explorateur de documents affiche les valeurs de groupe. Cliquez sur un lien quelconque pour accéder à la page du rapport contenant l'élément en question.  
   
 ##  <a name="HideMapWhenViewRpt"></a>   
-#### Pour masquer l'explorateur de documents lors de l'affichage d'un rapport  
+#### <a name="to-hide-the-document-map-when-you-view-a-report"></a>Pour masquer l'explorateur de documents lors de l'affichage d'un rapport  
   
 1.  Dans le Gestionnaire de rapports, accédez au rapport contenant l'explorateur de documents.  
   
@@ -109,10 +116,9 @@ caps.handback.revision: 13
 4.  Collez l'URL dans le Gestionnaire de rapports et appuyez sur ENTRÉE. Le rapport est exécuté et l'explorateur de documents est masqué.  
   
 > [!NOTE]  
->  Pour plus d'informations sur le téléchargement de ces exemples de rapports, consultez [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Exemples de rapports du Générateur de rapports et du Concepteur de rapports](http://go.microsoft.com/fwlink/?LinkId=198283).  
+>  Pour plus d’informations sur le téléchargement des exemples de rapports, consultez [exemples Générateur de rapports et du Concepteur de rapports](http://go.microsoft.com/fwlink/?LinkId=198283).  
 >   
 >  Pour plus d'informations, consultez « Accès URL » dans la [documentation de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) dans la documentation en ligne de SQL Server.  
-  
 
-  
-  
+
+D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

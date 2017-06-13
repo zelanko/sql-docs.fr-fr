@@ -1,7 +1,7 @@
 ---
 title: "Configurer le chiffrement de colonne à l’aide de PowerShell | Microsoft Docs"
 ms.custom: 
-ms.date: 01/10/2017
+ms.date: 05/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 65fa326c931ed4a4bd534e7f70ca4e93811ee44d
+ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
+ms.openlocfilehash: d4a5651f3ef4f8d848253711ed93721f387c016a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/18/2017
 
 ---
 # <a name="configure-column-encryption-using-powershell"></a>Configurer le chiffrement de colonne à l’aide de PowerShell
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Cet article fournit les étapes de définition de la configuration d’Always Encrypted cible pour les colonnes de base de données à l’aide de l’applet de commande [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx) (dans le module PowerShell *SqlServer* ). L’applet de commande **Set-SqlColumnEncryption** modifie le schéma de la base de données cible et les données stockées dans les colonnes sélectionnées. Les données stockées dans une colonne peuvent être chiffrées, rechiffrées ou déchiffrées, en fonction des paramètres de chiffrement cible spécifiés pour les colonnes et de la configuration de chiffrement active.
+Cet article fournit les étapes de définition de la configuration d’Always Encrypted cible pour les colonnes de base de données à l’aide de l’applet de commande [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) (dans le module PowerShell *SqlServer* ). L’applet de commande **Set-SqlColumnEncryption** modifie le schéma de la base de données cible et les données stockées dans les colonnes sélectionnées. Les données stockées dans une colonne peuvent être chiffrées, rechiffrées ou déchiffrées, en fonction des paramètres de chiffrement cible spécifiés pour les colonnes et de la configuration de chiffrement active.
 Pour plus d’informations sur la prise en charge d’Always Encrypted dans le module SqlServer PowerShell, consultez [Configurer Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
 ## <a name="prerequisites"></a>Conditions préalables
@@ -41,7 +41,7 @@ L’applet de commande **Set-SqlColumnEncryption** prend en charge deux approche
 
 Avec l’approche hors connexion, les tables cibles (et toutes les tables liées aux tables cibles, par exemple toutes les tables avec lesquelles une table cible a des relations de clés étrangères) ne sont pas disponibles pour l’écriture des transactions pendant toute la durée de l’opération. La sémantique des contraintes de clé étrangère (**CHECK** ou **NOCHECK**) est toujours conservée quand vous utilisez l’approche hors connexion.
 
-Avec l’approche en ligne (nécessite le module SqlServer PowerShell de SSMS 17.0 ou version ultérieure), l’opération de copie et de chiffrement, de déchiffrement ou de rechiffrement des données est effectuée de manière incrémentielle. Les applications peuvent lire et écrire des données à partir de et vers les tables cibles tout au long de l’opération de déplacement des données, à l’exception de la dernière itération, dont la durée est limitée par le paramètre **MaxDownTimeInSeconds** (vous pouvez le définir). Pour détecter et traiter les modifications que les applications peuvent effectuer pendant la copie des données, l’applet de commande active le [suivi des modifications](https://msdn.microsoft.com/library/bb964713.aspx) dans la base de données cible. Par conséquent, l’approche en ligne consomme plus de ressources sur le serveur que l’approche hors connexion. L’opération peut également prendre beaucoup plus de temps avec l’approche en ligne, en particulier si une charge de travail avec d’importantes opérations d’écriture ne s’exécute sur la base de données. L’approche en ligne peut être utilisée pour chiffrer une table à la fois et la table doit avoir une clé primaire. Par défaut, les contraintes de clé étrangère sont recréées avec l’option **NOCHECK** afin de minimiser l’impact sur les applications. Vous pouvez forcer la conservation de la sémantique des contraintes de clé étrangère en spécifiant l’option **KeepCheckForeignKeyConstraints**.
+Avec l’approche en ligne (requiert la version du module SqlServer PowerShell 21.x ou version ultérieure), l’opération de copie et chiffrer, déchiffrer ou rechiffrement des données est effectuée de façon incrémentielle. Les applications peuvent lire et écrire des données à partir de et vers les tables cibles tout au long de l’opération de déplacement des données, à l’exception de la dernière itération, dont la durée est limitée par le paramètre **MaxDownTimeInSeconds** (vous pouvez le définir). Pour détecter et traiter les modifications que les applications peuvent effectuer pendant la copie des données, l’applet de commande active le [suivi des modifications](../../track-changes/enable-and-disable-change-tracking-sql-server.md) dans la base de données cible. Par conséquent, l’approche en ligne consomme plus de ressources sur le serveur que l’approche hors connexion. L’opération peut également prendre beaucoup plus de temps avec l’approche en ligne, en particulier si une charge de travail avec d’importantes opérations d’écriture ne s’exécute sur la base de données. L’approche en ligne peut être utilisée pour chiffrer une table à la fois et la table doit avoir une clé primaire. Par défaut, les contraintes de clé étrangère sont recréées avec l’option **NOCHECK** afin de minimiser l’impact sur les applications. Vous pouvez forcer la conservation de la sémantique des contraintes de clé étrangère en spécifiant l’option **KeepCheckForeignKeyConstraints**.
 
 Vous trouverez ici des recommandations pour choisir entre l’approche en ligne ou l’approche hors connexion :
 
@@ -61,9 +61,9 @@ Tâche  |Article  |Accède au magasin de clés/aux clés en texte clair  |Accèd
 ---|---|---|---
 Étape 1. Démarrer un environnement PowerShell et importer le module SQL Server. | [Importer le module SQL Server](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | Non | Non
 Étape 2. Se connecter à votre serveur et à la base de données. | [Connexion à une base de données](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | Non | Oui
-Étape 3. S’authentifier auprès d’Azure, si votre clé principale de colonne (qui protège la clé de chiffrement de colonne, soumise à permutation) est stockée dans Azure Key Vault. | [Add-SqlAzureAuthenticationContext](https://msdn.microsoft.com/library/mt759815.aspx) | Oui | Non
-Étape 4. Créer un tableau d’objets SqlColumnEncryptionSettings : un pour chaque colonne de base de données que vous souhaitez chiffrer, rechiffrer ou déchiffrer. SqlColumnMasterKeySettings est un objet qui existe en mémoire (dans PowerShell). Il spécifie le schéma de chiffrement cible pour une colonne. | [New-SqlColumnEncryptionSettings](https://msdn.microsoft.com/library/mt759825.aspx) | Non | Non
-Étape 5. Définir la configuration de chiffrement souhaitée, spécifiée dans le tableau d’objets SqlColumnMasterKeySettings que vous avez créé à l’étape précédente. Une colonne est chiffrée, rechiffrée ou déchiffrée en fonction des paramètres cible spécifiés et de la configuration de chiffrement active de la colonne.| [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx)<br><br>**Remarque :** cette étape peut prendre longtemps. Vos applications ne pourront pas accéder aux tables pendant toute la durée de l’opération ou pendant une partie de l’opération, en fonction de l’approche sélectionnée (en ligne ou hors ligne). | Oui | Oui
+Étape 3. S’authentifier auprès d’Azure, si votre clé principale de colonne (qui protège la clé de chiffrement de colonne, soumise à permutation) est stockée dans Azure Key Vault. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Oui | Non
+Étape 4. Créer un tableau d’objets SqlColumnEncryptionSettings : un pour chaque colonne de base de données que vous souhaitez chiffrer, rechiffrer ou déchiffrer. SqlColumnMasterKeySettings est un objet qui existe en mémoire (dans PowerShell). Il spécifie le schéma de chiffrement cible pour une colonne. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | Non | Non
+Étape 5. Définir la configuration de chiffrement souhaitée, spécifiée dans le tableau d’objets SqlColumnMasterKeySettings que vous avez créé à l’étape précédente. Une colonne est chiffrée, rechiffrée ou déchiffrée en fonction des paramètres cible spécifiés et de la configuration de chiffrement active de la colonne.| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Remarque :** cette étape peut prendre longtemps. Vos applications ne pourront pas accéder aux tables pendant toute la durée de l’opération ou pendant une partie de l’opération, en fonction de l’approche sélectionnée (en ligne ou hors ligne). | Oui | Oui
 
 ## <a name="encrypt-columns-using-offline-approach---example"></a>Chiffrer des colonnes à l’aide de l’approche hors connexion - Exemple
 

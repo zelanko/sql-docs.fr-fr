@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7d93dd0a6eae5fead834526e86455717c6ed97e6
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: 0218298a95d1e7df242b3ca7cbae657effead719
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/15/2017
 
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Résolution des problèmes et maintenance du connecteur SQL Server
@@ -166,7 +166,7 @@ Les sauvegardes des clés peuvent être restaurées entre les régions Azure, ta
  La clé asymétrique dans le coffre de clés permet de protéger les clés de chiffrement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Seule la partie publique de la clé asymétrique sort du coffre ; la partie privée n’est jamais exportée par le coffre. Toutes les opérations de chiffrement effectuées à l’aide de la clé asymétrique ont lieu dans le service Azure Key Vault et sont protégées par la sécurité de ce service.  
   
  **Qu’est-ce qu’un URI de clé ?**  
- Dans Azure Key Vault, chaque clé a un URI, que vous pouvez utiliser pour référencer la clé dans votre application. Utilisez le format **https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey** pour obtenir la version actuelle, et le format **https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87** pour obtenir une version spécifique.  
+ Dans Azure Key Vault, chaque clé a un URI, que vous pouvez utiliser pour référencer la clé dans votre application. Utilisez le format `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` pour obtenir la version actuelle, utilisez le format `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` pour obtenir une version spécifique.  
   
 ### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>À propos de la configuration de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 

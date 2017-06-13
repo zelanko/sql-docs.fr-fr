@@ -1,31 +1,36 @@
 ---
-title: "Concepteur de requ&#234;tes de liste SharePoint (G&#233;n&#233;rateur de rapports) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10016"
+title: "Concepteur de requêtes de liste SharePoint (Générateur de rapports) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10016"
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 957ddf233fbbf41f468f8c981c3e8303a3672d9b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Concepteur de requ&#234;tes de liste SharePoint (G&#233;n&#233;rateur de rapports)
+# <a name="sharepoint-list-query-designer-report-builder"></a>Concepteur de requêtes de liste SharePoint (Générateur de rapports)
   Le Générateur de rapports et le Concepteur de rapports fournissent un concepteur de requêtes graphique et un concepteur de requêtes textuel, qui vous aident à créer une requête spécifiant les données à récupérer à partir d’un site SharePoint pour un jeu de données de rapport. Utilisez le Concepteur de requêtes graphique pour explorer les métadonnées de liste SharePoint, créer une requête de manière interactive et afficher les résultats de votre requête. Utilisez le Concepteur de requêtes textuel pour afficher la requête créée par le Concepteur de requêtes graphique, modifier une requête ou taper les commandes d'une requête. Vous pouvez également importer une requête existante à partir d'un fichier ou d'un rapport.  
   
 > [!IMPORTANT]  
 >  Les utilisateurs accèdent aux sources de données lorsqu'ils créent et exécutent des requêtes. Vous devez accorder des autorisations minimales sur les sources de données, telles que des autorisations en lecture seule.  
   
-## Concepteur de requêtes graphique  
+## <a name="graphical-query-designer"></a>Concepteur de requêtes graphique  
  Dans le concepteur de requêtes graphique, vous pouvez explorer le site SharePoint et générer de manière interactive la commande qui récupère des données de liste SharePoint pour un dataset. Vous choisissez les champs à inclure dans le dataset et spécifiez éventuellement les filtres qui limitent les données dans le dataset. Vous pouvez spécifier que les filtres soient utilisés comme paramètres et fournir la valeur du filtre au moment de l'exécution.  
   
  Les listes SharePoint incluent un grand nombre de champs spécifiques à SharePoint qu'il n'est pas nécessairement utile d'inclure dans les rapports. Le concepteur de requêtes fournit une option permettant de masquer ces champs pour déterminer plus facilement et plus rapidement les champs à utiliser.  
@@ -65,7 +70,7 @@ caps.handback.revision: 7
  Pour ajouter des champs à ce volet ou en supprimer, activez ou désactivez les cases à cocher en regard des champs de table ou de vue dans le volet Vue de base de données.  
   
 ###  <a name="AppliedFilters"></a> Volet Filtres appliqués  
- Le volet Filtres appliqués affiche les critères utilisés pour limiter le nombre de lignes de données qui sont récupérées au moment de l'exécution. Les critères spécifiés dans ce volet sont utilisés pour générer une clause WHERE [!INCLUDE[tsql](../../includes/tsql-md.md)]. Lorsque vous sélectionnez l'option de paramètre, un paramètre de rapport est automatiquement créé. Les paramètres de rapport basés sur des paramètres de requête permettent à un utilisateur de spécifier des valeurs pour la requête afin de contrôler les données dans le rapport.  
+ Le volet Filtres appliqués affiche les critères utilisés pour limiter le nombre de lignes de données qui sont récupérées au moment de l'exécution. Les critères spécifiés dans ce volet sont utilisés pour générer une clause WHERE [!INCLUDE[tsql](../../includes/tsql-md.md)] . Lorsque vous sélectionnez l'option de paramètre, un paramètre de rapport est automatiquement créé. Les paramètres de rapport basés sur des paramètres de requête permettent à un utilisateur de spécifier des valeurs pour la requête afin de contrôler les données dans le rapport.  
   
  Les colonnes suivantes sont affichées :  
   
@@ -84,7 +89,7 @@ caps.handback.revision: 7
   
  L'ordre de tri dans le jeu de résultats est déterminé par l'ordre dans lequel les données sont récupérées à partir de la source de données. Vous pouvez modifier l'ordre de tri en modifiant la requête ou une fois les données récupérées du rapport.  
   
-### Barre d'outils du concepteur de requêtes graphique  
+### <a name="graphical-query-designer-toolbar"></a>Barre d'outils du concepteur de requêtes graphique  
  La barre d'outils du concepteur de requêtes relationnelles fournit les boutons suivants pour vous permettre de spécifier ou d'afficher les résultats d'une requête.  
   
 |Bouton|Description|  
@@ -94,7 +99,7 @@ caps.handback.revision: 7
 |**Exécuter la requête**|Exécute la requête. Le volet Résultats de la requête affiche le jeu de résultats.|  
 |**Afficher les champs masqués**|Bascule pour afficher ou masquer les champs générés automatiquement par SharePoint, tels que les éléments de lien ProgId et Level SharePoint, mais qui ne sont généralement pas utilisés dans les rapports. Le masquage de ces champs rend la liste de champs plus courte et plus facile à utiliser.|  
   
-## Voir aussi  
- [Concepteurs de requêtes &#40;Générateur de rapports&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md)  
+## <a name="see-also"></a>Voir aussi  
+ [Concepteurs de requêtes &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

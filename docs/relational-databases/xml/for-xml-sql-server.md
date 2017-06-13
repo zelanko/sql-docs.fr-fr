@@ -24,13 +24,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f48dc6ebc5af10d1157978a65ceb224041229326
+ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
+ms.openlocfilehash: 259b31233d4d5000b67c9a07d0be36c230dc00f9
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/12/2017
 
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
+
+ > Pour obtenir un contenu pour les versions précédentes de SQL Server, consultez [FOR XML (SQL Server)](https://msdn.microsoft.com/en-US/library/ms178107(SQL.120).aspx).
+
   Une requête SELECT retourne les résultats sous la forme d'un ensemble de lignes. Vous pouvez si vous le souhaitez récupérer les résultats d'une requête SQL sous forme de code XML en spécifiant la clause FOR XML dans la requête. La clause FOR XML peut être utilisée dans les requêtes de premier niveau et dans les sous-requêtes. La clause FOR XML de premier niveau ne peut être utilisée que dans l'instruction SELECT. Dans les sous-requêtes, FOR XML peut être utilisée dans les instructions INSERT, UPDATE et DELETE. Elle peut être également utilisée dans les instructions d'assignation.  
   
  Dans une clause FOR XML, vous spécifiez l'un des modes suivants :  

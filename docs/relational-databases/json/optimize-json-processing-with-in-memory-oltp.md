@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4e0331c288665fd9f69444d0d14366dfa69a668f
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: 12ef08a1f90e0346828a9dafb4052864254954d7
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>Optimiser le traitement JSON avec OLTP en mémoire
@@ -161,18 +161,6 @@ AS BEGIN
 END
 ```
 
-## <a name="next-steps"></a>Étapes suivantes
-JSON dans les modules natifs OLTP en mémoire améliore les performances de la fonctionnalité JSON intégrée qui est disponible dans SQL Server et Azure SQL Database.
-
-Pour en savoir plus sur les principaux scénarios d’utilisation de JSON, consultez les ressources suivantes :
-
--   [Blog TechNet](https://blogs.technet.microsoft.com/dataplatforminsider/2016/01/05/json-in-sql-server-2016-part-1-of-4/)
--   [Documentation MSDN](https://msdn.microsoft.com/library/dn921897.aspx)
--   [Vidéo Channel 9](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
-
-Pour en savoir plus sur les différents scénarios d’intégration de JSON dans votre application, consultez les ressources suivantes :
--   Regardez les démonstrations de cette [vidéo Channel 9](https://channel9.msdn.com/Events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds).
--   Recherchez un scénario correspondant à votre cas d’usage dans les [billets de blog sur JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/).
--   Recherchez des exemples dans notre [référentiel GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/json/).
-
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>En savoir plus sur la fonction intégrée prise en charge de JSON dans SQL Server  
+Pour un grand nombre de solutions spécifiques, utilisez des cas et des recommandations, consultez le [billets de blog sur la prise en charge intégrée de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) dans SQL Server et dans la base de données SQL Azure par programme Jovan Popovic Gestionnaire Microsoft.
 

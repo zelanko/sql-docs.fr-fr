@@ -2,7 +2,7 @@
 title: "Bien démarrer avec PolyBase | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 10/25/2016
+ms.date: 5/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -25,16 +25,16 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 13d43201a92c729dd3405d2d436942316ebad0e4
+ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
+ms.openlocfilehash: 59bf4021617603f0720c23ca192f4ddb65aa6834
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="get-started-with-polybase"></a>Prise en main de PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Cette rubrique présente les concepts de base liés à l’exécution de Polybase. Pour plus d’informations, consultez [Guide de PolyBase](../../relational-databases/polybase/polybase-guide.md).  
+  Cette rubrique contient les principes de base sur l’exécution de PolyBase sur une instance de SQL Server.
   
  Après exécution des étapes ci-dessous, vous aurez acquis ce qui suit :  
   
@@ -46,8 +46,8 @@ ms.lasthandoff: 04/11/2017
   
 -   Exemples de requêtes utilisant des objets PolyBase  
   
-## <a name="prerequisites"></a>Composants requis  
- Une instance de  [SQL Server (64 bits)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016).  
+## <a name="prerequisites"></a>Configuration requise  
+ Une instance de [SQL Server (64 bits)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) par le code suivant :  
   
 -   Microsoft .NET Framework 4.5  
   
@@ -55,23 +55,21 @@ ms.lasthandoff: 04/11/2017
   
 -   Mémoire minimale : 4 Go  
   
--   Espace libre minimal sur le disque dur : 2 Go  
-  
+-   Espace libre minimal sur le disque dur : 2 Go    
 -   La connectivité TCP/IP doit être activée. (Consultez [Activer ou désactiver un protocole réseau de serveur](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)  
   
+ 
  Une source de données externe parmi les suivantes :  
   
 -   Cluster Hadoop. Pour connaître les versions prises en charge, consultez [Configurer PolyBase](#supported).  
 
--   Stockage Blob Azure 
-
--   Si vous envisagez d’utiliser la fonction de délégation des calculs sur Hadoop, vous devez vous assurer que le cluster Hadoop cible est doté des principaux composants de hdfs, Yarn/MapReduce avec le serveur Jobhistory activé. PolyBase envoie la requête émise via MapReduce et extrait l’état à partir du serveur JobHistory. Sans un de ses composants, la requête échoue et déclenche un message d’erreur. 
+-   Stockage d’objets Blob Azure
 
 > [!NOTE]
-> Les clusters HDInsight utilisent le stockage Blob Azure comme système de fichiers associé à leur stockage permanent. Vous pouvez utiliser PolyBase pour interroger les fichiers gérés par un cluster HDInsight. Pour ce faire, créez une source de données pour faire référence à l’objet blob qui est configuré en tant que stockage pour le cluster HDInsight. 
-  
+>   Si vous envisagez d’utiliser la fonction de délégation des calculs sur Hadoop, vous devez vous assurer que le cluster Hadoop cible est doté des principaux composants de hdfs, Yarn/MapReduce avec le serveur Jobhistory activé. PolyBase envoie la requête émise via MapReduce et extrait l’état à partir du serveur JobHistory. Sans un composant, la requête échoue. 
+
 ## <a name="install-polybase"></a>Installer PolyBase  
- Si vous n’avez pas installé PolyBase, consultez [PolyBaseinstallation](../../relational-databases/polybase/polybase-installation.md).  
+ Si vous n’avez pas encore installé PolyBase, consultez [PolyBase installation](../../relational-databases/polybase/polybase-installation.md).  
   
 ### <a name="how-to-confirm-installation"></a>Comment vérifier l’installation  
  Après l’installation, exécutez la commande suivante pour vérifier que PolyBase a été installé avec succès. Si PolyBase est installé, la valeur est 1, sinon 0.  
@@ -81,17 +79,17 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
 ```  
   
 ##  <a name="supported"></a> Configurer PolyBase  
- Après l’installation, vous devez configurer SQL Server pour qu’il se connecte à votre version de Hadoop ou au Stockage Blob Azure. PolyBase prend en charge deux fournisseurs Hadoop, Hortonworks Data Platform (HDP) et Cloudera CDH. Vous pouvez exécuter Hortonworks sur un ordinateur Windows ou Linux, et cela fait également partie de la configuration.  Les sources de données externes prises en charge sont les suivantes :  
+ Après l’installation, vous devez configurer SQL Server à utiliser votre version Hadoop ou le stockage d’objets Blob Azure. PolyBase prend en charge deux fournisseurs Hadoop, Hortonworks Data Platform (HDP) et Cloudera Distributed Hadoop (CDH).  Les sources de données externes prises en charge sont les suivantes :  
   
 -   Hortonworks HDP 1.3 sur Linux/Windows Server  
   
--   Hortonworks HDP 2.1 – 2.5 sur Linux
+-   Hortonworks HDP 2.1 – 2.6 sur Linux
 
 -   Hortonworks HDP 2.1 - 2.3 sur Windows Server  
   
 -   Cloudera CDH 4.3 sur Linux  
   
--   Cloudera CDH 5.1 – 5.5, 5.9, 5.10 sur Linux  
+-   Cloudera CDH 5.1 – 5.5, 5.9-5.11 sur Linux  
   
 -   Stockage Blob Azure  
   
@@ -101,8 +99,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
 ### <a name="external-data-source-configuration"></a>Configuration de source de données externes  
   
 1.  Exécutez [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ‘hadoop connectivity’ et définissez une valeur appropriée. Par défaut, la connectivité hadoop est définie sur 7. Pour trouver la valeur, consultez [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) [Configuration de la connectivité PolyBase &#40;Transact-SQL&#41;]  
-  
-    ```tsql  
+      ```tsql  
     -- Values map to various external data sources.  
     -- Example: value 7 stands for Azure blob storage and Hortonworks HDP 2.3 on Linux.  
     sp_configure @configname = 'hadoop connectivity', @configvalue = 7;   
@@ -159,7 +156,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
  Pour plus d’informations, consultez [Groupes de scale-out PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).  
   
 ## <a name="create-t-sql-objects"></a>Créer des objets T-SQL  
- Créez des objets en fonction de la source de données externe, Hadoop ou Stockage Azure.  
+ Créer des objets en fonction de la source de données externe, Hadoop ou Azure Storage.  
   
 ### <a name="hadoop"></a>Hadoop  
   
@@ -189,8 +186,7 @@ CREATE EXTERNAL DATA SOURCE MyHadoopCluster WITH (
 );  
   
 -- 4: Create an external file format.  
--- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).  
-  
+-- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).    
 CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
         FORMAT_TYPE = DELIMITEDTEXT,   
         FORMAT_OPTIONS (FIELD_TERMINATOR ='|',   

@@ -1,26 +1,31 @@
 ---
-title: "D&#233;finir les options de traitement (Reporting Services en mode int&#233;gr&#233; SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SharePoint integration [Reporting Services], content management"
-  - "instantanés [Reporting Services], création"
+title: "Définir les Options de traitement (Reporting Services en Mode intégré SharePoint) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SharePoint integration [Reporting Services], content management
+- snapshots [Reporting Services], creating
 ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 15
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8f2a5c52f4fa9b04026490c1e66243bf0d660c13
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# D&#233;finir les options de traitement (Reporting Services en mode int&#233;gr&#233; SharePoint)
+# <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Définir les options de traitement (Reporting Services en mode intégré SharePoint)
   Vous pouvez définir des options de traitement sur un rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour déterminer le moment où le traitement des données a lieu. Vous pouvez également définir une valeur d'expiration pour le traitement des rapports, ainsi que des options qui déterminent si l'historique du rapport en cours est activé.  
   
 -   Vous pouvez exécuter un rapport en tant qu'instantané de rapport afin d'éviter qu'il soit exécuté à des moments inopportuns (par exemple, pendant une sauvegarde programmée). En général, un instantané de rapport est créé et actualisé ultérieurement selon une planification, vous permettant ainsi de déterminer précisément le moment auquel le traitement du rapport et des données se produit. Si un rapport est basé sur des requêtes dont l'exécution est longue ou qui utilisent des données d'une source de données que vous ne souhaitez pas rendre accessible à certaines heures, vous devez exécuter le rapport en tant qu'instantané.  
@@ -36,9 +41,9 @@ caps.handback.revision: 15
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode|  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   [Pour définir les options d'actualisation des données](#bkmk_set_data_refresh)  
   
@@ -104,7 +109,7 @@ caps.handback.revision: 15
   
 1.  Utilisez Windows PowerShell pour définir le délai d'attente de base de données sur un serveur de rapports SharePoint. Pour plus d'informations, consultez la section sur l'obtention et la définition des propriétés de base de données de l'application Reporting Service dans l'article [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Définir les propriétés de traitement d'un rapport](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Mise en cache de rapports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
  [Définition des valeurs de délai d’attente pour le traitement d’un rapport et d’un dataset partagé &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  

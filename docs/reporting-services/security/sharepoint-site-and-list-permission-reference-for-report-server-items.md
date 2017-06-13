@@ -1,28 +1,33 @@
 ---
-title: "Article de r&#233;f&#233;rence sur les autorisations de site SharePoint et de listes pour les &#233;l&#233;ments de serveur de rapports | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "autorisations [Reporting Services], mode intégré SharePoint"
-  - "intégration SharePoint [Reporting Services], autorisations"
-  - "sécurité [Reporting Services], mode intégré SharePoint"
-  - "jeux d'autorisations [Reporting Services]"
+title: "Site SharePoint et référence sur les autorisations de liste des éléments de serveur de rapports | Documents Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Reporting Services], SharePoint integrated mode
+- SharePoint integration [Reporting Services], permissions
+- security [Reporting Services], SharePoint integrated mode
+- permission sets [Reporting Services]
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 caps.latest.revision: 14
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 14
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ca45a9fc4c37798983c4cc8956fbb27828a5ff01
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Article de r&#233;f&#233;rence sur les autorisations de site SharePoint et de listes pour les &#233;l&#233;ments de serveur de rapports
+# <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Article de référence sur les autorisations de site SharePoint et de listes pour les éléments de serveur de rapports
   Cette rubrique constitue une référence concernant les autorisations de SharePoint utilisables pour accorder un accès à des opérations sur un serveur de rapports qui s'exécute en mode intégré SharePoint. Si vous créez des niveaux d'autorisation personnalisés, cette rubrique peut vous aider à choisir les autorisations à utiliser.  
   
  SharePoint fournit trente-trois autorisations utilisables pour contrôler l'accès au contenu et aux opérations. Certaines d'entre elles s'appliquent aux documents et aux opérations qui concernent un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Vous pouvez utiliser les tables de référence ci-dessous pour connaître les autorisations qui prennent en charge des tâches données sur les rapports.  
@@ -41,7 +46,7 @@ caps.handback.revision: 14
 |-|  
 |[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode SharePoint &#124; SharePoint 2010 et SharePoint 2013.|  
   
-## Autorisations sur les listes  
+## <a name="list-permissions"></a>Autorisations sur les listes  
  Les autorisations définies sur la bibliothèque contenant les éléments du serveur de rapports déterminent la façon dont les utilisateurs accèdent à ces éléments.  
   
 |Autorisation|Description|F|C|V|Opération de serveur de rapports|  
@@ -58,7 +63,7 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  Parmi les autres autorisations de liste figurent Remplacer l'extraction, Approuver les éléments et Afficher les pages des applications. Ces autorisations ne sont pas évaluées par le serveur de rapports. Le serveur de rapports ne traite pas ces opérations.  
   
-## Autorisations sur le site  
+## <a name="site-permissions"></a>Autorisations sur le site  
  Les autorisations sur le site déterminent l'accès aux opérations sur le serveur de rapports qui ne sont pas directement liées aux éléments stockés dans une bibliothèque donnée. Par exemple, la création ou la gestion de planifications partagées peut servir à des éléments de plusieurs bibliothèques, et la configuration du composant WebPart Visionneuse de rapport peut être utilisée sur la totalité d'un site.  
   
 |Autorisation|Description|F|C|V|Opération de serveur de rapports|  
@@ -72,7 +77,7 @@ caps.handback.revision: 14
 |Utiliser les interfaces distantes|Utilisez les interfaces SOAP, Web DAV ou SharePoint Designer pour accéder au site Web.|X|X|X|Sert à appeler le point de terminaison du proxy URL vers le serveur de rapports.|  
 |Ouvrir|Ouvrez un site Web, une liste ou un dossier pour accéder aux éléments qu'il contient.|X|X|X|Consultez les planifications et les propriétés des éléments.|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   

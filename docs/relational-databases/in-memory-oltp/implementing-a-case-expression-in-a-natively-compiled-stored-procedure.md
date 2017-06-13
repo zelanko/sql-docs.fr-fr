@@ -2,7 +2,7 @@
 title: "Implémentation d’une expression CASE dans une procédure stockée compilée en mode natif | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 03/01/2017
+ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,13 +16,37 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 89227fade8bab98e8c7de4f1119acf16bd28df76
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 1829f2a3b1d053173145df421ce7d8d35a0e29e3
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>Implémentation d’une expression CASE dans une procédure stockée compilée en mode natif
+[!INCLUDE[tsql-appliesto-ssvnxt-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+
+  Les expressions CASE sont pris en charge dans les procédures stockées compilées en mode natif. L’exemple suivant montre une façon d’utiliser l’expression CASE dans une requête. La solution de contournement décrite pour les expressions CASE dans les modules compilés en mode natif s’avère n’est plus nécessaire.
+
+``` 
+-- Query using a CASE expression in a natively compiled stored procedure.
+CREATE PROCEDURE dbo.usp_SOHOnlineOrderResult  
+   WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
+   AS BEGIN ATOMIC WITH  (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE=N'us_english')  
+   SELECT   
+      SalesOrderID,   
+      CASE (OnlineOrderFlag)   
+      WHEN 1 THEN N'Order placed online by customer'  
+      ELSE N'Order placed by sales person'  
+      END  
+   FROM Sales.SalesOrderHeader_inmem
+END  
+GO  
+  
+EXEC dbo.usp_SOHOnlineOrderResult  
+GO  
+```  
+
+
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Les expressions CASE *ne sont pas* prises en charge dans les procédures stockées compilées en mode natif. L’exemple suivant illustre une méthode permettant d’implémenter les fonctionnalités d’une expression CASE dans une procédure stockée compilée en mode natif.  
@@ -85,3 +109,4 @@ GO
  [Les constructions Transact-SQL ne sont pas prises en charge par l’OLTP en mémoire](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   
+

@@ -1,26 +1,33 @@
 ---
-title: "Cr&#233;er le r&#244;le RSExecRole | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "RSExecRole"
+title: "Créer le rôle RSExecRole | Documents Microsoft"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 caps.latest.revision: 23
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 23
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c5830b59420268d58f6425f8a2ce52fc4a3be12e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Cr&#233;er le r&#244;le RSExecRole
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise un rôle de base de données prédéfini appelé **RSExecRole** pour octroyer des autorisations de serveur de rapports à la base de données du serveur de rapports. Le rôle **RSExecRole** est créé automatiquement avec la base de données du serveur de rapports. En règle générale, ne modifiez ou n'assignez jamais d'autres utilisateurs au rôle. Toutefois, lorsque vous déplacez une base de données du serveur de rapports vers un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] nouveau ou différent, vous devez recréer le rôle dans les bases de données système Master ou MSDB.  
+
+# <a name="create-the-rsexecrole"></a>Créer le rôle RSExecRole
+
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise un rôle de base de données prédéfini appelé **RSExecRole** pour octroyer des autorisations de serveur de rapports à la base de données du serveur de rapports. Le rôle **RSExecRole** est créé automatiquement avec la base de données du serveur de rapports. En règle générale, ne modifiez ou n'assignez jamais d'autres utilisateurs au rôle. Toutefois, lorsque vous déplacez une base de données du serveur de rapports vers un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]nouveau ou différent, vous devez recréer le rôle dans les bases de données système Master ou MSDB.  
   
  À l'aide des instructions suivantes, vous exécuterez les étapes ci-dessous :  
   
@@ -31,11 +38,11 @@ caps.handback.revision: 23
 > [!NOTE]  
 >  Les instructions de cette rubrique sont destinées aux utilisateurs qui ne souhaitent pas exécuter un script ou écrire du code WMI pour mettre en service la base de données du serveur de rapports. Si vous gérez un grand déploiement et que vous allez déplacer régulièrement des bases de données, il est conseillé d'écrire un script pour automatiser ces étapes. Pour plus d’informations, consultez [Accéder au fournisseur WMI de Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
-## Avant de commencer  
+## <a name="before-you-start"></a>Avant de commencer  
   
--   Effectuez une sauvegarde des clés de chiffrement afin de pouvoir les restaurer après le déplacement de la base de données. Cette étape n'affecte pas directement votre capacité à créer et à mettre en service le rôle **RSExecRole**, mais vous devez disposer d'une sauvegarde des clés afin de vérifier votre travail. Pour plus d’informations, consultez [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/back-up-and-restore-reporting-services-encryption-keys.md).  
+-   Effectuez une sauvegarde des clés de chiffrement afin de pouvoir les restaurer après le déplacement de la base de données. Cette étape n'affecte pas directement votre capacité à créer et à mettre en service le rôle **RSExecRole**, mais vous devez disposer d'une sauvegarde des clés afin de vérifier votre travail. Pour plus d’informations, consultez [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
--   Vérifiez que vous avez ouvert une session avec un compte d’utilisateur qui dispose d’autorisations **sysadmin** sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Vérifiez que vous avez ouvert une session avec un compte d’utilisateur qui dispose d’autorisations **sysadmin** sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Vérifiez que le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est installé et en cours d'exécution sur l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] que vous envisagez d'utiliser.  
   
@@ -43,10 +50,10 @@ caps.handback.revision: 23
   
  Les instructions permettant de créer manuellement le rôle **RSExecRole** sont destinées à être utilisées dans le contexte de la migration d'une installation du serveur de rapports. Les tâches importantes telles que la sauvegarde et le déplacement de la base de données du serveur de rapports ne sont pas traitées dans cette rubrique, mais sont présentées dans la documentation du moteur de base de données.  
   
-## Création du rôle RSExecRole dans la base de données Master  
+## <a name="create-rsexecrole-in-master"></a>Création du rôle RSExecRole dans la base de données Master  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise des procédures stockées étendues associées au service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour prendre en charge des opérations planifiées. Les étapes suivantes expliquent comment octroyer au rôle **RSExecRole** des autorisations Execute pour les procédures.  
   
-#### Pour créer RSExecRole dans la base de données système Master à l'aide de Management Studio  
+#### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>Pour créer RSExecRole dans la base de données système Master à l'aide de Management Studio  
   
 1.  Démarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et connectez-vous à l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui héberge la base de données du serveur de rapports.  
   
@@ -94,12 +101,12 @@ caps.handback.revision: 23
   
 20. Répétez ces étapes pour chacune des procédures stockées restantes. **RSExecRole** doit disposer des autorisations d'exécution pour les trois procédures stockées.  
   
- ![Page de propriétés du rôle de base de données](../../reporting-services/security/media/rsexecroledbproperties.gif "Page de propriétés du rôle de base de données")  
+ ![Page de propriétés du rôle de base de données](../../reporting-services/security/media/rsexecroledbproperties.gif "page de propriétés du rôle de base de données")  
   
-## Création du rôle RSExecRole dans la base de données MSDB  
+## <a name="create-rsexecrole-in-msdb"></a>Création du rôle RSExecRole dans la base de données MSDB  
  Reporting Services utilise des procédures stockées associées au service Agent SQL Server et extrait des informations sur les travaux à partir de tables système pour prendre en charge les opérations planifiées. Les étapes suivantes expliquent comment octroyer au rôle RSExecRole des autorisations Execute pour les procédures et des autorisations Select sur les tables.  
   
-#### Pour créer RSExecRole dans la base de données système MSDB  
+#### <a name="to-create-rsexecrole-in-the-msdb-system-database"></a>Pour créer RSExecRole dans la base de données système MSDB  
   
 1.  Répétez les mêmes étapes pour octroyer des autorisations aux procédures stockées et aux tables dans MSDB. Pour simplifier ces étapes, vous mettrez en service les procédures stockées et les tables séparément.  
   
@@ -153,7 +160,7 @@ caps.handback.revision: 23
   
 16. Cliquez sur **OK**, puis à nouveau sur **OK** .  
   
-17. Sélectionnez la première procédure stockée : sp_add_category.  
+17. Sélectionnez la première procédure stockée : sp_add_category.  
   
 18. Cliquez sur la case à cocher située à l'intersection de la ligne **Execute** et de la colonne **Octroyer** , puis cliquez sur **OK**.  
   
@@ -185,17 +192,17 @@ caps.handback.revision: 23
   
 30. Répétez ces étapes pour la table sysjobs. Des autorisations Select doivent être octroyées à RSExecRole pour les deux tables.  
   
-## Déplacement de la base de données du serveur de rapports  
- Une fois les rôles créés, vous pouvez déplacer la base de données du serveur de rapports vers une nouvelle instance de SQL Server. Pour plus d’informations, consultez [Déplacement des bases de données du serveur de rapports vers un autre ordinateur &#40;en mode natif SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+## <a name="move-the-report-server-database"></a>Déplacement de la base de données du serveur de rapports  
+ Une fois les rôles créés, vous pouvez déplacer la base de données du serveur de rapports vers une nouvelle instance de SQL Server. Pour plus d’informations, consultez [déplacement des bases de données du serveur de rapports vers un autre ordinateur](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
- Si vous mettez à niveau le [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez effectuer cette opération avant ou après le déplacement de la base de données.  
+ Si vous mettez à niveau le [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers SQL Server 2016, vous pouvez effectuer cette opération avant ou après le déplacement de la base de données.  
   
- La base de données du serveur de rapports sera automatiquement mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] lorsque le serveur de rapports s'y connectera. Il n'y a pas d'étapes spécifiques requises pour mettre à niveau la base de données.  
+ La base de données du serveur de rapports est mis à niveau automatiquement lorsque le serveur de rapports se connecte à ce dernier. Il n'y a pas d'étapes spécifiques requises pour mettre à niveau la base de données.  
   
-## Restauration des clés de chiffrement et vérification de votre travail  
+## <a name="restore-encryption-keys-and-verify-your-work"></a>Restauration des clés de chiffrement et vérification de votre travail  
  Si vous avez attaché les bases de données du serveur de rapports, vous devez maintenant être en mesure d'effectuer les étapes suivantes pour vérifier votre travail.  
   
-#### Pour vérifier le bon fonctionnement du serveur de rapports après le déplacement d'une base de données  
+#### <a name="to-verify-report-server-operability-after-a-database-move"></a>Pour vérifier le bon fonctionnement du serveur de rapports après le déplacement d'une base de données  
   
 1.  Démarrez l'outil de configuration de Reporting Services, puis connectez-vous au serveur de rapports.  
   
@@ -205,7 +212,7 @@ caps.handback.revision: 23
   
 4.  Cliquez sur **Choisir une base de données de serveur de rapports existante**.  
   
-5.  Entrez le nom de serveur du moteur de base de données. Si vous avez attaché les bases de données du serveur de rapports à une instance nommée, vous devez taper le nom de l’instance au format suivant : \<NomServeur>\\<NomInstance\>.  
+5.  Entrez le nom de serveur du moteur de base de données. Si vous avez attaché les bases de données de serveur de rapports à une instance nommée, vous devez taper le nom de l’instance au format suivant : \<nom_serveur >\\< nom_instance\>.  
   
 6.  Cliquez sur **Tester la connexion**.  
   
@@ -219,18 +226,19 @@ caps.handback.revision: 23
   
 11. Cliquez sur **Restaurer**.  
   
-12. Sélectionnez le fichier fort (.snk) qui contient la copie de sauvegarde de la clé symétrique utilisée pour déchiffrer les informations d'identification stockées et les informations de connexion dans la base de données du serveur de rapports.  
+12. Sélectionnez le fichier fort (.snk) qui contient la copie de sauvegarde de la clé symétrique utilisée pour déchiffrer les informations d'identification stockées et les informations de connexion dans la base de données du serveur de rapports.  
   
 13. Entrez le mot de passe, puis cliquez sur **OK**.  
   
 14. Cliquez sur **URL du Gestionnaire de rapports**.  
   
 15. Cliquez sur le lien pour ouvrir le Gestionnaire de rapports. Les éléments du serveur de rapports provenant de la base de données du serveur de rapports doivent s'afficher.  
-  
-## Voir aussi  
- [Déplacement des bases de données du serveur de rapports vers un autre ordinateur &#40;en mode natif SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
- [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Créer une base de données du serveur de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/create-a-native-mode-report-server-database-ssrs-configuration-manager.md)   
- [Sauvegarder et restaurer les clés de chiffrement Reporting Services](../../reporting-services/install-windows/back-up-and-restore-reporting-services-encryption-keys.md)  
-  
-  
+
+## <a name="next-steps"></a>Étapes suivantes
+
+[Déplacement des bases de données du serveur de rapports vers un autre ordinateur &#40;en mode natif SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
+[Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[Créer une base de données du serveur de rapports en Mode natif &#40; Gestionnaire de Configuration de SSRS &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+[Sauvegarder et restaurer les clés de chiffrement Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+
+D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

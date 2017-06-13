@@ -2,7 +2,7 @@
 title: Chiffrement SQL Server | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/03/2016
+ms.date: 05/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,24 +20,24 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 441968f81086a875ee526d31dcaf753c1e103868
+ms.sourcegitcommit: 6d75e0e40c5642993cb17b09e421fbfebf40f87a
+ms.openlocfilehash: c7aee6098b6cf8eca74dd3f34b9ed9a836bb9d20
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/16/2017
 
 ---
 # <a name="sql-server-encryption"></a>Chiffrement SQL Server
   Le chiffrement est un processus visant à rendre des données inintelligibles à l'aide d'une clé ou d'un mot de passe. Les données sont alors inutiles en l'absence du mot de passe ou de la clé de déchiffrement correspondante. Le chiffrement ne résout pas les problèmes de contrôle d'accès. Toutefois, il améliore la sécurité en limitant les pertes de données même si les contrôles d'accès sont contournés. Par exemple, si l'ordinateur hôte de la base de données est mal configuré et qu'un pirate parvient à se procurer des données sensibles, les données subtilisées seront vraisemblablement inexploitables si elles sont chiffrées.  
   
- Vous pouvez utiliser le chiffrement dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour les connexions, les données et les procédures stockées. Le tableau ci-dessous contient davantage d'informations sur le chiffrement dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
-  
+
 > [!IMPORTANT]  
 >  Bien que le chiffrement soit un outil précieux qui aide à garantir la sécurité, il ne doit pas être envisagé pour toutes les données et connexions. Lorsque vous décidez de mettre en œuvre ou non le chiffrement, tenez compte de la manière dont les utilisateurs accèderont aux données. Si les utilisateurs accèdent aux données via un réseau public, le chiffrement des données peut être requis pour augmenter la sécurité. Toutefois, si tous les accès impliquent une configuration intranet sécurisée, le chiffrement peut s'avérer superflu. Toute utilisation du chiffrement doit également inclure une stratégie de maintenance pour les mots de passe, les clés et les certificats.  
   
 > [!NOTE]  
 >  Les dernières informations sur la sécurité de niveau transport (TSL1.2) sont disponibles dans [Prise en charge de TLS 1.2 pour Microsoft SQL Server](https://support.microsoft.com/kb/3135244).  
-  
-## <a name="in-this-section"></a>Dans cette section  
+
+Vous pouvez utiliser le chiffrement dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour les connexions, les données et les procédures stockées. Les rubriques suivantes contiennent plus d’informations sur le chiffrement dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+
  [Hiérarchie de chiffrement](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
  Informations sur la hiérarchie de chiffrement dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 04/11/2017
  Informations sur l'utilisation d'un certificat pour chiffrer des données.  
   
 ## <a name="external-resources"></a>Ressources externes  
- [Microsoft TechNet : SQL Server TechCenter : SQL Server 2005 – Sécurité et protection](https://msdn.microsoft.com/sqlserver/bb895847.aspx)  
+ [Microsoft TechNet : SQL Server TechCenter : SQL Server 2012 sécurité et Protection](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
  Informations à jour sur la sécurité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  

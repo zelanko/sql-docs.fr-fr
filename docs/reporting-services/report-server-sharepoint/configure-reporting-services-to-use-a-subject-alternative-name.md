@@ -1,46 +1,51 @@
 ---
-title: "Configurer Reporting Services pour utiliser un autre nom de l&#39;objet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Configurer Reporting Services pour utiliser un autre nom d’objet | Documents Microsoft"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ce458f9f-4b4f-4a58-aa75-9a90dda1e622
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 6
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4c4d975e93e77f43c481b44644faaa310963527b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Configurer Reporting Services pour utiliser un autre nom de l&#39;objet
+# <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Configurer Reporting Services pour utiliser un autre nom de l'objet
   Cette rubrique explique comment configurer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) pour utiliser un autre nom de l’objet (SAN, Subject Alternative Name) en modifiant le fichier rsreportserver.config et en utilisant l’outil Netsh.exe.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode|  
   
  Les instructions s'appliquent à l'URL Reporting Services, ainsi qu'à une URL de service web.  
   
  Pour utiliser un nom SAN, le certificat SSL doit être inscrit sur le serveur, être signé et posséder la clé privée. Vous ne pouvez pas utiliser un certificat auto-signé.  
   
- Vous pouvez configurer les URL dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour utiliser un certificat SSL. Normalement, un certificat a juste un nom d'objet qui n'autorise qu'une seule URL pour une session SSL (Secure Sockets Layer). Le nom SAN est un champ supplémentaire dans le certificat qui permet à un service SSL d'être à l'écoute et d'être valide pour plusieurs URL. Il permet également au service SSL de partager le port SSL avec d'autres applications. Le nom du SAN ressemble à ceci : www.s2.com.  
+ Vous pouvez configurer les URL dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour utiliser un certificat SSL. Normalement, un certificat a juste un nom d'objet qui n'autorise qu'une seule URL pour une session SSL (Secure Sockets Layer). Le nom SAN est un champ supplémentaire dans le certificat qui permet à un service SSL d'être à l'écoute et d'être valide pour plusieurs URL. Il permet également au service SSL de partager le port SSL avec d'autres applications. Le nom du SAN ressemble à ceci : www.s2.com.  
   
  Pour plus d’informations sur l’activation de SSL pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Configurer des connexions SSL sur un serveur de rapports en mode natif](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
-### Configurer SSRS pour utiliser un autre nom de l'objet pour l'URL d'un service web  
+### <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Configurer SSRS pour utiliser un autre nom de l'objet pour l'URL d'un service web  
   
 1.  Démarrez le Gestionnaire de configuration de Reporting Services.  
   
      Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
-2.  Dans la page **URL du service web**, sélectionnez un port SSL et un certificat SSL.  
+2.  Dans la page **URL du service web** , sélectionnez un port SSL et un certificat SSL.  
   
-     ![Gestionnaire de configuration de Reporting Services](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Gestionnaire de configuration de Reporting Services")  
+     ![Gestionnaire de Configuration de Reporting Services](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Gestionnaire de Configuration de Reporting Services")  
   
      Le gestionnaire de configuration inscrit le certificat SSL pour le port.  
   
@@ -121,9 +126,9 @@ caps.handback.revision: 6
   
     ```  
   
-10. Dans la page **État de Report Server** du Gestionnaire de configuration de Reporting Services, cliquez sur **Arrêter**, puis sur **Démarrer** pour redémarrer le serveur de rapports.  
+10. Dans la page **État de Report Server** du Gestionnaire de configuration de Reporting Services, cliquez sur **Arrêter** , puis sur **Démarrer** pour redémarrer le serveur de rapports.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fichier de configuration RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   

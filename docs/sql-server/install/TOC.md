@@ -15,3 +15,4 @@
 # [Installer les fonctionnalités BI de SQL Server 2016](install-sql-server-business-intelligence-features.md)
 # [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](configure-the-windows-firewall-to-allow-sql-server-access.md)  
 ## [Configurer un ordinateur multirésident pour l’accès à SQL Server](configure-a-multi-homed-computer-for-sql-server-access.md)  
+# [Aide de l’Assistant Installation](instance-configuration.md)

@@ -1,33 +1,38 @@
 ---
-title: "Graphiques sparkline et barres de donn&#233;es (G&#233;n&#233;rateur de rapports et SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.sparklines.f1"
-  - "10544"
+title: "Graphiques sparkline et barres de données (Générateur de rapports et SSRS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.sparklines.f1
+- "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6021dec1c7d072041710c62a533d4e19ead4aa53
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Graphiques sparkline et barres de donn&#233;es (G&#233;n&#233;rateur de rapports et SSRS)
+# <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Graphiques sparkline et barres de données (Générateur de rapports et SSRS)
   Les graphiques sparkline et les barres de données sont des graphiques simples de petite taille qui communiquent beaucoup d'informations dans un petit espace, souvent intégré au texte.   
     
-  Dans les rapports [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], ils sont souvent utilisés dans les tables et les matrices. Ils tirent leur impact de l'affichage d'un grand nombre d'entre eux en même temps et de la possibilité de les comparer rapidement par superposition, au lieu de les examiner séparément. Les valeurs hors norme, les lignes qui ne sont pas exécutées comme les autres, sont ainsi plus visibles. Malgré sa petite taille, chaque graphique sparkline représente fréquemment plusieurs points de données, souvent dans le temps. Les barres de données peuvent représenter plusieurs points de données, mais en général n'en illustrent qu'un seul. Chaque graphique sparkline présente en général une série unique. Vous ne pouvez pas ajouter de graphique sparkline à un groupe de détails dans une table. Étant donné que les graphiques sparkline affichent des données agrégées, ils doivent entrer dans une cellule associée à un groupe. Les graphiques sparkline et les barres de données ont les mêmes éléments de graphique de base de catégories, séries et valeurs, mais ils n'ont aucune légende, ligne d'axe, étiquette ni graduation.  
+  Dans les rapports [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , ils sont souvent utilisés dans les tables et les matrices. Ils tirent leur impact de l'affichage d'un grand nombre d'entre eux en même temps et de la possibilité de les comparer rapidement par superposition, au lieu de les examiner séparément. Les valeurs hors norme, les lignes qui ne sont pas exécutées comme les autres, sont ainsi plus visibles. Malgré sa petite taille, chaque graphique sparkline représente fréquemment plusieurs points de données, souvent dans le temps. Les barres de données peuvent représenter plusieurs points de données, mais en général n'en illustrent qu'un seul. Chaque graphique sparkline présente en général une série unique. Vous ne pouvez pas ajouter de graphique sparkline à un groupe de détails dans une table. Étant donné que les graphiques sparkline affichent des données agrégées, ils doivent entrer dans une cellule associée à un groupe. Les graphiques sparkline et les barres de données ont les mêmes éléments de graphique de base de catégories, séries et valeurs, mais ils n'ont aucune légende, ligne d'axe, étiquette ni graduation.  
   
  ![rs_SparklineExample](../../reporting-services/report-design/media/rs-sparklineexample.gif "rs_SparklineExample")  
   
- Pour une prise en main rapide des graphiques sparkline, consultez [Didacticiel : ajouter un graphique sparkline à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md), ainsi que les vidéos [Procédure : créer un graphique sparkline dans une table](http://go.microsoft.com/fwlink/?LinkId=197092) et [Graphiques sparkline, graphiques à barres et indicateurs dans le Générateur de rapports](http://technet.microsoft.com/bi/video/ff877165).  
+ Pour une prise en main rapide des graphiques sparkline, consultez [Didacticiel : ajouter un graphique sparkline à un rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) , ainsi que les vidéos [Procédure : créer un graphique sparkline dans une table](http://go.microsoft.com/fwlink/?LinkId=197092) et [Graphiques sparkline, graphiques à barres et indicateurs dans le Générateur de rapports](http://technet.microsoft.com/bi/video/ff877165) .  
   
 > [!NOTE]  
 >  Vous pouvez publier des graphiques sparkline et des barres de données avec leur table, matrice ou liste parente indépendamment d'un rapport en tant que partie de rapport. En savoir plus sur les [Parties de rapports](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -50,7 +55,7 @@ caps.handback.revision: 11
   
  ![rs_DataBars](../../reporting-services/report-design/media/rs-databars.gif "rs_DataBars")  
   
- Dans cet exemple utilisant des barres de données empilées, chaque barre de données, même unique, illustre plusieurs points de données. Par exemple, les trois couleurs différentes de la barre pourraient représenter des tâches de trois niveaux de priorité avec la longueur de la barre représentant le nombre total de tâches affectées à chaque personne. Si vous avez créé ces barres de données empilées100 %à la place, chaque barre remplirait la cellule et les différentes couleurs représenteraient le pourcentage de la totalité pour chaque niveau de priorité.  
+ Dans cet exemple utilisant des barres de données empilées, chaque barre de données, même unique, illustre plusieurs points de données. Par exemple, les trois couleurs différentes de la barre pourraient représenter des tâches de trois niveaux de priorité avec la longueur de la barre représentant le nombre total de tâches affectées à chaque personne. Si vous avez créé ces barres de données empilées100 %à la place, chaque barre remplirait la cellule et les différentes couleurs représenteraient le pourcentage de la totalité pour chaque niveau de priorité.  
   
  Vous pouvez dériver des versions de barre de données de ces graphiques intégraux :  
   
@@ -59,13 +64,13 @@ caps.handback.revision: 11
 -   [Histogrammes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md) : histogrammes simples, empilés et empilés 100 %. Les histogrammes peuvent être des graphiques sparkline ou des barres de données.  
   
 ##  <a name="AlignDatainTableMatrix"></a> Alignement des données du graphique sparkline dans une table ou matrice  
- Lorsque vous insérez un graphique sparkline dans une table ou matrice, il est habituellement important que les points de données dans chaque graphique sparkline soient alignés avec les points de données des autres graphiques sparkline dans cette colonne. Sinon, il est difficile de comparer les données dans des lignes différentes. Par exemple, lorsque vous comparez les chiffres des ventes par mois pour différents vendeurs dans votre société, vous souhaitez que les mois soient alignés. Si un employé était absent pendant le mois d'avril, il n'existe aucune donnée pour cet employé pour ce mois. Vous souhaitez voir un vide pour ce mois et les données pour les mois suivants alignées avec celles pour les autres employés. Pour cela, vous pouvez aligner l'axe horizontal. Pour plus d’informations, consultez la section relative aux graphiques sparkline dans [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression scope for totals, aggregates, and built-in collections.md), ainsi que la rubrique [Aligner les données d’un graphique dans une table ou une matrice &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md).  
+ Lorsque vous insérez un graphique sparkline dans une table ou matrice, il est habituellement important que les points de données dans chaque graphique sparkline soient alignés avec les points de données des autres graphiques sparkline dans cette colonne. Sinon, il est difficile de comparer les données dans des lignes différentes. Par exemple, lorsque vous comparez les chiffres des ventes par mois pour différents vendeurs dans votre société, vous souhaitez que les mois soient alignés. Si un employé était absent pendant le mois d'avril, il n'existe aucune donnée pour cet employé pour ce mois. Vous souhaitez voir un vide pour ce mois et les données pour les mois suivants alignées avec celles pour les autres employés. Pour cela, vous pouvez aligner l'axe horizontal. Pour plus d’informations, consultez la section relative aux graphiques sparkline dans [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md), ainsi que la rubrique [Aligner les données d’un graphique dans une table ou une matrice &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md).  
   
  De la même façon, les données doivent également être alignées verticalement pour pouvoir être comparées entre les lignes, ce qui signifie que la hauteur des barres ou lignes dans un graphique sparkline ou une barre de données doit être relative à la hauteur des barres et lignes dans tous les autres graphiques sparkline ou barres de données. Sinon, vous ne pouvez pas comparer les lignes entre elles.  
   
  ![rs_SparklineAlignData](../../reporting-services/report-design/media/rs-sparklinealigndata.gif "rs_SparklineAlignData")  
   
- Dans cette image, l'histogramme affiche les ventes quotidiennes pour chaque employé. Notez que les jours pendant lesquels un employé ne génère aucun chiffre d'affaires, le graphique laisse un espace et aligne les jours suivants. Voici un exemple d'alignement horizontal. Notez également que, pour certains employés, chaque barre est courte et aucune barre n'atteint le haut de la cellule. Voici un exemple d'alignement vertical ; sans cet alignement, dans les lignes sans grandes barres, les barres courtes se développeraient pour remplir la hauteur de la cellule.  
+ Dans cette image, l'histogramme affiche les ventes quotidiennes pour chaque employé. Notez que les jours pendant lesquels un employé ne génère aucun chiffre d'affaires, le graphique laisse un espace et aligne les jours suivants. Voici un exemple d'alignement horizontal. Notez également que, pour certains employés, chaque barre est courte et aucune barre n'atteint le haut de la cellule. Voici un exemple d'alignement vertical ; sans cet alignement, dans les lignes sans grandes barres, les barres courtes se développeraient pour remplir la hauteur de la cellule.  
   
 ##  <a name="UnderstandScope"></a> Présentation des données fournies à un graphique sparkline ou une barre de données  
  Quand vous ajoutez un graphique sparkline ou une barre de données à une table ou une matrice, cette opération est appelée *imbrication* d’une région de données dans une autre. L'imbrication signifie que les données fournies au graphique sparkline ou à la barre de données sont contrôlées par le dataset sur lequel la table ou la matrice est basée, et selon sa position dans la table ou matrice. Pour plus d’informations, consultez [Régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md).  
@@ -81,8 +86,8 @@ caps.handback.revision: 11
   
  [Aligner les données d’un graphique dans une table ou une matrice &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
   
-### Autres rubriques de procédures pour les graphiques  
- Les graphiques sparkline et les barres de données étant un type de graphique, vous pouvez également consulter les rubriques de procédures suivantes pour obtenir des informations utiles et pertinentes sur les graphiques :  
+### <a name="other-how-to-topics-for-charts"></a>Autres rubriques de procédures pour les graphiques  
+ Les graphiques sparkline et les barres de données étant un type de graphique, vous pouvez également consulter les rubriques de procédures suivantes pour obtenir des informations utiles et pertinentes sur les graphiques :  
   
  [Ajouter un graphique à un rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 11
   
  [Spécifier des couleurs cohérentes pour plusieurs graphiques à base de formes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Didacticiel : ajouter un graphique sparkline à un rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)   
   

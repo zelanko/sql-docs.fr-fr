@@ -1,27 +1,33 @@
 ---
-title: "Cr&#233;er des rapports mobiles avec l’&#201;diteur de rapports mobiles SQL&#160;Server | Microsoft Docs"
-description: Learn about Reporting Services mobile reports for mobile devices, connected to on-premises data, with an assortment of data visualizations.
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: "Créer des rapports mobiles avec SQL Server Mobile Report Publisher | Documents Microsoft"
+description: "En savoir plus sur Reporting Services rapports mobiles pour les appareils mobiles connectés à des données locales, avec un large éventail de visualisations de données."
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 caps.latest.revision: 35
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 34
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 4fe797ac21e1f659b1a2a196be3f860a65b36896
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Cr&#233;er des rapports mobiles avec l’&#201;diteur de rapports mobiles SQL&#160;Server
+# <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>Créer des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server
 Découvrez les rapports mobiles [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , optimisés pour les appareils mobiles et connectés à des données locales, avec un large éventail de visualisations de données. 
 
-> **Remarque :** Pour migrer un contenu Datazen Server tel que des tableaux de bord et des indicateurs de performance clés vers un serveur SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , n’hésitez pas utiliser [l’Assistant de migration SQL Server pour Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128). 
+>[!NOTE]
+>  Vous devez migrer le contenu de Datazen serveur tels que des tableaux de bord et les indicateurs de performance clés à un SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] serveur ? n’hésitez pas utiliser [l’Assistant de migration SQL Server pour Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128). 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 
@@ -29,16 +35,16 @@ Avec [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)], vous pou
 
 * Connectez vos rapports mobiles à de nombreuses sources de données, y compris des données Analysis Services et SQL Server locales. 
 * Disposez vos rapports mobiles sur une aire de conception avec des lignes et des colonnes de grille réglables et des éléments de rapport mobile flexibles bien adaptés à la taille de votre écran. 
-* Ensuite, enregistrez ces rapports mobiles sur un serveur Reporting Services, puis affichez-les et exploitez-les dans un navigateur ou dans l’application mobile Power BI sur un appareil iPad, iPhone, Windows 10 ou sur un téléphone Android.
+* Ensuite, enregistrez ces rapports mobiles sur un serveur Reporting Services et afficher et interagir avec eux dans un navigateur ou dans l’application mobile Power BI sur iPad, iPhone, les téléphones Android tablettes et des appareils Windows 10.
   
-## <a name="create-includessrsnoversionmdtokenssrsnoversionmdmd-mobile-reports"></a>Créer des rapports mobiles [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  
+## <a name="create-includessrsnoversionmdincludesssrsnoversion-mdmd--mobile-reports"></a>Créer des rapports mobiles [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  
   
 Ces articles vous aideront à démarrer.
 -  Téléchargez [l’Éditeur de rapports mobiles SQL Server](http://go.microsoft.com/fwlink/?LinkID=733527).  
 -  [Créer un rapport mobile Reporting Services](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
 -  [Procédure détaillée : créer des rapports mobiles et des indicateurs de performance clés dans SQL Server 2016 Reporting Services](http://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (blog de Christopher Finlan, en anglais)  
-- [Commencer par la conception ou Commencer par les données](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md) : indiquez si vous souhaitez d’abord concevoir votre rapport avec des données simulées, ou commencer par vos propres données.  
-- [Données de rapports mobiles Reporting Services](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md) : utilisez des données de jeux de données partagés ou préparez des données à partir de classeurs Excel pour les utiliser dans vos rapports mobiles.
+- [Commencer par la conception ou Commencer par les données](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md): indiquez si vous souhaitez d’abord concevoir votre rapport avec des données simulées, ou commencer par vos propres données.  
+- [Données de rapports mobiles Reporting Services](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md): utilisez des données de jeux de données partagés ou préparez des données à partir de classeurs Excel pour les utiliser dans vos rapports mobiles.
 - [Procédure d’actualisation des données des rapports mobiles et des indicateurs de performance clés dans Reporting Services](http://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) (blog de Christopher Finlan, en anglais) : découvrez comment configurer la mise en cache pour les jeux de données partagés afin de contrôler la fréquence d’actualisation des données et d’accélérer les performances des rapports.
 - [Visualisations dans les rapports mobiles](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 - [Jauges dans les rapports mobiles](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
@@ -47,12 +53,11 @@ Ces articles vous aideront à démarrer.
   
 ## <a name="ssrs-mobile-reports-in-the-power-bi-mobile-apps"></a>Rapports mobiles SSRS dans les applications mobiles Power BI
 
--  Affichez les [rapports mobiles Reporting Services et les indicateurs de performance clés dans l’application iPad](https://powerbi.microsoft.com/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI pour iOS)  
--  Affichez les [rapports mobiles Reporting Services et les indicateurs de performance clés dans l’application iPhone](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI pour iOS)  
--  Affichez les [rapports mobiles Reporting Services et les indicateurs de performance clés dans l’application Power BI pour téléphones Android](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports)
+-  Vue [rapports mobiles Reporting Services et les indicateurs de performance clés dans l’application mobile iOS](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports)
+-  Vue [rapports mobiles Reporting Services et les indicateurs de performance clés dans l’application Power BI pour les appareils Android](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports)
 -  Affichez les [rapports mobiles Reporting Services et les indicateurs de performance clés dans l’application Power BI pour téléphones Windows 10](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
 
-### <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi  
   
 -   [Créer, modifier, puis supprimer des sources de données partagées (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
 -   [Gérer des jeux de données partagés](../../reporting-services/report-data/manage-shared-datasets.md)  
@@ -61,3 +66,5 @@ Ces articles vous aideront à démarrer.
 
   
   
+
+
