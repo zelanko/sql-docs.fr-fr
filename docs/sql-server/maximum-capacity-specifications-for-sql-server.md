@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: b03d9514e39fad101a305784b6852e012e3e4aad
+ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
+ms.openlocfilehash: b93591eb1d0f34b792adc6f2c998dbfdd9fca4b5
 ms.contentlocale: fr-fr
-ms.lasthandoff: 05/12/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spécifications des capacités maximales pour SQL Server
@@ -140,14 +140,14 @@ ms.lasthandoff: 05/12/2017
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objet de réplication||Taille maximale/nombre maximal dans SQL Server (64 bits)|  
 |--------------------------------------------------|-|---------------------------------------------------|  
-|Articles (publication de fusion)||256|  
+|Articles (publication de fusion)||2048|  
 |Articles (publication d'instantané ou transactionnelle)||32,767|  
 |Colonnes dans une table* (publication de fusion)||246|  
 |Colonnes dans une table** (publication d’instantané ou transactionnelle[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] )||1,000|  
 |Colonnes dans une table** (publication d’instantané ou transactionnelle Oracle)||995|  
 |Octets pour une colonne utilisée dans un filtre de lignes (publication de fusion)||1,024|  
 |Octets pour une colonne utilisée dans un filtre de lignes (publication d'instantané ou transactionnelle)||8,000|  
-  
+
  * Si le suivi de lignes est utilisé pour la détection de conflits (valeur par défaut), la table de base peut inclure 1 024 colonnes au maximum, mais les colonnes doivent être filtrées à partir de l’article afin que 246 colonnes au maximum soient publiées. Si le suivi de colonnes est utilisé, la table de base peut inclure 246 colonnes au maximum.  
   
  ** La table de base peut inclure le nombre maximal de colonnes autorisées dans la base de données de publication (1 024 pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), mais les colonnes doivent être filtrées à partir de l’article si elles sont plus nombreuses que le maximum spécifié pour le type de publication.  

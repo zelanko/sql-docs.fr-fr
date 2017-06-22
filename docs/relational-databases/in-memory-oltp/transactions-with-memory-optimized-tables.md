@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 03f81b7010fdba70cccc916406b70131dd24cb8d
+ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
+ms.openlocfilehash: 40b7bd5f5f8bf6682a7c85d332cce420baf06105
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
@@ -35,24 +35,6 @@ Les niveaux d’isolation de la transaction dans SQL Server s’appliquent diff�
 Pour connaître les conditions d’erreur spécifiques aux transactions dans les tables optimisées en mémoire, passez à la section [Détection des conflits et logique des nouvelles tentatives](#confdetretry34ni).
   
 Pour des informations générales, consultez [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
-  
-  
-  
-#### <a name="sections-in-this-article"></a>Sections de cet article :  
-  
-- [Approches pessimiste et optimiste](#pessvoptim22ni)  
-- [Modes d’initiation de la transaction](#txninitmodes24ni)  
-  - [Exemple de code avec le mode Explicite](#codeexamexpmode25ni)  
-- [Contrôle de version de ligne](#rowver28ni)  
-- [Niveaux d'isolement des transactions](#confdegreeiso30ni)  
-- [Durée de vie et phases de la transaction](#txnphaslife32ni)  
-- [Détection des conflits et logique des nouvelles tentatives](#confdetretry34ni)  
-  - [Exemple de code T-SQL de nouvelle tentative](#retrytsqlcodeexam35ni)  
-- [Transaction entre conteneurs](#crossconttxn38ni)  
-- [Limitations](#limitations40ni)  
-- [Procédures stockées compilées en mode natif](#natcompstorprocs42ni)  
-- [Autres liens de transaction](#othertxnlinks44ni)  
-  
   
   
 <a name="pessvoptim22ni"/>  

@@ -1,7 +1,7 @@
 ---
 title: Quel &#39; s de SQL Server 2017 | Documents Microsoft
 ms.custom: 
-ms.date: 05/23/2017
+ms.date: 06/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 1d363db8e8bd0e1460cdea3c3a7add68e48714c9
-ms.openlocfilehash: 25d81efe1b915f0e4ddc5eab2feb4142ad2ceb8f
+ms.sourcegitcommit: aa08b5e7de9bb317fd781a98ee5d829431b92df6
+ms.openlocfilehash: 66c9bc4f2cba20076c357d27fdfacbc767a94c5c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="what39s-new-in-sql-server-2017"></a>Quel &#39; s de SQL Server 2017
@@ -67,8 +67,8 @@ Cette rubrique est un résumé des nouveautés de la mise en production Communit
 - CLR utilise la sécurité d’accès de Code (CAS) dans le .NET Framework, qui n’est plus pris en charge comme une limite de sécurité. Un assembly CLR créé avec `PERMISSION_SET = SAFE` peuvent être en mesure d’accéder à des ressources système externes, appeler du code non managé et acquérir des privilèges sysadmin. À partir de [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)], un `sp_configure` option appelée `clr strict security` est introduit pour améliorer la sécurité des assemblys CLR. `clr strict security`est activé par défaut et traite `SAFE` et `EXTERNAL_ACCESS` assemblys comme si elles ont été marquées `UNSAFE`. Le `clr strict security` option peut être désactivée pour la compatibilité descendante, mais n’est ne pas recommandée. Microsoft recommande que tous les assemblys être signés par un certificat ou une clé asymétrique avec une connexion correspondante qui a été accordée `UNSAFE ASSEMBLY` autorisation dans la base de données master. Pour plus d’informations, consultez [stricte de sécurité CLR](../database-engine/configure-windows/clr-strict-security.md).  
 - Fonctionnalités de base de données de graphique pour modéliser des relations plusieurs-à-plusieurs. Cela inclut de nouveaux [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) syntaxe permettant de créer le nœud et les tableaux de bord et le mot clé [correspondance](../t-sql/queries/match-sql-graph.md) pour les requêtes. Pour plus d’informations, consultez [de traitement graphique avec SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md).   
 - Le paramétrage automatique est une fonctionnalité de base de données qui fournit un aperçu de requête potentiel des problèmes de performances, il peut recommander des solutions et corriger automatiquement les problèmes identifiés. Le paramétrage automatique [!INCLUDE[ssnoversion](../includes/ssnoversion.md)], vous avertit chaque fois qu’un problème de performance potentiel est détecté et vous permet d’appliquer des actions correctives, ou vous permet du [!INCLUDE[ssde](../includes/ssde-md.md)] résoudre automatiquement les problèmes de performances. Pour plus d’informations, consultez [le paramétrage automatique](../relational-databases/automatic-tuning/automatic-tuning.md).  
--    Lot Mode Adaptive joindre à améliorer la qualité du plan (sous compatibilité db 140).
--    Exécution entrelacée de T-SQL multi-instruction améliorer la qualité du plan (sous compatibilité 140 de base de données).
+-   Lot Mode Adaptive joindre à améliorer la qualité du plan (sous compatibilité db 140).
+-   Exécution entrelacée de T-SQL multi-instruction améliorer la qualité du plan (sous compatibilité 140 de base de données).
 - Magasin de requêtes maintenant suit également les informations de résumé de statistiques attente. Catégories de statistiques d’attente par la requête dans le magasin de requêtes de suivi permet le niveau de performances expérience de résolution des problèmes, en fournissant, voire plus, son les goulots d’étranglement tout en conservant les avantages clés de magasin de requêtes et les performances de la charge de travail suivant.
 - Prise en charge DTC pour les groupes de disponibilité AlwaysOn pour toutes les transactions de base de données croisées entre les bases de données qui font partie du groupe de disponibilité, y compris les bases de données qui font partie de la même instance. Pour plus d’informations, consultez [Transactions - mise en miroir de base de données et les groupes de disponibilité AlwaysOn](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 - Une nouvelle colonne **modified_extent_page_count** a été introduit dans [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) pour effectuer le suivi des modifications différentielles dans chaque fichier de base de données de la base de données.
@@ -76,7 +76,6 @@ Cette rubrique est un résumé des nouveautés de la mise en production Communit
 - Le programme d’installation de SQL Server prend en charge la spécification de taille de fichier tempdb initial jusqu'à **256 Go (262 144 Mo)** par fichier avec un avertissement si la taille du fichier est définie à une valeur supérieure à **1 Go** et si IFI n’est pas activé.
 - Une vue de gestion dynamique nouvelles (DMV) [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) est introduit pour suivre l’utilisation du magasin de version par base de données.
 - Une vue de gestion dynamique [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) est introduit pour exposer les informations de fichier journal virtuel similaires à DBCC LOGINFO.
-- DBCC CLONEDATABASE vous videz ainsi les statistiques d’exécution lors du clonage pour éviter de manquer des statistiques d’exécution de requête magasin clone de la base de données. En outre, DBCC CLONEDATABASE est encore améliorée pour prendre en charge et cloner des index de texte intégral.
 - Tables temporelles avec version système prennent désormais en charge la mise à jour en CASCADE et suppression en CASCADE.
 - Cette version CTP contient des correctifs de bogues pour le moteur de base de données.
 - Pour une liste détaillée des 2017 améliorations CTP dans les précédentes versions CTP, consultez [Nouveautés de SQL Server 2017 (moteur de base de données)](../database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md).   

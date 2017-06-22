@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 0927784589c1f7227b432ff49f81f29de20083ec
 ms.openlocfilehash: 200753bf64d92043171788852227c6199b64711d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 05/27/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="previous-sql-server-management-studio-releases"></a>Versions antérieures de SQL Server Management Studio
@@ -218,7 +218,7 @@ Les versions localisées dans des langues autres que l’anglais nécessitent la
 
 
 ## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-163-august-2016-releasehttpgomicrosoftcomfwlinklinkid824938"></a>![télécharger](../ssdt/media/download.png) [Version de SQL Server Management Studio 16.3 (août 2016)](http://go.microsoft.com/fwlink/?LinkID=824938)
- 15 août 2016 | Numéro de version : 13.0.15700.28
+ 15 Août 2016 | Numéro de version : 13.0.15700.28
 
 **Fonctionnalités**  
 1. Nouvelle option d’authentification « Authentification Active Directory universelle »

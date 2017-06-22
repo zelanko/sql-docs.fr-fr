@@ -1,7 +1,7 @@
 ---
 title: Didacticiels pour SQL Server | Documents Microsoft
 ms.custom: 
-ms.date: 05/24/2017
+ms.date: 06/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: erikre
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
-ms.openlocfilehash: f1220e70a98fd38ac2f38f892a42ff88c3f64555
+ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
+ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
 ms.contentlocale: fr-fr
-ms.lasthandoff: 05/25/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="tutorials-for-sql-server"></a>Didacticiels pour SQL Server
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/25/2017
 |[Didacticiels sur Integration Services](../integration-services/integration-services-tutorials.md)|Découvrez comment créer et déployer des packages [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
 |[Didacticiels sur la réplication](../relational-databases/replication/replication-tutorials.md)|Apprenez comment installer et exécuter les topologies de réplication à l'aide de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Didacticiels sur Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Découvrez comment créer des rapports de base et des abonnements.|  
-|[Didacticiels pour SQL Server R Services](../advanced-analytics/r-services/sql-server-r-services-tutorials.md)|Apprenez à utiliser des données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à l’aide du langage R et exécutez des scripts R avec [!INCLUDE[tsql](../includes/tsql-md.md)].|  
+|[Didacticiels pour SQL Server R Services](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|Apprenez à utiliser des données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à l’aide du langage R et exécutez des scripts R avec [!INCLUDE[tsql](../includes/tsql-md.md)].|  
   
  ## <a name="previously-published-tutorials"></a>Didacticiels déjà publiés :  
   
