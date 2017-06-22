@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
 ms.openlocfilehash: 508440b3e6cd15d4fb70f933c380e958dad74d56
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="guidelines-for-online-index-operations"></a>Instructions pour les opérations d'index en ligne
@@ -97,7 +97,7 @@ Pour plus d’informations, consultez [Disk Space Requirements for Index DDL Ope
 >
 
 Lorsque vous effectuez la reconstruction d’index en ligne peut être repris les indications suivantes s’appliquent :
--    La gestion, planification et l’extension des fenêtres de maintenance d’index. Vous pouvez suspendre et redémarrer une opération de reconstruction d’index plusieurs fois en fonction de vos fenêtres de maintenance.
+-   La gestion, planification et l’extension des fenêtres de maintenance d’index. Vous pouvez suspendre et redémarrer une opération de reconstruction d’index plusieurs fois en fonction de vos fenêtres de maintenance.
 - Récupération à partir d’échecs de reconstruction d’index (par exemple, les basculements de base de données ou manque d’espace disque).
 - Lorsqu’une opération d’index est en pause, à la fois l’index d’origine et celui qui vient d’être créé nécessitent l’espace disque et doivent être mis à jour au cours des opérations DML.
 

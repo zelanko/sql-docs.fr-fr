@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 49a53643e94d64fc47932bc2ee8dc3200967ae23
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>Audit local pour la collecte de commentaires d’utilisation de SSMS
@@ -28,9 +28,9 @@ SQL Server Management Studio (SSMS) intègre des fonctionnalités Internet qui p
 ## <a name="audit-feature-usage-data"></a>Données d’utilisation des fonctionnalités d’audit
 
 Pour connaître les données d’utilisation qui sont recueillies par SSMS, effectuez les étapes suivantes :
-1.    Lancez SSMS.
-2.    Cliquez sur **Affichage** et sur **Sortie** dans le menu principal pour afficher la fenêtre **Sortie**. 
-3.    Une fois la fenêtre **Sortie** affichée à l’écran, choisissez **Télémétrie** dans le menu **Afficher la sortie à partir de :**.
+1.  Lancez SSMS.
+2.  Cliquez sur **Affichage** et sur **Sortie** dans le menu principal pour afficher la fenêtre **Sortie**. 
+3.  Une fois la fenêtre **Sortie** affichée à l’écran, choisissez **Télémétrie** dans le menu **Afficher la sortie à partir de :**.
 
 Quand vous utilisez SSMS pour interagir avec vos bases de données, la fenêtre **Sortie** indique les données qui sont recueillies.
 

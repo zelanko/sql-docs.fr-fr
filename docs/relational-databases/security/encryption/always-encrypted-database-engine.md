@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/25/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (moteur de base de données)
@@ -103,15 +103,15 @@ Utilisez l’ [Assistant Always Encrypted](../../../relational-databases/securit
 > [!NOTE]  
 >  Pour visionner une vidéo qui inclut l’utilisation de l’Assistant, consultez [Getting Started with Always Encrypted with SSMS](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS)(Prise en main d’Always Encrypted avec SSMS).
 
-1.    Connectez-vous à une base de données qui contient des tables avec des colonnes que vous souhaitez chiffrer à l’aide de l’ **Explorateur d’objets** de Management Studio, ou créez une base de données, créez une ou plusieurs tables avec des colonnes à chiffrer et connectez-vous à cette base de données.
-2.    Cliquez avec le bouton droit sur votre base de données, pointez sur **Tâches**, puis cliquez sur **Chiffrer les colonnes** pour ouvrir l’**Assistant Always Encrypted**.
-3.    Examinez la page **Introduction** , puis cliquez sur **Suivant**.
-4.    Dans la page **Sélectionner les colonnes** , développez les tables et sélectionnez les colonnes que vous souhaitez chiffrer.
-5.    Pour chaque colonne sélectionnée pour le chiffrement, sélectionnez **Déterministe** ou *Aléatoire* comme *Type de chiffrement*.
-6.    Pour chaque colonne sélectionnée pour le chiffrement, sélectionnez une **Clé de chiffrement**. Si vous n’avez encore jamais créé de clé de chiffrement pour cette base de données, sélectionnez l’option par défaut de génération automatique d’une nouvelle clé, puis cliquez sur **Suivant**.
-7.    Dans la page **Configuration de la clé principale** , sélectionnez un emplacement pour stocker la nouvelle clé et une source de clé principale, puis cliquez sur **Suivant**.
-8.    Dans la page **Validation** , indiquez si vous souhaitez exécuter le script immédiatement ou créer un script PowerShell, puis cliquez sur **Suivant**.
-9.    Dans la page **Résumé** , passez en revue les options que vous avez sélectionnées, puis cliquez sur **Terminer**. Fermez l’Assistant à la fin.
+1.  Connectez-vous à une base de données qui contient des tables avec des colonnes que vous souhaitez chiffrer à l’aide de l’ **Explorateur d’objets** de Management Studio, ou créez une base de données, créez une ou plusieurs tables avec des colonnes à chiffrer et connectez-vous à cette base de données.
+2.  Cliquez avec le bouton droit sur votre base de données, pointez sur **Tâches**, puis cliquez sur **Chiffrer les colonnes** pour ouvrir l’**Assistant Always Encrypted**.
+3.  Examinez la page **Introduction** , puis cliquez sur **Suivant**.
+4.  Dans la page **Sélectionner les colonnes** , développez les tables et sélectionnez les colonnes que vous souhaitez chiffrer.
+5.  Pour chaque colonne sélectionnée pour le chiffrement, sélectionnez **Déterministe** ou *Aléatoire* comme *Type de chiffrement*.
+6.  Pour chaque colonne sélectionnée pour le chiffrement, sélectionnez une **Clé de chiffrement**. Si vous n’avez encore jamais créé de clé de chiffrement pour cette base de données, sélectionnez l’option par défaut de génération automatique d’une nouvelle clé, puis cliquez sur **Suivant**.
+7.  Dans la page **Configuration de la clé principale** , sélectionnez un emplacement pour stocker la nouvelle clé et une source de clé principale, puis cliquez sur **Suivant**.
+8.  Dans la page **Validation** , indiquez si vous souhaitez exécuter le script immédiatement ou créer un script PowerShell, puis cliquez sur **Suivant**.
+9.  Dans la page **Résumé** , passez en revue les options que vous avez sélectionnées, puis cliquez sur **Terminer**. Fermez l’Assistant à la fin.
 
   
 ## <a name="feature-details"></a>Détails sur les fonctionnalités  

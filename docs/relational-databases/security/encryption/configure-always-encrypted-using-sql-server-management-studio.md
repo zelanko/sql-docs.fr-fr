@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 80c832db0ffdb9a3666b60a19fdf11a01750b2e1
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configurer Always Encrypted à l’aide de SQL Server Management Studio
@@ -54,8 +54,8 @@ Cette section explique comment :
 ### <a name="retrieving-ciphertext-values-stored-in-encrypted-columns"></a>Récupération de valeurs de chiffrement stockées dans des colonnes chiffrées    
 
 Pour récupérer des valeurs à partir d’une colonne chiffrée en tant que texte chiffré (sans déchiffrer les valeurs) :
-1.    Veillez à ce que la fonctionnalité Always Encrypted soit désactivée pour la connexion de base de données de la fenêtre de l’éditeur de requête à partir de laquelle vous exécutez votre requête `SELECT` . Consultez la section ci-dessous [Activation et désactivation d’Always Encrypted pour une connexion de base de données](#en-dis) .      
-2.    Exécutez une requête `SELECT` . Les données récupérées à partir des colonnes chiffrées seront retournées comme valeurs binaires (chiffrées).   
+1.  Veillez à ce que la fonctionnalité Always Encrypted soit désactivée pour la connexion de base de données de la fenêtre de l’éditeur de requête à partir de laquelle vous exécutez votre requête `SELECT` . Consultez la section ci-dessous [Activation et désactivation d’Always Encrypted pour une connexion de base de données](#en-dis) .      
+2.  Exécutez une requête `SELECT` . Les données récupérées à partir des colonnes chiffrées seront retournées comme valeurs binaires (chiffrées).   
 
 *Exemple*   
 En supposant que `SSN` est une colonne chiffrée dans la table `Patients` , la requête ci-dessous récupère les valeurs de chiffrement binaires, si Always Encrypted est désactivé pour la connexion de base de données.   
@@ -65,9 +65,9 @@ En supposant que `SSN` est une colonne chiffrée dans la table `Patients` , la r
 ### <a name="retrieving-plaintext-values-stored-in-encrypted-columns"></a>Récupération de valeurs de texte brut stockées dans des colonnes chiffrées    
 
 Pour récupérer des valeurs à partir d’une colonne chiffrée en tant que texte brut (pour déchiffrer les valeurs) :   
-1.    Veillez à ce que la fonctionnalité Always Encrypted soit activée pour la connexion de base de données de la fenêtre de l’éditeur de requête à partir de laquelle vous exécutez votre requête `SELECT` . Cela indiquera au fournisseur de données .NET Framework pour SQL Server (utilisé par SSMS) de déchiffrer les données récupérées à partir des colonnes chiffrées. Consultez la section ci-dessous [Activation et désactivation d’Always Encrypted pour une base de données](#en-dis) .
-2.    Assurez-vous que vous pouvez accéder à toutes les clés principales de colonne configurées pour les colonnes chiffrées. Par exemple, si votre clé principale de colonne est un certificat, vous devez vous assurer que le certificat est déployé sur l’ordinateur sur lequel SSMS est en cours d’exécution. Ou, si votre clé principale de colonne est une clé stockée dans Azure Key Vault, vous devez vous assurer que vous êtes autorisé à accéder à la clé (vous serez peut-être également invité à vous connecter à Azure.)
-3.    Exécutez une requête `SELECT` . Les données récupérées à partir des colonnes chiffrées seront retournées comme texte brut en tant que valeurs des types de données d’origine.   
+1.  Veillez à ce que la fonctionnalité Always Encrypted soit activée pour la connexion de base de données de la fenêtre de l’éditeur de requête à partir de laquelle vous exécutez votre requête `SELECT` . Cela indiquera au fournisseur de données .NET Framework pour SQL Server (utilisé par SSMS) de déchiffrer les données récupérées à partir des colonnes chiffrées. Consultez la section ci-dessous [Activation et désactivation d’Always Encrypted pour une base de données](#en-dis) .
+2.  Assurez-vous que vous pouvez accéder à toutes les clés principales de colonne configurées pour les colonnes chiffrées. Par exemple, si votre clé principale de colonne est un certificat, vous devez vous assurer que le certificat est déployé sur l’ordinateur sur lequel SSMS est en cours d’exécution. Ou, si votre clé principale de colonne est une clé stockée dans Azure Key Vault, vous devez vous assurer que vous êtes autorisé à accéder à la clé (vous serez peut-être également invité à vous connecter à Azure.)
+3.  Exécutez une requête `SELECT` . Les données récupérées à partir des colonnes chiffrées seront retournées comme texte brut en tant que valeurs des types de données d’origine.   
 
 *Exemple*   
 En supposant que le SSN est une colonne `char(11)` chiffrée dans la table `Patients` , la requête, illustrée ci-dessous, renvoie les valeurs en texte brut, si Always Encrypted est activé pour la connexion de base de données et si vous avez accès à la clé principale de colonne configurée pour la colonne `SSN` .   
@@ -77,12 +77,12 @@ En supposant que le SSN est une colonne `char(11)` chiffrée dans la table `Pati
 ### <a name="sending-plaintext-values-targeting-encrypted-columns"></a>Envoi de valeurs en texte brut ciblant des colonnes chiffrées       
 
 Pour exécuter une requête qui envoie une valeur ciblant une colonne chiffrée, par exemple une requête qui insère, met à jour ou filtre une valeur stockée dans une colonne chiffrée :   
-1.    Veillez à ce que la fonctionnalité Always Encrypted soit activée pour la connexion de base de données de la fenêtre de l’éditeur de requête à partir de laquelle vous exécutez votre requête `SELECT` . Cela indiquera au fournisseur de données .NET Framework pour SQL Server (utilisé par SSMS) de chiffrer des variables Transact-SQL paramétrées (voir ci-dessous) ciblant des colonnes chiffrées. Consultez la section ci-dessous [Activation et désactivation d’Always Encrypted pour une base de données](#en-dis) .   
-2.    Assurez-vous que vous pouvez accéder à toutes les clés principales de colonne configurées pour les colonnes chiffrées. Par exemple, si votre clé principale de colonne est un certificat, vous devez vous assurer que le certificat est déployé sur l’ordinateur sur lequel SSMS est en cours d’exécution. Ou, si votre clé principale de colonne est une clé stockée dans Azure Key Vault, vous devez vous assurer que vous êtes autorisé à accéder à la clé (vous serez peut-être également invité à vous connecter à Azure.)   
-3.    Vérifiez que le paramétrage pour Always Encrypted est activé pour la fenêtre de l’éditeur de requête. (Nécessite au moins SSMS version 17.0.) Déclarez une variable Transact-SQL et initialisez-la avec une valeur à envoyer (insert, update ou filter by) à la base de données. Voir la section [Paramétrage pour Always Encrypted](#param) ci-dessous pour plus d’informations.   
+1.  Veillez à ce que la fonctionnalité Always Encrypted soit activée pour la connexion de base de données de la fenêtre de l’éditeur de requête à partir de laquelle vous exécutez votre requête `SELECT` . Cela indiquera au fournisseur de données .NET Framework pour SQL Server (utilisé par SSMS) de chiffrer des variables Transact-SQL paramétrées (voir ci-dessous) ciblant des colonnes chiffrées. Consultez la section ci-dessous [Activation et désactivation d’Always Encrypted pour une base de données](#en-dis) .   
+2.  Assurez-vous que vous pouvez accéder à toutes les clés principales de colonne configurées pour les colonnes chiffrées. Par exemple, si votre clé principale de colonne est un certificat, vous devez vous assurer que le certificat est déployé sur l’ordinateur sur lequel SSMS est en cours d’exécution. Ou, si votre clé principale de colonne est une clé stockée dans Azure Key Vault, vous devez vous assurer que vous êtes autorisé à accéder à la clé (vous serez peut-être également invité à vous connecter à Azure.)   
+3.  Vérifiez que le paramétrage pour Always Encrypted est activé pour la fenêtre de l’éditeur de requête. (Nécessite au moins SSMS version 17.0.) Déclarez une variable Transact-SQL et initialisez-la avec une valeur à envoyer (insert, update ou filter by) à la base de données. Voir la section [Paramétrage pour Always Encrypted](#param) ci-dessous pour plus d’informations.   
     >   [!NOTE]
     >   Étant donné que la prise en charge d’Always Encrypted est un sous-ensemble limité de conversions de type, dans de nombreux cas, il est nécessaire que ce type de variable Transact-SQL soit identique au type de colonne de base de données ciblée.   
-4.    Exécutez votre requête d’envoi de la valeur de la variable Transact-SQL à la base de données. SSMS convertira la variable à un paramètre de requête et chiffrera sa valeur avant de l’envoyer à la base de données.   
+4.  Exécutez votre requête d’envoi de la valeur de la variable Transact-SQL à la base de données. SSMS convertira la variable à un paramètre de requête et chiffrera sa valeur avant de l’envoyer à la base de données.   
 
 *Exemple*   
 En supposant que `SSN` est une colonne `char(11)` chiffrée dans la table `Patients` , le script ci-dessous tente de trouver une ligne contenant `'795-73-9838'` dans la colonne SSN pour retourner la valeur de la colonne `LastName` , à condition qu’Always Encrypted soit activé pour la connexion de base de données, que le paramétrage pour Always Encrypted soit activé pour la fenêtre de l’éditeur de requête et que vous ayez accès à la clé principale de colonne configurée pour la colonne `SSN` .   
@@ -92,18 +92,18 @@ En supposant que `SSN` est une colonne `char(11)` chiffrée dans la table `Patie
 ### <a name="en-dis"></a> Enabling and disabling Always Encrypted for a database connection   
 
 L’activation d’Always Encrypted pour une connexion de base de données indique au fournisseur de données .NET Framework pour SQL Server, utilisé par SQL Server Management Studio, de tenter d’effectuer ces actions de manière transparente :   
--    Déchiffrer les valeurs qui sont extraites des colonnes chiffrées et retournées dans les résultats de la requête.   
--    Chiffrer les valeurs des variables paramétrées Transact-SQL qui ciblent des colonnes de base de données chiffrées.   
+-   Déchiffrer les valeurs qui sont extraites des colonnes chiffrées et retournées dans les résultats de la requête.   
+-   Chiffrer les valeurs des variables paramétrées Transact-SQL qui ciblent des colonnes de base de données chiffrées.   
 Pour activer Always Encrypted pour une connexion de base de données, spécifiez `Column Encryption Setting=Enabled` dans l’onglet **Propriétés supplémentaires** de la boîte de dialogue **Se connecter au serveur** .    
 Pour désactiver Always Encrypted pour une connexion de base de données, spécifiez `Column Encryption Setting=Disabled` ou supprimez simplement le paramètre **Paramètre de chiffrement de colonne** dans l’onglet **Propriétés supplémentaires** de la boîte de dialogue **Se connecter au serveur** (sa valeur par défaut est **Désactivé**).   
 
 >  [!TIP] 
 >  Pour activer/désactiver Always Encrypted pour une fenêtre de l’éditeur de requête existante :   
->  1.    Cliquez avec le bouton droit n’importe où dans la fenêtre de l’éditeur de requête.
->  2.    Sélectionnez **Connexion** > **Modifier la connexion...**, 
->  3.    Cliquez sur **Options** >>,
->  4.    Sélectionnez l’onglet **Propriétés supplémentaires** et saisissez `Column Encryption Setting=Enabled` (pour activer le comportement Always Encrypted) ou supprimez le paramètre (pour désactiver le comportement Always Encrypted).   
->  5.    Cliquez sur **Se connecter**.   
+>  1.   Cliquez avec le bouton droit n’importe où dans la fenêtre de l’éditeur de requête.
+>  2.   Sélectionnez **Connexion** > **Modifier la connexion...**, 
+>  3.   Cliquez sur **Options** >>,
+>  4.   Sélectionnez l’onglet **Propriétés supplémentaires** et saisissez `Column Encryption Setting=Enabled` (pour activer le comportement Always Encrypted) ou supprimez le paramètre (pour désactiver le comportement Always Encrypted).   
+>  5.   Cliquez sur **Se connecter**.   
    
 ### <a name="param"></a>Parameterization for Always Encrypted   
  
@@ -123,18 +123,18 @@ WHERE [SSN] = @SSN
 Le paramétrage d’Always Encrypted est désactivé par défaut.    
 
 Pour activer/désactiver le paramétrage d’Always Encrypted pour la fenêtre active de l’éditeur de requête :   
-1.    Sélectionnez **Requête** dans le menu principal.   
-2.    Sélectionnez **Options de requête…**.   
-3.    Accédez à **Exécution** > **Avancé**.   
-4.    Sélectionnez ou désélectionnez **Activer le paramétrage d’Always Encrypted**.   
-5.    Cliquez sur **OK**.   
+1.  Sélectionnez **Requête** dans le menu principal.   
+2.  Sélectionnez **Options de requête…**.   
+3.  Accédez à **Exécution** > **Avancé**.   
+4.  Sélectionnez ou désélectionnez **Activer le paramétrage d’Always Encrypted**.   
+5.  Cliquez sur **OK**.   
 
 Pour activer/désactiver le paramétrage d’Always Encrypted pour de prochaines fenêtres d’éditeur de requête :   
-1.    Sélectionnez **Outils** dans le menu principal.   
-2.    Sélectionnez **Options...**.   
-3.    Accédez à **Exécution de la requête** > **SQL Server** > **Avancé**.   
-4.    Sélectionnez ou désélectionnez **Activer le paramétrage d’Always Encrypted**.   
-5.    Cliquez sur **OK**.   
+1.  Sélectionnez **Outils** dans le menu principal.   
+2.  Sélectionnez **Options...**.   
+3.  Accédez à **Exécution de la requête** > **SQL Server** > **Avancé**.   
+4.  Sélectionnez ou désélectionnez **Activer le paramétrage d’Always Encrypted**.   
+5.  Cliquez sur **OK**.   
 
 Si vous exécutez une requête dans une fenêtre de l’éditeur de requête qui utilise une connexion de base de données avec Always Enabled activé, mais que le paramétrage n’est pas activé pour la fenêtre de l’éditeur de requête, vous serez invité à l’activer.   
 >   [!NOTE]   
@@ -225,23 +225,23 @@ Pour plus d’informations, consultez [Créer et stocker des clés principales d
 
 La boîte de dialogue **Nouvelle clé principale de colonne** vous permet de générer une clé principale de colonne ou de choisir une clé existante dans un magasin de clés, puis de créer des métadonnées de clé principale de colonne pour la clé créée ou sélectionnée dans la base de données.
 
-1.    À l’aide de **l’Explorateur d’objets**, accédez au dossier **Sécurité>Clés Always Encrypted** sous votre base de données.
-2.    Cliquez avec le bouton droit sur le dossier **Clés principales de colonne** et sélectionnez **Nouvelle clé principale de colonne...**. 
-3.    Dans la boîte de dialogue **Nouvelle clé principale de colonne** , entrez le nom de l’objet de métadonnées de clé principale de colonne.
-4.    Sélectionnez un magasin de clés :
+1.  À l’aide de **l’Explorateur d’objets**, accédez au dossier **Sécurité>Clés Always Encrypted** sous votre base de données.
+2.  Cliquez avec le bouton droit sur le dossier **Clés principales de colonne** et sélectionnez **Nouvelle clé principale de colonne...**. 
+3.  Dans la boîte de dialogue **Nouvelle clé principale de colonne** , entrez le nom de l’objet de métadonnées de clé principale de colonne.
+4.  Sélectionnez un magasin de clés :
     - **Magasin de certificats – Utilisateur actuel** : indique l’emplacement du magasin de certificats de l’utilisateur actuel dans le magasin de certificats Windows, qui est votre magasin personnel. 
     - **Magasin de certificats – Ordinateur local** : indique l’emplacement du magasin de certificats de l’ordinateur local dans le magasin de certificats Windows. 
     - **Azure Key Vault** : vous devez vous connecter à Azure (cliquez sur **Connexion**). Une fois que vous êtes connecté, vous pouvez choisir l’un de vos abonnements Azure et un coffre de clés.
     - **Fournisseur du magasin de clés (CNG)** : indique un magasin de clés qui est accessible via un fournisseur KSP qui implémente l’API CNG (Cryptography Next Generation). En règle générale, ce type de magasin est un module de sécurité matériel. Après avoir sélectionné cette option, vous devez choisir un fournisseur KSP. Le**fournisseur de stockage de clés des logiciels Microsoft** est sélectionné par défaut. Si vous souhaitez utiliser une clé principale de colonne stockée dans un module de sécurité matériel, sélectionnez un fournisseur KSP pour votre appareil (il doit être installé et configuré sur l’ordinateur avant d’ouvrir la boîte de dialogue).
-    -    **Fournisseur de services de chiffrement (CAPI)** : magasin de clés qui est accessible via un fournisseur de services de chiffrement (CSP) qui implémente l’API de chiffrement (CAPI). En règle générale, un tel magasin est un module de sécurité matériel. Après avoir sélectionné cette option, vous devez choisir un fournisseur CSP.  Si vous souhaitez utiliser une clé principale de colonne stockée dans un module de sécurité matériel, sélectionnez un fournisseur CSP pour votre appareil (il doit être installé et configuré sur l’ordinateur avant d’ouvrir la boîte de dialogue).
+    -   **Fournisseur de services de chiffrement (CAPI)** : magasin de clés qui est accessible via un fournisseur de services de chiffrement (CSP) qui implémente l’API de chiffrement (CAPI). En règle générale, un tel magasin est un module de sécurité matériel. Après avoir sélectionné cette option, vous devez choisir un fournisseur CSP.  Si vous souhaitez utiliser une clé principale de colonne stockée dans un module de sécurité matériel, sélectionnez un fournisseur CSP pour votre appareil (il doit être installé et configuré sur l’ordinateur avant d’ouvrir la boîte de dialogue).
     
     >   [!NOTE]
     >   CAPI étant une API déconseillée, l’option Fournisseur de services de chiffrement (CAPI) est désactivée par défaut. Vous pouvez l’activer en créant la valeur DWORD Fournisseur CAPI activé sous la clé **[HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\sql13\Tools\Client\Always Encrypted]** dans le Registre Windows et en lui affectant la valeur 1. Vous devez utiliser CNG au lieu de CAPI, sauf si votre magasin de clés ne prend pas en charge CNG.
    
     Pour plus d’informations sur les magasins de clés ci-dessus, consultez [Créer et stocker des clés principales de colonne (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
-5.    Choisissez une clé existante dans votre magasin de clés, ou cliquez sur le bouton **Générer une clé** ou **Générer un certificat** pour créer une clé dans le magasin de clés. 
-6.    Cliquez sur **OK** et la nouvelle clé apparaît dans la liste. 
+5.  Choisissez une clé existante dans votre magasin de clés, ou cliquez sur le bouton **Générer une clé** ou **Générer un certificat** pour créer une clé dans le magasin de clés. 
+6.  Cliquez sur **OK** et la nouvelle clé apparaît dans la liste. 
 
 SQL Server Management Studio crée des métadonnées pour votre clé principale de colonne dans la base de données. La boîte de dialogue effectue cette opération en générant et en émettant une instruction [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) .
 
@@ -251,11 +251,11 @@ SQL Server Management Studio crée des métadonnées pour votre clé principale 
 
 La boîte de dialogue **Nouvelle clé de chiffrement de colonne** vous permet de générer une clé de chiffrement de colonne, de la chiffrer avec une clé principale de colonne et de créer des métadonnées de clé de chiffrement de colonne dans la base de données.
 
-1.    À l’aide de **l’Explorateur d’objets**, accédez au dossier **Sécurité/Clés Always Encrypted** sous votre base de données.
-2.    Cliquez avec le bouton droit sur le dossier **Clés de chiffrement de colonne** et sélectionnez **Nouvelle clé de chiffrement de colonne…**. 
-3.    Dans la boîte de dialogue **Nouvelle clé de chiffrement de colonne** , entrez le nom de l’objet de métadonnées de clé de chiffrement de colonne.
-4.    Sélectionnez un objet de métadonnées qui représente votre clé principale de colonne dans la base de données.
-5.    Cliquez sur **OK**. 
+1.  À l’aide de **l’Explorateur d’objets**, accédez au dossier **Sécurité/Clés Always Encrypted** sous votre base de données.
+2.  Cliquez avec le bouton droit sur le dossier **Clés de chiffrement de colonne** et sélectionnez **Nouvelle clé de chiffrement de colonne…**. 
+3.  Dans la boîte de dialogue **Nouvelle clé de chiffrement de colonne** , entrez le nom de l’objet de métadonnées de clé de chiffrement de colonne.
+4.  Sélectionnez un objet de métadonnées qui représente votre clé principale de colonne dans la base de données.
+5.  Cliquez sur **OK**. 
 
 
 SQL Server Management Studio génère une clé de chiffrement de colonne, puis récupère les métadonnées pour la clé principale de colonne sélectionnée à partir de la base de données. SQL Server Management Studio utilise ensuite les métadonnées de clé principale de colonne pour contacter le magasin de clés qui contient votre clé principale de colonne et chiffrer la clé de chiffrement de colonne. Enfin, les métadonnées de la nouvelle clé de chiffrement de colonne sont créées dans la base de données. La boîte de dialogue effectue cette opération en générant et en émettant une instruction [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) .
@@ -285,11 +285,11 @@ Mettez en service une nouvelle clé principale de colonne, en suivant les étape
 Une clé principale de colonne protège généralement une ou plusieurs clés de chiffrement de colonne. Chaque clé de chiffrement de colonne a une valeur chiffrée, stockée dans la base de données, qui est le produit du chiffrement de la clé de chiffrement de colonne avec la clé principale de colonne.
 Dans cette étape, chiffrez chacune des clés de chiffrement de colonne qui sont protégées par la clé principale de colonne que vous permutez avec la nouvelle clé principale de colonne, puis stockez la nouvelle valeur chiffrée dans la base de données. Par conséquent, chaque clé de chiffrement de colonne affectée par la permutation comporte deux valeurs chiffrées : une valeur chiffrée avec la clé principale de colonne existante et une nouvelle valeur chiffrée avec la nouvelle clé principale de colonne.
 
-1.    Dans **l’Explorateur d’objets**, accédez au dossier **Sécurité>Clés Always Encrypted>Clés principales de colonne**, puis recherchez la clé principale de colonne que vous permutez.
-2.    Cliquez avec le bouton droit sur la clé principale de colonne, puis sélectionnez **Permuter**.
-3.    Dans la boîte de dialogue **Permutation de la clé principale de colonne** , sélectionnez le nom de la nouvelle clé principale de colonne que vous avez créée à l’étape 1, dans le champ **Cible** .
-4.    Consultez la liste des clés de chiffrement de colonne protégées par les clés principales de colonne existantes. Ces clés sont affectées par la permutation.
-5.    Cliquez sur **OK**.
+1.  Dans **l’Explorateur d’objets**, accédez au dossier **Sécurité>Clés Always Encrypted>Clés principales de colonne**, puis recherchez la clé principale de colonne que vous permutez.
+2.  Cliquez avec le bouton droit sur la clé principale de colonne, puis sélectionnez **Permuter**.
+3.  Dans la boîte de dialogue **Permutation de la clé principale de colonne** , sélectionnez le nom de la nouvelle clé principale de colonne que vous avez créée à l’étape 1, dans le champ **Cible** .
+4.  Consultez la liste des clés de chiffrement de colonne protégées par les clés principales de colonne existantes. Ces clés sont affectées par la permutation.
+5.  Cliquez sur **OK**.
 
 SQL Server Management Studio obtient les métadonnées des clés de chiffrement de colonne qui sont protégées avec l’ancienne clé principale de colonne ainsi que les métadonnées de l’ancienne et de la nouvelle clés principales de colonne. SSMS utilise ensuite les métadonnées de clé principale de colonne pour accéder au magasin de clés contenant l’ancienne clé principale de colonne et déchiffre les clés de chiffrement de colonne. Par la suite, SSMS accède au magasin de clés contenant la nouvelle clé principale de colonne pour produire un nouvel ensemble de valeurs chiffrées des clés de chiffrement de colonne, puis ajoute les nouvelles valeurs aux métadonnées (en générant et en émettant des instructions [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md) ).
 
@@ -318,19 +318,19 @@ Une autre raison de nettoyer l’ancienne valeur avant l’archivage ou la suppr
 > [!WARNING]
 > Si vous supprimez la valeur d’une clé de chiffrement de colonne avant que sa clé principale de colonne correspondante ne soit devenue disponible pour une application, l’application ne peut plus déchiffrer la colonne de base de données.
 
-1.    Dans **l’Explorateur d’objets**, accédez au dossier **Sécurité>Clés Always Encrypted**, puis recherchez la clé principale de colonne existante à remplacer.
-2.    Cliquez avec le bouton droit sur la clé principale de colonne existante, puis sélectionnez **Nettoyage**.
-3.    Passez en revue la liste des valeurs clés de chiffrement de colonne à supprimer.
-4.    Cliquez sur **OK**.
+1.  Dans **l’Explorateur d’objets**, accédez au dossier **Sécurité>Clés Always Encrypted**, puis recherchez la clé principale de colonne existante à remplacer.
+2.  Cliquez avec le bouton droit sur la clé principale de colonne existante, puis sélectionnez **Nettoyage**.
+3.  Passez en revue la liste des valeurs clés de chiffrement de colonne à supprimer.
+4.  Cliquez sur **OK**.
 
 SQL Server Management Studio émet des instructions [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md) pour supprimer les valeurs chiffrées des clés de chiffrement de colonne chiffrées avec l’ancienne clé principale de colonne.
 
 **Étape 5 : Supprimer les métadonnées de votre ancienne clé principale de colonne**
 
 Si vous choisissez de supprimer la définition de l’ancienne clé principale de colonne de la base de données, procédez comme suit. 
-1.    Dans **l’Explorateur d’objets**, accédez au dossier **Sécurité>Clés Always Encrypted>Clés principales de colonne**, puis recherchez l’ancienne clé principale de colonne à supprimer de la base de données.
-2.    Cliquez avec le bouton droit sur l’ancienne clé principale de colonne, puis sélectionnez **Supprimer**. (Cela génère et émet une instruction [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md) pour supprimer les métadonnées de clé principale de colonne.)
-3.    Cliquez sur **OK**.
+1.  Dans **l’Explorateur d’objets**, accédez au dossier **Sécurité>Clés Always Encrypted>Clés principales de colonne**, puis recherchez l’ancienne clé principale de colonne à supprimer de la base de données.
+2.  Cliquez avec le bouton droit sur l’ancienne clé principale de colonne, puis sélectionnez **Supprimer**. (Cela génère et émet une instruction [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md) pour supprimer les métadonnées de clé principale de colonne.)
+3.  Cliquez sur **OK**.
 
 > [!NOTE]
 > Nous vous recommandons vivement de ne pas supprimer définitivement l’ancienne clé principale de colonne après la permutation. Au lieu de cela, laissez l’ancienne clé principale de colonne dans son magasin de clés actuel ou archivez-la dans un autre emplacement sécurisé. Si vous restaurez votre base de données à partir d’un fichier de sauvegarde à un point dans le temps avant la configuration de la nouvelle clé principale de colonne, vous aurez besoin de l’ancienne clé pour accéder aux données.
@@ -361,14 +361,14 @@ La permutation d’une clé de chiffrement de colonne implique le déchiffrement
 > La permutation d’une clé de chiffrement de colonne peut prendre beaucoup de temps si les tables qui contiennent les colonnes chiffrées avec la clé soumise à la permutation sont volumineuses. Pendant le rechiffrement des données, vos applications ne peuvent pas écrire dans les tables concernées. Votre organisation doit donc apporter un soin particulier à la planification de la permutation des clés de chiffrement de colonne.
 Pour permuter une clé de chiffrement de colonne, utilisez l’Assistant Always Encrypted.
 
-1.    Ouvrez l’Assistant pour votre base de données : cliquez avec le bouton droit sur votre base de données, pointez sur **Tâches**, puis cliquez sur **Chiffrer les colonnes**.
-2.    Examinez la page **Introduction** , puis cliquez sur **Suivant**.
-3.    Dans la page **Sélection de la colonne** , développez les tables et recherchez toutes les colonnes à remplacer qui sont actuellement chiffrés avec l’ancienne clé de chiffrement de colonne.
-4.    Pour chaque colonne chiffrée avec l’ancienne clé de chiffrement de colonne, affectez à **Clé de chiffrement** une nouvelle clé générée automatiquement. **Remarque :** Vous pouvez également créer une clé de chiffrement de colonne avant d’exécuter l’Assistant ; consultez la section *Mise en service des clés de chiffrement de colonne* ci-dessus.
-5.    Dans la page **Configuration de la clé principale** , sélectionnez un emplacement pour stocker la nouvelle clé et une source de clé principale, puis cliquez sur **Suivant**. **Remarque :** Si vous utilisez une clé de chiffrement de colonne existante (et non générée automatiquement), aucune action ne doit être effectuée dans cette page.
-6.    Dans la page **Validation**, indiquez si vous souhaitez exécuter le script immédiatement ou créer un script PowerShell, puis cliquez sur **Suivant**.
-7.    Dans la page **Résumé** , passez en revue les options que vous avez sélectionnées, puis cliquez sur **Terminer** et fermez l’Assistant à la fin.
-8.    Dans **l’Explorateur d’objets**, accédez au dossier **Sécurité/Clés Always Encrypted/Clés de chiffrement de colonne** , puis recherchez l’ancienne clé de chiffrement de colonne à supprimer de la base de données. Cliquez avec le bouton droit sur la clé et sélectionnez **Supprimer**.
+1.  Ouvrez l’Assistant pour votre base de données : cliquez avec le bouton droit sur votre base de données, pointez sur **Tâches**, puis cliquez sur **Chiffrer les colonnes**.
+2.  Examinez la page **Introduction** , puis cliquez sur **Suivant**.
+3.  Dans la page **Sélection de la colonne** , développez les tables et recherchez toutes les colonnes à remplacer qui sont actuellement chiffrés avec l’ancienne clé de chiffrement de colonne.
+4.  Pour chaque colonne chiffrée avec l’ancienne clé de chiffrement de colonne, affectez à **Clé de chiffrement** une nouvelle clé générée automatiquement. **Remarque :** Vous pouvez également créer une clé de chiffrement de colonne avant d’exécuter l’Assistant ; consultez la section *Mise en service des clés de chiffrement de colonne* ci-dessus.
+5.  Dans la page **Configuration de la clé principale** , sélectionnez un emplacement pour stocker la nouvelle clé et une source de clé principale, puis cliquez sur **Suivant**. **Remarque :** Si vous utilisez une clé de chiffrement de colonne existante (et non générée automatiquement), aucune action ne doit être effectuée dans cette page.
+6.  Dans la page **Validation**, indiquez si vous souhaitez exécuter le script immédiatement ou créer un script PowerShell, puis cliquez sur **Suivant**.
+7.  Dans la page **Résumé** , passez en revue les options que vous avez sélectionnées, puis cliquez sur **Terminer** et fermez l’Assistant à la fin.
+8.  Dans **l’Explorateur d’objets**, accédez au dossier **Sécurité/Clés Always Encrypted/Clés de chiffrement de colonne** , puis recherchez l’ancienne clé de chiffrement de colonne à supprimer de la base de données. Cliquez avec le bouton droit sur la clé et sélectionnez **Supprimer**.
 
 ### <a name="permissions"></a>Permissions
 
@@ -441,7 +441,7 @@ Pour permettre le déchiffrement (pour la source de données) ou le chiffrement 
 
 Le tableau ci-dessous répertorie les scénarios de migration possibles et comment ils se rapportent à Always Encrypted, ainsi que la configuration de source de données et de cible de données pour chaque connexion.
 
-| Scénario|Configuration de la connexion source|    Configuration de la connexion cible
+| Scénario|Configuration de la connexion source| Configuration de la connexion cible
 |:---|:---|:---
 |Chiffrer les données lors de la migration (les données sont stockées en texte clair dans la source de données et sont migrées vers les colonnes chiffrées dans la cible de données).| Fournisseur de données/pilote : *tout*<br><br>Paramètre de chiffrement de colonne = Désactivé<br><br>(si le fournisseur de données .NET Framework pour SQL Server et .NET Framework 4.6 ou version ultérieure sont utilisés.) | Fournisseur de données/pilote : *Fournisseur de données .NET Framework pour SQL Server* (.NET Framework 4.6 ou version ultérieure nécessaire)<br><br>Paramètre de chiffrement de colonne = Activé
 | Déchiffrer les données lors de la migration (les données sont stockées dans des colonnes chiffrées dans la source de données et migrées en texte clair vers la cible de données ; si la cible de données est une base de données, les colonnes cibles ne sont pas chiffrées).<br><br>**Remarque :** Les tables cibles avec les colonnes chiffrées doivent exister avant la migration.|Fournisseur de données/pilote : *Fournisseur de données .NET Framework pour SQL Server* (.NET Framework 4.6 ou version ultérieure nécessaire)<br><br>Paramètre de chiffrement de colonne = Activé|Fournisseur de données/pilote : *tout*<br><br>Paramètre de chiffrement de colonne = Désactivé<br><br>(si le fournisseur de données .NET Framework pour SQL Server et .NET Framework 4.6 ou version ultérieure sont utilisés.)

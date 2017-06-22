@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 61f3c832be62fb53a82713182dc026d7a6fc3fb5
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>Optimiser les performances de la réplication de fusion avec le suivi conditionnel des suppressions

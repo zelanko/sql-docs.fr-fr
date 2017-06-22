@@ -29,7 +29,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6a1f9f1dd348561e46c4e01dc4f635ef83f28193
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Planification de la prise en charge des navigateurs pour Reporting Services et Power View (Reporting Services 2014)

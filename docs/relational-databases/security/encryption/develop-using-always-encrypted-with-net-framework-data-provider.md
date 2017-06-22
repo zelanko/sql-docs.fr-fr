@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 09253894ace06e9bd0b6a515e133eb8e2f5860a1
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Développer à l’aide d’Always Encrypted avec le Fournisseur de données .NET Framework
@@ -262,7 +262,7 @@ Pour obtenir la valeur en texte clair d’une clé de chiffrement de colonne, le
 
 Le processus pour obtenir une clé de chiffrement de colonne est le suivant :
 
-1.    Si Always Encrypted est activé pour une requête, le fournisseur de données .NET Framework pour SQL Server appelle en toute transparence **sys.sp_describe_parameter_encryption** pour récupérer les métadonnées de chiffrement pour les paramètres ciblant les colonnes chiffrées, si la requête possède des paramètres. Pour les données chiffrées contenues dans les résultats d’une requête, SQL Server affecte automatiquement des métadonnées de chiffrement. Les informations sur la clé principale de colonne sont les suivantes :
+1.  Si Always Encrypted est activé pour une requête, le fournisseur de données .NET Framework pour SQL Server appelle en toute transparence **sys.sp_describe_parameter_encryption** pour récupérer les métadonnées de chiffrement pour les paramètres ciblant les colonnes chiffrées, si la requête possède des paramètres. Pour les données chiffrées contenues dans les résultats d’une requête, SQL Server affecte automatiquement des métadonnées de chiffrement. Les informations sur la clé principale de colonne sont les suivantes :
     - Le nom d’un fournisseur de magasins de clés qui encapsule un magasin de clés contenant la clé principale de colonne. 
     - Le chemin d’accès à une clé qui spécifie l’emplacement de la clé CMK dans le magasin de clés.
     
@@ -270,8 +270,8 @@ Le processus pour obtenir une clé de chiffrement de colonne est le suivant :
 
     - La valeur chiffrée d’une clé de chiffrement de colonne.
     - Le nom de l’algorithme utilisé pour chiffrer la clé CEK.
-2.    Le fournisseur de données .NET Framework pour SQL Server utilise le nom du magasin de clés principales de colonne (une instance d’une classe dérivée de la classe SqlColumnEncryptionKeyStoreProvider) dans une structure de données interne.
-3.    Pour déchiffrer la clé de chiffrement de colonne, le fournisseur de données .NET Framework pour SQL Server appelle la méthode SqlColumnEncryptionKeyStoreProvider.DecryptColumnEncryptionKey, en passant le chemin d’accès de la clé principale de colonne, la valeur chiffrée de la clé de chiffrement de colonne et le nom de l’algorithme de chiffrement utilisé pour générer la clé de chiffrement de la colonne chiffrée.
+2.  Le fournisseur de données .NET Framework pour SQL Server utilise le nom du magasin de clés principales de colonne (une instance d’une classe dérivée de la classe SqlColumnEncryptionKeyStoreProvider) dans une structure de données interne.
+3.  Pour déchiffrer la clé de chiffrement de colonne, le fournisseur de données .NET Framework pour SQL Server appelle la méthode SqlColumnEncryptionKeyStoreProvider.DecryptColumnEncryptionKey, en passant le chemin d’accès de la clé principale de colonne, la valeur chiffrée de la clé de chiffrement de colonne et le nom de l’algorithme de chiffrement utilisé pour générer la clé de chiffrement de la colonne chiffrée.
 
 
 

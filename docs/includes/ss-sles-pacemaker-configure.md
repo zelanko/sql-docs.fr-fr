@@ -51,5 +51,5 @@
     > [!NOTE]
     > **admin_addr** est la ressource de cluster IP virtuelle qui est configurée pendant l’installation initiale du cluster à un nœud.
 
-7.    **Procédures de suppression**. Si vous devez supprimer un nœud du cluster, utilisez le script d’amorçage **ha-cluster-remove**. Pour plus d’informations, consultez [Overview of the Bootstrap Scripts](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.bootstrap) (Vue d’ensemble des scripts d’amorçage).  
+7.  **Procédures de suppression**. Si vous devez supprimer un nœud du cluster, utilisez le script d’amorçage **ha-cluster-remove**. Pour plus d’informations, consultez [Overview of the Bootstrap Scripts](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.bootstrap) (Vue d’ensemble des scripts d’amorçage).  
 

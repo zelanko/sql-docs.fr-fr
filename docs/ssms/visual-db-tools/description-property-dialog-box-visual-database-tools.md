@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 23ece5ce731ee02212a84c08fcb4ac2c96bb59fa
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="description-property-dialog-box-visual-database-tools"></a>Boîte de dialogue Propriété de la description (Visual Database Tools)
