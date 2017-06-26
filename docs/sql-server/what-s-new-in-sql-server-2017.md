@@ -1,5 +1,5 @@
 ---
-title: Quel &#39; s de SQL Server 2017 | Documents Microsoft
+title: "Quelles sont les nouveautés dans SQL Server 2017 | Documents Microsoft"
 ms.custom: 
 ms.date: 06/19/2017
 ms.prod: sql-server-2017
@@ -21,7 +21,7 @@ ms.contentlocale: fr-fr
 ms.lasthandoff: 06/23/2017
 
 ---
-# <a name="what39s-new-in-sql-server-2017"></a>Quel &#39; s de SQL Server 2017
+# <a name="what39s-new-in-sql-server-2017"></a>Quelles sont les nouveautés dans SQL Server 2017
 SQL Server 2017 représente une étape importante sur la réalisation de SQL Server une plateforme qui vous donne le choix de langages de développement, les types de données, localement et dans le cloud et entre les systèmes d’exploitation en apportant la puissance de SQL Server pour Linux, conteneurs Docker de basés sur Linux et Windows.
 
 Cette rubrique est un résumé des nouveautés de la mise en production Community Technical Preview (CTP) et des liens vers plus d’informations pour les zones de fonctionnalité spécifique sur les nouveautés les plus récentes.
