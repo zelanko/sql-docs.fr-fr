@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Notes de publication | Microsoft Docs
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 06/22/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: b68d454230d414ff52d90b4f3f71dd68ee65c6bc
-ms.openlocfilehash: 1733a789fb2dc17eea82ab22d4a50614d1fffc3b
+ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
+ms.openlocfilehash: f593303a681e2f52161777fc48f0fb1b479d20d9
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="sql-server-management-studio----release-notes"></a>SQL Server Management Studio - Notes de publication
@@ -57,6 +57,9 @@ Les problèmes et limitations constatés dans cette version de SQL Server Manage
     
 5. **Les installations non anglaises de SSMS peuvent nécessiter l’installation d’un package de sécurité supplémentaire.**  
 Les versions localisées dans des langues autres que l’anglais nécessitent la [mise à jour de sécurité KB 2862966](https://support.microsoft.com/en-us/kb/2862966) si l’installation est effectuée sous Windows 8, Windows 7, Windows Server 2012 et Windows Server 2008 R2.
+
+5. **L’aide ne s’ouvre pas quand vous cliquez sur Aide ou quand vous appuyez sur F1**  
+Certains environnements affichent le message suivant quand vous cliquez sur Aide ou quand vous appuyez sur F1 : **Vous aurez besoin d’une nouvelle application pour ouvrir cet élément ms-xhelp**. Il s’agit d’un problème connu qui sera résolu dans une prochaine version.
   
 ## <a name="feedback"></a>Commentaires  
   

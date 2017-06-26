@@ -1,5 +1,5 @@
 ---
-title: "La Validation après la migration et Guide d’optimisation | Documents Microsoft"
+title: "Guide de validation et d’optimisation post-migration | Microsoft Docs"
 ms.custom: 
 ms.date: 5/03/2017
 ms.prod: sql-server-2016
@@ -18,21 +18,39 @@ author: pelopes
 ms.author: harinid
 manager: 
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
-ms.openlocfilehash: d81eabfa1bdb5736bbf6f53ed34c2e1ac157e782
+ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
+ms.openlocfilehash: 30a271511fff2d9c3c9eab73a0d118bfb3f8130d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 05/25/2017
+ms.lasthandoff: 06/23/2017
 
 ---
-# <a name="post-migration-validation-and-optimization-guide"></a>La Validation après la migration et Guide d’optimisation
+# <a name="post-migration-validation-and-optimization-guide"></a>Guide de validation et d’optimisation post-migration
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]post étape de migration est très essentiel de rapprochement de précision des données et l’exhaustivité, ainsi que découvrir des problèmes de performances avec la charge de travail.
+L’étape post-migration de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est cruciale pour rapprocher et compléter les données, ainsi que pour détecter les problèmes de performance avec la charge de travail.
 
-# <a name="common-performance-scenarios"></a>Scénarios courants de performances 
-Voici quelques-unes des scénarios courants de performances rencontrées après la migration vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] plateforme et comment les résoudre. Ceux-ci incluent des scénarios qui sont specifdic à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration (versions antérieures aux versions plus récentes), ainsi que la plateforme étrangère (par exemple, Oracle, DB2, MySQL et Sybase) à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration.
+# <a name="common-performance-scenarios"></a>Scénarios de performance courants 
+Voici quelques-uns des scénarios de performance courants rencontrés après la migration vers la plateforme [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et leur résolution. Certains scénarios sont spécifiques à la migration de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (d’une version antérieure vers une version plus récente), d’autres à la migration d’une plateforme étrangère (comme Oracle, DB2, MySQL ou Sybase) vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-## <a name="Parameter Sniffing"></a>Sensibilité de la détection des paramètres
+## <a name="CEUpgrade"></a> Régression des requêtes en raison d’un changement de version CE
+
+**S’applique à :** migration de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+
+Quand vous faites migrer une ancienne version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ou ultérieur, et que vous passez au [niveau de compatibilité de base de données](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) le plus récent, il est possible que les performances d’une charge de travail fassent l’objet d’une régression.
+
+Cela vient du fait qu’à compter de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], tous les changements de l’optimiseur de requête sont liés au [niveau de compatibilité de base de données](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) le plus récent, de sorte que les plans ne sont pas changés au moment même de la mise à niveau, mais quand un utilisateur remplace l’option de base de données `COMPATIBILITY_LEVEL` par la plus récente. Cette fonctionnalité, en association avec le magasin de requêtes, vous offre un niveau de contrôle élevé sur les performances des requêtes dans le processus de mise à niveau. 
+
+Pour plus d’informations sur les changements apportés à l’optimiseur de requête dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], consultez [Optimisation de vos plans de requête avec l’estimateur de cardinalité SQL Server 2014](http://msdn.microsoft.com/library/dn673537.aspx).
+
+### <a name="steps-to-resolve"></a>Étapes de résolution
+
+Remplacez le [niveau de compatibilité de base de données](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) par celui de la version de la source, puis suivez la procédure de mise à niveau recommandée que présente l’image suivante :
+
+![query-store-usage-5](../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
+
+Pour plus d’informations à ce sujet, consultez [Maintenir la stabilité des performances lors de la mise à niveau vers une version plus récente de SQL Server](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade).
+
+## <a name="ParameterSniffing"></a>Sensibilité de la détection des paramètres
 
 **S’applique à :** étrangère plateforme (par exemple, Oracle, DB2, MySQL et Sybase) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration.
 
@@ -40,20 +58,20 @@ Voici quelques-unes des scénarios courants de performances rencontrées après 
 > Pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migrations, si ce problème n’existe dans la source de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], effectuer une migration vers une version plus récente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en tant que-elle va pas traiter ce scénario. 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Compile les plans de requête sur les procédures stockées à l’aide de la détection des paramètres d’entrée à la première compilation, générer un plan paramétrable et réutilisable, optimisé pour qu’une entrée de la distribution des données. Même si ne pas les procédures stockées, la plupart des instructions qui génèrent des plans triviaux sont paramétrables. Lorsqu’un plan est tout d’abord mis en cache, toute exécution ultérieure mappe à un plan mis en cache précédemment.
-Un problème potentiel se produit lorsque que la première compilation ne peut-être pas avoir utilisées les plus courantes jeux de paramètres pour la charge de travail habituel. Pour des paramètres différents, le même plan d’exécution devient inefficace.
+Un problème potentiel se produit lorsque que la première compilation ne peut-être pas avoir utilisées les plus courantes jeux de paramètres pour la charge de travail habituel. Pour des paramètres différents, le même plan d’exécution devient inefficace. Pour plus d’informations à ce sujet, consultez [Détection de paramètres](../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
 
 ### <a name="steps-to-resolve"></a>Étapes de résolution
 
-1.    Utilisez le `RECOMPILE` indicateur. Un plan est calculé chaque fois adaptée à chaque valeur de paramètre.
-2.    Réécrivez la procédure stockée pour utiliser l’option `(OPTIMIZE FOR(<input parameter> = <value>))`. Déterminez la valeur à utiliser qui correspond le mieux à la plupart de la charge de travail pertinents, création et gestion d’un plan qui devient efficace pour la valeur paramétrable.
-3.    Réécrivez la procédure stockée à l’aide de la variable locale à l’intérieur de la procédure. L’optimiseur utilise désormais le vecteur de densité pour estimations, ce qui entraîne le même plan, quelle que soit la valeur du paramètre.
-4.    Réécrivez la procédure stockée pour utiliser l’option `(OPTIMIZE FOR UNKNOWN)`. Équivaut à l’aide de la technique de variable locale.
-5.    Réécrivez la requête afin d’utiliser l’indicateur `DISABLE_PARAMETER_SNIFFING`. Même effet que l’utilisation de la technique de variable locale par totalement la désactivation de la détection des paramètres, sauf si `OPTION(RECOMPILE)`, `WITH RECOMPILE` ou `OPTIMIZE FOR <value>` est utilisé.
+1.  Utilisez le `RECOMPILE` indicateur. Un plan est calculé chaque fois adaptée à chaque valeur de paramètre.
+2.  Réécrivez la procédure stockée pour utiliser l’option `(OPTIMIZE FOR(<input parameter> = <value>))`. Déterminez la valeur à utiliser qui correspond le mieux à la plupart de la charge de travail pertinents, création et gestion d’un plan qui devient efficace pour la valeur paramétrable.
+3.  Réécrivez la procédure stockée à l’aide de la variable locale à l’intérieur de la procédure. L’optimiseur utilise désormais le vecteur de densité pour estimations, ce qui entraîne le même plan, quelle que soit la valeur du paramètre.
+4.  Réécrivez la procédure stockée pour utiliser l’option `(OPTIMIZE FOR UNKNOWN)`. Équivaut à l’aide de la technique de variable locale.
+5.  Réécrivez la requête afin d’utiliser l’indicateur `DISABLE_PARAMETER_SNIFFING`. Même effet que l’utilisation de la technique de variable locale par totalement la désactivation de la détection des paramètres, sauf si `OPTION(RECOMPILE)`, `WITH RECOMPILE` ou `OPTIMIZE FOR <value>` est utilisé.
 
 > [!TIP] 
 > Optimisez la [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] fonctionnalité planifier une analyse pour identifier rapidement s’il s’agit d’un problème. Plus d’informations [ici](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/).
 
-## <a name="Missing indexes"></a>Index manquants
+## <a name="MissingIndexes"></a>Index manquants
 
 **S’applique à :** étrangère plate-forme (par exemple, Oracle, DB2, MySQL et Sybase) et [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration.
 
@@ -63,15 +81,15 @@ Index incorrectes ou manquantes provoque des e/s supplémentaires qui aboutissen
 
 ### <a name="steps-to-resolve"></a>Étapes de résolution
 
-1.    Tirer parti du plan d’exécution graphique pour toutes les références de l’Index manquant.
-2.    L’indexation des suggestions générées par [l’Assistant Paramétrage du moteur de base de données](../tools/dta/tutorial-database-engine-tuning-advisor.md).
-3.    Tirer parti de la [DMV d’index manquants](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) ou via le [tableau de bord SQL Server Performance](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
-4.    Tirer parti des scripts préexistants qui DMV existants fournisse dans n’importe quel index manquants, en double, redondantes, rarement utilisés et entièrement inutilisés, mais également si toutes les références de l’index sont suggéré/codée en dur dans les procédures existantes et des fonctions dans votre base de données. 
+1.  Tirer parti du plan d’exécution graphique pour toutes les références de l’Index manquant.
+2.  L’indexation des suggestions générées par [l’Assistant Paramétrage du moteur de base de données](../tools/dta/tutorial-database-engine-tuning-advisor.md).
+3.  Tirer parti de la [DMV d’index manquants](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) ou via le [tableau de bord SQL Server Performance](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
+4.  Tirer parti des scripts préexistants qui DMV existants fournisse dans n’importe quel index manquants, en double, redondantes, rarement utilisés et entièrement inutilisés, mais également si toutes les références de l’index sont suggéré/codée en dur dans les procédures existantes et des fonctions dans votre base de données. 
 
 > [!TIP] 
 > Exemples de ces scripts préexistants [la création d’Index](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Creation) et [informations sur les Index](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Information). 
 
-## <a name="Inability to use predicates"></a>Impossibilité d’utiliser des prédicats pour filtrer les données
+## <a name="InabilityPredicates"></a>Impossibilité d’utiliser des prédicats pour filtrer les données
 
 **S’applique à :** étrangère plate-forme (par exemple, Oracle, DB2, MySQL et Sybase) et [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration.
 
@@ -97,9 +115,9 @@ Voici quelques exemples de prédicats sargables non :
   -   Les expressions complexes basées sur des données en colonnes : évaluer la nécessité de créer à la place des colonnes calculées persistantes, ce qui peuvent être indexées ;
 
 > [!NOTE] 
-> Programmaticaly tous les éléments ci-dessus peuvent être effectuée.
+> Tout ce qui précède peut être réalisé par programmation.
 
-## <a name="Table Valued Functions"></a>Utilisation de fonctions table (plusieurs instructions Inline Visual Studio)
+## <a name="TableValuedFunctions"></a>Utilisation de fonctions table (plusieurs instructions Inline Visual Studio)
 
 **S’applique à :** étrangère plate-forme (par exemple, Oracle, DB2, MySQL et Sybase) et [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration.
 
@@ -112,7 +130,7 @@ Fonctions table retournent un type de données de table qui peut constituer une 
 > Étant donné que la table de sortie d’un MSTVF (fonction table multi-instructions Table) n’est pas créée au moment de la compilation, le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] optimiseur de requête s’appuie sur les paramètres heuristiques et statistiques pas réelles, afin de déterminer les estimations de ligne. Même si les index sont ajoutés à l’ou plusieurs tables de base, cela ne va pas à l’aide. Pour MSTVFs, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise une estimation fixe de 1 pour le nombre de lignes attendu doivent être retournées par une MSTVF (en commençant par [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] fixe d’estimation est 100 lignes).
 
 ### <a name="steps-to-resolve"></a>Étapes de résolution
-1.    Si la fonction table à instructions multiples est la seule instruction, convertir les TVF Inline.
+1.  Si la fonction table à instructions multiples est la seule instruction, convertir les TVF Inline.
 
     ```tsql
     CREATE FUNCTION dbo.tfnGetRecentAddress(@ID int)
@@ -142,7 +160,7 @@ Fonctions table retournent un type de données de table qui peut constituer une 
     )
     ```
 
-2.    Si elle est plus complexe, envisagez d’utiliser des résultats intermédiaires stockés dans des tables optimisées en mémoire ou des tables temporaires.
+2.  Si elle est plus complexe, envisagez d’utiliser des résultats intermédiaires stockés dans des tables optimisées en mémoire ou des tables temporaires.
 
 ##  <a name="Additional_Reading"></a> Lecture supplémentaire  
  [Bonnes pratiques relatives au magasin de requêtes](../relational-databases/performance/best-practice-with-the-query-store.md)  

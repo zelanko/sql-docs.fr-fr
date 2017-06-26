@@ -1,7 +1,7 @@
 ---
 title: "Créer une sauvegarde complète de base de données (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 07/25/2016
+ms.date: 06/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,19 +20,19 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: fb2aa3981cd5107cf3ea6f6dc0408acfe3292701
+ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
+ms.openlocfilehash: 141c83e009e1cf135690297442c6a4864a871bfc
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Créer une sauvegarde complète de base de données (SQL Server)
 
- > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Créer une sauvegarde complète de base de données (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx).
+ > Pour SQL Server 2014, accédez à [Créer une sauvegarde complète de base de données (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx).
 
   Cette rubrique explique comment créer une sauvegarde de base de données complète dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou de PowerShell.  
   
->  Pour plus d’informations sur la sauvegarde SQL Server dans le service Stockage Blob Microsoft Azure, consultez [Sauvegarde et restauration SQL Server avec le service Stockage Blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) et [Sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+>  Pour plus d’informations sur la sauvegarde SQL Server dans le service Stockage Blob Azure, consultez [Sauvegarde et restauration SQL Server avec le service Stockage Blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) et [Sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer 
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/05/2017
   
 ###  <a name="Recommendations"></a> Recommandations  
   
--   À mesure que la taille d'une base de données augmente, les sauvegardes complètes de base de données nécessitent davantage de temps et d'espace de stockage. Pour les bases de données volumineuses, il est conseillé de compléter les sauvegardes complètes avec une série de *sauvegardes différentielles de base de données*. Pour plus d’informations, consultez [Sauvegardes différentielles &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md) et [Sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+-   À mesure que la taille d’une base de données augmente, les sauvegardes complètes de base de données nécessitent davantage de temps et d’espace de stockage. Si votre base de données est volumineuse, songez à combiner une sauvegarde complète avec une série de [sauvegardes différentielles de base de données]((../../relational-databases/backup-restore/differential-backups-sql-server.md). Pour plus d’informations, consultez [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
 -   Vous pouvez estimer la taille d’une sauvegarde complète de base de données en utilisant la procédure stockée système [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) .  
   
@@ -198,7 +198,7 @@ Dans cet exemple, la base de données `Sales` est sauvegardée avec chiffrement 
 
 7.  Cliquez sur **OK**.
 
-#### <a name="d--backing-up-to-the-microsoft-azure-blob-storage-service"></a>**D.  Sauvegarde sur le service Stockage Blob Microsoft Azure**
+#### <a name="d--back-up-to-the-azure-blob-storage-service"></a>**D.  Sauvegarder sur le service Stockage Blob Azure**
 #### <a name="common-steps"></a>**Étapes courantes**  
 Les trois exemples suivants effectuent une sauvegarde complète de la base de données `Sales` vers le service Stockage Blob Microsoft Azure.  Le nom du compte de stockage est `mystorageaccount`.  Le conteneur se nomme `myfirstcontainer`.  Par souci de concision, les quatre premières étapes ne sont répertoriées ici qu’une seule fois et tous les exemples commencent à l’ **Étape 5**.
 1.  Dans l’ **Explorateur d’objets**, connectez-vous à une instance du moteur de base de données SQL Server et développez-la.
@@ -212,7 +212,7 @@ Les trois exemples suivants effectuent une sauvegarde complète de la base de do
     **D1.  Sauvegarde distribuée vers une URL quand il existe déjà des informations d’identification SQL Server**  
 Une stratégie d’accès stockée a été créée avec des droits de lecture, écriture et liste.  Les informations d’identification SQL Server, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, ont été créées à l’aide d’une signature d’accès partagé associée à la stratégie d’accès stockée.  
 *
-    5.    Sélectionnez `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` dans la zone de texte **Conteneur de stockage Windows Azure** .
+    5.  Sélectionnez `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` dans la zone de texte **Conteneur de stockage Windows Azure** .
 
     6.  Dans la zone de texte **Fichier de sauvegarde** , entrez `Sales_stripe1of2_20160601.bak`.
 
@@ -247,7 +247,7 @@ Une stratégie d’accès stockée a été créée avec des droits de lecture, �
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-### <a name="to-create-a-full-database-backup"></a>Pour créer une sauvegarde de base de données complète  
+### <a name="create-a-full-database-backup"></a>Créer une sauvegarde de base de données complète  
   
 1.  Exécutez l'instruction BACKUP DATABASE en spécifiant les éléments suivants :  
   
@@ -299,7 +299,7 @@ Une stratégie d’accès stockée a été créée avec des droits de lecture, �
   
 ###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
   
-#### <a name="a-backing-up-to-a-disk-device"></a>**A. Sauvegarde sur une unité de disque**  
+#### <a name="a-back-up-to-a-disk-device"></a>**A. Sauvegarder sur une unité de disque**  
  L'exemple suivant sauvegarde entièrement la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sur disque, à l'aide de `FORMAT` , pour créer une nouveau jeu de supports.  
   
 ```tsql  
@@ -313,7 +313,7 @@ TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.Bak'
 GO  
 ```  
   
-#### <a name="b-backing-up-to-a-tape-device"></a>**B. Sauvegarde sur un périphérique à bandes**  
+#### <a name="b-back-up-to-a-tape-device"></a>**B. Sauvegarder sur un périphérique à bandes**  
  L’exemple suivant sauvegarde la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] complète sur bande, en ajoutant la sauvegarde aux sauvegardes précédentes.  
   
 ```tsql  
@@ -326,7 +326,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-#### <a name="c-backing-up-to-a-logical-tape-device"></a>**C. Sauvegarde sur un périphérique à bandes logique**  
+#### <a name="c-back-up-to-a-logical-tape-device"></a>**C. Sauvegarder sur un périphérique à bandes logique**  
  L'exemple suivant crée une unité de sauvegarde logique pour un périphérique à bandes. Il sauvegarde ensuite la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] complète sur ce périphérique.  
   
 ```tsql  

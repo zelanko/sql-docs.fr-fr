@@ -19,13 +19,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
-ms.openlocfilehash: 19da2d9b81da6ec2886d7da3c5189607b0a60b16
+ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
+ms.openlocfilehash: 4650cfdda4eef32d1d09f4d4407b61f964832b8d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 06/23/2017
 
 ---
-# <a name="monitoring-performance-by-using-the-query-store"></a>Analyse des performances à l'aide du magasin de requêtes
+# <a name="monitoring-performance-by-using-the-query-store"></a>Surveillance des performances à l’aide du magasin de requêtes
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   La fonctionnalité de magasin de requêtes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous fournit des informations sur le choix de plan de requête et sur les performances. Elle simplifie la résolution des problèmes de performances en vous permettant de trouver rapidement les différences de performances provoquées par des changements de plan de requête. Le magasin de requête capture automatiquement l'historique des requêtes, des plans et des statistiques d'exécution et les conserve à des fins de révision. Elle sépare les données en périodes, ce qui vous permet de voir les modèles d'utilisation de base de données et de comprendre à quel moment les changements de plan de requête ont eu lieu sur le serveur. Vous pouvez configurer le magasin de requêtes à l’aide de l’option [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) . 
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/29/2017
   
 1.  Utilisez l’instruction **ALTER DATABASE** pour activer le magasin de requêtes. Par exemple :  
   
-    ```  
+    ```tsql  
     ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
     ```  
   
@@ -59,7 +59,6 @@ ms.lasthandoff: 04/29/2017
 > [!NOTE]  
 >  Vous ne pouvez pas activer le magasin de requêtes pour la base de données **master** ou **tempdb** .  
  
-  
 ##  <a name="About"></a> Informations sur le magasin de requêtes  
  Les plans d’exécution d’une requête spécifique dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] évoluent généralement au fil du temps pour un certain nombre de raisons, telles que les modifications des statistiques, les modifications de schémas, la création/suppression d’index, etc. Le cache de procédures (où sont stockés les plans de requête mis en cache) stocke uniquement le dernier plan d'exécution. Les plans sont également supprimés du cache du plan en raison de la sollicitation de la mémoire. Par conséquent, les régressions des performances de requête provoquées par des modifications du plan d'exécution peuvent être significatives et longues à résoudre.  
   
@@ -71,7 +70,7 @@ ms.lasthandoff: 04/29/2017
   
 -   Déterminez le nombre de fois où une requête a été exécutée dans une fenêtre de temps donnée, en aidant un administrateur de base de données à résoudre les problèmes liés aux ressources de performances.  
   
--   Identifiez les *n* requêtes les plus importantes (en termes de temps d’exécution, de consommation de mémoire, etc.) au cours des *x* dernières heures.  
+-   Identifiez les *n* requêtes les plus importantes (en termes de temps d’exécution, de consommation de mémoire, etc.) au cours des *x* dernières heures.  
   
 -   Auditez l'historique des plans de requête pour une requête donnée.  
   
@@ -81,7 +80,7 @@ ms.lasthandoff: 04/29/2017
   
  La requête suivante retourne des informations sur les requêtes et plans du magasin de requêtes.  
   
-```  
+```tsql  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
 FROM sys.query_store_plan AS Pl  
 JOIN sys.query_store_query AS Qry  
@@ -90,7 +89,6 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
  
-  
 ##  <a name="Regressed"></a> Use the Regressed Queries Feature  
  Après avoir activé le magasin de requêtes, actualisez la partie de la base de données du volet de l'Explorateur d'objets pour ajouter la section **Magasin de requêtes** .  
   
@@ -102,80 +100,67 @@ JOIN sys.query_store_query_text AS Txt
   
  Pour forcer un plan, sélectionnez une requête et un plan, puis cliquez sur **Forcer le plan.** Vous pouvez uniquement forcer des plans qui ont été enregistrés par la fonctionnalité de plan de requête et sont toujours conservés dans le cache du plan de requête.  
  
-  
-##  <a name="Options"></a> Configuration Options  
- OPERATION_MODE  
+##  <a name="Options"></a> Configuration Options 
+
+Les options suivantes sont disponibles pour configurer les paramètres du magasin de requête.
+
+ `OPERATION_MODE`  
  Peut être défini avec la valeur READ_WRITE (par défaut) ou READ_ONLY.  
   
- CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)  
+ `CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)`  
  Configurez l'argument STALE_QUERY_THRESHOLD_DAYS pour spécifier le nombre de jours de conservation des données dans le magasin de requêtes. La valeur par défaut est 30. Pour l’édition [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] de base, la valeur par défaut est 7 jours.
   
- DATA_FLUSH_INTERVAL_SECONDS  
+ `DATA_FLUSH_INTERVAL_SECONDS`  
  Détermine la fréquence à laquelle les données écrites sur le magasin de requête magasin est conservée sur le disque. Pour optimiser les performances, les données collectées par le magasin de requête sont écrites de façon asynchrone sur le disque. La fréquence à laquelle ce transfert asynchrone se produit est configurée via DATA_FLUSH_INTERVAL_SECONDS. La valeur par défaut est 900 (15 minutes).  
   
- MAX_STORAGE_SIZE_MB  
+ `MAX_STORAGE_SIZE_MB`  
  Configure la taille maximale du magasin de requêtes. Si la taille des données du magasin de requêtes atteint la limite MAX_STORAGE_SIZE_MB, le magasin de requêtes fait passer automatiquement l'état de lecture-écriture à lecture seule et arrête la collecte de nouvelles données.  La valeur par défaut est de 100 Mo. Pour [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] édition Premium, par la valeur par défaut est de 1 Go et pour [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] édition De base, elle est de 10 Mo.
   
- INTERVAL_LENGTH_MINUTES  
+ `INTERVAL_LENGTH_MINUTES`  
  Détermine l'intervalle de temps à laquelle les données des statistiques d'exécution du runtime sont agrégées dans le magasin de requête. Pour optimiser l'espace, les statistiques d'exécution du runtime du magasin de statistiques du runtime sont agrégées sur une période fixe. Cette période fixe est configurée via INTERVAL_LENGTH_MINUTES. La valeur par défaut est 60. 
   
- SIZE_BASED_CLEANUP_MODE  
+ `SIZE_BASED_CLEANUP_MODE`  
  Contrôle si le processus de nettoyage est automatiquement activé lorsque la quantité totale de données approche de la taille maximale. Peut être défini avec la valeur AUTO (par défaut) or OFF.  
   
- QUERY_CAPTURE_MODE  
+ `QUERY_CAPTURE_MODE`  
  Indique si le magasin de requête capture toutes les requêtes ou des requêtes appropriées en fonction du nombre d’exécutions et de la consommation de ressources ou arrête l’ajout de nouvelles requêtes et effectue uniquement un suivi des requêtes en cours. Peut être défini avec la valeur ALL (capturer toutes les requêtes), AUTO (ignorer les requêtes peu fréquentes et celles dont la durée de compilation et d’exécution n’est pas significative) ou NONE (arrêter la capture des nouvelles requêtes). La valeur par défaut est ALL sur SQL Server 2016 et AUTO sur Azure SQL Database.
   
- max_plans_per_query  
+ `MAX_PLANS_PER_QUERY`  
  Entier représentant le nombre maximal de plans gérés pour chaque requête. La valeur par défaut est 200.  
  
- WAIT_STATS_CAPTURE_MODE  
+ `WAIT_STATS_CAPTURE_MODE`  
  Contrôle si le magasin de requêtes capture les informations statistiques d’attente. Peut être désactivé = 0 ou sur = 1 (valeur par défaut)  
  
- Interrogez l’affichage **sys.database_query_store_options** pour déterminer les options actuelles du magasin de requêtes. Pour plus d’informations sur les valeurs, consultez [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).  
+ Interrogez l’affichage **sys.database_query_store_options** pour déterminer les options actuelles du magasin de requêtes. Pour plus d’informations sur les valeurs, consultez [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).  
   
  Pour plus d'informations sur la définition des options à l'aide d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] , consultez [Gestion des options](#OptionMgmt).  
- 
   
 ##  <a name="Related"></a> Related Views, Functions, and Procedures  
  Affichez et gérez le magasin de requêtes par le biais de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou à l’aide des vues et les procédures suivantes.  
-  
--   [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
+
+||| 
+|-|-|  
+|[sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)|| 
   
 ### <a name="query-store-catalog-views"></a>Affichages catalogue de magasin de requête  
- Sept affichages catalogue présentent des informations sur le magasin de requêtes.  
-  
--   [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)  
-  
--   [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)  
-  
--   [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)  
-  
--   [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)  
-  
--   [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)  
-  
--   [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)  
+ Les affichages catalogue présentent des informations sur le magasin de requêtes.  
 
--   [Sys.query_store_wait_stats &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md) 
-
--   [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)  
+||| 
+|-|-|  
+|[sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)|[sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)|  
+|[sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)|[sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)|  
+|[sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|[sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)|  
+|[Sys.query_store_wait_stats &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|  
   
 ### <a name="query-store-stored-procedures"></a>Procédures stockées du magasin de requêtes  
- Six procédures stockées configurent le magasin de requêtes.  
-  
--   [sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)  
-  
--   [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)  
-  
--   [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)  
-  
--   [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)  
-  
--   [sp_query_store_remove_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)  
-  
--   [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)  
+ Les procédures stockées configurent le magasin de requêtes.  
+
+||| 
+|-|-|  
+|[sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)|[sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)|  
+|[sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)|[sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)|  
+|[sp_query_store_remove_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)|[sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)|  
  
-  
 ##  <a name="Scenarios"></a> Principaux scénarios d’utilisation  
   
 ###  <a name="OptionMgmt"></a> Option Management  
@@ -183,24 +168,24 @@ JOIN sys.query_store_query_text AS Txt
   
  **Le magasin de requêtes est-il actuellement actif ?**  
   
- Le magasin de requêtes stocke ses données dans la base de données utilisateur. C’est pourquoi sa taille est limitée (configurée sur la limite **MAX_STORAGE_SIZE_MB**). Si les données du magasin de requêtes atteignent cette limite, le magasin de requêtes fait passer automatiquement l'état de Lecture-écriture à Lecture seule et arrête la collecte de nouvelles données.  
+ Le magasin de requêtes stocke ses données dans la base de données utilisateur. C’est pourquoi sa taille est limitée (`MAX_STORAGE_SIZE_MB`). Si les données du magasin de requêtes atteignent cette limite, le magasin de requêtes fait passer automatiquement l'état de Lecture-écriture à Lecture seule et arrête la collecte de nouvelles données.  
   
- Interrogez [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) pour déterminer si le magasin de requêtes est actuellement actif et s'il collecte des statistiques d'exécution.  
+ Interrogez [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) pour déterminer si le magasin de requêtes est actif et s’il collecte des statistiques d’exécution.  
   
-```  
+```tsql  
 SELECT actual_state, actual_state_desc, readonly_reason,   
     current_storage_size_mb, max_storage_size_mb  
 FROM sys.database_query_store_options;  
 ```  
   
- L’état du magasin de requêtes est déterminé par la colonne actual_state. S’il diffère de l’état souhaité, la colonne readonly_reason peut vous donner plus d’informations.   
+ L’état du magasin de requêtes est déterminé par la colonne actual_state. S’il diffère de l’état souhaité, la colonne `readonly_reason` peut vous donner plus d’informations.   
 Lorsque la taille du magasin de requête dépasse le quota, la fonctionnalité passe en mode readon_only.  
   
  **Accès aux options du magasin de requêtes**  
   
  Pour trouver des informations détaillées sur l'état du magasin de requêtes, exécutez ce qui suit dans une base de données utilisateur.  
   
-```  
+```tsql  
 SELECT * FROM sys.database_query_store_options;  
 ```  
   
@@ -208,12 +193,13 @@ SELECT * FROM sys.database_query_store_options;
   
  Vous pouvez remplacer l'intervalle d'agrégation des statistiques d'exécution de requête (la valeur par défaut est 60 minutes).  
   
-```  
+```tsql  
 ALTER DATABASE <database_name>   
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);  
 ```  
   
- Notez que les valeurs arbitraires ne sont pas autorisées. Vous devez utiliser l’une des valeurs suivantes : 1, 5, 10, 15, 30, 60, et 1 440 minutes.  
+ > [!NOTE]
+ > Les valeurs arbitraires ne sont pas autorisées pour `INTERVAL_LENGTH_MINUTES`. Utilisez l’une des valeurs suivantes : 1, 5, 10, 15, 30, 60 ou 1440 minutes.  
   
  La nouvelle valeur de l’intervalle est exposée par le biais de l’affichage **sys.database_query_store_options** .  
   
@@ -221,14 +207,14 @@ SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);
   
  Pour vérifier la taille et la limite actuelles du magasin de requête, exécutez l’instruction suivante dans la base de données utilisateur.  
   
-```  
+```tsql  
 SELECT current_storage_size_mb, max_storage_size_mb   
 FROM sys.database_query_store_options;  
 ```  
   
  Si le stockage du magasin de requêtes est saturé, utilisez l'instruction suivante pour l’étendre.  
   
-```  
+```tsql  
 ALTER DATABASE <database_name>   
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);  
 ```  
@@ -237,12 +223,11 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);
   
  Vous pouvez définir simultanément plusieurs options de magasin de requêtes avec l'instruction ALTER DATABASE.  
   
-```  
+```tsql  
 ALTER DATABASE <database name>   
 SET QUERY_STORE (  
     OPERATION_MODE = READ_WRITE,  
-    CLEANUP_POLICY =   
-    (STALE_QUERY_THRESHOLD_DAYS = 30),  
+    CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 30),  
     DATA_FLUSH_INTERVAL_SECONDS = 3000,  
     MAX_STORAGE_SIZE_MB = 500,  
     INTERVAL_LENGTH_MINUTES = 15,  
@@ -256,7 +241,7 @@ SET QUERY_STORE (
   
  Les tables internes du magasin de requêtes sont créées dans le groupe de fichiers PRIMARY lors de la création de la base de données. Cette configuration ne peut pas être modifiée ultérieurement. Si vous manquez d'espace, vous pouvez effacer les anciennes données du magasin de requêtes à l'aide de l'instruction suivante.  
   
-```  
+```tsql  
 ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;  
 ```  
   
@@ -264,7 +249,7 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
   
  **Supprimer des requêtes ad-hoc** Cette opération supprime les requêtes qui ont été exécutées une seule fois et qui datent de plus de 24 heures.  
   
-```  
+```tsql  
 DECLARE @id int  
 DECLARE adhoc_queries_cursor CURSOR   
 FOR   
@@ -307,7 +292,7 @@ DEALLOCATE adhoc_queries_cursor;
   
  ***n* dernières requêtes exécutées sur la base de données ?**  
   
-```  
+```tsql  
 SELECT TOP 10 qt.query_sql_text, q.query_id,   
     qt.query_text_id, p.plan_id, rs.last_execution_time  
 FROM sys.query_store_query_text AS qt   
@@ -322,7 +307,7 @@ ORDER BY rs.last_execution_time DESC;
   
  **Nombre d’exécutions de chaque requête ?**  
   
-```  
+```tsql  
 SELECT q.query_id, qt.query_text_id, qt.query_sql_text,   
     SUM(rs.count_executions) AS total_execution_count  
 FROM sys.query_store_query_text AS qt   
@@ -338,7 +323,7 @@ ORDER BY total_execution_count DESC;
   
  **Nombre de requêtes avec la durée moyenne d’exécution la plus longue au cours de la dernière heure ?**  
   
-```  
+```tsql  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
     qt.query_text_id, p.plan_id, GETUTCDATE() AS CurrentUTCTime,   
     rs.last_execution_time   
@@ -355,7 +340,7 @@ ORDER BY rs.avg_duration DESC;
   
  **Nombre de requêtes ayant la plus grande moyenne de lectures d’E/S physiques au cours des dernières 24 heures, avec le nombre moyen de lignes et d’exécutions correspondant ?**  
   
-```  
+```tsql  
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,   
     q.query_id, qt.query_text_id, p.plan_id, rs.runtime_stats_id,   
     rsi.start_time, rsi.end_time, rs.avg_rowcount, rs.count_executions  
@@ -374,7 +359,7 @@ ORDER BY rs.avg_physical_io_reads DESC;
   
  **Requêtes avec plusieurs plans ?** Ces requêtes sont particulièrement intéressantes, car elles sont adaptées aux régressions dues à un changement de plan. La requête suivante identifie ces requêtes, ainsi que tous les plans :  
   
-```  
+```tsql  
 WITH Query_MultPlans  
 AS  
 (  
@@ -403,7 +388,7 @@ ORDER BY query_id, plan_id;
   
  **Requêtes ayant récemment régressé en termes de performances (en comparant avec d’autres points dans le temps) ?** L'exemple de requête suivant retourne toutes les requêtes dont le temps d'exécution a doublé au cours des dernières 48 heures suite à un changement de plan. La requête compare tous les intervalles de statistiques d'exécution côte à côte.  
   
-```  
+```tsql  
 SELECT   
     qt.query_sql_text,   
     q.query_id,   
@@ -442,7 +427,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
   
  **Requêtes ayant récemment régressé en termes de performances (en comparant les exécutions récentes à l’historique) ?** La requête suivante compare l'exécution des requête en fonction des périodes d'exécution. Dans cet exemple spécifique, la requête compare l’exécution pendant une période récente (1 heure) et l’exécution pendant une période historique (la veille), puis identifie celle qui a introduit `additional_duration_workload`. Cette mesure est calculée comme suit : différence entre la moyenne des exécutions récentes et la moyenne des exécutions historiques, multipliée par le nombre d'exécutions récentes. Elle représente en fait la durée supplémentaire introduite dans les exécutions récentes en comparaison avec les exécutions historiques :  
   
-```  
+```tsql  
 --- "Recent" workload - last 1 hour  
 DECLARE @recent_start_time datetimeoffset;  
 DECLARE @recent_end_time datetimeoffset;  
@@ -531,7 +516,7 @@ OPTION (MERGE JOIN);
   
  **Forcer un plan pour une requête (appliquer une stratégie de forçage).** Lorsqu'un plan est forcé pour une requête donnée, chaque fois qu'une requête est exécutée, elle l'est avec le plan forcé.  
   
-```  
+```tsql  
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
@@ -539,10 +524,9 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
   
  **Supprimer l’application forcée du plan pour une requête.** Pour vous appuyer à nouveau sur l’optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour calculer le plan de requête optimal, utilisez **sp_query_store_unforce_plan** pour annuler l’application forcée du plan qui était sélectionné pour la requête.  
   
-```  
+```tsql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
- 
   
 ## <a name="see-also"></a>Voir aussi  
  [Bonnes pratiques relatives au magasin de requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md)   
