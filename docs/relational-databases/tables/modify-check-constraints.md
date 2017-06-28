@@ -1,7 +1,7 @@
 ---
 title: "Modifier des contraintes de validation | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 06/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -27,7 +27,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="modify-check-constraints"></a>Modifier des contraintes de validation
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Vous pouvez modifier une contrainte de validation dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] lorsque vous voulez changer l'expression de contrainte ou les options qui activent ou désactivent la contrainte pour des conditions spécifiques.  
   
@@ -83,3 +83,4 @@ ms.lasthandoff: 06/22/2017
  Pour modifier une contrainte `CHECK` à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)], vous devez d'abord supprimer la contrainte `CHECK` existante, puis la recréer avec la nouvelle définition. Pour plus d’informations, consultez [Supprimer des contraintes de validation](../../relational-databases/tables/delete-check-constraints.md) et [Créer des contraintes de validation](../../relational-databases/tables/create-check-constraints.md).  
   
 ###  <a name="TsqlExample"></a>  
+

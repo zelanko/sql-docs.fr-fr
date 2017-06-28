@@ -1,7 +1,7 @@
 ---
 title: "Créer des contraintes de validation | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 06/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -28,7 +28,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-check-constraints"></a>Créer des contraintes de validation
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Vous pouvez créer une contrainte de validation dans une table pour spécifier les valeurs de données admises dans une ou plusieurs colonnes dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -116,3 +116,4 @@ ms.lasthandoff: 06/22/2017
  Pour plus d’informations, consultez [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ###  <a name="TsqlExample"></a>  
+

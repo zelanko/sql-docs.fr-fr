@@ -1,7 +1,7 @@
 ---
 title: Supprimer des contraintes de validation | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 06/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -28,7 +28,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="delete-check-constraints"></a>Supprimer des contraintes de validation
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Vous pouvez supprimer une contrainte de validation dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. En supprimant des contraintes de validation, vous supprimez les restrictions sur les valeurs de données acceptées dans la ou les colonnes incluses dans l'expression de contrainte.  
   
@@ -82,3 +82,4 @@ ms.lasthandoff: 06/22/2017
  Pour plus d’informations, consultez [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
   
+
