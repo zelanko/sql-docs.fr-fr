@@ -1,7 +1,7 @@
 ---
 title: Contraintes uniques et contraintes de validation | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 06/27/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -25,7 +25,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Contraintes uniques et contraintes de validation
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Les contraintes UNIQUE et CHECK sont deux types de contraintes qui peuvent être utilisées pour appliquer l'intégrité des données à des tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce sont des objets de base de données importants.  
   
@@ -107,3 +107,4 @@ DELETE CheckTbl WHERE col1 = 10;
 |Décrit comment afficher les propriétés d'une contrainte de validation.|[Contraintes uniques et contraintes de validation](../../relational-databases/tables/unique-constraints-and-check-constraints.md)|  
   
   
+
