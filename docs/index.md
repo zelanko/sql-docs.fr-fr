@@ -4,10 +4,10 @@ hide_bc: true
 title: Documentation Microsoft SQL | Microsoft Docs
 description: "Découvrir SQL"
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
-ms.openlocfilehash: c7ae180aed734d85a10cb8b3b750426ecf552b8a
+ms.sourcegitcommit: 722e026f8b8e8f1e04a93ba58f78aa7135b528de
+ms.openlocfilehash: 7e838238148bc2e6c887d8960e7456b7539819d3
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 06/30/2017
 
 ---
 
@@ -139,7 +139,7 @@ ms.lasthandoff: 06/23/2017
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Exécuter sur Windows ou Linux</h4>
                                                 <ul>
-                                                    <li><a href="/sql/linux/?toc=/sql/linux/toc.json">SQL Server sur Linux</a></li>
+                                                    <li><a href="/sql/linux/sql-server-linux-overview">SQL Server sur Linux</a></li>
                                                     <li><a href="/azure/virtual-machines/linux/">Machines virtuelles Linux</a></li>
                                                     <li><a href="/azure/virtual-machines/windows/">Machines virtuelles Windows</a></li>
                                                     <li><a href="https://www.microsoft.com/en-us/cloud-platform/windows-server">Windows Server 2016</a></li>
@@ -196,7 +196,7 @@ ms.lasthandoff: 06/23/2017
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Concevoir</h4>
                                                 <ul>
-                                                    <li><a href="/sql/connect/sql-server-driver-documentation">Connecter avec des applications clientes</a></li>
+                                                    <li><a href="/sql/connect/sql-server-driver">Connecter avec des applications clientes</a></li>
                                                     <li><a href="/sql/relational-databases/database-features">Concepts des bases de données relationnelles</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Outils</h4>

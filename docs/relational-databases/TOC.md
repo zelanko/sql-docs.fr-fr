@@ -1,4 +1,6 @@
-# [Vue d’ensemble](database-features.md)
+# [Fonctionnalités de base de données](database-features.md)
+
+# Vue d'ensemble
 ## [Fonctionnalités entre les instances du moteur de base de données](database-engine-cross-instance-features.md)
 ## [Informations techniques de références](technical-reference-database-engine.md)  
 ## [Informations de référence sur les fonctionnalités](feature-reference-database-engine.md)   
@@ -31,18 +33,18 @@
 # [Bases de données](../relational-databases/databases/databases.md)
 
 # Développer des clients
-## [intégration du CLR](../relational-databases/clr-integration/assemblies-database-engine.md)
-## [Programmation de procédures stockées étendues](../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md)
+## [intégration du CLR](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)
+## [Programmation de procédures stockées étendues](../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)
 ## [Informations de référence sur les procédures stockées étendues](../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md)
-## [Messages d’erreur Express Localdb](../relational-databases/express-localdb-error-messages/localdb-error-admin-rights-required.md)
-## [API d’instance Express Localdb](../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md)
-## [Client natif](../relational-databases/native-client/finding-more-sql-server-native-client-information.md)
-## [SMO (Server Management Objects)](../relational-databases/server-management-objects-smo/backward-compatibility-in-smo.md)
+## [Messages d’erreur Express Localdb](../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md)
+## [API d’instance Express Localdb](../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md)
+## [Client natif](../relational-databases/native-client/sql-server-native-client-programming.md)
+## [SMO (Server Management Objects)](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)
 ## [SQLXML](../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)
 ## Fournisseur WMI (Windows Management Instrumentation)
-### [Configuration du fournisseur WMI](../relational-databases/wmi-provider-configuration/access-wmi-provider-for-configuration-management-using-vbscript.md)
-### [Classes de configuration du fournisseur WMI](../relational-databases/wmi-provider-configuration-classes/cinstance-class-instancename-property.md)
-### [Événements serveur du fournisseur WMI](../relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)
+### [Configuration du fournisseur WMI](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)
+### [Classes de configuration du fournisseur WMI](../relational-databases/wmi-provider-configuration-classes/wmi-provider-for-configuration-management-classes.md)
+### [Événements serveur du fournisseur WMI](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)
 
 # [Erreurs et événements](../relational-databases/errors-events/errors-and-events-reference-database-engine.md)
 # [Classe d’événements](../relational-databases/event-classes/sql-server-event-class-reference.md)

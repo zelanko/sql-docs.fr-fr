@@ -1,5 +1,7 @@
 # [Installation d’un cluster de basculement SQL Server](install/sql-server-failover-cluster-installation.md)  
-## [Avant l’installation du clustering de basculement](install/before-installing-failover-clustering.md)  
+
+# Concevoir
+## [Avant l'installation du clustering de basculement](install/before-installing-failover-clustering.md)  
 ## [Créer un cluster de basculement SQL Server (programme d’installation)](install/create-a-new-sql-server-failover-cluster-setup.md)  
 ## [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server (programme d’installation)](install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
 ## [Installer les outils clients sur un cluster de basculement SQL Server](install/install-client-tools-on-a-sql-server-failover-cluster.md)  
