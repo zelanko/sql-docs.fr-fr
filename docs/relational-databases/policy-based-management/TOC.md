@@ -1,5 +1,7 @@
-# [Administrer des serveurs à l’aide de la gestion basée sur des stratégies](administer-servers-by-using-policy-based-management.md)  
-## [Gestion basée sur des stratégies, stockage](policy-based-management-storage.md)  
+# [Administrer des serveurs à l'aide de la gestion basée sur des stratégies](administer-servers-by-using-policy-based-management.md)  
+
+# Gestion basée sur des stratégies
+## [Stockage de la gestion basée sur des stratégies](policy-based-management-storage.md)  
 ## [Configurer les propriétés générales de la gestion basée sur des stratégies](configure-the-general-properties-of-policy-based-management.md)  
 ## [Configurer des alertes pour informer les administrateurs de stratégie en cas d’échec de stratégie](configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
 ## [Créer une stratégie de gestion basée sur des stratégies](create-a-policy-based-management-policy.md)  
@@ -29,7 +31,7 @@
 ### [Détecter les échecs de requêtes d’entrée et de sortie](detect-failed-input-and-output-requests.md)  
 ### [Détecter des problèmes de carte hôte SCSI](detect-scsi-host-adapter-issues.md)  
 ### [Erreur de contrôle du pilote de périphérique](device-driver-control-error.md)  
-### [Erreur de périphérique non prêt](device-not-ready-error.md)  
+### [Erreur d’appareil non prêt](device-not-ready-error.md)  
 ### [Désactiver le regroupement léger](disable-lightweight-pooling.md)  
 ### [Autorisations Invité sur les bases de données utilisateur](guest-permissions-on-user-databases.md)  
 ### [Erreur d’E/S pendant le contrôle des erreurs de défaut de page matérielle](input-and-output-error-during-hard-page-fault.md)  
@@ -62,15 +64,17 @@
 ### [Boîte de dialogue Créer une nouvelle stratégie ou Ouvrir une stratégie, page Description](create-new-policy-or-open-policy-dialog-box-description-page.md)  
 ### [Afficher les stratégies, boîte de dialogue](view-policies-dialog-box.md)  
 ### [Boîte de dialogue Évaluer les stratégies, page Sélectionner la stratégie](evaluate-policies-dialog-box-policy-selection-page.md)  
-### [Boîte de dialogue Évaluer les stratégies, page Résultats d’évaluation](evaluate-policies-dialog-box-evaluation-results-page.md)  
+### [Boîte de dialogue Évaluer les stratégies, page Résultats d'évaluation](evaluate-policies-dialog-box-evaluation-results-page.md)  
 ### [Boîte de dialogue Propriétés de la facette, page Général](facet-properties-dialog-box-general-page.md)  
 ### [Boîte de dialogue Propriétés de la facette, page Stratégies dépendantes](facet-properties-dialog-box-dependent-policies-page.md)  
 ### [Boîte de dialogue Propriétés de la facette, page Conditions dépendantes](facet-properties-dialog-box-dependent-conditions-page.md)  
 ### [Vue détaillée des résultats, boîte de dialogue](results-detailed-view-dialog-box.md)  
-### [Afficher les facettes, boîte de dialogue](view-facets-dialog-box.md)  
+### [Afficher les facettes, boîte de dialogue ](view-facets-dialog-box.md)  
 ### [Sélectionner une source, boîte de dialogue](select-source-dialog-box.md)  
 ### [Exporter en tant que stratégie, boîte de dialogue](export-as-policy-dialog-box.md)  
 ### [Importer des stratégies, boîte de dialogue](import-policies-dialog-box.md)  
+
+
 # [Didacticiel : Administration de serveurs à l’aide de la gestion basée sur des stratégies](tutorial-administering-servers-by-using-policy-based-management.md)  
 ## [Leçon 1 : créer et appliquer une stratégie Désactivé par défaut](lesson-1-create-and-apply-an-off-by-default-policy.md)  
 ### [Leçon 1-1 : créer la stratégie Désactivé par défaut](lesson-1-1-create-the-off-by-default-policy.md)  
