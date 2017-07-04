@@ -1,24 +1,23 @@
 # [Fonctionnalités de base de données](database-features.md)
+# [Articles nouveaux et récemment mis à jour](new-updated-relational-databases.md)
 
 # Vue d'ensemble
 ## [Fonctionnalités entre les instances du moteur de base de données](database-engine-cross-instance-features.md)
-## [Informations techniques de références](technical-reference-database-engine.md)  
+## [Informations techniques de référence](technical-reference-database-engine.md)  
 ## [Informations de référence sur les fonctionnalités](feature-reference-database-engine.md)   
 
-# [Récemment mis à jour des Articles sur les bases de données relationnelles](relational-databases-new-updated-sql-docs-pr.md)
-
-# [Repères de SQL Server](sql-server-guides.md)
-## Guide de dépannage et surveillance des groupes de disponibilité AlwaysOn
+# [Guides SQL Server](sql-server-guides.md)
+## Guide de dépannage et de surveillance des groupes de disponibilité AlwaysOn
 ## [Conception d’index](sql-server-index-design-guide.md)
 ## [Architecture de gestion de mémoire](memory-management-architecture-guide.md)
 ### [Lecture de pages](reading-pages.md)  
 ### [Écriture de pages](writing-pages.md)
 ## [Architecture des pages et étendues](pages-and-extents-architecture-guide.md)
-## [L’optimisation et la Validation après la migration](post-migration-validation-and-optimization-guide.md)
+## [Optimisation et validation post-migration](post-migration-validation-and-optimization-guide.md)
 ## [Architecture de traitement des requêtes](query-processing-architecture-guide.md)
 ## [Architecture des threads et tâches](thread-and-task-architecture-guide.md)
-## [Gestion et l’Architecture du journal des transactions](sql-server-transaction-log-architecture-and-management-guide.md)
-## Guide du verrouillage des transactions et du contrôle de version de ligne
+## [Gestion et architecture du journal des transactions](sql-server-transaction-log-architecture-and-management-guide.md)
+## Guide de verrouillage des transactions et de contrôle de version de ligne
 
 # [Sauvegarde et restauration](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
 # [Objet blob](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)
@@ -95,7 +94,7 @@
 
 # [Didacticiels](database-engine-tutorials.md)  
 
-## [Mise en route du moteur de base de données](tutorial-getting-started-with-the-database-engine.md)  
+## [Bien démarrer avec le moteur de base de données](tutorial-getting-started-with-the-database-engine.md)  
 ### [Leçon 1 : connexion au moteur de base de données](lesson-1-connecting-to-the-database-engine.md)  
 ### [Leçon 2 : connexion depuis un autre ordinateur](lesson-2-connecting-from-another-computer.md)  
 
