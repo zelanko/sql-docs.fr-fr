@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8c0ed45fbf5da5c1c521ad52e25553a21c068a08
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>Prise en charge SQL Server Management Objects pour OLTP en mémoire
@@ -53,15 +53,15 @@ ms.lasthandoff: 04/11/2017
 -   <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>  
   
 ## <a name="code-sample"></a>Exemple de code  
- L'exemple réalise les actions suivantes :  
+ L'exemple réalise les actions suivantes :  
   
--   Crée une base de données avec le groupe de fichiers optimisé en mémoire et le fichier optimisé en mémoire.  
+-   Crée une base de données avec le groupe de fichiers mémoire optimisé et le fichier mémoire optimisé.  
   
--   Crée une table optimisée en mémoire durable avec une clé primaire, un index non cluster et un index de hachage non cluster.  
+-   Crée une table mémoire optimisée durable avec une clé primaire, un index non cluster et un index de hachage non cluster.  
   
 -   Crée des colonnes et des index.  
   
--   Crée un type de table optimisée en mémoire définie par l'utilisateur.  
+-   Crée un type de table mémoire optimisée, définie par l'utilisateur.  
   
 -   Crée une procédure stockée compilée en mode natif.  
   

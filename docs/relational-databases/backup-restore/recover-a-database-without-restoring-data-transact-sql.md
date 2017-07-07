@@ -26,7 +26,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 06806d82a8075b0aa25bd66028eefee1a83ec2f9
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>Récupérer une base de données sans restaurer les données (Transact-SQL)
@@ -35,7 +35,7 @@ ms.lasthandoff: 04/11/2017
  Une restauration avec récupération uniquement peut se produire pour une base de données entière ou pour un ou plusieurs fichiers ou groupes de fichiers.  
   
 ## <a name="recovery-only-database-restore"></a>Restauration de base de données avec récupération uniquement  
- Une restauration de base de données avec récupération uniquement est utile dans les situations suivantes :  
+ Une restauration de base de données avec récupération uniquement est utile dans les situations suivantes :  
   
 -   Vous n'avez pas récupéré la base de données lors de la restauration de la dernière sauvegarde au cours d'une séquence de restauration, et vous voulez à présent récupérer cette base de données pour la mettre en ligne.  
   

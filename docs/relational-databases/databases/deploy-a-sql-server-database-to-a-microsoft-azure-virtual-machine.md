@@ -41,11 +41,11 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2aca87c0050dd501c73bb4da8953a93bf40c0c8e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Déployer une base de données SQL Server sur une machine virtuelle Microsoft Azure
-  Utilisez l’Assistant **Déployer une base de données sur un ordinateur virtuel Microsoft Azure** pour déployer une base de données d’une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une machine virtuelle Microsoft Azure. L’Assistant utilise une sauvegarde complète de la base de données ; par conséquent, il copie toujours le schéma complet de la base de données et les données d’une base de données utilisateur SQL Server. L'Assistant effectue également toutes les configurations de machine virtuelle Windows Azure pour vous ; par conséquent, aucune configuration préalable de machine virtuelle n'est requise.  
+  Utilisez l’Assistant **Déployer une base de données sur un ordinateur virtuel Microsoft Azure** pour déployer une base de données d’une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une machine virtuelle Microsoft Azure. L’Assistant utilise une sauvegarde complète de la base de données ; par conséquent, il copie toujours le schéma complet de la base de données et les données d’une base de données utilisateur SQL Server. L'Assistant effectue également toutes les configurations de machine virtuelle Windows Azure pour vous ; par conséquent, aucune configuration préalable de machine virtuelle n'est requise.  
   
  Vous ne pouvez pas utiliser l’Assistant pour effectuer des sauvegardes différentielles. L’Assistant ne remplacera pas une base de données existante qui porte le même nom de base de données. Pour remplacer une base de données existante sur la machine virtuelle, vous devez d'abord supprimer la base de données existante ou modifier le nom de la base de données. S'il existe un conflit de noms entre le nom de la base de données d'une opération de déploiement en cours et d'une base de données existante sur la machine virtuelle, l'Assistant suggère un nom de base de données avec suffixe pour la base de données en cours pour vous permettre d'effectuer cette opération.  
   
@@ -130,7 +130,7 @@ Cette fonctionnalité de déploiement ne peut être utilisée qu’avec un compt
   
 -   SQL Server 2008  
   
--   SQL Server 2008 R2  
+-   SQL Server 2008 R2  
   
 -   SQL Server 2012  
   
@@ -138,7 +138,7 @@ Cette fonctionnalité de déploiement ne peut être utilisée qu’avec un compt
 
 - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- Les versions de base de données SQL Server exécutées dans une machine virtuelle Windows Azure peuvent être déployées dans :  
+ Les versions de base de données SQL Server exécutées dans une machine virtuelle Windows Azure peuvent être déployées dans :  
   
 -   SQL Server 2012  
   
@@ -293,7 +293,7 @@ Spécifiez ou confirmez le nom d’une nouvelle base de données. Si le nom de l
  [Gestion du cycle de vie de base de données](../../relational-databases/database-lifecycle-management.md)   
  [Exporter une application de la couche Données](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [Importer un fichier BACPAC pour créer une nouvelle base de données utilisateur](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   
- [Sauvegarde et restauration Azure SQL Database](https://msdn.microsoft.com/library/azure/jj650016.aspx)   
+ [Sauvegarde et restauration Base de données SQL Azure](https://msdn.microsoft.com/library/azure/jj650016.aspx)   
  [Déploiement de SQL Server dans Windows Azure Virtual Machines](http://msdn.microsoft.com/library/dn133141.aspx)   
  [Préparation à la migration vers SQL Server dans Windows Azure Virtual Machines](http://msdn.microsoft.com/library/dn133142.aspx)  
   

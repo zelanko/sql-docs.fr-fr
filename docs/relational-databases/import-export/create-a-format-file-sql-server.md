@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e2360e69486a82a375c038135616753bf0ed19c0
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-a-format-file-sql-server"></a>Créer un fichier de format (SQL Server)
@@ -38,7 +38,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="creating-a-non-xml-format-file"></a>Création d'un fichier de format non-XML  
  Pour utiliser une commande **bcp** pour créer un fichier de format, spécifiez l’argument **format** et utilisez **nul** à la place d’un chemin d’accès de fichier de données. L’option **format** requiert également l’option **-f** , comme suit :  
   
- **bcp** *table_or_view* **format** nul **-f***format_file_name*  
+ **bcp** *table_ou_vue* **format** nul **-f***nom_fichier_de_format*  
   
 > [!NOTE]  
 >  Pour bien distinguer un fichier au format non-XML, nous vous recommandons d'utiliser l'extension de nom de fichier .fmt, par exemple MaTable.fmt.  
@@ -67,7 +67,7 @@ ms.lasthandoff: 04/11/2017
   
 |Qualificateurs|Description|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file*|Format de fichier non-XML.|  
+|**formatnul-f** *fichier_de_format*|Format de fichier non-XML.|  
 |**-n**|Spécifie les types de données natifs.|  
 |**-T**|Spécifie que l'utilitaire **bcp** se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec une connexion approuvée qui utilise la sécurité intégrée. Si **-T** n’est pas spécifié, vous devez indiquer **-U** et **-P** pour pouvoir vous connecter.|  
   
@@ -97,7 +97,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
 |Qualificateurs|Description|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file*|Format de fichier non-XML.|  
+|**formatnul-f** *fichier_de_format*|Format de fichier non-XML.|  
 |**-c**|Données de type caractère.|  
 |**-T**|Spécifie que l'utilitaire **bcp** se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec une connexion approuvée qui utilise la sécurité intégrée. Si **-T** n’est pas spécifié, vous devez indiquer **-U** et **-P** pour pouvoir vous connecter.|  
   
@@ -140,7 +140,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
 #### <a name="f-using-a-format-file-with-the-code-page-option"></a>F. Utilisation d’un fichier de format avec l’option de page de code  
  Si vous créez un fichier de format à l’aide de la commande bcp (c’est-à-dire, en utilisant «`bcp forma`t … » ), des informations sur la page de code/classement sont écrites dans le fichier de format.   
-L’exemple de fichier de format pour table avec 5 colonnes suivant inclut le classement.  
+L’exemple de fichier de format pour table avec 5 colonnes suivant inclut le classement.  
   
 ```  
 13.0  
@@ -170,7 +170,7 @@ Voici un exemple de fichier de format sans les informations de classement.
 ## <a name="creating-an-xml-format-file"></a>Création d'un fichier de format XML  
  Pour utiliser une commande **bcp** pour créer un fichier de format, spécifiez l’argument **format** et utilisez **nul** à la place d’un chemin d’accès de fichier de données. L’option **format** nécessite toujours l’option **-f** ; la création d’un fichier de format XML nécessite également l’option **-x** , comme suit :  
   
- **bcp** *table_or_view* **format nul-f** *format_file_name* **-x**  
+ **bcp** *table_ou_vue* **format nul-f** *nom_fichier_de_format* **-x**  
   
 > [!NOTE]  
 >  Pour bien distinguer un fichier de format XML, nous vous recommandons d'utiliser l'extension de nom de fichier .xml, par exemple MaTable.xml.  
@@ -196,7 +196,7 @@ Voici un exemple de fichier de format sans les informations de classement.
   
 |Qualificateurs|Description|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file* **-x**|Fichier de format XML.|  
+|**formatnul-f** *fichier_de_format* **-x**|Fichier de format XML.|  
 |**-c**|Données de type caractère.|  
 |**-t** `,`|Virgule (**,**) servant d’indicateur de fin de champ.<br /><br /> Remarque : Si le fichier de données utilise l’indicateur de fin de champ défini par défaut (à savoir`\t`), le commutateur **-t** n’est pas nécessaire.|  
 |**-T**|Spécifie que l'utilitaire **bcp** se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec une connexion approuvée qui utilise la sécurité intégrée. Si **-T** n’est pas spécifié, vous devez indiquer **-U** et **-P** pour pouvoir vous connecter.|  
@@ -236,7 +236,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
 |Qualificateurs|Description|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file* **-x**|Fichier de format XML.|  
+|**formatnul-f** *fichier_de_format* **-x**|Fichier de format XML.|  
 |**-n**|Spécifie les types de données natifs.|  
 |**-T**|Spécifie que l'utilitaire **bcp** se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec une connexion approuvée qui utilise la sécurité intégrée. Si **-T** n’est pas spécifié, vous devez indiquer **-U** et **-P** pour pouvoir vous connecter.|  
   

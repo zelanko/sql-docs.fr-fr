@@ -27,7 +27,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0d09693778fa9382d40dfb02f0c3fb4b212f86ed
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restaurer une sauvegarde de base de données à l’aide de SSMS
@@ -218,61 +218,61 @@ L’exemple suivant restaure une base de données à l’état où elle se trouv
 ### <a name="e--restore-a-backup-from-the-microsoft-azure-storage-service"></a>**E.  Restaurer une sauvegarde à partir du service de stockage Microsoft Azure**
 #### <a name="common-steps"></a>**Étapes courantes**
 Les deux exemples ci-dessous effectuent une restauration de `Sales` à partir d’une sauvegarde située dans le service de stockage Microsoft Azure.  Le nom du compte de stockage est `mystorageaccount`.  Le conteneur se nomme `myfirstcontainer`.  Par souci de concision, les six premières étapes ne sont répertoriées ici qu’une seule fois et tous les exemples commencent à l’ **Étape 7**.
-1.    Dans l’ **Explorateur d’objets**, connectez-vous à une instance du moteur de base de données SQL Server et développez-la.
+1.  Dans l’ **Explorateur d’objets**, connectez-vous à une instance du moteur de base de données SQL Server et développez-la.
 
-2.    Cliquez avec le bouton droit sur **Bases de données** et sélectionnez **Restaurer la base de données**.
+2.  Cliquez avec le bouton droit sur **Bases de données** et sélectionnez **Restaurer la base de données**.
 
-3.    Dans la page **Général** , sélectionnez **Unité** dans la section **Source** .
+3.  Dans la page **Général** , sélectionnez **Unité** dans la section **Source** .
 
-4.    Cliquez sur le bouton Parcourir (...) pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde** .  
-5.    Sélectionnez **URL** dans la liste déroulante **Type de support de sauvegarde** .
+4.  Cliquez sur le bouton Parcourir (...) pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde** .  
+5.  Sélectionnez **URL** dans la liste déroulante **Type de support de sauvegarde** .
 
-6.    Cliquez sur **Ajouter** pour ouvrir la boîte de dialogue **Sélectionner un emplacement de fichier de sauvegarde** .
+6.  Cliquez sur **Ajouter** pour ouvrir la boîte de dialogue **Sélectionner un emplacement de fichier de sauvegarde** .
 
     #### <a name="e1---restore-a-striped-backup-over-an-existing-database-and-a-shared-access-signature-exists"></a>**E1.   Restaurer une sauvegarde distribuée sur une base de données existante quand il existe une signature d’accès partagé.**
     Une stratégie d’accès stockée a été créée avec des droits de lecture, écriture, suppression et liste.  Une signature d’accès partagé associée à la stratégie d’accès stockée a été créée pour le conteneur `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.  Les étapes sont essentiellement les mêmes s’il existe déjà des informations d’identification SQL Server.  La base de données `Sales` existe actuellement sur le serveur.  Les fichiers de sauvegarde sont `Sales_stripe1of2_20160601.bak` et `Sales_stripe2of2_20160601.bak`.  
 *  
-    7.    Sélectionnez `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` dans la liste déroulante **Conteneur de stockage Azure** si les informations d’identification SQL Server existent déjà. Sinon, entrez manuellement le nom du conteneur, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
+    7.  Sélectionnez `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` dans la liste déroulante **Conteneur de stockage Azure** si les informations d’identification SQL Server existent déjà. Sinon, entrez manuellement le nom du conteneur, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
     
-    8.    Entrez la signature d’accès partagé dans la zone de texte enrichi **Signature d’accès partagé** .
-       9.    Cliquez sur **OK** pour ouvrir la boîte de dialogue **Localiser le fichier de sauvegarde dans Microsoft Azure** .
-    10.    Développez **Conteneurs** et accédez à `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
+    8.  Entrez la signature d’accès partagé dans la zone de texte enrichi **Signature d’accès partagé** .
+       9.   Cliquez sur **OK** pour ouvrir la boîte de dialogue **Localiser le fichier de sauvegarde dans Microsoft Azure** .
+    10. Développez **Conteneurs** et accédez à `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
     
-    11.    Maintenez la touche Ctrl enfoncée et sélectionnez les fichiers `Sales_stripe1of2_20160601.bak` et `Sales_stripe2of2_20160601.bak`.
-    12.    Cliquez sur **OK**.
-    13.    Cliquez sur **OK** pour revenir à la page **Général** .
-    14.    Dans le volet **Sélectionner une page** , cliquez sur **Options** .
-    15.    Dans la section **Options de restauration** , sélectionnez **Remplacer la base de données existante (WITH REPLACE)**.
-    16.    Dans la section **Sauvegarde de la fin du journal** , décochez la case **Effectuer la sauvegarde de la fin du journal avant la restauration**.
-    17.    Dans la section **Connexions au serveur** , sélectionnez **Fermer les connexions existantes à la base de données de destination**.
-    18.    Cliquez sur **OK**.
+    11. Maintenez la touche Ctrl enfoncée et sélectionnez les fichiers `Sales_stripe1of2_20160601.bak` et `Sales_stripe2of2_20160601.bak`.
+    12. Cliquez sur **OK**.
+    13. Cliquez sur **OK** pour revenir à la page **Général** .
+    14. Dans le volet **Sélectionner une page** , cliquez sur **Options** .
+    15. Dans la section **Options de restauration** , sélectionnez **Remplacer la base de données existante (WITH REPLACE)**.
+    16. Dans la section **Sauvegarde de la fin du journal** , décochez la case **Effectuer la sauvegarde de la fin du journal avant la restauration**.
+    17. Dans la section **Connexions au serveur** , sélectionnez **Fermer les connexions existantes à la base de données de destination**.
+    18. Cliquez sur **OK**.
 
     #### <a name="e2---a-shared-access-signature-does-not-exist"></a>**E2.   Il n’existe aucune signature d’accès partagé**
     Dans cet exemple, la base de données `Sales` n’existe pas sur le serveur.
-    7.    Cliquez sur **Ajouter** pour ouvrir la boîte de dialogue **Se connecter à un abonnement Microsoft** .  
+    7.  Cliquez sur **Ajouter** pour ouvrir la boîte de dialogue **Se connecter à un abonnement Microsoft** .  
     
-    8.    Terminez la boîte de dialogue **Se connecter à un abonnement Microsoft** et cliquez sur **OK** pour revenir à la boîte de dialogue **Sélectionner un emplacement de fichier de sauvegarde** .  Pour plus d’informations, consultez [Se connecter à un abonnement Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) .
-    9.    Cliquez sur **OK** dans la boîte de dialogue **Sélectionner un emplacement de fichier de sauvegarde** pour ouvrir la boîte de dialogue **Localiser le fichier de sauvegarde dans Microsoft Azure** .
-    10.    Développez **Conteneurs** et accédez à `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
-    11.    Sélectionnez le fichier de sauvegarde, puis cliquez **OK**.
-    12.    Cliquez sur **OK** pour revenir à la page **Général** .
-    13.    Cliquez sur **OK**.
+    8.  Terminez la boîte de dialogue **Se connecter à un abonnement Microsoft** et cliquez sur **OK** pour revenir à la boîte de dialogue **Sélectionner un emplacement de fichier de sauvegarde** .  Pour plus d’informations, consultez [Se connecter à un abonnement Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) .
+    9.  Cliquez sur **OK** dans la boîte de dialogue **Sélectionner un emplacement de fichier de sauvegarde** pour ouvrir la boîte de dialogue **Localiser le fichier de sauvegarde dans Microsoft Azure** .
+    10. Développez **Conteneurs** et accédez à `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
+    11. Sélectionnez le fichier de sauvegarde, puis cliquez **OK**.
+    12. Cliquez sur **OK** pour revenir à la page **Général** .
+    13. Cliquez sur **OK**.
 
-#### <a name="f----restore-local-backup-to-microsoft-azure-storage-url"></a>**F.    Restaurer une sauvegarde locale dans le stockage Microsoft Azure (URL)**
+#### <a name="f---restore-local-backup-to-microsoft-azure-storage-url"></a>**F.   Restaurer une sauvegarde locale dans le stockage Microsoft Azure (URL)**
 La base de données `Sales` sera restaurée dans le conteneur de stockage Microsoft Azure `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` à partir d’une sauvegarde située dans `E:\MSSQL\BAK`.  Les informations d’identification SQL Server pour le conteneur Azure ont déjà été créées.  Il doit déjà exister des informations d’identification SQL Server pour le conteneur de destination, car elles ne peuvent pas être créées par la tâche **Restaurer** .  La base de données `Sales` n’existe pas sur le serveur actuellement.
-1.    Dans l’ **Explorateur d’objets**, connectez-vous à une instance du moteur de base de données SQL Server et développez-la.
+1.  Dans l’ **Explorateur d’objets**, connectez-vous à une instance du moteur de base de données SQL Server et développez-la.
 
-2.    Cliquez avec le bouton droit sur **Bases de données** et sélectionnez **Restaurer la base de données**.
-3.    Dans la page **Général** , sélectionnez **Unité** dans la section **Source** .
-4.    Cliquez sur le bouton Parcourir (...) pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde** .  
-5.    Sélectionnez **Fichier** dans la liste déroulante **Type de support de sauvegarde** .
-6.    Cliquez sur **Ajouter** pour ouvrir la boîte de dialogue **Localiser le fichier de sauvegarde** .
-7.    Accédez à `E:\MSSQL\BAK`, sélectionnez le fichier de sauvegarde, puis cliquez sur **OK**.
-8.    Cliquez sur **OK** pour revenir à la page **Général** .
-9.    Dans le volet **Sélectionnez** une page, cliquez sur **Fichiers** .
-10.    Cochez la case **Déplacer tous les fichiers dans le dossier**.
-11.    Entrez le conteneur, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, dans les zones de texte pour **Dossier des fichiers de données** et **Dossier des fichiers journaux**.
-12.    Cliquez sur **OK**.
+2.  Cliquez avec le bouton droit sur **Bases de données** et sélectionnez **Restaurer la base de données**.
+3.  Dans la page **Général** , sélectionnez **Unité** dans la section **Source** .
+4.  Cliquez sur le bouton Parcourir (...) pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde** .  
+5.  Sélectionnez **Fichier** dans la liste déroulante **Type de support de sauvegarde** .
+6.  Cliquez sur **Ajouter** pour ouvrir la boîte de dialogue **Localiser le fichier de sauvegarde** .
+7.  Accédez à `E:\MSSQL\BAK`, sélectionnez le fichier de sauvegarde, puis cliquez sur **OK**.
+8.  Cliquez sur **OK** pour revenir à la page **Général** .
+9.  Dans le volet **Sélectionnez** une page, cliquez sur **Fichiers** .
+10. Cochez la case **Déplacer tous les fichiers dans le dossier**.
+11. Entrez le conteneur, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, dans les zones de texte pour **Dossier des fichiers de données** et **Dossier des fichiers journaux**.
+12. Cliquez sur **OK**.
 
 
 ## <a name="see-also"></a>Voir aussi    

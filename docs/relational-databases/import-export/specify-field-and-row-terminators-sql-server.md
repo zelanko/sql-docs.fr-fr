@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 42c2ee3fe98d6c6fc35d2417469bc3eec9fddd8c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Spécifier des indicateurs de fin de champ et de fin de ligne (SQL Server)
@@ -159,7 +159,7 @@ GO
 ```  
   
 #### <a name="a-using-bcp-to-interactively-specify-terminators"></a>A. Utilisation de bcp pour spécifier de façon interactive les terminateurs  
- L'exemple suivant importe en bloc le fichier de données `Department-c-t.txt` par le biais de la commande `bcp` . Les commutateurs de cette commande sont identiques à ceux de la commande d'exportation en bloc. Pour plus d'informations, consultez la section « Spécification des terminateurs pour l'exportation en bloc », plus haut dans cette rubrique.  
+ L'exemple suivant importe en bloc le fichier de données `Department-c-t.txt` par le biais de la commande `bcp` . Les commutateurs de cette commande sont identiques à ceux de la commande d'exportation en bloc. Pour plus d'informations, consultez la section « Spécification des terminateurs pour l'exportation en bloc », plus haut dans cette rubrique.  
   
  À l'invite de commandes Windows, entrez :  
   

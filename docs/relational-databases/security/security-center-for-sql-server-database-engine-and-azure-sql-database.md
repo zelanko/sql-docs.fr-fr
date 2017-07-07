@@ -3,7 +3,7 @@ title: "Centre de sécurité pour le moteur de base de données SQL Server et Az
 ms.custom:
 - MSDN content
 - MSDN - SQL DB
-ms.date: 01/31/2017
+ms.date: 06/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.service: sql-database
@@ -23,12 +23,12 @@ ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
 caps.latest.revision: 55
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 838a61120369a01355c60f6ef580a8fb3b1cdd7f
+ms.sourcegitcommit: 959bb6b98264296d13967725f29f763e0943a843
+ms.openlocfilehash: 970ea936f444a1c96d2c05e376905af7e03aef58
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/30/2017
 
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database
@@ -54,7 +54,7 @@ ms.lasthandoff: 06/22/2017
 |-|-|  
 |**Octroi, révocation et refus d'autorisations**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Classes sécurisables<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") Autorisations de serveur granulaires<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Autorisations de base de données granulaires|[Hiérarchie des autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)<br /><br /> [Autorisations](../../relational-databases/security/permissions-database-engine.md)<br /><br /> [Éléments sécurisables](../../relational-databases/security/securables.md)<br /><br /> [Prise en main des autorisations du moteur de base de données](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)|  
 |**Sécurité par rôles**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") Rôles de niveau serveur<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Rôles de niveau base de données|[Rôles de niveau serveur](../../relational-databases/security/authentication-access/server-level-roles.md)<br /><br /> [Rôles au niveau de la base de données](../../relational-databases/security/authentication-access/database-level-roles.md)|  
-|**Restriction de l'accès aux données aux éléments de données sélectionnés**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Limiter l’accès aux données à l’aide de vues/procédures<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Sécurité au niveau des lignes<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Masquage dynamique des données<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Objets signés|Limiter l'accès aux données à l'aide de [Vues](../../relational-databases/views/views.md) et de [Procédures](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)<br /><br /> [Sécurité au niveau des lignes (SQL Server)](../../relational-databases/security/row-level-security.md)<br /><br /> [Sécurité au niveau de la ligne (Azure SQL Database)](http://msdn.microsoft.com/library/azure/dn765131.aspx)<br /><br /> [Masquage dynamique des données (SQL Server)](../../relational-databases/security/dynamic-data-masking.md)<br /><br /> [Masquage dynamique des données (Azure SQL Database)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)<br /><br /> [Objets signés](../../t-sql/statements/add-signature-transact-sql.md)|  
+|**Restriction de l'accès aux données aux éléments de données sélectionnés**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Limiter l’accès aux données à l’aide de vues/procédures<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Sécurité au niveau des lignes<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Masquage dynamique des données<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Objets signés|Limiter l'accès aux données à l'aide de [Vues](../../relational-databases/views/views.md) et de [Procédures](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)<br /><br /> [Sécurité au niveau des lignes (SQL Server)](../../relational-databases/security/row-level-security.md)<br /><br /> [sécurité au niveau de la ligne (base de données SQL Azure)](http://msdn.microsoft.com/library/azure/dn765131.aspx)<br /><br /> [Masquage dynamique des données (SQL Server)](../../relational-databases/security/dynamic-data-masking.md)<br /><br /> [Masquage dynamique des données (base de données SQL Azure)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)<br /><br /> [Objets signés](../../t-sql/statements/add-signature-transact-sql.md)|  
   
 ##  <a name="Encrypt"></a> Chiffrement : stockage de données secrètes  
   

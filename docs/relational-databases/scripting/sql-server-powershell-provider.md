@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 40b88611b6d25c2908a679b84f73ccad5b12cfbe
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-powershell-provider"></a>fournisseur PowerShell SQL Server
@@ -34,7 +34,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="benefits-of-the-sql-server-powershell-provider"></a>Avantages du fournisseur PowerShell SQL Server  
  Les chemins d'accès implémentés par le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permettent de vérifier facilement et de manière interactive tous les objets dans une instance de SQL Server. Vous pouvez parcourir les chemins d'accès à l'aide d'alias Windows PowerShell semblables aux commandes que vous utilisez généralement pour parcourir les chemins d'accès du système de fichiers.  
   
-## <a name="the-sql-server-powershell-hierarchy"></a>Hiérarchie PowerShell SQL Server  
+## <a name="the-sql-server-powershell-hierarchy"></a>Hiérarchie PowerShell SQL Server  
  Les produits dont les données ou modèles objets peuvent être représentés dans une hiérarchie utilisent des fournisseurs Windows PowerShell pour exposer les hiérarchies. La hiérarchie est exposée à l'aide d'une structure de chemin d'accès semblable à celle utilisée par le système de fichiers Windows.  
   
  Chaque fournisseur Windows PowerShell implémente un ou plusieurs lecteurs. Chaque lecteur est le nœud racine d'une hiérarchie d'objets connexes. Le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implémente un lecteur SQLSERVER:. Le fournisseur définit également un jeu de dossiers principaux pour le lecteur SQLSERVER:. Chaque dossier et ses sous-dossiers représentent l'ensemble d'objets auxquels il est possible d'accéder à l'aide d'un modèle SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object). Si vous vous trouvez au niveau d'un sous-dossier dans un chemin d'accès qui commence par l'un de ces dossiers principaux, vous pouvez utiliser les méthodes du modèle objet associé pour effectuer des actions sur l'objet représenté par ce nœud. Les dossiers Windows PowerShell implémentés par le fournisseur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sont répertoriés dans le tableau suivant.  
@@ -67,7 +67,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |SQLSERVER:\SQL\MyComputer\DEFAULT\Databases|<xref:Microsoft.SqlServer.Management.Smo.DatabaseCollection>|  
 |SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012|<xref:Microsoft.SqlServer.Management.Smo.Database>|  
   
-## <a name="sql-server-provider-tasks"></a>Tâches de fournisseur SQL Server  
+## <a name="sql-server-provider-tasks"></a>Tâches de fournisseur SQL Server  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
