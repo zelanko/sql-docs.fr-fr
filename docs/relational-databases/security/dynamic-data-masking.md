@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2a16a7b0399a696c670887e49b4cf5c32012afb1
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="dynamic-data-masking"></a>Masquage dynamique des données
@@ -30,10 +30,10 @@ Le masquage dynamique des données (DDM) limite l’exposition des données sens
 
 Le masquage dynamique des données permet d’empêcher les accès non autorisés à des données sensibles. Pour cela, les clients peuvent indiquer la quantité de données sensibles à exposer avec un impact minimal sur la couche Application. Il peut être configuré sur la base de données pour masquer les données sensibles dans les jeux de résultats de requêtes sur des champs de base de données désignés. Les données de la base de données ne sont pas modifiées. Le masquage dynamique des données est facile à utiliser avec des applications existantes, car les règles de masquage sont appliquées dans les résultats de la requête. De nombreuses applications peuvent masquer des données sensibles sans modifier les requêtes existantes.
 
-*     Une stratégie de masquage des données centrales agit directement sur les champs sensibles dans la base de données.
-*     Désignez les utilisateurs ou les rôles privilégiés qui n’ont pas accès aux données sensibles.
-*     DDM est doté de fonctions de masquage complètes et partielles, ainsi que d’un masque aléatoire pour les données numériques.
-*     Des commandes [!INCLUDE[tsql_md](../../includes/tsql-md.md)] simples définissent et gèrent les masques.
+*  Une stratégie de masquage des données centrales agit directement sur les champs sensibles dans la base de données.
+*  Désignez les utilisateurs ou les rôles privilégiés qui n’ont pas accès aux données sensibles.
+*  DDM est doté de fonctions de masquage complètes et partielles, ainsi que d’un masque aléatoire pour les données numériques.
+*  Des commandes [!INCLUDE[tsql_md](../../includes/tsql-md.md)] simples définissent et gèrent les masques.
 
 Par exemple, si une personne assurant le support technique au sein d’un centre d’appels peut identifier des appelants à l’aide de quelques chiffres de leur numéro de sécurité sociale ou de carte de crédit, ces données ne doivent pas lui être entièrement révélées. Il est ainsi possible de définir une règle de masquage qui cache tout, sauf les quatre derniers chiffres d’un numéro de sécurité sociale ou de carte de crédit, dans le jeu de résultats de toute requête. Autre exemple, en utilisant un masque de données approprié pour protéger les informations d’identification personnelle (PII), un développeur peut interroger des environnements de production à des fins de dépannage sans violer les réglementations de conformité.
 
@@ -60,7 +60,7 @@ Par exemple, si une personne assurant le support technique au sein d’un centre
   
  L’autorisation **CONTROL** sur la base de données inclut les autorisations **ALTER ANY MASK** et **UNMASK** .  
   
-## <a name="best-practices-and-common-use-cases"></a>Bonnes pratiques et des cas d’utilisation courants  
+## <a name="best-practices-and-common-use-cases"></a>Meilleures pratiques et des cas d’utilisation courants  
   
 -   La création d’un masque sur une colonne n’empêche pas la mise à jour de celle-ci. Par conséquent, si les utilisateurs reçoivent des données masquées quand ils interrogent une colonne masquée, ils peuvent mettre à jour les données s’ils disposent d’autorisations en écriture. Il convient néanmoins d’utiliser une stratégie de contrôle d’accès appropriée pour limiter les autorisations de mise à jour.  
   
@@ -80,9 +80,9 @@ WHERE is_masked = 1;
 ```  
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
- Il n’est pas possible de définir une règle de masquage pour les types de colonnes suivants :  
+ Il n’est pas possible de définir une règle de masquage pour les types de colonnes suivants :  
   
--   Colonnes chiffrées (Always Encrypted)  
+-   Colonnes chiffrées (chiffrement intégral)  
   
 -   FILESTREAM  
   
