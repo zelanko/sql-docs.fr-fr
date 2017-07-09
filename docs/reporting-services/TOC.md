@@ -2,6 +2,7 @@
 
 # Vue d'ensemble
 ## [Nouveautés de Reporting Services](what-s-new-in-sql-server-reporting-services-ssrs.md) 
+## [Articles nouveaux et récemment mis à jour](new-updated-reporting-services.md)
 ## [Concepts de Reporting Services (SSRS)](reporting-services-concepts-ssrs.md)
 ## [Fonctionnalités et tâches Reporting Services](reporting-services-features-and-tasks-ssrs.md)   
 ## [Compatibilité descendante](reporting-services-backward-compatibility.md)  
@@ -48,7 +49,7 @@
 ## [Messages d’alerte de données](data-alert-messages.md)  
 ## [Créer une alerte de données dans le Concepteur d’alertes de données](create-a-data-alert-in-data-alert-designer.md)  
 ## [Modifier une alerte de données dans le Concepteur d’alertes](edit-a-data-alert-in-alert-designer.md)  
-## [Gérer toutes les alertes de données sur un Site SharePoint dans le Gestionnaire des alertes de données](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
+## [Gérer toutes les alertes de données sur un site SharePoint dans le Gestionnaire des alertes de données](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
 ## [Gérer mes alertes de données dans le Gestionnaire des alertes de données](manage-my-data-alerts-in-data-alert-manager.md)  
 ## [Accorder des autorisations aux utilisateurs et alerter les administrateurs](grant-permissions-to-users-and-alerting-administrators.md)
 
