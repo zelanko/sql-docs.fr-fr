@@ -25,14 +25,18 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 43c8168aa5dc9cfb55c117f8a25ead5e8f2a9a4f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="improve-the-performance-of-full-text-indexes"></a>Améliorer les performances des index de recherche en texte intégral
+<a id="improve-the-performance-of-full-text-indexes" class="xliff"></a>
+
+# Améliorer les performances des index de recherche en texte intégral
 Cette rubrique décrit certaines causes courantes à l’origine de performances médiocres des requêtes et des index de recherche en texte intégral. Elle fournit également quelques suggestions pour éviter ces problèmes et améliorer les performances.
   
 ##  <a name="causes"></a> Causes courantes des problèmes de performances
-### <a name="hardware-resource-issues"></a>Problèmes liés aux ressources matérielles
+<a id="hardware-resource-issues" class="xliff"></a>
+
+### Problèmes liés aux ressources matérielles
 Les performances de l’indexation de texte intégral et des requêtes de texte intégral sont influencées par les ressources matérielles, telles que la mémoire, la vitesse du disque et de l’UC, ainsi que l’architecture de la machine.  
 
 La cause principale d’une baisse des performances de l’indexation de texte intégral se rapporte aux limites des ressources matérielles.  
@@ -46,14 +50,18 @@ La cause principale d’une baisse des performances de l’indexation de texte i
     > [!NOTE]  
     >  À partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], le moteur d’indexation et de recherche en texte intégral peut utiliser la mémoire AWE parce qu’il fait partie du processus sqlservr.exe.  
 
-### <a name="full-text-batching-issues"></a>Problèmes liés au traitement par lot de recherche en texte intégral
+<a id="full-text-batching-issues" class="xliff"></a>
+
+### Problèmes liés au traitement par lot de recherche en texte intégral
  Si le système ne rencontre aucun goulet d'étranglement matériel, les performances d'indexation de la recherche en texte intégral dépendent essentiellement des éléments suivants :  
   
 -   Durée de création des traitements de texte intégral par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Rapidité d'utilisation de ces traitements par le démon de filtre.  
 
-### <a name="full-text-index-population-issues"></a>Problèmes liés à l’alimentation d’un index de recherche en texte intégral
+<a id="full-text-index-population-issues" class="xliff"></a>
+
+### Problèmes liés à l’alimentation d’un index de recherche en texte intégral
 -   **Type d’alimentation**. Contrairement à un remplissage complet, le remplissage du suivi des modifications automatique, incrémentiel ou manuel n'a pas pour objectif de maximiser les ressources matérielles en vue d'obtenir une vitesse supérieure. Par conséquent, les suggestions de paramétrage fournies dans cette rubrique peuvent ne pas améliorer les performances de l’indexation de texte intégral lorsqu’une alimentation de suivi des modifications incrémentielle, manuelle ou automatique est utilisée.  
   
 -   **Fusion principale**. À la fin d'une alimentation, une fusion finale est déclenchée ; les fragments d'index sont fusionnés entre eux dans un index de recherche en texte intégral. Il en résulte une amélioration des performances des requêtes dans la mesure où seul l'index principal doit être interrogé au lieu des fragments d'index ; par ailleurs, les statistiques de score sont plus appropriées pour un classement en fonction de la pertinence. Toutefois, la fusion principale peut nécessiter de nombreuses entrées/sorties, car de grandes quantités de données doivent être écrites et lues lors de la fusion des fragments d’index, sans pour autant bloquer les requêtes entrantes.  
@@ -74,7 +82,9 @@ Pour optimiser les performances de vos index de recherche en texte intégral, ap
 -   Si vous utilisez une alimentation incrémentielle basée sur une colonne timestamp, créez un index secondaire sur la colonne **timestamp** afin d’améliorer les performances de l’alimentation incrémentielle.  
   
 ##  <a name="full"></a> Résoudre les problèmes de performances des alimentations complètes  
-### <a name="review-the-full-text-crawl-logs"></a>Passer en revue les journaux d’analyse de texte intégral
+<a id="review-the-full-text-crawl-logs" class="xliff"></a>
+
+### Passer en revue les journaux d’analyse de texte intégral
  Pour mieux diagnostiquer les problèmes de performances, examinez les journaux d’analyse de texte intégral.
  
 Lorsqu'une erreur se produit durant une analyse, la fonction d'analyse de la recherche en texte intégral crée et conserve un journal de l'analyse sous forme de fichier texte. Chaque journal de l'analyse correspond à un catalogue de texte intégral particulier. Par défaut, les journaux d’analyse pour une instance donnée (dans cet exemple, l’instance par défaut) figurent dans le dossier `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG`.
@@ -83,14 +93,16 @@ Le fichier journal de l'analyse respecte le modèle de dénomination suivant :
   
 `SQLFT<DatabaseID\><FullTextCatalogID\>.LOG[<n\>]`
   
-Les parties variables du nom de fichier du journal d’analyse sont les suivantes :
--   <**DatabaseID**> - ID d’une base de données. <**dbid**> est un nombre à cinq chiffres commençant par des zéros non significatifs.  
--   <**FullTextCatalogID**> - ID du catalogue de texte intégral. <**catid**> est un nombre à cinq chiffres commençant par des zéros non significatifs.  
--   <**n**> - Entier qui indique qu’il existe un ou plusieurs journaux d’analyse du même catalogue de texte intégral.  
+Les parties variables du nom de fichier du journal d’analyse sont les suivantes.
+-   <**DatabaseID**> - ID d’une base de données. <**dbid**> est un nombre à 5 chiffres commençant par des zéros non significatifs.  
+-   <**FullTextCatalogID**> - ID du catalogue de texte intégral. <**catid**> est un nombre à 5 chiffres commençant par des zéros non significatifs.  
+-   <**n**> - Entier qui indique qu'il existe un ou plusieurs journaux d'analyse du même catalogue de texte intégral.  
   
  Par exemple, `SQLFT0000500008.2` est le fichier journal d’analyse pour une base de données ayant un ID de base de données = 5 et un ID de catalogue de texte intégral = 8. Le 2 à la fin du nom de fichier indique qu'il existe deux fichiers journaux d'analyse pour cette combinaison base de données/catalogue.  
 
-### <a name="check-physical-memory-usage"></a>Vérifier l’utilisation de la mémoire physique  
+<a id="check-physical-memory-usage" class="xliff"></a>
+
+### Vérifier l’utilisation de la mémoire physique  
  Durant une alimentation de texte intégral, fdhost.exe ou sqlservr.exe peuvent manquer partiellement ou complètement de mémoire.
 -   Si le journal d'analyse de texte intégral indique que fdhost.exe est souvent redémarré ou que le code d'erreur 8007008 est retourné, cela signifie que l'un de ces processus manque de mémoire.
 -   Si fdhost.exe produit des vidages, en particulier sur des ordinateurs multiprocesseurs de grande capacité, cela peut signifier qu'il manque de mémoire.  
@@ -108,7 +120,9 @@ Les parties variables du nom de fichier du journal d’analyse sont les suivante
 
 -   **Problème de pagination**. Si la taille du fichier d'échange est insuffisante, comme cela peut se produire sur un système qui dispose d'un petit fichier d'échange avec une croissance limitée, fdhost.exe ou sqlservr.exe risquent de manquer de mémoire. Si les journaux d'analyse n'indiquent pas de défaillances relatives à la mémoire, il est probable que les performances sont dégradées par une pagination excessive.  
   
-### <a name="estimate-the-memory-requirements-of-the-filter-daemon-host-process-fdhostexe"></a>Estimer les besoins en mémoire du processus hôte de démon de filtre (fdhost.exe)  
+<a id="estimate-the-memory-requirements-of-the-filter-daemon-host-process-fdhostexe" class="xliff"></a>
+
+### Estimer les besoins en mémoire du processus hôte de démon de filtre (fdhost.exe)  
  La quantité de mémoire requise par le processus fdhost.exe pour une alimentation dépend principalement du nombre de plages d'analyses de texte intégral utilisées, de la taille de la mémoire partagée entrante et du nombre maximal d'instances relatives à la mémoire partagée entrante.  
   
  La quantité de mémoire consommée (en octets) par l'hôte de démon de filtre peut être estimée approximativement à l'aide de la formule suivante :  
@@ -143,7 +157,9 @@ Pour obtenir des informations essentielles sur les formules suivantes, consultez
 2.  500 Mo est une estimation de la mémoire requise par les autres processus dans le système. Si le système effectue un travail supplémentaire, augmentez cette valeur en conséquence.  
 3.  .*ism_size* est censé être de 8 Mo pour les plateformes x64.  
   
- #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Exemple : estimation des besoins en mémoire de fdhost.exe  
+<a id="example-estimate-the-memory-requirements-of-fdhostexe" class="xliff"></a>
+
+ #### Exemple : estimation des besoins en mémoire de fdhost.exe  
   
  Cet exemple se rapporte à un ordinateur 64 bits avec 8 Go de mémoire vive (RAM) et 4 processeurs double cœur. Les premières estimations de calcul de la mémoire requise par fdhost.exe :*F*. Le nombre de plages d'analyse est `8`.  
   
@@ -153,7 +169,9 @@ Pour obtenir des informations essentielles sur les formules suivantes, consultez
   
  `M = 8192-640-500=7052`  
   
- #### <a name="example-setting-max-server-memory"></a>Exemple : configuration de la mémoire maximum du serveur  
+<a id="example-setting-max-server-memory" class="xliff"></a>
+
+ #### Exemple : configuration de la mémoire maximum du serveur  
   
  Cet exemple utilise les instructions [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) et [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] pour définir **mémoire maximum du serveur** sur la valeur calculée pour *M* dans l’exemple précédent, `7052`:  
   
@@ -168,7 +186,9 @@ GO
   
 Pour plus d’informations sur les options de mémoire du serveur, consultez [Mémoire du serveur (option de configuration de serveur)](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
   
-### <a name="check-cpu-usage"></a>Vérifier l’utilisation de l’UC  
+<a id="check-cpu-usage" class="xliff"></a>
+
+### Vérifier l’utilisation de l’UC  
 Les performances des alimentations complètes ne sont pas optimales lorsque la consommation processeur moyenne est inférieure à environ 30 %. Voici quelques facteurs qui affectent la consommation processeur.  
   
 -   Temps d’attente élevé pour les pages  
@@ -211,7 +231,9 @@ Le moteur d’indexation et de recherche en texte intégral utilise deux types d
   
 Pour contourner ce problème, marquez le filtre du document conteneur (le document Word dans cet exemple) en tant que filtre monothread. Pour ce faire, définissez la valeur de Registre **ThreadingModel** pour le filtre en spécifiant **Thread cloisonné**. Pour plus d’informations sur les threads uniques cloisonnés (STA), consultez le livre blanc intitulé [Présentation et utilisation des modèles de threads COM](http://go.microsoft.com/fwlink/?LinkId=209159).  
   
-## <a name="see-also"></a>Voir aussi  
+<a id="see-also" class="xliff"></a>
+
+## Voir aussi  
  [Mémoire du serveur (option de configuration de serveur)](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [Maximum de la plage de l’analyse de texte intégral (option de configuration de serveur)](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
  [Alimenter des index de recherche en texte intégral](../../relational-databases/search/populate-full-text-indexes.md)   
