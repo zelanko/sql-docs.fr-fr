@@ -21,7 +21,9 @@ ms.contentlocale: fr-fr
 ms.lasthandoff: 06/23/2017
 
 ---
-# <a name="sql-server-management-studio----release-notes"></a>SQL Server Management Studio - Notes de publication
+<a id="sql-server-management-studio----release-notes" class="xliff"></a>
+
+# SQL Server Management Studio - Notes de publication
 Bienvenue dans notre version généralement disponible de SQL Server Management Studio !  Cette version de SQL Server Management Studio (SSMS) est une installation autonome indépendante de la version de SQL Server. Nous envisageons de la mettre à jour fréquemment en ajoutant des fonctionnalités, des correctifs et la prise en charge des fonctionnalités les plus récentes dans SQL Server et Azure SQL Database.  
   
 Pour installer la version la plus récente de SQL Server Management Studio, voir [Download SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md).  
@@ -61,11 +63,15 @@ Les versions localisées dans des langues autres que l’anglais nécessitent la
 5. **L’aide ne s’ouvre pas quand vous cliquez sur Aide ou quand vous appuyez sur F1**  
 Certains environnements affichent le message suivant quand vous cliquez sur Aide ou quand vous appuyez sur F1 : **Vous aurez besoin d’une nouvelle application pour ouvrir cet élément ms-xhelp**. Il s’agit d’un problème connu qui sera résolu dans une prochaine version.
   
-## <a name="feedback"></a>Commentaires  
+<a id="feedback" class="xliff"></a>
+
+## Commentaires  
   
 ![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [Forum des outils clients SQL](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Signaler un problème ou faire une suggestion sur Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback).  
   
-## <a name="see-also"></a>Voir aussi  
+<a id="see-also" class="xliff"></a>
+
+## Voir aussi  
 [Didacticiel de SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
 [Télécharger SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  
 [Versions antérieures de SQL Server Management Studio](../ssms/previous-sql-server-management-studio-releases.md)  
