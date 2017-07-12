@@ -18,7 +18,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
 ms.openlocfilehash: 2ef8331a2217c2fd41881b875264dab6ec2bb822
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 <a id="table-and-row-size-in-memory-optimized-tables" class="xliff"></a>

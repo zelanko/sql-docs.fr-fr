@@ -1,5 +1,5 @@
 ---
-title: "Modifier l’analyseur lexical utilisé pour l’anglais des États-Unis et l’anglais du Royaume-Uni | Microsoft Docs"
+title: "Modifier l’analyseur lexical utilisé pour l’anglais des États-Unis et l’anglais (R.U.) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,16 @@ caps.latest.revision: 10
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: be3d7e956f6ed89f14fc63c36d97974cc9218933
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/12/2017
 
 ---
-# <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Modifier l'analyseur lexical utilisé pour l'anglais des États-Unis et l'anglais du Royaume-Uni
+<a id="change-the-word-breaker-used-for-us-english-and-uk-english" class="xliff"></a>
+
+# Modifier l'analyseur lexical utilisé pour l'anglais des États-Unis et l'anglais (R.U.)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installe une nouvelle version (version 14.0.4999.1038) de l’analyseur lexical et du générateur de formes dérivées pour la langue anglaise, en remplaçant la version précédente de ces composants (version 12.0.6828.0). Pour plus d’informations sur la modification du comportement des nouveaux composants, consultez [Changements de comportement pour la recherche en texte intégral](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f). Cette rubrique décrit comment passer de la nouvelle version de ces composants à la version précédente, ou de la version précédente à la nouvelle version. Pour les installations de cluster, ces modifications doivent être apportées sur tous les nœuds principaux et passifs.  
   
  Les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisaient des analyseurs lexicaux différents représentés par des CLSID différents pour l'anglais des États-Unis (LCID 1033) et l'anglais du Royaume-Uni (LCID 2057). Dans cette version, les deux LCID utilisent les mêmes composants avec le même CLSID, comme indiqué dans le tableau suivant :  
@@ -35,9 +37,13 @@ ms.lasthandoff: 06/22/2017
   
  Pour plus d’informations sur les analyseurs lexicaux et générateurs de formes dérivées, consultez [Configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
-## <a name="switching-from-the-current-english-word-breaker-to-the-previous-english-word-breakers"></a>Basculement de l'analyseur lexical anglais actuel vers les analyseurs lexicaux anglais précédents  
+<a id="switching-from-the-current-english-word-breaker-to-the-previous-english-word-breakers" class="xliff"></a>
+
+## Basculement de l'analyseur lexical anglais actuel vers les analyseurs lexicaux anglais précédents  
   
-#### <a name="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version"></a>Pour basculer de la version actuelle de l'analyseur lexical anglais des États-Unis vers la version précédente  
+<a id="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version" class="xliff"></a>
+
+#### Pour basculer de la version actuelle de l'analyseur lexical anglais des États-Unis vers la version précédente  
   
 1.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<racine_instance\>\MSSearch\CLSID**.  
   
@@ -59,11 +65,13 @@ ms.lasthandoff: 06/22/2017
   
 6.  Redémarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-#### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>Pour basculer de la version actuelle de l'analyseur lexical anglais du Royaume-Uni vers la version précédente  
+<a id="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version" class="xliff"></a>
+
+#### Pour basculer de la version actuelle de l'analyseur lexical anglais (R.U.) vers la version précédente  
   
 1.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<racine_instance\>\MSSearch\CLSID**.  
   
-2.  Procédez comme suit pour ajouter une nouvelle clé pour les COM ClassID des interfaces précédentes de l'analyseur lexical et du générateur de formes dérivées anglais du Royaume-Uni pour LCID 2057 :  
+2.  Procédez comme suit pour ajouter une nouvelle clé pour les COM ClassID des interfaces précédentes de l'analyseur lexical et du générateur de formes dérivées anglais (R.U.) pour LCID 2057 :  
   
     1.  Ajoutez une nouvelle clé avec la valeur **{173C97E2-AEBE-437C-9445-01B237ABF2F6}** pour l’analyseur lexical précédent.  
   
@@ -81,9 +89,13 @@ ms.lasthandoff: 06/22/2017
   
 6.  Redémarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="switching-back-from-the-previous-english-word-breakers-to-the-current-english-word-breaker"></a>Rebasculement des analyseurs lexicaux anglais précédents vers l'analyseur lexical anglais actuel  
+<a id="switching-back-from-the-previous-english-word-breakers-to-the-current-english-word-breaker" class="xliff"></a>
+
+## Rebasculement des analyseurs lexicaux anglais précédents vers l'analyseur lexical anglais actuel  
   
-#### <a name="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version"></a>Pour rebasculer de la version précédente de l'analyseur lexical anglais des États-Unis vers la version actuelle  
+<a id="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version" class="xliff"></a>
+
+#### Pour rebasculer de la version précédente de l'analyseur lexical anglais des États-Unis vers la version actuelle  
   
 1.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<racine_instance\>\MSSearch\CLSID**.  
   
@@ -105,11 +117,13 @@ ms.lasthandoff: 06/22/2017
   
 6.  Redémarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-#### <a name="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version"></a>Pour rebasculer de la version précédente de l'analyseur lexical anglais du Royaume-Uni vers la version actuelle  
+<a id="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version" class="xliff"></a>
+
+#### Pour rebasculer de la version précédente de l'analyseur lexical anglais (R.U.) vers la version actuelle  
   
 1.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<racine_instance\>\MSSearch\CLSID**.  
   
-2.  Si les clés suivantes n'existent pas, procédez comme suit pour ajouter une nouvelle clé pour les COM ClassID des interfaces actuelles de l'analyseur lexical et du générateur de formes dérivées anglais du Royaume-Uni pour LCID 2057 :  
+2.  Si les clés suivantes n'existent pas, procédez comme suit pour ajouter une nouvelle clé pour les COM ClassID des interfaces actuelles de l'analyseur lexical et du générateur de formes dérivées anglais (R.U.) pour LCID 2057 :  
   
     1.  Ajoutez une nouvelle clé dont la valeur est **{9faed859-0b30-4434-ae65-412e14a16fb8}** pour l’analyseur lexical actuel.  
   
@@ -127,7 +141,9 @@ ms.lasthandoff: 06/22/2017
   
 6.  Redémarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Voir aussi  
+<a id="see-also" class="xliff"></a>
+
+## Voir aussi  
  [Rétablir la version précédente des analyseurs lexicaux utilisés par la recherche](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
  [Changements de comportement pour la recherche en texte intégral](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   

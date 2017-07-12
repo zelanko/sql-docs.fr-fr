@@ -16,17 +16,21 @@ caps.latest.revision: 54
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8df15a6d8f9875fbecf9e14fcdae51d37c7154fe
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/12/2017
 
 ---
-# <a name="full-text-search"></a>Recherche en texte intégral
+<a id="full-text-search" class="xliff"></a>
+
+# Recherche en texte intégral
   La recherche en texte intégral dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] permet aux utilisateurs et aux applications d’exécuter des requêtes de texte intégral sur des données caractères dans des tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
-## <a name="basic-tasks"></a>Tâches de base
+<a id="basic-tasks" class="xliff"></a>
+
+## Tâches de base
 Cette rubrique présente une vue d’ensemble de la recherche en texte intégral et décrit son architecture ainsi que ses composants. Si vous préférez commencer tout de suite, voici les tâches de base qui vous intéresse.
 -   [Commencer à utiliser la recherche en texte intégral](../../relational-databases/search/get-started-with-full-text-search.md)
 -   [Créer et gérer des catalogues de texte intégral](../../relational-databases/search/create-and-manage-full-text-catalogs.md)
@@ -37,7 +41,9 @@ Cette rubrique présente une vue d’ensemble de la recherche en texte intégral
 > [!NOTE]
 > Full-Text Search is an optional component of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous n’avez pas sélectionné la recherche en texte intégral lorsque vous avez installé SQL Server, exécutez de nouveau le programme d’installation de SQL Server pour l’ajouter.
 
-## <a name="overview"></a>Vue d'ensemble
+<a id="overview" class="xliff"></a>
+
+## Vue d'ensemble
 Un index de recherche en texte intégral comporte une ou plusieurs colonnes de caractères dans une table. Les types de données de ces colonnes peuvent être **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml** ou **varbinary(max)** et **FILESTREAM**. Chaque index de recherche en texte intégral indexe une ou plusieurs colonnes de la table, et chaque colonne peut utiliser une langue spécifique.  
   
  Les requêtes de texte intégral effectuent des recherches linguistiques sur des données texte dans des index de recherche en texte intégral ; pour cela, elles traitent les mots et les expressions à partir des règles d’une langue spécifique, telle que l’anglais ou le japonais. Les requêtes de texte intégral peuvent inclure des mots et des expressions simples ou plusieurs formes d'un mot ou d'une expression. Une requête de texte intégral retourne tous les documents qui contiennent au moins une correspondance (ce que l’on appelle aussi *résultat*). Une correspondance se produit lorsqu'un document cible contient tous les termes spécifiés dans la requête de texte intégral et satisfait toutes les autres conditions de recherche, telles que la distance entre les correspondances.    
@@ -146,7 +152,9 @@ Un index de recherche en texte intégral comporte une ou plusieurs colonnes de c
 ###  <a name="querying"></a> Processus d’interrogation de texte intégral  
  Le processeur de requêtes passe les parties de texte intégral d'une requête au Moteur d'indexation et de recherche en texte intégral à des fins de traitement. Le Moteur d'indexation et de recherche en texte intégral effectue l'analyse lexicale et procède éventuellement à des expansions du dictionnaire des synonymes, à la recherche de radical et au traitement des mots vides (mots parasites). Ensuite, les parties de texte intégral de la requête sont représentées sous forme d'opérateurs SQL, essentiellement comme des fonctions table multi-diffusion. Au cours de l'exécution de la requête, ces fonctions table multi-diffusion accèdent à l'index inversé pour extraire les résultats corrects. Les résultats sont alors retournés au client ou bien ils font l'objet d'un traitement supplémentaire avant d'être retournés au client.  
 
-## <a name="full-text-index-architecture"></a>Architecture des index de recherche en texte intégral
+<a id="full-text-index-architecture" class="xliff"></a>
+
+## Architecture des index de recherche en texte intégral
   Les informations contenues dans les index de recherche en texte intégral sont utilisées par le Moteur d'indexation et de recherche en texte intégral pour compiler des requêtes de texte intégral qui permettent de rechercher rapidement certains mots ou combinaisons de mots dans une table. Un index de recherche en texte intégral stocke les informations se rapportant aux mots significatifs et à leur emplacement dans une ou plusieurs colonnes d'une table de base de données. Un index de recherche en texte intégral est un type spécial d'index fonctionnel par jeton qui est construit et géré par le Moteur d'indexation et de recherche en texte intégral pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le processus de création d'un index de texte intégral diffère du processus de création des autres types d'index. Au lieu de construire une structure d'arbre B (B-tree) en fonction d'une valeur stockée dans une ligne particulière, le Moteur d'indexation et de recherche en texte intégral crée une structure d'index inversée, empilée, compressée et basée sur des jetons individuels provenant du texte indexé.  La taille d’un index de recherche en texte intégral est limitée uniquement par les ressources mémoire dont dispose l’ordinateur sur lequel l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute.  
   
  À compter de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], les index de recherche en texte intégral sont intégrés au Moteur de base de données, au lieu de résider dans le système de fichiers comme dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour une nouvelle base de données, le catalogue de texte intégral est désormais un objet virtuel qui n'appartient à aucun groupe de fichiers ; il s'agit tout simplement d'un concept logique qui fait référence à un groupe d'index de recherche en texte intégral. Notez toutefois que pendant la mise à niveau d’une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , pour tout catalogue de texte intégral qui contient des fichiers de données, un nouveau groupe de fichiers est créé ; pour plus d’informations, consultez [Mise à niveau de la fonction de recherche en texte intégral](../../relational-databases/search/upgrade-full-text-search.md).  
@@ -161,7 +169,7 @@ Un seul index de recherche en texte intégral est autorisé par table. Pour qu'u
 |DocumentID|Title|  
 |----------------|-----------|  
 |1|Crank Arm and Tire Maintenance|  
-|2|Front Reflector Bracket and Reflector Assembly 3|  
+|2|Front Reflector Bracket and Reflector Assembly 3|  
 |3|Front Reflector Bracket Installation|  
   
  Par exemple, la table suivante, qui illustre le Fragment 1, décrit le contenu de l’index de recherche en texte intégral créé sur la colonne **Title** de la table **Document** . Les index de recherche en texte intégral contiennent plus d'informations que les éléments présentés dans cette table. La table est une représentation logique d'un index de recherche en texte intégral et est fournie à des fins de démonstration uniquement. Les lignes sont stockées dans un format compressé pour optimiser l'utilisation du disque.  
@@ -232,7 +240,9 @@ Un seul index de recherche en texte intégral est autorisé par table. Pour qu'u
 |Assembly|1|2|6|  
 |3|1|2|7|  
 
-### <a name="differences-between-full-text-indexes-and-regular-sql-server-indexes"></a>Différences entre les index en recherche intégral et les index standard SQL Server :  
+<a id="differences-between-full-text-indexes-and-regular-sql-server-indexes" class="xliff"></a>
+
+### Différences entre les index en recherche intégral et les index standard SQL Server :  
   
 |Index de texte intégral|Index SQL Server classiques|  
 |------------------------|--------------------------------|  
