@@ -1,6 +1,6 @@
 ---
 title: "Utilisation des indicateurs de performance clés dans Reporting Services | Documents Microsoft"
-ms.date: 05/15/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,15 +14,17 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b451b1773d97d490c0021cdf8cfcfb14c07117b4
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: f8057d09bb9118ef5575645f3fab9ba7a1fede94
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="working-with-kpis-in-reporting-services"></a>Utilisation des indicateurs de performance clés dans Reporting Services
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+# Utilisation des indicateurs de performance clés dans Reporting Services
+<a id="working-with-kpis-in-reporting-services" class="xliff"></a>
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Un indicateur de performance clé (KPI) est un indice visuel qui représente la progression vers un objectif.  Les Indicateurs de performance clés sont utiles pour les équipes, les responsables et les entreprises pour évaluer rapidement l’état d’avancement par rapport à des objectifs mesurables.   
   
@@ -34,16 +36,19 @@ Un indicateur de performance clé (KPI) est un indice visuel qui représente la 
   
 -   Quelle est la quantité minimum de travail que j’ai terminé ?  
   
-## <a name="creating-a-dataset"></a>Création d’un dataset  
+## Création d’un dataset
+<a id="creating-a-dataset" class="xliff"></a>  
 Un indicateur de performance clé utilise uniquement la première ligne de données issue d’un dataset partagé. Assurez-vous que les données que vous souhaitez utiliser se trouvent sur cette première ligne. Pour créer un dataset partagé, vous pouvez utiliser le Générateur de rapports ou SQL Server Data Tools.  
   
 > **Remarque**: le dataset ne doit pas nécessairement être dans le même dossier que l’indicateur de performance clé.  
   
-## <a name="placement-of-kpis"></a>Positionnement des indicateurs de performance clés  
+## Positionnement des indicateurs de performance clés
+<a id="placement-of-kpis" class="xliff"></a>  
   
 Les indicateurs de performance clés peuvent être créés dans n’importe quel dossier sur votre serveur de rapports.  Avant de créer un indicateur de performance clé, vous devez réfléchir au meilleur emplacement pour celui-ci. Il est préférable de le placer dans un dossier visible pour les utilisateurs, qui soit en même temps utile à d’autres rapports et indicateurs de performance clés.  
   
-## <a name="adding-a-kpi"></a>Ajout d’un indicateur de performance clé  
+## Ajout d’un indicateur de performance clé
+<a id="adding-a-kpi" class="xliff"></a>  
   
 Après avoir déterminé l’emplacement de votre indicateur de performance clé, accédez à ce dossier et sélectionnez **Nouveau** > **Indicateur de performance clé** dans le menu supérieur.  
   
@@ -91,7 +96,8 @@ Procédez comme suit pour utiliser les données d’un dataset partagé.
   
     ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)  
   
-## <a name="removing-a-kpi"></a>Suppression d’un indicateur de performance clé  
+## Suppression d’un indicateur de performance clé
+<a id="removing-a-kpi" class="xliff"></a>  
   
 Pour supprimer un indicateur de performance clé, vous pouvez effectuer les opérations suivantes.  
   
@@ -103,11 +109,13 @@ Pour supprimer un indicateur de performance clé, vous pouvez effectuer les opé
   
     ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
   
-## <a name="refreshing-a-kpi"></a>Actualisation d’un indicateur de performance clé  
+## Actualisation d’un indicateur de performance clé
+<a id="refreshing-a-kpi" class="xliff"></a>  
   
 Pour actualiser l’indicateur de performance clé, vous devez configurer une mise en cache pour le dataset partagé. Pour plus d’informations sur le cache de plans d’actualisation, consultez [fonctionne avec les Datasets partagés](../reporting-services/work-with-shared-datasets-web-portal.md).  
   
-## <a name="next-steps"></a>Étapes suivantes
+## Étapes suivantes
+<a id="next-steps" class="xliff"></a>
   
 [Portail Web](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Travailler avec les Datasets partagés](../reporting-services/work-with-shared-datasets-web-portal.md)

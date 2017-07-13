@@ -1,7 +1,7 @@
 ---
 title: "Alertes de données de Reporting Services | Documents Microsoft"
 ms.custom: 
-ms.date: 05/10/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,26 +16,30 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 86cf02b246cc8ca11e7ed490cfb6082c2c6c7760
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 27956feca3ad15233943a447422e2260bd61c913
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="reporting-services-data-alerts"></a>Alertes de données Reporting Services
+# Alertes de données Reporting Services
+<a id="reporting-services-data-alerts" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sont une solution d'alerte pilotée par les données qui vous informe des données de rapport intéressantes ou importantes pour vous, à un moment donné. Grâce aux alertes de données, vous n'aurez plus besoin de chercher les informations, car elles viendront à vous.  
-  
- Les messages d'alerte de données sont envoyés par courrier électronique. Selon l'importance des informations, vous pouvez choisir la fréquence d'envoi des messages ou choisir de recevoir un message uniquement en cas de modification des résultats. Vous pouvez spécifier plusieurs destinataires de courrier électronique pour informer vos collègues et améliorer l'efficacité et la collaboration au sein de votre équipe.  
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+
+Alertes de données SQL Server Reporting Services sont une données contrôlée par une solution d’alerte qui vous permet d’être informé des données de rapport intéressantes ou importantes pour vous, à un moment donné. Grâce aux alertes de données, vous n'aurez plus besoin de chercher les informations, car elles viendront à vous.
+
+Les messages d'alerte de données sont envoyés par courrier électronique. Selon l'importance des informations, vous pouvez choisir la fréquence d'envoi des messages ou choisir de recevoir un message uniquement en cas de modification des résultats. Vous pouvez spécifier plusieurs destinataires de courrier électronique pour informer vos collègues et améliorer l'efficacité et la collaboration au sein de votre équipe.
 
 > [!NOTE]
 > Intégration de Reporting Services avec SharePoint n’est plus disponible après SQL Server 2016.
-  
-##  <a name="AlertingWF"></a> Architecture des alertes de données et flux de travail  
- Voici les zones clés des alertes de données d' [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] :  
-  
+
+##  <a name="AlertingWF"></a> Architecture des alertes de données et flux de travail
+
+Voici les zones clés des alertes de données d' [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] :
+
 -   **Définition et enregistrement des alertes de données**. Vous pouvez consulter un rapport, créer des règles qui identifient des valeurs de données intéressantes, définir les périodicités d'envoi de l'alerte de données et spécifier les destinataires du message d'alerte.  
   
 -   **Exécution des définitions d'alerte de données**. Le service d'alerte traite les définitions d'alerte selon la périodicité définie, récupère les données du rapport et crée des alertes de données en fonction des règles dans la définition d'alerte.  
@@ -54,7 +58,8 @@ ms.lasthandoff: 06/22/2017
   
  ![Flux de travail des alertes Reporting Services](../reporting-services/media/rs-alertingworkflow.gif "flux de travail des alertes Reporting Services")  
   
-### <a name="reports-supported-by-data-alerts"></a>Rapports pris en charge par les alertes de données  
+### Rapports pris en charge par les alertes de données
+<a id="reports-supported-by-data-alerts" class="xliff"></a>  
  Vous pouvez créer des alertes de données sur tous les types de rapports professionnels écrits en langage RDL et créés dans le Concepteur de rapports ou le Générateur de rapports. Rapports qui incluent des régions de données telles que les tables et les graphiques, rapports avec des sous-états, et rapports complexes avec plusieurs groupes de colonnes parallèles et régions de données imbriquées. Les seules conditions requises sont que le rapport inclue au moins une région de données de n'importe quel type et que la source de données du rapport soit configurée pour utiliser des informations d'identification stockées ou bien aucune information d'identification. Si le rapport n'a pas de régions de données, vous ne pouvez pas créer d'alerte sur ses données.  
   
  Vous ne pouvez pas créer des alertes de données sur des rapports créés avec [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)].  
@@ -69,29 +74,34 @@ ms.lasthandoff: 06/22/2017
   
 -   [Authentification avec le serveur de rapports](../reporting-services/security/authentication-with-the-report-server.md)  
   
-### <a name="run-reports"></a>Exécuter des rapports  
+### Exécuter des rapports
+<a id="run-reports" class="xliff"></a>  
  La première étape dans la création d'une définition d'alerte de données est de rechercher le rapport que vous souhaitez dans la bibliothèque SharePoint, puis de l'exécuter. Si un rapport ne contient pas de données lorsque vous l'exécutez, vous ne pouvez pas y créer d'alerte pour le moment.  
   
  Si le rapport est paramétré, vous devez spécifier les valeurs de paramètre à utiliser lorsque vous exécutez le rapport. Les valeurs de paramètre sont enregistrées dans les définitions d'alerte de données que vous créez sur un rapport. Les valeurs sont utilisées lorsque le rapport est exécuté à nouveau en tant qu'étape lors du traitement de la définition d'alerte de données. Si vous souhaitez modifier les valeurs de paramètre, vous devez réexécuter le rapport avec ces valeurs de paramètre et créer une définition d'alerte dans cette version du rapport.  
   
-### <a name="create-data-alert-definitions"></a>Créer des définitions d'alerte de données  
+### Créer des définitions d'alerte de données
+<a id="create-data-alert-definitions" class="xliff"></a>  
  La fonctionnalité d'alertes de données d' [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclut le Concepteur d'alerte de données, que vous utilisez pour créer des définitions d'alerte de données.  
   
  Pour créer une définition d'alerte de données, vous devez exécuter le rapport et ouvrir le Concepteur d'alertes de données à partir du menu **Actions** de la visionneuse de rapports SharePoint. Les flux de données de rapport sont générés et les 100 premières lignes du flux de données s'affichent dans une table d'aperçu dans le Concepteur d'alertes de données. Tous les flux de données d'un rapport sont mis en cache aussi longtemps que vous travaillez sur la définition d'alerte dans le Concepteur d'alerte de données. La mise en cache vous permet de commuter rapidement entre des flux de données. Lorsque vous rouvrez une définition d'alerte dans Concepteur d'alertes de données, les flux de données sont actualisés.  
   
  Les définitions d'alerte de données comprennent des règles et des clauses que les données du rapport doivent satisfaire pour déclencher un message d'alerte de données ; elles comprennent également une planification qui définit la fréquence d'envoi des messages d'alerte et, éventuellement, les dates de début et de fin d'envoi des messages d'alerte, ainsi que des informations telles la ligne Objet et une description à inclure dans le message d'alerte, et les destinataires du message. Après avoir créé une définition d'alerte, vous l'enregistrez dans la base de données des alertes SQL Server.  
   
-### <a name="save-data-alert-definitions-and-alerting-metadata"></a>Enregistrement des définitions d'alerte de données et des métadonnées d'alerte  
+### Enregistrement des définitions d'alerte de données et des métadonnées d'alerte
+<a id="save-data-alert-definitions-and-alerting-metadata" class="xliff"></a>  
  Lorsque vous installez [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint, la base de données des alertes SQL Server est automatiquement créée.  
   
  Les définitions d'alerte de données et les métadonnées d'alerte sont enregistrées dans la base de données des alertes. Par défaut, cette base de données est nommée ReportingServices\<GUID > _Alerting.  
   
  Lorsque vous enregistrez la définition d'alerte de données, les alertes créent un travail de SQL Server Agent. Le travail inclut une planification du travail. La planification est basée sur la périodicité que vous définissez sur la définition d'alerte. L'exécution du travail lance le traitement de la définition d'alerte de données.  
   
-### <a name="process-data-alert-definitions"></a>Traitement des définitions d'alerte de données  
+### Traitement des définitions d'alerte de données
+<a id="process-data-alert-definitions" class="xliff"></a>  
  Lorsque la planification du travail de SQL Server Agent démarre le traitement de la définition de l'alerte, le rapport est exécuté pour actualiser son flux de données. Le service d'alertes lit les flux de données et applique les règles que les définitions d'alerte de données spécifient aux valeurs de données. Si une ou plusieurs valeurs de données satisfont aux règles, une instance d'alerte de données est créée et un message d'alerte de données contenant les résultats de l'alerte est envoyé à tous les destinataires par courrier électronique. Les résultats sont des lignes de données de rapport qui satisfont à toutes les règles au moment où l'instance d'alerte a été créée. Pour éviter l'envoi de plusieurs messages d'alerte contenant les mêmes résultats, vous pouvez spécifier que les messages soient envoyés uniquement lorsque les résultats changent. Dans ce cas, une instance d'alerte est créée et enregistrée dans la base de données des alertes, mais aucun message d'alerte n'est généré. Si une erreur se produit, l'instance d'alerte est également enregistrée dans la base de données des alertes et un message d'alerte fournissant des détails sur l'erreur est envoyé aux destinataires. La section Diagnostic et connexion plus loin dans cette rubrique fournit plus d'informations sur la connexion et la résolution des problèmes.  
   
-### <a name="send-data-alert-messages"></a>Envoyer des messages d'alerte de données  
+### Envoyer des messages d'alerte de données
+<a id="send-data-alert-messages" class="xliff"></a>  
  Les messages d'alerte de données sont envoyés par courrier électronique.  
   
  La ligne **De** contient une valeur fournie par la configuration de la distribution du courrier électronique [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . La ligne **À** répertorie les destinataires que vous avez spécifiés quand vous avez créé l'alerte dans le Concepteur d'alertes de données.  
@@ -145,7 +155,8 @@ ms.lasthandoff: 06/22/2017
   
  Par défaut, les paramètres MaxRetries et SecondsBeforeRetry s'appliquent à tous les événements qui déclenchent des alertes de données. Si vous souhaitez avoir un contrôle plus précis des tentatives et des intervalles entre chaque tentative, vous pouvez ajouter des éléments à l'un des gestionnaires d'événements ou à tous les gestionnaires d'événements spécifiant des valeurs MaxRetries et SecondsBeforeRetry différentes.  
   
-### <a name="event-handlers-and-retry"></a>Gestionnaires d'événements et reprise  
+### Gestionnaires d'événements et reprise
+<a id="event-handlers-and-retry" class="xliff"></a>  
  Les gestionnaires d'événements sont les suivants :  
   
 |Gestionnaire d'événements|Description|  
@@ -216,7 +227,8 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="DiagnosticsLogging"></a> Diagnostic et connexion  
  Les alertes de données offrent plusieurs moyens pour aider les travailleurs de l'information et les administrateurs à suivre les alertes et comprendre pourquoi elles échouent, ou aider les administrateurs à utiliser les journaux d'exécution pour connaître les messages d'alerte envoyés, les destinataires, le nombre d'instances d'alerte envoyées, etc.  
   
-### <a name="data-alert-manager"></a>Gestionnaire des alertes de données  
+### Gestionnaire des alertes de données
+<a id="data-alert-manager" class="xliff"></a>  
  Le Gestionnaire des alertes de données répertorie les définitions d'alerte et les informations d'erreur qui aident les travailleurs de l'information et les administrateurs des alertes à comprendre pourquoi un échec se produit. Voici quelques causes courantes d'échec :  
   
 -   Le flux de données de rapport a changé et les colonnes qui sont référencées dans les règles de la définition d'alerte de données ne sont plus incluses dans le flux de données.  
@@ -225,12 +237,14 @@ ms.lasthandoff: 06/22/2017
   
 -   Le type de données dans la source de données sous-jacente a changé et la définition d'alerte n'est plus valide.  
   
-### <a name="logs"></a>Journaux  
+### Journaux
+<a id="logs" class="xliff"></a>  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit un certain nombre de journaux qui peuvent vous aider à en savoir plus les rapports exécutés lors du traitement des définitions d'alerte de données, les instances d'alerte de données créées etc. Trois journaux sont particulièrement utiles : le journal d'exécution des alertes, le journal d'exécution du serveur de rapports et le journal des traces du serveur de rapports.  
   
  Pour plus d’informations sur les autres journaux [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , consultez [Fichiers journaux et sources de Reporting Services](../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
-#### <a name="alerting-execution-log"></a>Journal d'exécution des alertes  
+#### Journal d'exécution des alertes
+<a id="alerting-execution-log" class="xliff"></a>  
  Le service d’exécution des alertes écrit des entrées dans la table ExecutionLogView dans la base de données des alertes. Vous pouvez interroger la table ou exécuter les procédures stockées suivantes pour obtenir des informations de diagnostic plus détaillées sur les alertes enregistrées dans la base de données des alertes.  
   
 -   ReadAlertData  
@@ -251,10 +265,12 @@ ms.lasthandoff: 06/22/2017
   
  Vous pouvez utiliser l'Agent SQL pour exécuter la procédure stockée selon une planification donnée. Pour plus d’informations, consultez [SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec).  
   
-#### <a name="report-server-execution-log"></a>Journal d'exécution du serveur de rapports  
+#### Journal d'exécution du serveur de rapports
+<a id="report-server-execution-log" class="xliff"></a>  
  Les rapports sont exécutés pour générer les flux de données sur lesquels les définitions d'alerte de données reposent. Le journal d'exécution du serveur de rapports dans la base de données du serveur de rapports capture des informations chaque fois que le rapport est exécuté. Vous pouvez interroger la vue ExecutionLog2 dans la base de données pour obtenir des informations détaillées. Pour plus d’informations, consultez [Journal des exécutions du serveur de rapports et vue ExecutionLog3](../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
-#### <a name="report-server-trace-log"></a>Journal des traces du serveur de rapports  
+#### Journal des traces du serveur de rapports
+<a id="report-server-trace-log" class="xliff"></a>  
  Le journal des traces du serveur de rapports contient des informations très détaillées sur les opérations du service de serveur de rapports, y compris celles effectuées par le service Web du serveur de rapports et le traitement en arrière-plan. Les informations du journal des traces sont utiles si vous déboguez une application qui comprend un serveur de rapports, ou si vous essayez de déterminer l'origine d'un problème consigné dans le journal des événements ou le journal des exécutions. Pour plus d’informations, consultez [Report Server Service Trace Log](../reporting-services/report-server/report-server-service-trace-log.md).  
   
 ##  <a name="PerformanceCounters"></a> Compteurs de performances  
@@ -318,10 +334,11 @@ ms.lasthandoff: 06/22/2017
   
 -   [Accorder des autorisations aux utilisateurs et alerter les administrateurs](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   
-## <a name="see-also"></a>Voir aussi
+## Voir aussi
+<a id="see-also" class="xliff"></a>
 
-[Concepteur d'alertes de données](../reporting-services/data-alert-designer.md)   
-[Gestionnaire des alertes de données pour les administrateurs d'alertes](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[Concepteur d’alertes de données](../reporting-services/data-alert-designer.md)   
+[Gestionnaire des alertes de données pour les administrateurs d’alertes](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Alerte de données pour les utilisateurs de SharePoint](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
 
 D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

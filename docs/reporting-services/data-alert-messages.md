@@ -1,7 +1,7 @@
 ---
 title: "Messages d’alerte de données | Documents Microsoft"
 ms.custom: 
-ms.date: 05/10/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,17 +16,20 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1182111ce441c5a02417532cf4344ceb4ce7e44e
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: a192628a5f2f899e96753d98e210bca6bfd426f1
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="data-alert-messages"></a>Messages d'alerte de données
+# Messages d'alerte de données
+<a id="data-alert-messages" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Les alertes de données autorisent l’envoi de deux types de messages d’alerte de données par courrier électronique : les messages contenant les résultats de l’alerte de données et les messages sans description d’erreur. Les messages contenant des résultats avisent tous les destinataires des modifications apportées aux données d'un rapport dignes d'intérêt et importantes pour les décisions économiques. Si pour une raison quelconque une erreur se produit et les résultats ne sont pas disponibles, un message d'erreur est envoyé à la place.
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+
+Alertes de données SQL Server Reporting Services remettre les deux types de données de messages d’alerte par courrier électronique : les Messages avec des données d’alerte résultats et des messages sans description d’erreur. Les messages contenant des résultats avisent tous les destinataires des modifications apportées aux données d'un rapport dignes d'intérêt et importantes pour les décisions économiques. Si pour une raison quelconque une erreur se produit et les résultats ne sont pas disponibles, un message d'erreur est envoyé à la place.
 
 Le propriétaire de la définition d'alerte de données peut également afficher des informations sur l'instance de l'alerte de données dans le Gestionnaire des alertes de données. Pour plus d’informations, consultez [Gestionnaire des alertes de données pour les utilisateurs SharePoint](../reporting-services/data-alert-manager-for-sharepoint-users.md).  
 
@@ -66,13 +69,14 @@ Le propriétaire de la définition d'alerte de données peut également afficher
 ##  <a name="HowTo"></a> Tâches associées  
  Cette section répertorie les procédures de création et de modification des définitions d'alerte de données qui fournissent la plupart des informations sur les éléments affichés dans les messages d'alerte de données.  
   
--   [Créer une alerte de données dans le Concepteur d'alertes](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
+-   [Créer une alerte de données dans le Concepteur d’alertes de données](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
   
--   [Modifier une alerte de données dans le Concepteur d'alertes](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [Modifier une alerte de données dans le Concepteur d’alertes](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
-## <a name="see-also"></a>Voir aussi
+## Voir aussi
+<a id="see-also" class="xliff"></a>
 
-[Concepteur d'alertes de données](../reporting-services/data-alert-designer.md)   
+[Concepteur d’alertes de données](../reporting-services/data-alert-designer.md)   
 [Alertes de données Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
 D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

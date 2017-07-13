@@ -2,7 +2,7 @@
 title: Prise en charge des navigateurs pour Reporting Services et Power View | Documents Microsoft
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/30/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -26,22 +26,24 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6a1f9f1dd348561e46c4e01dc4f635ef83f28193
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: fb5790cb0eaf8b160de98b2fa7ff3c327f654336
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="browser-support-for-reporting-services-and-power-view"></a>Planification de la prise en charge des navigateurs pour Reporting Services et Power View (Reporting Services 2014)
+# Planification de la prise en charge des navigateurs pour Reporting Services et Power View (Reporting Services 2014)
+<a id="browser-support-for-reporting-services-and-power-view" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 En savoir plus sur le navigateur que les versions sont prises en charge pour la gestion et l’affichage de SQL Server Reporting Services, les contrôles ReportViewer et Power View.
 
 > [!NOTE]
 > Intégration de Reporting Services avec SharePoint n’est plus disponible après SQL Server 2016.
 
-## <a name="browser-requirements-for-the-web-portal"></a>Configuration requise pour le portail web
+## Configuration requise pour le portail web
+<a id="browser-requirements-for-the-web-portal" class="xliff"></a>
 
 Voici la liste actuelle des navigateurs pris en charge pour le portail web.
 
@@ -71,7 +73,8 @@ Voici la liste actuelle des navigateurs pris en charge pour le portail web.
 
  **(+)** Dernière version commercialisée
 
-## <a name="browser-requirements-for-the-reportviewer-web-control-2015"></a>Navigateurs requis pour le contrôle web ReportViewer (2015)
+## Navigateurs requis pour le contrôle web ReportViewer (2015)
+<a id="browser-requirements-for-the-reportviewer-web-control-2015" class="xliff"></a>
 
  Voici la liste actuelle des navigateurs pris en charge avec le contrôle web ReportViewer (2015). La Visionneuse de rapports prend en charge l’affichage des rapports du portail web [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] et des bibliothèques SharePoint.  
 
@@ -92,7 +95,8 @@ Voici la liste actuelle des navigateurs pris en charge pour le portail web.
 
  Si vous utilisez un produit SharePoint intégré à [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consultez  [Planifier la prise en charge du navigateur dans SharePoint 2016](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
 
-### <a name="authentication-requirements"></a>Exigences relatives à l’authentification
+### Exigences relatives à l’authentification
+<a id="authentication-requirements" class="xliff"></a>
 
  Les navigateurs prennent en charge des schémas d'authentification spécifiques qui doivent être gérés par le serveur de rapports pour que la demande du client réussisse. Le tableau suivant identifie les types d'authentification par défaut pris en charge par chaque navigateur exécuté sur un système d'exploitation Windows.
 
@@ -106,7 +110,8 @@ Voici la liste actuelle des navigateurs pris en charge pour le portail web.
 
  **(+)** Dernière version commercialisée
 
-### <a name="script-requirements-for-viewing-reports"></a>Contraintes relatives à l’utilisation de scripts pour afficher des rapports
+### Contraintes relatives à l’utilisation de scripts pour afficher des rapports
+<a id="script-requirements-for-viewing-reports" class="xliff"></a>
 
  Pour utiliser la visionneuse de rapports, configurez votre navigateur pour exécuter des scripts.
 
@@ -119,7 +124,8 @@ Voici la liste actuelle des navigateurs pris en charge pour le portail web.
 > [!NOTE]
 > La barre d'outils Rapport fait partie du composant Visionneuse HTML. Par défaut, la barre d'outils s'affiche en haut de chaque rapport affiché dans une fenêtre de navigateur. La visionneuse de rapports contient des fonctionnalités qui vous permettent de rechercher des informations dans le rapport, d'atteindre une page spécifique, et d'ajuster la taille de la page à des fins d'affichage. Pour plus d'informations sur la barre d'outils du rapport ou sur la Visionneuse HTML, consultez [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md).
 
-## <a name="browser-support-for-reportviewer-web-server-controls-in-visual-studio"></a>Prise en charge des navigateurs pour les contrôles serveurs Web ReportViewer dans Visual Studio
+## Prise en charge des navigateurs pour les contrôles serveurs Web ReportViewer dans Visual Studio
+<a id="browser-support-for-reportviewer-web-server-controls-in-visual-studio" class="xliff"></a>
 
  Le contrôle serveur Web ReportViewer est utilisé pour inclure la fonctionnalité de rapports dans une application Web ASP.NET. Les contrôles sont inclus dans Visual Studio et prennent en charge des navigateurs et des versions de navigateur différents de ceux des autres composants décrits dans cette rubrique. Le type de navigateur utilisé pour afficher l'application détermine le type de fonctionnalité ReportViewer que vous pouvez fournir dans votre application. Utilisez le tableau de cette rubrique pour déterminer quels sont les navigateurs pris en charge soumis à des restrictions de fonctionnalités de rapport et quelles sont les plateformes prises en charge.  
 
@@ -135,7 +141,8 @@ Voici la liste actuelle des navigateurs pris en charge pour le portail web.
 
  **(+)** Dernière version commercialisée
 
-## <a name="power-view-browser-support"></a>Prise en charge du navigateur Power View
+## Prise en charge du navigateur Power View
+<a id="power-view-browser-support" class="xliff"></a>
 
 **Microsoft Windows**  
 *Windows 7, 8.1, 10 ; Windows Server 2008 R2, 2012, 2012 R2*
@@ -152,7 +159,8 @@ Voici la liste actuelle des navigateurs pris en charge pour le portail web.
 
  Pour en savoir plus sur la prise en charge des navigateurs SharePoint 2016, consultez [Planifier la prise en charge du navigateur dans SharePoint 2013](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
 
-## <a name="next-steps"></a>Étapes suivantes
+## Étapes suivantes
+<a id="next-steps" class="xliff"></a>
 
 [Recherche et affichage de rapports dans le portail web](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Outils de Reporting Services](../reporting-services/tools/reporting-services-tools.md)  

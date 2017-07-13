@@ -1,7 +1,7 @@
 ---
 title: "Alerte de données pour les utilisateurs de SharePoint | Documents Microsoft"
 ms.custom: 
-ms.date: 05/10/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,17 +19,21 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f8d31181dd32ab6d48bdc3452986c6ed1c51f9f8
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: e9644b5bfcc57b24793684095aba912c688346b8
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="data-alert-manager-for-sharepoint-users"></a>Gestionnaire des alertes de données pour les utilisateurs SharePoint
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+# Gestionnaire des alertes de données pour les utilisateurs SharePoint
+<a id="data-alert-manager-for-sharepoint-users" class="xliff"></a>
 
-[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit le Gestionnaire des alertes de données pour permettre aux travailleurs de l’information SharePoint de gérer les alertes de données. Ces derniers peuvent afficher les informations relatives aux alertes qu'ils ont créées, supprimer des alertes, ouvrir les définitions d'alerte pour les modifier et exécuter des alertes à la demande. Il peuvent choisir de consulter les alertes d'un seul rapport ou les alertes de tous les rapports. L'illustration suivante montre les fonctionnalités dont les travailleurs de l'information disposent dans le Gestionnaire des alertes de données.
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+
+[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]fournit le Gestionnaire des alertes de données pour les travailleurs de SharePoint gérer les alertes de données. Ces derniers peuvent afficher les informations relatives aux alertes qu'ils ont créées, supprimer des alertes, ouvrir les définitions d'alerte pour les modifier et exécuter des alertes à la demande. Il peuvent choisir de consulter les alertes d'un seul rapport ou les alertes de tous les rapports. L'illustration suivante montre les fonctionnalités dont les travailleurs de l'information disposent dans le Gestionnaire des alertes de données.
 
 ![Fonctionnalités du gestionnaire pour les utilisateurs SharePoint d’alerte](../reporting-services/media/rs-alertmanageriw.gif "des fonctionnalités de gestionnaire d’alertes pour les utilisateurs SharePoint")  
 
@@ -86,7 +90,8 @@ Quand le site SharePoint autorise les alertes de données, deux pages SharePoint
 -   [Modifier une alerte de données dans le Concepteur d’alertes](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
 
-## <a name="see-also"></a>Voir aussi
+## Voir aussi
+<a id="see-also" class="xliff"></a>
 
 [Concepteur d’alertes de données](../reporting-services/data-alert-designer.md)   
 [Créer une alerte de données dans le Concepteur d’alertes de données](../reporting-services/create-a-data-alert-in-data-alert-designer.md)   

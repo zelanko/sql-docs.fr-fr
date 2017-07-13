@@ -1,7 +1,7 @@
 ---
 title: "Utilisation des instantanés (portail web) | Documents Microsoft"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,15 +15,17 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f158c027acfd2acdf7a745c640babad561ec0d20
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 2bca4e3089bde763669c4fe518f509fbe94cb6eb
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="working-with-snapshots-web-portal"></a>Utilisation des instantanés (portail web)
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+# Utilisation des instantanés (portail web)
+<a id="working-with-snapshots-web-portal" class="xliff"></a>
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Vous pouvez contrôler si les instantanés sont créés pour un rapport en sélectionnant le **points de suspension (...)**  d’un rapport, en sélectionnant **gérer** et en sélectionnant **mise en cache** ou **instantanés d’historique**.  
   
@@ -32,7 +34,8 @@ Vous pouvez contrôler si les instantanés sont créés pour un rapport en séle
    
 Vous pouvez créer un instantané du cache, afin d’accélérer le chargement de propriétés d’exécution spécifiques. Vous pouvez également utiliser des instantanés d’historique pour capturer des points dans le temps.  
   
-## <a name="creating-a-cache-snapshot"></a>Création d’un instantané du cache  
+## Création d’un instantané du cache
+<a id="creating-a-cache-snapshot" class="xliff"></a>  
   
 Vous pouvez créer un instantané de la manière suivante.  
   
@@ -44,7 +47,8 @@ Vous pouvez créer un instantané de la manière suivante.
   
 3.  Sélectionnez **Créer un instantané du cache quand je clique sur Appliquer dans cette page** si vous souhaitez créer un instantané du cache dès maintenant. Si vous sélectionnez cette option, l’instantané n’est pas actualisé.  
   
-## <a name="create-modify-and-delete-history-snapshots"></a>Créer, modifier et supprimer des instantanés d’historique  
+## Créer, modifier et supprimer des instantanés d’historique
+<a id="create-modify-and-delete-history-snapshots" class="xliff"></a>  
   
 Pour utiliser des instantanés d’historique, gérez un rapport, puis sélectionnez **Instantanés d’historique**.  
   
@@ -62,7 +66,8 @@ Pour générer un instantané d’historique, le rapport doit pouvoir s’exécu
   
 3.  Vous pouvez sélectionner un instantané d’historique pour l’afficher. Les instantanés qui apparaissent dans l'historique de rapport ne sont différenciés que par la date et l'heure de leur création. Il n'y a aucun moyen de déterminer si un instantané a été généré par une opération manuelle ou planifiée.  
   
-### <a name="schedule-and-settings"></a>Planification et paramètres  
+### Planification et paramètres
+<a id="schedule-and-settings" class="xliff"></a>  
   
 Sélectionnez **Planification et paramètres** pour afficher des options supplémentaires pour la planification et le contrôle de la rétention des instantanés créés.  
   
@@ -76,7 +81,8 @@ Vous pouvez également définir la façon dont vous souhaitez conserver les inst
   
 Vous pouvez sélectionner cette option pour copier un instantané de rapport que vous avez généré selon les propriétés d’exécution de rapport dans l’historique de rapport. Vous pouvez définir les propriétés d'exécution de rapport pour exécuter un rapport à partir d'un instantané générée. En définissant cette propriété d'historique de rapport, vous pouvez conserver un enregistrement de tous les instantanés des rapports générés au fil du temps en plaçant des copies de ces derniers dans un historique de rapport.
 
-## <a name="next-steps"></a>Étapes suivantes
+## Étapes suivantes
+<a id="next-steps" class="xliff"></a>
 
 [Portail Web](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Utilisation des rapports paginés](working-with-paginated-reports-web-portal.md)  

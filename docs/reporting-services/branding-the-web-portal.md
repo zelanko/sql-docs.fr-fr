@@ -1,7 +1,7 @@
 ---
 title: Personnalisation du portail web | Documents Microsoft
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,22 +15,24 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 19742f59b104d18633a954dc2f8bc9824b58ef21
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: fcca4ace177a9d606a49db485fe6c61c4ef24355
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 
-# <a name="branding-the-web-portal"></a>Personnalisation du portail web
+# Personnalisation du portail web
+<a id="branding-the-web-portal" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Vous pouvez modifier l'apparence du portail web en le personnalisant à l’image de votre entreprise. Cette opération s'effectue via un package de marque. Vous pouvez créer ce package de marque même si vous n’avez les connaissances approfondies requises en matière de feuille de style en cascade (CSS).  
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
    
-## <a name="creating-the-brand-package"></a>Création du package de marque  
+## Création du package de marque
+<a id="creating-the-brand-package" class="xliff"></a>  
   
 Un package de marque pour Reporting Services se compose de trois éléments, et il est empaqueté comme un fichier .zip.   
   
@@ -40,7 +42,8 @@ Un package de marque pour Reporting Services se compose de trois éléments, et 
   
 Les fichiers doivent afficher les noms ci-dessus. Le fichier zip peut être nommé comme vous le souhaitez.  
   
-### <a name="metadataxml"></a>metadata.xml  
+### metadata.xml
+<a id="metadataxml" class="xliff"></a>  
   
 Le fichier metadata.xml vous permet de définir le nom du package de marque et comporte une entrée de référence pour vos deux fichiers logo.png et colors.json.  
   
@@ -63,7 +66,8 @@ Exemple avec un fichier de logo.
       <Item key="logo" path="logo.png" />  
     </Contents>  
   
-### <a name="colorsjson"></a>Colors.json  
+### Colors.json
+<a id="colorsjson" class="xliff"></a>  
   
 Lorsque le package de marque est chargé, le serveur extrait les paires nom/valeur appropriées à partir du fichier colors.json et les fusionne avec la feuille de style LESS master, brand.less. Ce fichier LESS est ensuite traité et le fichier CSS qui en résulte est transmis au client. Toutes les couleurs de la feuille de style suivent la représentation hexadécimale à six caractères d'une couleur.  
   
@@ -114,13 +118,15 @@ La première fois que vous vous connectez à un serveur avec l'Éditeur de rappo
   
 Vous pouvez ensuite utiliser ce thème pour les rapports mobiles que vous créez, même s’ils ne sont pas destinés au même serveur sur lequel vous avez déployé le thème.   
   
-### <a name="using-a-logo"></a>Utilisation d’un logo  
+### Utilisation d’un logo
+<a id="using-a-logo" class="xliff"></a>  
   
 Si vous incluez un logo avec votre package de marque, ce logo apparaît dans le portail web à la place de celui que vous définissez pour le portail web dans le menu Paramètres du site.  
   
 Le fichier que vous incluez comme logo doit utiliser le format de fichier PNG. Une fois chargées sur le serveur, les dimensions du fichier seront mises à l'échelle. Ces dimensions devraient avoisiner 290 x 60 pixels.  
    
-## <a name="applying-the-brand-package-to-the-web-portal"></a>Application du package de marque au portail web  
+## Application du package de marque au portail web
+<a id="applying-the-brand-package-to-the-web-portal" class="xliff"></a>  
   
 Pour ajouter, télécharger ou supprimer un package de marque, vous pouvez procédez comme suit.  
   
@@ -140,7 +146,8 @@ L’option**Charger le package de marque** appliquera le package au le portail w
   
 Vous pouvez également **télécharger** ou **supprimer** le package. La suppression du package réinitialisera immédiatement le portail web à la marque par défaut.  
   
-## <a name="metadataxml-example"></a>Exemple de fichier metadata.xml  
+## Exemple de fichier metadata.xml
+<a id="metadataxml-example" class="xliff"></a>  
   
     \<?xml version="1.0" encoding="utf-8"?>  
     <SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
@@ -154,7 +161,8 @@ Vous pouvez également **télécharger** ou **supprimer** le package. La suppres
         </Contents>  
     </SystemResourcePackage>  
    
-## <a name="colorsjson-example"></a>Exemple de fichier colors.json  
+## Exemple de fichier colors.json
+<a id="colorsjson-example" class="xliff"></a>  
   
     {  
         "name":"Multicolored example brand",  

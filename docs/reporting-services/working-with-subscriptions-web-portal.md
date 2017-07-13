@@ -1,7 +1,7 @@
 ---
 title: Utilisation des abonnements (portail web) | Documents Microsoft
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,15 +15,17 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 72e0abad76008b445fe32a9fed3cb4522ab64af2
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 4f49f5376344d6c52159c3a4dcff553255c79320
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="working-with-subscriptions-web-portal"></a>Utilisation des abonnements (portail web)
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+# Utilisation des abonnements (portail web)
+<a id="working-with-subscriptions-web-portal" class="xliff"></a>
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 La page Abonnements vous permet de répertorier tous les abonnements du rapport actif. Si vous disposez d'une autorisation suffisante (accordée par la tâche « Gérer tous les abonnements », par exemple), vous pouvez afficher les abonnements de tous les utilisateurs. Si ce n'est pas le cas, cette page affiche uniquement les abonnements dont vous être propriétaire.  
   
@@ -40,12 +42,14 @@ Vous pouvez obtenir à la page Abonnements en sélectionnant le **points de susp
   
 Cette page fournit également l’état du résultat des exécutions d’abonnement dans la colonne **Résultat** . Si une erreur s’est produite pour un abonnement, vous devez d’abord vérifier la colonne de résultat pour voir le message correspondant.  
   
-## <a name="creating-or-editing-a-subscription"></a>Création ou modification d’un abonnement  
+## Création ou modification d’un abonnement
+<a id="creating-or-editing-a-subscription" class="xliff"></a>  
 La page Nouvel abonnement ou Modifier l'abonnement permet de créer un abonnement ou de modifier un abonnement existant à un rapport. Les options de cette page varient selon votre attribution de rôle. Les utilisateurs qui possèdent des autorisations avancées peuvent utiliser des options supplémentaires.  
   
 Les abonnements sont pris en charge pour les rapports qui peuvent s'exécuter sans assistance. Les rapports doivent utiliser au minimum des informations d'identification stockées ou aucune information d'identification. Si le rapport utilise des paramètres, une valeur par défaut doit être spécifiée. Les abonnements peuvent devenir inactifs si vous modifiez les paramètres d'exécution de rapport ou que vous supprimez les valeurs par défaut utilisées par les propriétés de paramètres. Pour plus d’informations, consultez [Créer et gérer des abonnements pour les serveurs de rapports en mode natif].  
   
-### <a name="type-of-subscription"></a>Type d’abonnement  
+### Type d’abonnement
+<a id="type-of-subscription" class="xliff"></a>  
 Vous avez le choix entre un **abonnement standard** et un **abonnement piloté par les données**.  
   
 ![ssRSWebPortal-subscriptions3](../reporting-services/media/ssrswebportal-subscriptions3.png)  
@@ -56,7 +60,8 @@ Pour créer un abonnement piloté par les données, vous devez savoir comment é
   
 Cette option est disponible pour les utilisateurs qui disposent d’autorisations avancées. Si vous utilisez la sécurité par défaut, les abonnements pilotés par les données ne peuvent pas être utilisés pour les rapports contenus dans le dossier Mes rapports.  
   
-### <a name="destination"></a>Destination  
+### Destination
+<a id="destination" class="xliff"></a>  
 Sélectionnez l'extension de remise à utiliser pour distribuer le rapport.   
   
 La disponibilité d'une extension de remise varie selon qu'elle est installée et configurée sur le serveur de rapports. La messagerie Report Server est l'extension de remise par défaut, mais elle doit être configurée avant de pouvoir être utilisée. La remise de partage de fichiers ne requiert aucune configuration, mais vous devez définir un dossier partagé pour pouvoir l'utiliser.  
@@ -69,7 +74,8 @@ Selon l'extension de remise choisie, les paramètres suivants s'affichent :
   
 -   Les abonnements aux partages de fichiers fournissent des champs qui vous permettent de spécifier un emplacement cible. Vous pouvez remettre n'importe quel rapport dans un partage de fichiers. Toutefois, les rapports qui prennent en charge des fonctionnalités interactives (notamment les rapports de matrice qui prennent en charge l'extraction vers le bas pour les lignes et les colonnes) sont rendus sous forme de fichiers statiques. Vous ne pouvez pas afficher les lignes et les colonnes extraites d'un fichier statique. Le nom du partage de fichiers doit être spécifié au format UNC (Uniform Naming Convention) (par exemple, \\mycomputer\public\myreportfiles). N'incluez pas de barre oblique inverse à la fin du chemin d'accès. Le fichier de rapport est remis dans un format de fichier qui est basé sur le format de rendu (par exemple, si vous choisissez Excel, le fichier est remis en tant que fichier .xls).  
   
-### <a name="data-driven-subscription-dataset"></a>Dataset d’abonnement piloté par les données  
+### Dataset d’abonnement piloté par les données
+<a id="data-driven-subscription-dataset" class="xliff"></a>  
 Pour un abonnement piloté par les données, vous devez définir le dataset utilisé pour l’abonnement. Sélectionnez **Modifier le dataset** pour fournir ces informations.  
   
 ![ssRSWebPortal-subscriptions4](../reporting-services/media/ssrswebportal-subscriptions4.png)  

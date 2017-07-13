@@ -1,7 +1,7 @@
 ---
 title: "Gestionnaire d’alertes de données pour les administrateurs d’alertes | Documents Microsoft"
 ms.custom: 
-ms.date: 05/10/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,17 +19,20 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c9d88d14b1f67a6d8da584349062de51e75ebf02
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 4690c2cc9c6f9cbf9d9591993e1c2483489e6114
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="data-alert-manager-for-alerting-administrators"></a>Gestionnaire des alertes de données pour les administrateurs d'alertes
+# Gestionnaire des alertes de données pour les administrateurs d'alertes
+<a id="data-alert-manager-for-alerting-administrators" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit le Gestionnaire des alertes de données utilisé par les administrateurs d’alertes SharePoint pour gérer des alertes de données. Les administrateurs d'alertes peuvent consulter les informations relatives à toutes les alertes enregistrées sur le site et supprimer des alertes. L'image suivante affiche les fonctionnalités disponibles aux gestionnaires d'alertes SharePoint dans le Gestionnaire des alertes de données.
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+
+SQL Server Reporting Services fournit le Gestionnaire des alertes de données pour les administrateurs d’alertes SharePoint gérer les alertes de données. Les administrateurs d'alertes peuvent consulter les informations relatives à toutes les alertes enregistrées sur le site et supprimer des alertes. L'image suivante affiche les fonctionnalités disponibles aux gestionnaires d'alertes SharePoint dans le Gestionnaire des alertes de données.
 
 ![Gestionnaire d’alertes pour les administrateurs du](../reporting-services/media/rs-alertmanagersite.gif "Gestionnaire des alertes pour les administrateurs de site SharePoint")
 
@@ -79,7 +82,8 @@ ms.lasthandoff: 06/22/2017
   
 -   [Gérer toutes les alertes de données sur un site SharePoint dans le Gestionnaire des alertes de données](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
 
-## <a name="see-also"></a>Voir aussi
+## Voir aussi
+<a id="see-also" class="xliff"></a>
 
 [Alertes de données Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 

@@ -2,7 +2,7 @@
 title: Installer Reporting Services | Documents Microsoft
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/10/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,15 +17,18 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4f54a27cbe1553291095e8124bac55941d4eb326
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 9d336624d3a9468757363bc468e5cd85d607cbfd
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="install-reporting-services"></a>Installer Reporting Services
+# Installer Reporting Services
+<a id="install-reporting-services" class="xliff"></a>
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] implique des composants serveur pour le stockage des éléments de rapport, la restitution des rapports et le traitement des services d’abonnement et des autres services de rapport.  La procédure d’installation de serveur diffère selon qu’elle concerne un serveur de rapports en mode natif ou un serveur de rapports en mode SharePoint. Cette section inclut des rubriques détaillées pour l’installation et la vérification de scénarios [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de base.
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+Installation de SQL Server Reporting Services implique des composants de serveur pour le stockage des éléments de rapport, de rendu de rapports et de traitement d’abonnement et d’autres services de rapport.  La procédure d’installation de serveur diffère selon qu’elle concerne un serveur de rapports en mode natif ou un serveur de rapports en mode SharePoint. Cette section inclut des rubriques détaillées pour l’installation et la vérification de scénarios [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de base.
 
 > [!NOTE]
 > Recherchez Power BI serveur de rapports ? Consultez [installer Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/).
@@ -47,7 +50,8 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]
 > SQL Server Data Tools (SSDT) n’est pas inclus avec SQL Server 2016. [Téléchargez SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714).
 
-## <a name="next-steps"></a>Étapes suivantes
+## Étapes suivantes
+<a id="next-steps" class="xliff"></a>
 
 [Combinaisons prises en charge de SharePoint et le serveur Reporting Services et compléments](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
 [Mettre à niveau et migrer Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  

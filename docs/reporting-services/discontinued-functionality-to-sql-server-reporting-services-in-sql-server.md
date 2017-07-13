@@ -1,6 +1,6 @@
 ---
 title: "Fonctionnalités de SQL Server Reporting Services dans SQL Server 2016 supprimées | Documents Microsoft"
-ms.date: 05/30/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,25 +20,31 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 62fef7b5cd696802b351ebcef9c14204629c680b
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 937a22d56d2c290fb87d963ef3fd54d53c34f5fb
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 
-# <a name="discontinued-functionality-to-sql-server-reporting-services-in-sql-server"></a>Fonctionnalités supprimées dans SQL Server Reporting Services dans SQL Server 
+# Fonctionnalités supprimées de SQL Server Reporting Services dans SQL Server 2016
+<a id="discontinued-functionality-to-sql-server-reporting-services-in-sql-server-2016" class="xliff"></a>
 
-  Cette rubrique décrit [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] les fonctionnalités qui ne sont plus disponibles dans SQL Server 2016. Elle n'inclut pas les annonces relatives à la cessation de la prise en charge pour des versions spécifiques du système d'exploitation ou de [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Services (IIS). Pour plus d’informations sur cette configuration système requise, consultez [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
-  
-Une *fonctionnalité interrompue* désigne une fonctionnalité qui n’est plus prise en charge. Elle peut également avoir été physiquement retirée du produit. Les fonctionnalités suivantes ne sont plus disponibles.  
-  
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+
+Cette rubrique décrit les fonctionnalités de SQL Server Reporting Services qui ne sont plus disponibles dans SQL Server 2016. Il n’inclut pas les annonces sur la prise en charge supprimée des versions spécifiques du système d’exploitation ou Microsoft Internet Information Services (IIS). Pour plus d’informations sur cette configuration système requise, consultez [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
+
+Une *fonctionnalité interrompue* désigne une fonctionnalité qui n’est plus prise en charge. Elle peut également avoir été physiquement retirée du produit. Les fonctionnalités suivantes ne sont plus disponibles.
+
 |Fonctionnalité|Remplacement ou contournement|
 |-|-|
-|Charger des modèles de rapport via le [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]|Ceci peut encore être effectué via l’API SOAP.|  
-|Gérer des modèles de rapport via le [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]|Ceci peut encore être effectué via l’API SOAP.|  
+|Télécharger des modèles de rapport via le portail web|Ceci peut encore être effectué via l’API SOAP.|
+|Gérer les modèles de rapport via le portail web|Ceci peut encore être effectué via l’API SOAP.|
 
-## <a name="next-steps"></a>Étapes suivantes
+## Étapes suivantes
+<a id="next-steps" class="xliff"></a>
 
 [Nouveautés de Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
 [Changements de comportement SQL Server Reporting Services dans SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
