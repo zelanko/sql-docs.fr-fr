@@ -2,7 +2,7 @@
 title: Le portail Web (SSRS en Mode natif) | Documents Microsoft
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/15/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,22 +15,26 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 68cdac26293a2025a7a2cf8833d2d0f2f4f6ff8c
+ms.translationtype: MT
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: e3dff8b613f933caa84522b31bdc862aa9c799f7
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/10/2017
 
 ---
-# <a name="web-portal-ssrs-native-mode"></a>Portail web (SSRS en mode natif)
+<a id="web-portal-ssrs-native-mode" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+# Portail web (SSRS en mode natif)
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Le portail web Reporting Services est une expérience web qui vous permet d’afficher des rapports, rapports mobiles et indicateurs de performance clés et naviguer parmi les éléments qui se trouvent dans votre instance de serveur de rapports. Vous pouvez également utiliser le portail web pour administrer une instance de serveur de rapports unique.
 
 ![Portail SSRS](../reporting-services/media/ssrsportal.png)
 
-## <a name="what-is-the-web-portal"></a>Qu’est le portail web
+<a id="what-is-the-web-portal" class="xliff"></a>
+
+## Qu’est le portail web
 
 Vous pouvez utiliser le portail web pour effectuer les tâches suivantes :
 
@@ -68,13 +72,17 @@ Dans le cas d'une nouvelle installation, seuls les administrateurs locaux possè
 > [!NOTE]
 > Si vous accédez au portail web sur l'ordinateur local sur lequel le serveur est en cours d’exécution, il est possible qu’un message indiquant que vous n'êtes pas autorisé à afficher ce dossier s’affiche. Cela est dû au contrôle d'accès universel (UAC) et au fait que vous n'exécutez pas le navigateur en tant qu'administrateur. Vous n'êtes pas en mesure d'exécuter la session en tant qu'administrateur. Vous devez utiliser Internet Explorer. Vous pouvez soit accéder au serveur à distance, soit lancer Internet Explorer en tant qu'administrateur et accéder au portail web. Si vous souhaitez utiliser le portail web à distance, vous devez accorder les droits de gestionnaire du contenu de votre compte sur le dossier.  
 
-## <a name="start-and-use-the-web-portal"></a>Prise en main du portail web
+<a id="start-and-use-the-web-portal" class="xliff"></a>
+
+## Prise en main du portail web
 
 Le portail web est une application web que vous ouvrez en tapant le [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] URL dans la barre d’adresses de la fenêtre du navigateur. Lorsque vous démarrez le [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], les pages, liens et options que vous voyez varient en fonction des autorisations dont vous disposez sur le serveur de rapports. Pour effectuer une tâche, vous devez être titulaire d'un rôle qui inclut la tâche.  Un utilisateur doté d'un rôle disposant d'autorisations complètes peut accéder à l'ensemble des menus et des pages de l'application qui sont disponibles pour gérer un serveur de rapports. Un utilisateur doté d'un rôle limité aux autorisations d'affichage et d'exécution des rapports ne peut voir que les menus et les pages concernées par ces activités. Chaque utilisateur peut disposer de rôles divers pour les différents serveurs de rapports qu'il utilise, voire pour les divers rapports et dossiers stockés sur un serveur de rapports unique.
 
 Pour plus d'informations, consultez [Attribution d'autorisations sur un serveur de rapports en mode natif](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).
 
-### <a name="start-the-web-portal"></a>Démarrer le portail web
+<a id="start-the-web-portal" class="xliff"></a>
+
+### Démarrer le portail web
 
 Pour démarrer le portail web à partir d’un navigateur, procédez comme suit :
 
@@ -84,9 +92,11 @@ Pour démarrer le portail web à partir d’un navigateur, procédez comme suit�
 
     Par défaut, l’URL est *http://[ComputerName]/reports*.
 
-    Le serveur de rapports peut être configuré pour utiliser un port spécifique. Par exemple, *http://[ComputerName]:80/reports* ou *http://[ComputerName]:8080/reports*.
+    Le serveur de rapports peut être configuré pour utiliser un port spécifique. Par exemple, *http://[ComputerName]:80/reports* ou *http://[ComputerName]:8080/reports*,
 
-## <a name="grouping-by-categories"></a>Regroupement par catégories
+<a id="grouping-by-categories" class="xliff"></a>
+
+## Regroupement par catégories
 
 Le portail web permet de regrouper des éléments en différentes catégories. Les catégories disponibles sont les suivantes.
 
@@ -105,7 +115,9 @@ Vous pouvez contrôler ce qui est affiché en sélectionnant **Affichage** dans 
 
 ![ssRSWebPortal-hidden](../reporting-services/media/ssrswebportal-hidden.png)
 
-### <a name="power-bi-desktop-reports-and-excel-workbooks"></a>Rapports Power BI Desktop et classeurs Excel
+<a id="power-bi-desktop-reports-and-excel-workbooks" class="xliff"></a>
+
+### Rapports Power BI Desktop et classeurs Excel
 
 Vous pouvez télécharger, organiser et gérer les autorisations pour les rapports Power BI Desktop et les classeurs Excel. Ils sont regroupés au sein du portail web.
 
@@ -113,13 +125,17 @@ Vous pouvez télécharger, organiser et gérer les autorisations pour les rappor
 
 Les fichiers sont stockés dans Reporting Services, de la même façon que les autres fichiers de ressources. Sélectionner un de ces éléments permet de le télécharger localement sur votre bureau. Vous pouvez enregistrer les modifications apportées en les téléchargeant à nouveau sur le serveur de rapports.
 
-## <a name="search-for-items"></a>Recherche d’éléments
+<a id="search-for-items" class="xliff"></a>
+
+## Recherche d’éléments
 
 Vous pouvez entrer une équipe de recherche pour voir tout ce à quoi vous pouvez accéder. Les résultats sont classés ainsi : indicateurs de performance clés, rapports, jeux de données et autres éléments. Vous pouvez ensuite interagir avec les résultats et les ajouter à vos favoris.
 
 ![ssRSWebPortal-Search](../reporting-services/media/ssrswebportal-search.png)
 
-## <a name="web-portal-tasks"></a>Tâches du portail web
+<a id="web-portal-tasks" class="xliff"></a>
+
+## Tâches du portail web
 
 [Personnalisation du portail web](../reporting-services/branding-the-web-portal.md)
 
@@ -127,7 +143,9 @@ Vous pouvez entrer une équipe de recherche pour voir tout ce à quoi vous pouve
 
 [Utilisation de jeux de données partagés](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-## <a name="see-also"></a>Voir aussi
+<a id="see-also" class="xliff"></a>
+
+## Voir aussi
 
 [Créer des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 [Configurer une URL (Gestionnaire de configuration de SSRS)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
