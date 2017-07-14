@@ -2,7 +2,7 @@
 title: "Nouveautés de SQL Server 2016 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 12/15/2016
+ms.date: 06/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -23,16 +23,17 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a702ff8995bc7d4ad7b67c1e7a9d12299afb068f
+ms.sourcegitcommit: a59a02db0054f3fe1a7e571ad97f23c65b021a77
+ms.openlocfilehash: 331f6b68bb4cdd4803dd0fd634c3584f3b809064
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/29/2017
 
 ---
-# <a name="what39s-new-in-sql-server-2016"></a>Nouveautés de SQL Server 2016
- [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] est la plus grande avancée dans l’histoire de la plateforme de données Microsoft. Obtenez un aperçu en temps réel de vos données transactionnelles et analytiques avec une plateforme de base de données évolutive dans laquelle tout est intégré, à savoir des performances en mémoire sans précédent, des nouvelles innovations en matière de sécurité et de haute disponibilité, mais aussi des analyses complexes qui rendent vos applications stratégiques intelligentes.
+# Nouveautés de SQL Server 2016
+<a id="whats-new-in-sql-server-2016" class="xliff"></a>
+ SQL Server 2016 - Créez des applications critiques et intelligentes à l’aide d’une plateforme de base de données hybride évolutive où tout est intégré : depuis les performances en mémoire et la sécurité avancée jusqu’à l’analytique en base de données.
  
- Cette rubrique récapitule les liens vers les informations sur les nouveautés au niveau du composant [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] .   
+ Cette page fournit des liens vers des informations détaillées sur les nouveautés de SQL Server 2016 pour chaque composant.   
  
   ![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
  
@@ -40,17 +41,15 @@ ms.lasthandoff: 06/22/2017
  
     
  **Essayez SQL Server aujourd’hui !**    
- - Get the **free** [**SQL Server 2016 Developer edition!!**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers)
- 
- 
-[![Télécharger à partir du Centre d’évaluation](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) Télécharger SQL Server 2016 à partir du **[Centre d’évaluation](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)** 
+ - Téléchargez **gratuitement** [**SQL Server 2016 Developer Edition.**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers)
     
-[![Machine virtuelle Azure de petite taille](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Vous avez un compte Azure ?  Cliquez **[ici](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** pour lancer une machine virtuelle avec SQL Server 2016 SP1 déjà installé.  
+[![Machine virtuelle Azure de petite taille](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Vous avez un compte Azure ? Faites tourner une [machine virtuelle avec SQL Server 2016 déjà installé](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
 
- [![Télécharger à partir du Centre d’évaluation](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) Télécharger la dernière version de [**SQL Server Management Studio (SSMS)**](https://msdn.microsoft.com/library/mt238290.aspx).   
+ [![Télécharger à partir du Centre d’évaluation](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) Téléchargez la dernière version de [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).   
 
     
- ## <a name="whats-new-in-sql-server"></a>Nouveautés de SQL Server
+ ## Nouveautés de SQL Server
+<a id="whats-new-in-sql-server" class="xliff"></a>
 Liens vers des rubriques individuelles :
  
  - [Programme d’installation de SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)   
@@ -61,22 +60,23 @@ Liens vers des rubriques individuelles :
 
  - [Nouveau module SQL PowerShell](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
  
- - [Integration Services](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)    
+ - [Integration Services (SSIS)](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)    
   
  - [Reporting Services (SSRS)](https://msdn.microsoft.com/library/ms170438.aspx)   
   
- - [Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)    
+ - [Master Data Services (MDS)](../master-data-services/what-s-new-in-master-data-services-mds.md)    
        
  - [SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)    
       
   
     
-## <a name="see-also"></a>Voir aussi    
+## Autres liens
+<a id="more-links" class="xliff"></a>   
  +   [Notes de publication de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md). 
 + [Feuille de données SQL Server 2016](http://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
 + [Fonctionnalités prises en charge par les éditions de SQL Server](https://msdn.microsoft.com/library/cc645993.aspx)
  + [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
- + [Installer SQL Server 2016 à partir de l’Assistant Installation](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
+ + [Installer SQL Server 2016 à partir de l’Assistant Installation](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
  [Installation et installation de maintenance](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)    
 
 
