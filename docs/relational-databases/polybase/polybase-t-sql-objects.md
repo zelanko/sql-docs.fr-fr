@@ -2,7 +2,7 @@
 title: Objets T-SQL PolyBase | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 03/08/2016
+ms.date: 07/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -28,7 +28,7 @@ ms.lasthandoff: 06/30/2017
 ---
 # Objets T-SQL PolyBase
 <a id="polybase-t-sql-objects" class="xliff"></a>
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Pour utiliser PolyBase, vous devez créer des tables externes destinées à référencer vos données externes.  
   
