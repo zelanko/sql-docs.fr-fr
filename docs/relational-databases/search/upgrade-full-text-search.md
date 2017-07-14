@@ -24,10 +24,11 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 33b11df8c6894b8acd24da6afd4e2f825fc93445
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="upgrade-full-text-search"></a>Mise à niveau de la fonction de recherche en texte intégral
+# Mise à niveau de la fonction de recherche en texte intégral
+<a id="upgrade-full-text-search" class="xliff"></a>
   La mise à niveau de recherche en texte intégral vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est effectuée pendant l'installation et lorsque les fichiers de base de données et les catalogues de texte intégral de la version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont joints, restaurés ou copiés à l'aide de l'Assistant Copie de base de données.  
   
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/11/2017
  Lors de la mise à niveau d'une instance de serveur vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], l'interface utilisateur vous permet de choisir l'une des options de mise à niveau de texte intégral suivantes.  
   
 **Importer**  
- Les catalogues de texte intégral sont importés. En général, l'importation est considérablement plus rapide que lors d'une reconstruction (rebuild). Par exemple, lorsque vous utilisez un seul processeur, l'importation s'exécute approximativement 10 fois plus vite que lors de la reconstruction. Toutefois, un catalogue de texte intégral importé n'utilise pas les nouveaux analyseurs lexicaux installés avec la dernière version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour garantir la cohérence dans les résultats de la requête, les catalogues de texte intégral doivent être reconstruits.  
+ Les catalogues de texte intégral sont importés. En général, l'importation est considérablement plus rapide que lors d'une reconstruction (rebuild). Par exemple, lorsque vous utilisez un seul processeur, l'importation s'exécute approximativement 10 fois plus vite que lors de la reconstruction. Toutefois, un catalogue de texte intégral importé n'utilise pas les nouveaux analyseurs lexicaux installés avec la dernière version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour garantir la cohérence dans les résultats de la requête, les catalogues de texte intégral doivent être reconstruits.  
   
 > [!NOTE]  
 >  Le processus de reconstruction peut s'exécuter en mode multithread, et si plus de 10 processeurs sont disponibles, la reconstruction peut s'effectuer plus vite que l'importation si vous la laissez utiliser tous les processeurs.  
@@ -83,7 +84,8 @@ ms.lasthandoff: 04/11/2017
   
      L'importation ou la reconstruction pendant la mise à niveau mobilise beaucoup de ressources processeur, ce qui retarde la mise à niveau et en ligne du reste de l'instance serveur. Si le fait d'avoir l'instance de serveur en ligne dès que possible est important et si vous êtes disposé à exécuter une alimentation manuelle après la mise à niveau, la **réinitialisation** est appropriée.  
   
-## <a name="ensure-consistent-query-results-after-importing-a-full-text-index"></a>Garantie de résultats de requête cohérents après l’importation d’un index de recherche en texte intégral  
+## Garantie de résultats de requête cohérents après l’importation d’un index de recherche en texte intégral
+<a id="ensure-consistent-query-results-after-importing-a-full-text-index" class="xliff"></a>  
  Si un catalogue de texte intégral a été importé lors de la mise à niveau d'une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], des discordances entre la requête et le contenu de l'index de recherche en texte intégral peuvent parfois se produire à la suite de légères différences dans le comportement des analyseurs lexicaux anciens et nouveaux. Dans ce cas, pour garantir une correspondance totale entre requêtes et contenu d'index de recherche en texte intégral, choisissez l'une des options suivantes :  
   
 -   reconstruisez le catalogue de texte intégral contenant l’index de recherche en texte intégral ([ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)*nom_catalogue* REBUILD) ;  
@@ -92,7 +94,8 @@ ms.lasthandoff: 04/11/2017
   
  Pour plus d’informations sur les analyseurs lexicaux, consultez [Configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
-## <a name="upgrade-noise-word-files-to-stoplists"></a>Mise à niveau des fichiers de mots parasites vers des listes de mots vides  
+## Mise à niveau des fichiers de mots parasites vers des listes de mots vides
+<a id="upgrade-noise-word-files-to-stoplists" class="xliff"></a>  
 Lorsqu'une base de données est mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], les fichiers de mots parasites ne sont plus utilisés. Toutefois, les anciens fichiers de mots parasites sont stockés dans le dossier FTDATA\ FTNoiseThesaurusBak, et vous pouvez les utiliser ultérieurement lors de la mise à jour ou de la génération des listes de mots vides [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] correspondantes.  
   
  Après avoir effectué une mise à niveau de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]:  
@@ -112,7 +115,8 @@ Lorsqu'une base de données est mise à niveau vers [!INCLUDE[ssCurrent](../../i
   
      La clause STOPLIST OFF supprime le filtrage par mot vide et déclenche une alimentation de la table, sans filtrer les mots considérés comme des mots parasites.  
   
-## <a name="backup-and-imported-full-text-catalogs"></a>Sauvegarde et catalogues de texte intégral importés  
+## Sauvegarde et catalogues de texte intégral importés
+<a id="backup-and-imported-full-text-catalogs" class="xliff"></a>  
  Pour les catalogues de texte intégral qui sont reconstruits ou réinitialisés pendant la mise à niveau (et pour les nouveaux catalogues de texte intégral), le catalogue de texte intégral est un concept logique et ne réside pas dans un groupe de fichiers. Par conséquent, pour sauvegarder un catalogue de texte intégral dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous devez identifier tous les groupes de fichiers contenant un index de recherche en texte intégral du catalogue et les sauvegarder un par un. Pour plus d’informations, consultez [Sauvegarder et restaurer des catalogues et des index de recherche en texte intégral](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md).  
   
  Pour les catalogues de texte intégral importés à partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], le catalogue de texte intégral est encore un fichier de base de données dans son propre groupe de fichiers. Le processus de sauvegarde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] pour les catalogues de texte intégral s'applique encore mais le service MSFTESQL n'existe pas dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations sur le processus [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , consultez [Sauvegarde et restauration d’un catalogue de texte intégral](http://go.microsoft.com/fwlink/?LinkId=209154) dans la documentation en ligne de SQL Server 2005.  
@@ -124,7 +128,7 @@ Lorsqu'une base de données est mise à niveau vers [!INCLUDE[ssCurrent](../../i
   
  **Pour modifier le comportement de mise à niveau de texte intégral sur une instance de serveur**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Use the **upgrade\_option** action of [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] : Utiliser l’action **upgrade\_option** de [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** utilisez **l’option de mise à niveau de texte intégral** de la boîte de dialogue **Propriétés du serveur** . Pour plus d’informations, consultez [Gérer et surveiller la recherche en texte intégral pour une instance de serveur](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
@@ -155,7 +159,8 @@ Lorsqu'une base de données est mise à niveau vers [!INCLUDE[ssCurrent](../../i
   
 -   [Restaurations complètes de bases de données &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)  
   
-### <a name="example"></a>Exemple  
+### Exemple
+<a id="example" class="xliff"></a>  
  L'exemple suivant utilise la clause MOVE dans l'instruction [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) , afin de restaurer une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] nommée `ftdb1`. Les fichiers catalogue, le journal et la base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sont déplacés vers les nouveaux emplacements sur l'instance de serveur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , comme suit :  
   
 -   Le fichier de base de données, `ftdb1.mdf`, est déplacé vers `C:\Program Files\Microsoft SQL Server\MSSQL.1MSSQL13.MSSQLSERVER\MSSQL\DATA\ftdb1.mdf`.  
@@ -180,7 +185,8 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  Pour plus d’informations sur le détachement et l’attachement d’une base de données, consultez [Attacher et détacher une base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md), [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) et [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## Voir aussi
+<a id="see-also" class="xliff"></a>  
  [Commencer à utiliser la recherche en texte intégral](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurer et gérer des filtres pour la recherche](../../relational-databases/search/configure-and-manage-filters-for-search.md)  

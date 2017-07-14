@@ -29,19 +29,22 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 441ae5e2f835146f3d25bda645c44b33fa0146d2
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="enhance-transactional-replication-performance"></a>Améliorer les performances de la réplication transactionnelle
+# Améliorer les performances de la réplication transactionnelle
+<a id="enhance-transactional-replication-performance" class="xliff"></a>
   Après avoir tenu compte des conseils de performances générales décrites dans [Amélioration des performances générales de la réplication](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), envisagez ces domaines supplémentaires spécifiques à la réplication transactionnelle.  
   
-## <a name="database-design"></a>Création de bases de données  
+## Création de bases de données
+<a id="database-design" class="xliff"></a>  
   
 -   Réduisez la taille de transaction dans la conception de votre application.  
   
      Par défaut, la réplication transactionnelle propage les modifications en fonction des limites des transactions. Si les transactions sont plus petites, il est moins probable que l'Agent de distribution doive renvoyer une transaction à cause de problèmes réseau. S'il est demandé à l'Agent de renvoyer une transaction, la quantité de données envoyée est moins importante.  
   
-## <a name="distributor-configuration"></a>Configuration du serveur de distribution  
+## Configuration du serveur de distribution
+<a id="distributor-configuration" class="xliff"></a>  
   
 -   Configurez le serveur de distribution sur un serveur dédié.  
   
@@ -51,7 +54,8 @@ ms.lasthandoff: 04/11/2017
   
      Testez la réplication avec une charge normale pour votre système afin de déterminer l'espace nécessaire au stockage des commandes. Assurez-vous que la base de données est suffisamment volumineuse pour stocker les commandes sans avoir fréquemment recours à l'extension automatique. Pour plus d’informations sur la modification de la taille d’une base de données, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md).  
   
-## <a name="publication-design"></a>Conception de la publication  
+## Conception de la publication
+<a id="publication-design" class="xliff"></a>  
   
 -   Répliquez l'exécution d'une procédure stockée lors de mises à jour par lot de tables publiées.  
   
@@ -61,17 +65,19 @@ ms.lasthandoff: 04/11/2017
   
      Si vous ne pouvez pas utiliser le paramètre **-SubscriptionStreams** (décrit ultérieurement dans cette rubrique), envisagez de créer plusieurs publications. La répartition d'articles sur ces publications permet à la réplication d'appliquer en parallèle les modifications sur les abonnés.  
   
-## <a name="subscription-considerations"></a>Considérations sur les abonnements  
+## Considérations sur les abonnements
+<a id="subscription-considerations" class="xliff"></a>  
   
 -   Utilisez les agents indépendants plutôt que les agents partagés si vous avez plusieurs publications sur le même serveur de publication (valeur par défaut pour l'Assistant Nouvelle publication).  
   
 -   Exécutez les agents en mode continu et non par l'intermédiaire de planifications très fréquentes.  
   
-     Le fait de configurer les agents afin qu'ils s'exécutent en mode continu au lieu de planifier de fréquentes exécutions (par exemple, toutes les minutes) permet d'améliorer les performances de la réplication, car l'Agent n'a pas besoin de démarrer et de s'arrêter. Lorsque vous configurez l'Agent de distribution pour qu'il s'exécute en mode continu, les modifications sont diffusées avec une faible latence aux autres serveurs de la topologie qui sont connectés. Pour plus d'informations, consultez :  
+     Le fait de configurer les agents afin qu'ils s'exécutent en mode continu au lieu de planifier de fréquentes exécutions (par exemple, toutes les minutes) permet d'améliorer les performances de la réplication, car l'Agent n'a pas besoin de démarrer et de s'arrêter. Lorsque vous configurez l'Agent de distribution pour qu'il s'exécute en mode continu, les modifications sont diffusées avec une faible latence aux autres serveurs de la topologie qui sont connectés. Pour plus d'informations, consultez :  
   
-    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] : [Spécifier des planifications de synchronisation](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
-## <a name="distribution-agent-and-log-reader-agent-parameters"></a>Paramètres de l'Agent de distribution et de l'Agent de lecture du journal  
+## Paramètres de l'Agent de distribution et de l'Agent de lecture du journal
+<a id="distribution-agent-and-log-reader-agent-parameters" class="xliff"></a>  
   
 -   Pour résoudre les goulots d’étranglement accidentels et occasionnels, utilisez le paramètre **–MaxCmdsInTran** pour l’Agent de lecture du journal.  
   

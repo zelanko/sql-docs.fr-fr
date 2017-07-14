@@ -14,16 +14,15 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: HT
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
 ms.openlocfilehash: 2ef8331a2217c2fd41881b875264dab6ec2bb822
 ms.contentlocale: fr-fr
 ms.lasthandoff: 07/12/2017
 
 ---
-<a id="table-and-row-size-in-memory-optimized-tables" class="xliff"></a>
-
 # Taille de la table et des lignes dans les tables à mémoire optimisée
+<a id="table-and-row-size-in-memory-optimized-tables" class="xliff"></a>
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Avant [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la taille des données dans la ligne d’une table à mémoire optimisée ne pouvait pas être supérieure à [8 060 octets](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx). Toutefois, à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et dans Azure SQL Database, il est désormais possible de créer une table à mémoire optimisée avec plusieurs colonnes volumineuses (par exemple, plusieurs colonnes varbinary(8000)) et colonnes LOB (c'est-à-dire, varbinary(max), varchar(max) et nvarchar(max)) et d’effectuer des opérations dessus à l’aide de modules T-SQL compilés en mode natif et des types de table. 
@@ -248,9 +247,8 @@ where object_id = object_id('dbo.Orders')
 
 Le billet de blog [Nouveautés d’OLTP en mémoire dans SQL Server 2016 depuis CTP3](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3) détaille certaines de ces complexités.   
  
-<a id="see-also" class="xliff"></a>
-
-## Voir aussi  
+## Voir aussi
+<a id="see-also" class="xliff"></a>  
  [Tables à mémoire optimisée](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

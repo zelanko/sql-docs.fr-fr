@@ -20,13 +20,14 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: be34605990368fbbccdb8b81c119318c01431ced
+ms.sourcegitcommit: 722e026f8b8e8f1e04a93ba58f78aa7135b528de
+ms.openlocfilehash: b8b90960e312ed5e26d5379dac1312849818022d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/30/2017
 
 ---
-# <a name="polybase-t-sql-objects"></a>Objets T-SQL PolyBase
+# Objets T-SQL PolyBase
+<a id="polybase-t-sql-objects" class="xliff"></a>
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Pour utiliser PolyBase, vous devez créer des tables externes destinées à référencer vos données externes.  
@@ -40,11 +41,16 @@ ms.lasthandoff: 06/22/2017
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)  
-  
-## <a name="prerequisites"></a>Conditions préalables  
+ 
+> [!NOTE]
+>  PolyBase dans SQL Server 2016 prend uniquement en charge les utilisateurs Windows. Si vous essayez d’utiliser un utilisateur SQL pour interroger une table externe PolyBase, la requête échoue.
+
+## Configuration requise
+<a id="prerequisites" class="xliff"></a>  
  Configurez PolyBase. Consultez [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
   
-## <a name="create-external-tables-for-hadoop"></a>Créer des tables externes pour Hadoop  
+## Créer des tables externes pour Hadoop
+<a id="create-external-tables-for-hadoop" class="xliff"></a>  
  **1. Créer des informations d’identification incluses dans l’étendue de la base de données**  
   
  Cette étape est uniquement requise pour les clusters Hadoop sécurisés par Kerberos.  
@@ -122,7 +128,8 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 ```  
   
-## <a name="create-external-tables-for-azure-blob-storage"></a>Créer des tables externes pour le stockage d’objets blob Azure  
+## Créer des tables externes pour le stockage d’objets blob Azure
+<a id="create-external-tables-for-azure-blob-storage" class="xliff"></a>  
  **1. Créer des informations d’identification incluses dans l’étendue de la base de données**  
   
 ```sql  
@@ -197,7 +204,8 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 ```  
  
-## <a name="create-external-tables-for-azure-data-lake-store"></a>Créer des tables externes pour Azure Data Lake Store
+## Créer des tables externes pour Azure Data Lake Store
+<a id="create-external-tables-for-azure-data-lake-store" class="xliff"></a>
 Azure Data Lake Store est uniquement pris en charge par PolyBase dans SQL Data Warehouse.
 Pour plus d’informations sur Azure SQL Data Warehouse et ADLS, consultez la page [Chargement de données Azure Data Lake Store](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
  
@@ -289,10 +297,12 @@ WITH
 CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)  
 ```  
 
-## <a name="next-steps"></a>Étapes suivantes  
+## Étapes suivantes
+<a id="next-steps" class="xliff"></a>  
  Pour découvrir des exemples de requêtes, consultez [Requêtes PolyBase](../../relational-databases/polybase/polybase-queries.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## Voir aussi
+<a id="see-also" class="xliff"></a>  
  [Prise en main de PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
  [Guide de PolyBase](../../relational-databases/polybase/polybase-guide.md)  
   

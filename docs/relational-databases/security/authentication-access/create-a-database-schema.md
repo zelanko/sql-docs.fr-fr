@@ -1,7 +1,7 @@
 ---
 title: "Créer un schéma de base de données | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 07/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -22,13 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fe54e464e4aabc53eb8645c1fbf20f509f427978
+ms.sourcegitcommit: 3a224f5be40f6f7a68a28cb4c8f741c24527e8bd
+ms.openlocfilehash: b164e70bf4b1e7586d8e70ab8edb7baa1dfcaade
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/05/2017
 
 ---
-# <a name="create-a-database-schema"></a>Créer un schéma de base de données
+# Créer un schéma de base de données
+<a id="create-a-database-schema" class="xliff"></a>
   Cette rubrique explique comment créer un schéma dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
@@ -51,7 +52,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Le nouveau schéma appartient à l'un des principaux de base de données suivants : utilisateur de base de données, rôle de base de données ou rôle d'application. Les objets créés dans un schéma appartiennent au propriétaire du schéma. La valeur **principal_id** de ces objets est NULL dans **sys.objects**. Il est possible de transférer la propriété des objets contenus dans le schéma à n'importe quel principal de base de données, mais le propriétaire du schéma conserve toujours l'autorisation CONTROL sur les objets dans le schéma.  
   
--   Lors de la création d'un objet de base de données, si vous spécifiez un principal de domaine valide (utilisateur ou groupe) comme propriétaire de l'objet, le principal du domaine est ajouté à la base de données en tant que schéma. Le nouveau schéma appartiendra à ce principal de domaine.  
+-   Quand vous créez un objet de base de données, si vous spécifiez un principal de domaine valide (utilisateur ou groupe) comme propriétaire de l'objet, le principal du domaine est ajouté à la base de données comme schéma. Le nouveau schéma appartient à ce principal de domaine.  
   
 ###  <a name="Security"></a> Sécurité  
   
@@ -59,11 +60,12 @@ ms.lasthandoff: 06/22/2017
   
 -   Nécessite l'autorisation CREATE SCHEMA sur la base de données.  
   
--   Pour spécifier un autre utilisateur comme propriétaire du schéma à créer, l'appelant doit avoir l'autorisation IMPERSONATE sur cet utilisateur. Si un rôle de base de données est spécifié en tant que propriétaire, l'appelant doit disposer de l'un des éléments suivants : appartenance au rôle ou autorisation ALTER pour le rôle.  
+-   Pour spécifier un autre utilisateur comme propriétaire du schéma à créer, l'appelant doit avoir l'autorisation IMPERSONATE sur cet utilisateur. Si un rôle de base de données est spécifié comme propriétaire, l'appelant doit correspondre à l'un des critères suivants : appartenance au rôle ou autorisation ALTER pour le rôle.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-##### <a name="to-create-a-schema"></a>Pour créer un schéma  
+##### Pour créer un schéma
+<a id="to-create-a-schema" class="xliff"></a>  
   
 1.  Dans l'Explorateur d'objets, développez le dossier **Bases de données** .  
   
@@ -77,7 +79,8 @@ ms.lasthandoff: 06/22/2017
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### <a name="additional-options"></a>Options supplémentaires  
+### Options supplémentaires
+<a id="additional-options" class="xliff"></a>  
  La boîte de dialogue **Schéma - Nouveau** offre également des options sur deux pages supplémentaires : **Autorisations** et **Propriétés étendues**.  
   
 -   La page **Autorisations** répertorie tous les éléments sécurisables possibles et les autorisations sur les éléments sécurisables qui peuvent être accordées à la connexion.  
@@ -86,27 +89,36 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### <a name="to-create-a-schema"></a>Pour créer un schéma  
+#### Pour créer un schéma
+<a id="to-create-a-schema" class="xliff"></a>  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
-  
-    ```  
-    USE AdventureWorks2012;  
-    GO  
-    -- Creates the schema Sprockets owned by Annik that contains table NineProngs.   
-    -- The statement grants SELECT to Mandar and denies SELECT to Prasanna.  
-  
+3.  L’exemple suivant crée un schéma nommé `Chains`, puis crée une table nommée `Sizes`.  
+    ```sql  
+    CREATE SCHEMA Chains;
+    GO
+    CREATE TABLE Chains.Sizes (ChainID int, width dec(10,2));
+    ```
+
+4.  Des options supplémentaires peuvent être effectuées dans une seule instruction. L’exemple suivant crée le schéma `Sprockets` détenu par Annick qui contient la table `NineProngs`. L’instruction accorde `SELECT` à Mandar et refuse `SELECT` à Prasanna.  
+
+    ```sql  
     CREATE SCHEMA Sprockets AUTHORIZATION Annik  
         CREATE TABLE NineProngs (source int, cost int, partnumber int)  
         GRANT SELECT ON SCHEMA::Sprockets TO Mandar  
         DENY SELECT ON SCHEMA::Sprockets TO Prasanna;  
     GO  
     ```  
-  
+5. Exécutez l’instruction suivante pour consulter les schémas de cette base de données :
+
+   ```sql
+   SELECT * FROM sys.schemas;
+   ```
+
  Pour plus d’informations, consultez [CREATE SCHEMA &#40;Transact-SQL&#41;](../../../t-sql/statements/create-schema-transact-sql.md).  
   
   
+

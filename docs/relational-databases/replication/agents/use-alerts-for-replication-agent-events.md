@@ -29,13 +29,14 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 915d79db6a2c8f55443c92cb568bac8a9cc2c7d4
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="use-alerts-for-replication-agent-events"></a>Utiliser les alertes pour les événements des agents de réplication
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent offrent un moyen de surveiller les événements, comme les événements d’agent de réplication, en utilisant des alertes. L'Agent[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] surveille, dans le journal des applications, des événements associés à des alertes. Si un tel événement se produit, l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] répond automatiquement, en exécutant une tâche que vous avez définie et/ou en envoyant un e-mail ou un message par radio-messagerie à un opérateur spécifié. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclut un ensemble d'alertes prédéfinies d'Agents de réplication que vous pouvez configurer pour exécuter une tâche et/ou avertir un opérateur. Pour plus d'informations sur la définition d'une tâche à exécuter, consultez la section « Automatisation d'une réponse à une alerte » de la présente rubrique.  
+# Utiliser les alertes pour les événements des agents de réplication
+<a id="use-alerts-for-replication-agent-events" class="xliff"></a>
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] et l'Agent [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permettent de surveiller les événements, par exemple, les événements de l'Agent de réplication, à l'aide d'alertes. L'Agent[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] surveille, dans le journal des applications, des événements associés à des alertes. Si un tel événement se produit, l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] répond automatiquement, en exécutant une tâche que vous avez définie et/ou en envoyant un e-mail ou un message par radio-messagerie à un opérateur spécifié. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclut un ensemble d'alertes prédéfinies d'Agents de réplication que vous pouvez configurer pour exécuter une tâche et/ou avertir un opérateur. Pour plus d'informations sur la définition d'une tâche à exécuter, consultez la section « Automatisation d'une réponse à une alerte » de la présente rubrique.  
   
- Les alertes suivantes sont installées lorsqu'un ordinateur est configuré en tant que serveur de distribution :  
+ Les alertes suivantes sont installées lorsqu'un ordinateur est configuré en tant que serveur de distribution :  
   
 |ID du message|Alerte prédéfinie|Condition provoquant le déclenchement de l'alerte|Entrée d'informations supplémentaires dans msbd..sysreplicationalerts|  
 |----------------|----------------------|-----------------------------------------|-----------------------------------------------------------------|  
@@ -53,15 +54,18 @@ ms.lasthandoff: 04/11/2017
   
  **Pour configurer des alertes de réplication prédéfinies**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Configure Predefined Replication Alerts &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] : [Configurer des alertes de réplication prédéfinies &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
   
-## <a name="viewing-the-application-log-directly"></a>Affichage direct du journal des applications  
+## Affichage direct du journal des applications
+<a id="viewing-the-application-log-directly" class="xliff"></a>  
  Pour consulter le journal des applications Windows, utilisez l'Observateur d'événements [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Le journal des applications comporte les messages d'erreur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ainsi que des messages se rapportant à toutes les activités de l'ordinateur. À la différence du journal des erreurs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , chaque démarrage de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne crée pas un nouveau journal des applications (chaque session [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] écrit des nouveaux événements dans un journal des applications existant) ; en revanche, vous pouvez spécifier la durée de rétention des événements enregistrés. Lorsque vous affichez le journal des applications Windows, vous pouvez filtrer le journal en fonction d'événements spécifiques. Pour plus d'informations, consultez la documentation Windows.  
   
-## <a name="automating-a-response-to-an-alert"></a>Automatisation d'une réponse à une alerte  
+## Automatisation d'une réponse à une alerte
+<a id="automating-a-response-to-an-alert" class="xliff"></a>  
  La réplication fournit un travail de réponse aux abonnements dont la validation des données échoue ainsi qu'une infrastructure permettant de créer des réponses automatiques supplémentaires aux alertes. Le travail de réponse est intitulé **Réinitialiser les abonnements après échec de la validation des données** et stocké dans le dossier [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Travaux **de l'Agent** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations sur l’activation de ce travail de réponse, consultez [Configurer des alertes de réplication prédéfinies &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md). Si certains articles d'une publication transactionnelle ne peuvent pas être validés, le travail de réponse ne réinitialise que ces articles. Si certains articles d'une publication de fusion ne peuvent pas être validés, le travail de réponse réinitialise tous les articles de la publication.  
   
-### <a name="framework-for-automating-responses"></a>Infrastructure d'automatisation des réponses  
+### Infrastructure d'automatisation des réponses
+<a id="framework-for-automating-responses" class="xliff"></a>  
  Généralement, lorsqu'une alerte survient, la seule information dont vous disposez pour vous aider à comprendre la raison de l'alerte et l'action appropriée à entreprendre, se trouve dans le message d'alerte lui-même. L'analyse de ces informations peut être fastidieuse et sujette à erreurs. La réplication facilite l'automatisation des réponses en fournissant des informations supplémentaires sur l'alerte dans la table système **sysreplicationalerts** ; les données fournies sont déjà analysées dans une forme facilement utilisable pour les programmes personnalisés.  
   
  Si, par exemple, les données de la table **Sales.SalesOrderHeader** de l'Abonné A ne peuvent pas être validées, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut déclencher le message 20574, qui vous avertit de l'échec. Le message que vous recevez peut se présenter comme suit : « L'Abonné 'A' avec un abonnement à l'article 'SalesOrderHeader' de la publication 'MyPublication' n'a pas réussi la validation de données ».  
@@ -90,7 +94,8 @@ close hc
 deallocate hc  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## Voir aussi
+<a id="see-also" class="xliff"></a>  
  [Administration de l’Agent de réplication](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
  [Surveillance &#40;réplication&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  
