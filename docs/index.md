@@ -3,11 +3,11 @@ layout: HubPage
 hide_bc: true
 title: Documentation Microsoft SQL | Microsoft Docs
 description: "Découvrir SQL"
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 722e026f8b8e8f1e04a93ba58f78aa7135b528de
-ms.openlocfilehash: 7e838238148bc2e6c887d8960e7456b7539819d3
+ms.translationtype: HT
+ms.sourcegitcommit: 637bd8a98d4279f9d93806fe61cde480a52d5680
+ms.openlocfilehash: 78f0b4ab47b5b4a2a5aeff7e2efdbcc0223b7d8d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/15/2017
 
 ---
 
@@ -196,7 +196,7 @@ ms.lasthandoff: 06/30/2017
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Concevoir</h4>
                                                 <ul>
-                                                    <li><a href="/sql/connect/sql-server-driver">Connecter avec des applications clientes</a></li>
+                                                    <li><a href="/sql/connect/sql-server-drivers">Connecter avec des applications clientes</a></li>
                                                     <li><a href="/sql/relational-databases/database-features">Concepts des bases de données relationnelles</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Outils</h4>
@@ -426,3 +426,4 @@ ms.lasthandoff: 06/30/2017
         </ul>
     </div>
 </div>
+
