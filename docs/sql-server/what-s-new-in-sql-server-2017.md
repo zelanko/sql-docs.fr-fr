@@ -32,7 +32,7 @@ Cette rubrique est un résumé des nouveautés de la mise en production Communit
 
 
 **Essayez-le :**    
-   -   [![Télécharger à partir du centre d’évaluation](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  **[télécharger le Kit de développement SQL Server 2017 Community Technology Preview](http://go.microsoft.com/fwlink/?LinkID=829477)**
+   -   [![Télécharger à partir du centre d’évaluation](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **[télécharger le Kit de développement SQL Server 2017 Community Technology Preview](http://go.microsoft.com/fwlink/?LinkID=829477)**
 
 ## <a name="whats-new-in-sql-server-2017-ctp-21-may-2017"></a>Nouveautés de SQL Server CTP 2017 2.1 (mai 2017)
 ### <a name="sql-server-database-engine"></a>Moteur de base de données SQL Server  
