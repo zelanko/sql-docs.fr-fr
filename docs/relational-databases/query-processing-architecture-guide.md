@@ -17,11 +17,11 @@ caps.latest.revision: 5
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ceddddafe0c052d0477e218955949012818e9a73
-ms.openlocfilehash: bb13d94c5ef1eb36c3d50d3217f259a09c39e832
+ms.translationtype: HT
+ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
+ms.openlocfilehash: 0052444959911431f68bb40fd5059fb45b0d3412
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>Guide d’architecture de traitement des requêtes
@@ -37,7 +37,7 @@ Le traitement d'une instruction SQL unique est le cas le plus simple d'exécutio
 
 Une instruction `SELECT` est non procédurale ; elle ne précise pas les étapes exactes à suivre par le serveur de base de données pour extraire les données demandées. Cela signifie que le serveur de base de données doit analyser l'instruction afin de déterminer la manière la plus efficace d'extraire les données demandées. Cette opération est nommée optimisation de l’instruction `SELECT` . Le composant qui s’en charge est l’optimiseur de requête. L’entrée de l’optimiseur de requête est composée de la requête, du schéma de base de données (définitions des tables et des index) et de ses statistiques de base de données. La sortie de l’optimiseur de requête est un plan d’exécution de la requête, parfois appelé plan de requête ou simplement plan. Le contenu d'un plan de requête est détaillé plus loin dans cette rubrique.
 
-Les entrées et les sorties de l’optimiseur de requête pendant l’optimisation d’une instruction `SELECT` unique sont illustrées dans le diagramme suivant : ![query_processor_io](../relational-databases/media/query-processor-io.gif)
+The inputs and outputs of the Query Optimizer during optimization of a single `SELECT` unique sont illustrées dans le diagramme suivant : ![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 Une instruction `SELECT` ne définit que :  
 * le format du jeu de résultats. Il est principalement spécifié dans la liste de sélection. Toutefois, d’autres clauses telles que `ORDER BY` et `GROUP BY` influencent également la syntaxe finale du jeu de résultats.
@@ -58,13 +58,13 @@ Un plan d'exécution de requête permet de définir :
 * les méthodes utilisées pour extraire les données de chaque table.  
   Il existe également différentes méthodes d'accès aux données dans chaque table. Si seules quelques lignes ayant des valeurs de clés spécifiques sont nécessaires, le serveur de base de données peut utiliser un index. Si toutes les lignes de la table sont nécessaires, le serveur de base de données peut ignorer les index et procéder à une analyse de la table. Si toutes les lignes de la table sont nécessaires mais qu’il existe un index dont les colonnes clés se trouvent dans une clause `ORDER BY`, l’analyse d’index plutôt que l’analyse de table peut éviter un tri séparé du jeu de résultats. Dans le cas d'une table très petite, les analyses de table peuvent s'avérer plus efficaces pour quasiment tous les accès à la table.
 
-Le processus de sélection d'un plan d'exécution parmi plusieurs possibles est appelé optimisation. L’optimiseur de requêtes l’est un des composants les plus importants d’un système de base de données SQL. Même si l’optimiseur de requête peut créer une certaine surcharge pour analyser la requête et sélectionner un plan, il arrive en général à la compenser largement en adoptant un plan d’exécution efficace. Prenons l'exemple de deux entrepreneurs en bâtiment à qui l'on commande la même maison. Si l'un d'eux commence par consacrer quelques jours à planifier la construction de cette maison alors que l'autre lance immédiatement la construction sans aucune planification, il est fort probable que celui qui a pris le temps de planifier son projet finira le premier.
+Le processus de sélection d'un plan d'exécution parmi plusieurs possibles est appelé optimisation. L'optimiseur de requêtes est un des composants les plus importants d'un système de base de données SQL. Bien que l'optimiseur de requête puisse créer une certaine surcharge pour analyser la requête et sélectionner un plan, celle-ci est en général largement compensée par l'adoption d'un plan d'exécution efficace. Prenons l'exemple de deux entrepreneurs en bâtiment à qui l'on commande la même maison. Si l'un d'eux commence par consacrer quelques jours à planifier la construction de cette maison alors que l'autre lance immédiatement la construction sans aucune planification, il est fort probable que celui qui a pris le temps de planifier son projet finira le premier.
 
-L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est un optimiseur de requête basé sur les coûts. À chaque plan d'exécution possible est associé un coût exprimé en termes de quantité de ressources informatiques utilisées. L’optimiseur de requête doit analyser les plans possibles et opter pour celui dont le coût estimé est le plus faible. Certaines instructions `SELECT` complexes disposent de milliers de plans d’exécution possibles. Dans ce cas, l’optimiseur de requête n’analyse pas toutes les combinaisons possibles. Il recourt alors à des algorithmes sophistiqués afin de trouver un plan d'exécution dont le coût se rapproche raisonnablement du minimum possible.
+L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est un optimiseur de requête basé sur les coûts. À chaque plan d'exécution possible est associé un coût exprimé en termes de quantité de ressources informatiques utilisées. L'optimiseur de requêtes doit analyser les plans possibles et opter pour celui dont le coût estimé est le plus faible. Certaines instructions `SELECT` complexes disposent de milliers de plans d’exécution possibles. Dans ce cas, l'optimiseur de requêtes n'analyse pas toutes les combinaisons possibles. Il recourt alors à des algorithmes sophistiqués afin de trouver un plan d'exécution dont le coût se rapproche raisonnablement du minimum possible.
 
 L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] choisit non seulement le plan d’exécution dont le coût en ressources est le plus faible, mais également celui qui retourne le plus rapidement les résultats à l’utilisateur moyennant un coût en ressources raisonnable. Par exemple, le traitement d'une requête en parallèle monopolise généralement davantage de ressources qu'un traitement en série, mais il est plus rapide. L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise un plan d’exécution en parallèle pour retourner les résultats si la charge du serveur n’en est pas affectée de façon rédhibitoire.
 
-L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se base sur les statistiques de distribution lors de l’estimation du coût en ressources des différentes méthodes d’extraction d’informations à partir d’une table ou d’un index. Les statistiques de distribution sont conservées pour les colonnes et les index. Elles indiquent la sélectivité des valeurs dans un index ou une colonne en particulier. Par exemple, dans une table représentant des voitures, plusieurs voitures proviennent du même constructeur mais chacune a un numéro d'identification unique. Un index sur le numéro d'identification du véhicule est plus sélectif qu'un index sur le constructeur. Si les statistiques d’index ne sont pas à jour, l’optimiseur de requête peut ne pas effectuer le meilleur choix pour l’état actuel de la table. Pour plus d’informations sur la conservation de statistiques d’index à jour, consultez Utiliser les statistiques pour améliorer les performances des requêtes. 
+L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se base sur les statistiques de distribution lors de l’estimation du coût en ressources des différentes méthodes d’extraction d’informations à partir d’une table ou d’un index. Les statistiques de distribution sont conservées pour les colonnes et les index. Elles indiquent la sélectivité des valeurs dans un index ou une colonne en particulier. Par exemple, dans une table représentant des voitures, plusieurs voitures proviennent du même constructeur mais chacune a un numéro d'identification unique. Un index sur le numéro d'identification du véhicule est plus sélectif qu'un index sur le constructeur. Si les statistiques d'index ne sont pas à jour, l'optimiseur de requêtes peut ne pas effectuer le meilleur choix pour l'état actuel de la table. Pour plus d’informations sur la conservation de statistiques d’index à jour, consultez Utiliser les statistiques pour améliorer les performances des requêtes. 
 
 L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est important, car il permet l’ajustement dynamique du serveur de base de données au fur et à mesure que la base de données évolue sans recourir à l’intervention d’un programmeur ou d’un administrateur de bases de données. Cela permet aux programmeurs de se concentrer sur la description du résultat final de la requête. Ils peuvent faire confiance à l’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans son choix d’un plan d’exécution efficace pour l’état de la base de données à chaque exécution de l’instruction.
 
@@ -74,7 +74,7 @@ Les étapes permettant à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 1. L’analyseur examine l’instruction `SELECT` et la décompose en unités logiques telles que mots clé, expressions, opérateurs et identificateurs.
 2. Un arbre de requêtes, également appelé arbre de séquence, est créé pour décrire les étapes logiques nécessaires à la transformation des données source au format requis par le jeu de résultats.
-3. L’optimiseur de requête analyse plusieurs méthodes d’accès aux tables sources. Il choisit ensuite la série d'étapes qui retourne les résultats le plus rapidement tout en consommant moins de ressources. L'arbre de requêtes est mis à jour pour enregistrer cette série exacte d'étapes. La version optimisée finale de l'arbre de requêtes est nommée plan d'exécution.
+3. L'optimiseur de requête analyse plusieurs méthodes d'accès aux tables source. Il choisit ensuite la série d'étapes qui retourne les résultats le plus rapidement tout en consommant moins de ressources. L'arbre de requêtes est mis à jour pour enregistrer cette série exacte d'étapes. La version optimisée finale de l'arbre de requêtes est nommée plan d'exécution.
 4. Le moteur relationnel lance le plan d'exécution. Pendant le traitement des étapes qui requièrent des données issues des tables de base, le moteur relationnel demande que le moteur de stockage transmette les données des ensembles de lignes demandés à partir du moteur relationnel.
 5. Le moteur relationnel traite les données retournées du moteur de stockage dans le format défini pour le jeu de résultats et retourne ce jeu au client.
 
@@ -92,12 +92,12 @@ Le moteur relationnel peut avoir besoin de créer une table de travail pour exé
 
 Le processeur de requêtes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] traite différemment les vues indexées et les vues non indexées : 
 
-* Les lignes des vues indexées sont stockées dans la base de données dans le même format qu'une table. Si l’optimiseur de requête décide d’utiliser une vue indexée dans un plan de requête, celle-ci est traitée de la même façon qu’une table de base.
+* Les lignes des vues indexées sont stockées dans la base de données dans le même format qu'une table. Si l'optimiseur de requête décide d'utiliser une vue indexée dans un plan de requête, celle-ci est traitée de la même façon qu'une table de base.
 * Seule la définition d'une vue non indexée est stockée, tandis que les lignes de la vue ne le sont pas. L’optimiseur de requête incorpore la logique de la définition de la vue dans le plan d’exécution qu’il construit pour l’instruction SQL référençant la vue non indexée. 
 
 La logique utilisée par l’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour déterminer quand utiliser une vue indexée est similaire à la logique employée pour décider quand utiliser un index sur une table. Si les données de la vue indexée couvrent tout ou partie de l’instruction SQL et si l’optimiseur de requête détermine qu’un index sur la vue est le chemin le moins coûteux, l’optimiseur choisit l’index, que la vue soit référencée ou non par son nom dans la requête.
 
-Quand une instruction SQL référence une vue non indexée, l’analyseur et l’optimiseur de requête analysent la source de l’instruction SQL et de la vue, puis les résolvent dans un même plan d’exécution. Il n'y a pas de plans distincts pour l'instruction SQL et pour la vue.
+Lorsqu'une instruction SQL fait référence à une vue non indexée, l'analyseur et l'optimiseur de requête analysent la source de l'instruction SQL et de la vue, puis les résolvent dans un même plan d'exécution. Il n'y a pas de plans distincts pour l'instruction SQL et pour la vue.
 
 Imaginons par exemple la vue suivante :
 
@@ -198,37 +198,37 @@ L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
   * `CONCAT_NULL_YIELDS_NULL`
   * `QUOTED_IDENTIFIER` 
   * L’option de session `NUMERIC_ROUNDABORT` est désactivée (OFF).
-* L’optimiseur de requête trouve une correspondance entre les colonnes d’index des vues et les éléments de la requête, notamment : 
+* L'optimiseur de requête trouve une correspondance entre les colonnes d'index des vues et les éléments de la requête, notamment : 
   * Prédicats de la condition de recherche dans la clause WHERE
   * Opérations de jointure
   * Fonctions d'agrégation
   * Clauses`GROUP BY` 
   * Références de table
-* Le coût estimé de l’utilisation de l’index est le plus faible de tous les mécanismes d’accès envisagés par l’optimiseur de requête. 
+* Le coût estimé de l'utilisation de l'index est le plus faible de tous les mécanismes d'accès envisagés par l'optimiseur de requête. 
 * Dans la requête, vous devez appliquer le même ensemble d'indicateurs à chaque table que vous référencez, soit directement, soit en développant une vue afin d'accéder à ses tables sous-jacentes, et qui correspond à une référence de table dans la vue indexée.
 
 > [!NOTE] 
 > Les indicateurs `READCOMMITTED` et `READCOMMITTEDLOCK` sont toujours considérés comme des indicateurs différents dans ce contexte, indépendamment du niveau d’isolation de la transaction en cours.
  
-En dehors des exigences relatives aux indicateurs de table et aux options `SET`, l’optimiseur de requête emploie ces mêmes règles pour déterminer si l’index d’une table couvre une requête. Vous n'avez pas besoin de spécifier autre chose dans la requête pour utiliser une vue indexée.
+En dehors des exigences relatives aux indicateurs de table et aux options `SET` options and table hints, these are the same rules that the Query Optimizer uses to determine whether a table index covers a query. Vous n'avez pas besoin de spécifier autre chose dans la requête pour utiliser une vue indexée.
 
-Une requête ne doit pas obligatoirement référencer explicitement une vue indexée dans la clause `FROM` pour que l’optimiseur de requête utilise la vue indexée. Si la requête contient des références à des colonnes dans des tables de base qui sont également présentes dans la vue indexée, et si l’optimiseur de requête estime que l’emploi de la vue indexée offre le mécanisme d’accès le moins coûteux, il choisit la vue indexée, un peu comme il choisit les index des tables de base quand ceux-ci ne sont pas directement référencés dans une requête. L’optimiseur de requête peut choisir la vue quand elle contient des colonnes qui ne sont pas référencées par la requête, à condition que cette dernière offre l’option la moins coûteuse pour couvrir une ou plusieurs colonnes spécifiées dans la requête.
+Une requête ne doit pas faire référence explicitement à une vue indexée dans la clause `FROM` clause for the Query Optimizer to use the indexed view. Si la requête contient des références à des colonnes dans des tables de base qui sont également présentes dans la vue indexée, et si l'optimiseur de requête estime que l'emploi de la vue indexée offre le mécanisme d'accès le moins coûteux, il choisit la vue indexée, un peu comme il choisit les index des tables de base lorsque ceux-ci ne sont pas directement référencés dans une requête. L'optimiseur de requête peut choisir la vue lorsqu'elle contient des colonnes qui ne sont pas référencées par la requête, à condition que cette dernière offre l'option la moins coûteuse pour couvrir une ou plusieurs colonnes spécifiées dans la requête.
 
-L’optimiseur de requête traite une vue indexée référencée dans la clause `FROM` comme une vue standard. L’optimiseur de requête développe la définition de la vue dans la requête au début du processus d’optimisation. Ensuite, la mise en correspondance des éléments de la vue indexée est réalisée. La vue indexée peut être utilisée dans le plan d’exécution final sélectionné par l’optimiseur de requête ou, sinon, le plan peut matérialiser les données nécessaires à partir de la vue en accédant aux tables de base référencées par celle-ci. L’optimiseur de requête choisit la solution la plus économique.
+The Query Optimizer treats an indexed view referenced in the `FROM` comme une vue standard. L'optimiseur de requête développe la définition de la vue dans la requête au début du processus d'optimisation. Ensuite, la mise en correspondance des éléments de la vue indexée est réalisée. La vue indexée peut être utilisée dans le plan d’exécution final sélectionné par l’optimiseur de requête ou, sinon, le plan peut matérialiser les données nécessaires à partir de la vue en accédant aux tables de base référencées par celle-ci. L’optimiseur de requête choisit la solution la plus économique.
 
 #### <a name="using-hints-with-indexed-views"></a>Utilisation d'indicateurs avec les vues indexées
 
-Vous pouvez empêcher l’utilisation d’index de vue pour une requête à l’aide de l’indicateur de requête `EXPAND VIEWS` ou recourir à l’indicateur de table `NOEXPAND` afin d’imposer l’utilisation d’un index pour une vue indexée spécifiée dans la clause `FROM` d’une requête. Toutefois, vous devez laisser l’optimiseur de requête déterminer dynamiquement les meilleures méthodes d’accès à utiliser pour chaque requête. Limitez l’utilisation des indicateurs `EXPAND` et `NOEXPAND` aux cas spécifiques où les tests ont démontré qu’ils améliorent les performances de façon significative.
+Vous pouvez empêcher l’utilisation d’index de vue pour une requête à l’aide de l’indicateur de requête `EXPAND VIEWS` ou recourir à l’indicateur de table `NOEXPAND` afin d’imposer l’utilisation d’un index pour une vue indexée spécifiée dans la clause `FROM` d’une requête. Toutefois, vous devez laisser l'optimiseur de requête déterminer dynamiquement les meilleures méthodes d'accès à utiliser pour chaque requête. Limitez l’utilisation des indicateurs `EXPAND` et `NOEXPAND` aux cas spécifiques où les tests ont démontré qu’ils améliorent les performances de façon significative.
 
-L’option `EXPAND VIEWS` ordonne à l’optimiseur de requête de ne pas utiliser des index de vue pour toute la requête. 
+L’option `EXPAND VIEWS` option specifies that the Query Optimizer not use any view indexes for the whole query. 
 
-Quand `NOEXPAND` est spécifié dans une vue, l’optimiseur de requête envisage l’utilisation de n’importe quel index défini sur la vue. `NOEXPAND` spécifié avec la clause `INDEX()` facultative force l’optimiseur de requête à utiliser les index spécifiés. `NOEXPAND` peut être spécifié uniquement pour une vue indexée et ne peut pas être spécifié pour une vue qui n’a pas été indexée.
+Lorsque `NOEXPAND` is specified for a view, the Query Optimizer considers using any indexes defined on the view. `NOEXPAND` spécifié avec la clause `INDEX()` clause forces the Query Optimizer to use the specified indexes. `NOEXPAND` peut être spécifié uniquement pour une vue indexée et ne peut pas être spécifié pour une vue qui n’a pas été indexée.
 
 Lorsque ni `NOEXPAND` ni `EXPAND VIEWS` ne sont spécifiés dans une requête qui contient une vue, celle-ci est développée de manière à permettre l’accès aux tables sous-jacentes. Si la requête qui compose la vue contient des indicateurs de table, ceux-ci sont propagés aux tables sous-jacentes. (Ce processus est expliqué en détail dans Résolution de vues.) Si les ensembles d'indicateurs existant sur les tables sous-jacentes de la vue sont identiques, la requête peut être mise en correspondance avec une vue indexée. La plupart du temps, ces indicateurs correspondent les uns aux autres car ils sont hérités directement de la vue. Toutefois, si la requête référence des tables au lieu de vues et que les indicateurs appliqués directement à ces tables ne sont pas identiques, cette requête ne peut pas être mise en correspondance avec une vue indexée. Si les indicateurs `INDEX`, `PAGLOCK`, `ROWLOCK`, `TABLOCKX`, `UPDLOCK`ou `XLOCK` s’appliquent aux tables référencées dans la requête une fois la vue développée, la requête ne peut pas être mise en correspondance avec la vue indexée.
 
 Si un indicateur de table de la forme `INDEX (index_val[ ,...n] )` référence une vue dans une requête et que vous ne spécifiez pas l’indicateur `NOEXPAND` , l’indicateur d’index est ignoré. Pour spécifier l’utilisation d’un index particulier, utilisez `NOEXPAND`. 
 
-En règle générale, quand l’optimiseur de requête fait correspondre une vue indexée avec une requête, tous les indicateurs spécifiés sur les tables ou vues dans la requête sont appliqués directement à la vue indexée. Si l’optimiseur de requête choisit de ne pas utiliser une vue indexée, tous les indicateurs sont propagés directement aux tables référencées dans la vue. Pour plus d’informations, consultez Résolution de vues. Cette propagation ne s'applique pas aux indicateurs de jointure. Ils ne sont appliqués qu'à leur emplacement initial dans la requête. Les indicateurs de jointure ne sont pas envisagés par l’optimiseur de requête lors de la mise en correspondance des requêtes avec les vues indexées. Si un plan de requête utilise une vue indexée qui correspond à une partie d'une requête contenant un indicateur de jointure, celui-ci n'est pas utilisé dans le plan.
+En règle générale, quand l’optimiseur de requête fait correspondre une vue indexée avec une requête, tous les indicateurs spécifiés sur les tables ou vues dans la requête sont appliqués directement à la vue indexée. Si l'optimiseur de requête choisit de ne pas utiliser une vue indexée, tous les indicateurs sont propagés directement aux tables référencées dans la vue. Pour plus d’informations, consultez Résolution de vues. Cette propagation ne s'applique pas aux indicateurs de jointure. Ils ne sont appliqués qu'à leur emplacement initial dans la requête. Les indicateurs de jointure ne sont pas envisagés par l'optimiseur de requête lors de la mise en correspondance des requêtes avec les vues indexées. Si un plan de requête utilise une vue indexée qui correspond à une partie d'une requête contenant un indicateur de jointure, celui-ci n'est pas utilisé dans le plan.
 
 L'utilisation d'indicateurs n'est pas autorisée dans les définitions de vues indexées. Dans les modes de compatibilité 80 et supérieurs, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ignore les indicateurs présents dans les définitions de vues indexées lorsqu'il gère ces définitions ou qu'il exécute des requêtes qui utilisent des vues indexées. Bien que l'utilisation d'indicateurs dans les définitions de vues indexées ne génère pas d'erreur de syntaxe dans le mode de compatibilité 80, ils sont ignorés.
 
@@ -239,7 +239,7 @@ Le processeur de requêtes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] construit des plans intelligents et dynamiques qui utilisent efficacement les requêtes distribuées pour accéder aux données à partir des tables membres distantes : 
 
 * Le processeur de requêtes utilise d’abord OLE DB pour récupérer les définitions des contraintes de vérification de chaque table membre. Ceci permet au processeur de requêtes de mapper la distribution des valeurs de clés entre les tables membres.
-* Le processeur de requêtes compare les plages clés spécifiées dans la clause `WHERE` d’une instruction SQL au mappage qui représente la distribution des lignes dans les tables membres. Le processeur de requêtes construit alors un plan d'exécution des requêtes qui utilise les requêtes distribuées pour récupérer uniquement les lignes distantes requises pour exécuter l'instruction SQL. Le plan d'exécution est également construit de telle sorte que tout accès aux tables membres distantes pour les données ou les métadonnées est différé jusqu'à ce que les informations soient requises.
+* The Query Processor compares the key ranges specified in an SQL statement `WHERE` d’une instruction SQL au mappage qui représente la distribution des lignes dans les tables membres. Le processeur de requêtes construit alors un plan d'exécution des requêtes qui utilise les requêtes distribuées pour récupérer uniquement les lignes distantes requises pour exécuter l'instruction SQL. Le plan d'exécution est également construit de telle sorte que tout accès aux tables membres distantes pour les données ou les métadonnées est différé jusqu'à ce que les informations soient requises.
 
 Par exemple, prenons un système où une table de clients est partitionnée entre Server1 (`CustomerID` de 1 à 3299999), Server2 (`CustomerID` de 3300000 à 6599999) et Server3 (`CustomerID` de 6600000 à 9999999).
 
@@ -370,7 +370,7 @@ La colonne `recompile_cause` de `sql_statement_recompile` xEvent contient un cod
 > [!NOTE]
 > Quand l’option de base de données `AUTO_UPDATE_STATISTICS` a pour valeur `ON`, les requêtes sont recompilées quand elles ciblent des tables ou des vues indexées dont les statistiques ont été mises à jour ou dont les cardinalités ont sensiblement évolué depuis la dernière exécution. Ce comportement s’applique aux tables temporaires, aux tables définies par l’utilisateur standard, ainsi qu’aux tables inserted et deleted créées par des déclencheurs DML. Si les performances des requêtes sont affectées par des recompilations excessives, vous pouvez attribuer à ce paramètre la valeur `OFF`. Quand l’option de base de données `AUTO_UPDATE_STATISTICS` a pour valeur `OFF`, aucune recompilation ne se produit en fonction des statistiques ou des modifications de cardinalité, à l’exception des tables inserted et deleted qui sont créées par des déclencheurs DML `INSTEAD OF`. Comme ces tables sont créées dans tempdb, la recompilation de requêtes qui accèdent à ces tables dépend du paramétrage de `AUTO_UPDATE_STATISTICS` dans tempdb. Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, la recompilation des requêtes se poursuit en fonction des modifications de cardinalité apportées aux tables inserted et deleted créées par des déclencheurs DML, même si ce paramètre a pour valeur `OFF`.
 
-### <a name="parameters-and-execution-plan-reuse"></a>Réutilisation des paramètres et des plans d'exécution
+### <a name="PlanReuse"></a> Réutilisation des paramètres et des plans d'exécution
 
 L'utilisation de paramètres, notamment de marqueurs de paramètres dans les applications ADO, OLE DB et ODBC, peut favoriser la réutilisation des plans d'exécution. 
 
@@ -438,7 +438,7 @@ WHERE AddressID = 1 + 2;
 
 Elle peut toutefois être paramétrée conformément aux règles de paramétrage simple. En cas de tentative infructueuse de paramétrage forcé, le paramétrage simple est activé.
 
-### <a name="simple-parameterization"></a>Paramétrage simple
+### <a name="SimpleParam"></a> Paramétrage simple
 
 Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l’utilisation de paramètres ou de marqueurs de paramètres dans les instructions Transact-SQL augmente la capacité du moteur relationnel à associer les nouvelles instructions SQL aux plans d’exécution préalablement compilés existants.
 
@@ -474,7 +474,7 @@ Avec le comportement par défaut du paramétrage simple, [!INCLUDE[ssNoVersion](
 
 Une autre solution consiste à spécifier que ne soient paramétrables qu'une requête et toutes autres requêtes dont la syntaxe ne se différencie que par les valeurs des paramètres. 
 
-### <a name="forced-parameterization"></a>Paramétrage forcé
+### <a name="ForcedParam"></a> Paramétrage forcé
 
 Vous pouvez remplacer le comportement de paramétrage simple par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en spécifiant que toutes les instructions `SELECT`, `INSERT`, `UPDATE` et `DELETE` de la base de données soient paramétrables dans certaines limites. Le paramétrage forcé s’active en attribuant la valeur `PARAMETERIZATION` à l’option `FORCED` dans l’instruction `ALTER DATABASE` . Ce type de paramétrage permet d'améliorer les performances de certaines bases de données en réduisant la fréquence des compilations et des recompilations des requêtes. Les bases de données qui peuvent tirer profit du paramétrage forcé sont généralement des bases de données devant gérer un nombre important de requêtes simultanées émanant de sources telles que des applications de point de vente.
 
@@ -525,11 +525,11 @@ Lorsque [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] paramètre des li
 * Les littéraux binaires sont paramètres en varbinary(8000) si le littéral n’excède pas 8 000 octets. S’il dépasse 8 000 octets, il est converti en varbinary(max).
 * Les littéraux de type monétaire sont paramétrés sur money.
 
-#### <a name="guidelines-for-using-forced-parameterization"></a>Principes d'utilisation du paramétrage forcé
+#### <a name="ForcedParamGuide"></a> Principes d'utilisation du paramétrage forcé
 
 Lorsque vous affectez à l’option `PARAMETERIZATION` la valeur FORCED, tenez compte des points suivants :
 
-* Le paramétrage forcé convertit les constantes des littéraux d'une requête en paramètres lors de la compilation d'une requête. Par conséquent, l’optimiseur de requête peut opter pour des plans d’exécution de requêtes non optimisés. Plus spécifiquement, il est moins probable que l’optimiseur de requête établisse une correspondance avec une vue indexée ou un index d’une colonne calculée. Il peut également opter pour des plans non optimisés dans le cas de requêtes soumises pour des tables partitionnées ou des vues partitionnées et distribuées. Il n'est pas recommandé d'utiliser le paramétrage forcé dans des environnements reposant principalement sur des vues indexées ou des index de colonnes calculées. Dans l’ensemble, l’option `PARAMETERIZATION FORCED` devrait être utilisée exclusivement par des administrateurs de bases de données expérimentés qui se seront assurés que cela n’affectera pas les performances.
+* Le paramétrage forcé convertit les constantes des littéraux d'une requête en paramètres lors de la compilation d'une requête. Par conséquent, l'optimiseur de requête peut opter pour des plans d'exécution de requêtes non optimisés. Plus spécifiquement, il est moins probable que l'optimiseur de requête établisse une correspondance avec une vue indexée ou un index d'une colonne calculée. Il peut également opter pour des plans non optimisés dans le cas de requêtes soumises pour des tables partitionnées ou des vues partitionnées et distribuées. Il n'est pas recommandé d'utiliser le paramétrage forcé dans des environnements reposant principalement sur des vues indexées ou des index de colonnes calculées. Dans l’ensemble, l’option `PARAMETERIZATION FORCED` devrait être utilisée exclusivement par des administrateurs de bases de données expérimentés qui se seront assurés que cela n’affectera pas les performances.
 * Les requêtes distribuées qui font référence à plusieurs bases de données sont éligibles pour le paramétrage forcé pour autant que l’option `PARAMETERIZATION` ait la valeur `FORCED` dans la base de données dont le contexte fait l’objet de la requête.
 * L’affectation de la valeur `PARAMETERIZATION` à l’option `FORCED` vide tous les plans de requêtes du cache de plans d’une base de données, à l’exception de ceux qui sont en cours de compilation, de recompilation ou d’exécution. Tout plan d'une requête en cours de compilation ou d'exécution lors de la modification des paramètres est paramétré lors de la prochaine exécution de la requête.
 * La définition de l’option `PARAMETERIZATION` est une opération en ligne qui ne requiert aucun verrou exclusif au niveau de la base de données.
@@ -538,7 +538,7 @@ Lorsque vous affectez à l’option `PARAMETERIZATION` la valeur FORCED, tenez c
 Pour remplacer le comportement de paramétrage forcé, il suffit de spécifier qu'un paramétrage simple soit tenté sur une requête unique, à l'instar des autres requêtes de syntaxe équivalente mais présentant des valeurs de paramètres différentes. À l'inverse, vous pouvez spécifier que le paramétrage forcé soit tenté sur seul jeu de requêtes de syntaxe équivalente, même en cas de désactivation de l'option de paramétrage forcé dans la base de données. Vous pouvez utiliser les[repères de plan](../relational-databases/performance/plan-guides.md) à cet effet.
 
 > [!NOTE]
-> Quand l’option `PARAMETERIZATION` est définie à la valeur `FORCED`, le rapport des messages d’erreur peut différer du paramétrage simple en différents points : il est possible qu’il y ait un plus grand nombre de messages d’erreur que dans le cas d’un paramétrage simple et les numéros de ligne où interviennent les erreurs peuvent ne pas être corrects.
+> Quand l’option `PARAMETERIZATION` est définie avec la valeur `FORCED`, le rapport des messages d’erreur peut ne pas être le même que quand l’option `PARAMETERIZATION` est définie avec la valeur `SIMPLE` : davantage de messages d’erreur peuvent être signalés avec le paramétrage forcé qu’avec le paramétrage simple et les numéros de ligne où interviennent les erreurs peuvent ne pas être corrects.
 
 ### <a name="preparing-sql-statements"></a>Préparation des instructions SQL
 
@@ -580,7 +580,7 @@ Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le modèle de prép
 * Le modèle de préparation et d'exécution peut être transféré à d'autres bases de données, y compris des versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
  
-### <a name="parameter-sniffing"></a>Détection de paramètres
+### <a name="ParamSniffing"></a> Détection des paramètres
 La « détection de paramètres » fait référence à un processus par lequel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] « espionne » les valeurs de paramètres actuelles pendant la compilation ou la recompilation, et les transmet à l’optimiseur de requête afin qu’elles puissent servir à générer des plans d’exécution de requête potentiellement plus efficaces.
 
 Les valeurs de paramètres sont détectées pendant la compilation ou la recompilation pour les types de lots suivants :
@@ -606,7 +606,7 @@ L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 * Un plan d'exécution en série est considéré comme plus rapide que n'importe quel plan d'exécution parallèle envisageable pour la requête particulière.
 * La requête contient des opérateurs scalaires ou relationnels qui ne peuvent être exécutés en parallèle. Certains opérateurs peuvent entraîner l'exécution d'une section du plan de requête ou de la totalité du plan en mode série.
 
-### <a name="degree-of-parallelism"></a>Degré de parallélisme
+### <a name="DOP"></a> Degré de parallélisme
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] détecte automatiquement le meilleur degré de parallélisme pour chaque instance d'une exécution de requête en parallèle ou d'une opération DDL (Data Definition Language) d'index. Cette détection se fait sur la base des critères suivants : 
 
@@ -620,7 +620,7 @@ L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
   Les requêtes qui utilisent fortement les cycles microprocesseur et les opérations d'index qui créent ou reconstruisent un index, ou qui suppriment un index cluster, sont les candidates idéales pour un plan parallèle. Par exemple, les jointures de grandes tables, les agrégations importantes et le tri d'ensembles de résultats volumineux s'y prêtent bien. Pour les requêtes simples, typiques des applications de traitement de transactions, il s'avère que la coordination supplémentaire nécessaire à l'exécution d'une requête en parallèle n'est pas rentabilisée par l'augmentation potentielle des performances. Pour faire la distinction entre les requêtes qui tirent profit du parallélisme et les autres, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] compare le coût estimé de l’exécution de la requête ou de l’opération d’index à la valeur [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). Bien que ce ne soit pas recommandé, les utilisateurs peuvent modifier la valeur par défaut de 5 à l’aide de la procédure stockée [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). 
 
 4. Le nombre de lignes à traiter.  
-  Si l’optimiseur de requête détermine que le nombre de lignes est trop faible, il n’introduit pas d’opérateurs d’échange pour distribuer les lignes. Par conséquent, ces opérateurs sont exécutés en série. L'exécution des opérateurs dans un plan série permet d'éviter que les coûts de démarrage, de distribution et de coordination dépassent les bénéfices d'une exécution en parallèle.
+  Si l'optimiseur de requête détermine que le nombre de lignes est trop faible, il n'introduit pas les opérateurs d'échange qui servent à distribuer les lignes. Par conséquent, ces opérateurs sont exécutés en série. L'exécution des opérateurs dans un plan série permet d'éviter que les coûts de démarrage, de distribution et de coordination dépassent les bénéfices d'une exécution en parallèle.
 
 5. Disponibilité des statistiques de distribution actuelles.  
   Si ce niveau ne peut être atteint, le moteur de base de données envisage de passer à un degré inférieur avant d'abandonner totalement le plan parallèle.  
@@ -633,15 +633,15 @@ Lors de l'exécution, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.m
 
 Dans un plan d'exécution parallèle de requêtes, les opérateurs insert, update et delete sont exécutés en série. Cependant, la clause WHERE d'une instruction UPDATE ou DELETE, ou la partie SELECT d'une instruction INSERT peut être exécutée en parallèle. Les modifications réelles des données sont ensuite appliquées en série à la base de données.
 
-Les curseurs statiques et les curseurs pilotés par jeux de clés peuvent être complétés par des plans d'exécution parallèle. Cependant, le comportement des curseurs dynamiques ne peut être fourni que par une exécution en série. L’optimiseur de requête génère toujours un plan d’exécution en série pour une requête qui fait partie d’un curseur dynamique.
+Les curseurs statiques et les curseurs pilotés par jeux de clés peuvent être complétés par des plans d'exécution parallèle. Cependant, le comportement des curseurs dynamiques ne peut être fourni que par une exécution en série. L'optimiseur de requête génère toujours un plan d'exécution en série pour une requête qui fait partie d'un curseur dynamique.
 
 #### <a name="overriding-degrees-of-parallelism"></a>Remplacement des degrés de parallélisme
 
 Vous pouvez utiliser l’option de configuration de serveur [max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) (MAXDOP) ([ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) sur [!INCLUDE[ssSDS_md](../includes/sssds-md.md)]) pour limiter le nombre de processeurs à utiliser dans une exécution de plan parallèle. L’option max degree of parallelism peut être remplacée par des instructions d’exécution de requêtes ou d’opérations d’index individuelles grâce à la spécification de l’indicateur MAXDOP ou de l’option d’index MAXDOP. MAXDOP offre un meilleur contrôle sur les requêtes et les opérations d'index individuelles. Par exemple, vous pouvez utiliser l’option MAXDOP pour contrôler (à savoir augmenter ou réduire) le nombre de processeurs alloués à une opération d’index en ligne. Ceci vous permet d'équilibrer les ressources utilisées par une opération d'index et celles des utilisateurs simultanés. 
 
-Attribuer la valeur 0 (valeur par défaut) à l’option Degré maximal de parallélisme permet à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] d’utiliser tous les processeurs disponibles, 64 au maximum, dans une exécution de plan parallèle. Bien que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] définisse une cible d’exécution de 64 processeurs logiques quand l’option MAXDOP a la valeur 0, une autre valeur peut être définie manuellement si nécessaire. Attribuer la valeur 0 à MAXDOP pour les requêtes et les index permet à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] d’utiliser tous les processeurs disponibles, 64 au maximum, pour les requêtes ou les index donnés dans une exécution de plan parallèle. MAXDOP n’est pas une valeur appliquée pour toutes les requêtes parallèles, mais plutôt une cible provisoire pour toutes les requêtes éligibles pour le parallélisme. Cela signifie que si le nombre de threads de travail disponibles n’est pas suffisant au moment de l’exécution, une requête peut s’exécuter avec un degré de parallélisme inférieur à l’option MAXDOP.
+L’attribution de la valeur 0 (valeur par défaut) à l’option Degré maximal de parallélisme permet à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] d’utiliser tous les processeurs disponibles, jusqu’à 64, dans une exécution de plan parallèle. Bien que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] définisse une cible d’exécution de 64 processeurs logiques quand l’option MAXDOP a la valeur 0, une autre valeur peut être définie manuellement si nécessaire. Attribuer la valeur 0 à MAXDOP pour les requêtes et les index permet à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] d’utiliser tous les processeurs disponibles, 64 au maximum, pour les requêtes ou les index donnés dans une exécution de plan parallèle. MAXDOP n’est pas une valeur appliquée pour toutes les requêtes parallèles, mais plutôt une cible provisoire pour toutes les requêtes éligibles pour le parallélisme. Cela signifie que si le nombre de threads de travail disponibles n’est pas suffisant au moment de l’exécution, une requête peut s’exécuter avec un degré de parallélisme inférieur à l’option MAXDOP.
 
-Pour obtenir des recommandations sur la configuration de MAXDOP, consultez cet [Article du support technique Microsoft](https://support.microsoft.com/en-us/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server).
+Pour obtenir des recommandations sur la configuration de MAXDOP, consultez cet [Article du support technique Microsoft](http://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server).
 
 ### <a name="parallel-query-example"></a>Exemple de requête en parallèle
 
@@ -665,7 +665,7 @@ WHERE o_orderdate >= '2000/04/01'
    ORDER BY o_orderpriority
 ```
 
-Supposons que les index suivants soient définis dans les tables lineitem et orders :
+Supposons que les index suivants soient définis dans les tables `lineitem` et `orders` :
 
 ```tsql
 CREATE INDEX l_order_dates_idx 
@@ -751,7 +751,7 @@ Les phases principales d'une opération d'index parallèle sont les suivantes :
 
 Les instructions `CREATE TABLE` ou `ALTER TABLE` individuelles peuvent avoir plusieurs contraintes imposant la création d’un index. Ces opérations de création d'index multiples sont exécutées en série, bien que chaque opération de création d'index individuelle puisse être une opération parallèle sur un ordinateur doté de plusieurs UC.
 
-## <a name="distributted-query-architecture"></a>Architecture des requêtes distribuées
+## <a name="distributed-query-architecture"></a>Architecture des requêtes distribuées
 
 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge deux méthodes distinctes pour référencer des sources de données OLE DB hétérogènes dans les instructions Transact-SQL :
 
@@ -791,7 +791,7 @@ Quand c’est possible, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e
 
 ## <a name="query-processing-enhancements-on-partitioned-tables-and-indexes"></a>Améliorations du traitement des requêtes sur les tables et les index partitionnés
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2008 a amélioré les performances du traitement des requêtes sur les tables partitionnées pour de nombreux plans parallèles, changé la façon dont les plans parallèles et en série sont représentés, et amélioré les informations de partitionnement fournies dans les plans d’exécution au moment de la compilation et au moment de l’exécution. Cette rubrique décrit ces améliorations, fournit des indications sur la façon d'interpréter les plans d'exécution de requêtes de tables et d'index partitionnés, et fournit des recommandations pour améliorer les performances des requêtes sur les objets partitionnés. 
+[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] a amélioré les performances du traitement des requêtes sur les tables partitionnées pour de nombreux plans parallèles, changé la façon dont les plans parallèles et en série sont représentés, et amélioré les informations de partitionnement fournies dans les plans d’exécution au moment de la compilation et au moment de l’exécution. Cette rubrique décrit ces améliorations, fournit des indications sur la façon d'interpréter les plans d'exécution de requêtes de tables et d'index partitionnés, et fournit des recommandations pour améliorer les performances des requêtes sur les objets partitionnés. 
 
 > [!NOTE]
 > Les tables et les index partitionnés sont uniquement pris en charge dans les éditions Enterprise, Developer et Evaluation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
@@ -802,7 +802,7 @@ Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la représentation 
 
 L'élimination de partition est maintenant réalisée dans cette opération de recherche.
 
-De plus, l’optimiseur de requête est étendu de telle sorte qu’une opération de recherche ou d’analyse avec une condition puisse être réalisée sur `PartitionID` (comme colonne principale logique) et éventuellement d’autres colonnes clés d’index, puis une recherche de second niveau, avec une condition différente, peut être réalisée sur une ou plusieurs colonnes supplémentaires, pour chaque valeur distincte répondant à la qualification de l’opération de recherche de premier niveau. Autrement dit, cette opération, appelée analyse par saut, permet à l’optimiseur de requête d’effectuer une opération de recherche ou d’analyse basée sur une condition pour déterminer à quelles partitions accéder, et une opération de recherche d’index de second niveau au sein de cet opérateur pour retourner les lignes de ces partitions qui répondent à une condition différente. Examinez, par exemple, la requête suivante.
+In addition, the Query Optimizer is extended so that a seek or scan operation with one condition can be done on `PartitionID` (comme colonne principale logique) et éventuellement d'autres colonnes clés d'index, puis une recherche de second niveau, avec une condition différente, peut être réalisée sur une ou plusieurs colonnes supplémentaires, pour chaque valeur distincte répondant à la qualification de l'opération de recherche de premier niveau. Autrement dit, cette opération, appelée analyse par saut, permet à l’optimiseur de requête d’effectuer une opération de recherche ou d’analyse basée sur une condition pour déterminer à quelles partitions accéder et une opération de recherche d’index de second niveau au sein de cet opérateur pour retourner les lignes de ces partitions qui répondent à une condition différente. Examinez, par exemple, la requête suivante.
 
 ```tsql
 SELECT * FROM T WHERE a < 10 and b = 2;
@@ -816,7 +816,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 Pour résoudre la requête, le processeur de requêtes effectue une opération de recherche de premier niveau pour rechercher chaque partition contenant des lignes répondant à la condition `T.a < 10`. Cela identifie les partitions à accéder. Dans chaque partition identifiée, le processeur effectue ensuite une recherche de second niveau dans l’index cluster sur la colonne b pour rechercher les lignes qui répondent aux conditions `T.b = 2` et `T.a < 10`. 
 
-L'illustration suivante est une représentation logique de l'opération d'analyse par saut. Elle montre la table T avec des données dans les colonnes a et b. Les partitions sont numérotées de 1 à 4 et les limites de partition sont indiquées par des lignes verticales en pointillé. Une opération de recherche de premier niveau dans les partitions (non représentée dans l’illustration) a déterminé que les partitions 1, 2 et 3 répondent à la condition de recherche impliquée par le partitionnement défini pour la table et le prédicat sur la colonne a. À savoir, `T.a < 10`. Le chemin d'accès parcouru par la partie de la recherche de second niveau de l'opération d'analyse par saut est illustré par la ligne courbée. Fondamentalement, l'opération d'analyse par saut recherche dans chacune de ces partitions les lignes qui répondent à la condition `b = 2`. Le coût total de l'opération d'analyse par saut est le même que celui de trois recherches d'index séparées.   
+L'illustration suivante est une représentation logique de l'opération d'analyse par saut. Elle montre la table `T` avec des données dans les colonnes `a` et `b`. Les partitions sont numérotées de 1 à 4 et les limites de partition sont indiquées par des lignes verticales en pointillé. Une opération de recherche de premier niveau dans les partitions (non représentée dans l'illustration) a déterminé que les partitions 1, 2 et 3 répondent à la condition de recherche impliquée par le partitionnement défini pour la table et le prédicat sur la colonne `a`. À savoir, `T.a < 10`. Le chemin d'accès parcouru par la partie de la recherche de second niveau de l'opération d'analyse par saut est illustré par la ligne courbée. Fondamentalement, l'opération d'analyse par saut recherche dans chacune de ces partitions les lignes qui répondent à la condition `b = 2`. Le coût total de l'opération d'analyse par saut est le même que celui de trois recherches d'index séparées.   
 
 ![skip_scan](../relational-databases/media/skip-scan.gif)
 
@@ -846,7 +846,7 @@ SET quantity = quantity * 2
 WHERE date_id BETWEEN 20080802 AND 20080902;
 ```
 
-L’illustration suivante montre les propriétés de l’opérateur `Clustered Index Seek` dans le plan d’exécution de compilation pour cette requête. Pour examiner la définition de la table `fact_sales` et la définition de la partition, consultez la section « Exemple » dans cette rubrique.  
+L’illustration suivante montre les propriétés de l’opérateur `Clustered Index Seek` dans le plan d’exécution de compilation pour cette requête. Pour examiner la définition de la table `fact_sales` et la définition de la partition, consultez la section « Exemple » dans cette rubrique.  
 
 ![clustered_index_seek](../relational-databases/media/clustered-index-seek.gif)
 
@@ -914,7 +914,7 @@ Un segment de mémoire partitionné est traité comme un index logique sur l’I
 
 #### <a name="interpreting-execution-plans-for-collocated-joins"></a>Interprétation des plans d'exécution pour les jointures en colocation
 
-La colocation de jointure peut se produire lorsque deux tables sont partitionnées à l'aide de la même fonction de partitionnement ou d'une fonction de partitionnement équivalente et que les colonnes de partitionnement des deux côtés de la jointure sont spécifiées dans la condition de jointure de la requête. L’optimiseur de requête peut générer un plan où les partitions de chaque table avec des ID de partition identiques sont jointes séparément. Les jointures en colocation peuvent être plus rapides que les autres jointures car elles peuvent nécessiter moins de mémoire et occasionner un temps de traitement inférieur. L’optimiseur de requête choisit un plan en colocation ou non en fonction des estimations de coût.
+La colocation de jointure peut se produire lorsque deux tables sont partitionnées à l'aide de la même fonction de partitionnement ou d'une fonction de partitionnement équivalente et que les colonnes de partitionnement des deux côtés de la jointure sont spécifiées dans la condition de jointure de la requête. L'optimiseur de requête peut générer un plan où les partitions de chaque table avec des ID de partition identiques sont jointes séparément. Les jointures en colocation peuvent être plus rapides que les autres jointures car elles peuvent nécessiter moins de mémoire et occasionner un temps de traitement inférieur. L’optimiseur de requête choisit un plan en colocation ou non en fonction des estimations de coût.
 
 Dans un plan en colocation, la jointure `Nested Loops` lit une ou plusieurs partitions de table ou d’index jointes en interne. Les nombres dans les opérateurs `Constant Scan` représentent les numéros de partition. 
 
@@ -943,24 +943,24 @@ Bien que les exemples ci-dessus suggèrent une méthode simple pour allouer des 
 
 Pour prendre un autre exemple, supposons que la table a quatre partitions sur la colonne A avec des points de limite (10, 20, 30), un index sur la colonne B, et que la requête a une clause de prédicat `WHERE B IN (50, 100, 150)`. Les partitions de table étant basées sur les valeurs de A, les valeurs de B peuvent se produire dans chacune des partitions de table. Par conséquent, le processeur de requêtes recherche chacune des trois valeurs de B (50, 100, 150) dans chacune des quatre partitions de table. Le processeur de requêtes assignera des threads de travail proportionnellement afin de pouvoir exécuter chacune de ces 12 analyses de requête en parallèle.
 
-|Partitions de table basées sur la colonne A    |Recherches pour la colonne B dans chaque partition de table |
+|Partitions de table basées sur la colonne A |Recherches pour la colonne B dans chaque partition de table |
 |----|----|
-|Partition de table 1 : A < 10     |B=50, B=100, B=150 |
-|Partition de table 2 : A >= 10 AND A < 20     |B=50, B=100, B=150 |
-|Partition de table 3 : A >= 20 AND A < 30     |B=50, B=100, B=150 |
-|Partition de table 4 : A >= 30     |B=50, B=100, B=150 |
+|Partition de table 1 : A < 10   |B=50, B=100, B=150 |
+|Partition de table 2 : A >= 10 AND A < 20   |B=50, B=100, B=150 |
+|Partition de table 3 : A >= 20 AND A < 30   |B=50, B=100, B=150 |
+|Partition de table 4 : A >= 30  |B=50, B=100, B=150 |
 
 ### <a name="best-practices"></a>Bonnes pratiques
 
 Pour améliorer les performances des requêtes qui accèdent à une grande quantité de données à partir de tables et d'index partitionnés volumineux, nous vous recommandons d'appliquer les méthodes conseillées suivantes :
 
-* Agrégez par bandes chaque partition sur plusieurs disques.
+* Agrégez par bandes chaque partition sur plusieurs disques. Cette opération est particulièrement appropriée quand vous utilisez des disques de rotation.
 * Dans la mesure du possible, utilisez un serveur avec suffisamment de mémoire principale pour prendre en charge les partitions faisant l'objet d'un accès fréquent ou toutes les partitions afin de réduire le coût des E/S.
 * Si les données que vous interrogez ne tiennent pas en mémoire, compressez les tables et les index. Cela réduira le coût des E/S.
 * Utilisez un serveur avec des processeurs rapides et autant de noyaux de processeur que^possible selon vos moyens pour tirer parti des capacités de traitement de requête parallèle.
 * Assurez-vous que le serveur possède une bande passante de contrôleur d'E/S suffisante. 
 * Créez un index cluster sur chaque grande table partitionnée pour tirer parti des optimisations d'analyse d'arbre B (B-tree).
-* Appliquez les recommandations mentionnées dans le livre blanc « [Loading Bulk Data into a Partitioned Table](http://go.microsoft.com/fwlink/?LinkId=154561)» (en anglais) lors du chargement en masse des données dans des tables partitionnées.
+* Appliquez les recommandations mentionnées dans le livre blanc « [The Data Loading Performance Guide](http://msdn.microsoft.com/en-us/library/dd425070.aspx)» lors du chargement en masse des données dans des tables partitionnées.
 
 ### <a name="example"></a>Exemple
 
@@ -1034,5 +1034,6 @@ GO
 
 ##  <a name="Additional_Reading"></a> Lecture supplémentaire  
  [Guide de référence des opérateurs Showplan logiques et physiques](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
- [Événements étendus](../relational-databases/extended-events/extended-events.md)
+ [Événements étendus](../relational-databases/extended-events/extended-events.md)  
+ [Bonnes pratiques relatives au Magasin des requêtes](../relational-databases/performance/best-practice-with-the-query-store.md)
 
