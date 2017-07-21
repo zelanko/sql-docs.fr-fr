@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 58db786512aa1ed167df55831c6a7cc3c53224bd
+ms.translationtype: HT
+ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
+ms.openlocfilehash: f13f4f60d8df7d2a2fb668cc6d5a93f092973116
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="how-query-store-collects-data"></a>Comment le magasin de requêtes collecte les données
@@ -32,7 +32,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="views"></a>Vues  
  Le diagramme suivant montre les affichages du magasin de requêtes et leurs relations logiques avec les informations de compilation présentées sous la forme d'entités bleues :  
   
- ![query-store-process-1views](../../relational-databases/performance/media/query-store-process-1views.png "query-store-process-1views")  
+ ![query-store-process-2views](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
   
  **Description des affichages**  
   
@@ -68,7 +68,8 @@ ms.lasthandoff: 04/11/2017
   
  Dans le cas d'un incident du système, le magasin de requêtes peut perdre des données d’exécution jusqu'à la quantité définie avec `DATA_FLUSH_INTERVAL_SECONDS`. La valeur par défaut de 900 secondes (15 minutes) représente un équilibre optimal entre les performances de capture de requête et la disponibilité des données.  
 En cas de sollicitation de la mémoire, les statistiques d'exécution peuvent être vidées sur le disque plus tôt que ce qui est défini avec `DATA_FLUSH_INTERVAL_SECONDS`.  
-Lors de la lecture des données du magasin de requêtes, les données en mémoire et sur disque sont unifiées en toute transparence.  
+Lors de la lecture des données du magasin de requêtes, les données en mémoire et sur disque sont unifiées en toute transparence.
+En cas d’interruption de la session ou de blocage/redémarrage de l’application cliente, les statistiques sur les requêtes ne sont pas enregistrées.  
   
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 

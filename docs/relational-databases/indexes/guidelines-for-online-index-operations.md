@@ -1,7 +1,7 @@
 ---
 title: "Instructions pour les opérations d’index en ligne | Microsoft Docs"
 ms.custom: 
-ms.date: 04/14/2017
+ms.date: 07/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,11 +21,11 @@ caps.latest.revision: 64
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
-ms.openlocfilehash: 508440b3e6cd15d4fb70f933c380e958dad74d56
+ms.translationtype: HT
+ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
+ms.openlocfilehash: 9b6d3aabe451c35c25822a2114e825e980ad01d3
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="guidelines-for-online-index-operations"></a>Instructions pour les opérations d'index en ligne
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/23/2017
 -   Les index non cluster non uniques peuvent être créés en ligne lorsque la table contient des types de données LOB, mais qu'aucune de ces colonnes n'est utilisée dans la définition de l'index en tant que colonne clé ou non-clé (incluse).  
   
 -   Les index de tables temporaires locales ne peuvent pas être créés, reconstruits ou supprimés en ligne. Cette restriction ne s'applique pas aux index des tables temporaires globales.
-- Les index peuvent être repris où il a été arrêtée après une défaillance inattendue, le basculement de la base de données, ou un **PAUSE** commande. Consultez [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Cette fonctionnalité est en version préliminaire publique pour SQL Server 2017.
+- Les index peuvent être repris où il a été arrêtée après une défaillance inattendue, le basculement de la base de données, ou un **PAUSE** commande. Consultez [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Cette fonctionnalité est en préversion publique pour SQL Server 2017 et Azure SQL Database.
 
 > [!NOTE]  
 >  Les opérations d’index en ligne ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -93,7 +93,7 @@ Pour plus d’informations, consultez [Disk Space Requirements for Index DDL Ope
 ## <a name="resumable-index-rebuild-considerations"></a>Considérations relatives à la reconstruction d’Index pouvant être reprises
 
 > [!NOTE]
-> Consultez [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Cette fonctionnalité est en version préliminaire publique pour SQL Server 2017.
+> Consultez [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Cette fonctionnalité est en préversion publique pour SQL Server 2017 et Azure SQL Database.
 >
 
 Lorsque vous effectuez la reconstruction d’index en ligne peut être repris les indications suivantes s’appliquent :

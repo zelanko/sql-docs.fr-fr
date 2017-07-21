@@ -17,11 +17,11 @@ caps.latest.revision: 25
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f5b029907f25811131e08d2f7ade1f050e3a18d5
+ms.translationtype: HT
+ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
+ms.openlocfilehash: 0c39bbf997fb5041a1fc4ea55699fbb3a40e3d75
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="polybase-installation"></a>Installation de PolyBase
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Espace libre minimal sur le disque dur : 2 Go  
   
--   La connectivité TCP/IP doit être activée. (Consultez [Activer ou désactiver un protocole réseau de serveur](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)  
+-   La connectivité TCP/IP doit être activée. (Consultez [Activer ou désactiver un protocole réseau de serveur](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)  Par défaut, TCP/IP est désactivé sur les éditions Developer et Express de SQL Server. Vous devez l’activer manuellement pour que PolyBase puisse fonctionner.
   
  **Remarques**  
   
@@ -65,7 +65,7 @@ Une fois que vous avez installé PolyBase de façon autonome ou dans un groupe a
   
 4.  Dans la page de configuration du serveur, configurez le **Service de moteur SQL Server PolyBase** et le service de déplacement de données SQL Server PolyBase à exécuter sous le même compte.  
   
-    > **IMPORTANT** Dans un groupe de scale-out PolyBase, le moteur PolyBase et le service de déplacement PolyBase doivent être exécutés sous le même compte de domaine, et ce sur tous les nœuds.  
+    > **IMPORTANT !** Dans un groupe de scale-out PolyBase, le moteur PolyBase et le service de déplacement PolyBase doivent être exécutés sous le même compte de domaine, et ce sur tous les nœuds.  
     > Voir l’évolution horizontale PolyBase.  
   
 5.  Sur la **Page de configuration de PolyBase**, sélectionnez une des deux options. Pour plus d’informations, consultez [Groupes de scale-out PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md) .  

@@ -1,7 +1,7 @@
 ---
 title: "Renommer une procédure stockée | Microsoft Docs"
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 07/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,11 +17,11 @@ caps.latest.revision: 23
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8082b0cdf5788bd4b96c14ff60dbd9103c27bd74
+ms.translationtype: HT
+ms.sourcegitcommit: 47182ebd082dfae0963d761e54c4045be927d627
+ms.openlocfilehash: 1d0ddb568fd162f4be42234607b5b8484cb89f60
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="rename-a-stored-procedure"></a>Renommer une procédure stockée
@@ -47,8 +47,10 @@ ms.lasthandoff: 06/22/2017
   
 -   Les noms des procédures doivent respecter les conventions concernant les [identificateurs](../../relational-databases/databases/database-identifiers.md).  
   
--   Le fait de renommer une procédure stockée ne modifie pas le nom de l’objet correspondant dans la colonne de définition de l’affichage catalogue **sys.sql_modules** . Par conséquent, nous vous recommandons de ne pas renommer ce type d'objet. À la place, supprimez, puis recréez la procédure stockée avec son nouveau nom.  
-  
+-   Le fait de renommer une procédure stockée conserve la valeur `object_id` et toutes les autorisations spécifiquement assignées à la procédure. Le fait de supprimer et de recréer l’objet crée une nouvelle valeur `object_id` et supprime toutes les autorisations spécifiquement assignées à la procédure.
+
+-   Le fait de renommer une procédure stockée ne modifie pas le nom de l’objet correspondant dans la colonne de définition de la vue de catalogue **sys.sql_modules**. Pour ce faire, vous devez supprimer et recréer la procédure stockée avec son nouveau nom.  
+
 -   La modification du nom ou de la définition d'une procédure peut entraîner l'échec de ses objets dépendants si ceux-ci n'ont pas été mis à jour pour refléter les modifications apportées à la procédure. Pour plus d’informations, consultez [Afficher les dépendances d’une procédure stockée](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md).  
   
 ###  <a name="Security"></a> Sécurité  
@@ -65,15 +67,10 @@ ms.lasthandoff: 06/22/2017
 #### <a name="to-rename-a-stored-procedure"></a>Pour renommer une procédure stockée  
   
 1.  Dans l’Explorateur d’objets, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et développez-la.  
-  
 2.  Développez **Bases de données**, développez la base de données à laquelle appartient la procédure, puis développez **Programmabilité**.  
-  
 3.  [Déterminez les dépendances de la procédure stockée](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md).  
-  
 4.  Développez **Procédures stockées**, cliquez avec le bouton droit sur la procédure à renommer, puis cliquez sur **Renommer**.  
-  
 5.  Modifiez le nom de la procédure.  
-  
 6.  Modifiez le nom de la procédure référencé dans tous les objets ou scripts dépendants.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
@@ -81,18 +78,14 @@ ms.lasthandoff: 06/22/2017
 #### <a name="to-rename-a-stored-procedure"></a>Pour renommer une procédure stockée  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
-  
 3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple montre comment renommer une procédure en la supprimant puis en la recréant avec un nouveau nom. Le premier exemple crée la procédure stockée `'HumanResources.uspGetAllEmployeesTest`. Le deuxième exemple renomme la procédure stockée en `HumanResources.uspEveryEmployeeTest`.  
   
-```tsql  
+```sql  
 --Create the stored procedure.  
 USE AdventureWorks2012;  
 GO  
-IF OBJECT_ID ( 'HumanResources.uspGetAllEmployeesTest', 'P' ) IS NOT NULL   
-    DROP PROCEDURE HumanResources.uspGetAllEmployeesTest;  
-GO  
+
 CREATE PROCEDURE HumanResources.uspGetAllEmployeesTest  
 AS  
     SET NOCOUNT ON;  
@@ -101,17 +94,7 @@ AS
 GO  
   
 --Rename the stored procedure.  
-USE AdventureWorks2012;  
-GO  
-IF OBJECT_ID ( 'HumanResources.uspGetAllEmployeesTest', 'P' ) IS NOT NULL   
-    DROP PROCEDURE HumanResources.uspGetAllEmployeesTest;  
-GO  
-CREATE PROCEDURE HumanResources.uspEveryEmployeeTest  
-AS  
-    SET NOCOUNT ON;  
-    SELECT LastName, FirstName, Department  
-    FROM HumanResources.vEmployeeDepartmentHistory;  
-GO  
+EXEC sp_rename 'HumanResources.uspGetAllEmployeesTest', 'HumanResources.uspEveryEmployeeTest'; 
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
@@ -124,3 +107,4 @@ GO
  [Afficher les dépendances d’une procédure stockée](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)  
   
   
+

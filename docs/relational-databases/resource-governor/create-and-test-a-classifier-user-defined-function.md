@@ -1,7 +1,7 @@
 ---
 title: "Créer et tester une fonction classifieur définie par l’utilisateur | Microsoft Docs"
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 07/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,11 +19,11 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 097b7e93a82b8f1cc20767c57788eebe8162729a
+ms.translationtype: HT
+ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
+ms.openlocfilehash: 95cb4a61a662dae4168e1b67900cce9c16de315f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>Créer et tester une fonction classifieur définie par l'utilisateur
@@ -44,21 +44,21 @@ ms.lasthandoff: 06/22/2017
   
  La fonction classifieur étend le temps de connexion. Une fonction trop complexe peut provoquer l'expiration des délais d'attente de connexion ou ralentir les connexions rapides.  
   
-### <a name="to-create-the-classifier-user-defined-function"></a>Pour créer la fonction classifieur définie par l'utilisateur  
+## <a name="to-create-the-classifier-user-defined-function"></a>Pour créer la fonction classifieur définie par l'utilisateur  
   
 1.  Créez et configurez les nouveaux pools de ressources et groupes de charges de travail. Affectez chaque groupe de charge de travail au pool de ressources approprié.  
   
     ```  
     --- Create a resource pool for production processing  
     --- and set limits.  
-    USE master  
+    USE master;  
     GO  
     CREATE RESOURCE POOL pProductionProcessing  
     WITH  
     (  
          MAX_CPU_PERCENT = 100,  
          MIN_CPU_PERCENT = 50  
-    )  
+    );  
     GO  
     --- Create a workload group for production processing  
     --- and configure the relative importance.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 06/22/2017
     WITH  
     (  
          IMPORTANCE = MEDIUM  
-    )  
+    );  
     --- Assign the workload group to the production processing  
     --- resource pool.  
     USING pProductionProcessing  
@@ -79,7 +79,7 @@ ms.lasthandoff: 06/22/2017
     (  
          MAX_CPU_PERCENT = 50,  
          MIN_CPU_PERCENT = 0  
-    )  
+    );  
     GO  
     --- Create a workload group for off-hours processing  
     --- and configure the relative importance.  
@@ -90,32 +90,32 @@ ms.lasthandoff: 06/22/2017
     )  
     --- Assign the workload group to the off-hours processing  
     --- resource pool.  
-    USING pOffHoursProcessing  
+    USING pOffHoursProcessing;  
     GO  
     ```  
   
 2.  Mettez à jour la configuration en mémoire.  
   
     ```  
-    ALTER RESOURCE GOVERNOR RECONFIGURE  
+    ALTER RESOURCE GOVERNOR RECONFIGURE;  
     GO  
     ```  
   
 3.  Créez une table et définissez les heures de début et de fin pour la plage temporelle de traitement de production.  
   
     ```  
-    USE master  
+    USE master;  
     GO  
     CREATE TABLE tblClassificationTimeTable  
     (  
          strGroupName     sysname          not null,  
          tStartTime       time              not null,  
          tEndTime         time              not null  
-    )  
+    );  
     GO  
     --- Add time values that the classifier will use to  
     --- determine the workload group for a session.  
-    INSERT into tblClassificationTimeTable VALUES('gProductionProcessing', '6:35 AM', '6:15 PM')  
+    INSERT into tblClassificationTimeTable VALUES('gProductionProcessing', '6:35 AM', '6:15 PM');  
     go  
     ```  
   
@@ -130,11 +130,14 @@ ms.lasthandoff: 06/22/2017
     WITH SCHEMABINDING  
     AS  
     BEGIN  
+    /* We recommend running the classifier function code under 
+    snapshot isolation level OR using NOLOCK hint to avoid blocking on 
+    lookup table. In this example, we are using NOLOCK hint. */
          DECLARE @strGroup sysname  
          DECLARE @loginTime time  
          SET @loginTime = CONVERT(time,GETDATE())  
          SELECT TOP 1 @strGroup = strGroupName  
-              FROM dbo.tblClassificationTimeTable  
+              FROM dbo.tblClassificationTimeTable WITH(NOLOCK)
               WHERE tStartTime <= @loginTime and tEndTime >= @loginTime  
          IF(@strGroup is not null)  
          BEGIN  
@@ -143,26 +146,26 @@ ms.lasthandoff: 06/22/2017
     --- Use the default workload group if there is no match  
     --- on the lookup.  
          RETURN N'gOffHoursProcessing'  
-    END  
+    END;  
     GO  
     ```  
   
 5.  Inscrivez la fonction classifieur et mettez à jour la configuration en mémoire.  
   
     ```  
-    ALTER RESOURCE GOVERNOR with (CLASSIFIER_FUNCTION = dbo.fnTimeClassifier)  
-    ALTER RESOURCE GOVERNOR RECONFIGURE  
+    ALTER RESOURCE GOVERNOR with (CLASSIFIER_FUNCTION = dbo.fnTimeClassifier);  
+    ALTER RESOURCE GOVERNOR RECONFIGURE;  
     GO  
     ```  
   
-### <a name="to-verify-the-resource-pools-workload-groups-and-the-classifier-user-defined-function"></a>Pour vérifier les pools de ressources, les groupes de charges de travail et la fonction définie par l'utilisateur classifieur  
+## <a name="to-verify-the-resource-pools-workload-groups-and-the-classifier-user-defined-function"></a>Pour vérifier les pools de ressources, les groupes de charges de travail et la fonction définie par l'utilisateur classifieur  
   
 1.  Obtenez la configuration de pool de ressources et de groupe de charges de travail à l'aide de la requête suivante.  
   
     ```  
-    USE master  
-    SELECT * FROM sys.resource_governor_resource_pools  
-    SELECT * FROM sys.resource_governor_workload_groups  
+    USE master;  
+    SELECT * FROM sys.resource_governor_resource_pools;  
+    SELECT * FROM sys.resource_governor_workload_groups;  
     GO  
     ```  
   
@@ -170,45 +173,46 @@ ms.lasthandoff: 06/22/2017
   
     ```  
     --- Get the classifier function Id and state (enabled).  
-    SELECT * FROM sys.resource_governor_configuration  
+    SELECT * FROM sys.resource_governor_configuration;  
     GO  
     --- Get the classifer function name and the name of the schema  
     --- that it is bound to.  
     SELECT   
           object_schema_name(classifier_function_id) AS [schema_name],  
           object_name(classifier_function_id) AS [function_name]  
-    FROM sys.dm_resource_governor_configuration  
-  
+    FROM sys.dm_resource_governor_configuration;  
     ```  
   
 3.  Obtenez les données d'exécution actuelles pour les pools de ressources et groupes de charges de travail en utilisant la requête suivante.  
   
     ```  
-    SELECT * FROM sys.dm_resource_governor_resource_pools  
-    SELECT * FROM sys.dm_resource_governor_workload_groups  
+    SELECT * FROM sys.dm_resource_governor_resource_pools;  
+    SELECT * FROM sys.dm_resource_governor_workload_groups;  
     GO  
     ```  
   
 4.  Déterminez quelles sessions se trouvent dans chaque de groupe en utilisant la requête suivante.  
   
     ```  
-    SELECT s.group_id, CAST(g.name as nvarchar(20)), s.session_id, s.login_time, CAST(s.host_name as nvarchar(20)), CAST(s.program_name AS nvarchar(20))  
-              FROM sys.dm_exec_sessions s  
-         INNER JOIN sys.dm_resource_governor_workload_groups g  
-              ON g.group_id = s.group_id  
-    ORDER BY g.name  
+    SELECT s.group_id, CAST(g.name as nvarchar(20)), s.session_id, s.login_time, 
+        CAST(s.host_name as nvarchar(20)), CAST(s.program_name AS nvarchar(20))  
+    FROM sys.dm_exec_sessions AS s  
+    INNER JOIN sys.dm_resource_governor_workload_groups AS g  
+        ON g.group_id = s.group_id  
+    ORDER BY g.name;  
     GO  
     ```  
   
 5.  Déterminez quelles demandes se trouvent dans chaque groupe en utilisant la requête suivante.  
   
     ```  
-    SELECT r.group_id, g.name, r.status, r.session_id, r.request_id, r.start_time, r.command, r.sql_handle, t.text   
-               FROM sys.dm_exec_requests r  
-         INNER JOIN sys.dm_resource_governor_workload_groups g  
-                ON g.group_id = r.group_id  
-         CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t  
-    ORDER BY g.name  
+    SELECT r.group_id, g.name, r.status, r.session_id, r.request_id, 
+        r.start_time, r.command, r.sql_handle, t.text   
+    FROM sys.dm_exec_requests AS r  
+    INNER JOIN sys.dm_resource_governor_workload_groups AS g  
+        ON g.group_id = r.group_id  
+    CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t  
+    ORDER BY g.name;  
     GO  
     ```  
   
@@ -216,24 +220,25 @@ ms.lasthandoff: 06/22/2017
   
     ```  
     SELECT s.group_id, g.name, s.session_id, s.login_time, s.host_name, s.program_name   
-               FROM sys.dm_exec_sessions s  
-         INNER JOIN sys.dm_resource_governor_workload_groups g  
-               ON g.group_id = s.group_id  
-                     AND 'preconnect' = s.status  
-    ORDER BY g.name  
+    FROM sys.dm_exec_sessions AS s  
+    INNER JOIN sys.dm_resource_governor_workload_groups AS g  
+        ON g.group_id = s.group_id  
+           AND 'preconnect' = s.status  
+    ORDER BY g.name;  
     GO  
   
-    SELECT r.group_id, g.name, r.status, r.session_id, r.request_id, r.start_time, r.command, r.sql_handle, t.text   
-               FROM sys.dm_exec_requests r  
-         INNER JOIN sys.dm_resource_governor_workload_groups g  
-               ON g.group_id = r.group_id  
-                     AND 'preconnect' = r.status  
-         CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t  
-    ORDER BY g.name  
+    SELECT r.group_id, g.name, r.status, r.session_id, r.request_id, r.start_time, 
+        r.command, r.sql_handle, t.text   
+    FROM sys.dm_exec_requests AS r  
+    INNER JOIN sys.dm_resource_governor_workload_groups AS g  
+        ON g.group_id = r.group_id  
+           AND 'preconnect' = r.status  
+     CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t  
+    ORDER BY g.name;  
     GO  
     ```  
   
-### <a name="best-practices-for-using-lookup-tables-in-a-classifier-function"></a>Meilleures pratiques recommandées pour l'utilisation de tables de recherche dans une fonction classifieur  
+## <a name="best-practices-for-using-lookup-tables-in-a-classifier-function"></a>Meilleures pratiques recommandées pour l'utilisation de tables de recherche dans une fonction classifieur  
   
 1.  N'utilisez pas de table de recherche sauf en cas d'absolue nécessité. Si vous devez utiliser une table de recherche, vous pouvez la coder de façon irréversible dans la fonction elle-même ; toutefois, cette action doit être équilibrée avec la complexité et les modifications dynamiques de la fonction classifieur.  
   
@@ -259,7 +264,7 @@ ms.lasthandoff: 06/22/2017
   
     4.  Pas de déclencheurs sur la table.  
   
-    5.  Si vous effectuer une mise à jour du contenu de la table, veillez à utiliser une transaction de niveau d'isolement d'instantané afin d'éviter que l'enregistreur ne bloque les lecteurs. Notez que l'utilisation de l'indicateur `NOLOCK` doit également réduire cet effet.  
+    5.  Si vous mettez à jour le contenu de la table, veillez à utiliser une transaction de niveau d’isolement de capture instantanée dans la fonction classifieur afin d’éviter que l’enregistreur ne bloque les lecteurs. Notez que l'utilisation de l'indicateur `NOLOCK` doit également réduire cet effet.  
   
     6.  Si possible, désactivez la fonction classifieur lorsque vous modifiez le contenu de la table.  
   
@@ -280,3 +285,4 @@ ms.lasthandoff: 06/22/2017
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   
+
