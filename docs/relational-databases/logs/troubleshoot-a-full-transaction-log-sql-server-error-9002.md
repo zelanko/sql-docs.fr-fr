@@ -22,11 +22,11 @@ caps.latest.revision: 59
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 09bb30a44ef1675353fe8fa5bd9245c3f25c3894
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/21/2017
 
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Résoudre les problèmes liés à un journal des transactions saturé (erreur SQL Server 9002)
@@ -96,7 +96,7 @@ ms.lasthandoff: 06/22/2017
 > **REMARQUE** Dans les deux cas, si la limite de taille actuelle est atteinte, augmentez la valeur MAXSIZE.  
   
 ### <a name="add-a-log-file-on-a-different-disk"></a>Ajout d’un fichier journal sur un autre disque  
- Ajoutez un nouveau fichier journal à la base de données d'un autre disque doté d'un espace suffisant à l'aide de l'instruction ALTER DATABASE <nom_base_de_données> ADD LOG FILE.  
+ Ajoutez un nouveau fichier journal à la base de données d'un autre disque doté d'un espace suffisant à l'aide de l'instruction ALTER DATABASE <nom_base_de_données> ADD LOG FILE.  
   
  **Ajouter un fichier journal**  
   
@@ -114,8 +114,7 @@ Cette instruction vous permet d'identifier l'ID du propriétaire de la transacti
 Parfois, il vous suffit de mettre un terme au processus ; vous pouvez avoir à utiliser l’instruction [KILL](https://msdn.microsoft.com/library/ms173730.aspx) . Utilisez cette instruction avec précaution, particulièrement lorsque des processus critiques que vous ne voulez pas supprimer sont en cours d’exécution. Pour plus d’informations, voir [KILL (Transact-SQL)](https://msdn.microsoft.com/library/ms173730.aspx).
 
 ## <a name="see-also"></a>Voir aussi  
-[Article de support de la base de connaissances - Le journal des transactions augmente de manière inattendue ou est saturé sur un ordinateur SQL Server](https://support.microsoft.com/en-us/kb/317375)
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+[Article de support de la base de connaissances - Le journal des transactions augmente de manière inattendue ou est saturé sur un ordinateur SQL Server](https://support.microsoft.com/en-us/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Gérer la taille du fichier journal des transactions](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [Sauvegardes des journaux de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  
