@@ -3,7 +3,7 @@
 # [Gestion des connexions et des travaux après un basculement de rôle](management-of-logins-and-jobs-after-role-switching-sql-server.md)  
 # [Dépanner des utilisateurs orphelins](troubleshoot-orphaned-users-sql-server.md)  
 
-# [Installation d’un cluster de basculement (articles)](install/TOC.md)  
+# [Installation d’un cluster de basculement ](install/sql-server-failover-cluster-installation.md)  
 
 # [Clustering de basculement Windows Server (WSFC) avec SQL Server](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
 ## [Modes de quorum WSFC et configuration de vote](windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)  
