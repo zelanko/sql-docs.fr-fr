@@ -2,7 +2,7 @@
 title: Gestionnaire de configuration SQL Server | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 02/25/2016
+ms.date: 07/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -26,11 +26,11 @@ caps.latest.revision: 58
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 54e170a54d3b4008a46b722734919769e2244ef1
+ms.translationtype: HT
+ms.sourcegitcommit: de25852f9005be687fdb8a547e30a99bbb58cf4c
+ms.openlocfilehash: 8c9ab15a35c892a31b882797271629a5ec9ef1a0
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="sql-server-configuration-manager"></a>Gestionnaire de configuration SQL Server
@@ -40,11 +40,11 @@ ms.lasthandoff: 06/23/2017
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est un outil qui permet de gérer les services associés à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], de configurer les protocoles réseau utilisés par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]et de gérer la configuration de la connectivité réseau à partir des ordinateurs clients [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Le Gestionnaire de configuration est un composant logiciel enfichable MMC ( [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console), accessible à partir du menu Démarrer ou qui peut être ajouté dans tout autre affichage [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console. [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (**mmc.exe**) utilise le fichier **SQLServerManager\<version>.msc** (par exemple, **SQLServerManager13.msc** pour [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) pour ouvrir le Gestionnaire de configuration. Voici les chemins d’accès aux quatre dernières versions lorsque Windows est installé sur le lecteur C.  
   
 |||  
-|-|-|  
+|-|-|
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2017|C:\Windows\SysWOW64\SQLServerManager14.msc|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|  
 |[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|  
-|[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
-|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
+|[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|
   
 > [!NOTE]  
 >  Étant donné que le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est un composant logiciel enfichable pour le programme [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console et non pas un programme autonome, le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’apparaît pas en tant qu’application dans les versions plus récentes de Windows.  
@@ -69,7 +69,7 @@ ms.lasthandoff: 06/23/2017
 > [!IMPORTANT]  
 >  Utilisez toujours des outils [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , tels que le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , pour modifier le compte utilisé par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou les services Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et pour changer le mot de passe du compte. Outre la modification du nom de compte, le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] effectue d'autres configurations telles que la définition des autorisations dans le Registre Windows pour que le nouveau compte puisse lire les paramètres [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . D'autres outils tels que le gestionnaire de contrôle de services Windows peuvent modifier le nom du compte mais pas les paramètres associés. Si le service n'a pas accès à la section [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] du Registre, il est possible qu'il ne démarre pas correctement.  
   
- Les mots de passe modifiés à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], de SMO ou de WMI sont pris en compte immédiatement sans avoir à redémarrer le service.  
+ Les mots de passe modifiés à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , de SMO ou de WMI sont pris en compte immédiatement sans avoir à redémarrer le service.  
   
 ## <a name="manage-server--client-network-protocols"></a>Gestion des protocoles réseau serveur et clients  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vous permet de configurer les protocoles réseau serveur et clients ainsi que les options de connectivité. Une fois les protocoles adéquats activés, vous n'avez généralement pas besoin de modifier les connexions réseau du serveur. Toutefois, vous pouvez utiliser le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] si vous devez reconfigurer les connexions du serveur afin que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puisse écouter sur un protocole réseau, un port ou un canal spécifique. Pour plus d’informations sur l’activation des protocoles, consultez [Activer ou désactiver un protocole réseau de serveur](../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md). Pour plus d’informations sur l’activation de l’accès aux protocoles via un pare-feu, consultez [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  

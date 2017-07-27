@@ -2,7 +2,7 @@
 title: "Conversion de données JSON en lignes et colonnes à l’aide d’OPENJSON (SQL Server) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/31/2017
+ms.date: 07/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,33 +19,33 @@ caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: c153135f84f7cb9671840a55f29927fb06ea819e
+ms.translationtype: HT
+ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
+ms.openlocfilehash: a7229bfe9c6924d2d7a79c861fe10c48db4b0c15
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/20/2017
 
 ---
 # <a name="convert-json-data-to-rows-and-columns-with-openjson-sql-server"></a>Conversion de données JSON en lignes et colonnes à l’aide d’OPENJSON (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-La fonction d’ensemble de lignes **OPENJSON** convertit du texte JSON en un ensemble de lignes et de colonnes. Utilisez **OPENJSON** pour exécuter des requêtes SQL sur des collections JSON ou pour importer du texte JSON dans des tables SQL Server.  
+La fonction d’ensemble de lignes **OPENJSON** convertit du texte JSON en un ensemble de lignes et de colonnes. Après avoir transformé une collection JSON en ensemble de lignes avec **OPENJSON**, vous pouvez exécuter n’importe quelle requête SQL sur les données retournées ou l’insérer dans une table SQL Server. 
   
- La fonction **OPENJSON** prend un seul objet JSON ou une collection d’objets JSON, et les transforme en une ou plusieurs lignes. Par défaut, la fonction **OPENJSON** retourne les informations suivantes.
+La fonction **OPENJSON** prend un seul objet JSON ou une collection d’objets JSON, et les transforme en une ou plusieurs lignes. Par défaut, la fonction **OPENJSON** retourne les données suivantes :
 -   À partir d’un objet JSON, toutes les paires clé-valeur qu’elle trouve au premier niveau.
 -   À partir d’un tableau JSON, tous les éléments du tableau avec leurs index.  
-  
-Ajoutez éventuellement une clause **WITH** pour spécifier le schéma des lignes que la fonction **OPENJSON** retourne. Ce schéma explicite définit la structure de la sortie.  
-  
-## <a name="use-openjson-without-an-explicit-schema-for-the-output"></a>Utiliser OPENJSON sans schéma explicite pour la sortie
-Quand vous utilisez la fonction **OPENJSON** sans fournir un schéma explicite pour les résultats (autrement dit, sans clause **WITH** après OPENJSON), la fonction retourne une table comportant les trois colonnes suivantes.
-1.  Le nom de la propriété dans l’objet d’entrée (ou l’index de l’élément dans le tableau d’entrée).
-2.  La valeur de la propriété ou de l’élément du tableau.
-3.  Le type (par exemple, chaîne, nombre, booléen, tableau ou objet).
 
-Chaque propriété de l’objet JSON, ou chaque élément du tableau, est retourné sous la forme d’une ligne distincte.  
+Vous pouvez ajouter une clause **WITH** facultative afin de fournir un schéma qui définit explicitement la structure de la sortie.  
+  
+## <a name="option-1---openjson-with-the-default-output"></a>Option 1 : OPENJSON avec la sortie par défaut
+Quand vous utilisez la fonction **OPENJSON** sans fournir un schéma explicite pour les résultats (autrement dit, sans clause **WITH** après **OPENJSON**), la fonction retourne une table comportant les trois colonnes suivantes :
+1.  Le **nom** de la propriété dans l’objet d’entrée (ou l’index de l’élément dans le tableau d’entrée).
+2.  La **valeur** de la propriété ou de l’élément du tableau.
+3.  Le **type** (par exemple, chaîne, nombre, booléen, tableau ou objet).
 
-L’exemple ci-dessous utilise **OPENJSON** avec le schéma par défaut et retourne une ligne pour chaque propriété de l’objet JSON.  
+**OPENJSON** retourne chaque propriété de l’objet JSON, ou chaque élément du tableau, sous la forme d’une ligne distincte.  
+
+L’exemple ci-dessous utilise **OPENJSON** avec le schéma par défaut (autrement dit, sans la clause **WITH** facultative) et retourne une ligne pour chaque propriété de l’objet JSON.  
  
 **Exemple**
 ```sql  
@@ -66,17 +66,17 @@ FROM OPENJSON(@json);
 |age|45|2|  
 |skills|["SQL","C#","MVC"]|4|
 
-### <a name="more-info"></a>En savoir plus
+### <a name="more-info-about-openjson-with-the-default-schema"></a>Plus d’informations sur OPENJSON avec le schéma par défaut
 
 Pour plus d’informations et pour obtenir des exemples, consultez [Utiliser OPENJSON avec le schéma par défaut &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-the-default-schema-sql-server.md).
 
 Pour plus d’informations sur la syntaxe et l’utilisation, consultez [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md). 
 
     
-## <a name="use-openjson-with-an-explicit-schema-for-the-output"></a>Utiliser OPENJSON avec un schéma explicite pour la sortie
-Quand vous spécifiez un schéma pour les résultats à l’aide de la clause **WITH** de la fonction **OPENJSON**, la fonction retourne une table contenant uniquement les colonnes que vous définissez dans la clause **WITH**. Dans la clause **WITH**, vous spécifiez un ensemble de colonnes de sortie, leurs types et les chemins des propriétés JSON sources pour chaque valeur de sortie. **OPENJSON** itère le tableau d’objets JSON, lit la valeur du chemin spécifié pour chaque colonne, puis convertit la valeur dans le type spécifié.  
+## <a name="option-2---openjson-output-with-an-explicit-structure"></a>Option 2 : Sortie OPENJSON avec une structure explicite
+Quand vous spécifiez un schéma pour les résultats à l’aide de la clause **WITH** de la fonction **OPENJSON**, la fonction retourne une table contenant uniquement les colonnes que vous définissez dans la clause **WITH**. Dans la clause **WITH** facultative, vous spécifiez un ensemble de colonnes de sortie, leurs types et les chemins des propriétés sources JSON pour chaque valeur de sortie. **OPENJSON** itère le tableau d’objets JSON, lit la valeur du chemin spécifié pour chaque colonne, puis convertit la valeur dans le type spécifié.  
 
-Voici un exemple rapide qui utilise **OPENJSON** avec un schéma pour les résultats que vous spécifiez de façon explicite.  
+L’exemple ci-dessous utilise **OPENJSON** avec un schéma pour la sortie que vous spécifiez de façon explicite dans la clause **WITH**.  
   
 **Exemple**
   
@@ -125,23 +125,23 @@ WITH (
 |SO43659|2011-05-31T00:00:00|AW29825|1|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|  
   
- Cette fonction retourne et met en forme les éléments d’un tableau JSON.  
+Cette fonction retourne et met en forme les éléments d’un tableau JSON.  
   
 -   Pour chaque élément du tableau JSON, **OPENJSON** génère une nouvelle ligne dans la table de sortie. Les deux éléments du tableau JSON sont convertis en deux lignes dans la table retournée.  
   
--   Pour chaque colonne, spécifiée à l’aide de la syntaxe `colName type json_path`, la fonction **OPENJSON** convertit la valeur trouvée dans chaque élément de tableau sur le chemin spécifié dans le type spécifié, puis remplit une cellule dans la table de sortie. Dans cet exemple, les valeurs de la colonne `Date` sont tirées de chaque objet sur le chemin `$.Order.Date` et converties en valeur datetime.  
+-   Pour chaque colonne spécifiée à l’aide de la syntaxe `colName type json_path`, **OPENJSON** convertit la valeur trouvée dans chaque élément de tableau sur le chemin spécifié dans le type spécifié. Dans cet exemple, les valeurs de la colonne `Date` sont tirées de chaque élément sur le chemin `$.Order.Date` et converties en valeur datetime.  
   
-Après avoir transformé une collection JSON en ensemble de lignes avec **OPENJSON**, vous pouvez exécuter n’importe quelle requête SQL sur les données retournées ou l’insérer dans une table.  
-
-### <a name="more-info"></a>En savoir plus
+### <a name="more-info-about-openjson-with-an-explicit-schema"></a>Plus d’informations sur OPENJSON avec un schéma explicite
 Pour plus d’informations et pour obtenir des exemples, consultez [Utilisation d’OPENJSON avec un schéma explicite &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md).
 
 Pour plus d’informations sur la syntaxe et l’utilisation, consultez [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md).
 
 ## <a name="openjson-requires-compatibility-level-130"></a>OPENJSON exige le niveau de compatibilité 130
-La fonction **OPENJSON** est disponible uniquement sous le **niveau de compatibilité 130**. Si votre niveau de compatibilité de base de données est inférieur à 130, SQL Server ne pourra pas trouver et exécuter la fonction **OPENJSON** . Les autres fonctions JSON intégrées sont disponibles à tous les niveaux de compatibilité. Vous pouvez vérifier le niveau de compatibilité dans la vue sys.databases ou dans les propriétés de base de données.
+La fonction **OPENJSON** est disponible uniquement sous le **niveau de compatibilité 130**. Si le niveau de compatibilité de votre base de données est inférieur à 130, SQL Server ne peut pas trouver ni exécuter la fonction **OPENJSON**. Les autres fonctions JSON intégrées sont disponibles à tous les niveaux de compatibilité.
 
-Vous pouvez modifier un niveau de compatibilité de base de données à l’aide de la commande suivante :   
+Vous pouvez vérifier le niveau de compatibilité dans la vue `sys.databases` ou dans les propriétés de base de données.
+
+Vous pouvez modifier le niveau de compatibilité d’une base de données à l’aide de la commande suivante :   
 `ALTER DATABASE <DatabaseName> SET COMPATIBILITY_LEVEL = 130`  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>En savoir plus sur la fonction intégrée prise en charge de JSON dans SQL Server  

@@ -15,17 +15,17 @@ caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a4cdbe630a64ce01c6319dcc5791c0f3f9b3176b
+ms.translationtype: HT
+ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
+ms.openlocfilehash: 5f9f128cab773951438aa89998ad76e7ba29bb4d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/20/2017
 
 ---
 # <a name="temporal-tables"></a>Tables temporelles
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] introduit la prise en charge des tables temporelles avec version gérée par le système en tant que fonctionnalité de base de données qui fournit une prise en charge intégrée pour l’apport d’informations sur les données stockées dans la table à tout moment dans le temps, et non uniquement les données correctes au moment actuel. La fonctionnalité temporelle est une fonctionnalité de base de données introduite dans ANSI SQL 2011, et désormais prise en charge dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  SQL Server 2016 introduit la prise en charge des tables temporelles avec contrôle de version par le système en tant que fonctionnalité de base de données qui fournit une prise en charge intégrée pour l’apport d’informations sur les données stockées dans la table à tout moment, et non uniquement les données correctes au moment actuel. La fonctionnalité temporelle est une fonctionnalité de base de données introduite dans ANSI SQL 2011, et désormais prise en charge dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **Démarrage rapide**  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
     -   [Création d’une table temporelle avec contrôle de version du système](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)  
   
-    -   [Utilisation des tables temporelles optimisées en mémoire avec gestion de version par le système](../../relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md)  
+    -   [Utilisation des tables temporelles avec contrôle de version du système à mémoire optimisée](../../relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md)  
   
     -   [Modification des données dans une table temporelle avec système par version](../../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md)  
   
