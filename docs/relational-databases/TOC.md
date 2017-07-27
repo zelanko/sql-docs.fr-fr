@@ -1,10 +1,5 @@
-# [Fonctionnalités de base de données](database-features.md)
+# [Vue d’ensemble](database-features.md)
 # [Articles nouveaux et récemment mis à jour](new-updated-relational-databases.md)
-
-# Vue d'ensemble
-## [Fonctionnalités entre les instances du moteur de base de données](database-engine-cross-instance-features.md)
-## [Informations techniques de référence](technical-reference-database-engine.md)  
-## [Informations de référence sur les fonctionnalités](feature-reference-database-engine.md)   
 
 # [Guides SQL Server](sql-server-guides.md)
 ## Guide de dépannage et de surveillance des groupes de disponibilité AlwaysOn
