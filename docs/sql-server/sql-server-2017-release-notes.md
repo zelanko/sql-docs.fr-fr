@@ -14,15 +14,15 @@ caps.latest.revision: 41
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 67c1c0f3a9da6cc5d050da5db8a493f5da934c2a
-ms.openlocfilehash: fa45fea4ebb378f035b4b4af2b1fa8a20bc152a5
+ms.translationtype: HT
+ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
+ms.openlocfilehash: a2950b6aef0e12653efbb9eb26fd3f1ae6cb951e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/17/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>Notes de mise à jour de SQL Server 2017
-Cette rubrique décrit les limitations et les problèmes de [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]. Pour des informations connexes, consultez les rubriques suivantes :
+Cette rubrique décrit les limitations et les problèmes de [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]. Pour obtenir des informations associées, consultez les rubriques suivantes :
 
 - [Quelles sont les nouveautés dans SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 - [SQL Server sur Linux notes de publication](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
@@ -31,6 +31,16 @@ Cette rubrique décrit les limitations et les problèmes de [!INCLUDE[ssSQLv14_m
  **Essayez-le :**    
    -   [![Télécharger à partir du Centre d’évaluation](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  Télécharger [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] à partir du **[Centre d’évaluation](http://go.microsoft.com/fwlink/?LinkID=829477)**
 
+## <a name="sql-server-2017-release-candidate-rc1---july-2017"></a>SQL Server 2017 Release Candidate (RC1, juillet 2017)
+
+### <a name="sql-server-integration-services-ssis-rc1---july-2017"></a>SQL Server Integration Services (SSIS) (RC1, juillet 2017)
+- **Problème et impact sur le client :** le paramètre *runincluster* de la procédure stockée **[catalog].[create_execution]** est renommé *runinscaleout* pour des raisons de cohérence et de lisibilité.
+- **Solution de contournement :** si vous avez des scripts existants pour exécuter des packages dans Scale Out, vous devez remplacer le nom du paramètre *runincluster* par *runinscaleout* pour que les scripts fonctionnent dans la version RC1.
+
+- **Problème et impact sur le client :** SQL Server Management Studio (SSMS) 17.1 et versions antérieures ne peuvent pas déclencher l’exécution du package dans Scale Out dans la version RC1. Le message d’erreur est : « *@runincluster* n’est pas un paramètre valide pour la procédure **create_execution** ». Ce problème est résolu dans la prochaine version de SSMS, la version 17.2. Les versions 17.2 et ultérieures de SSMS prennent en charge le nouveau nom de paramètre et l’exécution de package dans Scale Out. 
+- **Solution de contournement :** jusqu’à ce que SSMS version 17.2 soit disponible, vous pouvez utiliser votre version existante de SSMS pour générer le script d’exécution du package, remplacer le nom du paramètre *runincluster* par *runinscaleout* dans le script, puis exécuter le script.
+
+![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-ctp-21-may--2017"></a>SQL Server CTP 2017 2.1 (mai 2017)
 ### <a name="documentation-ctp-21"></a>Documentation (préliminaire CTP 2.1)
 - **Problème et impact sur le client :** la documentation pour [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] est limitée, et le contenu est inclus avec l’ensemble de documentation [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] .  Dans les articles, le contenu propre à [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] est noté avec **S’applique à**. 
@@ -96,78 +106,10 @@ Cette rubrique décrit les limitations et les problèmes de [!INCLUDE[ssSQLv14_m
 
    Permet de récupérer l’instance de SQL Server hébergeant le réplica secondaire.
 
-
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
-
-## <a name="sql-server-2017-ctp-14-march--2017"></a>SQL Server 2017 CTP 1.4 (mars 2017)
-
-### <a name="documentation-ctp-14"></a>Documentation (CTP 1.4)
-- **Problème et impact sur le client :** la documentation pour [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] est limitée, et le contenu est inclus avec l’ensemble de documentation [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] .  Dans les articles, le contenu propre à [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] est noté avec **S’applique à**. 
-- **Problème et impact sur le client :** aucun contenu hors connexion n’est disponible pour [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
-
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
-
-## <a name="sql-server-2017-ctp-13-february--2017"></a>SQL Server CTP 2017 1.3 (février 2017)
-### <a name="supported-installation-scenarios-ctp-13"></a>Scénarios d’installation pris en charge (CTP 1.3)
-[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] est destiné à une version d’évaluation uniquement.  Les déploiements de production ne sont pas pris en charge. Nous vous recommandons d’installer et de tester [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] sur une machine virtuelle.
-
-### <a name="documentation-ctp-13"></a>Documentation (CTP 1.3)
-- **Problème et impact sur le client :** la documentation pour [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] est limitée, et le contenu est inclus avec l’ensemble de documentation [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] .  Dans les articles, le contenu propre à [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] est noté avec **S’applique à**. 
-- **Problème et impact sur le client :** aucun contenu hors connexion n’est disponible pour [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
-
-### <a name="sql-server-integration-services-ssis-ctp-13"></a>SQL Server Integration Services (SSIS) (CTP 1.3)
-#### <a name="cdc-components-not-supported-in-this-ctp-release"></a>Composants CDC non pris en charge dans cette version CTP
--   **Problème et impact sur le client**: la tâche de contrôle CDC, la source CDC et le séparateur CDC ne sont pas pris en charge dans cette version CTP.
--   **Solution de contournement :**Il n’existe aucune solution de contournement.
-
-
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
-
-## <a name="sql-server-2017-ctp-12-january--2017"></a>SQL Server CTP 2017 1.2 (janvier 2017)
-### <a name="supported-installation-scenarios-ctp-12"></a>Scénarios d’installation pris en charge (CTP 1.2)
-[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] est destiné à une version d’évaluation uniquement.  Les déploiements de production ne sont pas pris en charge. Nous vous recommandons d’installer et de tester [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] sur une machine virtuelle.
-
-### <a name="sql-server-database-engine-ctp-12"></a>Moteur de base de données SQL Server (CTP 1.2)
-- **Problème et impact sur le client :** dans certains cas, le service MSSQLSERVER se bloque à l’état « Démarrage ».
-- **Solution de contournement :** pour contourner ce problème :
-  -  Créez une dépendance entre le service `mssqlserver` et le service `keyiso` . Pour ce faire, vous pouvez exécuter la commande suivante à partir d’une invite de commandes avec élévation de privilèges : `sc config mssqlserver depend= keyiso`
-  - Redémarrez l'ordinateur.
-
-### <a name="documentation-ctp-12"></a>Documentation (CTP 1.2)
-- **Problème et impact sur le client :** La documentation pour [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] est limitée et le contenu est inclus avec l’ensemble de documentation [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] .  Dans les articles, le contenu propre à [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] est noté avec **S’applique à :**. 
-- **Problème et impact sur le client :** aucun contenu hors connexion n’est disponible pour [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
- 
-### <a name="sql-server-integration-services-ssis-ctp-12"></a>SQL Server Integration Services (SSIS) (CTP 1.2)
-#### <a name="deleting-the-ssis-catalog-may-fail-when-ssis-scale-out-is-installed"></a>La suppression de catalogue SSIS peut échouer quand SSIS Scale Out est installé
-**Problème et impact sur le client :**quand la fonctionnalité SSIS Scale Out est installée sur un ordinateur, la suppression de la base de données du catalogue SSISDB peut échouer avec l’erreur suivante : « Impossible de supprimer la connexion *“connexion”* , tant que l’utilisateur est connecté.
-   
-**Solution de contournement**:
--   Sur les ordinateurs Scale Out Master, exécutez la commande « services.msc » pour ouvrir la fenêtre Services. Arrêtez le service SQL Server Integration Services Cluster Master.
--   Sur les ordinateurs Scale Out Worker, qui se connectent au maître, exécutez la commande « services.msc » pour ouvrir la fenêtre Services. Arrêtez le service SQL Server Integration Services Cluster Worker.
-
-Vous pouvez à présent supprimer la base de données de catalogue SSISDB.
-
-### <a name="sql-server-master-data-services-ctp-12"></a>SQL Server Master Data Services (CTP 1.2)
-#### <a name="transaction-may-not-work-when-the-entity-transaction-log-type-is-set-to-attribute"></a>Une transaction peut échouer quand le type de journal de transactions d’entités a la valeur Attribut
-**Problème et impact sur le client :** Quand le type de journal de transactions d’entités a la valeur **Attribut** dans [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] (la valeur par défaut est **Membre**), les scénarios suivants échouent :
-
-* Les transactions liées aux changements d’entités ne sont pas affichées dans le site web.
-* Impossible d’ouvrir la page **Transactions** dans le site web et d’inverser une transaction.
-* Impossible de mettre à jour une entité avec une annotation de transaction dans le site web.
-
-**Solution de contournement :**Il n’existe aucune solution de contournement.
-
-#### <a name="copy-version-may-not-work-when-copy-only-committed-version-is-set-to-false"></a>L’action Copier la version peut ne pas fonctionner quand **Copier uniquement les versions activées** a la valeur False
--  **Problème et impact sur le client :** Quand le paramètre **Copier uniquement les versions activées** a la valeur **Non** (la valeur par défaut est **Oui**), l’opération de copie de version peut échouer. Aucun message d’erreur n’est affiché.
--  **Solution de contournement :**Il n’existe aucune solution de contournement.
-
 ##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) Contacter l’équipe d’ingénierie de SQL Server 
 - [Dépassement de la capacité de la pile (balise sql-server) : poser des questions techniques](http://stackoverflow.com/questions/tagged/sql-server)
 - [Forums MSDN : poser des questions techniques](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect : signaler des bogues et demander des fonctionnalités](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit : discussion générale sur R](https://www.reddit.com/r/SQLServer/)
 
-
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)
-
-

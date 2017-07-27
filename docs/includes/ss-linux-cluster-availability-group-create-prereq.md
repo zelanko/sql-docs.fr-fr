@@ -41,29 +41,30 @@ Avant de créer le groupe de disponibilité, vous devez :
    sudo vi /etc/hosts
    ```
 
-   L’exemple suivant `/etc/hosts` sur **node1** au gré des ajouts pour **node1** et **node2**. Dans ce document **node1** fait référence au réplica principal de SQL Server. **Node2** fait référence au serveur SQL secondaire. ;
+   L’exemple suivant affiche `/etc/hosts` sur **node1** au gré des ajouts pour **node1**, **node2** et **node3**. Dans ce document **node1** fait référence au serveur qui héberge le réplica principal. **node2** et **node3** font référence aux serveurs qui hébergent des réplicas secondaires.
 
 
    ```
    127.0.0.1   localhost localhost4 localhost4.localdomain4
    ::1       localhost localhost6 localhost6.localdomain6
-   10.128.18.128 node1
+   10.128.18.12 node1
    10.128.16.77 node2
+   10.128.15.33 node3
    ```
 
 ### <a name="install-sql-server"></a>Installation de SQL Server
 
 Installez SQL Server. Les liens suivants pointent vers les instructions d’installation de SQL Server pour différentes distributions. 
 
-- [Red Hat Enterprise Linux](..\linux\sql-server-linux-setup-red-hat.md)
+- [Red Hat Enterprise Linux](../linux/quickstart-install-connect-red-hat.md)
 
-- [SUSE Linux Enterprise Server](..\linux\sql-server-linux-setup-suse-linux-enterprise-server.md)
+- [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md)
 
-- [Ubuntu](..\linux\sql-server-linux-setup-ubuntu.md)
+- [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)
 
 ## <a name="enable-always-on-availability-groups-and-restart-sqlserver"></a>Activez les groupes de disponibilité Always On et redémarrez SQL Server
 
-Activer les groupes de disponibilité Always On sur chaque nœud hébergeant le service SQL Server, puis redémarrez `mssql-server`.  Exécutez le script suivant :
+Activez les groupes de disponibilité Always On sur chaque nœud hébergeant une instance de SQL Server, puis redémarrez `mssql-server`.  Exécutez le script suivant :
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
@@ -72,7 +73,7 @@ sudo systemctl restart mssql-server
 
 ##  <a name="enable-alwaysonhealth-event-session"></a>Activer la session d’événements AlwaysOn_health 
 
-Vous pouvez l’activer optionaly groupes de disponibilité AlwaysOn spécifique des événements étendus pour aider les causes diagnostic lors de la résolution d’un groupe de disponibilité.
+Vous pouvez éventuellement activer les événements étendus des groupes de disponibilité Always On pour mieux diagnostiquer la cause principale quand vous résolvez les problèmes d’un groupe de disponibilité. Exécutez la commande suivante sur chaque instance de SQL Server. 
 
 ```Transact-SQL
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
@@ -83,7 +84,7 @@ Pour plus d’informations sur cette session XE, consultez [toujours sur les év
 
 ## <a name="create-db-mirroring-endpoint-user"></a>Créer la base de données utilisateur de point de terminaison de mise en miroir
 
-Le script Transact-SQL suivant crée une connexion nommée `dbm_login`et un utilisateur nommé `dbm_user`. Mettre à jour le script avec un mot de passe fort. Exécutez la commande suivante sur tous les serveurs SQL Server pour créer la base de données utilisateur de point de terminaison de mise en miroir.
+Le script Transact-SQL suivant crée une connexion nommée `dbm_login`et un utilisateur nommé `dbm_user`. Mettre à jour le script avec un mot de passe fort. Exécutez la commande suivante sur toutes les instances de SQL Server pour créer l’utilisateur de point de terminaison de mise en miroir de bases de données.
 
 ```Transact-SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
@@ -92,9 +93,9 @@ CREATE USER dbm_user FOR LOGIN dbm_login;
 
 ## <a name="create-a-certificate"></a>Créer un certificat
 
-Service SQL Server sur Linux utilise des certificats pour authentifier les communications entre les points de terminaison de mise en miroir. 
+Le service SQL Server sur Linux utilise des certificats pour authentifier les communications entre les points de terminaison de mise en miroir. 
 
-Le script Transact-SQL suivant crée une clé principale et le certificat. Il sauvegarde le certificat et sécurise le fichier avec une clé privée. Mettre à jour le script avec les mots de passe forts. Se connecter au serveur SQL principal et exécuter Transact-SQL suivant pour créer le certificat :
+Le script Transact-SQL suivant crée une clé principale et le certificat. Il sauvegarde le certificat et sécurise le fichier avec une clé privée. Mettre à jour le script avec les mots de passe forts. Connectez-vous à la principale instance de SQL Server et exécutez la commande Transact-SQL suivante pour créer le certificat :
 
 ```Transact-SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
@@ -116,7 +117,7 @@ cd /var/opt/mssql/data
 scp dbm_certificate.* root@**<node2>**:/var/opt/mssql/data/
 ```
 
-Sur le serveur cible, accorder l’autorisation à l’utilisateur mssql d’accéder au certificat.
+Sur chaque serveur cible, accordez l’autorisation à l’utilisateur mssql d’accéder au certificat.
 
 ```bash
 cd /var/opt/mssql/data
@@ -144,7 +145,6 @@ Les points de terminaison de mise en miroir de bases de données utilisent le pr
 
 L’instruction Transact-SQL suivant crée un point de terminaison écoute nommé `Hadr_endpoint` pour le groupe de disponibilité. Il démarre le point de terminaison, et donne l’autorisation de connexion à l’utilisateur que vous avez créé. Avant d’exécuter le script, remplacez les valeurs comprises entre `**< ... >**`.
 
-
 >[!NOTE]
 >Pour cette version, n’utilisez pas une adresse IP différente pour l’adresse IP d’écouteur. Nous travaillons sur un correctif pour résoudre ce problème, mais la seule valeur acceptable pour le moment est « 0.0.0.0 ».
 
@@ -164,5 +164,8 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 
 >[!IMPORTANT]
 >Le port TCP sur le pare-feu doit être ouvert pour le port d’écoute.
+
+>[!IMPORTANT]
+>Pour la version SQL Server 2017, la seule méthode d’authentification prise en charge pour le point de terminaison de mise en miroir de bases de données est `CERTIFICATE`. L’option `WINDOWS` sera activée dans une version ultérieure.
 
 Pour plus d’informations, consultez [la base de données mise en miroir de point de terminaison (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).
