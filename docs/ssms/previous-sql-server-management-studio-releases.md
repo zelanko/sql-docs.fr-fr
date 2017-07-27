@@ -1,7 +1,7 @@
 ---
 title: "Versions antérieures de SQL Server Management Studio | Microsoft Docs"
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 07/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -14,16 +14,29 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0927784589c1f7227b432ff49f81f29de20083ec
-ms.openlocfilehash: 200753bf64d92043171788852227c6199b64711d
+ms.translationtype: HT
+ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
+ms.openlocfilehash: f55f56b31aec2e094a35200e6fe08b28c93affb0
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/27/2017
 
 ---
 # <a name="previous-sql-server-management-studio-releases"></a>Versions antérieures de SQL Server Management Studio
   
 Les versions antérieures suivantes de SQL Server Management Studio sont disponibles.
+
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-170-releasehttpgomicrosoftcomfwlinklinkid847722"></a>![télécharger](../ssdt/media/download.png) [SQL Server Management Studio 17.0](http://go.microsoft.com/fwlink/?LinkID=847722)
+
+**Informations sur la version**  
+  
+*Cette version de SSMS utilise le shell isolé Visual Studio 2015.*  
+Numéro de la version : 17.0  
+Numéro de build de cette version : 14.0.17099.0
+
+## <a name="changelog"></a>Journal des modifications  
+
+Voir [17.0](sql-server-management-studio-changelog-ssms.md#ssms-170-release).
+
    
 ## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1653-releasehttpgomicrosoftcomfwlinklinkid840946"></a>![télécharger](../ssdt/media/download.png) [version de SQL Server Management Studio 16.5.3](http://go.microsoft.com/fwlink/?LinkID=840946)
 
@@ -207,7 +220,7 @@ Les versions localisées dans des langues autres que l’anglais nécessitent la
 *  Correction d’un problème où Ctrl + Q ne sélectionnait pas la barre d’outils Lancement rapide.
     
 *  Correction d’un problème où la modification du paramètre MaxSize d’une base de données à l’aide de la boîte de dialogue Propriétés du serveur ne fonctionnait pas pour les bases de données > 2 To.  
-[Article Microsoft Connect n°1231091](https://connect.microsoft.com/SQLServer/feedback/details/1231091)
+[Article Microsoft Connect n° 1231091](https://connect.microsoft.com/SQLServer/feedback/details/1231091)
     
 *  Correction d’un problème où l’Assistant Restauration de la base de données n’acceptait pas les noms de fichiers avec des espaces de début :   
 [Article Microsoft Connect n° 2395147](https://connect.microsoft.com/SQLServer/feedback/details/2395147)

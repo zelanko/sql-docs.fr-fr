@@ -21,15 +21,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 82aede2ce0a0f0a0271e73361292628049f97875
+ms.translationtype: HT
+ms.sourcegitcommit: 47182ebd082dfae0963d761e54c4045be927d627
+ms.openlocfilehash: 77a39273f5fa02bac3255ea0436341db2342c236
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/27/2017
 
 ---
-# <a name="resize-the-job-history-log"></a>Redimensionner le journal d'historique des travaux
-Cette rubrique explique comment définir des limites de taille pour les journaux d'historique des travaux de l'Agent [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+# <a name="resize-the-job-history-log"></a>Resize the Job History Log
+Cette rubrique explique comment définir des limites de taille pour les journaux d’historique des travaux de l’Agent [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].
   
 -   **Avant de commencer :**  
   
