@@ -69,7 +69,7 @@ ms.lasthandoff: 06/22/2017
   
     -   Possibilité d’importer un DACPAC dans un projet de base de données et de poursuivre la conception de la base de données.  
   
-Les outils de données SQL Server prennent également en charge une base de données locale pour le développement d'applications de base de données non connecté, côté client. Le développeur peut prendre un instantané de cette base de données locale afin de créer un DACPAC contenu dans un fichier .dacpac.  
+        Les outils de données SQL Server prennent également en charge une base de données locale pour le développement d'applications de base de données non connecté, côté client. Le développeur peut prendre un instantané de cette base de données locale afin de créer un DACPAC contenu dans un fichier .dacpac.  
   
     -   Indépendamment, le développeur peut publier un projet de base de données directement dans une base de données, sans même générer un DACPAC. L'opération de publication suit le même comportement que l'opération de déploiement d'autres outils.  
   
