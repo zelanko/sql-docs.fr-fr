@@ -7,9 +7,6 @@
 ## [Articles nouveaux et récemment mis à jour](new-updated-ssms.md)
 ## [Versions précédentes de SSMS](previous-sql-server-management-studio-releases.md)
 
-# [Utiliser SSMS](use-sql-server-management-studio.md)
-# [Fonctionnalités dans SSMS](features-in-sql-server-management-studio.md)
-# [Collecte des commentaires d’utilisation](sql-server-management-studio-telemetry-ssms.md)
 # [Télécharger le module PowerShell SQL Server](download-sql-server-ps-module.md)
 
 # [SQL Server Agent +](../ssms/agent/sql-server-agent.md)
@@ -17,8 +14,8 @@
 # [Menu Aide +](../ssms/menu-help/sql-server-management-studio-menu-help.md)
 # [Explorateur d’objets +](../ssms/object/object-explorer.md)
 # [Explorateur de solutions +](../ssms/solution/solution-explorer.md)
-# [Modèles +](../ssms/template/template-explorer.md)
-# [Visual Database Tools +](../ssms/visual-db-tools/visual-database-tools.md)
+# [Modèles](../ssms/template/template-explorer.md)
+# [Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)
 # [Inscrire des serveurs +](../ssms/register-servers/register-servers.md)
 # [Didacticiels +](../ssms/tutorials/tutorial-sql-server-management-studio.md)
 
@@ -49,4 +46,4 @@
 
 # [Utilitaire Ssms](ssms-utility.md)  
 # [Raccourcis clavier SSMS](sql-server-management-studio-keyboard-shortcuts.md)  
-
+# [Données d’utilisation anonymes](sql-server-management-studio-telemetry-ssms.md)
