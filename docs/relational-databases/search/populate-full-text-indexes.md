@@ -35,8 +35,7 @@ ms.contentlocale: fr-fr
 ms.lasthandoff: 06/22/2017
 
 ---
-# Alimenter des index de recherche en texte intégral
-<a id="populate-full-text-indexes" class="xliff"></a>
+# <a name="populate-full-text-indexes"></a>Alimenter des index de recherche en texte intégral
   La création et la maintenance d’un index de recherche en texte intégral impliquent le remplissage de l’index à l’aide d’un processus appelé *alimentation* (également appelé *analyse*).  
   
 ##  <a name="types"></a> Types d’alimentation  
@@ -45,8 +44,7 @@ Un index de recherche en texte intégral prend en charge les types d’alimentat
 -   Alimentation automatique ou manuelle basée sur le **suivi des modifications**
 -   Alimentation incrémentielle basée sur un **horodatage**
   
-## Alimentation complète
-<a id="full-population" class="xliff"></a>  
+## <a name="full-population"></a>Alimentation complète  
  Au cours d'une alimentation complète, les entrées d'index sont créées pour toutes les lignes d'une table ou d'une vue indexée. Une alimentation complète d'un index de recherche en texte intégral crée des entrées d'index pour toutes les lignes de la table de base ou de la vue indexée.  
   
 Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alimente complètement un nouvel index de recherche en texte intégral dès que celui-ci est créé.
@@ -55,8 +53,7 @@ Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alimente 
 
 Pour créer un index de recherche en texte intégral sans le remplir immédiatement, spécifiez la clause `CHANGE_TRACKING OFF, NO POPULATION` dans l’instruction `CREATE FULLTEXT INDEX`. Si vous spécifiez `CHANGE_TRACKING MANUAL`, le moteur d’indexation et de recherche en texte intégral ne remplit pas le nouvel index de recherche en texte intégral tant que vous n’exécutez pas une instruction `ALTER FULLTEXT INDEX` à l’aide de la clause `START FULL POPULATION` ou `START INCREMENTAL POPULATION`. 
 
-### Exemple - Créer un index de recherche en texte intégral sans exécuter une alimentation complète
-<a id="example---create-a-full-text-index-without-running-a-full-population" class="xliff"></a>  
+### <a name="example---create-a-full-text-index-without-running-a-full-population"></a>Exemple - Créer un index de recherche en texte intégral sans exécuter une alimentation complète  
  L'exemple ci-après crée un index de recherche en texte intégral sur la table `Production.Document` de l'exemple de base de données `AdventureWorks` . Cet exemple utilise `WITH CHANGE_TRACKING OFF, NO POPULATION` pour différer l’alimentation complète initiale.  
   
 ```tsql
@@ -75,8 +72,7 @@ GO
   
 ```  
   
-### Exemple - Exécuter une alimentation complète sur une table
-<a id="example---run-a-full-population-on-a-table" class="xliff"></a>  
+### <a name="example---run-a-full-population-on-a-table"></a>Exemple - Exécuter une alimentation complète sur une table  
  L'exemple ci-après exécute une alimentation complète sur la table `Production.Document` de l'exemple de base de données `AdventureWorks` .  
   
 ```tsql
@@ -84,8 +80,7 @@ ALTER FULLTEXT INDEX ON Production.Document
    START FULL POPULATION;  
 ```  
    
-## Alimentation basée sur le suivi des modifications
-<a id="population-based-on-change-tracking" class="xliff"></a>
+## <a name="population-based-on-change-tracking"></a>Alimentation basée sur le suivi des modifications
  Vous pouvez éventuellement utiliser le suivi des modifications pour procéder à la gestion d'un index de recherche en texte intégral après son alimentation complète initiale. La surcharge associée au suivi des modifications est réduite, car [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère une table dans laquelle il suit les modifications apportées à la table de base depuis la dernière alimentation. Quand vous utilisez le suivi des modifications, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve un enregistrement des lignes de la table de base ou de la vue indexée ayant été modifiées par des opérations de mise à jour, de suppression ou d’insertion. Les modifications apportées aux données à l’aide de WRITETEXT et d’UPDATETEXT ne sont pas répercutées dans l’index de recherche en texte intégral, et ne sont pas prises en compte par le suivi des modifications.  
   
 > [!NOTE]  
@@ -93,8 +88,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
  Quand vous activez le suivi des modifications pendant la création d’index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alimente complètement le nouvel index de recherche en texte intégral immédiatement après sa création. Ensuite, les modifications font l'objet d'un suivi et propagées à l'index de recherche en texte intégral.
 
-### Activer le suivi des modifications
-<a id="enable-change-tracking" class="xliff"></a>
+### <a name="enable-change-tracking"></a>Activer le suivi des modifications
 Il existe deux types de suivi des modifications :
 -   Automatique (option`CHANGE_TRACKING AUTO`). Le suivi des modifications automatique est le comportement par défaut.
 -   Manuel (option `CHANGE_TRACKING MANUAL`).   
@@ -155,16 +149,14 @@ Il existe deux types de suivi des modifications :
     GO  
     ```
    
-### Désactiver le suivi des modifications
-<a id="disable-change-tracking" class="xliff"></a> 
+### <a name="disable-change-tracking"></a>Désactiver le suivi des modifications 
   
 -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING OFF  
   
 -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING OFF  
    
   
-## Alimentation incrémentielle basée sur un horodatage
-<a id="incremental-population-based-on-a-timestamp" class="xliff"></a>  
+## <a name="incremental-population-based-on-a-timestamp"></a>Alimentation incrémentielle basée sur un horodatage  
  L'alimentation incrémentielle est un autre mécanisme permettant d'alimenter manuellement un index de recherche en texte intégral. Si une table fait l'objet d'un nombre important d'insertions, l'alimentation incrémentielle peut s'avérer plus efficace que l'alimentation manuelle.
  
  Vous pouvez exécuter une alimentation incrémentielle pour un index de recherche en texte intégral pour lequel CHANGE_TRACKING a la valeur MANUAL ou OFF. 
@@ -178,8 +170,7 @@ Dans certains cas, la demande d’une alimentation incrémentielle entraîne une
 -   Si la première alimentation d'un index de recherche en texte intégral est une alimentation incrémentielle, elle indexe toutes les lignes, ce qui équivaut à une alimentation complète. 
 -   Si des métadonnées concernant l’index de recherche en texte intégral de la table ont changé depuis la dernière alimentation, les demandes d’alimentation incrémentielle sont implémentées comme des alimentations complètes. Cela concerne les modifications de métadonnées provoquées par des modifications de définitions de colonne, d'index ou d'index de recherche en texte intégral. 
 
-### Exécuter une alimentation incrémentielle
-<a id="run-an-incremental-population" class="xliff"></a>
+### <a name="run-an-incremental-population"></a>Exécuter une alimentation incrémentielle
   
  Pour exécuter une alimentation incrémentielle, exécutez une instruction `ALTER FULLTEXT INDEX` à l’aide de la clause `START INCREMENTAL POPULATION`.  
   
@@ -234,8 +225,7 @@ Les parties variables du nom de fichier du journal d’analyse sont les suivante
   
  Par exemple, `SQLFT0000500008.2` est le fichier journal d’analyse pour une base de données ayant un ID de base de données = 5 et un ID de catalogue de texte intégral = 8. Le 2 à la fin du nom de fichier indique qu'il existe deux fichiers journaux d'analyse pour cette combinaison base de données/catalogue.  
 
-## Voir aussi
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Voir aussi  
  [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)   
  [Commencer à utiliser la recherche en texte intégral](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Créer et gérer des index de recherche en texte intégral](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
