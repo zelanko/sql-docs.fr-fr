@@ -1,6 +1,6 @@
 ---
 title: "Utiliser l’Assistant Plan de maintenance | Microsoft Docs"
-ms.date: 08/19/2016
+ms.date: 06/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -37,11 +37,11 @@ caps.latest.revision: 43
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f4fa73a78b9f6e32edcf8395b344f1bcb7e8f5cc
+ms.translationtype: HT
+ms.sourcegitcommit: c51503eae95459aa4530032ef551d0eedf60caa4
+ms.openlocfilehash: 29245ecd82ef8f4401869008bcdb883880eec0bd
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Utiliser l'Assistant Plan de maintenance
@@ -56,7 +56,7 @@ ms.lasthandoff: 04/11/2017
 
 Pour empêcher cette élévation de privilège durant l’exécution de plans de maintenance, de jeux d’éléments de collecte de données et d’autres packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configurez les travaux de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent qui exécutent des packages de façon à utiliser un compte proxy doté de privilèges limités ou ajoutez uniquement des membres **sysadmin** aux rôles **db_ssisadmin** et **dc_admin** .  
 
-##  <a name="Prerequisite"></a> Condition préalable 
+##  <a name="Prerequisite"></a> Conditions préalables 
 Vous devez activer [Agent XPs (option de configuration de serveur)](../../database-engine/configure-windows/agent-xps-server-configuration-option.md).
   
   
@@ -110,7 +110,7 @@ Vous devez activer [Agent XPs (option de configuration de serveur)](../../databa
   
                 -   Si vous sélectionnez **Quotidienne**, dans la zone **Répéter toutes les** , entrez la fréquence de répétition du travail de planification en jours.  
   
-                -   Si vous sélectionnez **Hebdomadaire**, dans la zone **Répéter toutes les** , entrez la fréquence de répétition du travail de planification en semaines. Sélectionnez le jour ou les jours de la semaine pendant lesquels la planification du travail est exécutée.  
+                -   Si vous sélectionnez **Hebdomadaire**, dans la zone **Répéter toutes les** , entrez la fréquence de répétition du travail de planification en semaines. Sélectionnez les jours de la semaine pendant lesquels la planification du travail est exécutée.  
   
                 -   Si vous sélectionnez **Mensuelle**, sélectionnez **Jour** ou **Le**.  
   
@@ -203,7 +203,7 @@ Case à cocher**Inclure les index**
      La base de données est condensée en pages contiguës, mais les pages ne sont pas désallouées et les fichiers de base de données ne sont pas réduits. Utilisez cette option si vous prévoyez une nouvelle expansion de la base de données et que vous ne souhaitez pas réallouer de l'espace. Avec cette option, la taille des fichiers de base de données n'est pas réduite au maximum. L'option NOTRUNCATE est utilisée.  
   
      **Retourner l'espace libéré au système d'exploitation**  
-     La base de données est condensée en pages contiguës, et les pages sont remises à la disposition du système d'exploitation afin d'être utilisées par d'autres programmes. Les fichiers de base de données voient leur taille réduite le plus possible. L'option TRUNCATEONLY est utilisée. Il s'agit de l'option par défaut.  
+     La base de données est condensée en pages contiguës, et les pages sont remises à la disposition du système d'exploitation afin d'être utilisées par d'autres programmes. L'option TRUNCATEONLY est utilisée. Il s'agit de l'option par défaut.  
   
 ## <a name="define-the-index-tasks"></a>Définir les tâches d'index  
   
@@ -262,7 +262,7 @@ Case à cocher**Inclure les index**
     > **REMARQUE :** les opérations d’index en ligne ne sont pas disponibles dans toutes les éditions de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
      Case à cocher**MAXDOP**   
-     Remplace l’option de configuration Degré maximal de parallélisme de sp_configure pour DBCC CHECKDB. Pour plus d’informations, consultez [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).  
+     Remplace l’option de configuration Degré maximal de parallélisme de sp_configure pour DBCC CHECKDB. Pour plus d’informations, consultez [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   
 #### <a name="define-the-update-statistics-task"></a>Définir la tâche de mise à jour des statistiques  
   
@@ -362,7 +362,7 @@ Case à cocher**Inclure les index**
      Case à cocher**Créer un sous-répertoire pour chaque base de données**   
      Crée un sous-répertoire pour chaque base de données sauvegardée dans le cadre du plan de maintenance, dans le répertoire de disque spécifié contenant la sauvegarde de la base de données.  
   
-    > **IMPORTANT** Le sous-répertoire hérite les autorisations du répertoire parent. Limitez les autorisations pour éviter les accès non autorisés.  
+    > **IMPORTANT !** Le sous-répertoire hérite les autorisations du répertoire parent. Limitez les autorisations pour éviter les accès non autorisés.  
   
      Zone**Dossier**   
      Spécifiez le dossier dans lequel seront placés les fichiers de base de données créés automatiquement. Cette option est désactivée si URL est sélectionné en tant que destination de sauvegarde.  
@@ -370,7 +370,7 @@ Case à cocher**Inclure les index**
      **Informations d'identification SQL**  
      Sélectionnez les informations d'identification SQL utilisées pour l'authentification au stockage Windows Azure. Si vous n'avez pas d'informations d'identification SQL, cliquez sur le bouton **Créer** pour créer de nouvelles informations d'identification SQL.  
   
-    > **IMPORTANT** La boîte de dialogue qui s'ouvre lorsque vous cliquez sur **Créer** requiert un certificat de gestion ou le profil de publication de l'abonnement. Si vous n'avez pas accès au certificat de gestion ou au profil de publication, vous pouvez créer des informations d'identification SQL en spécifiant le nom du compte de stockage et les informations de clé d'accès à l'aide de Transact-SQL ou de SQL Server Management Studio. Consultez l’exemple de code dans la rubrique [Créer des informations d’identification](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) pour créer des informations d’identification à l’aide de Transact-SQL. Vous pouvez également utiliser SQL Server Management Studio, depuis l'instance du moteur de base de données, et cliquer avec le bouton droit sur **Sécurité**, puis sélectionner **Nouveau**, puis **Informations d'identification**. Spécifiez le nom du compte de stockage pour **Identité** et la clé d'accès dans le champ **Mot de passe** .  
+    > **IMPORTANT !** La boîte de dialogue qui s'ouvre lorsque vous cliquez sur **Créer** requiert un certificat de gestion ou le profil de publication de l'abonnement. Si vous n'avez pas accès au certificat de gestion ou au profil de publication, vous pouvez créer des informations d'identification SQL en spécifiant le nom du compte de stockage et les informations de clé d'accès à l'aide de Transact-SQL ou de SQL Server Management Studio. Consultez l’exemple de code dans la rubrique [Créer des informations d’identification](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) pour créer des informations d’identification à l’aide de Transact-SQL. Vous pouvez également utiliser SQL Server Management Studio, depuis l'instance du moteur de base de données, et cliquer avec le bouton droit sur **Sécurité**, puis sélectionner **Nouveau**, puis **Informations d'identification**. Spécifiez le nom du compte de stockage pour **Identité** et la clé d'accès dans le champ **Mot de passe** .  
   
      **Conteneur de stockage Windows Azure**  
      Spécifiez le nom du conteneur de stockage Windows Azure.  
