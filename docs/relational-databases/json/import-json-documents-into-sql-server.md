@@ -13,7 +13,7 @@ ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
 ms.openlocfilehash: 1c842fde925e89901971a525c3e171ffce050269
@@ -79,13 +79,13 @@ Vous pouvez également utiliser OPENROWSET comme décrit ci-dessus pour lire des
 
     Voici la syntaxe de commande :
 
-    ```
+    ```dos
     net use [drive letter] \\[storage name].file.core.windows.net\[share name] /u:[storage account name] [storage account access key]
     ```
 
     Voici un exemple qui affecte la lettre de lecteur local `T:` vers le partage du stockage de fichiers Azure :
 
-    ```
+    ```dos
     net use t: \\mystorage.file.core.windows.net\sharejson /u:myaccount hb5qy6eXLqIdBj0LvGMHdrTiygkjhHDvWjUZg3Gu7bubKLg==
     ```
 
@@ -141,7 +141,7 @@ SELECT value
 ### <a name="example-2"></a>Exemple 2
 OPENROWSET lit une valeur de texte unique à partir du fichier, la retourne sous la forme d’un BulkColumn, et la transmet à la fonction OPENJSON. OPENJSON effectue une itération au sein du tableau d’objets JSON dans le tableau BulkColumn et retourne un livre dans chaque ligne, au format JSON :
 
-```
+```json
 {"id":"978-0641723445″, "cat":["book","hardcover"], "name":"The Lightning Thief", … 
 {"id":"978-1423103349″, "cat":["book","paperback"], "name":"The Sea of Monsters", … 
 {"id":"978-1857995879″, "cat":["book","paperback"], "name":"Sophie’s World : The Greek … 
@@ -166,7 +166,8 @@ Dans cet exemple, OPENROWSET(BULK) lit le contenu du fichier et transmet ce cont
 978-0641723445|The Lightning Thief|12.5|384|Rick Riordan| 
 978-1423103349|The Sea of Monsters|6.49|304|Rick Riordan| 
 978-1857995879|Sophie’s World : The Greek Philosophers|3.07|64|Jostein Gaarder| 
-978-1933988177|Lucene in Action, Second Edition|30.5|475|Michael McCandless| 
+978-1933988177|Lucene in Action, Second Edition|30.5|475|Michael McCandless|
+||||||
 
 Vous pouvez maintenant retourner cette à l’utilisateur, ou charger les données dans une autre table.
 
