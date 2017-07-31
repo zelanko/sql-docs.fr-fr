@@ -19,11 +19,11 @@ caps.latest.revision: 63
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
 ms.openlocfilehash: 141c83e009e1cf135690297442c6a4864a871bfc
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Créer une sauvegarde complète de base de données (SQL Server)
@@ -150,7 +150,7 @@ ms.lasthandoff: 06/23/2017
   
      Pour plus d’informations sur les paramètres de compression de sauvegarde, consultez [Afficher ou configurer l’option de configuration du serveur valeur par défaut de compression de la sauvegarde](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).  
   
-22. Dans la section **Chiffrement** , sélectionnez la case à cocher **Chiffrer la sauvegarde** si vous souhaitez utiliser un chiffrement pour la sauvegarde. Utilisez la liste déroulante **Algorithme** pour sélectionner un algorithme de chiffrement.  Utilisez la liste déroulante **Certificat ou clé asymétrique** pour sélectionner un certificat ou une clé asymétrique existants. Le chiffrement est pris en charge dans SQL Server 2014 ou les versions ultérieures. Pour plus d’informations sur les options de chiffrement, consultez [Sauvegarder la base de données &#40;page Options de sauvegarde&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md).  
+22. Dans la section **Chiffrement** , sélectionnez la case à cocher **Chiffrer la sauvegarde** si vous souhaitez utiliser un chiffrement pour la sauvegarde. Utilisez la liste déroulante **Algorithme** pour sélectionner un algorithme de chiffrement.  Utilisez la liste déroulante **ertificat ou clé asymétrique** pour sélectionner un certificat ou une clé asymétrique existants. Le chiffrement est pris en charge dans SQL Server 2014 ou les versions ultérieures. Pour plus d’informations sur les options de chiffrement, consultez [Sauvegarder la base de données &#40;page Options de sauvegarde&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md).  
   
   
 Vous pouvez utiliser l’ [Assistant Plan de maintenance](https://msdn.microsoft.com/library/ms191002.aspx) pour créer des sauvegardes de bases de données. 
@@ -200,7 +200,7 @@ Dans cet exemple, la base de données `Sales` est sauvegardée avec chiffrement 
 
 #### <a name="d--back-up-to-the-azure-blob-storage-service"></a>**D.  Sauvegarder sur le service Stockage Blob Azure**
 #### <a name="common-steps"></a>**Étapes courantes**  
-Les trois exemples suivants effectuent une sauvegarde complète de la base de données `Sales` vers le service Stockage Blob Microsoft Azure.  Le nom du compte de stockage est `mystorageaccount`.  Le conteneur se nomme `myfirstcontainer`.  Par souci de concision, les quatre premières étapes ne sont répertoriées ici qu’une seule fois et tous les exemples commencent à l’ **Étape 5**.
+Les trois exemples suivants effectuent une sauvegarde complète de la base de données `Sales` vers le service de stockage d’objets blob Microsoft Azure.  Le nom du compte de stockage est `mystorageaccount`.  Le conteneur se nomme `myfirstcontainer`.  Par souci de concision, les quatre premières étapes ne sont répertoriées ici qu’une seule fois et tous les exemples commencent à l’ **Étape 5**.
 1.  Dans l’ **Explorateur d’objets**, connectez-vous à une instance du moteur de base de données SQL Server et développez-la.
 
 2.  Développez **Bases de données**, cliquez avec le bouton droit sur `Sales`, pointez sur **Tâches**, puis cliquez sur **Sauvegarder**.
@@ -259,14 +259,14 @@ Une stratégie d’accès stockée a été créée avec des droits de lecture, �
   
      BACKUP DATABASE *database*  
   
-     TO *backup_device* [ **,**...*n* ]  
+     TO *unité_sauvegarde* [ **, de**...*n* ]  
   
      [ WITH *options_with* [ **,**...*o* ] ] ;  
   
     |Option|Description|  
     |------------|-----------------|  
     |*database*|Base de données à sauvegarder|  
-    |*backup_device* [ **,**...*n* ]|Spécifie une liste de 1 à 64 unités de sauvegarde à utiliser pour l'opération de sauvegarde. Vous pouvez spécifier une unité de sauvegarde physique ou une unité de sauvegarde logique correspondante, si celle-ci est déjà définie. Pour spécifier une unité de sauvegarde physique, utilisez l'option DISK ou TAPE :<br /><br /> { DISK &#124; TAPE } **=***nom_unité_sauvegarde_physique*<br /><br /> Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
+    |*unité_sauvegarde* [ **, de**...*n* ]|Spécifie une liste de 1 à 64 unités de sauvegarde à utiliser pour l'opération de sauvegarde. Vous pouvez spécifier une unité de sauvegarde physique ou une unité de sauvegarde logique correspondante, si celle-ci est déjà définie. Pour spécifier une unité de sauvegarde physique, utilisez l'option DISK ou TAPE :<br /><br /> { DISK &#124; TAPE } **=***nom_unité_sauvegarde_physique*<br /><br /> Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
     |WITH *options_with* [ **,**...*o* ]|Spécifie éventuellement une ou plusieurs options supplémentaires, *o*. Pour obtenir des informations de base sur les options, consultez l'étape 2.|  
   
 2.  Spécifiez éventuellement une ou plusieurs options WITH. Quelques options WITH de base sont décrites ici. Pour plus d’informations sur toutes les options WITH, consultez [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  

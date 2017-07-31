@@ -17,11 +17,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b1acbcd97dfabfa5d23fa82e55d4eb01101233aa
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="hash-indexes-for-memory-optimized-tables"></a>Index de hachage pour les tables optimisées en mémoire
@@ -49,7 +49,7 @@ Des informations de contexte importantes pour comprendre cet article sont dispon
   
 ### <a name="a1-code-sample-for-syntax"></a>A.1 Exemple de code pour la syntaxe  
   
-Cette sous-section contient un bloc de code Transact-SQL qui illustre les syntaxes disponibles pour créer un index de hachage sur une table optimisée en mémoire :  
+Cette sous-section contient un bloc de code Transact-SQL qui illustre les syntaxes disponibles pour créer un index de hachage sur une table mémoire optimisée :  
   
 - L’exemple montre que l’index de hachage est déclaré à l’intérieur de l’instruction CREATE TABLE.  
   - Vous pouvez déclarer à la place l’index de hachage dans une instruction [ALTER TABLE...ADD INDEX](#h3-b2-declaration-limitations) distincte.  
@@ -118,7 +118,7 @@ Voici un exemple de la syntaxe de création d’un index de hachage en dehors de
 Un index de hachage ancre ses valeurs de clés dans ce que nous appelons un tableau de *compartiments* :  
   
 - Chaque compartiment comprend 8 octets, qui sont utilisés pour stocker l’adresse mémoire d’une liste de liens d’entrées d’index.  
-- Chaque entrée correspond à une valeur pour une clé d’index, plus l’adresse de la ligne associée dans la table optimisée en mémoire sous-jacente.  
+- Chaque entrée correspond à une valeur pour une clé d’index, plus l’adresse de la ligne associée dans la table mémoire optimisée sous-jacente.  
   - Chaque entrée pointe vers l’entrée suivante dans une liste de liens d’entrées, toutes chaînées au compartiment actuel.  
   
   

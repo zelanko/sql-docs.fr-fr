@@ -7,7 +7,7 @@ Vérifiez la base de données que vous ajoutez au groupe de disponibilité est e
 CREATE DATABASE [db1];
 ALTER DATABASE [db1] SET RECOVERY FULL;
 BACKUP DATABASE [db1] 
-   TO DISK = N'var/opt/mssql/data/db1.bak';
+   TO DISK = N'/var/opt/mssql/data/db1.bak';
 ```
 
 Sur le réplica principal de SQL Server, exécutez Transact-SQL suivant pour ajouter une base de données appelée `db1` à un groupe de disponibilité nommé `ag1`.

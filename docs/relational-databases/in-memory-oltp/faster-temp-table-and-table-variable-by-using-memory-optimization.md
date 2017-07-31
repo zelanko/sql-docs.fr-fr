@@ -14,11 +14,11 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4e2fb53cbb1d9a8999a9260b6907f5319c0fe203
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Table temporaire et variable de table plus rapides à l’aide de l’optimisation en mémoire
@@ -266,7 +266,7 @@ Opération terminée.
   
 Dans Microsoft SQL Server, pour utiliser les fonctionnalités optimisées en mémoire, votre base de données doit avoir un groupe de fichiers qui est déclaré avec **MEMORY_OPTIMIZED_DATA**.  
   
-- Azure SQL Database ne nécessite pas la création de ce groupe de fichiers.  
+- La base de données SQL Azure ne nécessite pas la création de ce groupe de fichiers.  
   
   
 *Condition préalable :* le code Transact-SQL suivant pour un groupe de fichiers est requis pour les exemples de code T-SQL longs dans les sections ultérieures de cet article.  
@@ -428,6 +428,6 @@ Si la variable de table optimisée en mémoire est accessible uniquement avec un
 ## <a name="h-see-also"></a>H. Voir aussi  
   
 - [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
-- [Définition de la durabilité des objets optimisés en mémoire](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)  
+- [Définition de la durabilité des objets mémoire optimisés](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)  
   
 

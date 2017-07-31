@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
 -   La requête s'exécute comme le résultat d'une référence de dataset partagé dans un rapport remis via la messagerie électronique, où un grand nombre de personnes sont susceptibles de cliquer sur le lien dans une courte plage horaire.  
   
--   La liste suivante fournit des exemples de situations dans lesquelles il ne convient pas de mettre en cache un dataset partagé :  
+ La liste suivante fournit des exemples de situations dans lesquelles il ne convient pas de mettre en cache un dataset partagé :  
   
 -   Les résultats de la requête doivent toujours inclure les données les plus récentes.  
   
