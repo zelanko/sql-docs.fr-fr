@@ -19,14 +19,14 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: c1abf6b65c375b2490a83e3ac278fca56f6189de
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="create-a-new-registered-server-sql-server-management-studio"></a>Créer un serveur inscrit (SQL Server Management Studio)
+# <a name="create-a-new-registered-server-sql-server-management-studio"></a>Créer un nouveau serveur inscrit (SQL Server Management Studio)
   Cette rubrique explique comment enregistrer les informations de connexion relatives aux serveurs auxquels vous accédez fréquemment en inscrivant ceux-ci dans le composant Serveurs inscrits de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Un serveur peut être inscrit avant la connexion ou lors de la connexion depuis l'Explorateur d'objets. Il existe une option de menu qui permet d'inscrire les instances de serveur sur l'ordinateur local.  
   
  Il existe deux types de serveurs inscrits :  

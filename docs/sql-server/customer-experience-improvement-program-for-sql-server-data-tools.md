@@ -14,11 +14,11 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
 ms.openlocfilehash: 399dd15292b67f89829576234e0b2c600e5b4e44
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>Programme d’amélioration du produit pour SQL Server Data Tools
@@ -63,7 +63,7 @@ ms.lasthandoff: 06/23/2017
   
  Type d'entrée DWORD :  
   
--   0 pour annuler l'abonnement  
+-   0 pour annuler l'abonnement  
   
 -   1 pour s'abonner  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 06/23/2017
   
  Type d'entrée DWORD :  
   
--   0 pour annuler l'abonnement  
+-   0 pour annuler l'abonnement  
   
 -   1 pour s'abonner  
   
@@ -133,17 +133,17 @@ ms.lasthandoff: 06/23/2017
   
  Les clients d’entreprises peuvent construire une stratégie de groupe pour s’abonner ou annuler l’abonnement en définissant une stratégie basée sur le registre pour SQL Server 2014.  
   
- La clé de Registre et les paramètres pertinents se présentent comme suit :  
+ La clé de Registre et les paramètres pertinents se présentent comme suit :  
   
  Clé = HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\120  
   
  Nom de l'entrée de Registre = CustomerFeedback  
   
- Type d'entrée DWORD :  
+ Type d'entrée DWORD :  
   
--   0 pour annuler l'abonnement  
+-   0 pour annuler l'abonnement  
   
--   1 pour s'abonner  
+-   1 pour s'abonner  
   
   
 
