@@ -16,22 +16,20 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 caps.latest.revision: 8
 author: sabotta
 ms.author: carlasab
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
 ms.openlocfilehash: ca52d53cf25fa0ead6abd9b870f4d8dab424d11a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/28/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# Visionneuse d’aide et contenu hors connexion pour SQL Server
-<a id="help-viewer-and-offline-content-for-sql-server" class="xliff"></a>
+# <a name="help-viewer-and-offline-content-for-sql-server"></a>Visionneuse d’aide et contenu hors connexion pour SQL Server
   
   
   
 Cet article décrit comment installer la visionneuse d’aide et consulter la documentation SQL Server hors connexion. L’article s’applique à la documentation de [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], SQL Server 2016 et SQL Server 2017. 
 
-## Installer la visionneuse d’aide
-<a id="install-help-viewer" class="xliff"></a>
+## <a name="install-help-viewer"></a>Installer la visionneuse d’aide
 Le tableau suivant répertorie les outils qui installent la visionneuse d’aide, en fonction de la version de SQL Server que vous utilisez. Installez l’un des outils répertoriés pour installer la visionneuse d’aide.
 
 
@@ -54,8 +52,7 @@ Le tableau suivant répertorie les outils qui installent la visionneuse d’aide
 > Vous pouvez aussi afficher l’aide locale de [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] avec la visionneuse d’aide version 2.x à la seule condition de choisir l’option **Installer du contenu à partir du disque**. 
 
 
-## Contenu hors connexion pour SQL Server 2016, SQL Server 2017
-<a id="sql-server-2016-sql-server-2017-offline-content" class="xliff"></a>  
+## <a name="sql-server-2016-sql-server-2017-offline-content"></a>Contenu hors connexion pour SQL Server 2016, SQL Server 2017  
  
 **Pour installer le contenu hors connexion**  
 1. Ouvrez la visionneuse d’aide en lançant SQL Server Management Studio ou Visual Studio, puis en cliquant sur **Ajouter et supprimer le contenu d’aide** dans le menu **Aide**.  
@@ -82,8 +79,7 @@ Le tableau suivant répertorie les outils qui installent la visionneuse d’aide
    >[!IMPORTANT]
    > Si un message s’affiche indiquant que l’opération de déplacement a échoué, fermez la boîte de message, puis fermez et rouvrez la visionneuse d’aide. Le nouvel emplacement du contenu doit à présent figurer dans **Chemin d’accès au stockage local**.   
  
-## Contenu hors connexion pour [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]
-<a id="includesssql14mdincludessssql14-mdmd-offline-content" class="xliff"></a> 
+## <a name="includesssql14mdincludessssql14-mdmd-offline-content"></a>Contenu hors connexion pour [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 
  
   
 **Pour installer le contenu hors connexion**  
@@ -114,8 +110,7 @@ Le tableau suivant répertorie les outils qui installent la visionneuse d’aide
   
     ![HelpViewer1_withContentInstalled_ZoomedIn](../release-notes/media/helpviewer1-withcontentinstalled-zoomedin.png)  
   
-## Afficher le contenu en ligne dans la visionneuse d’aide
-<a id="view-online-content-in-help-viewer" class="xliff"></a>
+## <a name="view-online-content-in-help-viewer"></a>Afficher le contenu en ligne dans la visionneuse d’aide
 
 Dans la visionneuse d’aide v2.x, vous pouvez afficher le contenu en ligne en effectuant l’une des opérations suivantes.
 
@@ -135,15 +130,13 @@ Dans la visionneuse d’aide v1.x, vous pouvez afficher le contenu en ligne en e
 
    ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../release-notes/media/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)
 
-## Aide F1 et autres conseils
-<a id="f1-help-and-other-tips" class="xliff"></a>
+## <a name="f1-help-and-other-tips"></a>Aide F1 et autres conseils
 
 Quand vous appuyez sur la touche F1, la rubrique correspondante s’affiche en ligne. Il n’est pas possible d’afficher la rubrique dans l’aide locale.
 
 Par ailleurs, la visionneuse d’aide ne prend en charge ni les paramètres proxy ni le format ISO. 
 
 
-## Autres informations
-<a id="additional-information" class="xliff"></a>
+## <a name="additional-information"></a>Autres informations
 [Visionneuse d’aide Microsoft - Visual Studio 2015](https://msdn.microsoft.com/library/hh580782.aspx)
 
