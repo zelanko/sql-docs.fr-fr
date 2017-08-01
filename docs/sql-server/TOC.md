@@ -2,7 +2,7 @@
 
 # Vue d'ensemble
 ## [Nouveautés de SQL Server 2016](what-s-new-in-sql-server-2016.md)
-## [Nouveautés de SQL Server 2017](what-s-new-in-sql-server-2017.md)
+## [Nouveautés de SQL Server 2017](what-s-new-in-sql-server-2017.md)
 ## [Éditions et fonctionnalités prises en charge de SQL Server 2016](editions-and-components-of-sql-server-2016.md)
 ## [Éditions et fonctionnalités prises en charge de SQL Server 2017](editions-and-components-of-sql-server-2017.md)
 ## [Spécifications de capacité maximale pour SQL Server](maximum-capacity-specifications-for-sql-server.md)
@@ -17,14 +17,14 @@
 ## [Microsoft SQL Server](../release-notes/microsoft-sql-server.md)
 ## [Notes de publication de SQL Server](../release-notes/sql-server-release-notes.md)
 ## [Notes de publication de SQL Server 2016](sql-server-2016-release-notes.md)
-## [Notes de publication de SQL Server 2017](sql-server-2017-release-notes.md)
+## [Notes de publication de SQL Server 2017](sql-server-2017-release-notes.md)
 
-## [Notes de publication de SQL Server 2014](../release-notes/sql-server-2014-release-notes.md)
+## [SQL Server 2014 Release Notes](../release-notes/sql-server-2014-release-notes.md)
 ## [Notes de publication de SQL Server 2012](../release-notes/sql-server-2012-release-notes.md)
-## [Notes de publication de SQL Server 2012 SP1](../release-notes/sql-server-2012-sp1-release-notes.md)
-## [Notes de publication de SQL Server 2012 SP2](../release-notes/sql-server-2012-sp2-release-notes.md)
+## [SQL Server 2012 SP1 Release Notes](../release-notes/sql-server-2012-sp1-release-notes.md)
+## [SQL Server 2012 SP2 Release Notes](../release-notes/sql-server-2012-sp2-release-notes.md)
 ## [Notes de publication de SQL Server 2012 SP3](../release-notes/sql-server-2012-sp3-release-notes.md)
-## [Notes de publication de SQL Server 2008 R2 SP2](../release-notes/sql-server-2008-r2-sp2-release-notes.md)
+## [SQL Server 2008 R2 SP2 Release Notes](../release-notes/sql-server-2008-r2-sp2-release-notes.md)
 
 # [Analysis Services](../analysis-services/analysis-services.md)
 # [Moteur de base de données](../database-engine/sql-server-database-engine-backward-compatibility.md)

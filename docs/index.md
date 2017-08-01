@@ -7,7 +7,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 733d1495b9dbe1ad5c7028df3b8d28884d6cebf3
 ms.openlocfilehash: 160ac8567e3a74738da5083d67f8c8015cf19c16
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 
@@ -99,7 +99,7 @@ ms.lasthandoff: 07/20/2017
                                                     <li><a href="/sql/ssdt/download-sql-server-data-tools-ssdt">SQL Server Data Tools (SSDT)</a></li>
                                                     <li><a href="https://www.microsoft.com/download/details.aspx?id=55329">Power BI Report Server et outils</a></li>
                                                 </ul>
-                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Exemples de bases de données</h4>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Bases de données exemple</h4>
                                                 <ul>
                                                     <li><a href="https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0">Exemple de base de données World Wide Importers</a></li>
                                                 </ul>
@@ -194,7 +194,7 @@ ms.lasthandoff: 07/20/2017
                                                 <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
                                                    <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Développer</h3>
                                                 </div>
-                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Concevoir</h4>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Conception</h4>
                                                 <ul>
                                                     <li><a href="/sql/connect/sql-server-drivers">Connecter avec des applications clientes</a></li>
                                                     <li><a href="/sql/relational-databases/database-features">Concepts des bases de données relationnelles</a></li>
