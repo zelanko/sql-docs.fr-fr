@@ -14,11 +14,11 @@ caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2a16a7b0399a696c670887e49b4cf5c32012afb1
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="dynamic-data-masking"></a>Masquage dynamique des données
@@ -80,9 +80,9 @@ WHERE is_masked = 1;
 ```  
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
- Il n’est pas possible de définir une règle de masquage pour les types de colonnes suivants :  
+ Il n’est pas possible de définir une règle de masquage pour les types de colonnes suivants :  
   
--   Colonnes chiffrées (chiffrement intégral)  
+-   Colonnes chiffrées (Always Encrypted)  
   
 -   FILESTREAM  
   

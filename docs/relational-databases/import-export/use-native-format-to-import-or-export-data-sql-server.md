@@ -17,11 +17,11 @@ caps.latest.revision: 43
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4cb08ec44780935a8340d267fd3790af5150659b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Utiliser le format natif pour importer ou exporter des données (SQL Server)
@@ -32,7 +32,7 @@ Il est recommandé d'utiliser le format natif lorsque vous transférez des donn�
 
 Le format natif préserve les types de données native d'une base de données. Il est destiné aux transferts de données à haute vitesse entre des tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous utilisez un fichier de format, les tables source et cible ne doivent pas nécessairement être identiques. Le transfert de données se déroule en deux étapes :  
   
-1.  exportation en bloc des données d'une table source vers un fichier de données ;  
+1.  exportation en bloc des données d'une table source vers un fichier de données ;  
   
 2.  importation en bloc des données d'un fichier de données vers la table cible.  
   

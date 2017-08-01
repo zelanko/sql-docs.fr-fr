@@ -18,7 +18,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: cf8509cab2424529ca0ed16c936fa63a139dfca4
 ms.openlocfilehash: eff546e84d3f872406136f68a7fdbbd8147175ca
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 
@@ -40,7 +40,7 @@ Parfois, le plan choisi par l’optimiseur de requête n’est pas optimal pour 
 ![Fonctionnalités de traitement de requêtes adaptatif](./media/1_AQPFeatures.png)
 
 ### <a name="how-to-enable-adaptive-query-processing"></a>Comment activer le traitement de requêtes adaptatif
-Vous pouvez faire en sorte que les charges de travail soient automatiquement éligibles au traitement de requêtes adaptatif en activant le niveau de compatibilité 140 pour la base de données.  Vous pouvez définir cette option à l’aide de Transact-SQL. Exemple :
+Vous pouvez faire en sorte que les charges de travail soient automatiquement éligibles au traitement de requêtes adaptatif en activant le niveau de compatibilité 140 pour la base de données.  Vous pouvez définir cette option à l’aide de Transact-SQL. Exemple :
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 140;
 ```
