@@ -22,11 +22,11 @@ caps.latest.revision: 61
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aa3c7efcaa066953595525819686c612b5a9aee5
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copier des bases de données avec la sauvegarde et la restauration
@@ -54,7 +54,7 @@ D’autres points sont susceptibles d’affecter cette procédure :
   
  Lorsque vous restaurez la base de données, vous pouvez, si vous le voulez, définir le mappage de lecteur, les noms de fichiers ou le chemin de la base de données à restaurer. 
  
- Cela peut être nécessaire dans les cas suivants :  
+ Cela peut être nécessaire dans les cas suivants :  
   
 -   La structure de répertoire ou le mappage de lecteur utilisé par la base de données sur l'ordinateur d'origine n'existe pas sur l'autre ordinateur. Par exemple, il est possible que la sauvegarde contienne un fichier à restaurer sur le lecteur E par défaut, mais que l'ordinateur de destination n'ait pas de lecteur E.  
   

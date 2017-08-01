@@ -14,11 +14,11 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5f74f31531f0b3c966235396d91ce12b00428d5c
 ms.openlocfilehash: 922e6a4a0df86f82012670874d49b65e1338b53c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Compilation en mode natif de tables et de procédures stockées
@@ -186,7 +186,7 @@ GO
 
 La DLL de native_sp peut interagir directement avec la DLL de t1, ainsi que le moteur de stockage de l'OLTP en mémoire, pour insérer les lignes le plus rapidement possible.
 
-Le compilateur de l'OLTP en mémoire tire parti de l'optimiseur de requête pour créer un plan d'exécution efficace pour chacune des requêtes dans la procédure stockée. Notez que les procédures stockées compilées en mode natif ne sont pas automatiquement recompilées si les données de la table sont modifiées. Pour plus d’informations sur la gestion des statistiques et des procédures stockées avec l’OLTP en mémoire, consultez [Statistiques pour les tables optimisées en mémoire](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md).
+Le compilateur de l'OLTP en mémoire tire parti de l'optimiseur de requête pour créer un plan d'exécution efficace pour chacune des requêtes dans la procédure stockée. Notez que les procédures stockées compilées en mode natif ne sont pas automatiquement recompilées si les données de la table sont modifiées. Pour plus d’informations sur la gestion des statistiques et des procédures stockées avec l’OLTP en mémoire, consultez [Statistiques pour les tables mémoire optimisées](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md).
 
 ## <a name="security-considerations-for-native-compilation"></a>Considérations sur la sécurité à prendre en compte pour une compilation native
 
@@ -216,5 +216,5 @@ Aucune intervention de l'utilisateur n'est nécessaire pour gérer ces fichiers.
 
 [Tables optimisées en mémoire](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 
-[Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)
+[Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)
 

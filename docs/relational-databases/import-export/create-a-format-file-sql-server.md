@@ -16,11 +16,11 @@ caps.latest.revision: 57
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e2360e69486a82a375c038135616753bf0ed19c0
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="create-a-format-file-sql-server"></a>Créer un fichier de format (SQL Server)
@@ -140,7 +140,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
 #### <a name="f-using-a-format-file-with-the-code-page-option"></a>F. Utilisation d’un fichier de format avec l’option de page de code  
  Si vous créez un fichier de format à l’aide de la commande bcp (c’est-à-dire, en utilisant «`bcp forma`t … » ), des informations sur la page de code/classement sont écrites dans le fichier de format.   
-L’exemple de fichier de format pour table avec 5 colonnes suivant inclut le classement.  
+L’exemple de fichier de format pour table avec 5 colonnes suivant inclut le classement.  
   
 ```  
 13.0  

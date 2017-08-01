@@ -15,11 +15,11 @@ caps.latest.revision: 28
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 47b0c3fc8aba635dcfd573536b770f13a40956fa
 ms.openlocfilehash: 0a63e3e5641ce513e0d3c30705ac8a7523cbc053
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Index columnstore - Nouveautés
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/29/2017
 |Index btree supplémentaires autorisés sur un segment de mémoire ou btree ayant un index columnstore non cluster|oui|oui|oui|oui|oui|oui|  
 |Index columnstore cluster actualisable||oui|oui|oui|oui|oui|  
 |Index Btree sur un index columnstore cluster|||oui|oui|oui|oui|  
-|Index columnstore sur une table à mémoire optimisée|||oui|oui|oui|oui|  
+|Index columnstore sur une table mémoire optimisée|||oui|oui|oui|oui|  
 |Définition d’index columnstore non cluster prenant en charge l’utilisation d’une condition filtrée|||oui|oui|oui|oui|  
 |Option de temporisation de la compression pour les index columnstore dans CREATE TABLE et ALTER TABLE|||oui|oui|oui|oui|
 |L’index columnStore peut avoir une colonne calculée non persistante.||||oui|||   
@@ -91,23 +91,23 @@ ms.lasthandoff: 06/29/2017
   
 -   La pile de prédicats accélère les requêtes qui comparent des chaînes de type [v]char ou n[v]char. Cela s’applique aux opérateurs de comparaison courants, et inclut des opérateurs tels que LIKE, qui utilisent des filtres bitmap. Cela fonctionne avec tous les classements que SQL Server prend en charge.  
   
-### <a name="performance-for-database-compatibility-level-130"></a>Performances pour le niveau de compatibilité de base de données 130  
+### <a name="performance-for-database-compatibility-level-130"></a>Performances pour le niveau de compatibilité de base de données 130  
   
--   Nouvelle prise en charge de l’exécution en mode batch pour les requêtes utilisant l’une des opérations suivantes :  
+-   Nouvelle prise en charge de l’exécution en mode batch pour les requêtes utilisant l’une des opérations suivantes :  
   
     -   SORT  
   
-    -   Agrégats avec plusieurs fonctions distinctes. Exemples : COUNT/COUNT, AVG/SUM, CHECKSUM_AGG, STDEV/STDEVP.  
+    -   Agrégats avec plusieurs fonctions distinctes. Exemples : COUNT/COUNT, AVG/SUM, CHECKSUM_AGG, STDEV/STDEVP.  
   
-    -   Fonctions d’agrégation Window : COUNT, COUNT_BIG, SUM, AVG, MIN, MAX et CLR.  
+    -   Fonctions d’agrégation Window : COUNT, COUNT_BIG, SUM, AVG, MIN, MAX et CLR.  
   
-    -   Agrégats définis par l’utilisateur Windows : CHECKSUM_AGG, STDEV, STDEVP, VAR, VARP et GROUPING.  
+    -   Agrégats définis par l’utilisateur Windows : CHECKSUM_AGG, STDEV, STDEVP, VAR, VARP et GROUPING.  
   
-    -   Fonctions analytiques d’agrégation Windows :  LAG< LEAD, FIRST_VALUE, LAST_VALUE, PERCENTILE_CONT, PERCENTILE_DISC, CUME_DIST et PERCENT_RANK.  
+    -   Fonctions analytiques d’agrégation Windows :  LAG< LEAD, FIRST_VALUE, LAST_VALUE, PERCENTILE_CONT, PERCENTILE_DISC, CUME_DIST et PERCENT_RANK.  
   
--   Les requêtes monothread s’exécutant sous MAXDOP 1 ou avec un plan de requête série s’exécutent en mode batch. Auparavant, seules les requêtes multithread s’exécutaient en mode batch.  
+-   Les requêtes monothread s’exécutant sous MAXDOP 1 ou avec un plan de requête série s’exécutent en mode batch. Auparavant, seules les requêtes multithread s’exécutaient en mode batch.  
   
--   Les requêtes de table à mémoire optimisée peuvent avoir des plans parallèles en mode SQL InterOp lors de l’accès aux données dans rowstore ou dans les index columnstore.  
+-   Les requêtes de table mémoire optimisée peuvent avoir des plans parallèles en mode SQL InterOp lors de l’accès aux données dans rowstore ou dans les index columnstore.  
   
 ### <a name="supportability"></a>Prise en charge  
  Ces vues système sont nouvelles pour columnstore :  
@@ -149,26 +149,26 @@ ms.lasthandoff: 06/29/2017
 -   Pour les tables en mémoire, les requêtes sur les index columnstore s’exécutent uniquement en mode InterOP et non en mode natif en mémoire. L’exécution en parallèle est prise en charge.  
   
 ## <a name="sql-server-2014"></a>SQL Server 2014  
- SQL Server 2014 a introduit l’index columnstore cluster en tant que format de stockage principal. Cela autorise des charges régulières ainsi que des opérations de mise à jour, de suppression et d’insertion.  
+ SQL Server 2014 a introduit l’index columnstore cluster en tant que format de stockage principal. Cela autorise des charges régulières ainsi que des opérations de mise à jour, de suppression et d’insertion.  
   
 -   La table peut utiliser un index columnstore cluster en tant que stockage de table primaire. Aucun autre index n’est autorisé sur la table mais, l’index columnstore cluster étant actualisable, vous pouvez effectuer des chargements réguliers et apporter des modifications à des lignes individuelles.  
   
--   L’index columnstore non cluster conserve les mêmes fonctionnalités que dans SQL Server 2012, à l’exception des opérateurs supplémentaires qui peuvent désormais être exécutés en mode batch. Il n’est toujours pas actualisable, sauf par reconstruction et par basculement de partition. L’index columnstore non cluster est pris en charge uniquement sur les tables sur disque, pas sur les tables en mémoire.  
+-   L’index columnstore non cluster conserve les mêmes fonctionnalités que dans SQL Server 2012, à l’exception des opérateurs supplémentaires qui peuvent désormais être exécutés en mode batch. Il n’est toujours pas actualisable, sauf par reconstruction et par basculement de partition. L’index columnstore non cluster est pris en charge uniquement sur les tables sur disque, pas sur les tables en mémoire.  
   
 -   Les index columnstore cluster et non cluster disposent d’une option de compression d’archivage qui compresse davantage les données. L’option d’archivage est utile pour réduire la taille des données en mémoire et sur disque, mais elle ralentit les performances des requêtes. Elle fonctionne bien pour les données rarement utilisées.  
   
 -   Les index columnstore cluster et non cluster fonctionnent d’une manière très similaire. Ils utilisent le même format de stockage en colonnes, le même moteur de traitement des requêtes et le même jeu de vues de gestion dynamique. La différence a trait aux types d’index (primaire et secondaire), et au fait que l’index columnstore non cluster est en lecture seule.  
   
--   Les opérateurs suivants s’exécutent en mode batch pour les requêtes multithread : scan, filter, project, join, group by et union all.  
+-   Les opérateurs suivants s’exécutent en mode batch pour les requêtes multithread : scan, filter, project, join, group by et union all.  
   
 ## <a name="sql-server-2012"></a>SQL Server 2012  
- SQL Server 2012 a introduit l’index columnstore non cluster en tant qu’autre type d’index sur les tables rowstore, et le traitement par lots pour les requêtes sur des données columnstore.  
+ SQL Server 2012 a introduit l’index columnstore non cluster en tant qu’autre type d’index sur les tables rowstore, et le traitement par lots pour les requêtes sur des données columnstore.  
   
 -   Une table rowstore peut avoir un index columnstore non cluster.  
   
 -   L’index columnstore est en lecture seule. Après avoir créé l’index columnstore, vous ne pouvez pas mettre à jour la table à l’aide d’opérations d’insertion, de suppression et de mise à jour. Pour effectuer ces opérations, vous devez supprimer l’index, mettre à jour la table, puis reconstruire l’index. Vous pouvez charger des données supplémentaires dans la table à l’aide d’un basculement de partition. L’avantage du basculement de partition est que vous pouvez charger des données sans devoir supprimer et reconstruire l’index columnstore.  
   
--   L’index columnstore requiert toujours un stockage supplémentaire, généralement supérieur de 10 % à celui du rowstore, car il stocke une copie des données.  
+-   L’index columnstore requiert toujours un stockage supplémentaire, généralement supérieur de 10 % à celui du rowstore, car il stocke une copie des données.  
   
 -   Le traitement par lots offre des performances de requête au moins deux fois supérieures, mais il est disponible uniquement pour l’exécution de requêtes parallèles.  
   

@@ -22,20 +22,19 @@ caps.latest.revision: 44
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1e8b91f880f5cc4f5db69f09fb0bded2b51aaa3c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# Implémenter un gestionnaire de logique métier pour un article de fusion
-<a id="implement-a-business-logic-handler-for-a-merge-article" class="xliff"></a>
+# <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implémenter un gestionnaire de logique métier pour un article de fusion
   Cette rubrique décrit comment implémenter un gestionnaire de logique métier pour un article de fusion dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de la programmation de réplication ou d'objets RMO (Replication Management Objects).  
   
  L'espace de noms <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implémente une interface qui vous permet d'écrire une logique métier complexe afin de gérer les événements qui se produisent au cours du processus de synchronisation de la réplication de fusion. Les méthodes dans le gestionnaire de logique métier peuvent être appelées par le processus de réplication pour chaque ligne modifiée qui est répliquée pendant la synchronisation.  
   
- La procédure globale permettant d'implémenter un gestionnaire de logique métier est la suivante :  
+ La procédure globale permettant d'implémenter un gestionnaire de logique métier est la suivante :  
   
 1.  Créez l'assembly du gestionnaire de logique métier.  
   
@@ -57,8 +56,7 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="ReplProg"></a> Utilisation de la programmation de la réplication  
   
-#### Pour créer et déployer un gestionnaire de logique métier
-<a id="to-create-and-deploy-a-business-logic-handler" class="xliff"></a>  
+#### <a name="to-create-and-deploy-a-business-logic-handler"></a>Pour créer et déployer un gestionnaire de logique métier  
   
 1.  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio, créez un projet pour l'assembly .NET contenant le code qui implémente le gestionnaire de logique métier.  
   
@@ -101,8 +99,7 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  Un gestionnaire de logique métier doit être déployé sur chaque serveur sur lequel l'Agent de fusion s'exécute, ce qui inclut le serveur IIS qui héberge replisapi.dll lors de l'utilisation de la synchronisation Web.  
   
-#### Pour inscrire un gestionnaire de logique métier
-<a id="to-register-a-business-logic-handler" class="xliff"></a>  
+#### <a name="to-register-a-business-logic-handler"></a>Pour inscrire un gestionnaire de logique métier  
   
 1.  Sur le serveur de publication, exécutez [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) pour vérifier que l’assembly n’a pas été inscrit en tant que gestionnaire de logique métier.  
   
@@ -111,13 +108,11 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  Si l'assembly n'est pas déployé dans le même répertoire que l'exécutable de l'Agent de fusion, dans le même répertoire que l'application qui démarre de façon synchrone l'Agent de fusion ni dans le GAC (Global Assembly Cache), vous devez spécifier le chemin d'accès complet avec le nom de l'assembly pour **@dotnet_assembly_name**. Lorsque vous utilisez la synchronisation Web, vous devez spécifier l'emplacement de l'assembly sur le serveur Web.  
   
-#### Pour utiliser un gestionnaire de logique métier avec un nouvel article de table
-<a id="to-use-a-business-logic-handler-with-a-new-table-article" class="xliff"></a>  
+#### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>Pour utiliser un gestionnaire de logique métier avec un nouvel article de table  
   
 1.  Exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) pour définir un article, en spécifiant le nom convivial du gestionnaire de logique métier pour **@article_resolver**. Pour plus d'informations, voir [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-#### Pour utiliser un gestionnaire de logique métier avec un article de table existant
-<a id="to-use-a-business-logic-handler-with-an-existing-table-article" class="xliff"></a>  
+#### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>Pour utiliser un gestionnaire de logique métier avec un article de table existant  
   
 1.  Exécutez [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), en spécifiant **@publication**, **@article**, en affectant la valeur **article_resolver** à **@property** et le nom convivial du gestionnaire de logique métier obtenu à l’étape 1 à **@value**.  
   
@@ -134,8 +129,7 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
   
-#### Pour créer un gestionnaire de logique métier
-<a id="to-create-a-business-logic-handler" class="xliff"></a>  
+#### <a name="to-create-a-business-logic-handler"></a>Pour créer un gestionnaire de logique métier  
   
 1.  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio, créez un projet pour l'assembly .NET contenant le code qui implémente le gestionnaire de logique métier.  
   
@@ -176,8 +170,7 @@ ms.lasthandoff: 06/22/2017
   
 6.  Générez le projet pour créer l'assembly du gestionnaire de logique métier.  
   
-#### Pour inscrire un gestionnaire de logique métier
-<a id="to-register-a-business-logic-handler" class="xliff"></a>  
+#### <a name="to-register-a-business-logic-handler"></a>Pour inscrire un gestionnaire de logique métier  
   
 1.  Créez une connexion au serveur de distribution en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
@@ -187,7 +180,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler> . Spécifiez les propriétés suivantes :  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetAssemblyName%2A> – nom de l'assembly .NET. Si l'assembly n'est pas déployé dans le même répertoire que l'exécutable de l'Agent de fusion, dans le même répertoire que l'application qui démarre de façon synchrone l'Agent de fusion ou dans le GAC, vous devez inclure le chemin d'accès complet avec le nom de l'assembly. Vous devez inclure le chemin d'accès complet avec le nom de l'assembly lorsque vous utilisez un gestionnaire de logique métier avec la synchronisation Web ;  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetAssemblyName%2A> – nom de l'assembly .NET. Si l'assembly n'est pas déployé dans le même répertoire que l'exécutable de l'Agent de fusion, dans le même répertoire que l'application qui démarre de façon synchrone l'Agent de fusion ou dans le GAC, vous devez inclure le chemin d'accès complet avec le nom de l'assembly. Vous devez inclure le chemin d'accès complet avec le nom de l'assembly lorsque vous utilisez un gestionnaire de logique métier avec la synchronisation Web ;  
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetClassName%2A> – nom complet de la classe qui remplace <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> et implémente le gestionnaire de logique métier ;  
   
@@ -195,13 +188,11 @@ ms.lasthandoff: 06/22/2017
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> – valeur **true**.  
   
-#### Pour déployer un gestionnaire de logique métier
-<a id="to-deploy-a-business-logic-handler" class="xliff"></a>  
+#### <a name="to-deploy-a-business-logic-handler"></a>Pour déployer un gestionnaire de logique métier  
   
 1.  Déployez l'assembly sur le serveur où l'Agent de fusion s'exécute, dans l'emplacement de fichier qui a été spécifié quand le gestionnaire de logique métier a été inscrit sur le serveur de distribution. Pour un abonnement par extraction, l'agent s'exécute sur l'Abonné, alors que pour un abonnement par émission de données, il s'exécute sur le serveur de distribution. Lorsque vous utilisez la synchronisation Web, l'agent s'exécute sur le serveur Web. Si le chemin d'accès complet n'a pas été inclus avec le nom de l'assembly lorsque le gestionnaire de logique métier a été inscrit, déployez l'assembly dans le même répertoire que l'exécutable de l'Agent de fusion, dans le même répertoire que l'application qui démarre de façon synchrone l'Agent de fusion. Vous pouvez installer l'assembly dans le GAC si plusieurs applications utilisent le même assembly.  
   
-#### Pour utiliser un gestionnaire de logique métier avec un nouvel article de table
-<a id="to-use-a-business-logic-handler-with-a-new-table-article" class="xliff"></a>  
+#### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>Pour utiliser un gestionnaire de logique métier avec un nouvel article de table  
   
 1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
@@ -217,8 +208,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Article.Create%2A> . Pour plus d'informations, voir [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-#### Pour utiliser un gestionnaire de logique métier avec un article de table existant
-<a id="to-use-a-business-logic-handler-with-an-existing-table-article" class="xliff"></a>  
+#### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>Pour utiliser un gestionnaire de logique métier avec un article de table existant  
   
 1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
@@ -251,8 +241,7 @@ ms.lasthandoff: 06/22/2017
   
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
-## Voir aussi
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Voir aussi  
  [Implémenter un outil personnalisé de résolution des conflits pour un article de fusion](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [Déboguer un gestionnaire de logique métier &#40;programmation de la réplication&#41;](../../relational-databases/replication/debug-a-business-logic-handler-replication-programming.md)   
  [Bonnes pratiques en matière de sécurité de la réplication](../../relational-databases/replication/security/replication-security-best-practices.md)   

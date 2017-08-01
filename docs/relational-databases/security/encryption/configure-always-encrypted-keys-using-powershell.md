@@ -14,11 +14,11 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
 ms.openlocfilehash: 0d112912b35e05e5e96ec43cf6bc5f7caee21bf4
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="configure-always-encrypted-keys-using-powershell"></a>Configurer des clés Always Encrypted à l’aide de PowerShell
@@ -38,7 +38,7 @@ La méthode de mise en service des clés décrite dans cette section ne prend pa
 Avant d’exécuter des étapes qui impliquent l’accès aux clés en texte clair ou au magasin de clés (identifiées dans la colonne **Accède au magasin de clés/aux clés en texte clair** dans le tableau ci-dessous), vérifiez que l’environnement PowerShell s’exécute sur un ordinateur sécurisé qui est différent d’un ordinateur qui héberge votre base de données. Pour plus d’informations, consultez ***Considérations en matière de sécurité pour la gestion des clés***.
 
 
-Tâche  |Article  |Accède au magasin de clés/aux clés en texte clair  |Accède à la base de données   
+Tâche  |Article  |Accède au magasin de clés/aux clés en texte brut  |Accède à la base de données   
 ---------|---------|---------|---------
 Étape 1. Créer une clé principale de colonne dans un magasin de clés.<br><br>**Remarque :** Le module SqlServer PowerShell ne prend pas en charge cette étape. Pour accomplir cette tâche à partir d’une ligne de commande, utilisez les outils qui sont spécifiques à votre magasin de clés sélectionné. |[Créer et stocker des clés principales de colonne (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | Oui | Non     
 Étape 2.  Démarrer un environnement PowerShell et importer le module SqlServer PowerShell.  |   [Configurer Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   |    Non    | Non         
@@ -192,7 +192,7 @@ Avant d’exécuter des étapes qui impliquent l’accès aux clés en texte cla
 Pour plus d’informations, consultez [Considérations en matière de sécurité pour la gestion des clés](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement).
 
 
-Tâche  |Article  |Accède au magasin de clés/aux clés en texte clair  |Accède à la base de données  
+Tâche  |Article  |Accède au magasin de clés/aux clés en texte brut  |Accède à la base de données  
 ---------|---------|---------|---------
 Étape 1. Créer une clé principale de colonne dans un magasin de clés.<br><br>**Remarque :** Le module SqlServer ne prend pas en charge cette étape. Pour accomplir cette tâche à partir d’une ligne de commande, vous devez utiliser les outils qui sont spécifiques au type de votre magasin de clés.     | [Créer et stocker des clés principales de colonne (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)  |    Oui    | Non 
 Étape 2.  Démarrer une session PowerShell et importer le module SqlServer.      |     [Importer le module SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule)     | Non | Non         

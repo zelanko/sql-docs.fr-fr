@@ -22,11 +22,11 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 530e940d95c3375b58b494e165cf5a193fdec720
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="search-text-with-regular-expressions"></a>Rechercher du texte avec des expressions régulières
@@ -74,7 +74,7 @@ ms.lasthandoff: 06/22/2017
 |Énième texte avec balises|\n|Dans une expression **Rechercher ou Remplacer** , recherche la concordance du texte correspondant à la énième expression avec balises, où n désigne un chiffre compris entre 1 et 9.<br /><br /> Dans une expression **Remplacer** , \0 insère le texte correspondant à l’expression entière.|  
 |Champ justifié à droite|\\(w,n)|Dans une expression **Remplacer** , aligne à droite la énième expression avec balises dans un champ comportant au moins *w* caractères.|  
 |Champ justifié à gauche|\\(-w,n)|Dans une expression **Remplacer** , aligne à gauche la énième expression avec balises dans un champ comportant au moins *w* caractères.|  
-|Empêcher la concordance|~(X)|Empêche la recherche d'une concordance quand le caractère X apparaît à cet endroit dans l'expression. Par exemple, réal~(ité) correspond à « réal » dans « réalisme » et « réalisation », mais pas à « réal » dans « réalité ».|  
+|Empêcher la concordance|~(X)|Empêche la recherche d'une concordance quand le caractère X apparaît à cet endroit dans l'expression. Par exemple, réal~(ité) correspond à « réal » dans « réalisme » et « réalisation », mais pas à « réal » dans « réalité ».|  
 |Caractère alphanumérique|:a|Représente l'expression ([a-zA-Z0-9]).|  
 |Caractère alphabétique|:c|Représente l'expression ([a-zA-Z]).|  
 |Chiffre décimal|:d|Représente l'expression ([0-9]).|  
@@ -126,7 +126,7 @@ ms.lasthandoff: 06/22/2017
   
 |Expression|Syntaxe|Description|  
 |----------------|------------|-----------------|  
-|Alpha|:Al|Représente n'importe quel caractère. Par exemple, :Alar retourne des mots comme « Par », « partie » ou « épargne ».|  
+|Alpha|:Al|Représente n'importe quel caractère. Par exemple, :Alar retourne des mots comme « Par », « partie » ou « épargne ».|  
 |Numérique|:Nu|Représente n'importe quel nombre ou chiffre.|  
 |Ponctuation|:Pu|Représente n'importe quel signe de ponctuation tel que ?, @, ', etc.|  
 |Espace blanc|:Wh|Représente n'importe quel type d'espace blanc, y compris les espaces typographiques et idéographiques.|  

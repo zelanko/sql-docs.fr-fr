@@ -14,11 +14,11 @@ caps.latest.revision: 28
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8c0ed45fbf5da5c1c521ad52e25553a21c068a08
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>Prise en charge SQL Server Management Objects pour OLTP en mémoire
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
 -   <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>  
   
 ## <a name="code-sample"></a>Exemple de code  
- L'exemple réalise les actions suivantes :  
+ L'exemple réalise les actions suivantes :  
   
 -   Crée une base de données avec le groupe de fichiers mémoire optimisé et le fichier mémoire optimisé.  
   

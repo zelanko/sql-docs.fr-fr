@@ -14,11 +14,11 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: db24b73ba03d4cde0dfc090ebf2ed8a1661a55e1
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Inspection des zones initiales dans OLTP en mémoire
@@ -212,7 +212,7 @@ Pour appliquer de manière fiable ce niveau aux tables optimisées en mémoire d
   
 Dans Microsoft SQL Server, avant de créer une table optimisée en mémoire, vous devez créer un groupe de fichiers en lui associant la déclaration CONTAINS MEMORY_OPTIMIZED_DATA. Le groupe de fichiers est attribué à votre base de données. Pour plus d’informations, consultez :  
   
-- [Groupe de fichiers optimisé en mémoire](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)  
+- [Groupe de fichiers mémoire optimisé](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)  
   
   
 Dans Azure SQL Database, vous ne devez et ne pouvez pas créer un groupe de fichiers de ce type.  
@@ -256,7 +256,7 @@ ALTER TABLE...ADD/DROP peut ajouter ou supprimer une colonne dans une table opti
 - Pour plus d’informations, consultez [Modification des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md).  
   
   
-#### <a name="plan-your-memory-optimized-tables-and-indexes"></a>Planifier vos tables et index optimisés en mémoire  
+#### <a name="plan-your-memory-optimized-tables-and-indexes"></a>Planifier vos tables et index mémoire optimisés  
   
   
 - [Index pour les tables optimisées en mémoire](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
@@ -404,14 +404,14 @@ Le reste de cette section répertorie les principaux éléments à prendre en co
 **Estimer la mémoire :** vous devez estimer la quantité de mémoire active que votre table optimisée en mémoire est appelée à consommer. Votre système informatique doit avoir une capacité de mémoire suffisante pour héberger une table optimisée en mémoire. Pour plus d’informations, consultez :  
   
 - [Surveiller l’utilisation de la mémoire et résoudre les problèmes connexes](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)  
-- [Estimer les besoins en mémoire des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
-- [Taille de la table et des lignes dans les tables optimisées en mémoire](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
+- [Estimer les besoins en mémoire des tables mémoire optimisées](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
+- [Taille de la table et des lignes dans les tables mémoire optimisées](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
 **Partitionner votre table volumineuse :** une façon de répondre à la demande d’une quantité de mémoire active élevée consiste à partitionner votre table volumineuse en parties en mémoire qui stockent les lignes de données *récentes à chaud* , tandis que les autres parties sur le disque comportent les lignes *héritées à froid* (telles que les commandes qui ont été entièrement livrées et terminées). Ce partitionnement est un processus manuel de conception et d’implémentation. Consultez :  
   
 - [Partitionnement au niveau de l’application](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
-- [Modèle d’application pour partitionner des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
+- [Modèle d’application pour partitionner des tables mémoire optimisées](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
   
   
 <a name="trade-offs-of-native-procs-38p"></a>  
@@ -435,7 +435,7 @@ Les[index pour les tables optimisées en mémoire](../../relational-databases/in
   
 Vous devez vous assurer qu’il y aura suffisamment de mémoire active pour votre table optimisée en mémoire planifié et ses index. Consultez :  
   
-- [Création et gestion du stockage des objets optimisés en mémoire](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
+- [Création et gestion du stockage des objets mémoire optimisés](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   
 Vous pouvez déclarer une table optimisée en mémoire avec DURABILITY = SCHEMA_ONLY :  
@@ -445,7 +445,7 @@ Vous pouvez déclarer une table optimisée en mémoire avec DURABILITY = SCHEMA_
 - Les tables SCHEMA_ONLY peuvent constituer une bonne [alternative aux tables #temporary](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md) dans tempdb, quand plusieurs milliers de lignes sont impliqués.  
   
   
-Vous pouvez aussi déclarer des variables de table comme optimisées en mémoire. Consultez :  
+Vous pouvez aussi déclarer des variables de table comme mémoire optimisée. Consultez :  
   
 - [Table temporaire et variable de table plus rapides à l’aide de l’optimisation en mémoire](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)  
   
@@ -496,7 +496,7 @@ Voici des liens vers d’autres articles qui traitent de considérations spécia
   - Fournit des informations sur la logique de nouvelle tentative dans T-SQL, pour les transactions sur les tables optimisées en mémoire.  
 - [Prise en charge d’OLTP en mémoire par Transact-SQL](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   - Instructions T-SQL et types de données pris en charge et non pris en charge, pour les procédures natives et les tables optimisées en mémoire  
-- [Lier une base de données avec des tables optimisées en mémoire à un pool de ressources](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md), qui présente une considération avancée optionnelle.  
+- [Lier une base de données avec des tables mémoire optimisées à un pool de ressources](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md), qui présente une considération avancée optionnelle.  
   
   
   

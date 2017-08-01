@@ -14,11 +14,11 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7b520a605648e8619f8462ae9125842fdeb37ebc
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-backup-to-url"></a>Sauvegarde SQL Server vers une URL
@@ -90,11 +90,11 @@ ms.lasthandoff: 06/22/2017
   
 -   La sauvegarde dans le stockage Premium n’est pas prise en charge.  
   
--   La taille maximale de sauvegarde prise en charge à l’aide d’un objet blob de pages est limitée par la taille maximale d’un objet blob de page unique, c’est-à-dire 1 To. La taille maximale de sauvegarde prise en charge à l’aide d’objets blob de blocs n’est pas limitée par la taille maximale d’un objet blob de blocs unique, qui est de 200 Go, car la sauvegarde vers des objets blob de blocs prend en charge un système de distribution permettant d’accepter des tailles de sauvegarde sensiblement plus importantes.  
+-   La taille maximale de sauvegarde prise en charge à l’aide d’un objet blob de pages est limitée par la taille maximale d’un objet blob de page unique, c’est-à-dire 1 To. La taille maximale de sauvegarde prise en charge à l’aide d’objets blob de blocs n’est pas limitée par la taille maximale d’un objet blob de blocs unique, qui est de 200 Go, car la sauvegarde vers des objets blob de blocs prend en charge un système de distribution permettant d’accepter des tailles de sauvegarde sensiblement plus importantes.  
   
 -   Vous pouvez émettre des instructions de sauvegarde ou de restauration à l’aide de TSQL, SMO, des applets de commande PowerShell, ou de l’Assistant Restauration ou Sauvegarde de SQL Server Management Studio.   
   
--   La création d'un nom d'unité logique n'est pas prise en charge. Par conséquent, l'ajout d'une URL comme unité de sauvegarde à l'aide de sp_dumpdevice ou de SQL Server Management Studio n'est pas pris en charge.  
+-   La création d'un nom d'unité logique n'est pas prise en charge. Par conséquent, l'ajout d'une URL comme unité de sauvegarde à l'aide de sp_dumpdevice ou de SQL Server Management Studio n'est pas pris en charge.  
   
 -   L'ajout d'objets blob de sauvegarde existants n'est pas pris en charge. Des sauvegardes vers un objet blob existant peuvent être remplacées uniquement à l’aide de l’option **WITH FORMAT** . Toutefois, lors de l’utilisation de sauvegardes de capture instantanée de fichier (avec l’argument **WITH FILE_SNAPSHOT** ), l’argument **WITH FORMAT** n’est pas autorisé, pour éviter de laisser orphelines des captures instantanées de fichier qui ont été créées avec la sauvegarde file-snapshot d’origine.  
   

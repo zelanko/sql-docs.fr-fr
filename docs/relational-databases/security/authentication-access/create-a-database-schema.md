@@ -21,15 +21,14 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 3a224f5be40f6f7a68a28cb4c8f741c24527e8bd
 ms.openlocfilehash: b164e70bf4b1e7586d8e70ab8edb7baa1dfcaade
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# Créer un schéma de base de données
-<a id="create-a-database-schema" class="xliff"></a>
+# <a name="create-a-database-schema"></a>Créer un schéma de base de données
   Cette rubrique explique comment créer un schéma dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
@@ -64,8 +63,7 @@ ms.lasthandoff: 07/05/2017
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-##### Pour créer un schéma
-<a id="to-create-a-schema" class="xliff"></a>  
+##### <a name="to-create-a-schema"></a>Pour créer un schéma  
   
 1.  Dans l'Explorateur d'objets, développez le dossier **Bases de données** .  
   
@@ -79,8 +77,7 @@ ms.lasthandoff: 07/05/2017
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### Options supplémentaires
-<a id="additional-options" class="xliff"></a>  
+### <a name="additional-options"></a>Options supplémentaires  
  La boîte de dialogue **Schéma - Nouveau** offre également des options sur deux pages supplémentaires : **Autorisations** et **Propriétés étendues**.  
   
 -   La page **Autorisations** répertorie tous les éléments sécurisables possibles et les autorisations sur les éléments sécurisables qui peuvent être accordées à la connexion.  
@@ -89,8 +86,7 @@ ms.lasthandoff: 07/05/2017
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour créer un schéma
-<a id="to-create-a-schema" class="xliff"></a>  
+#### <a name="to-create-a-schema"></a>Pour créer un schéma  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

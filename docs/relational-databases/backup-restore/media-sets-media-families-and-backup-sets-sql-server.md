@@ -27,11 +27,11 @@ caps.latest.revision: 59
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0b3e7aa7ca8af93ed67134fffb79bb59193a0aec
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Jeux de supports, familles de supports et jeux de sauvegarde (SQL Server)
@@ -55,7 +55,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="OvMediaSetsFamiliesBackupSets"></a> Vue d’ensemble des jeux de supports, familles de supports et jeux de sauvegarde  
  Les sauvegardes d'un ou de plusieurs supports de sauvegarde constituent un seul jeu de supports. Un *jeu de supports* est un ensemble ordonné de *supports de sauvegarde*, de bandes, de fichiers disque ou d’objets blob Azure auxquels une ou plusieurs opérations de sauvegarde ont été appliquées en utilisant un type et un nombre fixes d’unités de sauvegarde. Un jeu de supports donné utilise des lecteurs de bandes, lecteurs de disque ou objets blob Azure, mais pas une combinaison de deux ou plus. 
  
-**Exemple :** Les unités de sauvegarde associées à un jeu de supports peuvent être les trois lecteurs de bandes `\\.\TAPE0`, `\\.\TAPE1`et `\\.\TAPE2`. Ce support de sauvegarde contient uniquement des bandes, en commençant avec au minimum trois bandes (une par lecteur). Le type et le nombre d'unités de sauvegarde sont établis lors de la création d'un support de sauvegarde ; il n'est pas possible de les modifier. Cependant, si nécessaire, il est possible de remplacer entre les opérations de sauvegarde et de restauration une unité donnée par une unité du même type.  
+**Exemple :** Les unités de sauvegarde associées à un jeu de supports peuvent être les trois lecteurs de bandes `\\.\TAPE0`, `\\.\TAPE1`et `\\.\TAPE2`. Ce support de sauvegarde contient uniquement des bandes, en commençant avec au minimum trois bandes (une par lecteur). Le type et le nombre d'unités de sauvegarde sont établis lors de la création d'un support de sauvegarde ; il n'est pas possible de les modifier. Cependant, si nécessaire, il est possible de remplacer entre les opérations de sauvegarde et de restauration une unité donnée par une unité du même type.  
   
  Un jeu de supports est créé sur le support de sauvegarde en formatant le support au cours d'une opération de sauvegarde. Pour plus d'informations, consultez [Création d'un jeu de supports](#CreatingMediaSet), plus loin dans cette rubrique. Après le formatage, chaque fichier ou bande contient un en-tête de support pour le jeu de supports et est prêt à recevoir le contenu de la sauvegarde. Lorsque l'en-tête est en place, l'opération de sauvegarde se poursuit pour sauvegarder les données spécifiées sur le support de sauvegarde de toutes les unités de sauvegarde spécifiées pour l'opération.  
   
@@ -74,7 +74,7 @@ Dans un support de sauvegarde en miroir, chaque famille de support est mise en m
 ## <a name="the-media-header"></a>En-tête de support  
  Chaque volume de support de sauvegarde (fichier sur disque ou bande) contient un en-tête de support créé par la première opération de sauvegarde qui utilise la bande (ou le disque). Cet en-tête reste intact jusqu'à ce que le support soit reformaté.  
   
- L'en-tête de support contient toutes les informations indispensables à l'identification du support (fichier sur disque ou bande) et son emplacement dans la famille de supports à laquelle il appartient. Les informations indiquent les éléments suivants :  
+ L'en-tête de support contient toutes les informations indispensables à l'identification du support (fichier sur disque ou bande) et son emplacement dans la famille de supports à laquelle il appartient. Les informations indiquent les éléments suivants :  
   
 -   Nom du support.  
   
@@ -88,7 +88,7 @@ Dans un support de sauvegarde en miroir, chaque famille de support est mise en m
   
 -   Numéro d'identification unique de la famille de supports.  
   
--   Numéro de séquence de ce support dans la famille. Pour un fichier sur disque, cette valeur est toujours égale à 1.  
+-   Numéro de séquence de ce support dans la famille. Pour un fichier sur disque, cette valeur est toujours égale à 1.  
   
 -   Si la description du support contient une étiquette de support MTF ou une description du support.  
   
@@ -102,7 +102,7 @@ Dans un support de sauvegarde en miroir, chaque famille de support est mise en m
   
 -   Date et heure de création de l'étiquette.  
   
--   Nombre de miroirs dans le jeu (1 à 4) ; 1 indique une unité non mise en miroir.  
+-   Nombre de miroirs dans le jeu (1 à 4) ; 1 indique une unité non mise en miroir.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] peut traiter des supports formatés par des versions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]antérieures.  
   
@@ -216,7 +216,7 @@ L'ajout, qui est le comportement par défaut de l'instruction BACKUP, peut être
  
  Un support de sauvegarde n'est pas remplacé lorsque l'une des conditions ci-dessous est remplie :  
   
--   Toutes les sauvegardes présentes sur le support ne sont pas encore arrivées à expiration. (Si l'option SKIP est spécifiée, l'expiration n'est pas vérifiée.)  
+-   Toutes les sauvegardes présentes sur le support ne sont pas encore arrivées à expiration. (Si l'option SKIP est spécifiée, l'expiration n'est pas vérifiée.)  
   
      La date d'expiration précise que la sauvegarde expire et qu'elle peut être remplacée par une autre sauvegarde. Vous pouvez préciser la date d'expiration lors de la création d'une sauvegarde. Par défaut, la date d’expiration est déterminée par la définition de l’option **media retention** avec **sp_configure**. Pour plus d'informations, consultez [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
@@ -226,7 +226,7 @@ L'ajout, qui est le comportement par défaut de l'instruction BACKUP, peut être
   
  Cependant, vous pouvez ignorer ces contrôles de façon explicite si vous êtes sûr de vouloir remplacer le support existant, par exemple si vous savez que les sauvegardes sur bande ne vous sont plus utiles.  
   
- Si le support de sauvegarde est protégé par mot de passe Microsoft Windows, Microsoft SQL Server n'écrit pas dessus. Pour remplacer un support protégé par mot de passe, vous devez le réinitialiser.  
+ Si le support de sauvegarde est protégé par mot de passe Microsoft Windows, Microsoft SQL Server n'écrit pas dessus. Pour remplacer un support protégé par mot de passe, vous devez le réinitialiser.  
   
 
   
@@ -239,7 +239,7 @@ L'ajout, qui est le comportement par défaut de l'instruction BACKUP, peut être
   
 -   Supports physiques dans une famille de supports  
   
-     Un numéro de séquence de support indique l'ordre du support physique dans une famille de supports. Le premier numéro est 1 pour le premier support de sauvegarde. Ce support de sauvegarde est référencé par le chiffre 1, le deuxième support (première bande de sauvegarde consécutive) par le chiffre 2 et ainsi de suite. Lorsque la sauvegarde est restaurée, les numéros de séquence des supports garantissent que l'opérateur qui effectue la restauration de la sauvegarde monte le support approprié dans l'ordre approprié.  
+     Un numéro de séquence de support indique l'ordre du support physique dans une famille de supports. Le premier numéro est 1 pour le premier support de sauvegarde. Ce support de sauvegarde est référencé par le chiffre 1, le deuxième support (première bande de sauvegarde consécutive) par le chiffre 2 et ainsi de suite. Lorsque la sauvegarde est restaurée, les numéros de séquence des supports garantissent que l'opérateur qui effectue la restauration de la sauvegarde monte le support approprié dans l'ordre approprié.  
   
 ###  <a name="MultipleDevices"></a> Plusieurs unités  
  Lorsque vous utilisez plusieurs lecteurs de bandes ou fichiers disque, vous devez tenir compte des considérations suivantes :  
@@ -248,7 +248,7 @@ L'ajout, qui est le comportement par défaut de l'instruction BACKUP, peut être
   
      Le support de sauvegarde complet, créé par une opération de sauvegarde, doit être utilisé par toutes les opérations de sauvegarde suivantes. Par exemple, lorsqu'un support de sauvegarde est créé à l'aide de deux unités de sauvegarde sur bande, toutes les opérations de sauvegarde suivantes, impliquant le même support de sauvegarde, devront utiliser deux unités de sauvegarde.  
   
--   Pour la restauration :  
+-   Pour la restauration :  
   
      Pour une restauration à partir d'une sauvegarde de disque et pour une restauration en ligne, vous devez monter simultanément toutes les familles de supports. Pour une restauration hors connexion à partir d'une sauvegarde sur bande, vous pouvez traiter les familles de supports avec moins d'unités de sauvegarde. Chaque famille de supports doit être complètement traitée avant de démarrer le traitement d'une autre famille de supports. Les familles de supports sont toujours traitées en parallèle, sauf si la restauration a lieu sur une seule unité.  
   

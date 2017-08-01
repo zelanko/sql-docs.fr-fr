@@ -15,11 +15,11 @@ caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f61a7661093216f4aae6ebf71b9d7159200e5dbd
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Cibles des Événements étendus SQL Server
@@ -583,7 +583,7 @@ CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
 ### <a name="xml-output-received-for-lockacquired-by-ringbuffer"></a>Sortie XML reçue pour lock_acquired par ring_buffer
 
 
-Le contenu extrait par une instruction SELECT est au format d’une chaîne XML. La chaîne XML stockée par la cible ring_buffer dans nos tests, est présentée ci-après. Toutefois, pour limiter l’affichage XML suivant, tous les éléments d’& #x3c ;événement & #x3e ;, à l’exception de deux éléments ont été supprimés. En outre, au sein de chaque élément &#x3c;event&#x3e;, quelques éléments &#x3c;data&#x3e; superflus ont été supprimés.
+Le contenu extrait par une instruction SELECT est au format d’une chaîne XML. La chaîne XML stockée par la cible ring_buffer dans nos tests, est présentée ci-après. Toutefois, pour limiter l’affichage XML suivant, tous les éléments d’&#x3c ;événement &#x3e ;, à l’exception de deux éléments ont été supprimés. En outre, au sein de chaque élément &#x3c;event&#x3e;, quelques éléments &#x3c;data&#x3e; superflus ont été supprimés.
 
 
 ```xml

@@ -28,15 +28,14 @@ caps.latest.revision: 44
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 640c90e4f58c0dc09a732eb26a03808be2097999
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# S'abonner à des publications
-<a id="subscribe-to-publications" class="xliff"></a>
+# <a name="subscribe-to-publications"></a>S'abonner à des publications
   Un abonnement est une demande de copie de données et d'objets de base de données d'une publication. Il définit la publication qui sera reçue, où et quand elle sera reçue. Lorsque vous planifiez des abonnements, pensez à l'endroit où vous voulez qu'ait lieu le traitement de l'agent. Le type d'abonnement choisi détermine l'emplacement d'exécution de l'agent. Avec un abonnement par envoi de données (push), l'Agent de fusion ou l'Agent de distribution s'exécute sur le serveur de distribution tandis qu'avec un abonnement par extraction de données (pull), les agents s'exécutent sur les Abonnés. Il n'est plus possible de modifier le type d'un abonnement une fois celui-ci créé.  
   
 |Abonnement|Caractéristiques|Cas d'utilisation|  
@@ -44,29 +43,26 @@ ms.lasthandoff: 06/22/2017
 |Abonnement envoyé|Avec un abonnement par envoi de données, le serveur de publication propage les modifications à un Abonné sans que ce dernier en ait fait la demande. Les modifications peuvent être envoyées à des Abonnés à la demande, en continu ou selon un horaire planifié. L'Agent de distribution ou l'Agent de fusion s'exécute sur le serveur de distribution.|Les données sont censées être synchronisées de façon permanente ou à intervalles fréquents et périodiques.<br /><br /> La publication nécessite un transfert en temps réel (ou presque) des données.<br /><br /> L'augmentation de la charge imposée au processeur d'un serveur de distribution n'affecte pas les performances.<br /><br /> Le plus souvent utilisé avec la réplication d'instantané et la réplication transactionnelle.|  
 |Abonnement extrait|Dans le cas d'un abonnement par extraction, l'Abonné demande à recevoir les modifications apportées sur le serveur de publication. Ce type d'abonnement permet à l'utilisateur sur l'Abonné de déterminer le moment où les modifications sont synchronisées. L'Agent de distribution ou l'Agent de fusion s'exécute sur l'Abonné.|Avec ce type d'abonnement, les données sont en général synchronisées à la demande ou selon un horaire planifié plutôt qu'en continu.<br /><br /> La publication compte un grand nombre d'Abonnés et l'exécution de tous les agents sur un seul site ou sur le serveur de distribution entraînerait une consommation excessive des ressources.<br /><br /> Les abonnés sont autonomes, non connectés et/ou mobiles. Ils déterminent à quel moment ils se connectent et synchronisent les modifications.<br /><br /> Le plus souvent utilisé avec la réplication de fusion.|  
   
-## Types d'abonnements de réplication de fusion
-<a id="merge-replication-subscription-types" class="xliff"></a>  
+## <a name="merge-replication-subscription-types"></a>Types d'abonnements de réplication de fusion  
  Tous les types de réplication permettent des abonnements par envoi ou extraction de données. La réplication de fusion fait la distinction entre deux types d'abonnement : les abonnements client et les abonnements serveur. Ces deux types d'abonnement sont utilisables avec les abonnements par envoi ou extraction de données. Les abonnements client sont adaptés à la plupart des Abonnés, tandis que les abonnements serveur sont généralement utilisés pour les Abonnés qui republient des données vers d'autres Abonnés. Le choix de l'abonnement a également une incidence sur la résolution des conflits.  
   
-## Abonnés non-SQL Server
-<a id="non-sql-server-subscribers" class="xliff"></a>  
+## <a name="non-sql-server-subscribers"></a>Abonnés non-SQL Server  
  Oracle et IBM DB2 peuvent s'abonner à des publications transactionnelles et des publications d'instantané à l'aide des abonnements par envoi de données. Pour plus d’informations, consultez [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
-## Création d'abonnements
-<a id="creating-subscriptions" class="xliff"></a>  
- Pour créer un abonnement, fournissez les informations suivantes :  
+## <a name="creating-subscriptions"></a>Création d'abonnements  
+ Pour créer un abonnement, fournissez les informations suivantes :  
   
 -   Nom de la publication.  
   
 -   le nom de l'Abonné et de la base de données d'abonnement ;  
   
--   si l'Agent de distribution ou l'Agent de fusion s'exécute sur le serveur de distribution ou sur l'Abonné ;  
+-   si l'Agent de distribution ou l'Agent de fusion s'exécute sur le serveur de distribution ou sur l'Abonné ;  
   
 -   si l'Agent de distribution ou l'Agent de fusion s'exécute en continu, selon un horaire planifié ou à la demande seulement ;  
   
--   si l'Agent d'instantané doit créer un instantané initial pour l'abonnement et si l'Agent de distribution ou l'Agent de fusion doit appliquer cet instantané sur l'abonné ;  
+-   si l'Agent d'instantané doit créer un instantané initial pour l'abonnement et si l'Agent de distribution ou l'Agent de fusion doit appliquer cet instantané sur l'abonné ;  
   
--   les comptes sous lesquels l'Agent de distribution ou l'Agent de fusion s'exécute ;  
+-   les comptes sous lesquels l'Agent de distribution ou l'Agent de fusion s'exécute ;  
   
 -   Pour la réplication de fusion, le type d'abonnement : serveur ou client.  
   
@@ -97,8 +93,7 @@ ms.lasthandoff: 06/22/2017
   
  [Supprimer un abonnement par extraction](../../relational-databases/replication/delete-a-pull-subscription.md)  
   
-## Voir aussi
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Voir aussi  
  [Sécuriser l’abonné](../../relational-databases/replication/security/secure-the-subscriber.md)   
  [Expiration et désactivation des abonnements](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   
