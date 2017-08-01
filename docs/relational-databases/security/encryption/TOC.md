@@ -15,7 +15,7 @@
 ## [Sauvegarder la clé principale du service](back-up-the-service-master-key.md)  
 ## [Restaurer la clé principale du service](restore-the-service-master-key.md)  
 ## [Créer une clé principale de base de données](create-a-database-master-key.md)  
-## [Sauvegarder une clé principale de base de données](back-up-a-database-master-key.md)  
+## [Sauvegarder une clé primaire de base de données](back-up-a-database-master-key.md)  
 ## [Restaurer une clé principale de base de données](restore-a-database-master-key.md)  
 ## [Créer des clés symétriques identiques sur deux serveurs](create-identical-symmetric-keys-on-two-servers.md)  
 ## [Chiffrer une colonne de données](encrypt-a-column-of-data.md)  

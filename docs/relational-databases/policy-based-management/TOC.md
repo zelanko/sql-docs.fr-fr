@@ -1,7 +1,7 @@
-# [Administrer des serveurs à l'aide de la gestion basée sur des stratégies](administer-servers-by-using-policy-based-management.md)  
+# [Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](administer-servers-by-using-policy-based-management.md)  
 
 # Gestion basée sur des stratégies
-## [Stockage de la gestion basée sur des stratégies](policy-based-management-storage.md)  
+## [Gestion basée sur des stratégies, stockage](policy-based-management-storage.md)  
 ## [Configurer les propriétés générales de la gestion basée sur des stratégies](configure-the-general-properties-of-policy-based-management.md)  
 ## [Configurer des alertes pour informer les administrateurs de stratégie en cas d’échec de stratégie](configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
 ## [Créer une stratégie de gestion basée sur des stratégies](create-a-policy-based-management-policy.md)  

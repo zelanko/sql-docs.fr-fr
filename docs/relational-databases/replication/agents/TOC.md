@@ -4,7 +4,7 @@
 # [Agent de lecture du journal des réplications](replication-log-reader-agent.md)  
 # [Agent de fusion de réplication](replication-merge-agent.md)  
 # [Agent de lecture de la file d’attente de réplication](replication-queue-reader-agent.md)  
-# [Agent d’instantané de réplication](replication-snapshot-agent.md)  
+# [Agent d'instantané de réplication](replication-snapshot-agent.md)  
 # [Administration de l’Agent de réplication](replication-agent-administration.md)  
 ## [Profils de l’Agent de réplication](replication-agent-profiles.md)  
 ## [Utiliser les alertes pour les événements des agents de réplication](use-alerts-for-replication-agent-events.md)  

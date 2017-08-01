@@ -6,7 +6,7 @@
 
 # Domaines de réplication
 ## [Administration de la réplication](./administration/administration-replication.md)
-## [Agents de réplication](./agents/replication-agents.md)
+## [Replication Agents](./agents/replication-agents.md)
 ## [Concepts de développeur](../../relational-databases/replication/concepts/replication-developer-documentation.md)
 ## [Surveillance de la réplication](./monitor/monitoring-replication.md)
 ## [Réplication de bases de données hétérogènes non-SQL](./non-sql/heterogeneous-database-replication.md)
@@ -86,7 +86,7 @@
 ### [Valider des données sur l’abonné](validate-data-at-the-subscriber.md)  
 ## [Création de scripts de réplication](scripting-replication.md)  
 
-# [Informations techniques de références](technical-reference-replication.md)  
+# [Informations techniques de référence](technical-reference-replication.md)  
 ## [Informations de référence sur les propriétés](properties-reference-replication.md)  
 ### [Propriétés du serveur de distribution](distributor-properties.md)  
 #### [Propriétés du serveur de distribution, Général](distributor-properties-general.md)  
