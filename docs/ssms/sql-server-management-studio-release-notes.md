@@ -14,26 +14,25 @@ caps.latest.revision: 51
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
-ms.openlocfilehash: f593303a681e2f52161777fc48f0fb1b479d20d9
+ms.translationtype: HT
+ms.sourcegitcommit: 223d43974e6b63f7375a3d3e000492612fb6856e
+ms.openlocfilehash: 7fb0aa5f5d8b78a4783efdbb4e1f064eb025538a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-management-studio----release-notes"></a>SQL Server Management Studio - Notes de publication
-Bienvenue dans notre version généralement disponible de SQL Server Management Studio !  Cette version de SQL Server Management Studio (SSMS) est une installation autonome indépendante de la version de SQL Server. Nous envisageons de la mettre à jour fréquemment en ajoutant des fonctionnalités, des correctifs et la prise en charge des fonctionnalités les plus récentes dans SQL Server et Azure SQL Database.  
+Bienvenue dans notre version généralement disponible de SQL Server Management Studio !  Cette version de SQL Server Management Studio (SSMS) est une installation autonome indépendante de la version de SQL Server. Nous envisageons de la mettre à jour fréquemment en ajoutant des fonctionnalités, des correctifs et la prise en charge des fonctionnalités les plus récentes dans SQL Server et Azure SQL Database.  
   
-Pour installer la version la plus récente de SQL Server Management Studio, voir [Download SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md).  
+Pour installer la version la plus récente de SQL Server Management Studio, voir [Télécharger SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).  
   
 Les problèmes et limitations constatés dans cette version de SQL Server Management Studio sont les suivants :  
 
-1. **Assistant de restauration de base de données génère un modèle de chemin d’accès Incorrect pour l’emplacement de fichier de base de données de destination** 
-    il s’agit d’un problème connu lorsque SSMS est connecté à un serveur Linux. Même si le chemin d’accès semble incorrect/impair, elle est gérée correctement sur le côté serveur, il n’y a aucun problème fonctionnel.
+1. **L’Assistant Restauration de base de données génère un modèle de chemin d’accès incorrect pour l’emplacement du fichier de base de données de destination.** Il s’agit d’un problème connu lorsque SSMS est connecté à un serveur Linux. Même si le chemin d’accès semble incorrect/étrange, il est géré correctement côté serveur, c’est-à-dire qu’il n’y a aucun problème fonctionnel.
 
-2. **Problèmes de navigateur de fichiers**
-    - Lorsque vous travaillez avec une instance basée sur Windows SQL Server 2017 CTP 2.0, l’interface utilisateur de SSMS Explorateur peut ne pas ouvrir si le serveur possède un lecteur de disquette vide ou un disque dur protégé par Bitlocker installé. 
-    - L’interface utilisateur de l’Explorateur de fichiers ne sont plus prend en charge que les versions de 2017 du serveur SQL avant CTP 2.0.
+2. **Problèmes de l’explorateur de fichiers**
+    - Lorsque vous travaillez avec une instance Windows de SQL Server 2017 CTP 2.0, l’IU de l’explorateur de fichiers de SSMS peut ne pas réussir à s’ouvrir si un lecteur de disquette vide ou un disque fixe protégé par BitLocker est installé sur le serveur. 
+    - L’IU de l’explorateur de fichiers ne prend plus en charge les versions de SQL Server 2017 antérieures à CTP 2.0.
     
 
 
@@ -47,7 +46,7 @@ Les problèmes et limitations constatés dans cette version de SQL Server Manage
     
     Une solution de contournement consiste à utiliser les autres formes d’authentification fournies dans SSMS : authentification Active Directory par mot de passe, authentification Active Directory intégrée ou authentification SQL Server.
 
-5. **SSMS peut se connecter uniquement à des instances de SQL Server Integrated Services 2016 (SSIS 2016).**  
+5. **SSMS 17.x ne peut se connecter qu’à des instances de SQL Server 2017 Integrated Services (SSIS 2017).**  
     Il existe une limitation de compatibilité connue avec SQL Server Integration Services, qui empêche la connexion aux versions précédentes.
     
     Une solution de contournement de ce problème consiste à vous connecter à votre instance SQL Server Integration Services à l’aide de la [version de SSMS correspondant à votre instance SSIS.](../ssms/previous-sql-server-management-studio-releases.md) 

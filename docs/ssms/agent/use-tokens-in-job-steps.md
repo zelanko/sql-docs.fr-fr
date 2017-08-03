@@ -20,11 +20,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bc46faf06a34a41f94ee9eb4fa05c2a9ce3a5cec
+ms.translationtype: HT
+ms.sourcegitcommit: 8ec830912e034436d2de0613c793c08ce961c031
+ms.openlocfilehash: bc10ed9c7b6ea1a240b9274c9880c44fa3e8f3ab
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/25/2017
 
 ---
 # <a name="use-tokens-in-job-steps"></a>Utiliser des jetons dans les étapes d'un travail
@@ -70,8 +70,8 @@ Les tableaux suivants répertorient et décrivent les jetons et les macros pris 
 |**(A-ERR)**|Numéro d’erreur. Si le travail est exécuté par une alerte, la valeur du numéro d'erreur remplace automatiquement ce jeton dans l'étape de travail.|  
 |**(A-SEV)**|Gravité de l'erreur Si le travail est exécuté par une alerte, la valeur de la gravité de l'erreur remplace automatiquement ce jeton dans l'étape de travail.|  
 |**(A-MSG)**|Texte du message. Si le travail est exécuté par une alerte, la valeur du texte du message remplace automatiquement ce jeton dans l'étape de travail.|  
-|**(AGENT_JOB_NAME)**|Nom du travail.|  
-|**(AGENT_STEP_NAME)**|Nom de l'étape.|  
+|**(JOBNAME)**|Nom du travail.|  
+|**(STEPNAME)**|Nom de l'étape.|  
 |**(DATE)**|Date actuelle (au format AAAAMMJJ).|  
 |**(INST)**|Nom de l’instance. Pour une instance par défaut, ce jeton aura le nom de l'instance par défaut : MSSQLSERVER.|  
 |**(JOBID)**|ID de travail.|  

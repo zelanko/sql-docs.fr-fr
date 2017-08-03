@@ -9,7 +9,7 @@ La procédure suivante utilise **sqlcmd** pour se connecter localement à votre 
    ```
 
    > [!TIP]
-   > Vous pouvez omettre le mot de passe sur la ligne de commande pour être invité à l’entrer.
+   > Vous pouvez omettre le mot de passe dans la ligne de commande pour être invité à l’entrer.
 
    > [!TIP]
    > Si vous décidez ultérieurement de vous connecter à distance, spécifiez l’adresse IP ou le nom de l’ordinateur pour le paramètre **-S** et vérifiez que le port 1433 est ouvert sur votre pare-feu.
@@ -19,7 +19,7 @@ La procédure suivante utilise **sqlcmd** pour se connecter localement à votre 
 1. Si un échec de connexion s’affiche, tentez tout d’abord de diagnostiquer le problème à partir du message d’erreur. Examinez ensuite les [recommandations en matière de résolution des problèmes de connexion](../linux/sql-server-linux-troubleshooting-guide.md#connection).
 
 ## <a name="create-and-query-data"></a>Créer et interroger des données
-Les sections suivantes vous guident lors de l’utilisation de **sqlcmd** et Transact-SQL pour créer une base de données, ajouter des données et exécuter une requête simple.
+Les sections suivantes vous guident lors de l’utilisation de **sqlcmd** pour créer une base de données, ajouter des données et exécuter une requête simple.
 
 ### <a name="create-a-new-database"></a>Créer une base de données
 
@@ -75,7 +75,7 @@ Créez ensuite une table, `Inventory`, et insérez deux nouvelles lignes.
 
 Exécutez maintenant une requête pour retourner des données de la table `Inventory`.
 
-1. À partir de l’invite de commandes **sqlcmd**, entrez une requête qui retourne des lignes de la table `Inventory` où la quantité est supérieure à 152 :
+1. Dans l’invite de commandes **sqlcmd**, entrez une requête qui retourne les lignes de la table `Inventory` dont la quantité est supérieure à 152 :
 
    ```sql
    SELECT * FROM Inventory WHERE quantity > 152;
@@ -97,7 +97,7 @@ QUIT
 
 ## <a name="connect-from-windows"></a>Se connecter à partir de Windows
 
-Il est important de noter que les outils SQL Server sur Windows se connectent aux instances de SQL Server sur Linux de la même façon qu’ils se connectent à n’importe quelle instance distante de SQL Server.
+Les outils SQL Server sur Windows se connectent aux instances de SQL Server sous Linux de la même façon qu’à n’importe quelle instance distante de SQL Server.
 
 Si vous avez un ordinateur Windows qui peut se connecter à l’ordinateur Linux, tentez la même procédure dans cette rubrique à partir d’une invite de commandes Windows exécutant **sqlcmd**. Vérifiez simplement que vous utilisez l’adresse IP ou le nom d’ordinateur Linux cible plutôt que localhost et vérifiez que le port TCP 1433 est ouvert. Si vous avez des problèmes de connexion à partir de Windows, lisez les [recommandations en matière de résolution des problèmes de connexion](../linux/sql-server-linux-troubleshooting-guide.md#connection).
 
@@ -109,6 +109,15 @@ Pour d’autres outils qui s’exécutent sur Windows, mais se connectent à SQL
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Si vous débutez avec T-SQL, consultez [Didacticiel : écriture d’instructions Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md) et [Référence Transact-SQL (moteur de base de données)](../t-sql/language-reference.md).
+Pour connaître les autres scénarios d’installation, consultez les ressources suivantes :
 
-Pour découvrir d’autres façons de se connecter à SQL Server et de le gérer, consultez [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) et [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md).
+|||
+|---|---|
+| [Upgrade](../linux/sql-server-linux-setup.md#upgrade) | Apprenez à mettre à niveau une installation existante de SQL Server sous Linux |
+| [Désinstaller](../linux/sql-server-linux-setup.md#uninstall) | Désinstallez SQL Server sous Linux |
+| [Installation sans assistance](../linux/sql-server-linux-setup.md#unattended) | Apprenez à créer un script d’installation sans invites |
+| [Installation hors connexion](../linux/sql-server-linux-setup.md#offline) | Apprenez à télécharger manuellement les packages d’installation hors connexion |
+
+Pour découvrir d’autres façons de se connecter à SQL Server et de le gérer, consultez les pages [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) et [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md).
+
+Pour plus d’informations sur l’écriture de requêtes d’instructions Transact-SQL, consultez la page [Didacticiel : écrire des instructions Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
