@@ -19,11 +19,11 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1d131e8e7aee66186245b0d69acb1b5c10285cf3
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="specify-synchronization-schedules"></a>Spécifier des planifications de synchronisation
@@ -199,127 +199,127 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-push-subscription-to-a-transactional-publication"></a>Pour définir une planification de l'Agent de réplication lorsque vous créez un abonnement par émission de données à une publication transactionnelle  
   
-1.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransSubscription> pour l’abonnement que vous créez. Pour plus d’informations, consultez [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
+1.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransSubscription> pour l'abonnement que vous créez. Pour plus d’informations, consultez [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
   
-2.  Avant d’appeler <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>, définissez un ou plusieurs des champs suivants de la propriété <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> :  
+2.  Avant d'appeler <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>, définissez un ou plusieurs des champs suivants de la propriété <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> :  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> : type de fréquence (tel que quotidien ou hebdomadaire) que vous utilisez pour planifier l’agent.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> – type de fréquence (tel que quotidien ou hebdomadaire) que vous utilisez pour planifier l'agent ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> : jour de la semaine où un agent s’exécute.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> – jour de la semaine où un agent s'exécute ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> : semaine d’un mois donné quand l’agent est planifié pour s’exécuter chaque mois.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> – semaine d'un mois donné lorsque l'agent est planifié pour s'exécuter chaque mois ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> : nombre d’unités de type de fréquence entre deux synchronisations.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> – nombre d'unités de type de fréquence entre deux synchronisations ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> : unité de fréquence quand l’agent s’exécute plusieurs fois par jour.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> – unité de fréquence lorsque l'agent s'exécute plusieurs fois par jour ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> : nombre d’unités de fréquence entre deux exécutions quand l’agent s’exécute plusieurs fois par jour.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> – nombre d'unités de fréquence entre deux exécutions lorsque l'agent s'exécute plusieurs fois par jour ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> : première heure d’un jour donné à laquelle l’exécution de l’agent commence.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> – première heure d'un jour donné à laquelle l'exécution de l'agent commence ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> : heure la plus tardive d’un jour donné à laquelle l’exécution de l’agent commence.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> – heure la plus tardive d'un jour donné à laquelle l'exécution de l'agent commence ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> : premier jour d’application de la planification de l’agent.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> – premier jour d'application de la planification de l'agent ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> : dernier jour d’application de la planification de l’agent.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> – dernier jour d'application de la planification de l'agent.  
   
     > [!NOTE]  
     >  Si vous ne spécifiez pas l'une de ces propriétés, une valeur par défaut est définie.  
   
-3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> pour créer l’abonnement.  
+3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> pour créer l'abonnement.  
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-pull-subscription-to-a-transactional-publication"></a>Pour définir une planification de l'Agent de réplication lorsque vous créez un abonnement par extraction à une publication transactionnelle  
   
-1.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPullSubscription> pour l’abonnement que vous créez. Pour plus d’informations, consultez [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
+1.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPullSubscription> pour l'abonnement que vous créez. Pour plus d’informations, consultez [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
   
-2.  Avant d’appeler <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>, définissez un ou plusieurs des champs suivants de la propriété <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> :  
+2.  Avant d'appeler <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>, définissez un ou plusieurs des champs suivants de la propriété <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> :  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> : type de fréquence (tel que quotidien ou hebdomadaire) que vous utilisez pour planifier l’agent.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> – type de fréquence (tel que quotidien ou hebdomadaire) que vous utilisez pour planifier l'agent ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> : jour de la semaine où un agent s’exécute.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> – jour de la semaine où un agent s'exécute ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> : semaine d’un mois donné quand l’agent est planifié pour s’exécuter chaque mois.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> – semaine d'un mois donné où l'agent est planifié pour s'exécuter chaque mois ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> : nombre d’unités de type de fréquence entre deux synchronisations.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> – nombre d'unités de type de fréquence entre deux synchronisations ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> : unité de fréquence quand l’agent s’exécute plusieurs fois par jour.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> – unité de fréquence lorsque l'agent s'exécute plusieurs fois par jour ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> : nombre d’unités de fréquence entre deux exécutions quand l’agent s’exécute plusieurs fois par jour.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> – nombre d'unités de fréquence entre deux exécutions lorsque l'agent s'exécute plusieurs fois par jour ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> : première heure d’un jour donné à laquelle l’exécution de l’agent commence.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> – première heure d'un jour donné à laquelle l'exécution de l'agent commence ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> : heure la plus tardive d’un jour donné à laquelle l’exécution de l’agent commence.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> – heure la plus tardive d'un jour donné à laquelle l'exécution de l'agent commence ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> : premier jour d’application de la planification de l’agent.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> – premier jour d'application de la planification de l'agent ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> : dernier jour d’application de la planification de l’agent.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> – dernier jour d'application de la planification de l'agent.  
   
     > [!NOTE]  
     >  Si vous ne spécifiez pas l'une de ces propriétés, une valeur par défaut est définie.  
   
-3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A> pour créer l’abonnement.  
+3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A> pour créer l'abonnement.  
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-pull-subscription-to-a-merge-publication"></a>Pour définir une planification de l'Agent de réplication lorsque vous créez un abonnement par extraction à une publication de fusion  
   
-1.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePullSubscription> pour l’abonnement que vous créez. Pour plus d’informations, consultez [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
+1.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePullSubscription> pour l'abonnement que vous créez. Pour plus d’informations, consultez [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
   
-2.  Avant d’appeler <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>, définissez un ou plusieurs des champs suivants de la propriété <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> :  
+2.  Avant d'appeler <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>, définissez un ou plusieurs des champs suivants de la propriété <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> :  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> : type de fréquence (tel que quotidien ou hebdomadaire) que vous utilisez pour planifier l’agent.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> – type de fréquence (tel que quotidien ou hebdomadaire) que vous utilisez pour planifier l'agent ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> : jour de la semaine où un agent s’exécute.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> – jour de la semaine où un agent s'exécute ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> : semaine d’un mois donné quand l’agent est planifié pour s’exécuter chaque mois.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> – semaine d'un mois donné où l'agent est planifié pour s'exécuter chaque mois ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> : nombre d’unités de type de fréquence entre deux synchronisations.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> – nombre d'unités de type de fréquence entre deux synchronisations ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> : unité de fréquence quand l’agent s’exécute plusieurs fois par jour.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> – unité de fréquence lorsque l'agent s'exécute plusieurs fois par jour ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> : nombre d’unités de fréquence entre deux exécutions quand l’agent s’exécute plusieurs fois par jour.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> – nombre d'unités de fréquence entre deux exécutions lorsque l'agent s'exécute plusieurs fois par jour ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> : première heure d’un jour donné à laquelle l’exécution de l’agent commence.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> – première heure d'un jour donné à laquelle l'exécution de l'agent commence ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> : heure la plus tardive d’un jour donné à laquelle l’exécution de l’agent commence.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> – heure la plus tardive d'un jour donné à laquelle l'exécution de l'agent commence ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> : premier jour d’application de la planification de l’agent.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> – premier jour d'application de la planification de l'agent ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> : dernier jour d’application de la planification de l’agent.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> – dernier jour d'application de la planification de l'agent.  
   
     > [!NOTE]  
     >  Si vous ne spécifiez pas l'une de ces propriétés, une valeur par défaut est définie.  
   
-3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A> pour créer l’abonnement.  
+3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A> pour créer l'abonnement.  
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-push-subscription-to-a-merge-publication"></a>Pour définir une planification de l'Agent de réplication lorsque vous créez un abonnement par émission de données à une publication de fusion  
   
-1.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeSubscription> pour l’abonnement que vous créez. Pour plus d’informations, consultez [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
+1.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeSubscription> pour l'abonnement que vous créez. Pour plus d’informations, consultez [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
   
-2.  Avant d’appeler <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>, définissez un ou plusieurs des champs suivants de la propriété <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> :  
+2.  Avant d'appeler <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>, définissez un ou plusieurs des champs suivants de la propriété <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> :  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> : type de fréquence (tel que quotidien ou hebdomadaire) que vous utilisez pour planifier l’agent.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> – type de fréquence (tel que quotidien ou hebdomadaire) que vous utilisez pour planifier l'agent ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> : jour de la semaine où un agent s’exécute.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> – jour de la semaine où un agent s'exécute ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> : semaine d’un mois donné quand l’agent est planifié pour s’exécuter chaque mois.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> – semaine d'un mois donné où l'agent est planifié pour s'exécuter chaque mois ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> : nombre d’unités de type de fréquence entre deux synchronisations.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> – nombre d'unités de type de fréquence entre deux synchronisations ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> : unité de fréquence quand l’agent s’exécute plusieurs fois par jour.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> – unité de fréquence lorsque l'agent s'exécute plusieurs fois par jour ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> : nombre d’unités de fréquence entre deux exécutions quand l’agent s’exécute plusieurs fois par jour.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> – nombre d'unités de fréquence entre deux exécutions lorsque l'agent s'exécute plusieurs fois par jour ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> : première heure d’un jour donné à laquelle l’exécution de l’agent commence.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> – première heure d'un jour donné à laquelle l'exécution de l'agent commence ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> : heure la plus tardive d’un jour donné à laquelle l’exécution de l’agent commence.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> – heure la plus tardive d'un jour donné à laquelle l'exécution de l'agent commence ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> : premier jour d’application de la planification de l’agent.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> – premier jour d'application de la planification de l'agent ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> : dernier jour d’application de la planification de l’agent.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> – dernier jour d'application de la planification de l'agent.  
   
     > [!NOTE]  
     >  Si vous ne spécifiez pas l'une de ces propriétés, une valeur par défaut est définie.  
   
-3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> pour créer l’abonnement.  
+3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> pour créer l'abonnement.  
   
 ###  <a name="PShellExample"></a> Exemple (RMO)  
  Cet exemple crée un abonnement par émission de données à une publication de fusion et spécifie la planification sur laquelle l'abonnement est synchronisé.  

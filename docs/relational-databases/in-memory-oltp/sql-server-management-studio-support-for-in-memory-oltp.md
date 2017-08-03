@@ -14,11 +14,11 @@ caps.latest.revision: 31
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 24436bccfa9fd9c61edff66e630dd439041dd61f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Prise en charge de SQL Server Management Studio pour l'OLTP en mémoire
@@ -128,15 +128,15 @@ ms.lasthandoff: 06/22/2017
             >   
             >  `GO`  
   
-        -   Générez des &scripts.  
+        -   Générez des &amp;scripts.  
   
              Dans l’**Assistant Générer et publier des scripts**, la valeur par défaut de l’option de script **Vérifier l’existence de l’objet** est FALSE. Si la valeur de l’option de script **Vérifier l’existence de l’objet** est TRUE dans l’écran **Définir les options de script** de l’Assistant, le script généré contient « CREATE PROCEDURE <nom_procédure> AS » et « ALTER PROCEDURE <nom_procédure> <définition_procédure> ». Lorsqu'il est exécuté, le script généré retourne une erreur, car ALTER PROCEDURE n'est pas pris en charge sur les procédures stockées compilées en mode natif.  
   
-             Pour modifier le script généré pour chaque procédure stockée compilée en mode natif :  
+             Pour modifier le script généré pour chaque procédure stockée compilée en mode natif :  
   
-            1.  Dans « CREATE PROCEDURE <nom_procédure> AS », remplacez « AS » par « <définition_procédure> ».  
+            1.  Dans « CREATE PROCEDURE <nom_procédure> AS », remplacez « AS » par « <définition_procédure> ».  
   
-            2.  Supprimez « ALTER PROCEDURE <nom_procédure> <définition_procédure> ».  
+            2.  Supprimez « ALTER PROCEDURE <nom_procédure> <définition_procédure> ».  
   
         -   Copie de bases de données. Pour les bases de données contenant des objets optimisés en mémoire, la création de la base de données sur le serveur de destination et le transfert des données ne seront pas exécutés dans une transaction.  
   

@@ -18,11 +18,11 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 44bbfd608ad2511c95a872f07eac657ae7616e6d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="distribution-agent-security"></a>Sécurité de l'Agent de distribution
@@ -100,7 +100,7 @@ Persist Security Info=False;Connection Pooling=True;
 ## <a name="see-also"></a>Voir aussi  
  [Gérer les connexions et les mots de passe dans la réplication](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
  [Modèle de sécurité de l’Agent de réplication](../../relational-databases/replication/security/replication-agent-security-model.md)   
- [Vue d’ensemble des agents de réplication](../../relational-databases/replication/agents/replication-agents-overview.md)   
+ [Présentation des Agents de réplication](../../relational-databases/replication/agents/replication-agents-overview.md)   
  [Bonnes pratiques en matière de sécurité de la réplication](../../relational-databases/replication/security/replication-security-best-practices.md)   
  [S’abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md)  
   

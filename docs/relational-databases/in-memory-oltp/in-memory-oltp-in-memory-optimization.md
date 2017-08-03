@@ -18,11 +18,11 @@ caps.latest.revision: 106
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b377f0c359751a5c970ceef2e1d7fa6bc556e3d7
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP en mémoire (optimisation en mémoire)
@@ -63,7 +63,7 @@ Pour une présentation plus détaillée de l’OLTP en mémoire et un examen des
 |[Conditions requises pour l’utilisation des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)|Décrit les configurations matérielle et logicielle requises et fournit des instructions pour l'utilisation des tables optimisées en mémoire.|  
 |[Exemples de code OLTP en mémoire](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)|Contient des exemples de code qui montrent comment créer et utiliser une table optimisée en mémoire.|  
 |[Tables optimisées en mémoire](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)|Présente les tables optimisées en mémoire.|  
-|[Variables de table optimisée en mémoire](http://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|L'exemple de code illustre comment utiliser une variable de table optimisée en mémoire plutôt qu'une variable de table traditionnelle pour réduire l'utilisation de tempdb.|  
+|[Variables de table mémoire optimisée](http://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|L'exemple de code illustre comment utiliser une variable de table optimisée en mémoire plutôt qu'une variable de table traditionnelle pour réduire l'utilisation de tempdb.|  
 |[Index sur des tables optimisées en mémoire](http://msdn.microsoft.com/library/86805eeb-6972-45d8-8369-16ededc535c7)|Présente les index optimisés en mémoire.|  
 |[Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)|Présente les procédures stockées compilées en mode natif.|  
 |[Gestion de la mémoire pour l’OLTP en mémoire](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)|Comprendre et gérer l'utilisation de la mémoire sur votre système.|  

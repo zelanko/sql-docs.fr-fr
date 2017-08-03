@@ -18,11 +18,11 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5718198b2cbfc99a1658a703199bb943fcd73aeb
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Gérer les partitions d'une publication de fusion avec des filtres paramétrables
@@ -100,7 +100,7 @@ ms.lasthandoff: 06/22/2017
   
 -   La dernière fois qu'un travail d'instantané partitionné a été exécuté.  
   
- Tandis que la deuxième partie de l'instantané bipartite peut être généré à la demande lors de l'initialisation d'un nouvel abonnement, les procédures suivantes permettent de contrôler comment cet instantané est généré et de le prégénérer dans les cas les plus pratiques. Pour plus d’informations, voir [Instantanés des publications de fusion avec des filtres paramétrés](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+ Tandis que la deuxième partie de l'instantané bipartite peut être généré à la demande lors de l'initialisation d'un nouvel abonnement, les procédures suivantes permettent de contrôler comment cet instantané est généré et de le prégénérer dans les cas les plus pratiques. Pour plus d'informations, voir [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
   
 #### <a name="to-view-information-on-existing-partitions"></a>Pour consulter les informations sur les partitions existantes  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 06/22/2017
   
     -   **@host_name** - quand le filtre paramétrable est défini par la valeur retournée par [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md).  
   
-2.  Créez et initialisez l'instantané paramétrable de cette nouvelle partition. Pour plus d'informations, voir [Créer un instantané d’une publication de fusion avec des filtres paramétrés](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+2.  Créez et initialisez l'instantané paramétrable de cette nouvelle partition. Pour plus d'informations, voir [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 #### <a name="to-delete-a-partition"></a>Pour supprimer une partition  
   
@@ -127,7 +127,7 @@ ms.lasthandoff: 06/22/2017
      Le travail d'instantané et les fichiers d'instantané de la partition sont également supprimés.  
   
 ##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
- Pour mieux gérer une publication avec les filtres paramétrables, vous pouvez par programmation créer, énumérer ou supprimer les partitions d'Abonné, en utilisant les objets RMO (Replication Management Objects). Pour plus d'informations sur la création de partitions d'Abonné, consultez [Créer un instantané d'une publication de fusion avec des filtres paramétrés](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). Vous pouvez obtenir les informations suivantes sur les partitions existantes :  
+ Pour mieux gérer une publication avec les filtres paramétrables, vous pouvez par programmation créer, énumérer ou supprimer les partitions d'Abonné, en utilisant les objets RMO (Replication Management Objects). Pour plus d'informations sur la création de partitions d'Abonné, consultez [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). Vous pouvez obtenir les informations suivantes sur les partitions existantes :  
   
 -   la valeur et la fonction de filtrage sur lesquelles la partition est basée ;  
   
@@ -137,29 +137,29 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-view-information-on-existing-partitions"></a>Pour consulter les informations sur les partitions existantes  
   
-1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication>. Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publication, puis affectez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> la connexion <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée à l’étape 1.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publication et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec la valeur <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée au cours de l'étape 1.  
   
-3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l’objet. Si cette méthode retourne **false**, soit les propriétés de la publication ont été définies de manière incorrecte à l'étape 2, soit la publication n'existe pas.  
+3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne **false**, soit les propriétés de la publication ont été définies de manière incorrecte à l'étape 2, soit la publication n'existe pas.  
   
-4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergePartitions%2A>, puis passez le résultat à un tableau d’objets <xref:Microsoft.SqlServer.Replication.MergePartition>.  
+4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergePartitions%2A> et passez le résultat à un tableau d'objets <xref:Microsoft.SqlServer.Replication.MergePartition> .  
   
-5.  Pour chaque objet <xref:Microsoft.SqlServer.Replication.MergePartition> du tableau, récupérez les propriétés dignes d’intérêt.  
+5.  Pour chaque objet <xref:Microsoft.SqlServer.Replication.MergePartition> du tableau, récupérez les propriétés dignes d'intérêt.  
   
 #### <a name="to-delete-existing-partitions"></a>Pour supprimer les partitions existantes  
   
-1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication>. Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publication, puis affectez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> la connexion <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée à l’étape 1.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publication et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec la valeur <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée au cours de l'étape 1.  
   
-3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l’objet. Si cette méthode retourne **false**, soit les propriétés de la publication ont été définies de manière incorrecte à l'étape 2, soit la publication n'existe pas.  
+3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne **false**, soit les propriétés de la publication ont été définies de manière incorrecte à l'étape 2, soit la publication n'existe pas.  
   
-4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergePartitions%2A>, puis passez le résultat à un tableau d’objets <xref:Microsoft.SqlServer.Replication.MergePartition>.  
+4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergePartitions%2A> et passez le résultat à un tableau d'objets <xref:Microsoft.SqlServer.Replication.MergePartition> .  
   
-5.  Pour chaque objet <xref:Microsoft.SqlServer.Replication.MergePartition> du tableau, déterminez si la partition doit être supprimée. Cette décision repose habituellement sur la valeur de la propriété <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterLogin%2A> ou de la propriété <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterHostName%2A>.  
+5.  Pour chaque objet <xref:Microsoft.SqlServer.Replication.MergePartition> du tableau, déterminez si la partition doit être supprimée. Cette décision repose habituellement sur la valeur de la propriété <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterLogin%2A> ou de la propriété <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterHostName%2A> .  
   
-6.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.MergePublication.RemoveMergePartition%2A> de l’objet <xref:Microsoft.SqlServer.Replication.MergePublication> créé à l’étape 2. Passez l’objet <xref:Microsoft.SqlServer.Replication.MergePartition> créé à l’étape 5.  
+6.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.MergePublication.RemoveMergePartition%2A> sur l'objet <xref:Microsoft.SqlServer.Replication.MergePublication> à partir de l'étape 2. Passez l'objet <xref:Microsoft.SqlServer.Replication.MergePartition> créé à l'étape 5.  
   
 7.  Répétez l'étape 6 pour chaque partition supprimée.  
   

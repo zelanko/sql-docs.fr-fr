@@ -16,11 +16,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 4da1f93dcc4c6e75b554a1a6dab8cbeb86096009
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="sql-server-agent-properties-general-page"></a>Propriétés de SQL Server Agent (page Général)
@@ -33,7 +33,7 @@ Affiche l'état actuel du service [!INCLUDE[ssNoVersion](../../includes/ssnovers
 **Redémarrage automatique de SQL Server après un arrêt inattendu**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent redémarre [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] en cas d’arrêt inattendu de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
   
-**Redémarrage automatique de SQL Server Agent après un arrêt inattendu**  
+**Redémarrage automatique de l'Agent SQL Server après un arrêt inattendu**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] redémarre [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent en cas d’arrêt inattendu de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
   
 **Nom du fichier**  
@@ -53,6 +53,6 @@ Tapez le nom d'un opérateur destiné à recevoir la notification envoyée par r
   
 ## <a name="see-also"></a>Voir aussi  
 [Opérateurs](../../ssms/agent/operators.md)  
-[Journal des erreurs de SQL Server Agent](../../ssms/agent/sql-server-agent-error-log.md)  
+[Journal des erreurs de l'Agent SQL Server](../../ssms/agent/sql-server-agent-error-log.md)  
   
 

@@ -20,11 +20,11 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b2ef601ab4c3dca3b524805e9cce7798213deab9
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Mesurer la latence et valider les connexions pour la réplication transactionnelle
@@ -140,46 +140,46 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>Pour publier un jeton de suivi sur une publication transactionnelle  
   
-1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPublication>.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPublication> .  
   
-3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publication, et affectez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> la connexion créée à l’étape 1.  
+3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publication, et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec la connexion créée à l'étape 1.  
   
-4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l’objet. Si cette méthode retourne **false**, soit les propriétés de la publication ont été définies de manière incorrecte à l’étape 3, soit la publication n’existe pas.  
+4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne **false**, soit les propriétés de la publication ont été définies de manière incorrecte à l’étape 3, soit la publication n’existe pas.  
   
-5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A>. Cette méthode insère un jeton de suivi dans le journal des transactions de la publication.  
+5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A> . Cette méthode insère un jeton de suivi dans le journal des transactions de la publication.  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>Pour déterminer la latence et valider les connexions d'une publication transactionnelle  
   
-1.  Créez une connexion au serveur de distribution en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Créez une connexion au serveur de distribution en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor>.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor> .  
   
-3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A> et <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>, et affectez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> la connexion créée à l’étape 1.  
+3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, et <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> , et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec la connexion créée à l'étape 1.  
   
-4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l’objet. Si cette méthode retourne **false**, soit les propriétés de surveillance de la publication ont été définies de manière incorrecte à l'étape 3, soit la publication n'existe pas.  
+4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne **false**, soit les propriétés de surveillance de la publication ont été définies de manière incorrecte à l'étape 3, soit la publication n'existe pas.  
   
-5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A>. Effectuez un cast de l’objet <xref:System.Collections.ArrayList> retourné en un tableau d’objets <xref:Microsoft.SqlServer.Replication.TracerToken>.  
+5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> . Effectuez un cast de l'objet <xref:System.Collections.ArrayList> retourné en un tableau d'objets <xref:Microsoft.SqlServer.Replication.TracerToken> .  
   
-6.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A>. Passez une valeur de <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> pour un jeton de suivi de l’étape 5. Les informations de latence pour le jeton de suivi sélectionné sont ainsi retournées comme objet <xref:System.Data.DataSet>. Si toutes les informations de jeton de suivi sont retournées, la connexion entre le serveur de publication et le serveur de distribution et la connexion entre le serveur de distribution et l'Abonné existent et la topologie de réplication fonctionne.  
+6.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A> . Passez une valeur de <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> pour un jeton de suivi de l'étape 5. Les informations de latence pour le jeton de suivi sélectionné sont ainsi retournées comme objet <xref:System.Data.DataSet> . Si toutes les informations de jeton de suivi sont retournées, la connexion entre le serveur de publication et le serveur de distribution et la connexion entre le serveur de distribution et l'Abonné existent et la topologie de réplication fonctionne.  
   
 #### <a name="to-remove-tracer-tokens"></a>Pour supprimer les jetons de suivi  
   
-1.  Créez une connexion au serveur de distribution en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Créez une connexion au serveur de distribution en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor>.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor> .  
   
-3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A> et <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>, et affectez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> la connexion créée à l’étape 1.  
+3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, et <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> , et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec la connexion créée à l'étape 1.  
   
-4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l’objet. Si cette méthode retourne **false**, soit les propriétés de surveillance de la publication ont été définies de manière incorrecte à l'étape 3, soit la publication n'existe pas.  
+4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne **false**, soit les propriétés de surveillance de la publication ont été définies de manière incorrecte à l'étape 3, soit la publication n'existe pas.  
   
-5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A>. Effectuez un cast de l’objet <xref:System.Collections.ArrayList> retourné en un tableau d’objets <xref:Microsoft.SqlServer.Replication.TracerToken>.  
+5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> . Effectuez un cast de l'objet <xref:System.Collections.ArrayList> retourné en un tableau d'objets <xref:Microsoft.SqlServer.Replication.TracerToken> .  
   
-6.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.PublicationMonitor.CleanUpTracerTokenHistory%2A>. Passez l'une des valeurs suivantes :  
+6.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.PublicationMonitor.CleanUpTracerTokenHistory%2A> . Passez l'une des valeurs suivantes :  
   
-    -   Le <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> pour un jeton de suivi de l’étape 5. Les informations d'un jeton sélectionné sont alors supprimées.  
+    -   <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> pour un jeton de suivi de l'étape 5. Les informations d'un jeton sélectionné sont alors supprimées.  
   
-    -   Un objet <xref:System.DateTime>. Les informations pour tous les jetons plus anciens que les date et heure spécifiées sont alors supprimées.  
+    -   Objet <xref:System.DateTime> . Les informations pour tous les jetons plus anciens que les date et heure spécifiées sont alors supprimées.  
   
   
