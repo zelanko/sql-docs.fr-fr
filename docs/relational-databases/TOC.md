@@ -2,17 +2,17 @@
 # [Articles nouveaux et récemment mis à jour](new-updated-relational-databases.md)
 
 # [Guides SQL Server](sql-server-guides.md)
-## Guide de dépannage et de surveillance des groupes de disponibilité AlwaysOn
+## Guide de dépannage et de surveillance des groupes de disponibilité Always On
 ## [Conception d’index](sql-server-index-design-guide.md)
-## [Architecture de gestion de mémoire](memory-management-architecture-guide.md)
+## [Architecture de gestion de la mémoire](memory-management-architecture-guide.md)
 ### [Lecture de pages](reading-pages.md)  
 ### [Écriture de pages](writing-pages.md)
-## [Architecture des pages et étendues](pages-and-extents-architecture-guide.md)
-## [Optimisation et validation post-migration](post-migration-validation-and-optimization-guide.md)
-## [Architecture de traitement des requêtes](query-processing-architecture-guide.md)
-## [Architecture des threads et tâches](thread-and-task-architecture-guide.md)
+## [Architecture des pages et extensions](pages-and-extents-architecture-guide.md)
+## [Optimisation et validation de la post-migration](post-migration-validation-and-optimization-guide.md)
+## [Architecture du traitement des requêtes](query-processing-architecture-guide.md)
+## [Architecture des threads et des tâches](thread-and-task-architecture-guide.md)
 ## [Gestion et architecture du journal des transactions](sql-server-transaction-log-architecture-and-management-guide.md)
-## Guide de verrouillage des transactions et de contrôle de version de ligne
+## Guide du verrouillage des transactions et du contrôle de version de ligne
 
 # [Sauvegarde et restauration](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
 # [Objet blob](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)

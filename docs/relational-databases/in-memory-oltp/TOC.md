@@ -22,7 +22,7 @@
 # [Fonctions scalaires définies par l’utilisateur pour l’OLTP en mémoire](scalar-user-defined-functions-for-in-memory-oltp.md)  
 # [Index pour les tables optimisées en mémoire](indexes-for-memory-optimized-tables.md)  
 ## [Index de hachage pour les tables à mémoire optimisées](hash-indexes-for-memory-optimized-tables.md)  
-# [Procédures stockées compilées en mode natif](natively-compiled-stored-procedures.md)  
+# [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)  
 ## [Création de procédures stockées compilées en mode natif](creating-natively-compiled-stored-procedures.md)  
 ## [Modification de modules T-SQL compilés en mode natif](altering-natively-compiled-t-sql-modules.md)  
 ## [Blocs Atomic](atomic-blocks-in-native-procedures.md)  

@@ -3,7 +3,7 @@
 # [Configuration des espaces de stockage avec un cache en écriture différée NVDIMM-N](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
 
 # [Traitement des requêtes adaptative](adaptive-query-processing.md)
-# [Le paramétrage automatique](../automatic-tuning/automatic-tuning.md)
+# [Paramétrage automatique](../automatic-tuning/automatic-tuning.md)
 # [Estimation de la cardinalité](cardinality-estimation-sql-server.md)  
 
 # [Surveiller et régler les performances](monitor-and-tune-for-performance.md)  
@@ -27,7 +27,7 @@
 ### [Afficher un plan d'exécution réel](display-an-actual-execution-plan.md)  
 ### [Enregistrer un plan d’exécution au format XML](save-an-execution-plan-in-xml-format.md)  
 ## [Statistiques des requêtes dynamiques](live-query-statistics.md)  
-## [Surveillance des performances à l’aide du magasin de requêtes](monitoring-performance-by-using-the-query-store.md)  
+## [Analyse des performances à l'aide du magasin de requêtes](monitoring-performance-by-using-the-query-store.md)  
 ## [Utilisation du magasin de requêtes avec l’OLTP en mémoire](using-the-query-store-with-in-memory-oltp.md)  
 ## [Bonnes pratiques concernant le magasin de requêtes](best-practice-with-the-query-store.md)  
 ## [Scénarios d’utilisation du magasin de requêtes](query-store-usage-scenarios.md)  

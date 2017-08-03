@@ -1,5 +1,5 @@
-# [Vue d'ensemble](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-# [Confidentialité et PIBR livre blanc sur la configuration requise](microsoft-sql-and-the-gdpr-requirements.md) 
+# [Vue d’ensemble](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+# [Livre blanc sur la confidentialité et les exigences GDPR](microsoft-sql-and-the-gdpr-requirements.md) 
 # [Audit](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)
 # [Authentification-accès](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
 # [Chiffrement](../../relational-databases/security/encryption/sql-server-encryption.md)
