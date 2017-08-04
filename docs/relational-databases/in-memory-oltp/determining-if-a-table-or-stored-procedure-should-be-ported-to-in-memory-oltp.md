@@ -2,7 +2,7 @@
 title: "Déterminer si une procédure stockée ou une table doit être déplacée vers l’OLTP en mémoire | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 03/01/2017
+ms.date: 08/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,11 +18,11 @@ caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a6f70a5be224219a572df858e37ecbfe5f9fde07
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: b18d5078244bf83d8820bf3f03039ac120287f8a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Déterminer si un tableau ou une procédure stockée doit être déplacée vers l'OLTP en mémoire
@@ -48,6 +48,8 @@ ms.lasthandoff: 06/22/2017
 ## <a name="transaction-performance-analysis-reports"></a>Rapports d’analyse des performances de transaction  
  Vous pouvez générer des rapports d’analyse des performances de transaction dans l’ **Explorateur d’objets** en cliquant avec le bouton droit sur la base de données, en sélectionnant **Rapports**, **Rapports standard**, puis **Présentation de l’analyse des performances des transactions**. La base de données doit avoir une charge de travail active ou une exécution récente d’une charge de travail pour pouvoir générer un rapport d'analyse explicite.  
   
+### <a name="tables"></a>Tables
+  
  Le rapport détaillé d'une table comprend trois sections :  
   
 -   Section des statistiques d'analyse  
@@ -57,9 +59,7 @@ ms.lasthandoff: 06/22/2017
     -   Pourcentage du total des accès. Pourcentage des analyses et des recherches sur cette table, par rapport à l'activité de la base de données totale. Plus ce pourcentage est élevé, plus la table est sollicitée par rapport aux autres tables de la base de données.  
   
     -   Statistiques de recherche/Statistiques d'analyse de plage. Cette colonne indique le nombre de recherches de point et d'analyses de plage (analyses d'index et de table) effectuées sur la table pendant le profilage. La moyenne par transaction est une estimation.  
-  
-    -   Gain d'interopérabilité et gain natif. Ces colonnes estiment les avantages au niveau des performances que la recherche de point et l'analyse de plage pourraient offrir si la table était convertie en table mémoire optimisée.  
-  
+    
 -   Section des statistiques de contention  
   
      Cette section comprend un tableau indiquant la contention sur la table de base de données. Pour plus d'informations sur les verrous internes et les verrous de base de données, consultez Architecture du verrouillage Les colonnes sont les suivantes :  
@@ -74,8 +74,10 @@ ms.lasthandoff: 06/22/2017
   
      Cette section comprend un tableau des difficultés rencontrées pour convertir cette table de base de données en une table mémoire optimisée. Plus le taux de difficultés est élevé, plus il est difficile de convertir la table. Pour afficher les détails de la conversion de cette table de base de données, utilisez le Conseiller d'optimisation de la mémoire.  
   
- Les statistiques d'analyse et de contention dans le rapport détaillé de la table sont collectées et agrégées depuis sys.dm_db_index_operational_stats (Transact-SQL).  
-  
+Les statistiques d'analyse et de contention dans le rapport détaillé de la table sont collectées et agrégées depuis sys.dm_db_index_operational_stats (Transact-SQL).  
+
+### <a name="stored-procedures"></a>Procédures stockées
+
  Une procédure stockée avec un rapport élevé temps UC/temps écoulé est un candidat pour la migration. Le rapport affiche toutes les références de table, car les procédures stockées compilées en mode natif ne peuvent référencer que les tables mémoire optimisées, ce qui augmente le coût de migration.  
   
  Le rapport détaillé d'une procédure stockée comprend deux sections :  
@@ -107,7 +109,7 @@ ms.lasthandoff: 06/22/2017
   
  Vous pouvez générer une liste de contrôle de migration dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] à l’aide de la commande **Générer des listes de contrôle de migration OLTP en mémoire** ou de PowerShell.  
   
- **Pour générer une liste de contrôle de migration à l'aide de la commande de l'interface utilisateur**  
+**Pour générer une liste de contrôle de migration à l'aide de la commande de l'interface utilisateur**  
   
 1.  Dans l’ **Explorateur d’objets**, cliquez avec le bouton droit sur une base de données autre que la base de données système, cliquez sur **Tâches**, puis sur **Générer des listes de contrôle de migration OLTP en mémoire**.  
   
@@ -127,7 +129,7 @@ ms.lasthandoff: 06/22/2017
   
  Vous pouvez vérifier l'exactitude des rapports en les comparant aux rapports générés par l'outil Conseiller d'optimisation de la mémoire et l'outil Conseiller de compilation native. Pour plus d'informations, consultez [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) et [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md).  
   
- **Pour générer une liste de contrôle de migration à l'aide de SQL Server PowerShell**  
+**Pour générer une liste de contrôle de migration à l'aide de SQL Server PowerShell**  
   
 1.  Dans l' **Explorateur d'objets**, cliquez sur une base de données, puis sur **Démarrer PowerShell**. Vérifiez que les l’invite suivante apparaît.  
   
@@ -147,7 +149,7 @@ ms.lasthandoff: 06/22/2017
   
     -   Le rapport de liste de contrôle de migration est généré pour toutes les tables et procédures stockées dans la base de données, et se trouve dans l'emplacement spécifié par folder_path.  
   
- **Pour générer une liste de contrôle de migration à l'aide de Windows PowerShell**  
+**Pour générer une liste de contrôle de migration à l'aide de Windows PowerShell**  
   
 1.  Démarrez une session Windows PowerShell avec élévation de privilèges.  
   
@@ -178,3 +180,4 @@ ms.lasthandoff: 06/22/2017
  [Migration vers OLTP en mémoire](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+
