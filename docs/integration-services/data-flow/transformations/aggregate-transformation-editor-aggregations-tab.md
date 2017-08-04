@@ -1,44 +1,49 @@
 ---
-title: "&#201;diteur de transformation d&#39;agr&#233;gation (onglet Agr&#233;gations) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.aggregationtransformation.aggregations.f1"
-helpviewer_keywords: 
-  - "Éditeur de transformation d'agrégation"
+title: "Éditeur de Transformation (onglet agrégations) d’agrégation | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.aggregationtransformation.aggregations.f1
+helpviewer_keywords:
+- Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6e7bf78662f021ae3c6ff776635035feea985b12
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# &#201;diteur de transformation d&#39;agr&#233;gation (onglet Agr&#233;gations)
+# <a name="aggregate-transformation-editor-aggregations-tab"></a>Éditeur de transformation d'agrégation (onglet Agrégations)
   Utilisez l’onglet **Agrégations** de la boîte de dialogue **Éditeur de transformation d’agrégation** pour spécifier les colonnes destinées à l’agrégation et les propriétés de cette agrégation. Vous pouvez appliquer plusieurs agrégations. Ce type de transformation ne génère pas d'erreur de sortie.  
   
 > [!NOTE]  
->  Les options concernant le nombre et l’échelle de clés d’une part et le nombre et l’échelle de clés distinctes d’autre part s’appliquent au niveau du composant quand ces options sont indiquées sous l’onglet **Avancé**, au niveau de la sortie quand elles sont précisées dans l’affichage avancé de l’onglet **Agrégations** ou encore au niveau des colonnes quand elles sont spécifiées dans la liste de colonnes se trouvant dans la partie inférieure de l’onglet **Agrégations**.  
+>  Les options concernant le nombre et l’échelle de clés d’une part et le nombre et l’échelle de clés distinctes d’autre part s’appliquent au niveau du composant quand ces options sont indiquées sous l’onglet **Avancé** , au niveau de la sortie quand elles sont précisées dans l’affichage avancé de l’onglet **Agrégations** ou encore au niveau des colonnes quand elles sont spécifiées dans la liste de colonnes se trouvant dans la partie inférieure de l’onglet **Agrégations** .  
 >   
->  Dans la transformation d’agrégation, **Clés** et **Échelle de clé** font référence au nombre de groupes attendus d’une opération **Group by**. **Nombre de clés distinctes** et **Échelle de nombre des valeurs distinctes** font référence au nombre de valeurs distinctes attendues d’une opération **Comptage de valeurs**.  
+>  Dans la transformation d’agrégation, **Clés** et **Échelle de clé** font référence au nombre de groupes attendus d’une opération **Group by** . **Nombre de clés distinctes** et **Échelle de nombre des valeurs distinctes** font référence au nombre de valeurs distinctes attendues d’une opération **Comptage de valeurs** .  
   
  Pour en savoir plus sur la transformation d’agrégation, consultez [Transformation d’agrégation](../../../integration-services/data-flow/transformations/aggregate-transformation.md).  
   
-## Options  
- **Avancé / Simple**  
+## <a name="options"></a>Options  
+ **Avancé / Simple**  
  Permet d'afficher ou de masquer les options permettant de configurer plusieurs agrégations dans le cas de sorties multiples. Par défaut, les options avancées sont masquées.  
   
  **Nom d'agrégation**  
  Dans l'écran Avancé, permet d'attribuer un nom convivial à l'agrégation.  
   
  **Grouper par colonnes**  
- Dans l’écran Avancé, permet de sélectionner les colonnes afin de regrouper les éléments d’après la liste **Colonnes d’entrée disponibles**, comme décrit ci-dessous.  
+ Dans l’écran Avancé, permet de sélectionner les colonnes afin de regrouper les éléments d’après la liste **Colonnes d’entrée disponibles** , comme décrit ci-dessous.  
   
  **Échelle de clé**  
  Dans l'écran Avancé, permet de spécifier aussi éventuellement le nombre de clés adéquat que l'agrégation peut écrire. Par défaut, la valeur de cette option est **Non spécifié**. Si la valeur des propriétés **Échelle de clé** et **Clés** sont toutes deux définies, c’est celle de la propriété **Clés** qui prévaut.  
@@ -46,14 +51,14 @@ caps.handback.revision: 30
 |Value|Description|  
 |-----------|-----------------|  
 |Non spécifié|La propriété Échelle de clé n'est pas utilisée.|  
-|Faible|L’agrégation peut écrire environ 500 000 clés.|  
-|Moyenne|L'agrégation peut écrire environ 5 000 000 clés.|  
-|Élevée|L'agrégation peut écrire plus de 25 000 000 clés.|  
+|Faible|L’agrégation peut écrire environ 500 000 clés.|  
+|Moyenne|L'agrégation peut écrire environ 5 000 000 clés.|  
+|Élevée|L'agrégation peut écrire plus de 25 000 000 clés.|  
   
  **Clés**  
  Dans l'écran Avancé, permet d'indiquer éventuellement le nombre exact de clés que l'agrégation peut écrire. Si la valeur des propriétés **Échelle de clé** et **Clés** sont toutes deux précisées, celle de la propriété **Clés** prévaut alors.  
   
- **Colonnes d'entrée disponibles**  
+ **Colonnes d’entrée disponibles**  
  Permet de sélectionner les colonnes dans la liste des colonnes d'entrée disponibles en cochant ou décochant les cases du tableau.  
   
  **Colonne d'entrée**  
@@ -78,22 +83,22 @@ caps.handback.revision: 30
  **Indicateurs de comparaison**  
  Si vous sélectionnez **Group by**, permet d’utiliser les cases à cocher afin de contrôler le mode d’évaluation de la comparaison effectuée par la transformation. Pour plus d’informations sur les options de comparaison de chaînes, consultez [Comparaison des données chaînes](../../../integration-services/data-flow/comparing-string-data.md).  
   
- **Échelle de nombre des valeurs distinctes**  
+ **Count Distinct Scale**  
  Permet éventuellement de spécifier le nombre approximatif de valeurs distinctes que l'agrégation peut écrire. Par défaut, la valeur de cette option est **Non spécifié**. Si la valeur des propriétés **CountDistinctScale** et **CountDistinctKeys** sont toutes deux précisées, celle de la propriété **CountDistinctKeys** prévaut alors.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |Non spécifié|La propriété **CountDistinctScale** n’est pas utilisée.|  
-|Faible|L'agrégation peut écrire environ 500 000 valeurs distinctes.|  
-|Moyenne|L’agrégation peut écrire environ 5 000 000 de valeurs distinctes.|  
-|Élevée|L'agrégation peut écrire plus de 25 000 000 valeurs distinctes.|  
+|Faible|L'agrégation peut écrire environ 500 000 valeurs distinctes.|  
+|Moyenne|L’agrégation peut écrire environ 5 000 000 de valeurs distinctes.|  
+|Élevée|L'agrégation peut écrire plus de 25 000 000 valeurs distinctes.|  
   
- **Nombre de clés distinctes**  
+ **Count Distinct Keys**  
  Permet de spécifier éventuellement le nombre exact de valeurs distinctes que l'agrégation peut écrire. Si la valeur des propriétés **CountDistinctScale** et **CountDistinctKeys** sont toutes deux précisées, celle de la propriété **CountDistinctKeys** prévaut alors.  
   
-## Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de transformation d’agrégation &#40;onglet Avancé&#41;](../../../integration-services/data-flow/transformations/aggregate-transformation-editor-advanced-tab.md)   
- [Agréger les valeurs dans un dataset à l'aide de la transformation d'agrégation](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Integration Services Error and Message Reference](../../../integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de Transformation d’agrégation &#40; Onglet Avancé &#41;](../../../integration-services/data-flow/transformations/aggregate-transformation-editor-advanced-tab.md)   
+ [Agréger les valeurs dans un jeu de données à l’aide de la Transformation d’agrégation](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
   

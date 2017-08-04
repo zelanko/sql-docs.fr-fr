@@ -1,31 +1,36 @@
 ---
-title: "&#201;diteur de transformation de la table des caract&#232;res | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.charactermaptransformation.f1"
-helpviewer_keywords: 
-  - "Éditeur de transformation de la table des caractères"
+title: "Éditeur de Transformation de la table de caractères | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.charactermaptransformation.f1
+helpviewer_keywords:
+- Character Map Transformation Editor
 ms.assetid: 3f1dbcf9-9cca-4606-bdcc-7ea6ad48cdf3
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1ddabff7405401657b44a4cbc9205cf6092949d7
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# &#201;diteur de transformation de la table des caract&#232;res
+# <a name="character-map-transformation-editor"></a>Éditeur de transformation de la table des caractères
   Utilisez la boîte de dialogue **Éditeur de transformation de la table des caractères** pour sélectionner les fonctions de chaîne à appliquer aux données de colonne, et indiquer si le mappage est une modification sur place ou s’il est ajouté sous la forme d’une nouvelle colonne.  
   
  Pour en savoir plus sur la transformation de la table des caractères, consultez [Character Map Transformation](../../../integration-services/data-flow/transformations/character-map-transformation.md).  
   
-## Options  
+## <a name="options"></a>Options  
  **Colonnes d'entrée disponibles**  
  Activez les cases à cocher pour sélectionner les colonnes à transformer en utilisant des fonctions de chaîne. Vos sélections figurent dans le tableau ci-dessous.  
   
@@ -60,9 +65,9 @@ caps.handback.revision: 26
  Permet de saisir un alias pour chaque colonne de sortie. La valeur par défaut est **Copie de** suivi du nom de la colonne d'entrée. Toutefois, vous pouvez choisir n'importe quel nom descriptif unique.  
   
  **Configurer la sortie d'erreur**  
- Utilisez la boîte de dialogue [Configurer la sortie d’erreur](../Topic/Configure%20Error%20Output.md) pour définir les options de gestion des erreurs de cette transformation.  
+ Utilisez la boîte de dialogue [Configurer la sortie d’erreur](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) pour définir les options de gestion des erreurs de cette transformation.  
   
-## Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Integration Services Error and Message Reference](../../../integration-services/integration-services-error-and-message-reference.md)  
   
   

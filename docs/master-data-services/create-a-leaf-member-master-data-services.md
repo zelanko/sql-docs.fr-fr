@@ -1,32 +1,37 @@
 ---
-title: "Cr&#233;er un membre feuille (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "membres feuille [Master Data Services], création"
-  - "création de membres feuille [Master Data Services]"
-  - "membres [Master Data Services], création de membres feuille"
+title: "Créer un membre feuille (Master Data Services) | Documents Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- leaf members [Master Data Services], creating
+- creating leaf members [Master Data Services]
+- members [Master Data Services], creating leaf members
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 caps.latest.revision: 14
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3745604313dde3eda55c3d0f5d8f634bf7187440
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Cr&#233;er un membre feuille (Master Data Services)
+# <a name="create-a-leaf-member-master-data-services"></a>Créer un membre feuille (Master Data Services)
   Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], créez un membre feuille lorsque vous souhaitez ajouter des données de référence à votre système. Si vous souhaitez ajouter des données en bloc, utilisez à la place des tables de mise en lots. Pour plus d’informations, consultez [Importer des données à partir de tables &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
   
  Vous pouvez également utiliser [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] pour importer des données.  
   
-## Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Explorateur** .  
@@ -35,7 +40,7 @@ caps.handback.revision: 14
   
      Pour plus d’informations, consultez [Importer des données à partir de tables &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md).  
   
-### Pour créer un membre feuille  
+### <a name="to-create-a-leaf-member"></a>Pour créer un membre feuille  
   
 1.  Dans la page d'accueil de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , dans la liste **Modèle** , sélectionnez un modèle.  
   
@@ -57,8 +62,8 @@ caps.handback.revision: 14
   
 8.  Cliquez sur **OK**.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer un membre consolidé &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)   
- [Membres &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
+ [Les membres &#40; Master Data Services &#41;](../master-data-services/members-master-data-services.md)  
   
   

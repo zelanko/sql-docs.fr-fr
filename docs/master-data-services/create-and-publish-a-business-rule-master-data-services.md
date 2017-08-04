@@ -1,46 +1,51 @@
 ---
-title: "Cr&#233;er et publier une r&#232;gle d&#39;entreprise (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "règles d’entreprise [Master Data Services], création"
-  - "création de règles d'entreprise [Master Data Services]"
+title: "Créer et publier une règle d’entreprise (Master Data Services) | Documents Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- business rules [Master Data Services], creating
+- creating business rules [Master Data Services]
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 caps.latest.revision: 14
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b8ea50a2feb5c35e431422c1786d7731bf97d8fb
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Cr&#233;er et publier une r&#232;gle d&#39;entreprise (Master Data Services)
+# <a name="create-and-publish-a-business-rule-master-data-services"></a>Créer et publier une règle d'entreprise (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez une règle d'entreprise pour garantir l'exactitude de vos données de référence. Après avoir créé une règle, vous devez la publier avant de pouvoir l'appliquer aux données.  
   
-## Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
   
 -   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
-### Pour créer et publier une règle d'entreprise  
+### <a name="to-create-and-publish-a-business-rule"></a>Pour créer et publier une règle d'entreprise  
   
 1.  Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cliquez sur **Administration de système**.  
   
 2.  Dans la barre de menus, pointez sur **Gérer** et cliquez sur **Règles d'entreprise**.  
   
-3.  Dans la page **Règle d’entreprise**, sélectionnez un modèle dans la liste déroulante **Modèle**.  
+3.  Dans la page **Règle d’entreprise** , sélectionnez un modèle dans la liste déroulante **Modèle** .  
   
-4.  Dans la liste déroulante **Entité**, sélectionnez une entité.  
+4.  Dans la liste déroulante **Entité** , sélectionnez une entité.  
   
-5.  Dans la liste déroulante **Types de membres**, sélectionnez un type de membre auquel appliquer la règle d’entreprise.  
+5.  Dans la liste **Types de membres** , sélectionnez un type de membre auquel appliquer la règle d’entreprise.  
   
 6.  Cliquez sur **Ajouter**.  
   
@@ -55,9 +60,9 @@ caps.handback.revision: 14
   
 10. Sous le bloc **If** , cliquez sur le bouton **Ajouter**. Un panneau s’affiche.  
   
-11. Dans la liste déroulante **Attribut**, sélectionnez un attribut.  
+11. Dans la liste déroulante **Attribut** , sélectionnez un attribut.  
   
-12. Dans la liste déroulante **Opérateur**, sélectionnez une condition.  
+12. Dans la liste déroulante **Opérateur** , sélectionnez une condition.  
   
 13. Complétez tous les champs obligatoires.  
   
@@ -70,9 +75,9 @@ caps.handback.revision: 14
   
 16. Sous le bloc **Then** , cliquez sur le bouton **Ajouter** . Un panneau s’affiche.  
   
-17. Dans la liste déroulante **Attribut**, sélectionnez un attribut.  
+17. Dans la liste déroulante **Attribut** , sélectionnez un attribut.  
   
-18. Dans la liste déroulante **Opérateur**, sélectionnez une action.  
+18. Dans la liste déroulante **Opérateur** , sélectionnez une action.  
   
 19. Complétez tous les champs obligatoires.  
   
@@ -82,9 +87,9 @@ caps.handback.revision: 14
   
     1.  Sous le bloc **Else** , cliquez sur le bouton **Ajouter**. Un panneau s’affiche.  
   
-    2.  Dans la liste déroulante **Attribut**, sélectionnez un attribut.  
+    2.  Dans la liste déroulante **Attribut** , sélectionnez un attribut.  
   
-    3.  Dans la liste déroulante **Opérateur**, sélectionnez une action.  
+    3.  Dans la liste déroulante **Opérateur** , sélectionnez une action.  
   
     4.  Complétez tous les champs obligatoires.  
   
@@ -96,7 +101,7 @@ caps.handback.revision: 14
   
 24. Dans la boîte de dialogue de confirmation, cliquez sur **OK**. La valeur de la colonne **État de la règle d’entreprise** est **Active**.  
   
-## Colonnes de la grille  
+## <a name="grid-columns"></a>Colonnes de la grille  
  Pour chaque règle d’entreprise créée, une ligne comportant six colonnes est ajoutée dans la grille. Les colonnes sont décrites ci-après.  
   
 |Nom|Description|  
@@ -108,17 +113,17 @@ caps.handback.revision: 14
 |Exclu|Indique si la règle d’entreprise est exclue.|  
 |Notification|Spécifie l’utilisateur ou le groupe sélectionné auquel envoyer la notification par courrier électronique.|  
   
-## Étapes suivantes  
+## <a name="next-steps"></a>Étapes suivantes  
   
 -   Appliquez des règles d'entreprise aux données en suivant l'une de ces procédures :  
   
     -   [Valider des membres spécifiques par rapport aux règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [Valider une version par rapport aux règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [Valider une Version par rapport aux règles d’entreprise &#40; Master Data Services &#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configurer des règles d’entreprise pour envoyer des notifications &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
- [Modifier le nom d’une règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
- [Ajouter plusieurs conditions à une règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
+ [Modifier un nom de règle d’entreprise &#40; Master Data Services &#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
+ [Ajouter plusieurs Conditions à une règle d’entreprise &#40; Master Data Services &#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
   
   

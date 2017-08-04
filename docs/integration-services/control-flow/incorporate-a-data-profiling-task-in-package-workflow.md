@@ -1,38 +1,43 @@
 ---
-title: "Incorporer une t&#226;che de profilage des donn&#233;es dans le flux de travail du package | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tâche de profilage des données [Integration Services], utilisation de la sortie dans le flux de travail"
+title: "Incorporer une tâche de flux de travail de Package de profilage des données | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ea3c68e0320216c81ce2a47f426112dd4a25f22f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Incorporer une t&#226;che de profilage des donn&#233;es dans le flux de travail du package
+# <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporer une tâche de profilage des données dans le flux de travail du package
   Le profilage des données et le nettoyage des données ne sont pas des candidats pour un processus automatisé à leur stade initial. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], la sortie de la tâche de profilage des données doit habituellement faire l’objet d’une analyse visuelle et d’un jugement personnel pour qu’il soit déterminé si les violations signalées sont significatives ou excessives. Même après avoir reconnu des problèmes de qualité des données, un plan soigneusement pensé doit être appliqué pour déterminer la meilleure approche pour le nettoyage.  
   
  Toutefois, après avoir établi des critères de qualité des données, vous pouvez souhaiter automatiser une analyse et un nettoyage périodiques de la source de données. Considérez les scénarios suivants :  
   
--   **Vérification de la qualité des données avant une charge incrémentielle**. Utilisez la tâche de profilage des données pour calculer le profil de ratio Null de la colonne de nouvelles données prévues pour la colonne CustomerName dans un tableau Customers. Si le pourcentage de valeurs NULL est supérieur à 20 %, envoyez un message électronique qui contient la sortie de profil à l'opérateur et terminez le package. Dans le cas contraire, continuez la charge incrémentielle.  
+-   **Vérification de la qualité des données avant une charge incrémentielle**. Utilisez la tâche de profilage des données pour calculer le profil de ratio Null de la colonne de nouvelles données prévues pour la colonne CustomerName dans un tableau Customers. Si le pourcentage de valeurs NULL est supérieur à 20 %, envoyez un message électronique qui contient la sortie de profil à l'opérateur et terminez le package. Dans le cas contraire, continuez la charge incrémentielle.  
   
--   **Automatisation du nettoyage lorsque les conditions spécifiées sont satisfaites**. Utilisez la tâche de profilage des données pour calculer le profil d'inclusion de valeur de la colonne State (État) par rapport à une table de recherche d'états, et de la colonne ZIP Code/Postal Code (Code postal) par rapport à une table de recherche de codes postaux. Si la puissance d'inclusion des valeurs d'état est inférieure à 80 %, mais que la puissance d'inclusion des valeurs de code postal est supérieure à 99 %, cela indique deux choses. En premier lieu, les données d'état sont erronées. En second lieu, les données de code postal sont correctes. Lancez une tâche de flux de données qui nettoie les données d'état en effectuant une recherche de la valeur d'état correcte à partir de la valeur de code postal actuelle.  
+-   **Automatisation du nettoyage lorsque les conditions spécifiées sont satisfaites**. Utilisez la tâche de profilage des données pour calculer le profil d'inclusion de valeur de la colonne State (État) par rapport à une table de recherche d'états, et de la colonne ZIP Code/Postal Code (Code postal) par rapport à une table de recherche de codes postaux. Si la puissance d'inclusion des valeurs d'état est inférieure à 80 %, mais que la puissance d'inclusion des valeurs de code postal est supérieure à 99 %, cela indique deux choses. En premier lieu, les données d'état sont erronées. En second lieu, les données de code postal sont correctes. Lancez une tâche de flux de données qui nettoie les données d'état en effectuant une recherche de la valeur d'état correcte à partir de la valeur de code postal actuelle.  
   
  Une fois que vous avez un flux de travail dans lequel vous pouvez incorporer la tâche de flux de données, vous devez comprendre les étapes requises pour ajouter cette tâche. La section suivante décrit le processus général d'incorporation de la tâche de flux de données. Les deux sections finales décrivent comment connecter la tâche de flux de données, soit directement à une source de données, soit à des données transformées à partir du flux de données.  
   
-## Définition d'un flux de travail général pour la tâche de flux de données  
+## <a name="defining-a-general-workflow-for-the-data-flow-task"></a>Définition d'un flux de travail général pour la tâche de flux de données  
  La procédure décrite ci-dessous esquisse l'approche générale permettant d'utiliser la sortie de la tâche de profilage des données dans le flux de travail d'un package.  
   
-#### Pour utiliser par programmation la sortie de la tâche de profilage des données dans un package  
+#### <a name="to-use-the-output-of-the-data-profiling-task-programmatically-in-a-package"></a>Pour utiliser par programmation la sortie de la tâche de profilage des données dans un package  
   
 1.  Ajoutez et configurez la tâche de profilage des données dans un package.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 24
   
  Les sections suivantes appliquent ce flux de travail général pour profiler les données qui proviennent directement d'une source de données externe ou qui proviennent transformées de la tâche de flux de données. Ces sections indiquent également comment gérer les conditions préalables d'entrée et de sortie de la tâche de flux de données.  
   
-## Connexion de la tâche de profilage des données directement à une source de données externe  
+## <a name="connecting-the-data-profiling-task-directly-to-an-external-data-source"></a>Connexion de la tâche de profilage des données directement à une source de données externe  
  La tâche de profilage des données peut profiler des données qui proviennent directement d'une source de données.  Pour illustrer cette fonction, l'exemple suivant utilise la tâche de profilage des données pour calculer un profil de ratio Null de colonne sur les colonnes de la table Person.Address dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Ensuite, cet exemple utilise une tâche de script pour extraire les résultats du fichier de sortie et remplir les variables de package qui peuvent être utilisées pour diriger le flux de travail.  
   
 > [!NOTE]  
@@ -71,33 +76,33 @@ caps.handback.revision: 24
   
 -   Configuration des contraintes de précédence qui contrôleront quelles branches situées en aval dans le flux de travail seront exécutées, en fonction des résultats de la tâche de profilage des données.  
   
-### Configurer les gestionnaires de connexions  
+### <a name="configure-the-connection-managers"></a>Configurer les gestionnaires de connexions  
  Pour cet exemple, deux gestionnaires de connexions sont utilisés :  
   
 -   Un gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] qui se connecte à la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
 -   Un gestionnaire de connexions de fichiers qui crée le fichier de sortie qui contiendra les résultats de la tâche de profilage des données.  
   
-##### Pour configurer les gestionnaires de connexions  
+##### <a name="to-configure-the-connection-managers"></a>Pour configurer les gestionnaires de connexions  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], créez un nouveau package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-2.  Ajoutez un gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] au package. Configurez ce gestionnaire de connexions pour qu’il utilise le fournisseur de données .NET pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) et se connecte à une instance disponible de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+2.  Ajoutez un gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] au package. Configurez ce gestionnaire de connexions pour qu’il utilise le fournisseur de données .NET pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) et se connecte à une instance disponible de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-     Par défaut, le gestionnaire de connexions a le nom suivant : \<nom_serveur>.AdventureWorks1.  
+     Par défaut, le Gestionnaire de connexions a le nom suivant : \<nom du serveur >. AdventureWorks1.  
   
 3.  Ajoutez un gestionnaire de connexions de fichiers au package. Configurez ce gestionnaire de connexions pour créer le fichier de sortie pour la tâche de profilage des données.  
   
      Cet exemple utilise le nom de fichier, DataProfile1.xml. Par défaut, le gestionnaire de connexions a le même nom que le fichier.  
   
-### Configurer les variables de package  
+### <a name="configure-the-package-variables"></a>Configurer les variables de package  
  Cet exemple utilise deux variables de package :  
   
 -   La variable ProfileConnectionName transmet le nom du gestionnaire de connexions de fichiers à la tâche de script.  
   
 -   La variable AddressLine2NullRatio transmet au package le ratio de valeurs Null calculé pour cette colonne à partir de la tâche de script.  
   
-##### Pour configurer les variables de package qui contiendront les résultats du profil  
+##### <a name="to-configure-the-package-variables-that-will-hold-profile-results"></a>Pour configurer les variables de package qui contiendront les résultats du profil  
   
 -   Dans la fenêtre **Variables** , ajoutez et configurez les deux variables de package suivantes :  
   
@@ -105,7 +110,7 @@ caps.handback.revision: 24
   
     -   Entrez le nom **AddressLine2NullRatio**pour l’autre variable et définissez le type de cette variable en spécifiant **Double**.  
   
-### Configurer la tâche de profilage des données  
+### <a name="configure-the-data-profiling-task"></a>Configurer la tâche de profilage des données  
  La tâche de profilage des données doit être configurée de la façon suivante :  
   
 -   Pour utiliser les données que le gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] fournit comme entrée.  
@@ -114,7 +119,7 @@ caps.handback.revision: 24
   
 -   Pour enregistrer les résultats du profil dans le fichier associé au gestionnaire de connexions de fichiers.  
   
-##### Pour configurer la tâche de profilage des données  
+##### <a name="to-configure-the-data-profiling-task"></a>Pour configurer la tâche de profilage des données  
   
 1.  Ajoutez une tâche de profilage des données au flux de contrôle.  
   
@@ -128,10 +133,10 @@ caps.handback.revision: 24
   
 6.  Fermez l'Éditeur de tâche de profilage de données.  
   
-### Configurer la tâche de script  
+### <a name="configure-the-script-task"></a>Configurer la tâche de script  
  La tâche de script doit être configurée pour extraire les résultats du fichier de sortie et remplir les variables de package configurées précédemment.  
   
-##### Pour configurer la tâche de script  
+##### <a name="to-configure-the-script-task"></a>Pour configurer la tâche de script  
   
 1.  Ajoutez une tâche de script au flux de contrôle.  
   
@@ -262,7 +267,7 @@ caps.handback.revision: 24
   
 8.  Fermez l'environnement de développement de script, puis l'éditeur de tâche de script.  
   
-#### Code alternatif – Lecture de la sortie du profil à partir d'une variable  
+#### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>Code alternatif – Lecture de la sortie du profil à partir d'une variable  
  La procédure précédente montre comment charger la sortie de la tâche de profilage des données à partir d'un fichier. Toutefois, une méthode alternative consiste à charger cette sortie à partir d'une variable de package. Pour charger la sortie à partir d'une variable, vous devez apporter les modifications suivantes dans l'exemple de code :  
   
 -   Appelez la méthode **LoadXml** de la classe **XmlDocument** à la place de la méthode **Load** .  
@@ -285,16 +290,16 @@ caps.handback.revision: 24
     profileOutput.LoadXml(outputString);  
     ```  
   
-### Configurer les contraintes de précédence  
+### <a name="configure-the-precedence-constraints"></a>Configurer les contraintes de précédence  
  Il convient de configurer les contraintes de précédence pour contrôler quelles branches situées en aval dans le flux de travail seront exécutées, en fonction des résultats de la tâche de profilage des données.  
   
-##### Pour configurer les contraintes de précédence  
+##### <a name="to-configure-the-precedence-constraints"></a>Pour configurer les contraintes de précédence  
   
 -   Dans les contraintes de précédence qui connectent la tâche de script aux branches situées en aval dans le flux de travail, écrivez des expressions qui utilisent les valeurs des variables pour diriger le flux de travail.  
   
      Par exemple, vous pouvez définir l' **Opération d'évaluation** de la contrainte de précédence en spécifiant **Expression et contrainte**. Ensuite, vous pouvez utiliser `@AddressLine2NullRatio < .90` comme valeur de l'expression. En conséquence, le flux de travail suit le chemin d'accès sélectionné lorsque les tâches précédentes réussissent et lorsque le pourcentage de valeurs NULL dans la colonne sélectionnée est inférieur à 90 %.  
   
-## Connexion de la tâche de profilage des données aux données transformées à partir du flux de données  
+## <a name="connecting-the-data-profiling-task-to-transformed-data-from-the-data-flow"></a>Connexion de la tâche de profilage des données aux données transformées à partir du flux de données  
  Au lieu de profiler directement des données à partir d'une source de données, vous pouvez profiler des données qui ont déjà été chargées et transformées dans le flux de données. Toutefois, la tâche de profilage des données fonctionne uniquement par rapport à des données persistantes et non pas par rapport à des données en mémoire. Par conséquent, vous devez en premier lieu utiliser un composant de destination pour enregistrer les données transformées dans une table intermédiaire.  
   
 > [!NOTE]  
@@ -310,7 +315,7 @@ caps.handback.revision: 24
   
  La procédure décrite ci-dessous fournit l'approche générale de l'utilisation de la tâche de profilage des données pour profiler des données qui ont été transformées par le flux de données. Un grand nombre de ces étapes sont semblables à celles décrites précédemment pour le profilage de données qui proviennent directement d'une source de données externe. Vous pouvez réexaminer ces étapes précédentes pour obtenir plus d'informations sur la façon de configurer les différents composants.  
   
-#### Pour utiliser la tâche de profilage des données dans le flux de données  
+#### <a name="to-use-the-data-profiling-task-in-the-data-flow"></a>Pour utiliser la tâche de profilage des données dans le flux de données  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], créez un package.  
   
@@ -326,7 +331,7 @@ caps.handback.revision: 24
   
 7.  Dans les contraintes de précédence qui connectent la tâche de script aux branches situées en aval dans le flux de travail, écrivez des expressions qui utilisent les valeurs des variables pour diriger le flux de travail.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configuration de la tâche de profilage des données](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)   
  [Visionneuse du profil des données](../../integration-services/control-flow/data-profile-viewer.md)  
   

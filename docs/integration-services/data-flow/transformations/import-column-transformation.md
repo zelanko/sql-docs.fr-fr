@@ -1,32 +1,37 @@
 ---
-title: "Transformation d&#39;importation de colonne | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.importcolumntrans.f1"
-helpviewer_keywords: 
-  - "transformation d'importation de colonne [Integration Services]"
-  - "colonnes [Integration Services], importation"
-  - "importation de données, packages SSIS"
-  - "insertion de données"
+title: "Transformation de colonne d’importation | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.importcolumntrans.f1
+helpviewer_keywords:
+- Import Column transformation [Integration Services]
+- columns [Integration Services], importing
+- importing data, SSIS packages
+- inserting data
 ms.assetid: ac3b74c1-ef54-4297-8062-1734324fffcc
 caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 13d509e0a064b7f8e831e41825496e745d88f831
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transformation d&#39;importation de colonne
+# <a name="import-column-transformation"></a>Transformation d'importation de colonne
   La transformation d'importation de colonne lit des données dans des fichiers puis les ajoute à des colonnes dans un flux de données. Grâce à cette transformation, un package peut ajouter à un flux de données du texte et des images stockés dans des fichiers distincts. Par exemple, un flux de données qui charge des données dans une table stockant des informations sur des produits peut inclure la transformation d'importation de colonne pour importer depuis des fichiers les commentaires des clients sur chaque produit, puis ajouter ces commentaires au flux de données.  
   
- Vous pouvez configurer la transformation d'importation de colonne comme suit :  
+ Vous pouvez configurer la transformation d'importation de colonne comme suit :  
   
 -   Spécifiez les colonnes auxquelles la transformation ajoute des données.  
   
@@ -39,19 +44,19 @@ caps.handback.revision: 44
   
  Cette transformation a une entrée, une sortie et une sortie d'erreur.  
   
-## Configuration de la transformation d’importation de colonne  
+## <a name="configuration-of-the-import-column-transformation"></a>Configuration de la transformation d’importation de colonne  
  Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
   
- La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
+ La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
   
--   [Propriétés communes](../Topic/Common%20Properties.md)  
+-   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriétés personnalisées des transformations](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## Tâches associées  
+## <a name="related-tasks"></a>Tâches associées  
  Pour plus d’informations sur la définition des propriétés de ce composant, consultez [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Transformation d'exportation de colonne](../../../integration-services/data-flow/transformations/export-column-transformation.md)   
  [Flux de données](../../../integration-services/data-flow/data-flow.md)   
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

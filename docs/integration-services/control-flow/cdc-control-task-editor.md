@@ -1,24 +1,29 @@
 ---
-title: "&#201;diteur de t&#226;che de contr&#244;le CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.cdccontroltask.config.f1"
+title: "Éditeur de tâche de contrôle CDC | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 4f09d040-9ec8-4aaa-b684-f632d571f0a8
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9bcf6e5d0186e4b74c4ea8c3719193d1610c9bba
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# &#201;diteur de t&#226;che de contr&#244;le CDC
+# <a name="cdc-control-task-editor"></a>Éditeur de tâche de contrôle CDC
   Utilisez la boîte de dialogue **Éditeur de tâche de contrôle CDC** pour configurer la tâche de contrôle CDC. La configuration de la tâche de contrôle CDC inclut la définition d'une connexion à la base de données CDC, l'opération de la tâche CDC et des informations de gestion d'état.  
   
  Pour en savoir plus sur la tâche de contrôle CDC, consultez [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).  
@@ -27,9 +32,9 @@ caps.handback.revision: 10
   
 1.  Dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], ouvrez le package [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] doté de la tâche de contrôle CDC.  
   
-2.  Sous l’onglet **Flux de contrôle**, double-cliquez sur la tâche de contrôle CDC.  
+2.  Sous l’onglet **Flux de contrôle** , double-cliquez sur la tâche de contrôle CDC.  
   
-## Options  
+## <a name="options"></a>Options  
  **Gestionnaire de connexions ADO.NET de base de données CDC SQL Server**  
  Sélectionnez un gestionnaire de connexions existant dans la liste ou cliquez sur **Nouveau** pour créer une connexion. La connexion doit être établie avec une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activée pour la capture de données modifiées et dans laquelle la table de modifications sélectionnée est localisée.  
   
@@ -38,23 +43,23 @@ caps.handback.revision: 10
   
 -   **Marquer le début de la charge initiale**: cette opération est utilisée en exécutant une charge initiale d'une base de données active sans instantané. Elle est invoquée au début d'un package de chargement initial pour enregistrer le numéro LSN actuel dans la base de données source avant que le package de chargement initial commence à lire les tables sources. Cela requiert une connexion à la base de données source.  
   
-     Si vous sélectionnez **Marquer le début de la charge initiale** quand vous travaillez sur la capture de données modifiées [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (autrement dit, hors d’Oracle) l’utilisateur spécifié dans le gestionnaire de connexions doit être **db_owner** ou **sysadmin**.  
+     Si vous sélectionnez **Marquer le début de la charge initiale** quand vous travaillez sur la capture de données modifiées [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (autrement dit, hors d’Oracle) l’utilisateur spécifié dans le gestionnaire de connexions doit être  **db_owner** ou **sysadmin**.  
   
 -   **Marquer la fin de la charge initiale**: cette opération est utilisée en exécutant une charge initiale d'une base de données active sans instantané. Elle est invoquée à la fin d'un package de chargement initial pour enregistrer le numéro LSN actuel dans la base de données source une fois que le package de chargement initial a fini de lire les tables sources. Ce numéro LSN est déterminé en enregistrant l'heure à laquelle cette opération s'est produite, puis en interrogeant la table de mappage `cdc.lsn_time_`dans la base de données CDC afin de rechercher une modification survenue après cette heure.  
   
-     Si vous sélectionnez **Marquer la fin de la charge initiale** quand vous travaillez sur la capture de données modifiées [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (autrement dit, hors d’Oracle) l’utilisateur spécifié dans le gestionnaire de connexions doit être **db_owner** ou **sysadmin**.  
+     Si vous sélectionnez **Marquer la fin de la charge initiale** quand vous travaillez sur la capture de données modifiées [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (autrement dit, hors d’Oracle) l’utilisateur spécifié dans le gestionnaire de connexions doit être  **db_owner** ou **sysadmin**.  
   
 -   **Marquer le début CDC**: cette opération est utilisée lorsque la charge initiale est effectuée à partir d'un fichier de base de données d'instantanés ou d'une base de données d'arrêt inactive. Elle est appelée à n'importe quel stade du package de charge initiale. L'opération accepte un paramètre qui peut être un numéro LSN d'instantané, un nom de base de données d'instantanés (de laquelle le numéro LSN d'instantané dérive automatiquement) ou qui peut être laissé vide, auquel cas le numéro LSN de la base de données actuelle est utilisé comme dernier numéro LSN pour le package de traitement des modifications.  
   
      Cette opération est utilisée à la place des opérations Marquer le début/la fin de la charge initiale.  
   
-     Si vous sélectionnez **Marquer le début CDC** quand vous travaillez sur la capture de données modifiées [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (autrement dit, hors d’Oracle) l’utilisateur spécifié dans le gestionnaire de connexions doit être **db_owner** ou **sysadmin**.  
+     Si vous sélectionnez **Marquer le début CDC** quand vous travaillez sur la capture de données modifiées [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (autrement dit, hors d’Oracle) l’utilisateur spécifié dans le gestionnaire de connexions doit être  **db_owner** ou **sysadmin**.  
   
 -   **Get processing range**: cette opération est utilisée dans un package de traitement des modifications avant d'appeler le flux de données qui utilise le flux de données source CDC. Elle établit une plage de numéros LSN que le flux de données de la source CDC lit lorsqu'il est appelé. La plage est stockée dans une variable de package SSIS qui est utilisée par la source CDC pendant le traitement du flux de données.  
   
      Pour plus d’informations sur les états CDC stockés, consultez [Définir une variable d’état](../../integration-services/data-flow/define-a-state-variable.md).  
   
--   **Marquer la plage traitée** : cette opération est utilisée dans un package de traitement des modifications à la fin d’une exécution CDC (après que le flux de données CDC s’est terminé correctement) pour inscrire le dernier numéro LSN qui était complètement traité dans l’exécution CDC. Lors de la prochaine exécution de `GetProcessingRange` , cette position détermine le début de la prochaine plage de traitement.  
+-   **Marquer la plage traitée**: cette opération est utilisée dans un package de traitement des modifications à la fin d’une exécution CDC (après que le flux de données CDC s’est terminé correctement) pour inscrire le dernier numéro LSN qui était complètement traité dans l’exécution CDC. Lors de la prochaine exécution de `GetProcessingRange` , cette position détermine le début de la prochaine plage de traitement.  
   
 -   **Réinitialiser l'état CDC**: cette opération est utilisée pour réinitialiser l'état de capture de données modifiées (CDC) permanent associé au contexte CDC actuel. Une fois cette opération effectuée, le numéro LSN maximal actuel de la table d’horodatage des LSN `sys.fn_cdc_get_max_lsn` devient le début de la plage de traitement suivante. Cette opération requiert une connexion à la base de données source.  
   
@@ -65,7 +70,7 @@ caps.handback.revision: 10
   
  Pour plus d’informations sur la définition de la variable d’état, consultez [Définir une variable d’état](../../integration-services/data-flow/define-a-state-variable.md).  
   
- **Numéro séquentiel dans le journal (LSN) SQL Server pour démarrer le nom CDC/instantané :**  
+ **Numéro séquentiel dans le journal (LSN) SQL Server pour démarrer le nom CDC/instantané :**  
  Entrez le numéro LSN de la base de données source ou de la base de données d'instantanés à partir de laquelle la charge initiale est effectuée pour déterminer le début de la capture de données modifiées. Le numéro est disponible uniquement si **Opération de contrôle CDC** est défini sur **Marquer le début CDC**.  
   
  Pour plus d'informations sur ces opérations, consultez [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).  
@@ -88,7 +93,7 @@ caps.handback.revision: 10
  **Nom d'état**  
  Entrez le nom à associer à l'état CDC persistant. La charge complète et les packages CDC qui fonctionnent avec le même contexte CDC auront un nom d'état commun. Ce nom est utilisé pour surveiller la ligne d'état dans la table d'état.  
   
-## Voir aussi  
- [Propriétés personnalisées de la tâche de contrôle de capture de données modifiées](../../integration-services/control-flow/cdc-control-task-custom-properties.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Propriétés personnalisées de tâche de contrôle de capture de données modifiées](../../integration-services/control-flow/cdc-control-task-custom-properties.md)  
   
   

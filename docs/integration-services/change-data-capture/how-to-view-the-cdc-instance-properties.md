@@ -1,25 +1,30 @@
 ---
-title: "Proc&#233;dure : afficher les propri&#233;t&#233;s d&#39;une instance de capture de donn&#233;es modifi&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Comment afficher les propriétés d’Instance de capture de données modifiées | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
 caps.latest.revision: 5
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4c23f7aa902cedb22cc5df69c8169fea336513e5
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Proc&#233;dure : afficher les propri&#233;t&#233;s d&#39;une instance de capture de donn&#233;es modifi&#233;es
+# <a name="how-to-view-the-cdc-instance-properties"></a>Procédure : afficher les propriétés d'une instance de capture de données modifiées
   Cette procédure décrit comment utiliser la console du concepteur CDC pour afficher des informations sur les instances que vous créez afin d'aider à gérer le fonctionnement des instances.  
   
-### Pour afficher des informations sur une instance spécifique  
+### <a name="to-view-information-about-a-specific-instance"></a>Pour afficher des informations sur une instance spécifique  
   
 1.  Dans le menu **Démarrer** , sélectionnez **Console du concepteur de capture de données modifiées**.  
   

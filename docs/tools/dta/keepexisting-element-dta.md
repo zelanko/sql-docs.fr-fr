@@ -1,29 +1,34 @@
 ---
-title: "KeepExisting, &#233;l&#233;ment (Assistant Param&#233;trage de base de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "KeepExisting (élément)"
+title: "Keepexisting, élément (DTA) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- XML
+helpviewer_keywords:
+- KeepExisting element
 ms.assetid: e67aae61-d06d-4a03-85ba-6516c3502dce
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b67140ed0c525636e3229852521e21d0e0078c5a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# KeepExisting, &#233;l&#233;ment (Assistant Param&#233;trage de base de donn&#233;es)
+# <a name="keepexisting-element-dta"></a>KeepExisting, élément (Assistant Paramétrage de base de données)
   Spécifie les structures PDS (index, vues indexées ou partitions) que l'Assistant Paramétrage du moteur de base de données doit conserver lors de la génération de sa recommandation.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 13
       <KeepExisting>...</KeepExisting>  
 ```  
   
-## Caractéristiques de l'élément  
+## <a name="element-characteristics"></a>Caractéristiques de l'élément  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
@@ -42,17 +47,17 @@ caps.handback.revision: 13
 |**Valeur par défaut**|Aucun.|  
 |**Occurrence**|Facultatif. Ne peut être utilisé qu'une seule fois pour chaque élément **TuningOptions** .|  
   
-## Relations entre les éléments  
+## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[TuningOptions, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**Élément parent**|[Tuningoptions, élément &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**Éléments enfants**|Aucun.|  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  Pour obtenir un exemple d’utilisation de cet élément, consultez [Exemple de fichier d’entrée XML simple &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/simple-xml-input-file-sample-dta.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

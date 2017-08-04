@@ -1,29 +1,34 @@
 ---
-title: "Cr&#233;er un attribut de texte (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "attributs [Master Data Services], création d’attributs de texte"
-  - "création d'attributs de texte [Master Data Services]"
+title: "Créer un attribut de texte (Master Data Services) | Documents Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attributes [Master Data Services], creating text attributes
+- creating text attributes [Master Data Services]
 ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cb8300268810dd6389c6744b126da6f7ff460ffa
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Cr&#233;er un attribut de texte (Master Data Services)
+# <a name="create-a-text-attribute-master-data-services"></a>Créer un attribut de texte (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez un attribut de texte lorsque vous souhaitez que les utilisateurs entrent une chaîne de caractères comme valeur d'attribut.  
   
-## Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -32,12 +37,12 @@ caps.handback.revision: 8
   
 -   Une entité doit exister pour créer l'attribut qui lui est destiné. Pour plus d’informations, consultez [Créer une entité &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).  
   
-## Informations sur les attributs  
+## <a name="attribute-information"></a>Informations sur les attributs  
  Pour chaque attribut créé, une ligne comportant sept colonnes est ajoutée à la grille. Le tableau suivant décrit ces colonnes.  
   
 |Colonne|Description|  
 |------------|-----------------|  
-|État|État de l’attribut.<br /><br /> Quand vous cliquez sur Enregistrer, l’image ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status") indique que l’attribut est en cours de mise à jour.<br /><br /> En cas d’erreur lors de la création ou de la modification d’un attribut, l’image ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status") s’affiche.<br /><br /> Dans le cas contraire, l’état présente la valeur OK et l’image ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status") s’affiche.|  
+|État|État de l’attribut.<br /><br /> Lorsque vous cliquez sur Enregistrer, la ![icône de mise à jour d’état](../master-data-services/media/mds-statusicon-updating.png "icône de mise à jour d’état") image s’affiche, indiquant que l’attribut est mise à jour.<br /><br /> S’il existe des erreurs lors de la création ou modification d’un attribut, le ![icône de statut d’erreur](../master-data-services/media/mds-statusicon-error.png "icône de statut d’erreur") image s’affiche.<br /><br /> Dans le cas contraire, l’état est OK et la ![icône pour l’état OK](../master-data-services/media/mds-statusicon-ok.png "icône pour l’état OK") image s’affiche.|  
 |Nom|Nom de l'attribut.|  
 |Nom complet|Nom de l’attribut.|  
 |Description|Description de l’attribut.|  
@@ -55,7 +60,7 @@ caps.handback.revision: 8
   
 -   **Le**: date et heure de la dernière mise à jour de l’attribut.  
   
-### Pour créer un attribut de texte  
+### <a name="to-create-a-text-attribute"></a>Pour créer un attribut de texte  
   
 1.  Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cliquez sur **Administration de système**.  
   
@@ -79,7 +84,7 @@ caps.handback.revision: 8
   
 8.  Dans la zone **Largeur d'affichage en pixels** , tapez la largeur de la colonne d'attribut à afficher dans la grille **Explorateur** .  
   
-9. Dans la liste **Type d’attribut**, sélectionnez **Forme libre**.  
+9. Dans la liste **Type d’attribut** , sélectionnez **Forme libre**.  
   
 10. Dans la liste **Type de données** , sélectionnez **Texte**.  
   
@@ -89,10 +94,10 @@ caps.handback.revision: 8
   
 13. Cliquez sur **Enregistrer**.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Attributs &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
- [Modifier le nom et le type de données d’un attribut&#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [Créer un attribut basé sur un domaine &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [Modifier un nom d’attribut et Type de données &#40; Master Data Services &#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [Créer un attribut basé sur un domaine &#40; Master Data Services &#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [Créer un attribut de fichier &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

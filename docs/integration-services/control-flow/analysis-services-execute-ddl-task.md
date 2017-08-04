@@ -1,30 +1,35 @@
 ---
-title: "T&#226;che DDL d&#39;ex&#233;cution de SQL Server Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.asexecuteddltask.f1"
-helpviewer_keywords: 
-  - "tâche DDL d'exécution SQL Server Analysis Services"
-  - "DDL"
+title: "Analysis Services tâche DDL d’exécution | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.asexecuteddltask.f1
+helpviewer_keywords:
+- Analysis Services Execute DDL task
+- DDL
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4db091d5934df75f6dd90295e8501a562aa0a0ef
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# T&#226;che DDL d&#39;ex&#233;cution de SQL Server Analysis Services
+# <a name="analysis-services-execute-ddl-task"></a>Tâche DDL d'exécution de SQL Server Analysis Services
   La tâche DDL d'exécution de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exécute des instructions DDL (Data Definition Language) qui peuvent créer, supprimer ou modifier des modèles d'exploration de données et des objets multidimensionnels tels que des cubes et des dimensions. Par exemple, une instruction DDL peut créer une partition dans le cube **Adventure Works** ou supprimer une dimension dans [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)], l’exemple de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclus dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- La tâche DDL d'exécution de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise un gestionnaire de connexions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour se connecter à une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou à un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour plus d'informations, consultez [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
+ La tâche DDL d'exécution de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise un gestionnaire de connexions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour se connecter à une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou à un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Pour plus d'informations, consultez [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend une série de tâches qui effectuent des opérations de Business Intelligence, telles que le traitement des objets analytiques et l’exécution des requêtes de prédiction d’exploration de données.  
   
@@ -34,8 +39,8 @@ caps.handback.revision: 48
   
 -   [Tâche de requête d'exploration de données](../../integration-services/control-flow/data-mining-query-task.md)  
   
-## Instructions DDL  
- Les instructions DDL sont représentées en tant qu'instructions en langage ASSL ([!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language) et insérées dans une commande XMLA (XML for Analysis).  
+## <a name="ddl-statements"></a>Instructions DDL  
+ Les instructions DDL sont représentées en tant qu'instructions en langage ASSL ( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language) et insérées dans une commande XMLA (XML for Analysis).  
   
 -   Le langage ASSL permet de définir et de décrire une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ainsi que les bases de données et les objets de base de données qu’elle contient. Pour plus d’informations, consultez [Référence Analysis Services Scripting Language &#40;ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
   
@@ -45,10 +50,10 @@ caps.handback.revision: 48
   
  Étant donné que les instructions DDL peuvent contenir des mots de passe et d’autres informations sensibles, un package qui comporte une ou plusieurs tâches DDL d’exécution [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] doit utiliser le niveau de protection de package **EncryptAllWithUserKey** ou **EncryptAllWithPassword**. Pour plus d’informations, consultez [Integration Services &#40;SSIS&#41;, packages](../../integration-services/integration-services-ssis-packages.md).  
   
-### Exemples d'instructions DDL  
+### <a name="ddl-examples"></a>Exemples d'instructions DDL  
  Les trois instructions DDL suivantes ont été générées en créant des scripts d’objets dans [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)], la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluse dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- L’instruction DDL suivante supprime la dimension **Promotion**.  
+ L’instruction DDL suivante supprime la dimension **Promotion** .  
   
 ```  
 <Delete xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -60,7 +65,7 @@ caps.handback.revision: 48
   
 ```  
   
- L'instruction DDL suivante traite le cube [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)].  
+ L'instruction DDL suivante traite le cube [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] .  
   
 ```  
 <Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -77,7 +82,7 @@ caps.handback.revision: 48
   
 ```  
   
- L’instruction DDL suivante crée le modèle d’exploration de données **Forecasting**.  
+ L’instruction DDL suivante crée le modèle d’exploration de données **Forecasting** .  
   
 ```  
 <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -131,7 +136,7 @@ caps.handback.revision: 48
   
  Les trois instructions DDL suivantes ont été générées en créant des scripts d’objets dans [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)], la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluse dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- L’instruction DDL suivante supprime la dimension **Promotion**.  
+ L’instruction DDL suivante supprime la dimension **Promotion** .  
   
 ```  
 <Delete xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -143,7 +148,7 @@ caps.handback.revision: 48
   
 ```  
   
- L'instruction DDL suivante traite le cube [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)].  
+ L'instruction DDL suivante traite le cube [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] .  
   
 ```  
 <Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -160,7 +165,7 @@ caps.handback.revision: 48
   
 ```  
   
- L’instruction DDL suivante crée le modèle d’exploration de données **Forecasting**.  
+ L’instruction DDL suivante crée le modèle d’exploration de données **Forecasting** .  
   
 ```  
 <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -212,7 +217,7 @@ caps.handback.revision: 48
   
 ```  
   
-## Configuration de la tâche DDL d'exécution d'Analysis Services  
+## <a name="configuration-of-the-analysis-services-execute-ddl-task"></a>Configuration de la tâche DDL d'exécution d'Analysis Services  
  Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
@@ -225,9 +230,9 @@ caps.handback.revision: 48
   
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d'une tâche ou d'un conteneur](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Configuration par programmation de la tâche DDL d'exécution d'Analysis Services  
+## <a name="programmatic-configuration-of-the-analysis-services-execute-ddl-task"></a>Configuration par programmation de la tâche DDL d'exécution d'Analysis Services  
  Pour plus d'informations sur la définition par programmation de ces propriétés, cliquez sur la rubrique suivante :  
   
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.ASExecuteDDLTask>  

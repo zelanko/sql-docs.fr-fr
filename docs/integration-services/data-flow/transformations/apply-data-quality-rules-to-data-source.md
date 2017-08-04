@@ -1,27 +1,32 @@
 ---
-title: "Appliquer des r&#232;gles de qualit&#233; des donn&#233;es &#224; la source de donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Appliquer les règles de qualité des données à la Source de données | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a965e8f2-004d-4ccc-8523-a185b35b26e2
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e7db6b5fc01c5d85b75ebdd6c78ba004a94135bf
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Appliquer des r&#232;gles de qualit&#233; des donn&#233;es &#224; la source de donn&#233;es
+# <a name="apply-data-quality-rules-to-data-source"></a>Appliquer des règles de qualité des données à la source de données
   Vous pouvez utiliser Data Quality (DQS) Services pour corriger les données dans le flux de données du package en connectant la transformation de nettoyage DQS à la source de données. Pour plus d’informations sur DQS, consultez [Concepts Data Quality Services](../../../data-quality-services/data-quality-services-concepts.md). Pour plus d’informations sur la transformation, consultez [Transformation de nettoyage DQS](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md).  
   
  Lorsque vous traitez des données avec la transformation de nettoyage DQS, un projet de qualité des données est créé sur le serveur de qualité des données. Vous utilisez le client de qualité des données pour gérer le projet. Pour plus d’informations, consultez [Ouvrir, déverrouiller, renommer et supprimer un projet de qualité des données](https://msdn.microsoft.com/library/hh510417.aspx).  
   
-### Pour corriger les données dans le flux de données  
+### <a name="to-correct-data-in-the-data-flow"></a>Pour corriger les données dans le flux de données  
   
 1.  Créer un package.  
   

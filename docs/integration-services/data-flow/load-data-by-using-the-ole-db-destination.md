@@ -1,29 +1,34 @@
 ---
-title: "Charger des donn&#233;es &#224; l&#39;aide de la destination OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "chargement de données"
-  - "Destination OLE DB [Integration Services]"
-  - "destinations [Integration Services], OLE DB"
+title: "Charger des données à l’aide de la Destination OLE DB | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- loading data
+- OLE DB destination [Integration Services]
+- destinations [Integration Services], OLE DB
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: eada84a10a9163c3a5bf0757def7948e18bf35da
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Charger des donn&#233;es &#224; l&#39;aide de la destination OLE DB
+# <a name="load-data-by-using-the-ole-db-destination"></a>Charger des données à l'aide de la destination OLE DB
   Pour pouvoir ajouter et configurer une destination OLE DB, le package doit inclure au moins une tâche de flux de données et une source.  
   
-### Pour charger des données à l'aide d'une destination OLE DB  
+### <a name="to-load-data-using-an-ole-db-destination"></a>Pour charger des données à l'aide d'une destination OLE DB  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contenant le package souhaité.  
   
@@ -35,13 +40,13 @@ caps.handback.revision: 28
   
 5.  Double-cliquez sur la destination OLE DB.  
   
-6.  Dans la boîte de dialogue **Éditeur de destination OLE DB**, dans la page **Gestionnaire de connexions**, sélectionnez un gestionnaire de connexions OLE DB existant ou cliquez sur **Nouveau** pour créer un gestionnaire de connexions. Pour plus d’informations, consultez [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+6.  Dans la boîte de dialogue **Éditeur de destination OLE DB** , dans la page **Gestionnaire de connexions** , sélectionnez un gestionnaire de connexions OLE DB existant ou cliquez sur **Nouveau** pour créer un gestionnaire de connexions. Pour plus d’informations, consultez [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
-7.  Sélectionnez la méthode d'accès aux données :  
+7.  Sélectionnez la méthode d'accès aux données :  
   
     -   **Table ou vue** : sélectionnez une table ou une vue dans la base de données qui contient les données.  
   
-    -   **Table ou vue - chargement rapide** : sélectionnez une table ou une vue dans la base de données qui contient les données, puis définissez les options de chargement rapide : **Conserver l’identité**, **Conserver les valeurs NULL**, **Verrou de table**, **Contrainte de validation**, **Lignes par lot** ou **Taille de validation d’insertion maximale**.  
+    -   **Table ou vue - chargement rapide** : sélectionnez une table ou une vue dans la base de données qui contient les données, puis définissez les options de chargement rapide : **Conserver l’identité**, **Conserver les valeurs NULL**, **Verrou de table**, **Contrainte de validation**, **Lignes par lot**ou **Taille de validation d’insertion maximale**.  
   
     -   **Variable de nom de table ou de vue** : sélectionnez la variable définie par l’utilisateur qui contient le nom d’une table ou d’une vue dans la base de données.  
   
@@ -54,16 +59,16 @@ caps.handback.revision: 28
     > [!NOTE]  
     >  La destination OLE DB mappe automatiquement les colonnes portant le même nom.  
   
-9. Pour configurer l'affichage des erreurs, cliquez sur **Sortie d'erreur**. Pour plus d’informations, consultez [Configurer une sortie d’erreur dans un composant de flux de données](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md).  
+9. Pour configurer l'affichage des erreurs, cliquez sur **Sortie d'erreur**. Pour plus d’informations, consultez [Débogage d’un flux de données](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
 10. Cliquez sur **OK**.  
   
 11. Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Destination OLE DB](../../integration-services/data-flow/ole-db-destination.md)   
  [Transformations Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Chemins d'accès d'Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
- [tâche de flux de données](../../integration-services/control-flow/data-flow-task.md)  
+ [Chemins d’accès d’Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
+ [Tâche de flux de données](../../integration-services/control-flow/data-flow-task.md)  
   
   

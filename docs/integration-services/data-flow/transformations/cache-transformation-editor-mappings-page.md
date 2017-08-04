@@ -1,24 +1,29 @@
 ---
-title: "&#201;diteur de transformation du cache (page Mappages) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.cachetransmap.f1"
+title: "Éditeur de Transformation du cache (Page mappages) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.cachetransmap.f1
 ms.assetid: ffd53f18-9646-458a-a84a-f2467d601ea5
 caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 778b7cbcc861b9bdee2c027e5d7d85220b913072
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# &#201;diteur de transformation du cache (page Mappages)
+# <a name="cache-transformation-editor-mappings-page"></a>Éditeur de transformation du cache (page Mappages)
   Utilisez la page **Mappages** de l' **Éditeur de transformation du cache** pour mapper les colonnes d'entrée de la transformation du cache aux colonnes de destination du gestionnaire de connexions du cache.  
   
 > [!NOTE]  
@@ -28,7 +33,7 @@ caps.handback.revision: 16
   
  Pour en savoir plus sur le gestionnaire de connexions du cache, consultez [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
   
-## Options  
+## <a name="options"></a>Options  
  **Colonnes d'entrée disponibles**  
  Affichez la liste des colonnes d'entrée disponibles. Au moyen d'une opération glisser-déplacer, mappez les colonnes d'entrée disponibles aux colonnes de destination.  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 16
  **Colonne de destination**  
  Affichez les colonnes de destination disponibles.  
   
-## Voir aussi  
- [Éditeur de transformation du cache &#40;Page Gestionnaire de connexions&#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Éditeur de Transformation de cache &#40; Page Gestionnaire de connexions &#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md)  
   
   

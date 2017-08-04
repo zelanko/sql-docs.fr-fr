@@ -1,29 +1,34 @@
 ---
-title: "Cr&#233;ation d’une cha&#238;ne de connexion valide &#224; l’aide du protocole TCP/IP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "chaînes de connexion [Moteur de base de données]"
-  - "ports [SQL Server], connexion à"
-  - "TCP/IP [SQL Server], chaînes de connexion"
-  - "chaînes de connexion [moteur de base de données], TCP/IP"
-  - "alias [SQL Server], TCP/IP"
+title: "Création d’une chaîne de connexion valide à l’aide de TCP IP | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- connection strings [Database Engine]
+- ports [SQL Server], connecting to
+- TCP/IP [SQL Server], connection strings
+- connection strings [Database Engine], TCP/IP
+- aliases [SQL Server], TCP/IP
 ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8611848c01d854e373e3e945e9d7c6d69df0c2ce
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Cr&#233;ation d’une cha&#238;ne de connexion valide &#224; l’aide du protocole TCP/IP
-  Pour créer une chaîne de connexion valide à l'aide du protocole TCP/IP, procédez comme suit :  
+# <a name="creating-a-valid-connection-string-using-tcp-ip"></a>Création d’une chaîne de connexion valide à l’aide du protocole TCP/IP
+  Pour créer une chaîne de connexion valide à l'aide du protocole TCP/IP, procédez comme suit :  
   
 -   Spécifiez un **nom de l'alias**.  
   
@@ -36,14 +41,14 @@ caps.handback.revision: 31
  Au moment de la connexion, le composant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client lit dans le Registre les valeurs de serveur, protocole et port pour le nom d'alias spécifié, et crée une chaîne de connexion au format `tcp:<servername>[\<instancename>],<port>` ou `tcp:<IPAddress>[\<instancename>],<port>`.  
   
 > [!NOTE]  
->  Le pare-feu [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ferme le port 1433 par défaut. Sachant que [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] communique via le port 1433, vous devez rouvrir ce port si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour être à l’écoute des connexions clientes entrantes utilisant TCP/IP. Pour plus d'informations sur la configuration d'un pare-feu, consultez « Procédure : configurer un pare-feu pour accéder à SQL Server » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou passez en revue la documentation de votre pare-feu.  
+>  Le pare-feu [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ferme le port 1433 par défaut. Étant donné que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] communique via le port 1433, vous devez rouvrir le port si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour écouter les connexions clientes entrantes utilisant TCP/IP. Pour plus d'informations sur la configuration d'un pare-feu, consultez « Procédure : configurer un pare-feu pour accéder à SQL Server » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou passez en revue la documentation de votre pare-feu.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client prennent entièrement en charge les protocoles IPv4 (Internet Protocol version 4) et IPv6 (Internet Protocol version 6). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accepte les deux formats IPv4 et IPv6 pour les adresses IP. Pour plus d'informations sur IPv6, consultez « Connexion avec IPv6 » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client prend entièrement en charge le protocole Internet version 4 (IPv4) et le protocole Internet version 6 (IPv6). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gestionnaire de configuration accepte à la fois IPv4 et IPv6 formats pour les adresses IP. Pour plus d'informations sur IPv6, consultez « Connexion avec IPv6 » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Connexion au serveur local  
+## <a name="connecting-to-the-local-server"></a>Connexion au serveur local  
  Lorsque vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alors que celui-ci est exécuté sur le même ordinateur que l'ordinateur client, vous pouvez utiliser `(local)` comme nom de serveur. Cette option n'est pas conseillée dans la mesure où elle est source d'ambiguïté ; toutefois, elle peut s'avérer utile lorsqu'il est certain que le client s'exécute sur l'ordinateur visé. Par exemple, lorsque vous créez une application destinée à des utilisateurs itinérants déconnectés, tels que des vendeurs, pour lesquels [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute sur des ordinateurs portables et stocke les données de projet, un client établissant une connexion à `(local)` se connecte toujours à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cours d'exécution sur l'ordinateur portable. Vous pouvez utiliser le mot `localhost` ou un point (**.**) à la place de `(local)`.  
   
-## Vérification de votre protocole de connexion  
+## <a name="verifying-your-connection-protocol"></a>Vérification de votre protocole de connexion  
  La requête suivante retourne le protocole utilisé pour la connexion active.  
   
 ```  
@@ -53,7 +58,7 @@ WHERE session_id = @@SPID;
   
 ```  
   
-## Exemples  
+## <a name="examples"></a>Exemples  
  Connexion à partir du nom de serveur :  
   
 ```  
@@ -165,11 +170,11 @@ Server             .\<instancename>
 ```  
   
 > [!NOTE]  
->  Pour plus d’informations sur la spécification du protocole réseau en tant que paramètre **sqlcmd **, consultez « Procédure : établir une connexion au moteur de base de données à l’aide de sqlcmd.exe » dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Pour plus d’informations sur la spécification du protocole réseau en tant que paramètre **sqlcmd** , consultez « Procédure : établir une connexion au moteur de base de données à l’aide de sqlcmd.exe » dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Voir aussi  
- [Création d'une chaîne de connexion valide à l'aide du protocole de mémoire partagée](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
- [Création d'une chaîne de connexion valide à l'aide de canaux nommés](../Topic/Creating%20a%20Valid%20Connection%20String%20Using%20Named%20Pipes.md)   
- [Choix d'un protocole réseau](../Topic/Choosing%20a%20Network%20Protocol.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Création d’une chaîne de connexion valide à l’aide du protocole de mémoire partagée](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
+ [Création d’une chaîne de connexion valide à l’aide de canaux nommés](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)   
+ [Choix d’un protocole réseau](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   

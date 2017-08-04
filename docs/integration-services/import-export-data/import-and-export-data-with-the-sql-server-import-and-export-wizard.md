@@ -1,74 +1,96 @@
 ---
-title: "Importer et exporter des donn&#233;es avec l’Assistant Importation et Exportation SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "exportation de données"
-  - "mappage de fichiers [Integration Services]"
-  - "Assistant Importation et Exportation SQL Server"
-  - "packages SSIS, création"
-  - "packages [Integration Services], copie"
-  - "packages Integration Services, création"
-  - "packages [Integration Services], création"
-  - "packages SQL Server Integration Services, création"
-  - "Assistant Importation et Exportation"
-  - "copie de données [Integration Services]"
-  - "importation de données, packages SSIS"
-  - "sources [Integration Services], copie de données"
+title: "Importer et exporter des données avec le SQL Server Assistant Importation et exportation | Documents Microsoft"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- exporting data
+- mapping files [Integration Services]
+- SQL Server Import and Export Wizard
+- SSIS packages, creating
+- packages [Integration Services], copying
+- Integration Services packages, creating
+- packages [Integration Services], creating
+- SQL Server Integration Services packages, creating
+- Import and Export Wizard
+- copying data [Integration Services]
+- importing data, SSIS packages
+- sources [Integration Services], copying data
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 caps.latest.revision: 160
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 134
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
+ms.openlocfilehash: 7b9fae76cd6ffaee5679bc2d0ba7fa7b44f9aa65
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Importer et exporter des donn&#233;es avec l’Assistant Importation et Exportation SQL Server
- La fonction de l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est de copier simplement des données d’une source vers une destination. Vous n’êtes pas obligé d’avoir installé SQL Server pour exécuter l’Assistant. Cette vue d’ensemble décrit les sources de données depuis ou vers lesquelles vous pouvez importer ou exporter des données à l’aide de l’Assistant, et les autorisations nécessaires pour exécuter l’Assistant.
+# <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Importer et exporter des données avec l’Assistant Importation et Exportation SQL Server
 
-Cette rubrique fournit uniquement une **vue d’ensemble** de l’Assistant.
--   Si vous êtes prêt à exécuter l’Assistant et souhaitez simplement savoir comment le démarrer, consultez [Démarrer l’Assistant Importation et Exportation SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
--   Si vous recherchez des informations sur les étapes de l’Assistant, sélectionnez la page voulue dans le menu de navigation du contenu. Il existe une page distincte de documentation pour chaque page de l’Assistant. Sinon, pour afficher la documentation sur une page ou une boîte de dialogue déterminée de l’Assistant, appuyez sur la touche F1 à partir de cette page.
+ > Pour obtenir un contenu pour les versions précédentes de SQL Server, consultez [exécuter le SQL Server Assistant Importation et exportation](https://msdn.microsoft.com/en-US/library/ms140052(SQL.120).aspx).
 
-**Procurez-vous l’Assistant.** Si vous souhaitez exécuter l’Assistant, mais [!INCLUDE[msCoName] (../Token/msCoName_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’est pas installé sur votre ordinateur, vous pouvez installer l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en installant SSDT (SQL Server Data Tools). Pour plus d’informations, consultez [Télécharger SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx).
+ La fonction de l’Assistant Importation et Exportation[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est de copier simplement des données d’une source vers une destination. Cette présentation décrit les sources de données que l’Assistant peut l’utiliser en tant que sources et destinations, ainsi que les autorisations que nécessaires pour exécuter l’Assistant.
 
-> [!TIP] Si vous devez copier plusieurs bases de données ou des objets de base de données autres que des tables et des vues, utilisez l’Assistant Copie de base de données au lieu de l’Assistant Importation et exportation. Pour plus d’informations, consultez [Utiliser l’Assistant Copie de base de données](../../relational-databases/databases/use-the-copy-database-wizard.md).
+## <a name="get-the-wizard"></a>Obtenir de l’Assistant
+Si vous souhaitez exécuter l’Assistant, mais [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’est pas installé sur votre ordinateur, vous pouvez installer l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en installant SSDT (SQL Server Data Tools). Pour plus d’informations, consultez [Télécharger SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx).
 
-## <a name="example-of-a-common-use-case---exporting-data-to-excel-video"></a>Exemple de cas d’utilisation courant : exporter des données vers Excel (vidéo)  
-Une utilisation courante de l’Assistant est d’exporter des données vers Excel. Voici une vidéo de quatre minutes sur YouTube qui décrit l’Assistant et explique comment l’utiliser, avec des instructions claires et simples - [Using the SQL Server Import and Export Wizard to Export to Excel](https://go.microsoft.com/fwlink/?linkid=829049) (Utilisation de l’Assistant Importation et Exportation SQL Server pour exporter vers Excel).
+## <a name="what-happens-when-i-run-the-wizard"></a>Que se passe-t-il lorsque j’exécute l’Assistant ?
+-    **Consultez la liste des étapes.** Pour obtenir une description des étapes de l’Assistant, consultez [les étapes dans le SQL Server Assistant Importation et exportation](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). Il existe également une page distincte de la documentation pour chaque page de l’Assistant.  
+    \-ou\-
+-   **Voir un exemple simple.** Pour examiner rapidement les plusieurs écrans qui s’affichent dans une session normale, examinez cet exemple de bout en bout simple sur une seule page - [prise en main avec cet exemple simple de l’Assistant Importation et exportation](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).  
 
-##  <a name="a-namewizardsourcesa-what-data-sources-and-destinations-can-i-use"></a><a name="wizardSources"></a> Quelles sont les sources et destinations de données que je peux utiliser ?  
- L’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut copier des données à destination et en provenance des sources de données suivantes. Pour utiliser certains de ces sources de données, vous devrez peut-être télécharger et installer des fichiers supplémentaires.
-
+##  <a name="wizardSources"></a>Les sources et les destinations puis-je utiliser ?  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant Importation et exportation peuvent copier des données vers et depuis les sources de données répertoriées dans le tableau suivant. Pour vous connecter à certains de ces sources de données, vous devrez peut-être télécharger et installer des fichiers supplémentaires.
+ 
 | Source de données | Dois-je télécharger des fichiers supplémentaires ? |
 |-------------|-----------------------------------------|
-|**Bases de données d’entreprise**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle et autres.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe les fichiers nécessaires pour vous connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Oracle, mais n’installe pas les fichiers nécessaires pour vous connecter à d’autres bases de données d’entreprise, comme IBM DB2 ou Informix.<br/>- Si vous disposez déjà du logiciel client de votre système de base de données d’entreprise, vous avez en général ce qu’il vous faut pour établir une connexion.<br/>- Si vous n’avez pas installé le logiciel client, contactez l’administrateur de base de données pour lui demander comment installer une copie sous licence.|
-|**Bases de données open source**<br/>MySql, PostgreSQL, SQLite et autres.|Vous devez télécharger des fichiers supplémentaires pour vous connecter à ces sources de données.<br/><br/>- Pour **MySql**, consultez [MySQL Connectors](http://dev.mysql.com/downloads/connector/).<br/>- Pour **PostgreSQL**, consultez [psqlODBC - PostgreSQL ODBC driver](https://odbc.postgresql.org/) et des produits tiers comme [Npgsql - .NET Data Provider for PostgreSQL](http://www.npgsql.org/).<br/>- Pour **SQLite**, plusieurs pilotes et fournisseurs open source sont disponibles en ligne.|
-|**Fichiers texte** (fichiers plats).|Aucun fichier supplémentaire n’est requis.|
-|**Fichiers Microsoft Excel et Microsoft Access**|Microsoft Office n’installe pas tous les fichiers nécessaires à l’établissement d’une connexion à des sources de données Excel et Access. Obtenez le téléchargement suivant : [Microsoft Access Runtime 2016](https://www.microsoft.com/download/details.aspx?id=50040).|
-|**Sources de données Azure**<br/>Stockage d’objets blob Azure uniquement pour l’instant.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’installe pas les fichiers dont vous avez besoin pour vous connecter à Stockage Blob Azure en tant que source de données. Obtenez le téléchargement suivant : [Microsoft SQL Server 2016 Integration Services Feature Pack pour Azure](https://www.microsoft.com/download/details.aspx?id=49492).|
-|**Toute autre source de données pour laquelle un connecteur est disponible**.|Généralement, vous devez télécharger des fichiers supplémentaires pour vous connecter aux sources de données des types suivants.<br/><br/>- N’importe quelle source pour laquelle un **pilote ODBC** est disponible. Créez une connexion ODBC (Open Database Connectivity) en sélectionnant le fournisseur .NET Framework pour ODBC dans la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant, puis en fournissant une chaîne de connexion ou un nom de source de données (DSN) existant qui fait référence au pilote ODBC.<br/>- N’importe quelle source pour laquelle un **fournisseur OLE DB** est disponible.<br/>- N’importe quelle source pour laquelle un **fournisseur de données .NET Framework** est disponible.<br/>- Autres sources de données pour lesquelles des **composants tiers** offrent des fonctionnalités pour la source et la destination. En général, ces produits tiers sont vendus en tant que composants additionnels pour SQL Server Integration Services (SSIS).|
+|**Bases de données d’entreprise**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, DB2 et autres.|SQL Server ou SQL Server Data Tools (SSDT) installe les fichiers dont vous avez besoin pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mais, SSDT n’installe pas tous les fichiers dont vous avez besoin pour se connecter à d’autres bases de données d’entreprise telles que Oracle ou IBM DB2.<br/><br/>Pour vous connecter à une base de données d’entreprise, vous devez généralement disposer de deux choses :<br/><br/>1. **Le logiciel client**. Si vous disposez déjà du logiciel client de votre système de base de données d’entreprise, vous avez en général ce qu’il vous faut pour établir une connexion. Si vous n’avez pas installé le logiciel client, contactez l’administrateur de base de données pour lui demander comment installer une copie sous licence.<br/><br/>2. **Pilotes ou fournisseurs**. Microsoft installe des pilotes et des fournisseurs pour se connecter à Oracle. Pour vous connecter à IBM DB2, obtenir le fournisseur Microsoft® OLE DB pour DB2 v5.0 pour Microsoft SQL Server à partir de la [Microsoft SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676).|
+|**Fichiers texte** (fichiers plats)|Aucun fichier supplémentaire n’est requis.|
+|**Fichiers Microsoft Excel et Microsoft Access**|Microsoft Office n’installe pas tous les fichiers nécessaires à l’établissement d’une connexion à des sources de données Excel et Access. Obtenez le téléchargement suivant : [Microsoft Access Runtime 2016](https://www.microsoft.com/download/details.aspx?id=50040).<br/><br/>Pour plus d’informations, consultez [se connecter à une Source de données Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md) ou [se connecter à une Source de données Access](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md).|
+|**Sources de données Azure**<br/>Stockage d’objets blob Azure uniquement pour l’instant.|SQL Server Data Tools n’installez pas les fichiers dont vous avez besoin pour se connecter au stockage d’objets Blob Azure comme source de données. Obtenez le téléchargement suivant : [Microsoft SQL Server 2016 Integration Services Feature Pack pour Azure](https://www.microsoft.com/download/details.aspx?id=49492).<br/><br/>Pour plus d’informations, consultez [se connecter au stockage d’objets BLOB Azure](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md).|
+|**Bases de données open source**<br/>PostgreSQL, MySql et autres.|Vous devez télécharger des fichiers supplémentaires pour vous connecter à ces sources de données.<br/><br/>-Pour **PostgreSQL**, consultez [se connecter à une Source de données PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md).<br/>-Pour **MySql**, consultez [se connecter à une Source de données MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md).|
+|**Toute autre source de données pour laquelle un fournisseur ou le pilote n’est disponible**|Généralement, vous devez télécharger des fichiers supplémentaires pour vous connecter aux sources de données des types suivants.<br/><br/>- N’importe quelle source pour laquelle un **pilote ODBC** est disponible. Pour plus d’informations, consultez [se connecter à une Source de données ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).<br/>- N’importe quelle source pour laquelle un **fournisseur de données .NET Framework** est disponible.<br/>- N’importe quelle source pour laquelle un **fournisseur OLE DB** est disponible.<br/><br/>Les composants tiers qui fournissent des fonctionnalités de source et de destination pour les autres sources de données sont parfois commercialisés en tant que composants additionnels pour SQL Server Integration Services (SSIS).|
+
+## <a name="how-do-i-connect-to-my-data"></a>Comment se connecter à mes données ?
+Pour plus d’informations sur la façon de se connecter à une source de données couramment utilisées, consultez une des pages suivantes.
+-   [Se connecter à SQL Server](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
+-   [Connexion à Oracle](../../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)
+-   [Se connecter à des fichiers plats (fichiers texte)](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
+-   [Se connecter à Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)
+-   [Se connecter à Access](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
+-   [Se connecter au stockage d’objets Blob Azure](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
+-   [Se connecter avec ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
+-   [Se connecter à PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)
+-   [Se connecter à MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)
+
+
+Pour plus d’informations sur la façon de se connecter à une source de données qui n’est pas répertoriée ici, consultez [la référence de chaînes de connexion](https://www.connectionstrings.com/). Ce site tiers contient des exemples de chaînes de connexion et plus d’informations sur les fournisseurs de données et les informations de connexion que dont ils ont besoin.
+
+## <a name="what-permissions-do-i-need"></a>Quelles autorisations ai-je besoin ?  
+ Pour mener à bien les étapes de l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez disposer au moins des autorisations suivantes. Si vous utilisez déjà vos source et destination de données, vous avez probablement les autorisations nécessaires.
   
-> [!TIP] Si votre source de données nécessite une chaîne de connexion, des exemples sont disponibles sur ce site tiers : [The Connection Strings Reference](https://www.connectionstrings.com/).  
-  
-## <a name="what-permissions-do-i-need-to-run-the-wizard"></a>Quelles sont les autorisations nécessaires pour exécuter l’Assistant ?  
- Pour mener à bien les étapes de l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez disposer au moins des autorisations suivantes. Si vous utilisez déjà vos source et destination de données, vous avez probablement les autorisations nécessaires.
-  
-|Des autorisations sont nécessaires pour effectuer les opérations suivantes|Si vous vous connectez à SQL Server, vous avez besoin de ces autorisations |  
+|Des autorisations sont nécessaires pour effectuer les opérations suivantes|Si vous vous connectez à SQL Server, vous avez besoin de ces autorisations spécifiques |  
 |-------------------------|----------------------------------------------------|  
 |Se connecter aux bases de données sources et de destination ou aux partages de fichiers|Droits de connexion aux bases de données et au serveur|  
 |Exporter ou lire les données d’une base de données ou d’un fichier source.|Autorisations SELECT pour les tables et les vues sources|  
 |Importer ou écrire des données dans la base de données ou le fichier de destination.|Autorisations INSERT dans les tables de destination|  
 |Créer la base de données ou le fichier de destination, le cas échéant|Autorisations CREATE DATABASE ou CREATE TABLE|  
-|Enregistrer le package SSIS créé par l’Assistant, le cas échéant|Si vous souhaitez enregistrer le package dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]autorisations suffisantes pour enregistrer le package dans la base de données **msdb**.|  
+|Enregistrer le package SSIS créé par l’Assistant, le cas échéant|Si vous souhaitez enregistrer le package dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]autorisations suffisantes pour enregistrer le package dans la base de données **msdb** .|  
   
-##  <a name="a-namewizardssisa-the-wizard-uses-sql-server-integration-services-ssis"></a><a name="wizardSSIS"></a> L’Assistant utilise SQL Server Integration Services (SSIS)  
+## <a name="get-help-while-the-wizard-is-running"></a>Obtenir de l’aide pendant l’exécution de l’Assistant
+> [!TIP]
+> Pour afficher la documentation sur une page ou une boîte de dialogue déterminée de l’Assistant, appuyez sur la touche F1 à partir de cette page.   
+  
+##  <a name="wizardSSIS"></a> L’Assistant utilise SQL Server Integration Services (SSIS)  
  L’Assistant utilise SQL Server Integration Services (SSIS) pour copier les données. SSIS est un outil d’extraction, de transformation et de chargement (ETL) des données. Les pages de l’Assistant utilisent en partie le langage de SSIS.
   
  Dans SSIS, l’unité de base est le **package**. L’Assistant crée un package SSIS en mémoire à mesure que vous parcourez les pages de l’Assistant et spécifiez les options.    
@@ -77,11 +99,12 @@ Si vous avez installé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Pour plus d’informations, consultez [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md).
 
-## <a name="get-help-while-the-wizard-is-running"></a>Obtenir de l’aide pendant l’exécution de l’Assistant
-> [!TIP] Pour afficher la documentation sur une page ou une boîte de dialogue déterminée de l’Assistant, appuyez sur la touche F1 à partir de cette page.   
-  
 ## <a name="whats-next"></a>Étape suivante  
  Démarrez l'Assistant. Pour plus d’informations, consultez [Démarrer l’Assistant Importation et Exportation SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).  
-  
+
 ## <a name="see-also"></a>Voir aussi
+[Prise en main avec cet exemple simple de l’Assistant Importation et exportation](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)  
 [Mappage de type de données dans l’Assistant Importation et Exportation SQL Server](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
+
+
+

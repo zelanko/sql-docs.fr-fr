@@ -1,29 +1,34 @@
 ---
-title: "Flux de donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "données de sortie [Integration Services]"
-  - "flux de contrôle [Integration Services], éléments"
-  - "données d'entrée [Integration Services]"
-  - "métadonnées externes [Integration Services]"
-  - "flux de données [Integration Services]"
-  - "erreurs [Integration Services], sorties de flux de données"
+title: "Flux de données | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- output data [Integration Services]
+- data flow [Integration Services], elements
+- input data [Integration Services]
+- external metadata [Integration Services]
+- data flow [Integration Services]
+- errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 caps.latest.revision: 70
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 70
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a72cbbc25ba137e96ad792441ea7f30d1d0af14
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Flux de donn&#233;es
+# <a name="data-flow"></a>Flux de données
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit trois types différents de composants de flux de données : les sources, les transformations et les destinations. Les sources extraient les données des banques de données qui peuvent être des tables et des vues de bases de données relationnelles, des fichiers et des bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Les transformations modifient, synthétisent et nettoient les données. Les destinations chargent les données dans des banques de données ou créent des datasets en mémoire.  
   
 > [!NOTE]  
@@ -31,11 +36,11 @@ caps.handback.revision: 70
   
  Par ailleurs, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] propose des chemins qui connectent la sortie d’un composant à l’entrée d’un autre. Les chemins d'accès définissent la séquence des composants et vous permettent d'ajouter des annotations au flux de données ou d'afficher la source de la colonne.  
   
- Les composants du flux de données sont connectés en connectant la sortie des sources et des destinations à l'entrée des transformations et des destinations. Lors de la construction d'un flux de données, vous connectez généralement le second composant et les suivants au moment où vous les ajoutez au flux de données. Après avoir connecté le composant, les colonnes d'entrée peuvent être utilisées pour configurer le composant. Lorsqu'aucune colonne d'entrée n'est disponible, vous devez configurer le composant une fois celui-ci connecté au flux de données. Pour plus d’informations, consultez [Chemins d’accès d’Integration Services](../../integration-services/data-flow/integration-services-paths.md) et [Connecter des composants avec des chemins d’accès](../Topic/Connect%20Components%20with%20Paths.md).  
+ Les composants du flux de données sont connectés en connectant la sortie des sources et des destinations à l'entrée des transformations et des destinations. Lors de la construction d'un flux de données, vous connectez généralement le second composant et les suivants au moment où vous les ajoutez au flux de données. Après avoir connecté le composant, les colonnes d'entrée peuvent être utilisées pour configurer le composant. Lorsqu'aucune colonne d'entrée n'est disponible, vous devez configurer le composant une fois celui-ci connecté au flux de données. Pour plus d’informations, consultez [Chemins d’accès d’Integration Services](../../integration-services/data-flow/integration-services-paths.md) et [Connecter des composants avec des chemins d’accès](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8).  
   
  Le diagramme qui suit montre un flux de données composé d'une source, d'une transformation avec une entrée et une sortie et d'une destination. Ce diagramme indique les entrées, les sorties et les sorties d'erreurs, de même que les colonnes d'entrée, de sortie et externes.  
   
- ![Composants de flux de données avec leurs entrées et sorties](../../integration-services/data-flow/media/mw-dts-dataflow.gif "Composants de flux de données avec leurs entrées et sorties")  
+ ![Composants et de leurs entrées et sorties de flux de données](../../integration-services/data-flow/media/mw-dts-dataflow.gif "composants et de leurs entrées et sorties de flux de données")  
   
 ## <a name="data-flow-implementation"></a>Implémentation des flux de données  
  L'ajout d'une tâche de flux de données au flux de contrôle d'un package constitue la première étape de l'implémentation d'un flux de données dans un package. Un package peut inclure plusieurs tâches de flux de données, chacune possédant son propre flux de données. Par exemple, si un package requiert que des flux de données soient exécutés dans un ordre spécifique ou que d'autres tâches soient exécutées entre les flux de données, vous devez utiliser une tâche de flux de données distincte pour chaque flux de données.  
@@ -166,7 +171,7 @@ caps.handback.revision: 70
  Pour obtenir une démonstration de la manière d’exploiter les gains de performances du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Oracle par Attunity, consultez [Performance of Microsoft Connector for Oracle by Attunity (vidéo SQL Server)](http://go.microsoft.com/fwlink/?LinkID=210369).  
   
 ## <a name="connection-managers"></a>Gestionnaires de connexions  
- De nombreux composants de flux de données se connectent à des sources de données. Vous devez ajouter au package les gestionnaires de connexions requis par les composants avant de pouvoir configurer correctement le composant. Vous pouvez ajouter les gestionnaires de connexions au moment de la construction du flux de données ou avant de commencer à le construire. Pour plus d’informations, consultez [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md) et [Créer des gestionnaires de connexions](../Topic/Create%20Connection%20Managers.md).  
+ De nombreux composants de flux de données se connectent à des sources de données. Vous devez ajouter au package les gestionnaires de connexions requis par les composants avant de pouvoir configurer correctement le composant. Vous pouvez ajouter les gestionnaires de connexions au moment de la construction du flux de données ou avant de commencer à le construire. Pour plus d’informations, consultez [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md) et [Créer des gestionnaires de connexions](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
   
 ## <a name="external-metadata"></a>Métadonnées externes  
  Lorsque vous créez un flux de données dans un package à l'aide du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , les métadonnées des sources et des destinations sont copiées dans les colonnes externes des sources et des destinations et servent d'instantané du schéma. Quand [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] valide le package, le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] compare cet instantané au schéma de la source ou de la destination et publie des erreurs et des avertissements en fonction des disparités constatées.  
@@ -215,3 +220,4 @@ caps.handback.revision: 70
   
 ## <a name="related-content"></a>Contenu connexe  
  Vidéo, [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkID=210369)(Performances de Microsoft Connector pour Oracle par Attunity), sur le site web technet.microsoft.com.  
+

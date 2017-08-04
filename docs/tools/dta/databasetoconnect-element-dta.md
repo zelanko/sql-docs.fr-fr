@@ -1,26 +1,31 @@
 ---
-title: "DatabaseToConnect, &#233;l&#233;ment (Assistant Param&#233;trage de base de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "DatabaseToConnect (élément)"
+title: "Databasetoconnect, élément (DTA) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- XML
+helpviewer_keywords:
+- DatabaseToConnect element
 ms.assetid: 65153a66-3aee-4429-99b7-0816ac23c285
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 94746d3007587223ba1b2ae6a3868ce3a013bafd
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# DatabaseToConnect, &#233;l&#233;ment (Assistant Param&#233;trage de base de donn&#233;es)
+# DatabaseToConnect, élément (Assistant Paramétrage de base de données)
   Spécifie la première base de données à laquelle l'Assistant Paramétrage du moteur de base de données se connecte lors du paramétrage d'une charge de travail.  
   
 ## Syntaxe  
@@ -44,7 +49,7 @@ caps.handback.revision: 12
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[TuningOptions, élément &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**Élément parent**|[Tuningoptions, élément &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**Éléments enfants**|Aucune|  
   
 ## Notes  

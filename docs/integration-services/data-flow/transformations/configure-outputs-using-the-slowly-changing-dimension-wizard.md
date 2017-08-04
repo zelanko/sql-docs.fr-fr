@@ -1,37 +1,42 @@
 ---
-title: "Configurer les sorties &#224; l&#39;aide de l&#39;Assistant Dimension &#224; variation lente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transformation de dimension à variation lente"
-  - "dimensions à variation lente"
-  - "Dimension à variation lente (Assistant)"
+title: "Configurer les sorties à l’aide de l’Assistant Dimension à variation lente | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Slowly Changing Dimension transformation
+- slowly changing dimensions
+- Slowly Changing Dimension Wizard
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cc89e598abbf0b224325d74501b47e3999bf472b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Configurer les sorties &#224; l&#39;aide de l&#39;Assistant Dimension &#224; variation lente
+# <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Configurer les sorties à l'aide de l'Assistant Dimension à variation lente
   L'Assistant Dimension à variation lente fonctionne comme un éditeur pour la transformation de dimension à variation lente. La création et la configuration du flux de données pour des données de dimension à variation lente peuvent être des tâches complexes. L'Assistant Dimension à variation lente constitue le moyen le plus simple de créer le flux de données pour les sorties de transformation de dimension à variation lente ; il vous guide lors des étapes de mappage de colonnes, de sélection de colonnes clés d'entreprise, de définition des attributs de modification de colonnes et de configuration de la prise en charge des membres de dimension inférés.  
   
  Vous devez sélectionner au moins une colonne clé d'entreprise dans la table de dimension et la mapper à une colonne d'entrée. La valeur de la clé d'entreprise lie un enregistrement de la source à un enregistrement de la table de dimension. La transformation utilise ce mappage pour rechercher l'enregistrement dans la table de dimension et déterminer si un enregistrement est nouveau ou en cours d'évolution. En règle générale, la clé d'entreprise est la clé primaire dans la source, mais il peut s'agir d'une autre clé sous réserve qu'elle identifie de manière unique un enregistrement et que sa valeur ne change pas. La clé d'entreprise peut également être une clé composite, englobant plusieurs colonnes. La clé primaire de la table de dimension est généralement une clé de substitution, en l'occurrence une valeur numérique générée automatiquement par une colonne d'identité ou par une solution personnalisée telle qu'un script.  
   
  Avant de pouvoir exécuter l'Assistant Dimension à variation lente, vous devez ajouter une source et une transformation de dimension à variation lente au flux de données, puis connecter la sortie de la source à l'entrée de la transformation de dimension à variation lente. Le flux de données peut éventuellement inclure d'autres transformations entre la source de données et la transformation de dimension à variation lente.  
   
- Pour ouvrir l’Assistant Dimension à variation lente dans le Concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)], double-cliquez sur la transformation de dimension à variation lente.  
+ Pour ouvrir l’Assistant Dimension à variation lente dans le Concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , double-cliquez sur la transformation de dimension à variation lente.  
   
-## Création de sorties de dimensions à variation lente  
+## <a name="creating-slowly-changing-dimension-outputs"></a>Création de sorties de dimensions à variation lente  
   
-#### Pour créer des sorties de transformations de dimensions à variation lente  
+#### <a name="to-create-slowly-changing-dimension-transformation-outputs"></a>Pour créer des sorties de transformations de dimensions à variation lente  
   
 1.  Sélectionnez le gestionnaire de connexions pour accéder à la source de données qui contient la table de dimension à mettre à jour.  
   
@@ -73,12 +78,12 @@ caps.handback.revision: 43
   
      Le schéma suivant illustre un exemple de flux de données qui prend en charge les modifications d'attributs fixes, d'attributs variables et d'attributs d'historique, les membres inférés et les modifications d'enregistrements correspondants.  
   
-     ![Flux de données de l'Assistant Dimension à variation lente](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "Flux de données de l'Assistant Dimension à variation lente")  
+     ![Flux de données à partir de la modification de l’Assistant Dimension à variation lente](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "de flux de données à partir de la modification de l’Assistant Dimension à variation lente")  
   
-## Mise à jour de sorties de dimensions à variation lente  
+## <a name="updating-slowly-changing-dimension-outputs"></a>Mise à jour de sorties de dimensions à variation lente  
  Le moyen le plus simple de mettre à jour la configuration des sorties de transformations de dimensions à variation lente consiste à réexécuter l'Assistant Dimension à variation lente et à modifier les propriétés à partir des pages de l'Assistant. Vous pouvez également mettre à jour la transformation de dimension à variation lente par le biais de la boîte de dialogue **Éditeur avancé** ou par programmation.  
   
-## Voir aussi  
- [Transformation de dimension à variation lente](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   

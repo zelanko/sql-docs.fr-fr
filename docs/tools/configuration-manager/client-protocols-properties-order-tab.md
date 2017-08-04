@@ -1,25 +1,30 @@
 ---
-title: "Propri&#233;t&#233;s de protocoles clients (onglet Ordre) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "protocoles clients [SQL Server]"
+title: "Propriétés (onglet ordre) de protocoles clients | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- client protocols [SQL Server]
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e92bac20c6f709964dabf08710c2b18b5db0c1e4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propri&#233;t&#233;s de protocoles clients (onglet Ordre)
-  La page **Ordre** de la boîte de dialogue **Propriétés de protocoles clients** vous permet d’afficher et d’activer les protocoles clients.  
+# Propriétés de protocoles clients (onglet Ordre)
+  La page **Ordre**de la boîte de dialogue **Propriétés de protocoles clients** vous permet d’afficher et d’activer les protocoles clients.  
   
  Cliquez sur un protocole, puis sur **Activer** ou **Désactiver** pour déplacer le protocole sélectionné vers la liste **Protocoles désactivés** ou **Protocoles activés**.  
   
@@ -36,10 +41,10 @@ caps.handback.revision: 18
  Répertorie les protocoles disponibles pour les clients [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur cet ordinateur.  
   
  **>**  
- Active le protocole affiché en surbrillance dans la zone **Protocoles désactivés**, en le déplaçant vers la zone **Protocoles activés**.  
+ Active le protocole affiché en surbrillance dans la zone **Protocoles désactivés** , en le déplaçant vers la zone **Protocoles activés** .  
   
  **\<**  
- Désactive le protocole affiché en surbrillance dans la zone **Protocoles activés**, en le déplaçant vers la zone **Protocoles désactivés**.  
+ Désactive le protocole affiché en surbrillance dans la zone **Protocoles activés** , en le déplaçant vers la zone **Protocoles désactivés** .  
   
  Flèche haut  
  Déplace le protocole affiché en surbrillance vers le haut de la liste. Cela vous permet d'augmenter la priorité avec laquelle la Net-Library essaie d'utiliser le protocole sélectionné pour les connexions.  
@@ -54,6 +59,6 @@ caps.handback.revision: 18
 >  Si le protocole est spécifié par le biais d'un préfixe ou à l'intérieur de la chaîne de connexion, seul le protocole spécifié est essayé.  
   
 ## Voir aussi  
- [Choix d'un protocole réseau](../Topic/Choosing%20a%20Network%20Protocol.md)  
+ [Choix d’un protocole réseau](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   

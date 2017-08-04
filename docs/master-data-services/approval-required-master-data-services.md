@@ -1,23 +1,28 @@
 ---
-title: "Approbation requise (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Approbation requise (Master Data Services) | Documents Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b475a53d-269d-49f3-bb42-965c555f80be
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f73510c38944126f65567dcb0e6a8b97ec2498e0
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Approbation requise (Master Data Services)
+# <a name="approval-required-master-data-services"></a>Approbation requise (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], l’administrateur peut définir une entité sur Approbation requise. Toutes les modifications apportées à cette entité nécessitent que l’un des administrateurs d’entité les vérifie et les approuve.  
   
 > [!NOTE]  
@@ -27,7 +32,7 @@ caps.handback.revision: 7
 >   
 >  Les modifications apportées par une règle d’entreprise contournent l’approbation.  
   
-## Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle Administration de système  
@@ -36,7 +41,7 @@ caps.handback.revision: 7
   
 -   Une entité doit exister. Pour plus d’informations, consultez [Créer une entité &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).  
   
-## Pour activer l’option Approbation requise pour une entité  
+## <a name="to-enable-approval-required-for-an-entity"></a>Pour activer l’option Approbation requise pour une entité  
   
 1.  Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cliquez sur **Administration de système**.  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 7
   
 4.  Cliquez sur **Modifier**, sélectionnez **Approbation requise**, puis cliquez sur **Enregistrer**.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Ensembles de modifications &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md)  
   
   

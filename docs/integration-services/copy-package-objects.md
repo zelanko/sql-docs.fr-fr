@@ -1,36 +1,41 @@
 ---
-title: "Copier des objets de packages | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "flux de contrôle [Integration Services], copie d’objets"
-  - "copie des objets de packages [Integration Services]"
-  - "flux de données [Integration Services], copie d’objets"
-  - "gestionnaires de connexions [Integration Services], copie"
+title: Copier des objets de packages | Documents Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control flow [Integration Services], copying objects
+- copying package objects [Integration Services]
+- data flow [Integration Services], copying objects
+- connection managers [Integration Services], copying
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 61e0e7c321323bba74e05afe4d28ce7f525843af
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Copier des objets de packages
+# <a name="copy-package-objects"></a>Copier des objets de packages
   Cette rubrique indique comment copier des éléments de flux de contrôle, des éléments de flux de données, ainsi que des gestionnaires de connexions dans un package ou entre des packages.  
   
-### Pour copier des éléments de flux de contrôle et de données  
+### <a name="to-copy-control-and-data-flow-items"></a>Pour copier des éléments de flux de contrôle et de données  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] qui contient les packages que vous voulez utiliser.  
   
 2.  Dans l'Explorateur de solutions, double-cliquez sur les packages entre lesquels vous souhaitez effectuer une copie.  
   
-3.  Dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)], cliquez sur l’onglet du package qui contient les éléments à copier, puis cliquez sur l’onglet **Flux de contrôle**, **Flux de données** ou **Gestionnaires d’événements**.  
+3.  Dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , cliquez sur l’onglet du package qui contient les éléments à copier, puis cliquez sur l’onglet **Flux de contrôle**, **Flux de données**ou **Gestionnaires d’événements** .  
   
 4.  Sélectionnez les éléments de flux de contrôle ou de flux de données à copier. Vous pouvez sélectionner des éléments un à la fois en appuyant sur la touche Maj et en cliquant sur l'élément, ou bien sélectionner des éléments en tant que groupe en faisant glisser le pointeur sur les éléments à sélectionner.  
   
@@ -46,24 +51,24 @@ caps.handback.revision: 14
   
 7.  Cliquez avec le bouton droit, puis cliquez sur **Coller**.  
   
-### Pour copier des gestionnaires de connexions  
+### <a name="to-copy-connection-managers"></a>Pour copier des gestionnaires de connexions  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] qui contient le package que vous voulez utiliser.  
   
 2.  Dans l'Explorateur de solutions, double-cliquez sur le package.  
   
-3.  Dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)], cliquez sur l’onglet **Flux de contrôle**, **Flux de données** ou **Gestionnaire d’événements**.  
+3.  Dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , cliquez sur l’onglet **Flux de contrôle**, **Flux de données**ou **Gestionnaire d’événements** .  
   
-4.  Dans la zone **Gestionnaires de connexions**, cliquez avec le bouton droit sur le gestionnaire de connexions, puis cliquez sur **Copier**. Vous ne pouvez copier qu'un seul gestionnaire de connexions à la fois.  
+4.  Dans la zone **Gestionnaires de connexions** , cliquez avec le bouton droit sur le gestionnaire de connexions, puis cliquez sur **Copier**. Vous ne pouvez copier qu'un seul gestionnaire de connexions à la fois.  
   
-5.  Si vous copiez des éléments dans un package différent, cliquez sur le package de destination de la copie, puis cliquez sur l’onglet **Flux de contrôle**, **Flux de données** ou **Gestionnaire d’événements**.  
+5.  Si vous copiez des éléments dans un package différent, cliquez sur le package de destination de la copie, puis cliquez sur l’onglet **Flux de contrôle**, **Flux de données**ou **Gestionnaire d’événements** .  
   
-6.  Cliquez avec le bouton droit sur **Gestionnaires de connexions**, puis cliquez sur **Coller**.  
+6.  Cliquez avec le bouton droit sur **Gestionnaires de connexions** , puis cliquez sur **Coller**.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Flux de contrôle](../integration-services/control-flow/control-flow.md)   
  [Flux de données](../integration-services/data-flow/data-flow.md)   
- [Connexions Integration Services &#40;SSIS&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Copier des éléments de projet](../Topic/Copy%20Project%20Items.md)  
+ [Integration Services &#40; SSIS &#41; Connexions](../integration-services/connection-manager/integration-services-ssis-connections.md)   
+ [Copier les éléments de projet](http://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
   
   

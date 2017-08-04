@@ -1,27 +1,32 @@
 ---
-title: "Impl&#233;menter une recherche en mode Aucun cache ou Cache partiel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transformation de recherche"
-  - "correspondre exactement [Integration Services]"
-  - "recherches [Integration Services]"
-  - "correspondances exactes [Integration Services]"
+title: "Implémenter une recherche en Mode aucun Cache ou Cache partiel | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Lookup transformation
+- match exactly [Integration Services]
+- lookups [Integration Services]
+- exact matches [Integration Services]
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 caps.latest.revision: 67
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 67
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cb81f969cc30366489df367016c8096ea2ac1168
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Impl&#233;menter une recherche en mode Aucun cache ou Cache partiel
+# <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implémenter une recherche en mode Aucun cache ou Cache partiel
   Vous pouvez configurer la transformation de recherche afin qu'elle utilise le mode Cache partiel ou le mode Aucun cache.  
   
 -   Cache partiel  
@@ -32,36 +37,36 @@ caps.handback.revision: 67
   
      Aucune donnée n'est chargée dans le cache.  
   
- Que vous sélectionniez le mode Cache partiel ou le mode Aucun cache, vous utilisez un gestionnaire de connexions OLE DB pour vous connecter au dataset de référence. Le dataset de référence est généré à l’aide d’une table, d’une vue ou d’une requête SQL pendant l’exécution de la transformation de recherche.  
+ Que vous sélectionniez le mode Cache partiel ou le mode Aucun cache, vous utilisez un gestionnaire de connexions OLE DB pour vous connecter au dataset de référence. Le dataset de référence est généré à l’aide d’une table, d’une vue ou d’une requête SQL pendant l’exécution de la transformation de recherche.  
   
-### Pour implémenter une transformation de recherche en mode Aucun cache ou en mode Cache partiel  
+### <a name="to-implement-a-lookup-transformation-in-no-cache-or-partial-cache-mode"></a>Pour implémenter une transformation de recherche en mode Aucun cache ou en mode Cache partiel  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] qui contient le package souhaité, puis ouvrez le package.  
   
-2.  Sous l’onglet **Flux de données**, ajoutez une transformation de recherche.  
+2.  Sous l’onglet **Flux de données** , ajoutez une transformation de recherche.  
   
 3.  Connectez la transformation de recherche au flux de données en faisant glisser un connecteur à partir d'une source ou d'une transformation précédente jusqu'à la transformation de recherche.  
   
     > [!NOTE]  
-    >  Une transformation de recherche configurée pour utiliser le mode Aucun cache peut ne pas se valider si cette transformation se connecte à un fichier plat qui contient un champ Date vide. La validation de la transformation dépend si le gestionnaire de connexions pour le fichier plat a été configuré pour conserver des valeurs NULL. Pour garantir la validation de la transformation de recherche, dans **l’Éditeur de source de fichier plat**, dans la **page Gestionnaire de connexions**, sélectionnez l’option **Conserver les valeurs NULL de la source comme valeurs NULL dans le flux de données**.  
+    >  Une transformation de recherche configurée pour utiliser le mode Aucun cache peut ne pas se valider si cette transformation se connecte à un fichier plat qui contient un champ Date vide. La validation de la transformation dépend si le gestionnaire de connexions pour le fichier plat a été configuré pour conserver des valeurs NULL. Pour que la validation de la transformation de recherche soit validée, dans **l’Éditeur de source de fichier plat**, dans la **page Gestionnaire de connexions**, sélectionnez l’option **Conserver les valeurs NULL de la source comme valeurs NULL dans le flux de données** .  
   
 4.  Double-cliquez sur la transformation source ou précédente pour configurer le composant.  
   
-5.  Double-cliquez sur la transformation de recherche, puis dans **l’Éditeur de transformation de recherche**, dans la page **Général**, sélectionnez **Cache partiel** ou **Aucun cache**.  
+5.  Double-cliquez sur la transformation de recherche, puis dans **l’Éditeur de transformation de recherche**, dans la page **Général** , sélectionnez **Cache partiel** ou **Aucun cache**.  
   
-6.  Dans la liste **Spécifier comment gérer les lignes sans entrées correspondantes**, sélectionnez une option de gestion des erreurs.  
+6.  Dans la liste **Spécifier comment gérer les lignes sans entrées correspondantes** , sélectionnez une option de gestion des erreurs.  
   
-7.  Dans la page **Connexion**, sélectionnez un gestionnaire de connexions dans la liste **Gestionnaire de connexions OLE DB** ou cliquez sur **Nouveau** pour créer un gestionnaire de connexions. Pour plus d’informations, consultez [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md).  
+7.  Dans la page **Connexion** , sélectionnez un gestionnaire de connexions dans la liste **Gestionnaire de connexions OLE DB** ou cliquez sur **Nouveau** pour créer un gestionnaire de connexions. Pour plus d’informations, consultez [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
 8.  Procédez de l’une des manières suivantes :  
   
     -   Cliquez sur **Utiliser une table ou une vue**, puis sélectionnez une table ou une vue, ou cliquez sur **Nouveau** pour créer une table ou une vue.  
   
-    -   Cliquez sur **Utiliser les résultats d’une requête SQL**, puis générez une requête dans la fenêtre **Commande SQL**.  
+    -   Cliquez sur **Utiliser les résultats d’une requête SQL**, puis générez une requête dans la fenêtre **Commande SQL** .  
   
          —ou—  
   
-         Cliquez sur **Générer la requête** pour générer une requête à l’aide des outils graphiques fournis par le **Générateur de requêtes**.  
+         Cliquez sur **Générer la requête** pour générer une requête à l’aide des outils graphiques fournis par le **Générateur de requêtes** .  
   
          —ou—  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 67
   
      Pour afficher un échantillon des données, cliquez sur **Aperçu**.  
   
-9. Cliquez sur la page **Colonnes**, puis faites glisser au moins une colonne de la liste **Colonnes d’entrée disponibles** vers une colonne de la liste **Colonnes de recherche disponibles**.  
+9. Cliquez sur la page **Colonnes** , puis faites glisser au moins une colonne de la liste **Colonnes d’entrée disponibles** vers une colonne de la liste **Colonnes de recherche disponibles** .  
   
     > [!NOTE]  
     >  La transformation de recherche mappe automatiquement les colonnes ayant le même nom et le même type de données.  
@@ -79,23 +84,23 @@ caps.handback.revision: 67
     > [!NOTE]  
     >  Les types de données des colonnes doivent correspondre pour que les colonnes puissent être mappées. Pour plus d’informations, consultez [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
   
-10. Incluez des colonnes de recherche dans la sortie en procédant comme suit :  
+10. Incluez des colonnes de recherche dans la sortie en procédant comme suit :  
   
-    1.  Dans la liste **Colonnes de recherche disponibles**, sélectionnez des colonnes.  
+    1.  Dans la liste **Colonnes de recherche disponibles** , sélectionnez des colonnes.  
   
-    2.  Dans la liste **Opération de recherche**, spécifiez si les valeurs des colonnes de recherche remplacent les valeurs des colonnes d’entrée ou sont écrites dans une nouvelle colonne.  
+    2.  Dans la liste **Opération de recherche** , spécifiez si les valeurs des colonnes de recherche remplacent les valeurs des colonnes d’entrée ou sont écrites dans une nouvelle colonne.  
   
-11. Si vous avez sélectionné **Cache partial** à l’étape 5, dans la page **Avancé**, définissez les options de cache suivantes :  
+11. Si vous avez sélectionné **Cache partial** à l’étape 5, dans la page **Avancé** , définissez les options de cache suivantes :  
   
-    -   Dans la liste **Taille du cache (32 bits)**, sélectionnez la taille du cache pour les environnements 32 bits.  
+    -   Dans la liste **Taille du cache (32 bits)** , sélectionnez la taille du cache pour les environnements 32 bits.  
   
-    -   Dans la liste **Taille du cache (64 bits)**, sélectionnez la taille du cache pour les environnements 64 bits.  
+    -   Dans la liste **Taille du cache (64 bits)** , sélectionnez la taille du cache pour les environnements 64 bits.  
   
     -   Pour mettre en cache les lignes sans entrées correspondantes dans la référence, sélectionnez **Activer le cache pour les lignes sans entrées correspondantes**.  
   
-    -   Dans la liste **Allocation à partir du cache**, sélectionnez le pourcentage du cache à utiliser pour stocker les lignes sans entrées correspondantes.  
+    -   Dans la liste **Allocation à partir du cache** , sélectionnez le pourcentage du cache à utiliser pour stocker les lignes sans entrées correspondantes.  
   
-12. Pour modifier l’instruction SQL qui génère le dataset de référence, sélectionnez **Modifier l’instruction SQL** et modifiez l’instruction SQL affichée dans la zone de texte.  
+12. Pour modifier l’instruction SQL qui génère le dataset de référence, sélectionnez **Modifier l’instruction SQL**et modifiez l’instruction SQL affichée dans la zone de texte.  
   
      Si l’instruction inclut des paramètres, cliquez sur **Paramètres** pour mapper les paramètres aux colonnes d’entrée.  
   
@@ -106,7 +111,7 @@ caps.handback.revision: 67
   
 14. Cliquez sur **OK** pour enregistrer les modifications apportées à la transformation de recherche, puis exécutez le package.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

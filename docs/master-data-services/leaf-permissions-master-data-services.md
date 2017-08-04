@@ -1,28 +1,33 @@
 ---
-title: "Autorisations de feuille (services de donn&#233;es de r&#233;f&#233;rence) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "groupes d’attributs [Master Data Services], autorisations"
-  - "membres [Master Data Services], autorisations de membre feuille"
-  - "autorisations [Master Data Services], membres feuille"
-  - "membres feuille [Master Data Services], autorisations d’attribut"
-  - "attributs [Master Data Services], autorisations d’attribut de membre feuille"
+title: Autorisations (Master Data Services) de feuille | Documents Microsoft
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attribute groups [Master Data Services], permissions
+- members [Master Data Services], leaf member permissions
+- permissions [Master Data Services], leaf members
+- leaf members [Master Data Services], attribute permissions
+- attributes [Master Data Services], leaf member attribute permissions
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: caaea89264b37bd2c92f9c72a1cb7644b67b1fd4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Autorisations de feuille (services de donn&#233;es de r&#233;f&#233;rence)
+# <a name="leaf-permissions-master-data-services"></a>Autorisations de feuille (services de données de référence)
   Les autorisations de feuille s'appliquent aux valeurs d'attribut pour tous les membres feuille d'une entité.  
   
  Pour les entités sans hiérarchies explicites activées, l'affectation d'une autorisation **Feuille** revient à affecter l'autorisation à l'entité.  
@@ -43,7 +48,7 @@ caps.handback.revision: 9
   
  Vous pouvez aussi combiner les autorisations Read, Create, Update et Delete. Lorsque les autorisations Create, Update et Delete sont attribuées, l’autorisation Read est attribuée automatiquement.  
   
-## Autorisations d'attribut  
+## <a name="attribute-permissions"></a>Autorisations d'attribut  
  Les autorisations d'attribut s'appliquent aux valeurs de l'attribut pour l'entité spécifique. Les utilisateurs avec des autorisations d'attribut uniquement ne peuvent pas ajouter ni supprimer des membres.  
   
 |Autorisation|Description|  
@@ -54,7 +59,7 @@ caps.handback.revision: 9
 |**Delete**|Aucun effet.|  
 |**Refuser**|L'attribut n'est pas affiché.<br /><br /> Remarque : vous ne pouvez pas refuser explicitement l’accès aux attributs Name et Code.|  
   
-### Exemple  
+### <a name="example"></a>Exemple  
  Pour l'entité Product, affectez l'autorisation **Mise à jour** à l'attribut Subcategory. Autorisation refuser à tous les autres attributs.  
   
 |Nom|Code|Subcategory (Mise à jour)|  
@@ -67,11 +72,12 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  Dans cet exemple, Subcategory est un attribut basé sur un domaine, basé sur l'entité SubcategoryList. Vous pouvez sélectionner une sous-catégorie différente pour Mountain-100, mais vous ne pouvez pas ajouter ni supprimer des membres dans l'entité SubcategoryList.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Affecter des autorisations d’objet de modèle &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [Autorisations consolidées &#40;Master Data Services&#41;](../Topic/Consolidated%20Permissions%20\(Master%20Data%20Services\).md)   
+    
  [Autorisations d’objet de modèle &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [Membres &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
- [Attributs &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
+ [Les membres &#40; Master Data Services &#41;](../master-data-services/members-master-data-services.md)   
+ [Attributs &#40; Master Data Services &#41;](../master-data-services/attributes-master-data-services.md)  
   
   
+

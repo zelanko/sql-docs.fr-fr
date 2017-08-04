@@ -1,28 +1,33 @@
 ---
-title: "Autorisations des membres de la hi&#233;rarchie (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "membres [Master Data Services], autorisations"
-  - "autorisations [Master Data Services], membres"
+title: "Autorisations des membres de hiérarchie (Master Data Services) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- members [Master Data Services], permissions
+- permissions [Master Data Services], members
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 caps.latest.revision: 11
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5df8a0f0c01842c00c3698146e84ed78e6320683
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Autorisations des membres de la hi&#233;rarchie (Master Data Services)
+# <a name="hierarchy-member-permissions-master-data-services"></a>Autorisations des membres de la hiérarchie (Master Data Services)
   Les autorisations des membres de la hiérarchie sont optionnelles et doivent être utilisées uniquement lorsque vous souhaitez qu'un utilisateur ait un accès limité à des membres spécifiques. Si vous n'affectez pas d'autorisations sous l'onglet **Membres de hiérarchie** , les autorisations de l'utilisateur sont basées uniquement sur celles affectées sous l'onglet **Modèles** .  
   
- Les autorisations des membres de la hiérarchie sont affectées dans l’interface utilisateur de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], dans la zone fonctionnelle **Autorisations d’accès** sous l’onglet **Membres de hiérarchie**. Ces autorisations déterminent les membres auxquels un utilisateur peut accéder dans la zone fonctionnelle **Explorateur** de l'interface utilisateur.  
+ Les autorisations des membres de la hiérarchie sont affectées dans l’interface utilisateur de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , dans la zone fonctionnelle **Autorisations d’accès** sous l’onglet **Membres de hiérarchie** . Ces autorisations déterminent les membres auxquels un utilisateur peut accéder dans la zone fonctionnelle **Explorateur** de l'interface utilisateur.  
   
  Sous l'onglet **Membres de hiérarchie** , chaque hiérarchie est représentée comme une arborescence. Lorsque vous affectez une autorisation à un nœud dans l'arborescence, tous les enfants héritent de cette autorisation à moins qu'elle ne soit affectée explicitement à un niveau inférieur.  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 11
   
 |Autorisation|Description|  
 |----------------|-----------------|  
-|**Lire**|Les membres sont affichés.<br /><br /> <br /><br /> Remarque : si vous affectez uniquement l’autorisation **Lire** à **Racine**, les membres sous **Racine** sont en lecture seule. Toutefois, dans les collections et hiérarchies explicites, l’utilisateur peut déplacer des membres vers **Racine** et ajouter de nouveaux membres à **Racine**.|  
+|**Lire**|Les membres sont affichés.<br /><br /> <br /><br /> Remarque : si vous affectez uniquement l’autorisation **Lire** à **Racine**, les membres sous **Racine** sont en lecture seule. Toutefois, dans les collections et hiérarchies explicites, l’utilisateur peut déplacer des membres vers **Racine** et ajouter de nouveaux membres à **Racine**.|  
 |**Créer**|L’autorisation Créer n’est pas disponible dans les autorisations des membres de la hiérarchie.|  
 |**Update**|Les membres sont affichés et l'utilisateur peut les modifier. L'utilisateur peut également déplacer les membres dans les collections ou hiérarchies explicites auxquelles les membres appartiennent.|  
 |**Delete**|Les membres sont affichés, et l’utilisateur peut les modifier.|  
@@ -46,10 +51,10 @@ caps.handback.revision: 11
 > [!NOTE]  
 >  Vous ne pouvez pas affecter d'autorisations de membre de hiérarchie à des hiérarchies récursives, des hiérarchies dérivées avec un niveau supérieur composé d'une hiérarchie explicite et des hiérarchies dérivées avec des niveaux masqués.  
   
-## Possibilité de chevauchement des autorisations  
+## <a name="possible-overlapping-permissions"></a>Possibilité de chevauchement des autorisations  
  Lorsque vous affectez une autorisation aux membres, vous devrez peut-être résoudre des problèmes de chevauchement des autorisations.  
   
-### Lorsqu'un membre appartient à plusieurs hiérarchies  
+### <a name="when-a-member-belongs-to-multiple-hierarchies"></a>Lorsqu'un membre appartient à plusieurs hiérarchies  
  Plusieurs hiérarchies peuvent contenir le même membre.  
   
 -   Si l’autorisation **Mettre à jour** est affectée à un nœud de hiérarchie et que l’autorisation **Lire**est affectée à un autre nœud, les membres du nœud disposent de l’autorisation **Lire**.  
@@ -58,14 +63,14 @@ caps.handback.revision: 11
   
 -   Si un nœud de la hiérarchie est doté d’une combinaison quelconque des autorisations **Créer**/**Lire**/**Update**/**Supprimer** , et que des autorisations **Refuser** sont affectées à un autre nœud, l’accès aux membres du nœud est refusé.  
   
-## Ressources externes  
+## <a name="external-resources"></a>Ressources externes  
  Billet de blog, [Améliorations de sécurité](http://go.microsoft.com/fwlink/p/?LinkId=615376), sur msdn.com.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Affecter des autorisations de membre de hiérarchie &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
  [Mode de détermination des autorisations &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [Membres &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
- [Hiérarchies &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md)   
- [Appliquer immédiatement des autorisations de membre &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
+ [Les membres &#40; Master Data Services &#41;](../master-data-services/members-master-data-services.md)   
+ [Hiérarchies &#40; Master Data Services &#41;](../master-data-services/hierarchies-master-data-services.md)   
+ [Appliquer immédiatement des autorisations de membre &#40; Master Data Services &#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
   
   

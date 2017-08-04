@@ -1,43 +1,48 @@
 ---
-title: "Attributs (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "attributs de forme libre [Master Data Services]"
-  - "attributs [Master Data Services], à propos des attributs"
-  - "attributs [Master Data Services], attributs de fichier"
-  - "attributs de fichier [Master Data Services]"
-  - "attributs [Master Data Services], attributs de forme libre"
-  - "attributs [Master Data Services]"
+title: Attributs (Master Data Services) | Documents Microsoft
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- free-form attributes [Master Data Services]
+- attributes [Master Data Services], about attributes
+- attributes [Master Data Services], file attributes
+- file attributes [Master Data Services]
+- attributes [Master Data Services], free-form attributes
+- attributes [Master Data Services]
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 55a658c7d4d0638c2dabf82ba910276f29178aa7
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Attributs (Master Data Services)
-  Les attributs sont des objets contenus dans des entités [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Les valeurs d'attribut décrivent les membres de l'entité. Un attribut peut être utilisé pour décrire un membre feuille, un membre consolidé ou une collection.  
+# <a name="attributes-master-data-services"></a>Attributs (Master Data Services)
+  Les attributs sont des objets contenus dans des entités [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Les valeurs d'attribut décrivent les membres de l'entité. Un attribut peut être utilisé pour décrire un membre feuille, un membre consolidé ou une collection.  
   
-## Relations entre les attributs et les autres objets de modèle  
+## <a name="how-attributes-relate-to-other-model-objects"></a>Relations entre les attributs et les autres objets de modèle  
  Vous pouvez considérer un attribut comme une colonne dans une table d'entités. Une valeur d'attribut est la valeur utilisée pour décrire un membre spécifique.  
   
- ![Entité Master Data Services représentée en tant que table](../master-data-services/media/mds-conc-entity-table.gif "Entité Master Data Services représentée en tant que table")  
+ ![Entité Master Data Services représentée en tant que Table](../master-data-services/media/mds-conc-entity-table.gif "entité Master Data Services représentée en tant que Table")  
   
  Lorsque vous créez une entité qui contient de nombreux attributs, vous pouvez les organiser en groupes d'attributs. Pour plus d’informations, consultez [Groupes d’attributs &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md).  
   
-## Attributs requis  
+## <a name="required-attributes"></a>Attributs requis  
  Lorsque vous créez une entité, les attributs Name et Code sont créés automatiquement. L'attribut Code requiert une valeur et doit être unique dans l'entité. Vous ne pouvez pas supprimer les attributs Name et Code.  
   
-## Types d'attributs  
- Il existe trois types d'attributs :  
+## <a name="attribute-types"></a>Types d'attributs  
+ Il existe trois types d'attributs :  
   
 -   Les attributs de forme libre qui acceptent comme entrées de forme libre du texte, des nombres, des dates et des liens.  
   
@@ -45,10 +50,10 @@ caps.handback.revision: 12
   
 -   Les attributs de fichier qui permettent de stocker des fichiers, des documents ou des images. Les attributs de fichier qui contribuent à la cohérence de vos données en requérant que les fichiers aient une extension spécifique. Les attributs de fichier ne peuvent pas empêcher un utilisateur malveillant de télécharger un fichier d'un type différent.  
   
-### Attributs numériques de forme libre  
- Les attributs numériques de forme libre nécessitent une gestion spéciale, car leurs valeurs sont limitées au type **SqlDouble**.  
+### <a name="numeric-free-form-attributes"></a>Attributs numériques de forme libre  
+ Les attributs numériques de forme libre nécessitent une gestion spéciale, car leurs valeurs sont limitées au type **SqlDouble** .  
   
- Par défaut, une valeur décimale **SqlDouble** est caractérisée par une précision à 15 chiffres, bien qu’un maximum de 17 chiffres soit maintenu en interne. La précision d'un nombre à virgule flottante a plusieurs conséquences :  
+ Par défaut, une valeur décimale **SqlDouble** est caractérisée par une précision à 15 chiffres, bien qu’un maximum de 17 chiffres soit maintenu en interne. La précision d'un nombre à virgule flottante a plusieurs conséquences :  
   
 -   Deux nombres à virgule flottante qui apparaissent égaux pour une précision particulière peuvent ne pas l'être parce que leurs chiffres de droite sont différents.  
   
@@ -56,12 +61,12 @@ caps.handback.revision: 12
   
 -   Il peut arriver qu’une valeur n’effectue pas *d’aller-retour* si un nombre à virgule flottante est utilisé. Une valeur est dite d'aller-retour lorsqu'une opération convertit un nombre à virgule flottante d'origine sous une autre forme, lorsque l'opération inverse retransforme la forme convertie en un nombre à virgule flottante et lorsque le dernier chiffre du nombre à virgule flottante est égal au chiffre du nombre à virgule flottante d'origine. L'aller-retour peut échouer parce qu'un ou plusieurs chiffres de droite sont perdus ou ont changé au cours d'une conversion.  
   
-## Exemples d'attributs  
- Dans l'exemple suivant, l'entité comporte les attributs suivants : Name, Code, Subcategory, StandardCost, ListPrice et FilePhoto. Ces attributs décrivent les membres. Chaque membre est représenté par une ligne unique de valeurs d'attribut.  
+## <a name="attribute-examples"></a>Exemples d'attributs  
+ Dans l'exemple suivant, l'entité comporte les attributs suivants : Name, Code, Subcategory, StandardCost, ListPrice et FilePhoto. Ces attributs décrivent les membres. Chaque membre est représenté par une ligne unique de valeurs d'attribut.  
   
- ![Table de l'entité Bike Product](../master-data-services/media/mds-conc-entity-table-w-data.gif "Table de l'entité Bike Product")  
+ ![Table d’entité produit des vélos](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike Table d’entité produit")  
   
- Dans l'exemple suivant, l'entité Product contient :  
+ Dans l'exemple suivant, l'entité Product contient :  
   
 -   Les attributs de forme libre Name, Code, StandardCost et ListPrice.  
   
@@ -71,9 +76,9 @@ caps.handback.revision: 12
   
  Subcategory est une entité utilisée comme un attribut basé sur un domaine de Product. Category est une entité utilisée comme un attribut basé sur un domaine de Subcategory. Comme l'entité Product, les entités Category et Subcategory contiennent chacune les attributs par défaut Name et Code.  
   
- ![Arborescence de l'entité Product](../master-data-services/media/mds-conc-entity-ui.gif "Arborescence de l'entité Product")  
+ ![Structure d’arborescence entité produit](../master-data-services/media/mds-conc-entity-ui.gif "arborescence entité de produit")  
   
-## Tâches associées  
+## <a name="related-tasks"></a>Tâches associées  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
@@ -88,7 +93,7 @@ caps.handback.revision: 12
 |Modifier l'ordre des attributs.|[Changer l'ordre des attributs](../master-data-services/change-the-order-of-attributes.md)|  
 |Créer un attribut de date.|[Créer un attribut de date &#40;Master Data Services&#41;](../master-data-services/create-a-date-attribute-master-data-services.md)|  
   
-## Contenu connexe  
+## <a name="related-content"></a>Contenu connexe  
   
 -   [Attributs basés sur un domaine &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
   
@@ -96,8 +101,5 @@ caps.handback.revision: 12
   
 -   [Membres &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
--   [Autorisations de feuille &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)  
-  
--   [Autorisations consolidées &#40;Master Data Services&#41;](../Topic/Consolidated%20Permissions%20\(Master%20Data%20Services\).md)  
-  
+-   [Autorisations de feuille &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)
   

@@ -1,31 +1,36 @@
 ---
-title: "Source CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.cdcsource.f1"
+title: Source CDC | Documents Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.cdcsource.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 031c5321bc17307a12403d974380eb710c841653
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Source CDC
+# <a name="cdc-source"></a>Source CDC
   La source CDC lit une plage de données modifiées dans les tables de modifications de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et apporte les modifications en aval aux autres composants SSIS.  
   
- La plage de données modifiées lue par la source CDC est appelée « plage de traitement de capture de données modifiées » et est déterminée par la tâche de contrôle de capture de données modifiées exécutée avant le démarrage du flux de données actuel. La plage de traitement de capture de données modifiées est dérivée de la valeur d'une variable de package qui gère l'état du traitement de capture de données modifiées pour un groupe de tables.  
+ La plage de données modifiées lue par la source CDC est appelée « plage de traitement de capture de données modifiées » et est déterminée par la tâche de contrôle de capture de données modifiées exécutée avant le démarrage du flux de données actuel. La plage de traitement de capture de données modifiées est dérivée de la valeur d'une variable de package qui gère l'état du traitement de capture de données modifiées pour un groupe de tables.  
   
  La source CDC extrait les données d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide d’une table de base de données, d’une vue ou d’une instruction SQL.  
   
- La source CDC utilise les configurations suivantes :  
+ La source CDC utilise les configurations suivantes :  
   
 -   Un gestionnaire de connexions ADO.NET [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour accéder à la base de données CDC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations sur la configuration de la connexion à la source CDC, consultez [Éditeur de source CDC &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md).  
   
@@ -37,29 +42,29 @@ caps.handback.revision: 11
   
 -   Le nom de la variable de package d'état de capture de données modifiées à partir de laquelle la plage de traitement de capture de données modifiées est déterminée. La source CDC ne modifie pas cette variable.  
   
- Les données retournées par la source CDC sont les mêmes que celles retournées par les fonctions CDC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **cdc.fn_cdc_get_all_changes_\<nom-instance-capture>** ou **cdc.fn_cdc_get_net_changes_\<nom-instance-capture>** (si disponibles). Le seul ajout facultatif est la colonne **__$initial_processing** qui indique si la plage de traitement actuelle peut chevaucher une charge initiale de la table. Pour plus d’informations sur la traitement initial, consultez [Tâche de contrôle de capture de données modifiées](../../integration-services/control-flow/cdc-control-task.md).  
+ Les données retournées par la Source CDC sont le même que celui retourné par la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des fonctions de capture de données modifiées **cdc.fn_cdc_get_all_changes_\<capture-instance-name >** ou **cdc.fn_cdc_get_net_changes_\<capture-instance-name >** (le cas échéant). Le seul ajout facultatif est la colonne **__$initial_processing** qui indique si la plage de traitement actuelle peut chevaucher une charge initiale de la table. Pour plus d’informations sur la traitement initial, consultez [Tâche de contrôle de capture de données modifiées](../../integration-services/control-flow/cdc-control-task.md).  
   
  La source CDC a une sortie normale et une sortie d'erreur.  
   
-## Gestion des erreurs  
+## <a name="error-handling"></a>Gestion des erreurs  
  la source CDC a une sortie d'erreur. La sortie d'erreur du composant contient les colonnes de sortie suivantes :  
   
--   **Code d’erreur** : la valeur est toujours -1.  
+-   **Code d’erreur**: la valeur est toujours -1.  
   
--   **Colonne d’erreur** : colonne source à l’origine de l’erreur (pour les erreurs de conversion).  
+-   **Colonne d’erreur**: colonne source à l’origine de l’erreur (pour les erreurs de conversion).  
   
--   **Colonnes de ligne d’erreur** : données d’enregistrement à l’origine de l’erreur.  
+-   **Colonnes de ligne d’erreur**: données d’enregistrement à l’origine de l’erreur.  
   
  Selon le comportement paramétré pour les erreurs, la source CDC prend en charge les erreurs de retour (conversion de données, troncation) qui se produisent pendant le processus d'extraction dans la sortie d'erreur. Pour plus d’informations, consultez [Éditeur de source CDC &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md).  
   
-## Prise en charge du type de données  
+## <a name="data-type-support"></a>Prise en charge du type de données  
  Le composant source CDC pour Microsoft prend en charge tous les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sont mappés à des types de données SSIS appropriés.  
   
-## Résolution des problèmes liés à la source CDC  
+## <a name="troubleshooting-the-cdc-source"></a>Résolution des problèmes liés à la source CDC  
  Les éléments suivants contiennent des informations utiles à la résolution des problèmes liés à la source CDC.  
   
-### Utilisez ce script pour isoler les problèmes et les reproduire dans SQL Server Management Studio  
- L'opération de la source CDC est régie par l'opération de la tâche de contrôle de capture de données modifiées exécutée avant d'appeler la source CDC. La tâche de contrôle de capture de données modifiées prépare la valeur de la variable de package d'état de capture de données modifiées de sorte qu'elle contienne le NSE de début et le NSE de fin. Elle exécute une fonction équivalente au script suivant :  
+### <a name="use-this-script-to-isolate-problems-and-reproduce-them-in-sql-server-management-studio"></a>Utilisez ce script pour isoler les problèmes et les reproduire dans SQL Server Management Studio  
+ L'opération de la source CDC est régie par l'opération de la tâche de contrôle de capture de données modifiées exécutée avant d'appeler la source CDC. La tâche de contrôle de capture de données modifiées prépare la valeur de la variable de package d'état de capture de données modifiées de sorte qu'elle contienne le NSE de début et le NSE de fin. Elle exécute une fonction équivalente au script suivant :  
   
 ```  
 use <cdc-enabled-database-name>  
@@ -72,33 +77,33 @@ use <cdc-enabled-database-name>
 @end_lsn, '<mode>')  
 ```  
   
- où :  
+ où :  
   
--   \<cdc-enabled-database-name> est le nom de la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenant les tables de modifications.  
+-   \<CDC-activé-base de données-name > est le nom de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données contenant les tables de modifications.  
   
--   \<value-from-state-cs> est la valeur affichée dans la variable d'état de capture de données modifiées sous la forme CS/\<value-from-state-cs>/ (CS correspond à Current-processing-range-Start, début de la plage de traitement actuelle).  
+-   \<valeur-from-state-cs > est la valeur qui apparaît dans la variable d’état de capture de données modifiées sous la forme CS /\<, valeur-from-state-cs > / (CS signifie en cours-traitement--début de la plage).  
   
--   \<value-from-state-ce> est la valeur affichée dans la variable d'état de capture de données modifiées sous la forme CE/\<value-from-state-cs>/ (CE correspond à Current-processing-range-End, fin de la plage de traitement actuelle).  
+-   \<valeur d’état de ce > est la valeur qui apparaît dans la variable d’état de capture de données modifiées sous la forme CE /\<, valeur-from-state-cs > / (CE signifie en cours-traitement--fin de la plage).  
   
--   \<mode> correspond aux modes de traitement de capture de données modifiées. Les modes de traitement ont l’une des valeurs suivantes : **Tout**, **Tout avec les anciennes valeurs**, **NET**, **Net avec masque de mise à jour** et **Net avec fusion**.  
+-   \<mode > sont les modes de traitement de capture de données modifiées. Les modes de traitement ont l’une des valeurs suivantes : **Tout**, **Tout avec les anciennes valeurs**, **NET**, **Net avec masque de mise à jour**et **Net avec fusion**.  
   
  Ce script aide à isoler les problèmes en les reproduisant dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], où il est facile de reproduire et d'identifier des erreurs.  
   
-#### Message d'erreur SQL Server  
- Le message suivant peut être retourné par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
+#### <a name="sql-server-error-message"></a>Message d'erreur SQL Server  
+ Le message suivant peut être retourné par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
- **Nombre d'arguments fournis insuffisants pour la procédure ou la fonction cdc.fn_cdc_get_net_changes_\<..>.**  
+ **Un nombre insuffisant d’arguments fourni pour la procédure ou la fonction cdc.fn_cdc_get_net_changes_\<... >.**  
   
  Cette erreur n'indique pas qu'un argument est manquant. Elle signifie que les valeurs du NSE de début ou du NSE de fin dans la variable d'état de capture de données modifiées ne sont pas valides.  
   
-## Configuration de la source CDC  
+## <a name="configuring-the-cdc-source"></a>Configuration de la source CDC  
  Vous pouvez configurer la source CDC par programme ou par le biais du concepteur SSIS.  
   
  Pour plus d’informations, consultez l’une des rubriques suivantes :  
   
 -   [Éditeur de source CDC &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
--   [Éditeur de source CDC &#40;page Colonnes&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+-   [Éditeur de Source de capture de données modifiées &#40; Page colonnes &#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
 -   [Éditeur de source CDC &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
@@ -106,15 +111,15 @@ use <cdc-enabled-database-name>
   
  Pour ouvrir la boîte de dialogue **Éditeur avancé** :  
   
--   Dans l’écran **Flux de données** de votre projet [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)], cliquez avec le bouton droit sur la source CDC, puis sélectionnez **Afficher l’éditeur avancé**.  
+-   Dans l’écran **Flux de données** de votre projet [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] , cliquez avec le bouton droit sur la source CDC, puis sélectionnez **Afficher l’éditeur avancé**.  
   
- Pour plus d’informations sur les propriétés que vous pouvez définir dans la boîte de dialogue **Éditeur avancé**, consultez [Propriétés personnalisées des sources CDC](../../integration-services/data-flow/cdc-source-custom-properties.md).  
+ Pour plus d’informations sur les propriétés que vous pouvez définir dans la boîte de dialogue **Éditeur avancé** , consultez [Propriétés personnalisées des sources CDC](../../integration-services/data-flow/cdc-source-custom-properties.md).  
   
-## Dans cette section  
+## <a name="in-this-section"></a>Dans cette section  
   
 -   [Éditeur de source CDC &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
--   [Éditeur de source CDC &#40;page Colonnes&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+-   [Éditeur de Source de capture de données modifiées &#40; Page colonnes &#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
 -   [Éditeur de source CDC &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
@@ -122,8 +127,8 @@ use <cdc-enabled-database-name>
   
 -   [Extraire des données modifiées à l'aide de la source de capture de données modifiées](../../integration-services/data-flow/extract-change-data-using-the-cdc-source.md)  
   
-## Contenu connexe  
+## <a name="related-content"></a>Contenu connexe  
   
--   Entrée de blog, [Processing Modes for the CDC Source](http://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/) (Modes de traitement pour la source CDC), sur mattmasson.com.  
+-   Entrée de blog, [Processing Modes for the CDC Source](http://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)(Modes de traitement pour la source CDC), sur mattmasson.com.  
   
   

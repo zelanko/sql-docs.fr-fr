@@ -1,30 +1,35 @@
 ---
-title: "Transformation d&#39;audit | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.audittrans.f1"
-helpviewer_keywords: 
-  - "données d'environnement dans les packages [Integration Services]"
-  - "transformation d'audit"
+title: "Transformation d’audit | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.audittrans.f1
+helpviewer_keywords:
+- environment data in packages [Integration Services]
+- Audit transformation
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 caps.latest.revision: 46
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c495bd9c116e10877f79f165f0f582938b0347ad
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transformation d&#39;audit
+# <a name="audit-transformation"></a>transformation d'audit
   La transformation d'audit permet au flux de données d'un package de contenir des données relatives à l'environnement d'exécution du package. Par exemple, le nom du package, de l'ordinateur et de l'opérateur peuvent être ajoutés au flux de données. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] comprend des variables système qui fournissent ces informations.  
   
-## Variables système  
+## <a name="system-variables"></a>Variables système  
  Le tableau suivant décrit les variables système utilisables par la transformation d'audit.  
   
 |Variable système|Index|Description|  
@@ -39,7 +44,7 @@ caps.handback.revision: 46
 |**TaskName**|7|Nom de la tâche de flux de données à laquelle la transformation d'audit est associée.|  
 |**TaskId**|8|Identificateur unique de la tâche de flux de données.|  
   
-## Configuration de la transformation d'audit  
+## <a name="configuration-of-the-audit-transformation"></a>Configuration de la transformation d'audit  
  Pour configurer la transformation d'audit, vous devez indiquer le nom d'une nouvelle colonne de sortie à ajouter à la sortie de la transformation, puis mapper la variable système avec la colonne de sortie. Vous pouvez mapper une même variable système avec plusieurs colonnes.  
   
  Cette transformation a une entrée et une sortie. Elle ne prend pas en charge de sortie d'erreur.  
@@ -48,9 +53,9 @@ caps.handback.revision: 46
   
  Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de transformation d'audit** , consultez [Audit Transformation Editor](../../../integration-services/data-flow/transformations/audit-transformation-editor.md).  
   
- La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
+ La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
   
--   [Propriétés communes](../Topic/Common%20Properties.md)  
+-   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriétés personnalisées des transformations](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

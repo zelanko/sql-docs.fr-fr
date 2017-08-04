@@ -1,26 +1,31 @@
 ---
-title: "Cr&#233;er un index (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Créer un Index (Master Data Services) | Documents Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a4d03606ab8a45d6c7b326fd64b6900ac7e67356
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Cr&#233;er un index (Master Data Services)
+# <a name="create-an-index-master-data-services"></a>Créer un index (Master Data Services)
   Créez un index personnalisé sur une liste d’attributs que vous interrogez fréquemment, afin d’améliorer les performances des requêtes.  
   
-## Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle Administration de système. Pour plus d’informations, consultez [Autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -49,7 +54,7 @@ caps.handback.revision: 6
   
 |Nom de la colonne|Description|  
 |-----------------|-----------------|  
-|État|État de l’index.<br /><br /> Quand vous cliquez sur **Enregistrer**, l’image ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status") indique que l’index est en cours de mise à jour.<br /><br /> En cas d’erreur pendant la création ou la modification d’un index, l’image ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status") s’affiche.<br /><br /> Dans le cas contraire, l’état présente la valeur OK, et l’image ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status") s’affiche.|  
+|État|État de l’index.<br /><br /> Lorsque vous cliquez sur **enregistrer**, le ![icône de mise à jour d’état](../master-data-services/media/mds-statusicon-updating.png "icône de mise à jour d’état") image s’affiche, indiquant que la mise à jour de l’index.<br /><br /> S’il existe des erreurs lors de la création ou la modification d’un index, le ![icône de statut d’erreur](../master-data-services/media/mds-statusicon-error.png "icône de statut d’erreur") image s’affiche.<br /><br /> Dans le cas contraire, l’état est OK et le ![icône pour l’état OK](../master-data-services/media/mds-statusicon-ok.png "icône pour l’état OK") image s’affiche.|  
 |Nom|Nom de l'index.|  
 |Est unique|Indique si l’index est unique.|  
 |Sur les attributs|Affiche les noms complets des attributs sur lesquels l’index est défini.|  
@@ -64,10 +69,10 @@ caps.handback.revision: 6
   
 -   **Le**: date et heure de mise à jour de l’index.  
   
-## Étapes suivantes  
+## <a name="next-steps"></a>Étapes suivantes  
  [Modifier et supprimer un index &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-index-master-data-services.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Index personnalisé &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)  
   
   

@@ -1,26 +1,31 @@
 ---
-title: "&#201;diteur de t&#226;che de traitement d&#39;Analysis Services (page Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.asprocessingtask.as.f1"
-helpviewer_keywords: 
-  - "Éditeur de tâche de traitement d'Analysis Services"
+title: "Éditeur de tâche de traitement (Page Analysis Services) de Analysis Services | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.asprocessingtask.as.f1
+helpviewer_keywords:
+- Analysis Services Processing Task Editor
 ms.assetid: 5612be78-57cf-4e4e-92cf-6bfa9f971040
 caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e5b90a26fb4477243c5a48b87d134ff8129430ab
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# &#201;diteur de t&#226;che de traitement d&#39;Analysis Services (page Analysis Services)
+# <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Éditeur de tâche de traitement d'Analysis Services (page Analysis Services)
   Utilisez la page **Analysis Services** de la boîte de dialogue **Éditeur de tâche de traitement d’Analysis Services** pour définir un gestionnaire de connexions Analysis Services, sélectionner les objets analytiques à traiter et définir les options de traitement et de gestion des erreurs.  
   
  Lors du traitement des modèles tabulaires, gardez à l'esprit les points suivants :  
@@ -35,14 +40,14 @@ caps.handback.revision: 29
   
  Pour en savoir plus sur cette tâche, consultez [Tâche de traitement d’Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md).  
   
-## Options  
+## <a name="options"></a>Options  
  **Gestionnaire de connexions Analysis Services**  
  Sélectionnez un gestionnaire de connexions Analysis Services existant dans la liste ou cliquez sur **Nouveau** pour créer un nouveau gestionnaire de connexions.  
   
  **Nouveau**  
  Créez un nouveau gestionnaire de connexions Analysis Services.  
   
- **Rubriques connexes :** [Gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Référence de l’interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Rubriques connexes :** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Référence de l’interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Liste d'objets**  
  |Propriété|Description|  
@@ -61,7 +66,7 @@ caps.handback.revision: 29
  **Analyse d'impact**  
  Analyse l'impact sur l'objet sélectionné.  
   
- **Rubriques connexes :** [Boîte de dialogue Analyse d’impact &#40;Analysis Services - Données multidimensionnelles&#41;](../Topic/Impact%20Analysis%20Dialog%20Box%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)  
+ **Rubriques connexes :** [Boîte de dialogue Analyse d’impact &#40;Analysis Services - Données multidimensionnelles&#41;](http://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **Résumé des paramètres du traitement**  
  |Propriété|Description|  
@@ -75,11 +80,11 @@ caps.handback.revision: 29
  **Modifier les paramètres**  
  Change les options de traitement et la gestion des erreurs dans les clés de dimension.  
   
- **Rubriques connexes :** [Boîte de dialogue Modifier les paramètres &#40;Analysis Services - Données multidimensionnelles&#41;](../Topic/Change%20Settings%20Dialog%20Box%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)  
+ **Rubriques connexes :** [Boîte de dialogue Modifier les paramètres &#40;Analysis Services - Données multidimensionnelles&#41;](http://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
   
-## Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche de traitement d’Analysis Services &#40;page Général&#41;](../../integration-services/control-flow/analysis-services-processing-task-editor-general-page.md)   
- [Tâche DDL d'exécution de SQL Server Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de tâche de traitement Analysis Services &#40; Page Général &#41;](../../integration-services/control-flow/analysis-services-processing-task-editor-general-page.md)   
+ [Tâche DDL d’exécution d’Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
   

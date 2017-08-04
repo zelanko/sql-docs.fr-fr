@@ -1,30 +1,35 @@
 ---
-title: "Cr&#233;er un attribut bas&#233; sur un domaine (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "attributs basés sur un domaine [Master Data Services], création"
-  - "création d'attributs basés sur un domaine [Master Data Services]"
-  - "attributs [Master Data Services], création d’attributs basés sur un domaine"
+title: "Créer un attribut basé sur un domaine (Master Data Services) | Documents Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/25/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- domain-based attributes [Master Data Services], creating
+- creating domain-based attributes [Master Data Services]
+- attributes [Master Data Services], creating domain-based attributes
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 caps.latest.revision: 12
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 963b974e68187ecf4f42ad06c90ff1cb0ab3aa67
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Cr&#233;er un attribut bas&#233; sur un domaine (Master Data Services)
+# <a name="create-a-domain-based-attribute-master-data-services"></a>Créer un attribut basé sur un domaine (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez un attribut basé sur un domaine pour remplir les valeurs d'un attribut avec les membres d'une entité.  
   
-## Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -35,12 +40,12 @@ caps.handback.revision: 12
   
 -   Une entité doit exister pour créer l'attribut qui lui est destiné. Pour plus d’informations, consultez [Créer une entité &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).  
   
-## Informations sur les attributs  
+## <a name="attribute-information"></a>Informations sur les attributs  
  Pour chaque attribut créé, une ligne comportant sept colonnes est ajoutée à la grille. Le tableau suivant décrit ces colonnes.  
   
 |Colonne|Description|  
 |------------|-----------------|  
-|État|État de l’attribut.<br /><br /> Quand vous cliquez sur Enregistrer, l’image ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status") indique que l’attribut est en cours de mise à jour.<br /><br /> En cas d’erreur pendant la création ou la modification d’un attribut, l’image ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status") s’affiche.<br /><br /> Dans le cas contraire, l’état présente la valeur OK et l’image ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status") s’affiche.|  
+|État|État de l’attribut.<br /><br /> Lorsque vous cliquez sur Enregistrer, la ![icône de mise à jour d’état](../master-data-services/media/mds-statusicon-updating.png "icône de mise à jour d’état") image s’affiche, indiquant que l’attribut est mise à jour.<br /><br /> S’il existe des erreurs lors de la création ou modification d’un attribut, le ![icône de statut d’erreur](../master-data-services/media/mds-statusicon-error.png "icône de statut d’erreur") image s’affiche.<br /><br /> Dans le cas contraire, l’état est OK et la ![icône pour l’état OK](../master-data-services/media/mds-statusicon-ok.png "icône pour l’état OK") image s’affiche.|  
 |Nom|Nom de l'attribut.|  
 |Nom complet|Nom de l’attribut.|  
 |Description|Description de l’attribut.|  
@@ -58,7 +63,7 @@ caps.handback.revision: 12
   
 -   **Le**: date et heure de la dernière mise à jour de l’attribut.  
   
-### Pour créer un attribut basé sur un domaine  
+### <a name="to-create-a-domain-based-attribute"></a>Pour créer un attribut basé sur un domaine  
   
 1.  Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cliquez sur **Administration de système**.  
   
@@ -82,9 +87,9 @@ caps.handback.revision: 12
   
 8.  Dans la zone **Largeur d'affichage en pixels** , tapez la largeur de la colonne d'attribut à afficher dans la grille **Explorateur** .  
   
-9. Dans la liste **Type d’attribut**, sélectionnez **Basé sur un domaine**.  
+9. Dans la liste **Type d’attribut** , sélectionnez **Basé sur un domaine**.  
   
-10. Dans la liste **Entité de domaine** , sélectionnez l’entité à utiliser pour renseigner les valeurs d’attribut.  
+10. Dans la liste **Entité de domaine** , sélectionnez l’entité à utiliser pour renseigner les valeurs d’attribut. 
   
 11. **Facultatif, pour les attributs basés sur un domaine des membres feuille.** Sélectionnez un attribut parent de filtre utilisé pour limiter les valeurs autorisées pour l’attribut basé sur un domaine.  
   
@@ -96,10 +101,10 @@ caps.handback.revision: 12
   
 13. Cliquez sur **Enregistrer**.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Attributs basés sur un domaine &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
- [Créer une hiérarchie dérivée &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [Modifier le nom d’un attribut et un type de données &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [Créer une hiérarchie dérivée &#40; Master Data Services &#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
+ [Modifier un nom d’attribut et Type de données &#40; Master Data Services &#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [Supprimer un attribut &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)  
   
   

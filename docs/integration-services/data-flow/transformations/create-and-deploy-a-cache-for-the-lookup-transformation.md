@@ -1,26 +1,31 @@
 ---
-title: "Cr&#233;er et d&#233;ployer un cache pour la transformation de recherche | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "création de fichiers cache pour la transformation de recherche"
-  - "déploiement de fichiers cache pour la transformation de recherche"
-  - "fichiers cache pour la transformation de recherche"
+title: "Créer et déployer un Cache pour la Transformation de recherche | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- creating cache files for Lookup transformation
+- deploying cache files for Lookup transformation
+- Lookup transformation cache files
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
+ms.openlocfilehash: 88d6515c29c789c12818dfc51c86c5b1d4537247
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Cr&#233;er et d&#233;ployer un cache pour la transformation de recherche
+# <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Créer et déployer un cache pour la transformation de recherche
   Vous pouvez créer et déployer un fichier cache (.caw) pour la transformation de recherche. Le dataset de référence est stocké dans le fichier cache.  
   
  La transformation de recherche effectue des recherches en joignant les données des colonnes d’entrée d’une source de données connectée aux colonnes du dataset de référence.  
@@ -29,19 +34,19 @@ caps.handback.revision: 23
   
  Pour en savoir plus sur la transformation de recherche, consultez [Transformation de recherche](../../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
-### Pour créer un fichier cache  
+### <a name="to-create-a-cache-file"></a>Pour créer un fichier cache  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] qui contient le package souhaité, puis ouvrez le package.  
   
-2.  Sous l’onglet **Flux de contrôle**, ajoutez une tâche de flux de données.  
+2.  Sous l’onglet **Flux de contrôle** , ajoutez une tâche de flux de données.  
   
-3.  Sous l’onglet **Flux de données**, ajoutez une transformation du cache au flux de données, puis connectez la transformation à une source de données.  
+3.  Sous l’onglet **Flux de données** , ajoutez une transformation du cache au flux de données, puis connectez la transformation à une source de données.  
   
      Configurez la source de données selon vos besoins.  
   
-4.  Double-cliquez sur la transformation du cache puis, dans **l’Éditeur de transformation du cache**, dans la page **Gestionnaire de connexions**, cliquez sur **Nouveau** pour créer un gestionnaire de connexions du cache.  
+4.  Double-cliquez sur la transformation du cache puis, dans **l’Éditeur de transformation du cache**, dans la page **Gestionnaire de connexions** , cliquez sur **Nouveau** pour créer un gestionnaire de connexions du cache.  
   
-5.  Dans **l’Éditeur du gestionnaire de connexions du cache**, sous l’onglet **Général**, configurez le gestionnaire de connexions du cache pour enregistrer le cache en sélectionnant les options suivantes :  
+5.  Dans **l’Éditeur du gestionnaire de connexions du cache**, sous l’onglet **Général** , configurez le gestionnaire de connexions du cache pour enregistrer le cache en sélectionnant les options suivantes :  
   
     1.  Sélectionnez **Utiliser le cache de fichier**.  
   
@@ -50,9 +55,9 @@ caps.handback.revision: 23
      Le système crée le fichier lorsque vous exécutez le package.  
   
     > [!NOTE]  
-    >  Le niveau de protection du package ne s'applique pas au fichier cache. Si le fichier cache contient des informations sensibles, utilisez une liste de contrôle d'accès (ACL) pour restreindre l'accès à l'emplacement ou au dossier dans lequel vous stockez le fichier. Vous devez autoriser l'accès à certains comptes uniquement. Pour plus d’informations, consultez [Accéder aux fichiers utilisés par des packages](../../../integration-services/security/access-to-files-used-by-packages.md).  
+    >  Le niveau de protection du package ne s'applique pas au fichier cache. Si le fichier cache contient des informations sensibles, utilisez une liste de contrôle d'accès (ACL) pour restreindre l'accès à l'emplacement ou au dossier dans lequel vous stockez le fichier. Vous devez autoriser l'accès à certains comptes uniquement. Pour plus d’informations, consultez [Accéder aux fichiers utilisés par des packages](../../../integration-services/security/security-overview-integration-services.md#files).  
   
-6.  Cliquez sur l’onglet **Colonnes**, puis spécifiez quelles colonnes sont les colonnes d’index en utilisant l’option **Position d’index**.  
+6.  Cliquez sur l’onglet **Colonnes** , puis spécifiez quelles colonnes sont les colonnes d’index en utilisant l’option **Position d’index** .  
   
      Pour les colonnes qui ne sont pas des index, la position d'index est 0. Pour les colonnes d'index, la position d'index est un nombre séquentiel, positif.  
   
@@ -67,17 +72,17 @@ caps.handback.revision: 23
   
 8.  Exécutez le package.  
   
-### Pour déployer un fichier cache  
+### <a name="to-deploy-a-cache-file"></a>Pour déployer un fichier cache  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] qui contient le package souhaité, puis ouvrez le package.  
   
 2.  Vous pouvez éventuellement créer une configuration de package. Pour plus d’informations, consultez [Créer des configurations de package](../../../integration-services/packages/create-package-configurations.md).  
   
-3.  Ajoutez le fichier cache au projet en procédant comme suit :  
+3.  Ajoutez le fichier cache au projet en procédant comme suit :  
   
-    1.  Dans l'Explorateur de solutions, sélectionnez le projet que vous avez ouvert à l'étape 1.  
+    1.  Dans l'Explorateur de solutions, sélectionnez le projet que vous avez ouvert à l'étape 1.  
   
-    2.  Dans le menu **Projet**, cliquez sur **Ajouter un élément existant**.  
+    2.  Dans le menu **Projet** , cliquez sur **Ajouter un élément existant**.  
   
     3.  Sélectionnez le fichier de cache, puis cliquez sur **Ajouter**.  
   
@@ -85,11 +90,11 @@ caps.handback.revision: 23
   
 4.  Configurez le projet afin de créer un utilitaire de déploiement, puis créez le projet. Pour plus d’informations, consultez [Créer un utilitaire de déploiement](../../../integration-services/packages/create-a-deployment-utility.md).  
   
-     Un fichier manifeste, \<*nom_projet*>.SSISDeploymentManifest.xml, est créé, qui répertorie les différents fichiers du projet, les packages et les configurations des packages.  
+     Un fichier manifeste, \< *nom du projet*>. SSISDeploymentManifest.xml, est créé qui répertorie les divers fichiers dans le projet, les packages et les configurations du package.  
   
 5.  Déployez le package dans le système de fichiers. Pour plus d’informations, consultez [Déployer des packages à l’aide de l’utilitaire de déploiement](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer un utilitaire de déploiement](../../../integration-services/packages/create-a-deployment-utility.md)  
   
   

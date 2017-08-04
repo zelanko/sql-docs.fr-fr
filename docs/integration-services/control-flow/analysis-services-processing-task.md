@@ -1,27 +1,32 @@
 ---
-title: "T&#226;che de traitement d&#39;Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.asprocessingtask.f1"
-helpviewer_keywords: 
-  - "tâche de traitement d'Analysis Services"
-  - "traitement des objets [Integration Services]"
+title: "Tâche de traitement de Analysis Services | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.asprocessingtask.f1
+helpviewer_keywords:
+- Analysis Services Processing task
+- processing objects [Integration Services]
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 caps.latest.revision: 52
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2f607edcad955a4d0a22cc246a13d9d97a06fe24
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# T&#226;che de traitement d&#39;Analysis Services
+# <a name="analysis-services-processing-task"></a>tâche de traitement d'Analysis Services
   La tâche de traitement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] traite les objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tels que les modèles tabulaires, les cubes, les dimensions et les modèles d'exploration de données.  
   
  Lors du traitement des modèles tabulaires, gardez à l'esprit les points suivants :  
@@ -40,7 +45,7 @@ caps.handback.revision: 52
   
 -   [Tâche de requête d'exploration de données](../../integration-services/control-flow/data-mining-query-task.md)  
   
-## Traitement des objets  
+## <a name="object-processing"></a>Traitement des objets  
  Plusieurs objets peuvent être traités simultanément. Pour traiter plusieurs objets, vous définissez des paramètres qui s'appliquent au traitement de tous les objets du traitement.  
   
  Les objets d'un traitement peuvent être traités de façon séquentielle ou parallèle. Si le traitement ne contient pas d'objets nécessitant un traitement séquentiel, un traitement parallèle peut accélérer la procédure. Si des objets du traitement sont traités en parallèle, vous pouvez configurer la tâche afin qu'elle détermine le nombre d'objets à traiter de la sorte ou bien spécifier manuellement le nombre d'objets à traiter simultanément. Si des objets sont traités de façon séquentielle, vous pouvez définir un attribut de transaction sur le traitement en inscrivant tous les objets dans une même transaction ou en utilisant une transaction distincte pour chaque objet du traitement.  
@@ -52,15 +57,15 @@ caps.handback.revision: 52
  Cette tâche vous permet également de configurer la gestion des erreurs de clés de dimension. Par exemple, la tâche peut ignorer les erreurs ou s'arrêter dès qu'un certain nombre d'erreurs se sont produites. La tâche peut utiliser la configuration d'erreur par défaut ou vous pouvez construire une configuration d'erreur personnalisée. Dans la configuration d'erreur personnalisée, vous indiquez les conditions d'erreur et comment la tâche gère les erreurs. Par exemple, vous pouvez spécifier que l'exécution de la tâche doit s'arrêter dès la quatrième erreur ou indiquer comment la tâche doit gérer les valeurs de clé **NULL** . La configuration d'erreur personnalisée peut également comprendre le chemin d'accès d'un journal d'erreurs.  
   
 > [!NOTE]  
->  La tâche de traitement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne peut traiter que les objets analytiques créés à l'aide des outils [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  La tâche de traitement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne peut traiter que les objets analytiques créés à l'aide des outils [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Cette tâche est fréquemment utilisée avec une tâche d'insertion en bloc qui charge des données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou avec une tâche de flux qui met en œuvre un flux chargeant des données dans une table. Par exemple, la tâche de flux peut avoir un flux qui extrait des données d’une base de données OLTP (Online Transaction Processing) et les charge dans une table de faits d’un entrepôt de données, à la suite de quoi la tâche de traitement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est appelée pour traiter le cube basé sur l’entrepôt de données.  
   
  La tâche de traitement d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise un gestionnaire de connexions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour se connecter à une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour plus d'informations, consultez [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
   
-## Gestion des erreurs  
+## <a name="error-handling"></a>Gestion des erreurs  
   
-## Configuration de la tâche de traitement Analysis Services  
+## <a name="configuration-of-the-analysis-services-processing-task"></a>Configuration de la tâche de traitement Analysis Services  
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
@@ -73,9 +78,9 @@ caps.handback.revision: 52
   
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d'une tâche ou d'un conteneur](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Configuration par programmation de la tâche de traitement Analysis Services  
+## <a name="programmatic-configuration-of-the-analysis-services-processing-task"></a>Configuration par programmation de la tâche de traitement Analysis Services  
  Pour plus d'informations sur la définition par programmation de ces propriétés, cliquez sur l'une des rubriques suivantes :  
   
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.DTSProcessingTask>  

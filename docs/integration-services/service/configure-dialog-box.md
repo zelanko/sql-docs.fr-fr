@@ -1,26 +1,31 @@
 ---
-title: "Bo&#238;te de dialogue Configurer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.configure.f1"
-  - "sql13.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1"
-  - "sql13.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1"
+title: "Boîte de dialogue Configurer | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.configure.f1
+- sql13.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1
+- sql13.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f9587abfb97ec048985ac28de0e7dc585e2bea61
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Bo&#238;te de dialogue Configurer
+# <a name="configure-dialog-box"></a>Boîte de dialogue Configurer
   Utilisez la boîte de dialogue **Configurer** pour configurer les paramètres, les gestionnaires de connexions, ainsi que les références aux environnements, pour les packages et les projets.  
   
  **Que voulez-vous faire ?**  
@@ -48,7 +53,7 @@ caps.handback.revision: 11
 ##  <a name="parameter"></a> Définir les options de la page Paramètres  
  Utilisez la page **Paramètres** pour afficher les noms et valeurs des paramètres, ainsi que pour modifier ces valeurs.  
   
- Sélectionnez l’étendue des paramètres affichés sous les onglets **Paramètres** et **Gestionnaires de connexions**, dans la liste déroulante **Étendue**.  
+ Sélectionnez l’étendue des paramètres affichés sous les onglets **Paramètres** et **Gestionnaires de connexions** , dans la liste déroulante **Étendue** .  
   
  Vous trouverez ci-dessous la liste des options de l'onglet **Paramètres** .  
   
@@ -87,7 +92,7 @@ caps.handback.revision: 11
  Indique le dossier qui contient l'environnement.  
   
  **Ouvrir**  
- Cliquez pour ouvrir la boîte de dialogue **Propriétés d’environnement**.  
+ Cliquez pour ouvrir la boîte de dialogue **Propriétés d’environnement** .  
   
  **Ajouter**  
  Cliquez pour ajouter une référence à un environnement. Dans la boîte de dialogue **Parcourir les environnements** , cliquez sur un environnement, puis cliquez sur **OK**.  
@@ -95,6 +100,6 @@ caps.handback.revision: 11
  Vous pouvez sélectionner un environnement contenu dans n'importe quel dossier de projet sous le nœud **SSISDB** .  
   
  **Supprimer**  
- Cliquez sur un environnement répertorié dans la zone **Références**, puis sur **Supprimer**.  
+ Cliquez sur un environnement répertorié dans la zone **Références** , puis sur **Supprimer**.  
   
   

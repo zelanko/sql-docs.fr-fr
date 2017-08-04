@@ -1,25 +1,30 @@
 ---
-title: "Index personnalis&#233; (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Index personnalisé (Master Data Services) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccb20ed7018a941ccc5e928d7fc9488377e3a125
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Index personnalis&#233; (Master Data Services)
+# <a name="custom-index-master-data-services"></a>Index personnalisé (Master Data Services)
   Les index personnalisés créent un index non cluster sur un attribut spécifique (index unique) ou sur une liste d’attributs (index composite) dans une entité. En règle générale, les index améliorent les performances du processus d’exécution de requêtes. Pour plus d’informations sur les index SQL Server, consultez [Index](../relational-databases/indexes/indexes.md).  
   
-## Type d’index  
+## <a name="type-of-indexes"></a>Type d’index  
  Les types d’index personnalisés multiples que vous pouvez créer pour chaque entité sont les suivants :  
   
 -   Index unique  
@@ -28,7 +33,7 @@ caps.handback.revision: 9
   
  Un index unique garantit le fait que la colonne indexée ne contient aucune valeur en double. Dans le cas des index composites uniques, l’index garantit l’unicité de chaque combinaison de valeurs dans la liste d’attributs sélectionnés. La création d’un index unique est impossible s’il existe des valeurs en double pour les attributs sélectionnés.  
   
-## Règles  
+## <a name="rules"></a>Règles  
  Les règles applicables aux index personnalisés, qu’ils soient uniques ou non uniques, sont répertoriées ci-après.  
   
 -   Pour créer un index personnalisé, veillez à sélectionner au moins un attribut.  
@@ -40,11 +45,11 @@ caps.handback.revision: 9
   
 -   Vous pouvez inclure des attributs dans plusieurs index personnalisés à condition que chacun des autres index comprenne au moins un attribut différent. Dans le cas contraire, les index seront identiques.  
   
--   Si vous créez un index contenant de nombreux attributs ou des attributs de grande taille, et que la taille totale des attributs sélectionnés dépasse la taille de clé d’index maximale (900 octets), vous ne pourrez pas enregistrer l’index.  
+-   Si vous créez un index contenant de nombreux attributs ou des attributs de grande taille, et que la taille totale des attributs sélectionnés dépasse la taille de clé d’index maximale (900 octets), vous ne pourrez pas enregistrer l’index.  
   
 -   Vous pouvez créer un index personnalisé sur les attributs de membre feuille, à l’exclusion des attributs de fichier.  
   
--   Si vous souhaitez supprimer un attribut inclus dans un index personnalisé, les règles suivantes s’appliquent :  
+-   Si vous souhaitez supprimer un attribut inclus dans un index personnalisé, les règles suivantes s’appliquent :  
   
     -   Si l’index n’est créé que sur un seul attribut (index unique), l’attribut et l’index sont tous deux supprimés.  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 9
   
 -   Le type d’un attribut inclus dans un index personnalisé n’est pas modifiable.  
   
-## Tâches associées  
+## <a name="related-tasks"></a>Tâches associées  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  

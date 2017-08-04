@@ -1,40 +1,45 @@
 ---
-title: "Cr&#233;er un InfoCube pour les donn&#233;es de transaction | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Créer un InfoCube pour les données de Transaction | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3abae6f0ecf09b1b0156bedfb584570ed7bb45cd
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Cr&#233;er un InfoCube pour les donn&#233;es de transaction
+# <a name="create-infocube-for-transaction-data"></a>Créer un InfoCube pour les données de transaction
   Utilisez la boîte de dialogue **Créer un InfoCube pour les données de transaction** pour créer un InfoCube pour les données de transaction dans le système SAP Netweaver BW.  
   
  Vous pouvez ouvrir la boîte de dialogue **Créer un InfoCube pour les données de transaction** depuis la page **Gestionnaire de connexions** de **l’Éditeur de destination SAP BW**. Pour en savoir plus sur la destination SAP BW, consultez [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
   
 > [!IMPORTANT]  
->  La documentation de Microsoft Connector 1.1 pour SAP BW suppose que vous êtes familiarisé avec l'environnement SAP Netweaver BW. Pour plus d'informations sur SAP Netweaver BW, ou sur la configuration des objets et des processus SAP Netweaver BW objets, consultez la documentation SAP.  
+>  La documentation de Microsoft Connector 1.1 pour SAP BW suppose que vous êtes familiarisé avec l'environnement SAP Netweaver BW. Pour plus d'informations sur SAP Netweaver BW, ou sur la configuration des objets et des processus SAP Netweaver BW objets, consultez la documentation SAP.  
   
  **Pour ouvrir la boîte de dialogue Créer un InfoCube pour les données de transaction**  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui contient la destination SAP BW.  
   
-2.  Sous l’onglet **Flux de données**, double-cliquez sur la destination SAP BW.  
+2.  Sous l’onglet **Flux de données** , double-cliquez sur la destination SAP BW.  
   
 3.  Dans l' **Éditeur de destination SAP BW**, cliquez sur **Gestionnaire de connexions** pour ouvrir la page **Gestionnaire de connexions** de l'éditeur.  
   
-4.  Dans la page **Gestionnaire de connexions**, dans la zone de groupe **Créer des objets SAP BW**, sélectionnez **InfoCube**, puis cliquez sur **Créer**.  
+4.  Dans la page **Gestionnaire de connexions** , dans la zone de groupe **Créer des objets SAP BW** , sélectionnez **InfoCube**, puis cliquez sur **Créer**.  
   
-## Options générales  
+## <a name="general-options"></a>Options générales  
  **Nom de l'InfoCube**  
  Entrez le nom du nouvel InfoCube.  
   
@@ -44,11 +49,11 @@ caps.handback.revision: 10
  **Enregistrer et activer**  
  Enregistrez et activez le nouvel InfoCube.  
   
-## Options de structure de transfert de l'InfoCube  
+## <a name="infocube-transfer-structure-options"></a>Options de structure de transfert de l'InfoCube  
  La section de structure de transfert de l'InfoCube vous permet d'associer les colonnes de flux de données à des InfoObjects.  
   
  **PipelineElement**  
- Affiche la colonne dans la sortie du flux de données qui est connectée à la destination SAP BW.  
+ Affiche la colonne dans la sortie du flux de données qui est connectée à la destination SAP BW.  
   
  **PipelineDataType**  
  Affiche le type de données de la colonne de flux de données.  
@@ -59,7 +64,7 @@ caps.handback.revision: 10
  **Type**  
  Affiche le type de l'InfoObject qui est associé à la colonne de flux de données. Le tableau suivant répertorie les valeurs possibles pour le type.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |CHA|Caractéristiques|  
 |UNI|Unités|  
@@ -79,7 +84,7 @@ caps.handback.revision: 10
  **Iobject - Supprimer**  
  Supprimez l'association entre l'InfoObject et la colonne de flux de données de la ligne actuelle. Pour supprimer cette association, cliquez sur **Supprimer**.  
   
-## Voir aussi  
- [Aide (F1) sur Microsoft Connector 1.1 pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Aide (F1) sur Microsoft Connector 1.1 pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

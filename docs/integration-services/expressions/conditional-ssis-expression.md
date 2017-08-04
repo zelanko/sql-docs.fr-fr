@@ -1,29 +1,34 @@
 ---
-title: "? : (Conditionnel) (expression SSIS) | Microsoft Docs"
-ms.custom: 
-  - "ssisdev020617"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "conditionnel, opérateur (?:)"
-  - "?: (opérateur conditionnel)"
+title: '? : (Conditionnel) (Expression SSIS) | Documents Microsoft'
+ms.custom:
+- ssisdev020617
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- conditional operator (?:)
+- '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 311168388a44f5a42118a7bd496ead4228338496
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# ? : (Conditionnel) (expression SSIS)
+# <a name="--conditional-ssis-expression"></a>? : (Conditionnel) (expression SSIS)
   Renvoie une des deux expressions selon l'évaluation d'une expression booléenne. Si l'expression booléenne donne la valeur TRUE, la première expression est évaluée et le résultat est le résultat de l'expression. Si l'expression booléenne donne la valeur FALSE, la deuxième expression est évaluée et son résultat est le résultat de l'expression.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -31,7 +36,7 @@ boolean_expression?expression1:expression2
   
 ```  
   
-## Arguments  
+## <a name="arguments"></a>Arguments  
  *boolean_expression*  
  Expression valide qui renvoie TRUE, FALSE ou NULL.  
   
@@ -41,13 +46,13 @@ boolean_expression?expression1:expression2
  *expression2*  
  Toute expression valide.  
   
-## Types des résultats  
+## <a name="result-types"></a>Types des résultats  
  Type de données de *expression1* ou de *expression2*.  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Si l’argument *expression_booléenne* est évalué à NULL, le résultat de l’expression est NULL. Si une expression sélectionnée, *expression1* ou *expression2* est NULL, le résultat est NULL. Si une expression sélectionnée n'est pas NULL, mais que l'expression non sélectionnée est NULL, le résultat est la valeur de l'expression sélectionnée.  
   
- Si *expression1* et *expression2* ont le même type de données, le résultat est de ce type de données. Les règles supplémentaires suivantes s'appliquent aux types de résultats :  
+ Si *expression1* et *expression2* ont le même type de données, le résultat est de ce type de données. Les règles supplémentaires suivantes s'appliquent aux types de résultats :  
   
 -   Le type de données DT_TEXT nécessite que *expression1* et *expression2* aient la même page de codes.  
   
@@ -64,7 +69,7 @@ boolean_expression?expression1:expression2
     > [!NOTE]  
     >  Le système ne prend pas en charge les comparaisons entre une expression qui correspond à un type de données heure et une expression qui correspond à un type de données date ou date/heure. Le système génère alors une erreur.  
   
-     Lors de la comparaison des expressions, le système applique les règles de conversion suivantes dans l'ordre indiqué :  
+     Lors de la comparaison des expressions, le système applique les règles de conversion suivantes dans l'ordre indiqué :  
   
     -   Lorsque les deux expressions correspondent au même type de données, une comparaison de ce type de données est effectuée.  
   
@@ -76,7 +81,7 @@ boolean_expression?expression1:expression2
   
     -   Si une expression est d'un type autre que DT_DBTIMESTAMPOFFSET, DT_DBTIMESTAMP2 ou DT_DBTIME2, les expressions sont converties en type de données DT_DBTIMESTAMP avant leur comparaison.  
   
-     Lors de la comparaison des expressions, le système émet les hypothèses suivantes :  
+     Lors de la comparaison des expressions, le système émet les hypothèses suivantes :  
   
     -   Si chaque expression est d'un type de données qui inclut des fractions de seconde, le système suppose que le type de données avec le moins grand nombre de chiffres pour les fractions de seconde inclut des zéros pour les chiffres restants.  
   
@@ -84,21 +89,21 @@ boolean_expression?expression1:expression2
   
  Pour plus d'informations sur les types de données, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Exemples d'expressions  
+## <a name="expression-examples"></a>Exemples d'expressions  
  L'exemple suivant montre une expression qui selon une condition prend la valeur `savannah` ou `unknown`.  
   
 ```  
 @AnimalName == "Elephant"? "savannah": "unknown"  
 ```  
   
- L’exemple suivant montre une expression qui fait référence une colonne **ListPrice**. La colonne **ListPrice** a le type de données DT_CY. L’expression multiplie selon une condition la valeur de la colonne **ListPrice** par 0,2 ou 0,1.  
+ L’exemple suivant montre une expression qui fait référence une colonne **ListPrice** . La colonne**ListPrice** a le type de données DT_CY. L’expression multiplie selon une condition la valeur de la colonne **ListPrice** par 0,2 ou 0,1.  
   
 ```  
 ListPrice < 350.00 ? ListPrice * .2 : ListPrice * .1  
 ```  
   
-## Voir aussi  
- [Priorités et associativité des opérateurs](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Opérateurs &#40;expression SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Opérateurs et associativité](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Opérateurs &#40; Expression SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

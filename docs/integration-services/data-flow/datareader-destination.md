@@ -1,32 +1,37 @@
 ---
-title: "Destination DataReader | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.datareaderdest.f1"
-helpviewer_keywords: 
-  - "destination DataReader"
-  - "destinations [Integration Services], DataReader"
+title: Destination DataReader | Documents Microsoft
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.datareaderdest.f1
+helpviewer_keywords:
+- DataReader destination
+- destinations [Integration Services], DataReader
 ms.assetid: 56fcc4bf-c901-42c3-a71d-110039293431
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a7fd213d85558c2c9e114dc2b71854f21ac29a6c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Destination DataReader
-  La destination DataReader expose les données d’un flux à l’aide de l’interface **DataReader**ADO.NET. Les données peuvent ensuite être utilisées par d'autres applications. Vous pouvez par exemple configurer la source de données d’un rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de sorte qu’elle utilise le résultat d’exécution d’un package [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Pour ce faire, vous devez créer un flux qui implémente la destination DataReader.  
+# <a name="datareader-destination"></a>destination DataReader
+  La destination DataReader expose les données d’un flux à l’aide de l’interface **DataReader** ADO.NET. Les données peuvent ensuite être utilisées par d'autres applications. Vous pouvez par exemple configurer la source de données d’un rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de sorte qu’elle utilise le résultat d’exécution d’un package [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour ce faire, vous devez créer un flux qui implémente la destination DataReader.  
   
  Pour plus d’informations sur l’accès aux valeurs de la destination DataReader et sur leur lecture par programmation, consultez [Chargement de la sortie d’un package local](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md).  
   
-## Configuration de la destination DataReader  
+## <a name="configuration-of-the-datareader-destination"></a>Configuration de la destination DataReader  
  Vous pouvez spécifier une valeur de délai d'attente de la destination DataReader et indiquer si la destination doit échouer en cas de dépassement de délai. Un délai d'attente est dépassé si l'application ne demande aucune donnée dans le délai spécifié.  
   
  La destination DataReader possède une entrée. Elle ne prend pas en charge de sortie d'erreur.  
@@ -35,7 +40,7 @@ caps.handback.revision: 30
   
  Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
--   [Propriétés communes](../Topic/Common%20Properties.md)  
+-   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriétés personnalisées de la destination DataReader](../../integration-services/data-flow/datareader-destination-custom-properties.md)  
   

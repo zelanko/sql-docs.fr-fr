@@ -1,35 +1,40 @@
 ---
-title: "Modifier le nom d’un attribut et un type de donn&#233;es (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "attributs [Master Data Services], modification de nom"
+title: "Modifier un nom d’attribut et un Type de données (Master Data Services) | Documents Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attributes [Master Data Services], changing name
 ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "erikre"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a1c9e79f7485db3577a17147e2d187d2acc6c521
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Modifier le nom d’un attribut et un type de donn&#233;es (Master Data Services)
+# <a name="change-an-attribute-name-and-data-type-master-data-services"></a>Modifier le nom d’un attribut et un type de données (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez modifier le nom d'un attribut.  
   
-## Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
   
 -   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
-### Pour modifier le nom d’un attribut et un type  
+### <a name="to-change-an-attribute-name-and-type"></a>Pour modifier le nom d’un attribut et un type  
   
 1.  Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cliquez sur **Administration de système**.  
   
@@ -55,9 +60,9 @@ caps.handback.revision: 9
   
 9. Cliquez sur **Enregistrer**.  
   
-## Voir aussi  
- [Créer un attribut de texte &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
- [Supprimer un attribut &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)   
- [Attributs &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Créer un attribut de texte &#40; Master Data Services &#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
+ [Supprimer un attribut &#40; Master Data Services &#41;](../master-data-services/delete-an-attribute-master-data-services.md)   
+ [Attributs &#40; Master Data Services &#41;](../master-data-services/attributes-master-data-services.md)  
   
   

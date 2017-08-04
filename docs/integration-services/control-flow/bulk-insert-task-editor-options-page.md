@@ -1,31 +1,36 @@
 ---
-title: "&#201;diteur de t&#226;che d&#39;insertion en bloc (page Options) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.bulkinserttask.options.f1"
-helpviewer_keywords: 
-  - "Éditeur de tâche d'insertion en bloc"
+title: "En bloc éditeur de tâche d’insertion (Page Options) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.bulkinserttask.options.f1
+helpviewer_keywords:
+- Bulk Insert Task Editor
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1a714027caa6581a56d9f22da84c48d469e80cb1
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# &#201;diteur de t&#226;che d&#39;insertion en bloc (page Options)
+# <a name="bulk-insert-task-editor-options-page"></a>Éditeur de tâche d'insertion en bloc (page Options)
   Utilisez la page **Options** de la boîte de dialogue **Éditeur de tâche d'insertion en bloc** afin de définir les propriétés de l'opération d'insertion en bloc. La tâche d'insertion en bloc copie des volumes importants de données dans une table ou une vue [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Pour en savoir plus sur l’utilisation des insertions en bloc, consultez [Tâche d’insertion en bloc](../../integration-services/control-flow/bulk-insert-task.md) et [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
-## Options  
+## <a name="options"></a>Options  
  **CodePage**  
  Permet d'indiquer la page de codes des données dans le fichier de données.  
   
@@ -59,11 +64,11 @@ caps.handback.revision: 31
 > [!NOTE]  
 >  Chaque ligne ne pouvant pas être importée par l'opération de chargement en masse est comptée comme une erreur.  
   
-## Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche d’insertion en bloc &#40;page Général&#41;](../../integration-services/control-flow/bulk-insert-task-editor-general-page.md)   
- [Éditeur de tâche d’insertion en bloc &#40;page Connexion&#41;](../../integration-services/control-flow/bulk-insert-task-editor-connection-page.md)   
- [Page Expressions](../../integration-services/expressions/expressions-page.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de tâche d’insertion en bloc &#40; Page Général &#41;](../../integration-services/control-flow/bulk-insert-task-editor-general-page.md)   
+ [Éditeur de tâche d’insertion en bloc &#40; Page de connexion &#41;](../../integration-services/control-flow/bulk-insert-task-editor-connection-page.md)   
+ [Page expressions](../../integration-services/expressions/expressions-page.md)   
  [Flux de contrôle](../../integration-services/control-flow/control-flow.md)  
   
   

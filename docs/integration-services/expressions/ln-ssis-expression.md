@@ -1,47 +1,52 @@
 ---
-title: "LN (expression SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "LN, fonction"
-  - "logarithme népérien d'une expression [Integration Services]"
+title: LN (Expression SSIS) | Documents Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- LN function
+- natural logarithm of expression [Integration Services]
 ms.assetid: 55d7b657-b5fd-4753-9c81-54ed7575e720
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d34eb7a3087f30709a55912f1c60b97569fb209
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# LN (expression SSIS)
+# <a name="ln-ssis-expression"></a>LN (expression SSIS)
   Renvoie le logarithme népérien d'une expression numérique.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 LN(numeric_expression)  
 ```  
   
-## Arguments  
+## <a name="arguments"></a>Arguments  
  *numeric_expression*  
  Expression numérique valide non négative et différente de zéro.  
   
-## Types des résultats  
+## <a name="result-types"></a>Types des résultats  
  DT_R8  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  L'expression numérique est convertie vers le type de données DT_R8 avant le calcul du logarithme. Pour plus d’informations, consultez [Types de données d’Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
- Si l’argument *numeric_expression* donne une valeur inférieure ou égale à zéro, le résultat obtenu est Null.  
+ Si l’argument *numeric_expression* donne une valeur inférieure ou égale à zéro, le résultat obtenu est NULL.  
   
-## Exemples d'expressions  
+## <a name="expression-examples"></a>Exemples d'expressions  
  L'exemple suivant utilise un littéral numérique. La fonction renvoie la valeur 3,737766961828337.  
   
 ```  
@@ -60,8 +65,8 @@ LN(Length)
 LN(@Length)   
 ```  
   
-## Voir aussi  
- [LOG &#40;expression SSIS&#41;](../../integration-services/expressions/log-ssis-expression.md)   
- [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Voir aussi  
+ [JOURNAL &#40; Expression SSIS &#41;](../../integration-services/expressions/log-ssis-expression.md)   
+ [Fonctions &#40; Expression SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

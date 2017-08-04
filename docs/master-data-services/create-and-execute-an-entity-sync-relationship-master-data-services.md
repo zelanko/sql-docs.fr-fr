@@ -1,26 +1,31 @@
 ---
-title: "Cr&#233;er et ex&#233;cuter une relation de synchronisation d’entit&#233;s (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Créer et exécuter une relation de synchronisation d’entité (Master Data Services) | Documents Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f9efe68604f73df42930c5b3eb348e5c2b3e7965
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Cr&#233;er et ex&#233;cuter une relation de synchronisation d’entit&#233;s (Master Data Services)
+# <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>Créer et exécuter une relation de synchronisation d’entités (Master Data Services)
   La synchronisation d'entités est une synchronisation unidirectionnelle et reproductible entre des versions d'entités. Elle fournit un moyen de partager des données d’entités entre différents modèles.  
   
-## Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables  
  Conditions préalables pour créer une relation de synchronisation d’entités :  
   
 -   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle Administration de système. Pour plus d’informations, consultez [Autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -89,12 +94,12 @@ caps.handback.revision: 6
   
 4.  Cliquez sur **Exécuter**.  
   
-## Informations sur les relations de synchronisation  
+## <a name="sync-relationship-information"></a>Informations sur les relations de synchronisation  
  Pour chaque relation de synchronisation créée, une ligne comportant dix colonnes est ajoutée à la grille. Le tableau suivant décrit ces colonnes.  
   
 |Colonne|Description|  
 |------------|-----------------|  
-|État|Le statut de la relation de synchronisation.<br /><br /> Lorsque vous cliquez sur **Enregistrer** ou que vous exécutez une relation de synchronisation, l’image ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status") s’affiche, indiquant que la relation de synchronisation est en cours de mise à jour.<br /><br /> Si des erreurs se produisent lors de la création, de la modification ou de l’exécution d’une relation de synchronisation, l’image ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status") s’affiche.<br /><br /> Dans le cas contraire, l’état présente la valeur OK et l’image ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status") s’affiche.|  
+|État|Le statut de la relation de synchronisation.<br /><br /> Lorsque vous cliquez sur **enregistrer** ou exécuter une relation de synchronisation, le ![icône de mise à jour d’état](../master-data-services/media/mds-statusicon-updating.png "icône de mise à jour d’état") image s’affiche, indiquant que la relation de synchronisation met à jour.<br /><br /> S’il existe des erreurs lors de la création, de modification ou de l’exécution d’une relation de synchronisation, le ![icône de statut d’erreur](../master-data-services/media/mds-statusicon-error.png "icône de statut d’erreur") image s’affiche.<br /><br /> Dans le cas contraire, l’état est OK et la ![icône pour l’état OK](../master-data-services/media/mds-statusicon-ok.png "icône pour l’état OK") image s’affiche.|  
 |Modèle source|Nom du modèle source.|  
 |Version source|Nom de la version source.|  
 |Entité source|Nom de l'entité source.|  
@@ -117,7 +122,7 @@ caps.handback.revision: 6
   
 -   **Le**: date et heure de la dernière mise à jour de la synchronisation.  
   
-## Étapes suivantes  
+## <a name="next-steps"></a>Étapes suivantes  
  [Modifier et supprimer une relation de synchronisation d’entités &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  
   
   

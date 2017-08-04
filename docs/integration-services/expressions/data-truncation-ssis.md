@@ -1,27 +1,32 @@
 ---
-title: "Troncation de donn&#233;es (SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "données, troncation"
-  - "troncation de données [Integration Services]"
-  - "expressions [Integration Services], troncation de données"
-  - "options de troncation [Integration Services]"
+title: "Troncation de données (SSIS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- truncating data
+- data truncation [Integration Services]
+- expressions [Integration Services], data truncation
+- truncate options [Integration Services]
 ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5bed8ab4de8d1fe868cf12ca9e90e1040857d858
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Troncation de donn&#233;es (SSIS)
+# <a name="data-truncation-ssis"></a>Troncation de données (SSIS)
   La conversion de valeurs de données d’un type vers un autre peut entraîner la troncation de certaines valeurs.  
   
  Cette troncation peut se produire dans les cas suivants :  

@@ -1,27 +1,32 @@
 ---
-title: "Parcourir tous les principaux, bo&#238;te de dialogue | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.ssms.browseprincipals.f1"
+title: "Parcourir tous les principaux, boîte de dialogue | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.ssms.browseprincipals.f1
 ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ebfc25e2f1eae0c926f5597b4c330d8b8b21b93e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Parcourir tous les principaux, bo&#238;te de dialogue
+# <a name="browse-all-principals-dialog-box"></a>Parcourir tous les principaux, boîte de dialogue
   Utilisez la boîte de dialogue **Parcourir tous les principaux** pour sélectionner un principal de base de données et modifier les autorisations du principal sur le projet sélectionné ou sur tous les projets contenus dans un dossier sélectionné.  
   
- **Que voulez-vous faire ?**  
+ **Que voulez-vous faire ?**  
   
 -   [Ouvrir la boîte de dialogue Parcourir tous les principaux](#open_dialog)  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 11
  Nom du principal.  
   
  **Type**  
- Type du principal. Les types courants sont :  
+ Type du principal. Les types courants sont :  
   
 -   Utilisateur SQL  
   

@@ -1,34 +1,39 @@
 ---
-title: "R&#232;gles d&#39;entreprise (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/18/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "règles d’entreprise [Master Data Services], à propos des règles d’entreprise"
-  - "règles d'entreprise [Master Data Services]"
+title: "Les règles d’entreprise (Master Data Services) | Documents Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/18/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- business rules [Master Data Services], about business rules
+- business rules [Master Data Services]
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 caps.latest.revision: 16
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c8929bcaf6bc937ae6c8bf4bdb0e1b0d2e02f64
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# R&#232;gles d&#39;entreprise (Master Data Services)
+# <a name="business-rules-master-data-services"></a>Règles d'entreprise (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], une règle d'entreprise est une règle qui vous permet de vérifier la qualité et l'exactitude de vos données de référence. Vous pouvez utiliser une règle d'entreprise pour mettre à jour automatiquement vos données, envoyer un message électronique ou démarrer un processus ou un flux de travail d'entreprise.  
   
- Pour afficher des exemples de règles d’entreprise, consultez [exemples de règles d’entreprise & #40 ; Master Data Services & #41 ;](../master-data-services/business-rule-examples-master-data-services.md).  
+ Pour afficher des exemples de règles d’entreprise, consultez [exemples de règles d’entreprise &#40; Master Data Services &#41; ](../master-data-services/business-rule-examples-master-data-services.md).  
   
-## Créer et publier des règles d'entreprise  
- Règles d’entreprise sont **If/Then/Else** instructions que vous créez dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. Si une valeur d’attribut répond à une condition spécifiée, une action est alors entreprise. Dans le cas contraire, une action Else est effectuée. Les actions possibles incluent la définition d'une valeur par défaut ou la modification d'une valeur. Ces actions peuvent être associées à l'envoi d'une notification par courrier électronique.  
+## <a name="create-and-publish-business-rules"></a>Créer et publier des règles d'entreprise  
+ Les règles d'entreprise sont des instructions **If/Then/Else** que vous créez dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. Si une valeur d’attribut répond à une condition spécifiée, une action est alors entreprise. Dans le cas contraire, une action Else est effectuée. Les actions possibles incluent la définition d'une valeur par défaut ou la modification d'une valeur. Ces actions peuvent être associées à l'envoi d'une notification par courrier électronique.  
   
- Les règles d'entreprise peuvent être basées sur des valeurs d'attribut spécifiques (par exemple, effectuer une action si Color=Blue), ou lorsque les valeurs d'attribut changent (par exemple, effectuer une action si la valeur de l'attribut Color change). Pour plus d’informations sur le suivi des modifications non spécifiques, consultez [suivi des modifications & #40 ; Master Data Services & #41 ;](../master-data-services/change-tracking-master-data-services.md).  
+ Les règles d'entreprise peuvent être basées sur des valeurs d'attribut spécifiques (par exemple, effectuer une action si Color=Blue), ou lorsque les valeurs d'attribut changent (par exemple, effectuer une action si la valeur de l'attribut Color change). Pour plus d’informations sur le suivi des modifications non spécifiques, consultez [suivi des modifications &#40; Master Data Services &#41; ](../master-data-services/change-tracking-master-data-services.md).  
   
  Pour utiliser des règles d'entreprise vous devez d'abord les créer et les publier, puis appliquer les règles publiées aux données. Vous pouvez appliquer des règles à des sous-ensembles de données ou à toutes les données d'une version en validant la version. Une version ne peut pas être validée tant que tous les attributs n'ont pas passé la validation de la règle d'entreprise.  
   
@@ -38,7 +43,7 @@ caps.handback.revision: 16
   
  Si vous créez une règle d'entreprise qui utilise l'opérateur **OR** , vous devez créer une règle distincte pour chaque instruction conditionnelle qui peut être évaluée indépendamment. Vous pouvez alors exclure des règles si nécessaire, ce qui offre plus de souplesse et facilite la résolution des problèmes.  
   
-## Comment appliquer les règles d'entreprise  
+## <a name="how-business-rules-are-applied"></a>Comment appliquer les règles d'entreprise  
  Vous pouvez définir un ordre de priorité pour l’exécution des règles d’entreprise en déplaçant ces dernières vers le haut ou vers le bas. Toutefois, avant que la priorité soit prise en compte, les règles d'entreprise sont appliquées selon le type d'action qu'elles exécutent. L'ordre est le suivant :  
   
 1.  **Valeur par défaut**  
@@ -65,33 +70,33 @@ caps.handback.revision: 16
   
 -   Une règle d'entreprise ne peut pas contenir plus d'une action **démarrer le flux de travail** .  
   
-## Paramètres système  
- Il existe deux paramètres dans [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] qui affectent les règles d'entreprise. Vous pouvez ajuster ces paramètres dans le [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ou directement dans la table Paramètres système. Pour plus d’informations, consultez [paramètres système & #40 ; Master Data Services & #41 ;](../master-data-services/system-settings-master-data-services.md).  
+## <a name="system-settings"></a>Paramètres système  
+ Il existe deux paramètres dans [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] qui affectent les règles d'entreprise. Vous pouvez ajuster ces paramètres dans le [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ou directement dans la table Paramètres système. Pour plus d’informations, consultez [Paramètres système &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## Tâches associées  
+## <a name="related-tasks"></a>Tâches associées  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Créer et publier une règle d'entreprise.|[Création et publication d’une règle d’entreprise & #40 ; Master Data Services & #41 ;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
-|Ajouter plusieurs conditions à une règle d'entreprise.|[Ajouter plusieurs Conditions à une règle d’entreprise & #40 ; Master Data Services & #41 ;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
-|Créer une règle d'entreprise pour exiger que des valeurs soient affectées aux attributs.|[Exiger des valeurs d’attribut & #40 ; Master Data Services & #41 ;](../master-data-services/require-attribute-values-master-data-services.md)|  
-|Créer une règle d'entreprise pour entreprendre une action en fonction des modifications apportées aux valeurs d'attribut.|[Lancer des Actions en fonction de la valeur d’attribut change & #40 ; Master Data Services & #41 ;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
-|Créer une règle d’entreprise pour traiter un script défini par l’utilisateur comme une condition|[Extension des règles d’entreprise & #40 ; Master Data Services & #41 ;](../master-data-services/business-rules-extension-master-data-services.md)|  
-|Créer une règle d’entreprise pour traiter un script défini par l’utilisateur comme une action|[Extension des règles d’entreprise & #40 ; Master Data Services & #41 ;](../master-data-services/business-rules-extension-master-data-services.md)|  
-|Modifier le nom d'une règle d'entreprise existante.|[Modifier un nom de règle d’entreprise & #40 ; Master Data Services & #41 ;](../master-data-services/change-a-business-rule-name-master-data-services.md)|  
-|Configurer [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] pour envoyer des notifications lorsque les règles d'entreprise sont appliquées.|[Configurer des règles d’entreprise pour envoyer des Notifications & #40 ; Master Data Services & #41 ;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
-|Appliquer des règles d'entreprise à des membres spécifiques.|[Valider des membres spécifiques par rapport à des règles d’entreprise & #40 ; Master Data Services & #41 ;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
-|Exclure une règle d'entreprise de façon à ne pas l'utiliser.|[Exclure une règle d’entreprise & #40 ; Master Data Services & #41 ;](../master-data-services/exclude-a-business-rule-master-data-services.md)|  
-|Supprimer une règle d'entreprise existante.|[Supprimer une règle d’entreprise & #40 ; Master Data Services & #41 ;](../master-data-services/delete-a-business-rule-master-data-services.md)|  
+|Créer et publier une règle d'entreprise.|[Créer et publier une règle d’entreprise &#40; Master Data Services &#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
+|Ajouter plusieurs conditions à une règle d'entreprise.|[Ajouter plusieurs Conditions à une règle d’entreprise &#40; Master Data Services &#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
+|Créer une règle d'entreprise pour exiger que des valeurs soient affectées aux attributs.|[Exiger que les valeurs d’attribut &#40; Master Data Services &#41;](../master-data-services/require-attribute-values-master-data-services.md)|  
+|Créer une règle d'entreprise pour entreprendre une action en fonction des modifications apportées aux valeurs d'attribut.|[Initier des Actions en fonction de la valeur d’attribut change &#40; Master Data Services &#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|Créer une règle d’entreprise pour traiter un script défini par l’utilisateur comme une condition|[Extension des règles d’entreprise &#40; Master Data Services &#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
+|Créer une règle d’entreprise pour traiter un script défini par l’utilisateur comme une action|[Extension des règles d’entreprise &#40; Master Data Services &#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
+|Modifier le nom d'une règle d'entreprise existante.|[Modifier un nom de règle d’entreprise &#40; Master Data Services &#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)|  
+|Configurer [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] pour envoyer des notifications lorsque les règles d'entreprise sont appliquées.|[Configurer des règles d’entreprise pour envoyer des Notifications &#40; Master Data Services &#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
+|Appliquer des règles d'entreprise à des membres spécifiques.|[Valider des membres spécifiques par rapport aux règles d’entreprise &#40; Master Data Services &#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
+|Exclure une règle d'entreprise de façon à ne pas l'utiliser.|[Exclure une règle d’entreprise &#40; Master Data Services &#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)|  
+|Supprimer une règle d'entreprise existante.|[Supprimer une règle d’entreprise &#40; Master Data Services &#41;](../master-data-services/delete-a-business-rule-master-data-services.md)|  
   
-## Contenu connexe  
+## <a name="related-content"></a>Contenu connexe  
   
--   [Vue d’ensemble de Master Data Services & #40 ; MDS & #41 ;](../master-data-services/master-data-services-overview-mds.md)  
+-   [Vue d’ensemble de Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
--   [Versions & #40 ; Master Data Services & #41 ;](../master-data-services/versions-master-data-services.md)  
+-   [Versions &#40; Master Data Services &#41;](../master-data-services/versions-master-data-services.md)  
   
--   [Validation & #40 ; Master Data Services & #41 ;](../master-data-services/validation-master-data-services.md)  
+-   [Validation &#40; Master Data Services &#41;](../master-data-services/validation-master-data-services.md)  
   
--   [Suivi des modifications & #40 ; Master Data Services & #41 ;](../master-data-services/change-tracking-master-data-services.md)  
+-   [Le suivi des modifications &#40; Master Data Services &#41;](../master-data-services/change-tracking-master-data-services.md)  
   
   

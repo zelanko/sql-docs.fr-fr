@@ -1,32 +1,37 @@
 ---
-title: "Cast (expression SSIS) | Microsoft Docs"
-ms.custom: 
-  - "ssisdev020617"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CAST (fonction)"
-  - "conversion, opérateur"
-  - "conversion des types de données [Integration Services]"
-  - "types de données [Integration Services], expressions"
-  - "types de données [Integration Services], conversion"
+title: Cast (Expression SSIS) | Documents Microsoft
+ms.custom:
+- ssisdev020617
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CAST function
+- cast operator
+- converting data types [Integration Services]
+- data types [Integration Services], expressions
+- data types [Integration Services], converting
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 caps.latest.revision: 61
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 199dca85523f6ba2f4d53ef89e1b9a73667a6472
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Cast (expression SSIS)
+# <a name="cast-ssis-expression"></a>Cast (expression SSIS)
   Convertit explicitement une expression d'un type de données vers un autre. L'opérateur de conversion peut également fonctionner comme opérateur de troncation.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -34,20 +39,20 @@ caps.handback.revision: 61
   
 ```  
   
-## Arguments  
+## <a name="arguments"></a>Arguments  
  *type_spec*  
  Type de données [!INCLUDE[ssIS](../../includes/ssis-md.md)] valide.  
   
  *expression*  
  Expression valide.  
   
-## Types des résultats  
+## <a name="result-types"></a>Types des résultats  
  Type de données de *type_spec*. Pour plus d’informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Le schéma suivant montre les opérations de conversion valides.  
   
- ![Conversions légales et illégales entre types de données](../../integration-services/expressions/media/data-conversion.gif "Conversions légales et illégales entre types de données")  
+ ![Conversions légales et illégales entre types de données](../../integration-services/expressions/media/data-conversion.gif "conversions légales et illégales entre types de données")  
   
  La conversion vers certains types de données nécessite des paramètres. Le tableau suivant décrit ces types de données et leurs paramètres.  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 61
 |DT_STR|*charcount*<br /><br /> *codepage*|L'expression (DT_STR,30,1252) convertit 30 octets, ou 30 caractères codés sur un octet, vers le type de données DT_STR à l'aide de la page de codes 1252.|  
 |DT_WSTR|*Charcount*|L'expression (DT_WSTR,20) convertit 20 paires d'octets, ou 20 caractères Unicode, vers le type de données DT_WSTR.|  
 |DT_BYTES|*Bytecount*|L'expression (DT_BYTES,50) convertit 50 octets vers le type de données DT_BYTES.|  
-|DT_DECIMAL|*Échelle*|L'expression (DT_DECIMAL,2) convertit une valeur numérique dans le type de données DT_DECIMAL avec une échelle égale à 2.|  
+|DT_DECIMAL|*Échelle*|L'expression (DT_DECIMAL,2) convertit une valeur numérique dans le type de données DT_DECIMAL avec une échelle égale à 2.|  
 |DT_NUMERIC|*Précision*<br /><br /> *Échelle*|L'expression (DT_NUMERIC,10,3) convertit une valeur numérique dans le type de données DT_NUMERIC avec une précision de 10 et une échelle de 3.|  
 |DT_TEXT|*Codepage*|L'expression (DT_TEXT,1252) convertit une valeur vers le type de données DT_TEXT à l'aide de la page de codes 1252.|  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 61
   
  Pour plus d’informations sur la structure des types de données date, consultez [Types de données d’Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Exemples d'expressions SSIS  
+## <a name="ssis-expression-examples"></a>Exemples d'expressions SSIS  
  L'exemple suivant convertit une valeur numérique en un entier.  
   
 ```  
@@ -100,7 +105,7 @@ caps.handback.revision: 61
 (DT_NUMERIC,7,3)4000  
 ```  
   
- L’exemple suivant convertit les valeurs de la colonne **FirstName**, définie avec un type de données **nvarchar** et une longueur de 50, en une chaîne de caractères en utilisant la page de codes 1252.  
+ L’exemple suivant convertit les valeurs de la colonne **FirstName** , définie avec un type de données **nvarchar** et une longueur de 50, en une chaîne de caractères en utilisant la page de codes 1252.  
   
 ```  
 (DT_STR,50,1252)FirstName  
@@ -142,10 +147,10 @@ caps.handback.revision: 61
 (DT_DBTIMESTAMPOFFSET, 7) "1999-10-11 16:34:52.1234567 + 5:35"  
 ```  
   
-## Voir aussi  
- [Priorités et associativité des opérateurs](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Opérateurs &#40;expression SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)   
- [Expressions Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
- [Types de données Integration Services dans les expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Opérateurs et associativité](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Opérateurs &#40; Expression SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)   
+ [Integration Services &#40; SSIS &#41; Expressions](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Types de données dans les Expressions Integration Services](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
   
   

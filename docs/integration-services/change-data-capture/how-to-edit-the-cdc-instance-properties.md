@@ -1,25 +1,30 @@
 ---
-title: "Proc&#233;dure : modifier les propri&#233;t&#233;s d&#39;une instance de capture de donn&#233;es modifi&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Comment modifier les propriétés d’Instance de capture de données modifiées | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 09474650ff16a5b6a11ad9d02154d9f2a4261ea7
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Proc&#233;dure : modifier les propri&#233;t&#233;s d&#39;une instance de capture de donn&#233;es modifi&#233;es
+# <a name="how-to-edit-the-cdc-instance-properties"></a>Procédure : modifier les propriétés d'une instance de capture de données modifiées
   Cette procédure décrit comment utiliser la console du concepteur CDC pour modifier les propriétés de configuration d'une instance de capture de données modifiées.  
   
-### Pour modifier les propriétés de configuration de l'instance de capture de données modifiées  
+### <a name="to-edit-the-cdc-instance-configuration-properties"></a>Pour modifier les propriétés de configuration de l'instance de capture de données modifiées  
   
 1.  Dans le menu **Démarrer** , sélectionnez **Console du concepteur de capture de données modifiées**.  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 6
   
          Pour plus d'informations sur ce que vous pouvez modifier dans cet onglet, consultez [Edit Tables](../../integration-services/change-data-capture/edit-tables.md).  
   
-    -   **Scripts** : l’onglet **Scripts** permet d’exécuter ou de réexécuter un script sur la base de données source Oracle qui configure une journalisation supplémentaire.  
+    -   **Scripts**: l’onglet **Scripts** permet d’exécuter ou de réexécuter un script sur la base de données source Oracle qui configure une journalisation supplémentaire.  
   
          Pour plus d'informations sur ce que vous pouvez faire dans cet onglet, consultez [Review and Generate Supplemental Logging Scripts](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md).  
   
