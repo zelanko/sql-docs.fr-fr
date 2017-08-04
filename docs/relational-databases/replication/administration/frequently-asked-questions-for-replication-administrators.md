@@ -17,11 +17,11 @@ caps.latest.revision: 59
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b7fd50c53405ab0866e5eca50275531687c7b171
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Questions fréquentes (FAQ) pour les administrateurs de la réplication
@@ -105,15 +105,15 @@ ms.lasthandoff: 06/22/2017
   
 -   Un réseau privé virtuel (VPN). Pour plus d’informations, consultez [Publier des données sur Internet à l’aide d’un réseau privé virtuel](../../../relational-databases/replication/publish-data-over-the-internet-using-vpn.md).  
   
--   L'option de synchronisation web pour la réplication de fusion. Pour plus d’informations, voir [Synchronisation web pour la réplication de fusion](../../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
+-   L'option de synchronisation Web pour la réplication de fusion. Pour plus d’informations, voir [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
   
- Tous les types de réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent répliquer des données via un réseau privé virtuel (VPN), mais vous devrez plutôt utiliser la synchronisation web si vous utilisez une réplication de fusion.  
+ Tous les types de réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent répliquer des données via un réseau privé virtuel (VPN), mais vous devrez plutôt utiliser la synchronisation Web si vous utilisez une réplication de fusion.  
   
 ### <a name="does-replication-resume-if-a-connection-is-dropped"></a>La réplication reprend-elle si une connexion est supprimée ?  
  Oui. Le traitement de la réplication reprend là où il s'est interrompu si une connexion est supprimée. Si vous utilisez une réplication de fusion sur un réseau non fiable, envisagez d'utiliser des enregistrements logiques qui garantissent que les modifications liées sont traitées en tant qu'unité. Pour plus d’informations, consultez [Regrouper les modifications apportées à des lignes connexes à l’aide d’enregistrements logiques](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
 ### <a name="does-replication-work-over-low-bandwidth-connections-does-it-use-compression"></a>La réplication fonctionne-t-elle sur les connexions à faible bande passante ? Utilise-t-elle la compression ?  
- Oui, la réplication fonctionne sur les connexions à faible bande passante. Pour les connexions via TCP/IP, elle utilise la compression fournie par le protocole mais ne fournit pas de compression supplémentaire. Pour les connexions à synchronisation web via HTTPS, elle utilise la compression fournie par le protocole ainsi qu'une compression supplémentaire des fichiers XML utilisés pour répliquer les modifications.  
+ Oui, la réplication fonctionne sur les connexions à faible bande passante. Pour les connexions via TCP/IP, elle utilise la compression fournie par le protocole mais ne fournit pas de compression supplémentaire. Pour les connexions à synchronisation Web via HTTPS, elle utilise la compression fournie par le protocole ainsi qu'une compression supplémentaire des fichiers XML utilisés pour répliquer les modifications.  
   
 ## <a name="logins-and-object-ownership"></a>Noms d'accès et propriété d'objet  
   
