@@ -1,27 +1,32 @@
 ---
-title: "&#201;diteur de destination de fichier brut (page Gestionnaire de connexions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.rawfiledestinationconnectionmanager.f1"
+title: "Éditeur de Destination de fichier brut (Page Gestionnaire de connexions) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.rawfiledestinationconnectionmanager.f1
 ms.assetid: a0ec9643-3b44-4467-b855-f45ae4794f7f
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9f27180b2dca144905af1a5346d3d8747aa8248a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# &#201;diteur de destination de fichier brut (page Gestionnaire de connexions)
+# <a name="raw-file-destination-editor-connection-manager-page"></a>Éditeur de destination de fichier brut (page Gestionnaire de connexions)
   Utilisez l'Éditeur de destination de fichier brut pour configurer la destination de fichier brut et écrire des données brutes dans un fichier.  
   
- **Que voulez-vous faire ?**  
+ **Que voulez-vous faire ?**  
   
 -   [Ouvrir l'Éditeur de destination de fichier brut](#open)  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 8
  **Alias de sortie**  
  Spécifiez un autre nom pour la colonne de sortie.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Destination de fichier brut](../../integration-services/data-flow/raw-file-destination.md)  
   
   

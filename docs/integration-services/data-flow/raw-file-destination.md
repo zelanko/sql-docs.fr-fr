@@ -1,43 +1,48 @@
 ---
-title: "Destination de fichier brut | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.rawfiledest.f1"
-helpviewer_keywords: 
-  - "options d'ajout [Integration Services]"
-  - "destinations [Integration Services], fichier brut"
-  - "données brutes [Integration Services]"
-  - "écriture de données brutes"
-  - "Destination de fichier brut"
+title: Destination de fichier brut | Documents Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.rawfiledest.f1
+helpviewer_keywords:
+- append options [Integration Services]
+- destinations [Integration Services], Raw File
+- raw data [Integration Services]
+- writing raw data
+- Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a890502e4db72f00d21ed9656441cc27fa5e532d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Destination de fichier brut
+# <a name="raw-file-destination"></a>Destination de fichier brut
   La destination de fichier brut écrit des données brutes dans un fichier. Le format des données étant natif pour la destination, les données ne requièrent aucune traduction et peu d'analyse. Cela signifie que la destination de fichier brut peut écrire des données plus rapidement que d'autres destinations telles que les destinations de fichier plat et OLE DB.  
   
  Outre l'écriture de données brutes dans un fichier, vous pouvez également utiliser la destination de fichier brut pour générer un fichier brut vide qui contient uniquement les colonnes (fichier réservé aux métadonnées), sans avoir à exécuter le package. La source de fichier brut vous permet de récupérer les données brutes précédemment écrites par la destination. Vous pouvez également faire pointer la source de fichier brut vers le fichier réservé aux métadonnées.  
   
  Le format de fichier brut contient les informations de tri. La destination de fichier brut enregistre toutes les informations de tri, y compris les indicateurs de comparaison des colonnes de chaîne. La source de fichier brut lit et applique les informations de tri. Vous avez la possibilité de configurer la source de fichier brut pour ignorer les indicateurs de tri du fichier, à l'aide de l'éditeur avancé. Pour plus d’informations sur les indicateurs de comparaison, consultez [Comparaison de données de type chaîne](../../integration-services/data-flow/comparing-string-data.md).  
   
- Vous pouvez configurer la destination de fichier brut de plusieurs manières :  
+ Vous pouvez configurer la destination de fichier brut de plusieurs manières :  
   
 -   Spécifiez un mode d'accès qui est soit le nom du fichier, soit une variable contenant le nom du fichier dans lequel la destination de fichier brut écrit.  
   
 -   Indiquez si la destination de fichier brut ajoute des données à un fichier existant qui possède le même nom ou si elle crée un fichier.  
   
- On utilise fréquemment la destination de fichier brut pour écrire des résultats intermédiaires de données partiellement traitées entre des exécutions de packages. Le stockage de données brutes signifie qu'elles peuvent être lues rapidement par une source de fichier brut, puis davantage transformées avant d'être chargées dans leur destination finale. Par exemple, un package peut s'exécuter à plusieurs reprises et à chaque fois écrire des données brutes dans des fichiers. Ultérieurement, un package différent peut utiliser la source de fichier brut pour lire à partir de chaque fichier, utiliser une transformation d'union totale pour fusionner les données en un jeu de données, puis appliquer des transformations supplémentaires qui résument les données avant de les charger dans leur destination finale, telle qu'une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ On utilise fréquemment la destination de fichier brut pour écrire des résultats intermédiaires de données partiellement traitées entre des exécutions de packages. Le stockage de données brutes signifie qu'elles peuvent être lues rapidement par une source de fichier brut, puis davantage transformées avant d'être chargées dans leur destination finale. Par exemple, un package peut s'exécuter à plusieurs reprises et à chaque fois écrire des données brutes dans des fichiers. Ultérieurement, un package différent peut utiliser la source de fichier brut pour lire à partir de chaque fichier, utiliser une transformation d'union totale pour fusionner les données en un jeu de données, puis appliquer des transformations supplémentaires qui résument les données avant de les charger dans leur destination finale, telle qu'une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  La destination de fichier brut prend en charge les données nulles mais non les données d'objets BLOB (Binary Large Objects).  
@@ -47,7 +52,7 @@ caps.handback.revision: 59
   
  Cette source possède une entrée régulière. Elle ne prend pas en charge de sortie d'erreur.  
   
-## Options d'ajout et de nouveau fichier  
+## <a name="append-and-new-file-options"></a>Options d'ajout et de nouveau fichier  
  La propriété WriteOption inclut des options permettant d’ajouter des données à un fichier existant ou de créer un fichier.  
   
  Le tableau suivant décrit les options disponibles pour la propriété WriteOption.  
@@ -59,7 +64,7 @@ caps.handback.revision: 59
 |Créer une fois|Crée un nouveau fichier. Si le fichier existe, le composant échoue.|  
 |Tronquer et ajouter|Tronque un fichier existant, puis écrit les données dans le fichier. Les métadonnées des données ajoutées doivent correspondre au format de fichier.|  
   
- Voici des éléments importants relatifs à l'ajout de données :  
+ Voici des éléments importants relatifs à l'ajout de données :  
   
 -   L'ajout de données à un fichier brut existant n'entraîne pas un nouveau tri des données.  
   
@@ -89,7 +94,7 @@ caps.handback.revision: 59
   
  Les nouvelles données sont ajoutées à la fin du fichier brut et les clés triées (PK) ne sont pas ordonnées. Par ailleurs, l'opération d'ajout n'a pas modifié les métadonnées du fichier (informations de tri). Si vous lisez le fichier à l'aide de la source de fichier brut, le composant indique que le fichier est toujours trié sur PK même si les données du fichier ne sont plus dans le bon ordre.  
   
- Pour conserver les clés triées dans le bon ordre lors de l'ajout de données, concevez le flux de données du package comme suit :  
+ Pour conserver les clés triées dans le bon ordre lors de l'ajout de données, concevez le flux de données du package comme suit :  
   
 1.  Récupérez les nouvelles lignes via Source A.  
   
@@ -105,33 +110,33 @@ caps.handback.revision: 59
   
 6.  Remplacez RawFile1 par RawFile2.  
   
-### Utilisation de la destination de fichier brut dans une boucle  
+### <a name="using-the-raw-file-destination-in-a-loop"></a>Utilisation de la destination de fichier brut dans une boucle  
  Si le flux de données qui utilise la destination de fichier brut est dans une boucle, vous pouvez créer le fichier une fois puis ajouter les données au fichier lorsque la boucle se répète. Pour ajouter des données au fichier, les données ajoutées doivent correspondre au format du fichier existant.  
   
- Pour créer le fichier dans la première itération de la boucle puis ajouter des lignes dans les itérations ultérieures de la boucle, procédez comme suit lors de la conception :  
+ Pour créer le fichier dans la première itération de la boucle puis ajouter des lignes dans les itérations ultérieures de la boucle, procédez comme suit lors de la conception :  
   
 1.  Définissez la propriété sur **CreateOnce** ou **CreateAlways**, et effectuez une itération de la boucle. Le fichier est créé. Cette opération permet de s'assurer de la correspondance entre les métadonnées des données ajoutées et le fichier.  
   
 2.  Réinitialisez la propriété WriteOption à **Append** et définissez la propriété ValidateExternalMetadata sur **False**.  
   
- Si vous utilisez l’option **TruncateAppend** au lieu de l’option **Append**, celle-ci tronque les lignes ajoutées dans les itérations précédentes, puis ajoute de nouvelles lignes. L’utilisation de l’option **TruncateAppend** nécessite également que les données correspondent au format du fichier.  
+ Si vous utilisez l’option **TruncateAppend** au lieu de l’option **Append** , celle-ci tronque les lignes ajoutées dans les itérations précédentes, puis ajoute de nouvelles lignes. L’utilisation de l’option **TruncateAppend** nécessite également que les données correspondent au format du fichier.  
   
-## Configuration de la destination de fichier brut  
+## <a name="configuration-of-the-raw-file-destination"></a>Configuration de la destination de fichier brut  
  Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
- La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
+ La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
   
--   [Propriétés communes](../Topic/Common%20Properties.md)  
+-   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriétés personnalisées des fichiers bruts](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
-## Tâches associées  
+## <a name="related-tasks"></a>Tâches associées  
  Pour plus d’informations sur la définition des propriétés du composant, consultez [Définir les propriétés d’un composant de flux de données](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## Contenu connexe  
+## <a name="related-content"></a>Contenu connexe  
  Entrée de blog, [Raw Files Are Awesome](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx), sur sqlservercentral.com.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Source de fichier brut](../../integration-services/data-flow/raw-file-source.md)   
  [Flux de données](../../integration-services/data-flow/data-flow.md)  
   
