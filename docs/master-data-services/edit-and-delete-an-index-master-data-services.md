@@ -1,26 +1,31 @@
 ---
-title: "Modifier et supprimer un index (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Modifier et supprimer un Index (Master Data Services) | Documents Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f8fb2a63-f9ae-4b9d-b26f-2024d9af15c5
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a724dd8d312d75ddb3325e61c7d32c12ef78c606
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Modifier et supprimer un index (Master Data Services)
+# <a name="edit-and-delete-an-index-master-data-services"></a>Modifier et supprimer un index (Master Data Services)
   Vous pouvez modifier et supprimer un index créé sur les attributs.  
   
-## Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle Administration de système. Pour plus d’informations, consultez [Autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -59,7 +64,7 @@ caps.handback.revision: 5
   
 5.  Dans les boîtes de dialogue de confirmation, cliquez sur **OK**.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer un index &#40;Master Data Services&#41;](../master-data-services/create-an-index-master-data-services.md)   
  [Index personnalisé &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)  
   

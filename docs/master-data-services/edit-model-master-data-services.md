@@ -1,37 +1,42 @@
 ---
-title: "Modifier le mod&#232;le (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modèles [Master Data Services], modification de nom"
+title: "Modifier le modèle (Master Data Services) | Documents Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- models [Master Data Services], changing name
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08291f09ed7bc172fe22534e82b79ecc47ce55e1
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Modifier le mod&#232;le (Master Data Services)
+# <a name="edit-model-master-data-services"></a>Modifier le modèle (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez modifier le nom et la description d’un modèle et indiquer la durée de conservation des journaux des transactions.  
   
  Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md).  
   
-## Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
   
 -   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
-### Pour modifier un modèle  
+### <a name="to-change-a-model"></a>Pour modifier un modèle  
   
 1.  Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cliquez sur **Administration de système**.  
   
@@ -51,11 +56,11 @@ caps.handback.revision: 9
   
 8.  Cliquez sur **Enregistrer le modèle**.  
   
- La colonne **État** de la grille affiche l’état de l’opération sur le modèle. Lorsque vous cliquez sur le bouton **Enregistrer le modèle**, l’image ![Updating](../master-data-services/media/mds-model-status-updating.png "Updating") s’affiche, ce qui signifie que le modèle est en cours de mise à jour. En cas d’erreur lors de la création ou de la modification d’un modèle, l’image ![Error](../master-data-services/media/mds-model-status-error.png "Error") apparaît. Dans le cas contraire, le statut est OK et l’image ![OK](../master-data-services/media/mds-model-status-ok.png "OK") s’affiche.  
+ La colonne **État** de la grille affiche l’état de l’opération sur le modèle. Lorsque vous cliquez sur le **enregistrer le modèle** bouton, le ![mise à jour](../master-data-services/media/mds-model-status-updating.png "mise à jour") image est affichée, ce qui signifie que le modèle est mise à jour. S’il existe des erreurs lors de la création ou modification d’un modèle, le ![erreur](../master-data-services/media/mds-model-status-error.png "erreur") image est affichée. Dans le cas contraire, le statut est OK et l’image ![OK](../master-data-services/media/mds-model-status-ok.png "OK") apparaît.  
   
-## Voir aussi  
- [Créer un modèle &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)   
- [Supprimer un modèle &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)   
- [Modèles &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Créer un modèle de &#40; Master Data Services &#41;](../master-data-services/create-a-model-master-data-services.md)   
+ [Supprimer un modèle de &#40; Master Data Services &#41;](../master-data-services/delete-a-model-master-data-services.md)   
+ [Modèles (Master Data Services)](../master-data-services/models-master-data-services.md)  
   
   

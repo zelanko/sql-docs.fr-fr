@@ -1,32 +1,37 @@
 ---
-title: "Pr&#233;sentation : Importation de donn&#233;es &#224; partir de tables (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "processus de site [Master Data Services], à propos du processus de site"
-  - "importation de données [Master Data Services]"
-  - "processus de site [Master Data Services]"
+title: "Vue d’ensemble : Importation de données à partir des Tables (Master Data Services) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- staging process [Master Data Services], about staging process
+- importing data [Master Data Services]
+- staging process [Master Data Services]
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 caps.latest.revision: 21
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a33ef299ad64c4bc6ca5a96b43feb888b9147565
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Pr&#233;sentation : Importation de donn&#233;es &#224; partir de tables (Master Data Services)
+# <a name="overview-importing-data-from-tables-master-data-services"></a>Présentation : Importation de données à partir de tables (Master Data Services)
   Une fois que vous avez créé un modèle pour vos données dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez commencer à ajouter des données et à les modifier.   Vous utilisez les tables de mise en lots [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , les procédures stockées et Master Data Manager.  
   
  Pour obtenir des instructions sur la manière d’ajouter et de modifier des données, consultez [Importer des données à partir de tables &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md).  
   
 > [!NOTE]  
->  Vous pouvez également utiliser le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] pour ajouter des données au référentiel MDS (base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]) à partir d’Excel. Pour plus d’informations, consultez [Vue d’ensemble : importation de données à partir d’Excel &#40;Complément MDS pour Excel&#41;](../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
+>  Vous pouvez également utiliser le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]pour ajouter des données au référentiel MDS (base de données[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ) à partir d’Excel. Pour plus d’informations, consultez [Vue d’ensemble : importation de données à partir d’Excel &#40;Complément MDS pour Excel&#41;](../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
   
  Lorsque vous ajoutez et modifiez des données, procédez comme suit.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  Dans [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], la prise en charge des processus de mise en lots [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] est déconseillée.  
   
-## Désactivation et suppression de membres (MDS)  
+## <a name="deactivating-and-deleting-members-mds"></a>Désactivation et suppression de membres (MDS)  
  La désactivation signifie que le membre peut être réactivé. La réactivation d'un membre permet de restaurer ses attributs et son appartenance aux hiérarchies et collections. Toutes les transactions précédentes sont intactes. Les transactions de désactivation sont visibles par les administrateurs dans la zone fonctionnelle **Gestion des versions** de Master Data Manager.  
   
  La suppression signifie retirer définitivement le membre du système. Toutes les transactions du membre, toutes les relations et tous les attributs sont supprimés définitivement.  
@@ -57,7 +62,7 @@ caps.handback.revision: 21
 >   
 >  Vous ne pouvez pas utiliser la mise en lots pour supprimer ou désactiver des collections. Pour plus d’informations sur la désactivation manuelle des collections, consultez [Supprimer un membre ou une collection &#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md).  
   
-## Déplacement des membres d’une hiérarchie explicite (MDS)  
+## <a name="moving-explicit-hierarchy-members-mds"></a>Déplacement des membres d’une hiérarchie explicite (MDS)  
  Lorsque vous déplacez en bloc des membres des hiérarchies explicites, vous pouvez désigner les membres comme suit.  
   
 -   Un membre consolidé comme un parent d'un membre consolidé.  
@@ -68,43 +73,43 @@ caps.handback.revision: 21
   
 -   Un membre consolidé comme un frère d'une feuille ou un membre consolidé.  
   
-## Tables de mise en lots et procédures stockées (MDS)  
+## <a name="staging-tables-and-stored-procedures-mds"></a>Tables de mise en lots et procédures stockées (MDS)  
  La base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] inclut les types suivants de tables de mise en lots que vous pouvez remplir avec vos données.  
   
 -   [Table de mise en lots des membres feuille &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
--   [Table de mise en lots des membres consolidés &#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [Table intermédiaire des membres consolidés &#40; Master Data Services &#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
 -   [Table de mise en lots des relations &#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md)  
   
  Pour chaque entité du modèle, il existe une table de mise en lots. Le nom de la table indique l'entité correspondante et le type d'entité comme membre feuille. L'illustration suivante montre les tables de mise en lots pour les entités Devise, Client et Produit.  
   
- ![Staging Tables in MDS database](../master-data-services/media/mds-staging-tables.png "Staging Tables in MDS database")  
+ ![Tables intermédiaires dans la base de données MDS](../master-data-services/media/mds-staging-tables.png "Tables intermédiaires dans la base de données MDS")  
   
  Le nom de la table est spécifié lors de la création d'une entité et ne peut pas être modifié. Si le nom de la table de mise en lots contient un _1 ou tout autre nombre, une autre table de ce nom existait déjà lorsque l'entité a été créée.  
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] inclut les types suivants de procédures stockées de mise en lots.  
   
--   stg.udp_\<nom>_Feuille  
+-   STG.udp_\<nom > _Leaf  
   
--   stg.udp_\<nom>_Consolidé  
+-   STG.udp_\<nom > _Consolidated  
   
--   stg.udp_\<nom>_Relation  
+-   STG.udp_\<nom > _Relationship  
   
  Pour chaque entité du modèle, il existe trois procédures stockées qui correspondent à un membre feuille, un membre consolidé et les tables de mise en lots de relations.  L'illustration suivante montre les procédures stockées de mise en lots pour les entités Devise, Client et Produit.  
   
- ![Staging stored procedures in the MDS database](../master-data-services/media/mds-staging-storedprocedures.png "Staging stored procedures in the MDS database")  
+ ![Les procédures stockées dans la base de données MDS intermédiaires](../master-data-services/media/mds-staging-storedprocedures.png "intermédiaire de procédures stockées dans la base de données MDS")  
   
  Pour plus d’informations sur les procédures stockées, consultez [Procédure stockée de mise en lots &#40;Master Data Services&#41;](../master-data-services/staging-stored-procedure-master-data-services.md).  
   
-## Journalisation des transactions (MDS)  
+## <a name="logging-transactions-mds"></a>Journalisation des transactions (MDS)  
  Toutes les transactions qui se produisent lors de l'importation ou de la mise à jour des données ou des relations peuvent être enregistrées dans un journal. Une option dans la procédure stockée permet cette journalisation. Si vous initialisez le processus de site à l’aide de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], aucune journalisation n'a lieu.  
   
  Dans le [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], le paramètre **Journaliser toutes les transactions intermédiaires** ne s'applique pas à cette méthode de mise en lot des données.  
   
-## Contenu connexe  
+## <a name="related-content"></a>Contenu connexe  
   
--   [Validation &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
+-   [Validation &#40; Master Data Services &#41;](../master-data-services/validation-master-data-services.md)  
   
 -   [Règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   

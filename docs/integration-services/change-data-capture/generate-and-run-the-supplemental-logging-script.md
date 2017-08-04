@@ -1,24 +1,29 @@
 ---
-title: "G&#233;n&#233;rer et ex&#233;cuter le script de journalisation suppl&#233;mentaire | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "supLog"
+title: "Générer et exécuter le Script de journalisation supplémentaire | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- supLog
 ms.assetid: 6e940d93-12c6-4cda-9333-5489b245f0e4
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 736b11e79235b38659e9fa4c13f06369bd8b335d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# G&#233;n&#233;rer et ex&#233;cuter le script de journalisation suppl&#233;mentaire
+# <a name="generate-and-run-the-supplemental-logging-script"></a>Générer et exécuter le script de journalisation supplémentaire
   Utilisez la page Configurer des tables pour la capture des modifications pour exécuter un script sur la base de données source Oracle qui configure une journalisation supplémentaire.  
   
  **Pour exécuter les scripts de journalisation supplémentaire**  
@@ -35,8 +40,8 @@ caps.handback.revision: 6
   
  Cliquez sur **Suivant** pour [Generate Mirror Tables and CDC Capture Instances](../../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md).  
   
-## Voir aussi  
- [Procédure : créer l'instance SQL Server de base de données de modifications](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
- [Examiner et générer des scripts de journalisation supplémentaires](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
+## <a name="see-also"></a>Voir aussi  
+ [La création de l’Instance de base de données modifiées SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
+ [Examiner et générer des Scripts de journalisation supplémentaires](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
   
   

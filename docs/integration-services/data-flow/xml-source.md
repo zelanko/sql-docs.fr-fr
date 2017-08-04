@@ -1,28 +1,33 @@
 ---
-title: "Source XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.xmlsource.f1"
-helpviewer_keywords: 
-  - "sources [Integration Services], XML"
-  - "source XML [Integration Services]"
-  - "Éditeur de source XML"
+title: Source XML | Documents Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.xmlsource.f1
+helpviewer_keywords:
+- sources [Integration Services], XML
+- XML source [Integration Services]
+- XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 caps.latest.revision: 47
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e3af9fa8b743b01b222d1596197aa83bbb39854
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Source XML
+# <a name="xml-source"></a>Source XML
   La source XML lit un fichier de données XML et remplit les colonnes de la sortie source avec les données.  
   
  Les données des fichiers XML sont fréquemment organisées de façon hiérarchique. Par exemple, un fichier de données XML peut représenter des catalogues et des éléments dans des catalogues. Avant que les données puissent entrer dans le flux de données, la relation des éléments du fichier de données XML doit être déterminée et une sortie doit être générée pour chaque élément du fichier.  
@@ -68,7 +73,7 @@ caps.handback.revision: 47
   
  La source XML prend en charge plusieurs sorties standard et plusieurs sorties d'erreur.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut la boîte de dialogue **Éditeur de source XML** pour configurer la source XML. Cette boîte de dialogue est disponible dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut la boîte de dialogue **Éditeur de source XML**pour configurer la source XML. Cette boîte de dialogue est disponible dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
@@ -80,9 +85,9 @@ caps.handback.revision: 47
   
 -   [Éditeur de source XML &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/xml-source-editor-error-output-page.md)  
   
- La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
+ La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
   
--   [Propriétés communes](../Topic/Common%20Properties.md)  
+-   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriétés personnalisées des sources XML](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
@@ -92,3 +97,4 @@ caps.handback.revision: 47
   
 ## <a name="related-tasks"></a>Tâches associées  
  [Extraire des données à l’aide de la source XML](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
+

@@ -1,22 +1,27 @@
 ---
-title: "Propri&#233;t&#233;s personnalis&#233;es des fichiers plats | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Propriétés personnalisées de fichier plat | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 097c9a07d738bb1b192095ac91448487fdfa0eb1
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Propri&#233;t&#233;s personnalis&#233;es des fichiers plats
+# <a name="flat-file-custom-properties"></a>Propriétés personnalisées des fichiers plats
   **Propriétés personnalisées des sources**  
   
  La source de fichier plat comporte des propriétés personnalisées et les propriétés communes à l'ensemble des composants de flux de données.  
@@ -34,7 +39,7 @@ caps.handback.revision: 7
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
-|FastParse|Booléen|Valeur qui indique si la colonne utilise les routines d'analyse fournies par DTS (routines plus rapides mais qui ne tiennent pas compte des paramètres régionaux) ou les routines d'analyse standard qui tiennent compte des paramètres régionaux. Pour plus d'informations, consultez [Fast Parse](../Topic/Fast%20Parse.md) et [Standard Parse](../Topic/Standard%20Parse.md). La valeur par défaut de cette propriété est **False**.<br /><br /> Remarque : cette propriété n’est pas disponible dans **l’Éditeur de source de fichier plat**, mais elle peut être définie à l’aide de **l’éditeur avancé**.|  
+|FastParse|Booléen|Valeur qui indique si la colonne utilise les routines d'analyse fournies par DTS (routines plus rapides mais qui ne tiennent pas compte des paramètres régionaux) ou les routines d'analyse standard qui tiennent compte des paramètres régionaux. Pour plus d'informations, consultez [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) et [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). La valeur par défaut de cette propriété est **False**.<br /><br /> Remarque : cette propriété n’est pas disponible dans **l’Éditeur de source de fichier plat**, mais elle peut être définie à l’aide de **l’éditeur avancé**.|  
   
  Pour plus d'informations, consultez [Flat File Source](../../integration-services/data-flow/flat-file-source.md).  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 7
   
  Pour plus d'informations, consultez [Flat File Destination](../../integration-services/data-flow/flat-file-destination.md).  
   
-## Voir aussi  
- [Propriétés communes](../Topic/Common%20Properties.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

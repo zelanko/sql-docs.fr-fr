@@ -1,30 +1,35 @@
 ---
-title: "&#201;diteur de transformation de nettoyage DQS (bo&#238;te de dialogue) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssdqs.designer.cleansing.f1"
-  - "sql13.SSDQS.DESIGNER.DQCONNECTION.F1"
+title: "Boîte de dialogue Éditeur de Transformation de nettoyage DQS | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssdqs.designer.cleansing.f1
+- sql13.SSDQS.DESIGNER.DQCONNECTION.F1
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
 caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee0247e25e5ada17f3d79ce9ba63576a5b866b42
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# &#201;diteur de transformation de nettoyage DQS (bo&#238;te de dialogue)
+# <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Éditeur de transformation de nettoyage DQS (boîte de dialogue)
   Utilisez la boîte de dialogue de **l’Éditeur de transformation de nettoyage DQS** pour corriger les données à l’aide de DQS (Data Quality Services). Pour plus d’informations, consultez [Concepts Data Quality Services](../../../data-quality-services/data-quality-services-concepts.md).  
   
  Pour en savoir plus sur la transformation, consultez [Transformation de nettoyage DQS](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md).  
   
- **Que voulez-vous faire ?**  
+ **Que voulez-vous faire ?**  
   
 -   [Ouvrir l'Éditeur de transformation de nettoyage DQS](#open)  
   
@@ -38,7 +43,7 @@ caps.handback.revision: 16
   
 ##  <a name="open"></a> Ouvrir l'Éditeur de transformation de nettoyage DQS  
   
-1.  Ajoutez la transformation de nettoyage DQS au package [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
+1.  Ajoutez la transformation de nettoyage DQS au package [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
   
 2.  Cliquez avec le bouton droit sur le composant, puis cliquez sur **Modifier**.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 16
  Sélectionnez un gestionnaire de connexions DQS existant dans la liste, ou créez une connexion en cliquant sur **Nouveau**.  
   
  **Nouveau**  
- Créez un gestionnaire de connexions à l’aide de la boîte de dialogue **Gestionnaire de connexions du nettoyage DQS**. Consultez [Définir les options dans la boîte de dialogue Gestionnaire de connexions du nettoyage DQS](#manager)  
+ Créez un gestionnaire de connexions à l’aide de la boîte de dialogue **Gestionnaire de connexions du nettoyage DQS** . Consultez [Définir les options dans la boîte de dialogue Gestionnaire de connexions du nettoyage DQS](#manager)  
   
  **Base de connaissances Data Quality Services**  
  Sélectionnez une base de connaissances DQS existante pour la source de données connectée. Pour plus d’informations sur la base de connaissances DQS, consultez [Bases de connaissances et domaines DQS](../../../data-quality-services/dqs-knowledge-bases-and-domains.md).  
@@ -56,7 +61,7 @@ caps.handback.revision: 16
  Spécifiez s’il faut chiffrer la connexion, afin de chiffrer le transfert des données entre le serveur DQS et [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
   
  **Champs disponibles**  
- Répertorie les champs disponibles pour la base de connaissances sélectionnée. Il existe deux types de champs : domaines uniques, et domaines composés qui contiennent au moins deux domaines uniques.  
+ Répertorie les champs disponibles pour la base de connaissances sélectionnée. Il existe deux types de champs : domaines uniques, et domaines composés qui contiennent au moins deux domaines uniques.  
   
  Pour plus d’informations sur la façon de mapper des colonnes à des domaines composites, consultez [Mapper des colonnes à des domaines composites](../../../integration-services/data-flow/transformations/map-columns-to-composite-domains.md).  
   
@@ -65,7 +70,7 @@ caps.handback.revision: 16
  **Configurer la sortie d'erreur**  
  Spécifiez le mode de gestion des erreurs au niveau des lignes. Des erreurs peuvent se produire lorsque la transformation corrige des données de la source de données connectée, en raison de valeurs de données ou de contraintes de validation inattendues.  
   
- Les valeurs suivantes sont valides :  
+ Les valeurs suivantes sont valides :  
   
 -   **Composant défaillant**, qui indique que la transformation a échoué et que les données d’entrée ne sont pas insérées dans la base de données Data Quality Services. Ceci est la valeur par défaut.  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 16
  Répertorie les colonnes à partir de la source de données connectée. Sélectionnez une ou plusieurs colonnes qui contiennent les données que vous souhaitez corriger.  
   
  **Colonne d'entrée**  
- Répertorie une colonne d’entrée sélectionnée dans la zone **Colonnes d’entrée disponibles**.  
+ Répertorie une colonne d’entrée sélectionnée dans la zone **Colonnes d’entrée disponibles** .  
   
  **Domaine**  
  Sélectionnez un domaine pour la mapper à la colonne d'entrée.  
@@ -127,7 +132,7 @@ caps.handback.revision: 16
   
 3.  Cliquez sur **Ajouter**.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Appliquer des règles de qualité des données à la source de données](../../../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
   

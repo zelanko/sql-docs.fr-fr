@@ -1,29 +1,34 @@
 ---
-title: "Gestionnaire de connexions de fichiers plats | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gestionnaires de connexions [Integration Services], fichier plat"
-  - "connexions [Integration Services], fichiers plats"
-  - "fichiers [Integration Services], connexions"
-  - "Gestionnaire de connexions de fichiers plats"
-  - "fichiers plats"
-  - "connexions de fichiers plats multiples [Integration Services]"
+title: Flat File Connection Manager | Documents Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- connection managers [Integration Services], Flat File
+- connections [Integration Services], flat files
+- files [Integration Services], connections
+- Flat File connection manager
+- flat files
+- flat file connections [Integration Services]
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f3e174427f1aa92c14952571b0e81070ffe69d2
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Gestionnaire de connexions de fichiers plats
+# <a name="flat-file-connection-manager"></a>Gestionnaire de connexions de fichiers plats
   Un gestionnaire de connexions de fichiers plats permet à un package d'accéder aux données d'un fichier plat. Ainsi, les sources et destinations de fichiers plats peuvent utiliser des gestionnaires de connexions de fichiers plats pour extraire et charger des données.  
   
  Le gestionnaire de connexions de fichiers plats peut accéder à un seul fichier. Pour référencer plusieurs fichiers, utilisez un gestionnaire de connexions de fichiers plats multiples plutôt qu'un gestionnaire de connexions de fichiers plats. Pour plus d’informations, consultez [Gestionnaire de connexion de fichiers plats multiples](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md).  

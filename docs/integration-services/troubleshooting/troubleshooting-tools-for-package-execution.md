@@ -1,29 +1,34 @@
 ---
-title: "Outils de d&#233;pannage pour l&#39;ex&#233;cution des packages | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "packages SQL Server Integration Services, résolution des problèmes"
-  - "packages SSIS, résolution des problèmes"
-  - "Integration Services, résolution des problèmes"
-  - "erreurs [Integration Services], résolution des problèmes"
-  - "packages [Integration Services], résolution des problèmes"
+title: "Outils de dépannage pour l’exécution du Package | Documents Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Integration Services packages, troubleshooting
+- SSIS packages, troubleshooting
+- Integration Services, troubleshooting
+- errors [Integration Services], troubleshooting
+- packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: d4d50bedde83e493c8327d9321ebcfb12bc12985
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Outils de d&#233;pannage pour l&#39;ex&#233;cution des packages
+# <a name="troubleshooting-tools-for-package-execution"></a>Outils de dépannage pour l'exécution des packages
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] intègre des fonctionnalités et des outils que vous pouvez utiliser pour résoudre des problèmes liés aux packages que vous exécutez après les avoir menés à terme et les avoir déployés.  
   
  Au moment de la conception, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fournit des points d'arrêt permettant d'arrêter l'exécution des packages, une fenêtre Progression et des visionneuses de données à l'aide desquelles vous pouvez observer les données qui traversent le flux de données. Néanmoins, ces fonctionnalités ne sont pas disponibles lorsque vous exécutez des packages que vous avez déployés. Les principales techniques de dépannage des packages déployés sont les suivantes :  
@@ -40,12 +45,12 @@ caps.handback.revision: 59
   
 -   **Utilisez des points de contrôle pour redémarrer les packages à compter du point de défaillance**. Pour plus d'informations, consultez [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
-## Détecter et traiter les erreurs liées aux packages par le biais de gestionnaires d'événements  
+## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>Détecter et traiter les erreurs liées aux packages par le biais de gestionnaires d'événements  
  Vous pouvez répondre aux nombreux événements engagés par le package et les objets de ce dernier par le biais de gestionnaires d'événements.  
   
 -   **Créez un gestionnaire d'événements pour l'événement OnError**. Dans le gestionnaire d'événements, vous pouvez recourir à une tâche Envoyer un message pour signaler l'échec à un administrateur, utiliser une tâche de script et une logique personnalisée pour recueillir des informations système à des fins de dépannage, ou bien nettoyer les ressources temporaires ou des résultats incomplets. Pour plus d’informations, consultez [Gestionnaires d’événements Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-event-handlers.md).  
   
-## Résoudre les problèmes liés à des données incorrectes à l'aide de sorties d'erreur  
+## <a name="troubleshoot-bad-data-by-using-error-outputs"></a>Résoudre les problèmes liés à des données incorrectes à l'aide de sorties d'erreur  
  Vous pouvez exploiter la sortie d'erreur disponible dans nombre de composants de flux de données pour orienter les lignes contenant des erreurs vers une destination distincte en vue d'une analyse ultérieure. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).  
   
 -   **Capturez les données incorrectes à l'aide de sorties d'erreur**. Transmettez les lignes qui contiennent des erreurs à une destination distincte, telle qu'une table d'erreurs ou un fichier texte. La sortie d'erreur ajoute automatiquement deux colonnes numériques renfermant le numéro de l'erreur responsable du rejet de la ligne, ainsi que l'ID de la colonne dans laquelle l'erreur est survenue.  
@@ -54,17 +59,17 @@ caps.handback.revision: 59
   
 -   **Ou obtenez le nom des colonnes en enregistrant l’événement DiagnosticEx**. Cet événement consigne un mappage de lignage de flux de données dans le journal. Vous pouvez alors rechercher le nom de colonne dans ce mappage de lignage à l’aide de l’identificateur de colonne capturé par une sortie d’erreur.  Pour plus d’informations, consultez [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md).  
   
-     La valeur de la colonne de message pour **DiagnosticEx** est du texte XML. Pour afficher le texte du message pour une exécution de package, interrogez la vue [catalog.operation_messages &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md). Notez que l’événement **DiagnosticEx** ne conserve pas l’espace blanc dans sa sortie XML afin réduire la taille du journal. Pour améliorer la lisibilité, copiez le journal dans un éditeur XML (dans Visual Studio, par exemple) prenant en charge la mise en forme XML et la mise en surbrillance de la syntaxe.  
+     La valeur de la colonne de message pour **DiagnosticEx** est du texte XML. Pour afficher le texte du message pour une exécution de package, interrogez la vue [catalog.operation_messages &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md). Notez que l’événement **DiagnosticEx** ne conserve pas l’espace blanc dans sa sortie XML afin réduire la taille du journal. Pour améliorer la lisibilité, copiez le journal dans un éditeur XML (dans Visual Studio, par exemple) prenant en charge la mise en forme XML et la mise en surbrillance de la syntaxe.  
   
-## Résoudre les problèmes liés à l'exécution des packages à l'aide de rapports d'opérations  
+## <a name="troubleshoot-package-execution-by-using-operations-reports"></a>Résoudre les problèmes liés à l'exécution des packages à l'aide de rapports d'opérations  
  Des rapports d'opérations standard sont disponibles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour vous aider à contrôler les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] déployés dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Ces rapports de package vous aident à consulter l'état et l'historique du package et, si nécessaire, à identifier la cause des erreurs.  
   
  Pour plus d’informations, voir [Troubleshooting Reports for Package Execution](../../integration-services/troubleshooting/troubleshooting-reports-for-package-execution.md).  
   
-## Résoudre les problèmes liés à l'exécution des packages à l'aide de vues SSISDB  
+## <a name="troubleshoot-package-execution-by-using-ssisdb-views"></a>Résoudre les problèmes liés à l'exécution des packages à l'aide de vues SSISDB  
  Vous pouvez interroger plusieurs vues de base de données SSISDB pour contrôler les informations relatives à l'exécution des packages et à d'autres opérations. Pour plus d’informations, consultez [Surveiller les packages en cours d’exécution et autres opérations](../../integration-services/performance/monitor-running-packages-and-other-operations.md).  
   
-## Résoudre les problèmes liés à l'exécution des packages à l'aide de la journalisation  
+## <a name="troubleshoot-package-execution-by-using-logging"></a>Résoudre les problèmes liés à l'exécution des packages à l'aide de la journalisation  
  Vous pouvez contrôler la plupart des opérations réalisées dans vos packages en cours d'exécution en activant la fonction de journalisation. Les modules fournisseur d'informations permettent de capturer des informations sur des événements spécifiques à des fins d'analyse ultérieure, puis d'enregistrer ces informations dans une table de base de données, un fichier plat, un fichier XML ou un autre format de sortie pris en charge.  
   
 -   **Activez la journalisation**. Vous pouvez affiner la sortie de journalisation en choisissant uniquement les événements et les éléments d'information que vous souhaitez capturer. Pour plus d’informations, consultez [Journalisation d’Integration Services (SSIS)](https://msdn.microsoft.com/library/ms140246.aspx).  
@@ -83,36 +88,31 @@ caps.handback.revision: 59
   
      Pour plus d'informations sur cette approche, consultez la section « ETL Auditing and Logging » dans le livre blanc [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602)(en anglais).  
   
-## Résoudre les problèmes liés à l'exécution des packages à l'aide de fichiers de vidage du débogage  
+## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Résoudre les problèmes liés à l'exécution des packages à l'aide de fichiers de vidage du débogage  
  Dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez créer des fichiers de vidage du débogage qui fourniront des informations sur l'exécution d'un package. Pour plus d’informations, voir [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  
   
-## Résoudre les problèmes de validation au moment de l'exécution  
+## <a name="troubleshoot-run-time-validation-issues"></a>Résoudre les problèmes de validation au moment de l'exécution  
  Il est possible, parfois, que vous ne parveniez pas à vous connecter à vos sources de données ou que des parties de votre package ne puissent pas être validées jusqu'à ce que les précédentes tâches du package aient été exécutées. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vous permettent d'éviter des erreurs de validation susceptibles de survenir dans ces conditions :  
   
 -   **Configurez la propriété DelayValidation dans les éléments de package non valides lors du chargement du package**. Pour éviter des erreurs de validation lors du chargement du package, vous pouvez affecter à **DelayValidation** la valeur **True** dans des éléments de package dont la configuration n'est pas valide. Par exemple, vous pouvez disposer d'une tâche Flux de données qui utilise une table de destination qui n'existe pas jusqu'à ce qu'une tâche d'exécution SQL crée la table au moment de l'exécution. La propriété **DelayValidation** peut être activée au niveau du package ou au niveau des tâches individuelles et des conteneurs inclus dans le package.  
   
-     La propriété **DelayValidation** peut être définie sur une tâche Flux de données mais pas sur des composants de flux de données individuels. Vous pouvez obtenir un résultat similaire en affectant la valeur **false** à la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> des composants de flux de données. Néanmoins, si cette propriété affiche la valeur **false**, le composant n'a pas connaissance des modifications apportées aux métadonnées des sources de données externes. Quand la valeur **true** est définie, la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> peut permettre d’éviter des problèmes de blocage provoqués par un verrouillage dans la base de données, surtout quand le package utilise des transactions.  
+     La propriété **DelayValidation** peut être définie sur une tâche Flux de données mais pas sur des composants de flux de données individuels. Vous pouvez obtenir un résultat similaire en affectant la valeur <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> à la propriété **ValidateExternalMetadata**. Néanmoins, si cette propriété affiche la valeur **false**, le composant n'a pas connaissance des modifications apportées aux métadonnées des sources de données externes. Quand la valeur **true**est définie, la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> peut permettre d’éviter des problèmes de blocage provoqués par un verrouillage dans la base de données, surtout quand le package utilise des transactions.  
   
-## Résoudre les problèmes d'autorisations au moment de l'exécution  
- Si vous rencontrez des erreurs lorsque vous tentez d'exécuter des packages déployés à l'aide de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il est possible que les comptes employés par ce dernier ne disposent pas des autorisations nécessaires. Pour plus d'informations sur la résolution des problèmes liés aux packages que vous exécutez à partir des travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Un package SSIS n'est pas exécuté lorsque vous appelez le package SSIS à partir d'une étape de travail de SQL Server Agent](http://support.microsoft.com/kb/918760). Pour plus d’informations sur l’exécution de packages à partir des travaux de l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Travaux de l’Agent SQL Server pour les packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).  
+## <a name="troubleshoot-run-time-permissions-issues"></a>Résoudre les problèmes d'autorisations au moment de l'exécution  
+ Si vous rencontrez des erreurs lorsque vous tentez d'exécuter des packages déployés à l'aide de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il est possible que les comptes employés par ce dernier ne disposent pas des autorisations nécessaires. Pour plus d'informations sur la résolution des problèmes liés aux packages que vous exécutez à partir des travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Un package SSIS n'est pas exécuté lorsque vous appelez le package SSIS à partir d'une étape de travail de SQL Server Agent](http://support.microsoft.com/kb/918760). Pour plus d’informations sur l’exécution de packages à partir des travaux de l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Travaux de l’Agent SQL Server pour les packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).  
   
  Pour se connecter à des sources de données Excel ou Access, l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert un compte doté de l'autorisation de lire, écrire, créer et supprimer des fichiers temporaires dans le dossier spécifié par les variables d'environnement TEMP et TMP.  
   
-## Résoudre les problèmes liés à la version 64 bits  
+## <a name="troubleshoot-64-bit-issues"></a>Résoudre les problèmes liés à la version 64 bits  
   
 -   **Certains fournisseurs de données ne sont pas disponibles sur la plateforme 64 bits**. C’est notamment le cas du fournisseur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB, qui est nécessaire pour se connecter à des sources de données Excel ou Access : il n’est pas disponible dans une version 64 bits.  
   
-## Résoudre les erreurs sans description  
+## <a name="troubleshoot-errors-without-a-description"></a>Résoudre les erreurs sans description  
  Si vous rencontrez une erreur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sans description qui l'accompagne, vous pouvez localiser cette dernière dans le [Guide de référence des erreurs et des messages propres à Integration Services](../../integration-services/integration-services-error-and-message-reference.md) en recherchant l'erreur d'après son numéro. La liste ne comporte actuellement aucune information de dépannage.  
   
-## Tâches associées  
- [Configurer une sortie d'erreur dans un composant de flux de données](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md)  
+## <a name="related-tasks"></a>Tâches associées  
+ [Débogage de flux de données](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
-## Contenu connexe  
+## <a name="related-content"></a>Contenu connexe  
  Entrée de blog, [Ajout du nom de la colonne d'erreur à une sortie d'erreur](http://go.microsoft.com/fwlink/?LinkId=261546)sur dougbert.com.  
-  
-||  
-|-|  
-|![Icône Integration Services (petite)](../../integration-services/troubleshooting/media/dts-16.png "Icône Integration Services (petite)")  **Rester à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> -   [Visiter la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.|  
-  
-  
+

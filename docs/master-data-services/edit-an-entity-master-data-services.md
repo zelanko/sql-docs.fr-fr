@@ -1,35 +1,40 @@
 ---
-title: "Modifier une entit&#233; (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "entités [Master Data Services], modification de nom"
+title: "Modifier une entité (Master Data Services) | Documents Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- entities [Master Data Services], changing name
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1364db68abbbff7ff13899180af78dc87478737d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Modifier une entit&#233; (Master Data Services)
+# <a name="edit-an-entity-master-data-services"></a>Modifier une entité (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez modifier une entité.  
   
-## Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
   
 -   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
-### Pour modifier une entité  
+### <a name="to-edit-an-entity"></a>Pour modifier une entité  
   
 1.  Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cliquez sur **Administration de système**.  
   
@@ -55,22 +60,22 @@ caps.handback.revision: 8
   
      Pour plus d'informations, consultez [Data Compression](../relational-databases/data-compression/data-compression.md)  
   
-## État  
+## <a name="status"></a>État  
  La colonne d’état de la grille affiche l’état de l’opération sur l’entité. Lorsque vous cliquez sur **Enregistrer l’entité**, l’image ci-après s’affiche pour indiquer que l’entité est en cours de mise à jour.  
   
- ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")  
+ ![Icône de mise à jour d’état](../master-data-services/media/mds-statusicon-updating.png "icône de mise à jour d’état")  
   
  En cas d’erreur lors de la création ou de la modification d’une entité, l’image suivante apparaît.  
   
- ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status")  
+ ![Icône de statut d’erreur](../master-data-services/media/mds-statusicon-error.png "icône de statut d’erreur")  
   
  Si l’état présente la valeur OK, l’image suivante apparaît.  
   
- ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")  
+ ![Icône pour l’état OK](../master-data-services/media/mds-statusicon-ok.png "icône pour l’état OK")  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Hiérarchies explicites &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [Supprimer une entité &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)   
- [Entités &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
+ [Supprimer une entité &#40; Master Data Services &#41;](../master-data-services/delete-an-entity-master-data-services.md)   
+ [Entités (Master Data Services)](../master-data-services/entities-master-data-services.md)  
   
   

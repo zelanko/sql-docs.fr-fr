@@ -1,35 +1,40 @@
 ---
-title: "XML Task Editor (General Page) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.xmltask.general.f1"
-helpviewer_keywords: 
-  - "XML Task Editor"
+title: "Éditeur de tâche XML (Page Général) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.xmltask.general.f1
+helpviewer_keywords:
+- XML Task Editor
 ms.assetid: b9622c48-3243-4408-a1de-9ba20e32ff70
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f9dc1f49a7e2fcee8b87546585075d016f1f6ace
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# XML Task Editor (General Page)
+# <a name="xml-task-editor-general-page"></a>XML Task Editor (General Page)
   Utilisez le nœud **Général** de la boîte de dialogue **Éditeur de tâche XML** pour préciser le type d'opération à effectuer, puis la configurer.  
   
  Pour en savoir plus sur cette tâche, consultez [Tâche XML](../../integration-services/control-flow/xml-task.md) et [Effectuer une validation XML avec la tâche XML](../../integration-services/control-flow/validate-xml-with-the-xml-task.md). Pour plus d'informations sur l'utilisation de documents et de données XML, consultez «[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)» (en anglais) dans MSDN Library.  
   
-## Options statiques  
+## <a name="static-options"></a>Options statiques  
  **OperationType**  
  Permet de sélectionner le type d'opération dans la liste. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Valider**|Permet de valider le document XML en utilisant un DTD (Document Type Definition) ou un schéma XSD (XML Schema definition). Si cette valeur est sélectionnée, les options dynamiques incluses dans la section **Valider**s'affichent alors.|  
 |**XSLT**|Effectue les transformations XSL sur les documents XML. Si cette valeur est sélectionnée, les options dynamiques incluses dans la section **XSLT**s'affichent alors.|  
@@ -41,26 +46,26 @@ caps.handback.revision: 43
  **SourceType**  
  Permet de sélectionner le type de source correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Permet de définir la source sur un document XML.|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
   
  **Source**  
- Si **Source** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(…)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source de document**.  
+ Si **Source** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(…)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source de document** .  
   
- Si **Source** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant, ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Si **Source** a la valeur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers, ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
   
  **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Si **Source** a la valeur **Variable**, sélectionnez une variable existante, ou cliquez sur **\<Nouvelle variable...>** pour en créer une.  
+ Si **Source** a la valeur **Variable**, sélectionnez une variable existante ou cliquez sur  **\<nouvelle variable... >** pour créer une nouvelle variable.  
   
- **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](../Topic/Add%20Variable.md).  
+ **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
-## Options dynamiques OperationType  
+## <a name="operationtype-dynamic-options"></a>Options dynamiques OperationType  
   
-### OperationType = Validate  
+### <a name="operationtype--validate"></a>OperationType = Validate  
  Permet d'indiquer les options de l'opération Validate.  
   
  **SaveOperationResult**  
@@ -70,14 +75,14 @@ caps.handback.revision: 43
  Permet de spécifier si le fichier ou la variable de destination doit être remplacé.  
   
  **Destination**  
- Sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
   
  **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  **DestinationType**  
- Permet de sélectionner le type de destination correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
+ Permet de sélectionner le type de destination correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
@@ -85,7 +90,7 @@ caps.handback.revision: 43
  **ValidationType**  
  Permet de sélectionner le type de validation. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**DTD**|Permet d'utiliser un DTD (Document Type Definition).|  
 |**XSD**|Permet d'utiliser un schéma XSD (XML Schema Definition Language). Si cette valeur est sélectionnée, les options dynamiques incluses dans la section **ValidationType**s'affichent.|  
@@ -96,30 +101,30 @@ caps.handback.revision: 43
  **ValidationDetails**  
  Fournit une sortie d’erreur détaillée quand la valeur de cette propriété est true. Pour plus d’informations, consultez [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md).  
   
-### Options dynamiques de ValidationType  
+### <a name="validationtype-dynamic-options"></a>Options dynamiques de ValidationType  
   
-#### ValidationType = XSD  
+#### <a name="validationtype--xsd"></a>ValidationType = XSD  
  **SecondOperandType**  
  Permet de sélectionner le type de source correspondant au deuxième document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Permet de définir la source sur un document XML.|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
   
  **SecondOperand**  
- Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(…)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source**.  
+ Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(…)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source** .  
   
- Si **SecondOperandType** a la valeur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant, ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Si **SecondOperandType** a la valeur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers, ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
   
  **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Si **XPathStringSourceType** a la valeur **Variable**, sélectionnez une variable existante, ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Si **XPathStringSourceType** a la valeur **Variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...** > pour créer une nouvelle variable.  
   
- **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](../Topic/Add%20Variable.md).  
+ **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
-### OperationType = XSLT  
+### <a name="operationtype--xslt"></a>OperationType = XSLT  
  Permet d'indiquer les options relatives à l'opération de transformation XSLT.  
   
  **SaveOperationResult**  
@@ -129,18 +134,18 @@ caps.handback.revision: 43
  Permet de spécifier si le fichier ou la variable de destination doit être remplacé.  
   
  **Destination**  
- Si **DestinationType** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant, ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Si **DestinationType** a la valeur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers, ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
   
  **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Si **DestinationType** a la valeur **Variable**, sélectionnez une variable existante, ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Si **DestinationType** a la valeur **Variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...** > pour créer une nouvelle variable.  
   
- **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](../Topic/Add%20Variable.md).  
+ **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **DestinationType**  
- Permet de sélectionner le type de destination correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
+ Permet de sélectionner le type de destination correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
@@ -148,24 +153,24 @@ caps.handback.revision: 43
  **SecondOperandType**  
  Permet de sélectionner le type de source correspondant au deuxième document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Permet de définir la source sur un document XML.|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
   
  **SecondOperand**  
- Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(…)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source**.  
+ Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(…)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source** .  
   
- Si **SecondOperandType** a la valeur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant, ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Si **SecondOperandType** a la valeur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers, ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
   
  **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Si **XPathStringSourceType** a la valeur **Variable**, sélectionnez une variable existante, ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Si **XPathStringSourceType** a la valeur **Variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...** > pour créer une nouvelle variable.  
   
- **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](../Topic/Add%20Variable.md).  
+ **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
-### OperationType = XPATH  
+### <a name="operationtype--xpath"></a>OperationType = XPATH  
  Permet de spécifier les options relatives à l'opération XPath.  
   
  **SaveOperationResult**  
@@ -175,18 +180,18 @@ caps.handback.revision: 43
  Permet de spécifier si le fichier ou la variable de destination doit être remplacé.  
   
  **Destination**  
- Si **DestinationType** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant, ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Si **DestinationType** a la valeur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers, ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
   
  **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Si **DestinationType** a la valeur **Variable**, sélectionnez une variable existante, ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Si **DestinationType** a la valeur **Variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...** > pour créer une nouvelle variable.  
   
- **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](../Topic/Add%20Variable.md).  
+ **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **DestinationType**  
- Permet de sélectionner le type de destination correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
+ Permet de sélectionner le type de destination correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
@@ -194,22 +199,22 @@ caps.handback.revision: 43
  **SecondOperandType**  
  Permet de sélectionner le type de source correspondant au deuxième document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Permet de définir la source sur un document XML.|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
   
  **SecondOperand**  
- Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(…)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source**.  
+ Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(…)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source** .  
   
- Si **SecondOperandType** a la valeur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant, ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Si **SecondOperandType** a la valeur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers, ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
   
  **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Si **XPathStringSourceType** a la valeur **Variable**, sélectionnez une variable existante, ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Si **XPathStringSourceType** a la valeur **Variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...** > pour créer une nouvelle variable.  
   
- **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](../Topic/Add%20Variable.md).  
+ **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **PutResultInOneNode**  
  Permet de spécifier si le résultat doit être écrit dans un seul nœud.  
@@ -217,34 +222,34 @@ caps.handback.revision: 43
  **XPathOperation**  
  Permet d'indiquer le type de résultat XPath. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Evaluation**|Permet de retourner les résultats d'une fonction XPath.|  
 |**Liste de nœuds**|Permet de retourner les nœuds sélectionnés en tant que fragment XML.|  
 |**Valeurs**|Permet de retourner la valeur interne du texte correspondant à tous les nœuds sélectionnés, sous forme de chaîne concaténée.|  
   
-### OperationType = Fusionner  
+### <a name="operationtype--merge"></a>OperationType = Fusionner  
  Permet d'indiquer les différentes options de l'opération Fusionner.  
   
  **XPathStringSourceType**  
  Permet de sélectionner le type de source correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Permet de définir la source sur un document XML.|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
   
  **XPathStringSource**  
- Si **XPathStringSourceType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(…)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source de document**.  
+ Si **XPathStringSourceType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(…)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source de document** .  
   
- Si **XPathStringSourceType** a la valeur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant, ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Si **XPathStringSourceType** a la valeur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers, ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
   
  **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Si **XPathStringSourceType** a la valeur **Variable**, sélectionnez une variable existante, ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Si **XPathStringSourceType** a la valeur **Variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...** > pour créer une nouvelle variable.  
   
- **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](../Topic/Add%20Variable.md)  
+ **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  Lorsque vous utilisez une instruction XPath pour identifier l'emplacement de fusion dans le document source, cette instruction est supposée retourner un nœud unique. Si elle retourne plusieurs nœuds, seul le premier est utilisé. Le contenu du deuxième document est fusionné sous le premier nœud que la requête XPath retourne.  
   
@@ -255,18 +260,18 @@ caps.handback.revision: 43
  Permet de spécifier si le fichier ou la variable de destination doit être remplacé.  
   
  **Destination**  
- Si **DestinationType** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant, ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Si **DestinationType** a la valeur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers, ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
   
  **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Si **DestinationType** a la valeur **Variable**, sélectionnez une variable existante, ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Si **DestinationType** a la valeur **Variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...** > pour créer une nouvelle variable.  
   
- **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](../Topic/Add%20Variable.md).  
+ **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **DestinationType**  
- Permet de sélectionner le type de destination correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
+ Permet de sélectionner le type de destination correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
@@ -274,30 +279,30 @@ caps.handback.revision: 43
  **SecondOperandType**  
  Permet de sélectionner le type de destination correspondant au deuxième document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Permet de définir la source sur un document XML.|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
   
  **SecondOperand**  
- Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(…)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source de document**.  
+ Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(…)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source de document** .  
   
- Si **SecondOperandType** a la valeur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant, ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Si **SecondOperandType** a la valeur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers, ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
   
  **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Si **SecondOperandType** a la valeur **Variable**, sélectionnez une variable existante, ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Si **SecondOperandType** a la valeur **Variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...** > pour créer une nouvelle variable.  
   
- **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](../Topic/Add%20Variable.md)  
+ **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-### OperationType = Diff  
+### <a name="operationtype--diff"></a>OperationType = Diff  
  Permet d'indiquer les différentes options de l'opération Diff.  
   
  **DiffAlgorithm**  
  Permet de sélectionner l'algorithme Diff à utiliser pour la comparaison de documents. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Automatique**|Laisse la tâche XML déterminer si l'algorithme à utiliser est l'algorithme rapide ou l'algorithme précis.|  
 |**Rapide**|L'algorithme de comparaison utilisé est le plus rapide des deux, mais aussi le moins précis.|  
@@ -330,43 +335,43 @@ caps.handback.revision: 43
  Permet de spécifier si le fichier ou la variable de destination doit être remplacé.  
   
  **Destination**  
- Si **DestinationType** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant, ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Si **DestinationType** a la valeur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers, ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
   
  **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Si **DestinationType** a la valeur **Variable**, sélectionnez une variable existante, ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Si **DestinationType** a la valeur **Variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...** > pour créer une nouvelle variable.  
   
- **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](../Topic/Add%20Variable.md).  
+ **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **DestinationType**  
- Permet de sélectionner le type de destination correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
+ Permet de sélectionner le type de destination correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
   
  **SecondOperandType**  
- Permet de sélectionner le type de destination correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
+ Permet de sélectionner le type de destination correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Permet de définir la source sur un document XML.|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
   
  **SecondOperand**  
- Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(…)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source de document**.  
+ Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(…)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source de document** .  
   
- Si **SecondOperandType** a la valeur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant, ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Si **SecondOperandType** a la valeur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers, ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
   
  **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Si **SecondOperandType** a la valeur **Variable**, sélectionnez une variable existante, ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Si **SecondOperandType** a la valeur **Variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...** > pour créer une nouvelle variable.  
   
- **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](../Topic/Add%20Variable.md)  
+ **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-### OperationType = Patch  
+### <a name="operationtype--patch"></a>OperationType = Patch  
  Permet d'indiquer les différentes options de l'opération Patch.  
   
  **SaveOperationResult**  
@@ -376,44 +381,44 @@ caps.handback.revision: 43
  Permet de spécifier si le fichier ou la variable de destination doit être remplacé.  
   
  **Destination**  
- Si **DestinationType** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant, ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Si **DestinationType** a la valeur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers, ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
   
  **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Si **DestinationType** a la valeur **Variable**, sélectionnez une variable existante, ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Si **DestinationType** a la valeur **Variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...** > pour créer une nouvelle variable.  
   
- **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](../Topic/Add%20Variable.md).  
+ **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **DestinationType**  
- Permet de sélectionner le type de destination correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
+ Permet de sélectionner le type de destination correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
   
  **SecondOperandType**  
- Permet de sélectionner le type de destination correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
+ Permet de sélectionner le type de destination correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Permet de définir la source sur un document XML.|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
   
  **SecondOperand**  
- Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(…)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source de document**.  
+ Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(…)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source de document** .  
   
- Si **SecondOperandType** a la valeur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant, ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Si **SecondOperandType** a la valeur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers, ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
   
  **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Si **SecondOperandType** a la valeur **Variable**, sélectionnez une variable existante, ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Si **SecondOperandType** a la valeur **Variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...** > pour créer une nouvelle variable.  
   
- **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](../Topic/Add%20Variable.md)  
+ **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-## Voir aussi  
- [Guide de référence des erreurs et des messages propres à Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)   
  [Page Expressions](../../integration-services/expressions/expressions-page.md)  
   
   

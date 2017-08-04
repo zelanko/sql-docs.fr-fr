@@ -1,23 +1,28 @@
 ---
-title: "Extension de r&#232;gles d’entreprise (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Règles d’entreprise (Master Data Services) d’Extension | Documents Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 caps.latest.revision: 16
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04d846ca87f96f1b3f08a0add5115968af40a855
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Extension de r&#232;gles d’entreprise (Master Data Services)
+# <a name="business-rules-extension-master-data-services"></a>Extension de règles d’entreprise (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez appliquer des scripts SQL définis par l’utilisateur en tant qu’extension de conditions et d’actions prédéfinies.  
   
 > [!NOTE]  
@@ -67,7 +72,7 @@ CREATE PROCEDURE [usr].[YourAction]
 |stg.|SELECT, UPDATE, DELETE, EXECUTE, INSERT|  
 |usr|FULL|  
   
-## Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle Administration de système.  
@@ -76,17 +81,17 @@ CREATE PROCEDURE [usr].[YourAction]
   
 -   Des scripts définis par l’utilisateur avaient été ajoutés à la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## Créer une règle d’entreprise pour traiter un script défini par l’utilisateur comme une condition ou une action  
+## <a name="create-a-business-rule-to-take-a-user-defined-script-as-a-condition-or-as-an-action"></a>Créer une règle d’entreprise pour traiter un script défini par l’utilisateur comme une condition ou une action  
   
 1.  Dans Master Data Manager, cliquez sur **Administration de système**.  
   
 2.  Dans la barre de menus, pointez sur **Gérer** et cliquez sur **Règles d’entreprise**.  
   
-3.  Dans la page **Règles d’entreprise**, sélectionnez un modèle dans la liste déroulante **Modèle**.  
+3.  Dans la page **Règles d’entreprise** , sélectionnez un modèle dans la liste déroulante **Modèle** .  
   
-4.  Dans la liste déroulante **Entité**, sélectionnez une entité.  
+4.  Dans la liste déroulante **Entité** , sélectionnez une entité.  
   
-5.  Dans la liste déroulante **Types de membres**, sélectionnez un type de membre auquel appliquer la règle d’entreprise.  
+5.  Dans la liste **Types de membres** , sélectionnez un type de membre auquel appliquer la règle d’entreprise.  
   
 6.  Cliquez sur **Ajouter**.  
   
@@ -94,7 +99,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     1.  Sous le bloc **Si** , cliquez sur le bouton **Ajouter** . Un panneau s’affiche.  
   
-    2.  Dans la liste déroulante **Opérateur**, sélectionnez la fonction définie par l’utilisateur sous **Script défini par l’utilisateur**.  
+    2.  Dans la liste déroulante **Opérateur** , sélectionnez la fonction définie par l’utilisateur sous **Script défini par l’utilisateur** .  
   
     3.  Tous les paramètres de la fonction définie par l’utilisateur sont affichés.  
   
@@ -106,13 +111,13 @@ CREATE PROCEDURE [usr].[YourAction]
   
     1.  Sous le bloc **Alors** , cliquez sur le bouton **Ajouter** . Un panneau s’affiche.  
   
-    2.  Dans la liste déroulante **Opérateur**, sélectionnez la fonction définie par l’utilisateur sous **Script défini par l’utilisateur**.  
+    2.  Dans la liste déroulante **Opérateur** , sélectionnez la fonction définie par l’utilisateur sous **Script défini par l’utilisateur** .  
   
     3.  Cliquez sur **Enregistrer**.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [Conditions de règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
- [Actions de règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)  
+ [Conditions de règle d’entreprise &#40; Master Data Services &#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
+ [Actions de règle d’entreprise &#40; Master Data Services &#41;](../master-data-services/business-rule-actions-master-data-services.md)  
   
   

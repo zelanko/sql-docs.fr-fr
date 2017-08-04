@@ -1,26 +1,31 @@
 ---
-title: "Modifier et supprimer une relation de synchronisation d’entit&#233;s (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Modifier et supprimer une relation de synchronisation d’entité (Master Data Services) | Documents Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 25454041bec8581e814cc733ecbcfdb3a2ddaa0b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Modifier et supprimer une relation de synchronisation d’entit&#233;s (Master Data Services)
+# <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>Modifier et supprimer une relation de synchronisation d’entités (Master Data Services)
   La synchronisation d’entités est une synchronisation unidirectionnelle et reproductible entre des versions d'entités. Elle fournit un moyen de partager des données d’entités entre différents modèles. Vous pouvez modifier et supprimer une relation de synchronisation que vous avez créée.  
   
-## Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables  
  Conditions préalables à la modification d’une relation de synchronisation d’entités.  
   
 -   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle Administration de système. Pour plus d’informations, consultez [Autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -81,8 +86,8 @@ caps.handback.revision: 6
   
 5.  Dans la boîte de dialogue de confirmation, cliquez sur **OK**.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer et exécuter une relation de synchronisation d’entités &#40;Master Data Services&#41;](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
- [Relation de synchronisation d’entités &#40;Master Data Services&#41;](../master-data-services/entity-sync-relationship-master-data-services.md)  
+ [Relation de synchronisation d’entité &#40; Master Data Services &#41;](../master-data-services/entity-sync-relationship-master-data-services.md)  
   
   
