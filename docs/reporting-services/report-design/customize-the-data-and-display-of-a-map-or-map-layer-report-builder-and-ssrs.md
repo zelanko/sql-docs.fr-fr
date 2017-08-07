@@ -1,5 +1,5 @@
 ---
-title: "Personnaliser les données et l’affichage d’une carte ou une couche (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Personnaliser des données et l’affichage d’une carte ou d’une couche (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -28,11 +28,11 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a9751ad1f640181db57e4107ff1debfa510d3b0e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personnaliser des données et l'affichage d'une carte ou d'une couche (Générateur de rapports et SSRS)

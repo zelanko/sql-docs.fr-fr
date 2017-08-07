@@ -1,5 +1,5 @@
 ---
-title: "Interface utilisateur du Concepteur de requêtes textuel (Générateur de rapports) | Documents Microsoft"
+title: "Interface utilisateur du Concepteur de requêtes textuel (Générateur de rapports) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -19,11 +19,11 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1640b0536b6e206afbd2aff5ea8dd11349277f12
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Interface utilisateur du Concepteur de requêtes textuel (Générateur de rapports)
@@ -45,7 +45,7 @@ ms.lasthandoff: 06/22/2017
 |------------|-----------------|  
 |**Modifier en tant que texte**|Bascule entre le Concepteur de requêtes textuel et le concepteur de requêtes graphique. Les types de sources de données ne prennent pas tous en charge les concepteurs de requêtes graphiques.|  
 |**Importer**|Importe une requête existante à partir d'un fichier ou d'un rapport. Seuls les types de fichiers sql et rdl sont pris en charge.|  
-|![Exécutez la requête](../../reporting-services/report-data/media/rsqdicon-run.gif "exécuter la requête")|Exécute la requête et affiche le jeu de résultats dans le volet Résultats.|  
+|![Exécuter la requête](../../reporting-services/report-data/media/rsqdicon-run.gif "Exécuter la requête")|Exécute la requête et affiche le jeu de résultats dans le volet Résultats.|  
 |**Type de commande**|Sélectionnez **Text**, **StoredProcedure**ou **TableDirect**. Si une procédure stockée comporte des paramètres, la boîte de dialogue **Définir les paramètres de la requête** s'affiche lorsque vous cliquez sur **Exécuter** dans la barre d'outils, et vous pouvez spécifier les valeurs souhaitées. La prise en charge du type de commande varie en fonction du type de source de données. Par exemple, seuls OLE DB et ODBC prennent en charge **TableDirect**.<br /><br /> Remarque : si une procédure stockée renvoie plusieurs jeux de résultats, seul le premier jeu est utilisé pour remplir le jeu de données.|  
   
 ### <a name="command-type-text"></a>Texte de type de commande  
@@ -74,7 +74,7 @@ SELECT Name FROM Person.ContactType
   
  La figure suivante illustre les volets Résultats et Requête lorsque vous exécutez une procédure stockée. Dans ce cas, les paramètres d'entrée sont des constantes.  
   
- ![Procédure stockée dans le Concepteur de requêtes textuel](../../reporting-services/report-data/media/rs-relational-text-sp.gif "procédure stockée dans le Concepteur de requêtes textuel")  
+ ![Procédure stockée dans le concepteur de requêtes textuel](../../reporting-services/report-data/media/rs-relational-text-sp.gif "Procédure stockée dans le concepteur de requêtes textuel")  
   
  Le tableau ci-dessous décrit la fonction de chaque volet.  
   

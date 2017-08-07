@@ -43,6 +43,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Initialiser un abonnement avec un instantané](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
- [Snapshot Options](../../relational-databases/replication/snapshot-options.md)  
+ [Options d’instantané](../../relational-databases/replication/snapshot-options.md)  
   
   

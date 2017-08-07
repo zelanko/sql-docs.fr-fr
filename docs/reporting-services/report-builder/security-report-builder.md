@@ -1,5 +1,5 @@
 ---
-title: "Sécurité (Générateur de rapports) | Documents Microsoft"
+title: "Sécurité (Générateur de rapports) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7e6f09ff050246777e307f73280c764dd6da3ad7
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="security-report-builder"></a>Sécurité (Générateur de rapports)
@@ -50,7 +50,7 @@ ms.lasthandoff: 06/22/2017
   
      Pour permettre l'affichage et la publication des éléments sur un serveur de rapports, les ensembles d'autorisations qui s'appliquent aux éléments et opérations liés aux rapports sont organisés en rôles. Un administrateur de serveur de rapports vous attribue un ou plusieurs rôles. Par exemple, le rôle prédéfini Navigateur vous permet d'afficher les rapports, dossiers, modèles et ressources.  
   
-     Si vous ne pouvez pas vous connecter ou accéder à un serveur de rapports, contactez l'administrateur du serveur de rapports. Pour plus d’informations, consultez [Sécurité et protection de Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md) dans la documentation relative à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la [documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](http://go.microsoft.com/fwlink/?linkid=121312).  
+     Si vous ne pouvez pas vous connecter ou accéder à un serveur de rapports, contactez l'administrateur du serveur de rapports. Pour plus d’informations, consultez [Sécurité et protection de Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](http://go.microsoft.com/fwlink/?linkid=121312).  
   
 -   Serveur de rapports configuré en mode intégré SharePoint  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 06/22/2017
   
 -   N'utilisez pas de paramètres basés sur des paramètres de requête et qui sont de type **Texte** , à moins que vous ne fournissiez des valeurs valides. Une liste de valeurs disponibles aide l'utilisateur à choisir uniquement des valeurs valides. Sans une liste de valeurs disponibles, vous ne pouvez pas restreindre les valeurs qu'un utilisateur peut entrer.  
   
--   N'utilisez pas la valeur globale [&UserID] pour sécuriser des données privées. En tant que paramètre de rapport, cette valeur peut être spécifiée dans une URL de rapport à l'aide de la syntaxe d'accès URL. L'utilisation de cette valeur dans une expression d'un dataset partagé empêche le dataset d'être mis en cache. Pour plus d’informations, consultez [Référence de paramètre d’accès URL](../../reporting-services/url-access-parameter-reference.md) dans la documentation relative à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la [documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](http://go.microsoft.com/fwlink/?linkid=121312).  
+-   N'utilisez pas la valeur globale [&UserID] pour sécuriser des données privées. En tant que paramètre de rapport, cette valeur peut être spécifiée dans une URL de rapport à l'aide de la syntaxe d'accès URL. L'utilisation de cette valeur dans une expression d'un dataset partagé empêche le dataset d'être mis en cache. Pour plus d’informations, consultez [Référence de paramètre d’accès URL](../../reporting-services/url-access-parameter-reference.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](http://go.microsoft.com/fwlink/?linkid=121312).  
   
  Une fois les éléments publiés sur un serveur de rapports, l'administrateur du serveur de rapports peut contribuer à les sécuriser à l'aide d'une sécurité basée sur les rôles ou d'une sécurité au niveau des éléments et des dossiers. Pour plus d’informations, consultez [Sécuriser des rapports et des ressources](../../reporting-services/security/secure-reports-and-resources.md) dans la documentation relative à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la [documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](http://go.microsoft.com/fwlink/?linkid=121312).  
   

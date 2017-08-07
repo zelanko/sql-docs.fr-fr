@@ -1,5 +1,5 @@
 ---
-title: "Syntaxe d’élément de chemin d’accès pour les données de rapport XML (SSRS) | Documents Microsoft"
+title: "Syntaxe du chemin à l’élément pour des données de rapport XML (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -18,11 +18,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7c25d6665198e0392aa70d649ca658adec84d2de
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Syntaxe du chemin d'accès à l'élément pour des données de rapport XML (SSRS)
@@ -37,9 +37,9 @@ ms.lasthandoff: 06/22/2017
 |----------------|--------------|  
 |**gras**|Texte devant être tapé exactement comme indiqué.|  
 |&#124; (barre verticale)|Sépare les éléments de la syntaxe. Vous ne pouvez choisir qu'un seul de ces éléments.|  
-|`[ ]`(crochets)|Éléments de syntaxe facultatifs. Ne tapez pas les crochets.|  
+|`[ ]` (crochets)|Éléments de syntaxe facultatifs. Ne tapez pas les crochets.|  
 |**{ }** (accolades)|Délimitent les paramètres des éléments de syntaxe.|  
-|[**,**...*n*]|Indique l’élément précédent peut se répéter  *n*  nombre de fois. Les occurrences sont séparées par des virgules.|  
+|[**,**...*n*]|Indique que l’élément précédent peut se répéter *n* fois. Les occurrences sont séparées par des virgules.|  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -80,13 +80,13 @@ XMLLocalName :: =
 |Terme|Définition|  
 |----------|----------------|  
 |Element path|Définit la séquence de nœuds à parcourir dans le document XML afin de récupérer les données de champ d'un dataset avec une source de données XML.|  
-|**ElementNode**|Nœud XML dans le document XML. Les nœuds sont désignés par des balises et existent dans une relation hiérarchique avec d'autres nœuds. Par exemple, \<clients > est le nœud d’élément racine. \<Client > est un sous-élément de \<clients >.|  
+|**ElementNode**|Nœud XML dans le document XML. Les nœuds sont désignés par des balises et existent dans une relation hiérarchique avec d'autres nœuds. Par exemple, \<Customers> est le nœud de l’élément racine. \<Customer> est un sous-élément de \<Customers>.|  
 |**XMLName**|Nom du nœud. Par exemple, le nom du nœud Customers est Customers. **XMLName** peut porter comme préfixe un identificateur d’espace de noms qui identifie de façon unique chaque nœud.|  
 |**Encoding**|Indique que **Value** pour cet élément est encodé en XML et doit être décodé et inclus en tant que sous-élément de cet élément.|  
 |**FieldList**|Définit l'ensemble des éléments et des attributs à utiliser pour récupérer des données.<br /><br /> Si ce terme n'est pas spécifié, tous les attributs et les sous-éléments sont utilisés comme champs. Si la liste de champs vide est spécifiée (**{}**), aucun champ de ce nœud n’est utilisé.<br /><br /> **FieldList** ne peut pas contenir à la fois **Value** et **Element** ou **ElementNode**.|  
 |**Field**|Spécifie les données qui sont extraites en tant que champ de dataset.|  
-|**Attribute**|Paire nom-valeur dans **ElementNode**. Par exemple, dans le nœud d’élément \<Customer ID = « 1 » >, **ID** est un attribut et  **@ID(entier)** retourne « 1 » comme type d’entier dans le champ de données correspondant **ID**.|  
-|**Value**|Valeur de l'élément. **Value** ne peut être utilisé que sur le dernier **ElementNode** dans le chemin de l’élément. Par exemple, étant donné que \<retourner > est un nœud terminal, si vous l’incluez à la fin d’un chemin d’accès à un élément, la valeur de **retourner {@}** est **siège**.|  
+|**Attribute**|Paire nom-valeur dans **ElementNode**. Par exemple, dans le nœud d’élément \<Customer ID="1">, **ID** est un attribut et **@ID(Integer)** retourne « 1 » comme type d’entier dans l’élément **ID** du champ de données correspondant.|  
+|**Valeur**|Valeur de l'élément. **Value** ne peut être utilisé que sur le dernier **ElementNode** dans le chemin de l’élément. Par exemple, étant donné que \<Return> est un nœud terminal, si vous l’incluez à la fin du chemin d’un élément, la valeur de **Return {@}** est **Chair**.|  
 |**Element**|Valeur du sous-élément nommé. Par exemple, Customers {}/Customer {}/LastName récupère des valeurs pour l'élément LastName uniquement.|  
 |**Type**|Type de données facultatif utilisé pour le champ créé à partir de cet élément.|  
 |**NamespacePrefix**|**NamespacePrefix** est défini dans l’élément de requête XML. S’il n’existe aucun élément de requête XML, les espaces de noms dans **ElementPath** XML sont ignorés. S’il existe un élément de requête XML, **ElementPath** XML possède un attribut **IgnoreNamespaces**facultatif. Si IgnoreNamespaces a la valeur **true**, les espaces de noms dans **ElementPath** XML et le document XML sont ignorés. Pour plus d’informations, consultez [Syntaxe de requête XML pour les données de rapport XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).|  

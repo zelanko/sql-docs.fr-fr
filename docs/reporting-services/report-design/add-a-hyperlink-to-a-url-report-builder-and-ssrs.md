@@ -1,5 +1,5 @@
 ---
-title: "Ajouter un lien hypertexte vers une URL (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Ajouter un lien hypertexte à une URL (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/07/2016
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c4d66e7d74d06cbad20351f80a312be95cc253c0
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Ajouter un lien hypertexte à une URL (Générateur de rapports et SSRS)
@@ -29,11 +29,11 @@ Découvrez comment ajouter des actions de lien hypertexte à des zones de texte,
   
 *   Vous pouvez **ajouter un lien hypertexte qui ouvre un navigateur avec une URL** que vous spécifiez. Le lien hypertexte peut être une URL statique ou une expression apparentée à une URL. Si une base de données comprend un champ avec des URL, vous pouvez insérer ce champ dans l'expression de façon à produire une liste dynamique de liens hypertexte dans le rapport. Assurez-vous que les lecteurs de votre rapport ont accès à l’URL fournie.  
    
-*  Vous pouvez également **spécifier des URL pour créer des extractions** vers des rapports sur n’importe quel serveur de rapports que vos utilisateurs et vous-même avez l’autorisation d’afficher en utilisant des demandes d’URL dirigées vers le serveur de rapports. Par exemple, vous pouvez spécifier un rapport et masquer l'explorateur de documents à l'utilisateur lorsqu'il affiche pour la première fois le rapport. Pour plus d’informations, consultez [Accès URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md) et [Spécification de chemins d’accès à des éléments externes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).
+*  Vous pouvez également **spécifier des URL pour créer des extractions** vers des rapports sur n’importe quel serveur de rapports que vos utilisateurs et vous-même avez l’autorisation d’afficher en utilisant des demandes d’URL dirigées vers le serveur de rapports. Par exemple, vous pouvez spécifier un rapport et masquer l'explorateur de documents à l'utilisateur lorsqu'il affiche pour la première fois le rapport. Pour plus d’informations, consultez [Accès URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md) et [Spécification de chemins à des éléments externes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).
  
  *  Vous pouvez **ajouter un signet à un emplacement spécifique** dans le même rapport. 
   
-Essayez d’ajouter des liens hypertexte avec des exemples de données dans [Didacticiel : mettre en forme du texte &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+Essayez d’ajouter des liens hypertexte avec des exemples de données dans le [didacticiel : mettre en forme du texte &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  Les liens qui sont associés à des champs de dataset peuvent être vulnérables à des opérations de falsification à des fins malveillantes. Pour plus d’informations, consultez [Sécuriser des rapports et des ressources](../../reporting-services/security/secure-reports-and-resources.md).  

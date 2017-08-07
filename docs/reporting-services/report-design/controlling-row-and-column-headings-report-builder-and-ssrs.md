@@ -1,5 +1,5 @@
 ---
-title: "Contrôle des en-têtes de ligne et colonne (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Contrôle des en-têtes de ligne et de colonne (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f83ece6730c623a8c710d9b3aef3f8b4786b83ca
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>Contrôle des en-têtes de ligne et de colonne (Générateur de rapports et SSRS)
@@ -67,11 +67,11 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="Matrix"></a> Matrice  
  Par défaut, une matrice simple possède un groupe de lignes et un groupe de colonnes. La figure ci-dessous illustre une matrice avec un groupe de lignes basé sur la catégorie et un groupe de colonnes basé sur la géographie :  
   
- ![Matrice, ligne Category et groupe de colonnes Geography](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "matrice, ligne Category et groupe de colonnes Geography")  
+ ![Matrice, ligne Category et groupe de colonnes Geography](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "Matrice, ligne Category et groupe de colonnes Geography")  
   
  Les traits en pointillés indiquent les quatre zones de tableau matriciel. La zone de groupe de lignes a un en-tête de groupe de lignes qui contrôle les étiquettes de catégorie dans la première colonne. De même, la zone de groupe de colonnes a un en-tête de groupe de colonnes qui contrôle les étiquettes de géographie dans la première ligne. Dans l'aperçu, comme la matrice s'étend horizontalement sur la page, la première ligne affiche les en-têtes de colonnes, comme illustré dans la figure ci-dessous :  
   
- ![Aperçu d’une matrice rendue avec des groupes développés](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "aperçu d’une matrice rendue avec des groupes développés")  
+ ![Aperçu d’une matrice rendue avec des groupes développés](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "Aperçu d’une matrice rendue avec des groupes développés")  
   
  Pour répéter ou figer les en-têtes de colonnes sur la première ligne, définissez les propriétés pour les en-têtes de colonnes sur la région de données de tableau matriciel. Les en-têtes de colonnes pour les groupes de colonnes imbriqués sont inclus automatiquement.  
   
@@ -82,19 +82,19 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="TableNoGroups"></a> Table sans groupes de lignes  
  Par défaut, une table simple sans groupes inclut le groupe de détails. La figure ci-dessous illustre une table qui affiche la catégorie, le numéro de commande et les données de ventes :  
   
- ![Conception, table avec une ligne statique, une ligne dynamique](../../reporting-services/report-design/media/rs-tableheaderstaticdesign.gif "conception, table avec une ligne statique, une ligne dynamique")  
+ ![Conception, table avec une ligne statique, une ligne dynamique](../../reporting-services/report-design/media/rs-tableheaderstaticdesign.gif "Conception, table avec une ligne statique, une ligne dynamique")  
   
  Il n'y a pas de traits en pointillés, car la table est constituée uniquement de la zone de corps du tableau matriciel. La première ligne affiche les en-têtes de colonnes et représente un membre de tableau matriciel statique qui n'est associé à aucun groupe. La deuxième ligne affiche les données de détail et représente un membre de tableau matriciel dynamique associé au groupe de détails. La figure ci-dessous illustre la table dans l'aperçu :  
   
- ![Aperçu, table avec une ligne statique, une ligne dynamique](../../reporting-services/report-design/media/rs-tableheaderstaticpreview.gif "aperçu, table avec une ligne statique, une ligne dynamique")  
+ ![Aperçu, table avec une ligne statique, une ligne dynamique](../../reporting-services/report-design/media/rs-tableheaderstaticpreview.gif "Aperçu, table avec une ligne statique, une ligne dynamique")  
   
  Pour répéter ou figer des en-têtes de colonnes, définissez les propriétés sur le membre de tableau matriciel pour la ligne statique qui fait partie de la définition de région de données de tableau matriciel. Pour sélectionner la ligne statique, vous devez utiliser le mode Avancé du volet de regroupement. La figure ci-dessous illustre le volet Groupes de lignes :  
   
- ![Groupes de lignes, table avec 1 statiques, 1 ligne dynamique](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpanedefault.gif "groupes de lignes, table avec 1 statiques, 1 ligne dynamique")  
+ ![Groupes de lignes, table avec 1 ligne statique, 1 ligne dynamique](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpanedefault.gif "Groupes de lignes, table avec 1 ligne statique, 1 ligne dynamique")  
   
  En mode Avancé, la figure ci-dessous illustre les membres de tableau matriciel statiques et dynamiques pour les groupes de lignes dans la table :  
   
- ![Groupes de lignes, Avancé pour table par défaut](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpaneadvanced.gif "groupes de lignes, Avancé pour table par défaut")  
+ ![Groupes de lignes, avancé pour table par défaut](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpaneadvanced.gif "Groupes de lignes, avancé pour table par défaut")  
   
  Pour répéter ou figer les en-têtes de colonne pour le membre de tableau matriciel, sélectionnez la ligne statique étiquetée (**Statique**). Le volet Propriétés affiche les propriétés du membre du tableau matriciel que vous venez de sélectionner. En définissant des propriétés pour ce membre de tableau matriciel, vous pouvez contrôler la façon dont la première ligne se répète ou reste visible.  
   
@@ -103,19 +103,19 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="TableRowGroupsGroupHeader"></a> Table avec groupes de lignes et zone de groupe de lignes  
  Si vous ajoutez un groupe de lignes à une table simple, une zone de groupe de lignes est ajoutée à la table sur l'aire de conception. La figure ci-dessous illustre une table avec un groupe de lignes basé sur la catégorie :  
   
- ![Conception, table avec un groupe de lignes et détails](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "conception, table avec un groupe de lignes et détails")  
+ ![Conception, table avec un groupe de lignes et détails](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "Conception, table avec un groupe de lignes et détails")  
   
  Les traits en pointillés indiquent la zone des groupes de lignes du tableau matriciel et la zone de corps du tableau matriciel. La zone de groupe de lignes a un en-tête de groupe de lignes mais aucun en-tête de groupe de colonnes. La figure ci-dessous illustre cette table dans l'aperçu :  
   
- ![Aperçu, table avec un groupe de lignes et détails](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercellpreview.gif "aperçu, table avec un groupe de lignes et détails")  
+ ![Aperçu, table avec un groupe de lignes et détails](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercellpreview.gif "Aperçu, table avec un groupe de lignes et détails")  
   
  Pour répéter ou figer des en-têtes de colonnes, utilisez la même approche que l'exemple précédent. La figure ci-dessous illustre l'affichage par défaut du volet Groupes de lignes :  
   
- ![Groupes de lignes, la valeur par défaut avec membres dynamiques](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "groupes de lignes, par défaut avec membres dynamiques")  
+ ![Groupes de lignes, valeurs par défaut avec membres dynamiques](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "Groupes de lignes, valeurs par défaut avec membres dynamiques")  
   
  Utilisez le mode **Avancé** du volet Groupes de lignes pour afficher les membres de tableau matriciel, comme illustré dans la figure ci-dessous :  
   
- ![En mode avancé avec membres statiques, les groupes de lignes](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "groupes de lignes, en mode avancé avec membres statiques")  
+ ![Groupes de lignes, mode avancé avec membres statiques](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "Groupes de lignes, mode avancé avec membres statiques")  
   
  Pour les membres de tableau matriciel sont répertoriés **Statique**, (**Statique**) Catégorie et (**Détails**). Un membre de tableau matriciel qui inclut des parenthèses () indique qu'il n'existe pas d'en-tête de groupe correspondant. Pour répéter ou figer des en-têtes de colonnes, sélectionnez le membre de tableau matriciel statique supérieur et définissez les propriétés dans le volet Propriétés.  
   
@@ -130,19 +130,19 @@ ms.lasthandoff: 06/22/2017
   
  La figure ci-dessous illustre une table avec un groupe de lignes mais sans zone de groupe de lignes sur l'aire de conception :  
   
- ![Conception, table a un groupe de lignes mais aucun en-tête de groupe](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelldesign.gif "conception, table a un groupe de lignes mais aucun en-tête de groupe")  
+ ![Conception, la table comporte un groupe de lignes mais aucun en-tête de groupe](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelldesign.gif "Conception, la table comporte un groupe de lignes mais aucun en-tête de groupe")  
   
  La table a trois lignes. La première ligne contient les en-têtes de colonnes. La deuxième ligne contient la valeur de groupe et les sous-totaux. La troisième ligne contient les données de détail. Il n'y a pas de traits en pointillés, car il n'existe qu'une zone de corps du tableau matriciel. La figure ci-dessous illustre cette table dans l'aperçu :  
   
- ![Aperçu, table a un groupe de lignes mais aucun en-tête de groupe](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercellpreview.gif "l’aperçu, table a un groupe de lignes mais aucun en-tête de groupe")  
+ ![Aperçu, la table comporte un groupe de lignes mais aucun en-tête de groupe](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercellpreview.gif "Aperçu, la table comporte un groupe de lignes mais aucun en-tête de groupe")  
   
  Pour contrôler la façon dont les lignes se répètent ou restent visibles, vous devez définir les propriétés sur le membre de tableau matriciel pour chaque ligne. En mode par défaut, il n'existe aucune différence entre cet exemple et l'exemple précédent pour une table avec un groupe de lignes et un en-tête de groupe. La figure ci-dessous illustre le volet de regroupement en mode par défaut pour cette table :  
   
- ![Groupes de lignes, la valeur par défaut avec membres dynamiques](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "groupes de lignes, par défaut avec membres dynamiques")  
+ ![Groupes de lignes, valeurs par défaut avec membres dynamiques](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "Groupes de lignes, valeurs par défaut avec membres dynamiques")  
   
  Toutefois, cette structure de disposition affiche un jeu différent de membres de tableau matriciel en mode avancé. La figure ci-dessous illustre le volet de regroupement en mode avancé pour cette table :  
   
- ![Groupes de lignes, Avancé, aucun en-tête de groupe. ] (../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "Groupes de lignes, Avancé, aucun en-tête de groupe.")  
+ ![Groupes de lignes, avancé, aucun en-tête de groupe] (../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "Groupes de lignes, avancé, aucun en-tête de groupe")  
   
  Dans le volet Groupes de lignes, les membres de tableau matriciel suivants sont répertoriés : (**Statique**), (Catégorie), (**Statique**) et (**Détails**). Pour répéter ou figer les en-têtes de colonne, sélectionnez le membre de tableau matriciel (**Statique**) supérieur et définissez les propriétés dans le volet Propriétés.  
   

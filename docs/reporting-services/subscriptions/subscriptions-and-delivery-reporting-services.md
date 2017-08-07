@@ -1,5 +1,5 @@
 ---
-title: Abonnements et remise (Reporting Services) | Documents Microsoft
+title: Abonnements et remise (Reporting Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -26,11 +26,11 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5ecd364a199f122c98471f112e153d98d2778852
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Abonnements et remise (Reporting Services)
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
  Vous pouvez créer plusieurs abonnements pour un seul rapport afin de varier les options d'abonnement. Vous pouvez ainsi spécifier différentes valeurs de paramètres pour générer trois versions du même rapport, par exemple un rapport des ventes pour la région Ouest, un autre pour la région Est et un autre pour toutes les ventes.  
   
- ![flux d’abonnement ssrs exemple](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "exemple flux d’abonnement ssrs")  
+ ![exemple de flux d’abonnement ssrs](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "exemple de flux d’abonnement ssrs")  
   
  Les abonnements ne sont pas disponibles dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
@@ -189,7 +189,7 @@ ms.lasthandoff: 06/22/2017
  [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Planifications](../../reporting-services/subscriptions/schedules.md)   
  [Serveur de rapports Reporting Services &#40;mode natif&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Analyser les abonnements Reportions Services](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)  
+ [Analyser les abonnements de Reporting Services](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)  
   
   
 

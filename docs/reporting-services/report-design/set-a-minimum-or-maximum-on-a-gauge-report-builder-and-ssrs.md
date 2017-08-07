@@ -1,5 +1,5 @@
 ---
-title: "Définir un Minimum ou un Maximum sur une jauge (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Définir un minimum ou un maximum sur une jauge (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7d6381f105146c23e0813a37a8ab7acc3562ffe8
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>Définir un minimum ou un maximum sur une jauge (Générateur de rapports et SSRS)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
   
  Si votre plage de valeurs est large, par exemple de 0 à 10 000, envisagez d'utiliser un multiplicateur pour réduire le nombre de zéros sur la jauge. Le multiplicateur réduira uniquement l'échelle des nombres sur la jauge et pas la valeur proprement dite.  
   
- Vous pouvez utiliser des expressions pour définir les valeurs des options **Minimum** et **Maximum**. Pour plus d’informations, consultez [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
+ Vous pouvez utiliser des expressions pour définir les valeurs des options **Minimum** et **Maximum** . Pour plus d’informations, consultez [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
 ## <a name="to-set-the-minimum-and-maximum-on-the-gauge"></a>Pour définir le minimum et le maximum sur la jauge  
   

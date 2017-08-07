@@ -1,5 +1,5 @@
 ---
-title: "Propriétés du serveur (Page avancées) - Reporting Services | Documents Microsoft"
+title: "Propriétés du serveur (page Avancé) - Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -17,11 +17,11 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b5cd82621ecd65bb56b8a5a2eb0314935fd3a37a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propriétés du serveur (page Avancé) - Reporting Services
@@ -43,10 +43,10 @@ ms.lasthandoff: 06/22/2017
  Indique si la journalisation de l'exécution des rapports est activée. La valeur par défaut est **true**. Pour plus d’informations sur le journal des exécutions du serveur de rapports, consultez [Journal des exécutions du serveur de rapports et vue ExecutionLog3](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
  **ExecutionLogDaysKept**  
- Nombre de jours pendant lesquels conserver les informations sur l'exécution du rapport dans le journal des exécutions. Les valeurs valides pour cette propriété sont comprises entre **-1** et **2****147** **483****647**. Si la valeur est égale à **-1**, les entrées ne sont pas supprimées de la table du journal des exécutions. La valeur par défaut est **60**.  
+ Nombre de jours pendant lesquels conserver les informations sur l'exécution du rapport dans le journal des exécutions. Les valeurs valides pour cette propriété sont comprises entre **-1** et **2** **147** **483** **647**. Si la valeur est égale à **-1** , les entrées ne sont pas supprimées de la table du journal des exécutions. La valeur par défaut est **60**.  
  
 > [!NOTE] 
-> Définition d’une valeur de **0** sera *supprimer* toutes les entrées du journal d’exécution. La valeur **-1** conserve les entrées du journal d’exécution et ne seront pas supprimés.
+> La définition d’une valeur égale à **0** *supprime* toutes les entrées du journal d’exécution. La valeur **-1** conserve les entrées du journal d’exécution et ne les supprime pas.
   
  **SessionTimeout**  
  Durée (en secondes) pendant laquelle une session demeure active. La valeur par défaut est **600**.  
@@ -79,10 +79,10 @@ ms.lasthandoff: 06/22/2017
  **All =** les instantanés sont compressés pour toutes les options de stockage, qui incluent la base de données du serveur de rapports ou le système de fichiers.  
   
  **SystemReportTimeout**  
- Valeur (en secondes) du délai d'exécution du traitement du rapport par défaut pour tous les rapports gérés dans l'espace de noms du serveur de rapports. Cette valeur peut être remplacée au niveau du rapport. Si cette propriété est définie, le serveur de rapports essaie d'arrêter le traitement d'un rapport lorsque le délai spécifié est expiré. Les valeurs valides sont comprises entre **-1** et**2****147****483****647**. Si la valeur est égale à **-1**, les rapports de l’espace de noms ne spécifient pas de délai d’exécution pendant le traitement. La valeur par défaut est **1800**.  
+ Valeur (en secondes) du délai d'exécution du traitement du rapport par défaut pour tous les rapports gérés dans l'espace de noms du serveur de rapports. Cette valeur peut être remplacée au niveau du rapport. Si cette propriété est définie, le serveur de rapports essaie d'arrêter le traitement d'un rapport lorsque le délai spécifié est expiré. Les valeurs valides sont comprises entre **-1** et **2** **147** **483** **647**. Si la valeur est égale à **-1**, les rapports de l’espace de noms ne spécifient pas de délai d’exécution pendant le traitement. La valeur par défaut est **1800**.  
   
  **SystemSnapshotLimit**  
- Nombre maximal d'instantanés stockées pour un rapport. Les valeurs valides sont comprises entre **-1** et**2****147****483****647**. Si la valeur est égale à **-1**, il n’existe aucune limite sur le nombre d’instantanés.  
+ Nombre maximal d'instantanés stockées pour un rapport. Les valeurs valides sont comprises entre **-1** et **2** **147** **483** **647**. Si la valeur est égale à **-1**, il n’existe aucune limite sur le nombre d’instantanés.  
   
  **EnableIntegratedSecurity**  
  Détermine si la sécurité intégrée de Windows est prise en charge pour les connexions à la source de données de rapports. La valeur par défaut est **True**. Les valeurs valides sont les suivantes :  

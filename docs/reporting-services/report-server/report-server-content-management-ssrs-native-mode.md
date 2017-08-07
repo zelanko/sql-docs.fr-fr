@@ -1,5 +1,5 @@
 ---
-title: Rapports de gestion de contenu de serveur (SSRS en Mode natif) | Documents Microsoft
+title: Gestion du contenu du serveur de rapports (SSRS en mode natif) | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -21,11 +21,11 @@ caps.latest.revision: 50
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2289f62499f876cc296d6c939c4d9e70ccfe4c3f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gestion du contenu du serveur de rapports (SSRS en mode natif)
@@ -66,11 +66,11 @@ ms.lasthandoff: 06/22/2017
   
 |Icône|Élément pouvant être déplacé|  
 |----------|-------------------|  
-|![Icône de rapport](../../reporting-services/report-server/media/hlp-16doc.gif "icône de rapport")|Rapport|  
-|![Icône de rapport lié](../../reporting-services/report-server/media/hlp-16linked.gif "icône de rapport lié")|Rapport lié|  
-|![Icône de dossier](../../reporting-services/report-server/media/hlp-16folder.gif "icône de dossier")|Dossier|  
-|![icône de ressource générique](../../reporting-services/report-server/media/hlp-16file.gif "icône de ressource générique")|Ressource générique|  
-|![Icône de source de données partagée](../../reporting-services/report-data/media/hlp-16datasource.png "icône de source de données partagée")|Source de données partagée|  
+|![Icône Rapport](../../reporting-services/report-server/media/hlp-16doc.gif "Icône Rapport")|Rapport|  
+|![Icône Rapport lié](../../reporting-services/report-server/media/hlp-16linked.gif "Icône Rapport lié")|Rapport lié|  
+|![Icône Dossier](../../reporting-services/report-server/media/hlp-16folder.gif "Icône Dossier")|Dossier|  
+|![Icône Ressource générique](../../reporting-services/report-server/media/hlp-16file.gif "Icône Ressource générique")|Ressource générique|  
+|![Icône Source de données partagée](../../reporting-services/report-data/media/hlp-16datasource.png "Icône Source de données partagée")|Source de données partagée|  
 ||Dataset partagé|  
   
  Les éléments avec lesquels vous travaillez ne peuvent pas tous être déplacés. Par exemple, il n'est pas possible de déplacer les éléments qui sont associés à un rapport, comme les abonnements ou l'historique de rapport. Ces éléments se déplacent avec leurs rapports associés. Il n'est pas non plus possible de déplacer des éléments, comme les planifications partagées, qui existent à l'extérieur de l'arborescence des dossiers. Vous ne pouvez pas déplacer des éléments si vous n'avez pas l'autorisation de le faire. L'autorisation pour déplacer un élément est transmise lorsque les tâches suivantes sont sélectionnées dans votre attribution de rôle pour l'élément considéré : « Gérer les rapports », « Gérer les modèles », « Gérer les dossiers » et « Gérer les sources de données ».  
@@ -124,21 +124,21 @@ ms.lasthandoff: 06/22/2017
 ### <a name="deleting-folders-and-folder-contents"></a>Suppression de dossiers et de contenus de dossiers  
  Lorsque vous supprimez un dossier, vous supprimez tous les éléments qu'il contient. Avant de supprimer un dossier, vous devez examiner son contenu afin de déterminer s'il contient des éléments qui peuvent faire l'objet de références ou être utilisés par des éléments d'une autre partie de la hiérarchie des dossiers. Les éléments référencés sont les définitions de rapports prenant en charge les rapports liés, les sources de données partagées et les ressources.  
   
- Si vous supprimez un rapport ayant un ou plusieurs rapports liés qui lui font référence, les rapports liés deviendront non valides une fois le rapport supprimé. Vous ne pouvez pas déterminer à l'avance les rapports liés qui seront affectés car un rapport ne conserve pas d'informations sur les rapports qui lui sont liés. Vous pouvez toutefois consulter les propriétés d'un rapport lié afin d'identifier le rapport sur lequel il est basé. En revanche, les éléments de sources de données partagées indiquent tous les rapports qui utilisent l'élément afin que vous puissiez déterminer aisément si les informations de connexion sont utilisées. Pour plus d’informations, consultez [Créer, modifier, puis supprimer des sources de données partagées &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md). Enfin, les ressources utilisées par les rapports ne permettent pas d'identifier ces rapports.  
+ Si vous supprimez un rapport ayant un ou plusieurs rapports liés qui lui font référence, les rapports liés deviendront non valides une fois le rapport supprimé. Vous ne pouvez pas déterminer à l'avance les rapports liés qui seront affectés car un rapport ne conserve pas d'informations sur les rapports qui lui sont liés. Vous pouvez toutefois consulter les propriétés d'un rapport lié afin d'identifier le rapport sur lequel il est basé. En revanche, les éléments de sources de données partagées indiquent tous les rapports qui utilisent l'élément afin que vous puissiez déterminer aisément si les informations de connexion sont utilisées. Pour plus d’informations, consultez [Créer, modifier et supprimer des sources de données partagées &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md). Enfin, les ressources utilisées par les rapports ne permettent pas d'identifier ces rapports.  
   
  Avant de supprimer un dossier, déterminez si vous avez besoin de conserver l'historique de rapport des rapports susceptibles d'être supprimés ou les extensions de rapport (comme des abonnements pilotés par les données) faisant partie de rapports. Si vous avez besoin de ces informations, sortez l'élément du dossier avant de supprimer ce dossier.  
   
  Dans un dossier, la visibilité d'un élément dépend des attributions de rôles (autrement dit, des autorisations d'affichage d'un élément) et des options d'affichage définies actuellement pour le dossier. Dans le Gestionnaire de rapports, vous avez la possibilité de définir la page Contenu pour utiliser le mode Liste ou Détails. Dans certains cas, un élément de rapport peut se retrouver masqué dans l'affichage des listes. Prenez soin d'afficher un dossier en mode Détails avant de procéder à la suppression de son contenu.  
   
 ##  <a name="bkmk_Resources"></a> Ressources  
- Une ressource est un élément géré qui est stocké sur un serveur de rapports, mais qui n'est pas traité sur ce dernier. En règle générale, une ressource fournit du contenu externe aux utilisateurs des rapports. Il peut s'agir, par exemple, d'une image dans un fichier .jpg, d'un fichier de forme ESRI qui contient des données spatiales ou d'un fichier HTML qui décrit les règles d'entreprise utilisées dans un rapport. Le fichier JPG, SHP ou HTML est stocké sur le serveur de rapports ; toutefois, le serveur de rapports passe ce fichier directement au navigateur au lieu de le traiter en premier. Pour plus d’informations, consultez [Images &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md) et la section « Ajout de données à une carte » dans [Cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
+ Une ressource est un élément géré qui est stocké sur un serveur de rapports, mais qui n'est pas traité sur ce dernier. En règle générale, une ressource fournit du contenu externe aux utilisateurs des rapports. Il peut s'agir, par exemple, d'une image dans un fichier .jpg, d'un fichier de forme ESRI qui contient des données spatiales ou d'un fichier HTML qui décrit les règles d'entreprise utilisées dans un rapport. Le fichier JPG, SHP ou HTML est stocké sur le serveur de rapports ; toutefois, le serveur de rapports passe ce fichier directement au navigateur au lieu de le traiter en premier. Pour plus d’informations, consultez [Images &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md) et la section « Ajout de données à une carte » dans [Cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
 ### <a name="adding-and-viewing-a-resource"></a>Ajout et affichage d'une ressource  
  Pour ajouter une ressource à un serveur de rapports, vous devez télécharger ou publier un fichier :  
   
 |Opération|Type de fichier|  
 |---------------|---------------|  
-|Télécharger|Pour télécharger une ressource, vous devez utiliser le Gestionnaire de rapports si le serveur de rapports s'exécute en mode natif, ou une page d'application sur un site SharePoint si le serveur s'exécute en mode intégré SharePoint. Pour plus d’informations, consultez [Télécharger un fichier ou un rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) ou [Télécharger des documents vers une bibliothèque SharePoint &#40;Reporting Services en mode SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
+|Télécharger|Pour télécharger une ressource, vous devez utiliser le Gestionnaire de rapports si le serveur de rapports s'exécute en mode natif, ou une page d'application sur un site SharePoint si le serveur s'exécute en mode intégré SharePoint. Pour plus d’informations, consultez [Charger un fichier ou un rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) ou [Charger des documents vers une bibliothèque SharePoint &#40;Reporting Services en mode SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
 |Publier|Tous les fichiers d'un projet qui ne sont pas des rapports, des parties de rapport, des sources de données ou des datasets, sont téléchargés en tant que ressources. Pour publier une ressource, ajoutez un élément existant à un projet dans le Concepteur de rapports, puis publiez le projet sur un serveur de rapports.|  
   
  Toutes les ressources ont pour origine des fichiers situés sur un système de fichiers. Ceux-ci sont ensuite téléchargés vers un serveur de rapports. À l'exception de la limitation de la taille de fichier par défaut à 4 mégaoctets, imposée par ASP.NET, il n'y a pas de restrictions sur les types de fichiers que vous pouvez télécharger. Cependant, lorsqu'ils sont publiés sur un serveur de rapports en tant que ressources, les types de fichiers ayant des types MIME équivalents offrent une utilisation plus optimale que d'autres. Par exemple, les ressources basées sur des fichiers HTML et JPG s'ouvrent dans une fenêtre de navigateur lorsque l'utilisateur clique sur la ressource choisie ; le fichier HTML est rendu sous forme de page Web et le fichier JPG sous forme d'image à l'intention de l'utilisateur. En revanche, les ressources qui ne disposent pas de types MIME équivalents, par exemple les fichiers d'application de bureau, risquent de ne pas être rendues dans la fenêtre du navigateur.  

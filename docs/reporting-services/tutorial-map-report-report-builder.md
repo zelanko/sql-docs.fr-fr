@@ -1,5 +1,5 @@
 ---
-title: "Didacticiel : Mapper des rapports (Générateur de rapports) | Documents Microsoft"
+title: "Didacticiel : rapport cartographique (Générateur de rapports) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-server-2016
@@ -16,11 +16,11 @@ caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: efe91a2e1e8ca7b0744639ed718d63b70e3adc5c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="tutorial-map-report-report-builder"></a>Didacticiel : Rapport cartographique (Générateur de rapports)
@@ -35,7 +35,7 @@ Pour faire varier l'apparence des éléments cartographiques, vous devez spécif
 Dans ce didacticiel, vous créez un rapport cartographique qui affiche les emplacements des magasins dans les comtés de l’État de New York.  
    
 > [!NOTE]  
-> Dans ce didacticiel, les étapes de l'Assistant sont consolidées sous forme de deux procédures : l'une pour créer le dataset, et l'autre pour créer une table. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, le choix d’une source de données, la création d’un dataset et l’exécution de l’Assistant, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Dans ce didacticiel, les étapes de l'Assistant sont consolidées sous forme de deux procédures : l'une pour créer le dataset, et l'autre pour créer une table. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, le choix d’une source de données, la création d’un dataset et l’exécution de l’Assistant, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Durée estimée pour effectuer ce didacticiel : 30 minutes.  
   
@@ -53,7 +53,7 @@ Dans cette section, vous ajoutez une carte à votre rapport à partir de la bibl
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
-    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou Dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
+    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
@@ -97,18 +97,18 @@ Dans cette section, vous ajoutez une carte à votre rapport à partir de la bibl
   
     La carte est ajoutée à l'aire de conception.  
   
-13. Sélectionnez le texte « Map Title » et le type **Sales by Store** > Entrée.  
+13. Sélectionnez le texte « Map Title » et le type **Sales by Store** > Entrée.  
 
 15. Double-cliquez sur la carte pour afficher le volet **Couches**. Le volet **Couches** affiche une seule couche de polygones, PolygonLayer1, du type de couche **Incorporé**. Chaque comté est un élément cartographique incorporé sur cette couche.  
   
     > [!NOTE]  
-    > Si vous ne voyez pas le volet **Couches** , celui-ci se trouve peut-être à l’extérieur de votre vue actuelle. Utilisez la barre de défilement au bas de la fenêtre du mode Conception pour changer votre vue. Sinon, sous l’onglet **Affichage**, désactivez l’option **Données du rapport** pour disposer d’une plus grande aire de conception.   
+    > Si vous ne voyez pas le volet **Couches** , celui-ci se trouve peut-être à l’extérieur de votre vue actuelle. Utilisez la barre de défilement au bas de la fenêtre du mode Conception pour changer votre vue. Sinon, sous l’onglet **Affichage** , désactivez l’option **Données du rapport** pour disposer d’une plus grande aire de conception.   
 
-15. Cliquez sur la flèche en regard de PolygonLayer1 > **Propriétés des polygones**.
+15. Cliquez sur la flèche en regard de PolygonLayer1 > **Propriétés des polygones**.
 
-16. Sous l’onglet **Police**, changez la couleur en **Gris mat**.
+16. Sous l’onglet **Police** , changez la couleur en **Gris mat**.
 
-17. Sous l’onglet **Accueil** > **Exécuter** pour afficher l’aperçu du rapport.  
+17. Sous l’onglet **Accueil** > **Exécuter** pour afficher l’aperçu du rapport.  
   
     ![report-builder-map-first-preview](../reporting-services/media/report-builder-map-first-preview.png)
   
@@ -124,9 +124,9 @@ Dans cette section, vous utilisez l’Assistant Couche pour ajouter une couche d
   
 ### <a name="to-add-a-point-layer-based-on-a-sql-server-spatial-query"></a>Pour ajouter une couche de points basée sur une requête spatiale SQL Server  
   
-1.  Sous l’onglet **Exécuter** > **Conception** pour rebasculer en mode Conception.  
+1.  Sous l’onglet **Exécuter** > **Conception** pour rebasculer en mode Conception.  
   
-2.  Double-cliquez sur la carte pour afficher le volet **Couches** . Dans la barre d’outils, cliquez sur le **Assistant Nouvelle couche** bouton ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"). 
+2.  Double-cliquez sur la carte pour afficher le volet **Couches** . Dans la barre d’outils, cliquez sur le bouton **Assistant Nouvelle couche** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"). 
 
     ![report-builder-map-new-layer-wizard-icon](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
   
@@ -242,7 +242,7 @@ Utilisez l'Assistant Couche pour ajouter une couche qui affiche un itinéraire e
   
 1.  Basculez en mode Conception.  
   
-2.  Double-cliquez sur la carte pour afficher le volet **Couches** . Dans la barre d’outils, cliquez sur le **Assistant Nouvelle couche** bouton ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard").  
+2.  Double-cliquez sur la carte pour afficher le volet **Couches** . Dans la barre d’outils, cliquez sur le bouton **Assistant Nouvelle couche** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard").  
   
 3.  Dans la page **Choisir une source de données spatiales** , sélectionnez **Requête spatiale SQL Server** et cliquez sur **Suivant**.  
   
@@ -297,7 +297,7 @@ Dans cette section, vous ajoutez une couche qui affiche un arrière-plan de mosa
   
 1.  Basculez en mode Conception.  
   
-2.  Double-cliquez sur la carte pour afficher le volet **Couches** . Dans la barre d’outils, cliquez sur **ajouter une couche** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer").  
+2.  Double-cliquez sur la carte pour afficher le volet **Couches** . Dans la barre d’outils, cliquez sur **Ajouter une couche** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer").  
   
 3.  Dans la liste déroulante, cliquez sur **Couche de mosaïques**.  
   
@@ -306,9 +306,9 @@ Dans cette section, vous ajoutez une couche qui affiche un arrière-plan de mosa
     > [!NOTE]  
     > Dans l'Assistant, vous pouvez également ajouter une couche de mosaïques dans la page **Choisir des options de vue cartographique et de données spatiales** . Pour ce faire, sélectionnez **Ajouter un arrière-plan Bing Maps pour cette vue cartographique**. Dans un rapport rendu, l'arrière-plan de mosaïques affiche des mosaïques Bing Maps pour le centre et le niveau de zoom du point de vue de la carte actuels.  
   
-4.  Cliquez sur la flèche en regard de TileLayer1 > **Propriétés des mosaïques**.  
+4.  Cliquez sur la flèche en regard de TileLayer1 > **Propriétés des mosaïques**.  
   
-5.  Sous l’onglet **Général**, sous **Type**, sélectionnez **Aérien**. La vue aérienne ne contient pas de texte.  
+5.  Sous l’onglet **Général** , sous **Type**, sélectionnez **Aérien**. La vue aérienne ne contient pas de texte.  
 
     ![report-builder-map-bing-aerial](../reporting-services/media/report-builder-map-bing-aerial.png)
   
@@ -317,9 +317,9 @@ Dans cette section, vous ajoutez une couche qui affiche un arrière-plan de mosa
 ## <a name="Transparent"></a>5. Rendre une couche transparente  
 Dans cette section, pour permettre aux éléments d’une couche de laisser transparaître une autre couche, vous ajustez l’ordre et la transparence des couches pour obtenir l’effet souhaité. Vous commencez avec la première couche que vous avez créée, PolygonLayer1. 
   
-1.  Double-cliquez sur la carte pour afficher le volet **Couches**.  
+1.  Double-cliquez sur la carte pour afficher le volet **Couches** .  
   
-3.  Cliquez sur la flèche en regard de PolygonLayer1 > **Données de couche**. La boîte de dialogue **Propriétés des couches de polygones de la carte** s'ouvre.  
+3.  Cliquez sur la flèche en regard de PolygonLayer1 > **Données de couche**. La boîte de dialogue **Propriétés des couches de polygones de la carte** s'ouvre.  
   
 4.  Sous l’onglet **Visibilité** , sous **Transparence (pourcentage)**, tapez **30**.  
   
@@ -411,9 +411,9 @@ Par défaut, les données ont un format général. Dans cette section, vous appl
   
 1. Basculez en mode Conception.  
 
-2. Sélectionnez l’échelle de couleurs. Sous l’onglet **Accueil** > Section **Nombre**, cliquez sur **Devise**.  
+2. Sélectionnez l’échelle de couleurs. Sous l’onglet **Accueil** > section **Nombre**, cliquez sur **Devise**.  
   
-4.  Toujours dans la section **Nombre** cliquez deux fois sur le bouton **Réduire les décimales**.  
+4.  Toujours dans la section **Nombre** cliquez deux fois sur le bouton **Réduire les décimales** .  
   
     L'échelle de couleurs affiche les chiffres d'affaires annuels au format monétaire pour chaque plage.  
   
@@ -446,7 +446,7 @@ Vous pouvez définir les options d'affichage par défaut pour tous les élément
 
      La boîte de dialogue **Propriétés des polygones de la carte** s'ouvre. Les options d'affichage définies dans cette boîte de dialogue s'appliquent à tous les polygones de la couche avant les options d'affichage basées sur les règles.  
   
-4.  Sous l’onglet **Remplissage****Plein**. Les dégradés et les motifs s'appliquent à toutes les couleurs.  
+4.  Sous l’onglet **Remplissage**, vérifiez que le style de remplissage est **Plein**. Les dégradés et les motifs s'appliquent à toutes les couleurs.  
   
 6.  Dans **Couleur**, sélectionnez **Bleu acier clair**.  
   
@@ -457,15 +457,15 @@ Vous pouvez définir les options d'affichage par défaut pour tous les élément
 Les comtés sans données associées s’affichent en gris-bleu. Seuls les comtés qui ont des données analytiques associées ont des couleurs allant du **Rouge** au **Vert** en fonction des règles de couleur que vous avez spécifiées.  
   
 ## <a name="CustomPoint"></a>7. Ajouter un point personnalisé  
-Pour représenter un nouveau magasin qui n’a pas encore été mis en place, dans cette section, vous spécifiez un point avec le type de marqueur **Étoile**.  
+Pour représenter un nouveau magasin qui n’a pas encore été mis en place, dans cette section, vous spécifiez un point avec le type de marqueur **Étoile** .  
   
 1.  Basculez en mode Conception.  
   
-2.  Double-cliquez sur la carte pour afficher le volet **Couches** . Dans la barre d’outils, cliquez sur **ajouter une couche**![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer"), puis cliquez sur **couche de points**.    
+2.  Double-cliquez sur la carte pour afficher le volet **Couches** . Dans la barre d’outils, cliquez sur **Ajouter une couche** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer"), puis cliquez sur **Couche de points**.  
   
     Une nouvelle couche de points est ajoutée à la carte. Par défaut, le type de données spatiales de la couche de points est **Incorporé**.  
   
-3.  Cliquez sur la flèche sur PointLayer2 > **Ajouter un point**.  
+3.  Cliquez sur la flèche sur PointLayer2 > **Ajouter un point**.  
   
 4.  Déplacez le pointeur sur le point de vue de la carte. Le curseur se transforme en croix.  
   
@@ -532,7 +532,7 @@ Ce titre s'affiche alors dans la partie supérieure du rapport. En l'absence d'e
   
 ## <a name="Save"></a>10. Enregistrer le rapport  
   
-1.  En mode Création ou Aperçu, dans le menu **Fichier** > **Enregistrer sous**.
+1.  En mode Création ou Aperçu, dans le menu **Fichier** > **Enregistrer sous**.
  
 3.  Dans **Nom**, tapez **Ventes des magasins de New York**.  
 

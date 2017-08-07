@@ -20,11 +20,11 @@ caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e8fbc50a3d0e2c8e9df837f40bdfa5b787225fb3
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="create-a-push-subscription"></a>Créer un abonnement par émission (push)
@@ -161,81 +161,81 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-create-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Pour créer un abonnement par envoi de données vers un instantané ou une publication transactionnelle  
   
-1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPublication> en utilisant la connexion au serveur de publication créée à l’étape 1. Specify <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> et <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPublication> en utilisant la connexion au serveur de publication de l'étape 1. Spécifiez <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>et <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Si elle retourne la valeur **false**, les propriétés spécifiées à l'étape 2 sont incorrectes, ou la publication n'existe pas sur le serveur.  
+3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Si elle retourne la valeur **false**, les propriétés spécifiées à l'étape 2 sont incorrectes, ou la publication n'existe pas sur le serveur.  
   
-4.  Effectuez une opération AND logique au niveau du bit (**&** en Visual C# et **And** en Visual Basic) entre la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> et <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Si le résultat est <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, appliquez à <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> le résultat d’une opération OR logique au niveau du bit (**|** en Visual C# et **Or** en Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> et <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Ensuite, appelez <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> pour activer les abonnements par émission de données.  
+4.  Effectuez une opération AND logique au niveau du bit (**&** dans Visual C# et **And** dans Visual Basic) entre la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> et <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Si le résultat est <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, appliquez à <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> le résutat d'une opération OR logique au niveau du bit (**|** dans Visual C# et **Or** dans Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> et <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Appelez ensuite <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> pour activer les abonnements par envoi de données.  
   
-5.  Si la base de données d’abonnement n’existe pas, créez-la en utilisant la classe <xref:Microsoft.SqlServer.Management.Smo.Database>. Pour plus d’informations, consultez [Création, modification et suppression de bases de données](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
+5.  Si la base de données d'abonnements n'existe pas, créez-la en utilisant la classe <xref:Microsoft.SqlServer.Management.Smo.Database> . Pour plus d’informations, consultez [Création, modification et suppression de bases de données](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
-6.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransSubscription>.  
+6.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransSubscription> .  
   
 7.  Définissez les propriétés suivantes des abonnements :  
   
-    -   <xref:Microsoft.SqlServer.Management.Common.ServerConnection> sur le serveur de publication créé à l’étape 1 pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+    -   <xref:Microsoft.SqlServer.Management.Common.ServerConnection> sur l'Agent de publication créé à l'étape 1 pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-    -   Nom de la base de données d’abonnement pour <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>.  
+    -   Nom de la base de données d'abonnements pour <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>.  
   
-    -   Nom de l’Abonné pour <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>.  
+    -   Nom de l'abonné pour <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>.  
   
     -   Nom de la base de données de publication pour <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>.  
   
     -   Nom de la publication pour <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>.  
   
-    -   Les champs <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> et <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A>de <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> pour modifier les informations d’identification relatives au compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel l’Agent de distribution s’exécute sur le serveur de distribution. Ce compte permet de créer des connexions locales avec le serveur de distribution et des connexions distantes à l'aide de l'authentification Windows.  
+    -   Les paramètres <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> et <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> de <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> pour fournir les informations d'identification pour le compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel l'Agent de distribution fonctionne sur le serveur de distribution. Ce compte permet de créer des connexions locales avec le serveur de distribution et des connexions distantes à l'aide de l'authentification Windows.  
   
-        > **REMARQUE :**Il n’est pas nécessaire de définir <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> quand l’abonnement est créé par un membre du rôle serveur fixe **sysadmin**, même si cela est recommandé. Dans ce cas, l'Agent va emprunter l'identité du compte de l'Agent SQL Server. Pour plus d’informations, voir [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+        > **REMARQUE :** La configuration de <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> quand un abonnement est créé par un membre du rôle serveur fixe **sysadmin** n’est pas nécessaire, mais elle est néanmoins recommandée. Dans ce cas, l'Agent va emprunter l'identité du compte de l'Agent SQL Server. Pour plus d’informations, voir [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-    -   (Facultatif) Valeur **true** (par défaut) pour <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> afin de créer un travail d’agent qui est utilisé pour synchroniser l’abonnement. Si vous spécifiez **false**, l'abonnement peut uniquement être synchronisé par programme.  
+    -   (Facultatif) La valeur **true** (par défaut) de <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> pour créer un travail de l'Agent qui permet de synchroniser l'abonnement. Si vous spécifiez **false**, l'abonnement peut uniquement être synchronisé par programme.  
   
-    -   (Facultatif) Définissez les champs <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> et <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> ou <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> de <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A>quand vous utilisez l’authentification SQL Server pour vous connecter à l’Abonné.  
+    -   (Facultatif) Définissez les champs <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> et <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> ou <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> de <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> lorsque vous utilisez l'authentification SQL Server pour vous connecter à l'abonné.  
   
-8.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>.  
+8.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> .  
   
-    > **IMPORTANT !**Lors de la création d’un abonnement par émission de données sur un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour toutes les propriétés, y compris <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, sont envoyées au serveur de distribution en texte brut. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d’appeler la méthode <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    > **IMPORTANT!**Durant la création d’un abonnement par émission de données sur un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour toutes les propriétés, notamment <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, sont envoyées au serveur de distribution en texte brut. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'appeler la méthode <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> . Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 #### <a name="to-create-a-push-subscription-to-a-merge-publication"></a>Pour créer un abonnement par envoi de données vers une publication de fusion  
   
-1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> en utilisant la connexion au serveur de publication créée à l’étape 1. Specify <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> et <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> en utilisant la connexion au serveur de publication de l'étape 1. Spécifiez <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>et <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Si elle retourne la valeur **false**, les propriétés spécifiées à l'étape 2 sont incorrectes, ou la publication n'existe pas sur le serveur.  
+3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Si elle retourne la valeur **false**, les propriétés spécifiées à l'étape 2 sont incorrectes, ou la publication n'existe pas sur le serveur.  
   
-4.  Effectuez une opération AND logique au niveau du bit (**&** en Visual C# et **And** en Visual Basic) entre la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> et <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Si le résultat est <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, appliquez à <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> le résultat d’une opération OR logique au niveau du bit (**|** en Visual C# et **Or** en Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> et <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Ensuite, appelez <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> pour activer les abonnements par émission de données.  
+4.  Effectuez une opération AND logique au niveau du bit (**&** dans Visual C# et **And** dans Visual Basic) entre la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> et <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Si le résultat est <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, appliquez à <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> le résutat d'une opération OR logique au niveau du bit (**|** dans Visual C# et **Or** dans Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> et <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Appelez ensuite <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> pour activer les abonnements par envoi de données.  
   
-5.  Si la base de données d’abonnement n’existe pas, créez-la en utilisant la classe <xref:Microsoft.SqlServer.Management.Smo.Database>. Pour plus d’informations, consultez [Création, modification et suppression de bases de données](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
+5.  Si la base de données d'abonnements n'existe pas, créez-la en utilisant la classe <xref:Microsoft.SqlServer.Management.Smo.Database> . Pour plus d’informations, consultez [Création, modification et suppression de bases de données](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
-6.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeSubscription>.  
+6.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeSubscription> .  
   
 7.  Définissez les propriétés suivantes des abonnements :  
   
-    -   <xref:Microsoft.SqlServer.Management.Common.ServerConnection> sur le serveur de publication créé à l’étape 1 pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+    -   <xref:Microsoft.SqlServer.Management.Common.ServerConnection> sur l'Agent de publication créé à l'étape 1 pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-    -   Nom de la base de données d’abonnement pour <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>.  
+    -   Nom de la base de données d'abonnements pour <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>.  
   
-    -   Nom de l’Abonné pour <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>.  
+    -   Nom de l'abonné pour <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>.  
   
     -   Nom de la base de données de publication pour <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>.  
   
     -   Nom de la publication pour <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>.  
   
-    -   Les champs <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> et <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A>de <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> pour modifier les informations d’identification relatives au compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel l’Agent de fusion s’exécute sur le serveur de distribution. Ce compte permet de créer des connexions locales avec le serveur de distribution et des connexions distantes à l'aide de l'authentification Windows.  
+    -   Les paramètres <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> et <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> de <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> pour fournir les informations d'identification pour le compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel l'Agent de fusion fonctionne sur le serveur de distribution. Ce compte permet de créer des connexions locales avec le serveur de distribution et des connexions distantes à l'aide de l'authentification Windows.  
   
-        > **REMARQUE :**Il n’est pas nécessaire de définir <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> quand l’abonnement est créé par un membre du rôle serveur fixe **sysadmin**, même si cela est recommandé. Dans ce cas, l'Agent va emprunter l'identité du compte de l'Agent SQL Server. Pour plus d’informations, voir [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+        > **REMARQUE :** La configuration de <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> quand un abonnement est créé par un membre du rôle serveur fixe **sysadmin** n’est pas nécessaire, mais elle est néanmoins recommandée. Dans ce cas, l'Agent va emprunter l'identité du compte de l'Agent SQL Server. Pour plus d’informations, voir [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-    -   (Facultatif) Valeur **true** (par défaut) pour <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> afin de créer un travail d’agent qui est utilisé pour synchroniser l’abonnement. Si vous spécifiez **false**, l'abonnement peut uniquement être synchronisé par programme.  
+    -   (Facultatif) La valeur **true** (par défaut) de <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> pour créer un travail de l'Agent qui permet de synchroniser l'abonnement. Si vous spécifiez **false**, l'abonnement peut uniquement être synchronisé par programme.  
   
-    -   (Facultatif) Définissez les champs <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> et <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> ou <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> de <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A>quand vous utilisez l’authentification SQL Server pour vous connecter à l’Abonné.  
+    -   (Facultatif) Définissez les champs <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> et <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> ou <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> de <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> lorsque vous utilisez l'authentification SQL Server pour vous connecter à l'abonné.  
   
-    -   (Facultatif) Définissez les champs <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> et <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> ou <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> de <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> quand vous utilisez l’authentification SQL Server pour vous connecter au serveur de publication.  
+    -   (Facultatif) Définissez les champs <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> et <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> ou <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> de <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> lorsque vous utilisez l'authentification SQL Server pour vous connecter au serveur de publication.  
   
-8.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>.  
+8.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> .  
   
-    > **IMPORTANT !**  Lors de la création d’un abonnement par émission de données sur un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour toutes les propriétés, y compris <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, sont envoyées au serveur de distribution en texte brut. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d’appeler la méthode <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    > **IMPORTANT !**  Lors de la création d'un abonnement par émission de données sur un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour toutes les propriétés, y compris <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, sont envoyées au serveur de distribution en texte brut. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'appeler la méthode <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> . Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ###  <a name="PShellExample"></a> Exemples (RMO)  
  Cet exemple crée un nouvel abonnement par envoi de données vers une publication transactionnelle. Les informations d'identification du compte Windows que vous utilisez pour exécuter le travail de l'Agent de distribution sont transmises lors de l'exécution.  

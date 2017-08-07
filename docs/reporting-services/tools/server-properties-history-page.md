@@ -1,5 +1,5 @@
 ---
-title: "Propriétés du serveur (Page Historique) | Documents Microsoft"
+title: "Propriétés du serveur (page Historique) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-server-2016
@@ -17,11 +17,11 @@ caps.latest.revision: 30
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 66744654fac383f2390109a01f8d4cb7b502bf7a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="server-properties-history-page"></a>Propriétés du serveur (page Historique)
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>Voir aussi  
  [Définir les propriétés du serveur de rapports &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
  [Se connecter à un serveur de rapports dans Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Aide du serveur de rapports dans Management Studio accessible par la touche F1](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
+ [Aide du serveur de rapports dans Management Studio via la touche F1](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
   
   
 

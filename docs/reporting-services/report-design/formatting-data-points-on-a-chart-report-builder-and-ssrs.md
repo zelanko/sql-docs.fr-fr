@@ -1,5 +1,5 @@
 ---
-title: "Mise en forme des Points de données sur un graphique (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Mise en forme des points de données sur un graphique (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -18,11 +18,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d1514b7ec2a5f1d7d2d5abd3513db47a208a2e24
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Mise en forme des points de données sur un graphique (Générateur de rapports et SSRS)
@@ -65,7 +65,7 @@ Dans un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md
   
 |Mot clé de graphique|Description|Applicable au type de graphique|Exemple d'expression simple équivalente|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
-|#VALY|Valeur Y du point de données.|All|`=Fields!MyDataField.Value`|  
+|#VALY|Valeur Y du point de données.|Tous|`=Fields!MyDataField.Value`|  
 |#VALY2|Valeur Y n° 2 du point de données.|Graphique d'étendue, graphique à bulles|Aucune|  
 |#VALY3|Valeur Y n° 3 du point de données.|Graphique boursier, graphique en chandelier|Aucune|  
 |#VALY4|Valeur Y n° 4 du point de données.|Graphique boursier, graphique en chandelier|Aucune|  
@@ -73,17 +73,17 @@ Dans un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md
 |#LABEL|Étiquette de point de données.|Tous|Aucune|  
 |#AXISLABEL|Étiquette de point de données d'axe.|Graphique à base de formes|`=Fields!MyDataField.Value`|  
 |#INDEX|Index de point de données.|Tous|Aucune|  
-|#PERCENT|Pourcentage de la valeur Y du point de données.|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
-|#TOTAL|Total de toutes les valeurs Y de la série.|All|`=Sum(Fields!MyDataField.Value)`|  
+|#PERCENT|Pourcentage de la valeur Y du point de données.|Tous|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
+|#TOTAL|Total de toutes les valeurs Y de la série.|Tous|`=Sum(Fields!MyDataField.Value)`|  
 |#LEGENDTEXT|Texte qui correspond au texte de l'élément de légende.|Tous|Aucune|  
-|#AVG|Moyenne de toutes les valeurs Y de la série.|All|`=Avg(Fields!MyDataField.Value)`|  
+|#AVG|Moyenne de toutes les valeurs Y de la série.|Tous|`=Avg(Fields!MyDataField.Value)`|  
 |#MIN|Minimum de toutes les valeurs Y de la série.|Tous|`=Min(Fields!MyDataField.Value)`|  
-|#MAX|Maximum de toutes les valeurs Y de la série.|All|`=Max(Fields!MyDataField.Value)`|  
+|#MAX|Maximum de toutes les valeurs Y de la série.|Tous|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|Première de toutes les valeurs Y de la série.|Tous|`=First(Fields!MyDataField.Value)`|  
   
  Pour mettre en forme le mot clé, mettez une chaîne de mise en forme [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] entre parenthèses. Par exemple, pour spécifier la valeur du point de données dans une info-bulle sous la forme d’un nombre à deux décimales, incluez la chaîne de format « N2 » entre accolades, telle que « #VALY{N2} » pour la propriété **ToolTip** de la série. Pour plus d'informations sur les chaînes de mise en forme [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , consultez [Mise en forme des types](http://go.microsoft.com/fwlink/?LinkId=112024) sur le site MSDN. Pour plus d’informations sur la mise en forme des nombres dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Mise en forme des nombres et des dates &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
- Pour plus d’informations sur l’ajout de mots clés à un graphique, consultez [Afficher des info-bulles dans une série &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md), [Modifier le texte d’un élément de légende &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
+ Pour plus d’informations sur l’ajout de mots clés à un graphique, consultez [Afficher des info-bulles dans une série &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md), [Changer le texte d’un élément de légende &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   
 ## <a name="increasing-readability-in-a-chart-with-multiple-data-points"></a>Augmentation de la lisibilité d'un graphique avec plusieurs points de données  
  Si votre graphique comporte plusieurs séries, la lisibilité des points de données du graphique peut s'en trouver limitée. Lorsque vous ajoutez plusieurs séries à un graphique, envisagez d'utiliser une technique qui permet de lire et comprendre chaque série dans le graphique. Pour plus d’informations, consultez [Plusieurs séries sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
@@ -105,7 +105,7 @@ Dans un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md
  [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Mettre en forme les étiquettes des axes en tant que dates ou devises &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Didacticiel : ajouter un graphique à secteurs à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Didacticiel : ajouter un graphique à secteurs à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   

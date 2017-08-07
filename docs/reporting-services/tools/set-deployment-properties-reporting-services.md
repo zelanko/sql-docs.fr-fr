@@ -1,5 +1,5 @@
 ---
-title: "Définissez les propriétés de déploiement (Reporting Services) | Documents Microsoft"
+title: "Définir des propriétés de déploiement (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -20,11 +20,11 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 30d542287f81032aa1bc2540d461a8f8c163b2f9
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Définir des propriétés de déploiement (Reporting Services)
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  Dans la boîte de dialogue **Pages de propriétés** du projet, cliquez sur **Gestionnaire de configuration**.  
   
-3.  Dans la boîte de dialogue **Gestionnaire de configuration** , sélectionnez la configuration à modifier. La configuration actuellement active s’affiche en tant que **Active (***\<configuration >***)**.  
+3.  Dans la boîte de dialogue **Gestionnaire de configuration** , sélectionnez la configuration à modifier. La configuration actuellement active apparaît de la façon suivante : **Active(***\<configuration>***)**.  
   
 4.  Dans **Contextes des projets**, pour chaque projet de la solution, sélectionnez ou désélectionnez **Générer** ou **Déployer**.  
   
@@ -88,7 +88,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>Voir aussi  
  [Publication des sources de données et des rapports](../../reporting-services/reports/publishing-data-sources-and-reports.md)   
  [Aperçu des rapports](../../reporting-services/reports/previewing-reports.md)   
- [Aide sur le Concepteur de rapports via la touche F1](../../reporting-services/tools/report-designer-f1-help.md)   
+ [Aide sur le Concepteur de rapports accessible à l’aide de la touche F1](../../reporting-services/tools/report-designer-f1-help.md)   
  [Exemples d’URL pour les éléments de rapport publiés sur un serveur de rapports en mode SharePoint &#40;SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [Pages de propriétés du projet, boîte de dialogue](../../reporting-services/tools/project-property-pages-dialog-box.md)   
  [Publication de rapports sur un serveur de rapports](../../reporting-services/reports/publishing-reports-to-a-report-server.md)  

@@ -18,11 +18,11 @@ caps.latest.revision: 45
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bf5b724d58fde9162bc75a4052f569b5218bbe8c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="xml-format-files-sql-server"></a>Fichiers de format XML (SQL Server)
@@ -79,7 +79,7 @@ ms.lasthandoff: 06/22/2017
   
      \<RECORD>  
   
-     \<FIELD .../> [ ...*n*]  
+     \<FIELD .../> [ ...*n* ]  
   
      \</RECORD>  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 06/22/2017
   
      \<ROW>  
   
-     \<COLUMN .../> [ ...*n* ]  
+     \<COLUMN .../> [ ...*n* ]  
   
      \</ROW>  
   
@@ -205,7 +205,7 @@ ms.lasthandoff: 06/22/2017
 |---------------------|-----------------|------------------------------|  
 |ID **="***fieldID***"**|Spécifie le nom logique du champ dans le fichier de données. L'ID d'un champ est la clé utilisée pour y faire référence.<br /><br /> \<FIELD ID**="***fieldID***"**/> est mappé à \<COLUMN SOURCE**="***fieldID***"**/>|Requis|  
 |xsi:type **="***fieldType***"**|Il s'agit d'une construction XML (utilisée comme un attribut) qui identifie le type de l'instance de l'élément. La valeur de *fieldType* détermine de quels attributs facultatifs (ci-dessous) vous avez besoin dans une instance donnée.|Obligatoire (selon le type de données)|  
-|LENGTH **="***n***"**|Cet attribut définit la longueur pour une instance d'un type de données à longueur fixe.<br /><br /> Cette valeur de *n* doit être un entier positif.|Facultatif sauf s'il est requis par la valeur xsi:type|  
+|LENGTH **="***n***"**|Cet attribut définit la longueur pour une instance d'un type de données à longueur fixe.<br /><br /> La valeur de *n* doit être un entier positif.|Facultatif sauf s'il est requis par la valeur xsi:type|  
 |PREFIX_LENGTH **="***p***"**|Cet attribut définit la longueur de préfixe pour une représentation de données binaires. La valeur PREFIX_LENGTH, *p*, doit correspondre à l’une des valeurs suivantes : 1, 2, 4 ou 8.|Facultatif sauf s'il est requis par la valeur xsi:type|  
 |MAX_LENGTH **="***m***"**|Cet attribut est le nombre maximal d'octets pouvant être stockés dans un champ donné. Sans table cible, la longueur maximale de la colonne est inconnue. L'attribut MAX_LENGTH limite la longueur maximale d'une colonne de caractères en sortie, limitant ainsi le stockage alloué pour la valeur de la colonne. Ceci est particulièrement pratique lors de l'utilisation de l'option BULK de la fonction OPENROWSET dans une clause SELECT FROM.<br /><br /> Cette valeur de *m* doit être un entier positif. Par défaut, la longueur maximale est de 8 000 caractères pour une colonne **char** et de 4 000 caractères pour une colonne **nchar** .|Ce paramètre est facultatif|  
 |COLLATION **="***collationName***"**|COLLATION est uniquement autorisé pour les champs caractères. Pour obtenir la liste des noms du classement SQL, consultez [Nom du classement SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).|Ce paramètre est facultatif|  
@@ -259,7 +259,7 @@ ms.lasthandoff: 06/22/2017
 |SOURCE **="***fieldID***"**|Spécifie l'ID du champ mappé à la colonne.<br /><br /> \<COLUMN SOURCE**="***fieldID***"**/> est mappé à \<FIELD ID**="***fieldID***"**/>|Requis|  
 |NAME = "*columnName*"|Spécifie le nom de la colonne dans l'ensemble de lignes représenté par le fichier de format. Ce nom de colonne est utilisé pour identifier la colonne dans le jeu de résultats, et il ne doit pas nécessairement correspondre au nom de colonne utilisé dans la table cible.|Requis|  
 |xsi**:**type **="***ColumnType***"**|Il s'agit d'une construction XML (utilisée comme un attribut) qui identifie le type de données de l'instance de l'élément. La valeur de *ColumnType* détermine de quels attributs facultatifs (ci-dessous) vous avez besoin dans une instance donnée.<br /><br /> Remarque : Les valeurs possibles de *ColumnType* et leurs attributs associés sont répertoriés dans le tableau relatif à l’élément \<COLUMN> dans la section [Valeurs Xsi:type de l’élément &lt;COLUMN&gt;](#XsiTypeValuesOfCOLUMN).|Ce paramètre est facultatif|  
-|LENGTH **="***n***"**|Définit la longueur d'une instance d'un type de données à longueur fixe. LENGTH est utilisé uniquement lorsque xsi:type est un type de données string.<br /><br /> Cette valeur de *n* doit être un entier positif.|Facultatif (disponible uniquement si xsi:type est un type de données string)|  
+|LENGTH **="***n***"**|Définit la longueur d'une instance d'un type de données à longueur fixe. LENGTH est utilisé uniquement lorsque xsi:type est un type de données string.<br /><br /> La valeur de *n* doit être un entier positif.|Facultatif (disponible uniquement si xsi:type est un type de données string)|  
 |PRECISION **="***n***"**|Nombre de chiffres qui composent un nombre. Par exemple, le nombre 123,45 a une précision de 5.<br /><br /> Cette valeur doit être un entier positif.|Facultatif (disponible uniquement si xsi:type est un type de données variable-number)|  
 |SCALE **="***int***"**|Indique le nombre de chiffres à droite du point décimal (notre virgule) dans un nombre. Par exemple, le nombre 123,45 a une précision de 2.<br /><br /> La valeur doit être un entier.|Facultatif (disponible uniquement si xsi:type est un type de données variable-number)|  
 |NULLABLE **=** { **"**YES**"**<br /><br /> **"**NO**"** }|Indique si une colonne peut prendre des valeurs NULL. Cet attribut est complètement indépendant de FIELDS. Cependant, si une colonne n'est pas NULLABLE et si le champ spécifie NULL (en ne spécifiant pas de valeur), une erreur d'exécution en résulte.<br /><br /> L'attribut NULLABLE est utilisé uniquement si vous effectuez une instruction SELECT FROM OPENROWSET(BULK...) ordinaire.|Facultatif (disponible pour n'importe quel type de données)|  
