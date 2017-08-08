@@ -1,5 +1,5 @@
 ---
-title: Didacticiels pour SQL Server | Documents Microsoft
+title: Didacticiels pour SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 06/21/2017
 ms.prod: sql-server-2016
@@ -14,24 +14,24 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: erikre
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
 ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="tutorials-for-sql-server"></a>Didacticiels pour SQL Server
 [!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Fournit des didacticiels pour vous aider à apprendre les nouvelles technologies et fonctionnalités. Didacticiels pour les versions antérieures peuvent généralement être utilisés avec les versions plus récentes. Didacticiels résoudre une fonctionnalité plus récente, ils indique la version minimale pour suivre le didacticiel.  
+[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] fournit des didacticiels pour vous aider à apprendre les nouvelles technologies et fonctionnalités. Les didacticiels pour les versions antérieures peuvent généralement être utilisés avec les versions plus récentes. Quand des didacticiels traitent d’une fonctionnalité plus récente, ils indiquent la version minimale nécessaire pour suivre le didacticiel.  
      
--   Si un didacticiel utilise l’une de le [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] bases de données, vous devez télécharger et utiliser la version la plus récente à partir de CodePlex. Pour plus d’informations, consultez [bases de données AdventureWorks et Scripts pour SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502).    
+-   Si un didacticiel utilise une des bases de données [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)], vous devez télécharger et utiliser la version la plus récente disponible auprès de CodePlex. Pour plus d’informations, consultez [Bases de données AdventureWorks et scripts pour SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502).    
 -   Téléchargez un classeur [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] et des rapports [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] à utiliser avec des didacticiels sur [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , accédez à [Exemples Power View pour SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=220734).  
 - Découvrez le nouvel exemple [Wide World Importers](https://msdn.microsoft.com/library/mt734199(SQL.1).aspx) disponible dans le dépôt GitHub [sql-server-samples](https://github.com/Microsoft/sql-server-samples) . 
 
  
-## <a name="current-tutorials"></a>Didacticiels en cours  
+## <a name="current-tutorials"></a>Didacticiels actuels  
   
 |Technologie|Description|  
 |--------------|---------------|  

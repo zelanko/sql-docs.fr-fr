@@ -14,83 +14,83 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
 ms.openlocfilehash: 243d2e6187a58554cee80066912de7dfcc0c52fc
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Journal des modifications de SQL Server Data Tools (SSDT)
-Ce journal des modifications concerne [SQL Server Data Tools (SSDT) pour Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx).  
+Ce journal des modifications concerne [SQL Server Data Tools (SSDT) pour Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx).  
   
-Pour les publications détaillées sur les nouveautés et les modifications, visitez [le blog de l’équipe SSDT](https://blogs.msdn.microsoft.com/ssdt/)
+Pour des publications détaillées sur les nouveautés et les modifications, visitez [le blog de l’équipe SSDT](https://blogs.msdn.microsoft.com/ssdt/).
 
-## <a name="ssdt-171"></a>SSDT 17.1
+## <a name="ssdt-171"></a>SSDT 17.1
 Numéro de build : 14.0.61705.170
 
-### <a name="whats-new"></a>Quelles sont les nouveautés ?
+### <a name="whats-new"></a>Nouveautés
 **Projets AS :**
-- Les utilisateurs peuvent définir le codage des indications sur les colonnes dans l’interface utilisateur sur les modèles de 1400
-- Modèle de non liés IntelliSense est désormais disponible en mode hors connexion
-- L’Explorateur de modèles tabulaires contient maintenant un nœud pour représenter des expressions M nommées disponibles sur le modèle (1400 modèles tabulaires au niveau de compatibilité)
-- Azure sélecteur d’utilisateurs Active Directory similaire à un IAM du portail Microsoft Azure désormais disponible lors du paramétrage des membres du rôle dans les modèles tabulaires
+- Les utilisateurs peuvent définir des indications sur le codage des colonnes dans l’interface utilisateur sur les modèles 1400
+- IntelliSense non associé à un modèle est désormais disponible en mode hors connexion
+- L’Explorateur de modèles tabulaires contient maintenant un nœud pour représenter des expressions M nommées disponibles sur le modèle (modèles tabulaires de niveau de compatibilité 1400)
+- Un sélecteur de personnes Azure Active Directory similaire à la gestion des identités et des accès du portail Microsoft Azure est désormais disponible lors de la configuration des membres des rôles dans les modèles tabulaires
 
 **Projets de base de données :**
-- Mise à jour vers DacFx 17.1
+- Mis à jour vers DacFx 17.1
 
 ### <a name="bug-fixes"></a>Correctifs de bogues
-- Correction d’un problème où le nom du groupe concepteurs Business Intelligence a été affiché correctement dans les Options de Visual Studio dans VS2017
-- Correction d’un problème où une panne peut se produire à la génération d’une carte de Code pour une solution avec un projet de rapport ou en tant que projet
-- Un nombre fixe de problèmes avec l’intégration de PowerQuery pour les modèles tabulaires Analysis Services 1400 au niveau de compatibilité
-- Correction d’un problème dans le nouvel éditeur DAX fenêtre outil où l’opérateur d’assignation ne pourrait pas être sur une ligne distincte lors de la définition d’une mesure
-- Correction d’un problème qui a empêché l’affichage de mesures sous forme de tableau à partir de la mise à jour lorsque vous renommez des mesures de perspective
-- Mise à jour de moteur d’espace de travail intégré Analysis Services et de modèle objet tabulaire qui résout une régression à l’origine des projets tabulaires 1200 contenant des traductions sur déployer au serveur SQL Server 2016 Analysis Services
-- Correction d’un problème de performances apportées creation\deletion de nouvelles sources de données tabulaires 1400 très lentes
-- Correction d’un problème où le diagramme de vue de gestion dynamique dans les modèles multidimensionnels peut arrêter le rendu si vous modifiez la vue rapidement entre différents DSV
+- Correction d’un problème où le nom du groupe des concepteurs Business Intelligence était affiché in correctement dans les options de Visual Studio dans VS2017
+- Correction d’un problème où un blocage pouvait se produire lors de la génération d’une carte de code pour une solution avec un projet de rapport ou un projet AS
+- Correction de plusieurs problèmes avec l’intégration de PowerQuery pour les modèles tabulaires Analysis Services de niveau de compatibilité 1400
+- Correction d’un problème dans la fenêtre du nouvel éditeur DAX où l’opérateur d’assignation ne pouvait pas être sur une ligne distincte lors de la définition d’une mesure
+- Correction d’un problème qui empêchait la mise à jour de l’affichage des mesures tabulaires lors du renommage des mesures dans une perspective
+- Mise à jour du moteur de l’espace de travail intégré d’Analysis Services et du modèle d’objet tabulaire qui corrige une régression provoquant l’échec du déploiement de projets tabulaires 1200 contenant des traductions sur le serveur SQL Server 2016 Analysis Services
+- Correction d’un problème de performances qui rendait la création et la suppression de nouvelles sources de données tabulaires 1400 très lentes
+- Correction d’un problème où le diagramme de vue de source de données dans les modèles multidimensionnels pouvait cesser l’affichage en cas de changement rapide entre différentes vues de source de données
 
-## <a name="dacfx-171"></a>DacFx 17.1
-- Correction d’un problème lors du chiffrement d’une colonne avec les tables mémoire optimisées avec d’autres colonnes d’identité
-- Prise en charge SQLDOM pour l’option CATALOG_COLLATION pour créer la base de données
+## <a name="dacfx-171"></a>DacFx 17.1
+- Correction d’un problème lors du chiffrement d’une colonne avec des tables optimisées en mémoire avec d’autres colonnes d’identité
+- Prise en charge de SQLDOM pour l’option CATALOG_COLLATION pour CREATE DATABASE
 
-## <a name="dacfx-1701"></a>DacFx 17.0.1 
-- Résoudre les problème avec les bases de données avec une clé asymétrique par un HSM avec un fournisseur EKM [élément connecter](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider)
+## <a name="dacfx-1701"></a>DacFx 17.0.1 
+- Correction d’un problème pour les bases de données avec une clé asymétrique par un module de sécurité matériel (HSM) avec un fournisseur EKM [Article de Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider)
 
-## <a name="ssdt-170-supports-up-to-sql-server-2017"></a>SSDT 17,0 (prend en charge jusqu'à SQL Server 2017)
+## <a name="ssdt-170-supports-up-to-sql-server-2017"></a>SSDT 17.0 (prend en charge jusqu’à SQL Server 2017)
 Numéro de build : 14.0.61704.140
 
-### <a name="whats-new"></a>Quelles sont les nouveautés ?
+### <a name="whats-new"></a>Nouveautés
 **Projets de base de données :**
-- Modifiant un index cluster sur une vue n’est plus bloque déploiement
+- La modification d’un index cluster sur une vue ne bloque plus le déploiement.
 - Les chaînes de comparaison de schéma relatives au chiffrement des colonnes utilisent désormais le nom approprié au lieu du nom de l’instance.   
-- Ajout d’une nouvelle option de ligne de commande à SqlPackage: ModelFilePath.  Cela fournit une option pour les utilisateurs expérimentés spécifier un fichier externe model.xml pour l’importation, la publication et les opérations de script   
-- L’API DacFx a été étendu pour prendre en charge l’authentification Azure AD universelle et l’authentification multifacteur (MFA)
+- Ajout d’une nouvelle option de ligne de commande à SqlPackage: ModelFilePath.  Ceci permet aux utilisateurs avancés de spécifier un fichier model.xml externe pour les opérations d’importation, de publication et de script.   
+- L’API DacFx a été étendue pour prendre en charge l’authentification universelle Azure AD et l’authentification multifacteur
 
 **Projets IS :**
 - Le Gestionnaire de connexions OData et de sources OData de SSIS prend maintenant en charge la connexion aux flux OData de Microsoft Dynamics AX Online et Microsoft Dynamics CRM Online.
-- Le projet SSIS prend désormais en charge la version du serveur cible de « SQL Server 2017 » 
-- Prise en charge pour la tâche de contrôle de capture de données modifiées, séparateur CDC et la Source CDC lors du ciblage de SQL Server 2017. 
+- Les projets SSIS prennent maintenant en charge la version de serveur cible « SQL Server 2017 ». 
+- Prise en charge des tâches de contrôle CDC, du séparateur CDC et des sources CDC lors du ciblage de SQL Server 2017. 
 
 **Projets AS :**
-- Intégration d’Analysis Services PowerQuery (modèles tabulaires au niveau de compatibilité 1400) :
-    - DirectQuery est disponible pour SQL, Oracle, Teradata et si l’utilisateur a installé des pilotes tiers 3e
+- Intégration de PowerQuery à Analysis Services (modèles tabulaires de niveau de compatibilité 1400) :
+    - DirectQuery est disponible pour SQL Oracle et pour Teradata si l’utilisateur a installé les pilotes des tiers
     - Ajouter des colonnes par exemple dans PowerQuery
-    - Les options dans les modèles 1400 (propriétés du modèle utilisées par le moteur de M) d’accès aux données
-        - Activer le regroupement rapide (valeur par défaut est false, lorsque la valeur true, l’application Web hybride moteur ignorera niveaux de confidentialité de source de données lors de la combinaison de données)
-        - Activer hérité redirige (valeur par défaut est false – lors de la valeur est true, le moteur de l’application Web hybride suit les redirections HTTP qui sont potentiellement instable.  Par exemple, une redirection à partir de HTTPS pour un URI HTTP)  
-        - Retourner des valeurs d’erreur avec la valeur Null (valeur par défaut est false, lorsque la valeur true, erreurs de niveau cellule s’affichera comme null. Si la valeur est false, une exception sera levée est une cellule contienne une erreur)  
-    - Autres sources de données (sources de données de fichier) à l’aide de PowerQuery
+    - Options d’accès aux données dans les modèles 1400 (propriétés de niveau modèle utilisées par le moteur M)
+        - Activer la combinaison rapide (la valeur par défaut est false ; quand la valeur est true, le moteur de mashup ignore les niveaux de confidentialité des sources de données lors de la combinaison des données)
+        - Activer les redirections héritées (la valeur par défaut est false ; quand la valeur est true, le moteur de mashup suit les redirections HTTP qui sont potentiellement non sécurisées.  Par exemple, une redirection d’un URI HTTPS vers un URI HTTP)  
+        - Retourner les valeurs d’erreur comme Null (la valeur par défaut est false ; quand la valeur est true, les erreurs de niveau cellule sont retournées comme Null. Quand la valeur est false, une exception est levée si une cellule contient une erreur)  
+    - Sources de données supplémentaires (sources de données fichiers) avec PowerQuery
         - Excel 
         - Texte/CSV 
         - Xml 
         - JSON 
         - Dossier 
         - Base de données Access 
-        - Stockage Blob Azure 
-    - Interface utilisateur PowerQuery localisée
+        - Stockage d'objets blob d'Azure 
+    - Interface utilisateur de PowerQuery localisée
 - Fenêtre de l’outil Éditeur DAX
-    - DAX amélioré éditeur choisi pour les mesures, les colonnes calculées et des expressions de lignes de détails, disponibles via l’affichage, autres fenêtres dans SSDT
-    - Améliorations apportées à parser\Intellisense DAX
+    - Expérience améliorée de l’édition DAX pour les mesures, les colonnes calculées et les expressions de lignes de détails, disponibles via le menu Affichage, Autres fenêtres dans SSDT
+    - Améliorations apportées à l’analyseur\Intellisense DAX
 
 
 **Projets RS :**
@@ -121,17 +121,17 @@ Numéro de build : 14.0.61704.140
 - Correction d’un problème qui empêchait, dans certains cas, le fonctionnement correct de certaines sources de données (sans prise en charge du catalogue initial) 
 - L’Assistant de déploiement doit appliquer les modifications aux partitions de tables calculées même lorsque l’option de conservation des partitions est activée
 - Correction d’un problème où la boîte de dialogue Propriétés avancées de la connexion AS existante n’affiche pas la liste complète tant qu’elle n’est pas resélectionnée
-- Correction de quelques problèmes avec détouré chaînes d’interface utilisateur qui est apparue dans certaines versions localisées
-- Un nombre fixe de problèmes avec l’intégration de PowerQuery au niveau de compatibilité 1400 en tant que les modèles tabulaires
-- Correction d’un problème avec les modèles de style Assistant rapport ne s’affiche ne pas correctement
-- Correction d’un problème avec l’Assistant de rapport qui peuvent aboutir à des paramètres de la source des données incorrectes lors de la modification à partir de SQL As
-- Correction d’un problème provoquant l’échec de génération de projet Analysis Services (tabulaire) à partir de la ligne de commande (devenv.com\exe)
-- Correction d’un problème avec l’Analyseur de mesure DAX pour afficher la couleur de texte mis en surbrillance et correct lorsque vous démarrez avec des lettres avant : =
-- Correction d’un problème de déclenchement d’une ObjectRefException si les chemins d’accès a été trop longs, essayez d’afficher tous les fichiers de projet tabulaire en mode de l’espace de travail intégré
-- Correction d’un problème avec le Concepteur de Source de données Compact 4.0 Client fournisseur de données dans laquelle il apparaissait non disponible
-- Correction d’un problème qui a provoqué une erreur de parcourir en tant que modèle d’exploration de données dans VS2017
-- Correction d’un problème dans un modèle multidimensionnel dans VS2017 où le diagramme de vue de gestion dynamique s’arrête après la modification des vues de rendu et puis rencontre une exception
-- Correction d’un problème d’aperçu des rapports avec une connexion en tant qu’échouée dans VS2017
+- Correction de quelques problèmes avec les chaînes tronquées de l’interface utilisateur qui apparaissaient dans certaines versions localisées
+- Correction de plusieurs problèmes avec l’intégration de PowerQuery dans les modèles tabulaires Analysis Services de niveau de compatibilité 1400
+- Correction d’un problème avec les modèles de style de l’Assistant Rapport qui ne s’affichaient pas correctement
+- Correction d’un problème avec l’Assistant Rapport qui pouvait aboutir à des paramètres de source de données incorrects lors du passage de SQL à AS
+- Correction d’un problème provoquant l’échec de la génération des projets Analysis Services (tabulaire) à partir de la ligne de commande (devenv.com\exe)
+- Correction d’un problème avec l’analyseur de mesure DAX dans l’affichage de la couleur correcte du texte mis en surbrillance lors de la présence de lettres au commencement avant : =
+- Correction d’un problème de déclenchement d’une ObjectRefException si les chemins étaient trop longs pour Afficher tous les fichiers pour Projet tabulaire en mode Espace de travail intégré
+- Correction d’un problème avec le Concepteur de Source de données pour le fournisseur de données du client Compact 4.0 où il apparaissait indisponible
+- Correction d’un problème qui provoquait une erreur lors de la navigation dans un modèle d’exploration de données AS dans VS2017
+- Correction d’un problème dans un modèle multidimensionnel AS dans VS2017 où le diagramme de vue de source de données cesse l’affichage après la modification des vues puis lève une exception
+- Correction d’un problème dans l’aperçu des rapports avec un échec de connexion à AS dans VS2017
  
 
 **Projets RS :**
@@ -147,7 +147,7 @@ Numéro de build : 14.0.61704.140
 - Résolution d’un problème où Parties de package masque les annotations. [Article de Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/3106624/package-parts-hide-annotations)
 - Résolution d’un problème où Parties de package ignore les dispositions et les annotations des flux de données. [Article de Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/3109241/package-parts-discard-data-flow-layouts-and-annotations)
 - Résolution d’un problème où SSDT se bloque lors de l’importation d’un projet depuis SQL Server.
-- Résolution du problème de valeur par défaut TimeoutInMinutes de tâche de système de fichiers Hadoop à 10 après avoir enregistré le package SSIS lors de l’ouverture et de l’exécution.
+- Correction d’un problème où la valeur par défaut de TimeoutInMinutes pour les tâches du système de fichiers Hadoop était définie sur 10 après l’ouverture d’un package SSIS enregistré et à l’exécution.
 
 **Projets de base de données :**
 - SSDT DACPAC : réinsertion du paramètre de déploiement/ajout pour IgnoreColumnOrder [Article de Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/1221587/ssdt-dacpac-deploy-add-setting-back-in-for-ignorecolumnorder)
@@ -158,7 +158,7 @@ Numéro de build : 14.0.61704.140
 - Always Encrypted : le chiffrement en ligne ne désactive pas le suivi des modifications lors de l’annulation et ne fonctionne pas correctement si le suivi des modifications n’a pas été désactivé avant le démarrage du chiffrement
 
 
-## <a name="ssdt-165-supports-up-to-sql-server-2016"></a>SSDT 16,5 (prend en charge jusqu'à SQL Server 2016)
+## <a name="ssdt-165-supports-up-to-sql-server-2016"></a>SSDT 16.5 (prend en charge jusqu’à SQL Server 2016)
 Date de publication : 20 octobre 2016
 
 Numéro de build : 14.0.61021.0
@@ -400,7 +400,7 @@ Numéro de build : 14.0.60413.0
 * **Programme d’installation de SSDT :**  
     * Correction du problème où .Net était téléchargé lors de la désinstallation.  
     * La taille du programme d’installation est maintenant correctement définie sur les ordinateurs haute résolution.  
-    * Suppression du contrôle de version bloquant l’installation de SSDT si une version plus récente de SQL Server est présente.  
+    * Suppression de la gestion de versions bloquant l’installation de SSDT si une version plus récente de SQL Server est présente.  
     * Comparaison de schémas : correction d’un problème de performance où l’activation/désactivation de plusieurs éléments prenait beaucoup de temps dans Visual Studio.  
     * Prise en charge de l’utilisation de LocalDN 2014 sur les ordinateurs x86, car il n’existe aucune version x86 de SQL Server 2016.  
 * **Build et déploiement :**  
@@ -503,11 +503,11 @@ Numéro de build : 14.0.60203.0
   
 -   Divers correctifs de bogues dans SSIS et prise en charge du système d’exploitation Windows 7.  
   
-## <a name="ssdt-september-2015-preview"></a>Préversion de SSDT de septembre 2015  
+## <a name="ssdt-september-2015-preview"></a>SSDT version préliminaire de septembre 2015  
   
--   La prise en charge multilingue est nouvelle dans cette préversion.  
+-   La prise en charge multilingue est nouvelle dans cette version préliminaire.  
   
-## <a name="ssdt-august-2015-preview"></a>Préversion de SSDT d’août 2015  
+## <a name="ssdt-august-2015-preview"></a>SSDT version préliminaire d’août 2015  
   
 -   Nouveau programme Setup.exe autonome pour l’installation de SSDT.  Vous n’avez plus besoin d’utiliser une version modifiée du programme d’installation de SQL Server. Cette version de SSDT inclut un modèle de projet pour la création de bases de données relationnelles déployées sur SQL Server ou Azure SQL Database.  
   

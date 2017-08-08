@@ -1,2 +1,2 @@
-<Token>**Cette rubrique s’applique à :**![Oui](media/yes.png)SQL Server Windows(starting with 2017) ![Oui](media/yes.png)SQL Server Linux![aucun](media/no.png)base de données SQL Azure![aucun](media/no.png)Azure SQL Data Warehouse ![aucune](media/no.png)Parallel Data Warehouse</Token>
+<Token>**CETTE RUBRIQUE S’APPLIQUE À :**![oui](media/yes.png)SQL Server Windows (à partir de la version 2017)![oui](media/yes.png)SQL Server Linux![non](media/no.png)Azure SQL Database![non](media/no.png)Azure SQL Data Warehouse ![non](media/no.png)Parallel Data Warehouse </Token>
 

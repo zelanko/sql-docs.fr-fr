@@ -24,16 +24,16 @@ caps.latest.revision: 88
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
 ms.openlocfilehash: b93591eb1d0f34b792adc6f2c998dbfdd9fca4b5
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spécifications des capacités maximales pour SQL Server
 
- > Pour obtenir un contenu pour les versions précédentes de SQL Server, consultez [spécifications des capacités maximales pour SQL Server](https://msdn.microsoft.com/en-US/library/ms143432(SQL.120).aspx).
+ > Pour du contenu relatif aux versions précédentes de SQL Server, consultez [Spécifications des capacités maximales pour SQL Server](https://msdn.microsoft.com/en-US/library/ms143432(SQL.120).aspx).
 
   Les tableaux suivants présentent la taille maximale et le nombre maximal des différents objets définis dans les composants [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour naviguer jusqu'à la table d'une technologie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , cliquez sur son lien :  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/23/2017
 |Taille du lot||65 536 * Taille des paquets réseau|La taille des paquets réseau représente la taille des paquets TDS (Tabular Data Stream) utilisés pour la communication entre des applications et le [!INCLUDE[ssDE](../includes/ssde-md.md)]relationnel. La taille par défaut s'élève à 4 Ko ; elle est contrôlée par l'option de configuration Taille du paquet réseau.|  
 |Octets par colonne de chaîne courte||8,000||  
 |Octets par clause GROUP BY, ORDER BY||8,060||  
-|Octets par clé d’index||900 octets pour un index cluster. 1 700 pour un index non cluster.|Le nombre maximal d’octets dans une clé d’index cluster s’élève à 900 dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour une clé d’index non cluster, la valeur maximale est 1700 octets.<br /><br /> Vous pouvez définir une clé à l’aide de colonnes de longueur variable dont les tailles maximales, additionnées, dépasse la limite. Toutefois, la taille combinée des données de ces colonnes ne peut jamais dépasser la limite.<br /><br /> Dans un index non cluster, vous pouvez inclure des colonnes non-clés supplémentaires. Elles n’entrent pas en compte pour la limite de taille de la clé. Les colonnes non-clés peuvent améliorer les performances de certaines requêtes.|  
+|Octets par clé d’index||900 octets pour un index cluster. 1 700 pour un index non cluster.|Le nombre maximal d’octets dans une clé d’index cluster s’élève à 900 dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour une clé d’index non cluster, la valeur maximale est 1700 octets.<br /><br /> Vous pouvez définir une clé à l’aide de colonnes de longueur variable dont les tailles maximales, additionnées, dépasse la limite. Toutefois, la taille combinée des données de ces colonnes ne peut jamais dépasser la limite.<br /><br /> Dans un index non cluster, vous pouvez inclure des colonnes non-clés supplémentaires. Elles n’entrent pas en compte pour la limite de taille de la clé. Les colonnes non-clés peuvent améliorer les performances de certaines requêtes.|  
 |Octets par clé d’index pour les tables optimisées en mémoire||2500 octets pour un index non cluster. Aucune limite pour un index de hachage, tant que toutes les clés d’index s’ajustent sur la ligne.|Sur une table optimisée en mémoire, un index non cluster ne peut pas avoir de colonnes clés dont la taille maximale déclarée dépasse 2500 octets. Peu importe que la taille des données réelles dans les colonnes clés soit inférieure aux tailles maximales déclarées.<br /><br /> Pour une clé d’index de hachage, il n’existe aucune limite de taille.<br /><br /> Pour les index sur les tables optimisées en mémoire, il n’existe pas de concept de colonnes incluses, puisque tous les index couvrent, par nature, toutes les colonnes.<br /><br /> Pour une table optimisée en mémoire, même si la taille de ligne est de 8060 octets, certaines colonnes de longueur variable peuvent être physiquement stockées en dehors de ces 8060 octets. Toutefois, les tailles maximales déclarés de toutes les colonnes clés pour tous les index sur une table, plus les éventuelles colonnes de longueur fixe supplémentaires dans la table, doivent tenir dans les 8060 octets.|  
 |Octets par clé étrangère||900||  
 |Octets par clé primaire||900||  
@@ -73,12 +73,12 @@ ms.lasthandoff: 06/23/2017
 |Colonnes par instruction SELECT||4,096||  
 |Colonnes par instruction INSERT||4096||  
 |Connexions par client||Valeur maximale des connexions configurées||  
-|Taille de la base de données||524 272 téraoctets||  
+|Taille de la base de données||524 272 téraoctets||  
 |Bases de données par instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  
 |Groupes de fichiers par base de données||32,767||  
 |Groupes de fichiers par base de données pour les données optimisées en mémoire||1||  
 |Fichiers par base de données||32,767||  
-|Taille de fichier (données)||16 téraoctets||  
+|Taille de fichier (données)||16 téraoctets||  
 |Taille de fichier (journal)||2 téraoctets||  
 |Fichiers de données pour les données optimisées en mémoire par base de données||4.096||  
 |Fichier delta par fichier de données pour les données optimisées en mémoire||1||  
@@ -86,10 +86,10 @@ ms.lasthandoff: 06/23/2017
 |Longueur d'identificateur (en caractères)||128||  
 |Instances par ordinateur||50 instances sur un serveur autonome.<br /><br /> 25 instances sur un cluster de basculement si vous utilisez un disque de cluster partagé, car l'option stockée pour votre installation de cluster [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge 50 instances sur un cluster de basculement si vous choisissez les partages SMB comme option de stockage de votre installation de cluster.||  
 |Index par table optimisée en mémoire||8||  
-|Longueur d’une chaîne contenant des instructions SQL (taille du traitement)||65 536 * Taille des paquets réseau|La taille des paquets réseau représente la taille des paquets TDS (Tabular Data Stream) utilisés pour la communication entre des applications et le [!INCLUDE[ssDE](../includes/ssde-md.md)]relationnel. La taille par défaut s'élève à 4 Ko ; elle est contrôlée par l'option de configuration Taille du paquet réseau.|  
+|Longueur d’une chaîne contenant des instructions SQL (taille du traitement)||65 536 * Taille des paquets réseau|La taille des paquets réseau représente la taille des paquets TDS (Tabular Data Stream) utilisés pour la communication entre des applications et le [!INCLUDE[ssDE](../includes/ssde-md.md)]relationnel. La taille par défaut s'élève à 4 Ko ; elle est contrôlée par l'option de configuration Taille du paquet réseau.|  
 |Verrous par connexion||Verrous maximaux par serveur||  
 |Verrous par instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||Limité uniquement par la mémoire|Cette valeur s’applique à l’allocation de verrouillage statique. Les verrous dynamiques sont uniquement limités par la mémoire.|  
-|Niveaux d’imbrication des procédures stockées||32|Si une procédure stockée accède à plus de 64 bases de données ou à plus de 2 bases entrelacées, vous recevez un message d’erreur.|  
+|Niveaux d’imbrication des procédures stockées||32|Si une procédure stockée accède à plus de 64 bases de données ou à plus de 2 bases entrelacées, vous recevez un message d’erreur.|  
 |Sous-requêtes imbriquées||32||  
 |Niveaux de déclencheurs imbriqués||32||  
 |Index non cluster par table||999||  
@@ -99,7 +99,7 @@ ms.lasthandoff: 06/23/2017
 |Paramètres par fonction définie par l'utilisateur||2,100||  
 |REFERENCES par table||253||  
 |Lignes par table||Limité par le stockage disponible||  
-|Tables par base de données||Limité par le nombre d'objets dans une base de données|Les objets de base de données comprennent des tables, des vues, des procédures stockées, des fonctions définies par l’utilisateur, des déclencheurs, des règles, des valeurs par défaut et des contraintes. Au total, le nombre de tous les objets d'une base de données ne peut pas dépasser 2 147 483 647.|  
+|Tables par base de données||Limité par le nombre d'objets dans une base de données|Les objets de base de données comprennent des tables, des vues, des procédures stockées, des fonctions définies par l’utilisateur, des déclencheurs, des règles, des valeurs par défaut et des contraintes. Au total, le nombre de tous les objets d'une base de données ne peut pas dépasser 2 147 483 647.|  
 |Partitions par table ou index partitionné||15,000||  
 |Statistiques sur les colonnes non indexées||30,000|| 
 |Tables par instruction SELECT||Limité uniquement par les ressources disponibles||  
@@ -138,7 +138,7 @@ ms.lasthandoff: 06/23/2017
 ##  <a name="Replication"></a> Objets de réplication  
  Taille maximale et nombre maximal des différents objets définis dans la réplication [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objet de réplication||Taille maximale/nombre maximal dans SQL Server (64 bits)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objet de réplication||Taille maximale/nombre maximal dans SQL Server (64 bits)|  
 |--------------------------------------------------|-|---------------------------------------------------|  
 |Articles (publication de fusion)||2048|  
 |Articles (publication d'instantané ou transactionnelle)||32,767|  
@@ -148,7 +148,7 @@ ms.lasthandoff: 06/23/2017
 |Octets pour une colonne utilisée dans un filtre de lignes (publication de fusion)||1,024|  
 |Octets pour une colonne utilisée dans un filtre de lignes (publication d'instantané ou transactionnelle)||8,000|  
 
- * Si le suivi de lignes est utilisé pour la détection de conflits (valeur par défaut), la table de base peut inclure 1 024 colonnes au maximum, mais les colonnes doivent être filtrées à partir de l’article afin que 246 colonnes au maximum soient publiées. Si le suivi de colonnes est utilisé, la table de base peut inclure 246 colonnes au maximum.  
+ * Si le suivi de lignes est utilisé pour la détection de conflits (valeur par défaut), la table de base peut inclure 1 024 colonnes au maximum, mais les colonnes doivent être filtrées à partir de l’article afin que 246 colonnes au maximum soient publiées. Si le suivi de colonnes est utilisé, la table de base peut inclure 246 colonnes au maximum.  
   
  ** La table de base peut inclure le nombre maximal de colonnes autorisées dans la base de données de publication (1 024 pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), mais les colonnes doivent être filtrées à partir de l’article si elles sont plus nombreuses que le maximum spécifié pour le type de publication.  
   
