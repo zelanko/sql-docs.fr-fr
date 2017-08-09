@@ -42,26 +42,26 @@ ms.translationtype: HT
 ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
 ms.openlocfilehash: 97080f5d124b25b12b1f9f019e42753c143174e7
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Éditions et fonctionnalités prises en charge de SQL Server 2016
 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Cette rubrique fournit des détails sur les fonctionnalités prises en charge par les éditions de SQL Server.  À ce stade, il n’existe aucune modification aux fonctionnalités prises en charge par les éditions de SQL Server 2017.  
+Cette rubrique fournit des détails sur les fonctionnalités prises en charge par les éditions de SQL Server.  À ce jour, aucune modification n’a été apportée aux fonctionnalités prises en charge par les éditions de SQL Server 2017.  
   
 La configuration requise pour l'installation varie selon vos besoins applicatifs. Les différentes éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] s'adaptent aux exigences de chaque organisation et de chaque individu en termes de performances, d'exécution et de prix. Les composants [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que vous installez dépendent également de vos exigences spécifiques. Les sections suivantes vous aident à choisir parmi les éditions et les composants disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 La version d’évaluation de SQL Server est disponible pendant une période d’évaluation de 180 jours.  
   
 Pour obtenir les notes de publication les plus récentes et des informations sur les nouveautés, consultez les rubriques suivantes :
-- [Notes de publication SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)
+- [Notes de publication de SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)
 - [Notes de publication de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)
-- [Nouveautés de SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
+- [Nouveautés de SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Nouveautés de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
 
-### <a name="try-sql-server"></a>Essayer SQL Server !    
+### <a name="try-sql-server"></a>Essayez SQL Server !    
     
 > [![Télécharger à partir du Centre d’évaluation](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Télécharger SQL Server 2016 à partir du Centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
     
@@ -86,7 +86,7 @@ Pour obtenir les notes de publication les plus récentes et des informations sur
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>Utilisation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec des applications client/serveur  
  Vous pouvez installer uniquement les composants clients de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur un ordinateur exécutant des applications client/serveur qui se connectent directement à une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Une installation de composants clients est également un bon choix si vous administrez une instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur un serveur de base de données ou si vous prévoyez de développer des applications [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- L'option d'outils clients installe les fonctionnalités suivantes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] : composants de compatibilité descendante, [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], composants de connectivité, outils d'administration, kit de développement logiciel et composants de la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [installer SQL Server](../database-engine/install-windows/install-sql-server.md).  
+ L'option d'outils clients installe les fonctionnalités suivantes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] : composants de compatibilité descendante, [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], composants de connectivité, outils d'administration, kit de développement logiciel et composants de la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez  [Installer SQL Server](../database-engine/install-windows/install-sql-server.md).  
   
 ## <a name="deciding-among-includessnoversionincludesssnoversion-mdmd-components"></a>Choix des composants [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Utilisez la page de sélection de composant de l'Assistant Installation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour sélectionner les composants à inclure dans une installation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Par défaut, aucune des fonctionnalités incluses dans l'arborescence n'est sélectionnée.  
@@ -99,7 +99,7 @@ Pour obtenir les notes de publication les plus récentes et des informations sur
 |[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] inclut les outils de création et de gestion d’applications de traitement analytique en ligne (OLAP, OnLine Analytical Processing) et d’exploration de données.|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclut les composants serveur et clients permettant de créer, de gérer et de déployer des rapports tabulaires, de matrice, graphiques et de forme libre. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est également une plateforme évolutive que vous pouvez utiliser pour développer des applications de création de rapports.|  
 |[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] propose un ensemble d’outils graphiques et d’objets programmables permettant de déplacer, de copier et de transformer les données. Il inclut également le composant [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) pour [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) est la solution [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de gestion des données de référence. MDS peut être configuré pour gérer tout domaine (produits, clients, comptes) et inclut des hiérarchies, une sécurité granulaire, des transactions, le contrôle de version de données et les règles d'entreprise, ainsi que [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] , pouvant être utilisé pour gérer les données.|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) est la solution [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de gestion des données de référence. MDS peut être configuré pour gérer tout domaine (produits, clients, comptes) et inclut des hiérarchies, une sécurité granulaire, des transactions, la gestion des versions des données et les règles métier, ainsi que [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] , pouvant être utilisé pour gérer les données.|  
 |[!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)]|[!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] prend en charge les solutions R évolutives et distribuées sur plusieurs plateformes et avec plusieurs sources de données d’entreprise, notamment Linux, Hadoop et Teradata.|  
   
 |Outils d'administration|Description|  
@@ -120,7 +120,7 @@ Pour obtenir les notes de publication les plus récentes et des informations sur
 Pour connaître les fonctionnalités prises en charge par les éditions Developer et Evaluation, consultez les fonctionnalités répertoriées pour SQL Server Enterprise Edition dans les tableaux ci-dessous.
 Pour obtenir la liste des fonctionnalités qui ont été ajoutées à l’édition Developer pour [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1, consultez [Éditions de SQL Server 2016 SP1](https://aka.ms/uw6cw4).  
 
-L’Édition Developer continue à prendre en charge uniquement 1 client pour [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
+L’édition Developer continue à prendre en charge seulement 1 client pour [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
 ##  <a name="Cross-BoxScaleLimits"></a> Scale Limits  
   
@@ -128,12 +128,12 @@ L’Édition Developer continue à prendre en charge uniquement 1 client pour [S
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|
 |Capacité maximale de calcul utilisée par une instance unique - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|Maximum du système d'exploitation|Limité à moins de 4 sockets ou 24 cœurs|Limité à moins de 4 sockets ou 16 cœurs|Limité à moins de 1 socket ou 4 cœurs|Limité à moins de 1 socket ou 4 cœurs| 
 |Capacité maximale de calcul utilisée par une instance unique - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Maximum du système d'exploitation|Limité à moins de 4 sockets ou 24 cœurs|Limité à moins de 4 sockets ou 16 cœurs|Limité à moins de 1 socket ou 4 cœurs|Limité à moins de 1 socket ou 4 cœurs|  
-|Mémoire maximale du pool de mémoires tampons par instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Maximum du système d'exploitation|128 Go|64 Go|1410 Mo|1410 Mo|
+|Mémoire maximale du pool de mémoires tampons par instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Maximum du système d’exploitation|128 Go|64 Go|1410 Mo|1410 Mo|
 |Mémoire maximale du cache de segments columnstore par instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Mémoire illimitée| 32 Go<sup>2</sup>| 16 Go<sup>2</sup>| 352 Mo<sup>2</sup>| 352 Mo<sup>2</sup>|  
-|Taille maximale des données optimisées en mémoire par base de données dans le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Mémoire illimitée| 32 Go<sup>2</sup>| 16 Go<sup>2</sup>| 352 Mo<sup>2</sup>| 352 Mo<sup>2</sup>|  
-|Mémoire maximale utilisée par instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Maximum du système d'exploitation|Tabulaire : 16 Go<br /><br /> MOLAP : 64 Go|Néant|Néant|Néant|  
-|Mémoire maximale utilisée par instance de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Maximum du système d'exploitation|64 Go|64 Go|4 Go|Néant|
-|Taille maximale de la base de données relationnelle|524 Po|524 Po|524 Po|10 GB|10 GB|  
+|Taille maximale des données à mémoire optimisée par base de données dans le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Mémoire illimitée| 32 Go<sup>2</sup>| 16 Go<sup>2</sup>| 352 Mo<sup>2</sup>| 352 Mo<sup>2</sup>|  
+|Mémoire maximale utilisée par instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Maximum du système d’exploitation|Tabulaire : 16 Go<br /><br /> MOLAP : 64 Go|Néant|Néant|Néant|  
+|Mémoire maximale utilisée par instance de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Maximum du système d’exploitation|64 Go|64 Go|4 Go|Néant|
+|Taille maximale de la base de données relationnelle|524 Po|524 Po|524 Po|10 GB|10 GB|  
   
 <sup>1</sup> L’édition Enterprise avec serveur + licences d’accès client (CAL) (non disponibles pour les nouveaux contrats) est limitée à un maximum de 20 cœurs par instance SQL Server. Il n'existe aucune limite dans le mode de licence Serveur selon le nombre de cœurs. Pour plus d’informations, voir [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
@@ -161,7 +161,7 @@ L’Édition Developer continue à prendre en charge uniquement 1 client pour [S
 |Sauvegarde chiffrée|Oui|Oui|Non|Non|Non|
 |Sauvegarde hybride vers Windows Azure (sauvegarde vers une URL)|Oui|Oui|Non|Non|Non|  
   
- <sup>1</sup> pour plus d’informations sur l’installation de SQL Server sur Server Core, consultez [installer SQL Server sur Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md). 
+ <sup>1</sup> Pour plus d’informations sur l’installation de SQL Server sur Server Core, consultez [Installer SQL Server sur Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md). 
 
 <sup>2</sup> Pour plus d’informations sur les groupes de disponibilité de base, consultez [Groupes de disponibilité de base](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).  
 
@@ -179,14 +179,14 @@ L’Édition Developer continue à prendre en charge uniquement 1 client pour [S
 |Partitionnement des tables et des index|Oui|Oui <sup>2</sup>|Oui <sup>2</sup>|Oui <sup>2</sup>|Oui <sup>2</sup>|  
 |Compression des données|Oui|Oui <sup>2</sup>|Oui <sup>2</sup>|Oui <sup>2</sup>|Oui <sup>2</sup>|
 |Resource Governor|Oui|Non|Non|Non|Non|  
-|Parallélisme de tableau partitionné|Oui|Non|Non|Non|Non|
+|Parallélisme de tables partitionnées|Oui|Non|Non|Non|Non|
 |Plusieurs conteneurs Filestream|Oui|Oui <sup>2</sup>|Oui <sup>2</sup>|Oui <sup>2</sup>|Oui <sup>2</sup>|
 |Mémoire de pages de grande taille compatible NUMA et allocation de tableau de tampons|Oui|Non|Non|Non|Non|
 |Extension du pool de mémoires tampons|Oui|Oui|Non|Non|Non|
 |Gouvernance des ressources d'E/S|Oui|Non|Non|Non|Non|  
 |Durabilité différée|Oui|Oui|Oui|Oui|Oui|
 
-<sup>1</sup> La taille des données OLTP en mémoire et le cache de segments columnstore sont limités à la quantité de mémoire spécifiée par l’édition dans la section Limites d’échelle. Le Nombre maximal de degrés de parallélisme est limité. Le nombre de degrés de parallélisme maximal pour la création d’un index est limité à 2 pour l’Édition Standard et à 1 pour les éditions Web et Express. Cela fait référence aux index columnstore créés sur les tables basées sur des disques et les tables optimisées en mémoire.
+<sup>1</sup> La taille des données OLTP en mémoire et le cache de segments columnstore sont limités à la quantité de mémoire spécifiée par l’édition dans la section Limites d’échelle. Le Nombre maximal de degrés de parallélisme est limité. Le nombre de degrés de parallélisme maximal pour la création d’un index est limité à 2 pour l’Édition Standard et à 1 pour les éditions Web et Express. Ceci fait référence aux index columnstore créés sur des tables basées sur des disques et des tables à mémoire optimisée.
 
 <sup>2</sup> S’applique à [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. 
 
@@ -230,9 +230,9 @@ L’Édition Developer continue à prendre en charge uniquement 1 client pour [S
 |SQL CMD (outil d'invite de commandes)|Oui|Oui|Oui|Oui|Oui|      
 |Distributed Replay - Outil d’administration|Oui|Oui|Oui|Oui|Non|  
 |Distribute Replay - Client|Oui|Oui|Oui|Non|Non|  
-|Distributed Replay - Contrôleur|Oui (jusqu’à 16 clients)|Oui (1 client)|Oui (1 client)|Non|Non|   
+|Distributed Replay - Contrôleur|Oui (jusqu’à 16 clients)|Oui (1 client)|Oui (1 client)|Non|Non|   
 |SQL Profiler|Oui|Oui|Non <sup>1</sup>|Non <sup>1</sup>|Non <sup>1</sup>|  
-|Agent SQL Server|Oui|Oui|Oui|Non|Non| 
+|SQL Server Agent|Oui|Oui|Oui|Non|Non| 
 |Pack d'administration Microsoft System Center Operations Manager|Oui|Oui|Oui|Non|Non|  
 |Assistant Paramétrage de base de données (DTA)|Oui|Oui <sup>2</sup>|Oui <sup>2</sup>|Non|Non|      
   
@@ -249,14 +249,14 @@ L’Édition Developer continue à prendre en charge uniquement 1 client pour [S
 |Connexion administrateur dédiée|Oui|Oui|Oui|Oui avec indicateur de trace|Oui avec indicateur de trace|   
 |Prise en charge de scripts PowerShell|Oui|Oui|Oui|Oui|Oui| 
 |Prise en charge de SysPrep <sup>1</sup>|Oui|Oui|Oui|Oui|Oui| 
-|Prise en charge des opérations de composant d’application de la couche Données (DAC): extraction, déploiement, mise à niveau, suppression|Oui|Oui|Oui|Oui|Oui| 
+|Prise en charge des opérations des composants d’application du niveau Données : extraction, déploiement, mise à niveau, suppression|Oui|Oui|Oui|Oui|Oui| 
 |Automation de stratégie (vérification selon la planification et sur modification)|Oui|Oui|Oui|Non|Non|   
 |Collecteur de données de performances|Oui|Oui|Oui|Non|Non| 
 |Possibilité d’inscription en tant qu’instance managée dans le cadre de la gestion de plusieurs instances|Oui|Oui|Oui|Non|Non|   
 |Rapports de performances standard|Oui|Oui|Oui|Non|Non| 
 |Repères de plan et gel de plan relatif|Oui|Oui|Oui|Non|Non|   
 |Requête directe de vues d'index (à l'aide de l'indicateur NOEXPAND)|Oui|Oui|Oui|Oui|Oui| 
-|Maintenance des vues indexées automatique|Oui|Oui|Oui|Non|Non| 
+|Maintenance automatique des vues indexées|Oui|Oui|Oui|Non|Non| 
 |Vues partitionnées distribuées|Oui|Non|Non|Non|Non| 
 |Opérations d'index parallèles|Oui|Non|Non|Non|Non|  
 |Utilisation automatique de vues indexées par l'optimiseur de requête|Oui|Non|Non|Non|Non| 
@@ -283,7 +283,7 @@ L’Édition Developer continue à prendre en charge uniquement 1 client pour [S
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Intégration R de base|Oui|Oui|Oui|Oui|Non|   
 |Intégration R avancée|Oui|Non|Non|Non|Non| 
-|R Server (Standalone)|Oui|Non|Non|Non|Non|   
+|R Server (autonome)|Oui|Non|Non|Non|Non|   
 |Nœud de calcul Polybase|Oui|Oui <sup>1</sup>|Oui <sup>1</sup>, <sup>2</sup>|Oui <sup>1</sup>, <sup>2</sup>|Oui <sup>1</sup>, <sup>2</sup>| 
 |Nœud principal Polybase|Oui|Non|Non|Non|Non| 
 |JSON|Oui|Oui|Oui|Oui|Oui|   
@@ -311,7 +311,7 @@ L’Édition Developer continue à prendre en charge uniquement 1 client pour [S
 Pour plus d’informations sur les fonctionnalités Integration Services (SSIS) prises en charge par les éditions de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], consultez [Fonctionnalités Integration Services prises en charge par les éditions de SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
 
 ##  <a name="MDS"></a> Master Data Services  
- Pour plus d’informations sur la [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] et les fonctionnalités de Data Quality Services prises en charge par les éditions de [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], consultez [Master Data Services et données de qualité des Services de fonctionnalités prises en charge par les éditions de SQL Server](../master-data-services/master-data-services-and-data-quality-services-features-support.md). 
+ Pour plus d’informations sur les fonctionnalités [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] et Data Quality Services prises en charge par les éditions de [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], consultez [Fonctionnalités Master Data Services et Data Quality Services prises en charge par les éditions de SQL Server](../master-data-services/master-data-services-and-data-quality-services-features-support.md). 
 
   
 ##  <a name="DW"></a> Data Warehouse  
@@ -329,31 +329,31 @@ Pour plus d’informations sur les fonctionnalités Integration Services (SSIS) 
 <sup>1</sup> S’applique à [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] SP1.  
 ##  <a name="SSAS"></a> Analysis Services  
   
-Pour plus d’informations sur les fonctionnalités d’Analysis Services pris en charge par les éditions de [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], consultez [Analysis Services fonctionnalités prises en charge par les éditions de SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md). 
+Pour plus d’informations sur les fonctionnalités Analysis Services prises en charge par les éditions de [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], consultez [Fonctionnalités Analysis Services prises en charge par les éditions de SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md). 
   
 ##  <a name="BIMD"></a> BI Semantic Model (Multi Dimensional)  
   
-Pour plus d’informations sur les fonctionnalités d’Analysis Services pris en charge par les éditions de [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], consultez [Analysis Services fonctionnalités prises en charge par les éditions de SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Pour plus d’informations sur les fonctionnalités Analysis Services prises en charge par les éditions de [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], consultez [Fonctionnalités Analysis Services prises en charge par les éditions de SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
    
 ##  <a name="BIT"></a> BI Semantic Model (Tabular)  
   
-Pour plus d’informations sur les fonctionnalités d’Analysis Services pris en charge par les éditions de [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], consultez [Analysis Services fonctionnalités prises en charge par les éditions de SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Pour plus d’informations sur les fonctionnalités Analysis Services prises en charge par les éditions de [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], consultez [Fonctionnalités Analysis Services prises en charge par les éditions de SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
   
 ##  <a name="PPSP"></a> Power Pivot for SharePoint  
   
-Pour plus d’informations sur le Power Pivot pour les fonctionnalités de SharePoint prises en charge par les éditions de [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], consultez [Analysis Services fonctionnalités prises en charge par les éditions de SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Pour plus d’informations sur les fonctionnalités Power Pivot pour SharePoint prises en charge par les éditions de [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], consultez [Fonctionnalités Analysis Services prises en charge par les éditions de SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
   
 ##  <a name="DM"></a> Data Mining  
   
-Pour plus d’informations sur les fonctionnalités d’exploration de données pris en charge par les éditions de [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], consultez [Analysis Services fonctionnalités prises en charge par les éditions de SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Pour plus d’informations sur les fonctionnalités d’exploration de données prises en charge par les éditions de [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], consultez [Fonctionnalités Analysis Services prises en charge par les éditions de SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
   
 ##  <a name="SSRS"></a> Reporting Services  
   
-Pour plus d’informations sur les fonctionnalités de Reporting Services prises en charge par les éditions de [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], consultez [Reporting Services fonctionnalités prises en charge par les éditions de SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Pour plus d’informations sur les fonctionnalités Reporting Services prises en charge par les éditions de [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], consultez [Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
 
-##  <a name="BIC"></a> Business Intelligence Clients  
+##  <a name="BIC"></a> Clients Business Intelligence  
 
-Pour plus d’informations sur les fonctionnalités de Business Intelligence Client pris en charge par les éditions de [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], consultez [Analysis Services fonctionnalités prises en charge par les éditions de SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) ou [Reporting Services fonctionnalités prises en charge par les éditions de SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Pour plus d’informations sur les fonctionnalités de client Business Intelligence prises en charge par les éditions de [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], consultez [Fonctionnalités Analysis Services prises en charge par les éditions de SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) ou [Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
   
 ##  <a name="SLS"></a> Spatial and Location Services  
   
@@ -381,8 +381,8 @@ Pour plus d’informations sur les fonctionnalités de Business Intelligence Cli
 > [![Télécharger SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **[Télécharger la dernière version de SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**    
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécifications de produit pour SQL Server](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
- [Installation de SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
+ [Spécifications de produit pour SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
+ [Installation de SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  
   
   

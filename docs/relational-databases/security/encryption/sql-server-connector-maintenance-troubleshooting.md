@@ -16,11 +16,11 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: 0218298a95d1e7df242b3ca7cbae657effead719
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Résolution des problèmes et maintenance du connecteur SQL Server
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/23/2017
 >  Le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] exige que le nom de clé utilise uniquement les caractères « a-z », « A-Z », « 0-9 » et « - », avec une limite de 26 caractères.   
 > Des versions de clés différentes sous le même nom de clé dans Azure Key Vault ne fonctionnent pas avec le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour faire pivoter une clé Azure Key Vault qui est utilisée par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], une nouvelle clé portant un nouveau nom de la clé doit être créée.  
   
- En général, les clés asymétriques de serveur pour le chiffrement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doivent faire l’objet d’un contrôle de version une fois par an ou une fois tous les deux ans. Bien que le coffre de clés prenne en charge le contrôle de version des clés, les clients ne doivent pas utiliser cette fonctionnalité pour implémenter le contrôle de version. Le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne peut pas traiter les modifications apportées à la version des clés du coffre de clés. Pour implémenter le contrôle de version des clés, le client doit créer une clé dans le coffre de clés, puis chiffrer à nouveau la clé de chiffrement de données dans [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
+ En général, les clés asymétriques de serveur pour le chiffrement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doivent faire l’objet d’une gestion des versions une fois par an ou une fois tous les deux ans. Bien que le coffre de clés prenne en charge la gestion des versions des clés, les clients ne doivent pas utiliser cette fonctionnalité pour implémenter la gestion des versions. Le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne peut pas traiter les modifications apportées à la version des clés du coffre de clés. Pour implémenter la gestion des versions des clés, le client doit créer une clé dans le coffre de clés, puis chiffrer à nouveau la clé de chiffrement de données dans [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
  Dans le cas du chiffrement transparent des données, voici comment procéder :  
   
@@ -166,12 +166,11 @@ Les sauvegardes des clés peuvent être restaurées entre les régions Azure, ta
  La clé asymétrique dans le coffre de clés permet de protéger les clés de chiffrement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Seule la partie publique de la clé asymétrique sort du coffre ; la partie privée n’est jamais exportée par le coffre. Toutes les opérations de chiffrement effectuées à l’aide de la clé asymétrique ont lieu dans le service Azure Key Vault et sont protégées par la sécurité de ce service.  
   
  **Qu’est-ce qu’un URI de clé ?**  
- Dans Azure Key Vault, chaque clé a un URI, que vous pouvez utiliser pour référencer la clé dans votre application. Utilisez le format `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` pour obtenir la version actuelle, utilisez le format `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` pour obtenir une version spécifique.  
+ Dans Azure Key Vault, chaque clé a un URI, que vous pouvez utiliser pour référencer la clé dans votre application. Utilisez le format `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` pour obtenir la version actuelle, et le format `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` pour obtenir une version spécifique.  
   
 ### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>À propos de la configuration de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
-**Quels sont les points de terminaison auxquels le connecteur SQL Server doit pouvoir accéder ?** 
- Le connecteur communique avec deux points de terminaison, qui doivent figurer dans la liste verte. Le seul port requis pour la communication sortante à ces autres services est le port 443 pour Https :
+**Quels sont les points de terminaison auxquels le connecteur SQL Server doit pouvoir accéder ?** Le connecteur communique avec deux points de terminaison, qui doivent figurer dans la liste verte. Le seul port requis pour la communication sortante à ces autres services est le port 443 pour Https :
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/*:443
   
@@ -188,7 +187,7 @@ Les sauvegardes des clés peuvent être restaurées entre les régions Azure, ta
   
 -   Pour créer une clé asymétrique, l’autorisation `CREATE ASYMMETRIC KEY` est exigée.  
 
-**Comment modifier mon annuaire Active Directory par défaut pour que mon coffre de clés soit créé dans le même abonnement et annuaire Active Directory que le principal du service que j’ai créé pour le connecteur [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] ?**
+**Comment modifier mon Active Directory par défaut, de sorte que mon coffre de clés soit créé dans le même abonnement et Active Directory que le principal du service que j’ai créé pour le connecteur [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] ?**
 
 ![aad-change-default-directory-helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 
@@ -299,7 +298,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
 -   Informations de référence sur les [applets de commande Azure Key Vault](https://msdn.microsoft.com/library/dn868052.aspx) de PowerShell  
   
 ## <a name="see-also"></a>Voir aussi  
- [Extensible Key Management Using Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
+ [Gestion de clés extensible à l’aide d’Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Utiliser le connecteur SQL Server avec les fonctionnalités de chiffrement SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
  [Fournisseur EKM activé (option de configuration de serveur)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [Étapes de la configuration de la gestion de clés extensible à l’aide d’Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
   
