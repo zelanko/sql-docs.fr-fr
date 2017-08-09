@@ -15,11 +15,11 @@ caps.latest.revision: 23
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
 ms.openlocfilehash: 1fdb84c01f9e25c6ad818a6350a08df9ceaeae93
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gérer la rétention des données d’historique dans les tables temporelles avec version gérée par le système
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/23/2017
 ## <a name="data-retention-management-for-history-table"></a>Gestion de la rétention de données pour la table d’historique  
  La gestion de la rétention de données pour les tables temporelles consiste en premier lieu à déterminer la période de rétention nécessaire pour chaque table temporelle. Dans la plupart des cas, votre stratégie de rétention doit être considérée comme faisant partie de la logique métier de l’application utilisant les tables temporelles. Par exemple, les applications s’inscrivant dans des scénarios d’audit de données et de voyage dans le temps ont des exigences strictes qui définissent la durée pendant laquelle les données d’historique doivent être disponibles pour l’interrogation en ligne.  
   
- Une fois la période de rétention de données déterminée, l’étape suivante consiste à élaborer un plan de gestion des données d’historique, à définir l’emplacement et le mode de stockage de ces données et à spécifier le mode de suppression des données d’historique anciennes eu égard à vos conditions de rétention. Quatre approches pour la gestion des données d’historique dans la table d’historique temporelle suivantes sont disponibles :  
+ Une fois la période de rétention de données déterminée, l’étape suivante consiste à élaborer un plan de gestion des données d’historique, à définir l’emplacement et le mode de stockage de ces données et à spécifier le mode de suppression des données d’historique anciennes eu égard à vos conditions de rétention. Il existe quatre approches pour la gestion des données d’historique dans la table d’historique temporelle :  
   
 -   [Stretch Database](https://msdn.microsoft.com/library/mt637341.aspx#using-stretch-database-approach)  
   
@@ -67,10 +67,10 @@ ms.lasthandoff: 06/23/2017
   
 > **REMARQUE :** Stretch Database migre les données vers Azure. Par conséquent, vous devez disposer d’un compte Azure et d’un abonnement pour la facturation. Pour obtenir un compte d’évaluation gratuite Azure, cliquez sur [Évaluation d’un mois gratuite](https://azure.microsoft.com/pricing/free-trial/).  
   
- Vous pouvez configurer une table d’historique temporelle pour Stretch à l’aide de l’Assistant Stretch ou de Transact-SQL, et vous pouvez activer Stretch pour une table d’historique temporelle tout en ayant le contrôle de version système défini sur **ACTIVÉ**. L’extension de la table active n’est pas autorisée, car une telle opération ne se justifie pas.  
+ Vous pouvez configurer une table d’historique temporelle pour Stretch à l’aide de l’Assistant Stretch ou de Transact-SQL, et vous pouvez activer Stretch pour une table d’historique temporelle tout en ayant la gestion système des versions définie sur **ACTIVÉ**. L’extension de la table active n’est pas autorisée, car une telle opération ne se justifie pas.  
   
 ### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>Étendre l’ensemble de la table d’historique à l’aide de l’Assistant Stretch  
- Pour les débutants, la méthode la plus simple consiste à utiliser l’Assistant Stretch pour activer Stretch pour la base de données entière, puis à sélectionner la table d’historique temporelle dans l’Assistant Stretch (cet exemple part du principe que vous avez configuré la table Department en tant que table temporelle de contrôle de version du système dans une base de données autrement vide). Dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous ne pouvez pas cliquer avec le bouton droit sur la table d’historique temporelle proprement dite et cliquer sur Stretch.  
+ Pour les débutants, la méthode la plus simple consiste à utiliser l’Assistant Stretch pour activer Stretch pour la base de données entière, puis à sélectionner la table d’historique temporelle dans l’Assistant Stretch (cet exemple part du principe que vous avez configuré la table Department en tant que table temporelle avec versions gérées par le système dans une base de données autrement vide). Dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous ne pouvez pas cliquer avec le bouton droit sur la table d’historique temporelle proprement dite et cliquer sur Stretch.  
   
 1.  Cliquez avec le bouton droit sur votre base de données et pointez sur **Tâches**, sur **Stretch**, puis cliquez sur **Activer** pour lancer l’Assistant.  
   
@@ -177,7 +177,7 @@ COMMIT ;
   
 -   des tâches de maintenance de partition périodiques.  
   
- Pour illustrer cela, supposons que vous voulez conserver les données d’historique pendant six mois et que vous voulez conserver les données de chaque mois dans une partition distincte. Par ailleurs, supposons que vous avez activé le contrôle de version système en septembre 2015.  
+ Pour illustrer cela, supposons que vous voulez conserver les données d’historique pendant six mois et que vous voulez conserver les données de chaque mois dans une partition distincte. Par ailleurs, supposons que vous avez activé la gestion système des versions en septembre 2015.  
   
  Une tâche de configuration du partitionnement permet de créer la configuration initiale du partitionnement de la table d’historique. Pour cet exemple, il faudrait créer le même nombre de partitions que la taille de fenêtre défilante, exprimée en mois, plus une partition vide préparée à l’avance (voir ci-après). Cette configuration est l’assurance que le système pourra stocker correctement les nouvelles données quand la tâche de maintenance périodique sera lancée pour la première fois. De même, elle garantit que les partitions ne seront jamais fractionnées avec des données pour éviter des mouvements de données coûteux. Vous devez effectuer cette tâche à l’aide de Transact-SQL en utilisant le script d’exemple ci-après.  
   
@@ -428,28 +428,28 @@ BEGIN TRAN
 COMMIT;  
 ```  
 
-## <a name="using-temporal-history-retention-policy-approach"></a>À l’aide d’approche de stratégie de rétention historique temporelle
-> **Remarque :** à l’aide de la stratégie de rétention d’historique temporelle approche s’applique aux [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] et 2017 du serveur SQL à partir de CTP 1.3.  
+## <a name="using-temporal-history-retention-policy-approach"></a>Utilisation de l’approche de la stratégie de rétention d’historique temporelle
+> **REMARQUE :** L’utilisation de l’approche de la stratégie de rétention d’historique temporelle s’applique à [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] et à SQL Server 2017 (à partir de la version CTP 1.3).  
 
-Rétention de l’historique temporelle peut être configurée au niveau de la table individuelles, ce qui permet aux utilisateurs de créer de vieillissement flexible des stratégies. Application de la rétention temporelle est simple : il ne requiert qu’un seul paramètre à définir pendant la modification de la création ou le schéma de table.
+La rétention d’historique temporelle peut être configurée au niveau de la table individuelle, ce qui permet aux utilisateurs de créer des stratégies de vieillissement flexibles. L’application de la rétention temporelle est simple : un seul paramètre doit être défini durant la création de la table ou le changement de schéma.
 
-Après avoir défini la stratégie de rétention, base de données SQL Azure commence à vérifier régulièrement s’il existe des lignes historiques qui sont éligibles pour le nettoyage automatique des données. Identification des lignes correspondantes et leur suppression à partir de la table d’historique se produisent en toute transparence, dans la tâche en arrière-plan est planifiée et exécutée par le système. Condition d’âge pour les lignes de la table historique est vérifiée en fonction de la colonne représentant la fin de la période SYSTEM_TIME. Si la période de rétention, par exemple, est définie à six mois, les lignes éligibles pour le nettoyage de la table répondent à la condition suivante :
+Une fois que vous avez défini la stratégie de rétention, Azure SQL Database se met à vérifier régulièrement s’il existe des lignes d’historique éligibles pour un nettoyage automatique des données. L’identification des lignes correspondantes et leur suppression de la table d’historique se produisent de façon transparente, dans la tâche en arrière-plan planifiée et exécutée par le système. La condition d’âge des lignes de la table d’historique est vérifiée en fonction de la colonne représentant la fin de la période SYSTEM_TIME. Par exemple, si la période de rétention est définie à six mois, les lignes de table éligibles pour un nettoyage répondent à la condition suivante :
 ```
 ValidTo < DATEADD (MONTH, -6, SYSUTCDATETIME())
 ```
-Dans l’exemple précédent, nous avons supposé que ValidTo colonne correspond à la fin de la période SYSTEM_TIME.
+Dans l’exemple précédent, nous avons supposé que la colonne ValidTo correspond à la fin de la période SYSTEM_TIME.
 ### <a name="how-to-configure-retention-policy"></a>Comment configurer la stratégie de rétention ?
-Avant de configurer la stratégie de rétention pour une table temporelle, vérifiez d’abord si la rétention historique temporelle est activée au niveau de la base de données :
+Avant de configurer la stratégie de rétention d’une table temporelle, vérifiez d’abord si la rétention d’historique temporelle est activée au niveau de la base de données :
 ```
 SELECT is_temporal_history_retention_enabled, name
 FROM sys.databases
 ```
-Indicateur de base de données **is_temporal_history_retention_enabled** a la valeur ON par défaut, mais les utilisateurs peuvent les modifier avec l’instruction ALTER DATABASE. Il est automatiquement défini sur OFF après le point dans l’opération de restauration de temps. Pour activer le nettoyage de rétention d’historique temporelle pour votre base de données, exécutez l’instruction suivante :
+L’indicateur de base de données **is_temporal_history_retention_enabled** a la valeur ON par défaut, mais les utilisateurs peuvent le changer à l’aide de l’instruction ALTER DATABASE. Il prend automatiquement la valeur OFF après une opération de limite de restauration dans le temps. Si vous souhaitez activer le nettoyage de la rétention d’historique temporelle pour votre base de données, exécutez l’instruction suivante :
 ```
 ALTER DATABASE <myDB>
 SET TEMPORAL_HISTORY_RETENTION  ON
 ```
-Stratégie de rétention est configurée lors de la création de table en spécifiant la valeur du paramètre HISTORY_RETENTION_PERIOD :
+La stratégie de rétention est configurée durant la création de la table quand vous spécifiez la valeur du paramètre HISTORY_RETENTION_PERIOD :
 ```
 CREATE TABLE dbo.WebsiteUserInfo
 (  
@@ -469,13 +469,13 @@ CREATE TABLE dbo.WebsiteUserInfo
      )
  );
 ```
-Vous pouvez spécifier la période de rétention à l’aide d’unités de temps différent : jours, semaines, mois et les années. Si HISTORY_RETENTION_PERIOD est omis, infinie de rétention est utilisée. Vous pouvez également utiliser le mot clé infinie explicitement.
-Dans certains scénarios, vous pouvez choisir de configurer des rétention après la création de table, ou pour modifier précédemment configuré valeur. Dans ce cas utiliser l’instruction ALTER TABLE :
+Vous pouvez spécifier la période de rétention à l’aide de différentes unités de temps : DAYS, WEEKS, MONTHS et YEARS. Si HISTORY_RETENTION_PERIOD est omis, la rétention est censée être INFINITE. Vous pouvez également utiliser explicitement le mot clé INFINITE.
+Dans certains scénarios, vous pouvez configurer la rétention après la création de la table, ou pour changer une valeur configurée. Dans ce cas, utilisez l’instruction ALTER TABLE :
 ```
 ALTER TABLE dbo.WebsiteUserInfo
 SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 9 MONTHS));
 ```
-Pour vérifier l’état actuel de la stratégie de rétention, utilisez la requête suivante joint l’indicateur d’activation temporelle rétention au niveau de la base de données avec des périodes de rétention des tables individuelles :
+Pour passer en revue l’état actuel de la stratégie de rétention, utilisez la requête suivante qui permet de joindre l’indicateur d’activation de rétention temporelle au niveau de la base de données aux périodes de rétention de tables individuelles :
 ```
 SELECT DB.is_temporal_history_retention_enabled,
 SCHEMA_NAME(T1.schema_id) AS TemporalTableSchema,
@@ -488,25 +488,25 @@ where name = DB_NAME()) AS DB
 LEFT JOIN sys.tables T2   
 ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 ```
-### <a name="how-sql-database-deletes-aged-rows"></a>La base de données SQL supprime les anciennes lignes ?
-Le processus de nettoyage dépend de la mise en page de l’index de la table d’historique. Il est important de remarquer que *uniquement les tables d’historique avec un index cluster (B-tree ou columnstore) peuvent avoir fini de rétention configurée*. Une tâche en arrière-plan est créée pour effectuer un nettoyage de données d’anciennes données de toutes les tables temporelles avec la période de rétention finie. Logique de nettoyage de l’index cluster rowstore (B-tree) supprime les anciennes lignes en segments plus petits (jusqu'à 10 K) en réduisant la pression sur le journal de la base de données et le sous-système d’e/s. Bien que la logique de nettoyage utilise un index B-tree requis, l’ordre des suppressions pour les lignes antérieures à la période de rétention ne peut pas être garantie bien. Par conséquent, *ne prennent pas de dépendances sur l’ordre de nettoyage dans vos applications*.
+### <a name="how-sql-database-deletes-aged-rows"></a>Comment SQL Database supprime les lignes âgées ?
+Le processus de nettoyage dépend de la disposition de l’index de la table d’historique. Il est important de noter que *seules les tables d’historique avec un index cluster (arbre B (B-tree) ou columnstore) peuvent avoir une stratégie de rétention limitée et configurée*. Une tâche en arrière-plan est créée afin d’effectuer le nettoyage des anciennes données pour toutes les tables temporelles dont la période de rétention est limitée. La logique de nettoyage de l’index cluster rowstore (arbre B (B-tree)) supprime les anciennes lignes par petits blocs (jusqu’à 10 Ko), ce qui réduit la pression exercée sur le journal de la base de données et le sous-système d’E/S. Bien que la logique de nettoyage utilise l’index d’arbre B (B-tree) nécessaire, l’ordre des suppressions des lignes antérieures à la période de rétention ne peut pas être garanti. Vous ne devez donc *pas accepter de dépendances relatives à l’ordre de nettoyage dans vos applications*.
 
-La tâche de nettoyage pour le cluster columnstore supprime les groupes de l’ensemble de la ligne à la fois (généralement contient 1 million de lignes chacune), qui est très efficace, en particulier lorsque les données d’historique sont générées à un rythme haute.
+La tâche de nettoyage de l’index columnstore cluster supprime des groupes de lignes entiers (qui contiennent généralement 1 million de lignes chacun), ce qui est très efficace, en particulier quand les données d’historique sont générées à un rythme élevé.
 
-![Clustered columnstore rétention](../../relational-databases/tables/media/cciretention.png "Clustered columnstore rétention")
+![Rétention de l’index columnstore cluster](../../relational-databases/tables/media/cciretention.png "Rétention de l’index columnstore cluster")
 
-La compression des données excellente et facilite le nettoyage efficace rétention columnstore index cluster un choix idéal pour les scénarios lorsque votre charge de travail génère rapidement un volume élevé de données d’historique. Ce modèle est généralement utilisé pour les charges de travail intensives de traitement transactionnel qui utilise les tables temporelle pour le suivi des modifications et l’audit, analyse des tendances ou intégrer les données IoT.
+En raison de l’excellence de la compression des données et de l’efficacité du nettoyage de la rétention, l’index columnstore cluster est un choix idéal dans les scénarios où votre charge de travail génère rapidement une grande quantité de données d’historique. Ce modèle est généralement utilisé pour les charges de travail avec traitement transactionnel intensif, qui utilisent des tables temporelles pour l’audit et le suivi des changements, l’analyse des tendances ou l’ingestion des données IoT.
 
-Veuillez vérifier [gérer les données d’historique dans les Tables temporelles avec la stratégie de rétention](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy) pour plus d’informations.
+Pour plus d’informations, consultez [Gérer les données d’historique dans les tables temporelles avec une stratégie de rétention](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy).
 
 ## <a name="see-also"></a>Voir aussi  
  [Tables temporelles](../../relational-databases/tables/temporal-tables.md)   
- [Prise en main des tables temporelles de contrôle de version du système](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
+ [Prise en main des tables temporelles avec versions gérées par le système](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Vérifications de cohérence système des tables temporelles](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
  [Partitionnement des tables temporelles](../../relational-databases/tables/partitioning-with-temporal-tables.md)   
  [Considérations et limitations liées aux tables temporelles](../../relational-databases/tables/temporal-table-considerations-and-limitations.md)   
  [Sécurité de la table temporelle](../../relational-databases/tables/temporal-table-security.md)   
- [Tables temporelles à système par version avec tables optimisées en mémoire](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
+ [Tables temporelles avec version gérée par le système avec tables à mémoire optimisée](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
  [Vues et fonctions de métadonnées de table temporelle](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
