@@ -19,11 +19,11 @@ ms.translationtype: HT
 ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
 ms.openlocfilehash: bc86472cabd742e83980126dce2cf22d42dfdde2
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="developer-guides-for-sql-server"></a>Guides du développeur pour SQL Server
-  Intégrez presque toutes les fonctionnalités SQL Server via un code personnalisé, à l’aide d’interfaces et de modèles de programmation. Chaque zone fonctionnelle comporte des API managées et natives qui sont utilisées pour la collecte des données, l’accès aux données, l’administration de serveur ou la visualisation des données.  
+  Intégrez presque toutes les fonctionnalités SQL Server via du code personnalisé, à l’aide d’interfaces et de modèles de programmation. Chaque zone fonctionnelle comporte des API managées et natives qui sont utilisées pour la collecte des données, l’accès aux données, l’administration de serveur ou la visualisation des données.  
   
 ## <a name="sql-server-developer-edition-free"></a>SQL Server Developer Edition (gratuit !)
 
@@ -39,11 +39,11 @@ ms.lasthandoff: 07/20/2017
   
  - [Documentation Analysis Services pour les développeurs](../analysis-services/analysis-services-developer-documentation.md)  
   
- - [Documentation Reporting Services pour les développeurs](../reporting-services/reporting-services-developer-documentation.md)  
+ - [Documentation du développeur Reporting Services](../reporting-services/reporting-services-developer-documentation.md)  
   
  - [Documentation Integration Services pour les développeurs](../integration-services/integration-services-developer-documentation.md)  
   
- - [Documentation Master Data Services pour les développeurs](../master-data-services/develop/master-data-services-developer-documentation.md)  
+ - [Documentation du développeur Master Data Services](../master-data-services/develop/master-data-services-developer-documentation.md)  
   
  - [Documentation de la réplication pour les développeurs](../relational-databases/replication/concepts/replication-developer-documentation.md)  
   

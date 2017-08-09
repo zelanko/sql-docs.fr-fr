@@ -14,11 +14,11 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0bcdf5c7eec91bccabc4b7b54f6121bec4d6c7f2
 ms.openlocfilehash: bf29cd596c9b52ecf88fc715a580253de5477271
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planifier votre adoption des fonctionnalités OLTP en mémoire dans SQL Server
@@ -55,13 +55,13 @@ Votre système dispose-t-il d’assez de mémoire active pour prendre en charge 
 
 Une table optimisée en mémoire qui contient 200 Go de données nécessite plus de 200 Go de mémoire active dédiée pour sa prise en charge. Avant d’implémenter une table optimisée en mémoire contenant une grande quantité de données, vous devez prévoir la quantité de mémoire active supplémentaire que vous devrez peut-être ajouter à votre serveur. Pour obtenir des conseils sur l’estimation, consultez :
 
-- [Estimer les besoins en mémoire des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)
+- [Estimer les besoins en mémoire des tables mémoire optimisées](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)
 
 #### <a name="azure-sql-database"></a>Azure SQL Database
 
 Dans le cas d’une base de données hébergée dans le service cloud Azure SQL Database, le niveau de service que vous choisissez a un impact sur la quantité de mémoire active que votre base de données est autorisée à consommer. Vous devez prévoir de surveiller l’utilisation de la mémoire de votre base de données à l’aide d’une alerte. Pour plus d’informations, consultez :
 
-- Passez en revue les limites de stockage de l’OLTP en mémoire pour votre [niveau tarifaire](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)
+- Passer en revue les limites de stockage OLTP en mémoire pour votre [niveau tarifaire](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)
 - [Surveiller le stockage OLTP en mémoire](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>Variables de table optimisées en mémoire
@@ -114,7 +114,7 @@ Vous utilisez des fichiers .dacpac dans le contexte d’un projet Visual Studio 
 
 ### <a name="a4-guidance-for-whether-in-memory-oltp-features-are-right-for-your-application"></a>A.4 Déterminer si les fonctionnalités OLTP en mémoire sont adaptées à votre application
 
-Pour obtenir des conseils sur indique si les fonctionnalités OLTP en mémoire peuvent améliorer les performances de votre application, consultez :
+Pour savoir si les fonctionnalités OLTP en mémoire peuvent améliorer les performances de votre application, consultez :
 
 - [OLTP en mémoire (optimisation en mémoire)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
@@ -122,7 +122,7 @@ Pour obtenir des conseils sur indique si les fonctionnalités OLTP en mémoire p
 
 ## <a name="b-unsupported-features"></a>B. Fonctionnalités non prises en charge
 
-Fonctionnalités qui ne sont pas pris en charge dans certains scénarios OLTP en mémoire sont décrites sur :
+Les fonctionnalités qui ne sont pas prises en charge dans certains scénarios OLTP en mémoire sont décrites dans :
 
 - [Fonctionnalités SQL Server non prises en charge pour l’OLTP en mémoire](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)
 
@@ -142,7 +142,7 @@ En général, une capture instantanée est utile pour les itérations de test ra
 
 ### <a name="b2-cross-database-queries"></a>B.2 Requêtes de bases de données croisées
 
-Les tables optimisées en mémoire ne prennent pas en charge les transactions [entre bases de données](../../relational-databases/in-memory-oltp/cross-database-queries.md) . Vous ne pouvez pas accéder à une autre base de données à partir de la même transaction ou de la même requête qui accède également à une table optimisée en mémoire.
+Les tables optimisées en mémoire ne prennent pas en charge les transactions [entre bases de données](../../relational-databases/in-memory-oltp/cross-database-queries.md) . Vous ne pouvez pas accéder à une autre base de données à partir de la même transaction ou de la même requête qui accède également à une table mémoire optimisée.
 
 Les variables de table ne sont pas transactionnelles. Par conséquent, les [variables de tables optimisées en mémoire](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md) peuvent être utilisées dans les requêtes de bases de données croisées.
 
@@ -159,7 +159,7 @@ L’indicateur READPAST est utile lorsque plusieurs sessions accèdent à un mê
 - Aucune colonne ne peut être marquée pour [RowVersion](../../t-sql/data-types/rowversion-transact-sql.md) dans une table optimisée en mémoire.
 
 
-- A [séquence](../../t-sql/statements/create-sequence-transact-sql.md) ne peut pas être utilisé avec une contrainte dans une table optimisée en mémoire. Par exemple, vous ne peut pas créer une contrainte par défaut avec une clause NEXT VALUE FOR. Séquences peuvent être utilisés avec des instructions INSERT et UPDATE.
+- [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md) ne peut pas être utilisé avec une contrainte dans une table à mémoire optimisée. Par exemple, vous ne pouvez pas créer une contrainte DEFAULT avec une clause NEXT VALUE FOR. Vous pouvez utiliser plusieurs SEQUENCE avec des instructions INSERT et UPDATE.
 
 
 ## <a name="c-administrative-maintenance"></a>C. Maintenance administrative
@@ -170,7 +170,7 @@ Cette section décrit les différences qui existent au niveau de l’administrat
 
 ### <a name="c1-identity-seed-reset-increment--1"></a>C.1 Réinitialisation de la valeur initiale de la propriété Identity, incrément > 1
 
-Pour réattribuer une valeur à la colonne IDENTITY, [DBCC CHECKIDENT](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md) ne peut pas être utilisé dans une table optimisée en mémoire.
+Pour réattribuer une valeur à la colonne IDENTITY,[DBCC CHECKIDENT](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)ne peut pas être utilisé dans une table optimisée en mémoire.
 
 La valeur d’incrément est limitée à exactement 1 pour une colonne IDENTITY dans une table optimisée en mémoire.
 
@@ -223,7 +223,7 @@ Les index de hachage peuvent être les plus rapides pour accéder à une ligne s
 - Un index de hachage peut ne pas constituer le meilleur choix si la vitesse de duplication de la valeur de clé est trop élevée.
 
 - Ne sous-estimez pas le nombre de *compartiments* dont peut avoir besoin votre index de hachage, afin d’éviter que les compartiments ne contiennent de longues chaînes. Pour plus d’informations, consultez :
-    - [Index de hachage pour les tables optimisées en mémoire](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)
+    - [Index de hachage pour les tables mémoire optimisées](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)
 
 
 #### <a name="nonclustered-columnstore-indexes"></a>Index columnstore non cluster
@@ -249,7 +249,7 @@ Les Large Objects (LOB) sont des colonnes de types tels que varchar(**max**). Le
 
 Pour plus d’informations sur les colonnes LOB et hors ligne, consultez :
 
-- [Taille de la table et des lignes dans les tables optimisées en mémoire](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)
+- [Taille de la table et des lignes dans les tables mémoire optimisées](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)
 - [Types de données pris en charge pour l’OLTP en mémoire](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)
 
 
@@ -375,7 +375,7 @@ END;
 
 Certains types de plans de requête ne sont pas disponibles pour les procédures natives. Pour plus d’informations, consultez :
 
-- [Guide du traitement des requêtes pour les tables optimisées en mémoire](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)
+- [Guide du traitement des requêtes pour les tables mémoire optimisées](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)
 
 
 #### <a name="no-parallel-processing-in-a-native-proc"></a>Aucun traitement parallèle dans une procédure native

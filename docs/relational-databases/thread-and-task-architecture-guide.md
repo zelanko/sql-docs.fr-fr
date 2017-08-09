@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 93be3a22ee517f90e65b8c8ba6dcaa8d90ed8515
 ms.openlocfilehash: 3b835536b4f510021f0d966e3214cf1ec5f71f5c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="thread-and-task-architecture-guide"></a>guide d’architecture de thread et de tâche
@@ -93,14 +93,14 @@ Ne comptez pas sur la croissance automatique pour augmenter la taille du fichier
 
 Les performances des opérations d'index telles que la création ou la reconstruction d'index peuvent être améliorées sur les ordinateurs qui possèdent de nombreuses unités centrales en définissant temporairement le mode de récupération de la base de données sur le mode de récupération simple ou de journalisation en bloc. Ces opérations d’index peuvent générer une activité de journal significative et les contentions de journal peuvent affecter le meilleur choix de degré de parallélisme (DOP) effectué par SQL Server.
 
-En outre, envisagez d’ajuster le **degré maximal de parallélisme (MAXDOP)** option de configuration de serveur pour ces opérations. Les indications suivantes sont basées sur des tests internes et constituent des recommandations générales. Essayez plusieurs paramètres MAXDOP différents pour déterminer le paramètre optimal pour votre environnement.
+De plus, modifiez selon les besoins l’option de configuration serveur du **degré maximum de parallélisme (MAXDOP)** pour ces opérations. Les indications suivantes sont basées sur des tests internes et constituent des recommandations générales. Essayez plusieurs paramètres MAXDOP différents pour déterminer le paramètre optimal pour votre environnement.
 
 * Pour le mode de récupération complète, limitez la valeur de l’option Degré maximal de parallélisme à huit ou une valeur inférieure.   
 * Pour le modèle de journalisation en bloc ou le mode de récupération simple, essayez de définir la valeur de l’option Degré maximal de parallélisme sur une valeur supérieure à huit.   
 * Pour les serveurs pour lesquels des nœuds NUMA sont configurés, le degré maximal de parallélisme ne doit pas dépasser le nombre d'unités centrales attribuées à chaque nœud NUMA. Cela vient du fait que la requête est plus susceptible d'utiliser la mémoire locale d'un nœud NUMA, ce qui peut améliorer le temps d'accès à la mémoire.  
-* Pour les serveurs qui ont l’hyperthreading activé et ont été fabriqués en 2009 ou une version antérieure (avant que la fonctionnalité de hyper-threading a été améliorée), la valeur MAXDOP ne doit pas dépasser le nombre de processeurs physiques plutôt que de processeurs logiques.
+* Sur les serveurs ou l’hyperthreading est activé et qui ont été fabriqués avant l’année 2009 incluse (c’est-à-dire avant l’amélioration de la fonctionnalité hyperthreading), la valeur MAXDOP ne doit pas dépasser le nombre de processeurs physiques plutôt que le nombre de processeurs logiques.
 
-Pour plus d’informations sur l’option max degree of parallelism, consultez [configurer le degré maximal de parallélisme Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+Pour plus d’informations sur l’option relative au degré maximal de parallélisme, consultez [Configurer l’option de configuration du serveur Degré maximal de parallélisme](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 ### <a name="setting-the-maximum-number-of-worker-threads"></a>Configuration du nombre maximal de threads de travail
 
@@ -126,7 +126,7 @@ Le tableau suivant dresse la liste des composants de SQL Server et indique s’i
 |Integration Services   |Is.exe |Non |  
 |Service Broker |Sb.exe |Non |  
 |Recherche en texte intégral   |Fts.exe    |Non |  
-|Agent SQL Server   |Sqlagent.exe   |Non |  
+|SQL Server Agent   |Sqlagent.exe   |Non |  
 |SQL Server Management Studio   |Ssms.exe   |Non |  
 |Programme d'installation de SQL Server   |Setup.exe  |Non |  
 

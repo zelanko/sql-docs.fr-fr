@@ -21,11 +21,11 @@ caps.latest.revision: 58
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (moteur de base de données)
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/23/2017
 ## <a name="typical-scenarios"></a>Scénarios typiques  
   
 ### <a name="client-and-data-on-premises"></a>Client et données locaux  
- Un client dispose d’une application cliente et de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui s’exécutent localement, au sein de son entreprise. Le client souhaite embaucher un fournisseur externe pour administrer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Afin de protéger les données sensibles stockées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], le client utilise toujours Always Encrypted pour garantir la séparation des responsabilités entre les administrateurs de base de données et les administrateurs d’application. Le client stocke les valeurs de texte en clair des clés de chiffrement intégral dans un magasin de clés approuvé accessible à l’application cliente. Les administrateurs[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n’ont pas accès aux clés et, de ce fait, ne peuvent pas déchiffrer les données sensibles stockées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Un client dispose d’une application cliente et de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui s’exécutent localement, au sein de son entreprise. Le client souhaite embaucher un fournisseur externe pour administrer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Afin de protéger les données sensibles stockées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], le client utilise toujours Always Encrypted pour garantir la séparation des responsabilités entre les administrateurs de base de données et les administrateurs d’application. Le client stocke les valeurs de texte en clair des clés Always Encrypted dans un magasin de clés approuvé accessible à l’application cliente. Les administrateurs[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n’ont pas accès aux clés et, de ce fait, ne peuvent pas déchiffrer les données sensibles stockées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ### <a name="client-on-premises-with-data-in-azure"></a>Client local avec des données dans Azure  
  Un client dispose d’une application cliente locale au sein de son entreprise. L’application manipule des données sensibles stockées dans une base de données hébergée dans Azure ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s’exécutant dans une machine virtuelle sur Microsoft Azure). Le client utilise Always Encrypted et stocke les clés Always Encrypted dans un magasin de clés approuvé hébergé localement, pour s’assurer que les administrateurs de cloud [!INCLUDE[msCoName](../../../includes/msconame-md.md)] n’aient pas accès aux données sensibles.  

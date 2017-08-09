@@ -15,21 +15,21 @@ caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
 ms.openlocfilehash: 007b40b36317a67c6b9714b89aac0d3324312f30
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="temporal-table-usage-scenarios"></a>Scénarios d’utilisation de table temporelle
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Les tables temporelles sont généralement utiles dans les scénarios qui exigent un suivi de l’historique des modifications de données.    
-Nous vous recommandons d’envisager des Tables temporelles dans les cas d’usage suivant pour les principaux avantages.  
+Nous vous recommandons d’envisager les tables temporelles dans les cas d’usage suivants, car elles offrent des avantages importants au niveau de la productivité.  
   
 ## <a name="data-audit"></a>Audit des données  
- Utilisez le contrôle de version système temporel sur les tables qui stockent des informations critiques pour lesquelles vous devez effectuer le suivi de ce qui a changé et des moments où les modifications ont eu lieu, et mener des investigations légales sur les données à tout moment.    
+ Utilisez la gestion système des versions temporelle sur les tables qui stockent des informations critiques pour lesquelles vous devez effectuer le suivi de ce qui a changé et des moments où les modifications ont eu lieu, et mener des investigations légales sur les données à tout moment.    
 Les tables avec version système temporelles vous permettent de planifier les scénarios d’audit de données dans les premières étapes du cycle de développement ou d’ajouter un audit de données à des applications ou solutions existantes quand vous en avez besoin.  
   
  Le diagramme suivant illustre un scénario avec une table Employee, dont l’échantillon de données comprend des versions de ligne actuelles (bleu) et historiques (gris).   
@@ -37,7 +37,7 @@ La partie droite du diagramme indique les versions de ligne sur l’axe du temps
   
  ![TemporalUsageScenario1](../../relational-databases/tables/media/temporalusagescenario1.png "TemporalUsageScenario1")  
   
-### <a name="enabling-system-versioning-on-a-new-table-for-data-audit"></a>Activation du contrôle de version système sur une nouvelle table en vue d’un audit des données  
+### <a name="enabling-system-versioning-on-a-new-table-for-data-audit"></a>Activation de la gestion système des versions sur une nouvelle table en vue d’un audit des données  
  Si vous avez identifié des informations qui exigent un audit de données, créez des tables de base de données en tant que tables avec version système temporelles. L’exemple simple suivant illustre un scénario dont les informations se trouvent dans une table Employee appartenant à une base de données de ressources humaines hypothétique :  
   
 ```  
@@ -56,10 +56,10 @@ CREATE TABLE Employee
  WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));  
 ```  
   
- Diverses options pour créer une table avec contrôle de version du système temporelle sont décrites dans [Création d’une table temporelle avec contrôle de version du système](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md).  
+ Diverses options pour créer une table avec gestion système des versions temporelle sont décrites dans [Création d’une table temporelle avec versions gérées par le système](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md).  
   
-### <a name="enabling-system-versioning-on-an-existing-table-for-data-audit"></a>Activation du contrôle de version système sur une table existante en vue d’un audit des données  
- Si vous avez besoin d’effectuer un audit des données dans des bases de données existantes, utilisez ALTER TABLE pour convertir les tables non temporelles en tables avec version système. Pour préserver votre application, ajoutez des colonnes de période avec l’option HIDDEN, comme expliqué dans [Modifier une table non temporelle pour la convertir en table temporelle avec contrôle de version du système](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3). L’exemple suivant illustre l’activation du contrôle de version système sur une table Employee existante appartenant à une base de données de ressources humaines hypothétique :  
+### <a name="enabling-system-versioning-on-an-existing-table-for-data-audit"></a>Activation de la gestion système des versions sur une table existante en vue d’un audit des données  
+ Si vous avez besoin d’effectuer un audit des données dans des bases de données existantes, utilisez ALTER TABLE pour convertir les tables non temporelles en tables avec version système. Pour préserver votre application, ajoutez des colonnes de période avec l’option HIDDEN, comme expliqué dans [Modifier une table non temporelle pour la convertir en table temporelle avec versions gérées par le système](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3). L’exemple suivant illustre l’activation de la gestion système des versions sur une table Employee existante appartenant à une base de données de ressources humaines hypothétique :  
   
 ```  
 /*   
@@ -83,7 +83,7 @@ ALTER TABLE Employee
 Dans un scénario d’audit de données standard, vous souhaitez connaître toutes les modifications de données qui ont été appliquées à une ligne spécifique au cours d’une période digne d’intérêt. La table de l’historique par défaut est créée avec un arbre B (B-tree) rowstore cluster pour traiter efficacement ce cas d’usage.  
   
 ### <a name="performing-data-analysis"></a>Analyse des données  
- Une fois que vous avez activé le contrôle de version système à l’aide d’une des méthodes ci-dessus, une requête vous suffit pour lancer l’audit des données. La requête suivante recherche les versions de ligne dans la table Employee pour lesquelles EmployeeID vaut 1000 et qui ont été actives pendant au moins une partie de la période comprise entre le 1er janvier 2014 et le 1er janvier 2015 (limite supérieure comprise) :  
+ Une fois que vous avez activé la gestion système des versions à l’aide d’une des méthodes ci-dessus, une requête vous suffit pour lancer l’audit des données. La requête suivante recherche les versions de ligne dans la table Employee pour lesquelles EmployeeID vaut 1000 et qui ont été actives pendant au moins une partie de la période comprise entre le 1er janvier 2014 et le 1er janvier 2015 (limite supérieure comprise) :  
   
 ```  
 SELECT * FROM Employee   
@@ -144,7 +144,7 @@ FROM Employee
 > Si vous appliquez AT TIME ZONE à des colonnes de période, SQL Server effectue une analyse de table/index, qui peut être très coûteuse. Évitez ce type de condition dans vos requêtes :  
 > \<colonne de période>  AT TIME ZONE '\<votre fuseau horaire>'  >  {< | > | =, …} condition_date.  
   
- Voir aussi [Interrogation des données dans une table temporelle avec contrôle de version du système](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).  
+ Voir aussi [Interrogation des données dans une table temporelle avec versions gérées par le système](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).  
   
 ## <a name="point-in-time-analysis-time-travel"></a>Analyses à un point dans le temps (voyage dans le temps)  
  À la différence de l’audit de données, qui se concentre essentiellement sur les modifications apportées à des enregistrements individuels, les scénarios de voyage dans le temps permettent aux utilisateurs de voir comment des jeux de données entiers changent au fil du temps. Parfois, le voyage dans le temps fait appel à plusieurs tables temporelles connexes, chacune évoluant à son propre rythme, dont vous pouvez analyser les éléments suivants :  
@@ -159,7 +159,7 @@ FROM Employee
   
 ### <a name="oltp-with-auto-generated-data-history"></a>OLTP avec l’historique des données généré automatiquement  
  Dans les systèmes de traitement transactionnel, il n’est pas rare d’analyser l’évolution de métriques importantes dans le temps. Dans l’idéal, l’analyse de l’historique ne doit pas compromettre les performances de l’application OLTP, où l’accès à l’état des données le plus récent doit se produire avec une latence et un verrouillage des données minimaux.  Les tables avec version système temporelles sont conçues pour permettre aux utilisateurs de conserver en toute transparence l’historique complet des modifications en vue d’une analyse ultérieure, séparément des données actuelles, avec un impact minime sur la charge de travail OLTP principale.  
-Pour les charges de travail de traitement transactionnel élevées, nous vous recommandons d’utiliser des [tables temporelles avec contrôle de version du système avec tables optimisées en mémoire](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md); ainsi, vous pouvez stocker les données actuelles en mémoire et l’historique complet des modifications sur le disque à moindres coûts.  
+Pour les charges de travail de traitement transactionnel élevées, nous vous recommandons d’utiliser des [tables temporelles avec version gérée par le système avec tables à mémoire optimisée](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md); ainsi, vous pouvez stocker les données actuelles en mémoire et l’historique complet des modifications sur le disque à moindres coûts.  
   
  Pour la table de l’historique, nous vous recommandons d’utiliser un index columnstore cluster pour les raisons suivantes :  
   
@@ -179,7 +179,7 @@ Parmi les exemples de scénarios concrets qui rentrent dans cette catégorie, ci
  L’exemple de code suivant crée la table ProductInventory comme table temporelle avec version système en mémoire avec un index columnstore cluster sur la table de l’historique (qui remplace en fait l’index rowstore créé par défaut) :  
   
 > [!NOTE]  
->  Vérifiez que votre base de données permet de créer des tables optimisées en mémoire. Consultez [Création d’une table optimisée en mémoire et d’une procédure stockée compilée en mode natif](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
+>  Vérifiez que votre base de données permet de créer des tables optimisées en mémoire. Consultez [Création d’une table mémoire optimisée et d’une procédure stockée compilée en mode natif](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
 ```  
 USE TemporalProductInventory  
@@ -315,16 +315,16 @@ ALTER TABLE Product
 ALTER TABLE [Location]  
 ADD   
     SysStartTime datetime2 (2) GENERATED ALWAYS AS ROW START HIDDEN    
-        constraint DF_ValidFrom DEFAULT DATEADD(second, -1, SYSUTCDATETIME())  
+        constraint DFValidFrom DEFAULT DATEADD(second, -1, SYSUTCDATETIME())  
     , SysEndTime datetime2 (2)  GENERATED ALWAYS AS ROW END HIDDEN     
-        constraint DF_ValidTo DEFAULT '9999.12.31 23:59:59.99'  
+        constraint DFValidTo DEFAULT '9999.12.31 23:59:59.99'  
     , PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime);  
   
 ALTER TABLE [Location]    
     SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.LocationHistory));  
 ```  
   
- Étant donné que le modèle de données implique maintenant plusieurs tables temporelles, la bonne pratique pour une analyse AS OF consiste à créer une vue qui extrait les données nécessaires des tables connexes et à appliquer FOR SYSTEM_TIME AS OF à la vue, ce qui permet de simplifier sensiblement la reconstruction de l’état du modèle de données entier :  
+ Étant donné que le modèle de données implique maintenant plusieurs tables temporelles, la meilleure pratique pour une analyse AS OF consiste à créer une vue qui extrait les données nécessaires des tables connexes et à appliquer FOR SYSTEM_TIME AS OF à la vue, ce qui permet de simplifier sensiblement la reconstruction de l’état du modèle de données entier :  
   
 ```  
 DROP VIEW IF EXISTS vw_ProductInventoryDetails;  
@@ -515,7 +515,7 @@ GROUP BY DimProduct_History.ProductId, DimLocation_History.LocationId ;
   
 -   L’opération est très efficace et la base de données reste en ligne pour toutes les charges de travail utilisant des données.  
   
--   L’opération de réparation elle-même fait l’objet d’un contrôle de version. Comme vous disposez d’une piste d’audit pour l’opération de réparation elle-même, vous pouvez analyser ce qu’il s’est passé ultérieurement si nécessaire.  
+-   L’opération de réparation elle-même fait l’objet d’une gestion des versions. Comme vous disposez d’une piste d’audit pour l’opération de réparation elle-même, vous pouvez analyser ce qu’il s’est passé ultérieurement si nécessaire.  
   
  L’action de réparation peut être automatisée relativement facilement. Voici un exemple de code de la procédure stockée qui effectue la réparation des données de la table Employee utilisée dans le scénario d’audit de données.  
   
@@ -586,12 +586,12 @@ Si une valeur qui vient d’être mise à jour n’est pas correcte, dans de nom
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables temporelles](../../relational-databases/tables/temporal-tables.md)   
- [Prise en main des tables temporelles de contrôle de version du système](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
+ [Prise en main des tables temporelles avec versions gérées par le système](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Vérifications de cohérence système des tables temporelles](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
  [Partitionnement des tables temporelles](../../relational-databases/tables/partitioning-with-temporal-tables.md)   
  [Considérations et limitations liées aux tables temporelles](../../relational-databases/tables/temporal-table-considerations-and-limitations.md)   
  [Sécurité de la table temporelle](../../relational-databases/tables/temporal-table-security.md)   
- [Tables temporelles à système par version avec tables optimisées en mémoire](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
+ [Tables temporelles avec version gérée par le système avec tables à mémoire optimisée](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
  [Vues et fonctions de métadonnées de table temporelle](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   

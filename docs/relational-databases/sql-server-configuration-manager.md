@@ -30,12 +30,12 @@ ms.translationtype: HT
 ms.sourcegitcommit: de25852f9005be687fdb8a547e30a99bbb58cf4c
 ms.openlocfilehash: 8c9ab15a35c892a31b882797271629a5ec9ef1a0
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-configuration-manager"></a>Gestionnaire de configuration SQL Server
 
- > Pour obtenir un contenu pour les versions précédentes de SQL Server, consultez [Gestionnaire de Configuration SQL Server](https://msdn.microsoft.com/en-US/library/ms174212(SQL.120).aspx).
+ > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Gestionnaire de configuration SQL Server](https://msdn.microsoft.com/en-US/library/ms174212(SQL.120).aspx).
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est un outil qui permet de gérer les services associés à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], de configurer les protocoles réseau utilisés par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]et de gérer la configuration de la connectivité réseau à partir des ordinateurs clients [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Le Gestionnaire de configuration est un composant logiciel enfichable MMC ( [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console), accessible à partir du menu Démarrer ou qui peut être ajouté dans tout autre affichage [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console. [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (**mmc.exe**) utilise le fichier **SQLServerManager\<version>.msc** (par exemple, **SQLServerManager13.msc** pour [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) pour ouvrir le Gestionnaire de configuration. Voici les chemins d’accès aux quatre dernières versions lorsque Windows est installé sur le lecteur C.  
   

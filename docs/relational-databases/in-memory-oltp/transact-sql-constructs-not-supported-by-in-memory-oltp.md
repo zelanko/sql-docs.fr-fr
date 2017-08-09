@@ -14,11 +14,11 @@ caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 66f9964d94ebcbab021c9dcf69ae50663196a597
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Constructions Transact-SQL non prises en charge par l’OLTP en mémoire
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/23/2017
 |----------|----------|----------------|  
 |Fonctionnalité|ON|Les tables optimisées en mémoire ne peuvent pas être placées sur un groupe de fichiers ou un schéma de partition. Supprimez la clause ON de l'instruction **CREATE TABLE** .<br /><br /> Toutes les tables optimisées en mémoire sont associées à un groupe de fichiers/données optimisé en mémoire.|  
 |Type de données|*Nom du type de données*|Le type de données spécifié n'est pas pris en charge. Remplacez le type par un des types de données pris en charge. Pour plus d’informations, consultez [Types de données pris en charge pour l’OLTP en mémoire](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).|  
-|Fonctionnalité|Colonnes calculées|Les colonnes calculées ne sont pas prises en charge pour les tables mémoire optimisées. Supprimez les colonnes calculées de l'instruction **CREATE TABLE** .<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, les colonnes calculées sont prises en charge dans les tables optimisées en mémoire et les index.|  
+|Fonctionnalité|Colonnes calculées|Les colonnes calculées ne sont pas prises en charge pour les tables mémoire optimisées. Supprimez les colonnes calculées de l'instruction **CREATE TABLE** .<br/><br/>**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, les colonnes calculées sont prises en charge dans les tables optimisées en mémoire et les index.|  
 |Fonctionnalité|Réplication|La réplication n'est pas pris en charge avec les tables mémoire optimisées.|  
 |Fonctionnalité|FILESTREAM|Le stockage FILESTREAM n'est pas pris en charge pour les colonnes de tables mémoire optimisées. Supprimez le mot clé **FILESTREAM** de la définition de colonne.|  
 |Fonctionnalité|SPARSE|Les colonnes de tables mémoire optimisées ne peuvent pas être définies comme SPARSE. Supprimez le mot clé **SPARSE** de la définition de colonne.|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/23/2017
 |Opération|Mettre à jour les colonnes clés primaires|Les colonnes clés primaires des tables mémoire optimisées et les types de table ne peuvent pas être mis à jour. Si la clé primaire doit être mise à jour, supprimez l'ancienne ligne et insérez la nouvelle ligne avec la clé primaire mise à jour.|  
 |Opération|CREATE INDEX|Les index sur les tables mémoire optimisées doivent être spécifiés avec l’instruction **CREATE TABLE** ou l’instruction **ALTER TABLE** .|  
 |Opération|CREATE FULLTEXT INDEX|Les index de recherche en texte intégral ne sont pas pris en charge pour les tables mémoire optimisées.|  
-|Opération|modification de schéma|Les tables mémoire optimisées et les procédures stockées compilées en mode natif ne prennent pas en charge les modifications de schéma, telles que **sp_rename**.<br /><br /> Toute tentative de modifier le schéma génère l’erreur 12320. Les opérations qui nécessitent une modification de la version du schéma, comme un changement de nom, ne sont pas prises en charge dans les tables optimisées en mémoire.<br /><br /> Certaines modifications de schéma à l’aide de ALTER TABLE et ALTER PROCEDURE sont autorisées.<br/><br/>**S’applique à :** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].<br/>À partir de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], sp_rename est pris en charge.| 
+|Opération|modification de schéma|Les tables mémoire optimisées et les procédures stockées compilées en mode natif ne prennent pas en charge les modifications de schéma, telles que **sp_rename**.<br /><br /> Toute tentative de modifier le schéma génère l’erreur 12320. Les opérations qui nécessitent une modification de la version du schéma, comme un changement de nom, ne sont pas prises en charge dans les tables optimisées en mémoire.<br /><br /> Certaines modifications de schéma à l’aide de ALTER TABLE et ALTER PROCEDURE sont autorisées.<br/><br/>**S’applique à :** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].<br/>Depuis [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], sp_rename est pris en charge.| 
 |Opération|TRUNCATE TABLE|L'opération TRUNCATE n'est pas prise en charge pour les tables mémoire optimisées. Pour supprimer toutes les lignes d’une table, supprimez toutes les lignes en utilisant **DELETE FROM***table* ou supprimez la table et recréez-la.|  
 |Opération|ALTER AUTHORIZATION|La modification du propriétaire d'une table mémoire optimisée ou d'une procédure stockée compilée en mode natif existante n'est pas prise en charge. Supprimez ou recréez la table ou la procédure pour modifier la propriété.|  
 |Opération|ALTER SCHEMA|Transfert d’un élément sécurisable d’un schéma à un autre.|  
@@ -141,7 +141,7 @@ ms.lasthandoff: 06/23/2017
 |Opérateur|OFFSET|Cet opérateur n'est pas pris en charge. Supprimez **OFFSET** de la procédure stockée compilée en mode natif.|  
 |Opérateur|INTERSECT|Cet opérateur n'est pas pris en charge. Supprimez **INTERSECT** de la procédure stockée compilée en mode natif. Dans certain cas, INNER JOIN permet d'obtenir le même résultat.|  
 |Opérateur|EXCEPT|Cet opérateur n'est pas pris en charge. Supprimez **EXCEPT** de la procédure stockée compilée en mode natif.|  
-|Opérateur|APPLY|Cet opérateur n'est pas pris en charge. Supprimez **APPLY** de la procédure stockée compilée en mode natif.<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, l’opérateur APPLY est pris en charge dans les modules compilés en mode natif.|  
+|Opérateur|APPLY|Cet opérateur n'est pas pris en charge. Supprimez **APPLY** de la procédure stockée compilée en mode natif.<br/><br/>**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, l’opérateur APPLY est pris en charge dans les modules compilés en mode natif.|  
 |Opérateur|PIVOT|Cet opérateur n'est pas pris en charge. Supprimez **PIVOT** de la procédure stockée compilée en mode natif.|  
 |Opérateur|UNPIVOT|Cet opérateur n'est pas pris en charge. Supprimez **UNPIVOT** de la procédure stockée compilée en mode natif.|  
 |Opérateur|CONTAINS|Cet opérateur n'est pas pris en charge. Supprimez **CONTAINS** de la procédure stockée compilée en mode natif.|  

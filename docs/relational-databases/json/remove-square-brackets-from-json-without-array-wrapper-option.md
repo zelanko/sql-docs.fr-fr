@@ -17,21 +17,21 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 36e612b6c3759d968687d8ba35286c399de02a74
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: bf0d7645df22c9a7540650e3c7f2ca2d0db8e1cc
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="remove-square-brackets-from-json---withoutarraywrapper-option"></a>Supprimer les crochets de JSON - Option WITHOUT_ARRAY_WRAPPER
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Pour supprimer les crochets qui entourent par défaut la sortie JSON de la clause **FOR JSON** , spécifiez l’option **WITHOUT_ARRAY_WRAPPER** . Utilisez cette option avec les résultats d’une ligne unique pour générer un seul objet JSON en tant que sortie plutôt qu’un tableau avec un seul élément.
+Pour supprimer les crochets qui entourent par défaut la sortie JSON de la clause **FOR JSON**, spécifiez l’option **WITHOUT_ARRAY_WRAPPER**. Utilisez cette option avec un résultat d’une seule ligne pour générer un seul objet JSON en tant que sortie au lieu d’un tableau avec un seul élément.
 
-Si vous utilisez cette option avec un résultat de plusieurs lignes, le résultat n’est pas un JSON valide en raison de plusieurs éléments et les crochets manquants.  
+Si vous utilisez cette option avec un résultat de plusieurs lignes, la sortie résultante n’est pas un JSON valide en raison de la présence de plusieurs éléments et de l’absence de crochets.  
   
-## <a name="example-single-row-result"></a>Exemple (résultats à ligne unique)  
+## <a name="example-single-row-result"></a>Exemple (résultat d’une seule ligne)  
 L’exemple suivant montre la sortie de la clause **FOR JSON** avec et sans l’option **WITHOUT_ARRAY_WRAPPER** .  
   
  **Requête**  
@@ -51,7 +51,7 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 } 
 ```  
   
- **Résultat** (par défaut) sans le **WITHOUT_ARRAY_WRAPPER** option  
+ **Résultat** (par défaut) sans l’option **WITHOUT_ARRAY_WRAPPER**  
   
 ```json  
 [{
@@ -61,8 +61,8 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 }]
 ```  
 
-## <a name="example-multiple-row-result"></a>Exemple (plusieurs lignes de résultat)
-Voici un autre exemple de clause **FOR JSON** avec et sans l’option **WITHOUT_ARRAY_WRAPPER** . Cet exemple produit un résultat de plusieurs lignes. La sortie n’est pas un JSON valide en raison de plusieurs éléments et les crochets manquants.
+## <a name="example-multiple-row-result"></a>Exemple (résultat de plusieurs lignes)
+Voici un autre exemple de clause **FOR JSON** avec et sans l’option **WITHOUT_ARRAY_WRAPPER** . Cet exemple produit un résultat de plusieurs lignes. La sortie n’est pas un JSON valide en raison de la présence de plusieurs éléments et de l’absence de crochets.
   
  **Requête**  
   
@@ -91,7 +91,7 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 } 
 ```  
   
- **Résultat** (par défaut) sans le **WITHOUT_ARRAY_WRAPPER** option  
+ **Résultat** (par défaut) sans l’option **WITHOUT_ARRAY_WRAPPER**  
   
 ```json  
 [{
@@ -109,8 +109,8 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 }]
 ```  
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>En savoir plus sur la fonction intégrée prise en charge de JSON dans SQL Server  
-Pour un grand nombre de solutions spécifiques, utilisez des cas et des recommandations, consultez le [billets de blog sur la prise en charge intégrée de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) dans SQL Server et dans la base de données SQL Azure par programme Jovan Popovic Gestionnaire Microsoft.
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>En savoir plus sur la prise en charge intégrée de JSON dans SQL Server  
+Pour accéder à un grand nombre de solutions spécifiques, de cas d’usage et de recommandations, consultez les [billets de blog sur la prise en charge intégrée de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) dans SQL Server et Azure SQL Database, écrits par Jovan Popovic (Microsoft Program Manager).
   
 ## <a name="see-also"></a>Voir aussi  
  [Clause FOR &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)  

@@ -23,17 +23,17 @@ caps.latest.revision: 26
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
 ms.openlocfilehash: f9fe99ddd630b8444819c94111f6a363e96105f5
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="polybase-guide"></a>Guide de PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  PolyBase est une technologie qui accède aux données en dehors de la base de données via le langage t-sql.  Dans SQL Server 2016, il vous permet d’exécuter des requêtes sur des données externes dans Hadoop ou à importer/exporter des données à partir du stockage d’objets Blob Azure. Les requêtes sont optimisées pour déléguer les calculs à Hadoop. Dans l’entrepôt de données SQL Azure, vous pouvez importation/exportation de données à partir du stockage d’objets Blob Azure et Azure Data Lake Store.
+  PolyBase est une technologie qui permet d’accéder aux données en dehors de la base de données via le langage t-sql.  Dans SQL Server 2016, elle vous permet d’exécuter des requêtes sur des données externes dans Hadoop, ou d’importer/exporter des données à partir de Stockage Blob Azure. Les requêtes sont optimisées pour déléguer les calculs à Hadoop. Dans Azure SQL Data Warehouse, vous pouvez importer/exporter des données depuis Stockage Blob Azure et Azure Data Lake Store.
   
   
  Pour utiliser PolyBase, consultez [Prise en main de PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
@@ -43,15 +43,15 @@ ms.lasthandoff: 06/23/2017
 ## <a name="why-use-polybase"></a>Pourquoi utiliser PolyBase ?  
 Pour prendre de bonnes décisions, il est nécessaire d’analyser des données relationnelles et d’autres données qui ne sont pas structurées dans des tables, telles que les données Hadoop. Il s’agit d’une tâche délicate si vous n’avez pas les moyens de transférer les données entre les différents types de magasins de données. PolyBase comble cette lacune en fonctionnant avec des données externes à SQL Server.  
   
-Pour plus de simplicité, PolyBase ne nécessite pas d’installer des logiciels supplémentaires à votre environnement Hadoop. La syntaxe utilisée pour interroger des données externes est la même que celle utilisée pour interroger une table de base de données. Cela s’effectue en toute transparence. PolyBase gère tous les détails de l’arrière-plan et aucune connaissance de Hadoop est requis par l’utilisateur final pour interroger des tables externes. 
+Pour plus de simplicité, PolyBase vous dispense d’installer des logiciels supplémentaires dans votre environnement Hadoop. La syntaxe utilisée pour interroger des données externes est la même que celle utilisée pour interroger une table de base de données. Cela s’effectue en toute transparence. PolyBase gère tous les détails en arrière-plan. Aucune connaissance de Hadoop n’est nécessaire à l’utilisateur final pour interroger des tables externes. 
   
  PolyBase offre les fonctionnalités suivantes :  
   
 -   **Interrogation des données stockées dans Hadoop à partir de SQL Server ou PDW.** Les utilisateurs stockent des données dans des systèmes distribués et évolutifs économiques, tels que Hadoop. Avec PolyBase, il est facile d’interroger les données via T-SQL.  
   
--   **Interrogation des données stockées dans le stockage d’objets Blob Azure.** Pratique, le service Stockage Blob Azure est un emplacement qui permet de stocker les données destinées à être utilisées par les services Azure.  PolyBase permet d’accéder facilement aux données à l’aide de T-SQL.  
+-   **Interrogation des données stockées dans Stockage Blob Azure.** Pratique, Azure Blob Storage est un emplacement qui permet de stocker les données destinées à être utilisées par les services Azure.  PolyBase permet d’accéder facilement aux données à l’aide de T-SQL.  
   
--   **Importer des données depuis Hadoop, stockage d’objets Blob Azure ou Azure Data Lake Store** tirer parti de la vitesse de fonctionnalités d’analyse et de la technologie columnstore de Microsoft SQL en important des données dans des tables relationnelles Hadoop, stockage d’objets Blob Azure ou Azure Data Lake Store. Vous n’avez pas besoin d’un outil ETL ou d’importation distinct.  
+-   **Importation des données depuis Hadoop, Stockage Blob Azure ou Azure Data Lake Store.** Profitez de la rapidité des fonctionnalités d’analyse et de la technologie columnstore de Microsoft SQL en important les données de Hadoop, de Stockage Blob Azure ou d’Azure Data Lake Store dans des tables relationnelles. Vous n’avez pas besoin d’un outil ETL ou d’importation distinct.  
 
 -   **Exportation de données vers Hadoop, Stockage Blob Azure ou Azure Data Lake Store.** Archivez les données sur Hadoop, Stockage Blob Azure ou Azure Data Lake Store. Vous bénéficierez ainsi d’un mode de stockage économique et vos données resteront en ligne et donc facilement accessibles.  
   
@@ -69,7 +69,7 @@ Pour plus de simplicité, PolyBase ne nécessite pas d’installer des logiciels
 |||  
 |-|-|  
 |**Rubrique**|**Description**|  
-|[Prise en main de PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)|Étapes de base pour installer et configurer PolyBase. Cette rubrique vous montre comment créer des objets externes qui pointent vers des données stockées dans Hadoop ou Stockage Blob Azure, et propose des exemples de requêtes.|  
+|[Prise en main de PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)|Étapes de base pour installer et configurer PolyBase. Cette rubrique vous montre comment créer des objets externes qui pointent vers des données stockées dans Hadoop ou Azure Blob Storage, et propose des exemples de requêtes.|  
 |[Récapitulatif des fonctionnalités avec version de PolyBase](../../relational-databases/polybase/polybase-versioned-feature-summary.md)|Décrit les fonctionnalités de PolyBase qui sont prises en charge par SQL Server, Base de données SQL et SQL Data Warehouse.|  
 |[groupes de scale-out PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md)|Faites monter en puissance le parallélisme entre SQL Server et Hadoop au moyen de groupes de scale-out SQL Server.|  
 |[Installation de PolyBase](../../relational-databases/polybase/polybase-installation.md)|Informations de référence et étapes à suivre pour installer PolyBase avec l’Assistant Installation ou un outil en ligne de commande.|  

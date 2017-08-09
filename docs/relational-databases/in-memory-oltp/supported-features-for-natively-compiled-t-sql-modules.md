@@ -14,11 +14,11 @@ caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
 ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Fonctionnalités prises en charge pour les modules T-SQL compilés en mode natif
@@ -51,29 +51,29 @@ ms.lasthandoff: 06/23/2017
 
 Les constructions de requête suivantes sont prises en charge :  
 
-Expression CASE : CASE peut être utilisé dans toute instruction ou clause qui autorise une expression valide.
-   - **S’applique à :** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
-    À partir de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], les instructions CASE sont désormais pris en charge pour les modules T-SQL compilés en mode natif.
+Expression CASE : CASE peut être utilisé dans n’importe quelle instruction ou clause qui autorise une expression valide.
+   - **S’applique à :** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+    Depuis [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], les instructions CASE sont désormais prises en charge pour les modules T-SQL compilés en mode natif.
 
 Clause SELECT :  
 
 -   Alias de colonnes et de noms (en utilisant la syntaxe AS ou =).  
 
 -   Sous-requêtes scalaires
-    - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      À partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], sous-requêtes scalaires sont désormais pris en charge dans les modules compilés en mode natif.
+    - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Depuis [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], les sous-requêtes scalaires sont désormais prises en charge dans les modules compilés en mode natif.
 
 -   TOP*  
 
 -   SELECT DISTINCT  
-    - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      À partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], l’opérateur DISTINCT est pris en charge dans les modules compilés en mode natif.
+    - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Depuis [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], l’opérateur DISTINCT est pris en charge dans les modules compilés en mode natif.
 
               DISTINCT aggregates are not supported.  
 
 -   UNION et UNION ALL
-    - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      À partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], les opérateurs UNION et UNION ALL sont désormais pris en charge dans les modules compilés en mode natif.
+    - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Depuis [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], les opérateurs UNION et UNION ALL sont désormais pris en charge dans les modules compilés en mode natif.
 
 -   Affectations variables  
 
@@ -84,21 +84,21 @@ Clause FROM :
 -   FROM \<TVF inline compilé en mode natif>  
 
 -   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN et INNER JOIN.
-    - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      À partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], les jointures sont désormais pris en charge dans les modules compilés en mode natif.
+    - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Depuis [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], les jointures sont désormais prises en charge dans les modules compilés en mode natif.
 
 -   Sous-requêtes `[AS] table_alias`. Pour plus d’informations, consultez [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md). 
-    - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      À partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], les sous-requêtes sont désormais pris en charge dans les modules compilés en mode natif.
+    - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Depuis [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], les sous-requêtes sont désormais prises en charge dans les modules compilés en mode natif.
 
-Clause WHERE :  
+Clause WHERE :  
 
 -   Prédicat de filtre IS [NOT] NULL  
 
--   AINSI, ENTRE  
--   OR, PAS, DANS, IL EXISTE
-    - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      À partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], les opérateurs OR/NOT/IN/EXISTS sont désormais pris en charge dans les modules compilés en mode natif.
+-   AND, BETWEEN  
+-   OR, NOT, IN, EXISTS
+    - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Depuis [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], les opérateurs OR/NOT/IN/EXISTS sont désormais pris en charge dans les modules compilés en mode natif.
 
 
 Clause[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) :
@@ -194,7 +194,7 @@ Les instructions DML suivantes sont prises en charge.
 -   Opérateurs au niveau du bit ~, &, |, et ^  
 
 -   APPLY (opérateur)
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, l’opérateur APPLY est pris en charge dans les modules compilés en mode natif.
 
 ##  <a name="bfncsp"></a> Fonctions intégrées dans les modules compilés en mode natif  
@@ -205,7 +205,7 @@ Les instructions DML suivantes sont prises en charge.
 -   Fonctions de date : CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME et YEAR.  
 
 -   Fonctions de chaîne : LEN, LTRIM, RTRIM et SUBSTRING.  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       À compter de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, les fonctions intégrées suivantes sont également prises en charge : TRIM, TRANSLATE et CONCAT_WS.  
 
 -   Fonction d’identité : SCOPE_IDENTITY  
@@ -215,7 +215,7 @@ Les instructions DML suivantes sont prises en charge.
 -   Fonctions Uniqueidentifier : NEWID et NEWSEQUENTIALID  
 
 -   Fonctions JSON  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, les fonctions JSON sont prises en charge dans les modules compilés en mode natif.
 
 -   Fonctions d’erreur : ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY et ERROR_STATE  
@@ -253,7 +253,7 @@ Les instructions DML suivantes sont prises en charge.
 
  Si vous n'utilisez pas de clause ORDER BY, utilisez une valeur entière avec l'opérateur TOP.  
 
- Exemple avec TOP N = 8192 : Compiles  
+ Exemple avec TOP N = 8192 : Compiles  
 
 ```tsql  
 CREATE PROCEDURE testTop  
@@ -266,7 +266,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- Exemple avec TOP N > 8192 : Fails to compile.  
+ Exemple avec TOP N > 8192 : Fails to compile.  
 
 ```tsql  
 CREATE PROCEDURE testTop  
@@ -279,7 +279,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- La limitation de 8192 lignes s'applique uniquement à `TOP N` où `N` est une constante, comme dans les exemples précédents.  Si `N` doit être supérieur à 8192, vous pouvez affecter la valeur à une variable et utiliser cette variable avec `TOP`.  
+ La limitation de 8192 lignes s'applique uniquement à `TOP N` où `N` est une constante, comme dans les exemples précédents.  Si `N` doit être supérieur à 8192, vous pouvez affecter la valeur à une variable et utiliser cette variable avec `TOP`.  
 
  Exemple à l'aide d'une variable : Compiles  
 

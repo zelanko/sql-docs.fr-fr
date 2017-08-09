@@ -19,18 +19,18 @@ ms.translationtype: HT
 ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
 ms.openlocfilehash: 519fbd2bc596112dbb1c662d76e4aeeb230ffc36
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="new-and-recently-updated-relational-databases-docs"></a>Contenu nouveau et récemment mis à jour : documentation des bases de données relationnelles
 
 
 
-Presque tous les jours, Microsoft met à jour certains de ses articles sur son site web de documentation [Docs.Microsoft.com](http://docs.microsoft.com/). Cet article affiche des extraits d’articles récemment mis à jour. Des liens vers nouveaux articles peuvent également être répertoriés.
+Presque tous les jours, Microsoft met à jour certains de ses articles sur son site web de documentation [Docs.Microsoft.com](http://docs.microsoft.com/). Cet article contient des extraits d’articles récemment mis à jour. Des liens vers de nouveaux articles peuvent également être répertoriés.
 
-Cet article est généré par un programme est exécuté à nouveau régulièrement. Parfois un extrait peut apparaître avec mise en forme imparfait, ou en tant que markdown de l’article de la source. Les images ne sont jamais affichés ici.
+Cet article est généré par un programme qui est réexécuté régulièrement. Un extrait peut parfois apparaître avec une mise en forme imparfaite ou au format Markdown de l’article source. Les images ne sont jamais affichées ici.
 
-Mises à jour récentes sont signalés pour la plage de dates suivante et l’objet :
+Les mises à jour récentes sont signalées pour la plage de dates et le sujet suivants :
 
 
 
@@ -63,7 +63,7 @@ Les liens suivants renvoient aux nouveaux articles ajoutés récemment.
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>Liste compacte d’Articles récemment mis à jour
+## <a name="compact-list-of-articles-updated-recently"></a>Liste compacte d’articles mis à jour récemment
 
 Cette liste compacte fournit des liens vers tous les articles mis à jour qui sont répertoriés dans la section des extraits.
 
@@ -75,9 +75,9 @@ Cette liste compacte fournit des liens vers tous les articles mis à jour qui so
 
 Cette section affiche les extraits de mises à jour collectées à partir des articles qui ont récemment subi une mise à jour importante.
 
-Les extraits affichés ici apparaissent séparés à partir de leur contexte sémantique spécifique. En outre, parfois un extrait est séparé à partir de la syntaxe markdown important qui l’entoure dans l’article. Par conséquent, ces extraits sont pour des conseils généraux. Les extraits permettent uniquement de savoir si votre intérêt justifie pris le temps de cliquer sur et consultez l’article.
+Les extraits affichés ici apparaissent séparés de leur contexte sémantique propre. Un extrait est parfois séparé de la syntaxe Markdown importante qui l’entoure dans l’article. Ces extraits sont donc donnés à titre indicatif uniquement. Les extraits vous permettent seulement de savoir si les articles correspondants vont vous intéresser et si oui, de cliquer dessus pour les consulter.
 
-Pour celles-ci et d’autres raisons, ne pas copier le code à partir de ces extraits et ne prennent pas en tant que vérité exacte tout extrait de texte. Au lieu de cela, consultez l’article.
+Pour cela et pour d’autres raisons, ne copiez pas le code de ces extraits et ne prenez pas à la lettre les extraits de texte. Au lieu de cela, consultez l’article.
 
 
 
@@ -102,11 +102,11 @@ Pour celles-ci et d’autres raisons, ne pas copier le code à partir de ces ext
 
 **Journalisation d’ALTER TABLE sur des tables à mémoire optimisée**
 
-Sur une table à mémoire optimisée, la plupart des scénarios ALTER TABLE s’exécutent désormais en parallèle, d’où une optimisation des écritures dans le journal des transactions. L’optimisation est obtenue par la journalisation des seules modifications de métadonnées dans le journal des transactions. Cependant, les opérations ALTER TABLE suivantes sont effectuées en mode à thread unique et ne sont pas optimisées pour la journalisation.
+Sur une table optimisée en mémoire, la plupart des scénarios ALTER TABLE s’exécutent désormais en parallèle, d’où une optimisation des écritures dans le journal des transactions. L’optimisation est obtenue par la journalisation des seules modifications de métadonnées dans le journal des transactions. Cependant, les opérations ALTER TABLE suivantes sont effectuées en mode à thread unique et ne sont pas optimisées pour la journalisation.
 
-L’opération monothread dans ce cas consigne dans le journal des transactions l’intégralité du contenu de la table modifiée. Voici la liste des opérations à thread unique :
+L’opération monothread dans ce cas consigne dans le journal des transactions l’intégralité du contenu de la table modifiée. Voici la liste des opérations à thread unique :
 
-- Modifier ou ajouter une colonne pour utiliser un type d’objet volumineux (LOB) : nvarchar(max), varchar(max) ou varbinary(max).
+- Modifier ou ajouter une colonne pour utiliser un type d’objet volumineux (LOB) : nvarchar(max), varchar(max) ou varbinary(max).
 
 - Ajouter ou supprimer un index COLUMNSTORE.
 
@@ -149,9 +149,9 @@ L’opération monothread dans ce cas consigne dans le journal des transactions 
   
  Le calcul de la [taille du corps de ligne] est expliqué dans le tableau suivant.  
   
- Il existe deux calculs différents pour la taille du corps de ligne : la taille calculée et la taille réelle :  
+ Il existe deux calculs différents pour la taille du corps de ligne : la taille calculée et la taille réelle :  
   
--   La taille calculée, indiquée par [taille calculée du corps de ligne], est utilisée pour déterminer si la limite de taille de ligne de 8 060 octets est dépassée.  
+-   La taille calculée, indiquée par [taille calculée du corps de ligne], est utilisée pour déterminer si la limite de taille de ligne de 8 060 octets est dépassée.  
   
 -   La taille réelle, indiquée par [taille réelle du corps de ligne], est la taille de stockage réelle du corps de ligne en mémoire et dans les fichiers de point de contrôle.  
   
@@ -197,7 +197,7 @@ Voici quelques-uns des scénarios de performance courants rencontrés après la 
 
 Quand vous migrez d’une version antérieure de [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] vers [!INCLUDE[ssSQL14--../includes/sssql14-md.md)] ou une version plus récente, et que vous mettez à jour le [niveau de compatibilité de base de données--../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) vers le plus récent, une charge de travail peut être exposée à un risque de régression des performances.
 
-Cela vient du fait qu’à compter de [!INCLUDE[ssSQL14--../includes/sssql14-md.md)], tous les changements de l’optimiseur de requête sont liés au [niveau de compatibilité de base de données--../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) le plus récent, de sorte que les plans ne sont pas changés au moment même de la mise à niveau, mais quand un utilisateur remplace l’option de base de données `COMPATIBILITY_LEVEL` par la plus récente. Cette fonctionnalité, en association avec le Magasin des requêtes, vous offre un niveau de contrôle élevé sur les performances des requêtes dans le processus de mise à niveau. 
+Cela vient du fait qu’à compter de [!INCLUDE[ssSQL14--../includes/sssql14-md.md)], tous les changements de l’optimiseur de requête sont liés au [niveau de compatibilité de base de données--../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) le plus récent, de sorte que les plans ne sont pas changés au moment même de la mise à niveau, mais quand un utilisateur remplace l’option de base de données `COMPATIBILITY_LEVEL` par la plus récente. Cette fonctionnalité, en association avec le magasin de requêtes, vous offre un niveau de contrôle élevé sur les performances des requêtes dans le processus de mise à niveau. 
 
 Pour plus d’informations sur les changements apportés à l’optimiseur de requête dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], consultez [Optimisation de vos plans de requête avec l’estimateur de cardinalité SQL Server 2014](http://msdn.microsoft.com/library/dn673537.aspx).
 
@@ -214,7 +214,7 @@ Pour plus d’informations sur les changements apportés à l’optimiseur de re
 
 ### <a name="4-nbsp-sysquerystoreplan-transact-sqlsystem-catalog-viewssys-query-store-plan-transact-sqlmd"></a>4. &nbsp; [sys.query_store_plan (Transact-SQL)](system-catalog-views/sys-query-store-plan-transact-sql.md)
 
-*Mise à jour : 05-06-2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Précédent](#TitleNum_3))
+*Mise à jour : 05-06-2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Précédent](#TitleNum_3))
 
 <!-- Source markdown line 58.  ms.author= "rickbyh".  -->
 
@@ -257,11 +257,11 @@ Enfin, s’il y a des problèmes avec le plan lui-même :
 
 ## <a name="similar-articles"></a>Articles similaires
 
-Cette section liste les articles très similaires récemment mis à jour dans d’autres zones de sujet, dans le même dépôt GitHub.com : [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
+Cette section liste les articles très similaires récemment mis à jour dans d’autres domaines, dans le même dépôt GitHub.com : [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
 
 <!--  20170717-1101  -->
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Zones de sujet avec des articles nouveaux ou mis à jour récemment
+#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Domaines avec des articles nouveaux ou mis à jour récemment
 
 - [Nouveaux + Mis à jour (4 + 4) : **Analyse avancée pour SQL** (documentation)](../advanced-analytics/new-updated-advanced-analytics.md)
 - [Nouveaux + Mis à jour (2 + 0) : **Analysis Services pour SQL** (documentation)](../analysis-services/new-updated-analysis-services.md)
@@ -277,7 +277,7 @@ Cette section liste les articles très similaires récemment mis à jour dans d�
 - [Nouveaux + Mis à jour (1 + 0) : **Outils pour SQL** (documentation)](../tools/new-updated-tools.md)
 
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Zones de sujet sans article nouveau ou mis à jour récemment
+#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Domaines sans article nouveau ou mis à jour récemment
 
 - [Nouveaux + Mis à jour (0 + 0) : **ActiveX Data Objects (ADO) pour SQL** (documentation)](../ado/new-updated-ado.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Data Quality Services pour SQL** (documentation)](../data-quality-services/new-updated-data-quality-services.md)

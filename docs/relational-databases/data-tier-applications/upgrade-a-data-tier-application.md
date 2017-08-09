@@ -28,19 +28,19 @@ caps.latest.revision: 35
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
 ms.openlocfilehash: 2a55f2852f3146cd20ace9448040c1f96d328f07
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="upgrade-a-data-tier-application"></a>Mettre à niveau une application de la couche Données
   Utilisez l'Assistant Mise à niveau de l'application de la couche Données ou bien un script Windows PowerShell pour modifier le schéma et les propriétés d'une application de la couche Données (DAC) actuellement déployée pour qu'ils correspondent à ceux définis dans la nouvelle version de la DAC.  
   
--   **Before you begin:**  [Choosing DAC Upgrade Options](#ChoseDACUpgOptions), [Limitations and Restrictions](#LimitationsRestrictions), [Prerequisites](#Prerequisites), [Security](#Security), [Permissions](#Permissions)  
+-   **Avant de commencer :**  [Choix des options de mise à niveau de la DAC](#ChoseDACUpgOptions), [Limitations et restrictions](#LimitationsRestrictions), [Conditions préalables](#Prerequisites), [Sécurité](#Security), [Autorisations](#Permissions)  
   
--   **To upgrade a DAC, using:**  [The Upgrade Data-tier Application Wizard](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
+-   **Pour mettre à niveau une DAC en utilisant :**  [L’Assistant Mise à niveau de l’application de la couche Données](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  La mise à niveau d'une DAC est un processus sur place qui modifie le schéma de la base de données existante de manière à ce qu'il corresponde au schéma défini dans une nouvelle version de la DAC. La nouvelle version de la DAC est fournie dans un fichier de package DAC. Pour plus d’informations sur la création d’un package DAC, consultez [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md).  
@@ -251,7 +251,7 @@ ms.lasthandoff: 06/23/2017
 7.  Fermez le flux de fichier utilisé pour lire le fichier de package DAC.  
   
 ### <a name="example-powershell"></a>Exemple (PowerShell)  
- L’exemple suivant met à niveau une DAC nommée MyApplication sur une instance par défaut de la [!INCLUDE[ssDE](../../includes/ssde-md.md)], à l’aide d’une nouvelle version DAC dans un package MyApplication2017.dacpac.  
+ L’exemple suivant met à niveau une application DAC nommée MyApplication sur une instance par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)] en utilisant une nouvelle version de DAC dans un package MyApplication2017.dacpac.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  

@@ -17,16 +17,16 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
 ms.openlocfilehash: 7eb8ea4b29caaf7f1600bbd31db4f669b86476c1
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Retour de données à partir d'une procédure stockée
 
- > Pour obtenir un contenu pour les versions précédentes de SQL Server, consultez [renvoyer les données à partir d’une procédure stockée](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx).
+ > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Retour de données à partir d’une procédure stockée](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx).
 
   Il existe deux méthodes permettant de retourner des jeux de résultats ou des données d'une procédure vers un programme appelant : les paramètres de sortie et les codes de retour. Cette rubrique fournit des informations sur ces deux approches.  
   

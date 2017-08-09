@@ -14,11 +14,11 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
 ms.openlocfilehash: ee8d16f8999f2e3e39d90086993c9a46a30ac21a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>Types de données pris en charge pour l’OLTP en mémoire
@@ -90,8 +90,8 @@ SELECT
   
 ## <a name="see-also"></a>Voir aussi  
  [Prise en charge d'OLTP en mémoire par Transact-SQL](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
- [Implémentation de SQL_VARIANT dans une table optimisée en mémoire](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
- [Taille de la table et des lignes dans les tables optimisées en mémoire](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
+ [Implémentation de SQL_VARIANT dans un tableau mémoire optimisé](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
+ [Taille de la table et des lignes dans une table à mémoire optimisée](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
 

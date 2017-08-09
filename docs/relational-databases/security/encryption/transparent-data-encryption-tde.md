@@ -23,17 +23,17 @@ caps.latest.revision: 75
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
 ms.openlocfilehash: dc40b37eeab532f4143350800154fb34af6d4ea0
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="transparent-data-encryption-tde"></a>Chiffrement transparent des données (TDE)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
- > Pour obtenir un contenu pour les versions précédentes de SQL Server, consultez [Transparent Data Encryption (TDE)](https://msdn.microsoft.com/en-US/library/bb934049(SQL.120).aspx).
+ > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Transparent Data Encryption (TDE)](https://msdn.microsoft.com/en-US/library/bb934049(SQL.120).aspx).
 
   Le*chiffrement transparent des données* (TDE) chiffre les fichiers de données de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]et [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)] (processus appelé chiffrement des données au repos). Vous pouvez prendre plusieurs précautions pour mieux sécuriser la base de données comme par exemple concevoir un système sécurisé, chiffrer les ressources confidentielles et créer un pare-feu autour des serveurs de base de données. Toutefois, dans un scénario où le support physique (tel que des lecteurs ou des bandes de sauvegarde) est dérobé, une personne malveillante peut simplement restaurer ou attacher la base de données et parcourir les données. Une solution consiste à chiffrer les données sensibles dans la base de données et à protéger les clés utilisées pour chiffrer les données avec un certificat. Cela empêche toute personne qui ne dispose pas des clés d'utiliser les données, mais ce type de protection doit être planifié à l'avance.  
   

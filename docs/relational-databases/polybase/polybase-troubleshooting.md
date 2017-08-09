@@ -1,5 +1,5 @@
 ---
-title: "Résolution des problèmes de PolyBase | Microsoft Docs"
+title: "Résolution des problèmes de PolyBase | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 10/25/2016
@@ -24,10 +24,10 @@ ms.translationtype: HT
 ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
 ms.openlocfilehash: e65ea926f3a2d2fb3c30c511a1fbba6150de7b42
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="polybase-troubleshooting"></a>Résolution des problèmes de PolyBase
+# <a name="polybase-troubleshooting"></a>Résolution des problèmes de Polybase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Pour résoudre les problèmes de PolyBase, utilisez les techniques indiquées dans cette rubrique.  
@@ -52,9 +52,9 @@ ms.lasthandoff: 07/20/2017
 |[sys.dm_exec_dms_services &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-services-transact-sql.md)|[sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |[sys.dm_exec_external_operations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-operations-transact-sql.md)|[sys.dm_exec_external_work &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md)|  
   
-  Les requêtes PolyBase sont divisées en une série d’étapes dans sys.dm_exec_distributed_request_steps. Le tableau suivant fournit un mappage du nom de l’étape jusqu’à la vue de gestion dynamique associée.
+  Les requêtes PolyBase se décomposent en une série d’étapes dans sys.dm_exec_distributed_request_steps. Le tableau suivant fournit un mappage du nom de l’étape à la vue DMV associée.
   
- |Étape PolyBase|Vue de gestion dynamique associée|  
+ |Étape PolyBase|Vue DMV associée|  
  |-|-| 
  |HadoopJobOperation | sys.dm_exec_external_operations|
  |RandomIdOperation | sys.dm_exec_distributed_request_steps|
@@ -226,8 +226,8 @@ ms.lasthandoff: 07/20/2017
  PolyBase présente les limitations suivantes : 
  - La taille de ligne maximale, notamment la longueur totale des colonnes à longueur variable, ne peut pas dépasser 1 Mo. 
  - PolyBase ne prend pas en charge les types de données Hive 0.12+ (c’est-à-dire Char(), VarChar()).   
- - Lors de l’exportation de données dans un format de fichier ORC à partir de SQL Server ou Azure SQL Data Warehouse, le nombre de colonnes chargées en texte peut être limité à seulement 50, en raison d’erreurs d’insuffisance de mémoire Java. Pour contourner ce problème, exportez uniquement un sous-ensemble de colonnes.
-- [PolyBase ne s’installe pas quand vous ajoutez un nœud à un cluster de basculement SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
+ - Durant l’exportation de données dans un format de fichier ORC à partir de SQL Server ou Azure SQL Data Warehouse, le nombre de colonnes de texte lourdes peut être limité à seulement 50, en raison d’erreurs de mémoire insuffisante Java. Pour contourner ce problème, exportez uniquement une partie des colonnes.
+- [PolyBase ne s’installe pas quand vous ajoutez un nœud à un cluster de basculement SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
   
 ## <a name="error-messages-and-possible-solutions"></a>Messages d’erreur et solutions possibles
 

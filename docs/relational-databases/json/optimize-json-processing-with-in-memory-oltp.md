@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
-ms.openlocfilehash: a0118939a71b06d7c3258efdfbe291a910358c37
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: bb35a5255b35b93cd42e83bd17d9efdcf751bc84
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>Optimiser le traitement JSON avec OLTP en mémoire
@@ -45,13 +45,13 @@ CREATE TABLE xtp.Product(
 
 ## <a name="optimize-json-processing-with-additional-in-memory-features"></a>Optimiser le traitement JSON avec des fonctionnalités en mémoire supplémentaires
 Les fonctionnalités disponibles dans SQL Server et Azure SQL Database vous permettent d’intégrer les fonctionnalités JSON avec les technologies OLTP en mémoire existantes. Vous pouvez par exemple effectuer les opérations suivantes :
- - [valider la structure des documents JSON](#validate) stockés dans des tables à mémoire optimisée à l’aide des contraintes CHECK compilées en mode natif ;
- - [exposer et typer fortement les valeurs](#computedcol) stockées dans les documents JSON à l’aide de colonnes calculées ;
- - [indexer les valeurs](#index) des documents JSON à l’aide d’index à mémoire optimisée ;
- - [compiler en mode natif les requêtes SQL](#compile) qui utilisent des valeurs de documents JSON ou mettent en forme les résultats au format de texte JSON.
+ - [Valider la structure des documents JSON](#validate) stockés dans des tables à mémoire optimisée à l’aide des contraintes CHECK compilées en mode natif.
+ - [Exposer et typer fortement les valeurs](#computedcol) stockées dans les documents JSON à l’aide de colonnes calculées.
+ - [Indexer les valeurs](#index) des documents JSON à l’aide d’index à mémoire optimisée.
+ - [Compiler en mode natif les requêtes SQL](#compile) qui utilisent des valeurs de documents JSON ou mettent en forme les résultats au format de texte JSON.
 
 ## <a name="validate"></a> Valider des colonnes JSON
-SQL Server et Azure SQL Database vous permettent d’ajouter des contraintes CHECK compilées en mode natif qui valident le contenu de documents JSON stockés dans une colonne de chaîne. Avec les contraintes JSON CHECK compilées en mode natif, vous pouvez faire en sorte que le texte JSON stocké dans vos tables optimisées en mémoire soit correctement mis en forme.
+SQL Server et Azure SQL Database vous permettent d’ajouter des contraintes CHECK compilées en mode natif qui valident le contenu de documents JSON stockés dans une colonne de chaîne. Avec les contraintes JSON CHECK compilées en mode natif, vous pouvez faire en sorte que le texte JSON stocké dans vos tables à mémoire optimisée soit correctement mis en forme.
 
 L’exemple suivant crée une table `Product` avec une colonne JSON `Tags`. La colonne `Tags` a une contrainte CHECK qui utilise la fonction `ISJSON` pour valider le texte JSON dans la colonne.
 
@@ -86,7 +86,7 @@ L’exemple suivant montre comment exposer les deux valeurs suivantes à partir 
 -   Le pays où un produit est fabriqué.
 -   Le coût de fabrication du produit.
 
-Dans cet exemple, les colonnes calculées `MadeIn` et `Cost` sont mises à jour chaque fois que le document JSON stocké dans la colonne `Data` est modifié.
+Dans cet exemple, les colonnes calculées `MadeIn` et `Cost` sont mises à jour chaque fois que le document JSON stocké dans la colonne `Data` est changé.
 
 ```sql
 DROP TABLE IF EXISTS xtp.Product;
@@ -136,7 +136,7 @@ ALTER TABLE Product
 ```
 
 ## <a name="compile"></a> Compilation native des requêtes JSON
-Si vos procédures, fonctions et déclencheurs contiennent des requêtes qui utilisent les fonctions JSON intégrées, la compilation native améliore les performances de ces requêtes et réduit les cycles processeur requis pour les exécuter.
+Si vos procédures, fonctions et déclencheurs contiennent des requêtes qui utilisent les fonctions JSON intégrées, la compilation native améliore les performances de ces requêtes et réduit les cycles processeur nécessaires pour les exécuter.
 
 L’exemple suivant montre une procédure compilée en mode natif qui utilise plusieurs fonctions JSON : **JSON_VALUE**, **OPENJSON** et **JSON_MODIFY**.
 
@@ -165,6 +165,6 @@ AS BEGIN
 END
 ```
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>En savoir plus sur la fonction intégrée prise en charge de JSON dans SQL Server  
-Pour un grand nombre de solutions spécifiques, utilisez des cas et des recommandations, consultez le [billets de blog sur la prise en charge intégrée de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) dans SQL Server et dans la base de données SQL Azure par programme Jovan Popovic Gestionnaire Microsoft.
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>En savoir plus sur la prise en charge intégrée de JSON dans SQL Server  
+Pour accéder à un grand nombre de solutions spécifiques, de cas d’usage et de recommandations, consultez les [billets de blog sur la prise en charge intégrée de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) dans SQL Server et Azure SQL Database, écrits par Jovan Popovic (Microsoft Program Manager).
 

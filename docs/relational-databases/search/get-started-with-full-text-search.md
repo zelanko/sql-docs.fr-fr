@@ -22,17 +22,13 @@ ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: cb839fc8929f20c0ac7ca72dc90f364382bc33d0
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/12/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="get-started-with-full-text-search" class="xliff"></a>
-
-# Commencer à utiliser la recherche en texte intégral
+# <a name="get-started-with-full-text-search"></a>Commencer à utiliser la recherche en texte intégral
 Par défaut, les bases de données SQL Server prennent en charge le texte intégral. Cependant, avant de pouvoir exécuter des requêtes de texte intégral, vous devez créer un catalogue en texte intégral, puis créer un index en texte intégral sur les tables ou les vues indexées dans lesquelles vous souhaitez effectuer votre recherche.
 
-<a id="set-up-full-text-search-in-two-steps" class="xliff"></a>
-
-## Configurer la recherche en texte intégral en deux étapes
+## <a name="set-up-full-text-search-in-two-steps"></a>Configurer la recherche en texte intégral en deux étapes
 La configuration de la recherche en texte intégral s’effectue en deux étapes :  
 1.  Création d'un catalogue de texte intégral.  
 2.  Créez un index de texte intégral sur les tables ou les vues indexées dans lesquelles vous souhaitez effectuer votre recherche. 
@@ -42,15 +38,11 @@ Chaque index de recherche en texte intégral doit appartenir à un catalogue de 
 > [!NOTE]
 > Ces étapes supposent que les composants facultatifs de la recherche en texte intégral ont été installés lors de l’installation de SQL Server. Si ce n’est pas le cas, vous devez exécuter de nouveau le programme d’installation de SQL Server pour les ajouter.  
 
-<a id="set-up-full-text-search-with-a-wizard" class="xliff"></a>
-
-## Configurer la recherche en texte intégral à l’aide d’un Assistant 
+## <a name="set-up-full-text-search-with-a-wizard"></a>Configurer la recherche en texte intégral à l’aide d’un Assistant 
  
 Pour configurer la recherche en texte intégral par le biais d’un Assistant, consultez [Utiliser l’Assistant Indexation de texte intégral](../../relational-databases/search/use-the-full-text-indexing-wizard.md).
 
-<a id="set-up-full-text-search-with-transact-sql" class="xliff"></a>
-
-## Configurer la recherche en texte intégral avec Transact-SQL 
+## <a name="set-up-full-text-search-with-transact-sql"></a>Configurer la recherche en texte intégral avec Transact-SQL 
  L’exemple en deux parties ci-dessous crée d’abord un catalogue de texte intégral nommé `AdvWksDocFTCat` sur l’exemple de base de données AdventureWorks, puis crée un index de recherche en texte intégral sur la table `Document` dans cette même base de données. Cette instruction permet de créer le catalogue de texte intégral dans le répertoire par défaut qui est spécifié durant l’installation de SQL Server. Le dossier nommé `AdvWksDocFTCat` se trouve dans le répertoire par défaut.  
   
 1.  Pour créer un catalogue de texte intégral nommé `AdvWksDocFTCat`, l’exemple utilise une instruction [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md) :  
@@ -89,19 +81,13 @@ Pour configurer la recherche en texte intégral par le biais d’un Assistant, c
 
 ##  <a name="options"></a>Choisir des options pour un index de recherche en texte intégral 
   
-<a id="choose-a-language" class="xliff"></a>
-
-### Choisir une langue  
+### <a name="choose-a-language"></a>Choisir une langue  
  Pour plus d’informations sur la sélection du langage de colonne, consultez la section [Choisir une langue lors de la création d’un index de recherche en texte intégral](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  
   
-<a id="choose-a-filegroup" class="xliff"></a>
-
-### Choisir un groupe de fichiers  
+### <a name="choose-a-filegroup"></a>Choisir un groupe de fichiers  
  Le processus de création d’un index de recherche en texte intégral est plutôt gourmand en e/s. En résumé, il consiste à lire des données à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puis à propager les données filtrées dans l’index de recherche en texte intégral. Comme meilleure pratique recommandée, localisez un index de recherche en texte intégral dans le groupe de fichiers de base de données qui convient le mieux pour optimiser les performances d'E/S ou localisez les index de recherche en texte intégral dans un groupe de fichiers différent sur un autre volume.
   
-<a id="choose-a-full-text-catalog" class="xliff"></a>
-
-### Choisir un catalogue de texte intégral   
+### <a name="choose-a-full-text-catalog"></a>Choisir un catalogue de texte intégral   
  
  Nous vous recommandons d'associer les tables ayant les mêmes caractéristiques de mise à jour (par exemple avec peu de modifications ou, au contraire, beaucoup de modifications, ou les tables fréquemment modifiées à un moment donné de la journée) dans le même catalogue de texte intégral. Cette manière de configurer la planification du remplissage du catalogue de texte intégral permet d'assurer la synchronisation perpétuelle des index de texte intégral et des tables, sans nuire à l'utilisation des ressources du serveur de base de données pendant les périodes de forte activité.  
   
@@ -111,14 +97,10 @@ Pour configurer la recherche en texte intégral par le biais d’un Assistant, c
   
 -   Prenez en compte la quantité de modifications apparaissant dans les tables soumises à l’indexation de texte intégral ainsi que le nombre total de lignes concernées dans ces tables. Si le nombre total de lignes modifiées, auquel s’ajoute le nombre de lignes de table présentes au cours du dernier remplissage de texte intégral, s’élève à plusieurs millions, affectez la table à un catalogue de texte intégral qui lui est propre.  
 
-<a id="associate-a-unique-index" class="xliff"></a>
-
-### Associer un index unique
+### <a name="associate-a-unique-index"></a>Associer un index unique
 Sélectionnez systématiquement le plus petit index unique disponible comme clé unique de texte intégral Il s'agira idéalement d'un index de quatre octets, basé sur des entiers. Cela réduit considérablement la quantité de ressources requise par la service Recherche de [!INCLUDE[msCoName](../../includes/msconame-md.md)] dans le système de fichiers. Si la clé primaire est volumineuse (plus de 100 octets), pensez à choisir un autre index unique pour la table (ou créez-le) comme clé unique de texte intégral. Dans le cas contraire, si la taille de la clé unique de texte intégral dépasse la taille maximale autorisée (900 octets), le remplissage de texte intégral est impossible.  
  
-<a id="associate-a-stoplist" class="xliff"></a>
-
-### Associer une liste de mots vides   
+### <a name="associate-a-stoplist"></a>Associer une liste de mots vides   
   Une *liste de mots vides* est une liste contenant des mots vides, également appelés mots parasites. Une liste de mots vides est associée à chaque index de recherche en texte intégral, et les mots contenus dans cette liste de mots vides s'appliquent aux requêtes de texte intégral sur cet index. Par défaut, la liste de mots vides système est associée à un nouvel index de recherche en texte intégral. Vous pouvez créer et utiliser votre propre liste de mots vides.   
   
  Par exemple, l’instruction [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante crée une liste de mots vides de texte intégral nommée myStoplist en copiant la liste de mots vides système :  
@@ -137,17 +119,13 @@ GO
 ```  
 Pour plus d’informations, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).
 
-<a id="update-a-full-text-index" class="xliff"></a>
-
-## Mettre à jour un index de recherche en texte intégral  
+## <a name="update-a-full-text-index"></a>Mettre à jour un index de recherche en texte intégral  
  À l'instar des index [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] classiques, les index de recherche en texte intégral peuvent être automatiquement mis à jour à mesure que les données sont modifiées dans les tables associées. Il s'agit du comportement par défaut. Vous pouvez, également, garder manuellement vos index de recherche en texte intégral à jour ou à intervalles planifiés spécifiés. L’alimentation d’un index de recherche en texte intégral peut être longue et consommatrice de ressources. Ainsi, la mise à jour de l’index est habituellement effectuée en mode de processus asynchrone ; celui-ci s’exécute en arrière-plan et conserve l’index de recherche en texte intégral à jour après les modifications opérées dans la table de base. 
  
 La mise à jour immédiate d’un index de recherche en texte intégral après chaque modification dans la table de base est également gourmande en ressources. Par conséquent, si vous avez un taux de mise à jour/insertion/suppression élevé, vous pouvez constater une baisse dans les performances des requêtes. Si cela se produit, pensez à planifier de temps à autre des mises à jour manuelles du suivi des modifications afin de ne pas perdre trace des nombreuses modifications, au lieu de mettre des requêtes en concurrence pour les ressources.  
   
 Pour plus d’informations, consultez [Alimenter des index de recherche en texte intégral](../../relational-databases/search/populate-full-text-indexes.md). 
 
-<a id="next-steps" class="xliff"></a>
-
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 Après avoir configuré la recherche en texte intégral de SQL Server, vous êtes prêt à exécuter des requêtes de texte intégral. Pour plus d’informations, consultez [Exécuter une requête avec une recherche en texte intégral](../../relational-databases/search/query-with-full-text-search.md).
 

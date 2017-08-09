@@ -19,11 +19,11 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 6d75e0e40c5642993cb17b09e421fbfebf40f87a
 ms.openlocfilehash: c7aee6098b6cf8eca74dd3f34b9ed9a836bb9d20
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-encryption"></a>Chiffrement SQL Server
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/23/2017
 > [!NOTE]  
 >  Les dernières informations sur la sécurité de niveau transport (TSL1.2) sont disponibles dans [Prise en charge de TLS 1.2 pour Microsoft SQL Server](https://support.microsoft.com/kb/3135244).  
 
-Vous pouvez utiliser le chiffrement dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour les connexions, les données et les procédures stockées. Les rubriques suivantes contiennent plus d’informations sur le chiffrement dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+Vous pouvez utiliser le chiffrement dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour les connexions, les données et les procédures stockées. Les rubriques suivantes contiennent davantage d’informations sur le chiffrement dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
 
  [Hiérarchie de chiffrement](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
  Informations sur la hiérarchie de chiffrement dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -79,7 +79,7 @@ Vous pouvez utiliser le chiffrement dans [!INCLUDE[ssNoVersion](../../../include
  Informations sur l'utilisation d'un certificat pour chiffrer des données.  
   
 ## <a name="external-resources"></a>Ressources externes  
- [Microsoft TechNet : SQL Server TechCenter : SQL Server 2012 sécurité et Protection](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
+ [Microsoft TechNet : SQL Server TechCenter : SQL Server 2012 - Sécurité et protection](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
  Informations à jour sur la sécurité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  

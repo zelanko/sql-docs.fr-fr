@@ -26,11 +26,11 @@ caps.latest.revision: 52
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
 ms.openlocfilehash: f4f99b8869aca02d63b5aacaa883ce501e332ea7
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="server-level-roles"></a>Rôles de niveau serveur
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/23/2017
   
  Les rôles serveur fixes sont fournis pour des raisons de commodité et de compatibilité descendante. Attribuez des autorisations plus spécifiques chaque fois que cela est possible.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit neuf rôles serveur fixes. Les autorisations sont accordées aux rôles serveur fixes (à l’exception de **public**) ne peut pas être modifié. Depuis [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], il est possible de créer des rôles serveur définis par l'utilisateur et de leur ajouter des autorisations au niveau du serveur.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit neuf rôles serveur fixes. Les autorisations accordées aux rôles serveur fixes (à l’exception de **public**) ne peuvent pas être changées. Depuis [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], il est possible de créer des rôles serveur définis par l'utilisateur et de leur ajouter des autorisations au niveau du serveur.  
   
  Vous pouvez ajouter des principaux au niveau du serveur (connexions[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , comptes et groupes Windows) à des rôles serveur. Chaque membre d'un rôle serveur fixe peut ajouter des connexions à ce rôle. Les membres de rôles serveur définis par l'utilisateur ne peuvent pas ajouter d'autres principaux de serveur à ces rôles.  
 >  [!NOTE]
@@ -49,24 +49,24 @@ ms.lasthandoff: 06/23/2017
 ## <a name="fixed-server-level-roles"></a>Rôles serveur fixes  
  Le tableau ci-dessous répertorie les rôles serveur fixes et leurs fonctionnalités.  
   
-|Rôles serveur fixes| Description|  
+|Rôles serveur fixes|Description|  
 |------------------------------|-----------------|  
-|**sysadmin**|Membres de la **sysadmin** rôle serveur fixe peut effectuer toute activité sur le serveur.|  
+|**sysadmin**|Les membres du rôle serveur fixe **sysadmin** peuvent effectuer n’importe quelle activité sur le serveur.|  
 |**serveradmin**|Les membres du rôle serveur fixe **serveradmin** peuvent modifier les options de configuration à l’échelle du serveur et arrêter le serveur.|  
-|**securityadmin**|Les membres du rôle serveur fixe **securityadmin** gèrent les connexions et leurs propriétés. Ils peuvent `GRANT`, `DENY`, et `REVOKE` les autorisations au niveau du serveur. Ils peuvent également `GRANT`, `DENY`, et `REVOKE` de base de données au niveau des autorisations s’ils ont accès à une base de données. En outre, ils peuvent réinitialiser les mots de passe pour les connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .<br /><br /> **IMPORTANT :** la possibilité d’accorder l’accès à la [!INCLUDE[ssDE](../../../includes/ssde-md.md)] et de configurer des autorisations utilisateur permet à l’administrateur de sécurité affecter la plupart des autorisations du serveur. Le rôle **securityadmin** doit être traité comme équivalent au rôle **sysadmin** .|  
-|**processadmin**|Membres de la **processadmin** rôle serveur fixe peut mettre fin aux processus qui s’exécutent dans une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
-|**setupadmin**|Membres de la **setupadmin** rôle serveur fixe peut ajouter et supprimer des serveurs liés à l’aide de [!INCLUDE[tsql](../../../includes/tsql-md.md)] instructions. (**sysadmin** l’appartenance est nécessaire lorsque vous utilisez [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].)|  
-|**bulkadmin**|Membres de la **bulkadmin** rôle de serveur fixe peuvent exécuter la `BULK INSERT` instruction.|  
-|**diskadmin**|Le **diskadmin** rôle serveur fixe est utilisé pour gérer les fichiers disque.|  
+|**securityadmin**|Les membres du rôle serveur fixe **securityadmin** gèrent les connexions et leurs propriétés. Ils peuvent attribuer des autorisations `GRANT`, `DENY` et `REVOKE` au niveau du serveur. Ils peuvent également attribuer des autorisations `GRANT`, `DENY` et `REVOKE` au niveau de la base de données, s’ils ont accès à une base de données. En outre, ils peuvent réinitialiser les mots de passe pour les connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .<br /><br /> **IMPORTANT :** La possibilité d’octroyer l’accès au [!INCLUDE[ssDE](../../../includes/ssde-md.md)] et de configurer des autorisations utilisateur permet à l’administrateur de sécurité d’affecter la plupart des autorisations du serveur. Le rôle **securityadmin** doit être traité comme équivalent au rôle **sysadmin** .|  
+|**processadmin**|Les membres du rôle serveur fixe **processadmin** peuvent mettre fin aux processus en cours d’exécution dans une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|**setupadmin**|Les membres du rôle serveur fixe **setupadmin** peuvent ajouter et supprimer des serveurs liés à l’aide d’instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)]. (L’appartenance au rôle **sysadmin** est nécessaire pour utiliser [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].)|  
+|**bulkadmin**|Les membres du rôle serveur fixe **bulkadmin** peuvent exécuter l’instruction `BULK INSERT`.|  
+|**diskadmin**|Le rôle serveur fixe **diskadmin** permet de gérer les fichiers disque.|  
 |**dbcreator**|Les membres du rôle serveur fixe **dbcreator** peuvent créer, modifier, supprimer et restaurer n’importe quelle base de données.|  
-|**public**|Chaque [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] connexion appartient à la **public** rôle de serveur. Lorsqu'un principal de serveur ne s'est pas vu accorder ou refuser des autorisations spécifiques sur un objet sécurisable, l'utilisateur hérite des autorisations accordées à public sur cet objet. Vous ne devez affecter des autorisations publiques à un objet que lorsque vous souhaitez que ce dernier soit disponible pour tous les utilisateurs. Vous ne pouvez pas modifier l’appartenance au rôle public.<br /><br /> **Remarque :** **public** est implémenté différemment des autres rôles, et les autorisations peuvent être accordées, refusées ou révoquées depuis les rôles de serveur fixe public.|  
+|**public**|Chaque connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] appartient au rôle serveur **public**. Lorsqu'un principal de serveur ne s'est pas vu accorder ou refuser des autorisations spécifiques sur un objet sécurisable, l'utilisateur hérite des autorisations accordées à public sur cet objet. Vous ne devez affecter des autorisations publiques à un objet que lorsque vous souhaitez que ce dernier soit disponible pour tous les utilisateurs. Vous ne pouvez pas modifier l’appartenance au rôle public.<br /><br /> **Remarque :** **public** est implémenté différemment des autres rôles. Les autorisations peuvent être accordées, refusées ou révoquées à partir des rôles serveur fixes public.|  
   
 ## <a name="permissions-of-fixed-server-roles"></a>Autorisations des rôles serveur fixes  
  Certaines autorisations sont assignées à chaque rôle serveur fixe. Le graphique suivant présente les autorisations attribuées aux rôles serveur.   
 ![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-server-roles.png)   
   
 > [!IMPORTANT]  
->  L'autorisation **CONTROL SERVER** ressemble, mais n'est pas identique au rôle serveur fixe **sysadmin** . Les autorisations n'impliquent pas les appartenances au rôle et les appartenances au rôle n'accordent pas d'autorisation. (Par exemple : **CONTROL SERVER** n’implique pas l’appartenance au rôle serveur fixe **sysadmin**.) Cependant, il est parfois possible d'emprunter l'identité entre les rôles et les autorisations équivalentes. La plupart des commandes **DBCC** et de nombreuses procédures système exigent l'appartenance au rôle serveur fixe **sysadmin** . Pour découvrir la liste des 171 procédures stockées système qui nécessitent l’appartenance à **sysadmin** , consultez le billet de blog suivant d’Andreas Wolter : [Comparaison entre CONTROL SERVER et sysadmin/sa : autorisations, procédures système, DBCC, création de schéma automatique et réaffectation de privilèges - avertissements](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
+>  L'autorisation **CONTROL SERVER** ressemble, mais n'est pas identique au rôle serveur fixe **sysadmin** . Les autorisations n'impliquent pas les appartenances au rôle et les appartenances au role n'accordent pas d'autorisation. (Par exemple : **CONTROL SERVER** n’implique pas l’appartenance au rôle serveur fixe **sysadmin**.) Cependant, il est parfois possible d'emprunter l'identité entre les rôles et les autorisations équivalentes. La plupart des commandes **DBCC** et de nombreuses procédures système exigent l'appartenance au rôle serveur fixe **sysadmin** . Pour découvrir la liste des 171 procédures stockées système qui nécessitent l’appartenance à **sysadmin** , consultez le billet de blog suivant d’Andreas Wolter : [Comparaison entre CONTROL SERVER et sysadmin/sa : autorisations, procédures système, DBCC, création de schéma automatique et réaffectation de privilèges - avertissements](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
   
 ## <a name="server-level-permissions"></a>Autorisations au niveau serveur  
  Seules des autorisations au niveau du serveur peuvent être ajoutées aux rôles serveur définis par l'utilisateur. Pour répertorier les autorisations au niveau du serveur, exécutez l'instruction suivante. Les autorisations au niveau du serveur sont :  

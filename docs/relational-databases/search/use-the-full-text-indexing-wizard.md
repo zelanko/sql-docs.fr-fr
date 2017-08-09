@@ -27,11 +27,11 @@ caps.latest.revision: 24
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
 ms.openlocfilehash: 204b0e834db9ad1c5fe7d3f08f507629313e3cad
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Utiliser l'Assistant Indexation de texte intégral
@@ -102,9 +102,9 @@ ms.lasthandoff: 06/23/2017
      e. Sélectionner une valeur :  
       |Valeur|Description|  
       |-----------|-----------------|
-      |**<default>**| Si la table ou la vue n'est pas partitionnée, sélectionnez cette option pour utiliser le même groupe de fichiers que la table ou la vue sous-jacente. Si la table ou la vue est partitionnée, le groupe de fichiers primaire est utilisé.|
+      |**<default>**| Si la table ou la vue n'est pas partitionnée, sélectionnez cette option pour utiliser le même groupe de fichiers que la table ou la vue sous-jacente. Si la table ou la vue est partitionnée, le groupe de fichiers principal est utilisé|
       |**PRIMARY**|Sélectionnez cette option pour utiliser le groupe de fichiers primaire pour le nouvel index de recherche en texte intégral.|
-      *groupe de fichiers par défaut spécifié par l’utilisateur*|En cas d’une liste de mots vides par défaut définie par l’utilisateur, sélectionnez son nom dans la liste pour utiliser ce groupe de fichiers pour le nouvel index de recherche en texte intégral.|   
+      *groupe de fichiers par défaut spécifié par l’utilisateur*|S’il existe une liste de mots vides par défaut définie par l’utilisateur, sélectionnez son nom dans la liste afin d’utiliser ce groupe de fichiers pour le nouvel index de recherche en texte intégral.|   
   
      
  11. **Sélectionner la liste de mots vides de texte intégral**  
