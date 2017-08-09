@@ -29,7 +29,7 @@ Ces rubriques décrivent les commandes et options des boîtes de dialogue et fen
 Pour accéder aux rubriques relatives aux boîtes de dialogue, appuyez sur F1 lorsque vous avez ouvert une boîte de dialogue et qu'il s'agit de la fenêtre active. Pour accéder aux rubriques relatives aux fenêtres de propriétés, cliquez dans la fenêtre Propriétés et appuyez sur F1.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Concevoir des tables &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
-[Rubriques de procédures relatives à la conception de requêtes et de vues &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Concevoir des tables &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
 
