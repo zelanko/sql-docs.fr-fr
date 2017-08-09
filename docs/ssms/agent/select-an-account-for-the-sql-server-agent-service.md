@@ -25,11 +25,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
 ms.openlocfilehash: 3050dc3fc207f2154a70c68770ca266d2d47ce92
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Sélectionner un compte pour le service SQL Server Agent
@@ -112,9 +112,9 @@ Pour résoudre ce problème, redémarrez l'ordinateur qui exécute [!INCLUDE[ssN
 ## <a name="common-tasks"></a>Tâches courantes  
 **Pour spécifier le compte de démarrage du service SQL Server Agent**  
   
--   [Définir le compte de démarrage du service pour l’Agent SQL Server &amp;#40;Gestionnaire de configuration SQL Server&amp;#41;](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
+-   [Définir le compte de démarrage du service pour l’Agent SQL Server &#40;Gestionnaire de configuration SQL Server&#41;](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
   
-**Pour spécifier le profil de messagerie de l'Agent SQL Server**  
+**Pour spécifier le profil de messagerie de SQL Server Agent**  
   
 -   [Procédure : configurer la messagerie de l'Agent SQL Server en vue de l'utilisation de la messagerie de base de données (SQL Server Management Studio)](http://msdn.microsoft.com/en-us/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
   
