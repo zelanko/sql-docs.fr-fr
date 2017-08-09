@@ -1,5 +1,5 @@
 ---
-title: "Didacticiel : création d’un rapport de tableau de base (Générateur de rapports) | Microsoft Docs"
+title: "Didacticiel : Création d’un rapport de tableau de base (Générateur de rapports) | Documents Microsoft"
 ms.custom: 
 ms.date: 06/23/2016
 ms.prod: sql-server-2016
@@ -16,11 +16,11 @@ caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 021a980dee9f6cd72f663475ba084962fa543cd4
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Didacticiel : création d'un rapport de tableau de base (Générateur de rapports)
@@ -43,7 +43,7 @@ Créez un rapport de tableau avec l’Assistant Tableau ou matrice. Il existe de
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
-    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
+    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou Dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
@@ -62,9 +62,9 @@ Dans ce didacticiel, vous allez utiliser une source de données incorporée. Pou
   
 3.  Dans **Nom**, tapez **Product_Sales** comme nom de la source de données.  
   
-4.  Dans **Sélectionner un type de connexion**, assurez-vous que **Microsoft SQL Server** est sélectionné.  
+4.  Dans **Sélectionner un type de connexion**, vérifiez que **Microsoft SQL Server** est sélectionné.  
   
-5.  Dans **Chaîne de connexion**, tapez le texte suivant, où \<servername> est le nom d’une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  
+5.  Dans **Chaîne de connexion**, tapez le texte suivant, où \<nom_serveur> est le nom d’une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
     ```  
     Data Source=<servername>  
@@ -72,7 +72,7 @@ Dans ce didacticiel, vous allez utiliser une source de données incorporée. Pou
   
     Dans la mesure où vous utilisez une requête qui contient les données au lieu de récupérer ces dernières à partir d'une base de données, la chaîne de connexion n'inclut pas le nom de la base de données. Pour plus d’informations, voir [Éléments requis pour les didacticiels (Générateur de rapports)](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-6.  Cliquez sur l’onglet **Informations d’identification** . Entrez les informations d'identification nécessaires pour accéder à la source de données externe.  
+6.  Cliquez sur l’onglet **Informations d’identification**. Entrez les informations d'identification nécessaires pour accéder à la source de données externe.  
   
 7. Recliquez sur l’onglet Général. Pour vérifier vous pouvez vous connecter à la source de données, cliquez sur **Tester la connexion**.  
   
@@ -199,13 +199,13 @@ Par défaut, les données de synthèse du champ Sales affichent un nombre géné
   
 ### <a name="to-format-a-currency-field"></a>Pour mettre en forme un champ monétaire  
   
-1.  Pour afficher les zones de texte mis en forme et le texte d’espace réservé en tant qu’exemples de valeurs dans la vue Design, sous l’onglet **Accueil**, dans le groupe **Nombre**, cliquez sur la flèche à côté de l’icône **Styles des espaces réservés** > **Valeurs d’aperçu**.  
+1.  Pour afficher les zones de texte mis en forme et le texte d’espace réservé en tant qu’exemples de valeurs dans la vue Design, sous l’onglet **Accueil**, dans le groupe **Nombre**, cliquez sur la flèche à côté de l’icône **Styles des espaces réservés**> **Valeurs d’aperçu**.  
   
 2.   Cliquez sur la cellule de la deuxième ligne (sous la ligne des en-têtes de colonnes) de la colonne Sales et faites glisser la souris vers le bas de façon à sélectionner toutes les cellules qui contiennent `[Sum(Sales)]`.  
   
 3.  Sous l’onglet **Accueil** , dans le groupe **Nombre** , cliquez sur le bouton **Devise** . Les cellules changent pour afficher le format de devise.  
   
-    Si votre paramètre régional est Anglais (États-Unis), le texte d’exemple par défaut est [**$12,345.00**]. Si vous ne voyez pas d’exemple de valeur monétaire sous l’onglet **Accueil**, dans le groupe **Nombre**, cliquez sur la flèche à côté de l’icône **Styles des espaces réservés** > **Valeurs d’aperçu**.  
+    Si votre paramètre régional est Anglais (États-Unis), le texte d’exemple par défaut est [**$12,345.00**]. Si vous ne voyez pas d’exemple de valeur monétaire sous l’onglet **Accueil**, dans le groupe **Nombre**, cliquez sur la flèche à côté de l’icône **Styles des espaces réservés** > **Valeurs d’aperçu**.  
   
 4.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
@@ -222,7 +222,7 @@ Par défaut, le champ SalesDate affiche les informations de date et d’heure. V
   
 3.  Dans le ruban, sous l’onglet **Accueil** , dans le groupe **Nombre** cliquez sur la flèche et sélectionnez **Date**.  
   
-    La cellule affiche la date d’exemple **[1/31/2000]**. Si vous ne voyez pas d’exemple de date, sous l’onglet **Accueil**, dans le groupe **Nombre**, cliquez sur la flèche à côté de l’icône **Styles des espaces réservés** > **Valeurs d’aperçu**.  
+    La cellule affiche l’exemple de date **[1/31/2000]**. Si vous ne voyez pas d’exemple de date, sous l’onglet **Accueil**, dans le groupe **Nombre**, cliquez sur la flèche à côté de l’icône **Styles des espaces réservés** > **Valeurs d’aperçu**.  
   
 4.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
@@ -320,7 +320,7 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
 4.  Cliquez sur **Enregistrer**.  
   
 ## <a name="Export"></a>7. Exporter le rapport  
-Les rapports peuvent être exportés dans différents formats, par exemple, Microsoft Excel et les fichiers de valeurs séparées par des virgules (CSV). Pour plus d’informations, consultez [Export Reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+Les rapports peuvent être exportés dans différents formats, par exemple, Microsoft Excel et les fichiers de valeurs séparées par des virgules (CSV). Pour plus d’informations, consultez [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 Dans ce didacticiel, vous allez exporter le rapport vers Excel et définir une propriété du rapport afin de fournir un nom personnalisé pour l'onglet de classeur.  
   
@@ -346,7 +346,7 @@ Dans ce didacticiel, vous allez exporter le rapport vers Excel et définir une p
   
 3.  Dans la boîte de dialogue **Enregistrer sous** , naviguez jusqu’à l’emplacement où vous voulez enregistrer le fichier.  
   
-4.  Dans la zone **Nom de fichier** , tapez **Product_Sales_Excel**.  
+4.  Dans la zone **Nom de fichier**, tapez **Product_Sales_Excel**.  
   
 5.  Vérifiez que le type de fichier est **Excel (\*.xlsx)**.  
   
@@ -359,7 +359,7 @@ Dans ce didacticiel, vous allez exporter le rapport vers Excel et définir une p
 2.  Vérifiez que le nom de l’onglet de classeur est **Product Sales Excel**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
-Ceci conclut la procédure pas à pas décrivant comment créer un rapport de tableau de base. Pour plus d’informations sur les tables, consultez [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
+Ceci conclut la procédure pas à pas décrivant comment créer un rapport de tableau de base. Pour plus d’informations sur les tableaux, consultez [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
 [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)  

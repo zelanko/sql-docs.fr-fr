@@ -26,11 +26,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 10ec05b662839e5cf2aac0d756d7ae581bdf8de9
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# Concepteur d'alertes de données
-<a id="data-alert-designer" class="xliff"></a>
+# <a name="data-alert-designer"></a>Concepteur d'alertes de données
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -68,8 +67,7 @@ Vous pouvez créer et modifier les définitions d'alerte de données dans le Con
  ![Zones dans l’interface utilisateur du Concepteur d’alertes](../reporting-services/media/rs-alertdesigner.gif "zones dans l’interface utilisateur du Concepteur d’alertes")  
   
   
-### Données d'alerte
-<a id="alert-data" class="xliff"></a>  
+### <a name="alert-data"></a>Données d'alerte  
  Quand vous ouvrez le Concepteur d’alertes de données, il génère et met à disposition tous les flux de données du rapport. La liste déroulante **Nom des données du rapport** affiche les noms des flux. Les flux de données sont mis en cache dans la mémoire pendant que vous créez la définition d'alerte, et la table qui affiche les données du flux de données est remplie rapidement lorsque vous passez d'un flux de données à l'autre pour explorer les données de rapport.  
   
  La première étape pour la création d'une définition d'alerte de données consiste à sélectionner le flux de données de rapport qui contient les données que vous souhaitez surveiller au moyen de l'alerte. Les rapports peuvent avoir zéro ou plusieurs flux de données. Si un rapport n'a pas de flux de données, vous ne pouvez pas créer d'alertes sur ses données. Un flux de données peut être généré par toute région de données, notamment tous les types de graphiques, jauges, indicateurs ainsi que tables, matrices et listes.  
@@ -82,14 +80,12 @@ Vous pouvez créer et modifier les définitions d'alerte de données dans le Con
   
  Certains rapports comportent des millions de lignes de données. Le tableau montre uniquement les 100 premières lignes de données dans le flux.  
   
-### Nom de l'alerte
-<a id="alert-name" class="xliff"></a>  
+### <a name="alert-name"></a>Nom de l'alerte  
  Par défaut, la définition d'alerte a le même nom que le rapport. Vous pouvez remplacer le nom de l'alerte par un autre nom plus explicite. Cela permet de simplifier la gestion de vos alertes et de déterminer quelles alertes doivent être mises à jour, supprimées et ainsi de suite.  
   
  Vous pouvez créer plusieurs alertes sur un rapport. Il est possible d'avoir plusieurs définitions d'alerte avec le même nom, mais il est recommandé de donner un nom unique à l'alerte. Cela facilite la différenciation et la gestion des définitions d'alerte. Vous pouvez consulter la liste de toutes les alertes que vous avez créées dans le Gestionnaire des alertes de données. Pour plus d’informations, consultez [Gestionnaire des alertes de données pour les administrateurs d’alertes](../reporting-services/data-alert-manager-for-alerting-administrators.md) et [Gérer mes alertes de données dans le Gestionnaire des alertes de données](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
-### Règles et clauses
-<a id="rules-and-clauses" class="xliff"></a>  
+### <a name="rules-and-clauses"></a>Règles et clauses  
  L'étendue des modifications apportées aux données et les règles de l'alerte définissent les modifications qui déclenchent l'alerte. Les types de modifications apportées aux données sont les suivants :  
   
 -   **Au moins une donnée a**indique qu’au moins une valeur dans les données suit les règles spécifiées dans la condition.  
@@ -160,8 +156,7 @@ Vous pouvez créer et modifier les définitions d'alerte de données dans le Con
   
  Les règles et les clauses sont incluses dans le message d'alerte de données.  
   
-### Paramètres de planification
-<a id="schedule-settings" class="xliff"></a>  
+### <a name="schedule-settings"></a>Paramètres de planification  
  La planification que vous définissez pour l'alerte de données définit la périodicité d'envoi du message d'alerte et le début et la fin de l'envoi des messages d'alerte. Les modèles sont : une seule fois, toutes les minutes, une fois par jour et une fois par semaine. Bien qu'une alerte n'ait q'une seule planification possible, vous pouvez créer des périodicités complexes répondant à la plupart des exigences opérationnelles à l'aide de ces intervalles. Voici quelques exemples de périodicités communément utilisées dans les planifications :  
   
 -   **Une fois par jour, tous les 10 jours** — Envoie une alerte une fois par jour, tous les 10 jours.  
@@ -179,8 +174,7 @@ Vous pouvez créer et modifier les définitions d'alerte de données dans le Con
 > [!IMPORTANT]  
 >  Il est recommandé de ne pas utiliser une périodicité plus fréquente que la périodicité quotidienne, sauf si cela est requis par votre entreprise. Le traitement de la définition d'alerte de données en temps réel n'est pas un scénario pris en charge. Si le traitement des définitions d’alerte de données est trop fréquent, cela peut affecter les performances du serveur de rapports et du déploiement global de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
-### Paramètres de messagerie
-<a id="email-settings" class="xliff"></a>  
+### <a name="email-settings"></a>Paramètres de messagerie  
  Utilisez l’option **Destinataire(s)** pour spécifier les adresses e-mail des destinataires à qui envoyer les messages d’alerte de données par e-mail. Séparez les adresses de messagerie par des points-virgules, comme vous le feriez dans un courrier électronique Microsoft Office Outlook. Vous pouvez également spécifier des groupes de distribution comme destinataires, pour simplifier et accélérer la gestion de la liste des destinataires. Si SharePoint peut déterminer votre adresse de messagerie lorsque vous créez une définition d'alerte, celle-ci est ajoutée automatiquement aux destinataires répertoriés ; sinon, vous devez vous ajouter explicitement comme destinataire.  
   
  L’objet du courrier électronique par défaut est **d’alerte de données pour \<nom de l’alerte >**. Vous pouvez changer l'objet selon vos besoins.  
@@ -223,8 +217,7 @@ Vous pouvez créer et modifier les définitions d'alerte de données dans le Con
   
 -   [Créer une alerte de données dans le Concepteur d’alertes](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
 
-## Voir aussi
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Voir aussi
 
 [Alertes de données Reporting Services](../reporting-services/reporting-services-data-alerts.md)   
 [Gestionnaire des alertes de données pour les administrateurs d’alertes](../reporting-services/data-alert-manager-for-alerting-administrators.md)  

@@ -1,5 +1,5 @@
 ---
-title: "Didacticiel : mettre en forme du texte (Générateur de rapports) | Microsoft Docs"
+title: "Didacticiel : Mettre en forme le texte (Générateur de rapports) | Documents Microsoft"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -16,11 +16,11 @@ caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cfbe1001a049466af839363db29156df6b972556
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
@@ -47,7 +47,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
-    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
+    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou Dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
  
 2.  Dans le volet gauche de la boîte de dialogue **Mise en route** , assurez-vous que **Nouveau rapport** est sélectionné.  
   
@@ -66,7 +66,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
 4.  Vérifiez que le type de connexion est bien Microsoft SQL Server puis, dans la zone **Chaîne de connexion** , tapez : `Data Source = <servername>`  
   
     > [!NOTE]  
-    > L’expression `<servername>`, par exemple Rapport001, spécifie un ordinateur sur lequel une instance du moteur de base de données SQL Server est installée. Ce didacticiel n’a pas besoin de données spécifiques. Il a juste besoin d’une connexion à une base de données SQL Server. Si une connexion à une source de données est déjà répertoriée sous **Connexions à la source de données**, vous pouvez la sélectionner et passer à la procédure suivante, « Pour créer un dataset ». Pour plus d’informations, consultez [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > L’expression `<servername>`, par exemple Rapport001, spécifie un ordinateur sur lequel une instance du moteur de base de données SQL Server est installée. Ce didacticiel n’a pas besoin des données spécifiques ; Il suffit d’une connexion à une base de données SQL Server. Si une connexion à une source de données est déjà répertoriée sous **Connexions à la source de données**, vous pouvez la sélectionner et passer à la procédure suivante, « Pour créer un dataset ». Pour plus d’informations, consultez [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -186,7 +186,7 @@ Si vous souhaitez qu'un champ de votre dataset apparaisse dans un rapport, votre
 ## <a name="AddTable"></a>Ajouter un tableau à l'aire de conception du rapport  
 Créez ce tableau dans lequel vous pourrez placer les liens hypertexte et le texte pivoté.   
   
-1.  Sous l’onglet **Insertion** > **Table** > **Assistant Tableau**.  
+1.  Sous l’onglet **Insertion** > **Table** > **Assistant Tableau**.  
   
 2.  Dans la page **Choisir un dataset** de l’Assistant Nouveau tableau ou nouvelle matrice, cliquez sur **Choisir un dataset existant dans ce rapport ou un dataset partagé** > **TextDataset (dans ce rapport)** > **Suivant**.  
   
@@ -233,7 +233,7 @@ Dans cette section, vous allez ajouter un lien hypertexte au texte du tableau de
   
 7.  Sélectionnez `[LinkText]`.  
   
-8.  Sous l’onglet **Accueil** > **Police**, sélectionnez **Souligné**, puis affectez la valeur **Bleu** à **Couleur**.  
+8.  Sous l’onglet **Accueil** > **Police**, sélectionnez **Souligné**, puis affectez la valeur **Bleu** à **Couleur**.  
   
 9. Cliquez sur **Exécuter**.  
   
@@ -261,7 +261,7 @@ Dans cette section, vous allez faire pivoter une partie du texte du tableau des 
 
     ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
    
-6.  Sous l’onglet **Accueil** > section **Paragraphe**, sélectionnez **Milieu** et **Centre** pour centrer verticalement et horizontalement le texte dans la cellule.  
+6.  Sous l’onglet **Accueil** > section **Paragraphe**, sélectionnez **Milieu** et **Centre** pour centrer verticalement et horizontalement le texte dans la cellule.  
   
 8.  Cliquez sur Exécuter (**!**).  
   
@@ -275,7 +275,7 @@ Le texte de la cellule `[Territory]` s'exécute maintenant verticalement de bas 
   
 2.  Cliquez sur la cellule supérieure du tableau contenant `[Sum(Sales)]`, maintenez la touche Maj enfoncée et cliquez sur la cellule inférieure du tableau contenant `[Sum(Sales)]`.  
   
-3.  Sous l’onglet **Accueil** > groupe **Nombre** > bouton **Devise**.  
+3.  Sous l’onglet **Accueil** > groupe **Nombre** > bouton **Devise**.  
   
 4.  (Facultatif)     Si votre paramètre régional est Anglais (États-Unis), l’exemple de texte par défaut est [**$12,345.00**]. Si vous ne voyez pas s’afficher d’exemple de valeur monétaire, dans le groupe **Nombres** , cliquez sur **Styles des espaces réservés** > **Valeurs d’aperçu**.  
 
@@ -364,10 +364,10 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Il existe de nombreuses méthodes pour mettre en forme du texte dans le Générateur de rapports. Le [didacticiel : création d’un rapport de forme libre](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contient d’autres exemples.  
+Il existe de nombreuses méthodes pour mettre en forme du texte dans le Générateur de rapports. [Didacticiel : Création d’un rapport de forme libre](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contient d’autres exemples.  
 
-[Didacticiels du Générateur de rapports ](../reporting-services/report-builder-tutorials.md) 
-[Mise en forme des éléments de rapport](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
+[Didacticiels du Générateur de rapports ](../reporting-services/report-builder-tutorials.md)  
+ [mise en forme des éléments de rapport](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
 [Générateur de rapports dans SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -18,19 +18,17 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: c6dcc44b05633004bd525d337c8303c1a8180121
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# Utilisation des rapports paginés (portail web)
-<a id="working-with-paginated-reports-web-portal" class="xliff"></a>
+# <a name="working-with-paginated-reports-web-portal"></a>Utilisation des rapports paginés (portail web)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Vous pouvez afficher et gérer les propriétés d’un rapport paginé dans le portail web. À partir du portail web, vous pouvez lancer le Générateur de rapports pour créer ou modifier des rapports paginés.  
    
-## Créer un rapport paginé
-<a id="create-a-paginated-report" class="xliff"></a>  
+## <a name="create-a-paginated-report"></a>Créer un rapport paginé  
   
 Procédez comme suit pour créer un dataset partagé.  
   
@@ -44,8 +42,7 @@ Procédez comme suit pour créer un dataset partagé.
   
 4.  Créez votre rapport, puis sélectionnez l’icône **Enregistrer** en haut à gauche pour enregistrer le rapport paginé dans le serveur de rapports.  
   
-## Gérer un rapport paginé existant
-<a id="manage-an-existing-paginated-report" class="xliff"></a>  
+## <a name="manage-an-existing-paginated-report"></a>Gérer un rapport paginé existant  
   
 Procédez comme suit pour gérer un rapport paginé existant.  
   
@@ -60,22 +57,19 @@ Procédez comme suit pour gérer un rapport paginé existant.
     
     ![ssRSWebPortal-manage-report2](../reporting-services/media/ssrswebportal-manage-report2.png)  
   
-## Propriétés
-<a id="properties" class="xliff"></a>  
+## <a name="properties"></a>Propriétés  
   
 Dans la fenêtre des propriétés, vous pouvez modifier le **nom** et la **description** du rapport paginé. Vous pouvez également utiliser **Supprimer**, **Déplacer**, **Créer un rapport lié**, **Modifier dans le Générateur de rapports**, **Télécharger** ou **Remplacer**.  
     
 ![ssRSWebPortal-report-properties](../reporting-services/media/ssrswebportal-report-properties.png)  
    
-## Paramètres
-<a id="parameters" class="xliff"></a>  
+## <a name="parameters"></a>Paramètres  
   
 Vous pouvez modifier les paramètres existants d’un rapport paginé. Pour ajouter un nouveau paramètre, vous devez modifier le rapport dans le Générateur de rapports ou dans SQL Server Data Tools.  
   
 ![ssRSWebPortal-report-parameters](../reporting-services/media/ssrswebportal-report-parameters.png)  
    
-## Source de données
-<a id="data-source" class="xliff"></a>  
+## <a name="data-source"></a>Source de données  
 Vous pouvez pointer sur une source de données partagée, ou entrer les informations de connexion pour une source de données personnalisée.  
   
 ![ssRSWebPortal-report-datasource](../reporting-services/media/ssrswebportal-report-datasource.png)  
@@ -131,18 +125,15 @@ Ceci vous permet de ne pas fournir d’informations d’identification pour la s
   
 Pour utiliser cette option, vous devez avoir précédemment configuré le compte d’exécution sans assistance pour votre serveur de rapports. Le compte d’exécution sans assistance est utilisé pour se connecter à des sources de données externes quand d’autres sources d’informations d’identification ne sont pas disponibles. Si vous spécifiez cette option et que le compte n'est pas configuré, la connexion à la source de données de rapports échouera et le traitement de rapports ne se produira pas. Pour plus d’informations sur ce compte, consultez [Configurer le compte d’exécution sans assistance (Gestionnaire de configuration de SSRS)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
-## Abonnements
-<a id="subscriptions" class="xliff"></a>  
+## <a name="subscriptions"></a>Abonnements  
 Un abonnement Reporting Services est une configuration qui remet un rapport à une heure donnée ou en réponse à un événement, et dans un format de fichier que vous spécifiez. Par exemple, tous les mercredis, enregistrer le rapport MonthlySales.rdl au format de document Microsoft Word sur un partage de fichiers. Vous pouvez utiliser des abonnements pour planifier et automatiser la remise d'un rapport avec un ensemble de valeurs de paramètres de rapport spécifique. Pour plus d’informations, consultez [utilisation des abonnements](working-with-subscriptions-web-portal.md).
   
 ![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
-## Éléments dépendants
-<a id="dependent-items" class="xliff"></a>  
+## <a name="dependent-items"></a>Éléments dépendants  
 Utilisez la page Éléments dépendants pour afficher une liste d’éléments qui font référence à ce rapport. L’icône de chaque type d’élément indique ce qu’il est. Vous pouvez alors sélectionner le **points de suspension (...)**  sur chaque élément pour gérer ces éléments supplémentaires.  
   
-## Mise en cache
-<a id="caching" class="xliff"></a>  
+## <a name="caching"></a>Mise en cache  
 Vous disposez de différentes options de mise en cache des données pour un rapport paginé. Vous pouvez commencer avec une simple sélection.  
   
 1.  **Toujours exécuter ce rapport avec les données les plus récentes** interroge la source de données chaque fois que vous exécutez le rapport. Ceci aboutit à un rapport à la demande qui contient les données les plus récentes. Une nouvelle instance du rapport est créée à chaque fois que le rapport est ouvert, qui contient les résultats d’une nouvelle requête. Avec cette méthode, si dix utilisateurs ouvrent le rapport en même temps, dix requêtes sont envoyées à la source de données en vue d'un traitement.  
@@ -159,16 +150,14 @@ Vous disposerez d’options supplémentaires en sélectionnant **Mettre en cache
 
 Pour plus d’informations, consultez [utilisation des instantanés](working-with-snapshots-web-portal.md).
   
-### Expiration du cache
-<a id="cache-expiration" class="xliff"></a>  
+### <a name="cache-expiration"></a>Expiration du cache  
   
 Vous pouvez déterminer si vous voulez faire expirer le cache pour le rapport paginé après une certaine quantité de temps ou si vous préférez le faire selon une planification. Vous pouvez utiliser une planification partagée.  
   
 > [!NOTE]
 > Cela n’actualise pas le cache.  
   
-### Plans d'actualisation du cache
-<a id="cache-refresh-plans" class="xliff"></a>  
+### <a name="cache-refresh-plans"></a>Plans d'actualisation du cache  
   
 Vous pouvez utiliser des plans d’actualisation du cache pour créer des planifications de préchargement de copies temporaires des données pour un rapport paginé dans le cache. Un plan d'actualisation inclut une planification et la possibilité de spécifier ou de remplacer des valeurs pour les paramètres. Vous ne pouvez pas remplacer les valeurs des paramètres marqués en lecture seule. Vous pouvez créer et utiliser plusieurs plans d'actualisation.  
    
@@ -187,8 +176,7 @@ Une fois que vous avez terminé, vous pouvez sélectionner **Créer un plan d’
   
 Vous pouvez ensuite **Modifier** ou **Supprimer** des plans répertoriés. L’option **Créer à partir d'un élément existant** est activée lorsqu'un seul et unique plan d'actualisation du cache est sélectionné. Cette option crée un nouveau plan d'actualisation copié à partir du plan d'origine. La page du plan d'actualisation du cache qui s'ouvre contient les détails du plan sélectionné. Vous pouvez alors modifier les options du plan d'actualisation et enregistrer ce dernier en utilisant une nouvelle description.  
   
-## Instantanés d’historique
-<a id="history-snapshots" class="xliff"></a>  
+## <a name="history-snapshots"></a>Instantanés d’historique  
   
 Utilisez la page Instantanés d’historique pour afficher des instantanés de rapport qui sont générés et stockés dans le temps. Selon les options définies, l’historique de rapport peut contenir seulement les instantanés les plus récents.  
   
@@ -198,8 +186,7 @@ Pour générer un instantané, le rapport doit pouvoir s’exécuter sans assist
   
 Vous pouvez cliquer sur un instantané d'historique de rapport pour l'afficher. Les instantanés qui apparaissent dans l'historique de rapport ne sont différenciés que par la date et l'heure de leur création. Il n'y a aucun moyen de déterminer si un instantané a été généré par une opération manuelle ou planifiée.  
   
-## Sécurité
-<a id="security" class="xliff"></a>  
+## <a name="security"></a>Sécurité  
 Utilisez la page Propriétés de sécurité pour afficher ou modifier les paramètres de sécurité qui déterminent l’accès au rapport. Cette page est disponible pour les éléments que vous êtes autorisé à sécuriser.  
   
 L'accès aux éléments est défini par l'intermédiaire des attributions de rôle qui spécifient les tâches que peuvent effectuer un groupe ou un utilisateur. Une attribution de rôle est composée d'un nom d'utilisateur ou de groupe et d'une ou plusieurs définitions de rôles qui spécifient une collection de tâches.  
@@ -208,8 +195,7 @@ L'accès aux éléments est défini par l'intermédiaire des attributions de rô
   
 Sélectionnez cet élément pour modifier la façon dont la sécurité est définie pour l’élément actif.
 
-## Étapes suivantes
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Étapes suivantes
 
 [Portail Web](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Travailler avec les Datasets partagés](../reporting-services/work-with-shared-datasets-web-portal.md)

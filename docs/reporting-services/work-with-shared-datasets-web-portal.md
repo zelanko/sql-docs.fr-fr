@@ -18,11 +18,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# Utiliser des datasets partagés - portail web
-<a id="work-with-shared-datasets---web-portal" class="xliff"></a>
+# <a name="work-with-shared-datasets---web-portal"></a>Utiliser des datasets partagés - portail web
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -30,8 +29,7 @@ Avec un dataset partagé, vous pouvez gérer les paramètres d'un jeu de donnée
 
 Vous pouvez afficher et gérer les propriétés d’un dataset partagé dans le portail web. À partir du portail web, vous pouvez lancer le Générateur de rapports pour créer ou modifier des datasets partagés.
 
-## Création d’un dataset partagé
-<a id="create-a-shared-dataset" class="xliff"></a>
+## <a name="create-a-shared-dataset"></a>Création d’un dataset partagé
   
 Procédez comme suit pour créer un dataset partagé.  
   
@@ -49,8 +47,7 @@ Procédez comme suit pour créer un dataset partagé.
   
 6.  Créez votre dataset, puis sélectionnez l’icône **Enregistrer** dans l’angle supérieur gauche pour enregistrer le dataset dans le serveur de rapports.  
   
-## Gestion d’un dataset partagé existant
-<a id="manage-an-existing-shared-dataset" class="xliff"></a>
+## <a name="manage-an-existing-shared-dataset"></a>Gestion d’un dataset partagé existant
   
 Procédez comme suit pour gérer un dataset existant.  
   
@@ -65,15 +62,13 @@ Procédez comme suit pour gérer un dataset existant.
   
     ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
   
-## Propriétés
-<a id="properties" class="xliff"></a>
+## <a name="properties"></a>Propriétés
   
 Dans la fenêtre des propriétés, vous pouvez modifier le **nom** et la **description** du dataset. Vous pouvez également utiliser les fonctions **Supprimer**, **Déplacer**, **Modifier dans le Générateur de rapports**, **Télécharger** ou **Remplacer**.  
   
 ![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
   
-## Mise en cache
-<a id="caching" class="xliff"></a>
+## <a name="caching"></a>Mise en cache
   
 Vous disposez de différentes options de mise en cache des données d’un dataset. Vous pouvez commencer avec une simple sélection.  
   
@@ -87,8 +82,7 @@ Vous disposerez d’options supplémentaires en sélectionnant **Mettre en cache
   
 ![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
   
-### Expiration du cache
-<a id="cache-expiration" class="xliff"></a>  
+### <a name="cache-expiration"></a>Expiration du cache  
   
 Vous pouvez déterminer si vous voulez faire expirer le cache pour le dataset partagé après un certain intervalle, ou si vous préférez définir une planification. Vous pouvez utiliser une planification partagée.  
   
@@ -97,8 +91,7 @@ Vous pouvez déterminer si vous voulez faire expirer le cache pour le dataset pa
 > [!NOTE]
 > La définition d’un délai d’expiration n’actualise pas le cache. Sans un plan d’actualisation du cache, les données sont actualisées à l’exécution suivante du dataset.  
   
-### Plans d'actualisation du cache
-<a id="cache-refresh-plans" class="xliff"></a>  
+### <a name="cache-refresh-plans"></a>Plans d'actualisation du cache  
   
 Vous pouvez utiliser des plans d’actualisation du cache pour créer des planifications de préchargement de copies temporaires des données pour un dataset partagé dans le cache. Un plan d'actualisation inclut une planification et la possibilité de spécifier ou de remplacer des valeurs pour les paramètres. Vous ne pouvez pas remplacer les valeurs des paramètres marqués en lecture seule. Vous pouvez créer et utiliser plusieurs plans d'actualisation.   
   

@@ -1,5 +1,5 @@
 ---
-title: "Types de données dans les expressions (Générateur de rapports et SSRS) | Microsoft Docs"
+title: "Types de données dans les Expressions (Générateur de rapports et SSRS) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ae8de6c7f599e9e6e3414a5f0296213e0dbc89e7
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Types de données dans les expressions (Générateur de rapports et SSRS)
@@ -68,7 +68,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Modifiez la requête de dataset pour ajouter un nouveau champ de requête avec les données converties. Pour les sources de données relationnelles ou multidimensionnelles, cette procédure utilise les ressources de la source de données pour effectuer la conversion.  
   
--   Créez un champ calculé à partir d'un champ de dataset du rapport existant en écrivant une expression qui convertit toutes les données d'une colonne d'ensemble de résultats en une nouvelle colonne utilisant un type de données différent. Par exemple, l'expression suivante convertit la valeur du champ Année de nombre entier en chaîne : `=CStr(Fields!Year.Value)`. Pour plus d’informations, consultez [Ajouter, modifier ou actualiser des champs dans le volet des données de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
+-   Créez un champ calculé à partir d'un champ de dataset du rapport existant en écrivant une expression qui convertit toutes les données d'une colonne d'ensemble de résultats en une nouvelle colonne utilisant un type de données différent. Par exemple, l'expression suivante convertit la valeur du champ Année de nombre entier en chaîne : `=CStr(Fields!Year.Value)`. Pour plus d’informations, consultez [Ajouter, modifier ou actualiser des champs dans le volet des données de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
 -   Vérifiez si l'extension de traitement des données que vous utilisez inclut les métadonnées permettant d'extraire des données préformatées. Par exemple, une requête MDX [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclut une propriété étendue FORMATTED_VALUE pour les valeurs de cube qui ont déjà été mises en forme pendant le traitement du cube. Pour plus d’informations, consultez [Propriétés de champ étendues pour une base de données Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
@@ -100,9 +100,9 @@ ms.lasthandoff: 08/03/2017
  Lorsque vous vous connectez à une source de données par le biais d'un fournisseur de données qui ne prend pas en charge la conversion de tous les types de données de la source, le type de données par défaut utilisé pour les types de source de données non pris en charge est Chaîne. Les exemples suivants proposent des solutions pour les types de données spécifiques retournés en tant que chaîne.  
   
 ### <a name="concatenating-a-string-and-a-clr-datetimeoffset-data-type"></a>Concaténation d'une chaîne en type de données CLR DateTimeOffset  
- Pour la plupart des types de données, le CLR assure des conversions par défaut vous permettant de concaténer des valeurs utilisant des types de données différents en une seule chaîne à l'aide de l'opérateur &. Par exemple, l’expression suivante concatène le texte « Les date et heure sont : » avec un champ de dataset StartDate, qui est une valeur <xref:System.DateTime> : `="The date and time are: " & Fields!StartDate.Value`.  
+ Pour la plupart des types de données, le CLR assure des conversions par défaut vous permettant de concaténer des valeurs utilisant des types de données différents en une seule chaîne à l'aide de l'opérateur &. Par exemple, l'expression suivante concatène le texte "Les date et heure sont : " avec un champ de dataset StartDate, qui est une valeur <xref:System.DateTime> : `="The date and time are: " & Fields!StartDate.Value`.  
   
- Pour certains types de données, il peut être nécessaire d'inclure la fonction ToString. Par exemple, l’expression suivante affiche le même exemple en utilisant le type de données CLR <xref:System.DateTimeOffset>qui inclut la date, l’heure et un décalage de fuseau horaire par rapport au fuseau horaire UTC : `="The time is: " & Fields!StartDate.Value.ToString()`.  
+ Pour certains types de données, il peut être nécessaire d'inclure la fonction ToString. Par exemple, l’expression suivante affiche le même exemple utilisant le type de données CLR <xref:System.DateTimeOffset>, qui inclut la date, l’heure et un fuseau horaire décalée par rapport au fuseau horaire UTC : `="The time is: " & Fields!StartDate.Value.ToString()`.  
   
 ### <a name="converting-a-string-data-type-to-a-clr-datetime-data-type"></a>Conversion d'un type de données String en type de données CLR DateTime  
  Si une extension de traitement de données ne prend pas en charge tous les types de données définis dans une source de données, les données peuvent être extraites au format texte. Par exemple, une valeur utilisant le type de données **datetimeoffset(7)** peut être extraite en tant que type de données String. À Perth, en Australie, la valeur de chaîne pour le 1er juillet 2008, à 6:05:07.9999999 A.M. s'affiche alors sous la forme :  
@@ -145,7 +145,7 @@ ms.lasthandoff: 08/03/2017
   
  Pour plus d’informations sur les types de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) et [Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) dans la [documentation en ligne SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
   
- Pour plus d’et dans laformations sur les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , consultez [Types de données dans Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) et dans la [SQL Server Books Onlet dans lae](http://go.microsoft.com/fwlink/?linkid=120955).  
+ Pour plus d’informations sur les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Types de données dans Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) et dans la [documentation en ligne SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise en forme des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

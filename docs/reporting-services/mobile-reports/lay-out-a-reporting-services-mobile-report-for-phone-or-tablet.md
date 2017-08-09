@@ -1,5 +1,5 @@
 ---
-title: "Concevoir un rapport mobile Reporting Services pour téléphone ou tablette | Microsoft Docs"
+title: "Créer un rapport mobile Reporting Services pour le téléphone ou tablette | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,11 +14,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 283c93958b4cb8bedc890e8af942db3bc3c13a41
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="lay-out-a-reporting-services-mobile-report-for-phone-or-tablet"></a>Concevoir un rapport mobile Reporting Services pour téléphone ou tablette

@@ -23,13 +23,11 @@ ms.contentlocale: fr-fr
 ms.lasthandoff: 06/22/2017
 
 ---
-<a id="integrating-reporting-services-using-reportviewer-controls---get-started" class="xliff"></a>
-# Intégration de Reporting Services à l’aide de contrôles ReportViewer - mise en route
+# <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>Intégration de Reporting Services à l’aide de contrôles ReportViewer - mise en route
 
 Découvrez comment les développeurs peuvent incorporer des rapports paginés dans des sites web ASP.Net et les applications Windows forms, via le contrôle de ReportViewer Reporting Services 2016. Vous pouvez ajouter le contrôle à un nouveau projet, ou mettre à jour un projet existant.
 
-<a id="adding-the-reportviewer-control-to-a-new-web-project" class="xliff"></a>
-## Ajout du contrôle ReportViewer pour un projet web
+## <a name="adding-the-reportviewer-control-to-a-new-web-project"></a>Ajout du contrôle ReportViewer pour un projet web
 
 1. Créer un nouveau **Site Web ASP.NET vide** ou ouvrez un projet ASP.NET existant.
 
@@ -82,13 +80,11 @@ La dernière page doit ressembler à ce qui suit.
 
 ```
 
-<a id="updating-an-existing-project-to-use-the-reportviewer-control" class="xliff"></a>
-## Mise à jour d’un projet existant pour utiliser le contrôle ReportViewer
+## <a name="updating-an-existing-project-to-use-the-reportviewer-control"></a>Mise à jour d’un projet existant pour utiliser le contrôle ReportViewer
 
 Pour utiliser le contrôle ReportViewer 2016 dans un projet existant, ajoutez le contrôle via Nuget et mettre à jour les références d’assembly vers la version *14.0.0.0*. Cela inclut la mise à jour web.config du projet et toutes les pages .aspx qui référencent le contrôle ReportViewer.
 
-<a id="sample-webconfig-changes" class="xliff"></a>
-### Exemple web.config change
+### <a name="sample-webconfig-changes"></a>Exemple web.config change
 
 ```
 <?xml version="1.0"?>
@@ -135,8 +131,7 @@ Pour utiliser le contrôle ReportViewer 2016 dans un projet existant, ajoutez le
 </configuration>
 ```
 
-<a id="sample-aspx" class="xliff"></a>
-### Exemple .aspx
+### <a name="sample-aspx"></a>Exemple .aspx
 
 ```
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SampleAspx" %>
@@ -147,8 +142,7 @@ Pour utiliser le contrôle ReportViewer 2016 dans un projet existant, ajoutez le
 <!DOCTYPE html>
 ```
 
-<a id="adding-the-reportviewer-control-to-a-new-windows-forms-project" class="xliff"></a>
-## Ajout du contrôle ReportViewer pour un projet Windows forms
+## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>Ajout du contrôle ReportViewer pour un projet Windows forms
 
 1. Créer un nouveau **Application Windows Forms** ou ouvrez un projet existant.
 
@@ -183,15 +177,13 @@ Pour utiliser le contrôle ReportViewer 2016 dans un projet existant, ajoutez le
     }
     ```
 
-<a id="how-to-set-100-height-on-the-report-viewer-2016-control" class="xliff"></a>
-## Comment définir la hauteur de 100 % sur le contrôle 2016 de visionneuse de rapports
+## <a name="how-to-set-100-height-on-the-report-viewer-2016-control"></a>Comment définir la hauteur de 100 % sur le contrôle 2016 de visionneuse de rapports
 
 Le nouveau contrôle 2016 de visionneuse de rapports est optimisé pour les pages en mode de normes de HTML5 et fonctionne sur tous les navigateurs modernes. Dans le passé, avec l’ancien contrôle RVC, lorsque vous définissez la propriété de hauteur de 100 %, cela a fonctionné même si aucun des ancêtres avait la hauteur spécifiée. Ce comportement a changé dans HTML5. Lorsque vous définissez cette propriété sur le nouveau contrôle RVC, il fonctionnera correctement que si l’élément parent possède une hauteur définie, autrement dit, pas la valeur auto ou tous les ancêtres de RVC offrent de hauteur de 100 %.
 
 Voici les deux exemples pour ce faire.
 
-<a id="by-setting-the-height-of-all-the-parent-elements-to-100" class="xliff"></a>
-### En définissant la hauteur du parent tous les éléments à 100 %
+### <a name="by-setting-the-height-of-all-the-parent-elements-to-100"></a>En définissant la hauteur du parent tous les éléments à 100 %
 
 ```
 <!DOCTYPE html>
@@ -217,8 +209,7 @@ Voici les deux exemples pour ce faire.
 
 ```
 
-<a id="by-setting-the-style-height-attribute-on-the-parent-of-the-reportviewer-control" class="xliff"></a>
-### En définissant l’attribut de hauteur de style sur le parent du contrôle reportviewer
+### <a name="by-setting-the-style-height-attribute-on-the-parent-of-the-reportviewer-control"></a>En définissant l’attribut de hauteur de style sur le parent du contrôle reportviewer
 
 Pour plus d’informations sur les longueurs de pourcentage de la fenêtre d’affichage, consultez [longueurs de pourcentage de la fenêtre d’affichage](https://www.w3.org/TR/css3-values/#viewport-relative-lengths).
 
@@ -241,8 +232,7 @@ Pour plus d’informations sur les longueurs de pourcentage de la fenêtre d’a
 
 ```
 
-<a id="adding-control-to-visual-studio-toolbar" class="xliff"></a>
-## Ajout du contrôle de barre d’outils de Visual Studio
+## <a name="adding-control-to-visual-studio-toolbar"></a>Ajout du contrôle de barre d’outils de Visual Studio
 
 Le contrôle Visionneuse de rapports est désormais fourni comme package NuGet. Pour cette raison, vous ne verrez pas le contrôle Visionneuse de rapports s’affichent dans la boîte à outils Visual Studio par défaut. Vous pouvez ajouter le contrôle à la boîte à outils en procédant comme suit.
 
@@ -269,16 +259,14 @@ Le contrôle Visionneuse de rapports est désormais fourni comme package NuGet. 
 
     ![ssRS-boîte à outils-rvcontrol](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
 
-<a id="things-to-be-aware-of" class="xliff"></a>
-### Éléments à connaître
+### <a name="things-to-be-aware-of"></a>Éléments à connaître
 
 - Cette opération ajoute une référence pour le package NuGet installé dans votre projet en cours. L’élément dans la boîte à outils est conservées à d’autres projets. Lorsque vous installez le package NuGet dans un nouvelle solution/projet, l’élément de boîte à outils peut faire référence à une version antérieure. 
 
 - Le contrôle doit rester dans la boîte à outils, même si l’assembly n’est plus disponible. Si ce projet a été supprimé, Visual Studio génère une erreur si vous essayez et ajoutez le contrôle de la boîte à outils. Pour corriger cette erreur, supprimez le contrôle à partir de la boîte à outils et ajoutez-le de nouveau à l’aide de la procédure ci-dessus.
 
 
-<a id="common-issues" class="xliff"></a>
-## Problèmes courants
+## <a name="common-issues"></a>Problèmes courants
     
 - Le contrôle ReportViewer 2016 est conçu pour être utilisé avec les navigateurs modernes. Le contrôle peut ne pas fonctionne si les navigateurs restituent la page web dans un mode de compatibilité Internet Explorer. Les sites intranet peuvent nécessiter une balise meta pour remplacer le paramètre qui encourager le rendu des pages de l’intranet en mode de compatibilité.
 
@@ -286,13 +274,11 @@ Le contrôle Visionneuse de rapports est désormais fourni comme package NuGet. 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     ```
       
-<a id="providing-feedback" class="xliff"></a>
-## Envoi de commentaires
+## <a name="providing-feedback"></a>Envoi de commentaires
 
 Informer l’équipe de problèmes rencontrés avec le contrôle sur le [forums MSDN de Services Reporting](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices) ou par courrier électronique en [ RVCFeedback@microsoft.com ](mailto:RVCFeedback@microsoft.com).
 
-<a id="see-also" class="xliff"></a>
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Collecte de données dans le contrôle de ReportingViewer 2016](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
 D’autres questions ? [Essayez le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
