@@ -52,8 +52,8 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [FirstChild & #40 ; MDX & #41 ;](../mdx/firstchild-mdx.md)   
- [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
+ [FirstChild &#40; MDX &#41;](../mdx/firstchild-mdx.md)   
+ [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
 

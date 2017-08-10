@@ -66,7 +66,7 @@ CEILING(0.00)
  Renvoie 0,00  
   
 ## <a name="see-also"></a>Voir aussi  
- [FLOOR & #40 ; Expression SSIS & #41 ;](../../integration-services/expressions/floor-ssis-expression.md)   
- [Fonctions & #40 ; Expression SSIS & #41 ;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [FLOOR &#40; Expression SSIS &#41;](../../integration-services/expressions/floor-ssis-expression.md)   
+ [Fonctions &#40; Expression SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

@@ -116,7 +116,7 @@ Le tableau suivant contient le mappage de type par défaut entre ASE et [!INCLUD
 |**NCHAR [4001..\*]**|**nvarchar(max)**|  
 |**numeric**|**numeric**|  
 |**numérique [\*... \*]**|**numérique [\*]**|  
-|**numérique [\*... \*][\*.. \*]**|**numeric[\*][\*]**|  
+|**numérique [\*..\*][\*..\*]**|**numeric[\*][\*]**|  
 |**nvarchar**|**nvarchar**|  
 |**nvarchar [\*... 4000]**|**nvarchar [\*]**|  
 |**nvarchar [4001..\*]**|**nvarchar(max)**|  

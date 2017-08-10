@@ -47,9 +47,9 @@ DMX_Expression < DMX_Expression
  Valeur booléenne contenant la valeur TRUE si les deux paramètres ont la valeur Non NULL et si le premier paramètre a une valeur inférieure à la valeur du deuxième paramètre. La valeur booléenne contient FALSE si les deux paramètres ont la valeur Non NULL et si le premier paramètre a une valeur qui est égale à ou supérieure à la valeur du deuxième paramètre. La valeur booléenne contient une valeur NULL si l'un des deux ou les deux paramètres donnent comme résultat une valeur NULL.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Opérateurs de comparaison & #40 ; DMX & #41 ;](../dmx/operators-comparison.md)   
- [Les Extensions d’exploration de données & #40 ; DMX & #41 ; Référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Opérateurs & #40 ; DMX & #41 ;](../dmx/operators-dmx.md)  
+ [Opérateurs de comparaison &#40; DMX &#41;](../dmx/operators-comparison.md)   
+ [Les Extensions d’exploration de données &#40; DMX &#41; Référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Opérateurs &#40; DMX &#41;](../dmx/operators-dmx.md)  
   
   
 

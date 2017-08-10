@@ -79,7 +79,7 @@ ms.lasthandoff: 08/03/2017
  Pour plus d’informations, consultez [Propriétés personnalisées des sources CDC](../../integration-services/data-flow/cdc-source-custom-properties.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de Source de capture de données modifiées & #40 ; Page colonnes & #41 ;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)   
- [Éditeur de Source de capture de données modifiées & #40 ; Page sortie d’erreur & #41 ;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+ [Éditeur de Source de capture de données modifiées &#40; Page colonnes &#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)   
+ [Éditeur de Source de capture de données modifiées &#40; Page sortie d’erreur &#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
   

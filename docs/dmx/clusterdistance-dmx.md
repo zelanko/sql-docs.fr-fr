@@ -62,13 +62,13 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="related-prediction-functions"></a>Fonctions de prédiction connexes  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit les fonctions supplémentaires suivantes permettant d'interroger des modèles de clustering :  
   
--   Utilisez le [Cluster & #40 ; DMX & #41 ;](../dmx/cluster-dmx.md) fonction pour retourner le cluster le plus probable.  
+-   Utilisez le [Cluster &#40; DMX &#41;](../dmx/cluster-dmx.md) fonction pour retourner le cluster le plus probable.  
   
--   Utilisez le [ClusterProbability & #40 ; DMX & #41 ;](../dmx/clusterprobability-dmx.md) fonction permettant d’obtenir la probabilité qu’un cas appartienne à un cluster particulier. Cette valeur est l'inverse de la distance de cluster.  
+-   Utilisez le [ClusterProbability &#40; DMX &#41;](../dmx/clusterprobability-dmx.md) fonction permettant d’obtenir la probabilité qu’un cas appartienne à un cluster particulier. Cette valeur est l'inverse de la distance de cluster.  
   
--   Utilisez le [PredictHistogram & #40 ; DMX & #41 ;](../dmx/predicthistogram-dmx.md) fonction pour retourner un histogramme de la probabilité du cas d’entrée dans chacun des clusters du modèle.  
+-   Utilisez le [PredictHistogram &#40; DMX &#41;](../dmx/predicthistogram-dmx.md) fonction pour retourner un histogramme de la probabilité du cas d’entrée dans chacun des clusters du modèle.  
   
--   Utilisez le [PredictCaseLikelihood & #40 ; DMX & #41 ;](../dmx/predictcaselikelihood-dmx.md) fonction pour retourner une mesure comprise entre 0 et 1 qui indique la probabilité un cas d’entrée existe, compte tenu du modèle appris par l’algorithme.  
+-   Utilisez le [PredictCaseLikelihood &#40; DMX &#41;](../dmx/predictcaselikelihood-dmx.md) fonction pour retourner une mesure comprise entre 0 et 1 qui indique la probabilité un cas d’entrée existe, compte tenu du modèle appris par l’algorithme.  
   
 ## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>Exemple 1 : obtention de la distance de cluster au cluster le plus probable  
  L'exemple suivant retourne la distance séparant le cas spécifié du cluster auquel il est le plus susceptible d'appartenir.  
@@ -138,9 +138,9 @@ NATURAL PREDICTION JOIN
 |0.97008209236394|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Cluster & #40 ; DMX & #41 ;](../dmx/cluster-dmx.md)   
- [Les Extensions d’exploration de données & #40 ; DMX & #41 ; Référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Fonctions & #40 ; DMX & #41 ;](../dmx/functions-dmx.md)   
+ [Cluster &#40; DMX &#41;](../dmx/cluster-dmx.md)   
+ [Les Extensions d’exploration de données &#40; DMX &#41; Référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Fonctions &#40; DMX &#41;](../dmx/functions-dmx.md)   
  [Contenu du modèle d’exploration de données pour le Clustering des modèles &#40; Analysis Services - Exploration de données &#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

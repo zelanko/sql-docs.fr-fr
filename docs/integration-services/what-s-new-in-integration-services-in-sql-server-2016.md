@@ -173,7 +173,7 @@ La fonctionnalité de déploiement incrémentiel de packages vous permet de dép
   
 -   API MOM (Management Object Model)  
   
- Pour plus d’informations, consultez [Integration Services (SSIS) déployer des projets et Packages] (.. / integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md.  
+ Pour plus d’informations, consultez [Integration Services (SSIS) déployer des projets et Packages] (../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md.  
 
 ####  <a name="encrypted"></a> Prise en charge de la fonctionnalité Always Encrypted dans le catalogue SSIS  
  SSIS prend déjà en charge la fonctionnalité de chiffrement intégral dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez les billets de blog suivants.  
