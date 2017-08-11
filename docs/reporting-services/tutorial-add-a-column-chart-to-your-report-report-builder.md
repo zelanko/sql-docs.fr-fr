@@ -16,7 +16,7 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c231648deb4920a3e36a594271d1c9c199313668
 ms.contentlocale: fr-fr
@@ -36,7 +36,7 @@ L'illustration suivante montre l'histogramme que vous allez créer, avec une moy
   
 ![didacticiel-histogramme-générateur-de-rapports](../reporting-services/media/report-builder-column-chart-tutorial.png)    
 > [!NOTE]  
-> Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, le choix d’une source de données et la création d’un dataset, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, le choix d’une source de données et la création d’un dataset, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Durée estimée pour effectuer ce didacticiel : 15 minutes.  
   
@@ -55,7 +55,7 @@ Dans cette section, vous utilisez l’Assistant Graphique pour créer un dataset
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
-    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou Dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
+    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
@@ -68,7 +68,7 @@ Dans cette section, vous utilisez l’Assistant Graphique pour créer un dataset
     > [!NOTE]  
     > La source de données que vous choisissez n'a pas d'importance, tant que vous disposez des autorisations appropriées. Vous n'allez pas récupérer de données à partir de la source de données. Pour plus d’informations, consultez [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-6.  Dans la page **Créer une requête**, cliquez sur **Modifier en tant que texte**.  
+6.  Dans la page **Créer une requête** , cliquez sur **Modifier en tant que texte**.  
   
 7.  Collez la requête suivante dans le volet de requête :  
   
@@ -127,9 +127,9 @@ Par défaut, l'axe horizontal affiche les valeurs dans un format général qui e
   
 1.  Basculez en mode création de rapport.  
   
-2.  Cliquez avec le bouton droit sur l’axe horizontal > **Propriétés de l’axe horizontal**.  
+2.  Cliquez sur l’axe horizontal > **propriétés de l’axe Horizontal**.  
   
-3.  Sous l’onglet **Nombre**, dans **Catégorie**, sélectionnez **Date**.  
+3.  Sous l’onglet **Nombre** , dans **Catégorie**, sélectionnez **Date**.  
   
 5.  Dans la zone **Type** , sélectionnez **31 Jan 2000**.  
   
@@ -143,15 +143,15 @@ La date s'affiche dans le format de date que vous avez sélectionné. Le graphiq
   
 Vous pouvez personnaliser l'affichage des étiquettes en les faisant pivoter et en spécifiant l'intervalle.  
   
-## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4. Faire pivoter les étiquettes d’axes sur l’axe horizontal  
+## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4. Faire pivoter les étiquettes d’axe sur l’axe horizontal  
   
 1.  Basculez en mode création de rapport.  
   
 2.  Cliquez avec le bouton droit sur le titre de l’axe horizontal, puis cliquez sur **Afficher le titre de l’axe** pour supprimer le titre. Étant donné que l'axe horizontal indique les dates, le titre n'est pas nécessaire.  
   
-3.  Cliquez avec le bouton droit sur l’axe horizontal > **Propriétés de l’axe horizontal**.  
+3.  Cliquez sur l’axe horizontal > **propriétés de l’axe Horizontal**.  
   
-5.  Sous l’onglet **Étiquettes**, sous **Modifier les options d’ajustement automatique des étiquettes d’axe**, sélectionnez **Désactiver l’ajustement automatique**.  
+5.  Sous l’onglet **Étiquettes** , sous **Modifier les options d’ajustement automatique des étiquettes d’axe**, sélectionnez **Désactiver l’ajustement automatique**.  
   
 7.  Dans **Angle de rotation des étiquettes**, sélectionnez **-90**.  
   
@@ -172,7 +172,7 @@ La légende est créée automatiquement à partir des données de catégories et
   
 1.  Basculez en mode création de rapport.  
   
-2.  Cliquez avec le bouton droit sur la légende du graphique > **Propriétés de la légende**.  
+2.  Avec le bouton droit sur la légende du graphique > **propriétés de la légende**.  
   
 3.  Sous **Mise en page et position**, sélectionnez une autre position. Par exemple, sélectionnez l’option en bas au milieu.  
   
@@ -180,7 +180,7 @@ La légende est créée automatiquement à partir des données de catégories et
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  (Facultatif) Ce didacticiel ne comprenant qu’une seule catégorie, le graphique n’a pas besoin de légende. Pour la supprimer, cliquez sur la légende > **Supprimer la légende**.  
+5.  (Facultatif) Ce didacticiel ne comprenant qu’une seule catégorie, le graphique n’a pas besoin de légende. Pour le supprimer, cliquez sur la légende > **supprimer la légende**.  
   
 6.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
@@ -199,21 +199,21 @@ Par défaut, l'axe vertical affiche les valeurs dans un format général qui est
   
 2. Cliquez sur les étiquettes figurant sur l’axe vertical, sur le côté gauche du graphique, pour les sélectionner.  
   
-3.  Sous l’onglet **Accueil** > groupe **Nombre**, cliquez sur le bouton **Devise**. Les étiquettes de l'axe changent pour afficher le format monétaire.  
+3.  Sur le **accueil** onglet > **nombre** , cliquez sur le **devise** bouton. Les étiquettes de l'axe changent pour afficher le format monétaire.  
   
 4.  Cliquez sur le bouton **Réduire les décimales** à deux reprises, pour afficher le nombre arrondi au dollar le plus proche.  
   
-5.  Cliquez avec le bouton droit sur l’axe vertical > **Propriétés de l’axe vertical**.  
+5.  Cliquez sur l’axe vertical > **propriétés de l’axe Vertical**.  
   
-6.  Sous l’onglet **Nombre**, notez que **Devise** est déjà sélectionné dans la zone **Catégorie** et que **Nombre de décimales** est déjà **0** (zéro).  
+6.  Sous l’onglet **Nombre** , notez que **Devise** est déjà sélectionné dans la zone **Catégorie** et que **Nombre de décimales** est déjà **0** (zéro).  
   
 7.  Sélectionnez l’option **Afficher les valeurs en**. **Milliers** est déjà sélectionné.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. Cliquez avec le bouton droit sur l’axe vertical > **Afficher le titre de l’axe**. 
+9. Cliquez sur l’axe vertical > **afficher le titre axe**. 
 
-10. Cliquez avec le bouton droit sur le titre de l’axe vertical > **Propriétés du titre de l’axe**.  
+10. Cliquez sur le titre de l’axe vertical > **propriétés du titre axe**.  
   
 10. Remplacez le texte du champ **Texte du titre** par **Total des ventes (en milliers)**. Vous pouvez également spécifier diverses options de mise en forme du titre.  
   
@@ -283,7 +283,7 @@ Le graphique présente une ligne qui indique la moyenne mobile pour le total des
   
 4.  Sélectionnez **Graphique sur les ventes** et, sous l’onglet **Accueil** > section **Police** > **Gras**.  
   
-5.  Sélectionnez **Janvier à décembre 2015** et, sous l’onglet **Accueil** > section **Police** > affectez la valeur **10** à la taille de police.  
+5.  Sélectionnez **janvier à décembre 2015**, puis, dans le **accueil** onglet > **police** section > définir la taille de police **10**.  
   
 6.  (Facultatif) Vous devrez peut-être agrandir la zone de texte **Titre** pour contenir les deux lignes de texte. Tirez sur les flèches gauche-droite quand vous cliquez au milieu du bord inférieur. Et vous devrez peut-être faire glisser le haut du graphique pour que le titre soit visible.  
   
@@ -306,7 +306,7 @@ Le graphique présente une ligne qui indique la moyenne mobile pour le total des
 4.  Cliquez sur **Enregistrer**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
-Vous avez terminé le didacticiel Ajout d'un histogramme à un rapport. Pour en savoir plus sur les graphiques, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) et [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+Vous avez terminé le didacticiel Ajout d'un histogramme à un rapport. Pour en savoir plus sur les graphiques, consultez [graphiques &#40; Le Générateur de rapports et SSRS &#41; ](../reporting-services/report-design/charts-report-builder-and-ssrs.md) et [graphiques sparkline et barres de données &#40; Le Générateur de rapports et SSRS &#41; ](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
 -    [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md) 

@@ -26,14 +26,14 @@ helpviewer_keywords:
 - Web service [Reporting Services], delivery extension settings
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
 caps.latest.revision: 36
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 668c3d31af5f287d7d254c2dc666e20a5f6328fa
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: bc52f95cdc038c0074feb10b05fffe916b3d3da1
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Paramètres des extensions de remise de Reporting Services
@@ -45,7 +45,7 @@ ms.lasthandoff: 06/13/2017
 ## <a name="e-mail-delivery-settings"></a>Paramètres de remise par messagerie  
  Le tableau suivant répertorie les paramètres de remise par messagerie pour les abonnements qui utilisent la messagerie électronique du serveur de rapports.  
   
-|Paramètre|Value|  
+|Paramètre|Valeur|  
 |-------------|-----------|  
 |**À**|L’adresse de messagerie qui apparaît sur le **à** ligne du message électronique. Les adresses de messagerie multiples sont séparées par des points-virgules. Obligatoire.|  
 |**CC**|L’adresse de messagerie qui apparaît sur le **Cc** ligne du message électronique. Les adresses de messagerie multiples sont séparées par des points-virgules. Ce paramètre est facultatif.|  
@@ -72,7 +72,7 @@ ms.lasthandoff: 06/13/2017
 |**WRITEMODE**|Mode écriture à utiliser lors de l'accès au disque. Les valeurs valides sont **aucun**, **remplacer**, et **AutoIncrement**.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations techniques de référence &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)   
+ [Informations techniques de référence &#40; SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)   
  [Génération d’Applications à l’aide du Service Web et le .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

@@ -14,7 +14,7 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6a9eef590a80442110d49359c789ff5317246791
 ms.contentlocale: fr-fr
@@ -26,9 +26,9 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-create-a-folder"></a>Pour créer un dossier  
   
-1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Démarrer le [le Gestionnaire de rapports &#40; En Mode natif de SSRS &#41; ](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
-2.  Dans le portail web, sélectionnez **Dossier** sous le menu déroulant **Nouveau**. Une autre solution consiste à créer un dossier sous un dossier existant, à accéder à ce dossier, puis à sélectionner **Dossier** sous le menu déroulant **Nouveau** .  
+2.  Dans le portail web, sélectionnez **Dossier** sous le menu déroulant **Nouveau** . Une autre solution consiste à créer un dossier sous un dossier existant, à accéder à ce dossier, puis à sélectionner **Dossier** sous le menu déroulant **Nouveau** .  
   
      La boîte de dialogue **Créer un dossier dans** s’ouvre.  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/09/2017
 6.  Cliquez sur **Appliquer** pour enregistrer vos modifications.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Recherche, affichage et la gestion des rapports &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
 

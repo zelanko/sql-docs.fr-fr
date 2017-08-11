@@ -16,7 +16,7 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 356d795aec5249ecf4f990d549c8eacb70e25f03
 ms.contentlocale: fr-fr
@@ -46,7 +46,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
-    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou Dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
+    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
   
 2.  Dans le volet gauche, vérifiez que **Nouveau rapport** est sélectionné. 
  
@@ -60,9 +60,9 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
   
 3.  Cliquez sur **Utiliser une connexion incorporée dans mon rapport**.  
   
-4.  Vérifiez que le type de connexion est Microsoft SQL Server puis, dans la zone **Chaîne de connexion**, tapez **Data Source = \<nom_du_serveur>**  
+4.  Vérifiez que le type de connexion est Microsoft SQL Server, puis, dans le **chaîne de connexion** zone : **Source de données = \<nom_serveur >**  
   
-    **\<nom du serveur>**, par exemple Rapport001, spécifie un ordinateur sur lequel une instance du moteur de base de données SQL Server est installée. Dans la mesure où les données du rapport ne sont pas extraites d’une base de données SQL Server, vous n’avez pas besoin d’inclure le nom d’une base de données. La base de données par défaut sur le serveur spécifié est utilisée seulement pour analyser la requête.  
+    **\<nom_serveur >**, pour l’exemple rapport001, spécifie un ordinateur sur lequel une instance du moteur de base de données SQL Server est installée. Dans la mesure où les données du rapport ne sont pas extraites d’une base de données SQL Server, vous n’avez pas besoin d’inclure le nom d’une base de données. La base de données par défaut sur le serveur spécifié est utilisée seulement pour analyser la requête.  
   
 5.  Cliquez sur **Informations d'identification**, puis entrez les informations d'identification requises pour se connecter à l'instance du moteur de base de données SQL Server.  
   
@@ -124,13 +124,13 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="List"></a>2. Ajouter et configurer une liste  
-Dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], la région de données de liste est idéale pour créer des rapports de forme libre. Elle est basée sur la région de données de *tableau matriciel* , comme le sont les tables et les matrices. Pour plus d’informations, consultez [Créer des factures et des formulaires avec des listes](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+Dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , la région de données de liste est idéale pour créer des rapports de forme libre. Elle est basée sur la région de données de *tableau matriciel* , comme le sont les tables et les matrices. Pour plus d’informations, consultez [Créer des factures et des formulaires avec des listes](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
 Vous allez utiliser une liste pour afficher les informations des ventes des secteurs de vente dans un rapport mis en forme comme une newsletter. Les informations sont regroupées par secteur. Vous allez ajouter un nouveau groupe de lignes qui regroupe les données par secteur, puis vous supprimerez le groupe de lignes Détails intégré.  
   
 ### <a name="to-add-a-list"></a>Pour ajouter une liste  
   
-1.  Sous l’onglet **Insérer** > **Régions de données** > **Liste**. 
+1.  Sur le **insérer** onglet > **des régions de données** > **liste**. 
 
 2. Cliquez dans le corps du rapport (entre les zones de titre et de pied de page) et faites glisser pour créer la zone de liste. Définissez la taille de la zone de liste sur 7 pouces de haut et 6,25 pouces de large. Pour obtenir la taille exacte, dans le volet **Propriétés** sous **Position**, entrez des valeurs pour les propriétés **Largeur** et **Hauteur** .
   
@@ -169,7 +169,7 @@ Vous allez utiliser une liste pour afficher les informations des ventes des sect
   
 5.  Sélectionnez **Supprimer les colonnes uniquement**.  
   
-6.  Dans le volet Groupes de lignes, cliquez avec le bouton droit sur le groupe **Détails**, puis cliquez sur **Supprimer le groupe**.  
+6.  Dans le volet groupes de lignes, cliquez sur le **détails** groupe > **supprimer le groupe**.  
    
 7.  Cliquez sur **Supprimer le groupe uniquement**.  
   
@@ -184,9 +184,9 @@ Un des avantages des régions de données de liste est que vous pouvez ajouter d
 
 2. Cliquez en haut à gauche de la liste et faites glisser pour créer le rectangle de 7 pouces de haut et 3,5 pouces de large. À nouveau, pour obtenir la taille exacte, dans le volet **Propriétés** sous **Position**, entrez des valeurs pour **Largeur** et pour **Hauteur**.
   
-2.  Cliquez avec le bouton droit sur le rectangle > **Propriétés du rectangle**.  
+2.  Cliquez sur le rectangle > **propriétés du Rectangle**.  
   
-3.  Cliquez sur l'onglet **Remplissage**.  
+3.  Cliquez sur l'onglet **Remplissage** .  
   
 4.  Dans **Couleur de remplissage**, sélectionnez **Gris clair**.  
    
@@ -205,7 +205,7 @@ Vous pouvez ajouter des zones de texte pour afficher le texte statique qui est r
   
 1.  Cliquez sur **Conception** pour repasser en mode Conception.  
   
-2.  Sous l’onglet **Insérer** > **Zone de texte**. Cliquez en haut à gauche de la liste, à l’intérieur du rectangle que vous avez ajouté, et faites glisser pour dimensionner la zone de texte sur 3,45 pouces de large et 5 pouces de haut.  
+2.  Sur le **insérer** onglet > **zone de texte**. Cliquez en haut à gauche de la liste, à l’intérieur du rectangle que vous avez ajouté, et faites glisser pour dimensionner la zone de texte sur 3,45 pouces de large et 5 pouces de haut.  
   
 3.  Placez le curseur dans la zone de texte et tapez **Newsletter for** . Ajoutez un espace après le mot « for », pour séparer le texte du champ que vous ajouterez à l’étape suivante.   
   
@@ -215,9 +215,9 @@ Vous pouvez ajouter des zones de texte pour afficher le texte statique qui est r
   
     ![report-builder-free-form-territory-field](../reporting-services/media/report-builder-free-form-territory-field.png)
   
-5.  Sélectionnez le texte et le champ `[Territory]`.  
+5.  Sélectionnez le texte et le champ `[Territory]` .  
   
-6.  Sous l’onglet **Accueil** > **Police**, sélectionnez : 
+6.  Sur le **accueil** onglet > **police**, sélectionnez : 
   
     *  **Segoe Semibold**.
     *  **20 pt**.
@@ -229,7 +229,7 @@ Vous pouvez ajouter des zones de texte pour afficher le texte statique qui est r
    
 11. Sélectionnez le texte que vous avez ajouté aux étapes précédentes.
   
-12. Sous l’onglet **Accueil** > **Police**, sélectionnez : 
+12. Sur le **accueil** onglet > **police**, sélectionnez : 
   
     *  **Segoe Semibold**.
     *  **16 pt**.
@@ -246,7 +246,7 @@ Vous pouvez ajouter des zones de texte pour afficher le texte statique qui est r
   
 16. Sélectionnez le texte que vous venez d’ajouter.  
   
-17.  Sous l’onglet **Accueil** > **Police**, sélectionnez : 
+17.  Sur le **accueil** onglet > **police**, sélectionnez : 
   
       *  **Segoe UI**.
       *  **10 pt**.
@@ -258,15 +258,15 @@ Vous pouvez ajouter des zones de texte pour afficher le texte statique qui est r
 
 25. Sélectionnez le texte et le champ que vous venez d’ajouter.  
   
-17.  Sous l’onglet **Accueil** > **Police**, sélectionnez : 
+17.  Sur le **accueil** onglet > **police**, sélectionnez : 
   
       *  **Segoe Semibold**.
       *  **16 pt**.
       *  **Noir**.  
   
-22. Sélectionnez simplement le champ `[Sales]`, cliquez avec le bouton droit sur le champ > **Expression**.  
+22. Sélectionnez uniquement le `[Sales]` champ, cliquez sur le champ > **Expression**.  
   
-23. Dans la zone **Expression**, modifiez l’expression pour inclure la fonction Sum comme suit :  
+23. Dans la zone **Expression** , modifiez l’expression pour inclure la fonction Sum comme suit :  
   
     ```  
     =Sum(Fields!Sales.value)  
@@ -276,7 +276,7 @@ Vous pouvez ajouter des zones de texte pour afficher le texte statique qui est r
   
     ![report-builder-free-form-text-box](../reporting-services/media/report-builder-free-form-text-box.png)
  
-29. Avec `[Sum(Sales)]` toujours sélectionné, sous l’onglet **Accueil** > Groupe **Nombre** > **Devise**.  
+29. Avec `[Sum(Sales)]` toujours sélectionné, sous la **accueil** onglet > **nombre** groupe > **devise**.  
   
 30. Cliquez avec le bouton droit sur la zone de texte contenant le texte « Cliquez pour ajouter un titre », puis cliquez sur **Supprimer**.  
   
@@ -295,7 +295,7 @@ Utilisez l'Assistant Nouveau tableau ou nouvelle matrice pour ajouter un tableau
   
 ### <a name="to-add-a-table"></a>Pour ajouter un tableau  
   
-1.  Sous l’onglet **Insérer** > Zone **Régions de données** > **Tableau** > **Assistant Tableau**.  
+1.  Sur le **insérer** onglet > **des régions de données** zone > **Table** > **Assistant Table**.  
   
 2.  Dans la page **Choisir un dataset** , cliquez sur **ListDataset** > **Suivant**.  
   
@@ -326,9 +326,9 @@ Utilisez l'Assistant Nouveau tableau ou nouvelle matrice pour ajouter un tableau
 
     ![report-builder-free-form-type-total](../reporting-services/media/report-builder-free-form-type-total.png)
 
-12. Sélectionnez le champ [SalesDate]. Sous l’onglet **Accueil** > **Nombre**, changez **Par défaut** en **Date**.
+12. Sélectionnez le champ [SalesDate]. Sur le **accueil** onglet > **nombre**, modifiez **par défaut** à **Date**.
 
-13. Sélectionnez les champs [Sum(Sales)]. Sous l’onglet **Accueil** > **Nombre**, changez **Par défaut** en **Devise**.
+13. Sélectionnez les champs [Sum(Sales)]. Sur le **accueil** onglet > **nombre**, modifiez **par défaut** à **devise**.
 
 Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
@@ -378,7 +378,7 @@ Ajoutez une ligne pour séparer la zone éditoriale de la zone de détails dans 
   
 3.  Dessinez une ligne sous la zone de texte que vous avez ajoutée dans la leçon 4.  
   
-4.  Cliquez sur la ligne puis, sous l’onglet **Accueil** > **Bordure**, sélectionnez :
+4.  Cliquez sur la ligne, puis, dans le **accueil** onglet > **bordure**, sélectionnez :
      * **Largeur** : sélectionnez **3** pt.
      * **Couleur** : sélectionnez **Tomate**.  
   
@@ -397,7 +397,7 @@ Les rectangles vous aident à contrôler le rendu du rapport. Placez un graphiqu
   
 ## <a name="to-add-a-pie-chart"></a>Pour ajouter un graphique à secteurs  
   
-1.  Sous l’onglet **Insérer** > **Visualisations de données** > **Graphique** > **Assistant graphique**.  
+1.  Sur le **insérer** onglet > **des visualisations de données** > **graphique** > **Assistant graphique**.  
   
 2.  Dans la page **Choisir un dataset** , cliquez sur **ListDataset** > **Suivant**.  
   
@@ -415,12 +415,12 @@ Les rectangles vous aident à contrôler le rendu du rapport. Placez un graphiqu
    
 10. Sélectionnez le titre du graphique et tapez : **Product Quantities Sold**.  
   
-12. Sous l’onglet **Accueil** > **Police**, choisissez pour le titre :
+12. Sur le **accueil** onglet > **police**, que le titre :
     * **Police** **Segoe UI Semibold**.
-    * **Size** **12 pt**.
+    * **Taille** **12 pt**.
     * **Couleur** **Noir**.  
 
-13. Cliquez avec le bouton droit sur la légende > **Propriétés de la légende**.
+13. Avec le bouton droit de la légende > **propriétés de la légende**.
 
 14. Sous l’onglet **Général** sous **Position de la légende**, sélectionnez le point central en bas. 
   
@@ -432,9 +432,9 @@ Les rectangles vous aident à contrôler le rendu du rapport. Placez un graphiqu
   
 ## <a name="to-add-a-column-chart"></a>Pour ajouter un histogramme  
   
-1.  Sous l’onglet **Insérer** > **Visualisations de données** > **Graphique** > **Assistant graphique**.  
+1.  Sur le **insérer** onglet > **des visualisations de données** > **graphique,** > **Assistant graphique**.  
   
-2.  Dans la page **Choisir un dataset**, cliquez sur **ListDataset**, puis sur **Suivant**.  
+2.  Dans la page **Choisir un dataset** , cliquez sur **ListDataset**, puis sur **Suivant**.  
   
 3.  Cliquez sur **Colonne**, puis sur **Suivant**.  
   
@@ -454,10 +454,10 @@ Les rectangles vous aident à contrôler le rendu du rapport. Placez un graphiqu
    
 10. Sélectionnez le titre du graphique et tapez : **Ventes de produits**.  
   
-12. Sous l’onglet **Accueil** > **Police**, choisissez pour le titre :
+12. Sur le **accueil** onglet > **police**, que le titre :
     * **Police** **Segoe UI Semibold**.
-    * **Size** **12 pt**.
-    * **Color** **Black**.  
+    * **Taille** **12 pt**.
+    * **Couleur** **Noir**.  
   
 15. Cliquez avec le bouton droit sur la légende, puis cliquez sur **Supprimer la légende**.  
   
@@ -494,7 +494,7 @@ Vous pouvez utiliser des rectangles comme conteneurs pour d’autres éléments 
   
 1.  Cliquez sur le graphique à secteurs, appuyez sur la touche Ctrl, puis sélectionnez l’histogramme.  
   
-2.  Avec les deux graphiques sélectionnés, cliquez sur > **Disposition** > **Uniformiser la largeur**.  
+2.  Deux graphiques étant sélectionnés, avec le bouton droit > **disposition** > **Uniformiser la largeur**.  
   
     > [!NOTE]  
     > L'élément sur lequel vous cliquez en premier détermine la largeur de tous les éléments sélectionnés.  
@@ -513,7 +513,7 @@ Pour plus d’informations sur les listes, consultez :
 * [Créer des factures et des formulaires avec des listes](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Cellules, lignes et colonnes de région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-Pour plus d’informations sur les Concepteurs de requêtes, consultez [Concepteurs de requêtes &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) et [Interface utilisateur du Concepteur de requêtes textuel &#40;Générateur de rapports&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+Pour plus d’informations sur les concepteurs de requêtes, consultez [concepteurs de requêtes &#40; Le Générateur de rapports &#41; ](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) et [Interface utilisateur du Concepteur de requêtes textuel &#40; Le Générateur de rapports &#41; ](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## <a name="see-also"></a>Voir aussi  
 [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md) 

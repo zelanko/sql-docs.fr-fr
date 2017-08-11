@@ -16,7 +16,7 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ee55d7f9499b638828a6312761dd1b7480a7816c
 ms.contentlocale: fr-fr
@@ -47,7 +47,7 @@ Dans cette section, vous choisissez une source de données partagée, vous crée
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
-    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou Dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
+    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
@@ -57,7 +57,7 @@ Dans cette section, vous choisissez une source de données partagée, vous crée
   
 5.  Cliquez sur **Suivant**.  
   
-6.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données existante ou accédez au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n'est disponible ou si vous n'avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d’informations sur la création d’une source de données incorporée, consultez [Didacticiel : Création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données existante ou accédez au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n'est disponible ou si vous n'avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d’informations sur la création d’une source de données incorporée, consultez [didacticiel : création d’un rapport de base &#40; Le Générateur de rapports &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Cliquez sur **Suivant**.  
   
@@ -162,7 +162,7 @@ Par défaut, les données de synthèse du champ Sales affichent un nombre géné
   
 2.  Appuyez sur la touche Ctrl, puis sélectionnez les neuf cellules contenant `[Sum(Sales)]`.  
   
-3.  On the **Home** tab > **Number** > **Currency**. Les cellules changent pour afficher le format de devise.  
+3.  Sur le **accueil** onglet > **nombre** > **devise**. Les cellules changent pour afficher le format de devise.  
   
     Si vos paramètres régionaux sont Anglais (États-Unis), le texte de l’exemple par défaut est [**$12,345.00**]. Si vous ne voyez pas s’afficher d’exemple de valeur monétaire, dans le groupe **Nombres** , cliquez sur **Styles des espaces réservés** > **Valeurs d’aperçu**.  
     
@@ -170,9 +170,9 @@ Par défaut, les données de synthèse du champ Sales affichent un nombre géné
   
 4.  Cliquez sur la cellule qui contient `[SalesDate]`.  
   
-5.  Dans le groupe **Nombre** > **Date**.  
+5.  Dans le **nombre** groupe > **Date**.  
   
-    La cellule affiche l’exemple de date **[1/31/2000]**. Si vous ne voyez pas s’afficher d’exemple de date, cliquez sur **Styles des espaces réservés** dans le groupe **Nombres** , puis cliquez sur **Valeurs d’aperçu**.  
+    La cellule affiche la date d’exemple **[1/31/2000]**. Si vous ne voyez pas s’afficher d’exemple de date, cliquez sur **Styles des espaces réservés** dans le groupe **Nombres** , puis cliquez sur **Valeurs d’aperçu**.  
   
 6.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
@@ -268,7 +268,7 @@ La zone d'angle se trouve dans le coin supérieur gauche de la matrice. Selon le
   
 5.  Cliquez avec le bouton droit dans la cellule fusionnée, puis cliquez sur **Propriétés de la zone de texte**.  
   
-6.  On the **Border** tab > **Presets** > **None**.
+6.  Sur le **bordure** onglet > **Présélections** > **aucun**.
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -285,7 +285,7 @@ Un titre de rapport s'affiche dans la partie supérieure du rapport. Vous pouvez
   
 2.  Sélectionnez la zone de texte en haut du corps du rapport qui contient **Cliquez pour ajouter un titre**, puis appuyez sur la touche Suppr.  
   
-3.  Sous l’onglet **Insérer** > **En-tête** > **Ajouter un en-tête**.  
+3.  Sur le **insérer** onglet > **en-tête** > **ajouter un en-tête**.  
   
     Un en-tête est ajouté en haut du corps du rapport.  
   
@@ -335,9 +335,9 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
 ## <a name="RotateTextBox"></a>9. (Facultatif) Faire pivoter la zone de texte de 270 degrés  
 Un rapport avec des matrices peut s'étendre horizontalement et verticalement lorsqu'il s'exécute. En faisant pivoter les zones de texte verticalement, ou de 270 degrés, vous pouvez gagner de l'espace horizontal. Le rapport rendu sera alors plus étroit, et s'il est exporté dans un format tel que Microsoft Word, il rentrera plus facilement sur une page imprimée.  
   
-Une zone de texte peut également afficher du texte horizontal dans le sens vertical (de haut en bas). Pour plus d’informations, consultez [Zones de texte &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
+Une zone de texte peut également afficher du texte horizontal dans le sens vertical (de haut en bas). Pour plus d’informations, consultez [zones de texte &#40; Le Générateur de rapports et SSRS &#41; ](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
   
-### <a name="to-rotate-text-box-270-degrees"></a>Pour faire pivoter la zone de texte de 270 degrés  
+### <a name="to-rotate-text-box-270-degrees"></a>Pour faire pivoter la zone de texte de 270 degrés  
   
 1.  Cliquez sur **Conception** pour repasser en mode Conception.  
   
@@ -353,9 +353,9 @@ Une zone de texte peut également afficher du texte horizontal dans le sens vert
   
 4.  Vérifiez que la propriété CanGrow est définie sur **Vrai**.  
   
-5.  Sous l’onglet **Accueil** > section **Paragraphe**, sélectionnez **Milieu** et **Centre** pour centrer verticalement et horizontalement le texte dans la cellule.  
+5.  Sous l’onglet **Accueil** > section **Paragraphe**, sélectionnez **Milieu** et **Centre** pour centrer verticalement et horizontalement le texte dans la cellule.  
  
-6. Redimensionnez la colonne Territory afin qu'elle fasse à 0,5 pouce de large et supprimez le titre de la colonne.  
+6. Redimensionnez la colonne Territory afin qu'elle fasse à 0,5 pouce de large et supprimez le titre de la colonne.  
 6.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
 Le nom du secteur est écrit verticalement, de bas en haut. La hauteur du groupe de lignes Territory varie en fonction de la longueur du nom du secteur.  

@@ -20,7 +20,7 @@ caps.latest.revision: 67
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7cd0ab1950eeaf54da67e7f8dd5bb2da89a26307
 ms.contentlocale: fr-fr
@@ -64,6 +64,6 @@ Vous devez également disposer d’autorisations en lecture seule pour pouvoir r
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Didacticiels de Reporting Services](../reporting-services/reporting-services-tutorials-ssrs.md)  
+[Didacticiels sur Reporting Services](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
 D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

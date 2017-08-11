@@ -14,7 +14,7 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1c1b584f5a88af5055ffac67932fd94a37734bfd
 ms.contentlocale: fr-fr
@@ -40,7 +40,7 @@ Les étapes suivantes utilisent une table de totaux de comparaison avec les donn
 
    ![mobile-report-properties-columns](../../reporting-services/mobile-reports/media/mobile-report-properties-columns.png)
 
-   De même, pour la **Série de comparaison** -- les comparaisons (de **Comparison1** à **Comparison5**) sont sélectionnées.
+   De même pour **série de comparaison** -- **Comparison1** via **Comparison5** sont sélectionnés.
    
 4. Sélectionnez **Aperçu**.
 

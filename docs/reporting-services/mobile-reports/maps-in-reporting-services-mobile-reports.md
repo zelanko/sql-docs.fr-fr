@@ -14,7 +14,7 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: dcac784ffea9845be91f35f03fb45e2ca6a6e530
 ms.contentlocale: fr-fr
@@ -62,7 +62,7 @@ Pour afficher des données réelles sur votre carte, vous devez définir des val
   
 1. Sélectionnez l’onglet **Données** dans le coin supérieur gauche.  
   
-2. Sélectionnez **ajouter des données**, puis **Excel Local** ou **serveur SSRS**.  
+2. Sélectionnez **Ajouter des données**, puis **Excel local** ou **Serveur SSRS**.  
   
    > **Conseil**: Vérifiez que les [données sont dans un format compatible pour les rapports mobiles](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md).  
   

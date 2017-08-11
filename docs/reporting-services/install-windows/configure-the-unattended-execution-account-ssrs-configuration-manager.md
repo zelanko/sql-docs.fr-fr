@@ -22,7 +22,7 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4c18054b5c11569239af51e7c3808bdb9ce05109
 ms.contentlocale: fr-fr
@@ -63,7 +63,7 @@ ms.lasthandoff: 08/09/2017
   
      **rsconfig -e -u\<domaine/nom d’utilisateur > -p\<mot de passe >**  
   
- **rsconfig -e** prend en charge d’autres arguments. Pour plus d’informations sur la syntaxe et pour obtenir des exemples de commande, consultez [Utilitaire rsconfig&#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md) dans la documentation en ligne de SQL Server.  
+ **rsconfig -e** prend en charge d’autres arguments. Pour plus d’informations sur la syntaxe et pour obtenir des exemples de commande, consultez [rsconfig utilitaire &#40; SSRS &#41; ](../../reporting-services/tools/rsconfig-utility-ssrs.md) dans la documentation en ligne de SQL Server.  
   
 ### <a name="how-account-information-is-stored"></a>Comment les informations sur le compte sont stockées  
  Lorsque vous définissez le compte, les paramètres suivants sont spécifiés comme valeurs chiffrées dans le fichier RSreportserver.config sur une instance de serveur de rapports locale ou distante :  

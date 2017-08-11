@@ -15,7 +15,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5203aab062888ca40ee83ee3f00521d6661defba
 ms.contentlocale: fr-fr
@@ -118,18 +118,18 @@ Vous pouvez créer les définitions d'alerte de données dans le Concepteur d'al
   
      Si l’adresse e-mail de la personne qui a créé la définition d’alerte est disponible, elle est ajouté à la zone **Destinataire** .  
   
-20. Éventuellement, dans la zone de texte **Objet** , mettez à jour la ligne Objet du message d’alerte.  
+20. Éventuellement, dans la zone de texte **Objet**, mettez à jour la ligne Objet du message d’alerte.  
   
      La valeur par défaut est de l’objet **d’alerte de données pour \<nom de l’alerte données >**.  
   
-21. Éventuellement, dans la zone de texte **Description** , tapez une description pour le message d’alerte.  
+21. Éventuellement, dans la zone de texte **Description**, tapez une description pour le message d’alerte.  
   
 22. Cliquez sur **Enregistrer**.  
 
 ## <a name="see-also"></a>Voir aussi
 
-[Concepteur d'alertes de données](../reporting-services/data-alert-designer.md)   
-[Gestionnaire des alertes de données pour les administrateurs d'alertes](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[Concepteur d’alertes de données](../reporting-services/data-alert-designer.md)   
+[Gestionnaire des alertes de données pour les administrateurs d’alertes](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Alertes de données Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
 D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

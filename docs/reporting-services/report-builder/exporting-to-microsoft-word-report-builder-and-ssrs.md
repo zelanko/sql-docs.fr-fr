@@ -15,7 +15,7 @@ caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7c537a08d262bfadf686e1c6555d1ce221f5aef7
 ms.contentlocale: fr-fr
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  Le type de contenu des fichiers générés par ce convertisseur est **application/vnd.openxmlformats-officedocument.wordprocessingml.document** et l’extension de fichier est .docx.  
   
- Pour plus d’informations sur l’exportation vers Word, consultez [Exporter les rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+ Consultez [exporter des rapports &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) pour plus d’informations sur l’exportation vers Word.  
   
  Après avoir exporté le rapport vers un document Word, vous pouvez modifier le contenu de votre rapport et concevoir des rapports de style document comme des étiquettes de publipostage, des bons de commande ou des lettres types.  
   
@@ -167,7 +167,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Utilisation du Générateur de rapports en mode déconnecté et affichage de l'aperçu d'un rapport dans le Générateur de rapports.  
   
--   Utilisation du composant WebPart Visionneuse de rapports en mode local alors que la batterie de serveurs SharePoint n'est pas intégrée à un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [Rapports en mode local et rapports en mode connecté dans la Visionneuse de rapports &#40;Reporting Services en mode SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
+-   Utilisation du composant WebPart Visionneuse de rapports en mode local alors que la batterie de serveurs SharePoint n'est pas intégrée à un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [en Mode Local vs. rapports en mode connecté dans la Visionneuse de rapports &#40;Reporting Services en mode SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  Si le convertisseur **Word 2003** est configuré pour être visible, les options de menu **Word** et **Word 2003** sont disponibles dans les scénarios suivants :  
   
@@ -201,6 +201,6 @@ ms.lasthandoff: 08/09/2017
 [Comportements de rendu](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
 [Fonctionnalité interactive des différentes Extensions de rendu de rapport](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
 [Rendu des éléments de rapport](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
-[Tables, Matrices et listes](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+[Tables, matrices et listes](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
 
 D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

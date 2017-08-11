@@ -16,14 +16,14 @@ helpviewer_keywords:
 - authorization [Reporting Services]
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
 caps.latest.revision: 20
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b97911d8adf797fdf324e0c97863dadd611ca596
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 10fbded684af5a1d17a6491d28a3524acbb2759a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="authorization-in-reporting-services"></a>Autorisation dans Reporting Services
@@ -64,11 +64,11 @@ public bool CheckAccess(
  Le serveur de rapports appelle la méthode <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> en passant le nom de l'utilisateur connecté, un jeton utilisateur, le descripteur de sécurité de l'élément et l'opération demandée dans le nom de l'utilisateur connecté. Ici, vous devez vérifier le descripteur de sécurité pour le nom d'utilisateur et l'autorisation appropriée pour effectuer la demande, puis retourner **true** pour indiquer que l'accès est accordé ou **false** pour indiquer que l'accès est refusé.  
   
 ## <a name="security-descriptors"></a>Descripteurs de sécurité  
- Lors de la définition de stratégies d'autorisation sur des éléments dans la base de données du serveur de rapports, une application cliente (telle que le Gestionnaire de rapports) envoie les informations utilisateur ainsi qu'une stratégie de sécurité pour l'élément à l'extension de sécurité. La stratégie de sécurité et les informations utilisateur sont désignées collectivement sous le nom de « descripteur de sécurité ». Un descripteur de sécurité contient les informations suivantes pour un élément dans la base de données du serveur de rapports :  
+ Lors de la définition de stratégies d'autorisation sur des éléments dans la base de données du serveur de rapports, une application cliente (telle que le Gestionnaire de rapports) envoie les informations utilisateur ainsi qu'une stratégie de sécurité pour l'élément à l'extension de sécurité. La stratégie de sécurité et les informations utilisateur sont désignées collectivement sous le nom de « descripteur de sécurité ». Un descripteur de sécurité contient les informations suivantes pour un élément dans la base de données du serveur de rapports :  
   
--   le groupe ou l'utilisateur étant autorisé d'une certaine manière à effectuer des opérations sur l'élément ;  
+-   le groupe ou l'utilisateur étant autorisé d'une certaine manière à effectuer des opérations sur l'élément ;  
   
--   le type de l'élément ;  
+-   le type de l'élément ;  
   
 -   une liste de contrôle d'accès discrétionnaire qui contrôle l'accès à l'élément.  
   
@@ -81,7 +81,7 @@ public bool CheckAccess(
   
  Comme représenté dans ce diagramme, l'autorisation suit la séquence suivante :  
   
-1.  Une fois authentifié, les applications clientes font des demandes au serveur de rapports par le biais des méthodes du service Web Reporting Services. Un ticket d'authentification est passé au serveur de rapports sous forme d'un cookie dans l'en-tête HTTP de chaque demande Web.  
+1.  Une fois authentifié, les applications clientes font des demandes au serveur de rapports par le biais des méthodes du service Web Reporting Services. Un ticket d'authentification est passé au serveur de rapports sous forme d'un cookie dans l'en-tête HTTP de chaque demande Web.  
   
 2.  Le cookie est validé avant toute vérification d'accès.  
   

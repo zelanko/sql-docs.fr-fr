@@ -16,7 +16,7 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4d862dc34dcbb81ce8d50cfac53d81a80f47d29c
 ms.contentlocale: fr-fr
@@ -41,7 +41,7 @@ Cette leçon suppose que vous utilisez [!INCLUDE[ssManStudioFull_md](../includes
   
 5.  Cliquez sur le bouton **Nouvelle requête** dans la barre d’outils.  
   
-6.  Copiez les instructions [!INCLUDE[tsql](../includes/tsql-md.md)] suivantes dans la requête vide :  
+6.  Copiez les instructions [!INCLUDE[tsql](../includes/tsql-md.md)] suivantes dans la requête vide :  
   
     ```  
     Use Subscribers  
@@ -64,7 +64,7 @@ Cette leçon suppose que vous utilisez [!INCLUDE[ssManStudioFull_md](../includes
     GO  
     ```  
   
-7.  Cliquez sur **! Exécuter** dans la barre d’outils.  
+7.  Cliquez sur  **Exécutez** sur la barre d’outils.  
   
 8.  Utilisez une instruction SELECT pour vérifier que votre table comporte bien trois lignes de données. Par exemple : `select * from OrderInfo`  
   

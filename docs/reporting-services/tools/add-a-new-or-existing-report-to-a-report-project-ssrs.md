@@ -17,7 +17,7 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 94cc2ebfc2b11bd6bc3e2ab2ce07b5c22c14a12c
 ms.contentlocale: fr-fr
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Pour afficher l'aperçu d'un rapport avec les sources de données existantes, vous devez disposer d'autorisations sur la source de données à partir du client de création de votre rapport. Pour plus d’informations, consultez [Connexions de données, sources de données et chaînes de connexion](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
- Après avoir ajouté un rapport, vous pouvez définir des sources de données et des datasets, ainsi que concevoir la mise en page du rapport. Pour commencer, consultez [Créer un rapport de table de base &#40;didacticiel SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) ou [Tables &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
+ Après avoir ajouté un rapport, vous pouvez définir des sources de données et des datasets, ainsi que concevoir la mise en page du rapport. Pour commencer, consultez [créer un rapport de base &#40; Didacticiel SSRS &#41; ](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) ou [Tables &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
   
 ## <a name="to-add-a-new-report-using-the-report-wizard"></a>Pour ajouter un nouveau rapport en utilisant l'Assistant Rapport  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/09/2017
      Le rapport est ajouté au projet sous le dossier **Rapports** . Lorsque vous fermez et rouvrez le projet, les rapports sont triés alphabétiquement.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Didacticiels sur Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
+ [Reporting Services Tutorials &#40; SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
  D’autres questions ? [Essayez le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   

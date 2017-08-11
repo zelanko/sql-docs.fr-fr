@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 45658226a90008784ca76ab781282dda1dd01dd0
 ms.contentlocale: fr-fr
@@ -85,22 +85,22 @@ ms.lasthandoff: 08/09/2017
   
   
 ##  <a name="InThisSection"></a> Dans cette section  
- [Rapports d’extraction &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)  
+ [Rapports d’extraction &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)  
  Décrit les rapports qui s'ouvrent lorsqu'un utilisateur clique sur un lien dans un rapport principal.  
   
- [Sous-rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)  
+ [Sous-rapports &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)  
  Décrit les rapports qui s'affichent dans le corps d'un rapport principal.  
   
- [Régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)  
+ [Régions de données imbriquées &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)  
  Décrit l'imbrication d'une région de données dans une autre, par exemple un graphique imbriqué dans une matrice.  
   
- [Action d’exploration &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)  
+ [Action d’extraction &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)  
  Décrit l'utilisation de l'action d'exploration pour masquer et afficher des éléments de rapport.  
   
- [Spécification de chemins d’accès à des éléments externes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)  
+ [Spécification des chemins d’accès aux éléments externes &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)  
  Explique comment faire référence aux éléments externes au fichier de définition de rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [Paramètres de rapport &#40; Le Générateur de rapports et le Concepteur de rapports &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

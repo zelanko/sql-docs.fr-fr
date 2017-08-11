@@ -19,7 +19,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7df29304e469a78f64a8b81198d7991f956953fe
 ms.contentlocale: fr-fr
@@ -51,7 +51,7 @@ ms.lasthandoff: 08/09/2017
   
  Si vous n'êtes pas familier des fichiers .odc, vous pouvez utiliser les instructions suivantes pour en créer un et l'exporter. Pour créer facilement un fichier .odc pour une source de données OLE DB, un des moyens consiste à utiliser Excel 2007 et l'Assistant Connexion de données. Notez que l'Assistant ne crée pas de source de données ; une source de données externe doit être déjà définie.  
   
- Un fichier .odc doit être utilisé uniquement s'il est totalement compatible avec le rapport et les requêtes. Si vous rencontrez des erreurs qui imposent d'importantes modifications au rapport ou au fichier .odc, vous devez créer un nouveau fichier .rsds pour le rapport. Pour plus d’informations sur la manière de créer une source de données partagée qui utilise un fichier .rsds, consultez [Créer et gérer des sources de données partagées &#40;Reporting Services en mode intégré SharePoint&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ Un fichier .odc doit être utilisé uniquement s'il est totalement compatible avec le rapport et les requêtes. Si vous rencontrez des erreurs qui imposent d'importantes modifications au rapport ou au fichier .odc, vous devez créer un nouveau fichier .rsds pour le rapport. Pour plus d’informations sur la création d’une source de données partagée qui utilise un fichier .rsds, consultez [créer et gérer des Sources de données partagées &#40; Reporting Services dans SharePoint intégré en Mode &#41; ](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
   
 ### <a name="to-create-and-export-an-odc-file"></a>Pour créer et exporter un fichier .odc  
   

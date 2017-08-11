@@ -15,7 +15,7 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 88e933ca66ab9f8f6e90237ef045b12927fab40c
 ms.contentlocale: fr-fr
@@ -68,6 +68,6 @@ ms.lasthandoff: 08/09/2017
 >  La suppression d'un en-tête ou d'un pied de page entraîne sa suppression du rapport. Les éléments que vous avez précédemment ajoutés à l'en-tête ou au pied de page ne réapparaissent pas si vous le rajoutez.  
   
 ## <a name="see-also"></a>Voir aussi  
- [En-têtes et pieds de page &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
+ [En-têtes et pieds de page &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
   
   

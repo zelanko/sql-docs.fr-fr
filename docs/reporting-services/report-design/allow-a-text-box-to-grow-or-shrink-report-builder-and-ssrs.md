@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: abb928e42a7420b421c91f6b5f78256213cb5df9
 ms.contentlocale: fr-fr
@@ -36,6 +36,6 @@ ms.lasthandoff: 08/09/2017
     -   Si vous souhaitez autoriser la réduction de la zone de texte en fonction de son contenu, sélectionnez **Autoriser la réduction de la hauteur**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Zones de texte &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
+ [Zones de texte &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
   
   

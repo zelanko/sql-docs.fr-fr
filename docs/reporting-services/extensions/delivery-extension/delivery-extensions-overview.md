@@ -17,14 +17,14 @@ helpviewer_keywords:
 - delivery extensions [Reporting Services], about extensions
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
 caps.latest.revision: 37
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3b201ef2225d7794b399c79a318627fc978b8b72
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 79894381bf493132c1f73d711ecd6d1ba282401e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="delivery-extensions-overview"></a>Vue d'ensemble des extensions de remise
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
 |Messagerie du serveur de rapports|Utilise un serveur SMTP pour envoyer électroniquement des rapports aux utilisateurs ou groupes individuels.|  
 |Partage de fichiers du serveur de rapports|Utilisé pour distribuer des rapports dans votre organisation aux partages de fichier réseau. Permet de copier automatiquement un rapport dans un partage de fichiers dans le cadre d'une planification désignée.|  
   
- ![Architecture d’extension de remise de Reporting Services](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "Reporting Services delivery extension architecture")  
+ ![Architecture d’extension de remise de Services de création de rapports](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "architecture d’extension de remise de Reporting Services")  
 Architecture d'extension de remise de Reporting Services  
   
  Les extensions de remise sont associées avec des abonnements. Lors de la création d'un abonnement, un utilisateur peut choisir l'une des extensions de remise disponibles pour déterminer le mode de remise du rapport. Dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], les abonnements se trouvent dans la base de données du serveur de rapports. Lorsqu'un événement se produit, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] associe l'événement aux abonnements contenus dans la base de données du serveur de rapports. Pour chaque abonnement attaché à l'événement, le serveur de rapports crée une notification. Pour les abonnements pilotés par les données, une notification est créée pour chaque destinataire. Une fois qu'une notification est créée, le serveur de rapports appelle une extension de remise particulière et passe dans les valeurs les paramètres d'extensions spécifiés dans la notification. L'extension de remise envoie la notification à l'utilisateur spécifiée par l'extension de remise sélectionnée.  

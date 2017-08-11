@@ -19,14 +19,14 @@ helpviewer_keywords:
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 caps.latest.revision: 43
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 33dfc4da9781e537c222bd9aed593b694d734ba0
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: ae7f1a99b09e4c8fc5f2483e9aa360cce83da2df
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Propriétés de Reporting Services - propriétés d’élément de serveur de rapports
@@ -65,13 +65,13 @@ ms.lasthandoff: 06/13/2017
 |Propriété| Description|  
 |--------------|-----------------|  
 |**Langage**|Langue utilisé dans un rapport. La valeur est un code de langue défini dans la spécification RFC1766 du groupe de travail IETF (Internet Engineering Task Force). La première partie est une désignation de deux caractères de la langue de base. La deuxième partie est séparée par un trait d'union et désigne la variation ou le dialecte de la langue. Si aucune valeur n’est spécifiée dans l’élément **Style** associé à l’élément **Body** dans la définition du rapport, la valeur par défaut est la langue du serveur de rapports.|  
-|**ReportProcessingTimeout**|Délai d'expiration, en secondes, d'un rapport individuel. Si cette valeur est définie, le serveur de rapports tente d'arrêter le traitement d'un rapport lorsque le délai spécifié est écoulé. Les valeurs valides sont comprises entre **-1** et**2****147****483****647**. Si la valeur est **-1**, le rapport n’arrive pas à expiration au cours du traitement. Si la valeur est **null**, la valeur de la propriété système **ReportProcessingTimeout** est utilisée pour le délai d’expiration de traitement des rapports. La valeur par défaut est **null**. Pour plus d’informations, consultez [Propriétés système de Report Server](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).|  
+|**ReportProcessingTimeout**|Délai d'expiration, en secondes, d'un rapport individuel. Si cette valeur est définie, le serveur de rapports tente d'arrêter le traitement d'un rapport lorsque le délai spécifié est écoulé. Les valeurs valides sont comprises entre **-1** et **2** **147** **483** **647**. Si la valeur est **-1**, le rapport n’expire pas pendant le traitement. Si la valeur est **null**, la valeur de la propriété système **ReportProcessingTimeout** est utilisé pour le délai d’attente de traitement de rapport. La valeur par défaut est **null**. Pour plus d’informations, consultez [Propriétés système de Report Server](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).|  
 |**ExecutionDate**|Date et heure de dernière création d'un instantané de rapport pour un rapport.|  
-|**CanRunUnattended**|Valeur qui indique si un rapport peut être exécuté sans assistance selon une planification. Si cette propriété a la valeur **true**, les valeurs par défaut pour les paramètres de rapport sont définies et les informations d’identification de la source de données sont stockées avec le rapport, ou l’option de récupération des informations d’identification a la valeur **None**. Si cette propriété a la valeur **false**, les conditions requises pour exécuter un rapport sans assistance ne sont pas satisfaites. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
-|**HasParameterDefaultValues**|Valeur qui indique si le rapport a des valeurs par défaut valides définies pour tous les paramètres de rapport. La valeur est également **true** si un rapport ne possède pas de paramètres de rapport. Si cette propriété a la valeur **false**, un ou plusieurs paramètres de rapport n’ont pas de valeur par défaut valide.|  
+|**CanRunUnattended**|Valeur qui indique si un rapport peut être exécuté sans assistance selon une planification. Si cette propriété est définie sur **true**, valeurs par défaut pour les paramètres de rapport sont définies et informations d’identification de source de données sont stockées avec le rapport, ou option de récupération des informations d’identification a la valeur **aucun**. Si cette propriété est définie sur **false**, la configuration requise pour l’exécution d’un rapport sans assistance n’est pas remplie. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
+|**HasParameterDefaultValues**|Valeur qui indique si le rapport a des valeurs par défaut valides définies pour tous les paramètres de rapport. La valeur est également **true** si un rapport n’a pas de paramètres de rapport. Si cette propriété a la valeur **false**, un ou plusieurs paramètres de rapport n’ont pas de valeur par défaut valide.|  
 |**HasDataSourceCredentials**|Valeur qui indique que l’option de récupération des informations d’identification définie pour toutes les sources de données associées au rapport est **None** ou **Store**. Si cette propriété a la valeur **false**, une option de récupération des informations d’identification définie pour l’une des sources de données associées au rapport est **Integrated** ou **Prompt**.|  
 |**IsSnapshotExecution**|Valeur qui indique si le rapport est un instantané.|  
-|**HasScheduleReadyDataSources**|Valeur qui indique si les sources de données d'un rapport sont configurées pour prendre en charge l'exécution planifiée. Si cette propriété a la valeur **false**, les utilisateurs ne peuvent pas s’abonner au rapport.|  
+|**HasScheduleReadyDataSources**|Valeur qui indique si les sources de données d'un rapport sont configurées pour prendre en charge l'exécution planifiée. Si cette propriété est définie sur **false**, les utilisateurs ne peuvent pas s’abonner au rapport.|  
   
 ## <a name="resource-properties"></a>Propriétés de ressource  
  Outre les propriétés d'élément répertoriées précédemment, la propriété suivante s'applique aux ressources dans la base de données du serveur de rapports.  
@@ -82,7 +82,7 @@ ms.lasthandoff: 06/13/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Génération d’Applications à l’aide du Service Web et le .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Service web Report Server](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Informations techniques de référence &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [Service Web Report Server](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
+ [Informations techniques de référence &#40; SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   

@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f394a1ad055276cc7f0a6d28f923215dde8e437a
 ms.contentlocale: fr-fr
@@ -49,6 +49,6 @@ ms.lasthandoff: 08/09/2017
  Lorsque vous effectuez des recherches dans la base de données d'un serveur de rapports, le contenu de votre dossier Mes rapports est inclus dans l'étendue de la recherche, tandis que le contenu des dossiers Mes rapports des autres utilisateurs en est exclu. Les résultats de la recherche présentent uniquement les rapports auxquels vous avez accès.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Recherche, affichage et la gestion des rapports &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

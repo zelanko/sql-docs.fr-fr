@@ -20,14 +20,14 @@ helpviewer_keywords:
 - extensions [Reporting Services]
 ms.assetid: 2bf17ae4-2292-4a58-a1f0-56e99abd9b69
 caps.latest.revision: 45
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: cd4cd15bf03648329dab8bc7ef55314ece7cf9a2
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 37adf4c09f7f23294572a17631240ad88f51fc9e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="reporting-services-extensions"></a>Extensions Reporting Services
@@ -40,16 +40,16 @@ ms.lasthandoff: 06/22/2017
  Une autre extension du serveur de rapports, RDCE (Report Definition Customization Extension), peut personnaliser dynamiquement une définition de rapport avant que celle-ci ne soit passée au moteur de traitement. Vous pouvez personnaliser des rapports en fonction de facteurs tels que des utilisateurs ou des langues. Par exemple, vous pouvez implémenter des vues adaptées à différents utilisateurs, tels que des responsables ou des membres d'un service, ou vous pouvez personnaliser un rapport pour générer une disposition différente selon qu'il est rendu en français ou en arabe.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Considérations sur la sécurité pour les Extensions](../../reporting-services/extensions/security-considerations-for-extensions.md)  
+ [Considérations sur la sécurité pour les extensions](../../reporting-services/extensions/security-considerations-for-extensions.md)  
  Décrit les problèmes de sécurité relatifs au développement et au déploiement d'extensions [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Implémentation d’une Extension de traitement des données](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)  
+ [Mise en œuvre d’une extension pour le traitement des données](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)  
  Décrit les spécifications et les étapes relatives à l'implémentation d'une extension pour le traitement des données pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Implémentation d’une Extension de remise](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)  
+ [Mise en œuvre d'une extension de remise](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)  
  Décrit les spécifications et les étapes relatives à l'implémentation d'une extension de remise pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Implémentation d’une Extension de rendu](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)  
+ [Mise en œuvre d'une extension de rendu](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)  
  Contient une introduction au développement d'extensions de rendu.  
   
  [Implémentation d'une extension de sécurité](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  

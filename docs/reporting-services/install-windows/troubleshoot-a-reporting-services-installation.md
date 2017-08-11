@@ -14,7 +14,7 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 79d064c7ddb43531fdff086eda71ba1e28d71fd6
 ms.contentlocale: fr-fr
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Authz.dll doit être présent dans le dossier System32.  
   
- Le programme d'installation ne recherche plus les services Internet (IIS) ou [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]nécessite MDAC 2.0 et le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] version 2.0 ; Le programme d’installation installera ces s’ils ne sont pas déjà installés.  
+ Le programme d'installation ne recherche plus les services Internet (IIS) ou [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nécessite MDAC 2.0 et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] version 2.0. Le programme d'installation installe ces composants s'ils ne le sont pas déjà.  
   
 ##  <a name="bkmk_tshoot_sharepoint"></a> Dépannage des problèmes liés aux installations en mode SharePoint  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
  ![Icône de flèche utilisée avec différée lien en haut](../../analysis-services/instances/media/uparrow16x16.gif "icône de flèche utilisée avec différée lien en haut") [résolution des problèmes liés aux installations en Mode de SharePoint](#bkmk_tshoot_sharepoint)  
   
-###  <a name="bkmk_no_ssrs_service"></a>Vous ne voyez pas du service SQL Server Reporting Services dans l’Administration centrale de SharePoint après l’installation de SQL Server 2016 SSRS en mode SharePoint  
+###  <a name="bkmk_no_ssrs_service"></a> Vous ne voyez pas le service SQL Server Reporting Services dans l’Administration centrale de SharePoint après avoir installé SQL Server 2016 SSRS en mode SharePoint  
  **Description :** si après avoir installé SQL Server 2016 Reporting Services en mode SharePoint et le SQL Server 2016 Reporting Services complément pour SharePoint 2013/2016, vous ne voyez pas « SQL Server Reporting Services » dans les deux menus suivants, puis le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service n’a pas été enregistré :  
   
 -   Administration centrale de SharePoint 2013/2016 -> « Gestion des applications » -> Page « Gérer les services sur le serveur »  
@@ -93,7 +93,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  Sur l’ordinateur qui exécute l’Administration centrale de SharePoint 2013/2016  
   
-    1.  Ouvrez SharePoint 2013/2016 Management Shell avec des privilèges d’administrateur. Cliquez avec le bouton droit sur l'icône et cliquez sur « Exécuter en tant qu'administrateur ». Exécutez les trois applets de commande suivantes à partir de l'interpréteur de commandes :  
+    1.  Ouvrez SharePoint 2013/2016 Management Shell avec des privilèges d’administrateur. Cliquez avec le bouton droit sur l'icône et cliquez sur « Exécuter en tant qu'administrateur ». Exécutez les trois applets de commande suivantes à partir de l'interpréteur de commandes :  
   
     2.  ```  
         Install-SPRSService  
@@ -212,7 +212,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Ouvrez une fenêtre de commande et tapez la commande suivante à l'invite de commandes :  
   
-    -   **Exécutez \<**  *répertoire .NET 4.0 Framework* **> \InstallUtil.exe \< ** *répertoire Bin Report Server* **> \ReportingServicesLibrary.dll**  
+    -   **Exécutez \<**  *répertoire .NET 4.0 Framework* **> \InstallUtil.exe \<**  *répertoire Bin Report Server* **> \ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
         >  Remplacez \< *répertoire .NET 4.0 Framework*> avec le chemin d’accès physique de .NET Framework 4.0 fichiers et \< *répertoire Bin Report Server*> avec le chemin d’accès physique des fichiers bin de serveur de rapports.  

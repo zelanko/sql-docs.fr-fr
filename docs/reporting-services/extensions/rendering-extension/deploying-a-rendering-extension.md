@@ -17,14 +17,14 @@ helpviewer_keywords:
 - rendering extensions [Reporting Services], deploying
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 caps.latest.revision: 44
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 260e104d2686ab9111c9b38c2ecf6c5da2fbdb91
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 3fbab7c48a0d522519a9e7ada9cf9c8cb1d40c7b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="deploying-a-rendering-extension"></a>Déploiement d'une extension de rendu
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
  La table suivante décrit les attributs de l'élément **Extension** pour les extensions de rendu.  
   
-|Attribute|Description|  
+|Attribut|Description|  
 |---------------|-----------------|  
 |**Nom**|Nom unique de l'extension. La longueur maximale de l'attribut **Name** est de 255 caractères. Le nom doit être unique parmi toutes les entrées de l'élément **Extensions** d'un fichier de configuration. Si un nom existe en double, le serveur de rapports retourne une erreur.|  
 |**Type**|Liste séparée par des virgules qui inclut l'espace de noms complet, ainsi que le nom de l'assembly.|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 06/22/2017
   
      Pour plus d’informations, consultez [Fichier de configuration RSReportServer](../../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
-3.  Localisez l'élément **Render** dans le fichier Rsreportserver.config. Une entrée correspondant à votre nouvelle extension doit être créée à l'emplacement suivant :  
+3.  Localisez l'élément **Render** dans le fichier Rsreportserver.config. Une entrée correspondant à votre nouvelle extension doit être créée à l'emplacement suivant :  
   
     ```  
     <Extensions>  
@@ -80,6 +80,6 @@ ms.lasthandoff: 06/22/2017
  [Implémentation d’une Extension de rendu](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
  [Vue d’ensemble des Extensions de rendu](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)   
  [Implémentation de l’Interface IRenderingExtension](../../../reporting-services/extensions/rendering-extension/implementing-the-irenderingextension-interface.md)   
- [Considérations sur la sécurité pour les Extensions](../../../reporting-services/extensions/security-considerations-for-extensions.md)  
+ [Considérations sur la sécurité pour les extensions](../../../reporting-services/extensions/security-considerations-for-extensions.md)  
   
   

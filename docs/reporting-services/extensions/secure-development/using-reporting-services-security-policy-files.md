@@ -22,14 +22,14 @@ helpviewer_keywords:
 - named permission sets [Reporting Services]
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
 caps.latest.revision: 33
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b1db09303de945d18f7e71d2d88ca295bb025b26
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 490f32a022606157376f7c8402d11cd8f027bc04
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Utilisation des fichiers de stratégie de sécurité Reporting Services
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="policy-files-in-reporting-services"></a>Fichiers de stratégie dans Reporting Services  
  Le tableau suivant répertorie les fichiers de configuration de stratégie dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], leurs emplacements (dans une installation par défaut) et leurs fonctions respectives.  
   
-|Nom de fichier|Emplacement (installation par défaut)| Description|  
+|Nom de fichier|Emplacement (installation par défaut)|Description|  
 |---------------|---------------------------------------|-----------------|  
 |rssrvpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer|Fichier de configuration de stratégie du serveur de rapports. Ces stratégies de sécurité affectent principalement les expressions de rapport et les assemblys personnalisés, une fois qu'un rapport est déployé sur un serveur de rapports. Ce fichier de stratégie affecte également les extensions personnalisées en matière de données, de remise, de rendu et de sécurité, qui sont déployées sur le serveur de rapports.|  
 |rsmgrpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager.|Fichier de configuration de stratégie du Gestionnaire de rapports. Ces stratégies de sécurité affectent tous les assemblys qui étendent le Gestionnaire de rapports, par exemple les extensions d'interface utilisateur d'abonnement pour une remise personnalisée.|  

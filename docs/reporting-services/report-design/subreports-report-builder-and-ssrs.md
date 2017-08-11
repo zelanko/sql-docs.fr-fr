@@ -15,7 +15,7 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8deb7c183ab46007fb0d4c4aee17762676963c4d
 ms.contentlocale: fr-fr
@@ -50,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
  Vous pouvez placer un sous-rapport dans le corps principal du rapport ou dans une région de données. Si vous le placez dans une région de données, il se répétera avec chaque instance du groupe ou chaque ligne de la région de données. Pour passer au sous-rapport une valeur à partir du groupe ou de la ligne, dans la propriété de la valeur, utilisez une expression de champ pour le champ qui contient la valeur à passer au paramètre du sous-rapport.  
   
- Pour plus d’informations sur l’utilisation des sous-rapports, consultez [Ajouter un sous-rapport et des paramètres &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md).  
+ Pour plus d’informations sur l’utilisation des sous-rapports, consultez [ajouter un sous-rapport et des paramètres de &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md).  
   
 ## <a name="specifying-subreport-names-and-locations"></a>Spécification des noms et emplacements de sous-rapports  
  Vous pouvez concevoir un rapport principal de manière à spécifier un sous-rapport se trouvant dans un dossier différent sur le même serveur de rapports.  
@@ -60,6 +60,6 @@ ms.lasthandoff: 08/09/2017
  Dans le Générateur de rapports, pour afficher un aperçu d'un sous-rapport dans un rapport principal, les deux rapports doivent se trouver sur le même serveur de rapports ou vous devez spécifier un chemin d'accès complet au sous-rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Extraction, exploration, sous-rapports et régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [L’extraction, exploration, sous-rapports et les régions de données imbriquées &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

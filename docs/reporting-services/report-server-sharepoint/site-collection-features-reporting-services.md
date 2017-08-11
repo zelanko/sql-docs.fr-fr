@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b68204ab4c9a008db7c43d2c568d1c3ccedbcb7a
 ms.contentlocale: fr-fr
@@ -39,7 +39,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Activer les fonctionnalités d'intégration Report Server et Power View dans SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)   
-[Reporting Services pour les paramètres de Site et les fonctionnalités du Site &#40; Mode SharePoint &#41;](../../reporting-services/report-server-sharepoint/site-settings-and-features-reporting-services.md)   
+[Paramètres et fonctions du site Reporting Services &#40;mode SharePoint&#41;](../../reporting-services/report-server-sharepoint/site-settings-and-features-reporting-services.md)   
 [Activer la fonctionnalité Synchronisation de fichiers de serveur de rapports dans l'Administration centrale de SharePoint](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)  
 
 D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

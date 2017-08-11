@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1356d575f58eb36d00f52bcbac1483ce902b1954
 ms.contentlocale: fr-fr
@@ -31,11 +31,11 @@ ms.lasthandoff: 08/09/2017
   
  Vous pouvez mettre à jour les valeurs et les états d'indicateurs. Pour plus d'informations, consultez les rubriques suivantes :  
   
--   [Modifier les icônes d’indicateur et jeux d’indicateurs &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [Modifier les icônes d’indicateur et jeux d’indicateurs &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [Définir et configurer des unités de mesure &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [Définir et configurer des unités de mesure &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [Définir l’étendue de synchronisation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [Définir l’étendue de synchronisation &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)  
   
  Étant donné qu’un indicateur est positionné à l’intérieur du panneau de jauge, vous devez sélectionner l’indicateur au lieu du panneau quand vous souhaitez configurer l’indicateur à l’aide de la boîte de dialogue **Propriétés des indicateurs** ou du volet **Propriétés** . L'image suivante illustre un indicateur sélectionné dans son panneau de jauge.  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-add-an-indicator-to-a-table-or-matrix"></a>Pour ajouter un indicateur à une table ou une matrice  
   
-1.  Ouvrez un rapport existant ou créez un rapport qui contient une table et une matrice avec les données que vous souhaitez afficher. Pour plus d’informations, consultez [Tables &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md) ou [Matrices](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md).  
+1.  Ouvrez un rapport existant ou créez un rapport qui contient une table et une matrice avec les données que vous souhaitez afficher. Pour plus d’informations, consultez [Tables &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/tables-report-builder-and-ssrs.md) ou [Matrices](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md).  
   
 2.  Insérez une colonne dans votre table ou matrice. Pour plus d’informations, consultez [Insérer ou supprimer une colonne &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
   
@@ -76,6 +76,6 @@ ms.lasthandoff: 08/09/2017
 2.  Cliquez sur **Supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Indicateurs &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
+ [Indicateurs &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

@@ -15,7 +15,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: fc9ca2f7181dbda59726b9c38352c349bcf8a472
 ms.contentlocale: fr-fr
@@ -35,9 +35,9 @@ Cet article explique comment :
 - Afficher le rapport mobile dans l’application mobile Power BI.  
   
 ## <a name="before-we-start"></a>Avant de commencer  
-Pour suivre la procédure, vous avez besoin de ces produits :  
+Pour suivre la procédure, vous avez besoin de ces produits :  
   
-* Pour créer des sources de données et des indicateurs de performance clés, et publier des jeux de données et des rapports mobiles, vous devez accéder à un [!INCLUDE[ssRSCurrent_md](../../includes/ssrscurrent-md.md)][serveur de rapports en mode natif](https://msdn.microsoft.com/library/ms143711.aspx).  
+* Pour créer des sources de données et des indicateurs de performance clés et publier des jeux de données et les rapports mobiles, vous devez avoir accès à un [!INCLUDE[ssRSCurrent_md](../../includes/ssrscurrent-md.md)] [serveur de rapports en mode natif](https://msdn.microsoft.com/library/ms143711.aspx).  
 * Pour [créer des jeux de données partagés](#shared-dataset), vous devez [installer le Générateur de rapports](https://msdn.microsoft.com/library/ff519551.aspx).  
 * Pour créer des rapports mobiles, [installez l’Éditeur de rapports mobiles SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766).  
 * [Exemple de base de données AdventureWorks et scripts](http://msftdbprodsamples.codeplex.com/).  
@@ -235,9 +235,9 @@ Les listes de sélection jouent le rôle de filtres dans Power BI et Excel. Nous
   
 Maintenant que vous avez créé des visuels sur la présentation principale, vous pouvez créer un rapport mobile avec une présentation spécialement optimisée pour vos utilisateurs de téléphone.    
   
-1. En haut à droite, cliquez sur l’icône de zone de dessin > **Téléphone**.  
+1. Dans le coin supérieur droit, cliquez sur l’icône de zone de dessin > **téléphone**.  
   
-2. Sous l’onglet Disposition sous **Instances de contrôles** sont affichés les deux graphiques que vous avez créés.   
+2. Sous l’onglet Disposition sous **Instances de contrôles**sont affichés les deux graphiques que vous avez créés.   
   
 3. Faites glisser l’arborescence sur la zone de dessin de téléphone, et faites en sorte qu’elle mesure quatre colonnes sur trois lignes.  
   

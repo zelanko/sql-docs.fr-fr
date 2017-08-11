@@ -19,14 +19,14 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], methods
 ms.assetid: f7b9ca05-fc4c-4b30-8e5d-172dd0f4a832
 caps.latest.revision: 38
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 43fcfe6eecffdc237366eb7963a5582b1915d363
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 761571f88c2321c823dc240cfa9bb3ba75d9414b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="supplying-web-service-method-arguments"></a>Spécification d'arguments de méthode de service Web
@@ -49,7 +49,7 @@ rs.CreateFolder("Product Sales", "/Sales", null);
   
 ## <a name="see-also"></a>Voir aussi  
  [Génération d’Applications à l’aide du Service Web et le .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Service web Report Server](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Informations techniques de référence &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [Service Web Report Server](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
+ [Informations techniques de référence &#40; SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   

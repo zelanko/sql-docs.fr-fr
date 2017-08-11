@@ -17,7 +17,7 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 993571d2e5d70ba0553a0ed747caccfcadb3a0da
 ms.contentlocale: fr-fr
@@ -43,22 +43,22 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Mise en forme du texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Mise en forme du texte et des espaces réservés &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
  Explique comment mettre en forme le texte et personnaliser les options de mise en forme pour différents blocs de texte dans une zone de texte.  
   
- [Importation de données HTML dans un rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [Importation de données HTML dans un rapport &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
  Explique comment insérer et utiliser du contenu HTML dans un rapport.  
   
- [Mise en forme des nombres et des dates &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
+ [Mise en forme des nombres et Dates &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
  Décrit comment utiliser les chaînes de mise en forme standard et personnalisées prises en charge par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Mise en forme des lignes, des couleurs et des images &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)  
+ [Mise en forme des lignes, couleurs et Images &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)  
  Décrit comment mettre en forme des lignes, quadrillages, couleurs et images dans les éléments de rapport et régions de données.  
   
- [Définir les paramètres régionaux d’un rapport ou d’une zone de texte &#40;Reporting Services&#41;](../../reporting-services/report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)  
+ [Définir les paramètres régionaux pour un rapport ou zone de texte &#40; Reporting Services &#41;](../../reporting-services/report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  Explique comment modifier le paramètre pour les formats d'affichage de données qui diffèrent par langue et zone, telle que la date, la devise et les valeurs du nombre.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
+ [Mise en forme d’un graphique &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
   
   

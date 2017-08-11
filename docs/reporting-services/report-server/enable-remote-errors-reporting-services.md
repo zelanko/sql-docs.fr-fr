@@ -18,7 +18,7 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 20adc5eb8b830b960fe07d39f3717279abca3f23
 ms.contentlocale: fr-fr
@@ -73,7 +73,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Cliquez avec le bouton droit sur le nœud du serveur de rapports, puis sélectionnez **Propriétés**.  
   
-3.  Cliquez sur **Avancé** pour ouvrir la page de propriétés. Pour plus d’informations, consultez [Propriétés du serveur &#40;page Avancé&#41; - Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  Cliquez sur **Avancé** pour ouvrir la page de propriétés. Pour plus d’informations, consultez [propriétés du serveur &#40; Page avancé &#41; -Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne.  
   
 4.  Dans **EnableRemoteErrors**, sélectionnez **True**.  
   

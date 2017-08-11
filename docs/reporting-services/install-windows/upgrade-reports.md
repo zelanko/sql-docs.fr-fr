@@ -24,7 +24,7 @@ caps.latest.revision: 70
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5c6265fd62ae10a8037b0fbd1f7d26edb5de8bc9
 ms.contentlocale: fr-fr
@@ -120,7 +120,7 @@ ms.lasthandoff: 08/09/2017
 |Éléments de rapport personnalisés tiers|Mise à niveau non effectuée.<br /><br /> Traitement par le processeur de rapports [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
   
 ###  <a name="OpeningaReport"></a> Ouverture d'un rapport avec éléments de rapport personnalisés dans le Concepteur de rapports  
- Lorsque vous ouvrez un [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] rapport avec éléments de rapport personnalisés dans le Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], les rapports sont mis à niveau vers le nouveau schéma de définition de rapport. Selon les éléments de rapport personnalisés contenus dans le rapport, l'une des actions suivantes a lieu :  
+ Lorsque vous ouvrez un rapport [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] avec éléments de rapport personnalisés dans le Concepteur de rapports de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le rapport est mis à niveau vers le nouveau schéma de définition de rapport. Selon les éléments de rapport personnalisés contenus dans le rapport, l'une des actions suivantes a lieu :  
   
 -   Éléments de rapport personnalisés tiers détectés. Si la version du CRI installé sur l'ordinateur de création de rapports n'est pas compatible avec le nouveau schéma RDL, l'aire de conception affiche une zone de texte avec une croix de couleur rouge. Vous devez contacter votre administrateur système pour installer les nouvelles versions des éléments de rapport personnalisés des fournisseurs tiers compatibles avec le nouveau schéma RDL.  
   
@@ -147,10 +147,10 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Mettre à niveau et migrer Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[Modifications avec rupture dans SQL Server Reporting Services dans SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
-[Changements de comportement SQL Server Reporting Services dans SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
-[Fonctionnalités supprimées dans SQL Server Reporting Services dans SQL Server 2016](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
+[Modifications importantes de SQL Server Reporting Services dans SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
+[Changements de comportement apportés à SQL Server Reporting Services dans SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
+[Fonctionnalités supprimées de SQL Server Reporting Services dans SQL Server 2016](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [Éléments de rapport personnalisés](../../reporting-services/custom-report-items/custom-report-items.md)   
-[Mettre à niveau une base de données du serveur de rapports](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
+[Mettre à niveau une base de données de serveurs de rapports](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 
 D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

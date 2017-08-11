@@ -15,7 +15,7 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a401c2af14ba5e530d9efe3ff62eeae3ad9f8e7e
 ms.contentlocale: fr-fr
@@ -69,7 +69,7 @@ ms.lasthandoff: 08/09/2017
   
 |Base de données|Exemple de nom||  
 |--------------|------------------|-|  
-|Base de données de catalogue|ReportingService_[service application GUID] **(\*)**|L'utilisateur migre.|  
+|Base de données de catalogue|ReportingService_ [GUID application service] **(\*)**|L'utilisateur migre.|  
 |Base de données temporaire|ReportingService_[service application GUID]TempDB **(\*)**|L'utilisateur migre.|  
 |Base de données d'alertes|ReportingService_[GUID application service]_Alerting|Créée lorsqu'une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est créée.|  
   

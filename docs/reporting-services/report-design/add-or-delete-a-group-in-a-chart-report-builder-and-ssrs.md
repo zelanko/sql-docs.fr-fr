@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5360240569fcffe5f9708f68d7f95403e45c0909
 ms.contentlocale: fr-fr
@@ -61,6 +61,6 @@ Dans les rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 
 2.  Cliquez avec le bouton droit sur le groupe dans la zone **Groupes de catégories** ou **Groupes de séries** , puis sélectionnez **Supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [Graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   

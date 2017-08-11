@@ -17,14 +17,14 @@ caps.latest.revision: 26
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1acdcb76215bc8f7a3ae1017649a3e3a2cbcdc94
 ms.contentlocale: fr-fr
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="rrrenderingerror---reporting-services-error"></a>rrRenderingError - Erreur Reporting Services
+# <a name="rrrenderingerror---reporting-services-error"></a>rrRenderingError - erreur Reporting Services
     
 ## <a name="details"></a>Détails  
   

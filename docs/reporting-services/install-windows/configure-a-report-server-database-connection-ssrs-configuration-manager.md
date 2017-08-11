@@ -21,7 +21,7 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6d7a1e1b9b0c8fb3fe60022f79ebfd21d6c44a09
 ms.contentlocale: fr-fr
@@ -41,7 +41,7 @@ Chaque instance de serveur de rapports requiert une connexion à la base de donn
   
 -   Configuration d'un serveur de rapports de manière à utiliser une base de données de serveur de rapports différente  
   
--   Modification du compte ou du mot de passe de l'utilisateur permettant d'établir la connexion à la base de données. Vous devez uniquement mettre à jour la connexion de base de données lorsque les informations du compte sont stockées dans le fichier RSReportServer.config. Si vous utilisez le compte de service pour la connexion (qui utilise la sécurité intégrée de Windows comme type d'informations d'identification), le mot de passe n'est pas stocké, ce qui évite de mettre à jour les informations de connexion. Pour plus d’informations sur la modification des comptes, consultez [Configurer le compte de service Report Server &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
+-   Modification du compte ou du mot de passe de l'utilisateur permettant d'établir la connexion à la base de données. Vous devez uniquement mettre à jour la connexion de base de données lorsque les informations du compte sont stockées dans le fichier RSReportServer.config. Si vous utilisez le compte de service pour la connexion (qui utilise la sécurité intégrée de Windows comme type d'informations d'identification), le mot de passe n'est pas stocké, ce qui évite de mettre à jour les informations de connexion. Pour plus d’informations sur la modification des comptes, consultez [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
 -   Configuration d'un déploiement avec montée en puissance parallèle de serveurs de rapports La configuration d'un déploiement avec montée en puissance parallèle nécessite la création de plusieurs connexions à une base de données de serveur de rapports. Pour plus d’informations sur cette opération à plusieurs étapes, consultez [Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
@@ -61,7 +61,7 @@ Chaque instance de serveur de rapports requiert une connexion à la base de donn
   
 -   Nom de l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] hébergeant la base de données du serveur de rapports.  
   
--   Nom de la base de données du serveur de rapports. Lorsque vous créez une connexion pour la première fois, vous pouvez créer une nouvelle base de données de serveur de rapports ou sélectionner une base de données existante. Pour plus d’informations, consultez [Créer une base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md).  
+-   Nom de la base de données du serveur de rapports. Lorsque vous créez une connexion pour la première fois, vous pouvez créer une nouvelle base de données de serveur de rapports ou sélectionner une base de données existante. Pour plus d’informations, consultez [Create a Report Server Database  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md).  
   
 -   Type d'informations d'identification. Vous pouvez utiliser les comptes de service, un compte de domaine Windows ou une connexion de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -101,7 +101,7 @@ Chaque instance de serveur de rapports requiert une connexion à la base de donn
 ##### <a name="using-service-accounts-and-integrated-security"></a>Utilisation de comptes de service et de la sécurité intégrée  
  Vous pouvez utiliser la sécurité intégrée de Windows pour vous connecter via le compte de service Report Server. Le compte bénéficie des droits de connexion à la base de données du serveur de rapports. Il s'agit du type d'informations d'identification par défaut que choisit le programme d'installation si vous installez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la configuration par défaut.  
   
- Le compte de service est un compte approuvé qui implique une faible maintenance de la gestion d'une connexion de base de données de serveur de rapports. Comme le compte de service utilise la sécurité intégrée de Windows pour établir la connexion, il n'est pas nécessaire que les informations d'identification soient stockées. Toutefois, si vous modifiez par la suite l'identité ou le mot de passe du compte de service (par exemple, basculer d'un compte intégré vers un compte de domaine), veillez bien à utiliser l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour effectuer la modification. L'outil met automatiquement à jour les autorisations de base de données pour utiliser les informations modifiées sur le compte. Pour plus d’informations, consultez [Configurer le compte de service Report Server &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
+ Le compte de service est un compte approuvé qui implique une faible maintenance de la gestion d'une connexion de base de données de serveur de rapports. Comme le compte de service utilise la sécurité intégrée de Windows pour établir la connexion, il n'est pas nécessaire que les informations d'identification soient stockées. Toutefois, si vous modifiez par la suite l'identité ou le mot de passe du compte de service (par exemple, basculer d'un compte intégré vers un compte de domaine), veillez bien à utiliser l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour effectuer la modification. L'outil met automatiquement à jour les autorisations de base de données pour utiliser les informations modifiées sur le compte. Pour plus d’informations, consultez [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
  Si vous configurez la connexion de base de données pour qu'elle utilise le compte de service, le compte doit posséder les autorisations réseau si la base de données du serveur de rapports se trouve sur un ordinateur distant. N'utilisez pas le compte de service si la base de données du serveur de rapports se trouve dans un domaine différent, derrière un pare-feu ou si vous utilisez la sécurité des groupes de travail à la place de la sécurité des domaines. Utilisez un compte d'utilisateur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à la place.  
   
@@ -132,7 +132,7 @@ Chaque instance de serveur de rapports requiert une connexion à la base de donn
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Créer une base de données du serveur de rapports](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
-[Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
+[Gérer un serveur de rapports Reporting Services en Mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [Configurer le compte de Service Report Server](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
 
 D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

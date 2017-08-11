@@ -21,14 +21,14 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], methods
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
 caps.latest.revision: 49
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ec79e5169ff32294cc68f5bee24c3df677d8b38b
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: f99a0c09bfbe96062b078c07f86295b34069d9cf
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="report-server-web-service-methods"></a>Méthodes des services Web Report Server
@@ -39,22 +39,22 @@ ms.lasthandoff: 06/13/2017
   
 |Rubrique| Description|  
 |-----------|-----------------|  
-|[Points de terminaison de Service à Web Report Server](../../../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md)|Décrit les points de terminaison de chaque service Web Report Server utilisés pour la gestion et l'exécution des rapports.|  
-|[Méthodes de gestion Namespace Report Server](../../../reporting-services/report-server-web-service/methods/report-server-namespace-management-methods.md)|Décrit les méthodes que vous pouvez utiliser pour gérer la base de données du serveur de rapports. Plus précisément, ces méthodes vous permettent de gérer des dossiers et des ressources, et de définir des propriétés d'élément.|  
+|[Points de terminaison du service Web des serveurs de rapports](../../../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md)|Décrit les points de terminaison de chaque service Web Report Server utilisés pour la gestion et l'exécution des rapports.|  
+|[Méthodes de gestion des espaces de noms des serveurs de rapports](../../../reporting-services/report-server-web-service/methods/report-server-namespace-management-methods.md)|Décrit les méthodes que vous pouvez utiliser pour gérer la base de données du serveur de rapports. Plus précisément, ces méthodes vous permettent de gérer des dossiers et des ressources, et de définir des propriétés d'élément.|  
 |[Méthodes d’autorisation](../../../reporting-services/report-server-web-service/methods/authorization-methods.md)|Décrit les méthodes que vous pouvez utiliser pour gérer des tâches, des rôles et des stratégies.|  
-|[Sources de données et les méthodes de connexion](../../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md)|Décrit les méthodes que vous pouvez utiliser pour définir et gérer la connexion aux sources de données et les informations d'identification des rapports.|  
-|[Méthodes de paramètres de rapport](../../../reporting-services/report-server-web-service/methods/report-parameters-methods.md)|Décrit les méthodes que vous pouvez utiliser pour définir et extraire des paramètres destinés aux rapports.|  
-|[Méthodes de modèle - Service Web Report Server](../../../reporting-services/report-server-web-service/methods/model-methods-report-server-web-service.md)|Décrit les méthodes que vous pouvez utiliser pour gérer des modèles.|  
-|[Méthodes d’exécution et le rendu](../../../reporting-services/report-server-web-service/methods/rendering-and-execution-methods.md)|Décrit les méthodes que vous pouvez utiliser pour gérer l'exécution, le rendu et la mise en cache des rapports.|  
-|[Méthodes d’historique de rapport](../../../reporting-services/report-server-web-service/methods/report-history-methods.md)|Décrit les méthodes que vous pouvez utiliser pour créer des instantanés d'historique de rapport et les gérer.|  
+|[Sources de données et méthodes de connexion](../../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md)|Décrit les méthodes que vous pouvez utiliser pour définir et gérer la connexion aux sources de données et les informations d'identification des rapports.|  
+|[Méthodes des paramètres des rapports](../../../reporting-services/report-server-web-service/methods/report-parameters-methods.md)|Décrit les méthodes que vous pouvez utiliser pour définir et extraire des paramètres destinés aux rapports.|  
+|[Méthodes de modèles - service web des serveurs de rapports](../../../reporting-services/report-server-web-service/methods/model-methods-report-server-web-service.md)|Décrit les méthodes que vous pouvez utiliser pour gérer des modèles.|  
+|[Méthodes de rendu et d'exécution](../../../reporting-services/report-server-web-service/methods/rendering-and-execution-methods.md)|Décrit les méthodes que vous pouvez utiliser pour gérer l'exécution, le rendu et la mise en cache des rapports.|  
+|[Méthodes d'historique des rapports](../../../reporting-services/report-server-web-service/methods/report-history-methods.md)|Décrit les méthodes que vous pouvez utiliser pour créer des instantanés d'historique de rapport et les gérer.|  
 |[Méthodes de planification](../../../reporting-services/report-server-web-service/methods/scheduling-methods.md)|Décrit les méthodes que vous pouvez utiliser pour créer et gérer des planifications partagées et des plans d'actualisation du cache, utilisées ensuite par le serveur de rapports.|  
-|[Méthodes d’abonnement et remise](../../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|Décrit les méthodes que vous pouvez utiliser pour créer des abonnements et générer des remises de rapport, puis gérer ces événements.|  
-|[Méthodes des rapports liés](../../../reporting-services/report-server-web-service/methods/linked-reports-methods.md)|Décrit les méthodes que vous pouvez utiliser pour créer et gérer des rapports liés.|  
+|[Méthodes d'abonnement et de remise](../../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|Décrit les méthodes que vous pouvez utiliser pour créer des abonnements et générer des remises de rapport, puis gérer ces événements.|  
+|[Méthodes relatives aux rapports liés](../../../reporting-services/report-server-web-service/methods/linked-reports-methods.md)|Décrit les méthodes que vous pouvez utiliser pour créer et gérer des rapports liés.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [L’accès à l’API SOAP](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
  [Génération d’Applications à l’aide du Service Web et le .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Service web Report Server](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Informations techniques de référence &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [Service Web Report Server](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
+ [Informations techniques de référence &#40; SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   

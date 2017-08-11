@@ -16,7 +16,7 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c0c6cc27711140e96bbf4420e8de596af53ddfcd
 ms.contentlocale: fr-fr
@@ -27,7 +27,7 @@ ms.lasthandoff: 08/09/2017
 
 le portail web est une application Web frontale utilisée pour afficher des rapports, gérer le contenu du serveur de rapports et accorder l’accès utilisateur à un serveur de rapports en mode natif. le portail web est installé avec le service Web Report Server dans la même instance de serveur de rapports et éventuellement configuré si vous sélectionnez le **installer la configuration en mode natif par défaut** option dans le programme d’installation. Vous pouvez également configurer le portail web comme une tâche après l’installation. Cette rubrique fournit des informations sur ce qui suit les scénarios de configuration du portail web :
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Pour utiliser le portail web, vous devez satisfaire aux conditions suivantes :
 
@@ -100,9 +100,9 @@ Vous pouvez créer un package de marque personnalisée pour modifier les couleur
 [Prise en charge des navigateurs pour Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
 [configurer une URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Vérifier une installation de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   
-[Activer les fonctionnalités de Reporting Services ou désactiver](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)   
-[Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
-[Fichier de configuration RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+[Activer ou désactiver les fonctionnalités Reporting Services](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)   
+[gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
+[RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Configurer un serveur de rapports en Mode natif pour l’Administration locale](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)
 
  D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
