@@ -21,11 +21,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 42709e27ef13cadc3be92ce5afcbbf9ea35ab1f7
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>Les clés de chiffrement SSRS - stocker des données de serveur de rapports chiffrée
@@ -66,10 +66,10 @@ ms.lasthandoff: 06/22/2017
  Un serveur de rapports stocke d'autres données non chiffrées, mais qui contiennent des informations sensibles que vous voulez protéger. Plus particulièrement, les instantanés d'historique de rapport et d'exécution de rapport contiennent des résultats de requêtes pouvant inclure des données destinées exclusivement à des utilisateurs autorisés. Si vous utilisez la fonction d'instantané pour des rapports qui contiennent des données confidentielles, sachez que les utilisateurs capables d'ouvrir des tables dans une base de données du serveur de rapports peuvent être en mesure d'afficher des parties d'un rapport stocké en inspectant le contenu de la table.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne prend pas en charge la mise en cache ou l’historique de rapport pour les rapports basés sur l’identité de sécurité de l’utilisateur.  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ne prend pas en charge la mise en cache ou identité de l’historique de rapport pour les rapports qui utilisent des paramètres en fonction de la sécurité de l’utilisateur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Configurer et gérer les clés de chiffrement &#40; Gestionnaire de Configuration de SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
 

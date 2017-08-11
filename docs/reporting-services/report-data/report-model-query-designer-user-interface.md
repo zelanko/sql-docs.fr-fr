@@ -22,11 +22,11 @@ caps.latest.revision: 31
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 08ab050564e74a18d8231701f2355c042efc8685
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-model-query-designer-user-interface"></a>Interface utilisateur du concepteur de requêtes de modèle de rapport
@@ -63,7 +63,7 @@ ms.lasthandoff: 06/22/2017
 |**Importer**|Importe une requête existante à partir d'un fichier de définition de rapport (.rdl) sur le système de fichiers. Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Annuler action](../../reporting-services/report-data/media/rsqdicon-undo.gif "Annuler action")|Annule la dernière action.|  
 |![Action de restauration par progression](../../reporting-services/report-data/media/rsqdicon-redo.gif "rétablir action")|Rétablit la dernière action.|  
-|![Exécutez la requête](../../reporting-services/report-data/media/rsqdicon-run.gif "exécuter la requête")|Exécute la requête et affiche les résultats dans le volet Résultat.|  
+|![Exécuter la requête](../../reporting-services/report-data/media/rsqdicon-run.gif "Exécuter la requête")|Exécute la requête et affiche les résultats dans le volet Résultat.|  
 |![Filtre graphique à côté de la colonne de filtre sélectionnée](../../reporting-services/report-data/media/rsqdicon-filter.gif "filtre graphique à côté de la colonne de filtre sélectionnée")|Ouvre la boîte de dialogue **Filtrer les données** qui permet de spécifier les données à filtrer. Vous pouvez spécifier des filtres indépendamment des données actuelles de la zone de conception.|  
   
 ## <a name="text-based-query-designer"></a>Concepteur de requêtes textuel  
@@ -89,12 +89,12 @@ ms.lasthandoff: 06/22/2017
 |------------|-----------------|  
 |**Modifier en tant que texte**|Bascule entre le Concepteur de requêtes textuel et le concepteur de requêtes graphique.|  
 |**Importer**|Importe une requête à partir d'un rapport existant.|  
-|![Exécutez la requête](../../reporting-services/report-data/media/rsqdicon-run.gif "exécuter la requête")|Exécute le texte de la requête et affiche les résultats dans le volet Résultat.|  
+|![Exécuter la requête](../../reporting-services/report-data/media/rsqdicon-run.gif "Exécuter la requête")|Exécute le texte de la requête et affiche les résultats dans le volet Résultat.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils de création de requêtes &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
  [Ajouter des données à partir de sources de données externes &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
- [Connexion à un modèle de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   
- [Fichier de configuration RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
+ [Connexion de modèle de rapport &#40; SSRS &#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   
+ [Fichier de Configuration RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
   
   

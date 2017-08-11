@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fb2ff6fdeb8f4d05866c09e87cd899a5dd2bb7ad
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>Datasets incorporés et partagés (Générateur de rapports et SSRS)
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
  Dans le Générateur de rapports, vous pouvez effectuer les actions suivantes :  
   
-1.  Pour créer un dataset partagé, utilisez le mode création de dataset partagé. Vous pouvez l'enregistrer sur un serveur de rapports ou un site SharePoint pour le partager avec d'autres rapports. Vous pouvez également accéder au serveur de rapports et modifier tout dataset partagé existant. Dans ce mode, vous pouvez créer une requête et définir toutes les options de dataset. Pour plus d’informations, consultez [Mode Création de dataset partagé &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md).  
+1.  Pour créer un dataset partagé, utilisez le mode création de dataset partagé. Vous pouvez l'enregistrer sur un serveur de rapports ou un site SharePoint pour le partager avec d'autres rapports. Vous pouvez également accéder au serveur de rapports et modifier tout dataset partagé existant. Dans ce mode, vous pouvez créer une requête et définir toutes les options de dataset. Pour plus d’informations, consultez [mode de création de Dataset partagé &#40; Le Générateur de rapports &#41; ](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md).  
   
 2.  Pour ajouter un dataset partagé à votre rapport, ouvrez le Générateur de rapports en mode création de rapport. Depuis un Assistant ou le volet Données du rapport, accédez au serveur de rapports et sélectionnez le dataset partagé à ajouter à votre rapport. Dans ce mode, vous ne pouvez pas modifier la requête sauf pour ajouter des champs. Vous pouvez remplacer d'autres options de données et ajouter des filtres. Vous ne pouvez pas supprimer de filtres.  
   
@@ -65,10 +65,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Connexions de données ou sources de données incorporées et partagées &#40;Générateur de rapports et SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
- [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [Créer un Dataset partagé ou Dataset incorporé &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [Jeux de données du rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
+ [Collection de champs de DataSet &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [Connexions de données, les Sources de données et les chaînes de connexion dans le Générateur de rapports](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

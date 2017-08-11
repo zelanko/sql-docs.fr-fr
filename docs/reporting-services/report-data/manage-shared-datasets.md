@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6414ac861d66bdacde41575662c7c66fc5014839
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="manage-shared-datasets"></a>Gérer des datasets partagés
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
  La définition de dataset partagé inclut une requête, des paramètres de dataset y compris les valeurs par défaut, des options de données telles que le respect de la casse, et des filtres de dataset. Les valeurs que vous établissez dans la définition sont utilisées chaque fois que le dataset partagé est inclus dans un rapport.  
   
- Pour utiliser un dataset partagé dans un rapport, vous ouvrez une application telle que le Générateur de rapports, accédez au serveur de rapports ou au site SharePoint, et sélectionnez le dataset partagé. Cela ajoute une instance du dataset partagé au rapport. Dans le rapport, vous ne pouvez pas afficher ou modifier la requête ou la source de données partagée pour le dataset partagé. Vous pouvez spécifier un jeu supplémentaire de valeurs de propriété du dataset qui s'appliquent à l'instance dans le rapport. Par exemple, vous pouvez ajouter un filtre ou des options de modifications des données telles que le respect de la casse. Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) dans la [documentation du Générateur de rapports ](http://go.microsoft.com/fwlink/?LinkId=154494) sur msdn.microsoft.com.  
+ Pour utiliser un dataset partagé dans un rapport, vous ouvrez une application telle que le Générateur de rapports, accédez au serveur de rapports ou au site SharePoint, et sélectionnez le dataset partagé. Cela ajoute une instance du dataset partagé au rapport. Dans le rapport, vous ne pouvez pas afficher ou modifier la requête ou la source de données partagée pour le dataset partagé. Vous pouvez spécifier un jeu supplémentaire de valeurs de propriété du dataset qui s'appliquent à l'instance dans le rapport. Par exemple, vous pouvez ajouter un filtre ou des options de modifications des données telles que le respect de la casse. Pour plus d’informations, consultez [incorporé Datasets du rapport et Datasets partagés &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) dans les [documentation du Générateur de rapports](http://go.microsoft.com/fwlink/?LinkId=154494) sur msdn.microsoft.com.  
   
 ## <a name="managing-shared-datasets"></a>Gestion de Datasets partagés  
  Pour gérer les propriétés d'un dataset partagé, vous pouvez utiliser le Gestionnaire de rapports pour un serveur de rapports en mode natif ou des pages d'application sur un site SharePoint si vous avez déployé le serveur de rapports en mode intégré SharePoint. Les tâches que vous pouvez effectuer sur un dataset partagé dépendent de vos attributions de rôle ainsi que du niveau sur site et des autorisations au niveau de l'élément, notamment les autorisations sur le dossier si l'héritage des autorisations est appliqué. La sécurité au niveau de l'élément pour les datasets partagés suit le même modèle que celle pour les rapports. Pour plus d’informations, consultez [Sécuriser les éléments de dataset partagés](../../reporting-services/security/secure-shared-dataset-items.md).  
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
 |-|-|  
 |Modifier le nom|Modifiez le nom du dataset partagé. Toutes les références d'éléments dépendants continueront de fonctionner.|  
 |Modifier la description|Modifiez la description du dataset partagé.|  
-|Modifier le délai d'attente d'exécution de la requête|Définissez le délai d'attente d'exécution de la requête en secondes. Zéro (0) seconde signifie aucun délai d'attente. Détermine le nombre de secondes avant l'expiration de la requête du dataset. Pour ne spécifier aucune valeur de délai d'attente, utilisez 0. Pour plus d’informations, consultez [Définition des valeurs de délai d’attente pour le traitement d’un rapport et d’un dataset partagé &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  
+|Modifier le délai d'attente d'exécution de la requête|Définissez le délai d'attente d'exécution de la requête en secondes. Zéro (0) seconde signifie aucun délai d'attente. Détermine le nombre de secondes avant l'expiration de la requête du dataset. Pour ne spécifier aucune valeur de délai d'attente, utilisez 0. Pour plus d’informations, consultez [des valeurs de délai d’expiration des paramètres de rapport et le traitement de Dataset partagé &#40; SSRS &#41; ](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  
 |Afficher les éléments dépendants|Affichez les éléments qui utilisent ce dataset partagé : parties de rapport publiées, sources de données partagées et rapports.|  
   
  Les propriétés de dataset partagées supplémentaires suivantes sont configurées automatiquement :  
@@ -126,6 +126,6 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Octroi d’autorisations sur un serveur de rapports en Mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

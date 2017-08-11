@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 2ae4ec5004c6299dc8201daa18ab89b432cab845
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>Créer une matrice (Générateur de rapports et SSRS)
@@ -48,11 +48,11 @@ ms.lasthandoff: 06/22/2017
   
  Ajoutez des groupes en faisant glisser des champs de dataset vers les zones de groupes de lignes et de groupes de colonnes du volet de regroupement. Le premier champ que vous faites glisser vers le volet des groupes de lignes ou des groupes de colonnes remplace le groupe par défaut vide initial. Vous pouvez alors appliquer une mise en forme à chaque cellule, en fonction des données.  
   
- ![Matrice, ligne Category et groupe de colonnes Geography](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "matrice, ligne Category et groupe de colonnes Geography")  
+ ![Matrice, ligne Category et groupe de colonnes Geography](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "Matrice, ligne Category et groupe de colonnes Geography")  
   
  Dans l'aperçu, vous pouvez développer la matrice afin d'afficher les valeurs des groupes de lignes et des groupes de colonnes. Les cellules affichent des valeurs de résumé, comme indiqué dans l'illustration suivante.  
   
- ![Aperçu d’une matrice rendue avec des groupes développés](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "aperçu d’une matrice rendue avec des groupes développés")  
+ ![Aperçu d’une matrice rendue avec des groupes développés](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "Aperçu d’une matrice rendue avec des groupes développés")  
   
  La matrice avec laquelle vous démarrez est un modèle basé sur la région de données de tableau matriciel. Vous pouvez poursuivre le développement de la conception de votre matrice en ajoutant des groupes de lignes ou de colonnes imbriqués ou adjacents, voire en ajoutant des lignes de détails. Pour plus d’informations, consultez [Exploration de la souplesse d’une région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 06/22/2017
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Référence des fonctions d’agrégation &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Exemples d’expressions &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

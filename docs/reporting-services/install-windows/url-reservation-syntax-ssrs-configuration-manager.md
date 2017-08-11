@@ -16,11 +16,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d18adbfb6ce7a50b458ac1f8197c197281e9d81e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>Syntaxe de réservation d’URL (Gestionnaire de configuration de SSRS)
@@ -43,8 +43,8 @@ ms.lasthandoff: 06/22/2017
 |VirtualDirectory|ReportServer*[_InstanceName]*<br /><br /> Reports*[_InstanceName]*<br /><br /> \<personnalisé >|Spécifie le nom de l'application. La valeur est une chaîne. Par défaut, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise ReportServer et Reports comme noms d'applications pour les applications service Web Report Server et Gestionnaire de rapports. Vous pouvez utiliser d'autres noms, si vous le souhaitez.<br /><br /> Cette valeur est requise. Elle identifie la publication.<br /><br /> Spécifiez un seul répertoire virtuel pour chaque instance d'application. Pour créer plusieurs URL pour la même application dans la même instance, créez plusieurs versions de l’élément **UrlString**. Pour créer des noms de répertoire virtuel uniques pour plusieurs instances d'application, pensez à ajouter le nom de l'instance dans le nom de répertoire virtuel à l'aide du trait de soulignement (_). La propriété *InstanceName* est facultative, mais recommandée si vous avez plusieurs instances sur le même ordinateur. Pour plus d’informations sur la définition des réservations d’URL pour les instances nommées, consultez [Réservations d’URL pour les déploiements de serveur de rapports multi-instance &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md).<br /><br /> La valeur du répertoire virtuel ne respecte pas la casse. Vous pouvez utiliser n'importe quelle chaîne tant qu'elle n'inclut pas les caractères de séparation d'URL ou l'encodage d'URL.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [Configurer des URL de Report Server &#40; Gestionnaire de Configuration de SSRS &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Configurer une URL &#40; Gestionnaire de Configuration de SSRS &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
   
   
 

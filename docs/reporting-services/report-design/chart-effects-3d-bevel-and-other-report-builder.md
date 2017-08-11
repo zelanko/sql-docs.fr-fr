@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f6d149a116c243fba0587afe1dcf969f9356c57f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="chart-effects---3d-bevel-and-other-report-builder"></a>Effets de graphique - 3D, de relief et autres (Générateur de rapports)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
   
  Des effets en trois dimensions peuvent être appliqués aux graphiques individuels et il est possible d'afficher à la fois des graphiques en deux et trois dimensions sur le même rapport.  
   
- Pour tous les types de graphiques, vous pouvez ajouter des effets en trois dimensions à une zone de graphique dans la boîte de dialogue **Propriétés de la zone de graphique** en sélectionnant **Afficher en 3D**. Pour plus d’informations, consultez [Ajouter des effets 3D à un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md).  
+ Pour tous les types de graphiques, vous pouvez ajouter des effets en trois dimensions à une zone de graphique dans la boîte de dialogue **Propriétés de la zone de graphique** en sélectionnant **Afficher en 3D**. Pour plus d’informations, consultez [Add 3D Effects to a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md).  
   
  Il est également possible d'améliorer l'impact visuel des graphiques en ajoutant des styles de biseau, de relief et de texture dans les graphiques à barres, à secteurs, en anneau, et les histogrammes. Pour plus d’informations, consultez [Ajouter des styles de biseau, du relief et des textures à un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
@@ -65,8 +65,8 @@ ms.lasthandoff: 06/22/2017
  Vous pouvez ajouter des styles de mise en surbrillance à un graphique 3D via la propriété **Ombrage** qui apparaît sous Area3DStyle dans le volet Propriétés quand la zone de graphique est sélectionnée. Un style d'éclairage simple applique la même teinte aux éléments de zone de graphique. Un style réaliste modifie les teintes des éléments de zone de graphique selon un angle d'éclairage spécifié.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Ajouter des effets 3D à un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  
+ [Mise en forme les étiquettes des axes sur un graphique &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Mise en forme d’un graphique &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Ajouter des effets 3D à un graphique &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  
   
   

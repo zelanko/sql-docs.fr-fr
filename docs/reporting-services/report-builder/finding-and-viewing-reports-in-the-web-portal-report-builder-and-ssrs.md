@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 85eda9497d17c2e5e7bb7fecf15e1d214d24ca11
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>Recherche et affichage de rapports dans le portail web (Générateur de rapports et SSRS)
@@ -33,7 +33,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="navigating-the-folder-hierarchy-in-report-manager"></a>Navigation dans l'arborescence des dossiers du Gestionnaire de rapports  
  Pour parcourir les rapports que vous souhaitez exécuter, vous pouvez utiliser la page d'accueil, qui s'affiche automatiquement lorsque vous démarrez le Gestionnaire de rapports et lorsque vous ouvrez un dossier dans l'arborescence des dossiers. La page d'accueil affiche uniquement les éléments que vous êtes autorisé à afficher. Le chemin d'accès de dossier est affiché sous la forme d'une ligne de liens en haut de la page d'accueil. Les noms des dossiers sont répertoriés en séquence, en commençant par le dossier racine (dossier de base). Chaque fois que vous ouvrez un dossier supplémentaire, son nom est ajouté au chemin d'accès de dossier en haut de la page. **(1)** dans l’illustration ci-dessous. Lorsque vous ouvrez un rapport, le nom du rapport est également ajouté au chemin d'accès de dossier.  
   
- ![Ruban du Gestionnaire de rapports et la Navigation](../../reporting-services/report-builder/media/rs-reportmanager-ribbon.gif "Report Manager Ribbon and Navigation")  
+ ![Ruban du Gestionnaire de rapports et la Navigation](../../reporting-services/report-builder/media/rs-reportmanager-ribbon.gif "ruban du Gestionnaire de rapports et la Navigation")  
 Ruban du Gestionnaire de rapports  
   
  Utilisez les méthodes suivantes pour parcourir une arborescence des dossiers :  
@@ -47,7 +47,7 @@ Ruban du Gestionnaire de rapports
 ## <a name="opening-a-report"></a>Ouverture d'un rapport  
  Une fois le rapport trouvé, cliquez sur son nom pour l'ouvrir. Le rapport est rendu en HTML et s'affiche dans la page Contenu du Gestionnaire de rapports. Les rapports sont toujours mis en cache par la session du navigateur, de sorte que si vous ouvrez un rapport, vous pouvez généralement y revenir en cliquant sur le bouton **Précédent** . Ceci est vrai même s'il vous a été demandé de fournir un nom d'utilisateur et un mot de passe pour exécuter le rapport. Vous ne pouvez pas véritablement fermer un rapport rendu tant que le navigateur n'est pas fermé.  
   
- Tous les rapports visibles dans l'arborescence des dossiers ne sont pas accessibles immédiatement. Certains rapports peuvent exiger la saisie d'un nom d'utilisateur et d'un mot de passe afin de déterminer si vous êtes autorisé ou non à accéder à la source de données du rapport. Pour plus d’informations sur l’ouverture des rapports dans le Gestionnaire de rapports, consultez [Ouvrir et fermer un rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
+ Tous les rapports visibles dans l'arborescence des dossiers ne sont pas accessibles immédiatement. Certains rapports peuvent exiger la saisie d'un nom d'utilisateur et d'un mot de passe afin de déterminer si vous êtes autorisé ou non à accéder à la source de données du rapport. Pour plus d’informations sur l’ouverture des rapports dans le Gestionnaire de rapports, consultez [ouvrir et fermer un rapport &#40; Le Gestionnaire de rapports &#41; ](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
   
  Vous pouvez également accéder à un rapport du serveur de rapports et l'ouvrir directement à partir du Générateur de rapports. Pour plus d’informations, consultez [Recherche de rapports et d’autres éléments &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)(Planification de la prise en charge des navigateurs pour Reporting Services et Power View).  
   
@@ -61,6 +61,6 @@ Ruban du Gestionnaire de rapports
   
 ## <a name="see-also"></a>Voir aussi  
  [Recherche de rapports et d’autres éléments &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Recherche, affichage et la gestion des rapports &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

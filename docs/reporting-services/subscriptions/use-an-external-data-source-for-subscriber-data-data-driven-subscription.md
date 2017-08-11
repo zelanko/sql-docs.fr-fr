@@ -22,11 +22,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a337202cea263001fe810c91a607fa1746219bd6
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Utiliser une source de données externe pour les données des abonnés (abonnements pilotés par les données)
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Modèles de rapport  
   
- Si vous disposez d’une extension de traitement des données personnalisées que vous souhaitez utiliser dans les abonnements pilotés par les données, il doit implémenter la <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> et <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> interfaces. L'extension de traitement des données doit prendre en charge une exécution de requête schéma exclusivement. Cette requête permet de récupérer les métadonnées des colonnes lors de la conception, afin que les utilisateurs puissent mapper les colonnes aux options de remise et aux paramètres de rapport dans la définition d'abonnement. L'exécution de requêtes schéma exclusivement intervient très tôt dans le processus, lorsque l'utilisateur définit l'abonnement.  
+ Si vous disposez d’une extension de traitement de données que vous voulez utiliser dans les abonnements pilotés par les données, cette extension doit implémenter les interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> et <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> . L'extension de traitement des données doit prendre en charge une exécution de requête schéma exclusivement. Cette requête permet de récupérer les métadonnées des colonnes lors de la conception, afin que les utilisateurs puissent mapper les colonnes aux options de remise et aux paramètres de rapport dans la définition d'abonnement. L'exécution de requêtes schéma exclusivement intervient très tôt dans le processus, lorsque l'utilisateur définit l'abonnement.  
   
 ## <a name="query-requirements"></a>Impératifs liés aux requêtes  
  Lorsque vous créez une requête qui récupère les données d'abonnement, gardez à l'esprit les points suivants :  
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>Transmission de valeurs de paramètres de la base de données d'abonnés au rapport  
  Si vous créez un abonnement piloté par les données pour un rapport paramétrable, vous pouvez utiliser des valeurs de paramètres de variable pour personnaliser la production de chaque rapport. Par exemple, une base de données d'abonnés peut contenir des numéros d'identification d'employés, des dates d'embauche, des titres de fonction et des adresses de lieux de travail dont vous pouvez vous servir pour filtrer les données du rapport. Si le rapport accepte des paramètres basés sur ces données de colonnes, vous pouvez mapper le paramètre à la colonne appropriée.  
   
- Lors du mappage de champs d'abonné à des paramètres de rapport, vérifiez que les types de données et les longueurs de colonnes sont compatibles. En cas de non-correspondance du type de données, une erreur se produit lors du traitement des abonnements. Pour en savoir plus sur l’utilisation des données dans un rapport paramétrable, consultez [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ Lors du mappage de champs d'abonné à des paramètres de rapport, vérifiez que les types de données et les longueurs de colonnes sont compatibles. En cas de non-correspondance du type de données, une erreur se produit lors du traitement des abonnements. Pour plus d’informations sur l’utilisation des données dans un rapport paramétrable, consultez [créer un abonnement piloté &#40; Didacticiel SSRS &#41; ](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
 ## <a name="modifying-the-subscriber-data-source"></a>Modification de la source de données des abonnés  
  Les modifications suivantes apportées à la source de données peuvent empêcher l'exécution de l'abonnement :  
@@ -85,7 +85,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer, modifier ou supprimer des abonnements pilotés par les données](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [Abonnements pilotés par les données](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Abonnements et remise &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   

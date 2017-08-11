@@ -22,11 +22,11 @@ caps.latest.revision: 31
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8afee187160da9d35efd0c7079b649bac7e73740
+ms.translationtype: MT
+ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
+ms.openlocfilehash: 57312a2c4c75a9df1abc55baa833772c9949270c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Utilisation du contrôle RSClientPrint dans les applications personnalisées
@@ -72,7 +72,7 @@ ms.lasthandoff: 06/13/2017
   
 ### <a name="rsclientprint-properties"></a>Propriétés de RSClientPrint  
   
-|Propriété|Type|L/E|Valeur par défaut| Description|  
+|Propriété|Type|L/E|Par défaut| Description|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Double|L/E|paramètre de rapport|Obtient ou définit la marge de gauche. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans le rapport, est de 12,2 millimètres.|  
 |MarginRight|Double|L/E|paramètre de rapport|Obtient ou définit la marge de droite. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans le rapport, est de 12,2 millimètres.|  
@@ -111,7 +111,7 @@ ms.lasthandoff: 06/13/2017
   
 |Argument|E/S|Type| Description|  
 |--------------|----------|----------|-----------------|  
-|ServerPath|Dans|String|Spécifie le répertoire virtuel du serveur de rapports (par exemple, `https://adventure-works/reportserver`).|  
+|ServerPath|Dans|Chaîne|Spécifie le répertoire virtuel du serveur de rapports (par exemple, `https://adventure-works/reportserver`).|  
 |ReportPathParameters|Dans|Chaîne|Spécifie le nom complet du rapport, ainsi que les paramètres, dans l'espace de noms de dossier du serveur de rapports. Les rapports sont extraits via une URL. Par exemple : "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
 |ReportName|Dans|Chaîne|Nom court du rapport (dans l'exemple ci-dessus, le nom court est Employee Sales Summary). Il s'affiche dans la boîte de dialogue Imprimer ainsi que dans la file d'attente à l'impression.|  
   
@@ -151,6 +151,6 @@ ms.lasthandoff: 06/13/2017
 ## <a name="see-also"></a>Voir aussi  
  [Imprimer des rapports à partir d’un navigateur avec le contrôle d’impression &#40; Le Générateur de rapports et SSRS &#41;](../../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
  [Impression de rapports &#40; Le Générateur de rapports et SSRS &#41;](../../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
- [Paramètres d'informations de périphérique pour l'image](../../../reporting-services/image-device-information-settings.md)  
+ [Image Device Information Settings](../../../reporting-services/image-device-information-settings.md)  
   
   

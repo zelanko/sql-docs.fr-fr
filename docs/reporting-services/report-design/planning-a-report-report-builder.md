@@ -18,11 +18,11 @@ caps.latest.revision: 19
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fa6837d82c145d2bb079013238dd67332e512cc6
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="planning-a-report-report-builder"></a>Planification d'un rapport (Générateur de rapports)
@@ -30,7 +30,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **Quel format souhaitez-vous affecter au rapport ?**  
   
-     Vous pouvez restituer les rapports en ligne dans un navigateur tel que le portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou les exporter dans d’autres formats tels que Word, Excel ou PDF. La forme finale de votre rapport est un aspect important car toutes les fonctionnalités ne sont pas disponibles dans tous les formats d'exportation. Pour plus d’informations, consultez [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+     Vous pouvez restituer les rapports en ligne dans un navigateur tel que le portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou les exporter dans d’autres formats tels que Word, Excel ou PDF. La forme finale de votre rapport est un aspect important car toutes les fonctionnalités ne sont pas disponibles dans tous les formats d'exportation. Pour plus d’informations, consultez [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 -   **Quelle structure souhaitez-vous utiliser pour présenter les données dans le rapport ?**  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **Quelles données souhaitez-vous présenter aux utilisateurs ? Les données ou le format doivent-ils être filtré pour différents publics ?**  
   
-     Vous souhaiterez peut-être réduire l'étendue du rapport à des utilisateurs ou des emplacements spécifiques, ou à une période donnée. Pour filtrer les données du rapport, utilisez des paramètres permettant de récupérer et d'afficher uniquement les données souhaitées. Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+     Vous souhaiterez peut-être réduire l'étendue du rapport à des utilisateurs ou des emplacements spécifiques, ou à une période donnée. Pour filtrer les données du rapport, utilisez des paramètres permettant de récupérer et d'afficher uniquement les données souhaitées. Pour plus d’informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 -   **Avez-vous besoin de créer vos propres calculs ?**  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Générateur de rapports dans SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Concepts de création de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Rapports création Concepts &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Didacticiels du Générateur de rapports](../../reporting-services/report-builder-tutorials.md)  
   
   

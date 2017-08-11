@@ -19,11 +19,11 @@ caps.latest.revision: 48
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7e79341b1988e43d27ac35d46fcba482de0ab371
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-access-parameter-reference"></a>Référence de paramètre d'accès URL
@@ -277,7 +277,7 @@ ms.lasthandoff: 06/22/2017
 -   *ClearSession*:  
                   La valeur **true** indique au serveur de rapports de supprimer un rapport d’une session de rapport. Toutes les instances de rapport associées à un utilisateur authentifié sont supprimées de la session de rapport. (Par définition, une instance de rapport est un rapport identique exécuté plusieurs fois avec des valeurs de paramètre de rapport différentes.) La valeur par défaut est **false**.  
   
--   *ResetSession* :  
+-   *ResetSession*:  
                   La valeur **true** indique au serveur de rapports de réinitialiser la session de rapport en supprimant l’association de la session de rapport à tous les instantanés de rapport. La valeur par défaut est **false**.  
   
 -   *ShowHideToggle*:  

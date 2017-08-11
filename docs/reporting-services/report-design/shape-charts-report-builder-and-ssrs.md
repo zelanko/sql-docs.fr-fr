@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 84ee7a9030bb27725994a33860b26b8754034cd9
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>Graphiques à base de formes (Générateur de rapports et SSRS)
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Les graphiques à base de formes sont idéaux pour représenter des pourcentages proportionnels en respectant un ordre de tri. Toutefois, par souci de cohérence, le graphique ne trie pas les valeurs de votre dataset par défaut. Pensez à organiser vos valeurs de la plus élevée à la plus basse pour représenter le plus correctement possible vos données sous la forme d'un graphique en entonnoir ou en pyramide. Pour plus d’informations, consultez [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
--   Les valeurs null, vides, négatives n'ont aucun effet lors du calcul de ratios C'est pourquoi, ces valeurs ne sont pas affichées sur un graphique à base de formes. Si vous souhaitez indiquer visuellement ces types de valeurs sur votre graphique, modifiez le type de graphique. Pour plus d’informations sur l’ajout de points vides à un graphique qui n’est pas à base de formes, consultez [Ajouter des points vides à un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
+-   Les valeurs null, vides, négatives n'ont aucun effet lors du calcul de ratios C'est pourquoi, ces valeurs ne sont pas affichées sur un graphique à base de formes. Si vous souhaitez indiquer visuellement ces types de valeurs sur votre graphique, modifiez le type de graphique. Pour plus d’informations sur l’ajout de points vides à un graphique de la forme non, consultez [ajouter des Points vides à un graphique &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
   
 -   Si vous définissez vos propres couleurs sur un graphique à base de formes à l'aide d'une palette personnalisée, assurez-vous de disposer de suffisamment de couleurs dans votre palette pour mettre en surbrillance chaque point de données avec sa propre couleur. Pour plus d’informations, consultez [Mise en forme des couleurs des séries d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   
@@ -56,12 +56,12 @@ ms.lasthandoff: 06/22/2017
   
 -   Les types de graphique à base de formes ne peuvent pas être combinés avec un autre type de graphique dans la même zone de graphique. Si vous devez afficher des comparaisons entre des données affichées sur un graphique à base de formes et des données affichées sur un autre type de graphique, vous devrez ajouter une deuxième zone de graphique.  
   
--   Vous pouvez appliquer des styles de dessin supplémentaires aux graphiques en secteurs et aux graphiques en anneau pour impact visuel amélioré. Pour plus d’informations, consultez [Mise en forme des couleurs des séries d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
+-   Vous pouvez appliquer des styles de dessin supplémentaires aux graphiques en secteurs et aux graphiques en anneau pour impact visuel amélioré. Consultez [mise en forme des couleurs des séries sur un graphique &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md) pour plus d’informations.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Points de données vides et Null dans les graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Graphiques à secteurs &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
+ [Graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Mise en forme d’un graphique &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Points de données vides et Null dans les graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [Les graphiques en secteurs &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
   
   

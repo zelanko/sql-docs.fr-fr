@@ -15,11 +15,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3b5e30cca2aa3c75ca4d13e89e7af7b181a18916
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="troubleshoot-reporting-services"></a>Dépannage de Reporting Services
@@ -31,22 +31,22 @@ ms.lasthandoff: 06/22/2017
 
 +  [Résoudre les problèmes de conception de rapports avec Reporting Services](../../reporting-services/troubleshooting/troubleshoot-report-design-issues-with-reporting-services.md)  
 
-+  [Résoudre les problèmes de récupération des données de rapports Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
++  [Résoudre les problèmes de récupération des données avec des rapports Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 
 +  [Résoudre les problèmes de traitement des rapports Reporting Services](../../reporting-services/troubleshooting/troubleshoot-processing-of-reporting-services-reports.md)  
 
-+  [Résoudre les problèmes de rendu des rapports de Services Reporting](../../reporting-services/troubleshooting/troubleshoot-reporting-services-report-rendering-issues.md)  
++  [Résoudre les problèmes de rendu des rapports Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-report-rendering-issues.md)  
 
 +  [Résolution des problèmes liés à la publication ou à l’affichage d’un rapport sur un serveur de rapports en mode natif](../../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md)  
 
 +  [Résoudre les problèmes de serveur et de connexion à la base de données avec Reporting Server](https://msdn.microsoft.com/library/mt650905.aspx)  
 
  ![Icône de dossier petit fichier](../../reporting-services/troubleshooting/media/filefolder-small.png)**erreur et référence des événements**   
- + [Guide de référence des erreurs et des événements &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
+ + [Erreurs et événements référence &#40; Reporting Services &#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 
 +  [Cause et résolution des erreurs Reporting Services](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
 
 ## <a name="see-also"></a>Voir aussi  
  [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Activer des événements Reporting Services pour le journal des traces SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+ [Activer des événements de Reporting Services pour le journal des traces SharePoint &#40; ULS &#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
 

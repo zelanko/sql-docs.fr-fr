@@ -32,11 +32,11 @@ caps.latest.revision: 53
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 103472f5003235e0e08c65c40999545ff4d864ee
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="manage-a-running-process"></a>Gérer un processus en cours d'exécution
@@ -58,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Abonnements standard détenus par des utilisateurs individuels.  
   
- L'annulation d'un travail supprime uniquement les processus qui s'exécutent sur le serveur de rapports. Le serveur de rapports ne gère pas le traitement des données sur d'autres ordinateurs ; par conséquent, vous devez annuler manuellement les processus de requête qui se retrouvent par la suite orphelins sur d'autres systèmes. Envisagez la possibilité d'affecter des valeurs au délai d'expiration des requêtes afin de clore automatiquement les requêtes dont l'exécution est trop longue. Pour plus d’informations, consultez [Définition des valeurs de délai d’attente pour le traitement d’un rapport et d’un dataset partagé &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Pour plus d’informations sur l’interruption momentanée d’un rapport, consultez [Désactiver ou suspendre le traitement des rapports et des abonnements](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).  
+ L'annulation d'un travail supprime uniquement les processus qui s'exécutent sur le serveur de rapports. Le serveur de rapports ne gère pas le traitement des données sur d'autres ordinateurs ; par conséquent, vous devez annuler manuellement les processus de requête qui se retrouvent par la suite orphelins sur d'autres systèmes. Envisagez la possibilité d'affecter des valeurs au délai d'expiration des requêtes afin de clore automatiquement les requêtes dont l'exécution est trop longue. Pour plus d’informations, consultez [des valeurs de délai d’expiration des paramètres de rapport et le traitement de Dataset partagé &#40; SSRS &#41; ](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Pour plus d’informations sur l’interruption momentanée d’un rapport, consultez [Désactiver ou suspendre le traitement des rapports et des abonnements](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).  
   
 > [!NOTE]  
 >  Dans de rares cas, vous serez peut-être amené à redémarrer le serveur pour annuler un processus. Pour le mode SharePoint, vous devrez peut-être redémarrer le pool d'applications hébergeant l'application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [Démarrer et arrêter le service Report Server](../../reporting-services/report-server/start-and-stop-the-report-server-service.md).  
@@ -125,10 +125,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Annuler les travaux du serveur de rapports &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)   
- [Propriétés du travail &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)   
- [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [Fichier de configuration RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Analyse des performances d'un serveur de rapports](../../reporting-services/report-server/monitoring-report-server-performance.md)  
+ [Propriétés du travail &#40; Management Studio &#41;](../../reporting-services/tools/job-properties-management-studio.md)   
+ [Modifier un fichier de Configuration Reporting Services &#40; RSreportserver.config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [Le Gestionnaire de rapports &#40; En Mode natif de SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Contrôle des performances d'un serveur de rapports](../../reporting-services/report-server/monitoring-report-server-performance.md)  
   
   

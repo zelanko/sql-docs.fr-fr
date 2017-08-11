@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aef6ef0fe1f32f015abe3b48177f6e4d3e45648d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>Modifier la hauteur de ligne ou la largeur de colonne (Générateur de rapports et SSRS)
@@ -71,10 +71,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Région de données de tableau matriciel (Générateur de rapports et SSRS)](https://msdn.microsoft.com/library/dd220587.aspx)   
- [Cellules, lignes et colonnes de région de données de tableau matriciel (Générateur de rapports et SSRS)](https://msdn.microsoft.com/library/dd220511.aspx)   
+ [Les cellules de région de données de tableau matriciel, lignes et colonnes (Générateur de rapports) et SSRS](https://msdn.microsoft.com/library/dd220511.aspx)   
  [Tables (Générateur de rapports et SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [Matrices (Générateur de rapports et SSRS)](https://msdn.microsoft.com/library/dd207149.aspx)   
  [Listes (Générateur de rapports et SSRS)](https://msdn.microsoft.com/library/dd239330.aspx)   
- [Tables, matrices et listes (Générateur de rapports et SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Tables, Matrices et listes (Générateur de rapports et SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

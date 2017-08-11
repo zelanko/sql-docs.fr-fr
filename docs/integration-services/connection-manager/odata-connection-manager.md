@@ -1,21 +1,29 @@
 ---
-title: "Gestionnaire de connexions OData | Microsoft Docs"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Gestionnaire de connexions OData | Documents Microsoft
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+f1_keywords:
+- sql13.dts.designer.odatasource.connectionmanager.f1
+- sql13.dts.designer.odataconnectionmanager.f1
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: b23a158bff546fd6ffb4208638c039d690379ce1
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/09/2017
+
 ---
-# Gestionnaire de connexions OData
+# <a name="odata-connection-manager"></a>Gestionnaire de connexions OData
   Utilisez un gestionnaire de connexions OData pour vous connecter à une source OData. Un composant source OData se connecte à une source OData à l’aide d’un gestionnaire de connexions OData et consomme les données du service. Pour plus d'informations, consultez [OData Source](../../integration-services/data-flow/odata-source.md).  
   
 ## <a name="adding-an-odata-connection-manager-to-an-ssis-package"></a>Ajout d’un gestionnaire de connexions OData à un package SSIS  
@@ -57,6 +65,24 @@ caps.handback.revision: 9
 |UserName|Nom d'utilisateur à utiliser pour l'authentification de base.|  
 |Mot de passe|Mot de passe à utiliser pour l'authentification de base.|  
 |ConnectionString|Reflète d'autres propriétés du gestionnaire de connexions.|  
+  
+## <a name="odata-connection-manager-editor"></a>Éditeur du gestionnaire de connexions OData
+  La boîte de dialogue **Éditeur du gestionnaire de connexions OData** vous permet d'ajouter ou de modifier une connexion à une source OData existante.  
+  
+### <a name="options"></a>Options  
+ **Nom du gestionnaire de connexions**  
+ Nom du gestionnaire de connexions.  
+  
+ **Emplacement du document de service**  
+ URL du service OData. Par exemple : http://services.odata.org/V3/Northwind/Northwind.svc/.  
+  
+ **Authentification**  
+ Sélectionnez **Authentification Windows** ou utilisez **ce nom d’utilisateur et ce mot de passe** pour **Authentification de base**. Si vous sélectionnez la deuxième option, entrez le **nom d'utilisateur** et le **mot de passe**. 
+ 
+ Il existe désormais trois autres options. Sélectionnez **Microsoft Dynamics AX Online** pour Dynamics AX Online, **Microsoft Dynamics CRM Online** pour Dynamics CRM Online et **Microsoft Online Services** pour Microsoft Online Services. Si vous sélectionnez l’une de ces trois options, entrez le **nom d’utilisateur** et le **mot de passe**.
+  
+ **Tester la connexion**  
+ Cliquez sur ce bouton pour tester la connexion à la source OData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Éditeur du gestionnaire de connexions OData](../../integration-services/connection-manager/odata-connection-manager-editor.md)  

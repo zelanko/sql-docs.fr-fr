@@ -163,11 +163,11 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8e9aa0032e0610b73c28ff50c7c8f616cca6a2fd
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Jauges (Générateur de rapports et SSRS)
@@ -197,7 +197,7 @@ ms.lasthandoff: 06/22/2017
   
  Les jauges linéaires sont rectangulaires, orientées horizontalement ou verticalement, et ressemblent à des règles. Les pointeurs de la jauge sont souvent des thermomètres, mais peuvent être des marqueurs ou des barres. En raison de sa forme, ce type de jauge est utile pour l'intégration dans les régions de données de table ou de matrice pour afficher des données de progression.  
   
- Outre ces différences, les deux types de jauges sont interchangeables. Toutefois, si vous devez utiliser une jauge simple dans votre rapport, vous devez envisager d'utiliser un indicateur au lieu d'une jauge. Pour plus d’informations, consultez [Indicateurs &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+ Outre ces différences, les deux types de jauges sont interchangeables. Toutefois, si vous devez utiliser une jauge simple dans votre rapport, vous devez envisager d'utiliser un indicateur au lieu d'une jauge. Pour plus d’informations, consultez [indicateurs &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
  Les illustrations suivantes montrent des jauges radiale et linéaire. La jauge radiale est ronde et utilise le pointeur de type aiguille. La jauge linéaire est horizontale et utilise le pointeur de type thermomètre.  
   
@@ -248,7 +248,7 @@ ms.lasthandoff: 06/22/2017
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
- Pour plus d’informations sur les expressions d’agrégation, consultez [Référence aux fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
+ Pour plus d’informations sur les expressions d’agrégation, consultez [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
 ### <a name="defining-a-group-on-a-gauge"></a>Définition d'un groupe sur une jauge  
  Après avoir ajouté un champ à la jauge, vous pouvez ajouter un groupe de données. Le jauge diffère de toutes les autres régions de données dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]qui peut afficher plusieurs groupes dans une même région de données. Lorsque vous ajoutez un groupe en définissant une expression de groupe sur la jauge, cela revient à ajouter un groupe de lignes sur la région de données de tableau matriciel. Lorsque le groupe est ajouté, seule la valeur du dernier groupe est toutefois affichée en tant que valeur de pointeur sur la jauge. Par exemple, si vous ajoutez une expression de regroupement sur Year, le pointeur pointera sur la valeur qui représente la valeur des ventes agrégées pour la dernière année du dataset. Pour plus d’informations sur les groupes, consultez [Fonctionnement des groupes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
@@ -305,9 +305,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Filtre, groupe et trier des données &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Paramètres de rapport &#40; Le Générateur de rapports et le Concepteur de rapports &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Tables, Matrices et listes &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

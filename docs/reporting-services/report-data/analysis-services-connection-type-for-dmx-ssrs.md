@@ -23,11 +23,11 @@ caps.latest.revision: 64
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e4cb050e8f838eaab2bc215005b167c0dea258fc
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>Type de connexion Analysis Services pour DMX (SSRS)
@@ -39,7 +39,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="design-mode"></a>Mode Création  
  Le Concepteur de requêtes DMX s'ouvre en mode Création. Le mode Création comprend une zone de conception graphique permettant de sélectionner un modèle d'exploration de données et une table d'entrée, ainsi qu'une grille utilisée pour spécifier la requête de prédiction. Il existe deux autres modes dans le Concepteur de requêtes DMX : le mode Requête et le mode Résultat. En mode Requête, la grille du mode Création est remplacée par un volet Requête, qui vous permet de taper des requêtes DMX. En mode Résultat, le jeu de résultats retourné par la requête apparaît dans une grille de données.  
   
- Pour changer de mode dans le Concepteur de requêtes DMX, cliquez avec le bouton droit dans la zone de conception, puis sélectionnez **Création** **Requête** ou **Résultat**. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes DMX Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md) et [Récupérer des données d’un modèle d’exploration de données &#40;DMX&#41; &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md).  
+ Pour changer de mode dans le Concepteur de requêtes DMX, cliquez avec le bouton droit dans la zone de conception, puis sélectionnez **Création** **Requête**ou **Résultat**. Pour plus d’informations, consultez [Analysis Services DMX Query Designer User Interface](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md) et [récupérer les données à partir d’un modèle d’exploration de données &#40; DMX &#41; &#40; SSRS &#41; ](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md).  
   
 ## <a name="designing-a-prediction-query"></a>Conception d'une requête de prédiction  
  Le volet Création de requête du mode Création contient deux fenêtres : **Modèle d’exploration de données** et **Sélectionner une ou plusieurs tables d’entrée**. La fenêtre **Modèle d’exploration de données** vous permet de sélectionner le modèle d’exploration de données à utiliser dans la requête. La fenêtre **Sélectionner une ou plusieurs tables d’entrée** vous permet de sélectionner la table sur laquelle baser les prévisions. Si vous souhaitez utiliser une requête singleton au lieu d’une table d’entrée, cliquez avec le bouton droit dans le volet Conception de requête, puis sélectionnez **Requête singleton**. La fenêtre **Sélectionner une ou plusieurs tables d’entrée** est remplacée par une fenêtre **Entrée de requête singleton** .  
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="using-parameters"></a>Utilisation des paramètres  
  Vous pouvez transmettre des paramètres de rapport à un paramètre de requête DMX. Pour ce faire, vous devez ajouter un paramètre à la requête DMX, définir les paramètres de requête dans la boîte de dialogue **Paramètres de la requête** , puis modifier les paramètres de rapport correspondants. Pour définir un paramètre de requête, cliquez sur le **paramètres de requête** (![icône de la boîte de dialogue Paramètres de requête](../../reporting-services/report-data/media/iconqueryparameter.gif "icône de la boîte de dialogue Paramètres de requête")) dans la barre d’outils. Pour obtenir des instructions sur la définition des paramètres dans une requête DMX, consultez [Définir des paramètres dans le Concepteur de requêtes MDX pour Analysis Services &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md).  
   
- Pour plus d’informations sur la façon de gérer la relation entre les paramètres de rapport et les paramètres de requête, consultez [Associer un paramètre de requête à un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md). Pour plus d’informations sur les paramètres, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ Pour plus d’informations sur la façon de gérer la relation entre les paramètres de rapport et les paramètres de requête, consultez [associer un paramètre de requête avec un paramètre de rapport &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-data/associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md). Pour plus d’informations, consultez [les paramètres de rapport &#40; Le Générateur de rapports et le Concepteur de rapports &#41; ](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Solutions d’exploration de données](../../analysis-services/data-mining/data-mining-solutions.md)   

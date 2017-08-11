@@ -19,11 +19,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e5941044afa950ba41e23ce1c3507a51e6121556
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personnaliser le composant WebPart Visionneuse de rapports
@@ -97,7 +97,7 @@ ms.lasthandoff: 06/22/2017
  La zone Paramètres fournit des champs permettant d'entrer des valeurs avant l'exécution du rapport. Elle n'est utilisée que lorsqu'une définition de rapport comprend des paramètres. Lorsque la zone Paramètres ou Informations d'identification est visible, l'affichage du rapport est ajusté en fonction de la largeur restante du composant WebPart. Vous pouvez définir les propriétés du composant WebPart afin de personnaliser la largeur de la zone Paramètres. Vous pouvez également définir les étiquettes qui s'affichent en regard des paramètres individuels sur la page. Pour plus d’informations sur la modification des étiquettes de paramètres, consultez [Définir les paramètres sur un rapport publié &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Composant WebPart Visionneuse de rapports sur un site SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
- [Ajouter le composant WebPart Visionneuse de rapports à une page web &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
+ [WebPart Visionneuse de rapports sur un Site SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [Ajouter le composant WebPart Visionneuse de rapports à une Page Web &#40; Reporting Services dans SharePoint intégré en Mode &#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
   
   

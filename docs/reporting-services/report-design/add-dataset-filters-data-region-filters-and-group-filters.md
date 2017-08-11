@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e5d4e66fa2de743e7a28dfeba78bb7a753374a5a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes
@@ -97,14 +97,14 @@ ms.lasthandoff: 06/22/2017
 ### <a name="value"></a>Valeur  
  L’expression Valeur spécifie la dernière partie de l’équation de filtre. Le processeur de rapports convertit l'expression évaluée dans le type de données que vous avez spécifié, puis évalue l'équation de filtre entière pour déterminer si les données spécifiées dans le champ Expression sont filtrées ou non.  
   
- Pour effectuer une conversion dans un type de données autre que CLR standard, vous devez modifier l'expression afin de procéder à une conversion explicite dans un type de données spécifique. Vous pouvez utiliser les fonctions de conversion répertoriées dans la boîte de dialogue **Expression** sous **Fonctions communes**, **Conversion**. Par exemple, pour un champ `ListPrice` qui représente les données stockées en tant qu’un **money** de type de données sur un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source de données, l’extension de traitement de données retourne la valeur du champ en tant qu’un <xref:System.Decimal> type de données. Pour définir qu’un filtre doit utiliser seulement des valeurs supérieures à **50000,00 $** dans la devise du rapport, convertissez la valeur en Décimal en utilisant l’expression `=CDec(50000.00)`.  
+ Pour effectuer une conversion dans un type de données autre que CLR standard, vous devez modifier l'expression afin de procéder à une conversion explicite dans un type de données spécifique. Vous pouvez utiliser les fonctions de conversion répertoriées dans la boîte de dialogue **Expression** sous **Fonctions communes**, **Conversion**. Par exemple, pour un champ `ListPrice` qui représente les données stockées avec un type de données **monétaire** sur une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l’extension de traitement des données retourne la valeur du champ en utilisant le type de données <xref:System.Decimal> . Pour définir qu’un filtre doit utiliser seulement des valeurs supérieures à **50000,00 $** dans la devise du rapport, convertissez la valeur en Décimal en utilisant l’expression `=CDec(50000.00)`.  
   
  Cette valeur peut également inclure une référence de paramètre permettant à un utilisateur de sélectionner de manière interactive une valeur de filtre.  
   
  Retour au début  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [Utilisation d’expressions dans les rapports &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Paramètres de rapport &#40; Le Générateur de rapports et le Concepteur de rapports &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

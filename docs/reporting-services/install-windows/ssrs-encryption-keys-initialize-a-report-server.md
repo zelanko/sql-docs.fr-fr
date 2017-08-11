@@ -21,11 +21,11 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cca3d552a0e1ffb7fdfc09e98a334f8f4d196d84
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>Les clés de chiffrement SSRS - initialiser un serveur de rapports
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 5.  Le service Report Server se connecte à nouveau à la base de données du serveur de rapports et ajoute la clé symétrique aux valeurs de la clé publique et de l'identificateur d'installation stockées au cours de l'étape 3. Avant de la stocker, le service Report Server utilise sa clé publique pour chiffrer la clé symétrique. Une fois cette nouvelle clé stockée, le serveur de rapports est considéré comme initialisé et opérationnel.  
   
 ## <a name="initializing-a-report-server-for-scale-out-deployment"></a>Initialisation d'un serveur de rapports pour un déploiement évolutif  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge le modèle de déploiement avec montée en puissance parallèle qui partage une seule base de données de serveur de rapports entre plusieurs instances de serveurs de rapports. Pour intégrer un déploiement évolutif, un serveur de rapports doit créer et stocker sa copie de la clé symétrique dans la base de données partagée. Bien qu'une seule clé symétrique soit utilisée par les serveurs utilisateurs de la base de données, chaque serveur de rapports possède un exemplaire de la clé. Chaque exemplaire est différent en soi puisqu’il est chiffré exclusivement à l’aide de la clé publique qu’il possède.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]prend en charge un modèle de déploiement avec montée en puissance parallèle qui partage une base de données du serveur de rapports unique entre plusieurs instances de serveur de rapports. Pour intégrer un déploiement évolutif, un serveur de rapports doit créer et stocker sa copie de la clé symétrique dans la base de données partagée. Bien qu'une seule clé symétrique soit utilisée par les serveurs utilisateurs de la base de données, chaque serveur de rapports possède un exemplaire de la clé. Chaque exemplaire est différent en soi puisqu’il est chiffré exclusivement à l’aide de la clé publique qu’il possède.  
   
  Les premières étapes assurant l'initialisation d'un serveur de rapports en vue d'un déploiement évolutif sont identiques aux trois premières étapes de l'initialisation d'une combinaison base de données et serveur unique.  
   

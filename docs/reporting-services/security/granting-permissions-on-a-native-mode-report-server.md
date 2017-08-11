@@ -27,18 +27,18 @@ caps.latest.revision: 60
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e587f50e041d42bb09d99fa03d4146216883fce6
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Octroi d'autorisations sur un serveur de rapports en mode natif
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise l'autorisation basée sur les rôles et un sous-système d'authentification pour déterminer qui est habilité à effectuer des opérations et à accéder aux éléments d'un serveur de rapports. L'autorisation basée sur les rôles catégorise en rôles l'ensemble des actions qu'un utilisateur ou groupe peut effectuer. L'authentification repose sur l'authentification Windows intégrée ou sur un module d'authentification personnalisé que vous fournissez. Vous pouvez utiliser des rôles prédéfinis ou personnalisés avec chacun de ces types d'authentifications.  
   
 ## <a name="using-roles-to-grant-report-server-access"></a>Utilisation de rôles pour octroyer l'accès au serveur de rapports  
- Tous les utilisateurs interagissent avec un serveur de rapports dans le contexte d'un rôle qui définit un niveau spécifique d'accès. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclut des rôles prédéfinis que vous pouvez affecter aux utilisateurs et aux groupes pour fournir l’accès immédiat à un serveur de rapports. **Gestionnaire de contenu**, **Serveur de publication**et **Navigateur** sont des exemples de rôles prédéfinis. Chaque rôle définit un ensemble de tâches associées. Par exemple, un **serveur de publication** est autorisé à ajouter des rapports et à créer des dossiers pour stocker ces mêmes rapports.  
+ Tous les utilisateurs interagissent avec un serveur de rapports dans le contexte d'un rôle qui définit un niveau spécifique d'accès. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]inclut des rôles prédéfinis que vous pouvez affecter aux utilisateurs et groupes pour fournir un accès immédiat à un serveur de rapports. **Gestionnaire de contenu**, **Serveur de publication**et **Navigateur** sont des exemples de rôles prédéfinis. Chaque rôle définit un ensemble de tâches associées. Par exemple, un **serveur de publication** est autorisé à ajouter des rapports et à créer des dossiers pour stocker ces mêmes rapports.  
   
  Les attributions de rôles sont généralement héritées d'un nœud parent, mais vous pouvez rompre l'héritage d'autorisation en créant une attribution de rôles pour un élément particulier. Un utilisateur membre du rôle **Gestionnaire de contenu** pour un rapport peut être membre du rôle **Lecteur** pour un autre rapport.  
   
@@ -72,15 +72,15 @@ ms.lasthandoff: 06/22/2017
   
 |Outil|Tâches|  
 |----------|-----------|  
-|Management Studio – Permet d'afficher, modifier, créer et supprimer des définitions de rôles.|[Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
-|Gestionnaire de rapports – Permet d'assigner des utilisateurs et des groupes aux rôles.|[Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [Modifier ou supprimer une affectation de rôle &#40;Gestionnaire de rapports&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
+|Management Studio – Permet d'afficher, modifier, créer et supprimer des définitions de rôles.|[Créer, supprimer ou modifier un rôle &#40; Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
+|Gestionnaire de rapports – Permet d'assigner des utilisateurs et des groupes aux rôles.|[Accorder l’accès de l’utilisateur à un serveur de rapports &#40; Le Gestionnaire de rapports &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [Modifier ou supprimer une attribution de rôle &#40; Le Gestionnaire de rapports &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Rôles prédéfinis](../../reporting-services/security/role-definitions-predefined-roles.md)   
- [Accord d’autorisations sur des éléments de serveur de rapports sur un site SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Octroi d’autorisations sur les éléments de serveur de rapports sur un Site SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Authentification avec le serveur de rapports](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Créer et gérer des attributions de rôles](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [Sécurité et protection de Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md)   
- [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+ [Sécurité et Protection de Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md)   
+ [Gestion de contenu de serveur de rapports &#40; En Mode natif de SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

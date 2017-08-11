@@ -21,11 +21,11 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ffe0a7ea7f46ed7b1ae5d1e5070d58afa0540b12
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>Ajouter et supprimer des clés de chiffrement pour un déploiement évolutif
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Exécutez **rskeymgmt.exe** localement sur l’ordinateur hébergeant un serveur de rapports déjà membre du déploiement par montée en puissance parallèle de serveurs de rapports.  
   
-2.  Utilisez l’argument **-j** pour rattacher un serveur de rapports à la base de données de serveur de rapports. Utilisez le **-m** et  **-n**  arguments pour spécifier le serveur de rapports distant instance que vous souhaitez ajouter au déploiement. Utilisez les arguments **-u** et **-v** pour spécifier un compte d’administrateur sur l’ordinateur distant. Si vous créez un déploiement évolutif en utilisant plusieurs instances de serveur de rapports sur le même ordinateur, la syntaxe à utiliser est légèrement différente. Pour plus d’informations sur la syntaxe à utiliser, consultez [Utilitaire rskeymgmt &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md).  
+2.  Utilisez l’argument **-j** pour rattacher un serveur de rapports à la base de données de serveur de rapports. Servez-vous de l’utilitaire **-m** et **-n** pour spécifier l’instance de serveur de rapports distante à ajouter au déploiement. Utilisez les arguments **-u** et **-v** pour spécifier un compte d’administrateur sur l’ordinateur distant. Si vous créez un déploiement évolutif en utilisant plusieurs instances de serveur de rapports sur le même ordinateur, la syntaxe à utiliser est légèrement différente. Pour plus d’informations sur la syntaxe à utiliser, consultez [Utilitaire rskeymgmt &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md).  
   
      L'exemple suivant illustre les arguments que vous devez spécifier si vous ajoutez un serveur de rapports distant à un déploiement évolutif (vous pouvez omettre les informations d'identification si vous avez des autorisations d'administrateur sur l'ordinateur distant) :  
   
@@ -68,8 +68,8 @@ ms.lasthandoff: 06/22/2017
  Ces étapes suppriment le serveur de rapports d'un déploiement avec montée en puissance parallèle, mais ne désinstallent pas l'instance [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur le serveur de rapports. Après avoir supprimé le serveur de rapports du déploiement avec montée en puissance parallèle, vous pouvez désinstaller [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] du serveur si vous n'avez plus besoin de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur ce serveur. Pour plus d’informations, consultez [Désinstaller une instance existante de SQL Server &#40;programme d’installation&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [Initialiser un serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
+ [Configurer et gérer les clés de chiffrement &#40; Gestionnaire de Configuration de SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Initialiser un serveur de rapports &#40; Gestionnaire de Configuration de SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   
 

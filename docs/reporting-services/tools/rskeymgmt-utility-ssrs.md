@@ -26,11 +26,11 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 95e64239c30aab1a341c281230c887f9668b9277
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilitaire rskeymgmt (SSRS)
@@ -100,7 +100,7 @@ rskeymgmt {-?}
  Spécifie le nom de l'ordinateur distant qui héberge l'instance de serveur de rapports que vous joignez au déploiement évolutif de serveurs de rapports. Utilisez le nom de l'ordinateur qui l'identifie sur votre réseau.  
   
  **-n**  
- Spécifie le nom de l'instance de serveur de rapports sur un ordinateur distant. Cet argument est facultatif si vous avez installé le serveur de rapports sur la valeur par défaut [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance (la valeur par défaut  **-n**  est MSSQLSERVER). Si vous avez installé le serveur de rapports comme une instance nommée,  **-n**  est requis.  
+ Spécifie le nom de l'instance de serveur de rapports sur un ordinateur distant. Cet argument est facultatif si vous avez installé le serveur de rapports sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut (la valeur par défaut de **-n** est MSSQLSERVER). Si vous avez installé le serveur de rapports en tant qu’instance nommée, **-n** est obligatoire.  
   
  **-u**  *useraccount*  
  Spécifie le compte d'administrateur sur l'ordinateur distant que vous joignez au déploiement évolutif. Si un compte n'est pas spécifié, les informations d'identification de l'utilisateur actuel sont employées.  
@@ -170,7 +170,7 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>Emplacement du fichier  
- RSKEYMGMT.exe se trouve dans  **\<* lecteur*> : \Program Files\Microsoft SQL Server\110\Tools\Binn ** ou au * * \<* lecteur*> : \Program fichiers (x86) \Microsoft SQL Server\110\Tools\Binn**. Vous pouvez exécuter l'utilitaire à partir de n'importe quel dossier de votre système de fichiers.  
+ RSKEYMGMT.exe se trouve dans  **\<* lecteur*> : \Program Files\Microsoft SQL Server\110\Tools\Binn ** ou au  **\<* lecteur*> : \Program fichiers (x86) \Microsoft SQL Server\110\Tools\Binn**. Vous pouvez exécuter l'utilitaire à partir de n'importe quel dossier de votre système de fichiers.  
   
 ## <a name="remarks"></a>Notes  
  Un serveur de rapports chiffre les informations d'identification et les informations de connexion stockées. Une clé publique et une clé symétrique sont utilisées pour chiffrer les données. La base de données d'un serveur de rapports doit posséder les clés valides pour que le serveur de rapports puisse s'exécuter. Vous pouvez utiliser **rskeymgmt** pour sauvegarder, supprimer ou restaurer des clés. Si les clés ne peuvent pas être restaurées, cet outil permet de supprimer un contenu chiffré qui ne peut plus être utilisé.  
@@ -181,8 +181,8 @@ rskeymgmt -r <installationID>
   
 ## <a name="see-also"></a>Voir aussi  
  [Déploiement avec montée en puissance parallèle - Mode natif de Reporting Services &#40;Gestionnaire de configuration&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
- [Serveur de rapports Reporting Services &#40;mode natif&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Utilitaires d’invite de commandes du serveur de rapports &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Reporting Services Report Server &#40; En Mode natif &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Utilitaires d’invite de commandes de serveur de rapports &#40; SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
+ [Configurer et gérer les clés de chiffrement &#40; Gestionnaire de Configuration de SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

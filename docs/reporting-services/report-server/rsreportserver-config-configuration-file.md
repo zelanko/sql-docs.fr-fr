@@ -15,11 +15,11 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 64cab4cc760ee1af2c3777bca88be2663d8039a4
+ms.translationtype: MT
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 967dfebc4add43efb039a3b5eb54f8e5d20f1fab
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>Fichier de configuration RSReportServer.config
@@ -77,6 +77,7 @@ Pour plus d’informations sur la modification du fichier, consultez [Modifier u
 |**DisableSecureFormsAuthenticationCookie**|La valeur par défaut est False.<br /><br /> Spécifie s'il faut désactiver l'utilisation forcée du cookie employé pour que l'authentification par formulaire et personnalisée soit considérée comme sécurisée. Depuis SQL Server 2012, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] marque automatiquement les cookies d'authentification par formulaire utilisés avec les extensions d'authentification personnalisée comme cookies sécurisés lors de l'envoi au client. En modifiant cette propriété, les administrateurs de serveurs de rapports et les auteurs d'extensions de sécurité personnalisées peuvent revenir au comportement précédent, lequel autorise l'auteur d'une extension de sécurité personnalisée à déterminer s'il faut marquer le cookie en tant que cookie sécurisé. Il est recommandé d'utiliser des cookies sécurisés pour l'authentification par formulaire afin d'éviter les attaques par relecture et les renifleurs réseau.|N|  
 |**CleanupCycleMinutes**|Spécifie au bout de combien de minutes les anciennes sessions et les instantanés expirés sont supprimés des bases de données du serveur de rapports. La plage de valeurs valides s'étend de 0 à un entier maximal. La valeur par défaut est 10. La valeur 0 désactive le processus de nettoyage de la base de données.|N,S|  
 |**MaxActiveReqForOneUser**|Spécifie le nombre maximal de rapports qu'un utilisateur peut traiter en même temps. Une fois la limite atteinte, les demandes de traitement de rapport supplémentaires sont refusées. Les valeurs valides vont de 1 à un entier maximal. La valeur par défaut est 20.<br /><br /> Notez que le traitement de la plupart des requêtes étant extrêmement rapide, il est très improbable qu'un seul utilisateur puisse cumuler plus de 20 connexions ouvertes à un moment donné. Si les utilisateurs ouvrent simultanément plus de 15 rapports nécessitant un traitement intensif, vous serez amené à augmenter cette valeur.<br /><br /> Ce paramètre est ignoré pour les serveurs de rapports qui s'exécutent en mode intégré SharePoint.|N,S|  
+|**MaxActiveReqForAnonymous**|Spécifie le nombre maximal de demandes anonymes qui peuvent être dans le processus en même temps. Une fois que la limite est atteinte, le traitement des demandes supplémentaires sont refusées. Les valeurs valides vont de 1 à un entier maximal. La valeur par défaut est 200.
 |**DatabaseQueryTimeout**|Spécifie au bout de combien de secondes une connexion à la base de données du serveur de rapports expire. Cette valeur est transmise à la propriété System.Data.SQLClient.SQLCommand.CommandTimeout. Les valeurs valides sont comprises entre 0 et 2147483647. La valeur par défaut est 120. La valeur 0 spécifie un temps d'attente illimité et, par conséquent, n'est pas recommandée.|N|  
 |**AlertingCleanupCycleMinutes**|La valeur par défaut est 20.<br /><br /> Détermine la fréquence à laquelle le nettoyage des données temporaires stockées dans la base de données d'alertes doit avoir lieu.|S|  
 |**AlertingDataCleanupMinutes**|La valeur par défaut est 360.<br /><br /> Détermine la durée pendant laquelle les données de session utilisées pour la création et la modification d'une définition d'alerte sont conservées dans la base de données d'alerte. L'intervalle par défaut est de 6 heures.|S|  

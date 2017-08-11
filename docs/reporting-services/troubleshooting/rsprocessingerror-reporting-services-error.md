@@ -17,11 +17,11 @@ caps.latest.revision: 29
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7065e2f766ec3ce56bed2d9b3bc0e90c5290b6ea
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Erreur Reporting Services
@@ -101,9 +101,9 @@ ms.lasthandoff: 06/22/2017
  Vérifiez que les appels de fonction effectués dans la requête et les expressions sont valides.  
   
 ### <a name="cannot-compare-data-types-for-a-filter"></a>Impossible de comparer des types de données pour un filtre  
- Dans une équation de filtre, l'expression de filtre qui définit le contenu du filtre et la valeur du filtre doit être le même type de données pour être comparé. Si l'une des erreurs suivantes s'affichent, modifiez l'expression de champ ou la valeur de filtre pour que les types de données correspondent :  
+ Dans une équation de filtre, l'expression de filtre qui définit le contenu du filtre et la valeur du filtre doit être le même type de données pour être comparé. Si l'une des erreurs suivantes s'affichent, modifiez l'expression de champ ou la valeur de filtre pour que les types de données correspondent :  
   
--   Le traitement de  *\<type d’élément de rapport >* pour le * \<nom d’élément de rapport >* ne peut pas être effectuée. Impossible de comparer des types de données  *\<type >* et * \<type >*. Vérifiez le type de données retourné par la  *\<nom d’élément de rapport >*.  
+-   Le traitement de  *\<type d’élément de rapport >* pour le  *\<nom d’élément de rapport >* ne peut pas être effectuée. Impossible de comparer des types de données  *\<type >* et  *\<type >*. Vérifiez le type de données retourné par la  *\<nom d’élément de rapport >*.  
   
 -   Impossible d’évaluer la  *\<nom de la propriété >*.  
   
@@ -114,15 +114,15 @@ ms.lasthandoff: 06/22/2017
 ### <a name="invalid-or-conflicting-scope-specification-in-an-aggregate-function-call"></a>Spécification d'étendue non valide et incompatible dans un appel de fonction d'agrégation  
  Lorsque vous incluez des appels de fonction d'agrégation à une expression dans une cellule de tableau matriciel, le processeur de rapports évalue l'expression dans l'étendue des groupes intimes auxquels la cellule appartient.  
   
- Vous pouvez également passer le nom d'une étendue spécifique à une fonction d'agrégation. L'étendue peut faire référence au nom d'un dataset, une région de données ou le nom d'une étendue plus élevée dans la hiérarchie de données. Cela s'applique aux messages suivants :  
+ Vous pouvez également passer le nom d'une étendue spécifique à une fonction d'agrégation. L'étendue peut faire référence au nom d'un dataset, une région de données ou le nom d'une étendue plus élevée dans la hiérarchie de données. Cela s'applique aux messages suivants :  
   
 -   Le  *\<type d’élément de rapport >* '*\<nom d’élément de rapport >*' a une portée non valide «*\<Nom_Étendue >*». L'étendue doit être l'étendue actuelle ou doit se trouver dans l'étendue actuelle.  
   
--   Le  *\<nom de la propriété >* expression pour le * \<type d’élément de rapport >* '*\<nom d’élément de rapport >*' a un paramètre d’étendue qui n’est pas valide pour une fonction d’agrégation. Le paramètre d'étendue doit être défini sur une constante de chaîne qui est égale au nom d'un groupe conteneur, au nom d'une région de données conteneur, ou au nom d'un dataset.  
+-   Le  *\<nom de la propriété >* expression pour le  *\<type d’élément de rapport >* '*\<nom d’élément de rapport >*' a un paramètre d’étendue qui n’est pas valide pour une fonction d’agrégation. Le paramètre d'étendue doit être défini sur une constante de chaîne qui est égale au nom d'un groupe conteneur, au nom d'une région de données conteneur, ou au nom d'un dataset.  
   
  Pour les fonctions d’agrégation qui calculent des totaux cumulés (**Previous**, **RunningValue**, or **RowNumber**), vous pouvez spécifier un paramètre d’étendue qui est un nom de groupe de lignes ou un nom de groupe de colonnes, mais pas les deux. Cela s'applique au message d'erreur suivant :  
   
--   **Précédent**, **RunningValue** ou **RowNumber** utilisées dans les cellules de données des fonctions d’agrégation le  *\<type d’élément de rapport >* '*\<nom d’élément de rapport >*» font référence aux étendues de regroupement dans les colonnes et les lignes de la * \<type d’élément de rapport >*. Les paramètres d’étendue de toutes les **précédent**, **RunningValue** et **RowNumber** dans les fonctions d’agrégation un  *\<type d’élément de rapport >* peuvent faire référence à des regroupements de lignes ou des regroupements de colonnes de données, mais pas les deux.  
+-   **Précédent**, **RunningValue** ou **RowNumber** utilisées dans les cellules de données des fonctions d’agrégation le  *\<type d’élément de rapport >* '*\<nom d’élément de rapport >*» font référence aux étendues de regroupement dans les colonnes et les lignes de la  *\<type d’élément de rapport >*. Les paramètres d’étendue de toutes les **précédent**, **RunningValue** et **RowNumber** dans les fonctions d’agrégation un  *\<type d’élément de rapport >* peuvent faire référence à des regroupements de lignes ou des regroupements de colonnes de données, mais pas les deux.  
   
  Pour plus d’informations, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) et [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -130,13 +130,13 @@ ms.lasthandoff: 06/22/2017
  N'utilisez pas d'étendue par défaut pour une zone de texte ajoutée à l'aire de conception du rapport lorsque le rapport a plusieurs dataset. Utilisez une expression qui inclut le nom du dataset comme étendue, et une fonction d'agrégation. Par exemple, `=First(Fields!FieldName.Value, "DataSet2")`.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Expressions &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Référence des fonctions d’agrégation &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Exemples d’expressions &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Jeux de données du rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Filtres couramment utilisés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
- [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Code personnalisé et références d’assembly dans les expressions du Concepteur de rapports &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Informations de référence sur la collection de paramètres &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [Filtres couramment utilisés &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
+ [Collection de champs de DataSet &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [Code personnalisé et références d’Assembly dans les Expressions dans le Concepteur de rapports &#40; SSRS &#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
+ [Références à la Collection Parameters &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

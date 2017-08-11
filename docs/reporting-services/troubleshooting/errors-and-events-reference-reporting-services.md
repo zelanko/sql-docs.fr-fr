@@ -21,11 +21,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a0738c8ac950a86ef877c26fd8b6a0f6a6b075f2
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Guide de référence des erreurs et des événements (Reporting Services)
@@ -53,14 +53,14 @@ ms.lasthandoff: 06/22/2017
 |117|Erreur|Démarrage/Fermeture|Serveur de rapports|La version de la base de données du serveur de rapports n'est pas valide.|  
 |118|Avertissement|Journalisation|Serveur de rapports<br /><br /> Gestionnaire de rapports|Le journal des traces ne se trouve pas à l'emplacement attendu. Un nouveau journal des traces sera créé dans le répertoire par défaut. Pour plus d’informations, consultez [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
 |119|Erreur|Activation|Serveur de rapports<br /><br /> Processeur de planification et de remise|*\<Source >* n’a pas reçu d’accéder au contenu de la base de données du serveur de rapports.|  
-|120|Erreur|Activation|Serveur de rapports|Impossible de déchiffrer la clé symétrique. Le compte sous lequel le service est exécuté a vraisemblablement été modifié. Pour plus d’informations, consultez [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
+|120|Erreur|Activation|Serveur de rapports|Impossible de déchiffrer la clé symétrique. Le compte sous lequel le service est exécuté a vraisemblablement été modifié. Pour plus d’informations, consultez [configurer et gérer les clés de chiffrement &#40; Gestionnaire de Configuration de SSRS &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |121|Erreur|Démarrage/Fermeture|Serveur de rapports|Échec de démarrage du service d'appel de procédure distante (RPC).|  
 |122|Avertissement|Remise|Processeur de planification et de remise|Le processeur de planification et de remise ne peut pas se connecter au serveur SMTP qui est utilisé pour la remise du courrier électronique. Pour plus d’informations sur les connexions au serveur SMTP, consultez [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).|  
 |123|Avertissement|Journalisation|Serveur de rapports<br /><br /> Gestionnaire de rapports|Le serveur de rapports n'a pas réussi à écrire dans le journal des traces. Pour plus d’informations sur les journaux des traces, consultez [Journal des traces du service Report Server](../../reporting-services/report-server/report-server-service-trace-log.md).|  
-|124|Informations|Activation|Serveur de rapports|Le service Report Server est initialisé. Pour plus d’informations, consultez [Initialiser un serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).|  
-|125|Informations|Activation|Serveur de rapports|Extraction réussie de la clé utilisée pour chiffrer les données. Pour plus d’informations sur les clés, consultez [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
-|126|Informations|Activation|Serveur de rapports|Application réussie de la clé utilisée pour chiffrer les données. Pour plus d’informations sur les clés, consultez [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
-|127|Informations|Activation|Serveur de rapports|Suppression réussie du contenu chiffré dans la base de données du serveur de rapports. Pour plus d’informations sur la suppression des données chiffrées irrécupérables, consultez [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
+|124|Informations|Activation|Serveur de rapports|Le service Report Server est initialisé. Pour plus d’informations, consultez [initialiser un serveur de rapports &#40; Gestionnaire de Configuration de SSRS &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).|  
+|125|Informations|Activation|Serveur de rapports|Extraction réussie de la clé utilisée pour chiffrer les données. Pour plus d’informations sur les clés, consultez [configurer et gérer les clés de chiffrement &#40; Gestionnaire de Configuration de SSRS &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
+|126|Informations|Activation|Serveur de rapports|Application réussie de la clé utilisée pour chiffrer les données. Pour plus d’informations sur les clés, consultez [configurer et gérer les clés de chiffrement &#40; Gestionnaire de Configuration de SSRS &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
+|127|Informations|Activation|Serveur de rapports|Suppression réussie du contenu chiffré dans la base de données du serveur de rapports. Pour plus d’informations sur la suppression des données chiffrées non récupérable, consultez [configurer et gérer les clés de chiffrement &#40; Gestionnaire de Configuration de SSRS &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |128|Erreur|Activation|Serveur de rapports|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de différentes éditions ne fonctionnent pas ensemble.|  
 |129|Erreur|Gestion|Serveur de rapports<br /><br /> Processeur de planification et de remise|Impossible de déchiffrer un paramètre chiffré d'un fichier de configuration.|  
 |130|Erreur|Gestion|Serveur de rapports<br /><br /> Processeur de planification et de remise|*\<Source >* ne peut pas trouver le fichier de configuration. Des fichiers de configuration sont nécessaires pour le serveur de rapports.|  

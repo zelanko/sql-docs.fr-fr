@@ -24,11 +24,11 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 186bb0bab4abac91ea95d397f379986cac9d2f0f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Mise en forme des nombres et des dates (Générateur de rapports et SSRS)
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/22/2017
   
  Pour spécifier des chaînes de format dans un élément de rapport de zone de texte, sélectionnez l’élément que vous souhaitez mettre en forme, cliquez dessus avec le bouton droit, sélectionnez **Propriétés de la zone de texte**, puis cliquez sur **Nombre**. En procédant de la même manière, vous pouvez mettre en forme des cellules individuelles d'une région de données de table ou de matrice, car ces cellules sont des zones de texte individuelles.  
   
- Une région de données de graphique affiche généralement des dates le long de l'axe des abscisses (x) et des valeurs le long de l'axe des ordonnées (y). Pour spécifier la mise en forme d’un graphique, cliquez avec le bouton droit sur un axe et sélectionnez **Propriétés de l’axe**. Sur l'axe des ordonnées, vous ne pouvez spécifier que des formats pour les nombres. Pour plus d’informations, consultez [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
+ Une région de données de graphique affiche généralement des dates le long de l'axe des abscisses (x) et des valeurs le long de l'axe des ordonnées (y). Pour spécifier la mise en forme d’un graphique, cliquez avec le bouton droit sur un axe et sélectionnez **Propriétés de l’axe**. Sur l'axe des ordonnées, vous ne pouvez spécifier que des formats pour les nombres. Pour plus d’informations, consultez [Mise en forme des points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
  Pour spécifier la mise en forme d’une région de données de jauge, cliquez avec le bouton droit sur l’échelle de la jauge et sélectionnez **Propriétés de l’échelle radiale** ou **Propriétés de l’échelle linéaire**.  
   
@@ -63,9 +63,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise en forme du texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Mise en forme des lignes, couleurs et images &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
- [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Mettre en forme les étiquettes des axes en tant que dates ou devises &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Mise en forme des échelles sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [Mise en forme des lignes, couleurs et Images &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
+ [Mise en forme d’un graphique &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Étiquettes d’axe de format en tant que Dates ou devises &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [Mise en forme des échelles sur une jauge &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

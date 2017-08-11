@@ -22,11 +22,11 @@ caps.latest.revision: 51
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a49274f347768a1a213c9a0010917e9e1d1376a5
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="schedules"></a>Planifications
@@ -129,20 +129,20 @@ ms.lasthandoff: 06/22/2017
 >  Vous pouvez utiliser la facette **Configuration de la surface d'exposition pour Reporting Services** pour interrompre temporairement ou définitivement des opérations planifiées. Bien que vous puissiez créer et déployer des extensions de remise personnalisées, le processeur de planification et de livraison n'est en lui-même pas extensible. Vous ne pouvez pas modifier la manière dont il gère les événements et les notifications. Pour plus d'informations sur la désactivation des fonctionnalités, consultez la section **Événements planifiés et remise** de [Turn Reporting Services Features On or Off](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md).  
   
 ###  <a name="bkmk_stoppingagent"></a> Conséquences de l'interruption de l'Agent SQL Server  
- Le traitement des rapports planifiés utilise l'Agent SQL Server par défaut. Si vous arrêtez ce service, aucune nouvelle demande de traitement ne sera ajoutée à la file d'attente à moins d'y être intégrée, par programmation, à l'aide de la méthode <xref:ReportService2010.ReportingService2010.FireEvent%2A>. Lorsque vous redémarrez le service, les travaux à l'origine des demandes de traitement des rapports reprennent leur cours. Le serveur de rapports ne tente pas de recréer les travaux de traitement des rapports survenus précédemment tandis que l'Agent SQL Server était en mode hors connexion. Si vous arrêtez l'Agent SQL Server l'espace d'une semaine, toutes les opérations planifiées de cette semaine sont perdues.  
+ Le traitement des rapports planifiés utilise l'Agent SQL Server par défaut. Si vous arrêtez ce service, aucune nouvelle demande de traitement ne sera ajoutée à la file d’attente à moins d’y être intégrée, par programmation, à l’aide de la méthode <xref:ReportService2010.ReportingService2010.FireEvent%2A> . Lorsque vous redémarrez le service, les travaux à l'origine des demandes de traitement des rapports reprennent leur cours. Le serveur de rapports ne tente pas de recréer les travaux de traitement des rapports survenus précédemment tandis que l'Agent SQL Server était en mode hors connexion. Si vous arrêtez l'Agent SQL Server l'espace d'une semaine, toutes les opérations planifiées de cette semaine sont perdues.  
   
 > [!NOTE]  
->  La fonction assurée par l'Agent SQL Server pour Reporting Services peut être remplacée par un code personnalisé qui utilise la méthode <xref:ReportService2010.ReportingService2010.FireEvent%2A> pour ajouter des événements planifiés dans la file d'attente.  
+>  La fonction assurée par SQL Server Agent pour Reporting Services peut être remplacée par un code personnalisé qui utilise la méthode <xref:ReportService2010.ReportingService2010.FireEvent%2A> pour ajouter des événements planifiés dans la file d’attente.  
   
 ###  <a name="bkmk_stoppingservice"></a> Conséquences de l'arrêt du service Report Server  
  Si vous arrêtez le service Report Server, l'Agent SQL Server continue malgré tout d'ajouter des demandes de traitement de rapport à la file d'attente. Les informations d'état de SQL Server Agent indiquent que les travaux ont été correctement effectués. Toutefois, aucun traitement de rapport n'a, en réalité, été réalisé puisque le service Report Server ne fonctionne pas. Les demandes continueront de s'accumuler dans la file d'attente jusqu'à ce que le service Report Server redémarre. Une fois ce service relancé, toutes les demandes de traitement de rapport présentes dans la file d'attente sont traitées dans l'ordre.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer, modifier et supprimer des instantanés dans l'historique de rapport](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
- [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Abonnements et remise &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Abonnements pilotés par les données](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Mise en cache de rapports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Mise en cache de rapports &#40; SSRS &#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [Gestion de contenu de serveur de rapports &#40; En Mode natif SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Mettre en cache les datasets partagés &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
   
   

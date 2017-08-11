@@ -17,11 +17,11 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 70ffdb98f998c46946452a2753b63f9f4bd95dfa
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visionneuse HTML et barre d'outils Rapport
@@ -32,7 +32,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="report-toolbar"></a>Barre d'outils Rapport  
  Cette barre d'outils offre des fonctionnalités de navigation entre les pages, de zoom, d'actualisation, de recherche, d'exportation, d'impression et de source de donnés pour les rapports affichés dans l'extension de rendu HTML.  
   
- La fonction d'impression est facultative. Lorsqu'elle est disponible, l'icône Imprimante s'affiche dans la barre d'outils. À la première utilisation, lorsque vous cliquez sur cette icône, vous téléchargez un contrôle ActiveX que vous devez installer. Lorsque ce contrôle est installé, en cliquant sur l'icône Imprimante, vous ouvrez la boîte de dialogue Imprimer qui permet de sélectionner une imprimante parmi celles qui sont configurées sur votre ordinateur. Les paramètres du serveur et du navigateur déterminent la disponibilité de la fonction d'impression. Pour plus d’informations, consultez [Imprimer des rapports à partir d’un navigateur à l’aide du contrôle d’impression &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md) et [Activer et désactiver l’impression côté client pour Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ La fonction d'impression est facultative. Lorsqu'elle est disponible, l'icône Imprimante s'affiche dans la barre d'outils. À la première utilisation, lorsque vous cliquez sur cette icône, vous téléchargez un contrôle ActiveX que vous devez installer. Lorsque ce contrôle est installé, en cliquant sur l'icône Imprimante, vous ouvrez la boîte de dialogue Imprimer qui permet de sélectionner une imprimante parmi celles qui sont configurées sur votre ordinateur. Les paramètres du serveur et du navigateur déterminent la disponibilité de la fonction d'impression. Pour plus d’informations, consultez [imprimer les rapports à partir d’un navigateur avec le contrôle d’impression &#40; Le Générateur de rapports et SSRS &#41; ](../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md) et [activer et désactiver l’impression côté Client pour Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
  La barre d'outils Rapport est identique à celle illustrée ci-dessous. Elle peut être toutefois différente selon les fonctionnalités de rapport ou les options de rendu disponibles.  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Recherche, affichage et la gestion des rapports &#40; Le Générateur de rapports et SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

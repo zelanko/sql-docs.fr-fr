@@ -15,17 +15,17 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a9f084fc55a0f3011a40c6f2d8a2cfcdf61dc9f2
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-sparklines-and-data-bars-report-builder-and-ssrs"></a>Ajouter des graphiques sparkline et des barres de données (Générateur de rapports et SSRS)
   Les graphiques sparkline et les barres de données sont des graphiques de petite taille qui communiquent beaucoup d'informations avec peu de détails superflus. Pour plus d’informations sur ces graphiques, consultez [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
- Dans [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], les graphiques sparkline et les barres de données sont généralement placés dans les cellules d’une table ou d’une matrice. Les graphiques sparkline affichent habituellement une seule série chacun. Les barres de données peuvent contenir un ou plusieurs points de données. Les graphiques sparkline et barres de données tirent tous deux leur impact de la répétition des informations de série pour chaque ligne dans la table ou la matrice.  
+ Dans [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , les graphiques sparkline et les barres de données sont généralement placés dans les cellules d’une table ou d’une matrice. Les graphiques sparkline affichent habituellement une seule série chacun. Les barres de données peuvent contenir un ou plusieurs points de données. Les graphiques sparkline et barres de données tirent tous deux leur impact de la répétition des informations de série pour chaque ligne dans la table ou la matrice.  
   
 ## <a name="to-add-a-sparkline-or-data-bar-to-a-table-or-matrix"></a>Pour ajouter un graphique sparkline ou une barre de données à une table ou une matrice  
   
@@ -33,7 +33,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  Insérez une colonne dans votre table ou matrice. Pour plus d’informations, consultez [Insérer ou supprimer une colonne &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
   
-3.  Sous l’onglet **Insérer**, cliquez sur **Graphique sparkline** ou sur **Barre de données**, puis cliquez dans une cellule de la nouvelle colonne.  
+3.  Sous l’onglet **Insérer** , cliquez sur **Graphique sparkline** ou sur **Barre de données**, puis cliquez dans une cellule de la nouvelle colonne.  
   
     > [!NOTE]  
     >  Vous ne pouvez pas insérer de graphiques sparkline dans un groupe de détails dans une table. Ils doivent entrer dans une cellule associée à un groupe.  

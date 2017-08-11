@@ -21,11 +21,11 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f989ec80fe80d85381673cb12a90b8e3cea82da4
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>Définir des paramètres dans le Concepteur de requêtes MDX pour Analysis Services
@@ -68,7 +68,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  Dans le **paramètre** colonne, cliquez sur  **\<Entrez le paramètre >**, puis tapez le nom d’un paramètre.  
   
-5.  Dans la colonne **Dimension** , choisissez une valeur dans la liste déroulante.  
+5.  Dans la colonne **Dimension**, choisissez une valeur dans la liste déroulante.  
   
 6.  Dans la colonne **Hiérarchie** , choisissez une valeur dans la liste déroulante.  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 06/22/2017
      Pour afficher le dataset qui fournit des valeurs disponibles pour le paramètre de rapport, cliquez avec le bouton droit sur tout espace vide dans le volet des données de rapport, puis cliquez sur **Afficher les datasets masqués**. Le volet des données de rapport affiche tous les datasets dans le rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Type de connexion Analysis Services pour MDX (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
- [Interface utilisateur du Concepteur de requêtes MDX Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
+ [Type de connexion Analysis Services pour MDX &#40; SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
+ [Interface utilisateur du Concepteur de requêtes Analysis Services MDX](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
   
   

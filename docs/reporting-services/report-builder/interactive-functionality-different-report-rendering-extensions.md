@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 9a422c1619ae284ec49643465bd8b84efda1910b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>Fonctionnalité interactive - différentes Extensions de rendu de rapport
@@ -59,7 +59,7 @@ ms.lasthandoff: 06/22/2017
 |-------------------|-------------------------|  
 |Aperçu/Visionneuse de rapports, HTML|Les utilisateurs cliquent sur des icônes de développement et de réduction pour afficher des sections du rapport.|  
 |PDF|Le serveur de rapports exporte la vue actuelle du rapport au format PDF. Le basculement interactif n'est pas pris en charge|  
-|Excel|Les liens et éléments d'exploration qui peuvent être basculés sont rendus sous forme de plans réductibles dans Excel. Vous pouvez développer et réduire des sections du rapport dans Excel. Pour plus d’informations sur les limitations imposées par Excel, consultez [Exportation vers Microsoft Excel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
+|Excel|Les liens et éléments d'exploration qui peuvent être basculés sont rendus sous forme de plans réductibles dans Excel. Vous pouvez développer et réduire des sections du rapport dans Excel. Pour plus d’informations sur les limites imposées par Excel, consultez [exportation vers Microsoft Excel &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |Word|Le serveur de rapports exporte la vue actuelle du rapport au format PDF. Le basculement interactif n'est pas pris en charge|  
 |Autres|Non disponible en MHTML, XML ou CSV. Lors de l'exportation au format Image, le serveur de rapports exporte l'état actuel (afficher ou masquer) du rapport en PDF. Le basculement interactif n'est pas pris en charge.|  
   
@@ -115,10 +115,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Tri interactif, Explorateurs de documents et liens &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [Tri interactif, explorateurs de documents et liens &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
     
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [Graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
 

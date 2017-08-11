@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c1f264426872fea87eec1da8ab17243bbe82ae76
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Zones de région de données de tableau matriciel (Générateur de rapports et SSRS)
@@ -45,7 +45,7 @@ Sur l'aire de conception, les traits en pointillés délimitent les quatre zones
   
 -   **Zone du corps de tableau matriciel**. Le corps du tableau matriciel se trouve en bas, à droite (ou en bas, à gauche pour les dispositions RTL). Le corps du tableau matriciel affiche les données détaillées et les données groupées. Dans cet exemple, seules les données agrégées sont utilisées. L'étendue de l'expression est déterminée par les groupes, auxquels la zone de texte appartient, dont le niveau est le plus profond. Les cellules du corps du tableau matriciel affichent des données détaillées quand elles figurent dans des lignes de détail et des données agrégées quand elles appartiennent à des lignes ou colonnes associées à des groupes. Par défaut, les cellules des lignes ou colonnes de groupe qui contiennent des expressions simples ne comportant pas de fonction d'agrégation affichent la première valeur du groupe. Sur l'illustration donnée en exemple, les cellules affichent les totaux agrégés pour les totaux de ligne de l'intégralité des bons de commande.  
   
- Pendant l’exécution du rapport, les groupes de colonne s’affichent en détail sur la droite (ou sur la gauche, quand la propriété Direction de la région de données de tableau matriciel est définie sur RTL) pour chaque colonne définie, des valeurs uniques étant attribuées aux expressions de groupe. Les groupes de ligne s'affichent en détail en bas de la page. Pour plus d’informations, consultez [Cellules, lignes et colonnes de région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
+ Pendant l’exécution du rapport, les groupes de colonne s’affichent en détail sur la droite (ou sur la gauche, quand la propriété Direction de la région de données de tableau matriciel est définie sur RTL) pour chaque colonne définie, des valeurs uniques étant attribuées aux expressions de groupe. Les groupes de ligne s'affichent en détail en bas de la page. Pour plus d’informations, consultez [Cellules, lignes et colonnes d’une région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
  L'illustration suivante montre la région de données du tableau matriciel telle qu'elle apparaît dans l'Aperçu.  
   
@@ -56,7 +56,7 @@ Sur l'aire de conception, les traits en pointillés délimitent les quatre zones
 ## <a name="see-also"></a>Voir aussi  
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Didacticiels du Générateur de rapports](../../reporting-services/report-builder-tutorials.md)   
- [Tables &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Tables &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [Créer une matrice](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [Créer des factures et des formulaires avec des listes](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  

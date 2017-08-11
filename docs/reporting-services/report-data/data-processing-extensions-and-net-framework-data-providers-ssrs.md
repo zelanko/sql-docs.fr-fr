@@ -22,18 +22,18 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 74e70cd67affe64f31076f362f36e813f3357f82
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>Extensions pour le traitement des données et fournisseurs de données .NET Framework (SSRS)
-  Une extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est un composant installé avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]et chargé de récupérer des données à partir d’un type spécifique de source de données, et de fournir des fonctionnalités supplémentaires de prise en charge de la conception et du traitement des rapports. A [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fournisseur de données est un composant disponible à partir de [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou des sources tierces qui prend en charge <xref:System.Data> interfaces qui permettent de récupérer et modifier des données à partir d’un type spécifique de source de données.  
+  Une extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est un composant installé avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]et chargé de récupérer des données à partir d’un type spécifique de source de données, et de fournir des fonctionnalités supplémentaires de prise en charge de la conception et du traitement des rapports. Une extension pour le traitement des données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] est un composant disponible dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou des sources tierces qui prend en charge des interfaces <xref:System.Data> qui vous permettent de récupérer et de modifier des données à partir d’un type spécifique de source de données.  
   
 ## <a name="understanding-a-data-processing-extension"></a>Présentation d'une extension pour le traitement des données  
- A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] extension pour le traitement de données prend en charge un sous-ensemble de la <xref:System.Data> interfaces. Les extensions pour le traitement des données requièrent l'accès en lecture seule à une source de données ; de ce fait, les interfaces pour l'écriture et la mise à jour ne sont pas implémentées. Chaque extension pour le traitement des données peut fournir des fonctionnalités personnalisées pour prendre en charge le traitement des rapports. Par exemple, une extension pour le traitement des données peut prendre en charge les types de fonctionnalités suivants :  
+ Une extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge un sous-ensemble des interfaces <xref:System.Data> . Les extensions pour le traitement des données requièrent l'accès en lecture seule à une source de données ; de ce fait, les interfaces pour l'écriture et la mise à jour ne sont pas implémentées. Chaque extension pour le traitement des données peut fournir des fonctionnalités personnalisées pour prendre en charge le traitement des rapports. Par exemple, une extension pour le traitement des données peut prendre en charge les types de fonctionnalités suivants :  
   
 -   Gestion des informations d'identification indépendamment de la chaîne de connexion  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 06/22/2017
 -   Récupération des propriétés de données ainsi que des valeurs de données dans la source de données  
   
 ## <a name="understanding-a-data-provider"></a>Présentation d'un fournisseur de données  
- A [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fournisseur de données (parfois connu en tant que pilote) prend en charge un jeu standard de <xref:System.Data> des interfaces pour la lecture, écriture et mise à jour des données sur une source de données. Vous pouvez utiliser un fournisseur de données en l'absence d'extension pour le traitement des données pour un type spécifique de source de données. De nombreux fournisseurs de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] standard tiers sont disponibles.  
+ Une extension pour le traitement des données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (parfois connu sous le nom de pilote) prend en charge un jeu standard d’interfaces <xref:System.Data> pour lire, écrire et mettre à jour des données sur une source de données. Vous pouvez utiliser un fournisseur de données en l'absence d'extension pour le traitement des données pour un type spécifique de source de données. De nombreux fournisseurs de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] standard tiers sont disponibles.  
   
  Comme [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possède une architecture de fournisseur de données extensible, vous pouvez créer une extension pour le traitement des données personnalisée pour inclure les fonctionnalités supplémentaires fournies par les extensions pour le traitement de données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d'informations, consultez [Implémentation d’une extension pour le traitement des données](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md). Pour les extensions pour le traitement des données tierces, consultez la documentation associée.  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
 >  Vous devez installer et inscrire un fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ou une extension pour le traitement des données personnalisée avant de pouvoir les utiliser pour accéder à des données à partir d'une source de données. L'extension pour le traitement des données doit être installée et inscrite à la fois sur le client de création de rapports pour créer le rapport et sur le serveur de rapports pour afficher le rapport publié. Tous les fournisseurs de données ne sont pas conçus pour fonctionner dans un environnement serveur. Pour plus d’informations, consultez [Inscrire un fournisseur de données .NET Framework standard &#40;SSRS&#41;](../../reporting-services/report-data/register-a-standard-net-framework-data-provider-ssrs.md) et [Déploiement d’une extension pour le traitement des données](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d'ensemble des extensions pour le traitement des données](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md)   
- [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Vue d’ensemble des Extensions de traitement des données](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md)   
+ [Rapport incorporé des jeux de données et des Datasets partagés &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

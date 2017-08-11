@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d688ed124a419017e97d405d7f5bd80e6e3bf530
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Mise en page et rendu (Générateur de rapports et SSRS)
@@ -92,7 +92,7 @@ Un rapport peut également contenir des sous-rapports.
   
  Quand vous utilisez une extension de rendu de **saut de page conditionnelle** telle que l’extension de rendu HTML, vous souhaiterez peut-être savoir quelle est l’apparence du rapport imprimé et également comment il est restitué par un convertisseur de saut de page manuel tel que PDF. Pendant la création ou la mise à jour d'un rapport, vous pouvez afficher l'aperçu du rapport et l'exporter dans le Générateur de rapports ou le Concepteur de rapports.  
   
- Les convertisseurs de **saut de page manuel** ont le plus d’impact sur la mise en page du rapport et la taille de la page physique. Pour en savoir plus, consultez [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ Les convertisseurs de**saut de page manuel** ont le plus d’impact sur la mise en page du rapport et la taille de la page physique. Pour en savoir plus, consultez [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
    
 ##  <a name="HowTo"></a> Rubriques de procédures  
  Cette section répertorie les procédures qui vous indiquent pas à pas comment utiliser la pagination dans les rapports.  

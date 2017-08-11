@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f5862f4faec4784aac678d578c155ac5992a55f6
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modifier un fichier de configuration Reporting Services (RSreportserver.config)
@@ -98,9 +98,9 @@ ms.lasthandoff: 06/22/2017
   
     -   [Authentification avec le serveur de rapports](../../reporting-services/security/authentication-with-the-report-server.md)  
   
-    -   [Configurer le portail Web pour passer des Cookies d’authentification personnalisée](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
+    -   [Configurer le portail Web pour passer des cookies d’authentification personnalisée](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
   
-    -   [Personnaliser les paramètres d'extension de rendu dans RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
+    -   [Personnaliser les paramètres d’Extension de rendu dans RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
 5.  Enregistrez le fichier.  
   
@@ -108,12 +108,12 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Fichier de configuration RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Fichier de configuration ReportingServicesService](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)   
- [Fichier de configuration RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [Déploiement d'une extension pour le traitement des données](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
- [Déploiement d'une extension de remise](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)   
- [Déploiement d'une extension de rendu](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)   
- [Fichiers de configuration de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)  
+ [Fichier de Configuration ReportingServicesService](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)   
+ [Fichier de Configuration RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
+ [Déploiement d’une Extension de traitement des données](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
+ [Déploiement d’une Extension de remise](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)   
+ [Déploiement d’une Extension de rendu](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)   
+ [Fichiers de Configuration Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)  
   
   
 

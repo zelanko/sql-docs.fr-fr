@@ -17,11 +17,11 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 232e24ef08c24d5c6a2c9799094fc492305eea46
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-a-linked-report"></a>Créer un rapport lié
@@ -39,20 +39,20 @@ ms.lasthandoff: 06/22/2017
   
 2.  Indiquez un nom pour le nouveau rapport lié. Tapez éventuellement une description.  
   
-3.  Pour sélectionner un autre dossier pour le rapport, cliquez sur **Modifier l’emplacement**. Cliquez ensuite sur le dossier à utiliser ou tapez son nom dans la zone **Emplacement** . [!INCLUDE[clickOK](../../includes/clickok-md.md)] Si vous ne sélectionnez aucun dossier, le rapport lié est créé dans le dossier actif (où est stocké le rapport sur lequel il est basé).  
+3.  Pour sélectionner un autre dossier pour le rapport, cliquez sur **Modifier l’emplacement**. Cliquez ensuite sur le dossier à utiliser ou tapez son nom dans la zone **Emplacement** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]Si vous ne sélectionnez pas un autre dossier, le rapport lié est créé dans le dossier actif (où est stocké le rapport, sur qu'il est basé).  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Le rapport lié s’ouvre.  
+4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]Le rapport lié s’ouvre.  
   
      L'icône d'un rapport lié est différente des autres éléments gérés par un serveur de rapports. L'icône ci-après indique un rapport lié :  
   
-     ![Icône de rapport lié](../../reporting-services/report-server/media/hlp-16linked.gif "icône de rapport lié")  
+     ![Icône Rapport lié](../../reporting-services/report-server/media/hlp-16linked.gif "Icône Rapport lié")  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ouvrir et fermer un rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
- [Page Nouveau rapport lié &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/fefb46e8-6901-4d50-a3f8-7c49ad72e7b1)   
- [Page Choisir l’emplacement de l’élément &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c)   
- [Page Propriétés générales, Rapports &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/66c99d28-ab41-45f0-bf02-ed560293595d)   
- [Concepts de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [Ouvrir et fermer un rapport &#40; Le Gestionnaire de rapports &#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
+ [Page nouveau rapport lié &#40; Le Gestionnaire de rapports &#41;](http://msdn.microsoft.com/library/fefb46e8-6901-4d50-a3f8-7c49ad72e7b1)   
+ [Choisissez la Page d’emplacement de l’élément &#40; Le Gestionnaire de rapports &#41;](http://msdn.microsoft.com/library/4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c)   
+ [Page propriétés générales, rapports &#40; Le Gestionnaire de rapports &#41;](http://msdn.microsoft.com/library/66c99d28-ab41-45f0-bf02-ed560293595d)   
+ [Reporting Services Concepts &#40; SSRS &#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
+ [Le Gestionnaire de rapports &#40; En Mode natif de SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

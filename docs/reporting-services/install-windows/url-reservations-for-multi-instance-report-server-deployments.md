@@ -16,11 +16,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e046d1afc8cc2f774e56f70ac9448e9ba9660cbb
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>Réservations d'URL pour les déploiements de serveur de rapports multi-instance
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
  Les URL en double sont détectées pendant l'inscription d'URL, qui se produit lorsque le service démarre. Si vous créez des réservations d'URL qui ne sont pas uniques, le conflit de nom peut ne pas être détecté avant le démarrage du service. Pour cette raison, assurez-vous de suivre les conventions ou les règles d'affectation de noms afin de vous assurer que toutes les valeurs sont uniques.  
   
 ## <a name="default-naming-conventions"></a>Conventions d'affectation de noms par défaut  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peut être installé dans une instance nommée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Lorsque vous installez ou configurez un serveur de rapports dans une instance nommée, le nom de l'instance est inclus automatiquement dans le répertoire virtuel dans la réservation d'URL par défaut que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit. Le tableau suivant indique les réservations d'URL pour une instance par défaut et une instance nommée.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peut être installé dans une instance nommée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lorsque vous installez ou configurez un serveur de rapports dans une instance nommée, le nom de l'instance est inclus automatiquement dans le répertoire virtuel dans la réservation d'URL par défaut que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit. Le tableau suivant indique les réservations d'URL pour une instance par défaut et une instance nommée.  
   
 |Instance SQL Server|Réservation d'URL par défaut|  
 |-------------------------|-----------------------------|  
@@ -49,11 +49,11 @@ ms.lasthandoff: 06/22/2017
 |`http://www.contoso.com/reportserver`|`http://SRVR-46/reportserver`|Chaque instance répond à différents noms de serveurs (nom de domaine complet et nom d'ordinateur).|  
   
 ## <a name="uniqueness-requirements"></a>Spécifications relatives à l'unicité  
- Les technologies sous-jacentes utilisées par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] imposent des spécifications relatives aux noms uniques. HTTP.SYS requiert que toutes les URL dans sa base de données de référentiel soient uniques. Vous pouvez varier le port, le nom d'hôte ou le nom de répertoire virtuel pour créer une URL unique. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] requiert que les identités d’application soient uniques dans le même processus. Cette spécification affecte les noms de répertoires virtuels. Elle spécifie que vous ne pouvez pas dupliquer de nom de répertoire virtuel dans la même instance de serveur de rapports.  
+ Les technologies sous-jacentes utilisées par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] imposent des spécifications relatives aux noms uniques. HTTP.SYS requiert que toutes les URL dans sa base de données de référentiel soient uniques. Vous pouvez varier le port, le nom d'hôte ou le nom de répertoire virtuel pour créer une URL unique. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] requiert que les identités d'application soient uniques dans le même processus. Cette spécification affecte les noms de répertoires virtuels. Elle spécifie que vous ne pouvez pas dupliquer de nom de répertoire virtuel dans la même instance de serveur de rapports.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [Configurer des URL de Report Server &#40; Gestionnaire de Configuration de SSRS &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Configurer une URL &#40; Gestionnaire de Configuration de SSRS &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
   
   
 

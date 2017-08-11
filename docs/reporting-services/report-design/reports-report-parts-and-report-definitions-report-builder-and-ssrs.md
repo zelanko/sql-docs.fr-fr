@@ -18,11 +18,11 @@ caps.latest.revision: 26
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3c5a2673c5e38d6bd216116cd14225f1ed064487
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Rapports, parties de rapports et définitions de rapports (Générateur de rapports et SSRS)
@@ -54,7 +54,7 @@ ms.lasthandoff: 06/22/2017
  La sécurité d'un rapport publié est assurée au moyen des attributions de rôles utilisant le modèle de sécurité basée sur les rôles de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les rapports publiés sont accessibles par le biais d’URL, de composants WebPart SharePoint ou du portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Vous pouvez également naviguer jusqu’aux rapports et les ouvrir dans le Générateur de rapports.  
   
 ### <a name="report-snapshots"></a>Instantanés de rapport  
- Un rapport peut également être publié sous la forme d'un instantané qui contient à la fois les informations de mise en page et les données qui étaient en vigueur au moment où le rapport a été exécuté pour la première fois. Les instantanés de rapport ne sont pas enregistrés dans un format de rendu particulier. Ils sont générés dans un format d'affichage final (par exemple, au format HTML) uniquement à la demande d'un utilisateur ou d'une application. Pour plus d’informations, consultez [Recherche et affichage de rapports dans le Gestionnaire de rapports &#40;Générateur de rapports et SSRS&#41;](https://msdn.microsoft.com/library/dd255286.aspx).  
+ Un rapport peut également être publié sous la forme d'un instantané qui contient à la fois les informations de mise en page et les données qui étaient en vigueur au moment où le rapport a été exécuté pour la première fois. Les instantanés de rapport ne sont pas enregistrés dans un format de rendu particulier. Ils sont générés dans un format d'affichage final (par exemple, au format HTML) uniquement à la demande d'un utilisateur ou d'une application. Pour plus d’informations, consultez [Recherche et affichage de rapports dans le Gestionnaire de rapports &#40;Générateur de rapports et SSRS&#41;](https://msdn.microsoft.com/library/dd255286.aspx).  
   
 ## <a name="rendered-reports"></a>Rapports rendus  
  Un rapport rendu est un rapport dont le traitement est complet et qui contient à la fois des informations de mise en page et des données dans un format d'affichage approprié (par exemple au format HTML). Il est impossible de lire un rapport tant que son rendu n'est pas effectué dans un format de sortie. Vous pouvez effectuer le rendu d'un rapport en procédant de l'une des façons suivantes :  
@@ -72,7 +72,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>Voir aussi  
  [Concepts de création de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Générateur de rapports dans SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Recherche, affichage et la gestion des rapports &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

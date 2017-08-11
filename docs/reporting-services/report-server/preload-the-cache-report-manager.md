@@ -18,11 +18,11 @@ caps.latest.revision: 35
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c5543c648289dee007a2249299ecb006d41f6b98
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="preload-the-cache-report-manager"></a>préchargement du cache (Gestionnaire de rapports)
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
-2.  Dans le Gestionnaire de rapports, accédez à la page **Contenu**, puis à l’élément que vous voulez mettre en cache.  
+2.  Dans le Gestionnaire de rapports, accédez à la page **Contenu** , puis à l’élément que vous voulez mettre en cache.  
   
 3.  Pointez sur l’élément, cliquez sur la liste déroulante, puis cliquez sur **Gérer**.  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
-2.  Dans le Gestionnaire de rapports, accédez à la page **Contenu**, puis au rapport pour lequel vous voulez créer un abonnement.  
+2.  Dans le Gestionnaire de rapports, accédez à la page **Contenu** , puis au rapport pour lequel vous voulez créer un abonnement.  
   
 3.  Cliquez successivement sur le rapport, sur l’onglet **Abonnements** , puis sur **Nouvel abonnement piloté par les données**.  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 06/22/2017
      Ou, pour créer une planification personnalisée, cliquez sur **Suivant une planification créée pour cet abonnement** , puis sur **Suivant**. Configurez la planification, puis cliquez sur **Terminer**.  
   
     > [!NOTE]  
-    >  Pour que les abonnés reçoivent la version du rapport la plus récente, la planification que vous configurez doit être chronologiquement cohérente par rapport à la planification de la remise du rapport que vous avez définie pour les abonnés. Pour plus d’informations, consultez [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+    >  Pour que les abonnés reçoivent la version du rapport la plus récente, la planification que vous configurez doit être chronologiquement cohérente par rapport à la planification de la remise du rapport que vous avez définie pour les abonnés. Pour plus d’informations, consultez [le Gestionnaire de rapports &#40; En Mode natif de SSRS &#41; ](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 14. Configurez les options d'exécution du rapport comme suit. Dans la page du rapport, cliquez sur l’onglet **Propriétés** .  
   
@@ -116,19 +116,19 @@ ms.lasthandoff: 06/22/2017
   
 16. Dans la page qui s’affiche, sélectionnez **Effectuer le rendu de ce rapport avec les données les plus récentes**.  
   
-17. Choisissez l'une des deux options de mise en cache suivantes et configurez l'expiration comme suit :  
+17. Choisissez l'une des deux options de mise en cache suivantes et configurez l'expiration comme suit :  
   
     -   Pour effectuer l'expiration d'une copie mise en cache après l'écoulement d'une durée particulière, cliquez sur **Mettre en cache une copie temporaire du rapport. Faire expirer la copie du rapport après un certain nombre de minutes.** Tapez le nombre de minutes pour l'expiration du rapport.  
   
-    -   Pour définir l’expiration d’une copie mise en cache selon une planification, cliquez sur **Mettre en cache une copie temporaire du rapport. Faire expirer la copie du rapport selon la planification suivante.** Cliquez sur **Configurer** ou sélectionnez une planification partagée pour définir l’expiration du rapport.  
+    -   Pour effectuer la copie mise en cache expire à une planification, cliquez sur **mettre en Cache une copie temporaire du rapport. Faire expirer la copie du rapport selon la planification suivante.** Cliquez sur **Configurer**ou sélectionnez une planification partagée pour définir l’expiration du rapport.  
   
 18. Cliquez sur **Appliquer**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Abonnements pilotés par les données](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Performances, instantanés, mise en cache &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
- [Définir les propriétés de traitement d'un rapport](../../reporting-services/report-server/set-report-processing-properties.md)   
+ [Performances, instantanés, mise en cache &#40; Reporting Services &#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
+ [Définir les propriétés de traitement des rapports](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Mise en cache de rapports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)  
   
   

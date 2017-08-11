@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 03787380e498b82c160583cf1e8391bf643edf7c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tables-report-builder--and-ssrs"></a>Tables (Générateur de rapports et SSRS)
@@ -71,7 +71,7 @@ ms.lasthandoff: 06/22/2017
  Pour plus d’informations, consultez [Ajouter un total à un groupe ou à une région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).  
   
 ##  <a name="AddingRowGroups"></a> Ajout de groupes de lignes à une table  
- De la même manière que vous pouvez faire glisser un champ du volet des données de rapport vers une cellule pour afficher les données de détail, vous pouvez faire glisser un champ vers le volet de regroupement pour ajouter un groupe. Pour une table, faites glisser le champ vers le volet Groupes de lignes. Une fois que vous avez ajouté un groupe, la table ajoute automatiquement des cellules dans les nouvelles colonnes dans la région du groupe de lignes dans laquelle afficher les valeurs du groupe. Pour plus d’informations sur les zones, consultez [Zones de région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
+ De la même manière que vous pouvez faire glisser un champ du volet des données de rapport vers une cellule pour afficher les données de détail, vous pouvez faire glisser un champ vers le volet de regroupement pour ajouter un groupe. Pour une table, faites glisser le champ vers le volet Groupes de lignes. Une fois que vous avez ajouté un groupe, la table ajoute automatiquement des cellules dans les nouvelles colonnes dans la région du groupe de lignes dans laquelle afficher les valeurs du groupe. Pour plus d’informations sur les zones, consultez [zones de région de données de tableau matriciel &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  L'illustration suivante représente une table avec deux groupes de lignes imbriquées en mode Conception. Les groupes de lignes ont été créés en faisant glisser le champ Order, puis le champ Date vers le volet Groupes de lignes puis en insérant chaque groupe comme un parent des groupes existants. L'illustration montre un groupe parent basé sur la date et un groupe enfant basé sur le numéro de commande, ainsi que le groupe de détails défini par défaut.  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 06/22/2017
   
  ![Table regroupée par date, puis la commande](../../reporting-services/media/rs-basictablegroupspreview.png "Table regroupée par date, puis par commande")  
   
- Un autre mode d'affichage des données groupées consiste à mettre en retrait la hiérarchie de groupe pour afficher la relation imbriquée de groupes au lieu de présenter chaque valeur dans sa propre colonne. Ce style de mise en forme est appelé rapport par palier. Pour plus d’informations sur la mise en forme des informations d’un groupe sous forme d’un rapport en escalier, consultez [Créer un rapport en escalier &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md).  
+ Un autre mode d'affichage des données groupées consiste à mettre en retrait la hiérarchie de groupe pour afficher la relation imbriquée de groupes au lieu de présenter chaque valeur dans sa propre colonne. Ce style de mise en forme est appelé rapport par palier. Pour plus d’informations sur la mise en forme des informations de groupe en tant qu’un rapport en escalier, consultez [créer un rapport en escalier &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md).  
   
 ### <a name="adding-totals-to-row-groups"></a>Ajout de totaux aux groupes de lignes  
  Pour afficher des totaux pour un groupe, vous pouvez utiliser la commande contextuelle **Ajouter un total** . Pour un groupe de lignes, la commande Ajouter un total ajoute une ligne à l'extérieur du groupe de sorte qu'elle ne se répète qu'une fois par rapport au groupe. Pour les groupes imbriqués, la ligne de total du groupe enfant peut être à l'extérieur du groupe enfant mais à l'intérieur du groupe parent. Dans un tel cas, il est utile de définir une couleur d'arrière-plan de la ligne de total pour le groupe enfant afin de la distinguer des lignes de détails. Vous pouvez également utiliser une couleur d'arrière-plan différente pour distinguer l'en-tête de la table et les lignes de pied de page. L'illustration suivante montre la table avec une ligne de total ajoutée pour le groupe en fonction des numéros de commande.  
@@ -120,8 +120,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Expressions &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Exemples d’expressions &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Tables, Matrices et listes &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

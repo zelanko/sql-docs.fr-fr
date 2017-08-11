@@ -15,11 +15,11 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b50d53f5b7ba102454f53646dec8cf1897df52f9
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="images-report-builder-and-ssrs"></a>Images [Générateur de rapports et SSRS]
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="ExternalImages"></a> Images externes  
  Dans un rapport, vous pouvez inclure une image stockée, en spécifiant une URL pointant vers celle-ci. Lorsque vous utilisez une image externe dans un rapport, la source de l'image est définie à **External** et la valeur de l'image correspond à l'adresse URL ou au chemin d'accès de l'image.  
   
- Pour plus d’informations, consultez [Spécification de chemins vers des éléments externes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
+ Pour plus d’informations, consultez [Spécification de chemins d’accès à des éléments externes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
  Lorsque le rapport est exécuté dans le Générateur de rapports ou dans le Concepteur de rapports, l'aperçu utilise les informations d'identification de l'utilisateur pour afficher l'image. Lorsque le rapport est exécuté sur le serveur de rapports, l'image dans le rapport peut ne pas s'afficher si les informations d'identification du serveur ne sont pas suffisantes pour accéder à l'image. Dans ce cas, contactez votre administrateur système.  
   
@@ -85,6 +85,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Exportation vers un fichier image &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
- [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
+ [Comportements de rendu &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   

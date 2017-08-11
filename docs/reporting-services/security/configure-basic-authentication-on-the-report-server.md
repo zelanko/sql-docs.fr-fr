@@ -18,11 +18,11 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bfadbdb617198fe04b789d0d1d6589f4af2d887f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Configurer une authentification de base sur le serveur de rapports
@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  Rechercher \< **authentification**>.  
   
-3.  Copiez, parmi les structures XML suivantes, celle qui répond le mieux à vos besoins. La première structure XML fournit des espaces réservés pour spécifier tous les éléments décrits dans la section suivante :  
+3.  Copiez, parmi les structures XML suivantes, celle qui répond le mieux à vos besoins. La première structure XML fournit des espaces réservés pour spécifier tous les éléments décrits dans la section suivante :  
   
     ```  
     <Authentication>  
@@ -95,7 +95,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Domaines d'application des applications du serveur de rapports](../../reporting-services/report-server/application-domains-for-report-server-applications.md)   
- [Sécurité et protection de Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md)  
+ [Sécurité et Protection de Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md)  
   
   
 
