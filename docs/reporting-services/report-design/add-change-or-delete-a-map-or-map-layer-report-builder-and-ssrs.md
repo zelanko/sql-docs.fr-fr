@@ -32,11 +32,11 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8c45b97760006a9939f44b41c018d04321060df9
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Ajouter, modifier ou supprimer une carte ou une couche (Générateur de rapports et SSRS)
@@ -68,7 +68,7 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="AddLayer"></a> Pour ajouter une couche à partir de l’Assistant Couche  
   
--   Dans le ruban, dans le menu **Insérer** , cliquez sur **Carte**, puis sur **Carte Wizard**. L'Assistant vous permet d'ajouter une couche à la carte existante. La plupart des pages des Assistants Carte et Couche sont identiques.  
+-   Dans le ruban, dans le menu **Insérer** , cliquez sur **Carte**, puis sur **Carte Wizard.**. L'Assistant vous permet d'ajouter une couche à la carte existante. La plupart des pages des Assistants Carte et Couche sont identiques.  
   
      Pour plus d’informations, consultez [Assistant Carte et Assistant Couche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
@@ -256,7 +256,7 @@ ms.lasthandoff: 06/22/2017
      Vous pouvez également masquer la couche de manière conditionnelle. Pour plus d’informations, consultez [Masquer un élément &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Mappages de &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Dépanner les rapports : Mapper des rapports &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   
