@@ -15,7 +15,7 @@ caps.latest.revision: 32
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d68de45f8514de03e9804996da00d5f63d211311
 ms.contentlocale: fr-fr
@@ -33,7 +33,7 @@ Lorsque vous installez SQL Server 2016 Reporting Services SharePoint mode, les a
 -   Gestion des fonctionnalités d' [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , par exemple extensions et clés de chiffrement.  
 
 ##  <a name="bkmk_cmdlet_sum"></a> Résumé des applets de commande  
- Pour exécuter les applets de commande, vous devez ouvrir SharePoint Management Shell. Vous pouvez aussi utiliser l’éditeur d’interface utilisateur graphique fourni avec Microsoft Windows : **l’Environnement d’écriture de scripts intégré de Windows PowerShell (ISE)**. Pour plus d’informations, consultez [démarrage de Windows PowerShell sur Windows Server](http://technet.microsoft.com/library/hh847814.aspx). Dans les résumés suivants d'applets de commande, les références à l'application de service « bases de données » font référence à toutes les bases de données créées et utilisées par une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Cela inclut la configuration, la définition d'alertes et les bases de données temp.  
+ Pour exécuter les applets de commande, vous devez ouvrir SharePoint Management Shell. Vous pouvez aussi utiliser l’éditeur d’interface utilisateur graphique fourni avec Microsoft Windows : **l’Environnement d’écriture de scripts intégré de Windows PowerShell (ISE)**. Pour plus d’informations, consultez [Démarrage de Windows PowerShell sur Windows Server](http://technet.microsoft.com/library/hh847814.aspx). Dans les résumés suivants d'applets de commande, les références à l'application de service « bases de données » font référence à toutes les bases de données créées et utilisées par une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Cela inclut la configuration, la définition d'alertes et les bases de données temp.  
   
  Si vous voyez un message d'erreur semblable au suivant lorsque vous tapez les exemples PowerShell :  
   
@@ -50,7 +50,7 @@ Lorsque vous installez SQL Server 2016 Reporting Services SharePoint mode, les a
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- Pour plus d’informations, consultez [utiliser Windows PowerShell pour administrer SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx).  
+ Pour plus d’informations, consultez [Utiliser Windows PowerShell pour administrer SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx).  
   
 #### <a name="to-open-the-sharepoint-management-shell-and-run-cmdlets"></a>Pour ouvrir SharePoint Management Shell et exécuter les applets de commande  
   
@@ -280,8 +280,8 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Utiliser PowerShell pour modifier et répertorier les propriétaires d’abonnements Reporting Services, et exécuter un abonnement](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[Liste de vérification : Utiliser PowerShell pour vérifier Power Pivot pour SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
-[Obtention d’aide sur SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
+[Liste de vérification : utiliser PowerShell pour vérifier Power Pivot pour SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+[Obtenir de l'aide sur SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 [Scripts PowerShell de gestion CodePlex SharePoint](http://sharepointpsscripts.codeplex.com/)   
 
 D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
