@@ -20,7 +20,7 @@ caps.latest.revision: 92
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e7144b243b14ea3f65d912552ce8e6cdd736ab59
 ms.contentlocale: fr-fr
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Mise à niveau :** vous mettez à niveau les composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur les serveurs et instances où ils sont installés. Cela s'appelle communément une mise à niveau « sur place ». La mise à niveau sur place n'est pas prise en charge d'un mode de serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à un autre. Par exemple, vous ne pouvez pas mettre à niveau un serveur de rapports en mode natif vers un serveur de rapports en mode SharePoint. vous pouvez migrer vos éléments de rapport d'un mode à l'autre. Pour plus d'informations, consultez la section « Migration du mode natif au mode SharePoint » plus loin dans ce document.  
   
--   **Migration**: vous installez et configurez un nouvel environnement SharePoint, copiez vos éléments de rapport et ressources dans le nouvel environnement et configurez le nouvel environnement de façon à utiliser le contenu existant. une forme de migration de niveau inférieur consiste à copier les bases de données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], les fichiers de configuration, et si vous utilisez le mode SharePoint, les bases de données de contenu SharePoint.  
+-   **Migration**: vous installez et configurez un nouvel environnement SharePoint, copiez vos éléments de rapport et ressources dans le nouvel environnement et configurez le nouvel environnement de façon à utiliser le contenu existant. une forme de migration de niveau inférieur consiste à copier les bases de données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , les fichiers de configuration, et si vous utilisez le mode SharePoint, les bases de données de contenu SharePoint.  
     
 > **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Sauvegardez toutes les personnalisations effectuées dans les répertoires virtuels [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans IIS.  
   
--   Supprimez les certificats SSL non valides.  Cela inclut les certificats expirés et que vous ne projetez pas de mettre à jour avant la mise à niveau de Reporting Services.  Les certificats non valides provoqueront l'échec de la mise à niveau et l'écriture d'un message d'erreur dans le fichier journal Reporting Services similaire au message suivant : **Microsoft.ReportingServices.WmiProvider.WMIProviderException: A Secure Sockets Layer (SSL) certificate is not configured on the Web site**.  
+-   Supprimez les certificats SSL non valides.  Cela inclut les certificats expirés et que vous ne projetez pas de mettre à jour avant la mise à niveau de Reporting Services.  Les certificats non valides provoquent l’échec de la mise à niveau et un message d’erreur semblable au suivant est ajouté au fichier journal de Reporting Services : **Microsoft.ReportingServices.WmiProvider.WMIProviderException : Un certificat SSL (Secure Sockets Layer) n’est pas configuré sur le site web.**.  
   
  Avant de mettre à niveau un environnement de production, veillez à toujours exécuter une mise à niveau de test dans un environnement de préproduction qui a la même configuration que votre environnement de production.  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 08/09/2017
   
  Toutefois, la **migration** manuelle d'une installation du serveur de rapports est requise si vous rencontrez l'une des conditions suivantes :  
   
--   Vous souhaitez modifier le type de serveur de rapports utilisé dans votre déploiement. Par exemple, vous ne pouvez pas mettre à niveau ou convertir un serveur de rapports en mode natif vers le mode SharePoint. Pour plus d’informations, consultez [Migration du mode natif au mode SharePoint &#40;SSRS&#41;](../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md).  
+-   Vous souhaitez modifier le type de serveur de rapports utilisé dans votre déploiement. Par exemple, vous ne pouvez pas mettre à niveau ou convertir un serveur de rapports en mode natif vers le mode SharePoint. Pour plus d’informations, consultez [natif pour la Migration de SharePoint &#40; SSRS &#41; ](../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md).  
   
 -   Vous souhaitez réduire la durée pendant laquelle le serveur de rapports est mis hors connexion lors du processus de mise à niveau. Votre installation actuelle reste en ligne pendant que vous copiez des données de contenu vers une nouvelle instance du serveur de rapports et testez l'installation sans modifier l'état de votre installation existante du serveur de rapports.  
   
@@ -142,7 +142,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_native_scaleout"></a> Mettre à niveau un déploiement par montée en puissance parallèle en mode natif Reporting Services  
  Voici un récapitulatif de la procédure de mise à niveau d'un déploiement en mode natif de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] avec montée en puissance parallèle sur plusieurs serveurs de rapports. Ce processus implique des temps morts du déploiement de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
-1.  Sauvegardez les bases de données et les clés de chiffrement du serveur de rapports. Pour plus d’informations, consultez [Opérations de sauvegarde et de restauration pour Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) et [Ajouter et supprimer des clés de chiffrement pour un déploiement évolutif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
+1.  Sauvegardez les bases de données et les clés de chiffrement du serveur de rapports. Pour plus d’informations, consultez [opérations de sauvegarde et restauration pour Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) et [ajouter et supprimer des clés de chiffrement pour un déploiement évolutif &#40; Gestionnaire de Configuration de SSRS &#41; ](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
   
 2.  Utilisez le gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour supprimer tous les serveurs de rapports du déploiement avec montée en puissance parallèle. Pour plus d’informations, consultez [Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
@@ -164,7 +164,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Complément pour les produits SharePoint. Pour plus d’informations, consultez [Installer ou désinstaller le complément Reporting Services pour SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
   
- Pour plus d’informations sur la migration d’une installation en mode SharePoint, consultez [Migrer une installation Reporting Services &#40;mode SharePoint&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
+ Pour obtenir des instructions détaillées sur la migration d’une installation en mode de SharePoint, consultez [migrer une Installation Reporting Services &#40; Mode SharePoint &#41; ](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
   
 > [!IMPORTANT]  
 >  Certains des scénarios suivants requièrent l'arrêt de l'environnement SharePoint en raison des différentes technologies devant être mises à niveau. Si votre situation ne permet pas de temps d'arrêt, vous devez effectuer une migration complète au lieu d'une mise à niveau sur place.  
@@ -179,7 +179,7 @@ ms.lasthandoff: 08/09/2017
      Si vous avez une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée à SharePoint 2010, vous ne pouvez pas effectuer une mise à niveau sur place du serveur SharePoint. Toutefois, vous pouvez migrer les bases de données de contenu et les bases de données d’application de service de la batterie de serveurs SharePoint 2010 vers une batterie de serveurs SharePoint 2013/2016.  
   
 ### <a name="includesssql11includessssql11-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]pour SQL Server Reporting Services  
- **Environnement de départ :** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)], SharePoint 2010.  
+ **Environnement de départ :** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)], SharePoint 2010.  
   
  **Environnement final :** SQL Server Reporting Services, SharePoint 2013 ou SharePoint 2016.   
   
@@ -188,7 +188,7 @@ ms.lasthandoff: 08/09/2017
      Si vous avez une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée à SharePoint 2010, vous ne pouvez pas effectuer une mise à niveau sur place du serveur SharePoint. Toutefois, vous pouvez migrer les bases de données de contenu et les bases de données d’application de service de la batterie de serveurs SharePoint 2010 vers une batterie de serveurs SharePoint 2013/2016.  
   
 ### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]pour SQL Server Reporting Services  
- **Starting environment:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], SharePoint 2010.  
+ **Environnement de départ :** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], SharePoint 2010.  
   
  **Environnement final :** SQL Server Reporting Services, SharePoint 2013 ou SharePoint 2016.  
  
