@@ -49,7 +49,7 @@ ms.lasthandoff: 08/02/2017
  ![Icône de lien de rubrique](../database-engine/configure-windows/media/topic-link.gif "icône lien de rubrique") pour les conventions de syntaxe qui sont utilisées pour le **bcp** syntaxe, consultez [Conventions de syntaxe Transact-SQL &#40; Transact-SQL &#41; ](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 > [!NOTE]
-> Si vous utilisez **bcp** pour sauvegarder vos données, créez un fichier de format pour enregistrer le format de données. Les fichiers de données**bcp**  **n’incluent pas** de schéma ni d’informations de format, ce qui fait que si une table ou une vue est supprimée et si vous n’avez pas de fichier de format, il se peut que vous ne soyez pas en mesure d’importer les données.  
+> Si vous utilisez **bcp** pour sauvegarder vos données, créez un fichier de format pour enregistrer le format de données. Les fichiers de données**bcp** **n’incluent pas** de schéma ni d’informations de format, ce qui fait que si une table ou une vue est supprimée et si vous n’avez pas de fichier de format, il se peut que vous ne soyez pas en mesure d’importer les données.  
   
 <table><th>Syntaxe</th><tr><td><pre>
 bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>
@@ -139,7 +139,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  Indique la page de codes des données dans le fichier. L’utilisation de*code_page* n’est justifiée que si les données contiennent des colonnes de type **char**, **varchar**ou **text** dont les valeurs de caractères sont supérieures à 127 ou inférieures à 32.  
   
 > [!NOTE]
-> Nous recommandons de spécifier un nom de classement pour chaque colonne dans un fichier de format, sauf lorsque vous souhaitez que l’option 65001 soit prioritaire sur la spécification de page de codes/classement
+> Nous recommandons de spécifier un nom de classement pour chaque colonne dans un fichier de format, sauf lorsque vous souhaitez que l’option 65001 soit prioritaire sur la spécification de page de codes/classement.
   
 |Valeur de la page de codes|Description|  
 |---------------------|-----------------|  
@@ -149,7 +149,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 |*code_page*|Numéro spécifique de la page de codes, par exemple 850.<br /><br /> Les versions antérieures à la version 13 ([!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) ne prennent pas en charge la page de codes 65001 (encodage UTF-8). La version 13 et les versions ultérieures peuvent importer l’encodage UTF-8 pour les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
   
  **-d** ***database_name***<a name="d"></a>   
- Spécifie la base de données à laquelle se connecter. Par défaut, bcp.exe se connecte à la base de données par défaut de l'utilisateur. Si **-d** *database_name* et un nom en trois parties (*database_name.schema.table*, passed as the first parameter to bcp.exe) is specified, an error will occur because you cannot specify the database name twice.Si *database_name* commence par un trait d’union (-) ou une barre oblique (/), n’ajoutez pas d’espace entre **-d** et le nom de la base de données.  
+ Spécifie la base de données à laquelle se connecter. Par défaut, bcp.exe se connecte à la base de données par défaut de l'utilisateur. Si **-d** *database_name* et un nom en trois parties (*database_name.schema.table*, passé comme premier paramètre à bcp.exe) est spécifié, une erreur se produit, car vous ne pouvez pas spécifier le nom de la base de données deux fois. Si *database_name* commence par un trait d’union (-) ou une barre oblique (/), n’ajoutez pas d’espace entre **-d** et le nom de la base de données.  
   
  **-e** ***err_file***<a name="e"></a>  
  Spécifie le chemin complet d’un fichier d’erreur utilisé pour stocker les lignes que l’utilitaire **bcp** ne peut pas transférer du fichier vers la base de données. Les messages d’erreur de la commande **bcp** sont transmis à la station de travail de l’utilisateur. Si cette option est omise, aucun fichier d'erreur n'est créé.  
@@ -195,7 +195,7 @@ Nombre approximatif de kilo-octets (Ko) de données par lot ( *cc*). Par défaut
 Spécifie qu'un verrou de niveau table d'une mise à jour en bloc est obtenu pour la durée de l'opération de chargement en masse ; sinon, un verrou de niveau ligne est obtenu. Cette option augmente sensiblement les performances car le maintien d'un verrou pour la durée de la seule opération de copie réduit la contention de verrouillage de la table. Une table peut être chargée simultanément par plusieurs clients à condition qu’elle ne comporte pas d’index et que **TABLOCK** soit spécifié. Par défaut, le comportement du verrouillage est déterminé par l'option **table lock on bulk load**.  
   
   > [!NOTE]
-  > Si la table cible est un index cluster columnstore, l’indicateur TABLOCK n’est pas requis pour le chargement par plusieurs clients simultanés, car chaque thread simultané a reçu un rowgroup distinct au sein de l’index et y charge les données. Pour plus d’informations, reportez-vous aux rubriques sur les concepts de l’index columnstore.
+  > Si la table cible est un index cluster columnstore, l’indicateur TABLOCK n’est pas requis pour le chargement par plusieurs clients simultanés, car chaque thread simultané a reçu un rowgroup distinct au sein de l’index et y charge les données. Pour plus d’informations, reportez-vous aux rubriques sur les concepts de l’index columnstore,
   
   **CHECK_CONSTRAINTS**  
   Spécifie que toutes les contraintes sur la table ou vue cible doivent être vérifiées pendant l'opération d'importation en bloc. Sans l'option CHECK_CONSTRAINTS, toute contrainte CHECK et FOREIGN KEY est ignorée. Après l'opération, la contrainte sur la table est marquée comme non approuvée.  
@@ -383,7 +383,7 @@ L’utilitaire bcp peut également être téléchargé séparément depuis le [M
 ## <a name="data-validation"></a>Validation des données  
  **bcp** applique désormais une validation des données et des contrôles de données qui peuvent entraîner l’échec de scripts existants s’ils sont exécutés sur des données non valides dans un fichier de données. Par exemple, **bcp** vérifie maintenant que :  
   
--   la représentation en mode natif des types de données **float** ou **real** est valide ;  
+-   la représentation en mode natif des types de données **float** ou **real** est valide.  
   
 -   les données Unicode comportent un nombre d'octets pair.  
   
