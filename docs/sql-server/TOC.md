@@ -21,13 +21,13 @@
 
 ## [SQL Server 2014 Release Notes](../release-notes/sql-server-2014-release-notes.md)
 ## [Notes de publication de SQL Server 2012](../release-notes/sql-server-2012-release-notes.md)
-## [Notes de publication de SQL Server 2012 SP1](../release-notes/sql-server-2012-sp1-release-notes.md)
+## [SQL Server 2012 SP1 Release Notes](../release-notes/sql-server-2012-sp1-release-notes.md)
 ## [SQL Server 2012 SP2 Release Notes](../release-notes/sql-server-2012-sp2-release-notes.md)
 ## [Notes de publication de SQL Server 2012 SP3](../release-notes/sql-server-2012-sp3-release-notes.md)
 ## [SQL Server 2008 R2 SP2 Release Notes](../release-notes/sql-server-2008-r2-sp2-release-notes.md)
 
 # [Analysis Services](../analysis-services/analysis-services.md)
-# [Moteur de base de données](../database-engine/sql-server-database-engine-backward-compatibility.md)
+# [Moteur de base de données](../database-engine/sql-server-database-engine-overview.md)
 # [Data Quality Services](../data-quality-services/data-quality-services.md)
 # [Clusters de basculement](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
 # [Installer](../sql-server/install/planning-a-sql-server-installation.md)
