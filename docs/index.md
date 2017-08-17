@@ -4,10 +4,10 @@ hide_bc: true
 title: Documentation Microsoft SQL | Microsoft Docs
 description: "Découvrir SQL"
 ms.translationtype: HT
-ms.sourcegitcommit: d37309cb29d315e2382213ee762ce1cc83e19e77
-ms.openlocfilehash: 1d61c44b74a4987b32b87bab9d061926aa177052
+ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
+ms.openlocfilehash: ec933d582956a21fee23173f5c08bec3d1fa807e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 
@@ -239,8 +239,13 @@ ms.lasthandoff: 08/09/2017
                                                 <div style="height:135px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
                                                    <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Migrer une base de données</h3>
                                                 </div>
-                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Télécharger les outils de migration</h4>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Mettre à niveau votre base de données SQL Server</h4>
                                                 <ul>
+                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54090">Assistant Expérimentation de base de données</a></li> 
+                                                </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Services et outils de migration</h4>
+                                                <ul>
+                                                    <li><a href="http://sqldatabase-migrationpreview.azurewebsites.net">Service de migration de base de données Azure (préversion privée)</a></li>
                                                     <li><a href="https://www.microsoft.com/download/details.aspx?id=53595"> Assistant Migration de données</a></li>
                                                     <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54255">SSMA pour Access</a></li>
                                                     <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54254">SSMA pour DB2</a></li>
@@ -248,10 +253,10 @@ ms.lasthandoff: 08/09/2017
                                                     <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54258">SSMA pour Oracle</a></li>
                                                     <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54256">SSMA pour SAP ASE</a></li>
                                                 </ul>
-                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Migrer votre base de données SQL Server</h4>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Migrer votre base de données vers Azure</h4>
                                                 <ul>
-                                                    <li><a href="/azure/sql-database/sql-database-migrate-your-sql-server-database">Vers Azure SQL Database</a></li>
-                                                    <li><a href="/azure/sql-data-warehouse/sql-data-warehouse-overview-migrate">Vers Azure SQL Data Warehouse</a></li>
+                                                    <li><a href="/azure/sql-database/sql-database-migrate-your-sql-server-database">Migrer vers Azure SQL Database</a></li>
+                                                    <li><a href="/azure/sql-data-warehouse/sql-data-warehouse-overview-migrate">Migrer vers Azure SQL Data Warehouse</a></li>
                                                 </ul>
                                             </div>
                                         </div>
