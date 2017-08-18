@@ -1,25 +1,30 @@
 ---
-title: "Configurer la r&#233;plication pour les groupes de disponibilit&#233; Always On (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "groupes de disponibilité [SQL Server], interopérabilité"
-  - "réplication [SQL Server], groupes de disponibilité AlwaysOn"
+title: "Configurer la réplication pour les groupes de disponibilité AlwaysOn (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], interoperability
+- replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 caps.latest.revision: 17
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b1c8cbe1c3b1682b6994859d134bd2a4de432fd6
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurer la r&#233;plication pour les groupes de disponibilit&#233; Always On (SQL Server)
+# <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>Configurer la réplication pour les groupes de disponibilité Always On (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   La configuration de la réplication [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et des groupes de disponibilité Always On implique sept étapes. Chaque étape est décrite plus en détail dans les sections qui suivent.  
@@ -109,12 +114,12 @@ caps.handback.revision: 17
         @value = 'true';  
     ```  
   
-3.  Créez la publication, les articles et les abonnements de réplication. Pour plus d'informations sur la configuration de la réplication, consultez « Publication de données et d'objets de base de données ».  
+3.  Créez la publication, les articles et les abonnements de réplication. Pour plus d'informations sur la configuration de la réplication, consultez « Publication de données et d'objets de base de données ».  
   
 ##  <a name="step2"></a> 2. Configurez le groupe de disponibilité Always On.  
  Dans le principal visé, créez le groupe de disponibilité avec la base de données publiée (ou à publier) en tant que base de données membre. Si vous utilisez l'Assistant Groupe de disponibilité, vous pouvez autoriser l'Assistant à synchroniser pour la première fois les bases de données de réplica secondaire ou vous pouvez effectuer l'initialisation manuellement à l'aide des fonctionnalités de sauvegarde et de restauration.  
   
- Créez un écouteur DNS pour le groupe de disponibilité qui sera utilisé par les agents de réplication pour la connexion au principal actuel. Le nom de l'écouteur spécifié sera utilisé comme cible de redirection pour la paire « serveur de publication d'origine/base de données publiée ». Par exemple, si vous utilisez DDL pour configurer le groupe de disponibilité, l'exemple de code suivant peut être utilisé pour spécifier un écouteur d'un groupe de disponibilité nommé `MyAG` :  
+ Créez un écouteur DNS pour le groupe de disponibilité qui sera utilisé par les agents de réplication pour la connexion au principal actuel. Le nom de l'écouteur spécifié sera utilisé comme cible de redirection pour la paire « serveur de publication d'origine/base de données publiée ». Par exemple, si vous utilisez DDL pour configurer le groupe de disponibilité, l'exemple de code suivant peut être utilisé pour spécifier un écouteur d'un groupe de disponibilité nommé `MyAG` :  
   
 ```  
 ALTER AVAILABILITY GROUP 'MyAG'   
@@ -124,7 +129,7 @@ ALTER AVAILABILITY GROUP 'MyAG'
  Pour plus d’informations, consultez [Création et configuration des groupes de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md).  
   
 ##  <a name="step3"></a> 3. Vérifier que tous les hôtes de réplica secondaire sont configurés pour la réplication  
- Pour chaque hôte de réplica secondaire, vérifiez que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a été configuré pour prendre en charge la réplication. La requête suivante peut être exécutée sur chaque hôte de réplica secondaire pour déterminer si la réplication est installée :  
+ Pour chaque hôte de réplica secondaire, vérifiez que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a été configuré pour prendre en charge la réplication. La requête suivante peut être exécutée sur chaque hôte de réplica secondaire pour déterminer si la réplication est installée :  
   
 ```  
 USE master;  
@@ -134,7 +139,7 @@ EXEC @installed = sys.sp_MS_replication_installed;
 SELECT @installed;  
 ```  
   
- Si *@installed* est 0, la réplication doit être ajoutée à l’installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Si *@installed* est 0, la réplication doit être ajoutée à l’installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="step4"></a> 4. Configurer les hôtes de réplica secondaire comme des serveurs de publication de réplication  
  Un réplica secondaire ne peut pas servir de serveur de publication ou de de republication de réplication, mais la réplication doit être configurée de sorte que le serveur secondaire puisse prendre la suite après un basculement. Sur le serveur de distribution, configurez la distribution pour chaque hôte de réplica secondaire. Indiquez la même base de données de distribution et le même répertoire de travail spécifiés lorsque le serveur de publication d'origine a été ajouté au serveur de distribution. Si vous utilisez des procédures stockées pour configurer la distribution, utilisez **sp_adddistpublisher** pour associer les serveurs de publication distants au serveur de distribution. Si *@login* et *@password* ont été utilisés pour le serveur de publication d'origine, spécifiez les mêmes valeurs lorsque vous ajoutez les hôtes de réplica secondaire comme serveurs de publication.  
@@ -195,7 +200,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 >   
 >  Msg 21899, Niveau 11, État 1, Procédure **sp_hadr_verify_subscribers_at_publisher**, Ligne 109  
 >   
->  La requête au serveur de publication redirigé 'MyReplicaHostName' pour déterminer s'il y a des entrées sysserver pour les abonnés du serveur de publication d'origine 'MyOriginalPublisher' a échoué avec l'erreur '976', message d'erreur 'Erreur 976, Niveau 14, État 1, Message : La base de données cible, 'MyPublishedDB', participe à un groupe de disponibilité et n'est actuellement pas accessible pour les requêtes. Le déplacement des données est alors suspendu ou le réplica de disponibilité n'est pas activé pour l'accès en lecture. Pour autoriser l'accès en lecture seule à cette base de données et à d'autres dans le groupe de disponibilité, activez l'accès en lecture sur un ou plusieurs réplicas de disponibilité secondaires dans le groupe.  Pour plus d’informations, consultez l’instruction **ALTER AVAILABILITY GROUP** dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+>  La requête au serveur de publication redirigé 'MyReplicaHostName' pour déterminer s'il y a des entrées sysserver pour les abonnés du serveur de publication d'origine 'MyOriginalPublisher' a échoué avec l'erreur '976', message d'erreur 'Erreur 976, Niveau 14, État 1, Message : La base de données cible, 'MyPublishedDB', participe à un groupe de disponibilité et n'est actuellement pas accessible pour les requêtes. Le déplacement des données est alors suspendu ou le réplica de disponibilité n'est pas activé pour l'accès en lecture. Pour autoriser l'accès en lecture seule à cette base de données et à d'autres dans le groupe de disponibilité, activez l'accès en lecture sur un ou plusieurs réplicas de disponibilité secondaires dans le groupe.  Pour plus d’informations, consultez l’instruction **ALTER AVAILABILITY GROUP** dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
 >   
 >  Une ou plusieurs erreurs de validation de serveur de publication ont été rencontrées pour l'hôte de réplica 'MyReplicaHostName'.  
   
@@ -209,7 +214,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Gestion d’une base de données de publication Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [Réplication, suivi des modifications, capture de données modifiées et groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate, track, change data capture - always on availability.md)  
+-   [Réplication, suivi des modifications, capture de données modifiées et groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
 -   [Administration &#40;Replication&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
   
@@ -223,9 +228,9 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Créer un groupe de disponibilité &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md)  
   
--   [Spécifier l’URL de point de terminaison lors de l’ajout ou lors de la modification d’un réplica de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md)  
+-   [Spécifier l’URL de point de terminaison lors de l’ajout ou lors de la modification d’un réplica de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [Créer un point de terminaison de mise en miroir de bases de données pour les groupes de disponibilité Always On &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database mirroring - always on availability groups- powershell.md)  
+-   [Créer un point de terminaison de mise en miroir de bases de données pour les groupes de disponibilité Always On &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Joindre un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
@@ -235,10 +240,11 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Créer ou configurer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
-## Voir aussi  
- [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Groupes de disponibilité Always On : interopérabilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
- [Réplication SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
+ [Groupes de disponibilité AlwaysOn : interopérabilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [Réplication SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
   
   
+

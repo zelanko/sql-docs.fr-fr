@@ -1,31 +1,36 @@
 ---
-title: "Configurer l&#39;option de configuration du serveur cursor threshold | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cursor threshold (option)"
+title: "Configurer l’option de configuration de serveur cursor threshold | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cursor threshold option
 ms.assetid: 189f2067-c6c4-48bd-9bd9-65f6b2021c12
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b17a4177e481059db1fa71b5e727590aca377b75
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurer l&#39;option de configuration du serveur cursor threshold
+# <a name="configure-the-cursor-threshold-server-configuration-option"></a>Configurer l'option de configuration de serveur cursor threshold
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Cette rubrique explique comment configurer l'option de configuration de serveur **Seuil du curseur** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **Seuil du curseur** spécifie le nombre de lignes du jeu de curseurs à partir desquelles les jeux de clés de curseurs sont générés de façon asynchrone. Lorsque le curseur génère un jeu de clés pour un jeu de résultats, l'optimiseur de requête évalue le nombre de lignes renvoyées pour ce jeu de résultats. Si l'optimiseur de requête estime que le nombre de lignes renvoyées est plus élevé que ce seuil, le curseur est généré de façon asynchrone, ce qui permet à l'utilisateur de rechercher des lignes à partir du curseur alors que ce dernier continue d'être rempli. Dans le cas contraire, le curseur est généré de façon synchrone et la requête attend que toutes les lignes soient renvoyées.  
+  Cette rubrique explique comment configurer l'option de configuration de serveur **cursor threshold** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **** spécifie le nombre de lignes du jeu de curseurs à partir desquelles les jeux de clés de curseurs sont générés de façon asynchrone. Lorsque le curseur génère un jeu de clés pour un jeu de résultats, l'optimiseur de requête évalue le nombre de lignes renvoyées pour ce jeu de résultats. Si l'optimiseur de requête estime que le nombre de lignes renvoyées est plus élevé que ce seuil, le curseur est généré de façon asynchrone, ce qui permet à l'utilisateur de rechercher des lignes à partir du curseur alors que ce dernier continue d'être rempli. Dans le cas contraire, le curseur est généré de façon synchrone et la requête attend que toutes les lignes soient renvoyées.  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
@@ -33,13 +38,13 @@ caps.handback.revision: 28
   
      [Sécurité](#Security)  
   
--   **Pour configurer l'option Seuil du curseur, utilisez :**  
+-   **Pour configurer l'option cursor threshold, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [Après avoir configuré l'option Seuil du curseur](#FollowUp)  
+-   **Suivi :**  [Après avoir configuré l'option cursor threshold](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -51,18 +56,18 @@ caps.handback.revision: 28
   
 ###  <a name="Recommendations"></a> Recommandations  
   
--   Cette option avancée ne doit être modifiée que par un administrateur de base de données qualifié ou un technicien agréé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Cette option avancée ne doit être modifiée que par un administrateur de base de données qualifié ou un technicien agréé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Si vous attribuez la valeur -1 à l’option **Seuil du curseur**, tous les jeux de clés sont générés de façon synchrone (ce qui avantage les jeux de curseurs de petite taille). Si vous attribuez la valeur 0 à l'option **cursor threshold** , tous les jeux de clés de curseurs sont générés de manière asynchrone. Si d'autres valeurs sont définies, l'optimiseur de requêtes compare le nombre estimé de lignes du jeu de curseurs et crée le jeu de clés de façon asynchrone si ce nombre dépasse celui de l'option **cursor threshold**. N'attribuez pas une valeur trop faible à l'option **Seuil du curseur** , sachant que les petits jeux de résultats sont mieux générés de manière synchrone.  
+-   Si vous attribuez la valeur -1 à l’option **Seuil du curseur** , tous les jeux de clés sont générés de façon synchrone (ce qui avantage les jeux de curseurs de petite taille). Si vous attribuez la valeur 0 à l'option **cursor threshold** , tous les jeux de clés de curseurs sont générés de manière asynchrone. Si d'autres valeurs sont définies, l'optimiseur de requêtes compare le nombre estimé de lignes du jeu de curseurs et crée le jeu de clés de façon asynchrone si ce nombre dépasse celui de l'option **cursor threshold**. N'attribuez pas une valeur trop faible à l'option **Seuil du curseur** , sachant que les petits jeux de résultats sont mieux générés de manière synchrone.  
   
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Les autorisations d’exécution de **sp_configure**, sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
+ Les autorisations d’exécution de **sp_configure** , sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour configurer l'option cursor threshold  
+#### <a name="to-configure-the-cursor-threshold-option"></a>Pour configurer l'option cursor threshold  
   
 1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur un serveur et sélectionnez **Propriétés**.  
   
@@ -72,7 +77,7 @@ caps.handback.revision: 28
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour configurer l'option cursor threshold  
+#### <a name="to-configure-the-cursor-threshold-option"></a>Pour configurer l'option cursor threshold  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -96,10 +101,10 @@ GO
   
  Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option Seuil du curseur  
+##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option cursor threshold  
  Le paramètre prend effet immédiatement sans redémarrage du serveur.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [@@CURSOR_ROWS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-rows-transact-sql.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
@@ -107,3 +112,4 @@ GO
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
   
   
+

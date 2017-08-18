@@ -1,37 +1,42 @@
 ---
-title: "Configurer l&#39;option de configuration du serveur Langue par d&#233;faut | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "langue par défaut, option"
+title: "Configurer l’option de configuration de serveur default language | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- default language option
 ms.assetid: c08c26d8-5a62-487e-a4ee-4c529e4f9287
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a37c53330f2f60f73ce9605dd3bcb36bad8aef08
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurer l&#39;option de configuration du serveur Langue par d&#233;faut
+# <a name="configure-the-default-language-server-configuration-option"></a>Configurer l'option de configuration de serveur default language
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Cette rubrique explique comment configurer l'option de configuration de serveur **Langue par défaut** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **Langue par défaut** spécifie la langue par défaut pour toutes les connexions nouvellement créées. Pour définir la langue par défaut, spécifiez la valeur **langid** de la langue souhaitée. La valeur **langid** peut être obtenue en interrogeant la vue de compatibilité **sys.syslanguages** .  
+  Cette rubrique explique comment configurer l'option de configuration de serveur **default language** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **** spécifie la langue par défaut pour toutes les connexions nouvellement créées. Pour définir la langue par défaut, spécifiez la valeur **langid** de la langue souhaitée. La valeur **langid** peut être obtenue en interrogeant la vue de compatibilité **sys.syslanguages** .  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Recommandations](#Recommendations)  
   
      [Sécurité](#Security)  
   
--   **Pour configurer l'option Langue par défaut, utilisez :**  
+-   **Pour configurer l'option default language, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -43,20 +48,20 @@ caps.handback.revision: 27
   
 ###  <a name="Recommendations"></a> Recommandations  
   
--   La langue par défaut pour une session ouverte peut être remplacée en utilisant CREATE LOGIN ou ALTER LOGIN. Elle correspond à celle définie dès l'ouverture de la session, à moins qu’elle ne soit remplacée à chaque session à l’aide des API ODBC (Open Database Connectivity) ou OLE DB. Remarque : Vous ne pouvez définir l’option **Langue par défaut** que sur un identificateur de langue existant dans [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) (0-32). Lorsque vous utilisez des bases de données à relation contenant-contenu, il est possible de définir une langue par défaut pour une base de données à l'aide de CREATE DATABASE ou de ALTER DATABASE, et pour les utilisateurs de bases de données à relation contenant-contenu, à l'aide de CREATE USER ou de ALTER USER. La langue par défaut dans une base de données à relation contenant-contenu peut être définie à l'aide de la valeur **langid** , du nom de la langue, ou d'un alias de langue répertorié dans **sys.syslanguages**.  
+-   La langue par défaut pour une session ouverte peut être remplacée en utilisant CREATE LOGIN ou ALTER LOGIN. Elle correspond à celle définie dès l'ouverture de la session, à moins qu’elle ne soit remplacée à chaque session à l’aide des API ODBC (Open Database Connectivity) ou OLE DB. Remarque : Vous ne pouvez définir l’option **default language** que sur un identificateur de langue existant dans [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) (0-32). Lorsque vous utilisez des bases de données à relation contenant-contenu, il est possible de définir une langue par défaut pour une base de données à l'aide de CREATE DATABASE ou de ALTER DATABASE, et pour les utilisateurs de bases de données à relation contenant-contenu, à l'aide de CREATE USER ou de ALTER USER. La langue par défaut dans une base de données à relation contenant-contenu peut être définie à l'aide de la valeur **langid** , du nom de la langue, ou d'un alias de langue répertorié dans **sys.syslanguages**.  
   
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Les autorisations d’exécution de **sp_configure**, sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres pour modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
+ Les autorisations d’exécution de **sp_configure** , sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour configurer l'option Langue par défaut  
+#### <a name="to-configure-the-default-language-option"></a>Pour configurer l'option default language  
   
 1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur un serveur, puis sélectionnez **Propriétés**.  
   
-2.  Cliquez sur l’onglet **Paramètres généraux**.  
+2.  Cliquez sur l’onglet **Paramètres généraux** .  
   
 3.  Dans la zone **Langue par défaut pour l'utilisateur** , sélectionnez la langue dans laquelle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit afficher les messages système.  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour configurer l'option Langue par défaut  
+#### <a name="to-configure-the-default-language-option"></a>Pour configurer l'option default language  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -83,10 +88,10 @@ GO
   
  Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option Langue par défaut  
+##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option default language  
  Le paramètre prend effet immédiatement sans redémarrage du serveur.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
@@ -98,3 +103,4 @@ GO
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+
