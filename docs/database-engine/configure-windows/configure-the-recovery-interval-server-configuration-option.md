@@ -1,40 +1,45 @@
 ---
-title: "Configurer l&#39;option de configuration du serveur recovery interval | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restauration de l'intervalle de récupération [SQL Server]"
-  - "points de contrôle [SQL Server]"
-  - "intervalle de récupération (option) [SQL Server]"
-  - "recovery interval (option par défaut)"
-  - "temps [SQL Server], intervalle de récupération"
-  - "intervalle de récupération [SQL Server]"
-  - "nombre maximum de minutes par récupération de base de données"
-  - "récupération [SQL Server], intervalle de récupération (option)"
+title: "Configurer l’option de configuration de serveur recovery interval | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring recovery interval [SQL Server]
+- checkpoints [SQL Server]
+- recovery interval option [SQL Server]
+- default recovery interval option
+- time [SQL Server], recovery interval
+- interval for recovery [SQL Server]
+- maximum number of minutes per database recovery
+- recovery [SQL Server], recovery interval option
 ms.assetid: e4734b3b-8fbe-4b65-9c48-91b5a3dd18e1
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9b07822ce0611d8fdd7de6f1dc4fd369d0128717
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurer l&#39;option de configuration du serveur recovery interval
+# <a name="configure-the-recovery-interval-server-configuration-option"></a>Configurer l'option de configuration de serveur recovery interval
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Cette rubrique explique comment configurer l'option de configuration de serveur **intervalle de récupération** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **intervalle de récupération** définit une limite supérieure de durée de récupération pour une base de données. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] utilise la valeur spécifiée pour cette option afin de déterminer approximativement à quelle fréquence les [points de contrôle automatique](../../relational-databases/logs/database-checkpoints-sql-server.md) génèrent des points de contrôle automatique sur une base de données spécifiée.  
+  Cette rubrique explique comment configurer l'option de configuration de serveur **recovery interval** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **recovery interval** définit une limite supérieure de durée de récupération pour une base de données. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] utilise la valeur spécifiée pour cette option afin de déterminer approximativement à quelle fréquence les [points de contrôle automatique](../../relational-databases/logs/database-checkpoints-sql-server.md) génèrent des points de contrôle automatique sur une base de données spécifiée.  
   
- La valeur par défaut pour l'intervalle de récupération est 0, ce qui permet au [!INCLUDE[ssDE](../../includes/ssde-md.md)] de configurer automatiquement l'intervalle de récupération. En général, avec l'intervalle de récupération par défaut, les points de contrôle automatique sont générés environ une fois par minute pour les bases de données actives et la durée de récupération est inférieure à une minute. Des valeurs supérieures indiquent la durée de récupération maximale approximative, en minutes. Par exemple, si vous affectez à l'intervalle de récupération la valeur « 3 », cela indique que la durée de récupération maximale est d'environ trois minutes.  
+ La valeur par défaut pour l'intervalle de récupération est 0, ce qui permet au [!INCLUDE[ssDE](../../includes/ssde-md.md)] de configurer automatiquement l'intervalle de récupération. En général, avec l'intervalle de récupération par défaut, les points de contrôle automatique sont générés environ une fois par minute pour les bases de données actives et la durée de récupération est inférieure à une minute. Des valeurs supérieures indiquent la durée de récupération maximale approximative, en minutes. Par exemple, si vous affectez à l'intervalle de récupération la valeur « 3 », cela indique que la durée de récupération maximale est d'environ trois minutes.  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
@@ -42,13 +47,13 @@ caps.handback.revision: 39
   
      [Sécurité](#Security)  
   
--   **Pour configurer l'option de configuration du serveur d'intervalle de récupération (recovery interval), utilisez :**  
+-   **Pour configurer l'option de configuration de serveur recovery interval, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [Après avoir configuré l'option d'intervalle de récupération](#FollowUp)  
+-   **Suivi :**  [Après avoir configuré l'option recovery interval](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 39
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Les autorisations d’exécution de **sp_configure**, sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
+ Les autorisations d’exécution de **sp_configure** , sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour définir l'intervalle de récupération**  
@@ -76,11 +81,11 @@ caps.handback.revision: 39
   
 2.  Cliquez sur le nœud **Paramètres de base de données** .  
   
-3.  Sous **Récupération**, dans la zone **Intervalle de récupération (minutes)**, tapez ou sélectionnez une valeur de 0 à 32767 pour définir la durée maximale en minutes que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut consacrer à la récupération de chaque base de données, au démarrage. La valeur par défaut est égale à 0, ce qui correspond à une configuration automatique par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour les bases de données actives, cela représente concrètement une durée de récupération inférieure à une minute et un point de contrôle chaque minute environ.  
+3.  Sous **Récupération**, dans la zone **Intervalle de récupération (minutes)** , tapez ou sélectionnez une valeur de 0 à 32767 pour définir la durée maximale en minutes que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut consacrer à la récupération de chaque base de données, au démarrage. La valeur par défaut est égale à 0, ce qui correspond à une configuration automatique par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour les bases de données actives, cela représente concrètement une durée de récupération inférieure à une minute et un point de contrôle chaque minute environ.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour définir l'intervalle de récupération  
+#### <a name="to-set-the-recovery-interval"></a>Pour définir l'intervalle de récupération  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -104,15 +109,16 @@ GO
   
  Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option intervalle de récupération  
+##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option recovery interval  
  Le paramètre prend effet immédiatement sans redémarrage du serveur.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Modifier la durée de récupération cible d’une base de données &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)   
  [Points de contrôle de base de données &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [Afficher les options avancées (option de configuration de serveur)](../../database-engine/configure-windows/show-advanced-options-server-configuration-option.md)   
+ [show advanced options (option de configuration de serveur)](../../database-engine/configure-windows/show-advanced-options-server-configuration-option.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)  
   
   
+

@@ -1,37 +1,42 @@
 ---
-title: "Clustering de basculement et groupes de disponibilit&#233; Always On (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clustering [SQL Server]"
-  - "Groupes de disponibilité [SQL Server], clusters WSFC"
-  - "instances de cluster de basculement [SQL Server], consultez le clustering de basculement [SQL Server]"
-  - "quorum [SQL Server]"
-  - "clustering de basculement [SQL Server], groupes de disponibilité AlwaysOn"
-  - "Groupes de disponibilité [SQL Server], instances de cluster de basculement"
+title: "Clustering de basculement et groupes de disponibilité Always On (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 07/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clustering [SQL Server]
+- Availability Groups [SQL Server], WSFC clusters
+- Failover Cluster Instances [SQL Server], see failover clustering [SQL Server]
+- quorum [SQL Server]
+- failover clustering [SQL Server], AlwaysOn Availability Groups
+- Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 caps.latest.revision: 48
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 47
----
-# Clustering de basculement et groupes de disponibilit&#233; Always On (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c1184d2ea29ccf64159df67950b5b078010e73a7
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
 
-   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], la solution haute disponibilité et de récupération d’urgence introduite dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], requiert le clustering de basculement Windows Server (WSFC). En outre, bien que [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ne dépende pas du Clustering de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vous pouvez utiliser une instance de clustering de basculement pour héberger un réplica de disponibilité pour un groupe de disponibilité. Il est important de connaître le rôle de chaque technologie de clustering, ainsi que les observations nécessaires lorsque vous concevez votre environnement [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+---
+# <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Clustering de basculement et groupes de disponibilité Always On (SQL Server)
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+
+   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], la solution haute disponibilité et de récupération d'urgence introduite dans [!INCLUDE[sssql11](../../../includes/sssql11_md.md)], requiert le Clustering de basculement Windows Server (WSFC). En outre, bien que [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ne dépende pas du Clustering de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vous pouvez utiliser une instance de clustering de basculement pour héberger un réplica de disponibilité pour un groupe de disponibilité. Il est important de connaître le rôle de chaque technologie de clustering, ainsi que les observations nécessaires lorsque vous concevez votre environnement [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
 > [!NOTE]  
->  Pour plus d’informations sur les concepts [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
+>  Pour plus d’informations sur les concepts [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , consultez [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   [Clustering de basculement Windows Server](#WSFC)  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 47
 -   [Restrictions d'utilisation du Gestionnaire du cluster de basculement WSFC avec des groupes de disponibilité](#FCMrestrictions)  
   
 ##  <a name="WSFC"></a> Clustering de basculement de serveur Windows et groupes de disponibilité  
- Le déploiement de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] requiert un cluster WSFC (clustering de basculement Windows Server). Pour que [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] soit activén une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit résider sur un nœud WSFC, et le cluster et le nœud WSFC doivent être en ligne. De plus, chaque réplica de disponibilité d'un groupe de disponibilité donné doit résider sur un nœud différent du même cluster WSFC. La seule exception survient lors de la migration vers un autre cluster WSFC : un groupe de disponibilité peut temporairement chevaucher deux clusters.  
+ Le déploiement de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] requiert un cluster WSFC (clustering de basculement Windows Server). Pour que [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]soit activén une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit résider sur un nœud WSFC, et le cluster et le nœud WSFC doivent être en ligne. De plus, chaque réplica de disponibilité d'un groupe de disponibilité donné doit résider sur un nœud différent du même cluster WSFC. La seule exception survient lors de la migration vers un autre cluster WSFC : un groupe de disponibilité peut temporairement chevaucher deux clusters.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] s’appuie sur le cluster WSFC (clustering de basculement Windows Server) pour surveiller et gérer les rôles actuels des réplicas de disponibilité qui appartiennent à un groupe de disponibilité donné et pour déterminer de quelle manière un événement de basculement affecte les réplicas de disponibilité. Un groupe de ressources WSFC est créé pour chaque groupe de disponibilité que vous créez. Le cluster WSFC surveille ce groupe de ressources pour évaluer l'intégrité du réplica principal.  
   
@@ -53,8 +58,8 @@ caps.handback.revision: 47
   
  Pour plus d’informations sur l’exécution de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur nœuds de clustering de basculement Windows Server (WSFC) et sur le quorum WSFC, consultez [Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
-### Migration entre clusters de groupes de disponibilité Always On pour la mise à niveau du système d’exploitation  
- Depuis [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prend en charge la migration entre clusters de groupes de disponibilité pour les déploiements dans un nouveau cluster de clustering de basculement Windows Server (WSFC). Une migration entre clusters déplace un groupe de disponibilité ou un lot de groupes de disponibilité vers le nouveau cluster WSFC de destination avec un temps mort minimal. Le processus de migration entre clusters permet de conserver les contrats de niveau de service (SLA) lors de la mise à niveau vers un cluster [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]. [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] (ou une version ultérieure) doit être installé et activé pour Always On sur le cluster WSFC de destination. La réussite d'une migration entre clusters dépend de la planification et de la préparation du cluster WSFC de destination.  
+### <a name="cross-cluster-migration-of-always-on-availability-groups-for-os-upgrade"></a>Migration entre clusters de groupes de disponibilité Always On pour la mise à niveau du système d’exploitation  
+ Depuis [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prend en charge la migration entre clusters de groupes de disponibilité pour les déploiements dans un nouveau cluster de clustering de basculement Windows Server (WSFC). Une migration entre clusters déplace un groupe de disponibilité ou un lot de groupes de disponibilité vers le nouveau cluster WSFC de destination avec un temps mort minimal. Le processus de migration entre clusters permet de conserver les contrats de niveau de service (SLA) lors de la mise à niveau vers un cluster [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] . [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] (ou une version ultérieure) doit être installé et activé pour Always On sur le cluster WSFC de destination. La réussite d'une migration entre clusters dépend de la planification et de la préparation du cluster WSFC de destination.  
   
  Pour plus d’informations, consultez [Migration entre clusters de groupes de disponibilité Always On pour la mise à niveau du système d’exploitation](http://msdn.microsoft.com/library/jj873730.aspx).  
   
@@ -63,9 +68,9 @@ caps.handback.revision: 47
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ne dépend d'aucune forme de stockage partagé. Toutefois, si vous utilisez une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour héberger un ou plusieurs réplicas de disponibilité, chacune de ces instances de cluster de basculement requiert un stockage partagé conformément à l'installation standard de l'instance de cluster de basculement SQL Server.  
   
- Pour plus d’informations sur les conditions préalables requises, consultez la section « Conditions préalables requises et restrictions pour l’utilisation d’une instance de cluster de basculement SQL Server afin d’héberger un réplica de disponibilité » de [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+ Pour plus d’informations sur les conditions préalables requises, consultez la section « Conditions préalables requises et restrictions pour l’utilisation d’une instance de cluster de basculement SQL Server afin d’héberger un réplica de disponibilité » de [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-### Comparaison des instances de cluster de basculement et des groupes de disponibilité  
+### <a name="comparison-of-failover-cluster-instances-and-availability-groups"></a>Comparaison des instances de cluster de basculement et des groupes de disponibilité  
  Quel que soit le nombre de nœuds de l'instance de cluster de basculement, celle-ci ne peut héberger qu'un seul réplica dans un groupe de disponibilité. Le tableau suivant décrit les distinctions de concepts entre les nœuds d'une instance de cluster de basculement et les réplicas dans un groupe de disponibilité.  
   
 ||Nœuds dans une instance de cluster de basculement|Réplicas dans un groupe de disponibilité|  
@@ -85,10 +90,10 @@ caps.handback.revision: 47
 > [!NOTE]  
 >  Pour plus d’informations sur le **nombre de nœuds** dans le clustering de basculement et les **groupes de disponibilité Always On** dans les différentes éditions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
-### Considérations relatives à l'hébergement d'un réplica de disponibilité sur une instance de cluster de disponibilité  
+### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>Considérations relatives à l'hébergement d'un réplica de disponibilité sur une instance de cluster de disponibilité  
   
 > [!IMPORTANT]  
->  Si vous envisagez d’héberger un réplica de disponibilité sur une instance de cluster de basculement SQL Server, assurez-vous que les nœuds hôtes Windows Server 2008 respectent les conditions préalables requises et les restrictions Always On applicables aux instances de cluster de basculement. Pour plus d’informations, consultez [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+>  Si vous envisagez d’héberger un réplica de disponibilité sur une instance de cluster de basculement SQL Server, assurez-vous que les nœuds hôtes Windows Server 2008 respectent les conditions préalables requises et les restrictions Always On applicables aux instances de cluster de basculement. Pour plus d’informations, consultez [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Les instances de cluster de basculement ne prennent pas en charge le basculement automatique par les groupes de disponibilité. Par conséquent, tout réplica de disponibilité hébergé par une instance de cluster de basculement ne peut être configuré que pour un basculement manuel.  
   
@@ -96,18 +101,18 @@ caps.handback.revision: 47
   
  Lorsque vous choisissez une instance de cluster de basculement pour l'hébergement d'un réplica de disponibilité pour un groupe de disponibilité donné, vérifiez qu'un basculement de l'instance de cluster de basculement ne peut pas provoquer de tentative d'hébergement, par un seul nœud WSFC, de deux réplicas de disponibilité pour le même groupe de disponibilité.  
   
- L'exemple de scénario suivant montre en quoi cette configuration risque de provoquer des problèmes :  
+ L'exemple de scénario suivant montre en quoi cette configuration risque de provoquer des problèmes :  
   
- Marcel configure un cluster WSFC avec deux nœuds, `NODE01` et `NODE02`. Il installe une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], `fciInstance1`, sur `NODE01` et `NODE02`, où `NODE01` est le propriétaire actuel de `fciInstance1`.  
+ Marcel configure un cluster WSFC avec deux nœuds, `NODE01` et `NODE02`. Il installe une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , `fciInstance1`, sur `NODE01` et `NODE02` , où `NODE01` est le propriétaire actuel de `fciInstance1`.  
  Sur `NODE02`, Marcel installe une autre instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], `Instance3`, qui est une instance autonome.  
  Sur `NODE01`, Marcel active fciInstance1 pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Sur `NODE02`, il active `Instance3` pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Il configure ensuite un groupe de disponibilité pour lequel `fciInstance1` héberge le réplica principal et `Instance3` héberge le réplica secondaire.  
- À un certain stade, `fciInstance1` devient indisponible sur `NODE01`, et le cluster WSFC provoque un basculement de `fciInstance1` vers `NODE02`. Après le basculement, `fciInstance1` est une instance activée pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] qui s'exécute sous le rôle principal sur `NODE02`. Toutefois, `Instance3` réside maintenant sur le même nœud WSFC que `fciInstance1`. Cela viole la contrainte [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+ À un certain stade, `fciInstance1` devient indisponible sur `NODE01`, et le cluster WSFC provoque un basculement de `fciInstance1` vers `NODE02`. Après le basculement, `fciInstance1` est une instance activée pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]qui s'exécute sous le rôle principal sur `NODE02`. Toutefois, `Instance3` réside maintenant sur le même nœud WSFC que `fciInstance1`. Cela viole la contrainte [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
  Pour résoudre le problème présenté par ce scénario, l'instance autonome, `Instance3`, doit résider sur un autre nœud dans le même cluster WSFC que `NODE01` et `NODE02`.  
   
- Pour plus d’informations sur le clustering de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez [Instances de cluster de basculement Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+ Pour plus d’informations sur le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , consultez [Instances de cluster de basculement Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 ##  <a name="FCMrestrictions"></a> Restrictions d'utilisation du Gestionnaire du cluster de basculement WSFC avec des groupes de disponibilité  
- N'utilisez pas le Gestionnaire du cluster de basculement pour manipuler des groupes de disponibilité, par exemple :  
+ N'utilisez pas le Gestionnaire du cluster de basculement pour manipuler des groupes de disponibilité, par exemple :  
   
 -   N'ajoutez pas ou ne supprimez pas de ressources dans le service cluster (groupe de ressources) du groupe de disponibilité.  
   
@@ -117,28 +122,29 @@ caps.handback.revision: 47
   
 ##  <a name="RelatedContent"></a> Contenu connexe  
   
--   **Blogs :**  
+-   **Blogs :**  
   
-     [Configurer le clustering de basculement Windows pour SQL Server (groupe de disponibilité ou instance de cluster de basculement) avec une sécurité limitée](http://blogs.msdn.com/b/sqlAlways%20On/archive/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security.aspx)  
+     [Configurer le clustering de basculement Windows pour SQL Server (groupe de disponibilité ou instance de cluster de basculement) avec une sécurité limitée](https://blogs.msdn.microsoft.com/sqlalwayson/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security/)  
   
-     [Blogs de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](http://blogs.msdn.com/b/sqlAlways%20On/)  
+     [Blogs de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [Blogs des ingénieurs du Service clientèle et du Support technique de SQL Server](http://blogs.msdn.com/b/psssql/)  
   
--   **Livres blancs :**  
+-   **Livres blancs :**  
   
      [Guide de l’architecture Always On : Création d’une solution haute disponibilité et de récupération d’urgence en utilisant des instances de cluster de basculement et des groupes de disponibilité](http://msdn.microsoft.com/library/jj215886.aspx)  
   
      [Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [Livres blancs de Microsoft pour SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Livres blancs de Microsoft pour SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
   
      [Livres blancs de l'équipe de consultants clients de SQL Server](http://sqlcat.com/)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Activer et désactiver les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)   
  [Surveiller des groupes de disponibilité &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Instances de cluster de basculement Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
   
   
+

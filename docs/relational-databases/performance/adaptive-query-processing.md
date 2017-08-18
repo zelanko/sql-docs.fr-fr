@@ -2,7 +2,7 @@
 title: "Traitement de requêtes adaptatif dans les bases de données Microsoft SQL | Microsoft Docs | Microsoft Docs"
 description: "Fonctionnalités de traitement de requêtes adaptatif pour améliorer les performances des requêtes dans SQL Server (2017 et versions ultérieures) et Azure SQL Database."
 ms.custom: 
-ms.date: 07/19/2017
+ms.date: 08/02/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: joesackmsft
 ms.author: josack;monicar
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: cf8509cab2424529ca0ed16c936fa63a139dfca4
-ms.openlocfilehash: eff546e84d3f872406136f68a7fdbbd8147175ca
+ms.sourcegitcommit: d6cf5e76f4edac2aed3842870fdb0362b9661802
+ms.openlocfilehash: b609b1895637dd90cc3fc94422012c5bf4b4bd81
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
@@ -101,10 +101,10 @@ Cette requête retourne 336 lignes.  En activant les statistiques des requêtes
 ![Résultat de la requête : 336 lignes](./media/4_AQPStats336Rows.png)
 
 Dans le plan, nous voyons les éléments suivants :
-- Nous avons une analyse d’index columnstore utilisée pour fournir des lignes pendant la phase de génération de la jointure hachée.
-- Nous avons le nouvel opérateur de jointure adaptative. Cet opérateur définit un seuil qui sert à déterminer le moment où il faut basculer vers un plan de boucles imbriquée.  Dans notre exemple, le seuil est de 78 lignes.  Tout plan avec &gt;= 78 lignes utilise une jointure hachée.  Si le nombre de lignes est inférieur au seuil, une jointure de boucles imbriquées est utilisée.
-- Comme dans notre exemple nous obtenons 336 lignes, nous dépassons le seuil et la deuxième branche représente donc la phase de sondage d’une opération de jointure hachée standard. Notez que les statistiques des requêtes actives affichent les lignes qui sont traitées par les opérateurs – dans notre exemple « 672 sur 672 ».
-- La dernière branche est notre recherche d’index cluster que doit utiliser la jointure de boucles imbriquées, pour laquelle le seuil n’a pas été dépassé. Notez que nous voyons « 0 sur 336 » lignes affichées (la branche n’est pas utilisée).
+1. Nous avons une analyse d’index columnstore utilisée pour fournir des lignes pendant la phase de génération de la jointure hachée.
+1. Nous avons le nouvel opérateur de jointure adaptative. Cet opérateur définit un seuil qui sert à déterminer le moment où il faut basculer vers un plan de boucles imbriquée.  Dans notre exemple, le seuil est de 78 lignes.  Tout plan avec &gt;= 78 lignes utilise une jointure hachée.  Si le nombre de lignes est inférieur au seuil, une jointure de boucles imbriquées est utilisée.
+1. Comme dans notre exemple nous obtenons 336 lignes, nous dépassons le seuil et la deuxième branche représente donc la phase de sondage d’une opération de jointure hachée standard. Notez que les statistiques des requêtes actives affichent les lignes qui sont traitées par les opérateurs – dans notre exemple « 672 sur 672 ».
+1. La dernière branche est notre recherche d’index cluster que doit utiliser la jointure de boucles imbriquées, pour laquelle le seuil n’a pas été dépassé. Notez que nous voyons « 0 sur 336 » lignes affichées (la branche n’est pas utilisée).
  Maintenant nous allons comparer le plan avec la même requête, mais cette fois pour une seule ligne dans la table :
  
 ```sql
@@ -166,7 +166,7 @@ Le graphique suivant montre un exemple d’intersection entre le coût d’une j
 L’exécution entrelacée change la limite unidirectionnelle entre les phases d’exécution et d’optimisation pour l’exécution d’une seule requête, et permet d’adapter les plans selon les estimations de cardinalité révisées. Pendant l’optimisation, si nous rencontrons un candidat pour l’exécution entrelacée, c’est-à-dire des **fonctions table à instructions multiples (MSTVF)**, nous suspendons l’optimisation, exécutons la sous-arborescence applicable, capturons des estimations de cardinalité précises, puis reprenons l’optimisation pour les opérations en aval.
 Les MSTVF ont une estimation de cardinalité fixe égale à 100 dans SQL Server 2014 et SQL Server 2016, et égale à 1 pour les versions antérieures. L’exécution entrelacée entraîne des problèmes de performance des charges de travail qui sont liés à ces estimations de cardinalité fixes associées aux fonctions table à instructions multiples.
 
-L’image suivante illustre une sortie de statistiques de requêtes actives, un sous-ensemble d’un plan d’exécution global qui montre l’impact des estimations de cardinalité fixes des MSTVF. Vous pouvez comparer le flux de lignes réel et les lignes estimées. Il y a trois zones notables dans le plan (le flux va de droite à gauche) :
+L’image suivante illustre une sortie de statistiques de requêtes actives, un sous-ensemble d’un plan d’exécution global qui montre l’impact des estimations de cardinalité fixes des MSTVF. Vous pouvez comparer le flux de lignes réel et les lignes estimées. Il y a trois zones notables dans le plan (le flux va de droite à gauche) :
 1. L’analyse de table MSTVF utilise une estimation fixe de 100 lignes. Dans cet exemple, toutefois, l’analyse de table présente un flux de *527 597* lignes, comme indiqué dans les statistiques des requêtes actives par les chiffres « 527597 sur 100 » (nombre réel sur nombre estimé). L’estimation fixe est donc considérablement biaisée.
 1. Pour l’opération de boucles imbriquées, seules 100 lignes sont supposées être retournées par le côté extérieur de la jointure. Étant donné le nombre élevé de lignes retournées par la MSTVF, vous avez tout intérêt à utiliser un autre algorithme de jointure.
 1. Pour l’opération de correspondance de hachage, notez le petit symbole d’avertissement qui indique dans ce cas un dépassement de capacité sur le disque.

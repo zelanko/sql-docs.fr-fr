@@ -1,36 +1,41 @@
 ---
-title: "Utiliser l&#39;Assistant Ajouter un r&#233;plica Windows Azure (SQL&#160;Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.addreplicawizard.azurereplica.f1"
+title: "Utiliser l’Assistant Ajout d’un réplica Azure (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.addreplicawizard.azurereplica.f1
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 24b3e9ec3cded630a18fef353ccaad3b5a2912b1
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Utiliser l&#39;Assistant Ajouter un r&#233;plica Windows Azure (SQL&#160;Server)
+# <a name="use-the-add-azure-replica-wizard-sql-server"></a>Utiliser l'Assistant Ajout d’un réplica Azure (SQL Server)
   Utilisez l’Assistant Ajouter un réplica Microsoft Azure pour vous aider à créer une machine virtuelle Microsoft Azure dans un environnement informatique hybride et à le configurer comme réplica secondaire pour un groupe de disponibilité Always On nouveau ou existant.  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Conditions préalables](#Prerequisites)  
   
      [Sécurité](#Security)  
   
--   **Pour ajouter un réplica, consultez** [Assistant Ajouter un réplica Microsoft Azure (SQL Server Management Studio)](#SSMSProcedure)  
+-   **Pour ajouter un réplica, consultez**  [Assistant Ajouter un réplica Microsoft Azure (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
- Si vous n’avez jamais ajouté de réplica de disponibilité à un groupe de disponibilité, consultez les sections « Instances de serveur » et « Groupes de disponibilité et réplicas » dans [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+ Si vous n’avez jamais ajouté de réplica de disponibilité à un groupe de disponibilité, consultez les sections « Instances de serveur » et « Groupes de disponibilité et réplicas » dans [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Prerequisites"></a> Conditions préalables  
   
@@ -52,21 +57,21 @@ caps.handback.revision: 12
  Consultez [Security](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md#Security)  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de l'Assistant Ajouter un réplica Windows Azure (SQL Server Management Studio)  
- L'Assistant Ajouter un réplica Windows Azure peut être lancé depuis la page [Spécifier les réplicas](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md). Il existe deux moyens d'atteindre cette page :  
+ L'Assistant Ajouter un réplica Windows Azure peut être lancé depuis la page [Spécifier les réplicas](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md). Il existe deux moyens d'atteindre cette page :  
   
 -   [Utiliser l’Assistant Groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   
 -   [Utiliser l’Assistant Ajouter un réplica au groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
- Une fois que vous avez lancé l'Assistant Ajouter un réplica Windows Azure, suivez les étapes ci-dessous :  
+ Une fois que vous avez lancé l'Assistant Ajouter un réplica Windows Azure, suivez les étapes ci-dessous :  
   
 1.  Commencez par télécharger un certificat de gestion pour votre abonnement Windows Azure. Cliquez sur **Télécharger** pour ouvrir la page de connexion.  
   
-2.  Connectez-vous à Microsoft Azure avec votre compte Microsoft ou votre compte professionnel ou scolaire. Votre compte Microsoft ou compte professionnel ou scolaire se présente sous la forme d’une adresse e-mail, par exemple HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. Pour en savoir plus sur les informations d’identification Azure, consultez les rubriques suivantes : [Microsoft Account for Organizations FAQ (FAQ sur les comptes Microsoft pour les organisations)](http://technet.microsoft.com/jj592903) et [Résolution des problèmes de connexion avec votre compte d’organisation](https://support.microsoft.com/kb/2756852).  
+2.  Connectez-vous à Microsoft Azure avec votre compte Microsoft ou votre compte professionnel ou scolaire. Votre compte Microsoft ou votre compte d’organisation  a le format d’une adresse e-mail, comme HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. Pour en savoir plus sur les informations d’identification Azure, consultez les rubriques suivantes : [Microsoft Account for Organizations FAQ (FAQ sur les comptes Microsoft pour les organisations)](http://technet.microsoft.com/jj592903) et [Résolution des problèmes de connexion avec votre compte d’organisation](https://support.microsoft.com/kb/2756852).  
   
 3.  Connectez-vous ensuite à votre abonnement en cliquant sur **Connexion**. Une fois que vous êtes connecté, les listes déroulantes sont remplies avec vos paramètres Microsoft Azure, tels que **Réseau virtuel** et **Sous-réseau de réseau virtuel**.  
   
-4.  Spécifiez les paramètres de l'ordinateur virtuel Windows Azure qui hébergera le nouveau réplica secondaire :  
+4.  Spécifiez les paramètres de l'ordinateur virtuel Windows Azure qui hébergera le nouveau réplica secondaire :  
   
      Image  
      Nom de l'image SQL Server à utiliser pour l'ordinateur virtuel Windows Azure  
@@ -90,7 +95,7 @@ caps.handback.revision: 12
      Sous-réseau de réseau virtuel dans lequel placer l'ordinateur virtuel Windows Azure  
   
      Domaine  
-     Domaine Active Directory (AD) auquel joindre l'ordinateur virtuel Windows Azure  
+     Domaine Active Directory (AD) auquel joindre l'ordinateur virtuel Windows Azure  
   
      Nom d'utilisateur de domaine  
      Nom d'utilisateur AD utilisé pour joindre l'ordinateur virtuel Windows Azure au domaine  
@@ -108,9 +113,10 @@ caps.handback.revision: 12
   
 -   [Ajouter un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)   
+ [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Ajouter un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
   
+

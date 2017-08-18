@@ -1,44 +1,49 @@
 ---
-title: "Transformer les mots parasites (option de configuration de serveur) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "requêtes de texte intégral [SQL Server], performances"
-  - "transform noise words (option)"
-  - "mots parasites [recherche en texte intégral]"
-  - "recherche en texte intégral [SQL Server], mots vides"
-  - "mots vides [recherche en texte intégral]"
+title: transform noise words (option de configuration de serveur) | Microsoft Docs
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text queries [SQL Server], performance
+- transform noise words option
+- noise words [full-text search]
+- full-text search [SQL Server], stopwords
+- stopwords [full-text search]
 ms.assetid: 69bd388e-a86c-4de4-b5d5-d093424d9c57
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 583251526aa09d10fc0c5ab649aa5b7eebd39005
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Transformer les mots parasites (option de configuration de serveur)
+# <a name="transform-noise-words-server-configuration-option"></a>transform noise words (option de configuration de serveur)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Utilisez l’option de configuration de serveur **Transformer les mots parasites** pour supprimer un message d’erreur si des mots parasites, autrement dit des [mots vides](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md), provoquent le retour de lignes nulles d’une opération booléenne sur une requête de texte intégral. Cette option est utile pour les requêtes de texte intégral qui utilisent le prédicat CONTAINS dans lequel les opérations booléennes ou les opérations de proximité (NEAR) incluent des mots parasites. Les valeurs possibles sont décrites dans le tableau suivant.  
+  Utilisez l’option de configuration de serveur **transform noise words** pour supprimer un message d’erreur si des mots parasites, autrement dit des [mots vides](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md), provoquent le retour de lignes nulles d’une opération booléenne sur une requête de texte intégral. Cette option est utile pour les requêtes de texte intégral qui utilisent le prédicat CONTAINS dans lequel les opérations booléennes ou les opérations de proximité (NEAR) incluent des mots parasites. Les valeurs possibles sont décrites dans le tableau suivant.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|0|Les mots parasites (ou mots vides) ne sont pas transformés. Lorsqu'une requête de texte intégral contient des mots parasites, la requête retourne des lignes nulles, et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un avertissement. Il s'agit du comportement par défaut.<br /><br /> Remarque : l’avertissement a trait à l’exécution. Par conséquent, si la clause de texte intégral dans la requête n'est pas exécutée, l'avertissement n'est pas généré. Pour une requête locale, un seul avertissement est généré, même lorsqu'il y a plusieurs clauses de requêtes de texte intégral. Pour une requête distante, le serveur lié peut ne pas relayer l'erreur ; par conséquent, l'avertissement peut ne pas être généré.|  
-|1|Les mots parasites (ou mots vides) sont transformés. Ils sont ignorés, et le reste de la requête est évalué.<br /><br /> Si des mots parasites sont spécifiés dans un terme de proximité, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les supprime. Par exemple, le mot parasite `is` est supprimé de `CONTAINS(<column_name>, 'NEAR (hello,is,goodbye)')`, en transformant la requête de recherche en `CONTAINS(<column_name>, 'NEAR(hello,goodbye)')`. Notez que `CONTAINS(<column_name>, 'NEAR(hello,is)')` serait transformé en `CONTAINS(<column_name>, hello)`, car il n'existe qu'un seul terme de recherche valide.|  
+|0|Les mots parasites (ou mots vides) ne sont pas transformés. Lorsqu'une requête de texte intégral contient des mots parasites, la requête retourne des lignes nulles, et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un avertissement. Il s'agit du comportement par défaut.<br /><br /> Remarque : l’avertissement a trait à l’exécution. Par conséquent, si la clause de texte intégral dans la requête n'est pas exécutée, l'avertissement n'est pas généré. Pour une requête locale, un seul avertissement est généré, même lorsqu'il y a plusieurs clauses de requêtes de texte intégral. Pour une requête distante, le serveur lié peut ne pas relayer l'erreur ; par conséquent, l'avertissement peut ne pas être généré.|  
+|1|Les mots parasites (ou mots vides) sont transformés. Ils sont ignorés, et le reste de la requête est évalué.<br /><br /> Si des mots parasites sont spécifiés dans un terme de proximité, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les supprime. Par exemple, le mot parasite `is` est supprimé de `CONTAINS(<column_name>, 'NEAR (hello,is,goodbye)')`, en transformant la requête de recherche en `CONTAINS(<column_name>, 'NEAR(hello,goodbye)')`. Notez que `CONTAINS(<column_name>, 'NEAR(hello,is)')` serait transformé en `CONTAINS(<column_name>, hello)` , car il n'existe qu'un seul terme de recherche valide.|  
   
-## Effets du paramètre Transformer les mots parasites  
- Cette section illustre le comportement des requêtes qui contiennent un mot parasite, « `the` », sous les autres paramètres de **Transformer les mots parasites**.  Il est supposé que les chaînes de la requête de texte intégral de l'exemple sont exécutées par rapport à une ligne de table qui contient les données suivantes : `[1, "The black cat"]`.  
+## <a name="effects-of-the-transform-noise-words-setting"></a>Effets du paramètre Transformer les mots parasites  
+ Cette section illustre le comportement des requêtes qui contiennent un mot parasite, «`the`», sous les autres paramètres de ****.  Il est supposé que les chaînes de la requête de texte intégral de l'exemple sont exécutées par rapport à une ligne de table qui contient les données suivantes : `[1, "The black cat"]`.  
   
 > [!NOTE]  
 >  Tous ces scénarios peuvent générer un avertissement de mot parasite.  
   
--   Avec Transformer les mots parasites défini sur 0 :  
+-   Avec transform noise words défini sur 0 :  
   
     |Chaîne de requête|Résultat|  
     |------------------|------------|  
@@ -47,7 +52,7 @@ caps.handback.revision: 43
     |"`the`" AND NOT "`black`"|Aucun résultat|  
     |"`black`" AND NOT "`the`"|Aucun résultat|  
   
--   Avec Transformer les mots parasites défini sur 1 :  
+-   Avec transform noise words défini sur 1 :  
   
     |Chaîne de requête|Résultat|  
     |------------------|------------|  
@@ -56,8 +61,8 @@ caps.handback.revision: 43
     |"`the`" AND NOT "`black`"|Aucun résultat|  
     |"`black`" AND NOT "`the`"|Accès à la ligne portant l'ID 1|  
   
-## Exemple  
- L’exemple suivant définit **Transformer les mots parasites** sur `1`.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant définit **transform noise words** sur `1`.  
   
 ```  
 sp_configure 'show advanced options', 1;  
@@ -68,8 +73,9 @@ RECONFIGURE;
 GO  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)  
   
   
+

@@ -1,27 +1,32 @@
 ---
-title: "Exemple&#160;: configuration de la mise en miroir de bases de donn&#233;es &#224; l&#39;aide de certificats (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mise en miroir de base de données [SQL Server], déploiement"
-  - "certificats [SQL Server], mise en miroir de base de données"
-  - "authentification [SQL Server], mise en miroir de base de données"
-  - "mise en miroir de bases de données (SQL Server), sécurité"
+title: "Exemple : configuration de la mise en miroir de bases de données à l’aide de certificats (Transact-SQL) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- certificates [SQL Server], database mirroring
+- authentication [SQL Server], database mirroring
+- database mirroring [SQL Server], security
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 caps.latest.revision: 50
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d6e25ad5bb119adb048ee80f89b1ff76baefb7bf
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Exemple&#160;: configuration de la mise en miroir de bases de donn&#233;es &#224; l&#39;aide de certificats (Transact-SQL)
+# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Exemple : configuration de la mise en miroir de bases de données à l'aide de certificats (Transact-SQL)
   Cet exemple décrit toutes les étapes de création d'une session de mise en miroir de bases de données à l'aide de l'authentification basée sur les certificats. Les exemples de cette rubrique utilisent [!INCLUDE[tsql](../../includes/tsql-md.md)]. À moins que vous ne puissiez garantir la sécurité de votre réseau, il est recommandé d'utiliser le chiffrement pour les connexions de mise en miroir de bases de données.  
   
  Lors de la copie d'un certificat sur un autre système, utilisez une méthode de copie sécurisée. Veillez particulièrement à sécuriser tous vos certificats.  
@@ -31,27 +36,27 @@ caps.handback.revision: 50
   
  Le rôle principal initial est occupé par HOST_A, et le rôle miroir par HOST_B.  
   
- La configuration de la mise en miroir de bases de données à l'aide de certificats implique quatre étapes générales, dont les première, deuxième et quatrième sont illustrées par cet exemple. Ces étapes sont les suivantes :  
+ La configuration de la mise en miroir de bases de données à l'aide de certificats implique quatre étapes générales, dont les première, deuxième et quatrième sont illustrées par cet exemple. Ces étapes sont les suivantes :  
   
 1.  [Configuration des connexions sortantes](#ConfiguringOutboundConnections)  
   
-     Cet exemple montre les étapes nécessaires à la :  
+     Cet exemple montre les étapes nécessaires à la :  
   
-    1.  configuration d'Host_A pour les connexions sortantes ;  
+    1.  configuration d'Host_A pour les connexions sortantes ;  
   
     2.  configuration d'Host_B pour les connexions sortantes.  
   
-     Pour plus d’informations sur cette étape de la configuration de la mise en miroir de bases de données, consultez [Autoriser un point de terminaison de mise en miroir de bases de données à utiliser des certificats pour les connexions sortantes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md).  
+     Pour plus d’informations sur cette étape de la configuration de la mise en miroir de bases de données, consultez [Autoriser un point de terminaison de mise en miroir de bases de données à utiliser des certificats pour les connexions sortantes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).  
   
 2.  [Configuration des connexions entrantes](#ConfigureInboundConnections)  
   
-     Cet exemple montre les étapes nécessaires à la :  
+     Cet exemple montre les étapes nécessaires à la :  
   
-    1.  configuration d'Host_A pour les connexions entrantes ;  
+    1.  configuration d'Host_A pour les connexions entrantes ;  
   
     2.  configuration d'Host_B pour les connexions entrantes.  
   
-     Pour plus d’informations sur cette étape de la configuration de la mise en miroir de bases de données, consultez [Autoriser un point de terminaison de mise en miroir de bases de données à utiliser des certificats pour les connexions entrantes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md).  
+     Pour plus d’informations sur cette étape de la configuration de la mise en miroir de bases de données, consultez [Autoriser un point de terminaison de mise en miroir de bases de données à utiliser des certificats pour les connexions entrantes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md).  
   
 3.  Création de la base de données miroir  
   
@@ -149,7 +154,7 @@ caps.handback.revision: 50
   
 5.  Au moyen d'une méthode sécurisée de copie quelconque, copiez C:\HOST_B_cert.cer sur HOST_A.  
   
- Pour plus d’informations, consultez [Autoriser un point de terminaison de mise en miroir de bases de données à utiliser des certificats pour les connexions sortantes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md).  
+ Pour plus d’informations, consultez [Autoriser un point de terminaison de mise en miroir de bases de données à utiliser des certificats pour les connexions sortantes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).  
   
  [&#91;Début de l’exemple&#93;](#ExampleH2)  
   
@@ -223,11 +228,11 @@ caps.handback.revision: 50
 > [!IMPORTANT]  
 >  Si vous envisagez d'utiliser le mode haute sécurité avec basculement automatique, vous devez répéter les mêmes étapes pour configurer le témoin pour les connexions sortantes et entrantes. La configuration des connexions entrantes lorsqu'un serveur témoin est impliqué suppose de configurer les connexions et les utilisateurs du serveur témoin sur les deux serveurs partenaires, ainsi que les connexions et les utilisateurs des deux serveurs partenaires sur le serveur témoin.  
   
- Pour plus d’informations, consultez [Autoriser un point de terminaison de mise en miroir de bases de données à utiliser des certificats pour les connexions entrantes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md).  
+ Pour plus d’informations, consultez [Autoriser un point de terminaison de mise en miroir de bases de données à utiliser des certificats pour les connexions entrantes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md).  
   
  [&#91;Début de l’exemple&#93;](#ExampleH2)  
   
-### Création de la base de données miroir  
+### <a name="creating-the-mirror-database"></a>Création de la base de données miroir  
  Pour plus d’informations sur la création d’une base de données miroir, consultez [Préparer une base de données miroir pour la mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 ###  <a name="ConfigureMirroringPartners"></a> Configuration des serveurs partenaires de mise en miroir  
@@ -260,7 +265,7 @@ caps.handback.revision: 50
     ```  
   
     > [!NOTE]  
-    >  Si vous envisagez d’utiliser le mode haute sécurité avec basculement automatique, laissez la sécurité des transactions définie avec la valeur FULL (valeur par défaut) et ajoutez dès que possible le témoin après l’exécution de la deuxième instruction SET PARTNER **’***serveur_partenaire***’**. Notez que le serveur témoin doit d'abord être configuré pour les connexions sortantes et entrantes.  
+    >  Si vous envisagez d’utiliser le mode haute sécurité avec basculement automatique, laissez la sécurité des transactions définie avec la valeur FULL (valeur par défaut) et ajoutez dès que possible le témoin après l’exécution de la deuxième instruction SET PARTNER **’***serveur_partenaire***’** . Notez que le serveur témoin doit d'abord être configuré pour les connexions sortantes et entrantes.  
   
  [&#91;Début de l’exemple&#93;](#ExampleH2)  
   
@@ -268,18 +273,18 @@ caps.handback.revision: 50
   
 -   [Préparer une base de données miroir pour la mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
--   [Autoriser un point de terminaison de mise en miroir de bases de données à utiliser des certificats pour les connexions entrantes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md)  
+-   [Autoriser un point de terminaison de mise en miroir de bases de données à utiliser des certificats pour les connexions entrantes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [Autoriser un point de terminaison de mise en miroir de bases de données à utiliser des certificats pour les connexions sortantes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md)  
+-   [Autoriser un point de terminaison de mise en miroir de bases de données à utiliser des certificats pour les connexions sortantes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
 -   [Gestion des connexions et des travaux après un basculement de rôle &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
--   [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage metadata when making a database available on another server.md) (SQL Server)  
+-   [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md) (SQL Server)  
   
 -   [Résoudre des problèmes de configuration de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
-## Voir aussi  
- [Sécurité du transport de la mise en miroir de bases de données et des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Sécurité du transport de la mise en miroir de bases de données et des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Spécifier une adresse réseau de serveur &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
  [Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Utiliser des certificats pour un point de terminaison de mise en miroir de bases de données &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)   
@@ -287,3 +292,4 @@ caps.handback.revision: 50
  [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
+

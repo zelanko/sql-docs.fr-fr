@@ -1,49 +1,54 @@
 ---
-title: "Configurer l&#39;option de configuration du serveur user connections | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "connexions simultanées [SQL Server]"
-  - "user connections (option) [SQL Server]"
-  - "utilisateurs [SQL Server], connexions simultanées "
-  - "nombre maximum de connexions utilisateur simultanées"
-  - "connexions [SQL Server], simultanées"
+title: "Configurer l’option de configuration de serveur user connections | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- simultaneous connections [SQL Server]
+- user connections option [SQL Server]
+- users [SQL Server], simultaneous connections
+- maximum number of simultaneous user connections
+- connections [SQL Server], simultaneous
 ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 64d4e5e4e8cf6a2c278c9c7dc51443a28eaeedcf
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurer l&#39;option de configuration du serveur user connections
+# <a name="configure-the-user-connections-server-configuration-option"></a>Configurer l'option de configuration de serveur user connections
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Cette rubrique explique comment définir l'option de configuration de serveur **connexions utilisateur** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **connexions utilisateur** spécifie le nombre maximal de connexions utilisateur simultanées autorisées sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le nombre réel de connexions utilisateur autorisées dépend également de la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée, ainsi que des limites de vos applications et de votre matériel. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise un maximum de 32 767 connexions utilisateur. L’option **user connections** est dynamique (auto-configurable). Ainsi, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applique automatiquement le nombre maximal de connexions utilisateur en fonction des besoins, jusqu’à la valeur maximale autorisée. Par exemple, si seuls 10 utilisateurs sont connectés, 10 objets connexion utilisateur sont alloués. Dans la plupart des cas, il est inutile de modifier la valeur de cette option. La valeur par défaut est zéro, ce qui signifie que le nombre maximal (32 767) de connexions utilisateur est autorisé.  
+  Cette rubrique explique comment définir l'option de configuration de serveur **user connections** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **user connections** spécifie le nombre maximal de connexions utilisateur simultanées autorisées sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le nombre réel de connexions utilisateur autorisées dépend également de la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée, ainsi que des limites de vos applications et de votre matériel. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise un maximum de 32 767 connexions utilisateur. L’option **user connections** est dynamique (auto-configurable). Ainsi, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applique automatiquement le nombre maximal de connexions utilisateur en fonction des besoins, jusqu’à la valeur maximale autorisée. Par exemple, si seuls 10 utilisateurs sont connectés, 10 objets connexion utilisateur sont alloués. Dans la plupart des cas, il est inutile de modifier la valeur de cette option. La valeur par défaut est zéro, ce qui signifie que le nombre maximal (32 767) de connexions utilisateur est autorisé.  
   
- Pour déterminer le nombre maximal de connexions utilisateur autorisé par votre système, vous pouvez exécuter [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ou interroger l’affichage catalogue [sys.configuration](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).  
+ Pour déterminer le nombre maximal de connexions utilisateur autorisé par votre système, vous pouvez exécuter [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ou interroger l’affichage catalogue [sys.configuration](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) .  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Recommandations](#Recommendations)  
   
      [Sécurité](#Security)  
   
--   **Pour configurer l'option connexions utilisateur, utilisez :**  
+-   **Pour configurer l'option user connections, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [Après avoir configuré l'option connexions utilisateur](#FollowUp)  
+-   **Suivi :**  [Après avoir configuré l'option user connections](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 29
   
 -   Cette option avancée ne doit être modifiée que par un administrateur de base de données qualifié ou un technicien agréé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   L'option **connexions utilisateur** vous aide à éviter de surcharger le serveur avec de trop nombreuses connexions simultanées. Pour estimer le nombre de connexions à définir, prenez comme base la configuration de votre système et les besoins des utilisateurs. Par exemple, pour un système comptant de nombreux utilisateurs, chaque utilisateur n'a pas obligatoirement besoin d'une connexion unique. Les connexions peuvent être partagées par plusieurs utilisateurs. Les utilisateurs qui exécutent des applications OLE DB ont besoin d’une connexion pour chaque objet de connexion ouvert. Les utilisateurs qui exécutent des applications ODBC (Open Database Connectivity) ont besoin d’une connexion pour chaque descripteur de connexion actif dans l’application. Les utilisateurs qui exécutent des applications de type bibliothèque de base de données (DB-Library) ont besoin d’une connexion pour chaque processus démarré qui appelle la fonction **dbopen** de la bibliothèque de base de données.  
+-   L'option **user connections** vous aide à éviter de surcharger le serveur avec de trop nombreuses connexions simultanées. Pour estimer le nombre de connexions à définir, prenez comme base la configuration de votre système et les besoins des utilisateurs. Par exemple, pour un système comptant de nombreux utilisateurs, chaque utilisateur n'a pas obligatoirement besoin d'une connexion unique. Les connexions peuvent être partagées par plusieurs utilisateurs. Les utilisateurs qui exécutent des applications OLE DB ont besoin d’une connexion pour chaque objet de connexion ouvert. Les utilisateurs qui exécutent des applications ODBC (Open Database Connectivity) ont besoin d’une connexion pour chaque descripteur de connexion actif dans l’application. Les utilisateurs qui exécutent des applications de type bibliothèque de base de données (DB-Library) ont besoin d’une connexion pour chaque processus démarré qui appelle la fonction **dbopen** de la bibliothèque de base de données.  
   
     > [!IMPORTANT]  
     >  Si vous devez utiliser cette option, n'attribuez pas une valeur trop élevée, car chaque connexion possède un espace réservé, qu'elle soit utilisée ou non. Si vous dépassez le nombre maximal de connexions utilisateur, un message d'erreur s'affiche et vous devez attendre qu'une autre connexion soit disponible pour pouvoir vous connecter.  
@@ -59,11 +64,11 @@ caps.handback.revision: 29
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Les autorisations d’exécution de **sp_configure**, sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
+ Les autorisations d’exécution de **sp_configure** , sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour configurer l'option connexions utilisateur  
+#### <a name="to-configure-the-user-connections-option"></a>Pour configurer l'option user connections  
   
 1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur un serveur, puis cliquez sur **Propriétés**.  
   
@@ -75,7 +80,7 @@ caps.handback.revision: 29
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour configurer l'option connexions utilisateur  
+#### <a name="to-configure-the-user-connections-option"></a>Pour configurer l'option user connections  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -99,12 +104,13 @@ GO
   
  Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option connexions utilisateur  
+##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option user connections  
  Le serveur doit être redémarré pour que le paramètre puisse être effet.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

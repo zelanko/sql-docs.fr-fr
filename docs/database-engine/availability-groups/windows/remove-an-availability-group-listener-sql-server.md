@@ -1,29 +1,34 @@
 ---
-title: "Supprimer un &#233;couteur de groupe de disponibilit&#233; (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.removeaglistener.default.f1"
-helpviewer_keywords: 
-  - "Groupes de disponibilité [SQL Server], écouteurs"
+title: "Supprimer un écouteur de groupe de disponibilité (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.removeaglistener.default.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], listeners
 ms.assetid: fd9bba9a-d29f-4c23-8ecd-aaa049ed5f1b
 caps.latest.revision: 14
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 7c1751fec54325b1f882e4a16d17cb1a01c42d42
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Supprimer un &#233;couteur de groupe de disponibilit&#233; (SQL Server)
-  Cette rubrique explique comment supprimer un écouteur de groupe de disponibilité d’un groupe de disponibilité Always On à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+# <a name="remove-an-availability-group-listener-sql-server"></a>Supprimer un écouteur de groupe de disponibilité (SQL Server)
+  Cette rubrique explique comment supprimer un écouteur de groupe de disponibilité d’un groupe de disponibilité Always On à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Conditions préalables](#Prerequisites)  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 14
   
      [Sécurité](#Security)  
   
--   **Pour supprimer un écouteur à l'aide de :**  
+-   **Pour supprimer un écouteur à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 14
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Configuration requise  
+###  <a name="Prerequisites"></a> Conditions préalables  
   
 -   Vous devez être connecté à l'instance de serveur qui héberge le réplica principal.  
   
@@ -53,21 +58,21 @@ caps.handback.revision: 14
 ####  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour supprimer un écouteur de groupe de disponibilité**  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance de serveur qui héberge le réplica principal, cliquez sur le nom du serveur pour développer l'arborescence du serveur.  
   
-2.  Développez le nœud **Haute disponibilité Always On** et le nœud **Groupes de disponibilité**.  
+2.  Développez le nœud **Haute disponibilité Always On** et le nœud **Groupes de disponibilité** .  
   
 3.  Développez le nœud du groupe de disponibilité, puis développez le nœud **Écouteurs de groupe de disponibilité** .  
   
-4.  Cliquez avec le bouton droit sur l’écouteur à supprimer et sélectionnez la commande **Supprimer**.  
+4.  Cliquez avec le bouton droit sur l’écouteur à supprimer et sélectionnez la commande **Supprimer** .  
   
 5.  Cela ouvre la boîte de dialogue **Supprimer l'écouteur du groupe de disponibilité** . Pour plus d'informations, consultez [Supprimer l'écouteur du groupe de disponibilité](#AgListenerPropertiesDialog), plus loin dans cette rubrique.  
   
 ###  <a name="AgListenerPropertiesDialog"></a> Supprimer l'écouteur du groupe de disponibilité (boîte de dialogue)  
- **Nom   **  
+ **Nom**  
  Nom de l'écouteur à supprimer.  
   
  **Résultat**  
@@ -84,7 +89,7 @@ caps.handback.revision: 14
   
      où *nom_groupe* est le nom du groupe de disponibilité et *nom_dns* est le nom DNS de l’écouteur du groupe de disponibilité.  
   
-     L'exemple suivant supprime l'écouteur du groupe de disponibilité `AccountsAG`. Le nom DNS est AccountsAG_Listener.  
+     L'exemple suivant supprime l'écouteur du groupe de disponibilité `AccountsAG` . Le nom DNS est AccountsAG_Listener.  
   
     ```  
     ALTER AVAILABILITY GROUP AccountsAG REMOVE LISTENER ‘AccountsAG_Listener’;  
@@ -103,7 +108,7 @@ caps.handback.revision: 14
     ```  
   
     > [!NOTE]  
-    >  Pour afficher la syntaxe d’une applet de commande, utilisez l’applet de commande **Get-Help** dans l’environnement PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  Pour afficher la syntaxe d’une applet de commande, utilisez l’applet de commande **Get-Help** dans l’environnement PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   
@@ -111,8 +116,9 @@ caps.handback.revision: 14
   
 -   [Afficher les propriétés d’écouteur de groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)  
+ [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   
+

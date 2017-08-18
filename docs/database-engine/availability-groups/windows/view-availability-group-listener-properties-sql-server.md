@@ -1,48 +1,53 @@
 ---
-title: "Afficher les propri&#233;t&#233;s d&#39;&#233;couteur de groupe de disponibilit&#233; (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/11/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygrouplistenerproperties.general.f1"
-helpviewer_keywords: 
-  - "groupes de disponibilité [SQL Server], analyse"
+title: "Afficher les propriétés d’un écouteur de groupe de disponibilité (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 07/11/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygrouplistenerproperties.general.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], monitoring
 ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
 caps.latest.revision: 18
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 412b0c4d11084319487a2c03e5cc7a42dbcbb361
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Afficher les propri&#233;t&#233;s d&#39;&#233;couteur de groupe de disponibilit&#233; (SQL Server)
+# <a name="view-availability-group-listener-properties-sql-server"></a>Afficher les propriétés d’un écouteur de groupe de disponibilité (SQL Server)
   Cette rubrique explique comment afficher les propriétés d’un *écouteur de groupe de disponibilité* Always On à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)] dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
--   **Pour afficher les propriétés d'un écouteur, utilisez :**  
+-   **Pour afficher les propriétés d'un écouteur, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- **Pour afficher les propriétés d'un écouteur, procédez comme suit :**  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+ **Pour afficher les propriétés d'un écouteur, procédez comme suit :**  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à une instance de serveur qui héberge un réplica de disponibilité du groupe de disponibilité dont vous souhaitez afficher l'écouteur. Cliquez sur le nom du serveur pour développer son arborescence.  
   
-2.  Développez le nœud **Haute disponibilité Always On** et le nœud **Groupes de disponibilité**.  
+2.  Développez le nœud **Haute disponibilité Always On** et le nœud **Groupes de disponibilité** .  
   
 3.  Développez le nœud du groupe de disponibilité, puis développez le nœud **Écouteurs de groupe de disponibilité** .  
   
-4.  Cliquez avec le bouton droit sur l’écouteur que vous voulez afficher, puis sélectionnez la commande **Propriétés**.  
+4.  Cliquez avec le bouton droit sur l’écouteur que vous voulez afficher, puis sélectionnez la commande **Propriétés** .  
   
 5.  Cela ouvre la boîte de dialogue **Propriétés de l'écouteur du groupe disponibilité** . Pour plus d’informations, consultez [Propriétés de l’écouteur du groupe disponibilité (boîte de dialogue)](#AgListenerPropertiesDialog), plus loin dans cette rubrique.  
   
-###  <a name="AgListenerPropertiesDialog"></a> Propriétés de l'écouteur du groupe disponibilité (boîte de dialogue)  
+###  <a name="AgListenerPropertiesDialog"></a> Propriétés de l’écouteur du groupe disponibilité (boîte de dialogue)  
  **Nom DNS de l'écouteur**  
  Nom réseau de l'écouteur du groupe de disponibilité.  
   
@@ -53,20 +58,20 @@ caps.handback.revision: 18
 >  Si vous êtes connecté au réplica principal, vous pouvez utiliser ce champ pour modifier le numéro de port de l'écouteur. Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
  **Mode réseau**  
- Indique le protocole TCP utilisé par l'écouteur, à savoir :  
+ Indique le protocole TCP utilisé par l'écouteur, à savoir :  
   
  **DHCP**  
  L'écouteur utilise une adresse IP dynamique affectée par un serveur exécutant le protocole DHCP (Dynamic Host Configuration Protocol).  
   
- **Adresse IP statique**  
- L'écouteur utilise une ou plusieurs adresses IP statiques. Pour accéder aux différents sous-réseaux, un écouteur de groupe de disponibilité doit utiliser des adresses IP statiques.  
+ **Adresse IP statique**  
+ L'écouteur utilise une ou plusieurs adresses IP statiques. Pour accéder aux différents sous-réseaux, un écouteur de groupe de disponibilité doit utiliser des adresses IP statiques.  
   
- La grille affiche chacun des sous-réseaux sur lesquels l'écouteur écoute, ainsi que l'adresse IP associée à chaque sous-réseau.  
+ La grille affiche chacun des sous-réseaux sur lesquels l'écouteur écoute, ainsi que l'adresse IP associée à chaque sous-réseau.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
- **Pour afficher les propriétés d'un écouteur, procédez comme suit :**  
+ **Pour afficher les propriétés d'un écouteur, procédez comme suit :**  
   
- Pour surveiller les écouteurs de groupe de disponibilité, utilisez les vues suivantes :  
+ Pour surveiller les écouteurs de groupe de disponibilité, utilisez les vues suivantes :  
   
  [sys.availability_group_listener_ip_addresses](../../../relational-databases/system-catalog-views/sys-availability-group-listener-ip-addresses-transact-sql.md)  
  Retourne une ligne pour chaque adresse IP virtuelle conforme actuellement en ligne pour un écouteur de groupe de disponibilité.  
@@ -84,7 +89,7 @@ caps.handback.revision: 18
  **Noms de colonne** : listener_id, ip_address, is_ipv4, port, type, type_desc, state, state_desc, start_time  
   
 > [!NOTE]  
->  Pour plus d’informations sur l’utilisation de [!INCLUDE[tsql](../../../includes/tsql-md.md)] pour surveiller votre environnement [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [Surveiller des groupes de disponibilité &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md).  
+>  Pour plus d’informations sur l’utilisation de [!INCLUDE[tsql](../../../includes/tsql-md.md)] pour surveiller votre environnement [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , consultez [Surveiller des groupes de disponibilité &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md).  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   
@@ -92,9 +97,10 @@ caps.handback.revision: 18
   
 -   [Supprimer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)   
+ [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Surveiller des groupes de disponibilité &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   
+

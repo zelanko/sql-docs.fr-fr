@@ -1,46 +1,51 @@
 ---
-title: "Configurer l&#39;option de configuration du serveur locks | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "locks (option) [SQL Server]"
+title: "Configurer l’option de configuration de serveur locks | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- locks option [SQL Server]
 ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1e604d8fdd52824c11657b52b2baa3a7b528370d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurer l&#39;option de configuration du serveur locks
+# <a name="configure-the-locks-server-configuration-option"></a>Configurer l'option de configuration de serveur locks
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Cette rubrique explique comment configurer l'option de configuration de serveur **Verrous** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **Verrous** définit le nombre maximum de verrous disponibles, limitant ainsi la quantité de mémoire utilisée pour eux par le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . La valeur par défaut est 0 ; elle permet au [!INCLUDE[ssDE](../../includes/ssde-md.md)] d'allouer et de libérer des structures de verrous de manière dynamique en fonction des modifications de la configuration requise.  
+  Cette rubrique explique comment configurer l'option de configuration de serveur **locks** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **locks** définit le nombre maximum de verrous disponibles, limitant ainsi la quantité de mémoire utilisée pour eux par le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . La valeur par défaut est 0 ; elle permet au [!INCLUDE[ssDE](../../includes/ssde-md.md)] d'allouer et de libérer des structures de verrous de manière dynamique en fonction des modifications de la configuration requise.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Recommandations](#Recommendations)  
   
      [Sécurité](#Security)  
   
--   **Pour définir l'option Verrous, utilisez :**  
+-   **Pour définir l'option locks, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [Après avoir configuré l'option Verrous](#FollowUp)  
+-   **Suivi :**  [Après avoir configuré l'option locks](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -54,16 +59,16 @@ caps.handback.revision: 28
   
      La configuration recommandée est l'autorisation de l'utilisation dynamique des verrous par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cependant, vous pouvez définir l'option **locks** et empêcher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'allouer des ressources de verrous de façon dynamique. Quand l’option **locks** a une valeur différente de 0, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne peut pas allouer plus de verrous que ce **nombre**. Augmentez cette valeur si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche un message vous informant que vous avez dépassé le nombre de verrous disponibles. Puisque chaque verrou consomme de la mémoire (96 octets par verrou), il est possible que l’augmentation de cette valeur vous oblige à augmenter la mémoire destinée au serveur.  
   
--   L'option **locks** influence également le moment où a lieu l'escalade de verrous. Quand l’option **locks** a la valeur 0, l’escalade de verrous se produit quand la mémoire utilisée par les structures de verrous actuelles atteint 40 pour cent du pool de mémoire du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Lorsque l'option **Verrous** a une valeur différente de 0, l'escalade de verrous intervient quand le nombre de verrous atteint 40 pour cent de la valeur spécifiée pour **Verrous**.  
+-   L'option **locks** influence également le moment où a lieu l'escalade de verrous. Quand l’option **locks** a la valeur 0, l’escalade de verrous se produit quand la mémoire utilisée par les structures de verrous actuelles atteint 40 pour cent du pool de mémoire du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Lorsque l'option **locks** a une valeur différente de 0, l'escalade de verrous intervient quand le nombre de verrous atteint 40 pour cent de la valeur spécifiée pour **Verrous**.  
   
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Les autorisations d’exécution de **sp_configure**, sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
+ Les autorisations d’exécution de **sp_configure** , sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour définir l'option locks  
+#### <a name="to-configure-the-locks-option"></a>Pour définir l'option locks  
   
 1.  Dans l’Explorateur d'objets, cliquez avec le bouton droit sur un serveur et sélectionnez **Propriétés**.  
   
@@ -75,7 +80,7 @@ caps.handback.revision: 28
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour définir l'option locks  
+#### <a name="to-configure-the-locks-option"></a>Pour définir l'option locks  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -98,12 +103,13 @@ GO
   
  Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option Verrous  
+##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option locks  
  Le serveur doit être redémarré pour que le paramètre puisse être effet.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

@@ -1,61 +1,66 @@
 ---
-title: "Configurer l&#39;option de configuration du serveur remote login timeout | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "remote login timeout, option"
+title: "Configurer l’option de configuration de serveur remote login timeout | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- remote login timeout option
 ms.assetid: 077adebe-0e3f-42a5-a75e-5e6d04847e2b
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9581ea300b05cd811cfddd73d04e24e9cac65bf4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurer l&#39;option de configuration du serveur remote login timeout
+# <a name="configure-the-remote-login-timeout-server-configuration-option"></a>Configurer l'option de configuration de serveur remote login timeout
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Cette rubrique explique comment configurer l'option de configuration de serveur **Délai d'attente de la connexion distante** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **Délai d'attente de la connexion distante** spécifie le nombre de secondes d'attente avant le renvoi d'une tentative de connexion à un serveur distant qui a échoué. Par exemple, si vous tentez de vous connecter à un serveur distant et que ce serveur est arrêté, l'option **remote login timeout** vous assure de ne pas attendre indéfiniment que votre ordinateur cesse ses tentatives de connexion. La valeur par défaut de cette option est de 10 secondes. Une valeur égale à 0 entraîne une attente infinie.  
+  Cette rubrique explique comment configurer l'option de configuration de serveur **remote login timeout** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **Délai d'attente de la connexion distante** spécifie le nombre de secondes d'attente avant le renvoi d'une tentative de connexion à un serveur distant qui a échoué. Par exemple, si vous tentez de vous connecter à un serveur distant et que ce serveur est arrêté, l'option **remote login timeout** vous assure de ne pas attendre indéfiniment que votre ordinateur cesse ses tentatives de connexion. La valeur par défaut de cette option est de 10 secondes. Une valeur égale à 0 entraîne une attente infinie.  
   
 > [!NOTE]  
->  La valeur par défaut de cette option est de 20 secondes dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+>  La valeur par défaut de cette option est de 20 secondes dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour configurer l'option Délai d'attente de la connexion distante, utilisez :**  
+-   **Pour configurer l'option remote login timeout, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [Après avoir configuré l'option Délai d'attente de la connexion distante](#FollowUp)  
+-   **Suivi :**  [Après avoir configuré l'option remote login timeout](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
   
--   L'option **Délai d'attente de la connexion distante** concerne les connexions à des fournisseurs OLE DB établies pour des requêtes hétérogènes.  
+-   L'option **remote login timeout** concerne les connexions à des fournisseurs OLE DB établies pour des requêtes hétérogènes.  
   
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Les autorisations d’exécution de **sp_configure**, sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
+ Les autorisations d’exécution de **sp_configure** , sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour configurer l'option Délai d'attente de la connexion distante  
+#### <a name="to-configure-the-remote-login-timeout-option"></a>Pour configurer l'option remote login timeout  
   
 1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur un serveur et sélectionnez **Propriétés**.  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour configurer l'option Délai d'attente de la connexion distante  
+#### <a name="to-configure-the-remote-login-timeout-option"></a>Pour configurer l'option remote login timeout  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -87,12 +92,13 @@ GO
   
  Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option Délai d'attente de la connexion distante  
+##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option remote login timeout  
  Le paramètre prend effet immédiatement sans redémarrage du serveur.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

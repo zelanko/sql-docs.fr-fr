@@ -1,39 +1,44 @@
 ---
-title: "Configurer la copie des journaux de transaction (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "copie des journaux de transaction [SQL Server], activation"
-  - "copie des journaux de transaction [SQL Server], configuration"
+title: Configurer la copie des journaux de transaction (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], enabling
+- log shipping [SQL Server], configuring
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 caps.latest.revision: 42
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: a1703b56628ba9c509f66cb3d722e6636bd29486
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurer la copie des journaux de transaction (SQL Server)
+# <a name="configure-log-shipping-sql-server"></a>Configurer la copie des journaux de transaction (SQL Server)
   Cette rubrique explique comment configurer une copie des journaux de transaction dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
->  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] et versions ultérieures prennent en charge la compression de la sauvegarde. Lorsque vous créez une configuration de copie des journaux de transaction, vous pouvez contrôler le comportement de compression des sauvegardes de fichiers journaux. Pour plus d’informations, consultez [Compression de sauvegardes &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
+>  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] et ses versions ultérieures prennent en charge la compression de la sauvegarde. Lorsque vous créez une configuration de copie des journaux de transaction, vous pouvez contrôler le comportement de compression des sauvegardes de fichiers journaux. Pour plus d’informations, consultez [Compression de sauvegardes &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Conditions préalables](#Prerequisites)  
   
      [Sécurité](#Security)  
   
--   **Pour configurer la copie des journaux de transaction, utilisez :**  
+-   **Pour configurer la copie des journaux de transaction, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -45,18 +50,18 @@ caps.handback.revision: 42
   
 ###  <a name="Prerequisites"></a> Conditions préalables  
   
--   La base de données primaire doit utiliser le mode de récupération complète ou de récupération utilisant les journaux de transactions ; le basculement de la base de données vers une récupération simple empêcherait toute copie des journaux de transaction.  
+-   La base de données primaire doit utiliser le mode de récupération complète ou de récupération utilisant les journaux de transactions ; le basculement de la base de données vers une récupération simple empêcherait toute copie des journaux de transaction.  
   
 -   Avant de configurer la copie des journaux de transaction, vous devez créer un partage afin de rendre les sauvegardes de journaux de transactions disponibles pour le serveur secondaire. Il s'agit d'un partage du répertoire vers lequel les sauvegardes des journaux de transactions seront générées. Par exemple, si vous sauvegardez vos journaux de transactions dans le répertoire c:\data\tlogs\\, vous pouvez créer le partage \\\\*primaryserver*\tlogs de ce répertoire.  
   
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Les procédures stockées de copie des journaux de transaction nécessitent l’appartenance au rôle serveur fixe **sysadmin**.  
+ Les procédures stockées de copie des journaux de transaction nécessitent l’appartenance au rôle serveur fixe **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour configurer la copie des journaux de transaction  
+#### <a name="to-configure-log-shipping"></a>Pour configurer la copie des journaux de transaction  
   
 1.  Cliquez avec le bouton droit sur la base de données que vous voulez utiliser en tant que base de données primaire dans une configuration de copie des journaux de transaction, puis cliquez sur **Propriétés**.  
   
@@ -125,7 +130,7 @@ caps.handback.revision: 42
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour configurer la copie des journaux de transaction  
+#### <a name="to-configure-log-shipping"></a>Pour configurer la copie des journaux de transaction  
   
 1.  Initialisez la base de données secondaire en restaurant une sauvegarde complète de la base de données primaire sur le serveur secondaire.  
   
@@ -145,7 +150,7 @@ caps.handback.revision: 42
   
 9. Sur le serveur principal, exécutez [sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md) pour ajouter les informations requises sur la nouvelle base de données secondaire au serveur principal.  
   
-10. Sur le serveur secondaire, activez les travaux de copie et de restauration. Pour plus d’informations, consultez [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
+10. Sur le serveur secondaire, activez les travaux de copie et de restauration. Pour plus d’informations, consultez [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd).  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   
@@ -163,8 +168,8 @@ caps.handback.revision: 42
   
 -   [Basculer vers une base de données secondaire de copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## Voir aussi  
- [À propos de la copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>Voir aussi  
+ [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Tables et procédures stockées liées à la copie des journaux de transaction](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   
   

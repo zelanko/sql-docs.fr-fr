@@ -1,28 +1,33 @@
 ---
-title: "Supprimer un groupe de disponibilit&#233; (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.deleteag.f1"
-helpviewer_keywords: 
-  - "Groupes de disponibilité [SQL Server], suppression"
-  - "groupes de disponibilité [SQL Server], abandon"
+title: "Supprimer un groupe de disponibilité (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.deleteag.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], removing
+- Availability Groups [SQL Server], dropping
 ms.assetid: 4b7f7f62-43a3-49db-a72e-22d4d7c2ddbb
 caps.latest.revision: 48
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 393f088ea977236aa7feba6107828eb64e646b64
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Supprimer un groupe de disponibilit&#233; (SQL Server)
-  Cette rubrique explique comment supprimer un groupe de disponibilité Always On à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Si une instance de serveur qui héberge l'un des réplicas de disponibilité est hors connexion lorsque vous supprimez un groupe de disponibilité, une fois de nouveau en ligne, l'instance de serveur supprimera le réplica de disponibilité local. La suppression d'un groupe de disponibilité supprime tout écouteur du groupe de disponibilité associé.  
+# <a name="remove-an-availability-group-sql-server"></a>Supprimer un groupe de disponibilité (SQL Server)
+  Cette rubrique explique comment supprimer un groupe de disponibilité Always On à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Si une instance de serveur qui héberge l'un des réplicas de disponibilité est hors connexion lorsque vous supprimez un groupe de disponibilité, une fois de nouveau en ligne, l'instance de serveur supprimera le réplica de disponibilité local. La suppression d'un groupe de disponibilité supprime tout écouteur du groupe de disponibilité associé.  
   
  Notez qu'en cas de besoin, vous pouvez supprimer un groupe de disponibilité de tout nœud de clustering de basculement Windows Server (WSFC) qui possède les informations d'identification de sécurité correctes pour le groupe de disponibilité. Cela vous permet de supprimer un groupe de disponibilité lorsqu'il ne reste aucun de ses réplicas de disponibilité.  
   
@@ -62,20 +67,20 @@ caps.handback.revision: 48
 ####  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER. Pour supprimer un groupe de disponibilité qui n'est pas hébergé par l'instance de serveur local, vous avez besoin de l'autorisation CONTROL SERVER ou CONTROL sur ce groupe de disponibilité.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour supprimer un groupe de disponibilité**  
   
 1.  Dans l’Explorateur d’objets, connectez-vous à l’instance de serveur qui héberge le réplica principal, si possible, ou connectez-vous à une autre instance de serveur qui est activée pour les groupes de disponibilité Always On sur un nœud WSFC comportant les informations d’identification de sécurité appropriées pour le groupe de disponibilité. Développez l'arborescence du serveur.  
   
-2.  Développez le nœud **Haute disponibilité Always On** et le nœud **Groupes de disponibilité**.  
+2.  Développez le nœud **Haute disponibilité Always On** et le nœud **Groupes de disponibilité** .  
   
-3.  Cette étape varie selon que vous souhaitez supprimer plusieurs groupes de disponibilité ou un seul, comme suit :  
+3.  Cette étape varie selon que vous souhaitez supprimer plusieurs groupes de disponibilité ou un seul, comme suit :  
   
-    -   Pour supprimer plusieurs groupes de disponibilité (dont les réplicas principaux figurent sur l’instance de serveur connectée), utilisez le volet **Détails de l’Explorateur d’objets** pour afficher et sélectionner tous les groupes de disponibilité à supprimer. Pour plus d’informations, consultez [Utiliser les détails de l’Explorateur d’objets pour surveiller les groupes de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use object explorer details to monitor availability groups.md).  
+    -   Pour supprimer plusieurs groupes de disponibilité (dont les réplicas principaux figurent sur l’instance de serveur connectée), utilisez le volet **Détails de l’Explorateur d’objets** pour afficher et sélectionner tous les groupes de disponibilité à supprimer. Pour plus d’informations, consultez [Utiliser les détails de l’Explorateur d’objets pour surveiller les groupes de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md).  
   
     -   Pour supprimer un seul groupe de disponibilité, sélectionnez-le dans le volet **Explorateur d'objets** ou le volet **Détails de l'Explorateur d'objets** .  
   
-4.  Cliquez avec le bouton droit sur le ou les groupes de disponibilité sélectionnés, puis sélectionnez la commande **Supprimer**.  
+4.  Cliquez avec le bouton droit sur le ou les groupes de disponibilité sélectionnés, puis sélectionnez la commande **Supprimer** .  
   
 5.  Dans la boîte de dialogue **Supprimer le groupe de disponibilité** , pour supprimer tous les groupes de disponibilité répertoriés, cliquez sur **OK**. Si vous ne souhaitez pas supprimer tous les groupes de disponibilité répertoriés, cliquez sur **Annuler**.  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 48
   
      où *nom_groupe* est le nom du groupe de disponibilité à supprimer.  
   
-     L'exemple suivant supprime le groupe de disponibilité `MyAG`.  
+     L'exemple suivant supprime le groupe de disponibilité `MyAG` .  
   
     ```  
     DROP AVAILABILITY GROUP MyAG;  
@@ -103,7 +108,7 @@ caps.handback.revision: 48
   
 1.  Remplacez le répertoire (**cd**) par l’instance de serveur qui héberge le réplica principal, si possible, ou connectez-vous à une autre instance de serveur qui est activée pour les groupes de disponibilité Always On sur un nœud WSFC comportant les informations d’identification de sécurité appropriées pour le groupe de disponibilité.  
   
-2.  Utilisez l’applet de commande **Remove-SqlAvailabilityGroup**.  
+2.  Utilisez l’applet de commande **Remove-SqlAvailabilityGroup** .  
   
      Par exemple, la commande suivante supprime le groupe de disponibilité nommé `MyAg`. Cette commande peut être exécutée sur n'importe quelle instance de serveur qui héberge un réplica de disponibilité pour le groupe de disponibilité.  
   
@@ -113,18 +118,19 @@ caps.handback.revision: 48
     ```  
   
     > [!NOTE]  
-    >  Pour afficher la syntaxe d’une applet de commande, utilisez l’applet de commande **Get-Help** dans l’environnement PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  Pour afficher la syntaxe d’une applet de commande, utilisez l’applet de commande **Get-Help** dans l’environnement PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
--   [fournisseur PowerShell SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [fournisseur PowerShell SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ##  <a name="RelatedContent"></a> Contenu connexe  
   
--   [Fonctionnement : comportements de DROP AVAILABILITY GROUP](http://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (blog des ingénieurs du Service clientèle et du Support technique de SQL Server)  
+-   [Fonctionnement : comportements de DROP AVAILABILITY GROUP](http://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (blog des ingénieurs du Service clientèle et du Support technique de SQL Server)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Création et configuration des groupes de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   
   
+

@@ -1,32 +1,37 @@
 ---
-title: "Configurer l&#39;option de configuration du serveur max worker threads | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "threads de travail [SQL Server]"
-  - "max worker threads (option)"
+title: "Configurer l’option de configuration de serveur max worker threads | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- worker threads [SQL Server]
+- max worker threads option
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0fb31141506ab6391c25afde71e1433935e32718
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurer l&#39;option de configuration du serveur max worker threads
+# <a name="configure-the-max-worker-threads-server-configuration-option"></a>Configurer l'option de configuration de serveur max worker threads
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Cette rubrique explique comment configurer l'option de configuration de serveur **Nombre maximum de threads de travail** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **Nombre maximum de threads de travail** configure le nombre de threads de travail disponibles pour les processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise les services de thread natifs des systèmes d'exploitation pour qu'un ou plusieurs threads prennent en charge chaque réseau que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge simultanément, qu'un autre thread prenne en charge les points de contrôle de base de données et qu'un pool de threads gère tous les utilisateurs. La valeur par défaut de **Nombre maximum de threads de travail** est 0. Cela permet à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de configurer automatiquement le nombre de threads de travail au démarrage. Ce paramètre par défaut convient à la plupart des systèmes. Cependant, selon votre configuration système, l'attribution d'une valeur spécifique à l'option **Nombre maximum de threads de travail** permet parfois d'accroître les performances.  
+  Cette rubrique explique comment configurer l'option de configuration de serveur **max worker threads** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **max worker threads** configure le nombre de threads de travail disponibles pour les processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise les services de thread natifs des systèmes d'exploitation pour qu'un ou plusieurs threads prennent en charge chaque réseau que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge simultanément, qu'un autre thread prenne en charge les points de contrôle de base de données et qu'un pool de threads gère tous les utilisateurs. La valeur par défaut de **Nombre maximum de threads de travail** est 0. Cela permet à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de configurer automatiquement le nombre de threads de travail au démarrage. Ce paramètre par défaut convient à la plupart des systèmes. Cependant, selon votre configuration système, l'attribution d'une valeur spécifique à l'option **Nombre maximum de threads de travail** permet parfois d'accroître les performances.  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
@@ -34,13 +39,13 @@ caps.handback.revision: 36
   
      [Sécurité](#Security)  
   
--   **Pour configurer l'option Nombre maximum de threads de travail, utilisez :**  
+-   **Pour configurer l'option max worker threads, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [Après avoir configuré l'option Nombre maximum de threads de travail](#FollowUp)  
+-   **Suivi :**  [Après avoir configuré l'option max worker threads](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -56,18 +61,18 @@ caps.handback.revision: 36
   
 -   Le tableau ci-dessous montre le nombre maximal de threads de travail automatiquement configuré pour différentes combinaisons d'UC et de versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-    |Nombre d'unités centrales|ordinateur 32 bits|Ordinateur 64 bits|  
+    |Nombre d'unités centrales|ordinateur 32 bits|Ordinateur 64 bits|  
     |--------------------|----------------------|----------------------|  
-    |\<= 4 processeurs|256|512|  
-    |8 processeurs|288|576|  
-    |16 processeurs|352|704|  
-    |32 processeurs|480|960|  
-    |64 processeurs|736|1472|  
-    |128 processeurs|4224|4480|  
-    |256 processeurs|8320|8576|  
+    |\<= 4 processeurs|256|512|  
+    |8 processeurs|288|576|  
+    |16 processeurs|352|704|  
+    |32 processeurs|480|960|  
+    |64 processeurs|736|1472|  
+    |128 processeurs|4224|4480|  
+    |256 processeurs|8320|8576|  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut plus être installé sur un système d’exploitation 32 bits. Les valeurs d’ordinateur 32 bits sont répertoriées pour aider les clients exécutant [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions antérieures.   Nous vous recommandons d'utiliser 1 024 comme nombre maximal de threads de travail pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécutée sur un ordinateur 32 bits.  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut plus être installé sur un système d’exploitation 32 bits. Les valeurs d’ordinateur 32 bits sont répertoriées pour aider les clients exécutant [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions antérieures.   Nous vous recommandons d'utiliser 1 024 comme nombre maximal de threads de travail pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécutée sur un ordinateur 32 bits.  
   
     > [!NOTE]  
     >  Pour obtenir des recommandations concernant l’utilisation de plus de 64 unités centrales, consultez [Recommandations pour l’exécution de SQL Server sur des ordinateurs comportant plus de 64 unités centrales](http://technet.microsoft.com/library/ee210547\(SQL.105\).aspx).  
@@ -104,11 +109,11 @@ WHERE s.is_user_process = 0;
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Les autorisations d’exécution de **sp_configure**, sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres pour modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
+ Les autorisations d’exécution de **sp_configure** , sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour configurer l'option Nombre maximum de threads de travail  
+#### <a name="to-configure-the-max-worker-threads-option"></a>Pour configurer l'option max worker threads  
   
 1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur un serveur, puis sélectionnez **Propriétés**.  
   
@@ -120,7 +125,7 @@ WHERE s.is_user_process = 0;
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour configurer l'option Nombre maximum de threads de travail  
+#### <a name="to-configure-the-max-worker-threads-option"></a>Pour configurer l'option max worker threads  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -144,13 +149,14 @@ GO
   
  Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option Nombre maximum de threads de travail  
- La modification prendra effet immédiatement, sans nécessiter le redémarrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option max worker threads  
+ La modification prendra effet immédiatement, sans nécessiter le redémarrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Connexion de diagnostic pour les administrateurs de base de données](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)  
   
   
+

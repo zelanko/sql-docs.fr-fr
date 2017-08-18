@@ -1,30 +1,35 @@
 ---
-title: "R&#233;sultat de l’&#233;valuation de strat&#233;gie (Always On) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "swb.agdashboard.policyeval.f1"
-  - "sql13.swb.agdashboard.policyeval.f1"
+title: "Résultat de l’évaluation de stratégie (Always On) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- swb.agdashboard.policyeval.f1
+- sql13.swb.agdashboard.policyeval.f1
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 caps.latest.revision: 9
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 99e4bfcb27e83991ca69b775f6db846eaec5d585
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# R&#233;sultat de l’&#233;valuation de strat&#233;gie (Always On)
+# <a name="policy-evaluation-result-always-on"></a>Résultat de l’évaluation de stratégie (Always On)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Utilisez la page **Résultat de l’évaluation de stratégie** du tableau de bord Always On pour visualiser tous les problèmes de stratégie actuels.  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   [Options de la boîte de dialogue](#Options)  
   
@@ -32,12 +37,12 @@ caps.handback.revision: 9
   
 ##  <a name="Options"></a> Options de la boîte de dialogue  
  **Problème détecté**  
- Affiche une ligne pour chaque problème détecté. L'icône associée à un problème fournit un indicateur visuel pour indiquer la gravité du problème, comme suit :  
+ Affiche une ligne pour chaque problème détecté. L'icône associée à un problème fournit un indicateur visuel pour indiquer la gravité du problème, comme suit :  
   
 |Icône|Severity|  
 |----------|--------------|  
-|![Icône d'interface utilisateur : error](../../../database-engine/availability-groups/windows/media/repl-icon-error.png "Icône d'interface utilisateur : error")|Critique|  
-|![Icône d'interface utilisateur : warning](../../../database-engine/availability-groups/windows/media/repl-icon-warn.png "Icône d'interface utilisateur : warning")|Avertissement|  
+|![Icône d’interface utilisateur : erreur](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Icône d’interface utilisateur : erreur")|Critique|  
+|![Icône d’interface utilisateur : avertissement](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|Avertissement|  
   
  **Description**  
  Cette grille affiche une brève description du problème sélectionné.  
@@ -51,8 +56,9 @@ caps.handback.revision: 9
   
 -   [Utiliser les stratégies Always On pour afficher l’intégrité d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Stratégies Always On pour les problèmes opérationnels avec des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)  
+ [Stratégies Always On pour les problèmes opérationnels avec des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)  
   
   
+

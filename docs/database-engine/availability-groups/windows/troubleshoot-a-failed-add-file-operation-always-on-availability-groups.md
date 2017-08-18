@@ -1,25 +1,30 @@
 ---
-title: "R&#233;soudre une op&#233;ration d’ajout de fichier ayant &#233;chou&#233; (groupes de disponibilit&#233; Always On) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "bases de données secondaires [SQL Server], groupes de disponibilité"
-  - "Groupes de disponibilité [SQL Server], résolution des problèmes"
+title: "Résoudre une opération d’ajout de fichier ayant échoué (Groupes de disponibilité AlwaysOn) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- secondary databases [SQL Server], Availability Groups
+- Availability Groups [SQL Server], troubleshooting
 ms.assetid: 31ceaebf-864b-4dd0-9112-0d047b0316ad
 caps.latest.revision: 11
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: e859a6d1353a86c58ceed0e0ec10f72135baebfc
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# R&#233;soudre une op&#233;ration d’ajout de fichier ayant &#233;chou&#233; (groupes de disponibilit&#233; Always On)
+# <a name="troubleshoot-a-failed-add-file-operation-always-on-availability-groups"></a>Résoudre une opération d’ajout de fichier ayant échoué (groupes de disponibilité Always On)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Pour certains déploiements de groupes de disponibilité Always On, les chemins des fichiers varient entre le système qui héberge le réplica principal et les systèmes qui hébergent un réplica secondaire. Si le chemin d'accès aux fichiers d'une opération d'ajout de fichier n'existe pas sur le réplica secondaire, l'opération d'ajout de fichier réussit sur la base de données principale. Cependant, l'opération d'ajout e fichier entraîne l'interruption de la base de données secondaire. Par voie de conséquence, le réplica secondaire passe à l'état NOT SYNCHRONIZING.  
@@ -27,8 +32,8 @@ caps.handback.revision: 11
 > [!NOTE]  
 >  Nous recommandons, si possible, que le chemin d'accès au fichier (y compris la lettre de lecteur) d'une base de données secondaire donnée soit identique au chemin d'accès de la base de données primaire correspondante.  
   
-## Dépannage  
- Pour résoudre ce problème, le propriétaire de la base de données doit effectuer les opérations suivantes :  
+## <a name="problem-resolution"></a>Dépannage  
+ Pour résoudre ce problème, le propriétaire de la base de données doit effectuer les opérations suivantes :  
   
 1.  Supprimer la base de données secondaire du groupe de disponibilité. Pour plus d’informations, consultez [Supprimer une base de données secondaire d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md).  
   
@@ -40,8 +45,9 @@ caps.handback.revision: 11
   
 5.  Réintégrer la base de données secondaire au groupe de disponibilité. Pour plus d’informations, consultez [Joindre une base de données secondaire à un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Préparer manuellement une base de données secondaire pour un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)   
  [Dépanner des utilisateurs orphelins &#40;SQL Server&#41;](../../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)   
  [Résoudre des problèmes de configuration des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)
+

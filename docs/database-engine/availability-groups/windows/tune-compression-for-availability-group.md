@@ -1,22 +1,27 @@
 ---
-title: "R&#233;gler la compression pour le groupe de disponibilit&#233; | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/22/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Régler la compression pour un groupe de disponibilité | Microsoft Docs"
+ms.custom: 
+ms.date: 06/22/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "v-saume"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: v-saume
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1654499b131e9f13362e94f540b6ef8e521f2ad0
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# R&#233;gler la compression pour le groupe de disponibilit&#233;
+# <a name="tune-compression-for-availability-group"></a>Régler la compression pour un groupe de disponibilité
 
 Par défaut, SQL Server compresse les flux de données pour les groupes de disponibilité, si besoin. La compression réduit le trafic réseau, augmente la charge processeur et peut entraîner une latence. Vous devez être membre du rôle de serveur fixe pour activer la compression. Le tableau suivant indique à quel moment SQL Server utilise la compression pour les flux de journaux des groupes de disponibilité :
 
@@ -26,7 +31,7 @@ Par défaut, SQL Server compresse les flux de données pour les groupes de dispo
 | Réplicas à validation asynchrone | Compressé
 | Pendant l’amorçage automatique | Non compressé
 
-## Indicateurs de trace pour la compression du groupe de disponibilité 
+## <a name="trace-flags-for-availability-group-compression"></a>Indicateurs de trace pour la compression du groupe de disponibilité 
 
 Dans la majorité des cas, Microsoft recommande de ne pas modifier ces paramètres. Vous pouvez utiliser des indicateurs de trace globaux pour tester la modification de ces paramètres. SQL Server applique des indicateurs de trace globaux à l’intégralité de l’instance. Tous les groupes de disponibilité inclus dans l’instance sont affectés par ces paramètres.  
 
@@ -39,7 +44,7 @@ Indicateur de trace | Description
 9592          | Active la compression du flux de journal pour les groupes de disponibilité avec des réplicas synchrones. Cette fonctionnalité est désactivée par défaut sur les réplicas synchrones car la compression ajoute une latence. La compression du flux de journal est activée par défaut pour les réplicas asynchrones.
 
 
-## Ressources
+## <a name="resources"></a>Ressources
 
 
 [Options de démarrage du moteur de base de données](../../../database-engine/configure-windows/database-engine-service-startup-options.md)
@@ -47,3 +52,4 @@ Indicateur de trace | Description
 [Amorçage automatique](https://msdn.microsoft.com/library/mt735149(SQL.130).aspx)
 
 [Conditions préalables relatives à Always On](https://msdn.microsoft.com/library/ff878487.aspx) 
+

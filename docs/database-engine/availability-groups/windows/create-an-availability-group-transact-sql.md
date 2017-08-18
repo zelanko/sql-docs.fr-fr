@@ -1,30 +1,35 @@
 ---
-title: "Cr&#233;er un groupe de disponibilit&#233; (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Groupes de disponibilité [SQL Server], création"
+title: "Créer un groupe de disponibilité (Transact-SQL) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], creating
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 caps.latest.revision: 52
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: fd318a4404090630da97bf3bc684af3a8e43de0f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Cr&#233;er un groupe de disponibilit&#233; (Transact-SQL)
+# <a name="create-an-availability-group-transact-sql"></a>Créer un groupe de disponibilité (Transact-SQL)
   Cette rubrique explique comment utiliser [!INCLUDE[tsql](../../../includes/tsql-md.md)] pour créer et configurer un groupe de disponibilité sur des instances de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] sur lesquelles la fonctionnalité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] est activée. Un *groupe de disponibilité* définit un jeu de bases de données utilisateur qui basculent en tant qu'unité unique et un jeu de partenaires de basculement, appelés *réplicas de disponibilité*, qui prennent en charge le basculement.  
   
 > [!NOTE]  
 >  Pour obtenir une présentation des groupes de disponibilité, consultez [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Conditions préalables](#PrerequisitesRestrictions)  
   
@@ -32,7 +37,7 @@ caps.handback.revision: 51
   
      [Résumé des tâches et instructions Transact-SQL correspondantes](#SummaryTsqlStatements)  
   
--   **Pour créer et configurer un groupe de disponibilité en utilisant : ** [Transact-SQL](#TsqlProcedure)  
+-   **Pour créer et configurer un groupe de disponibilité en utilisant :**  [Transact-SQL](#TsqlProcedure)  
   
 -   **Exemple :**  [Configuration d'un groupe de disponibilité qui utilise l'authentification Windows](#ExampleConfigAGWinAuth)  
   
@@ -41,14 +46,14 @@ caps.handback.revision: 51
 -   [Contenu connexe](#RelatedContent)  
   
 > [!NOTE]  
->  En guise d'alternative à [!INCLUDE[tsql](../../../includes/tsql-md.md)], vous pouvez utiliser l'Assistant Création d'un groupe de disponibilité ou les applets de commande PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Utiliser l’Assistant Groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md), [Utiliser la boîte de dialogue Nouveau groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md) ou [Créer un groupe de disponibilité &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md).  
+>  En guise d'alternative à [!INCLUDE[tsql](../../../includes/tsql-md.md)], vous pouvez utiliser l'Assistant Création d'un groupe de disponibilité ou les applets de commande PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Utiliser l’Assistant Groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md), [Utiliser la boîte de dialogue Nouveau groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)ou [Créer un groupe de disponibilité &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md).  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  Nous vous recommandons fortement de lire cette section avant d'essayer de créer votre premier groupe de disponibilité.  
   
 ###  <a name="PrerequisitesRestrictions"></a> Conditions préalables requises, restrictions et recommandations  
   
--   Avant de créer un groupe de disponibilité, vérifiez que les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui hébergent les réplicas de disponibilité résident sur des nœuds WSFC (Windows Server Failover Clustering) différents au sein du même clustering de basculement WSFC. Vérifiez également que chaque instance du serveur répond à toutes les autres conditions requises relatives à [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Pour plus d’informations, nous vous conseillons vivement de lire la rubrique [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+-   Avant de créer un groupe de disponibilité, vérifiez que les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui hébergent les réplicas de disponibilité résident sur des nœuds WSFC (Windows Server Failover Clustering) différents au sein du même clustering de basculement WSFC. Vérifiez également que chaque instance du serveur répond à toutes les autres conditions requises relatives à [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Pour plus d’informations, nous vous conseillons vivement de lire la rubrique [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Security"></a> Sécurité  
   
@@ -60,22 +65,22 @@ caps.handback.revision: 51
   
 |Tâche|Instruction(s) Transact-SQL|Où effectuer la tâche**\***|  
 |----------|----------------------------------|---------------------------------|  
-|Créer le point de terminaison de mise en miroir de bases de données (une fois par instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)])|[CREATE ENDPOINT](../../../t-sql/statements/create-endpoint-transact-sql.md) *endpointName* … FOR DATABASE_MIRRORING|Exécutez sur chaque instance de serveur dans laquelle le point de terminaison de mise en miroir de bases de données est manquant.|  
+|Créer le point de terminaison de mise en miroir de bases de données (une fois par instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|[CREATE ENDPOINT](../../../t-sql/statements/create-endpoint-transact-sql.md) *endpointName* … FOR DATABASE_MIRRORING|Exécutez sur chaque instance de serveur dans laquelle le point de terminaison de mise en miroir de bases de données est manquant.|  
 |Créer un groupe de disponibilité|[CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)|Exécutez sur l'instance de serveur qui hébergera le réplica principal initial.|  
 |Joindre le réplica secondaire au groupe de disponibilité|[ALTER AVAILABILITY GROUP](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md) *nom_groupe* JOIN|Exécutez sur chaque instance de serveur qui héberge un réplica secondaire.|  
-|Préparer la base de données secondaire|[BACKUP](../../../t-sql/statements/backup-transact-sql.md) et [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md).|Créez des sauvegardes sur l'instance de serveur qui héberge le réplica principal.<br /><br /> Restaurez les sauvegardes sur chaque instance de serveur qui héberge un réplica secondaire, à l'aide de RESTORE WITH NORECOVERY.|  
-|Démarrer la synchronisation des données en joignant chaque base de données secondaire au groupe de disponibilité|[ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md) *nom_base_de_données* SET HADR AVAILABILITY GROUP = *nom_groupe*|Exécutez sur chaque instance de serveur qui héberge un réplica secondaire.|  
+|Préparer la base de données secondaire|[BACKUP](../../../t-sql/statements/backup-transact-sql.md) et [RESTORE](../../../t-sql/statements/restore-statements-transact-sql.md).|Créez des sauvegardes sur l'instance de serveur qui héberge le réplica principal.<br /><br /> Restaurez les sauvegardes sur chaque instance de serveur qui héberge un réplica secondaire, à l'aide de RESTORE WITH NORECOVERY.|  
+|Démarrer la synchronisation des données en joignant chaque base de données secondaire au groupe de disponibilité|[ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) *nom_base_de_données* SET HADR AVAILABILITY GROUP = *nom_groupe*|Exécutez sur chaque instance de serveur qui héberge un réplica secondaire.|  
   
  *Pour effectuer une tâche donnée, connectez-vous aux instances de serveur indiquées.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL pour créer et configurer un groupe de disponibilité  
   
 > [!NOTE]  
->  Pour obtenir un exemple de procédure de configuration qui contient des exemples de code de chacune de ces instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)], consultez [Exemple : configuration d’un groupe de disponibilité qui utilise l’authentification Windows](#ExampleConfigAGWinAuth).  
+>  Pour obtenir un exemple de procédure de configuration qui contient des exemples de code de chacune de ces instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] , consultez [Exemple : configuration d’un groupe de disponibilité qui utilise l’authentification Windows](#ExampleConfigAGWinAuth).  
   
 1.  Connectez-vous à l'instance de serveur qui hébergera le réplica principal.  
   
-2.  Créez le groupe de disponibilité en utilisant l’instruction [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+2.  Créez le groupe de disponibilité en utilisant l’instruction [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
 3.  Joignez le nouveau réplica secondaire au groupe de disponibilité. Pour plus d’informations, consultez [Joindre un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
@@ -83,10 +88,10 @@ caps.handback.revision: 51
   
 5.  Joignez chaque nouvelle base de données secondaire au groupe de disponibilité. Pour plus d’informations, consultez [Joindre un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-##  <a name="ExampleConfigAGWinAuth"></a> Exemple : configuration d'un groupe de disponibilité qui utilise l'authentification Windows  
+##  <a name="ExampleConfigAGWinAuth"></a> Exemple : configuration d’un groupe de disponibilité qui utilise l’authentification Windows  
  Cet exemple crée un exemple de procédure de configuration [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] qui utilise [!INCLUDE[tsql](../../../includes/tsql-md.md)] pour installer des points de terminaison de mise en miroir de bases de données qui utilisent l'authentification Windows, et créer et configurer un groupe de disponibilité et ses bases de données secondaires.  
   
- Cet exemple contient les sections suivantes :  
+ Cet exemple contient les sections suivantes :  
   
 -   [Conditions préalables requises pour l'utilisation de l'exemple de procédure de configuration](#PrerequisitesForExample)  
   
@@ -95,9 +100,9 @@ caps.handback.revision: 51
 -   [Exemple de code complet pour l'exemple de procédure de configuration](#CompleteCodeExample)  
   
 ###  <a name="PrerequisitesForExample"></a> Conditions préalables requises pour l'utilisation de l'exemple de procédure de configuration  
- Cet exemple de procédure présente les conditions suivantes :  
+ Cet exemple de procédure présente les conditions suivantes :  
   
--   Les instances de serveur doivent prendre en charge [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Pour plus d’informations, consultez [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+-   Les instances de serveur doivent prendre en charge [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Pour plus d’informations, consultez [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 -   Deux exemples de bases de données, *MyDb1* et *MyDb2*, doivent exister sur l'instance de serveur qui hébergera le réplica principal. Les exemples de code suivants créent et configurent ces deux bases de données et créent une sauvegarde complète de chacune d'elles. Exécutez ces exemples de code sur l'instance de serveur sur laquelle vous envisagez de créer l'exemple de groupe de disponibilité. Cette instance de serveur hébergera le réplica principal initial de l'exemple de groupe de disponibilité.  
   
@@ -144,7 +149,7 @@ caps.handback.revision: 51
 |Principal|`COMPUTER01`|`AgHostInstance`|  
 |Secondary|`COMPUTER02`|Instance par défaut.|  
   
-1.  Créez un point de terminaison de mise en miroir de bases de données nommé *dbm_endpoint* sur l’instance de serveur sur laquelle vous envisagez de créer le groupe de disponibilité (il s’agit d’une instance nommée `AgHostInstance` sur `COMPUTER01`). Ce point de terminaison utilise le port 7022. Notez que l'instance de serveur sur laquelle vous créez le groupe de disponibilité hébergera le réplica principal.  
+1.  Créez un point de terminaison de mise en miroir de bases de données nommé *dbm_endpoint* sur l’instance de serveur sur laquelle vous envisagez de créer le groupe de disponibilité (il s’agit d’une instance nommée `AgHostInstance` sur `COMPUTER01`). Ce point de terminaison utilise le port 7022. Notez que l'instance de serveur sur laquelle vous créez le groupe de disponibilité hébergera le réplica principal.  
   
     ```  
     -- Create endpoint on server instance that hosts the primary replica:  
@@ -471,9 +476,9 @@ GO
   
 -   [Créer ou configurer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
--   [Configurer la stratégie de basculement flexible pour contrôler les conditions du basculement automatique &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/configure flexible automatic failover policy.md)  
+-   [Configurer la stratégie de basculement flexible pour contrôler les conditions du basculement automatique &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)  
   
--   [Spécifier l’URL de point de terminaison lors de l’ajout ou lors de la modification d’un réplica de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md)  
+-   [Spécifier l’URL de point de terminaison lors de l’ajout ou lors de la modification d’un réplica de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
 -   [Configurer la sauvegarde sur des réplicas de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
@@ -507,13 +512,13 @@ GO
   
  **Pour configurer un point de terminaison pour la mise en miroir de bases de données**  
   
--   [Créer un point de terminaison de mise en miroir de bases de données pour les groupes de disponibilité Always On &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database mirroring - always on availability groups- powershell.md)  
+-   [Créer un point de terminaison de mise en miroir de bases de données pour les groupes de disponibilité Always On &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
 -   [Utiliser des certificats pour un point de terminaison de mise en miroir de bases de données &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
--   [Spécifier l’URL de point de terminaison lors de l’ajout ou lors de la modification d’un réplica de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md)  
+-   [Spécifier l’URL de point de terminaison lors de l’ajout ou lors de la modification d’un réplica de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **Pour résoudre des problèmes de configuration des groupes de disponibilité Always On**  
   
@@ -523,32 +528,33 @@ GO
   
 ##  <a name="RelatedContent"></a> Contenu connexe  
   
--   **Blogs :**  
+-   **Blogs :**  
   
      [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [Blogs de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](http://blogs.msdn.com/b/sqlAlways%20On/)  
+     [Blogs de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [Blogs des ingénieurs du Service clientèle et du Support technique de SQL Server](http://blogs.msdn.com/b/psssql/)  
   
--   **Vidéos :**  
+-   **Vidéos :**  
   
      [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1: Introducing the Next Generation High Availability Solution (Présentation de la solution haute disponibilité de nouvelle génération)](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2: Building a Mission-Critical High Availability Solution Using Always On (Génération d’une solution haute disponibilité critique à l’aide d’Always On)](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **Livres blancs :**  
+-   **Livres blancs :**  
   
-     [Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence)](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [Livres blancs de Microsoft pour SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Livres blancs de Microsoft pour SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
   
      [Livres blancs de l'équipe de consultants clients de SQL Server](http://sqlcat.com/)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)   
- [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)  
+ [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
+ [Conditions préalables, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   
+

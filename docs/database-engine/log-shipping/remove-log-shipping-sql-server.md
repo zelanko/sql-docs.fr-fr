@@ -1,35 +1,40 @@
 ---
-title: "Supprimer la copie des journaux de transaction (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "copie des journaux de transaction [SQL Server], suppression"
-  - "retrait de la copie des journaux de transaction"
-  - "suppression de la copie des journaux de transaction"
+title: Supprimer la copie des journaux de transaction (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], removing
+- removing log shipping
+- deleting log shipping
 ms.assetid: 859373db-c744-4a4b-8479-45163f61e8cb
 caps.latest.revision: 18
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: daec2b5c293d683423b85f59fc75b7b27f76f541
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Supprimer la copie des journaux de transaction (SQL Server)
+# <a name="remove-log-shipping-sql-server"></a>Supprimer la copie des journaux de transaction (SQL Server)
   Cette rubrique explique comment supprimer la copie des journaux de transaction dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour supprimer la copie des journaux de transaction, utilisez :**  
+-   **Pour supprimer la copie des journaux de transaction, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -42,11 +47,11 @@ caps.handback.revision: 18
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Les procédures stockées de copie des journaux de transaction nécessitent l’appartenance au rôle serveur fixe **sysadmin**.  
+ Les procédures stockées de copie des journaux de transaction nécessitent l’appartenance au rôle serveur fixe **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour supprimer l'envoi de journaux  
+#### <a name="to-remove-log-shipping"></a>Pour supprimer l'envoi de journaux  
   
 1.  Connectez-vous à l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est actuellement le serveur principal de copie des journaux de transaction et développez-la.  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 18
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour supprimer l'envoi de journaux  
+#### <a name="to-remove-log-shipping"></a>Pour supprimer l'envoi de journaux  
   
 1.  Sur le serveur principal de copie des journaux de transaction, exécutez [sp_delete_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md) pour supprimer du serveur principal les informations relatives à la base de données secondaire.  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 18
   
 3.  Sur le serveur principal de copie des journaux de transaction, exécutez **sp_delete_log_shipping_primary_database** pour supprimer du serveur principal les informations relatives à la configuration d’envoi de journaux. Le travail de sauvegarde est également supprimé.  
   
-4.  Sur le serveur principal de copie des journaux de transaction, désactivez le travail de sauvegarde. Pour plus d’informations, consultez [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
+4.  Sur le serveur principal de copie des journaux de transaction, désactivez le travail de sauvegarde. Pour plus d’informations, consultez [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd).  
   
 5.  Sur le serveur secondaire de copie des journaux de transaction, désactivez les travaux de copie et de restauration.  
   
@@ -79,7 +84,7 @@ caps.handback.revision: 18
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   
--   [Mise à niveau de la copie des journaux de transaction vers SQL Server 2016 &#40;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
+-   [Mise à niveau de la copie des journaux de transaction vers SQL Server 2016 &#40;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
 -   [Configurer la copie des journaux de transaction &#40;Transact-SQL&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)  
   
@@ -91,9 +96,9 @@ caps.handback.revision: 18
   
 -   [Basculer vers une base de données secondaire de copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
--   [Activer ou désactiver un travail](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Tables et procédures stockées liées à la copie des journaux de transaction](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

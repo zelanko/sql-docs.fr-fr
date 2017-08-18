@@ -1,30 +1,35 @@
 ---
-title: "Vue d’ensemble des instructions Transact-SQL pour les groupes de disponibilit&#233; Always On (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "groupes de disponibilité [SQL Server], à propos"
-  - "Groupes de disponibilité [SQL Server], instructions Transact-SQL"
+title: "Instructions Transact-SQL pour les groupes de disponibilité Always On | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], about
+- Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: fd3581c9da53446ce52a6ac8401f5180476a1cca
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Vue d’ensemble des instructions Transact-SQL pour les groupes de disponibilit&#233; Always On (SQL Server)
+# <a name="transact-sql-statements-for-always-on-availability-groups"></a>Instructions Transact-SQL pour les groupes de disponibilité Always On
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Cette rubrique présente les instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] qui prennent en charge le déploiement de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], ainsi que la création et la gestion d'un groupe de disponibilité donné, d'un réplica de disponibilité et d'une base de données de disponibilité.  
+  Cette rubrique présente les instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] qui prennent en charge le déploiement de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , ainsi que la création et la gestion d'un groupe de disponibilité donné, d'un réplica de disponibilité et d'une base de données de disponibilité.  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   [CREATE ENDPOINT](#CreateEndpoint)  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 23
 ##  <a name="CreateAG"></a> CREATE AVAILABILITY GROUP  
  [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md) crée un groupe de disponibilité et éventuellement un écouteur du groupe de disponibilité. Au minimum, vous devez spécifier votre instance de serveur locale, qui deviendra le réplica principal initial. Éventuellement, vous pouvez également spécifier jusqu'à quatre réplicas secondaires.  
   
- Exécutez CREATE AVAILABILITY GROUP sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que vous voulez utiliser pour héberger le réplica principal initial de votre nouveau groupe de disponibilité. Cette instance de serveur doit résider sur un nœud d’un cluster de basculement Windows Server (WSFC). Pour plus d’informations, consultez [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+ Exécutez CREATE AVAILABILITY GROUP sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que vous voulez utiliser pour héberger le réplica principal initial de votre nouveau groupe de disponibilité. Cette instance de serveur doit résider sur un nœud d’un cluster de basculement Windows Server (WSFC). Pour plus d’informations, consultez [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ##  <a name="AlterAG"></a> ALTER AVAILABILITY GROUP  
  [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) prend en charge la modification d’un groupe de disponibilité ou d’un écouteur de groupe de disponibilité existant, ainsi que le basculement d’un groupe de disponibilité.  
@@ -54,13 +59,13 @@ caps.handback.revision: 23
  Exécutez ALTER AVAILABILITY GROUP sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui héberge le réplica principal actuel.  
   
 ##  <a name="AlterDb"></a> ALTER DATABASE … SET HADR …  
- Les options de la clause [SET HADR](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md) de l’instruction ALTER DATABASE vous permettent de joindre une base de données secondaire au groupe de disponibilité de la base de données primaire correspondante, de supprimer une base de données jointe, d’interrompre la synchronisation des données sur une base de données jointe et de reprendre la synchronisation des données.  
+ Les options de la clause [SET HADR](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) de l’instruction ALTER DATABASE vous permettent de joindre une base de données secondaire au groupe de disponibilité de la base de données primaire correspondante, de supprimer une base de données jointe, d’interrompre la synchronisation des données sur une base de données jointe et de reprendre la synchronisation des données.  
   
 ##  <a name="DropAG"></a> DROP AVAILABILITY GROUP  
  [DROP AVAILABILITY GROUP](../../../t-sql/statements/drop-availability-group-transact-sql.md) supprime un groupe de disponibilité spécifié et tous ses réplicas. L'instruction DROP AVAILABILITY GROUP peut être exécutée à partir de n'importe quel nœud [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] dans le cluster de basculement WSFC.  
   
-##  <a name="Restrictions"></a> Restrictions sur les instructions Transact-SQL AVAILABILITY GROUP  
- Les instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] CREATE AVAILABILITY GROUP, ALTER AVAILABILITY GROUP et DROP AVAILABILITY GROUP ont les limitations suivantes :  
+##  <a name="Restrictions"></a> Restrictions on the AVAILABILITY GROUP Transact-SQL Statements  
+ Les instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] CREATE AVAILABILITY GROUP, ALTER AVAILABILITY GROUP et DROP AVAILABILITY GROUP ont les limitations suivantes :  
   
 -   À l'exception de DROP AVAILABILITY GROUP, l'exécution de ces instructions requiert que le service HADR soit activé sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Activer et désactiver les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
@@ -72,7 +77,8 @@ caps.handback.revision: 23
   
 -   Si une instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] est exécutée alors qu'une autre récupération ou action de groupe de disponibilité est en cours, l'instruction retourne une erreur. Attendez la fin de l'action ou de la récupération, puis réessayez l'instruction, si nécessaire.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

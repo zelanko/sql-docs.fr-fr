@@ -1,62 +1,57 @@
 ---
-title: "Utiliser l&#39;Assistant Groupe de disponibilit&#233; (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.newagwizard.f1"
-  - "sql13.swb.newavgroupwiz.f1"
-helpviewer_keywords: 
-  - "Assistant Nouveau groupe de disponibilité, réplicas de disponibilité"
-  - "groupes de disponibilité [SQL Server], assistants"
-  - "Groupes de disponibilité [SQL Server], création"
+title: "Utiliser l’Assistant Groupe de disponibilité (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.newagwizard.f1
+- sql13.swb.newavgroupwiz.f1
+helpviewer_keywords:
+- New Availability Group Wizard, availability replicas
+- Availability Groups [SQL Server], wizards
+- Availability Groups [SQL Server], creating
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 caps.latest.revision: 46
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: f4a3c46eaad9fcdb330210d18ed8b2a56e178043
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Utiliser l&#39;Assistant Groupe de disponibilit&#233; (SQL Server Management Studio)
-  Cette rubrique explique comment utiliser l’Assistant Nouveau groupe de disponibilité (dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) pour créer et configurer un groupe de disponibilité Always On dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un *groupe de disponibilité* définit un jeu de bases de données utilisateur qui basculent en tant qu'unité unique et un jeu de partenaires de basculement, appelés *réplicas de disponibilité*, qui prennent en charge le basculement.  
+# <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Utiliser l'Assistant Groupe de disponibilité (SQL Server Management Studio)
+  Cette rubrique explique comment utiliser l’**Assistant Nouveau groupe de disponibilité** dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] pour créer et configurer un groupe de disponibilité Always On dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un *groupe de disponibilité* définit un jeu de bases de données utilisateur qui basculent en tant qu'unité unique et un jeu de partenaires de basculement, appelés *réplicas de disponibilité*, qui prennent en charge le basculement.  
   
 > [!NOTE]  
 >  Pour obtenir une présentation des groupes de disponibilité, consultez [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
-  
--   **Avant de commencer :**  
-  
-     [Conditions préalables requises, restrictions et recommandations](#Prerequisites)  
-  
-     [Sécurité](#Security)  
-  
--   **Pour créer et configurer un groupe de disponibilité, à l’aide de** l’[Assistant Nouveau groupe de disponibilité (SQL Server Management Studio)](#RunAGwiz)  
-  
-> [!NOTE]  
->  Comme alternative à l'utilisation de l'Assistant Nouveau groupe de disponibilité, vous pouvez utiliser les applets de commande [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour plus d’informations, consultez [Créer un groupe de disponibilité &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md) ou [Créer un groupe de disponibilité &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md).  
-  
+    
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  Nous vous recommandons fortement de lire cette section avant d'essayer de créer votre premier groupe de disponibilité.  
   
 ###  <a name="Prerequisites"></a> Conditions préalables requises, restrictions et recommandations  
- Dans la plupart des cas, vous pouvez utiliser l'Assistant Nouveau groupe de disponibilité pour exécuter toutes les tâches nécessaires à la création et à la configuration d'un groupe de disponibilité. Toutefois, vous devrez peut-être accomplir certaines de ces tâches manuellement.  
+
+Dans la plupart des cas, vous pouvez utiliser l'Assistant Nouveau groupe de disponibilité pour exécuter toutes les tâches nécessaires à la création et à la configuration d'un groupe de disponibilité. Toutefois, vous devrez peut-être accomplir certaines de ces tâches manuellement.  
   
--   Avant de créer un groupe de disponibilité, vérifiez que les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui hébergent les réplicas de disponibilité résident sur des nœuds WSFC (Windows Server Failover Clustering) différents au sein du même clustering de basculement WSFC. Vérifiez également que chaque instance du serveur répond à toutes les autres conditions requises relatives à [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Pour plus d’informations, nous vous conseillons vivement de lire la rubrique [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+- Si vous utilisez un type de cluster WSFC pour héberger un groupe de disponibilité, vérifiez que les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui hébergent les réplicas de disponibilité se trouvent sur des serveurs (ou des nœuds) de cluster différents au sein du même WSFC. Vérifiez également que chaque instance de serveur satisfait aux autres prérequis de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Pour plus d’informations, nous vous conseillons vivement de lire la rubrique [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 -   Si une instance de serveur que vous sélectionnez pour héberger un réplica de disponibilité s'exécute sous un compte d'utilisateur de domaine et n'a pas encore de point de terminaison de mise en miroir de bases de données, l'Assistant peut créer le point de terminaison et accorder l'autorisation CONNECT au compte de service de l'instance de serveur. Toutefois, si le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'exécute en tant que compte intégré, tel que Système local, Service local ou Service réseau, ou comme compte qui n'appartient pas au domaine, vous devez utiliser des certificats pour l'authentification du point de terminaison, et l'Assistant ne peut pas créer un point de terminaison de mise en miroir de bases de données sur l'instance de serveur. Dans ce cas, nous recommandons de créer les points de terminaison de mise en miroir de bases de données manuellement avant de lancer l'Assistant Nouveau groupe de disponibilité.  
   
-     **Pour utiliser des certificats pour un point de terminaison de mise en miroir de bases de données :**  
+     **Pour utiliser des certificats pour un point de terminaison de mise en miroir de bases de données :**  
   
      [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)  
   
      [Utiliser des certificats pour un point de terminaison de mise en miroir de bases de données &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
--   Les instances de cluster de basculement (FCI) SQL Server ne prennent pas en charge le basculement automatique par les groupes de disponibilité. Par conséquent, tout réplica de disponibilité hébergé par une instance de cluster de basculement ne peut être configuré que pour un basculement manuel.  
+-   Les instances de cluster de basculement (FCI) SQL Server ne prennent pas en charge le basculement automatique par les groupes de disponibilité. Par conséquent, tout réplica de disponibilité hébergé par une instance de cluster de basculement ne peut être configuré que pour un basculement manuel.  
   
 -   **Conditions préalables requises pour que l'Assistant effectue une synchronisation des données initiale complète**  
   
@@ -82,17 +77,19 @@ caps.handback.revision: 45
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance de serveur qui héberge le réplica principal.  
   
-2.  Développez le nœud **Haute disponibilité Always On** et le nœud **Groupes de disponibilité**.  
+2.  Développez le nœud **Haute disponibilité Always On** et le nœud **Groupes de disponibilité** .  
   
 3.  Pour lancer l'Assistant Nouveau groupe de disponibilité, sélectionnez la commande **Assistant Nouveau groupe de disponibilité** .  
   
 4.  La première fois que vous exécutez cet Assistant, une page **Introduction** apparaît. Pour ignorer cette page dans le futur, vous pouvez cliquer sur **Ne plus afficher cette page**. Après avoir lu cette page, cliquez sur **Suivant**.  
   
-5.  Sur la page **Spécifier le nom du groupe de disponibilité** , entrez le nom du nouveau groupe de disponibilité dans le champ **Nom du groupe de disponibilité** . Ce nom doit être un identificateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valide, qui est unique sur le cluster de basculement WSFC et dans l'ensemble de votre domaine. La longueur maximale d'un nom de groupe de disponibilité est de 128 caractères.  
-  
+5.  Sur la page **Spécifier les options du groupe de disponibilité**, entrez le nom du nouveau groupe de disponibilité dans le champ **Nom du groupe de disponibilité**. Ce nom doit être un identificateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valide, qui est unique sur le cluster et dans l’ensemble de votre domaine. La longueur maximale d'un nom de groupe de disponibilité est de 128 caractères. e
+
+6. Ensuite, spécifiez le type de cluster. Les types de cluster possibles dépendent de la version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et du système d’exploitation. Choisissez **WSFC**, **EXTERNAL** ou **NONE**. Pour plus d’informations, consultez la page [Spécifier les options du groupe de disponibilité](specify-availability-group-name-page.md).
+ 
 6.  Sur la page **Sélectionner des bases de données** , la grille répertorie les bases de données utilisateur sur l'instance de serveur connectée qui peuvent devenir des *bases de données de disponibilité*. Sélectionnez une ou plusieurs des bases de données répertoriées pour participer au nouveau groupe de disponibilité. Ces bases de données seront initialement les *bases de données primaires*initiales.  
   
-     Pour chaque base de données répertoriée, la colonne **Taille** affiche la taille de la base de données, si elle est connue. La colonne **État** indique si une base de données particulière satisfait aux [conditions préalables requises](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md) pour les bases de données de disponibilité. Si les conditions préalables requises ne sont pas remplies, une courte description de l'état indique la raison pour laquelle la base de données est inéligible ; par exemple, si elle n'utilise pas le mode de récupération complet. Pour plus d'informations, cliquez sur la description de l'état.  
+     Pour chaque base de données répertoriée, la colonne **Taille** affiche la taille de la base de données, si elle est connue. La colonne **État** indique si une base de données particulière satisfait aux [conditions préalables requises](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)pour les bases de données de disponibilité. Si les conditions préalables requises ne sont pas remplies, une courte description de l'état indique la raison pour laquelle la base de données est inéligible ; par exemple, si elle n'utilise pas le mode de récupération complet. Pour plus d'informations, cliquez sur la description de l'état.  
   
      Si vous modifiez une base de données pour la rendre éligible, cliquez sur **Actualiser** pour mettre à jour la grille de bases de données.  
   
@@ -103,19 +100,23 @@ caps.handback.revision: 45
     |Onglet|Brève description|  
     |---------|-----------------------|  
     |**Réplicas**|Cet onglet vous permet de spécifier chaque instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui hébergera un réplica secondaire. Notez que l'instance de serveur à laquelle vous êtes actuellement connecté doit héberger le réplica principal.|  
-    |**Points de terminaison**|Utilisez cet onglet pour vérifier tous les points de terminaison de mise en miroir de bases de données existants et également, si ce point de terminaison manque sur une instance de serveur dont les comptes de service utilisent l'authentification Windows, pour créer le point de terminaison automatiquement.<br /><br /> Remarque : si une instance de serveur s’exécute sous un compte d’utilisateur qui n’appartient pas au domaine, vous devez apporter une modification manuelle à votre instance de serveur avant de pouvoir continuer dans l’Assistant. Pour plus d'informations, consultez [Conditions préalables requises](#Prerequisites), plus haut dans cette rubrique.|  
+    |**Points de terminaison**|Utilisez cet onglet pour vérifier tous les points de terminaison de mise en miroir de bases de données existants et également, si ce point de terminaison manque sur une instance de serveur dont les comptes de service utilisent l'authentification Windows, pour créer le point de terminaison automatiquement.<br /><br /> Remarque : si une instance de serveur s’exécute sous un compte d’utilisateur qui n’appartient pas au domaine, vous devez apporter une modification manuelle à votre instance de serveur avant de pouvoir continuer dans l’Assistant. Pour plus d'informations, consultez [Conditions préalables requises](#Prerequisites), plus haut dans cette rubrique.|  
     |**Préférences de sauvegarde**|Utilisez cet onglet pour spécifier vos préférences de sauvegarde pour le groupe de disponibilité dans son ensemble, ainsi que les priorités de sauvegarde pour les différents réplicas de disponibilité.|  
     |**Port d'écoute**|Utilisez cet onglet pour créer un écouteur de groupe de disponibilité. Par défaut, l'assistant ne crée pas d'écouteur.|  
   
 8.  Sur la page **Sélectionner la synchronisation de données initiale** , choisissez comment vous souhaitez que vos nouvelles bases de données secondaires soient créées et jointes au groupe de disponibilité. Choisissez l'une des options suivantes :  
   
-    -   **Complet**  
+    -   **Amorçage automatique**  
+  
+         SQL Server crée automatiquement les réplicas secondaires pour chaque base de données du groupe. L’amorçage automatique nécessite que le chemin des données et des fichiers journaux soit le même sur chaque instance de SQL Server qui participe au groupe. Disponible sur [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] et ultérieur. Consultez [Initialiser automatiquement le groupe de disponibilité Always On](automatically-initialize-always-on-availability-group.md).
+    
+    -   **Sauvegarde complète de la base de données et des journaux**  
   
          Sélectionnez cette option si votre environnement répond aux conditions requises pour démarrer automatiquement la synchronisation initiale des données (pour plus d’informations, consultez [Conditions préalables requises, restrictions et recommandations](#Prerequisites), plus haut dans cette rubrique).  
   
          Si vous sélectionnez **Complet**, après avoir créé le groupe de disponibilité, l'assistant sauvegarde chaque base de données primaire et son journal des transactions sur un partage réseau et restaure les sauvegardes sur chaque instance de serveur qui héberge un réplica secondaire. L'assistant joint ensuite chaque base de données secondaire au groupe de disponibilité.  
   
-         Dans le champ **Spécifier un emplacement réseau partagé accessible par tous les réplicas :**, spécifiez un partage de sauvegarde dans lequel l’intégralité de l’instance de serveur qui héberge les réplicas dispose d’un accès en lecture-écriture. Pour plus d'informations, consultez [Conditions préalables requises](#Prerequisites), plus haut dans cette rubrique.  
+         Dans le champ **Spécifier un emplacement réseau partagé accessible par tous les réplicas :** , spécifiez un partage de sauvegarde dans lequel l’intégralité de l’instance de serveur qui héberge les réplicas dispose d’un accès en lecture-écriture. Pour plus d'informations, consultez [Conditions préalables requises](#Prerequisites), plus haut dans cette rubrique.  
   
     -   **Joindre uniquement**  
   
@@ -125,12 +126,12 @@ caps.handback.revision: 45
   
          Sélectionnez cette option si vous souhaitez utiliser votre propre base de données et sauvegardes de journaux de vos bases de données primaires. Pour plus d’informations, consultez [Démarrer un mouvement de données sur une base de données secondaire Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-9. La page **Validation** vérifie si les valeurs que vous avez spécifiées dans cet Assistant répondent aux exigences de l'Assistant Nouveau groupe de disponibilité. Pour effectuer un changement, cliquez sur **Précédent** pour revenir à une page antérieure de l'assistant pour modifier une ou plusieurs valeurs. Cliquez sur **Suivant** pour revenir à la page **Validation**, puis cliquez sur **Réexécuter la validation**.  
+9. La page **Validation** vérifie si les valeurs que vous avez spécifiées dans cet Assistant répondent aux exigences de l'Assistant Nouveau groupe de disponibilité. Pour effectuer un changement, cliquez sur **Précédent** pour revenir à une page antérieure de l'assistant pour modifier une ou plusieurs valeurs. Cliquez sur **Suivant** pour revenir à la page **Validation** , puis cliquez sur **Réexécuter la validation**.  
   
-10. Sur la page **Résumé** , examinez vos choix pour le nouveau groupe de disponibilité. Pour apporter une modification, cliquez sur **Précédent** pour revenir à la page appropriée. Après avoir apporté la modification, cliquez sur **Suivant** pour revenir à la page **Résumé**.  
+10. Sur la page **Résumé** , examinez vos choix pour le nouveau groupe de disponibilité. Pour apporter une modification, cliquez sur **Précédent** pour revenir à la page appropriée. Après avoir apporté la modification, cliquez sur **Suivant** pour revenir à la page **Résumé** .  
   
     > [!IMPORTANT]  
-    >  Lorsque le compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d'une instance de serveur qui hébergera un nouveau réplica de disponibilité n'existe pas en tant que connexion, l'Assistant nouveau groupe de disponibilité doit créer la connexion. Dans la page **Résumé**, l'Assistant affiche des informations pour la connexion qui doit être créée. Si vous cliquez sur **Terminer**, l'Assistant crée cette connexion pour le compte de service SQL Server et accorde l'autorisation de connexion CONNECT.  
+    >  Lorsque le compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d'une instance de serveur qui hébergera un nouveau réplica de disponibilité n'existe pas en tant que connexion, l'Assistant nouveau groupe de disponibilité doit créer la connexion. Dans la page **Résumé** , l'Assistant affiche des informations pour la connexion qui doit être créée. Si vous cliquez sur **Terminer**, l'Assistant crée cette connexion pour le compte de service SQL Server et accorde l'autorisation de connexion CONNECT.  
   
      Si vous êtes satisfait de vos sélections, cliquez éventuellement sur **Script** pour créer un script des étapes que l'assistant devra exécuter. Ensuite, pour créer et configurer le nouveau groupe de disponibilité, cliquez sur **Terminer**.  
   
@@ -165,13 +166,13 @@ caps.handback.revision: 45
   
  **Pour configurer un point de terminaison pour la mise en miroir de bases de données**  
   
--   [Créer un point de terminaison de mise en miroir de bases de données pour les groupes de disponibilité Always On &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database mirroring - always on availability groups- powershell.md)  
+-   [Créer un point de terminaison de mise en miroir de bases de données pour les groupes de disponibilité Always On &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
 -   [Utiliser des certificats pour un point de terminaison de mise en miroir de bases de données &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
--   [Spécifier l’URL de point de terminaison lors de l’ajout ou lors de la modification d’un réplica de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md)  
+-   [Spécifier l’URL de point de terminaison lors de l’ajout ou lors de la modification d’un réplica de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **Pour résoudre des problèmes de configuration des groupes de disponibilité Always On**  
   
@@ -181,31 +182,36 @@ caps.handback.revision: 45
   
 ##  <a name="RelatedContent"></a> Contenu connexe  
   
--   **Blogs :**  
+-   **Blogs :**  
   
      [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [Blogs de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](http://blogs.msdn.com/b/sqlAlways%20On/)  
+     [Blogs de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [Blogs des ingénieurs du Service clientèle et du Support technique de SQL Server](http://blogs.msdn.com/b/psssql/)  
   
--   **Vidéos :**  
+-   **Vidéos :**  
   
      [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1: Introducing the Next Generation High Availability Solution (Présentation de la solution haute disponibilité de nouvelle génération)](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2: Building a Mission-Critical High Availability Solution Using Always On (Génération d’une solution haute disponibilité critique à l’aide d’Always On)](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **Livres blancs :**  
+-   **Livres blancs :**  
   
      [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence)](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [Livres blancs de Microsoft pour SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Livres blancs de Microsoft pour SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
   
      [Livres blancs de l'équipe de consultants clients de SQL Server](http://sqlcat.com/)  
   
-## Voir aussi  
+## <a name="alternate-ways-to-create-availability-groups"></a>Autres méthodes de création de groupes de disponibilité
+
+Comme alternative à l'utilisation de l'Assistant Nouveau groupe de disponibilité, vous pouvez utiliser les applets de commande [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour plus d’informations, consultez [Créer un groupe de disponibilité &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md) ou [Créer un groupe de disponibilité &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md).  
+
+
+## <a name="see-also"></a>Voir aussi  
  [Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Conditions préalables, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)  
+ [Conditions préalables, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
-  
+

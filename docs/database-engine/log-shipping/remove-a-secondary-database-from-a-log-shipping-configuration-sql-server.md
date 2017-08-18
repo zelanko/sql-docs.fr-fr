@@ -1,37 +1,42 @@
 ---
-title: "Supprimer une base de donn&#233;es secondaire dans une configuration de copie des journaux de transaction (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "suppression de bases de données secondaires"
-  - "bases de données secondaires [SQL Server], dans copie des journaux de transaction"
-  - "retrait de bases de données secondaires"
-  - "fichiers de données secondaires [SQL Server], suppression"
-  - "copie des journaux de transaction [SQL Server], bases de données secondaires"
+title: "Supprimer une base de données secondaire dans une configuration de la copie des journaux de transaction (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deleting secondary databases
+- secondary databases [SQL Server], in log shipping
+- removing secondary databases
+- secondary data files [SQL Server], removing
+- log shipping [SQL Server], secondary databases
 ms.assetid: ebe368a4-ca1c-45d0-9a71-3ddbd5b26a8e
 caps.latest.revision: 19
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 9c0ced4d63693c2d299556a28796e55fccbcc2b5
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Supprimer une base de donn&#233;es secondaire dans une configuration de copie des journaux de transaction (SQL Server)
+# <a name="remove-a-secondary-database-from-a-log-shipping-configuration-sql-server"></a>Supprimer une base de données secondaire dans une configuration de copie des journaux de transaction (SQL Server)
   Cette rubrique explique comment supprimer la base de données secondaire de copie des journaux de transaction dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour supprimer une base de données secondaire de copie des journaux de transaction, utilisez :**  
+-   **Pour supprimer une base de données secondaire de copie des journaux de transaction, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -44,11 +49,11 @@ caps.handback.revision: 19
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Les procédures stockées de copie des journaux de transaction nécessitent l’appartenance au rôle serveur fixe **sysadmin**.  
+ Les procédures stockées de copie des journaux de transaction nécessitent l’appartenance au rôle serveur fixe **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour supprimer une base de données secondaire pour la copie des journaux de transaction  
+#### <a name="to-remove-a-log-shipping-secondary-database"></a>Pour supprimer une base de données secondaire pour la copie des journaux de transaction  
   
 1.  Connectez-vous à l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est actuellement le serveur principal de copie des journaux de transaction et développez-la.  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour supprimer une base de données secondaire  
+#### <a name="to-remove-a-secondary-database"></a>Pour supprimer une base de données secondaire  
   
 1.  Sur le serveur principal, exécutez [sp_delete_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md) pour supprimer du serveur principal les informations relatives à la base de données secondaire.  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 19
     > [!NOTE]  
     >  Si aucune autre base de données secondaire portant le même ID secondaire n’existe, **sp_delete_log_shipping_secondary_primary** est appelé par **sp_delete_log_shipping_secondary_database** et supprime l’entrée de l’ID secondaire, ainsi que les travaux de copie et de restauration.  
   
-3.  Sur le serveur secondaire, désactivez les travaux de copie et de restauration. Pour plus d’informations, consultez [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
+3.  Sur le serveur secondaire, désactivez les travaux de copie et de restauration. Pour plus d’informations, consultez [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd).  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   
@@ -91,7 +96,7 @@ caps.handback.revision: 19
   
 -   [Basculer vers une base de données secondaire de copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Tables et procédures stockées liées à la copie des journaux de transaction](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

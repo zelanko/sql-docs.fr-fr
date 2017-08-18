@@ -1,30 +1,35 @@
 ---
-title: "Changer le contexte de cluster HADR de l&#39;instance de serveur (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Groupes de disponibilité [SQL Server], clusters WSFC"
-  - "Réplicas de disponibilité [SQL Server], modifier le contexte de cluster WSFC"
+title: "Changer le contexte de cluster HADR de l’instance de serveur (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- Availability replicas [SQL Server], change WSFC cluster context
 ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 caps.latest.revision: 32
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 29d356ca6c432963015a4c9f4a81702b97812c51
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Changer le contexte de cluster HADR de l&#39;instance de serveur (SQL Server)
+# <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>Changer le contexte de cluster HADR de l'instance de serveur (SQL Server)
   Cette rubrique explique comment basculer le contexte de cluster HADR d'une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[tsql](../../../includes/tsql-md.md)] dans [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] et versions ultérieures. Le *contexte de cluster HADR* détermine le cluster de clustering de basculement Windows Server (WSFC) qui gère les métadonnées pour les réplicas de disponibilité hébergés par l’instance de serveur.  
   
  Basculez le contexte de cluster HADR uniquement pendant une migration entre clusters de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] vers une instance de [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] sur un nouveau cluster WSFC. La migration entre clusters de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prend en charge la mise à niveau vers [!INCLUDE[win8](../../../includes/win8-md.md)] ou [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] avec un temps mort minimal des groupes de disponibilité. Pour plus d’informations, consultez [Migration entre clusters de groupes de disponibilité Always On pour la mise à niveau du système d’exploitation](http://msdn.microsoft.com/library/jj873730.aspx).  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
@@ -34,9 +39,9 @@ caps.handback.revision: 31
   
      [Sécurité](#Security)  
   
--   **Pour basculer le contexte de cluster d’un réplica de disponibilité, utilisez :** [Transact-SQL](#TsqlProcedure)  
+-   **Pour basculer le contexte de cluster d’un réplica de disponibilité, utilisez :**  [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :** [après le basculement du contexte de cluster d’un réplica de disponibilité](#FollowUp)  
+-   **Suivi :**  [après le basculement du contexte de cluster d’un réplica de disponibilité](#FollowUp)  
   
 -   [Tâches associées](#RelatedTasks)  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 31
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 > [!CAUTION]  
->  Basculez le contexte de cluster HADR uniquement lors de la migration entre clusters de déploiements [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+>  Basculez le contexte de cluster HADR uniquement lors de la migration entre clusters de déploiements [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 31
   
 -   Pour pouvoir être basculée du contexte de cluster local vers un cluster à distance, une instance de serveur ne peut pas héberger de réplicas de disponibilité. La vue de catalogue [sys.availability_replicas](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md) ne doit retourner aucune ligne.  
   
-     S'il existe des réplicas de disponibilité sur l'instance de serveur, avant de modifier le contexte de cluster HADR, vous devez effectuer l'une des opérations suivantes :  
+     S'il existe des réplicas de disponibilité sur l'instance de serveur, avant de modifier le contexte de cluster HADR, vous devez effectuer l'une des opérations suivantes :  
   
     |Rôle de réplica|Action|Lien|  
     |------------------|------------|----------|  
@@ -74,9 +79,9 @@ caps.handback.revision: 31
   
 ###  <a name="Recommendations"></a> Recommandations  
   
--   Nous vous recommandons de spécifier le nom de domaine complet. Cela est dû au fait que pour rechercher l'adresse IP cible d'un nom court, ALTER SERVER CONFIGURATION utilise la résolution DNS. Dans certaines situations, selon l'ordre de recherche de DNS, l'utilisation d'un nom court peut entraîner quelques confusions. Par exemple, considérez la commande suivante, exécutée sur un nœud dans le domaine `abc`, (`node1.abc.com`). Le cluster de destination attendu est le cluster `CLUS01` dans le domaine `xyz` (`clus01.xyz.com`). Toutefois, le domaine local héberge aussi un cluster nommé `CLUS01` (`clus01.abc.com`).  
+-   Nous vous recommandons de spécifier le nom de domaine complet. Cela est dû au fait que pour rechercher l'adresse IP cible d'un nom court, ALTER SERVER CONFIGURATION utilise la résolution DNS. Dans certaines situations, selon l'ordre de recherche de DNS, l'utilisation d'un nom court peut entraîner quelques confusions. Par exemple, considérez la commande suivante, exécutée sur un nœud dans le domaine `abc` , (`node1.abc.com`). Le cluster de destination attendu est le cluster `CLUS01` dans le domaine `xyz` (`clus01.xyz.com`). Toutefois, le domaine local héberge aussi un cluster nommé `CLUS01` (`clus01.abc.com`).  
   
-     Si le nom court du cluster cible, `CLUS01`, a été spécifié, la résolution de noms DNS peut retourner l'adresse IP d'un cluster incorrect, `clus01.abc.com`. Pour éviter une telle confusion, spécifiez le nom complet du cluster cible, comme dans l'exemple suivant :  
+     Si le nom court du cluster cible, `CLUS01`, a été spécifié, la résolution de noms DNS peut retourner l'adresse IP d'un cluster incorrect, `clus01.abc.com`. Pour éviter une telle confusion, spécifiez le nom complet du cluster cible, comme dans l'exemple suivant :  
   
     ```  
     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com'  
@@ -92,9 +97,9 @@ caps.handback.revision: 31
   
 -   **Compte de service SQL Server**  
   
-     Le compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de l'instance de serveur doit disposer :  
+     Le compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de l'instance de serveur doit disposer :  
   
-    -   des autorisations nécessaires pour ouvrir le cluster WSFC de destination ;  
+    -   des autorisations nécessaires pour ouvrir le cluster WSFC de destination ;  
   
     -   d'un accès en lecture/écriture au cluster WSFC distant.  
   
@@ -103,11 +108,11 @@ caps.handback.revision: 31
   
 1.  Connectez-vous à l'instance de qui héberge soit le réplica principal, soit un réplica secondaire du groupe de disponibilité.  
   
-2.  Utilisez la clause SET HADR CLUSTER CONTEXT de l’instruction [ALTER SERVER CONFIGURATION](../../../t-sql/statements/alter-server-configuration-transact-sql.md), comme suit :  
+2.  Utilisez la clause SET HADR CLUSTER CONTEXT de l’instruction [ALTER SERVER CONFIGURATION](../../../t-sql/statements/alter-server-configuration-transact-sql.md) , comme suit :  
   
      ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **’***windows_cluster***’** | LOCAL }  
   
-     où :  
+     où :  
   
      *windows_cluster*  
      Le nom d'objet cluster (CON) d'un cluster WSFC. Vous pouvez spécifier le nom court ou le nom de domaine complet. Nous vous recommandons de spécifier le nom de domaine complet. Pour plus d'informations, consultez [Recommandations](#Recommendations), plus haut dans cette rubrique.  
@@ -115,7 +120,7 @@ caps.handback.revision: 31
      LOCAL  
      Cluster WSFC local  
   
-### Exemples  
+### <a name="examples"></a>Exemples  
  L'exemple qui suit remplace le contexte de cluster HADR par un autre cluster. Pour identifier le cluster WSFC de destination, `clus01`, l'exemple spécifie le nom d'objet cluster complet, `clus01.xyz.com`.  
   
 ```  
@@ -128,10 +133,10 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
 ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = LOCAL;  
 ```  
   
-##  <a name="FollowUp"></a> Suivi : après le basculement du contexte de cluster d'un réplica de disponibilité  
+##  <a name="FollowUp"></a> Suivi : après le basculement du contexte de cluster d'un réplica de disponibilité  
  Le nouveau contexte de cluster HADR prend effet immédiatement, sans redémarrer l'instance de serveur. Le paramètre de contexte de cluster HADR est un paramètre persistant au niveau de l'instance qui demeure inchangé si l'instance de serveur redémarre.  
   
- Confirmez le nouveau contexte de cluster HADR en interrogeant la vue de gestion dynamique [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md), comme suit :  
+ Confirmez le nouveau contexte de cluster HADR en interrogeant la vue de gestion dynamique [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md) , comme suit :  
   
 ```  
 SELECT cluster_name FROM sys.dm_hadr_cluster  
@@ -139,7 +144,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
  Cette requête doit retourner le nom du cluster auquel sur lequel vous définissez le contexte de cluster HADR.  
   
- Lorsque le contexte de cluster HADR est basculé vers un nouveau cluster :  
+ Lorsque le contexte de cluster HADR est basculé vers un nouveau cluster :  
   
 -   Les métadonnées sont nettoyées pour tous les réplicas de disponibilité qui sont actuellement hébergés par l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -161,13 +166,14 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 ##  <a name="RelatedContent"></a> Contenu connexe  
   
--   [Articles techniques SQL Server 2012](http://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
+-   [Articles techniques SQL Server 2012](http://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [Blog de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](http://blogs.msdn.com/b/sqlAlways%20On/)  
+-   [Blog de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   
+

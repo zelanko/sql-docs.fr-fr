@@ -1,31 +1,36 @@
 ---
-title: "Basculement de r&#244;le durant une session de mise en miroir de bases de donn&#233;es (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "basculement de rôle [SQL Server]"
-  - "serveurs partenaires de mise en miroir [SQL Server]"
-  - "basculement [SQL Server]"
-  - "partenaires de basculement [SQL Server]"
-  - "mise en miroir de base de données [SQL Server], partenaires"
-  - "serveurs partenaires dans les sessions de mise en miroir de bases de données [SQL Server]"
-  - "basculement [SQL Server], mise en miroir de bases de données"
-  - "mise en miroir de bases de données [SQL Server], basculement"
+title: "Basculement de rôle durant une session de mise en miroir de bases de données (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- role switching [SQL Server]
+- mirroring partners [SQL Server]
+- failover [SQL Server]
+- failover partners [SQL Server]
+- database mirroring [SQL Server], partners
+- partners in database mirroring sessions [SQL Server]
+- failover [SQL Server], database mirroring
+- database mirroring [SQL Server], failover
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 caps.latest.revision: 50
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: e49ab29353985dc5e3de035b7a67da9928412c23
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Basculement de r&#244;le durant une session de mise en miroir de bases de donn&#233;es (SQL Server)
+# <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Basculement de rôle durant une session de mise en miroir de bases de données (SQL Server)
   Dans le contexte d'une session de mise en miroir de bases de données, le rôle principal et le rôle miroir sont généralement interchangeables lors d'un processus appelé *basculement de rôle*. Dans une situation de basculement de rôle, le serveur miroir est le *partenaire de basculement* du serveur principal ; il adopte le rôle principal, en récupérant sa copie de la base de données et en la mettant en ligne en tant que nouvelle base de données principale. L'ancien serveur principal (s'il est disponible) joue le rôle de serveur miroir, et sa base de données devient la nouvelle base de données miroir. Les rôles peuvent éventuellement basculer plusieurs fois, soit en réponse à plusieurs défaillances, soit pour des raisons administratives.  
   
 > [!NOTE]  
@@ -58,7 +63,7 @@ caps.handback.revision: 50
      Un service forcé est pris en charge en mode haute sécurité lorsqu'aucun témoin n'est défini en mode haute performance. Suite à la perte du serveur principal, le propriétaire de la base de données peut rendre la base de données disponible en forçant le service sur le serveur miroir (avec possibilité de perte de données).  
   
     > [!NOTE]  
-    >  Nous vous recommandons de définir la propriété WITNESS sur OFF en mode haute performance. Sinon, pour mettre la base de données en ligne, le serveur miroir doit être connecté au témoin.  
+    >  Nous vous recommandons de définir la propriété WITNESS sur OFF en mode haute performance. Sinon, pour mettre la base de données en ligne, le serveur miroir doit être connecté au témoin.  
   
      Pour plus d’informations, consultez [Service forcé (avec possible perte de données)](#ForcedService), plus loin dans cette rubrique.  
   
@@ -72,12 +77,12 @@ caps.handback.revision: 50
   
  Après un basculement de rôle, certaines métadonnées doivent exister sur les deux partenaires pour garantir que tous les utilisateurs de base de données peuvent accéder à la nouvelle base de données principale. De plus, des travaux de sauvegarde doivent être créés sur le nouveau serveur principal pour garantir que la base de données continue d'être sauvegardée régulièrement. Pour plus d’informations, consultez [Gestion des connexions et des travaux après un basculement de rôle &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
- Au cours d'un basculement de rôle, la durée pendant laquelle la mise en miroir de base de données sera hors service dépend du type de basculement de rôle et de sa raison. Pour plus d’informations, consultez [Estimer l’interruption de service au cours d’un basculement de rôle &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).  
+ Au cours d'un basculement de rôle, la durée pendant laquelle la mise en miroir de base de données sera hors service dépend du type de basculement de rôle et de sa raison. Pour en savoir plus, voir [Estimer l’interruption de service au cours d’un basculement de rôle &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).  
   
-##  <a name="ManualFailover"></a> Basculement manuel  
+##  <a name="ManualFailover"></a> Manual Failover  
  Le basculement manuel déconnecte les clients de la base de données et inverse les rôles des partenaires. Seul le mode haute sécurité prend en charge le basculement manuel.  
   
- **Dans cette section :**  
+ **Dans cette section :**  
   
 -   [Maintien de la disponibilité lors des mises à niveau](#AvailabilityDuringUpgrades)  
   
@@ -99,7 +104,7 @@ caps.handback.revision: 50
  Le basculement manuel nécessite que la sécurité de transaction soit définie sur FULL (c'est-à-dire, mode haute sécurité). Lorsque les partenaires sont connectés et que la base de données est déjà synchronisée, un basculement manuel est possible.  
   
 ###  <a name="HowManualFoWorks"></a> Fonctionnement du basculement manuel  
- Le basculement manuel initialise la série d'actions suivante :  
+ Le basculement manuel initialise la série d'actions suivante :  
   
 1.  Le serveur principal déconnecte les clients de la base de données principale, envoie la fin du journal au serveur miroir, puis définit l'état de la mise en miroir à SYNCHRONIZING pour se préparer à prendre le rôle miroir.  
   
@@ -122,7 +127,7 @@ caps.handback.revision: 50
     > [!NOTE]  
     >  Dès que le nouveau serveur miroir a resynchronisé les bases de données, le basculement est de nouveau possible, mais dans le sens inverse.  
   
- Après le basculement, les clients doivent se reconnecter à la base de données principale actuelle. Pour plus d’informations, consultez [Connecter des clients à une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+ Après le basculement, les clients doivent se reconnecter à la base de données principale actuelle. Pour en savoir plus, voir [Connecter des clients à une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
  **Pour initialiser un basculement manuel**  
   
@@ -130,13 +135,13 @@ caps.handback.revision: 50
   
 -   [Basculer manuellement une session de mise en miroir de bases de données &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md).  
   
-##  <a name="AutomaticFailover"></a> Basculement automatique  
+##  <a name="AutomaticFailover"></a> Automatic Failover  
  Le basculement automatique est pris en charge uniquement dans les sessions de mise en miroir de bases de données s’exécutant avec un témoin et en mode haute sécurité (*mode haute sécurité avec basculement automatique*). En mode haute sécurité avec basculement automatique, une fois la base de données synchronisée, si la base de données principale devient non disponible, le basculement automatique se produit. Lors d'un basculement automatique, le serveur miroir assume le rôle de serveur principal et met en ligne sa copie de la base de données en tant que base de données principale. Exiger la synchronisation de la base de données empêche toute perte de données lors du basculement, car chaque transaction validée sur la base de données principale est également validée sur la base de données miroir.  
   
 > [!IMPORTANT]  
 >  Pour que le basculement automatique améliore la fiabilité, les bases de données miroir et principale doivent résider sur des ordinateurs distincts.  
   
- **Dans cette section :**  
+ **Dans cette section :**  
   
 -   [Conditions requises pour un basculement automatique](#ConditionsForAutoFo)  
   
@@ -147,7 +152,7 @@ caps.handback.revision: 50
 -   [Pour désactiver le basculement automatique (à l'aide de Transact-SQL)](#DisableAutoTsql)  
   
 ###  <a name="ConditionsForAutoFo"></a> Conditions requises pour un basculement automatique  
- Le basculement automatique nécessite les conditions suivantes :  
+ Le basculement automatique nécessite les conditions suivantes :  
   
 -   La session de mise en miroir de bases de données doit s'exécuter en mode haute sécurité et doit posséder un témoin. Pour en savoir plus, voir [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
@@ -163,7 +168,7 @@ caps.handback.revision: 50
      La manière dont le serveur miroir détecte une défaillance du serveur principal est variable, selon qu'il s'agisse d'une défaillance matérielle ou logicielle. Pour plus d’informations, consultez [Défaillances possibles pendant la mise en miroir d’une base de données](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md).  
   
 ###  <a name="HowAutoFoWorks"></a> Fonctionnement du basculement automatique  
- Sous les conditions précédentes, le basculement automatique initialise la séquence d'actions suivante :  
+ Sous les conditions précédentes, le basculement automatique initialise la séquence d'actions suivante :  
   
 1.  Si le serveur principal fonctionne toujours, il change l'état de la base de données principale en DISCONNECTED et déconnecte tous les clients de la base de données principale.  
   
@@ -184,10 +189,10 @@ caps.handback.revision: 50
   
  Au départ, les trois serveurs sont connectés (la session bénéficie d'un quorum complet). **Partner_A** est le serveur principal, **Partner_B** le serveur miroir. **Partner_A** (ou la base de données principale sur **Partner_A**) devient non disponible. Le témoin et **Partner_B** détectent tous les deux que le principal n’est plus disponible et la session conserve le quorum. **Partner_B** devient le serveur principal et rend sa copie de la base de données disponible en tant que nouvelle base de données principale. Finalement, **Partner_A** se reconnecte à la session et découvre que **Partner_B** possède maintenant le rôle principal. **Partner_A** prend alors le rôle miroir.  
   
- Après le basculement, les clients doivent se reconnecter à la base de données principale actuelle. Pour plus d’informations, consultez [Connecter des clients à une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+ Après le basculement, les clients doivent se reconnecter à la base de données principale actuelle. Pour en savoir plus, voir [Connecter des clients à une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 > [!NOTE]  
->  Les transactions qui ont été préparées à l'aide du service MSDTC ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator) mais qui ne sont toujours pas validées au moment du basculement, sont considérées comme abandonnées après le basculement de la base de données.  
+>  Les transactions qui ont été préparées à l'aide du service MSDTC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator) mais qui ne sont toujours pas validées au moment du basculement, sont considérées comme abandonnées après le basculement de la base de données.  
   
 ###  <a name="DisableAutoSSMS"></a> Pour désactiver le basculement automatique (SQL Server Management Studio)  
  Ouvrez la page **Mise en miroir** de la boîte de dialogue Propriétés de la base de données, puis changez de mode de fonctionnement en sélectionnant l’une des options suivantes :  
@@ -210,10 +215,10 @@ caps.handback.revision: 50
     > [!NOTE]  
     >  La désactivation du témoin avec maintien de la sécurité complète des transactions place la session en mode haute sécurité sans basculement automatique.  
   
-##  <a name="ForcedService"></a> Service forcé (avec possibilité de perte de données)  
+##  <a name="ForcedService"></a> Forced Service (with Possible Data Loss)  
  La mise en miroir de bases de données fournit un service forcé (avec possibilité de perte de données) en guise de méthode de récupération d'urgence afin de vous permettre d'utiliser un serveur miroir en tant que serveur de secours actif. Le service forcé est possible uniquement si le serveur principal est déconnecté du serveur miroir lors d'une session de mise en miroir. Le service forcé entraînant un risque de perte de données, il convient de l'utiliser avec prudence et parcimonie.  
   
- La prise en charge du service forcé dépend du mode de fonctionnement et de l'état de la session, comme suit :  
+ La prise en charge du service forcé dépend du mode de fonctionnement et de l'état de la session, comme suit :  
   
 -   En général, le mode hautes performances prend en charge le service forcé lorsque le serveur principal est déconnecté. Cependant, et bien que cela ne soit pas obligatoire, un témoin peut exister pour une session en mode hautes performances. Dans ce cas, le service forcé exige que le serveur miroir et le témoin soient interconnectés.  
   
@@ -226,7 +231,7 @@ caps.handback.revision: 50
 > [!IMPORTANT]  
 >  Si le serveur principal a simplement été déconnecté de la session de mise en miroir de bases de données et qu'il est encore en cours d'exécution, certains clients peuvent continuer d'accéder à la base de données principale d'origine. Avant de forcer le service, il est important d'empêcher les clients d'accéder au serveur principal d'origine. Autrement, une fois le service forcé, la base de données principale d'origine et la base de données principale actuelle risquent d'être mises à jour indépendamment l'une de l'autre.  
   
- **Dans cette section :**  
+ **Dans cette section :**  
   
 -   [Cas ordinaire de service forcé](#TypicalCaseFS)  
   
@@ -249,13 +254,13 @@ caps.handback.revision: 50
 >  Bien que le mode hautes performances n'ait pas besoin de témoin, si un témoin est configuré, il est possible de forcer le service seulement si le témoin est connecté au serveur miroir.  
   
 ###  <a name="FSrisks"></a> Risques posés par le service forcé  
- Il est essentiel de comprendre que le service forcé peut entraîner une perte de données. La perte de données est possible car le serveur miroir ne peut pas communiquer avec le serveur principal et, par conséquent, ne peut pas garantir la synchronisation des deux bases de données. Le service forcé démarre un nouveau point de branchement de récupération. Étant donné que la base de données principale et la base de données miroir d'origine sont situées sur différents branchements de récupération, chaque base de données contient maintenant des données qui ne figurent pas dans l'autre base de données : la base de données principale d'origine contient toutes les modifications qui n'avaient pas encore été envoyées de sa file d'attente d'envoi à l'ancienne base de données miroir (le journal non envoyé) ; l'ancienne base de données miroir contient toutes les modifications qui surviennent une fois le service forcé.  
+ Il est essentiel de comprendre que le service forcé peut entraîner une perte de données. La perte de données est possible car le serveur miroir ne peut pas communiquer avec le serveur principal et, par conséquent, ne peut pas garantir la synchronisation des deux bases de données. Le service forcé démarre un nouveau point de branchement de récupération. Étant donné que la base de données principale et la base de données miroir d'origine sont situées sur différents branchements de récupération, chaque base de données contient maintenant des données qui ne figurent pas dans l'autre base de données : la base de données principale d'origine contient toutes les modifications qui n'avaient pas encore été envoyées de sa file d'attente d'envoi à l'ancienne base de données miroir (le journal non envoyé) ; l'ancienne base de données miroir contient toutes les modifications qui surviennent une fois le service forcé.  
   
  Si le service est forcé suite à une défaillance du serveur principal, le risque de perte de données dépend du fait que les journaux de transactions ont été envoyés ou non au serveur miroir avant la défaillance. En mode haute sécurité, cela est possible uniquement jusqu'à ce que la base de données miroir soit synchronisée. En mode hautes performances, une accumulation du journal non envoyé est toujours une possibilité.  
   
- Les implications du service forcé dépendent en partie de la présence d'un témoin dans la session :  
+ Les implications du service forcé dépendent en partie de la présence d'un témoin dans la session :  
   
--   En l'absence de témoin, le service peut être forcé si les partenaires sont déconnectés, par exemple en raison d'une rupture de leur connexion réseau. Si le serveur principal d'origine est encore en cours d'exécution, les deux partenaires détiennent le rôle principal. Les clients qui se connectent au nouveau serveur principal accèderont à la version actuelle de la base de données, alors que les clients qui se connectent au serveur principal d'origine accèderont à la base de données principale d'origine. Cette situation accroît le risque de perte de données. Si les partenaires sont autorisés à se reconnecter, le serveur principal d'origine assume le rôle de miroir et modifie l'état de sa base de données en « récupération » avant que la mise en miroir soit suspendue. Si la session reprend, les transactions de la base de données principale d'origine dont le journal se trouvait dans la file d'attente d'envoi lors de la déconnexion la plus récente sont perdues. En outre, toutes les transactions qui ont eu lieu après le forçage du service sont également perdues.  
+-   En l'absence de témoin, le service peut être forcé si les partenaires sont déconnectés, par exemple en raison d'une rupture de leur connexion réseau. Si le serveur principal d'origine est encore en cours d'exécution, les deux partenaires détiennent le rôle principal. Les clients qui se connectent au nouveau serveur principal accèderont à la version actuelle de la base de données, alors que les clients qui se connectent au serveur principal d'origine accèderont à la base de données principale d'origine. Cette situation accroît le risque de perte de données. Si les partenaires sont autorisés à se reconnecter, le serveur principal d'origine assume le rôle de miroir et modifie l'état de sa base de données en « récupération » avant que la mise en miroir soit suspendue. Si la session reprend, les transactions de la base de données principale d'origine dont le journal se trouvait dans la file d'attente d'envoi lors de la déconnexion la plus récente sont perdues. En outre, toutes les transactions qui ont eu lieu après le forçage du service sont également perdues.  
   
 -   En présence d'un témoin, si le serveur miroir est déconnecté du serveur principal et du témoin, le principal demeure exposé tant qu'il est connecté au témoin. Si le serveur principal est ensuite déconnecté du témoin, il ne sert plus la base de données. Par la suite, si le serveur miroir se reconnecte au témoin, le service forcé devient possible. Si le service est forcé, toutes les modifications apportées pendant que le serveur principal d'origine s'exécutait en situation exposée seront perdues si le serveur principal d'origine se reconnecte.  
   
@@ -264,10 +269,10 @@ caps.handback.revision: 50
 ###  <a name="ManageDataLoss"></a> Gestion de la perte de données potentielle  
  Après le forçage du service, une fois l'ancien serveur principal disponible, en supposant que sa base de données ne soit pas endommagée, vous pouvez tenter de gérer la perte de données potentielle. La méthode disponible pour gérer la perte de données potentielle dépend selon que le serveur principal d'origine s'est reconnecté à son partenaire et a rejoint la session de mise en miroir. En supposant que le serveur principal d'origine puisse accéder à la nouvelle instance principale, la reconnexion se produit automatiquement et de manière transparente.  
   
-#### Le serveur principal d'origine s'est reconnecté  
+#### <a name="the-original-principal-server-has-reconnected"></a>Le serveur principal d'origine s'est reconnecté  
  En général, après une défaillance, lorsque le serveur principal d'origine redémarre, il se reconnecte rapidement à son partenaire. Lors de la reconnexion, le serveur principal d'origine devient le serveur miroir. Sa base de données devient la base de données miroir et passe à l'état de récupération avant que la session soit suspendue. La base de données miroir ne sera restaurée que si vous rétablissez la mise en miroir.  
   
- Toutefois, la base de données de récupération est inaccessible ; par conséquent, vous ne pouvez pas l'inspecter afin d'évaluer les données qui seraient perdues si vous rétablissiez la mise en miroir. La décision relative à la reprise ou à la suppression de la mise en miroir dépend donc selon que vous souhaitez accepter ou non le risque de perte de données.  
+ Toutefois, la base de données de récupération est inaccessible ; par conséquent, vous ne pouvez pas l'inspecter afin d'évaluer les données qui seraient perdues si vous rétablissiez la mise en miroir. La décision relative à la reprise ou à la suppression de la mise en miroir dépend donc selon que vous souhaitez accepter ou non le risque de perte de données.  
   
 -   Si la perte de données est inacceptable, vous devez supprimer la mise en miroir afin de récupérer les données.  
   
@@ -277,7 +282,7 @@ caps.handback.revision: 50
   
      La reprise de la mise en miroir entraîne la restauration de la nouvelle base de données miroir en guise de première étape vers la synchronisation de la base de données. Si des enregistrements de journal se trouvaient dans la file d'attente d'envoi au moment de la défaillance, les transactions correspondantes sont perdues, même si elles ont été validées.  
   
-#### Le serveur principal d'origine ne s'est pas reconnecté  
+#### <a name="the-original-principal-server-has-not-reconnected"></a>Le serveur principal d'origine ne s'est pas reconnecté  
  Si vous pouvez empêcher momentanément le serveur principal d'origine de se reconnecter par le biais du réseau au nouveau serveur principal, vous pouvez inspecter la base de données principale d'origine afin d'évaluer les données qui seraient perdues si vous rétablissiez la mise en miroir.  
   
 -   Si la perte de données potentielle est acceptable  
@@ -307,11 +312,11 @@ caps.handback.revision: 50
   
 -   [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)  
   
--   [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Estimer l’interruption de service au cours d’un basculement de rôle &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [Défaillances possibles pendant la mise en miroir d'une base de données](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
+ [Défaillances possibles pendant la mise en miroir de bases de données](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
  [Connecter des clients à une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Témoin de mise en miroir de base de données](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [Restaurations complètes de bases de données &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   

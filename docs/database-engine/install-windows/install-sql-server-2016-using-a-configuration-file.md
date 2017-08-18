@@ -1,25 +1,30 @@
 ---
-title: "Installer SQL Server&#160;2016 &#224; l’aide d’un fichier de configuration | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/20/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "home-page"
+title: "Installer SQL Server 2016 à l’aide d’un fichier de configuration | Microsoft Docs"
+ms.custom: 
+ms.date: 01/20/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: home-page
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: bfde812d87371a8ae730be4a01577f714334adc6
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Installer SQL Server&#160;2016 &#224; l’aide d’un fichier de configuration
+# <a name="install-sql-server-2016-using-a-configuration-file"></a>Installer SQL Server 2016 à l’aide d’un fichier de configuration
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le programme d’installation permet de générer un fichier de configuration basé sur les entrées système par défaut et celles effectuées au moment de l’exécution. Vous pouvez utiliser le fichier de configuration pour déployer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans la totalité de l'entreprise avec la même configuration. Vous pouvez également standardiser les installations manuelles dans l'ensemble de l'entreprise, en créant un fichier de commandes qui lance Setup.exe.  
   
- Le programme d'installation prend en charge l'utilisation du fichier de configuration uniquement via l'invite de commandes. L'ordre de traitement des paramètres lors de l'utilisation du fichier de configuration est décrit ci-dessous :  
+ Le programme d'installation prend en charge l'utilisation du fichier de configuration uniquement via l'invite de commandes. L'ordre de traitement des paramètres lors de l'utilisation du fichier de configuration est décrit ci-dessous :  
   
 -   Le fichier de configuration remplace les valeurs par défaut d'un package.  
   
@@ -27,10 +32,10 @@ caps.handback.revision: 34
   
  Le fichier de configuration permet d'assurer le suivi des paramètres et des valeurs de chaque installation. Cela le rend très utile pour vérifier et auditer des installations.  
   
-## Structure de fichier de configuration  
+## <a name="configuration-file-structure"></a>Structure de fichier de configuration  
  Le fichier ConfigurationFile.ini est un fichier texte avec des paramètres (paire nom/valeur) et des commentaires descriptifs.  
   
- Voici un exemple de fichier ConfigurationFile.ini :  
+ Voici un exemple de fichier ConfigurationFile.ini :  
   
 ```  
 ; Microsoft SQL Server Configuration file  
@@ -46,33 +51,33 @@ ACTION="Install"
 FEATURES=SQL,Tools  
 ```  
   
-#### Comment générer un fichier de configuration  
+#### <a name="how-to-generate-a-configuration-file"></a>Comment générer un fichier de configuration  
   
-1.  Insérez le support d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dans le dossier racine, double-cliquez sur Setup.exe. Pour effectuer l'installation à partir d'un partage réseau, recherchez le dossier racine sur le partage, puis double-cliquez sur Setup.exe.  
+1.  Insérez le support d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Dans le dossier racine, double-cliquez sur Setup.exe. Pour effectuer l'installation à partir d'un partage réseau, recherchez le dossier racine sur le partage, puis double-cliquez sur Setup.exe.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition ne crée pas de fichier de configuration automatiquement. La commande suivante démarre l’installation et crée un fichier de configuration.  
     >   
     >  SETUP.exe /UIMODE=Normal /ACTION=INSTALL  
   
-2.  Suivez le déroulement des étapes de l'Assistant jusqu'à la page **Prêt pour l'installation** . Le chemin d'accès au fichier de configuration est spécifié dans la page **Prêt pour l'installation** , dans la section relative au chemin d'accès du fichier de configuration. Pour plus d’informations sur la façon d’installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Installer SQL Server 2016 avec l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/install-sql-server-2016-from-the-installation-wizard-setup.md).  
+2.  Suivez le déroulement des étapes de l'Assistant jusqu'à la page **Prêt pour l'installation** . Le chemin d'accès au fichier de configuration est spécifié dans la page **Prêt pour l'installation** , dans la section relative au chemin d'accès du fichier de configuration. Pour plus d’informations sur la façon d’installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Installer SQL Server 2016 avec l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
 3.  Annulez l'exécution du programme d'installation sans réellement terminer l'installation afin de générer le fichier INI.  
   
     > [!NOTE]  
     >  L'infrastructure d'installation écrit tous les paramètres appropriés pour les actions exécutées, à l'exception des informations sensibles comme les mots de passe. Le paramètre /IAcceptSQLServerLicenseTerms n'est pas écrit dans le fichier de configuration et requiert soit une modification du fichier de configuration, soit une valeur à fournir à l'invite de commandes. Pour plus d’informations, consultez [Installer SQL Server 2016 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). De plus, une valeur est incluse pour les paramètres booléens pour lesquels une valeur n'est généralement pas fournie via l'invite de commandes.  
   
-## Utilisation du fichier de configuration pour installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="using-the-configuration-file-to-install-includessnoversionincludesssnoversion-mdmd"></a>Utilisation du fichier de configuration pour installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Vous ne pouvez utiliser le fichier de configuration que pour les installations en ligne de commande.  
   
 > [!NOTE]  
 >  Si vous devez apporter des modifications au fichier de configuration, nous vous recommandons de faire une copie de ce dernier et de l''utiliser.  
   
-#### Comment utiliser un fichier de configuration pour installer une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autonome  
+#### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance"></a>Comment utiliser un fichier de configuration pour installer une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autonome  
   
 -   Exécutez l'installation à partir de l'invite de commandes et spécifiez le fichier ConfigurationFile.ini à l'aide du paramètre *ConfigurationFile* .  
   
-#### Procédure d'utilisation d'un fichier de configuration afin de préparer et finaliser une image d'une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autonome (SysPrep)  
+#### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance-sysprep"></a>Procédure d'utilisation d'un fichier de configuration afin de préparer et finaliser une image d'une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autonome (SysPrep)  
   
 1.  Pour préparer une ou plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les configurer sur le même ordinateur.  
   
@@ -90,19 +95,19 @@ FEATURES=SQL,Tools
   
     -   Le fichier de configuration de finalisation d'image peut être stocké avec l'image Windows pour l'automatisation de la configuration des instances préparées.  
   
-#### Procédure d'installation d'un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du fichier de configuration  
+#### <a name="how-to-install-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>Procédure d'installation d'un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du fichier de configuration  
   
-1.  Option d'installation intégrée (créez un cluster de basculement à nœud unique sur un nœud et exécutez AddNode sur les nœuds supplémentaires) :  
+1.  Option d'installation intégrée (créez un cluster de basculement à nœud unique sur un nœud et exécutez AddNode sur les nœuds supplémentaires) :  
   
     -   Effectuez l'installation d'un cluster de basculement et capturez le fichier de configuration qui répertorie tous les paramètres d'installation.  
   
-    -   Effectuez l’installation du cluster de basculement à partir de la ligne de commande en spécifiant le paramètre *ConfigurationFile*.  
+    -   Effectuez l’installation du cluster de basculement à partir de la ligne de commande en spécifiant le paramètre *ConfigurationFile* .  
   
     -   Sur un nœud supplémentaire destiné à être ajouté, exécutez AddNode afin de capturer le fichier ConfigurationFile.ini applicable au cluster de basculement existant.  
   
     -   Exécutez AddNode à partir de la ligne de commande sur tous les nœuds supplémentaires destinés à joindre le cluster de basculement, en spécifiant le même fichier de configuration à l'aide du paramètre ConfigurationFile.  
   
-2.  Option d'installation avancée (préparez le cluster de basculement sur tous les nœuds de cluster de basculement, puis, après avoir préparé tous les nœuds, exécutez l'opération de création sur le nœud propriétaire du disque partagé) :  
+2.  Option d'installation avancée (préparez le cluster de basculement sur tous les nœuds de cluster de basculement, puis, après avoir préparé tous les nœuds, exécutez l'opération de création sur le nœud propriétaire du disque partagé) :  
   
     -   Exécutez **Prepare** sur l'un des nœuds et capturez le fichier ConfigurationFile.ini.  
   
@@ -112,34 +117,35 @@ FEATURES=SQL,Tools
   
     -   Vous pouvez ensuite spécifier ce fichier ConfigurationFile.ini pour créer le cluster de basculement.  
   
-#### Comment ajouter ou supprimer un nœud dans un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du fichier de configuration  
+#### <a name="how-to-add-or-remove-a-node-to-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>Comment ajouter ou supprimer un nœud dans un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du fichier de configuration  
   
 -   Si vous disposez d'un fichier de configuration qui a été précédemment utilisé pour ajouter ou supprimer un nœud dans un cluster de basculement, vous pouvez réutiliser ce même fichier pour ajouter ou supprimer des nœuds supplémentaires.  
   
-#### Comment mettre à niveau un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du fichier de configuration  
+#### <a name="how-to-upgrade-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>Comment mettre à niveau un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du fichier de configuration  
   
 1.  Exécutez la mise à niveau sur le nœud passif et capturez le fichier ConfigurationFile.ini. Pour ce faire, vous pouvez effectuer la mise à niveau réelle ou sortir à la fin du processus sans effectuer la mise à niveau réelle.  
   
 2.  Sur tous les nœuds supplémentaires à mettre à niveau, spécifiez le fichier ConfigurationFile.ini pour exécuter le processus.  
   
-## Exemple de syntaxe  
- Voici quelques exemples qui illustrent l'utilisation du fichier de configuration :  
+## <a name="sample-syntax"></a>Exemple de syntaxe  
+ Voici quelques exemples qui illustrent l'utilisation du fichier de configuration :  
   
--   Pour spécifier le fichier de configuration à l'invite de commandes :  
+-   Pour spécifier le fichier de configuration à l'invite de commandes :  
   
 ```  
 Setup.exe /ConfigurationFile=MyConfigurationFile.INI  
 ```  
   
--   Pour spécifier des mots de passe à l'invite de commandes plutôt que dans le fichier de configuration :  
+-   Pour spécifier des mots de passe à l'invite de commandes plutôt que dans le fichier de configuration :  
   
 ```  
 Setup.exe /SQLSVCPASSWORD="************" /AGTSVCPASSWORD="************" /ASSVCPASSWORD="************" /ISSVCPASSWORD="************" /RSSVCPASSWORD="************" /ConfigurationFile=MyConfigurationFile.INI  
 ```  
   
-## Voir aussi  
- [Installer SQL Server 2016 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
- [Installation d'un cluster de basculement SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
- [Mise à niveau d’une instance de cluster de basculement SQL Server](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Installer SQL Server 2016 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [Installation d’un cluster de basculement SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
+ [Mettre à niveau une instance de cluster de basculement SQL Server](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
   
   
+

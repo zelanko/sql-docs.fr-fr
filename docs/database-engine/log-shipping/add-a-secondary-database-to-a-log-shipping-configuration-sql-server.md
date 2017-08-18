@@ -1,36 +1,41 @@
 ---
-title: "Ajouter une base de donn&#233;es secondaire dans une configuration de copie des journaux de transaction (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ajout de bases de données secondaires"
-  - "bases de données secondaires [SQL Server], dans copie des journaux de transaction"
-  - "fichiers de données secondaires [SQL Server], ajout"
-  - "copie des journaux de transaction [SQL Server], bases de données secondaires"
+title: "Ajouter une base de données secondaire dans une configuration de copie des journaux de transaction (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- adding secondary databases
+- secondary databases [SQL Server], in log shipping
+- secondary data files [SQL Server], adding
+- log shipping [SQL Server], secondary databases
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d1f64d49c5baf05dc1c7f18c4c0c568a94e424ae
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Ajouter une base de donn&#233;es secondaire dans une configuration de copie des journaux de transaction (SQL Server)
+# <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>Ajouter une base de données secondaire dans une configuration de copie des journaux de transaction (SQL Server)
   Cette rubrique explique comment ajouter une base de données secondaire à une configuration de copie des journaux de transaction dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour ajouter une base de données secondaire pour la copie des journaux de transaction, utilisez :**  
+-   **Pour ajouter une base de données secondaire pour la copie des journaux de transaction, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -43,11 +48,11 @@ caps.handback.revision: 20
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Les procédures stockées de copie des journaux de transaction nécessitent l’appartenance au rôle serveur fixe **sysadmin**.  
+ Les procédures stockées de copie des journaux de transaction nécessitent l’appartenance au rôle serveur fixe **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour ajouter une base de données secondaire pour la copie des journaux de transaction  
+#### <a name="to-add-a-log-shipping-secondary-database"></a>Pour ajouter une base de données secondaire pour la copie des journaux de transaction  
   
 1.  Cliquez avec le bouton droit sur la base de données à utiliser en tant que base de données primaire dans la configuration de copie des journaux de transaction, puis sélectionnez **Propriétés**.  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 20
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour ajouter une base de données secondaire pour la copie des journaux de transaction  
+#### <a name="to-add-a-log-shipping-secondary-database"></a>Pour ajouter une base de données secondaire pour la copie des journaux de transaction  
   
 1.  Sur le serveur secondaire, exécutez [sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md) en fournissant les informations sur le serveur et la base de données principaux. Cette procédure stockée retourne l'ID secondaire et les ID des travaux de copie et de restauration.  
   
@@ -91,7 +96,7 @@ caps.handback.revision: 20
   
 4.  Sur le serveur principal, exécutez [sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md) pour ajouter les informations requises sur la nouvelle base de données secondaire au serveur principal.  
   
-5.  Sur le serveur secondaire, activez les travaux de copie et de restauration. Pour plus d’informations, consultez [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
+5.  Sur le serveur secondaire, activez les travaux de copie et de restauration. Pour plus d’informations, consultez [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd).  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   
@@ -109,8 +114,8 @@ caps.handback.revision: 20
   
 -   [Basculer vers une base de données secondaire de copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## Voir aussi  
- [À propos de la copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>Voir aussi  
+ [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Tables et procédures stockées liées à la copie des journaux de transaction](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   
   

@@ -1,26 +1,31 @@
 ---
-title: "Mise en miroir et instantan&#233;s de bases de donn&#233;es (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mise en miroir de bases de données [SQL Server], interopérabilité"
-  - "instantanés [instantanés de base de données SQL Server], mise en miroir de bases de données"
-  - "instantanés [SQL Server], mise en miroir de bases de données"
+title: "Mise en miroir et instantanés de bases de données (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], interoperability
+- snapshots [SQL Server database snapshots], database mirroring
+- database snapshots [SQL Server], database mirroring
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
 caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 32381132f193eae0c3ecae20247d36dcefb8f658
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Mise en miroir et instantan&#233;s de bases de donn&#233;es (SQL Server)
+# <a name="database-mirroring-and-database-snapshots-sql-server"></a>Mise en miroir et instantanés de bases de données (SQL Server)
   Une base de données miroir maintenue à des fins de disponibilité peut être utilisée dans le but de décharger la création de rapports. Pour utiliser une base de données miroir à des fins de création de rapports, créez un instantané de base de données sur la base de données miroir et redirigez les requêtes de connexions clientes vers l'instantané le plus récent. Un instantané de base de données est une image – statique, en lecture seule et cohérente par rapport aux transactions – de sa base de données source telle qu'elle existait au moment de la création de l'instantané. Pour créer un instantané de base de données dans une base de données miroir, la base de données doit être dans un état de mise en miroir synchronisée.  
   
  Contrairement à la base de données miroir, un instantané de base de données est accessible à tous les clients. Tant que le serveur miroir communique avec le serveur principal, vous pouvez demander aux clients sources des rapports de se connecter à un instantané. Notez qu'un instantané de base de données étant statique, les nouvelles données ne sont pas disponibles. Pour que les utilisateurs puissent accéder aux données relativement récentes, un instantané de base de données doit être créé régulièrement et les applications doivent diriger les connexions clientes entrantes vers ce nouvel instantané.  
@@ -35,10 +40,10 @@ caps.handback.revision: 40
 > [!NOTE]  
 >  Pour une solution de création de rapports dotée d'une bonne capacité de déploiement horizontal, envisagez la réplication. Pour plus d’informations, consultez [Réplication SQL Server](../../relational-databases/replication/sql-server-replication.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  Cet exemple créé des instantanés de bases de données sur une base de données miroir.  
   
- Imaginons que la base de données d'une session de mise en miroir de base de données soit la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Cet exemple crée trois instantanés de base de données sur la copie miroir de la base de données `AdventureWorks` qui réside sur le lecteur `F`. Les noms des instantanés sont `AdventureWorks_0600`, `AdventureWorks_1200` et `AdventureWorks_1800` ; ils identifient les heures de création approximatives des captures.  
+ Imaginons que la base de données d'une session de mise en miroir de base de données soit la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Cet exemple crée trois instantanés de base de données sur la copie miroir de la base de données `AdventureWorks` qui réside sur le lecteur `F` . Les noms des instantanés sont `AdventureWorks_0600`, `AdventureWorks_1200`et `AdventureWorks_1800` ; ils identifient les heures de création approximatives des captures.  
   
 1.  Créez le premier instantané de base de données sur le miroir de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
@@ -76,9 +81,8 @@ caps.handback.revision: 40
   
 -   [Supprimer un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [&#91;Haut&#93;](#Top)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Instantanés de base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [Connecter des clients à une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)  
   

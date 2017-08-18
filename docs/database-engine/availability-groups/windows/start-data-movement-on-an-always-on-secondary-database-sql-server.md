@@ -1,38 +1,43 @@
 ---
-title: "D&#233;marrer un mouvement de donn&#233;es sur une base de donn&#233;es secondaire Always On (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "groupes de disponibilité [SQL Server], bases de données"
+title: "Démarrer un déplacement de données sur une base de données secondaire AlwaysOn (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], databases
 ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
 caps.latest.revision: 17
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 842e500bc9579b31601aa1f6814593024cdaaeb7
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# D&#233;marrer un mouvement de donn&#233;es sur une base de donn&#233;es secondaire Always On (SQL Server)
+# <a name="start-data-movement-on-an-always-on-secondary-database-sql-server"></a>Démarrer un déplacement de données sur une base de données secondaire AlwaysOn (SQL Server) 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique contient des informations sur le démarrage de la synchronisation des données après avoir ajouté une base de données à un groupe de disponibilité Always On. Pour chaque nouveau réplica principal, les bases de données secondaires doivent être préparées sur les instances de serveur qui hébergent les réplicas secondaires. Puis, chacune de ces bases de données secondaires doit être attachée manuellement au groupe de disponibilité.  
   
 > [!NOTE]  
->  Si les chemins d’accès aux fichiers sont identiques sur chaque instance de serveur qui héberge un réplica de disponibilité pour un groupe de disponibilité, [l’Assistant Nouveau groupe de disponibilité](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md), [l’Assistant Ajouter un réplica au groupe de disponibilité](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md) ou [l’Assistant Ajouter une base de données au groupe de disponibilité](../../../database-engine/availability-groups/windows/use-the-add-database-to-availability-group-wizard-sql-server-management-studio.md) peut être en mesure de démarrer automatiquement la synchronisation des données.  
+>  Si les chemins d’accès aux fichiers sont identiques sur chaque instance de serveur qui héberge un réplica de disponibilité pour un groupe de disponibilité, [l’Assistant Nouveau groupe de disponibilité](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md), [l’Assistant Ajouter un réplica au groupe de disponibilité](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)ou [l’Assistant Ajouter une base de données au groupe de disponibilité](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md) peut être en mesure de démarrer automatiquement la synchronisation des données.  
   
- Pour démarrer la synchronisation des données manuellement, vous devez vous connecter, tour à tour, à chaque instance de serveur qui héberge un réplica secondaire pour le groupe de disponibilité et procéder comme suit :  
+ Pour démarrer la synchronisation des données manuellement, vous devez vous connecter, tour à tour, à chaque instance de serveur qui héberge un réplica secondaire pour le groupe de disponibilité et procéder comme suit :  
   
-1.  Restaurez les sauvegardes actuelles de chaque base de données primaire et de son journal des transactions (à l'aide de RESTORE WITH NORECOVERY). Vous pouvez utiliser l'une des autres approches suivantes :  
+1.  Restaurez les sauvegardes actuelles de chaque base de données primaire et de son journal des transactions (à l'aide de RESTORE WITH NORECOVERY). Vous pouvez utiliser l'une des autres approches suivantes :  
   
     -   Restaurez manuellement une sauvegarde récente de la base de données primaire à l'aide de RESTORE WITH NORECOVERY, puis restaurez chaque sauvegarde de journal suivante à l'aide de RESTORE WITH NORECOVERY. Effectuez cette séquence de restauration sur chaque instance de serveur qui héberge un réplica secondaire pour le groupe de disponibilité.  
   
-         **Pour plus d'informations, consultez :**  
+         **Pour plus d'informations, consultez :**  
   
          [Préparer manuellement une base de données secondaire pour un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
@@ -41,15 +46,15 @@ caps.handback.revision: 17
         > [!NOTE]  
         >  Après avoir créé toutes les bases de données secondaires pour le groupe de disponibilité, si vous souhaitez effectuer des sauvegardes sur des réplicas secondaires, vous devez reconfigurer la préférence de sauvegarde automatisée du groupe de disponibilité.  
   
-         **Pour plus d'informations, consultez :**  
+         **Pour plus d'informations, consultez :**  
   
-         [Conditions préalables requises pour la migration de la copie des journaux de transaction vers les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs migrating log shipping to always on availability groups.md)  
+         [Conditions préalables requises pour la migration de la copie des journaux de transaction vers les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
          [Configurer la sauvegarde sur des réplicas de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
 2.  Dès que possible, attachez chaque base de données secondaire récemment préparée au groupe de disponibilité.  
   
-     **Pour plus d'informations, consultez :**  
+     **Pour plus d'informations, consultez :**  
   
      [Joindre une base de données secondaire à un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
@@ -59,9 +64,10 @@ caps.handback.revision: 17
   
 -   [Utiliser l’Assistant Ajouter un réplica au groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Utiliser l’Assistant Ajouter une base données au groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-database-to-availability-group-wizard-sql-server-management-studio.md)  
+-   [Utiliser l’Assistant Ajouter une base données au groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

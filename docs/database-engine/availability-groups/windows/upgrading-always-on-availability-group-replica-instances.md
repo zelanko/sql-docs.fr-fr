@@ -1,44 +1,49 @@
 ---
-title: "Mise &#224; niveau d’instances de r&#233;plica d’un groupe de disponibilit&#233; Always On | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Mise à niveau d’instances de réplica d’un groupe de disponibilité Always On | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 caps.latest.revision: 14
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1783e700e516978e4eded68fa675addd8d31a234
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Mise &#224; niveau d’instances de r&#233;plica d’un groupe de disponibilit&#233; Always On
+# <a name="upgrading-always-on-availability-group-replica-instances"></a>Mise à niveau d’instances de réplica d’un groupe de disponibilité Always On
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Pendant la mise à niveau d’un groupe de disponibilité Always On [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers une nouvelle version [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], un nouveau Service Pack [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou une mise à jour cumulative, ou pendant l’installation d’un nouveau Service Pack ou une nouvelle mise à jour cumulative Windows, vous pouvez réduire les temps d’arrêt pour chaque réplica principal à un seul basculement manuel en effectuant une mise à niveau propagée (ou deux basculements manuels en cas de restauration automatique vers l’instance principale d’origine). Pendant le processus de mise à niveau, un réplica secondaire sera pas disponible pour le basculement ou pour des opérations en lecture seule et, après la mise à niveau, le réplica secondaire peut prendre un certain temps rattraper son retard sur le nœud de réplica principal en fonction du volume d’activité sur le nœud de réplica principal (attendez-vous à un trafic réseau important).  
+  Pendant la mise à niveau d’un groupe de disponibilité Always On [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers une nouvelle version [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , un nouveau Service Pack [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ou une mise à jour cumulative, ou pendant l’installation d’un nouveau Service Pack ou une nouvelle mise à jour cumulative Windows, vous pouvez réduire les temps d’arrêt pour chaque réplica principal à un seul basculement manuel en effectuant une mise à niveau propagée (ou deux basculements manuels en cas de restauration automatique vers l’instance principale d’origine). Pendant le processus de mise à niveau, un réplica secondaire sera pas disponible pour le basculement ou pour des opérations en lecture seule et, après la mise à niveau, le réplica secondaire peut prendre un certain temps rattraper son retard sur le nœud de réplica principal en fonction du volume d’activité sur le nœud de réplica principal (attendez-vous à un trafic réseau important).  
   
 > [!NOTE]  
->  Cette rubrique limite la discussion à la mise à niveau de SQL Server lui-même. Elle ne couvre pas la mise à niveau du système d’exploitation contenant le cluster WSFC (Windows Server Failover Clusting). La mise à niveau du système d’exploitation Windows qui héberge le cluster de basculement n’est pas prise en charge psr les systèmes d’exploitation antérieurs à Windows Server 2012 R2. Pour mettre à niveau un nœud de cluster s’exécutant sur Windows Server 2012 R2, consultez la rubrique [Cluster Operating System Rolling Upgrade](https://technet.microsoft.com/library/dn850430.aspx) (Mise à niveau propagée du système d’exploitation de cluster).  
+>  Cette rubrique limite la discussion à la mise à niveau de SQL Server lui-même. Elle ne couvre pas la mise à niveau du système d’exploitation contenant le cluster WSFC (Windows Server Failover Clusting). La mise à niveau du système d’exploitation Windows qui héberge le cluster de basculement n’est pas prise en charge psr les systèmes d’exploitation antérieurs à Windows Server 2012 R2. Pour mettre à niveau un nœud de cluster s’exécutant sur Windows Server 2012 R2, consultez la rubrique [Cluster Operating System Rolling Upgrade](https://technet.microsoft.com/library/dn850430.aspx)(Mise à niveau propagée du système d’exploitation de cluster).  
   
-## Configuration requise  
+## <a name="prerequisites"></a>Configuration requise  
  Avant de commencer, passez en revue les informations importantes suivantes :  
   
 -   [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): vérifiez que vous pouvez procéder à une mise à niveau vers SQL Server 2016 à partir de votre version du système d’exploitation Windows et de la version de SQL Server. Par exemple, vous ne pouvez pas mettre à niveau directement une instance SQL Server 2005 vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 -   [Choose a Database Engine Upgrade Method](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): sélectionnez la méthode et les étapes de mise à niveau appropriées en fonction des versions et mises à niveau prises en charge ainsi que des autres composants installés dans votre environnement pour mettre à niveau les composants dans le bon ordre.  
   
--   [Planifier et tester le plan de mise à niveau du moteur de base de données](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) : consultez les notes de version et les problèmes de mise à niveau connus, ainsi que la liste de contrôle préalable à la mise à niveau, puis développez et testez votre plan de mise à niveau.  
+-   [Planifier et tester le plan de mise à niveau du moteur de base de données](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): consultez les notes de version et les problèmes de mise à niveau connus, ainsi que la liste de contrôle préalable à la mise à niveau, puis développez et testez votre plan de mise à niveau.  
   
--   [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md) : prenez connaissance de la configuration logicielle requise pour installer [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Si des logiciels supplémentaires sont nécessaires, installez-les sur chaque nœud avant de commencer le processus de mise à niveau pour réduire les éventuels temps d’arrêt.  
+-   [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): prenez connaissance de la configuration logicielle requise pour installer [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Si des logiciels supplémentaires sont nécessaires, installez-les sur chaque nœud avant de commencer le processus de mise à niveau pour réduire les éventuels temps d’arrêt.  
   
-## Bonnes pratiques pour la mise à niveau propagée de groupes de disponibilité Always On  
- Appliquez les meilleures pratiques suivantes lorsque vous effectuez la mise à niveau/mise à jour du serveur afin de réduire les temps d’arrêt et la perte de données de vos groupes de disponibilité :  
+## <a name="rolling-upgrade-best-practices-for-always-on-availability-groups"></a>Bonnes pratiques pour la mise à niveau propagée de groupes de disponibilité Always On  
+ Appliquez les meilleures pratiques suivantes lorsque vous effectuez la mise à niveau/mise à jour du serveur afin de réduire les temps d’arrêt et la perte de données de vos groupes de disponibilité :  
   
--   Avant de procéder à la mise à niveau propagée :  
+-   Avant de procéder à la mise à niveau propagée :  
   
     -   Procédez à un essai de basculement manuel sur au moins l’une de vos instances de réplica avec validation synchrone.  
   
@@ -62,10 +67,10 @@ caps.handback.revision: 14
   
 -   Avant de procéder au basculement d'un groupe de disponibilité, vérifiez que l'état de synchronisation de la cible de basculement est SYNCHRONIZED.  
   
-## Processus de mise à niveau propagée  
- Dans la pratique, le processus exact dépend de facteurs tels que la topologie de déploiement de vos groupes de disponibilité et du mode de validation de chaque réplica. Cependant, dans le scénario le plus simple, une mise à niveau propagée est un processus en plusieurs étapes impliquant les étapes suivantes :  
+## <a name="rolling-upgrade-process"></a>Processus de mise à niveau propagée  
+ Dans la pratique, le processus exact dépend de facteurs tels que la topologie de déploiement de vos groupes de disponibilité et du mode de validation de chaque réplica. Cependant, dans le scénario le plus simple, une mise à niveau propagée est un processus en plusieurs étapes impliquant les étapes suivantes :  
   
- ![Mise à niveau du groupe de disponibilité dans le scénario HADR](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "Mise à niveau du groupe de disponibilité dans le scénario HADR")  
+ ![Mise à niveau d’un groupe de disponibilité dans le scénario HADR](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "Mise à niveau d’un groupe de disponibilité dans le scénario HADR")  
   
 1.  Supprimer le basculement automatique sur tous les réplicas avec validation synchrone  
   
@@ -81,12 +86,12 @@ caps.handback.revision: 14
   
  Si nécessaire, effectuez un basculement manuel supplémentaire pour rétablir la configuration d'origine du groupe de disponibilité.  
   
-## Groupe de disponibilité avec un réplica secondaire distant  
- Si vous avez déployé un groupe de disponibilité uniquement à des fins de récupération d'urgence, vous devrez peut-être le basculer sur un réplica secondaire avec validation asynchrone. Cette configuration est illustrée dans la figure ci-dessous :  
+## <a name="availability-group-with-one-remote-secondary-replica"></a>Groupe de disponibilité avec un réplica secondaire distant  
+ Si vous avez déployé un groupe de disponibilité uniquement à des fins de récupération d'urgence, vous devrez peut-être le basculer sur un réplica secondaire avec validation asynchrone. Cette configuration est illustrée dans la figure ci-dessous :  
   
- ![Mise à niveau du groupe de disponibilité dans le scénario DR](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "Mise à niveau du groupe de disponibilité dans le scénario DR")  
+ ![Mise à niveau d’un groupe de disponibilité dans le scénario DR](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "Mise à niveau d’un groupe de disponibilité dans le scénario DR")  
   
- Dans ce cas, vous devez basculer le groupe de disponibilité sur le réplica secondaire avec validation asynchrone lors de la mise à niveau propagée. Pour éviter la perte de données, changez le mode de validation en validation synchrone et attendez que le réplica secondaire soit synchronisé avant de basculer le groupe de disponibilité. Par conséquent, le processus de mise à niveau à jour peut ressembler à ce qui suit :  
+ Dans ce cas, vous devez basculer le groupe de disponibilité sur le réplica secondaire avec validation asynchrone lors de la mise à niveau propagée. Pour éviter la perte de données, changez le mode de validation en validation synchrone et attendez que le réplica secondaire soit synchronisé avant de basculer le groupe de disponibilité. Par conséquent, le processus de mise à niveau à jour peut ressembler à ce qui suit :  
   
 1.  Mise à niveau l’instance de réplica secondaire sur le site distant  
   
@@ -102,16 +107,16 @@ caps.handback.revision: 14
   
 7.  Changer le mode de validation en validation asynchrone  
   
- Le mode de validation synchrone n'étant pas recommandé pour la synchronisation des données sur un site distant, les applications clientes peuvent remarquer une augmentation immédiate de la latence de la base de données après modification du paramètre. De plus, avec le basculement les messages du journal en attente d'accusé de réception sont ignorés. Le nombre de messages du journal ignorés peut être élevé en raison de la latence réseau élevée entre les deux sites, à l'origine d'un nombre élevé d'échecs de transactions des clients. Pour réduire l'impact sur les applications clientes, procédez comme suit :  
+ Le mode de validation synchrone n'étant pas recommandé pour la synchronisation des données sur un site distant, les applications clientes peuvent remarquer une augmentation immédiate de la latence de la base de données après modification du paramètre. De plus, avec le basculement les messages du journal en attente d'accusé de réception sont ignorés. Le nombre de messages du journal ignorés peut être élevé en raison de la latence réseau élevée entre les deux sites, à l'origine d'un nombre élevé d'échecs de transactions des clients. Pour réduire l'impact sur les applications clientes, procédez comme suit :  
   
 -   Sélectionnez avec précaution une fenêtre de maintenance lorsque le trafic est faible sur le client  
   
 -   Lors de la mise à niveau ou mise à jour sur le site principal [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , revenez au mode de disponibilité validation asynchrone, puis rétablissez la validation synchrone lorsque vous êtes prêt à effectuer le basculement sur le site principal  
   
-## Groupe de disponibilité avec nœuds d'instance de cluster de basculement  
+## <a name="availability-group-with-failover-cluster-instance-nodes"></a>Groupe de disponibilité avec nœuds d'instance de cluster de basculement  
  Si un groupe de disponibilité contient des nœuds d'instance de cluster de basculement, mettez à niveau les nœuds inactifs avant de mettre à niveau les nœuds actifs. La figure ci-dessous illustre un scénario de groupe de disponibilité courant avec instances de cluster de basculement pour la haute disponibilité et la validation asynchrone entre les instances de cluster de basculement à des fins de récupération d'urgence, et l'ordre de mise à niveau.  
   
- ![Mise à niveau du groupe de disponibilité avec instances de cluster de basculement](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "Mise à niveau du groupe de disponibilité avec instances de cluster de basculement")  
+ ![Mise à niveau d’un groupe de disponibilité avec des FCI](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "Mise à niveau d’un groupe de disponibilité avec des FCI")  
   
 1.  Mettre à niveau ou à jour REMOTE2  
   
@@ -125,7 +130,7 @@ caps.handback.revision: 14
   
 6.  Mettre à niveau ou à jour PRIMARY1  
   
-## Mettre à niveau/mettre à jour des instances de SQL Server avec plusieurs groupes de disponibilité  
+## <a name="upgrade-update-sql-server-instances-with-multiple-availability-groups"></a>Mettre à niveau/mettre à jour des instances de SQL Server avec plusieurs groupes de disponibilité  
  Si vous exécutez plusieurs groupes de disponibilité avec réplicas principaux sur des nœuds de serveur distincts (configuration active/active), le chemin d'accès de mise à niveau implique davantage d'étapes de basculement afin d'assurer la haute disponibilité du processus. Supposons que vous exécutez trois groupes de disponibilité sur trois nœuds de serveur, tel que l'illustre le tableau suivant, et tous les réplicas secondaires s'exécutent en mode de validation synchrone.  
   
 |Groupe de disponibilité|Nœud1|Nœud2|Node3|  
@@ -134,7 +139,7 @@ caps.handback.revision: 14
 |AG2||Principal||  
 |AG3|||Principal|  
   
- Il peut s'avérer nécessaire d'effectuer une mise à niveau/ propagée à charge équilibrée dans l'ordre suivant :  
+ Il peut s'avérer nécessaire d'effectuer une mise à niveau/ propagée à charge équilibrée dans l'ordre suivant :  
   
 1.  Basculer AG2 sur Nœud3 (pour libérer Nœud2)  
   
@@ -163,8 +168,9 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  Dans de nombreux cas, une fois la mise à niveau propagée terminée, le serveur principal d’origine sera restauré automatiquement sur le réplica principal.  
   
-## Voir aussi  
- [Effectuer une mise à niveau vers SQL Server 2016 à l’aide de l’Assistant Installation &#40;programme d’installation&#41;](../../../database-engine/install-windows/upgrade-to-sql-server-2016-using-the-installation-wizard-setup.md)   
- [Installer SQL Server 2016 à partir de l’invite de commandes](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Effectuer une mise à niveau vers SQL Server 2016 à l’aide de l’Assistant Installation &#40;programme d’installation&#41;](../../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
+ [Installer SQL Server 2016 à partir de l’invite de commandes](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
   
+

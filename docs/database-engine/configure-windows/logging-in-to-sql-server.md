@@ -1,46 +1,51 @@
 ---
-title: "Connexion &#224; SQL&#160;Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server, connexion"
-  - "services [SQL Server], connexion"
-  - "chaîne de connexion TCP"
-  - "connexion au Moteur de base de données"
-  - "connexions [SQL Server], à propos de la connexion"
-  - "chaîne de connexion à un canal nommé"
-  - "connexions [SQL Server]"
-  - "chaîne de connexion à une mémoire partagée"
-  - "connexion [SQL Server]"
-  - "comptes de connexion [SQL Server]"
+title: "Connexion à SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server, logging in
+- services [SQL Server], logging in
+- TCP connection string
+- connecting to the Database Engine
+- logins [SQL Server], about logging in
+- named pipe connection string
+- log ins [SQL Server]
+- shared memory connection string
+- logging in [SQL Server]
+- logins [SQL Server]
 ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b4ed2e0c35921a717fc9447e62d469fb0153a74c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Connexion &#224; SQL&#160;Server
+# <a name="logging-in-to-sql-server"></a>Connexion à SQL Server
   Vous pouvez vous connecter à une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de n’importe quel outil d’administration graphique ou d’une invite de commandes.  
   
- Lorsque vous vous connectez à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide d’un outil d’administration graphique tel que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous êtes invité à fournir le nom du serveur, une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et un mot de passe, si cela est nécessaire. Si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant l'authentification Windows, vous n'avez pas besoin de fournir de compte de connexion SQL Server chaque fois que vous accédez à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise alors votre compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows pour vous connecter automatiquement. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d’exécution dans un mode d’authentification mixte ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows) et que vous choisissez de vous connecter en utilisant l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez spécifier une connexion et un mot de passe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lorsque c'est possible, utilisez l'authentification Windows.  
+ Lorsque vous vous connectez à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide d’un outil d’administration graphique tel que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous êtes invité à fournir le nom du serveur, une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et un mot de passe, si cela est nécessaire. Si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant l'authentification Windows, vous n'avez pas besoin de fournir de compte de connexion SQL Server chaque fois que vous accédez à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise alors votre compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows pour vous connecter automatiquement. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d’exécution dans un mode d’authentification mixte ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows) et que vous choisissez de vous connecter en utilisant l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez spécifier une connexion et un mot de passe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Lorsque c'est possible, utilisez l'authentification Windows.  
   
 > [!NOTE]  
 >  Si vous avez sélectionné un classement respectant la casse lors de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], votre connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] respecte également la casse.  
   
-## Format à utiliser pour spécifier le nom de SQL Server  
- Lorsque vous vous connectez à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)], vous devez spécifier le nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est l'instance par défaut (une instance sans nom), indiquez alors le nom de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé, ou l'adresse IP de cet ordinateur. Si l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est une instance nommée (comme SQLEXPRESS), indiquez le nom de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé, ou l'adresse IP de l'ordinateur, et ajoutez une barre oblique suivie du nom de l'instance.  
+## <a name="format-for-specifying-the-name-of-sql-server"></a>Format à utiliser pour spécifier le nom de SQL Server  
+ Lorsque vous vous connectez à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , vous devez spécifier le nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est l'instance par défaut (une instance sans nom), indiquez alors le nom de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé, ou l'adresse IP de cet ordinateur. Si l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est une instance nommée (comme SQLEXPRESS), indiquez le nom de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé, ou l'adresse IP de l'ordinateur, et ajoutez une barre oblique suivie du nom de l'instance.  
   
  Les exemples suivants permettent de se connecter à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui s'exécute sur un ordinateur nommé APPHOST. Si une instance nommée est spécifiée, ces exemples utilisent le nom d'instance SQLEXPRESS.  
   
- **Exemples :**  
+ **Exemples :**  
   
 |Type d'instance|Entrée pour le nom du serveur|  
 |----------------------|-------------------------------|  
@@ -67,7 +72,7 @@ caps.handback.revision: 34
 |Connexion à une instance par défaut par son nom, en imposant une connexion par canaux nommés.|np:APPHOST|  
 |Connexion à une instance nommée par son nom, en imposant une connexion par canaux nommés.|np:APPHOST\SQLEXPRESS|  
   
-## Vérification du protocole de connexion  
+## <a name="verifying-your-connection-protocol"></a>Vérification du protocole de connexion  
  En cas de connexion au [!INCLUDE[ssDE](../../includes/ssde-md.md)], la requête suivante renvoie le protocole utilisé pour la connexion actuelle, ainsi que la méthode d'authentification (NTLM ou Kerberos), et indique si la connexion est chiffrée.  
   
 ```tsql  
@@ -76,7 +81,7 @@ FROM sys.dm_exec_connections
 WHERE session_id = @@SPID;  
 ```  
   
-## Tâches associées  
+## <a name="related-tasks"></a>Tâches associées  
  [Se connecter à une instance de SQL Server &#40;invite de commandes&#41;](../../database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md)  
   
  Les ressources suivantes peuvent vous aider à résoudre un problème de connexion.  
@@ -85,11 +90,11 @@ WHERE session_id = @@SPID;
   
 -   [Procédure de résolution des problèmes de connectivité SQL](http://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   
-## Contenu connexe  
+## <a name="related-content"></a>Contenu connexe  
  [Choisir un mode d'authentification](../../relational-databases/security/choose-an-authentication-mode.md)  
   
- [Utiliser l'utilitaire sqlcmd](../../relational-databases/scripting/use-the-sqlcmd-utility.md)  
+ [Utiliser l'utilitaire sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
- [Création d'une connexion](../../t-sql/creating-a-login.md)  
+ [Création d'une connexion](../../t-sql/lesson-2-1-creating-a-login.md)  
   
   

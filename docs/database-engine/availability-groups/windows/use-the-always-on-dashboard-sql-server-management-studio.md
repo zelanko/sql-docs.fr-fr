@@ -1,30 +1,35 @@
 ---
-title: "Utiliser le tableau de bord Always On (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.agdashboard.f1"
-helpviewer_keywords: 
-  - "groupes de disponibilité [SQL Server], stratégies"
-  - "groupes de disponibilité [SQL Server], tableau de bord"
+title: "Utiliser le tableau de bord du groupe de disponibilité Always On (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.agdashboard.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], policies
+- Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 caps.latest.revision: 30
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b17125da076312057366a5f2150d513072b074f2
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Utiliser le tableau de bord Always On (SQL Server Management Studio)
+# <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Utiliser le tableau de bord du groupe de disponibilité Always On (SQL Server Management Studio)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Les administrateurs de base de données utilisent le tableau de bord Always On pour obtenir un aperçu rapide de l’intégrité d’un groupe de disponibilité Always On et de ses réplicas de disponibilité et bases de données dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Parmi les utilisations courantes du tableau de bord Always On, citons :  
+  Les administrateurs de base de données utilisent le tableau de bord du groupe de disponibilité Always On pour obtenir un aperçu rapide de l’intégrité d’un groupe de disponibilité, de ses réplicas de disponibilité et de ses bases de données dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Voici quelques-unes des utilisations courantes du tableau de bord du groupe de disponibilité :  
   
 -   Choix d'un réplica pour un basculement manuel.  
   
@@ -34,7 +39,7 @@ caps.handback.revision: 30
   
 -   Évaluation de l'impact sur les performances d'un réplica secondaire avec validation synchrone  
   
- Le tableau de bord Always On fournit les états principaux et les indicateurs de performance du groupe de disponibilité et vous permet ainsi de prendre facilement des décisions opérationnelles en matière de haute disponibilité sur la base des types d’informations suivants.  
+ Le tableau de bord fournit les états principaux et les indicateurs de performance du groupe de disponibilité, et vous permet ainsi de prendre facilement des décisions opérationnelles en matière de haute disponibilité sur la base des types d’informations suivants.  
   
 -   État de restauration de réplica  
   
@@ -50,37 +55,9 @@ caps.handback.revision: 30
   
 -   Durée de restauration du journal  
   
- **Dans cette rubrique :**  
-  
--   **Avant de commencer :**  
-  
-     [Conditions préalables](#Prerequisites)  
-  
-     [Sécurité](#Security)  
-  
-     [Autorisations](#Permissions)  
-  
--   **Mise en route :**  
-  
-     [Tableau de bord Always On](#SSMSProcedure)  
-  
-     [Pour modifier les options du tableau de bord Always On](#DashboardOptions)  
-  
--   **Volets du tableau de bord :**  
-  
-     [Résumé des groupes de disponibilité](#AvGroupsView)  
-  
-     [Détails du groupe de disponibilité](#AvGroupDetails)  
-  
-     [Détails du réplica de disponibilité](#AvReplicaDetails)  
-  
-     [Pour regrouper les informations de groupe de disponibilité](#AvDbDetails)  
-  
--   [Tâches associées](#RelatedTasks)  
-  
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Configuration requise  
+###  <a name="Prerequisites"></a> Conditions préalables  
  Vous devez être connecté à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instance de serveur) qui héberge soit le réplica principal, soit un réplica secondaire d'un groupe de disponibilité.  
   
 ###  <a name="Security"></a> Sécurité  
@@ -92,7 +69,7 @@ caps.handback.revision: 30
   
 1.  Dans l’Explorateur d’objets, connectez-vous à l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur laquelle vous souhaitez exécuter le tableau de bord Always On.  
   
-2.  Développez le nœud **Haute disponibilité Always On**, cliquez avec le bouton droit sur le nœud **Groupes de disponibilité**, puis cliquez sur **Afficher le tableau de bord**.  
+2.  Développez le nœud **Haute disponibilité Always On** , cliquez avec le bouton droit sur le nœud **Groupes de disponibilité** , puis cliquez sur **Afficher le tableau de bord**.  
   
 ###  <a name="DashboardOptions"></a> Pour modifier les options du tableau de bord Always On  
  Vous pouvez utiliser la boîte de dialogue **Options de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]** pour configurer le comportement du tableau de bord [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On en ce qui concerne l’actualisation automatique et l’activation d’une stratégie Always On définie automatiquement.  
@@ -113,29 +90,29 @@ caps.handback.revision: 30
  Nom de l'instance de serveur qui héberge le réplica principal du groupe de disponibilité.  
   
  **Mode de basculement**  
- Affiche le mode de basculement pour lequel le réplica est configuré. Les valeurs possibles pour le mode de basculement sont les suivantes :  
+ Affiche le mode de basculement pour lequel le réplica est configuré. Les valeurs possibles pour le mode de basculement sont les suivantes :  
   
 -   **Automatique**. Indique qu'un ou plusieurs réplicas se trouvent en mode de basculement automatique.  
   
 -   **Manuel**. Indique qu'aucun réplica n'est en mode de basculement automatique.  
   
  **Problèmes**  
- Cliquez sur le lien **Problèmes** pour ouvrir la documentation de dépannage relative à un problème donné. Pour obtenir la liste de tous les problèmes de stratégie Always On, consultez [Stratégies Always On pour les problèmes opérationnels avec des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md).  
+ Cliquez sur le lien **Problèmes** pour ouvrir la documentation de dépannage relative à un problème donné. Pour obtenir la liste de tous les problèmes de stratégie Always On, consultez [Stratégies Always On pour les problèmes opérationnels avec des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
 > [!TIP]  
 >  Cliquez sur les en-têtes de colonne pour trier les informations de groupe de disponibilité selon le nom du groupe de disponibilité, l'instance principale, le mode de basculement ou le problème.  
   
 ##  <a name="AvGroupDetails"></a> Détails du groupe de disponibilité  
- Les informations détaillées suivantes sont affichées pour le groupe de disponibilité que vous sélectionnez dans l'écran récapitulatif :  
+ Les informations détaillées suivantes sont affichées pour le groupe de disponibilité que vous sélectionnez dans l'écran récapitulatif :  
   
  **État du groupe de disponibilité**  
  Affiche l'état d'intégrité du groupe de disponibilité.  
   
- **Instance principale**  
+ **Primary instance**  
  Nom de l'instance de serveur qui héberge le réplica principal du groupe de disponibilité.  
   
- **Mode de basculement**  
- Affiche le mode de basculement pour lequel le réplica est configuré. Les valeurs possibles pour le mode de basculement sont les suivantes :  
+ **Failover mode**  
+ Affiche le mode de basculement pour lequel le réplica est configuré. Les valeurs possibles pour le mode de basculement sont les suivantes :  
   
 -   **Automatique**. Indique qu'un ou plusieurs réplicas se trouvent en mode de basculement automatique.  
   
@@ -154,7 +131,7 @@ caps.handback.revision: 30
  Indique le rôle actuel du réplica de disponibilité, à savoir **Principal** ou **Secondaire**. Pour plus d’informations sur les rôles des [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). Cette colonne est affichée par défaut.  
   
  **Mode de basculement**  
- Affiche le mode de basculement pour lequel le réplica est configuré. Les valeurs possibles pour le mode de basculement sont les suivantes :  
+ Affiche le mode de basculement pour lequel le réplica est configuré. Les valeurs possibles pour le mode de basculement sont les suivantes :  
   
 -   **Automatique**. Indique qu'un ou plusieurs réplicas se trouvent en mode de basculement automatique.  
   
@@ -175,7 +152,7 @@ caps.handback.revision: 30
 -   **NULL**. État inconnu. Cette valeur se produit lorsque l'instance de serveur locale ne peut pas communiquer avec le cluster de basculement WSFC (le nœud local ne fait pas partie du quorum WSFC).  
   
  **Problèmes**  
- Énonce le nom du problème. Cette valeur est affichée par défaut. Pour obtenir la liste de tous les problèmes de stratégie Always On, consultez [Stratégies Always On pour les problèmes opérationnels avec des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md).  
+ Énonce le nom du problème. Cette valeur est affichée par défaut. Pour obtenir la liste de tous les problèmes de stratégie Always On, consultez [Stratégies Always On pour les problèmes opérationnels avec des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Mode de disponibilité**  
  Indique que la propriété de réplica que vous définissez séparément pour chaque réplica de disponibilité. Cette valeur est masquée par défaut. Les valeurs possibles sont les suivantes :  
@@ -237,15 +214,15 @@ caps.handback.revision: 30
   
 -   **Bases de données de disponibilité**  
   
--   **État de synchronisation**  
+-   **Synchronization state**  
   
 -   **Disponibilité de basculement**  
   
 -   **Problèmes**  
   
- Le volet qui affiche les informations regroupées comporte les colonnes suivantes :  
+ Le volet qui affiche les informations regroupées comporte les colonnes suivantes :  
   
- **Nom   **  
+ **Nom**  
  Nom de la base de données de disponibilité. Cette valeur est affichée par défaut.  
   
  **Réplica**  
@@ -290,8 +267,8 @@ caps.handback.revision: 30
     > [!CAUTION]  
     >  Lorsqu'une base de données est dans l'état INITIALIZING, forcer le basculement vers le réplica secondaire laisse toujours cette base de données dans un état dans lequel elle ne peut pas être démarrée.  
   
- **Disponibilité du basculement**  
- Indique le réplica de disponibilité qui peut basculer avec ou sans perte possible de données. Cette colonne est affichée par défaut. Les valeurs possibles sont les suivantes :  
+ **Failover Readiness**  
+ Indique le réplica de disponibilité qui peut basculer avec ou sans perte possible de données. Cette colonne est affichée par défaut. Les valeurs possibles sont les suivantes :  
   
 -   **Perte de données**  
   
@@ -304,7 +281,7 @@ caps.handback.revision: 30
   
 -   **Critique**. Cliquez pour afficher les problèmes critiques.  
   
- Pour obtenir la liste de tous les problèmes de stratégie Always On, consultez [Stratégies Always On pour les problèmes opérationnels avec des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md).  
+ Pour obtenir la liste de tous les problèmes de stratégie Always On, consultez [Stratégies Always On pour les problèmes opérationnels avec des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Suspendu**  
  Indique si la base de données est à l’état **Suspendu** ou si elle a été **reprise**. Cette valeur est masquée par défaut.  
@@ -379,8 +356,9 @@ caps.handback.revision: 30
   
 -   [Utiliser les stratégies Always On pour afficher l’intégrité d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [Surveillance des groupes de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   
+

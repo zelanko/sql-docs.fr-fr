@@ -1,30 +1,35 @@
 ---
-title: "Service Broker avec les groupes de disponibilit&#233; Always On (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Service Broker, groupes de disponibilité AlwaysOn"
-  - "groupes de disponibilité [SQL Server], interopérabilité"
+title: "Service Broker avec les groupes de disponibilité Always On (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Service Broker, AlwaysOn Availability Groups
+- Availability Groups [SQL Server], interoperability
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 caps.latest.revision: 13
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: e57858f580d34c2ba830f9e1732e555f677338a5
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Service Broker avec les groupes de disponibilit&#233; Always On (SQL Server)
+# <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker avec les groupes de disponibilité Always On (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique contient des informations sur la configuration de Service Broker afin d'utiliser [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   [Spécifications pour qu'un service dans un groupe de disponibilité reçoive les messages distants](#ReceiveRemoteMessages)  
   
@@ -38,14 +43,14 @@ caps.handback.revision: 13
   
 2.  **Vérifiez que le point de terminaison Service Broker existe et est configuré correctement.**  
   
-     Sur chaque instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui héberge un réplica de disponibilité pour le groupe de disponibilité, configurez le point de terminaison Service Broker, comme suit :  
+     Sur chaque instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui héberge un réplica de disponibilité pour le groupe de disponibilité, configurez le point de terminaison Service Broker, comme suit :  
   
-    -   Définissez LISTENER_IP sur « ALL ». Ce paramètre permet les connexions à une adresse IP valide liée à l'écouteur du groupe de disponibilité.  
+    -   Définissez LISTENER_IP sur « ALL ». Ce paramètre permet les connexions à une adresse IP valide liée à l'écouteur du groupe de disponibilité.  
   
     -   Définissez le PORT de Service Broker sur le même numéro de port pour toutes les instances de serveur hôte.  
   
         > [!TIP]  
-        >  Pour afficher le numéro de port du point de terminaison Service Broker sur une instance de serveur donnée, interrogez la colonne **port** de l’affichage catalogue [sys.tcp_endpoints](../../../relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql.md), où **type_desc** = 'SERVICE_BROKER'.  
+        >  Pour afficher le numéro de port du point de terminaison Service Broker sur une instance de serveur donnée, interrogez la colonne **port** de l’affichage catalogue [sys.tcp_endpoints](../../../relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql.md) , où **type_desc** = 'SERVICE_BROKER'.  
   
      L'exemple suivant crée un point de terminaison Service Broker authentifié par Windows qui utilise le port par défaut de Service Broker (4022) et écoute toutes les adresses IP valides.  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 13
   
 1.  **Créez un itinéraire vers le service cible.**  
   
-     Configurez l'itinéraire comme suit :  
+     Configurez l'itinéraire comme suit :  
   
     -   Définissez ADDRESS sur l'adresse IP de l'écouteur du groupe de disponibilité qui héberge la base de données de service.  
   
@@ -112,11 +117,12 @@ caps.handback.revision: 13
   
 -   [Création et configuration des groupes de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   
--   [Configurer des comptes de connexion pour la mise en miroir de bases de données ou les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/database-mirroring/set up login accounts - database mirroring always on availability.md)  
+-   [Configurer des comptes de connexion pour la mise en miroir de bases de données ou les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)   
+ [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [SQL Server Service Broker](../../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   
+

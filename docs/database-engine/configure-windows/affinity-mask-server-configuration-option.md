@@ -1,41 +1,46 @@
 ---
-title: "Masque d&#39;affinit&#233; (option de configuration de serveur) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "affinity mask (option par défaut)"
-  - "rechargement du cache de processeur"
-  - "cache de processeur [SQL Server]"
-  - "processeur [SQL Server], gestion des licences"
-  - "appel de processus différé"
-  - "affinity mask (option)"
-  - "affinité de processeur [SQL Server]"
-  - "SMP"
-  - "différé, appel de processus"
+title: affinity mask (option de configuration de serveur) | Microsoft Docs
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- default affinity mask option
+- reloading processor cache
+- processor cache [SQL Server]
+- CPU [SQL Server], licensing
+- deferred process call
+- affinity mask option
+- processor affinity [SQL Server]
+- SMP
+- DPC
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 caps.latest.revision: 52
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0aa50b8c593ced9089a939eb5490380872d38472
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Masque d&#39;affinit&#233; (option de configuration de serveur)
+# <a name="affinity-mask-server-configuration-option"></a>affinity mask (option de configuration de serveur)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez plutôt [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez plutôt [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).  
   
  Pour réaliser les travaux multitâches, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows déplace parfois les threads de processus entre les différents processeurs. Même si cela est efficace du point de vue du système d'exploitation, cette activité peut réduire les performances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du fait des charges système élevées, puisque chaque cache de processeur est rechargé par des données de façon répétée. L'affectation de processeurs à des threads spécifiques permet d'améliorer les performances dans ces conditions en éliminant les rechargements de processeurs et en réduisant la migration des threads entre les processeurs (réduisant ainsi les changements de contexte) ; une telle association entre un thread et un processeur est appelée affinité du processeur.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge l’affinité du processeur au moyen de deux options de masque d’affinité : affinity mask (également appelé **CPU affinity mask**) et affinity I/O mask. Pour plus d’informations sur l’option affinity I/O mask, consultez [Option de configuration de serveur Masque d’affinité d’E/S](../../database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md). La prise en charge de l’affinité du processeur et d’E/S pour les serveurs dotés de 33 à 64 processeurs nécessite l’utilisation supplémentaire de l’ [option de configuration de serveur Masque d’affinité 64](../../database-engine/configure-windows/affinity64-mask-server-configuration-option.md) et de l’ [option de configuration du serveur affinity64 Input-Output mask](../../database-engine/configure-windows/affinity64-input-output-mask-server-configuration-option.md), respectivement.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge l’affinité du processeur au moyen de deux options de masque d’affinité : affinity mask (également appelé **CPU affinity mask**) et affinity I/O mask. Pour plus d’informations sur l’option affinity I/O mask, consultez [affinity Input-Output mask (option de configuration de serveur)](../../database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md). La prise en charge de l’affinité du processeur et d’E/S pour les serveurs dotés de 33 à 64 processeurs nécessite l’utilisation supplémentaire de l’[option de configuration de serveur affinity64 mask](../../database-engine/configure-windows/affinity64-mask-server-configuration-option.md) et de l’[option de configuration du serveur affinity64 Input-Output mask](../../database-engine/configure-windows/affinity64-input-output-mask-server-configuration-option.md), respectivement.  
   
 > [!NOTE]  
 >  La prise en charge de l'affinité pour les serveurs dotés de 33 à 64 processeurs est uniquement disponible sur les systèmes d'exploitation 64 bits.  
@@ -90,7 +95,7 @@ caps.handback.revision: 52
 > [!CAUTION]  
 >  Évitez de configurer l'affinité de processeur dans le système d'exploitation Windows et le masque d'affinité dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ces paramètres tentent d'obtenir le même résultat et, si les configurations sont incohérentes, les résultats risquent d'être imprévisibles. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il est préférable de configurer l’affinité de processeur à l’aide de l’option sp_configure dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  Par exemple, pour définir l'option affinity mask, si les processeurs 1, 2 et 5 sont sélectionnés comme étant disponibles et si les bits 1, 2 et 5 ont la valeur 1 alors que les bits 0, 3, 4, 6 et 7 ont la valeur 0, une valeur hexadécimale égale à 0x26 ou l'équivalent décimal `38` est spécifiée. Numérotez les bits de droite à gauche. L'option affinity mask commence à compter les processeurs de 0 à 31, de sorte que dans l'exemple suivant, le compteur `1` représente le deuxième processeur sur le serveur.  
   
 ```  
@@ -117,21 +122,21 @@ GO
   
  L'option affinity mask est une option avancée. Si vous utilisez la procédure stockée système sp_configure pour changer sa valeur, vous ne pouvez modifier l’option **affinity mask** que si la valeur 1 a été attribuée à l’option **show advanced options** . Après l'exécution de la commande [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE, le nouveau paramètre prend immédiatement effet sans redémarrage de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Non-Uniform Memory Access (NUMA)  
+## <a name="non-uniform-memory-access-numa"></a>Non-Uniform Memory Access (NUMA)  
  Lorsque vous utilisez l'accès NUMA (Non-Uniform Memory Access) matériel et que le masque d'affinité est défini, chaque planificateur dans un nœud possède une affinité avec sa propre unité centrale. Lorsque le masque d'affinité n'est pas défini, chaque planificateur possède une affinité avec le groupe d'unités centrales au sein du nœud NUMA et un planificateur mappé sur le nœud NUMA N1 peut planifier du travail sur toute unité centrale dans le nœud, mais pas sur des unités centrales associées à un autre nœud.  
   
  Toute opération en cours sur un nœud NUMA unique peut utiliser uniquement des pages tampon à partir de ce nœud. Lorsqu'une opération est exécutée en parallèle sur des unités centrales issues de plusieurs nœuds, de la mémoire peut être utilisée à partir de tout nœud impliqué.  
   
-## À propos des licences  
+## <a name="licensing-issues"></a>À propos des licences  
  L'affinité dynamique dépend étroitement des licences des processeurs. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'autorise pas la configuration d'options de masque d'affinité qui enfreignent la stratégie de licences.  
   
-### Démarrage  
+### <a name="startup"></a>Démarrage  
  Si un masque d'affinité spécifié ne respecte pas la stratégie de licences au moment du démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de l'attachement de la base de données, la couche du moteur achève le processus de démarrage ou l'opération de restauration/attachement de base de données, puis remet à zéro la valeur d'exécution sp_configure du masque d'affinité, en consignant un message d'erreur dans le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### Reconfiguration  
+### <a name="reconfigure"></a>Reconfiguration  
  Si un masque d'affinité spécifié ne respecte pas la stratégie de licences lors de l'exécution de la commande [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE, un message d'erreur est envoyé à la session cliente et est consigné dans le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , exigeant ainsi que l'administrateur de la base de données reconfigure le masque d'affinité. Aucune commande RECONFIGURE WITH OVERRIDE n'est acceptée dans ce cas.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
@@ -139,3 +144,4 @@ GO
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   
+

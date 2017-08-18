@@ -1,29 +1,34 @@
 ---
-title: "SMO et DMO XPs (option de configuration de serveur) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: SMO and DMO XPs (option de configuration de serveur) | Microsoft Docs
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bcd945ba-5d81-4124-9a2b-d87491c2a369
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccd3457a8081eea7d57c9c3d673adf2b3fb6db07
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# SMO et DMO XPs (option de configuration de serveur)
+# <a name="smo-and-dmo-xps-server-configuration-option"></a>SMO and DMO XPs (option de configuration de serveur)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Utilisez l'option des procédures étendues SMO et DMO pour activer les procédures stockées étendues [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object (SMO) sur ce serveur.  
+  Utilisez l'option SMO and DMO XPs pour activer les procédures stockées étendues [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object (SMO) sur ce serveur.  
   
- Remarque : à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], DMO a été supprimé de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Remarque : à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], DMO a été supprimé de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Les valeurs possibles sont décrites dans le tableau suivant :  
+ Les valeurs possibles sont décrites dans le tableau suivant :  
   
 |Valeur|Signification|  
 |-----------|-------------|  
@@ -32,7 +37,7 @@ caps.handback.revision: 15
   
  Ce paramètre prend effet immédiatement.  
   
-## Exemples  
+## <a name="examples"></a>Exemples  
  L'exemple suivant active les procédures stockées étendues de SMO.  
   
 ```  
@@ -46,7 +51,8 @@ RECONFIGURE
 GO  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Guide de programmation SQL Server Management Objects &#40;SMO&#41;](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
   
+

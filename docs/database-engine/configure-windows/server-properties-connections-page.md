@@ -1,35 +1,40 @@
 ---
-title: "Propri&#233;t&#233;s du serveur (page Connexions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.connections.f1"
+title: "Propriétés du serveur (page Connexions) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73d0b32c2688c912c282c7c4acab0bd9ecb5633f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propri&#233;t&#233;s du serveur (page Connexions)
+# <a name="server-properties---connections-page"></a>Propriétés du serveur - page Connexions
   Utilisez cette page pour consulter ou modifier vos options de connexion.  
   
-## Connexions  
+## <a name="connections"></a>Connexions  
  **Nombre maximal de connexions simultanées (0 = illimité)**  
- Si la valeur spécifiée est différente de zéro, cette option limite le nombre de connexions autorisées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Si la valeur spécifiée est différente de zéro, cette option limite le nombre de connexions autorisées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!CAUTION]  
->  Une petite valeur, comme 1 ou 2, peut empêcher les administrateurs de se connecter pour administrer le serveur ; toutefois, la connexion administrateur dédiée pourra toujours se connecter.  
+>  Une petite valeur, comme 1 ou 2, peut empêcher les administrateurs de se connecter pour administrer le serveur ; toutefois, la connexion administrateur dédiée pourra toujours se connecter.  
   
-## Options de connexion par défaut  
- **Options de connexion par défaut**  
+## <a name="default-connection-options"></a>Options de connexion par défaut  
+ **Default connection options**  
  Indique les options de connexion par défaut qui sont décrites dans le tableau suivant.  
   
 |Option de configuration|Description|  
@@ -52,25 +57,25 @@ caps.handback.revision: 27
   
  Pour plus d'informations sur les options de connexion, recherchez l'option qui vous intéresse dans la documentation en ligne.  
   
-## Connexions au serveur distant  
+## <a name="remote-server-connections"></a>Connexions au serveur distant  
  **Autoriser les accès distants à ce serveur**  
- Contrôle l'exécution des procédures stockées à partir de serveurs distants exécutant des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cocher cette case revient à affecter la valeur 1 à l’option **sp_configureremote access**. La désactiver empêche l'exécution de procédures stockées à partir d'un serveur distant.  
+ Contrôle l'exécution des procédures stockées à partir de serveurs distants exécutant des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cocher cette case revient à affecter la valeur 1 à l’option **sp_configureremote access** . La désactiver empêche l'exécution de procédures stockées à partir d'un serveur distant.  
   
  **Délai d'attente de la requête distante (en secondes, 0 = aucun délai)**  
- Spécifie le temps (en secondes) imparti à une opération distante avant l'expiration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La valeur par défaut est de 600 secondes, soit un délai d'attente de 10 minutes.  
+ Spécifie le temps (en secondes) imparti à une opération distante avant l'expiration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La valeur par défaut est de 600 secondes, soit un délai d'attente de 10 minutes.  
   
  **Nécessite des transactions distribuées pour la communication de serveur à serveur**  
- Protège les actions d'une procédure de serveur à serveur par le biais d'une transaction MS DTC ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator). Pour plus d'informations, consultez [Configure the remote proc trans Server Configuration Option](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md).  
+ Protège les actions d'une procédure de serveur à serveur par le biais d'une transaction MS DTC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator). Pour plus d'informations, consultez [Configure the remote proc trans Server Configuration Option](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md).  
   
-## Options d'affichage de la page Propriétés  
+## <a name="property-page-display-options"></a>Options d'affichage de la page Propriétés  
  **Valeurs configurées**  
  Affiche les valeurs configurées pour les options de ce volet. Si vous modifiez ces valeurs, cliquez sur **Valeurs en cours d’exécution** pour vérifier si les modifications ont été prises en compte. Si ce n'est pas le cas, l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être d'abord redémarrée.  
   
  **Valeurs en cours d’exécution**  
  Affiche les valeurs en cours d'exécution pour les options de ce volet. Ces valeurs sont en lecture seule.  
   
-## Voir aussi  
- [Options &#40;Exécution de requête : SQL Server : Page Avancé&#41;](../Topic/Options%20\(Query%20Execution:%20SQL%20Server:%20Advanced%20Page\).md)   
+## <a name="see-also"></a>Voir aussi  
+ [Options &#40;Exécution de requête : SQL Server : Page Avancé&#41;](http://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)   
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

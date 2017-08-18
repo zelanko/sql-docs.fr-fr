@@ -1,26 +1,31 @@
 ---
-title: "Pr&#233;parer une base de donn&#233;es miroir pour la mise en miroir (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mise en miroir de base de données [SQL Server], préparation pour la mise en miroir"
-  - "connexions [SQL Server], mise en miroir de base de données"
-  - "miroir de bases de données [SQL Server]"
+title: "Préparer une base de données miroir pour la mise en miroir (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], preparing for mirroring
+- logins [SQL Server], database mirroring
+- mirror database [SQL Server]
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 caps.latest.revision: 43
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: e813cf330d3c2d61b9c3163bac75ec5441d06455
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Pr&#233;parer une base de donn&#233;es miroir pour la mise en miroir (SQL Server)
+# <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Préparer une base de données miroir pour la mise en miroir (SQL Server)
   Avant qu'une session de mise en miroir de bases de données puisse commencer, le propriétaire de la base de données ou l'administrateur système doit s'assurer que la base de données miroir a été créée et qu'elle est prête pour la mise en miroir. La création d'une nouvelle base de données miroir requiert au minimum la réalisation d'une sauvegarde complète de la base de données principale puis d'une sauvegarde du journal, ainsi que la restauration de ces deux sauvegardes sur l'instance du serveur miroir, en utilisant WITH NORECOVERY.  
   
  Cette rubrique explique comment préparer une base de données miroir dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -49,7 +54,7 @@ caps.handback.revision: 43
   
 -   Les instances du serveur miroir et du serveur principal doivent exécuter la même version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Bien qu'il soit possible que le serveur miroir possède une version ultérieure de SQL Server, cette configuration est recommandée uniquement lors d'une mise à niveau planifiée avec soin. Dans une telle configuration, vous courez le risque d'un basculement automatique, dans lequel le déplacement des données est automatiquement interrompu, car les données n'ont pas accès à une version antérieure de SQL Server. Pour plus d’informations, consultez [Mise à niveau des instances en miroir](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
   
--   Les instances du serveur miroir et du serveur principal doivent exécuter la même édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la prise en charge de la mise en miroir de bases de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   Les instances du serveur miroir et du serveur principal doivent exécuter la même édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la prise en charge de la mise en miroir de bases de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   La base de données doit utiliser le mode de récupération complète.  
   
@@ -75,7 +80,7 @@ caps.handback.revision: 43
   
 -   Si possible, le chemin d'accès (y compris la lettre de lecteur) de la base de données miroir doit être identique au chemin d'accès de la base de données principale.  
   
-     Si les chemins d'accès des fichiers doivent différer, par exemple, si la base de données principale se trouve sur le lecteur « F: », mais que le système miroir n'a pas de lecteur F:, vous devez inclure l'option MOVE dans l'instruction RESTORE STATEMENT.  
+     Si les chemins d'accès des fichiers doivent différer, par exemple, si la base de données principale se trouve sur le lecteur « F: », mais que le système miroir n'a pas de lecteur F:, vous devez inclure l'option MOVE dans l'instruction RESTORE STATEMENT.  
   
     > [!IMPORTANT]  
     >  Pour pouvoir ajouter un fichier pendant une session de mise en miroir sans compromettre la session, il faut que le chemin d'accès au fichier existe sur les deux serveurs. Par conséquent, si vous déplacez des fichiers de base de données lors de la création de la base de données miroir, une opération d'ajout de fichier ultérieure peut échouer sur la base de données miroir et entraîner la suspension de la mise en miroir. Pour plus d’informations sur le traitement d’un échec d’opération de création de fichier, consultez [Résoudre des problèmes de configuration de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md).  
@@ -128,7 +133,7 @@ caps.handback.revision: 43
   
     -   [Restaurer une sauvegarde de base de données à l’aide de SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
-    -   [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md) et [RESTORE Arguments &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md).  
+    -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) et [Arguments RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 7.  À l'aide de RESTORE WITH NORECOVERY, appliquez les autres sauvegardes de fichiers journaux ou sauvegardes en attente à la base de données miroir.  
   
@@ -154,7 +159,7 @@ caps.handback.revision: 43
     > [!NOTE]  
     >  Dans le cas d'une base de données de production, il est conseillé de toujours effectuer les sauvegardes sur une unité distincte.  
   
-     Sur l'instance de serveur principal (sur `PARTNERHOST1`), créez une sauvegarde complète de la base de données principale comme suit :  
+     Sur l'instance de serveur principal (sur `PARTNERHOST1`), créez une sauvegarde complète de la base de données principale comme suit :  
   
     ```  
     BACKUP DATABASE AdventureWorks   
@@ -167,9 +172,9 @@ caps.handback.revision: 43
   
 4.  À l'aide de RESTORE WITH NORECOVERY, restaurez la sauvegarde complète sur l'instance de serveur miroir. La commande de restauration dépend si les chemins d'accès aux bases de données principale et miroir sont identiques ou non.  
   
-    -   **Si les chemins d'accès sont identiques :**  
+    -   **Si les chemins d'accès sont identiques :**  
   
-         Sur l'instance de serveur miroir (sur `PARTNERHOST5`), restaurez la sauvegarde complète comme suit :  
+         Sur l'instance de serveur miroir (sur `PARTNERHOST5`), restaurez la sauvegarde complète comme suit :  
   
         ```  
         RESTORE DATABASE AdventureWorks   
@@ -178,7 +183,7 @@ caps.handback.revision: 43
         GO  
         ```  
   
-    -   **Si les chemins d'accès sont différents :**  
+    -   **Si les chemins d'accès sont différents :**  
   
          Si le chemin d'accès de la base de données miroir n'est pas le même que celui de la base de données principale (lettres de lecteurs distinctes, par exemple), la création de la base de données miroir requiert l'intégration d'une clause MOVE dans l'opération de restauration.  
   
@@ -198,7 +203,7 @@ caps.handback.revision: 43
         GO  
         ```  
   
-5.  Après avoir créé la sauvegarde complète, vous devez créer une sauvegarde du journal sur la base de données principale. Par exemple, l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante sauvegarde le journal dans le même fichier utilisé par la sauvegarde complète antérieure :  
+5.  Après avoir créé la sauvegarde complète, vous devez créer une sauvegarde du journal sur la base de données principale. Par exemple, l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante sauvegarde le journal dans le même fichier utilisé par la sauvegarde complète antérieure :  
   
     ```  
     BACKUP LOG AdventureWorks   
@@ -234,11 +239,11 @@ caps.handback.revision: 43
   
  Pour voir un exemple de configuration de la mise en miroir d’une base de données illustrant la configuration de la sécurité, la préparation de la base de données miroir, la configuration des serveurs partenaires et l’ajout d’un témoin, consultez [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir préparé une base de données miroir  
+##  <a name="FollowUp"></a> Suivi : Après avoir préparé une base de données miroir  
   
 1.  Si des sauvegardes de fichier journal supplémentaires ont été effectuées depuis votre opération RESTORE LOG la plus récente, vous devez appliquer manuellement chaque sauvegarde de journal supplémentaire, à l'aide de RESTORE WITH NORECOVERY.  
   
-2.  Démarrez la session de mise en miroir. Pour plus d’informations, consultez [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md) ou [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
+2.  Démarrez la session de mise en miroir. Pour plus d’informations, consultez [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md) ou de [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md).  
   
 3.  Si vous avez désactivé le travail de sauvegarde sur la base de données principale, réactivez le travail.  
   
@@ -250,23 +255,25 @@ caps.handback.revision: 43
   
 -   [Restaurer une sauvegarde de journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
--   [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
--   [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
+-   [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)  
   
 -   [Configurer une base de données miroir chiffrée](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)  
   
 -   [Configurer une base de données miroir pour utiliser la propriété Trustworthy &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [Sécurité du transport de la mise en miroir de bases de données et des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)   
+ [Sécurité du transport de la mise en miroir de bases de données et des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [Sauvegarder et restaurer des catalogues et des index de recherche en texte intégral](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [Mise en miroir de bases de données et catalogues de texte intégral &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)   
  [Mise en miroir de bases de données et réplication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [Arguments RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [Arguments RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)  
   
   
+
+

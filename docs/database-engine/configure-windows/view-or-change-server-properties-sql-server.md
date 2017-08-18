@@ -1,38 +1,46 @@
 ---
-title: "Afficher ou modifier des propri&#233;t&#233;s de serveur (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "visualisation des propriétés du serveur"
-  - "propriétés de serveur [SQL Server]"
-  - "affichage des propriétés du serveur"
-  - "serveurs [SQL Server], affichage"
+title: "Afficher ou modifier des propriétés de serveur (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.connectionproperties.f1
+helpviewer_keywords:
+- viewing server properties
+- server properties [SQL Server]
+- displaying server properties
+- servers [SQL Server], viewing
+- Connection Properties dialog box
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ad9ae740eaff2b6491038b4617659ef6fd32dcf8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Afficher ou modifier des propri&#233;t&#233;s de serveur (SQL Server)
+# <a name="view-or-change-server-properties-sql-server"></a>Afficher ou modifier des propriétés de serveur (SQL Server)
   Cette rubrique explique comment afficher ou modifier les propriétés d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou SQL Server Configuration Manager.  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour afficher ou modifier des propriétés de serveur à l'aide de :**  
+-   **Pour afficher ou modifier des propriétés de serveur à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -58,11 +66,11 @@ caps.handback.revision: 32
 ####  <a name="Permissions"></a> Autorisations  
  Pour plus d’informations, consultez [Rôles de niveau serveur](../../relational-databases/security/authentication-access/server-level-roles.md).  
   
- Les autorisations d’exécution de **sp_configure**, sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
+ Les autorisations d’exécution de **sp_configure** , sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour afficher ou modifier des propriétés de serveur  
+#### <a name="to-view-or-change-server-properties"></a>Pour afficher ou modifier des propriétés de serveur  
   
 1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur un serveur, puis cliquez sur **Propriétés**.  
   
@@ -70,20 +78,20 @@ caps.handback.revision: 32
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour afficher les propriétés du serveur à l'aide de la fonction intégrée SERVERPROPERTY  
+#### <a name="to-view-server-properties-by-using-the-serverproperty-built-in-function"></a>Pour afficher les propriétés du serveur à l'aide de la fonction intégrée SERVERPROPERTY  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple utilise la fonction intégrée [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md) dans une instruction `SELECT` pour retourner des informations sur le serveur actif. Ce scénario est utile lorsque plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont installées sur un serveur basé sur Windows et que le client doit ouvrir une autre connexion vers l'instance utilisée par la connexion actuelle.  
+3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple utilise la fonction intégrée [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md) dans une instruction `SELECT` pour retourner des informations sur le serveur actif. Ce scénario est utile lorsque plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont installées sur un serveur basé sur Windows et que le client doit ouvrir une autre connexion vers l'instance utilisée par la connexion actuelle.  
   
     ```tsql  
     SELECT CONVERT( sysname, SERVERPROPERTY('servername'));  
     GO  
     ```  
   
-#### Pour afficher les propriétés du serveur à l'aide de la vue de catalogue sys.servers  
+#### <a name="to-view-server-properties-by-using-the-sysservers-catalog-view"></a>Pour afficher les propriétés du serveur à l'aide de la vue de catalogue sys.servers  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -100,7 +108,7 @@ caps.handback.revision: 32
   
     ```  
   
-#### Pour afficher les propriétés du serveur à l'aide de la vue de catalogue sys.configurations  
+#### <a name="to-view-server-properties-by-using-the-sysconfigurations-catalog-view"></a>Pour afficher les propriétés du serveur à l'aide de la vue de catalogue sys.configurations  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -117,7 +125,7 @@ caps.handback.revision: 32
   
     ```  
   
-#### Pour modifier une propriété de serveur à l'aide de sp_configure  
+#### <a name="to-change-a-server-property-by-using-spconfigure"></a>Pour modifier une propriété de serveur à l'aide de sp_configure  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -140,10 +148,10 @@ GO
   
  Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="PowerShellProcedure"></a> Utilisation du Gestionnaire de configuration SQL Server  
+##  <a name="PowerShellProcedure"></a> Utilisation du Gestionnaire de configuration SQL Server  
  Certaines propriétés du serveur peuvent être affichées ou modifiées à l'aide du gestionnaire de configuration SQL Server. Par exemple, vous pouvez afficher la version et l'édition de l'instance de SQL Server, ou modifier l'emplacement où les fichiers des journaux d'erreurs sont stockés. Vous pouvez aussi afficher ces propriétés en interrogeant les [fonctions et vues de gestion dynamique relatives au serveur](../../relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md).  
   
-#### Pour afficher ou modifier des propriétés de serveur  
+#### <a name="to-view-or-change-server-properties"></a>Pour afficher ou modifier des propriétés de serveur  
   
 1.  Dans le menu **Démarrer** , pointez sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]et sur **Outils de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server**.  
   
@@ -153,17 +161,17 @@ GO
   
 4.  Dans la boîte de dialogue **Propriétés de SQL Server (\<***nom_instance***>)**, modifiez les propriétés du serveur sous l’onglet **Service** ou **Avancé**, puis cliquez sur **OK**.  
   
-##  <a name="FollowUp"></a> Suivi : après avoir modifié les propriétés du serveur  
+##  <a name="FollowUp"></a> Suivi : après avoir modifié les propriétés du serveur  
  Pour certaines propriétés, le serveur doit être redémarré afin d'appliquer les modification.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
+ [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [Configurer WMI pour afficher l'état du serveur dans les outils SQL Server](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)   
+ [Configurer WMI pour afficher l’état du serveur dans les outils SQL Server](http://msdn.microsoft.com/library/7e97197b-ed4d-40d1-9a52-9ab1d92401d7)   
  [Gestionnaire de configuration SQL Server](../../relational-databases/sql-server-configuration-manager.md)   
  [Fonctions de configuration &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [Fonctions et vues de gestion dynamique relatives au serveur &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md)  

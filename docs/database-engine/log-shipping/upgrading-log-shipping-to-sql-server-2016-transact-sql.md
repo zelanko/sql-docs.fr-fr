@@ -1,30 +1,35 @@
 ---
-title: "Mise &#224; niveau de la copie des journaux de transaction vers SQL Server&#160;2016 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "copie des journaux de transaction [SQL Server], mise à niveau"
+title: "Mise à niveau de la copie des journaux de transaction vers SQL Server 2016 (Transact-SQL) | Microsoft Docs"
+ms.custom: 
+ms.date: 02/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], upgrading
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 caps.latest.revision: 59
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 05c650a9f5929704a512b28033d6f06f54415a26
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Mise &#224; niveau de la copie des journaux de transaction vers SQL Server&#160;2016 (Transact-SQL)
+# <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Mise à niveau de la copie des journaux de transaction vers SQL Server 2016 (Transact-SQL)
   Lors de la mise à niveau d’une configuration de la copie des journaux de transaction de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une nouvelle version de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , un nouveau service pack [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou une mise à jour cumulative [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la mise à niveau de vos serveurs de copie des journaux de transaction dans le bon ordre permettra de préserver votre solution de récupération d’urgence de copie des journaux de transaction.  
   
 > [!NOTE]  
->  [La compression de la sauvegarde](../../relational-databases/backup-restore/backup-compression-sql-server.md) a été introduite dans [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]. Une configuration mise à niveau de copie des journaux de transaction utilise l’option de configuration du niveau serveur par défaut pour la **compression de sauvegarde** pour contrôler si la compression de la sauvegarde est utilisée pour les fichiers de sauvegarde du journal des transactions. Le comportement de la compression de la sauvegarde des sauvegardes de fichiers journaux peut être spécifié pour chaque configuration de la copie des journaux de transaction. Pour plus d’informations, consultez [Configurer la copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
+>  [La compression de la sauvegarde](../../relational-databases/backup-restore/backup-compression-sql-server.md) a été introduite dans [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]. Une configuration mise à niveau de copie des journaux de transaction utilise l’option de configuration du niveau serveur par défaut pour la **compression de sauvegarde** pour contrôler si la compression de la sauvegarde est utilisée pour les fichiers de sauvegarde du journal des transactions. Le comportement de la compression de la sauvegarde des sauvegardes de fichiers journaux peut être spécifié pour chaque configuration de la copie des journaux de transaction. Pour plus d’informations, consultez [Configurer la copie des journaux de transaction &#40;Transact-SQL&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   [Configuration requise](#Prerequisites)  
   
@@ -43,9 +48,9 @@ caps.handback.revision: 59
   
 -   [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): sélectionnez la méthode et les étapes de mise à niveau appropriées en fonction des versions et mises à niveau prises en charge ainsi que des autres composants installés dans votre environnement pour mettre à niveau les composants dans le bon ordre.  
   
--   [Planifier et tester le plan de mise à niveau du moteur de base de données](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) : consultez les notes de version et les problèmes de mise à niveau connus, ainsi que la liste de contrôle préalable à la mise à niveau, puis développez et testez votre plan de mise à niveau.  
+-   [Planifier et tester le plan de mise à niveau du moteur de base de données](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): consultez les notes de version et les problèmes de mise à niveau connus, ainsi que la liste de contrôle préalable à la mise à niveau, puis développez et testez votre plan de mise à niveau.  
   
--   [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md) : prenez connaissance de la configuration logicielle requise pour installer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Si des logiciels supplémentaires sont nécessaires, installez-les sur chaque nœud avant de commencer le processus de mise à niveau pour réduire les éventuels temps d’arrêt.  
+-   [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): prenez connaissance de la configuration logicielle requise pour installer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Si des logiciels supplémentaires sont nécessaires, installez-les sur chaque nœud avant de commencer le processus de mise à niveau pour réduire les éventuels temps d’arrêt.  
   
 ##  <a name="ProtectData"></a> Protéger vos données avant la mise à niveau  
  Comme méthode conseillée, nous vous recommandons de protéger vos données avant une mise à niveau de la copie des journaux de transaction.  
@@ -85,11 +90,12 @@ caps.handback.revision: 59
 > [!NOTE]  
 >  La copie des journaux de transaction de journaux permet aussi de [Basculer vers une base de données secondaire de copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) et éventuellement de [Changer des rôles entre les serveurs primaire et secondaire de copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md). Cependant, étant donné que la copie des journaux de transaction est rarement configurée en tant que solution à haute disponibilité de nos jours (les nouvelles options sont bien plus robustes), le basculement ne réduira généralement pas le temps d’arrêt, car les objets de base de données système ne sont pas synchronisés. De plus, permettre aux clients de localiser et se connecter facilement à un serveur secondaire promu peut être un calvaire.  
   
-## Voir aussi  
- [Effectuer une mise à niveau vers SQL Server 2016 à l’aide de l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/upgrade-to-sql-server-2016-using-the-installation-wizard-setup.md)   
- [Installer SQL Server 2016 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Effectuer une mise à niveau vers SQL Server 2016 à l’aide de l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
+ [Installer SQL Server 2016 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Configurer la copie des journaux de transaction &#40;Transact-SQL&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)   
  [Surveiller la copie des journaux de transaction &#40;Transact-SQL&#41;](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md)   
  [Tables et procédures stockées liées à la copie des journaux de transaction](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   
   
+

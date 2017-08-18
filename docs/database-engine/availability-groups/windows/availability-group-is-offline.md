@@ -1,28 +1,33 @@
 ---
-title: "Le groupe de disponibilit&#233; est hors connexion | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.agdashboard.agp2online.issues.f1"
-helpviewer_keywords: 
-  - "groupes de disponibilité [SQL Server], stratégies"
+title: "Le groupe de disponibilité est hors connexion | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.agdashboard.agp2online.issues.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], policies
 ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 caps.latest.revision: 14
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c64ddb1c8c152594a359c1b10e0cb621e25bc11e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Le groupe de disponibilit&#233; est hors connexion
+# <a name="availability-group-is-offline"></a>Le groupe de disponibilité est hors connexion
     
-## Introduction  
+## <a name="introduction"></a>Introduction  
   
 |||  
 |-|-|  
@@ -31,7 +36,7 @@ caps.handback.revision: 14
 |**Catégorie**|**Critique**|  
 |**Facette**|Groupe de disponibilité|  
   
-## Description  
+## <a name="description"></a>Description  
  Cette stratégie vérifie l'état (en ligne ou hors connexion) du groupe de disponibilité. La stratégie se trouve dans un état non sain et une alerte est générée lorsque la ressource de cluster du groupe de disponibilité est hors connexion ou que le groupe de disponibilité n'a pas de réplica principal.  
   
  L'état de la stratégie est sain lorsque la ressource de cluster du groupe de disponibilité est en ligne et que le groupe de disponibilité a un réplica principal.  
@@ -39,8 +44,8 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  Pour cette version de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], les informations sur les causes et les solutions possibles sont situées sous [Le groupe de disponibilité est hors connexion](http://go.microsoft.com/fwlink/p/?LinkId=220850) sur le Wiki TechNet.  
   
-## Causes possibles  
- Ce problème peut être dû à un échec de l'instance de serveur qui héberge le réplica principal ou à la mise hors connexion de la ressource de groupe de disponibilité du cluster de basculement Windows Server (WSFC). Voici les causes possibles de mise hors connexion du groupe de disponibilité :  
+## <a name="possible-causes"></a>Causes possibles  
+ Ce problème peut être dû à un échec de l'instance de serveur qui héberge le réplica principal ou à la mise hors connexion de la ressource de groupe de disponibilité du cluster de basculement Windows Server (WSFC). Voici les causes possibles de mise hors connexion du groupe de disponibilité :  
   
 -   Le groupe de disponibilité n'est pas configuré avec le mode de basculement automatique. Le réplica principal va bientôt être indisponible et le rôle de tous les réplicas du groupe de disponibilité est RESOLVING.  
   
@@ -60,8 +65,8 @@ caps.handback.revision: 14
   
 -   Un basculement automatique, manuel ou forcé est en cours pour le groupe de disponibilité.  
   
-## Solutions possibles  
- Voici les solutions possibles à ce problème :  
+## <a name="possible-solutions"></a>Solutions possibles  
+ Voici les solutions possibles à ce problème :  
   
 -   Si l'instance SQL Server du réplica principal est arrêtée, redémarrez le serveur, puis vérifiez que le groupe de disponibilité repasse à un état sain.  
   
@@ -71,8 +76,9 @@ caps.handback.revision: 14
   
 -   Si un basculement est en cours, attendez qu'il soit achevé.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Utiliser le tableau de bord Always On &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   
+

@@ -1,32 +1,37 @@
 ---
-title: "Changer des r&#244;les entre les serveurs primaire et secondaire de copie des journaux de transaction (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "copie des journaux de transaction [SQL Server], changements de rôles"
-  - "fichiers de données secondaires [SQL Server], changement de rôles entre"
-  - "bases de données primaires [SQL Server]"
-  - "changements initiaux des rôles [SQL Server]"
-  - "copie des journaux de transaction [SQL Server], basculement"
-  - "basculement [SQL Server], copie des journaux de transaction"
+title: "Changer des rôles entre les serveurs primaire et secondaire de copie des journaux de transaction (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], role changes
+- secondary data files [SQL Server], roles changed between
+- primary databases [SQL Server]
+- initial role changes [SQL Server]
+- log shipping [SQL Server], failover
+- failover [SQL Server], log shipping
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 47e98a220a3480a854be76dbae16e98c0c17d180
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Changer des r&#244;les entre les serveurs primaire et secondaire de copie des journaux de transaction (SQL Server)
+# <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>Changer des rôles entre les serveurs primaire et secondaire de copie des journaux de transaction (SQL Server)
   Après avoir basculé une configuration de copie des journaux de transactions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers un serveur secondaire, vous pouvez configurer votre base de données secondaire de façon à ce qu'elle agisse en tant que base de données primaire. Vous pourrez alors intervertir les bases de données primaire et secondaire en fonction des besoins.  
   
-## Exécution du changement de rôle initial  
+## <a name="performing-the-initial-role-change"></a>Exécution du changement de rôle initial  
  La première fois que vous voulez basculer vers la base de données secondaire et en faire votre base de données primaire, vous devez effectuer un ensemble d'opérations. Après cela, vous pourrez intervertir facilement les rôles des bases de données primaire et secondaire.  
   
 1.  Basculez manuellement de la base de données primaire vers la base de données secondaire. Vérifiez que vous avez sauvegardé le journal des transactions en cours sur votre serveur principal en utilisant l'option NORECOVERY. Pour plus d’informations, consultez [Basculer vers un serveur secondaire d’envoi de journaux &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md).  
@@ -67,8 +72,8 @@ caps.handback.revision: 20
         GO  
         ```  
   
-## Interversion des rôles  
- Une fois les opérations ci-dessus effectuées pour le changement initial des rôles, vous pouvez intervertir les rôles des bases de données primaire et secondaire en effectuant les opérations de cette section. Pour changer les rôles, effectuez ces opérations générales :  
+## <a name="swapping-roles"></a>Interversion des rôles  
+ Une fois les opérations ci-dessus effectuées pour le changement initial des rôles, vous pouvez intervertir les rôles des bases de données primaire et secondaire en effectuant les opérations de cette section. Pour changer les rôles, effectuez ces opérations générales :  
   
 1.  Connectez la base de données secondaire, en sauvegardant le journal des transactions du serveur principal avec l'option NORECOVERY.  
   
@@ -77,7 +82,7 @@ caps.handback.revision: 20
 3.  Activez l'opération de copie des journaux de transaction sur le serveur secondaire (nouveau serveur principal, ainsi que les opérations de copie et de restauration sur le serveur principal (nouveau serveur secondaire).  
   
 > [!IMPORTANT]  
->  Lorsque vous modifiez une base de données secondaire en base de données primaire, pour garantir une expérience cohérente aux utilisateurs et aux applications, vous devrez peut-être recréer tout ou partie des métadonnées de la base de données, telles que les connexions et les travaux, sur la nouvelle instance de serveur principal. Pour plus d’informations, consultez [Gérer les métadonnées lors de la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage metadata when making a database available on another server.md).  
+>  Lorsque vous modifiez une base de données secondaire en base de données primaire, pour garantir une expérience cohérente aux utilisateurs et aux applications, vous devrez peut-être recréer tout ou partie des métadonnées de la base de données, telles que les connexions et les travaux, sur la nouvelle instance de serveur principal. Pour plus d’informations, consultez [Gérer les métadonnées lors de la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   
@@ -85,7 +90,7 @@ caps.handback.revision: 20
   
 -   [Gestion des connexions et des travaux après un basculement de rôle &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tables et procédures stockées liées à la copie des journaux de transaction](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   
   

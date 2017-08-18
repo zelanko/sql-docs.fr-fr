@@ -1,49 +1,54 @@
 ---
-title: "Activer ou d&#233;sactiver un protocole r&#233;seau de serveur | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "protocoles réseau [SQL Server], désactivation"
-  - "connexions à distance [SQL Server], activation à l’aide du Gestionnaire de configuration"
-  - "protocoles [SQL Server], activation à l’aide du Gestionnaire de configuration"
-  - "protocoles [SQL Server], désactivation à l’aide du Gestionnaire de configuration"
-  - "désactivation des protocoles réseau, Gestionnaire de configuration"
-  - "protocoles réseau [SQL Server], activation"
-  - "activation des protocoles réseau, Gestionnaire de configuration"
-  - "configuration de la surface d’exposition [SQL Server], protocoles de connexion"
-  - "connexions [SQL Server], activation à distance à l’aide du Gestionnaire de configuration"
+title: "Activer ou désactiver un protocole réseau de serveur | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- network protocols [SQL Server], disabling
+- remote connections [SQL Server], enabling using Configuration Manager
+- protocols [SQL Server], enabling using Configuration Manager
+- protocols [SQL Server], disabling using Configuration Manager
+- disabling network protocols, Configuration Manager
+- network protocols [SQL Server], enabling
+- enabling network protocols, Configuration Manager
+- surface area configuration [SQL Server], connection protocols
+- connections [SQL Server], enabling remote using Configuration Manager
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7bb0a9abeba4730bd2d5d4e57cd7b02b2b93b55c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Activer ou d&#233;sactiver un protocole r&#233;seau de serveur
+# Activer ou désactiver un protocole réseau de serveur
   Tous les protocoles réseau sont installés par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mais ils peuvent être activés ou non. Cette rubrique décrit comment activer ou désactiver un protocole réseau de serveur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide du gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de PowerShell. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être arrêté et redémarré pour que la modification soit prise en compte.  
   
 > [!IMPORTANT]  
 >  Lors de l'installation de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] une connexion est ajoutée pour le groupe BUILTIN\Users. Cela permet à tous les utilisateurs authentifiés sur l'ordinateur d'accéder à l'instance de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] en tant que membres du rôle public. La connexion BUILTIN\Users peut être supprimée sans risque pour restreindre l'accès au [!INCLUDE[ssDE](../../includes/ssde-md.md)] aux utilisateurs de l'ordinateur qui disposent de connexions ou qui sont membres d'autres groupes Windows avec des connexions.  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support TLS 1.0 et SSL 3.0. Si vous appliquez un autre protocole (comme TLS 1.1 ou TLS 1.2) en apportant des modifications dans la couche SChannel du système d’exploitation, vos connexions à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risquent d’échouer.  
+>  Les fournisseurs de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prennent en charge TLS 1.0 et SSL 3.0. Si vous appliquez un autre protocole (comme TLS 1.1 ou TLS 1.2) en apportant des modifications dans la couche SChannel du système d’exploitation, vos connexions à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risquent d’échouer.  
   
  **Dans cette rubrique**  
   
--   **Pour activer ou désactiver un protocole réseau de serveur à l'aide de :**  
+-   **Pour activer ou désactiver un protocole réseau de serveur à l'aide de :**  
   
      [Gestionnaire de configuration SQL Server](#SSMSProcedure)  
   
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="SSMSProcedure"></a> Utilisation du Gestionnaire de configuration SQL Server  
+##  <a name="SSMSProcedure"></a> Utilisation du Gestionnaire de configuration SQL Server  
   
 #### Pour activer un protocole réseau de serveur  
   
@@ -57,13 +62,13 @@ caps.handback.revision: 29
   
 5.  Dans le volet d’informations, cliquez avec le bouton droit sur **SQL Server (***\<nom_instance>***)**, puis cliquez sur **Redémarrer** pour arrêter et redémarrer le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell SQL Server  
+##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell SQL Server  
   
 #### Pour activer un protocole réseau de serveur à l'aide de PowerShell  
   
 1.  En utilisant des autorisations d'administrateur, ouvrez une invite de commandes.  
   
-2.  Démarrez Windows PowerShell à partir de la barre des tâches, ou cliquez successivement sur Démarrer, Tous les Programmes, Accessoires, Windows PowerShell, puis Windows PowerShell.  
+2.  Démarrez Windows PowerShell à partir de la barre des tâches, ou cliquez successivement sur Démarrer, Tous les Programmes, Accessoires, Windows PowerShell, puis Windows PowerShell.  
   
 3.  Importez le module **sqlps** en entrant **Import-Module “sqlps”**  
   

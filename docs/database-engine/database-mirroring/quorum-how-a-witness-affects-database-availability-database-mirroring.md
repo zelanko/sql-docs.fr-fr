@@ -1,36 +1,41 @@
 ---
-title: "Quorum&#160;: effets d&#39;un t&#233;moin sur la disponibilit&#233; de la base de donn&#233;es (mise en miroir de bases de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "quorum [SQL Server], mise en miroir de bases de données"
-  - "exécution exposée dans la mise en miroir de bases de données [SQL Server]"
-  - "quorum témoin à partenaire [SQL Server]"
-  - "partenaires [SQL Server], quorum partenaire à partenaire"
-  - "témoin [SQL Server], quorum"
-  - "possession de quorum [SQL Server]"
-  - "quorum [SQL Server]"
-  - "miroir de bases de données [SQL Server]"
-  - "quorum complet [SQL Server]"
-  - "mode haute disponibilité [SQL Server]"
+title: "Quorum : effets d'un témoin sur la disponibilité de la base de données (mise en miroir de bases de données) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- quorum [SQL Server], database mirroring
+- running exposed in database mirroring [SQL Server]
+- witness-to-partner quorum [SQL Server]
+- partners [SQL Server], partner-to-partner quorum
+- witness [SQL Server], quorum
+- have quorum [SQL Server]
+- quorum [SQL Server]
+- mirror database [SQL Server]
+- full quorum [SQL Server]
+- high-availability mode [SQL Server]
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 423b441557ac6d255414889deaaf50e7a510707d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Quorum&#160;: effets d&#39;un t&#233;moin sur la disponibilit&#233; de la base de donn&#233;es (mise en miroir de bases de donn&#233;es)
+# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum : effets d'un témoin sur la disponibilité de la base de données (mise en miroir de bases de données)
   Chaque fois qu’un témoin est défini pour une session de mise en miroir de base de données, un *quorum* est nécessaire. Le quorum désigne une relation où deux ou plusieurs instances de serveur dans une session de mise en miroir de base de données sont connectées. En règle générale, le quorum implique trois instances de serveurs interconnectées. Lorsqu'un témoin est défini, un quorum est requis pour rendre la base de données disponible. Conçu pour les sessions en mode haute sécurité avec basculement automatique, un quorum garantit qu'une base de données appartient à un seul partenaire à la fois.  
   
- Si une instance de serveur spécifique est déconnectée d'une session de mise en miroir, l'instance perd le quorum. Si aucune instance de serveur n'est connectée, la session perd le quorum et la base de données n'est plus disponible. Trois types de quorum sont possibles :  
+ Si une instance de serveur spécifique est déconnectée d'une session de mise en miroir, l'instance perd le quorum. Si aucune instance de serveur n'est connectée, la session perd le quorum et la base de données n'est plus disponible. Trois types de quorum sont possibles :  
   
 -   Un *quorum complet* inclut les deux partenaires et le témoin.  
   
@@ -49,10 +54,10 @@ caps.handback.revision: 36
 > [!IMPORTANT]  
 >  Le témoin ne doit être défini que si vous avez l'intention d'utiliser le mode haute sécurité avec basculement automatique. En mode hautes performances, qui ne requiert jamais de témoin, nous vous conseillons vivement d'attribuer la valeur OFF à la propriété WITNESS. Pour plus d’informations sur l’impact d’un témoin sur le mode hautes performances, consultez [Modes de fonctionnement de la mise en miroir de bases de données](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
-## Quorum dans les sessions en mode haute sécurité  
+## <a name="quorum-in-high-safety-mode-sessions"></a>Quorum dans les sessions en mode haute sécurité  
  En mode haute sécurité, un quorum permet le basculement automatique en fournissant un contexte dans lequel les instances de serveur avec quorum décident quel partenaire détient le rôle de principal. Le serveur principal sert la base de données s'il dispose d'un quorum. Si le serveur principal perd le quorum lorsque le serveur miroir synchronisé et le témoin conservent le quorum, le basculement automatique se produit.  
   
- Les scénarios de quorum en mode haute sécurité sont les suivants :  
+ Les scénarios de quorum en mode haute sécurité sont les suivants :  
   
 -   Un *quorum complet* composé des deux partenaires et du témoin.  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 36
   
 -   Un *quorum de témoin à partenaire* composé du témoin et de l’un des partenaires.  
   
-     Si la connexion réseau entre les partenaires est perdue car l'un des partenaires a été perdu, les cas suivants sont possibles :  
+     Si la connexion réseau entre les partenaires est perdue car l'un des partenaires a été perdu, les cas suivants sont possibles :  
   
     -   Le serveur miroir est perdu et le serveur principal et le témoin conservent le quorum.  
   
@@ -91,20 +96,20 @@ caps.handback.revision: 36
 > [!IMPORTANT]  
 >  Lorsqu'une session possède un quorum partenaire à partenaire, si l'un des partenaires perd le quorum, la session perd le quorum. Cependant, si vous pensez que le témoin va rester longtemps déconnecté, nous vous recommandons de supprimer temporairement le témoin de la session. La suppression du témoin supprime la nécessité d'avoir un quorum. Enfin, si le serveur miroir perd la connexion, le serveur principal peut continuer de servir la base de données. Pour plus d’informations sur l’ajout ou la suppression d’un témoin, consultez [Témoin de mise en miroir de base de données](../../database-engine/database-mirroring/database-mirroring-witness.md).  
   
-### Effets du quorum sur la disponibilité de la base de données  
+### <a name="how-quorum-affects-database-availability"></a>Effets du quorum sur la disponibilité de la base de données  
  L'illustration suivante montre la façon dont le témoin et les partenaires coopèrent pour garantir que, à un moment donné, un seul partenaire possède le rôle principal, et que seul le serveur principal actif peut mettre sa base de données en ligne. Les deux scénarios commencent avec un quorum complet, avec **Partner_A** dans le rôle de principal et **Partner_B** dans le rôle de miroir.  
   
  ![Coopération entre témoin et serveurs partenaires](../../database-engine/database-mirroring/media/dbm-quorum-scenarios.gif "Coopération entre témoin et serveurs partenaires")  
   
- Le scénario 1 montre comment, après que le serveur principal d’origine (**Partner_A**) a subi une défaillance, le témoin et le miroir s’accordent à considérer le principal, **Partner_A**, comme n’étant plus disponible et forment un quorum. Le miroir, **Partner_B**, assume alors le rôle de principal. Le basculement automatique intervient et **Partner_B** met sa copie de la base de données en ligne. Ensuite, **Partner_B** tombe en panne et la base de données bascule hors connexion. Plus tard, l’ancien serveur principal, **Partner_A**, se reconnecte au témoin regagnant le quorum, mais, en communiquant avec le témoin, **Partner_A** apprend qu’il ne peut pas mettre sa copie de la base de données en ligne étant donné que **Partner_B** possède maintenant le rôle de principal. Quand **Partner_B** réintègre la session, il remet la base de données en ligne.  
+ Le scénario 1 montre comment, après que le serveur principal d’origine (**Partner_A**) a subi une défaillance, le témoin et le miroir s’accordent à considérer le principal, **Partner_A**, comme n’étant plus disponible et forment un quorum. Le miroir, **Partner_B** , assume alors le rôle de principal. Le basculement automatique intervient et **Partner_B**met sa copie de la base de données en ligne. Ensuite, **Partner_B** tombe en panne et la base de données bascule hors connexion. Plus tard, l’ancien serveur principal, **Partner_A**, se reconnecte au témoin regagnant le quorum, mais, en communiquant avec le témoin, **Partner_A** apprend qu’il ne peut pas mettre sa copie de la base de données en ligne étant donné que **Partner_B** possède maintenant le rôle de principal. Quand **Partner_B** réintègre la session, il remet la base de données en ligne.  
   
  Dans le scénario 2, le témoin perd le quorum, tandis que les partenaires, **Partner_A** et **Partner_B**, le conservent, et la base de données reste en ligne. Puis, les partenaires perdent également leur quorum et la base de données bascule hors connexion. Plus tard, le serveur principal, **Partner_A**, se reconnecte au témoin regagnant le quorum. Le témoin confirme que **Partner_A** possède encore le rôle de principal et **Partner_A** remet la base de données en ligne.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Modes de fonctionnement de la mise en miroir de bases de données](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [Basculement de rôle durant une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Témoin de mise en miroir de base de données](../../database-engine/database-mirroring/database-mirroring-witness.md)   
- [Défaillances possibles pendant la mise en miroir d'une base de données](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
+ [Défaillances possibles pendant la mise en miroir de bases de données](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
  [États de la mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md)  
   
   

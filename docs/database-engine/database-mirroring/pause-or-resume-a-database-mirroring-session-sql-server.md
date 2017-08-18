@@ -1,37 +1,42 @@
 ---
-title: "Suspendre ou reprendre une session de mise en miroir de bases de donn&#233;es (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "reprise de la mise en miroir de bases de données"
-  - "mise en miroir de bases de données [SQL Server], sessions"
-  - "mise en miroir de base de données [SQL Server], suspension"
-  - "mise en miroir de bases de données [SQL Server], reprise"
-  - "suspension de la mise en miroir de bases de données"
+title: "Suspendre ou reprendre une session de mise en miroir de bases de données (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resuming database mirroring
+- database mirroring [SQL Server], sessions
+- database mirroring [SQL Server], pausing
+- database mirroring [SQL Server], resuming
+- pausing database mirroring
 ms.assetid: 05ede3b4-6abe-4442-abb7-9f5aee1d6bc0
 caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c8cb7cac464772284682e74d2f8157df190adcef
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Suspendre ou reprendre une session de mise en miroir de bases de donn&#233;es (SQL Server)
+# <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>Suspendre ou reprendre une session de mise en miroir de bases de données (SQL Server)
   Cette rubrique explique comment suspendre ou reprendre la mise en miroir de bases de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Sur ReplaceThisText, à l'aide de :**  
+-   **Sur ReplaceThisText, à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 34
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Pour suspendre ou reprendre une session de mise en miroir de bases de données, utilisez la page **Mise en miroir** de la boîte de dialogue Propriétés de la base de données.  
   
-#### Pour suspendre ou reprendre la mise en miroir de bases de données  
+#### <a name="to-pause-or-resume-database-mirroring"></a>Pour suspendre ou reprendre la mise en miroir de bases de données  
   
 1.  Lors d'une session de mise en miroir de bases de données, connectez-vous à l'instance du serveur principal, puis, dans l'Explorateur d'objets, cliquez sur le nom du serveur pour développer l'arborescence du serveur.  
   
@@ -71,47 +76,47 @@ caps.handback.revision: 34
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour suspendre la mise en miroir de bases de données  
+#### <a name="to-pause-database-mirroring"></a>Pour suspendre la mise en miroir de bases de données  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)] de l'un des partenaires.  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3.  Soumettez l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante :  
+3.  Soumettez l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante :  
   
      ALTER DATABASE *nom_base_de_données* SET PARTNER SUSPEND  
   
      où *nom_base_de_données* est la base de données en miroir dont vous voulez suspendre la session.  
   
-     L'exemple suivant suspend l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+     L'exemple suivant suspend l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET PARTNER SUSPEND;  
     ```  
   
-##### Pour reprendre la mise en miroir de bases de données  
+##### <a name="to-resume-database-mirroring"></a>Pour reprendre la mise en miroir de bases de données  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)] de l'un des partenaires.  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3.  Émettez l'instruction Transact-SQL suivante :  
+3.  Émettez l'instruction Transact-SQL suivante :  
   
      ALTER DATABASE *nom_base_de_données* SET PARTNER RESUME  
   
      où *nom_base_de_données* est la base de données en miroir dont vous voulez reprendre la session.  
   
-     L'exemple suivant suspend l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+     L'exemple suivant suspend l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
     ```  
   
-##  <a name="FollowUp"></a> Suivi : après avoir suspendu ou repris la mise en miroir de bases de données  
+##  <a name="FollowUp"></a> Suivi : après avoir suspendu ou repris la mise en miroir de bases de données  
   
 -   **Après avoir suspendu la mise en miroir de bases de données**  
   
-     Sur la base de données primaire, prenez des précautions pour éviter la saturation du journal des transactions. Pour plus d’informations, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+     Sur la base de données primaire, prenez des précautions pour éviter la saturation du journal des transactions. Pour plus d'informations, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
 -   **Après avoir repris la mise en miroir de bases de données**  
   
@@ -121,7 +126,7 @@ caps.handback.revision: 34
   
 -   [Supprimer une mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   

@@ -1,29 +1,34 @@
 ---
-title: "Secondaires actifs : r&#233;plicas secondaires accessibles en lecture (groupes de disponibilit&#233; Always On) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/06/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "accès à la connexion aux réplicas de disponibilité"
-  - "Groupes de disponibilité [SQL Server], réplicas de disponibilité"
-  - "Groupes de disponibilité [SQL Server], réplicas secondaires lisibles"
-  - "réplicas secondaires actifs [SQL Server], accès en lecture seule"
-  - "accès en lecture aux réplicas secondaires"
-  - "Groupes de disponibilité [SQL Server], réplicas secondaires actifs"
+title: "Secondaires actifs - Réplicas secondaires lisibles - Disponibilité Always On | Microsoft Docs"
+ms.custom: 
+ms.date: 06/06/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- connection access to availability replicas
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], readable secondary replicas
+- active secondary replicas [SQL Server], read-only access to
+- readable secondary replicas
+- Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 caps.latest.revision: 80
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 80
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 184067cec6269692f38b92b71cfc208bfab8256d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Secondaires actifs : r&#233;plicas secondaires accessibles en lecture (groupes de disponibilit&#233; Always On)
+# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secondaires actifs : réplicas secondaires accessibles en lecture (groupes de disponibilité Always On)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Les fonctions secondaires actives de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluent la prise en charge de l’accès en lecture seule à un ou plusieurs réplicas secondaires (*réplicas secondaires accessibles en lecture*). Un réplica secondaire accessible en lecture autorise l'accès en lecture seule à toutes ses bases de données secondaires. Toutefois, les bases de données secondaires accessibles en lecture ne sont pas définies en lecture seule. Elles sont dynamiques. Chaque base de données secondaire change à mesure que les modifications apportées à la base de données primaire sont répercutées sur elle. Pour un réplica secondaire classique, les données des bases de données secondaires, y compris les tables optimisées en mémoire durables, sont quasiment synchronisées en temps réel. De plus, les index de recherche en texte intégral sont synchronisés avec les bases de données secondaires. En général, la latence des données entre une base de données primaire et la base de données secondaire correspondante n'est que de quelques secondes.  
@@ -33,7 +38,7 @@ caps.handback.revision: 80
 > [!NOTE]  
 >  Bien que vous ne puissiez pas écrire de données dans les bases de données secondaires, vous pouvez écrire dans d’autres bases de données en lecture-écriture sur l’instance de serveur qui héberge le réplica secondaire, notamment les bases de données utilisateur et les bases de données système telles que **tempdb**.  
   
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prend également en charge le reroutage des demandes de connexion de tentative de lecture sur un réplica secondaire accessible en lecture (*routage en lecture seule*). Pour plus d’informations sur le routage en lecture seule, consultez [Utilisation d’un écouteur pour se connecter à un réplica secondaire en lecture seule (routage en lecture seule)](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md#ConnectToSecondary).  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prend également en charge le reroutage des demandes de connexion de tentative de lecture sur un réplica secondaire accessible en lecture (*routage en lecture seule*). Pour plus d’informations sur le routage en lecture seule, consultez [Utilisation d’un écouteur pour se connecter à un réplica secondaire en lecture seule (routage en lecture seule)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary).  
   
  **Dans cette rubrique :**  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 80
   
 -   [Considérations relatives à la planification des capacités](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_CapacityPlanning)  
   
--   [Tâches connexes](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_RelatedTasks)  
+-   [Tâches associées](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_RelatedTasks)  
   
 -   [Contenu connexe](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#RelatedContent)  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 80
   
 -   Les charges de travail en lecture seule pour les tables sur disque utilisent le contrôle de version de ligne pour supprimer la contention de blocage sur les bases de données secondaires. Toutes les requêtes exécutées sur les bases de données secondaires sont automatiquement mappées au niveau des transactions d'isolation d'instantané, même lorsque d'autres niveaux d'isolation des transactions sont définis de manière explicite. De plus, tous les indicateurs de verrouillage sont ignorés. Cela élimine la contention de lecture/écriture.  
   
--   Les charges de travail en lecture seule pour les tables durables optimisées en mémoire accèdent aux données de la même manière que sur la base de données primaire, à l’aide des procédures stockées natives ou de l’interopérabilité SQL présentant les mêmes limitations de niveau d’isolation des transactions (consultez [Niveaux d’isolation du moteur de base de données](http://msdn.microsoft.com/fr-fr/8ac7780b-5147-420b-a539-4eb556e908a7)). La charge de travail de création de rapports ou les requêtes en lecture seule en cours d'exécution sur le réplica principal peuvent être exécutées sur le réplica secondaire sans procéder à la moindre modification. De la même manière, une charge de travail de création de rapports ou des requêtes en lecture seule en cours d'exécution sur un réplica secondaire peuvent être exécutées sur le réplica principal sans procéder à la moindre modification.  Similaires aux tables sur disque, toutes les requêtes exécutées sur les bases de données secondaires sont automatiquement mappées au niveau des transactions d'isolation d'instantané, même lorsque d'autres niveaux d'isolation des transactions sont définis de manière explicite.  
+-   Les charges de travail en lecture seule pour les tables durables optimisées en mémoire accèdent aux données de la même manière que sur la base de données primaire, à l’aide des procédures stockées natives ou de l’interopérabilité SQL présentant les mêmes limitations de niveau d’isolation des transactions (consultez [Niveaux d’isolation du moteur de base de données](http://msdn.microsoft.com/en-us/8ac7780b-5147-420b-a539-4eb556e908a7)). La charge de travail de création de rapports ou les requêtes en lecture seule en cours d'exécution sur le réplica principal peuvent être exécutées sur le réplica secondaire sans procéder à la moindre modification. De la même manière, une charge de travail de création de rapports ou des requêtes en lecture seule en cours d'exécution sur un réplica secondaire peuvent être exécutées sur le réplica principal sans procéder à la moindre modification.  Similaires aux tables sur disque, toutes les requêtes exécutées sur les bases de données secondaires sont automatiquement mappées au niveau des transactions d'isolation d'instantané, même lorsque d'autres niveaux d'isolation des transactions sont définis de manière explicite.  
   
 -   Les opérations DML sont autorisées sur les variables de table pour les types de tables sur disque et optimisées en mémoire sur le réplica secondaire.  
   
@@ -77,27 +82,27 @@ caps.handback.revision: 80
     > [!NOTE]  
     >  Éventuellement, l'administrateur de base de données peut configurer un réplica de disponibilité pour exclure les connexions en lecture seule en cas d'exécution sous le rôle principal.  
   
-     Pour plus d’informations, consultez [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md).  
+     Pour plus d’informations, consultez [À propos de l’accès de la connexion client aux réplicas de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md).  
   
 -   **Écouteur de groupe de disponibilité**  
   
-     Pour prendre en charge le routage en lecture seule, un groupe de disponibilité doit posséder un [écouteur de groupe de disponibilité](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md). Le client en lecture seule doit diriger ses demandes de connexion à cet écouteur, et la chaîne de connexion du client doit spécifier la tentative d'application « en lecture seule ». Autrement dit, il doit s’agir de *demandes de connexion d’intention de lecture*.  
+     Pour prendre en charge le routage en lecture seule, un groupe de disponibilité doit posséder un [écouteur de groupe de disponibilité](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md). Le client en lecture seule doit diriger ses demandes de connexion à cet écouteur, et la chaîne de connexion du client doit spécifier la tentative d'application « en lecture seule ». Autrement dit, il doit s’agir de *demandes de connexion d’intention de lecture*.  
   
 -   **Routage en lecture seule**  
   
      Le*routage en lecture seule* fait référence à la capacité de SQL Server d’acheminer les demandes de connexions de tentative de lecture entrantes, qui sont dirigées vers un écouteur de groupe de disponibilité, vers un réplica secondaire accessible en lecture disponible. Les conditions préalables requises pour le routage en lecture seule sont les suivantes :  
   
-    -   Pour prendre en charge le routage en lecture seule, un réplica secondaire accessible en lecture requiert une URL de routage en lecture seule. Cette URL est effective uniquement lorsque le réplica local s'exécute sous le rôle secondaire. L'URL de routage en lecture seule doit être spécifiée par réplica, si nécessaire. Chaque URL de routage en lecture seule est utilisée pour acheminer les demandes de connexion d'intention de lecture vers un réplica secondaire lisible spécifique. En général, à chaque réplica secondaire lisible est affectée une URL de routage en lecture seule.  
+    -   Pour prendre en charge le routage en lecture seule, un réplica secondaire accessible en lecture requiert une URL de routage en lecture seule. Cette URL est effective uniquement lorsque le réplica local s'exécute sous le rôle secondaire. L'URL de routage en lecture seule doit être spécifiée par réplica, si nécessaire. Chaque URL de routage en lecture seule est utilisée pour acheminer les demandes de connexion d'intention de lecture vers un réplica secondaire lisible spécifique. En général, à chaque réplica secondaire lisible est affecté une URL de routage en lecture seule.  
   
     -   Chaque réplica de disponibilité qui doit prendre en charge le routage en lecture seule lorsqu'il est le réplica principal requiert une liste de routage en lecture seule. Une liste de routage en lecture seule donnée est effective uniquement lorsque le réplica local s'exécute sous le rôle principal. Cette liste doit être spécifiée par réplica, si nécessaire. En général, chaque liste de routage en lecture seule contient toutes les URL de routage en lecture seule, avec l'URL du réplica local à la fin de la liste.  
   
         > [!NOTE]  
         >  Les demandes de connexion d’intention de lecture peuvent faire l’objet d’un équilibrage de charge entre les réplicas. Pour plus d’informations, consultez [Configurer l’équilibrage de charge entre des réplicas en lecture seule](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing).  
   
-     Pour plus d’informations, consultez [Configure Read-Only Routing for an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).  
+     Pour plus d’informations, consultez [Configurer le routage en lecture seule pour un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).  
   
 > [!NOTE]  
->  Pour plus d’informations sur les écouteurs de groupe de disponibilité et sur le routage en lecture seule, consultez [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md).  
+>  Pour plus d’informations sur les écouteurs de groupe de disponibilité et sur le routage en lecture seule, consultez [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
 ##  <a name="bkmk_LimitationsRestrictions"></a> Limitations et restrictions  
  Certaines opérations ne sont pas entièrement prises en charge, comme expliqué ci-après :  
@@ -131,9 +136,9 @@ caps.handback.revision: 80
   
 -   [Latence des données](#DataLatency)  
   
--   [Impact d’une charge de travail en lecture seule](#ReadOnlyWorkloadImpact)  
+-   [Impact d'une charge de travail en lecture seule](#ReadOnlyWorkloadImpact)  
   
--   [Indexation](#Indexing)  
+-   [Indexation](#bkmk_Indexing)  
   
 -   [Statistiques des bases de données d’accès en lecture seule](#Read-OnlyStats)  
   
@@ -145,9 +150,9 @@ caps.handback.revision: 80
  Cela signifie qu'il y a une certaine latence, en général de quelques secondes, entre les réplicas principal et secondaire. Dans des cas exceptionnels, toutefois, par exemple si des problèmes réseau réduisent le débit, la latence peut devenir importante. La latence augmente en cas de survenue de goulots d'étranglement d'E/S et lorsque le déplacement des données est suspendu. Pour surveiller le déplacement des données suspendu, utilisez le [Tableau de bord Always On](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) ou la vue de gestion dynamique [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) .  
   
 ####  <a name="bkmk_LatencyWithInMemOLTP"></a> Latence des données sur des bases de données avec des tables optimisées en mémoire  
- Dans [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] , la latence des données sur les secondaires actifs faisait l’objet de considérations spéciales (consultez la version [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] de cet article). À partir de [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] , la latence des données ne fait plus l’objet de considérations spéciales pour les tables optimisées en mémoire. La latence des données attendue pour les tables optimisées en mémoire est comparable à celle des tables sur disque.  
+ Dans [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], la latence des données sur les secondaires actifs faisait l’objet de considérations spéciales. consultez [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Secondaires actifs : réplicas secondaires accessibles en lecture](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). À partir de [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] , la latence des données ne fait plus l’objet de considérations spéciales pour les tables optimisées en mémoire. La latence des données attendue pour les tables optimisées en mémoire est comparable à celle des tables sur disque.  
   
-###  <a name="ReadOnlyWorkloadImpact"></a> Impact d’une charge de travail en lecture seule  
+###  <a name="ReadOnlyWorkloadImpact"></a> Impact d'une charge de travail en lecture seule  
  Lorsque vous configurez un réplica secondaire pour l'accès en lecture seule, vos charges de travail en lecture seule sur les bases de données secondaires consomment des ressources système, telles que le processeur et les E/S (pour les tables sur disque) des threads de phase de restauration par progression, surtout si les charges de travail en lecture seule sur les tables sur disque nécessitent de nombreuses E/S. Aucun impact n'est à constater sur les E/S lors de l'accès aux tables optimisées en mémoire, car toutes les lignes résident en mémoire.  
   
  En outre, les charges de travail en lecture seule sur les réplicas secondaires peuvent bloquer les modifications du langage de définition de données (DDL) qui sont appliquées par les enregistrements du journal.  
@@ -201,7 +206,7 @@ caps.handback.revision: 80
 -   Le suffixe _readonly_database_statistic est réservé aux statistiques générées par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Vous ne pouvez pas utiliser ce suffixe lorsque vous créez des statistiques sur une base de données primaire. Pour plus d'informations, consultez [Statistics](../../../relational-databases/statistics/statistics.md).  
   
 ##  <a name="bkmk_AccessInMemTables"></a> Accès aux tables optimisées en mémoire sur un réplica secondaire  
- Les niveaux d’isolation de la transaction qui peuvent être utilisés avec des tables optimisées en mémoire sur un réplica secondaire sont les mêmes que sur le réplica principal. Il est recommandé de définir le niveau d’isolation au niveau de la session sur READ COMMITTED et de définir l’option au niveau de la base de données MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT sur ON. Exemple :  
+ Les niveaux d’isolation de la transaction qui peuvent être utilisés avec des tables optimisées en mémoire sur un réplica secondaire sont les mêmes que sur le réplica principal. Il est recommandé de définir le niveau d’isolation au niveau de la session sur READ COMMITTED et de définir l’option au niveau de la base de données MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT sur ON. Par exemple :  
   
 ```tsql  
 ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  
@@ -256,7 +261,8 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [À propos de l’accès de la connexion client aux réplicas de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)   
+ [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Statistiques](../../../relational-databases/statistics/statistics.md)  
   
   
+

@@ -1,34 +1,39 @@
 ---
-title: "Utiliser des seuils d&#39;avertissement et d&#39;alertes sur des m&#233;triques de performances de mise en miroir (SQL&#160;Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "surveillance de la mise en miroir de bases de données [SQL Server]"
-  - "seuils [SQL Server]"
-  - "mise en miroir de bases de données [SQL Server], gestion dans SQL Server Management Studio"
-  - "alertes [SQL Server], mise en miroir de bases de données"
-  - "mise en miroir de bases de données [SQL Server], analyse"
-  - "avertissements [mise en miroir de bases de données]"
+title: "Utiliser des seuils d’avertissement et d’alertes sur des métriques de performances de mise en miroir (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- monitoring database mirroring [SQL Server]
+- thresholds [SQL Server]
+- database mirroring [SQL Server], managing in SQL Server Management Studio
+- alerts [SQL Server], database mirroring
+- database mirroring [SQL Server], monitoring
+- warnings [database mirroring]
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 caps.latest.revision: 40
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1d7f8c3105d562dd4203f5f9d2f47852068af819
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Utiliser des seuils d&#39;avertissement et d&#39;alertes sur des m&#233;triques de performances de mise en miroir (SQL&#160;Server)
-  Cette rubrique contient des informations sur les événements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour lesquels des seuils d'avertissement peuvent être configurés et gérés pour la mise en miroir de bases de données. Vous pouvez utiliser le moniteur de mise en miroir de bases de données ou les procédures stockées **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert** et **sp_dbmmonitordropalert**. Cette rubrique contient également des informations sur la configuration d'alertes sur des événements de mise en miroir de bases de données.  
+# <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Utiliser des seuils d'avertissement et d'alertes sur des métriques de performances de mise en miroir (SQL Server)
+  Cette rubrique contient des informations sur les événements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour lesquels des seuils d'avertissement peuvent être configurés et gérés pour la mise en miroir de bases de données. Vous pouvez utiliser le moniteur de mise en miroir de bases de données ou les procédures stockées **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**et **sp_dbmmonitordropalert** . Cette rubrique contient également des informations sur la configuration d'alertes sur des événements de mise en miroir de bases de données.  
   
  Une fois l'analyse établie pour une base de données en miroir, un administrateur système peut configurer des seuils d'avertissements sur plusieurs métriques de performances clés. Il est également possible de configurer des alertes sur ces événements de mise en miroir de bases de données et sur d'autres événements.  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   [Métriques de performances et seuils d'avertissement](#PerfMetricsAndWarningThresholds)  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 40
 |Mesure de performance|Seuil d'avertissement|Libellé Moniteur de mise en miroir de bases de données|  
 |------------------------|-----------------------|--------------------------------------|  
 |Journal non envoyé|Spécifie la quantité de kilo-octets (Ko) de journal non envoyé qui génère un avertissement sur l'instance de serveur principal. Cet avertissement aide à mesurer le risque de perte de données en termes de Ko et concerne tout particulièrement le mode hautes performances. Toutefois, l'avertissement est également approprié en mode haute sécurité lorsque la mise en miroir est interrompue ou suspendue en raison de la déconnexion des partenaires.|**Avertir si le journal non envoyé dépasse le seuil**|  
-|Journal non restauré|Spécifie la quantité de Ko de journal non restauré qui génère un avertissement sur l'instance de serveur miroir. Cet avertissement permet de mesurer le temps de basculement. Le*temps de basculement* est principalement constitué du temps nécessaire à l'ancien serveur miroir pour restaurer par progression tout journal demeuré dans sa file d'attente de restauration par progression et d'un court laps de temps supplémentaire.<br /><br /> Remarque : pour un basculement automatique, le temps nécessaire au système pour remarquer l’erreur ne dépend pas du temps de basculement.<br /><br /> Pour plus d’informations, consultez [Estimer l’interruption de service au cours d’un basculement de rôle &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|**Avertir si le journal non restauré dépasse le seuil**|  
+|Journal non restauré|Spécifie la quantité de Ko de journal non restauré qui génère un avertissement sur l'instance de serveur miroir. Cet avertissement permet de mesurer le temps de basculement. Le*temps de basculement* est principalement constitué du temps nécessaire à l'ancien serveur miroir pour restaurer par progression tout journal demeuré dans sa file d'attente de restauration par progression et d'un court laps de temps supplémentaire.<br /><br /> Remarque : pour un basculement automatique, le temps nécessaire au système pour remarquer l’erreur ne dépend pas du temps de basculement.<br /><br /> Pour en savoir plus, voir [Estimer l’interruption de service au cours d’un basculement de rôle &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|**Avertir si le journal non restauré dépasse le seuil**|  
 |Transaction non envoyée la plus ancienne|Spécifie le nombre de minutes de transactions pouvant s'accumuler dans la file d'attente d'envoi avant qu'un avertissement ne soit généré sur l'instance de serveur principal. Cet avertissement aide à mesurer le risque de perte de données en termes de temps et concerne tout particulièrement le mode hautes performances. Toutefois, l'avertissement est également approprié en mode haute sécurité lorsque la mise en miroir est interrompue ou suspendue en raison de la déconnexion des partenaires.|**Avertir si la durée de vie de la plus ancienne transaction non envoyée dépasse le seuil**|  
 |Charge de validation par le serveur miroir|Spécifie le nombre de millisecondes de délai moyen par transaction qui sont tolérés avant qu'un avertissement soit généré sur le serveur principal. Ce délai correspond au temps de traitement pendant lequel l'instance de serveur principal attend que l'instance de serveur miroir écrive l'enregistrement du journal de transaction dans la file d'attente de restauration par progression. Cette valeur est utile uniquement en mode haute sécurité.|**Avertir si le temps de traitement de validation de miroir dépasse le seuil**|  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 40
 ##  <a name="SetUpManageWarningThresholds"></a> Définition et gestion de seuils d'avertissement  
  Un administrateur système peut configurer un ou plusieurs seuils d'avertissement pour les métriques de performances de mise en miroir clés. Nous recommandons de définir un seuil pour un avertissement donné sur les deux partenaires afin de s'assurer que l'avertissement persiste en cas de basculement de la base de données. Le seuil approprié sur chaque partenaire dépend des capacités de performances du système du partenaire.  
   
- Les seuils d'avertissement peuvent être configurés et gérés à l'aide des méthodes suivantes :  
+ Les seuils d'avertissement peuvent être configurés et gérés à l'aide des méthodes suivantes :  
   
 -   Moniteur de mise en miroir de bases de données  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 40
     |[sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)|Retourne des informations sur des seuils d'avertissement sur une ou l'ensemble des métriques de performances clés du moniteur de mise en miroir de bases de données.|  
     |[sp_dbmmonitordropalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)|Supprime l'avertissement pour une métrique de performance spécifiée.|  
   
-## Événements de seuil de performance envoyés au journal des événements Windows  
+## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>Événements de seuil de performance envoyés au journal des événements Windows  
  Si un seuil d’avertissement est défini pour une métrique de performance, la valeur la plus récente est comparée au seuil quand la table d’états est mise à jour. Si le seuil est atteint, la procédure de mise à jour, **sp_dbmmonitorupdate**, génère un événement d’informations (un *événement de seuil de performance*) pour la métrique et elle écrit l’événement dans le journal des événements [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Le tableau suivant répertorie les ID des événements de seuil de performance.  
   
 |Mesure de performance|ID d'événement|  
@@ -91,7 +96,7 @@ caps.handback.revision: 40
   
 -   Événements de seuil de performance  
   
-     Pour plus d'informations, consultez « Événements de seuil de performance envoyés au journal des événements Windows » plus haut dans cette rubrique.  
+     Pour plus d'informations, consultez « Événements de seuil de performance envoyés au journal des événements Windows » plus haut dans cette rubrique.  
   
 -   Événements de changement d'état  
   
@@ -112,9 +117,9 @@ caps.handback.revision: 40
 ##  <a name="RelatedTasks"></a> Tâches associées  
  **Pour créer une alerte à l'aide de SQL Server Management Studio**  
   
--   [Créer une alerte utilisant un numéro d'erreur](../../ssms/agent/create-an-alert-using-an-error-number.md)  
+-   [Créer une alerte utilisant un numéro d'erreur](http://msdn.microsoft.com/library/03dd7fac-5073-4f86-babd-37e45a86023c)  
   
--   [Créer une alerte d'événement WMI](../../ssms/agent/create-a-wmi-event-alert.md)  
+-   [Créer une alerte d'événement WMI](http://msdn.microsoft.com/library/b8c46db6-408b-484e-98f0-a8af3e7ec763)  
   
  **Pour surveiller une mise en miroir de bases de données**  
   
@@ -138,7 +143,7 @@ caps.handback.revision: 40
   
 -   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Surveillance de la mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   

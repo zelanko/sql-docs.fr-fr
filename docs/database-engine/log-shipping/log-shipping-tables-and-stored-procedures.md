@@ -1,31 +1,36 @@
 ---
-title: "Tables et proc&#233;dures stock&#233;es li&#233;es &#224; la copie des journaux de transaction | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "serveurs secondaires [SQL Server]"
-  - "serveurs moniteurs [SQL Server]"
-  - "copie des journaux de transaction [SQL Server], tables système"
-  - "copie des journaux de transaction [SQL Server], procédures stockées"
-  - "serveurs principaux [SQL Server]"
+title: "Tables et procédures stockées de copie des journaux de transaction | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- secondary servers [SQL Server]
+- monitor servers [SQL Server]
+- log shipping [SQL Server], system tables
+- log shipping [SQL Server], stored procedures
+- primary servers [SQL Server]
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 25b36ec7a049001e54726e37024c392f71cd07ab
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Tables et proc&#233;dures stock&#233;es li&#233;es &#224; la copie des journaux de transaction
-  Cette rubrique décrit toutes les tables et procédures stockées associées à une configuration d'envoi de journaux. Toutes les tables liées à l’envoi de journaux sont stockées, sur chaque serveur, dans **msdb**. Le tableau ci-dessous décrit les tables et les procédures stockées utilisées par serveur, au sein d'une configuration d'envoi de journaux.  
+# <a name="log-shipping-tables-and-stored-procedures"></a>Tables et procédures stockées liées à la copie des journaux de transaction
+  Cette rubrique décrit toutes les tables et procédures stockées associées à une configuration d'envoi de journaux. Toutes les tables liées à l’envoi de journaux sont stockées, sur chaque serveur, dans **msdb** . Le tableau ci-dessous décrit les tables et les procédures stockées utilisées par serveur, au sein d'une configuration d'envoi de journaux.  
   
-## Tables du serveur principal  
+## <a name="primary-server-tables"></a>Tables du serveur principal  
   
 |Table|Description|  
 |-----------|-----------------|  
@@ -36,7 +41,7 @@ caps.handback.revision: 20
 |[log_shipping_primary_databases](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)|Contient les informations de configuration des bases de données primaires d'un serveur donné. Stocke une ligne par base de données primaire.|  
 |[log_shipping_primary_secondaries](../../relational-databases/system-tables/log-shipping-primary-secondaries-transact-sql.md)|Corrèle les bases de données primaires avec les bases de données secondaires.|  
   
-## Procédures stockées du serveur principal  
+## <a name="primary-server-stored-procedures"></a>Procédures stockées du serveur principal  
   
 |Procédure stockée|Description|  
 |----------------------|-----------------|  
@@ -46,11 +51,11 @@ caps.handback.revision: 20
 |[sp_cleanup_log_shipping_history](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)|Purge l'historique localement et sur le moniteur, en fonction de la période de rétention.|  
 |[sp_delete_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)|Supprime l'envoi du journal de la base de données primaire, ce qui inclut le travail de sauvegarde ainsi que les historiques local et distant.|  
 |[sp_delete_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md)|Supprime le nom d'une base de données secondaire d'une base de données primaire.|  
-|[sp_help_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)|Extrait les paramètres de la base de données principale et affiche les valeurs des tables **log_shipping_primary_databases** et **log_shipping_monitor_primary**.|  
+|[sp_help_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)|Extrait les paramètres de la base de données principale et affiche les valeurs des tables **log_shipping_primary_databases** et **log_shipping_monitor_primary** .|  
 |[sp_help_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-secondary-transact-sql.md)|Extrait les noms des bases de données secondaires d'une base de données principale.|  
 |[sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)|Actualise le moniteur et affiche les informations les plus récentes relatives à l'agent d'envoi de journal spécifié.|  
   
-## Tables du serveur secondaire  
+## <a name="secondary-server-tables"></a>Tables du serveur secondaire  
   
 |Table|Description|  
 |-----------|-----------------|  
@@ -62,9 +67,9 @@ caps.handback.revision: 20
 |[log_shipping_secondary_databases](../../relational-databases/system-tables/log-shipping-secondary-databases-transact-sql.md)|Stocke les informations de configuration d'une base de données secondaire donnée. Stoke une ligne par base de données secondaire.|  
   
 > [!NOTE]  
->  Les bases de données secondaires d’une base de données primaire donnée, situées sur le même serveur secondaire, partagent les paramètres de la table **log_shipping_secondary**. Si un paramètre partagé est modifié pour une base de données secondaire, la modification est effectuée pour l'ensemble des bases de données secondaires.  
+>  Les bases de données secondaires d’une base de données primaire donnée, situées sur le même serveur secondaire, partagent les paramètres de la table **log_shipping_secondary** . Si un paramètre partagé est modifié pour une base de données secondaire, la modification est effectuée pour l'ensemble des bases de données secondaires.  
   
-## Procédures stockées du serveur secondaire  
+## <a name="secondary-server-stored-procedures"></a>Procédures stockées du serveur secondaire  
   
 |Procédure stockée|Description|  
 |----------------------|-----------------|  
@@ -75,11 +80,11 @@ caps.handback.revision: 20
 |[sp_cleanup_log_shipping_history](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)|Purge l'historique localement et sur le moniteur, en fonction de la période de rétention.|  
 |[sp_delete_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)|Supprime une base de données secondaire, ainsi que les historiques local et distant.|  
 |[sp_delete_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-primary-transact-sql.md)|Supprime les informations relatives au serveur principal spécifié du serveur secondaire.|  
-|[sp_help_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)|Extrait les paramètres des bases de données secondaires à partir des tables **log_shipping_secondary**, **log_shipping_secondary_databases** et **log_shipping_monitor_secondary**.|  
+|[sp_help_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)|Extrait les paramètres des bases de données secondaires à partir des tables **log_shipping_secondary**, **log_shipping_secondary_databases**et **log_shipping_monitor_secondary** .|  
 |[sp_help_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)|Cette procédure stockée récupère les paramètres d'une base de données primaire donnée sur le serveur secondaire.|  
 |[sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)|Actualise le moniteur et affiche les informations les plus récentes relatives à l'agent d'envoi de journal spécifié.|  
   
-## Tables du serveur moniteur  
+## <a name="monitor-server-tables"></a>Tables du serveur moniteur  
   
 |Table|Description|  
 |-----------|-----------------|  
@@ -89,14 +94,14 @@ caps.handback.revision: 20
 |[log_shipping_monitor_primary](../../relational-databases/system-tables/log-shipping-monitor-primary-transact-sql.md)|Stocke un enregistrement de surveillance par base de données primaire associée à ce serveur moniteur.|  
 |[log_shipping_monitor_secondary](../../relational-databases/system-tables/log-shipping-monitor-secondary-transact-sql.md)|Stocke un enregistrement de surveillance par base de données secondaire associée à ce serveur moniteur.|  
   
-## Procédures stockées du serveur moniteur  
+## <a name="monitor-server-stored-procedures"></a>Procédures stockées du serveur moniteur  
   
 |Procédure stockée|Description|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-add-log-shipping-alert-job-transact-sql.md)|Crée un travail d'alerte pour l'envoi de journaux si aucun n'a encore été créé.|  
 |[sp_delete_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql.md)|Supprime un travail d'alerte pour l'envoi de journaux si aucune base de données primaire associée n'existe.|  
 |[sp_help_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-help-log-shipping-alert-job-transact-sql.md)|Retourne l'ID du travail d'alerte.|  
-|[sp_help_log_shipping_monitor_primary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql.md)|Retourne les enregistrements d’analyse de la base de données primaire spécifiée à partir de la table **log_shipping_monitor_primary**.|  
-|[sp_help_log_shipping_monitor_secondary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql.md)|Retourne les enregistrements d’analyse de la base de données secondaire définie à partir de la table **log_shipping_monitor_primary**.|  
+|[sp_help_log_shipping_monitor_primary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql.md)|Retourne les enregistrements d’analyse de la base de données primaire spécifiée à partir de la table **log_shipping_monitor_primary** .|  
+|[sp_help_log_shipping_monitor_secondary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql.md)|Retourne les enregistrements d’analyse de la base de données secondaire définie à partir de la table **log_shipping_monitor_primary** .|  
   
   

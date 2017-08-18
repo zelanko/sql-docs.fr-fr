@@ -1,32 +1,37 @@
 ---
-title: "Propri&#233;t&#233;s du serveur (page Processeurs) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.processor.f1"
+title: "Propriétés du serveur (page Processeurs) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.processor.f1
 ms.assetid: cc1581a2-492b-41f0-bda5-17909b65c4f7
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2b7667d7be2910280587e548eb2548e3224221d6
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propri&#233;t&#233;s du serveur (page Processeurs)
+# <a name="server-properties---processors-page"></a>Propriétés du serveur - Page Processeurs
   Utilisez cette page pour afficher ou modifier les options de votre processeur. Les paramètres d'affinité du processeur ne sont activés que si plusieurs processeurs sont installés.  
   
-## Options  
+## <a name="options"></a>Options  
  **Affinité du processeur**  
- Affecte des processeurs à des threads spécifiques afin d'éliminer les recharges de processeurs et de réduire la migration des threads entre les processeurs. Pour plus d’informations, consultez [Masque d’affinité (option de configuration de serveur)](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md).  
+ Affecte des processeurs à des threads spécifiques afin d'éliminer les recharges de processeurs et de réduire la migration des threads entre les processeurs. Pour plus d’informations, consultez [affinity mask (option de configuration de serveur)](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md).  
   
  **Affinité d'E/S**  
- Lie les E/S disque [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à un sous-ensemble spécifié d’UC. Pour plus d’informations, consultez [Option de configuration de serveur Masque d’affinité d’E/S](../../database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md).  
+ Lie les E/S disque [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à un sous-ensemble spécifié d’UC. Pour plus d’informations, consultez [affinity Input-Output mask (option de configuration de serveur)](../../database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md).  
   
  **Définir automatiquement le masque d'affinité du processeur pour tous les processeurs**  
  Autorise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à définir l'affinité du processeur.  
@@ -34,14 +39,14 @@ caps.handback.revision: 25
  **Définir automatiquement le masque d'affinité d'E/S pour tous les processeurs**  
  Autorise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à définir l'affinité d'E/S.  
   
- **Nombre maximal de threads de travail**  
+ **Nombre maximal de threads de travail**  
  0 autorise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à définir dynamiquement le nombre de threads de travail. Ce paramètre convient à la plupart des systèmes. Toutefois, selon votre configuration système, l'attribution d'une valeur spécifique à cette option peut permettre d'accroître les performances. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md).  
   
  **Renforcer la priorité SQL Server**  
  Indique si l’exécution de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit avoir une priorité de planification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows supérieure à celle d’autres processus du même ordinateur. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur priority boost](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md).  
   
  **Utiliser les fibres Windows (regroupement léger)**  
- Utilise les fibres Windows plutôt que des threads pour le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Notez que cette option n’est disponible que dans Windows 2003 Server Edition. Pour plus d’informations, consultez [lightweight pooling Server Configuration Option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md).  
+ Utilise les fibres Windows plutôt que des threads pour le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Notez que cette option n’est disponible que dans Windows 2003 Server Edition. Pour plus d’informations, consultez [lightweight pooling Server Configuration Option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md).  
   
  **Valeurs configurées**  
  Affiche les valeurs configurées pour les options de ce volet. Si vous modifiez ces valeurs, cliquez sur **Valeurs en cours d’exécution** pour vérifier si les modifications ont été prises en compte. Si ce n'est pas le cas, l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être d'abord redémarrée.  
@@ -49,7 +54,7 @@ caps.handback.revision: 25
  **Valeurs en cours d’exécution**  
  Affiche les valeurs en cours d'exécution pour les options de ce volet. Ces valeurs sont en lecture seule.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

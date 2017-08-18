@@ -1,32 +1,37 @@
 ---
-title: "Afficher ou configurer l&#39;option de configuration du serveur valeur par d&#233;faut de compression de la sauvegarde | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server Management Studio [SQL Server], option par défaut de compression de la sauvegarde"
-  - "compression de la sauvegarde [SQL Server], option par défaut de compression de la sauvegarde"
+title: "Afficher ou configurer l’option de configuration de serveur backup compression default | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Management Studio [SQL Server], backup compression default option
+- backup compression [SQL Server], backup compression default Option
 ms.assetid: 23029395-3e93-4c29-b7d6-e5a47a3526ff
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: a6cbf2bc726dce79d1076ff7b2c1f2606c9b951e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Afficher ou configurer l&#39;option de configuration du serveur valeur par d&#233;faut de compression de la sauvegarde
+# <a name="view-or-configure-the-backup-compression-default-server-configuration-option"></a>Afficher ou configurer l'option de configuration de serveur backup compression default
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Cette rubrique explique comment afficher ou configurer l’option de configuration du serveur **valeur par défaut de compression de la sauvegarde** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L’option **valeur par défaut de compression de la sauvegarde** détermine si l’instance de serveur crée des sauvegardes compressées par défaut. Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé, l’option **valeur par défaut de compression de la sauvegarde** est désactivée.  
+  Cette rubrique explique comment afficher ou configurer l’option de configuration de serveur **backup compression default** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L’option **valeur par défaut de compression de la sauvegarde** détermine si l’instance de serveur crée des sauvegardes compressées par défaut. Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé, l’option **valeur par défaut de compression de la sauvegarde** est désactivée.  
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
@@ -34,7 +39,7 @@ caps.handback.revision: 30
   
      [Sécurité](#Security)  
   
--   **Pour afficher ou configurer l'option valeur par défaut de compression de la sauvegarde, utilisez :**  
+-   **Pour afficher ou configurer l'option valeur par défaut de compression de la sauvegarde, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -46,9 +51,9 @@ caps.handback.revision: 30
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
   
--   La compression de la sauvegarde n'est pas disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   La compression de la sauvegarde n'est pas disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
--   Par défaut, la compression augmente considérablement l'utilisation de l'UC et l'UC supplémentaire consommée par le processus de compression peut avoir un impact néfaste sur les opérations simultanées. Il peut donc être préférable, dans une session où l’utilisation de l’UC est limitée, de créer une sauvegarde compressée de priorité basse à l’aide de [Resource Governor](../../relational-databases/resource-governor/resource-governor.md). Pour plus d’informations, consultez [Utiliser Resource Governor pour limiter l’utilisation de l’UC par compression de la sauvegarde &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).  
+-   Par défaut, la compression augmente considérablement l'utilisation de l'UC et l'UC supplémentaire consommée par le processus de compression peut avoir un impact néfaste sur les opérations simultanées. Il peut donc être préférable, dans une session où l’utilisation de l’UC est limitée, de créer une sauvegarde compressée de priorité basse à l’aide de [Resource Governor](../../relational-databases/resource-governor/resource-governor.md). Pour plus d'informations, consultez [Utiliser Resource Governor pour limiter l’utilisation de l’UC par compression de la sauvegarde &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).  
   
 ###  <a name="Recommendations"></a> Recommandations  
   
@@ -59,17 +64,17 @@ caps.handback.revision: 30
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Les autorisations d’exécution de **sp_configure**, sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres pour modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
+ Les autorisations d’exécution de **sp_configure** , sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### Pour afficher ou configurer l'option valeur par défaut de compression de la sauvegarde  
+#### <a name="to-view-or-configure-the-backup-compression-default-option"></a>Pour afficher ou configurer l'option backup compression default  
   
 1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur un serveur et sélectionnez **Propriétés**.  
   
 2.  Cliquez sur le nœud **Paramètres de base de données** .  
   
-3.  Sous **Sauvegarde et restauration**, **Compresser la sauvegarde** affiche le paramètre actuel de l’option **valeur par défaut de compression de la sauvegarde** . Ce paramètre détermine la valeur par défaut au niveau du serveur pour la compression des sauvegardes, comme suit :  
+3.  Sous **Sauvegarde et restauration**, **Compresser la sauvegarde** affiche le paramètre actuel de l’option **valeur par défaut de compression de la sauvegarde** . Ce paramètre détermine la valeur par défaut au niveau du serveur pour la compression des sauvegardes, comme suit :  
   
     -   Si la case à cocher **Compresser la sauvegarde** est désactivée, les nouvelles sauvegardes ne sont pas compressées par défaut.  
   
@@ -79,7 +84,7 @@ caps.handback.revision: 30
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### Pour afficher l'option valeur par défaut de compression de la sauvegarde  
+#### <a name="to-view-the-backup-compression-default-option"></a>Pour afficher l'option backup compression default  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -94,7 +99,7 @@ WHERE name = 'backup compression default' ;
 GO  
 ```  
   
-#### Pour configurer l'option de compression de la sauvegarde par défaut  
+#### <a name="to-configure-the-backup-compression-default-option"></a>Pour configurer l'option backup compression default  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -110,10 +115,10 @@ GO
   
  Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option de compression de la sauvegarde par défaut  
+##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option backup compression default  
  Le paramètre prend effet immédiatement sans redémarrage du serveur.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
@@ -121,3 +126,5 @@ GO
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)  
   
   
+
+
