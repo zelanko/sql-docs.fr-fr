@@ -19,11 +19,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ecf6dd4edb70904d902f11940da42dc33765708f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="open-table-designer-visual-database-tools"></a>Ouvrir le Concepteur de tables (Visual Database Tools)
@@ -47,7 +47,7 @@ Vous pouvez accéder au Concepteur de tables en ouvrant une table nouvelle ou ex
     Le menu **Concepteur de tables** est ajouté au menu principal et la table s’ouvre dans les volets du concepteur.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Concevoir des tables &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[Concevoir des tables &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
 [Tables](http://msdn.microsoft.com/en-us/82d7819c-b801-4309-a849-baa63083e83f)  
   
 

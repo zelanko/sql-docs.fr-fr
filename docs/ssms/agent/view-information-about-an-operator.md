@@ -21,11 +21,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a747402098366d0bbe387b76938fc5fbde8ed87a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="view-information-about-an-operator"></a>Afficher des informations relatives à un opérateur
@@ -72,11 +72,11 @@ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de ba
   
     Pour plus d’informations sur les options disponibles contenues dans la boîte de dialogue *Propriétés***nom_opérateur** , consultez :  
   
-    -   [Propriétés des opérateurs - Nouvel opérateur &amp;#40;page Général&amp;#41;$$$](../../ssms/agent/operator-properties-new-operator-general-page.md)  
+    -   [Propriétés des opérateurs - Nouvel opérateur &#40;page Général&#41;$$$](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   
-    -   [Propriétés des opérateurs - Nouvel opérateur &amp;#40;page Notifications&amp;#41;$$$](../../ssms/agent/operator-properties-new-operator-notifications-page.md)  
+    -   [Propriétés des opérateurs - Nouvel opérateur &#40;page Notifications&#41;$$$](../../ssms/agent/operator-properties-new-operator-notifications-page.md)  
   
-    -   [Propriétés Opérateur &amp;#40;page Historique&amp;#41;](../../ssms/agent/operator-properties-history-page.md)  
+    -   [Propriétés Opérateur &#40;page Historique&#41;](../../ssms/agent/operator-properties-history-page.md)  
   
 5.  Lorsque vous avez terminé, cliquez sur **OK**.  
   

@@ -18,11 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a44398daffbf1ab25f52430d2b27a0e822427db1
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Créer manuellement des jointures réflexives (Visual Database Tools)
@@ -122,14 +122,14 @@ Cheryl Carson       Abraham Bennet
   
 4.  Dans la fenêtre Propriétés, cliquez sur **Condition et type de jointure** et cliquez sur le bouton de sélection **(…)** , à droite de la propriété.  
   
-5.  Dans la [boîte de dialogue Joindre](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md), modifiez éventuellement l’opérateur de comparaison entre les clés primaires. Indiquez par exemple l'opérateur inférieur à (<).  
+5.  Dans la [boîte de dialogue Joindre](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md) , modifiez éventuellement l’opérateur de comparaison entre les clés primaires. Indiquez par exemple l'opérateur inférieur à (<).  
   
 6.  Créez la condition de jointure supplémentaire (par exemple, authors.zip = authors1.zip) en faisant glisser le nom de la colonne de jointure primaire figurant dans la première occurrence de la table ou de l'objet table jusqu'à la colonne correspondante de la seconde occurrence.  
   
 7.  Spécifiez d'autres options de requête comme les colonnes de sortie, les conditions de recherche et l'ordre de tri.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Créer automatiquement des jointures réflexives &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-self-joins-automatically-visual-database-tools.md)  
-[Interroger avec des jointures &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
+[Créer automatiquement des jointures réflexives &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-self-joins-automatically-visual-database-tools.md)  
+[Interroger avec des jointures &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
   
 

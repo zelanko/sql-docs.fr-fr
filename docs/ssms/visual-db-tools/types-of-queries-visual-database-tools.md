@@ -20,47 +20,47 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 14a314fc77534de5378a38de50e1768d25dc5bda
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="types-of-queries-visual-database-tools"></a>Types de requêtes (Visual Database Tools)
 Le Concepteur de requêtes et de vues propose des fonctionnalités intégrées pour certains types de requêtes (Select, Insert Results, Insert Values, Update, Delete et Make Table) et prend également en charge les requêtes d'expression UNION, de recherche en texte intégral et CASE.  
   
 ## <a name="in-this-section"></a>Dans cette section  
-[Types de requêtes pris en charge &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  
+[Types de requêtes pris en charge &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  
 Décrit les types de requêtes que vous pouvez utiliser avec le Concepteur de requêtes et de vues.  
   
-[Créer des requêtes de recherche en texte intégral &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md)  
+[Créer des requêtes de recherche en texte intégral &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md)  
 Explique comment créer une requête qui recherche une colonne indexée en texte intégral.  
   
-[Créer des requêtes Insert Results &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md)  
+[Créer des requêtes Insert Results &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md)  
 Explique comment créer une requête qui insère les résultats d'une instruction SELECT dans une table.  
   
-[Créer des requêtes Insert Values &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-insert-values-queries-visual-database-tools.md)  
+[Créer des requêtes Insert Values &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-insert-values-queries-visual-database-tools.md)  
 Explique comment créer une requête qui insère des valeurs dans une table.  
   
-[Créer des requêtes Make Table &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-make-table-queries-visual-database-tools.md)  
+[Créer des requêtes Make Table &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-make-table-queries-visual-database-tools.md)  
 Explique comment créer une requête qui crée une nouvelle table.  
   
-[Créer des requêtes Delete &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md)  
+[Créer des requêtes Delete &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md)  
 Explique comment créer une requête qui supprime des données.  
   
-[Créer des requêtes UNION &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-union-queries-visual-database-tools.md)  
+[Créer des requêtes UNION &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-union-queries-visual-database-tools.md)  
 Explique comment créer une requête qui fusionne les résultats de deux instructions SELECT ou davantage dans un seul jeu de résultats.  
   
-[Créer des requêtes Update &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-update-queries-visual-database-tools.md)  
+[Créer des requêtes Update &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-update-queries-visual-database-tools.md)  
 Explique comment créer une requête qui met à jour une table.  
   
 ## <a name="reference"></a>Référence  
-[Propriétés de la requête &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/query-properties-visual-database-tools.md)  
+[Propriétés de la requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-properties-visual-database-tools.md)  
 Décrit les propriétés disponibles lors de la conception de requêtes.  
   
 ## <a name="related-sections"></a>Sections connexes  
-[Rubriques de procédures relatives à la conception de requêtes et de vues &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 Explique comment concevoir et manipuler les requêtes et les vues.  
   
 

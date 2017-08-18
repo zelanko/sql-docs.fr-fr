@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 81ad964781f4d467f27d0693522f601bb86119fc
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sql-server-management-studio-menu-help"></a>Aide de SQL Server Management Studio
@@ -31,17 +31,17 @@ Cette section contient l’aide accessible par le biais de la touche F1 pour les
   
 [Options d'enregistrement avancées](../../ssms/menu-help/advanced-save-options.md)  
   
-[Boîte de dialogue Choisir des dossiers de recherche &amp;#40;Visual Studio&amp;#41;](../../ssms/menu-help/choose-search-folders-dialog-box-visual-studio.md)  
+[Boîte de dialogue Choisir des dossiers de recherche &#40;Visual Studio&#41;](../../ssms/menu-help/choose-search-folders-dialog-box-visual-studio.md)  
   
-[Choisir des éléments de boîte à outils &amp;#40;page Tâches de maintenance&amp;#41;](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)  
+[Choisir des éléments de boîte à outils &#40;page Tâches de maintenance&#41;](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)  
   
-[Personnaliser &amp;#40;page Commandes&amp;#41;](../../ssms/menu-help/customize-commands-page.md)  
+[Personnaliser &#40;page Commandes&#41;](../../ssms/menu-help/customize-commands-page.md)  
   
-[Personnaliser &amp;#40;page Barres d’outils&amp;#41;](../../ssms/menu-help/customize-toolbars-page.md)  
+[Personnaliser &#40;page Barres d’outils&#41;](../../ssms/menu-help/customize-toolbars-page.md)  
   
 [Outils externes](../../ssms/menu-help/external-tools.md)  
   
-[Ouvrir avec &amp;#40;Nouveau fichier&amp;#41;](../../ssms/menu-help/open-with-new-file.md)  
+[Ouvrir avec &#40;Nouveau fichier&#41;](../../ssms/menu-help/open-with-new-file.md)  
   
 [Aide (F1) des boîtes de dialogue Options](../../ssms/menu-help/options-dialog-boxes-f1-help.md)  
   
@@ -49,6 +49,6 @@ Cette section contient l’aide accessible par le biais de la touche F1 pour les
   
 [Enregistrer les modifications](../../ssms/menu-help/save-changes.md)  
   
-[Boîte de dialogue Fenêtres &amp;#40;Aide de Microsoft Document Explorer&amp;#41;](../../ssms/menu-help/windows-dialog-box-microsoft-document-explorer-help.md)  
+[Boîte de dialogue Fenêtres &#40;Aide de Microsoft Document Explorer&#41;](../../ssms/menu-help/windows-dialog-box-microsoft-document-explorer-help.md)  
   
 

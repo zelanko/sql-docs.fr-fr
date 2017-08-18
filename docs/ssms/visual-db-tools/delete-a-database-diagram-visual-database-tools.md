@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ca2182f7cf871a32891a186f13fb177b7f22be52
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>Supprimer un schéma de base de données (Visual Database Tools)
@@ -42,6 +42,6 @@ Lorsque vous n'avez plus besoin d'un schéma de base de données, vous pouvez le
 Le schéma de base de données est supprimé de la base de données. Lorsque vous supprimez un schéma de base de données, ses tables sont préservées.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Utiliser des schémas de base de données &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
 

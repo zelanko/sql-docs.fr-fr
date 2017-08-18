@@ -18,11 +18,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c2192e6a80331af869eb5cf0fcf26c39a47610e1
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="summarize-query-results-visual-database-tools"></a>Résumé des résultats d'une requête (Visual Database Tools)
@@ -31,20 +31,20 @@ Certains principes logiques s'appliquent à la création de requêtes d'agrégat
 Une bonne compréhension des principes des requêtes d'agrégation et du comportement du Concepteur de requêtes et de vues permet de créer des requêtes correctes du point de vue logique. Le principe déterminant est que les requêtes d'agrégation ne peuvent donner que des informations de synthèse. C'est pourquoi la plupart des principes présentés plus loin décrivent les différentes méthodes permettant de référencer des colonnes de données individuelles dans une requête d'agrégation.  
   
 ## <a name="in-this-section"></a>Dans cette section  
-[Utiliser des colonnes dans des requêtes d'agrégation &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-columns-in-aggregate-queries-visual-database-tools.md)  
+[Utiliser des colonnes dans des requêtes d'agrégation &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-columns-in-aggregate-queries-visual-database-tools.md)  
 Décrit les concepts relatifs au regroupement et à la synthèse de colonnes à l'aide des clauses GROUP BY, WHERE et HAVING.  
   
-[Compter les lignes d'une table &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/count-rows-in-a-table-visual-database-tools.md)  
+[Compter les lignes d'une table &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/count-rows-in-a-table-visual-database-tools.md)  
 Fournit la procédure de comptage du nombre de lignes dans une table ou du nombre de lignes dans une table qui répondent à un jeu de critères.  
   
-[Synthétiser ou regrouper des valeurs de toutes les lignes d'une table &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools.md)  
+[Synthétiser ou regrouper des valeurs de toutes les lignes d'une table &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools.md)  
 Fournit la procédure de synthèse de toutes les lignes plutôt que d'un jeu de lignes groupées.  
   
-[Synthétiser ou regrouper des valeurs à l'aide d'expressions personnalisées &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/summarize-or-aggregate-values-using-custom-expressions-visual-database-tools.md)  
+[Synthétiser ou regrouper des valeurs à l'aide d'expressions personnalisées &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-or-aggregate-values-using-custom-expressions-visual-database-tools.md)  
 Fournit la procédure d'utilisation d'expressions pour synthétiser ou regrouper plutôt que d'utiliser des clauses prédéfinies.  
   
 ## <a name="related-sections"></a>Sections connexes  
-[Rubriques de procédures relatives à la conception de requêtes et de vues &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 Fournit des liens vers des rubriques qui décrivent l'utilisation du Concepteur de requêtes et de vues.  
   
 

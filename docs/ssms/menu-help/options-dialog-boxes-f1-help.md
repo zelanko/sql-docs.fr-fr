@@ -17,31 +17,31 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8af8c347e4225f1beb4cef6f4b515568115146f1
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Aide (F1) des boîtes de dialogue Options
 Cette section contient l’aide accessible par le biais de la touche F1 des boîtes de dialogue qui sont accessibles en cliquant sur **Options** dans le menu **Outils** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   
-[Options &amp;#40;Concepteurs - Concepteurs Analysis Services - Général&amp;#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
+[Options &#40;Concepteurs - Concepteurs Analysis Services - Général&#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   
-[Options &amp;#40;Concepteurs - page Plans de maintenance&amp;#41;](../../ssms/menu-help/options-designers-maintenance-plans-page.md)  
+[Options &#40;Concepteurs - page Plans de maintenance&#41;](../../ssms/menu-help/options-designers-maintenance-plans-page.md)  
   
-[Options &amp;#40;Concepteurs - Page Concepteurs de bases de données et de tables&amp;#41;](../../ssms/menu-help/options-designers-table-and-database-designers-page.md)  
+[Options &#40;Concepteurs - Page Concepteurs de bases de données et de tables&#41;](../../ssms/menu-help/options-designers-table-and-database-designers-page.md)  
   
-[Options &amp;#40;Environnement - Page Polices et couleurs&amp;#41;](../../ssms/menu-help/options-environment-fonts-and-colors-page.md)  
+[Options &#40;Environnement - Page Polices et couleurs&#41;](../../ssms/menu-help/options-environment-fonts-and-colors-page.md)  
   
-[Options &amp;#40;Environnement - Page Général&amp;#41;](../../ssms/menu-help/options-environment-general-page.md)  
+[Options &#40;Environnement - Page Général&#41;](../../ssms/menu-help/options-environment-general-page.md)  
   
-[Options &amp;#40;Environnement - Aide - Page Général&amp;#41;](../../ssms/menu-help/options-environment-help-general-page.md)  
+[Options &#40;Environnement - Aide - Page Général&#41;](../../ssms/menu-help/options-environment-help-general-page.md)  
   
-[Options &amp;#40;Environnement - Aide - Page En ligne&amp;#41;](../../ssms/menu-help/options-environment-help-online-page.md)  
+[Options &#40;Environnement - Aide - Page En ligne&#41;](../../ssms/menu-help/options-environment-help-online-page.md)  
   
-[Options &amp;#40;Environnement - Page Clavier&amp;#41;](../../ssms/menu-help/options-environment-keyboard-page.md)  
+[Options &#40;Environnement - Page Clavier&#41;](../../ssms/menu-help/options-environment-keyboard-page.md)  
   
 [Options (Exécution de requête - Analysis Server - Page Général)](http://msdn.microsoft.com/en-us/456867d0-724c-449c-abf9-013a694d7924)  
   

@@ -20,11 +20,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5bfe05dde95b8fdb47893ea17802b0798de9762a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="view-information-about-an-alert"></a>Afficher les informations relatives à une alerte
@@ -63,13 +63,13 @@ Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent afficher des
   
     Pour plus d’informations sur les options disponibles contenues dans la boîte de dialogue *Propriétés de l’alerte***nom_alerte** , consultez :  
   
-    -   [Propriétés de l’alerte - Nouvelle alerte &amp;#40;page Général&amp;#41;](../../ssms/agent/alert-properties-new-alert-general-page.md)  
+    -   [Propriétés de l’alerte - Nouvelle alerte &#40;page Général&#41;](../../ssms/agent/alert-properties-new-alert-general-page.md)  
   
-    -   [Propriétés de l’alerte - Nouvelle alerte &amp;#40;page Réponse&amp;#41;](../../ssms/agent/alert-properties-new-alert-response-page.md)  
+    -   [Propriétés de l’alerte - Nouvelle alerte &#40;page Réponse&#41;](../../ssms/agent/alert-properties-new-alert-response-page.md)  
   
-    -   [Propriétés de l’alerte - Nouvelle alerte &amp;#40;page Options&amp;#41;](../../ssms/agent/alert-properties-new-alert-options-page.md)  
+    -   [Propriétés de l’alerte - Nouvelle alerte &#40;page Options&#41;](../../ssms/agent/alert-properties-new-alert-options-page.md)  
   
-    -   [Propriétés de l'alerte &amp;#40;page Historique&amp;#41;](../../ssms/agent/alert-properties-history-page.md)  
+    -   [Propriétés de l'alerte &#40;page Historique&#41;](../../ssms/agent/alert-properties-history-page.md)  
   
 5.  Lorsque vous avez terminé, cliquez sur **OK**.  
   

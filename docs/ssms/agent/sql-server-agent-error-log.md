@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d1947c39760dc30d22c7b419412288da72fcc9e3
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sql-server-agent-error-log"></a>Journal des erreurs de SQL Server Agent
@@ -41,11 +41,11 @@ Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent n'est pa
   
 **Pour afficher le journal des erreurs SQL Server Agent**  
   
--   [Afficher le journal des erreurs SQL Server Agent &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/agent/view-sql-server-agent-error-log-sql-server-management-studio.md)  
+-   [Afficher le journal des erreurs SQL Server Agent &#40;SQL Server Management Studio&#41;](../../ssms/agent/view-sql-server-agent-error-log-sql-server-management-studio.md)  
   
 **Pour renommer le journal des erreurs SQL Server Agent**  
   
--   [Renommer un journal d’erreurs SQL Server Agent &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/agent/rename-a-sql-server-agent-error-log-sql-server-management-studio.md)  
+-   [Renommer un journal d’erreurs SQL Server Agent &#40;SQL Server Management Studio&#41;](../../ssms/agent/rename-a-sql-server-agent-error-log-sql-server-management-studio.md)  
   
 **Pour envoyer des messages d'erreur SQL Server Agent**  
   
@@ -53,6 +53,6 @@ Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent n'est pa
   
 **Pour écrire des messages de trace d'exécution dans le journal des erreurs SQL Server Agent**  
   
--   [Écrire des messages de trace d’exécution dans le journal des erreurs SQL Server Agent &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/agent/write-execution-trace-messages-to-sql-server-agent-log-ssms.md)  
+-   [Écrire des messages de trace d’exécution dans le journal des erreurs SQL Server Agent &#40;SQL Server Management Studio&#41;](../../ssms/agent/write-execution-trace-messages-to-sql-server-agent-log-ssms.md)  
   
 

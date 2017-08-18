@@ -23,11 +23,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c2115ca07d5e726a4bdb1fc3bba5ba8f0d202277
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Conventions pour la combinaison de conditions de recherche dans le volet Critères (Visual Database Tools)
@@ -170,6 +170,6 @@ Le Concepteur de requêtes et de vues représente cette clause WHERE dans le vol
 Si vous apportez des modifications à la requête (en modifiant, par exemple, une valeur dans le volet Critères), le Concepteur de requêtes et de vues recrée l'instruction SQL dans le volet SQL. L'instruction SQL recréée ressemblera à celle qui est affichée dans le volet Critères, et non à votre instruction d'origine. Par exemple, si le volet Critères contient des clauses AND distribuées, l'instruction obtenue dans le volet SQL contiendra des clauses AND distribuées de façon explicite. Pour plus d'informations, consultez « Utilisation de AND avec plusieurs clauses OR », plus haut dans cette rubrique.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Spécifier des critères de recherche &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   
 

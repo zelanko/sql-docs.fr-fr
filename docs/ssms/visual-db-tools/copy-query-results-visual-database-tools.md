@@ -16,15 +16,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 43a63ea7380ce4586d8a411c085c094aa953b1b2
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="copy-query-results-visual-database-tools"></a>Copier les résultats d'une requête (Visual Database Tools)
-Vous pouvez copier le jeu de résultats sous la forme de texte séparé par des tabulations à partir du volet **Résultats**. Vous pouvez copier le jeu de résultats complet ou plusieurs lignes ou cellules contiguës ou non contiguës.  
+Vous pouvez copier le jeu de résultats sous la forme de texte séparé par des tabulations à partir du volet **Résultats** . Vous pouvez copier le jeu de résultats complet ou plusieurs lignes ou cellules contiguës ou non contiguës.  
   
 ### <a name="to-copy-result-set-text-from-the-results-pane"></a>Pour copier le texte du jeu de résultats à partir du volet Résultats  
   
@@ -55,6 +55,6 @@ Vous pouvez copier le jeu de résultats sous la forme de texte séparé par des 
 5.  Cliquez avec le bouton droit, puis cliquez sur **Copier**.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Utiliser des données du volet de résultats &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[Utiliser des données du volet de résultats &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   
 

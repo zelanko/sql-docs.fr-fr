@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d77c2ce648939486be70ca9ab961bb9697b4d8db
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Volet Schéma (Visual Database Tools)
@@ -69,8 +69,8 @@ Le tableau suivant dresse la liste des cases à cocher et des symboles utilisés
   
 |Case à cocher ou symbole| Description|  
 |-----------------------|---------------|  
-|![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi7.gif "Visual Database Tools icon")<br /><br />![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi8.gif "Visual Database Tools icon")<br /><br />![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi9.gif "Visual Database Tools icon")<br /><br />![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbia.gif "Visual Database Tools icon")|Spécifie si une colonne de données apparaît dans l'ensemble des résultats de la requête (requête Select) ou si elle est utilisée dans une requête Update, Insert From, Make Table ou Insert Into. Sélectionnez la colonne pour l'ajouter aux résultats. Si **(Toutes les colonnes)** est sélectionné, toutes les colonnes de données figurent dans le résultat.<br /><br />L'icône utilisée avec la case à cocher dépend du type de requête que vous créez. Lorsque vous créez une requête Delete, vous ne pouvez pas sélectionner des colonnes individuelles.|  
-|![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbib.gif "Visual Database Tools icon")<br /><br />![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbic.gif "Visual Database Tools icon")|Indique si la colonne de données sert à trier les résultats de la requête (fait partie d'une clause ORDER BY). L'icône indique A-Z pour un ordre de tri croissant et Z-A pour un ordre de tri décroissant.|  
+|![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi7.gif "Icône Visual Database Tools")<br /><br />![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi8.gif "Icône Visual Database Tools")<br /><br />![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi9.gif "Icône Visual Database Tools")<br /><br />![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbia.gif "Icône Visual Database Tools")|Spécifie si une colonne de données apparaît dans l'ensemble des résultats de la requête (requête Select) ou si elle est utilisée dans une requête Update, Insert From, Make Table ou Insert Into. Sélectionnez la colonne pour l'ajouter aux résultats. Si **(Toutes les colonnes)** est sélectionné, toutes les colonnes de données figurent dans le résultat.<br /><br />L'icône utilisée avec la case à cocher dépend du type de requête que vous créez. Lorsque vous créez une requête Delete, vous ne pouvez pas sélectionner des colonnes individuelles.|  
+|![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbib.gif "Icône Visual Database Tools")<br /><br />![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbic.gif "Icône Visual Database Tools")|Indique si la colonne de données sert à trier les résultats de la requête (fait partie d'une clause ORDER BY). L'icône indique A-Z pour un ordre de tri croissant et Z-A pour un ordre de tri décroissant.|  
 |![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbid.gif "Icône Visual Database Tools")|Indique si la colonne de données sert à créer un ensemble de résultats groupés (fait partie d'une clause GROUP BY) dans une requête d'agrégation.|  
 |![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbie.gif "Icône Visual Database Tools")|Indique si la colonne de données est incluse dans une condition de recherche de la requête (fait partie d'une clause WHERE ou HAVING).|  
 |![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbif.gif "Icône Visual Database Tools")|Indique si le contenu de la colonne de données est utilisé dans une synthèse (s'il est inclus dans une fonction d'agrégation telle que SUM ou AVG).|  
@@ -100,8 +100,8 @@ Les icônes présentes aux extrémités de la ligne de jointure indiquent le typ
 |![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbio.gif "Icône Visual Database Tools")|Le Concepteur de requêtes et de vues ne peut pas déterminer le type de jointure|  
   
 ## <a name="see-also"></a>Voir aussi  
-[Rubriques de procédures relatives à la conception de requêtes et de vues &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Volet Critères &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)  
-[Trier et regrouper des résultats de requête &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Volet Critères &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)  
+[Trier et regrouper des résultats de requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
   
 

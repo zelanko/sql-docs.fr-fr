@@ -19,11 +19,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b8628cf736650c53493501777f79f970ff864209
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="edit-an-operator"></a>Modifier un opérateur
@@ -49,13 +49,13 @@ Cette rubrique explique comment modifier la disponibilité d'un opérateur pour 
   
 -   Les options du récepteur de radiomessagerie et **net send** seront supprimées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent dans une version future de [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Évitez d'utiliser ces fonctionnalités dans une nouvelle tâche de développement et prévoyez de modifier les applications qui les utilisent actuellement.  
   
--   Remarque : l'Agent SQL Server doit être configuré pour utiliser la messagerie de base de données pour envoyer des notifications aux opérateurs par messagerie électronique ou radiomessagerie. Pour plus d'informations, consultez [Affecter des alertes à un opérateur](http://msdn.microsoft.com/library/ms190038.aspx).  
+-   Remarque : SQL Server Agent doit être configuré pour utiliser la messagerie de base de données pour envoyer des notifications aux opérateurs par messagerie électronique ou radiomessagerie. Pour plus d'informations, consultez [Affecter des alertes à un opérateur](http://msdn.microsoft.com/library/ms190038.aspx).  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
   
 ### <a name="Security"></a>Sécurité  
   
-#### <a name="Permissions"></a>Autorisations  
+#### <a name="Permissions"></a>Permissions  
 Seuls les membres du rôle serveur fixe **sysadmin** peuvent modifier des opérateurs.  
   
 ## <a name="SSMSProcedure"></a>Utilisation de SQL Server Management Studio  
@@ -72,11 +72,11 @@ Seuls les membres du rôle serveur fixe **sysadmin** peuvent modifier des opéra
   
     Pour plus d’informations sur les options disponibles contenues dans la boîte de dialogue *Propriétés de***nom_opérateur** , consultez :  
   
-    -   [Propriétés des opérateurs - Nouvel opérateur &amp;#40;page Général&amp;#41;$$$](../../ssms/agent/operator-properties-new-operator-general-page.md)  
+    -   [Propriétés des opérateurs - Nouvel opérateur &#40;page Général&#41;$$$](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   
-    -   [Propriétés des opérateurs - Nouvel opérateur &amp;#40;page Notifications&amp;#41;$$$](../../ssms/agent/operator-properties-new-operator-notifications-page.md)  
+    -   [Propriétés des opérateurs - Nouvel opérateur &#40;page Notifications&#41;$$$](../../ssms/agent/operator-properties-new-operator-notifications-page.md)  
   
-    -   [Propriétés Opérateur &amp;#40;page Historique&amp;#41;](../../ssms/agent/operator-properties-history-page.md)  
+    -   [Propriétés Opérateur &#40;page Historique&#41;](../../ssms/agent/operator-properties-history-page.md)  
   
 5.  Lorsque vous avez terminé, cliquez sur **OK**.  
   

@@ -18,11 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b702cadee477e53a0af109dee115b11132f9cd74
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="development-test-and-production-databases-visual-database-tools"></a>Bases de données de développement, de test et de production (Visual Database Tools)
@@ -31,6 +31,6 @@ Si deux bases de données sont de structure identique, vous pouvez apporter des 
 Dans ce but, exécutez toutes les modifications dans une seule et même session avec la base de données de développement, créez un script de modification de votre session et exécutez le script ultérieurement dans la base de données de test.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Environnements multi-utilisateurs &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
+[Environnements multi-utilisateurs &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
   
 

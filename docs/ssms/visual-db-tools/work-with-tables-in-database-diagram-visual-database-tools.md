@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f581cf8ed155d90bdb21fcab32c83c3cdc2a6e66
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="work-with-tables-in-database-diagram-visual-database-tools"></a>Utiliser des tables dans les schémas de base de données (Visual Database Tools)
@@ -33,22 +33,22 @@ Vous pouvez modifier et créer des tables de base de données dans le Concepteur
 > Si la table est publiée pour réplication, vous devez apporter vos modifications au schéma à l’aide de l’instruction Transact-SQL [ALTER TABLE](http://msdn.microsoft.com/en-us/f1745145-182d-4301-a334-18f799d361d1) ou de SMO (SQL Server Management Objects). Lorsque les modifications sont apportées au schéma à l'aide du Concepteur de tables ou du Concepteur de schémas de base de données, celui-ci tente d'abandonner la table et de la recréer. Toutefois, il est impossible d'abandonner les objets publiés, par conséquent les modifications du schéma échoueront.  
   
 ## <a name="in-this-section"></a>Dans cette section  
-[Ajouter des tables à des schémas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  
+[Ajouter des tables à des schémas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  
   
-[Ajouter des tables connexes à des schémas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/add-related-tables-to-diagrams-visual-database-tools.md)  
+[Ajouter des tables connexes à des schémas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-related-tables-to-diagrams-visual-database-tools.md)  
   
-[Enregistrer des tables sélectionnées dans un schéma &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/save-selected-tables-on-a-diagram-visual-database-tools.md)  
+[Enregistrer des tables sélectionnées dans un schéma &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-selected-tables-on-a-diagram-visual-database-tools.md)  
   
-[Copier des tables d’un schéma de base de données vers un autre &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/copy-tables-from-one-database-diagrams-to-another-visual-database-tools.md)  
+[Copier des tables d’un schéma de base de données vers un autre &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/copy-tables-from-one-database-diagrams-to-another-visual-database-tools.md)  
   
-[Supprimer des tables de schémas de base de données &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/remove-tables-from-database-diagrams-visual-database-tools.md)  
+[Supprimer des tables de schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-tables-from-database-diagrams-visual-database-tools.md)  
   
-[Mapper des relations plusieurs-à-plusieurs &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/map-many-to-many-relationships-visual-database-tools.md)  
+[Mapper des relations plusieurs-à-plusieurs &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/map-many-to-many-relationships-visual-database-tools.md)  
   
-[Établir des relations réflexives &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/draw-reflexive-relationships-visual-database-tools.md)  
+[Établir des relations réflexives &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/draw-reflexive-relationships-visual-database-tools.md)  
   
 ## <a name="reference"></a>Référence  
-[Boîte de dialogue Ajouter une table &amp;#40;Concepteur de bases de données&amp;#41; &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/add-table-dialog-box-database-designer-visual-database-tools.md)  
+[Boîte de dialogue Ajouter une table &#40;Concepteur de bases de données&#41; &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-table-dialog-box-database-designer-visual-database-tools.md)  
   
 ## <a name="related-sections"></a>Sections connexes  
 

@@ -20,11 +20,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c420cccafdda162f8acee678536b4419270c5777
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>Ajouter un projet existant à une solution
@@ -44,7 +44,7 @@ Vous pouvez ajouter un ou plusieurs projets à une solution existante. Un même 
 > Avant d'ajouter un projet existant à partir d'un répertoire partagé dans un environnement multidéveloppeur, assurez-vous que vos modifications n'affectent pas ou n'écrasent pas les modifications effectuées par un autre développeur.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Projets &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
-[Solutions &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
+[Projets &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
+[Solutions &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
   
 

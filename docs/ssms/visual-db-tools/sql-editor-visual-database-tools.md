@@ -25,11 +25,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: dd01c244e33751b49c4bd811a879eedd500be957
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sql-editor-visual-database-tools"></a>Éditeur SQL (Visual Database Tools)
@@ -53,6 +53,6 @@ L'Éditeur SQL fournit de nombreuses fonctionnalités pratiques de modification 
 Lorsque vous modifiez des instructions SQL, certaines instructions Transact-SQL apparaissent dans une zone entourée d'un trait fin. Cela vous aide à mieux appréhender les sections de commandes du code SQL et à identifier les blocs d'instructions SQL qui peuvent être conçus de manière graphique à l'aide du Concepteur de requêtes. Pour plus d’informations sur l’utilisation du Concepteur de requêtes, consultez [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md).  
   
 ## <a name="see-also"></a>Voir aussi  
-[Rubriques de procédures relatives à la conception de requêtes et de vues &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
 

@@ -17,11 +17,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f9c97287220cddf8d77b65375f308b784d508742
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="add-text-annotations-to-diagrams-visual-database-tools"></a>Ajouter des annotations de texte aux schémas (Visual Database Tools)
@@ -41,6 +41,6 @@ Pour créer des notes ou des commentaires sur un schéma, vous pouvez ajouter de
 > Pour modifier la police, cliquez avec le bouton droit sur le champ de texte et cliquez sur **Définir la police de l’annotation de texte**.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Utiliser des schémas de base de données &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
 

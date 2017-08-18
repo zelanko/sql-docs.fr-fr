@@ -27,11 +27,11 @@ caps.latest.revision: 28
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0be7c28ff6d9359ae858902f7b2d07cee6f353f6
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurer l'entrepôt de données de gestion (SQL Server Management Studio)
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
      Pour configurer plusieurs instances, passez à l'étape 5.  
   
     > [!NOTE]  
-    >  L'utilisation de proxys dans les déploiements où le collecteur de données est installé sur plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui utilisent le même entrepôt de données de gestion est considérée comme étant la bonne pratique.  
+    >  L'utilisation de proxys dans les déploiements où le collecteur de données est installé sur plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui utilisent le même entrepôt de données de gestion est considérée comme étant la meilleure pratique.  
   
 5.  Ouvrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sur une autre instance et procédez de l'une des manières suivantes :  
   

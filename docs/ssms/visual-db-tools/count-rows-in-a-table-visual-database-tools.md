@@ -21,15 +21,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b1c6738ba292765a769cad8ae68cfae9a4503f8a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>Compter les lignes d'une table (Visual Database Tools)
-Vous pouvez compter les lignes d'une table afin de déterminer les éléments suivants :  
+Vous pouvez compter les lignes d'une table afin de déterminer les éléments suivants :  
   
 -   le nombre total de lignes dans une table, par exemple le décompte de tous les livres d'une table `titles` ;  
   
@@ -91,7 +91,7 @@ Les procédures associées aux trois types de nombres sont similaires.
 5.  Exécute la requête.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Trier et regrouper des résultats de requête &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
-[Résumer les résultats de la requête &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
+[Trier et regrouper des résultats de requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[Résumer les résultats de la requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
   
 

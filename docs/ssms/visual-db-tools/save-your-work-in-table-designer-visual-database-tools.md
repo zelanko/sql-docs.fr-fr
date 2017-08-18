@@ -18,11 +18,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5643c68421bd731f9615a7e54e3e24d9f5237b37
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="save-your-work-in-table-designer-visual-database-tools"></a>Enregistrer votre travail dans le Concepteur de tables (Visual Database Tools)
@@ -46,6 +46,6 @@ Vous pouvez enregistrer les modifications dans les tables qui sont ouvertes dans
 > Pour enregistrer des modifications sur tous les articles non ouverts, tels que tables, vues, procédures stockées, dans le menu **Fichier** , choisissez **Enregistrer tout**.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Propriétés de la table &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  
+[Propriétés de la table &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  
   
 

@@ -21,11 +21,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 54ac206f363cfdb5698d02d16fdf197933b87a72
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="solution-explorer"></a>Explorateur de solutions
@@ -57,8 +57,8 @@ Utilisez les rubriques ci-dessous pour commencer à utiliser les solutions SQL S
 |||  
 |-|-|  
 |**Description**|**Rubrique**|  
-|Décrit comment collecter un ou plusieurs projets dans une solution.|[Solutions &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/solution/solutions-sql-server-management-studio.md)|  
-|Décrit comment créer un projet et ajouter des éléments comme les scripts et les connexions.|[Projets &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/solution/projects-sql-server-management-studio.md)|  
+|Décrit comment collecter un ou plusieurs projets dans une solution.|[Solutions &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)|  
+|Décrit comment créer un projet et ajouter des éléments comme les scripts et les connexions.|[Projets &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)|  
 |Fournit des informations sur les fichiers utilisés par [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] pour gérer les solutions et les fichiers.|[Fichiers gérant les solutions et les projets](../../ssms/solution/files-that-manage-solutions-and-projects.md)|  
   
 

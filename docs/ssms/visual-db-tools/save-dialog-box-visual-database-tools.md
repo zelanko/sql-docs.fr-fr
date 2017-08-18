@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b9bb3d6b6f64dae6aa3fc79494fd85730b380daf
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>Enregistrer, boîte de dialogue (Visual Database Tools)
@@ -38,6 +38,6 @@ Vérifie si cette boîte de dialogue apparaît au prochain enregistrement des ta
 Affiche la boîte de dialogue **Enregistrer sous** , vous demandant de spécifier un emplacement d’enregistrement pour un fichier texte énumérant les tables. Ce fichier fournit la liste des tables affectées par vos modifications.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Concevoir des tables &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[Concevoir des tables &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
   
 

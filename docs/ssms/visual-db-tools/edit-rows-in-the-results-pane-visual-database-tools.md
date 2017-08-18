@@ -21,11 +21,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ed3ab23388672cda824ad3ccce6e1275908c028d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>Modifier les lignes dans le volet Résultats (Visual Database Tools)
@@ -45,7 +45,7 @@ Dans la plupart des cas, vous pouvez modifier les données dans le [volet Résul
 4.  Enregistrez vos modifications en quittant la ligne.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Utiliser des données du volet de résultats &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
-[Règles relatives à la mise à jour des résultats &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md)  
+[Utiliser des données du volet de résultats &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[Règles relatives à la mise à jour des résultats &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md)  
   
 

@@ -17,21 +17,21 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f87cf8d01b8a7b00e91df6803936f37df4af4b46
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="design-tables-visual-database-tools"></a>Concevoir des tables (Visual Database Tools)
 Le Concepteur de tables consacre une fenêtre entière à la conception d'une table individuelle. Les rubriques de cette section expliquent comment utiliser le Concepteur de tables pour créer et modifier des tables de base de données.  
   
 ## <a name="in-this-section"></a>Dans cette section  
-[Ouvrir le Concepteur de tables &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/open-table-designer-visual-database-tools.md)  
+[Ouvrir le Concepteur de tables &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-table-designer-visual-database-tools.md)  
 Ouvrez une table de base de données nouvelle ou existante.  
   
-[Enregistrer votre travail dans le Concepteur de tables &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/save-your-work-in-table-designer-visual-database-tools.md)  
+[Enregistrer votre travail dans le Concepteur de tables &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-your-work-in-table-designer-visual-database-tools.md)  
 Enregistrez les modifications apportées à des tables spécifiques ou à toutes les tables contenues dans le Concepteur de tables.  
   
 
