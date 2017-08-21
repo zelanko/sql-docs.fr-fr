@@ -1,7 +1,7 @@
 ---
 title: "Nouveautés de SQL Server 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/31/2017
+ms.date: 08/07/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,29 +15,21 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: b2f5d26757bd436cfd21076b2a4899376ee60c9f
-ms.openlocfilehash: 9bee627cf0c6918136dbc5adc510944eaaf05dbf
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 64fa56e239432ed01fb908ebcb9bda221a42cd5e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Nouveautés de SQL Server 2017
-SQL Server 2017 représente une étape importante pour faire de SQL Server une plateforme vous offrant des choix en matière de langages de développement, de types de données, d’utilisation locale ou dans le cloud et de systèmes d’exploitation, en apportant la puissance de SQL Server à Linux, aux conteneurs Docker basés sur Linux et à Windows. Cette rubrique récapitule les nouveautés pour des composants spécifiques dans les dernières versions SQL Server 2017 Release Candidate (RC1, juillet 2017) et Community Technical Preview (CTP).
+SQL Server 2017 représente une étape importante pour faire de SQL Server une plateforme vous offrant des choix en matière de langages de développement, de types de données, d’utilisation locale ou dans le cloud et de systèmes d’exploitation, en apportant la puissance de SQL Server à Linux, aux conteneurs Docker basés sur Linux et à Windows. Cette rubrique récapitule les nouveautés de fonctionnalités spécifiques des dernières versions SQL Server 2017 Release Candidate (RC2, août 2017) et Community Technical Preview (CTP).
 
-**Faites un essai :** [Téléchargez SQL Server 2017 Release Candidate (RC)](http://go.microsoft.com/fwlink/?LinkID=829477)
+**Faites un essai :** [Téléchargez la dernière version de SQL Server 2017 : RC2, août 2017](http://go.microsoft.com/fwlink/?LinkID=829477).
+Cette version contient des correctifs de bogues et des améliorations au niveau des performances.
 
 >**Exécutez SQL Server sur Linux !** Pour plus d’informations, consultez [Documentation de SQL Server sur Linux](https://docs.microsoft.com/sql/linux/).
 
-## <a name="latest-release-sql-server-2017-release-candidate-rc2-august-2017"></a>Mise en production la plus récente : SQL Server 2017 Release Candidate (RC2, août 2017)
-Cette mise en production contient des correctifs de bogues et des améliorations au niveau des performances.
-
-### <a name="master-data-services-mds"></a>Master Data Services (MDS)
-- Les performances et l’expérience de mise à niveau ont été améliorées, lors de la mise à niveau vers SQL Server 2017 Master Data Services à partir des versions antérieures de SQL Server ci-dessous.
-    - SQL Server 2012
-    - SQL Server 2014
-    - SQL Server 2016
-
-## <a name="sql-server-database-engine"></a>Moteur de base de données SQL Server  
+## <a name="sql-server-2017-database-engine"></a>Moteur de base de données SQL Server 2017  
 SQL Server 2017 inclut de nombreuses nouvelles fonctionnalités du moteur de base de données, des perfectionnements et des améliorations des performances. 
 - Vous pouvez désormais ajouter des **assemblys CLR** à une liste verte, comme une solution de contournement pour la fonctionnalité `clr strict security` décrite dans CTP 2.0. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) et [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) sont ajoutés pour prendre en charge la liste des assemblys approuvés (RC1).  
 - La **reconstruction d’index en ligne pouvant être reprise** reprend une opération de reconstruction d’index en ligne là où elle s’est arrêtée après un échec (par exemple, un basculement vers un réplica ou un espace disque insuffisant), ou s’arrête et reprend ultérieurement une opération de reconstruction d’index en ligne. Consultez les pages [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) et [Instructions pour les opérations d’index en ligne](../relational-databases/indexes/guidelines-for-online-index-operations.md). (CTP 2.0)
@@ -66,7 +58,7 @@ SQL Server 2017 inclut de nombreuses nouvelles fonctionnalités du moteur de ba
 
 Pour plus d’informations, consultez [Nouveautés du moteur de base de données SQL Server 2017](~/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md).
 
-## <a name="sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS)
+## <a name="sql-server-2017-integration-services-ssis"></a>SQL Server 2017 Integration Services (SSIS)
 - La nouvelle fonctionnalité **Scale Out** dans SSIS présente les fonctions nouvelles et modifiées suivantes. Pour plus d’informations, consultez [Nouveautés d’Integration Services dans SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md). (RC1)
     -   Scale Out Master prend désormais en charge la haute disponibilité.
     -   La gestion de basculement des journaux d’exécution des Scale Out Workers est améliorée.
@@ -79,13 +71,13 @@ Pour plus d’informations, consultez [Nouveautés du moteur de base de données
 
 Pour plus d’informations, consultez [Nouveautés d’Integration Services dans SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md).
 
-## <a name="master-data-services-mds"></a>Master Data Services (MDS)
-En plus de l’amélioration des performances et de l’expérience de mise à niveau vers SQL Server 2017 MDS, les perfectionnements supplémentaires suivants ont été apportés à Master Data Services.
+## <a name="sql-server-2017-master-data-services-mds"></a>SQL Server 2017 Master Data Services (MDS)
+- L’expérience et les performances ont été améliorées lors de la mise à niveau à partir de SQL Server 2012, SQL Server 2014 et SQL Server 2016 vers SQL Server 2017 Master Data Services. 
 - Vous pouvez à présent afficher les listes d’entités, hiérarchies et collections triées sur la page **Explorer** de l’application Web.
-- Les performances ont été améliorées pour la mise en lots de millions d’enregistrements suivant la procédure stockée de mise en lots.
-- Les performances ont été améliorées lors du développement du dossier **Entités** sur la page **Gérer les groupes** pour attribuer les autorisations de modèle. La page **Gérer les groupes** se trouve dans la section **Sécurité** de l’application Web. Pour plus d’informations sur l’amélioration des performances, consultez la page [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview). Pour plus d’informations sur l’attribution d’autorisations, consultez la page [Attribuer des autorisations d’objet de modèle (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md).
+- Les performances sont meilleures lors de la mise en lots de millions d’enregistrements suivant la procédure stockée de mise en lots.
+- Les performances sont aussi meilleures lors du développement du dossier **Entités** de la page **Gérer les groupes** pour attribuer les autorisations de modèle. La page **Gérer les groupes** se trouve dans la section **Sécurité** de l’application Web. Pour plus d’informations sur l’amélioration des performances, consultez la page [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview). Pour plus d’informations sur l’attribution d’autorisations, consultez la page [Attribuer des autorisations d’objet de modèle (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md).
 
-## <a name="sql-server-analysis-services-ssas"></a>SQL Server Analysis Services (SSAS) 
+## <a name="sql-server-2017-analysis-services-ssas"></a>SQL Server 2017 Analysis Services (SSAS) 
 SQL Server Analysis Services 2017 introduit de nombreuses améliorations pour les modèles tabulaires. notamment :
 - Mode tabulaire comme option d’installation par défaut pour Analysis Services. (CTP 2.0)
 - Sécurité au niveau objet pour sécuriser les métadonnées des modèles tabulaires. (CTP 2.0)
@@ -101,25 +93,22 @@ SQL Server Analysis Services 2017 introduit de nombreuses améliorations pour l
 
 Pour plus d’informations, consultez [Nouveautés de SQL Server Analysis Services 2017](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md).
 
-## <a name="sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS)
+## <a name="sql-server-2017-reporting-services-ssrs"></a>SQL Server 2017 Reporting Services (SSRS)
 À partir de CTP 2.1, SSRS n’est plus disponible pour une installation via le programme d’installation de SQL Server. Accédez au Centre de téléchargement Microsoft pour [télécharger la version Release Candidate de Microsoft SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252). 
 - Des commentaires sont maintenant disponibles pour les rapports, pour ajouter une perspective et collaborer avec d’autres utilisateurs. Vous pouvez également inclure des pièces jointes avec des commentaires. (CTP 2.1)
 - Dans les dernières versions du Générateur de rapports et SQL Server Data Tools, vous pouvez créer des requêtes DAX natives sur des modèles de données tabulaires SQL Server Analysis Services pris en charge en faisant glisser les champs voulus dans les concepteurs de requêtes. Consultez le [blog de Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
 
 Pour plus d’informations, consultez [Nouveautés de SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
-## <a name="sql-server-machine-learning-services"></a>SQL Server Machine Learning Services
-SQL Server R Services a été renommé **SQL Server Machine Learning Services** pour refléter la prise en charge de Python en plus du langage R. Vous pouvez utiliser Machine Learning Services (en base de données) pour exécuter des scripts R ou Python dans SQL Server. Vous pouvez également installer **Microsoft Machine Learning Server (autonome)** pour déployer et consommer des modèles R et Python qui ne nécessitent pas SQL Server. 
+## <a name="sql-server-2017-machine-learning-services"></a>SQL Server 2017 Machine Learning Services
+SQL Server R Services a été renommé **SQL Server Machine Learning Services** pour refléter la prise en charge de Python en plus du langage R. Vous pouvez utiliser Machine Learning Services (en base de données) pour exécuter des scripts R ou Python dans SQL Server, ou installer **Microsoft Machine Learning Server (autonome)** pour déployer et utiliser des modèles R et Python qui ne nécessitent pas SQL Server. 
 
 Les développeurs SQL Server ont désormais accès aux bibliothèques Python ML et AI complètes qui sont disponibles dans l’écosystème open source, ainsi qu’aux dernières innovations de Microsoft : 
 
-+ **revoscalepy** : cette version Pythonic de RevoScaleR inclut des algorithmes parallèles pour les régressions linéaires et logistiques, arbres de décision, arbres amplifiés et forêts aléatoires, ainsi qu’un vaste ensemble d’API pour la transformation et le déplacement des données, les contextes de calcul distants et les sources de données.
-
-+ **microsoftml** : ce package de pointe d’algorithmes et de transformations Machine Learning avec des liaisons Python inclut des réseaux neuronaux profonds, des arbres de décision et des forêts d’arbres décisionnels rapides, ainsi que des algorithmes optimisés pour les régressions linéaires et logistiques. Vous disposez également de modèles dont l’apprentissage a déjà été effectué. Basés sur les modèles ResNet, ils sont utiles pour l’extraction d’images ou l’analyse des sentiments.
-
-+ **Mise en œuvre de Python avec T-SQL** : déployez facilement du code Python à l’aide de la procédure stockée `sp_execute_external_script`. Bénéficiez d’excellentes performances en diffusant par streaming des données provenant de SQL à destination de processus Python et en utilisant la parallélisation des anneaux MPI.
-
-+ **Python dans les contextes de calcul SQL Server** : les scientifiques des données et les développeurs peuvent exécuter du code Python à distance à partir de leurs environnements de développement pour explorer des données et développer des modèles sans déplacer les données.
+- **revoscalepy** : cette version Pythonic de RevoScaleR inclut des algorithmes parallèles pour les régressions linéaires et logistiques, arbres de décision, arbres amplifiés et forêts aléatoires, ainsi qu’un vaste ensemble d’API pour la transformation et le déplacement des données, les contextes de calcul distants et les sources de données.
+- **microsoftml** : ce package de pointe d’algorithmes et de transformations Machine Learning avec des liaisons Python inclut des réseaux neuronaux profonds, des arbres de décision et des forêts d’arbres décisionnels rapides, ainsi que des algorithmes optimisés pour les régressions linéaires et logistiques. Vous disposez également de modèles dont l’apprentissage a déjà été effectué. Basés sur les modèles ResNet, ils sont utiles pour l’extraction d’images ou l’analyse des sentiments.
+- **Mise en œuvre de Python avec T-SQL** : déployez facilement du code Python à l’aide de la procédure stockée `sp_execute_external_script`. Bénéficiez d’excellentes performances en diffusant par streaming des données provenant de SQL à destination de processus Python et en utilisant la parallélisation des anneaux MPI.
+- **Python dans les contextes de calcul SQL Server** : les scientifiques des données et les développeurs peuvent exécuter du code Python à distance à partir de leurs environnements de développement pour explorer des données et développer des modèles sans déplacer les données.
 
 Pour plus d’informations, consultez [Nouveautés de SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 

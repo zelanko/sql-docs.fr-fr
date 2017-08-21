@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: b2f5d26757bd436cfd21076b2a4899376ee60c9f
-ms.openlocfilehash: cd57edcb06ea6d9baced3ce5765743769caba04e
+ms.sourcegitcommit: 04245fd42b770129ce4074f8a4ae8377b10cf384
+ms.openlocfilehash: 6494051851601ead6fb3d51e1688b8f1320ed5d4
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/15/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>Notes de publication de SQL Server 2017
@@ -29,7 +29,7 @@ Cette rubrique décrit les limitations et les problèmes de [!INCLUDE[ssSQLv14_m
 [![Télécharger à partir du Centre d’évaluation.](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  Télécharger [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] à partir du **[Centre d’évaluation](http://go.microsoft.com/fwlink/?LinkID=829477)**
 
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>SQL Server 2017 Release Candidate (RC2 - Août 2017)
-Il n’y a aucun serveur SQL dans les notes de version Windows pour cette version. Consultez [Notes de publication de SQL Server sur Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
+Il n’y a aucun serveur SQL Server dans les notes de publication Windows pour cette version. Consultez [Notes de publication de SQL Server sur Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc1---july-2017"></a>SQL Server 2017 Release Candidate (RC1, juillet 2017)
@@ -120,3 +120,4 @@ Il n’y a aucun serveur SQL dans les notes de version Windows pour cette versio
 - [Problèmes connus dans Machine Learning Services](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)
+

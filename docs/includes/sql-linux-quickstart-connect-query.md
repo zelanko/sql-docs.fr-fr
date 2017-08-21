@@ -113,7 +113,7 @@ Pour connaître les autres scénarios d’installation, consultez les ressources
 
 |||
 |---|---|
-| [Upgrade](../linux/sql-server-linux-setup.md#upgrade) | Apprenez à mettre à niveau une installation existante de SQL Server sous Linux |
+| [Upgrade](../linux/sql-server-linux-setup.md#upgrade) | Apprenez à mettre à niveau une installation existante de SQL Server sur Linux |
 | [Désinstaller](../linux/sql-server-linux-setup.md#uninstall) | Désinstallez SQL Server sous Linux |
 | [Installation sans assistance](../linux/sql-server-linux-setup.md#unattended) | Apprenez à créer un script d’installation sans invites |
 | [Installation hors connexion](../linux/sql-server-linux-setup.md#offline) | Apprenez à télécharger manuellement les packages d’installation hors connexion |
