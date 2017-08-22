@@ -1,7 +1,7 @@
 ---
 title: "Prise en charge d’OLTP en mémoire par SQL Server Management Objects | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -12,70 +12,71 @@ ms.topic: article
 ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
 caps.latest.revision: 28
 author: JennieHubbard
-ms.author: jhubbard
+ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8c0ed45fbf5da5c1c521ad52e25553a21c068a08
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: f97c2335abf293f70fad454ac9f181a3cb3e439c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>Prise en charge SQL Server Management Objects pour OLTP en mémoire
-  Cette rubrique décrit les modifications de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) pour l'OLTP en mémoire.  
+
+Cette rubrique décrit les modifications de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) pour l'OLTP en mémoire.  
   
- Les types et membres suivants prennent en charge l'OLTP en mémoire :  
+Les types et membres suivants prennent en charge l'OLTP en mémoire :  
   
--   <xref:Microsoft.SqlServer.Management.Smo.DurabilityType>  
+- Microsoft.SqlServer.Management.Smo.**<xref:Microsoft.SqlServer.Management.Smo.DurabilityType>** (énumération)
+
+- Microsoft.SqlServer.Management.Smo.FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.FileGroupType%2A>** (propriété)
+
+- Microsoft.SqlServer.Management.Smo.FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.%23ctor%2A>** (constructeur)
+
+- Microsoft.SqlServer.Management.Smo.**<xref:Microsoft.SqlServer.Management.Smo.FileGroupType>** (énumération)
+
+- Microsoft.SqlServer.Management.Smo.Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.BucketCount%2A>** (propriété)
+
+- Microsoft.SqlServer.Management.IndexType.**<xref:Microsoft.SqlServer.Management.Smo.IndexType.NonClusteredHashIndex>** (membre d’énumération)
+
+- Microsoft.SqlServer.Management.Smo.Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.IsMemoryOptimized%2A>** (propriété)
+
+- Microsoft.SqlServer.Management.Smo.Server.**<xref:Microsoft.SqlServer.Management.Smo.Server.IsXTPSupported%2A>** (propriété)
+
+- Microsoft.SqlServer.Management.Smo.StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsNativelyCompiled%2A>** (propriété)
+
+- Microsoft.SqlServer.Management.Smo.StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsSchemaBound%2A>** (propriété)
+
+- Microsoft.SqlServer.Management.Smo.Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.Durability%2A>** (propriété)
+
+- Microsoft.SqlServer.Management.Smo.Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.IsMemoryOptimized%2A>** (propriété)
+
+- Microsoft.SqlServer.Management.Smo.UserDefinedTableType.**<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>** (propriété)
+
+## <a name="code-sample"></a>Exemple de code
+
+#### <a name="actions-taken-in-the-code-example"></a>Actions effectuées dans l’exemple de code
   
--   <xref:Microsoft.SqlServer.Management.Smo.FileGroup.FileGroupType%2A>  
+-   Création d’une base de données avec un groupe de fichiers à mémoire optimisée et un fichier à mémoire optimisée.  
   
--   <xref:Microsoft.SqlServer.Management.Smo.FileGroup.%23ctor%2A>  
+-   Création d’une table à mémoire optimisée durable avec une clé primaire, un index non cluster et un index de hachage non cluster.  
   
--   <xref:Microsoft.SqlServer.Management.Smo.FileGroupType>  
+-   Création de colonnes et d’index.  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Index.BucketCount%2A>  
+-   Création d’un type de table à mémoire optimisée, défini par l’utilisateur.  
   
--   <xref:Microsoft.SqlServer.Management.Smo.IndexType.NonClusteredHashIndex>  
+-   Création d’une procédure stockée compilée en mode natif.
+
+#### <a name="assemblies-referenced-by-the-compiled-code-example"></a>Assemblys référencés par l’exemple de code compilé
+
+- Microsoft.SqlServer.ConnectionInfo.dll
+- Microsoft.SqlServer.Management.Sdk.Sfc.dll
+- Microsoft.SqlServer.Smo.dll
+- Microsoft.SqlServer.SqlEnum.dll
+
+#### <a name="source-code"></a>Code source
   
--   <xref:Microsoft.SqlServer.Management.Smo.Index.IsMemoryOptimized%2A>  
-  
--   <xref:Microsoft.SqlServer.Management.Smo.Server.IsXTPSupported%2A>  
-  
--   <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsNativelyCompiled%2A>  
-  
--   <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsSchemaBound%2A>  
-  
--   <xref:Microsoft.SqlServer.Management.Smo.Table.Durability%2A>  
-  
--   <xref:Microsoft.SqlServer.Management.Smo.Table.IsMemoryOptimized%2A>  
-  
--   <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>  
-  
-## <a name="code-sample"></a>Exemple de code  
- L'exemple réalise les actions suivantes :  
-  
--   Crée une base de données avec le groupe de fichiers mémoire optimisé et le fichier mémoire optimisé.  
-  
--   Crée une table mémoire optimisée durable avec une clé primaire, un index non cluster et un index de hachage non cluster.  
-  
--   Crée des colonnes et des index.  
-  
--   Crée un type de table mémoire optimisée, définie par l'utilisateur.  
-  
--   Crée une procédure stockée compilée en mode natif.  
-  
- Cet exemple doit faire référence aux assemblys suivants :  
-  
--   Microsoft.SqlServer.Smo.dll  
-  
--   Microsoft.SqlServer.Management.Sdk.Sfc.dll  
-  
--   Microsoft.SqlServer.ConnectionInfo.dll  
-  
--   Microsoft.SqlServer.SqlEnum.dll  
-  
-```tsql  
+```csharp
 using Microsoft.SqlServer.Management.Smo;  
 using System;  
   
@@ -83,23 +84,29 @@ public class A {
    static void Main(string[] args) {  
       Server server = new Server("(local)");  
   
-      // Create a database with memory-optimized filegroup and memory-optimized file  
+      // Create a database with memory-optimized filegroup and memory-optimized file.
       Database db = new Database(server, "MemoryOptimizedDatabase");  
       db.Create();  
-      FileGroup fg = new FileGroup(db, "memOptFilegroup", FileGroupType.MemoryOptimizedDataFileGroup);  
+      FileGroup fg = new FileGroup(
+         db,
+         "memOptFilegroup",
+         FileGroupType.MemoryOptimizedDataFileGroup);  
       db.FileGroups.Add(fg);  
       fg.Create();  
-      // change this path if needed  
-      DataFile file = new DataFile(fg, "memOptFile", @"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\MSSQLmemOptFileName");  
+      // Change this path if needed.
+      DataFile file = new DataFile(
+         fg,
+         "memOptFile",
+         @"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\MSSQLmemOptFileName");  
       file.Create();  
   
-      // Create a durable memory-optimized table with primary key, nonclustered index and nonclustered hash index  
-      // Define the table as memory optimized and set the durability  
+      // Create a durable memory-optimized table with primary key, nonclustered index and nonclustered hash index.
+      // Define the table as memory optimized and set the durability.
       Table table = new Table(db, "memOptTable");  
       table.IsMemoryOptimized = true;  
       table.Durability = DurabilityType.SchemaAndData;  
   
-      // Create columns  
+      // Create columns.
       Column col1 = new Column(table, "col1", DataType.Int);  
       col1.Nullable = false;  
       table.Columns.Add(col1);  
@@ -110,7 +117,7 @@ public class A {
       col3.Nullable = false;  
       table.Columns.Add(col3);  
   
-      // Create indexes  
+      // Create indexes.
       Index pk = new Index(table, "PK_memOptTable");  
       pk.IndexType = IndexType.NonClusteredIndex;  
       pk.IndexKeyType = IndexKeyType.DriPrimaryKey;  
@@ -120,23 +127,25 @@ public class A {
       Index ixNonClustered = new Index(table, "ix_nonClustered");  
       ixNonClustered.IndexType = IndexType.NonClusteredIndex;  
       ixNonClustered.IndexKeyType = IndexKeyType.None;  
-      ixNonClustered.IndexedColumns.Add(new IndexedColumn(ixNonClustered, col2.Name));  
+      ixNonClustered.IndexedColumns.Add(
+         new IndexedColumn(ixNonClustered, col2.Name));  
       table.Indexes.Add(ixNonClustered);  
   
       Index ixNonClusteredHash = new Index(table, "ix_nonClustered_Hash");  
       ixNonClusteredHash.IndexType = IndexType.NonClusteredHashIndex;  
       ixNonClusteredHash.IndexKeyType = IndexKeyType.None;  
       ixNonClusteredHash.BucketCount = 1024;  
-      ixNonClusteredHash.IndexedColumns.Add(new IndexedColumn(ixNonClusteredHash, col3.Name));  
+      ixNonClusteredHash.IndexedColumns.Add(
+         new IndexedColumn(ixNonClusteredHash, col3.Name));  
       table.Indexes.Add(ixNonClusteredHash);  
   
       table.Create();  
   
-      // Create a user-defined memory-optimized table type  
+      // Create a user-defined memory-optimized table type.
       UserDefinedTableType uDTT = new UserDefinedTableType(db, "memOptUDTT");  
       uDTT.IsMemoryOptimized = true;  
   
-      // Add columns  
+      // Add columns.
       Column udTTCol1 = new Column(uDTT, "udtCol1", DataType.Int);  
       udTTCol1.Nullable = false;  
       uDTT.Columns.Add(udTTCol1);  
@@ -147,7 +156,7 @@ public class A {
       udTTCol3.Nullable = false;  
       uDTT.Columns.Add(udTTCol3);  
   
-      // Add index  
+      // Add index.
       Index ix = new Index(uDTT, "IX_UDT");  
       ix.IndexType = IndexType.NonClusteredHashIndex;  
       ix.BucketCount = 1024;  
@@ -157,7 +166,7 @@ public class A {
   
       uDTT.Create();  
   
-      // Create a natively compiled stored procedure  
+      // Create a natively compiled stored procedure.
       StoredProcedure sProc = new StoredProcedure(db, "nCSProc");  
       sProc.TextMode = false;  
       sProc.TextBody = "--Type body here";  
@@ -170,6 +179,6 @@ public class A {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Prise en charge d'OLTP en mémoire par SQL Server](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
-  
-  
+
+[Prise en charge d'OLTP en mémoire par SQL Server](sql-server-support-for-in-memory-oltp.md)
+

@@ -1,7 +1,7 @@
 ---
 title: "Fonctions déterministes et non déterministes | Microsoft Docs"
 ms.custom: 
-ms.date: 09/28/2016
+ms.date: 08/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,11 +20,11 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cd6393571f06ba7b73f0b52bcfe8bc218279c1af
+ms.translationtype: HT
+ms.sourcegitcommit: 4d56a0bb3893d43943478c6d5addb719ea32bd10
+ms.openlocfilehash: fe23cb7ab3fbc0461f0c0853aedaa4444e4bb543
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Fonctions déterministes et non déterministes
@@ -90,16 +90,16 @@ ms.lasthandoff: 06/22/2017
 |CURRENT_TIMESTAMP|RAND|  
 |DENSE_RANK|RANK|  
 |FIRST_VALUE|ROW_NUMBER|   
-||TEXTPTR|  
+|FORMAT|TEXTPTR|  
   
 ## <a name="calling-extended-stored-procedures-from-functions"></a>Appel de procédures stockées étendues à partir de fonctions  
- Les fonctions qui appellent des procédures stockées étendues sont non déterministes car les procédures stockées étendues peuvent provoquer des effets secondaires sur la base de données. Ces effets secondaires sont des modifications de l'état global de la base de données, comme la mise à jour d'une table ou d'une ressource externe, telle qu'un fichier ou le réseau (par exemple la modification d'un fichier ou l'envoi d'un courrier électronique). Vous ne pouvez pas être assuré d'obtenir un jeu de résultats cohérent lors de l'exécution d'une procédure stockée étendue à partir d'une fonction définie par l'utilisateur. Les fonctions définies par l'utilisateur qui créent des effets secondaires sur la base de données ne sont pas recommandées.  
+ Les fonctions qui appellent des procédures stockées étendues sont non déterministes car les procédures stockées étendues peuvent provoquer des effets secondaires sur la base de données. Ces effets secondaires sont des modifications de l'état global de la base de données, comme la mise à jour d'une table ou d'une ressource externe, telle qu'un fichier ou le réseau (par exemple la modification d'un fichier ou l'envoi d'un courrier électronique). N’attendez pas de jeu de résultats cohérent lors de l’exécution d’une procédure stockée étendue à partir d’une fonction définie par l’utilisateur. Les fonctions définies par l'utilisateur qui créent des effets secondaires sur la base de données ne sont pas recommandées.  
   
- Une procédure stockée étendue appelée depuis l'intérieur d'une fonction ne peut pas retourner de jeux de résultats au client. Toute API Open Data Services qui retourne des jeux de résultats au client aura un code de retour FAIL.  
+ Une procédure stockée étendue appelée depuis l'intérieur d'une fonction ne peut pas retourner de jeux de résultats au client. Toute API Open Data Services qui retourne des jeux de résultats au client a un code de retour FAIL.  
   
  La procédure stockée étendue ne peut pas se reconnecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cependant, la procédure ne peut pas joindre la même transaction que la fonction originale ayant appelé la procédure stockée étendue.  
   
- Comme pour les appels à partir d'une procédure stockée ou de traitement par lot, la procédure stockée étendue est exécutée dans le contexte du compte de sécurité [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel fonctionne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le propriétaire de la procédure stockée étendue doit prendre ce fait en considération lorsqu'il accorde à d'autres utilisateurs la permission d'exécuter la procédure.  
+ Comme pour les appels à partir d'une procédure stockée ou de traitement par lot, la procédure stockée étendue est exécutée dans le contexte du compte de sécurité [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel fonctionne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le propriétaire de la procédure stockée étendue doit prendre en compte les autorisations de ce contexte de sécurité quand il accorde à d’autres utilisateurs l’autorisation d’exécuter la procédure.  
   
   
 

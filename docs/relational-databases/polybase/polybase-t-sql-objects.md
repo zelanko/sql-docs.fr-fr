@@ -2,7 +2,7 @@
 title: Objets T-SQL PolyBase | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 07/13/2017
+ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,16 +14,15 @@ helpviewer_keywords:
 - PolyBase, fundamentals
 - PolyBase, SQL statements
 - PolyBase, SQL objects
-ms.assetid: ef5d6c40-6ce6-4cf0-8ad3-38f98b32f98e
 caps.latest.revision: 20
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: de25852f9005be687fdb8a547e30a99bbb58cf4c
-ms.openlocfilehash: c2ed145cb54f90bdbb368d120651a6875f9d5b5c
+ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
+ms.openlocfilehash: 8a6a21a3cc6317d1eee54cd83ced008e3358e139
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="polybase-t-sql-objects"></a>Objets T-SQL PolyBase
@@ -44,10 +43,12 @@ ms.lasthandoff: 07/31/2017
 > [!NOTE]
 >  PolyBase dans SQL Server 2016 prend uniquement en charge les utilisateurs Windows. Si vous essayez d’utiliser un utilisateur SQL pour interroger une table externe PolyBase, la requête échoue.
 
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prérequis  
  Configurez PolyBase. Consultez [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
   
-## <a name="create-external-tables-for-hadoop"></a>Créer des tables externes pour Hadoop  
+## <a name="create-external-tables-for-hadoop"></a>Créer des tables externes pour Hadoop
+S’applique à : SQL Server (à compter de 2016), Parallel Data Warehouse
+  
  **1. Créer des informations d’identification incluses dans l’étendue de la base de données**  
   
  Cette étape est uniquement requise pour les clusters Hadoop sécurisés par Kerberos.  
@@ -126,6 +127,8 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
   
 ## <a name="create-external-tables-for-azure-blob-storage"></a>Créer des tables externes pour le stockage d’objets blob Azure  
+S’applique à : SQL Server (à compter de 2016), Azure SQL Data Warehouse, Parallel Data Warehouse
+
  **1. Créer des informations d’identification incluses dans l’étendue de la base de données**  
   
 ```sql  
@@ -201,11 +204,11 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
  
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>Créer des tables externes pour Azure Data Lake Store
-Azure Data Lake Store est uniquement pris en charge par PolyBase dans SQL Data Warehouse.
-Pour plus d’informations sur Azure SQL Data Warehouse et ADLS, consultez la page [Chargement de données Azure Data Lake Store](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
+S’applique à : Azure SQL Data Warehouse
+
+Pour plus d’informations, consultez [Charger avec Azure Data Lake Store](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
  
- **1. Créer des informations d’identification incluses dans l’étendue de la base de données**  
-  
+ **1. Créer des informations d’identification incluses dans l’étendue de la base de données**   
 
 ```sql
 -- Create a Database Master Key.

@@ -1,7 +1,7 @@
 ---
 title: "Suppression de fichiers de sauvegarde d’objets blob avec des baux actifs | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,38 +14,38 @@ caps.latest.revision: 16
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a8590c7e7adbf796d44347b66a790f98c13667bc
+ms.translationtype: HT
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: f2b63d34ff5c06d82b6514d7447762546fe2c9e1
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/17/2017
 
 ---
-# <a name="deleting-backup-blob-files-with-active-leases"></a>Suppression de fichiers de sauvegarde d'objets blob avec des baux actifs
-  En cas de sauvegarde vers ou de restauration depuis le stockage Windows Azure, SQL Server acquiert un bail infini pour verrouiller l'accès exclusif à l'objet blob. Lorsque le processus de sauvegarde ou de restauration est terminé, le bail est libéré. Si une sauvegarde ou une restauration échoue, le processus de sauvegarde tente de nettoyer tout objet blob non valide. Toutefois, si la sauvegarde échoue en raison d'un problème de connectivité du réseau prolongé, le processus de sauvegarde peut ne pas être à nouveau en mesure d'accéder à l'objet blob et celui-ci peut rester orphelin. Par conséquent, l'objet blob ne peut pas être écrit ou supprimé tant que le bail n'a pas été libéré. Cette rubrique explique comment libérer le bail et supprimer l'objet blob.  
+# <a name="delete-backup-blob-files-with-active-leases"></a>Supprimer des fichiers blob de sauvegarde avec des baux actifs
+  En cas de sauvegarde vers ou de restauration à partir du stockage Microsoft Azure, SQL Server acquiert un bail infini pour verrouiller l’accès exclusif à l’objet blob. Lorsque le processus de sauvegarde ou de restauration est terminé, le bail est libéré. Si une sauvegarde ou une restauration échoue, le processus de sauvegarde tente de nettoyer tout objet blob non valide. Toutefois, si la sauvegarde échoue en raison d'un problème de connectivité du réseau prolongé, le processus de sauvegarde peut ne pas être à nouveau en mesure d'accéder à l'objet blob et celui-ci peut rester orphelin. Par conséquent, l’objet blob ne peut pas être écrit ou supprimé tant que le bail n’a pas été libéré. Cette rubrique explique comment libérer (résilier) le bail et supprimer l’objet blob. 
   
  Pour plus d’informations sur les types de baux, consultez cet [article](http://go.microsoft.com/fwlink/?LinkId=275664).  
   
- Si l'opération de sauvegarde échoue, elle peut générer un fichier de sauvegarde non valide.  Le fichier de sauvegarde d'objet blob peut également avoir un bail actif, ce qui empêche sa suppression ou son remplacement.  Pour pouvoir supprimer ou remplacer des objets blob de ce type, le bail doit d'abord être résilié. En cas d'échec de la sauvegarde, nous vous recommandons de nettoyer les baux et de supprimer les objets blob. Vous pouvez également définir un nettoyage périodique dans le cadre des tâches de gestion du stockage.  
+ Si l’opération de sauvegarde échoue, elle peut générer un fichier de sauvegarde non valide. Le fichier de sauvegarde d'objet blob peut également avoir un bail actif, ce qui empêche sa suppression ou son remplacement. Pour supprimer ou remplacer ces objets blob, le bail doit d’abord être libéré (résilié). En cas d’échec de sauvegarde, nous vous recommandons de nettoyer les baux et de supprimer les objets blob. Vous pouvez également périodiquement nettoyer les baux et supprimer les objets blob dans le cadre de vos tâches de gestion du stockage.  
   
- En cas d'échec d'une restauration, les restaurations suivantes ne sont pas bloquées. Par conséquent, le bail actif ne pose pas problème. La résiliation du bail est uniquement nécessaire lorsque vous devez remplacer ou supprimer l'objet blob.  
+ En cas d’échec d’une restauration, les restaurations suivantes ne sont pas bloquées. Par conséquent, le bail actif ne pose pas problème. La résiliation du bail est uniquement nécessaire lorsque vous devez remplacer ou supprimer l'objet blob.  
   
-## <a name="managing-orphaned-blobs"></a>Gestion des objets blob orphelins  
- Les étapes suivantes décrivent la procédure de nettoyage après l'échec d'une activité de sauvegarde ou de restauration. Toutes les opérations peuvent être effectuées à l'aide de scripts PowerShell. Un exemple de code est fourni dans la section suivante :  
+## <a name="manage-orphaned-blobs"></a>Gérer les objets blob orphelins  
+ Les étapes suivantes décrivent la procédure de nettoyage après l'échec d'une activité de sauvegarde ou de restauration. Vous pouvez effectuer toutes les étapes à l’aide de scripts PowerShell. La section suivante contient un exemple de script PowerShell :  
   
-1.  **Identification des objets blob avec baux :** si vous avez un script ou un processus qui exécute les processus de sauvegarde, vous pouvez capturer l’erreur dans le script ou le processus et l’utiliser pour nettoyer les objets blob.   Vous pouvez également utiliser les propriétés LeaseStats et LeastState pour identifier les objets blob auxquels des baux sont associés. Une fois que vous avez identifié les objets blob, nous vous recommandons de consulter la liste et de vérifier la validité du fichier de sauvegarde avant de supprimer l'objet blob.  
+1.  **Identifier des objets blob avec baux :** si vous avez un script ou un processus qui exécute les processus de sauvegarde, vous pouvez capturer l’erreur dans le script ou le processus, et l’utiliser pour nettoyer les objets blob.  Vous pouvez également utiliser les propriétés LeaseStats et LeastState pour identifier les objets blob associés à des baux. Une fois que vous avez identifié les objets blob, consultez la liste et vérifiez la validité du fichier de sauvegarde avant de supprimer l’objet blob.  
   
-2.  **Résiliation du bail :** une demande autorisée peut résilier le bail sans fournir d’ID de bail. Pour plus d’informations, consultez [cet article](http://go.microsoft.com/fwlink/?LinkID=275664) .  
+2.  **Résiliation du bail :** une demande autorisée peut résilier le bail sans fournir d’ID de bail. Pour plus d’informations, consultez [cet article](http://go.microsoft.com/fwlink/?LinkID=275664) .  
   
     > [!TIP]  
     >  SQL Server génère un ID de bail pour établir un accès exclusif pendant l'opération de restauration. L'ID de bail de la restauration est BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
   
-3.  **Suppression de l’objet blob :** pour supprimer un objet blob dont le bail est actif, vous devez d’abord résilier le bail.  
+3.  **Supprimer l’objet blob :** Pour supprimer un objet blob avec un bail actif, vous devez d’abord résilier le bail.  
   
 ###  <a name="Code_Example"></a> Exemple de script PowerShell  
   
 > [!IMPORTANT]  
->  Si vous exécutez PowerShell 2.0, vous pouvez rencontrer des problèmes lors du chargement de l'assembly Microsoft WindowsAzure.Storage.dll. Nous vous recommandons d’effectuer une mise à niveau de Powershell pour résoudre le problème. Vous pouvez également utiliser la solution de contournement suivante pour PowerShell 2.0 :  
+>  Si vous exécutez PowerShell 2.0, vous pouvez rencontrer des problèmes lors du chargement de l'assembly Microsoft WindowsAzure.Storage.dll. Nous vous recommandons de mettre à niveau [Powershell](https://docs.microsoft.com/powershell/) pour résoudre le problème. Vous pouvez également utiliser la solution de contournement suivante pour PowerShell 2.0 :  
 >   
 >  -   Créez ou modifiez le fichier powershell.exe.config pour charger les assemblies .NET 2.0 et .NET 4.0 au moment de l'exécution avec les informations suivantes :  
 >   
@@ -60,14 +60,14 @@ ms.lasthandoff: 06/22/2017
 >   
 >     ```  
   
- L'exemple suivant montre comment identifier les objets blob qui ont des baux actifs, puis résilier ces derniers. Il montre également comment filtrer les identificateurs de bail de la version.  
+ L’exemple de script suivant identifie les objets blob avec des baux actifs, puis résilie ces baux. Il montre également comment filtrer les identificateurs de bail de la version.  
   
- Conseils pour l'exécution de ce script  
+**Conseils pour l’exécution de ce script**  
   
 > [!WARNING]  
->  Si une sauvegarde dans le service de stockage d'objets blob Windows Azure s'exécute en même temps que ce script, elle peut échouer étant donné que ce script résilie le bail que la sauvegarde essaie d'acquérir au même moment. Nous recommandons d'exécuter ce script au cours d'une fenêtre de maintenance ou lorsqu'aucune sauvegarde n'est prévue.  
+>  Si une sauvegarde dans le service de stockage d’objets blob Microsoft Azure s’exécute en même temps que ce script, elle peut échouer, car ce script résilie le bail que la sauvegarde essaie d’acquérir au même moment. Exécutez ce script au cours d’une fenêtre de maintenance ou quand aucune sauvegarde n’est en cours d’exécution ou prévue.  
   
-1.  Lorsque vous exécutez ce script, vous êtes invité à fournir des valeurs pour le compte de stockage, la clé de stockage, le conteneur, le chemin d'accès du stockage Windows Azure et les paramètres de nom. Le chemin d'accès de l'assembly de stockage est le répertoire d'installation de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le nom de fichier de l'assembly de stockage est Microsoft.WindowsAzure.Storage.dll. Voici un exemple des commandes et valeurs entrées :  
+1.  Quand vous exécutez ce script, vous êtes invité à fournir des valeurs pour le compte de stockage, la clé de stockage, le conteneur, le chemin du stockage Azure et les paramètres de nom. Le chemin d'accès de l'assembly de stockage est le répertoire d'installation de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le nom de fichier de l'assembly de stockage est Microsoft.WindowsAzure.Storage.dll. Voici un exemple des commandes et valeurs entrées :  
   
     ```  
     cmdlet  at command pipeline position 1  
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
     storageAssemblyPath: C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Microsoft.WindowsAzure.Storage.dll  
     ```  
   
-2.  Si aucun objet blob ne dispose d'un bail verrouillé, vous devez voir le message suivant :  
+2.  Si aucun objet blob n’a de bail verrouillé, vous devez voir le message suivant :  
   
      **Il n'existe aucun objet blob à l'état bail verrouillé**  
   
@@ -116,7 +116,7 @@ $client = New-Object 'Microsoft.WindowsAzure.Storage.Blob.CloudBlobClient' "http
 $container = $client.GetContainerReference($blobContainer)  
   
 #list all the blobs  
-$allBlobs = $container.ListBlobs()   
+$allBlobs = $container.ListBlobs($null,$true) 
   
 $lockedBlobs = @()  
 # filter blobs that are have Lease Status as "locked"  
@@ -163,3 +163,4 @@ if($lockedBlobs.Count -gt 0)
  [Bonnes pratiques en matière de sauvegarde SQL Server vers une URL et résolution des problèmes associés](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   
+

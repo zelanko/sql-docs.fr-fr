@@ -1,7 +1,7 @@
 ---
 title: cross db ownership chaining (option de configuration de serveur) | Microsoft Docs
 ms.custom: 
-ms.date: 03/02/2017
+ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,10 +19,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 457ca08fbfef2ab0fb96e4cd2ec4515e04b9dc6e
+ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
+ms.openlocfilehash: c42780edef8e57b9d8159d9dfe384554cade4fb2
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="cross-db-ownership-chaining-server-configuration-option"></a>cross db ownership chaining (option de configuration de serveur)
@@ -39,7 +39,13 @@ ms.lasthandoff: 08/02/2017
 -   Vous pouvez définir le chaînage des propriétés des bases de données croisées pour des bases de données spécifiques à l'aide de la clause SET de l'instruction ALTER DATABASE. Si vous créez une nouvelle base de données, vous pouvez définir l'option de chaînage des propriétés des bases de données croisées pour la nouvelle base de données à l'aide de l'instruction CREATE DATABASE.  
   
      Il n’est pas recommandé d’attribuer la valeur 1 à l’option **cross db ownership chaining** , sauf si toutes les bases de données hébergées par l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent participer au chaînage des propriétés des bases de données croisées et que vous êtes conscient de l’impact de ce paramétrage sur la sécurité.  
-  
+
+Pour déterminer l’état actuel du chaînage des propriétés des bases de données croisées, exécutez la requête suivante :  
+```sql
+SELECT is_db_chaining_on, name FROM sys.databases;
+```  
+Un résultat égal à 1 indique que le chaînage des propriétés des bases de données croisées est activé.
+
 ## <a name="controlling-cross-database-ownership-chaining"></a>Contrôle du chaînage des propriétés des bases de données croisées  
  Avant d'activer ou de désactiver le chaînage des propriétés des bases de données croisées, prenez en considération les points suivants :  
   
