@@ -89,10 +89,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 458c1eba94f31cc9577a82eb429749b1b22fc21f
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: c30ab95ac8b543071c0136369b276442c0f81cfc
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Installer SQL Server à partir de l'invite de commandes
@@ -846,6 +846,8 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||AdvancedAnalytics|Installe R Services (dans la base de données).|  
 |AS||Installe tous les composants [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |RS||Installe tous les composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|RS_SHP||Installe des composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour SharePoint.|  
+|RS_SHPWFE||Installe le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint. |  
 |DQC||Installe [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)].|  
 |IS||Installe tous les composants [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
 |MDS||Installe [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].|  

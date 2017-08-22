@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 61366dbbcc5b4787783ea3e52112d827e2db026f
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: a768e5237b997e5f9b05e9476c907ea66f886c7b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>Audit local pour la collecte de commentaires d’utilisation de SQL Server
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/02/2017
 
 Microsoft SQL Server contient des fonctionnalités Internet susceptibles de collecter et d’envoyer des informations sur votre ordinateur ou appareil (« informations standard sur l’ordinateur ») à Microsoft. Le composant d’audit local de la [collecte de commentaires d’utilisation de SQL Serve](http://support.microsoft.com/kb/3153756) écrit les données collectées par le service vers un dossier désigné, représentant les données (journaux) qui peuvent être envoyées à Microsoft. L’objectif de l’audit local est d’autoriser les clients à visualiser toutes les données collectées par Microsoft avec cette fonctionnalité, pour des raisons de conformité, de réglementation ou de validation de la confidentialité.  
 
-À compter de SQL Server 2016 CU2, l’audit local est configurable au niveau de l’instance de moteur de base de données SQL Server et Analysis Services (SSAS). L’audit local pour SQL Server Integration Services (SSIS) est configurable avec le moteur de base de données. Les autres composants SQL Server installés pendant la configuration et les outils SQL Server qui sont téléchargés ou installés après la configuration ne possèdent pas de fonctionnalité d’audit local pour la collecte de commentaires relatifs à l’utilisation. 
+À compter de SQL Server 2016 CU2, l’audit local est configurable au niveau de l’instance de moteur de base de données SQL Server et Analysis Services (SSAS). Dans SQL Server 2016 CU4 et SQL Server 2016 SP1, l’audit local est également activé pour SQL Server Integration Services (SSIS). Les autres composants SQL Server installés pendant la configuration et les outils SQL Server qui sont téléchargés ou installés après la configuration ne possèdent pas de fonctionnalité d’audit local pour la collecte de commentaires relatifs à l’utilisation. 
 
 ## <a name="prerequisites"></a>Conditions préalables 
 
@@ -61,7 +61,7 @@ Procédez comme suit pour obtenir le compte de connexion de service de télémé
  
 1. Lancez **Services** ; cliquez sur le bouton **Windows**  et tapez *services.msc*. 
 
-2. Accédez au service approprié. Par exemple, pour le moteur de base de données, recherchez **SQL Server CEIP service *nom de l’instance***. Pour Analysis Services, recherchez **SQL Server Analysis Services CEIP *nom de l’instance***. 
+2. Accédez au service approprié. Par exemple, pour le moteur de base de données, recherchez **SQL Server CEIP service \<nom de l’instance\>**. Pour Analysis Services, recherchez **SQL Server Analysis Services CEIP \<nom de l’instance\>**. Pour Integration Services, recherchez **SQL Server Integration Services CEIP service 13**.
 
 3. Cliquez avec le bouton droit sur le service et sélectionnez **Propriétés**. 
 
