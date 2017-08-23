@@ -1,28 +1,33 @@
 ---
-title: "Source SAP BW | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Source SAP BW | Documents Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fe41cbbd7a58fe50e6dbfaa2c85b9f5f22cea0b5
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Source SAP BW
+# <a name="sap-bw-source"></a>Source SAP BW
   La source SAP BW est le composant source de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 pour SAP BW. Ainsi, la source SAP BW extrait des données d'un système SAP Netweaver BW version 7 et met ces données à la disposition du flux de données dans un package [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Cette source comporte une sortie et une sortie d'erreur.  
   
 > [!IMPORTANT]  
->  La documentation de Microsoft Connector 1.1 pour SAP BW suppose que vous êtes familiarisé avec l'environnement SAP Netweaver BW. Pour plus d'informations sur SAP Netweaver BW, ou sur la configuration des objets et des processus SAP Netweaver BW objets, consultez la documentation SAP.  
+>  La documentation de Microsoft Connector 1.1 pour SAP BW suppose que vous êtes familiarisé avec l'environnement SAP Netweaver BW. Pour plus d'informations sur SAP Netweaver BW, ou sur la configuration des objets et des processus SAP Netweaver BW objets, consultez la documentation SAP.  
   
 > [!IMPORTANT]  
 >  Vous devez disposer d'une licence SAP supplémentaire pour extraire des données à partir de SAP Netweaver BW. Vérifiez auprès de SAP.  
@@ -39,7 +44,7 @@ caps.handback.revision: 10
  La source SAP BW nécessite la présence de certains objets dans le système SAP Netweaver BW pour que la source puisse fonctionner. Si ces objets n'existent pas, vous devez suivre ces étapes pour les créer et les configurer dans le système SAP Netweaver BW.  
   
 > [!NOTE]  
->  Pour plus d'informations sur ces objets et ces étapes de configuration, consultez la documentation de SAP Netweaver BW.  
+>  Pour plus d'informations sur ces objets et ces étapes de configuration, consultez la documentation de SAP Netweaver BW.  
   
 1.  Connectez-vous à SAP Netweaver BW via l'interface GUI SAP, entrez le code de transaction SM59, puis créez une destination RFC :  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 10
   
     4.  Enregistrez et activez la nouvelle destination Open Hub.  
   
-3.  Créer un processus de transfert de données (DTP) :  
+3.  Créer un processus de transfert de données (DTP) :  
   
     1.  Dans le volet central de l’InfoArea, cliquez avec le bouton droit sur la destination créée précédemment, puis sélectionnez **Créer le processus de transfert de données**.  
   
@@ -89,7 +94,7 @@ caps.handback.revision: 10
   
 -   Recherchez et sélectionnez la destination OHS (Open Hub Service) à utiliser pour extraire des données.  
   
--   Sélectionnez l'une des méthodes suivantes pour extraire des données :  
+-   Sélectionnez l'une des méthodes suivantes pour extraire des données :  
   
     -   Déclenchez une chaîne de processus. Dans ce cas, le package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] démarre le processus d'extraction.  
   
@@ -99,11 +104,11 @@ caps.handback.revision: 10
   
 -   Selon la méthode sélectionnée pour extraire des données, fournissez les informations supplémentaires suivantes :  
   
-    -   Pour l’option **P - Déclencher une chaîne de processus**, fournissez le nom d’hôte de passerelle, le nom du service de passerelle, l’ID de programme pour la destination RFC et le nom de la chaîne de processus.  
+    -   Pour l’option **P - Déclencher une chaîne de processus** , fournissez le nom d’hôte de passerelle, le nom du service de passerelle, l’ID de programme pour la destination RFC et le nom de la chaîne de processus.  
   
-    -   Pour l’option **A - Attendre la notification**, fournissez le nom d’hôte de passerelle, le nom du serveur de passerelle et l’ID de programme pour la destination RFC. Vous pouvez également spécifier le délai d'attente (en secondes). Le délai d'attente représente la durée maximale pendant laquelle la source attendra une notification.  
+    -   Pour l’option **A - Attendre la notification** , fournissez le nom d’hôte de passerelle, le nom du serveur de passerelle et l’ID de programme pour la destination RFC. Vous pouvez également spécifier le délai d'attente (en secondes). Le délai d'attente représente la durée maximale pendant laquelle la source attendra une notification.  
   
-    -   Pour l’option **E - Extraire uniquement**, fournissez l’ID de demande.  
+    -   Pour l’option **E - Extraire uniquement** , fournissez l’ID de demande.  
   
 -   Spécifiez les règles pour la conversion de chaînes. (Par exemple, convertissez toutes les chaînes, selon que le système SAP Netweaver BW est Unicode ou non, ou convertissez toutes les chaînes en **varchar** ou **nvarchar**).  
   
@@ -115,20 +120,20 @@ caps.handback.revision: 10
   
  Pour obtenir la procédure pas à pas qui montre comment configurer et utiliser le gestionnaire de connexions, la source et la destination SAP BW, consultez le livre blanc [Utilisation de SQL Server 2008 Integration Services avec SAP BI 7.0](http://go.microsoft.com/fwlink/?LinkID=137090). Ce livre blanc explique également comment configurer les objets nécessaires dans SAP BW.  
   
-### Utilisation du concepteur SSIS pour configurer la source  
+### <a name="using-the-ssis-designer-to-configure-the-source"></a>Utilisation du concepteur SSIS pour configurer la source  
  Pour plus d'informations sur les propriétés de la source SAP BW que vous pouvez définir dans le Concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de source SAP BW &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
+-   [Éditeur de Source SAP BW &#40; Page Gestionnaire de connexions &#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
   
--   [Éditeur de source SAP BW &#40;page Colonnes&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
+-   [Éditeur de Source SAP BW &#40; Page colonnes &#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
   
--   [Éditeur de source SAP BW &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
+-   [Éditeur de Source SAP BW &#40; Page sortie d’erreur &#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
   
--   [Éditeur de source SAP BW &#40;page Avancé&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
+-   [Éditeur de Source SAP BW &#40; Page avancé &#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
   
  Pendant que vous configurez la source SAP BW, vous pouvez également utiliser différentes boîtes de dialogue pour rechercher des objets SAP Netweaver BW ou pour afficher un aperçu des données sources. Pour plus d'informations sur ces boîtes de dialogue, cliquez sur l'une des rubriques suivantes :  
   
--   [Rechercher la destination RFC](../../integration-services/data-flow/look-up-rfc-destination.md)  
+-   [Rechercher la Destination RFC](../../integration-services/data-flow/look-up-rfc-destination.md)  
   
 -   [Rechercher la chaîne de processus](../../integration-services/data-flow/look-up-process-chain.md)  
   
@@ -136,7 +141,7 @@ caps.handback.revision: 10
   
 -   [Aperçu](../../integration-services/data-flow/preview.md)  
   
-## Voir aussi  
- [Composants Microsoft Connector 1.1 pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Composants Microsoft Connector 1.1 pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

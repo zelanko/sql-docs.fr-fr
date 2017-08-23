@@ -1,29 +1,34 @@
 ---
-title: "Option replay (outil d&#39;administration Distributed Replay) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Option Replay (outil d’Administration Distributed Replay) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 32c85446a36defba2e615b04d3d3cb9fd9149fe5
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Option replay (outil d&#39;administration Distributed Replay)
-  L’outil d’administration [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay (**DReplay.exe**) est un outil en ligne de commande que vous pouvez utiliser pour communiquer avec Distributed Replay Controller. Cette rubrique décrit l’option de ligne de commande **replay** et la syntaxe correspondante.  
+# <a name="replay-option-distributed-replay-administration-tool"></a>Option replay (outil d'administration Distributed Replay)
+  L’outil d’administration [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay ( **DReplay.exe**) est un outil en ligne de commande que vous pouvez utiliser pour communiquer avec Distributed Replay Controller. Cette rubrique décrit l’option de ligne de commande **replay** et la syntaxe correspondante.  
   
  L’option **replay** initialise l’étape de relecture d’événement, dans laquelle le contrôleur distribue des données de relecture aux clients spécifiés, lance la relecture distribuée et synchronise les clients. Chaque client participant à la relecture peut éventuellement enregistrer l'activité de relecture et enregistrer un fichier de trace de résultats localement.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.png "Icône Lien de rubrique") Pour plus d’informations sur les conventions de syntaxe utilisées par l’outil d’administration, consultez [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "icône lien de rubrique") pour plus d’informations sur les conventions de syntaxe qui sont utilisées par l’outil d’administration, consultez [Conventions de syntaxe Transact-SQL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -32,34 +37,34 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
     [-f status_interval]  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  **-m** *controller*  
- Spécifie le nom de l'ordinateur du contrôleur. Vous pouvez utiliser « `localhost` » ou « `.` » pour désigner l'ordinateur local.  
+ Spécifie le nom de l'ordinateur du contrôleur. Vous pouvez utiliser «`localhost`» ou «`.`» pour désigner l'ordinateur local.  
   
  Si le paramètre **-m** n’est pas spécifié, l’ordinateur local est utilisé.  
   
  **-d** *controller_working_dir*  
  Spécifie le répertoire du contrôleur où sera stocké le fichier intermédiaire. Le paramètre **-d** est obligatoire.  
   
- Les conditions suivantes s'appliquent :  
+ Les conditions suivantes s'appliquent :  
   
 -   Le répertoire doit résider sur le contrôleur.  
   
 -   Vous devez spécifier le chemin complet, en commençant par une lettre de lecteur (par exemple, `c:\WorkingDir`).  
   
--   Le chemin d'accès ne doit pas se terminer par une barre oblique inverse « `\` ».  
+-   Le chemin d'accès ne doit pas se terminer par une barre oblique inverse «`\`».  
   
 -   Les chemins d'accès UNC ne sont pas pris en charge.  
   
  **-o**  
- Capture l'activité de relecture des clients et la sauvegarde dans un fichier de trace de résultats dans le chemin d'accès spécifié par l'élément `<ResultDirectory>`, dans le fichier de configuration client `DReplayClient.xml`.  
+ Capture l'activité de relecture des clients et la sauvegarde dans un fichier de trace de résultats dans le chemin d'accès spécifié par l'élément `<ResultDirectory>` , dans le fichier de configuration client `DReplayClient.xml`.  
   
  Lorsque le paramètre **–o** n’est pas spécifié, le fichier de trace de résultats n’est pas généré. La sortie de console retourne les informations de résumé à la fin de la relecture, mais aucune autre statistique de relecture n'est disponible.  
   
  **-s** *target_server*  
  Spécifie l'instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec laquelle la charge de travail distribuée doit être relue. Vous devez spécifier ce paramètre au format **nom_serveur[\nom_instance]**.  
   
- Vous ne pouvez pas utiliser « `localhost` » ou « `.` » comme serveur cible.  
+ Vous ne pouvez pas utiliser «`localhost`» ou «`.`» comme serveur cible.  
   
  Le paramètre **-s** n’est pas obligatoire si l’élément `<Server>` est spécifié dans la section `<ReplayOptions>` du fichier de configuration de relecture `DReplay.exe.replay.config`.  
   
@@ -72,7 +77,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
 >  Chaque client s'inscrit avec le contrôleur spécifié dans le fichier de configuration client lors du démarrage du service client.  
   
  **-c** *config_file*  
- C'est le chemin d'accès complet du fichier de configuration de relecture ; il est utilisé pour spécifier l'emplacement du fichier lorsqu'il est stocké à un autre emplacement.  
+ C'est le chemin d'accès complet du fichier de configuration de relecture ; il est utilisé pour spécifier l'emplacement du fichier lorsqu'il est stocké à un autre emplacement.  
   
  Le paramètre **-c** n’est pas obligatoire si vous voulez utiliser les valeurs par défaut du fichier de configuration de relecture `DReplay.exe.replay.config`.  
   
@@ -81,14 +86,14 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
  Si **-f** n’est pas spécifié, l’intervalle par défaut est de 30 secondes.  
   
-## Exemples  
+## <a name="examples"></a>Exemples  
  Dans cet exemple, la relecture distribuée tire beaucoup de son comportement d'un fichier de configuration de relecture modifié, `DReplay.exe.replay.config`.  
   
 -   Le paramètre **-m** spécifie qu’un ordinateur nommé `controller1` agit en tant que contrôleur. Le nom d'ordinateur doit être spécifié quand le service contrôleur s'exécute sur un autre ordinateur.  
   
 -   Le paramètre **-d** spécifie l’emplacement du fichier intermédiaire sur le contrôleur, `c:\WorkingDir`.  
   
--   Le paramètre **-o** spécifie que chaque client spécifié capture l’activité de relecture et l’enregistre dans un fichier de trace de résultats. Remarque : l'élément `<ResultTrace>` dans le fichier de configuration peut être utilisé pour spécifier si le nombre de lignes et le jeu de résultats doivent être enregistrés.  
+-   Le paramètre **-o** spécifie que chaque client spécifié capture l’activité de relecture et l’enregistre dans un fichier de trace de résultats. Remarque : l'élément `<ResultTrace>` dans le fichier de configuration peut être utilisé pour spécifier si le nombre de lignes et le jeu de résultats doivent être enregistrés.  
   
 -   Le paramètre **-w** spécifie que les ordinateurs `client1` à `client4` participent en tant que clients à la relecture distribuée.  
   
@@ -96,13 +101,13 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
 -   Le paramètre **-s** n’est pas obligatoire, car l’élément `<Server>` est spécifié dans l’élément `<ReplayOptions>` du fichier de configuration de relecture `DReplay.exe.replay.config`.  
   
- L'étape de relecture d'événement est initialisée avec la syntaxe suivante, lorsque l'outil d'administration est exécuté à partir d'un autre ordinateur que le contrôleur :  
+ L'étape de relecture d'événement est initialisée avec la syntaxe suivante, lorsque l'outil d'administration est exécuté à partir d'un autre ordinateur que le contrôleur :  
   
 ```  
 dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,client4 -c c:\DReplay.exe.replay.config  
 ```  
   
- Pour spécifier un mode de mise en séquence synchrone, l'élément `<SequencingMode>` du fichier `DReplay.exe.replay.config` est défini comme égal à la valeur `synchronization`. La section `<ResultTrace>` du fichier de configuration de relecture est modifiée pour spécifier que le nombre de lignes doit être enregistré. Ces modifications sont illustrées dans l'exemple XML suivant :  
+ Pour spécifier un mode de mise en séquence synchrone, l'élément `<SequencingMode>` du fichier `DReplay.exe.replay.config` est défini comme égal à la valeur `synchronization`. La section `<ResultTrace>` du fichier de configuration de relecture est modifiée pour spécifier que le nombre de lignes doit être enregistré. Ces modifications sont illustrées dans l'exemple XML suivant :  
   
 ```  
 <?xml version='1.0'?>  
@@ -125,7 +130,7 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
 </Options>  
 ```  
   
- Pour spécifier un mode de séquencement en simultané (stress), l'élément `<SequencingMode>` du fichier `DReplay.exe.replay.config` est défini comme égal à la valeur `stress`. Les éléments `<ConnectTimeScale>` et `<ThinkTimeScale>` ont la valeur `50` (pour spécifier 50 pour cent). Pour plus d'informations sur le délai de connexion et le temps de réflexion, consultez [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md). Ces modifications sont illustrées dans l'exemple XML suivant :  
+ Pour spécifier un mode de séquencement en simultané (stress), l'élément `<SequencingMode>` du fichier `DReplay.exe.replay.config` est défini comme égal à la valeur `stress`. Les éléments `<ConnectTimeScale>` et `<ThinkTimeScale>` ont la valeur `50` (pour spécifier 50 pour cent). Pour plus d'informations sur le délai de connexion et le temps de réflexion, consultez [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md). Ces modifications sont illustrées dans l'exemple XML suivant :  
   
 ```  
 <?xml version='1.0'?>  
@@ -148,14 +153,14 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
 </Options>  
 ```  
   
-## Autorisations  
+## <a name="permissions"></a>Autorisations  
  Vous devez exécuter l'outil d'administration en tant qu'utilisateur interactif, comme un utilisateur local ou un compte d'utilisateur de domaine. Pour utiliser un compte d'utilisateur local, l'outil d'administration et le contrôleur doivent s'exécuter sur le même ordinateur.  
   
  Pour plus d’informations, voir [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
   
-## Voir aussi  
- [Relire les données de trace](../../tools/distributed-replay/replay-trace-data.md)   
- [Examiner les résultats de la relecture](../../tools/distributed-replay/review-the-replay-results.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Relire les données de Trace](../../tools/distributed-replay/replay-trace-data.md)   
+ [Passez en revue les résultats de relecture](../../tools/distributed-replay/review-the-replay-results.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Configurer Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)   
  [Forum de SQL Server Distributed Replay](http://social.technet.microsoft.com/Forums/sl/sqldru/)   

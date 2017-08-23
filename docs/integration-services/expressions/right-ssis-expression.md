@@ -1,44 +1,49 @@
 ---
-title: "RIGHT (expression SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "RIGHT, fonction"
+title: RIGHT (Expression SSIS) | Documents Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RIGHT function
 ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b81ead33054642391dcd95d56746a90cf347dcc9
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# RIGHT (expression SSIS)
+# <a name="right-ssis-expression"></a>RIGHT (expression SSIS)
   Renvoie le nombre de caractères spécifié en commençant par la partie la plus à droite d'une expression de caractères donnée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 RIGHT(character_expression,integer_expression)  
 ```  
   
-## Arguments  
+## <a name="arguments"></a>Arguments  
  *character_expression*  
  Expression de caractères à partir de laquelle doivent être extraits les caractères.  
   
  *integer_expression*  
  Expression entière indiquant le nombre de caractères à renvoyer.  
   
-## Types des résultats  
+## <a name="result-types"></a>Types des résultats  
  DT_WSTR  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Si *integer_expression* est supérieure à la longueur de *character_expression*, la fonction retourne *character_expression*.  
   
  Si l’argument *integer_expression* a pour valeur zéro, la fonction renvoie une chaîne de longueur nulle.  
@@ -51,7 +56,7 @@ RIGHT(character_expression,integer_expression)
   
  La fonction RIGHT renvoie un résultat NULL si l'un des arguments est NULL.  
   
-## Exemples d'expressions  
+## <a name="expression-examples"></a>Exemples d'expressions  
  L'exemple suivant utilise un littéral de chaîne. Le résultat obtenu est `"Bike"`.  
   
 ```  
@@ -70,8 +75,8 @@ RIGHT(Name, @Times)
 RIGHT(Name, (DT_I2)@Times))  
 ```  
   
-## Voir aussi  
- [LEFT &#40;expression SSIS&#41;](../../integration-services/expressions/left-ssis-expression.md)   
- [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Voir aussi  
+ [GAUCHE &#40; Expression SSIS &#41;](../../integration-services/expressions/left-ssis-expression.md)   
+ [Fonctions &#40; Expression SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

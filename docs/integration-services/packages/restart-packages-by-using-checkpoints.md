@@ -1,29 +1,34 @@
 ---
-title: "Red&#233;marrer des packages &#224; l&#39;aide de points de contr&#244;le | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "points de contrôle [Integration Services]"
-  - "redémarrage de packages"
-  - "démarrage de packages"
+title: "Redémarrer les Packages à l’aide de points de contrôle | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- checkpoints [Integration Services]
+- restarting packages
+- starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 caps.latest.revision: 54
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
+ms.openlocfilehash: 5207ffe29852aa5ed10144a3184917704682c49e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Red&#233;marrer des packages &#224; l&#39;aide de points de contr&#244;le
+# <a name="restart-packages-by-using-checkpoints"></a>Redémarrer des packages à l'aide de points de contrôle
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peut redémarrer les packages ayant échoué à partir du point d'échec, au lieu de reprendre l'exécution du package tout entier. Si un package est configuré pour utiliser des points de contrôle, des informations sur l'exécution du package sont écrites dans un fichier de point de contrôle. Lorsque le package ayant échoué est relancé, le fichier de point de contrôle est utilisé pour redémarrer le package à partir du point d'échec. Si le package est exécuté avec succès, le fichier de point de contrôle est supprimé, puis recréé à l’exécution suivante du package.  
   
- L'utilisation des points de contrôle dans un package offre les avantages suivants :  
+ L'utilisation des points de contrôle dans un package offre les avantages suivants :  
   
 -   Éviter de répéter le téléchargement ascendant et descendant de gros fichiers. Par exemple, un package qui télécharge plusieurs gros fichiers à l'aide d'une tâche FTP pour chaque téléchargement peut être redémarré après l'échec du téléchargement d'un seul fichier, puis ne reprendre le téléchargement que pour ce fichier.  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 54
   
  Si un package est configuré pour utiliser les points de contrôle, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] capture le point de redémarrage dans le fichier de point de contrôle. Le type de conteneur qui échoue et l'implémentation de fonctionnalités telles que les transactions affectent le point de redémarrage enregistré dans le fichier de point de contrôle. Les valeurs actuelles des variables sont également capturées dans le fichier de point de contrôle. Toutefois, les valeurs des variables de type de données **Object** ne sont pas enregistrées dans les fichiers de point de contrôle.  
   
-## Définition des points de redémarrage  
+## <a name="defining-restart-points"></a>Définition des points de redémarrage  
  Le conteneur d'hôte de tâche, qui encapsule une seule tâche, est la plus petite unité atomique à pouvoir être redémarrée. Le conteneur de boucles Foreach et un conteneur transactionnel sont également traités comme des unités atomiques de travail.  
   
  Si un package est arrêté alors qu'un conteneur transactionnel est en cours d'exécution, la transaction est arrêtée et tout travail effectué par le conteneur est annulé. Lorsque le package est redémarré, le conteneur qui a échoué est exécuté à nouveau. La réalisation de conteneurs enfants du conteneur transactionnel n'est pas enregistrée dans le fichier de point de contrôle. Par conséquent, lorsque le package est redémarré, le conteneur transactionnel et ses conteneurs enfants sont exécutés à nouveau.  
@@ -47,7 +52,7 @@ caps.handback.revision: 54
   
  Un package ne peut être redémarré qu'au niveau du flux de contrôle. Vous ne pouvez pas redémarrer un package au milieu d'un flux de données. Pour éviter de réexécuter tout le flux de données, le package peut être conçu de manière à inclure plusieurs flux de données, utilisant chacun une tâche de flux de données différente. De cette manière, le package peut être redémarré en ne réexécutant qu'une seule tâche de flux de données.  
   
-## Configuration d'un package pour le redémarrage  
+## <a name="configuring-a-package-to-restart"></a>Configuration d'un package pour le redémarrage  
  Le fichier de point de contrôle comprend les résultats d'exécution de tous les conteneurs achevés, les valeurs actuelles des variables système et définies par l'utilisateur, ainsi que les informations de configuration du package. Le fichier peut également inclure un identificateur unique du package. Pour redémarrer correctement le package, l'identificateur du package dans le fichier de point de contrôle doit correspondre au package. Dans le cas contraire, le redémarrage échoue. Cela empêche un package d'utiliser un fichier de point de contrôle écrit par une version de package différente. Si un package redémarre après avoir été exécuté correctement, le fichier de point de contrôle est supprimé.  
   
  Le tableau suivant présente les propriétés de package que vous définissez pour implémenter les points de contrôle.  
@@ -62,7 +67,7 @@ caps.handback.revision: 54
   
  Vous pouvez utiliser la propriété ForceExecutionResult pour tester l’utilisation des points de contrôle dans un package. En affectant la valeur la valeur Failure à la propriété ForceExecutionResult d’une tâche ou d’un conteneur, vous pouvez imiter un échec en temps réel. Lorsque vous redémarrez le package, la tâche et les conteneurs ayant échoué sont réexécutés.  
   
-### Utilisation des points de contrôle  
+### <a name="checkpoint-usage"></a>Utilisation des points de contrôle  
  La propriété CheckpointUsage peut avoir les valeurs suivantes :  
   
 |Valeur|Description|  
@@ -72,22 +77,46 @@ caps.handback.revision: 54
 |**IfExists**|Spécifie que le fichier de point de contrôle est utilisé s'il existe. Si le fichier de point de contrôle existe, le package redémarre à partir du point de l'échec de la précédente exécution. Sinon il est exécuté à partir du début du flux de travail du package.|  
   
 > [!NOTE]  
->  L’option **/CheckPointing on** de dtexec revient à affecter la valeur **True** à la propriété **SaveCheckpoints** du package et la valeur Always à la propriété **CheckpointUsage**. Pour plus d’informations, voir [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
+>  L’option **/CheckPointing on** de dtexec revient à affecter la valeur **True** à la propriété **SaveCheckpoints**du package et la valeur Always à la propriété **CheckpointUsage** . Pour plus d’informations, voir [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
   
-## Sécurisation des fichiers de point de contrôle  
- La protection au niveau du package n'inclut pas la protection des fichiers de point de contrôle ; vous devez donc sécuriser ces fichiers séparément. Les données de point de contrôle peuvent être stockées uniquement dans le système de fichiers et vous devez utiliser une liste de contrôle d'accès au système d'exploitation pour sécuriser l'emplacement ou le dossier de stockage du fichier. Il est important de sécuriser les fichiers de point de contrôle car ceux-ci contiennent des informations sur l'état du package, notamment les valeurs actuelles des variables. Une variable peut ainsi contenir un ensemble d'enregistrements doté de plusieurs lignes de données privées, telles que des numéros de téléphone. Pour plus d’informations, consultez [Accéder aux fichiers utilisés par des packages](../../integration-services/security/access-to-files-used-by-packages.md).  
+## <a name="securing-checkpoint-files"></a>Sécurisation des fichiers de point de contrôle  
+ La protection au niveau du package n'inclut pas la protection des fichiers de point de contrôle ; vous devez donc sécuriser ces fichiers séparément. Les données de point de contrôle peuvent être stockées uniquement dans le système de fichiers et vous devez utiliser une liste de contrôle d'accès au système d'exploitation pour sécuriser l'emplacement ou le dossier de stockage du fichier. Il est important de sécuriser les fichiers de point de contrôle car ceux-ci contiennent des informations sur l'état du package, notamment les valeurs actuelles des variables. Une variable peut ainsi contenir un ensemble d'enregistrements doté de plusieurs lignes de données privées, telles que des numéros de téléphone. Pour plus d’informations, consultez [Accéder aux fichiers utilisés par des packages](../../integration-services/security/security-overview-integration-services.md#files).  
+
+## <a name="configure-checkpoints-for-restarting-a-failed-package"></a>Configurer des points de contrôle pour redémarrer un package ayant échoué
+  Vous pouvez configurer les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de sorte qu'ils redémarrent à partir d'un point d'arrêt au lieu de réexécuter l'ensemble du package. Pour ce faire, vous devez définir les propriétés des points de contrôle.  
   
-### Pour configurer les propriétés des points de contrôle  
+### <a name="to-configure-a-package-to-restart"></a>Pour configurer le redémarrage d'un package  
   
--   [Configurer des points de contrôle pour redémarrer un package ayant échoué](../../integration-services/packages/configure-checkpoints-for-restarting-a-failed-package.md)  
+1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contenant le package à configurer.  
   
-## Ressources externes  
+2.  Dans **l’Explorateur de solutions**, double-cliquez sur le package pour l’ouvrir.  
+  
+3.  Cliquez sur l'onglet **Flux de contrôle** .  
+  
+4.  Cliquez avec le bouton droit n’importe où dans l’arrière-plan de la surface de dessin du flux de contrôle, puis cliquez sur **Propriétés**.  
+  
+5.  Définissez la propriété SaveCheckpoints sur **True**.  
+  
+6.  Tapez le nom du fichier point de contrôle dans la propriété CheckpointFileName.  
+  
+7.  Définissez la propriété CheckpointUsage sur l’une des deux valeurs suivantes :  
+  
+    -   Sélectionnez **Always** pour toujours redémarrer le package à partir du point d'arrêt.  
+  
+        > [!IMPORTANT]  
+        >  Une erreur se produit si le fichier de point d'arrêt n'est pas disponible.  
+  
+    -   Sélectionnez **IfExists** pour redémarrer le package uniquement si le fichier de point d'arrêt est disponible.  
+  
+8.  Configurez les tâches et les conteneurs à partir desquels le package peut redémarrer.  
+  
+    -   Cliquez avec le bouton droit sur une tâche ou un conteneur, puis cliquez sur **Propriétés**.  
+  
+    -   Affectez à la propriété FailPackageOnFailure la valeur **True** pour chaque tâche et conteneur sélectionnés.  
+    
+## <a name="external-resources"></a>Ressources externes  
   
 -   Article technique, [Redémarrage automatique des packages SSIS après un basculement ou un échec](http://go.microsoft.com/fwlink/?LinkId=200407), sur social.technet.microsoft.com  
   
 -   Article du Support technique Microsoft, [Les points de contrôle SSIS ne sont pas respectés pour les éléments de conteneur de boucles For ou Foreach](http://go.microsoft.com/fwlink/?LinkId=241633), sur le site support.microsoft.com.  
-  
-## Voir aussi  
- [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
-  
-  
+

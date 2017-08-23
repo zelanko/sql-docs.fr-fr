@@ -1,47 +1,52 @@
 ---
-title: "REVERSE (expression SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "REVERSE (fonction)"
-  - "expressions d'inversion de caractères"
+title: REVERSE (Expression SSIS) | Documents Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- REVERSE function
+- reverse character expressions
 ms.assetid: bcebcc55-7247-4896-8f53-4d582d58cfb4
 caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bb7529a91258c78d9bc8c752c775a5544975e7d0
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# REVERSE (expression SSIS)
+# <a name="reverse-ssis-expression"></a>REVERSE (expression SSIS)
   Renvoie une expression de caractères en ordre inverse.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 REVERSE(character_expression)  
 ```  
   
-## Arguments  
+## <a name="arguments"></a>Arguments  
  *character_expression*  
  Expression de caractères à inverser.  
   
-## Types des résultats  
+## <a name="result-types"></a>Types des résultats  
  DT_WSTR  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  L’argument *character_expression* doit être du type de données DT_WSTR.  
   
  REVERSE retourne un résultat Null si *character_expression* est Null.  
   
-## Exemples d'expressions  
+## <a name="expression-examples"></a>Exemples d'expressions  
  L'exemple suivant utilise un littéral de chaîne. Le résultat obtenu est « ekiB niatnuoM ».  
   
 ```  
@@ -54,7 +59,7 @@ REVERSE("Mountain Bike")
 REVERSE(@Name)  
 ```  
   
-## Voir aussi  
- [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Fonctions &#40; Expression SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

@@ -1,32 +1,37 @@
 ---
-title: "Mapper des param&#232;tres de requ&#234;te &#224; des variables dans un composant de flux de donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "requêtes [Integration Services], mappage de paramètres"
-  - "paramètres [Integration Services]"
-  - "mappage de paramètres de requêtes à des variables [Integration Services]"
-  - "variables [Integration Services], mappage de paramètres à"
+title: "Mapper des paramètres de requête à des Variables dans un composant de flux de données | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [Integration Services], parameter mapping
+- parameters [Integration Services]
+- mapping query parameters to variables [Integration Services]
+- variables [Integration Services], mapping parameters to
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: da9367a56cefbb37244d4a47543b93586e7e8870
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Mapper des param&#232;tres de requ&#234;te &#224; des variables dans un composant de flux de donn&#233;es
+# <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>Mapper des paramètres de requête à des variables dans un composant de flux de données
   Lorsque vous configurez la source OLE DB pour utiliser des requêtes paramétrables, vous pouvez mapper les paramètres à des variables.  
   
  La source OLE DB utilise des requêtes paramétrables pour filtrer les données lorsqu'elle se connecte à une source de données.  
   
-### Pour mapper un paramètre de requête à une variable  
+### <a name="to-map-a-query-parameter-to-a-variable"></a>Pour mapper un paramètre de requête à une variable  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contenant le package souhaité.  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 34
   
 7.  Cliquez sur **Paramètres**.  
   
-8.  Dans la boîte de dialogue **Définition des paramètres de la requête**, mappez chaque paramètre de la liste **Paramètres** à une variable de la liste **Variables** ou créez une variable en cliquant sur **\<Nouvelle variable>**. Cliquez sur **OK**.  
+8.  Dans le **définition des paramètres de requête** boîte de dialogue zone, mappez chaque paramètre dans le **paramètres** liste à une variable dans le **Variables** liste ou créez une nouvelle variable en cliquant sur  **\<nouvelle variable >**. Cliquez sur **OK**.  
   
     > [!NOTE]  
     >  Seules les variables système et les variables définies par l'utilisateur qui se trouvent dans l'étendue du package, dans un conteneur parent tel qu'une boucle Foreach ou dans la tâche de flux de données contenant le composant de flux de données, peuvent être mappées. La variable doit avoir un type de données compatible avec la colonne de la clause WHERE à laquelle le paramètre est affecté.  
@@ -51,7 +56,7 @@ caps.handback.revision: 34
   
 10. Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Source OLE DB](../../integration-services/data-flow/ole-db-source.md)   
  [Transformation de recherche](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   

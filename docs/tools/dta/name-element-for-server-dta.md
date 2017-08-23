@@ -1,29 +1,34 @@
 ---
-title: "Name, &#233;l&#233;ment pour les serveurs (Assistant Param&#233;trage de base de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "Name (élément)"
+title: "Nom d’élément pour le serveur (DTA) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- XML
+helpviewer_keywords:
+- Name element
 ms.assetid: 4c94754d-6d62-4357-8ce7-f107ebf90c71
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 98b9748db2c405491ed94568de25525e208c2ff4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Name, &#233;l&#233;ment pour les serveurs (Assistant Param&#233;trage de base de donn&#233;es)
+# <a name="name-element-for-server-dta"></a>Name, élément pour les serveurs (Assistant Paramétrage de base de données)
   Contient le nom du serveur sur lequel résident les bases de données que vous souhaitez paramétrer.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -32,7 +37,7 @@ caps.handback.revision: 14
     <Name>...</Name>  
 ```  
   
-## Caractéristiques de l'élément  
+## <a name="element-characteristics"></a>Caractéristiques de l'élément  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
@@ -40,17 +45,17 @@ caps.handback.revision: 14
 |**Valeur par défaut**|Aucun.|  
 |**Occurrence**|Obligatoire une fois par élément **Server** .|  
   
-## Relations entre les éléments  
+## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[Server, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/server-element-dta.md)|  
+|**Élément parent**|[Élément de serveur &#40; DTA &#41;](../../tools/dta/server-element-dta.md)|  
 |**Éléments enfants**|Aucun.|  
   
-## Exemple  
- Pour voir un exemple d’utilisation de l’élément **Name**, consultez [Server, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/server-element-dta.md).  
+## <a name="example"></a>Exemple  
+ Pour voir un exemple d’utilisation de l’élément **Name** , consultez [Server Element &#40;DTA&#41;](../../tools/dta/server-element-dta.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

@@ -1,30 +1,35 @@
 ---
-title: "Propri&#233;t&#233;s du package, bo&#238;te de dialogue | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.ssms.ispackageprop.general.f1"
-  - "sql13.ssis.ssms.packageproperties.f1"
+title: "Boîte de dialogue Propriétés du package | Documents Microsoft"
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.ssms.ispackageprop.general.f1
+- sql13.ssis.ssms.packageproperties.f1
 ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2269955b34d8077a56c83044bf12c262be166aa8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Propri&#233;t&#233;s du package, bo&#238;te de dialogue
+# <a name="package-properties-dialog-box"></a>Propriétés du package, boîte de dialogue
   Utilisez la boîte de dialogue **Propriétés du package** pour afficher et gérer les propriétés des packages stockés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Pour plus d’informations, consultez [Serveur Integration Services &#40;SSIS&#41;](https://msdn.microsoft.com/library/ms141134.aspx).  
   
- **Que voulez-vous faire ?**  
+ **Que voulez-vous faire ?**  
   
 -   [Ouvrir la boîte de dialogue Propriétés du package](#open_dialog)  
   
@@ -64,3 +69,4 @@ caps.handback.revision: 27
  Affiche la description facultative du package.  
   
   
+

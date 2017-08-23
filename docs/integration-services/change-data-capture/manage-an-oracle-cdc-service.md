@@ -1,24 +1,29 @@
 ---
-title: "G&#233;rer un service de capture de donn&#233;es modifi&#233;es Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "createSrv"
+title: "Gérer un Service de capture de données modifiées Oracle | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- createSrv
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ece331cf561da80bf56df914fec6f42159ade23e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# G&#233;rer un service de capture de donn&#233;es modifi&#233;es Oracle
+# <a name="manage-an-oracle-cdc-service"></a>Gérer un service de capture de données modifiées Oracle
   Vous pouvez utiliser la console de configuration du service de capture de données modifiées pour gérer un service de capture de données modifiées spécifique.  
   
  **Pour sélectionner le service de capture de données modifiées à utiliser**  
@@ -37,13 +42,13 @@ caps.handback.revision: 8
   
      Vous pouvez également cliquer avec le bouton droit sur le service de capture de données modifiées que vous souhaitez utiliser et sélectionner l'action souhaitée. Consultez [What can you do with a CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
   
-##  <a name="BKMK_WhatcandowithCDCService"></a> Opérations possibles avec un service de capture de données modifiées  
+##  <a name="BKMK_WhatcandowithCDCService"></a> What can you do with a CDC Service  
  Vous pouvez effectuer les actions suivantes lorsque vous utilisez un service de capture de données modifiées.  
   
-### Supprimer le service  
+### <a name="delete-the-service"></a>Supprimer le service  
  Dans le volet **Actions** à droite de la console de configuration du service de capture de données modifiées, cliquez sur **Supprimer** pour supprimer le service.  
   
- Vous pouvez aussi cliquer avec le bouton droit sur le service de capture de données modifiées à supprimer et sélectionner **Supprimer**.  
+ Vous pouvez également cliquer avec le bouton droit sur le service de capture de données modifiées à supprimer et sélectionner **Supprimer**.  
   
  **Remarque**: si le service est en cours d'exécution lors de sa suppression, il est arrêté avant d'être supprimé.  
   
@@ -51,12 +56,12 @@ caps.handback.revision: 8
   
  Pour plus d'informations sur les données que vous devez taper dans la boîte de dialogue Connexion à SQL Server, consultez [Connection to SQL Server for Delete](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md).  
   
-### Modifier les propriétés de service de capture de données modifiées  
+### <a name="edit-the-cdc-service-properties"></a>Modifier les propriétés de service de capture de données modifiées  
  Dans le volet **Actions** à droite de la console de configuration du service de capture de données modifiées, cliquez sur **Propriétés**.  
   
- Vous pouvez aussi cliquer avec le bouton droit sur le service de capture de données modifiées dont vous voulez modifier les propriétés et sélectionner **Propriétés**.  
+ Vous pouvez également cliquer avec le bouton droit sur le service de capture de données modifiées où vous souhaitez modifier les propriétés et sélectionner **Propriétés**.  
   
-## Voir aussi  
- [Procédure : gérer un service de capture de données modifiées local](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Comment gérer un Service de capture de données modifiées Local](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)  
   
   

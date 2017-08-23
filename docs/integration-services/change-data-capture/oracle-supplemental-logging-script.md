@@ -1,29 +1,34 @@
 ---
-title: "Script de journalisation suppl&#233;mentaire Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Script de journalisation supplémentaire Oracle | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 16e3c1b59550236eaa1716d7251e55c0cee6b919
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Script de journalisation suppl&#233;mentaire Oracle
+# <a name="oracle-supplemental-logging-script"></a>Script de journalisation supplémentaire Oracle
   Cette boîte de dialogue affiche le script Oracle de journalisation supplémentaire.  
   
  Lorsque vous préparez une instance de capture de données modifiées pour l'utilisation, le concepteur CDC crée un script Oracle SQL qui configure une journalisation supplémentaire pour les tables à capturer. Le script de journalisation supplémentaire indique à Oracle que lorsqu'une table spécifique est mise à jour, les enregistrements de modification qu'elle écrit dans le journal des transactions doivent contenir les données de toutes les colonnes d'intérêt, et non pas seulement des colonnes qui ont été modifiées.  
   
  Selon les stratégies de l'administrateur de base de données Oracle de votre organisation, l'exécution du script de journalisation supplémentaire peut nécessiter un examen et une approbation par un administrateur de base de données Oracle.  
   
-## Options  
+## <a name="options"></a>Options  
  Voici les options disponibles pour l'exécution du script.  
   
  **Exécuter le script**  
@@ -35,8 +40,8 @@ caps.handback.revision: 6
  **Copier**  
  Copie le script dans le Presse-papiers. Lorsque vous serez prêt, vous pourrez coller le script dans n'importe quel emplacement si un administrateur de base de données Oracle (DBA) doit examiner et exécuter le script de journalisation supplémentaire.  
   
-## Voir aussi  
- [Procédure : gérer une instance de capture de données modifiées](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
- [Gérer une instance de capture de données modifiées](../../integration-services/change-data-capture/manage-a-cdc-instance.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Comment gérer une Instance de capture de données modifiées](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
+ [Gérer une Instance de capture de données modifiées](../../integration-services/change-data-capture/manage-a-cdc-instance.md)  
   
   

@@ -1,27 +1,32 @@
 ---
-title: "Transformation de commande OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.oledbcommandtrans.f1"
-helpviewer_keywords: 
-  - "instructions [Integration Services]"
-  - "transformation de commande OLE DB"
+title: Transformation de commande OLE DB | Documents Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.oledbcommandtrans.f1
+helpviewer_keywords:
+- statements [Integration Services]
+- OLE DB Command transformation
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 caps.latest.revision: 55
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 35cad22ea543204b457cd8b9674540f24e482a6c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transformation de commande OLE DB
+# <a name="ole-db-command-transformation"></a>transformation de commande OLE DB
   La transformation de commande OLE DB exécute une instruction SQL pour chaque ligne d'un flux de données. Par exemple, vous pouvez exécuter une instruction SQL qui insère, met à jour ou supprime des lignes d'une table de base de données.  
   
  Vous pouvez configurer la transformation de commande OLE DB de plusieurs manières :  
@@ -32,7 +37,7 @@ caps.handback.revision: 55
   
 -   Spécifiez la page de codes par défaut.  
   
- En général, l'instruction SQL inclut des paramètres. Les valeurs des paramètres sont stockées dans des colonnes externes dans l'entrée de transformation et le mappage d'une colonne d'entrée à une colonne externe mappe une colonne d'entrée à un paramètre. Par exemple, pour rechercher des lignes dans la table **DimProduct** par la valeur de leur colonne **ProductKey** et pour les supprimer, vous pouvez mapper la colonne externe nommée **Param_0** à la colonne d’entrée nommée **ProductKey**, puis exécuter l’instruction SQL `DELETE FROM DimProduct WHERE ProductKey = ?`. La transformation de commande OLE DB fournit les noms des paramètres, que vous ne pouvez pas modifier. Les noms des paramètres sont **Param_0**, **Param_1** et ainsi de suite.  
+ En général, l'instruction SQL inclut des paramètres. Les valeurs des paramètres sont stockées dans des colonnes externes dans l'entrée de transformation et le mappage d'une colonne d'entrée à une colonne externe mappe une colonne d'entrée à un paramètre. Par exemple, pour rechercher des lignes dans la table **DimProduct** par la valeur de leur colonne **ProductKey** et pour les supprimer, vous pouvez mapper la colonne externe nommée **Param_0** à la colonne d’entrée nommée **ProductKey** , puis exécuter l’instruction SQL `DELETE FROM DimProduct WHERE ProductKey = ?`. La transformation de commande OLE DB fournit les noms des paramètres, que vous ne pouvez pas modifier. Les noms des paramètres sont **Param_0**, **Param_1**et ainsi de suite.  
   
  Si vous configurez la transformation de commande OLE DB à l'aide de la boîte de dialogue **Éditeur avancé** , les paramètres de l'instruction SQL peuvent être mappés automatiquement à des colonnes externes dans l'entrée de transformation (et les caractéristiques de chaque paramètre définis) en cliquant sur le bouton **Actualiser** . Toutefois, si le fournisseur OLE DB utilisé par la transformation de commande OLE DB ne prend pas en charge la dérivation d'informations de paramètres à partir du paramètre, vous devez configurer les colonnes externes manuellement. Cela signifie que vous devez ajouter une colonne pour chaque paramètre à l’entrée externe de la transformation, mettre à jour les noms de colonnes de façon à utiliser des noms tels que **Param_0**, spécifier la valeur de la propriété DBParamInfoFlags, puis mapper les colonnes d’entrée qui contiennent des valeurs de paramètres aux colonnes externes.  
   
@@ -42,13 +47,13 @@ caps.handback.revision: 55
   
  Cette transformation a une entrée, une sortie standard et une sortie d'erreur.  
   
-## Journalisation  
+## <a name="logging"></a>Journalisation  
  Vous pouvez consigner les appels émis par la transformation de commande OLE DB vers les fournisseurs de données externes. Vous pouvez utiliser cette fonctionnalité de journalisation pour résoudre des problèmes liés aux connexions et aux commandes vers des sources de données externes effectuées par la transformation de commande OLE DB. Pour consigner les appels que la transformation de commande OLE DB adresse à des fournisseurs de données externes, activez la journalisation des packages et sélectionnez l'événement **Diagnostic** au niveau du package. Pour plus d’informations, consultez [Outils de dépannage pour l’exécution des packages](../../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
-## Tâches associées  
- Vous pouvez configurer la transformation à l'aide du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou du modèle objet. Pour plus d’informations sur la configuration de la transformation à l’aide du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)], consultez [Configurer la transformation de commande OLE DB](../../../integration-services/data-flow/transformations/configure-the-ole-db-command-transformation.md). Pour plus d'informations sur la configuration par programmation de cette transformation, consultez le Guide du développeur.  
+## <a name="related-tasks"></a>Tâches associées  
+ Vous pouvez configurer la transformation à l'aide du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou du modèle objet. Pour plus d’informations sur la configuration de la transformation à l’aide du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , consultez  [Configurer la transformation de commande OLE DB](../../../integration-services/data-flow/transformations/configure-the-ole-db-command-transformation.md). Pour plus d'informations sur la configuration par programmation de cette transformation, consultez le Guide du développeur.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Flux de données](../../../integration-services/data-flow/data-flow.md)   
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

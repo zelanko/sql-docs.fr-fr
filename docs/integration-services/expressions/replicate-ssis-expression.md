@@ -1,47 +1,52 @@
 ---
-title: "REPLICATE (expression SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "REPLICATE (fonction)"
+title: REPLICATE (Expression SSIS) | Documents Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- REPLICATE function
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c94e5f4221251b3b931ebabc5076620ba6ab0e7e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# REPLICATE (expression SSIS)
+# <a name="replicate-ssis-expression"></a>REPLICATE (expression SSIS)
   Renvoie une expression de caractères qui est répliquée plusieurs fois. L'argument *times* doit correspondre à un nombre entier.  
   
 > [!NOTE]  
->  La fonction REPLICATE utilise habituellement des chaînes longues, elle est donc plus exposée à la limitation fixée à 4000 caractères sur la longueur d'expression. Si le résultat de l'évaluation d'une expression donne le type de données Integration Services DT_WSTR ou DT_STR, cette expression sera réduite à 4000 caractères. Si le type du résultat d'une sous-expression est DT_STR ou DT_WSTR, cette sous-expression sera également tronquée à 4000 caractères, peu importe le type de résultat obtenu dans l'expression générale. Les conséquences de la troncation peuvent être gérées naturellement ou être à l'origine d'un avertissement ou d'un message d'erreur. Pour plus d’informations, consultez [Syntaxe &#40;SSIS&#41;](../../integration-services/expressions/syntax-ssis.md).  
+>  La fonction REPLICATE utilise habituellement des chaînes longues, elle est donc plus exposée à la limitation fixée à 4000 caractères sur la longueur d'expression. Si le résultat de l'évaluation d'une expression donne le type de données Integration Services DT_WSTR ou DT_STR, cette expression sera réduite à 4000 caractères. Si le type du résultat d'une sous-expression est DT_STR ou DT_WSTR, cette sous-expression sera également tronquée à 4000 caractères, peu importe le type de résultat obtenu dans l'expression générale. Les conséquences de la troncation peuvent être gérées naturellement ou être à l'origine d'un avertissement ou d'un message d'erreur. Pour plus d’informations, consultez [Syntaxe &#40;SSIS&#41;](../../integration-services/expressions/syntax-ssis.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 REPLICATE(character_expression,times)  
 ```  
   
-## Arguments  
+## <a name="arguments"></a>Arguments  
  *character_expression*  
  Expression de caractères à répliquer.  
   
- *multiplié par*  
- Expression entière spécifiant le nombre de réplications de l’argument *character_expression*.  
+ *times*  
+ Expression entière spécifiant le nombre de réplications de l’argument *character_expression* .  
   
-## Types des résultats  
+## <a name="result-types"></a>Types des résultats  
  DT_WSTR  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Si l’argument *times* a pour valeur zéro, la fonction retourne une chaîne de longueur nulle.  
   
  Si l'argument *times* est un nombre négatif, la fonction renvoie une erreur.  
@@ -52,7 +57,7 @@ REPLICATE(character_expression,times)
   
  La fonction REPLICATE renvoie un résultat NULL si l'un des arguments est NULL.  
   
-## Exemples d'expressions  
+## <a name="expression-examples"></a>Exemples d'expressions  
  L'exemple suivant réplique un littéral de chaîne trois fois. Le résultat obtenu est « Mountain BikeMountain BikeMountain Bike ».  
   
 ```  
@@ -65,13 +70,13 @@ REPLICATE("Mountain Bike", 3)
 REPLICATE(Name, @Times)  
 ```  
   
- L'exemple suivant réplique la valeur de la variable **Name** un nombre de fois égal à la valeur de la colonne **Times** . La valeur **Times** a un type de données non-entier et l’expression comprend une conversion explicite vers un type de données entier. Si la variable **Name** contient « Helmet » et que la colonne **Times** a pour valeur 2, le résultat obtenu est « HelmetHelmet ».  
+ L'exemple suivant réplique la valeur de la variable **Name** un nombre de fois égal à la valeur de la colonne **Times** . La valeur**Times** a un type de données non-entier et l’expression comprend une conversion explicite vers un type de données entier. Si la variable **Name** contient « Helmet » et que la colonne **Times** a pour valeur 2, le résultat obtenu est « HelmetHelmet ».  
   
 ```  
 REPLICATE(@Name, (DT_I4(Times))  
 ```  
   
-## Voir aussi  
- [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Fonctions &#40; Expression SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

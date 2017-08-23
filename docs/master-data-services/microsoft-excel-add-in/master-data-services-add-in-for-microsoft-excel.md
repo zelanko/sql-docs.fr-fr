@@ -1,32 +1,37 @@
 ---
-title: "Compl&#233;ment Master Data Services pour Microsoft Excel | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Complément Master Data Services pour Microsoft Excel | Documents Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/25/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 caps.latest.revision: 30
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 4d7a1a96cde8a7423aaa8d202ac7def518152279
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Compl&#233;ment Master Data Services pour Microsoft Excel
-  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] vous permet de charger des listes filtrées de données à partir de MDS dans Excel et de les utiliser comme tout autre type de données. Lorsque vous avez terminé, vous pouvez de nouveau publier les données sur MDS, où elles sont stockées de manière centralisée. La sécurité détermine les données que vous pouvez afficher et mettre à jour.  
+# <a name="master-data-services-add-in-for-microsoft-excel"></a>Complément Master Data Services pour Microsoft Excel
+  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]vous permet de charger des listes filtrées de données à partir de MDS dans Excel et de les utiliser comme tout autre type de données. Lorsque vous avez terminé, vous pouvez de nouveau publier les données sur MDS, où elles sont stockées de manière centralisée. La sécurité détermine les données que vous pouvez afficher et mettre à jour.  
   
  Si vous êtes un administrateur, utilisez [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] pour créer des entités et des attributs et les charger avec des données. Cela vous évite d'utiliser d'autres outils pour charger les données dans vos modèles.  
   
  Dans [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], vous pouvez utiliser Data Quality Services (DQS) pour faire correspondre des données avant de les charger dans MDS. Cela évite la duplication des données dans MDS.  
 
 ## <a name="downloads"></a>Téléchargements 
->*  Téléchargez le [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] pour [!INCLUDE[ssCurrent_md](../../includes/sscurrent-md.md)] SP1 à partir de [cette page du Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?linkid=836866).
->* Téléchargez le [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] pour SQL Server vNext CTP1 à partir de [cette page du Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?linkid=836867).
+>*  Téléchargez le logiciel complément Master Data Services pour Excel pour SQL Server 2016 SP1 à partir de [cette page Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=836866). 
+>* Téléchargez le [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] pour SQL Server 2017 CTP1 de [cette page Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=836867). Ce complément fonctionne également pour SQL Server 2017 RC1.
 
  
   
@@ -83,3 +88,4 @@ caps.handback.revision: 30
 -   [Sécurité &#40;Master Data Services&#41;](../../master-data-services/security-master-data-services.md)  
   
   
+

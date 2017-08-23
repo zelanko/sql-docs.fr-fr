@@ -1,40 +1,45 @@
 ---
-title: "&#201;diteur de destination SAP&#160;BW (page Sortie d&#39;erreur) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sapbwdestination.erroroutput.f1"
+title: "Éditeur de Destination SAP BW (Page sortie d’erreur) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sapbwdestination.erroroutput.f1
 ms.assetid: a543d811-0bd2-4890-a0d3-f5fdcd4524b8
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f1b243b6fae68be78e20bbb87a18c16cb78d24f7
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# &#201;diteur de destination SAP&#160;BW (page Sortie d&#39;erreur)
+# <a name="sap-bw-destination-editor-error-output-page"></a>Éditeur de destination SAP BW (page Sortie d'erreur)
   Utilisez la page **Sortie d’erreur** de **l’Éditeur de destination SAP BW** pour définir les options de gestion des erreurs.  
   
  Pour en savoir plus sur la destination SAP BW de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 pour SAP BW, consultez [Destination SAP BW](../../integration-services/data-flow/sap-bw-destination.md).  
   
 > [!IMPORTANT]  
->  La documentation de Microsoft Connector 1.1 pour SAP BW suppose que vous êtes familiarisé avec l'environnement SAP Netweaver BW. Pour plus d'informations sur SAP Netweaver BW, ou sur la configuration des objets et des processus SAP Netweaver BW objets, consultez la documentation SAP.  
+>  La documentation de Microsoft Connector 1.1 pour SAP BW suppose que vous êtes familiarisé avec l'environnement SAP Netweaver BW. Pour plus d'informations sur SAP Netweaver BW, ou sur la configuration des objets et des processus SAP Netweaver BW objets, consultez la documentation SAP.  
   
  **Pour ouvrir la page Sortie d'erreur**  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui contient la destination SAP BW.  
   
-2.  Sous l’onglet **Flux de données**, double-cliquez sur la destination SAP BW.  
+2.  Sous l’onglet **Flux de données** , double-cliquez sur la destination SAP BW.  
   
 3.  Dans **l’Éditeur de destination SAP BW**, cliquez sur **Sortie d’erreur** pour ouvrir la page **Sortie d’erreur** de l’éditeur.  
   
-## Options  
+## <a name="options"></a>Options  
   
 > [!NOTE]  
 >  Si vous ne connaissez pas toutes les valeurs requises pour configurer la destination, adressez-vous à votre administrateur SAP.  
@@ -46,7 +51,7 @@ caps.handback.revision: 10
  Cette option n'est pas utilisée.  
   
  **Erreur**  
- Spécifiez ce que la destination doit faire en cas d'erreur : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
+ Spécifiez ce que la destination doit faire en cas d'erreur : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
  **Troncation**  
  Cette option n'est pas utilisée.  
@@ -55,15 +60,15 @@ caps.handback.revision: 10
  Affichez la description de l'opération.  
   
  **Définir cette valeur sur les cellules sélectionnées**  
- Spécifiez ce que la destination doit faire pour l'ensemble des cellules sélectionnées lorsqu'une erreur ou une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
+ Spécifiez ce que la destination doit faire pour l'ensemble des cellules sélectionnées lorsqu'une erreur ou une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
  **Appliquer**  
  Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
-## Voir aussi  
- [Éditeur de destination SAP BW &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
- [Éditeur de destination SAP BW &#40;page Mappages&#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
- [Éditeur de destination SAP BW &#40;page Avancé&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
- [Aide (F1) sur Microsoft Connector 1.1 pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Éditeur de Destination SAP BW &#40; Page Gestionnaire de connexions &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+ [Éditeur de Destination SAP BW &#40; Page mappages &#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
+ [Éditeur de Destination SAP BW &#40; Page avancé &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
+ [Aide (F1) sur Microsoft Connector pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

@@ -1,64 +1,174 @@
 ---
-title: "Ex&#233;cuter des packages Integration Services (SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "packages Integration Services, exécution"
-  - "packages SSIS, exécution"
-  - "packages [Integration Services], exécution"
-  - "packages SQL Server Integration Services, exécution"
-  - "exécution de packages [Integration Services]"
-  - "exécution de packages [Integration Services]"
-  - "Integration Services, (voir aussi Packages Integration Services)"
+title: "Packages exécution Integration Services (SSIS) | Documents Microsoft"
+ms.custom: 
+ms.date: 12/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.ssms.ispackageexecute.f1
+- sql13.ssis.ssms.executepackage.f1
+helpviewer_keywords:
+- Integration Services packages, running
+- SSIS packages, running
+- packages [Integration Services], running
+- SQL Server Integration Services packages, running
+- executing packages [Integration Services]
+- running packages [Integration Services]
+- Integration Services, (See also Integration Services packages)
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 caps.latest.revision: 65
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: f9c69107d378b8a49c02cfebd04d09e76f5c6e8a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Ex&#233;cuter des packages Integration Services (SSIS)
-  Pour exécuter un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vous pouvez utiliser un outil parmi plusieurs, en fonction de l’endroit où ces packages sont stockés. Ces outils sont répertoriées dans le tableau ci-dessous.  
+# <a name="run-integration-services-ssis-packages"></a>Exécuter des packages Integration Services (SSIS)
+  Pour exécuter un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez utiliser un outil parmi plusieurs, en fonction de l’endroit où ces packages sont stockés. Ces outils sont répertoriées dans le tableau ci-dessous.  
   
- Pour stocker un package sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vous utilisez le modèle de déploiement de projet pour déployer le projet sur le serveur. Pour plus d’informations, consultez [Déployer des projets sur le serveur Integration Services](../../integration-services/packages/deploy-projects-to-integration-services-server.md).  
+ Pour stocker un package sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vous utilisez le modèle de déploiement de projet pour déployer le projet sur le serveur. Pour plus d’informations, consultez [Integration Services (SSIS) déployer des projets et Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  Pour stocker un package dans le magasin de packages SSIS, la base de données msdb ou dans le système de fichiers, vous utilisez le modèle de déploiement de package. Pour plus d’informations, consultez [Déploiement de packages hérités &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 |Outil|Packages stockés sur le serveur Integration Services|Packages stockés dans le magasin de packages SSIS ou dans la base de données msdb|Packages stockés dans le système de fichiers, hors de l'emplacement qui fait partie du magasin de packages SSIS|  
 |----------|-----------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|  
 |**Outils de données SQL Server**|Non|Non<br /><br /> Vous pouvez cependant ajouter un package existant à un projet du magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] , qui inclut la base de données msdb. L'ajout d'un package existant au projet de cette manière effectue une copie locale du package dans le système de fichiers.|Oui|  
-|**SQL Server Management Studio, quand vous êtes connecté à une instance du moteur de base de données qui héberge le serveur Integration Services**<br /><br /> Pour plus d’informations, consultez [Boîte de dialogue d’exécution de package](../../integration-services/packages/execute-package-dialog-box.md)|Oui|Non<br /><br /> Vous pouvez toutefois importer un package vers le serveur à partir de ces emplacements.|Non<br /><br /> Vous pouvez toutefois importer un package vers le serveur à partir du système de fichiers.|
-|**SQL Server Management Studio, quand vous êtes connecté à une instance du moteur de base de données qui héberge le serveur Integration Services**<br /><br /> Pour plus d’informations, consultez [Exécuter des packages dans Scale Out](../../integration-services/run-packages-in-integration-services-ssis-scale-out.md)|Oui|Non|Non|
+|**SQL Server Management Studio, quand vous êtes connecté à une instance du moteur de base de données qui héberge le serveur Integration Services**<br /><br /> Pour plus d’informations, consultez [Boîte de dialogue d’exécution de package](#execute_package_dialog)|Oui|Non<br /><br /> Vous pouvez toutefois importer un package vers le serveur à partir de ces emplacements.|Non<br /><br /> Vous pouvez toutefois importer un package vers le serveur à partir du système de fichiers.|
+|**SQL Server Management Studio, quand vous êtes connecté à une instance du moteur de base de données qui héberge le serveur Integration Services**<br /><br /> Pour plus d’informations, consultez [Exécuter des packages dans Scale Out](../../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md)|Oui|Non|Non|
 |**SQL Server Management Studio, quand il est connecté au service Integration Services qui gère le magasin de packages SSIS**|Non|Oui|Non<br /><br /> Vous pouvez cependant importer un package dans le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] à partir du système de fichiers.|  
 |**dtexec**<br /><br /> Pour plus d’informations, voir [dtexec Utility](../../integration-services/packages/dtexec-utility.md).|Oui|Oui|Oui|  
 |**dtexecui**<br /><br /> Pour plus d’informations, consultez [Référence de l’interface utilisateur de l’utilitaire d’exécution de package &#40;DtExecUI&#41;](../../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md)|Non|Oui|Oui|  
 |**SQL Server Agent**<br /><br /> Vous pouvez utiliser un travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour planifier un package.<br /><br /> Pour plus d’informations, consultez [Travaux de l’Agent SQL Server pour les packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).|Oui|Oui|Oui|  
 |**Procédure stockée intégrée**<br /><br /> Pour plus d’informations, consultez [catalog.start_execution &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)|Oui|Non|Non|  
-|**API managée, en utilisant des types et des membres de l’espace de noms **<xref:Microsoft.SqlServer.Management.IntegrationServices>|Oui|Non|Non|  
-|**API managée, en utilisant des types et des membres de l’espace de noms **<xref:Microsoft.SqlServer.Dts.Runtime>|Actuellement impossible|Oui|Oui|  
-  
+|**API managée à l’aide de types et membres dans le** <xref:Microsoft.SqlServer.Management.IntegrationServices> espace de noms|Oui|Non|Non|  
+|**API managée à l’aide de types et membres dans le** <xref:Microsoft.SqlServer.Dts.Runtime> espace de noms|Actuellement impossible|Oui|Oui|  
+
 ## <a name="execution-and-logging"></a>Exécution et journalisation  
  Les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peuvent être activés pour la journalisation et vous pouvez capturer des informations sur l'exécution dans des fichiers journaux. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
- Vous pouvez surveiller des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] déployés et exécutés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l’aide des rapports de fonctionnement. Les rapports sont disponibles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d'informations, consultez [Reports for the Integration Services Server](../../integration-services/performance/reports-for-the-integration-services-server.md).  
+ Vous pouvez surveiller des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] déployés et exécutés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l’aide des rapports de fonctionnement. Les rapports sont disponibles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d'informations, consultez [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="run-a-package-in-sql-server-data-tools"></a>Exécuter un package dans les outils de données SQL Server
+  Les packages sont exécutés le plus souvent dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pendant le développement, le débogage et le test des packages. Quand vous exécutez un package à partir du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , il est exécuté immédiatement.  
   
--   [Planifier un package à l’aide de SQL Server Agent](../../integration-services/packages/schedule-a-package-by-using-sql-server-agent.md)  
+ Pendant qu’un package s’exécute, le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] affiche la progression de l’exécution sous l’onglet **Progression** . Vous pouvez afficher l'heure de début et de fin du package et de ses tâches et conteneurs, ainsi que des informations sur les tâches et les conteneurs du package ayant échoué. Quand un package a terminé son exécution, les informations sur l’exécution restent disponibles sous l’onglet **Résultats d’exécution** . Pour plus d’informations, consultez la section « Rapport de progression » dans la rubrique [Débogage du flux de contrôle](../../integration-services/troubleshooting/debugging-control-flow.md).  
   
--   [Exécuter un package dans les outils de données SQL Server](../../integration-services/packages/run-a-package-in-sql-server-data-tools.md)  
+ **Déploiement au moment du design**. Lorsqu'un package est exécuté dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], il est créé, puis déployé dans un dossier. Avant d'exécuter le package, vous pouvez spécifier le dossier dans lequel il est déployé. Si vous ne spécifiez aucun dossier, le dossier **bin** est utilisé par défaut. Ce type de déploiement est appelé déploiement au moment de la conception.  
   
--   [Exécuter un package sur le serveur SSIS à l’aide de SQL Server Management Studio](../../integration-services/packages/run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
+### <a name="to-run-a-package-in-sql-server-data-tools"></a>Pour exécuter un package dans les outils de données SQL Server  
   
+1.  Dans l’Explorateur de solutions, si votre solution contient plusieurs projets, cliquez avec le bouton droit sur le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui contient le package, puis cliquez sur **Définir en tant qu’objet de démarrage** pour définir le projet de démarrage.  
+  
+2.  Dans l’Explorateur de solutions, si votre projet contient plusieurs packages, cliquez avec le bouton droit sur un package, puis cliquez sur **Définir en tant qu’objet de démarrage** pour définir le package de démarrage.  
+  
+3.  Pour exécuter un package, utilisez l'une des procédures suivantes :  
+  
+    -   Ouvrez le package à exécuter, puis cliquez sur **Démarrer le débogage** dans la barre de menus ou appuyez sur F5. Une fois l'exécution du package terminée, appuyez sur Maj+F5 pour revenir au mode Création.  
+  
+    -   Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le package, puis cliquez sur **Exécuter le package**.  
+  
+### <a name="to-specify-a-different-folder-for-design-time-deployment"></a>Pour spécifier un dossier différent pour le déploiement au moment du design  
+  
+1.  Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le dossier de projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contenant le package à exécuter, puis cliquez sur **Propriétés**.  
+  
+2.  Dans le  **\<nom du projet > Pages de propriétés** boîte de dialogue, cliquez sur **Build**.  
+  
+3.  Mettez à jour la valeur de la propriété OutputPath pour indiquer le dossier que vous souhaitez utiliser pour le déploiement au moment du design, puis cliquez sur **OK**.  
+
+
+## <a name="run-a-package-on-the-ssis-server-using-sql-server-management-studio"></a>Exécuter un package sur le serveur SSIS à l'aide de SQL Server Management Studio
+  Après avoir déployé votre projet sur le serveur[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez exécuter le package sur le serveur.  
+  
+ Vous pouvez utiliser des rapports d'opérations pour afficher des informations sur les packages qui ont été exécutés, ou qui sont actuellement exécutés, sur le serveur. Pour plus d'informations, consultez [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
+  
+### <a name="to-run-a-package-on-the-server-using-sql-server-management-studio"></a>Pour exécuter un package sur le serveur à l'aide de SQL Server Management Studio  
+  
+1.  Ouvrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et connectez-vous à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui contient le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  
+2.  Dans l’Explorateur d’objets, développez le nœud **Catalogues Integration Services** , développez le nœud **SSISDB** , puis accédez au package contenu dans le projet que vous avez déployé.  
+  
+3.  Cliquez avec le bouton droit sur le nom du package, puis sélectionnez **Exécuter**.  
+  
+4.  Configurez l’exécution du package à l’aide des paramètres sous les onglets **Paramètres**, **Gestionnaires de connexions**et **Avancé** de la boîte de dialogue **Exécuter le package** .  
+  
+5.  Cliquez sur **OK** pour exécuter le package.  
+  
+     - ou -  
+  
+     Utilisez des procédures stockées pour exécuter le package. Cliquez sur **Script** pour générer l’instruction Transact-SQL qui crée et démarre une instance de l’exécution. L'instruction inclut un appel aux procédures stockées catalog.create_execution, catalog.set_execution_parameter_value et catalog.start_execution. Pour plus d’informations sur ces procédures stockées, consultez [catalog.create_execution &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md), [catalog.set_execution_parameter_value &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) [catalog.start_execution &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md).  
+
+## <a name="execute_package_dialog"></a> Boîte de dialogue d’exécution de package
+  Utilisez la boîte de dialogue **Exécuter le package** pour exécuter un package stocké sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  
+ Un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peut contenir des paramètres qui référencent les valeurs stockées dans les variables d'environnement. Avant d'exécuter un tel package, vous devez spécifier quel environnement sera utilisé pour fournir les valeurs de variable d'environnement. Un projet peut contenir plusieurs environnements, mais un seul environnement peut être utilisé pour la liaison de valeurs de variable d'environnement au moment de l'exécution. Si aucune variable d'environnement n'est utilisée dans le package, un environnement n'est pas obligatoire.  
+  
+ Que voulez-vous faire ?  
+  
+-   [Ouvrir la boîte de dialogue Exécuter le package](#open_dialog)  
+  
+-   [Définir les options sur la page Général](#general)  
+  
+-   [Définir les options de l'onglet Paramètres](#parameters)  
+  
+-   [Définir les options de l'onglet Gestionnaires de connexions](#connection)  
+  
+-   [Définir les options de l'onglet Avancé](#advanced)  
+  
+-   [Création de script avec les options de la boîte de dialogue Exécuter le package](#script)  
+  
+###  <a name="open_dialog"></a> Ouvrir la boîte de dialogue Exécuter le package  
+  
+1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous au serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  
+     Vous vous connectez à l'instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] qui héberge la base de données SSISDB.  
+  
+2.  Dans l'Explorateur d'objets, développez l'arborescence pour afficher le nœud **Integration Services Catalogues** .  
+  
+3.  Développez le nœud **SSISDB** .  
+  
+4.  Développez le dossier contenant le package à exécuter.  
+  
+5.  Cliquez avec le bouton droit sur le package, puis cliquez sur **Exécuter**.  
+  
+###  <a name="general"></a> Définir les options sur la page Général  
+ Sélectionnez **Environnement** pour spécifier l'environnement qui est appliqué avec le package.  
+  
+###  <a name="parameters"></a> Définir les options de l'onglet Paramètres  
+ Utilisez l'onglet **Paramètres** pour modifier les valeurs de paramètre utilisées lors de l'exécution du package.  
+  
+###  <a name="connection"></a> Définir les options de l'onglet Gestionnaires de connexions  
+ Utilisez l'onglet Gestionnaires de connexions pour définir les propriétés du ou des gestionnaires de connexions du package.  
+  
+###  <a name="advanced"></a> Définir les options de l'onglet Avancé  
+ Utilisez l'onglet Avancé pour gérer des propriétés et d'autres paramètres du package.  
+  
+ **Ajouter**, **Modifier**, **Supprimer**  
+ Cliquez pour ajouter, modifier ou supprimer une propriété.  
+  
+ **Niveau de journalisation**  
+ Sélectionnez le niveau de journalisation pour l'exécution du package. Pour plus d’informations, consultez [catalog.set_execution_parameter_value &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md).  
+  
+ **Vider en cas d'erreurs**  
+ Spécifiez si un fichier de vidage est créé lorsque des erreurs se produisent pendant l'exécution du package. Pour plus d’informations, voir [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  
+  
+ **Runtime 32 bits**  
+ Indiquez que le package doit s'exécuter sur un système 32 bits.  
+  
+###  <a name="script"></a> Création de script avec les options de la boîte de dialogue Exécuter le package  
+ Lorsque vous vous trouvez dans la boîte de dialogue **Exécuter le package** , vous pouvez également utiliser le bouton **Script** de la barre d'outils pour écrire du code [!INCLUDE[tsql](../../includes/tsql-md.md)] . Le script généré appelle les procédures stockées [catalog.start_execution &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) avec les options que vous avez sélectionnées dans la boîte de dialogue **Exécuter le package**. Le script s'affiche dans une nouvelle fenêtre de script dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+
 ## <a name="see-also"></a>Voir aussi  
  [Utilitaire dtexec](../../integration-services/packages/dtexec-utility.md)   
 [Démarrer l’Assistant Importation et Exportation SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)
   
   
+

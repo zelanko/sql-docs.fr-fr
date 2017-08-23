@@ -1,22 +1,27 @@
 ---
-title: "Propri&#233;t&#233;s personnalis&#233;es OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Propriétés personnalisées OLE DB | Documents Microsoft"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b10906c0cb7ba618c029bc79f9c5918a936dc918
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Propri&#233;t&#233;s personnalis&#233;es OLE DB
+# <a name="ole-db-custom-properties"></a>Propriétés personnalisées OLE DB
   **Propriétés personnalisées des sources**  
   
  La source OLE DB comporte des propriétés personnalisées et les propriétés communes à l'ensemble des composants de flux de données.  
@@ -43,14 +48,14 @@ caps.handback.revision: 8
   
  La destination OLE DB comporte à la fois des propriétés personnalisées et les propriétés communes à l'ensemble des composants de flux de données.  
   
- Le tableau suivant décrit les propriétés personnalisées de la destination OLE DB. Toutes les propriétés sont en lecture/écriture.  
+ Le tableau suivant décrit les propriétés personnalisées de la destination OLE DB. Toutes les propriétés sont en lecture/écriture.  
   
 > [!NOTE]  
 >  Les options FastLoad répertoriées ici (FastLoadKeepIdentity, FastLoadKeepNulls et FastLoadOptions) correspondent aux propriétés qui portent des noms similaires et sont présentées dans l’interface **IRowsetFastLoad** implémentée par le fournisseur Microsoft OLE DB pour SQL Server (SQLOLEDB). Pour plus d'informations, effectuez une recherche sur IRowsetFastLoad dans MSDN Library.  
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer (énumération)|Valeur qui spécifie la manière dont la destination accède à sa base de données de destination.<br /><br /> Cette propriété peut prendre les valeurs suivantes :<br /><br /> <br /><br /> **OpenRowset** (0) : vous devez fournir le nom d’une table ou d’une vue.<br /><br /> **OpenRowset à partir de Variable** (1) : vous devez fournir le nom d’une variable qui contient le nom d’une table ou d’une vue.<br /><br /> **OpenRowset à l’aide de FastLoad** (3) : vous devez fournir le nom d’une table ou d’une vue.<br /><br /> **OpenRowset à l’aide de FastLoad à partir de Variable**(4) : vous devez fournir le nom d’une variable qui contient le nom d’une table ou d’une vue.<br /><br /> **Commande SQL** (2) : vous devez fournir une instruction SQL.|  
+|AccessMode|Integer (énumération)|Valeur qui spécifie la manière dont la destination accède à sa base de données de destination.<br /><br /> Cette propriété peut prendre les valeurs suivantes :<br /><br /> <br /><br /> **OpenRowset** (0) : vous devez fournir le nom d’une table ou d’une vue.<br /><br /> **OpenRowset à partir de Variable** (1) : vous devez fournir le nom d’une variable qui contient le nom d’une table ou d’une vue.<br /><br /> **OpenRowset à l’aide de FastLoad** (3) : vous devez fournir le nom d’une table ou d’une vue.<br /><br /> **OpenRowset à l’aide de FastLoad à partir de Variable** (4) : vous devez fournir le nom d’une variable qui contient le nom d’une table ou d’une vue.<br /><br /> **Commande SQL** (2) : vous devez fournir une instruction SQL.|  
 |AlwaysUseDefaultCodePage|Booléen|Valeur qui indique s'il faut utiliser la valeur de la propriété **DefaultCodePage** pour chaque colonne ou tenter de dériver la page de codes à partir des paramètres régionaux de chaque colonne. La valeur par défaut de cette propriété est **False**.|  
 |CommandTimeout|Entier|Nombre maximal de secondes pendant lesquelles la commande SQL peut être exécutée avant d'arriver à expiration. La valeur 0 indique un délai infini. La valeur par défaut de cette propriété est 0.<br /><br /> Remarque : cette propriété n’est pas disponible dans **l’Éditeur de destination OLE DB**, mais vous pouvez la définir à l’aide de **l’éditeur avancé**.|  
 |DefaultCodePage|Entier|Page de codes par défaut associée à la destination OLE DB.|  
@@ -66,7 +71,7 @@ caps.handback.revision: 8
   
  Pour plus d’informations, consultez [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
   
-## Voir aussi  
- [Propriétés communes](../Topic/Common%20Properties.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

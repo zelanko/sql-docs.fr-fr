@@ -1,33 +1,38 @@
 ---
-title: "Transformation de tableau crois&#233; dynamique | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.pivottrans.f1"
-helpviewer_keywords: 
-  - "transformation de tableau croisé dynamique"
-  - "données normalisées [Integration Services]"
-  - "propriété PivotUsage"
-  - "ensemble de données [Integration Services], données normalisées"
-  - "ensemble de données moins normalisées [Integration Services]"
+title: "Transformation de tableau croisé dynamique | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.pivottrans.f1
+helpviewer_keywords:
+- Pivot transformation
+- normalized data [Integration Services]
+- PivotUsage property
+- datasets [Integration Services], normalized data
+- less normalized data set [Integration Services]
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 caps.latest.revision: 55
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 79a12bf64f2ec27306a5ca8776b33acdb79ca82d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transformation de tableau crois&#233; dynamique
-  La transformation de tableau croisé dynamique transforme un dataset normalisé en une version moins normalisée mais plus compacte en croisant dynamiquement les données d'entrée sur une valeur de colonne. Par exemple, un dataset **Commandes** normalisé comprenant le nom de client, le produit et la quantité achetée contient généralement plusieurs lignes pour un même client ayant acheté plusieurs produits ; chaque ligne indiquant les détails de commande d’un produit différent. En croisant dynamiquement le dataset sur la colonne de produit, la transformation de tableau croisé dynamique peut sortir un dataset contenant une seule ligne par client. Cette ligne unique indique tous les achats du client ; le nom des produits est indiqué sous forme de nom de colonne et la quantité sous forme de valeur de la colonne de produit. Dans la mesure où tous les clients n'achètent pas chacun des produits, de nombreuses colonnes peuvent contenir des valeurs null.  
+# <a name="pivot-transformation"></a>transformation de tableau croisé dynamique
+  La transformation de tableau croisé dynamique transforme un dataset normalisé en une version moins normalisée mais plus compacte en croisant dynamiquement les données d'entrée sur une valeur de colonne. Par exemple, un dataset **Commandes** normalisé comprenant le nom de client, le produit et la quantité achetée contient généralement plusieurs lignes pour un même client ayant acheté plusieurs produits ; chaque ligne indiquant les détails de commande d’un produit différent. En croisant dynamiquement le dataset sur la colonne de produit, la transformation de tableau croisé dynamique peut sortir un dataset contenant une seule ligne par client. Cette ligne unique indique tous les achats du client ; le nom des produits est indiqué sous forme de nom de colonne et la quantité sous forme de valeur de la colonne de produit. Dans la mesure où tous les clients n'achètent pas chacun des produits, de nombreuses colonnes peuvent contenir des valeurs null.  
   
- Lorsqu'un dataset est croisé dynamiquement, les colonnes d'entrée jouent des rôles différents dans le processus de croisement dynamique. Une colonne peut jouer les rôles suivants :  
+ Lorsqu'un dataset est croisé dynamiquement, les colonnes d'entrée jouent des rôles différents dans le processus de croisement dynamique. Une colonne peut jouer les rôles suivants :  
   
 -   La colonne est transmise à la sortie sans subir aucune modification. De nombreuses lignes d'entrées pouvant se traduire par une seule ligne de sortie, la transformation copie uniquement la première valeur d'entrée de la colonne.  
   
@@ -39,15 +44,15 @@ caps.handback.revision: 55
   
  Cette transformation a une entrée, une sortie standard et une sortie d'erreur.  
   
-## Trier et dupliquer les lignes  
- Pour une plus grande efficacité du croisement dynamique des données, autrement dit pour créer aussi peu d'enregistrements dans le dataset de sortie que possible, les données d'entrée doivent être triées sur la colonne tableau croisé dynamique. Si les données ne sont pas triées, la transformation de tableau croisé dynamique risque de générer plusieurs enregistrements pour chaque valeur de la clé d'ensemble, qui est la colonne définissant l'appartenance à l'ensemble. Par exemple, si un dataset est croisé dynamiquement sur une colonne **Nom**, mais que les noms ne sont pas triés, le dataset de sortie risque de contenir plus d’une ligne pour chaque client car un croisement dynamique est effectué chaque fois que la valeur de la colonne **Nom** change.  
+## <a name="sort-and-duplicate-rows"></a>Trier et dupliquer les lignes  
+ Pour une plus grande efficacité du croisement dynamique des données, autrement dit pour créer aussi peu d'enregistrements dans le dataset de sortie que possible, les données d'entrée doivent être triées sur la colonne tableau croisé dynamique. Si les données ne sont pas triées, la transformation de tableau croisé dynamique risque de générer plusieurs enregistrements pour chaque valeur de la clé d'ensemble, qui est la colonne définissant l'appartenance à l'ensemble. Par exemple, si un dataset est croisé dynamiquement sur une colonne **Nom** , mais que les noms ne sont pas triés, le dataset de sortie risque de contenir plus d’une ligne pour chaque client car un croisement dynamique est effectué chaque fois que la valeur de la colonne **Nom** change.  
   
- Les données d'entrée peuvent contenir des lignes en double, ce qui entraîne l'échec de la transformation de tableau croisé dynamique. L'expression « lignes en double » désigne des lignes qui ont les mêmes valeurs dans les colonnes clés d'ensemble et dans les colonnes tableau croisé dynamique. Pour éviter cet échec, vous pouvez soit configurer la transformation de manière à rediriger les lignes d'erreur vers une sortie d'erreur, soit préagréger les valeurs de manière à ce qu'il n'y ait pas de lignes en double.  
+ Les données d'entrée peuvent contenir des lignes en double, ce qui entraîne l'échec de la transformation de tableau croisé dynamique. L'expression « lignes en double » désigne des lignes qui ont les mêmes valeurs dans les colonnes clés d'ensemble et dans les colonnes tableau croisé dynamique. Pour éviter cet échec, vous pouvez soit configurer la transformation de manière à rediriger les lignes d'erreur vers une sortie d'erreur, soit préagréger les valeurs de manière à ce qu'il n'y ait pas de lignes en double.  
   
 ##  <a name="options"></a> Options de la boîte de dialogue Tableau croisé dynamique  
- Configurez l’opération d’ajout de tableau croisé dynamique en définissant les options de la boîte de dialogue **Tableau croisé dynamique**. Pour ouvrir la boîte de dialogue **Tableau croisé dynamique**, ajoutez la transformation de tableau croisé dynamique au package dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], puis cliquez avec le bouton droit sur le composant et cliquez sur **Modifier**.  
+ Configurez l’opération d’ajout de tableau croisé dynamique en définissant les options de la boîte de dialogue **Tableau croisé dynamique** . Pour ouvrir la boîte de dialogue **Tableau croisé dynamique** , ajoutez la transformation de tableau croisé dynamique au package dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], puis cliquez avec le bouton droit sur le composant et cliquez sur **Modifier**.  
   
- La liste suivante décrit les options de la boîte de dialogue **Tableau croisé dynamique**.  
+ La liste suivante décrit les options de la boîte de dialogue **Tableau croisé dynamique** .  
   
  **Clé de tableau croisé dynamique**  
  Spécifie la colonne à utiliser pour les valeurs de la ligne supérieure (ligne d'en-tête) du tableau.  
@@ -66,7 +71,7 @@ caps.handback.revision: 55
  **Générer des colonnes de sortie de tableau croisé dynamique à partir de valeurs**  
  Entrez les valeurs clés de tableau croisé dynamique dans cette zone pour permettre à la transformation de tableau croisé dynamique de créer des colonnes de sortie pour chaque valeur. Vous pouvez soit entrer les valeurs avant d'exécuter le package, soit procéder comme suit.  
   
-1.  Sélectionnez l’option **Ignorer les valeurs clés de tableau croisé dynamique sans correspondance et les signaler après l’exécution de DataFlow**, puis cliquez sur **OK** dans la boîte de dialogue **Tableau croisé dynamique** pour enregistrer les modifications apportées à la transformation de tableau croisé dynamique.  
+1.  Sélectionnez l’option **Ignorer les valeurs clés de tableau croisé dynamique sans correspondance et les signaler après l’exécution de DataFlow** , puis cliquez sur **OK** dans la boîte de dialogue **Tableau croisé dynamique** pour enregistrer les modifications apportées à la transformation de tableau croisé dynamique.  
   
 2.  Exécutez le package.  
   
@@ -78,28 +83,28 @@ caps.handback.revision: 55
   
 6.  Cliquez avec le bouton droit sur la transformation de tableau croisé dynamique, puis cliquez sur **Modifier**.  
   
-7.  Désactivez l’option **Ignorer les valeurs clés de tableau croisé dynamique sans correspondance et les signaler après l’exécution de DataFlow**, puis collez les valeurs clés de tableau croisé dynamique dans la zone **Générer des colonnes de sortie de tableau croisé dynamique à partir de valeurs** en utilisant le format suivant.  
+7.  Désactivez l’option **Ignorer les valeurs clés de tableau croisé dynamique sans correspondance et les signaler après l’exécution de DataFlow** , puis collez les valeurs clés de tableau croisé dynamique dans la zone **Générer des colonnes de sortie de tableau croisé dynamique à partir de valeurs** en utilisant le format suivant.  
   
      [valeur1],[valeur2],[valeur3]  
   
  **Générer des colonnes maintenant**  
- Cliquez pour créer une colonne de sortie pour chaque valeur clé de tableau croisé dynamique listée dans la zone **Générer des colonnes de sortie de tableau croisé dynamique à partir de valeurs**.  
+ Cliquez pour créer une colonne de sortie pour chaque valeur clé de tableau croisé dynamique listée dans la zone **Générer des colonnes de sortie de tableau croisé dynamique à partir de valeurs** .  
   
- Les colonnes de sortie apparaissent dans la zone **Colonnes de sorties croisées dynamiquement existantes**.  
+ Les colonnes de sortie apparaissent dans la zone **Colonnes de sorties croisées dynamiquement existantes** .  
   
  **Colonnes de sorties croisées dynamiquement existantes**  
  Liste les colonnes de sortie des valeurs clés de tableau croisé dynamique  
   
- Le tableau suivant illustre un jeu de données avant que les données n’aient été croisées dynamiquement dans la colonne **Year**.  
+ Le tableau suivant illustre un jeu de données avant que les données n’aient été croisées dynamiquement dans la colonne **Year** .  
   
-|Année|Nom du produit|Total|  
+|Year|Nom du produit|Total|  
 |----------|------------------|-----------|  
 |2004|HL Mountain Tire|1504884.15|  
 |2003|Road Tire Tube|35920.50|  
 |2004|Water Bottle – 30 oz.|2805.00|  
 |2002|Touring Tire|62364.225|  
   
- Le tableau suivant illustre un jeu de données après que les données ont été croisées dynamiquement dans la colonne **Year**.  
+ Le tableau suivant illustre un jeu de données après que les données ont été croisées dynamiquement dans la colonne **Year** .  
   
 ||2002|2003|2004|  
 |-|----------|----------|----------|  
@@ -108,31 +113,31 @@ caps.handback.revision: 55
 |Water Bottle – 30 oz.|*NULL*|*NULL*|2805.00|  
 |Touring Tire|62364.225|375051.60|1041810.00|  
   
- Pour croiser dynamiquement les données de la colonne **Year**, comme indiqué ci-dessus, vous devez définir les options suivantes dans la boîte de dialogue **Tableau croisé dynamique**.  
+ Pour croiser dynamiquement les données de la colonne **Year** , comme indiqué ci-dessus, vous devez définir les options suivantes dans la boîte de dialogue **Tableau croisé dynamique** .  
   
--   Year est sélectionné dans la zone de liste **Clé de tableau croisé dynamique**.  
+-   Year est sélectionné dans la zone de liste **Clé de tableau croisé dynamique** .  
   
--   Product Name est sélectionné dans la zone de liste **Définir la clé**.  
+-   Product Name est sélectionné dans la zone de liste **Définir la clé** .  
   
--   Total est sélectionné dans la zone de liste **Valeur de tableau croisé dynamique**.  
+-   Total est sélectionné dans la zone de liste **Valeur de tableau croisé dynamique** .  
   
--   Les valeurs suivantes sont entrées dans la zone **Générer des colonnes de sortie de tableau croisé dynamique à partir de valeurs**.  
+-   Les valeurs suivantes sont entrées dans la zone **Générer des colonnes de sortie de tableau croisé dynamique à partir de valeurs** .  
   
      [2002],[2003],[2004]  
   
-## Configuration de la transformation Pivot  
+## <a name="configuration-of-the-pivot-transformation"></a>Configuration de la transformation Pivot  
  Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé**, cliquez sur l'une des rubriques suivantes :  
+ Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** , cliquez sur l'une des rubriques suivantes :  
   
--   [Propriétés communes](../Topic/Common%20Properties.md)  
+-   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriétés personnalisées des transformations](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## Contenu connexe  
+## <a name="related-content"></a>Contenu connexe  
  Pour plus d’informations sur la définition des propriétés de ce composant, consultez [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Transformation Unpivot](../../../integration-services/data-flow/transformations/unpivot-transformation.md)   
  [Flux de données](../../../integration-services/data-flow/data-flow.md)   
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

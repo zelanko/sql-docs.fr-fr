@@ -1,34 +1,39 @@
 ---
-title: "Pr&#233;parer les donn&#233;es de trace d&#39;entr&#233;e | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Préparer les données de Trace d’entrée | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c56107c8558e61e62a98d670ad7e0e2ede9316aa
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Pr&#233;parer les donn&#233;es de trace d&#39;entr&#233;e
+# <a name="prepare-the-input-trace-data"></a>Préparer les données de trace d'entrée
   Avant de pouvoir démarrer une relecture distribuée avec la fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, vous devez préparer les données de trace d'entrée en initialisant l'étape de prétraitement de l'outil d'administration de relecture distribuée. Dans l'étape de prétraitement, Distributed Replay Controller traite les données de trace et génère un fichier intermédiaire :  
   
- ![Étape de prétraitement Distributed Replay](../../tools/distributed-replay/media/preprocess.gif "Étape de prétraitement Distributed Replay")  
+ ![Étape de prétraitement Distributed replay](../../tools/distributed-replay/media/preprocess.gif "étape de prétraitement Distributed replay")  
   
  Pour plus d'informations sur l'étape de prétraitement, consultez [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  
   
 > [!NOTE]  
 >  Les données de trace d'entrée doivent être capturées dans une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compatible avec Distributed Replay. Les données de trace d'entrée doivent également être compatibles avec le serveur cible sur lequel vous souhaitez relire les données de trace. Pour plus d'informations sur les conditions requises en matière de version, consultez [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md).  
   
-### Pour préparer les données de trace d'entrée  
+### <a name="to-prepare-the-input-trace-data"></a>Pour préparer les données de trace d'entrée  
   
-1.  **(Facultatif) Modifier les paramètres de configuration du prétraitement **: si vous voulez modifier les paramètres de configuration du prétraitement, tels que filtrer ou non les sessions système ou configurer la durée d’inactivité maximale, vous devez modifier l’élément `<PreprocessModifiers>` du fichier de configuration de prétraitement XML, `DReplay.exe.preprocess.config`. Si vous modifiez le fichier de configuration de prétraitement, nous vous recommandons de modifier une copie plutôt que l'original. Pour modifier des paramètres, suivez la procédure suivante :  
+1.  **(Facultatif) Modifier les paramètres de configuration du prétraitement**: si vous voulez modifier les paramètres de configuration du prétraitement, tels que filtrer ou non les sessions système ou configurer la durée d’inactivité maximale, vous devez modifier l’élément `<PreprocessModifiers>` du fichier de configuration de prétraitement XML, `DReplay.exe.preprocess.config`. Si vous modifiez le fichier de configuration de prétraitement, nous vous recommandons de modifier une copie plutôt que l'original. Pour modifier des paramètres, suivez la procédure suivante :  
   
     1.  Faites une copie du fichier par défaut de configuration de prétraitement, `DReplay.exe.preprocess.config`, et renommez le nouveau fichier. Le fichier par défaut de configuration de prétraitement se trouve dans le dossier d'installation de l'outil d'administration.  
   
@@ -42,24 +47,24 @@ caps.handback.revision: 23
   
     1.  Ouvrez l’utilitaire d’invite de commandes Windows (**CMD.exe**) et accédez à l’emplacement d’installation de l’outil d’administration Distributed Replay (**DReplay.exe**).  
   
-    2.  (Facultatif) Utilisez le paramètre *controller*, **-m**, pour spécifier le contrôleur, si le service du contrôleur s’exécute sur un ordinateur différent de l’outil d’administration.  
+    2.  (Facultatif) Utilisez le paramètre *controller* , **-m**, pour spécifier le contrôleur, si le service du contrôleur s’exécute sur un ordinateur différent de l’outil d’administration.  
   
-    3.  Utilisez le paramètre *input_trace_file*, **-i**, pour spécifier l’emplacement et le nom des fichiers de trace d’entrée.  
+    3.  Utilisez le paramètre *input_trace_file* , **-i**, pour spécifier l’emplacement et le nom des fichiers de trace d’entrée.  
   
-    4.  Utilisez le paramètre *controller_working_directory*, **-d**, pour spécifier l’emplacement où le fichier intermédiaire doit être enregistré sur le contrôleur.  
+    4.  Utilisez le paramètre *controller_working_directory* , **-d**, pour spécifier l’emplacement où le fichier intermédiaire doit être enregistré sur le contrôleur.  
   
-    5.  (Facultatif) Utilisez le paramètre *config_file*, **-c**, pour spécifier l’emplacement du fichier de configuration de prétraitement. Utilisez ce paramètre pour pointer sur le nouveau fichier de configuration, si vous avez modifié une copie du fichier de configuration de prétraitement par défaut.  
+    5.  (Facultatif) Utilisez le paramètre *config_file* , **-c**, pour spécifier l’emplacement du fichier de configuration de prétraitement. Utilisez ce paramètre pour pointer sur le nouveau fichier de configuration, si vous avez modifié une copie du fichier de configuration de prétraitement par défaut.  
   
-    6.  (Facultatif) Utilisez le paramètre*status_interval*, **-f**, pour spécifier si vous voulez que l’outil d’administration affiche des messages d’état à une fréquence autre que 30 secondes.  
+    6.  (Facultatif) Utilisez le paramètre *status_interval* , **-f**, pour spécifier si vous voulez que l’outil d’administration affiche des messages d’état à une fréquence autre que 30 secondes.  
   
      Par exemple, l’initialisation de l’étape de prétraitement sur le même ordinateur que le service contrôleur, pour un fichier de trace situé dans `c:\trace1.trc`, un répertoire de travail du contrôleur situé dans `c:\WorkingDir` et un message d’état affiché selon la valeur par défaut de 30 secondes, requiert la syntaxe : `dreplay preprocess -i c:\trace1.trc -d c:\WorkingDir`  
   
 3.  Une fois l'étape de prétraitement terminée, le fichier intermédiaire est stocké dans le répertoire de travail du contrôleur. Pour initialiser l’étape de relecture d’événements, vous devez exécuter l’outil d’administration avec l’option **replay** . Pour plus d’informations, consultez [Relire les données de trace](../../tools/distributed-replay/replay-trace-data.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Conditions requises par Distributed Replay](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Options de ligne de commande de l’outil d’administration &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Conditions préalables de relecture distribuée](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Options de ligne de commande de l’outil Administration &#40; Distributed Replay Utility &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configurer Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

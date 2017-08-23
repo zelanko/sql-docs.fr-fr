@@ -1,47 +1,52 @@
 ---
-title: "LOG (expression SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "logarithmes de base 10"
-  - "LOG, fonction"
+title: LOG (Expression SSIS) | Documents Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- base-10 logarithms
+- LOG function
 ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 855937a74d16d811a6a97694fc9d32b6beb200ea
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# LOG (expression SSIS)
+# <a name="log-ssis-expression"></a>LOG (expression SSIS)
   Renvoie le logarithme de base 10 d'une expression numérique.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 LOG(numeric_expression)  
 ```  
   
-## Arguments  
+## <a name="arguments"></a>Arguments  
  *numeric_expression*  
  Expression numérique valide différente de zéro ou non négative.  
   
-## Types des résultats  
+## <a name="result-types"></a>Types des résultats  
  DT_R8  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  *L’expression numérique* est convertie vers le type de données DT_R8 avant le calcul du logarithme. Pour plus d’informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Si l’argument *numeric_expression* donne une valeur inférieure ou égale à zéro, le résultat obtenu est NULL.  
   
-## Exemples d'expressions  
+## <a name="expression-examples"></a>Exemples d'expressions  
  L'exemple suivant utilise un littéral numérique. La fonction renvoie la valeur 1,988291341907488.  
   
 ```  
@@ -60,9 +65,9 @@ LOG(Length)
 LOG(@Length)   
 ```  
   
-## Voir aussi  
- [EXP &#40;expression SSIS&#41;](../../integration-services/expressions/exp-ssis-expression.md)   
- [LN &#40;expression SSIS&#41;](../../integration-services/expressions/ln-ssis-expression.md)   
- [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Voir aussi  
+ [EXP &#40; Expression SSIS &#41;](../../integration-services/expressions/exp-ssis-expression.md)   
+ [LN &#40; Expression SSIS &#41;](../../integration-services/expressions/ln-ssis-expression.md)   
+ [Fonctions &#40; Expression SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
