@@ -1,7 +1,7 @@
 ---
 title: "Télécharger SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/18/2017
+ms.date: 08/07/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,74 +15,76 @@ ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
 caps.latest.revision: 113
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
-ms.openlocfilehash: 7aaa4c48419bf24357b2bef95c40d721d1ab2f2a
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
+ms.openlocfilehash: 4bcceaeca15c3fa20cd797bda0182cf48f73a730
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/08/2017
 
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>Télécharger SSDT (SQL Server Data Tools)
 
-**[SQL Server Data Tools](https://msdn.microsoft.com/mt186501)** est un outil de développement moderne que vous pouvez télécharger gratuitement pour créer des bases de données relationnelles SQL Server, des bases de données SQL Azure, des packages Integration Services, des modèles de données Analysis Services et des rapports Reporting Services. Avec SSDT, vous pouvez concevoir et déployer tout type de contenu SQL Server avec la même facilité que lorsque vous développez une application dans Visual Studio. Cette version prend en charge SQL Server 2017 à SQL Server 2005 et fournit l’environnement de conception pour ajouter des fonctionnalités qui sont nouvelles dans SQL Server 2016.  
+**[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)** est un outil de développement moderne que vous pouvez télécharger gratuitement pour créer des bases de données relationnelles SQL Server, des bases de données SQL Azure, des packages Integration Services, des modèles de données Analysis Services et des rapports Reporting Services. Avec SSDT, vous pouvez concevoir et déployer tout type de contenu SQL Server avec la même facilité que lorsque vous développez une application dans Visual Studio. Cette version prend en charge SQL Server 2017 à SQL Server 2005 et fournit l’environnement de conception permettant d’ajouter de nouvelles fonctionnalités de SQL Server.  
     
     
-![télécharger](../ssdt/media/download.png) [Télécharger SQL Server Data Tools 17.1 pour Visual Studio 2015](https://go.microsoft.com/fwlink/?linkid=849393)
+![télécharger](../ssdt/media/download.png) [Télécharger SQL Server Data Tools 17.2 pour Visual Studio 2015](https://go.microsoft.com/fwlink/?linkid=852922)
 
-![télécharger](../ssdt/media/download.png) [Télécharger Data-Tier Application Framework (DacFx) 17.1](https://www.microsoft.com/download/details.aspx?id=55255)
+![télécharger](../ssdt/media/download.png) [Télécharger Data-Tier Application Framework (DacFx) 17.2](https://www.microsoft.com/download/details.aspx?id=55713)
 
-## <a name="sql-server-data-tools"></a>Outils de données SQL Server   
+## <a name="sql-server-data-tools"></a>SQL Server Data Tools   
 **Informations sur la version**  
   
-Numéro de la version : 17.1  
-Numéro de build de cette version : 14.0.61705.170
+Numéro de la version : 17.2  
+Numéro de build de cette version : 14.0.61707.300
   
- **Nouveautés**
- - Prise en charge en mode hors connexion d’IntelliSense AS non lié au modèle (par exemple, mise en surbrillance, saisie semi-automatique des instructions et informations de paramètres)
- - Ajout à l’Explorateur de modèles tabulaires pour afficher les expressions M
- - Sélecteur de personnes d’Azure Active Directory pour la configuration des membres de rôle dans les modèles tabulaires
- - Prise en charge de l’encodage des indicateurs dans l’interface utilisateur lors de la définition des modèles 1400
- - Plusieurs correctifs de bogues de projet AS
- - Plusieurs correctifs de bogues DacFx
+**Nouveautés**
 
- **Problèmes connus**
- - Lors de la création d’une source de données dans un modèle AS de niveau de compatibilité 1400, si vous sélectionnez une source de données de fichiers et que vous appuyez sur Annuler avant de créer la source de données, l’éditeur tabulaire (Model.bim) bascule en lecture seule. Vous pouvez contourner ce problème en fermant simplement l’éditeur tabulaire et en le rouvrant à partir de l’Explorateur de solutions.
+**AS**
 
-Liste complète des modifications disponibles dans le [journal des modifications](changelog-for-sql-server-data-tools-ssdt.md)
+- La sécurité au niveau des objets peut maintenant être configurée dans la boîte de dialogue Rôles pour la sécurité avancée dans les modèles tabulaires de niveau de compatibilité 1400.
+- Une nouvelle sélection de membre du rôle AAD a été ajoutée pour les utilisateurs sans adresse e-mail dans les modèles Azure AS des projets AS SSDT pour VS2017.
+- Une nouvelle propriété de projet Azure AS « Toujours demander » a été ajoutée dans les projets tabulaires AS SSDT pour personnaliser le comportement de mise en cache des informations d’identification ADAL.
 
- > Pour utiliser SQL Server Data Tools dans Visual Studio 2017, consultez [cette](#use-ssdt-in-visual-studio-2017) section ci-dessous
+
+**Problèmes connus**
+
+- Pour obtenir la liste complète des modifications, consultez le [journal des modifications](changelog-for-sql-server-data-tools-ssdt.md).
+- Signalez les problèmes sur le site de [Commentaires Connect SSDT](https://connect.microsoft.com/SQLServer/Feedback).
+
+> [!NOTE]
+> Pour utiliser SQL Server Data Tools dans Visual Studio 2017, consultez [cette](#use-ssdt-in-visual-studio-2017) section ci-dessous
 
   **Langues disponibles**  
   
  Vous pouvez installer cette version de SSDT dans les langues suivantes :  
-[chinois (République populaire de Chine)]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x804) | 
-[chinois (Taïwan)]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x404) | 
-[anglais (États-Unis)]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x409) | 
-[français]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x40c)  
-[allemand]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x407) | 
-[italien]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x410) | 
-[japonais]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x411) | 
-[coréen]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x412) | 
-[portugais (Brésil)]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x416) | 
-[russe]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x419) | 
-[espagnol]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x40a)  
+[chinois (République populaire de Chine)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x804) | 
+[chinois (Taïwan)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x404) | 
+[anglais (États-Unis)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x409) | 
+[français]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x40c)  
+[allemand]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x407) | 
+[italien]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x410) | 
+[japonais]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x411) | 
+[coréen]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x412) | 
+[portugais (Brésil)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x416) | 
+[russe]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x419) | 
+[espagnol]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x40a)  
 
 **Images ISO**
 
 Une image ISO de SSDT peut être utilisée comme alternative pour installer SSDT ou pour installer un point d'installation d'administration. L'image ISO est un fichier auto-extractible qui contient tous les composants nécessaires à SSDT et qui peut être téléchargée à l'aide d'un gestionnaire de téléchargement redémarrable, ce qui est utile en cas de bande passante réseau limitée ou peu fiable. Une fois téléchargée, l’image ISO peut être montée comme lecteur ou gravée sur un DVD.
 
-[chinois (République populaire de Chine)]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x804) |
-[chinois (Taïwan)]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x404) |
-[anglais (États-Unis)]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x409) |
-[français]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x40c)  
-[allemand]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x407) |
-[italien]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x410) |
-[japonais]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x411) |
-[coréen]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x412) |
-[portugais (Brésil)]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x416) |
-[russe]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x419) |
-[espagnol]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x40a)
+[chinois (République populaire de Chine)]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x804) |
+[chinois (Taïwan)]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x404) |
+[anglais (États-Unis)]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x409) |
+[français]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x40c)  
+[allemand]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x407) |
+[italien]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x410) |
+[japonais]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x411) |
+[coréen]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x412) |
+[portugais (Brésil)]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x416) |
+[russe]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x419) |
+[espagnol]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x40a)
 
 ## <a name="download-visual-studio"></a>Télécharger Visual Studio
 
@@ -98,7 +100,7 @@ Si [Visual Studio 2015 Community Edition (ou ultérieur)](https://www.visualstud
   
 |Modèles de projets|Plateformes SQL prises en charge|  
 |-------------------|--------------------|  
-Bases de données relationnelles|  SQL Server 2005* - SQL Server 2017 <br /><br />Base de données Azure SQL<br /><br />Azure SQL Data Warehouse (prend uniquement en charge les requêtes ; les projets de base de données ne sont pas encore pris en charge)<br /><br />  * SQL Server 2005 est déprécié,<br /><br /> passez à une version de SQL officiellement prise en charge|
+Bases de données relationnelles|  SQL Server 2005* - SQL Server 2017 <br /><br />Azure SQL Database<br /><br />Azure SQL Data Warehouse (prend uniquement en charge les requêtes ; les projets de base de données ne sont pas encore pris en charge)<br /><br />  * SQL Server 2005 est déprécié,<br /><br /> passez à une version de SQL officiellement prise en charge|
   |Modèles Analysis Services<br /><br />Reporting Services, rapports | SQL Server 2008 – SQL Server 2017|
   |Integration Services, packages| SQL Server 2012 – SQL Server 2017    |
   

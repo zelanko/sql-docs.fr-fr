@@ -14,11 +14,11 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 51c7de44c90a78293fc3777a92261e30fbc5f28c
+ms.translationtype: HT
+ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
+ms.openlocfilehash: 0569452520fad4183c4de2f15c59c7ca3a37586b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/08/2017
 
 ---
 # <a name="sql-server-management-studio---license-terms"></a>SQL Server Management Studio - Termes du contrat de licence
@@ -110,11 +110,13 @@ de ce logiciel à moins que d’autres termes n’accompagnent ces produits, auq
   
 **11.   EFFET JURIDIQUE.** Le présent contrat décrit certains droits légaux. Vous pouvez avoir d’autres droits au regard des lois de votre pays. Vous pouvez également bénéficier de certains droits à l’égard de la partie auprès de laquelle vous avez acquis le logiciel. Le présent contrat ne modifie pas vos droits au regard des lois de votre pays si celles-ci ne le permettent pas.  
   
-**12.   EXCLUSION DE GARANTIE. Le logiciel est concédé sous licence « en l’état ». Vous assumez les risques liés à leur utilisation. Microsoft n’accorde aucune garantie ou condition expresse. Vous pouvez bénéficier de droits des consommateurs supplémentaires ou de garanties statutaires dans le cadre du droit local, que ce contrat ne peut modifier. Lorsque cela est autorisé par le droit local, Microsoft exclut les garanties implicites de qualité, d’adéquation à un usage particulier et d’absence de contrefaçon.**  
+**12.   Le logiciel peut inclure des fonctionnalité en préversion, en version bêta, ou d’autres fonctionnalités ou logiciels, en version préliminaire proposés par Microsoft, comme décrit dans la documentation. LES PRÉVERSIONS SONT FOURNIES « EN L’ÉTAT », « AVEC TOUTES LES IMPERFECTIONS » ET « SELON LA DISPONIBILITÉ », ET SONT EXCLUES DES CONTRATS DE NIVEAU DE SERVICE ET DE LA GARANTIE LIMITÉE. Les préversions peuvent ne pas être couvertes par le service client. Les préversions peuvent être soumises à des engagements de sécurité, conformité et confidentialité limités ou différents. Nous sommes susceptibles de changer ou d’interrompre les préversions à tout moment sans préavis. Nous pouvons également choisir de ne pas mettre une préversion en « Disponibilité générale ».**
+
+**13.   EXCLUSION DE GARANTIE. Le logiciel est concédé sous licence « en l’état ». Vous assumez les risques liés à leur utilisation. Microsoft n’accorde aucune garantie ou condition expresse. Vous pouvez bénéficier de droits des consommateurs supplémentaires ou de garanties statutaires dans le cadre du droit local, que ce contrat ne peut modifier. Lorsque cela est autorisé par le droit local, Microsoft exclut les garanties implicites de qualité, d’adéquation à un usage particulier et d’absence de contrefaçon.**  
   
 **POUR L’AUSTRALIE – La loi australienne sur la consommation (Australian Consumer Law) vous accorde des garanties statutaires qu’aucun élément du présent accord ne peut affecter.**  
   
-**13.   LIMITATION ET EXCLUSION DE RECOURS ET DE DOMMAGES. Vous pouvez obtenir de Microsoft et de ses fournisseurs une indemnisation en cas de dommages directs limitée à U.S. $5.00. Vous ne pouvez prétendre à aucune indemnisation pour les autres dommages, y compris les dommages spéciaux, indirects, incidents ou accessoires et les pertes de bénéfices.**  
+**14.   LIMITATION ET EXCLUSION DE RECOURS ET DE DOMMAGES. Vous pouvez obtenir de Microsoft et de ses fournisseurs une indemnisation en cas de dommages directs limitée à U.S. $5.00. Vous ne pouvez prétendre à aucune indemnisation pour les autres dommages, y compris les dommages spéciaux, indirects, incidents ou accessoires et les pertes de bénéfices.**  
 Cette limitation s'applique uniquement à  
 * toute affaire liée au logiciel, aux services ou au contenu (y compris le code) figurant sur des sites Internet tiers ou dans des programmes tiers ; et  
 * les réclamations au titre de violation de contrat ou de garantie ou de condition, ou au titre de responsabilité stricte, de négligence ou d’une autre faute dans la limite autorisée par la loi en vigueur.  
