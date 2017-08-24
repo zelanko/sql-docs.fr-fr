@@ -1,39 +1,44 @@
 ---
-title: "Outils de d&#233;pannage de la connectivit&#233; des packages | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "packages SQL Server Integration Services, résolution des problèmes"
-  - "packages SSIS, résolution des problèmes"
-  - "Integration Services, résolution des problèmes"
-  - "connectivité [Integration Services], résolution des problèmes"
-  - "erreurs [Integration Services], résolution des problèmes"
-  - "packages [Integration Services], résolution des problèmes"
+title: "Outils de dépannage pour la connectivité des packages | Documents Microsoft"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Integration Services packages, troubleshooting
+- SSIS packages, troubleshooting
+- Integration Services, troubleshooting
+- connectivity [Integration Services], troubleshooting
+- errors [Integration Services], troubleshooting
+- packages [Integration Services], troubleshooting
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
 caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e3799e224930806445bc1c27f37c05b95a0bbbae
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Outils de d&#233;pannage de la connectivit&#233; des packages
+# <a name="troubleshooting-tools-for-package-connectivity"></a>Outils de dépannage de la connectivité des packages
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut des fonctionnalités et des outils que vous pouvez utiliser pour dépanner la connectivité entre les packages et les sources de données à partir desquelles les packages extraient et chargent des données.  
   
-## Dépannage des problèmes liés aux fournisseurs de données externes  
+## <a name="troubleshooting-issues-with-external-data-providers"></a>Dépannage des problèmes liés aux fournisseurs de données externes  
  Beaucoup de packages échouent lorsqu'ils communiquent avec des fournisseurs de données externes. Néanmoins, les messages que retournent ces fournisseurs à [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] apportent souvent des informations insuffisantes pour commencer à résoudre cet échec de communication. Pour traiter ce problème, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut des messages de journalisation qui vous permettent de résoudre les problèmes d'interaction d'un package avec des sources de données externes.  
   
 -   **Activez la journalisation et sélectionnez l’événement Diagnostic du package pour afficher les messages de dépannage**. Les composants [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] suivants peuvent écrire un message dans le journal avant et après chaque appel à un fournisseur de données externes :  
   
     -   Gestionnaire de connexions OLE DB, source OLE DB et destination OLE DB  
   
-    -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] gestionnaire de connexions et source ADO NET  
+    -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)]Gestionnaire de connexions et source ADO NET  
   
     -   Tâche d'exécution de requêtes SQL  
   
@@ -67,8 +72,8 @@ caps.handback.revision: 13
     ExternalRequest_post: 'IDbConnection.Close finished'. The external request has completed."  
     ```  
   
-## Voir aussi  
- [Outils de dépannage pour le développement des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Outils de dépannage pour l'exécution des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Outils de dépannage pour le développement de packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Outils de dépannage pour l’exécution du Package](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

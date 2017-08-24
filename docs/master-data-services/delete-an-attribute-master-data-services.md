@@ -1,36 +1,41 @@
 ---
-title: "Supprimer un attribut (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "attributs [Master Data Services], suppression"
-  - "suppression d'attributs [Master Data Services]"
+title: Supprimer un attribut (Master Data Services) | Documents Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attributes [Master Data Services], deleting
+- deleting attributes [Master Data Services]
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1d36564680430b7d35c415e23586c7fd0c47e084
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Supprimer un attribut (Master Data Services)
+# <a name="delete-an-attribute-master-data-services"></a>Supprimer un attribut (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], supprimez un attribut lorsque vous souhaitez supprimer définitivement l’attribut et toutes les valeurs d’attribut associées.  
   
-## Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
   
 -   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
-### Pour supprimer un attribut  
+### <a name="to-delete-an-attribute"></a>Pour supprimer un attribut  
   
 1.  Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cliquez sur **Administration de système**.  
   
@@ -57,10 +62,10 @@ caps.handback.revision: 6
   
 8.  Dans la boîte de dialogue de confirmation, cliquez sur **OK**.  
   
-## Voir aussi  
- [Attributs &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
- [Attributs basés sur un domaine &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
- [Créer un attribut de texte &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
- [Créer un attribut basé sur un domaine &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Attributs &#40; Master Data Services &#41;](../master-data-services/attributes-master-data-services.md)   
+ [Attributs basés sur un domaine &#40; Master Data Services &#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
+ [Créer un attribut de texte &#40; Master Data Services &#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
+ [Créer un attribut basé sur un domaine &#40; Master Data Services &#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
   

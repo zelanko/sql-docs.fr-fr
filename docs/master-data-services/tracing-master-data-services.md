@@ -1,22 +1,27 @@
 ---
-title: "Suivi (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Suivi (Master Data Services) | Documents Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "erikre"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9697bf0ee7df005c5cdd5b12126df2e31c7deca2
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Suivi (Master Data Services)
+# <a name="tracing-master-data-services"></a>Suivi (Master Data Services)
   Le fichier Web.config contient une section de suivi, comme indiqué ci-dessous. Cette section est une nouveauté dans [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]  
   
 ```  
@@ -47,9 +52,9 @@ caps.handback.revision: 7
   
      Pour plus d’informations, voir [SourceLevels, énumération](https://msdn.microsoft.com/en-us/library/system.diagnostics.sourcelevels).  
   
--   Les journaux sont enregistrés dans le dossier Logs sous le dossier WebApplication. L’emplacement par défaut est le suivant : C:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication\Logs.  
+-   Les journaux sont enregistrés dans le dossier Logs sous le dossier WebApplication. L’emplacement par défaut est le suivant : C:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication\Logs.  
   
--   Un fichier est créé quotidiennement ou tous les 10 Mo.  
+-   Un fichier est créé quotidiennement ou tous les 10 Mo.  
   
 -   Lorsque la taille du répertoire atteint 200 Mo, le journal le plus ancien est supprimé.  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 7
     |Level|Niveau de cette entrée de suivi.|  
     |Boîte de|Corps du message de suivi.|  
   
-## Ressources externes  
+## <a name="external-resources"></a>Ressources externes  
  Billet de blog intitulé [Troubleshooting Logging Improvement](http://go.microsoft.com/fwlink/p/?LinkId=615377)(en anglais) sur msdn.com.  
   
   

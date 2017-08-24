@@ -1,40 +1,45 @@
 ---
-title: "Utilitaire ssbdiagnose (Service Broker) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Service Broker, rapports runtime"
-  - "Service Broker, utilitaires d’invite de commandes"
-  - "dépannage [Service Broker], conversations"
-  - "dépannage [Service Broker], configurations"
-  - "utilitaires d'invite de commandes [Service Broker]"
-  - "Service Broker, dépannage"
-  - "Service Broker, Rapports de configuration"
-  - "Service Broker, outils"
-  - "dépannage [Service Broker], runtime"
-  - "conversations [Service Broker], dépannage"
-  - "dépannage [Service Broker], utilitaire ssbdiagnose"
-  - "outils [Service Broker], ssbdiagnose"
-  - "Service Broker, utilitaire ssbdiagnose"
-  - "ssbdiagnose"
+title: Utilitaire ssbdiagnose (Service Broker) | Documents Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Service Broker, runtime reports
+- Service Broker, command prompt utilities
+- troubleshooting [Service Broker], conversations
+- troubleshooting [Service Broker], configurations
+- command prompt utilities [Service Broker]
+- Service Broker, troubleshooting
+- Service Broker, configuration reports
+- Service Broker, tools
+- troubleshooting [Service Broker], runtime
+- conversations [Service Broker], troubleshooting
+- troubleshooting [Service Broker], ssbdiagnose utility
+- tools [Service Broker], ssbdiagnose
+- Service Broker, ssbdiagnose utility
+- ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 84a8489536783d1a9cb1d97aa95022ca7e952118
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Utilitaire ssbdiagnose (Service Broker)
+# <a name="ssbdiagnose-utility-service-broker"></a>Utilitaire ssbdiagnose (Service Broker)
   L’utilitaire **ssbdiagnose** signale des problèmes rencontrés dans des conversations [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou dans la configuration des services [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Des vérifications de configuration peuvent réalisées pour deux services ou pour un seul. Les problèmes sont signalés soit dans la fenêtre d’invite de commandes par un texte explicite, soit dans un fichier XML mis en forme qui peut être redirigé vers un fichier ou un autre programme.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -97,7 +102,7 @@ ssbdiagnose
   
 ```  
   
-## Options de ligne de commande  
+## <a name="command-line-options"></a>Options de ligne de commande  
  **-XML**  
  Spécifie que la sortie de **ssbdiagnose** doit être générée au format XML. Ce fichier peut être redirigé vers un fichier ou une autre application. Si l’option **-XML** n’est pas spécifiée, la sortie de **ssbdiagnose** se présente sous forme de texte explicite.  
   
@@ -113,9 +118,9 @@ ssbdiagnose
  Le paramètre par défaut est **WARNING**.  
   
  **-IGNORE** *ID_erreur*  
- Spécifie que les erreurs ou les messages ayant l’*ID_erreur* spécifié ne doivent pas être inclus dans les rapports. Vous pouvez spécifier **-IGNORE** plusieurs fois pour supprimer plusieurs ID de message.  
+ Spécifie que les erreurs ou les messages ayant l’ *ID_erreur* spécifié ne doivent pas être inclus dans les rapports. Vous pouvez spécifier **-IGNORE** plusieurs fois pour supprimer plusieurs ID de message.  
   
- **\<baseconnectionoptions>**  
+ **\<baseconnectionoptions >**  
  Spécifie les informations de connexion de base utilisées par **ssbdiagnose** quand les options de connexion ne sont pas incluses dans une clause spécifique. Les informations de connexion indiquées dans une clause spécifique remplacent celles figurant dans **baseconnectionoption** . Ceci est effectué individuellement pour chaque paramètre. Par exemple, si les options **-S** et **-d** sont spécifiées dans **baseconnetionoptions**, et si seule l’option **-d** est spécifiée dans **oconnetionoptions**, **ssbdiagnose** utilise -S de **baseconnetionoptions** et -d de **toconnetionoptions**.  
   
  **CONFIGURATION**  
@@ -124,15 +129,15 @@ ssbdiagnose
  **FROM SERVICE** *nom_service*  
  Spécifie le service qui lance les conversations.  
   
- **\<fromconnectionoptions>**  
+ **\<fromconnectionoptions >**  
  Spécifie les informations requises pour se connecter à la base de données contenant le service initiateur. Si **fromconnectionoptions** n’est pas spécifié, **ssbdiagnose** utilise les informations de connexion de **baseconnectionoptions** pour se connecter à la base de données de l’initiateur. Si **fromconnectionoptions** est spécifié, la base de données contenant le service initiateur doit y être indiquée. Si **fromconnectionoptions** n’est pas spécifié, **baseconnectionoptions** doit spécifier la base de données de l’initiateur.  
   
  **TO SERVICE** *nom_service*[, *ID_broker* ]  
  Spécifie le service qui est la cible des conversations.  
   
- *nom_service* : spécifie le nom du service cible.  
+ *nom_service*: spécifie le nom du service cible.  
   
- *ID_broker* : spécifie l’ID [!INCLUDE[ssSB](../../includes/sssb-md.md)] qui identifie la base de données cible. *ID_broker* est un GUID. Vous pouvez exécuter la requête suivante dans la base de données cible pour le rechercher :  
+ *ID_broker*: spécifie l’ID [!INCLUDE[ssSB](../../includes/sssb-md.md)] qui identifie la base de données cible. *ID_broker* est un GUID. Vous pouvez exécuter la requête suivante dans la base de données cible pour le rechercher :  
   
 ```  
 SELECT service_broker_guid  
@@ -140,20 +145,20 @@ FROM sys.databases
 WHERE database_id = DB_ID();  
 ```  
   
- **\<toconnectionoptions>**  
+ **\<toconnectionoptions >**  
  Spécifie les informations requises pour connecter la base de données contenant le service cible. Si **toconnectionoptions** n’est pas spécifié, **ssbdiagnose** utilise les informations de connexion de **baseconnectionoptions** pour se connecter à la base de données cible.  
   
  **MIRROR**  
  Spécifie que le service [!INCLUDE[ssSB](../../includes/sssb-md.md)] associé est hébergé par une base de données miroir. **ssbdiagnose** vérifie si l’itinéraire du service est un itinéraire mis en miroir, où la clause MIRROR_ADDRESS est spécifiée sur CREATE ROUTE.  
   
- **\<mirrorconnectionoptions>**  
+ **\<mirrorconnectionoptions >**  
  Spécifie les informations requises pour se connecter à la base de données miroir. Si **mirrorconnectionoptions** n’est pas spécifié, **ssbdiagnose** utilise les informations de connexion de **baseconnectionoptions** pour se connecter à la base de données miroir.  
   
  **ON CONTRACT** *nom_contract*  
  Demande que **ssbdiagnose** vérifie uniquement les configurations qui utilisent le contrat spécifié. Si ON CONTRACT n’est pas spécifié, **ssbdiagnose** effectue un rapport sur le contrat nommé DEFAULT.  
   
  **ENCRYPTION** { **ON** | **OFF** | **ANONYMOUS** }  
- Demande que la configuration du dialogue soit vérifiée pour le niveau de chiffrement spécifié :  
+ Demande que la configuration du dialogue soit vérifiée pour le niveau de chiffrement spécifié :  
   
  **ON**: paramètre par défaut. La sécurité de dialogue complète est configurée. Des certificats ont été déployés des deux côtés du dialogue, une liaison de service distant est présente et l'instruction GRANT SEND du service cible a spécifié l'utilisateur initiateur.  
   
@@ -162,7 +167,7 @@ WHERE database_id = DB_ID();
  **ANONYMOUS**: la sécurité de dialogue anonyme est configurée. Un certificat a été déployé, la liaison de service distant a spécifié la clause ANONYMOUS, et l’instruction GRANT SEND du service cible a spécifié le rôle **public** .  
   
  **RUNTIME**  
- Demande un rapport sur les problèmes à l'origine d'erreurs d'exécution pour une conversation [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Si ni **-NEW** ni **-ID** n’est spécifiée, **ssbdiagnose** surveille toutes les conversations dans toutes les bases de données spécifiées dans les options de connexion. Si l’option **-NEW** ou **-ID** est spécifiée, **ssbdiagnose** génère la liste des ID spécifiés dans les paramètres.  
+ Demande un rapport sur les problèmes à l'origine d'erreurs d'exécution pour une conversation [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Si ni **-NEW** ni **-ID** n’est spécifiée, **ssbdiagnose** surveille toutes les conversations dans toutes les bases de données spécifiées dans les options de connexion. Si l’option **-NEW** ou **-ID** est spécifiée, **ssbdiagnose** génère la liste des ID spécifiés dans les paramètres.  
   
  Pendant son exécution, **ssbdiagnose** enregistre tous les événements [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] qui indiquent des erreurs d’exécution. Il enregistre les événements qui se produisent pour les ID spécifiés, ainsi que les événements au niveau système. Si des erreurs d’exécution sont rencontrées, **ssbdiagnose** exécute un rapport de configuration sur la configuration associée.  
   
@@ -172,7 +177,7 @@ WHERE database_id = DB_ID();
  Spécifie que **ssbdiagnose** doit signaler les événements [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] dans le cadre d’un rapport RUNTIME. Seuls les événements considérés comme des conditions d'erreur sont signalés. Par défaut, **ssbdiagnose** ne fait que surveiller les événements d’erreurs. Il ne les signale pas dans la sortie.  
   
  **-NEW**  
- Demande le contrôle d’exécution de la première conversation qui commence après le démarrage de **ssbdiagnose**.  
+ Demande le contrôle d’exécution de la première conversation qui commence après le démarrage de **ssbdiagnose** .  
   
  **-ID**  
  Demande que les éléments de conversation spécifiés fassent l'objet d'une surveillance au moment de l'exécution. Vous pouvez spécifier **-ID** plusieurs fois.  
@@ -182,46 +187,46 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  Identificateur unique qui identifie un point de terminaison de conversation dans une application. Les descripteurs de conversation sont uniques à un point de terminaison d'une conversation, les points de terminaison initiateur et cible ont des descripteurs de conversation distincts.  
   
- Les descripteurs de conversation sont retournés aux applications par le paramètre *@dialog_handle* de l’instruction **BEGIN DIALOG**, et la colonne **conversation_handle** dans le jeu de résultats d’une instruction **RECEIVE**.  
+ Les descripteurs de conversation sont retournés aux applications par le paramètre *@dialog_handle* de l’instruction **BEGIN DIALOG** , et la colonne **conversation_handle** dans le jeu de résultats d’une instruction **RECEIVE** .  
   
- Les descripteurs de conversation sont signalés dans la colonne **conversation_handle** des affichages catalogue **sys.transmission_queue** et **sys.conversation_endpoints**.  
+ Les descripteurs de conversation sont signalés dans la colonne **conversation_handle** des affichages catalogue **sys.transmission_queue** et **sys.conversation_endpoints** .  
   
  *conversation_group_id*  
  Identificateur unique qui identifie un groupe de conversations.  
   
- Les ID de groupe de conversations sont retournés aux applications par le paramètre *@conversation_group_id* de l’instruction **GET CONVERSATION GROUP**, et la colonne **conversation_group_id** dans le jeu de résultats d’une instruction **RECEIVE**.  
+ Les ID de groupe de conversations sont retournés aux applications par le paramètre *@conversation_group_id* de l’instruction **GET CONVERSATION GROUP** , et la colonne **conversation_group_id** dans le jeu de résultats d’une instruction **RECEIVE** .  
   
- Les ID de groupe de conversations sont signalés dans les colonnes **conversation_group_id** des affichages catalogue **sys.conversation_groups** et **sys.conversation_endpoints**.  
+ Les ID de groupe de conversations sont signalés dans les colonnes **conversation_group_id** des affichages catalogue **sys.conversation_groups** et **sys.conversation_endpoints** .  
   
  *conversation_id*  
  Identificateur unique qui identifie une conversation. Les ID de conversation sont les mêmes pour les points de terminaison initiateur et cible d'une conversation.  
   
- Les ID de conversation sont signalés dans la colonne **conversation_id** de l’affichage catalogue **sys.conversation_endpoints**.  
+ Les ID de conversation sont signalés dans la colonne **conversation_id** de l’affichage catalogue **sys.conversation_endpoints** .  
   
  **-TIMEOUT** *intervalle_délai_d’attente*  
- Spécifie la durée d’exécution du rapport **RUNTIME** en secondes. Si vous ne spécifiez pas **-TIMEOUT**, le rapport d’exécution s’exécute indéfiniment. **-TIMEOUT** est utilisé uniquement sur les rapports **RUNTIME**, et non sur les rapports **CONFIGURATION**. Utilisez Ctrl+C pour quitter **ssbdiagnose** si **-TIMEOUT** n’a pas été spécifié, ou pour terminer un rapport d’exécution avant **-**l’expiration du délai d’attente. *intervalle_délai_d’attente* doit être un nombre compris entre 1 et 2 147 483 647.  
+ Spécifie la durée d’exécution du rapport **RUNTIME** en secondes. Si vous ne spécifiez pas **-TIMEOUT** , le rapport d’exécution s’exécute indéfiniment. **-TIMEOUT** est utilisé uniquement sur les rapports **RUNTIME** , et non sur les rapports **CONFIGURATION** . Utilisez Ctrl+C pour quitter **ssbdiagnose** si **-TIMEOUT** n’a pas été spécifié, ou pour terminer un rapport d’exécution avant**-**l’expiration du délai d’attente. *intervalle_délai_d’attente* doit être un nombre compris entre 1 et 2 147 483 647.  
   
- **\<runtimeconnectionoptions>**  
+ **\<runtimeconnectionoptions >**  
  Spécifie les informations de connexion pour les bases de données contenant les services associés aux éléments de conversation qui sont surveillés. Si tous les services se trouvent dans la même base de données, vous ne devez spécifier qu’une seule clause **CONNECT TO** . Si les services se trouvent dans des bases de données séparées, vous devez fournir une clause **CONNECT TO** pour chaque base de données. Si **runtimeconnectionoptions** n’est pas spécifié, **ssbdiagnose** utilise les informations de connexion de **baseconnectionoptions**.  
   
  **–E**  
- Ouvrir une connexion par le biais de l’authentification Windows à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] en utilisant votre compte Windows actuel comme ID de connexion. La connexion doit être membre du rôle serveur fixe **sysadmin**.  
+ Ouvrir une connexion par le biais de l’authentification Windows à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] en utilisant votre compte Windows actuel comme ID de connexion. La connexion doit être membre du rôle serveur fixe **sysadmin** .  
   
  L'option -E ignore les paramètres d'utilisateur et de mot de passe des variables d'environnement SQLCMDUSER et SQLCMDPASSWORD.  
   
  Si ni l’option **-E** ni l’option **-U** n’est spécifiée, **ssbdiagnose** utilise la valeur de la variable d’environnement SQLCMDUSER. Si cette variable n’est pas définie non plus, **ssbdiagnose** utilise l’authentification Windows.  
   
- Si l’option **-E** est utilisée avec l’option **-U** ou **-P**, un message d’erreur est généré.  
+ Si l’option **-E** est utilisée avec l’option **-U** ou **-P** , un message d’erreur est généré.  
   
  **-U** *ID_connexion*  
- Ouvrir une connexion par le biais de l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant l’ID de connexion spécifié. La connexion doit être membre du rôle serveur fixe **sysadmin**.  
+ Ouvrir une connexion par le biais de l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant l’ID de connexion spécifié. La connexion doit être membre du rôle serveur fixe **sysadmin** .  
   
  Si ni l’option **-E** ni l’option **-U** n’est spécifiée, **ssbdiagnose** utilise la valeur de la variable d’environnement SQLCMDUSER. Si cette variable n’est pas définie non plus, **ssbdiagnose** essaie de se connecter en utilisant le mode d’authentification Windows sur la base du compte Windows de l’utilisateur qui exécute **ssbdiagnose**.  
   
- Si l’option **-U** est utilisée avec l’option **-E**, un message d’erreur est généré. Si l’option **–U** est suivie de plusieurs arguments, un message d’erreur est généré et le programme se termine.  
+ Si l’option **-U** est utilisée avec l’option **-E** , un message d’erreur est généré. Si l’option **–U** est suivie de plusieurs arguments, un message d’erreur est généré et le programme se termine.  
   
- **-p** *mot_de_passe*  
- Spécifie le mot de passe de l’ID de connexion **-U**. Les mots de passe respectent la casse. Si vous utilisez l’option **-U** mais pas l’option **-P**, **ssbdiagnose** utilise la valeur de la variable d’environnement SQLCMDPASSWORD. Si cette variable n’est pas définie non plus, **ssbdiagnose** invite l’utilisateur à entrer un mot de passe.  
+ **-P** *mot_de_passe*  
+ Spécifie le mot de passe de l’ID de connexion **-U** . Les mots de passe respectent la casse. Si vous utilisez l’option **-U** mais pas l’option **-P** , **ssbdiagnose** utilise la valeur de la variable d’environnement SQLCMDPASSWORD. Si cette variable n’est pas définie non plus, **ssbdiagnose** invite l’utilisateur à entrer un mot de passe.  
   
 > [!IMPORTANT]  
 >  Lorsque vous tapez une commande SET SQLCMDPASSWORD, votre mot de passe est visible par quiconque regarde votre moniteur.  
@@ -229,31 +234,31 @@ WHERE database_id = DB_ID();
  Si l’option **-P** est spécifiée sans mot de passe, **ssbdiagnose** utilise le mot de passe par défaut (NULL).  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Pour plus d’informations, consultez [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]Pour plus d’informations, consultez [mots de passe forts](../../relational-databases/security/strong-passwords.md).  
   
  L'invite de mot de passe s'affiche en imprimant l'invite de commande sur la console, comme suit : `Password:`  
   
  L'entrée de l'utilisateur est masquée, ce qui signifie que rien ne s'affiche et que le curseur reste immobile.  
   
- Si l’option **-P** est utilisée avec l’option **-E**, un message d’erreur est généré.  
+ Si l’option **-P** est utilisée avec l’option **-E** , un message d’erreur est généré.  
   
  Si l’option **-P** est suivie de plusieurs arguments, un message d’erreur est généré.  
   
  **-S** *nom_serveur*[\\*nom_instance*]  
  Spécifie l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui contient les services [!INCLUDE[ssSB](../../includes/sssb-md.md)] à analyser.  
   
- Spécifiez *nom_serveur* pour vous connecter à l’instance par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur ce serveur. Spécifiez *nom_serveur***\\***nom_instance* pour vous connecter à une instance nommée du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur ce serveur. Si vous ne spécifiez pas l’option **-S**, **ssbdiagnose** utilise la valeur de la variable d’environnement SQLCMDSERVER. Si cette variable n’est pas définie non plus, **ssbdiagnose** se connecte à l’instance par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur l’ordinateur local.  
+ Spécifiez *nom_serveur* pour vous connecter à l’instance par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur ce serveur. Spécifiez *nom_serveur***\\***nom_instance* pour vous connecter à une instance nommée du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur ce serveur. Si vous ne spécifiez pas l’option **-S** , **ssbdiagnose** utilise la valeur de la variable d’environnement SQLCMDSERVER. Si cette variable n’est pas définie non plus, **ssbdiagnose** se connecte à l’instance par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur l’ordinateur local.  
   
  **-d** *nom_base_de_données*  
- Spécifie la base de données qui contient les services [!INCLUDE[ssSB](../../includes/sssb-md.md)] à analyser. Si cette base de données n'existe pas, un message d'erreur est généré. Si vous ne spécifiez pas l’option **-d**, la valeur par défaut est la base de données spécifiée dans la propriété de base de données par défaut de votre connexion.  
+ Spécifie la base de données qui contient les services [!INCLUDE[ssSB](../../includes/sssb-md.md)] à analyser. Si cette base de données n'existe pas, un message d'erreur est généré. Si vous ne spécifiez pas l’option **-d** , la valeur par défaut est la base de données spécifiée dans la propriété de base de données par défaut de votre connexion.  
   
  **-l** *délai_d’attente_connexion*  
- Spécifie le délai d'attente d'une tentative de connexion à un serveur (en secondes). Si vous ne spécifiez pas l’option **-l**, **ssbdiagnose** utilise la valeur définie pour la variable d’environnement SQLCMDLOGINTIMEOUT. Si cette variable n'est pas définie non plus, le délai d'attente par défaut est de trente secondes. Le délai d'attente de la connexion doit être un nombre compris entre 0 et 65534. Si la valeur fournie n’est pas numérique ou n’est pas comprise dans cet intervalle, **ssbdiagnose** génère un message d’erreur. Une valeur de 0 spécifie un délai d'attente infini.  
+ Spécifie le délai d'attente d'une tentative de connexion à un serveur (en secondes). Si vous ne spécifiez pas l’option **-l** , **ssbdiagnose** utilise la valeur définie pour la variable d’environnement SQLCMDLOGINTIMEOUT. Si cette variable n'est pas définie non plus, le délai d'attente par défaut est de trente secondes. Le délai d'attente de la connexion doit être un nombre compris entre 0 et 65534. Si la valeur fournie n’est pas numérique ou n’est pas comprise dans cet intervalle, **ssbdiagnose** génère un message d’erreur. Une valeur de 0 spécifie un délai d'attente infini.  
   
  **-?**  
  Affiche l'aide de la ligne de commande.  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Utilisez **ssbdiagnose** pour effectuer les opérations suivantes :  
   
 -   Confirmer qu'une application [!INCLUDE[ssSB](../../includes/sssb-md.md)] récemment configurée ne contient pas d'erreurs de configuration.  
@@ -266,17 +271,17 @@ WHERE database_id = DB_ID();
   
 -   Obtenir un rapport sur toute erreur se produisant dans un jeu d'éléments de conversation [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
   
-## Rapport de configuration  
+## <a name="configuration-reporting"></a>Rapport de configuration  
  Pour analyser correctement la configuration utilisée par une conversation, exécutez un rapport de configuration **ssbdiagnose** utilisant les mêmes options que celles de la conversation. Si vous spécifiez pour **ssbdiagnose** un niveau d’options inférieur à celui de la conversation, **ssbdiagnose** risque de ne pas signaler les éléments requis par la conversation. Si vous spécifiez un niveau d’options supérieur pour **ssbdiagnose**, ce dernier risque de signaler des éléments de rapport qui ne sont pas requis par la conversation. Par exemple, une conversation entre deux services qui se trouvent dans la même base de données peut être exécutée avec ENCPRYPTION OFF. Si vous exécutez **ssbdiagnose** pour valider la configuration entre les deux services, mais utilisez le paramètre ENCRYPTION ON par défaut, **ssbdiagnose** signale qu’une clé principale est absente de la base de données. Or la conversation ne requiert pas de clé principale.  
   
  Le rapport de configuration de **ssbdiagnose** analyse un seul service [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou une seule paire de services à chaque exécution. Pour générer un rapport sur plusieurs paires de services [!INCLUDE[ssSB](../../includes/sssb-md.md)] , générez un fichier de commande .cmd qui appelle **ssbdiagnose** plusieurs fois.  
   
-## Rapport d'exécution  
- Quand vous spécifiez -RUNTIME, **ssbdiagnose** recherche toutes les bases de données spécifiées dans **runtimeconnectionoptions** et **baseconnectionoptions** pour générer la liste des ID [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Le contenu de liste d'ID générée dépend des options -NEW et –ID :  
+## <a name="runtime-reporting"></a>Rapport d'exécution  
+ Quand vous spécifiez -RUNTIME, **ssbdiagnose** recherche toutes les bases de données spécifiées dans **runtimeconnectionoptions** et **baseconnectionoptions** pour générer la liste des ID [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Le contenu de liste d'ID générée dépend des options -NEW et –ID :  
   
--   Si vous ne spécifiez ni **-NEW** ni **-ID**, la liste inclut toutes les conversations pour toutes les bases de données spécifiées dans les options de connexion.  
+-   Si vous ne spécifiez ni **-NEW** ni **-ID** , la liste inclut toutes les conversations pour toutes les bases de données spécifiées dans les options de connexion.  
   
--   Si vous spécifiez **-NEW**, **ssbdiagnose** inclut les éléments de la première conversation qui démarre après exécution de **ssbdiagnose**. Sont ainsi inclus l'ID de la conversation et les descripteurs de la conversation pour les points de terminaison initiateur et cible.  
+-   Si vous spécifiez **-NEW** , **ssbdiagnose** inclut les éléments de la première conversation qui démarre après exécution de **ssbdiagnose** . Sont ainsi inclus l'ID de la conversation et les descripteurs de la conversation pour les points de terminaison initiateur et cible.  
   
 -   Si vous spécifiez **-ID** avec un descripteur de conversation, seul ce descripteur est inclus dans la liste.  
   
@@ -292,29 +297,29 @@ WHERE database_id = DB_ID();
   
  Par défaut, **ssbdiagnose** ne signale pas les événements d’erreur. Il signale seulement les problèmes sous-jacents identifiés au cours de la vérification de la configuration. Cela réduit la quantité d'informations signalée et vous aide à vous concentrer sur les problèmes de configuration sous-jacents. Vous pouvez spécifier **-SHOWEVENTS** pour afficher les événements d’erreur rencontrés par **ssbdiagnose**.  
   
-## Problèmes signalés par ssbdiagnose  
+## <a name="issues-reported-by-ssbdiagnose"></a>Problèmes signalés par ssbdiagnose  
  **ssbdiagnose** signale trois classes de problèmes. Dans le fichier de sortie XML, chaque catégorie de problème correspond à un type distinct de l'élément Issue. Ces trois types de problèmes signalés par **ssbdiagnose** sont les suivants :  
   
  **Diagnostic**  
  Signale un problème de configuration. Sont inclus les problèmes identifiés soit lors de l’exécution d’un rapport **CONFIGURATION** , soit pendant la phase de configuration d’un rapport **RUNTIME** . **ssbdiagnose** signale chaque problème de configuration une seule fois.  
   
  **Événement**  
- Signale un événement [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] qui indique qu’un problème a été rencontré par une conversation surveillée pendant un rapport **RUNTIME**. **ssbdiagnose** signale les événements chaque fois qu’ils sont générés. Les événements peuvent être signalés plusieurs fois si plusieurs conversations rencontrent le problème.  
+ Signale un événement [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] qui indique qu’un problème a été rencontré par une conversation surveillée pendant un rapport **RUNTIME** . **ssbdiagnose** signale les événements chaque fois qu’ils sont générés. Les événements peuvent être signalés plusieurs fois si plusieurs conversations rencontrent le problème.  
   
  **Problème**  
  Signale un problème qui empêche **ssbdiagnose** d’effectuer une analyse de la configuration ou de surveiller des conversations.  
   
-## Variables d'environnement sqlcmd  
- L’utilitaire **ssbdiagnose** prend en charge les variables d’environnement SQLCMDSERVER, SQLCMDUSER, SQLCMDPASSWORD et SQLCMDLOGINTIMOUT, qui sont également utilisées par l’utilitaire **sqlcmd** . Vous pouvez définir les variables d’environnement soit en utilisant l’invite de commandes SET, soit en utilisant la commande **setvar** dans des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] exécutés à l’aide de **sqlcmd**. Pour plus d’informations sur la façon d’utiliser **setvar** dans **sqlcmd**, consultez [Utiliser sqlcmd avec des variables de script](../../relational-databases/scripting/use-sqlcmd-with-scripting-variables.md).  
+## <a name="sqlcmd-environment-variables"></a>Variables d'environnement sqlcmd  
+ L’utilitaire **ssbdiagnose** prend en charge les variables d’environnement SQLCMDSERVER, SQLCMDUSER, SQLCMDPASSWORD et SQLCMDLOGINTIMOUT, qui sont également utilisées par l’utilitaire **sqlcmd** . Vous pouvez définir les variables d’environnement soit en utilisant l’invite de commandes SET, soit en utilisant la commande **setvar** dans des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] exécutés à l’aide de **sqlcmd**. Pour plus d’informations sur la façon d’utiliser **setvar** dans **sqlcmd**, consultez [Utiliser sqlcmd avec des variables de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  
   
-## Autorisations  
- Dans chaque clause **connectionoptions**, la connexion spécifiée avec l’option **-E** ou **-U** doit être un membre du rôle serveur fixe **sysadmin** dans l’instance spécifiée dans **-S**.  
+## <a name="permissions"></a>Autorisations  
+ Dans chaque clause **connectionoptions** , la connexion spécifiée avec l’option **-E** ou **-U** doit être un membre du rôle serveur fixe **sysadmin** dans l’instance spécifiée dans **-S**.  
   
-## Exemples  
+## <a name="examples"></a>Exemples  
  Cette section contient des exemples d’utilisation de **ssbdiagnose** à une invite de commandes.  
   
-### A. Vérification de la configuration de deux services dans la même base de données  
- L'exemple suivant montre comment demander un rapport de configuration dans le contexte suivant :  
+### <a name="a-checking-the-configuration-of-two-services-in-the-same-database"></a>A. Vérification de la configuration de deux services dans la même base de données  
+ L'exemple suivant montre comment demander un rapport de configuration dans le contexte suivant :  
   
 -   Le service initiateur et le service cible se trouvent dans la même base de données.  
   
@@ -328,14 +333,14 @@ WHERE database_id = DB_ID();
 ssbdiagnose -E -d MyDatabase CONFIGURATION FROM SERVICE /test/initiator TO SERVICE /test/target  
 ```  
   
-### B. Vérification de la configuration de deux services sur des ordinateurs distincts qui utilisent une seule connexion  
+### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>B. Vérification de la configuration de deux services sur des ordinateurs distincts qui utilisent une seule connexion  
  L'exemple suivant montre comment demander un rapport de configuration lorsque le service initiateur et le service cible se trouvent sur des ordinateurs distincts, mais sont accessibles en utilisant la même connexion via l'authentification Windows.  
   
 ```  
 ssbdiagnose -E CONFIGURATION FROM SERVICE /text/initiator -S InitiatorComputer -d InitiatorDatabase TO SERVICE /test/target -S TargetComputer -d TargetDatabase ON CONTRACT TestContract  
 ```  
   
-### C. Vérification de la configuration de deux services sur des ordinateurs distincts qui utilisent des connexions distinctes  
+### <a name="c-checking-the-configuration-of-two-services-on-separate-computers-that-use-separate-logins"></a>C. Vérification de la configuration de deux services sur des ordinateurs distincts qui utilisent des connexions distinctes  
  L'exemple suivant montre comment demander un rapport de configuration lorsque le service initiateur et le service cible se trouvent sur des ordinateurs distincts et que des connexions d'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] distinctes sont requises pour chaque instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ```  
@@ -345,7 +350,7 @@ ssbdiagnose CONFIGURATION FROM SERVICE /text/initiator
 -U TargetLogin -p ER!49jiy -d TargetDatabase ON CONTRACT TestContract  
 ```  
   
-### D. Vérification de la configuration de services mis en miroir sur des ordinateurs distincts avec le chiffrement anonyme  
+### <a name="d-checking-mirrored-service-configurations-on-separate-computers-with-anonymous-encryption"></a>D. Vérification de la configuration de services mis en miroir sur des ordinateurs distincts avec le chiffrement anonyme  
  L'exemple suivant montre comment demander un rapport de configuration lorsque le service initiateur et le service cible se trouvent sur des ordinateurs distincts et que l'initiateur est mis en miroir sur une instance nommée. Ce rapport vérifie également que les services sont configurés pour utiliser le chiffrement anonyme.  
   
 ```  
@@ -355,8 +360,8 @@ ssbdiagnose -E CONFIGURATION FROM SERVICE /text/initiator
 -S TargetComputer -d TargetDatabase ON CONTRACT TestContract ENCRYPTION ANONYMOUS  
 ```  
   
-### E. Vérification de la configuration de deux contrats  
- L'exemple suivant montre comment générer un fichier de commandes qui demande des rapports de configuration dans le contexte suivant :  
+### <a name="e-checking-the-configuration-of-two-contracts"></a>E. Vérification de la configuration de deux contrats  
+ L'exemple suivant montre comment générer un fichier de commandes qui demande des rapports de configuration dans le contexte suivant :  
   
 -   Le service initiateur et le service cible se trouvent dans la même base de données.  
   
@@ -373,14 +378,14 @@ ssbdiagnose -E -d MyDatabase CONFIGURATION FROM SERVICE /test/initiator
 TO SERVICE /test/target ON CONTRACT PromotionContract  
 ```  
   
-### F. Surveillance du statut d'une conversation spécifique sur l'ordinateur local avec un délai d'attente  
- L’exemple suivant montre comment surveiller une conversation spécifique où le service initiateur et le service cible se trouvent dans la même base de données dans l’instance par défaut du même ordinateur exécutant **ssbdiagnose**. La valeur de l'intervalle d'arrêt est de 20 secondes.  
+### <a name="f-monitor-the-status-of-a-specific-conversation-on-the-local-computer-with-a-time-out"></a>F. Surveillance du statut d'une conversation spécifique sur l'ordinateur local avec un délai d'attente  
+ L’exemple suivant montre comment surveiller une conversation spécifique où le service initiateur et le service cible se trouvent dans la même base de données dans l’instance par défaut du même ordinateur exécutant **ssbdiagnose**. La valeur de l'intervalle d'arrêt est de 20 secondes.  
   
 ```  
 ssbdiagnose -E -d TestDatabase RUNTIME -ID D68D77A9-B1CF-41BF-A5CE-279ABCAB140D -TIMEOUT 20  
 ```  
   
-### G. Surveillance du statut d'une conversation qui s'étend sur deux ordinateurs  
+### <a name="g-monitor-the-status-of-a-conversation-that-spans-two-computers"></a>G. Surveillance du statut d'une conversation qui s'étend sur deux ordinateurs  
  L'exemple suivant montre comment surveiller une conversation spécifique où le service initiateur et le service cible se trouvent sur des ordinateurs distincts.  
   
 ```  
@@ -390,7 +395,7 @@ ssbdiagnose RUNTIME -ID D68D77A9-B1CF-41BF-A5CE-279ABCAB140D
 -d TargetDatabase  
 ```  
   
-### H. Surveillance du statut d'une conversation dans deux bases de données dans la même instance  
+### <a name="h-monitor-the-status-of-a-conversation-in-two-databases-in-the-same-instance"></a>H. Surveillance du statut d'une conversation dans deux bases de données dans la même instance  
  L'exemple suivant montre comment surveiller une conversation spécifique où le service initiateur et le service cible se trouvent dans des bases de données distinctes dans la même instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Cet exemple utilise **baseconnectionoptions** pour spécifier l’instance et les informations de connexion, ainsi que deux clauses CONNECT TO pour spécifier les bases de données. -SHOWEVENTS est spécifié afin que tous les événements d'exécution soient inclus dans le rapport.  
   
 ```  
@@ -399,7 +404,7 @@ ssbdiagnose -E -S TestComputer/DevTestInstance RUNTIME -SHOWEVENTS
 -d InitiatorDatabase CONNECT TO -d TargetDatabase  
 ```  
   
-### I. Surveillance du statut de deux conversations entre deux bases de données  
+### <a name="i-monitor-the-status-of-two-conversations-between-two-databases"></a>I. Surveillance du statut de deux conversations entre deux bases de données  
  L'exemple suivant montre comment surveiller deux conversations spécifiques où le service initiateur et le service cible se trouvent dans des bases de données distinctes dans la même instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Cet exemple utilise **baseconnectionoptions** pour spécifier l’instance et les informations de connexion, ainsi que deux clauses CONNECT TO pour spécifier les bases de données.  
   
 ```  
@@ -409,7 +414,7 @@ ssbdiagnose -E -S TestComputer/DevTestInstance RUNTIME
 -d InitiatorDatabase CONNECT TO -d TargetDatabase  
 ```  
   
-### J. Surveillance du statut de toutes les conversations entre deux bases de données  
+### <a name="j-monitor-the-status-of-all-conversations-between-two-databases"></a>J. Surveillance du statut de toutes les conversations entre deux bases de données  
  L'exemple suivant montre comment surveiller toutes les conversations entre deux bases de données dans la même instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Cet exemple utilise **baseconnectionoptions** pour spécifier l’instance et les informations de connexion, ainsi que deux clauses CONNECT TO pour spécifier les bases de données.  
   
 ```  
@@ -418,7 +423,7 @@ ssbdiagnose -E -S TestComputer/DevTestInstance RUNTIME
 -d TargetDatabase  
 ```  
   
-### K. Ignorer des erreurs spécifiques  
+### <a name="k-ignore-specific-errors"></a>K. Ignorer des erreurs spécifiques  
  L'exemple suivant montre comment ignorer les erreurs connues (303 et 304) détectées dans la configuration actuelle de l'activation dans un système test.  
   
 ```  
@@ -427,7 +432,7 @@ CONFIGURATION FROM SERVICE /test/initiator TO SERVICE /test/target
 ON CONTRACT TextContract  
 ```  
   
-### L. Redirection de la sortie XML de ssbdiagnose  
+### <a name="l-redirecting-ssbdiagnose-xml-output"></a>L. Redirection de la sortie XML de ssbdiagnose  
  L’exemple suivant montre comment demander que **ssbdiagnose** génère sa sortie sous la forme d’un fichier XML redirigé vers un fichier. Le fichier TestDiag.xml peut ensuite être ouvert par une application pour analyser ou créer un rapport à partir des fichiers XML de **ssbdiagnose** . Vous pouvez également le consulter dans tout éditeur XML, tel que le bloc-notes XML.  
   
 ```  
@@ -435,7 +440,7 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
 /test/initiator TO SERVICE /test/target > c:\MyDiagnostics\TestDiag.xml  
 ```  
   
-### M. Utilisation d'une variable d'environnement  
+### <a name="m-using-an-environment-variable"></a>M. Utilisation d'une variable d'environnement  
  L’exemple suivant commence par définir la variable d’environnement SQLCMDSERVER pour qu’elle contienne le nom du serveur, puis exécute **ssbdiagnose** sans spécifier l’option **-S**.  
   
 ```  
@@ -444,22 +449,22 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
 /test/initiator TO SERVICE /test/target  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
+ [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [CRÉER une priorité de service BROKER &#40; Transact-SQL &#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [CREATE CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   
+ [CRÉER un contrat &#40; Transact-SQL &#41;](../../t-sql/statements/create-contract-transact-sql.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
- [CREATE MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
+ [CRÉER un TYPE DE MESSAGE &#40; Transact-SQL &#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
  [CREATE REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/create-remote-service-binding-transact-sql.md)   
  [CREATE ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/create-route-transact-sql.md)   
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
- [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)   
- [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
- [sys.conversation_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
+ [RÉCEPTION &#40; Transact-SQL &#41;](../../t-sql/statements/receive-transact-sql.md)   
+ [Sys.transmission_queue &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)   
+ [Sys.conversation_endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
+ [Sys.conversation_groups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
   
   

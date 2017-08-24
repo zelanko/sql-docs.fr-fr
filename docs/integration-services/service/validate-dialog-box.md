@@ -1,30 +1,35 @@
 ---
-title: "Bo&#238;te de dialogue Valider | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.ssms.isprojectvalidate.f1"
-  - "sql13.ssis.ssms.ispackagevalidate.f1"
+title: "Boîte de dialogue Valider | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.ssms.isprojectvalidate.f1
+- sql13.ssis.ssms.ispackagevalidate.f1
 ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d7ff51208136b767dfb6260e6cfc07e67615531e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Bo&#238;te de dialogue Valider
+# <a name="validate-dialog-box"></a>Boîte de dialogue Valider
   Utilisez la boîte de dialogue **Valider** pour examiner les problèmes usuels d'un projet ou package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  En cas de problème, un message s'affiche en haut de la boîte de dialogue. Sinon, le terme Prêt s'affiche en haut.  
   
- **Que voulez-vous faire ?**  
+ **Que voulez-vous faire ?**  
   
 -   [Ouvrir la boîte de dialogue Valider](#open_dialog)  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 7
  Sélectionnez l'environnement à utiliser pour valider le projet ou le package.  
   
  **Runtime 32 bits**  
- Sélectionnez cette option afin d'utiliser un runtime 32 bits pour exécuter un package.  
+ Sélectionnez cette option afin d'utiliser un runtime 32 bits pour exécuter un package.  
   
  L'onglet **Paramètres** indique les valeurs de paramètres que vous utilisez pour valider le projet ou le package. Voici les options de l'onglet Paramètres.  
   

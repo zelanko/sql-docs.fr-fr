@@ -1,30 +1,35 @@
 ---
-title: "!= (Diff&#233;rent de) (expression SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "différent de, opérateur (!=)"
-  - "!= (différent de)"
+title: "! = (Différent de) (Expression SSIS) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- unequal operator (!=)
+- '!= (not equal to)'
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
 caps.latest.revision: 53
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 53
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 062024b2e222c0240852ce36646ecfd5b001deba
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# != (Diff&#233;rent de) (expression SSIS)
+# <a name="-unequal-ssis-expression"></a>!= (Différent de) (expression SSIS)
   Effectue une comparaison pour déterminer si deux expressions de types de données compatibles sont différentes. L'évaluateur d'expression convertit automatiquement de nombreux types de données avant de réaliser la comparaison.  
   
  Toutefois, pour certains types de données, il est nécessaire que l'expression contienne une conversion explicite afin qu'elle puisse être évaluée correctement. Pour plus d’informations sur les conversions valides entre les types de données, consultez [Cast &#40;expression SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -32,14 +37,14 @@ expression1 != expression2
   
 ```  
   
-## Arguments  
+## <a name="arguments"></a>Arguments  
  *expression1, expression2*  
  Toute expression valide.  
   
-## Types des résultats  
+## <a name="result-types"></a>Types des résultats  
  DT_BOOL  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Si l'une des expressions de la comparaison est NULL, le résultat de la comparaison est NULL. Si les deux expressions sont NULL, le résultat est NULL.  
   
  Le jeu d’expressions, *expression1* et *expression2*, doit suivre une des règles suivantes :  
@@ -56,7 +61,7 @@ expression1 != expression2
     > [!NOTE]  
     >  Le système ne prend pas en charge les comparaisons entre une expression qui correspond à un type de données heure et une expression qui correspond à un type de données date ou date/heure. Le système génère alors une erreur.  
   
-     Lors de la comparaison des expressions, le système applique les règles de conversion suivantes dans l'ordre indiqué :  
+     Lors de la comparaison des expressions, le système applique les règles de conversion suivantes dans l'ordre indiqué :  
   
     -   Lorsque les deux expressions correspondent au même type de données, une comparaison de ce type de données est effectuée.  
   
@@ -68,7 +73,7 @@ expression1 != expression2
   
     -   Si une expression est d'un type autre que DT_DBTIMESTAMPOFFSET, DT_DBTIMESTAMP2 ou DT_DBTIME2, les expressions sont converties en type de données DT_DBTIMESTAMP avant leur comparaison.  
   
-     Lors de la comparaison des expressions, le système émet les hypothèses suivantes :  
+     Lors de la comparaison des expressions, le système émet les hypothèses suivantes :  
   
     -   Si chaque expression est d'un type de données qui inclut des fractions de seconde, le système suppose que le type de données avec le moins grand nombre de chiffres pour les fractions de seconde inclut des zéros pour les chiffres restants.  
   
@@ -84,7 +89,7 @@ expression1 != expression2
   
  Pour plus d'informations sur les types de données, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Exemples d'expressions  
+## <a name="expression-examples"></a>Exemples d'expressions  
  L'exemple suivant renvoie la valeur TRUE uniquement si la date actuelle n'est pas le 4 juillet 2003. Pour plus d’informations, consultez [GETDATE &#40;expression SSIS&#41;](../../integration-services/expressions/getdate-ssis-expression.md).  
   
 ```  
@@ -103,9 +108,9 @@ ListPrice != 500
 @LPrice != 500  
 ```  
   
-## Voir aussi  
- [== &#40;Égal&#41; &#40;expression SSIS&#41;](../../integration-services/expressions/equal-ssis-expression.md)   
- [Priorités et associativité des opérateurs](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Opérateurs &#40;expression SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Voir aussi  
+ [== &#40; Égal &#41; &#40; Expression SSIS &#41;](../../integration-services/expressions/equal-ssis-expression.md)   
+ [Opérateurs et associativité](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Opérateurs &#40; Expression SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

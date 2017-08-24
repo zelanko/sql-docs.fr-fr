@@ -1,23 +1,28 @@
 ---
-title: "Installer Distributed Replay | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Installer Distributed Replay | Documents Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: f12949316171843274bc70aefc3ed8ff2b236e45
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Installer Distributed Replay
-  Vous pouvez installer Distributed Replay de trois manières :  
+# <a name="install-distributed-replay"></a>Installer Distributed Replay
+  Vous pouvez installer Distributed Replay de trois manières :  
   
 -   [Installer Distributed Replay à partir de l’Assistant Installation](#bkmk_wizard)  
   
@@ -54,25 +59,25 @@ caps.handback.revision: 21
   
  **Emplacements d'installation**  
   
- En supposant que vous utilisez les emplacements de fichiers et l'installation par défaut, le répertoire de base se trouve dans C:\Program Files\Microsoft SQL Server. Dans ce répertoire, les emplacements d'installation des binaires et des assemblys sont les suivants :  
+ En supposant que vous utilisez les emplacements de fichiers et l'installation par défaut, le répertoire de base se trouve dans C:\Program Files\Microsoft SQL Server. Dans ce répertoire, les emplacements d'installation des binaires et des assemblys sont les suivants :  
   
--   Sur un système 32 bits :  
+-   Sur un système 32 bits :  
   
      [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Outils  
   
      \- - OU -  
   
-     \<Répertoire des fonctionnalités partagées>\Tools\\(autre répertoire des fonctionnalités partagées, fourni par l’utilisateur)  
+     \<Partager le répertoire des fonctionnalités > \Tools\\(répertoire de fonctionnalités partagées fourni par l’utilisateur)  
   
--   Sur un système 64 bits :  
+-   Sur un système 64 bits :  
   
      C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86)\130\Tools  
   
      \- - OU -  
   
-     \<Répertoire des fonctionnalités partagées (x86)>\Tools\\(autre répertoire des fonctionnalités partagées (x86), fourni par l’utilisateur)  
+     \<Partager le répertoire des fonctionnalités (x86) > \Tools\\(fourni par l’utilisateur autre (x86) répertoire des fonctionnalités partagées)  
   
-#### Pour installer les fonctionnalités Distributed Replay  
+#### <a name="to-install-distributed-replay-features"></a>Pour installer les fonctionnalités Distributed Replay  
   
 1.  Pour démarrer l'installation d'une fonctionnalité Distributed Replay, démarrez l'Assistant Installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
@@ -129,7 +134,7 @@ caps.handback.revision: 21
     > [!IMPORTANT]  
     >  Une fois que vous avez installé Distributed Replay, vous devez créer des règles de pare-feu sur le contrôleur et les ordinateurs clients, et accorder des autorisations à chaque ordinateur client sur le serveur cible. Pour plus d’informations, consultez [Suivre les étapes consécutives à l’installation](../../tools/distributed-replay/complete-the-post-installation-steps.md).  
   
-### Sécurité du .NET Framework  
+### <a name="net-framework-security"></a>Sécurité du .NET Framework  
  Vous devez posséder des autorisations administratives pour installer les fonctionnalités de Distributed Replay. Seule une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disposant d’autorisations sysadmin peut ajouter des comptes de services clients au rôle serveur sysadmin du serveur de test. Pour plus d'informations sur les questions de sécurité de Distributed Replay, consultez [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
   
 ##  <a name="bkmk_command_prompt"></a> Installer Distributed Replay à partir de l'invite de commandes  
@@ -138,8 +143,8 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  Pour des installations locales, vous devez exécuter le programme d'installation en tant qu'administrateur. Si vous installez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine qui a les autorisations de lecture et d'exécution sur le partage distant.  
   
-### Paramètres d'installation  
- La liste des fonctionnalités prioritaires comprend [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et Tools. La fonctionnalité Tools installera les outils d'administration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ainsi que d'autres composants partagés. Pour installer les composants Distributed Replay, spécifiez les paramètres suivants :  
+### <a name="installation-parameters"></a>Paramètres d'installation  
+ La liste des fonctionnalités prioritaires comprend [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]et Tools. La fonctionnalité Tools installera les outils d'administration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ainsi que d'autres composants partagés. Pour installer les composants Distributed Replay, spécifiez les paramètres suivants :  
   
 |Composant|Paramètre|  
 |---------------|---------------|  
@@ -157,7 +162,7 @@ caps.handback.revision: 21
 |/CTLRSVCACCOUNT<br /><br /> **Ce paramètre est facultatif**|Compte de service Distributed Replay Controller.|Vérifie le compte et le mot de passe|  
 |/CTLRSVCPASSWORD<br /><br /> **Ce paramètre est facultatif**|Mot de passe du compte de service Distributed Replay Controller.|Vérifie le compte et le mot de passe|  
 |/CTLRSTARTUPTYPE<br /><br /> **Ce paramètre est facultatif**|Type de démarrage pour le compte de service Distributed Replay Controller.|Automatique<br /><br /> Désactivé<br /><br /> Manuel|  
-|/CTLRUSERS<br /><br /> **Ce paramètre est facultatif**|Spécifiez les utilisateurs qui disposent d'autorisations pour le service Distributed Replay Controller.|Ensemble de chaînes de compte d'utilisateur utilisant «   » (espace) comme séparateur<br /><br /> **Important**: lorsque vous configurez le service Distributed Replay Controller, vous pouvez spécifier un ou plusieurs comptes d'utilisateurs qui seront utilisés pour exécuter les services Distributed Replay Client. Vous trouverez ci-dessous la liste des comptes pris en charge :<br /><br /> Compte d'utilisateur de domaine<br /><br /> Compte d'utilisateur local créé par l'utilisateur<br /><br /> Administrateur<br /><br /> Administrateur<br /><br /> Compte virtuel et Compte de service administré (MSA)<br /><br /> Services réseau, Services locaux et Système<br /><br /> <br /><br /> Remarque : les comptes de groupe (locaux ou de domaine) et autres comptes intégrés (comme Tout le monde) ne sont pas acceptés.|  
+|/CTLRUSERS<br /><br /> **Ce paramètre est facultatif**|Spécifiez les utilisateurs qui disposent d'autorisations pour le service Distributed Replay Controller.|Ensemble de chaînes de compte d'utilisateur utilisant «   » (espace) comme séparateur<br /><br /> **Important**: lorsque vous configurez le service Distributed Replay Controller, vous pouvez spécifier un ou plusieurs comptes d'utilisateurs qui seront utilisés pour exécuter les services Distributed Replay Client. Vous trouverez ci-dessous la liste des comptes pris en charge :<br /><br /> Compte d'utilisateur de domaine<br /><br /> Compte d'utilisateur local créé par l'utilisateur<br /><br /> Administrateur<br /><br /> Administrateur<br /><br /> Compte virtuel et Compte de service administré (MSA)<br /><br /> Services réseau, Services locaux et Système<br /><br /> <br /><br /> Remarque : les comptes de groupe (locaux ou de domaine) et autres comptes intégrés (comme Tout le monde) ne sont pas acceptés.|  
 |/CLTSVCACCOUNT<br /><br /> **Ce paramètre est facultatif**|Compte de service Distributed Replay Client.|Vérifie le compte et le mot de passe|  
 |/CLTSVCPASSWORD<br /><br /> **Ce paramètre est facultatif**|Mot de passe du compte du service Distributed Replay Client.|Vérifie le compte et le mot de passe|  
 |/CLTSTARTUPTYPE<br /><br /> **Ce paramètre est facultatif**|Type de démarrage du compte du service Distributed Replay Client.|Automatique<br /><br /> Désactivé<br /><br /> Manuel|  
@@ -165,7 +170,7 @@ caps.handback.revision: 21
 |/CLTWORKINGDIR<br /><br /> **Ce paramètre est facultatif**|Répertoire de travail du service Distributed Replay Client.|Chemin d'accès valide|  
 |/CLTRESULTDIR<br /><br /> **Ce paramètre est facultatif**|Répertoire des résultats du service Distributed Replay Client.|Chemin d'accès valide|  
   
-### Exemple de syntaxe :  
+### <a name="sample-syntax"></a>Exemple de syntaxe :  
  **Pour installer le composant contrôleur de Distributed Replay**  
   
 ```  
@@ -181,7 +186,7 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
 ##  <a name="bkmk_configuration_file"></a> Installer Distributed Replay à l'aide d'un fichier de configuration  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet de générer un fichier de configuration basé sur les entrées utilisateur et les entrées système par défaut. Si vous spécifiez que vous souhaitez que les outils d'administration soient installés, vous pouvez utiliser le fichier de configuration pour déployer les trois composants Distributed Replay (outil d'administration, Distributed Replay Controller et Distributed Replay Client). Il prend en charge l'installation, la réparation et la désinstallation des composants Distributed Replay.  
   
- Le programme d'installation ne prend en charge l'utilisation du fichier de configuration qu'à l'aide de la ligne de commande. L'ordre de traitement des paramètres lors de l'utilisation du fichier de configuration est décrit ci-dessous :  
+ Le programme d'installation ne prend en charge l'utilisation du fichier de configuration qu'à l'aide de la ligne de commande. L'ordre de traitement des paramètres lors de l'utilisation du fichier de configuration est décrit ci-dessous :  
   
 -   Le fichier de configuration remplace les valeurs par défaut d'un package.  
   
@@ -192,19 +197,19 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
 > [!IMPORTANT]  
 >  Une fois que vous avez installé Distributed Replay, vous devez créer des règles de pare-feu sur le contrôleur et les ordinateurs clients, et accorder des autorisations à chaque ordinateur client sur le serveur cible. Pour plus d’informations, consultez [Suivre les étapes consécutives à l’installation](../../tools/distributed-replay/complete-the-post-installation-steps.md).  
   
-#### Pour générer un fichier de configuration  
+#### <a name="to-generate-a-configuration-file"></a>Pour générer un fichier de configuration  
   
 1.  Suivez le déroulement des étapes de l'Assistant Installation jusqu'à la page **Prêt pour l'installation** . Le chemin d'accès au fichier de configuration est spécifié dans la page **Prêt pour l'installation** , dans la section relative au chemin d'accès du fichier de configuration.  
   
 2.  Annulez l'exécution du programme d'installation sans réellement terminer l'installation afin de générer le fichier INI.  
   
-#### Pour installer Distributed Replay à l'aide du fichier de configuration  
+#### <a name="to-install-distributed-replay-using-the-configuration-file"></a>Pour installer Distributed Replay à l'aide du fichier de configuration  
   
 -   Exécutez l'installation à partir de l'invite de commandes et spécifiez le fichier ConfigurationFile.ini à l'aide du paramètre ConfigurationFile.  
   
  **Exemple de syntaxe**  
   
- Voici un exemple montrant comment spécifier le fichier de configuration lors de l'invite de commandes :  
+ Voici un exemple montrant comment spécifier le fichier de configuration lors de l'invite de commandes :  
   
 ```  
 Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / ConfigurationFile=ConfigurationFile.INI\  
@@ -213,11 +218,12 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
 > [!NOTE]  
 >  Vous devez spécifier les deux mots de passe dans la ligne de commande car il n'est pas possible de les configurer dans le fichier de configuration.  
   
-## Voir aussi  
- [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Conditions requises par Distributed Replay](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Options de ligne de commande de l’outil d’administration &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Conditions préalables de relecture distribuée](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Options de ligne de commande de l’outil Administration &#40; Distributed Replay Utility &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configurer Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   
+

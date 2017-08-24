@@ -1,35 +1,40 @@
 ---
-title: "Transformation de recherche de terme | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.termlookuptrans.f1"
-helpviewer_keywords: 
-  - "extraction de données [Integration Services]"
-  - "correspondance des termes extraits [Integration Services]"
-  - "extraction de texte [Integration Services]"
-  - "extractions de termes [Integration Services]"
-  - "recherches [Integration Services]"
-  - "compte des éléments extraits"
-  - "transformation de recherche de terme"
+title: Transformation de recherche de terme | Documents Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.termlookuptrans.f1
+helpviewer_keywords:
+- extracting data [Integration Services]
+- match extracted terms [Integration Services]
+- text extraction [Integration Services]
+- term extractions [Integration Services]
+- lookups [Integration Services]
+- counting extracted items
+- Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 caps.latest.revision: 56
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 56
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3eefbab1c6f9b3cd5e51faa9e875a44218c33b3f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transformation de recherche de terme
+# <a name="term-lookup-transformation"></a>transformation de recherche de terme
   La transformation de recherche de terme met en correspondance des termes extraits de texte d'une colonne d'entrée de transformation avec les termes d'une table de référence. Elle compte ensuite le nombre de fois où un terme de la table de recherche apparaît dans le dataset d'entrée, puis écrit ce nombre et le terme de la table de référence dans les colonnes de la sortie de la transformation. Cette transformation est utile pour créer une liste personnalisée de termes reposant sur le texte d'entrée et complétée de statistiques de fréquence.  
   
- Avant d'effectuer une recherche, la transformation de recherche de terme extrait des mots du texte dans une colonne d'entrée à l'aide de la même méthode que la transformation d'extraction de terme :  
+ Avant d'effectuer une recherche, la transformation de recherche de terme extrait des mots du texte dans une colonne d'entrée à l'aide de la même méthode que la transformation d'extraction de terme :  
   
 -   Le texte est divisé en phrases.  
   
@@ -39,17 +44,17 @@ caps.handback.revision: 56
   
  Il est possible de configurer la transformation de recherche de terme de manière à effectuer une mise en correspondance respectant la casse.  
   
-## Correspondances  
- La recherche de terme effectue une recherche et renvoie une valeur en suivant les règles ci-dessous :  
+## <a name="matches"></a>Correspondances  
+ La recherche de terme effectue une recherche et renvoie une valeur en suivant les règles ci-dessous :  
   
 -   Si la transformation est configurée pour effectuer des mises en correspondance respectant la casse, les termes ne correspondant pas à la casse sont ignorés. Par exemple, *étudiant* et *ÉTUDIANT* sont considérés comme des termes distincts.  
   
     > [!NOTE]  
     >  Un mot dont la première lettre est une minuscule peut être mis en correspondance avec un mot dont la première lettre est une majuscule en début de phrase. Par exemple, *étudiant* et *Étudiant* sont mis en correspondance si *Étudiant* est le premier mot de la phrase.  
   
--   Si une forme plurielle du nom ou de la phrase nominale existe dans la table de référence, la recherche met en correspondance uniquement la forme plurielle du nom ou de la phrase nominale. Par exemple, les instances de *étudiants* et de *étudiant* sont comptabilisées de façon distincte.  
+-   Si une forme plurielle du nom ou de la phrase nominale existe dans la table de référence, la recherche met en correspondance uniquement la forme plurielle du nom ou de la phrase nominale. Par exemple, les instances de *étudiants* et de *étudiant*sont comptabilisées de façon distincte.  
   
--   Si seule la forme singulier du mot se trouve dans la table de référence, les formes singulier et pluriel du mot ou de la phrase sont mises en correspondance avec la forme singulier. Par exemple, si la table de recherche contient *étudiant* et que la transformation trouve les mots *étudiant* et *étudiants*, ces deux mots seront comptabilisées comme des correspondances du terme *étudiant*.  
+-   Si seule la forme singulier du mot se trouve dans la table de référence, les formes singulier et pluriel du mot ou de la phrase sont mises en correspondance avec la forme singulier. Par exemple, si la table de recherche contient *étudiant*et que la transformation trouve les mots *étudiant* et *étudiants*, ces deux mots seront comptabilisées comme des correspondances du terme *étudiant*.  
   
 -   Si le texte de la colonne d'entrée est une phrase nominale contenant des lemmes, seul le dernier mot de la phrase nominale est affecté par la normalisation. Par exemple, la version avec lemmes de *visites avec les médecins* est *visite avec les médecins*.  
   
@@ -57,23 +62,23 @@ caps.handback.revision: 56
   
 |Élément|Value|  
 |----------|-----------|  
-|Terme entré|Windows 7 Professionnel|  
-|Termes de référence|Windows, Windows 7 Professionnel|  
+|Terme entré|Windows 7 Professionnel|  
+|Termes de référence|Windows, Windows 7 Professionnel|  
 |Sortie|Windows|  
   
- La transformation de recherche de terme peut mettre en correspondance des noms et des phrases nominales contenant des caractères spéciaux. Les données de la table de référence peuvent inclure ces caractères. Les caractères spéciaux sont les suivants : %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ et ‘.  
+ La transformation de recherche de terme peut mettre en correspondance des noms et des phrases nominales contenant des caractères spéciaux. Les données de la table de référence peuvent inclure ces caractères. Les caractères spéciaux sont les suivantes : %, @, &, $, #, \*, :,,., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (,), [,], {,}, », et '.  
   
-## Types de données  
+## <a name="data-types"></a>Types de données  
  La transformation de recherche de terme ne peut utiliser qu'une colonne contenant le type de données DT_WSTR ou DT_NTEXT. Si une colonne contient du texte, mais pas l'un de ces types de données, la transformation de conversion de données peut ajouter une colonne avec le type de données DT_WSTR ou DT_NTEXT au flux de données, puis copier les valeurs de la colonne dans cette nouvelle colonne. La sortie de la transformation de conversion de données peut ensuite être utilisée comme entrée de la transformation de recherche de terme. Pour plus d’informations, voir [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md).  
   
-## Configuration de la transformation de recherche de terme  
+## <a name="configuration-the-term-lookup-transformation"></a>Configuration de la transformation de recherche de terme  
  Les colonnes d’entrée de la transformation de recherche de terme incluent la propriété InputColumnType, qui indique l’utilisation de la colonne. InputColumnType peut contenir les valeurs ci-dessous :  
   
--   La valeur 0 indique que la colonne est transmise à la sortie uniquement et n'est pas utilisée dans la recherche.  
+-   La valeur 0 indique que la colonne est transmise à la sortie uniquement et n'est pas utilisée dans la recherche.  
   
--   La valeur 1 indique que la colonne est utilisée dans la recherche uniquement.  
+-   La valeur 1 indique que la colonne est utilisée dans la recherche uniquement.  
   
--   La valeur 2 indique que la colonne est transmise à la sortie et est utilisée dans la recherche.  
+-   La valeur 2 indique que la colonne est transmise à la sortie et est utilisée dans la recherche.  
   
  Les colonnes de sortie de la transformation, dont la propriété InputColumnType a la valeur 0 ou 2, sont accompagnées de la propriété CustomLineageID, qui contient l’identificateur de lignage affecté à la colonne par un composant amont du flux de données.  
   
@@ -91,7 +96,7 @@ caps.handback.revision: 56
   
  Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de transformation de recherche de terme**, cliquez sur l’une des rubriques suivantes :  
+ Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de transformation de recherche de terme** , cliquez sur l’une des rubriques suivantes :  
   
 -   [Éditeur de transformation de recherche de terme &#40;onglet Table de référence&#41;](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-reference-table-tab.md)  
   
@@ -101,7 +106,7 @@ caps.handback.revision: 56
   
  Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
--   [Propriétés communes](../Topic/Common%20Properties.md)  
+-   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriétés personnalisées des transformations](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

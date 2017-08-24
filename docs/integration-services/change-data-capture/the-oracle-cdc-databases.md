@@ -1,22 +1,27 @@
 ---
-title: "Bases de donn&#233;es de capture de donn&#233;es modifi&#233;es Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Les bases de données Oracle CDC | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 caps.latest.revision: 17
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de8243fb726a9154222f240c5b032291d454befb
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Bases de donn&#233;es de capture de donn&#233;es modifi&#233;es Oracle
+# <a name="the-oracle-cdc-databases"></a>Bases de données de capture de données modifiées Oracle
   Une instance Oracle CDC est associée à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le même nom sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible. Cette base de données est appelée base de données de capture de données modifiées Oracle (ou base de données CDC).  
   
  La base de données CDC est créée et configurée à l'aide de la console du concepteur de capture de données modifiées Oracle et contient les éléments suivants :  
@@ -44,7 +49,7 @@ caps.handback.revision: 17
  Lorsqu'une base de données CDC est créée et des tables Oracle de source CDC sont installées, le propriétaire de la base de données CDC peut accorder l'autorisation SELECT des tables miroir et définir des rôles de régulation SQL Server CDC pour contrôler l'accès aux données modifiées.  
   
 ## <a name="mirror-tables"></a>Tables miroir  
- Pour chaque table capturée, \<schema-name>.\<table-name>, dans la base de données source Oracle, une table vide similaire est créée dans la base de données CDC, avec les mêmes noms de schéma et de table. Les tables sources Oracle avec le nom de schéma `cdc` (ne respectant pas la casse) ne peuvent pas être capturées, car le schéma `cdc` dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est réservé pour SQL Server CDC.  
+ Pour chaque table capturée, \<nom de schéma >.\< nom de la table >, dans la base de données source Oracle, une table vide similaire est créée dans la base de données de capture de données modifiées, portant le même nom de schéma et une table. Les tables sources Oracle avec le nom de schéma `cdc` (ne respectant pas la casse) ne peuvent pas être capturées, car le schéma `cdc` dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est réservé pour SQL Server CDC.  
   
  Les tables miroir sont vides ; aucune donnée n'est stockée dans ces dernières. Elles servent à activer l'infrastructure standard SQL Server CDC utilisée par l'instance Oracle CDC. Pour empêcher l'insertion ou la mise à jour des données dans les tables miroir, toutes les opérations UPDATE, DELETE et INSERT sont refusées pour le rôle PUBLIC. Cela garantit qu'elles ne peuvent pas être modifiées.  
   
@@ -72,23 +77,23 @@ caps.handback.revision: 17
   
 -   [cdc.xdbcdc_staged_transactions](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions)  
   
-###  <a name="a-namebkmkchangetablescta-change-tables-ct"></a><a name="BKMK_Change_Tables_CT"></a> Tables de modifications (_CT)  
+###  <a name="BKMK_Change_Tables_CT"></a> Tables de modifications (_CT)  
  Les tables de modifications sont créées à partir des tables miroir. Elles contiennent les données modifiées qui sont capturées dans la base de données Oracle. Les tables sont nommées en fonction de la convention suivante :  
   
- **[cdc].[\<capture-instance>_CT]**  
+ **[cdc]. [\<instance de capture > _CT]**  
   
  Lorsque la capture est initialement activée pour la table `<schema-name>.<table-name>`, le nom par défaut de l'instance de capture est `<schema-name>_<table-name>`. Par exemple, le nom par défaut de l'instance de capture pour la table Oracle HR.EMPLOYEES est HR_EMPLOYEES et la table de modifications associée est [cdc]. [HR_EMPLOYEES_CT].  
   
  Les tables de capture sont écrites par l'instance Oracle CDC. Elles sont lues à l'aide de fonctions table spéciales générées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsque l'instance de capture est créée. Par exemple, `fn_cdc_get_all_changes_HR_EMPLOYEES`. Pour plus d’informations sur ces fonctions CDC, consultez [Fonctions de capture de données modifiées (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=231152).  
   
-###  <a name="a-namebkmkcdclsntimemappinga-cdclsntimemapping"></a><a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
+###  <a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  La table **[cdc].[lsn_time_mapping]** est générée par le composant SQL Server CDC. Son utilisation dans le cas de capture de données modifiées Oracle est différente de son utilisation normale.  
   
  Pour la capture de données modifiées Oracle, les valeurs LSN stockées dans cette table reposent sur la valeur SCN (System Change Number) Oracle associée à la modification. Les 6 premiers octets de la valeur LSN constituent le numéro SCN Oracle d'origine.  
   
  En outre, lors de l'utilisation d'Oracle CDC, les colonnes de temps (`tran_begin_time` et `tran_end_time`) stockent l'heure UTC de la modification plutôt que l'heure locale, comme avec SQL Server CDC standard. Cela garantit que les modifications de l'heure d'été n'affectent pas les données stockées dans lsn_time_mapping.  
   
-###  <a name="a-namebkmkcdcxdbcdcconfiga-cdcxdbcdcconfig"></a><a name="BKMK_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
+###  <a name="BKMK_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
  Cette table contient les données de configuration de l'instance Oracle CDC. Elle est mise à jour à l'aide de la console du concepteur CDC. Cette table a une seule ligne.  
   
  Le tableau suivant décrit les colonnes de la table **cdc.xdbcdc_config** .  
@@ -131,7 +136,7 @@ caps.handback.revision: 17
 |CDC_stop_on_breaking_schema_changes|False|-|-|False|Propriété booléenne. **True** indique l’arrêt quand une modification avec rupture du schéma est détectée.<br /><br /> **False** indique la suppression de la table miroir et de l’instance de capture.|  
 |source_oracle_home||-|-|False|Peut être défini sur un chemin racine Oracle spécifique ou un nom de dossier racine Oracle que l'instance de capture de données modifiées utilisera pour se connecter à Oracle.|  
   
-###  <a name="a-namebkmkcdcxdbcdcstatea-cdcxdbcdcstate"></a><a name="BKMK_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
+###  <a name="BKMK_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
  Cette table contient des informations sur l'état persistant de l'instance Oracle CDC. L'état de capture est utilisé dans des scénarios de récupération et de basculement et à des fins de contrôle d'intégrité.  
   
  Le tableau suivant décrit les colonnes de la table **cdc.xdbcdc_state** .  
@@ -156,7 +161,7 @@ caps.handback.revision: 17
 |read_changes|Nombre d'enregistrements de modification lus dans le journal des transactions Oracle source.|  
 |staged_transactions|Nombre de transactions actives intermédiaires dans la table **cdc.xdbcdc_staged_transactions** .|  
   
-###  <a name="a-namebkmkcdcxdbcdctracea-cdcxdbcdctrace"></a><a name="BKMK_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
+###  <a name="BKMK_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
  Cette table contient des informations sur le fonctionnement de l'instance de capture de données modifiées. Les informations stockées dans cette table incluent les enregistrements d'erreur, les modifications notables d'état et les enregistrements de trace. Les informations d’erreur sont également écrites dans le journal des événements Windows pour garantir que les informations sont disponibles si la table **cdc.xcbcdc_trace** n’est pas disponible.  
   
  Le tableau suivant décrit les colonnes de la table cdc.xdbcdc_trace :  
@@ -171,7 +176,7 @@ caps.handback.revision: 17
 |status_message|Message d'état utilisé par la table d'état.|  
 |données|Informations supplémentaires pour les cas où l'erreur ou l'enregistrement de trace contient une charge utile (par exemple, un enregistrement de journal endommagé).|  
   
-###  <a name="a-namebkmkcdcxdbcdcstagedtransactionsa-cdcxdbcdcstagedtransactions"></a><a name="BKMK_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
+###  <a name="BKMK_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
  Cette table stocke les enregistrements de modification des transactions de grande taille ou longues jusqu'à ce que l'événement de validation ou de restauration de transaction soit capturé. Le service de capture de données modifiées Oracle classe les enregistrements de journal capturés par heure de validation de transaction, puis par ordre chronologique pour chaque transaction. Les enregistrements de journaux pour la même transaction sont stockés en mémoire jusqu'à ce que la transaction se termine, puis sont écrits dans la table de modifications cible ou ignorés (en cas de restauration). Comme il existe une quantité limitée de mémoire disponible, les grandes transactions sont écrites dans la table **cdc.xdbcdc_staged_transactions** jusqu’à ce que la transaction soit terminée. Les transactions sont également écrites dans la table de mise en lots lorsqu'elles s'exécutent longtemps. Par conséquent, lorsque l'instance Oracle CDC est redémarrée, les anciennes modifications n'ont pas besoin d'être relues dans les journaux des transactions Oracle.  
   
  Le tableau suivant décrit les colonnes de la table **cdc.xdbcdc_staged_transactions** .  

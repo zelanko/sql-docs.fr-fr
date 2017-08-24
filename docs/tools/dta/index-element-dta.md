@@ -1,29 +1,34 @@
 ---
-title: "&#201;l&#233;ment Index (Assistant Param&#233;trage de base de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "Index, élément (Assistant Paramétrage de base de données)"
+title: "Index de l’élément (DTA) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- XML
+helpviewer_keywords:
+- Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5d5affde03096be39cb219ecb0bac2e402761622
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# &#201;l&#233;ment Index (Assistant Param&#233;trage de base de donn&#233;es)
+# <a name="index-element-dta"></a>Index, élément (Assistant Paramétrage de base de données)
   Contient les informations sur un index que vous souhaitez créer ou supprimer pour une configuration spécifiée par l'utilisateur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,42 +40,42 @@ caps.handback.revision: 18
     </Index>  
 ```  
   
-## Attributs des éléments  
+## <a name="element-attributes"></a>Attributs des éléments  
   
 |Attribut d'index|Type de données|Description|  
 |---------------------|---------------|-----------------|  
-|**Cluster**|**boolean**|Ce paramètre est facultatif. Spécifie un index cluster. Défini sur « true » ou « false », par exemple :<br /><br /> `<Index Clustered="true">`<br /><br /> Par défaut, cet attribut est défini sur « false ».|  
-|**Unique**|**boolean**|Ce paramètre est facultatif. Spécifie un index unique Défini sur « true » ou « false », par exemple :<br /><br /> `<Index Unique="true">`<br /><br /> Par défaut, cet attribut est défini sur « false ».|  
-|**En ligne**|**boolean**|Ce paramètre est facultatif. Spécifie un index qui peut effectuer des opérations alors que le serveur est connecté, ce qui nécessite de l'espace disque temporaire. Défini sur « true » ou « false », par exemple :<br /><br /> `<Index Online="true">`<br /><br /> Par défaut, cet attribut est défini sur « false ».<br /><br /> Pour plus d'informations, consultez [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).|  
-|**IndexSizeInMB**|**double**|Ce paramètre est facultatif. Spécifie la taille maximale, en mégaoctets, de l'index, par exemple :<br /><br /> `<Index IndexSizeInMB="873.75">`<br /><br /> Aucun paramètre par défaut.|  
-|**NumberOfRows**|**entier**|Ce paramètre est facultatif. Simule différentes tailles d'index, ce qui simule différentes tailles de tables, par exemple :<br /><br /> `<Index NumberOfRows="3000">`<br /><br /> Aucun paramètre par défaut.|  
-|**QUOTED_IDENTIFIER**|**boolean**|Ce paramètre est facultatif. Force [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à suivre les règles ISO concernant les guillemets délimitant les identificateurs et les chaînes littérales. Cet attribut doit être activé si l'index se trouve sur une colonne calculée ou une vue. Par exemple, la syntaxe suivante active cet attribut :<br /><br /> `<Index QUOTED_IDENTIFIER [...]>`<br /><br /> Par défaut, cet attribut est désactivé.<br /><br /> Pour plus d’informations, consultez [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).|  
-|**ARITHABORT**|**boolean**|Ce paramètre est facultatif. Entraîne l'arrêt d'une requête lorsqu'un dépassement de capacité ou une division par zéro se produit durant son exécution. Cet attribut doit être activé si l'index se trouve sur une colonne calculée ou une vue. Par exemple, la syntaxe suivante active cet attribut :<br /><br /> `<Index ARITHABORT [...]>`<br /><br /> Par défaut, cet attribut est désactivé.<br /><br /> Pour plus d’informations, consultez [SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md).|  
-|**CONCAT_NULL_YIELDS_**<br /><br /> **NULL**|**boolean**|Ce paramètre est facultatif. Détermine si les résultats de concaténation sont considérés comme des valeurs NULL ou des chaînes vides. Cet attribut doit être activé si l'index se trouve sur une colonne calculée ou une vue. Par exemple, la syntaxe suivante active cet attribut :<br /><br /> `<Index CONCAT_NULL_YIELDS_NULL [...]>`<br /><br /> Par défaut, cet attribut est désactivé.<br /><br /> Pour plus d’informations, consultez [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).|  
-|**ANSI_NULLS**|**boolean**|Ce paramètre est facultatif. Spécifie le comportement conforme à la norme ISO pour les opérateurs de comparaison égal à (=) et différent de (<>), lorsqu'ils sont utilisés avec des valeurs Null. Cet attribut doit être activé si l'index se trouve sur une colonne calculée ou une vue. Par exemple, la syntaxe suivante active cet attribut :<br /><br /> `<Index ANSI_NULLS [...]>`<br /><br /> Par défaut, cet attribut est désactivé.<br /><br /> Pour plus d’informations, consultez [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).|  
-|**ANSI_PADDING**|**boolean**|Ce paramètre est facultatif. Contrôle la façon dont une colonne stocke des valeurs plus courtes que sa taille définie Cet attribut doit être activé si l'index se trouve sur une colonne calculée ou une vue. Par exemple, la syntaxe suivante active cet attribut :<br /><br /> `<Index ANSI_PADDING [...]>`<br /><br /> Par défaut, cet attribut est désactivé.<br /><br /> Pour plus d’informations, consultez [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).|  
-|**ANSI_WARNINGS**|**boolean**|Ce paramètre est facultatif. Spécifie le comportement conforme à la norme ISO pour plusieurs conditions d'erreur : Cet attribut doit être activé si l'index se trouve sur une colonne calculée ou une vue. Par exemple, la syntaxe suivante active cet attribut :<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> Par défaut, cet attribut est désactivé.<br /><br /> Pour plus d’informations, consultez [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md).|  
-|**NUMERIC_ROUNDABORT**|**boolean**|Ce paramètre est facultatif. Spécifie le niveau de gravité de l'erreur générée lorsqu'un arrondi effectué dans une expression entraîne une perte de précision. Cet attribut doit être désactivé si l'index se trouve sur une colonne calculée ou une vue.<br /><br /> La syntaxe suivante active cet attribut :<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> Par défaut, cet attribut est désactivé.<br /><br /> Pour plus d’informations, consultez [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md).|  
+|**Cluster**|**boolean**|Ce paramètre est facultatif. Spécifie un index cluster. Défini sur « true » ou « false », par exemple :<br /><br /> `<Index Clustered="true">`<br /><br /> Par défaut, cet attribut est défini sur « false ».|  
+|**Unique**|**boolean**|Ce paramètre est facultatif. Spécifie un index unique Défini sur « true » ou « false », par exemple :<br /><br /> `<Index Unique="true">`<br /><br /> Par défaut, cet attribut est défini sur « false ».|  
+|**En ligne**|**boolean**|Ce paramètre est facultatif. Spécifie un index qui peut effectuer des opérations alors que le serveur est connecté, ce qui nécessite de l'espace disque temporaire. Défini sur « true » ou « false », par exemple :<br /><br /> `<Index Online="true">`<br /><br /> Par défaut, cet attribut est défini sur « false ».<br /><br /> Pour plus d'informations, consultez [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).|  
+|**IndexSizeInMB**|**double**|Ce paramètre est facultatif. Spécifie la taille maximale, en mégaoctets, de l'index, par exemple :<br /><br /> `<Index IndexSizeInMB="873.75">`<br /><br /> Aucun paramètre par défaut.|  
+|**NumberOfRows**|**entier**|Ce paramètre est facultatif. Simule différentes tailles d'index, ce qui simule différentes tailles de tables, par exemple :<br /><br /> `<Index NumberOfRows="3000">`<br /><br /> Aucun paramètre par défaut.|  
+|**QUOTED_IDENTIFIER**|**boolean**|Ce paramètre est facultatif. Force [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à suivre les règles ISO concernant les guillemets délimitant les identificateurs et les chaînes littérales. Cet attribut doit être activé si l'index se trouve sur une colonne calculée ou une vue. Par exemple, la syntaxe suivante active cet attribut :<br /><br /> `<Index QUOTED_IDENTIFIER [...]>`<br /><br /> Par défaut, cet attribut est désactivé.<br /><br /> Pour plus d’informations, consultez [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).|  
+|**ARITHABORT**|**boolean**|Ce paramètre est facultatif. Entraîne l'arrêt d'une requête lorsqu'un dépassement de capacité ou une division par zéro se produit durant son exécution. Cet attribut doit être activé si l'index se trouve sur une colonne calculée ou une vue. Par exemple, la syntaxe suivante active cet attribut :<br /><br /> `<Index ARITHABORT [...]>`<br /><br /> Par défaut, cet attribut est désactivé.<br /><br /> Pour plus d’informations, consultez [SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md).|  
+|**CONCAT_NULL_YIELDS_**<br /><br /> **NULL**|**boolean**|Ce paramètre est facultatif. Détermine si les résultats de concaténation sont considérés comme des valeurs NULL ou des chaînes vides. Cet attribut doit être activé si l'index se trouve sur une colonne calculée ou une vue. Par exemple, la syntaxe suivante active cet attribut :<br /><br /> `<Index CONCAT_NULL_YIELDS_NULL [...]>`<br /><br /> Par défaut, cet attribut est désactivé.<br /><br /> Pour plus d’informations, consultez [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).|  
+|**ANSI_NULLS**|**boolean**|Ce paramètre est facultatif. Spécifie le comportement conforme à la norme ISO pour les opérateurs de comparaison égal à (=) et différent de (<>), lorsqu'ils sont utilisés avec des valeurs Null. Cet attribut doit être activé si l'index se trouve sur une colonne calculée ou une vue. Par exemple, la syntaxe suivante active cet attribut :<br /><br /> `<Index ANSI_NULLS [...]>`<br /><br /> Par défaut, cet attribut est désactivé.<br /><br /> Pour plus d’informations, consultez [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).|  
+|**ANSI_PADDING**|**boolean**|Ce paramètre est facultatif. Contrôle la façon dont une colonne stocke des valeurs plus courtes que sa taille définie Cet attribut doit être activé si l'index se trouve sur une colonne calculée ou une vue. Par exemple, la syntaxe suivante active cet attribut :<br /><br /> `<Index ANSI_PADDING [...]>`<br /><br /> Par défaut, cet attribut est désactivé.<br /><br /> Pour plus d’informations, consultez [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).|  
+|**ANSI_WARNINGS**|**boolean**|Ce paramètre est facultatif. Spécifie le comportement conforme à la norme ISO pour plusieurs conditions d'erreur : Cet attribut doit être activé si l'index se trouve sur une colonne calculée ou une vue. Par exemple, la syntaxe suivante active cet attribut :<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> Par défaut, cet attribut est désactivé.<br /><br /> Pour plus d’informations, consultez [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md).|  
+|**NUMERIC_ROUNDABORT**|**boolean**|Ce paramètre est facultatif. Spécifie le niveau de gravité de l'erreur générée lorsqu'un arrondi effectué dans une expression entraîne une perte de précision. Cet attribut doit être désactivé si l'index se trouve sur une colonne calculée ou une vue.<br /><br /> La syntaxe suivante active cet attribut :<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> Par défaut, cet attribut est désactivé.<br /><br /> Pour plus d’informations, consultez [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md).|  
   
-## Caractéristiques de l'élément  
+## <a name="element-characteristics"></a>Caractéristiques de l'élément  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |**Type de données et longueur**|Aucun.|  
 |**Valeur par défaut**|Aucun.|  
-|**Occurrence**|Obligatoire une fois pour chaque élément **Create** ou **Drop** si aucune autre structure PDS n’est spécifiée avec les éléments **Statistics** ou **Heap**.|  
+|**Occurrence**|Obligatoire une fois pour chaque élément **Create** ou **Drop** si aucune autre structure PDS n’est spécifiée avec les éléments **Statistics** ou **Heap** .|  
   
-## Relations entre les éléments  
+## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[Create, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/create-element-dta.md)<br /><br /> Élément **Drop**. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.|  
-|**Éléments enfants**|[Name, élément pour les index &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Column, élément pour les index &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> Élément **PartitionScheme**. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> Élément **PartitionColumn**. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> [Filegroup, élément pour les index &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> Élément **NumberOfReferences**. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> Élément **PercentUsage**. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.|  
+|**Élément parent**|[Create, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/create-element-dta.md)<br /><br /> Élément**Drop** . Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.|  
+|**Éléments enfants**|[Name, élément pour les Index &#40; DTA &#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Column, élément pour les index &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> Élément**PartitionScheme** . Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> Élément**PartitionColumn** . Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> [Filegroup, élément pour les index &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> Élément**NumberOfReferences** . Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> Élément**PercentUsage** . Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.|  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  Pour obtenir un exemple d’utilisation de cet élément, consultez l’[Exemple de fichier d’entrée XML avec une configuration spécifiée par l’utilisateur &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

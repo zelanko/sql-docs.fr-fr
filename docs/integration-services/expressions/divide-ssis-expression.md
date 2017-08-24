@@ -1,28 +1,33 @@
 ---
-title: "Diviser (expression SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "/ (divide)"
-  - "division, opérateur (/)"
+title: Diviser (Expression SSIS) | Documents Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- / (divide)
+- divide operator (/)
 ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
 caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bf7ca9400837b33ed016c03408028b0102c7418f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Diviser (expression SSIS)
+# <a name="divide-ssis-expression"></a>Diviser (expression SSIS)
   Divise la première expression numérique par la deuxième.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -30,17 +35,17 @@ dividend / divisor
   
 ```  
   
-## Arguments  
+## <a name="arguments"></a>Arguments  
  *dividend*  
- Expression numérique à diviser. *dividend* peut être n’importe quelle expression numérique valide. Pour plus d’informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Expression numérique à diviser. *dividend* peut être n’importe quelle expression numérique valide. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
  *divisor*  
  Expression numérique par laquelle diviser le dividende. *divisor* peut être n’importe quelle expression numérique valide, sauf zéro.  
   
-## Types des résultats  
+## <a name="result-types"></a>Types des résultats  
  Déterminés par les types de données des deux arguments. Pour plus d’informations, consultez [Types de données Integration Services dans les expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Si l'un des opérandes est NULL, le résultat est NULL.  
   
  La division par zéro n'est pas autorisée. L’évaluation de la sous-expression *divisor* génère l’une des erreurs suivantes :  
@@ -51,21 +56,21 @@ dividend / divisor
   
 -   Si la sous-expression *divisor* qui donne la valeur zéro contient des colonnes d’entrée, l’erreur se produit au moment de l’exécution et est gérée en fonction des règles de flux d’erreur du composant de flux de données.  
   
-## Exemples d'expressions  
+## <a name="expression-examples"></a>Exemples d'expressions  
  L'exemple suivant divise deux littéraux numériques.  
   
 ```  
 25 / 5  
 ```  
   
- L’exemple suivant divise les valeurs de la colonne **ListPrice** par celles de la colonne **StandardCost**.  
+ L’exemple suivant divise les valeurs de la colonne **ListPrice** par celles de la colonne **StandardCost** .  
   
 ```  
 ListPrice / StandardCost  
 ```  
   
-## Voir aussi  
- [Priorités et associativité des opérateurs](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Opérateurs &#40;expression SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Opérateurs et associativité](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Opérateurs &#40; Expression SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

@@ -1,51 +1,56 @@
 ---
-title: "TOKEN  (expression SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: TOKEN (Expression SSIS) | Documents Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff578d1f2ba584c64e471fa9514c6fa76e581d8e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# TOKEN  (expression SSIS)
+# <a name="token--ssis-expression"></a>TOKEN  (expression SSIS)
   Retourne un jeton (sous-chaîne) à partir d'une chaîne en fonction des délimiteurs spécifiés qui séparent les jetons de la chaîne et du numéro de jeton qui indique le jeton à retourner.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 TOKEN(character_expression, delimiter_string, occurrence)  
 ```  
   
-## Arguments  
+## <a name="arguments"></a>Arguments  
  *character_expression*  
  Chaîne qui contient des jetons séparés par des délimiteurs.  
   
  *delimiter_string*  
- Chaîne qui contient les caractères de délimitation. Par exemple, « ; , » contient trois caractères de délimitation : le point-virgule, un espace vide et une virgule.  
+ Chaîne qui contient les caractères de délimitation. Par exemple, « ; , » contient trois caractères de délimitation : le point-virgule, un espace vide et une virgule.  
   
  *occurrence*  
- Entier signé ou non signé qui spécifie le jeton à retourner. Par exemple, si vous spécifiez 3 comme valeur pour ce paramètre, le troisième jeton de la chaîne est retourné.  
+ Entier signé ou non signé qui spécifie le jeton à retourner. Par exemple, si vous spécifiez 3 comme valeur pour ce paramètre, le troisième jeton de la chaîne est retourné.  
   
-## Types des résultats  
+## <a name="result-types"></a>Types des résultats  
  DT_WSTR  
   
-## Notes  
- Cette fonction fractionne la chaîne <character_expression> dans un ensemble de jetons séparés par des délimiteurs spécifiés dans la chaîne <delimiter_string>, puis retourne le jeton N, où N est le nombre d’occurrences du jeton spécifié par le paramètre \<occurrence>. Consultez la section Exemples pour obtenir des exemples d'utilisation de cette fonction.  
+## <a name="remarks"></a>Notes  
+ Cette fonction fractionne la chaîne < character_expression > dans un ensemble de jetons séparés par des délimiteurs spécifiés dans l’élément < delimiter_string > et renvoie le jeton n où N est le nombre d’occurrences du jeton spécifié par le \<occurrence > paramètre. Consultez la section Exemples pour obtenir des exemples d'utilisation de cette fonction.  
   
- Les remarques suivantes s'appliquent à la fonction TOKEN :  
+ Les remarques suivantes s'appliquent à la fonction TOKEN :  
   
 -   La chaîne de délimitation peut contenir un ou plusieurs caractères de délimitation.  
   
--   Si la valeur du paramètre \<occurrence> est supérieure au nombre total de jetons présents dans la chaîne, la fonction retourne NULL.  
+-   Si la valeur de \<occurrence > le paramètre est supérieur au nombre total de jetons dans la chaîne, la fonction renvoie la valeur NULL.  
   
 -   Les délimiteurs de début sont ignorés.  
   
@@ -55,20 +60,20 @@ TOKEN(character_expression, delimiter_string, occurrence)
   
 -   Vous pouvez utiliser des variables et des colonnes comme valeurs de tous les arguments de l'expression.  
   
-## Exemples d'expressions  
- Dans l’exemple suivant, la fonction TOKEN retourne « a ». La chaîne « a little white dog » comprend 4 jetons (« a », « little », « white », « dog ») séparés par le délimiteur «   » (espace). Le deuxième argument, une chaîne de délimitation, spécifie un seul délimiteur, l'espace, à utiliser dans le fractionnement de la chaîne d'entrée en jetons. Le dernier argument, 1, indique le premier jeton à retourner. Le premier jeton est « a » dans cet exemple de chaîne.  
+## <a name="expression-examples"></a>Exemples d'expressions  
+ Dans l’exemple suivant, la fonction TOKEN retourne « a ». La chaîne « a little white dog » comprend 4 jetons (« a », « little », « white », « dog ») séparés par le délimiteur «   » (espace). Le deuxième argument, une chaîne de délimitation, spécifie un seul délimiteur, l'espace, à utiliser dans le fractionnement de la chaîne d'entrée en jetons. Le dernier argument, 1, indique le premier jeton à retourner. Le premier jeton est « a » dans cet exemple de chaîne.  
   
 ```  
 TOKEN("a little white dog"," ",1)  
 ```  
   
- Dans l'exemple suivant, la fonction TOKEN retourne « dog ». La chaîne de délimitation de cet exemple contient 5 délimiteurs. La chaîne d'entrée contient 4 jetons : « a », « little », « white », « dog ».  
+ Dans l'exemple suivant, la fonction TOKEN retourne « dog ». La chaîne de délimitation de cet exemple contient 5 délimiteurs. La chaîne d'entrée contient 4 jetons : « a », « little », « white », « dog ».  
   
 ```  
 TOKEN("a:little|white dog","| ,.:",4)  
 ```  
   
- Dans l'exemple suivant, la fonction TOKEN retourne «   » (une chaîne vide), car il n'y a pas 99 jetons dans la chaîne.  
+ Dans l'exemple suivant, la fonction TOKEN retourne «   » (une chaîne vide), car il n'y a pas 99 jetons dans la chaîne.  
   
 ```  
 TOKEN("a little white dog"," ",99)  
@@ -80,7 +85,7 @@ TOKEN("a little white dog"," ",99)
 TOKEN("a little white dog","|",1)  
 ```  
   
- Dans l'exemple suivant, la fonction TOKEN retourne « a ». Elle ignore tous les espaces de début.  
+ Dans l'exemple suivant, la fonction TOKEN retourne « a ». Elle ignore tous les espaces de début.  
   
 ```  
 TOKEN("        a little white dog", " ", 1)  
@@ -92,13 +97,13 @@ TOKEN("        a little white dog", " ", 1)
 TOKEN("2009/01/01", "/"), 1  
 ```  
   
- Dans l'exemple suivant, la fonction TOKEN retourne le nom de fichier figurant dans le chemin d'accès spécifié. Par exemple, si la valeur de User::Path est « c:\program files\data\myfile.txt », la fonction TOKEN retourne « myfile.txt ». La fonction TOKENCOUNT retourne 4 et la fonction TOKEN retourne le 4ème jeton, « myfile.txt ».  
+ Dans l'exemple suivant, la fonction TOKEN retourne le nom de fichier figurant dans le chemin d'accès spécifié. Par exemple, si la valeur de User::Path est « c:\program files\data\myfile.txt », la fonction TOKEN retourne « myfile.txt ». La fonction TOKENCOUNT retourne 4 et la fonction TOKEN retourne le 4ème jeton, « myfile.txt ».  
   
 ```  
 TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))  
 ```  
   
-## Voir aussi  
- [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Fonctions &#40; Expression SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

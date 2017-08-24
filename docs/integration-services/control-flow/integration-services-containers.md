@@ -1,39 +1,44 @@
 ---
-title: "Conteneurs Integration Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SSIS, conteneurs"
-  - "conteneurs [Integration Services]"
-  - "conteneurs [Integration Services], à propos des conteneurs"
-  - "flux de contrôle [Integration Services], conteneurs"
-  - "conteneurs SQL Server Integration Services"
+title: Conteneurs Integration Services | Documents Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SSIS containers
+- containers [Integration Services]
+- containers [Integration Services], about containers
+- control flow [Integration Services], containers
+- SQL Server Integration Services containers
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 95b6e69e463bd8e3b44e55c11d308b3d5a25ce63
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Conteneurs Integration Services
+# <a name="integration-services-containers"></a>Conteneurs Integration Services
   Les conteneurs sont des objets de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui fournissent une structure aux packages et des services aux tâches. Ils prennent en charge les flux de contrôle répétitifs dans les packages, et regroupent les tâches et les conteneurs en unités de travail significatives. Outre des tâches, les conteneurs peuvent comprendre d'autres conteneurs.  
   
- Les packages utilisent les conteneurs aux fins suivantes :  
+ Les packages utilisent les conteneurs aux fins suivantes :  
   
--   Répéter des tâches pour tous les éléments d'une collection, tels que les fichiers d'un dossier, des schémas ou des objets SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects). Par exemple, un package peut exécuter des instructions Transact-SQL résidant dans plusieurs fichiers.  
+-   Répéter des tâches pour tous les éléments d'une collection, tels que les fichiers d'un dossier, des schémas ou des objets SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects). Par exemple, un package peut exécuter des instructions Transact-SQL résidant dans plusieurs fichiers.  
   
 -   Répéter des tâches jusqu’à ce qu’une expression spécifiée renvoie la valeur **false**. Par exemple, un package peut envoyer un message électronique différent sept fois, à raison d'une fois par jour de la semaine.  
   
 -   Regrouper les tâches et les conteneurs qui doivent réussir ou échouer en tant qu'unité. Par exemple, un package peut regrouper les tâches qui suppriment et ajoutent des lignes dans une table de base de données, puis valider ou annuler toutes les tâches si l'une d'elles échoue.  
   
-## Types de conteneurs  
+## <a name="container-types"></a>Types de conteneurs  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit quatre types de conteneurs pour la création de packages. Le tableau suivant décrit ces types de conteneurs.  
   
 |Conteneur|Description|  
@@ -45,8 +50,8 @@ caps.handback.revision: 48
   
  Les packages et les gestionnaires d'événements sont également des types de conteneurs. Pour plus d’informations, consultez [Packages Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md) et [Gestionnaires d’événements Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-event-handlers.md).  
   
-### Résumé des propriétés de conteneur  
- Tous les types de conteneurs possèdent un ensemble de propriétés communes. Si vous créez des packages à l’aide des outils graphiques fournis par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], la fenêtre Propriétés répertorie les propriétés suivantes pour les conteneurs de boucles Foreach, de boucles For et de séquences. Les propriétés du conteneur d'hôte de tâche sont configurées dans le cadre de la configuration de la tâche encapsulée par l'hôte de tâche. Définissez les propriétés de l'hôte de tâche lorsque vous configurez la tâche.  
+### <a name="summary-of-container-properties"></a>Résumé des propriétés de conteneur  
+ Tous les types de conteneurs possèdent un ensemble de propriétés communes. Si vous créez des packages à l’aide des outils graphiques fournis par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , la fenêtre Propriétés répertorie les propriétés suivantes pour les conteneurs de boucles Foreach, de boucles For et de séquences. Les propriétés du conteneur d'hôte de tâche sont configurées dans le cadre de la configuration de la tâche encapsulée par l'hôte de tâche. Définissez les propriétés de l'hôte de tâche lorsque vous configurez la tâche.  
   
 |Propriété|Description|  
 |--------------|-----------------|  
@@ -68,7 +73,7 @@ caps.handback.revision: 48
 |**Nom**|Nom du conteneur.<br /><br /> Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A>.|  
 |**TransactionOption**|Participation transactionnelle du conteneur. Cette propriété peut prendre les valeurs **NotSupported**, **Supported**et **Required**. La valeur par défaut de cette propriété est **Supported**. Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
   
- Pour plus d'informations sur toutes les propriétés disponibles pour les conteneurs de boucle Foreach, les conteneurs de boucle For, les conteneurs Sequence et les conteneurs d'hôte de tâche lorsqu'ils sont configurés par programmation, consultez les rubriques API [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] suivantes :  
+ Pour plus d'informations sur toutes les propriétés disponibles pour les conteneurs de boucle Foreach, les conteneurs de boucle For, les conteneurs Sequence et les conteneurs d'hôte de tâche lorsqu'ils sont configurés par programmation, consultez les rubriques API [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] suivantes :  
   
 -   T:Microsoft.SqlServer.Dts.Runtime.ForEachLoop  
   
@@ -78,25 +83,25 @@ caps.handback.revision: 48
   
 -   T:Microsoft.SqlServer.Dts.Runtime.TaskHost  
   
-## Objets étendant les fonctionnalités des conteneurs  
- Les conteneurs comprennent des flux de contrôle composés d'exécutables et de contraintes de précédence, et peuvent utiliser des gestionnaires d'événements et des variables. Le conteneur d'hôte de tâche est une exception : étant donné que celui-ci encapsule une seule tâche, il n'utilise pas de contraintes de précédence.  
+## <a name="objects-that-extend-container-functionality"></a>Objets étendant les fonctionnalités des conteneurs  
+ Les conteneurs comprennent des flux de contrôle composés d'exécutables et de contraintes de précédence, et peuvent utiliser des gestionnaires d'événements et des variables. Le conteneur d'hôte de tâche est une exception : étant donné que celui-ci encapsule une seule tâche, il n'utilise pas de contraintes de précédence.  
   
-### Exécutables  
- Les exécutables désignent les tâches de niveau conteneur et tous les conteneurs se trouvant dans le conteneur. Un exécutable peut être l’une des tâches et l’un des conteneurs fournis par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ou bien une tâche personnalisée. Pour plus d’informations, consultez [Tâches Integration Services](../../integration-services/control-flow/integration-services-tasks.md).  
+### <a name="executables"></a>Exécutables  
+ Les exécutables désignent les tâches de niveau conteneur et tous les conteneurs se trouvant dans le conteneur. Un exécutable peut être l’une des tâches et l’un des conteneurs fournis par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ou bien une tâche personnalisée. Pour plus d’informations, consultez [Tâches Integration Services](../../integration-services/control-flow/integration-services-tasks.md).  
   
-### Contraintes de précédence  
+### <a name="precedence-constraints"></a>Contraintes de précédence  
  Les contraintes de priorité relient en un flux de contrôle ordonné les conteneurs et les tâches figurant dans le même conteneur parent. Pour plus d’informations, consultez [Contraintes de précédence](../../integration-services/control-flow/precedence-constraints.md).  
   
-### Gestionnaires d'événements  
+### <a name="event-handlers"></a>Gestionnaires d'événements  
  Les gestionnaires d'événements au niveau conteneur répondent aux événements déclenchés par le conteneur ou par les objets figurant dans celui-ci. Pour plus d’informations, consultez [Gestionnaires d’événements Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-event-handlers.md).  
   
-### Variables  
+### <a name="variables"></a>Variables  
  Les variables utilisées dans les conteneurs comprennent les variables système de niveau conteneur fournies par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et les variables définies par l’utilisateur utilisées par le conteneur. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
-## Points d’arrêt  
+## <a name="break-points"></a>Points d’arrêt  
  Quand vous définissez un point d’arrêt sur un conteneur et que la condition d’arrêt est **Arrêter lorsque le conteneur reçoit l’événement OnVariableValueChanged**, définissez la variable dans l’étendue du conteneur.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Flux de contrôle](../../integration-services/control-flow/control-flow.md)  
   
   

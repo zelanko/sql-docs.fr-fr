@@ -1,38 +1,43 @@
 ---
-title: "Supprimer une hi&#233;rarchie d&#233;riv&#233;e (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "suppression de hiérarchies dérivées [Master Data Services]"
-  - "Hiérarchies dérivées, suppression"
+title: "Supprimer une hiérarchie dérivée (Master Data Services) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deleting derived hierarchies [Master Data Services]
+- derived hierarchies, deleting
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3b95bf71e1cc687ffd70fce617fd6629fede7d5c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Supprimer une hi&#233;rarchie d&#233;riv&#233;e (Master Data Services)
+# <a name="delete-a-derived-hierarchy-master-data-services"></a>Supprimer une hiérarchie dérivée (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], supprimez une hiérarchie dérivée lorsque vous êtes sûr de ne plus en avoir besoin.  
   
 > [!NOTE]  
 >  La suppression d'une hiérarchie dérivée n'a aucun effet sur les relations d'attributs sur lesquelles la hiérarchie est basée.  
   
-## Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
   
 -   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
-### Pour supprimer une hiérarchie dérivée  
+### <a name="to-delete-a-derived-hierarchy"></a>Pour supprimer une hiérarchie dérivée  
   
 1.  Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cliquez sur **Administration de système**.  
   
@@ -46,8 +51,8 @@ caps.handback.revision: 6
   
 6.  Dans la boîte de dialogue de confirmation, cliquez sur **OK**.  
   
-## Voir aussi  
- [Créer une hiérarchie dérivée &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [Hiérarchies dérivées &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Créer une hiérarchie dérivée &#40; Master Data Services &#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
+ [Hiérarchies dérivées &#40; Master Data Services &#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

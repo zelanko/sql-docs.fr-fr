@@ -1,25 +1,30 @@
 ---
-title: "Didacticiel : Utiliser la source OData | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Didacticiel : Utilisation de la Source OData | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38fc17519a5c0450b2a80a4bb0429ea24f34ac64
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Didacticiel : Utiliser la source OData
+# <a name="tutorial-using-the-odata-source"></a>Didacticiel : Utiliser la source OData
   Ce didacticiel vous guide dans le processus d’extraction de la collection **Employés** de l’exemple de service OData **Northwind** (http://services.odata.org/V3/Northwind/Northwind.svc/), puis de son chargement dans un fichier plat.  
   
-## 1. Créer un projet Integration Services  
+## <a name="1-create-an-integration-services-project"></a>1. Créer un projet Integration Services  
   
 1.  Lancez **SQL Server Data Tools** ou [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 6
   
 5.  Entrez un **nom** et sélectionnez un **emplacement** pour le projet, puis cliquez sur **OK**.  
   
-## 2. Ajouter et configurer la source OData sur le package SSIS  
+## <a name="2-add-and-configure-odata-source-to-the-ssis-package"></a>2. Ajouter et configurer la source OData sur le package SSIS  
   
 1.  Glissez-déplacez une **Tâche de flux de données** de la **Boîte à outil SSIS** vers l’aire de conception de flux de contrôle pour votre package SSIS.  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 6
   
 15. Cliquez sur **OK** pour fermer la boîte de dialogue **Éditeur de source OData** .  
   
-## 3. Ajouter une destination de fichier plat et tester la solution  
+## <a name="3-add-flat-file-destination-and-test-the-solution"></a>3. Ajouter une destination de fichier plat et tester la solution  
   
 1.  Glissez-déplacez une **Destination de fichier plat** de la **Boîte à outil SSIS** vers l’aire de conception du flux de données sous le composant **Source OData**.  
   
@@ -75,7 +80,7 @@ caps.handback.revision: 6
   
 5.  Dans la boîte de dialogue **Format de fichier plat** , sélectionnez **Délimité**. Vous devez voir s'afficher la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** .  
   
-6.  Dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats**, pour **Nom de fichier**, entrez **c:\Employees.txt**.  
+6.  Dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** , pour **Nom de fichier**, entrez **c:\Employees.txt**.  
   
 7.  Cliquez sur **Colonnes**dans le volet de navigation gauche. Vous pouvez définir les données de cette page.  
   

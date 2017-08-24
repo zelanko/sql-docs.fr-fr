@@ -1,30 +1,35 @@
 ---
-title: "Source Excel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.excelsource.f1"
-helpviewer_keywords: 
-  - "Excel [Integration Services]"
-  - "sources [Integration Services], Excel"
+title: Excel Source | Documents Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.excelsource.f1
+helpviewer_keywords:
+- Excel [Integration Services]
+- sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 caps.latest.revision: 60
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d9db81f159d831fe10aaf99a4b27a34aef0764fc
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Source Excel
+# <a name="excel-source"></a>Source Excel
   La source Excel extrait des données de feuilles de calcul ou de plages dans des classeurs [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
   
- La source Excel fournit quatre modes d'accès aux données différents pour l'extraction des données :  
+ La source Excel fournit quatre modes d'accès aux données différents pour l'extraction des données :  
   
 -   Une table ou une vue.  
   
@@ -35,26 +40,26 @@ caps.handback.revision: 60
 -   Les résultats d'une instruction SQL stockée dans une variable.  
   
 > [!IMPORTANT]  
->  Dans Excel, une feuille de calcul ou une plage sont l'équivalent d'une table ou d'une vue. La listes de tables disponibles dans les éditeurs de source et de destination Excel n'affiche que des feuilles de calcul existantes (identifiées par le signe « $ » à la fin du nom de la feuille de calcul, par exemple « Feuille1$ ») et des plages nommées (signalées par l'absence du signe « $ », par exemple « MaPlage »). Pour plus d'informations, consultez la section Considérations sur l'utilisation.  
+>  Dans Excel, une feuille de calcul ou une plage sont l'équivalent d'une table ou d'une vue. La listes de tables disponibles dans les éditeurs de source et de destination Excel n'affiche que des feuilles de calcul existantes (identifiées par le signe « $ » à la fin du nom de la feuille de calcul, par exemple « Feuille1$ ») et des plages nommées (signalées par l'absence du signe « $ », par exemple « MaPlage »). Pour plus d'informations, consultez la section Considérations sur l'utilisation.  
   
- La source Excel utilise à un gestionnaire de connexions Excel pour se connecter à une source de données ; ce gestionnaire spécifie le classeur à utiliser. Pour plus d'informations, consultez [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md).  
+ La source Excel utilise à un gestionnaire de connexions Excel pour se connecter à une source de données ; ce gestionnaire spécifie le classeur à utiliser. Pour plus d'informations, consultez [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md).  
   
  La source Excel a une sortie normale et une sortie d'erreur.  
   
-## Considérations sur l'utilisation  
+## <a name="usage-considerations"></a>Considérations sur l'utilisation  
  Le gestionnaire de connexions Excel utilise le fournisseur [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB pour Jet version 4.0 et son pilote de prise en charge Excel ISAM (Indexed Sequential Access Method) pour se connecter puis lire et écrire les données dans les sources de données Excel.  
   
  De nombreux articles disponibles dans la Base de connaissances [!INCLUDE[msCoName](../../includes/msconame-md.md)] documentent le comportement de ce fournisseur et de ce pilote et, bien que ces articles ne soient pas spécifiques à [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou à son prédécesseur DTS (Data Transformation Services), vous pouvez souhaiter vous informer sur certains comportements susceptibles de produire des résultats inattendus. Pour obtenir des informations générales sur l'utilisation et le comportement du pilote Excel, consultez [COMMENT FAIRE : Utiliser ADO avec des données Excel à partir de Visual Basic ou de VBA](http://support.microsoft.com/kb/257819).  
   
  Les comportements suivants du fournisseur Jet associé au pilote Excel peuvent produire des résultats inattendus lors de la lecture des données à partir d'une source de données Excel.  
   
--   **Sources de données**. Dans un classeur Excel, la source de données peut être une feuille de calcul, à laquelle le signe « $ » doit être ajouté (par exemple, « Feuille1$ ») ou une plage nommée (par exemple, « MaPlage »). Dans une instruction SQL, le nom d'une feuille de calcul doit être délimité (par exemple, « [Feuille1$] ») afin que le signe « $ » ne provoque pas une erreur de syntaxe. Le générateur de requêtes ajoute automatiquement ces délimiteurs. Lorsque vous spécifiez une feuille de calcul ou une plage, le pilote lit le bloc de cellules contigu, à partir de la première cellule non vide dans l'angle supérieur gauche de la feuille de calcul ou de la plage. Par conséquent, il ne peut pas y avoir de ligne vide dans les données source, ni entre les lignes de titre ou d'en-tête et les lignes de données.  
+-   **Sources de données**. Dans un classeur Excel, la source de données peut être une feuille de calcul, à laquelle le signe « $ » doit être ajouté (par exemple, « Feuille1$ ») ou une plage nommée (par exemple, « MaPlage »). Dans une instruction SQL, le nom d'une feuille de calcul doit être délimité (par exemple, « [Feuille1$] ») afin que le signe « $ » ne provoque pas une erreur de syntaxe. Le générateur de requêtes ajoute automatiquement ces délimiteurs. Lorsque vous spécifiez une feuille de calcul ou une plage, le pilote lit le bloc de cellules contigu, à partir de la première cellule non vide dans l'angle supérieur gauche de la feuille de calcul ou de la plage. Par conséquent, il ne peut pas y avoir de ligne vide dans les données source, ni entre les lignes de titre ou d'en-tête et les lignes de données.  
   
--   **Valeurs manquantes**. Le pilote Excel lit un certain nombre de lignes (par défaut, 8 lignes) dans la source spécifiée afin de déterminer le type de données de chaque colonne. Lorsqu'il s'avère qu'une colonne combine différents types de données, notamment des données numériques avec des données texte, le pilote porte son choix sur le type de données majoritaire et retourne des valeurs NULL dans les cellules qui contiennent des données de l'autre type. En cas d'égalité, le type numérique l'emporte. La plupart des options de mise en forme de cellule dans la feuille de calcul Excel n'affectent pas cette détermination du type de données. Vous pouvez modifier ce comportement du pilote Excel en spécifiant le mode d'importation. Pour spécifier le mode d’importation, ajoutez **IMEX=1** à la valeur de Propriétés étendues dans la chaîne de connexion du gestionnaire de connexions Excel dans la fenêtre **Propriétés**. Pour plus d’informations, consultez [PRB: valeurs Excel retournées en tant que valeurs NULL à l’aide de DAO OpenRecordset](http://support.microsoft.com/kb/194124).  
+-   **Valeurs manquantes**. Le pilote Excel lit un certain nombre de lignes (par défaut, 8 lignes) dans la source spécifiée afin de déterminer le type de données de chaque colonne. Lorsqu'il s'avère qu'une colonne combine différents types de données, notamment des données numériques avec des données texte, le pilote porte son choix sur le type de données majoritaire et retourne des valeurs NULL dans les cellules qui contiennent des données de l'autre type. En cas d'égalité, le type numérique l'emporte. La plupart des options de mise en forme de cellule dans la feuille de calcul Excel n'affectent pas cette détermination du type de données. Vous pouvez modifier ce comportement du pilote Excel en spécifiant le mode d'importation. Pour spécifier le mode d’importation, ajoutez **IMEX=1** à la valeur de Propriétés étendues dans la chaîne de connexion du gestionnaire de connexions Excel dans la fenêtre **Propriétés** . Pour plus d’informations, consultez [PRB: valeurs Excel retournées en tant que valeurs NULL à l’aide de DAO OpenRecordset](http://support.microsoft.com/kb/194124).  
   
--   **Texte tronqué**. Lorsque le pilote détermine qu'une colonne Excel contient des données texte, il sélectionne le type de données (string ou memo) en fonction de la valeur la plus longue qu'il échantillonne. Si le pilote ne découvre pas de valeurs comptant plus de 255 caractères dans les lignes échantillonnées, il traite la colonne comme une colonne de type string à 255 caractères et non comme une colonne de type memo. Par conséquent, les valeurs de plus de 255 caractères peuvent être tronquées. Pour importer des données à partir d'une colonne de type memo sans troncation, vous devez vous assurer que la colonne de type memo dans au moins une des lignes échantillonnées contient une valeur comptant plus de 255 caractères, sinon, vous devez augmenter le nombre de lignes échantillonnées par le pilote pour inclure une telle ligne. Vous pouvez augmenter le nombre de lignes échantillonnées en augmentant la valeur de **TypeGuessRows** sous la clé de Registre **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Excel**. Pour plus d’informations, consultez [PRB : échec de transfert de données de source Jet 4.0 OLEDB avec erreur de dépassement de mémoire tampon](http://support.microsoft.com/kb/281517).  
+-   **Texte tronqué**. Lorsque le pilote détermine qu'une colonne Excel contient des données texte, il sélectionne le type de données (string ou memo) en fonction de la valeur la plus longue qu'il échantillonne. Si le pilote ne découvre pas de valeurs comptant plus de 255 caractères dans les lignes échantillonnées, il traite la colonne comme une colonne de type string à 255 caractères et non comme une colonne de type memo. Par conséquent, les valeurs de plus de 255 caractères peuvent être tronquées. Pour importer des données à partir d'une colonne de type memo sans troncation, vous devez vous assurer que la colonne de type memo dans au moins une des lignes échantillonnées contient une valeur comptant plus de 255 caractères, sinon, vous devez augmenter le nombre de lignes échantillonnées par le pilote pour inclure une telle ligne. Vous pouvez augmenter le nombre de lignes échantillonnées en augmentant la valeur de **TypeGuessRows** sous la clé de Registre **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Excel** . Pour plus d’informations, consultez [PRB : échec de transfert de données de source Jet 4.0 OLEDB avec erreur de dépassement de mémoire tampon](http://support.microsoft.com/kb/281517).  
   
--   **Types de données système**. Le pilote Excel ne reconnaît qu'un ensemble limité de types de données. Par exemple, toutes les colonnes numériques sont interprétées comme doubles (DT_R8) et toutes les colonnes de type chaîne (autres que les colonnes mémo) comme des chaînes Unicode de 255 caractères (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mappe les types de données Excel de la façon suivante :  
+-   **Types de données système**. Le pilote Excel ne reconnaît qu'un ensemble limité de types de données. Par exemple, toutes les colonnes numériques sont interprétées comme doubles (DT_R8) et toutes les colonnes de type chaîne (autres que les colonnes mémo) comme des chaînes Unicode de 255 caractères (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mappe les types de données Excel de la façon suivante :  
   
     -   Numérique – virgule flottante à double précision (DT_R8)  
   
@@ -72,14 +77,14 @@ caps.handback.revision: 60
   
     -   Conversion entre des colonnes Excel de type string Unicode et des colonnes de type string non-Unicode avec des pages de codes spécifiques.  
   
-    -   Conversion entre des colonnes Excel de type string à 255 caractères et des colonnes de type string de longueurs différentes.  
+    -   Conversion entre des colonnes Excel de type string à 255 caractères et des colonnes de type string de longueurs différentes.  
   
     -   Conversion entre des colonnes numériques Excel à double précision et des colonnes numériques d'autres types.  
   
-## Configuration d'une source Excel  
+## <a name="excel-source-configuration"></a>Configuration d'une source Excel  
  Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de source Excel**, cliquez sur l’une des rubriques suivantes :  
+ Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de source Excel** , cliquez sur l’une des rubriques suivantes :  
   
 -   [Éditeur de source Excel &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/excel-source-editor-connection-manager-page.md)  
   
@@ -89,13 +94,13 @@ caps.handback.revision: 60
   
  La boîte de dialogue **Éditeur avancé** reflète toutes les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
--   [Propriétés communes](../Topic/Common%20Properties.md)  
+-   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriétés personnalisées d'Excel](../../integration-services/data-flow/excel-custom-properties.md)  
   
  Pour plus d’informations sur le bouclage dans un groupe de fichiers Excel, consultez [Effectuer une boucle dans des fichiers et des tables Excel en utilisant un conteneur de boucles Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md).  
   
-## Tâches associées  
+## <a name="related-tasks"></a>Tâches associées  
   
 -   [Mapper des paramètres de requête à des variables dans un composant de flux de données](../../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
   
@@ -105,7 +110,7 @@ caps.handback.revision: 60
   
 -   [Effectuer une boucle dans des fichiers et des tables Excel en utilisant un conteneur de boucles Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
-## Contenu connexe  
+## <a name="related-content"></a>Contenu connexe  
   
 -   Entrée de blog, [Importing data from 64-bit Excel in SSIS](http://go.microsoft.com/fwlink/?LinkId=217673), sur hrvoje.piasevoli.com  
   

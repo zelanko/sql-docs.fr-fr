@@ -1,31 +1,36 @@
 ---
-title: "Utilitaire tablediff | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "comparaison de données"
-  - "tablediff (utilitaire)"
-  - "tables [réplication SQL Server]"
-  - "comparaisons de tables [SQL Server]"
-  - "utilitaires à invite de commandes [SQL Server], tablediff"
-  - "dépannage [réplication SQL Server], non-convergence"
-  - "non-convergence [SQL Server]"
+title: Utilitaire tablediff | Documents Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- comparing data
+- tablediff utility
+- tables [SQL Server replication]
+- table comparisons [SQL Server]
+- command prompt utilities [SQL Server], tablediff
+- troubleshooting [SQL Server replication], non-convergence
+- non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5ecdf895353c1ec75004b2268bbd055b255b53ab
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Utilitaire tablediff
-  L’utilitaire **tablediff** sert à comparer les données dans deux tables et à identifier une non-convergence. Il est particulièrement utile pour résoudre des problèmes de non-convergence dans une topologie de réplication. Cet utilitaire peut être employé à partir de l'invite de commandes ou dans un fichier de commandes pour effectuer les tâches suivantes :  
+# <a name="tablediff-utility"></a>tablediff (utilitaire)
+  L’utilitaire **tablediff** sert à comparer les données dans deux tables et à identifier une non-convergence. Il est particulièrement utile pour résoudre des problèmes de non-convergence dans une topologie de réplication. Cet utilitaire peut être employé à partir de l'invite de commandes ou dans un fichier de commandes pour effectuer les tâches suivantes :  
   
 -   Une comparaison ligne par ligne entre une table source dans une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agissant comme serveur de publication de réplication et la table de destination dans une ou plusieurs instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agissant comme abonnés de réplication.  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 30
   
 -   Consignation des résultats dans un fichier de sortie ou dans une table de la base de données de destination.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -73,7 +78,7 @@ tablediff
 }  
 ```  
   
-## Arguments  
+## <a name="arguments"></a>Arguments  
  [ **-?** ]  
  Retour de la liste des paramètres pris en charge.  
   
@@ -90,13 +95,13 @@ tablediff
  Propriétaire du schéma de la table source. Par défaut, le propriétaire de la table est supposé être dbo.  
   
  **-sourcepassword** *source_password*  
- Mot de passe de la connexion utilisée pour la connexion au serveur source avec l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Mot de passe de la connexion utilisée pour la connexion au serveur source avec l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  Lorsque cela est possible, fournissez les informations d'identification au moment de l'exécution. Si vous devez enregistrer les informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher un accès non autorisé.  
   
  **-sourceuser** *source_login*  
- Connexion employée pour établir la connexion au serveur source avec l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Si *source_login* n’est pas fourni, l’authentification Windows est employée lors de la connexion au serveur source. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
+ Connexion employée pour établir la connexion au serveur source avec l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Si *source_login* n’est pas fourni, l’authentification Windows est employée lors de la connexion au serveur source. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-sourcelocked**  
  Durant la comparaison, la table source est verrouillée à l'aide des indicateurs de table TABLOCK et HOLDLOCK.  
@@ -114,13 +119,13 @@ tablediff
  Le propriétaire du schéma de la table de destination. Par défaut, le propriétaire de la table est supposé être dbo.  
   
  **-destinationpassword** *destination_password*  
- Mot de passe de la connexion utilisée pour établir une connexion au serveur de destination avec l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Mot de passe de la connexion utilisée pour établir une connexion au serveur de destination avec l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  Lorsque cela est possible, fournissez les informations d'identification au moment de l'exécution. Si vous devez enregistrer les informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher un accès non autorisé.  
   
  **-destinationuser** *destination_login*  
- Connexion employée pour établir la connexion au serveur de destination avec l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Si *destination_login* n’est pas fourni, l’authentification Windows est employée lors de la connexion au serveur. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
+ Connexion employée pour établir la connexion au serveur de destination avec l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Si *destination_login* n’est pas fourni, l’authentification Windows est employée lors de la connexion au serveur. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-destinationlocked**  
  Durant la comparaison, la table de destination est verrouillée à l'aide des indicateurs de table TABLOCK et HOLDLOCK.  
@@ -135,7 +140,7 @@ tablediff
  Compare les différences au niveau des colonnes.  
   
  **-dt**  
- Supprime la table de résultats spécifiée par *table_name* si la table existe déjà.  
+ Supprime la table de résultats spécifiée par *table_name*si la table existe déjà.  
   
  **-et** *table_name*  
  Spécifie le nom de la table de résultats à créer. Si cette table existe déjà, **-DT** doit être utilisé, sinon l’opération échoue.  
@@ -161,7 +166,7 @@ tablediff
  **-t** *connection_timeouts*  
  Définit le délai d'attente de connexion, en secondes, pour les connexions au serveur source et au serveur de destination.  
   
-## Valeur retournée  
+## <a name="return-value"></a>Valeur retournée  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -169,8 +174,8 @@ tablediff
 |**1**|Erreur critique|  
 |**2**|Tables différentes|  
   
-## Notes  
- L’utilitaire **tablediff** ne peut pas être utilisé avec des serveurs non-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+## <a name="remarks"></a>Notes  
+ L’utilitaire **tablediff** ne peut pas être utilisé avec des serveurs non-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Les tables comprenant des colonnes de types de données **sql_variant** ne sont pas prises en charge.  
   
@@ -182,18 +187,18 @@ tablediff
 |**smallint**|**int** ou **bigint**|  
 |**int**|**bigint**|  
 |**timestamp**|**varbinary**|  
-|**varchar(max)**|**texte**|  
+|**varchar(max)**|**text**|  
 |**nvarchar(max)**|**ntext**|  
 |**varbinary(max)**|**image**|  
-|**texte**|**varchar(max)**|  
+|**text**|**varchar(max)**|  
 |**ntext**|**nvarchar(max)**|  
 |**image**|**varbinary(max)**|  
   
  Utilisez l’option **-strict** pour interdire ces mappages et effectuer une validation stricte.  
   
- La table source de la comparaison doit contenir au moins une colonne de clé primaire, d'identité ou ROWGUID. Quand vous utilisez l’option **-strict**, la table de destination doit également contenir une colonne de clé primaire, d’identité ou ROWGUID.  
+ La table source de la comparaison doit contenir au moins une colonne de clé primaire, d'identité ou ROWGUID. Quand vous utilisez l’option **-strict** , la table de destination doit également contenir une colonne de clé primaire, d’identité ou ROWGUID.  
   
- Le script [!INCLUDE[tsql](../includes/tsql-md.md)] généré pour faire converger la table de destination n'inclut pas les types de données suivants :  
+ Le script [!INCLUDE[tsql](../includes/tsql-md.md)] généré pour faire converger la table de destination n'inclut pas les types de données suivants :  
   
 -   **varchar(max)**  
   
@@ -205,22 +210,22 @@ tablediff
   
 -   **xml**  
   
--   **texte**  
+-   **text**  
   
 -   **ntext**  
   
 -   **image**  
   
-## Autorisations  
+## <a name="permissions"></a>Autorisations  
  Pour comparer les tables, vous avez besoin des autorisations SELECT ALL sur les objets de table comparés.  
   
- Pour utiliser l’option **-et**, vous devez être membre du rôle de base de données fixe db_owner, ou au moins disposer de l’autorisation CREATE TABLE dans la base de données d’abonnement et de l’autorisation ALTER sur le schéma du propriétaire de destination sur le serveur de destination.  
+ Pour utiliser l’option **-et** , vous devez être membre du rôle de base de données fixe db_owner, ou au moins disposer de l’autorisation CREATE TABLE dans la base de données d’abonnement et de l’autorisation ALTER sur le schéma du propriétaire de destination sur le serveur de destination.  
   
- Pour utiliser l’option **-dt**, vous devez être membre du rôle de base de données fixe db_owner ou disposer au moins de l’autorisation ALTER sur le schéma du propriétaire de destination sur le serveur de destination.  
+ Pour utiliser l’option **-dt** , vous devez être membre du rôle de base de données fixe db_owner ou disposer au moins de l’autorisation ALTER sur le schéma du propriétaire de destination sur le serveur de destination.  
   
- Pour utiliser l’option **-o** ou **-f**, vous devez disposer d’autorisations d’écriture sur l’emplacement du répertoire de fichiers spécifié.  
+ Pour utiliser l’option **-o** ou **-f** , vous devez disposer d’autorisations d’écriture sur l’emplacement du répertoire de fichiers spécifié.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Comparer des tables répliquées pour identifier les différences &#40;programmation de réplication&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   

@@ -1,27 +1,32 @@
 ---
-title: "Service de capture de donn&#233;es modifi&#233;es Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Le Service de capture de données modifiées Oracle | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d1c3535f7818b1865d9ff7b0da1d098884b042ca
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Service de capture de donn&#233;es modifi&#233;es Oracle
+# <a name="the-oracle-cdc-service"></a>Service de capture de données modifiées Oracle
   Le service de capture de données modifiées Oracle est un service Windows qui exécute le programme xdbcdcsvc.exe. Ce service peut être configuré pour exécuter plusieurs services Windows sur le même ordinateur, chacun avec un nom différent de service Windows. La création de plusieurs services Windows de capture de données modifiées Oracle sur un seul ordinateur est souvent réalisée pour obtenir une meilleure séparation entre eux, ou lorsque chacun d'eux doit fonctionner avec une autre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Un service de capture de données modifiées Oracle est créé à l'aide de la console de configuration du service de capture de données modifiées Oracle ou est défini par l'interface de ligne de commande intégrée au programme xdbcdcsvc.exe. Dans les deux cas, chaque service de capture de données modifiées Oracle créé est associé à une seule instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (qui peut être regroupée ou mise en miroir avec l’installation **AlwaysOn**) et les informations de connexion (chaîne de connexion et informations d’identification d’accès) font partie de la configuration du service.  
+ Un service de capture de données modifiées Oracle est créé à l'aide de la console de configuration du service de capture de données modifiées Oracle ou est défini par l'interface de ligne de commande intégrée au programme xdbcdcsvc.exe. Dans les deux cas, chaque service de capture de données modifiées Oracle créé est associé à une seule instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (qui peut être regroupée ou mise en miroir avec l’installation **AlwaysOn** ) et les informations de connexion (chaîne de connexion et informations d’identification d’accès) font partie de la configuration du service.  
   
- Lorsqu'un service de capture de données modifiées Oracle est démarré, il tente de se connecter à l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle il est associé, d'obtenir la liste des instances Oracle CDC à gérer et effectue une première validation de l'environnement. Les erreurs qui se produisent lors du démarrage du service et toutes les informations de démarrage et d'arrêt sont toujours écrites dans le journal des événements des applications Windows. Quand une connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est établie, les erreurs et messages d’information sont écrits dans la table **dbo.xdbcdc_trace** de la base de données MSXDBCDC de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un des contrôles effectués au démarrage est la vérification qu'aucun autre service de capture de données modifiées Oracle portant le même nom ne fonctionne actuellement. Si un service du même nom est actuellement connecté à partir d'un autre ordinateur, le service de capture de données modifiées Oracle entre dans une boucle d'attente et attend que l'autre service se déconnecte avant de continuer à gérer la capture de données modifiées Oracle.  
+ Lorsqu'un service de capture de données modifiées Oracle est démarré, il tente de se connecter à l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle il est associé, d'obtenir la liste des instances Oracle CDC à gérer et effectue une première validation de l'environnement. Les erreurs qui se produisent lors du démarrage du service et toutes les informations de démarrage et d'arrêt sont toujours écrites dans le journal des événements des applications Windows. Quand une connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est établie, les erreurs et messages d’information sont écrits dans la table **dbo.xdbcdc_trace** de la base de données MSXDBCDC de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un des contrôles effectués au démarrage est la vérification qu'aucun autre service de capture de données modifiées Oracle portant le même nom ne fonctionne actuellement. Si un service du même nom est actuellement connecté à partir d'un autre ordinateur, le service de capture de données modifiées Oracle entre dans une boucle d'attente et attend que l'autre service se déconnecte avant de continuer à gérer la capture de données modifiées Oracle.  
   
  Quand le service de capture de données modifiées Oracle passe toutes les vérifications de démarrage, il vérifie la table **dbo.xdbcdc_databases** dans la base de données MSXDBCDC pour toutes les instances Oracle CDC actives. Pour chaque instance Oracle CDC active, le service démarre un sous-processus afin de gérer cette instance Oracle CDC.  
   
@@ -38,24 +43,24 @@ GO
   
 ```  
   
- Le processus d’instance Oracle CDC met à jour son état dans la table système **cdc.xdbcdc_state** et écrit les informations d’erreur dans la table **cdc.xdbcdc_trace**. La table **xdbcdc_state** est utile pour surveiller l’état de l’instance Oracle CDC. Elle fournit l’état à jour, différents compteurs (tels que le nombre de modifications lues à partir d’Oracle, le nombre de modifications écrites dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le numéro de la transaction validée écrite et le nombre actuel de transactions en cours) et l’indication de latence.  
+ Le processus d’instance Oracle CDC met à jour son état dans la table système **cdc.xdbcdc_state** et écrit les informations d’erreur dans la table **cdc.xdbcdc_trace** . La table **xdbcdc_state** est utile pour surveiller l’état de l’instance Oracle CDC. Elle fournit l’état à jour, différents compteurs (tels que le nombre de modifications lues à partir d’Oracle, le nombre de modifications écrites dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le numéro de la transaction validée écrite et le nombre actuel de transactions en cours) et l’indication de latence.  
   
- La configuration de l’instance Oracle CDC est enregistrée dans la table **cdc.xdbcdc_config**, qui est la table avec laquelle la console du concepteur de capture de données modifiées Oracle s’exécute. Étant donné que la configuration entière d'une instance Oracle CDC se trouve dans l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible et les bases de données CDC, il est possible de créer des scripts de déploiement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour une instance Oracle CDC. Cette opération s'effectue à l'aide des consoles de configuration du service de capture de données modifiées Oracle et du concepteur de capture de données modifiées Oracle.  
+ La configuration de l’instance Oracle CDC est enregistrée dans la table **cdc.xdbcdc_config** , qui est la table avec laquelle la console du concepteur de capture de données modifiées Oracle s’exécute. Étant donné que la configuration entière d'une instance Oracle CDC se trouve dans l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible et les bases de données CDC, il est possible de créer des scripts de déploiement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour une instance Oracle CDC. Cette opération s'effectue à l'aide des consoles de configuration du service de capture de données modifiées Oracle et du concepteur de capture de données modifiées Oracle.  
   
-## Considérations relatives à la sécurité  
+## <a name="security-considerations"></a>Considérations relatives à la sécurité  
  Le section suivante décrit les exigences de sécurité nécessaires pour utiliser le service de capture de données modifiées pour Oracle.  
   
-### Protection des données Oracle sources  
+### <a name="protection-of-source-oracle-data"></a>Protection des données Oracle sources  
  Le service de capture de données modifiées Oracle n'a pas besoin d'accéder aux données sources Oracle et est protégé en veillant à ce que les informations d'identification pour l'exploration des journaux n'accordent pas l'autorisation SELECT sur les tables Oracle clientes.  
   
-### Protection des données modifiées Oracle sources  
- Le service de capture de données modifiées Oracle est fourni avec des informations d'identification pour l'exploration des données de journaux qui permettent au service de capturer les modifications apportées à une table de la base de données Oracle. Les données modifiées ne disposent pas des autorisations d'accès granulaires dont disposent les tables régulières ; par conséquent, l'accès aux données modifiées passe outre les contrôles d'accès aux données Oracle intégrés.  
+### <a name="protection-of-source-oracle-change-data"></a>Protection des données modifiées Oracle sources  
+ Le service de capture de données modifiées Oracle est fourni avec des informations d'identification pour l'exploration des données de journaux qui permettent au service de capturer les modifications apportées à une table de la base de données Oracle. Les données modifiées ne disposent pas des autorisations d'accès granulaires dont disposent les tables régulières ; par conséquent, l'accès aux données modifiées passe outre les contrôles d'accès aux données Oracle intégrés.  
   
  Les tables Oracle sources capturées peuvent contenir des tables miroir vides avec les mêmes schéma et nom de table dans la base de données CDC. Les données capturées sont stockées dans les instances de capture [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et offrent la même protection que celle est fournie pour les modifications capturées dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour accéder aux données modifiées associées à une instance de capture, l'utilisateur doit pouvoir accéder à toutes les colonnes capturées de la table miroir associée. De plus, si un rôle de régulation est spécifié lors de la création de l'instance de capture, l'appelant doit également être membre du rôle de régulation spécifié. Les autres fonctions de capture de données modifiées générales pour accéder aux métadonnées sont accessibles à tous les utilisateurs de base de données par le biais du rôle public, bien que l'accès aux métadonnées retournées soit en général également régulé par le biais de l'accès choisi aux tables sources sous-jacentes et par l'appartenance aux rôles de régulation définis.  
   
  Cela signifie que les utilisateurs avec le rôle serveur fixe **sysadmin** ou le rôle de base de données fixe **db_owner** ont (par défaut) l’accès complet aux données capturées, et plus d’accès peut être accordé par le biais des rôles de régulation ou en accordant l’accès choisi aux colonnes capturées.  
   
-### Protection des informations d'identification pour l'exploration des données de journaux Oracle sources  
+### <a name="protection-of-source-oracle-log-mining-credentials"></a>Protection des informations d'identification pour l'exploration des données de journaux Oracle sources  
  La configuration du service de capture de données modifiées Oracle, stockée dans la base de données CDC (dans la table cdc.xdbcdc_config) inclut le nom d'utilisateur d'exploration de données de journaux et son mot de passe associé.  
   
  Le mot de passe d'exploration de données de journaux est stocké chiffré à l'aide d'une clé asymétrique avec le nom fixe `xdbcdc_asym_key` qui est automatiquement créé avec la commande suivante :  
@@ -78,10 +83,10 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
  La clé asymétrique est automatiquement créée dans la base de données CDC lorsque le service de capture de données modifiées détecte une base de données CDC d'instance Oracle qui n'a pas cette clé asymétrique ou lorsque la clé existe mais que le mot de passe ne correspond pas.  
   
-### Compte de service Windows pour le service de capture de données modifiées Oracle  
+### <a name="oracle-cdc-service-windows-service-account"></a>Compte de service Windows pour le service de capture de données modifiées Oracle  
  Le compte de service utilisé avec le service Windows de capture de données modifiées Oracle ne requiert aucune autorisation supplémentaire. Ce compte doit pouvoir utiliser l'API Oracle Native Client et l'API ODBC SQL Server Native Client. Il doit également avoir accès à la clé de configuration du service dans le Registre (cette console de configuration du service de capture de données modifiées configure une liste de contrôle d'accès à cet effet).  
   
-## Dans cette section  
+## <a name="in-this-section"></a>Dans cette section  
   
 -   [Prise en charge de la haute disponibilité](../../integration-services/change-data-capture/high-availability-support.md)  
   
@@ -91,8 +96,8 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
 -   [Utilisation du service de capture de données modifiées Oracle](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
   
-## Voir aussi  
- [Procédure : gérer un service de capture de données modifiées local](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)   
- [Gérer un service de capture de données modifiées Oracle](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Procédure : gérer un service de capture de données modifiées local](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)   
+ [Gérer un Service de capture de données modifiées Oracle](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   

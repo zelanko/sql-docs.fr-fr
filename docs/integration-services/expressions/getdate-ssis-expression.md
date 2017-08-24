@@ -1,45 +1,50 @@
 ---
-title: "GETDATE (expression SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "date actuelle"
-  - "GETDATE (fonction)"
-  - "dates [Integration Services], GETDATE"
+title: GETDATE (Expression SSIS) | Documents Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- current date
+- GETDATE function
+- dates [Integration Services], GETDATE
 ms.assetid: 6d20ec93-3244-4d63-baf6-70eff7bd598c
 caps.latest.revision: 35
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e792dc04b4bb115dc3e9dff840da1690395862e9
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# GETDATE (expression SSIS)
+# <a name="getdate-ssis-expression"></a>GETDATE (expression SSIS)
   Renvoie la date actuelle du système dans un format DT_DBTIMESTAMP. La fonction GETDATE ne prend aucun argument.  
   
 > [!NOTE]  
 >  La fonction GETDATE retourne un résultat d'une longueur de 29 caractères.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 GETDATE()  
 ```  
   
-## Arguments  
+## <a name="arguments"></a>Arguments  
  Aucun  
   
-## Types des résultats  
+## <a name="result-types"></a>Types des résultats  
  DT_DBTIMESTAMP  
   
-## Exemples d'expressions  
+## <a name="expression-examples"></a>Exemples d'expressions  
  L'exemple suivant renvoie l'année de la date actuelle.  
   
 ```  
@@ -58,8 +63,8 @@ DATEDIFF("dd",ModifiedDate,GETDATE())
 DATEADD("Month",3,GETDATE())  
 ```  
   
-## Voir aussi  
- [GETUTCDATE &#40;expression SSIS&#41;](../../integration-services/expressions/getutcdate-ssis-expression.md)   
- [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Voir aussi  
+ [GETUTCDATE &#40; Expression SSIS &#41;](../../integration-services/expressions/getutcdate-ssis-expression.md)   
+ [Fonctions &#40; Expression SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

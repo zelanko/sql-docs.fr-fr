@@ -1,25 +1,30 @@
 ---
-title: "Utiliser une destination de jeu d&#39;enregistrements | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Destination de l'ensemble d'enregistrements"
+title: "Utiliser une Destination d’ensemble d’enregistrements | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e2423a1d19122a3eb13bd69c4bce495c96d81ff
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Utiliser une destination de jeu d&#39;enregistrements
-  La destination d'ensemble d'enregistrements n'enregistre pas les données sur une source de données externe. Elle enregistre les données en mémoire dans un ensemble d’enregistrements stocké dans une variable de package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de type **Object**. Une fois que la destination d'ensemble d'enregistrements a sauvegardé les données, vous devez en général utiliser un conteneur de boucles Foreach avec l'énumérateur ADO Foreach pour traiter une par une les lignes de l'ensemble d'enregistrements. L'énumérateur ADO Foreach enregistre la valeur de chaque colonne de la ligne actuelle dans une variable de package distincte. Ensuite, les tâches que vous configurez à l'intérieur du conteneur de boucles Foreach lisent les valeurs contenues dans ces variables et effectuent certaines actions sur ces valeurs.  
+# <a name="use-a-recordset-destination"></a>Utiliser une destination de jeu d'enregistrements
+  La destination d'ensemble d'enregistrements n'enregistre pas les données sur une source de données externe. Elle enregistre les données en mémoire dans un ensemble d’enregistrements stocké dans une variable de package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de type **Object** . Une fois que la destination d'ensemble d'enregistrements a sauvegardé les données, vous devez en général utiliser un conteneur de boucles Foreach avec l'énumérateur ADO Foreach pour traiter une par une les lignes de l'ensemble d'enregistrements. L'énumérateur ADO Foreach enregistre la valeur de chaque colonne de la ligne actuelle dans une variable de package distincte. Ensuite, les tâches que vous configurez à l'intérieur du conteneur de boucles Foreach lisent les valeurs contenues dans ces variables et effectuent certaines actions sur ces valeurs.  
   
  Vous pouvez utiliser la destination d'ensemble d'enregistrements dans de nombreux scénarios différents. Voici quelques exemples :  
   
@@ -29,10 +34,10 @@ caps.handback.revision: 11
   
  Les sections suivantes décrivent tout d'abord le processus général d'utilisation de la destination d'ensemble d'enregistrements et présentent ensuite un exemple spécifique d'utilisation de la destination.  
   
-## Étapes générales d'utilisation d'une destination d'ensemble d'enregistrements  
+## <a name="general-steps-to-using-a-recordset-destination"></a>Étapes générales d'utilisation d'une destination d'ensemble d'enregistrements  
  La procédure suivante résume les étapes requises pour enregistrer des données dans une destination d'ensemble d'enregistrements, puis l'utilisation du conteneur de boucles Foreach pour traiter chaque ligne.  
   
-#### Pour enregistrer des données dans une destination d'ensemble d'enregistrements et traiter chaque ligne à l'aide du conteneur de boucles Foreach  
+#### <a name="to-save-data-to-a-recordset-destination-and-process-each-row-by-using-the-foreach-loop-container"></a>Pour enregistrer des données dans une destination d'ensemble d'enregistrements et traiter chaque ligne à l'aide du conteneur de boucles Foreach  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], créez ou ouvrez un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -50,16 +55,16 @@ caps.handback.revision: 11
   
     1.  Dans la page **Collection** , sélectionnez l'énumérateur ADO Foreach. Puis, pour **Variable source de l'objet ADO**, sélectionnez la variable qui contient l'ensemble d'enregistrements.  
   
-    2.  Dans la page **Mappage de variables**, mappez l’index de base zéro de chaque colonne que vous souhaitez utiliser à la variable appropriée.  
+    2.  Dans la page **Mappage de variables** , mappez l’index de base zéro de chaque colonne que vous souhaitez utiliser à la variable appropriée.  
   
          Sur chaque itération de la boucle, l'énumérateur remplit les variables avec les valeurs de colonne de la ligne actuelle.  
   
 8.  À l'intérieur du conteneur de boucles Foreach, ajoutez et configurez des tâches destinées à traiter une par une les lignes de l'ensemble d'enregistrements en lisant les valeurs des variables.  
   
-## Exemple d'utilisation de la destination d'ensemble d'enregistrements  
+## <a name="example-of-using-the-recordset-destination"></a>Exemple d'utilisation de la destination d'ensemble d'enregistrements  
  Dans l'exemple suivant, la tâche de flux de données charge des informations relatives aux employés [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] de la table Sales.SalesPerson dans une destination d'ensemble d'enregistrements. Un conteneur de boucles Foreach lit ensuite les lignes de données une par une et appelle une tâche Envoyer un message. Cette tâche utilise des expressions pour envoyer un message électronique personnalisé à chaque vendeur au sujet du montant de sa prime.  
   
-#### Pour créer le projet et configurer les variables  
+#### <a name="to-create-the-project-and-configure-the-variables"></a>Pour créer le projet et configurer les variables  
   
 1.  Dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], créez un projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -83,7 +88,7 @@ caps.handback.revision: 11
   
          La variable **Bonus** contient le montant de la prime du vendeur.  
   
-#### Pour configurer les gestionnaires de connexions  
+#### <a name="to-configure-the-connection-managers"></a>Pour configurer les gestionnaires de connexions  
   
 1.  Dans la zone Gestionnaires de connexions du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , ajoutez et configurez un nouveau gestionnaire de connexions OLE DB qui se connecte à l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
@@ -93,7 +98,7 @@ caps.handback.revision: 11
   
      La tâche Envoyer un message à l'intérieur du conteneur de boucles Foreach utilisera ce gestionnaire de connexions pour envoyer des courriers électroniques.  
   
-#### Pour configurer le flux de données et la destination d'ensemble d'enregistrements  
+#### <a name="to-configure-the-data-flow-and-the-recordset-destination"></a>Pour configurer le flux de données et la destination d'ensemble d'enregistrements  
   
 1.  Sous l'onglet **Flux de contrôle** du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , ajoutez une tâche de flux de données à l'aire de conception.  
   
@@ -124,7 +129,7 @@ caps.handback.revision: 11
   
     2.  Sous l'onglet **Colonnes d'entrée** , sélectionnez les trois colonnes disponibles.  
   
-#### Pour configurer le conteneur de boucles Foreach et exécuter le package  
+#### <a name="to-configure-the-foreach-loop-container-and-run-the-package"></a>Pour configurer le conteneur de boucles Foreach et exécuter le package  
   
 1.  Sous l'onglet **Flux de contrôle** du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , ajoutez un conteneur de boucles Foreach et connectez-le à la tâche de flux de données.  
   

@@ -1,29 +1,34 @@
 ---
-title: "Extraire des donn&#233;es &#224; l&#39;aide de la source OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "extraction de données [Integration Services]"
-  - "sources [Integration Services]"
-  - "source OLE DB [Integration Services]"
+title: "Extraire des données à l’aide de la Source OLE DB | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extracting data [Integration Services]
+- sources [Integration Services], OLE DB
+- OLE DB source [Integration Services]
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: c80e5fef4855cf5066dfa00bf527e452aa616d33
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Extraire des donn&#233;es &#224; l&#39;aide de la source OLE DB
+# <a name="extract-data-by-using-the-ole-db-source"></a>Extraire des données à l'aide de la source OLE DB
   Pour pouvoir ajouter et configurer une source OLE DB, le package doit inclure au moins une tâche de flux de données.  
   
-### Pour extraire des données à l'aide d'une source OLE DB  
+### <a name="to-extract-data-using-an-ole-db-source"></a>Pour extraire des données à l'aide d'une source OLE DB  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contenant le package souhaité.  
   
@@ -33,9 +38,9 @@ caps.handback.revision: 23
   
 4.  Double-cliquez sur la source OLE DB.  
   
-5.  Dans la boîte de dialogue **Éditeur de source OLE DB**, dans la page **Gestionnaire de connexions**, sélectionnez un gestionnaire de connexions OLE DB existant ou cliquez sur **Nouveau** pour créer un gestionnaire de connexions. Pour plus d’informations, consultez [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+5.  Dans la boîte de dialogue **Éditeur de source OLE DB** , dans la page **Gestionnaire de connexions** , sélectionnez un gestionnaire de connexions OLE DB existant ou cliquez sur **Nouveau** pour créer un gestionnaire de connexions. Pour plus d’informations, consultez [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
-6.  Sélectionnez la méthode d'accès aux données :  
+6.  Sélectionnez la méthode d'accès aux données :  
   
     -   **Table ou vue** Sélectionnez une table ou une vue dans la base de données à laquelle le gestionnaire de connexions OLE DB se connecte.  
   
@@ -53,9 +58,9 @@ caps.handback.revision: 23
   
 7.  Pour mettre à jour le mappage entre les colonnes externes et les colonnes de sortie, cliquez sur **Colonnes** et sélectionnez des colonnes dans la liste **Colonne externe** .  
   
-8.  Si vous le souhaitez, mettez à jour les noms des colonnes de sortie en modifiant des valeurs dans la liste **Colonne de sortie**.  
+8.  Si vous le souhaitez, mettez à jour les noms des colonnes de sortie en modifiant des valeurs dans la liste **Colonne de sortie** .  
   
-9. Pour configurer l'affichage des erreurs, cliquez sur **Sortie d'erreur**. Pour plus d’informations, consultez [Configurer une sortie d’erreur dans un composant de flux de données](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md).  
+9. Pour configurer l'affichage des erreurs, cliquez sur **Sortie d'erreur**. Pour plus d’informations, consultez [Débogage d’un flux de données](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
 10. Vous pouvez cliquer sur **Aperçu** pour afficher jusqu’à 200 lignes de données extraites par la source OLE DB.  
   
@@ -63,10 +68,10 @@ caps.handback.revision: 23
   
 12. Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Source OLE DB](../../integration-services/data-flow/ole-db-source.md)   
  [Transformations Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Chemins d'accès d'Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
- [tâche de flux de données](../../integration-services/control-flow/data-flow-task.md)  
+ [Chemins d’accès d’Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
+ [Tâche de flux de données](../../integration-services/control-flow/data-flow-task.md)  
   
   

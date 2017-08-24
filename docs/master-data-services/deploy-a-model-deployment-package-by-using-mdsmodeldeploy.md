@@ -1,23 +1,28 @@
 ---
-title: "D&#233;ployer un package de d&#233;ploiement de mod&#232;le &#224; l&#39;aide de MDSModelDeploy | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Déployer un Package de déploiement de modèle à l’aide de MDSModelDeploy | Documents Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 caps.latest.revision: 16
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a678aee3bb185cf8dd44cb69d3c0027c090a81d3
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
-# D&#233;ployer un package de d&#233;ploiement de mod&#232;le &#224; l&#39;aide de MDSModelDeploy
+# <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Déployer un package de déploiement de modèle à l'aide de MDSModelDeploy
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], utilisez l'outil MDSModelDeploy pour déployer un package qui contient soit :  
   
 -   Des objets de modèle uniquement.  
@@ -29,7 +34,7 @@ caps.handback.revision: 16
 > [!IMPORTANT]  
 >  Les packages peuvent être déployés uniquement dans l'édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans laquelle ils ont été créés. Cela signifie que les packages créés dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ne peuvent pas être déployés sur [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ou les versions ultérieures.  
   
-## Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** dans l'environnement [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] cible.  
@@ -40,7 +45,7 @@ caps.handback.revision: 16
   
 -   Si vous mettez à jour un modèle avec des données, la version que vous déployez ne peut pas avoir l'état **Verrouillé** ou **Activé**.  
   
-### Pour déployer un package de déploiement de modèle  
+### <a name="to-deploy-a-model-deployment-package"></a>Pour déployer un package de déploiement de modèle  
   
 1.  Déterminez si vous déployez un nouveau modèle, un clone d'un modèle, ou si vous mettez à jour un modèle préalablement cloné. Pour plus d’informations, consultez [Options de déploiement de modèle &#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md).  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 16
         MDSModelDeploy deployclone -package PackageName  
         ```  
   
-    -   Pour mettre à jour un de modèle existant et ses données :  
+    -   Pour mettre à jour un de modèle existant et ses données :  
   
         ```  
         MDSModelDeploy deployupdate -package PackageName -version VersionName  
@@ -109,12 +114,12 @@ caps.handback.revision: 16
   
      Lorsque vous mettez à jour un modèle, si le processus échoue au cours des trois premières étapes, il s'arrête ; toutefois, les modifications qui sont déjà effectuées ne sont pas annulées. Si le processus échoue à l'étape 4, les membres qui peuvent être mis à jour sont mis à jour.  
   
-## Étapes suivantes  
- Les attributs de fichier et les autorisations d’accès ne sont pas inclus dans les packages de déploiement de modèle. Après avoir déployé un modèle, vous devez les mettre à jour manuellement. Pour plus d'informations, consultez :  
+## <a name="next-steps"></a>Étapes suivantes  
+ Les attributs de fichier et les autorisations d’accès ne sont pas inclus dans les packages de déploiement de modèle. Après avoir déployé un modèle, vous devez les mettre à jour manuellement. Pour plus d'informations, consultez :  
   
 -   [Affecter des autorisations d’objet de modèle &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## Voir aussi  
- [Déploiement de modèles &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Déploiement de modèles &#40; Master Data Services &#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   
