@@ -17,6 +17,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>Exemple : Script d’installation sans assistance de SQL Server pour SUSE Linux Enterprise Server
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 Cet exemple de script d’interpréteur de commandes installe SQL Server 2017 RC2 sur SP2 v12 de SUSE Linux Enterprise Server (SLES) sans entrée interactive. Il fournit des exemples d’installation du moteur de base de données, les outils de ligne de commande de SQL Server, l’Agent SQL Server et effectue les étapes de post-installation. Vous pouvez éventuellement installer la recherche en texte intégral et créer un utilisateur administratif.
 
 > [!TIP]
