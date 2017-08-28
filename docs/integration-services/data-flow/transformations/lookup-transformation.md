@@ -11,6 +11,10 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.lookuptrans.f1
+- sql13.dts.designer.lookuptransformation.general.f1
+- sql13.dts.designer.lookuptransformation.referencetable.f1
+- sql13.dts.designer.lookuptransformation.columns.f1
+- sql13.dts.designer.lookuptransformation.advanced.f1
 helpviewer_keywords:
 - Lookup transformation
 - joining columns [Integration Services]
@@ -24,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14e72d1f2d9790cd74c54eb7e152c0b29d278212
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: ee0c7e667e933c98bdbc228244a9dea1cf2c9bdd
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="lookup-transformation"></a>Transformation de recherche
@@ -59,7 +63,7 @@ ms.lasthandoff: 08/03/2017
   
  La transformation de recherche essaie de réaliser une équijointure entre les valeurs de l'entrée de transformation et celles du dataset de référence. (Une équijointure signifie que chaque ligne de l'entrée de transformation doit correspondre à au moins une ligne du dataset de référence.) Si une équijointure n'est pas possible, la transformation de recherche effectue l'une des actions suivantes :  
   
--   En l'absence d'entrée correspondante dans le dataset de référence, aucune jointure n'est réalisée. Par défaut, la transformation de recherche traite les lignes sans entrées correspondantes comme des erreurs. Toutefois, vous pouvez configurer la transformation de recherche pour rediriger ces lignes vers une sortie sans correspondance. Pour plus d’informations, consultez [Éditeur de transformation de recherche &#40;page Général&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-general-page.md) et [Éditeur de transformation de recherche &#40;page Sortie d’erreur&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+-   En l'absence d'entrée correspondante dans le dataset de référence, aucune jointure n'est réalisée. Par défaut, la transformation de recherche traite les lignes sans entrées correspondantes comme des erreurs. Toutefois, vous pouvez configurer la transformation de recherche pour rediriger ces lignes vers une sortie sans correspondance.  
   
 -   En présence de plusieurs correspondances dans la table de référence, la transformation de recherche retourne uniquement la première correspondance retournée par la requête de recherche. Si plusieurs correspondances sont trouvées, la transformation de recherche génère une erreur ou un avertissement uniquement lorsque la transformation a été configurée pour charger tout le dataset de référence dans le cache. Dans ce cas, la transformation de recherche génère un avertissement lorsque la transformation détecte plusieurs correspondances au moment où la transformation remplit le cache.  
   
@@ -139,6 +143,139 @@ ms.lasthandoff: 08/03/2017
 -   Exemple, [Lookup Transformation](http://go.microsoft.com/fwlink/?LinkId=267528)(Transformation de recherche), sur msftisprodsamples.codeplex.com.  
   
      Pour plus d’informations sur l’installation d’exemples de produits et de bases de données [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , consultez [SQL Server Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=267527)(Exemples de produits SQL Server Integration Services).  
+  
+## <a name="lookup-transformation-editor-general-page"></a>Éditeur de transformation de recherche (page Général)
+  Utilisez la page **Général** de la boîte de dialogue Éditeur de transformation de recherche pour sélectionner le mode de cache ainsi que le type de connexion et pour spécifier comment gérer les lignes sans entrées correspondantes.  
+  
+### <a name="options"></a>Options  
+ **Cache complet**  
+ Générez et chargez le dataset de référence dans le cache avant l'exécution de la transformation de recherche.  
+  
+ **Cache partiel**  
+ Générez le dataset de référence pendant l'exécution de la transformation de recherche. Chargez dans le cache les lignes avec des entrées correspondantes dans le dataset de référence et celles sans entrées correspondantes dans le dataset.  
+  
+ **Aucun cache**  
+ Générez le dataset de référence pendant l'exécution de la transformation de recherche. Aucune donnée n'est chargée dans le cache.  
+  
+ **Gestionnaire de connexions du cache**  
+ Configurez la transformation de recherche pour utiliser un gestionnaire de connexions du cache. Cette option n'est disponible que si l'option Cache complet est sélectionnée.  
+  
+ **Gestionnaire de connexions OLE DB**  
+ Configurez la transformation de recherche pour utiliser un gestionnaire de connexions OLE DB.  
+  
+ **Spécifier comment gérer les lignes sans entrées correspondantes**  
+ Sélectionnez une option pour gérer les lignes qui ne correspondent pas au moins à une entrée dans le dataset de référence.  
+  
+ Lorsque vous sélectionnez **Rediriger les lignes vers la sortie sans correspondance**, les lignes sont redirigées vers une sortie sans correspondance et ne sont pas gérées comme des erreurs. L'option **Erreur** figurant dans la page **Sortie d'erreur** de la boîte de dialogue **Éditeur de transformation de recherche** n'est pas disponible.  
+  
+ Lorsque vous sélectionnez une autre option dans la zone de liste **Spécifier comment gérer les lignes sans entrées correspondantes** , les lignes sont gérées comme des erreurs. L'option **Erreur** de la page **Sortie d'erreur** est disponible.  
+  
+### <a name="external-resources"></a>Ressources externes  
+ Entrée de blog, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) sur blogs.msdn.com  
+  
+## <a name="lookup-transformation-editor-connection-page"></a>Éditeur de transformation de recherche (page Connexion)
+  Utilisez la page **Connexion** de la boîte de dialogue **Éditeur de transformation de recherche** pour sélectionner un gestionnaire de connexions. Si vous sélectionnez un gestionnaire de connexions OLE DB, vous sélectionnez également une requête, une table ou une vue pour générer le dataset de référence.  
+  
+### <a name="options"></a>Options  
+ Les options suivantes sont disponibles quand vous sélectionnez **Cache complet** et **Gestionnaire de connexions du cache** dans la page Général de la boîte de dialogue **Éditeur de transformation de recherche** .  
+  
+ **Gestionnaire de connexions du cache**  
+ Sélectionnez un gestionnaire de connexions du cache existant dans la liste ou créez une connexion en cliquant sur **Nouveau**.  
+  
+ **Nouveau**  
+ Créez une connexion à l’aide de la boîte de dialogue **Éditeur du gestionnaire de connexions du cache** .  
+  
+ Les options suivantes sont disponibles quand vous sélectionnez **Cache complet**, **Cache partiel**ou **Aucun cache**et **Gestionnaire de connexions OLE DB**dans la page Général de la boîte de dialogue **Éditeur de transformation de recherche** .  
+  
+ **Gestionnaire de connexions OLE DB**  
+ Sélectionnez un gestionnaire de connexions OLE DB existant dans la liste ou créez une connexion en cliquant sur **Nouveau**.  
+  
+ **Nouveau**  
+ Crée une connexion en utilisant la boîte de dialogue **Configurer le gestionnaire de connexions OLE DB** .  
+  
+ **Utiliser une table ou une vue**  
+ Sélectionnez une table ou une vue existante dans la liste ou créez une table en cliquant sur **Nouveau**.  
+  
+> [!NOTE]  
+>  Si vous spécifiez une instruction SQL dans la page **Avancé** de l’ **Éditeur de transformation de recherche**, cette instruction SQL substitue et remplace le nom de table a sélectionné ici. Pour plus d’informations, consultez [Éditeur de transformation de recherche &#40;page Avancé&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md).  
+  
+ **Nouveau**  
+ Utilisez la boîte de dialogue **Créer une table** pour créer une table.  
+  
+ **Utiliser les résultats d'une requête SQL**  
+ Choisissez cette option pour rechercher une requête existante, générer une requête, vérifier la syntaxe d'une requête et afficher un aperçu des résultats d'une requête.  
+  
+ **Construire une requête**  
+ Créez l’instruction Transact-SQL à exécuter à l’aide du **Générateur de requêtes**. Cet outil graphique permet de créer des requêtes en explorant les données.  
+  
+ **Parcourir**  
+ Permet de rechercher une requête existante enregistrée dans un fichier.  
+  
+ **Analyser la requête**  
+ Contrôle la syntaxe d'une requête.  
+  
+ **Aperçu**  
+ Affiche un aperçu des résultats à l’aide de la boîte de dialogue **Visualiser les résultats de la requête** . Cette option affiche jusqu'à 200 lignes.  
+  
+### <a name="external-resources"></a>Ressources externes  
+ Entrée de blog, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) sur blogs.msdn.com  
+  
+## <a name="lookup-transformation-editor-columns-page"></a>Éditeur de transformation de recherche (page Colonnes)
+  Utilisez la page **Colonnes** de la boîte de dialogue **Éditeur de transformation de recherche** pour définir la jointure entre la table source et la table de référence, ainsi que pour sélectionner les colonnes de recherche dans la table de référence.  
+  
+### <a name="options"></a>Options  
+ **Colonnes d'entrée disponibles**  
+ Affichez la liste des colonnes d'entrée disponibles. Les colonnes d'entrée représentent les colonnes dans le flux de données d'une source connectée. Les colonnes d'entrée et la colonne de recherche doivent avoir des types de données identiques.  
+  
+ Au moyen d'une opération glisser-déplacer, mappez les colonnes d'entrée disponibles aux colonnes de recherche.  
+  
+ Vous pouvez également mapper les colonnes d'entrée aux colonnes de recherche à l'aide du clavier. Pour ce faire, mettez en surbrillance une colonne dans la table **Colonnes d'entrée disponibles** , appuyez sur la touche de l'application, puis cliquez sur **Modifier les mappages**.  
+  
+ **Colonnes de recherche disponibles**  
+ Affichez la liste des colonnes de recherche. Les colonnes de recherche représentent les colonnes de la table de référence dans lesquelles vous souhaitez rechercher des valeurs qui correspondent aux colonnes d'entrée.  
+  
+ Au moyen d'une opération glisser-déplacer, mappez les colonnes de recherche disponibles aux colonnes d'entrée.  
+  
+ Utilisez les cases à cocher pour sélectionner les colonnes de recherche de la table de référence sur lesquelles effectuer les opérations de recherche.  
+  
+ Vous pouvez également mapper les colonnes de recherche aux colonnes d'entrée à l'aide du clavier. Pour ce faire, mettez en surbrillance une colonne dans la table **Colonnes de recherche disponibles** , appuyez sur la touche de l'application, puis cliquez sur **Modifier les mappages**.  
+  
+ **colonne de recherche**  
+ Affichez les colonnes de recherche sélectionnées. Les sélections se reflètent dans les sélections des cases à cocher de la table **Colonnes de recherche disponibles** .  
+  
+ **Opération de recherche**  
+ Dans la liste, sélectionnez une opération de recherche à exécuter sur la colonne de recherche.  
+  
+ **Alias de sortie**  
+ Permet de saisir un alias pour la sortie de chaque colonne de recherche. La valeur par défaut est le nom de la colonne de recherche. Toutefois, vous pouvez sélectionner n'importe quel nom descriptif unique.  
+  
+## <a name="lookup-transformation-editor-advanced-page"></a>Éditeur de transformation de recherche (page Avancé)
+  La page **Avancé** de la boîte de dialogue **Éditeur de transformation de recherche** permet de configurer la mise en cache partielle et de modifier l’instruction SQL pour la transformation de recherche.  
+  
+### <a name="options"></a>Options  
+ **Taille du cache (32 bits)**  
+ Ajustez la taille du cache (en mégaoctets) pour les ordinateurs 32 bits. La valeur par défaut est 5 mégaoctets.  
+  
+ **Taille du cache (64 bits)**  
+ Ajustez la taille du cache (en mégaoctets) pour les ordinateurs 64 bits. La valeur par défaut est 5 mégaoctets.  
+  
+ **Activer le cache pour les lignes sans entrées correspondantes**  
+ Mettez en cache les lignes sans entrées correspondantes dans le dataset de référence.  
+  
+ **Allocation à partir du cache**  
+ Spécifiez le pourcentage de cache à allouer aux lignes sans entrées correspondantes dans le dataset de référence.  
+  
+ **Modifier l'instruction SQL**  
+ Modifiez l'instruction SQL utilisée pour générer le dataset de référence.  
+  
+> [!NOTE]  
+>  L’instruction SQL facultative que vous spécifiez dans cette page substitue et remplace le nom de table que vous avez spécifié dans la page **Connexion** de **l’Éditeur de transformation de recherche**. Pour plus d’informations, consultez [Éditeur de transformation de recherche &#40;page Connexion&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md).  
+  
+ **Définition des paramètres**  
+ Mappez les colonnes d’entrée aux paramètres en utilisant la boîte de dialogue **Définition des paramètres de la requête** .  
+  
+### <a name="external-resources"></a>Ressources externes  
+ Entrée de blog, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) sur blogs.msdn.com  
   
 ## <a name="see-also"></a>Voir aussi  
  [Transformation de recherche floue](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   

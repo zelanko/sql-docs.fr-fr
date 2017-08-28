@@ -15,22 +15,24 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b4f3283de9e26ce05849a34c8906a3095c229680
+ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
+ms.openlocfilehash: 64e297a37c3b6449551968b5788f8c2c0ddd4ab6
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="odata-source-properties"></a>Propriétés de la source OData
-  Quand vous cliquez avec le bouton droit sur **Source OData** dans le flux de données, puis cliquez sur **Propriétés**, vous voyez les propriétés du composant **Source OData** dans la fenêtre **Propriétés** .  
-  
-|||  
-|-|-|  
+Lorsque vous cliquez sur **OData Source** le flux de données, cliquez sur **propriétés**, vous consultez les propriétés pour le **OData Source** composant dans le **propriétés** fenêtre.  
+
+## <a name="properties"></a>Propriétés 
 |Propriété|Description|  
-|CollectionName|Nom de la collection que vous souhaitez à extraire du service OData. La propriété **CollectionName** est utilisée quand **UseResourcePath** a la valeur false.<br /><br /> Cette propriété utilise des expressions et permet de définir la valeur au moment de l'exécution. Cependant, si les métadonnées de la collection ne correspondent pas aux métadonnées utilisées au moment de la conception, une erreur de validation est générée, et l'exécution du flux de données échouera.|  
+|-|-|  
+|CollectionName|Nom de la collection pour récupérer à partir du service OData. La propriété **CollectionName** est utilisée quand **UseResourcePath** a la valeur false.<br /><br /> Cette propriété est expressionable, ce qui vous permet de définir la valeur lors de l’exécution. Toutefois, si les métadonnées de la collection ne correspondent pas les métadonnées qui existaient au moment du design, une erreur de validation se produit, ce à l’origine de l’exécution du flux de données échouera.|  
 |DefaultStringLength|Cette valeur spécifie la longueur par défaut des colonnes de chaîne qui n'ont pas de longueur maximale.<br /><br /> **Valeur par défaut :** 4000|  
-|Requête|Paramètres de requête OData. Cette propriété utilise des expressions et peut être définie au moment de l'exécution.|  
+|Requête|Paramètres de requête OData. Cette propriété est expressionable et peut être définie lors de l’exécution.|  
 |ResourcePath|Utilisez cette propriété lorsque vous devez spécifier un chemin d'accès de ressources complet, plutôt que sélectionner uniquement un nom de collection. Cette propriété est utilisée lorsque **UseResourcePath** a la valeur True.|  
 |UseResourcePath|Lorsque la valeur est définie à True, la valeur **ResourcePath** est ajoutée à l'URL de base pour déterminer l'emplacement du flux OData. Lorsque la valeur est False, la valeur **CollectionName** est utilisée.<br /><br /> **Valeur par défaut :** False|  
   
-  
+## <a name="see-also"></a>Voir aussi
+[Source OData](odata-source.md)
+

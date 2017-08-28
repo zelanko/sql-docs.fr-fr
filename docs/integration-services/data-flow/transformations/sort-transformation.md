@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sorttrans.f1
+- sql13.dts.designer.sorttransformation.f1
 helpviewer_keywords:
 - Sort transformation
 - descending sorts
@@ -24,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bb0f93339416c071177fd532847b584ab2043e84
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: bcffbef3e370183c6e37726e23d058d342d252e2
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="sort-transformation"></a>transformation de tri
@@ -45,11 +46,9 @@ ms.lasthandoff: 08/03/2017
  Cette transformation a une entrée et une sortie. Elle ne prend pas en charge les sorties d'erreur.  
   
 ## <a name="configuration-of-the-sort-transformation"></a>Configuration de la transformation de tri  
- Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programme.  
   
- Pour plus d’informations sur les propriétés que vous pouvez définir dans la boîte de dialogue **Éditeur de transformation de tri** , consultez [Éditeur de transformation de tri](../../../integration-services/data-flow/transformations/sort-transformation-editor.md).  
-  
- La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
+ La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programme. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
   
 -   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
@@ -60,6 +59,37 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-content"></a>Contenu connexe  
  Exemple, [SortDeDuplicateDelimitedString Custom SSIS Component](http://go.microsoft.com/fwlink/?LinkId=220821), sur codeplex.com.  
+  
+## <a name="sort-transformation-editor"></a>Éditeur de transformation de tri
+  Utilisez la boîte de dialogue **Éditeur de transformation de tri** pour sélectionner les colonnes à trier, définir l'ordre de tri et indiquer si les doublons sont supprimés.  
+  
+### <a name="options"></a>Options  
+ **Colonnes d'entrée disponibles**  
+ Définissez les colonnes à trier en utilisant les cases à cocher.  
+  
+ **Nom**  
+ Affiche le nom de chaque colonne d'entrée disponible.  
+  
+ **Relais**  
+ Indique s'il faut inclure la colonne dans la sortie triée.  
+  
+ **Colonne d'entrée**  
+ Sélectionnez dans la liste le nom d'une colonne d'entrée pour chaque ligne. Vos sélections se reflètent dans les sélections des cases à cocher de la table **Colonnes d'entrée disponibles** .  
+  
+ **Alias de sortie**  
+ Permet de saisir un alias pour chaque colonne de sortie. Par défaut, il s'agit du nom de la colonne d'entrée ; vous pouvez néanmoins choisir un nom unique et descriptif.  
+  
+ **Type de tri**  
+ Indiquez si vous voulez effectuer un tri croissant ou décroissant.  
+  
+ **Ordre de tri**  
+ Indiquez l'ordre de tri des colonnes. Vous devez le faire manuellement pour chaque colonne.  
+  
+ **Indicateurs de comparaison**  
+ Pour plus d’informations sur les options de comparaison de chaînes, consultez [Comparaison des données chaînes](../../../integration-services/data-flow/comparing-string-data.md).  
+  
+ **Supprimer les lignes avec des valeurs de tri en double**  
+ Indiquez si la transformation copie les lignes en double dans la sortie de transformation ou crée une seule entrée pour tous les doublons en fonction des options de comparaison de chaînes définies.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Flux de données](../../../integration-services/data-flow/data-flow.md)   

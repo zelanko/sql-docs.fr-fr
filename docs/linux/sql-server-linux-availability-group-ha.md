@@ -14,14 +14,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8e2d26fd9ce79fc8c47c7499313648d565ae1b97
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 353e7cf5cef8430303e3ee6fbefc92db08f5f733
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Haute disponibilité et protection des données pour les configurations de groupe de disponibilité
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Cet article présente les configurations de déploiement pris en charge pour les groupes de disponibilité SQL Server Always On sur des serveurs Linux. Un groupe de disponibilité prend en charge la haute disponibilité et protection des données. Détection de défaillance automatique, le basculement automatique et la reconnexion après un basculement transparente fournissent une haute disponibilité. Réplicas synchronisés fournissent la protection des données. 
 
@@ -114,7 +115,7 @@ Par exemple, un groupe de disponibilité avec trois réplicas synchrones - un r�
 Dans ce scénario, les deux réplicas ont répondu pour le basculement doit être déclenchée. Pour le basculement automatique réussi après une panne de réplica principal, les deux réplicas secondaires doivent être mis à jour et de répondre à la promouvoir la notification préalable. S’ils sont en ligne et synchrone, ils ont le même numéro de séquence. Le groupe de disponibilité promeut un d’eux. Si seul un des réplicas secondaires répond à l’avant de promouvoir l’action, l’agent de ressource ne peut pas garantir que la base de données secondaire qui a répondu possède les numéros de séquence le plus élevé et un basculement n’est pas déclenché.
 
 >[!IMPORTANT]
->Lorsque `required_synchronized_secondaries_to_commit` est 0 est risque de perte de données. Durant une panne de réplica principal, l’agent de ressource ne déclenche pas automatiquement un basculement. Vous pouvez attendre primary afin de restaurer ou basculer manuellement à l’aide de `FORCE_FAILOVER_ALLOW_DATA_LOSS`.
+>Quand la valeur de `required_synchronized_secondaries_to_commit` est 0, il existe un risque de perte de données. Durant une panne de réplica principal, l’agent de ressource ne déclenche pas automatiquement un basculement. Vous pouvez attendre primary afin de restaurer ou basculer manuellement à l’aide de `FORCE_FAILOVER_ALLOW_DATA_LOSS`.
 
 Vous pouvez choisir de remplacer le comportement par défaut et empêcher la ressource de groupe de disponibilité de paramètre `required_synchronized_secondaries_to_commit` automatiquement.
 

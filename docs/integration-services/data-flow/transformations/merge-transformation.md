@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.mergetrans.f1
+- sql13.dts.designer.mergetransformation.f1
 helpviewer_keywords:
 - merging datasets [Integration Services]
 - merging data [Integration Services]
@@ -23,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0e9bb9533459c720bae5b12d5f4ebdce1f85fc4d
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 4c3eead08bb91d43f83782682a122da278ac051f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="merge-transformation"></a>transformation de fusion
@@ -58,9 +59,7 @@ ms.lasthandoff: 08/03/2017
  Cette transformation a deux entrées et une sortie. Elle ne prend pas en charge de sortie d'erreur.  
   
 ## <a name="configuration-of-the-merge-transformation"></a>Configuration de la transformation de fusion  
- Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
-  
- Pour plus d’informations sur les propriétés que vous pouvez définir dans la boîte de dialogue **Éditeur de transformation de fusion** , consultez [Éditeur de transformation de fusion](../../../integration-services/data-flow/transformations/merge-transformation-editor.md).  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programme.  
   
  Pour plus d'informations sur les propriétés définissables par programmation, cliquez sur l'une des rubriques suivantes :  
   
@@ -73,7 +72,23 @@ ms.lasthandoff: 08/03/2017
   
 -   [Définir les propriétés d'un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [Trier des données pour les transformations de fusion et de jointure de fusion](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Trier des données pour la fusion et de Transformations de jointure de fusion](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+  
+## <a name="merge-transformation-editor"></a>Éditeur de transformation de fusion
+  Utilisez **l’Éditeur de transformation de fusion** pour définir des colonnes dans deux datasets triés à fusionner.  
+  
+> [!IMPORTANT]  
+>  La transformation de fusion requiert des données triées pour ses entrées. Pour plus d’informations sur cette spécification importante, consultez [Trier des données pour les transformations de fusion et de jointure de fusion](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
+  
+### <a name="options"></a>Options  
+ **Nom de colonne de sortie**  
+ Spécifiez le nom de la colonne de sortie.  
+  
+ **Entrée de fusion 1**  
+ Sélectionnez la colonne à fusionner sous la forme Entrée de fusion 1.  
+  
+ **Entrée de fusion 2**  
+ Sélectionnez la colonne à fusionner sous la forme Entrée de fusion 2.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Transformation de jointure de fusion](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   

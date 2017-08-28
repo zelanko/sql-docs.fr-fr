@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataminingquerytrans.f1
+- sql13.dts.designer.dmquerytransformation.miningmodel.f1
+- sql13.dts.designer.dmquerytransformation.query.f1
 helpviewer_keywords:
 - Data Mining Query transformation
 - prediction queries [Integration Services]
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 544f0aaf11e83b9ba2fc0ae5150b85e537998c25
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 7ec5d0d1168e49fb38ce8b58eaa75d6c0d6c51b5
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="data-mining-query-transformation"></a>transformation de requête d'exploration de données
@@ -38,12 +40,6 @@ ms.lasthandoff: 08/03/2017
   
  Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d’informations sur les propriétés que vous pouvez définir dans la boîte de dialogue **Éditeur de transformation de requête d’exploration de données** , cliquez sur l’une des rubriques suivantes :  
-  
--   [Éditeur de transformation de requête d’exploration de données &#40;onglet Modèle d'exploration de données&#41;](../../../integration-services/data-flow/transformations/data-mining-query-transformation-editor-mining-model-tab.md)  
-  
--   [Éditeur de transformation de requête d’exploration de données &#40;onglet Modèle d'exploration de données&#41;](../../../integration-services/data-flow/transformations/data-mining-query-transformation-editor-mining-model-tab.md)  
-  
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
   
 -   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -52,4 +48,30 @@ ms.lasthandoff: 08/03/2017
   
  Pour plus d’informations sur la façon de définir des propriétés, consultez [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
+## <a name="data-mining-query-transformation-editor-mining-model-tab"></a>Éditeur de transformation de requête d'exploration de données (onglet Modèle d'exploration de données)
+  Utilisez l'onglet **Modèle d'exploration de données** de l' **Éditeur de transformation de requête d'exploration de données** pour sélectionner la structure d'exploration de données et ses modèles d'exploration de données.  
   
+### <a name="options"></a>Options  
+ **Connexion**  
+ Sélectionnez une connexion Analysis Services en utilisant la zone de liste, ou créez une connexion en utilisant le bouton **Nouvelle** comme indiqué ci-dessous.  
+  
+ **Nouvelle**  
+ Créez une connexion à l’aide de la boîte de dialogue **Ajout d’un gestionnaire de connexions Analysis Services** .  
+  
+ **Structure d'exploration de données**  
+ Sélectionnez dans la liste des structures de modèles d'exploration de données.  
+  
+ **Modèles d'exploration de données**  
+ Affiche la liste des modèles d’exploration de données associés à la structure d’exploration de données sélectionnée.  
+  
+## <a name="data-mining-query-transformation-editor-query-tab"></a>Éditeur de transformation de requête d'exploration de données (onglet Requête)
+  Utilisez l'onglet **Requête** de la boîte de dialogue **Éditeur de transformation de requête d'exploration de données** pour créer une requête de prédiction.  
+  
+### <a name="options"></a>Options  
+ **Requête d'exploration de données**  
+ Tapez une requête DMX (Data Mining Extensions) directement dans la zone de texte.  
+  
+ **Générer une nouvelle requête**  
+ Cliquez sur **Générer une nouvelle requête** pour créer une requête DMX (Data Mining Extensions) à l’aide du générateur graphique de requêtes.  
+  
+

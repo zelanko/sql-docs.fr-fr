@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.exportcolumntrans.f1
+- sql13.dts.designer.fileextractortransformation.columns.f1
+- sql13.dts.designer.fileextractortransformation.errorhandling.f1
 helpviewer_keywords:
 - exporting data
 - append options [Integration Services]
@@ -24,10 +26,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e7e611452f931d049c63c822587dc7610bf1eb25
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 986a900c49a91578358b0ace380c1fb6e3f5cb9e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="export-column-transformation"></a>Transformation d'exportation de colonne
@@ -65,8 +67,6 @@ ms.lasthandoff: 08/03/2017
   
  Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de transformation d’exportation de colonne**, consultez [Éditeur de transformation d’exportation de colonne &#40;page Colonnes&#41;](../../../integration-services/data-flow/transformations/export-column-transformation-editor-columns-page.md).  
-  
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
   
 -   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -74,5 +74,49 @@ ms.lasthandoff: 08/03/2017
 -   [Propriétés personnalisées des transformations](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  Pour plus d’informations sur la façon de définir des propriétés, consultez [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="export-column-transformation-editor-columns-page"></a>Éditeur de transformation d'exportation de colonne (page Colonnes)
+  Utilisez la page **Colonnes** de la boîte de dialogue **Éditeur de transformation d'exportation de colonne** pour spécifier les colonnes du flux de données à extraire dans des fichiers. Vous pouvez préciser si la transformation d'exportation de colonne ajoute des données à la fin d'un fichier ou écrase le fichier existant.  
+  
+### <a name="options"></a>Options  
+ **Colonne d'extraction**  
+ Permet de sélectionner à partir de la liste d'entrée des colonnes contenant des données texte ou image. Toutes les lignes doivent avoir des définitions pour les options **Colonne d'extraction** et **Colonne du chemin d'accès**.  
+  
+ **Colonne du chemin d'accès**  
+ Permet de sélectionner à partir de la liste d'entrée des colonnes contenant les chemins d'accès aux fichiers ainsi que les noms de fichiers. Toutes les lignes doivent avoir des définitions pour les options **Colonne d'extraction** et **Colonne du chemin d'accès**.  
+  
+ **Autoriser l'ajout**  
+ Permet de préciser si la transformation ajoute ou non des données à la fin des fichiers existants. La valeur par défaut est **false**.  
+  
+ **Forcer la troncation**  
+ Permet de préciser si la transformation supprime le contenu des fichiers existants avant d'écrire des données. La valeur par défaut est **false**.  
+  
+ **Écrire la marque d'ordre d'octet**  
+ Indique s'il est nécessaire d'écrire une marque d'ordre d'octet (BOM, Byte-Order Mark) dans le fichier. Une BOM est écrite uniquement quand les données sont de type **DT_NTEXT** ou DT_WSTR et qu’elles ne sont pas ajoutées à un fichier de données existant.  
+  
+## <a name="export-column-transformation-editor-error-output-page"></a>Éditeur de transformation d'exportation de colonne (page Sortie d'erreur)
+  La page **Sortie d'erreur** de la boîte de dialogue **Éditeur de transformation d'exportation de colonne** permet de spécifier la manière dont les erreurs doivent être traitées.  
+  
+### <a name="options"></a>Options  
+ **Entrée/sortie**  
+ Affiche le nom de la sortie. Cliquez sur le nom pour développer la vue de sorte à afficher les colonnes.  
+  
+ **Colonne**  
+ Affiche les colonnes de sortie sélectionnées à la page **Colonnes** de la boîte de dialogue **Éditeur de transformation d’exportation de colonne** .  
+  
+ **Erreur**  
+ Indiquez ce qui doit se produire en cas d'erreur : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
+  
+ **Troncation**  
+ Indiquez ce qui doit se produire en cas de troncation : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
+  
+ **Description**  
+ Affichez la description de l'opération.  
+  
+ **Définir cette valeur sur les cellules sélectionnées**  
+ Indiquez ce qui doit se produire pour l'ensemble des cellules sélectionnées lorsqu'une erreur ou une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
+  
+ **Appliquer**  
+ Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
   

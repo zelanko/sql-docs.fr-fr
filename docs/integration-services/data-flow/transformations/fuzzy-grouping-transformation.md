@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.fuzzygroupingtrans.f1
+- sql13.dts.designer.fuzzygroupingtransformation.connection.f1
+- sql13.dts.designer.fuzzygroupingtransformation.columns.f1
+- sql13.dts.designer.fuzzygroupingtransformation.advanced.f1
 helpviewer_keywords:
 - cleaning data
 - comparing data
@@ -30,10 +33,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 009cdda72a100f887adb81e6f526b9a3ebe7651f
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 6fceec90818b05ae23c04f90cff8f68c8c7c3c42
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="fuzzy-grouping-transformation"></a>Transformation de regroupement approximatif
@@ -85,14 +88,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-fuzzy-grouping-transformation"></a>Configuration de la transformation de regroupement probable  
  Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de transformation de regroupement probable** , cliquez sur l’une des rubriques suivantes :  
-  
--   [Éditeur de transformation de regroupement probable &#40;onglet Gestionnaire de connexions&#41;](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
-  
--   [Éditeur de transformation de regroupement approximatif &#40;onglet Colonnes&#41;](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-columns-tab.md)  
-  
--   [Éditeur de transformation de regroupement probable &#40;onglet Avancé&#41;.](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-advanced-tab.md)  
-  
  Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
 -   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -104,7 +99,86 @@ ms.lasthandoff: 08/03/2017
   
 -   [Identifier des lignes de données semblables à l'aide de la transformation de regroupement probable](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
--   [Définir les propriétés d'un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+-   [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## <a name="fuzzy-grouping-transformation-editor-connection-manager-tab"></a>Éditeur de transformation de regroupement probable (onglet Gestionnaire de connexions)
+  Utilisez l'onglet **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de transformation de regroupement probable** pour sélectionner une connexion existante ou en créer une.  
+  
+> [!NOTE]  
+>  Le serveur défini par la connexion doit exécuter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La transformation de regroupement probable crée des objets de données temporaires dans tempdb qui peuvent être aussi volumineux que l’ensemble de l’entrée de la transformation. Au cours de son exécution, la transformation envoie des requêtes serveur par rapport aux objets temporaires, ce qui peut affecter les performances générales du serveur.  
+  
+### <a name="options"></a>Options  
+ **Gestionnaire de connexions OLE DB**  
+ Sélectionnez une connexion OLE DB existante en utilisant la zone de liste, ou créez une connexion en utilisant le bouton **Nouvelle** .  
+  
+ **Nouvelle**  
+ Crée une connexion en utilisant la boîte de dialogue **Configurer le gestionnaire de connexions OLE DB** .  
+  
+## <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Éditeur de transformation de regroupement approximatif (onglet Colonnes)
+  L'onglet **Colonnes** de la boîte de dialogue **Éditeur de transformation de regroupement approximatif** permet de spécifier les colonnes utilisées pour regrouper les lignes comportant des doublons.  
+  
+### <a name="options"></a>Options  
+ **Colonnes d'entrée disponibles**  
+ Sélectionnez dans cette liste les colonnes d'entrée utilisées pour regrouper les lignes comportant des doublons.  
+  
+ **Nom**  
+ Permet d'afficher le nom des colonnes d'entrée disponibles.  
+  
+ **Transfert direct**  
+ Permet d'indiquer s'il est nécessaire d'inclure la colonne d'entrée dans la sortie de la transformation. Toutes les colonnes utilisées pour le regroupement sont automatiquement copiées dans la sortie. Vous pouvez inclure des colonnes supplémentaires en activant cette colonne.  
+  
+ **Colonne d'entrée**  
+ Choisissez l’une des colonnes d’entrée précédemment sélectionnées dans la liste **Colonnes d’entrée disponibles** .  
+  
+ **Alias de sortie**  
+ Entrez un nom descriptif pour la colonne de sortie correspondante. Par défaut, cette colonne porte le même nom que la colonne d'entrée.  
+  
+ **Grouper les alias de sortie**  
+ Entrez un nom descriptif pour la colonne qui va contenir la valeur canonique des doublons groupés. Par défaut, cette colonne de sortie porte le nom de la colonne d'entrée suivi de la mention « _clean ».  
+  
+ **Type de correspondance**  
+ Sélectionnez la correspondance floue ou exacte. Avec une correspondance approximative, les lignes sont considérées comme des doublons si elles sont suffisamment similaires dans toutes les colonnes. Si vous spécifiez une correspondance exacte pour certaines colonnes, seules les lignes contenant des valeurs identiques dans les colonnes associées à une correspondance exacte seront considérées comme des doublons probables. Par conséquent, si vous savez qu'une colonne ne contient aucune erreur ni incohérence, vous pouvez opter pour la correspondance exacte sur cette colonne afin d'accroître la précision de la correspondance approximative sur d'autres colonnes.  
+  
+ **Similarité minimale**  
+ Définissez, à l'aide du curseur, le seuil de similarité au niveau de la jointure. Plus la valeur est proche de 1, plus la valeur de recherche doit être proche de la valeur source pour constituer une correspondance. Si vous augmentez le seuil, vous pouvez améliorer la vitesse de correspondance étant donné qu'un plus petit nombre d'enregistrements candidats doit être pris en compte.  
+  
+ **Alias de sortie de similarité**  
+ Spécifiez le nom d'une nouvelle colonne de sortie qui contient le score de similarité de la jointure sélectionnée. Si vous ne définissez pas cette valeur, la colonne de sortie n'est pas créée.  
+  
+ **Chiffres**  
+ Spécifiez l'importance des premiers et derniers chiffres en comparant les données de la colonne. Par exemple, si les premiers chiffres sont significatifs, « 123 Main Street » ne sera pas groupé avec « 456 Main Street ».  
+  
+|Valeur|Description|  
+|-----------|-----------------|  
+|**Aucun**|Les premiers et derniers chiffres ne sont pas significatifs.|  
+|**Premiers**|Seuls les premiers chiffres sont significatifs.|  
+|**Derniers**|Seuls les derniers chiffres sont significatifs.|  
+|**LeadingAndTrailing**|Les premiers et derniers chiffres sont significatifs.|  
+  
+ **Indicateurs de comparaison**  
+ Pour plus d’informations sur les options de comparaison de chaînes, consultez [Comparaison des données chaînes](../../../integration-services/data-flow/comparing-string-data.md).  
+  
+## <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>Éditeur de transformation de regroupement probable (onglet Avancé).
+  Utilisez l'onglet **Avancé** de la boîte de dialogue **Éditeur de transformation de regroupement probable** pour spécifier les colonnes d'entrée et de sortie, définir des seuils de similarité et des séparateurs.  
+  
+> [!NOTE]  
+>  Les propriétés **Exhaustive** et **MaxMemoryUsage** de la transformation de regroupement approximatif ne sont pas disponibles dans l' **Éditeur de transformation de regroupement approximatif**, mais elles peuvent être définies à l'aide de l' **Éditeur avancé**. Pour plus d'informations sur ces propriétés, consultez la section Transformation de regroupement approximatif dans [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
+  
+### <a name="options"></a>Options  
+ **Nom de la colonne clé d'entrée**  
+ Spécifiez le nom d'une colonne de sortie qui contient l'identificateur unique de chaque ligne d'entée. La colonne **_key_in** a une valeur qui identifie chaque ligne de manière unique.  
+  
+ **Nom de la colonne clé de sortie**  
+ Spécifiez le nom d'une colonne de sortie qui contient l'identificateur unique de la ligne canonique d'un groupe de lignes dupliquées. La colonne **_key_out** correspond à la valeur **_key_in** de la ligne de données canonique.  
+  
+ **Nom de colonne du score de similarité**  
+ Spécifiez un nom qui contient le score de similarité. Le score de similarité est une valeur comprise entre 0 et 1 qui indique le niveau de similarité avec la ligne canonique. Plus le score se rapproche de 1, plus la ligne correspond à la ligne canonique.  
+  
+ **Seuil de similarité**  
+ Définissez le seuil de similarité au moyen du curseur. Plus le seuil est proche de 1, plus la similarité entre les lignes est grande pour se qualifier comme lignes dupliquées. L'augmentation du seuil peut accélérer les recherches du fait que moins de candidats doivent être évalués.  
+  
+ **Séparateurs de jetons**  
+ La transformation fournit un ensemble de séparateurs par défaut pour marquer des données, mais vous devez ajouter ou supprimer des séparateurs en modifiant la liste en fonction des besoins.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Transformation de recherche floue](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   

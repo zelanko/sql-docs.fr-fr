@@ -11,13 +11,15 @@ ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 05cc425e6411734b0cc300a9e3587fa2196893ab
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: b2e9353126b98cdda0753e1ad6dc4d1a2adbb1eb
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Utilisez Visual Studio pour créer des bases de données pour SQL Server sur Linux 
+# <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Utilisez Visual Studio pour créer des bases de données pour SQL Server sur Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 SQL Server Data Tools (SSDT), Visual Studio se transforme en un environnement de gestion (DLM) du cycle de vie de développement et de base de données puissantes, pour SQL Server sur Linux. Vous pouvez développer, créer, tester et publier votre base de données à partir d’un projet de contrôle de code source, tout comme vous développez votre code d’application.
 
@@ -37,7 +39,7 @@ SQL Server Data Tools (SSDT), Visual Studio se transforme en un environnement de
 
 SQL Server 2017 RC2 sur Linux est prise en charge par SSDT version 17,0 RC ou version ultérieure.
 
-1. [Téléchargez et installez SSDT 17,0 RC2].
+* [Téléchargez et installez SSDT 17,0 RC2](https://go.microsoft.com/fwlink/?linkid=837939).
 
 ## <a name="create-a-new-database-project-in-source-control"></a>Créer un nouveau projet de base de données dans le contrôle de code source
 
@@ -110,11 +112,7 @@ Si vous utilisez T-SQL, consultez [didacticiel : écriture d’instructions Tra
 Pour plus d’informations sur le développement d’une base de données avec les outils de données SQL, consultez [documents de MSDN SSDT]
 
 [télécharger et installer Visual Studio]:https://www.visualstudio.com/downloads/
-[Téléchargez et installez SSDT 17,0 RC2]:https://aka.ms/ssdt-download
+[Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
 [documents de MSDN SSDT]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
 [didacticiel : écriture d’instructions Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
 [de référence Transact-SQL (moteur de base de données)]:https://msdn.microsoft.com/library/bb510741.aspx
-
-
-
-

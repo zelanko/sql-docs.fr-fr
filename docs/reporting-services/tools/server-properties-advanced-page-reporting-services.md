@@ -18,10 +18,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 5baf0e5c9dcc3b9c70fce06024e5bba957c48f65
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 0626dc829e6ae2cd4212dc05deb406740592dc40
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 
@@ -124,6 +124,19 @@ PowerBI ReportServer activez l’exportation de données à partir des élément
 
 **EnableTestConnectionDetailedErrors**  
 Indique si les messages d'erreur détaillés sont envoyés à l'ordinateur client lorsque des utilisateurs testent des connexions de la source des données à l'aide du serveur de rapports. La valeur par défaut est **true**. Si l’option est définie sur **false**, seuls les messages d’erreur génériques sont envoyés.
+
+**AccessControlAllowCredentials**  
+Indique si la réponse à la demande du client peut être exposée lorsque l’indicateur « informations d’identification » est défini sur true. La valeur par défaut est **false**.
+
+**AccessControlAllowHeaders** liste séparés par des virgules des en-têtes autorisé par le serveur lorsqu’un client effectue une demande. Cette propriété peut être une chaîne vide, en spécifiant * autorise tous les en-têtes.
+
+**AccessControlAllowMethods** une liste de séparés par des virgules des méthodes HTTP auxquelles le serveur autorisera lorsqu’un client effectue une demande. Les valeurs par défaut (GET, PUT, POST, PATCH, DELETE), en spécifiant * autorisera toutes les méthodes.
+
+**AccessControlAllowOrigin** une liste de séparés par des virgules des origines qui autorise le serveur lorsqu’un client effectue une demande. La valeur par défaut est vide qui empêche toutes les demandes, spécifiant * autorisera toutes les origines lorsque les informations d’identification ne sont pas définies ; Si les informations d’identification sont spécifiées, une liste explicite d’origine doit être spécifiée.
+
+**AccessControlExposeHeaders** liste séparés par des virgules des en-têtes que le serveur doit exposer aux clients. La valeur par défaut est vide.
+
+**AccessControlMaxAge** Spécifie le nombre de secondes pendant lesquelles les résultats de la demande préliminaire peuvent être mis en cache. La valeur par défaut est 600 (10 minutes).
 
 ## <a name="see-also"></a>Voir aussi
 

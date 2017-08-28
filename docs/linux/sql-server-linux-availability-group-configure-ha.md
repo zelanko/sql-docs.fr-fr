@@ -10,14 +10,15 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3a94bf7646143d687a7300c8ab2a66c3caa2d8d9
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 6ceceaa00b2db22b5f1be9a6e8305da5b4cea49b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-
 # <a name="configure-always-on-availability-group-for-sql-server-on-linux"></a>Configurer le groupe de disponibilité Always On pour SQL Server sur Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Cet article décrit comment créer un serveur SQL effectue toujours sur le groupe de disponibilité pour la haute disponibilité sur Linux. Il existe deux types de configuration pour les groupes de disponibilité. A *haute disponibilité* configuration utilise un gestionnaire de cluster pour assurer la continuité. Cette configuration peut également inclure des réplicas en lecture de montée en puissance parallèle. Ce document explique comment créer la configuration de haute disponibilité de groupe de disponibilité.
 

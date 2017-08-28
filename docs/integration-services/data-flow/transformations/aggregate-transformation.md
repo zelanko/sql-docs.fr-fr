@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.aggregatetrans.f1
+- sql13.dts.designer.aggregationtransformation.aggregations.f1
+- sql13.dts.designer.aggregationtransformation.advanced.f1
 helpviewer_keywords:
 - IsBig property
 - aggregate functions [Integration Services]
@@ -22,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9e6bdc92869d16ac47745b04c0a94d9f9c993449
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 7db09ca84b86d93790ce4b1bf6300526df188dea
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="aggregate-transformation"></a>Transformation d'agrégation
@@ -114,13 +116,7 @@ ms.lasthandoff: 08/03/2017
   
  Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de transformation d’agrégation** , cliquez sur l’une des rubriques suivantes :  
-  
--   [Éditeur de transformation d’agrégation &#40;onglet Agrégations&#41;](../../../integration-services/data-flow/transformations/aggregate-transformation-editor-aggregations-tab.md)  
-  
--   [Éditeur de transformation d’agrégation &#40;onglet Avancé&#41;](../../../integration-services/data-flow/transformations/aggregate-transformation-editor-advanced-tab.md)  
-  
- La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programme. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
+ La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
   
 -   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
@@ -135,7 +131,114 @@ ms.lasthandoff: 08/03/2017
 -   [Trier des données pour les transformations de fusion et de jointure de fusion](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Agréger les valeurs dans un dataset à l'aide de la transformation d'agrégation](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+ [Agréger les valeurs dans un jeu de données à l’aide de la Transformation d’agrégation](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+  
+## <a name="aggregate-transformation-editor-aggregations-tab"></a>Éditeur de transformation d'agrégation (onglet Agrégations)
+  Utilisez l’onglet **Agrégations** de la boîte de dialogue **Éditeur de transformation d’agrégation** pour spécifier les colonnes destinées à l’agrégation et les propriétés de cette agrégation. Vous pouvez appliquer plusieurs agrégations. Ce type de transformation ne génère pas d'erreur de sortie.  
+  
+> [!NOTE]  
+>  Les options concernant le nombre et l’échelle de clés d’une part et le nombre et l’échelle de clés distinctes d’autre part s’appliquent au niveau du composant quand ces options sont indiquées sous l’onglet **Avancé** , au niveau de la sortie quand elles sont précisées dans l’affichage avancé de l’onglet **Agrégations** ou encore au niveau des colonnes quand elles sont spécifiées dans la liste de colonnes se trouvant dans la partie inférieure de l’onglet **Agrégations** .  
+>   
+>  Dans la transformation d’agrégation, **Clés** et **Échelle de clé** font référence au nombre de groupes attendus d’une opération **Group by** . **Nombre de clés distinctes** et **Échelle de nombre des valeurs distinctes** font référence au nombre de valeurs distinctes attendues d’une opération **Comptage de valeurs** .  
+  
+### <a name="options"></a>Options  
+ **Avancé / Simple**  
+ Permet d'afficher ou de masquer les options permettant de configurer plusieurs agrégations dans le cas de sorties multiples. Par défaut, les options avancées sont masquées.  
+  
+ **Nom d'agrégation**  
+ Dans l'écran Avancé, permet d'attribuer un nom convivial à l'agrégation.  
+  
+ **Grouper par colonnes**  
+ Dans l’écran Avancé, permet de sélectionner les colonnes afin de regrouper les éléments d’après la liste **Colonnes d’entrée disponibles** , comme décrit ci-dessous.  
+  
+ **Échelle de clé**  
+ Dans l'écran Avancé, permet de spécifier aussi éventuellement le nombre de clés adéquat que l'agrégation peut écrire. Par défaut, la valeur de cette option est **Non spécifié**. Si la valeur des propriétés **Échelle de clé** et **Clés** sont toutes deux définies, c’est celle de la propriété **Clés** qui prévaut.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|Non spécifié|La propriété Échelle de clé n'est pas utilisée.|  
+|Faible|L’agrégation peut écrire environ 500 000 clés.|  
+|Moyenne|L'agrégation peut écrire environ 5 000 000 clés.|  
+|Élevée|L'agrégation peut écrire plus de 25 000 000 clés.|  
+  
+ **Clés**  
+ Dans l'écran Avancé, permet d'indiquer éventuellement le nombre exact de clés que l'agrégation peut écrire. Si la valeur des propriétés **Échelle de clé** et **Clés** sont toutes deux précisées, celle de la propriété **Clés** prévaut alors.  
+  
+ **Colonnes d’entrée disponibles**  
+ Permet de sélectionner les colonnes dans la liste des colonnes d'entrée disponibles en cochant ou décochant les cases du tableau.  
+  
+ **Colonne d'entrée**  
+ Permet de sélectionner des colonnes dans la liste des colonnes d'entrée disponibles.  
+  
+ **Alias de sortie**  
+ Permet de saisir un alias pour chaque colonne. Par défaut, il s'agit du nom de la colonne d'entrée ; vous pouvez néanmoins choisir un nom unique et descriptif.  
+  
+ **Opération**  
+ Permet de choisir dans la liste parmi les opérations disponibles, d'après le tableau suivant.  
+  
+|Opération|Description|  
+|---------------|-----------------|  
+|**GroupBy**|Divise les datasets en groupes. Les colonnes incluant tout type de données peuvent être utilisées pour le regroupement. Pour plus d'informations, consultez GROUP BY.|  
+|**Sum**|Additionne les valeurs dans une colonne. Seules les colonnes dont les données sont numériques peuvent être additionnées. Pour plus d'informations, consultez SUM.|  
+|**Moyenne**|Retourne la moyenne des valeurs d'une colonne. La moyenne ne peut être calculée que sur les colonnes dont les données sont numériques. Pour plus d'informations, consultez AVG.|  
+|**Compter**|Retourne le nombre d'éléments figurant dans un groupe. Pour plus d'informations, consultez COUNT.|  
+|**CountDistinct**|Retourne le nombre de valeurs non NULL uniques d'un groupe. Pour plus d'informations, consultez COUNT et Distinct.|  
+|**Minimum**|Renvoie la valeur minimale figurant dans un groupe. Cette opération se restreint aux données numériques.|  
+|**Maximum**|Renvoie la valeur maximale figurant dans un groupe. Cette opération se restreint aux données numériques.|  
+  
+ **Indicateurs de comparaison**  
+ Si vous sélectionnez **Group by**, permet d’utiliser les cases à cocher afin de contrôler le mode d’évaluation de la comparaison effectuée par la transformation. Pour plus d’informations sur les options de comparaison de chaînes, consultez [Comparaison des données chaînes](../../../integration-services/data-flow/comparing-string-data.md).  
+  
+ **Count Distinct Scale**  
+ Permet éventuellement de spécifier le nombre approximatif de valeurs distinctes que l'agrégation peut écrire. Par défaut, la valeur de cette option est **Non spécifié**. Si la valeur des propriétés **CountDistinctScale** et **CountDistinctKeys** sont toutes deux précisées, celle de la propriété **CountDistinctKeys** prévaut alors.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|Non spécifié|La propriété **CountDistinctScale** n’est pas utilisée.|  
+|Faible|L'agrégation peut écrire environ 500 000 valeurs distinctes.|  
+|Moyenne|L’agrégation peut écrire environ 5 000 000 de valeurs distinctes.|  
+|Élevée|L'agrégation peut écrire plus de 25 000 000 valeurs distinctes.|  
+  
+ **Count Distinct Keys**  
+ Permet de spécifier éventuellement le nombre exact de valeurs distinctes que l'agrégation peut écrire. Si la valeur des propriétés **CountDistinctScale** et **CountDistinctKeys** sont toutes deux précisées, celle de la propriété **CountDistinctKeys** prévaut alors.  
+  
+## <a name="aggregate-transformation-editor-advanced-tab"></a>Éditeur de transformation d'agrégation (onglet Avancé)
+  L’onglet **Avancé** de la boîte de dialogue **Éditeur de transformation d’agrégation** permet de définir les propriétés des composants, de spécifier des agrégations et de définir les propriétés des colonnes d’entrée et de sortie.  
+  
+> [!NOTE]  
+>  Les options concernant le nombre et l’échelle de clés d’une part, et le nombre et l’échelle de clés distinctes d’autre part, s’appliquent au niveau du composant quand ces options sont indiquées sous l’onglet **Avancé** , au niveau de la sortie quand elles sont précisées dans l’affichage avancé de l’onglet **Agrégations** , ou encore au niveau des colonnes quand elles sont spécifiées dans la liste de colonnes se trouvant dans la partie inférieure de l’onglet **Agrégations** .  
+>   
+>  Dans la transformation d’agrégation, **Clés** et **Échelle de clé** font référence au nombre de groupes attendus d’une opération **Group by** . **Nombre de clés distinctes** et **Échelle de nombre des valeurs distinctes** font référence au nombre de valeurs distinctes attendues d’une opération **Comptage de valeurs** .  
+  
+### <a name="options"></a>Options  
+ **Échelle de clé**  
+ Permet de spécifier le nombre approximatif de clés attendu par l'agrégation (facultatif). La transformation utilise ces informations afin d'optimiser la taille initiale de son cache. Par défaut, la valeur de cette option est **Non spécifié**. Si les deux options **Échelle de clé** et **Nombre de clés** sont spécifiées, **Nombre de clés** est prioritaire.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|Non spécifié|La propriété **KeyScale** n’est pas utilisée.|  
+|Faible|L’agrégation peut écrire environ 500 000 clés.|  
+|Moyenne|L'agrégation peut écrire environ 5 000 000 clés.|  
+|Élevée|L'agrégation peut écrire plus de 25 000 000 clés.|  
+  
+ **Nombre de clés**  
+ Permet de spécifier le nombre exact de clés attendu par l'agrégation (facultatif). La transformation utilise ces informations afin d'optimiser la taille initiale de son cache. Si les deux options **Échelle de clé** et **Nombre de clés** sont spécifiées, **Nombre de clés** est prioritaire.  
+  
+ **Échelle de nombre des valeurs distinctes**  
+ Permet éventuellement de spécifier le nombre approximatif de valeurs distinctes que l'agrégation peut écrire. Par défaut, la valeur de cette option est **Non spécifié**. Si les deux options **Échelle de nombre des valeurs distinctes** et **Nombre de clés distinctes** sont spécifiées, **Nombre de clés distinctes** est prioritaire.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|Non spécifié|La propriété CountDistinctScale n'est pas utilisée.|  
+|Faible|L'agrégation peut écrire environ 500 000 valeurs distinctes.|  
+|Moyenne|L’agrégation peut écrire environ 5 000 000 de valeurs distinctes.|  
+|Élevée|L'agrégation peut écrire plus de 25 000 000 valeurs distinctes.|  
+  
+ **Nombre de clés distinctes**  
+ Permet de spécifier éventuellement le nombre exact de valeurs distinctes que l'agrégation peut écrire. Si les deux options **Échelle de nombre des valeurs distinctes** et **Nombre de clés distinctes** sont spécifiées, **Nombre de clés distinctes** est prioritaire.  
+  
+ **Facteur d'extension automatique**  
+ Utilisez une valeur comprise entre 1 et 100 afin de spécifier le pourcentage selon lequel la mémoire peut être étendue pendant l'agrégation. Par défaut, la valeur de cette option est **25 %**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Flux de données](../../../integration-services/data-flow/data-flow.md)   

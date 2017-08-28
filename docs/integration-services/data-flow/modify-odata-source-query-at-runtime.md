@@ -1,5 +1,5 @@
 ---
-title: "Modifier la requête Source OData à l’exécution | Documents Microsoft"
+title: "Fournir une requête Source OData à l’exécution | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,21 +15,21 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e061fe6989d9629d655d9e0c08f2cd4c1d932540
+ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
+ms.openlocfilehash: 9da1f1be0a790d01f9403d6fc05a5c1498c0ee8b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="modify-odata-source-query-at-runtime"></a>Modifier la requête de la source OData à l'exécution
-  Vous pouvez modifier la requête de la source OData à l’exécution en ajoutant une expression à la propriété **[OData Source].[Query]** de la tâche de flux de données.  
+# <a name="provide-an-odata-source-query-at-runtime"></a>Fournir une requête Source OData à l’exécution
+ Vous pouvez modifier la requête OData Source à l’exécution en ajoutant un *expression* à la **[OData Source]. [ Requête]** propriété de la tâche de flux de données.  
   
- Notez que les colonnes doivent être identiques à celles utilisées au moment de la conception ; sinon vous obtiendrez une erreur lors de l'exécution du package. Veillez à spécifier les mêmes colonnes (dans le même ordre) lorsque vous utilisez l'option de requête $select. Une alternative plus sûre à l'utilisation de l'option $select est de désélectionner les colonnes que vous ne souhaitez pas utiliser directement de l'interface utilisateur du composant source.  
+ Les colonnes retournées doivent être les mêmes colonnes qui ont été retournés au moment du design ; dans le cas contraire, vous obtenez une erreur lorsque le package est exécuté. Veillez à spécifier les mêmes colonnes (dans le même ordre) lorsque vous utilisez l'option de requête $select. Une alternative plus sûre à l'utilisation de l'option $select est de désélectionner les colonnes que vous ne souhaitez pas utiliser directement de l'interface utilisateur du composant source.  
   
- Il existe d'autres méthodes de définition dynamique de la valeur de la requête à l'exécution. Voici quelques-unes des plus courantes.  
+ Il existe d'autres méthodes de définition dynamique de la valeur de la requête à l'exécution. Voici quelques-unes des méthodes plus courantes.  
   
-## <a name="exposing-the-query-as-a-parameter"></a>Exposer une requête en tant que paramètre  
- La procédure suivante comporte des étapes pour exposer une requête utilisée par un composant source OData comme paramètre sur le package.  
+## <a name="provide-the-query-as-a-parameter"></a>Fournir la requête en tant que paramètre  
+ La procédure suivante montre comment exposer la requête utilisée par un composant OData Source en tant que paramètre du package.  
   
 1.  Cliquez avec le bouton droit sur **Tâche de flux de données** et sélectionnez l’option **Paramétrer**. option.  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 08/03/2017
   
 3.  Vous pouvez soit **créer un paramètre** , soit **utiliser un paramètre existant**.  
   
-4.  Si vous sélectionnez **Créer un paramètre**, procédez comme suit :  
+4.  Si vous sélectionnez **créer un nouveau paramètre**:  
   
     1.  Entrez un **nom** et une **description** pour le paramètre.  
   
@@ -49,24 +49,24 @@ ms.lasthandoff: 08/03/2017
   
 5.  Cliquez sur **OK** pour fermer la boîte de dialogue.  
   
-## <a name="using-an-expression"></a>Utiliser une expression  
- Cette méthode est utile lorsque vous souhaitez construire dynamiquement la chaîne de requête à l'exécution. Dans cet exemple, la variable MaxRows sera définie par d'autres moyens (script, paramètre, etc.).  
+## <a name="provide-the-query-with-an-expression"></a>La requête lui fournissez une expression
+ Cette méthode est utile lorsque vous souhaitez construire dynamiquement la chaîne de requête lors de l’exécution.
   
-1.  Sélectionnez la **Tâche de flux de données** qui contient votre **Source OData**.  
+1.  Sélectionnez le **Data Flow Task** qui contient votre **OData Source**.  
   
 2.  La fenêtre **Propriétés** met en surbrillance la propriété **Expressions** .  
   
-3.  Cliquez sur les points de suspension (...) pour ouvrir l’ **Éditeur d’expressions de la propriété**.  
+3.  Cliquez sur les points de suspension (bouton) pour afficher la **Éditeur d’Expressions de propriété**.  
   
 4.  Sélectionnez la propriété **[OData Source].[Query]** .  
   
-5.  Cliquez sur les points de suspension (…) pour **Expression**.  
+5.  Cliquez sur les points de suspension (bouton) pour **Expression**.  
   
 6.  Entrez l’ **expression**.  
   
 7.  Cliquez sur **OK**.  
   
-> [!WARNING]  
->  Notez qu'en utilisant cette approche, vous devez vous assurer que les valeurs définies sont codées correctement pour l'URL. Lorsque vous recevez des valeurs de l'entrée utilisateur (par exemple, lorsque vous définissez des valeurs d'option de requête individuelles), vous devez vous assurer que les valeurs sont validées pour éviter des attaques potentielles par injection SQL.  
+> [!NOTE]  
+> Lorsque vous utilisez cette approche, vous devez vous assurer que les valeurs que vous définissez sont correctement encodé en URL. Lorsque vous recevez des valeurs de l'entrée utilisateur (par exemple, lorsque vous définissez des valeurs d'option de requête individuelles), vous devez vous assurer que les valeurs sont validées pour éviter des attaques potentielles par injection SQL.  
   
   
