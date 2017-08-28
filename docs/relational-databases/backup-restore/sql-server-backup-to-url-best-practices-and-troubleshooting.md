@@ -100,7 +100,7 @@ ms.lasthandoff: 07/31/2017
 -   En cas de restauration d'une sauvegarde compressée, vous pouvez rencontrer l'erreur suivante :  
   
     -   `SqlException 3284 occurred. Severity: 16 State: 5`  
-        **Message : la marque de fichier du périphérique `'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak'` n’est pas alignée. Réexécutez l’instruction Restore avec la même taille de bloc que celle utilisée pour créer le jeu de sauvegarde : « 65536 » semble une valeur possible.**  
+        **Message : la marque de fichier de l’appareil `'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak'` n’est pas alignée. Réexécutez l’instruction Restore avec la même taille de bloc que celle utilisée pour créer le jeu de sauvegarde : « 65536 » semble une valeur possible.**  
   
          Pour résoudre cette erreur, réexécutez l’instruction **BACKUP** en spécifiant **BLOCKSIZE = 65536** .  
   
