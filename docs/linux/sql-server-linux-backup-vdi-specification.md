@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server sur le client Linux VDI spécification du Kit de développement logiciel
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Ce document couvre les interfaces fournies par le serveur SQL Server sur un client de l’interface (VDI) périphérique virtuel Linux SDK. Éditeurs de logiciels indépendants (ISV) peuvent utiliser l’API Virtual Backup Device Application Programming Interface () pour intégrer SQL Server dans leurs produits. En règle générale, VDI sur Linux se comporte de la même façon et l’infrastructure VDI sur Windows avec les modifications suivantes :
 

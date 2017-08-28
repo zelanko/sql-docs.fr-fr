@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurer SLES Cluster pour le groupe de disponibilité de SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Ce guide fournit des instructions pour créer un cluster à trois nœuds pour SQL Server sur SUSE Linux Enterprise Server (SLES) 12 SP2. Pour la haute disponibilité, un groupe de disponibilité sur Linux nécessite trois nœuds, voir [haute disponibilité et protection des données pour les configurations de groupe de disponibilité](sql-server-linux-availability-group-ha.md). La couche de gestion de clusters est basée sur SUSE [haute disponibilité Extension (HAÉ)](https://www.suse.com/products/highavailability) construit sur [STIMULATEUR](http://clusterlabs.org/). 
 

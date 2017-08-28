@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurer des clusters de disques partagés Red Hat Enterprise Linux pour SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Ce guide fournit des instructions pour créer un cluster de disque partagé de deux nœuds pour SQL Server sur Red Hat Enterprise Linux. La couche de clustering basée sur Red Hat Enterprise Linux (RHEL) [module complémentaire de haute disponibilité](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) construit sur [STIMULATEUR](http://clusterlabs.org/). L’instance de SQL Server est active sur un nœud ou l’autre.
 

@@ -19,7 +19,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Exporter et importer une base de données sur Linux avec SSMS ou SqlPackage.exe sur Windows
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Cette rubrique montre comment utiliser [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx) et [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) pour exporter et importer une base de données SQL Server 2017 RC2 sur Linux. SSMS et SqlPackage.exe sont des applications Windows, par conséquent, utilisez cette technique lorsque vous disposez d’un ordinateur Windows qui peut se connecter à une instance distante de SQL Server sur Linux.
 

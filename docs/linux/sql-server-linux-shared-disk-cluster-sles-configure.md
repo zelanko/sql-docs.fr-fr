@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Configurer des clusters de disques partagés SLES pour SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Ce guide fournit des instructions pour créer un cluster de disque partagé de deux nœuds pour SQL Server sur SUSE Linux Enterprise Server (SLES). La couche de gestion de clusters est basée sur SUSE [haute disponibilité Extension (HAÉ)](https://www.suse.com/products/highavailability) construit sur [STIMULATEUR](http://clusterlabs.org/). 
 

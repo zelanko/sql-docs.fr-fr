@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurer le Cluster d’Ubuntu et de ressources du groupe de disponibilité
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Ce document explique comment créer un cluster de trois nœuds sur Ubuntu et ajouter un groupe de disponibilité créé précédemment en tant que ressource dans le cluster. Pour la haute disponibilité, un groupe de disponibilité sur Linux nécessite trois nœuds, voir [haute disponibilité et protection des données pour les configurations de groupe de disponibilité](sql-server-linux-availability-group-ha.md).
 

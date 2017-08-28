@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Fonctionnement des clusters de disques partagés Red Hat Enterprise Linux pour SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Ce document décrit comment effectuer les tâches suivantes pour SQL Server sur un cluster de basculement de disque partagé avec Red Hat Enterprise Linux.
 

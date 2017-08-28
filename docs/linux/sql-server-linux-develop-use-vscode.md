@@ -19,7 +19,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Utilisez le Code de Visual Studio pour créer et exécuter des scripts Transact-SQL pour SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Cette rubrique montre comment utiliser le **mssql** extension pour Visual Studio Code (Code de Visual Studio) pour développer des bases de données SQL Server.
 

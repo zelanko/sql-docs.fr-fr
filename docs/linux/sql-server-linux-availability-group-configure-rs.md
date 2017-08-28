@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="configure-read-scale-out-availability-group-for-sql-server-on-linux"></a>Configurer le groupe de disponibilité de montée en puissance parallèle en lecture pour SQL Server sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Vous pouvez configurer un groupe de disponibilité de montée en puissance parallèle en lecture pour SQL Server sur Linux. Il existe deux architectures pour les groupes de disponibilité. A *haute disponibilité* architecture utilise un gestionnaire de cluster pour assurer la continuité améliorée. Cette architecture peut également inclure des réplicas en lecture de montée en puissance parallèle. Pour créer l’architecture haute disponibilité, consultez [configurer toujours sur le groupe de disponibilité pour SQL Server sur Linux](sql-server-linux-availability-group-configure-ha.md).
 

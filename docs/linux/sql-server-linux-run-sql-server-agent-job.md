@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Créer et exécuter des travaux de l’Agent SQL Server sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Travaux de SQL Server sont utilisés pour exécuter régulièrement la même séquence de commandes dans votre base de données SQL Server. Cette rubrique fournit des exemples montrant comment créer des travaux de l’Agent SQL Server sur Linux à l’aide de Transact-SQL et SQL Server Management Studio (SSMS).
 

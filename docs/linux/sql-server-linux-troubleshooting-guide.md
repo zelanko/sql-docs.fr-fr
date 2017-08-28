@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Résoudre les problèmes de SQL Server sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Ce document décrit comment résoudre les problèmes de Microsoft SQL Server est en cours d’exécution sur Linux ou dans un conteneur Docker. Lors du dépannage de SQL Server sur Linux, veuillez vous n’oubliez pas les limitations de cette version préliminaire privée. Vous trouverez une liste de ces éléments dans le [Notes de publication](sql-server-linux-release-notes.md).
 

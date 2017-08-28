@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Nouveautés de 2017 du serveur SQL sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Cette rubrique décrit les nouveautés de SQL Server 2017 est en cours d’exécution sur Linux.
 

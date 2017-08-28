@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Installer les outils de ligne de commande SQL Server sqlcmd et bcp sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Les étapes suivantes installer les outils de ligne de commande, les pilotes ODBC de Microsoft et leurs dépendances. Le **mssql-tools** package contient :
 

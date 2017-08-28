@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Prise en main l’envoi de journaux sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Envoi de journaux du serveur SQL est une configuration à haute disponibilité où une base de données à partir d’un serveur principal est répliquée sur un ou plusieurs serveurs secondaires. En bref, une sauvegarde de la base de données est restaurée sur le serveur secondaire. Puis le serveur principal crée des sauvegardes du journal des transactions régulièrement, et les serveurs secondaires de les restaurent, mise à jour de la copie secondaire de la base de données. 
 

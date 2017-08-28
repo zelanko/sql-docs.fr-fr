@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="business-continuity-and-database-recovery-sql-server-on-linux"></a>Récupération entreprise la continuité des activités et de la base de données SQL Server sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 SQL Server sur Linux permet aux organisations d’obtenir un vaste éventail d’objectifs du contrat de niveau de service pour prendre en compte les différents besoins de l’entreprise.
 

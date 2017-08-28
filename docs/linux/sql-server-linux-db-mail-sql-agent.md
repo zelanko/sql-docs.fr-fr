@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Messagerie de base de données et les alertes par courrier électronique avec l’Agent SQL sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Les étapes suivantes vous montrent comment configurer la messagerie de base de données et l’utiliser avec l’Agent SQL Server (**mssql-server-agent**) sur Linux. 
 

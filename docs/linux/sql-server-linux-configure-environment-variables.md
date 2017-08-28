@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configurer les paramètres de SQL Server avec les variables d’environnement sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Vous pouvez utiliser plusieurs variables d’environnement différent pour configurer SQL Server 2017 RC2 sur Linux. Ces variables sont utilisées dans deux scénarios :
 
