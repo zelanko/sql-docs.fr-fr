@@ -14,17 +14,17 @@ caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 1c842fde925e89901971a525c3e171ffce050269
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 95489b4e72f1321f7e1139f06040eb81a5956b15
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="import-json-documents-into-sql-server"></a>Importer des documents JSON dans SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Cette rubrique décrit comment importer des fichiers JSON dans SQL Server. Il existe actuellement un grand nombre de documents JSON stockées dans des fichiers. Applications enregistrer des informations dans les fichiers JSON, les capteurs de génèrent des informations qui sont stockées dans des fichiers au format JSON et ainsi de suite. Il est important de pouvoir lire les données JSON stockées dans des fichiers, charger les données dans SQL Server et les analyser.
+Cette rubrique décrit comment importer des fichiers JSON dans SQL Server. Il existe un grand nombre de documents JSON stockés dans des fichiers. Les applications journalisent des informations dans les fichiers JSON, les capteurs génèrent des informations stockées dans les fichiers JSON, etc. Il est important de pouvoir lire les données JSON stockées dans des fichiers, charger les données dans SQL Server et les analyser.
 
 ## <a name="import-a-json-document-into-a-single-column"></a>Importer un document JSON dans une seule colonne
 **OPENROWSET(BULK)** est une fonction table qui peut lire des données à partir de n’importe quel fichier sur le réseau ou le lecteur local, si SQL Server dispose d’un accès en lecture à cet emplacement. Elle retourne une table avec une colonne unique où figure le contenu du fichier. Vous pouvez utiliser différentes options avec la fonction OPENROWSET(BULK), comme des séparateurs. Mais dans le cas le plus simple, vous pouvez charger tout le contenu d’un fichier en tant que valeur de texte, (Cette valeur unique élevée est appelée objet volumineux à caractère unique, ou SINGLE_CLOB.) 
@@ -54,7 +54,7 @@ SELECT BulkColumn
 Après avoir chargé le contenu du fichier JSON, vous pouvez enregistrer le texte JSON dans une table.
 
 ## <a name="import-multiple-json-documents"></a>Importer plusieurs documents JSON
-Vous pouvez utiliser la même approche pour charger un ensemble de fichiers JSON du système de fichiers dans une variable locale, une à la fois. On part du principe que les fichiers se nomment `book<index>.json`.
+Vous pouvez adopter la même approche pour charger un ensemble de fichiers JSON depuis le système de fichiers vers une variable locale. On part du principe que les fichiers se nomment `book<index>.json`.
   
 ```sql
 DECLARE @i INT = 1
@@ -71,11 +71,11 @@ END
 ```
 
 ## <a name="import-json-documents-from-azure-file-storage"></a>Importer des documents JSON à partir du Stockage de fichiers Azure
-Vous pouvez également utiliser OPENROWSET comme décrit ci-dessus pour lire des fichiers JSON à partir d’autres emplacements de fichiers SQL Server peut accéder. Par exemple, le Stockage de fichiers Azure prend en charge le protocole SMB. Ainsi, vous pouvez mapper un lecteur virtuel local au partage de Stockage de fichiers Azure à l’aide de la procédure suivante :
+Vous pouvez également utiliser OPENROWSET(BULK) comme indiqué ci-dessus pour lire les fichiers JSON à partir d’autres emplacements accessibles à SQL Server. Par exemple, le Stockage de fichiers Azure prend en charge le protocole SMB. Ainsi, vous pouvez mapper un lecteur virtuel local au partage de Stockage de fichiers Azure à l’aide de la procédure suivante :
 1.  Créez un compte de stockage de fichier (par exemple, `mystorage`), un partage de fichiers (par exemple, `sharejson`) et un dossier dans le Stockage de fichiers Azure à l’aide du portail Azure ou d’Azure PowerShell.
 2.  Chargez des fichiers JSON vers le partage de stockage de fichiers.
 3.  Créez sur votre ordinateur une règle de pare-feu sortante dans le Pare-feu Windows qui autorise l’utilisation du port 445. Notez qu’il est possible que votre fournisseur de services Internet bloque ce port. Si vous obtenez une erreur DNS (erreur 53) à l’étape suivante, cela signifie que vous n’avez pas ouvert le port 445 ou que votre fournisseur de services Internet le bloque.
-4. Monter le partage du stockage de fichiers Azure comme un lecteur local (par exemple `T:`).
+4. Montez le partage Stockage Fichier Azure en tant que lecteur local (par exemple `T:`).
 
     Voici la syntaxe de commande :
 
@@ -83,7 +83,7 @@ Vous pouvez également utiliser OPENROWSET comme décrit ci-dessus pour lire des
     net use [drive letter] \\[storage name].file.core.windows.net\[share name] /u:[storage account name] [storage account access key]
     ```
 
-    Voici un exemple qui affecte la lettre de lecteur local `T:` vers le partage du stockage de fichiers Azure :
+    Voici un exemple qui affecte la lettre de lecteur local `T:` au partage Stockage Fichier Azure :
 
     ```dos
     net use t: \\mystorage.file.core.windows.net\sharejson /u:myaccount hb5qy6eXLqIdBj0LvGMHdrTiygkjhHDvWjUZg3Gu7bubKLg==
@@ -91,7 +91,7 @@ Vous pouvez également utiliser OPENROWSET comme décrit ci-dessus pour lire des
 
     Vous trouverez la clé de compte de stockage et la clé d’accès au compte de stockage primaire ou secondaire dans la section Clés des Paramètres dans le portail Azure.
 
-5.  Vous pouvez maintenant accéder vos fichiers JSON à partir du partage de stockage de fichiers Azure à l’aide du lecteur mappé, comme indiqué dans l’exemple suivant :
+5.  Vous pouvez maintenant accéder à vos fichiers JSON à partir du partage Stockage Fichier Azure à l’aide du lecteur mappé, comme indiqué dans l’exemple suivant :
 
     ```sql
     SELECT book.* FROM
@@ -105,9 +105,9 @@ Pour plus d’informations sur le Stockage de fichiers Azure, consultez [Stockag
 
 ## <a name="import-json-documents-from-azure-blob-storage"></a>Importer des documents JSON à partir de Stockage Blob Azure
 
-Vous pouvez charger des fichiers directement dans la base de données SQL Azure à partir du stockage d’objets Blob Azure avec la commande T-SQL BULK INSERT ou la fonction OPENROWSET.
+Vous pouvez charger des fichiers directement dans Azure SQL Database à partir de Stockage Blob Azure avec la commande T-SQL BULK INSERT ou la fonction OPENROWSET.
 
-Commencez par créer une source de données externe, comme indiqué dans l’exemple suivant.
+Commencez par créer une source de données externe, comme illustré dans l’exemple suivant.
 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
@@ -124,10 +124,10 @@ FROM 'data/product.dat'
 WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
 ```
 
-Pour plus d’informations et obtenir un exemple qui utilise OPENROWSET, consultez [le chargement des fichiers de stockage d’objets Blob Azure dans la base de données SQL Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/02/23/loading-files-from-azure-blob-storage-into-azure-sql-database/).
+Pour plus d’informations et pour obtenir un exemple d’utilisation d’OPENROWSET, consultez [Chargement de fichiers de Stockage Blob Azure vers Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/02/23/loading-files-from-azure-blob-storage-into-azure-sql-database/).
 
 ## <a name="parse-json-documents-into-rows-and-columns"></a>Analyser des documents JSON dans des lignes et des colonnes
-Au lieu de lire un fichier JSON entier comme une seule valeur, vous souhaiterez analyser et de retourner les livres dans le fichier et de leurs propriétés dans des lignes et colonnes. L’exemple suivant utilise un fichier JSON à partir de [ce site](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json) contenant une liste de livres.
+Au lieu de lire un fichier JSON entier en tant que valeur unique, vous pouvez l’analyser et retourner les livres figurant dans le fichier, ainsi que leurs propriétés, dans des lignes et des colonnes. L’exemple suivant utilise un fichier JSON provenant de [ce site](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json) et contenant une liste de livres.
 
 ### <a name="example-1"></a>Exemple 1
 Dans l’exemple le plus simple, vous pouvez charger la liste entière à partir du fichier. 
@@ -139,7 +139,7 @@ SELECT value
 ```
 
 ### <a name="example-2"></a>Exemple 2
-OPENROWSET lit une valeur de texte unique à partir du fichier, la retourne sous la forme d’un BulkColumn, et la transmet à la fonction OPENJSON. OPENJSON effectue une itération au sein du tableau d’objets JSON dans le tableau BulkColumn et retourne un livre dans chaque ligne, au format JSON :
+OPENROWSET lit une valeur de texte unique à partir du fichier, la retourne sous la forme d’un BulkColumn, et la transmet à la fonction OPENJSON. OPENJSON itère au sein du tableau d’objets JSON dans le tableau BulkColumn et retourne un livre sur chaque ligne au format JSON :
 
 ```json
 {"id":"978-0641723445″, "cat":["book","hardcover"], "name":"The Lightning Thief", … 
@@ -171,8 +171,8 @@ Dans cet exemple, OPENROWSET(BULK) lit le contenu du fichier et transmet ce cont
 
 Vous pouvez maintenant retourner cette à l’utilisateur, ou charger les données dans une autre table.
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>En savoir plus sur la fonction intégrée prise en charge de JSON dans SQL Server  
-Pour un grand nombre de solutions spécifiques, utilisez des cas et des recommandations, consultez le [billets de blog sur la prise en charge intégrée de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) dans SQL Server et dans la base de données SQL Azure par programme Jovan Popovic Gestionnaire Microsoft.
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>En savoir plus sur la prise en charge intégrée de JSON dans SQL Server  
+Pour accéder à un grand nombre de solutions spécifiques, de cas d’usage et de recommandations, consultez les [billets de blog sur la prise en charge intégrée de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) dans SQL Server et Azure SQL Database, écrits par Jovan Popovic (Microsoft Program Manager).
   
 ## <a name="see-also"></a>Voir aussi
 [Conversion de données JSON en lignes et colonnes à l’aide d’OPENJSON](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)

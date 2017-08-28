@@ -18,11 +18,11 @@ caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: e2a427682aebeeccc82a1b7f6521399b8a0b6fe8
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: fed02f20beb9bd84dfd5ac2add3c66daf207e07c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="json-data-sql-server"></a>Données JSON (SQL Server)
@@ -70,7 +70,7 @@ Si vous avez stocké du texte JSON dans des tables de base de données, vous pou
 
 **Exemple**
   
- Dans l’exemple suivant, la requête utilise à la fois relationnelle et les données JSON (stockées dans une colonne nommée `jsonCol`) à partir d’une table :  
+ Dans l’exemple suivant, la requête utilise à la fois les données relationnelles et les données JSON (stockées dans une colonne nommée `jsonCol`) dans une table :  
   
 ```sql  
 SELECT Name,Surname,
@@ -321,7 +321,7 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
   
 ### <a name="microsoft-blog-posts"></a>Billets de blog Microsoft  
   
--   Pour un grand nombre de solutions spécifiques, utilisez des cas et des recommandations, consultez le [billets de blog sur la prise en charge intégrée de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) dans SQL Server et dans la base de données SQL Azure par programme Jovan Popovic Gestionnaire Microsoft.  
+-   Pour accéder à un grand nombre de solutions spécifiques, de cas d’usage et de recommandations, consultez les [billets de blog sur la prise en charge intégrée de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) dans SQL Server et Azure SQL Database, écrits par Jovan Popovic (Microsoft Program Manager).  
   
 ### <a name="reference-topics"></a>Rubriques d’informations de référence  
   

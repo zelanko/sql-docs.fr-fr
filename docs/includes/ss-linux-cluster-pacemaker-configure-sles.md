@@ -1,4 +1,4 @@
-2. Sur tous les nœuds de cluster, créez un fichier pour stocker le nom d’utilisateur SQL Server et le mot de passe pour la connexion STIMULATEUR. La commande suivante a pour effet de créer et remplir ce fichier :
+2. Sur tous les nœuds du cluster, créez un fichier pour stocker le nom d’utilisateur et le mot de passe SQL Server du compte de connexion Pacemaker. La commande suivante a pour effet de créer et remplir ce fichier :
 
    ```bash
    sudo touch /var/opt/mssql/secrets/passwd
@@ -8,7 +8,7 @@
    sudo chmod 600 /var/opt/mssql/secrets/passwd    
    ```
 
-3. Tous les nœuds de cluster, ouvrez les ports du pare-feu STIMULATEUR. Pour ouvrir ces ports avec `firewalld`, exécutez la commande suivante :
+3. Sur tous les nœuds du cluster, ouvrez les ports de pare-feu de Pacemaker. Pour ouvrir ces ports avec `firewalld`, exécutez la commande suivante :
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability

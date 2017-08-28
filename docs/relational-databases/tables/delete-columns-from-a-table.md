@@ -19,11 +19,11 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 621185759462020bca20985c3133c93814a1f333
 ms.openlocfilehash: ef0c4b8b66af5dfc46c836fc8c18734609b1301a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="delete-columns-from-a-table"></a>Supprimer des colonnes d'une table
@@ -66,9 +66,9 @@ ms.lasthandoff: 06/23/2017
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  Dans **l’Explorateur d’objets**, localisez la table à partir de laquelle votre choix supprimer des colonnes, développez afin d’exposer les noms de colonnes. 
+2.  Dans l’**Explorateur d’objets**, recherchez la table dans laquelle vous souhaitez supprimer des colonnes, puis développez-la pour exposer les noms des colonnes. 
 
-3.  Avec le bouton droit de la colonne que vous souhaitez supprimer, puis choisissez **supprimer**.  
+3.  Cliquez avec le bouton droit sur la colonne à supprimer, puis choisissez **Supprimer**.  
   
 3.  Dans la boîte de dialogue **Supprimer un objet** , cliquez sur **OK**.  
   

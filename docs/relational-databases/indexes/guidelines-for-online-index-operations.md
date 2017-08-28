@@ -25,7 +25,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
 ms.openlocfilehash: 9b6d3aabe451c35c25822a2114e825e980ad01d3
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="guidelines-for-online-index-operations"></a>Instructions pour les opérations d'index en ligne
@@ -38,7 +38,7 @@ ms.lasthandoff: 07/11/2017
 -   Les index non cluster non uniques peuvent être créés en ligne lorsque la table contient des types de données LOB, mais qu'aucune de ces colonnes n'est utilisée dans la définition de l'index en tant que colonne clé ou non-clé (incluse).  
   
 -   Les index de tables temporaires locales ne peuvent pas être créés, reconstruits ou supprimés en ligne. Cette restriction ne s'applique pas aux index des tables temporaires globales.
-- Les index peuvent être repris où il a été arrêtée après une défaillance inattendue, le basculement de la base de données, ou un **PAUSE** commande. Consultez [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Cette fonctionnalité est en préversion publique pour SQL Server 2017 et Azure SQL Database.
+- L’exécution des index peut reprendre là où elle s’est arrêtée après une défaillance inattendue, un basculement de base de données ou une commande **PAUSE**. Consultez [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Cette fonctionnalité est en préversion publique pour SQL Server 2017 et Azure SQL Database.
 
 > [!NOTE]  
 >  Les opérations d’index en ligne ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -90,29 +90,29 @@ Pour plus d’informations, consultez [Disk Space Requirements for Index DDL Ope
 ## <a name="transaction-log-considerations"></a>Considérations relatives aux journaux de transactions  
  Les opérations d'index à grande échelle, réalisées hors connexion ou en ligne, peuvent générer de fortes charges de données susceptibles de remplir rapidement le journal de transactions. Pour garantir que l'opération d'index peut être restaurée, le journal des transactions ne doit pas être tronqué tant que l'opération d'index n'est pas terminée ; toutefois, le journal peut être sauvegardé pendant l'opération d'index. Par conséquent, le journal des transactions doit disposer d'un espace suffisant pour stocker les transactions des opérations d'index et les éventuelles transactions utilisateur simultanées pendant la durée de l'opération d'index. Pour plus d’informations, consultez [Espace disque du journal des transactions pour les opérations d’index](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md).  
 
-## <a name="resumable-index-rebuild-considerations"></a>Considérations relatives à la reconstruction d’Index pouvant être reprises
+## <a name="resumable-index-rebuild-considerations"></a>Considérations relatives à la regénération d’index pouvant être reprise
 
 > [!NOTE]
 > Consultez [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Cette fonctionnalité est en préversion publique pour SQL Server 2017 et Azure SQL Database.
 >
 
-Lorsque vous effectuez la reconstruction d’index en ligne peut être repris les indications suivantes s’appliquent :
--   La gestion, planification et l’extension des fenêtres de maintenance d’index. Vous pouvez suspendre et redémarrer une opération de reconstruction d’index plusieurs fois en fonction de vos fenêtres de maintenance.
-- Récupération à partir d’échecs de reconstruction d’index (par exemple, les basculements de base de données ou manque d’espace disque).
-- Lorsqu’une opération d’index est en pause, à la fois l’index d’origine et celui qui vient d’être créé nécessitent l’espace disque et doivent être mis à jour au cours des opérations DML.
+Quand vous effectuez une regénération d’index en ligne pouvant être reprise, les recommandations suivantes s’appliquent :
+-   Gestion, planification et extension des fenêtres de maintenance d’index. Vous pouvez suspendre et redémarrer une opération de regénération d’index à plusieurs reprises en fonction de vos fenêtres de maintenance.
+- Récupération après des échecs de regénération d’index (par exemple les basculements de bases de données ou le manque d’espace disque).
+- Quand une opération d’index est en pause, l’index d’origine et celui qui vient d’être créé nécessitent de l’espace disque et doivent être mis à jour durant les opérations DML.
 
-- Permet la troncation des journaux de troncation pendant une opération de reconstruction d’index (cette opération ne peut pas être effectuée pour une opération d’index en ligne normal).
-- SORT_IN_TEMPDB = ON option n’est pas prise en charge.
+- Active les journaux de troncation durant une opération de regénération d’index (cette opération ne peut pas être effectuée pour une opération d’index en ligne classique).
+- L’option SORT_IN_TEMPDB=ON n’est pas prise en charge
 
 > [!IMPORTANT]
-> Rebuild peut être repris ne nécessite pas vous permet de maintenir une troncation longue, ce qui permet la troncation du journal au cours de cette opération et une meilleure gestion de l’espace journal. Avec la nouvelle conception, nous managé conserver les données nécessaires dans une base de données ainsi que toutes les références requises pour redémarrer l’opération peut être reprise.
+> Avec la regénération pouvant être reprise, vous n’êtes pas obligé de maintenir une troncation de longue durée ouverte, ce qui permet la troncation des journaux au cours de cette opération et une meilleure gestion de l’espace des journaux. Avec la nouvelle conception, nous avons réussi à conserver les données nécessaires dans une base de données, ainsi que toutes les références indispensables au redémarrage de l’opération pouvant être reprise.
 >
 
-En règle générale, il n’existe aucune différence de performances entre la reconstruction d’index en ligne de reprise et sans reprise possible. Lorsque vous mettez à jour un index peut être repris lors de la reconstruction d’un index est interrompue :
-- Pour en lecture principalement les charges de travail, l’impact sur les performances est insignifiante. 
-- Pour les charges de travail à nombre élevé de mise à jour, vous pouvez rencontrer une baisse de débit (notre test montre inférieure à 10 % de dégradation).
+En règle générale, il n’existe aucune différence de performances entre la regénération d’index en ligne avec reprise et sans reprise. Quand vous mettez à jour un index pouvant être repris alors qu’une opération de regénération d’index est en pause :
+- Pour les charges de travail de lecture principalement, l’impact sur les performances est insignifiant. 
+- Pour les grosses charges de travail de mise à jour, vous risquez de faire face à une dégradation du débit (nos tests montrent une dégradation inférieure à 10 %).
 
-En règle générale, il n’existe aucune différence de qualité de défragmentation entre la reconstruction d’index en ligne de reprise et sans reprise possible.
+En règle générale, il n’existe aucune différence de qualité de défragmentation entre la regénération d’index en ligne avec reprise et sans reprise.
  
 ## <a name="related-content"></a>Contenu associé  
  [Fonctionnement des opérations d’index en ligne](../../relational-databases/indexes/how-online-index-operations-work.md)  

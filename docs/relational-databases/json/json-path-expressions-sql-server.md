@@ -17,18 +17,18 @@ ms.assetid: 25ea679c-84cc-4977-867c-2cbe9d192553
 caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 44bfd54aa494dd52174eeed8479e14a99d810af3
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 07c873941669f7a36ff9b93651a938ecae2662b7
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="json-path-expressions-sql-server"></a>Expressions de chemin JSON (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
- Utiliser des expressions de chemin JSON pour référencer les propriétés d’objets JSON.  
+ Utilisez les expressions de chemins JSON pour référencer les propriétés des objets JSON.  
   
  Vous devez fournir une expression de chemin lorsque vous appelez les fonctions suivantes.  
   
@@ -43,18 +43,18 @@ ms.lasthandoff: 06/23/2017
 ## <a name="parts-of-a-path-expression"></a>Parties d’une expression de chemin
  Une expression de chemin comporte deux composants.  
   
-1.  Le paramètre facultatif [mode path](#PATHMODE), avec la valeur **lax** ou **strict**.  
+1.  Le [mode PATH](#PATHMODE) facultatif, avec la valeur **lax** ou **strict**.  
   
 2.  Le [chemin](#PATH) lui-même.  
 
 ##  <a name="PATHMODE"></a> Path mode  
  Au début de l’expression de chemin, vous pouvez éventuellement déclarer le mode PATH en spécifiant le mot clé **lax** ou **strict**. La valeur par défaut est **lax**.  
   
--   Dans **lax** mode, la fonction retourne des valeurs vides si l’expression de chemin contient une erreur. Par exemple, si vous demandez la valeur **$.name**, et le texte JSON ne contient pas un **nom** clé, la fonction retourne la valeur null, mais ne déclenche pas une erreur.  
+-   En mode **lax**, la fonction retourne des valeurs vides si l’expression de chemin contient une erreur. Par exemple, si vous demandez la valeur **$.name** et si le texte JSON ne contient pas de clé **name**, la fonction retourne une valeur null mais ne génère pas d’erreur.  
   
--   Dans **strict** mode, la fonction génère une erreur si l’expression de chemin contient une erreur.  
+-   En mode **strict**, la fonction génère une erreur si l’expression de chemin contient une erreur.  
 
-La requête suivante spécifie explicitement `lax` mode dans l’expression de chemin d’accès.
+La requête suivante spécifie explicitement le mode `lax` dans l’expression de chemin.
 
 ```sql  
 DECLARE @json NVARCHAR(MAX)
@@ -102,7 +102,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
 |$|{ "people": [ { "name": "John",  "surname": "Doe" },<br />   { "name": "Jane",  "surname": null, "active": true } ] }|  
   
 ## <a name="how-built-in-functions-handle-duplicate-paths"></a>Comment les fonctions intégrées gèrent-elles les chemins en double ?  
- Si le texte JSON contient des propriétés dupliquées - par exemple, deux clés portant le même nom au même niveau que - le **JSON_VALUE** et **JSON_QUERY** fonctions retournent uniquement la première valeur qui correspond au chemin d’accès. Pour analyser un objet JSON qui contient les clés en double et toutes les valeurs de retour, utilisez **OPENJSON**, comme illustré dans l’exemple suivant.  
+ Si le texte JSON contient des propriétés dupliquées (par exemple, deux clés portant le même nom au même niveau), les fonctions **JSON_VALUE** et **JSON_QUERY** retournent uniquement la première valeur correspondant au chemin. Pour analyser un objet JSON contenant des clés dupliquées et retourner toutes les valeurs, utilisez **OPENJSON**, comme indiqué dans l’exemple suivant.  
   
 ```sql  
 DECLARE @json NVARCHAR(MAX)
@@ -112,8 +112,8 @@ SELECT value
 FROM OPENJSON(@json,'$.person.info') 
 ```  
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>En savoir plus sur la fonction intégrée prise en charge de JSON dans SQL Server  
-Pour un grand nombre de solutions spécifiques, utilisez des cas et des recommandations, consultez le [billets de blog sur la prise en charge intégrée de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) dans SQL Server et dans la base de données SQL Azure par programme Jovan Popovic Gestionnaire Microsoft.
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>En savoir plus sur la prise en charge intégrée de JSON dans SQL Server  
+Pour accéder à un grand nombre de solutions spécifiques, de cas d’usage et de recommandations, consultez les [billets de blog sur la prise en charge intégrée de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) dans SQL Server et Azure SQL Database, écrits par Jovan Popovic (Microsoft Program Manager).
   
 ## <a name="see-also"></a>Voir aussi  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)   

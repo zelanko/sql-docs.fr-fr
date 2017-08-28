@@ -14,11 +14,11 @@ caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
 ms.openlocfilehash: d4a5651f3ef4f8d848253711ed93721f387c016a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="configure-column-encryption-using-powershell"></a>Configurer le chiffrement de colonne à l’aide de PowerShell
@@ -41,13 +41,13 @@ L’applet de commande **Set-SqlColumnEncryption** prend en charge deux approche
 
 Avec l’approche hors connexion, les tables cibles (et toutes les tables liées aux tables cibles, par exemple toutes les tables avec lesquelles une table cible a des relations de clés étrangères) ne sont pas disponibles pour l’écriture des transactions pendant toute la durée de l’opération. La sémantique des contraintes de clé étrangère (**CHECK** ou **NOCHECK**) est toujours conservée quand vous utilisez l’approche hors connexion.
 
-Avec l’approche en ligne (requiert la version du module SqlServer PowerShell 21.x ou version ultérieure), l’opération de copie et chiffrer, déchiffrer ou rechiffrement des données est effectuée de façon incrémentielle. Les applications peuvent lire et écrire des données à partir de et vers les tables cibles tout au long de l’opération de déplacement des données, à l’exception de la dernière itération, dont la durée est limitée par le paramètre **MaxDownTimeInSeconds** (vous pouvez le définir). Pour détecter et traiter les modifications que les applications peuvent effectuer pendant la copie des données, l’applet de commande active le [suivi des modifications](../../track-changes/enable-and-disable-change-tracking-sql-server.md) dans la base de données cible. Par conséquent, l’approche en ligne consomme plus de ressources sur le serveur que l’approche hors connexion. L’opération peut également prendre beaucoup plus de temps avec l’approche en ligne, en particulier si une charge de travail avec d’importantes opérations d’écriture ne s’exécute sur la base de données. L’approche en ligne peut être utilisée pour chiffrer une table à la fois et la table doit avoir une clé primaire. Par défaut, les contraintes de clé étrangère sont recréées avec l’option **NOCHECK** afin de minimiser l’impact sur les applications. Vous pouvez forcer la conservation de la sémantique des contraintes de clé étrangère en spécifiant l’option **KeepCheckForeignKeyConstraints**.
+Avec l’approche en ligne (nécessite le module SqlServer PowerShell 21.x ou version ultérieure), l’opération de copie et de chiffrement, de déchiffrement ou de rechiffrement des données est effectuée de manière incrémentielle. Les applications peuvent lire et écrire des données à partir de et vers les tables cibles tout au long de l’opération de déplacement des données, à l’exception de la dernière itération, dont la durée est limitée par le paramètre **MaxDownTimeInSeconds** (vous pouvez le définir). Pour détecter et traiter les modifications que les applications peuvent effectuer pendant la copie des données, l’applet de commande active le [suivi des modifications](../../track-changes/enable-and-disable-change-tracking-sql-server.md) dans la base de données cible. Par conséquent, l’approche en ligne consomme plus de ressources sur le serveur que l’approche hors connexion. L’opération peut également prendre beaucoup plus de temps avec l’approche en ligne, en particulier si une charge de travail avec d’importantes opérations d’écriture ne s’exécute sur la base de données. L’approche en ligne peut être utilisée pour chiffrer une table à la fois et la table doit avoir une clé primaire. Par défaut, les contraintes de clé étrangère sont recréées avec l’option **NOCHECK** afin de minimiser l’impact sur les applications. Vous pouvez forcer la conservation de la sémantique des contraintes de clé étrangère en spécifiant l’option **KeepCheckForeignKeyConstraints**.
 
 Vous trouverez ici des recommandations pour choisir entre l’approche en ligne ou l’approche hors connexion :
 
 Utilisez l’approche hors connexion :
-- Pour réduire la durée de l’opération 
-- Pour chiffrer/déchiffrer/chiffrer de nouveau des colonnes de plusieurs tables en même temps
+- pour réduire la durée de l’opération ; 
+- pour chiffrer/déchiffrer/chiffrer de nouveau des colonnes de plusieurs tables en même temps ;
 - Si le tableau cible n’a pas de clé primaire
 
 Utilisez l’approche en ligne :
@@ -57,7 +57,7 @@ Utilisez l’approche en ligne :
 
 L’applet de commande **Set-SqlColumnEncryption** , qui permet de configurer le chiffrement pour des colonnes de base de données, gère les clés Always Encrypted et les données stockées dans des colonnes de base de données. Ainsi, il est important que vous exécutiez cette applet de commande sur un ordinateur sécurisé. Si votre base de données est dans SQL Server, exécutez l’applet de commande à partir d’un ordinateur autre que celui qui héberge votre instance de SQL Server. L’objectif principal d’Always Encrypted étant de garantir la sécurité des données sensibles chiffrées même si le système de base de données est compromis, l’exécution d’un script PowerShell qui traite des clés et/ou des données sensibles sur l’ordinateur SQL Server peut réduire ou annuler les avantages de la fonctionnalité.
 
-Tâche  |Article  |Accède au magasin de clés/aux clés en texte clair  |Accède à la base de données   
+Tâche  |Article  |Accède au magasin de clés/aux clés en texte brut  |Accède à la base de données   
 ---|---|---|---
 Étape 1. Démarrer un environnement PowerShell et importer le module SQL Server. | [Importer le module SQL Server](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | Non | Non
 Étape 2. Se connecter à votre serveur et à la base de données. | [Connexion à une base de données](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | Non | Oui

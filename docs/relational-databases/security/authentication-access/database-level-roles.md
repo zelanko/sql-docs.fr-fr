@@ -42,11 +42,11 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
-ms.openlocfilehash: 411da6974090c9ccad6aa6184c248537bfdebe79
+ms.translationtype: HT
+ms.sourcegitcommit: 47b0c3fc8aba635dcfd573536b770f13a40956fa
+ms.openlocfilehash: 6510f02e44dfc84c24c19c509a8dd9254845d4a1
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="database-level-roles"></a>Rôles au niveau de la base de données
@@ -71,7 +71,7 @@ Pour obtenir une liste de toutes les autorisations, consultez l’affiche [Autor
 
 ## <a name="fixed-database-roles"></a>rôles de base de données fixes
   
- Le tableau suivant répertorie les rôles de base de données fixes et leurs fonctionnalités. Ces rôles existent dans toutes les bases de données. À l’exception de la **public** rôle de base de données, les autorisations attribuées aux rôles de base de données fixe ne peut pas être modifié.   
+ Le tableau suivant répertorie les rôles de base de données fixes et leurs fonctionnalités. Ces rôles existent dans toutes les bases de données. À l’exception du rôle de base de données **public**, les autorisations affectées aux rôles de base de données fixes ne peuvent pas être changées.   
   
 |Nom du rôle de base de données fixe|Description|  
 |-------------------------------|-----------------|  

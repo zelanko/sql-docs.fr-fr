@@ -19,23 +19,23 @@ ms.translationtype: HT
 ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
 ms.openlocfilehash: a3b52f0dc6a552c7eb0d41e0cca4137b97dd8f15
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="new-and-recently-updated-sql-server-data-tools-ssdt"></a>Nouveautés et mises à jour récentes : SQL Server Data Tools (SSDT)
 
 
 
-Presque tous les jours Microsoft met à jour certains de ses articles existants sur son [Docs.Microsoft.com](http://docs.microsoft.com/) site Web de documentation. Cet article affiche des extraits d’articles récemment mis à jour. Des liens vers nouveaux articles peuvent également être répertoriés.
+Presque tous les jours, Microsoft met à jour certains de ses articles existants sur son site web de documentation [Docs.Microsoft.com](http://docs.microsoft.com/). Cet article contient des extraits d’articles récemment mis à jour. Des liens vers de nouveaux articles peuvent également être répertoriés.
 
-Cet article est généré par un programme est exécuté à nouveau régulièrement. Parfois un extrait peut apparaître avec mise en forme imparfait, ou en tant que markdown de l’article de la source. Les images ne sont jamais affichés ici.
+Cet article est généré par un programme qui est réexécuté régulièrement. Un extrait peut parfois apparaître avec une mise en forme imparfaite ou au format Markdown de l’article source. Les images ne sont jamais affichées ici.
 
-Mises à jour récentes sont signalés pour la plage de dates suivante et l’objet :
+Les mises à jour récentes sont signalées pour la plage de dates et le sujet suivants :
 
 
 
 - *Plage de dates des mises à jour :* &nbsp; **23-05-2017** &nbsp; - au - &nbsp; **17-07-2017**
-- *Zone de sujet :* &nbsp; **SQL Server Data Tools (SSDT)**.
+- *Domaine :* &nbsp; **SQL Server Data Tools (SSDT)**.
 
 
 
@@ -47,7 +47,7 @@ Mises à jour récentes sont signalés pour la plage de dates suivante et l’ob
 Les liens suivants renvoient aux nouveaux articles ajoutés récemment.
 
 
-***Il n’y a aucun nouvel article.***
+***Il n’y a aucun nouvel article pour cette fois.***
 
 
 
@@ -56,7 +56,7 @@ Les liens suivants renvoient aux nouveaux articles ajoutés récemment.
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>Liste compacte d’Articles récemment mis à jour
+## <a name="compact-list-of-articles-updated-recently"></a>Liste compacte d’articles mis à jour récemment
 
 Cette liste compacte fournit des liens vers tous les articles mis à jour qui sont répertoriés dans la section des extraits.
 
@@ -66,11 +66,11 @@ Cette liste compacte fournit des liens vers tous les articles mis à jour qui so
 
 ## <a name="updated-articles-with-excerpts"></a>Articles mis à jour avec des extraits
 
-Cette section affiche les extraits de mises à jour collectées à partir des articles qui ont récemment subi une mise à jour importante.
+Cette section affiche les extraits des mises à jour collectés dans des articles qui ont récemment fait l’objet d’une mise à jour importante.
 
-Les extraits affichés ici apparaissent séparés à partir de leur contexte sémantique spécifique. En outre, parfois un extrait est séparé à partir de la syntaxe markdown important qui l’entoure dans l’article. Par conséquent, ces extraits sont pour des conseils généraux. Les extraits permettent uniquement de savoir si votre intérêt justifie pris le temps de cliquer sur et consultez l’article.
+Les extraits affichés ici apparaissent séparés de leur contexte sémantique propre. Un extrait est parfois séparé de la syntaxe Markdown importante qui l’entoure dans l’article. Par conséquent, ces extraits sont donnés à titre indicatif uniquement. Les extraits vous permettent seulement de savoir si les articles correspondants vont vous intéresser et si oui, de cliquer dessus pour les consulter.
 
-Pour celles-ci et d’autres raisons, ne pas copier le code à partir de ces extraits et ne prennent pas en tant que vérité exacte tout extrait de texte. Au lieu de cela, consultez l’article.
+Pour cela et pour d’autres raisons, ne copiez pas le code de ces extraits et ne prenez pas à la lettre les extraits de texte. Consultez plutôt l’article.
 
 
 
@@ -86,13 +86,13 @@ Pour celles-ci et d’autres raisons, ne pas copier le code à partir de ces ext
 
 ## <a name="similar-articles"></a>Articles similaires
 
-Cette section liste les articles très similaires récemment mis à jour dans d’autres zones de sujet, dans le même dépôt GitHub.com : [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
+Cette section liste les articles très similaires récemment mis à jour dans d’autres domaines, dans le même dépôt GitHub.com : [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
 
 <!--  20170717-1101  -->
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Zones de sujet avec des articles nouveaux ou mis à jour récemment
+#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Domaines avec des articles nouveaux ou mis à jour récemment
 
-- [Nouveaux + Mis à jour (4 + 4) : **Analyse avancée pour SQL** (documentation)](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nouveaux + Mis à jour (4 + 4) : **Analytique avancée pour SQL** (documentation)](../advanced-analytics/new-updated-advanced-analytics.md)
 - [Nouveaux + Mis à jour (2 + 0) : **Analysis Services pour SQL** (documentation)](../analysis-services/new-updated-analysis-services.md)
 - [Nouveaux + Mis à jour (1 + 2) : **Connexion à SQL** (documentation)](../connect/new-updated-connect.md)
 - [Nouveaux + Mis à jour (6 + 0) : **Moteur de base de données pour SQL** (documentation)](../database-engine/new-updated-database-engine.md)
@@ -106,7 +106,7 @@ Cette section liste les articles très similaires récemment mis à jour dans d�
 - [Nouveaux + Mis à jour (1 + 0) : **Outils pour SQL** (documentation)](../tools/new-updated-tools.md)
 
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Zones de sujet sans article nouveau ou mis à jour récemment
+#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Domaines sans article nouveau ou mis à jour récemment
 
 - [Nouveaux + Mis à jour (0 + 0) : **ActiveX Data Objects (ADO) pour SQL** (documentation)](../ado/new-updated-ado.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Data Quality Services pour SQL** (documentation)](../data-quality-services/new-updated-data-quality-services.md)

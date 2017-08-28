@@ -19,11 +19,11 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
 ms.openlocfilehash: c27f699eb519c1e9a72756c26e8b320869786c6c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="encrypt-a-column-of-data"></a>Chiffrer une colonne de données
@@ -56,12 +56,12 @@ ms.lasthandoff: 06/23/2017
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
 
-Pour utiliser les exemples suivants vous devez disposer d’une clé principale de base de données. Si votre base de données n’a pas déjà une clé principale de base de données, créez-en un en exécutant l’instruction suivante, en fournissant votre mot de passe :   
+Pour pouvoir utiliser les exemples suivants, vous devez avoir une clé principale de base de données. Si votre base de données ne dispose pas déjà d’une clé principale de base de données, créez-en une en exécutant l’instruction suivante et en fournissant votre mot de passe :   
 ```  
 CREATE MASTER KEY ENCRYPTION BY   
 PASSWORD = '<some strong password>';  
 ```  
-Pensez toujours à sauvegarder votre clé principale de base de données. Pour plus d’informations sur les clés principales de base de données, consultez [CREATE MASTER KEY &#40; Transact-SQL &#41; ](../../../t-sql/statements/create-master-key-transact-sql.md).
+Sauvegardez toujours votre clé principale de base de données. Pour plus d’informations sur les clés principales de base de données, consultez [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md).
 
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Pour chiffrer une colonne de données à l'aide d'un chiffrement symétrique simple  
   

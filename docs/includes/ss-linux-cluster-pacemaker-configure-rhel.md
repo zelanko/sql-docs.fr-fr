@@ -1,11 +1,11 @@
-3. Tous les nœuds de cluster, ouvrez les ports du pare-feu STIMULATEUR. Pour ouvrir ces ports avec `firewalld`, exécutez la commande suivante :
+3. Sur tous les nœuds du cluster, ouvrez les ports de pare-feu de Pacemaker. Pour ouvrir ces ports avec `firewalld`, exécutez la commande suivante :
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability
    sudo firewall-cmd --reload
    ```
 
-   > Si le pare-feu n’a pas une configuration à haute disponibilité intégrée, ouvrez les ports suivants pour Pacemaker.
+   > Si le pare-feu n’a pas de configuration de haute disponibilité intégrée, ouvrez les ports suivants pour Pacemaker.
    >
    > * TCP : ports 2224, 3121, 21064
    > * UDP : port 5405
