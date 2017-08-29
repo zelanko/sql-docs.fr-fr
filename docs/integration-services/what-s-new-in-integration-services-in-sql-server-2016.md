@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bdb767ed145a95868bb11e5a9fa4facc837d0c07
+ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
+ms.openlocfilehash: 5e1127580ff900077fa3d36abcb339cce57857d2
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Quel &#39; nouveauté dans Integration Services dans SQL Server 2016
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
- Cette rubrique décrit les fonctionnalités qui ont été ajoutées ou mises à jour dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+ Cette rubrique décrit les fonctionnalités qui ont été ajoutées ou mis à jour dans SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
 ## <a name="improvements-grouped-by-category"></a>Améliorations regroupées par catégorie  
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 08/03/2017
   
         -   [Publication du connecteur pour SAP BW pour SQL Server 2016](#SAPBW)
         
-        -   [Publication de la version&amp;4;.0 des connecteurs pour Oracle et Teradata](#oracleteradata)
+        -   [Publication de la version 4.0 des connecteurs pour Oracle et Teradata](#oracleteradata)
         
         -   [Publication des connecteurs pour Analytics Platform System (PDW) Appliance Update 5](#pdwau5)
   
@@ -156,7 +156,7 @@ ms.lasthandoff: 08/03/2017
 ####  <a name="AlwaysOn"></a> Prise en charge de la fonctionnalité AlwaysOn dans le catalogue SSIS  
  La fonctionnalité des groupes de disponibilité AlwaysOn est une solution de haute disponibilité et de récupération d’urgence qui offre une alternative au niveau de l’entreprise à la mise en miroir de bases de données. Un groupe de disponibilité prend en charge un environnement de basculement pour un ensemble discret de bases de données utilisateur, appelées bases de données de disponibilité, qui basculent ensemble. Pour plus d’informations, consultez [Groupes de disponibilité AlwaysOn](https://msdn.microsoft.com/library/hh510230.aspx).  
   
- Dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], SSIS introduit de nouvelles fonctionnalités qui vous permettent d’effectuer facilement un déploiement vers un catalogue SSIS centralisé (par exemple, une base de données utilisateur SSISDB). Pour fournir une haute disponibilité à la base de données SSISDB et son contenu (projets, packages, journaux d’exécution, etc.), vous pouvez ajouter la base de données SSISDB à un groupe de disponibilité AlwaysOn, comme n’importe quelle autre base de données utilisateur. Quand un basculement se produit, le nœud secondaire devient automatiquement le nouveau nœud primaire.  
+ Dans SQL Server 2016, SSIS introduit de nouvelles fonctionnalités qui vous permettent de déployer facilement vers un catalogue SSIS centralisé (par exemple, les données utilisateur SSISDB). Pour fournir une haute disponibilité à la base de données SSISDB et son contenu (projets, packages, journaux d’exécution, etc.), vous pouvez ajouter la base de données SSISDB à un groupe de disponibilité AlwaysOn, comme n’importe quelle autre base de données utilisateur. Quand un basculement se produit, le nœud secondaire devient automatiquement le nouveau nœud primaire.  
   
  Pour obtenir une présentation détaillée et des instructions détaillées pour l’activation d’AlwaysOn pour SSISDB, consultez [catalogue SSIS](../integration-services/service/ssis-catalog.md).  
 
@@ -173,7 +173,7 @@ La fonctionnalité de déploiement incrémentiel de packages vous permet de dép
   
 -   API MOM (Management Object Model)  
   
- Pour plus d’informations, consultez [Integration Services (SSIS) déployer des projets et Packages] (../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md.  
+ Pour plus d’informations, consultez [Integration Services (SSIS) déployer des projets et Packages] (.. / integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md.  
 
 ####  <a name="encrypted"></a> Prise en charge de la fonctionnalité Always Encrypted dans le catalogue SSIS  
  SSIS prend déjà en charge la fonctionnalité de chiffrement intégral dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez les billets de blog suivants.  
@@ -193,7 +193,7 @@ La fonctionnalité de déploiement incrémentiel de packages vous permet de dép
  Le nouveau niveau de journalisation **RuntimeLineage** dans le catalogue SSIS permet de collecter les données nécessaires pour le suivi des informations de lignage dans le flux de données. Vous pouvez analyser ces informations de lignage pour mapper la relation de lignage entre différentes tâches. Les éditeurs de logiciels indépendants et les développeurs peuvent créer des outils de mappage de lignage personnalisés à l’aide de ces informations. 
 
 ####  <a name="CustomLogging"></a> Nouveau niveau de journalisation personnalisé dans le catalogue SSIS  
- Dans les versions antérieures du catalogue SSIS, vous pouvez choisir l’un des quatre niveaux de journalisation intégrés ( **None, Basic, Performance ou Verbose**) quand vous exécutez un package. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ajoute le niveau de journalisation **RuntimeLineage** . En outre, vous pouvez désormais créer et enregistrer plusieurs niveaux de journalisation personnalisés dans le catalogue SSIS, et choisir le niveau de journalisation à utiliser chaque fois que vous exécutez un package. Pour chaque niveau de journalisation personnalisé, sélectionnez uniquement les statistiques et les événements à capturer. Vous pouvez éventuellement inclure le contexte de l’événement pour voir les valeurs des variables, les chaînes de connexion et les propriétés de la tâche. Pour plus d’informations, consultez [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
+ Dans les versions antérieures du catalogue SSIS, vous pouvez choisir l’un des quatre niveaux de journalisation intégrés ( **None, Basic, Performance ou Verbose**) quand vous exécutez un package. SQL Server 2016 ajoute le **RuntimeLineage** niveau de journalisation. En outre, vous pouvez désormais créer et enregistrer plusieurs niveaux de journalisation personnalisés dans le catalogue SSIS, et choisir le niveau de journalisation à utiliser chaque fois que vous exécutez un package. Pour chaque niveau de journalisation personnalisé, sélectionnez uniquement les statistiques et les événements à capturer. Vous pouvez éventuellement inclure le contexte de l’événement pour voir les valeurs des variables, les chaînes de connexion et les propriétés de la tâche. Pour plus d’informations, consultez [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
 
 ####  <a name="ErrorColumn"></a> Noms de colonnes pour les erreurs contenues dans le flux de données  
  Lorsque vous redirigez les lignes contenant des erreurs vers une sortie d'erreur dans le flux de données, la sortie contient un identificateur numérique pour la colonne dans laquelle l'erreur s'est produite, mais n'affiche pas le nom de la colonne. Il existe désormais plusieurs façons de rechercher ou d’afficher le nom de la colonne dans laquelle l’erreur s’est produite.  
@@ -280,7 +280,7 @@ La fonctionnalité de déploiement incrémentiel de packages vous permet de dép
 ####  <a name="SAPBW"></a> Publication du connecteur pour SAP BW pour SQL Server 2016  
  Microsoft® Connector pour SAP BW pour Microsoft SQL Server® 2016 a été publié avec SQL Server 2016 Feature Pack. Pour télécharger les composants du Feature Pack, consultez [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297).
  
-#### <a name="oracleteradata"></a> Publication de la version&amp;4;.0 des connecteurs pour Oracle et Teradata
+#### <a name="oracleteradata"></a> Publication de la version&4;.0 des connecteurs pour Oracle et Teradata
 La version&4;.0 de Microsoft Connectors pour Oracle et Teradata a été publiée. Pour télécharger les connecteurs, consultez [Microsoft Connectors v4.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950).
 
 ### <a name="pdwau5"></a> Publication des connecteurs pour Analytics Platform System (PDW) Appliance Update 5
@@ -289,7 +289,7 @@ Les adaptateurs de destination pour le chargement des données dans PDW avec AU5
 ### <a name="expanded-connectivity-to-the-cloud"></a>Extension de la connectivité au cloud
 
 ####  <a name="AFP2016"></a> Publication d’Azure Feature Pack pour SSIS pour SQL Server 2016  
- Azure Feature Pack pour Integration Services a été publié pour [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Le Feature Pack contient les gestionnaires de connexions permettant de se connecter aux sources de données Azure, ainsi que les tâches permettant d’effectuer les opérations Azure courantes. Pour plus d’informations, consultez [Feature Pack Azure pour Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
+ Azure Feature Pack pour Integration Services a été publié pour SQL Server 2016. Le Feature Pack contient les gestionnaires de connexions permettant de se connecter aux sources de données Azure, ainsi que les tâches permettant d’effectuer les opérations Azure courantes. Pour plus d’informations, consultez [Feature Pack Azure pour Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
 
 #### <a name="dynamics"></a> Prise en charge des ressources Microsoft Dynamics Online publiées dans Service Pack 1
 
