@@ -1,7 +1,7 @@
 ---
 title: Journal des modifications de SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 08/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,20 +15,36 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: 51cfeaf15f9d7a01ce55968907e0074f7f2cb955
+ms.sourcegitcommit: 71a2cbf181c94c4c1aff877614aadf890b2496e0
+ms.openlocfilehash: e4bc77e76190463864ecab75ae94e28b16624309
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Journal des modifications de SQL Server Data Tools (SSDT)
-Ce journal des modifications concerne [SQL Server Data Tools (SSDT) pour Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx).  
+Ce journal des modification est pour [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).  
   
 Pour des publications détaillées sur les nouveautés et les modifications, consultez [le blog de l’équipe SSDT](https://blogs.msdn.microsoft.com/ssdt/)
 
+## <a name="ssdt-for-visual-studio-2017-1530-preview"></a>SSDT pour Visual Studio 2017 (15.3.0 en préversion)
+Numéro de build : 14.0.16121.0
+  
+### <a name="whats-new"></a>Nouveautés
+
+Cette préversion est la première version de SSDT pour Visual Studio 2017. Cette version présente une expérience d’installation web autonome pour les projets de base de données SQL Server, Analysis Services, Reporting Services et Integration Services dans Visual Studio 2017 15.3 ou ultérieur.
 
 
-## <a name="ssdt-172"></a>SSDT 17.2
+**Problèmes connus**
+
+- Le programme d’installation n’est pas localisé.
+- SSIS n’est pas localisé.
+- La tâche d’exécution de package SSIS ne prend pas en charge le débogage quand *ExecuteOutofProcess* a la valeur *True*. Ce problème s’applique uniquement au débogage. L’enregistrement, le déploiement et l’exécution via DTExec.exe ou le catalogue SSIS ne sont pas impactés.
+- Pour obtenir la liste complète des modifications, consultez le [journal des modifications](changelog-for-sql-server-data-tools-ssdt.md).
+- Signalez les problèmes sur le site de [Commentaires Connect SSDT](https://connect.microsoft.com/SQLServer/Feedback).
+- Les packages SSIS qui contiennent des extensions tierces ne peuvent pas être intervertis pour cibler d’autres versions de serveur.
+
+
+## <a name="ssdt-172-for-visual-studio-2015"></a>SSDT 17.2 pour Visual Studio 2015
 Numéro de build : 14.0.61707.300
 
 ### <a name="whats-new"></a>Nouveautés
@@ -76,7 +92,7 @@ Numéro de build : 14.0.61707.300
 - Changement de la dernière *TargetServerVersion* de « SQL Server vNext » en « SQL Server 2017"
 
 
-## <a name="ssdt-171"></a>SSDT 17.1
+## <a name="ssdt-171-for-visual-studio-2015"></a>SSDT 17.1 pour Visual Studio 2015
 Numéro de build : 14.0.61705.170
 
 ### <a name="whats-new"></a>Nouveautés
@@ -106,7 +122,7 @@ Numéro de build : 14.0.61705.170
 ## <a name="dacfx-1701"></a>DacFx 17.0.1 
 - Correction d’un problème pour les bases de données avec une clé asymétrique par un module de sécurité matériel (HSM) avec un fournisseur EKM [Article de Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider)
 
-## <a name="ssdt-170-supports-up-to-sql-server-2017"></a>SSDT 17.0 (prend en charge jusqu’à SQL Server 2017)
+## <a name="ssdt-170-for-visual-studio-2015-supports-up-to-sql-server-2017"></a>SSDT 17.0 pour Visual Studio 2015 (prend en charge jusqu’à SQL Server 2017)
 Numéro de build : 14.0.61704.140
 
 ### <a name="whats-new"></a>Nouveautés
@@ -208,7 +224,7 @@ Numéro de build : 14.0.61704.140
 - Always Encrypted : le chiffrement en ligne ne désactive pas le suivi des modifications lors de l’annulation et ne fonctionne pas correctement si le suivi des modifications n’a pas été désactivé avant le démarrage du chiffrement
 
 
-## <a name="ssdt-165-supports-up-to-sql-server-2016"></a>SSDT 16.5 (prend en charge jusqu’à SQL Server 2016)
+## <a name="ssdt-165-for-visual-studio-2015-supports-up-to-sql-server-2016"></a>SSDT 16.5 pour Visual Studio 2015 (prend en charge jusqu’à SQL Server 2016)
 Date de publication : 20 octobre 2016
 
 Numéro de build : 14.0.61021.0
@@ -303,7 +319,7 @@ Pour plus d’informations, lisez le [billet du blog Analysis Services](https://
 
 
 
-## <a name="ssdt-164-for-sql-server-2016"></a>SSDT 16.4 (pour SQL Server 2016)
+## <a name="ssdt-164-for-visual-studio-2015-for-sql-server-2016"></a>SSDT 16.4 pour Visual Studio 2015 (pour SQL Server 2016)
 Date de publication : 20 septembre 2016
 
 Numéro de build : 14.0.60918
@@ -343,7 +359,7 @@ Le modèle tabulaire SSDT comprend désormais une instance SSAS interne qu’il 
 
 
 
-## <a name="ssdt-163-for-sql-server-2016"></a>SSDT 16.3 (pour SQL Server 2016)
+## <a name="ssdt-163-for-visual-studio-2015-for-sql-server-2016"></a>SSDT 16.3 pour Visual Studio 2015 (pour SQL Server 2016)
 Date de publication : 15 août 2016
 
 Numéro de build de : 14.0.60812.0  
@@ -383,7 +399,7 @@ Numéro de build de : 14.0.60812.0
 
  
   
-## <a name="ssdt-july-for-sql-server-2016"></a>SSDT Juillet (pour SQL Server 2016)  
+## <a name="ssdt-july-for-visual-studio-2015-for-sql-server-2016"></a>SSDT de juillet pour Visual Studio 2015 (pour SQL Server 2016)  
 Date de publication : 30 juin 2016  
   
 Numéro de build : 14.0.60629.0  
@@ -426,7 +442,7 @@ Numéro de build : 14.0.60629.0
     * Correction d’un problème dans l’IU des tables calculées dans les modèles de niveau de compatibilité 1200 en cas d’utilisation de la mise en forme par défaut pour le type de colonne afin d’autoriser le changement du type de mise en forme à partir de l’IU. 
     
 
-## <a name="ssdt-june-for-sql-server-2016"></a>SSDT Juin (pour SQL Server 2016)  
+## <a name="ssdt-june-for-visual-studio-2015-for-sql-server-2016"></a>SSDT de juin pour Visual Studio 2015 (pour SQL Server 2016)  
 Date de publication : 1 juin 2016  
   
 Numéro de build : 14.0.60525.0 

@@ -2,8 +2,10 @@
 title: "Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 06/14/2017
-ms.prod: sql-server-2016
+ms.date: 08/23/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -51,17 +53,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f6ac799e828d817eb19d6a8451c8c2011b0ea82f
-ms.openlocfilehash: 85e12d330f4c779deda67a739e107309074c0ea7
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 952d6202918895d0d6f7b6496bff1185ccc4170b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Configurations matérielle et logicielle requises pour l'installation de SQL Server
 
 Cette rubrique liste les configurations matérielle et logicielle minimales pour installer et exécuter [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] sur le système d’exploitation Windows. 
 
-[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] introduit la prise en charge de [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] sur Linux. Pour plus d’informations, consultez [[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] sur Linux](../../linux/sql-server-linux-overview.md). 
+[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] introduit la prise en charge de [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] sur Linux. Pour obtenir des informations, consultez [Configurations matérielle et logicielle requises pour [!INCLUDE[ssNoVersion](../../includes/ssNoVersion_md.md)] sur Linux](../../linux/sql-server-linux-setup.md#system). 
 
 > Cette rubrique s’applique à [!INCLUDE[ss2016](../../includes/sssql15-md.md)] et ultérieur. Pour obtenir du contenu relatif aux versions précédentes de SQL Server, consultez [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2014](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx). 
   

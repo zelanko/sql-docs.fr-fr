@@ -1,7 +1,7 @@
 ---
 title: "Notes de publication de SQL Server 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/16/2017
+ms.date: 08/25/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,18 +15,18 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 04245fd42b770129ce4074f8a4ae8377b10cf384
-ms.openlocfilehash: 6494051851601ead6fb3d51e1688b8f1320ed5d4
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 0288cee4b9dee5fba6b67b21e81193bdbe374a94
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>Notes de publication de SQL Server 2017
 Cette rubrique décrit les limitations et les problèmes de [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]. Pour des informations connexes, consultez :
 - [Nouveautés de SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Notes de publication de SQL Server sur Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
-  
-[![Télécharger à partir du Centre d’évaluation.](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  Télécharger [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] à partir du **[Centre d’évaluation](http://go.microsoft.com/fwlink/?LinkID=829477)**
+
+[![Télécharger à partir du Centre d’évaluation](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Faites un essai :** [Téléchargez la dernière version de SQL Server 2017 : RC2, août 2017](http://go.microsoft.com/fwlink/?LinkID=829477).
 
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>SQL Server 2017 Release Candidate (RC2 - Août 2017)
 Il n’y a aucun serveur SQL Server dans les notes de publication Windows pour cette version. Consultez [Notes de publication de SQL Server sur Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
@@ -109,11 +109,12 @@ Il n’y a aucun serveur SQL Server dans les notes de publication Windows pour c
 
    L’instance de SQL Server qui hébergeait le réplica secondaire revient à un état normal.
 
-##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) Contacter l’équipe d’ingénierie de SQL Server 
-- [Dépassement de la capacité de la pile (balise sql-server) : poser des questions techniques](http://stackoverflow.com/questions/tagged/sql-server)
+##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) Obtenir de l’aide 
+- [Stack Overflow (tag sql-server) : poser des questions sur le développement SQL](http://stackoverflow.com/questions/tagged/sql-server)
 - [Forums MSDN : poser des questions techniques](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect : signaler des bogues et demander des fonctionnalités](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit : discussion générale sur SQL Server](https://www.reddit.com/r/SQLServer/)
+- [Termes du contrat de licence Microsoft SQL Server et autres informations](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
 
 ## <a name="more-information"></a>Informations complémentaires
 - [Notes de publication de SQL Server Reporting Services](../reporting-services/reporting-services-release-notes.md).
