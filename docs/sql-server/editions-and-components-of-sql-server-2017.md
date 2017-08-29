@@ -40,10 +40,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
-ms.openlocfilehash: 6c17972f863043a53bf60b6c814aaac0c3c38d51
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 22507f627c33c9424d725ca5d249bd04628b3ea6
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Éditions et fonctionnalités prises en charge de SQL Server 2017
@@ -199,7 +199,8 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Durabilité différée|Oui|Oui|Oui|Oui|Oui|
 |Paramétrage automatique|Oui|Non|Non|Non|Non|
 |Jointures adaptatives en mode batch|Oui|Non|Non|Non|Non|
-|Rétroaction d’allocation de mémoire en mode batch|Oui|Non|Non|Non|Non|
+|Retour d’allocation de mémoire en mode batch|Oui|Non|Non|Non|Non|
+|Exécution entrelacée pour les fonctions table à instructions multiples|Oui|Oui|Oui|Oui|Oui|
 |Améliorations de l’insertion en bloc|Oui|Oui|Oui|Oui|Oui|
 
 
