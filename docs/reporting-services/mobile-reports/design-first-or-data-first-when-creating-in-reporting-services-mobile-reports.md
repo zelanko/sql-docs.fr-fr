@@ -22,7 +22,7 @@ ms.contentlocale: fr-fr
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="design-first-or-data-first-when-creating-in-reporting-services-mobile-reports"></a>Design first or data first when creating in Reporting Services mobile reports
+# <a name="design-first-or-data-first-when-creating-in-reporting-services-mobile-reports"></a>Commencer par la conception ou par les données lors de création dans les rapports mobiles Reporting Services
   
 L’ [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)]vous permet de créer rapidement des rapports mobiles bien adaptés à la taille de votre écran, sur une aire de conception avec des lignes et des colonnes de grille réglables et des éléments de rapport mobile flexibles.   
   
