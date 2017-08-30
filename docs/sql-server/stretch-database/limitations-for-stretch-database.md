@@ -62,8 +62,8 @@ Les tables compatibles Stretch présentent les limitations suivantes.
   
 -   Tables optimisées en mémoire  
   
- ### <a name="data-types"></a>Types de données  
- -   text, ntext et image  
+### <a name="data-types"></a>Types de données  
+-   text, ntext et image  
   
 -   timestamp  
   
