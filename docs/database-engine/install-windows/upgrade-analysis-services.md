@@ -54,7 +54,7 @@ ms.lasthandoff: 08/02/2017
  Les niveaux de compatibilité des bases de données attachées à un serveur donné restent inchangés, sauf si vous les modifiez manuellement.  
   
 ### <a name="in-place-upgrade"></a>Mise à niveau sur place  
- Vous pouvez mettre à niveau une instance existante d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and, as part of the upgrade process, auversmatically migrate existing databases from the old instance vers the new instance. Comme les métadonnées et les données binaires sont compatibles entre les deux versions, vous conserverez les données après la mise à niveau et vous n'avez pas à migrer les données manuellement.  
+ Vous pouvez mettre à niveau une instance existante d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et, dans le cadre du processus de mise à niveau, migrer automatiquement les bases de données existantes de l'instance précédente vers la nouvelle. Comme les métadonnées et les données binaires sont compatibles entre les deux versions, vous conserverez les données après la mise à niveau et vous n'avez pas à migrer les données manuellement.  
   
  Pour mettre à niveau une instance existante, exécutez le programme d'installation et spécifiez le nom de l'instance existante comme nom de la nouvelle instance.  
   

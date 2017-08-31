@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Déclencher l'événement : ManageWeb  
   
- Pour plus d'informations, consultez [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
+ Pour plus d'informations, consultez [Comparer des rôles et des tâches dans Reporting Services avec les autorisations et les groupes SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
   
 ### <a name="script-usage"></a>Utilisation des scripts  
  **Créer les fichiers de scripts (.ps1)**  
