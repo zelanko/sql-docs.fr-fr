@@ -70,4 +70,3 @@ Pour commencer ce didacticiel, commençons par regarder [!INCLUDE[ssManStudioFul
 [Connexion avec le composant Serveurs inscrits et l'Explorateur d'objets](../../tools/sql-server-management-studio/lesson-1-2-connect-with-registered-servers-and-object-explorer.md)  
 
   
-
