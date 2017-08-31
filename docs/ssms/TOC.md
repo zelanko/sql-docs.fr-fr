@@ -32,8 +32,9 @@
 # [Environnement de SSMS](the-sql-server-management-studio-environment.md)
 # [Pages de propriétés dans SSMS](property-pages-in-sql-server-management-studio.md)
 # [Fenêtre Propriétés dans SSMS](properties-window-management-studio.md)
+# [Fenêtre de sortie dans SSMS](output-window.md)
 
-# [À propos de, boîte de dialogue](about-dialog-box.md)
+# [Boîte de dialogue À propos de](about-dialog-box.md)
 # [Navigateur web SMS](sql-server-management-studio-web-browser.md)
 # [Éléments généraux de l’interface utilisateur](general-user-interface-elements.md)
 
