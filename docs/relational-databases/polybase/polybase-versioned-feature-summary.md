@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: cf69aa2c57e86aab11974b5874039ae7f72b9917
-ms.openlocfilehash: 3384d962c3765bf4feb00f957ad56a668f8d92e4
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: dcfa27ad11e3027519398b9424056b52afb1617b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>Récapitulatif des fonctionnalités de version PolyBase
@@ -35,6 +35,7 @@ Récapitulatif des fonctionnalités PolyBase disponibles pour les services et pr
 |Interroger des données Hadoop avec [!INCLUDE[tsql](../../includes/tsql-md.md)]|oui|non|non|oui|
 |Importer des données depuis Hadoop|oui|non|non|oui|
 |Exporter des données vers Hadoop  |oui|non|non| oui|
+|Interroger, importer, exporter vers HDInsights |non|non|non|non
 |Transmettre des calculs de requête à Hadoop|oui|non|non|oui|  
 |Importer des données depuis le stockage d’objets blob Azure|oui|non|oui|oui| 
 |Exporter des données vers le stockage d’objets blob Azure|oui|non|oui|oui|  

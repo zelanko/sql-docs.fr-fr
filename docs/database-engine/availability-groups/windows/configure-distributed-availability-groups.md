@@ -1,7 +1,7 @@
 ---
 title: "Configurer un groupe de disponibilité distribué (Groupe de disponibilité AlwaysOn) | Microsoft Docs"
 ms.custom: 
-ms.date: 07/12/2017
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 97c42036e08fa8d1d8e7152b7fb89908472efe6b
+ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
+ms.openlocfilehash: 01f0e6dfacfab0d8528d3b399267c45afef95a11
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 
 # <a name="configure-distributed-availability-group"></a>Configurer un groupe de disponibilité distribué  
 
-Pour créer un groupe de disponibilité distribué, vous devez créer un groupe de disponibilité et un écouteur sur chaque cluster de basculement Windows Server. Vous combinez ensuite ces éléments dans un groupe de disponibilité distribué. Les étapes suivantes fournissent un exemple de base dans Transact-SQL. Cet exemple ne couvre pas tous les détails de la création des groupes de disponibilité et des écouteurs. Son but est de mettre en évidence les exigences principales. 
+Pour créer un groupe de disponibilité distribué, vous devez créer un groupe de disponibilité et un écouteur sur chaque cluster de basculement Windows Server. Vous combinez ensuite ces groupes de disponibilité dans un groupe de disponibilité distribué. Les étapes suivantes fournissent un exemple de base dans Transact-SQL. Cet exemple ne couvre pas tous les détails de la création des groupes de disponibilité et des écouteurs. Son but est de mettre en évidence les exigences principales. 
 
 Pour obtenir une présentation technique des groupes de disponibilité distribués, consultez [Groupes de disponibilité distribués](distributed-availability-groups.md).   
 
@@ -31,13 +31,13 @@ Pour obtenir une présentation technique des groupes de disponibilité distribu�
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>Définir les écouteurs de point de terminaison pour écouter toutes les adresses IP
 
-Vérifiez que les points de terminaison peuvent communiquer entre les différents groupes de disponibilité du groupe de disponibilité distribué. Si un groupe de disponibilité est défini sur un réseau spécifique sur le point de terminaison, le groupe de disponibilité distribué ne fonctionnera pas correctement. Sur chaque serveur qui hébergera un réplica dans le groupe de disponibilité distribué, configurez l’écouteur sur `LISTENER_IP = ALL`. 
+Vérifiez que les points de terminaison peuvent communiquer entre les différents groupes de disponibilité du groupe de disponibilité distribué. Si un groupe de disponibilité est défini sur un réseau spécifique sur le point de terminaison, le groupe de disponibilité distribué ne fonctionne pas correctement. Sur chaque serveur qui héberge un réplica dans le groupe de disponibilité distribué, configurez l’écouteur sur `LISTENER_IP = ALL`. 
 
 #### <a name="create-a-listener-to-listen-to-all-ip-addresses"></a>Créer un écouteur pour écouter toutes les adresses IP
 
 Par exemple, le script suivant crée un point de terminaison d’écouteur sur le port TCP 5022 qui écoute sur toutes les adresses IP.  
 
-```tsql
+```sql
 CREATE ENDPOINT [aodns-hadr] 
     STATE=STARTED
     AS TCP (LISTENER_PORT = 5022, LISTENER_IP = ALL)
@@ -53,7 +53,7 @@ GO
 
 Par exemple, le script suivant modifie un point de terminaison d’écouteur pour qu’il écoute sur toutes les adresses IP.  
 
-```tsql
+```sql
 ALTER ENDPOINT [aodns-hadr] 
     AS TCP (LISTENER_IP = ALL)
 GO
@@ -64,7 +64,7 @@ GO
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>Créer le groupe de disponibilité principal sur le premier cluster  
 Créez un groupe de disponibilité sur le premier cluster WSFC.   Dans cet exemple, le groupe de disponibilité est nommé `ag1` pour la base de données `db1`.      
   
-```tsql  
+```sql  
 CREATE AVAILABILITY GROUP [ag1]   
 FOR DATABASE db1   
 REPLICA ON N'server1' WITH (ENDPOINT_URL = N'TCP://server1.contoso.com:5022',  
@@ -83,34 +83,40 @@ GO
   
 ```  
   
-Notez que cet exemple utilise un amorçage direct, où **SEEDING_MODE** est défini sur **AUTOMATIC** pour les réplicas et le groupe de disponibilité distribué. Cela signifie qu’une fois mis en place, les réplicas secondaires et le groupe de disponibilité secondaire sont automatiquement renseignés sans qu’une sauvegarde manuelle et une restauration de base de données primaire soient nécessaires.  
+>[!NOTE]
+>L’exemple précédent utilise un amorçage direct, où **SEEDING_MODE** a la valeur **AUTOMATIC** pour les réplicas et le groupe de disponibilité distribué. Cette configuration définit les réplicas secondaires et le groupe de disponibilité secondaire pour qu’ils soient renseignés automatiquement sans qu’une sauvegarde manuelle et une restauration de base de données primaire soient nécessaires.  
   
 ### <a name="join-the-secondary-replicas-to-the-primary-availability-group"></a>Joindre les réplicas secondaires au groupe de disponibilité principal  
 Les réplicas secondaires doivent être joints au groupe de disponibilité **ALTER AVAILABILITY GROUP** avec l’option **JOIN** . Étant donné que l’amorçage direct est utilisé dans cet exemple, vous devez également appeler  **ALTER AVAILABILITY GROUP** avec l’option **GRANT CREATE ANY DATABASE** . Ainsi, le groupe de disponibilité peut créer la base de données et commencer l’amorçage automatique à partir du réplica principal.  
   
 Dans cet exemple, les commandes suivantes sont exécutées sur le réplica secondaire `server2`pour rejoindre le groupe de disponibilité `ag1` . Le groupe de disponibilité est ensuite autorisé à créer des bases de données sur le réplica secondaire.  
   
-```tsql  
+```sql  
 ALTER AVAILABILITY GROUP [ag1] JOIN   
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE  
 GO  
 ```  
+
+>[!NOTE]
+>Quand le groupe de disponibilité crée une base de données sur un réplica secondaire, il définit le propriétaire de la base de données en tant que compte qui a exécuté l’instruction `ALTER AVAILABILITY GROUP` pour accorder l’autorisation de créer une base de données. Pour plus d’informations, consultez [ Octroyer l’autorisation de créer une base de données sur un réplica secondaire au groupe de disponibilité](automatic-seeding-secondary-replicas.md#grantCreate).
   
 ### <a name="create-a-listener-for-the-primary-availability-group"></a>Créer un écouteur pour le groupe de disponibilité principal  
 
 Ajoutez ensuite un écouteur pour le groupe de disponibilité principal sur le premier cluster WSFC. Dans cet exemple, l’écouteur est nommé `ag1-listener`. Pour obtenir des instructions détaillées sur la création d’un écouteur, consultez [Créer ou configurer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
-```  
+```sql
 ALTER AVAILABILITY GROUP [ag1]    
-    ADD LISTENER 'ag1-listener' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173);    
+    ADD LISTENER 'ag1-listener' ( 
+        WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , 
+        PORT = 60173);    
 GO  
 ```  
   
 
 ## <a name="create-second-availability-group"></a>Créer un second groupe de disponibilité  
- Puis, sur le deuxième cluster WSFC, créez un deuxième groupe de disponibilité `ag2`. Dans ce cas, la base de données n’est pas spécifiée, car elle est automatiquement amorcée à partir du groupe de disponibilité principal.  
+ Puis, sur le deuxième cluster WSFC, créez un deuxième groupe de disponibilité `ag2`. Dans ce cas, la base de données n’est pas spécifiée, car elle est amorcée automatiquement à partir du groupe de disponibilité principal.  
   
-```tsql  
+```sql  
 CREATE AVAILABILITY GROUP [ag2]   
 FOR   
 REPLICA ON N'server3' WITH (ENDPOINT_URL = N'TCP://server3.contoso.com:5022',   
@@ -129,12 +135,12 @@ GO
 ```  
   
 > [!NOTE]  
->  Notez que les groupes de disponibilité secondaires doivent utiliser le même point de terminaison de mise en miroir de bases de données (le port 5022 dans l’exemple). Sinon, la réplication s’arrête après un basculement local.  
+> Le groupe de disponibilité secondaire doit utiliser le même point de terminaison de mise en miroir de bases de données (le port 5022 dans l’exemple). Sinon, la réplication s’arrête après un basculement local.  
   
 ### <a name="join-the-secondary-replicas-to-the-secondary-availability-group"></a>Joindre les réplicas secondaires au groupe de disponibilité secondaire  
  Dans cet exemple, les commandes suivantes sont exécutées sur le réplica secondaire `server4`pour rejoindre le groupe de disponibilité `ag2` . Le groupe de disponibilité est ensuite autorisé à créer des bases de données sur le réplica secondaire pour prendre en charge l’amorçage direct.  
   
-```tsql  
+```sql  
 ALTER AVAILABILITY GROUP [ag2] JOIN   
 ALTER AVAILABILITY GROUP [ag2] GRANT CREATE ANY DATABASE  
 GO  
@@ -150,9 +156,9 @@ GO
 ```  
   
 ## <a name="create-distributed-availability-group-on-first-cluster"></a>Créer un groupe de disponibilité distribué sur le premier cluster  
- Sur le premier cluster WSFC, créez un groupe de disponibilité distribué (nommé `distributedag` dans cet exemple). Utilisez la commande **CREATE AVAILABILITY GROUP** avec l’option **DISTRIBUTED** . Le paramètre **AVAILABILITY GROUP ON** spécifie les groupes de disponibilité membres, `ag1` et `ag2`.  
+ Sur le premier cluster WSFC, créez un groupe de disponibilité distribué (nommé `distributedag` dans cet exemple). Utilisez la commande **CREATE AVAILABILITY GROUP** avec l’option **DISTRIBUTED** . Le paramètre **AVAILABILITY GROUP ON** spécifie les groupes de disponibilité membres `ag1` et `ag2`.  
   
-```tsql  
+```sql  
 CREATE AVAILABILITY GROUP [distributedag]  
    WITH (DISTRIBUTED)   
    AVAILABILITY GROUP ON  
@@ -179,7 +185,7 @@ GO
 ## <a name="join-distributed-availability-group-on-second-cluster"></a>Joindre un groupe de disponibilité distribué sur le second cluster  
  Joignez ensuite le groupe de disponibilité distribué au deuxième cluster WSFC.  
   
-```tsql  
+```sql  
 ALTER AVAILABILITY GROUP [distributedag]   
    JOIN   
    AVAILABILITY GROUP ON  
@@ -201,17 +207,17 @@ GO
 ```  
 
   
-## <a name="failover-to-a-secondary-availability-group"></a>Basculement vers un groupe de disponibilité secondaire  
-Seul le basculement manuel est pris en charge pour l’instant. L’instruction Transact-SQL suivante force le basculement sur le groupe de disponibilité distribué nommé `distributedag`:  
+## <a name="failover"></a> Basculer vers un groupe de disponibilité secondaire  
+Seul le basculement manuel est pris en charge pour l’instant. L’instruction Transact-SQL suivante bascule le groupe de disponibilité distribué nommé `distributedag` :  
 
 
 1. Définissez le mode de disponibilité sur validation synchrone pour le groupe de disponibilité secondaire. 
     
-      ```tsql  
+      ```sql  
       ALTER AVAILABILITY GROUP [distributedag] 
       MODIFY 
       AVAILABILITY GROUP ON
-      'ag1' WITH  
+      'ag1' WITH 
          ( 
           LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',  
           AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT, 
@@ -230,7 +236,7 @@ Seul le basculement manuel est pris en charge pour l’instant. L’instruction 
   
 1. Attendez que l’état du groupe de disponibilité distribuée soit défini sur `SYNCHRONIZED`. Exécutez la requête suivante sur le serveur SQL Server qui héberge le réplica principal du groupe de disponibilité principal. 
     
-      ```tsql  
+      ```sql  
       SELECT ag.name
              , drs.database_id
              , drs.group_id
@@ -244,48 +250,48 @@ Seul le basculement manuel est pris en charge pour l’instant. L’instruction 
 
     Continuez une fois que le groupe de disponibilité **synchronization_state_desc** est `SYNCHRONIZED`. Si **synchronization_state_desc** n’est pas `SYNCHRONIZED`, exécutez la commande toutes les cinq secondes jusqu’à ce qu’il change. Ne continuez pas jusqu’à **synchronization_state_desc** = `SYNCHRONIZED`. 
 
-1. Sur le serveur SQL Server hébergeant le réplica principal pour le groupe de disponibilité principal, définissez la valeur du rôle du groupe de disponibilité distribué sur `SECONDARY`. 
+1. Sur le serveur SQL Server hébergeant le réplica principal pour le groupe de disponibilité principal, affectez la valeur `SECONDARY` au rôle du groupe de disponibilité distribué. 
 
-      ```tsql
-      ALTER AVAILABILITY GROUP distributedag SET (ROLE = SECONDARY); 
-      ```  
+    ```sql
+    ALTER AVAILABILITY GROUP distributedag SET (ROLE = SECONDARY); 
+    ```  
 
-   >[REMARQUE !] À ce stade, le groupe de disponibilité distribué n’est pas disponible.
+    À ce stade, le groupe de disponibilité distribué n’est pas disponible.
 
 1. Testez la disponibilité du basculement. Exécutez la requête suivante :
 
-      ```tsql
-      SELECT ag.name, 
-             drs.database_id, 
-             drs.group_id, 
-             drs.replica_id, 
-             drs.synchronization_state_desc, 
-             drs.end_of_log_lsn 
-      FROM sys.dm_hadr_database_replica_states drs, sys.availability_groups ag
-      WHERE drs.group_id = ag.group_id; 
-      ```  
-    Le groupe de disponibilité est prêt pour le basculement lorsque **synchronization_state_desc** est `SYNCHRONIZED` et **end_of_log_lsn** est le même pour les deux groupes de disponibilité. 
+    ```sql
+    SELECT ag.name, 
+        drs.database_id, 
+        drs.group_id, 
+        drs.replica_id, 
+        drs.synchronization_state_desc, 
+        drs.end_of_log_lsn 
+    FROM sys.dm_hadr_database_replica_states drs, sys.availability_groups ag
+    WHERE drs.group_id = ag.group_id; 
+    ```  
+    Le groupe de disponibilité est prêt pour le basculement quand **synchronization_state_desc** est `SYNCHRONIZED` et que **end_of_log_lsn** est identique pour les deux groupes de disponibilité. 
 
-1. Basculement du groupe de disponibilité principal vers le groupe de disponibilité secondaire. Exécutez la commande suivante sur le serveur SQL Server qui héberge le réplica principal du groupe de disponibilité secondaire. 
+1. Basculez du groupe de disponibilité principal vers le groupe de disponibilité secondaire. Exécutez la commande suivante sur le serveur SQL Server qui héberge le réplica principal du groupe de disponibilité secondaire. 
 
-      ```tsql
-      ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
-      ```  
+    ```sql
+    ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
+    ```  
 
-   >[REMARQUE !] Après cette étape, le groupe de disponibilité distribué est disponible.
+    Après cette étape, le groupe de disponibilité distribué est disponible.
       
-Après avoir effectué les étapes ci-dessus, le groupe de disponibilité distribué bascule sans perte de données. Microsoft vous recommande de définir le mode de disponibilité sur ASYNCHRONOUS_COMMIT si les groupes de disponibilité sont à une distance géographique qui provoque des temps de latence. 
+Après avoir effectué les étapes ci-dessus, le groupe de disponibilité distribué bascule sans perte de données. Si les groupes de disponibilité sont à une distance géographique qui provoque des temps de latence, Microsoft vous recommande de définir le mode de disponibilité sur ASYNCHRONOUS_COMMIT. 
   
 ## <a name="remove-a-distributed-availability-group"></a>Supprimer un groupe de disponibilité distribué  
  L’instruction Transact-SQL suivante supprime un groupe de disponibilité distribué nommé `distributedag`:  
   
-```tsql  
+```sql  
 DROP AVAILABILITY GROUP [distributedag]  
 ```  
 
 ## <a name="create-distributed-availability-group-on-failover-cluster-instances"></a>Créer un groupe de disponibilité distribué sur des instances de cluster de basculement
 
-Vous pouvez créer un groupe de disponibilité distribué à l’aide d’un groupe de disponibilité sur une instance de cluster de basculement (FCI). Dans ce cas, vous n’avez pas besoin d’écouteur de groupe de disponibilité. Utilisez le nom de réseau virtuel pour le réplica principal de l’instance FCI. L’exemple suivant montre un groupe de disponibilité distribué appelé SQLFCIDAG. Un des groupes de disponibilité est SQLFCIAG. SQLFCIAG possède 2 réplicas FCI. Le VNN pour le réplica FCI principal est SQLFCIAG-1, et celui du réplica FCI secondaire est SQLFCIAG-2. Le groupe de disponibilité distribué inclut également SQLAG-DR pour la récupération d’urgence.
+Vous pouvez créer un groupe de disponibilité distribué à l’aide d’un groupe de disponibilité sur une instance de cluster de basculement (FCI). Dans ce cas, vous n’avez pas besoin d’écouteur de groupe de disponibilité. Utilisez le nom de réseau virtuel pour le réplica principal de l’instance FCI. L’exemple suivant montre un groupe de disponibilité distribué appelé SQLFCIDAG. Un des groupes de disponibilité est SQLFCIAG. SQLFCIAG a deux réplicas FCI. Le VNN pour le réplica FCI principal est SQLFCIAG-1, et celui du réplica FCI secondaire est SQLFCIAG-2. Le groupe de disponibilité distribué inclut également SQLAG-DR pour la récupération d’urgence.
 
 ![Groupe de disponibilité distribué Always On](../../../database-engine/availability-groups/windows/media/always-on-availability-group-distributed.png)
 
@@ -293,7 +299,7 @@ Vous pouvez créer un groupe de disponibilité distribué à l’aide d’un gro
  
  Le DDL suivant crée ce groupe de disponibilité distribué. 
 
-```tsql  
+```sql  
 CREATE AVAILABILITY GROUP [SQLFCIDAG]  
    WITH (DISTRIBUTED)   
    AVAILABILITY GROUP ON  
@@ -313,13 +319,13 @@ CREATE AVAILABILITY GROUP [SQLFCIDAG]
       );   
 ```  
 
->[REMARQUE !] L’URL de l’écouteur est le VNN de l’instance FCI principale.
+L’URL de l’écouteur est le VNN de l’instance FCI principale.
 
 ## <a name="manually-fail-over-fci-in-distributed-availability-group"></a>Basculer manuellement FCI dans le groupe de disponibilité distribué
 
 Pour basculer manuellement le groupe de disponibilité FCI, mettez à jour le groupe de disponibilité distribué de façon à refléter la modification de l’URL de l’écouteur. Par exemple, exécutez le DDL suivant sur le groupe de disponibilité principal et le groupe de disponibilité secondaire de SQLFCIAG :
 
-```tsql  
+```sql  
 ALTER AVAILABILITY GROUP [SQLFCIDAG]  
    MODIFY AVAILABILITY GROUP ON  
  'SQLFCIAG' WITH    

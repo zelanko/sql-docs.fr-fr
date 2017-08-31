@@ -1,8 +1,10 @@
 ---
 title: "Initialiser automatiquement un groupe de disponibilité Always On | Microsoft Docs"
 ms.custom: 
-ms.date: 11/14/2016
-ms.prod: sql-server-2016
+ms.date: 08/23/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,21 +17,22 @@ author: MikeRayMSFT
 ms.author: v-saume
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b30513c845d486875840eabd66506497182eb692
+ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
+ms.openlocfilehash: 6184d0cfedb90d16f1a7c1af109003908e481a89
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Initialiser automatiquement le groupe de disponibilité Always On
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
+SQL Server 2016 propose un amorçage automatique des groupes de disponibilité. Quand vous créez un groupe de disponibilité par amorçage automatique, SQL Server crée automatiquement les réplicas secondaires de chaque base de données du groupe. Vous n’avez plus besoin de sauvegarder ni de restaurer manuellement les réplicas secondaires. Pour activer l’amorçage automatique, créez le groupe de disponibilité avec T-SQL ou utilisez la dernière version de SQL Server Management Studio.
 
- SQL Server 2016 propose un amorçage automatique des groupes de disponibilité. Quand vous créez un groupe de disponibilité par amorçage automatique, SQL Server crée automatiquement les réplicas secondaires de chaque base de données du groupe. Vous n’avez plus besoin de sauvegarder ni de restaurer manuellement les réplicas secondaires. Pour activer l’amorçage automatique, créez le groupe de disponibilité avec T-SQL.
+Pour plus d’informations, consultez [Amorçage automatique pour les réplicas secondaires](automatic-seeding-secondary-replicas.md).
  
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prérequis
 
-L’amorçage automatique exige que le chemin des fichiers de données et des fichiers journaux soit le même sur chaque instance de SQL Server qui participe au groupe de disponibilité. 
+Dans SQL Server 2016, l’amorçage automatique exige que le chemin des fichiers de données et des fichiers journaux soit le même sur chaque instance de SQL Server qui participe au groupe de disponibilité. Dans SQL Server 2017, vous pouvez utiliser différents chemins, mais Microsoft recommande d’utiliser les mêmes chemins quand tous les réplicas sont hébergés sur la même plateforme (par exemple Windows ou Linux). Les groupes de disponibilité multiplateformes ont des chemins différents pour les réplicas. Pour plus d’informations, consultez [Disposition des disques](automatic-seeding-secondary-replicas.md#disklayout).
 
 L’amorçage du groupe de disponibilité communique par le biais du point de terminaison de mise en miroir de bases de données. Ouvrez des règles de pare-feu pour le trafic entrant dans le port du point de terminaison de mise en miroir sur chaque serveur.
 
@@ -41,44 +44,44 @@ Pour créer un groupe de disponibilité par amorçage automatique, définissez `
 
 L’exemple suivant crée un groupe de disponibilité sur un cluster de basculement Windows Server à deux nœuds. Avant d’exécuter les scripts, mettez à jour les valeurs conformément à votre environnement.
 
-1. Créez les points de terminaison. Chaque serveur a besoin d’un point de terminaison. Le script suivant crée un point de terminaison qui utilise le port TCP 5022 pour l’écouteur. Définissez `<endpoint_name>` et `LISTENER_PORT` conformément à votre environnement et exécutez le script :
+1. Créez les points de terminaison. Chaque serveur a besoin d’un point de terminaison. Le script suivant crée un point de terminaison qui utilise le port TCP 5022 pour l’écouteur. Définissez `<endpoint_name>` et `LISTENER_PORT` conformément à votre environnement et exécutez le script sur les deux serveurs :
 
-    ```
-    --Create the endpoint on both servers
-    -- Run this script twice, once on each server. 
+    ```sql
     CREATE ENDPOINT [<endpoint_name>] 
-    STATE=STARTED
-    AS TCP (LISTENER_PORT = 5022, LISTENER_IP = ALL)
-    FOR DATA_MIRRORING (ROLE = ALL, AUTHENTICATION = WINDOWS NEGOTIATE, ENCRYPTION = REQUIRED ALGORITHM AES)
+        STATE=STARTED
+        AS TCP (LISTENER_PORT = 5022, LISTENER_IP = ALL)
+        FOR DATA_MIRRORING (
+            ROLE = ALL, 
+            AUTHENTICATION = WINDOWS NEGOTIATE, 
+            ENCRYPTION = REQUIRED ALGORITHM AES
+            )
     GO
     ```
 
-1. Créez le groupe de disponibilité. Le script suivant crée le groupe de disponibilité. Mettez à jour les valeurs du nom du groupe, des noms de serveur et des noms de domaine, puis exécutez-le sur l’instance principale de SQL Server.  
+1. Créez le groupe de disponibilité. Le script suivant crée le groupe de disponibilité. Mettez à jour les valeurs entre crochets `<>` du nom du groupe, des noms de serveurs et des noms de domaines, puis exécutez-le sur l’instance principale de SQL Server.  
 
-    ```
-    ---Run On Primary
+    ```sql
     CREATE AVAILABILITY GROUP [<availability_group_name>]
-    FOR DATABASE db1
-    REPLICA ON'<*primary_server*>'
-    WITH (ENDPOINT_URL = N'TCP://<primary_server>.<fully_qualified_domain_name>:5022', 
-    FAILOVER_MODE = AUTOMATIC, 
-    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-    BACKUP_PRIORITY = 50, 
-    SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
-    SEEDING_MODE = AUTOMATIC),
-    N'<secondary_server>' WITH (ENDPOINT_URL = N'TCP://<secondary_server>.<fully_qualified_domain_name>:5022', 
-    FAILOVER_MODE = AUTOMATIC, 
-    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-    BACKUP_PRIORITY = 50, 
-    SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
-    SEEDING_MODE = AUTOMATIC);
+        FOR DATABASE db1
+        REPLICA ON'<*primary_server*>'
+        WITH (ENDPOINT_URL = N'TCP://<primary_server>.<fully_qualified_domain_name>:5022', 
+            FAILOVER_MODE = AUTOMATIC, 
+            AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
+            BACKUP_PRIORITY = 50, 
+            SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
+            SEEDING_MODE = AUTOMATIC),
+        N'<secondary_server>' WITH (ENDPOINT_URL = N'TCP://<secondary_server>.<fully_qualified_domain_name>:5022', 
+            FAILOVER_MODE = AUTOMATIC, 
+            AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
+            BACKUP_PRIORITY = 50, 
+            SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
+            SEEDING_MODE = AUTOMATIC);
     GO
     ``` 
 
-1. Joignez le serveur secondaire au groupe de disponibilité et octroyez à ce dernier une autorisation de créer des bases de données. Exécutez le script suivant sur l’instance secondaire de SQL Server : 
+1. Joignez l’instance de serveur secondaire au groupe de disponibilité et octroyez à ce dernier l’autorisation de créer des bases de données. Mettez à jour le script suivant, remplacez les valeurs figurant entre crochets `<>` en fonction de votre environnement, puis exécutez-le sur l’instance de réplica secondaire de SQL Server : 
  
-    ```
-    --Run on Secondary Replica to join to the availability group
+    ```sql
     ALTER AVAILABILITY GROUP [<availability_group_name>] JOIN
     GO  
     ALTER AVAILABILITY GROUP [<availability_group_name>] GRANT CREATE ANY DATABASE
@@ -87,53 +90,57 @@ L’exemple suivant crée un groupe de disponibilité sur un cluster de basculem
 
 SQL Server crée automatiquement le réplica de base de données sur le serveur secondaire. Si la base de données est volumineuse, sa synchronisation peut prendre un certain temps. Si une base de données se trouve dans un groupe de disponibilité configuré pour l’amorçage automatique, vous pouvez interroger la vue système `sys.dm_hadr_automatic_seeding` pour surveiller la progression de l’amorçage. La requête suivante renvoie une seule ligne pour chaque base de données présente dans un groupe de disponibilité configuré pour l’amorçage automatique.
 
-```
- SELECT start_time,
-       ag.name,
-       db.database_name,
-       current_state,
-       performed_seeding,
-       failure_state,
-       failure_state_desc
- FROM sys.dm_hadr_automatic_seeding autos 
-    JOIN sys.availability_databases_cluster db ON autos.ag_db_id = db.group_database_id
-    JOIN sys.availability_groups ag ON autos.ag_id = ag.group_id
+```sql 
+SELECT start_time,
+    ag.name,
+    db.database_name,
+    current_state,
+    performed_seeding,
+    failure_state,
+    failure_state_desc
+FROM sys.dm_hadr_automatic_seeding autos 
+    JOIN sys.availability_databases_cluster db 
+        ON autos.ag_db_id = db.group_database_id
+    JOIN sys.availability_groups ag 
+        ON autos.ag_id = ag.group_id
 ```
 
 ## <a name="prevent-automatic-seeding-after-an-availability-group"></a>Empêcher l’amorçage automatique sur un groupe de disponibilité
 
-Pour empêcher temporairement le serveur principal d’amorcer davantage de bases de données sur le réplica secondaire, vous pouvez refuser au groupe de disponibilité l’autorisation de créer des bases de données. Exécutez la requête suivante sur l’instance qui héberge le réplica secondaire pour refuser au groupe de disponibilité l’autorisation de créer des bases de données.
+Pour empêcher temporairement le réplica principal d’amorcer davantage de bases de données sur le réplica secondaire, vous pouvez refuser au groupe de disponibilité l’autorisation de créer des bases de données. Exécutez la requête suivante sur l’instance qui héberge le réplica secondaire pour refuser au groupe de disponibilité l’autorisation de créer des bases de données.
 
-```
-ALTER AVAILABILITY GROUP [<availability_group_name>] DENY CREATE ANY DATABASE
+```sql
+ALTER AVAILABILITY GROUP [<availability_group_name>] 
+    DENY CREATE ANY DATABASE
 GO
 ```
 
 
 ## <a name="enable-automatic-seeding-on-an-existing-availability-group"></a>Activer l’amorçage automatique sur un groupe de disponibilité existant
 
-Vous pouvez définir l’amorçage automatique sur une base de données existante. La commande suivante modifie un groupe de disponibilité pour qu’il utilise l’amorçage automatique. 
+Vous pouvez définir l’amorçage automatique sur une base de données existante. La commande suivante change un groupe de disponibilité pour qu’il utilise l’amorçage automatique. Exécutez la commande suivante sur le réplica principal.
 
-```
+```sql
 ALTER AVAILABILITY GROUP [<availability_group_name>] 
-MODIFY REPLICA ON '<primary_node>' WITH (SEEDING_MODE = AUTOMATIC)
+    MODIFY REPLICA ON '<secondary_node>' 
+    WITH (SEEDING_MODE = AUTOMATIC)
 GO
 ```
 
-Elle force une base de données à redémarrer l’amorçage, si besoin. Par exemple, si l’amorçage échoue en raison d’un espace disque insuffisant sur le réplica secondaire, vous pouvez exécuter `ALTER AVAILABILITY GROUP ... WITH (SEEDING_MODE=AUTOMATIC)` pour redémarrer l’amorçage après avoir ajouté de l’espace libre.
+La commande précédente force une base de données à redémarrer l’amorçage si nécessaire. Par exemple, si l’amorçage échoue en raison d’un espace disque insuffisant sur le réplica secondaire, exécutez `ALTER AVAILABILITY GROUP ... WITH (SEEDING_MODE=AUTOMATIC)` pour redémarrer l’amorçage après avoir ajouté de l’espace libre.
 
 ## <a name="stop-automatic-seeding"></a>Arrêter l’amorçage automatique
 
-Pour arrêter l’amorçage automatique pour un groupe de disponibilité, exécutez le script suivant sur l’instance qui héberge le réplica principal :
+Pour arrêter l’amorçage automatique pour un groupe de disponibilité, exécutez le script suivant sur le réplica principal :
 
-```
+```sql
 ALTER AVAILABILITY GROUP [<availability_group_name>] 
-    MODIFY REPLICA ON '<primary_node>'   
+    MODIFY REPLICA ON '<secondary_node>'   
     WITH (SEEDING_MODE = MANUAL)
 GO
 ```
 
-Tous les réplicas en cours d’amorçage sont annulés et SQL Server ne peut plus initialiser automatiquement les réplicas de ce groupe de disponibilité. La synchronisation de tous les réplicas déjà initialisés n’est quant à elle pas interrompue. 
+Le script ci-dessus annule tous les réplicas en cours d’amorçage et empêche SQL Server d’initialiser automatiquement des réplicas dans ce groupe de disponibilité. Il n’interrompt pas la synchronisation des réplicas déjà initialisés. 
 
 
 ## <a name="monitor-automatic-seeding-availability-group"></a>Surveiller un groupe de disponibilité à amorçage automatique
@@ -146,13 +153,13 @@ Les vues système suivantes indiquent l’état de l’amorçage automatique SQL
 
 Sur le réplica principal, interrogez `sys.dm_hadr_automatic_seeding` pour vérifier l’état du processus d’amorçage automatique. La vue retourne une seule ligne pour chaque processus d’amorçage. Exemple :
 
-``` 
+```sql
 SELECT start_time, 
-        completion_time
-        is_source,
-        current_state,
-        failure_state,
-        failure_state_desc
+    completion_time
+    is_source,
+    current_state,
+    failure_state,
+    failure_state_desc
 FROM sys.dm_hadr_automatic_seeding
 ```
  
@@ -160,7 +167,7 @@ FROM sys.dm_hadr_automatic_seeding
 
 Sur le réplica principal, interrogez la vue de gestion dynamique `sys.dm_hadr_physical_seeding_stats` pour voir les statistiques physiques de chaque processus d’amorçage en cours d’exécution. La requête suivante retourne des lignes quand l’amorçage est en cours d’exécution :
 
-```
+```sql
 SELECT * FROM sys.dm_hadr_physical_seeding_stats;
 ```
 
@@ -174,7 +181,7 @@ L’amorçage automatique comporte de nouveaux événements étendus pour le sui
 
 Par exemple, ce script crée une session d’événements étendus qui capture les événements liés à l’amorçage automatique : 
 
-```
+```sql
 CREATE EVENT SESSION [AlwaysOn_autoseed] ON SERVER 
     ADD EVENT sqlserver.hadr_automatic_seeding_state_transition,
     ADD EVENT sqlserver.hadr_automatic_seeding_timeout,
@@ -186,8 +193,20 @@ CREATE EVENT SESSION [AlwaysOn_autoseed] ON SERVER
     ADD EVENT sqlserver.hadr_physical_seeding_progress,
     ADD EVENT sqlserver.hadr_physical_seeding_restore_state_change,
     ADD EVENT sqlserver.hadr_physical_seeding_submit_callback
-    ADD TARGET package0.event_file(SET filename=N’autoseed.xel’,max_file_size=(5),max_rollover_files=(4))
-WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=30 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=ON)
+    ADD TARGET package0.event_file(
+        SET filename=N’autoseed.xel’,
+            max_file_size=(5),
+            max_rollover_files=(4)
+        )
+WITH (
+    MAX_MEMORY=4096 KB,
+    EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
+    MAX_DISPATCH_LATENCY=30 SECONDS,
+    MAX_EVENT_SIZE=0 KB,
+    MEMORY_PARTITION_MODE=NONE,
+    TRACK_CAUSALITY=OFF,
+    STARTUP_STATE=ON
+    )
 GO 
 
 ALTER EVENT SESSION AlwaysOn_autoseed ON SERVER STATE=START
@@ -216,22 +235,22 @@ Le tableau suivant répertorie les événements étendus liés à l’amorçage 
 
 ### <a name="other-troubleshooting-considerations"></a>Autres considérations liées à la résolution des problèmes
 
-**Surveiller la fin de l’amorçage automatique**
+**Surveillance lors de l’amorçage automatique**
 
 Interrogez `sys.dm_hadr_physical_seeding_stats` pour connaître les processus d’amorçage automatique en cours d’exécution. La vue retourne une seule ligne pour chaque base de données. Exemple :
 
-```
+```sql
 SELECT local_database_name, 
-       role_desc, 
-       internal_state_desc, 
-       transfer_rate_bytes_per_second, 
-       transferred_size_bytes, 
-       database_size_bytes, 
-       start_time_utc, 
-       end_time_utc, estimate_time_complete_utc, 
-       total_disk_io_wait_time_ms, 
-       total_network_wait_time_ms, 
-       is_compression_enabled 
+    role_desc, 
+    internal_state_desc, 
+    transfer_rate_bytes_per_second, 
+    transferred_size_bytes, 
+    database_size_bytes, 
+    start_time_utc, 
+    end_time_utc, estimate_time_complete_utc, 
+    total_disk_io_wait_time_ms, 
+    total_network_wait_time_ms, 
+    is_compression_enabled 
 FROM sys.dm_hadr_physical_seeding_stats
 ```
 
@@ -240,14 +259,14 @@ FROM sys.dm_hadr_physical_seeding_stats
 
 Quand une base de données n’apparaît pas dans un groupe de disponibilité pour lequel l’amorçage automatique est activé, ce dernier a probablement échoué. La base de données n’est donc pas ajoutée au groupe de disponibilité sur les réplicas principal et secondaire. Interrogez `sys.dm_hadr_automatic_seeding` sur les réplicas principaux et secondaires. Par exemple, exécutez la requête suivante pour identifier l’état d’échec de l’amorçage automatique.
 
-```
+```sql
 SELECT start_time, 
-       completion_time, 
-       is_source, 
-       current_state, 
-       failure_state, 
-       failure_state_desc, 
-       error_code 
+    completion_time, 
+    is_source, 
+    current_state, 
+    failure_state, 
+    failure_state_desc, 
+    error_code 
 FROM sys.dm_hadr_automatic_seeding
 ```
 
@@ -265,7 +284,7 @@ Avant d’ajouter une base de données à un groupe de disponibilité par amorç
 
 ## <a name="resources"></a>Ressources
 
-[CREATE AVAILABILITY GROUP (Transact-SQL) -](https://msdn.microsoft.com/library/ff878399.aspx)
+[CREATE AVAILABILITY GROUP (Transact-SQL)](https://msdn.microsoft.com/library/ff878399.aspx)
 
 [Guide de surveillance et de résolution des problèmes des groupes de disponibilité Always On](http://technet.microsoft.com/library/dn135328.aspx)
 

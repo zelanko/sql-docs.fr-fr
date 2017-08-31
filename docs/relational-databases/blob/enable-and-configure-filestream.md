@@ -1,7 +1,7 @@
 ---
 title: Activer et configurer FILESTREAM | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/23/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7bee35abc8b2c450a9bd1badb89b18eb31128be8
+ms.translationtype: HT
+ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
+ms.openlocfilehash: 19f5d560766c4bc70bd16fcff4f9f12f23b80146
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="enable-and-configure-filestream"></a>Activer et configurer FILESTREAM
@@ -73,9 +73,9 @@ ms.lasthandoff: 06/22/2017
   
 -   Utilisez des clusters NTFS de 64 Ko. Les volumes compressés doivent être définis à l'aide de clusters NTFS de 4 Ko.  
   
--   Désactivez l’indexation sur les volumes FILESTREAM et définissez **disablelastaccess** . Pour définir **disablelastaccess**, servez-vous de l’utilitaire Windows **fsutil** .  
+-   Désactivez l’indexation sur les volumes FILESTREAM et définissez **disablelastaccess**. Pour définir **disablelastaccess**, utilisez l’utilitaire **fsutil** de Windows.  
   
--   Désactivez l'analyse antivirus des volumes FILESTREAM lorsqu'elle n'est pas nécessaire. Si l'analyse antivirus est nécessaire, ne définissez pas de stratégies qui suppriment automatiquement les fichiers incriminés.  
+-   Désactivez l’analyse antivirus des volumes FILESTREAM quand elle n’est pas nécessaire. Si l'analyse antivirus est nécessaire, ne définissez pas de stratégies qui suppriment automatiquement les fichiers incriminés.  
   
 -   Configurez et paramétrez le niveau RAID pour la tolérance de panne et en fonction des performances requises par une application.  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 06/22/2017
 |RAID 5 + agrégation par bandes|Excellent|Excellent|Excellent|Option la plus chère.|  
   
   
-###  <a name="database"></a> Conception d'une base de données physique  
+###  <a name="database"></a> Conception d’une base de données physique  
  Lorsque vous concevez une base de données FILESTREAM, prenez en compte les recommandations suivantes:  
   
 -   Les colonnes FILESTREAM doivent être accompagnées d’une colonne **uniqueidentifier**ROWGUID correspondante. Ces types de tables doivent également être accompagnés d'un index unique. En règle générale, cet index n'est pas un index cluster. Si la logique métier des bases de données requiert un index cluster, vous devez vous assurer que les valeurs stockées dans l'index ne sont pas aléatoires. Les valeurs aléatoires entraînent une réorganisation de l'index chaque fois qu'une ligne est ajoutée ou supprimée dans la table.  
@@ -97,3 +97,4 @@ ms.lasthandoff: 06/22/2017
 -   La gestion de l'espace et les stratégies ne sont pas prises en charge directement par FILESTREAM. Toutefois, vous pouvez gérer l'espace et appliquer des stratégies de manière indirecte en affectant chaque groupe de fichiers FILESTREAM à un volume distinct et en utilisant les fonctionnalités de gestion du volume.  
   
   
+

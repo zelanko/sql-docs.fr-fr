@@ -14,17 +14,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6c41a2a22b034f36ebe96508e978096b0ed29524
+ms.translationtype: HT
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: c247025da3c103105e41162cc614b1986796bb42
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configurer les options avancées pour la sauvegarde managée SQL Server sur Microsoft Azure
   Ce didacticiel explique comment définir les options avancées pour [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Ces procédures sont nécessaires uniquement si vous avez besoin des fonctionnalités qu’elles proposent. Sinon, vous pouvez activer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] et utiliser le comportement par défaut.  
   
- Dans chaque scénario, la sauvegarde est spécifiée à l'aide du paramètre `database_name` . Lorsque le paramètre `database_name` est NULL ou *, les modifications affectent les paramètres par défaut au niveau de l’instance. Les paramètres au niveau de l'instance affectent également les bases de données créées après la modification.  
+ Dans chaque scénario, la sauvegarde est spécifiée à l'aide du paramètre `database_name` . Quand le paramètre `database_name` est NULL ou *, les modifications affectent les paramètres par défaut au niveau de l’instance. Les paramètres au niveau de l'instance affectent également les bases de données créées après la modification.  
   
  Une fois que vous avez défini ces paramètres, vous pouvez activer la sauvegarde managée pour la base de données ou l’instance à l’aide de la procédure stockée système [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md). Pour plus d'informations, consultez [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  **Déterminer le jour de la semaine pour les sauvegardes hebdomadaires :** si la sauvegarde est hebdomadaire, choisissez un jour de la semaine pour la sauvegarde complète.  
   
-4.  **Déterminer l’heure de début de la sauvegarde :** à l’aide de la notation au format 24 heures, choisissez l’heure de début de la sauvegarde.  
+4.  **Déterminer l’heure de début de la sauvegarde :** à l’aide de la notation au format 24 heures, choisissez l’heure de début de la sauvegarde.  
   
 5.  **Déterminer la durée autorisée pour la sauvegarde :** spécifie le délai dans lequel la sauvegarde doit être effectuée.  
   
@@ -120,3 +120,4 @@ ms.lasthandoff: 06/22/2017
  [Sauvegarde managée SQL Server sur Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   
+

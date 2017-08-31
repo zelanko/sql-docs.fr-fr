@@ -13,12 +13,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 529ae718a28d99104d8835ecaf2cdc4eb5fcc63f
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
+ms.openlocfilehash: 9061cf182fd1bc245de22ea2bade18b93e231042
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Sauvegarde managée SQL Server sur Microsoft Azure
@@ -111,6 +111,10 @@ ms.lasthandoff: 06/22/2017
  Pour une base de données, si un travail de sauvegarde complète de base de données est en cours, la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] attend la fin du travail avant d'effectuer une autre sauvegarde complète de la même base de données. De même, une seule sauvegarde de journal de transactions peut être exécutée à la fois. Toutefois, une sauvegarde de base de données complète et une sauvegarde de journal peuvent s'exécuter simultanément. Les échecs sont enregistrés en tant qu'événements étendus.  
   
  Si plus de 10 sauvegardes de base de données complètes sont planifiées simultanément, un avertissement est généré au moyen du canal de débogage des événements étendus. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] met alors en file d'attente les bases de données qui restent à sauvegarder, jusqu'à ce que toutes les sauvegardes soient planifiées et terminées.  
+
+> [!NOTE]
+> La Gestion de sauvegarde SQL Server n’est pas prise en charge avec les serveurs proxy.
+>
   
 ##  <a name="support_limits"></a> Prise en charge  
  Les considérations et les limitations suivantes relatives à la prise en charge sont spécifiques à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  

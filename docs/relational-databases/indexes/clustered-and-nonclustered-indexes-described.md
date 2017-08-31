@@ -1,7 +1,7 @@
 ---
 title: Description des index cluster et non-cluster | Microsoft Docs
 ms.custom: 
-ms.date: 11/01/2016
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,11 +17,11 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: 860844c00da732d2a40b4572aff98ec06f5d4ddf
+ms.translationtype: HT
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 3ddf0231bfbea2137834ffbf7113654af9d9af6a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Description des index cluster et non-cluster
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
     -   Le pointeur situé entre une ligne d'un index non-cluster et une ligne de données est appelé un localisateur de ligne. La structure d'un localisateur de ligne varie selon que les pages de données sont stockées dans un segment de mémoire ou dans une table cluster. Pour un segment de mémoire, un localisateur de ligne est un pointeur vers la ligne. Pour une table cluster, le localisateur de ligne est la clé de l'index cluster.  
   
-    -   Vous pouvez ajouter des colonnes sans clé au niveau du nœud terminal de l'index non cluster pour contourner des limites de clé d'index existantes, colonnes de 900 octets et de 16 clés, et exécuter des requêtes indexées totalement couvertes. Pour plus d’informations, consultez [Créer des index avec colonnes incluses](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
+    -   Vous pouvez ajouter des colonnes sans clé au niveau du nœud terminal de l’index non cluster pour contourner les limites de clé d’index existantes, et exécuter des requêtes indexées totalement couvertes. Pour plus d’informations, consultez [Créer des index avec colonnes incluses](../../relational-databases/indexes/create-indexes-with-included-columns.md). Pour plus d’informations sur les limites de clé d’index, consultez [Spécifications des capacités maximales pour SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md). 
   
  Tant les index cluster que les index non-cluster peuvent être uniques. En d'autres termes, deux lignes ne peuvent pas avoir la même valeur de clé d'index. Dans le cas contraire, l'index n'est pas unique et plusieurs lignes peuvent partager la même valeur de clé. Pour plus d’informations, consultez [Créer des index uniques](../../relational-databases/indexes/create-unique-indexes.md).  
   

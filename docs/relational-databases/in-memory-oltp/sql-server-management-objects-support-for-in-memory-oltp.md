@@ -1,7 +1,8 @@
 ---
 title: "Prise en charge d’OLTP en mémoire par SQL Server Management Objects | Microsoft Docs"
+description: "Décrit les éléments dans SQL Server Management Objects (SMO) qui prennent en charge l’OLTP en mémoire."
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 08/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,57 +16,35 @@ author: JennieHubbard
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: f97c2335abf293f70fad454ac9f181a3cb3e439c
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 249188036af10473b3a17eaeb2d0c47b80420f4a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>Prise en charge SQL Server Management Objects pour OLTP en mémoire
 
-Cette rubrique décrit les modifications de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) pour l'OLTP en mémoire.  
-  
-Les types et membres suivants prennent en charge l'OLTP en mémoire :  
-  
-- Microsoft.SqlServer.Management.Smo.**<xref:Microsoft.SqlServer.Management.Smo.DurabilityType>** (énumération)
+Cette rubrique décrit les éléments dans SQL Server Management Objects (SMO) qui prennent en charge l’OLTP en mémoire.  
 
-- Microsoft.SqlServer.Management.Smo.FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.FileGroupType%2A>** (propriété)
+## <a name="smo-types-and-members"></a>Types et membres SMO
 
-- Microsoft.SqlServer.Management.Smo.FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.%23ctor%2A>** (constructeur)
+Les types et membres suivants sont dans l’espace de noms **Microsoft.SqlServer.Management.Smo** et prennent en charge l’OLTP en mémoire :
 
-- Microsoft.SqlServer.Management.Smo.**<xref:Microsoft.SqlServer.Management.Smo.FileGroupType>** (énumération)
+- **<xref:Microsoft.SqlServer.Management.Smo.DurabilityType>** (énumeration)
+- FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.FileGroupType%2A>** (propriété)
+- FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.%23ctor%2A>** (constructeur)
+- **<xref:Microsoft.SqlServer.Management.Smo.FileGroupType>** (énumeration)
+- Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.BucketCount%2A>** (propriété)
+- IndexType.**<xref:Microsoft.SqlServer.Management.Smo.IndexType.NonClusteredHashIndex>** (membre d’énumeration)
+- Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.IsMemoryOptimized%2A>** (propriété)
+- Server.**<xref:Microsoft.SqlServer.Management.Smo.Server.IsXTPSupported%2A>** (propriété)
+- StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsNativelyCompiled%2A>** (propriété)
+- StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsSchemaBound%2A>** (propriété)
+- Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.Durability%2A>** (propriété)
+- Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.IsMemoryOptimized%2A>** (propriété)
+- UserDefinedTableType.**<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>** (propriété)
 
-- Microsoft.SqlServer.Management.Smo.Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.BucketCount%2A>** (propriété)
-
-- Microsoft.SqlServer.Management.IndexType.**<xref:Microsoft.SqlServer.Management.Smo.IndexType.NonClusteredHashIndex>** (membre d’énumération)
-
-- Microsoft.SqlServer.Management.Smo.Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.IsMemoryOptimized%2A>** (propriété)
-
-- Microsoft.SqlServer.Management.Smo.Server.**<xref:Microsoft.SqlServer.Management.Smo.Server.IsXTPSupported%2A>** (propriété)
-
-- Microsoft.SqlServer.Management.Smo.StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsNativelyCompiled%2A>** (propriété)
-
-- Microsoft.SqlServer.Management.Smo.StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsSchemaBound%2A>** (propriété)
-
-- Microsoft.SqlServer.Management.Smo.Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.Durability%2A>** (propriété)
-
-- Microsoft.SqlServer.Management.Smo.Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.IsMemoryOptimized%2A>** (propriété)
-
-- Microsoft.SqlServer.Management.Smo.UserDefinedTableType.**<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>** (propriété)
-
-## <a name="code-sample"></a>Exemple de code
-
-#### <a name="actions-taken-in-the-code-example"></a>Actions effectuées dans l’exemple de code
-  
--   Création d’une base de données avec un groupe de fichiers à mémoire optimisée et un fichier à mémoire optimisée.  
-  
--   Création d’une table à mémoire optimisée durable avec une clé primaire, un index non cluster et un index de hachage non cluster.  
-  
--   Création de colonnes et d’index.  
-  
--   Création d’un type de table à mémoire optimisée, défini par l’utilisateur.  
-  
--   Création d’une procédure stockée compilée en mode natif.
+## <a name="c-code-example"></a>Exemple de code C#
 
 #### <a name="assemblies-referenced-by-the-compiled-code-example"></a>Assemblys référencés par l’exemple de code compilé
 
@@ -73,6 +52,14 @@ Les types et membres suivants prennent en charge l'OLTP en mémoire :
 - Microsoft.SqlServer.Management.Sdk.Sfc.dll
 - Microsoft.SqlServer.Smo.dll
 - Microsoft.SqlServer.SqlEnum.dll
+
+#### <a name="actions-taken-in-the-code-example"></a>Actions effectuées dans l’exemple de code
+
+1. Création d’une base de données avec un groupe de fichiers à mémoire optimisée et un fichier à mémoire optimisée.  
+2. Création d’une table à mémoire optimisée durable avec une clé primaire, un index non cluster et un index de hachage non cluster.  
+3. Création de colonnes et d’index.  
+4. Création d’un type de table à mémoire optimisée, défini par l’utilisateur.  
+5. Création d’une procédure stockée compilée en mode natif.
 
 #### <a name="source-code"></a>Code source
   
@@ -180,5 +167,6 @@ public class A {
   
 ## <a name="see-also"></a>Voir aussi  
 
-[Prise en charge d'OLTP en mémoire par SQL Server](sql-server-support-for-in-memory-oltp.md)
+- [Prise en charge d'OLTP en mémoire par SQL Server](sql-server-support-for-in-memory-oltp.md)
+- [Vue d’ensemble de SMO](../server-management-objects-smo/overview-smo.md)
 

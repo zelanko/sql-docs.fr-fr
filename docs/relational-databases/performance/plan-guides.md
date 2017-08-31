@@ -24,11 +24,11 @@ caps.latest.revision: 52
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e3c1733219769d0a2d08996db9a25e3dd08a1e86
+ms.translationtype: HT
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: 2e8ae8b72d588904cc7b3d4aaeaba1e783a21b48
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="plan-guides"></a>Repères de plan
@@ -42,12 +42,12 @@ ms.lasthandoff: 06/22/2017
 ## <a name="types-of-plan-guides"></a>Types de repères de plan  
  Il est possible de créer les types de repères de plan suivants.  
   
- OBJECT, repère de plan  
+ ### <a name="object-plan-guide"></a>OBJECT, repère de plan  
  Un repère de plan OBJECT correspond à des requêtes qui s'exécutent dans le contexte de procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)] , de fonctions scalaires définies par l'utilisateur, de fonctions table à instructions multiples définies par l'utilisateur et de déclencheurs DML.  
   
- Supposons que la procédure stockée suivante, qui accepte le paramètre `@Country`_`region` , figure dans une application de base de données déployée dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] :  
+ Supposons que la procédure stockée suivante, qui accepte le paramètre `@Country_region`, figure dans une application de base de données déployée dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] :  
   
-```  
+```t-sql  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
 AS  
 BEGIN  
@@ -60,11 +60,11 @@ BEGIN
 END;  
 ```  
   
- Supposons que cette procédure stockée a été compilée et optimisée pour `@Country`_`region = N'AU'` (Australie). Toutefois, comme il y a relativement peu de commandes client qui proviennent d'Australie, les performances diminuent lorsque la requête s'exécute à l'aide de valeurs de paramètre de pays contenant plus de commandes client. Dans la mesure où les États-Unis constituent le pays qui arrive en première position en termes de commandes remportées, un plan de requête généré pour `@Country`\_`region = N'US'` obtiendrait de meilleures performances pour toutes les valeurs possibles du paramètre `@Country`\_`region` .  
+ Supposons que cette procédure stockée a été compilée et optimisée pour `@Country_region = N'AU'` (Australie). Toutefois, comme il y a relativement peu de commandes client qui proviennent d'Australie, les performances diminuent lorsque la requête s'exécute à l'aide de valeurs de paramètre de pays contenant plus de commandes client. La plupart des commandes provenant des États-Unis, un plan de requête généré pour `@Country_region = N'US'` obtiendrait de meilleures performances pour toutes les valeurs possibles du paramètre `@Country_region`.  
   
  Vous pouvez résoudre ce problème en modifiant la procédure stockée pour ajouter l'indicateur de requête `OPTIMIZE FOR` à la requête. Toutefois, étant donné que la procédure stockée se trouve dans une application déployée, vous ne pouvez pas modifier directement le code de cette dernière. Vous pouvez en revanche créer le repère de plan suivant dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
-```  
+```t-sql  
 sp_create_plan_guide   
 @name = N'Guide1',  
 @stmt = N'SELECT *FROM Sales.SalesOrderHeader AS h,  
@@ -81,16 +81,16 @@ sp_create_plan_guide
   
  Lorsque la requête spécifiée dans l'instruction `sp_create_plan_guide` s'exécute, elle est modifiée avant l'optimisation de façon à inclure la clause `OPTIMIZE FOR (@Country = N''US'')` .  
   
- Repère de plan SQL  
+ ### <a name="sql-plan-guide"></a>Repère de plan SQL  
  Un repère de plan SQL correspond à des requêtes qui s'exécutent dans le contexte de lots et d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] autonomes ne faisant pas partie d'un objet de base de données. Les repères de plan SQL peuvent également être employés pour les requêtes paramétrables au format spécifié. Les repères de plan SQL s'appliquent aux instructions et aux lots [!INCLUDE[tsql](../../includes/tsql-md.md)] autonomes. Le plus souvent, ces instructions sont envoyées par une application à l’aide de la procédure stockée système [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) . Imaginons par exemple le traitement autonome suivant :  
   
-```  
+```t-sql  
 SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC;  
 ```  
   
  Pour empêcher la génération d'un plan d'exécution parallèle sur cette requête, créez le repère de plan suivant et affectez à l'indicateur de requête `MAXDOP` la valeur `1` dans le paramètre `@hints` .  
   
-```  
+```t-sql  
 sp_create_plan_guide   
 @name = N'Guide2',   
 @stmt = N'SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC',  
@@ -105,25 +105,28 @@ sp_create_plan_guide
   
  Les repères de plan SQL peuvent aussi être créés sur des requêtes paramétrables au même format lorsque l'option de base de données PARAMETERIZATION a la valeur FORCED ou lorsqu'un repère de plan TEMPLATE est créé pour spécifier qu'une classe de requête est paramétrable.  
   
- TEMPLATE, repère de plan  
+ ### <a name="template-plan-guide"></a>TEMPLATE, repère de plan  
  Un repère de plan TEMPLATE correspond à des requêtes autonomes paramétrables au format spécifié. Il s'emploie pour remplacer l'option de base de données PARAMETERIZATION par une classe de requêtes.  
   
  Vous pouvez créer un repère de plan TEMPLATE dans l'une des circonstances suivantes :  
   
--   lorsque l'option de base de données PARAMETERIZATION est définie à FORCED, mais qu'il y a des requêtes que vous voulez compiler selon les règles du paramétrage simple ;  
+-   Quand l’option de base de données PARAMETERIZATION a la valeur FORCED, mais qu’il y a des requêtes que vous voulez compiler selon les règles du [paramétrage simple](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)  
   
--   lorsque l'option de base de données PARAMETERIZATION est définie à SIMPLE (l'option par défaut), mais que vous voulez appliquer une tentative de paramétrage forcé à une classe de requêtes.  
+-   Quand l’option de base de données PARAMETERIZATION a la valeur SIMPLE (l’option par défaut), mais que vous voulez appliquer une tentative de [paramétrage forcé](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) à une classe de requêtes  
   
 ## <a name="plan-guide-matching-requirements"></a>Paramétrage de la mise en correspondance du repère de plan  
  Les repères de plan sont limités à la base de données dans laquelle ils sont créés. Par conséquent, seuls les repères de plan existant dans la base de données qui est active lors de l'exécution d'une requête peuvent être mis en correspondance avec cette requête. Supposons que [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] est la base de données active et que la requête suivante est exécutée :  
   
- `SELECT FirstName, LastName FROM Person.Person;`  
+ ```t-sql
+ SELECT FirstName, LastName FROM Person.Person;
+ ```  
   
  Seuls les repères de plan de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] peuvent être mis en correspondance avec cette requête. Supposons maintenant que [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] est la base de données active et que les instructions suivantes sont exécutées :  
   
- `USE DB1;`  
-  
- `SELECT FirstName, LastName FROM Person.Person;`  
+ ```t-sql
+ USE DB1; 
+ SELECT FirstName, LastName FROM Person.Person;
+ ```  
   
  Seuls les repères de plan de `DB1` peuvent être mis en correspondance avec la requête, car celle-ci s'exécute dans le contexte de `DB1`.  
   

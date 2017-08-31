@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
-ms.openlocfilehash: 0052444959911431f68bb40fd5059fb45b0d3412
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: 24f0d590630fb04ff45557dfb72616a8e1795f7e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>Guide d’architecture de traitement des requêtes
@@ -37,7 +37,7 @@ Le traitement d'une instruction SQL unique est le cas le plus simple d'exécutio
 
 Une instruction `SELECT` est non procédurale ; elle ne précise pas les étapes exactes à suivre par le serveur de base de données pour extraire les données demandées. Cela signifie que le serveur de base de données doit analyser l'instruction afin de déterminer la manière la plus efficace d'extraire les données demandées. Cette opération est nommée optimisation de l’instruction `SELECT` . Le composant qui s’en charge est l’optimiseur de requête. L’entrée de l’optimiseur de requête est composée de la requête, du schéma de base de données (définitions des tables et des index) et de ses statistiques de base de données. La sortie de l’optimiseur de requête est un plan d’exécution de la requête, parfois appelé plan de requête ou simplement plan. Le contenu d'un plan de requête est détaillé plus loin dans cette rubrique.
 
-The inputs and outputs of the Query Optimizer during optimization of a single `SELECT` unique sont illustrées dans le diagramme suivant : ![query_processor_io](../relational-databases/media/query-processor-io.gif)
+Les entrées et les sorties de l’optimiseur de requête pendant l’optimisation d’une instruction `SELECT` unique sont illustrées dans le diagramme suivant : ![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 Une instruction `SELECT` ne définit que :  
 * le format du jeu de résultats. Il est principalement spécifié dans la liste de sélection. Toutefois, d’autres clauses telles que `ORDER BY` et `GROUP BY` influencent également la syntaxe finale du jeu de résultats.
@@ -210,19 +210,19 @@ L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 > [!NOTE] 
 > Les indicateurs `READCOMMITTED` et `READCOMMITTEDLOCK` sont toujours considérés comme des indicateurs différents dans ce contexte, indépendamment du niveau d’isolation de la transaction en cours.
  
-En dehors des exigences relatives aux indicateurs de table et aux options `SET` options and table hints, these are the same rules that the Query Optimizer uses to determine whether a table index covers a query. Vous n'avez pas besoin de spécifier autre chose dans la requête pour utiliser une vue indexée.
+En dehors des exigences relatives aux indicateurs de table et aux options `SET`, l’optimiseur de requête emploie ces mêmes règles pour déterminer si l’index d’une table couvre une requête. Vous n'avez pas besoin de spécifier autre chose dans la requête pour utiliser une vue indexée.
 
-Une requête ne doit pas faire référence explicitement à une vue indexée dans la clause `FROM` clause for the Query Optimizer to use the indexed view. Si la requête contient des références à des colonnes dans des tables de base qui sont également présentes dans la vue indexée, et si l'optimiseur de requête estime que l'emploi de la vue indexée offre le mécanisme d'accès le moins coûteux, il choisit la vue indexée, un peu comme il choisit les index des tables de base lorsque ceux-ci ne sont pas directement référencés dans une requête. L'optimiseur de requête peut choisir la vue lorsqu'elle contient des colonnes qui ne sont pas référencées par la requête, à condition que cette dernière offre l'option la moins coûteuse pour couvrir une ou plusieurs colonnes spécifiées dans la requête.
+Une requête ne doit pas obligatoirement référencer explicitement une vue indexée dans la clause `FROM` pour que l’optimiseur de requête utilise la vue indexée. Si la requête contient des références à des colonnes dans des tables de base qui sont également présentes dans la vue indexée, et si l'optimiseur de requête estime que l'emploi de la vue indexée offre le mécanisme d'accès le moins coûteux, il choisit la vue indexée, un peu comme il choisit les index des tables de base lorsque ceux-ci ne sont pas directement référencés dans une requête. L'optimiseur de requête peut choisir la vue lorsqu'elle contient des colonnes qui ne sont pas référencées par la requête, à condition que cette dernière offre l'option la moins coûteuse pour couvrir une ou plusieurs colonnes spécifiées dans la requête.
 
-The Query Optimizer treats an indexed view referenced in the `FROM` comme une vue standard. L'optimiseur de requête développe la définition de la vue dans la requête au début du processus d'optimisation. Ensuite, la mise en correspondance des éléments de la vue indexée est réalisée. La vue indexée peut être utilisée dans le plan d’exécution final sélectionné par l’optimiseur de requête ou, sinon, le plan peut matérialiser les données nécessaires à partir de la vue en accédant aux tables de base référencées par celle-ci. L’optimiseur de requête choisit la solution la plus économique.
+L’optimiseur de requête traite une vue indexée référencée dans la clause `FROM` comme une vue standard. L'optimiseur de requête développe la définition de la vue dans la requête au début du processus d'optimisation. Ensuite, la mise en correspondance des éléments de la vue indexée est réalisée. La vue indexée peut être utilisée dans le plan d’exécution final sélectionné par l’optimiseur de requête ou, sinon, le plan peut matérialiser les données nécessaires à partir de la vue en accédant aux tables de base référencées par celle-ci. L’optimiseur de requête choisit la solution la plus économique.
 
 #### <a name="using-hints-with-indexed-views"></a>Utilisation d'indicateurs avec les vues indexées
 
 Vous pouvez empêcher l’utilisation d’index de vue pour une requête à l’aide de l’indicateur de requête `EXPAND VIEWS` ou recourir à l’indicateur de table `NOEXPAND` afin d’imposer l’utilisation d’un index pour une vue indexée spécifiée dans la clause `FROM` d’une requête. Toutefois, vous devez laisser l'optimiseur de requête déterminer dynamiquement les meilleures méthodes d'accès à utiliser pour chaque requête. Limitez l’utilisation des indicateurs `EXPAND` et `NOEXPAND` aux cas spécifiques où les tests ont démontré qu’ils améliorent les performances de façon significative.
 
-L’option `EXPAND VIEWS` option specifies that the Query Optimizer not use any view indexes for the whole query. 
+L’option `EXPAND VIEWS` ordonne à l’optimiseur de requête de ne pas utiliser des index de vue pour toute la requête. 
 
-Lorsque `NOEXPAND` is specified for a view, the Query Optimizer considers using any indexes defined on the view. `NOEXPAND` spécifié avec la clause `INDEX()` clause forces the Query Optimizer to use the specified indexes. `NOEXPAND` peut être spécifié uniquement pour une vue indexée et ne peut pas être spécifié pour une vue qui n’a pas été indexée.
+Quand `NOEXPAND` est spécifié dans une vue, l’optimiseur de requête envisage l’utilisation de n’importe quel index défini sur la vue. `NOEXPAND` spécifié avec la clause `INDEX()` facultative force l’optimiseur de requête à utiliser les index spécifiés. `NOEXPAND` peut être spécifié uniquement pour une vue indexée et ne peut pas être spécifié pour une vue qui n’a pas été indexée.
 
 Lorsque ni `NOEXPAND` ni `EXPAND VIEWS` ne sont spécifiés dans une requête qui contient une vue, celle-ci est développée de manière à permettre l’accès aux tables sous-jacentes. Si la requête qui compose la vue contient des indicateurs de table, ceux-ci sont propagés aux tables sous-jacentes. (Ce processus est expliqué en détail dans Résolution de vues.) Si les ensembles d'indicateurs existant sur les tables sous-jacentes de la vue sont identiques, la requête peut être mise en correspondance avec une vue indexée. La plupart du temps, ces indicateurs correspondent les uns aux autres car ils sont hérités directement de la vue. Toutefois, si la requête référence des tables au lieu de vues et que les indicateurs appliqués directement à ces tables ne sont pas identiques, cette requête ne peut pas être mise en correspondance avec une vue indexée. Si les indicateurs `INDEX`, `PAGLOCK`, `ROWLOCK`, `TABLOCKX`, `UPDLOCK`ou `XLOCK` s’appliquent aux tables référencées dans la requête une fois la vue développée, la requête ne peut pas être mise en correspondance avec la vue indexée.
 
@@ -468,7 +468,7 @@ WHERE ProductSubcategoryID = 4;
 Lors du traitement d'instructions SQL complexes, il est possible que le moteur relationnel rencontre certaines difficultés pour déterminer les expressions qui peuvent être paramétrables. Afin d’augmenter la capacité du moteur relationnel à associer des instructions SQL complexes à des plans d’exécution existants et inutilisés, spécifiez les paramètres de manière explicite à l’aide de sp_executesql ou de marqueurs de paramètres. 
 
 > [!NOTE]
-> Quand les opérateurs arithmétiques +, -, *, / ou % sont utilisés pour réaliser une conversion implicite ou explicite de valeurs constantes int, smallint, tinyint ou bigint pour les types de données float, real, decimal ou numeric, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] applique des règles spécifiques pour calculer le type et la précision des résultats des expressions. Toutefois, ces règles diffèrent selon que la requête est paramétrable ou non. Par conséquent, dans certains cas, des expressions similaires dans les requêtes peuvent produire des résultats différents.
+> Quand les opérateurs arithmétiques +, -, \*, / ou % sont utilisés pour réaliser une conversion implicite ou explicite de valeurs constantes int, smallint, tinyint ou bigint pour les types de données float, real, decimal ou numeric, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] applique des règles spécifiques pour calculer le type et la précision des résultats des expressions. Toutefois, ces règles diffèrent selon que la requête est paramétrable ou non. Par conséquent, dans certains cas, des expressions similaires dans les requêtes peuvent produire des résultats différents.
 
 Avec le comportement par défaut du paramétrage simple, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] paramètre une classe relativement réduite de requêtes. Toutefois, vous pouvez attribuer la valeur `PARAMETERIZATION` à l’option `ALTER DATABASE` de la commande `FORCED`pour spécifier que toutes les requêtes d’une base de données soient paramétrables, sous réserve de certaines contraintes. Cette opération peut améliorer les performances des bases de données soumises à des volumes élevés de requêtes simultanées en réduisant la fréquence des compilations de requête.
 
@@ -503,7 +503,7 @@ En outre, les clauses de requête suivantes ne sont pas paramétrables. Notez qu
 * L’argument style d’une clause `CONVERT` .
 * Les constantes entières d’une clause `IDENTITY` .
 * Les constantes spécifiées à l'aide de la syntaxe d'extension ODBC.
-* Les expressions de constantes pouvant être évaluées lors de la compilation et qui sont des arguments des opérateurs +, -, *, / et %. Lors de l'examen d'un paramétrage forcé éventuel, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considère qu'une expression est constituée de constantes pouvant être évaluées lors de la compilation lorsque l'une des conditions suivantes est vraie :  
+* Les expressions de constantes pouvant être évaluées lors de la compilation et qui sont des arguments des opérateurs +, -, \*, / et %. Lors de l'examen d'un paramétrage forcé éventuel, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considère qu'une expression est constituée de constantes pouvant être évaluées lors de la compilation lorsque l'une des conditions suivantes est vraie :  
   * l'expression ne contient pas de colonnes, de variables ou de sous-requêtes ;  
   * l’expression contient une clause `CASE` .  
 * Les arguments des clauses d'indicateur de requête. Notamment l’argument `number_of_rows` de l’indicateur de requête `FAST` , l’argument `number_of_processors` de l’indicateur de requête `MAXDOP` et l’argument number de l’indicateur de requête `MAXRECURSION` .
@@ -511,7 +511,7 @@ En outre, les clauses de requête suivantes ne sont pas paramétrables. Notez qu
 Le paramétrage est effectué au niveau des instructions Transact-SQL individuelles. En d'autres termes, les instructions individuelles d'un traitement sont paramétrables. Une fois la compilation terminée, la requête paramétrable est exécutée dans le contexte du traitement pour lequel elle a été initialement soumise. Dans le cas d’un plan d’exécution mis en cache, vous pouvez déterminer si la requête a été paramétrée en référençant la colonne sql de la vue de gestion dynamique sys.syscacheobjects. Si la requête est paramétrable, les noms et les types de données des paramètres sont spécifiés avant le texte de chaque lot soumis dans cette colonne, par exemple (@1 tinyint).
 
 > [!NOTE]
-> Les noms des paramètres sont arbitraires. Les utilisateurs et les applications ne doivent par conséquent pas se fier à un ordre particulier d'affectation des noms. En outre, les éléments suivants peuvent varier dans les versions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et les mises à niveau des Service Packs : les noms des paramètres, le choix des littéraux paramétrés et l'espacement dans le texte paramétré.
+> Les noms des paramètres sont arbitraires. Les utilisateurs et les applications ne doivent par conséquent pas se fier à un ordre particulier d'affectation des noms. En outre, les éléments suivants peuvent varier dans les versions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et les mises à niveau des Service Packs : les noms des paramètres, le choix des littéraux paramétrés et l’espacement dans le texte paramétré.
 
 #### <a name="data-types-of-parameters"></a>Types de données des paramètres
 
