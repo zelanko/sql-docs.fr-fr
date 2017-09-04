@@ -4,17 +4,17 @@ description: "Explorer les différentes façons d’utilisation et d’interagir
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 66f625f1739f17f20a6b5e2a564f2d72f81d6b95
+ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
+ms.openlocfilehash: 8a0c0a07c6874c6015ec3c4b1f561e0a1076482f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Configurer SQL Server 2017 les images de conteneur sur Docker
@@ -227,7 +227,7 @@ docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
 docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```
 
-## <a name="upgrade-sql-server-in-containers"></a>Mise à niveau SQL Server dans des conteneurs
+## <a id="upgrade"></a>Mise à niveau SQL Server dans des conteneurs
 
 Pour mettre à niveau de l’image de conteneur avec Docker, extraire la dernière version à partir du Registre. Utilisez la `docker pull` commande :
 
@@ -237,15 +237,51 @@ docker pull microsoft/mssql-server-linux:latest
 
 Cela met à jour l’image de SQL Server pour les conteneurs de nouveau que vous créez, mais il ne met pas à jour SQL Server de tous les conteneurs en cours d’exécution. Pour ce faire, vous devez créer un conteneur avec la dernière image de conteneur de SQL Server et migrer vos données vers ce nouveau conteneur.
 
-1. Tout d’abord, assurez-vous que vous utilisez l’un de le [techniques de persistance des données](#persist) pour votre conteneur de SQL Server existant.
+1. Tout d’abord, obtenez la dernière image de conteneur de SQL Server.
 
-2. Arrêtez le conteneur de SQL Server avec le `docker stop` commande.
+   ```bash
+   docker pull microsoft/mssql-server-linux:latest
+   ```
 
-3. Créer un nouveau conteneur de SQL Server avec `docker run` et spécifiez un répertoire hôte mappé ou un conteneur de volume de données. Le nouveau conteneur utilise désormais une nouvelle version de SQL Server avec vos données SQL Server existantes.
+1. Assurez-vous que vous utilisez l’un de le [techniques de persistance des données](#persist) pour votre conteneur de SQL Server existant. Cela vous permet de démarrer un nouveau conteneur avec les mêmes données.
 
-4. Vérifiez vos bases de données et les données dans le nouveau conteneur.
+1. Arrêtez le conteneur de SQL Server avec le `docker stop` commande.
 
-5. Éventuellement, supprimez l’ancien conteneur avec `docker rm`.
+1. Créer un nouveau conteneur de SQL Server avec `docker run` et spécifiez un répertoire hôte mappé ou un conteneur de volume de données. Le nouveau conteneur utilise désormais une nouvelle version de SQL Server avec vos données SQL Server existantes.
+
+   > [!IMPORTANT]
+   > Mise à niveau est uniquement prise en charge entre RC1 et RC2 pour l’instant.
+
+1. Vérifiez vos bases de données et les données dans le nouveau conteneur.
+
+1. Éventuellement, supprimez l’ancien conteneur avec `docker rm`.
+
+## <a name="run-a-specific-sql-server-container-image"></a>Exécuter une image de conteneur de SQL Server spécifique
+
+Il existe des scénarios où vous pouvez utiliser la dernière image de conteneur de SQL Server. Pour exécuter une image de conteneur de SQL Server spécifique, procédez comme suit :
+
+1. Identifier le Docker **balise** pour la version que vous souhaitez utiliser. Pour afficher les légendes disponibles, consultez [la page du hub Docker mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
+
+1. Extraire l’image de conteneur de SQL Server avec la balise. Par exemple, pour extraire l’image RC1, remplacez `<image_tag>` dans la commande suivante avec `rc1`.
+
+   ```bash
+   docker pull microsoft/mssql-server-linux:<image_tag>
+   ```
+
+1. Pour exécuter un nouveau conteneur avec cette image, spécifiez le nom de balise dans le `docker run` commande. Dans la commande suivante, remplacez `<image_tag>` avec la version que vous souhaitez exécuter.
+
+   ```bash
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d microsoft/mssql-server-linux:<image_tag>
+   ```
+
+   ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d microsoft/mssql-server-linux:<image_tag>
+   ```
+
+Ces étapes peuvent également servir à passer un conteneur existant. Par exemple, vous pourrez à restaurer ou de la rétrogradation d’un conteneur en cours d’exécution pour le dépannage ou de test. Pour passer un conteneur en cours d’exécution, vous devez utiliser une technique de persistance pour le dossier de données. Suivez la procédure décrite dans la [mise à niveau de la section](#upgrade), mais spécifie le nom de balise de l’ancienne version lorsque vous exécutez le nouveau conteneur.
+
+> [!IMPORTANT]
+> Mise à niveau vers une version antérieure sont uniquement pris en charge entre RC1 et RC2 pour l’instant.
 
 ## <a id="troubleshooting"></a>Résolution des problèmes
 
