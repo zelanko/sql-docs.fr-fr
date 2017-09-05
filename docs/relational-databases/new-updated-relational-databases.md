@@ -188,7 +188,7 @@ L’opération monothread dans ce cas consigne dans le journal des transactions 
 
 
 
-Voici quelques-uns des scénarios de performance courants rencontrés après la migration vers la plateforme [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] et leur résolution. Certains de ces scénarios sont propres à la migration de [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] vers [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] (des versions antérieures aux versions plus récentes), ainsi qu’à la migration d’une plateforme étrangère (comme Oracle, DB2, MySQL et Sybase) vers [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)].
+Voici quelques-uns des scénarios de performance courants rencontrés après la migration vers la plateforme [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] et leur résolution. Certains de ces scénarios sont propres à la migration de [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] vers [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)]\(des versions antérieures aux versions plus récentes), ainsi qu’à la migration d’une plateforme étrangère (comme Oracle, DB2, MySQL et Sybase) vers [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)].
 
 **<a name="CEUpgrade"></a> Régression des requêtes en raison d’un changement de version CE**
 
