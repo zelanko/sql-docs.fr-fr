@@ -14,7 +14,7 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e1fde5db0ebdf332d82cdb7269342aea036ec61
 ms.contentlocale: fr-fr
@@ -63,7 +63,7 @@ ms.lasthandoff: 08/09/2017
   
 5.  Lorsque vous êtes invité à sauvegarder la clé symétrique, tapez un nom de fichier et un emplacement pour la sauvegarde de la clé symétrique, entrez un mot de passe pour verrouiller et déverrouiller le fichier, puis cliquez sur **OK**.  
   
-6.  Si le serveur de rapports utilise le compte de service pour se connecter à la base de données du serveur de rapports, les informations de connexion seront mises à jour pour utiliser le nouveau compte ou mot de passe. La mise à jour des informations de connexion nécessite que vous vous connectiez à la base de données. Si la boîte de dialogue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Database Connection** dialog box appears, enter credentials that have permission to connect to the database, and then click **OK**.  
+6.  Si le serveur de rapports utilise le compte de service pour se connecter à la base de données du serveur de rapports, les informations de connexion seront mises à jour pour utiliser le nouveau compte ou mot de passe. La mise à jour des informations de connexion nécessite que vous vous connectiez à la base de données. Si la boîte de dialogue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Connexion de la base de données** apparaît, entrez les informations d'identification habilitées à se connecter à la base de données, puis cliquez sur **OK**.  
   
 7.  Lorsque vous êtes invité à restaurer la clé symétrique, tapez le mot de passe spécifié à l’étape 5, puis cliquez sur **OK**.  
   
