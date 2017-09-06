@@ -1,26 +1,34 @@
 ---
-title: "T&#226;che de service Web | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.webservicetask.f1"
-helpviewer_keywords: 
-  - "tâche de service Web [Integration Services]"
+title: "Tâche de Service Web | Documents Microsoft"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.webservicetask.f1
+- sql13.dts.designer.webservicestask.general.f1
+- sql13.dts.designer.webservicestask.input.f1
+- sql13.dts.designer.webservicestask.output.f1
+helpviewer_keywords:
+- Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 caps.latest.revision: 57
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: d8ebe6e3486cb13440a66383c518c9d306f2984f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/11/2017
+
 ---
-# T&#226;che de service Web
+# <a name="web-service-task"></a>Tâche de service Web
   La tâche de service Web exécute une méthode de service Web. Vous pouvez utiliser la tâche de service Web pour :  
   
 -   Écrire dans une variable les valeurs renvoyées par une méthode de service Web. Vous pouvez par exemple obtenir la température la plus élevée de la journée à partir d'une méthode de service Web, puis utiliser cette valeur pour mettre à jour une variable utilisée dans une expression qui définit une valeur de colonne.  
@@ -50,9 +58,9 @@ caps.handback.revision: 57
  Les résultats de la méthode de service Web peuvent être écrits dans une variable ou dans un fichier. Vous pouvez utiliser le gestionnaire de connexions de fichiers pour spécifier le fichier ou indiquer le nom de la variable dans laquelle écrire les résultats. Pour plus d’informations, consultez [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md) et [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
 ## <a name="custom-logging-messages-available-on-the-web-service-task"></a>Messages de journalisation personnalisés disponibles dans la tâche de service Web  
- Le tableau suivant répertorie les entrées de journal personnalisées de la tâche de service Web. Pour plus d’informations, consultez [Journalisation Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md) et [Messages personnalisés pour la journalisation](../../integration-services/performance/custom-messages-for-logging.md).  
+ Le tableau suivant répertorie les entrées de journal personnalisées de la tâche de service Web. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Entrée du journal| Description|  
+|Entrée du journal|Description|  
 |---------------|-----------------|  
 |**WSTaskBegin**|La tâche a commencé à accéder à un service Web.|  
 |**WSTaskEnd**|La tâche a terminé une méthode de service Web.|  
@@ -61,24 +69,120 @@ caps.handback.revision: 57
 ## <a name="configuration-of-the-web-service-task"></a>Configuration de la tâche de service Web  
  Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
-  
--   [Éditeur de tâche de service Web &#40;page Général&#41;](../../integration-services/control-flow/web-service-task-editor-general-page.md)  
-  
--   [Éditeur de tâche de service Web &#40;page Entrée&#41;](../../integration-services/control-flow/web-service-task-editor-input-page.md)  
-  
--   [Éditeur de tâche de service Web &#40;page Sortie&#41;](../../integration-services/control-flow/web-service-task-editor-output-page.md)  
+ Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
 -   [Page Expressions](../../integration-services/expressions/expressions-page.md)  
   
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d’une tâche ou d’un conteneur](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Définir les propriétés d’une tâche ou d’un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>Configuration par programmation de la tâche de service web  
  Pour plus d'informations sur la définition par programmation de ces propriétés, cliquez sur l'une des rubriques suivantes :  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
+## <a name="web-service-task-editor-general-page"></a>Éditeur de tâche de service Web (page Général)
+  Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche de service Web** pour définir un gestionnaire de connexions HTTP, spécifier l’emplacement du fichier WSDL (Web Services Description Language) qu’utilise la tâche de service web, décrire la tâche de service web et télécharger le fichier WSDL.  
+  
+### <a name="options"></a>Options  
+ **HTTPConnection**  
+ Sélectionnez un gestionnaire de connexions dans la liste, ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
+  
+> [!IMPORTANT]  
+>  Le gestionnaire de connexions HTTP prend en charge uniquement l'authentification anonyme et l'authentification de base. Il ne prend pas en charge l'authentification Windows.  
+  
+ **Rubriques connexes :**  [Gestionnaire de connexions HTTP](../../integration-services/connection-manager/http-connection-manager.md), [Éditeur du gestionnaire de connexions HTTP &#40;page Server (Serveur)&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
+  
+ **WSDLFile**  
+ Tapez le chemin d’accès qualifié complet d’un fichier WSDL qui est en local sur l’ordinateur ou cliquez sur le bouton Parcourir **(…)** et recherchez ce fichier.  
+  
+ Si vous avez déjà téléchargé manuellement le fichier WSDL sur l'ordinateur, sélectionnez-le. Toutefois, si le fichier WSDL n'a pas encore été téléchargé, procédez comme suit :  
+  
+-   Créez un fichier vide ayant l'extension de nom de fichier .wsdl.  
+  
+-   Sélectionnez ce fichier vide pour l’option **WSDLFile** .  
+  
+-   Affectez à **OverwriteWSDLFile** la valeur **True** pour permettre le remplacement du fichier vide par le fichier WSDL réel.  
+  
+-   Cliquez sur **Télécharger WSDL** pour télécharger le fichier WSDL réel et remplacer le fichier vide.  
+  
+    > [!NOTE]  
+    >  L’option **Télécharger WSDL** n’est pas activée tant que vous n’avez pas indiqué le nom d’un fichier local existant dans la zone **WSDLFile** .  
+  
+ **OverwriteWSDLFile**  
+ Indiquez si le fichier WSDL de la tâche de service Web peut être remplacé.  
+  
+ Si vous projetez de télécharger le fichier WSDL à l’aide du bouton **Télécharger WSDL** , définissez cette valeur sur **True**.  
+  
+ **Nom**  
+ Fournissez un nom unique pour la tâche de service Web. Ce nom sert d'étiquette à l'icône de la tâche.  
+  
+> [!NOTE]  
+>  Les noms de tâche doivent être uniques dans un package.  
+  
+ **Description**  
+ Entrez une description de la tâche de service Web.  
+  
+ **Télécharger WSDL**  
+ Téléchargez le fichier WSDL.  
+  
+ Ce bouton n’est pas activé tant que vous n’avez pas indiqué le nom d’un fichier local existant dans la zone **WSDLFile** .  
+  
+## <a name="web-service-task-editor-input-page"></a>Éditeur de tâche de service Web (page Entrée)
+  Utilisez la page **Entrée** de l' **Éditeur de tâche de service Web** pour définir le service Web, la méthode Web et les valeurs à fournir à la méthode Web comme entrée. Vous pouvez fournir les valeurs en tapant des chaînes directement dans la colonne Valeur ou en y sélectionnant des variables.  
+  
+### <a name="options"></a>Options  
+ **Service**  
+ Sélectionnez un service Web dans la liste pour l'utiliser afin d'exécuter la méthode Web.  
+  
+ **Méthode**  
+ Dans la liste, sélectionnez la méthode Web que doit exécuter la tâche.  
+  
+ **WebMethodDocumentation**  
+ Entrez la description de la méthode web ou cliquez sur le bouton Parcourir **(…)** et entrez la description dans la boîte de dialogue **Documentation de la méthode Web** .  
+  
+ **Nom**  
+ Contient la liste des noms des entrées dans la méthode Web.  
+  
+ **Type**  
+ Indique le type des données des entrées.  
+  
+> [!NOTE]  
+>  La tâche de service Web prend uniquement en charge les paramètres des types de données suivants : les types de primitives tels que les entiers et les chaînes ; les tableaux et séquences de types de primitives, ainsi que les énumérations.  
+  
+ **Variable**  
+ Activez les cases à cocher afin d'utiliser des variables pour fournir les entrées.  
+  
+ **Valeur**  
+ Si les cases Variable sont cochées, sélectionnez les variables dans la liste pour fournir les entrées ; sinon, tapez les valeurs à utiliser en guise d’entrées.  
+  
+## <a name="web-service-task-editor-output-page"></a>Éditeur de tâche de service Web (page Sortie)
+  Utilisez la page **Sortie** de la boîte de dialogue **Éditeur de tâche de service Web** pour définir l’emplacement de stockage du résultat retourné par la méthode web.  
+  
+### <a name="static-options"></a>Options statiques  
+ **OutputType**  
+ Sélectionnez le type de stockage à utiliser pour stocker le résultat. Cette propriété dispose des options répertoriées dans le tableau suivant.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Connexion de fichiers**|Stocke le résultat dans un fichier. Cette valeur affiche l’option dynamique **Fichier**.|  
+|**Variable**|Stocke le résultat dans une variable. Cette valeur affiche l’option dynamique **Variable**.|  
+  
+### <a name="outputtype-dynamic-options"></a>Options dynamiques OutputType  
+  
+#### <a name="outputtype--file-connection"></a>OutputType = Connexion de fichiers  
+ **Fichier**  
+ Sélectionnez un gestionnaire de connexions de fichier dans la liste ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
+  
+ **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="outputtype--variable"></a>OutputType = Variable  
+ **Variable**  
+ Sélectionnez une variable dans la liste ou cliquez sur \< **nouvelle Variable...** > pour créer une nouvelle variable.  
+  
+ **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
 ## <a name="related-content"></a>Contenu connexe  
  Vidéo, [Procédure : appeler un service Web à l’aide de la tâche Service Web (vidéo liée à SQL Server)](http://go.microsoft.com/fwlink/?LinkId=259642), sur technet.microsoft.com.  
+

@@ -1,28 +1,36 @@
 ---
-title: "T&#226;che d&#39;ex&#233;cution de package | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.executepackagetask.f1"
-helpviewer_keywords: 
-  - "tâche d'exécution de package [Integration Services]"
-  - "packages enfants"
-  - "packages parents [Integration Services]"
+title: "Exécuter la tâche de Package | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.executepackagetask.f1
+- sql13.dts.designer.executepackagetask.package.f1
+- sql13.dts.designer.executepackagetask.parameter.F1
+- sql13.dts.designer.executepackagetask.general.f1
+helpviewer_keywords:
+- Execution Package task [Integration Services]
+- child packages
+- parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 caps.latest.revision: 63
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 63
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 70b2679a86d46c731617d7f607541f60886afb40
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/11/2017
+
 ---
-# T&#226;che d&#39;ex&#233;cution de package
+# <a name="execute-package-task"></a>Tâche d'exécution de package
   La tâche d'exécution de package étend les fonctionnalités d'entreprise de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en permettant à des packages d'exécuter d'autres packages au sein d'un flux de travail.  
   
  Vous pouvez utiliser la tâche d'exécution de package aux fins suivantes :  
@@ -39,15 +47,15 @@ caps.handback.revision: 63
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend des tâches qui effectuent des opérations de flux de travail, telles que l'exécution de fichiers de commandes, d'exécutables et de packages. Pour plus d'informations, consultez [Execute Process Task](../../integration-services/control-flow/execute-process-task.md).  
   
-## Exécution des packages  
+## <a name="running-packages"></a>Exécution des packages  
  La tâche d'exécution de package peut exécuter des packages enfants contenus dans le même projet qui contient le package parent. Vous sélectionnez un package enfant d'un projet en définissant la propriété **ReferenceType** sur **Project Reference**, puis en définissant la propriété **PackageNameFromProjectReference** .  
   
 > [!NOTE]  
->  L’option **ReferenceType** est en lecture seule et est définie sur **Référence externe** si le projet qui contient le package n’a pas été converti en modèle de déploiement de projet. Pour plus d’informations sur la conversion, consultez [Déployer des projets sur le serveur Integration Services](../../integration-services/packages/deploy-projects-to-integration-services-server.md).  
+>  L’option **ReferenceType** est en lecture seule et est définie sur **Référence externe** si le projet qui contient le package n’a pas été converti en modèle de déploiement de projet. [Integration Services (SSIS) de déployer les projets et Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  La tâche d’exécution de package peut exécuter des packages stockés dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb et des packages stockés dans le système de fichiers. La tâche utilise un gestionnaire de connexions OLE DB pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou un gestionnaire de connexions de fichiers pour accéder au système de fichiers. Pour plus d'informations, consultez [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) et [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
   
- La tâche d'exécution de package peut également exécuter un plan de maintenance de base de données, ce qui vous permet de gérer les packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et les plans de maintenance de base de données dans la même solution [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Un plan de maintenance de base de données est similaire à un package [!INCLUDE[ssIS](../../includes/ssis-md.md)], mais il ne peut inclure que des tâches de maintenance de base de données et est toujours stocké dans la base de données msdb.  
+ La tâche d'exécution de package peut également exécuter un plan de maintenance de base de données, ce qui vous permet de gérer les packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et les plans de maintenance de base de données dans la même solution [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Un plan de maintenance de base de données est similaire à un package [!INCLUDE[ssIS](../../includes/ssis-md.md)] , mais il ne peut inclure que des tâches de maintenance de base de données et est toujours stocké dans la base de données msdb.  
   
  Si vous choisissez un package stocké dans le système de fichiers, vous devez fournir le nom et l'emplacement du package. Le package peut se trouver à n'importe quel endroit dans le système de fichiers ; il n'est pas nécessaire qu'il figure dans le même dossier que le package parent.  
   
@@ -55,15 +63,15 @@ caps.handback.revision: 63
   
  Dans d'autres situations, vous pouvez préférer que les packages parent et enfants échouent ensemble comme une même unité, ou bien éviter la charge de traitement supplémentaire d'un autre processus. Par exemple, si un processus enfant échoue et que les traitements ultérieurs du processus parent du package dépendent de la réussite du processus enfant, alors le package enfant doit s'exécuter dans le processus du package parent.  
   
- Par défaut, la propriété ExecuteOutOfProcess de la tâche d’exécution du package a la valeur **False**, et le package enfant s’exécute dans le même processus que le package parent. Si vous affectez la valeur **True**à cette propriété, le package enfant s'exécute dans un processus indépendant. Cela peut ralentir le lancement du package enfant. En outre, si vous affectez la valeur **True** à la propriété, vous ne pouvez pas déboguer le package dans une installation d’outils uniquement. Vous devez installer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Pour plus d’informations, consultez [Installer Integration Services](../../integration-services/install-windows/install-integration-services.md).  
+ Par défaut, la propriété ExecuteOutOfProcess de la tâche d’exécution du package a la valeur **False**, et le package enfant s’exécute dans le même processus que le package parent. Si vous affectez la valeur **True**à cette propriété, le package enfant s'exécute dans un processus indépendant. Cela peut ralentir le lancement du package enfant. En outre, si vous affectez la valeur **True**à la propriété, vous ne pouvez pas déboguer le package dans une installation d’outils uniquement. Vous devez installer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Pour plus d’informations, consultez [Installer Integration Services](../../integration-services/install-windows/install-integration-services.md).  
   
-## Extension des transactions  
- La transaction que le package parent utilise peut être étendue au package enfant ; par conséquent, le travail réalisé par les deux packages peut être validé ou annulé. Par exemple, les insertions dans une base de données effectuées par le package parent peuvent être validées ou annulées, en fonction de celles réalisées par le package enfant, et vice versa. Pour plus d'informations, consultez [Inherited Transactions](../Topic/Inherited%20Transactions.md).  
+## <a name="extending-transactions"></a>Extension des transactions  
+ La transaction que le package parent utilise peut être étendue au package enfant ; par conséquent, le travail réalisé par les deux packages peut être validé ou annulé. Par exemple, les insertions dans une base de données effectuées par le package parent peuvent être validées ou annulées, en fonction de celles réalisées par le package enfant, et vice versa. Pour plus d'informations, consultez [Inherited Transactions](http://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c).  
   
-## Propagation des détails de la journalisation  
+## <a name="propagating-logging-details"></a>Propagation des détails de la journalisation  
  Le package enfant exécuté par la tâche d'exécution de package peut ou non être configuré de manière à utiliser la journalisation, mais il transfère toujours les détails du journal au package parent. Si la tâche d'exécution de package est configurée de manière à utiliser la journalisation, elle consigne les informations détaillées du journal à partir du package enfant. Pour plus d’informations, consultez [Journalisation Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-## Passage de valeurs à des packages enfants  
+## <a name="passing-values-to-child-packages"></a>Passage de valeurs à des packages enfants  
  Un package enfant utilise fréquemment des valeurs transmises par un autre package qui l'appelle, généralement son package parent. L'utilisation de valeurs issues d'un package parent est utile dans les scénarios suivants :  
   
 -   Les parties d'un flux de travail plus volumineux sont affectées à différents packages. Par exemple, un package télécharge des données chaque nuit, les résume, affecte des valeurs de données de synthèse à des variables, puis les passe à un autre package qui les traite à son tour.  
@@ -85,7 +93,7 @@ caps.handback.revision: 63
     > [!NOTE]  
     >  Si le paramètre de package enfant ne respecte pas la casse et s'il est mappé à un paramètre parent qui respecte la casse, le package enfant ne peut pas s'exécuter.  
     >   
-    >  Les conditions de mappage suivantes sont prises en charge :  
+    >  Les conditions de mappage suivantes sont prises en charge :  
     >   
     >  Le paramètre de package enfant qui respecte la casse est mappé à un paramètre parent qui respecte la casse.  
     >   
@@ -95,27 +103,125 @@ caps.handback.revision: 63
   
  La variable du package parent peut être définie dans l'étendue de la tâche d'exécution de package ou dans un conteneur parent tel que le package. Si plusieurs variables de même nom sont disponibles, la variable utilisée est celle définie dans l'étendue de la tâche d'exécution de package ou celle qui, du point de vue de l'étendue, est la plus proche de la tâche.  
   
- Pour plus d’informations, consultez [Utiliser les valeurs des variables et des paramètres dans un package enfant](../../integration-services/packages/use-the-values-of-variables-and-parameters-in-a-child-package.md).  
+ Pour plus d’informations, consultez [Utiliser les valeurs des variables et des paramètres dans un package enfant](../../integration-services/packages/legacy-package-deployment-ssis.md#child).  
   
-### Accès aux variables de package parent  
+### <a name="accessing-parent-package-variables"></a>Accès aux variables de package parent  
  Les packages enfants peuvent accéder à des variables de package parent à l'aide de la tâche de script. Lorsque vous entrez le nom de la variable de package parent sur la page **Script** dans l' **Éditeur de tâche de script**, n'incluez pas **Utilisateur :** dans le nom de la variable. Sinon, le package enfant ne localise pas la variable lorsque vous exécutez le package parent.  
   
-## Configuration de la tâche d'exécution de package  
+## <a name="configuring-the-execute-package-task"></a>Configuration de la tâche d'exécution de package  
  Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
-  
--   [Éditeur de tâche d'exécution de package](../../integration-services/control-flow/execute-package-task-editor.md)  
+ Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
 -   [Page Expressions](../../integration-services/expressions/expressions-page.md)  
   
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d'une tâche ou d'un conteneur](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Configuration de la tâche d'exécution de package par programmation  
+## <a name="configuring-the-execute-package-task-programmatically"></a>Configuration de la tâche d'exécution de package par programmation  
  Pour plus d'informations sur la définition par programmation de ces propriétés, cliquez sur la rubrique suivante :  
   
 -   [N:Microsoft.SqlServer.Dts.Tasks.ExecutePackageTask](https://technet.microsoft.com/library/microsoft.sqlserver.dts.tasks.executepackagetask\(v=sql.110\).aspx)  
+  
+## <a name="execute-package-task-editor"></a>Éditeur de tâche d'exécution de package
+  Utilisez l'Éditeur de tâche d'exécution de package pour configurer la tâche d'exécution de package. La tâche d'exécution de package étend les fonctionnalités d'entreprise de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en permettant à des packages d'exécuter d'autres packages au sein d'un flux de travail.  
+  
+ **Que voulez-vous faire ?**  
+  
+-   [Ouvrir l'Éditeur de tâche d'exécution de package](#open)  
+  
+-   [Définir les options sur la page Général](#general)  
+  
+-   [Définir les options sur la page Package](#package)  
+  
+-   [Définir les options sur la page Liaisons de paramètre](#parameter)  
+  
+###  <a name="open"></a> Ouvrir l'Éditeur de tâche d'exécution de package  
+  
+1.  Ouvrez un projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] qui contient une tâche d'exécution de package.  
+  
+2.  Cliquez avec le bouton droit sur la tâche dans le Concepteur SSIS, puis cliquez sur **Modifier**.  
+  
+###  <a name="general"></a> Définir les options sur la page Général  
+ **Nom**  
+ Fournissez un nom unique pour la tâche d'exécution de package. Ce nom sert d'étiquette à l'icône de la tâche.  
+  
+> [!NOTE]  
+>  Les noms de tâche doivent être uniques dans un package.  
+  
+ **Description**  
+ Entrez une description de la tâche d'exécution de package.  
+  
+###  <a name="package"></a> Définir les options sur la page Package  
+ **ReferenceType**  
+ Sélectionnez **Référence du projet** pour les packages enfants qui sont dans le projet. Sélectionnez **Référence externe** pour les packages enfants situés en dehors du package.  
+  
+> [!NOTE]  
+>  L’option **ReferenceType** est en lecture seule et est définie sur **Référence externe** si le projet qui contient le package n’a pas été converti en modèle de déploiement de projet. [Integration Services (SSIS) de déployer les projets et Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+  
+ **Mot de passe**  
+ Si le package enfant s'avère protégé par un mot de passe, indiquez ce dernier ou cliquez sur le bouton représentant des points de suspension (…) afin de définir un nouveau mot de passe.  
+  
+ **ExecuteOutOfProcess**  
+ Spécifiez si le package enfant s'exécute dans le processus du package parent ou dans un processus distinct. Par défaut, la propriété ExecuteOutOfProcess de la tâche d’exécution du package a la valeur **False**, et le package enfant s’exécute dans le même processus que le package parent. Si vous affectez la valeur **true**à cette propriété, le package enfant s'exécute dans un processus indépendant. Cela peut ralentir le lancement du package enfant. En outre, si vous avez défini la propriété sur **true**, vous ne pouvez pas déboguer le package dans une installation d’outils uniquement : vous devez installer le produit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour plus d’informations, consultez [Installer Integration Services](../../integration-services/install-windows/install-integration-services.md).  
+  
+#### <a name="referencetype-dynamic-options"></a>Options dynamiques de ReferenceType  
+  
+##### <a name="referencetype--external-reference"></a>ReferenceType = Référence externe  
+ **Emplacement**  
+ Sélectionnez l'emplacement du package enfant. Cette propriété dispose des options répertoriées dans le tableau suivant.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**SQL Server**|Définissez l'emplacement d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Système de fichiers**|Permet de définir l'emplacement du système de fichiers.|  
+  
+ **Connexion**  
+ Sélectionnez le type d’emplacement de stockage du package enfant.  
+  
+ **PackageNameReadOnly**  
+ Permet d'afficher le nom du package.  
+  
+##### <a name="referencetype--project-reference"></a>ReferenceType = Référence du projet  
+ **PackageNameFromProjectReference**  
+ Sélectionnez un package contenu dans le projet, qui sera le package enfant.  
+  
+#### <a name="location-dynamic-options"></a>Options dynamiques pour la définition de l'emplacement  
+  
+##### <a name="location--sql-server"></a>Emplacement = SQL Server  
+ **Connexion**  
+ Sélectionnez un gestionnaire de connexions OLE DB dans la liste, ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
+  
+ **Rubriques connexes :** [Gestionnaire de connexions OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+  
+ **PackageName**  
+ Permet de saisir le nom du package enfant ou de cliquer sur le bouton représenté par des points de suspension (…) pour atteindre le package.  
+  
+##### <a name="location--file-system"></a>Emplacement = Système de fichiers  
+ **Connexion**  
+ Sélectionnez un gestionnaire de connexions de fichier dans la liste, ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
+  
+ **Rubriques connexes :** [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md)  
+  
+ **PackageNameReadOnly**  
+ Permet d'afficher le nom du package.  
+  
+###  <a name="parameter"></a> Définir les options sur la page Liaisons de paramètre  
+ Vous pouvez passer des valeurs du package parent ou du projet au package enfant. Le projet doit utiliser le modèle de déploiement de projet et le package enfant doit être contenu dans le même projet qui contient le package parent.  
+  
+ Pour plus d’informations sur la conversion des projets dans le modèle de déploiement de projet, consultez [Integration Services (SSIS) déployer des projets et Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+  
+ **Paramètre de package enfant**  
+ Entrez ou sélectionnez un nom pour le paramètre de package enfant.  
+  
+ **Variable ou paramètre de liaison**  
+ Sélectionnez le paramètre ou la variable contenant la valeur que vous souhaitez transmettre au package enfant.  
+  
+ **Ajouter**  
+ Cliquez pour mapper un paramètre ou une variable à un paramètre de package enfant.  
+  
+ **Supprimer**  
+ Cliquez pour supprimer un mappage entre un paramètre ou une variable et un paramètre de package enfant.  
   
   

@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.oledbsource.f1
+- sql13.dts.designer.oledbsourceadapter.connection.f1
+- sql13.dts.designer.oledbsourceadapter.columns.f1
+- sql13.dts.designer.oledbsourceadapter.errorhandling.f1
 helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
@@ -20,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93d3d15703e1c5a405c523d5e912658246e774ad
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 995d2688f0e4f8ab9af751c3521e45cb0626451f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="ole-db-source"></a>Source OLE DB
@@ -95,15 +98,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuring-the-ole-db-source"></a>Configuration de la source OLE DB  
  Vous pouvez définir les propriétés par programmation ou par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de source OLE DB** , cliquez sur l’une des rubriques suivantes :  
-  
--   [Éditeur de source OLE DB &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/ole-db-source-editor-connection-manager-page.md)  
-  
--   [Éditeur de source OLE DB &#40;page Colonnes&#41;](../../integration-services/data-flow/ole-db-source-editor-columns-page.md)  
-  
--   [Éditeur de source OLE DB &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/ole-db-source-editor-error-output-page.md)  
-  
- La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
+ La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programme. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
   
 -   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
@@ -121,6 +116,118 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-content"></a>Contenu connexe  
  Article Wiki, [SSIS with Oracle Connectors](http://go.microsoft.com/fwlink/?LinkId=220670)(SSIS avec connecteurs Oracle) sur social.technet.microsoft.com.  
+  
+## <a name="ole-db-source-editor-connection-manager-page"></a>Éditeur de source OLE DB (page Gestionnaire de connexions)
+  La page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source OLE DB** vous permet de sélectionner le gestionnaire de connexions OLE DB pour la source. Cette page vous permet également de sélectionner une table ou une vue à partir de la base de données.  
+  
+> [!NOTE]  
+>  Pour charger des données à partir d’une source de données qui utilise [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, utilisez une source OLE DB. Vous ne pouvez pas utiliser une source Excel pour charger des données à partir d'une source de données Excel 2007. Pour plus d’informations, consultez [Configurer le gestionnaire de connexions OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md).  
+>   
+>  Pour charger des données à partir d'une source de données qui utilise [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2003 ou une version antérieure, utilisez une source Excel. Pour plus d’informations, consultez [Éditeur de source Excel &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/excel-source-editor-connection-manager-page.md).  
+  
+> [!NOTE]  
+>  La propriété **CommandTimeout** de la source OLE DB n’est pas disponible dans **l’Éditeur de source OLE DB**, mais peut être définie à l’aide de **l’Éditeur avancé**. Pour plus d’informations sur cette propriété, consultez la section sur la source Excel dans [Propriétés personnalisées OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md).  
+  
+### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>Ouvrez l’éditeur de Source OLE DB (Page Gestionnaire de connexions)  
+  
+1.  Ajoutez la source OLE DB au package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  
+2.  Cliquez avec le bouton droit sur le composant de la source, puis cliquez sur **Modifier**.  
+  
+3.  Cliquez sur **Gestionnaire de connexions**.  
+  
+### <a name="static-options"></a>Options statiques  
+ **Gestionnaire de connexions OLE DB**  
+ Sélectionnez un gestionnaire de connexions existant dans la liste ou créez une connexion en cliquant sur **Nouveau**.  
+  
+ **Nouveau**  
+ Créez un gestionnaire de connexions à l’aide de la boîte de dialogue **Configurer le gestionnaire de connexions OLE DB** .  
+  
+ **Mode d'accès aux données**  
+ Spécifiez la méthode de sélection des données dans la source.  
+  
+|Option|Description|  
+|------------|-----------------|  
+|Table ou vue|Permet de récupérer les données d'une table ou d'une vue dans la source de données OLE DB.|  
+|Variable de nom de table ou de vue|Spécifiez le nom de la table ou de la vue dans une variable.<br /><br /> **Informations connexes :** [Utiliser des variables dans des packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Commande SQL|Récupérez les données de la source de données OLE DB à l'aide d'une requête SQL.|  
+|Commande SQL à partir d'une variable|Spécifiez le texte de la requête SQL dans une variable.|  
+  
+ **Aperçu**  
+ Affichez un aperçu des résultats à partir de la boîte de dialogue **Vue de données** . Le mode**Aperçu** peut afficher jusqu’à 200 lignes.  
+  
+> [!NOTE]  
+>  Lorsque vous affichez l'aperçu des données, les colonnes ayant un type CLR défini par l'utilisateur ne contiennent pas de données. À la place les valeurs \<valeur trop grande pour être affichée > ou System.Byte [] s’affichent. La première s’affiche lorsque le fournisseur SQL OLE DB accède à la source de données, la seconde lorsque vous utilisez le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+  
+### <a name="data-access-mode-dynamic-options"></a>Options dynamiques du mode d'accès aux données  
+  
+#### <a name="data-access-mode--table-or-view"></a>Mode d'accès aux données = Table ou vue  
+ **Nom de la table ou de la vue**  
+ Sélectionnez le nom de la table ou de la vue dans la liste de celles qui sont disponibles dans la source de données.  
+  
+#### <a name="data-access-mode--table-name-or-view-name-variable"></a>Mode d'accès aux données = Variable de nom de table ou de vue  
+ **Nom de la variable**  
+ Sélectionnez la variable qui contient le nom de la table ou de la vue.  
+  
+#### <a name="data-access-mode--sql-command"></a>Mode d'accès aux données = Commande SQL  
+ **Texte de la commande SQL**  
+ Entrez le texte d'une requête SQL, générez la requête en cliquant sur **Générer une requête**ou recherchez le fichier qui contient le texte de la requête en cliquant sur **Parcourir**.  
+  
+ **Paramètres**  
+ Si vous avez entré une requête paramétrable en spécifiant ? comme espace réservé de paramètre dans le texte de la requête, utilisez la boîte de dialogue **Définition des paramètres de la requête** pour mapper des paramètres d’entrée de la requête à des variables du package.  
+  
+ **Build query**  
+ Utilisez la boîte de dialogue **Générateur de requêtes** pour construire la requête SQL visuellement.  
+  
+ **Parcourir**  
+ Dans la boîte de dialogue **Ouvrir** , localisez le fichier contenant le texte de la requête SQL.  
+  
+ **Analyser la requête**  
+ Vérifiez la syntaxe du texte de la requête.  
+  
+#### <a name="data-access-mode--sql-command-from-variable"></a>Mode d'accès aux données = Commande SQL à partir d'une variable  
+ **Nom de la variable**  
+ Sélectionnez la variable qui contient le texte de la requête SQL.  
+  
+## <a name="ole-db-source-editor-columns-page"></a>Éditeur de source OLE DB (page Colonnes)
+  Utilisez la page **Colonnes** de la boîte de dialogue **Éditeur de source OLE DB** pour mapper une colonne de sortie à chaque colonne externe (source).  
+  
+### <a name="options"></a>Options  
+ **Colonnes externes disponibles**  
+ Affiche la liste des colonnes externes disponibles dans la source de données. Vous ne pouvez pas ajouter ou supprimer des colonnes à l'aide de cette table.  
+  
+ **Colonne externe**  
+ Affiche les colonnes externes (sources) selon l'ordre dans lequel vous les visualisez lorsque vous configurez des composants qui consomment des données à partir de cette source. Vous pouvez modifier cet ordre en supprimant d'abord les colonnes sélectionnées dans la table, puis en choisissant des colonnes externes dans la liste selon un ordre différent.  
+  
+ **Colonne de sortie**  
+ Spécifiez un nom unique pour chaque colonne de sortie. Le nom par défaut est celui de la colonne externe (source) sélectionnée ; vous pouvez néanmoins choisir n'importe quel nom unique et significatif. Le nom spécifié s'affiche dans le concepteur SSIS.  
+  
+## <a name="ole-db-source-editor-error-output-page"></a>Éditeur de source OLE DB (page Sortie d'erreur)
+  La page **Sortie d’erreur** de la boîte de dialogue **Éditeur de source OLE DB** vous permet de sélectionner les options de gestion des erreurs et de définir les propriétés sur les colonnes de sortie d’erreur.  
+  
+### <a name="options"></a>Options  
+ **Entrée/sortie**  
+ Affichez le nom de la source de données.  
+  
+ **Colonne**  
+ Indique les colonnes (sources) externes que vous avez sélectionnées dans la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source OLE DB**.  
+  
+ **Erreur**  
+ Indiquez ce qui doit se produire lorsqu'une erreur se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
+  
+ **Rubriques connexes :** [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **Troncation**  
+ Indiquez ce qui doit se produire lorsqu'une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
+  
+ **Description**  
+ Affiche la description de l'erreur.  
+  
+ **Définir cette valeur sur les cellules sélectionnées**  
+ Indiquez ce qui doit se produire pour l'ensemble des cellules sélectionnées lorsqu'une erreur ou une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
+  
+ **Appliquer**  
+ Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Destination OLE DB](../../integration-services/data-flow/ole-db-destination.md)   

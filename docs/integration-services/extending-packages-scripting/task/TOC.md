@@ -1,0 +1,10 @@
+# [Extension du package à l’aide de la tâche de script](extending-the-package-with-the-script-task.md)
+# [Configuration de la tâche de script dans l’éditeur de tâche de script](configuring-the-script-task-in-the-script-task-editor.md)
+# [Codage et débogage de la tâche de script](coding-and-debugging-the-script-task.md)
+# [Utilisation de variables dans la tâche de script](using-variables-in-the-script-task.md)
+# [Connexion à des sources de données dans la tâche de script](connecting-to-data-sources-in-the-script-task.md)
+# [Déclenchement d’événements dans la tâche de script](raising-events-in-the-script-task.md)
+# [Journalisation dans la tâche de script](logging-in-the-script-task.md)
+# [Retour de résultats de la tâche de script](returning-results-from-the-script-task.md)
+
+# [Exemples de tâche de script](../../extending-packages-scripting-task-examples/script-task-examples.md)

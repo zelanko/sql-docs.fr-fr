@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataminingmodeltrainingdest.f1
+- sql13.dts.designer.dmmtrainingtransformation.connection.f1
+- sql13.dts.designer.dmmtrainingtransformation.columns.f1
 helpviewer_keywords:
 - destinations [Integration Services], Data Mining Model Training
 - Data Mining Model Training destination
@@ -22,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cdb0903098dee37d88e89519cf6bc375b0fb90f0
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 570a7e8c6b20ea528f5980fb3ae53a60037d0243
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="data-mining-model-training-destination"></a>Destination d’apprentissage du modèle d’exploration de données
@@ -43,18 +45,47 @@ ms.lasthandoff: 08/03/2017
   
  Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur d’apprentissage du modèle d’exploration de données** , cliquez sur l’une des rubriques suivantes :  
-  
--   [Éditeur d’apprentissage du modèle d’exploration de données &#40;onglet Connexion&#41;](../../integration-services/data-flow/data-mining-model-training-editor-connection-tab.md)  
-  
--   [Éditeur d’apprentissage du modèle d’exploration de données &#40;onglet Colonnes&#41;](../../integration-services/data-flow/data-mining-model-training-editor-columns-tab.md)  
-  
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
   
 -   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriétés personnalisées de la destination d'apprentissage du modèle d'exploration de données](../../integration-services/data-flow/data-mining-model-training-destination-custom-properties.md)  
   
- Pour plus d’informations sur la définition des propriétés, consultez [Définir les propriétés d’un composant de flux de données](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+ Pour plus d’informations sur la façon de définir les propriétés, consultez [Définir les propriétés d’un composant de flux de données](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
+## <a name="data-mining-model-training-editor-connection-tab"></a>Éditeur d'apprentissage du modèle d'exploration de données (onglet Connexion)
+  Utilisez la page **Connexion** de la boîte de dialogue **Éditeur d'apprentissage du modèle d'exploration de données** pour sélectionner un modèle d'exploration de données pour l'apprentissage.  
   
+### <a name="options"></a>Options  
+ **Gestionnaire de connexions**  
+ Sélectionnez une connexion dans la liste des connexions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existantes ou créez une nouvelle connexion [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l’aide du bouton **Nouveau** décrit ci-après.  
+  
+ **Nouveau**  
+ Créez une connexion à l’aide de la boîte de dialogue **Ajout d’un gestionnaire de connexions Analysis Services** .  
+  
+ **Structure d'exploration de données**  
+ Sélectionnez une structure dans la liste de structures d’exploration de données disponibles ou créez une nouvelle structure en cliquant sur **Nouveau**.  
+  
+ **Nouveau**  
+ Créez une structure d’exploration de données et un modèle d’exploration de données à l’aide de **l’Assistant Exploration de données**.  
+  
+ **Modèles d'exploration de données**  
+ Affiche la liste des modèles d'exploration de données associés à la structure d'exploration de données sélectionnée.  
+  
+## <a name="data-mining-model-training-editor-columns-tab"></a>Éditeur d'apprentissage du modèle d'exploration de données (onglet Colonnes)
+  Utilisez la page **Colonnes** de la boîte de dialogue **Éditeur d'apprentissage du modèle d'exploration de données** pour établir une correspondance entre les colonnes d'entrée et les colonnes de la structure d'exploration de données.  
+  
+## <a name="options"></a>Options  
+ **Colonnes d'entrée disponibles**  
+ Affichez la liste des colonnes d'entrée disponibles. Faites glisser les colonnes d'entrée pour les mapper sur les colonnes de la structure d'exploration de données.  
+  
+ **Colonnes de structure d'exploration de données**  
+ Affiche la liste des colonnes de la structure d'exploration de données. Faites glisser les colonnes de la structure d'exploration de données pour les mapper sur les colonnes d'entrée disponibles.  
+  
+ **Colonne d'entrée**  
+ Affiche les colonnes d'entrée sélectionnées dans le tableau ci-dessus. Pour modifier ou supprimer une sélection de mappage, utilisez la liste **Colonnes d'entrée disponibles**.  
+  
+ **Colonnes de structure d'exploration de données**  
+ Affiche chaque colonne de destination disponible, qu’elle soit mappée ou non.  
+  
+

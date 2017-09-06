@@ -11,16 +11,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.odbcdest.f1
+- sql13.ssis.designer.odbcdest.connection.f1
+- sql13.ssis.designer.odbcdest.columns.f1
+- sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5947fa19295580396ce74f8dd93f75abed653797
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: b17bf59986633097e381e968222c5da670eefd7b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="odbc-destination"></a>Destination ODBC
@@ -79,14 +82,107 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Éditeur de Destination ODBC &#40; Page sortie d’erreur &#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
-  
--   [Éditeur de Destination ODBC &#40; Page mappages &#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
-  
--   [Éditeur de Destination ODBC &#40; Page Gestionnaire de connexions &#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
-  
 -   [Charger des données à l’aide de la Destination ODBC](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
   
 -   [Propriétés personnalisées des destinations ODBC](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
   
+## <a name="odbc-destination-editor-connection-manager-page"></a>Éditeur de destination ODBC (page Gestionnaire de connexions)
+  Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de destination ODBC** pour sélectionner le gestionnaire de connexions ODBC de la destination. Cette page vous permet également de sélectionner une table ou une vue à partir de la base de données.  
   
+ **Pour ouvrir l'Éditeur de destination ODBC (page Gestionnaire de connexions)**  
+  
+### <a name="task-list"></a>Liste des tâches  
+  
+-   Dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], ouvrez le package [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] qui possède la destination ODBC.  
+  
+-   Sous l’onglet **Flux de données** , double-cliquez sur la destination ODBC.  
+  
+-   Dans l' **Éditeur de destination ODBC**, cliquez sur **Gestionnaire de connexions**.  
+  
+### <a name="options"></a>Options  
+  
+#### <a name="connection-manager"></a>Gestionnaire de connexions  
+ Sélectionnez un gestionnaire de connexions ODBC existant dans la liste ou cliquez sur Nouveau pour créer une nouvelle connexion. La connexion peut concerner n'importe quelle base de données prise en charge par ODBC.  
+  
+#### <a name="new"></a>Nouveau  
+ Cliquez sur **Nouveau**. La boîte de dialogue **Configurer l'Éditeur du gestionnaire de connexions ODBC** s'ouvre et vous permet de créer un nouveau gestionnaire de connexions.  
+  
+#### <a name="data-access-mode"></a>Mode d'accès aux données  
+ Spécifiez la méthode de chargement des données dans la destination. Ces fonctions sont répertoriées dans le tableau suivant :  
+  
+|Option|Description|  
+|------------|-----------------|  
+|Nom de la table - Lot|Sélectionnez cette option pour configurer la destination ODBC en mode par lot. Lorsque vous sélectionnez cette option, les options suivantes sont disponibles :|  
+||**Nom de la table ou de la vue**: sélectionnez une table ou une vue disponible dans la liste.<br /><br /> Cette liste contient les 1 000 premières tables uniquement. Si votre base de données contient plus de 1000 tables, vous pouvez taper le début du nom d’une table ou utiliser le caractère générique (\*) pour entrer une partie du nom afin d’afficher la table ou les tables que vous souhaitez utiliser.<br /><br /> **Taille du lot**: entrez la taille du lot pour le chargement en bloc. Il s'agit du nombre de lignes chargées dans un même lot.|  
+|Nom de la table - Ligne par ligne|Sélectionnez cette option pour configurer la destination ODBC de manière à insérer les lignes dans la table de destination une par une. Lorsque vous sélectionnez cette option, l'option suivante est disponible :|  
+||**Nom de la table ou de la vue**: sélectionnez dans la liste une table ou une vue disponible dans la base de données.<br /><br /> Cette liste contient les 1 000 premières tables uniquement. Si votre base de données contient plus de 1 000 tables, vous pouvez taper le début du nom d'une table ou utiliser le caractère générique (*) pour entrer une partie du nom afin d'afficher la table ou les tables que vous souhaitez utiliser.|  
+  
+#### <a name="preview"></a>Aperçu  
+ Cliquez sur **Aperçu** pour afficher jusqu'à 200 lignes de données pour la table sélectionnée.  
+  
+## <a name="odbc-destination-editor-mappings-page"></a>Éditeur de destination ODBC (page Mappages)
+  La page **Mappages** de la boîte de dialogue **Éditeur de destination ODBC** vous permet de mapper les colonnes d’entrée aux colonnes de destination.  
+  
+### <a name="options"></a>Options  
+  
+#### <a name="available-input-columns"></a>Colonnes d'entrée disponibles  
+ Liste des colonnes d'entrée disponibles. Par glisser-déplacer, mappez une colonne d'entrée à une colonne de destination disponible.  
+  
+#### <a name="available-destination-columns"></a>Colonnes de destination disponibles  
+ Liste des colonnes de destination disponibles. Par glisser-déplacer, mappez une colonne de destination à une colonne d'entrée disponible.  
+  
+#### <a name="input-column"></a>Colonne d'entrée  
+ Affichez les colonnes d’entrée que vous avez sélectionnées. Vous pouvez supprimer des mappages en sélectionnant  **\<ignorer >** pour exclure des colonnes de la sortie.  
+  
+#### <a name="destination-column"></a>Colonne de destination  
+ Affiche toutes les colonnes de destination disponibles, mappées et non mappées.  
+  
+## <a name="odbc-destination-editor-error-output-page"></a>Éditeur de destination ODBC (page Sortie d'erreur)
+  Utilisez la page **Sortie d'erreur** de la boîte de dialogue **Éditeur de destination ODBC** pour sélectionner les options de gestion des erreurs.  
+  
+ **Pour ouvrir l'Éditeur de destination ODBC (page Sortie d'erreur)**  
+  
+### <a name="task-list"></a>Liste des tâches  
+  
+-   Dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], ouvrez le package [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] qui possède la destination ODBC.  
+  
+-   Sous l’onglet **Flux de données** , double-cliquez sur la destination ODBC.  
+  
+-   Dans l' **Éditeur de destination ODBC**, cliquez sur **Sortie d'erreur**.  
+  
+### <a name="options"></a>Options  
+  
+#### <a name="inputoutput"></a>Entrée/sortie  
+ Affichez le nom de la source de données.  
+  
+#### <a name="column"></a>Colonne  
+ Non utilisé.  
+  
+#### <a name="error"></a>Erreur  
+ Sélectionnez la façon dont la destination ODBC doit gérer les erreurs dans un flux : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
+  
+#### <a name="truncation"></a>Troncation  
+ Sélectionnez la façon dont la destination ODBC doit gérer la troncation dans un flux : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
+  
+#### <a name="description"></a>Description  
+ Affichez la description d'une erreur.  
+  
+#### <a name="set-this-value-to-selected-cells"></a>Définir cette valeur sur les cellules sélectionnées  
+ Sélectionnez la façon dont la destination ODBC gère l'ensemble des cellules sélectionnées lorsqu'une erreur ou une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
+  
+#### <a name="apply"></a>Appliquer  
+ Appliquez les options de gestion des erreurs aux cellules sélectionnées.  
+  
+### <a name="error-handling-options"></a>Options de gestion des erreurs  
+ Vous pouvez utiliser les options suivantes pour configurer la façon dont la destination ODBC gère les erreurs et les troncations.  
+  
+#### <a name="fail-component"></a>Composant défaillant  
+ La tâche de flux de données échoue lorsqu'une erreur ou une troncation a lieu. Il s'agit du comportement par défaut.  
+  
+#### <a name="ignore-failure"></a>Ignorer l'échec  
+ L'erreur ou la troncation est ignorée.  
+  
+#### <a name="redirect-flow"></a>Rediriger le flux  
+ La ligne qui provoque l'erreur ou la troncation est dirigée vers la sortie d'erreur de la destination ODBC. Pour plus d'informations, consultez Destination ODBC.  
+  
+

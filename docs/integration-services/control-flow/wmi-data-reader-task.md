@@ -1,28 +1,35 @@
 ---
-title: "T&#226;che Lecteur de donn&#233;es WMI | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.wmidatareadertask.f1"
-helpviewer_keywords: 
-  - "WQL [Integration Services]"
-  - "Tâche Lecteur de données WMI [Integration Services]"
+title: "Tâche lecteur de données WMI | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.wmidatareadertask.f1
+- sql13.dts.designer.wmidatareadertask.general.f1
+- sql13.dts.designer.wmidatareadertask.wmiquery.f1
+helpviewer_keywords:
+- WQL [Integration Services]
+- WMI Data Reader task [Integration Services]
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 75beba806fea6d2e680720ef9c9c72b7809dbe70
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/11/2017
+
 ---
-# T&#226;che Lecteur de donn&#233;es WMI
-  La tâche Lecteur de données WMI exécute des requêtes au moyen du langage de requête WMI (Windows Management Instrumentation) qui retournent des informations à partir de WMI sur un système informatique. Vous pouvez utiliser la tâche Lecteur de données WMI pour effectuer les opérations suivantes :  
+# <a name="wmi-data-reader-task"></a>Tâche Lecteur de données WMI
+  La tâche Lecteur de données WMI exécute des requêtes au moyen du langage de requête WMI (Windows Management Instrumentation) qui retournent des informations à partir de WMI sur un système informatique. Vous pouvez utiliser la tâche Lecteur de données WMI pour effectuer les opérations suivantes :  
   
 -   Interrogation des journaux des événements Windows sur un ordinateur local ou distant et écriture des informations dans un fichier ou une variable.  
   
@@ -46,7 +53,7 @@ caps.handback.revision: 49
   
  La tâche Lecteur de données WMI utilise un gestionnaire de connexions WMI pour se connecter au serveur à partir duquel elle lit les informations WMI. Pour plus d'informations, consultez [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md).  
   
-## Requête WQL  
+## <a name="wql-query"></a>Requête WQL  
  WQL est un dialecte de SQL avec des extensions qui permettent de prendre en charge la notification d'événement WMI et d'autres fonctionnalités spécifiques à WMI. Pour plus d'informations sur WQL, consultez la documentation Windows Management Instrumentation dans [MSDN Library](http://go.microsoft.com/fwlink/?linkid=7022).  
   
 > [!NOTE]  
@@ -70,20 +77,18 @@ SELECT FreeSpace, DeviceId, Size, SystemName, Description FROM Win32_LlogicalDis
 Select * FROM Win32_QuickFixEngineering  
 ```  
   
-## Messages de journalisation personnalisés disponibles dans la tâche Lecteur de données WMI  
- Le tableau suivant répertorie les entrées de journal personnalisées de la tâche Lecteur de données WMI. Pour plus d’informations, consultez [Journalisation Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md) et [Messages personnalisés pour la journalisation](../../integration-services/performance/custom-messages-for-logging.md).  
+## <a name="custom-logging-messages-available-on-the-wmi-data-reader-task"></a>Messages de journalisation personnalisés disponibles dans la tâche Lecteur de données WMI  
+ Le tableau suivant répertorie les entrées de journal personnalisées de la tâche Lecteur de données WMI. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
 |**WMIDataReaderGettingWMIData**|Indique que la tâche a commencé la lecture des données WMI.|  
 |**WMIDataReaderOperation**|Indique la requête WQL que la tâche a exécutée.|  
   
-## Configuration de la tâche Lecteur de données WMI  
+## <a name="configuration-of-the-wmi-data-reader-task"></a>Configuration de la tâche Lecteur de données WMI  
  Vous pouvez définir les propriétés par programmation ou par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
-  
--   [Éditeur de tâche Lecteur de données WMI &#40;page Options WMI&#41;](../../integration-services/control-flow/wmi-data-reader-task-editor-wmi-options-page.md)  
+ Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
 -   [Page Expressions](../../integration-services/expressions/expressions-page.md)  
   
@@ -91,12 +96,93 @@ Select * FROM Win32_QuickFixEngineering
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WmiDataReaderTask.WmiDataReaderTask>  
   
-## Tâches associées  
+## <a name="related-tasks"></a>Tâches associées  
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d'une tâche ou d'un conteneur](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Définir les propriétés d’une tâche ou d’un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Voir aussi  
+## <a name="wmi-data-reader-task-editor-general-page"></a>Éditeur de tâche Lecteur de données WMI (page Général)
+  La page **Général** de la boîte de dialogue **Éditeur de tâche Lecteur de données WMI** permet de nommer et décrire la tâche Lecteur de données WMI.  
+  
+  Pour plus d’informations sur la requête WQL (WMI Query Language), consultez la rubrique [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)(Interrogation avec WQL) de la documentation de Windows Management Instrumentation, dans MSDN Library.  
+  
+### <a name="options"></a>Options  
+ **Nom**  
+ Fournit un nom unique pour la tâche Lecteur de données WMI. Ce nom sert d'étiquette à l'icône de la tâche.  
+  
+> [!NOTE]  
+>  Les noms de tâche doivent être uniques dans un package.  
+  
+ **Description**  
+ Tapez une description de la tâche Lecteur de données WMI.  
+  
+## <a name="wmi-data-reader-task-editor-wmi-options-page"></a>Éditeur de tâche Lecteur de données WMI (page Options WMI)
+  Utilisez la page **Options WMI** de la boîte de dialogue **Éditeur de tâche Lecteur de données WMI** pour définir la source de la requête WQL (Windows Management Instrumentation Query Language) et la destination du résultat de la requête.  
+  
+ Pour plus d’informations sur la requête WQL (WMI Query Language), consultez la rubrique [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)(Interrogation avec WQL) de la documentation de Windows Management Instrumentation, dans MSDN Library.  
+  
+### <a name="static-options"></a>Options statiques  
+ **WMIConnectionName**  
+ Sélectionnez un gestionnaire de connexions WMI dans la liste, ou cliquez sur \< **nouvelle connexion WMI...** > pour en créer un nouveau.  
+  
+ **Rubriques connexes :** [Gestionnaire de connexions WMI](../../integration-services/connection-manager/wmi-connection-manager.md), [Éditeur du gestionnaire de connexions WMI](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
+  
+ **WQLQuerySourceType**  
+ Sélectionnez le type de la source de la requête WQL que la tâche exécute. Cette propriété dispose des options répertoriées dans le tableau suivant.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Entrée directe**|Définit la source d'une requête WQL. Si vous sélectionnez cette valeur, l'option dynamique **WQLQuerySourceType**s'affiche.|  
+|**Connexion de fichiers**|Sélectionnez un fichier qui contient la requête WQL. Si vous sélectionnez cette valeur, l'option dynamique **WQLQuerySourceType**s'affiche.|  
+|**Variable**|Définissez la source dans une variable qui définit la requête WQL. Si vous sélectionnez cette valeur, l'option dynamique **WQLQuerySourceType**s'affiche.|  
+  
+ **OutputType**  
+ Indiquez si la sortie doit être une table de données, une valeur de propriété ou un nom et une valeur de propriété.  
+  
+ **OverwriteDestination**  
+ Indique s'il faut conserver ou remplacer les données d'origine dans le fichier ou la variable de destination, ou leur ajouter des données.  
+  
+ **DestinationType**  
+ Sélectionnez le type de la destination de la requête WQL que la tâche exécute. Cette propriété dispose des options répertoriées dans le tableau suivant.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Connexion de fichiers**|Sélectionnez un fichier pour y enregistrer le résultat de la requête WQL. Cette valeur affiche l'option dynamique **DestinationType**.|  
+|**Variable**|Définissez la variable de stockage du résultat de la requête WQL. Cette valeur affiche l'option dynamique **DestinationType**.|  
+  
+### <a name="wqlquerysourcetype-dynamic-options"></a>Options dynamiques WQLQuerySourceType  
+  
+#### <a name="wqlquerysourcetype--direct-input"></a>WQLQuerySourceType = Entrée directe  
+ **WQLQuerySource**  
+ Fournissez une requête ou cliquez sur le bouton de sélection (...) et entrez une requête en utilisant la boîte de dialogue **Requête WQL** .  
+  
+#### <a name="wqlquerysourcetype--file-connection"></a>WQLQuerySourceType = Connexion de fichiers  
+ **WQLQuerySource**  
+ Sélectionnez un gestionnaire de connexions de fichier dans la liste, ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
+  
+ **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="wqlquerysourcetype--variable"></a>WQLQuerySourceType = Variable  
+ **WQLQuerySource**  
+ Sélectionnez une variable dans la liste, ou cliquez sur \< **nouvelle variable...** > pour créer une nouvelle variable.  
+  
+ **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+### <a name="destinationtype-dynamic-options"></a>Options dynamiques DestinationType  
+  
+#### <a name="destinationtype--file-connection"></a>DestinationType = Connexion de fichiers  
+ **Destination**  
+ Sélectionnez un gestionnaire de connexions de fichier dans la liste, ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
+  
+ **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="destinationtype--variable"></a>DestinationType = Variable  
+ **Destination**  
+ Sélectionnez une variable dans la liste, ou cliquez sur \< **nouvelle variable...** > pour créer une nouvelle variable.  
+  
+ **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+## <a name="see-also"></a>Voir aussi  
  [Tâches Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flux de contrôle](../../integration-services/control-flow/control-flow.md)  
   

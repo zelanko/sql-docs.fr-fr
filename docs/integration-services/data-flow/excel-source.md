@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.excelsource.f1
+- sql13.dts.designer.excelsourceadapter.connection.f1
+- sql13.dts.designer.excelsourceadapter.columns.f1
+- sql13.dts.designer.excelsourceadapter.erroroutput.f1
 helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
@@ -20,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d9db81f159d831fe10aaf99a4b27a34aef0764fc
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: e8b5878513b74faa8df5e7766762f2f7287ec7af
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="excel-source"></a>Source Excel
@@ -84,14 +87,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="excel-source-configuration"></a>Configuration d'une source Excel  
  Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de source Excel** , cliquez sur l’une des rubriques suivantes :  
-  
--   [Éditeur de source Excel &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/excel-source-editor-connection-manager-page.md)  
-  
--   [Éditeur de source Excel &#40;page Colonnes&#41;](../../integration-services/data-flow/excel-source-editor-columns-page.md)  
-  
--   [Éditeur de source Excel &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/excel-source-editor-error-output-page.md)  
-  
  La boîte de dialogue **Éditeur avancé** reflète toutes les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
 -   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -108,7 +103,103 @@ ms.lasthandoff: 08/03/2017
   
 -   [Trier des données pour les transformations de fusion et de jointure de fusion](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
--   [Effectuer une boucle dans des fichiers et des tables Excel en utilisant un conteneur de boucles Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+-   [Boucle via Excel fichiers et les Tables à l’aide d’un conteneur de boucles Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+  
+## <a name="excel-source-editor-connection-manager-page"></a>Éditeur de source Excel (page Gestionnaire de connexions)
+  Le nœud **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source Excel** vous permet de sélectionner le classeur [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] de la source à utiliser. La source Excel lit les données à partir d'une feuille de calcul ou d'une plage nommée dans un classeur existant.  
+  
+> [!NOTE]  
+>  La propriété **CommandTimeout** de la source Excel n’est pas disponible dans **l’Éditeur de source Excel**, mais peut être définie à l’aide de **l’Éditeur avancé**. Pour plus d’informations sur cette propriété, consultez la section sur la source Excel dans [Propriétés personnalisées d’Excel](../../integration-services/data-flow/excel-custom-properties.md).  
+  
+### <a name="static-options"></a>Options statiques  
+ **Gestionnaire de connexions OLE DB**  
+ Sélectionnez un gestionnaire de connexions Excel existant dans la liste ou créez une connexion en cliquant sur **Nouveau**.  
+  
+ **Nouveau**  
+ Créez un gestionnaire de connexions à l’aide de la boîte de dialogue **Gestionnaire de connexions Excel** .  
+  
+ **Mode d'accès aux données**  
+ Spécifiez la méthode de sélection des données dans la source.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|Table ou vue|Récupérez des données à partir d'une feuille de calcul ou d'une plage nommée dans le fichier Excel.|  
+|Variable de nom de table ou de vue|Spécifiez le nom de la feuille de calcul ou de la plage dans une variable.<br /><br /> **Informations connexes :** [Utiliser des variables dans des packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Commande SQL|Récupérez des données à partir du fichier Excel à l'aide d'une requête SQL. |  
+|Commande SQL à partir d'une variable|Spécifiez le texte de la requête SQL dans une variable.|  
+  
+ **Aperçu**  
+ Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Vue de données** . L'aperçu peut afficher jusqu'à 200 lignes.  
+  
+### <a name="data-access-mode-dynamic-options"></a>Options dynamiques du mode d'accès aux données  
+  
+#### <a name="data-access-mode--table-or-view"></a>Mode d'accès aux données = Table ou vue  
+ **Nom de la feuille Excel**  
+ Sélectionnez le nom de la feuille de calcul ou de la plage nommée dans la liste des éléments disponibles dans le classeur Excel.  
+  
+#### <a name="data-access-mode--table-name-or-view-name-variable"></a>Mode d'accès aux données = Variable de nom de table ou de vue  
+ **Nom de la variable**  
+ Sélectionnez la variable contenant le nom de la feuille de calcul ou de la plage nommée.  
+  
+#### <a name="data-access-mode--sql-command"></a>Mode d'accès aux données = Commande SQL  
+ **Texte de la commande SQL**  
+ Entrez le texte d’une requête SQL, créez la requête en cliquant sur **Générer une requête**ou parcourez l’arborescence jusqu’au fichier qui contient le texte de la requête en cliquant sur **Parcourir**.  
+  
+ **Paramètres**  
+ Si vous avez entré une requête paramétrable en spécifiant ? comme espace réservé de paramètre dans le texte de la requête, utilisez la boîte de dialogue **Définition des paramètres de la requête** pour mapper des paramètres d’entrée de la requête à des variables du package.  
+  
+ **Build query**  
+ Utilisez la boîte de dialogue **Générateur de requêtes** pour construire la requête SQL visuellement.  
+  
+ **Parcourir**  
+ Dans la boîte de dialogue **Ouvrir** , localisez le fichier contenant le texte de la requête SQL.  
+  
+ **Analyser la requête**  
+ Vérifiez la syntaxe du texte de la requête.  
+  
+#### <a name="data-access-mode--sql-command-from-variable"></a>Mode d'accès aux données = Commande SQL à partir d'une variable  
+ **Nom de la variable**  
+ Sélectionnez la variable qui contient le texte de la requête SQL.  
+  
+## <a name="excel-source-editor-columns-page"></a>Éditeur de source Excel (page Colonnes)
+  La page **Colonnes** de la boîte de dialogue **Éditeur de source Excel** vous permet de mapper une colonne de sortie à chaque colonne externe (source).  
+  
+### <a name="options"></a>Options  
+ **Colonnes externes disponibles**  
+ Affiche la liste des colonnes externes disponibles dans la source de données. Vous ne pouvez pas ajouter ou supprimer des colonnes à l'aide de cette table.  
+  
+ **Colonne externe**  
+ Affiche les colonnes externes (sources) dans l'ordre de lecture de la tâche. Vous pouvez modifier cet ordre en désactivant les colonnes sélectionnées dans la table mentionnée ci-dessus, puis en sélectionnant les colonnes externes dans la liste, dans un ordre différent.  
+  
+ **Colonne de sortie**  
+ Spécifiez un nom unique pour chaque colonne de sortie. Le nom par défaut est celui de la colonne externe (source) sélectionnée ; vous pouvez néanmoins choisir n'importe quel nom unique et significatif. Le nom fourni sera affiché dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+  
+## <a name="excel-source-editor-error-output-page"></a>Éditeur de source Excel (page Sortie d'erreur)
+  La page **Sortie d’erreur** de la boîte de dialogue **Éditeur de source Excel** vous permet de sélectionner les options de gestion des erreurs et de définir les propriétés sur les colonnes de sortie d’erreur.  
+  
+### <a name="options"></a>Options  
+ **Entrée ou Sortie**  
+ Affichez le nom de la source de données.  
+  
+ **Colonne**  
+ Indique les colonnes externes (source) que vous avez sélectionnées à la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source Excel**.  
+  
+ **Erreur**  
+ Indiquez ce qui doit se produire lorsqu'une erreur se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
+  
+ **Rubriques connexes :** [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **Troncation**  
+ Indiquez ce qui doit se produire lorsqu'une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
+  
+ **Description**  
+ Affiche la description de l'erreur.  
+  
+ **Définir cette valeur sur les cellules sélectionnées**  
+ Indiquez ce qui doit se produire pour l'ensemble des cellules sélectionnées lorsqu'une erreur ou une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
+  
+ **Appliquer**  
+ Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
 ## <a name="related-content"></a>Contenu connexe  
   

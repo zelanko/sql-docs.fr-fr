@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.bulkinserttask.f1
+- sql13.dts.designer.bulkinserttask.connection.f1
+- sql13.dts.designer.bulkinserttask.general.f1
+- sql13.dts.designer.bulkinserttask.options.f1
 helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
@@ -20,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 81b72c67ee8d968a2452e7ede94fe8c390c53a9b
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 72f40019acada98168cf425dca983154e0e2dc8f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="bulk-insert-task"></a>tâche d'insertion en bloc
@@ -91,13 +94,7 @@ ms.lasthandoff: 08/03/2017
   
  Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
-  
--   [Éditeur de tâche d’insertion en bloc &#40;page Général&#41;](../../integration-services/control-flow/bulk-insert-task-editor-general-page.md)  
-  
--   [Éditeur de tâche d’insertion en bloc &#40;page Connexion&#41;](../../integration-services/control-flow/bulk-insert-task-editor-connection-page.md)  
-  
--   [Éditeur de tâche d’insertion en bloc &#40;page Options&#41;](../../integration-services/control-flow/bulk-insert-task-editor-options-page.md)  
+ Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
 -   [Page Expressions](../../integration-services/expressions/expressions-page.md)  
   
@@ -121,4 +118,103 @@ ms.lasthandoff: 08/03/2017
   
 -   Article technique, [Using SQL Server Integration Services to Bulk Load Data](http://go.microsoft.com/fwlink/?LinkId=233701), sur le site simple-talk.com.  
   
+## <a name="bulk-insert-task-editor-connection-page"></a>Éditeur de tâche d'insertion en bloc (page Connexion)
+  Utilisez la page **Connexion** de la boîte de dialogue **Éditeur de tâche d'insertion en bloc** pour définir la source et la destination de l'opération d'insertion en bloc et le format à utiliser.  
   
+ Pour en savoir plus sur l’utilisation des insertions en bloc, consultez [Tâche d’insertion en bloc](../../integration-services/control-flow/bulk-insert-task.md) et [Fichiers de format pour l’importation ou l’exportation de données &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
+  
+### <a name="options"></a>Options  
+ **Connexion**  
+ Sélectionnez un gestionnaire de connexions OLE DB dans la liste, ou cliquez sur \< **nouvelle connexion...** > pour créer une nouvelle connexion.  
+  
+ **Rubriques connexes :** [Gestionnaire de connexions OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+  
+ **Table de destination**  
+ Tapez le nom de la table de destination ou affichez ou sélectionnez une table ou une vue dans la liste.  
+  
+ **Format**  
+ Sélectionnez la source du format de l'insertion en bloc. Cette propriété dispose des options répertoriées dans le tableau suivant.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Utiliser un fichier**|Sélectionnez un fichier contenant la spécification de format. Cette option affiche l'option dynamique **FormatFile**.|  
+|**Spécifier**|Spécifiez le format. Cette option affiche les options dynamiques **RowDelimiter** et **ColumnDelimiter**.|  
+  
+ **Fichier**  
+ Sélectionnez un gestionnaire de connexions de fichiers ou de fichiers plats dans la liste, ou cliquez sur \< **nouvelle connexion...** > pour créer une nouvelle connexion.  
+  
+ L'emplacement du fichier dépend du moteur de base de données SQL Server spécifié dans le gestionnaire de connexions pour cette tâche. Le fichier texte doit être accessible au moteur de base de données SQL Server situé sur un disque dur local du serveur ou via un partage ou un lecteur mappé à SQL Server. Le fichier n'est pas accessible au runtime SSIS.  
+  
+ Si vous accédez au fichier source en utilisant un gestionnaire de connexions de fichiers plats, la tâche d'insertion en bloc n'utilise pas le format défini dans le gestionnaire de connexions de fichiers plats. Elle utilise à la place le format spécifié dans un fichier de format, ou les valeurs des propriétés RowDelimiter et ColumnDelimiter de la tâche.  
+  
+ **Rubriques connexes :** [Gestionnaire de connexions File](../../integration-services/connection-manager/file-connection-manager.md), [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md) 
+  
+ **Actualiser les tables**  
+ Actualise la liste des tables et des vues.  
+  
+### <a name="format-dynamic-options"></a>Options dynamiques de format  
+  
+#### <a name="format--use-file"></a>Format = Utiliser un fichier  
+ **FormatFile**  
+ Tapez le chemin du fichier de format ou cliquez sur le bouton avec des points de suspension **(…)** pour rechercher le fichier de format.  
+  
+#### <a name="format--specify"></a>Format = Spécifier  
+ **RowDelimiter**  
+ Spécifiez le délimiteur de ligne dans le fichier source. La valeur par défaut est **{CR}{LF}**.  
+  
+ **ColumnDelimiter**  
+ Spécifiez le délimiteur de colonne dans le fichier source. La valeur par défaut est **Tab**.  
+  
+## <a name="bulk-insert-task-editor-general-page"></a>Éditeur de tâche d'insertion en bloc (page Général)
+  Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche d'insertion en bloc** afin d'attribuer un nom et décrire la tâche d'insertion en bloc.  
+  
+### <a name="options"></a>Options  
+ **Nom**  
+ Permet d'attribuer un nom unique à la tâche d'insertion en bloc. Ce nom sert d'étiquette à l'icône de la tâche.  
+  
+> [!NOTE]  
+>  Les noms de tâche doivent être uniques dans un package.  
+  
+ **Description**  
+ Permet de fournir une description à la tâche d'insertion en bloc.  
+ 
+## <a name="bulk-insert-task-editor-options-page"></a>Éditeur de tâche d'insertion en bloc (page Options)
+  Utilisez la page **Options** de la boîte de dialogue **Éditeur de tâche d'insertion en bloc** afin de définir les propriétés de l'opération d'insertion en bloc. La tâche d'insertion en bloc copie des volumes importants de données dans une table ou une vue [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  
+ Pour en savoir plus sur l’utilisation des insertions en bloc, consultez [Tâche d’insertion en bloc](../../integration-services/control-flow/bulk-insert-task.md) et [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
+  
+### <a name="options"></a>Options  
+ **CodePage**  
+ Permet d'indiquer la page de codes des données dans le fichier de données.  
+  
+ **DataFileType**  
+ Permet d'indiquer la valeur correspondant au type de données à utiliser lors d'une opération de chargement.  
+  
+ **BatchSize**  
+ Permet d'indiquer le nombre de lignes contenues dans un traitement. La valeur par défaut correspond à la totalité du fichier de données. Si vous attribuez à **BatchSize** la valeur zéro, les données sont chargées dans un traitement unique.  
+  
+ **LastRow**  
+ Permet de spécifier la dernière ligne à copier.  
+  
+ **FirstRow**  
+ Permet de spécifier la première ligne à partir de laquelle la copie doit commencer.  
+  
+ **Options**  
+ |Terme|Définition|  
+|----------|----------------|  
+|**Contraintes de validation**|Permet de vérifier les contraintes s'appliquant à la table et aux colonnes.|  
+|**Conserver les valeurs NULL**|Permet de conserver les valeurs Null pendant l'opération d'insertion en bloc au lieu d'insérer des valeurs par défaut dans les colonnes vides.|  
+|**Activer l'insertion d'identité**|Permet d'insérer des valeurs existantes dans une colonne d'identité.|  
+|**Verrou de table**|Permet de verrouiller la table lors de l'opération d'insertion en bloc.|  
+|**Exécuter les déclencheurs**|Lance tout déclencheur d'insertion, de mise à jour ou de suppression sur la table.|  
+  
+ **SortedData**  
+ Implique l'ajout de la clause ORDER BY dans l'instruction d'insertion en bloc. Le nom de colonne que vous fournissez doit être celui d'une colonne valide pour la table de destination. La valeur par défaut est **false**. En d'autres termes, les données ne sont pas triées par une clause ORDER BY.  
+  
+ **MaxErrors**  
+ Permet de spécifier le nombre maximal d'erreurs tolérées avant l'annulation de l'opération d'insertion en bloc. La valeur 0 indique qu'un nombre illimité d'erreurs est autorisé.  
+  
+> [!NOTE]  
+>  Chaque ligne ne pouvant pas être importée par l'opération de chargement en masse est comptée comme une erreur.  
+  
+

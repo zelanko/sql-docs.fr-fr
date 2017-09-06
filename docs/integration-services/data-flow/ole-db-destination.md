@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.oledbdest.f1
+- sql13.dts.designer.oledbdestadapter.connection.f1
+- sql13.dts.designer.oledbdestadapter.mappings.f1
+- sql13.dts.designer.oledbdestadapter.errorhandling.f1
 helpviewer_keywords:
 - fast-load data access mode [Integration Services]
 - OLE DB destination [Integration Services]
@@ -25,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5a16dc276a0ed875c2343bf0b5de7739e3c2955a
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 4b765081a3897553bef2791bf72631908b5adc2c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="ole-db-destination"></a>Destination OLE DB
@@ -106,15 +109,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuring-the-ole-db-destination"></a>Configuration de la destination OLE DB  
  Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de destination OLE DB** , cliquez sur l'une des rubriques suivantes :  
-  
--   [Éditeur de destination OLE DB &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/ole-db-destination-editor-connection-manager-page.md)  
-  
--   [Éditeur de destination OLE DB &#40;page Mappages&#41;](../../integration-services/data-flow/ole-db-destination-editor-mappings-page.md)  
-  
--   [Éditeur de destination OLE DB &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/ole-db-destination-editor-error-output-page.md)  
-  
- La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programme. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
+ La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
   
 -   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
@@ -124,7 +119,186 @@ ms.lasthandoff: 08/03/2017
   
 -   [Charger des données à l'aide de la destination OLE DB](../../integration-services/data-flow/load-data-by-using-the-ole-db-destination.md)  
   
--   [Définir les propriétés d'un composant de flux de données](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+-   [Définir les propriétés d’un composant de flux de données](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## <a name="ole-db-destination-editor-connection-manager-page"></a>Éditeur de destination OLE DB (page Gestionnaire de connexions)
+  Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de destination OLE DB** pour sélectionner la connexion OLE DB de la destination. Cette page vous permet également de sélectionner une table ou une vue à partir de la base de données.  
+  
+> [!NOTE]  
+>  Si la source de données est [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, la source de données requiert un gestionnaire de connexions différent des versions antérieures d'Excel. Pour plus d’informations, consultez [Établir une connexion à un classeur Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md).  
+  
+> [!NOTE]  
+>  La propriété **CommandTimeout** de la destination OLE DB n’est pas disponible dans **l’Éditeur de destination OLE DB**, mais peut être définie à l’aide de **l’Éditeur avancé**. De plus, certaines options de chargement rapide sont uniquement disponibles dans **l’Éditeur avancé**. Pour plus d’informations sur ces propriétés, consultez la section sur la destination OLE DB dans [Propriétés personnalisées OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md).  
+  
+### <a name="static-options"></a>Options statiques  
+ **Gestionnaire de connexions OLE DB**  
+ Sélectionnez un gestionnaire de connexions existant dans la liste ou créez une connexion en cliquant sur **Nouveau**.  
+  
+ **Nouveau**  
+ Créez un gestionnaire de connexions à l’aide de la boîte de dialogue **Configurer le gestionnaire de connexions OLE DB** .  
+  
+ **Mode d'accès aux données**  
+ Spécifiez la méthode de chargement des données dans la destination. Le chargement de données du jeu de caractères codés sur deux octets (DBCS) nécessite l'utilisation d'une des options de chargement rapide. Pour plus d’informations sur les modes d’accès aux données à chargement rapide, qui sont optimisés pour les insertions en bloc, consultez [Destination OLE DB](../../integration-services/data-flow/ole-db-destination.md).  
+  
+|Option|Description|  
+|------------|-----------------|  
+|Table ou vue|Chargez les données dans une table ou une vue de la destination OLE DB.|  
+|Table ou vue - chargement rapide|Chargez les données dans une table ou une vue de la destination OLE DB et utilisez l'option de chargement rapide. Pour plus d’informations sur les modes d’accès aux données à chargement rapide, qui sont optimisés pour les insertions en bloc, consultez [Destination OLE DB](../../integration-services/data-flow/ole-db-destination.md).|  
+|Variable de nom de table ou de vue|Spécifiez le nom de la table ou de la vue dans une variable.<br /><br /> **Informations connexes**: [Utiliser des variables dans des packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Variable de nom de table ou de vue - chargement rapide|Spécifiez le nom de la table ou de la vue dans une variable et chargez les données à l'aide de l'option de chargement rapide. Pour plus d’informations sur les modes d’accès aux données à chargement rapide, qui sont optimisés pour les insertions en bloc, consultez [Destination OLE DB](../../integration-services/data-flow/ole-db-destination.md).|  
+|Commande SQL|Chargez les données dans la destination OLE DB à l'aide d'une requête SQL.|  
+  
+ **Aperçu**  
+ Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Visualiser les résultats de la requête** . L'aperçu peut afficher jusqu'à 200 lignes.  
+  
+### <a name="data-access-mode-dynamic-options"></a>Options dynamiques du mode d'accès aux données  
+ Chacun des paramètres **Mode d’accès aux données** affiche un jeu dynamique d’options spécifiques au paramètre en question. Les sections suivantes décrivent chacune des options dynamiques disponibles pour chaque paramètre **Mode d’accès aux données** .  
+  
+#### <a name="data-access-mode--table-or-view"></a>Mode d'accès aux données = Table ou vue  
+ **Nom de la table ou de la vue**  
+ Sélectionnez le nom de la table ou de la vue dans la liste de celles qui sont disponibles dans la source de données.  
+  
+ **Nouveau**  
+ Utilisez la boîte de dialogue **Créer une table** pour créer une table.  
+  
+> [!NOTE]  
+>  Quand vous cliquez sur **Nouvelle**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] génère une instruction CREATE TABLE par défaut, basée sur la source de données connectée. Cette instruction CREATE TABLE par défaut n'inclut pas l'attribut FILESTREAM, même si la table source inclut une colonne dans laquelle l'attribut FILESTREAM est déclaré. Pour exécuter un composant [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] avec l'attribut FILESTREAM, implémentez d'abord le stockage FILESTREAM sur la base de données de destination. Ajoutez ensuite l’attribut FILESTREAM à l’instruction CREATE TABLE dans la boîte de dialogue **Créer une table**. Pour plus d’informations, consultez [Données blob &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+  
+#### <a name="data-access-mode--table-or-view--fast-load"></a>Mode d'accès aux données = Table ou vue - chargement rapide  
+ **Nom de la table ou de la vue**  
+ Sélectionnez une table ou une vue dans la base de données à l’aide de cette liste, ou créez une table en cliquant sur **Nouveau**.  
+  
+ **Nouveau**  
+ Utilisez la boîte de dialogue **Créer une table** pour créer une table.  
+  
+> [!NOTE]  
+>  Quand vous cliquez sur **Nouvelle**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] génère une instruction CREATE TABLE par défaut, basée sur la source de données connectée. Cette instruction CREATE TABLE par défaut n'inclut pas l'attribut FILESTREAM, même si la table source inclut une colonne dans laquelle l'attribut FILESTREAM est déclaré. Pour exécuter un composant [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] avec l'attribut FILESTREAM, implémentez d'abord le stockage FILESTREAM sur la base de données de destination. Ajoutez ensuite l’attribut FILESTREAM à l’instruction CREATE TABLE dans la boîte de dialogue **Créer une table**. Pour plus d’informations, consultez [Données blob &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+  
+ **Conserver l'identité**  
+ Spécifiez si les valeurs d'identité doivent être copiées lors du chargement des données. Cette propriété n'est disponible qu'avec l'option de chargement rapide. La valeur par défaut de cette propriété est **false**.  
+  
+ **Conserver les valeurs NULL**  
+ Spécifiez si les valeurs NULL doivent être copiées lors du chargement des données. Cette propriété n'est disponible qu'avec l'option de chargement rapide. La valeur par défaut de cette propriété est **false**.  
+  
+ **Verrou de table**  
+ Spécifiez si la table est verrouillée pendant le chargement. La valeur par défaut de cette propriété est **true**.  
+  
+ **Contraintes de validation**  
+ Spécifiez si la destination vérifie les contraintes lors du chargement des données. La valeur par défaut de cette propriété est **true**.  
+  
+ **Lignes par lot**  
+ Permet d'indiquer le nombre de lignes contenues dans un traitement. La valeur par défaut de cette propriété est **–1**, ce qui signifie qu’aucune valeur n’a été attribuée.  
+  
+> [!NOTE]  
+>  Effacez la zone de texte dans **l’Éditeur de destination OLE DB** pour indiquer que vous ne voulez pas assigner de valeur personnalisée à cette propriété.  
+  
+ **Taille de validation d'insertion maximale**  
+ Spécifiez la taille du lot que la destination OLE DB tente de valider pendant les opérations de chargement rapide. La valeur **0** indique que toutes les données sont validées dans un seul lot après traitement de toutes les lignes.  
+  
+> [!NOTE]  
+>  Une valeur de **0** peut faire en sorte que le package en cours d’exécution cesse de répondre si la destination OLE DB et un autre composant de flux de données mettent à jour la même table source. Pour empêcher que le package ne s’arrête, affectez la valeur **2147483647** à l’option **Taille de validation d’insertion maximale**.  
+  
+ Si vous spécifiez une valeur pour cette propriété, la destination valide les lignes par lot qui ont la plus petite taille entre (a) la **Taille de validation d’insertion maximale**et (b) les lignes restantes dans le tampon qui sont en cours de traitement.  
+  
+> [!NOTE]  
+>  Tout échec de contrainte à la destination entraîne l’échec de la totalité du lot de lignes définies par la **Taille de validation d’insertion maximale** .  
+  
+#### <a name="data-access-mode--table-name-or-view-name-variable"></a>Mode d'accès aux données = Variable de nom de table ou de vue  
+ **Nom de la variable**  
+ Sélectionnez la variable qui contient le nom de la table ou de la vue.  
+  
+#### <a name="data-access-mode--table-name-or-view-name-variable--fast-load"></a>Mode d'accès aux données = Variable de nom de table ou de vue - chargement rapide  
+ **Nom de la variable**  
+ Sélectionnez la variable qui contient le nom de la table ou de la vue.  
+  
+ **Nouveau**  
+ Utilisez la boîte de dialogue **Créer une table** pour créer une table.  
+  
+> [!NOTE]  
+>  Quand vous cliquez sur **Nouvelle**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] génère une instruction CREATE TABLE par défaut, basée sur la source de données connectée. Cette instruction CREATE TABLE par défaut n'inclut pas l'attribut FILESTREAM, même si la table source inclut une colonne dans laquelle l'attribut FILESTREAM est déclaré. Pour exécuter un composant [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] avec l'attribut FILESTREAM, implémentez d'abord le stockage FILESTREAM sur la base de données de destination. Ajoutez ensuite l’attribut FILESTREAM à l’instruction CREATE TABLE dans la boîte de dialogue **Créer une table**. Pour plus d’informations, consultez [Données blob &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+  
+ **Conserver l'identité**  
+ Spécifiez si les valeurs d'identité doivent être copiées lors du chargement des données. Cette propriété n'est disponible qu'avec l'option de chargement rapide. La valeur par défaut de cette propriété est **false**.  
+  
+ **Conserver les valeurs NULL**  
+ Spécifiez si les valeurs NULL doivent être copiées lors du chargement des données. Cette propriété n'est disponible qu'avec l'option de chargement rapide. La valeur par défaut de cette propriété est **false**.  
+  
+ **Verrou de table**  
+ Spécifiez si la table est verrouillée pendant le chargement. La valeur par défaut de cette propriété est **false**.  
+  
+ **Contraintes de validation**  
+ Spécifiez si la tâche vérifie les contraintes. La valeur par défaut de cette propriété est **false**.  
+  
+ **Lignes par lot**  
+ Permet d'indiquer le nombre de lignes contenues dans un traitement. La valeur par défaut de cette propriété est **–1**, ce qui signifie qu’aucune valeur n’a été attribuée.  
+  
+> [!NOTE]  
+>  Effacez la zone de texte dans **l’Éditeur de destination OLE DB** pour indiquer que vous ne voulez pas assigner de valeur personnalisée à cette propriété.  
+  
+ **Taille de validation d'insertion maximale**  
+ Spécifiez la taille du lot que la destination OLE DB tente de valider pendant les opérations de chargement rapide. La valeur par défaut, **2147483647** , indique que toutes les données sont validées dans un seul lot après traitement de toutes les lignes.  
+  
+> [!NOTE]  
+>  Une valeur de **0** peut faire en sorte que le package en cours d’exécution cesse de répondre si la destination OLE DB et un autre composant de flux de données mettent à jour la même table source. Pour empêcher que le package ne s’arrête, affectez la valeur **2147483647** à l’option **Taille de validation d’insertion maximale**.  
+  
+#### <a name="data-access-mode--sql-command"></a>Mode d'accès aux données = Commande SQL  
+ **Texte de la commande SQL**  
+ Entrez le texte d’une requête SQL, générez la requête en cliquant sur **Générer une requête**ou recherchez le fichier qui contient le texte de la requête en cliquant sur **Parcourir**.  
+  
+> [!NOTE]  
+>  La destination OLE DB ne prend pas en charge les paramètres. Si vous devez exécuter une instruction INSERT paramétrable, envisagez d'utiliser la transformation de commande OLE DB. Pour plus d’informations, consultez [OLE DB Command Transformation](../../integration-services/data-flow/transformations/ole-db-command-transformation.md).  
+  
+ **Build query**  
+ Utilisez la boîte de dialogue **Générateur de requêtes** pour construire la requête SQL visuellement.  
+  
+ **Parcourir**  
+ Dans la boîte de dialogue **Ouvrir** , localisez le fichier contenant le texte de la requête SQL.  
+  
+ **Analyser la requête**  
+ Vérifiez la syntaxe du texte de la requête.  
+  
+## <a name="ole-db-destination-editor-mappings-page"></a>Éditeur de destination OLE DB (page Mappages)
+  La page **Mappages** de la boîte de dialogue **Éditeur de destination OLE DB** vous permet de mapper les colonnes d’entrée aux colonnes de destination.  
+  
+### <a name="options"></a>Options  
+ **Colonnes d'entrée disponibles**  
+ Affichez la liste des colonnes d'entrée disponibles. Au moyen du glisser-déplacer, mappez les colonnes d'entrée disponibles dans la table sur des colonnes de destination.  
+  
+ **Colonnes de destination disponibles**  
+ Affichez la liste des colonnes de destination disponibles. Utilisez une opération de glisser-déplacer pour mapper les colonnes de destination disponibles dans la table aux colonnes d'entrée.  
+  
+ **Colonne d'entrée**  
+ Affichez les colonnes d’entrée que vous avez sélectionnées. Vous pouvez supprimer des mappages en sélectionnant  **\<ignorer >** pour exclure des colonnes de la sortie.  
+  
+ **Colonne de destination**  
+ Indique chaque colonne de destination disponible, qu'elle soit mappée ou non.  
+  
+## <a name="ole-db-destination-editor-error-output-page"></a>Éditeur de destination OLE DB (page Sortie d'erreur)
+  Utilisez la page **Sortie d'erreur** de la boîte de dialogue **Éditeur de destination OLE DB** pour définir les options de gestion des erreurs.  
+  
+### <a name="options"></a>Options  
+ **Entrée/sortie**  
+ Affichez le nom de l'entrée.  
+  
+ **Colonne**  
+ Non utilisé.  
+  
+ **Erreur**  
+ Indiquez ce qui doit se produire lorsqu'une erreur se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
+  
+ **Rubriques connexes :** [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **Troncation**  
+ Non utilisé.  
+  
+ **Description**  
+ Affichez la description de l'opération.  
+  
+ **Définir cette valeur sur les cellules sélectionnées**  
+ Indiquez ce qui doit se produire pour l'ensemble des cellules sélectionnées lorsqu'une erreur ou une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
+  
+ **Appliquer**  
+ Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
 ## <a name="related-content"></a>Contenu connexe  
  [Source OLE DB](../../integration-services/data-flow/ole-db-source.md)  

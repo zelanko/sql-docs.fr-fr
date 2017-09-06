@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.xmlsource.f1
+- sql13.dts.designer.xmlsourceadapter.connectionmanager.f1
+- sql13.dts.designer.xmlsourceadapter.columns.f1
+- sql13.dts.designer.xmlsourceadapter.erroroutput.f1
 helpviewer_keywords:
 - sources [Integration Services], XML
 - XML source [Integration Services]
@@ -21,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0e3af9fa8b743b01b222d1596197aa83bbb39854
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 53aaa24f90570856354e1f7ebc46fea9eac0730f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="xml-source"></a>Source XML
@@ -77,14 +80,6 @@ ms.lasthandoff: 08/03/2017
   
  Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de source XML** , cliquez sur l’une des rubriques suivantes :  
-  
--   [Éditeur de source XML &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/xml-source-editor-connection-manager-page.md)  
-  
--   [Éditeur de source XML &#40;page Colonnes&#41;](../../integration-services/data-flow/xml-source-editor-columns-page.md)  
-  
--   [Éditeur de source XML &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/xml-source-editor-error-output-page.md)  
-  
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
   
 -   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -94,6 +89,88 @@ ms.lasthandoff: 08/03/2017
  Pour plus d’informations sur la définition des propriétés, cliquez sur l’une des rubriques suivantes :  
   
 -   [Définir les propriétés d’un composant de flux de données](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## <a name="xml-source-editor-connection-manager-page"></a>Éditeur de source XML (page Gestionnaire de connexions)
+  Utilisez la page **Gestionnaire de connexions** de l' **Éditeur de source XML** pour spécifier un fichier XML et le schéma XSD qui transforme les données XML.  
+  
+### <a name="static-options"></a>Options statiques  
+ **Mode d'accès aux données**  
+ Spécifiez la méthode de sélection des données dans la source.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|Emplacement du fichier XML|Récupère des données dans un fichier XML.|  
+|Fichier XML à partir d'une variable|Spécifiez le nom de fichier XML dans une variable.<br /><br /> **Informations connexes**: [Utiliser des variables dans des packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Données XML à partir d'une variable|Récupère des données XML à partir d'une variable.|  
+  
+ **Utiliser le schéma inclus**  
+ Indique si les données de la source XML contiennent le schéma XSD définissant et validant sa structure et ses données.  
+  
+ **Emplacement XSD**  
+ Tapez le chemin et le nom de fichier du schéma XSD, ou recherchez le fichier en cliquant sur **Parcourir**.  
+  
+ **Parcourir**  
+ Dans la boîte de dialogue **Ouvrir** , recherchez le fichier de schéma XSD.  
+  
+ **Créer XSD**  
+ Utilisez la boîte de dialogue **Enregistrer sous** pour sélectionner l’emplacement du fichier de schéma XSD généré automatiquement. L'éditeur détermine le schéma en fonction de la structure des données XML.  
+  
+### <a name="data-access-mode-dynamic-options"></a>Options dynamiques du mode d'accès aux données  
+  
+#### <a name="data-access-mode--xml-file-location"></a>Mode d'accès aux données = emplacement du fichier XML  
+ **Emplacement XML**  
+ Tapez le chemin et le nom du fichier de données XML, ou recherchez le fichier en cliquant sur **Parcourir**.  
+  
+ **Parcourir**  
+ Dans la boîte de dialogue **Ouvrir** , recherchez le fichier de données XML.  
+  
+#### <a name="data-access-mode--xml-file-from-variable"></a>Mode d'accès aux données = fichier XML à partir d'une variable  
+ **Nom de la variable**  
+ Sélectionnez la variable contenant le chemin d'accès et le nom du fichier XML.  
+  
+#### <a name="data-access-mode--xml-data-from-variable"></a>Mode d'accès aux données = données XML à partir d'une variable  
+ **Nom de la variable**  
+ Sélectionnez la variable qui contient les données XML.  
+  
+## <a name="xml-source-editor-columns-page"></a>Éditeur de source XML (page Colonnes)
+  Le nœud **Colonnes** de la boîte de dialogue **Éditeur de source XML** vous permet de mapper une colonne de sortie à une colonne externe (source).  
+  
+### <a name="options"></a>Options  
+ **Colonnes externes disponibles**  
+ Affiche la liste des colonnes externes disponibles dans la source de données. Vous ne pouvez pas ajouter ou supprimer des colonnes à l'aide de cette table.  
+  
+ **Colonne externe**  
+ Affiche les colonnes externes (sources) dans l'ordre de lecture de la tâche. Vous pouvez modifier cet ordre en désactivant les colonnes sélectionnées dans la table affichée dans l'éditeur, puis en sélectionnant les colonnes externes dans la liste, dans un ordre différent.  
+  
+ **Colonne de sortie**  
+ Spécifiez un nom unique pour chaque colonne de sortie. Le nom par défaut est celui de la colonne externe (source) sélectionnée ; vous pouvez néanmoins choisir n'importe quel nom unique et significatif. Le nom fourni sera affiché dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+  
+## <a name="xml-source-editor-error-output-page"></a>Éditeur de source XML (page Sortie d'erreur)
+  Utilisez la page **Sortie d’erreur** de la boîte de dialogue **Éditeur de source XML** pour sélectionner les options de gestion des erreurs et pour définir les propriétés des colonnes de sortie d’erreur.  
+  
+### <a name="options"></a>Options  
+ **Entrée/sortie**  
+ Affichez le nom de la source de données.  
+  
+ **Colonne**  
+ Affichez les colonnes externes (sources) que vous avez sélectionnées dans la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source XML**.  
+  
+ **Erreur**  
+ Indiquez ce qui doit se produire lorsqu'une erreur se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
+  
+ **Rubriques connexes :** [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **Troncation**  
+ Indiquez ce qui doit se produire lorsqu'une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
+  
+ **Description**  
+ Affiche la description de l'erreur.  
+  
+ **Définir cette valeur sur les cellules sélectionnées**  
+ Indiquez ce qui doit se produire pour l'ensemble des cellules sélectionnées lorsqu'une erreur ou une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
+  
+ **Appliquer**  
+ Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
 ## <a name="related-tasks"></a>Tâches associées  
  [Extraire des données à l’aide de la source XML](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  

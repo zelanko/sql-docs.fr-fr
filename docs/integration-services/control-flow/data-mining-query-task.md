@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataminingquerytask.f1
+- sql13.dts.designer.dmquerytask.miningmodel.f1
+- sql13.dts.designer.dmquerytask.query.f1
+- sql13.dts.designer.dmquerytask.output.f1
 helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
@@ -20,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0b171b2ce21054b6cca5f2de64fa1d04f4fa00c9
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: efffacb30616a880c628894dac2f49201c2b8e24
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="data-mining-query-task"></a>Tâche de requête d'exploration de données
@@ -53,14 +56,6 @@ ms.lasthandoff: 08/03/2017
   
  Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
-  
--   [Éditeur de tâche de requête d’exploration de données &#40;onglet Modèle d’exploration de données&#41;](../../integration-services/control-flow/data-mining-query-task-editor-mining-model-tab.md)  
-  
--   [Éditeur de tâche de requête d’exploration de données &#40;onglet Requête&#41;](../../integration-services/control-flow/data-mining-query-task-editor-query-tab.md)  
-  
--   [Éditeur de tâche de requête d’exploration de données &#40;onglet Sortie&#41;](../../integration-services/control-flow/data-mining-query-task-editor-output-tab.md)  
-  
 > [!NOTE]  
 >  L'éditeur de tâche de requête d'exploration de données n'a pas de page Expressions. À la place, utilisez la fenêtre **Propriétés** pour accéder aux outils de création et de gestion des expressions des propriétés de la tâche de requête d'exploration de données.  
   
@@ -73,4 +68,120 @@ ms.lasthandoff: 08/03/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.DMQueryTask.DMQueryTask>  
   
+## <a name="data-mining-query-task-editor-mining-model-tab"></a>Éditeur de tâche de requête d'exploration de données (onglet Modèle d'exploration de données)
+  Utilisez l’onglet **Modèle d’exploration de données** de la boîte de dialogue **Tâche de requête d’exploration de données** pour spécifier la structure et le modèle d’exploration de données à utiliser.  
   
+ Pour en savoir plus sur l’implémentation de l’exploration de données dans les packages, consultez [Tâche de requête d’exploration de données](../../integration-services/control-flow/data-mining-query-task.md) et [Solutions d’exploration de données](../../analysis-services/data-mining/data-mining-solutions.md).  
+  
+### <a name="general-options"></a>Options générales  
+ **Nom**  
+ Fournissez un nom unique pour la tâche de requête d'exploration de données. Ce nom sert d'étiquette à l'icône de la tâche.  
+  
+> [!NOTE]  
+>  Les noms de tâche doivent être uniques dans un package.  
+  
+ **Description**  
+ Saisissez la description de la tâche de requête d'exploration de données.  
+  
+### <a name="mining-model-tab-options"></a>Options de l'onglet Modèle d'exploration de données  
+ **Connexion**  
+ Choisissez un gestionnaire de connexions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans la liste ou cliquez sur **Nouveau** pour créer un gestionnaire de connexions.  
+  
+ **Rubriques connexes :**  [Gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+  
+ **Nouveau**  
+ Créez un gestionnaire de connexions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+  
+ **Rubriques connexes :** [Référence de l’interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+  
+ **Structure d'exploration de données**  
+ Sélectionnez une structure d'exploration de données dans la liste.  
+  
+ **Modèles d'exploration de données**  
+ Sélectionnez un modèle d'exploration de données qui repose sur la structure sélectionnée.  
+
+## <a name="data-mining-query-task-editor-query-tab"></a>Éditeur de tâche de requête d'exploration de données (onglet Requête)
+  Utilisez l’onglet **Requête** de la boîte de dialogue **Tâche de requête d’exploration de données** pour créer des requêtes de prédiction basées sur un modèle d’exploration de données. Dans cette boîte de dialogue, vous pouvez également lier des paramètres et des ensembles de résultats à des variables.  
+  
+ Pour en savoir plus sur l’implémentation de l’exploration de données dans les packages, consultez [Tâche de requête d’exploration de données](../../integration-services/control-flow/data-mining-query-task.md) et [Solutions d’exploration de données](../../analysis-services/data-mining/data-mining-solutions.md).  
+  
+### <a name="general-options"></a>Options générales  
+ **Nom**  
+ Fournissez un nom unique pour la tâche de requête d'exploration de données. Ce nom sert d'étiquette à l'icône de la tâche.  
+  
+> [!NOTE]  
+>  Les noms de tâche doivent être uniques dans un package.  
+  
+ **Description**  
+ Saisissez la description de la tâche de requête d'exploration de données.  
+  
+### <a name="build-query-tab-options"></a>Options de l'onglet Générer la requête  
+ **Requête d'exploration de données**  
+ Tapez une requête d'exploration de données.  
+  
+ **Rubriques connexes :** [Guide de référence du langage DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md)  
+  
+ **Générer une nouvelle requête**  
+ Créez la requête d'exploration de données en utilisant un outil graphique.  
+  
+ **Rubriques connexes :** [Data Mining Query](../../integration-services/control-flow/data-mining-query.md)  
+  
+### <a name="parameter-mapping-tab-options"></a>Options de l'onglet Mappage de paramètre  
+ **Nom du paramètre**  
+ Vous pouvez également mettre à jour le nom du paramètre. Mappez le paramètre à une variable en sélectionnant cette dernière dans la liste **Nom de la variable** .  
+  
+ **Nom de la variable**  
+ Sélectionnez une variable dans la liste pour l'associer au paramètre.  
+  
+ **Ajouter**  
+ Ajoute un paramètre à la liste.  
+  
+ **Supprimer**  
+ Sélectionnez un paramètre, puis cliquez sur **Supprimer**.  
+  
+### <a name="result-set-tab-options"></a>Options de l'onglet Ensemble de résultats  
+ **Nom de résultat**  
+ Vous pouvez également mettre à jour le nom de l'ensemble de résultats. Mappez le résultat à une variable en sélectionnant cette dernière dans la liste **Nom de la variable** .  
+  
+ Après avoir ajouté un résultat en cliquant sur **Ajouter**, définissez un nom unique pour le résultat.  
+  
+ **Nom de la variable**  
+ Sélectionnez une variable dans la liste pour l'associer à l'ensemble de résultats.  
+  
+ **Type de résultat**  
+ Indique si une ligne ou un ensemble de résultats complet doit être retourné.  
+  
+ **Ajouter**  
+ Ajoute un ensemble de résultats à la liste.  
+  
+ **Supprimer**  
+ Sélectionnez un résultat et cliquez sur **Supprimer**.  
+## <a name="data-mining-query-task-editor-output-tab"></a>Éditeur de tâche de requête d'exploration de données (onglet Sortie)
+  Utilisez l'onglet **Sortie** de la boîte de dialogue **Éditeur de tâche de requête d'exploration de données** pour définir la destination de la requête de prédiction.  
+  
+ Pour en savoir plus sur l’implémentation de l’exploration de données dans les packages, consultez [Tâche de requête d’exploration de données](../../integration-services/control-flow/data-mining-query-task.md) et [Solutions d’exploration de données](../../analysis-services/data-mining/data-mining-solutions.md).  
+  
+### <a name="general-options"></a>Options générales  
+ **Nom**  
+ Fournissez un nom unique pour la tâche de requête d'exploration de données. Ce nom sert d'étiquette à l'icône de la tâche.  
+  
+> [!NOTE]  
+>  Les noms de tâche doivent être uniques dans un package.  
+  
+ **Description**  
+ Saisissez la description de la tâche de requête d'exploration de données.  
+  
+### <a name="output-tab-options"></a>Options de l'onglet Sortie  
+ **Connexion**  
+ Sélectionnez un gestionnaire de connexions dans la liste ou cliquez sur **Nouveau** pour en créer un.  
+  
+ **Nouveau**  
+ Crée un gestionnaire de connexions. Vous ne pouvez utiliser que les types de gestionnaires de connexions ADO.NET et OLE DB.  
+  
+ **Table de sortie**  
+ Définissez la table dans laquelle la requête de prédiction écrit ses résultats.  
+  
+ **Supprimer et recréer la table de sortie**  
+ Indiquez si la requête de prédiction doit remplacer le contenu de la table de destination en supprimant, puis en recréant la table.  
+  
+

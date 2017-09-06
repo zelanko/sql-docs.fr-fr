@@ -11,16 +11,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.cdcsource.f1
+- sql13.ssis.designer.cdcsource.connection.f1
+- sql13.ssis.designer.cdcsource.columns.f1
+- sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 031c5321bc17307a12403d974380eb710c841653
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 1fa9085d2b60f5416fe11359f1c2965ac38f9ee7
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="cdc-source"></a>Source CDC
@@ -55,7 +58,7 @@ ms.lasthandoff: 08/03/2017
   
 -   **Colonnes de ligne d’erreur**: données d’enregistrement à l’origine de l’erreur.  
   
- Selon le comportement paramétré pour les erreurs, la source CDC prend en charge les erreurs de retour (conversion de données, troncation) qui se produisent pendant le processus d'extraction dans la sortie d'erreur. Pour plus d’informations, consultez [Éditeur de source CDC &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md).  
+ Selon le comportement paramétré pour les erreurs, la source CDC prend en charge les erreurs de retour (conversion de données, troncation) qui se produisent pendant le processus d'extraction dans la sortie d'erreur.  
   
 ## <a name="data-type-support"></a>Prise en charge du type de données  
  Le composant source CDC pour Microsoft prend en charge tous les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sont mappés à des types de données SSIS appropriés.  
@@ -117,15 +120,132 @@ use <cdc-enabled-database-name>
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Éditeur de source CDC &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
-  
--   [Éditeur de Source de capture de données modifiées &#40; Page colonnes &#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
-  
--   [Éditeur de source CDC &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
-  
 -   [Propriétés personnalisées des sources CDC](../../integration-services/data-flow/cdc-source-custom-properties.md)  
   
--   [Extraire des données modifiées à l'aide de la source de capture de données modifiées](../../integration-services/data-flow/extract-change-data-using-the-cdc-source.md)  
+-   [Extraire des données modifiées à l’aide de la source de capture de données modifiées](../../integration-services/data-flow/extract-change-data-using-the-cdc-source.md)  
+  
+## <a name="cdc-source-editor-connection-manager-page"></a>Éditeur de source CDC (page Gestionnaire de connexions)
+  Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source CDC** pour sélectionner le gestionnaire de connexions ADO.NET de la base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à partir de laquelle la source CDC lit les lignes modifiées (la base de données CDC). Une fois la base de données CDC sélectionnée, vous devez sélectionner une table capturée dans la base de données.  
+  
+ Pour plus d'informations sur la source CDC, consultez [CDC Source](../../integration-services/data-flow/cdc-source.md).  
+  
+### <a name="task-list"></a>Liste des tâches  
+ **Pour ouvrir l'Éditeur de source CDC (page Gestionnaire de connexions)**  
+  
+1.  Dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], ouvrez le package [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] qui possède la source CDC.  
+  
+2.  Sous l’onglet **Flux de données** , double-cliquez sur la source CDC.  
+  
+3.  Dans **l’Éditeur de source CDC**, cliquez sur **Gestionnaire de connexions**.  
+  
+### <a name="options"></a>Options  
+ **Gestionnaire de connexions ADO.NET**  
+ Sélectionnez un gestionnaire de connexions existant dans la liste ou cliquez sur **Nouveau** pour créer une connexion. La connexion doit être établie avec une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activée pour la capture de données modifiées et dans laquelle la table de modifications sélectionnée est localisée.  
+  
+ **Nouveau**  
+ Cliquez sur **Nouveau**. La boîte de dialogue **Configurer l’Éditeur du gestionnaire de connexions ADO.NET** s’ouvre et vous permet de créer un gestionnaire de connexions.  
+  
+ **Table CDC**  
+ Sélectionnez la table source CDC qui contient les modifications capturées que vous souhaitez lire et envoyer aux composants SSIS en aval pour le traitement.  
+  
+ **Instance de capture**  
+ Sélectionnez ou tapez le nom de l'instance de capture CDC avec la table CDC à lire.  
+  
+ Une table source capturée peut contenir une ou deux instances capturées pour gérer la transition transparente de la définition de table lors des modifications de schéma. Si plusieurs instances de capture sont définies pour la table source qui est capturée, sélectionnez l'instance de capture à utiliser ici. Le nom d’instance par défaut capture pour une table [schema]. [table] est \<schéma > _\<table >, mais que les noms d’instance de capture en cours d’utilisation peuvent être différents. La table réelle qui est lu à partir d’est la table CDC **cdc.\< instance de capture > _CT**.  
+  
+ **Mode de traitement CDC**  
+ Sélectionnez le mode de traitement le plus adapté pour la gestion de vos besoins de traitement. Les options possibles sont les suivantes :  
+  
+-   **Tout**: retourne les modifications apportées à la plage de capture de données modifiées actuelle sans les valeurs **Avant la mise à jour** .  
+  
+-   **Tout avec les anciennes valeurs**: retourne les modifications apportées à la plage de traitement de capture de données modifiées actuelle, dont les anciennes valeurs (**Avant la mise à jour**). Chaque opération de mise à jour utilise deux lignes, une avec les valeurs avant la mise à jour et une avec la valeur après la mise à jour.  
+  
+-   **Net**: retourne une seule ligne de modification par ligne source modifiée dans la plage de capture de données modifiées actuelle. Si une ligne source a été mise à jour plusieurs fois, la modification associée est appliquée (par exemple, l'insertion et la mise à jour sont considérées comme une mise à jour unique, et la mise à jour et la suppression sont considérées comme une suppression unique). Lorsque vous travaillez dans le mode de traitement de modifications Net, il est possible de fractionner les modifications apportées aux sorties de suppression, d'insertion et de mise à jour et de les traiter en parallèle car la ligne source apparaît dans plusieurs sorties.  
+  
+-   **NET avec masque de mise à jour**: ce mode est semblable au mode Net standard, mais il ajoute également des colonnes booléennes avec le modèle de nom **__ $\<nom de colonne >\__Changed** indiquant les colonnes modifiées en cours de modification ligne.  
+  
+-   **Net avec fusion** : ce mode est semblable au mode Net standard, à ceci près que les opérations d’insertion et de mise à jour sont fusionnées en une seule opération de fusion (UPSERT).  
+  
+> [!NOTE]  
+>  Pour toutes les options de modifications Net, la table source doit avoir une clé primaire ou un index unique. Pour les tables sans clé primaire ou sans index unique, vous devez utiliser l’option **Tout** .  
+  
+ **Variable contenant l'état CDC**  
+ Sélectionnez la variable de package de chaîne SSIS qui gère l'état de capture de données modifiées pour le contexte de capture de données modifiées actuel. Pour plus d’informations sur la variable d’état CDC, consultez [Définir une variable d’état](../../integration-services/data-flow/define-a-state-variable.md).  
+  
+ **Inclure la colonne de l'indicateur de retraitement**  
+ Cochez cette case pour créer une colonne spéciale de sortie nommée ***** __$reprocessing *****.  
+  
+ Cette colonne a la valeur **true** quand la plage de traitement CDC chevauche la plage de traitement initiale (la plage de NSE correspondant à la période de charge initiale) ou lorsqu’une plage de traitement CDC est retraitée suite à une erreur lors d’une exécution précédente. Cette colonne d'indicateur permet au développeur SSIS de gérer les erreurs différemment lors du retraitement des modifications (par exemple, les actions telles que la suppression d'une ligne inexistante et une insertion ayant échoué sur une clé dupliquée peuvent être ignorées).  
+  
+ Pour plus d’informations, consultez [Propriétés personnalisées des sources CDC](../../integration-services/data-flow/cdc-source-custom-properties.md).  
+  
+## <a name="cdc-source-editor-columns-page"></a>Éditeur de source CDC (page Colonnes)
+  Utilisez la page **Colonnes** de la boîte de dialogue **Éditeur de source CDC** pour mapper une colonne de sortie à chaque colonne externe (source).  
+  
+### <a name="task-list"></a>Liste des tâches  
+ **Pour ouvrir l'Éditeur de source CDC (page Colonnes)**  
+  
+1.  Dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], ouvrez le package [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] qui possède la source CDC.  
+  
+2.  Sous l’onglet **Flux de données** , double-cliquez sur la source CDC.  
+  
+3.  Dans l' **Éditeur de source CDC**, cliquez sur **Colonnes**.  
+  
+### <a name="options"></a>Options  
+ **Colonnes externes disponibles**  
+ Liste des colonnes externes disponibles dans la source de données. Vous ne pouvez pas ajouter ou supprimer des colonnes à l'aide de cette table. Sélectionnez les colonnes à utiliser dans la source. Les colonnes sélectionnées sont ajoutées à la liste **Colonne externe** dans l'ordre de leur sélection.  
+  
+ **Colonne externe**  
+ Vue des colonnes externes (sources) selon l'ordre dans lequel vous les visualisez lorsque vous configurez des composants qui consomment des données à partir de la source CDC. Vous pouvez modifier cet ordre en supprimant d'abord les colonnes sélectionnées dans la liste **Colonnes externes disponibles** , puis en choisissant des colonnes externes dans la liste selon un ordre différent. Les colonnes sélectionnées sont ajoutées à la liste **Colonne externe** dans l'ordre de leur sélection.  
+  
+ **Colonne de sortie**  
+ Spécifiez un nom unique pour chaque colonne de sortie. Le nom par défaut est celui de la colonne externe (source) sélectionnée ; toutefois, vous pouvez choisir n'importe quel nom unique et descriptif. Le nom entré est affiché dans le concepteur SSIS.  
+  
+## <a name="cdc-source-editor-error-output-page"></a>Éditeur de source CDC (page Sortie d'erreur)
+  Utilisez la page **Sortie d'erreur** de la boîte de dialogue **Éditeur de source CDC** pour sélectionner les options de gestion des erreurs.  
+  
+### <a name="task-list"></a>Liste des tâches  
+ **Pour ouvrir l'Éditeur de source CDC (page Sortie d'erreur)**  
+  
+1.  Dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], ouvrez le package [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] qui possède la source CDC.  
+  
+2.  Sous l’onglet **Flux de données** , double-cliquez sur la source CDC.  
+  
+3.  Dans l' **Éditeur de source CDC**, cliquez sur **Sortie d'erreur**.  
+  
+### <a name="options"></a>Options  
+ **Entrée/sortie**  
+ Affichez le nom de la source de données.  
+  
+ **Colonne**  
+ Affichez les colonnes externes (sources) que vous avez sélectionnées dans la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source CDC** .  
+  
+ **Erreur**  
+ Sélectionnez la façon dont la source CDC doit gérer les erreurs dans un flux : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
+  
+ **Troncation**  
+ Sélectionnez la façon dont la source CDC doit gérer la troncation dans un flux : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
+  
+ **Description**  
+ Non utilisé.  
+  
+ **Définir cette valeur sur les cellules sélectionnées**  
+ Sélectionnez la façon dont la source CDC gère l'ensemble des cellules sélectionnées lorsqu'une erreur ou une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
+  
+ **Appliquer**  
+ Appliquez les options de gestion des erreurs aux cellules sélectionnées.  
+  
+### <a name="error-handling-options"></a>Options de gestion des erreurs  
+ Vous pouvez utiliser les options suivantes pour configurer la façon dont la source CDC gère les erreurs et les troncations.  
+  
+ **Composant défaillant**  
+ La tâche de flux de données échoue lorsqu'une erreur ou une troncation a lieu. Il s'agit du comportement par défaut.  
+  
+ **Ignorer l'échec**  
+ L'erreur ou la troncation est ignorée et la ligne de données est dirigée vers la sortie de la source CDC.  
+  
+ **Rediriger le flux**  
+ La ligne de données qui présente l'erreur ou la troncation est dirigée vers la sortie d'erreur de la source CDC. Dans ce cas, la gestion des erreurs de la source CDC est utilisée. Pour plus d'informations, consultez [CDC Source](../../integration-services/data-flow/cdc-source.md).  
   
 ## <a name="related-content"></a>Contenu connexe  
   

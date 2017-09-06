@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.flatfiledest.f1
+- sql13.dts.designer.flatfiledestadapter.connection.f1
+- sql13.dts.designer.flatfiledestadapter.mappings.f1
 helpviewer_keywords:
 - flat files
 - Flat File destination
@@ -22,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 78a0ec526f83dcab8d7358ef5a51f1f6ccfd0a04
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: c7112381911e783e86db2504e3ec12b321be4905
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="flat-file-destination"></a>Destination de fichier plat
@@ -46,12 +48,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-flat-file-destination"></a>Configuration de la destination de fichier plat  
  Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de source de fichier plat** , cliquez sur l’une des rubriques suivantes :  
-  
--   [Éditeur de destination de fichier plat &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/flat-file-destination-editor-connection-manager-page.md)  
-  
--   [Éditeur de destination de fichier plat &#40;page Mappages&#41;](../../integration-services/data-flow/flat-file-destination-editor-mappings-page.md)  
-  
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
   
 -   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -60,6 +56,45 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-tasks"></a>Tâches associées  
  Pour plus d’informations sur la définition des propriétés d’un composant de flux de données, consultez [Définir les propriétés d’un composant de flux de données](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="flat-file-destination-editor-connection-manager-page"></a>Éditeur de destination de fichier plat (page Gestionnaire de connexions)
+  Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de destination de fichier plat** pour sélectionner la connexion de fichier plat de la destination et spécifier si elle doit remplacer le fichier de destination existant ou lui être ajoutée. La destination de fichier plat écrit ses données dans un fichier texte. Ce fichier texte peut être d'un format délimité, à largeur fixe avec séparateur de lignes, ou en drapeau à droite.  
+  
+### <a name="options"></a>Options  
+ **Gestionnaire de connexions de fichiers plats**  
+ Sélectionnez un gestionnaire de connexions existant dans la zone de liste ou créez une connexion en cliquant sur **Nouveau**.  
+  
+ **Nouveau**  
+ Créez une connexion à l’aide des boîtes de dialogue **Format de fichier plat** et **Éditeur du gestionnaire de connexions de fichiers plats** .  
+  
+ En plus des formats de fichier plat standard (délimité, largeur fixe et en drapeau à droite), la boîte de dialogue **Format de fichier plat** contient une quatrième option : **Largeur fixe avec séparateurs de lignes**. Cette option représente un cas particulier du format en drapeau à droite dans lequel [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ajoute une colonne factice comme dernière colonne de données. Cette colonne factice garantit que la dernière colonne a une largeur fixe.  
+  
+ L'option **Largeur fixe avec séparateurs de lignes** n'est pas disponible dans l' **éditeur du gestionnaire de connexions de fichiers plats**. Le cas échéant, vous pouvez émuler cette option dans l'éditeur. Pour émuler cette option, dans la page **Général** de l' **éditeur du gestionnaire de connexions de fichiers plats**, pour **Format**, sélectionnez **En drapeau à droite**. Puis, dans la page **Avancé** de l'éditeur, ajoutez une colonne factice comme dernière colonne de données.  
+  
+ **Remplacer les données du fichier**  
+ Précisez si le fichier existant doit être remplacé ou si les données doivent lui être ajoutées.  
+  
+ **En-tête**  
+ Tapez un bloc de texte à insérer dans le fichier avant l'écriture des données. Utilisez cette option pour inclure des informations supplémentaires, telles que des titres de colonne.  
+  
+ **Aperçu**  
+ Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Vue de données** . L'aperçu peut afficher jusqu'à 200 lignes.  
+  
+## <a name="flat-file-destination-editor-mappings-page"></a>Éditeur de destination de fichier plat (page Mappages)
+  La page **Mappages** de la boîte de dialogue **Éditeur de destination de fichier plat** permet de mapper des colonnes d’entrée à des colonnes de destination.  
+  
+### <a name="options"></a>Options  
+ **Colonnes d'entrée disponibles**  
+ Affichez la liste des colonnes d'entrée disponibles. Au moyen d'une opération glisser-déplacer, mappez les colonnes d'entrée disponibles aux colonnes de destination.  
+  
+ **Colonnes de destination disponibles**  
+ Affichez la liste des colonnes de destination disponibles. Au moyen d'une opération glisser-déplacer, mappez les colonnes de destination disponibles aux colonnes d'entrée.  
+  
+ **Colonne d'entrée**  
+ Affichez les colonnes d'entrée sélectionnées précédemment. Vous pouvez modifier les mappages au moyen de la liste **Colonnes d'entrée disponibles**. Sélectionnez  **\<ignorer >** pour exclure la colonne de la sortie.  
+  
+ **Colonne de destination**  
+ Affiche chaque colonne de destination disponible, qu'elle soit mappée ou non.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Source de fichier plat](../../integration-services/data-flow/flat-file-source.md)   

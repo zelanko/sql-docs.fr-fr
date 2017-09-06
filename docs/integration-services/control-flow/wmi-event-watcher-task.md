@@ -1,28 +1,35 @@
 ---
-title: "T&#226;che Observateur d&#39;&#233;v&#233;nement WMI | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.wmieventwatchertask.f1"
-helpviewer_keywords: 
-  - "WQL [Integration Services]"
-  - "tâche Observateur d'événement WMI [Integration Services]"
+title: "Tâche Observateur d’événement WMI | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.wmieventwatchertask.f1
+- sql13.dts.designer.wmieventwatcher.general.f1
+- sql13.dts.designer.wmieventwatcher.wmiquery.f1
+helpviewer_keywords:
+- WQL [Integration Services]
+- WMI Event Watcher task [Integration Services]
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 caps.latest.revision: 53
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 53
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: e46d2c926ecd1dd381d358ea6e779bc427116444
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/11/2017
+
 ---
-# T&#226;che Observateur d&#39;&#233;v&#233;nement WMI
-  La tâche Observateur d'événement WMI observe les événements WMI (Windows Management Instrumentation) à l'aide d'une requête d'événement WQL (Windows Management Instrumentation Query Language) pour spécifier les événements dignes d'intérêt. Vous pouvez utiliser la tâche Observateur d'événement WMI pour effectuer les opérations suivantes :  
+# <a name="wmi-event-watcher-task"></a>Tâche Observateur d'événement WMI
+  La tâche Observateur d'événement WMI observe les événements WMI (Windows Management Instrumentation) à l'aide d'une requête d'événement WQL (Windows Management Instrumentation Query Language) pour spécifier les événements dignes d'intérêt. Vous pouvez utiliser la tâche Observateur d'événement WMI pour effectuer les opérations suivantes :  
   
 -   Attendre la notification signalant que des fichiers ont été ajoutés à un dossier, puis initier le traitement du fichier.  
   
@@ -32,17 +39,17 @@ caps.handback.revision: 53
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut une tâche qui lit les informations WMI.  
   
- Pour plus d'informations sur cette tâche, cliquez sur la rubrique suivante :  
+ Pour plus d'informations sur cette tâche, cliquez sur la rubrique suivante :  
   
 -   [Tâche Lecteur de données WMI](../../integration-services/control-flow/wmi-data-reader-task.md)  
   
-## Requêtes WQL  
+## <a name="wql-queries"></a>Requêtes WQL  
  WQL est un dialecte de SQL avec des extensions qui permettent de prendre en charge la notification d'événement WMI et d'autres fonctionnalités spécifiques à WMI. Pour plus d’informations sur WQL, consultez la documentation Windows Management Instrumentation dans [MSDN Library](http://go.microsoft.com/fwlink/?linkid=62553).  
   
 > [!NOTE]  
 >  Les classes WMI varient d'une version de Windows à l'autre.  
   
- La requête suivante observe la notification signalant que l'utilisation du processeur est supérieure à 40 %.  
+ La requête suivante observe la notification signalant que l'utilisation du processeur est supérieure à 40 %.  
   
 ```  
 SELECT * from __InstanceModificationEvent WITHIN 2 WHERE TargetInstance ISA 'Win32_Processor' and TargetInstance.LoadPercentage > 40  
@@ -54,16 +61,16 @@ SELECT * from __InstanceModificationEvent WITHIN 2 WHERE TargetInstance ISA 'Win
 SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_DirectoryContainsFile" and TargetInstance.GroupComponent= "Win32_Directory.Name=\"c:\\\\WMIFileWatcher\""   
 ```  
   
-## Messages de journalisation personnalisés disponibles dans la tâche Observateur d'événement WMI  
- Le tableau suivant répertorie les entrées de journal personnalisées de la tâche Observateur d'événement WMI. Pour plus d’informations, consultez [Journalisation Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md) et [Messages personnalisés pour la journalisation](../../integration-services/performance/custom-messages-for-logging.md).  
+## <a name="custom-logging-messages-available-on-the-wmi-event-watcher-task"></a>Messages de journalisation personnalisés disponibles dans la tâche Observateur d'événement WMI  
+ Le tableau suivant répertorie les entrées de journal personnalisées de la tâche Observateur d'événement WMI. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
 |**WMIEventWatcherEventOccurred**|Indique qu'un événement surveillé par la tâche s'est produit.|  
 |**WMIEventWatcherTimedout**|Indique que le délai de la tâche a expiré.|  
-|**WMIEventWatcherWatchingForWMIEvents**|Indique que la tâche a commencé l'exécution de la requête WQL. L'entrée inclut la requête.|  
+|**WMIEventWatcherWatchingForWMIEvents**|Indique que la tâche a commencé l'exécution de la requête WQL. L'entrée inclut la requête.|  
   
-## Configuration de la tâche Observateur d'événement WMI  
+## <a name="configuration-of-the-wmi-event-watcher-task"></a>Configuration de la tâche Observateur d'événement WMI  
  Vous pouvez configurer la tâche Lecteur de données WMI de plusieurs manières :  
   
 -   Spécifiez le gestionnaire de connexions WMI à utiliser.  
@@ -88,21 +95,88 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
-  
--   [Éditeur de tâche Observateur d’événement WMI &#40;page Général&#41;](../../integration-services/control-flow/wmi-event-watcher-task-editor-general-page.md)  
-  
--   [Éditeur de tâche Observateur d’événement WMI &#40;page Options WMI&#41;](../../integration-services/control-flow/wmi-event-watcher-task-editor-wmi-options-page.md)  
+ Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
 -   [Page Expressions](../../integration-services/expressions/expressions-page.md)  
   
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d'une tâche ou d'un conteneur](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Configuration par programmation de la tâche Observateur d'événement WMI  
+## <a name="programmatic-configuration-of-the-wmi-event-watcher-task"></a>Configuration par programmation de la tâche Observateur d'événement WMI  
  Pour plus d'informations sur la définition par programmation de ces propriétés, cliquez sur la rubrique suivante :  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WmiEventWatcherTask.WmiEventWatcherTask>  
   
+## <a name="wmi-event-watcher-task-editor-general-page"></a>Éditeur de tâche Observateur d'événement WMI (page Général)
+  Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche Observateur d'événement WMI** pour nommer et décrire la tâche Observateur d'événement WMI.  
   
+ Pour plus d’informations sur la requête WQL (WMI Query Language), consultez la rubrique [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)(Interrogation avec WQL) de la documentation de Windows Management Instrumentation, dans MSDN Library.  
+  
+### <a name="options"></a>Options  
+ **Nom**  
+ Fournissez un nom unique pour la tâche Observateur d'événement WMI. Ce nom sert d'étiquette à l'icône de la tâche.  
+  
+> [!NOTE]  
+>  Les noms de tâche doivent être uniques dans un package.  
+  
+ **Description**  
+ Entrez une description de la tâche Observateur d'événement WMI.  
+  
+## <a name="wmi-event-watcher-task-editor-wmi-options-page"></a>Éditeur de tâche Observateur d'événement WMI (page Options WMI)
+  Utilisez la page **Options WMI** de la boîte de dialogue **Éditeur de tâche Observateur d'événement WMI** pour définir la source de la requête WQL (Windows Management Instrumentation Query Language) et le mode de réponse de la tâche Observateur d'événement WMI aux événements WMI (Microsoft Windows Instrumentation).  
+  
+ Pour plus d’informations sur la requête WQL (WMI Query Language), consultez la rubrique [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)(Interrogation avec WQL) de la documentation de Windows Management Instrumentation, dans MSDN Library.  
+  
+### <a name="static-options"></a>Options statiques  
+ **WMIConnectionName**  
+ Sélectionnez un gestionnaire de connexions WMI dans la liste, ou cliquez sur \< **nouvelle connexion WMI...** > pour en créer un nouveau.  
+  
+ **Rubriques connexes :** [Gestionnaire de connexions WMI](../../integration-services/connection-manager/wmi-connection-manager.md), [Éditeur du gestionnaire de connexions WMI](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
+  
+ **WQLQuerySourceType**  
+ Sélectionnez le type de la source de la requête WQL que la tâche exécute. Cette propriété dispose des options répertoriées dans le tableau suivant.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Entrée directe**|Définit la source d'une requête WQL. Cette valeur affiche l'option dynamique **WQLQuerySource**.|  
+|**Connexion de fichiers**|Sélectionnez un fichier qui contient la requête WQL. Cette valeur affiche l'option dynamique **WQLQuerySource**.|  
+|**Variable**|Définit la source dans une variable qui définit la requête WQL. Cette valeur affiche l'option dynamique **WQLQuerySource**.|  
+  
+ **ActionAtEvent**  
+ Indiquez si l’événement WMI consigne l’événement et lance l’action [!INCLUDE[ssIS](../../includes/ssis-md.md)] , ou consigne uniquement l’événement.  
+  
+ **AfterEvent**  
+ Indiquez si la tâche aboutit ou échoue lorsqu'elle reçoit l'événement WMI, ou si elle continue d'observer l'occurrence de l'événement.  
+  
+ **ActionAtTimeout**  
+ Indiquez si la tâche consigne la temporisation d'une requête WMI et déclenche un événement [!INCLUDE[ssIS](../../includes/ssis-md.md)] en réponse, ou si elle consigne uniquement la temporisation.  
+  
+ **AfterTimeout**  
+ Indiquez si la tâche aboutit ou échoue en réponse à une temporisation, ou si elle continue d'observer l'occurrence d'une temporisation.  
+  
+ **NumberOfEvents**  
+ Indiquez le nombre d'événements à observer.  
+  
+ **Délai d'expiration**  
+ Indiquez le délai en secondes avant l'occurrence de l'événement. La valeur 0 indique qu'aucun délai n'a lieu.  
+  
+### <a name="wqlquerysource-dynamic-options"></a>Options dynamiques WQLQuerySource  
+  
+#### <a name="wqlquerysource--direct-input"></a>WQLQuerySource = Entrée directe  
+ **WQLQuerySource**  
+ Fournissez une requête ou cliquez sur les points de suspension (…) et entrez une requête en utilisant la boîte de dialogue **Requête WQL** .  
+  
+#### <a name="wqlquerysource--file-connection"></a>WQLQuerySource = Connexion de fichiers  
+ **WQLQuerySource**  
+ Sélectionnez un gestionnaire de connexions de fichier dans la liste, ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
+  
+ **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="wqlquerysource--variable"></a>WQLQuerySource = Variable  
+ **WQLQuerySource**  
+ Sélectionnez une variable dans la liste, ou cliquez sur \< **nouvelle variable...** > pour créer une nouvelle variable.  
+  
+ **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+

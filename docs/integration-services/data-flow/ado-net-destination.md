@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.adonetdest.f1
+- sql13.dts.designer.adonetdest.connection.f1
+- sql13.dts.designer.adonetdest.mappings.f1
+- sql13.dts.designer.adonetdest.erroroutput.f1
 helpviewer_keywords:
 - destinations [Integration Services], ADO.NET
 - ADO.NET destination
@@ -20,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 19dc271dee6898d253f51be7c49efe7f0aaa5e7a
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 70508825dfb2bdf60bcd77bdaad9ba9dbb19e7eb
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="ado-net-destination"></a>Destination ADO NET
@@ -49,20 +52,123 @@ ms.lasthandoff: 08/03/2017
   
  Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d’informations sur les propriétés que vous pouvez définir dans la boîte de dialogue **Éditeur de destination ADO.NET** , cliquez sur une des rubriques suivantes :  
-  
--   [Éditeur de destination ADO.NET &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/ado-net-destination-editor-connection-manager-page.md)  
-  
--   [Éditeur de destination ADO NET &#40;page Mappages&#41;](../../integration-services/data-flow/ado-net-destination-editor-mappings-page.md)  
-  
--   [Éditeur de destination ADO NET &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)  
-  
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
   
 -   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriétés personnalisées ADO NET](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
- Pour plus d’informations sur la façon de définir des propriétés, consultez [Définir les propriétés d’un composant de flux de données](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+ Pour plus d’informations sur la façon de définir les propriétés, consultez [Définir les propriétés d’un composant de flux de données](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="ado-net-destination-editor-connection-manager-page"></a>Éditeur de destination ADO NET (page Gestionnaire de connexions)
+  Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de destination ADO NET** pour sélectionner la connexion [!INCLUDE[vstecado](../../includes/vstecado-md.md)] de la destination. Cette page vous permet également de sélectionner une table ou une vue à partir de la base de données.  
+  
+ **Pour ouvrir la page Gestionnaire de connexions**  
+  
+1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui possède la destination ADO NET.  
+  
+2.  Sous l’onglet **Flux de données** , double-cliquez sur la destination ADO NET.  
+  
+3.  Dans **l’Éditeur de destination ADO NET**, cliquez sur **Gestionnaire de connexions**.  
+  
+### <a name="static-options"></a>Options statiques  
+ **Connection manager**  
+ Sélectionnez un gestionnaire de connexions existant dans la liste ou créez une connexion en cliquant sur **Nouveau**.  
+  
+ **Nouveau**  
+ Créez un gestionnaire de connexions à l’aide de la boîte de dialogue **Configurer le gestionnaire de connexions ADO.NET** .  
+  
+ **Utiliser une table ou une vue**  
+ Sélectionnez une table ou une vue existante dans la liste ou créez une table en cliquant sur **Nouvelle**.  
+  
+ **Nouveau**  
+ Créez une table ou vue à l’aide de la boîte de dialogue **Créer une table** .  
+  
+> [!NOTE]  
+>  Quand vous cliquez sur **Nouvelle**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] génère une instruction CREATE TABLE par défaut, basée sur la source de données connectée. Cette instruction CREATE TABLE par défaut n'inclut pas l'attribut FILESTREAM, même si la table source inclut une colonne dans laquelle l'attribut FILESTREAM est déclaré. Pour exécuter un composant [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] avec l'attribut FILESTREAM, implémentez d'abord le stockage FILESTREAM sur la base de données de destination. Ajoutez ensuite l’attribut FILESTREAM à l’instruction CREATE TABLE dans la boîte de dialogue **Créer une table**. Pour plus d’informations, consultez [Données blob &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+  
+ **Aperçu**  
+ Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Visualiser les résultats de la requête** . L'aperçu peut afficher jusqu'à 200 lignes.  
+  
+ **Utiliser l'insertion en bloc le cas échéant**  
+ Spécifiez s’il convient d’utiliser l’interface <xref:System.Data.SqlClient.SqlBulkCopy> pour améliorer les performances des opérations d’insertion en bloc.  
+  
+ Seuls les fournisseurs ADO.NET qui retournent un objet <xref:System.Data.SqlClient.SqlConnection> prennent en charge l’utilisation de l’interface <xref:System.Data.SqlClient.SqlBulkCopy> . Le fournisseur de données .NET pour SQL Server (SqlClient) retourne un objet <xref:System.Data.SqlClient.SqlConnection> , et un fournisseur personnalisé peut retourner un objet <xref:System.Data.SqlClient.SqlConnection> .  
+  
+ Le fournisseur de données .NET pour SQL Server (SqlClient) vous permet de vous connecter à [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+  
+ Si vous sélectionnez **Utiliser l’insertion en bloc le cas échéant**et affectez à l’option **Erreur** la valeur **Rediriger la ligne**, le lot de données que la destination redirige vers la sortie d’erreur peut inclure des lignes correctes. Pour plus d’informations sur la gestion des erreurs dans les opérations en bloc, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md). Pour plus d’informations sur l’option **Erreur** , consultez [Éditeur de destination ADO NET &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md).  
+  
+> [!NOTE]  
+>  Si une table source SQL Server ou Sybase inclut une colonne d’identité, vous devez utiliser des tâches d’exécution SQL pour activer l’option IDENTITY_INSERT avant la destination ADO NET et de les désactiver à nouveau par la suite. (La propriété de colonne d’identité spécifie une valeur incrémentielle pour la colonne. L’instruction SET IDENTITY_INSERT permet de valeurs explicites de la table source être insérées dans la colonne d’identité dans la table de destination.)  
+>   
+>   Pour exécuter les instructions SET IDENTITY_INSERT et les chargement de données, vous devez effectuer les opérations suivantes.
+>       1. Utilisez le Gestionnaire de connexions ADO.NET même pour les tâches d’exécution SQL et pour la destination ADO.NET.
+>       2. Dans le Gestionnaire de connexions, définissez la **RetainSameConnection** propriété et la **MultipleActiveResultSets** True à la propriété.
+>       3. Sur la destination ADO.NET, définissez la **UseBulkInsertWhenPossible** propriété sur False.
+>
+>  Pour plus d’informations, consultez [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) et [IDENTITY &#40;Propriété&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
+  
+## <a name="external-resources"></a>Ressources externes  
+ Article technique sur sqlcat.com, traitant du [chargement rapide de données sur Microsoft Azure SQL Database](http://go.microsoft.com/fwlink/?LinkId=244333)  
+  
+## <a name="ado-net-destination-editor-mappings-page"></a>Éditeur de destination ADO NET (page Mappages)
+  Utilisez la page **Mappages** de la boîte de dialogue **Éditeur de destination ADO NET** pour mapper des colonnes d’entrée à des colonnes de destination.  
+  
+ **Pour ouvrir la page Mappages**  
+  
+1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui possède la destination ADO NET.  
+  
+2.  Sous l’onglet **Flux de données** , double-cliquez sur la destination ADO NET.  
+  
+3.  Dans **l’Éditeur de destination ADO NET**, cliquez sur **Mappages**.  
+  
+### <a name="options"></a>Options  
+ **Colonnes d'entrée disponibles**  
+ Affichez la liste des colonnes d'entrée disponibles. Au moyen du glisser-déplacer, mappez les colonnes d'entrée disponibles dans la table sur des colonnes de destination.  
+  
+ **Colonnes de destination disponibles**  
+ Affichez la liste des colonnes de destination disponibles. Utilisez une opération de glisser-déplacer pour mapper les colonnes de destination disponibles dans la table aux colonnes d'entrée.  
+  
+ **Colonne d'entrée**  
+ Affichez les colonnes d’entrée que vous avez sélectionnées. Vous pouvez supprimer des mappages en sélectionnant  **\<ignorer >** pour exclure des colonnes de la sortie.  
+  
+ **Colonne de destination**  
+ Indique chaque colonne de destination disponible, qu'elle soit mappée ou non.  
+  
+## <a name="ado-net-destination-editor-error-output-page"></a>Éditeur de destination ADO NET (page Sortie d'erreur)
+  Utilisez la page **Sortie d'erreur** de la boîte de dialogue **Éditeur de destination ADO NET** pour spécifier les options de gestion des erreurs.  
+  
+ **Pour ouvrir la page Sortie d'erreur**  
+  
+1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui possède la destination ADO NET.  
+  
+2.  Sous l’onglet **Flux de données** , double-cliquez sur la destination ADO NET.  
+  
+3.  Dans **l’Éditeur de destination ADO NET**, cliquez sur **Sortie d’erreur**.  
+  
+### <a name="options"></a>Options  
+ **Entrée ou Sortie**  
+ Affichez le nom de l'entrée.  
+  
+ **Colonne**  
+ Non utilisé.  
+  
+ **Erreur**  
+ Indiquez ce qui doit se produire lorsqu'une erreur se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
+  
+ **Rubriques connexes :** [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **Troncation**  
+ Non utilisé.  
+  
+ **Description**  
+ Affichez la description de l'opération.  
+  
+ **Définir cette valeur sur les cellules sélectionnées**  
+ Indiquez ce qui doit se produire pour l'ensemble des cellules sélectionnées lorsqu'une erreur ou une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
+  
+ **Appliquer**  
+ Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
   

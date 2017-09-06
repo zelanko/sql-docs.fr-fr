@@ -1,0 +1,16 @@
+# [Développement d’un composant de flux de données personnalisé](developing-a-custom-data-flow-component.md)
+# [Création d’un composant de flux de données personnalisé](creating-a-custom-data-flow-component.md)
+# [Méthodes de conception d’un composant de flux de données](design-time-methods-of-a-data-flow-component.md)
+# [Méthodes d’exécution d’un composant de flux de données](run-time-methods-of-a-data-flow-component.md)
+# [Plan d’exécution et allocation de mémoire tampon](execution-plan-and-buffer-allocation.md)
+# [Utilisation de types de données dans le flux de données](working-with-data-types-in-the-data-flow.md)
+# [Validation d’un composant de flux de données](validating-a-data-flow-component.md)
+# [Implémentation des métadonnées externes](implementing-external-metadata.md)
+# [Déclenchement et définition d’événements dans un composant de flux de données](raising-and-defining-events-in-a-data-flow-component.md)
+# [Enregistrement et définition d’entrées de journal dans un composant de flux de données](logging-and-defining-log-entries-in-a-data-flow-component.md)
+# [Utilisation de sorties d’erreur dans un composant de flux de données](using-error-outputs-in-a-data-flow-component.md)
+# [Développement d’une interface utilisateur pour un composant de flux de données](developing-a-user-interface-for-a-data-flow-component.md)
+# [Mise à niveau de la version d’un composant de flux de données](upgrading-the-version-of-a-data-flow-component.md)
+
+# Sous-catégories d’articles
+## [Types de flux de données](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)

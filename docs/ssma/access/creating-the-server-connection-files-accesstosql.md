@@ -2,7 +2,7 @@
 title: "Créez les fichiers de connexion du serveur (AccessToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -16,16 +16,16 @@ ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
 caps.latest.revision: 10
 author: sabotta
 ms.author: carlasab
-manager: lonnyb
+manager: murato
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 333640f0b258c97ba87c56fe4bd8a15100bba858
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 7812e5ad1b6566a3ef477800d8098b23abacdd6a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/17/2017
 
 ---
-# <a name="creating-the-server-connection-files-accesstosql"></a>Créez les fichiers de connexion du serveur (AccessToSQL)
-Informations sur le serveur peuvent être spécifiées dans la section serveurs du fichier de script ou dans un fichier de connexion de serveur distinct. Le paramètre de ligne de commande pour le fichier de connexion de serveur est, `-c <serverconnectionfile>`. Si le même id de serveur est présent dans le fichier de script et le fichier de connexion de serveur, la définition de serveur dans le fichier de script est pris en compte.  
+# <a name="creating-the-server-connection-files-accesstosql"></a>Création du serveur de fichiers de connexion (AccessToSQL)
+Informations sur le serveur peuvent être spécifié dans la section serveurs du fichier de script. Informations sur le serveur peuvent également être spécifiées dans un fichier de connexion de serveur distinct. Le paramètre de ligne de commande pour le fichier de connexion de serveur est `-c <serverconnectionfile>`. Si le même id de serveur est présent dans le script et le serveur de fichiers de connexion, la définition de serveur dans le fichier de script est pris en compte.  
   
 ```xml  
 <!--Sample of server connection file commands -->  
@@ -75,6 +75,6 @@ L’utilisateur peut valider facilement son fichier de connexion de serveur par 
 L’étape suivante d’exploitation de la console est [l’exécution de la Console SSMA &#40; AccessToSQL &#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[L’exécution de la Console SSMA (accès)](http://msdn.microsoft.com/en-us/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[L’exécution de la Console SSMA (accès)](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   
 
