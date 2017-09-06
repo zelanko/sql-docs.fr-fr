@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5486c08226959ecb96431659ce2b865160d20680
+ms.translationtype: HT
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: da7bf96dbacf57f7086c5cfda298b2e810c43a07
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guide d’architecture et gestion du journal des transactions SQL Server
@@ -217,7 +217,7 @@ L'Agent de lecture du journal surveille le journal des transactions de chaque ba
 ## <a name="additional-reading"></a>Lecture supplémentaire  
  Pour plus d'informations sur le journal des transactions, nous vous recommandons de lire les articles et les ouvrages suivants.  
   
- [Fonctionnement de la journalisation et de la récupération dans SQL Server de Paul Randall](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
+ [Fonctionnement de la journalisation et de la récupération dans SQL Server, par Paul Randall](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
   
  [Gestion du journal des transactions SQL Server de Tony Davis et Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   

@@ -15,11 +15,11 @@ caps.latest.revision: 23
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b16232d4a183a75dd9cf76e57ca0751df19e3a2f
+ms.translationtype: HT
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: 16e5ac5c58c00568541aa10352b11017c1bd9d3e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="columnstore-indexes---query-performance"></a>Index columnstore - Performances des requêtes
@@ -116,13 +116,17 @@ ms.lasthandoff: 06/22/2017
  ¹S’applique à SQL Server 2016, SQL Database V12 Premium Edition et SQL Data Warehouse    
     
 ### <a name="aggregate-pushdown"></a>Agrégation en mode Push    
- Chemin d’exécution standard utilisé pour le calcul d’agrégation qui récupère les lignes qualifiées du nœud SCAN et agrège les valeurs en mode batch.  Cette méthode offre de bonnes performances, mais dans SQL Server 2016, l’opération d’agrégation peut être transmise en mode Push vers le nœud SCAN pour améliorer les performances de calcul d’agrégation par ordre de grandeur avec l’exécution en mode batch, à condition que les conditions suivantes soient remplies :    
-    
--   Les opérateurs d’agrégation pris en charge sont MIN, MAX, SUM, COUNT et AVG.    
-    
--   Tous les types de données <= 64 bits sont pris en charge.  Par exemple, le type bigint est pris en charge, car sa taille est de 8 octets, mais le type decimal (38,6) ne l’est pas, car sa taille est de 17 octets. En outre, aucun type string n’est pris en charge.    
-    
--   L’opérateur d’agrégation doit être au-dessus d’un nœud SCAN ou d’un nœud SCAN avec une clause Group By.    
+ Chemin d’exécution standard utilisé pour le calcul d’agrégation qui récupère les lignes qualifiées du nœud SCAN et agrège les valeurs en mode batch.  Cette méthode offre de bonnes performances, mais dans SQL Server 2016, l’opération d’agrégation peut être transmise en mode Push vers le nœud SCAN pour améliorer les performances de calcul d’agrégation par ordre de grandeur avec l’exécution en mode batch, à condition que les conditions suivantes soient remplies : 
+ 
+-    Les agrégats sont MIN, MAX, SUM, COUNT et COUNT(*). 
+-  L’opérateur d’agrégation doit être au-dessus d’un nœud SCAN ou d’un nœud SCAN avec une clause Group By.
+-  Cet agrégat n’est pas un agrégat distinct.
+-  La colonne d’agrégation n’est pas une colonne de chaîne.
+-  La colonne d’agrégation n’est pas une colonne virtuelle. 
+-  Le type de données d’entrée et de sortie doit être l’un des types suivants et ne pas dépasser 64 bits.
+    -  Tiny int, int, big int, small int, bit
+    -  Small money, money, decimal et numeric avec une précision <= 18
+    -  Small date, date, datetime, datetime2, time
     
  L’agrégation en mode Push est encore plus rapide en exécutant une agrégation sans cache des données compressées/encodées et en utilisant SIMD.    
     

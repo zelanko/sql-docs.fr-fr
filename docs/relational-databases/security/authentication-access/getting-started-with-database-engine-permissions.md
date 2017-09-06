@@ -16,11 +16,11 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 16d16229a267564977addc768e04e804d0b163cf
+ms.translationtype: HT
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: 376e591e28bbdddbd635392b24c3d6652f3bd94d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Prise en main des autorisations du moteur de base de données
@@ -161,14 +161,14 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
  La première autorisation répertoriée ci-dessus (`GRANT SELECT ON OBJECT::Region TO Ted;`) est la plus granulaire ; autrement dit, cette instruction est l’autorisation minimale la plus stricte pour accorder l’autorisation `SELECT`. Aucune autorisation sur des objets subordonnés ne l’accompagne. Par principe, accordez toujours l’autorisation minimale la plus stricte possible. Toutefois, si les circonstances imposent une simplification du système d’octroi, accordez une autorisation plus générale. Ainsi, si Ted a besoin d’autorisations pour l’ensemble du schéma, accordez `SELECT` une fois au niveau du schéma, au lieu d’accorder `SELECT` au niveau table ou vue plusieurs fois. La conception de la base de données détermine en grande partie l’efficacité de cette stratégie. Cette dernière fonctionne de façon optimale si votre base de données permet d’inclure dans un seul schéma les objets nécessitant des autorisations identiques.  
   
 ## <a name="list-of-permissions"></a>Liste d’autorisations  
- [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] a 230 autorisations. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] a 219 autorisations. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] a 214 autorisations. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] a 195 autorisations. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]et [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] ont moins d’autorisations, car ils exposent uniquement une partie du moteur de base de données, bien que chacun ait des autorisations qui ne s’appliquent pas à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le graphique suivant illustre les autorisations et leurs relations. Certaines des autorisations de niveau supérieur (telles que `CONTROL SERVER`) figurent plusieurs fois. Dans cette rubrique, le poster est trop petit pour être lu correctement. Cliquez sur l’image pour télécharger le  **Poster des autorisations du moteur de base de données** au format pdf.  
+ [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] a 230 autorisations. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] a 219 autorisations. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] a 214 autorisations. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] a 195 autorisations. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]et [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] ont moins d’autorisations, car ils exposent uniquement une partie du moteur de base de données, bien que chacun ait des autorisations qui ne s’appliquent pas à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le graphique suivant illustre les autorisations et leurs relations. Certaines des autorisations de niveau supérieur (telles que `CONTROL SERVER`) figurent plusieurs fois. Dans cette rubrique, le poster est trop petit pour être lu correctement. Cliquez sur l’image pour télécharger le **Poster des autorisations du moteur de base de données** au format pdf.  
   
 [![Autorisations de moteur de base de données](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
  
  Pour obtenir un graphique montrant les relations entre les principaux [!INCLUDE[ssDE](../../../includes/ssde-md.md)] et les objets serveur et de base de données, consultez [Hiérarchie des autorisations &#40;moteur de base de données&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md).  
   
 ## <a name="permissions-vs-fixed-server-and-fixed-database-roles"></a>Autorisations associées aux rôles serveur fixes et rôles de base de données fixes  
- Les autorisations des rôles serveur fixes et des rôles de base de données fixes sont similaires, mais ne sont pas exactement les mêmes que les autorisations granulaires. Par exemple, les membres du rôle serveur fixe `sysadmin` disposent de toutes les autorisations sur l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], de même que les connexions avec l’autorisation `CONTROL SERVER` . Toutefois, accorder l’autorisation `CONTROL SERVER` ne fait pas d’une connexion un membre du rôle serveur fixe sysadmin et ajouter une connexion au rôle serveur fixe  `sysadmin` n’accorde pas explicitement à celle-ci l’autorisation  `CONTROL SERVER` . Parfois, une procédure stockée vérifie les autorisations en examinant le rôle fixe et pas l’autorisation granulaire. Par exemple, le détachement d’une base de données requiert l’appartenance au rôle de base de données fixe `db_owner` . L’autorisation `CONTROL DATABASE` équivalente n’est pas suffisante. Ces deux systèmes fonctionnent en parallèle, mais interagissent rarement. Microsoft recommande d’utiliser le système d’autorisation granulaire plus récent au lieu des rôles fixes chaque fois que possible.  
+ Les autorisations des rôles serveur fixes et des rôles de base de données fixes sont similaires, mais ne sont pas exactement les mêmes que les autorisations granulaires. Par exemple, les membres du rôle serveur fixe `sysadmin` disposent de toutes les autorisations sur l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], de même que les connexions avec l’autorisation `CONTROL SERVER` . Toutefois, l’octroi de l’autorisation `CONTROL SERVER` ne fait pas d’une connexion un membre du rôle serveur fixe sysadmin et l’ajout d’une connexion au rôle serveur fixe `sysadmin` n’octroie pas explicitement à celle-ci l’autorisation `CONTROL SERVER`. Parfois, une procédure stockée vérifie les autorisations en examinant le rôle fixe et pas l’autorisation granulaire. Par exemple, le détachement d’une base de données requiert l’appartenance au rôle de base de données fixe `db_owner` . L’autorisation `CONTROL DATABASE` équivalente n’est pas suffisante. Ces deux systèmes fonctionnent en parallèle, mais interagissent rarement. Microsoft recommande d’utiliser le système d’autorisation granulaire plus récent au lieu des rôles fixes chaque fois que possible.
   
 ## <a name="monitoring-permissions"></a>Surveillance des autorisations  
  Les vues suivantes retournent des informations de sécurité.  
@@ -238,7 +238,7 @@ JOIN sys.database_principals AS dRole
 -   [Didacticiel : écriture d'instructions Transact-SQL](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
+ [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [Fonctions de sécurité &#40;Transact-SQL&#41;](../../../t-sql/functions/security-functions-transact-sql.md)   
  [Fonctions et vues de gestion dynamique relatives à la sécurité &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Affichages catalogue de sécurité &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
