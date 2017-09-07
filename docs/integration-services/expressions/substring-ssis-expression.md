@@ -1,35 +1,40 @@
 ---
-title: "SUBSTRING (expression SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SUBSTRING (fonction)"
-  - "partie d'expression renvoyée [Integration Services]"
+title: SUBSTRING (Expression SSIS) | Documents Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SUBSTRING function
+- part of expression returned [Integration Services]
 ms.assetid: 3a46748a-f5f8-4a6c-9108-673666754068
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 47f7ac32826faacd2ad38c0a09750012222fde7e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
-# SUBSTRING (expression SSIS)
+# <a name="substring-ssis-expression"></a>SUBSTRING (expression SSIS)
   Renvoie la partie d'une expression de caractères qui commence à la position spécifiée et qui a la longueur spécifiée. Les paramètres *position* et *length* doivent correspondre à des entiers.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 SUBSTRING(character_expression, position, length)  
 ```  
   
-## Arguments  
+## <a name="arguments"></a>Arguments  
  *character_expression*  
  Expression de caractères à partir de laquelle doivent être extraits les caractères.  
   
@@ -39,10 +44,10 @@ SUBSTRING(character_expression, position, length)
  *length*  
  Entier exprimant, en nombre de caractères, la longueur de la sous-chaîne.  
   
-## Types des résultats  
+## <a name="result-types"></a>Types des résultats  
  DT_WSTR  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  SUBSTRING utilise un index de base un. Si *position* est 1, la sous-chaîne commence par le premier caractère de *character_expression*.  
   
  La fonction SUBSTRING n'est opérationnelle qu'avec le type de données DT_WSTR. Un argument *character_expression* représentant un littéral de chaîne ou une colonne de données du type de données DT_STR est implicitement converti dans le type de données DT_WSTR avant que la fonction SUBSTRING soit exécutée. Les autres types de données doivent être explicitement convertis vers le type de données DT_WSTR. Pour plus d’informations, consultez [Types de données d’Integration Services](../../integration-services/data-flow/integration-services-data-types.md) et [Cast &#40;expression SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
@@ -53,7 +58,7 @@ SUBSTRING(character_expression, position, length)
   
  L'argument *length* peut être supérieur à la longueur de la chaîne. Dans ce cas, la fonction renvoie le reste de la chaîne.  
   
-## Exemples d'expressions  
+## <a name="expression-examples"></a>Exemples d'expressions  
  L'exemple suivant renvoie deux caractères, à partir du quatrième caractère, d'un littéral de chaîne. Le résultat obtenu est « ph ».  
   
 ```  
@@ -90,7 +95,7 @@ SUBSTRING (@PostalCode,6,4)
 SUBSTRING ("Redmond",4,0)  
 ```  
   
-## Voir aussi  
- [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Fonctions &#40; Expression SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
