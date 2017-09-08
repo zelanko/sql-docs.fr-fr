@@ -1,33 +1,38 @@
 ---
-title: "Mod&#232;les d&#39;exploration de donn&#233;es (Analysis Services - Exploration de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "algorithmes [exploration de données]"
-  - "modèles d’exploration de données [Analysis Services]"
-  - "architecture logique [Analysis Services - Données multidimensionnelles]"
-  - "propriétés [Analysis Services]"
-  - "modèles d’exploration de données [Analysis Services], à propos des modèles d’exploration de données"
-  - "architecture [Analysis Services]"
+title: "Les modèles d’exploration de données (Analysis Services - Exploration de données) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- algorithms [data mining]
+- mining models [Analysis Services]
+- logical architecture [Analysis Services Multidimensional Data]
+- properties [Analysis Services]
+- mining models [Analysis Services], about data mining models
+- architecture [Analysis Services]
 ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3425210ee85136d7b85c48c16562d85534a115f8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Mod&#232;les d&#39;exploration de donn&#233;es (Analysis Services - Exploration de donn&#233;es)
+# <a name="mining-models-analysis-services---data-mining"></a>Modèles d'exploration de données (Analysis Services - Exploration de données)
   Un *modèle d’exploration de données* est créé en appliquant un algorithme aux données, mais c’est plus qu’un algorithme ou qu’un conteneur de métadonnées : il s’agit d’un jeu de données, de statistiques et de modèles qui peuvent être appliqués à de nouvelles données pour générer des prédictions et pour effectuer des inférences sur les relations.  
   
- Cette section explique ce qu'est un modèle d'exploration de données et son utilisation : l'architecture de base des modèles et des structures, les propriétés des modèles d'exploration de données, ainsi que les méthodes pour créer et utiliser des modèles d'exploration de données.  
+ Cette section explique ce qu'est un modèle d'exploration de données et son utilisation : l'architecture de base des modèles et des structures, les propriétés des modèles d'exploration de données, ainsi que les méthodes pour créer et utiliser des modèles d'exploration de données.  
   
  [Architecture du modèle d'exploration de données](#bkmk_mdlArch)  
   
@@ -46,26 +51,26 @@ caps.handback.revision: 37
   
  Un modèle d'exploration de données est vide jusqu'à ce que les données fournies par la structure d'exploration de données aient été traitées et analysées. Après traitement, un modèle d'exploration de données contiendra des métadonnées, des résultats et des liaisons se rapportant à la structure d'exploration de données.  
   
- ![Le modèle contient des métadonnées, des modèles et des liaisons](../../analysis-services/data-mining/media/dmcon-modelarch2.gif "Le modèle contient des métadonnées, des modèles et des liaisons")  
+ ![modèle contient des métadonnées, les modèles et les liaisons](../../analysis-services/data-mining/media/dmcon-modelarch2.gif "modèle contient des métadonnées, les modèles et les liaisons")  
   
  Les métadonnées indiquent le nom du modèle et le serveur où il est stocké, ainsi qu'une définition du modèle, y compris les colonnes de la structure d'exploration de données utilisées pour créer le modèle, les définitions des filtres éventuels appliqués lors du traitement du modèle et l'algorithme utilisé pour analyser les données. Tous ces choix, les colonnes de données et leurs types de données, les filtres et l'algorithme, ont une influence importante sur les résultats de l'analyse.  
   
- Par exemple, vous pouvez utiliser les mêmes données pour créer plusieurs modèles, en utilisant éventuellement un algorithme de clustering, un algorithme d'arbre de décision et un algorithme Naïve Bayes. Chaque type de modèle crée un ensemble différent de modèles, de jeux d'éléments, de règles ou de formules, que vous pouvez utiliser pour faire des prédictions. Généralement, chaque algorithme analyse les données d’une manière différente afin que le *contenu* du modèle résultant soit également organisé en différentes structures. Dans un type de modèle, les données et les modèles peuvent être regroupés en *clusters* ; dans un autre type de modèle, les données peuvent être organisées en arborescences et en branches, ainsi que selon les règles qui les divisent et les définissent.  
+ Par exemple, vous pouvez utiliser les mêmes données pour créer plusieurs modèles, en utilisant éventuellement un algorithme de clustering, un algorithme d'arbre de décision et un algorithme Naïve Bayes. Chaque type de modèle crée un ensemble différent de modèles, de jeux d'éléments, de règles ou de formules, que vous pouvez utiliser pour faire des prédictions. Généralement, chaque algorithme analyse les données d’une manière différente afin que le *contenu* du modèle résultant soit également organisé en différentes structures. Dans un type de modèle, les données et les modèles peuvent être regroupés en *clusters*; dans un autre type de modèle, les données peuvent être organisées en arborescences et en branches, ainsi que selon les règles qui les divisent et les définissent.  
   
- Le modèle est également affecté par les données sur lesquelles vous effectuez l'apprentissage : même les modèles qualifiés sur la même structure d'exploration de données peuvent donner des résultats différents si vous filtrez les données différemment ou utilisez différentes valeurs de départ durant l'analyse. Toutefois, les données réelles ne sont pas stockées dans le modèle ; seules les statistiques sommaires sont stockées, les données réelles résidant dans la structure d'exploration de données. Si vous avez créé des filtres sur les données lors de l'apprentissage du modèle, les définitions de filtre sont également enregistrées avec l'objet de modèle.  
+ Le modèle est également affecté par les données sur lesquelles vous effectuez l'apprentissage : même les modèles qualifiés sur la même structure d'exploration de données peuvent donner des résultats différents si vous filtrez les données différemment ou utilisez différentes valeurs de départ durant l'analyse. Toutefois, les données réelles ne sont pas stockées dans le modèle ; seules les statistiques sommaires sont stockées, les données réelles résidant dans la structure d'exploration de données. Si vous avez créé des filtres sur les données lors de l'apprentissage du modèle, les définitions de filtre sont également enregistrées avec l'objet de modèle.  
   
  Le modèle contient un jeu de liaisons, qui renvoient aux données mises en cache dans la structure d'exploration de données. Si les données ont été mises en cache dans la structure et n'ont pas été effacées après leur traitement, ces liaisons permettent d'extraire des résultats les cas les prenant en charge. Toutefois, les données réelles sont stockées dans le cache de la structure, et non dans le modèle.  
   
  [Architecture du modèle d'exploration de données](#bkmk_mdlArch)  
   
 ##  <a name="bkmk_mdlDefine"></a> Définition des modèles d'exploration de données  
- Pour créer un modèle d'exploration de données, suivez ces étapes générales :  
+ Pour créer un modèle d'exploration de données, suivez ces étapes générales :  
   
 -   Créez la structure d'exploration de données sous-jacente et incluez des colonnes de données qui peuvent être nécessaires.  
   
 -   Sélectionnez l'algorithme le mieux adapté à la tâche analytique.  
   
--   Choisissez les colonnes de la structure à utiliser dans le modèle, puis spécifiez comment elles doivent être utiliser : quelle colonne contient les résultats que vous souhaitez prédire, quelles colonnes servent d'entrée uniquement, etc.  
+-   Choisissez les colonnes de la structure à utiliser dans le modèle, puis spécifiez comment elles doivent être utiliser : quelle colonne contient les résultats que vous souhaitez prédire, quelles colonnes servent d'entrée uniquement, etc.  
   
 -   Facultativement, définition des paramètres pour régler avec précision le traitement par l'algorithme.  
   
@@ -75,11 +80,11 @@ caps.handback.revision: 37
   
 -   L'Assistant Exploration de données permet de créer une structure et un modèle d'exploration de données connexe. Il s'agit de la méthode la plus simple à utiliser. L'Assistant crée automatiquement la structure d'exploration de données requise et permet de configurer les paramètres importants.  
   
--   Une instruction DMX CREATE MODEL peut être utilisée pour définir un modèle. La structure requise est créée automatiquement dans le cadre du processus ; par conséquent, vous ne pouvez pas réutiliser une structure existante avec cette méthode. Utilisez cette méthode si vous savez déjà exactement quel modèle vous souhaitez créer ou si vous souhaitez écrire des scripts pour des modèles.  
+-   Une instruction DMX CREATE MODEL peut être utilisée pour définir un modèle. La structure requise est créée automatiquement dans le cadre du processus ; par conséquent, vous ne pouvez pas réutiliser une structure existante avec cette méthode. Utilisez cette méthode si vous savez déjà exactement quel modèle vous souhaitez créer ou si vous souhaitez écrire des scripts pour des modèles.  
   
 -   Une instruction A DMX ALTER STRUCTURE ADD MODEL peut être utilisée pour ajouter un nouveau modèle d'exploration de données à une structure existante. Utilisez cette méthode si vous souhaitez essayer différents modèles basés sur le même jeu de données.  
   
- Vous pouvez également créer par programmation des modèles d'exploration de données, avec AMO ou XML/A, ou en utilisant d'autres clients, tels que le Client d'exploration de données pour Excel. Pour plus d'informations, consultez les rubriques suivantes :  
+ Vous pouvez également créer par programmation des modèles d'exploration de données, avec AMO ou XML/A, ou en utilisant d'autres clients, tels que le Client d'exploration de données pour Excel. Pour plus d'informations, consultez les rubriques suivantes :  
   
  [Architecture du modèle d'exploration de données](#bkmk_mdlArch)  
   
@@ -92,7 +97,7 @@ caps.handback.revision: 37
   
 -   **Propriété Algorithme** : spécifie l’algorithme utilisé pour créer le modèle. Les algorithmes disponibles dépendent du fournisseur utilisé. Pour une liste des algorithmes inclus avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Algorithmes d’exploration de données &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md). La propriété **Algorithme** s’applique au modèle d’exploration de données et ne peut être définie qu’une seule fois pour chaque modèle. Vous pouvez modifier l'algorithme ultérieurement mais certaines colonnes du modèle d'exploration de données peuvent devenir non valides si elles ne sont pas prises en charge par l'algorithme choisi. Vous devez toujours retraiter le modèle suivant la modification de cette propriété.  
   
--   **Propriété Utilisation** : définit la façon dont chaque colonne est utilisée par le modèle. Vous pouvez définir l’utilisation de la colonne comme **Entrée**, **Prédire**, **Prédire uniquement** ou **Clé**. La propriété **Utilisation** s’applique à des colonnes individuelles du modèle d’exploration de données et doit être définie individuellement pour chaque colonne incluse dans un modèle. Si la structure contient une colonne que vous n’utilisez pas dans le modèle, l’utilisation est définie sur **Ignorer**. Les exemples de données que vous pouvez inclure dans la structure d'exploration de données mais pas utiliser dans l'analyse, peuvent être des noms de client ou des adresses de messagerie. De cette façon, vous pouvez les interroger ultérieurement sans avoir à les inclure dans la phase d'analyse.  
+-   **Propriété Utilisation** : définit la façon dont chaque colonne est utilisée par le modèle. Vous pouvez définir l’utilisation de la colonne comme **Entrée**, **Prédire**, **Prédire uniquement**ou **Clé**. La propriété **Utilisation** s’applique à des colonnes individuelles du modèle d’exploration de données et doit être définie individuellement pour chaque colonne incluse dans un modèle. Si la structure contient une colonne que vous n’utilisez pas dans le modèle, l’utilisation est définie sur **Ignorer**. Les exemples de données que vous pouvez inclure dans la structure d'exploration de données mais pas utiliser dans l'analyse, peuvent être des noms de client ou des adresses de messagerie. De cette façon, vous pouvez les interroger ultérieurement sans avoir à les inclure dans la phase d'analyse.  
   
  Après avoir créé un modèle d'exploration de données, vous pouvez modifier la valeur de ses propriétés. Toutefois, toute modification, même sur le nom du modèle d'exploration de données, requiert un traitement supplémentaire du modèle. Lorsque le modèle a été traité de nouveau, vous pouvez voir des résultats différents.  
   
@@ -101,7 +106,7 @@ caps.handback.revision: 37
 ##  <a name="bkmk_mdlCols"></a> Colonnes d'un modèle d'exploration de données  
  Le modèle d'exploration de données contient des colonnes de données qui sont obtenues à partir des colonnes définies dans la structure d'exploration de données. Vous pouvez choisir les colonnes provenant de la structure d'exploration de données à utiliser dans le modèle et créer des copies des colonnes de la structure d'exploration de données, puis les renommer ou modifier leur utilisation. Dans le cadre du processus de création de modèles, vous devez également définir l'utilisation de la colonne par le modèle. Cela inclut des informations indiquant notamment si la colonne est une clé, si elle est utilisée pour la prédiction ou si elle peut être ignorée par l'algorithme.  
   
- Lorsque vous générez un modèle, plutôt que d'ajouter automatiquement chaque colonne de données disponibles, il est recommandé de vérifier les données de la structure avec soin et de n'inclure dans le modèle que les colonnes qui se justifient pour l'analyse. Par exemple, vous devez éviter d'inclure plusieurs colonnes qui répètent les mêmes données et éviter d'utiliser des colonnes contenant principalement des valeurs uniques. Si vous pensez qu'une colonne ne doit pas être utilisée, il n'est pas nécessaire de la supprimer de la structure ou du modèle d'exploration de données ; à la place, vous pouvez placer sur cette colonne un indicateur qui spécifie qu'elle doit être ignorée lors de la génération du modèle. Cela signifie que la colonne restera dans la structure d'exploration de données, mais ne sera pas utilisée dans le modèle d'exploration de données. Si vous avez activé l'extraction du modèle vers la structure d'exploration de données, vous pouvez récupérer les informations de la colonne ultérieurement.  
+ Lorsque vous générez un modèle, plutôt que d'ajouter automatiquement chaque colonne de données disponibles, il est recommandé de vérifier les données de la structure avec soin et de n'inclure dans le modèle que les colonnes qui se justifient pour l'analyse. Par exemple, vous devez éviter d'inclure plusieurs colonnes qui répètent les mêmes données et éviter d'utiliser des colonnes contenant principalement des valeurs uniques. Si vous pensez qu'une colonne ne doit pas être utilisée, il n'est pas nécessaire de la supprimer de la structure ou du modèle d'exploration de données ; à la place, vous pouvez placer sur cette colonne un indicateur qui spécifie qu'elle doit être ignorée lors de la génération du modèle. Cela signifie que la colonne restera dans la structure d'exploration de données, mais ne sera pas utilisée dans le modèle d'exploration de données. Si vous avez activé l'extraction du modèle vers la structure d'exploration de données, vous pouvez récupérer les informations de la colonne ultérieurement.  
   
  Selon l'algorithme choisi, il est possible que certaines colonnes de la structure d'exploration de données soient incompatibles avec certains types de modèle ou qu'elles aboutissent à des résultats incorrects. Par exemple, si vos données contiennent des données numériques continues, telles qu'une colonne de revenus, et que votre modèle requiert des valeurs discrètes, vous pouvez convertir les données en plages discrètes ou les supprimer du modèle. Dans certains cas, l'algorithme convertit automatiquement ou lie les données à votre place, mais les résultats peuvent ne pas toujours être conformes à vos souhaits ou attentes. Pensez à effectuer des copies supplémentaires de la colonne et essayez différents modèles. Vous pouvez également définir des indicateurs sur les différentes colonnes pour indiquer où est requis un traitement spécial. Par exemple, si vos données contiennent des valeurs Null, vous pouvez utiliser un indicateur de modélisation pour contrôler la gestion. Si vous souhaitez qu'une colonne particulière soit considérée comme régresseur dans un modèle, vous pouvez le faire à l'aide d'un indicateur de modélisation.  
   
@@ -121,7 +126,7 @@ caps.handback.revision: 37
   
  Vous pouvez également créer des requêtes sur le modèle d'exploration de données pour élaborer des prédictions, ou récupérer les métadonnées du modèle ou les motifs créés par celui-ci. Vous pouvez créer des requêtes avec les extensions DMX (Data Mining Extensions).  
   
-## Contenu connexe  
+## <a name="related-content"></a>Contenu connexe  
   
 |Rubriques|Liens|  
 |------------|-----------|  
@@ -132,7 +137,7 @@ caps.handback.revision: 37
 |Apprendre à utiliser les visionneuses personnalisées d'exploration de données dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Visionneuses de modèle d’exploration de données](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |Afficher des exemples de différents types de requête que vous pouvez utiliser sur des modèles d'exploration de données.|[Requêtes d'exploration de données](../../analysis-services/data-mining/data-mining-queries.md)|  
   
-## Tâches associées  
+## <a name="related-tasks"></a>Tâches associées  
  Utilisez les liens suivants pour obtenir des informations spécifiques sur l'utilisation des modèles d'exploration de données  
   
 |Tâche|Lien|  
@@ -144,7 +149,7 @@ caps.handback.revision: 37
 |Remplir les modèles avec des données ou mettre à jour des données dans un modèle|[Traiter un modèle d'exploration de données](../../analysis-services/data-mining/process-a-mining-model.md)|  
 |Utiliser des modèles OLAP|[Créer une dimension d'exploration de données](../../analysis-services/data-mining/create-a-data-mining-dimension.md)|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Objets de bases de données &#40;Analysis Services – Données multidimensionnelles&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

@@ -1,23 +1,28 @@
 ---
-title: "Cr&#233;er une structure d&#39;exploration de donn&#233;es OLAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Créer une Structure d’exploration de données OLAP | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: b4c361d8a255b4ef5dc348692bb688a0421b0abd
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cr&#233;er une structure d&#39;exploration de donn&#233;es OLAP
+# <a name="create-an-olap-mining-structure"></a>Créer une structure d'exploration de données OLAP
   Il existe de nombreux avantages à la création d'un modèle d'exploration de données basé sur un cube OLAP ou une autre banque de données multidimensionnelles. Une solution OLAP contient déjà de grandes quantités de données qui sont correctement organisées, nettoyées et mises en forme ; toutefois, la complexité des données est telle que les utilisateurs ont peu de chances de trouver des modèles explicites par une exploration ad hoc. L'exploration de données offre la possibilité de découvrir de nouvelles corrélations et de fournir un éclairage utilisable.  
   
  Cette rubrique décrit comment créer une structure d'exploration de données OLAP, en fonction d'une dimension et de mesures associées dans une solution multidimensionnelle existante.  
@@ -42,7 +47,7 @@ caps.handback.revision: 12
  Pour plus d’informations, consultez [Importer un projet d’exploration de données à l’aide de l’Assistant Importation d’Analysis Services](../../analysis-services/data-mining/import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
   
 ##  <a name="bkmk_Overview"></a> Vue d'ensemble du processus d'exploration de données OLAP  
- Démarrez l’Assistant Exploration de données en cliquant avec le bouton droit sur le nœud **Structures d’exploration de données** dans l’Explorateur de solutions, puis en sélectionnant **Nouvelle structure d’exploration de données**. L'Assistant vous guide à travers les étapes suivantes pour créer la structure d'un nouveau modèle :  
+ Démarrez l’Assistant Exploration de données en cliquant avec le bouton droit sur le nœud **Structures d’exploration de données** dans l’Explorateur de solutions, puis en sélectionnant  **Nouvelle structure d’exploration de données**. L'Assistant vous guide à travers les étapes suivantes pour créer la structure d'un nouveau modèle :  
   
 1.  **Sélectionner la méthode de définition**: vous sélectionnez ici un type de source de données, puis choisissez **À partir d'un cube existant**.  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 12
   
 3.  **Sélectionner la dimension de cube source**: cette étape est le même que la sélection d'une source de données. Vous devez choisir l'unique dimension qui contient les données les plus importantes utilisées pour l'apprentissage de votre modèle. Vous pouvez ajouter des données d'autres dimensions ultérieurement, ou filtrer la dimension.  
   
-4.  **Sélectionner la clé de cas** : dans la dimension que vous venez de sélectionner, choisissez un attribut (colonne) pour servir d’identificateur unique de vos données de cas.  
+4.  **Sélectionner la clé de cas**: dans la dimension que vous venez de sélectionner, choisissez un attribut (colonne) pour servir d’identificateur unique de vos données de cas.  
   
      En général, une colonne sera présélectionnée pour vous, mais vous pouvez en changer si en fait il existe plusieurs clés.  
   
@@ -113,7 +118,7 @@ caps.handback.revision: 12
 |Rechercher des cellules intéressantes ou anormales|Identifiez les ventes des magasins qui ne suivent pas les tendances générales dans le temps.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series)|  
 |Rechercher des corrélations|Identifiez les facteurs qui sont liés au temps mort de serveur, notamment la zone, le type de l'ordinateur, le système d'exploitation ou la date d'achat.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Naïve Bayes|  
   
-##  <a name="bkmk_Filters"></a> Découpage d'un cube et filtrage de modèles  
+##  <a name="bkmk_Filters"></a>Découpage d’un Cube et. filtrage de modèles  
  Le découpage du cube lorsque vous générez un modèle revient à créer un filtre sur un modèle d'exploration de données relationnel. Dans un modèle relationnel, le filtre sur la source de données est défini comme une clause WHERE sur une instruction SQL ; dans un cube, vous utilisez l’éditeur pour créer des instructions de filtre à l’aide de MDX.  
   
  Par exemple, un cube peut contenir des informations sur des achats de produits dans le monde entier, mais pour votre campagne de marketing, vous souhaitez créer un modèle basé sur l'analyse des clients femmes de plus de 30 ans résidant au Royaume-Uni.  
@@ -124,7 +129,7 @@ caps.handback.revision: 12
   
 -   Pour le deuxième filtre, vous choisissez la dimension Customer, vous sélectionnez l’attribut Gender et vous sélectionnez « Femme » dans la liste des valeurs d’attribut.  
   
- Une fois la structure d'exploration de données créée, vous pouvez modifier la définition des données du cube et les critères de filtre. Pour plus d’informations, consultez [Filter the Source Cube for a Mining Structure](../Topic/Filter%20the%20Source%20Cube%20for%20a%20Mining%20Structure.md).  
+ Une fois la structure d'exploration de données créée, vous pouvez modifier la définition des données du cube et les critères de filtre. Pour plus d’informations, consultez [filtres pour les modèles d’exploration de données](~/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
  Les onglets **Structure d'exploration de données** et **Modèle d'exploration de données** fournissent tous deux une option pour ajouter un filtre à une structure d'exploration de données existante, en cliquant sur **Définir une coupe de cube**. La boîte de dialogue **Découper un cube** vous aide à générer une expression de filtre MDX valide en choisissant une valeur dans les listes déroulantes.  
   
@@ -156,13 +161,14 @@ caps.handback.revision: 12
  L'option **Créer le cube au moyen d'une dim. du mod. d'explor. de données**vous permet d'exporter la nouvelle dimension d'exploration de données dans un nouveau cube. Tous les objets requis pour l'extraction sur la dimension d'exploration de données seront inclus automatiquement.  
   
 > [!WARNING]  
->  Seuls les types de modèles suivants prennent en charge la création de dimensions d'exploration de données : modèles basés sur l'algorithme de gestion de clusters Microsoft, l'algorithme MDT (Microsoft Decision Trees) ou l'algorithme Microsoft Association.  
+>  Seuls les types de modèles suivants prennent en charge la création de dimensions d'exploration de données : modèles basés sur l'algorithme de gestion de clusters Microsoft, l'algorithme MDT (Microsoft Decision Trees) ou l'algorithme Microsoft Association.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Colonnes de structure d'exploration de données](../../analysis-services/data-mining/mining-structure-columns.md)   
+ [Colonnes de Structure d’exploration de données](../../analysis-services/data-mining/mining-structure-columns.md)   
  [Colonnes d'un modèle d'exploration de données](../../analysis-services/data-mining/mining-model-columns.md)   
- [Propriétés du modèle d'exploration de données](../../analysis-services/data-mining/mining-model-properties.md)   
- [Propriétés des colonnes de structure et des structure d'exploration de données](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)  
+ [Propriétés du modèle d’exploration de données](../../analysis-services/data-mining/mining-model-properties.md)   
+ [Propriétés de Structure d’exploration de données et les colonnes de Structure](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)  
   
   
+

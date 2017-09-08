@@ -1,28 +1,33 @@
 ---
-title: "Codes des types d&#39;objets Analysis Services utilis&#233;s dans les traces | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "Codes des types utilisés dans les traces d’objets Analysis Services | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7bd50f15603440953dc2f9c52ae669e5fcbd3108
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Codes des types d&#39;objets Analysis Services utilis&#233;s dans les traces
+# <a name="analysis-services-object-type-codes-used-in-traces"></a>Codes des types d'objets Analysis Services utilisés dans les traces
   Cette page répertorie le type d'objet (un numéro à six chiffres) de chaque objet d'un modèle de données Analysis Services. Ces codes apparaissent dans les journaux des traces et sont utilisés pour identifier le type d'objet associé à un verrou particulier. Par exemple, un dépassement du délai d'attente d'un verrou sur une base de données indique le type d'objet 100002, qui est le type d'objet Base de données.  
   
 > [!NOTE]  
 >  Il y a davantage de codes répertoriés ci-dessous que ce qui apparaît réellement dans un journal des traces. La liste ci-dessous est une liste complète des codes de type pour chaque objet, mais seuls les objets susceptibles d'être verrouillés comportent un code de type d'objet dans un journal des traces.  
   
-## Référence de type d'objet  
+## <a name="object-type-reference"></a>Référence de type d'objet  
   
 |Type d'objet|Nom de l'objet|  
 |-----------------|-----------------|  

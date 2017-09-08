@@ -1,31 +1,36 @@
 ---
-title: "D&#233;ployer une solution d&#39;exploration de donn&#233;es sur des versions ant&#233;rieures de SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "compatibilité descendante [Analysis Services]"
-  - "exclusion [exploration de données]"
-  - "déploiement [Analysis Services]"
-  - "série chronologique [Analysis Services]"
-  - "déploiement [Analysis Services - exploration de données]"
-  - "synchronisation [Analysis Services]"
-  - "déploiement [Analysis Services]"
+title: "Déployer une Solution d’exploration de données pour les Versions précédentes de SQL Server | Documents Microsoft"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backward compatibility [Analysis Services]
+- holdout [data mining]
+- deploy [Analysis Services]
+- time series [Analysis Services]
+- deploying [Analysis Services - data mining]
+- synchronization [Analysis Services]
+- deployment [Analysis Services]
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d56f2cdd207e7d50584b08b5ebcae77bd9057b36
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# D&#233;ployer une solution d&#39;exploration de donn&#233;es sur des versions ant&#233;rieures de SQL Server
+# <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Déployer une solution d'exploration de données sur des versions antérieures de SQL Server
   Cette section décrit des problèmes de compatibilité connus qui peuvent survenir lorsque vous essayez de déployer un modèle d'exploration de données ou une structure d'exploration de données créée dans une instance de [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] sur une base de données qui utilise SQL Server 2005 Analysis Services, ou lorsque vous déployez des modèles créés dans SQL Server 2005 sur une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Le déploiement sur une instance de SQL Server 2000 Analysis Services n'est pas pris en charge.  
@@ -45,7 +50,7 @@ caps.handback.revision: 16
   
  Par conséquent, les modèles d'exploration de données de série chronologique qui utilisent le nouvel algorithme ARIMA peuvent se comporter différemment lorsqu'ils sont déployés sur une instance de SQL Server 2005 Analysis Services.  
   
- Si vous avez défini explicitement le paramètre PREDICTION_SMOOTHING pour contrôler l'association des modèles ARTXP et ARIMA dans la prédiction, lorsque vous déployez ce modèle sur une instance de SQL Server 2005, Analysis Services déclenche une erreur indiquant que le paramètre n'est pas valide. Pour empêcher cette erreur, vous devez supprimer le paramètre PREDICTION_SMOOTHING et convertir les modèles dans un modèle purement ARTXP.  
+ Si vous avez défini explicitement le paramètre PREDICTION_SMOOTHING pour contrôler l'association des modèles ARTXP et ARIMA dans la prédiction, lorsque vous déployez ce modèle sur une instance de SQL Server 2005, Analysis Services déclenche une erreur indiquant que le paramètre n'est pas valide. Pour empêcher cette erreur, vous devez supprimer le paramètre PREDICTION_SMOOTHING et convertir les modèles dans un modèle purement ARTXP.  
   
  Inversement, si vous déployez un modèle de série chronologique créé à l'aide de SQL Server 2005 Analysis Services sur une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], lorsque vous ouvrez le modèle d'exploration de données dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], les fichiers de définition sont convertis d'abord au nouveau format, et deux nouveaux paramètres sont ajoutés par défaut à tous les modèles de série chronologique. Le paramètre FORECAST_METHOD est ajouté avec la valeur par défaut de MIXED, et le paramètre PREDICTION_SMOOTHING est ajouté avec la valeur par défaut de 0.5. Toutefois, le modèle continue à utiliser uniquement ARTXP pour la prévision jusqu'à son retraitement. Dès que vous retraitez le modèle, la prédiction change pour utiliser à la fois ARIMA et ARTXP.  
   
@@ -56,14 +61,14 @@ caps.handback.revision: 16
  Si le fournisseur utilisé pour la source de données du modèle est SQL Server ou le fournisseur de données SQL Client 10, vous devez aussi modifier la définition de la source de données pour spécifier la version antérieure de SQL Server Native Client. Sinon, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] génère une erreur indiquant que le fournisseur n'est pas enregistré.  
   
 ##  <a name="bkmk_Holdout"></a> Déploiement de modèles avec données d'exclusion  
- Si vous utilisez [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] pour créer une structure d'exploration de données qui contient une partition d'exclusion utilisée pour tester les modèles d'exploration de données, la structure d'exploration de données peut être déployée sur une instance de SQL Server 2005, mais les informations de partition seront perdues.  
+ Si vous créez une structure d’exploration de données qui contient une partition d’exclusion utilisée pour tester les modèles d’exploration de données, la structure d’exploration de données peut être déployée à une instance de SQL Server 2005, mais les informations de partition seront perdues.  
   
  Lorsque vous ouvrez la structure d'exploration de données dans SQL Server 2005 Analysis Services, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] génère une erreur, puis régénère la structure pour supprimer la partition d'exclusion.  
   
- Après avoir reconstruit la structure, la taille de la partition d’exclusion n’est plus disponible dans la fenêtre Propriétés. Toutefois, la valeur (\<ddl100_100:HoldoutMaxPercent>30\</ddl100_100:HoldoutMaxPercent>) peut être encore présente dans le fichier script ASSL.  
+ Une fois que la structure a été reconstruite, la taille de la partition d’exclusion n’est plus disponible dans la fenêtre Propriétés. Toutefois, la valeur \<ddl100_100 : holdoutmaxpercent > 30\</ddl100_100:HoldoutMaxPercent >) peuvent toujours être présents dans le fichier de script ASSL.  
   
 ##  <a name="bkmk_Filter"></a> Déploiement de modèles avec filtres  
- Si vous utilisez [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] pour appliquer un filtre à un modèle d'exploration de données, le modèle peut être déployé sur une instance de SQL Server 2005, mais le filtre ne sera pas appliqué.  
+ Si vous appliquez un filtre à un modèle d’exploration de données, le modèle peut être déployé à une instance de SQL Server 2005, mais le filtre n’est pas appliqué.  
   
  Lorsque vous ouvrez le modèle d'exploration de données, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] génère une erreur, puis régénère le modèle pour supprimer le filtre.  
   
@@ -77,7 +82,7 @@ caps.handback.revision: 16
   
  Si vous essayez de synchroniser une base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , le serveur retourne une erreur et la synchronisation de la base de données échoue.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Compatibilité descendante Analysis Services](../../analysis-services/analysis-services-backward-compatibility.md)  
   
   

@@ -1,27 +1,32 @@
 ---
-title: "Mining Model Content for Decision Tree Models (Analysis Services - Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mining model content, decision tree models"
-  - "decision tree algorithms [Analysis Services]"
-  - "arbres de décision [Analysis Services]"
+title: "Contenu pour les modèles d’arbre de décision du modèle d’exploration de données | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining model content, decision tree models
+- decision tree algorithms [Analysis Services]
+- decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: da90bcdea225f4a27fdd28339bdeb127943ea15a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
+# <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
   Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles utilisant l'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees). Pour obtenir une explication générale du contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md). Il est important de se rappeler que l'algorithme MDT (Microsoft Decision Trees) est un algorithme hybride qui peut créer des modèles avec des fonctions très différentes : un arbre de décision peut représenter des associations, des règles ou même une régression linéaire. La structure de l'arbre est essentiellement la même, mais le mode d’interprétation des informations dépendra de l'objectif visé par la création du modèle.  
   
 ##  <a name="bkmk_Top"></a> Présentation de la structure d'un modèle d’arbre de décision  
@@ -32,7 +37,7 @@ caps.handback.revision: 24
 > [!NOTE]  
 >  Si votre modèle inclut plusieurs arborescences, vous ne pouvez en consulter qu’une seule à la fois dans la **Visionneuse d'arborescences Microsoft**. Toutefois, toutes les arborescences du même modèle sont affichées en même temps dans la **Visionneuse de l'arborescence de contenu générique** .  
   
- ![structure de contenu de modèle pour arbre de décision](../../analysis-services/data-mining/media/modelcontentstructure-dt.gif "structure de contenu de modèle pour arbre de décision")  
+ ![structure du contenu de modèle pour arbre de décision](../../analysis-services/data-mining/media/modelcontentstructure-dt.gif "structure du contenu de modèle pour arbre de décision")  
   
  L'arborescence de chaque attribut prédictible contient des informations qui décrivent la manière dont les colonnes d'entrée choisies affectent le résultat de l'attribut prédictible concerné. Chaque arborescence est menée par un nœud (NODE_TYPE = 9) qui contient l'attribut prédictible, suivi d'une série de nœuds (NODE_TYPE = 10) qui représentent les attributs d'entrée. Un attribut correspond à une colonne de niveau de cas ou aux valeurs des colonnes de table imbriquée, qui représentent généralement les valeurs de la colonne **Key** de la table imbriquée.  
   
@@ -45,12 +50,12 @@ caps.handback.revision: 24
  L'algorithme MDT (Microsoft Decision Trees) ne permet pas d’avoir des types de données continues en tant qu’entrées ; par conséquent, si les colonnes ont un type de données numériques continues, les valeurs sont discrétisées. L'algorithme effectue sa propre discrétisation à l’endroit du fractionnement pour tous les attributs continus.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] choisit automatiquement une méthode pour placer les attributs continus dans un compartiment ; toutefois, vous pouvez déterminer comment les valeurs continues dans les entrées sont discrétisées en affectant au type de contenu de la colonne de structure d’exploration de données la valeur **Discretized**, puis en définissant la propriété <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> ou <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]choisit automatiquement une méthode de création de compartiments des attributs continus ; Toutefois, vous pouvez contrôler comment les valeurs continues dans les entrées en définissant le type de contenu de la colonne de structure d’exploration de données à **Discretized** , puis en définissant le <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> ou <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> propriété.  
   
  [Haut](#bkmk_Top)  
   
 ##  <a name="bkmk_ModelContent"></a> Contenu d’un modèle d'arbre de décision  
- Cette section fournit des informations et des exemples liés uniquement aux colonnes du contenu du modèle d'exploration de données se rapportant aux modèles d’arbre de décision. Pour plus d’informations sur les colonnes à caractère général de l’ensemble de lignes de schéma et pour obtenir des explications sur la terminologie relative aux modèles d’exploration de données, consultez [Contenu du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+ Cette section fournit des informations et des exemples liés uniquement aux colonnes du contenu du modèle d'exploration de données se rapportant aux modèles d’arbre de décision. Pour plus d’informations sur les colonnes à caractère général de l’ensemble de lignes de schéma et pour obtenir des explications sur la terminologie relative aux modèles d’exploration de données, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Nom de la base de données où le modèle est stocké.  
@@ -72,7 +77,7 @@ caps.handback.revision: 24
  Les nœuds enfants d’un nœud donné auront le même préfixe hexadécimal, suivi d’un autre nombre hexadécimal qui représente la séquence du nœud enfant au sein du parent. Vous pouvez utiliser les préfixes pour déduire un chemin d'accès.  
   
  NODE_TYPE  
- Dans les modèles d'arbre de décision, les types de nœud suivants sont créés :  
+ Dans les modèles d'arbre de décision, les types de nœud suivants sont créés :  
   
 |Type de nœud|Description|  
 |---------------|-----------------|  
@@ -159,32 +164,32 @@ caps.handback.revision: 24
  MSOLAP_NODE_SHORT_CAPTION  
  Étiquette utilisée à des fins d'affichage.  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Un modèle d'arbre de décision n'a pas de nœud distinct qui stocke les statistiques pour l’ensemble du modèle, contrairement au nœud de statistiques marginales figurant dans un modèle Naive Bayes ou un modèle de réseau neuronal. En lieu et place, le modèle crée une arborescence séparée pour chaque attribut prédictible, avec un nœud (Tout) en haut de l’arborescence. Les arborescence sont indépendantes les unes des autres. Si votre modèle ne contient qu'un seul attribut prédictible, il n'y a qu'une seule arborescence et de ce fait un seul nœud (Tout).  
   
  Chaque arborescence représentant un attribut de sortie est en outre subdivisée en branches intérieures (NODE_TYPE = 3) qui représentent des fractionnements. Chacune de ces arborescences contient des statistiques sur la distribution de l'attribut cible. De plus, chaque nœud terminal (NODE_TYPE = 4) contient des statistiques qui décrivent les attributs d'entrée et leurs valeurs, ainsi que le nombre de cas prenant en charge chaque paire attribut/valeur. Par conséquent, vous pouvez consulter facilement les probabilités ou la distribution de données sans devoir interroger les données sources, quelle que soit la branche d'un arbre de décision. Chaque niveau de l'arborescence représente forcément la somme de ses nœuds enfants immédiats.  
   
- Consultez [Exemples de requêtes de modèle d’arbre de décision](../../analysis-services/data-mining/decision-trees-model-query-examples.md) pour obtenir des exemples d’extraction de ces statistiques.  
+ Consultez [Exemples de requêtes de modèle d’arbre de décision](../../analysis-services/data-mining/decision-trees-model-query-examples.md)pour obtenir des exemples d’extraction de ces statistiques.  
   
  [Haut](#bkmk_Top)  
   
-## Exemple de structure d’arbre de décision  
+## <a name="example-of-decision-tree-structure"></a>Exemple de structure d’arbre de décision  
  Pour comprendre le mode de fonctionnement d’un arbre de décision, prenons comme exemple un scénario d'acheteur de vélo AdventureWorks. En supposant que l'attribut prédictible est représenté par les achats des clients, l'algorithme d'arbres de décision essaie de trouver une colonne de données, parmi toutes les entrées fournies, qui détecte le plus efficacement les clients qui risquent d'acheter un vélo et ceux pour qui cet achat est improbable. Par exemple, le modèle peut trouver que l’âge est le meilleur indicateur du comportement d'achat. Plus particulièrement que les clients de plus de 30 ans ont de fortes chances d’acheter un vélo, et qu'il est improbable que les autres clients fassent un achat. Dans ce scénario, le modèle crée un *fractionnement* sur l'attribut Age. Cela signifie que l'arborescence se divise en deux branches : une contenant les clients de plus de 30 ans, et l’autre les clients plus jeunes. Les nouvelles branches sont représentées dans la structure du modèle sous la forme de deux nouvelles arborescences intérieures (NODE_TYPE = 3).  
   
  Pour chaque branche, le modèle continue de rechercher des attributs supplémentaires à utiliser pour différencier les clients. S'il s’avère inutile que les données continuent de créer des sous-groupes de clients, le modèle cesse de générer l'arborescence. Le modèle cesse également de générer l'arborescence lorsque le nombre de cas dans le nœud est trop petit pour continuer, indépendamment de la qualité du fractionnement, ou si la valeur est nulle ou manquante. En arrêtant la croissance de l'arborescence de manière anticipée, vous empêchez le modèle d’effectuer l’apprentissage trop près d’un jeu de données particulier.  
   
  Chaque nœud d'arbre intérieur contient des nœuds terminaux qui fournissent les détails des résultats au vu des résultats de classification actuels. Par exemple, vous pouvez avoir un nœud intérieur qui représente Âge >= 30 et Genre = Homme. Le nœud de ce groupe indique combien de clients de cette catégorie ont acheté ou non un produit. Par exemple, la classification peut contenir les fractionnements d'arborescence suivants :  
   
-|Arbre intérieur|Split|  
+|Arbre intérieur|fractionnement|  
 |-------------------|-----------|  
 |Âge >= 30|Âge >= 30 et Genre = Homme|  
 ||Âge >= 30 et Genre = Femme|  
 |Âge < 30|Âge < 30 et Genre = Homme|  
-||Âge \< 30 et Genre = Femme|  
+||Âge < 30 et Genre = Femme|  
   
  Lorsque vous utilisez un modèle d'arbre de décision à des fins de prédiction, le modèle prend les attributs que vous lui conférez comme arguments et suit le chemin d'accès aux attributs jusqu’en bas de l'arborescence. En règle générale, toutes les prédictions mènent à un nœud terminal, et les nœuds intérieurs sont utilisés uniquement pour la classification.  
   
- Un nœud terminal a toujours un NODE_TYPE de 4 (Distribution) et contient un histogramme indiquant la probabilité de chaque résultat (achat ou non achat) au vu des attributs fournis. Par exemple, si vous demandez une prédiction pour un nouveau client qui est un homme de plus de 60 ans, le modèle recherchera le nœud correspondant (Âge > 30 et Genre = Homme), puis affichera la probabilité pour le résultat spécifié. Ces probabilités sont stockées dans la table [NODE_DISTRIBUTION](#bkmk_NodeDist_Discrete) du nœud.  
+ Un nœud terminal a toujours un NODE_TYPE de 4 (Distribution) et contient un histogramme indiquant la probabilité de chaque résultat (achat ou non achat) au vu des attributs fournis. Par exemple, si vous demandez une prédiction pour un nouveau client qui est un homme de plus de 60 ans, le modèle recherchera le nœud correspondant (Âge > 30 et Genre = Homme), puis affichera la probabilité pour le résultat spécifié. Ces probabilités sont stockées dans la table [NODE_DISTRIBUTION](#bkmk_NodeDist_Discrete) du nœud.  
   
  Si l'attribut prédictible est un nombre continu, l'algorithme essaie de créer une formule de régression qui modélise la relation entre l'attribut prédictible et les entrées.  
   
@@ -195,7 +200,7 @@ caps.handback.revision: 24
   
 |||  
 |-|-|  
-|**NODE_CAPTION**|Affiche l'attribut qui distingue ce nœud par rapport au nœud parent. La légende du nœud définit un sous-segment de remplissage basé sur la condition de fractionnement. Par exemple, si le fractionnement portait sur [Age] et s’il s’agissait d’un fractionnement tripartite, les légendes des trois nœuds enfants pourraient être [Age] < 40, 40 <= [Age] \< 50, [Age] >= 50.|  
+|**NODE_CAPTION**|Affiche l'attribut qui distingue ce nœud par rapport au nœud parent. La légende du nœud définit un sous-segment de remplissage basé sur la condition de fractionnement. Par exemple, si le fractionnement portait sur [Age] et s’il s’agissait d’un fractionnement tripartite, les légendes des trois nœuds enfants pourraient être [Age] < 40, 40 <= [Age] < 50, [Age] >= 50.|  
 |**NODE_DESCRIPTION**|Contient la liste complète des attributs qui distinguent ce nœud des autres, en commençant par le nœud parent du modèle. Par exemple, Nom de produit = Pomme et Couleur = Rouge.|  
   
  [Haut](#bkmk_Top)  
@@ -206,24 +211,24 @@ caps.handback.revision: 24
  L'attribut représenté par le fragment XML peut être simple ou complexe. Un attribut simple contient le nom de la colonne du modèle, ainsi que la valeur de l’attribut. Si la colonne du modèle contient une table imbriquée, l'attribut de table imbriquée est représenté sous la forme d’une concaténation du nom de la table, de la valeur de clé et de l'attribut.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge la version 2.0 du PMML standard, avec des extensions prenant en charge l’utilisation d’une table imbriquée. Si vos données contiennent des tables imbriquées et si vous générez une version PMML du modèle, tous les éléments du modèle qui incluent les prédicats sont marqués comme extensions.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge la version 2.0 du PMML standard, ainsi que les extensions permettant l'utilisation de la table imbriquée. Si vos données contiennent des tables imbriquées et si vous générez une version PMML du modèle, tous les éléments du modèle qui incluent les prédicats sont marqués comme extensions.  
   
  [Haut](#bkmk_Top)  
   
 ###  <a name="bkmk_NodeDist_Discrete"></a> Distribution du nœud pour les attributs discrets  
  Dans un modèle d'arbre de décision, la table NODE_DISTRIBUTION contient des statistiques utiles. Toutefois, le type de statistiques varie selon que l'arborescence prédit un attribut discret ou continu. Cette section explique la signification des statistiques de distribution du nœud pour les attributs discrets.  
   
-#### Nom et valeur de l’attribut  
+#### <a name="attribute-name-and-attribute-value"></a>Nom et valeur de l’attribut  
  Dans un arbre de classification, le nom de l’attribut contient toujours le nom de la colonne prédictible. Cette valeur indique la prédiction de l'arborescence. Comme une arborescence unique représente toujours un attribut prédictible unique, cette valeur est répétée dans toute l'arborescence.  
   
  Pour un type de données discrètes, le champ de valeur de l’attribut répertorie les valeurs possibles de la colonne prédictible, plus la valeur **Missing** .  
   
-#### Support technique  
+#### <a name="support"></a>Support technique  
  La valeur de prise en charge pour chaque nœud indique le nombre de cas inclus dans ce nœud. Au niveau (Tout), vous devez voir le nombre total de cas utilisés pour l’apprentissage du modèle. Pour chaque fractionnement dans l'arborescence, la valeur de prise en charge correspond au nombre de cas regroupés dans ce nœud de l'arborescence. La somme des cas dans les nœuds terminaux est forcément égale au nombre de cas dans le nœud parent de l'arborescence.  
   
  Pour les nœuds qui représentent des attributs continus, la présence de la valeur NULL dans les données peut mener à des résultats non intuitifs. Par exemple, en présence de m cas, une valeur moyenne sera calculée comme somme(tous les cas)/n, où n est un nombre inférieur à m, et où m-n indique le nombre de cas avec les valeurs manquantes. La prise en charge est également représentée comme n.  
   
-#### Probabilité  
+#### <a name="probability"></a>Probabilité  
  La probabilité associée à chaque nœud indique la probabilité de tout cas figurant dans le jeu de données complet de ce nœud particulier. Les scores de probabilité sont calculés pour toute l'arborescence et pour le fractionnement immédiat.  
   
  Par exemple, la table suivante présente un modèle très simple de 100 cas.  
@@ -235,7 +240,7 @@ caps.handback.revision: 24
 |Âge < 30|40|Âge < 30 et Genre = Homme|30|30/40 = .75|30/100 = .30|  
 |||Âge < 30 et Genre = Femme|10|10/40 = .25|10/100 = .10|  
   
- Un petit ajustement est effectué dans tous les modèles afin de compenser pour les valeurs manquantes éventuelles. Pour les attributs continus, chaque valeur ou plage de valeurs est représentée sous forme d’état (par exemple, Âge \< 30, Âge = 30 et Âge > 30) et les probabilités sont calculées comme suit : l’état existe (valeur = 1), un autre état existe (valeur = 0), l’état est **Missing**. Pour plus d’informations sur l’ajustement des probabilités afin de représenter les valeurs manquantes, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
+ Un petit ajustement est effectué dans tous les modèles afin de compenser pour les valeurs manquantes éventuelles. Pour les attributs continus, chaque valeur ou plage de valeurs est représentée comme un état (par exemple, âge \<30, âge = 30 et l’âge > 30) et les probabilités sont calculées comme suit : état existe (valeur = 1), un autre état existe (valeur = 0), l’état est **manquant**. Pour plus d’informations sur l’ajustement des probabilités afin de représenter les valeurs manquantes, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
  Les probabilités pour chaque nœud sont calculées presque directement à partir de la distribution, comme suit :  
   
@@ -245,15 +250,15 @@ caps.handback.revision: 24
   
  Lors de l’élaboration de prédictions, la probabilité de la distribution doit être équilibrée avec la probabilité du nœud pour lisser les probabilités. Par exemple, si un fractionnement dans l'arborescence sépare des cas par un quotient de 9000/1000, l'arborescence est très déséquilibrée. Par conséquent, une prédiction issue de la petite branche ne doit pas avoir le même poids qu'une prédiction provenant d'une branche comportant de nombreux cas.  
   
-#### Variance  
+#### <a name="variance"></a>Variance  
  L’écart est une mesure du mode de dispersion des valeurs dans un exemple, au vu d’une distribution attendue. Pour les valeurs discrètes, l’écart est de 0 par définition.  
   
  Pour plus d’informations sur le calcul de l’écart pour les valeurs continues, consultez [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
-#### Type de valeur  
+#### <a name="value-type"></a>Type de valeur  
  La colonne de type de valeur fournit des informations sur la signification de la valeur numérique indiquée dans les autres colonnes de la table NODE_DISTRIBUTION. Vous pouvez utiliser le type de valeur dans les requêtes pour extraire des lignes spécifiques dans les tables imbriquées. Pour obtenir des exemples, consultez [Exemples de requêtes de modèle d’arbre de décision](../../analysis-services/data-mining/decision-trees-model-query-examples.md).  
   
- Parmi les types de l’énumération <xref:Microsoft.AnalysisServices.AdomdClient.MiningValueType>, les types suivants sont utilisés dans les arbres de classification.  
+ Parmi les types de l’énumération <xref:Microsoft.AnalysisServices.AdomdClient.MiningValueType> , les types suivants sont utilisés dans les arbres de classification.  
   
 |Type de valeur|Description|  
 |----------------|-----------------|  
@@ -271,7 +276,7 @@ caps.handback.revision: 24
   
  Pour tous les autres nœuds de l'arborescence (excepté les nœuds terminaux), le score de chaque nœud représente le meilleur score de fractionnement du nœud actuel, moins le score de fractionnement du nœud parent. En règle générale, le score de fractionnement d’un nœud parent doit toujours être meilleur que celui de ses nœuds enfants. Cela est dû au fait qu'un modèle d'arbre de décision se fractionne normalement en premier sur les attributs les plus importants.  
   
- Il existe de nombreuses façons de calculer un score pour un fractionnement, selon le paramètre d'algorithme choisi. La manière dont les scores sont calculés pour chacune des méthodes de calcul de score dépasse le cadre de cette rubrique. Pour plus d'informations, consultez «[Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://go.microsoft.com/fwlink/?LinkId=45963)» (en anglais) sur le site Web [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research.  
+ Il existe de nombreuses façons de calculer un score pour un fractionnement, selon le paramètre d'algorithme choisi. La manière dont les scores sont calculés pour chacune des méthodes de calcul de score dépasse le cadre de cette rubrique. Pour plus d'informations, consultez «[Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://research.microsoft.com/en-us/um/people/heckerman/hgc94uai.pdf)» (en anglais) sur le site Web [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research.  
   
 > [!NOTE]  
 >  Si vous créez un modèle d'arbre de décision ayant des attributs prédictibles continus et discrets, vous verrez des scores complètement différents dans les nœuds (Tout) qui représentent chaque type d'arborescence. Chaque modèle doit être considéré indépendamment, et les méthodes utilisées pour calculer le score de la régression sont complètement différentes de celles utilisées pour calculer le score de la classification. Les valeurs de score de nœud ne peuvent pas être comparées.  
@@ -287,16 +292,17 @@ caps.handback.revision: 24
   
 |Condition de fractionnement|Résultat dans le nœud|  
 |---------------------|--------------------|  
-|si n \< 5|La relation peut être exprimée comme équation 1|  
+|si n < 5|La relation peut être exprimée comme équation 1|  
 |si n est compris entre 5 et 10|Aucune équation|  
 |si n > 10|La relation peut être exprimée comme équation 2|  
   
  Pour plus d’informations sur les nœuds de régression, consultez [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
-## Voir aussi  
- [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Visionneuses de modèle d’exploration de données](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [Requêtes d'exploration de données](../../analysis-services/data-mining/data-mining-queries.md)   
  [Algorithme MDT (Microsoft Decision Trees)](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  
   
   
+

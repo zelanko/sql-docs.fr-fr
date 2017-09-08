@@ -1,25 +1,30 @@
 ---
-title: "Cr&#233;er un graphique de courbes d&#39;&#233;l&#233;vation, un graphique des b&#233;n&#233;fices ou une matrice de classification | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Graphique d’analyse de précision de l’exploration de données [Analysis Services], structures d’exploration de données"
+title: "Créer un graphique de courbes d’élévation, un graphique des bénéfices ou une matrice de Classification | Documents Microsoft"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Mining Accuracy Chart [Analysis Services], mining structures
 ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4a4ebb3633becee7df676650ce88d2e00ff96f8a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cr&#233;er un graphique de courbes d&#39;&#233;l&#233;vation, un graphique des b&#233;n&#233;fices ou une matrice de classification
+# <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Créer un graphique de courbes d'élévation, un graphique des bénéfices ou une matrice de classification
   Vous pouvez créer un graphique d'analyse de précision pour un modèle d'exploration de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en cinq étapes de base :  
   
 -   Sélectionnez la structure d'exploration de données contenant les modèles d'exploration de données à comparer.  
@@ -34,7 +39,7 @@ caps.handback.revision: 20
   
  Ces étapes de base sont les mêmes pour le graphique de courbes d'élévation, le graphique des bénéfices et la matrice de classification. Les procédures suivantes présentent les étapes à suivre pour configurer les options des graphiques de base pour ces types de graphiques. Pour plus d’informations sur la création d’un rapport de validation croisée, consultez [Mesures dans le rapport de validation croisée](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).  
   
-### Ouvrir la structure d'exploration de données dans le concepteur graphique d'analyse de précision  
+### <a name="open-the-mining-structure-in-the-accuracy-chart-designer"></a>Ouvrir la structure d'exploration de données dans le concepteur graphique d'analyse de précision  
   
 1.  Ouvrez le Concepteur d'exploration de données dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 20
   
 3.  Cliquez sur l'onglet **Graphique d'analyse de précision de l'exploration de données** .  
   
-### Sélectionner des modèles d'exploration de données à inclure dans le graphique  
+### <a name="select-mining-models-for-inclusion-in-the-chart"></a>Sélectionner des modèles d'exploration de données à inclure dans le graphique  
   
 1.  Sous l'onglet **Graphique d'analyse de précision de l'exploration de données** du Concepteur d'exploration de données dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], cliquez sur l'onglet **Sélection d'entrée** .  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 20
   
      Pour plus d’informations, consultez [Choisir la colonne à utiliser pour tester un modèle d’exploration de données](../../analysis-services/data-mining/choose-the-column-to-use-for-testing-a-mining-model.md).  
   
-### Sélectionner des données de test  
+### <a name="select-testing-data"></a>Sélectionner des données de test  
   
 1.  Sous l'onglet **Sélection d'entrée** de l'onglet **Graphique d'analyse de précision de l'exploration de données** , spécifiez la source des données à utiliser pour générer le graphique en sélectionnant l'une des options dans le groupe, **Sélectionner le jeu de données à utiliser pour le graphique d'analyse de précision**.  
   
@@ -76,7 +81,7 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  Vous ne pouvez pas créer de filtre sur les scénarios de test de modèle ou sur les scénarios de test de structure d'exploration de données sous l'onglet **Sélection d'entrée** . Pour créer un filtre sur le modèle d'exploration de données, modifiez la propriété Filtrer du modèle. Pour plus d’informations, consultez [Appliquer un filtre à un modèle d’exploration de données](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md).  
   
-### Configurer les paramètres du graphique et générer le graphique  
+### <a name="configure-chart-settings-and-generate-the-chart"></a>Configurer les paramètres du graphique et générer le graphique  
   
 1.  Sous l'onglet **Graphique d'analyse de précision de l'exploration de données** , cliquez sur l'onglet correspondant au graphique à créer.  
   
@@ -84,14 +89,14 @@ caps.handback.revision: 20
   
 3.  Pour une **matrice de classification**, cliquez sur l'onglet **Matrice de classification** . Aucun autre paramètres n'est nécessaire ; le graphique est automatiquement généré en fonction des données d'entrée et du modèle que vous avez sélectionnés.  
   
-4.  Pour un **graphique des bénéfices**, cliquez d'abord sur l'onglet **Graphique de courbes d'élévation** . Ensuite, dans la liste déroulante **Type de graphique**, sélectionnez **Graphique des bénéfices**.  
+4.  Pour un **graphique des bénéfices**, cliquez d'abord sur l'onglet **Graphique de courbes d'élévation** . Ensuite, dans la liste déroulante **Type de graphique** , sélectionnez **Graphique des bénéfices**.  
   
      Entrez les paramètres suivants dans la boîte de dialogue **Paramètres du graphique des bénéfices** .  
   
      **Remplissage**  
      Nombre de cas du jeu de données que vous voulez utiliser lors de la création du graphique de courbes d'élévation.  
   
-     Le modèle choisit toujours les cas par ordre décroissant de probabilité ; en d'autres termes, si vous évaluez des clients potentiels et que vous choisissez un nombre qui représente uniquement la moitié des enregistrements de votre base de données de clients, le modèle mesurera la précision sur le sous-ensemble des cas les mieux adaptés à votre modèle.  
+     Le modèle choisit toujours les cas par ordre décroissant de probabilité ; en d'autres termes, si vous évaluez des clients potentiels et que vous choisissez un nombre qui représente uniquement la moitié des enregistrements de votre base de données de clients, le modèle mesurera la précision sur le sous-ensemble des cas les mieux adaptés à votre modèle.  
   
      En effet, lorsque vous utilisez le modèle pour générer un publipostage ou créer une campagne, vous utiliserez la probabilité de prédiction associée à chaque cas pour cibler uniquement les clients qui ont la probabilité la plus élevée de faire une réponse positive.  
   
@@ -110,7 +115,7 @@ caps.handback.revision: 20
      **Revenu par personne**  
      Revenu associé à chaque vente réussie.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Graphique de courbes d’élévation &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
  [Matrice de classification &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   

@@ -1,73 +1,80 @@
 ---
-title: "Niveau de compatibilit&#233; pour les mod&#232;les tabulaires dans Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.versioncompat.f1"
+title: "Niveau de compatibilité pour les modèles tabulaires dans Analysis Services | Documents Microsoft"
+ms.custom: 
+ms.date: 07/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.versioncompat.f1
 ms.assetid: 8943d78d-4a73-4be8-ad14-3d428f5abd06
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 27
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 58710676e09a49ecc1b49ad37c656e3589ee1257
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Niveau de compatibilit&#233; pour les mod&#232;les tabulaires dans Analysis Services
-  Le *niveau de compatibilité* d’un modèle ou d’une base de données fait référence à un ensemble de comportements spécifiques à chaque version dans le moteur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Vous pouvez créer des modèles à n’importe quel niveau de compatibilité pris en charge afin d’obtenir les comportements d'une version particulière. Par exemple, les métadonnées d'objets DirectQuery et tabulaires ont des implémentations différentes en fonction du niveau de compatibilité attribué.  
+# <a name="compatibility-level-for-analysis-services-tabular-models"></a>Niveau de compatibilité pour les modèles tabulaires Analysis Services
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  Le *le niveau de compatibilité* fait référence à des comportements spécifiques à chaque version dans le moteur Analysis Services. Par exemple, DirectQuery et les métadonnées de l’objet sous forme de tableau ont des implémentations différentes en fonction du niveau de compatibilité. En général, vous devez choisir le dernier niveau de compatibilité pris en charge par vos serveurs.
+
+  **Le dernier niveau de compatibilité est 1400** 
   
- **SQL Server 2016 RTM (1200)**, ou niveau de compatibilité 1200 pour faire court, est une nouveauté de SQL Server 2016 qui ne s’applique qu’aux modèles tabulaires.  Les modèles tabulaires au niveau de compatibilité 1200 s’exécuteront uniquement sur une instance tabulaire [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] .  
+Principales fonctionnalités dans le niveau de compatibilité 1400 sont les suivantes :
+
+*  Nouvelle infrastructure pour la connectivité de données et les importer dans les modèles tabulaires avec prise en charge de TOM APIs et de script TMSL. Cela permet la prise en charge des sources de données supplémentaires telles que le stockage Blob Azure. Données supplémentaires sources seront inclus dans de futures mises à jour.
+*  Transformation de données et des fonctionnalités de combiner des données à l’aide d’expressions M et obtenir des données.
+*  Mesures prennent désormais en charge une propriété de lignes de détail avec une expression DAX, l’activation des Outils BI telles que Microsoft Excel exploration aux données détaillées à partir d’un rapport. Par exemple, lorsque les utilisateurs finaux afficher le total des ventes pour une région ou le mois, ils peuvent afficher les détails de la commande associée. 
+*  Sécurité au niveau objet pour les noms de table et de colonne, en plus des données au sein de celles-ci.
+*  Prise en charge améliorée pour les hiérarchies irrégulières.
+*  Surveillance des performances et améliorations.
+
   
- Pour créer ou mettre à niveau un modèle tabulaire, utilisez SQL Server Data Tools (SSDT) et définissez la propriété **Niveau de compatibilité** pendant la création du projet ou dans le fichier **model.bim** une fois le projet créé.  
+## <a name="supported-compatibility-levels-by-version"></a>Niveaux de compatibilité pris en charge par version
   
-> [!NOTE]  
->  Les modèles multidimensionnels suivent un chemin d'accès de version indépendante en termes de niveaux de compatibilité. Lorsque les numéros sont identiques, comme c'est le cas avec 1103, il s’agit d’une coïncidence. Pour plus d’informations, consultez [Niveau de compatibilité d’une base de données multidimensionnelle &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md).  
+|||  
+|-|-|- 
+|**Niveau de compatibilité**|**Version du serveur**| 
+|1400|Azure Analysis Services (version préliminaire), SQL Server 2017 |  
+|1200|Azure Analysis Services, SQL Server 2017, SQL Server 2016| 
+|1103|SQL Server 2017 *, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
+|1100|SQL Server 2017 *, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 
+
+\*niveaux de compatibilité 1100 et 1103 sont déconseillées dans SQL Server 2017.
   
-## Niveaux de compatibilité pris en charge pour les bases de données d’un modèle tabulaire  
- Analysis Services prend en charge les niveaux de compatibilité suivants, applicables à la fois aux modèles et aux bases de données.  La version de l'outil permettant de créer un modèle détermine si des niveaux de compatibilité plus élevés sont disponibles.  
+## <a name="set-compatibility-level"></a>Définir le niveau de compatibilité 
+ Lorsque vous créez un nouveau projet de modèle tabulaire dans SQL Server Data Tools (SSDT), vous pouvez spécifier le niveau de compatibilité sur les **Générateur de modèles tabulaires** boîte de dialogue. 
   
-||||  
-|-|-|-|  
-|niveau de compatibilité|Version du serveur|Version de l’outil de modélisation|  
-|1200|S'exécute uniquement sur les instances SQL Server 2016|[SQL Server Data Tools pour Visual Studio 2015 uniquement](http://go.microsoft.com/fwlink/?LinkID=690931) <sup>1</sup><br /><br /> [What's New in Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md) décrit les fonctionnalités disponibles à ce niveau.|  
-|1103|SQL Server 2016<br /><br /> SQL Server 2014<br /><br /> SQL Server 2012 SP1|[SQL Server Data Tools pour Visual Studio 2015](http://go.microsoft.com/fwlink/?LinkID=690931) <sup>2</sup><br /><br /> [SQL Server Data Tools for Business Intelligence (Visual Studio 2013)](https://www.microsoft.com/en-us/download/details.aspx?id=42313)<br /><br /> [SQL Server Data Tools for Business Intelligence (Visual Studio 2012)](http://www.microsoft.com/en-us/download/details.aspx?id=36843)|  
-|1100|SQL Server 2016<br /><br /> SQL Server 2014<br /><br /> SQL Server 2012 SP1<br /><br /> SQL Server 2012|[SQL Server Data Tools pour Visual Studio 2015](http://go.microsoft.com/fwlink/?LinkID=690931) <sup>1</sup><br /><br /> [SQL Server Data Tools for Business Intelligence (Visual Studio 2013)](https://www.microsoft.com/en-us/download/details.aspx?id=42313)<br /><br /> [SQL Server Data Tools for Business Intelligence (Visual Studio 2012)](http://www.microsoft.com/en-us/download/details.aspx?id=36843)<br /><br /> Business Intelligence Development Studio (s'exécute dans le shell Visual Studio 2010 et s’installe via le programme d'installation SQL Server)|  
+ ![ssas_tabularproject_compat1200](../../analysis-services/tabular-models/media/ssas-tabularproject-compat1200.png)  
   
- <sup>1</sup> Vous pouvez utiliser SQL Server Data Tools pour Visual Studio 2015 afin de déployer un modèle tabulaire 1100 ou 1103 sur des versions antérieures d'Analysis Services.  
+ Si vous sélectionnez le **ne plus afficher ce message** option, tous les projets suivants utilise le niveau de compatibilité que vous avez spécifié en tant que la valeur par défaut. Vous pouvez modifier le niveau de compatibilité par défaut dans SSDT sous **Outils** > **Options**.  
   
- <sup>2</sup> Les niveaux de compatibilité 1100, 1103 et 1200 sont tous valides pour les projets de modèles tabulaires dans SQL Server Data Tools pour Visual Studio 2015, mais vous pouvez uniquement déployer et exécuter un modèle 1200 sur une instance SQL Server 2016 d'Analysis Services.  
+ Pour mettre à niveau un projet de modèle tabulaire dans SSDT, définissez le **le niveau de compatibilité** propriété du modèle **propriétés** fenêtre. Gardez à l’esprit, le niveau de compatibilité de la mise à niveau est irréversible.
   
-## Définir le niveau de compatibilité lors de la création ou de la mise à niveau d'un projet de modèle tabulaire dans SSDT  
- Quand vous créez un projet de modèle tabulaire dans SQL Server Data Tools (SSDT), dans la boîte de dialogue **Options de nouveau projet tabulaire**, spécifiez le niveau de compatibilité.  
+## <a name="check-compatibility-level-for-a-database-in-ssms"></a>Vérifier le niveau de compatibilité d'une base de données dans SSMS  
+ Dans SSMS, cliquez sur le nom de la base de données > **propriétés** > **le niveau de compatibilité**.  
   
- ![ssas_tabularproject_compat1200](../../analysis-services/tabular-models/media/ssas-tabularproject-compat1200.jpg "ssas_tabularproject_compat1200")  
-  
- Vous pouvez également spécifier un niveau de compatibilité par défaut en sélectionnant l'option **Ne plus afficher ce message** . Tous les projets suivants utiliseront le niveau de compatibilité que vous avez spécifié. Vous pouvez modifier le niveau de compatibilité par défaut dans SSDT sous **Outils** > **Options**.  
-  
- Pour mettre à niveau un projet de modèle tabulaire, définissez la propriété **Niveau de compatibilité** dans la fenêtre **Propriétés** du modèle sur **SQL Server 2016 RTM (1200)**.  Consultez la rubrique [Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) (éventuellement en anglais) pour plus d'informations.  
-  
-> [!NOTE]  
->  Vous pouvez créer un modèle tabulaire en vous basant sur un classeur Power Pivot importé. Par défaut, Power BI Desktop crée automatiquement des modèles tabulaires au niveau de compatibilité 1200. Cependant, les versions antérieures de classeurs Power Pivot peuvent être au niveau 1100. Lorsque vous utilisez un classeur plus ancien, n'oubliez pas de modifier la propriété **Niveau de compatibilité** pour la mettre à niveau.  
-  
-## Vérifier le niveau de compatibilité d'une base de données dans SSMS  
- Dans SSMS, cliquez avec le bouton droit sur le nom de la base de données, puis choisissez **Propriétés** > **Niveau de compatibilité**.  
-  
-## Vérifier le niveau de compatibilité pris en charge pour un serveur dans SSMS  
+## <a name="check-supported-compatibility-level-for-a-server-in-ssms"></a>Vérifier le niveau de compatibilité pris en charge pour un serveur dans SSMS  
  Dans SSMS, cliquez avec le bouton droit sur le nom du serveur, puis choisissez **Propriétés** > **Niveau de compatibilité pris en charge**.  
   
- Cette propriété spécifie le plus haut niveau de compatibilité de la base de données qui s'exécutera sur le serveur.  Le niveau de compatibilité pris en charge est en lecture seule et ne peut pas être modifié.  
+ Cette propriété spécifie le niveau de compatibilité le plus élevé d’une base de données qui s’exécutent sur le serveur. Le niveau de compatibilité pris en charge est en lecture seule et ne peut pas être modifié.  
   
-## Voir aussi  
- [Niveau de compatibilité d’une base de données multidimensionnelle &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
- [Nouveautés d’Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md)   
- [Importer à partir de Power Pivot &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)   
- [Créer un projet de modèle tabulaire &#40;Analysis Services&#41;](../../analysis-services/tabular-models/create-a-new-tabular-model-project-analysis-services.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Niveau de compatibilité d’une base de données multidimensionnelle](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
+ [Quelles sont les nouveautés dans Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md)   
+ [Créez un projet de modèle tabulaire](../../analysis-services/tabular-models/create-a-new-tabular-model-project-analysis-services.md)  
   
   
+

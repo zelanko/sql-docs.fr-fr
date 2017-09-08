@@ -1,40 +1,45 @@
 ---
-title: "Autoexists | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "La fonctionnalité Autoexists | Documents Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 934307b7230a950bc41b5de117cc6f2326b90561
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Autoexists
-  La fonctionnalité d’auto-existence, ou *autoexists*, limite l’espace du cube aux cellules qui existent réellement dans le cube, par opposition à celles qui pourraient exister en créant toutes les combinaisons possibles de membres de la hiérarchie d’attribut à partir de la même hiérarchie. En effet, les membres d'une hiérarchie d'attribut ne peuvent coexister avec les membres d'une autre hiérarchie d'attribut au sein de la même dimension. Lorsque deux hiérarchies d'attribut, ou plus, de la même dimension sont utilisées dans une instruction SELECT, Analysis Services évalue les expressions des attributs pour s'assurer que les membres de ces attributs sont correctement limités afin de répondre aux critères de tous les autres attributs.  
+# <a name="autoexists"></a>Autoexists
+  La fonctionnalité d’auto-existence, ou *autoexists* , limite l’espace du cube aux cellules qui existent réellement dans le cube, par opposition à celles qui pourraient exister en créant toutes les combinaisons possibles de membres de la hiérarchie d’attribut à partir de la même hiérarchie. En effet, les membres d'une hiérarchie d'attribut ne peuvent coexister avec les membres d'une autre hiérarchie d'attribut au sein de la même dimension. Lorsque deux hiérarchies d'attribut, ou plus, de la même dimension sont utilisées dans une instruction SELECT, Analysis Services évalue les expressions des attributs pour s'assurer que les membres de ces attributs sont correctement limités afin de répondre aux critères de tous les autres attributs.  
   
- Supposons, par exemple, que vous utilisez des attributs de la dimension de Geography. Si vous avez une expression qui retourne tous les membres de l'attribut Ville et une autre expression qui limite les membres de l'attribut Pays à tous les pays d'Europe, il en résultera une limitation des membres de l'attribut Ville aux seules villes qui appartiennent à des pays d'Europe. Cela est dû à la particularité de la fonctionnalité Autoexists d'Analysis Services. En effet, elle tente d'empêcher que des enregistrements de la dimension exclus d'une expression d'attribut soient exclus par les autres expressions d'attributs. La fonctionnalité Autoexists peut également être interprétée comme l'intersection obtenue entre les différentes expressions d'attributs sur les lignes de la dimension.  
+ Supposons, par exemple, que vous utilisez des attributs de la dimension de Geography. Si vous avez une expression qui retourne tous les membres de l'attribut Ville et une autre expression qui limite les membres de l'attribut Pays à tous les pays d'Europe, il en résultera une limitation des membres de l'attribut Ville aux seules villes qui appartiennent à des pays d'Europe. Cela est dû à la particularité de la fonctionnalité Autoexists d'Analysis Services. En effet, elle tente d'empêcher que des enregistrements de la dimension exclus d'une expression d'attribut soient exclus par les autres expressions d'attributs. La fonctionnalité Autoexists peut également être interprétée comme l'intersection obtenue entre les différentes expressions d'attributs sur les lignes de la dimension.  
   
-## Existence des cellules  
- Les cellules suivantes existent toujours :  
+## <a name="cell-existence"></a>Existence des cellules  
+ Les cellules suivantes existent toujours :  
   
 -   Le membre (All), de chaque hiérarchie, lorsqu'il est croisé avec des membres d'autres hiérarchies dans la même dimension.  
   
 -   Les membres calculés lorsqu'ils sont croisés avec leurs frères et sœurs non calculés, ou avec les parents ou descendants de leurs frères et sœurs non calculés.  
   
-## Création de cellules inexistantes  
- Une cellule inexistante est une cellule fournie par le système en réponse à une requête ou à un calcul qui demande une cellule qui n'existe pas dans le cube. Par exemple, si vous travaillez avec un cube muni d'une hiérarchie d'attribut Ville, d'une hiérarchie d'attribut Pays qui appartient à la dimension Zone géographique, et d'une mesure Montant des ventes sur Internet, l'espace de ce cube inclut uniquement les membres qui coexistent entre eux. Par exemple, si la hiérarchie d'attribut Ville inclut les villes de New York, Londres, Paris, Tokyo et Melbourne et la hiérarchie d'attribut Pays les pays États-Unis, Royaume-Uni, France, Japon et Australie, l'espace du cube n'inclut pas l'espace (cellule) à l'intersection de Paris et États-Unis.  
+## <a name="providing-non-existing-cells"></a>Création de cellules inexistantes  
+ Une cellule inexistante est une cellule fournie par le système en réponse à une requête ou à un calcul qui demande une cellule qui n'existe pas dans le cube. Par exemple, si vous travaillez avec un cube muni d'une hiérarchie d'attribut Ville, d'une hiérarchie d'attribut Pays qui appartient à la dimension Zone géographique, et d'une mesure Montant des ventes sur Internet, l'espace de ce cube inclut uniquement les membres qui coexistent entre eux. Par exemple, si la hiérarchie d'attribut Ville inclut les villes de New York, Londres, Paris, Tokyo et Melbourne et la hiérarchie d'attribut Pays les pays États-Unis, Royaume-Uni, France, Japon et Australie, l'espace du cube n'inclut pas l'espace (cellule) à l'intersection de Paris et États-Unis.  
   
- Lorsque vous interrogez des cellules qui n'existent pas, ces cellules retournent des valeurs NULL, ce qui signifie qu'elles ne peuvent pas contenir des calculs et que vous ne pouvez pas définir un calcul autorisé à écrire dans l'espace concerné. Par exemple, l'instruction suivante inclut des cellules qui n'existent pas :  
+ Lorsque vous interrogez des cellules qui n'existent pas, ces cellules retournent des valeurs NULL, ce qui signifie qu'elles ne peuvent pas contenir des calculs et que vous ne pouvez pas définir un calcul autorisé à écrire dans l'espace concerné. Par exemple, l'instruction suivante inclut des cellules qui n'existent pas :  
   
 ```  
 SELECT [Customer].[Gender].[Gender].Members ON COLUMNS,  
@@ -62,9 +67,9 @@ WHERE Measures.[Internet Sales Amount]
 ```  
   
 > [!NOTE]  
->  Remarquez l'emploi de 0, soit la formule abrégée de Axes(0), pour désigner l'axe des colonnes.  
+>  Remarquez l'emploi de 0, soit la formule abrégée de Axes(0), pour désigner l'axe des colonnes.  
   
- La requête ci-dessus retourne uniquement les cellules des membres de chaque hiérarchie d'attribut dans la requête qui coexistent entre eux. Vous pouvez également écrire cette requête en utilisant la nouvelle variante * de la fonction [* (Crossjoin) (MDX)](../../../mdx/crossjoin-mdx.md).  
+ La requête ci-dessus retourne uniquement les cellules des membres de chaque hiérarchie d'attribut dans la requête qui coexistent entre eux. Vous pouvez également écrire cette requête en utilisant la nouvelle variante * de la fonction [* (Crossjoin) (MDX)](../../../mdx/crossjoin-mdx-operator-reference.md) .  
   
 ```  
 SELECT   
@@ -85,14 +90,14 @@ WHERE (Measures.[Internet Sales Amount],
    [Customer].[Country].[United States])  
 ```  
   
- Les valeurs retournées des cellules sont identiques, même si les métadonnées dans l'ensemble de résultats apparaissent différemment. Par exemple, dans la requête ci-dessus, la hiérarchie Country a été déplacée vers l'axe de segment (dans la clause WHERE) et ne peut donc s'afficher de manière explicite dans l'ensemble de résultats.  
+ Les valeurs retournées des cellules sont identiques, même si les métadonnées dans l'ensemble de résultats apparaissent différemment. Par exemple, dans la requête ci-dessus, la hiérarchie Country a été déplacée vers l'axe de segment (dans la clause WHERE) et ne peut donc s'afficher de manière explicite dans l'ensemble de résultats.  
   
  Chacune des trois requêtes présentées ci-dessus illustre les effets du comportement de l’auto-existence dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
-## Fonctionnalités Deep Autoexists et Shallow Autoexists  
- Autoexists peut être appliquée en profondeur ou superficiellement aux expressions. La fonctionnalité **Deep Autoexists** signifie que toutes les expressions sont évaluées pour rencontrer l’espace le plus profond possible après l’application des expressions de découpage, des expressions de sous-sélection dans l’axe, etc. La fonctionnalité **Shallow Autoexists** permet d’évaluer les expressions externes avant l’expression actuelle et de passer ces résultats à l’expression actuelle. La fonctionnalité Deep Autoexists est paramétrée par défaut.  
+## <a name="deep-and-shallow-autoexists"></a>Fonctionnalités Deep Autoexists et Shallow Autoexists  
+ Autoexists peut être appliquée en profondeur ou superficiellement aux expressions. La fonctionnalité**Deep Autoexists** signifie que toutes les expressions sont évaluées pour rencontrer l’espace le plus profond possible après l’application des expressions de découpage, des expressions de sous-sélection dans l’axe, etc. La fonctionnalité**Shallow Autoexists** permet d’évaluer les expressions externes avant l’expression actuelle et de passer ces résultats à l’expression actuelle. La fonctionnalité Deep Autoexists est paramétrée par défaut.  
   
- Le scénario et les exemples suivants illustrent les différents types de fonctionnalités Autoexists. Dans les exemples suivants, nous allons créer deux jeux : l'un sous forme d'expression calculée et l'autre sous forme d'expression constante.  
+ Le scénario et les exemples suivants illustrent les différents types de fonctionnalités Autoexists. Dans les exemples suivants, nous allons créer deux jeux : l'un sous forme d'expression calculée et l'autre sous forme d'expression constante.  
   
  `//Obtain the Top 10 best reseller selling products by Name`  
   
@@ -130,23 +135,23 @@ WHERE (Measures.[Internet Sales Amount],
   
  `from [Adventure Works]`  
   
- Le jeu de résultats obtenu est le suivant :  
+ Le jeu de résultats obtenu est le suivant :  
   
 |||||  
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**14 356 699,36 $**|**19 012,71 $**|**0.13**|  
-|**Road-250**|**9 377 457,68 $**|**4 032,47 $**|**0.04%**|  
-|**Mountain-100**|**8 568 958,27 $**|**139 393,27 $**|**1.63**|  
-|**Road-650**|**7 442 141,81 $**|**39 698,30 $**|**0.53**|  
-|**Touring-1000**|**6 723 794,29 $**|**166 144,17 $**|**2.47**|  
-|**Road-550-W**|**3 668 383,88 $**|**1 901,97 $**|**0.05**|  
-|**Road-350-W**|**3 665 932,31 $**|**20 946,50 $**|**0.57%**|  
-|**HL Mountain Frame**|**3 365 069,27 $**|**$174.11**|**0.01**|  
-|**Road-150**|**2 363 805,16 $**|**$0.00**|**0.00%**|  
-|**Touring-3000**|**2 046 508,26 $**|**79 582,15 $**|**3.89%**|  
+|**Mountain-200**|**14 356 699,36 $**|**19 012,71 $**|**0.13**|  
+|**Road-250**|**9 377 457,68 $**|**4 032,47 $**|**0.04%**|  
+|**Mountain-100**|**8 568 958,27 $**|**139 393,27 $**|**1.63**|  
+|**Road-650**|**7 442 141,81 $**|**39 698,30 $**|**0.53**|  
+|**Touring-1000**|**6 723 794,29 $**|**166 144,17 $**|**2.47**|  
+|**Road-550-W**|**3 668 383,88 $**|**1 901,97 $**|**0.05**|  
+|**Road-350-W**|**3 665 932,31 $**|**20 946,50 $**|**0.57%**|  
+|**HL Mountain Frame**|**3 365 069,27 $**|**$174.11**|**0.01**|  
+|**Road-150**|**2 363 805,16 $**|**$0.00**|**0.00%**|  
+|**Touring-3000**|**2 046 508,26 $**|**79 582,15 $**|**3.89%**|  
   
- Le jeu de produits obtenu semble être le même que jeu Preferred10Products, qui se présente ainsi :  
+ Le jeu de produits obtenu semble être le même que jeu Preferred10Products, qui se présente ainsi :  
   
  `with member [Measures].[PCT Discount] AS '[Measures].[Discount Amount]/[Measures].[Reseller Sales Amount]', FORMAT_STRING = 'Percent'`  
   
@@ -182,21 +187,21 @@ WHERE (Measures.[Internet Sales Amount],
   
  `from [Adventure Works]`  
   
- Conformément aux résultats suivants, les deux jeux (Top10SellingProducts, Preferred10Products) sont identiques :  
+ Conformément aux résultats suivants, les deux jeux (Top10SellingProducts, Preferred10Products) sont identiques :  
   
 |||||  
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**14 356 699,36 $**|**19 012,71 $**|**0.13**|  
-|**Road-250**|**9 377 457,68 $**|**4 032,47 $**|**0.04%**|  
-|**Mountain-100**|**8 568 958,27 $**|**139 393,27 $**|**1.63**|  
-|**Road-650**|**7 442 141,81 $**|**39 698,30 $**|**0.53**|  
-|**Touring-1000**|**6 723 794,29 $**|**166 144,17 $**|**2.47**|  
-|**Road-550-W**|**3 668 383,88 $**|**1 901,97 $**|**0.05**|  
-|**Road-350-W**|**3 665 932,31 $**|**20 946,50 $**|**0.57%**|  
-|**HL Mountain Frame**|**3 365 069,27 $**|**$174.11**|**0.01**|  
-|**Road-150**|**2 363 805,16 $**|**$0.00**|**0.00%**|  
-|**Touring-3000**|**2 046 508,26 $**|**79 582,15 $**|**3.89**|  
+|**Mountain-200**|**14 356 699,36 $**|**19 012,71 $**|**0.13**|  
+|**Road-250**|**9 377 457,68 $**|**4 032,47 $**|**0.04%**|  
+|**Mountain-100**|**8 568 958,27 $**|**139 393,27 $**|**1.63**|  
+|**Road-650**|**7 442 141,81 $**|**39 698,30 $**|**0.53**|  
+|**Touring-1000**|**6 723 794,29 $**|**166 144,17 $**|**2.47**|  
+|**Road-550-W**|**3 668 383,88 $**|**1 901,97 $**|**0.05**|  
+|**Road-350-W**|**3 665 932,31 $**|**20 946,50 $**|**0.57%**|  
+|**HL Mountain Frame**|**3 365 069,27 $**|**$174.11**|**0.01**|  
+|**Road-150**|**2 363 805,16 $**|**$0.00**|**0.00%**|  
+|**Touring-3000**|**2 046 508,26 $**|**79 582,15 $**|**3.89%**|  
   
  L'exemple suivant illustre le concept de la fonctionnalité Deep Autoexists. Dans l'exemple, nous filtrons Top10SellingProducts sur l'attribut [Product].[Product Line] pour les membres du groupe [Mountain]. Notez que les deux attributs (slicer et axis) appartiennent à la même dimension, [Product].  
   
@@ -214,27 +219,27 @@ WHERE (Measures.[Internet Sales Amount],
   
  `where [Product].[Product Line].[Mountain]`  
   
- Génère les jeux de résultats suivants :  
+ Génère les jeux de résultats suivants :  
   
 |||||  
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**14 356 699,36 $**|**19 012,71 $**|**0.13**|  
-|**Mountain-100**|**8 568 958,27 $**|**139 393,27 $**|**1.63%**|  
-|**HL Mountain Frame**|**3 365 069,27 $**|**$174.11**|**0.01%**|  
-|**Mountain-300**|**1 907 249,38 $**|**$876.95**|**0.05**|  
-|**Mountain-500**|**1 067 327,31 $**|**17 266,09 $**|**1.62**|  
-|**Mountain-400-W**|**592 450,05 $**|**$303.49**|**0.05**|  
-|**LL Mountain Frame**|**521 864,42 $**|**$252.41**|**0.05**|  
-|**ML Mountain Frame-W**|**482 953,16 $**|**$206.95**|**0.04%**|  
-|**ML Mountain Frame**|**343 785,29 $**|**$161.82**|**0.05%**|  
-|**Women's Mountain Shorts**|**260 304,09 $**|**6 675,56 $**|**2.56**|  
+|**Mountain-200**|**14 356 699,36 $**|**19 012,71 $**|**0.13**|  
+|**Mountain-100**|**8 568 958,27 $**|**139 393,27 $**|**1.63**|  
+|**HL Mountain Frame**|**3 365 069,27 $**|**$174.11**|**0.01**|  
+|**Mountain-300**|**1 907 249,38 $**|**$876.95**|**0.05**|  
+|**Mountain-500**|**1 067 327,31 $**|**17 266,09 $**|**1.62**|  
+|**Mountain-400-W**|**592 450,05 $**|**$303.49**|**0.05**|  
+|**LL Mountain Frame**|**521 864,42 $**|**$252.41**|**0.05**|  
+|**ML Mountain Frame-W**|**482 953,16 $**|**$206.95**|**0.04%**|  
+|**ML Mountain Frame**|**343 785,29 $**|**$161.82**|**0.05**|  
+|**Women's Mountain Shorts**|**260 304,09 $**|**6 675,56 $**|**2.56**|  
   
- Dans le jeu de résultats ci-dessus, nous avons sept nouveaux venus dans la liste des articles Top10SellingProducts ; de plus, Mountain-200, Mountain-100 et HL Mountain Frame ont été déplacés en haut de la liste. Dans le jeu de résultats précédent, ces trois valeurs étaient entrecoupées.  
+ Dans le jeu de résultats ci-dessus, nous avons sept nouveaux venus dans la liste des articles Top10SellingProducts ; de plus, Mountain-200, Mountain-100 et HL Mountain Frame ont été déplacés en haut de la liste. Dans le jeu de résultats précédent, ces trois valeurs étaient entrecoupées.  
   
  On parle alors de fonctionnalité Deep Autoexists, car le jeu Top10SellingProducts est évalué pour répondre aux conditions de découpage de la requête. La fonctionnalité Deep Autoexists signifie que toutes les expressions seront évaluées pour rencontrer l'espace le plus profond possible après l'application des expressions de découpage, des expressions de sous-sélection dans l'axe, etc.  
   
- Toutefois, vous pouvez souhaiter effectuer l'analyse sur Top10SellingProducts comme équivalent à Preferred10Products, comme dans l'exemple suivant :  
+ Toutefois, vous pouvez souhaiter effectuer l'analyse sur Top10SellingProducts comme équivalent à Preferred10Products, comme dans l'exemple suivant :  
   
  `with member [Measures].[PCT Discount] AS '[Measures].[Discount Amount]/[Measures].[Reseller Sales Amount]', FORMAT_STRING = 'Percent'`  
   
@@ -272,20 +277,20 @@ WHERE (Measures.[Internet Sales Amount],
   
  `where [Product].[Product Line].[Mountain]`  
   
- Génère les jeux de résultats suivants :  
+ Génère les jeux de résultats suivants :  
   
 |||||  
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**14 356 699,36 $**|**19 012,71 $**|**0.13**|  
-|**Mountain-100**|**8 568 958,27 $**|**139 393,27 $**|**1.63%**|  
-|**HL Mountain Frame**|**3 365 069,27 $**|**$174.11**|**0.01%**|  
+|**Mountain-200**|**14 356 699,36 $**|**19 012,71 $**|**0.13**|  
+|**Mountain-100**|**8 568 958,27 $**|**139 393,27 $**|**1.63**|  
+|**HL Mountain Frame**|**3 365 069,27 $**|**$174.11**|**0.01**|  
   
  Dans les résultats ci-dessus, le découpage donne un résultat qui contient uniquement les produits de Preferred10Products qui font partie du groupe [Mountain] dans [Product].[Product Line], comme prévu car Preferred10Products est une expression constante.  
   
  Ce jeu de résultats est également interprété comme une fonctionnalité Shallow Autoexists. En effet, l'expression est évaluée avant la clause de découpage. Dans l'exemple précédent, l'expression était une expression constante à des fins d'illustration pour présenter le concept.  
   
- Le comportement d’Autoexists peut être modifié au niveau de la session à l’aide de la propriété de chaîne de connexion **Autoexists**. L’exemple suivant commence en ouvrant une nouvelle session et en ajoutant la propriété *Autoexists=3* à la chaîne de connexion. Vous devez ouvrir une nouvelle connexion pour exécuter l'exemple. Une fois la connexion établie avec le paramètre Autoexists, elle reste effective jusqu'à ce qu'elle soit interrompue.  
+ Le comportement d’Autoexists peut être modifié au niveau de la session à l’aide de la propriété de chaîne de connexion **Autoexists** . L’exemple suivant commence en ouvrant une nouvelle session et en ajoutant la propriété *Autoexists=3* à la chaîne de connexion. Vous devez ouvrir une nouvelle connexion pour exécuter l'exemple. Une fois la connexion établie avec le paramètre Autoexists, elle reste effective jusqu'à ce qu'elle soit interrompue.  
   
  `with member [Measures].[PCT Discount] AS '[Measures].[Discount Amount]/[Measures].[Reseller Sales Amount]', FORMAT_STRING = 'Percent'`  
   
@@ -306,19 +311,19 @@ WHERE (Measures.[Internet Sales Amount],
 |||||  
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**14 356 699,36 $**|**19 012,71 $**|**0.13**|  
-|**Mountain-100**|**8 568 958,27 $**|**139 393,27 $**|**1.63%**|  
-|**HL Mountain Frame**|**3 365 069,27 $**|**$174.11**|**0.01%**|  
+|**Mountain-200**|**14 356 699,36 $**|**19 012,71 $**|**0.13**|  
+|**Mountain-100**|**8 568 958,27 $**|**139 393,27 $**|**1.63**|  
+|**HL Mountain Frame**|**3 365 069,27 $**|**$174.11**|**0.01**|  
   
- Le comportement d’Autoexists peut être modifié à l’aide du paramètre AUTOEXISTS=[1|2|3] dans la chaîne de connexion. Consultez [Propriétés XMLA prises en charge &#40;XMLA&#41;](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md) et <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> pour connaître les modalités d’utilisation de ce paramètre.  
+ Comportement d’Autoexists peut être modifié à l’aide de la fonctionnalité AUTOEXISTS = [1 | 2 | paramètre 3] dans la chaîne de connexion ; consultez [pris en charge les propriétés XMLA &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) et <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> pour l’utilisation des paramètres.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Concepts clés dans MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Espace du cube](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
+ [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Tuples](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
  [Utilisation de membres, de tuples et de jeux &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
- [Valeurs totales affichées et non affichées](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
- [Guide de référence du langage MDX &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
- [Référence MDX &#40;Multidimensional Expressions&#41;](../../../mdx/multidimensional-expressions-mdx-reference.md)  
+ [Valeurs totales et Non visibles](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
+ [Informations de référence sur le langage MDX &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [Informations de référence sur les expressions multidimensionnelles &#40;MDX&#41;](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

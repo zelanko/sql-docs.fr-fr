@@ -1,35 +1,40 @@
 ---
-title: "Options et param&#232;tres de traitement (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "traiter les données (option) [Analysis Services]"
-  - "traitement des objets [Analysis Services]"
-  - "annuler le traitement (option) [Analysis Services]"
-  - "traiter entièrement (option) [Analysis Services]"
-  - "traiter l'index (option) [Analysis Services]"
-  - "traiter la structure (option) [Analysis Services]"
-  - "traitement incrémentiel (option) [Analysis Services]"
-  - "traiter la mise à jour (option) [Analysis Services]"
-  - "traiter l'effacement de la structure (option) [Analysis Services]"
-  - "traiter par défaut (option) [Analysis Services]"
+title: "Options et paramètres (Analysis Services) de traitement | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- process data option [Analysis Services]
+- processing objects [Analysis Services]
+- unprocess option [Analysis Services]
+- process full option [Analysis Services]
+- process index option [Analysis Services]
+- process structure option [Analysis Services]
+- process incremental option [Analysis Services]
+- process update option [Analysis Services]
+- process clear structure option [Analysis Services]
+- process default option [Analysis Services]
 ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
 caps.latest.revision: 48
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 48
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a4540adcf485554cff6c909dedf4d53585336ae6
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Options et param&#232;tres de traitement (Analysis Services)
+# <a name="processing-options-and-settings-analysis-services"></a>Options et paramètres de traitement (Analysis Services)
   Lorsque vous traitez des objets dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez sélectionner une option de traitement afin de contrôler le type de traitement qui se produit pour chaque objet. Les types de traitement varient d'un objet à l'autre et en fonction des modification qui ont été apportées à l'objet depuis le dernier traitement. Si vous autorisez [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à sélectionner automatiquement une méthode de traitement, la méthode utilisée sera celle qui permet de traiter complètement l'objet le plus rapidement possible.  
   
  Les paramètres de traitement vous permettent de contrôler les objets traités et les méthodes utilisées pour traiter ces objets. Certains paramètres de traitement sont principalement utilisés pour des travaux de traitement par lots. Pour plus d’informations sur le traitement par lots, consultez [Traitement par lots &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md).  
@@ -37,7 +42,7 @@ caps.handback.revision: 48
 > [!NOTE]  
 >  Cette rubrique s'applique aux solutions multidimensionnelles et d'exploration de données. Pour plus d’informations sur les solutions tabulaires, consultez [Traiter une base de données, une table ou une partition &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md).  
   
-## Options de traitement  
+## <a name="processing-options"></a>Options de traitement  
  Le tableau suivant décrit les méthodes de traitement disponibles dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]et identifie les objets pour lesquels chaque méthode est prise en charge.  
   
 |Mode|S'applique à|Description|  
@@ -52,7 +57,7 @@ caps.handback.revision: 48
 |**Traiter la structure**|Cube et structures d'exploration|Si le cube n'est pas traité, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] va traiter, si nécessaire, toutes les dimensions du cube. Ensuite, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] va créer uniquement des définitions de cube. Si cette option est appliquée à une structure d'exploration de données, elle la remplit avec des données sources. La différence entre cette option et l'option Traiter entièrement est que cette option n'effectue pas d'itération du traitement jusqu'aux modèles d'exploration de données eux-mêmes.|  
 |**Traiter l'effacement de la structure**|Structures d'exploration de données|Supprime toutes les données d'apprentissage d'une structure d'exploration de données.|  
   
-## Paramètres de traitement  
+## <a name="processing-settings"></a>Paramètres de traitement  
  Le tableau ci-dessous décrit les paramètres de traitement qu'il est possible d'utiliser lors de la création d'une opération de traitement.  
   
 |Option de traitement|Description|Valeur d'option|  
@@ -66,7 +71,7 @@ caps.handback.revision: 48
 ||**Limitation du traitement des erreurs**. Contrôle le nombre d'erreurs traitées grâce à la sélection d'une des options suivantes :|**Ignorer le nombre d'erreurs**. Cela permet au traitement de se poursuivre, quel que soit le nombre d'erreurs.<br /><br /> **Arrêter en cas d'erreur**. Cette option vous permet de contrôler deux paramètres supplémentaires. **Nombre d'erreurs** vous permet de limiter le traitement à l'occurrence d'une quantité spécifique d'erreurs. **Action pour l'erreur** vous permet de déterminer l'action à effectuer lorsque le **Nombre d'erreurs** est atteint. Vous pouvez sélectionner **Arrêter le traitement**, ce qui provoque l'échec du travail de traitement et l'annulation des modifications, ou **Arrêter l'inscription dans le journal**, ce qui permet de continuer le traitement sans enregistrer les erreurs dans le journal. **Arrêter en cas d'erreur** est le paramètre par défaut avec **Nombre d'erreurs** défini à la valeur **0** et **Action pour l'erreur** défini à la valeur **Arrêter le traitement**.|  
 ||Les conditions d’erreur suivantes. Vous pouvez définir la valeur d’option afin de contrôler le comportement de gestion d’erreur spécifique.<br /><br /> Lorsque vous sélectionnez **Utiliser la configuration d’erreur par défaut**, Analysis Services utilise la configuration d’erreur définie pour chaque objet traité. Si un objet est défini de façon à utiliser des paramètres de configuration par défaut, Analysis Services utilise les paramètres par défaut répertoriés pour chaque option.|**Clé introuvable**. Se produit lorsqu'une valeur de clé existe dans une partition mais n'existe pas dans la dimension correspondante. La valeur par défaut est **Signaler et continuer**. Les autres valeurs sont **Ignorer l'erreur** et **Signaler et arrêter**.<br /><br /> **Clé dupliquée**. Se produit lorsqu'il existe plusieurs valeurs de clé dans une dimension. La valeur par défaut est **Ignorer l'erreur**. Les autres valeurs sont **Signaler et continuer** et **Signaler et arrêter**.<br /><br /> **Clé NULL convertie en clé inconnue**. Se produit lorsqu'une valeur de clé est NULL et que **Action pour l'erreur de clé** a la valeur **Convertir en clé inconnue**. La valeur par défaut est **Ignorer l'erreur**. Les autres valeurs sont **Signaler et continuer** et **Signaler et arrêter**.<br /><br /> **Clé NULL non autorisée**. Se produit lorsque **Action pour l'erreur de clé** a la valeur **Annuler l'enregistrement**. La valeur par défaut est **Signaler et continuer**. Les autres valeurs sont **Ignorer l'erreur** et **Signaler et arrêter**.|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Traitement d’un modèle multidimensionnel &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

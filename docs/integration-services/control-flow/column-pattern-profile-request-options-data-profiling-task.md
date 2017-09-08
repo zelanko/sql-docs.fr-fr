@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c7ece8c33a4c110898134da60aea6595b936e1e9
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: e718e67c8756d691338a614c775c2ff71df4b06c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Options Demande de profil de modèle de colonne (tâche de profilage des données)
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/03/2017
   
 -   **Séparateurs** Par défaut, la liste des séparateurs contient les caractères suivants : espace, tabulation horizontale (\t), nouvelle ligne (\n) et retour chariot (\r). Vous pouvez définir d'autres séparateurs mais vous ne pouvez pas supprimer les séparateurs par défaut.  
   
--   **Symboles** Par défaut, la liste des **symboles** contient les caractères suivants : `,.;:-"'`~=&/@!?()<>[]{}|#*^%`. For example, if the symbols are "`()-`", la valeur « (425) 123-4567 » est marquée sous forme de jetons de la manière suivante : ["(", "425", ")", "123", "-", "4567", ")"].  
+-   **Symboles** par défaut, la liste des **symboles** contient les caractères suivants : `,.;:-"'~=&/@!?()<>[]{}|#*^%`. Par exemple, si les symboles sont "`()-`", la valeur "(425) 123-4567" est marquée sous forme de jeton de la manière suivante : ["(", "425", ")", "123", "-", "4567", ")"].  
   
  Un caractère ne peut pas être à la fois un séparateur et un symbole.  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="data-options"></a>Options de données  
  **ConnectionManager**  
- Sélectionnez le gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existant qui utilise le fournisseur de données .NET pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) pour se connecter à la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui contient la table ou la vue à profiler.  
+ Sélectionnez le gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existant qui utilise le fournisseur de données .NET pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) pour établir la connexion à la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui contient la table ou la vue à profiler.  
   
  **TableOrView**  
  Sélectionnez la table ou la vue existante qui contient la colonne à profiler.  
@@ -147,7 +147,8 @@ ms.lasthandoff: 08/03/2017
  Pour plus d'informations, consultez la section « Fonctionnement de l'utilisation de la table des balises » plus haut dans cette rubrique.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de tâche &#40; de profilage des données Page Général &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Éditeur de tâche de profilage de données &#40;page Général&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Formulaire de profil rapide de Table simple &#40; &#41; de la tâche de profilage des données](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
+

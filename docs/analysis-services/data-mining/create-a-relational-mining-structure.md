@@ -1,29 +1,34 @@
 ---
-title: "Cr&#233;er une structure d&#39;exploration de donn&#233;es relationnelle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dimensions [Analysis Services], exploration de données"
-  - "exploration de données [Analysis Services], structure"
-  - "structures d’exploration de données [Analysis Services], création"
-  - "modèles d'exploration de données relationnels [Analysis Services]"
-  - "modèles d'exploration de données OLAP [Analysis Services]"
+title: "Créer une Structure d’exploration de données relationnelles | Documents Microsoft"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dimensions [Analysis Services], data mining
+- data mining [Analysis Services], structure
+- mining structures [Analysis Services], creating
+- relational mining models [Analysis Services]
+- OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 82fa652f76c1818ef6538b379723e7f91c8482ab
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cr&#233;er une structure d&#39;exploration de donn&#233;es relationnelle
+# <a name="create-a-relational-mining-structure"></a>Créer une structure d'exploration de données relationnelle
   La plupart des modèles d'exploration de données sont basés sur des sources de données relationnelles. Les avantages de la création d'un modèle d'exploration de données relationnel sont que vous pouvez compiler des données ad hoc et effectuer l'apprentissage et la mise à jour d'un modèle sans entrer dans la complexité d'une création de cube.  
   
  Une structure d'exploration de données relationnelle peut ajouter des données provenant de sources disparates. Les données brutes peuvent être stockées dans des tables, des fichiers ou des systèmes de bases de données relationnelles, à condition que les données puissent être définies dans la vue de source de données. Par exemple, vous devez utiliser une structure d'exploration de données relationnelle si vos données se trouvent dans Excel, un entrepôt de données SQL Server ou une base de données de rapports SQL Server, ou dans des sources externes accessibles via des fournisseurs OLE DB ou ODBC.  
@@ -42,15 +47,15 @@ caps.handback.revision: 35
   
  [Pourquoi et comment activer l'extraction](#BKMK_DrillThru)  
   
-## Spécifications  
+## <a name="requirements"></a>Spécifications  
  Tout d'abord, vous devez disposer d'une source de données existante. Vous pouvez utiliser le concepteur de source de données pour configurer une source de données, si aucune n'est disponible. Pour plus d’informations, consultez [Créer une source de données &#40;SSAS Multidimensionnel&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
   
  Ensuite, utilisez l'Assistant Vue de source de données pour compiler les données requises en une vue de source de données. Pour plus d’informations sur la façon dont vous pouvez sélectionner, transformer, filtrer ou gérer des données avec des vues de source de données, consultez [Vues de sources de données dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
 ##  <a name="BKMK_Relational_Structure"></a> Vue d’ensemble du processus  
- Démarrez l’Assistant Exploration de données en cliquant avec le bouton droit sur le nœud **Structures d’exploration de données** dans l’Explorateur de solutions, puis en sélectionnant **Ajouter une nouvelle structure d’exploration de données**. L'Assistant vous guide à travers les étapes suivantes pour créer la structure d'un nouveau modèle d'exploration de données relationnel :  
+ Démarrez l’Assistant Exploration de données en cliquant avec le bouton droit sur le nœud **Structures d’exploration de données** dans l’Explorateur de solutions, puis en sélectionnant **Ajouter une nouvelle structure d’exploration de données**. L'Assistant vous guide à travers les étapes suivantes pour créer la structure d'un nouveau modèle d'exploration de données relationnel :  
   
-1.  **Sélectionner la méthode de définition** : sélectionnez un type de source de données, puis choisissez **À partir d’une base de données relationnelle ou d’un entrepôt de données qui existent déjà**.  
+1.  **Sélectionner la méthode de définition**: sélectionnez un type de source de données, puis choisissez **À partir d’une base de données relationnelle ou d’un entrepôt de données qui existent déjà**.  
   
 2.  **Créer la structure d'exploration de données**: déterminez si vous allez générer simplement une structure ou une structure avec un modèle d'exploration de données.  
   
@@ -58,13 +63,13 @@ caps.handback.revision: 35
   
 3.  **Sélectionner une vue de source de données** choisissez une vue de source de données à utiliser dans l'apprentissage de votre modèle. La vue de source de données peut également contenir des données utilisées pour les test ou des données non liées. Vous devez alors choisir les données réellement utilisées dans la structure et le modèle. Vous pouvez également appliquer ultérieurement des filtres aux données.  
   
-4.  **Spécifier les types des tables** : sélectionnez la table qui contient les cas utilisés pour l’analyse. Pour certains jeux de données, notamment ceux utilisés pour générer des modèles de panier d'achat, vous pouvez également inclure une table associée, à utiliser comme table imbriquée.  
+4.  **Spécifier les types des tables**: sélectionnez la table qui contient les cas utilisés pour l’analyse. Pour certains jeux de données, notamment ceux utilisés pour générer des modèles de panier d'achat, vous pouvez également inclure une table associée, à utiliser comme table imbriquée.  
   
      Pour chaque table, vous devez spécifier la clé, de sorte que l'algorithme puisse identifier un enregistrement unique, et les enregistrements associés si vous avez ajouté une table imbriquée.  
   
      Pour plus d’informations, consultez [Colonnes de structure d’exploration de données](../../analysis-services/data-mining/mining-structure-columns.md).  
   
-5.  **Spécifier les données d’apprentissage**: dans cette page, vous choisissez comme *table de cas* la table qui contient les données les plus importantes pour l’analyse.  
+5.  **Spécifier les données d’apprentissage**: dans cette page, vous choisissez comme *table de cas*la table qui contient les données les plus importantes pour l’analyse.  
   
      Pour certains jeux de données, notamment ceux utilisés pour générer des modèles de panier d'achat, vous pouvez également inclure une table associée. Les valeurs de cette table imbriquée sont gérées sous forme de plusieurs valeurs, toutes associées à une ligne unique (ou cas) dans la table principale.  
   
@@ -89,16 +94,16 @@ caps.handback.revision: 35
 ##  <a name="BKMK_ChooseRelData"></a> Comment choisir des données relationnelles  
  Les structures d’exploration de données relationnelles peuvent être basées sur n’importe quelle donnée disponible par le biais d’une source de données OLE DB. Si les données sources sont contenues dans plusieurs tables, utilisez une vue de source de données pour rassembler les tables et les colonnes dont vous avez besoin en un seul lieu.  
   
- Si les tables comprennent des relations un-à-plusieurs (par exemple, vous avez plusieurs enregistrements d'achats pour chaque client que vous souhaitez analyser) vous pouvez ajouter les deux tables, puis utiliser une table comme la table de cas, en liant les données du côté « plusieurs » de la relation en tant que table imbriquée.  
+ Si les tables comprennent des relations un-à-plusieurs (par exemple, vous avez plusieurs enregistrements d'achats pour chaque client que vous souhaitez analyser) vous pouvez ajouter les deux tables, puis utiliser une table comme la table de cas, en liant les données du côté « plusieurs » de la relation en tant que table imbriquée.  
   
  Les données d'une structure d'exploration de données sont dérivées de tout ce qui se trouve dans la vue de source de données existante. Vous pouvez modifier les données dont vous avez besoin dans la vue de source de données, en ajoutant des relations ou des colonnes dérivées qui ne sont peut-être pas présentes dans les données relationnelles sous-jacentes. Vous pouvez également créer des calculs nommés ou des agrégations dans la vue de source de données. Ces fonctionnalités sont très pratiques si vous ne contrôlez pas l'organisation des données dans la source de données ou si vous souhaitez faire des essais avec différentes agrégations de données pour vos modèles d'exploration de données.  
   
- Vous ne devez pas utiliser la totalité des données disponibles ; vous pouvez choisir les colonnes à inclure dans la structure d'exploration de données. Tous les modèles basés sur cette structure peuvent alors utiliser ces colonnes ou vous pouvez marquer certaines colonnes comme **Ignorer** pour un modèle en particulier. Vous pouvez permettre aux utilisateurs d'un modèle d'exploration de données d'explorer ses résultats pour afficher des colonnes supplémentaires de la structure d'exploration de données qui n'étaient pas incluses dans le modèle d'exploration de données lui-même.  
+ Vous ne devez pas utiliser la totalité des données disponibles ; vous pouvez choisir les colonnes à inclure dans la structure d'exploration de données. Tous les modèles basés sur cette structure peuvent alors utiliser ces colonnes ou vous pouvez marquer certaines colonnes comme **Ignorer** pour un modèle en particulier. Vous pouvez permettre aux utilisateurs d'un modèle d'exploration de données d'explorer ses résultats pour afficher des colonnes supplémentaires de la structure d'exploration de données qui n'étaient pas incluses dans le modèle d'exploration de données lui-même.  
   
 ##  <a name="bkmk_ContentDataType"></a> Comment spécifier le type de contenu et le type de données  
- Le type de données est à peu près le même que les types de données que vous spécifiez dans SQL Server ou dans d'autres interfaces d'application : dates et heures, nombres de différentes tailles, valeurs booléennes, texte et autres données discrètes.  
+ Le type de données est à peu près le même que les types de données que vous spécifiez dans SQL Server ou dans d'autres interfaces d'application : dates et heures, nombres de différentes tailles, valeurs booléennes, texte et autres données discrètes.  
   
- Toutefois, les types de contenu sont importants pour l'exploration de données et affectent les résultats de l'analyse. Le type de contenu indique à l'algorithme ce qu'il doit faire avec les données : les numéros doivent-ils être traités sur une échelle continue, ou placés dans un conteneur ? Combien de valeurs potentielles existe-t-il ? Chaque valeur est-elle distincte ? Si la valeur est une clé, de quel type de clé s'agit-il : indique-t-elle une valeur date/heure, une séquence, ou un autre type de clé ?  
+ Toutefois, les types de contenu sont importants pour l'exploration de données et affectent les résultats de l'analyse. Le type de contenu indique à l'algorithme ce qu'il doit faire avec les données : les numéros doivent-ils être traités sur une échelle continue, ou placés dans un conteneur ? Combien de valeurs potentielles existe-t-il ? Chaque valeur est-elle distincte ? Si la valeur est une clé, de quel type de clé s'agit-il : indique-t-elle une valeur date/heure, une séquence, ou un autre type de clé ?  
   
  Notez que le choix du type de données peut limiter votre choix de types de contenu. Par exemple, vous ne pouvez pas discrétiser des valeurs non numériques. Si le type de contenu que vous souhaitez n’est pas affiché, vous pouvez cliquer sur **Précédent** pour revenir à la page du type de données et essayer un autre type de données.  
   
@@ -119,16 +124,16 @@ caps.handback.revision: 35
 ##  <a name="BKMK_DrillThru"></a> Pourquoi et comment activer l'extraction  
  Vers la toute fin de l'Assistant, vous avez la possibilité d'activer *l’extraction*. Il est facile d'ignorer cette option, mais c'est une option importante. L'extraction permet de consulter les données source de la structure d'exploration de données en interrogeant le modèle d'exploration de données.  
   
- Pourquoi cette option est-elle utile ? Supposons que vous consultez les résultats d'un modèle de clustering et que vous souhaitez afficher les clients placés dans un cluster spécifique. À l'aide de l'extraction, vous pouvez consulter des détails comme les informations de contact.  
+ Pourquoi cette option est-elle utile ? Supposons que vous consultez les résultats d'un modèle de clustering et que vous souhaitez afficher les clients placés dans un cluster spécifique. À l'aide de l'extraction, vous pouvez consulter des détails comme les informations de contact.  
   
 > [!WARNING]  
 >  Pour utiliser l'extraction, vous devez l'activer lors de la création de la structure d'exploration de données. Vous pouvez activer l'extraction sur les modèles ultérieurement, en définissant une propriété sur le modèle, mais les structures d'exploration de données requièrent que cette option soit définie au début. Pour plus d’informations, consultez [Requêtes d’extraction &#40;exploration de données&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Concepteur d'exploration de données](../../analysis-services/data-mining/data-mining-designer.md)   
- [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
- [Propriétés du modèle d'exploration de données](../../analysis-services/data-mining/mining-model-properties.md)   
- [Propriétés des colonnes de structure et des structure d'exploration de données](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)   
+ [Assistant exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [Propriétés du modèle d’exploration de données](../../analysis-services/data-mining/mining-model-properties.md)   
+ [Propriétés de Structure d’exploration de données et les colonnes de Structure](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)   
  [Tâches de la structure d'exploration de données et procédures](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

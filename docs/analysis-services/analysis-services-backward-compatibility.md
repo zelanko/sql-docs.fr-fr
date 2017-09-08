@@ -1,44 +1,130 @@
 ---
-title: "Compatibilit&#233; descendante Analysis Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "installation d’Analysis Services, compatibilité descendante"
-  - "compatibilité descendante [Analysis Services]"
-  - "compatibilité [Analysis Services]"
-  - "Analysis Services, compatibilité descendante"
-  - "mise à niveau d'Analysis Services"
-  - "SSAS, compatibilité descendante"
-  - "SQL Server Analysis Services, compatibilité descendante"
+title: "Compatibilité descendante de SQL Server 2016 Analysis Services | Documents Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/11/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- installing Analysis Services, backward compatibility
+- backward compatibility [Analysis Services]
+- compatibility [Analysis Services]
+- Analysis Services, backward compatibility
+- upgrading Analysis Services
+- SSAS, backward compatibility
+- SQL Server Analysis Services, backward compatibility
 ms.assetid: 618b6c3a-e20d-47a9-b2c6-6d848dfba05a
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 38
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: f54505056125f11f3843a671a76136288f54b5d1
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Compatibilit&#233; descendante Analysis Services
-  Les rubriques de cette section décrivent les changements de comportement entre les versions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+# <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Compatibilité descendante de Analysis Services (SQL Server 2016)
+[!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
+
+Cet article décrit les modifications de la disponibilité des fonctionnalités et de comportement entre la version actuelle et la version précédente.
+
+## <a name="deprecated-features"></a>Fonctionnalités déconseillées
+A *fonctionnalité déconseillée* sera supprimé du produit dans une version ultérieure, mais est toujours pris en charge et incluse dans la version actuelle pour assurer la compatibilité descendante. Il est recommandé de que vous arrêter d’utiliser les fonctionnalités déconseillées dans les projets nouveaux et existants pour assurer la compatibilité avec les versions ultérieures.
   
-## Dans cette section  
+Les fonctionnalités suivantes sont déconseillées dans cette version :
   
-|Rubriques|Description|  
-|------------|-----------------|  
-|[Fonctionnalités Analysis Services déconseillées dans SQL Server 2016](../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)|Décrit les fonctionnalités qui ont été conservées dans la version actuelle pour des raisons de compatibilité descendante, mais qui seront supprimées dans une prochaine version d’ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
-|[Fonctionnalités Analysis Services interrompues dans SQL Server 2016](../analysis-services/discontinued-analysis-services-functionality-in-sql-server-2016.md)|Décrit les fonctionnalités qui existaient dans les versions antérieures d’  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , mais qui désormais ne sont officiellement plus prises en charge dans la version actuelle.|  
-|[Modifications avec rupture dans les fonctionnalités Analysis Services de SQL Server 2016](../analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2016.md)|Décrit les modifications de code introduites dans cette version d’ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui sont susceptibles d’interrompre un modèle, une application personnalisée ou un script créés dans des versions précédentes du logiciel.|  
-|[Modifications du comportement des fonctionnalités d’Analysis Services dans SQL Server 2016](../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)|Décrit les fonctionnalités existantes qui présentent des comportements différents dans cette version d’ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Voici quelques exemples d’opérations courantes : remplacer une valeur par défaut par une nouvelle valeur ou une valeur différente, interdire une opération ou une configuration précédemment autorisées, ou encore imposer la révision ou le remplacement manuel d’une configuration ou d’un paramètre perdus pendant une mise à niveau.|  
+|||  
+|-|-|  
+|**En mode/une catégorie**|**Fonctionnalité**|  
+|(Multidimensionnel)|Partitions distantes|  
+|(Multidimensionnel)|Groupes de mesures liés distants|  
+|(Multidimensionnel)|Écriture différée dimensionnelle|  
+|(Multidimensionnel)|Dimensions liées|   
+|(Multidimensionnel)|Notifications de table SQL Server pour la mise en cache proactive.  <br />La solution de remplacement consiste à utiliser l’interrogation pour la mise en cache proactive. <br />Consultez [Mise en cache proactive &#40;dimensions&#41;](../analysis-services/multidimensional-models-olap-logical-dimension-objects/proactive-caching-dimensions.md) et [Mise en cache proactive &#40;partitions&#41;](../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).|  
+|(Multidimensionnel)|Cubes de session. Il n’existe aucune solution de remplacement.|  
+|(Multidimensionnel)|Cubes locaux. Il n’existe aucune solution de remplacement.|  
+|Tabulaire|Les niveaux de compatibilité 1100 et 1103 des modèles tabulaires ne seront pas pris en charge dans une future version. La solution consiste à définir des modèles au niveau de compatibilité 1200 ou supérieur, la conversion des définitions de modèle en métadonnées tabulaires. Consultez [Compatibility Level for Tabular models in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).|  
+|Outils|SQL Server Profiler pour la capture de traces<br /><br /> La solution consiste à utiliser le Générateur de profils d’événements étendus, intégré dans SQL Server Management Studio.  <br /> Consultez [Surveiller Analysis Services avec des événements étendus SQL Server](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
+|Outils|Server Profiler pour Trace Replay <br />Remplacement. Il n’existe aucune solution de remplacement.|  
+|Objets de gestion de trace et API de trace|Objets Microsoft.AnalysisServices.Trace (contenant les API des objets Analysis Services de trace et de relecture). La solution de remplacement est multiple :<br /><br /> -   Configuration de trace : Microsoft.SqlServer.Management.XEvent<br />-   Lecture de trace : Microsoft.SqlServer.XEvent.Linq<br />-   Relecture de trace : Aucune|  
   
-## Voir aussi  
- [Nouveautés d’Analysis Services](../analysis-services/what-s-new-in-analysis-services.md)   
- [Mettre à niveau Analysis Services](../database-engine/install-windows/upgrade-analysis-services.md)  
+> [!NOTE]  
+>  Les fonctionnalités précédemment annoncées comme déconseillées dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] restent en place. Le code prenant en charge ces fonctionnalités n’ayant pas encore été supprimé du produit, bon nombre de celles-ci sont toujours présentes dans cette version. Lors des fonctions précédemment déconseillées peuvent être accessibles, ils sont considérés comme déconseillés et ne peut être physiquement retirées du produit à tout moment.  
+
+## <a name="discontinued-features"></a>Fonctionnalités supprimées
+A *abandonné fonctionnalité* a été déconseillée dans une version antérieure. Il peut continuer à être inclus dans la version actuelle, mais n’est plus pris en charge. Fonctionnalités supprimées peuvent être supprimées entièrement dans une future version ou mettre à jour.
+
+Les fonctionnalités suivantes ont été déconseillées dans une version antérieure et ne sont plus prises en charge dans cette version.
+
+|||  
+|-|-|  
+|**Fonctionnalité**|**Remplacement ou contournement**|  
+|[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|Aucun. L’utilisation de cette fonctionnalité a été déconseillée dans SQL Server 2005.|  
+|[CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)|Aucun. L’utilisation de cette fonctionnalité a été déconseillée dans SQL Server 2005.|  
+|Indicateur d’optimiseur de requête NON_EMPTY_BEHAVIOR|Aucun. L’utilisation de cette fonctionnalité a été déconseillée dans SQL Server 2008.|  
+|Assemblys COM|Aucun. L’utilisation de cette fonctionnalité a été déconseillée dans SQL Server 2008.|  
+|Propriété intrinsèque de cellule CELL_EVALUATION_LIST|Aucun. L’utilisation de cette fonctionnalité a été déconseillée dans SQL Server 2005.|  
   
+> [!NOTE]  
+>  Les fonctionnalités précédemment annoncées comme déconseillées dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] restent en place. Le code prenant en charge ces fonctionnalités n’ayant pas encore été supprimé du produit, bon nombre de celles-ci sont toujours présentes dans cette version. Lors des fonctions précédemment déconseillées peuvent être accessibles, ils sont considérés comme déconseillés et ne peut être physiquement retirées du produit à tout moment.  
+
+## <a name="breaking-changes"></a>Modifications avec rupture
+Une *modification avec rupture* bloque le fonctionnement d’un modèle de données, d’un code d’application ou d’un script après la mise à niveau du modèle ou du serveur.
   
+### <a name="net-40-version-upgrade"></a>Mise à niveau du .NET 4.0  
+ Les bibliothèques clientes Analysis Services Management Objects (AMO), ADOMD.NET et le modèle d’objet tabulaire (TOM) maintenant ciblent le runtime .NET 4.0. Il peut s’agir d’une modification majeure pour les applications qui ciblent le .NET 3.5. Les applications utilisant des versions plus récentes de ces assemblys doivent maintenant cibler .NET 4.0 ou ultérieur.  
+  
+### <a name="amo-version-upgrade"></a>Mise à niveau de la version AMO  
+ Cette version est une mise à niveau de version pour [Analysis Services Management Objects &#40; AMO &#41; ](https://msdn.microsoft.com/library/mt436122.aspx) et est une modification avec rupture dans certaines circonstances.  Le code et les scripts qui appellent AMO continueront de s’exécuter comme avant, si vous mettez à niveau une version précédente. Toutefois, si vous avez besoin pour *recompiler* votre application et que vous ciblez une instance de SQL Server 2016 Analysis Services, vous devez ajouter l’espace de noms suivant pour rendre votre code ou votre script opérationnel :  
+  
+```  
+  
+using Microsoft.AnalysisServices;  
+using Microsoft.AnalysisServices.Core;  
+  
+```  
+  
+ L’espace de noms [Microsoft.AnalysisServices.Core](https://msdn.microsoft.com/library/microsoft.analysisservices.core.aspx) est maintenant nécessaire chaque fois que vous faites référence à l’assembly Microsoft.AnalysisServices dans votre code. Les objets qui auparavant ne figuraient que dans l’espace de noms **Microsoft.AnalysisServices** sont déplacés dans l’espace de noms principal dans cette version, si l’objet est utilisé de la même façon dans des scénarios multidimensionnels et tabulaires.  Par exemple, les API liées au serveur sont déplacées dans l’espace de noms principal.  
+  
+ Bien qu’il y ait plusieurs espaces de noms, deux coexistent dans le même assembly (Microsoft.AnalysisServices.dll).  
+  
+### <a name="xevent-discover-changes"></a>Modifications de DISCOVER XEvent  
+ Pour mieux prendre en charge XEvent découvrir la diffusion en continu dans SSMS pour SQL Server 2016 Analysis Services, `DISCOVER_XEVENT_TRACE_DEFINITION` est remplacé par les traces XEvent suivants :  
+  
+-   DISCOVER_XEVENT_PACKAGES  
+  
+-   DISCOVER_XEVENT_OBJECT  
+  
+-   DISCOVER_XEVENT_OBJECT_COLUMNS  
+  
+-   DISCOVER_XEVENT_SESSION_TARGETS  
+
+## <a name="behavior-changes"></a>Changements de comportement
+Une *modifications de comportement* affecte le mode de fonctionnement ou d’interaction des fonctionnalités de la version actuelle de SQL Server par rapport aux versions précédentes.
+  
+Une révision des valeurs par défaut, une configuration manuelle requise pour une mise à niveau ou une restauration, ou une nouvelle implémentation d’une fonction existante sont toutes des exemples de modification de comportement dans le produit.
+  
+Les comportements de fonctionnalité modifiés dans cette version, mais qui restent opérationnels après la mise à niveau d’un modèle ou d’un code, sont répertoriés ici.
+  
+### <a name="analysis-services-in-sharepoint-mode"></a>Analysis Services en mode SharePoint
+ L’exécution de l’Assistant de configuration de PowerPivot en tant que tâche de post-installation n’est plus nécessaire. Cela est vrai pour toutes les versions prises en charge de SharePoint qui chargent des modèles à partir de l’actuelle SQL Server 2016 Analysis Services.
+  
+### <a name="directquery-mode-for-tabular-models"></a>Mode DirectQuery dans les modèles tabulaires
+ *DirectQuery* est un mode d’accès aux données des modèles tabulaires, où la requête s’exécute sur une base de données relationnelle principale, extrayant le jeu de résultats en temps réel. Il est souvent utilisé pour les jeux de données trop volumineux pour la mémoire ou lorsque les données sont volatiles et que vous souhaitez recevoir les données les plus récentes suite aux requêtes exécutées sur un modèle tabulaire.
+  
+ Dans plusieurs versions précédentes, DirectQuery existait sous la forme d’un mode d’accès aux données. Dans SQL Server 2016 Analysis Services, l’implémentation a été légèrement modifiée, en supposant que le modèle tabulaire est au niveau de compatibilité 1200 ou supérieur. DirectQuery a moins de restrictions qu’auparavant. Il propose également d’autres propriétés de base de données.
+  
+ Si vous utilisez DirectQuery dans un modèle tabulaire existant, vous pouvez conserver ce dernier à son niveau de compatibilité actuel (1100 ou 1103) et continuer de l’utiliser tel qu’il est mis en œuvre à ces niveaux. Vous pouvez également passer à 1200 ou supérieur à tirer parti des améliorations apportées à DirectQuery.
+  
+ Il n’existe aucune mise à niveau sur place d’un modèle DirectQuery, car les paramètres à partir de niveaux de compatibilité antérieurs n’ont pas d’équivalents exacts dans les niveaux de compatibilité 1200 et supérieurs plus récente. Si vous avez un modèle tabulaire existant qui s’exécute en mode DirectQuery, vous devez ouvrir le modèle dans SQL Server Data Tools, désactiver DirectQuery, définissez le **le niveau de compatibilité** propriété 1200 ou supérieur, puis reconfigurer les propriétés de DirectQuery. Consultez [DirectQuery Mode](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md) pour plus d’informations.
+
+
+## <a name="see-also"></a>Voir aussi
+[Compatibilité descendante de Analysis Services (2017 de serveur SQL)](analysis-services-backward-compatibility-sql2017.md)

@@ -1,26 +1,31 @@
 ---
-title: "Cat&#233;gorie d&#39;&#233;v&#233;nement Audit de s&#233;curit&#233; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "catégorie d'événement Audit de sécurité [SQL Server]"
-  - "classes d’événements [Analysis Services], audit de sécurité"
-  - "événements sécurité [Analysis Services]"
+title: "Catégorie d’événement d’Audit de sécurité | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Security Audit event category [SQL Server]
+- event classes [Analysis Services], security audit
+- security events [Analysis Services]
 ms.assetid: 9686a495-68d7-4137-8e30-2655aa519f6c
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 25
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bb384601c49088675c25547b3ae7dc21b4510380
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cat&#233;gorie d&#39;&#233;v&#233;nement Audit de s&#233;curit&#233;
+# <a name="security-audit-event-category"></a>Catégorie d'événement Audit de sécurité
   La catégorie d'événement Audit de sécurité contient les classes d'événements décrites dans le tableau ci-dessous.  
   
 |Classe d'événements|ID d'événement|Description|  
@@ -33,7 +38,7 @@ caps.handback.revision: 25
   
  Pour plus d’informations sur les colonnes associées à chaque classe d’événements Security Audit, consultez [Colonnes de données Audit de sécurité](../../analysis-services/trace-events/security-audit-data-columns.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Événements de trace Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

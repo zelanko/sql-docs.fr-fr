@@ -1,28 +1,33 @@
 ---
-title: "Appliquer un filtre &#224; un mod&#232;le d&#39;exploration de donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/19/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "filtre de modèle [exploration de données]"
-  - "filtres [exploration de données]"
-  - "filtrage des lignes d'entrée [Analysis Services]"
-  - "filtrage de données [Analysis Services]"
+title: "Appliquer un filtre à un modèle d’exploration de données | Documents Microsoft"
+ms.custom: 
+ms.date: 03/19/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- model filter [data mining]
+- filters [data mining]
+- filtering input rows [Analysis Services]
+- filtering data [Analysis Services]
 ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: a3e32512c4cb0139b838195d3a03e8384183a11a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Appliquer un filtre &#224; un mod&#232;le d&#39;exploration de donn&#233;es
+# <a name="apply-a-filter-to-a-mining-model"></a>Appliquer un filtre à un modèle d'exploration de données
   Si votre structure d'exploration de données contient une table imbriquée, vous pouvez appliquer un filtre à la table de cas, à la table imbriquée, ou aux deux.  
   
  La procédure suivante indique comment créer les deux types de filtres : filtres de cas et filtres sur les lignes de la table imbriquée.  
@@ -38,7 +43,7 @@ AND EXISTS (SELECT * FROM [<nested table name>]
 WHERE [Model] <> 'Water Bottle' )   
 ```  
   
-### Pour créer un filtre de cas sur un modèle d'exploration de données  
+### <a name="to-create-a-case-filter-on-a-mining-model"></a>Pour créer un filtre de cas sur un modèle d'exploration de données  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dans l'Explorateur de solutions, cliquez sur la structure d'exploration de données qui contient le modèle d'exploration de données à filtrer.  
   
@@ -70,7 +75,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 9. Cliquez sur la ligne suivante dans la grille.  
   
-     La condition de filtre que vous avez créée est ajoutée automatiquement à la zone de texte Expression. Par exemple : `[Income] > '30000'`  
+     La condition de filtre que vous avez créée est ajoutée automatiquement à la zone de texte Expression. Par exemple : `[Income] > '30000'`  
   
 10. Cliquez sur la zone de texte **AND/OR** dans la ligne suivante de la grille pour ajouter une condition.  
   
@@ -84,9 +89,9 @@ WHERE [Model] <> 'Water Bottle' )
   
 13. La condition de filtre dans la zone de texte Expression est automatiquement mise à jour pour inclure la nouvelle condition. L'expression complétée se présente comme suit : `[Income] > '30000'AND [Income] < '40000'`  
   
-### Pour ajouter un filtre sur la table imbriquée dans un modèle d'exploration de données  
+### <a name="to-add-a-filter-on-the-nested-table-in-a-mining-model"></a>Pour ajouter un filtre sur la table imbriquée dans un modèle d'exploration de données  
   
-1.  Dans la boîte de dialogue **Filtre de modèle \<nom>**, cliquez sur une ligne vide dans la grille sous **Colonne de la structure d’exploration de données**.  
+1.  Dans le  **\<nom > filtre de modèle** boîte de dialogue, cliquez sur une ligne vide dans la grille sous **colonne de Structure d’exploration de données**.  
   
 2.  Sélectionnez le nom de la table imbriquée dans la liste déroulante.  
   
@@ -96,9 +101,9 @@ WHERE [Model] <> 'Water Bottle' )
   
      Ce sont les seules conditions disponibles pour la table imbriquée dans la boîte de dialogue **Filtre de modèle** , car vous restreignez la table de cas uniquement aux cas qui contiennent une certaine valeur dans la table imbriquée. Vous allez définir la valeur pour la condition sur la table imbriquée lors de l'étape suivante.  
   
-4.  Cliquez sur la zone **Valeur**, puis sur le bouton **(…)** pour générer une expression.  
+4.  Cliquez sur la zone **Valeur** , puis sur le bouton **(…)** pour générer une expression.  
   
-     La boîte de dialogue **Filtre \<nom>** s’ouvre. Cette boîte de dialogue peut définir des conditions uniquement sur la table actuelle, qui est la table imbriquée dans ce cas.  
+     Le  **\<nom > filtre** boîte de dialogue s’ouvre. Cette boîte de dialogue peut définir des conditions uniquement sur la table actuelle, qui est la table imbriquée dans ce cas.  
   
 5.  Cliquez sur la zone **Colonne de la structure d'exploration de données** et sélectionnez un nom de colonne dans les listes déroulantes des colonnes de la table imbriquée.  
   
@@ -115,7 +120,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
 > [!NOTE]  
 >  Puisque le nombre d'attributs de table imbriquée est potentiellement illimité, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne fournit pas de liste de valeurs possibles à sélectionner. Vous devez taper la valeur exacte. En outre, vous ne pouvez pas utiliser d'opérateur LIKE dans une table imbriquée.  
   
-1.  Le cas échéant, ajoutez plus de conditions, combinez des conditions en sélectionnant **AND** ou **OR** dans la zone **AND/OR** située à gauche de la grille **Conditions**. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+1.  Le cas échéant, ajoutez plus de conditions, combinez des conditions en sélectionnant **AND** ou **OR** dans la zone **AND/OR** située à gauche de la grille **Conditions** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 2.  Dans la boîte de dialogue **Filtre de modèle** , examinez les conditions que vous avez créées en utilisant la boîte de dialogue **Filtre** . Les conditions pour la table imbriquée sont ajoutées aux conditions pour la table de cas, tandis que le jeu complet de conditions de filtre est affiché dans la zone de texte **Expression** .  
   
@@ -124,11 +129,10 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
     > [!NOTE]  
     >  Si vous modifiez manuellement quelque partie que ce soit d'une expression de filtre, la grille est alors désactivée et vous devez utiliser l'expression de filtre en mode édition de texte uniquement. Pour restaurer le mode de modification de grille, vous devez effacer l'expression de filtre et recommencer.  
   
-4.  
-  
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
  [Tâches du modèle d'exploration de données et procédures](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Supprimer un filtre d'un modèle d'exploration de données](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
   
+

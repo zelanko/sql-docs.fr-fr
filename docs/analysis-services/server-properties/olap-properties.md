@@ -1,112 +1,117 @@
 ---
-title: "Propri&#233;t&#233;s OLAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "AggregationPerfLog, propriété"
-  - "DefaultPageSizeForProp, propriété"
-  - "UseSinglePassForDimSecurityAutoExist, propriété"
-  - "DeepCompressValue, propriété"
-  - "CacheRowsetRows, propriété"
-  - "Income, propriété"
-  - "AggregationNewAlgo, propriété"
-  - "MemoryAdjustFactor, propriété"
-  - "DimensionLatencyAccuracy, propriété"
-  - "InitialBonus, propriété"
-  - "DefaultPageSizeForDataHeader, propriété"
-  - "MaxCPUUsage, propriété"
-  - "DistinctBuffer, propriété"
-  - "PartitionLatencyAccuracy, propriété"
-  - "MaxRetries, propriété"
-  - "UseDataCacheRegistryMultiplyKey, propriété"
-  - "ConvertDeletedToUnknown, propriété"
-  - "DatabaseConnectionPoolMax, propriété"
-  - "DataFileInitEnabled, propriété"
-  - "DefaultPageSizeForHash, propriété"
-  - "MaxRolapOrConditions, propriété"
-  - "UseDataCacheFreeLastPageMemory, propriété"
-  - "OLAP [Analysis Services], propriétés"
-  - "MapHandleAlgorithm, propriété"
-  - "IndexBuildEnabled, propriété"
-  - "MaxObjectsInParallel, propriété"
-  - "IgnoreNullRolapRows, propriété"
-  - "DimensionPropertyCacheSize, propriété"
-  - "DefaultRefreshInterval, propriété"
-  - "CheckDistinctRecordSortOrder, propriété"
-  - "BufferMemoryLimit, propriété"
-  - "EnableTableGrouping, propriété"
-  - "ExpressNonEmptyUseEnabled, propriété"
-  - "CopyLinkedDataCacheAndRegistry, propriété"
-  - "UseDataSlice, propriété"
-  - "MemoryLimitErrorEnabled, propriété"
-  - "Enabled, propriété"
-  - "EnableRolapOptimization, propriété"
-  - "DatabaseConnectionPoolTimeout, propriété"
-  - "UseDataCacheRegistryHashTable, propriété"
-  - "AggregationsBuildEnabled, propriété"
-  - "Tax, propriété"
-  - "DatabaseConnectionPoolGeneralTimeout, propriété"
-  - "DefaultPageSizeForString, propriété"
-  - "DatabaseConnectionPoolConnectTimeout, propriété"
-  - "MinimumBalance, propriété"
-  - "OptimizeSchema, propriété"
-  - "UseCalculationCacheRegistry, propriété"
-  - "MaxTableDepth, propriété"
-  - "DataSliceInitEnabled, propriété"
-  - "PrefetchLowerGranularities, propriété"
-  - "UseVBANet, propriété"
-  - "BufferRecordLimit, propriété"
-  - "DefaultPageSizeForIndexHeader, propriété"
-  - "MaximumBalance, propriété"
-  - "CalculationCacheRegistryMaxIterations, propriété"
-  - "DefaultDrillthroughMaxRows, propriété"
-  - "IndexBuildThreshold, propriété"
-  - "UseDataCacheRegistry, propriété"
-  - "MemoryAdjustConst, propriété"
-  - "ApplyIntersect, propriété"
-  - "IndexFileInitEnabled, propriété"
-  - "CacheRowsetToDisk, propriété"
-  - "DataCacheRegistryMaxIterations, propriété"
-  - "AllowSEFiltering, propriété"
-  - "ForceMultiPass, propriété"
-  - "ApplySubtract, propriété"
-  - "IndexUseEnabled, propriété"
-  - "AggregationsUseEnabled, propriété"
-  - "DataPlacementOptimization, propriété"
-  - "UseMaterializedIterators, propriété"
-  - "CacheRecordLimit, propriété"
-  - "ROLAPDimensionProcessingEffort, propriété"
-  - "DefaultPageSizeForIndex, propriété"
-  - "EnableRolapDimQueryTableGrouping, propriété"
-  - "DimensionPropertyKeyCache, propriété"
-  - "SleepIntervalSecs, propriété"
-  - "DefaultPageSizeForData, propriété"
-  - "MapFormatMask, propriété"
-  - "CalculationEvaluationPolicy, propriété"
-  - "AggregationMemoryLimitMin, propriété"
-  - "RecordsReportGranularity, propriété"
-  - "MemoryLimit, propriété"
-  - "AggregationMemoryLimitMax, propriété"
+title: "Propriétés OLAP | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- AggregationPerfLog property
+- DefaultPageSizeForProp property
+- UseSinglePassForDimSecurityAutoExist property
+- DeepCompressValue property
+- CacheRowsetRows property
+- Income property
+- AggregationNewAlgo property
+- MemoryAdjustFactor property
+- DimensionLatencyAccuracy property
+- InitialBonus property
+- DefaultPageSizeForDataHeader property
+- MaxCPUUsage property
+- DistinctBuffer property
+- PartitionLatencyAccuracy property
+- MaxRetries property
+- UseDataCacheRegistryMultiplyKey property
+- ConvertDeletedToUnknown property
+- DatabaseConnectionPoolMax property
+- DataFileInitEnabled property
+- DefaultPageSizeForHash property
+- MaxRolapOrConditions property
+- UseDataCacheFreeLastPageMemory property
+- OLAP [Analysis Services], properties
+- MapHandleAlgorithm property
+- IndexBuildEnabled property
+- MaxObjectsInParallel property
+- IgnoreNullRolapRows property
+- DimensionPropertyCacheSize property
+- DefaultRefreshInterval property
+- CheckDistinctRecordSortOrder property
+- BufferMemoryLimit property
+- EnableTableGrouping property
+- ExpressNonEmptyUseEnabled property
+- CopyLinkedDataCacheAndRegistry property
+- UseDataSlice property
+- MemoryLimitErrorEnabled property
+- Enabled property
+- EnableRolapOptimization property
+- DatabaseConnectionPoolTimeout property
+- UseDataCacheRegistryHashTable property
+- AggregationsBuildEnabled property
+- Tax property
+- DatabaseConnectionPoolGeneralTimeout property
+- DefaultPageSizeForString property
+- DatabaseConnectionPoolConnectTimeout property
+- MinimumBalance property
+- OptimizeSchema property
+- UseCalculationCacheRegistry property
+- MaxTableDepth property
+- DataSliceInitEnabled property
+- PrefetchLowerGranularities property
+- UseVBANet property
+- BufferRecordLimit property
+- DefaultPageSizeForIndexHeader property
+- MaximumBalance property
+- CalculationCacheRegistryMaxIterations property
+- DefaultDrillthroughMaxRows property
+- IndexBuildThreshold property
+- UseDataCacheRegistry property
+- MemoryAdjustConst property
+- ApplyIntersect property
+- IndexFileInitEnabled property
+- CacheRowsetToDisk property
+- DataCacheRegistryMaxIterations property
+- AllowSEFiltering property
+- ForceMultiPass property
+- ApplySubtract property
+- IndexUseEnabled property
+- AggregationsUseEnabled property
+- DataPlacementOptimization property
+- UseMaterializedIterators property
+- CacheRecordLimit property
+- ROLAPDimensionProcessingEffort property
+- DefaultPageSizeForIndex property
+- EnableRolapDimQueryTableGrouping property
+- DimensionPropertyKeyCache property
+- SleepIntervalSecs property
+- DefaultPageSizeForData property
+- MapFormatMask property
+- CalculationEvaluationPolicy property
+- AggregationMemoryLimitMin property
+- RecordsReportGranularity property
+- MemoryLimit property
+- AggregationMemoryLimitMax property
 ms.assetid: 06eb0d78-96c0-42ff-b759-f4c794597c8d
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 095706fc60fe06ae2a83969431b390772bee37f2
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Propri&#233;t&#233;s OLAP
+# <a name="olap-properties"></a>Propriétés OLAP
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de serveur OLAP répertoriées dans les tableaux suivants. Pour plus d’informations sur les autres propriétés de serveur et la façon de les configurer, consultez [Propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **S'applique à :** Mode serveur multidimensionnel uniquement  
   
-## Mémoire  
+## <a name="memory"></a>Mémoire  
  **DefaultPageSizeForData**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -128,25 +133,25 @@ caps.handback.revision: 18
  **DefaultPageSizeForProp**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## LazyProcessing  
+## <a name="lazyprocessing"></a>LazyProcessing  
  **Activé**  
  Propriété booléenne qui spécifie si le traitement différé des agrégations est activé.  
   
  **SleepIntervalSecs**  
- Propriété dont la valeur est un entier 32 bits signé qui définit l'intervalle, en secondes, en fonction duquel le serveur vérifie s'il y a des travaux de traitement différé en attente.  
+ Propriété dont la valeur est un entier 32 bits signé qui définit l'intervalle, en secondes, en fonction duquel le serveur vérifie s'il y a des travaux de traitement différé en attente.  
   
  **MaxCPUUsage**  
- Propriété dont la valeur est un nombre 64 bits signé en virgule flottante double précision qui définit sous la forme d'un pourcentage l'utilisation maximale de l'unité centrale pour les traitements différés. Le serveur surveille l'utilisation moyenne de l'unité centrale en prenant des instantanés à intervalles réguliers. Il est normal que l'unité centrale dépasse temporairement ce seuil lors des pointes d'activité.  
+ Propriété dont la valeur est un nombre 64 bits signé en virgule flottante double précision qui définit sous la forme d'un pourcentage l'utilisation maximale de l'unité centrale pour les traitements différés. Le serveur surveille l'utilisation moyenne de l'unité centrale en prenant des instantanés à intervalles réguliers. Il est normal que l'unité centrale dépasse temporairement ce seuil lors des pointes d'activité.  
   
- La valeur par défaut de cette propriété, 0,5, indique qu'un maximum de 50 % de l'unité centrale sera consacré au traitement différé.  
+ La valeur par défaut de cette propriété, 0,5, indique qu'un maximum de 50 % de l'unité centrale sera consacré au traitement différé.  
   
  **MaxObjectsInParallel**  
- Propriété dont la valeur est un entier 32 bits signé qui spécifie le nombre maximal de partitions pouvant faire l'objet d'un traitement différé en parallèle.  
+ Propriété dont la valeur est un entier 32 bits signé qui spécifie le nombre maximal de partitions pouvant faire l'objet d'un traitement différé en parallèle.  
   
  **MaxRetries**  
- Propriété dont la valeur est un entier 32 bits signé qui définit le nombre de nouvelles tentatives en cas d'échec du traitement en différé avant qu'une erreur ne soit déclenchée.  
+ Propriété dont la valeur est un entier 32 bits signé qui définit le nombre de nouvelles tentatives en cas d'échec du traitement en différé avant qu'une erreur ne soit déclenchée.  
   
-## ProcessPlan  
+## <a name="processplan"></a>ProcessPlan  
  **CacheRowsetRows**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -154,7 +159,7 @@ caps.handback.revision: 18
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **DistinctBuffer**  
- Propriété dont la valeur est un entier 32 bits signé qui définit la taille d'une mémoire tampon interne utilisée pour les comptages de valeurs. Augmentez cette valeur si vous souhaitez accélérer le traitement du comptage de valeurs au prix d'une plus grande consommation de mémoire.  
+ Propriété dont la valeur est un entier 32 bits signé qui définit la taille d'une mémoire tampon interne utilisée pour les comptages de valeurs. Augmentez cette valeur si vous souhaitez accélérer le traitement du comptage de valeurs au prix d'une plus grande consommation de mémoire.  
   
  **EnableRolapDimQueryTableGrouping**  
  Propriété booléenne qui spécifie si le regroupement de tables est activé pour les dimensions ROLAP. Si sa valeur est True, lors de l'extraction des dimensions ROLAP au moment de l'exécution, les tables de dimension ROLAP sont consultées en entier immédiatement, au lieu d'utiliser des requêtes distinctes pour chaque attribut.  
@@ -175,9 +180,9 @@ caps.handback.revision: 18
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **MemoryLimit**  
- Propriété dont la valeur est un nombre 64 bits signé en virgule flottante double précision qui définit la capacité de mémoire maximale à consacrer au traitement, exprimée en pourcentage de la mémoire physique.  
+ Propriété dont la valeur est un nombre 64 bits signé en virgule flottante double précision qui définit la capacité de mémoire maximale à consacrer au traitement, exprimée en pourcentage de la mémoire physique.  
   
- La valeur par défaut de cette propriété, 65, indique que 65 % de la mémoire physique peut être consacrée au traitement des cubes et des dimensions.  
+ La valeur par défaut de cette propriété, 65, indique que 65 % de la mémoire physique peut être consacrée au traitement des cubes et des dimensions.  
   
  **MemoryLimitErrorEnabled**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -185,7 +190,7 @@ caps.handback.revision: 18
  **OptimizeSchema**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## ProactiveCaching  
+## <a name="proactivecaching"></a>ProactiveCaching  
  **DefaultRefreshInterval**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -195,16 +200,16 @@ caps.handback.revision: 18
  **PartitionLatencyAccuracy**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Traiter  
+## <a name="process"></a>Traiter  
  **AggregationMemoryLimitMax**  
- Propriété dont la valeur est un nombre 64 bits signé en virgule flottante double précision qui définit la capacité de mémoire maximale pouvant être consacrée au traitement des agrégations, exprimée en pourcentage de la mémoire physique.  
+ Propriété dont la valeur est un nombre 64 bits signé en virgule flottante double précision qui définit la capacité de mémoire maximale pouvant être consacrée au traitement des agrégations, exprimée en pourcentage de la mémoire physique.  
   
- La valeur par défaut de cette propriété, 80, indique que 80 % de la mémoire physique peut être consacrée au traitement des agrégations.  
+ La valeur par défaut de cette propriété, 80, indique que 80 % de la mémoire physique peut être consacrée au traitement des agrégations.  
   
  **AggregationMemoryLimitMin**  
- Propriété dont la valeur est un nombre 64 bits signé en virgule flottante double précision qui définit la capacité de mémoire minimale pouvant être consacrée au traitement des agrégations, exprimée en pourcentage de la mémoire physique. Une valeur supérieure est susceptible d'accélérer le traitement des agrégations au prix d'une plus grande consommation de mémoire.  
+ Propriété dont la valeur est un nombre 64 bits signé en virgule flottante double précision qui définit la capacité de mémoire minimale pouvant être consacrée au traitement des agrégations, exprimée en pourcentage de la mémoire physique. Une valeur supérieure est susceptible d'accélérer le traitement des agrégations au prix d'une plus grande consommation de mémoire.  
   
- La valeur par défaut de cette propriété, 10, indique qu'un minimum de 10 % de la mémoire physique sera consacré au traitement des agrégations.  
+ La valeur par défaut de cette propriété, 10, indique qu'un minimum de 10 % de la mémoire physique sera consacré au traitement des agrégations.  
   
  **AggregationNewAlgo**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -216,31 +221,31 @@ caps.handback.revision: 18
  Propriété booléenne qui spécifie si la génération d'agrégations est activée. Il s'agit d'un mécanisme permettant de tester les performances de la génération d'agrégations sans modifier la conception des agrégations.  
   
  **BufferMemoryLimit**  
- Propriété dont la valeur est un nombre 64 bits signé en virgule flottante double précision qui définit la limite de la mémoire tampon de traitement, exprimée en pourcentage de la mémoire physique.  
+ Propriété dont la valeur est un nombre 64 bits signé en virgule flottante double précision qui définit la limite de la mémoire tampon de traitement, exprimée en pourcentage de la mémoire physique.  
   
- La valeur par défaut de cette propriété, 60, indique qu'il est possible d'utiliser jusqu'à 60 % de la mémoire physique comme mémoire tampon.  
+ La valeur par défaut de cette propriété, 60, indique qu'il est possible d'utiliser jusqu'à 60 % de la mémoire physique comme mémoire tampon.  
   
  **BufferRecordLimit**  
- Propriété dont la valeur est un entier 32 bits signé qui définit le nombre d'enregistrements qu'il est possible de stocker en mémoire tampon durant le traitement.  
+ Propriété dont la valeur est un entier 32 bits signé qui définit le nombre d'enregistrements qu'il est possible de stocker en mémoire tampon durant le traitement.  
   
- La valeur par défaut de cette propriété est 1 048 576 (enregistrements).  
+ La valeur par défaut de cette propriété est 1 048 576 (enregistrements).  
   
  **CacheRecordLimit**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **CheckDistinctRecordSortOrder**  
- Propriété booléenne qui définit si l'ordre de tri des résultats d'une requête de comptage de valeurs est significatif lors du traitement de partitions. La valeur True indique que l'ordre de tri n'est pas significatif et doit être « vérifié » par le serveur. Lors du traitement des partitions avec une mesure de comptage de valeurs, une requête comportant une clause ORDER BY est envoyée à SQL Server. Attribuez la valeur False à cette propriété si vous souhaitez accélérer le traitement.  
+ Propriété booléenne qui définit si l'ordre de tri des résultats d'une requête de comptage de valeurs est significatif lors du traitement de partitions. La valeur True indique que l'ordre de tri n'est pas significatif et doit être « vérifié » par le serveur. Lors du traitement des partitions avec une mesure de comptage de valeurs, une requête comportant une clause ORDER BY est envoyée à SQL Server. Attribuez la valeur False à cette propriété si vous souhaitez accélérer le traitement.  
   
  La valeur par défaut de cette propriété, True, indique que l'ordre de tri n'est pas significatif et doit être vérifié.  
   
  **DatabaseConnectionPoolConnectTimeout**  
- Propriété dont la valeur est un entier 32 bits signé qui spécifie le délai d'attente en secondes lors de l'ouverture d'une nouvelle connexion.  
+ Propriété dont la valeur est un entier 32 bits signé qui spécifie le délai d'attente en secondes lors de l'ouverture d'une nouvelle connexion.  
   
  **DatabaseConnectionPoolGeneralTimeout**  
- Propriété dont la valeur est un entier 32 bits signé qui spécifie le délai de connexion de base de données en secondes à utiliser avec les connexions OLEDB externes.  
+ Propriété dont la valeur est un entier 32 bits signé qui spécifie le délai de connexion de base de données en secondes à utiliser avec les connexions OLEDB externes.  
   
  **DatabaseConnectionPoolMax**  
- Propriété dont la valeur est un entier 32 bits signé qui spécifie le nombre maximal de connexions de base de données regroupées en pool.  
+ Propriété dont la valeur est un entier 32 bits signé qui spécifie le nombre maximal de connexions de base de données regroupées en pool.  
   
  La valeur par défaut de cette propriété est 50 (connexions).  
   
@@ -268,9 +273,9 @@ caps.handback.revision: 18
  Propriété booléenne qui spécifie si les index sont générés lors du traitement. Cette propriété sert à tester les performances et à informer.  
   
  **IndexBuildThreshold**  
- Propriété dont la valeur est un entier 32 bits signé qui spécifie un seuil, exprimé en nombre de lignes, en dessous duquel les index ne seront pas générés pour les partitions.  
+ Propriété dont la valeur est un entier 32 bits signé qui spécifie un seuil, exprimé en nombre de lignes, en dessous duquel les index ne seront pas générés pour les partitions.  
   
- La valeur par défaut de cette propriété est 4 096 (lignes).  
+ La valeur par défaut de cette propriété est 4 096 (lignes).  
   
  **IndexFileInitEnabled**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -279,14 +284,14 @@ caps.handback.revision: 18
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **RecordsReportGranularity**  
- Propriété dont la valeur est un entier 32 bits signé qui spécifie la périodicité, exprimée en nombre de lignes, selon laquelle le serveur enregistre les événements Trace durant le traitement.  
+ Propriété dont la valeur est un entier 32 bits signé qui spécifie la périodicité, exprimée en nombre de lignes, selon laquelle le serveur enregistre les événements Trace durant le traitement.  
   
- La valeur par défaut de cette propriété, 1 000, indique qu'un événement Trace est enregistré toutes les 1 000 lignes.  
+ La valeur par défaut de cette propriété, 1 000, indique qu'un événement Trace est enregistré toutes les 1 000 lignes.  
   
  **ROLAPDimensionProcessingEffort**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Requête  
+## <a name="query"></a>Requête  
  **AggregationsUseEnabled**  
  Propriété booléenne qui définit si les agrégations stockées sont utilisées au moment de l'exécution. Cette propriété permet de désactiver les agrégations sans qu'il soit nécessaire de modifier leur conception ou de les retraiter, par exemple dans un but informatif ou pour tester les performances.  
   
@@ -311,16 +316,16 @@ caps.handback.revision: 18
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **DefaultDrillthroughMaxRows**  
- Propriété dont la valeur est un entier 32 bits signé qui spécifie le nombre maximal de lignes qui seront renvoyées par une requête qui effectue une extraction.  
+ Propriété dont la valeur est un entier 32 bits signé qui spécifie le nombre maximal de lignes qui seront renvoyées par une requête qui effectue une extraction.  
   
- La valeur par défaut de cette propriété est 10 000 (lignes).  
+ La valeur par défaut de cette propriété est 10 000 (lignes).  
   
  **DimensionPropertyCacheSize**  
- Propriété dont la valeur est un entier 32 bits signé qui spécifie la quantité de mémoire (en octets) utilisée pour mettre en cache les membres de dimension utilisés dans une requête.  
+ Propriété dont la valeur est un entier 32 bits signé qui spécifie la quantité de mémoire (en octets) utilisée pour mettre en cache les membres de dimension utilisés dans une requête.  
   
- La valeur par défaut est 4 000 000 octets (ou 4 Mo) par hiérarchie d'attribut, par requête active. La valeur par défaut fournit une taille de cache bien équilibrée pour les solutions comportant des hiérarchies standard. Toutefois, les dimensions avec un grand nombre de membres (des millions) ou des hiérarchies profondes offrent de meilleures performances si vous augmentez cette valeur.  
+ La valeur par défaut est 4 000 000 octets (ou 4 Mo) par hiérarchie d'attribut, par requête active. La valeur par défaut fournit une taille de cache bien équilibrée pour les solutions comportant des hiérarchies standard. Toutefois, les dimensions avec un grand nombre de membres (des millions) ou des hiérarchies profondes offrent de meilleures performances si vous augmentez cette valeur.  
   
- Impact de l'augmentation de la taille du cache :  
+ Impact de l'augmentation de la taille du cache :  
   
 -   Les coûts d'utilisation de la mémoire augmentent lorsque vous autorisez l'utilisation de davantage de mémoire par le cache de dimension. L'utilisation réelle dépend de l'exécution de la requête. Certaines requêtes n'utilisent pas la quantité maximale autorisée.  
   
@@ -328,7 +333,7 @@ caps.handback.revision: 18
   
 -   Affecte toutes les bases de données sur le serveur. **DimensionPropertyCachesize** est une propriété à l’échelle du serveur. La modification de cette propriété affecte toutes les bases de données exécutées sur l'instance actuelle.  
   
- Approche pour estimer la configuration requise du cache de dimension :  
+ Approche pour estimer la configuration requise du cache de dimension :  
   
 1.  Commencez par augmenter la taille en entrant un grand nombre pour déterminer si l'augmentation de la taille du cache de dimension présente un avantage. Par exemple, doublez la valeur par défaut lors de l'étape initiale.  
   
@@ -430,7 +435,7 @@ caps.handback.revision: 18
  **DataCache\ MemoryModel\ Tax**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Travaux  
+## <a name="jobs"></a>Travaux  
  **ProcessAggregation\ MemoryModel\ Income**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -476,8 +481,8 @@ caps.handback.revision: 18
  **ProcessAggregation\ ProcessProperty\ Tax**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Voir aussi  
- [propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Déterminer le mode serveur d'une instance Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

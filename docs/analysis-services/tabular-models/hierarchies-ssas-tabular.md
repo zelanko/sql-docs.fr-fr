@@ -1,47 +1,44 @@
 ---
-title: "Hi&#233;rarchies (SSAS Tabulaire) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Hiérarchies | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e3e50e89-f85d-485b-a271-1e0550520212
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 5ce337737331ecf67332e4f012993a28d59715b0
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Hi&#233;rarchies (SSAS Tabulaire)
+# <a name="hierarchies"></a>Hierarchies
   Les hiérarchies, dans les modèles tabulaires, sont des métadonnées qui définissent les relations entre deux colonnes ou plus d'une table. Les hiérarchies peuvent apparaître séparément des autres colonnes dans une liste de champs de clients de création de rapports, ce qui les rend faciles à parcourir par les utilisateurs du client et à inclure dans un rapport.  
-  
- Sections de cette rubrique :  
-  
--   [Avantages](#bkmk_benefits)  
-  
--   [Définition de hiérarchies](#bkmk_define)  
-  
--   [Tâches associées](#bkmk_related_tasks)  
   
 ##  <a name="bkmk_benefits"></a> Avantages  
  Les tables peuvent inclure des dizaines, voire des centaines de colonnes avec des noms de colonne inhabituels sans ordre apparent. Cela peut entraîner une apparence non ordonnée dans les listes de champs de clients de création de rapports, ce qui complique la tâche des utilisateurs qui recherchent et souhaitent inclure des données dans un rapport. Les hiérarchies peuvent fournir une vue simple et intuitive d'une structure de données autrement plus complexe.  
   
- Par exemple, dans un tableau de dates, vous pouvez créer une hiérarchie de calendrier. « Année civile » est utilisé comme niveau parent de premier niveau, avec « Mois », « Semaine » et « Jour » inclus comme niveaux enfants (Année civile->Mois->Semaine->Jour). Cette hiérarchie montre une relation logique entre « Année civile » et « Jour ». Un utilisateur client peut ensuite sélectionner l'année civile d'une liste de champs pour inclure tous les niveaux dans un tableau croisé dynamique, ou développer la hiérarchie, puis sélectionner uniquement les niveaux particuliers à inclure dans le tableau croisé dynamique.  
+ Par exemple, dans un tableau de dates, vous pouvez créer une hiérarchie de calendrier. « Année civile » est utilisé comme niveau parent de premier niveau, avec « Mois », « Semaine » et « Jour » inclus comme niveaux enfants (Année civile->Mois->Semaine->Jour). Cette hiérarchie montre une relation logique entre « Année civile » et « Jour ». Un utilisateur client peut ensuite sélectionner l'année civile d'une liste de champs pour inclure tous les niveaux dans un tableau croisé dynamique, ou développer la hiérarchie, puis sélectionner uniquement les niveaux particuliers à inclure dans le tableau croisé dynamique.  
   
- Chaque niveau dans une hiérarchie étant une représentation d'une colonne dans une table, le niveau peut être renommé. Bien que cette opération ne concerne pas seulement les hiérarchies (toute colonne peut être renommée dans un modèle tabulaire), renommer les niveaux de la hiérarchie peut permettre aux utilisateurs de rechercher et d’inclure plus facilement des niveaux dans un rapport. Renommer un niveau ne renomme pas la colonne qu'il référence ; cela rend simplement le niveau plus identifiable. Dans notre hiérarchie Année civile, par exemple, dans la table de date de la vue de données, les colonnes CalendarYear, CalendarMonth, CalendarWeek et CalendarDay ont été renommées en Année civile, Mois, Semaine et Jour de manière à les rendre plus facilement identifiables. Renommer des niveaux présente un autre avantage, celui d'assurer la cohérence dans les rapports, étant donné que les utilisateurs seront moins souvent amenés à modifier les noms de colonnes pour les rendre plus lisibles dans les tableaux croisés dynamiques, les graphiques, etc.  
+ Chaque niveau dans une hiérarchie étant une représentation d'une colonne dans une table, le niveau peut être renommé. Bien que cette opération ne concerne pas seulement les hiérarchies (toute colonne peut être renommée dans un modèle tabulaire), renommer les niveaux de la hiérarchie peut permettre aux utilisateurs de rechercher et d’inclure plus facilement des niveaux dans un rapport. Renommer un niveau ne renomme pas la colonne qu'il référence ; cela rend simplement le niveau plus identifiable. Dans notre hiérarchie Année civile, par exemple, dans la table de date de la vue de données, les colonnes CalendarYear, CalendarMonth, CalendarWeek et CalendarDay ont été renommées en Année civile, Mois, Semaine et Jour de manière à les rendre plus facilement identifiables. Renommer des niveaux présente un autre avantage, celui d'assurer la cohérence dans les rapports, étant donné que les utilisateurs seront moins souvent amenés à modifier les noms de colonnes pour les rendre plus lisibles dans les tableaux croisés dynamiques, les graphiques, etc.  
   
- Les hiérarchies peuvent être incluses dans des perspectives. Les perspectives définissent des sous-ensembles visualisables d'un modèle et des points de vue du modèle focalisés sur un domaine d'activité ou sur une application. Par exemple, une perspective peut fournir aux utilisateurs une liste visuelle (hiérarchie) d'éléments de données requis pour des exigences de création de rapports spécifiques. Pour plus d’informations, consultez [Perspectives &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md).  
+ Les hiérarchies peuvent être incluses dans des perspectives. Les perspectives définissent des sous-ensembles visualisables d'un modèle et des points de vue du modèle focalisés sur un domaine d'activité ou sur une application. Par exemple, une perspective peut fournir aux utilisateurs une liste visuelle (hiérarchie) d'éléments de données requis pour des exigences de création de rapports spécifiques. Pour plus d’informations, consultez [Perspectives](../../analysis-services/tabular-models/perspectives-ssas-tabular.md).  
   
- Les hiérarchies ne sont pas censées être utilisées comme mécanisme de sécurité, mais en tant qu'outil pour améliorer le confort de l'utilisateur. Toute la sécurité d'une hiérarchie donnée est héritée du modèle sous-jacent. Les hiérarchies ne peuvent pas autoriser l'accès aux objets de modèle auxquels un utilisateur n'a pas accès. La sécurité de la base de données model doit d'abord être résolue, avant que l'utilisateur puisse accéder aux objets du modèle par le biais d'une hiérarchie. Les rôles de sécurité peuvent permettre de sécuriser les métadonnées et les données de modèle. Pour plus d’informations, consultez [Rôles &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md).  
+ Les hiérarchies ne sont pas censées être utilisées comme mécanisme de sécurité, mais en tant qu'outil pour améliorer le confort de l'utilisateur. Toute la sécurité d'une hiérarchie donnée est héritée du modèle sous-jacent. Les hiérarchies ne peuvent pas autoriser l'accès aux objets de modèle auxquels un utilisateur n'a pas accès. La sécurité de la base de données model doit d'abord être résolue, avant que l'utilisateur puisse accéder aux objets du modèle par le biais d'une hiérarchie. Les rôles de sécurité peuvent permettre de sécuriser les métadonnées et les données de modèle. Pour plus d’informations, consultez [rôles](../../analysis-services/tabular-models/roles-ssas-tabular.md).  
   
-##  <a name="bkmk_define"></a> Définition de hiérarchies  
- Vous créez et gérez des hiérarchies à l'aide du générateur de modèles dans la vue de diagramme. La création et la gestion des hiérarchies n'est pas prise en charge dans le générateur de modèles dans la vue de données. Pour afficher le concepteur de modèles dans la Vue de diagramme, dans le menu **Modèle**, pointez sur **Vue du modèle**, puis cliquez sur **Vue de diagramme**.  
+##  <a name="bkmk_define"></a> Defining hierarchies  
+ Vous créez et gérez des hiérarchies à l'aide du générateur de modèles dans la vue de diagramme. La création et la gestion des hiérarchies n'est pas prise en charge dans le générateur de modèles dans la vue de données. Pour afficher le concepteur de modèles dans la Vue de diagramme, dans le menu **Modèle** , pointez sur **Vue du modèle**, puis cliquez sur **Vue de diagramme**.  
   
  Pour créer une hiérarchie, cliquez avec le bouton droit sur une colonne que vous souhaitez désigner comme niveau parent, puis sélectionnez **Créer une hiérarchie**. Vous pouvez sélectionner plusieurs colonnes (dans une table unique) à inclure, ou vous pouvez ajouter des colonnes ultérieurement comme niveaux enfants en cliquant et en faisant glisser des colonnes vers le niveau parent. Lorsque plusieurs colonnes sont sélectionnées, elles sont automatiquement placées dans un ordre selon la cardinalité. Vous pouvez modifier cet ordre en cliquant et en faisant glisser une colonne (niveau) vers un ordre différent ou en utilisant les contrôles de navigation Haut et Bas dans le menu contextuel. Lors de l'ajout d'une colonne comme niveau enfant, vous pouvez utiliser la détection automatique en faisant glisser, puis en déplaçant la colonne sur le niveau parent.  
   
@@ -49,17 +46,17 @@ caps.handback.revision: 13
   
  Par défaut, les nouvelles hiérarchies sont nommées hierarchy1, hiérarchie 2, etc. Il est recommandé de modifier les noms de hiérarchie afin de refléter la nature de la relation parent-enfant, et ainsi les rendre plus identifiables aux utilisateurs.  
   
- Après avoir créé des hiérarchies, vous pouvez tester leur efficacité dans votre modèle à l'aide de la fonctionnalité Analyser dans Excel. Pour plus d’informations, consultez [Analyser dans Excel &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
+ Après avoir créé des hiérarchies, vous pouvez tester leur efficacité dans votre modèle à l'aide de la fonctionnalité Analyser dans Excel. Pour plus d’informations, consultez [analyser dans Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
   
 ##  <a name="bkmk_related_tasks"></a> Tâches associées  
   
-|Tâche|Description|  
+|Tâche| Description|  
 |----------|-----------------|  
-|[Créer et gérer des hiérarchies &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/create-and-manage-hierarchies-ssas-tabular.md)|Décrit comment créer et gérer des hiérarchies à l'aide du générateur de modèles dans la vue de diagramme.|  
+|[Créer et gérer des hiérarchies](../../analysis-services/tabular-models/create-and-manage-hierarchies-ssas-tabular.md)|Décrit comment créer et gérer des hiérarchies à l'aide du générateur de modèles dans la vue de diagramme.|  
   
-## Voir aussi  
- [Générateur de modèles tabulaires &#40;SSAS&#41;](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
- [Perspectives &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
- [Rôles &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Générateur de modèles tabulaires](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
+ [Perspectives](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
+ [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   
   

@@ -1,25 +1,30 @@
 ---
-title: "Colonnes de donn&#233;es Audit de s&#233;curit&#233; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "catégorie d'événement Audit de sécurité [SQL Server]"
+title: "Colonnes de données d’Audit de sécurité | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Security Audit event category [SQL Server]
 ms.assetid: fac1a7f9-5961-4f4b-bb04-847616b505d7
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 36
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 77d887822dd132c6e4d3e356e49279fa92d32541
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Colonnes de donn&#233;es Audit de s&#233;curit&#233;
-  La catégorie d'événement Audit de sécurité contient les classes d'événements suivantes :  
+# <a name="security-audit-data-columns"></a>Colonnes de données Audit de sécurité
+  La catégorie d'événement Audit de sécurité contient les classes d'événements suivantes :  
   
 ||||  
 |-|-|-|  
@@ -32,16 +37,16 @@ caps.handback.revision: 36
   
  Les tableaux suivants répertorient les colonnes de données de chacune de ces classes d'événements.  
   
-## Audit Login  
+## <a name="audit-login"></a>Audit Login  
   
 |||||  
 |-|-|-|-|  
 |**Nom de la colonne**|**ID de la colonne**|**Type de colonne**|**Description de la colonne**|  
 |EventClass|0|1|Classe d'événements utilisée pour catégoriser les événements.|  
-|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
-|StartTime|3|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|StartTime|3|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
 |Severity|22|1|Niveau de gravité d'une exception.|  
-|Réussi|23|1|1 = réussite. 0 = échec (1 signifie la réussite de la vérification d'autorisations et 0 l'échec de cette vérification, par exemple).|  
+|Réussi|23|1|1 = réussite. 0 = échec (1 signifie la réussite de la vérification d'autorisations et 0 l'échec de cette vérification, par exemple).|  
 |Erreur|24|1|Numéro d'erreur d'un événement donné.|  
 |ConnectionID|25|1|ID de connexion unique.|  
 |NTUserName|32|8|Nom d'utilisateur Windows.|  
@@ -52,16 +57,16 @@ caps.handback.revision: 36
 |NTCanonicalUserName|40|8|Nom d'utilisateur sous forme canonique. Par exemple, engineering.microsoft.com/software/someone.|  
 |ServerName|43|8|Nom du serveur produisant l'événement.|  
   
-## Audit Logout  
+## <a name="audit-logout"></a>Audit Logout  
   
 |**Nom de la colonne**|**ID de la colonne**|**Type de colonne**|**Description de la colonne**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Classe d'événements utilisée pour catégoriser les événements.|  
-|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
-|EndTime|4|5|Heure de fin de l'événement. Cette colonne n'est pas remplie pour les classes d'événements de démarrage, comme SQL:BatchStarting ou SP:Starting. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|EndTime|4|5|Heure de fin de l'événement. Cette colonne n'est pas remplie pour les classes d'événements de démarrage, comme SQL:BatchStarting ou SP:Starting. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
 |Duration|5|2|Durée (en millisecondes) de l'événement.|  
 |CPUTime|6|2|Temps processeur (en millisecondes) utilisé par l'événement.|  
-|Réussi|23|1|1 = réussite. 0 = échec (1 signifie la réussite de la vérification d'autorisations et 0 l'échec de cette vérification, par exemple).|  
+|Réussi|23|1|1 = réussite. 0 = échec (1 signifie la réussite de la vérification d'autorisations et 0 l'échec de cette vérification, par exemple).|  
 |ConnectionID|25|1|ID de connexion unique.|  
 |NTUserName|32|8|Nom d'utilisateur Windows.|  
 |NTDomainName|33|8|Domaine Windows auquel appartient l'utilisateur.|  
@@ -71,20 +76,20 @@ caps.handback.revision: 36
 |NTCanonicalUserName|40|8|Nom d'utilisateur sous forme canonique. Par exemple, engineering.microsoft.com/software/someone.|  
 |ServerName|43|8|Nom du serveur produisant l'événement.|  
   
-## Audit Server Starts And Stops  
+## <a name="audit-server-starts-and-stops"></a>Audit Server Starts And Stops  
   
 |**Nom de la colonne**|**ID de la colonne**|**Type de colonne**|**Description de la colonne**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Classe d'événements utilisée pour catégoriser les événements.|  
-|EventSubclass|1|1|La sous-classe d’événements fournit des informations supplémentaires sur chaque classe d’événements :<br /><br /> 1 : Arrêt de l’instance<br /><br /> 2 : Instance démarrée<br /><br /> 3 : Instance suspendue<br /><br /> 4 : Poursuite de l’instance|  
-|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|EventSubclass|1|1|La sous-classe d’événements fournit des informations supplémentaires sur chaque classe d’événements :<br /><br /> 1 : Arrêt de l’instance<br /><br /> 2 : Instance démarrée<br /><br /> 3 : Instance suspendue<br /><br /> 4 : Poursuite de l’instance|  
+|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
 |Severity|22|1|Niveau de gravité d'une exception.|  
-|Réussi|23|1|1 = réussite. 0 = échec (1 signifie la réussite de la vérification d'autorisations et 0 l'échec de cette vérification, par exemple).|  
+|Réussi|23|1|1 = réussite. 0 = échec (1 signifie la réussite de la vérification d'autorisations et 0 l'échec de cette vérification, par exemple).|  
 |Erreur|24|1|Numéro d'erreur d'un événement donné.|  
 |TextData|42|9|Données texte associées à l'événement.|  
 |ServerName|43|8|Nom du serveur produisant l'événement.|  
   
-## Audit Object Permission Event  
+## <a name="audit-object-permission-event"></a>Audit Object Permission Event  
   
 |**Nom de la colonne**|**ID de la colonne**|**Type de colonne**|**Description de la colonne**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -94,7 +99,7 @@ caps.handback.revision: 36
 |ObjectPath|14|8|Chemin d'accès de l'objet. Liste de parents séparés par une virgule, commençant par le parent de l'objet.|  
 |ObjectReference|15|8|Référence de l'objet. Encodée au format XML pour tous les parents, en utilisant des balises pour décrire l'objet.|  
 |Severity|22|1|Niveau de gravité d'une exception.|  
-|Réussi|23|1|1 = réussite. 0 = échec (1 signifie la réussite de la vérification d'autorisations et 0 l'échec de cette vérification, par exemple).|  
+|Réussi|23|1|1 = réussite. 0 = échec (1 signifie la réussite de la vérification d'autorisations et 0 l'échec de cette vérification, par exemple).|  
 |Erreur|24|1|Numéro d'erreur d'un événement donné.|  
 |ConnectionID|25|1|ID de connexion unique.|  
 |DatabaseName|28|8|Nom de la base de données dans laquelle l'instruction de l'utilisateur s'exécute.|  
@@ -109,13 +114,13 @@ caps.handback.revision: 36
 |TextData|42|9|Données texte associées à l'événement.|  
 |ServerName|43|8|Nom du serveur produisant l'événement.|  
   
-## Audit Admin Operations Event  
+## <a name="audit-admin-operations-event"></a>Audit Admin Operations Event  
   
 |**Nom de la colonne**|**ID de la colonne**|**Type de colonne**|**Description de la colonne**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventSubclass|1|1|La sous-classe d’événements fournit des informations supplémentaires sur chaque classe d’événements :<br /><br /> 1 : **Backup**<br /><br /> 2 : **Restore**<br /><br /> 3 : **Synchronize**<br /><br /> 4 : **Detach**<br /><br /> 5 : **Attach**<br /><br /> 6 : **ImageLoad**<br /><br /> 7 : **ImageSave**|  
 |Severity|22|1|Niveau de gravité d'une exception.|  
-|Réussi|23|1|1 = réussite. 0 = échec (1 signifie la réussite de la vérification d'autorisations et 0 l'échec de cette vérification, par exemple).|  
+|Réussi|23|1|1 = réussite. 0 = échec (1 signifie la réussite de la vérification d'autorisations et 0 l'échec de cette vérification, par exemple).|  
 |Erreur|24|1|Numéro d'erreur d'un événement donné.|  
 |ConnectionID|25|1|ID de connexion unique.|  
 |DatabaseName|28|8|Nom de la base de données dans laquelle l'instruction de l'utilisateur s'exécute.|  
@@ -130,7 +135,7 @@ caps.handback.revision: 36
 |TextData|42|9|Données texte associées à l'événement.|  
 |ServerName|43|8|Nom du serveur produisant l'événement.|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Catégorie d'événement Audit de sécurité](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

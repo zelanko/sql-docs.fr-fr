@@ -1,0 +1,367 @@
+---
+title: CAS (Transact-SQL) | Documents Microsoft
+ms.custom: 
+ms.date: 06/28/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- CASE_TSQL
+- CASE
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- CASE expression [Transact-SQL]
+- simple CASE expression
+- comparing expressions
+- searched CASE expression
+ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
+caps.latest.revision: 59
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: b366f7b6d57adbed5f028171617abb7516f3260b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="case-transact-sql"></a>CASE (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  Évalue une liste de conditions et retourne une expression de résultat parmi plusieurs possibilités.  
+  
+ L'expression CASE a deux formats :  
+  
+-   l'expression CASE simple détermine le résultat en comparant une expression à un jeu d'expressions simples ;  
+  
+-   l'expression CASE élaborée évalue un ensemble d'expressions booléennes pour déterminer le résultat.  
+  
+ Les deux formats prennent en charge un argument ELSE facultatif.  
+  
+ CASE peut être utilisé dans n'importe quelle instruction ou clause qui autorise une expression valide. Par exemple, vous pouvez utiliser CASE dans les instructions telles que SELECT, UPDATE, DELETE et SET, ainsi que dans les clauses telles que select_list, IN, WHERE, ORDER BY et HAVING.  
+  
+ ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Syntaxe  
+  
+```  
+-- Syntax for SQL Server and Azure SQL Database  
+  
+Simple CASE expression:   
+CASE input_expression   
+     WHEN when_expression THEN result_expression [ ...n ]   
+     [ ELSE else_result_expression ]   
+END   
+Searched CASE expression:  
+CASE  
+     WHEN Boolean_expression THEN result_expression [ ...n ]   
+     [ ELSE else_result_expression ]   
+END  
+```  
+  
+```  
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+  
+CASE  
+     WHEN when_expression THEN result_expression [ ...n ]   
+     [ ELSE else_result_expression ]   
+END  
+```  
+  
+## <a name="arguments"></a>Arguments  
+ *Il peut s’agir*  
+ Expression évaluée à l'aide du format CASE simple. *Il peut s’agir* valide [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
+  
+ Lorsque *il peut s’agir*  
+ Une expression simple à laquelle *il peut s’agir* est comparé quand le format CASE simple est utilisé. *Il peut s’agir* toute expression valide. Les types de données de *il peut s’agir* et chaque *il peut s’agir* doivent être identiques ou permettre une conversion implicite.  
+  
+ PUIS *result_expression*  
+ Expression retournée lorsque *il peut s’agir* est égal à *il peut s’agir* a la valeur TRUE, ou *Boolean_expression* a la valeur TRUE. *expressions de résultat* valide [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
+  
+ AUTRE *else_result_expression*  
+ Expression retournée si aucune opération de comparaison n'a la valeur TRUE. Si cet argument est omis et si aucune opération de comparaison n'a la valeur TRUE, CASE retourne la valeur NULL. *else_result_expression* toute expression valide. Les types de données de *else_result_expression* et n’importe quel *result_expression* doivent être identiques ou permettre une conversion implicite.  
+  
+ Lorsque *Boolean_expression*  
+ Expression booléenne évaluée lorsque la fonction CASE élaborée est utilisée. *Boolean_expression* toute expression booléenne valide.  
+  
+## <a name="return-types"></a>Types de retour  
+ Retourne le type de priorité la plus élevé à l’ensemble des types dans *result_expression* et le paramètre facultatif *else_result_expression*. Pour plus d’informations, consultez [Priorités des types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+  
+### <a name="return-values"></a>Valeurs de retour  
+ **Expression CASE simple :**  
+  
+ L'expression CASE simple fonctionne en comparant la première expression à l'expression contenue dans chaque clause WHEN pour déterminer son équivalence. Si ces expressions sont équivalentes, l'expression contenue dans la clause THEN est retournée.  
+  
+-   Autorise uniquement un contrôle d'égalité.  
+  
+-   Dans l’ordre spécifié, expression_en_entrée = il peut s’agir pour chaque clause WHEN.  
+  
+-   Retourne le *result_expression* du premier *il peut s’agir* = *il peut s’agir* qui prend la valeur TRUE.  
+  
+-   Si aucun *il peut s’agir* = *il peut s’agir* a la valeur TRUE, le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] retourne le *else_result_expression* si une clause ELSE est spécifiée, ou une valeur NULL si aucune clause ELSE n’est spécifiée.  
+  
+ **Expression CASE recherchée :**  
+  
+-   Évalue, dans l’ordre spécifié, *Boolean_expression* pour chaque clause WHEN.  
+  
+-   Retourne *result_expression* du premier *Boolean_expression* qui prend la valeur TRUE.  
+  
+-   Si aucun *Boolean_expression* a la valeur TRUE, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] retourne le *else_result_expression* si une clause ELSE est spécifiée, ou une valeur NULL si aucune clause ELSE n’est spécifiée.  
+  
+## <a name="remarks"></a>Notes  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise uniquement 10 niveaux d'imbrication dans les expressions CASE.  
+  
+ L'expression CASE ne peut pas être utilisée pour contrôler le flux d'exécution d'instructions, de blocs d'instructions, de fonctions définies par l'utilisateur et de procédures stockées Transact-SQL. Pour obtenir la liste des méthodes de contrôle de flux, consultez [langage de contrôle de flux &#40; Transact-SQL &#41; ](~/t-sql/language-elements/control-of-flow.md).  
+  
+ L'instruction CASE évalue les conditions de manière séquentielle et s'arrête à la première condition remplie. Dans certains cas, une expression est évaluée avant qu'une instruction CASE ne reçoive les résultats de l'expression en entrée. Des erreurs sont possibles lors de l'évaluation de ces expressions. Les expressions d'agrégation qui apparaissent dans les arguments WHEN d'une instruction CASE sont évaluées en premier, puis fournies à l'instruction CASE. Par exemple, la requête suivante génère une erreur de division par zéro lors de la production de la valeur de l'agrégat MAX. Cela se produit avant l'évaluation de l'expression CASE.  
+  
+```tsql  
+WITH Data (value) AS   
+(   
+SELECT 0   
+UNION ALL   
+SELECT 1   
+)   
+SELECT   
+   CASE   
+      WHEN MIN(value) <= 0 THEN 0   
+      WHEN MAX(1/value) >= 100 THEN 1   
+   END   
+FROM Data ;  
+```  
+  
+ Vous devez uniquement dépendre de l'ordre d'évaluation des conditions WHEN pour les expressions scalaires (notamment les sous-requêtes non corrélées qui retournent des expressions scalaires), et non pas pour les expressions d'agrégation.  
+  
+## <a name="examples"></a>Exemples  
+  
+### <a name="a-using-a-select-statement-with-a-simple-case-expression"></a>A. Utilisation d'une instruction SELECT avec une expression CASE simple  
+ Dans une instruction `SELECT`, une expression `CASE` simple permet seulement de vérifier s'il y a égalité ; aucune autre comparaison n'est effectuée. L'exemple suivant utilise l'expression `CASE` pour modifier la présentation des catégories de gammes de produits pour en faciliter la lecture.  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+SELECT   ProductNumber, Category =  
+      CASE ProductLine  
+         WHEN 'R' THEN 'Road'  
+         WHEN 'M' THEN 'Mountain'  
+         WHEN 'T' THEN 'Touring'  
+         WHEN 'S' THEN 'Other sale items'  
+         ELSE 'Not for sale'  
+      END,  
+   Name  
+FROM Production.Product  
+ORDER BY ProductNumber;  
+GO  
+  
+```  
+  
+### <a name="b-using-a-select-statement-with-a-searched-case-expression"></a>B. Utilisation d'une instruction SELECT avec une expression CASE élaborée  
+ Dans une instruction `SELECT`, l'expression `CASE` élaborée permet de remplacer des valeurs dans le jeu de résultats, en fonction des valeurs de comparaison. L'exemple suivant donne le prix sous la forme d'un texte de commentaire basé sur la fourchette de prix d'un produit.  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+SELECT   ProductNumber, Name, "Price Range" =   
+      CASE   
+         WHEN ListPrice =  0 THEN 'Mfg item - not for resale'  
+         WHEN ListPrice < 50 THEN 'Under $50'  
+         WHEN ListPrice >= 50 and ListPrice < 250 THEN 'Under $250'  
+         WHEN ListPrice >= 250 and ListPrice < 1000 THEN 'Under $1000'  
+         ELSE 'Over $1000'  
+      END  
+FROM Production.Product  
+ORDER BY ProductNumber ;  
+GO  
+  
+```  
+  
+### <a name="c-using-case-in-an-order-by-clause"></a>C. Utilisation de CASE dans une clause ORDER BY  
+ L'exemple suivant utilise l'expression CASE dans une clause ORDER BY pour déterminer l'ordre de tri des lignes d'après la valeur d'une colonne donnée. Dans le premier exemple, la valeur de la colonne `SalariedFlag` de la table `HumanResources.Employee` est évaluée. Les employés pour lesquels `SalariedFlag` a la valeur 1 sont retournés par ordre décroissant d'`BusinessEntityID`. Les employés pour lesquels `SalariedFlag` a la valeur 0 sont retournés par ordre croissant d'`BusinessEntityID`. Dans le deuxième exemple, le jeu de résultats est classé par la colonne `TerritoryName` lorsque la colonne `CountryRegionName` est égale à « United States » et par `CountryRegionName` pour toutes les autres lignes.  
+  
+```  
+SELECT BusinessEntityID, SalariedFlag  
+FROM HumanResources.Employee  
+ORDER BY CASE SalariedFlag WHEN 1 THEN BusinessEntityID END DESC  
+        ,CASE WHEN SalariedFlag = 0 THEN BusinessEntityID END;  
+GO  
+  
+```  
+  
+```  
+SELECT BusinessEntityID, LastName, TerritoryName, CountryRegionName  
+FROM Sales.vSalesPerson  
+WHERE TerritoryName IS NOT NULL  
+ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName  
+         ELSE CountryRegionName END;  
+  
+```  
+  
+### <a name="d-using-case-in-an-update-statement"></a>D. Utilisation de CASE dans une instruction UPDATE  
+ L'exemple suivant utilise l'expression CASE dans une instruction UPDATE afin de déterminer la valeur définie pour la colonne `VacationHours` des employés pour lesquels `SalariedFlag` a la valeur 0. En soustrayant 10 heures des résultats de `VacationHours` dans une valeur négative, `VacationHours` augmente de 40 heures ; sinon, `VacationHours` augmente de 20 heures. La clause OUTPUT est utilisée pour afficher les valeurs antérieures et postérieures aux congés.  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+UPDATE HumanResources.Employee  
+SET VacationHours =   
+    ( CASE  
+         WHEN ((VacationHours - 10.00) < 0) THEN VacationHours + 40  
+         ELSE (VacationHours + 20.00)  
+       END  
+    )  
+OUTPUT Deleted.BusinessEntityID, Deleted.VacationHours AS BeforeValue,   
+       Inserted.VacationHours AS AfterValue  
+WHERE SalariedFlag = 0;  
+  
+```  
+  
+### <a name="e-using-case-in-a-set-statement"></a>E. Utilisation de CASE dans une instruction SET  
+ L'exemple suivant utilise l'expression CASE dans une instruction SET au sein de la fonction table `dbo.GetContactInfo`. Dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], toutes les données relatives aux personnes sont stockées dans la table `Person.Person`. Par exemple, la personne qui peut être un employé, représentant du fournisseur ou un client. La fonction retourne le premier et le nom d’une donnée `BusinessEntityID` et le type de contact pour cette personne. L’expression CASE dans l’instruction SET détermine la valeur à afficher pour la colonne `ContactType` en fonction de l’existence de la `BusinessEntityID` colonne dans la `Employee`, `Vendor`, ou `Customer` tables.  
+  
+```  
+  
+USE AdventureWorks2012;  
+GO  
+CREATE FUNCTION dbo.GetContactInformation(@BusinessEntityID int)  
+    RETURNS @retContactInformation TABLE   
+(  
+BusinessEntityID int NOT NULL,  
+FirstName nvarchar(50) NULL,  
+LastName nvarchar(50) NULL,  
+ContactType nvarchar(50) NULL,  
+    PRIMARY KEY CLUSTERED (BusinessEntityID ASC)  
+)   
+AS   
+-- Returns the first name, last name and contact type for the specified contact.  
+BEGIN  
+    DECLARE   
+        @FirstName nvarchar(50),   
+        @LastName nvarchar(50),   
+        @ContactType nvarchar(50);  
+  
+    -- Get common contact information  
+    SELECT   
+        @BusinessEntityID = BusinessEntityID,   
+@FirstName = FirstName,   
+        @LastName = LastName  
+    FROM Person.Person   
+    WHERE BusinessEntityID = @BusinessEntityID;  
+  
+    SET @ContactType =   
+        CASE   
+            -- Check for employee  
+            WHEN EXISTS(SELECT * FROM HumanResources.Employee AS e   
+                WHERE e.BusinessEntityID = @BusinessEntityID)   
+                THEN 'Employee'  
+  
+            -- Check for vendor  
+            WHEN EXISTS(SELECT * FROM Person.BusinessEntityContact AS bec  
+                WHERE bec.BusinessEntityID = @BusinessEntityID)   
+                THEN 'Vendor'  
+  
+            -- Check for store  
+            WHEN EXISTS(SELECT * FROM Purchasing.Vendor AS v            
+                WHERE v.BusinessEntityID = @BusinessEntityID)   
+                THEN 'Store Contact'  
+  
+            -- Check for individual consumer  
+            WHEN EXISTS(SELECT * FROM Sales.Customer AS c   
+                WHERE c.PersonID = @BusinessEntityID)   
+                THEN 'Consumer'  
+        END;  
+  
+    -- Return the information to the caller  
+    IF @BusinessEntityID IS NOT NULL   
+    BEGIN  
+        INSERT @retContactInformation  
+        SELECT @BusinessEntityID, @FirstName, @LastName, @ContactType;  
+    END;  
+  
+    RETURN;  
+END;  
+GO  
+  
+SELECT BusinessEntityID, FirstName, LastName, ContactType  
+FROM dbo.GetContactInformation(2200);  
+GO  
+SELECT BusinessEntityID, FirstName, LastName, ContactType  
+FROM dbo.GetContactInformation(5);  
+  
+```  
+  
+### <a name="f-using-case-in-a-having-clause"></a>F. Utilisation de CASE dans une clause HAVING  
+ L'exemple suivant utilise l'expression CASE dans une clause HAVING pour restreindre les lignes retournées par l'instruction SELECT. L’instruction retourne le taux horaire maximal pour chaque fonction dans la `HumanResources.Employee` table. La clause HAVING restreint les fonctions aux hommes ayant un taux de salaire maximal supérieur à 40 dollars ou aux femmes ayant un taux de salaire maximal supérieur à 42 dollars.  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+SELECT JobTitle, MAX(ph1.Rate)AS MaximumRate  
+FROM HumanResources.Employee AS e  
+JOIN HumanResources.EmployeePayHistory AS ph1 ON e.BusinessEntityID = ph1.BusinessEntityID  
+GROUP BY JobTitle  
+HAVING (MAX(CASE WHEN Gender = 'M'   
+        THEN ph1.Rate   
+        ELSE NULL END) > 40.00  
+     OR MAX(CASE WHEN Gender  = 'F'   
+        THEN ph1.Rate    
+        ELSE NULL END) > 42.00)  
+ORDER BY MaximumRate DESC;  
+  
+```  
+  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+  
+### <a name="g-using-a-select-statement-with-a-case-expression"></a>G. À l’aide d’une instruction SELECT avec une expression CASE  
+ Dans une instruction SELECT, l’expression CASE autorise les valeurs à remplacer dans le jeu de résultats en fonction des valeurs de comparaison. L’exemple suivant utilise l’expression CASE pour modifier l’affichage de la ligne des catégories de produits pour les rendre plus compréhensible. Lorsqu’une valeur n’existe pas, le texte « pas à la vente » s’affiche.  
+  
+```  
+-- Uses AdventureWorks  
+  
+SELECT   ProductAlternateKey, Category =  
+      CASE ProductLine  
+         WHEN 'R' THEN 'Road'  
+         WHEN 'M' THEN 'Mountain'  
+         WHEN 'T' THEN 'Touring'  
+         WHEN 'S' THEN 'Other sale items'  
+         ELSE 'Not for sale'  
+      END,  
+   EnglishProductName  
+FROM dbo.DimProduct  
+ORDER BY ProductKey;  
+```  
+  
+### <a name="h-using-case-in-an-update-statement"></a>H. Utilisation de CASE dans une instruction UPDATE  
+ L'exemple suivant utilise l'expression CASE dans une instruction UPDATE afin de déterminer la valeur définie pour la colonne `VacationHours` des employés pour lesquels `SalariedFlag` a la valeur 0. En soustrayant 10 heures des résultats de `VacationHours` dans une valeur négative, `VacationHours` augmente de 40 heures ; sinon, `VacationHours` augmente de 20 heures.  
+  
+```  
+-- Uses AdventureWorks   
+  
+UPDATE dbo.DimEmployee  
+SET VacationHours =   
+    ( CASE  
+         WHEN ((VacationHours - 10.00) < 0) THEN VacationHours + 40  
+         ELSE (VacationHours + 20.00)   
+       END  
+    )   
+WHERE SalariedFlag = 0;  
+  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Expressions &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
+ [Fusionner &#40; Transact-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
+ [IIF &#40; Transact-SQL &#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
+ [Choisissez &#40; Transact-SQL &#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
+  
+  
+
+
+
+

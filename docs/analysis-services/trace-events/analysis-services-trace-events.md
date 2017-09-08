@@ -1,38 +1,43 @@
 ---
-title: "&#201;v&#233;nements de trace Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SQL Server Profiler, Analysis Services"
-  - "surveillance d'Analysis Services [SQL Server]"
-  - "performances [Analysis Services], SQL Server Profiler"
-  - "événements [Analysis Services]"
-  - "classes d'événements [Analysis Services], à propos des classes d'événements"
-  - "Profiler [SQL Server Profiler], Analysis Services"
-  - "classes d'événements [Analysis Services]"
+title: "Événements de Trace Analysis Services | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- SQL Server Profiler, Analysis Services
+- monitoring Analysis Services [SQL Server]
+- performance [Analysis Services], SQL Server Profiler
+- events [Analysis Services]
+- event classes [Analysis Services], about event classes
+- Profiler [SQL Server Profiler], Analysis Services
+- event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b97d63ba708128fbd4d42f2e5278273609d144e1
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# &#201;v&#233;nements de trace Analysis Services
+# <a name="analysis-services-trace-events"></a>Événements de trace Analysis Services
   Vous pouvez suivre l'activité d'une instance Microsoft SQL Server Analysis Services (SSAS) en capturant, puis en analysant les événements de trace générés par l'instance.  Les événements de trace sont regroupés afin que vous puissiez plus facilement rechercher des événements de trace connexes.  Chaque événement de trace contient un jeu de données concernant l'événement ; toutes les parties de données ne sont pas correctes pour tous les événements.  
   
- Les événements de trace peuvent être démarrés et capturés à l’aide de **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]** (consultez [Utiliser SQL Server Profiler pour contrôler Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)). Ils peuvent aussi être démarrés à partir d’une commande XMLA sous forme **d’événements étendus SQL Server** et analysés ultérieurement (consultez [Surveiller Analysis Services avec des événements étendus SQL Server](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)).  
+ Les événements de trace peuvent être démarrés et capturés à l’aide de **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**(consultez [Utiliser SQL Server Profiler pour contrôler Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)). Ils peuvent aussi être démarrés à partir d’une commande XMLA sous forme **d’événements étendus SQL Server** et analysés ultérieurement (consultez [Surveiller Analysis Services avec des événements étendus SQL Server](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)).  
   
- Les tables suivantes décrivent chaque catégorie d'événement et les événements de cette catégorie. Chaque table contient les colonnes suivantes :  
+ Les tables suivantes décrivent chaque catégorie d'événement et les événements de cette catégorie. Chaque table contient les colonnes suivantes :  
   
 **ID d'événement**  
- Valeur entière qui identifie le type d'événement. Cette valeur est utile lorsque vous lisez les traces converties en tables ou en fichiers XML pour filtrer le type d'événement.  
+ Valeur entière qui identifie le type d'événement. Cette valeur est utile lorsque vous lisez les traces converties en tables ou en fichiers XML pour filtrer le type d'événement.  
   
 **Nom d'événement**  
  Le nom donné à l'événement dans les applications clientes Analysis Services.  
@@ -183,7 +188,7 @@ caps.handback.revision: 37
 |42|Existing Session|Session existante.|  
 |43|Session Initialize|Initialisation de session.|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser SQL Server Profiler pour contrôler Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)  
   
   

@@ -1,23 +1,28 @@
 ---
-title: "Configurer PowerPivot et d&#233;ployer des solutions (SharePoint&#160;2013) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "power-view"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Configurer PowerPivot et déployer des Solutions (SharePoint 2013) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- power-view
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 901098e2a656d178932b9b706b70d559bef4f215
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Configurer PowerPivot et d&#233;ployer des solutions (SharePoint&#160;2013)
-  Cette rubrique décrit le déploiement et la configuration des améliorations intermédiaires apportées aux fonctionnalités [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] dans [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)], dont la Galerie [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)], l’actualisation des données de planification, le tableau de bord de gestion et les fournisseurs de données. Exécutez l’outil **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2013** pour effectuer les opérations suivantes :  
+# <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>Configurer PowerPivot et déployer des solutions (SharePoint 2013)
+  Cette rubrique décrit le déploiement et la configuration des améliorations intermédiaires apportées aux fonctionnalités [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] dans [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] , dont la Galerie [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , l’actualisation des données de planification, le tableau de bord de gestion et les fournisseurs de données. Exécutez l’outil **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2013** pour effectuer les opérations suivantes :  
   
 -   Déployer les fichiers de solution SharePoint.  
   
@@ -27,7 +32,7 @@ caps.handback.revision: 14
   
  Pour plus d’informations sur l’installation de l’outil de configuration de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2013, consultez [Installer ou désinstaller le complément Power Pivot pour SharePoint &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
- Cette rubrique contient les sections suivantes :  
+ Cette rubrique contient les sections suivantes :  
   
  [Exécuter Configuration de PowerPivot pour SharePoint 2013](#bkmk_run_configuration_tool)  
   
@@ -44,12 +49,12 @@ caps.handback.revision: 14
   
 |Nom|Description|  
 |----------|-----------------|  
-|[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2013|SharePoint 2013|  
-|[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Outil de configuration|SharePoint 2010 avec SharePoint 2010 Service Pack 1 (SP1)|  
+|[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2013|SharePoint 2013|  
+|[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Outil de configuration|SharePoint 2010 avec SharePoint 2010 Service Pack 1 (SP1)|  
   
  **Remarque :** pour effectuer les étapes suivantes, vous devez être administrateur de batterie de serveurs. Si un message d'erreur semblable au suivant s'affiche :  
   
--   « L'utilisateur n'est pas un administrateur de batterie de serveurs. Traitez les échecs de validation et réessayez. »  
+-   « L'utilisateur n'est pas un administrateur de batterie de serveurs. Traitez les échecs de validation et réessayez. »  
   
  Connectez-vous avec le compte qui a installé SharePoint ou configurez le compte d'installation en tant qu'administrateur principal du site Administration centrale de SharePoint.  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 14
   
     5.  Cliquez sur **Créer une collection de sites** dans la fenêtre de gauche. Notez l' **URL du site** afin de pouvoir y faire référence dans les étapes ultérieures. Si le serveur SharePoint n'est pas déjà configuré, l'Assistant de configuration définit par défaut l'application Web et les URL de collection de sites sur la racine de `http://[ServerName]`. Pour modifier les valeurs par défaut, examinez les pages suivantes dans la fenêtre de gauche : **Créer une application Web par défaut** et **Déployer une solution d'application Web**.  
   
-5.  Éventuellement, examinez les valeurs d'entrée restantes utilisées pour effectuer chaque action. Cliquez sur chaque action dans la fenêtre à gauche pour afficher et passer en revue les détails de l'action. Pour plus d’informations sur chacune d’elles, consultez la section Valeurs d’entrée utilisées pour configurer le serveur dans [Configurer ou réparer Power Pivot pour SharePoint 2010 (outil de configuration de PowerPivot)](http://msdn.microsoft.com/fr-fr/d61f49c5-efaa-4455-98f2-8c293fa50046) dans cette rubrique.  
+5.  Éventuellement, examinez les valeurs d'entrée restantes utilisées pour effectuer chaque action. Cliquez sur chaque action dans la fenêtre à gauche pour afficher et passer en revue les détails de l'action. Pour plus d’informations sur chacune d’elles, consultez la section Valeurs d’entrée utilisées pour configurer le serveur dans [Configurer ou réparer PowerPivot pour SharePoint 2010 (outil de configuration de PowerPivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046) dans cette rubrique.  
   
 6.  Éventuellement, supprimez toutes les actions que vous ne souhaitez pas traiter à ce stade. Par exemple, si vous souhaitez configurer le service Banque d'informations sécurisé ultérieurement, cliquez sur **Configurer le service Banque d'informations sécurisé**, puis désactivez la case à cocher **Inclure cette action dans la liste des tâches**.  
   
@@ -79,7 +84,7 @@ caps.handback.revision: 14
   
 8.  Cliquez sur **Exécuter** pour traiter toutes les actions de la liste des tâches. Notez qu' **Exécuter** devient disponible lorsque vous avez validé les actions. Si **Exécuter** n'est pas activé, commencez par cliquer sur **Valider** .  
   
- Pour plus d’informations, consultez [Configurer ou réparer Power Pivot pour SharePoint 2010 (outil de configuration de Power Pivot)](http://msdn.microsoft.com/fr-fr/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ Pour plus d’informations, consultez [Configurer ou réparer Power Pivot pour SharePoint 2010 (outil de configuration de Power Pivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
 ##  <a name="bkmk_verify_powerpivot"></a> Vérifier la configuration de PowerPivot  
  **Services :**  
@@ -88,17 +93,17 @@ caps.handback.revision: 14
   
 2.  Vérifiez que **SQL Server Analysis Services** et le **Service système [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SQL Server** sont démarrés.  
   
- **Fonctionnalités de la batterie de serveurs :**  
+ **Fonctionnalités de la batterie de serveurs :**  
   
 1.  Dans l'Administration centrale, sous Paramètres système, cliquez sur **Gérer les fonctionnalités des batteries de serveurs**.  
   
-2.  Vérifiez que l’option **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]Fonctionnalité d’intégration** a la valeur **Active**.  
+2.  Vérifiez que l’option **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Fonctionnalité d’intégration** a la valeur **Active**.  
   
- **Fonctionnalités de la collection de sites :**  
+ **Fonctionnalités de la collection de sites :**  
   
 1.  Accédez à l'URL du site créé par l'outil de configuration.  
   
-     Cliquez sur **Paramètres**![Paramètres SharePoint](../../../analysis-services/media/as-sharepoint2013-settings-gear.png "Paramètres SharePoint"), puis sur **Paramètres du site**.  
+     Cliquez sur **paramètres**![paramètres SharePoint](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "paramètres SharePoint"), puis cliquez sur **paramètres du Site**.  
   
      Cliquez sur **Fonctionnalités de la collection de sites**.  
   

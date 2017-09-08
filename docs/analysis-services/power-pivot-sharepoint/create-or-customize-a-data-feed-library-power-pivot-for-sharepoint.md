@@ -1,38 +1,43 @@
 ---
-title: "Cr&#233;er ou personnaliser une biblioth&#232;que de flux de donn&#233;es (PowerPivot pour SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "bibliothèque de flux de données"
-  - "flux de données [Analysis Services avec SharePoint]"
+title: "Créer ou personnaliser une bibliothèque de flux de données (PowerPivot pour SharePoint) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data feed library
+- data feeds [Analysis Services with SharePoint]
 ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 22
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 55a0d510b8d80ca4c3752194b4c9c488ac4d787b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cr&#233;er ou personnaliser une biblioth&#232;que de flux de donn&#233;es (PowerPivot pour SharePoint)
+# <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>Créer ou personnaliser une bibliothèque de flux de données (PowerPivot pour SharePoint)
   Une *bibliothèque de flux de données* est une bibliothèque SharePoint spécifique qui permet d’enregistrer et de partager des documents de service de données Atom (.atomsvc). Ces documents fournissent des flux XML aux classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou à d'autres applications clientes qui prennent en charge le format de flux Atom. Une bibliothèque de flux de données est différente des autres bibliothèques SharePoint, car elle vous donne la possibilité :  
   
 -   de créer ou modifier un *document de service de données*, utilisé pour spécifier une connexion HTTP à un flux spécifique ;  
   
--   de partager et gérer des documents de service de données depuis un emplacement central ;  
+-   de partager et gérer des documents de service de données depuis un emplacement central ;  
   
--   d'identifier visuellement des documents de service de données à l'aide d'une icône, ce qui vous permet de distinguer facilement les documents de service des autres documents stockés dans la même bibliothèque : ![GMNI_IconDataFeed](../../analysis-services/power-pivot-sharepoint/media/gmni-icondatafeed.png "GMNI_IconDataFeed")  
+-   Identifier visuellement des documents de service de données par une icône, ce qui vous pouvez de distinguer facilement des documents de service à partir d’autres documents stockés dans la même bibliothèque : ![GMNI_IconDataFeed](../../analysis-services/power-pivot-sharepoint/media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
   
  Une bibliothèque de flux de données contient toujours des fichiers de documents de service de données (.atomsvc), et jamais le flux de données lui-même. Contrairement à un flux de données, qui est constitué de données XML statiques, le document de service de données spécifie l'URL d'un service ou d'une application qui génère un flux à la demande, fournissant ainsi des informations de connexion réutilisables pour les opérations d'importation répétées.  
   
- Cette rubrique contient les sections suivantes :  
+ Cette rubrique contient les sections suivantes :  
   
  [Conditions préalables](#prereq)  
   
@@ -41,12 +46,12 @@ caps.handback.revision: 22
  [Ajouter le type de contenu du flux à une bibliothèque](#addtolib)  
   
 ##  <a name="prereq"></a> Conditions préalables  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] L’intégration de la fonctionnalité doit être activée pour les sites pour lesquels vous créez la bibliothèque de flux de données. Si le type de modèle de bibliothèque de flux n'est pas disponible, la cause en est probablement que cette condition préalable n'est pas respectée. Pour plus d’informations, consultez [Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate power pivot integration for site collections in ca.md).  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] L’intégration de la fonctionnalité doit être activée pour les sites pour lesquels vous créez la bibliothèque de flux de données. Si le type de modèle de bibliothèque de flux n'est pas disponible, la cause en est probablement que cette condition préalable n'est pas respectée. Pour plus d’informations, consultez [Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
  Vous devez être propriétaire de site pour créer la bibliothèque.  
   
 ##  <a name="createlib"></a> Créer une bibliothèque de flux  
- La création d’une bibliothèque de flux de données est la première étape de l’activation des flux de données pour les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Avant de pouvoir créer un document, une bibliothèque de flux doit être en place, car c'est elle qui fournit les pages d'application et de gestion de documents de service de données.  
+ La création d’une bibliothèque de flux de données est la première étape de l’activation des flux de données pour les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Avant de pouvoir créer un document, une bibliothèque de flux doit être en place, car c'est elle qui fournit les pages d'application et de gestion de documents de service de données.  
   
  Une bibliothèque de flux de données est basée sur un modèle intégré et sur un *type de contenu de document de service de données* préconfiguré qui définit les propriétés et comportements d’un document de service de données.  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 22
   
  Les étapes suivantes doivent être répétées pour chaque bibliothèque dans laquelle vous souhaitez créer ou modifier des documents d'inscription de flux de données.  
   
-#### Étape 1 : activer la gestion des types de contenu  
+#### <a name="step-1-enable-content-type-management"></a>Étape 1 : activer la gestion des types de contenu  
   
 1.  Ouvrez la bibliothèque de documents pour laquelle activer plusieurs types de contenu.  
   
@@ -87,7 +92,7 @@ caps.handback.revision: 22
   
 7.  Cliquez sur **OK**.  
   
-#### Étape 2 : ajouter le type de contenu du document de service de données  
+#### <a name="step-2-add-the-data-service-document-content-type"></a>Étape 2 : ajouter le type de contenu du document de service de données  
   
 1.  Dans la section Types de contenu, cliquez sur **Ajouter à partir de types de contenu de site existants**. Si vous ne voyez pas cette page, retournez au site, cliquez sur **Bibliothèque** dans Outils de bibliothèque, puis sur **Paramètres de la bibliothèque**.  
   
@@ -99,7 +104,7 @@ caps.handback.revision: 22
   
 5.  Cliquez sur **OK**.  
   
-#### Étape 3 : vérifier la configuration des documents de service de données  
+#### <a name="step-3-verify-data-service-document-configuration"></a>Étape 3 : vérifier la configuration des documents de service de données  
   
 1.  Ouvrez la page d'accueil du site.  
   
@@ -109,9 +114,9 @@ caps.handback.revision: 22
   
 4.  Cliquez sur la flèche vers le bas de Nouveau document et sélectionnez **Document de service de données**. La page Nouveau document de service de données s'affiche.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser des flux de données &#40;Power Pivot pour SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)   
- [Supprimer une bibliothèque de flux de données PowerPivot](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
+ [Supprimer la bibliothèque de flux de données de tableau croisé dynamique d’alimentation](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
  [Administration et configuration d’un serveur Power Pivot dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Flux de données Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   

@@ -1,27 +1,32 @@
 ---
-title: "Propri&#233;t&#233;s (SSAS Tabulaire) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Propriétés (SSAS tabulaire) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a59d3448-8619-4044-923b-8effba926dfa
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b51561b367c10248daca388c58646e68ecc1534e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Propri&#233;t&#233;s (SSAS Tabulaire)
+# <a name="properties-ssas-tabular"></a>Propriétés (SSAS Tabulaire)
   Les projets de modèles tabulaires dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ont diverses propriétés qui définissent les comportements du projet, du modèle, de la création de rapports et du déploiement. Les paramètres de propriété sont stockés au format XML dans le fichier Model.bim ; toutefois, toutes les propriétés décrites dans cette section peuvent être configurées dans les fenêtres **Propriétés** de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
-## Tâches associées  
+## <a name="related-tasks"></a>Tâches associées  
   
 |Rubrique|Description|  
 |-----------|-----------------|  

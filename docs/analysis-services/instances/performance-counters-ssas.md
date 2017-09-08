@@ -1,27 +1,32 @@
 ---
-title: "Compteurs de performance (SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Les compteurs de performance (SSAS) | Documents Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e2d625f6c9060f32fb2a2dc676c84c673f55c8f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Compteurs de performance (SSAS)
+# <a name="performance-counters-ssas"></a>Compteurs de performance (SSAS)
   L'Analyseur de performances vous permet d'analyser les performances d'une instance Microsoft SQL Server Analysis Services (SSAS) à l'aide de compteurs de performance.  
   
- L'Analyseur de performances est un composant logiciel enfichable MMC ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console) qui assure le suivi de l'utilisation des ressources. Pour démarrer ce composant logiciel enfichable, tapez **PerfMon** à l’invite de commandes ou dans le Panneau de configuration, cliquez sur **Outils d’administration**, puis sur **Analyseur de performances**. L'Analyseur de performances vous permet d'assurer le suivi des performances et de l'activité du serveur et du traitement à l'aide d'objets et de compteurs prédéfinis et de surveiller les événements à l'aide de compteurs définis par l'utilisateur. L'Analyseur de performances collecte des comptes, et non des données, relatifs aux événements (par exemple, sur l'utilisation de la mémoire, le nombre de transactions actives ou l'activité de l'UC.) Vous pouvez également définir des seuils pour des compteurs spécifiques de manière à générer des alertes pour avertir les opérateurs.  
+ L'Analyseur de performances est un composant logiciel enfichable MMC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console) qui assure le suivi de l'utilisation des ressources. Pour démarrer ce composant logiciel enfichable, tapez **PerfMon** à l’invite de commandes ou dans le Panneau de configuration, cliquez sur **Outils d’administration**, puis sur **Analyseur de performances**. L'Analyseur de performances vous permet d'assurer le suivi des performances et de l'activité du serveur et du traitement à l'aide d'objets et de compteurs prédéfinis et de surveiller les événements à l'aide de compteurs définis par l'utilisateur. L'Analyseur de performances collecte des comptes, et non des données, relatifs aux événements (par exemple, sur l'utilisation de la mémoire, le nombre de transactions actives ou l'activité de l'UC.) Vous pouvez également définir des seuils pour des compteurs spécifiques de manière à générer des alertes pour avertir les opérateurs.  
   
  L'Analyseur de performances analyse les instances locales et distantes d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Utilisation de l'Analyseur de performances](http://technet.microsoft.com/library/cc749115.aspx).  
   
@@ -29,7 +34,7 @@ caps.handback.revision: 14
   
  Les compteurs sont regroupés afin que vous puissiez plus facilement rechercher les compteurs associés.  
   
-## Compteurs par groupes  
+## <a name="counters-by-groups"></a>Compteurs par groupes  
   
 |Grouper|Description|  
 |-----------|-----------------|  
@@ -135,7 +140,7 @@ caps.handback.revision: 14
 |Nombre actuel de nœuds d'évaluation mis en cache|Nombre actuel (approximatif) de nœuds d'évaluation mis en cache générés par les plans d'exécution MDX.|  
 |Nombre de nœuds d'évaluation du moteur de stockage mis en cache|Nombre total de nœuds d'évaluation du moteur de stockage mis en cache générés par les plans d'exécution MDX.|  
 |Nombre de nœuds d'évaluation en mode bloc mis en cache|Nombre total de nœuds d'évaluation en mode bloc mis en cache générés par les plans d'exécution MDX.|  
-|Nombre de nœuds d'évaluation « autres » mis en cache|Nombre total de nœuds d'évaluation mis en cache générés par les plans d'exécution MDX qui ne sont ni du moteur de stockage ni en mode bloc.|  
+|Nombre de nœuds d'évaluation « autres » mis en cache|Nombre total de nœuds d'évaluation mis en cache générés par les plans d'exécution MDX qui ne sont ni du moteur de stockage ni en mode bloc.|  
 |Nombre de suppressions de nœuds d'évaluation|Nombre total de suppressions dans le cache des nœuds d'évaluation en raison de collisions.|  
 |Nombre d'accès à l'index de hachage dans le cache des nœuds d'évaluation|Nombre total d'accès dans le cache des nœuds d'évaluation satisfaits par l'index de hachage.|  
 |Nombre d'accès cellule par cellule dans le cache des nœuds d'évaluation|Nombre total d'accès cellule par cellule dans le cache des nœuds d'évaluation.|  
@@ -159,9 +164,9 @@ caps.handback.revision: 14
 |Compteur|Description|  
 |-------------|-----------------|  
 |Pool de pages mémoire d'allocation 64 (Ko)|Mémoire empruntée au système, en Ko.  Cette mémoire est distribuée aux autres parties du serveur.|  
-|Pool de pages mémoire disponible 64 (Ko)|Mémoire actuelle (en Ko) dans la liste de disponibilité 64 Ko  (pages de mémoire prêtes à être utilisées).|  
+|Pool de pages mémoire disponible 64 (Ko)|Mémoire actuelle (en Ko) dans la liste de disponibilité 64 Ko  (pages de mémoire prêtes à être utilisées).|  
 |Pool de pages mémoire d'allocation 8 (Ko)|Mémoire empruntée (en Ko) au pool de pages 64 Ko.  Cette mémoire est distribuée aux autres parties du serveur.|  
-|Pool de pages mémoire disponible 8 (Ko)|Mémoire actuelle (en Ko) dans la liste de disponibilité 8 Ko  (pages de mémoire prêtes à être utilisées).|  
+|Pool de pages mémoire disponible 8 (Ko)|Mémoire actuelle (en Ko) dans la liste de disponibilité 8 Ko  (pages de mémoire prêtes à être utilisées).|  
 |Pool de pages mémoire d'allocation 1 (Ko)|Mémoire empruntée (en Ko) au pool de pages 64 Ko.  Cette mémoire est distribuée aux autres parties du serveur.|  
 |Pool de pages mémoire disponible 1 (Ko)|Mémoire actuelle (en Ko) dans la liste de disponibilité 8 Ko  (pages de mémoire prêtes à être utilisées).|  
 |Prix actuel de la mémoire nettoyage|Prix actuel de la mémoire, $/octet/temps, normalisé à 1000.|  
@@ -169,7 +174,7 @@ caps.handback.revision: 14
 |Mémoire nettoyage réduite Ko/s|Taux de réduction, en Ko/s|  
 |Mémoire nettoyage réductible (Ko)|Quantité de mémoire (en Ko) qui doit être vidée par le nettoyeur d'arrière-plan.|  
 |Mémoire nettoyage non réductible (Ko)|Quantité de mémoire (en Ko) qui ne doit pas être vidée par le nettoyeur d'arrière-plan.|  
-|Mémoire nettoyage (Ko)|Quantité de mémoire (en Ko) identifiée par le nettoyeur d'arrière-plan.  (Mémoire nettoyage réductible + Mémoire nettoyage non réductible.)|  
+|Mémoire nettoyage (Ko)|Quantité de mémoire (en Ko) identifiée par le nettoyeur d'arrière-plan.  (Mémoire nettoyage réductible + Mémoire nettoyage non réductible.)|  
 |Utilisation de la mémoire en Ko|Utilisation de la mémoire du processus serveur intervenant dans le calcul du coût de la mémoire nettoyage.  Équivaut au compteur Process\\PrivateBytes, plus la taille des données mappées en mémoire, moins la mémoire mappée ou allouée par le moteur d'analyse en mémoire xVelocity (VertiPaq) dépassant la limite de mémoire du moteur xVelocity.|  
 |Limite basse de la mémoire en Ko|Limite de mémoire inférieure dans le fichier de configuration.|  
 |Limite haute de la mémoire en Ko|Limite de mémoire supérieure dans le fichier de configuration.|  
@@ -180,8 +185,8 @@ caps.handback.revision: 14
 |Défauts de page du cache de fichiers/s|Taux de défaut de page dans le cache de fichiers.|  
 |Lectures dans le cache de fichiers/s|Lectures de pages dans le cache de fichiers/s|  
 |Lectures (en Ko) dans le cache de fichiers/s|Lectures (en Ko) dans le cache de fichiers/s|  
-|Écritures dans le cache de fichiers/s|Pages écrites dans le cache de fichiers/s.  Les écritures sont asynchrones.|  
-|Écritures en Ko dans le cache de fichiers/s|Écritures en Ko dans le cache de fichiers/s.  Les écritures sont asynchrones.|  
+|Écritures dans le cache de fichiers/s|Pages écrites dans le cache de fichiers/s. Les écritures sont asynchrones.|  
+|Écritures en Ko dans le cache de fichiers/s|Écritures en Ko dans le cache de fichiers/s. Les écritures sont asynchrones.|  
 |E/S du cache de fichiers Erreurs/s|E/S du cache de fichiers Taux d'erreurs.|  
 |Erreurs d'E/S dans le cache de fichiers|Total des erreurs d'E/S dans le cache de fichiers.|  
 |Pages d'horloge examinées dans le cache de fichiers/s|Taux auquel le nettoyeur d'arrière-plan examine les pages dans le cadre d'une suppression.|  

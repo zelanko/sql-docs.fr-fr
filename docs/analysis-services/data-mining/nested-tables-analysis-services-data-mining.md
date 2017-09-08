@@ -1,38 +1,43 @@
 ---
-title: "Tables imbriqu&#233;es (Analysis Services - Exploration de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "exploration de données [Analysis Services], tables imbriquées"
-  - "tables [Analysis Services], imbriquées"
-  - "tables imbriquées"
+title: "Tables imbriquées (Analysis Services - Exploration de données) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], nested tables
+- tables [Analysis Services], nested
+- nested tables
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
 caps.latest.revision: 52
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1ad436f2cfa5da5381ad683a1fc804468c5a40d3
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Tables imbriqu&#233;es (Analysis Services - Exploration de donn&#233;es)
-  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les données doivent être fournies à un algorithme d’exploration de données sous la forme d’une série de cas inclus dans une table de cas. Toutefois, tous les cas ne peuvent pas être décrits par une ligne de données unique. Par exemple, un cas peut être dérivé de deux tables : une qui contient des informations sur les clients et une autre qui contient les achats des clients. Un client unique présent dans la table des informations sur les clients peut avoir plusieurs articles dans la table des achats des clients, ce qui rend difficile la description des données à l'aide d'une seule ligne. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit une méthode unique permettant de gérer de tels cas, en utilisant des *tables imbriquées*. Le concept d'une table imbriquée est illustré dans la figure ci-dessous.  
+# <a name="nested-tables-analysis-services---data-mining"></a>Tables imbriquées (Analysis Services - Exploration de données)
+  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les données doivent être fournies à un algorithme d’exploration de données sous la forme d’une série de cas inclus dans une table de cas. Toutefois, tous les cas ne peuvent pas être décrits par une ligne de données unique. Par exemple, un cas peut être dérivé de deux tables : une qui contient des informations sur les clients et une autre qui contient les achats des clients. Un client unique présent dans la table des informations sur les clients peut avoir plusieurs articles dans la table des achats des clients, ce qui rend difficile la description des données à l'aide d'une seule ligne. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit une méthode unique permettant de gérer de tels cas, en utilisant des *tables imbriquées*. Le concept d'une table imbriquée est illustré dans la figure ci-dessous.  
   
- ![Combinaison de deux tables à l'aide d'une table imbriquée](../../analysis-services/data-mining/media/nested-tables.gif "Combinaison de deux tables à l'aide d'une table imbriquée")  
+ ![Deux tables combinées à l’aide d’une table imbriquée](../../analysis-services/data-mining/media/nested-tables.gif "deux tables combinées à l’aide d’une table imbriquée")  
   
- Dans ce diagramme, la première table, qui correspond à la table parent, contient des informations sur les clients et associe un identificateur unique à chaque client. La deuxième table, la table enfant, contient les achats de chaque client. Les achats figurant dans la table enfant sont liés à la table parent par l’identificateur unique, à savoir la colonne **CustomerKey**. La troisième table du diagramme montre les deux tables associées.  
+ Dans ce diagramme, la première table, qui correspond à la table parent, contient des informations sur les clients et associe un identificateur unique à chaque client. La deuxième table, la table enfant, contient les achats de chaque client. Les achats figurant dans la table enfant sont liés à la table parent par l’identificateur unique, à savoir la colonne **CustomerKey** . La troisième table du diagramme montre les deux tables associées.  
   
  Une table imbriquée est représentée dans la table de cas sous la forme d’une colonne spéciale dont le type de données est **TABLE**. Pour toute ligne de cas particulière, ce type de colonne contient des lignes sélectionnées à partir de la table enfant qui se rapportent à la table parent.  
   
- Les données d'une table imbriquée peuvent être utilisées pour les prédictions ou en entrée, ou pour les deux. Par exemple, vous pouvez avoir deux colonnes de table imbriquée dans un modèle : une colonne de table imbriquée peut contenir une liste des produits achetés par un client, l'autre colonne contenant des informations sur les passe-temps favoris du client, informations obtenues à partir d'une étude. Dans ce scénario, vous pouvez utiliser les passe-temps favoris du client comme entrée pour analyser son comportement d'achat et prédire ses achats probables.  
+ Les données d'une table imbriquée peuvent être utilisées pour les prédictions ou en entrée, ou pour les deux. Par exemple, vous pouvez avoir deux colonnes de table imbriquée dans un modèle : une colonne de table imbriquée peut contenir une liste des produits achetés par un client, l'autre colonne contenant des informations sur les passe-temps favoris du client, informations obtenues à partir d'une étude. Dans ce scénario, vous pouvez utiliser les passe-temps favoris du client comme entrée pour analyser son comportement d'achat et prédire ses achats probables.  
   
-## Jointure de tables de cas et de tables imbriquées  
+## <a name="joining-case-tables-and-nested-tables"></a>Jointure de tables de cas et de tables imbriquées  
  Pour créer une table imbriquée, les deux tables sources doivent contenir une relation définie afin que les éléments d'une table puissent être liés à l'autre table. Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous pouvez définir cette relation dans la vue de source de données.  
   
 > [!NOTE]  
@@ -40,7 +45,7 @@ caps.handback.revision: 52
   
  Vous pouvez créer des tables imbriquées par programmation en utilisant le langage DMX (Data Mining Extensions) ou des objets AMO (Analysis Management Objects), ou en utilisant l'Assistant Exploration de données et le Concepteur d'exploration de données dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
-## Utilisation de colonnes de table imbriquée dans un modèle d'exploration de données  
+## <a name="using-nested-table-columns-in-a-mining-model"></a>Utilisation de colonnes de table imbriquée dans un modèle d'exploration de données  
  Dans la table de cas, la clé est souvent un ID de client, un nom de produit ou une date dans une série, c'est-à-dire des données qui identifient de façon unique une ligne dans la table. . Toutefois, dans les tables imbriquées, la clé n'est pas en général la clé relationnelle (ou clé étrangère), mais plutôt la colonne qui représente l'attribut que vous modélisez.  
   
  Par exemple, si la table de cas contient des commandes et que la table imbriquée contient les articles de la commande, vous voudrez sans doute modéliser la relation entre les articles stockés dans la table imbriquée sur plusieurs commandes, qui sont stockées dans la table de cas. Par conséquent, bien que la table imbriquée **Items** soit jointe à la table de cas **Orders** par la clé relationnelle **OrderID**, vous ne devez pas utiliser **OrderID** comme clé de table imbriquée. Au lieu de cela, sélectionnez la colonne **Items** comme clé de table imbriquée, car cette colonne contient les données à modéliser. Dans la plupart des cas, vous pouvez ignorer en toute sécurité **OrderID** dans le modèle d’exploration de données, car la relation entre la table de cas et la table imbriquée a déjà été établie par la définition de la vue de source de données.  
@@ -51,21 +56,21 @@ caps.handback.revision: 52
   
  Si l'ordre des articles est important, vous pouvez avoir besoin d'une colonne supplémentaire qui indique la séquence. Quand vous utilisez l’algorithme Sequence Clustering pour créer un modèle, vous devez choisir une colonne *séquence clé* supplémentaire pour représenter l’ordre des articles. La colonne de séquence clé est un type spécial de clé imbriquée qui est utilisée uniquement dans les modèles Sequence Clustering et qui nécessite un type de données numérique unique. Par exemple, des entiers et des dates peuvent être utilisés comme colonne de séquence clé, mais toutes les valeurs de séquence doivent être uniques. Outre la colonne de séquence clé, un modèle Sequence Clustering possède également une clé de table imbriquée qui représente l'attribut modélisé, par exemple les produits achetés.  
   
-### Utilisation de colonnes imbriquées non-clés à partir d'une table imbriquée  
+### <a name="using-non-key-nested-columns-from-a-nested-table"></a>Utilisation de colonnes imbriquées non-clés à partir d'une table imbriquée  
  Après avoir défini la jointure entre la table de cas et la table imbriquée, puis choisi une colonne contenant des attributs intéressants et uniques à utiliser comme clé de table imbriquée, vous pouvez inclure d'autres colonnes de la table imbriquée à utiliser comme entrée au modèle. Toutes les colonnes de la table imbriquée peuvent être utilisées pour l'entrée, la prédiction et l'entrée, ou uniquement la prédiction.  
   
- Par exemple, si la table imbriquée contient les colonnes **Product**, **ProductQuantity** et **ProductPrice**, vous pouvez choisir **Product** comme clé de table imbriquée et ajouter **ProductQuantity** à la structure d’exploration de données pour une utilisation comme entrée.  
+ Par exemple, si la table imbriquée contient les colonnes **Product**, **ProductQuantity**et **ProductPrice**, vous pouvez choisir **Product** comme clé de table imbriquée et ajouter **ProductQuantity** à la structure d’exploration de données pour une utilisation comme entrée.  
   
-## Filtrage de données de table imbriquée  
+## <a name="filtering-nested-table-data"></a>Filtrage de données de table imbriquée  
  Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez créer des filtres sur les données utilisées pour effectuer l'apprentissage d'un modèle d'exploration de données ou le tester. Vous pouvez utiliser un filtre pour affecter la composition du modèle ou pour tester le modèle sur un sous-ensemble de cas. Des filtres peuvent également être appliqués aux tables imbriquées. Toutefois, la syntaxe pouvant être utilisée avec les tables imbriquées présente certaines limites.  
   
  Souvent, lorsque vous appliquez un filtre à une table imbriquée, vous testez l'existence ou la non-existence d'un attribut. Par exemple, vous pouvez appliquer un filtre qui restreint les cas utilisés dans le modèle à ceux ayant une valeur spécifiée dans la table imbriquée. Ou, vous pouvez restreindre les cas utilisés dans le modèle aux clients qui n'ont pas acheté un article particulier.  
   
- Lorsque vous créez des filtres sur une table imbriquée, vous pouvez également utiliser des opérateurs tels que « supérieur à » et « inférieur à ». Par exemple, vous pouvez restreindre les cas utilisés dans le modèle aux clients qui ont acheté au moins n unités du produit cible. La capacité de filtrer les attributs de table imbriquée offre une grande souplesse dans la personnalisation des modèles.  
+ Lorsque vous créez des filtres sur une table imbriquée, vous pouvez également utiliser des opérateurs tels que « supérieur à » et « inférieur à ». Par exemple, vous pouvez restreindre les cas utilisés dans le modèle aux clients qui ont acheté au moins n unités du produit cible. La capacité de filtrer les attributs de table imbriquée offre une grande souplesse dans la personnalisation des modèles.  
   
  Pour plus d’informations sur la création et l’utilisation de filtres de modèle, consultez [Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   

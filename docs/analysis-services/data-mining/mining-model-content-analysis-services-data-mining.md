@@ -1,33 +1,38 @@
 ---
-title: "Contenu du mod&#232;le d’exploration de donn&#233;es (Analysis Services - Exploration de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "algorithms [data mining]"
-  - "standard deviation"
-  - "confidence scores [data mining]"
-  - "mining models [Analysis Services]"
-  - "variance"
-  - "machine learning algorithms [Analysis Services]"
-  - "model content"
-  - "support [data mining]"
-  - "node distribution"
+title: "Contenu du modèle d’exploration de données (Analysis Services - Exploration de données) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- algorithms [data mining]
+- standard deviation
+- confidence scores [data mining]
+- mining models [Analysis Services]
+- variance
+- machine learning algorithms [Analysis Services]
+- model content
+- support [data mining]
+- node distribution
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 4097a5ab62a6e30f2056216ec83eb0c568547479
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Contenu du mod&#232;le d’exploration de donn&#233;es (Analysis Services - Exploration de donn&#233;es)
+# <a name="mining-model-content-analysis-services---data-mining"></a>Contenu du modèle d’exploration de données (Analysis Services - Exploration de données)
   Après avoir conçu et traité un modèle d'exploration de données à l'aide de données provenant de la structure d'exploration de données sous-jacente, celui-ci est complet et présente un *contenu de modèle d'exploration de données*. Vous pouvez utiliser ce contenu pour faire des prédictions ou analyser vos données.  
   
  Le contenu du modèle d'exploration de données inclut des métadonnées relatives au modèle, des statistiques sur les données, et les modèles découverts par l'algorithme d'exploration. Selon l'algorithme utilisé, le contenu du modèle peut inclure des formules de régression, les définitions de règles et jeux d'éléments, ou des pondérations et d'autres statistiques.  
@@ -68,11 +73,11 @@ caps.handback.revision: 25
   
 -   Fragments XML qui décrivent une partie du modèle.  
   
-### Liste des types de nœuds de contenu d'exploration de données  
+### <a name="list-of-mining-content-node-types"></a>Liste des types de nœuds de contenu d'exploration de données  
  Le tableau suivant répertorie les différents types de nœud générés dans les modèles d'exploration de données. Comme chaque algorithme traite les informations différemment, chaque modèle génère seulement certains types spécifiques de nœuds. Si vous modifiez l'algorithme, le type de nœud peut changer. De plus, si vous retraitez le modèle, le contenu de chaque nœud peut changer.  
   
 > [!NOTE]  
->  Si vous utilisez un service d’exploration de données différent de celui fourni dans [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], ou si vous créez vos propres algorithmes de plug-in, des types de nœuds personnalisés supplémentaires peuvent être disponibles.  
+>  Si vous utilisez un service d’exploration de données différent, ou si vous créez vos propres algorithmes de plug-in, les types de nœuds personnalisés supplémentaires peuvent être disponibles.  
   
 |NODE_TYPE ID|Étiquette de nœud|Contenu de nœud|  
 |-------------------|----------------|-------------------|  
@@ -107,10 +112,10 @@ caps.handback.revision: 25
 |30|ArimaMovingAverage|Coefficient de moyenne mobile pour un terme unique dans un modèle ARIMA. S'applique uniquement aux modèles de série chronologique qui utilisent l'algorithme ARIMA.|  
 |1000|CustomBase|Point de départ pour les types de nœuds personnalisés. Les types de nœuds personnalisés doivent être des entiers supérieurs en valeur à cette constante. S'applique aux modèles créés à l'aide des algorithmes de plug-in personnalisés.|  
   
-### ID, nom, légende et description du nœud  
+### <a name="node-id-name-caption-and-description"></a>ID, nom, légende et description du nœud  
  Le nœud racine de tout modèle est toujours affecté de l’ID unique (**NODE_UNIQUE_NAME**) de 0. Tous les ID de nœud sont attribués automatiquement par Analysis Services et ne peuvent pas être modifiés.  
   
- Le nœud racine pour chaque modèle contient également des métadonnées de base relatives au modèle. Ces métadonnées incluent la base de données Analysis Services qui contient le modèle (**MODEL_CATALOG**), le schéma (**MODEL_SCHEMA)** et le nom du modèle (**MODEL_NAME)**. Toutefois, ces informations sont répétées dans tous les nœuds du modèle, donc il n'est pas nécessaire d'interroger le nœud racine pour obtenir ces métadonnées.  
+ Le nœud racine pour chaque modèle contient également des métadonnées de base relatives au modèle. Ces métadonnées incluent la base de données Analysis Services qui contient le modèle (**MODEL_CATALOG**), le schéma (**MODEL_SCHEMA)**et le nom du modèle (**MODEL_NAME)**. Toutefois, ces informations sont répétées dans tous les nœuds du modèle, donc il n'est pas nécessaire d'interroger le nœud racine pour obtenir ces métadonnées.  
   
  En plus d’un nom utilisé comme identificateur unique, chaque nœud a un *nom* (**NODE_NAME**). Ce nom est créé automatiquement par l'algorithme à des fins d'affichage et ne peut pas être modifié.  
   
@@ -122,7 +127,7 @@ caps.handback.revision: 25
 > [!NOTE]  
 >  Le serveur Analysis Services prend en charge le changement de nom des nœuds seulement si vous générez des modèles à l'aide d'un algorithme de plug-in personnalisé qui implémente le changement de nom. Pour permettre le changement de nom, vous devez substituer les méthodes lorsque vous créez l'algorithme de plug-in.  
   
-### Parents du nœud, enfants du nœud et cardinalité du nœud.  
+### <a name="node-parents-node-children-and-node-cardinality"></a>Parents du nœud, enfants du nœud et cardinalité du nœud.  
  La relation entre nœuds parents et enfants dans une arborescence est déterminée par la valeur de la colonne PARENT_UNIQUE_NAME. Cette valeur est stockée dans le nœud enfant et vous indique l'ID du nœud parent. Les exemples suivants illustrent la manière dont ces informations peuvent être utilisées :  
   
 -   Un PARENT_UNIQUE_NAME qui est NULL indique que le nœud est le nœud supérieur du modèle.  
@@ -141,8 +146,8 @@ caps.handback.revision: 25
 > [!NOTE]  
 >  Certains modèles, tels que ceux créés par l'algorithme MNR (Microsoft Neural Network), contiennent aussi un type de nœud spécial qui fournit des statistiques descriptives sur les données d'apprentissage du modèle entier. Par définition, ces nœuds n'ont jamais de nœuds enfants.  
   
-### Distribution du nœud  
- La colonne NODE_DISTRIBUTION contient une table imbriquée qui fournit dans de nombreux nœuds des informations importantes et détaillées sur les modèles découverts par l'algorithme. Les statistiques exactes fournies dans cette table changent selon le type de modèle, la position du nœud dans l'arborescence, et si l'attribut prévisible est une valeur numérique continue ou une valeur discrète ; toutefois, elles peuvent inclure les valeurs minimales et maximales d'un attribut, les pondérations attribuées aux valeurs, le nombre de cas dans un nœud, les coefficients utilisés dans une formule de régression, et les mesures statistiques telles que l'écart type et la variance. Pour plus d'informations sur la manière d'interpréter la distribution de nœud, consultez la rubrique pour le type spécifique du type de modèle que vous utilisez.  
+### <a name="node-distribution"></a>node distribution  
+ La colonne NODE_DISTRIBUTION contient une table imbriquée qui fournit dans de nombreux nœuds des informations importantes et détaillées sur les modèles découverts par l'algorithme. Les statistiques exactes fournies dans cette table changent selon le type de modèle, la position du nœud dans l'arborescence, et si l'attribut prévisible est une valeur numérique continue ou une valeur discrète ; toutefois, elles peuvent inclure les valeurs minimales et maximales d'un attribut, les pondérations attribuées aux valeurs, le nombre de cas dans un nœud, les coefficients utilisés dans une formule de régression, et les mesures statistiques telles que l'écart type et la variance. Pour plus d'informations sur la manière d'interpréter la distribution de nœud, consultez la rubrique pour le type spécifique du type de modèle que vous utilisez.  
   
 > [!NOTE]  
 >  La table NODE_DISTRIBUTION peut être vide, selon le type de nœud. Par exemple, certains nœuds servent uniquement à organiser une collection de nœuds enfants, et ce sont les nœuds enfants qui contiennent les statistiques détaillées.  
@@ -177,7 +182,7 @@ caps.handback.revision: 25
 |(1) Racine du modèle|1200|  
 |(2) Sexe = Homme<br /><br /> (3) Sexe = Femme|600<br /><br /> 600|  
 |(4) Sexe = Home et Revenu = Élevé<br /><br /> (5) Sexe = Homme et Revenu = Moyen<br /><br /> (6) Sexe = Homme et Revenu = Bas|200<br /><br /> 200<br /><br /> 200|  
-| (7) Sexe = Femme et Revenu = Élevé<br /><br /> (8) Sexe = Femme et Revenu = Moyen<br /><br /> (9) Sexe = Femme et Revenu = Bas|200<br /><br /> 200<br /><br /> 200|  
+|(7) Sexe = Femme et Revenu = Élevé<br /><br /> (8) Sexe = Femme et Revenu = Moyen<br /><br /> (9) Sexe = Femme et Revenu = Bas|200<br /><br /> 200<br /><br /> 200|  
   
  Pour un modèle de clustering, le nombre du support peut être pondéré pour inclure les probabilités d'appartenance à plusieurs clusters. L'appartenance à plusieurs clusters est la méthode de clustering par défaut. Dans ce scénario, comme chaque cas n'appartient pas nécessairement à un seul et unique cluster, le support dans ces modèles peut ne pas atteindre 100 pour cent sur l'ensemble des clusters.  
   
@@ -190,7 +195,7 @@ caps.handback.revision: 25
   
  Par exemple, si les valeurs actuelles pour [Enfants Totaux] sont 'Un' et 'Deux', il est souhaitable d'éviter de créer un modèle qui prédit qu'il est impossible de n'avoir pas d'enfants, ou d'avoir trois enfants. Pour garantir que les valeurs manquantes sont improbables, mais pas impossibles, l'algorithme ajoute toujours 1 au nombre de valeurs réelles pour tout attribut.  
   
- Exemple :  
+ Exemple :  
   
  Probabilité de [Enfants Totaux = Un] = [Nombre de cas où Enfants Totaux = Un] + 1/[Nombre de tous les cas] + 3  
   
@@ -201,7 +206,7 @@ caps.handback.revision: 25
   
  Après ajustement, les probabilités pour toutes les valeurs sont encore égales à 1. La probabilité pour la valeur sans données (dans cet exemple, [Enfants Totaux = 'Zéro', 'Trois', ou une autre valeur]) commence à un niveau non nul très bas, et augmente lentement au fur et à mesure de l'ajout de cas.  
   
- VARIANCE  
+ variance  
  Indique la variance des valeurs dans le nœud. Par définition, la variance est toujours de 0 pour les valeurs discrètes. Si le modèle prend en charge des valeurs continues, la variance est calculée comme σ (sigma), à l’aide du dénominateur n, ou le nombre de cas dans le nœud.  
   
  Il y a deux définitions dans l’utilisation générale pour représenter l’écart type (**StDev**). Une méthode pour calculer l'écart type prend en considération le décalage, et une autre méthode calcule l'écart type sans utiliser le décalage. En général, les algorithmes d'exploration de données Microsoft n'utilisent pas le décalage lors du calcul de l'écart type.  
@@ -214,7 +219,7 @@ caps.handback.revision: 25
 |ID VALUE_TYPE|Étiquette de valeur|Nom de type de valeur|  
 |--------------------|-----------------|---------------------|  
 |1|Missing|Indique que les données de cas ne contenaient pas de valeur pour cet attribut. L’état **Missing** est calculé séparément des attributs qui ont des valeurs.|  
-|2|Existant|Indique que les données de cas contiennent une valeur pour cet attribut.|  
+|2|Existing|Indique que les données de cas contiennent une valeur pour cet attribut.|  
 |3|Continu|Indique que la valeur de l'attribut est une valeur numérique continue et par conséquent peut être représentée par une moyenne ainsi que la variance et l'écart type.|  
 |4|Discret|Indique une valeur, soit numérique, soit texte, traitée comme discrète.<br /><br /> **Remarque** Les valeurs discrètes peuvent être aussi manquantes ; toutefois, elles sont traitées différemment durant les calculs. Pour plus d’informations, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).|  
 |5|Discrétisé|Indique que l'attribut contient des valeurs numériques qui ont été discrétisées. La valeur sera une chaîne mise en forme qui décrit les compartiments de discrétisation.|  
@@ -224,7 +229,7 @@ caps.handback.revision: 25
 |9|Statistiques|Indique une valeur numérique qui représente une statistique pour un régresseur.|  
 |10|Nom unique de nœud|Indique que la valeur ne doit pas être traitée comme numérique ou chaîne, mais comme l'identificateur unique d'un autre nœud de contenu dans un modèle.<br /><br /> Par exemple, dans un modèle de réseau neuronal, les ID fournissent des pointeurs à partir des nœuds dans la couche de sortie vers les nœuds de la couche masquée, et des nœuds de la couche masquée vers les nœuds de la couche d'entrée.|  
 |11|Intercepter|Indique une valeur numérique qui représente l'interception dans une formule de régression.|  
-|12|Périodicité|Indique que la valeur dénote une structure périodique dans un modèle.<br /><br /> S'applique uniquement aux modèles de série chronologique qui contiennent un modèle ARIMA.<br /><br /> Remarque : l’algorithme MTS (Microsoft Time Series) détecte automatiquement des structures périodiques en fonction des données d’apprentissage. Par conséquent, les périodicités dans le modèle final peuvent inclure des valeurs de périodicité que vous n'avez pas fournies comme paramètre lors de la création du modèle.|  
+|12|Périodicité|Indique que la valeur dénote une structure périodique dans un modèle.<br /><br /> S'applique uniquement aux modèles de série chronologique qui contiennent un modèle ARIMA.<br /><br /> Remarque : l’algorithme MTS (Microsoft Time Series) détecte automatiquement des structures périodiques en fonction des données d’apprentissage. Par conséquent, les périodicités dans le modèle final peuvent inclure des valeurs de périodicité que vous n'avez pas fournies comme paramètre lors de la création du modèle.|  
 |13|Ordre autorégressif|Indique que la valeur représente le nombre de séries autorégressives.<br /><br /> S'applique aux modèles de série chronologique qui utilisent l'algorithme ARIMA.|  
 |14|Ordre des moyennes mobiles|Valeur qui représente le nombre de moyennes mobiles dans une série.<br /><br /> S'applique aux modèles de série chronologique qui utilisent l'algorithme ARIMA.|  
 |15|Ordre des différences|Indique que la valeur représente une valeur qui indique le nombre de fois où la série fait l'objet d'une différenciation.<br /><br /> S'applique aux modèles de série chronologique qui utilisent l'algorithme ARIMA.|  
@@ -234,10 +239,10 @@ caps.handback.revision: 25
   
  Les types valeur sont dérivés de l'énumération ADMOMD.NET. Pour plus d’informations, consultez <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>.  
   
-### Score du nœud  
+### <a name="node-score"></a>Score du nœud  
  La signification du score de nœud diffère selon le type de modèle et peut également être spécifique au type de nœud. Pour plus d’informations sur la méthode de calcul de NODE_SCORE pour chaque type de modèle et de nœud, consultez [Contenu du modèle d’exploration de données par type d’algorithme](#bkmk_AlgoType).  
   
-### Probabilité du nœud et probabilité marginale  
+### <a name="node-probability-and-marginal-probability"></a>Probabilité du nœud et probabilité marginale  
  L'ensemble de lignes de schéma du modèle d'exploration de données inclut les colonnes NODE_PROBABILITY et MARGINAL_PROBABILITY pour tous les types de modèle. Ces colonnes contiennent uniquement des valeurs dans les nœuds où une valeur de probabilité est explicite. Par exemple, le nœud racine d'un modèle ne contient jamais un score de probabilité.  
   
  Dans les nœuds qui fournissent des scores de probabilité, la probabilité du nœud et les probabilités marginales représentent des calculs différents.  
@@ -250,13 +255,13 @@ caps.handback.revision: 25
   
  Par exemple, si l'alimentation de tous les clients dans un arbre de décision est répartie de manière égale par sexe (et aucune valeur ne manque), la probabilité des nœuds enfants doit être .5. Toutefois, supposons que chacun des nœuds pour le sexe est également divisé par niveaux de revenu, Élevé, Moyen, et Bas. Dans ce cas, le score MARGINAL_PROBABILITY pour chaque nœud enfant doit toujours être .33 mais la valeur NODE_PROBABILTY sera le produit de toutes les probabilités qui mènent à ce nœud et donc toujours inférieure à la valeur MARGINAL_PROBABILITY.  
   
-|Niveau de nœud/attribut et valeur|Probabilité marginale|probabilité du nœud|  
+|Niveau de nœud/attribut et valeur|probabilité marginale|probabilité du nœud|  
 |----------------------------------------|--------------------------|----------------------|  
 |Racine du modèle<br /><br /> Tous les clients cibles|1|1|  
 |Clients cibles répartis par sexe|.5|.5|  
 |Clients cibles répartis par sexe, et répartis de nouveau en trois directions selon le revenu|.33|.5 * .33 = .165|  
   
-### Règle du nœud et règle marginale  
+### <a name="node-rule-and-marginal-rule"></a>Règle du nœud et règle marginale  
  L'ensemble de lignes de schéma du modèle d'exploration de données inclut aussi les colonnes NODE_PROBABILITY et MARGINAL_PROBABILITY pour tous les types de modèle. Ces colonnes contiennent des fragments XML qui peuvent être utilisés pour sérialiser un modèle, ou représenter certaines parties de la structure de modèle. Ces colonnes peuvent être vides pour certains nœuds, si une valeur n'a aucune signification.  
   
  Deux types de règles XML sont fournis, semblables aux deux types de valeurs de probabilité. Le fragment XML dans MARGINAL_RULE définit l'attribut et la valeur du nœud actuel, alors que le fragment XML dans NODE_RULE décrit le chemin d'accès au nœud actuel de la racine modèle.  
@@ -270,16 +275,16 @@ caps.handback.revision: 25
   
 -   **Rubriques de requêtes :** Fournissent des exemples de requêtes par rapport à un type de modèle particulier et des recommandation sur la manière d'interpréter les résultats.  
   
-|Type d'algorithme ou de modèle|Contenu du modèle|Interrogation des modèles d'exploration de données|  
+|Type d'algorithme ou de modèle|model content|Interrogation des modèles d'exploration de données|  
 |-----------------------------|-------------------|----------------------------|  
 |Modèles de règles d'association|[Contenu du modèle d’exploration de données pour les modèles d’association &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle d'association](../../analysis-services/data-mining/association-model-query-examples.md)|  
 |Modèles de clustering|[Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)|  
 |Modèle d'arbres de décision|[Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle d'arbre de décision](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|  
 |Modèles de régression linéaire|[Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Exemples de requête de modèle de régression linéaire](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
-|Modèles de régression logistique|[Contenu du modèle d’exploration de données pour les modèles de régression logistique &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining model content for logistic regression models.md)|[Exemples de requête de modèle de régression linéaire](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
+|Modèles de régression logistique|[Contenu du modèle d’exploration de données pour les modèles de régression logistique &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)|[Exemples de requête de modèle de régression linéaire](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
 |Modèles Naïve Bayes|[Contenu du modèle d’exploration de données pour les modèles Naive Bayes &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle Naive Bayes](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)|  
 |Modèles de réseau neuronal|[Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de réseau neuronal](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
-|Sequence clustering|[Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining model content for sequence clustering models.md)|[Exemples de requêtes de modèle MSC (Sequence Clustering)](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
+|Sequence clustering|[Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)|[Exemples de requêtes de modèle MSC (Sequence Clustering)](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
 |Modèles de séries chronologiques|[Contenu du modèle d’exploration de données pour les modèles de séries chronologiques &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de série chronologique](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
   
 ##  <a name="bkmk_Viewing"></a> Outils pour afficher le contenu du modèle d'exploration de données  
@@ -302,8 +307,8 @@ SELECT * FROM [<mining model name>].CONTENT
   
  Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez aussi accéder aux informations dans les ensembles de lignes de schéma d'exploration de données en ouvrant une connexion à l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et en interrogeant les tables système. Pour plus d’informations, consultez [Ensembles de lignes de schéma d’exploration de données &#40;SSAS&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md).  
   
-## Voir aussi  
- [Visionneuse de l’arborescence de contenu générique Microsoft &#40;exploration de données&#41;](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md)   
+## <a name="see-also"></a>Voir aussi  
+ [Visionneuse de l’arborescence de contenu générique Microsoft &#40;exploration de données&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)   
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
   
