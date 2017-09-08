@@ -1,35 +1,40 @@
 ---
-title: "D&#233;finir les options d&#39;emprunt d&#39;identit&#233; (SSAS - Multidimensionnel) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.sqlserverstudio.impersonationinfo.f1"
-helpviewer_keywords: 
-  - "boîte de dialogue Informations d'emprunt d'identité"
+title: "Définir les Options d’emprunt d’identité (SSAS - multidimensionnel) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.sqlserverstudio.impersonationinfo.f1
+helpviewer_keywords:
+- Impersonation Information dialog box
 ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 27
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9dfd1dbf5f4f514136695dc2bb0d776afda99562
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# D&#233;finir les options d&#39;emprunt d&#39;identit&#233; (SSAS - Multidimensionnel)
+# <a name="set-impersonation-options-ssas---multidimensional"></a>Définir les options d'emprunt d'identité (SSAS - Multidimensionnel)
   Quand vous créez un objet **source de données** dans un modèle Analysis Services, un des paramètres que vous devez configurer est une option d’emprunt d’identité. Cette option détermine si Analysis Services utilise l'identité d'un compte d'utilisateur Windows spécifique lors d'opérations locales spécifiques associées à la connexion, telles que le téléchargement d'un fournisseur de données OLE DB ou la résolution d'informations de profil utilisateur dans des environnements qui prennent en charge les profils itinérants.  
   
  Pour les connexions qui utilisent l'authentification Windows, l'option d'emprunt d'identité détermine également l'identité de l'utilisateur sous laquelle les requêtes s'exécutent sur la source de données externe. Par exemple, si vous définissez l’option d’emprunt d’identité sur **contoso\dbuser**, les requêtes utilisées pour récupérer les données pendant le traitement sont exécutées en tant que **contoso\dbuser** sur le serveur de base de données.  
   
  Cette rubrique explique comment définir les options d’emprunt d’identité dans la boîte de dialogue **Informations d’emprunt d’identité** pendant la configuration d’un objet source de données.  
   
-## Définir les options d'emprunt d'identité dans SQL Server Data Tools  
+## <a name="set-impersonation-options-in-sql-server-data-tools"></a>Définir les options d'emprunt d'identité dans SQL Server Data Tools  
   
 1.  Double-cliquez sur une source de données dans l'Explorateur de solutions pour ouvrir le Concepteur de source de données.  
   
@@ -37,20 +42,20 @@ caps.handback.revision: 27
   
 3.  Sélectionnez une option décrite dans la section [Options d’emprunt d’identité](#bkmk_options) de cette rubrique.  
   
-## Définir les options d'emprunt d'identité dans Management Studio  
+## <a name="set-impersonation-options-in-management-studio"></a>Définir les options d'emprunt d'identité dans Management Studio  
  Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ouvrez la boîte de dialogue **Informations d’emprunt d’identité** en cliquant sur le bouton représentant des points de suspension (**...**) pour obtenir les propriétés de boîtes de dialogue suivantes :  
   
--   Boîte de dialogue **Propriétés de la base de données**, via la propriété Informations d’emprunt d’identité de source de données.  
+-   Boîte de dialogue**Propriétés de la base de données** , via la propriété Informations d’emprunt d’identité de source de données.  
   
--   Boîte de dialogue **Propriétés de la source de données**, via la propriété Informations d’emprunt d’identité.  
+-   Boîte de dialogue**Propriétés de la source de données** , via la propriété Informations d’emprunt d’identité.  
   
--   Boîte de dialogue **Propriétés de l’assembly**, via la propriété Informations d’emprunt d’identité.  
+-   Boîte de dialogue**Propriétés de l’assembly** , via la propriété Informations d’emprunt d’identité.  
   
-##  <a name="bkmk_options"></a> Options d'emprunt d'identité  
+##  <a name="bkmk_options"></a> Options d’emprunt d’identité  
  Toutes les options sont disponibles dans la boîte de dialogue, mais elles ne sont pertinentes pour tous les scénarios. Utilisez les informations suivantes pour déterminer la meilleure solution pour votre scénario.  
   
  **Utiliser un nom d'utilisateur et un mot de passe spécifiques**  
- Sélectionnez cette option pour que l’objet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise les informations d’identification de sécurité d’un compte d’utilisateur Windows, spécifié au format *\<nom de domaine>***\\***\<nom de compte d’utilisateur>*.  
+ Sélectionnez cette option pour que le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objet utiliser les informations d’identification de sécurité d’un compte d’utilisateur Windows spécifié dans ce format :  *\<nom de domaine >***\\***\<nom de compte d’utilisateur >*.  
   
  Sélectionnez cette option pour utiliser une identité d'utilisateur Windows dédiée et dotée de privilèges minimaux que vous avez créée spécifiquement à des fins d'accès aux données. Par exemple, si vous créez de manière régulière un compte à usage général pour la récupération de données utilisées dans des rapports, vous pouvez spécifier ce compte ici.  
   
@@ -61,10 +66,10 @@ caps.handback.revision: 27
  **Utiliser le compte de service**  
  Sélectionnez cette option pour que l'objet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise les informations d'identification de sécurité associées au service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui gère l'objet. Il s'agit de l'option par défaut. Dans les versions précédentes, il s'agissait de la seule option pouvant être utilisée. Vous préférerez peut-être opter pour cette option si vous souhaitez surveiller l'accès aux données au niveau du service plutôt qu'au niveau des comptes d'utilisateurs individuels.  
   
- Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], selon le système d'exploitation utilisé, le compte de service peut être NetworkService ou un compte virtuel intégré créé pour une instance spécifique d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Si vous sélectionnez le compte de service d'une connexion qui utilise l'authentification Windows, n'oubliez pas de créer un nom d'accès à la base de données pour ce compte et d'accorder des autorisations de lecture, car il sera utilisé pour récupérer les données lors du traitement. Pour plus d’informations sur le compte de service, consultez [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], selon le système d'exploitation utilisé, le compte de service peut être NetworkService ou un compte virtuel intégré créé pour une instance spécifique d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si vous sélectionnez le compte de service d'une connexion qui utilise l'authentification Windows, n'oubliez pas de créer un nom d'accès à la base de données pour ce compte et d'accorder des autorisations de lecture, car il sera utilisé pour récupérer les données lors du traitement. Pour plus d’informations sur le compte de service, consultez [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 > [!NOTE]  
->  Si vous utilisez l’authentification de base de données, vous devez sélectionner l’option d’emprunt d’identité **Utiliser le compte de service** si le service s’exécute sous le compte virtuel dédié pour Analysis Services. Ce compte possédera les autorisations d'accès aux fichiers locaux. Si le service s’exécute en tant que NetworkService, utilisez un compte d’utilisateur Windows doté de privilèges minimaux qui a des autorisations **Permettre l’ouverture d’une session locale**. En fonction du compte spécifié, vous devrez peut-être aussi accorder des autorisations d'accès aux fichiers dans le dossier du programme Analysis Services.  
+>  Si vous utilisez l’authentification de base de données, vous devez sélectionner l’option d’emprunt d’identité **Utiliser le compte de service** si le service s’exécute sous le compte virtuel dédié pour Analysis Services. Ce compte possédera les autorisations d'accès aux fichiers locaux. Si le service s’exécute en tant que NetworkService, utilisez un compte d’utilisateur Windows doté de privilèges minimaux qui a des autorisations **Permettre l’ouverture d’une session locale** . En fonction du compte spécifié, vous devrez peut-être aussi accorder des autorisations d'accès aux fichiers dans le dossier du programme Analysis Services.  
   
  Pour les bases de données multidimensionnelles, les informations d'identification du compte de service sont utilisées pour le traitement, les requêtes ROLAP, les partitions distantes, les objets liés et la synchronisation entre la cible et la source.  
   
@@ -83,9 +88,9 @@ caps.handback.revision: 27
   
  **Sources de données - Option Hériter**  
   
- Au niveau de la source de données, **Hériter** spécifie qu’[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] doit utiliser l’option d’emprunt d’identité de l’objet parent. Dans un modèle multidimensionnel, l'objet parent est la base de données d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Le choix de l’option **Hériter** vous permet de gérer de manière centralisée les paramètres d’emprunt d’identité pour cette source de données et d’autres sources qui font partie de la même base de données. Pour que cette option soit explicite, choisissez un nom et un mot de passe d'utilisateur Windows spécifiques à la base de données. Sinon, la combinaison de **Hériter** sur la source de données et de **Par défaut** sur la base de données équivaut à utiliser l’option de compte de service.  
+ Au niveau de la source de données, **Hériter** spécifie qu’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] doit utiliser l’option d’emprunt d’identité de l’objet parent. Dans un modèle multidimensionnel, l'objet parent est la base de données d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Le choix de l’option **Hériter** vous permet de gérer de manière centralisée les paramètres d’emprunt d’identité pour cette source de données et d’autres sources qui font partie de la même base de données. Pour que cette option soit explicite, choisissez un nom et un mot de passe d'utilisateur Windows spécifiques à la base de données. Sinon, la combinaison de **Hériter** sur la source de données et de **Par défaut** sur la base de données équivaut à utiliser l’option de compte de service.  
   
- Pour spécifier un nom d'utilisateur et un mot de passe Windows au niveau de la base de données, procédez comme suit :  
+ Pour spécifier un nom d'utilisateur et un mot de passe Windows au niveau de la base de données, procédez comme suit :  
   
 1.  Cliquez avec le bouton droit sur [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et choisissez **Propriétés**.  
   
@@ -99,7 +104,7 @@ caps.handback.revision: 27
 
  Pour les bases de données multidimensionnelles, l’option **Par défaut** signifie que l’on utilise le compte de service et l’utilisateur actuel pour les opérations d’exploration de données.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer une source de données &#40;SSAS Multidimensionnel&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [Définir les propriétés de la source de données &#40;SSAS Multidimensionnel&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
 

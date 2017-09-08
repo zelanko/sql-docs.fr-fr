@@ -1,29 +1,34 @@
 ---
-title: "D&#233;ploiement d&#39;une solution de mod&#232;le multidimensionnel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "déploiements Analysis Services, planification"
-  - "déploiement [Analysis Services]"
-  - "déploiement [Analysis Services], planification"
+title: "Déploiement de solutions de modèle multidimensionnel | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Analysis Services deployments, planning
+- deploying [Analysis Services]
+- deploying [Analysis Services], planning
 ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 39
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d09db4ead5f0b05d82c40a16aed31a070b16250c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# D&#233;ploiement d&#39;une solution de mod&#232;le multidimensionnel
-  Une fois le développement d’un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] terminé, vous pouvez déployer la base de données sur un serveur Analysis Services. Analysis Services fournit six méthodes de déploiement possibles qui peuvent être utilisées pour déplacer la base de données vers un serveur de production ou de test. Les méthodes sont énumérées ici dans l'ordre de leur avantage : automatisation AMO (Analysis Management Objects), XMLA, Assistant Déploiement, Utilitaire de déploiement, Assistant Synchronisation, Sauvegarde et Restauration.  
+# <a name="multidimensional-model-solution-deployment"></a>Déploiement d'une solution de modèle multidimensionnel
+  Une fois le développement d’un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] terminé, vous pouvez déployer la base de données sur un serveur Analysis Services. Analysis Services fournit six méthodes de déploiement possibles qui peuvent être utilisées pour déplacer la base de données vers un serveur de production ou de test. Les méthodes sont énumérées ici dans l'ordre de leur avantage : automatisation AMO (Analysis Management Objects), XMLA, Assistant Déploiement, Utilitaire de déploiement, Assistant Synchronisation, Sauvegarde et Restauration.  
   
  Cette rubrique comprend les sections suivantes :  
   
@@ -45,16 +50,16 @@ caps.handback.revision: 39
 |**Sauvegarde et restauration**|La sauvegarde offre la méthode la plus simple permettant de transférer des bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Dans la boîte de dialogue **Sauvegarde** , vous pouvez définir la configuration des options, puis exécuter la sauvegarde à partir de cette même boîte de dialogue. Vous pouvez également créer un script qui peut être enregistré et exécuté aussi souvent que nécessaire.<br /><br /> La sauvegarde et la restauration ne sont pas utilisées aussi souvent que les autres méthodes de déploiement, mais elles permettent de terminer rapidement un déploiement avec une infrastructure minimale.|[Sauvegarde et restauration de bases de données Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)|  
   
 ##  <a name="bkmk_considerations"></a> Points à prendre en considération pour le déploiement  
- Avant de déployer un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], prenez en considération les questions qui s’appliquent à votre solution, puis passez en revue le lien associé pour savoir comment résoudre le problème :  
+ Avant de déployer un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , prenez en considération les questions qui s’appliquent à votre solution, puis passez en revue le lien associé pour savoir comment résoudre le problème :  
   
-|Considération|Lien vers des informations  supplémentaires|  
+|Considération|Lien vers des informations  supplémentaires|  
 |-------------------|------------------------------|  
-|Quelles ressources matérielles et logicielles sont nécessaires pour cette solution ?|[Configuration requise et considérations relatives au déploiement d'Analysis Services](../../analysis-services/multidimensional-models/requirements-and-considerations-for-analysis-services-deployment.md)|  
-|Comment allez-vous déployer les objets connexes qui se trouvent en dehors de l’étendue du projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], par exemple les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], les rapports ou les schémas de base de données relationnelle ?||  
-|Comment allez-vous charger et mettre à jour les données dans la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] déployée ?<br /><br /> Comment allez-vous mettre à jour les métadonnées (par exemple les calculs) dans la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] déployée ?|[Méthodes de déploiement](#bkmk_meth) dans cette rubrique.|  
-|Souhaitez-vous autoriser des utilisateurs à accéder aux données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à travers Internet ?|[Configurer l’accès HTTP à Analysis Services sur Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md)|  
-|Souhaitez-vous fournir un accès par requête continu aux données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ?|[Configuration requise et considérations relatives au déploiement d'Analysis Services](../../analysis-services/multidimensional-models/requirements-and-considerations-for-analysis-services-deployment.md)|  
-|Souhaitez-vous déployer des objets dans un environnement distribué en utilisant des objets liés ou des partitions distantes ?|[Créer et gérer une partition locale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md), [Créer et gérer une partition distante &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md) et [Groupes de mesures liés](../../analysis-services/multidimensional-models/linked-measure-groups.md).|  
+|Quelles ressources matérielles et logicielles sont nécessaires pour cette solution ?|[Configuration requise et considérations relatives au déploiement d'Analysis Services](../../analysis-services/multidimensional-models/requirements-and-considerations-for-analysis-services-deployment.md)|  
+|Comment allez-vous déployer les objets connexes qui se trouvent en dehors de l’étendue du projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , par exemple les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , les rapports ou les schémas de base de données relationnelle ?||  
+|Comment allez-vous charger et mettre à jour les données dans la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] déployée ?<br /><br /> Comment allez-vous mettre à jour les métadonnées (par exemple les calculs) dans la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] déployée ?|[Méthodes de déploiement](#bkmk_meth) dans cette rubrique.|  
+|Souhaitez-vous autoriser des utilisateurs à accéder aux données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à travers Internet ?|[Configurer l’accès HTTP à Analysis Services sur Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|  
+|Souhaitez-vous fournir un accès par requête continu aux données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ?|[Configuration requise et considérations relatives au déploiement d'Analysis Services](../../analysis-services/multidimensional-models/requirements-and-considerations-for-analysis-services-deployment.md)|  
+|Souhaitez-vous déployer des objets dans un environnement distribué en utilisant des objets liés ou des partitions distantes ?|[Créer et gérer une partition locale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md), [Créer et gérer une partition distante &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md) et [Groupes de mesures liés](../../analysis-services/multidimensional-models/linked-measure-groups.md).|  
 |Comment allez-vous sécuriser les données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ?|[Autorisation de l’accès à des objets et des opérations &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)|  
   
 ##  <a name="bkmk_rel"></a> Tâches associées  

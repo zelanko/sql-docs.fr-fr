@@ -1,35 +1,40 @@
 ---
-title: "Traitement d’un mod&#232;le multidimensionnel (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mode en ligne [Analysis Services]"
-  - "traitement des objets [Analysis Services]"
-  - "partitions [Analysis Services], traitement"
-  - "travaux [Analysis Services]"
-  - "objets [Analysis Services], traitement"
-  - "retraitement des objets"
-  - "analyse d'impact [Analysis Services]"
-  - "dimensions [Analysis Services], traitement"
-  - "mode projet [Analysis Services]"
-  - "cubes [Analysis Services], traitement"
+title: "Traitement d’un modèle multidimensionnel (Analysis Services) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- online mode [Analysis Services]
+- processing objects [Analysis Services]
+- partitions [Analysis Services], processing
+- jobs [Analysis Services]
+- objects [Analysis Services], processing
+- reprocessing objects
+- impact analysis [Analysis Services]
+- dimensions [Analysis Services], processing
+- project mode [Analysis Services]
+- cubes [Analysis Services], processing
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
 caps.latest.revision: 52
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 52
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eb063d1667fc3cd3824f2577784278fa46308960
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Traitement d’un mod&#232;le multidimensionnel (Analysis Services)
+# <a name="processing-a-multidimensional-model-analysis-services"></a>Traitement d’un modèle multidimensionnel (Analysis Services)
   Le traitement est l'étape, ou la série d'étapes, dans lesquelles Analysis Services charge des données d'une source de données relationnelle dans un modèle multidimensionnel. Pour les objets qui utilisent le mode de stockage MOLAP, les données sont enregistrées sur le disque le dossier des fichiers de la base de données. Pour le mode de stockage ROLAP, le traitement s'effectue à la demande, en réponse à une requête MDX sur un objet. Pour les objets qui utilisent le stockage ROLAP, le traitement fait référence à la mise à jour du cache avant de retourner des résultats de la requête.  
   
  Par défaut, le traitement s'effectue lorsque vous déployez une solution sur le serveur. Vous pouvez également traiter une partie d'une solution, ad hoc ou à l'aide d'outils tels que [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], ou selon une planification à l'aide de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et de SQL Server Agent. Lorsque vous apportez une modification structurelle au modèle, telle que la suppression d'une dimension ou la modification de son niveau de compatibilité, vous devez réeffectuer le traitement afin de synchroniser les aspects physiques et logiques du modèle.  
@@ -42,7 +47,7 @@ caps.handback.revision: 52
   
  [Traitement d'objets](#bkmk_proc)  
   
- [Retraitement des objets](#bkmk_reproc)  
+ [Reprocessing Objects](#bkmk_reproc)  
   
 ##  <a name="bkmk_prereq"></a> Conditions préalables  
   
@@ -62,13 +67,13 @@ caps.handback.revision: 52
  Pour plus d’informations, consultez [Outils et approches de traitement &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md).  
   
 ##  <a name="bkmk_proc"></a> Traitement d'objets  
- Le traitement affecte les objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] suivants : groupes de mesures, partitions, dimensions, cubes, modèles d'exploration de données, structures d'exploration et bases de données. Lorsqu'un objet contient un ou plusieurs objets, le traitement de l'objet de niveau supérieur entraîne le traitement en cascade de tous les objets de niveau inférieur. Par exemple, un cube contient généralement un ou plusieurs groupes de mesures (chacun d'entre eux contenant une ou plusieurs partitions) et des dimensions. Le traitement d'un cube entraîne le traitement de tous les groupes de mesures qu'il contient et des dimensions constituantes qui sont actuellement dans un état non traité. Pour plus d’informations sur le traitement des objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Traitement des objets Analysis Services](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
+ Le traitement affecte les objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] suivants : groupes de mesures, partitions, dimensions, cubes, modèles d'exploration de données, structures d'exploration et bases de données. Lorsqu'un objet contient un ou plusieurs objets, le traitement de l'objet de niveau supérieur entraîne le traitement en cascade de tous les objets de niveau inférieur. Par exemple, un cube contient généralement un ou plusieurs groupes de mesures (chacun d'entre eux contenant une ou plusieurs partitions) et des dimensions. Le traitement d'un cube entraîne le traitement de tous les groupes de mesures qu'il contient et des dimensions constituantes qui sont actuellement dans un état non traité. Pour plus d’informations sur le traitement des objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , consultez [Traitement des objets Analysis Services](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
   
  Durant l'exécution du travail de traitement, les objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] affectés sont accessibles pour l'interrogation. Le travail de traitement fonctionne à l'intérieur d'une transaction et celle-ci peut être validée ou annulée. Si le travail de traitement échoue, la transaction est restaurée. Si le travail de traitement réussit, un verrou exclusif est placé sur l'objet lorsque des modifications sont validées, ce qui signifie que l'objet est momentanément indisponible pour l'interrogation ou le traitement. Pendant la phase de validation de la transaction, il est toujours possible d'envoyer des requêtes à l'objet, mais celles-ci seront mises en file d'attente jusqu'à la fin de la validation.  
   
  Durant un travail de traitement, le traitement éventuel d'un objet et la façon dont il sera traité dépendent de l'option de traitement définie pour cet objet. Pour plus d’informations sur les options de traitement spécifiques applicables à chaque objet, consultez [Options et paramètres de traitement &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
-##  <a name="bkmk_reproc"></a> Retraitement des objets  
+##  <a name="bkmk_reproc"></a> Reprocessing Objects  
  Les cubes contenant des éléments non traités doivent être retraités avant de pouvoir être explorés. Les cubes dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contiennent des groupes de mesures et des partitions doivent être traitées avant de pouvoir interroger le cube. Le traitement d'un cube fait en sorte que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] traite les dimensions constituantes du cube si elles sont dans un état non traité. Une fois qu'un objet a déjà été traité une fois, il doit être retraité, partiellement ou intégralement, à chaque fois que l'une des situations suivantes se produit :  
   
 -   la structure de l'objet change, par exemple en cas de suppression d'une colonne dans une table de faits ;  
@@ -79,8 +84,8 @@ caps.handback.revision: 52
   
  Lorsque vous traitez des objets dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez sélectionner une option de traitement ou vous pouvez demander à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de déterminer le type de traitement approprié. Les méthodes de traitement disponibles varient d'un objet à l'autre et sont basées sur le type d'objet. En outre, les méthodes disponibles dépendent des modifications qui ont été apportées à l'objet depuis son dernier traitement. Si vous autorisez [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à sélectionner automatiquement une méthode de traitement, la méthode utilisée sera celle qui permet de traiter complètement l’objet le plus rapidement possible. Pour plus d’informations, consultez [Options et paramètres de traitement &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
-## Voir aussi  
- [Architecture logique &#40;Analysis Services - Données multidimensionnelles&#41;](../Topic/Logical%20Architecture%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)   
- [Objets de bases de données &#40;Analysis Services - Données multidimensionnelles&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Architecture logique &#40;Analysis Services - Données multidimensionnelles&#41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Objets de bases de données &#40;Analysis Services – Données multidimensionnelles&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

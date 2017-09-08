@@ -1,29 +1,34 @@
 ---
-title: "Algorithme MSC (Microsoft Sequence Clustering) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clusters [Analysis Services]"
-  - "algorithmes [exploration de données]"
-  - "sequence clustering algorithms [Analysis Services]"
-  - "séquence [Analysis Services]"
+title: Algorithme Microsoft Sequence Clustering | Documents Microsoft
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clusters [Analysis Services]
+- algorithms [data mining]
+- sequence clustering algorithms [Analysis Services]
+- sequence [Analysis Services]
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
 caps.latest.revision: 49
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 09d9c1909f093547dedd79823a06d9647f0bd6a8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Algorithme MSC (Microsoft Sequence Clustering)
-  L’algorithme MSC ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) est un algorithme unique qui combine l’analyse de séquence avec le regroupement en cluster. Cet algorithme vous permet d’explorer des données qui contiennent des événements qui peuvent être liés en une *séquence*. L’algorithme recherche les séquences les plus communes, puis effectue un regroupement en clusters pour rechercher les séquences identiques. Les exemples suivants illustrent les types de séquences susceptibles d’être capturées en tant que données d’apprentissage automatique, pour fournir des indications sur des problèmes courants ou des scénarios d’entreprise :  
+# <a name="microsoft-sequence-clustering-algorithm"></a>Algorithme MSC (Microsoft Sequence Clustering)
+  L’algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) est un algorithme unique qui combine l’analyse de séquence avec le regroupement en cluster. Cet algorithme vous permet d’explorer des données qui contiennent des événements qui peuvent être liés en une *séquence*. L’algorithme recherche les séquences les plus communes, puis effectue un regroupement en clusters pour rechercher les séquences identiques. Les exemples suivants illustrent les types de séquences susceptibles d’être capturées en tant que données d’apprentissage automatique, pour fournir des indications sur des problèmes courants ou des scénarios d’entreprise :  
   
 -   Parcours de visite générés quand les utilisateurs parcourent un site web  
   
@@ -33,20 +38,20 @@ caps.handback.revision: 49
   
 -   Enregistrements qui suivent les interactions du client ou du patient au fil du temps, pour prévoir les annulations de service ou d’autres résultats de qualité médiocre  
   
- Cet algorithme est semblable à de nombreux égards à l’algorithme de gestion de clusters [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Toutefois, au lieu de rechercher des clusters de cas qui contiennent des attributs similaires, l’algorithme MSC ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) recherche des clusters de cas qui contiennent des chemins similaires dans une séquence.  
+ Cet algorithme est semblable à de nombreux égards à l’algorithme de gestion de clusters [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Toutefois, au lieu de rechercher des clusters de cas qui contiennent des attributs similaires, l’algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) recherche des clusters de cas qui contiennent des chemins similaires dans une séquence.  
   
-## Exemple  
- Le site web [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] collecte des informations sur les pages que les utilisateurs du site visitent et sur l’ordre de consultation de ces pages. Comme la société permet de commander en ligne, les clients doivent se connecter au site. Cela fournit à la société des informations sur les clics effectués pour chaque profil de client. En utilisant l'algorithme MSC ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) sur ces données, la société peut détecter des groupes, ou des clusters, de clients qui présentent des modèles ou des séquences de clics similaires. La société peut ensuite utiliser ces clusters pour analyser comment les utilisateurs se déplacent sur le site Web, pour identifier les pages les plus étroitement liées à la vente d'un produit particulier et pour prévoir les pages qui ont le plus de chance d'être consultées ensuite.  
+## <a name="example"></a>Exemple  
+ Le site web [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] collecte des informations sur les pages que les utilisateurs du site visitent et sur l’ordre de consultation de ces pages. Comme la société permet de commander en ligne, les clients doivent se connecter au site. Cela fournit à la société des informations sur les clics effectués pour chaque profil de client. En utilisant l'algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) sur ces données, la société peut détecter des groupes, ou des clusters, de clients qui présentent des modèles ou des séquences de clics similaires. La société peut ensuite utiliser ces clusters pour analyser comment les utilisateurs se déplacent sur le site Web, pour identifier les pages les plus étroitement liées à la vente d'un produit particulier et pour prévoir les pages qui ont le plus de chance d'être consultées ensuite.  
   
-## Fonctionnement de l'algorithme  
- L’algorithme MSC ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) est un algorithme hybride qui associe les techniques de clustering à l’analyse en chaînes de Markov pour identifier les clusters et leur séquence.  Une des particularités de l'algorithme MSC ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) est qu'il utilise des données de séquence. Ces données représentent généralement une série d'événements ou de transitions entre des états dans un dataset, comme par exemple une série d'achats de produits ou de clics Web pour un utilisateur particulier. L’algorithme examine toutes les probabilités de transitions et mesure les différences, ou distances, entre toutes les séquences possibles dans le dataset pour identifier les séquences les mieux adaptées pour servir d’entrées au clustering. Une fois que l’algorithme a créé la liste des séquences candidates, il utilise les informations de séquence comme entrée pour le clustering en utilisant l’espérance-maximisation (EM, Expectation maximization).  
+## <a name="how-the-algorithm-works"></a>Fonctionnement de l'algorithme  
+ L’algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) est un algorithme hybride qui associe les techniques de clustering à l’analyse en chaînes de Markov pour identifier les clusters et leur séquence.  Une des particularités de l'algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) est qu'il utilise des données de séquence. Ces données représentent généralement une série d'événements ou de transitions entre des états dans un dataset, comme par exemple une série d'achats de produits ou de clics Web pour un utilisateur particulier. L’algorithme examine toutes les probabilités de transitions et mesure les différences, ou distances, entre toutes les séquences possibles dans le dataset pour identifier les séquences les mieux adaptées pour servir d’entrées au clustering. Une fois que l’algorithme a créé la liste des séquences candidates, il utilise les informations de séquence comme entrée pour le clustering en utilisant l’espérance-maximisation (EM, Expectation maximization).  
   
  Pour obtenir une description détaillée de l’implémentation, consultez [Références techniques relatives à l’algorithme MSC (Microsoft Sequence Clustering)](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md).  
   
-## Données requises pour les modèles Sequence Clustering  
+## <a name="data-required-for-sequence-clustering-models"></a>Données requises pour les modèles Sequence Clustering  
  Lorsque vous préparez des données à utiliser pour l'apprentissage d'un modèle Sequence Clustering, vous devez comprendre les spécifications liées à l'algorithme, y compris la quantité de données requises et le mode d'utilisation des données.  
   
- Les spécifications d'un modèle Sequence Clustering sont les suivantes :  
+ Les spécifications d'un modèle Sequence Clustering sont les suivantes :  
   
 -   **Une seule colonne clé** Un modèle Sequence Clustering requiert une clé qui identifie les enregistrements.  
   
@@ -54,21 +59,21 @@ caps.handback.revision: 49
   
 -   **Des attributs non-séquence facultatifs** L’algorithme prend en charge l’ajout d’autres attributs non liés à un séquencement. Ces attributs peuvent inclure des colonnes imbriquées.  
   
- Prenons l'exemple cité précédemment concernant le site Web [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)], un modèle Sequence Clustering peut inclure des informations sur les commandes sous forme de table de cas, des statistiques démographiques sur un client spécifique pour chaque commande sous forme d'attributs non-séquence et une table imbriquée contenant l'ordre dans lequel le client a parcouru le site ou a placé des articles dans son panier sous forme d'informations de séquence.  
+ Prenons l'exemple cité précédemment concernant le site Web [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] , un modèle Sequence Clustering peut inclure des informations sur les commandes sous forme de table de cas, des statistiques démographiques sur un client spécifique pour chaque commande sous forme d'attributs non-séquence et une table imbriquée contenant l'ordre dans lequel le client a parcouru le site ou a placé des articles dans son panier sous forme d'informations de séquence.  
   
  Pour des informations plus détaillées sur les types de contenu et les types de données pris en charge pour les modèles Sequence Clustering, consultez la section relative aux spécifications dans [Références techniques relatives à l’algorithme MSC (Microsoft Sequence Clustering)](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md).  
   
-## Affichage d'un modèle Sequence Clustering  
+## <a name="viewing-a-sequence-clustering-model"></a>Affichage d'un modèle Sequence Clustering  
  Le modèle d'exploration de données que crée cet algorithme contient les descriptions des séquences les plus courantes dans les données. Pour explorer le modèle, vous pouvez utiliser la **Visionneuse de l’algorithme MSC (Microsoft Sequence Cluster)**. Lorsque vous affichez un modèle Sequence Clustering, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous montre des clusters qui contiennent plusieurs transitions. Vous pouvez également afficher des statistiques pertinentes. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’algorithme MSC (Microsoft Sequence Cluster)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
   
- Si vous voulez en savoir plus, vous pouvez parcourir le modèle dans la [Visionneuse de l’arborescence de contenu générique Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). Le contenu stocké pour le modèle inclut la distribution de toutes les valeurs dans chaque nœud, la probabilité de chaque cluster et des détails concernant les transitions. Pour plus d’informations, consultez [Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining model content for sequence clustering models.md).  
+ Si vous voulez en savoir plus, vous pouvez parcourir le modèle dans la [Visionneuse de l’arborescence de contenu générique Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). Le contenu stocké pour le modèle inclut la distribution de toutes les valeurs dans chaque nœud, la probabilité de chaque cluster et des détails concernant les transitions. Pour plus d’informations, consultez [Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md).  
   
-## Création de prédictions  
+## <a name="creating-predictions"></a>Création de prédictions  
  Après l'apprentissage d'un modèle, les résultats sont stockés sous la forme d'un jeu de modèles. Vous pouvez utiliser les descriptions des séquences les plus courantes dans les données pour prévoir l'étape probable suivante d'une nouvelle séquence. Toutefois, comme l'algorithme inclut d'autres colonnes, vous pouvez utiliser le modèle obtenu pour identifier les relations entre les données en séquence et les entrées non séquentielles. Par exemple, si vous ajoutez des données démographiques au modèle, vous pouvez effectuer des prévisions sur des groupes spécifiques de clients. Les requêtes de prédiction peuvent être personnalisées pour retourner un nombre variable de prédictions ou des statistiques descriptives.  
   
  Pour plus d’informations sur la façon de créer des requêtes sur un modèle d’exploration de données, consultez [Requêtes d’exploration de données](../../analysis-services/data-mining/data-mining-queries.md). Pour obtenir des exemples d’utilisation de requêtes avec un modèle Sequence Clustering, consultez [Exemples de requêtes de modèle MSC (Sequence Clustering)](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md).  
   
-## Notes  
+## <a name="remarks"></a>Notes  
   
 -   Ne prend pas en charge l’utilisation du langage PMML (Predictive Model Markup Language) pour créer des modèles d’exploration de données.  
   
@@ -76,10 +81,11 @@ caps.handback.revision: 49
   
 -   Prend en charge l'utilisation de modèles d'exploration de données OLAP et la création de dimensions d'exploration de données.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Références techniques relatives à l'algorithme MSC (Microsoft Sequence Clustering)](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [Microsoft Sequence Clustering algorithme techniques de référence](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [Sequence Clustering Model Query Examples](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
  [Explorer un modèle à l'aide de la visionneuse de l'algorithme MSC (Microsoft Sequence Cluster)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
   
+

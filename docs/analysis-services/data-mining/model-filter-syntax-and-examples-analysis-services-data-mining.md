@@ -1,31 +1,36 @@
 ---
-title: "Syntaxe de filtre de mod&#232;le et exemples (Analysis Services - Exploration de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "filtre de modèle [exploration de données]"
-  - "syntaxe de filtre [exploration de données]"
-  - "filtres [exploration de données]"
-  - "filtres [Analysis Services]"
+title: "Syntaxe de filtre et des exemples de modèle (Analysis Services - Exploration de données) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- model filter [data mining]
+- filter syntax [data mining]
+- filters [data mining]
+- filters [Analysis Services]
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: c24c6ad5bbfba2f93039bd53609ddd86010e10ee
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Syntaxe de filtre de mod&#232;le et exemples (Analysis Services - Exploration de donn&#233;es)
+# <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Syntaxe de filtre de modèle et exemples (Analysis Services - Exploration de données)
   Cette section fournit des informations détaillées sur la syntaxe des filtres de modèle, avec quelques exemples d'expressions.  
   
- [Syntaxe de filtre](#bkmk_syntax)  
+ [Syntaxe de filtre](#bkmk_Syntax)  
   
  [Filtres sur les attributs de cas](#bkmk_Ex1)  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 17
   
  [Filtres sur les dates](#bkmk_Ex8)  
   
-##  <a name="bkmk_Syntax"></a> Syntaxe de filtre  
+##  <a name="bkmk_Syntax"></a> Filter Syntax  
  Les expressions de filtre sont généralement équivalentes au contenu d'une clause WHERE. Vous pouvez connecter plusieurs conditions à l'aide des opérateurs logiques **AND**, **OR**et **NOT**.  
   
  Dans les tables imbriquées, vous pouvez également utiliser les opérateurs **EXISTS** et **NOT EXISTS** . Une condition **EXISTS** est évaluée à **true** si la sous-requête retourne au moins une ligne. Ceci est utile dans les cas où vous souhaitez restreindre le modèle aux cas qui contiennent une valeur particulière dans la table imbriquée : par exemple, les clients qui ont acheté un élément au moins une fois.  
@@ -103,7 +108,7 @@ caps.handback.revision: 17
   
  En d’autres termes, vous ne définissez pas la condition comme `AgeDisc = ’25-35’`; au lieu de cela, vous calculez et utilisez une valeur à partir de cet intervalle.  
   
- Exemple : `AgeDisc = 27` signifie toute valeur dans le même intervalle que 27, ce qui dans ce cas correspond à 25-35.  
+ Exemple :  `AgeDisc = 27`  signifie toute valeur dans le même intervalle que 27, ce qui dans ce cas correspond à 25-35.  
   
  *nestedTablePredicate*  
  Expression de filtre qui s'applique à une table imbriquée. Peut être utilisée uniquement dans les filtres de modèle.  
@@ -115,7 +120,7 @@ caps.handback.revision: 17
   
  Tous les prédicats doivent être du type décrit dans *avPredicates*. En outre, les prédicats peuvent faire référence uniquement à des colonnes incluses dans la table imbriquée actuelle, identifiées par l'argument, *columnName*.  
   
-### Limitations relatives à la syntaxe de filtre  
+### <a name="limitations-on-filter-syntax"></a>Limitations relatives à la syntaxe de filtre  
  Les restrictions suivantes s'appliquent aux filtres :  
   
 -   Un filtre peut contenir uniquement des prédicats simples. Cela comprend les opérateurs mathématiques, les scalaires et les noms de colonnes.  
@@ -124,10 +129,10 @@ caps.handback.revision: 17
   
 -   Les opérateurs non booléens, tels que les signes plus ou moins, ne sont pas pris en charge dans la syntaxe de filtre.  
   
-## Exemples de filtres  
+## <a name="examples-of-filters"></a>Exemples de filtres  
  Les exemples suivants montrent l'utilisation de filtres appliqués à un modèle d'exploration de données. Si vous créez l'expression de filtre à l'aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dans la fenêtre **Propriété** et le volet **Expression** de la boîte de dialogue de filtre, vous obtiendriez uniquement la chaîne qui apparaît après les mots clés WITH FILTER. Ici, la définition de la structure d'exploration de données est incluse afin de simplifier la compréhension du type et de l'utilisation de colonne.  
   
-###  <a name="bkmk_Ex1"></a> Exemple 1 : Filtrage par défaut au niveau du cas  
+###  <a name="bkmk_Ex1"></a> Exemple 1 : Filtrage par défaut au niveau du cas  
  Cet exemple montre un filtre simple qui restreint les cas utilisés dans le modèle aux clients de plus de trente ans exerçant la profession (occupation) d'architecte.  
   
 ```  
@@ -141,9 +146,8 @@ MaritalStatus PREDICT
 WITH FILTER (Age > 30 AND Occupation=’Architect’)  
 ```  
   
- [Retour au début](#bkmk_Syntax)  
   
-###  <a name="bkmk_Ex2"></a> Exemple 2 : Filtrage au niveau du cas à l'aide d'attributs de tables imbriquées  
+###  <a name="bkmk_Ex2"></a> Exemple 2 : Filtrage au niveau du cas à l'aide d'attributs de tables imbriquées  
  Si votre structure d'exploration de données contient des tables imbriquées, vous pouvez filtrer sur l'existence d'une valeur dans une table imbriquée ou filtrer sur des lignes de table imbriquée qui contiennent une valeur spécifique. Cet exemple restreint les cas utilisés pour le modèle aux clients dont l'âge est supérieur à 30 et qui ont effectué au moins un achat incluant du lait.  
   
  Comme le montre cet exemple, il n'est pas nécessaire que le filtre utilise uniquement des colonnes incluses dans le modèle. La table imbriquée **Products** fait partie de la structure d'exploration de données, mais elle n'est pas incluse dans le modèle d'exploration de données. Toutefois, vous pouvez toujours filtrer sur des valeurs et des attributs dans la table imbriquée. Pour afficher les détails de ces cas, l'extraction doit être activée.  
@@ -161,10 +165,9 @@ FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’
 )  
 ```  
   
- [Retour au début](#bkmk_Syntax)  
   
-###  <a name="bkmk_Ex3"></a> Exemple 3 : Filtrage au niveau du cas sur plusieurs attributs de tables imbriquées  
- Cet exemple montre un filtre en trois parties : une condition s'applique à la table de cas, une autre condition à un attribut dans la table imbriquée, et une autre condition sur une valeur spécifique dans l'une des colonnes de table imbriquée.  
+###  <a name="bkmk_Ex3"></a> Exemple 3 : Filtrage au niveau du cas sur plusieurs attributs de tables imbriquées  
+ Cet exemple montre un filtre en trois parties : une condition s'applique à la table de cas, une autre condition à un attribut dans la table imbriquée, et une autre condition sur une valeur spécifique dans l'une des colonnes de table imbriquée.  
   
  La première condition du filtre, `Age > 30`, s'applique à une colonne dans la table de cas. Les conditions restantes s'appliquent à la table imbriquée.  
   
@@ -187,9 +190,8 @@ FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’
 )  
 ```  
   
- [Retour au début](#bkmk_Syntax)  
   
-###  <a name="bkmk_Ex4"></a> Exemple 4 : Filtrage au niveau du cas en l'absence d'attributs de tables imbriquées  
+###  <a name="bkmk_Ex4"></a> Exemple 4 : Filtrage au niveau du cas en l'absence d'attributs de tables imbriquées  
  Cet exemple indique comment limiter les cas aux clients qui n'ont pas acheté d'élément spécifique, en filtrant sur l'absence d'un attribut dans la table imbriquée. Dans cet exemple, l'apprentissage du modèle s'effectue à l'aide de clients dont l'âge est supérieur à 30 et qui n'ont jamais acheté de lait.  
   
 ```  
@@ -207,7 +209,6 @@ ProductName
 FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’) )  
 ```  
   
- [Retour au début](#bkmk_Syntax)  
   
 ###  <a name="bkmk_Ex5"></a> Exemple 5 : Filtrage sur plusieurs valeurs de tables imbriquées  
  Le but de l'exemple est d'illustrer le filtrage de table imbriquée. Le filtre de table imbriquée est appliqué après le filtre de cas et il restreint uniquement des lignes de table imbriquée.  
@@ -230,7 +231,6 @@ Quantity
 WITH DRILLTHROUGH  
 ```  
   
- [Retour au début](#bkmk_Syntax)  
   
 ###  <a name="bkmk_Ex6"></a> Exemple 6 : Filtrage sur des attributs de tables imbriquées et EXISTS  
  Dans cet exemple, le filtre sur la table imbriquée restreint les lignes à celles qui contiennent du lait ou de l'eau en bouteille. Ensuite, les cas dans le modèle sont restreints à l'aide d'une instruction **EXISTS** . Cela permet de s'assurer que la table imbriquée n'est pas vide.  
@@ -251,10 +251,9 @@ Quantity
 FILTER (EXISTS (Products))  
 ```  
   
- [Retour au début](#bkmk_Syntax)  
   
 ###  <a name="bkmk_Ex7"></a> Exemple 7 : Combinaisons de filtres complexes  
- Le scénario de ce modèle ressemble à celui de l'Exemple 4, mais il est beaucoup plus complexe. La table imbriquée, **ProductsOnSale**, a la condition de filtre `(OnSale)`, ce qui signifie que la valeur de **OnSale** doit être **true** pour le produit répertorié dans **ProductName**. Ici, **OnSale** est une colonne de structure.  
+ Le scénario de ce modèle ressemble à celui de l'Exemple 4, mais il est beaucoup plus complexe. La table imbriquée, **ProductsOnSale**, a la condition de filtre `(OnSale)` , ce qui signifie que la valeur de **OnSale** doit être **true** pour le produit répertorié dans **ProductName**. Ici, **OnSale** est une colonne de structure.  
   
  La deuxième partie du filtre, pour **ProductsNotOnSale**, répète cette syntaxe, mais filtre les produits pour lesquels la valeur de **OnSale** est **not true**`(!OnSale)`.  
   
@@ -294,7 +293,6 @@ FILTER (EXISTS (Products))
   
  `FILTER (EXISTS (ProductsOnSale) AND EXISTS(ProductsNotOnSale) AND Age > 25)`  
   
- [Retour au début](#bkmk_Syntax)  
   
 ###  <a name="bkmk_Ex8"></a> Exemple 8 : Filtrage sur les dates  
  Vous pouvez filtrer des colonnes d'entrée sur les dates, comme vous le feriez avec d'autres données. Les dates contenues dans une colonne de type date/heure sont des valeurs continues. Vous pouvez par conséquent spécifier une plage de dates en utilisant des opérateurs tels que supérieur à (>) ou inférieur à (<). Si votre source de données ne représente pas les dates par un type de données Continuous, mais comme des valeurs texte ou discrètes, vous ne pouvez pas filtrer sur une plage de dates ; vous devez spécifier des valeurs discrètes individuelles.  
@@ -317,10 +315,9 @@ FILTER (EXISTS (Products))
   
  Par exemple, si vous souhaitez filtrer les résultats de votre centre d'appels de façon à n'afficher que les week-ends, vous pouvez, dans la vue de source de données, créer une expression qui extrait le nom du jour de la semaine correspondant à chaque date, puis utiliser ce nom comme valeur d'entrée ou comme valeur discrète pour le filtrage. Rappelez-vous simplement que des valeurs répétées peuvent affecter le modèle, de sorte qu'il est préférable de n'utiliser que l'une des colonnes, et non la colonne de date plus la valeur dérivée.  
   
- [Retour au début](#bkmk_Syntax)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [Test et validation &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Test et validation &#40;Exploration des données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

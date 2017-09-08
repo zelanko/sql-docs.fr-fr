@@ -1,80 +1,74 @@
 ---
-title: "Tableau de bord de gestion Power Pivot et donn&#233;es d’utilisation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Power Pivot Management Dashboard and Usage Data | Documents Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 5833c1dae2cc6b5cf8f85a52bec088d96e609537
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Tableau de bord de gestion Power Pivot et donn&#233;es d’utilisation
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est une collection de rapports et de composants WebPart prédéfinis dans l’Administration centrale de SharePoint, qui vous aident à administrer un déploiement de SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. Le tableau de bord de gestion fournit des informations sur l'intégrité du serveur, l'activité du classeur et l'actualisation des données. Le tableau de bord utilise les données issues de la collecte des données d'utilisation de SharePoint.  
+# <a name="power-pivot-management-dashboard-and-usage-data"></a>Tableau de bord de gestion Power Pivot et données d’utilisation
+  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] est une collection de rapports et de composants WebPart prédéfinis dans l’Administration centrale de SharePoint, qui vous aident à administrer un déploiement de SQL Server [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] pour SharePoint. Le tableau de bord de gestion fournit des informations sur l'intégrité du serveur, l'activité du classeur et l'actualisation des données. Le tableau de bord utilise les données issues de la collecte des données d'utilisation de SharePoint.  
   
- [Conditions préalables](#prereq)  
-  
- [Présentation des différentes sections du tableau de bord](#items)  
-  
- [Ouvrir le Tableau de bord de gestion Power Pivot](#open)  
-  
- [Données sources dans les tableaux de bord](#sourcedata)  
-  
- [Modifier le tableau de bord Power Pivot](#edit)  
-  
- [Créer des rapports personnalisés pour le Tableau de bord de gestion Power Pivot](#reports)  
   
 ##  <a name="prereq"></a> Conditions préalables  
- Pour ouvrir le tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour une application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que vous gérez, vous devez être administrateur du service.  
+ Pour ouvrir le tableau de bord de gestion [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] pour une application de service [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] que vous gérez, vous devez être administrateur du service.  
   
 ##  <a name="items"></a> Présentation des différentes sections du tableau de bord  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] contient des composants WebPart et des rapports incorporés qui explorent des catégories d’informations spécifiques. La liste suivante décrit chaque élément du tableau de bord :  
+ [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] contient des composants WebPart et des rapports incorporés qui explorent des catégories d’informations spécifiques. La liste suivante décrit chaque élément du tableau de bord :  
   
 |Tableau de bord|Description|  
 |---------------|-----------------|  
-|Infrastructure - Intégrité du serveur|Affiche les tendances d'utilisation de l'UC, de consommation de mémoire et de temps de réponse aux requêtes au fil du temps afin que vous puissiez évaluer si les ressources système s'approchent de leur capacité maximale ou sont sous-utilisées.|  
+|Infrastructure - Intégrité du serveur|Affiche les tendances d'utilisation de l'UC, de consommation de mémoire et de temps de réponse aux requêtes au fil du temps afin que vous puissiez évaluer si les ressources système s'approchent de leur capacité maximale ou sont sous-utilisées.|  
 |Actions|Contient des liens vers d'autres pages de l'Administration centrale, notamment l'application de service actuelle, une liste des applications de service et la journalisation de l'utilisation.|  
-|Activité du classeur - Graphique|Crée des rapports sur la fréquence des accès aux données. Vous pouvez connaître le nombre de connexions aux sources des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] établies chaque jour ou chaque semaine.|  
-|Activité du classeur - Liste|Crée des rapports sur la fréquence des accès aux données. Vous pouvez connaître le nombre de connexions aux sources des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] établies chaque jour ou chaque semaine.|  
-|Actualisation des données - Activité récente|Crée des rapports sur l'état des travaux d'actualisation des données, y compris ceux dont l'exécution a échoué. Ce rapport fournit un affichage composite des opérations d'actualisation des données au niveau de l'application. Les administrateurs peuvent d’un coup d’œil voir le nombre de travaux d’actualisation des données définis pour l’application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans son intégralité.|  
-|Actualisation des données - Défaillances récentes|Répertorie les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour lesquels l’actualisation des données n’a pas abouti.|  
+|Activité du classeur - Graphique|Crée des rapports sur la fréquence des accès aux données. Vous pouvez connaître le nombre de connexions aux sources des données [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] établies chaque jour ou chaque semaine.|  
+|Activité du classeur - Liste|Crée des rapports sur la fréquence des accès aux données. Vous pouvez connaître le nombre de connexions aux sources des données [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] établies chaque jour ou chaque semaine.|  
+|Actualisation des données - Activité récente|Crée des rapports sur l'état des travaux d'actualisation des données, y compris ceux dont l'exécution a échoué. Ce rapport fournit un affichage composite des opérations d'actualisation des données au niveau de l'application. Les administrateurs peuvent d’un coup d’œil voir le nombre de travaux d’actualisation des données définis pour l’application de service [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] dans son intégralité.|  
+|Actualisation des données - Défaillances récentes|Répertorie les classeurs [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] pour lesquels l’actualisation des données n’a pas abouti.|  
 |Rapports|Contient des liens vers des rapports que vous pouvez ouvrir dans Excel.|  
   
 ##  <a name="open"></a> Ouvrir le Tableau de bord de gestion Power Pivot  
- Le tableau de bord affiche les informations d’une seule application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] à la fois. Vous pouvez ouvrir le tableau de bord de gestion à partir de deux emplacements.  
+ Le tableau de bord affiche les informations d’une seule application de service [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] à la fois. Vous pouvez ouvrir le tableau de bord de gestion à partir de deux emplacements.  
   
-### Ouvrir le tableau de bord à partir des Paramètres généraux de l'application  
+### <a name="open-the-dashboard-from-general-application-settings"></a>Ouvrir le tableau de bord à partir des Paramètres généraux de l'application  
   
-1.  Dans l’Administration centrale, dans le groupe **Paramètres généraux de l’application**, cliquez sur **Tableau de bord de gestion[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+1.  Dans l’Administration centrale, dans le groupe **Paramètres généraux de l’application**, cliquez sur **Tableau de bord de gestion[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]**.  
   
 2.  Dans la page principale, sélectionnez l’application de service Power Pivot dont vous souhaitez consulter les données opérationnelles.  
   
-### Ouvrir le tableau de bord à partir d’une application de service Power Pivot  
+### <a name="open-the-dashboard-from-a-power-pivot-service-application"></a>Ouvrir le tableau de bord à partir d’une application de service Power Pivot  
   
 1.  Dans Administration centrale, sous **Gestion des applications**, cliquez sur **Gérer les applications de service**.  
   
-2.  Cliquez sur le nom de l’application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] affiche les données opérationnelles de l’application de service actuelle.  
+2.  Cliquez sur le nom de l’application de service [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] . Le tableau de bord de gestion [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] affiche les données opérationnelles de l’application de service actuelle.  
   
-### Modifiez l'application de service actuelle.  
- Pour modifier l’application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] actuelle dans le tableau de bord de gestion :  
+### <a name="change-the-current-service-application"></a>Modifiez l'application de service actuelle.  
+ Pour modifier l’application de service [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] actuelle dans le tableau de bord de gestion :  
   
-1.  En haut du tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], repérez le nom de l’application de service actuelle, par exemple **Application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] par défaut**.  
+1.  En haut du tableau de bord de gestion [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)], repérez le nom de l’application de service actuelle, par exemple **Application de service [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] par défaut**.  
   
 2.  Dans le tableau de bord **Actions** , cliquez sur **Lister les applications de service**.  
   
-3.  Cliquez sur le nom de l’application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dont vous souhaitez afficher les rapports du tableau de bord de gestion.  
+3.  Cliquez sur le nom de l’application de service [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] dont vous souhaitez afficher les rapports du tableau de bord de gestion.  
   
 ##  <a name="sourcedata"></a> Données sources dans les tableaux de bord  
- Les tableaux de bord, rapports et composants WebPart affichent les données à partir d’un modèle de données interne qui extrait des données du système et des bases de données d’application [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le modèle de données interne est incorporé dans un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] hébergé sur le site Administration centrale. La structure du modèle de données est fixe. Même si vous pouvez utiliser le classeur PowerPivot comme source de données pour créer des rapports, vous ne devez pas en modifier la structure d'une manière qui risquerait de rompre les rapports prédéfinis qui l'utilisent.  
+ Les tableaux de bord, rapports et composants WebPart affichent les données à partir d’un modèle de données interne qui extrait des données du système et des bases de données d’application [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] . Le modèle de données interne est incorporé dans un classeur [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] hébergé sur le site Administration centrale. La structure du modèle de données est fixe. Même si vous pouvez utiliser le classeur PowerPivot comme source de données pour créer des rapports, vous ne devez pas en modifier la structure d'une manière qui risquerait de rompre les rapports prédéfinis qui l'utilisent.  
   
  Pour plus d'informations sur la procédure de collecte des données, consultez les rubriques suivantes :  
   
@@ -88,32 +82,32 @@ caps.handback.revision: 13
  Si vous avez des compétences en matière de développement ou de personnalisation de tableaux de bord, vous pouvez modifier le tableau de bord pour y inclure de nouveaux composants WebPart. Vous avez également la possibilité de modifier les propriétés des composants WebPart inclus dans le tableau de bord.  
   
 ##  <a name="reports"></a> Créer des rapports personnalisés pour le Tableau de bord de gestion Power Pivot  
- À des fins de création de rapports, les données d’utilisation et l’historique [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont conservés dans un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] interne créé et configuré en même temps que le tableau de bord. Si les rapports par défaut ne fournissent pas les informations qui vous intéressent, vous pouvez créer des rapports personnalisés dans Excel, basés sur le classeur. Le classeur et tous les rapports personnalisés créés sont conservés si vous mettez à niveau ou désinstallez les fichiers solution [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ultérieurement. Le classeur et les rapports sont stockés dans la bibliothèque de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sur le site Administration centrale. Cette bibliothèque n'est pas visible par défaut, mais vous pouvez l'afficher en utilisant l'action Afficher tout le contenu du site dans les Actions du site.  
+ À des fins de création de rapports, les données d’utilisation et l’historique [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] sont conservés dans un classeur [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] interne créé et configuré en même temps que le tableau de bord. Si les rapports par défaut ne fournissent pas les informations qui vous intéressent, vous pouvez créer des rapports personnalisés dans Excel, basés sur le classeur. Le classeur et tous les rapports personnalisés créés sont conservés si vous mettez à niveau ou désinstallez les fichiers solution [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ultérieurement. Le classeur et les rapports sont stockés dans la bibliothèque de gestion [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] sur le site Administration centrale. Cette bibliothèque n'est pas visible par défaut, mais vous pouvez l'afficher en utilisant l'action Afficher tout le contenu du site dans les Actions du site.  
   
- Pour vous aider à prendre en main la génération de rapports personnalisés, le tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] propose un fichier Office Data Connection (.odc) pour la connexion au classeur source. Par exemple, vous pouvez utiliser le fichier .odc dans Excel pour créer des rapports supplémentaires.  
+ Pour vous aider à prendre en main la génération de rapports personnalisés, le tableau de bord de gestion [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] propose un fichier Office Data Connection (.odc) pour la connexion au classeur source. Par exemple, vous pouvez utiliser le fichier .odc dans Excel pour créer des rapports supplémentaires.  
   
 > [!NOTE]  
 >  Modifiez le fichier pour éviter l'erreur suivante lors de la tentative d'utilisation du fichier .odc dans Excel : « Échec de l'initialisation de la source de données ». Le fichier .odc généré automatiquement inclut un paramètre qui n'est pas pris en charge par le fournisseur OLE DB MSOLAP. Les instructions suivantes fournissent la solution de contournement permettant de supprimer ces paramètres.  
   
- Vous devez être administrateur de batterie de serveurs ou de service pour générer des rapports basés sur le classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans l’Administration centrale.  
+ Vous devez être administrateur de batterie de serveurs ou de service pour générer des rapports basés sur le classeur [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] dans l’Administration centrale.  
   
-1.  Ouvrez le tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+1.  Ouvrez le tableau de bord de gestion [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .  
   
 2.  Accédez à la section **Rapports** , au bas de la page.  
   
-3.  Cliquez sur **Données de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+3.  Cliquez sur **Données de gestion [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]**.  
   
 4.  Enregistrez le fichier .odc dans un dossier local.  
   
 5.  Ouvrez le fichier .odc dans un éditeur de texte.  
   
-6.  Dans l’élément **\<odc:ConnectionString>**, allez jusqu’à la fin de la ligne et supprimez **Embedded Data=False**, puis supprimez **Edit Mode=0**. Si le dernier caractère de la chaîne est un point-virgule, supprimez-le.  
+6.  Dans le  **\<odc : ConnectionString >** élément, faites défiler jusqu'à la fin de la ligne et supprimez **données incorporées = False**, puis supprimez **Mode d’édition = 0**. Si le dernier caractère de la chaîne est un point-virgule, supprimez-le.  
   
-7.  Enregistrez le fichier. Les étapes restantes dépendent de la version de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et d’Excel que vous utilisez.  
+7.  Enregistrez le fichier. Les étapes restantes dépendent de la version de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] et d’Excel que vous utilisez.  
   
 8.  1.  Démarrez Excel 2013  
   
-    2.  Dans le ruban **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** , cliquez sur **Gérer**.  
+    2.  Dans le ruban **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]** , cliquez sur **Gérer**.  
   
     3.  Cliquez sur **Données externes** puis sur **Connexions existantes**.  
   
@@ -133,15 +127,15 @@ caps.handback.revision: 13
   
 9. 1.  Démarrez Excel 2010.  
   
-    2.  Dans le ruban [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], cliquez sur **Lancer la fenêtre [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+    2.  Dans le ruban [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)], cliquez sur **Lancer la fenêtre [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]**.  
   
-    3.  Sur le ruban Conception de la fenêtre [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , cliquez sur **Connexions existantes**.  
+    3.  Sur le ruban Conception de la fenêtre [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] , cliquez sur **Connexions existantes**.  
   
     4.  Cliquez sur **Parcourir**.  
   
     5.  Dans le chemin d'accès, spécifiez le fichier .odc.  
   
-    6.  Cliquez sur **Ouvrir**. L’Assistant Importation de table démarre, à l’aide de la chaîne de connexion au classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui contient les données d’utilisation.  
+    6.  Cliquez sur **Ouvrir**. L’Assistant Importation de table démarre, à l’aide de la chaîne de connexion au classeur [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] qui contient les données d’utilisation.  
   
     7.  Cliquez sur **Tester la connexion** pour vérifier l'accès.  
   
@@ -149,8 +143,8 @@ caps.handback.revision: 13
   
     9. Dans Spécifier la requête MDX, cliquez sur **Conception** pour ouvrir le concepteur de requêtes MDX afin d'assembler les données avec lesquelles vous souhaitez travailler, puis créez des rapports de tableau croisé dynamique ou de graphique croisé dynamique pour visualiser les données dans Excel.  
   
-## Voir aussi  
- [Actualisation des données Power Pivot avec SharePoint 2010](http://msdn.microsoft.com/fr-fr/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
+## <a name="see-also"></a>Voir aussi  
+ [Actualisation des données Power Pivot avec SharePoint 2010](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
  [Configurer la collecte des données d’utilisation &#40;PowerPivot pour SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

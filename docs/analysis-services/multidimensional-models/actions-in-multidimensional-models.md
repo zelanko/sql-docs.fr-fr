@@ -1,29 +1,34 @@
 ---
-title: "Actions dans les mod&#232;les multidimensionnels | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "actions [Analysis Services], création"
-  - "actions de rapport [Analysis Services]"
-  - "actions d'extraction [Analysis Services]"
-  - "cubes [Analysis Services], actions"
+title: "Actions dans les modèles multidimensionnels | Documents Microsoft"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- actions [Analysis Services], creating
+- report actions [Analysis Services]
+- drillthrough actions [Analysis Services]
+- cubes [Analysis Services], actions
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a4b7d3b0523fb19b9b0d7e0542cc587fb1585992
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Actions dans les mod&#232;les multidimensionnels
+# <a name="actions-in-multidimensional-models"></a>Actions dans les modèles multidimensionnels
   Une action est une opération réalisée par un utilisateur final sur un cube (ou portion de cube) sélectionné. Cette opération peut soit démarrer une application en prenant comme paramètre l'élément sélectionné, soit extraire des informations relatives à l'élément sélectionné. Pour plus d’informations sur les d’actions, consultez [Actions &#40;Analysis Services - Données multidimensionnelles&#41;](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md).  
   
  Pour construire des actions pour un cube, utilisez l’onglet **Actions** du Concepteur de cube. Spécifiez les éléments suivants :  
@@ -32,7 +37,7 @@ caps.handback.revision: 20
  Sélectionnez un nom identifiant l'action.  
   
  **Cible d'action**  
- Sélectionnez l'objet auquel l'action est attachée. Généralement, dans les applications clientes, l'action s'affiche lorsque les utilisateurs finaux sélectionnent l'objet cible ; toutefois, l'application cliente détermine quelle opération de l'utilisateur final affiche les actions. Pour **Type de cible**, sélectionnez l’un des objets suivants :  
+ Sélectionnez l'objet auquel l'action est attachée. Généralement, dans les applications clientes, l'action s'affiche lorsque les utilisateurs finaux sélectionnent l'objet cible ; toutefois, l'application cliente détermine quelle opération de l'utilisateur final affiche les actions. Pour **Type de cible**, sélectionnez l’un des objets suivants :  
   
 -   Membres d'attribut  
   
@@ -77,13 +82,13 @@ caps.handback.revision: 20
 |**Application**|Décrit l'application de l'action.|  
 |**Description**|Décrit l'action.|  
 |**Légende**|Fournit une légende qui s'affiche pour l'action. Si la légende est au format MDX, spécifiez **True** pour **La légende est MDX**.|  
-|**La légende est MDX **|Spécifiez **True** si la légende est au format MDX ou **False** si ce n’est pas le cas.|  
+|**La légende est MDX**|Spécifiez **True** si la légende est au format MDX ou **False** si ce n’est pas le cas.|  
   
 > [!NOTE]  
 >  Vous devez utiliser le langage de script Analysis Services (ASSL) ou les objets AMO (Analysis Management Objects) pour définir les types d'action de ligne de commande et HTML. Pour plus d’informations, consultez [Élément Action &#40;ASSL&#41;](../../analysis-services/scripting/objects/action-element-assl.md), [Élément Type &#40;Action&#41; &#40;ASSL&#41;](../../analysis-services/scripting/properties/type-element-action-assl.md) et [Programmation d’objets OLAP AMO avancés](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md).  
   
-## Création d'une action de rapport  
- Le serveur de rapports répond aux demandes de rapports basées sur une URL. Pour créer une action de rapport, dans le menu **Cube**, cliquez sur **Nouvelle action de rapport**. Les options suivantes sont propres à une action de rapport.  
+## <a name="creating-a-reporting-action"></a>Création d'une action de rapport  
+ Le serveur de rapports répond aux demandes de rapports basées sur une URL. Pour créer une action de rapport, dans le menu **Cube** , cliquez sur **Nouvelle action de rapport**. Les options suivantes sont propres à une action de rapport.  
   
  **Serveur de rapports**  
  Les propriétés décrites dans le tableau suivant sont spécifiées pour le serveur de rapports.  
@@ -100,7 +105,7 @@ caps.handback.revision: 20
  **Paramètres (facultatif)**  
  Les paramètres sont envoyés au serveur comme une partie de la chaîne de l'URL lorsque l'action est créée. Ceux-ci comptent notamment **Nom du paramètre** et **Valeur du paramètre**, c’est-à-dire une expression MDX.  
   
- L'URL du serveur de rapports est construite comme suit :  
+ L'URL du serveur de rapports est construite comme suit :  
   
 ```  
   
@@ -115,19 +120,19 @@ parametervalue1
 & ...  
 ```  
   
- Par exemple :  
+ Par exemple :  
   
 ```  
 http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Region=West  
 ```  
   
-## Création d'une action d'extraction  
- Une action d'extraction est définie par une action de type ensemble de lignes, qui est retournée à l'application cliente comme une instruction d'extraction. La cible d'action est le membre d'un groupe de mesures. Pour créer une action d’extraction, dans le menu **Cube**, cliquez sur **Nouvelle action d’extraction**. Les options suivantes sont propres à une action d'extraction.  
+## <a name="creating-a-drillthrough-action"></a>Création d'une action d'extraction  
+ Une action d'extraction est définie par une action de type ensemble de lignes, qui est retournée à l'application cliente comme une instruction d'extraction. La cible d'action est le membre d'un groupe de mesures. Pour créer une action d’extraction, dans le menu **Cube** , cliquez sur **Nouvelle action d’extraction**. Les options suivantes sont propres à une action d'extraction.  
   
  **Colonnes d'extraction**  
  Sélectionnez une ou plusieurs dimensions et, pour chacune d'entre elles, les colonnes d'extraction retournées à l'application cliente par l'action.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Cubes dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

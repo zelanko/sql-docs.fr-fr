@@ -1,44 +1,49 @@
 ---
-title: "Modifier les propri&#233;t&#233;s d&#39;une vue de source de donn&#233;es (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "noms conviviaux [Analysis Services]"
-  - "noms [Analysis Services], vues de sources de données"
-  - "visualisation des tables"
-  - "affichage des tables"
-  - "vues de sources de données [Analysis Services], tables"
-  - "tables [Analysis Services], vues de sources de données"
+title: "Modifier les propriétés dans une vue de Source de données (Analysis Services) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- friendly names [Analysis Services]
+- names [Analysis Services], data source views
+- viewing tables
+- displaying tables
+- data source views [Analysis Services], tables
+- tables [Analysis Services], data source views
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8d2d7af5e8fa2adb597380aded86778e57135ae0
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Modifier les propri&#233;t&#233;s d&#39;une vue de source de donn&#233;es (Analysis Services)
-  Après avoir défini une vue de source de données à l'aide de l'Assistant Vue de source de données, puis ajouté des tables, des vues, des calculs nommés et des requêtes nommées à la vue de source de données, vous pouvez modifier les propriétés en rapport avec :  
+# <a name="change-properties-in-a-data-source-view-analysis-services"></a>Modifier les propriétés d'une vue de source de données (Analysis Services)
+  Après avoir défini une vue de source de données à l'aide de l'Assistant Vue de source de données, puis ajouté des tables, des vues, des calculs nommés et des requêtes nommées à la vue de source de données, vous pouvez modifier les propriétés en rapport avec :  
   
--   les critères de correspondance de vues de source de données ;  
+-   les critères de correspondance de vues de source de données ;  
   
--   les options avancées de vue de source de données ;  
+-   les options avancées de vue de source de données ;  
   
--   les noms d'objets ;  
+-   les noms d'objets ;  
   
 -   les métadonnées d'objets.  
   
  Vous pouvez également consulter les métadonnées d'objets récupérées dans la source de données et qui ne peuvent pas être modifiées.  
   
-## Consultation ou modification des propriétés d'une vue de source de données  
+## <a name="viewing-or-changing-data-source-view-properties"></a>Consultation ou modification des propriétés d'une vue de source de données  
  Les propriétés d'une vue de source de données, autres que la description de la vue de source de données, sont définies par l'Assistant Vue de source de données lorsque vous définissez initialement la vue de source de données. Le tableau suivant répertorie et décrit les propriétés d'une vue de source de données.  
   
 > [!NOTE]  
@@ -53,8 +58,8 @@ caps.handback.revision: 34
 |RetrieveRelationships|Indique si les relations sont récupérées dans la base de données. La valeur par défaut est True.|  
 |SchemaRestriction|Indique les restrictions, le cas échéant, sur les schémas récupérés dans une source de données. Par défaut, aucune restriction de schéma n'est définie.|  
   
-## Consultation ou modification des propriétés DataTable  
- Les propriétés **DataTable** sont les propriétés des tables, des vues et des requêtes nommées dans une vue de source de données. Ces propriétés sont définies lorsque n'importe lequel des objets est ajouté à la vue de source de données. Le tableau suivant répertorie et décrit les propriétés des objets **DataTable** d’une vue de source de données.  
+## <a name="viewing-or-changing-datatable-properties"></a>Consultation ou modification des propriétés DataTable  
+ Les propriétés**DataTable** sont les propriétés des tables, des vues et des requêtes nommées dans une vue de source de données. Ces propriétés sont définies lorsque n'importe lequel des objets est ajouté à la vue de source de données. Le tableau suivant répertorie et décrit les propriétés des objets **DataTable** d’une vue de source de données.  
   
 |Propriété|Description|  
 |--------------|-----------------|  
@@ -67,20 +72,20 @@ caps.handback.revision: 34
 |Schéma|Indique le schéma de base de données applicable à la table, la vue ou la requête nommée. Cette propriété n’est pas modifiable.|  
 |TableType|Indique le type de table de la table, de la vue ou de la requête nommée. Cette propriété n’est pas modifiable.|  
   
-## Consultation ou modification des propriétés DataColumn  
- Les propriétés **DataColumn** sont les propriétés des colonnes de tables, de vues et de requêtes nommées dans une vue de source de données. Ces propriétés sont définies lorsque n'importe lequel de ces objets est ajouté à la vue de source de données, soit à partir de la vue ou de la table sous-jacente, soit à partir d'une requête nommée, soit tel que défini par un calcul nommé. Le tableau suivant répertorie et décrit les propriétés des objets **DataColumn** d’une vue de source de données.  
+## <a name="viewing-or-changing-datacolumn-properties"></a>Consultation ou modification des propriétés DataColumn  
+ Les propriétés**DataColumn** sont les propriétés des colonnes de tables, de vues et de requêtes nommées dans une vue de source de données. Ces propriétés sont définies lorsque n'importe lequel de ces objets est ajouté à la vue de source de données, soit à partir de la vue ou de la table sous-jacente, soit à partir d'une requête nommée, soit tel que défini par un calcul nommé. Le tableau suivant répertorie et décrit les propriétés des objets **DataColumn** d’une vue de source de données.  
   
 |Propriété|Description|  
 |--------------|-----------------|  
 |AllowNull|Spécifie la propriété NULL de la colonne en fonction de la colonne dans la table sous-jacente, d'une valeur ou d'une requête nommée. Cette propriété n’est pas modifiable.|  
 |DataType|Spécifie le type de données de la colonne en fonction de la colonne dans la table sous-jacente, d'une valeur ou d'une requête nommée. Vous ne pouvez pas modifier directement cette propriété. Cependant, si nécessaire, pour remplacer le type de données d'une colonne dans une table ou une vue, remplacez la table par une requête nommée qui convertit la colonne en type de données souhaité.|  
-|DateTimeMode|Indique le format de sérialisation de la date pour les colonnes **DateTime**. La valeur par défaut est **UnspecifiedLocal**. Cette propriété est modifiable.|  
+|DateTimeMode|Indique le format de sérialisation de la date pour les colonnes **DateTime** . La valeur par défaut est **UnspecifiedLocal**. Cette propriété est modifiable.|  
 |Description|Fournit la description de la colonne. Si la colonne de base de données sous-jacente dispose d'une description stockée comme propriété étendue, cette valeur s'affiche. Vous pouvez modifier cette propriété.|  
 |FriendlyName|Indique un nom de colonne dans une table ou une vue plus facile à comprendre ou plus approprié pour la zone de sujet. Par défaut, la valeur de la propriété **FriendlyName** d’une colonne dans une table ou une vue est identique à celle de la propriété **Name** correspondante. La propriété **FriendlyName** est utilisée par des objets OLAP et d’exploration de données lors de la définition d’attributs basés sur des colonnes de tables ou de vues. Vous pouvez modifier cette propriété.|  
 |Longueur|Indique la longueur maximale de la colonne, en fonction des données de la colonne dans la vue ou la table sous-jacente.|  
 |Nom|Indique le nom de la colonne sous-jacente, ou le nom du calcul nommé. La propriété **Name** est utilisée par des objets OLAP et d’exploration de données lors de la définition d’attributs basés sur des calculs nommés. Vous pouvez modifier cette propriété uniquement pour les calculs nommés.|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vues de sources de données dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Utiliser des diagrammes dans un concepteur de vues de sources de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   

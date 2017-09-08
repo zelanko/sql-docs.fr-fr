@@ -1,27 +1,32 @@
 ---
-title: "Exemples de requ&#234;te de mod&#232;le de r&#233;gression lin&#233;aire | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "algorithmes de régression linéaire [Analysis Services]"
-  - "régression linéaire [Analysis Services]"
-  - "requêtes de contenu [DMX]"
+title: "Exemples de requêtes de modèle de régression linéaire | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- linear regression algorithms [Analysis Services]
+- linear regression [Analysis Services]
+- content queries [DMX]
 ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 36f1f595cd087ff05582250c205681b2b7794702
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Exemples de requ&#234;te de mod&#232;le de r&#233;gression lin&#233;aire
+# <a name="linear-regression-model-query-examples"></a>Exemples de requête de modèle de régression linéaire
   Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez créer une requête de contenu, qui fournit des détails sur les modèles (ou séquences) découverts au cours de l'analyse, ou créer une requête de prédiction, qui utilise les séquences du modèle pour effectuer des prédictions pour les nouvelles données. Par exemple, une requête de contenu peut fournir des détails supplémentaires sur la formule de régression, tandis qu'une requête de prédiction peut vous indiquer si un nouveau point de données est adapté au modèle. Vous pouvez également extraire les métadonnées relatives au modèle en utilisant une requête.  
   
  Cette section explique comment créer ces requêtes pour les modèles basés sur l'algorithme MLR (Microsoft Linear Regression).  
@@ -44,7 +49,7 @@ caps.handback.revision: 21
  [Utilisation des fonctions de prédiction avec un modèle de régression](#bkmk_Query5)  
   
 ##  <a name="bkmk_top"></a> Recherche d'informations sur le modèle de régression linéaire  
- La structure d'un modèle de régression linéaire est extrêmement simple : le modèle d'exploration de données représente les données sous la forme d'un nœud unique qui définit la formule de régression. Pour plus d’informations, consultez [Contenu du modèle d’exploration de données pour les modèles de régression logistique &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining model content for logistic regression models.md).  
+ La structure d'un modèle de régression linéaire est extrêmement simple : le modèle d'exploration de données représente les données sous la forme d'un nœud unique qui définit la formule de régression. Pour plus d’informations, consultez [Contenu du modèle d’exploration de données pour les modèles de régression logistique &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md).  
   
  [Retour en haut](#bkmk_top)  
   
@@ -64,14 +69,14 @@ WHERE MODEL_NAME = 'TM_PredictIncome'
 |COMPLEXITY_PENALTY=0.9,<br /><br /> MAXIMUM_INPUT_ATTRIBUTES=255,<br /><br /> MAXIMUM_OUTPUT_ATTRIBUTES=255,<br /><br /> MINIMUM_SUPPORT=10,<br /><br /> SCORE_METHOD=4,<br /><br /> SPLIT_METHOD=3,<br /><br /> FORCE_REGRESSOR=|  
   
 > [!NOTE]  
->  Le paramètre `FORCE_REGRESSOR =` indique que la valeur actuelle du paramètre FORCE_REGRESSOR est Null.  
+>  Le paramètre`FORCE_REGRESSOR =` indique que la valeur actuelle du paramètre FORCE_REGRESSOR est Null.  
   
  [Retour en haut](#bkmk_top)  
   
 ###  <a name="bkmk_Query2"></a> Exemple de requête 2 : récupération de la formule de régression du modèle  
- La requête suivante retourne le contenu du modèle d'exploration de données pour un modèle de régression linéaire qui a été construit en utilisant la même source de données de publipostage ciblé que celle utilisée dans le [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md). Ce modèle prédit le revenu des clients en fonction de leur âge.  
+ La requête suivante retourne le contenu du modèle d'exploration de données pour un modèle de régression linéaire qui a été construit en utilisant la même source de données de publipostage ciblé que celle utilisée dans le [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Ce modèle prédit le revenu des clients en fonction de leur âge.  
   
- La requête retourne le contenu du nœud qui contient la formule de régression. Chaque variable et chaque coefficient est stocké dans une ligne distincte de la table imbriquée NODE_DISTRIBUTION. Pour consulter la formule de régression complète, dans la [Visionneuse d’arborescences Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md), cliquez sur le nœud **(Tout)**, puis ouvrez **Légende d’exploration de données**.  
+ La requête retourne le contenu du nœud qui contient la formule de régression. Chaque variable et chaque coefficient est stocké dans une ligne distincte de la table imbriquée NODE_DISTRIBUTION. Pour consulter la formule de régression complète, dans la [Visionneuse d’arborescences Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md), cliquez sur le nœud **(Tout)** , puis ouvrez **Légende d’exploration de données**.  
   
 ```  
 SELECT FLATTENED NODE_DISTRIBUTION as t  
@@ -128,7 +133,7 @@ AS t
 FROM LR_PredictIncome.CONTENT  
 ```  
   
- Cette requête retourne deux lignes : une provenant du contenu du modèle d'exploration de données et celle provenant de la table imbriquée qui contient le coefficient. La colonne ATTRIBUTE_NAME n'est pas incluse ici parce qu'elle est toujours vide pour le coefficient.  
+ Cette requête retourne deux lignes : une provenant du contenu du modèle d'exploration de données et celle provenant de la table imbriquée qui contient le coefficient. La colonne ATTRIBUTE_NAME n'est pas incluse ici parce qu'elle est toujours vide pour le coefficient.  
   
 |MODEL_NAME|t.ATTRIBUTE_VALUE|t.VALUETYPE|  
 |-----------------|------------------------|-----------------|  
@@ -137,16 +142,16 @@ FROM LR_PredictIncome.CONTENT
   
  [Retour en haut](#bkmk_top)  
   
-## Élaborer des prédictions à partir d'un modèle de régression linéaire  
+## <a name="making-predictions-from-a-linear-regression-model"></a>Élaborer des prédictions à partir d'un modèle de régression linéaire  
  Vous pouvez créer des requêtes de prédiction sur des modèles de régression linéaire en utilisant l'onglet Prévision de modèle d'exploration de données du Concepteur d'exploration de données. Le générateur de requêtes de prédiction est disponible à la fois dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 > [!NOTE]  
->  Vous pouvez également créer des requêtes sur les modèles de régression en utilisant les compléments d’exploration de données pour Excel [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou les compléments d’exploration de données pour Excel [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Même si les compléments d'exploration de données pour Excel ne créent pas de modèles de régression, vous pouvez parcourir et interroger un modèle d'exploration de données stocké sur une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+>  Vous pouvez également créer des requêtes sur les modèles de régression en utilisant les compléments d’exploration de données pour Excel [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou les compléments d’exploration de données pour Excel [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] . Même si les compléments d'exploration de données pour Excel ne créent pas de modèles de régression, vous pouvez parcourir et interroger un modèle d'exploration de données stocké sur une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  [Retour en haut](#bkmk_top)  
   
 ###  <a name="bkmk_Query4"></a> Exemple de requête 4 : prédiction du revenu à l'aide d'une requête singleton  
- La méthode la plus facile pour créer une requête singleton sur un modèle de régression consiste à utiliser la boîte de dialogue **Entrée de requête singleton**. Par exemple, pour créer la requête DMX suivante, sélectionnez le modèle de régression approprié, choisissez **Requête singleton**, puis tapez **20** comme valeur pour **Age**.  
+ La méthode la plus facile pour créer une requête singleton sur un modèle de régression consiste à utiliser la boîte de dialogue **Entrée de requête singleton** . Par exemple, pour créer la requête DMX suivante, sélectionnez le modèle de régression approprié, choisissez **Requête singleton**, puis tapez **20** comme valeur pour **Age**.  
   
 ```  
 SELECT [LR_PredictIncome].[Yearly Income]  
@@ -184,7 +189,7 @@ NATURAL PREDICTION JOIN
   
  [Retour en haut](#bkmk_top)  
   
-## Liste des fonctions de prédiction  
+## <a name="list-of-prediction-functions"></a>Liste des fonctions de prédiction  
  Tous les algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)] prennent en charge un ensemble commun de fonctions. Toutefois, l'algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression) prend en charge les fonctions supplémentaires répertoriées dans le tableau suivant.  
   
 |||  
@@ -200,10 +205,10 @@ NATURAL PREDICTION JOIN
   
  Pour obtenir la liste des fonctions qui sont communes à tous les algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)], consultez [Algorithmes d’exploration de données &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md). Pour plus d’informations sur l’utilisation de ces fonctions, consultez [Fonctions DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Algorithme MLR (Microsoft Linear Regression)](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [Requêtes d'exploration de données](../../analysis-services/data-mining/data-mining-queries.md)   
- [Références techniques relatives à l'algorithme MLR (Microsoft Linear Regression)](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
- [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Référence technique de Microsoft Linear Regression algorithme](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

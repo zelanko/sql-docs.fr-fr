@@ -1,27 +1,32 @@
 ---
-title: "Configurer la collecte des donn&#233;es d’utilisation (PowerPivot pour SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Configurer la collecte de données d’utilisation pour (Power Pivot pour SharePoint | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 98ec79c14a0ac082c75967a9c81fa7b2027f5511
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Configurer la collecte des donn&#233;es d’utilisation (PowerPivot pour SharePoint)
+# <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>Configurer la collecte des données d’utilisation (PowerPivot pour SharePoint)
   La collecte des données d'utilisation est une fonctionnalité SharePoint au niveau de la batterie de serveurs. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint utilise et étend ce système pour fournir des rapports dans le tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui détaillent le mode d’utilisation des données et services [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Selon la façon dont vous avez installé votre serveur SharePoint, la collecte des données d'utilisation peut être désactivée pour la batterie de serveurs. Un administrateur de batterie de serveurs doit activer la journalisation pour créer les données d’utilisation qui s’affichent dans le tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
- Pour plus d’informations sur les données d’utilisation figurant dans le tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], consultez [Tableau de bord de gestion Power Pivot et données d’utilisation](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
+ Pour plus d’informations sur les données d’utilisation figurant dans le tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , consultez [Tableau de bord de gestion Power Pivot et données d’utilisation](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
  **Dans cette rubrique :**  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 9
   
 6.  Cliquez sur **OK** pour enregistrer vos modifications.  
   
-7.  Vous pouvez éventuellement spécifier si tous les messages sont journalisés, ou uniquement les erreurs. Pour plus d’informations sur la limitation des messages d’événement, consultez [Configurer et afficher les fichiers journaux SharePoint et la journalisation des diagnostics &#40;PowerPivot pour SharePoint&#41;](../Topic/Configure%20and%20View%20SharePoint%20Log%20Files%20%20and%20Diagnostic%20Logging%20\(Power%20Pivot%20for%20SharePoint\).md).  
+7.  Vous pouvez éventuellement spécifier si tous les messages sont journalisés, ou uniquement les erreurs. Pour plus d’informations sur la limitation des messages d’événement, consultez [Configurer et afficher les fichiers journaux SharePoint et la journalisation des diagnostics &#40;PowerPivot pour SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
 ##  <a name="configdb"></a> Définir l'emplacement du fichier journal  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont stockées initialement dans les fichiers journaux d’utilisation sur le serveur local, puis déplacées régulièrement vers les bases de données d’application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . L'emplacement du fichier journal est défini dans l'Administration centrale. L'emplacement par défaut est :  
@@ -89,7 +94,7 @@ caps.handback.revision: 9
   
 -   Le travail du minuteur « Importation des données d’utilisation de Microsoft SharePoint Foundation » déplace les données d’utilisation [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vers la base de données d’application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
--   Le travail du minuteur chargé de traiter le tableau de bord de gestion des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] déplace les données vers un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui est la source des données des rapports d’administration intégrés.  
+-   Le travail du minuteur chargé de traiter le tableau de bord de gestion des données[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] déplace les données vers un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui est la source des données des rapports d’administration intégrés.  
   
  Si vous devez actualiser plus fréquemment les rapports d’administration affichés dans le tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , procédez comme suit.  
   
@@ -129,7 +134,7 @@ caps.handback.revision: 9
  Pour plus d’informations sur la collecte et le stockage des données d’utilisation, consultez [Collecte des données d’utilisation Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md).  
   
 ##  <a name="qrh"></a> Définir des catégories de temps de réponse aux requêtes lents, moyens et rapides à des fins de création de rapports  
- Les performances de traitement des requêtes sont mesurées par rapport à des catégories prédéfinies qui définissent un cycle de requête-réponse en fonction de sa durée d'exécution. Les catégories prédéfinies sont les suivantes : Triviale, Rapide, Attendue, Longue et Hors limite. Chaque demande envoyée à un serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] relève de l’une des catégories en fonction de sa durée d’exécution.  
+ Les performances de traitement des requêtes sont mesurées par rapport à des catégories prédéfinies qui définissent un cycle de requête-réponse en fonction de sa durée d'exécution. Les catégories prédéfinies sont les suivantes : Triviale, Rapide, Attendue, Longue et Hors limite. Chaque demande envoyée à un serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] relève de l’une des catégories en fonction de sa durée d’exécution.  
   
  Les informations de réponse à une requête sont utilisées dans les rapports d'activité. Dans les rapports, chaque catégorie est utilisée différemment pour déterminer plus efficacement l’évolution des performances du système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Par exemple, les demandes triviales sont totalement exclues, car leur exclusion supprime le bruit dans les données et affiche des tendances plus significatives avec les catégories restantes. Par opposition, les statistiques sur les demandes longues ou hors limite sont les plus importantes dans le rapport afin que les administrateurs ou les propriétaires de classeurs puissent entreprendre l'action corrective sur le champ.  
   
@@ -137,13 +142,13 @@ caps.handback.revision: 9
   
 1.  [Ouvrez la page Application de service PowerPivot](#openconfig).  
   
-2.  Dans la section **Collecte des données d’utilisation**, sous **Limite supérieure de réponse triviale**, entrez une valeur (en millisecondes) définissant la limite supérieure d’exécution d’une réponse triviale. En général, les demandes faisant partie de cette catégorie sont les suivantes : requête ping de serveur, initiation de session et requête de métadonnées. La valeur par défaut est 500 millisecondes (une demi-seconde).  
+2.  Dans la section **Collecte des données d’utilisation** , sous **Limite supérieure de réponse triviale** , entrez une valeur (en millisecondes) définissant la limite supérieure d’exécution d’une réponse triviale. En général, les demandes faisant partie de cette catégorie sont les suivantes : requête ping de serveur, initiation de session et requête de métadonnées. La valeur par défaut est 500 millisecondes (une demi-seconde).  
   
-3.  Dans Limite supérieure des demandes rapides, entrez une valeur (en millisecondes) qui définit la limite supérieure pour l'exécution d'une réponse rapide. Les demandes faisant partie de cette catégorie sont les suivantes : requêtes de datasets très petits ou serveurs de métadonnées de datasets importants. La valeur par défaut est 1 000 millisecondes (une seconde).  
+3.  Dans Limite supérieure des demandes rapides, entrez une valeur (en millisecondes) qui définit la limite supérieure pour l'exécution d'une réponse rapide. Les demandes faisant partie de cette catégorie sont les suivantes : requêtes de datasets très petits ou serveurs de métadonnées de datasets importants. La valeur par défaut est 1 000 millisecondes (une seconde).  
   
-4.  Dans la section **Limite supérieure de réponse attendue**, entrez une valeur (en millisecondes) définissant la limite supérieure pour l’exécution d’une réponse dans un laps de temps moyen ou attendu. Les demandes qui font partie de cette catégorie incluent le chargement de données dans une visionneuse. La valeur par défaut est 3 000 millisecondes (trois secondes).  
+4.  Dans la section **Limite supérieure de réponse attendue**, entrez une valeur (en millisecondes) définissant la limite supérieure pour l’exécution d’une réponse dans un laps de temps moyen ou attendu. Les demandes qui font partie de cette catégorie incluent le chargement de données dans une visionneuse. La valeur par défaut est 3 000 millisecondes (trois secondes).  
   
-5.  Dans la section **Limite supérieure de réponse longue**, entrez une valeur (en millisecondes) définissant la limite supérieure pour l’exécution d’une réponse longue. Les demandes faisant partie de cette catégorie ont une durée d'exécution plus longue que prévue, qui reste cependant dans une plage acceptable. La valeur par défaut est 10 000 millisecondes (dix secondes).  
+5.  Dans la section **Limite supérieure de réponse longue**, entrez une valeur (en millisecondes) définissant la limite supérieure pour l’exécution d’une réponse longue. Les demandes faisant partie de cette catégorie ont une durée d'exécution plus longue que prévue, qui reste cependant dans une plage acceptable. La valeur par défaut est 10 000 millisecondes (dix secondes).  
   
      Les requêtes qui dépassent cette limite sont classées comme étant *Hors limite*. Il n'existe pas de seuil configurable pour *Hors limite*. Ce seuil est déduit de la limite supérieure que vous spécifiez pour Limite supérieure des demandes longues. Les requêtes appartenant à la catégorie Hors limite ont une durée d'exécution plus longue que celle autorisée par un contrat SLA que vous avez défini.  
   
@@ -154,11 +159,11 @@ caps.handback.revision: 9
   
 1.  [Ouvrez la page Application de service PowerPivot](#openconfig).  
   
-2.  Dans la section **Collecte des données d’utilisation**, sous **Intervalle de création de rapports de requête**, entrez le nombre de secondes au terme duquel le serveur consignera les statistiques sur les requêtes pour toutes les catégories (triviale, rapide, attendue, longue et hors limite) sous la forme d’un événement unique dans le système de collecte des données d’utilisation.  
+2.  Dans la section **Collecte des données d’utilisation** , sous **Intervalle de création de rapports de requête**, entrez le nombre de secondes au terme duquel le serveur consignera les statistiques sur les requêtes pour toutes les catégories (triviale, rapide, attendue, longue et hors limite) sous la forme d’un événement unique dans le système de collecte des données d’utilisation.  
   
     -   La plage valide est comprise entre 1 et n'importe quel entier positif.  
   
-    -   La valeur par défaut est 300 secondes (cinq minutes). Cette valeur est recommandée pour les environnements de batterie de serveurs dynamiques qui exécutent divers services et applications.  
+    -   La valeur par défaut est 300 secondes (cinq minutes). Cette valeur est recommandée pour les environnements de batterie de serveurs dynamiques qui exécutent divers services et applications.  
   
      Si vous définissez un nombre beaucoup plus élevé, vous risquez de perdre des données statistiques avant qu'elles ne soient consignées. Par exemple, le redémarrage d'un service entraînera la perte des statistiques sur les requêtes. Inversement, si vos rapports d'activité intégrés affichent des données insuffisantes, vous pouvez diminuer la fréquence pour obtenir plus souvent des événements d'intervalle de création de rapports.  
   
@@ -182,15 +187,15 @@ caps.handback.revision: 9
   
 |Paramètre|Valeur par défaut|Type|Plage valide|  
 |-------------|-------------------|----------|-----------------|  
-|**Événements d’utilisation Analysis Services** (connexion, chargement, déchargement, requêtes)|\<enabled>|Booléen|Ces valeurs sont activées ou désactivées.|  
-|**Intervalle de création de rapports de requête**|300 (en secondes)|Entier|Comprise entre 1 et n'importe quel entier positif. La valeur par défaut est 5 minutes.|  
-|**Historique des données d'utilisation**|365 (en jours)|Entier|La valeur 0 spécifie une durée illimitée, mais vous pouvez également définir une limite supérieure pour l'expiration des données d'historique qui sont alors automatiquement supprimées. Les valeurs valides pour une période de rétention limitée sont comprises entre 1 et 5 000 (en jours).|  
-|Limite supérieure de réponse triviale|500 (en millisecondes)|Entier|Définit une limite maximale qui définit un échange requête-réponse triviale. Toute demande dont la durée d'exécution est comprise entre 0 et 500 millisecondes est une demande triviale ; elle est ignorée à des fins de création de rapports.|  
+|**Événements d’utilisation Analysis Services** (connexion, chargement, déchargement, requêtes)|\<activé >|Booléen|Ces valeurs sont activées ou désactivées.|  
+|**Query Reporting interval**|300 (en secondes)|Entier|Comprise entre 1 et n'importe quel entier positif. La valeur par défaut est 5 minutes.|  
+|**Usage data history**|365 (en jours)|Entier|La valeur 0 spécifie une durée illimitée, mais vous pouvez également définir une limite supérieure pour l'expiration des données d'historique qui sont alors automatiquement supprimées. Les valeurs valides pour une période de rétention limitée sont comprises entre 1 et 5 000 (en jours).|  
+|Limite supérieure de réponse triviale|500 (en millisecondes)|Entier|Définit une limite maximale qui définit un échange requête-réponse triviale. Toute demande dont la durée d'exécution est comprise entre 0 et 500 millisecondes est une demande triviale ; elle est ignorée à des fins de création de rapports.|  
 |Limite supérieure de réponse rapide|1000 (en millisecondes)|Entier|Définit une limite maximale qui définit un échange requête-réponse rapide.|  
 |Limite supérieure de réponse attendue|3000 (en millisecondes)|Entier|Définit une limite maximale qui définit un échange requête-réponse attendue.|  
-|Limite supérieure de réponse longue|10 000 (en millisecondes)|Entier|Définit une limite maximale qui définit un échange requête-réponse long. Toute demande qui dépasse cette limite est classée dans la catégorie Hors limite pour laquelle il n'existe pas de seuil maximal.|  
+|Limite supérieure de réponse longue|10 000 (en millisecondes)|Entier|Définit une limite maximale qui définit un échange requête-réponse long. Toute demande qui dépasse cette limite est classée dans la catégorie Hors limite pour laquelle il n'existe pas de seuil maximal.|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Référence de paramètre de configuration &#40;Power Pivot pour SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Collecte des données d’utilisation Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
   

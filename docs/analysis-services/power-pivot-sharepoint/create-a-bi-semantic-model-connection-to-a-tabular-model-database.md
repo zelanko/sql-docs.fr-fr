@@ -1,24 +1,29 @@
 ---
-title: "Cr&#233;er une connexion de mod&#232;le s&#233;mantique BI &#224; une base de donn&#233;es model tabulaire | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Créer une connexion de modèle sémantique BI vers une base de données de modèle tabulaire | Documents Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7c4e9b6b1814994caf778e0c3d50a69ffc70d4ee
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cr&#233;er une connexion de mod&#232;le s&#233;mantique BI &#224; une base de donn&#233;es model tabulaire
+# <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Créer une connexion de modèle sémantique BI à une base de données model tabulaire
   Utilisez les informations de cette rubrique pour configurer une connexion de modèle sémantique BI qui redirige vers une base de données model tabulaire qui s'exécute sur une instance Analysis Services en dehors de la batterie SharePoint.  
   
  Après avoir créé une connexion de modèle sémantique BI et configuré les autorisations SharePoint et Analysis Services, les utilisateurs peuvent l'utiliser comme source de données pour les rapports Excel ou [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
@@ -40,7 +45,7 @@ caps.handback.revision: 16
 ##  <a name="bkmk_prereq"></a> Examiner la configuration requise  
  Vous devez disposer d'autorisations Collaboration ou supérieures pour créer un fichier de connexion de modèle sémantique BI.  
   
- Vous devez disposer d'une bibliothèque qui prend en charge le type de contenu Connexion de modèle sémantique BI. Pour plus d’informations, consultez [Ajouter un type de contenu de connexion du modèle sémantique BI à une bibliothèque &#40;Power Pivot pour SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add bi semantic model connection content type to library.md).  
+ Vous devez disposer d'une bibliothèque qui prend en charge le type de contenu Connexion de modèle sémantique BI. Pour plus d’informations, consultez [Ajouter un type de contenu de connexion du modèle sémantique BI à une bibliothèque &#40;Power Pivot pour SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md).  
   
  Vous devez connaître le serveur et le nom de la base de données pour lesquels vous configurez une connexion de modèle sémantique BI. Analysis Services doit être configuré pour le mode tabulaire. Les bases de données qui s'exécutent sur le serveur doivent être des bases de données model tabulaires. Pour obtenir des instructions sur la recherche du mode serveur, consultez [Déterminer le mode serveur d’une instance Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 16
   
  Les rôles, et parfois l'appartenance au rôle, sont définis lorsque le modèle est créé dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Vous ne pouvez pas utiliser SQL Server Management Studio pour créer des rôles, mais vous pouvez l'utiliser pour ajouter des membres à un rôle qui est déjà défini. Pour plus d’informations sur la création de rôles, consultez [Créer et gérer des rôles &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
   
-#### Assigner l'appartenance au rôle  
+#### <a name="assign-role-membership"></a>Assigner l'appartenance au rôle  
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous à l'instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], développez la base de données dans l'Explorateur d'objets, puis développez **Rôles**. Vous devez voir un rôle qui est déjà défini. S'il n'existe aucun rôle, contactez l'auteur du modèle et demandez l'ajout d'un rôle. Le modèle doit être redéployé avant que le rôle soit visible dans Management Studio.  
   
@@ -99,9 +104,9 @@ caps.handback.revision: 16
   
 3.  Définissez à la fois les propriétés du **Serveur** et de la **Base de données** . Si vous n'êtes pas sûr du nom de la base de données, utilisez SQL Server Management Studio pour consulter la liste des bases de données déployées sur le serveur.  
   
-     **Nom du serveur** est le nom réseau du serveur, l’adresse IP ou le nom de domaine complet (par exemple, myserver.mydomain.corp.adventure-works.com). Si le serveur est installé comme une instance nommée, entrez le nom du serveur selon ce format : nomordinateur\nominstance.  
+     **Nom du serveur** est le nom réseau du serveur, l’adresse IP ou le nom de domaine complet (par exemple, myserver.mydomain.corp.adventure-works.com). Si le serveur est installé comme une instance nommée, entrez le nom du serveur selon ce format : nomordinateur\nominstance.  
   
-     **Base de données** doit être une base de données tabulaire actuellement disponible sur le serveur. Ne spécifiez pas un autre fichier de connexion de modèle sémantique BI, un fichier Office Data Connection (.odc), une base de données OLAP Analysis Services ni un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Pour obtenir le nom de la base de données, vous pouvez utiliser Management Studio pour vous connecter au serveur et afficher la liste des bases de données disponibles. Utilisez la page de propriétés de la base de données pour vous assurer d'utiliser le nom correct.  
+     **Base de données** doit être une base de données tabulaire actuellement disponible sur le serveur. Ne spécifiez pas un autre fichier de connexion de modèle sémantique BI, un fichier Office Data Connection (.odc), une base de données OLAP Analysis Services ni un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Pour obtenir le nom de la base de données, vous pouvez utiliser Management Studio pour vous connecter au serveur et afficher la liste des bases de données disponibles. Utilisez la page de propriétés de la base de données pour vous assurer d'utiliser le nom correct.  
   
 4.  Cliquez sur **OK** pour enregistrer la page. À ce stade, l’application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vérifie la connexion.  
   
@@ -143,7 +148,7 @@ caps.handback.revision: 16
 ##  <a name="bkmk_next"></a> Étapes suivantes  
  Après avoir créé et sécurisé une connexion de modèle sémantique BI, vous pouvez la spécifier en tant que source de données. Pour plus d’informations, consultez [Utiliser une connexion de modèle sémantique BI dans Excel ou Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Connexion de modèle sémantique BI Power Pivot &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
  [Créer une connexion du modèle sémantique BI à un classeur PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   

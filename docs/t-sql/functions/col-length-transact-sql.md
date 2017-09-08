@@ -1,0 +1,93 @@
+---
+title: COL_LENGTH (Transact-SQL) | Documents Microsoft
+ms.custom: 
+ms.date: 07/24/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- COL_LENGTH
+- COL_LENGTH_TSQL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- lengths [SQL Server], columns
+- COL_LENGTH function
+- column properties [SQL Server]
+- column length [SQL Server]
+ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
+caps.latest.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 3e0debbe52f8e0bbff8e8f7cc0d6509e1e9436b5
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="collength-transact-sql"></a>COL_LENGTH (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+Renvoie la longueur définie d'une colonne, exprimée en octets.
+  
+![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+  
+## <a name="syntax"></a>Syntaxe  
+  
+```sql
+COL_LENGTH ( 'table' , 'column' )   
+```  
+  
+## <a name="arguments"></a>Arguments  
+**'** *table* **'**  
+Nom de la table dont les informations de longueur de colonne doivent être déterminées. *table* est une expression de type **nvarchar**.
+  
+**'** *colonne* **'**  
+Nom de la colonne dont la longueur doit être déterminée. *colonne* est une expression de type **nvarchar**.
+  
+## <a name="return-type"></a>Type de retour
+**smallint**
+  
+## <a name="exceptions"></a>Exceptions  
+Retourne la valeur NULL en cas d'erreur ou si un appelant n'est pas autorisé à afficher l'objet.
+  
+Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un utilisateur peut voir uniquement les métadonnées des éléments sécurisables qui lui appartiennent ou pour lesquels il dispose d'un droit d'accès. Cela signifie que les fonctions intégrées générant des métadonnées, telles que COL_LENGTH, peuvent retourner la valeur NULL si l'utilisateur ne dispose d'aucune autorisation sur l'objet. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
+  
+## <a name="remarks"></a>Notes  
+Pour les colonnes de type **varchar** déclaré avec le **max** spécificateur (**varchar (max)**), COL_LENGTH retourne la valeur – 1.
+  
+## <a name="examples"></a>Exemples  
+L'exemple suivant montre les valeurs renvoyées pour une colonne de type `varchar(40)` et pour une colonne de type `nvarchar(40)`.
+  
+```sql
+USE AdventureWorks2012;  
+GO  
+CREATE TABLE t1(c1 varchar(40), c2 nvarchar(40) );  
+GO  
+SELECT COL_LENGTH('t1','c1')AS 'VarChar',  
+      COL_LENGTH('t1','c2')AS 'NVarChar';  
+GO  
+DROP TABLE t1;  
+```  
+  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+  
+```sql
+VarChar     NVarChar  
+40          80  
+```  
+  
+## <a name="see-also"></a>Voir aussi
+[Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+[Fonctions de métadonnées &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[COL_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/col-name-transact-sql.md)  
+[COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)
+  
+  
+

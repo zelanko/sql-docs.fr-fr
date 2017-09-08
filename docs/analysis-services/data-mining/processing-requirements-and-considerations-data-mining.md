@@ -1,27 +1,32 @@
 ---
-title: "Exigences et consid&#233;rations concernant le traitement (exploration de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "exploration de données [Analysis Services], objets"
-  - "structures d’exploration de données [Analysis Services], traitement"
-  - "modèles d’exploration de données [Analysis Services], traitement"
+title: "Le traitement de la configuration requise et considérations (exploration de données) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], objects
+- mining structures [Analysis Services], processing
+- mining models [Analysis Services], processing
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c2a677617feb9ade819df897e2ca2418bfce8d2a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Exigences et consid&#233;rations concernant le traitement (exploration de donn&#233;es)
+# <a name="processing-requirements-and-considerations-data-mining"></a>Exigences et considérations concernant le traitement (exploration de données)
   Cette rubrique décrit quelques considérations techniques que vous devez garder à l'esprit lors du traitement des objets d'exploration de données. Pour une présentation générale du traitement et de la manière dont il s’applique à l’exploration de données, consultez [Traitement des objets d’exploration de données](../../analysis-services/data-mining/processing-data-mining-objects.md).  
   
  [Requêtes sur le magasin relationnel](#bkmk_QueryReqs)  
@@ -31,11 +36,11 @@ caps.handback.revision: 30
  [Traitement des modèles d'exploration de données](#bkmk_ProcessModels)  
   
 ##  <a name="bkmk_QueryReqs"></a> Requêtes sur le magasin relationnel au cours du traitement  
- Pour l'exploration de données, le traitement s'effectue en trois phases : l'interrogation des données sources, la détermination des statistiques brutes et l'utilisation de la définition et de l'algorithme du modèle pour l'apprentissage du modèle d'exploration de données.  
+ Pour l'exploration de données, le traitement s'effectue en trois phases : l'interrogation des données sources, la détermination des statistiques brutes et l'utilisation de la définition et de l'algorithme du modèle pour l'apprentissage du modèle d'exploration de données.  
   
  Le serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] émet des requêtes vers la base de données qui fournit les données brutes. Cette base de données peut être une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou d’une version antérieure du moteur de base de données SQL Server. Pendant le traitement d’une structure d’exploration de données, les données de la source sont transférées à cette structure et conservées sur le disque dans un nouveau format compressé. Seules certaines colonnes de la source de données sont traitées : il s’agit des colonnes incluses dans la structure d’exploration de données, comme défini par les liaisons.  
   
- À l'aide de ces données, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] génère un index de toutes les données et colonnes discrétisées, et crée un index séparé pour les colonnes continues. Une requête est émise pour chaque table imbriquée pour créer l'index. De plus, une requête supplémentaire par table imbriquée est générée pour traiter les relations entre chaque paire table imbriquée/table de cas. La raison pour laquelle il convient de créer plusieurs requêtes est le traitement d'une banque de données multidimensionnelle interne spéciale. Vous pouvez limiter le nombre de requêtes qu’[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] envoie au magasin relationnel en définissant la propriété de serveur **DatabaseConnectionPoolMax**. Pour plus d’informations, consultez [Propriétés OLAP](../../analysis-services/server-properties/olap-properties.md).  
+ À l'aide de ces données, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] génère un index de toutes les données et colonnes discrétisées, et crée un index séparé pour les colonnes continues. Une requête est émise pour chaque table imbriquée pour créer l'index. De plus, une requête supplémentaire par table imbriquée est générée pour traiter les relations entre chaque paire table imbriquée/table de cas. La raison pour laquelle il convient de créer plusieurs requêtes est le traitement d'une banque de données multidimensionnelle interne spéciale. Vous pouvez limiter le nombre de requêtes qu’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] envoie au magasin relationnel en définissant la propriété de serveur **DatabaseConnectionPoolMax**. Pour plus d’informations, consultez [Propriétés OLAP](../../analysis-services/server-properties/olap-properties.md).  
   
  Lors du traitement du modèle, celui-ci ne relit pas les données à partir de la source de données, mais il récupère à la place un résumé des données à partir de la structure d'exploration de données. À l'aide du cube qui a été créé, ainsi que des données d'index et de cas mises en cache, le serveur crée des threads indépendants pour l'apprentissage des modèles.  
   
@@ -57,20 +62,20 @@ caps.handback.revision: 30
   
  Toutefois, dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous ne pouvez pas sélectionner plusieurs modèles d’exploration de données à traiter avec la structure. Si vous devez contrôler les modèles traités, vous devez les sélectionner individuellement, ou utiliser XMLA ou DMX pour les traiter en série.  
   
-## Lorsqu'un retraitement est requis  
+## <a name="when-reprocessing-is-required"></a>Lorsqu'un retraitement est requis  
  Vous devez traiter les modèles [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que vous définissez avant de commencer à les utiliser. Vous devez également retraiter les modèles d'exploration de données chaque fois que vous modifiez la structure d'exploration de données, mettez à jour les données d'apprentissage, modifiez un modèle d'exploration de données existant ou ajoutez un nouveau modèle d'exploration de données à la structure.  
   
- Les modèles d'exploration de données sont également traités dans les scénarios suivants :  
+ Les modèles d'exploration de données sont également traités dans les scénarios suivants :  
   
- **Déploiement d’un projet** : en fonction des paramètres et de l’état actuel du projet, les modèles d’exploration de données du projet sont généralement traités intégralement quand le projet est déployé.  
+ **Déploiement d’un projet**: en fonction des paramètres et de l’état actuel du projet, les modèles d’exploration de données du projet sont généralement traités intégralement quand le projet est déployé.  
   
- Lorsque vous commencez le déploiement, le traitement démarre automatiquement, à moins qu'il n'existe une version préalablement traitée sur le serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et qu'aucune modification sur la structure n'ait eu lieu. Vous pouvez déployer un projet en sélectionnant **Déployer la solution** dans la liste déroulante ou en appuyant sur la touche F5. Plusieurs possibilités s'offrent à vous :  
+ Lorsque vous commencez le déploiement, le traitement démarre automatiquement, à moins qu'il n'existe une version préalablement traitée sur le serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et qu'aucune modification sur la structure n'ait eu lieu. Vous pouvez déployer un projet en sélectionnant **Déployer la solution** dans la liste déroulante ou en appuyant sur la touche F5. Plusieurs possibilités s'offrent à vous :  
   
- Pour plus d’informations sur la définition des propriétés de déploiement d’[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui contrôlent la manière dont les modèles d’exploration de données sont déployés, consultez [Déploiement de solutions d’exploration de données](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md).  
+ Pour plus d’informations sur la définition des propriétés de déploiement d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui contrôlent la manière dont les modèles d’exploration de données sont déployés, consultez [Déploiement de solutions d’exploration de données](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md).  
   
- **Déplacement d’un modèle d’exploration de données** : quand vous déplacez un modèle d’exploration de données à l’aide de la commande EXPORT, seule la définition du modèle est exportée, laquelle comprend le nom de la structure d’exploration de données qui doit fournir des données au modèle.  
+ **Déplacement d’un modèle d’exploration de données**: quand vous déplacez un modèle d’exploration de données à l’aide de la commande EXPORT, seule la définition du modèle est exportée, laquelle comprend le nom de la structure d’exploration de données qui doit fournir des données au modèle.  
   
- Exigences de retraitement pour les scénarios suivants utilisant les commandes EXPORT et IMPORT :  
+ Exigences de retraitement pour les scénarios suivants utilisant les commandes EXPORT et IMPORT :  
   
 -   La structure d'exploration de données existe sur l'instance cible et la structure d'exploration de données est dans un état non traité.  
   
@@ -86,7 +91,7 @@ caps.handback.revision: 30
   
  Pour plus d’informations, consultez [Exporter et importer des objets d’exploration de données](../../analysis-services/data-mining/export-and-import-data-mining-objects.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Traitement d’un modèle multidimensionnel &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  

@@ -1,27 +1,32 @@
 ---
-title: "Inscrire une instance Analysis Services dans un groupe de serveurs | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Inscrire une Instance Analysis Services dans un groupe de serveurs | Documents Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5fd3826b-8f75-48eb-910c-bf784163e53b
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7096b27b40d42ce11035feee9871a151c1460c76
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Inscrire une instance Analysis Services dans un groupe de serveurs
+# <a name="register-an-analysis-services-instance-in-a-server-group"></a>Inscrire une instance Analysis Services dans un groupe de serveurs
   Si vous utilisez un grand nombre d'instances de serveur Analysis Services, vous pouvez créer des groupes de serveurs dans Management Studio pour faciliter l'administration des serveurs. La finalité d'un groupe de serveurs est d'assurer la proximité au sein d'un groupe de serveurs associés dans l'espace de travail d'administration. Par exemple, supposons que votre rôle consiste à gérer dix instances distinctes d'Analysis Services. En les regroupant par mode serveur, par critères de temps d'exécution ou par service ou région, vous pouvez afficher les instances qui partagent les mêmes caractéristiques et vous y connecter plus facilement. Vous pouvez également ajouter des informations descriptives qui vous permettent de vous souvenir du mode d'utilisation du serveur.  
   
- ![Volet Serveur inscrit avec des serveurs membres](../../analysis-services/instances/media/ssas-ssms-registerserver.gif "Volet Serveur inscrit avec des serveurs membres")  
+ ![Volet de serveur inscrit avec les serveurs membres](../../analysis-services/instances/media/ssas-ssms-registerserver.gif "volet serveur inscrit avec des serveurs membres")  
   
  Les groupes de serveurs peuvent être créés dans une structure hiérarchique. Le groupe de serveurs locaux est le nœud racine. Il contient toujours les instances d'Analysis Services qui s'exécutent sur l'ordinateur local. Vous pouvez ajouter des serveurs distants à n'importe quel groupe, y compris le groupe local.  
   
@@ -29,7 +34,7 @@ caps.handback.revision: 8
   
  Les informations de connexion définies pour le serveur, notamment le nom du serveur, sont conservées avec l'inscription du serveur. Vous ne pouvez pas modifier les informations de connexion ni utiliser le nom enregistré en cas de connexion au serveur à l'aide d'autres outils.  
   
-## Créer un groupe de serveurs et ajouter des serveurs inscrits  
+## <a name="create-a-server-group-and-add-registered-servers"></a>Créer un groupe de serveurs et ajouter des serveurs inscrits  
   
 1.  Dans Management Studio, cliquez sur Serveurs inscrits dans le menu Affichage pour ouvrir le volet Serveurs inscrits dans l'espace de travail. Par défaut, un groupe de serveurs locaux est déjà créé. Toutes les instances d'Analysis Services qui s'exécutent sur le serveur local en sont membres.  
   

@@ -1,34 +1,39 @@
 ---
-title: "Surveiller Analysis Services avec des &#233;v&#233;nements &#233;tendus SQL Server | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "XEvents"
-  - "Sql13.ssms.XeASNewEventSession.General.f1"
-  - "Sql13.ssms.XeASNewEventSession.Events.f1"
-  - "Sql13.ssms.XeASNewEventSession.Targets.f1"
-  - "Sql13.ssms.XeASNewEventSession.Advanced.f1"
+title: "Surveiller Analysis Services avec les événements étendus SQL Server | Documents Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- XEvents
+- Sql13.ssms.XeASNewEventSession.General.f1
+- Sql13.ssms.XeASNewEventSession.Events.f1
+- Sql13.ssms.XeASNewEventSession.Targets.f1
+- Sql13.ssms.XeASNewEventSession.Advanced.f1
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cec6da660c202dfde5a1169dd34397fca5c51207
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Surveiller Analysis Services avec des &#233;v&#233;nements &#233;tendus SQL Server
+# <a name="monitor-analysis-services-with-sql-server-extended-events"></a>Surveiller Analysis Services avec des événements étendus SQL Server
   Les événements étendus (*xEvents*) est un système léger de traçage et de surveillance des performances qui utilise très peu de ressources système. C’est un outil idéal pour diagnostiquer les problèmes sur les serveurs de production et de test. Il est également hautement évolutif et configurable, et plus facile à utiliser dans SQL Server 2016 grâce à la prise en charge de nouveaux outils intégrés. Dans SQL Server Management Studio, vous pouvez configurer, exécuter et surveiller sur les connexions aux instances Analysis Services un traçage en direct, d’une manière similaire à l’utilisation du SQL Server Profiler. L’ajout d’outils optimisés doit faire des xEvents un remplacement plus raisonnable du SQL Server Profiler et crée une meilleure symétrie plus dans la façon dont vous diagnostiquez des problèmes dans votre moteur de base de données et les charges de travail Analysis Services.  
   
- Outre [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous pouvez configurer des sessions d’événements étendus [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l’aide de scripts XMLA, de la même manière que dans les versions antérieures.  
+ Outre [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous pouvez configurer des sessions d’événements étendus  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l’aide de scripts XMLA, de la même manière que dans les versions antérieures.  
   
  Tous les événements Analysis Services peuvent être capturés et ciblés sur des consommateurs spécifiques, comme défini dans [Événements étendus](../../relational-databases/extended-events/extended-events.md).  
   
@@ -48,11 +53,11 @@ caps.handback.revision: 11
   
  **Choix des événements**  
   
- Si vous connaissez déjà les événements à capturer, le moyen le plus simple de les ajouter à la trace est de les rechercher. Sinon, les événements suivants sont fréquemment utilisés pour les opérations de surveillance :  
+ Si vous connaissez déjà les événements à capturer, le moyen le plus simple de les ajouter à la trace est de les rechercher. Sinon, les événements suivants sont fréquemment utilisés pour les opérations de surveillance :  
   
 -   **CommandBegin** et **CommandEnd**.  
   
--   **QueryBegin**, **QueryEnd** et **QuerySubcubeVerbose** (affiche entièrement la requête MDX ou DAX envoyée au serveur), plus **ResourceUsage** pour les statistiques sur les ressources utilisées par la requête et le nombre de lignes retournées.  
+-   **QueryBegin**, **QueryEnd**et **QuerySubcubeVerbose** (affiche entièrement la requête MDX ou DAX envoyée au serveur), plus **ResourceUsage** pour les statistiques sur les ressources utilisées par la requête et le nombre de lignes retournées.  
   
 -   **ProgressReportBegin** et **ProgressReportEnd** (pour les opérations de traitement).  
   
@@ -72,20 +77,20 @@ caps.handback.revision: 11
   
  Veillez à configurer la session de manière à inclure des champs d’événement afin de pouvoir facilement voir les informations qui vous intéressent.  
   
- L’option **Configurer** se trouve à l’extrémité de la boîte de dialogue.  
+ L’option**Configurer** se trouve à l’extrémité de la boîte de dialogue.  
   
- ![ssas-xevents-configure](../../analysis-services/instances/media/ssas-xevents-configure.PNG "ssas-xevents-configure")  
+ ![configurer SSAS-xevents](../../analysis-services/instances/media/ssas-xevents-configure.PNG "configurer ssas-événements étendus")  
   
  Dans la configuration, sous l’onglet Champs d’événement, sélectionnez **TextData** pour que ce champ s’affiche en regard de l’événement en indiquant les valeurs de retour, notamment les requêtes exécutées sur le serveur.  
   
- Après avoir configuré une session pour les événements et le stockage de données souhaités, vous pouvez cliquer sur le bouton de script pour envoyer votre configuration vers l’une des destinations prises en charge, y compris un fichier, une nouvelle requête dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et le Presse-papiers.  
+ Après avoir configuré une session pour les événements et le stockage de données souhaités, vous pouvez cliquer sur le bouton de script pour envoyer votre configuration vers l’une des destinations prises en charge, y compris un fichier, une nouvelle requête dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]et le Presse-papiers.  
   
  **Actualisation de Sessions**  
   
  Une fois la session créée, veillez à actualiser le dossier Sessions dans Management Studio pour voir la session que vous venez de créer. Si vous avez configuré un event_stream, vous pouvez cliquer sur le nom de la session et choisir **Surveiller les données actives** pour surveiller l’activité du serveur en temps réel.  
   
 ##  <a name="bkmk_script_start"></a> Script XMLA pour démarrer les événements étendus dans Analysis Services  
- Le traçage d'événements étendus est activé à l'aide d'une commande de script de création d'objet XMLA semblable à celle ci-dessous :  
+ Le traçage d'événements étendus est activé à l'aide d'une commande de script de création d'objet XMLA semblable à celle ci-dessous :  
   
 ```  
 <Execute …>  
@@ -117,13 +122,13 @@ caps.handback.revision: 11
   
 ```  
   
- Les éléments suivants seront définis par l'utilisateur, selon les besoins de suivi :  
+ Les éléments suivants seront définis par l'utilisateur, selon les besoins de suivi :  
   
  *trace_id*  
  Définit l'identificateur unique pour cette trace.  
   
  *trace_name*  
- Nom donné à cette trace ; habituellement une définition compréhensible de la trace. On utilise généralement la valeur *trace_id* comme nom.  
+ Nom donné à cette trace ; habituellement une définition compréhensible de la trace. On utilise généralement la valeur *trace_id* comme nom.  
   
  *AS_event*  
  Événement Analysis Services à exposer. Consultez [Événements de trace Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md) pour les noms des événements.  
@@ -136,10 +141,10 @@ caps.handback.revision: 11
   
 ||  
 |-|  
-|![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Dans cette rubrique](#bkmk_top)|  
+|![Icône de flèche utilisée avec différée lien en haut](../../analysis-services/instances/media/uparrow16x16.gif "icône de flèche utilisée avec différée lien en haut") [dans cette rubrique](#bkmk_top)|  
   
 ##  <a name="bkmk_script_stop"></a> Script XMLA pour arrêter les événements étendus dans Analysis Services  
- Pour arrêter les événements étendus qui tracent l'objet, vous devez supprimer cet objet à l'aide d'une commande de script de suppression d'objet XMLA semblable à celle ci-dessous :  
+ Pour arrêter les événements étendus qui tracent l'objet, vous devez supprimer cet objet à l'aide d'une commande de script de suppression d'objet XMLA semblable à celle ci-dessous :  
   
 ```  
 <Execute xmlns="urn:schemas-microsoft-com:xml-analysis">  
@@ -157,16 +162,16 @@ caps.handback.revision: 11
   
 ```  
   
- Les éléments suivants seront définis par l'utilisateur, selon les besoins de suivi :  
+ Les éléments suivants seront définis par l'utilisateur, selon les besoins de suivi :  
   
  *trace_id*  
  Définit l'identificateur unique pour la trace à supprimer.  
   
 ||  
 |-|  
-|![Icône de flèche utilisée avec le lien Retour en haut](../../analysis-services/instances/media/uparrow16x16.png "Icône de flèche utilisée avec le lien Retour en haut") [Dans cette rubrique](#bkmk_top)|  
+|![Icône de flèche utilisée avec différée lien en haut](../../analysis-services/instances/media/uparrow16x16.gif "icône de flèche utilisée avec différée lien en haut") [dans cette rubrique](#bkmk_top)|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)  
   
   

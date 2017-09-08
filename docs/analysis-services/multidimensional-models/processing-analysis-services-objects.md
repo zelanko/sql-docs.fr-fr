@@ -1,28 +1,33 @@
 ---
-title: "Traitement des objets Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "objets OLAP [Analysis Services], traitement"
-  - "OLAP (objets) [Analysis Services]"
+title: Pour des objets de traitement Analysis Services | Documents Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLAP objects [Analysis Services], processing
+- OLAP objects [Analysis Services]
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58e0a8da7c8bfeae9d661dc78d264218c7c19b81
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Traitement des objets Analysis Services
-  Le traitement affecte les types d’objets [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] suivants : bases de données, cubes, dimensions, groupes de mesures, partitions, et structures et modèles d’exploration de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour chaque objet, vous pouvez spécifier le niveau de traitement de l’objet ou spécifier l’option Traiter par défaut pour permettre à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de sélectionner automatiquement le niveau optimal de traitement. Pour plus d’informations sur les différents niveaux de traitement pour chaque objet, consultez [Options et paramètres de traitement &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
+# <a name="processing-analysis-services-objects"></a>Traitement des objets Analysis Services
+  Le traitement affecte les types d’objets [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] suivants : bases de données, cubes, dimensions, groupes de mesures, partitions, et structures et modèles d’exploration de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Pour chaque objet, vous pouvez spécifier le niveau de traitement de l’objet ou spécifier l’option Traiter par défaut pour permettre à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de sélectionner automatiquement le niveau optimal de traitement. Pour plus d’informations sur les différents niveaux de traitement pour chaque objet, consultez [Options et paramètres de traitement &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
  Vous devez avoir connaissance des conséquences du comportement de traitement afin de réduire les répercussions négatives. Par exemple, le fait de traiter entièrement une dimension fait passer automatiquement toutes les partitions qui en dépendent à l'état non traité. Cela rend les cubes affectés indisponibles pour les requêtes tant que les partitions dépendantes n'ont pas été traitées.  
   
@@ -79,10 +84,10 @@ caps.handback.revision: 44
  Quand vous traitez un groupe de mesures, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] traite une partie ou l’ensemble des partitions au sein du groupe de mesures, ainsi que toutes les dimensions non traitées qui participent au groupe de mesures. Les particularités du traitement dépendent de l'option de traitement que vous sélectionnez. Vous pouvez traiter un ou plusieurs groupes de mesures dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sans affecter d'autres groupes de mesures dans un cube.  
   
 > [!NOTE]  
->  Vous pouvez traiter des groupes de mesures individuels par programmation ou en utilisant [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Vous ne pouvez pas traiter des groupes de mesures individuels dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ; en revanche, vous pouvez procéder au traitement par partition.  
+>  Vous pouvez traiter des groupes de mesures individuels par programmation ou en utilisant [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Vous ne pouvez pas traiter des groupes de mesures individuels dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]; en revanche, vous pouvez procéder au traitement par partition.  
   
 ##  <a name="bkmk_procpartition"></a> Traitement d'une partition  
- Pour une administration efficace d’[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], il est nécessaire de partitionner les données. Le traitement des partitions est unique car il prend en considération les contraintes d'utilisation et d'espace du disque dur, ainsi que les limitations relatives aux structures de données imposées par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour maintenir des temps de réponse courts pour les requêtes et un débit de traitement élevé, vous devez régulièrement créer, traiter et fusionner des partitions. Il est très important de reconnaître et de gérer le risque d'intégration de données redondantes durant la fusion de partitions. Pour plus d’informations, consultez [Fusionner des partitions dans Analysis Services &#40;SSAS - Multidimensionnel&#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md).  
+ Pour une administration efficace d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , il est nécessaire de partitionner les données. Le traitement des partitions est unique car il prend en considération les contraintes d'utilisation et d'espace du disque dur, ainsi que les limitations relatives aux structures de données imposées par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour maintenir des temps de réponse courts pour les requêtes et un débit de traitement élevé, vous devez régulièrement créer, traiter et fusionner des partitions. Il est très important de reconnaître et de gérer le risque d'intégration de données redondantes durant la fusion de partitions. Pour plus d’informations, consultez [Fusionner des partitions dans Analysis Services &#40;SSAS - Multidimensionnel&#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md).  
   
  Quand vous traitez une partition, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] traite la partition et toutes les dimensions non traitées qui existent dans la partition, en fonction de l’option de traitement que vous sélectionnez. L'utilisation de partitions offre plusieurs avantages pour le traitement. Vous pouvez traiter une partition sans affecter les autres partitions d'un cube. Les partitions sont utiles pour stocker des données sujettes à l'écriture différée de cellule. L'écriture différée est une fonctionnalité qui permet à l'utilisateur d'effectuer une analyse de simulation en écrivant de nouvelles données dans la partition afin de voir les modifications prévues. Une partition d'écriture différée est requise si vous utilisez la fonctionnalité d'écriture différée de cellule de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Le traitement des partitions en parallèle est utile car [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise plus efficacement la puissance de traitement et peut réduire sensiblement le temps total de traitement. Vous pouvez également traiter les partitions de manière séquentielle.  
   
@@ -93,9 +98,9 @@ caps.handback.revision: 44
   
  Pour plus d’informations sur le traitement des structures et des modèles d’exploration de données, consultez [Exigences et considérations concernant le traitement &#40;exploration de données&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Outils et approches de traitement &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
- [Traitement par lots &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+ [Le traitement par lots &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [Traitement d’un modèle multidimensionnel &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

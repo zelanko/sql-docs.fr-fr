@@ -1,37 +1,48 @@
 ---
-title: "Applet de commande New-RestoreLocation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: Applet de commande New-RestoreLocation | Documents Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 5ca13d8c-1c5d-4f02-869c-72e0defce6d7
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: a87852e69b55ea26cb56fe6918d1d4310c339f27
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Applet de commande New-RestoreLocation
+# <a name="new-restorelocation-cmdlet"></a>Applet de commande New-RestoreLocation
+
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
+
   Spécifie les informations utilisées pour restaurer une base de données.  
+
+>[!NOTE] 
+>Cet article peut contenir des exemples et des informations obsolètes. Utilisez l’applet de commande Get-Help pour la dernière version.
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
  `New-RestoreLocation [-File <String>] [-DataSourceId <String>] [-ConnectionString <String>] [-DataSourceType <RestoreDataSourceType>] [-Folders <RestoreFolder[]>] [-AsTemplate] [-Server <String>] [-Credential <PSCredential>] [-Verbose] [-Debug] [-ErrorAction <ActionPreference>] [-WarningAction <ActionPreference>] [-ErrorVariable <String>] [-WarningVariable <String>] [-OutVariable <String>] [-OutBuffer <Int32>] [-WhatIf] [-Confirm]`  
   
  `New-RestoreLocation [-Server <String>] [-Credential <PSCredential>] [-Verbose] [-Debug] [-ErrorAction <ActionPreference>] [-WarningAction <ActionPreference>] [-ErrorVariable <String>] [-WarningVariable <String>] [-OutVariable <String>] [-OutBuffer <Int32>] [-WhatIf] [-Confirm]`  
   
  Les paramètres communs, tels que –Verbose et -Debug, ainsi que les paramètres d'erreur et d'avertissement, -Whatif et –Confirm, sont décrits dans la référence Windows PowerShell. Pour plus d’informations, consultez [about_CommonParameters](http://technet.microsoft.com/library/dd315352.aspx).  
   
-## Description  
+## <a name="description"></a>Description  
  L'applet de commande New-RestoreLocation contient les informations utilisées pour restaurer une base de données, y compris la chaîne de connexion du serveur et de la base de données, des propriétés de la source de données, des fichiers et dossiers associés à la base de données qui est restaurée.  
   
-## Paramètres  
+## <a name="parameters"></a>Paramètres  
   
-### -File \<string>  
+### <a name="-file-string"></a>-Fichier \<chaîne >  
  Spécifie le nom du fichier de sauvegarde que vous restaurez.  
   
 |||  
@@ -42,7 +53,7 @@ caps.handback.revision: 11
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### -DataSourceId \<string>  
+### <a name="-datasourceid-string"></a>-DataSourceId \<chaîne >  
   
 |||  
 |-|-|  
@@ -52,7 +63,7 @@ caps.handback.revision: 11
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### -ConnectionString \<string>  
+### <a name="-connectionstring-string"></a>-ConnectionString \<chaîne >  
  Spécifie la chaîne de connexion d'une instance Analysis Services distante.  
   
 |||  
@@ -63,7 +74,7 @@ caps.handback.revision: 11
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### -DataSourceType \<AS.RestoreDataSourceType>  
+### <a name="-datasourcetype-asrestoredatasourcetype"></a>-DataSourceType \<As. RestoreDataSourceType >  
  Spécifie si la source de données est distante ou locale, selon l'emplacement de la partition.  
   
 |||  
@@ -74,7 +85,7 @@ caps.handback.revision: 11
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### -Folders \<AS.RestoreFolder>  
+### <a name="-folders-asrestorefolder"></a>-Dossiers \<As. RestoreFolder >  
  Spécifie des dossiers de partitions sur l'instance locale ou distante.  
   
 |||  
@@ -85,7 +96,7 @@ caps.handback.revision: 11
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### -AsTemplate \<SwitchParameter>  
+### <a name="-astemplate-switchparameter"></a>-AsTemplate \<Paramètre_booléen >  
  Spécifie si l'objet doit être créé en mémoire et retourné.  
   
 |||  
@@ -96,7 +107,7 @@ caps.handback.revision: 11
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### -Server \<string>  
+### <a name="-server-string"></a>-Serveur \<chaîne >  
  Spécifie l'instance Analysis Services à laquelle l'applet de commande se connectera et qu'il exécutera. Si aucun nom de serveur n'est fourni, une connexion sera établie à localhost. Pour les instances par défaut, spécifiez simplement le nom du serveur. Pour les instances nommées, utilisez le format nom_serveur\nom_instance. Pour les connexions HTTP, utilisez le format http[s]://serveur[:port]/répertoirevirtuel/msmdpump.dll.  
   
 |||  
@@ -107,22 +118,22 @@ caps.handback.revision: 11
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### -Credential \<PSCredential>  
- Ce paramètre est utilisé pour transmettre un nom d'utilisateur et un mot de passe lors de l'utilisation d'une connexion HTTP à une instance Analysis Services, pour une instance que vous avez configurée pour l'accès HTTP. Pour plus d’informations, consultez [Configurer l’accès HTTP à Analysis Services sur Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md) et [Scripts PowerShell dans Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md) pour les connexions HTTP.  
+### <a name="-credential-pscredential"></a>-Credential \<PSCredential >  
+ Ce paramètre est utilisé pour transmettre un nom d'utilisateur et un mot de passe lors de l'utilisation d'une connexion HTTP à une instance Analysis Services, pour une instance que vous avez configurée pour l'accès HTTP. Pour plus d’informations, consultez [configurer l’accès HTTP à Analysis Services sur Internet Information Services &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md) pour les connexions HTTP.  
   
  Si ce paramètre est indiqué, le nom d'utilisateur et le mot de passe seront utilisés pour la connexion à l'instance du serveur d'analyse spécifiée. Si aucune information d'identification n'est indiquée, le compte Windows par défaut de l'utilisateur qui exécute l'outil sera utilisé.  
   
- Pour utiliser ce paramètre, créez d’abord un objet PSCredential à l’aide de Get-Credential pour spécifier le nom d’utilisateur et le mot de passe, par exemple, `$Cred=Get-Credential “adventure-works\bobh”`. Vous pouvez ensuite canaliser cet objet vers le paramètre –Credential `(-Credential:$Cred`).  
+ Pour utiliser ce paramètre, créez d’abord un objet PSCredential à l’aide de Get-Credential pour spécifier le nom d’utilisateur et le mot de passe (par exemple, `$Cred=Get-Credential “adventure-works\bobh”`. Vous pouvez ensuite canaliser cet objet vers le paramètre –Credential `(-Credential:$Cred`).  
   
 |||  
 |-|-|  
 |Requis ?|false|  
 |Position ?|nommée|  
 |Valeur par défaut||  
-|Accepter l'entrée de pipeline ?|True (ByValue)|  
-|Accepter les caractères génériques ?|false|  
+|Accepter l'entrée de pipeline ?|True (ByValue)|  
+|Accepter les caractères génériques ?|false|  
   
-## Entrées et sorties  
+## <a name="inputs-and-outputs"></a>Entrées et sorties  
  Le type d'entrée correspond au type des objets que vous pouvez canaliser vers l'applet de commande. Le type de retour correspond au type des objets retournés par l'applet de commande.  
   
 |||  
@@ -130,10 +141,6 @@ caps.handback.revision: 11
 |Entrées|Aucun|  
 |Sorties|Aucun|  
   
-## Exemples  
-  
-## Voir aussi  
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [Gérer les modèles tabulaires à l'aide de PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)  
+## <a name="examples"></a>Exemples  
   
   

@@ -1,68 +1,73 @@
 ---
-title: "Propri&#233;t&#233;s du journal | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "QueryLogFileSize, propriété"
-  - "QueryLogTableName, propriété"
-  - "TraceBackgroundDistributionPeriod, propriété"
-  - "TraceMaxRowsetSize, propriété"
-  - "NullKeyConvertedToUnknown, propriété"
-  - "CrashReportsFolder, propriété"
-  - "TraceDefinitionFile, propriété"
-  - "SQLDumperFlagsOn, propriété"
-  - "KeyErrorLimit, propriété"
-  - "SnapshotDefinitionFile, propriété"
-  - "MinidumpErrorList, propriété"
-  - "ErrorLogFileName, propriété"
-  - "KeyDuplicate, propriété"
-  - "IgnoreDataTruncation, propriété"
-  - "journaux [Analysis Services]"
-  - "Enabled, propriété"
-  - "FileSizeMB, propriété"
-  - "TraceFileWriteTrailerPeriod, propriété"
-  - "TraceQueryResponseTextChunkSize, propriété"
-  - "File, propriété"
-  - "FileBufferSize, propriété"
-  - "TraceRowsetBackgroundFlushPeriod, propriété"
-  - "ErrorLogFileSize, propriété"
-  - "TraceRequestParameters, propriété"
-  - "KeyErrorLimitAction, propriété"
-  - "CreateQueryLogTable, propriété"
-  - "LogDir, propriété"
-  - "TraceBackgroundFlushPeriod, propriété"
-  - "TraceFileBufferSize, propriété"
-  - "SQLDumperFlagsOff, propriété"
-  - "QueryLogConnectionString, propriété"
-  - "KeyNotFound, propriété"
-  - "KeyErrorLogFile, propriété"
-  - "TraceReportFQDN, propriété"
-  - "KeyErrorAction, propriété"
-  - "QueryLogFileName, propriété"
-  - "MessageLogs, propriété"
-  - "MiniDumpFlagsOn, propriété"
-  - "SnapshotFrequencySec, propriété"
-  - "QueryLogSampling, propriété"
-  - "CreateAndSendCrashReports, propriété"
-  - "LogDurationSec, propriété"
+title: "Propriétés du journal | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- QueryLogFileSize property
+- QueryLogTableName property
+- TraceBackgroundDistributionPeriod property
+- TraceMaxRowsetSize property
+- NullKeyConvertedToUnknown property
+- CrashReportsFolder property
+- TraceDefinitionFile property
+- SQLDumperFlagsOn property
+- KeyErrorLimit property
+- SnapshotDefinitionFile property
+- MinidumpErrorList property
+- ErrorLogFileName property
+- KeyDuplicate property
+- IgnoreDataTruncation property
+- logs [Analysis Services]
+- Enabled property
+- FileSizeMB property
+- TraceFileWriteTrailerPeriod property
+- TraceQueryResponseTextChunkSize property
+- File property
+- FileBufferSize property
+- TraceRowsetBackgroundFlushPeriod property
+- ErrorLogFileSize property
+- TraceRequestParameters property
+- KeyErrorLimitAction property
+- CreateQueryLogTable property
+- LogDir property
+- TraceBackgroundFlushPeriod property
+- TraceFileBufferSize property
+- SQLDumperFlagsOff property
+- QueryLogConnectionString property
+- KeyNotFound property
+- KeyErrorLogFile property
+- TraceReportFQDN property
+- KeyErrorAction property
+- QueryLogFileName property
+- MessageLogs property
+- MiniDumpFlagsOn property
+- SnapshotFrequencySec property
+- QueryLogSampling property
+- CreateAndSendCrashReports property
+- LogDurationSec property
 ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 23
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 72e9b5094c12d014c361875016b8208264ad2860
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Propri&#233;t&#233;s du journal
+# <a name="log-properties"></a>Propriétés du journal
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de serveur de journal répertoriées dans les tableaux suivants. Pour plus d’informations sur les autres propriétés de serveur et la façon de les configurer, consultez [Propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
-## Général  
+## <a name="general"></a>Général  
  **Fichier**  
  Propriété de type chaîne qui spécifie le nom du fichier journal du serveur. Cette propriété s'applique uniquement si vous utilisez un fichier sur disque pour l'enregistrement, au lieu d'une table de base de données (comportement par défaut).  
   
@@ -74,8 +79,8 @@ caps.handback.revision: 23
  **MessageLogs**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Journal des erreurs de SQL Server  
- Vous pouvez définir ces propriétés au niveau de l'instance du serveur pour modifier les valeurs par défaut de la configuration d'erreur qui s'affichent dans d'autres outils et concepteurs. Pour plus d’informations, consultez [Configuration d’erreur pour le traitement des cubes, des partitions et des dimensions &#40;SSAS - Multidimensionnel&#41;](../../analysis-services/multidimensional-models/error configuration for cube, partition, and dimension processing.md) et <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>.  
+## <a name="error-log"></a>Journal des erreurs de SQL Server  
+ Vous pouvez définir ces propriétés au niveau de l'instance du serveur pour modifier les valeurs par défaut de la configuration d'erreur qui s'affichent dans d'autres outils et concepteurs. Consultez [Configuration d’erreur pour le Cube, Partition et le traitement de Dimension &#40; SSAS - multidimensionnel &#41; ](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) et <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> pour plus d’informations.  
   
  **ErrorLog\ErrorLogFileName**  
  Propriété utilisée comme valeur par défaut durant une opération de traitement effectuée par le serveur.  
@@ -94,7 +99,7 @@ caps.handback.revision: 23
  Il s'agit d'un nom de fichier défini par l'utilisateur qui doit avoir une extension de fichier .log, situé dans un dossier sur lequel le compte de services dispose des autorisations d'accès en lecture/écriture. Ce fichier journal contient uniquement les erreurs générées lors du traitement. Utilisez la Boîte noire si vous avez besoin de plus d'informations.  
   
  **ErrorLog\KeyErrorLimit**  
- Il s'agit du nombre maximal d'erreurs d'intégrité des données que le serveur autorise avant que le traitement échoue. Une valeur égale à -1 indique un nombre illimité. La valeur par défaut est 0, ce qui signifie que le traitement s'arrête après la première erreur. Vous pouvez également définir un nombre entier.  
+ Il s'agit du nombre maximal d'erreurs d'intégrité des données que le serveur autorise avant que le traitement échoue. Une valeur égale à -1 indique un nombre illimité. La valeur par défaut est 0, ce qui signifie que le traitement s'arrête après la première erreur. Vous pouvez également définir un nombre entier.  
   
  **ErrorLog\KeyErrorLimitAction**  
  Spécifie l'action entreprise par le serveur lorsque le nombre maximal d'erreurs de clé est atteint. Les réponses valides à cette action sont :  
@@ -127,7 +132,7 @@ caps.handback.revision: 23
  **ErrorLog\IgnoreDataTruncation**  
  Propriété utilisée comme valeur par défaut durant une opération de traitement effectuée par le serveur.  
   
-## Exception  
+## <a name="exception"></a>Exception  
  **Exception\CreateAndSendCrashReports**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -146,15 +151,15 @@ caps.handback.revision: 23
  **Exception\MinidumpErrorList**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Boîte noire SQL  
+## <a name="flight-recorder"></a>Boîte noire SQL  
  **FlightRecorder\Enabled**  
  Propriété booléenne qui indique si la fonctionnalité de boîte noire SQL est activée.  
   
  **FlightRecorder\FileSizeMB**  
- Propriété dont la valeur est un entier 32 bits signé qui définit la taille du fichier sur disque de la boîte noire SQL, exprimée en mégaoctets.  
+ Propriété dont la valeur est un entier 32 bits signé qui définit la taille du fichier sur disque de la boîte noire SQL, exprimée en mégaoctets.  
   
  **FlightRecorder\LogDurationSec**  
- Propriété dont la valeur est un entier 32 bits signé qui définit la fréquence en secondes selon laquelle l'enregistrement reprend au début dans la boîte noire SQL.  
+ Propriété dont la valeur est un entier 32 bits signé qui définit la fréquence en secondes selon laquelle l'enregistrement reprend au début dans la boîte noire SQL.  
   
  **FlightRecorder\SnapshotDefinitionFile**  
  Propriété de type chaîne qui spécifie le nom du fichier de définition d'instantané, qui contient les commandes de découverte envoyées au serveur lorsqu'un instantané est réalisé.  
@@ -162,21 +167,21 @@ caps.handback.revision: 23
  La valeur par défaut de cette propriété est vide, ce qui correspond au nom de fichier par défaut FlightRecorderSnapshotDef.txt.  
   
  **FlightRecorder\SnapshotFrequencySec**  
- Propriété dont la valeur est un entier 32 bits signé qui définit la fréquence en secondes des instantanés.  
+ Propriété dont la valeur est un entier 32 bits signé qui définit la fréquence en secondes des instantanés.  
   
  **FlightRecorder\TraceDefinitionFile**  
  Propriété de type chaîne qui spécifie le nom du fichier de définition de trace de la boîte noire SQL.  
   
  La valeur par défaut de cette propriété est vide, ce qui correspond au nom de fichier par défaut FlightRecorderTraceDef.txt.  
   
-## Journal des requêtes  
+## <a name="query-log"></a>Journal des requêtes  
  **S'applique à :** Mode serveur multidimensionnel uniquement  
   
  **QueryLog\QueryLogFileName**  
  Propriété de type chaîne qui spécifie le nom du fichier journal des requêtes. Cette propriété s'applique uniquement si vous utilisez un fichier sur disque pour l'enregistrement, au lieu d'une table de base de données (comportement par défaut).  
   
  **QueryLog\QueryLogSampling**  
- Propriété dont la valeur est un entier 32 bits signé qui spécifie le taux d'échantillonnage du journal des requêtes.  
+ Propriété dont la valeur est un entier 32 bits signé qui spécifie le taux d'échantillonnage du journal des requêtes.  
   
  La valeur par défaut de cette propriété, 10, signifie qu'une requête sur 10 est enregistrée.  
   
@@ -199,7 +204,7 @@ caps.handback.revision: 23
 > [!NOTE]  
 >  Pour plus d’informations sur la configuration du journal des requêtes, consultez [Configuration du journal des requêtes Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81890).  
   
-## Trace  
+## <a name="trace"></a>Trace  
  **Trace\TraceBackgroundDistributionPeriod**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -230,8 +235,8 @@ caps.handback.revision: 23
  **Trace\TraceRowsetBackgroundFlushPeriod**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Voir aussi  
- [propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Déterminer le mode serveur d'une instance Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

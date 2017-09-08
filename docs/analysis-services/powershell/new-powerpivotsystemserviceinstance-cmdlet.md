@@ -1,38 +1,49 @@
 ---
-title: "Applet de commande New-PowerPivotSystemServiceInstance | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: Applet de commande New-PowerPivotSystemServiceInstance | Documents Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 7ea94113-c0f1-4cca-9228-f1a034fba5db
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 8cde819f27942e78bf67c85356602ad1954420c0
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Applet de commande New-PowerPivotSystemServiceInstance
+# <a name="new-powerpivotsystemserviceinstance-cmdlet"></a>Applet de commande New-PowerPivotSystemServiceInstance
+
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
+
   Ajoute une nouvelle instance de service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] à un serveur d’applications.  
+
+>[!NOTE] 
+>Cet article peut contenir des exemples et des informations obsolètes. Utilisez l’applet de commande Get-Help pour la dernière version.
   
  **S'applique à :** SharePoint 2010 et SharePoint 2013.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServicePipeBind>] [-SystemServiceInstanceName <string>] [-Provision] [<CommonParameters>]  
 ```  
   
-## Description  
+## <a name="description"></a>Description  
  L’applet de commande New-PowerPivotSystemServiceInstance configure un nouvel objet PowerPivotSystemService au niveau de la batterie une fois que vous avez utilisé le programme d’installation de SQL Server pour installer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint sur le serveur d’applications local. Vous ne pouvez configurer qu'une seule instance du service sur chaque serveur d'applications.  Si le service est déjà configuré, vous ne pouvez pas exécuter cette applet de commande.  
   
-## Paramètres  
+## <a name="parameters"></a>Paramètres  
   
-### -ParentService \<PowerPivotMidTierServicePipeBind>  
+### <a name="-parentservice-powerpivotmidtierservicepipebind"></a>-ParentService \<PowerPivotMidTierServicePipeBind >  
  Spécifie le GUID de l’objet parent du service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans la batterie. Dans cette version, un seul objet parent est autorisé. Vous pouvez utiliser l'applet de commande Get-PowerPivotSystemService pour retourner l'objet de service ou son GUID.  
   
 |||  
@@ -43,7 +54,7 @@ New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServiceP
 |Accepter l'entrée de pipeline ?|true|  
 |Accepter les caractères génériques ?|false|  
   
-### -SystemServiceInstanceName \<string>  
+### <a name="-systemserviceinstancename-string"></a>-SystemServiceInstanceName \<chaîne >  
  Spécifie un nom qui identifie cet objet.  
   
 |||  
@@ -54,7 +65,7 @@ New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServiceP
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### Provision [\<SwitchParameter>]  
+### <a name="provision-switchparameter"></a>Configurer [\<Paramètre_booléen >]  
  Rend le service accessible sur SharePoint. Les valeurs valides sont $true ou $false.  
   
 |||  
@@ -65,10 +76,10 @@ New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServiceP
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### \<CommonParameters>  
- Cette applet de commande prend en charge les paramètres communs : Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer et OutVariable. Pour plus d’informations, consultez [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825).  
+### <a name="commonparameters"></a>\<Paramètres_courants >  
+ Cette applet de commande prend en charge les paramètres communs : Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer et OutVariable. Pour plus d’informations, consultez [About_Commonparameters](http://go.microsoft.com/fwlink/?linkID=227825).  
   
-## Entrées et sorties  
+## <a name="inputs-and-outputs"></a>Entrées et sorties  
  Le type d'entrée correspond au type des objets que vous pouvez canaliser vers l'applet de commande. Le type de retour correspond au type des objets retournés par l'applet de commande.  
   
 |||  
@@ -76,7 +87,7 @@ New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServiceP
 |Entrées|Aucun.|  
 |Sorties|Aucun.|  
   
-## Exemple 1  
+## <a name="example-1"></a>Exemple 1  
   
 ```  
 C:\PS>New-PowerPivotSystemServiceInstance -Provision:$true  
@@ -84,7 +95,7 @@ C:\PS>New-PowerPivotSystemServiceInstance -Provision:$true
   
  Cet exemple montre la forme la plus commune de l'applet de commande. Il inscrit le service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sur le serveur d’applications local avec la batterie.  
   
-## Exemple 2  
+## <a name="example-2"></a>Exemple 2  
   
 ```  
 C:\PS>New-PowerPivotSystemServiceInstance -SystemServiceInstanceName "MyPSSInstance" -provision:$false  

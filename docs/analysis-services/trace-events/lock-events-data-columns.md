@@ -1,22 +1,27 @@
 ---
-title: "Colonnes de donn&#233;es des &#233;v&#233;nements de verrou | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "Verrouiller des colonnes de données d’événements | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: c223157f-41a0-405c-bc1a-41c999506936
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a211ed540b3bddb11c5d84cf0db65ef3dade1ad
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Colonnes de donn&#233;es des &#233;v&#233;nements de verrou
+# <a name="lock-events-data-columns"></a>Colonnes de données des événements de verrou
   La catégorie d'événements Verrous contient les classes d'événements suivantes :  
   
 |**ID d'événement**|**Nom d'événement**|**Description de l'événement**|  
@@ -29,24 +34,24 @@ caps.handback.revision: 5
   
  Le tableau suivant répertorie les colonnes de données de cette classe d'événements.  
   
-## Deadlock  
+## <a name="deadlock"></a>Deadlock  
   
 |**Nom de la colonne**|**ID de la colonne**|**Type de colonne**|**Description de la colonne**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Classe d'événements utilisée pour catégoriser les événements.|  
-|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
 |DatabaseName|28|8|Nom de la base de données dans laquelle l'instruction de l'utilisateur s'exécute.|  
 |TextData|42|9|Données texte associées à l'événement.|  
 |ServerName|43|8|Nom du serveur produisant l'événement.|  
   
-## Lock Timeout  
+## <a name="lock-timeout"></a>Lock Timeout  
   
 |**Nom de la colonne**|**ID de la colonne**|**Type de colonne**|**Description de la colonne**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Classe d'événements utilisée pour catégoriser les événements.|  
-|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
-|StartTime|3|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
-|EndTime|4|5|Heure de fin de l'événement. Cette colonne n'est pas remplie pour les classes d'événements de démarrage, comme SQL:BatchStarting ou SP:Starting. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|StartTime|3|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|EndTime|4|5|Heure de fin de l'événement. Cette colonne n'est pas remplie pour les classes d'événements de démarrage, comme SQL:BatchStarting ou SP:Starting. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
 |Duration|5|2|Durée (en millisecondes) de l'événement.|  
 |IntegerData|10|1|Données de type Integer (entier).|  
 |ObjectType|12|1|Type d'objet.|  
@@ -60,12 +65,12 @@ caps.handback.revision: 5
 |SPID|41|1|ID de processus serveur. Cela identifie de façon unique une session utilisateur. Le SPID correspond directement au GUID de session utilisé par XML/A.|  
 |ServerName|43|8|Nom du serveur produisant l'événement.|  
   
-## Lock Acquired  
+## <a name="lock-acquired"></a>Lock Acquired  
   
 |**Nom de la colonne**|**ID de la colonne**|**Type de colonne**|**Description de la colonne**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Classe d'événements utilisée pour catégoriser les événements.|  
-|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
 |ConnectionID|25|1|ID de connexion unique.|  
 |NTUserName|32|8|Nom d'utilisateur Windows.|  
 |NTDomainName|33|8|Domaine Windows auquel appartient l'utilisateur.|  
@@ -78,12 +83,12 @@ caps.handback.revision: 5
 |TextData|42|9|Données texte associées à l'événement.|  
 |ServerName|43|8|Nom du serveur produisant l'événement.|  
   
-## Lock Released  
+## <a name="lock-released"></a>Lock Released  
   
 |**Nom de la colonne**|**ID de la colonne**|**Type de colonne**|**Description de la colonne**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Classe d'événements utilisée pour catégoriser les événements.|  
-|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
 |ConnectionID|25|1|ID de connexion unique.|  
 |NTUserName|32|8|Nom d'utilisateur Windows.|  
 |NTDomainName|33|8|Domaine Windows auquel appartient l'utilisateur.|  
@@ -96,12 +101,12 @@ caps.handback.revision: 5
 |TextData|42|9|Données texte associées à l'événement.|  
 |ServerName|43|8|Nom du serveur produisant l'événement.|  
   
-## Lock Waiting  
+## <a name="lock-waiting"></a>Lock Waiting  
   
 |**Nom de la colonne**|**ID de la colonne**|**Type de colonne**|**Description de la colonne**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Classe d'événements utilisée pour catégoriser les événements.|  
-|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
 |ConnectionID|25|1|ID de connexion unique.|  
 |NTUserName|32|8|Nom d'utilisateur Windows.|  
 |NTDomainName|33|8|Domaine Windows auquel appartient l'utilisateur.|  
@@ -114,7 +119,7 @@ caps.handback.revision: 5
 |TextData|42|9|Données texte associées à l'événement.|  
 |ServerName|43|8|Nom du serveur produisant l'événement.|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Catégorie d'événements de verrou](../../analysis-services/trace-events/lock-events-category.md)  
   
   

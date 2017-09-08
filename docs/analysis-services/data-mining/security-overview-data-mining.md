@@ -1,29 +1,34 @@
 ---
-title: "Vue d&#39;ensemble de la s&#233;curit&#233; (exploration de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sécurité [Analysis Services - exploration de données], à propos de la sécurité"
+title: "Vue d’ensemble de la sécurité (exploration de données) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [Analysis Services - data mining], about security
 ms.assetid: 387bde00-bcf3-4612-b27b-f9f608dbf71e
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4857608190aa03baca0a6916275641f463c6cf2a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Vue d&#39;ensemble de la s&#233;curit&#233; (exploration de donn&#233;es)
-  La sécurisation de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a lieu à plusieurs niveaux. Vous devez sécuriser chaque instance d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et ses sources de données pour vous assurer que seuls les utilisateurs autorisés disposent d'autorisations de lecture/écriture sur les dimensions, les modèles d'exploration de données et les sources de données sélectionnés. Vous devez également sécuriser les sources de données sous-jacentes pour empêcher les utilisateurs non autorisés de compromettre volontairement les informations professionnelles sensibles. Le processus de sécurisation d’une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est décrit dans les rubriques suivantes.  
+# <a name="security-overview-data-mining"></a>Vue d'ensemble de la sécurité (exploration de données)
+  La sécurisation de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a lieu à plusieurs niveaux. Vous devez sécuriser chaque instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et ses sources de données pour vous assurer que seuls les utilisateurs autorisés disposent d'autorisations de lecture/écriture sur les dimensions, les modèles d'exploration de données et les sources de données sélectionnés. Vous devez également sécuriser les sources de données sous-jacentes pour empêcher les utilisateurs non autorisés de compromettre volontairement les informations professionnelles sensibles. Le processus de sécurisation d’une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est décrit dans les rubriques suivantes.  
   
 ##  <a name="bkmk_Architecture"></a> Architecture de la sécurité  
- Consultez les ressources suivantes pour en savoir plus sur l'architecture de sécurité de base d'une instance d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], notamment sur la manière dont [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise l'authentification Windows de [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour authentifier l'accès utilisateur.  
+ Consultez les ressources suivantes pour en savoir plus sur l'architecture de sécurité de base d'une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], notamment sur la manière dont [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise l'authentification Windows de [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour authentifier l'accès utilisateur.  
   
 -   [Rôles de sécurité &#40;Analysis Services - Données multidimensionnelles&#41;](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
@@ -39,10 +44,10 @@ caps.handback.revision: 12
  Dans le cadre de l'exploration de données, le jeu d'autorisations permettant de créer et de traiter des modèles doit être différent de celui permettant de les afficher et de les interroger. L'élaboration de prédictions sur un modèle est une sorte de requête et ne requiert pas d'autorisations d'administration.  
   
 ##  <a name="bkmk_Instance"></a> Sécurisation d'une instance d'Analysis Services  
- Ensuite, vous devez protéger l’ordinateur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le système d’exploitation Windows de l’ordinateur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proprement dit et les sources de données utilisées par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ Ensuite, vous devez protéger l’ordinateur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , le système d’exploitation Windows de l’ordinateur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proprement dit et les sources de données utilisées par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ##  <a name="bkmk_Access"></a> Configuration de l'accès à Analysis Services  
- Lorsque vous configurez et définissez les utilisateurs autorisés d'une instance d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous devez déterminer quels utilisateurs sont également autorisés à administrer des objets de base de données spécifiques, ceux qui peuvent afficher la définition d'objets ou parcourir les modèles, et ceux qui ont la possibilité d'accéder directement aux sources de données.  
+ Lorsque vous configurez et définissez les utilisateurs autorisés d'une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous devez déterminer quels utilisateurs sont également autorisés à administrer des objets de base de données spécifiques, ceux qui peuvent afficher la définition d'objets ou parcourir les modèles, et ceux qui ont la possibilité d'accéder directement aux sources de données.  
   
 ##  <a name="bkmk_DMspecial"></a> Considérations spéciales relatives à l'exploration de données  
  Pour permettre à un analyste ou un développeur de créer et de tester des modèles d'exploration de données, vous devez lui donner des autorisations administratives sur la base de données dans laquelle les modèles d'exploration de données sont stockés. Par conséquent, l'analyste ou le développeur d'exploration de données peut potentiellement créer ou supprimer d'autres objets qui ne sont pas associés à l'exploration de données, y compris les objets d'exploration de données qui ont été créés et utilisés par d'autres analystes ou développeurs, ou les objets OLAP non inclus dans la solution d'exploration de données.  
@@ -55,7 +60,7 @@ caps.handback.revision: 12
   
  Si vous utilisez des packages Integration Services pour nettoyer des données, pour mettre à jour des modèles d'exploration de données ou pour élaborer des prédictions, vous devez vous assurer que le service Integration Services dispose des autorisations appropriées sur la base de données dans laquelle le modèle est stocké et sur les données sources.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Rôles et autorisations &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

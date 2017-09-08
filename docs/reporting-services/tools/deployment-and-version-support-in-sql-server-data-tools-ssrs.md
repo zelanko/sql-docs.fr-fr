@@ -1,5 +1,5 @@
 ---
-title: "Déploiement et prise en charge de la Version de SQL Server Data Tools (SSRS) | Documents Microsoft"
+title: "Déploiement et prise en charge de la Version de SQL Server Data Tools (SSDT) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -15,14 +15,14 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 29df783121de48e39d824b9b9e9666d764717ebc
+ms.translationtype: MT
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 173d2a355d1084b22bdc90643484dbab2568e0b0
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>Prise en charge des déploiements et des versions dans SQL Server Data Tools (SSRS)
+# <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Déploiement et prise en charge de la Version de SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] prend en charge les scénarios suivants :  
   
 -   Ouvrez les définitions de rapport (*.rdl) et les projets de serveurs de rapports (\*.rptproj).  
@@ -78,3 +78,4 @@ ms.lasthandoff: 08/09/2017
  [Publication des sources de données et des rapports](../../reporting-services/reports/publishing-data-sources-and-reports.md)  
   
   
+

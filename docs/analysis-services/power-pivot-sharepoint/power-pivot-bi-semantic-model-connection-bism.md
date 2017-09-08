@@ -1,29 +1,34 @@
 ---
-title: "Connexion de mod&#232;le s&#233;mantique BI&#160;Power&#160;Pivot (.bism) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Connexion de modèle sémantique BI PowerPivot (.bism) de l’alimentation | Documents Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 41cfa6b2ca110803ca4b63abf683edf7d508c027
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Connexion de mod&#232;le s&#233;mantique BI&#160;Power&#160;Pivot (.bism)
-  Une connexion de modèle sémantique BI (.bism) est une connexion portable qui connecte des rapports Excel ou Power View à une base de données de modèle tabulaire Analysis Services, ou une instance Analysis Services en mode multidimensionnel. Si vous connaissez les fichiers Office Data Connection (.odc), vous remarquerez des similitudes avec la définition et l'utilisation d'une connexion .bism.  
+# <a name="power-pivot-bi-semantic-model-connection-bism"></a>Connexion de modèle sémantique BI Power Pivot (.bism)
+  Une connexion de modèle sémantique BI (.bism) est une connexion portable qui connecte des rapports Excel ou Power View à une base de données de modèle tabulaire Analysis Services, ou une instance Analysis Services en mode multidimensionnel. Si vous connaissez les fichiers Office Data Connection (.odc), vous remarquerez des similitudes avec la définition et l'utilisation d'une connexion .bism.  
   
  Une connexion de modèle sémantique BI est créée et accessible via SharePoint. La création de connexions de modèles sémantiques BI active les commandes de lancement rapide sur une connexion de modèle sémantique BI dans une bibliothèque. Les commandes de lancement rapide ouvrent un nouveau classeur Excel ou les options de modification du fichier de connexion. Si Reporting Services est installé, vous verrez également une commande permettant de créer un rapport [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
   
- ![Capture d'écran de la commande de lancement rapide de BISM](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "Capture d'écran de la commande de lancement rapide de BISM")  
+ ![Commande de lancement rapide de capture d’écran de BISM](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "commande de lancement rapide de capture d’écran de BISM")  
   
 ##  <a name="bkmk_prereq"></a> Bases de données prises en charge  
  Une connexion de modèle sémantique BI pointe sur des données de modèle tabulaire. Il y a trois sources pour ces données :  
@@ -36,7 +41,7 @@ caps.handback.revision: 37
   
  Pour obtenir une comparaison des sources de données, consultez le contenu de la communauté [Understanding the SQL Server 2012 BI Semantic Model (BISM)](http://www.mssqltips.com/sqlservertip/2818/understanding-the-sql-server-2012-bi-semantic-model-bism/).  
   
-## Présentation de la séquence de connexion des connexions sémantiques BI  
+## <a name="understanding-the-connection-sequence-for-bi-semantic-connections"></a>Présentation de la séquence de connexion des connexions sémantiques BI  
  Cette section décrit le comportement de connexion entre différentes applications clientes, telles que l'application bureautique Excel ou le client de création de rapports Power View sur SharePoint, et une base de données model tabulaire à l'intérieur ou à l'extérieur de la batterie de serveurs SharePoint.  
   
  Toutes les connexions à une base de données de modèle tabulaire sont établies à l'aide des informations d'identification de l'utilisateur qui demande les données. Toutefois, les mécanismes de cette connexion varient selon que la connexion est une connexion dans la batterie ou une connexion à simple ou double saut, et selon que Kerberos est activé ou désactivé. Pour plus d’informations sur les connexions authentifiées entre SharePoint et des sources de données principales, consultez [Double-hop authentication: Why NTLM fails and Kerberos works](http://go.microsoft.com/fwlink/?LinkId=237137).  
@@ -47,7 +52,7 @@ caps.handback.revision: 37
   
  L'illustration suivante montre cette séquence de connexion. Elle commence par une demande de connexion .bism, suivie par le téléchargement des informations de connexion sur le client, puis par la connexion à simple saut à la base de données. La connexion est établie à l'aide des informations d'identification Windows de l'utilisateur Excel, qui a des autorisations de lecture sur la base de données Analysis Services. Il s'agit d'un seul saut, de sorte que même si Kerberos est activé, il n'est pas requis pour ce scénario.  
   
- ![Connexions à une base de données model tabulaire à partir d'Excel](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivotbismconnection-1.gif "Connexions à une base de données model tabulaire à partir d'Excel")  
+ ![Connexions à partir d’Excel à la base de données model tabulaire](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivotbismconnection-1.gif "connexions à partir d’Excel à la base de données model tabulaire")  
   
  **Se connecter depuis Power View aux données tabulaires sur un réseau**  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 37
   
  L'illustration suivante montre une séquence de connexion qui utilise la même identité d'utilisateur Windows pour chaque connexion. Dans la dernière connexion à Analysis Services, la connexion est établie par l'identité de l'application de service Reporting Services, en passant l'identité d'utilisateur Windows à **effectiveusername**.  
   
- ![Connexion à une base de données tabulaire avec emprunt d'identité](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivotbismconnection-2.gif "Connexion à une base de données tabulaire avec emprunt d'identité")  
+ ![Connexion avec emprunt d’identité à la base de données tabulaire](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivotbismconnection-2.gif "connexion avec emprunt d’identité à la base de données tabulaire")  
   
  **Se connecter depuis Power View aux données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans SharePoint**  
   
@@ -70,15 +75,15 @@ caps.handback.revision: 37
  Dans ce scénario, toutes les connexions se produisent dans la même batterie, donc il n'y a aucune spécification pour Kerberos ou la délégation contrainte.  
   
 ##  <a name="bkmk_rel"></a> Tâches associées  
- [Ajouter un type de contenu de connexion du modèle sémantique BI à une bibliothèque &#40;Power Pivot pour SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add bi semantic model connection content type to library.md)  
+ [Ajouter un type de contenu de connexion du modèle sémantique BI à une bibliothèque &#40;Power Pivot pour SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md)  
   
  [Créer une connexion du modèle sémantique BI à un classeur PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
- [Créer une connexion de modèle sémantique BI à une base de données model tabulaire](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [Create a BI Semantic Model Connection to a Tabular Model Database](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
  [Utiliser une connexion de modèle sémantique BI dans Excel ou Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Déterminer le mode serveur d'une instance Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Se connecter à Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   

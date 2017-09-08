@@ -1,41 +1,52 @@
 ---
-title: "Applet de commande Merge-Partition | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: Applet de commande Merge-Partition | Documents Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 15c7b069-897d-4bc8-a808-59cbeeabe4d8
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 4103154c133a430d3725aa30c073ab5e386f5c3f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Applet de commande Merge-Partition
+# <a name="merge-partition-cmdlet"></a>Applet de commande Merge-Partition
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Fusionne les données d'une ou de plusieurs partitions sources dans une partition cible, puis supprime les partitions sources.  
+
+>[!NOTE] 
+>Cet article peut contenir des exemples et des informations obsolètes. Utilisez l’applet de commande Get-Help pour la dernière version.
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
  `Merge-ASDatabase [-Name] <string> [-SourcePartitions] <System.String[]> -Database <string> -Cube <string> -MeasureGroup <string> [-Server <string>] [-Credentials <PSCredential>] [<CommonParameters>]`  
   
  `Merge-ASDatabase -TargetPartition <Microsoft.AnalysisServices.Partition> [-SourcePartitions] <System.String[]> -Database <string> -Cube <string> -MeasureGroup <string> [-Server <string>] [-Credentials <PSCredential>] [<CommonParameters>]`  
   
-## Description  
- L'applet de commande Merge-Partition fusionne les données d'une ou de plusieurs partitions sources dans une partition cible, puis supprime les partitions sources. Les partitions ne peuvent être fusionnées que si elles répondent à tous les critères suivants :  
+## <a name="description"></a>Description  
+ L'applet de commande Merge-Partition fusionne les données d'une ou de plusieurs partitions sources dans une partition cible, puis supprime les partitions sources. Les partitions ne peuvent être fusionnées que si elles répondent à tous les critères suivants :  
   
 -   les partitions se trouvent dans le même groupe de mesures ;  
   
--   les partitions se trouvent sur le même ordinateur ;  
+-   les partitions se trouvent sur le même ordinateur ;  
   
 -   les partitions partagent le même mode de stockage (MOLAP, HOLAP et ROLAP pour les bases de données multidimensionnelles).  
   
-## Paramètres  
+## <a name="parameters"></a>Paramètres  
   
-### -Name \<string>  
+### <a name="-name-string"></a>-Name \<chaîne >  
  Spécifie la partition cible dans laquelle les données de partition source sont fusionnées. Cette partition doit déjà exister.  
   
 |||  
@@ -46,18 +57,18 @@ caps.handback.revision: 9
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### -SourcePartition \<string>  
+### <a name="-sourcepartition-string"></a>-SourcePartition \<chaîne >  
  Spécifie la partition source qui sera fusionnée dans la partition cible. Vous pouvez créer une liste séparée par des virgules des partitions que vous voulez fusionner. Utilisez une variable pour stocker la liste. Par exemple $Sources=”Sales_2008”, “Sales_2009”, “Sales_2010”.  
   
 |||  
 |-|-|  
 |Requis ?|true|  
-|Position ?|1|  
+|Position ?|1|  
 |Valeur par défaut||  
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### -Database \<string>  
+### <a name="-database-string"></a>-De base de données \<chaîne >  
  Spécifie la base de données à laquelle les partitions appartiennent.  
   
 |||  
@@ -68,7 +79,7 @@ caps.handback.revision: 9
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### -Cube \<string>  
+### <a name="-cube-string"></a>-Cube \<chaîne >  
  Spécifie le cube auquel les partitions appartiennent.  
   
 |||  
@@ -79,7 +90,7 @@ caps.handback.revision: 9
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### -MeasureGroup \<string>  
+### <a name="-measuregroup-string"></a>Le groupe de mesures - \<chaîne >  
  Spécifie le groupe de mesures auquel la partition appartient.  
   
 |||  
@@ -90,7 +101,7 @@ caps.handback.revision: 9
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### -Server \<string>  
+### <a name="-server-string"></a>-Serveur \<chaîne >  
  Spécifie l'instance Analysis Services à laquelle l'applet de commande se connectera et qu'il exécutera. Si aucun nom de serveur n'est fourni, une connexion est établie à localhost. Pour les instances par défaut, spécifiez simplement le nom du serveur. Pour les instances nommées, utilisez le format nom_serveur\nom_instance. Pour les connexions HTTP, utilisez le format http[s]://serveur[:port]/répertoirevirtuel/msmdpump.dll.  
   
 |||  
@@ -101,8 +112,8 @@ caps.handback.revision: 9
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### -Credential \<PSCredential>  
- Ce paramètre est utilisé pour transmettre un nom d'utilisateur et un mot de passe lors de l'utilisation d'une connexion HTTP à une instance Analysis Services, pour une instance que vous avez configurée pour l'accès HTTP. Pour plus d’informations, consultez [Configurer l’accès HTTP à Analysis Services sur Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md) et [Scripts PowerShell dans Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md) pour les connexions HTTP.  
+### <a name="-credential-pscredential"></a>-Credential \<PSCredential >  
+ Ce paramètre est utilisé pour transmettre un nom d'utilisateur et un mot de passe lors de l'utilisation d'une connexion HTTP à une instance Analysis Services, pour une instance que vous avez configurée pour l'accès HTTP. Pour plus d’informations, consultez [configurer l’accès HTTP à Analysis Services sur Internet Information Services &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md) pour les connexions HTTP.  
   
  Si ce paramètre est indiqué, le nom d'utilisateur et le mot de passe seront utilisés pour la connexion à l'instance du serveur d'analyse spécifiée. Si aucune information d'identification n'est indiquée, le compte Windows par défaut de l'utilisateur qui exécute l'outil sera utilisé.  
   
@@ -113,10 +124,10 @@ caps.handback.revision: 9
 |Requis ?|false|  
 |Position ?|nommée|  
 |Valeur par défaut||  
-|Accepter l'entrée de pipeline ?|True (ByValue)|  
-|Accepter les caractères génériques ?|false|  
+|Accepter l'entrée de pipeline ?|True (ByValue)|  
+|Accepter les caractères génériques ?|false|  
   
-### -TargetPartition \<Microsoft.AnalysisServices.Partition>  
+### <a name="-targetpartition-microsoftanalysisservicespartition"></a>-TargetPartition \<objet Microsoft.AnalysisServices.Partition >  
  Spécifie la partition cible dans laquelle les partitions sources sont fusionnées.  
   
 |||  
@@ -127,10 +138,10 @@ caps.handback.revision: 9
 |Accepter l'entrée de pipeline ?|true|  
 |Accepter les caractères génériques ?|false|  
   
-### \<CommonParameters>  
- La commande cmdlet prend en charge les paramètres communs : -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer et -OutVariable. Pour plus d’informations, consultez [About_Commonparameters](http://go.microsoft.com/fwlink/?linkID=227825).  
+### <a name="commonparameters"></a>\<Paramètres_courants >  
+ La commande cmdlet prend en charge les paramètres communs : -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer et -OutVariable. Pour plus d’informations, consultez [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825).  
   
-## Entrées et sorties  
+## <a name="inputs-and-outputs"></a>Entrées et sorties  
  Le type d'entrée correspond au type des objets que vous pouvez canaliser vers l'applet de commande. Le type de retour correspond au type des objets retournés par l'applet de commande.  
   
 |||  
@@ -138,13 +149,10 @@ caps.handback.revision: 9
 |Entrées|System.string|  
 |Sorties|Aucun|  
   
-## Exemple 1  
+## <a name="example-1"></a>Exemple 1  
  `PS SQL SERVER:\sqlas\locahost\default\Databases\AWTEST\Cubes\Adventure Works\MeasureGroups\sales orders\partitions> $Source=”Total_Orders_2001”, “Total_Orders_2002”, “Total_Orders_2003”` `PS SQL SERVER:\sqlas\locahost\default\Databases\AWTEST\Cubes\Adventure Works\MeasureGroups\sales orders\partitions> Merge-Partition –Name “Total_Orders_2004” –SourcePartitions:$Source –database “AWTEST” –cube “Adventure Works” –MeasureGroup “Sales Orders”`  
   
  Cette commande fusionne les partitions à partir de 2001, 2002 et 2003 dans la partition pour 2004, puis supprime les partitions des années précédentes.  
   
-## Voir aussi  
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [Gérer les modèles tabulaires à l'aide de PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)  
-  
+
   

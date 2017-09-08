@@ -1,24 +1,29 @@
 ---
-title: "Cr&#233;er une connexion du mod&#232;le s&#233;mantique BI &#224; un classeur PowerPivot | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Créer une connexion de modèle sémantique BI à un classeur PowerPivot | Documents Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: f5171b30d867a9e2bd676ff1895ad992b56c5e96
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cr&#233;er une connexion du mod&#232;le s&#233;mantique BI &#224; un classeur PowerPivot
+# <a name="create-a-bi-semantic-model-connection-to-a-power-pivot-workbook"></a>Créer une connexion du modèle sémantique BI à un classeur PowerPivot
   Utilisez les informations de cette rubrique pour configurer une connexion du modèle sémantique BI qui redirige vers un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans la même batterie.  
   
  Après avoir créé une connexion de modèle sémantique BI et configuré les autorisations SharePoint, vous pouvez l'utiliser comme source de données pour les rapports Excel ou [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
@@ -38,9 +43,9 @@ caps.handback.revision: 10
 ##  <a name="bkmk_prereq"></a> Examiner la configuration requise  
  Vous devez disposer d'autorisations Collaboration ou supérieures pour créer un fichier de connexion de modèle sémantique BI.  
   
- Vous devez disposer d'une bibliothèque qui prend en charge le type de contenu Connexion de modèle sémantique BI. Pour plus d’informations, consultez [Ajouter un type de contenu de connexion du modèle sémantique BI à une bibliothèque &#40;Power Pivot pour SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add bi semantic model connection content type to library.md).  
+ Vous devez disposer d'une bibliothèque qui prend en charge le type de contenu Connexion de modèle sémantique BI. Pour plus d’informations, consultez [Ajouter un type de contenu de connexion du modèle sémantique BI à une bibliothèque &#40;Power Pivot pour SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md).  
   
- Vous devez connaître l’URL du classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour lequel vous configurez une connexion du modèle sémantique BI (par exemple, http://adventure-works/shared documents/myworkbook.xlsx). Le classeur doit figurer dans la même batterie de serveurs.  
+ Vous devez connaître l’URL de la [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] classeur pour lequel vous configurez une connexion de modèle sémantique BI (par exemple, `http://adventure-works/shared documents/myworkbook.xlsx`). Le classeur doit figurer dans la même batterie de serveurs.  
   
  Tous les ordinateurs et utilisateurs qui participent à la séquence de connexion doivent être dans le même domaine ou dans un domaine approuvé (approbation bidirectionnelle).  
   
@@ -48,15 +53,15 @@ caps.handback.revision: 10
   
 1.  Dans la bibliothèque qui contiendra la connexion de modèle sémantique BI, cliquez sur **Documents** sur le ruban SharePoint. Cliquez sur la flèche de déroulement de Nouveau document, puis sélectionnez **Fichier de connexion BISM** pour ouvrir la page Nouvelle connexion de modèle sémantique BI.  
   
-     ![Sous-menu Nouveau document dans une bibliothèque SharePoint](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-new.gif "Sous-menu Nouveau document dans une bibliothèque SharePoint")  
+     ![Sous-menu Nouveau Document dans une bibliothèque SharePoint](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-new.gif "sous-menu Nouveau Document dans une bibliothèque SharePoint")  
   
-2.  Définissez la propriété **Server** sur l’URL SharePoint du classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (par exemple, **http://mysharepoint/shared documents/myWorkbook.xlsx**). Dans un déploiement [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint, les données peuvent être chargées sur tout serveur de la batterie. Pour cette raison, les connexions de la source de données aux données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] spécifient uniquement le chemin d’accès au classeur. Le service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] détermine quel serveur charge les données.  
+2.  Définissez la propriété **Server** sur l’URL SharePoint du classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (par exemple, `http://mysharepoint/shared documents/myWorkbook.xlsx`. Dans un déploiement [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint, les données peuvent être chargées sur tout serveur de la batterie. Pour cette raison, les connexions de la source de données aux données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] spécifient uniquement le chemin d’accès au classeur. Le service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] détermine quel serveur charge les données.  
   
      N’employez pas la propriété **Database** . Elle n’est pas utilisée lors de la spécification de l’emplacement d’un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
      Votre page doit ressembler à l'illustration suivante.  
   
-     ![Page de connexion BISM affichant l'URL du classeur](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-ppvtds.gif "Page de connexion BISM affichant l'URL du classeur")  
+     ![Page de connexion BISM affichant l’URL classeur](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-ppvtds.gif "page de connexion BISM montrant l’URL de classeur")  
   
      Éventuellement, si vous disposez d'autorisations SharePoint sur le classeur, une étape supplémentaire de validation est effectuée pour s'assurer que l'emplacement est valide. Si vous n'êtes pas autorisé à accéder aux données, vous avez la possibilité d'enregistrer la connexion de modèle sémantique BI sans la réponse de validation.  
   
@@ -97,7 +102,7 @@ caps.handback.revision: 10
 ##  <a name="bkmk_next"></a> Étapes suivantes  
  Après avoir créé et sécurisé une connexion de modèle sémantique BI, vous pouvez la spécifier en tant que source de données. Pour plus d’informations, consultez [Utiliser une connexion de modèle sémantique BI dans Excel ou Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Connexion de modèle sémantique BI Power Pivot &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
  [Utiliser une connexion de modèle sémantique BI dans Excel ou Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
  [Créer une connexion de modèle sémantique BI à une base de données model tabulaire](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  

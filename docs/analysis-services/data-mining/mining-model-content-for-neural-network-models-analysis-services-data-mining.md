@@ -1,36 +1,41 @@
 ---
-title: "Mining Model Content for Neural Network Models (Analysis Services - Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "output neurons [Analysis Services]"
-  - "neural network algorithms [Analysis Services]"
-  - "output layer [Data Mining]"
-  - "hidden layer"
-  - "hidden neurons"
-  - "input layer [Data Mining]"
-  - "input neurons [Analysis Services]"
-  - "mining model content, neural network models"
-  - "neural network model [Analysis Services]"
+title: "Pour les modèles de réseau neuronal contenu du modèle d’exploration de données | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- output neurons [Analysis Services]
+- neural network algorithms [Analysis Services]
+- output layer [Data Mining]
+- hidden layer
+- hidden neurons
+- input layer [Data Mining]
+- input neurons [Analysis Services]
+- mining model content, neural network models
+- neural network model [Analysis Services]
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 4ba3de4a84dfd666e23d9877241f8c444891a0be
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
+# <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
   Cette rubrique décrit le contenu du modèle d'exploration de données qui est spécifique aux modèles qui utilisent l'algorithme MNN (Microsoft Neural Network). Pour obtenir une explication sur la procédure d’interprétation des statistiques et de la structure partagées par tous les types de modèles et pour obtenir des définitions générales de termes en rapport avec le contenu du modèle d’exploration de données, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
-## Fonctionnement de la structure d'un modèle Neural Network  
+## <a name="understanding-the-structure-of-a-neural-network-model"></a>Fonctionnement de la structure d'un modèle Neural Network  
  Chaque modèle de réseau neuronal a un nœud parent unique, qui représente le modèle et ses métadonnées, et un nœud de statistiques marginales (NODE_TYPE = 24), qui apporte des statistiques descriptives sur les attributs d'entrée. Le nœud des statistiques marginales est utile parce qu'il résume les informations sur les entrées, afin que vous n'ayez pas besoin d'interroger les données des nœuds individuels.  
   
  Sous ces deux nœuds, il y a au moins deux nœuds supplémentaires, voire beaucoup plus, selon le nombre d'attributs prédictibles du modèle.  
@@ -39,9 +44,9 @@ caps.handback.revision: 19
   
 -   Les nœuds consécutifs contiennent chacun un *sous-réseau* différent (NODE_TYPE = 17). Chaque sous-réseau contient toujours une couche masquée (NODE_TYPE = 19) et une couche de sortie (NODE_TYPE = 20) pour ce sous-réseau.  
   
- ![structure de contenu de modèle pour réseaux neuronaux](../../analysis-services/data-mining/media/modelcontentstructure-nn.gif "structure de contenu de modèle pour réseaux neuronaux")  
+ ![structure du contenu de modèle pour les réseaux neuronaux](../../analysis-services/data-mining/media/modelcontentstructure-nn.gif "structure du contenu de modèle pour les réseaux neuronaux")  
   
- Les informations dans la couche d'entrée sont simples : le nœud supérieur pour chaque couche d'entrée (NODE_TYPE = 18) sert d'organisateur pour une collection de nœuds d'entrée (NODE_TYPE = 21). Le contenu des nœuds d'entrée est décrit dans la table ci-dessous.  
+ Les informations dans la couche d'entrée sont simples : le nœud supérieur pour chaque couche d'entrée (NODE_TYPE = 18) sert d'organisateur pour une collection de nœuds d'entrée (NODE_TYPE = 21). Le contenu des nœuds d'entrée est décrit dans la table ci-dessous.  
   
  Chaque sous-réseau (NODE_TYPE = 17) représente l’analyse de l’influence de la couche d’entrée sur un attribut prédictible particulier. S'il existe plusieurs sorties prévisibles, il y a plusieurs sous-réseaux. La couche masquée de chaque sous-réseau contient plusieurs nœuds masqués (NODE_TYPE = 22) qui contiennent des détails à propos des poids pour chaque transition qui se termine dans ce nœud masqué spécifique.  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 19
   
  Pour utiliser les données et voir comment le modèle corrèle les entrées avec les sorties, utilisez la **visionneuse de l'algorithme MNN (Microsoft Neural Network)**. Avec cette visionneuse personnalisée, vous pouvez filtrer les attributs d'entrée et leurs valeurs, et consulter des graphiques qui illustrent comment ils affectent les sorties. Les info-bulles de la visionneuse montrent la probabilité et la finesse associées à chaque paire de valeurs d'entrée et de sortie. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’algorithme MNN (Microsoft Neural Network)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   
-## Contenu du modèle pour un modèle de réseau neuronal  
+## <a name="model-content-for-a-neural-network-model"></a>Contenu du modèle pour un modèle de réseau neuronal  
  Cette section fournit des informations et des exemples uniquement pour les colonnes du contenu du modèle d'exploration de données qui sont particulièrement pertinentes pour les réseaux neuronaux. Pour plus d’informations sur les colonnes à caractère général de l’ensemble de lignes de schéma, telles que MODEL_CATALOG et MODEL_NAME, non décrites ici, ou pour obtenir des explications sur la terminologie relative aux modèles d’exploration de données, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
@@ -72,7 +77,7 @@ caps.handback.revision: 19
 |Statistiques marginales|Vide|  
 |Couche d'entrée|Vide|  
 |Nœud d'entrée|Nom d'attribut d'entrée|  
-|Couche masquée|Vide|  
+|hidden layer|Vide|  
 |Nœud masqué|Vide|  
 |Couche de sortie|Vide|  
 |Nœud de sortie|Nom d'attribut de sortie|  
@@ -86,7 +91,7 @@ caps.handback.revision: 19
  Pour plus d'informations sur la façon dont les noms et ID fournissent des informations structurelles à propos du modèle, consultez la section, [Utilisation de noms des nœuds et ID](#bkmk_NodeIDs).  
   
  NODE_TYPE  
- Un modèle de réseau neuronal génère en sortie les types de nœuds suivants :  
+ Un modèle de réseau neuronal génère en sortie les types de nœuds suivants :  
   
 |ID du type de nœud|Description|  
 |------------------|-----------------|  
@@ -112,7 +117,7 @@ caps.handback.revision: 19
 |Statistiques marginales|Toujours 0.|  
 |Couche d'entrée|Indique le nombre de paires de valeurs d'attribut d'entrée utilisées par le modèle.|  
 |Nœud d'entrée|Toujours 0.|  
-|Couche masquée|Indique le nombre de nœuds masqués créés par le modèle.|  
+|hidden layer|Indique le nombre de nœuds masqués créés par le modèle.|  
 |Nœud masqué|Toujours 0.|  
 |Couche de sortie|Indique le nombre de valeurs de sortie.|  
 |Nœud de sortie|Toujours 0.|  
@@ -131,7 +136,7 @@ caps.handback.revision: 19
 |Statistiques marginales|Vide|  
 |Couche d'entrée|Vide|  
 |Nœud d'entrée|Nom d'attribut d'entrée|  
-|Couche masquée|Vide|  
+|hidden layer|Vide|  
 |Nœud masqué|Entier qui indique la séquence du nœud masqué dans la liste de nœuds masqués.|  
 |Couche de sortie|Vide|  
 |Nœud de sortie|Si l'attribut de sortie est continu, contient le nom de l'attribut de sortie.<br /><br /> Si l'attribut de sortie est discret ou discrétisé, contient le nom de l'attribut et la valeur.|  
@@ -145,7 +150,7 @@ caps.handback.revision: 19
 |Statistiques marginales|Vide|  
 |Couche d'entrée|Vide|  
 |Nœud d'entrée|Fragment XML qui contient les mêmes informations que la colonne NODE_DESCRIPTION.|  
-|Couche masquée|Vide|  
+|hidden layer|Vide|  
 |Nœud masqué|Entier qui indique la séquence du nœud masqué dans la liste de nœuds masqués.|  
 |Couche de sortie|Vide|  
 |Nœud de sortie|Fragment XML qui contient les mêmes informations que la colonne NODE_DESCRIPTION.|  
@@ -177,7 +182,7 @@ caps.handback.revision: 19
 |Statistiques marginales|Vide|  
 |Couche d'entrée|Vide|  
 |Nœud d'entrée|Nom d'attribut d'entrée.|  
-|Couche masquée|Vide|  
+|hidden layer|Vide|  
 |Nœud masqué|Vide|  
 |Couche de sortie|Vide|  
 |Nœud de sortie|Nom d'attribut d'entrée.|  
@@ -188,7 +193,7 @@ caps.handback.revision: 19
  MSOLAP_NODE_SHORT_CAPTION  
  Dans les modèles de réseau neuronal, toujours vide.  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Le but de la formation d'un modèle de réseau neuronal est de déterminer les poids associés à chaque transition d'une entrée à un point milieu et d'un point milieu à un point de terminaison. Par conséquent, la couche d'entrée du modèle existe principalement pour stocker les valeurs réelles utilisées pour générer le modèle. La couche masquée stocke les poids calculés et fournit des pointeurs aux attributs d'entrée. La couche de sortie stocke les valeurs prévisibles et fournit également des pointeurs aux points milieu dans la couche masquée.  
   
 ##  <a name="bkmk_NodeIDs"></a> Utilisation de noms des nœuds et ID  
@@ -213,7 +218,7 @@ caps.handback.revision: 19
 ##  <a name="bkmk_NodeDistTable"></a> Interprétation des informations dans la table NODE_DISTRIBUTION  
  La table NODE_DISTRIBUTION peut être vide dans certains nœuds. Toutefois, la table NODE_DISTRIBUTION stocke des informations importantes et intéressantes à propos du modèle pour les nœuds d'entrée, les nœuds de couche masquée et les nœuds de sortie. Pour vous aider à interpréter cette information, la table NODE_DISTRIBUTION contient une colonne VALUETYPE pour chaque ligne, qui indique si la valeur dans la colonne ATTRIBUTE_VALUE est discrète (4), discrétisée (5) ou continue (3).  
   
-### Nœuds d'entrée  
+### <a name="input-nodes"></a>Nœuds d'entrée  
  La couche d'entrée contient un nœud pour chaque valeur de l'attribut utilisé dans le modèle.  
   
  **Attribut discret :** le nœud d’entrée stocke uniquement le nom de l’attribut et sa valeur dans les colonnes ATTRIBUTE_NAME et ATTRIBUTE_VALUE. Par exemple, s'il s'agit de la colonne [Poste de travail], un nœud distinct est créé pour chaque valeur de cette colonne utilisée dans le modèle, tel que Matin et Après-midi. La table NODE_DISTRIBUTION pour chaque nœud liste uniquement la valeur actuelle de l'attribut.  
@@ -222,13 +227,13 @@ caps.handback.revision: 19
   
  **Attribut continu :** le nœud d'entrée stocke la valeur moyenne de l'attribut. La table NODE_DISTRIBUTION pour chaque nœud liste uniquement la valeur actuelle de l'attribut.  
   
-### Nœuds de couche masquée  
+### <a name="hidden-layer-nodes"></a>Nœuds de couche masquée  
  La couche masquée contient un nombre variable de nœuds. Dans chaque nœud, la table NODE_DISTRIBUTION contient des mappages de la couche masquée aux nœuds dans la couche d'entrée. La colonne ATTRIBUTE_NAME contient un ID de nœud qui correspond à un nœud dans la couche d'entrée. La colonne ATTRIBUTE_VALUE contient le poids associé à cette combinaison de nœud d'entrée et nœud de couche masquée. La dernière ligne de la table contient un coefficient qui représente le poids de ce nœud masqué dans la couche masquée.  
   
-### Nœuds de sortie  
+### <a name="output-nodes"></a>Nœuds de sortie  
  La couche de sortie contient un nœud de sortie pour chaque valeur de sortie utilisée dans le modèle. Dans chaque nœud, la table NODE_DISTRIBUTION contient des mappages de la couche de sortie aux nœuds dans la couche masquée. La colonne ATTRIBUTE_NAME contient un ID de nœud qui correspond à un nœud dans la couche masquée. La colonne ATTRIBUTE_VALUE contient le poids associé à cette combinaison de nœud de sortie et nœud de couche masquée.  
   
- La table NODE_DISTRIBUTION présente les informations supplémentaires suivantes, selon le type de l'attribut :  
+ La table NODE_DISTRIBUTION présente les informations supplémentaires suivantes, selon le type de l'attribut :  
   
  **Attribut discret :** les deux lignes finales de la table NODE_DISTRIBUTION contiennent un coefficient pour le nœud dans son ensemble et la valeur actuelle de l’attribut.  
   
@@ -236,9 +241,9 @@ caps.handback.revision: 19
   
  **Attribut continu :** les deux lignes finales de la table NODE_DISTRIBUTION contiennent la moyenne de l’attribut, le coefficient pour le nœud dans son ensemble et la variance du coefficient.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Algorithme MNN (Microsoft Neural Network)](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [Microsoft Neural Network Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [Neural Network Model Query Examples](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

@@ -1,30 +1,35 @@
 ---
-title: "Formules de validation crois&#233;e | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Formules de Validation croisée | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9ae8b6960e04fbbe04a7a536cc75c361d36c907f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Formules de validation crois&#233;e
+# <a name="cross-validation-formulas"></a>Formules de validation croisée
   Lorsque vous créez un rapport de validation croisée, il contient des mesures de précision pour chaque modèle, selon le type du modèle d'exploration de données (autrement dit, l'algorithme utilisé pour créer le modèle), le type de données de l'attribut prédictible et la valeur de l'attribut prédictible, le cas échéant.  
   
  Cette section répertorie les mesures utilisées dans le rapport de validation croisée et décrit la méthode de calcul.  
   
  Pour une décomposition des mesures de précision par type de modèle, consultez [Mesures dans le rapport de validation croisée](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).  
   
-## Formules utilisées pour les mesures de validation croisée  
+## <a name="formulas-used-for-cross-validation-measures"></a>Formules utilisées pour les mesures de validation croisée  
   
 > [!NOTE]  
 >  **Important :** ces mesures de précision sont calculées pour chaque attribut cible. Pour chaque attribut, vous pouvez spécifier ou omettre une valeur cible. Si un cas dans le jeu de données n'a pas de valeur pour l'attribut cible, le cas est traité comme faisant appel à une valeur spéciale appelée *valeur manquante*. Les lignes qui ont des valeurs manquantes ne sont pas comptées lors du calcul de la mesure de précision pour un attribut cible particulier. Notez que, dans la mesure où les scores sont calculés individuellement pour chaque attribut, si des valeurs sont présentes pour l'attribut cible mais manquantes pour d'autres attributs, cela n'affecte pas le score pour l'attribut cible.  
@@ -33,7 +38,7 @@ caps.handback.revision: 9
 |-------------|----------------|--------------------|  
 |**Vrai positif**|Attribut discret, valeur spécifiée|Nombre de cas qui remplissent ces conditions :<br /><br /> Le cas contient la valeur cible.<br /><br /> Le modèle a prédit que le cas contient la valeur cible.|  
 |**Vrai négatif**|Attribut discret, valeur spécifiée|Nombre de cas qui remplissent ces conditions :<br /><br /> Le cas ne contient pas la valeur cible.<br /><br /> Le modèle a prédit que le cas ne contient pas la valeur cible.|  
-|**Faux positif**|Attribut discret, valeur spécifiée|Nombre de cas qui remplissent ces conditions :<br /><br /> La valeur réelle est égale à la valeur cible.<br /><br /> Le modèle a prédit que le cas contient la valeur cible.|  
+|**Faux positif**|Attribut discret, valeur spécifiée|Nombre de cas qui remplissent ces conditions :<br /><br /> La valeur réelle est égale à la valeur cible.<br /><br /> Le modèle a prédit que le cas contient la valeur cible.|  
 |**Faux négatif**|Attribut discret, valeur spécifiée|Nombre de cas qui remplissent ces conditions :<br /><br /> La valeur réelle n'est pas égale à la valeur cible.<br /><br /> Le modèle a prédit que le cas ne contient pas la valeur cible.|  
 |**Succès/échec**|Attribut discret, cible non spécifiée|Nombre de cas qui remplissent ces conditions :<br /><br /> Succès si l'état prédit avec la probabilité la plus élevée est identique à l'état d'entrée et la probabilité est supérieure à la valeur de **Seuil d'état**.<br /><br /> Sinon, Échec.|  
 |**Finesse**|Attribut discret. La valeur cible peut être spécifiée, mais elle n'est pas requise.|La vraisemblance logarithmique moyenne pour toutes les lignes avec des valeurs pour l’attribut cible, où la vraisemblance logarithmique de chaque cas est calculée par Log(ActualProbability/MarginalProbability). Pour calculer la moyenne, la somme des valeurs de la vraisemblance du journal est divisée par le nombre de lignes dans le dataset d'entrée, à l'exclusion des lignes avec les valeurs manquantes pour l'attribut cible.<br /><br /> La courbe d'élévation peut être une valeur négative ou positive. Une valeur positive signifie un modèle efficace qui devance l'estimation aléatoire.|  
@@ -44,8 +49,8 @@ caps.handback.revision: 9
 |**Erreur-type**|Attribut discret. La valeur cible peut être spécifiée, mais elle n'est pas requise.|Racine carrée de la moyenne des carrés du complément du score de probabilité, divisée par le nombre de cas dans la partition, en excluant les lignes avec des valeurs manquantes pour l'attribut cible.|  
 |**Erreur-type**|Attribut discret, cible non spécifiée|Racine carrée de la moyenne des carrés du complément du score de probabilité, divisée par le nombre de cas dans la partition, en excluant les cas avec des valeurs manquantes pour l'attribut cible.|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Test et validation &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
- [Validation croisée &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)  
+ [Validation croisée &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)  
   
   

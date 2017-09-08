@@ -1,23 +1,28 @@
 ---
-title: "Prediction Queries (Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Requêtes de prédiction (exploration de données) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 55dd3cf7af1721a958ebebb70d864a1fd0b873c6
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Prediction Queries (Data Mining)
+# <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
   Un projet d'exploration de données type a pour objectif d'utiliser le modèle d'exploration de données pour faire des prédictions. Par exemple, vous pouvez prédire le temps d'inactivité prévu d'un certain cluster de serveurs, ou générer un score qui indique si des segments de clients sont susceptibles de répondre à une campagne de publicité. Pour effectuer toutes ces tâches, vous devez créer une requête de prédiction.  
   
  Fonctionnellement, il existe différents types de requêtes de prédiction prises en charge dans SQL Server, selon le type d'entrée de la requête :  
@@ -84,7 +89,7 @@ caps.handback.revision: 14
 > [!WARNING]  
 >  Si vous utilisez le concepteur de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], la source de données externe doit d’abord être définie comme vue de source de données.  
   
- Si vous utilisez DMX pour créer une jointure de prédiction, vous pouvez spécifier la source de données externe en utilisant les commandes OPENQUERY, OPENROWSET ou SHAPE. La méthode d'accès aux données par défaut dans les modèles DMX est OPENQUERY. Pour plus d’informations sur ces méthodes, consultez [&#60;source data query&#62;](../Topic/%3Csource%20data%20query%3E.md).  
+ Si vous utilisez DMX pour créer une jointure de prédiction, vous pouvez spécifier la source de données externe en utilisant les commandes OPENQUERY, OPENROWSET ou SHAPE. La méthode d'accès aux données par défaut dans les modèles DMX est OPENQUERY. Pour plus d’informations sur ces méthodes, consultez [&#60;source data query&#62;](../../dmx/source-data-query.md).  
   
 ###  <a name="bkmk_TSQuery"></a> Prédictions dans les modèles d'exploration de données de série chronologique  
  Les modèles de série chronologique sont différents d'autres types de modèles ; vous pouvez soit utiliser le modèle tel quel afin de créer des prédictions, ou vous pouvez fournir de nouvelles données au modèle pour mettre à jour le modèle et créer des prédictions basées sur les tendances récentes. Si vous ajoutez de nouvelles données, vous pouvez spécifier la façon dont elles doivent être utilisées.  
@@ -95,7 +100,7 @@ caps.handback.revision: 14
   
 -   *Remplacer les cas de modèle* signifie que vous conservez le modèle ayant fait l'objet d'un apprentissage, mais vous remplacez les cas sous-jacents par un nouveau jeu de données de cas. Cette option est utile lorsque vous souhaitez conserver la tendance dans le modèle, mais l'appliquer à un ensemble différent de données.  
   
-     Par exemple, votre modèle d'origine a pu faire l'objet d'un apprentissage sur un ensemble de données avec des volumes de ventes très élevés ; lorsque vous remplacez les données sous-jacentes par une nouvelle série (peut-être d'un magasin avec un volume de ventes inférieur), vous conservez la tendance, mais les prédictions commencent à partir des valeurs de la série de remplacement.  
+     Par exemple, votre modèle d'origine a pu faire l'objet d'un apprentissage sur un ensemble de données avec des volumes de ventes très élevés ; lorsque vous remplacez les données sous-jacentes par une nouvelle série (peut-être d'un magasin avec un volume de ventes inférieur), vous conservez la tendance, mais les prédictions commencent à partir des valeurs de la série de remplacement.  
   
  Quelle que soit l'approche que vous utilisez, le point de départ pour les prédictions est toujours la fin de la série d'origine.  
   
@@ -147,7 +152,7 @@ FROM
   
  Si votre fournisseur ne peut pas gérer d'ensembles de lignes hiérarchiques, vous pouvez aplatir les résultats en utilisant le mot clé FLATTEN dans la requête de prédiction. Pour plus d’informations et des exemples d’ensembles de lignes aplatis, consultez [SELECT &#40;DMX&#41;](../../dmx/select-dmx.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Requêtes de contenu &#40;Exploration de données&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
  [Requêtes de définition des données &#40;Exploration de données&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   

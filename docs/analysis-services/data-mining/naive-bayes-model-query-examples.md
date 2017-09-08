@@ -1,27 +1,32 @@
 ---
-title: "Exemples de requ&#234;tes de mod&#232;le Naive Bayes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "naive bayes model [Analysis Services]"
-  - "naive bayes algorithms [Analysis Services]"
-  - "requêtes de contenu [DMX]"
+title: "Exemples de requêtes de modèle Naive Bayes | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- naive bayes model [Analysis Services]
+- naive bayes algorithms [Analysis Services]
+- content queries [DMX]
 ms.assetid: e642bd7d-5afa-4dfb-8cca-4f84aadf61b0
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6935ffd8851a9454a1a2e53655be814a4eda3af1
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Exemples de requ&#234;tes de mod&#232;le Naive Bayes
+# <a name="naive-bayes-model-query-examples"></a>Exemples de requêtes de modèle Naive Bayes
   Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez soit créer une requête de contenu, qui fournit des détails sur les modèles (ou séquences) découverts au cours de l'analyse, soit créer une requête de prédiction, qui utilise les séquences du modèle pour effectuer des prédictions pour les nouvelles données. Vous pouvez également récupérer les métadonnées relatives au modèle en utilisant une requête sur l'ensemble de lignes de schéma d'exploration de données. Cette section explique comment créer ces requêtes pour les modèles basés sur l'algorithme MNB (Microsoft Naive Bayes).  
   
  **Requêtes de contenu**  
@@ -42,10 +47,10 @@ caps.handback.revision: 13
   
  [Prédiction d'associations](#bkmk_Query7)  
   
-## Recherche d'informations relatives à un modèle Naive Bayes  
+## <a name="finding-information-about-a-naive-bayes-model"></a>Recherche d'informations relatives à un modèle Naive Bayes  
  Le contenu d'un modèle Naive Bayes fournit des informations d'agrégat sur la distribution de valeurs dans les données d'apprentissage. Vous pouvez également récupérer des informations sur les métadonnées du modèle en créant des requêtes sur les ensembles de lignes de schéma d'exploration de données.  
   
-###  <a name="bkmk_Query1"></a> Exemple de requête 1 : obtention des métadonnées du modèle à l'aide de DMX  
+###  <a name="bkmk_Query1"></a> Exemple de requête 1 : obtention des métadonnées du modèle à l'aide de DMX  
  En interrogeant l'ensemble de lignes de schéma d'exploration de données, vous pouvez obtenir les métadonnées du modèle. Celles-ci peuvent inclure la date de création du modèle, celle de son dernier traitement, le nom de la structure d'exploration de données sur laquelle le modèle est basé, ainsi que le nom des colonnes utilisées comme attribut prédictible. Vous pouvez également retourner les paramètres qui ont été utilisés lors de la création du modèle.  
   
 ```  
@@ -67,7 +72,7 @@ WHERE MODEL_NAME = 'TM_NaiveBayes_Filtered'
 |PREDICTION_ENTITY|Bike Buyer,Yearly Income|  
 |FILTER|[Region] = 'Europe' OR [Region] = 'North America'|  
   
- Le modèle utilisé pour cet exemple est basé sur le modèle Naive Bayes créé dans le [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md), mais il a été modifié en ajoutant un deuxième attribut prédictible et en appliquant un filtre aux données d'apprentissage.  
+ Le modèle utilisé pour cet exemple est basé sur le modèle Naive Bayes créé dans le [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c), mais il a été modifié en ajoutant un deuxième attribut prédictible et en appliquant un filtre aux données d'apprentissage.  
   
 ###  <a name="bkmk_Query2"></a> Exemple de requête 2 : extraction d'un résumé des données d'apprentissage  
  Dans un modèle Naive Bayes, le nœud des statistiques marginales stocke des informations d'agrégat sur la distribution de valeurs dans les données d'apprentissage. Ce résumé est pratique et vous évite d'avoir à créer des requêtes SQL sur les données d'apprentissage pour obtenir les mêmes informations.  
@@ -111,7 +116,7 @@ FROM TM_NaiveBayes.CONTENT
 WHERE ATTRIBUTE_NAME = 'Region'  
 ```  
   
- Cette requête retourne deux types de nœuds : le nœud qui représente l'attribut d'entrée (NODE_TYPE = 10) et ceux pour chaque valeur de l'attribut (NODE_TYPE = 11). La légende du nœud est utilisée pour l'identifier, plutôt que son nom, car elle affiche à la fois le nom d'attribut et la valeur d'attribut.  
+ Cette requête retourne deux types de nœuds : le nœud qui représente l'attribut d'entrée (NODE_TYPE = 10) et ceux pour chaque valeur de l'attribut (NODE_TYPE = 11). La légende du nœud est utilisée pour l'identifier, plutôt que son nom, car elle affiche à la fois le nom d'attribut et la valeur d'attribut.  
   
 |NODE_TYPE|NODE_CAPTION|NODE_PROBABILITY|NODE_SUPPORT|MSOLAP_NODE_SCORE|NODE_TYPE|  
 |----------------|-------------------|-----------------------|-------------------|-------------------------|----------------|  
@@ -164,7 +169,7 @@ CALL GetPredictableAttributes ('TM_NaiveBayes')
   
  Pour plus d’informations sur les procédures stockées système Analysis Services, consultez [Procédures stockées d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md).  
   
-## Utilisation d'un modèle Naive Bayes pour élaborer des prédictions  
+## <a name="using-a-naive-bayes-model-to-make-predictions"></a>Utilisation d'un modèle Naive Bayes pour élaborer des prédictions  
  L'algorithme MNB (Microsoft Naive Bayes) est en général moins utilisé pour la prédiction qu'il ne l'est pour l'exploration des relations entre les attributs d'entrée et prévisibles. Toutefois, le modèle prend en charge l'utilisation de fonctions de prédiction à la fois pour la prédiction et l'association.  
   
 ###  <a name="bkmk_Query5"></a> Exemple de requête 5 : prédiction des résultats à l'aide d'une requête singleton  
@@ -213,7 +218,7 @@ NATURAL PREDICTION JOIN
  La ligne finale de la table indique les ajustements apportés aux paramètres de prise en charge et de probabilité pour la valeur manquante. Les valeurs de variance et d'écart type sont toujours 0, car les modèles Naive Bayes ne peuvent pas modéliser de valeurs continues.  
   
 ###  <a name="bkmk_Query7"></a> Exemple de requête 7 : prédiction d'associations  
- L'algorithme MNB (Microsoft Naive Bayes) permet d'analyser les associations, si la structure d'exploration de données contient une table imbriquée avec l'attribut prédictible comme clé. Par exemple, pour créer un modèle Naive Bayes, utilisez la structure d’exploration de données créée dans [Leçon 3 : Génération d’un scénario de panier d’achat &#40;Didacticiel sur l’exploration de données intermédiaire&#41;](../Topic/Lesson%203:%20Building%20a%20Market%20Basket%20Scenario%20\(Intermediate%20Data%20Mining%20Tutorial\).md) du didacticiel d’exploration de données. Le modèle utilisé dans cet exemple a été modifié pour ajouter des informations sur le revenu et la région du client dans la table de cas.  
+ L'algorithme MNB (Microsoft Naive Bayes) permet d'analyser les associations, si la structure d'exploration de données contient une table imbriquée avec l'attribut prédictible comme clé. Par exemple, pour créer un modèle Naive Bayes, utilisez la structure d’exploration de données créée dans [Leçon 3 : Génération d’un scénario de panier d’achat &#40;Didacticiel sur l’exploration de données intermédiaire&#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a) du didacticiel d’exploration de données. Le modèle utilisé dans cet exemple a été modifié pour ajouter des informations sur le revenu et la région du client dans la table de cas.  
   
  L'exemple de requête suivant présente une requête singleton qui prédit les produits associés aux achats, `'Road Tire Tube'`. Vous pouvez utiliser ces informations pour recommander des produits à un type de client spécifique.  
   
@@ -238,7 +243,7 @@ AS t
 |Touring-2000|  
 |Touring-1000|  
   
-## Liste de fonctions  
+## <a name="function-list"></a>Liste de fonctions  
  Tous les algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)] prennent en charge un ensemble commun de fonctions. Toutefois, l'algorithme MNB ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes) prend en charge les fonctions supplémentaires répertoriées dans le tableau suivant.  
   
 |||  
@@ -254,7 +259,7 @@ AS t
   
  Pour connaître la syntaxe de fonctions spécifiques, consultez [Informations de référence sur les fonctions DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Références techniques relatives à l'algorithme MNB (Microsoft Naive Bayes)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)   
  [Algorithme MNB (Microsoft Naive Bayes)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
  [Contenu du modèle d’exploration de données pour les modèles Naive Bayes &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  

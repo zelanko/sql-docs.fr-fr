@@ -1,35 +1,40 @@
 ---
-title: "Propri&#233;t&#233;s de m&#233;moire | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "LowMemoryLimit, propriété"
-  - "MinimumAllocatedMemory, propriété"
-  - "MidMemoryPrice, propriété"
-  - "MemoryHeapType, propriété"
-  - "mémoire [Analysis Services]"
-  - "DefaultPagesCountToReuse, propriété"
-  - "TotalMemoryLimit, propriété"
-  - "SessionMemoryLimit, propriété"
-  - "VirtualMemoryLimit, propriété"
-  - "WaitCountIfHighMemory, propriété"
-  - "HighMemoryPrice, propriété"
-  - "HeapTypeForObjects, propriété"
+title: "Propriétés de mémoire | Documents Microsoft"
+ms.custom: 
+ms.date: 11/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- LowMemoryLimit property
+- MinimumAllocatedMemory property
+- MidMemoryPrice property
+- MemoryHeapType property
+- memory [Analysis Services]
+- DefaultPagesCountToReuse property
+- TotalMemoryLimit property
+- SessionMemoryLimit property
+- VirtualMemoryLimit property
+- WaitCountIfHighMemory property
+- HighMemoryPrice property
+- HeapTypeForObjects property
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a26f0b5272c12e45ed1bf99c0d297fa7f89773ae
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Propri&#233;t&#233;s de m&#233;moire
+# <a name="memory-properties"></a>Propriétés de mémoire
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] préalloue une petite quantité de mémoire au démarrage, afin que les requêtes puissent être traitées immédiatement. De la mémoire supplémentaire est allouée à mesure que les charges de travail de requête et de traitement augmentent. 
   
   En spécifiant des paramètres de configuration, vous pouvez contrôler les seuils auxquels la mémoire est libérée. Par exemple, le paramètre **HardMemoryLimit** spécifie une condition de mémoire insuffisante auto-imposée (par défaut, ce seuil est désactivé), où les nouvelles requêtes sont rejetées en bloc jusqu’à ce que des ressources supplémentaires soient disponibles.
@@ -74,7 +79,7 @@ Sauf indication contraire, les propriétés suivantes s’appliquent à la fois 
   
   
 
-Paramètre  | Description  
+Paramètre  |Description  
 ---------|---------
 **0**     |  Désactive la pagination. Si la mémoire est insuffisante, le traitement échoue avec une erreur de mémoire insuffisante. Si vous désactivez la pagination, vous devez accorder des privilèges Windows au compte de service. Pour obtenir des instructions, consultez [Configurer les comptes de service &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md). 
 **1**     |  (par défaut) Cette propriété active la pagination sur le disque à l’aide du fichier de pagination du système d’exploitation (pagefile.sys).   
@@ -96,19 +101,19 @@ Lorsque la valeur définie est 1, le traitement est moins susceptible d’échou
  **MemoryHeapType**  
   Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Les valeurs valides dans SQL Server 2016 SP1 Analysis Services et version ultérieure sont les suivantes :
   
-  Paramètre |  Description
+  Paramètre | Description
 --------|------------
 **-1** | (par défaut) Automatique. Le moteur décidera de l’option à utiliser.
 **1** | Segment de mémoire Analysis Services.
 **2** | LFH Windows.
-**5** | Allocateur hybride. Cet allocateur utilisera LFH Windows pour les allocations \< = 16 Ko et le segment de mémoire Analysis Services pour les allocations > 16 Ko. 
+**5** | Allocateur hybride. Cet allocateur utilisera LFH Windows pour \<= allocations de 16 Ko et le tas AS pour > allocations de 16 Ko. 
 **6** | Allocateur Intel TBB. Disponible dans SQL Server 2016 SP1 Analysis Services (et version ultérieure).
   
   
  **HeapTypeForObjects**  
   Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Les valeurs valides sont les suivantes :
   
-   Paramètre |  Description
+   Paramètre | Description
 --------|------------
 **0** | Segment de mémoire LFH Windows.
 **1** | Allocateur d’emplacement Analysis Services.
@@ -141,3 +146,4 @@ Lorsque la valeur définie est 1, le traitement est moins susceptible d’échou
  [Déterminer le mode serveur d’une instance Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   [SQL Server 2008 R2 Analysis Services Operations Guide (Guide des opérations SQL Server 2008 R2 Analysis Services)](http://go.microsoft.com/fwlink/?LinkID=225539)
   
+

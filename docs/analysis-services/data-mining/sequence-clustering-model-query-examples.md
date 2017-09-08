@@ -1,27 +1,32 @@
 ---
-title: "Sequence Clustering Model Query Examples | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sequence clustering algorithms [Analysis Services]"
-  - "content queries [DMX]"
-  - "sequence [Analysis Services]"
+title: "Exemples de requêtes modèle de Clustering de séquence | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sequence clustering algorithms [Analysis Services]
+- content queries [DMX]
+- sequence [Analysis Services]
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 580fc9147e787d22bf3a87f7ba2bc6752cf4a816
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Sequence Clustering Model Query Examples
+# <a name="sequence-clustering-model-query-examples"></a>Sequence Clustering Model Query Examples
   Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez soit créer une requête de contenu, qui fournit des détails sur les informations stockées dans le modèle, soit créer une requête de prédiction, qui utilise les séquences du modèle pour effectuer des prédictions basées sur les nouvelles données que vous fournissez. Pour un modèle Sequence Clustering, les requêtes de contenu fournissent en général des détails supplémentaires à propos des clusters trouvés ou les transitions dans ces clusters. Vous pouvez également extraire les métadonnées relatives au modèle en utilisant une requête.  
   
  Les requêtes de prédiction sur un modèle Sequence Clustering font en général des recommandations basées sur les séquences et transitions, sur les attributs non-séquence inclus dans le modèle ou sur une combinaison de séquence et attributs non-séquence.  
@@ -41,12 +46,12 @@ caps.handback.revision: 22
  [Prédiction d'un ou de plusieurs états suivants](#bkmk_Query4)  
   
 ##  <a name="bkmk_ContentQueries"></a> Recherche d'informations sur le modèle Sequence Clustering  
- Pour créer des requêtes pertinentes sur le contenu d'un modèle d'exploration de données, vous devez comprendre la structure du contenu du modèle et les types d'informations stockés dans les différents types de nœuds. Pour plus d’informations, consultez [Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining model content for sequence clustering models.md).  
+ Pour créer des requêtes pertinentes sur le contenu d'un modèle d'exploration de données, vous devez comprendre la structure du contenu du modèle et les types d'informations stockés dans les différents types de nœuds. Pour plus d’informations, consultez [Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md).  
   
 ###  <a name="bkmk_Query1"></a> Exemple de requête 1 : utilisation de l'ensemble de lignes de schéma d'exploration de données pour retourner les paramètres du modèle  
  En interrogeant l'ensemble de lignes de schéma d'exploration de données, vous pouvez rechercher plusieurs types d'informations sur le modèle, dont les métadonnées de base, sa date et heure de création, le moment où il a été traité pour la dernière fois, le nom de la structure d'exploration de données sur laquelle il est basé et la colonne utilisée comme attribut prévisible.  
   
- La requête suivante retourne les paramètres utilisés pour générer et procéder à l'apprentissage du modèle, `[Sequence Clustering]`. Vous pouvez créer ce modèle dans  la leçon 5 du [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md).  
+ La requête suivante retourne les paramètres utilisés pour générer et procéder à l'apprentissage du modèle, `[Sequence Clustering]`. Vous pouvez créer ce modèle dans  la leçon 5 du [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
 ```  
 SELECT MINING_PARAMETERS   
@@ -87,7 +92,7 @@ AND [PARENT_UNIQUE_NAME] = 0
   
  Résultats partiels :  
   
-|NODE_UNIQUE_NAME|Produit 1|Support de séquence|Probabilité de la séquence|  
+|NODE_UNIQUE_NAME|Produit 1|Support de séquence|Probabilité de la séquence|  
 |------------------------|---------------|----------------------|--------------------------|  
 |1081327|Manquant|0|#######|  
 |1081327|All-Purpose Bike Stand|17|0.00111|  
@@ -152,7 +157,7 @@ WHERE NODE_UNIQUE_NAME = '1081365'
   
  Cette section fournit quelques exemples sur la façon d'utiliser les procédures stockées système pour créer des requêtes sur un modèle Sequence Clustering :  
   
-#### Profils du cluster et cas d'exemple  
+#### <a name="cluster-profiles-and-sample-cases"></a>Profils du cluster et cas d'exemple  
  L'onglet Profils du cluster affiche une liste des clusters dans le modèle, la taille de chaque cluster et un histogramme qui indique les états inclus dans le cluster. Il existe deux procédures stockées système que vous pouvez utiliser dans les requêtes pour extraire des informations semblables :  
   
 -   `GetClusterProfile` retourne les caractéristiques du cluster, avec toutes les informations trouvées dans la table NODE_DISTRIBUTION du cluster.  
@@ -181,9 +186,9 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetNodeGraph
 SELECT * FROM [Sequence Clustering].SAMPLE_CASES WHERE IsInNode('12')  
 ```  
   
- Pour plus d’informations, consultez [SELECT FROM &#60;modèle&#62;.SAMPLE_CASES &#40;DMX&#41;](../Topic/SELECT%20FROM%20%3Cmodel%3E.SAMPLE_CASES%20\(DMX\).md).  
+ Pour plus d’informations, consultez [SELECT FROM &#60;modèle&#62;.SAMPLE_CASES &#40;DMX&#41;](../../dmx/select-from-model-sample-cases-dmx.md).  
   
-#### Caractéristiques et discrimination du cluster  
+#### <a name="cluster-characteristics-and-cluster-discrimination"></a>Caractéristiques et discrimination du cluster  
  L'onglet **Caractéristiques du cluster** résume les attributs principaux de chaque cluster, classés par probabilité. Vous pouvez trouver le nombre de cas appartenant à un cluster ainsi que des informations relatives à la distribution des cas dans le cluster : chaque caractéristique a un certain support. Pour consulter les caractéristiques d'un cluster particulier, vous devez connaître l'ID du cluster.  
   
  Les exemples suivants utilisent la procédure stockée système `GetClusterCharacteristics`pour retourner toutes les caractéristiques du Cluster 12 qui ont un score de probabilité supérieur au seuil spécifié de 0,0005.  
@@ -206,12 +211,12 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
   
  Si vous souhaitez écrire votre propre requête en DMX pour comparer deux clusters, ou comparer un cluster avec son complément, vous devez commencer par extraire un jeu de caractéristiques, puis extraire les caractéristiques du cluster qui vous intéresse et comparer les deux jeux. Ce scénario est plus compliqué et nécessite généralement un traitement client.  
   
-#### États et transitions  
+#### <a name="states-and-transitions"></a>États et transitions  
  L'onglet **Transitions d'état** de l'algorithme Microsoft Sequence Clustering effectue des requêtes compliquées interroge sur le principal pour extraire et comparer les statistiques de clusters différents. Reproduire ces résultats requiert une requête plus complexe et un traitement client.  
   
  Toutefois, vous pouvez utiliser les requêtes DMX décrites dans l'exemple 2 de la section [Requêtes de contenu](#bkmk_ContentQueries)pour extraire des probabilités et des états pour les séquences ou pour les transitions individuelles.  
   
-## Utilisation du modèle pour réaliser des prédictions  
+## <a name="using-the-model-to-make-predictions"></a>Utilisation du modèle pour réaliser des prédictions  
  Les requêtes de prédiction sur un modèle Sequence Clustering peuvent utiliser beaucoup des fonctions de prédiction utilisées avec d'autres modèles de clustering. De plus, vous pouvez utiliser la fonction de prédiction spéciale, [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md), pour effectuer des recommandations ou prédire les états suivants.  
   
 ###  <a name="bkmk_Query4"></a> Requête d'exemple 4 : prédiction d'un ou de plusieurs états suivants  
@@ -235,7 +240,7 @@ AS t
 |1||Cycling Cap|  
 |2||Cycling Cap|  
 |3||Sport-100|  
-|4||Long-Sleeve logo Jersey|  
+|4||Long-Sleeve Logo Jersey (Pull-over à manches longues)|  
 |5||Half-Finger Gloves|  
 |6||All-Purpose Bike Stand|  
 |7||All-Purpose Bike Stand|  
@@ -248,7 +253,7 @@ AS t
   
  Les valeurs des lignes 6 et 7 sont des espaces réservés. Lorsque vous atteignez la fin de la chaîne de transitions possibles, plutôt que terminer les résultats de prédiction, la valeur passée comme une entrée est ajoutée aux résultats. Par exemple, si vous avez augmenté le nombre de prédictions jusqu'à 20, les valeurs des lignes 6-20 sont toutes les mêmes, All-Purpose Bike Stand.  
   
-## Liste de fonctions  
+## <a name="function-list"></a>Liste de fonctions  
  Tous les algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)] prennent en charge un ensemble commun de fonctions. Toutefois, l'algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) prend en charge les fonctions supplémentaires répertoriées dans le tableau suivant.  
   
 |||  
@@ -269,12 +274,12 @@ AS t
 |[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|Retourne la valeur de support pour un état spécifié.|  
 |[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|Retourne la variance d'une colonne spécifiée.|  
   
- Pour obtenir la liste des fonctions communes à tous les algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)], consultez [Fonctions de prédiction générales &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). Pour la syntaxe de fonctions spécifiques, consultez [Informations de référence sur les fonctions DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
+ Pour obtenir la liste des fonctions communes à tous les algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)], consultez [Fonctions de prédiction générales &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). Pour la syntaxe de fonctions spécifiques, consultez [Fonctions DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
-## Voir aussi  
- [Requêtes d'exploration de données](../../analysis-services/data-mining/data-mining-queries.md)   
- [Références techniques relatives à l'algorithme MSC (Microsoft Sequence Clustering)](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Algorithme MSC (Microsoft Sequence Clustering)](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining model content for sequence clustering models.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Requêtes d’exploration de données](../../analysis-services/data-mining/data-mining-queries.md)   
+ [Microsoft Sequence Clustering algorithme techniques de référence](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

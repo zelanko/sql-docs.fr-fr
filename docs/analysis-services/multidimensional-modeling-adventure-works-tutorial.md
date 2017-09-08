@@ -1,30 +1,35 @@
 ---
-title: "Mod&#233;lisation multidimensionnelles (didacticiel Adventure Works) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "didacticiels [Analysis Services]"
-  - "Analysis Services, didacticiels"
+title: "(Didacticiel Adventure Works) de modélisation multidimensionnelle | Documents Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- tutorials [Analysis Services]
+- Analysis Services, tutorials
 ms.assetid: db55e226-601a-4026-8651-573195555a59
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 31
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eee675f86ab6707346b2789e424bcc1778f111f4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Mod&#233;lisation multidimensionnelles (didacticiel Adventure Works)
+# <a name="multidimensional-modeling-adventure-works-tutorial"></a>Modélisation multidimensionnelles (didacticiel Adventure Works)
 Didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Ce didacticiel explique comment utiliser [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] pour développer et déployer un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et tous les exemples sont basés sur la société fictive [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] .  
   
-## Contenu du didacticiel  
+## <a name="what-you-will-learn"></a>Contenu du didacticiel  
 Dans ce didacticiel, vous apprendrez les éléments suivants:  
   
 -   Définir des sources de données, des vues de source de données, des dimensions, des attributs, des relations d'attributs, des hiérarchies et des cubes dans un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] au sein de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
@@ -37,8 +42,8 @@ Dans ce didacticiel, vous apprendrez les éléments suivants:
   
 Une description du scénario accompagne ce didacticiel afin que vous puissiez mieux comprendre le contexte de ces leçons. Pour plus d'informations, consultez [Analysis Services Tutorial Scenario](../analysis-services/analysis-services-tutorial-scenario.md).  
   
-## Conditions préalables  
-Vous aurez besoin d'exemples de données, de fichiers d'exemple de projet et d'un logiciel pour effectuer toutes les leçons du didacticiel. Pour obtenir des instructions sur la façon de vous procurer et d'installer les éléments requis pour ce didacticiel, consultez l' [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../analysis-services/install sample data and projects.md).  
+## <a name="prerequisites"></a>Conditions préalables  
+Vous aurez besoin d'exemples de données, de fichiers d'exemple de projet et d'un logiciel pour effectuer toutes les leçons du didacticiel. Pour obtenir des instructions sur la façon de vous procurer et d'installer les éléments requis pour ce didacticiel, consultez l' [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../analysis-services/install-sample-data-and-projects.md).  
   
 En outre, les autorisations suivantes doivent être en place pour achever correctement ce didacticiel :  
   
@@ -46,27 +51,28 @@ En outre, les autorisations suivantes doivent être en place pour achever correc
   
 -   Vous devez disposer d'autorisations de lecture dans l'exemple de base de données **AdventureWorksDW2012** . Cet exemple de base de données est valable pour la version de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
   
-## Leçons  
+## <a name="lessons"></a>Leçons  
 Ce didacticiel inclut les leçons suivantes.  
   
 |Leçon|Durée estimée|  
 |----------|------------------------------|  
-|[Leçon 1 : Définition d'une vue de source de données dans un projet Analysis Services](../analysis-services/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 minutes|  
+|[Leçon 1 : Définition d'une vue de source de données dans un projet Analysis Services](../analysis-services/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 minutes|  
 |[Leçon 2 : Définition et déploiement d'un cube](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)|30 minutes|  
-|[Leçon 3 : Modification des mesures, des attributs et des hiérarchies](../analysis-services/lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 minutes|  
-|[Leçon 4 : Définition des attributs avancés et des propriétés de dimension](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 minutes|  
-|[Leçon 5 : Définition des relations entre les dimensions et les groupes de mesures](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 minutes|  
+|[Leçon 3 : Modification des mesures, des attributs et des hiérarchies](../analysis-services/lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 minutes|  
+|[Leçon 4 : Définition des attributs avancés et des propriétés de dimension](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 minutes|  
+|[Leçon 5 : Définition des relations entre les dimensions et les groupes de mesures](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 minutes|  
 |[Leçon 6 : Définition de calculs](../analysis-services/lesson-6-defining-calculations.md)|45 minutes|  
 |[Leçon 7 : Définition d’indicateurs de performance clés &#40;KPIs&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)|30 minutes|  
-|[Leçon 8 : Définition des actions](../analysis-services/lesson-8-defining-actions.md)|30 minutes|  
-|[Leçon 9 : Définition de perspectives et de traductions](../analysis-services/lesson-9-defining-perspectives-and-translations.md)|30 minutes|  
-|[Leçon 10 : Définition de rôles administratifs](../analysis-services/lesson-10-defining-administrative-roles.md)|15 minutes|  
+|[Leçon 8 : Définition des actions](../analysis-services/lesson-8-defining-actions.md)|30 minutes|  
+|[Leçon 9 : Définition de perspectives et de traductions](../analysis-services/lesson-9-defining-perspectives-and-translations.md)|30 minutes|  
+|[Leçon 10 : Définition de rôles administratifs](../analysis-services/lesson-10-defining-administrative-roles.md)|15 minutes|  
   
 > [!NOTE]  
 > La base de données de cube que vous allez créer dans ce didacticiel est une version simplifiée du projet de modèle multidimensionnel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui fait partie des exemples de bases de données Adventure Works disponibles en téléchargement sur le site Codeplex. La version du didacticiel de la base de données multidimensionnelle Adventure Works est simplifiée afin de se consacrer davantage aux compétences spécifiques que vous souhaitez maîtriser au plus vite. Après avoir terminé le didacticiel, explorez le projet de modèle multidimensionnel par vous même afin d'approfondir votre compréhension de la modélisation multidimensionnelle [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-## Étape suivante  
+## <a name="next-step"></a>Étape suivante  
 Pour démarrer le didacticiel, passez à la première leçon : [Lesson 1: Defining a Data Source View within an Analysis Services Project](../analysis-services/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md).  
   
   
   
+

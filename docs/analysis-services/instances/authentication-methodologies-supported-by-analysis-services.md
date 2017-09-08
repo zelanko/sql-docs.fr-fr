@@ -1,25 +1,30 @@
 ---
-title: "M&#233;thodologies d&#39;authentification prises en charge par Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Méthodologies d’authentification pris en charge par Analysis Services | Documents Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3d7e13fb81b3c59d348f9ccb8e4933683cf96f0b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# M&#233;thodologies d&#39;authentification prises en charge par Analysis Services
-  Les connexions d'une application cliente à une instance d'Analysis Services nécessitent l'authentification Windows (intégrée). Fournissez une identité d'utilisateur Windows à l'aide de l'une des méthodes suivantes :  
+# <a name="authentication-methodologies-supported-by-analysis-services"></a>Méthodologies d'authentification prises en charge par Analysis Services
+  Les connexions d'une application cliente à une instance d'Analysis Services nécessitent l'authentification Windows (intégrée). Fournissez une identité d'utilisateur Windows à l'aide de l'une des méthodes suivantes :  
   
 -   NTLM  
   
@@ -57,7 +62,7 @@ caps.handback.revision: 8
  Pour plus d’informations sur la configuration d’Analysis Services pour la délégation contrainte, consultez [Configurer Analysis Services pour la délégation contrainte Kerberos](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md).  
   
 > [!NOTE]  
->  Windows Server 2012 prend en charge la délégation contrainte dans les domaines. À l'inverse, la configuration de la délégation contrainte Kerberos dans des domaines à des niveaux fonctionnels inférieurs, tels que Windows Server 2008 ou 2008 R2, nécessite que les ordinateurs clients et serveurs soient membres du même domaine.  
+>  Windows Server 2012 prend en charge la délégation contrainte dans les domaines. À l'inverse, la configuration de la délégation contrainte Kerberos dans des domaines à des niveaux fonctionnels inférieurs, tels que Windows Server 2008 ou 2008 R2, nécessite que les ordinateurs clients et serveurs soient membres du même domaine.  
   
  **EffectiveUserName**  
   
@@ -71,19 +76,19 @@ caps.handback.revision: 8
   
  Pour l'authentification anonyme, vous pouvez définir l'identité d'un utilisateur anonyme dans un compte d'utilisateur Windows spécifique (IUSR_GUEST par défaut) ou une identité du pool d'applications. Le compte d'utilisateur anonyme est utilisé sur la connexion Analysis Services et doit disposer d'autorisations d'accès aux données sur l'instance Analysis Services. Lorsque vous utilisez cette approche, seule l'identité de l'utilisateur associée au compte anonyme est utilisée sur la connexion. Si votre application nécessite la gestion d'identités supplémentaires, choisissez une des autres approches, ou complétez avec une solution de gestion des identités que vous fournissez.  
   
- L'authentification de base ou anonyme est disponible uniquement lorsque vous configurez Analysis Services pour l'accès HTTP, à l'aide d'IIS et du fichier msmdpump.dll pour établir la connexion. Pour plus d’informations, consultez [Configurer l’accès HTTP à Analysis Services sur Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md).  
+ L'authentification de base ou anonyme est disponible uniquement lorsque vous configurez Analysis Services pour l'accès HTTP, à l'aide d'IIS et du fichier msmdpump.dll pour établir la connexion. Pour plus d’informations, consultez [Configurer l’accès HTTP à Analysis Services sur Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
- **Informations d'identification stockées**  
+ **Stored Credentials**  
   
  La plupart des services d'application intermédiaires comprennent une fonctionnalité de stockage du nom d'utilisateur et du mot de passe qui sont ensuite utilisés pour récupérer des données dans un magasin de données de bas niveau, tel qu'Analysis Services ou le moteur relationnel SQL Server. De ce fait, le stockage des informations d'identification offre une cinquième solution pour la récupération des données. Les limitations de cette approche comprennent la surcharge de maintenance associée à la mise à jour des noms d'utilisateur et des mots de passe et l'utilisation d'une seule identité sur la connexion. Si votre solution nécessite l'identité de l'appelant d'origine, le stockage des informations d'identification ne constitue pas une solution viable.  
   
  Pour plus d’informations sur les informations d’identification, consultez [Créer, modifier et supprimer des sources de données partagées &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) et [Utiliser Excel Services avec le service Banque d’informations sécurisé dans SharePoint Server 2013](http://go.microsoft.com/fwlink/?LinkID=309869).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utilisation d'emprunt d'identité avec sécurité du transport](http://go.microsoft.com/fwlink/?LinkId=311727)   
- [Configurer l’accès HTTP à Analysis Services sur Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md)   
+ [Configurer l’accès HTTP à Analysis Services sur Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [Configurer Analysis Services pour la délégation contrainte Kerberos](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)   
- [Inscription du nom SPN pour une instance Analysis Services](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
+ [Inscription SPN pour une instance Analysis Services](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
  [Se connecter à Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   

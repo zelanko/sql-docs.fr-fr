@@ -1,22 +1,27 @@
 ---
-title: "Cat&#233;gorie d&#39;&#233;v&#233;nements de traitement de requ&#234;te | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "Catégorie d’événements de traitement des requêtes | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: a94b3198-be85-4935-845d-1cd4e121fc94
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3e583b0b0a6985ec4c91090b9009df6924c25c75
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cat&#233;gorie d&#39;&#233;v&#233;nements de traitement de requ&#234;te
+# <a name="query-processing-events-category"></a>Catégorie d'événements de traitement de requête
   La catégorie d'événement Query Processing contient les classes d'événements décrites dans le tableau ci-dessous.  
   
 |**Classe d'événements**|**ID d'événement**|**Description**|  
@@ -42,7 +47,7 @@ caps.handback.revision: 6
   
  Pour plus d'informations sur les colonnes associées à chaque classe d'événements Query Processing, consultez [Query Processing Events Data Columns](../../analysis-services/trace-events/query-processing-events-data-columns.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Événements de trace Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

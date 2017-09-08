@@ -1,32 +1,37 @@
 ---
-title: "D&#233;ployer des solutions de mod&#232;le avec l&#39;utilitaire de d&#233;ploiement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "déploiement [Analysis Services], invite de commandes"
-  - "utilitaires d’invite de commandes [SQL Server], Microsoft.AnalysisServices.Deployment"
-  - "Microsoft.AnalysisServices.Deployment (utilitaire)"
-  - "Analysis Services (déploiements), invite de commandes"
+title: "Déployer des Solutions de modèle avec l’utilitaire de déploiement | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deploying [Analysis Services], command prompt
+- command prompt utilities [SQL Server], Microsoft.AnalysisServices.Deployment
+- Microsoft.AnalysisServices.Deployment utility
+- Analysis Services deployments, command prompt
 ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 23
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6bd590943c8922087164bd4759faaf7e39af720b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# D&#233;ployer des solutions de mod&#232;le avec l&#39;utilitaire de d&#233;ploiement
+# <a name="deploy-model-solutions-with-the-deployment-utility"></a>Déployer des solutions de modèle avec l'utilitaire de déploiement
   L'utilitaire **Microsoft.AnalysisServices.Deployment** permet de démarrer le moteur de déploiement de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à partir de l'invite de commandes. Comme un fichier d'entrée, l'utilitaire emploie les fichiers de sorties XML générés par la construction d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Les fichiers d'entrées sont facilement modifiables pour personnaliser le déploiement d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Le script de déploiement généré peut alors être immédiatement exécuté ou enregistré en vue d'un déploiement ultérieur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -61,7 +66,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 > [!NOTE]  
 >  L’argument **/d** est utilisé uniquement en mode de sortie. Cet argument est ignoré s'il est spécifié en mode réponse ou en mode silencieux. Pour plus d'informations sur les modes, consultez la section, [Modes](#Modes), plus loin dans cette rubrique.  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  L'utilitaire **Microsoft.AnalysisServices.Deployment** prend un ensemble de fichiers qui fournit les définitions d'objets, les cibles de déploiement, les options de déploiement et les paramètres de configuration et tente de déployer les définitions d'objets dans les cibles de déploiement spécifiées, en utilisant les options de déploiement et les paramètres de configuration spécifiés. Cet utilitaire peut fournir une interface utilisateur lorsqu'il est invoqué dans un fichier de réponse ou en mode de sortie. Pour plus d’informations sur l’utilisation de l’interface utilisateur fournie pour cet utilitaire pour créer des fichiers de réponse, consultez [Déployer des solutions de modèles à l’aide de l’Assistant Déploiement](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md).  
   
  L'utilitaire se trouve dans le dossier \Program files (x86)\Microsoft SQL Server\110\Binn\ManagementStudio.  
@@ -77,7 +82,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
   
  [Retour aux arguments](#Arguments)  
   
-## Exemples  
+## <a name="examples"></a>Exemples  
  L'exemple suivant illustre le déploiement d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode silencieux, consignant les messages de progression et d'erreur en vue d'une analyse ultérieure :  
   
  `Microsoft.AnalysisServices.Deployment.exe`  
@@ -86,7 +91,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
   
  `/s: C:\ My Documents\Visual Studio 2010\Projects\AdventureWorksProject\Project1\bin\deployment.log`  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Référence de l’utilitaire d’invite de commandes &#40;moteur de base de données&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

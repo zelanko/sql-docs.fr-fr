@@ -1,26 +1,31 @@
 ---
-title: "Traiter manuellement les donn&#233;es (SSAS Tabulaire) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.datarefreshprogressdb.f1"
+title: "Traiter manuellement des données (SSAS tabulaire) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.datarefreshprogressdb.f1
 ms.assetid: 0918c04c-c1e6-45b4-acfa-96fa578e684b
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d421c1f625ee182497be3fbbff0c19f727f1a2b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Traiter manuellement les donn&#233;es (SSAS Tabulaire)
+# <a name="manually-process-data-ssas-tabular"></a>Traiter manuellement les données (SSAS Tabulaire)
   Cette rubrique décrit la procédure permettant de traiter manuellement des données d'espace de travail dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  Lorsque vous créez un modèle tabulaire qui utilise des données externes, vous pouvez actualiser manuellement les données à l'aide de la commande Traiter. Vous pouvez traiter une table unique, toutes les tables du modèle, ou une ou plusieurs partitions. Chaque fois que vous traitez des données, vous pouvez également être amené à recalculer les données.  Le traitement de données consiste à obtenir les données les plus récentes à partir des sources externes. Recalculer implique mettre à jour le résultat de toute formule qui utilise les données.  
@@ -33,19 +38,19 @@ caps.handback.revision: 18
   
 ##  <a name="bkmk_mahually_process"></a> Traiter manuellement les données  
   
-#### Pour traiter des données pour une seule table ou toutes les tables d'un modèle  
+#### <a name="to-process-data-for-a-single-table-or-all-tables-in-a-model"></a>Pour traiter des données pour une seule table ou toutes les tables d'un modèle  
   
 1.  Dans le générateur de modèles, cliquez sur la table que vous souhaitez traiter.  
   
 2.  Dans le menu **Modèle** , cliquez sur **Traiter**, puis sur **Traiter** ou **Traiter tout**.  
   
-#### Pour traiter les données de toutes les tables qui utilisent la même connexion  
+#### <a name="to-process-data-for-all-tables-using-the-same-connection"></a>Pour traiter les données de toutes les tables qui utilisent la même connexion  
   
 1.  Dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], cliquez sur le menu **Modèle** , puis sur **Connexions existantes**.  
   
 2.  Dans la boîte de dialogue **Connexions existantes** , sélectionnez une connexion, puis cliquez sur **Traiter**.  
   
-#### Pour traiter des données pour une ou plusieurs partitions  
+#### <a name="to-process-data-for-one-or-more-partitions"></a>Pour traiter des données pour une ou plusieurs partitions  
   
 1.  Dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], cliquez sur le menu **Modèle** , pointez sur **Traiter**, puis cliquez sur **Traiter les partitions**.  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 18
  **Arrêter l'actualisation**  
  Cliquez pour arrêter l'opération de traitement. Cette option est utile si l'opération prend trop de temps ou génère trop d'erreurs.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Traiter les données &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md)   
  [Dépanner le traitement des données &#40;SSAS Tabulaire&#41;](../../analysis-services/troubleshoot-process-data-ssas-tabular.md)  
   

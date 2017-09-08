@@ -1,24 +1,29 @@
 ---
-title: "Colonnes de donn&#233;es d&#39;&#233;v&#233;nements de notification | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Notifications d'événement, catégorie d'événement"
+title: "Colonnes de données d’événements notification | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Notification Events event category
 ms.assetid: 0ecf06da-1586-415a-9da8-60d4c634f030
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f671eb89295049c09da1f037fdb4544db84b7280
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Colonnes de donn&#233;es d&#39;&#233;v&#233;nements de notification
+# <a name="notification-events-data-columns"></a>Colonnes de données d'événements de notification
   Les événements de notification sont des événements qui ne sont pas directement générés par les utilisateurs de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Par exemple, des notifications se déclenchent suite à la mise à jour par les utilisateurs des tables sous-jacentes pour la mise en cache proactive.  
   
  La catégorie d'événement Événements de notification a la classe d'événements suivante :  
@@ -30,17 +35,17 @@ caps.handback.revision: 30
   
  Le tableau suivant répertorie les colonnes de données de la classe d'événements.  
   
-## Notification  
+## <a name="notification"></a>Notification  
   
 |**Nom de la colonne**|**ID de la colonne**|**Type de colonne**|**Description de la colonne**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Classe d'événements utilisée pour catégoriser les événements.|  
 |EventSubclass|1|1|La sous-classe d'événements fournit des informations supplémentaires sur chaque classe d'événements.<br /><br /> Les paires **ID de sous-classe**:<br />                      **Nom de sous-classe** suivantes sont définies :<br /><br /> 0 : début de la mise en cache proactive<br /><br /> 1 : fin de la mise en cache proactive<br /><br /> 2 : boîte noire démarrée<br /><br /> 3 : boîte noire arrêtée<br /><br /> 4 : propriétés de configuration mises à jour<br /><br /> 5 : trace SQL<br /><br /> 6 : objet créé<br /><br /> 7 : objet supprimé<br /><br /> 8 : objet modifié<br /><br /> 9 : début de l’interrogation de la mise en cache proactive<br /><br /> 10 : fin de l’interrogation de la mise en cache proactive<br /><br /> 11 : début de l’instantané de la boîte noire<br /><br /> 12 : fin de l’instantané de la boîte noire<br /><br /> 13 : mise en cache proactive : objet notifiable mis à jour<br /><br /> 14 : traitement différé : début du traitement<br /><br /> 15 : traitement différé : traitement terminé<br /><br /> 16 : début de l’événement SessionOpened<br /><br /> 17 : fin de l’événement SessionOpened<br /><br /> 18 : début de l’événement SessionClosing<br /><br /> 19 : fin de l’événement SessionClosing<br /><br /> 20 : début de l’événement CubeOpened<br /><br /> 21 : fin de l’événement CubeOpened<br /><br /> 22 : début de l’événement CubeClosing<br /><br /> 23 : fin de l’événement CubeClosing<br /><br /> 24 : arrêt de transaction demandé|  
-|CurrentTime|2|5|Contient l'heure actuelle de l'événement de notification, le cas échéant. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
-|StartTime|3|5|Contient l'heure de début de l'événement, le cas échéant. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
-|EndTime|4|5|Contient l'heure de fin de l'événement. Cette colonne n'est pas remplie pour les classes d'événements de démarrage, comme SQL:BatchStarting ou SP:Starting. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|CurrentTime|2|5|Contient l'heure actuelle de l'événement de notification, le cas échéant. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|StartTime|3|5|Contient l'heure de début de l'événement, le cas échéant. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|EndTime|4|5|Contient l'heure de fin de l'événement. Cette colonne n'est pas remplie pour les classes d'événements de démarrage, comme SQL:BatchStarting ou SP:Starting. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
 |Duration|5|2|Contient le temps (en millisecondes) utilisé par l'événement.|  
-|IntegerData|10|1|Contient les données entières associées à l'événement de notification. Lorsque la colonne EventSubclass contient la valeur 8, les valeurs sont :<br /><br /> 1 = Créé<br /><br /> 2 = Supprimé<br /><br /> 3 = Propriétés de l'objet modifié<br /><br /> 4 = Propriétés modifiées de l'enfant de l'objet<br /><br /> 6 = Enfant ajouté<br /><br /> 7 = Enfant supprimé<br /><br /> 8 = Objet complètement traité<br /><br /> 9 = Objet partiellement traité<br /><br /> 10 = Objet non traité<br /><br /> 11 = Objet complètement optimisé<br /><br /> 12 = Objet partiellement optimisé<br /><br /> 13 = Objet non optimisé|  
+|IntegerData|10|1|Contient les données entières associées à l'événement de notification. Lorsque la colonne EventSubclass contient la valeur 8, les valeurs sont :<br /><br /> 1 = Créé<br /><br /> 2 = Supprimé<br /><br /> 3 = Propriétés de l'objet modifié<br /><br /> 4 = Propriétés modifiées de l'enfant de l'objet<br /><br /> 6 = Enfant ajouté<br /><br /> 7 = Enfant supprimé<br /><br /> 8 = Objet complètement traité<br /><br /> 9 = Objet partiellement traité<br /><br /> 10 = Objet non traité<br /><br /> 11 = Objet complètement optimisé<br /><br /> 12 = Objet partiellement optimisé<br /><br /> 13 = Objet non optimisé|  
 |ObjectID|11|8|Contient l'ID d'objet pour lequel cette notification est émise ; il s'agit d'une valeur de chaîne.|  
 |ObjectType|12|1|Contient le type d'objet associé à l'événement de notification.|  
 |ObjectName|13|8|Contient le nom d'objet associé à l'événement de notification.|  
@@ -57,13 +62,13 @@ caps.handback.revision: 30
 |ServerName|43|8|Contient le nom de l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sur laquelle l'événement de notification s'est produit.|  
 |RequestProperties|45|9|Contient les propriétés de la demande XMLA.|  
   
-## Définis par l'utilisateur  
+## <a name="user-defined"></a>Définis par l'utilisateur  
   
 |**Nom de la colonne**|**ID de la colonne**|**Type de colonne**|**Description de la colonne**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Classe d'événements utilisée pour catégoriser les événements.|  
 |EventSubclass|1|1|Sous-classe d'événement spécifique de l'utilisateur qui fournit des informations supplémentaires sur chaque classe d'événements.|  
-|CurrentTime|2|5|Contient l'heure actuelle de l'événement de notification, le cas échéant. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|CurrentTime|2|5|Contient l'heure actuelle de l'événement de notification, le cas échéant. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
 |IntegerData|10|1|Informations d'événement définies par l'utilisateur.|  
 |ConnectionID|25|1|Contient l'ID de connexion unique associé à l'événement de notification.|  
 |DatabaseName|28|8|Contient le nom de la base de données dans laquelle l'événement de notification s'est produit.|  
@@ -75,7 +80,7 @@ caps.handback.revision: 30
 |TextData|42|9|Contient les données texte associées à l'événement de notification.|  
 |ServerName|43|8|Contient le nom de l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sur laquelle l'événement de notification s'est produit.|  
   
-## Voir aussi  
- [Catégorie d'événement Événements de notification](../../analysis-services/trace-events/notification-events-event-category.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Notification Events Event Category](../../analysis-services/trace-events/notification-events-event-category.md)  
   
   

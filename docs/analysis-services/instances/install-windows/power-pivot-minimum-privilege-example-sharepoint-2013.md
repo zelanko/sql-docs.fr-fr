@@ -1,30 +1,35 @@
 ---
-title: "Exemple de configuration avec privil&#232;ges minimum pour Power Pivot pour SharePoint&#160;2013 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Power Pivot avec privilèges Minimum exemple - SharePoint 2013 | Documents Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c1e09e6c-52d3-48ab-8c70-818d5d775087
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 9583847e375cf3deb030319dce8b77dab3e5e609
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Exemple de configuration avec privil&#232;ges minimum pour Power Pivot pour SharePoint&#160;2013
+# <a name="power-pivot-minimum-privilege-example---sharepoint-2013"></a>Power Pivot avec privilèges Minimum exemple - SharePoint 2013
   Cette rubrique décrit un exemple de configuration de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2013 avec les privilèges minimum. La configuration utilise un compte différent pour chacun des trois composants et chaque compte dispose du niveau minimum de privilèges.  
   
 ||  
 |-|  
 |**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013|  
   
-## Récapitulatif des comptes  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2013 prend en charge l’utilisation du compte Service réseau pour le compte de service Analysis Services. Le compte Service réseau n'est pas un scénario pris en charge avec SharePoint 2010. Pour plus d’informations sur les comptes de service, consultez [Configurer les comptes de service Windows et les autorisations](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx).  
+## <a name="summary-of-accounts"></a>Récapitulatif des comptes  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2013 prend en charge l’utilisation du compte Service réseau pour le compte de service Analysis Services. Le compte Service réseau n'est pas un scénario pris en charge avec SharePoint 2010. Pour plus d’informations sur les comptes de service, consultez [Configurer les comptes de service Windows et les autorisations](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx).  
   
  Le tableau suivant récapitule les trois comptes utilisés dans cet exemple de configuration avec privilèges minimums.  
   
@@ -34,13 +39,13 @@ caps.handback.revision: 12
 |Compte de batterie de serveurs SharePoint|**SPFarm**|  
 |Compte de service Analysis Services|**SPsvc**|  
   
-### Compte Administrateur SharePoint (SpAdmin)  
- **SPAdmin** est un compte de domaine que vous utilisez pour installer et configurer la batterie de serveurs. Il s’agit du compte utilisé pour exécuter l’Assistant Configuration SharePoint et l’outil de configuration [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2013. Le compte **SPAdmin** est le seul compte à exiger des droits d’administrateur local. Avant d’exécuter l’outil de configuration [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)], accordez les privilèges du compte **SPAdmin** à l’instance de base de données SQL Server où SharePoint crée les bases de données de contenu et de configuration. Pour configurer le compte SPAdmin dans un scénario avec privilèges minimums, il doit être membre des rôles **securityadmin** et **dbcreator**.  
+### <a name="the-sharepoint-administrator-account-spadmin"></a>Compte Administrateur SharePoint (SpAdmin)  
+ **SPAdmin** est un compte de domaine que vous utilisez pour installer et configurer la batterie de serveurs. Il s’agit du compte utilisé pour exécuter l’Assistant Configuration SharePoint et l’outil de configuration [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2013. Le compte **SPAdmin** est le seul compte à exiger des droits d’administrateur local. Avant d’exécuter l’outil de configuration [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , accordez les privilèges du compte **SPAdmin** à l’instance de base de données SQL Server où SharePoint crée les bases de données de contenu et de configuration. Pour configurer le compte SPAdmin dans un scénario avec privilèges minimums, il doit être membre des rôles **securityadmin** et **dbcreator**.  
   
-### Compte de batterie de serveurs (SPFarm)  
+### <a name="the-farm-account-spfarm"></a>Compte de batterie de serveurs (SPFarm)  
  **SPFarm** est un compte de domaine que le service du minuteur SharePoint et l'application Web de l'Administration centrale utilisent pour accéder à la base de données de contenu SharePoint. Ce compte n'a pas besoin d'être administrateur local. L’Assistant Configuration SharePoint octroie le privilège minimal approprié dans la base de données SQL Server principale. La configuration de privilèges minimums SQL Server correspond à l’appartenance aux rôles **securityadmin** et **dbcreator**.  
   
-### Compte de service pour le service Power Pivot (SPsvc)  
+### <a name="the-service-account-for-power-pivot-service-spsvc"></a>Compte de service pour le service Power Pivot (SPsvc)  
  Si une nouvelle batterie de serveurs SharePoint n’est pas configurée avant d’exécuter l’outil de configuration [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , l’outil de configuration [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] créera par défaut les applications suivantes :  
   
 -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] .  
@@ -51,7 +56,7 @@ caps.handback.revision: 12
   
  L’outil de configuration [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] configure les trois applications de service dans le pool d’applications par défaut. Ce pool d'applications est généralement configuré pour s'exécuter sous le compte SPFarm, lequel a accès à un grand nombre de ressources dont un compte de service n'a pas besoin. Pour transformer l'environnement en un environnement de privilèges minimums, configurez un nouveau compte de domaine qui sera utilisé par le pool d'applications et l'application Web appropriés.  
   
- **Pour créer un compte de domaine SPsvc à utiliser comme compte de service SharePoint :**  
+ **Pour créer un compte de domaine SPsvc à utiliser comme compte de service SharePoint :**  
   
 1.  Dans l’Administration centrale de SharePoint, sélectionnez **Sécurité**.  
   
@@ -69,11 +74,11 @@ caps.handback.revision: 12
   
 3.  Sélectionnez le pool d’application de service utilisé par l’application de service [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Ensuite, sélectionnez le compte SPSvc.  
   
- **Pour accorder l'accès à l'application Web avec PowerShell :**  
+ **Pour accorder l'accès à l'application Web avec PowerShell :**  
   
-1.  Exécutez SharePoint 2013 Management Shell avec des privilèges d'administrateur.  
+1.  Exécutez SharePoint 2013 Management Shell avec des privilèges d'administrateur.  
   
-2.  Exécutez le code PowerShell suivant :  
+2.  Exécutez le code PowerShell suivant :  
   
     ```  
     $webApp = Get-SPWebApplication "http://<servername>"  

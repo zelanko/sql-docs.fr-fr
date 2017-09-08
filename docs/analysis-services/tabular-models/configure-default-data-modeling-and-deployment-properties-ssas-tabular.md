@@ -1,32 +1,37 @@
 ---
-title: "Configurer les propri&#233;t&#233;s par d&#233;faut de mod&#233;lisation des donn&#233;es et de d&#233;ploiement (SSAS Tabulaire) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DATA_MODELING"
-  - "sql13.asvs.bidtoolset.deployment.f1"
-  - "sql13.asvs.bidtoolset.asoptions.f1"
-  - "VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT"
+title: "Configurer les propriétés de déploiement (SSAS tabulaire) et de la modélisation des données par défaut | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DATA_MODELING
+- sql13.asvs.bidtoolset.deployment.f1
+- sql13.asvs.bidtoolset.asoptions.f1
+- VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 50c41697a0197261be8ef1b60b469a28bd331248
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Configurer les propri&#233;t&#233;s par d&#233;faut de mod&#233;lisation des donn&#233;es et de d&#233;ploiement (SSAS Tabulaire)
+# <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>Configurer les propriétés par défaut de modélisation des données et de déploiement (SSAS Tabulaire)
   Cette rubrique explique comment configurer les paramètres de propriétés de niveau de compatibilité, de déploiement et de base de données d’espace de travail par défaut, qui peuvent être prédéfinis pour chaque nouveau projet de modèle tabulaire que vous créez dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Après qu'un projet a été créé, ces propriétés peuvent être encore être modifiées selon vos besoins.  
   
-#### Pour configurer le paramètre de propriété Niveau de compatibilité par défaut pour les nouveaux projets de modèle  
+#### <a name="to-configure-the-default-compatibility-level-property-setting-for-new-model-projects"></a>Pour configurer le paramètre de propriété Niveau de compatibilité par défaut pour les nouveaux projets de modèle  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], cliquez sur le menu **Outils** , puis sur **Options**.  
   
@@ -36,10 +41,10 @@ caps.handback.revision: 17
   
     |Propriété|Paramètre par défaut|Description|  
     |--------------|---------------------|-----------------|  
-    |**Niveau de compatibilité par défaut pour les nouveaux projets**|SQL Server 2016 (1200)|Ce paramètre spécifie le niveau de compatibilité par défaut à utiliser pour créer un projet de modèle tabulaire. Vous pouvez choisir SQL Server 2012 (1100) si vous comptez effectuer le déploiement sur une instance Analysis Services sans avoir appliqué le SP1, ou SQL Server 2012 SP1 ou plus si le SP1 est appliqué sur votre instance de déploiement. Pour plus d’informations, consultez [Niveau de compatibilité pour les modèles tabulaires dans Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).|  
+    |**Niveau de compatibilité par défaut pour les nouveaux projets**|SQL Server 2016 (1200)|Ce paramètre spécifie le niveau de compatibilité par défaut à utiliser pour créer un projet de modèle tabulaire. Vous pouvez choisir SQL Server 2012 (1100) si vous comptez effectuer le déploiement sur une instance Analysis Services sans avoir appliqué le SP1, ou SQL Server 2012 SP1 ou plus si le SP1 est appliqué sur votre instance de déploiement. Pour plus d’informations, consultez [Niveau de compatibilité pour les modèles tabulaires dans Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).|  
     |**Options de niveau de compatibilité**|Toutes activées|Spécifie les options de niveau de compatibilité pour les nouveaux projets de modèles tabulaires et le déploiement vers une autre instance Analysis Services.|  
   
-#### Pour configurer le paramètre de propriété du serveur de déploiement par défaut pour les nouveaux projets de modèle  
+#### <a name="to-configure-the-default-deployment-server-property-setting-for-new-model-projects"></a>Pour configurer le paramètre de propriété du serveur de déploiement par défaut pour les nouveaux projets de modèle  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], cliquez sur le menu **Outils** , puis sur **Options**.  
   
@@ -71,9 +76,9 @@ caps.handback.revision: 17
 > [!NOTE]  
 >  Les modifications apportées aux propriétés de modèle par défaut n'affecteront pas les propriétés des modèles existants créés avant la modification.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Propriétés de projet &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
- [Propriétés de modèle &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
+ [Propriétés de modèle &#40; SSAS tabulaire &#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
  [Niveau de compatibilité pour les modèles tabulaires dans Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   

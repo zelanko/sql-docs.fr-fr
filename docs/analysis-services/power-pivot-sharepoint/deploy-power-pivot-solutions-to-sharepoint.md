@@ -1,29 +1,34 @@
 ---
-title: "D&#233;ployer des solutions Power Pivot sur SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Déployer des Solutions Power Pivot pour SharePoint | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8a9725c24b4cc324db21e9c39cdd9feef0829cae
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# D&#233;ployer des solutions Power Pivot sur SharePoint
+# <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Déployer des solutions Power Pivot sur SharePoint
   Utilisez les instructions suivantes pour déployer manuellement deux packages de solution qui ajoutent des fonctionnalités [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] à un environnement SharePoint Server 2010. Le déploiement des solutions est une étape indispensable pour configurer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint sur un serveur SharePoint 2010. Pour obtenir la liste complète des étapes nécessaires, consultez [Administration et configuration d’un serveur Power Pivot dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
   
  Pour déployer les solutions, vous pouvez également utiliser l’outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . L'utilisation de l'outil de configuration est plus simple et plus efficace pour une installation sur un serveur unique, mais vous souhaiterez peut-être recourir à l'Administration centrale et à PowerShell si vous préférez travailler avec un outil qui vous est familier ou si vous configurez plusieurs fonctionnalités en même temps. Pour plus d’informations sur l’utilisation de l’outil de configuration, consultez [Outils de configuration de Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   
  Avant de déployer ces solutions, vous devez d’abord installer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint à l’aide du support d’installation de SQL Server 2012. Le programme d'installation de SQL Server installe les packages de solution que vous êtes sur le point de déployer.  
   
- Cette rubrique contient les sections suivantes :  
+ Cette rubrique contient les sections suivantes :  
   
  [Condition préalable : vérifier que l'application Web utilise l'authentification en mode classique](#bkmk_classic)  
   
@@ -38,7 +43,7 @@ caps.handback.revision: 13
  [À propos des solutions Power Pivot](#intro)  
   
 ##  <a name="bkmk_classic"></a> Condition préalable : vérifier que l'application Web utilise l'authentification en mode classique  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint n’est pris en charge que pour les applications web qui utilisent l’authentification Windows en mode classique. Pour vérifier si l’application utilise le mode classique, exécutez l’applet de commande PowerShell suivante à partir de **SharePoint 2010 Management Shell** en remplaçant **http://<nom du site de niveau supérieur>** par le nom de votre site SharePoint :  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint n’est pris en charge que pour les applications web qui utilisent l’authentification Windows en mode classique. Pour vérifier si l’application utilise le mode classique, exécutez l’applet de commande PowerShell suivante à partir de la **SharePoint 2010 Management Shell**, en remplaçant **http://\<nom de site de niveau supérieur >** avec le nom de votre site SharePoint :  
   
 ```  
 Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthentication  
@@ -47,7 +52,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
  La valeur de retour devrait être **False**. Si la valeur est **True**, vous n’avez pas accès aux données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] avec cette application Web.  
   
 ##  <a name="bkmk_farm"></a> Étape 1 : déployer la solution de batterie de serveurs  
- Cette section montre comment déployer des solutions à l’aide de PowerShell, mais vous pouvez également utiliser l’outil de configuration [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour effectuer cette tâche. Pour plus d’informations, consultez [Configurer ou réparer Power Pivot pour SharePoint 2010 (outil de configuration de Power Pivot)](http://msdn.microsoft.com/fr-fr/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ Cette section montre comment déployer des solutions à l’aide de PowerShell, mais vous pouvez également utiliser l’outil de configuration [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour effectuer cette tâche. Pour plus d’informations, consultez [Configurer ou réparer Power Pivot pour SharePoint 2010 (outil de configuration de Power Pivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  Cette tâche ne doit être effectuée qu’une seule fois, après l’installation de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint.  
   
@@ -118,9 +123,9 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  Cliquez sur **Retirer la solution**.  
   
- Si vous rencontrez des problèmes de déploiement de serveur que vous attribuez à la solution de batterie de serveurs, vous pouvez recommencer en exécutant l’option **Réparer** dans l’outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Il est préférable de réparer les opérations via l'outil, car vous aurez moins d'étapes à effectuer. Pour plus d’informations, consultez [Configurer ou réparer Power Pivot pour SharePoint 2010 (outil de configuration de Power Pivot)](http://msdn.microsoft.com/fr-fr/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ Si vous rencontrez des problèmes de déploiement de serveur que vous attribuez à la solution de batterie de serveurs, vous pouvez recommencer en exécutant l’option **Réparer** dans l’outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Il est préférable de réparer les opérations via l'outil, car vous aurez moins d'étapes à effectuer. Pour plus d’informations, consultez [Configurer ou réparer Power Pivot pour SharePoint 2010 (outil de configuration de Power Pivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
- Si vous souhaitez néanmoins redéployer toutes les solutions, veillez à le faire dans cet ordre :  
+ Si vous souhaitez néanmoins redéployer toutes les solutions, veillez à le faire dans cet ordre :  
   
 1.  Retirez la solution d’application Web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de toutes les applications Web SharePoint qui l’utilisent.  
   
@@ -144,11 +149,11 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 |Solution|Description|  
 |--------------|-----------------|  
 |Powerpivotfarm.wsp|Ajoute Microsoft.AnalysisServices.SharePoint.Integration.dll à l'assembly global.<br /><br /> Ajoute Microsoft.AnalysisServices.ChannelTransport.dll à l'assembly global.<br /><br /> Installe des fonctionnalités et des fichiers de ressources, et enregistre des types de contenu.<br /><br /> Ajoute des modèles de bibliothèque pour la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et les bibliothèques de flux de données.<br /><br /> Ajoute des pages d’application pour la configuration de l’application de service, le tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , l’actualisation des données et la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
-|powerpivotwebapp.wsp|Ajoute les fichiers de ressources Microsoft.AnalysisServices.SharePoint.Integration.dll au dossier des extensions du serveur Web sur le Web frontal.<br /><br /> Ajoute le service web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] au serveur web frontal.<br /><br /> Ajoute la génération de miniatures pour la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
+|powerpivotwebapp.wsp|Ajoute les fichiers de ressources Microsoft.AnalysisServices.SharePoint.Integration.dll au dossier des extensions du serveur Web sur le Web frontal.<br /><br /> Ajoute le service web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] au serveur web frontal.<br /><br /> Ajoute la génération de miniatures pour la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mettre à niveau Power Pivot pour SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [Administration et configuration d’un serveur Power Pivot dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
- [Configuration de Power Pivot à l’aide de Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  
+ [Configuration de Power Pivot à l’aide de Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  
   
   

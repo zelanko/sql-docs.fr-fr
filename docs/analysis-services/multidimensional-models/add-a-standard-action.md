@@ -1,27 +1,32 @@
 ---
-title: "Ajouter une action standard | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Ajouter une Action Standard | Documents Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
 caps.latest.revision: 7
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 7
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8f084616a0dd548fe9ee939f5e770b1f69f125f1
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Ajouter une action standard
+# <a name="add-a-standard-action"></a>Ajouter une action standard
   Vous ajoutez une action à une base de données à l'aide de la vue Actions du Concepteur de cube. Cette vue est accessible depuis [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Après avoir créé une action, elle devient disponible aux utilisateurs une fois que vous avez retraité le cube approprié. Pour plus d'informations, consultez [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
   
-### Pour créer une action  
+### <a name="to-create-an-action"></a>Pour créer une action  
   
 1.  Ouvrez le cube pour lequel vous souhaitez créer une action, puis cliquez sur l'onglet **Actions** .  
   
@@ -29,7 +34,7 @@ caps.handback.revision: 7
   
     -   Dans **Nom**, tapez le nom de l'action.  
   
-    -   Dans la liste déroulante **Type de cible**, sélectionnez le type d’objet auquel vous souhaitez attacher l’action. L'objet que vous sélectionnez dans **Type de cible** détermine les objets qui sont disponibles, ainsi que le type de sélection que vous pouvez effectuer dans **Objet cible**. Le tableau suivant répertorie les sélections **Objet cible** valides pour chaque type de cible.  
+    -   Dans la liste déroulante **Type de cible** , sélectionnez le type d’objet auquel vous souhaitez attacher l’action. L'objet que vous sélectionnez dans **Type de cible** détermine les objets qui sont disponibles, ainsi que le type de sélection que vous pouvez effectuer dans **Objet cible**. Le tableau suivant répertorie les sélections **Objet cible** valides pour chaque type de cible.  
   
         |Si vous sélectionnez le type de cible suivant|Effectuez la sélection suivante dans Objet cible|  
         |---------------------------------------------|---------------------------------------------------|  
@@ -46,7 +51,7 @@ caps.handback.revision: 7
   
     -   (Facultatif.) Dans **Condition**, créez une expression MDX pour limiter la cible de l'action. Vous pouvez taper l'expression manuellement ou vous pouvez faire glisser des éléments depuis les onglets **Métadonnées** et **Fonctions** .  
   
-    -   Dans la liste déroulante **Type**, sélectionnez le type d’action que vous souhaitez créer. Le tableau suivant répertorie les types d'actions disponibles.  
+    -   Dans la liste déroulante **Type** , sélectionnez le type d’action que vous souhaitez créer. Le tableau suivant répertorie les types d'actions disponibles.  
   
         |Type|Description|  
         |----------|-----------------|  
@@ -79,6 +84,6 @@ caps.handback.revision: 7
   
     -   Dans **Légende**, tapez une légende ou une expression MDX qui correspond à une légende. Cette légende est affichée aux utilisateurs finaux lorsque l'action est initiée. Si vous n'indiquez pas de légende, le nom de l'action est utilisé à la place.  
   
-    -   Dans la liste déroulante **La légende est MDX**, spécifiez si la légende est MDX. Ce champ indique au serveur s'il faut évaluer le contenu de **Légende** en tant qu'expression MDX.  
+    -   Dans la liste déroulante **La légende est MDX** , spécifiez si la légende est MDX. Ce champ indique au serveur s'il faut évaluer le contenu de **Légende** en tant qu'expression MDX.  
   
   

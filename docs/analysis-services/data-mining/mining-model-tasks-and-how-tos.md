@@ -1,29 +1,34 @@
 ---
-title: "T&#226;ches du mod&#232;le d&#39;exploration de donn&#233;es et proc&#233;dures | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "exploration de données [Analysis Services], modèles"
-  - "modèles d’exploration de données [Analysis Services], rubriques de procédures"
+title: "Tâches liées aux modèles et les procédures d’exploration de données | Documents Microsoft"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], models
+- mining models [Analysis Services], how-to topics
 ms.assetid: 7c2073e5-b40f-4bf8-aa51-021adb08e072
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0ad2ff2582e2b781debd14372614bd0e8c6d2323
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# T&#226;ches du mod&#232;le d&#39;exploration de donn&#233;es et proc&#233;dures
+# <a name="mining-model-tasks-and-how-tos"></a>Tâches du modèle d'exploration de données et procédures
   L’onglet **Modèles d’exploration de données** du Concepteur d’exploration de données dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] permet de gérer et de traiter les modèles d’exploration de données dans une structure d’exploration de données.  
   
-## Dans cette section  
+## <a name="in-this-section"></a>Dans cette section  
   
 -   [Ajouter un modèle d'exploration de données à une structure d'exploration de données existante](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)  
   
@@ -55,9 +60,9 @@ caps.handback.revision: 34
   
 -   [Créer une dimension d'exploration de données](../../analysis-services/data-mining/create-a-data-mining-dimension.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tâches de la structure d'exploration de données et procédures](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)   
- [Modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
+ [Les modèles d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
  [Concepts d'exploration de données](../../analysis-services/data-mining/data-mining-concepts.md)  
   
   

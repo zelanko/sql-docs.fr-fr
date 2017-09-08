@@ -1,38 +1,49 @@
 ---
-title: "Applet de commande Set-PowerPivotSystemService | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: Applet de commande Set-PowerPivotSystemService | Documents Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: f6ef197b-3d74-4339-ae73-8a7c1eaf0e91
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 6157a4fc3b43c1a7dad7805c3efa5677d85b4d66
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Applet de commande Set-PowerPivotSystemService
+# <a name="set-powerpivotsystemservice-cmdlet"></a>Applet de commande Set-PowerPivotSystemService
+  
+  [!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
+  
   Définit les propriétés globales de l'objet PowerPivotSystemService au niveau de la batterie.  
+
+>[!NOTE] 
+>Cet article peut contenir des exemples et des informations obsolètes. Utilisez l’applet de commande Get-Help pour la dernière version.
   
  **S'applique à :** SharePoint 2010 et SharePoint 2013.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-UpdateAssemblyInformation <switch>] [-WorkbookUpgradeOnDataRefresh <boolean>] [-DirectTCPConnections <boolean>] [-Confirm <switch>] [<CommonParameters>]  
 ```  
   
-## Description  
+## <a name="description"></a>Description  
  L’applet de commande Set-PowerPivotSystemService met à jour les propriétés de l’objet parent de service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans la batterie.  
   
-## Paramètres  
+## <a name="parameters"></a>Paramètres  
   
-### -Identity \<PowerPivotMidTierServicePipeBind>  
+### <a name="-identity-powerpivotmidtierservicepipebind"></a>-Identité \<PowerPivotMidTierServicePipeBind >  
  Spécifie l'objet parent dont vous mettez à jour les propriétés. La valeur doit être un GUID valide qui identifie l'objet de manière unique dans la batterie.  
   
 |||  
@@ -43,7 +54,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |Accepter l'entrée de pipeline ?|true|  
 |Accepter les caractères génériques ?|false|  
   
-### -UpdateAssemblyInformation \<switch>  
+### <a name="-updateassemblyinformation-switch"></a>-UpdateAssemblyInformation \<commutateur >  
  Utilisé uniquement pour la mise à niveau. Si la version d'assembly déployée dans la batterie de serveurs est différente de la version stockée dans la base de données de configuration SharePoint, vous pouvez exécuter cette applet de commande pour mettre à jour les informations de l'assembly dans la base de données de configuration. Les informations de version de l'assembly sont disponibles dans les propriétés de fichier du fichier Microsoft.AnalysisServices.SharePoint.Integration.dll stocké dans l'assembly global.  
   
 |||  
@@ -54,7 +65,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### -WorkbookUpgradeOnDataRefresh \<boolean>  
+### <a name="-workbookupgradeondatarefresh-boolean"></a>-WorkbookUpgradeOnDataRefresh \<booléenne >  
  Utilisé pour mettre à niveau de manière automatique un classeur [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] au début d'une actualisation des données planifiée sur le serveur. L'actualisation des données est prise en charge uniquement pour les classeurs qui correspondent à la version actuelle du serveur. Si vous activez cette propriété, un classeur est automatiquement mis à niveau afin que l'actualisation des données puisse continuer. Cette propriété est définie au niveau de l'instance de serveur. Vous ne pouvez pas la modifier pour des classeurs, des bibliothèques, des sites ou des utilisateurs spécifiques.  
   
 |||  
@@ -65,8 +76,8 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### -DirectTCPConnections \<boolean>  
- Spécifie qu’Excel Services envoie directement toutes les requêtes à l’instance de SQL Server Analysis Services (POWERPIVOT) qui a chargé une base de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], en ignorant le fournisseur de données MSOLAP et le transport de canal qui sont habituellement utilisés pour chaque demande de requête envoyée à une base de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+### <a name="-directtcpconnections-boolean"></a>-DirectTCPConnections \<booléenne >  
+ Spécifie qu’Excel Services envoie directement toutes les requêtes à l’instance de SQL Server Analysis Services (POWERPIVOT) qui a chargé une base de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , en ignorant le fournisseur de données MSOLAP et le transport de canal qui sont habituellement utilisés pour chaque demande de requête envoyée à une base de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  La définition de ce paramètre optimise les performances et l’évolutivité des requêtes [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en améliorant l’efficacité des connexions aux bases de données chargées. Notez que ce paramètre ne modifie pas le comportement de l'allocation de la demande de chargement initiale. Les autres paramètres, tels que –RoundRobinAllocation et –HealthBasedAllocation, qui sont utilisés pour allouer les requêtes de chargement de base de données entre plusieurs instances de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint dans la batterie ne sont pas affectés, car –DirectTCPConnections s’applique uniquement aux requêtes générées après le chargement de la base de données.  
   
@@ -75,12 +86,12 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |||  
 |-|-|  
 |Requis ?|false|  
-|Position ?|3|  
+|Position ?|3|  
 |Valeur par défaut|false|  
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### -Confirm \<switch>  
+### <a name="-confirm-switch"></a>-Confirmer \<commutateur >  
  Demande une confirmation avant d'exécuter la commande. Cette valeur est activée par défaut. Pour contourner la réponse de confirmation dans une commande, spécifiez Confirm:$false sur la commande.  
   
 |||  
@@ -91,10 +102,10 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### \<CommonParameters>  
+### <a name="commonparameters"></a>\<Paramètres_courants >  
  Cette applet de commande prend en charge les paramètres communs : Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer et OutVariable. Pour plus d’informations, consultez [About_Commonparameters](http://go.microsoft.com/fwlink/?linkID=227825).  
   
-## Entrées et sorties  
+## <a name="inputs-and-outputs"></a>Entrées et sorties  
  Le type d'entrée correspond au type des objets que vous pouvez canaliser vers l'applet de commande. Le type de retour correspond au type des objets retournés par l'applet de commande.  
   
 |||  
@@ -102,7 +113,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |Entrées|Aucun.|  
 |Sorties|Aucun.|  
   
-## Exemple 1  
+## <a name="example-1"></a>Exemple 1  
   
 ```  
 C:\PS>Set-PowerPivotSystemService -WorkbookUpgradeOnDataRefresh:$true  
@@ -111,3 +122,4 @@ C:\PS>Set-PowerPivotSystemService -WorkbookUpgradeOnDataRefresh:$true
  Active la mise à niveau automatique des classeurs de version précédente afin que l'actualisation des données planifiée puisse continuer.  
   
   
+

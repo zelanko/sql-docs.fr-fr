@@ -1,30 +1,35 @@
 ---
-title: "Configurer Analysis Services pour la d&#233;l&#233;gation contrainte Kerberos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Configurer Analysis Services pour la délégation contrainte Kerberos | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a6158c7263fcd620f1ac577522b09f8ac4b9e08d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Configurer Analysis Services pour la d&#233;l&#233;gation contrainte Kerberos
-  Quand vous configurez Analysis Services pour l'authentification Kerberos, vous cherchez probablement à obtenir l'un des deux résultats suivants : laisser le soin à Analysis Services d'emprunter l'identité d'un utilisateur durant l'interrogation de données, ou demander à Analysis Services de déléguer l'identité d'utilisateur à un service de bas niveau. Chaque scénario implique des spécifications de configuration légèrement différentes. De plus, dans les deux cas, une vérification doit avoir lieu pour s'assurer que la configuration a été effectuée correctement.  
+# <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Configurer Analysis Services pour la délégation contrainte Kerberos
+  Quand vous configurez Analysis Services pour l'authentification Kerberos, vous cherchez probablement à obtenir l'un des deux résultats suivants : laisser le soin à Analysis Services d'emprunter l'identité d'un utilisateur durant l'interrogation de données, ou demander à Analysis Services de déléguer l'identité d'utilisateur à un service de bas niveau. Chaque scénario implique des spécifications de configuration légèrement différentes. De plus, dans les deux cas, une vérification doit avoir lieu pour s'assurer que la configuration a été effectuée correctement.  
   
 > [!TIP]  
 >  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** est un outil de diagnostic qui permet de dépanner les problèmes de connexion que rencontre Kerberos avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Gestionnaire de configuration de Microsoft Kerberos pour SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
   
- Cette rubrique contient les sections suivantes :  
+ Cette rubrique contient les sections suivantes :  
   
 -   [Autoriser Analysis Services à emprunter l'identité d'un utilisateur](#bkmk_impersonate)  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  La délégation n'est pas nécessaire si la connexion à Analysis Services est un saut unique, ou si votre solution utilise les informations d'identification stockées fournies par le Service Banque d'informations sécurisé ou Reporting Services de SharePoint. Si toutes les connexions sont des connexions directes à partir d'Excel vers une base de données Analysis Services, ou si elles sont basées sur des informations d'identification stockées, vous pouvez utiliser Kerberos (ou NTLM) sans avoir à configurer la délégation contrainte.  
 >   
->  La délégation Kerberos contrainte est requise si l'identité de l'utilisateur doit servir à plusieurs connexions d'ordinateur (connexions « à deux tronçons »). Lorsque l'accès aux données Analysis Services dépend de l'identité de l'utilisateur et que la demande de connexion provient d'un service de délégation, utilisez la liste de vérification de la section suivante pour vous assurer qu'Analysis Services peut emprunter l'identité de l'appelant d'origine. Pour plus d'informations sur les flux d'authentification Analysis Services, consultez [Authentification et délégation d'identité Microsoft BI](http://go.microsoft.com/fwlink/?LinkID=286576).  
+>  La délégation Kerberos contrainte est requise si l'identité de l'utilisateur doit servir à plusieurs connexions d'ordinateur (connexions « à deux tronçons »). Lorsque l'accès aux données Analysis Services dépend de l'identité de l'utilisateur et que la demande de connexion provient d'un service de délégation, utilisez la liste de vérification de la section suivante pour vous assurer qu'Analysis Services peut emprunter l'identité de l'appelant d'origine. Pour plus d'informations sur les flux d'authentification Analysis Services, consultez [Authentification et délégation d'identité Microsoft BI](http://go.microsoft.com/fwlink/?LinkID=286576).  
 >   
 >  En guise de meilleure pratique de sécurité, Microsoft recommande de toujours utiliser la délégation contrainte plutôt que la délégation non contrainte. La délégation non contrainte présente un risque majeur pour la sécurité car elle permet à l’identité de service d’emprunter l’identité d’un autre utilisateur sur *n’importe quel* service, application ou ordinateur en aval (plutôt qu’uniquement les services définis de manière explicite via la délégation contrainte).  
   
@@ -44,9 +49,9 @@ caps.handback.revision: 14
   
 |Tâche|Description|  
 |----------|-----------------|  
-|Étape 1 : Vérifier que les comptes conviennent pour la délégation|Vérifiez que les comptes utilisés pour exécuter les services présentent les propriétés appropriées dans Active Directory. Les comptes de service dans Active Directory ne doivent pas être marqués comme comptes sensibles, ni être spécifiquement exclus des scénarios de délégation. Pour plus d'informations, consultez [Présentation des comptes d'utilisateurs](http://go.microsoft.com/fwlink/?LinkId=235818).<br /><br /> Remarque : généralement, tous les comptes et les serveurs impliqués dans le traitement doivent appartenir au même domaine Active Directory ou à des domaines approuvés dans la même forêt. Toutefois, étant donné que Windows Server 2012 prend en charge la délégation entre les limites de domaine, vous pouvez configurer la délégation contrainte Kerberos si le niveau fonctionnel du domaine est Windows Server 2012. Sinon, vous pouvez configurer Analysis Services pour l'accès HTTP et utiliser les méthodes d'authentification IIS sur la connexion cliente. Pour plus d’informations, consultez [Configurer l’accès HTTP à Analysis Services sur Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md).|  
+|Étape 1 : Vérifier que les comptes conviennent pour la délégation|Vérifiez que les comptes utilisés pour exécuter les services présentent les propriétés appropriées dans Active Directory. Les comptes de service dans Active Directory ne doivent pas être marqués comme comptes sensibles, ni être spécifiquement exclus des scénarios de délégation. Pour plus d'informations, consultez [Présentation des comptes d'utilisateurs](http://go.microsoft.com/fwlink/?LinkId=235818).<br /><br /> Remarque : généralement, tous les comptes et les serveurs impliqués dans le traitement doivent appartenir au même domaine Active Directory ou à des domaines approuvés dans la même forêt. Toutefois, étant donné que Windows Server 2012 prend en charge la délégation entre les limites de domaine, vous pouvez configurer la délégation contrainte Kerberos si le niveau fonctionnel du domaine est Windows Server 2012. Sinon, vous pouvez configurer Analysis Services pour l'accès HTTP et utiliser les méthodes d'authentification IIS sur la connexion cliente. Pour plus d’informations, consultez [Configurer l’accès HTTP à Analysis Services sur Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).|  
 |Étape 2 : Inscrire le SPN|Avant de configurer une délégation contrainte, vous devez enregistrer un Nom de principal de service (SPN) pour l'instance du service Analysis Services. Vous aurez besoin du SPN Analysis Services lors de la configuration de la délégation contrainte Kerberos pour les services de niveau intermédiaire. Pour obtenir des instructions, consultez [SPN registration for an Analysis Services instance](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md) .<br /><br /> Un nom de principal du service (SPN) spécifie l'identité unique d'un service dans un domaine configuré pour l'authentification Kerberos. Les connexions clientes utilisant la sécurité intégrée demandent souvent un SPN dans le cadre de l'authentification SSPI. La demande est transmise à un contrôleur de domaine (DC) Active Directory, le centre de distribution de clés KDC accordant un ticket si le nom SPN présenté par le client comporte une inscription du nom SPN correspondante dans Active Directory.|  
-|Étape 3 : Configurer une délégation contrainte|Après avoir validé les comptes que vous souhaitez utiliser et inscrit les noms SPN de ces derniers, la prochaine étape consiste à configurer les services de haut niveau, tels que les services Web IIS, Reporting Services ou SharePoint pour la délégation contrainte, en spécifiant l'instance Analysis Services comme service spécifique pour lequel la délégation est autorisée.<br /><br /> Les services qui s'exécutent dans SharePoint, tels que Excel Services ou Reporting Services en mode SharePoint, hébergent fréquemment des classeurs et des rapports qui utilisent des données tabulaires ou multidimensionnelles d'Analysis Services. Configurer une délégation contrainte pour ces services est une tâche de configuration commune, nécessaire pour la prise en charge de l'actualisation des données à partir d'Excel Services. Les liens suivants fournissent des instructions pour les services SharePoint, ainsi que d'autres services susceptibles de présenter une demande de connexion de données en aval pour les données Analysis Services :<br /><br /> [Délégation d’identité pour Excel Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299826) ou [Comment configurer Excel Services dans SharePoint Server 2010 pour l’authentification Kerberos](http://support.microsoft.com/kb/2466519)<br /><br /> [Délégation d'identité pour les services PerformancePoint (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299827)<br /><br /> [Délégation d'identité pour SQL Server Reporting Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299828)<br /><br /> Pour IIS 7.0, consultez [Configurer l’authentification Windows (IIS 7.0)](http://technet.microsoft.com/library/cc754628\(v=ws.10\).aspx) ou [Comment configurer SQL Server 2008 Analysis Services et SQL Server 2005 Analysis Services pour utiliser l’authentification Kerberos](http://support.microsoft.com/kb/917409).|  
+|Étape 3 : Configurer une délégation contrainte|Après avoir validé les comptes que vous souhaitez utiliser et inscrit les noms SPN de ces derniers, la prochaine étape consiste à configurer les services de haut niveau, tels que les services Web IIS, Reporting Services ou SharePoint pour la délégation contrainte, en spécifiant l'instance Analysis Services comme service spécifique pour lequel la délégation est autorisée.<br /><br /> Les services qui s'exécutent dans SharePoint, tels que Excel Services ou Reporting Services en mode SharePoint, hébergent fréquemment des classeurs et des rapports qui utilisent des données tabulaires ou multidimensionnelles d'Analysis Services. Configurer une délégation contrainte pour ces services est une tâche de configuration commune, nécessaire pour la prise en charge de l'actualisation des données à partir d'Excel Services. Les liens suivants fournissent des instructions pour les services SharePoint, ainsi que d'autres services susceptibles de présenter une demande de connexion de données en aval pour les données Analysis Services :<br /><br /> [Délégation d’identité pour Excel Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299826) ou [Comment configurer Excel Services dans SharePoint Server 2010 pour l’authentification Kerberos](http://support.microsoft.com/kb/2466519)<br /><br /> [Délégation d'identité pour les services PerformancePoint (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299827)<br /><br /> [Délégation d'identité pour SQL Server Reporting Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299828)<br /><br /> Pour IIS 7.0, consultez [Configurer l’authentification Windows (IIS 7.0)](http://technet.microsoft.com/library/cc754628\(v=ws.10\).aspx) ou [Comment configurer SQL Server 2008 Analysis Services et SQL Server 2005 Analysis Services pour utiliser l’authentification Kerberos](http://support.microsoft.com/kb/917409).|  
 |Étape 4 : Tester les connexions|Lors du test, connectez-vous à partir d'ordinateurs distants, sous des identités différentes, et interrogez Analysis Services en utilisant les mêmes applications en tant qu'utilisateurs professionnels. Vous pouvez utiliser SQL Server Profiler pour surveiller la connexion. Vous devez voir l'identité de l'utilisateur dans la demande. Pour plus d'informations, consultez [Tester une identité empruntée ou déléguée](#bkmk_test) dans cette section.|  
   
 ##  <a name="bkmk_delegate"></a> Configurer Analysis Services pour une délégation approuvée  
@@ -77,25 +82,25 @@ caps.handback.revision: 14
   
      L'onglet Délégation n'est disponible que lorsque le compte d'utilisateur (OlapSvc) est affecté à un service (Analysis Services) et que le service dispose d'un nom SPN inscrit pour ce compte. L'inscription du nom SPN requiert que le service s'exécute.  
   
-     ![SSAS_Kerberos_1_AccountProperties](../../analysis-services/instances/media/ssas-kerberos-1-accountproperties.png "SSAS_Kerberos_1_AccountProperties")  
+     ![SSAS_Kerberos_1_AccountProperties](../../analysis-services/instances/media/ssas-kerberos-1-accountproperties.gif "SSAS_Kerberos_1_AccountProperties")  
   
 3.  Sur la page Ajouter des services, cliquez sur **Utilisateurs ou ordinateurs**.  
   
-     ![SSAS_Kerberos_2_](../../analysis-services/instances/media/ssas-kerberos-2.png "SSAS_Kerberos_2_")  
+     ![SSAS_Kerberos_2_](../../analysis-services/instances/media/ssas-kerberos-2.gif "SSAS_Kerberos_2_")  
   
 4.  Sur la page de sélection d'utilisateurs ou de l'ordinateur, entrez le compte utilisé pour exécuter l'instance SQL Server qui fournit des données aux bases de données model tabulaires Analysis Services. Cliquez sur **OK** pour accepter le compte de service.  
   
      Si vous ne pouvez pas sélectionner le compte souhaité, vérifiez que SQL Server s'exécute et qu'un SPN est inscrit pour ce compte. Pour plus d'informations sur les noms SPN pour le moteur de base de données, consultez [Register a Service Principal Name for Kerberos Connections](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
-     ![SSAS_Kerberos_3_SelectUsers](../../analysis-services/instances/media/ssas-kerberos-3-selectusers.png "SSAS_Kerberos_3_SelectUsers")  
+     ![SSAS_Kerberos_3_SelectUsers](../../analysis-services/instances/media/ssas-kerberos-3-selectusers.gif "SSAS_Kerberos_3_SelectUsers")  
   
 5.  L'instance de SQL Server doit maintenant apparaître dans Ajouter des services. Tout service qui utilise également ce compte apparaît aussi dans la liste. Choisissez l'instance de SQL Server que vous souhaitez utiliser. Cliquez sur **OK** pour accepter l'instance.  
   
-     ![SSAS_Kerberos_4_](../../analysis-services/instances/media/ssas-kerberos-4.png "SSAS_Kerberos_4_")  
+     ![SSAS_Kerberos_4_](../../analysis-services/instances/media/ssas-kerberos-4.gif "SSAS_Kerberos_4_")  
   
 6.  La page de propriétés du compte de service Analysis Services doit désormais ressembler à la capture d'écran suivante. Cliquez sur **OK** pour enregistrer vos modifications.  
   
-     ![SSAS_Kerberos_5_Finished](../../analysis-services/instances/media/ssas-kerberos-5-finished.png "SSAS_Kerberos_5_Finished")  
+     ![SSAS_Kerberos_5_Finished](../../analysis-services/instances/media/ssas-kerberos-5-finished.gif "SSAS_Kerberos_5_Finished")  
   
 7.  Effectuez un test pour vérifier la réussite de la délégation en établissant une connexion à partir d'un ordinateur client distant, sous une identité différente, et interrogez le modèle tabulaire. Vous devez voir l'identité de l'utilisateur dans la demande dans SQL Server Profiler.  
   
@@ -112,11 +117,11 @@ caps.handback.revision: 14
   
  Consultez également [The Most Confusing Dialog Box in Active Directory](http://windowsitpro.com/windows/most-confusing-dialog-box-active-directory) pour obtenir une description détaillée de chaque option de l'onglet Délégation de la boîte de dialogue de propriétés de l'objet Active Directory. Cet article explique également comment utiliser LDP pour effectuer des tests et interpréter leurs résultats.  
   
-## Voir aussi  
- [Authentification et délégation d'identité Microsoft BI](http://go.microsoft.com/fwlink/?LinkID=286576)   
- [Authentification mutuelle à l'aide de Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
+## <a name="see-also"></a>Voir aussi  
+ [Authentification et délégation d'identité Microsoft BI](http://go.microsoft.com/fwlink/?LinkID=286576)   
+ [Kerberos à l’aide de l’authentification mutuelle](http://go.microsoft.com/fwlink/?LinkId=299283)   
  [Se connecter à Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
- [Inscription du nom SPN pour une instance Analysis Services](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
+ [Inscription SPN pour une instance Analysis Services](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
  [Propriétés des chaînes de connexion &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   

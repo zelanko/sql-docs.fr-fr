@@ -1,27 +1,32 @@
 ---
-title: "Fusionner des partitions dans Analysis Services (SSAS - Multidimensionnel) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "partitions [Analysis Services], fusion"
-  - "fusion de partitions [Analysis Services]"
+title: Fusionner des Partitions dans Analysis Services (SSAS - multidimensionnel) | Documents Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- partitions [Analysis Services], merging
+- merging partitions [Analysis Services]
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a973f81fbb9eef7294b9beec9251569bcce0bf4f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Fusionner des partitions dans Analysis Services (SSAS - Multidimensionnel)
+# <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Fusionner des partitions dans Analysis Services (SSAS - Multidimensionnel)
   Vous pouvez fusionner des partitions dans une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existante pour consolider les données de faits de plusieurs partitions du même groupe de mesures.  
   
  [Scénarios courants](#bkmk_Scenario)  
@@ -44,7 +49,7 @@ caps.handback.revision: 34
  Comme le montre ce scénario, fusionner des partitions peut devenir une tâche courante effectuée régulièrement et constituer une approche progressive pour consolider et organiser les données d'historique.  
   
 ##  <a name="bkmk_prereq"></a> Spécifications  
- Les partitions peuvent être fusionnées seulement si elles répondent à tous les critères suivants :  
+ Les partitions peuvent être fusionnées seulement si elles répondent à tous les critères suivants :  
   
 -   Elles ont le même groupe de mesures.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 34
 ##  <a name="bkmk_Where"></a> Mettre à jour la source de partition après avoir fusionné les partitions  
  Les partitions sont segmentées par requête, comme la clause WHERE d'une requête SQL utilisée pour traiter les données, ou par une table ou une requête nommée qui fournit des données à la partition. La propriété **Source** sur la partition indique si la partition est liée à une requête ou une table.  
   
- Quand vous fusionnez des partitions, le contenu des partitions est consolidé, mais la propriété **Source** n’est pas mise à jour pour refléter l’étendue supplémentaire de la partition. Cela signifie que si, plus tard, vous retraitez une partition qui conserve sa propriété **Source** d’origine, vous obtiendrez des données incorrectes de cette partition. La partition agrégera à tort des données au niveau parent. L’exemple suivant illustre ce comportement.  
+ Quand vous fusionnez des partitions, le contenu des partitions est consolidé, mais la propriété **Source** n’est pas mise à jour pour refléter l’étendue supplémentaire de la partition. Cela signifie que si, plus tard, vous retraitez une partition qui conserve sa propriété **Source**d’origine, vous obtiendrez des données incorrectes de cette partition. La partition agrégera à tort des données au niveau parent. L’exemple suivant illustre ce comportement.  
   
  **Le problème**  
   
@@ -78,13 +83,13 @@ caps.handback.revision: 34
   
  **La solution**  
   
- La solution consiste à mettre à jour la propriété **Source**, en ajustant la clause WHERE ou la requête nommée, ou en fusionnant manuellement les données des tables de faits sous-jacentes, pour que le traitement suivant soit précis, compte tenu de l’étendue supplémentaire de la partition.  
+ La solution consiste à mettre à jour la propriété **Source** , en ajustant la clause WHERE ou la requête nommée, ou en fusionnant manuellement les données des tables de faits sous-jacentes, pour que le traitement suivant soit précis, compte tenu de l’étendue supplémentaire de la partition.  
   
  Dans cet exemple, après la fusion de la partition 3 dans la partition 2, vous pouvez créer un filtre, tel que ("Product" = 'ColaDecaf' OR "Product" = 'ColaDiet') dans la partition obtenue (partition2) pour spécifier que seules les données relatives à [ColaDecaf] et [ColaDiet] doivent être extraites de la table de faits, et que les données de [ColaFull] doivent être exclues. Vous pouvez également spécifier des filtres pour la partition2 et la partition 3 au moment de la création de ces partitions. Ces filtres seront associés pendant la fusion. Dans les deux cas, après le traitement de la partition, le cube ne contiendra pas de données en double.  
   
  **La conclusion**  
   
- Après avoir fusionné des partitions, vérifiez toujours la propriété **Source** pour vous assurer que le filtre est approprié pour les données fusionnées. Si vous avez commencé par une partition qui incluait des données historiques pour Q1, Q2 et Q3 et que vous fusionnez maintenant Q4, vous devez ajuster le filtre de manière à inclure Q4. Sinon, le traitement ultérieur de la partition générera des résultats erronés. Il ne sera pas correct pour Q4.  
+ Après avoir fusionné des partitions, vérifiez toujours la propriété **Source** pour vous assurer que le filtre est approprié pour les données fusionnées. Si vous avez commencé par une partition qui incluait des données historiques pour Q1, Q2 et Q3 et que vous fusionnez maintenant Q4, vous devez ajuster le filtre de manière à inclure Q4. Sinon, le traitement ultérieur de la partition générera des résultats erronés. Il ne sera pas correct pour Q4.  
   
 ##  <a name="bkmk_fact"></a> Considérations spéciales pour les partitions segmentées par une table de faits ou une requête nommée  
  Outre les requêtes, les partitions peuvent également être segmentées par une table ou une requête nommée. Si la partition source et la partition cible utilisent la même table de faits dans une source de données ou une vue de source de données, la propriété **Source** est valide après la fusion des partitions. Elle spécifie les données de la table de faits qui sont appropriées à la partition résultante. Étant donné que les faits utilisés pour la partition obtenue existent dans la table de faits, aucune modification de la propriété **Source** n’est nécessaire.  
@@ -95,13 +100,13 @@ caps.handback.revision: 34
   
  Pour la même raison, les partitions obtenant des données segmentées de requêtes nommées requièrent également une mise à jour. La partition associée doit maintenant avoir une requête nommée qui retourne le jeu de résultats combiné qui a été obtenu précédemment à partir des requêtes nommées distinctes.  
   
-## Considérations sur le stockage de partitions : MOLAP  
+## <a name="partition-storage-considerations-molap"></a>Considérations sur le stockage de partitions : MOLAP  
  Lors de la fusion de partitions MOLAP, les faits stockés dans les structures multidimensionnelles des partitions sont également fusionnés. Ceci produit une partition complète et cohérente en interne. Cependant, les faits stockés dans les partitions MOLAP sont des copies des faits de la table de faits. Lorsque la partition est traitée ultérieurement, les faits de la structure multidimensionnelle sont supprimés (seulement pour un traitement complet et d'actualisation) et les données sont copiées à partir de la table de faits, comme indiqué par la source de données et le filtre de la partition. Si la partition source utilise une table de faits différente de celle de la partition de destination, vous devez fusionner manuellement ces deux tables de faits pour vous assurer qu'un ensemble de données complet sera disponible au moment du traitement de la partition résultante. Cela s'applique également si les deux partitions se basent sur des requêtes nommées différentes.  
   
 > [!IMPORTANT]  
 >  Une partition MOLAP (OLAP multidimensionnel) fusionnée avec une table de faits incomplète contient une copie fusionnée en interne des données de la table de faits et fonctionne correctement jusqu'à son traitement.  
   
-## Considérations sur le stockage de partitions : partitions HOLAP et ROLAP  
+## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>Considérations sur le stockage de partitions : partitions HOLAP et ROLAP  
  Lorsque des partitions HOLAP ou ROLAP ayant des tables de faits différentes sont fusionnées, ces tables de faits ne sont pas automatiquement fusionnées. À moins qu'elles ne soient fusionnées manuellement, seule la table de faits associée à la partition de destination est disponible pour la partition fusionnée. Les faits associés à la partition source ne permettent pas de développer le niveau inférieur d'une partition résultante, et au moment du traitement de la partition, les agrégations ne synthétiseront pas les données de la table non disponible.  
   
 > [!IMPORTANT]  
@@ -118,7 +123,7 @@ caps.handback.revision: 34
   
 1.  Dans l’Explorateur d’objets, développez le nœud **Groupes de mesures** du cube contenant les partitions à fusionner, développez **Partitions**, cliquez avec le bouton droit sur la partition correspondant à la cible ou à la destination de la fusion. Par exemple, si vous déplacez des données de faits trimestrielles vers une partition qui stocke des données de faits annuelles, sélectionnez la partition qui contient les données de faits annuelles.  
   
-2.  Cliquez sur **Fusionner des partitions** pour ouvrir la boîte de dialogue **Partition de fusion \<nom_partition>**.  
+2.  Cliquez sur **fusionner des Partitions** pour ouvrir le **Partition de fusion \<nom de la partition >** boîte de dialogue.  
   
 3.  Sous **Partitions sources**, cochez la case à côté de chaque partition source que vous voulez fusionner avec la partition cible, puis cliquez sur **OK**.  
   
@@ -132,13 +137,13 @@ caps.handback.revision: 34
 ##  <a name="bkmk_partitionsXMLA"></a> Procédure pour fusionner des partitions à l'aide de XMLA  
  Pour plus d’informations, consultez [Fusion de partitions &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Traitement des objets Analysis Services](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
  [Partitions &#40;Analysis Services - Données multidimensionnelles&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Créer et gérer une partition locale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
- [Créer et gérer une partition distante &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
- [Définir l'écriture différée de partition](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
- [Partitions activées en écriture](../Topic/Write-Enabled%20Partitions.md)   
- [Configurer le stockage de chaînes pour des dimensions et des partitions](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
+ [Créer et gérer une Partition distante &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
+ [Définir l’écriture différée de Partition](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
+ [Partitions activées en écriture](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+ [Configurer le stockage des chaînes pour les Dimensions et Partitions](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
   
   

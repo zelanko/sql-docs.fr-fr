@@ -1,31 +1,36 @@
 ---
-title: "Contenu du mod&#232;le d&#39;exploration de donn&#233;es pour les mod&#232;les Naive Bayes (Analysis Services - Exploration de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modèle naive bayes [Analysis Services]"
-  - "classifieurs bayésiens"
-  - "algorithmes Naive Bayes [Analysis Services]"
-  - "contenu du modèle d'exploration de données, modèles Naive Bayes"
+title: "Exploration du contenu du modèle pour les modèles Naive Bayes (Analysis Services - Exploration de données) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- naive bayes model [Analysis Services]
+- Bayesian classifiers
+- naive bayes algorithms [Analysis Services]
+- mining model content, naive bayes models
 ms.assetid: 63fa15b0-e00c-4aa3-aa49-335f5572ff7e
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f7786d6273c7941863b413f384ea8eb86bbbe84e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Contenu du mod&#232;le d&#39;exploration de donn&#233;es pour les mod&#232;les Naive Bayes (Analysis Services - Exploration de donn&#233;es)
+# <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles Naive Bayes (Analysis Services - Exploration de données)
   Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles utilisant l'algorithme Naive Bayes [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Pour obtenir une explication sur la procédure d’interprétation des statistiques et de la structure partagées par tous les types de modèles et pour obtenir des définitions générales de termes en rapport avec le contenu du modèle d’exploration de données, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
-## Présentation de la structure d'un modèle Naive Bayes  
+## <a name="understanding-the-structure-of-a-naive-bayes-model"></a>Présentation de la structure d'un modèle Naive Bayes  
  Un modèle Naive Bayes possède un nœud parent unique qui représente le modèle et ses métadonnées, et sous ce nœud parent, un nombre donné d’arborescences indépendantes représentant les attributs prédictibles que vous avez sélectionnés. Outre les arborescences des attributs, chaque modèle contient un nœud de statistiques marginales (NODE_TYPE = 26) qui fournit des statistiques descriptives sur le jeu de cas d'apprentissage. Pour plus d’informations, consultez [Informations du nœud de statistiques marginales](#bkmk_margstats).  
   
  Pour chaque attribut et valeur prédictibles, le modèle génère une arborescence contenant des informations qui décrivent comment les différentes colonnes d'entrée ont affecté le résultat de l’élément prédictible concerné. Chaque arborescence contient l'attribut prédictible et sa valeur (NODE_TYPE = 9), puis une série de nœuds qui représentent les attributs d'entrée (NODE_TYPE = 10). Comme les attributs d'entrée ont généralement plusieurs valeurs, chaque attribut d'entrée (NODE_TYPE = 10) peut avoir plusieurs nœuds enfants (NODE_TYPE = 11), chacun correspondant à un état spécifique de l'attribut.  
@@ -33,9 +38,9 @@ caps.handback.revision: 16
 > [!NOTE]  
 >  Comme un modèle Naive Bayes n'autorise pas les types de données continues, toutes les valeurs des colonnes d'entrée sont traitées comme discrètes ou discrétisées. Vous pouvez spécifier comment une valeur est discrétisée. Pour plus d’informations, consultez [Modifier la discrétisation d’une colonne dans un modèle d’exploration de données](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md).  
   
- ![structure de contenu de modèle pour Naive Bayes](../../analysis-services/data-mining/media/modelcontentstructure-nb.gif "structure de contenu de modèle pour Naive Bayes")  
+ ![structure du contenu de modèle pour Naive bayes](../../analysis-services/data-mining/media/modelcontentstructure-nb.gif "structure du contenu de modèle pour Naive bayes")  
   
-## Contenu d’un modèle Naive Bayes  
+## <a name="model-content-for-a-naive-bayes-model"></a>Contenu d’un modèle Naive Bayes  
  Cette section fournit des informations et des exemples liés uniquement aux colonnes du contenu du modèle d'exploration de données se rapportant aux modèles Naive Bayes.  
   
  Pour plus d’informations sur les colonnes à caractère général de l’ensemble de lignes de schéma, telles que MODEL_CATALOG et MODEL_NAME, non décrites ici, ou pour obtenir des explications sur la terminologie relative aux modèles d’exploration de données, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -70,7 +75,7 @@ caps.handback.revision: 16
  Nom unique du nœud. Les noms uniques sont affectés selon une convention qui fournit des informations sur les relations entre les nœuds. Pour plus d'informations sur les conventions d'affectation des noms de nœud, consultez [Utilisation de noms de nœud et ID](#bkmk_nodenames).  
   
  NODE_TYPE  
- Un modèle Naive Bayes génère les types de nœud suivants :  
+ Un modèle Naive Bayes génère les types de nœud suivants :  
   
 |ID du type de nœud|Description|  
 |------------------|-----------------|  
@@ -189,9 +194,9 @@ caps.handback.revision: 16
 |---------------|----------------------------|  
 |Racine du modèle (1)|Toujours 0.|  
 |Nœud de statistiques marginales (26)|Valeur d'ID arbitraire.|  
-|attribut prédictible (9)|Nombre hexadécimal commençant par 10000000<br /><br /> Exemple : 100000001, 10000000b|  
+|attribut prédictible (9)|Nombre hexadécimal commençant par 10000000<br /><br /> Exemple : 100000001, 10000000b|  
 |Attribut d'entrée (10)|Nombre hexadécimal bipartite où la première partie est toujours 20000000 et où la deuxième partie commence par l'identificateur hexadécimal de l'attribut prédictible connexe.<br /><br /> Exemple : 20000000b00000000<br /><br /> Dans ce cas, l'attribut prédictible connexe est 10000000b.|  
-|État d'attribut d'entrée (11)|Nombre hexadécimal tripartite où la première partie est toujours 30000000, où la deuxième partie commence par l'identificateur hexadécimal de l'attribut prédictible connexe et où la troisième partie représente l'identificateur de la valeur.<br /><br /> Exemple : 30000000b00000000200000000<br /><br /> Dans ce cas, l'attribut prédictible connexe est 10000000b.|  
+|État d'attribut d'entrée (11)|Nombre hexadécimal tripartite où la première partie est toujours 30000000, où la deuxième partie commence par l'identificateur hexadécimal de l'attribut prédictible connexe et où la troisième partie représente l'identificateur de la valeur.<br /><br /> Exemple : 30000000b00000000200000000<br /><br /> Dans ce cas, l'attribut prédictible connexe est 10000000b.|  
   
  Vous pouvez utiliser les ID pour associer les états et les attributs d'entrée à un attribut prédictible. Par exemple, la requête suivante renvoie les noms et les légendes des nœuds qui représentent les combinaisons possibles des attributs d’entrée et des attributs prédictibles pour le modèle, `TM_NaiveBayes`.  
   
@@ -225,7 +230,7 @@ AND [PARENT_UNIQUE_NAME] = '20000000000000009'
 > [!NOTE]  
 >  Le nom de colonne PARENT_UNIQUE_NAME doit être mis entre parenthèses afin de le distinguer du mot clé réservé du même nom.  
   
- Résultats attendus :  
+ Résultats attendus :  
   
 |NODE_NAME|NODE_CAPTION|NODE_PROBABILITY|  
 |----------------|-------------------|-----------------------|  
@@ -234,7 +239,7 @@ AND [PARENT_UNIQUE_NAME] = '20000000000000009'
 |3000000000000000900000002|Bike Buyer -> Marital Status = M|0.542495996|  
   
 ##  <a name="bkmk_nodedist"></a> Table NODE_DISTRIBUTION  
- La colonne de table imbriquée NODE_DISTRIBUTION contient généralement des statistiques relatives à la distribution des valeurs dans le nœud. Dans un modèle Naive Bayes, cette table est remplie uniquement pour les nœuds suivants :  
+ La colonne de table imbriquée NODE_DISTRIBUTION contient généralement des statistiques relatives à la distribution des valeurs dans le nœud. Dans un modèle Naive Bayes, cette table est remplie uniquement pour les nœuds suivants :  
   
 |Type de nœud|Contenu de table imbriquée|  
 |---------------|-----------------------------|  
@@ -266,7 +271,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
  Dans ces résultats, la valeur de la colonne SUPPORT indique le nombre de clients ayant la situation de famille spécifiée qui ont acheté un vélo. La colonne PROBABILITY contient la probabilité de chaque valeur d'attribut, telle que calculée pour ce nœud uniquement. Pour obtenir des définitions générales des termes utilisés dans la table NODE_DISTRIBUTION, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ###  <a name="bkmk_margstats"></a> Informations du nœud de statistiques marginales  
- Dans un modèle Naive Bayes, la table imbriquée du nœud de statistiques marginales contient la distribution des valeurs pour le jeu complet de données d'apprentissage. Par exemple, la table suivante contient une liste partielle des statistiques figurant dans la table NODE_DISTRIBUTION imbriquée pour le modèle, `TM_NaiveBayes` :  
+ Dans un modèle Naive Bayes, la table imbriquée du nœud de statistiques marginales contient la distribution des valeurs pour le jeu complet de données d'apprentissage. Par exemple, la table suivante contient une liste partielle des statistiques figurant dans la table NODE_DISTRIBUTION imbriquée pour le modèle, `TM_NaiveBayes`:  
   
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
@@ -283,12 +288,12 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  La colonne [Bike Buyer] est incluse parce que le nœud de statistiques marginales contient toujours une description de l’attribut prédictible et de ses valeurs possibles. Toutes les autres colonnes répertoriées représentent des attributs d'entrée, avec les valeurs utilisées dans le modèle. Les valeurs peuvent être uniquement manquantes, discrètes ou discrétisées.  
   
- Dans un modèle Naive Bayes, il ne peut pas y avoir d'attributs continus ; par conséquent, toutes les données numériques sont représentées comme discrètes (VALUE_TYPE = 4) ou discrétisées (VALUE_TYPE = 5).  
+ Dans un modèle Naive Bayes, il ne peut pas y avoir d'attributs continus ; par conséquent, toutes les données numériques sont représentées comme discrètes (VALUE_TYPE = 4) ou discrétisées (VALUE_TYPE = 5).  
   
  Une valeur **manquante** (VALUE_TYPE = 1) est ajoutée à chaque attribut d’entrée et de sortie pour représenter les valeurs potentielles qui ne figuraient pas dans les données d’apprentissage. Vous devez faire la distinction entre « manquant » en tant que chaîne et la valeur **Missing** par défaut. Pour plus d’informations, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
-## Voir aussi  
- [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Visionneuses de modèle d’exploration de données](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [Requêtes d'exploration de données](../../analysis-services/data-mining/data-mining-queries.md)   
  [Algorithme MNB (Microsoft Naive Bayes)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)  

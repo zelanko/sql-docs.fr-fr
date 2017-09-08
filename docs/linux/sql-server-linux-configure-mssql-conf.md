@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 894a3756d9bffcaaf3347e0bfae92abb0f846a97
+ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
+ms.openlocfilehash: 5147b648f2b34496bc46f756639ded028b01fe0e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurer SQL Server sur Linux avec l’outil mssql-conf
@@ -26,6 +26,7 @@ ms.lasthandoff: 08/28/2017
 |---|---|
 | [Classement](#collation) | Définir un nouveau classement pour SQL Server sur Linux. |
 | [Commentaires client](#customerfeedback) | Choisissez ou non de SQL Server envoie des commentaires à Microsoft. |
+| [Profil de messagerie de base de données](#dbmail) | Définir le profil de messagerie de base de données par défaut pour SQL Server sur Linux |
 | [Répertoire de données par défaut](#datadir) | Remplacez le répertoire par défaut pour les nouveaux fichiers de données de base de données SQL Server (.mdf). |
 | [Répertoire de journal par défaut](#datadir) | Change le répertoire par défaut pour les nouveaux fichiers de journal (.ldf) de base de données SQL Server. |
 | [Répertoire de vidage par défaut](#dumpdir) | Remplacez le répertoire par défaut pour les nouvelles images de mémoire et d’autres fichiers de résolution des problèmes. |
@@ -214,6 +215,13 @@ La première capture phase est contrôlée par le **coredump.coredumptype** para
     | **filtré** | Conception utilise filtré en fonction des soustraction où toute la mémoire dans le processus est incluse, sauf si spécifiquement exclus. La conception comprend les mécanismes internes de SQLPAL et de l’environnement hôte, à l’exception de certaines régions à partir de l’image mémoire.
     | **complète** | Complète un vidage de processus complète qui inclut toutes les régions se trouve dans **/proc / $pid/mappages**. Cela n’est pas contrôlé par **coredump.captureminiandfull** paramètre. |
 
+## <a id="dbmail"></a>Définir le profil de messagerie de base de données par défaut pour SQL Server sur Linux
+
+Le **sqlpagent.databasemailprofile** vous permet de définir le profil de messagerie de base de données par défaut pour les alertes par courrier électronique.
+
+```bash
+sudo /opt/mssq/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
+```
 ## <a id="hadr"></a>Haute disponibilité
 
 Le **hadr.hadrenabled** option active les groupes de disponibilité sur votre instance de SQL Server. La commande suivante active les groupes de disponibilité en définissant **hadr.hadrenabled** à 1. Vous devez redémarrer SQL Server pour le paramètre prenne effet.

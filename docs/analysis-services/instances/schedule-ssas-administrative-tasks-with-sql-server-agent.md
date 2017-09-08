@@ -1,38 +1,43 @@
 ---
-title: "Planifier des t&#226;ches administratives SSAS avec SQL Server Agent | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Planifier des tâches administratives SSAS avec SQL Server Agent | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 857540f661aa8eaecd42d98a648c03c043d06e2a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Planifier des t&#226;ches administratives SSAS avec SQL Server Agent
+# <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Planifier des tâches administratives SSAS avec SQL Server Agent
   Le service SQL Server Agent vous permet de planifier des tâches administratives [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à exécuter dans l’ordre et au moment que vous précisez. Les tâches planifiées vous aident à automatiser les processus qui s’exécutent selon des cycles réguliers ou prévisibles. Vous pouvez planifier l'exécution de tâches administratives, telles que le traitement de cubes, durant les périodes de faible activité. Vous pouvez également déterminer l'ordre dans lequel les tâches s'exécutent en créant des étapes de travail au sein d'un travail de l'Agent SQL Server. Par exemple, vous pouvez traiter un cube, puis effectuer une sauvegarde de ce cube.  
   
  Les étapes de travail vous permettent de contrôler le flux d'exécution. Si un travail échoue, vous pouvez configurer l'Agent SQL Server de sorte qu'il continue d'exécuter les tâches restantes ou qu'il arrête l'exécution. Vous pouvez également configurer SQL Server Agent de sorte qu'il envoie des notifications concernant le succès ou l'échec de l'exécution d'un travail.  
   
  Cette rubrique est une procédure pas à pas qui décrit deux méthodes d'utilisation de SQL Server Agent pour exécuter le script XMLA. Le premier exemple montre comment planifier le traitement d'une dimension unique. Le deuxième exemple montre comment combiner les tâches de traitement dans un seul script qui s'exécute sur une planification. Pour effectuer cette procédure pas à pas, vous devez satisfaire aux conditions suivantes.  
   
-## Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables  
  Le service Agent SQL Server doit être installé.  
   
- Par défaut, les travaux s'exécutent sous le compte de service. Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le compte par défaut pour SQL Server Agent est NT Service\SQLAgent$\<nom instance>. Pour effectuer une sauvegarde ou une tâche de traitement, ce compte doit être un administrateur système sur l'instance Analysis Services. Pour plus d’informations, consultez [Accorder des droits d’administrateur de serveur à une instance Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
+ Par défaut, les travaux s'exécutent sous le compte de service. Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le compte par défaut de SQL Server Agent est NT Service\SQLAgent$\<nom_instance >. Pour effectuer une sauvegarde ou une tâche de traitement, ce compte doit être un administrateur système sur l'instance Analysis Services. Pour plus d’informations, consultez [Accorder des droits d’administrateur de serveur à une instance Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
- Vous devez également disposer d'une base de données de test. Vous pouvez déployer l'exemple de base de données multidimensionnelle AdventureWorks ou un projet du didacticiel MDX Analysis Services dans cette procédure pas à pas. Pour plus d’informations, consultez [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../../analysis-services/install sample data and projects.md).  
+ Vous devez également disposer d'une base de données de test. Vous pouvez déployer l'exemple de base de données multidimensionnelle AdventureWorks ou un projet du didacticiel MDX Analysis Services dans cette procédure pas à pas. Pour plus d’informations, consultez [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../../analysis-services/install-sample-data-and-projects.md).  
   
-## Exemple 1 : traitement d'une dimension dans une tâche planifiée  
+## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>Exemple 1 : traitement d'une dimension dans une tâche planifiée  
  Cet exemple montre comment créer et planifier un travail qui traite une dimension.  
   
  Une tâche planifiée [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est un script XMLA imbriqué dans un travail de SQL Server Agent. Ce travail est planifié pour s'exécuter à une heure et une fréquence souhaitées. SQL Server Agent faisant partie de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous travaillez avec le Moteur de base de données et avec [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour créer et planifier une tâche administrative.  
@@ -49,7 +54,7 @@ caps.handback.revision: 12
   
 4.  Dans la boîte de dialogue **Traiter la dimension** , cliquez sur **Annuler** pour fermer la boîte de dialogue.  
   
-5.  Dans la fenêtre **Requête XMLA**, mettez en surbrillance le script XMLA, cliquez avec le bouton droit sur le script en surbrillance et sélectionnez **Copier**.  
+5.  Dans la fenêtre **Requête XMLA** , mettez en surbrillance le script XMLA, cliquez avec le bouton droit sur le script en surbrillance et sélectionnez **Copier**.  
   
      Cette étape copie le script XMLA dans le presse-papiers Windows. Vous pouvez laisser le script XMLA dans le presse-papiers ou le coller dans le Bloc-notes ou un éditeur de texte différent. Voici un exemple de script XMLA.  
   
@@ -84,7 +89,7 @@ caps.handback.revision: 12
   
 7.  Dans **Serveur**, tapez **localhost** pour une instance par défaut de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et **localhost\\**\<*nom_instance*> pour une instance nommée.  
   
-     Si vous allez exécuter le travail à partir d'un ordinateur distant, utilisez le nom du serveur et le nom de l'instance où le travail s'exécutera. Utilisez le format \<*nom_serveur*> pour une instance par défaut, et \<*nom_serveur*>\\<*nom_instance*> pour une instance nommée.  
+     Si vous allez exécuter le travail à partir d'un ordinateur distant, utilisez le nom du serveur et le nom de l'instance où le travail s'exécutera. Utilisez le format \< *nom du serveur*> pour une instance par défaut, et \< *nom du serveur*>\\<*nom de l’instance*> pour une instance nommée.  
   
 8.  Dans **Type**, sélectionnez **Commande SQL Server Analysis Services**.  
   
@@ -106,7 +111,7 @@ caps.handback.revision: 12
   
 15. Lorsque le travail est terminé, cliquez sur **Fermer**.  
   
-## Exemple 2 : traitement par lots d'une dimension et d'une partition dans une tâche planifiée  
+## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Exemple 2 : traitement par lots d'une dimension et d'une partition dans une tâche planifiée  
  Les procédures de cet exemple montrent comment créer et planifier un travail qui traite par lots une dimension de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et en même temps traiter une partition de cube qui dépend de la dimension pour l'agrégation. Pour plus d’informations sur le traitement par lots des objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Traitement par lots &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md).  
   
 ###  <a name="bkmk_BatchProcess"></a> Créer un script pour le traitement par lots d'une dimension et d'une partition dans un travail de SQL Server Agent  
@@ -136,7 +141,7 @@ caps.handback.revision: 12
     > [!WARNING]  
     >  Si la partition est traitée en premier, le traitement ultérieur de la dimension provoque le non traitement de la partition. La partition nécessiterait alors un second traitement pour atteindre l'état traité.  
   
-9. Dans la fenêtre **Requête XMLA** qui contient le script XMLA qui traite la partition, mettez en surbrillance le code à l’intérieur des indicateurs `Batch` et `Parallel`, cliquez avec le bouton droit sur le script en surbrillance, puis sélectionnez **Copier**.  
+9. Dans la fenêtre **Requête XMLA** qui contient le script XMLA qui traite la partition, mettez en surbrillance le code à l’intérieur des indicateurs `Batch` et `Parallel` , cliquez avec le bouton droit sur le script en surbrillance, puis sélectionnez **Copier**.  
   
     ```  
     <Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
@@ -222,8 +227,7 @@ caps.handback.revision: 12
   
 16. Lorsque le travail est terminé, cliquez sur **Fermer**.  
   
-## Voir aussi  
- [Options et paramètres de traitement &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
- [Tâches d'administration à l'aide de scripts dans Analysis Services](../../analysis-services/instances/script-administrative-tasks-in-analysis-services.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Options de traitement et les paramètres &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
   
   

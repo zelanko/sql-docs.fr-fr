@@ -1,24 +1,29 @@
 ---
-title: "G&#233;rer les r&#244;les &#224; l&#39;aide de SSMS (SSAS Tabulaire) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Gérer les rôles à l’aide de SSMS (SSAS tabulaire) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 652faac0-1cfc-438b-8119-2f4b090a2381
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c7458aa948c023e073f3080116fed980e8571c78
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# G&#233;rer les r&#244;les &#224; l&#39;aide de SSMS (SSAS Tabulaire)
+# <a name="manage-roles-by-using-ssms-ssas-tabular"></a>Gérer les rôles à l'aide de SSMS (SSAS Tabulaire)
   Vous pouvez créer, modifier et gérer les rôles pour un modèle tabulaire déployé à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Tâches de cette rubrique :  
@@ -59,12 +64,12 @@ caps.handback.revision: 10
   
 6.  Dans la fenêtre de paramètres d'appartenance, cliquez sur **Ajouter**, puis dans la boîte de dialogue **Sélectionner les utilisateurs ou les groupes** , ajoutez les utilisateurs ou groupes Windows que vous souhaitez ajouter comme membres.  
   
-7.  Si le rôle que vous créez dispose d'autorisations de lecture, vous pouvez ajouter des filtres de lignes à une table à l'aide d'une formule DAX. Pour ajouter des filtres de lignes, dans la boîte de dialogue **Propriétés du rôle - \<nom_rôle>**, dans **Sélectionner une page**, cliquez sur **Filtres de lignes**.  
+7.  Si le rôle que vous créez dispose d'autorisations de lecture, vous pouvez ajouter des filtres de lignes à une table à l'aide d'une formule DAX. Pour ajouter des filtres de lignes, dans le **propriétés du rôle - \<rolename >** boîte de dialogue **sélectionner une page**, cliquez sur **les filtres de lignes**.  
   
-8.  Dans la fenêtre de filtres de lignes, sélectionnez une table, cliquez sur le champ **Filtre DAX**, puis tapez une formule DAX dans le champ **Filtre DAX - \<nom_table>**.  
+8.  Dans la fenêtre de filtres de lignes, sélectionnez une table, puis cliquez sur le **filtre DAX** champ, puis dans le **filtre DAX - \<tablename >** , tapez une formule DAX.  
   
     > [!NOTE]  
-    >  Le champ Filtre DAX - \<nom_table> ne contient pas d’éditeur de requête ni de fonctionnalité d’insertion par saisie semi-automatique. Pour utiliser la saisie semi-automatique lorsque vous écrivez une formule DAX, vous devez utiliser un éditeur de formules DAX dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+    >  Le filtre DAX - \<tablename > champ ne pas contenir un éditeur de requête de la saisie semi-automatique ou fonctionnalité d’insertion. Pour utiliser la saisie semi-automatique lorsque vous écrivez une formule DAX, vous devez utiliser un éditeur de formules DAX dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 9. Cliquez sur **OK** pour enregistrer le rôle.  
   
@@ -76,13 +81,13 @@ caps.handback.revision: 10
   
 -   Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez la base de données model tabulaire qui contient le rôle que vous souhaitez modifier, développez **Rôles**, cliquez avec le bouton droit sur le rôle, puis cliquez sur **Propriétés**.  
   
-     Dans la boîte de dialogue **Propriétés du rôle** \<nom_rôle>, vous pouvez modifier les autorisations, ajouter ou supprimer des membres, et ajouter/modifier des filtres de lignes.  
+     Dans le **propriétés du rôle** \<rolename > boîte de dialogue, vous pouvez modifier les autorisations, ajouter ou supprimer des membres et des filtres de lignes d’ajouter/modifier.  
   
 ###  <a name="bkmk_deletet_role"></a> Pour supprimer un rôle  
   
 -   Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez la base de données model tabulaire qui contient le rôle que vous souhaitez supprimer, développez **Rôles**, cliquez avec le bouton droit sur le rôle, puis cliquez sur **Supprimer**.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Rôles &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   
   

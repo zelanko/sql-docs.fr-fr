@@ -1,0 +1,199 @@
+---
+title: ENTRE (Transact-SQL) | Documents Microsoft
+ms.custom: 
+ms.date: 08/28/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- BETWEEN
+- BETWEEN_TSQL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- inclusive ranges
+- testing range
+- exclusive ranges
+- NOT BETWEEN operator
+- BETWEEN operator
+- range to test [SQL Server]
+ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
+caps.latest.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 71bc6e3bee0176f895dac6037219294acdab52d0
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="between-transact-sql"></a>BETWEEN (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  Définit un intervalle sur lequel la recherche doit porter.  
+  
+ ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Syntaxe  
+  
+```  
+test_expression [ NOT ] BETWEEN begin_expression AND end_expression  
+```  
+  
+## <a name="arguments"></a>Arguments  
+ *test_expression*  
+ Est la [expression](../../t-sql/language-elements/expressions-transact-sql.md) à tester dans la plage définie par *début_expression*et *fin_expression*. *test_expression* doit être le même type de données à la fois comme *début_expression* et *fin_expression*.  
+  
+ NOT  
+ Indique la négation du résultat du prédicat.  
+  
+ *début_expression*  
+ Toute expression valide. *début_expression* doit être le même type de données à la fois comme *test_expression* et *fin_expression*.  
+  
+ *fin_expression*  
+ Toute expression valide. *fin_expression* doit être le même type de données à la fois comme *test_expression*et *début_expression*.  
+  
+ AND  
+ Espace réservé qui indique que *test_expression* doit se trouver dans la plage indiquée par *début_expression* et *fin_expression*.  
+  
+## <a name="result-types"></a>Types des résultats  
+ **Booléen**  
+  
+## <a name="result-value"></a>Valeur des résultats  
+ BETWEEN renvoie **TRUE** si la valeur de *test_expression* est supérieure ou égale à la valeur de *début_expression* et inférieur ou égal à la valeur de *fin_expression*.  
+  
+ PAS entre retourne **TRUE** si la valeur de *test_expression* est inférieure à la valeur de *début_expression* ou supérieur à la valeur de *fin_expression*.  
+  
+## <a name="remarks"></a>Notes  
+ Pour spécifier un intervalle exclusif, employez les opérateurs « supérieur à » (>) et « inférieur à » (<). Si l'un des paramètres fournis avec le prédicat BETWEEN ou NOT BETWEEN a la valeur NULL, le résultat est UNKNOWN.  
+  
+## <a name="examples"></a>Exemples  
+  
+### <a name="a-using-between"></a>A. Utilisation de BETWEEN  
+ L’exemple suivant retourne des informations sur les rôles de base de données dans une base de données. La première requête retourne tous les rôles. Le deuxième exemple utilise la `BETWEEN` clause pour limiter les rôles spécifié `database_id` valeurs.  
+  
+```sql  
+SELECT principal_id, name 
+FROM sys.database_principals
+WHERE type = 'R';
+
+SELECT principal_id, name 
+FROM sys.database_principals
+WHERE type = 'R'
+AND principal_id BETWEEN 16385 AND 16390;
+GO  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]   
+```  
+principal_id    name
+------------  ---- 
+0               public
+16384           db_owner
+16385           db_accessadmin
+16386           db_securityadmin
+16387           db_ddladmin
+16389           db_backupoperator
+16390           db_datareader
+16391           db_datawriter
+16392           db_denydatareader
+16393           db_denydatawriter
+```  
+```  
+principal_id    name
+------------  ---- 
+16385           db_accessadmin
+16386           db_securityadmin
+16387           db_ddladmin
+16389           db_backupoperator
+16390           db_datareader
+```  
+  
+### <a name="b-using--and--instead-of-between"></a>B. Utilisation de > et de < à la place de BETWEEN  
+ L'exemple suivant utilise les opérateurs « supérieur à » (`>`) et « inférieur à » (`<`) ; ceux-ci n'étant pas inclusifs, il retourne neuf lignes au lieu des dix retournées dans l'exemple précédent.  
+  
+```sql  
+-- Uses AdventureWorks  
+  
+SELECT e.FirstName, e.LastName, ep.Rate  
+FROM HumanResources.vEmployee e   
+JOIN HumanResources.EmployeePayHistory ep   
+    ON e.BusinessEntityID = ep.BusinessEntityID  
+WHERE ep.Rate > 27 AND ep.Rate < 30  
+ORDER BY ep.Rate;  
+GO  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+ ```  
+ FirstName   LastName             Rate  
+ ---------   -------------------  ---------  
+ Paula       Barreto de Mattos    27.1394  
+ Janaina     Bueno                27.4038  
+ Dan         Bacon                27.4038  
+ Ramesh      Meyyappan            27.4038  
+ Karen       Berg                 27.4038  
+ David       Bradley              28.7500  
+ Hazem       Abolrous             28.8462  
+ Ovidiu      Cracium              28.8462  
+ Rob         Walters              29.8462  
+ ```    
+  
+### <a name="c-using-not-between"></a>C. Utilisation de NOT BETWEEN  
+ L'exemple suivant recherche toutes les lignes situées en dehors d'une plage spécifiée allant de `27` à `30`.  
+  
+```sql  
+-- Uses AdventureWorks  
+  
+SELECT e.FirstName, e.LastName, ep.Rate  
+FROM HumanResources.vEmployee e   
+JOIN HumanResources.EmployeePayHistory ep   
+    ON e.BusinessEntityID = ep.BusinessEntityID  
+WHERE ep.Rate NOT BETWEEN 27 AND 30  
+ORDER BY ep.Rate;  
+GO  
+```  
+  
+### <a name="d-using-between-with-datetime-values"></a>D. Utilisation de BETWEEN avec des valeurs datetime  
+ L’exemple suivant récupère des lignes dans lesquelles **datetime** valeurs sont comprises entre `'20011212'` et `'20020105'`(inclus).  
+  
+```sql  
+-- Uses AdventureWorks  
+  
+SELECT BusinessEntityID, RateChangeDate  
+FROM HumanResources.EmployeePayHistory  
+WHERE RateChangeDate BETWEEN '20011212' AND '20020105';  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+ ```  
+ BusinessEntityID RateChangeDate  
+ ----------- -----------------------  
+ 3           2001-12-12 00:00:00.000  
+ 4           2002-01-05 00:00:00.000  
+ ```  
+ 
+ La requête extrait les lignes attendues car les valeurs de date dans la requête et le **datetime** valeurs stockées dans les `RateChangeDate` colonne ont été spécifiées sans la partie heure de la date. Lorsque la partie heure n'est pas spécifiée, la valeur par défaut est 12:00 A.M. Notez qu'une ligne qui contient une heure ultérieure à 12h00 le 5 janvier 2002 ne serait pas retournée par cette requête car cette date se situe hors de la plage.  
+  
+  
+## <a name="see-also"></a>Voir aussi  
+ [&#62; &#40; Supérieur à &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/greater-than-transact-sql.md)   
+ [&#60; &#40; Inférieur à &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/less-than-transact-sql.md)   
+ [Expressions &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
+ [Opérateurs &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
+ [OÙ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+  
+  
+
+
+

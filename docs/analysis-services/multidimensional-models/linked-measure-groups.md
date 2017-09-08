@@ -1,30 +1,35 @@
 ---
-title: "Groupes de mesures li&#233;s | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "groupes de mesures liés [Analysis Services]"
-  - "référencement de groupes de mesures"
-  - "Groupe de mesures lié, Assistant"
-  - "groupes de mesures [Analysis Services], liés"
-  - "dimensions liées [Analysis Services]"
+title: Lier les groupes de mesures | Documents Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- linked measure groups [Analysis Services]
+- referencing measure groups
+- Linked Measure Group Wizard
+- measure groups [Analysis Services], linked
+- linked dimensions [Analysis Services]
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 41
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 390e596ce08f5956f65cc106b50af7b68c4d2da4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Groupes de mesures li&#233;s
+# <a name="linked-measure-groups"></a>Groupes de mesures liés
   Un groupe de mesures lié est basé sur un autre groupe de mesures situé dans un autre cube de la même base de données ou d'une autre base de données Analysis Services. Utilisez un groupe de mesures lié si vous voulez réutiliser un jeu de mesures, et les valeurs de données correspondantes, dans plusieurs cubes.  
   
  Microsoft recommande que les groupes de mesures liés et d'origine se trouvent dans des solutions exécutées sur le même serveur. La liaison à un groupe de mesures sur un serveur distant sera déconseillée dans une version ultérieure (voir [Fonctionnalités Analysis Services déconseillées dans SQL Server 2016](../../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)).  
@@ -32,7 +37,7 @@ caps.handback.revision: 41
 > [!IMPORTANT]  
 >  Les groupes de mesures liés sont en lecture seule. Pour récupérer les dernières modifications, vous devez supprimer et recréer tous les groupes de mesures liés en fonction de l'objet source modifié. Pour cette raison, groupes de mesures et la zone de collage entre les projets est une approche lieu que vous devez comme au cas où futures de modifications au groupe de mesures seront requises.  
   
-## Limites d'utilisation  
+## <a name="usage-limitations"></a>Limites d'utilisation  
  Comme indiqué précédemment, une contrainte importante de l'utilisation des mesures liées est l'impossibilité de personnaliser une mesure directement liée. Les modifications apportées au type de données, au format, à la liaison de données et à la visibilité, ainsi que l'appartenance des éléments au groupe de mesures lui-même, sont autant de modifications qui doivent être effectuées dans le groupe de mesures d'origine.  
   
  D'un point de vue opérationnel, les groupes de mesures liés sont identiques aux autres groupes de mesures lorsque des applications clientes y accèdent et ils sont interrogés de la même façon que les autres groupes de mesures.  
@@ -49,9 +54,9 @@ caps.handback.revision: 41
   
 -   Les groupes de mesures liés ne peuvent pas être utilisés dans des relations plusieurs-à-plusieurs, en particulier lorsque ces relations sont dans des cubes différents. Cela peut entraîner des agrégations ambiguës. Pour plus d’informations, consultez [Quantités incorrectes de mesures liées dans les cubes contenant des relations plusieurs-à-plusieurs](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx).  
   
- Les mesures contenues dans un groupe de mesures lié ne s’organisent directement que conjointement à des dimensions liées extraites de la même base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Toutefois, vous pouvez utiliser les membres calculés pour associer les informations de groupes de mesures liés aux autres dimensions non liées de votre cube. Vous pouvez également utiliser une relation indirecte, telle qu'une référence ou une relation plusieurs-à-plusieurs, pour lier des dimensions non liées à un groupe de mesures lié.  
+ Les mesures contenues dans un groupe de mesures lié ne s’organisent directement que conjointement à des dimensions liées extraites de la même base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Toutefois, vous pouvez utiliser les membres calculés pour associer les informations de groupes de mesures liés aux autres dimensions non liées de votre cube. Vous pouvez également utiliser une relation indirecte, telle qu'une référence ou une relation plusieurs-à-plusieurs, pour lier des dimensions non liées à un groupe de mesures lié.  
   
-## Créer ou modifier une mesure liée  
+## <a name="create-or-modify-a-linked-measure"></a>Créer ou modifier une mesure liée  
  Utilisez [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pour créer un groupe de mesures lié.  
   
 1.  Finalisez toutes les modifications apportées au groupe de mesures d'origine dans le cube source, afin de ne pas avoir à recréer les groupes de mesures liés ultérieurement dans les cubes suivants. Vous pouvez renommer un objet lié, mais vous ne pouvez pas modifier les autres propriétés.  
@@ -66,12 +71,12 @@ caps.handback.revision: 41
   
 6.  Cliquez sur **Terminer** pour créer l’objet lié. Les objets liés apparaissent dans le volet Mesures et Dimensions, signalés par l'icône de lien.  
   
-## Sécuriser une mesure liée  
+## <a name="secure-a-linked-measure"></a>Sécuriser une mesure liée  
  Une fois le lien défini, l'accès aux mesures d'un groupe de mesures lié est géré de la même façon que l'accès aux autres groupes de mesures. Un objet lié apparaît à côté de ses homologues non liés dans le Concepteur de rôle. Pour plus d’informations sur la gestion de la sécurité d’un groupe de mesures, consultez [Octroyer des autorisations de cube ou de modèle &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
  Pour définir ou utiliser un groupe de mesures lié, le compte de service Windows pour l’instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] doit être membre d’un rôle de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui a les droits d’accès **ReadDefinition** et **Read** au cube source et au groupe de mesures sur l’instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] source ou membre du rôle Administrateurs [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour l’instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] source.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Définir des dimensions liées](../../analysis-services/multidimensional-models/define-linked-dimensions.md)  
   
   

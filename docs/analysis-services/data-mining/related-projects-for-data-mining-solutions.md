@@ -1,23 +1,28 @@
 ---
-title: "Projets connexes pour des solutions d&#39;exploration de donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Projets connexes pour les Solutions d’exploration de données | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 290142e362b4e41148ab2042c8c76738f3e7b54c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Projets connexes pour des solutions d&#39;exploration de donn&#233;es
+# <a name="related-projects-for-data-mining-solutions"></a>Projets connexes pour des solutions d'exploration de données
   Une solution d'exploration de données requiert au minimum le projet d'exploration de données, lequel définit les sources de données, les vues de source de données, ainsi que les structures et modèles d'exploration de données. Toutefois, lorsque les modèles d'exploration de données sont utilisés dans les prises de décision quotidiennes, il est important que l'exploration de données soit intégrée à l'autre partie d'une solution d'analyse prédictive, qui peut inclure ces processus et composants :  
   
 -   Préparation et sélection des données et des variables. Inclut le nettoyage de données, la gestion et l'intégration des métadonnées de plusieurs sources de données, ainsi que la conversion, la fusion et le téléchargement de données dans un entrepôt de données.  
@@ -32,7 +37,7 @@ caps.handback.revision: 12
   
  [Integration Services](#bkmk_SSIS)  
   
- [Reporting Services](#bkmk_SSRS)  
+ [Reporting Services](#bkmk_SSRS)  
   
  [Data Quality Service](#bkmk_DQSetc)  
   
@@ -173,7 +178,7 @@ caps.handback.revision: 12
   
 -   Chaque colonne que vous indexez doit avoir une clé unique.  
   
--   L'indexation de recherche en texte intégral n'est pris en charge que pour les colonnes avec les types de données suivants : char, varchar, nchar, nvarchar, text, ntext, image, xml, varbinary et varbinary(max). Si la colonne est varbinary, varbinary (max), image ou xml, vous devez spécifier l'extension de fichier du document indexable (.doc, .pdf, .xls, etc.) dans une colonne de type distincte.  
+-   L'indexation de recherche en texte intégral n'est pris en charge que pour les colonnes avec les types de données suivants : char, varchar, nchar, nvarchar, text, ntext, image, xml, varbinary et varbinary(max). Si la colonne est varbinary, varbinary (max), image ou xml, vous devez spécifier l'extension de fichier du document indexable (.doc, .pdf, .xls, etc.) dans une colonne de type distincte.  
   
 ##  <a name="bkmk_SemSearch"></a> Indexation sémantique  
  La recherche sémantique s'appuie sur les fonctionnalités de recherche en texte intégral existantes de SQL Server, mais utilise d'autres fonctions et statistiques pour permettre des scénarios tels que l'extraction automatique de mots clés et la détection de documents connexes. Par exemple, vous pouvez utiliser la recherche sémantique afin de générer une taxonomie simple pour une organisation ou classer un ensemble de documents. Vous pouvez également utiliser la combinaison des termes extraits et des scores de similarité des documents dans des modèles de clustering ou d'arbre de décision.  
@@ -200,7 +205,7 @@ caps.handback.revision: 12
   
 -   Les langues de texte intégral ne prennent pas toutes en charge l'indexation sémantique. Pour obtenir la liste des langues prises en charge, consultez [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Solutions de modèles multidimensionnels &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [Solutions de modèles tabulaires &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   

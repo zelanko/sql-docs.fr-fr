@@ -1,27 +1,32 @@
 ---
-title: "Le&#231;on 6 : D&#233;finition de calculs | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Leçon 6 : Définition de calculs | Documents Microsoft"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f31c731b89eeb6673f931dd90adc7c11b1373cbf
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Le&#231;on 6 : D&#233;finition de calculs
+# <a name="lesson-6-defining-calculations"></a>Leçon 6 : Définition de calculs
 Dans cette leçon, vous apprenez à définir des calculs, qui sont des expressions ou des scripts MDX (Multidimensional Expressions). Les calculs vous permettent de définir des membres calculés, des jeux nommés et d'exécuter d'autres commandes de script pour étendre les possibilités d'un cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Par exemple, vous pouvez exécuter une commande de script pour définir un sous-cube et assigner un calcul aux cellules du sous-cube.  
   
-Lorsque vous définissez un nouveau calcul dans le Concepteur de cube, ce calcul est ajouté au volet **Organisateur de script** de l'onglet **Calculs** du Concepteur de cube, et les champs pour ce type de calcul particulier s'affichent dans un formulaire de calcul dans le volet **Expressions de calcul** . Les calculs sont exécutés dans l'ordre où ils apparaissent dans le volet **Organisateur de script** . Vous pouvez changer l’ordre des calculs en cliquant avec le bouton droit sur un calcul particulier, puis en sélectionnant **Monter** ou **Descendre**. Ou bien, vous pouvez cliquer sur un calcul particulier, puis utiliser l’icône **Monter** ou **Descendre** de la barre d’outils de l’onglet **Calculs**.  
+Lorsque vous définissez un nouveau calcul dans le Concepteur de cube, ce calcul est ajouté au volet **Organisateur de script** de l'onglet **Calculs** du Concepteur de cube, et les champs pour ce type de calcul particulier s'affichent dans un formulaire de calcul dans le volet **Expressions de calcul** . Les calculs sont exécutés dans l'ordre où ils apparaissent dans le volet **Organisateur de script** . Vous pouvez changer l’ordre des calculs en cliquant avec le bouton droit sur un calcul particulier, puis en sélectionnant **Monter** ou **Descendre**. Ou bien, vous pouvez cliquer sur un calcul particulier, puis utiliser l’icône **Monter** ou **Descendre** de la barre d’outils de l’onglet **Calculs** .  
   
 Sous l'onglet **Calculs** , vous pouvez ajouter de nouveaux calculs et afficher ou modifier des calculs existants dans l'un des deux modes d'affichage du volet **Expressions de calcul** :  
   
@@ -46,16 +51,16 @@ Pour plus d’informations, consultez [Calculs](../analysis-services/multidimens
   
 Cette leçon contient les tâches suivantes :  
   
-[Définition des membres calculés](../analysis-services/defining-calculated-members.md)  
+[Définition des membres calculés](../analysis-services/lesson-6-1-defining-calculated-members.md)  
 Dans cette tâche, vous apprenez à définir des membres calculés.  
   
-[Définition de jeux nommés](../analysis-services/defining-named-sets.md)  
+[Définition de jeux nommés](../analysis-services/lesson-6-2-defining-named-sets.md)  
 Dans cette tâche, vous apprenez à définir des jeux nommés.  
   
-## Leçon suivante  
+## <a name="next-lesson"></a>Leçon suivante  
 [Leçon 7 : Définition d’indicateurs de performance clés &#40;KPIs&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Scénario du didacticiel Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
 [Modélisation multidimensionnelle &#40;didacticiel Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Créer des jeux nommés](../analysis-services/multidimensional-models/create-named-sets.md)  
@@ -63,3 +68,4 @@ Dans cette tâche, vous apprenez à définir des jeux nommés.
   
   
   
+
