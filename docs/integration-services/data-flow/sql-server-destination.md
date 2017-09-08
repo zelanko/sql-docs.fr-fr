@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sqlserverdest.f1
+- sql13.dts.designer.sqlserverdestadapter.connection.f1
+- sql13.dts.designer.sqlserverdestadapter.mappings.f1
+- sql13.dts.designer.sqlserverdestadapter.advanced.f1
 helpviewer_keywords:
 - SQL Server destination
 - loading data
@@ -23,10 +26,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f1224814d165d5763d832b18f6523c6c47f6f59c
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: e85093b58f8fcad60231c0f1a5c24387be686be3
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="sql-server-destination"></a>Destination SQL Server
@@ -93,14 +96,6 @@ ms.lasthandoff: 08/03/2017
   
  Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de destination SQL** , cliquez sur l’une des rubriques suivantes :  
-  
--   [Éditeur de destination SQL &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/sql-destination-editor-connection-manager-page.md)  
-  
--   [Éditeur de destination SQL &#40;page Mappages&#41;](../../integration-services/data-flow/sql-destination-editor-mappings-page.md)  
-  
--   [Éditeur de destination SQL &#40;page Avancé&#41;](../../integration-services/data-flow/sql-destination-editor-advanced-page.md)  
-  
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
   
 -   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -125,7 +120,88 @@ ms.lasthandoff: 08/03/2017
   
 -   Article technique, [Guide des performances de chargement des données](http://go.microsoft.com/fwlink/?LinkId=233700), sur le site msdn.microsoft.com.  
   
--   Article technique, [Utilisation de SQL Server Integration Services pour le chargement en masse des données](http://go.microsoft.com/fwlink/?LinkId=233701), sur le site simple-talk.com.  
+-   Article technique, [Using SQL Server Integration Services to Bulk Load Data](http://go.microsoft.com/fwlink/?LinkId=233701), sur le site simple-talk.com.  
+  
+## <a name="sql-destination-editor-connection-manager-page"></a>Éditeur de destination SQL (page Gestionnaire de connexions)
+  Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de destination SQL** pour spécifier des informations sur la source de données et afficher un aperçu des résultats. La destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] charge les données dans des tables ou des vues, dans une base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  
+### <a name="options"></a>Options  
+ **Gestionnaire de connexions OLE DB**  
+ Sélectionnez un gestionnaire de connexions existant dans la liste ou créez une connexion en cliquant sur **Nouvelle**.  
+  
+ **Nouvelle**  
+ Crée une connexion en utilisant la boîte de dialogue **Configurer le gestionnaire de connexions OLE DB** .  
+  
+ **Utiliser une table ou une vue**  
+ Sélectionnez une table ou une vue existante dans la liste, ou créez une connexion en cliquant sur **Nouvelle**.  
+  
+ **Nouvelle**  
+ Utilisez la boîte de dialogue **Créer une table** pour créer une table.  
+  
+> [!NOTE]  
+>  Quand vous cliquez sur **Nouvelle**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] génère une instruction CREATE TABLE par défaut, basée sur la source de données connectée. Cette instruction CREATE TABLE par défaut n'inclut pas l'attribut FILESTREAM, même si la table source inclut une colonne dans laquelle l'attribut FILESTREAM est déclaré. Pour exécuter un composant [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] avec l'attribut FILESTREAM, implémentez d'abord le stockage FILESTREAM sur la base de données de destination. Ajoutez ensuite l’attribut FILESTREAM à l’instruction CREATE TABLE dans la boîte de dialogue **Créer une table**. Pour plus d’informations, consultez [Données blob &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+  
+ **Aperçu**  
+ Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Visualiser les résultats de la requête** . L'aperçu peut afficher jusqu'à 200 lignes.  
+  
+## <a name="sql-destination-editor-mappings-page"></a>Éditeur de destination SQL (page Mappages)
+  La page **Mappages** de la boîte de dialogue **Éditeur de destination SQL** vous permet de mapper les colonnes d'entrée aux colonnes de destination.  
+  
+### <a name="options"></a>Options  
+ **Colonnes d'entrée disponibles**  
+ Affichez la liste des colonnes d'entrée disponibles. Au moyen du glisser-déplacer, mappez les colonnes d'entrée disponibles dans la table sur des colonnes de destination.  
+  
+ **Colonnes de destination disponibles**  
+ Affichez la liste des colonnes de destination disponibles. Utilisez une opération de glisser-déplacer pour mapper les colonnes de destination disponibles dans la table aux colonnes d'entrée.  
+  
+ **Colonne d'entrée**  
+ Affiche les colonnes d'entrée sélectionnées dans le tableau ci-dessus. Vous pouvez modifier les mappages au moyen de la liste **Colonnes d'entrée disponibles**.  
+  
+ **Colonne de destination**  
+ Affiche chaque colonne de destination disponible, qu'elle soit mappée ou non.  
+  
+## <a name="sql-destination-editor-advanced-page"></a>Éditeur de destination SQL (page Avancé)
+  Utilisez la page **Avancé** de la boîte de dialogue **Éditeur de destination SQL** pour spécifier les options avancées pour l’insertion en bloc.  
+  
+### <a name="options"></a>Options  
+ **Conserver l'identité**  
+ Spécifie si la tâche doit insérer des valeurs dans les colonnes d'identité. La valeur par défaut de cette propriété est **False**.  
+  
+ **Conserver les valeurs NULL**  
+ Spécifie si la tâche doit conserver les valeurs NULL. La valeur par défaut de cette propriété est **False**.  
+  
+ **Verrou de table**  
+ Spécifie si la table est verrouillée lors du chargement des données. La valeur par défaut de cette propriété est **True**.  
+  
+ **Contraintes de validation**  
+ Spécifie si la tâche doit vérifier les contraintes. La valeur par défaut de cette propriété est **True**.  
+  
+ **Exécuter les déclencheurs**  
+ Spécifie si l'insertion en bloc doit exécuter les déclencheurs sur les tables. La valeur par défaut de cette propriété est **False**.  
+  
+ **Première ligne**  
+ Spécifie la première ligne à insérer. La valeur par défaut de cette propriété est **-1**, ce qui signifie qu’aucune valeur ne lui a été assignée.  
+  
+> [!NOTE]  
+>  Effacez la zone de texte dans **l’Éditeur de destination SQL** pour indiquer que vous ne voulez pas assigner de valeur à cette propriété. Utilisez -1 dans la fenêtre **Propriétés** , **l’Éditeur avancé**et le modèle objet.  
+  
+ **Dernière ligne**  
+ Spécifie la dernière ligne à insérer. La valeur par défaut de cette propriété est **-1**, ce qui signifie qu’aucune valeur ne lui a été assignée.  
+  
+> [!NOTE]  
+>  Effacez la zone de texte dans **l’Éditeur de destination SQL** pour indiquer que vous ne voulez pas assigner de valeur à cette propriété. Utilisez -1 dans la fenêtre **Propriétés** , **l’Éditeur avancé**et le modèle objet.  
+  
+ **Nombre maximum d'erreurs**  
+ Spécifie le nombre d'erreurs au-delà duquel l'insertion en bloc s'arrête. La valeur par défaut de cette propriété est **–1**, ce qui signifie qu’aucune valeur ne lui a été assignée.  
+  
+> [!NOTE]  
+>  Effacez la zone de texte dans **l’Éditeur de destination SQL** pour indiquer que vous ne voulez pas assigner de valeur à cette propriété. Utilisez -1 dans la fenêtre **Propriétés** , **l’Éditeur avancé**et le modèle objet.  
+  
+ **Délai d'expiration**  
+ Spécifie le nombre de secondes pouvant s'écouler avant l'expiration de l'insertion en bloc.  
+  
+ **Ordre des colonnes**  
+ Tapez le nom des colonnes de tri. Chaque colonne peut être triée par ordre croissant ou décroissant. Si vous utilisez plusieurs colonnes de tri, délimitez la liste par des virgules.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Flux de données](../../integration-services/data-flow/data-flow.md)  

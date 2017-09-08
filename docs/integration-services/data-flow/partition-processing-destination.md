@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.partitionprocessingdest.f1
+- sql13.dts.designer.partprocessingtransformation.connection.f1
+- sql13.dts.designer.partprocessingtransformation.mapping.f1
+- sql13.dts.designer.partprocessingtransformation.advanced.f1
 helpviewer_keywords:
 - partitions [Analysis Services], processing
 - Partition Processing destination [Integration Services]
@@ -21,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 036b792f9895c6b5d56438ce52455aeb5622e0ba
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 124e43d651641eacbf98d82e1d9b1fffeec54b44
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="partition-processing-destination"></a>Destination de traitement de partition
@@ -50,14 +53,6 @@ ms.lasthandoff: 08/03/2017
   
  Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d’informations sur les propriétés pouvant être définies dans la boîte de dialogue **Éditeur de destination de traitement de partition** , cliquez sur l’une des rubriques suivantes :  
-  
--   [Éditeur de destination de traitement de partition &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/partition-processing-destination-editor-connection-manager-page.md)  
-  
--   [Éditeur de destination de traitement de partition &#40;page Mappages&#41;](../../integration-services/data-flow/partition-processing-destination-editor-mappings-page.md)  
-  
--   [Éditeur de destination de traitement de partition &#40;page Avancé&#41;](../../integration-services/data-flow/partition-processing-destination-editor-advanced-page.md)  
-  
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
   
 -   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -66,4 +61,127 @@ ms.lasthandoff: 08/03/2017
   
  Pour plus d’informations sur la façon de définir des propriétés, consultez [Définir les propriétés d’un composant de flux de données](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
+## <a name="partition-processing-destination-editor-connection-manager-page"></a>Éditeur de destination de traitement de partition (page Gestionnaire de connexions)
+  La page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de destination de traitement de partition** vous permet de spécifier une connexion à un projet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou à une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
+> [!NOTE]  
+>  Les tâches décrites ici ne s’appliquent pas aux modèles tabulaires Analysis Services.  Vous ne pouvez pas mapper des colonnes d’entrée aux colonnes de partition pour les modèles tabulaires. Vous pouvez en revanche utiliser la tâche DDL d'exécution [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) d'Analysis Services pour traiter la partition.  
+  
+### <a name="options"></a>Options  
+ **Connection manager**  
+ Sélectionnez un gestionnaire de connexions existant dans la liste ou créez une connexion en cliquant sur **Nouveau**.  
+  
+ **Nouveau**  
+ Créez une connexion via la boîte de dialogue **Ajout d’un gestionnaire de connexions Analysis Services** .  
+  
+ **Liste des partitions disponibles**  
+ Sélectionnez la partition à traiter.  
+  
+ **Méthode de traitement**  
+ Sélectionnez la méthode de traitement. La valeur par défaut de cette option est **Complète**.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|Ajouter (incrémentiel)|Permet d'effectuer un traitement incrémentiel de la partition.|  
+|Complète|Permet d'effectuer un traitement complet de la partition.|  
+|Données seulement|Permet d'effectuer un traitement de mise à jour de la partition.|  
+  
+## <a name="partition-processing-destination-editor-mappings-page"></a>Éditeur de destination de traitement de partition (page Mappages)
+  Utilisez la page **Mappages** de la boîte de dialogue **Éditeur de destination de traitement de partition** pour mapper des colonnes d'entrée sur des colonnes de partition.  
+  
+> [!NOTE]  
+>  Les tâches décrites ici ne s’appliquent pas aux modèles tabulaires Analysis Services.  Vous ne pouvez pas mapper des colonnes d’entrée aux colonnes de partition pour les modèles tabulaires. Vous pouvez en revanche utiliser la tâche DDL d'exécution [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) d'Analysis Services pour traiter la partition.  
+  
+### <a name="options"></a>Options  
+ **Colonnes d'entrée disponibles**  
+ Affichez la liste des colonnes d'entrée disponibles. Au moyen du glisser-déplacer, mappez les colonnes d'entrée disponibles dans la table sur des colonnes de destination.  
+  
+ **Colonnes de destination disponibles**  
+ Affichez la liste des colonnes de destination disponibles. Utilisez une opération de glisser-déplacer pour mapper les colonnes de destination disponibles dans la table aux colonnes d'entrée.  
+  
+ **Colonne d'entrée**  
+ Affiche les colonnes d'entrée sélectionnées dans le tableau ci-dessus. Vous pouvez modifier les mappages au moyen de la liste **Colonnes d'entrée disponibles**.  
+  
+ **Colonne de destination**  
+ Affiche chaque colonne de destination disponible, qu'elle soit mappée ou non.  
+  
+## <a name="partition-processing-destination-editor-advanced-page"></a>Éditeur de destination de traitement de partition (page Avancé)
+  Utilisez la page **Avancé** de la boîte de dialogue **Éditeur de destination de traitement de partition** pour configurer la gestion des erreurs.  
+  
+> [!NOTE]  
+>  Les tâches décrites ici ne s’appliquent pas aux modèles tabulaires Analysis Services.  Vous ne pouvez pas mapper des colonnes d’entrée aux colonnes de partition pour les modèles tabulaires. Vous pouvez en revanche utiliser la tâche DDL d'exécution [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) d'Analysis Services pour traiter la partition.  
+  
+### <a name="options"></a>Options  
+ **Utiliser la configuration d'erreur par défaut**  
+ Indiquez si vous voulez utiliser la gestion des erreurs par défaut d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Par défaut, cette valeur est définie sur **True**.  
+  
+ **Action pour l'erreur de clé**  
+ Indiquez comment traiter les enregistrements dont les valeurs de clé ne sont pas acceptables.  
+  
+|Valeur|Description|  
+|-----------|-----------------|  
+|**ConvertToUnknown**|Convertir la valeur de clé non acceptable en valeur inconnue (Unknown).|  
+|**DiscardRecord**|Ignorer l'enregistrement.|  
+  
+ **Ignorer les erreurs**  
+ Spécifiez que les erreurs doivent être ignorées.  
+  
+ **Arrêter en cas d'erreur**  
+ Spécifiez que le traitement doit s'arrêter lorsqu'une erreur se produit.  
+  
+ **Nombre d'erreurs**  
+ Spécifiez le nombre maximal d’erreurs au-delà duquel le traitement doit s’arrêter, si vous avez sélectionné **Arrêter en cas d’erreur**.  
+  
+ **Action pour l'erreur**  
+ Indiquez l’action à appliquer lorsque le nombre maximal d’erreurs est atteint, si vous avez sélectionné **Arrêter en cas d’erreur**.  
+  
+|Valeur|Description|  
+|-----------|-----------------|  
+|**StopProcessing**|Arrêter le traitement.|  
+|**StopLogging**|Arrêter d'enregistrer les erreurs.|  
+  
+ **Clé introuvable**  
+ Indiquez l'action à appliquer en cas d'erreur de clé introuvable. Par défaut, cette valeur est définie sur **ReportAndContinue**.  
+  
+|Valeur|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Ignorer l'erreur et continuer le traitement.|  
+|**ReportAndContinue**|Signaler l'erreur et continuer le traitement.|  
+|**ReportAndStop**|Signaler l'erreur et arrêter le traitement.|  
+  
+ **Clé dupliquée**  
+ Indiquez l'action à appliquer en cas d'erreur de clé dupliquée. Par défaut, cette valeur est définie sur **IgnoreError**.  
+  
+|Valeur|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Ignorer l'erreur et continuer le traitement.|  
+|**ReportAndContinue**|Signaler l'erreur et continuer le traitement.|  
+|**ReportAndStop**|Signaler l'erreur et arrêter le traitement.|  
+  
+ **Clé NULL convertie en clé inconnue**  
+ Indiquez l'action à appliquer lorsqu'une clé NULL a été convertie en clé inconnue (Unknown). Par défaut, cette valeur est définie sur **IgnoreError**.  
+  
+|Valeur|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Ignorer l'erreur et continuer le traitement.|  
+|**ReportAndContinue**|Signaler l'erreur et continuer le traitement.|  
+|**ReportAndStop**|Signaler l'erreur et arrêter le traitement.|  
+  
+ **Clé NULL non autorisée**  
+ Indiquez l'action à appliquer si une clé NULL est trouvée alors que les clés NULL ne sont pas autorisées. Par défaut, cette valeur est définie sur **ReportAndContinue**.  
+  
+|Valeur|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Ignorer l'erreur et continuer le traitement.|  
+|**ReportAndContinue**|Signaler l'erreur et continuer le traitement.|  
+|**ReportAndStop**|Signaler l'erreur et arrêter le traitement.|  
+  
+ **Chemin d'accès du journal des erreurs**  
+ Tapez le chemin du journal des erreurs ou sélectionnez une destination à l’aide du bouton Parcourir **(...)** .  
+  
+ **Parcourir (...)**  
+ Sélectionnez le chemin d'accès du journal des erreurs.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)   
+
