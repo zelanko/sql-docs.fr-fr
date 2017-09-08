@@ -1,26 +1,31 @@
 ---
-title: "Traitement par lots (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "traitements par lot [Analysis Services]"
+title: Traitement par lots (Analysis Services) | Documents Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- batches [Analysis Services]
 ms.assetid: ba4dcf72-0667-41d0-816b-ab8ff9a7d9cb
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 39
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a7770a5b6f5a6ba26cfa89d1200a776ec55c0942
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Traitement par lots (Analysis Services)
+# <a name="batch-processing-analysis-services"></a>Traitement par lots (Analysis Services)
   Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez utiliser la commande batch pour envoyer plusieurs commandes de traitement au serveur dans une demande unique. Le traitement par lots vous offre une méthode pour contrôler les objets qui doivent être traités, et dans quel ordre. De plus, un traitement par lots peut s'exécuter en tant que série de travaux autonomes ou en tant que transaction dans laquelle l'échec d'un processus entraîne une annulation de l'ensemble du traitement par lots.  
   
  Le traitement par lots optimise la disponibilité des données en consolidant et en réduisant la durée nécessaire à la validation des modifications. Lorsque vous traitez entièrement une dimension, toute partition qui utilise cette dimension est marquée comme non traitée. En conséquence, les cubes qui contiennent les partitions non traitées sont indisponibles pour l'exploration. Vous pouvez résoudre ce problème à l'aide d'un travail de traitement par lots en traitant les dimensions avec les partitions affectées. L'exécution du travail de traitement par lots en tant que transaction permet de s'assurer que tous les objets inclus dans la transaction demeurent disponibles pour les requêtes jusqu'à ce que tout le traitement soit terminé. Lorsque la transaction valide les modifications, des verrous sont placés sur les objets affectés, ce qui les rend temporairement indisponibles, mais globalement, la durée nécessaire pour valider les modifications est moindre que si vous traitiez des objets individuellement.  
@@ -73,9 +78,9 @@ caps.handback.revision: 39
 ##  <a name="bkmk_xmla"></a> Traitement par lots à l'aide de XMLA dans Management Studio  
  Vous pouvez créer un script XMLA qui exécute le traitement par lots. Commencez en générant un script XMLA dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour chaque objet, puis associez-les dans une seule requête XMLA que vous exécutez de façon interactive ou dans une tâche planifiée.  
   
- Pour obtenir des instructions étape par étape, consultez l’**exemple 2** dans [Planifier des tâches administratives SSAS avec SQL Server Agent](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md).  
+ Pour obtenir des dansstructions étape par étape, consultez l’ **exemple 2** dans [Schedule SSAS Admdansistrative Tasks with SQL Server Agent](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Traitement d’un modèle multidimensionnel &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   
