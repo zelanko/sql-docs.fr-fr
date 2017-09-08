@@ -1,30 +1,35 @@
 ---
-title: "Personnaliser les mod&#232;les et les structures d&#39;exploration de donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "attributs [exploration de données]"
-  - "modèles d’exploration de données [Analysis Services], propriétés"
-  - "algorithmes [exploration de données]"
-  - "modèles d’exploration de données [Analysis Services], création"
-  - "modèles d’exploration de données [Analysis Services], modification"
-  - "modèles d’exploration de données [Analysis Services], à propos des modèles d’exploration de données"
+title: "Personnaliser les modèles d’exploration de données et la Structure | Documents Microsoft"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attributes [data mining]
+- mining models [Analysis Services], properties
+- algorithms [data mining]
+- mining models [Analysis Services], creating
+- mining models [Analysis Services], modifying
+- mining models [Analysis Services], about data mining models
 ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a2e730d9e6f183e5311f29ffe87f1c46a73468a4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Personnaliser les mod&#232;les et les structures d&#39;exploration de donn&#233;es
+# <a name="customize-mining-models-and-structure"></a>Personnaliser les modèles et les structures d'exploration de données
   Après avoir sélectionné un algorithme qui répond aux besoins de votre entreprise, vous pouvez personnaliser le modèle d'exploration de données de plusieurs façons pour éventuellement améliorer les résultats.  
   
 -   Utilisez des colonnes de données différentes dans le modèle ou modifiez l'utilisation, le type de contenu ou la méthode de discrétisation pour les colonnes.  
@@ -37,15 +42,15 @@ caps.handback.revision: 23
   
  Cette rubrique décrit ces options.  
   
-## Modification des données utilisées par le modèle  
+## <a name="changing-data-used-by-the-model"></a>Modification des données utilisées par le modèle  
  Les décisions que vous prenez concernant les colonnes de données à utiliser dans le modèle et la façon d'utiliser et de traiter ces données affectent considérablement les résultats de l'analyse. Les rubriques suivantes fournissent des informations vous permettant de comprendre ces choix.  
   
-### Utilisation de la sélection des fonctionnalités  
+### <a name="using-feature-selection"></a>Utilisation de la sélection des fonctionnalités  
  La plupart des algorithmes d'exploration de données dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise un processus appelé *sélection des fonctionnalités* pour sélectionner uniquement les attributs les plus utiles pour l'ajout à un modèle. Le fait de réduire le nombre de colonnes et d'attributs peut améliorer les performances et la qualité du modèle. Les méthodes de sélection de fonctionnalités qui sont disponibles diffèrent en fonction de l'algorithme que vous choisissez.  
   
  [Sélection des fonctionnalités &#40;exploration de données&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md).  
   
-### Modification de l'utilisation  
+### <a name="changing-usage"></a>Modification de l'utilisation  
  Vous pouvez modifier les colonnes incluses dans un modèle d'exploration de données et la façon dont chaque colonne est utilisée. Si vous n'obtenez pas les résultats attendus, vous devez référencer les colonnes vous avez utilisées comme entrée et vous demander si les colonnes sont un choix adéquat et si vous pouvez faire quelque chose pour améliorer la gestion des données, notamment :  
   
 -   Identifier des variables catégorielles étiquetées par erreur en tant que nombres.  
@@ -58,23 +63,23 @@ caps.handback.revision: 23
   
  Il n'est pas nécessaire de supprimer physiquement les colonnes de la structure d'exploration de données ; vous pouvez simplement marquer la colonne comme **Ignorer**. La colonne est supprimée du modèle d'exploration de données, mais elle peut encore être utilisée par d'autres modèles d'exploration de données dans la structure, ou référencée dans une requête d'extraction.  
   
-### Créer des alias pour des colonnes du modèle  
+### <a name="creating-aliases-for-model-columns"></a>Créer des alias pour des colonnes du modèle  
  Lorsque [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crée le modèle d'exploration de données, il utilise les mêmes noms de colonnes que ceux de la structure d'exploration de données. Vous pouvez ajouter un alias à toute colonne du modèle d'exploration de données. Cela peut simplifier la compréhension du contenu ou de l'utilisation des colonnes, ou permettre de raccourcir les noms afin de simplifier la création de requêtes. Les alias sont également utiles lorsque vous souhaitez créer une copie d'une colonne et lui donner un nom descriptif.  
   
  Vous pouvez créer un alias en modifiant la propriété **Name** de la colonne du modèle d'exploration de données. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] continue à utiliser le nom d'origine comme ID de la colonne et la nouvelle valeur que vous tapez pour **Nom** devient l'alias de colonne et apparaît dans la grille dans les parenthèses situées à côté de l'utilisation de colonne.  
   
- ![alias sur des colonnes du modèle d'exploration de données](../../analysis-services/data-mining/media/modelcolumnalias-income.gif "alias sur des colonnes du modèle d'exploration de données")  
+ ![alias d’exploration de données sur des colonnes de modèle](../../analysis-services/data-mining/media/modelcolumnalias-income.gif "alias sur l’exploration de données des colonnes de modèle")  
   
  Le graphique illustre des modèles connexes qui ont plusieurs copies d'une colonne de structure d'exploration de données, tous en rapport avec le Revenu. Chaque copie de la colonne de structure a été discrétisée d'une manière différente. Les modèles du diagramme utilisent chacun une colonne différente de la structure d’exploration de données ; toutefois, pour simplifier la comparaison des colonnes des différents modèles, la colonne dans chaque modèle a été renommée [**Revenus**].  
   
-### Ajout de filtres  
+### <a name="adding-filters"></a>Ajout de filtres  
  Vous pouvez ajouter un filtre à un modèle d'exploration de données. Un filtre est un ensemble de conditions WHERE qui restreignent les données dans les cas de modèles à un certain sous-ensemble. Le filtre est utilisé lors de la formation du modèle et peut éventuellement être utilisé lorsque vous testez le modèle ou créez des graphiques d'analyse de précision.  
   
  En ajoutant des filtres, vous pouvez réutiliser des structures d'exploration de données mais aussi créer des modèles basés sur des sous-ensembles de données très différents. vous pouvez aussi simplement utiliser des filtres pour éliminer certaines lignes et améliorer la qualité de l'analyse.  
   
  Pour plus d’informations, consultez [Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
-## Modifier l'algorithme  
+## <a name="changing-the-algorithm"></a>Modifier l'algorithme  
  Bien que les nouveaux modèles ajoutés à une structure d'exploration de données partagent le même jeu de données, vous pouvez obtenir des résultats différents en utilisant un algorithme différent (si les données le prennent en charge), ou en modifiant les paramètres de l'algorithme. Vous pouvez également définir des indicateurs de modélisation.  
   
  Le choix de l'algorithme détermine le type de résultats que vous obtiendrez. Pour obtenir des informations générales sur le fonctionnement d’un algorithme spécifique, ou sur les scénarios professionnels où l’utilisation d’un algorithme particulier vous serait profitable, consultez [Algorithmes d’exploration de données &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
@@ -89,7 +94,7 @@ caps.handback.revision: 23
 |[Algorithme Microsoft Association](../../analysis-services/data-mining/microsoft-association-algorithm.md)|[Algorithme MLR (Microsoft Linear Regression)](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)|  
 |[Algorithme MSC (Microsoft Sequence Clustering)](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)||  
   
-## Personnaliser les paramètres d'algorithme  
+## <a name="customizing-algorithm-parameters"></a>Personnaliser les paramètres d'algorithme  
  Chaque algorithme prend en charge des paramètres que vous pouvez utiliser pour personnaliser le comportement de l'algorithme et optimiser les résultats de votre modèle. Pour obtenir une description de l'utilisation de chaque paramètre, consultez les rubriques suivantes :  
   
  La rubrique relative à chaque type d'algorithme répertorie également les fonctions de prédiction qui peuvent être utilisées avec les modèles basés sur cet algorithme.  
@@ -132,7 +137,7 @@ caps.handback.revision: 23
 |SPLIT_METHOD|[Références techniques relatives à l'algorithme MDT (Microsoft Decision Trees)](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)|  
 |STOPPING_TOLERANCE|[Références techniques relatives à l'algorithme de gestion de clusters Microsoft](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Architecture physique &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
   

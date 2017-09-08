@@ -1,34 +1,39 @@
 ---
-title: "Cr&#233;er des membres calcul&#233;s | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "membres calculés [Analysis Services]"
-  - "mesures personnalisées [Analysis Services]"
-  - "membres [Analysis Services], calculés"
-  - "calculs [Analysis Services], membres calculés"
+title: "Créer des membres calculés | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- calculated members [Analysis Services]
+- custom measures [Analysis Services]
+- members [Analysis Services], calculated
+- calculations [Analysis Services], calculated members
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73feb8d67594c4967fa0ecb0050783b970e58726
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cr&#233;er des membres calcul&#233;s
-  Vous pouvez créer des mesures ou des membres de dimension personnalisés, nommés « membres calculés », en combinant des données de cube, des opérateurs arithmétiques, des nombres et des fonctions. Par exemple, vous pouvez créer un membre calculé nommé Euros qui convertit les dollars en euros en multipliant une mesure de dollar existante par un taux de conversion. Les euros peuvent ensuite être affichés par l'utilisateur final dans une ligne ou une colonne séparée.  
+# <a name="create-calculated-members"></a>Créer des membres calculés
+  Vous pouvez créer des mesures ou des membres de dimension personnalisés, nommés « membres calculés », en combinant des données de cube, des opérateurs arithmétiques, des nombres et des fonctions. Par exemple, vous pouvez créer un membre calculé nommé Euros qui convertit les dollars en euros en multipliant une mesure de dollar existante par un taux de conversion. Les euros peuvent ensuite être affichés par l'utilisateur final dans une ligne ou une colonne séparée.  
   
  Les définitions du membre calculé sont stockées, mais leurs valeurs existent uniquement en mémoire. Dans l'exemple précédent, les valeurs en marks sont présentées aux utilisateurs finaux, mais elles ne sont pas stockées comme données du cube.  
   
- Vous créez les membres calculés dans les cubes. Pour créer un membre calculé, sous l’onglet **Calculs** du Concepteur de cube, cliquez sur l’icône **Nouveau membre calculé** de la barre d’outils. Cette commande affiche un formulaire dans lequel vous spécifiez les options suivantes pour le membre calculé :  
+ Vous créez les membres calculés dans les cubes. Pour créer un membre calculé, sous l’onglet **Calculs** du Concepteur de cube, cliquez sur l’icône **Nouveau membre calculé** de la barre d’outils. Cette commande affiche un formulaire dans lequel vous spécifiez les options suivantes pour le membre calculé :  
   
  **Nom**  
  Sélectionnez le nom du membre calculé. Ce nom apparaît en tant qu'en-tête de colonne ou de ligne pour les valeurs du membre calculé lorsque les utilisateurs finaux parcourent le cube.  
@@ -44,11 +49,11 @@ caps.handback.revision: 26
  Les hiérarchies sont divisées en niveaux qui contiennent les membres. Chaque membre produit un en-tête. Lorsqu'il parcourt les données dans un cube, l'utilisateur final peut descendre d'un en-tête sélectionné à des en-têtes subordonnés qui n'étaient pas visibles auparavant. L'en-tête du membre calculé est ajouté dans le niveau situé directement sous le membre parent que vous sélectionnez.  
   
  **Expression**  
- Spécifiez l'expression qui produit les valeurs du membre calculé. Cette expression peut être écrite en MDX L'expression peut contenir l'un des éléments suivants :  
+ Spécifiez l'expression qui produit les valeurs du membre calculé. Cette expression peut être écrite en MDX L'expression peut contenir l'un des éléments suivants :  
   
--   les expressions de données qui représentent les composants de cube tels que les dimensions, les niveaux, les mesures, et ainsi de suite ;  
+-   les expressions de données qui représentent les composants de cube tels que les dimensions, les niveaux, les mesures, et ainsi de suite ;  
   
--   les opérateurs arithmétiques ;  
+-   les opérateurs arithmétiques ;  
   
 -   Nombres  
   
@@ -76,12 +81,12 @@ caps.handback.revision: 26
   
  Vous pouvez faire glisser ou copier les composants de cube de l’onglet **Métadonnées** du volet **Outils de calcul** dans la zone **Expression** du volet des expressions de calcul. Vous pouvez faire glisser ou copier les fonctions de l’onglet **Fonctions** du volet **Outils de calcul** dans la zone **Expression** du volet des expressions de calcul.  
   
-## Adressage des membres calculés  
- Quand vous créez un membre calculé sous l’onglet **Calculs** du **Concepteur de cube**, vous spécifiez la hiérarchie parente dans laquelle le membre calculé est stocké. La hiérarchie parente détermine l'adressage d'un membre calculé à l'aide des règles suivantes :  
+## <a name="addressing-calculated-members"></a>Adressage des membres calculés  
+ Quand vous créez un membre calculé sous l’onglet **Calculs** du **Concepteur de cube**, vous spécifiez la hiérarchie parente dans laquelle le membre calculé est stocké. La hiérarchie parente détermine l'adressage d'un membre calculé à l'aide des règles suivantes :  
   
 -   Si un membre calculé est créé dans la dimension de mesures, il est adressable dans cette dimension.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Calculs dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   

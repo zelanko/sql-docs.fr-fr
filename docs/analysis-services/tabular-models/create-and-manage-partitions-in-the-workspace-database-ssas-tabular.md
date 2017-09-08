@@ -1,26 +1,31 @@
 ---
-title: "Cr&#233;er et g&#233;rer des partitions dans la base de donn&#233;es de l&#39;espace de travail (SSAS Tabulaire) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.partitionmgr.f1"
+title: "Créer et gérer des Partitions dans la base de données (SSAS tabulaire) de l’espace de travail | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.partitionmgr.f1
 ms.assetid: 0b3027d6-652b-4eb3-a197-58b25df65218
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 737b5220666edbbb481f0e50671b65e5a55a1de5
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cr&#233;er et g&#233;rer des partitions dans la base de donn&#233;es de l&#39;espace de travail (SSAS Tabulaire)
+# <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>Créer et gérer des partitions dans la base de données de l'espace de travail (SSAS Tabulaire)
   Les partitions divisent une table en sections logiques. Chaque partition peut ensuite être traitée (actualisée) indépendamment ou parallèlement à d'autres partitions. Les partitions peuvent améliorer l'évolutivité et la gestion de bases de données volumineuses. Par défaut, chaque table possède une partition qui inclut toutes les colonnes. Les tâches de cette rubrique décrivent comment créer et gérer des partitions dans la base de données model de l’espace de travail à l’aide de la boîte de dialogue **Gestionnaire de partition** dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
   
  Une fois que le modèle a été déployé sur une autre instance Analysis Services, les administrateurs de bases de données peuvent créer et gérer des partitions dans le modèle (déployé) à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Créer et gérer des partitions de modèles tabulaires &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
@@ -36,8 +41,8 @@ caps.handback.revision: 15
 > [!NOTE]  
 >  Vous ne pouvez pas fusionner des partitions dans la base de données model de l'espace de travail à l'aide de la boîte de dialogue Gestionnaire de partitions. Les partitions peuvent être fusionnées dans un modèle déployé uniquement à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## Tâches  
- Pour créer et gérer des partitions, vous allez utiliser la boîte de dialogue **Gestionnaire de partition**. Pour consulter la boîte de dialogue **Gestionnaire de partition**, dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], cliquez sur le menu **Table**, puis sur **Partitions**.  
+## <a name="tasks"></a>Tâches  
+ Pour créer et gérer des partitions, vous allez utiliser la boîte de dialogue **Gestionnaire de partition** . Pour consulter la boîte de dialogue **Gestionnaire de partition** , dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], cliquez sur le menu **Table** , puis sur **Partitions**.  
   
 ###  <a name="bkmk_create_new"></a> Pour créer une nouvelle partition  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 15
   
 2.  Cliquez sur le menu **Table** , puis sur **Partitions**.  
   
-3.  Dans **Gestionnaire de partition**, dans la zone de liste **Table**, vérifiez ou sélectionnez la table que vous voulez partitionner, puis cliquez sur **Nouveau**.  
+3.  Dans **Gestionnaire de partition**, dans la zone de liste **Table** , vérifiez ou sélectionnez la table que vous voulez partitionner, puis cliquez sur **Nouveau**.  
   
 4.  Dans **Nom de la partition**, tapez un nom pour la partition. Par défaut, le nom de la partition par défaut est numéroté de manière incrémentielle pour chaque nouvelle partition.  
   
@@ -57,19 +62,19 @@ caps.handback.revision: 15
   
 ###  <a name="bkmk_copy"></a> Pour copier une partition  
   
-1.  Dans **Gestionnaire de partition**, dans la zone de liste **Table**, vérifiez ou sélectionnez la table qui contient la partition que vous souhaitez copier.  
+1.  Dans **Gestionnaire de partition**, dans la zone de liste **Table** , vérifiez ou sélectionnez la table qui contient la partition que vous souhaitez copier.  
   
-2.  Dans la liste **Partitions**, sélectionnez la partition à copier, puis cliquez sur **Copier**.  
+2.  Dans la liste **Partitions** , sélectionnez la partition à copier, puis cliquez sur **Copier**.  
   
 3.  Dans **Nom de la partition**, tapez un nouveau nom pour la partition.  
   
 ###  <a name="bkmk_delete"></a> Pour supprimer une partition  
   
-1.  Dans **Gestionnaire de partition**, dans la zone de liste **Table**, vérifiez ou sélectionnez la table qui contient la partition à supprimer.  
+1.  Dans **Gestionnaire de partition**, dans la zone de liste **Table** , vérifiez ou sélectionnez la table qui contient la partition à supprimer.  
   
-2.  Dans la liste **Partitions**, sélectionnez la partition à supprimer, puis cliquez sur **Supprimer**.  
+2.  Dans la liste **Partitions** , sélectionnez la partition à supprimer, puis cliquez sur **Supprimer**.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Partitions &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md)   
  [Traiter des partitions dans la base de données de l’espace de travail &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)  
   

@@ -1,23 +1,28 @@
 ---
-title: "Requ&#234;tes de d&#233;finition des donn&#233;es (Exploration de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Requêtes de définition de données (exploration de données) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 49e02de1-4ffa-401c-8eee-471a9c25b86a
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a42d980837958ff2b605eeaac01dd61739bc1078
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Requ&#234;tes de d&#233;finition des donn&#233;es (Exploration de donn&#233;es)
+# <a name="data-definition-queries-data-mining"></a>Requêtes de définition des données (Exploration de données)
   Pour l’exploration de données, la catégorie *requête Définition des données* signifie des instructions DMX ou des commandes XMLA qui effectuent les opérations suivantes :  
   
 -   Créer, modifier, ou manipuler des objets d'exploration de données, tels qu'un modèle.  
@@ -49,7 +54,7 @@ caps.handback.revision: 12
  Pour afficher les instructions utilisées pour définir des sources de données pour l’apprentissage ou la prédiction, vous pouvez sélectionner **Vue SQL** dans le Générateur de requêtes de prédiction. Il peut parfois être utile de créer des requêtes de base pour l'apprentissage et le test des modèles à l'aide du Générateur de requêtes de prédiction, afin d'utiliser la syntaxe correcte. Vous pouvez ensuite basculer vers **Vue SQL** et modifier manuellement la requête. Pour plus d’informations, consultez [Modifier manuellement une requête de prédiction](../../analysis-services/data-mining/manually-edit-a-prediction-query.md).  
   
 ###  <a name="bkmk_SSMS"></a> Requêtes de définition des données dans SQL Server Management Studio  
- Pour les objets d'exploration de données, vous pouvez utiliser des requêtes de définition des données afin d'effectuer les actions suivantes :  
+ Pour les objets d'exploration de données, vous pouvez utiliser des requêtes de définition des données afin d'effectuer les actions suivantes :  
   
 -   Créer des types spécifiques de modèles, tels qu’un modèle de clustering ou un modèle d’arbre de décision, à l’aide de [CREATE MINING MODEL &#40;DMX&#41;](../../dmx/create-mining-model-dmx.md).  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 12
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit les modèles de requête qui peuvent vous aider à créer des requêtes Définition des données. Pour plus d’informations, consultez [Utiliser des modèles Analysis Services dans SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md).  
   
- En général, les modèles qui sont fournis pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] contiennent uniquement la définition générale de syntaxe, que vous devez personnaliser, soit en tapant dans la fenêtre **Requête**, soit en utilisant la boîte de dialogue fournie pour entrer des paramètres.  
+ En général, les modèles qui sont fournis pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] contiennent uniquement la définition générale de syntaxe, que vous devez personnaliser, soit en tapant dans la fenêtre **Requête** , soit en utilisant la boîte de dialogue fournie pour entrer des paramètres.  
   
  Pour obtenir un exemple de la manière d’entrer des paramètres à l’aide de l’interface, consultez [Créer une requête singleton de prédiction à partir d’un modèle](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md).  
   
@@ -86,9 +91,9 @@ caps.handback.revision: 12
 |Capturer des définitions de requêtes à l'aide de SQL Server Profiler, puis utiliser les traces pour surveiller [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Utiliser SQL Server Profiler pour contrôler Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
 |En savoir plus sur les langages de script et les langages de programmation fournis pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Référence XML for Analysis &#40;XMLA&#41;](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [Développement avec AMO &#40;Analysis Management Objects&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
 |Apprendre à gérer les modèles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|[Exporter et importer des objets d'exploration de données](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [EXPORT &#40;DMX&#41;](../../dmx/export-dmx.md)<br /><br /> [IMPORT &#40;DMX&#41;](../../dmx/import-dmx.md)|  
-|En savoir plus sur OPENROWSET et d'autres méthodes pour interroger des données externes.|[&#60;requête de données source&#62;](../Topic/%3Csource%20data%20query%3E.md).|  
+|En savoir plus sur OPENROWSET et d'autres méthodes pour interroger des données externes.|[&#60;requête de données source&#62;](../../dmx/source-data-query.md).|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
   

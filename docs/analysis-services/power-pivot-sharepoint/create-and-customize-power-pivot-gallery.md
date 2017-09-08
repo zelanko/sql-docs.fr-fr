@@ -1,24 +1,29 @@
 ---
-title: "Cr&#233;er et personnaliser une Galerie PowerPivot | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/31/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Créer et personnaliser la galerie PowerPivot | Documents Microsoft"
+ms.custom: 
+ms.date: 08/31/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 9e98f38071c044aab967690ffafffa6ada634141
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cr&#233;er et personnaliser une Galerie PowerPivot
+# <a name="create-and-customize-power-pivot-gallery"></a>Créer et personnaliser une Galerie PowerPivot
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est un type de bibliothèque de documents SharePoint qui fournit des fonctions d’aperçu et de gestion des documents pour les classeurs Excel publiés et les rapports Reporting Services contenant des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 ##  <a name="bkmk_top"></a> Dans cette rubrique  
@@ -43,7 +48,7 @@ caps.handback.revision: 16
     >  La Galerie PowerPivot requiert Microsoft Silverlight.  Le navigateur Microsoft Edge ne prend pas en charge Silverlight.   
     > Pour afficher le contenu de la bibliothèque dans Edge, cliquez sur l’onglet **Bibliothèque** dans la Galerie PowerPivot, puis définissez l’affichage de la bibliothèque de documents sur **Tous les documents**.    
     > Pour modifier l’affichage par défaut, cliquez sur l’onglet **Bibliothèque** , puis sur Modifier l’affichage. Cliquez sur Définir cet affichage comme affichage par défaut, puis sur OK pour enregistrer l’affichage par défaut.  
-    >  Pour plus d’informations sur les composants pris en charge par Edge, consultez le billet du blog Windows intitulé [A break from the past, part 2: Saying goodbye to ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+    >  Pour plus d’informations sur les composants pris en charge par Edge, consultez le billet du blog Windows intitulé [A break from the past, part 2: Saying goodbye to ActiveX, VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
 -   Vous devez être propriétaire de site pour créer une bibliothèque.  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 16
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ne doit pas être située dans un site sensible. Le site parent qui contient la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] doit être ajouté dans la zone sites de confiance ou Intranet local.  
   
--   La solution d’application web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] doit être déployée pour votre application et la fonctionnalité [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] doit être activée pour la collection de sites. Pour plus d’informations, consultez [Deploy Power Pivot Solutions to SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md) et[Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate power pivot integration for site collections in ca.md).  
+-   La solution d’application web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] doit être déployée pour votre application et la fonctionnalité [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] doit être activée pour la collection de sites. Pour plus d’informations, consultez [Deploy Power Pivot Solutions to SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md) et[Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
 -   Pour être en mesure d'afficher ou de créer un rapport Reporting Services basé sur un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , vous devez installer le classeur et le rapport dans la même bibliothèque Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le rapport doit utiliser un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui contient des données incorporées ou le classeur doit contenir au plus une source de données externe qui est un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 16
   
     3.  Sous Bibliothèques, cliquez sur **Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
   
-    1.  **SharePoint 2013** : cliquez sur l’icône de paramètres ![Paramètres SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.png "Paramètres SharePoint"). Cliquez sur **Contenu du site**.  
+    1.  **SharePoint 2013**: cliquez sur l’icône paramètres ![paramètres SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "paramètres SharePoint"). Cliquez sur **Contenu du site**.  
   
     2.  Cliquez sur **Ajouter une application**.  
   
@@ -98,7 +103,7 @@ caps.handback.revision: 16
   
  Vous ne pouvez pas modifier les paramètres qui contrôlent les informations d'origine des documents. Les informations fournies sur les documents, telles que l'auteur de l'ajout ou de la dernière modification du classeur, sont déterminées par un ensemble fixe de colonnes qu'il est impossible de modifier.  
   
-#### Modifier l'ordre de tri, ajouter des filtres ou limiter le nombre de documents  
+#### <a name="change-sort-order-add-filters-or-limit-the-number-of-documents"></a>Modifier l'ordre de tri, ajouter des filtres ou limiter le nombre de documents  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] affiche toujours les valeurs « Dernière modification » et « Créé par ». Vous ne pouvez pas désactiver ces colonnes. Vous ne pouvez pas activer d'autres colonnes pour la bibliothèque. Utilisez les instructions suivantes pour modifier l'ordre de tri, ajouter un filtre ou limiter le nombre de documents visibles.  
   
 1.  Dans un site SharePoint, ouvrez la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -120,7 +125,7 @@ caps.handback.revision: 16
 ####  <a name="bkmk_hide_refresh_button"></a> Désactiver ou masquer le bouton Actualiser  
  Vous ne pouvez pas masquer le bouton **Gérer l'actualisation des données** . Toutefois, le bouton est désactivé si l'utilisateur ne dispose pas d'autorisations suffisantes.  
   
- ![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.png "as_powerpivot_refresh_manage_reresh")  
+ ![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")  
   
  Les propriétaires ou auteurs de classeurs doivent avoir l'autorisation **Collaboration** pour planifier des actualisation de données sur un classeur. Les utilisateurs disposant d'autorisations Collaboration peuvent ouvrir et modifier la page de configuration de l'actualisation des données pour spécifier les informations d'identification et de planification utilisées pour actualiser les données.  
   
@@ -139,7 +144,7 @@ caps.handback.revision: 16
 |Tous les documents|Il s'agit de la mise en page standard pour les bibliothèques de documents. Vous pouvez choisir cette vue pour gérer des documents individuels ou afficher le contenu de bibliothèques sous forme de liste.<br /><br /> Utilisez cette vue pour modifier des propriétés ou pour supprimer ou déplacer des documents.<br /><br /> Si vous avez activé le contrôle de version, vous devez utiliser cette vue pour archiver des documents dans la bibliothèque ou les en extraire.|  
 |Vue Théâtre et vue Carrousel|Ces vues spécialisées sont idéales pour exposer un petit nombre de documents connexes. La rotation complète des miniatures inclut toutes les pages de tous les documents de la bibliothèque. Si vous avez un grand nombre de documents, ces vues peuvent être impraticables pour les utilisateurs qui souhaitent trouver ou ouvrir un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] spécifique.<br /><br /> Vue Théâtre : la zone d'aperçu est centrée. Des miniatures plus petites de chaque feuille de calcul s'affichent plus bas dans la page, des deux côtés.<br /><br /> Vue Carrousel : la zone d'aperçu est centrée. Les miniatures qui précèdent et suivent immédiatement la miniature actuelle sont adjacentes à la zone d'aperçu.|  
   
-### Passer à une vue différente  
+### <a name="switch-to-a-different-view"></a>Passer à une vue différente  
   
 1.  Dans un site SharePoint, ouvrez la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
@@ -147,10 +152,11 @@ caps.handback.revision: 16
   
 3.  Dans Gérer les affichages, sous Affichage actuel, sélectionnez la vue que vous voulez utiliser dans la liste. Les vues prédéfinies sont les suivantes : Galerie, Théâtre et Carrousel. Vous pouvez également choisir Tous les documents si vous souhaitez déplacer, supprimer ou gérer des documents dans la bibliothèque.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Dépanner une installation Power Pivot pour SharePoint](../../analysis-services/troubleshoot-a-power-pivot-for-sharepoint-installation.md)   
- [Utiliser la galerie PowerPivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)   
- [Créer un emplacement approuvé pour les sites Power Pivot dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [Utilisez la galerie PowerPivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)   
+ [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Supprimer la galerie PowerPivot](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)  
   
   
+

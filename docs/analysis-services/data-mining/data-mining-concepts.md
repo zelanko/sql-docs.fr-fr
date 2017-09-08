@@ -1,44 +1,49 @@
 ---
-title: "Concepts d&#39;exploration de donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server Analysis Services, exploration de données"
-  - "nettoyage de données"
-  - "analyse prédictive"
-  - "algorithmes d'apprentissage"
-  - "exploration de données [Analysis Services], concepts"
-  - "apprentissage inductif"
-  - "exploration de données [Analysis Services], à propos de l’exploration de données"
-  - "modèles d'exploration de données [Analysis Services]"
-  - "accès aux données [Analysis Services]"
-  - "algorithmes d'apprentissage automatique [Analysis Services]"
-  - "modèles d'exploration de données [Analysis Services], à propos de l’exploration de données"
-  - "SSAS, exploration de données"
-  - "Analysis Services, exploration de données"
+title: "Concepts d’exploration de données | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Analysis Services, data mining
+- cleaning data
+- predictive analytics
+- learning algorithms
+- data mining [Analysis Services], concepts
+- inductive learning
+- data mining [Analysis Services], about data mining
+- mining models [Analysis Services]
+- data access [Analysis Services]
+- machine learning algorithms [Analysis Services]
+- mining models [Analysis Services], about data mining
+- SSAS, data mining
+- Analysis Services, data mining
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
 caps.latest.revision: 48
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d9bad5ee7b9724c7faa1acbe4ebcc3fa2fa6812c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Concepts d&#39;exploration de donn&#233;es
+# <a name="data-mining-concepts"></a>Concepts d'exploration de données
   L'exploration de données est un processus de recherche d'informations utilisables à partir de jeux de données de grande taille. L'exploration de données utilise l’analyse mathématique pour dégager les motifs et les tendances existant dans les données. En général, ces motifs ne peuvent pas être trouvés par l’exploration de données traditionnelle parce que les relations sont trop complexes ou parce que la quantité de données est trop importante.  
   
  Ces motifs et tendances peuvent être collectés et définis en tant que *modèle d'exploration de données*. Les modèles d'exploration de données peuvent être appliqués à des scénarios spécifiques, tels que :  
   
 -   **Prévisions**: estimation des ventes, prédiction des charges du serveur ou du temps mort de serveur  
   
--   **Risque et probabilité** : choix des meilleurs clients pour des publipostages ciblés, détermination du seuil de rentabilité probable pour les scénarios à risque, affectation de probabilités aux diagnostics ou à d’autres résultats  
+-   **Risque et probabilité**: choix des meilleurs clients pour des publipostages ciblés, détermination du seuil de rentabilité probable pour les scénarios à risque, affectation de probabilités aux diagnostics ou à d’autres résultats  
   
 -   **Recommandations**: identification des produits susceptibles d'être vendus ensemble, génération de recommandations  
   
@@ -62,18 +67,18 @@ caps.handback.revision: 48
   
  Le diagramme suivant décrit les relations entre chacune des étapes du processus et les technologies [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous pouvez utiliser pour effectuer chaque étape.  
   
- ![Étapes clés du processus d'exploration de données](../../analysis-services/data-mining/media/data-mining-process.gif "Étapes clés du processus d'exploration de données")  
+ ![Étapes clés du processus d’exploration de données de](../../analysis-services/data-mining/media/data-mining-process.gif "étapes clés du processus d’exploration de données de")  
   
  Le processus illustré dans le diagramme est cyclique, ce qui signifie que la création d'un modèle d'exploration de données est un processus dynamique et itératif. En effet, après avoir exploré les données, vous pouvez juger que les données sont insuffisantes pour créer les modèles d'exploration de données appropriés et devoir, par conséquent, rechercher des données supplémentaires. Vous pouvez également générer plusieurs modèles, puis vous rendre compte qu'ils ne résolvent pas correctement le problème que vous avez défini et devoir par conséquent redéfinir le problème. Vous devrez peut-être également mettre à jour les modèles une fois qu'ils ont été déployés parce que vous disposez de données supplémentaires. Il est possible que chaque étape du processus doive être répétée de nombreuses fois pour créer un modèle correct.  
   
  L'exploration de données Microsoft SQL Server fournit un environnement intégré pour la création et l'utilisation des modèles d'exploration de données. Cet environnement inclut SQL Server Development Studio, qui contient des algorithmes d'exploration de données et des outils de requête qui facilitent l'établissement d'une solution globale pour divers projets, et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], qui contient des outils pour parcourir des modèles et gérer des objets d'exploration de données. Pour plus d’informations, consultez [Création de modèles MDX à l’aide des Outils de données SQL Server &#40;SSDT&#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md).  
   
- Pour obtenir un exemple montrant comment les outils [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être appliqués à un scénario d’entreprise, consultez le [Didacticiel sur l’exploration de données de base](../Topic/Basic%20Data%20Mining%20Tutorial.md).  
+ Pour obtenir un exemple montrant comment les outils [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être appliqués à un scénario d’entreprise, consultez le [Didacticiel sur l’exploration de données de base](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
 ##  <a name="DefiningTheProblem"></a> Définition du problème  
  La première étape du processus d'exploration de données, mise en évidence dans le diagramme suivant, consiste à définir clairement le problème et à envisager les moyens d'utilisation des données pour apporter une solution au problème.  
   
- ![Première étape d'exploration des données : définition du problème](../../analysis-services/data-mining/media/dmprocess-defining.gif "Première étape d'exploration des données : définition du problème")  
+ ![Première étape de données d’exploration de données : définition du problème](../../analysis-services/data-mining/media/dmprocess-defining.gif "première étape de données d’exploration de données : définition du problème")  
   
  Cette étape inclut l'analyse des besoins de l'entreprise, la définition de l'étendue du problème, la détermination des mesures d'évaluation du modèle et la définition des objectifs spécifiques du projet d'exploration de données. Ces tâches peuvent être traduites par des questions, telles que :  
   
@@ -96,7 +101,7 @@ caps.handback.revision: 48
 ##  <a name="PreparingData"></a> Préparation des données  
  La deuxième étape du processus d'exploration de données, mise en évidence dans le diagramme suivant, consiste à consolider et à nettoyer les données identifiées à l'étape [Définition du problème](#DefiningTheProblem) .  
   
- ![Deuxième étape d'exploration des données : préparation des données](../../analysis-services/data-mining/media/dmprocess-preparing.gif "Deuxième étape d'exploration des données : préparation des données")  
+ ![Deuxième étape de données d’exploration de données : préparation des données](../../analysis-services/data-mining/media/dmprocess-preparing.gif "deuxième étape de données d’exploration de données : préparation des données")  
   
  Les données peuvent être dispersées dans une entreprise et stockées dans des formats différents ou bien contenir des incohérences, telles que des entrées incorrectes ou manquantes. Par exemple, les données peuvent indiquer qu'un client a acheté un produit avant sa mise sur le marché, ou qu'une cliente fait régulièrement des achats dans un magasin se trouvant à 3 000 kilomètres de chez elle.  
   
@@ -115,7 +120,7 @@ caps.handback.revision: 48
 ##  <a name="ExploringData"></a> Exploration des données  
  La troisième étape du processus d'exploration de données, mise en évidence dans le diagramme suivant, consiste à explorer les données préparées.  
   
- ![Troisième étape d'exploration des données : exploration des données](../../analysis-services/data-mining/media/dmprocess-exploring.gif "Troisième étape d'exploration des données : exploration des données")  
+ ![Troisième étape d’exploration : exploration de données](../../analysis-services/data-mining/media/dmprocess-exploring.gif "troisième étape d’exploration : exploration de données")  
   
  Vous devez vous familiariser avec les données afin de prendre les décisions appropriées lors de la création des modèles d’exploration. Les techniques d'exploration comprennent le calcul des valeurs minimales et maximales, le calcul des écarts moyens et types, et l'examen de la distribution des données. Par exemple, vous pouvez déterminer en examinant les valeurs maximales, minimales et moyennes que les données ne sont pas représentatives de vos clients ou de vos processus d’entreprise, et que vous devez par conséquent obtenir des données plus équilibrées ou examiner les hypothèses sur lesquelles reposent vos attentes. Les écarts types et autres valeurs de distribution peuvent fournir des informations utiles sur la stabilité et la précision des résultats. Un grand écart type peut indiquer que l'ajout de données supplémentaires est susceptible d’améliorer le modèle. Les données qui se différencient fortement d'une distribution standard peuvent être faussées ou représenter l’image exacte d'un problème vécu, mais elles permettent difficilement d’ajuster un modèle en fonction des données.  
   
@@ -130,9 +135,9 @@ caps.handback.revision: 48
 ##  <a name="BuildingModels"></a> Création des modèles  
  La quatrième étape du processus d'exploration de données, mise en évidence dans le diagramme suivant, consiste à générer le ou les modèles d'exploration de données. Vous allez utiliser les connaissances acquises à l'étape [Exploration des données](#ExploringData) pour définir et créer les modèles.  
   
- ![Quatrième étape d'exploration des données : création de modèles d'exploration de données](../../analysis-services/data-mining/media/dmprocess-building.gif "Quatrième étape d'exploration des données : création de modèles d'exploration de données")  
+ ![Quatrième étape de données d’exploration de données : création de modèles d’exploration de données](../../analysis-services/data-mining/media/dmprocess-building.gif "quatrième étape de données d’exploration de données : création de modèles d’exploration de données")  
   
- Vous définissez les colonnes de données que vous souhaitez utiliser en créant une structure d'exploration de données. La structure d'exploration de données est liée à la source de données, mais ne contient pas de données tant qu’elle n'a pas fait l'objet d'un traitement. Lorsque vous traitez la structure d'exploration de données, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] génère des agrégats et d'autres informations statistiques qui peuvent être utilisés pour l'analyse. Ces informations peuvent être utilisées par n'importe quel modèle d’exploration de données basé sur la structure. Pour plus d’informations sur l’association des structures d’exploration de données avec les modèles d’exploration de données, consultez [Architecture logique &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)..  
+ Vous définissez les colonnes de données que vous souhaitez utiliser en créant une structure d'exploration de données. La structure d'exploration de données est liée à la source de données, mais ne contient pas de données tant qu’elle n'a pas fait l'objet d'un traitement. Lorsque vous traitez la structure d'exploration de données, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] génère des agrégats et d'autres informations statistiques qui peuvent être utilisés pour l'analyse. Ces informations peuvent être utilisées par n'importe quel modèle d’exploration de données basé sur la structure. Pour plus d’informations sur l’association des structures d’exploration de données avec les modèles d’exploration de données, consultez [Architecture logique &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md).  
   
  Avant de traiter la structure et le modèle, un modèle d'exploration de données n'est qu'un conteneur spécifiant les colonnes utilisées pour l'entrée, l'attribut prédit et les paramètres indiquant à l'algorithme comment traiter les données. Le traitement d'un modèle est souvent appelé *apprentissage*. L’apprentissage fait référence au processus visant à appliquer un algorithme mathématique spécifique aux données de la structure pour extraire des motifs. Les schémas trouvés dans le processus d’apprentissage dépendent de la sélection des données d'apprentissage, de l'algorithme choisi et de la manière dont vous avez configuré cet algorithme. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] contient de nombreux algorithmes différents, chacun étant adapté à un type de tâche différent et créant un type de modèle différent. Pour obtenir la liste des algorithmes fournis avec [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consultez [Algorithmes d’exploration de données &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
@@ -145,11 +150,11 @@ caps.handback.revision: 48
 ##  <a name="ValidatingModels"></a> Exploration et validation des modèles  
  La cinquième étape du processus d'exploration de données, mise en évidence dans le diagramme suivant, consiste à explorer les modèles d’exploration de données créés et à tester leur efficacité.  
   
- ![Cinquième étape d'exploration des données : validation des modèles d'exploration de données](../../analysis-services/data-mining/media/dmprocess-validating.gif "Cinquième étape d'exploration des données : validation des modèles d'exploration de données")  
+ ![Cinquième étape de données d’exploration de données : validation des modèles d’exploration de données](../../analysis-services/data-mining/media/dmprocess-validating.gif "cinquième étape de données d’exploration de données : validation des modèles d’exploration de données")  
   
  Avant de déployer un modèle dans un environnement de production, vous voudrez vérifier si ce modèle fonctionne bien. De plus, lorsque vous générez un modèle, vous créez généralement plusieurs modèles avec des configurations différentes et testez tous les modèles pour déterminer lequel produit les meilleurs résultats par rapport à votre problème et vos données.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit des outils qui permettent de séparer vos données en jeux de données d’apprentissage et en jeux de données de test afin d’évaluer correctement la performance de tous les modèles sur les mêmes données. Le jeu de données d'apprentissage sert à générer le modèle tandis que le jeu de données de test sert à vérifier la précision du modèle en créant des requêtes de prédictions. Dans [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], ce partitionnement peut être effectué automatiquement lorsque le modèle d'exploration de données est généré. Pour plus d’informations, consultez [Test et validation &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit des outils qui permettent de séparer vos données en jeux de données d’apprentissage et en jeux de données de test afin d’évaluer correctement la performance de tous les modèles sur les mêmes données. Le jeu de données d'apprentissage sert à générer le modèle tandis que le jeu de données de test sert à vérifier la précision du modèle en créant des requêtes de prédictions. Ce partitionnement peut être effectué automatiquement lors de la génération du modèle d’exploration de données. Pour plus d’informations, consultez [Test et validation &#40;Exploration des données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
   
  Vous pouvez explorer les tendances et les motifs trouvés par les algorithmes en utilisant les visionneuses du Concepteur d'exploration de données de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Pour plus d’informations, consultez [Visionneuses de modèle d’exploration de données](../../analysis-services/data-mining/data-mining-model-viewers.md). Vous pouvez également tester la qualité des prédictions créées par les modèles à l'aide des outils du Concepteur, tels que le graphique de courbes d'élévation et la matrice de classification. Pour vérifier si le modèle est spécifique à vos données ou s’il peut être utilisé pour faire des inférences générales, vous pouvez utiliser la technique statistique appelée *validation croisée* pour créer automatiquement des sous-ensembles de données et tester le modèle avec chaque sous-ensemble. Pour plus d’informations, consultez [Test et validation &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
   
@@ -158,7 +163,7 @@ caps.handback.revision: 48
 ##  <a name="DeployingandUpdatingModels"></a> Déploiement et mise à jour des modèles  
  La dernière étape du processus d'exploration de données, mise en évidence dans le diagramme suivant, consiste à déployer les modèles les plus efficaces dans un environnement de production.  
   
- ![Sixième étape d'exploration des données : déploiement de modèles d'exploration de données](../../analysis-services/data-mining/media/dmprocess-deploying.gif "Sixième étape d'exploration des données : déploiement de modèles d'exploration de données")  
+ ![Sixième étape de données d’exploration de données : déploiement de modèles d’exploration de données](../../analysis-services/data-mining/media/dmprocess-deploying.gif "sixième étape de données d’exploration de données : déploiement de modèles d’exploration de données")  
   
  Une fois que les modèles d'exploration de données sont déployés dans un environnement de production, vous pouvez effectuer de nombreuses tâches selon vos besoins. Voici quelques-unes des tâches que vous pouvez effectuer :  
   
@@ -166,9 +171,9 @@ caps.handback.revision: 48
   
 -   Créer des requêtes de contenu pour extraire des statistiques, des règles ou des formules du modèle. Pour plus d’informations, consultez [Requêtes d’exploration de données](../../analysis-services/data-mining/data-mining-queries.md).  
   
--   Incorporer la fonctionnalité d'exploration de données directement dans une application. Vous pouvez inclure des objets AMO (Analysis Management Objects) contenant un jeu d'objets qui peuvent être utilisés par votre application pour créer, modifier, traiter et supprimer des structures et des modèles d'exploration de données. Vous pouvez aussi envoyer directement des messages XML for Analysis (XMLA) à une instance d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour plus d’informations, consultez [Développement (Analysis Services - Exploration de données)](https://technet.microsoft.com/library/bb522473\(v=sql.110\).aspx).  
+-   Incorporer la fonctionnalité d'exploration de données directement dans une application. Vous pouvez inclure des objets AMO (Analysis Management Objects) contenant un jeu d'objets qui peuvent être utilisés par votre application pour créer, modifier, traiter et supprimer des structures et des modèles d'exploration de données. Vous pouvez aussi envoyer directement des messages XML for Analysis (XMLA) à une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour plus d’informations, consultez [Développement (Analysis Services - Exploration de données)](https://technet.microsoft.com/library/bb522473\(v=sql.110\).aspx).  
   
--   Utiliser [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour créer un package dans lequel un modèle d'exploration de données est utilisé pour répartir intelligemment les données entrantes dans plusieurs tables. Par exemple, si une base de données est continuellement mise à jour avec des noms de clients potentiels, vous pouvez utiliser un modèle d'exploration de données avec [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour séparer les données entrantes en deux catégories : clients susceptibles d'acheter un produit et clients susceptibles de ne pas acheter un produit. Pour plus d’informations, consultez [Utilisations courantes d’Integration Services](http://msdn.microsoft.com/fr-fr/3b97897a-d418-4ef4-b5a4-5aabf4fa6bca).  
+-   Utiliser [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour créer un package dans lequel un modèle d'exploration de données est utilisé pour répartir intelligemment les données entrantes dans plusieurs tables. Par exemple, si une base de données est continuellement mise à jour avec des noms de clients potentiels, vous pouvez utiliser un modèle d'exploration de données avec [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour séparer les données entrantes en deux catégories : clients susceptibles d'acheter un produit et clients susceptibles de ne pas acheter un produit. Pour plus d’informations, consultez [Utilisations courantes d’Integration Services](http://msdn.microsoft.com/en-us/3b97897a-d418-4ef4-b5a4-5aabf4fa6bca).  
   
 -   Créer un rapport permettant aux utilisateurs d'effectuer directement des requêtes sur un modèle d'exploration de données existant. Pour plus d’informations, consultez [Reporting Services dans les outils de données SQL Server &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
   
@@ -176,7 +181,7 @@ caps.handback.revision: 48
   
 -   Mettre à jour les modèles dynamiquement lorsque des données supplémentaires entrent dans l'entreprise et apporter des modifications constantes pour améliorer l'efficacité de la solution doivent faire partie de la stratégie de déploiement. Pour plus d’informations, consultez [Gestion des solutions et des objets d’exploration de données](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Solutions d'exploration de données](../../analysis-services/data-mining/data-mining-solutions.md)   
  [Outils d'exploration de données](../../analysis-services/data-mining/data-mining-tools.md)  
   

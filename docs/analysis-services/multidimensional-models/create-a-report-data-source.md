@@ -1,30 +1,35 @@
 ---
-title: "Cr&#233;er une source de donn&#233;es de rapport | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Créer une Source de données de rapport | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b941dc8eb4fb1f0fc14d2565c8f1f65dd3ba4d15
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cr&#233;er une source de donn&#233;es de rapport
-  Pour permettre à Power View de se connecter à un modèle multidimensionnel, vous devez créer une définition de source de données de rapport partagée, également appelée fichier .rsds, dans une bibliothèque SharePoint. Le fichier .rsds spécifie le nom d'une instance de serveur Analysis Services, le type de connexion, la chaîne de connexion et les informations d'identification utilisées pour la connexion à la source de données. Lorsqu'un utilisateur clique sur le fichier .rsds, un nouveau rapport Power View vide (un fichier .rdlx) s'ouvre dans le navigateur.  
+# <a name="create-a-report-data-source"></a>Créer une source de données de rapport
+  Pour permettre à Power View de se connecter à un modèle multidimensionnel, vous devez créer une définition de source de données de rapport partagée, également appelée fichier .rsds, dans une bibliothèque SharePoint. Le fichier .rsds spécifie le nom d'une instance de serveur Analysis Services, le type de connexion, la chaîne de connexion et les informations d'identification utilisées pour la connexion à la source de données. Lorsqu'un utilisateur clique sur le fichier .rsds, un nouveau rapport Power View vide (un fichier .rdlx) s'ouvre dans le navigateur.  
   
- Pour créer une connexion .rsds, vous devez disposer de SQL Server 2012 (ou version ultérieure) Reporting Services et du complément Reporting Services pour SharePoint 2010 ou SharePoint 2013.  
+ Pour créer une connexion .rsds, vous devez disposer de SQL Server 2012 (ou version ultérieure) Reporting Services et du complément Reporting Services pour SharePoint 2010 ou SharePoint 2013.  
   
-## Créer une connexion de source de données de rapport (.rsds) à un modèle multidimensionnel  
- Avant de commencer, vous devez connaître les éléments suivants :  
+## <a name="create-a-report-data-source-rsds-connection-to-a-multidimensional-model"></a>Créer une connexion de source de données de rapport (.rsds) à un modèle multidimensionnel  
+ Avant de commencer, vous devez connaître les éléments suivants :  
   
 -   Le nom de l'instance de serveur Analysis Services exécutée en mode multidimensionnel.  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 8
   
 -   (Facultatif) Identificateur de paramètres régionaux.  
   
-#### Pour créer un fichier de source de données de rapport partagée (.rsds) (SharePoint 2010)  
+#### <a name="to-create-a-shared-report-data-source-rsds-file-sharepoint-2010"></a>Pour créer un fichier de source de données de rapport partagée (.rsds) (SharePoint 2010)  
   
 1.  Cliquez sur l'onglet **Documents** dans le ruban de la bibliothèque.  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 8
     > [!NOTE]  
     >  Si l’élément **Source de données du rapport** ne figure pas dans le menu, cela signifie que le type de contenu de la source de données du rapport n’a pas été activé pour cette bibliothèque. Pour plus d’informations, consultez [Ajouter des types de contenus Reporting Services à une bibliothèque SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
-3.  Dans la page **Propriétés de la source de données**, dans la zone **Nom**, entrez un nom pour le fichier .rsds de connexion.  
+3.  Dans la page **Propriétés de la source de données** , dans la zone **Nom**, entrez un nom pour le fichier .rsds de connexion.  
   
 4.  Dans la zone **Type de source de données**, sélectionnez **Modèle sémantique Microsoft BI pour Power View**.  
   

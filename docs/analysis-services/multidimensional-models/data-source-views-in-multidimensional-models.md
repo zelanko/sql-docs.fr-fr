@@ -1,37 +1,42 @@
 ---
-title: "Vues de sources de donn&#233;es dans les mod&#232;les multidimensionnels | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "vues de sources de données [Analysis Services]"
-  - "vues de source de données [Analysis Services], à propos des vues de sources de données"
-  - "SQL Server Analysis Services, vues de sources de données"
-  - "vues de sources de données [Analysis Services], multiples"
-  - "Analysis Services, vues de sources de données"
-  - "vues de sources de données multiples"
-  - "SSAS, vues de source de données"
+title: "Dans les modèles multidimensionnels, les vues de Source de données | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data source views [Analysis Services]
+- data source views [Analysis Services], about data source views
+- SQL Server Analysis Services, data source views
+- data source views [Analysis Services], multiple
+- Analysis Services, data source views
+- multiple data source views
+- SSAS, data source views
 ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 36
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 717cf118bae358e566c130ede70fb82572a1d38b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Vues de sources de donn&#233;es dans les mod&#232;les multidimensionnels
+# <a name="data-source-views-in-multidimensional-models"></a>Vues de sources de données dans les modèles multidimensionnels
   Une vue de source de données (DSV) est une abstraction d'une source de données relationnelle qui devient la base des cubes et des dimensions que vous créez dans un projet multidimensionnel. L'objectif d'une vue DSV est de vous donner le contrôle des structures de données utilisées dans votre projet, et de travailler indépendamment des sources de données sous-jacentes (par exemple, possibilité de renommer ou concaténer des colonnes sans modifier directement la source de données d'origine).  
   
  Vous pouvez créer plusieurs vues de sources de données dans un projet ou une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sur une ou plusieurs sources de données et construire chacune d’elles en fonction de la configuration requise pour une solution différente.  
   
-## Tâches associées  
+## <a name="related-tasks"></a>Tâches associées  
  [Définition d’une vue de source de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  
   
  [Ajout ou suppression de tables ou de vues dans une vue de source de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
@@ -56,8 +61,8 @@ caps.handback.revision: 36
   
  [Actualiser le schéma dans une vue de source de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Assistant Génération de schéma &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)   
- [Sources de données prises en charge &#40;SSAS - Modèle multidimensionnel&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+ [Sources de données prises en charge &#40;SSAS – Multidimensionnel&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

@@ -1,29 +1,34 @@
 ---
-title: "Requ&#234;tes d&#39;exploration de donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "requêtes de prédiction [Analysis Services]"
-  - "requêtes [DMX], création"
-  - "requêtes de prédiction [DMX]"
-  - "Générateur de requêtes de prédiction"
-  - "modèles d'exploration de données [Analysis Services], interrogation"
+title: "Requêtes d’exploration de données | Documents Microsoft"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- prediction queries [Analysis Services]
+- queries [DMX], creating
+- prediction queries [DMX]
+- Prediction Query Builder
+- mining models [Analysis Services], querying
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1994ebc359ca23eee9ae76112d9ceebd1970debb
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Requ&#234;tes d&#39;exploration de donn&#233;es
+# <a name="data-mining-queries"></a>Requêtes d'exploration de données
   Les requêtes d'exploration de données sont utiles à de nombreuses fins. Vous pouvez :  
   
 -   Appliquer le modèle aux nouvelles données, pour créer des prédictions uniques ou multiples. Vous pouvez fournir des valeurs d'entrée sous forme de paramètres, ou dans un lot.  
@@ -73,14 +78,14 @@ caps.handback.revision: 44
   
 -   Parcourez et explorez chaque type de modèle à l'aide des visionneuses personnalisées d'exploration de données fournies pour chaque type d'algorithme. Pour plus d’informations, consultez [Tâches de la visionneuse de modèle d’exploration de données et procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md).  
   
--   Examinez le contenu de modèle pour chaque type de modèle, à l'aide de la **Visionneuse de l'arborescence de contenu générique Microsoft**. Pour interpréter ces informations, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+-   Examinez le contenu de modèle pour chaque type de modèle, à l'aide de la **Visionneuse de l'arborescence de contenu générique Microsoft**. Pour interpréter ces informations, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ##  <a name="bkmk_Interfaces"></a> Outils et interfaces de requête  
- Vous pouvez générer des requêtes d'exploration de données en mode interactif à l'aide de l'un des outils de requête fournis par SQL Server. Le générateur de requêtes de prédiction graphique est fourni à la fois dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Si vous n'avez pas utilisé le générateur de requêtes de prédiction auparavant, nous vous recommandons de suivre les étapes du [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md) pour vous familiariser avec l'interface. Pour obtenir une vue d’ensemble rapide des étapes, consultez la section consacrée à la création d’une requête dans [Créer une requête de prédiction à l’aide du Générateur de requêtes de prédiction](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md).  
+ Vous pouvez générer des requêtes d'exploration de données en mode interactif à l'aide de l'un des outils de requête fournis par SQL Server. Le générateur de requêtes de prédiction graphique est fourni à la fois dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Si vous n'avez pas utilisé le générateur de requêtes de prédiction auparavant, nous vous recommandons de suivre les étapes du [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c) pour vous familiariser avec l'interface. Pour obtenir une vue d’ensemble rapide des étapes, consultez la section consacrée à la création d’une requête dans [Créer une requête de prédiction à l’aide du Générateur de requêtes de prédiction](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md).  
   
  Le générateur de requêtes de prédiction est utile pour démarrer des requêtes que vous personnaliserez ultérieurement. Vous pouvez ajouter facilement des sources de données et les mapper à des colonnes, puis basculer vers la vue DMX et personnaliser la requête en ajoutant une clause WHERE ou d'autres fonctions.  
   
- Une fois que vous êtes familiarisé avec les modèles d'exploration de données et la procédure de génération des requêtes, vous pouvez également écrire des requêtes directement à l'aide du langage d'extensions DMX (Data Mining Extensions). DMX est un langage de requête semblable à Transact-SQL, et que vous pouvez utiliser à partir de nombreux clients. DMX est l'outil de choix pour créer des prédictions personnalisées et des requêtes complexes. Pour obtenir une présentation de DMX, consultez [Création et interrogation de modèles d’exploration de données à l’aide du langage DMX : didacticiels &#40;Analysis Services - Exploration de données&#41;](../Topic/Creating%20and%20Querying%20Data%20Mining%20Models%20with%20DMX:%20Tutorials%20\(Analysis%20Services%20-%20Data%20Mining\).md).  
+ Une fois que vous êtes familiarisé avec les modèles d'exploration de données et la procédure de génération des requêtes, vous pouvez également écrire des requêtes directement à l'aide du langage d'extensions DMX (Data Mining Extensions). DMX est un langage de requête semblable à Transact-SQL, et que vous pouvez utiliser à partir de nombreux clients. DMX est l'outil de choix pour créer des prédictions personnalisées et des requêtes complexes. Pour obtenir une présentation de DMX, consultez [Création et interrogation de modèles d’exploration de données à l’aide du langage DMX : didacticiels &#40;Analysis Services - Exploration de données&#41;](http://msdn.microsoft.com/library/145b81a7-c0c3-4ca3-bb32-0b482423b9a0).  
   
  Les éditeurs DMX sont fournis à la fois dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez également utiliser le générateur de requêtes de prédiction pour démarrer vos requêtes, puis changer la vue afin d'activer l'éditeur de texte et copier l'instruction DMX dans un autre client. Pour plus d’informations, consultez [Outils de requête d’exploration de données](../../analysis-services/data-mining/data-mining-query-tools.md).  
   
@@ -139,7 +144,7 @@ caps.handback.revision: 44
   
  Pour plus d’informations sur les contextes de sécurité requis pour exécuter des requêtes d’exploration de données, consultez [Vue d’ensemble de la sécurité &#40;exploration de données&#41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
   
-## Dans cette section  
+## <a name="in-this-section"></a>Dans cette section  
  Les rubriques de cette section présentent chaque type de requête d'exploration de données plus en détail et fournissent des liens vers des exemples détaillés de création de requêtes sur des modèles d'exploration de données.  
   
  [Requêtes de prédiction &#40;Exploration de données&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
@@ -150,24 +155,24 @@ caps.handback.revision: 44
   
  [Requêtes de définition des données &#40;Exploration de données&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
- [Outils de requête d'exploration de données](../../analysis-services/data-mining/data-mining-query-tools.md)  
+ [Outils de requête d’exploration de données](../../analysis-services/data-mining/data-mining-query-tools.md)  
   
-## Tâches associées  
+## <a name="related-tasks"></a>Tâches associées  
  Utilisez ces liens pour apprendre à créer et à utiliser des requêtes d'exploration de données.  
   
 |Tâches|Liens|  
 |-----------|-----------|  
-|Afficher des didacticiels et des procédures pas à pas sur les requêtes d'exploration de données|[Leçon 6 : création et utilisation de prédictions &#40;Didacticiel sur l’exploration de données de base&#41;](../Topic/Lesson%206:%20Creating%20and%20Working%20with%20Predictions%20\(Basic%20Data%20Mining%20Tutorial\).md)<br /><br /> [Didacticiel DMX sur la prédiction de série chronologique](../Topic/Time%20Series%20Prediction%20DMX%20Tutorial.md)|  
-|Utiliser les outils de requête d'exploration de données dans SQL Server Management Studio et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[Créer une requête DMX dans SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [Créer une requête de prédiction à l'aide du Générateur de requêtes de prédiction](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [Appliquer des fonctions de prédiction à un modèle](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)<br /><br /> [Modifier manuellement une requête de prédiction](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)|  
+|Afficher des didacticiels et des procédures pas à pas sur les requêtes d'exploration de données|[Leçon 6 : création et utilisation de prédictions &#40;Didacticiel sur l’exploration de données de base&#41;](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)<br /><br /> [Didacticiel DMX sur la prédiction de série chronologique](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)|  
+|Utiliser les outils de requête d'exploration de données dans SQL Server Management Studio et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[Créer une requête DMX dans SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [Créer une requête de prédiction à l’aide du Générateur de requêtes de prédiction](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [Appliquer des fonctions de prédiction à un modèle](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)<br /><br /> [Modifier manuellement une requête de prédiction](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)|  
 |Utiliser des données externes utilisées dans des requêtes de prédiction|[Choisir et mapper les données d'entrée pour une requête de prédiction](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [Choisir et mapper les données d'entrée pour une requête de prédiction](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)|  
 |Utiliser les résultats de requêtes|[Afficher et enregistrer les résultats d'une requête de prédiction](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)|  
 |Utiliser les modèles de requête DMX et XMLA fournis dans Management Studio|[Créer une requête singleton de prédiction à partir d'un modèle](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [Create a Data Mining Query by Using XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)<br /><br /> [Utiliser des modèles Analysis Services dans SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |En savoir plus sur les requêtes de contenu et afficher des exemples|[Créer une requête de contenu sur un modèle d'exploration de données](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)<br /><br /> [Interroger les paramètres utilisés pour créer un modèle d'exploration de données](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [Requêtes de contenu &#40;Exploration de données&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)|  
 |Définir des options de requête et résoudre les problèmes liés aux autorisations et aux requêtes|[Modifier la valeur du délai d'attente pour les requêtes d'exploration de données](../../analysis-services/data-mining/change-the-time-out-value-for-data-mining-queries.md)|  
-|Utiliser les composants d'exploration de données dans Integration Services|[Tâche de requête d'exploration de données](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Transformation de requête d’exploration de données](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
+|Utiliser les composants d'exploration de données dans Integration Services|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)  
+ [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)  
   
   

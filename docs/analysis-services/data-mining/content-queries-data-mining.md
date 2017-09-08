@@ -1,23 +1,28 @@
 ---
-title: "Requ&#234;tes de contenu (Exploration de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Requêtes (exploration de données) de contenu | Documents Microsoft"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2d45986f9907903c6ccdf4d7b1c6bfe5d22eee78
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Requ&#234;tes de contenu (Exploration de donn&#233;es)
+# <a name="content-queries-data-mining"></a>Requêtes de contenu (Exploration de données)
   Une requête de contenu est une façon d'extraire des informations sur les statistiques internes et la structure du modèle d'exploration de données. Parfois, une requête de contenu peut fournir des détails qui ne sont pas aisément disponibles dans la visionneuse. Vous pouvez également utiliser les résultats d'une requête de contenu pour extraire des informations par programme pour d'autres utilisations.  
   
  Cette section fournit des informations générales sur les types d'informations que vous pouvez récupérer à l'aide d'une requête de contenu, ainsi que la syntaxe DMX générale pour les requêtes de contenu.  
@@ -135,7 +140,7 @@ caps.handback.revision: 12
  Certains exemples sont fournis dans cette section pour montrer comment le choix de l'algorithme affecte le type d'informations stockées dans le modèle. Pour plus d’informations sur le contenu du modèle d’exploration de données et sur le contenu spécifique à chaque type de modèle, consultez [Contenu du modèle d’exploration de données &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ###  <a name="bkmk_Assoc"></a> Exemple 1 : requête de contenu sur un modèle d'association  
- L'instruction, `SELECT FROM <model>.CONTENT`, retourne différents types d'informations, selon le type de modèle que vous interrogez. Pour un modèle d'association, le *type de nœud*constitue une information clé. Les nœuds sont comme des conteneurs pour les informations dans le contenu du modèle. Dans un modèle d'association, les nœuds qui représentent des règles ont une valeur NODE_TYPE de 8, tandis que les nœuds qui représentent des jeux d'éléments ont une valeur NODE_TYPE de 7.  
+ L'instruction, `SELECT FROM <model>.CONTENT`, retourne différents types d'informations, selon le type de modèle que vous interrogez. Pour un modèle d'association, le *type de nœud*constitue une information clé. Les nœuds sont comme des conteneurs pour les informations dans le contenu du modèle. Dans un modèle d'association, les nœuds qui représentent des règles ont une valeur NODE_TYPE de 8, tandis que les nœuds qui représentent des jeux d'éléments ont une valeur NODE_TYPE de 7.  
   
  Ainsi, la requête suivante retourne les 10 premiers jeux d’éléments, classés par prise en charge (classement par défaut).  
   
@@ -144,7 +149,7 @@ SELECT TOP 10 NODE_DESCRIPTION, NODE_PROBABILITY, SUPPORT
 FROM <model>.CONTENT WHERE NODE_TYPE = 7  
 ```  
   
- La requête suivante est générée sur la base de ces informations. La requête suivante retourne trois colonnes : l'ID du nœud, la règle complète et le produit dans la partie droite du jeu d'éléments, c'est-à-dire le produit prédit pour être associé à d'autres produits dans le cadre d'un jeu d'éléments.  
+ La requête suivante est générée sur la base de ces informations. La requête suivante retourne trois colonnes : l'ID du nœud, la règle complète et le produit dans la partie droite du jeu d'éléments, c'est-à-dire le produit prédit pour être associé à d'autres produits dans le cadre d'un jeu d'éléments.  
   
 ```  
 SELECT FLATTENED NODE_UNIQUE_NAME, NODE_DESCRIPTION,  
@@ -158,11 +163,11 @@ WHERE NODE_TYPE = 8
 ORDER BY NODE_SUPPORT DESC  
 ```  
   
- Le mot clé FLATTENED indique que l'ensemble de lignes imbriqué doit être converti en table aplatie. L'attribut qui représente le produit dans la partie droite de la règle est contenu dans la table NODE_DISTRIBUTION ; par conséquent, nous récupérons uniquement la ligne qui contient un nom d'attribut en spécifiant que la longueur doit être supérieure à 2.  
+ Le mot clé FLATTENED indique que l'ensemble de lignes imbriqué doit être converti en table aplatie. L'attribut qui représente le produit dans la partie droite de la règle est contenu dans la table NODE_DISTRIBUTION ; par conséquent, nous récupérons uniquement la ligne qui contient un nom d'attribut en spécifiant que la longueur doit être supérieure à 2.  
   
  Une fonction de chaîne simple est utilisée pour supprimer le nom du modèle de la troisième colonne. (En général, le nom du modèle est préfixé avec les valeurs des colonnes imbriquées.)  
   
- La clause WHERE spécifie que la valeur de NODE_TYPE doit être 8 pour récupérer uniquement des règles.  
+ La clause WHERE spécifie que la valeur de NODE_TYPE doit être 8 pour récupérer uniquement des règles.  
   
  Pour obtenir plus d’exemples, consultez [Exemples de requête de modèle d’association](../../analysis-services/data-mining/association-model-query-examples.md).  
   
@@ -195,7 +200,7 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
   
  Pour plus d'informations sur l'utilisation des ensembles de lignes hiérarchiques, consultez la spécification OLEDB sur MSDN.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Présentation de l'instruction DMX Select](../../dmx/understanding-the-dmx-select-statement.md)   
  [Requêtes d'exploration de données](../../analysis-services/data-mining/data-mining-queries.md)  
   

@@ -1,27 +1,32 @@
 ---
-title: "Cr&#233;ation et configuration d’une application de service Power Pivot dans l&#39;Administration centrale | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Créer et configurer l’Application de Service PowerPivot dans l’autorité de certification | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 343e3ed597e892e7b9e332d35acb6719e5b27aee
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cr&#233;ation et configuration d’une application de service Power Pivot dans l&#39;Administration centrale
+# <a name="create-and-configure-power-pivot-service-application-in-ca"></a>Créer et configurer l’Application de Service PowerPivot dans l’autorité de certification
   Une application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est une instance de service partagé du service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Chaque application de service possède une identité d'application, des paramètres de configuration, des propriétés et un système de stockage des données internes qui lui sont propres.  
   
- Cette rubrique contient les sections suivantes :  
+ Cette rubrique contient les sections suivantes :  
   
  [Déterminer s'il est nécessaire de créer une nouvelle application de service Power Pivot](#determine)  
   
@@ -58,13 +63,13 @@ caps.handback.revision: 19
   
 3.  Sélectionnez **Application de service SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**. Si cette option ne s'affiche pas dans la liste, cela signifie que [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint n'est pas installé ou configuré correctement.  
   
-4.  Dans la page **Créer une nouvelle application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, entrez un nom pour l’application. Le nom par défaut est PowerPivotServiceApplication\<numéro>. Si vous créez plusieurs applications de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , il est utile d'entrer un nom descriptif pour permettre aux autres administrateurs de savoir comment l'application est utilisée.  
+4.  Dans la page **Créer une nouvelle application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, entrez un nom pour l’application. La valeur par défaut est PowerPivotServiceApplication\<nombre >. Si vous créez plusieurs applications de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , il est utile d'entrer un nom descriptif pour permettre aux autres administrateurs de savoir comment l'application est utilisée.  
   
 5.  Dans Pool d'applications, créez un nouveau pool d'applications pour l'application (recommandé). Sélectionnez ou créez un compte géré pour le pool d'applications. Veillez à spécifier un compte d'utilisateur de domaine. Un compte d'utilisateur de domaine permet l'utilisation de la fonctionnalité Compte géré de SharePoint, qui vous permet de mettre à jour des mots de passe et des informations sur le compte dans un seul emplacement. Des comptes de domaine sont requis si vous prévoyez une montée en puissance parallèle du déploiement incluant des instances de service supplémentaires qui s'exécuteront sous la même identité.  
   
 6.  Dans **Serveur de base de données**, la valeur par défaut est l'instance du moteur de base de données SQL Server qui héberge les bases de données de configuration de la batterie de serveurs. Vous pouvez utiliser ce serveur ou choisir un autre serveur SQL Server.  
   
-7.  Dans **Nom de la base de données**, la valeur par défaut est PowerPivotServiceApplication1_\<guid>. Vous devez créer une base de données unique pour chaque application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le nom de la base de données par défaut correspond au nom par défaut de l'application de service. Si vous avez entré un nom d'application de service unique, suivez une convention d'affectation des noms similaire pour la base de données afin de pouvoir les gérer ensemble.  
+7.  Dans **nom de la base de données**, la valeur par défaut est PowerPivotServiceApplication1_\<guid >. Vous devez créer une base de données unique pour chaque application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le nom de la base de données par défaut correspond au nom par défaut de l'application de service. Si vous avez entré un nom d'application de service unique, suivez une convention d'affectation des noms similaire pour la base de données afin de pouvoir les gérer ensemble.  
   
 8.  Dans **Authentification de la base de données**, la valeur par défaut est Authentification Windows. Si vous choisissez **Authentification SQL**, reportez-vous au guide de l'administrateur SharePoint pour des recommandations concernant l'utilisation de ce type d'authentification dans un déploiement SharePoint.  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 19
   
      N'ajoutez pas l'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] au groupe de connexions par défaut s'il en existe déjà une. L'ajout de plusieurs entrées du même type d'application de service n'est pas une configuration prise en charge et risque de provoquer des erreurs. Si vous créez des applications de service supplémentaires, laissez-les hors du groupe de connexions par défaut et ajoutez-les plutôt à des listes personnalisées.  
   
-     Pour plus d’informations sur les associations de service, consultez [Connecter une application de service Power Pivot à une application web SharePoint dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/connect power pivot service app to sharepoint web app in ca.md).  
+     Pour plus d’informations sur les associations de service, consultez [Connecter une application de service Power Pivot à une application web SharePoint dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md).  
   
 10. Cliquez sur **OK.** Le service s'affiche avec les autres services gérés dans la liste des applications de service de la batterie de serveurs.  
   
@@ -91,25 +96,25 @@ caps.handback.revision: 19
   
 4.  Dans **Délai d’attente du chargement d’une base de données**, augmentez ou diminuez la valeur pour modifier la durée pendant laquelle le service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] attend une réponse de l’instance de SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) à laquelle il a transféré une demande de chargement de données. Étant donné que l'acheminement des jeux de données très volumineux prend du temps, vous devez accorder à l'instance de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] un temps suffisant pour récupérer le classeur Excel et déplacer les données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vers une instance d’Analysis Services en vue du traitement de la demande. Étant donné que les données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] peuvent être particulièrement volumineuses, la valeur par défaut est 30 minutes.  
   
-5.  Dans **Délai d'attente du pool de connexions**, augmentez ou diminuez la valeur afin de modifier le nombre de minutes pendant lesquelles une connexion de données inactive restera ouverte. La valeur par défaut est 30 minutes. Durant ce laps de temps, le service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] réutilise une connexion de données inactive pour les demandes en lecture seule émanant du même utilisateur SharePoint pour les mêmes données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Si aucune demande supplémentaire n'est reçue pour ces données pendant la période spécifiée, la connexion est supprimée du pool. Les valeurs valides sont comprises entre 1 et 3600 secondes. Pour plus d’informations sur les pools de connexions, consultez [Référence de paramètre de configuration &#40;Power Pivot pour SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md).  
+5.  Dans **Délai d'attente du pool de connexions**, augmentez ou diminuez la valeur afin de modifier le nombre de minutes pendant lesquelles une connexion de données inactive restera ouverte. La valeur par défaut est 30 minutes. Durant ce laps de temps, le service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] réutilise une connexion de données inactive pour les demandes en lecture seule émanant du même utilisateur SharePoint pour les mêmes données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si aucune demande supplémentaire n'est reçue pour ces données pendant la période spécifiée, la connexion est supprimée du pool. Les valeurs valides sont comprises entre 1 et 3600 secondes. Pour plus d’informations sur les pools de connexions, consultez [Référence de paramètre de configuration &#40;Power Pivot pour SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md).  
   
 6.  Dans **Taille maximale du pool de connexions utilisateur**, augmentez ou diminuez la valeur afin de modifier le nombre maximal de connexions inactives que le service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] crée dans différents pools de connexion pour chaque combinaison d'utilisateur SharePoint, dataset [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et version.  
   
-     La valeur par défaut est 1000 connexions inactives. Les valeurs valides sont -1 (illimité), 0 (désactive le regroupement de connexions utilisateur) ou une plage comprise entre 1 et 10000.  
+     La valeur par défaut est 1000 connexions inactives. Les valeurs valides sont -1 (illimité), 0 (désactive le regroupement de connexions utilisateur) ou une plage comprise entre 1 et 10000.  
   
      Ces pools de connexions permettent au service de gérer plus efficacement les connexions aux mêmes données en lecture seule par le même utilisateur. Si vous désactivez le regroupement de connexions, chaque connexion sera recréée.  
   
      Notez que la modification de la limite de taille du pool de connexions, y compris son paramétrage sur la valeur 0, ne provoque pas de perte de connexion. Les pools de connexions servent à réduire les temps d'attente lors de la connexion aux données. Le service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ne refuse jamais une connexion basée sur des paramètres du pool de connexions.  
   
-7.  Dans **Taille maximale du pool de connexions administrateur**, augmentez ou diminuez la valeur afin de modifier le nombre de connexions ouvertes dans un pool de connexions créé pour une connexion de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] à Analysis Services. Chaque instance de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ouvre une connexion d'administration distincte à une instance Analysis Services sur le même ordinateur. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] crée un pool distinct pour réutiliser les connexions d'administration en vue de vérifier si des connexions sont inactives et de contrôler l'intégrité du serveur. La valeur par défaut est 200 connexions. Les valeurs valides sont -1 (illimité), 0 (désactive le regroupement de connexions administrateur) ou 1 à 10000. Si vous sélectionnez 0, chaque connexion est recréée.  
+7.  Dans **Taille maximale du pool de connexions administrateur**, augmentez ou diminuez la valeur afin de modifier le nombre de connexions ouvertes dans un pool de connexions créé pour une connexion de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] à Analysis Services. Chaque instance de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ouvre une connexion d'administration distincte à une instance Analysis Services sur le même ordinateur. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] crée un pool distinct pour réutiliser les connexions d'administration en vue de vérifier si des connexions sont inactives et de contrôler l'intégrité du serveur. La valeur par défaut est 200 connexions. Les valeurs valides sont -1 (illimité), 0 (désactive le regroupement de connexions administrateur) ou 1 à 10000. Si vous sélectionnez 0, chaque connexion est recréée.  
   
 8.  Dans **Méthode d'allocation**, vous pouvez spécifier le schéma d'équilibrage de charge utilisé par le service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour sélectionner une application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] spécifique pour l'équilibrage de charge d'une demande initiale. La valeur par défaut est **Selon l'intégrité**pour allouer les demandes en fonction de l'état du serveur, mesuré d'après la mémoire disponible et l'utilisation du processeur. Alternativement, vous pouvez choisir la méthode **Tourniquet (round robin)** , laquelle alloue les demandes aux serveurs dans le même ordre de répétition, qu'un serveur soit occupé ou inactif.  
   
 9. Dans Actualisation des données, sous **Heures d'ouverture**, vous pouvez spécifier la plage d'heures qui détermine un jour ouvrable. Les planifications d'actualisation des données peuvent s'exécuter à la fin d'une journée de travail pour récupérer les données transactionnelles qui ont été générées pendant les heures d'ouverture normales.  
   
-10. Dans **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sans assistance**, vous pouvez spécifier une application cible du service Banque d'informations sécurisé prédéfinie qui stocke un compte prédéfini pour l'exécution des travaux d'actualisation des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Veillez à spécifier le nom de l'application cible, et pas l'ID. L'application cible pour l'actualisation des données sans assistance est créée automatiquement si vous avez utilisé l'option Nouveau serveur dans le programme d'installation de SQL Server pour installer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. Sinon, vous devez créer l'application cible manuellement. Pour obtenir des instructions sur la manière de configurer le compte, consultez [Configurer le compte d’actualisation des données Power Pivot sans assistance (PowerPivot pour SharePoint)](http://msdn.microsoft.com/fr-fr/81401eac-c619-4fad-ad3e-599e7a6f8493).  
+10. Dans **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sans assistance**, vous pouvez spécifier une application cible du service Banque d'informations sécurisé prédéfinie qui stocke un compte prédéfini pour l'exécution des travaux d'actualisation des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Veillez à spécifier le nom de l'application cible, et pas l'ID. L'application cible pour l'actualisation des données sans assistance est créée automatiquement si vous avez utilisé l'option Nouveau serveur dans le programme d'installation de SQL Server pour installer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. Sinon, vous devez créer l'application cible manuellement. Pour obtenir des instructions sur la manière de configurer le compte, consultez [Configurer le compte d’actualisation des données Power Pivot sans assistance (PowerPivot pour SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493).  
   
-11. Dans **Autoriser les utilisateurs à entrer des informations d'identification Windows personnalisées**, vous pouvez activer ou désactiver la case à cocher pour spécifier si les propriétaires de planifications peuvent entrer des informations d'identification Windows arbitraires pour exécuter une planification d'actualisation des données. Si vous activez cette case à cocher, l'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] crée et gère une application cible pour chaque ensemble d'informations d'identification stockées. Pour plus d’informations, consultez [Configurer les informations d’identification stockées pour l’actualisation des données Power Pivot (Power Pivot pour SharePoint)](http://msdn.microsoft.com/fr-fr/987eff0f-bcfe-4bbd-81e0-9aca993a2a75).  
+11. Dans **Autoriser les utilisateurs à entrer des informations d'identification Windows personnalisées**, vous pouvez activer ou désactiver la case à cocher pour spécifier si les propriétaires de planifications peuvent entrer des informations d'identification Windows arbitraires pour exécuter une planification d'actualisation des données. Si vous activez cette case à cocher, l'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] crée et gère une application cible pour chaque ensemble d'informations d'identification stockées. Pour plus d’informations, consultez [Configurer les informations d’identification stockées pour l’actualisation des données Power Pivot (Power Pivot pour SharePoint)](http://msdn.microsoft.com/en-us/987eff0f-bcfe-4bbd-81e0-9aca993a2a75).  
   
 12. Dans **Longueur maximale de l'historique de traitement**, vous pouvez spécifier la durée de rétention d'un enregistrement d'historique du traitement de l'actualisation des données. Ces informations s'affichent dans les pages d'historique de l'actualisation des données qui sont conservées pour chaque classeur utilisant l'actualisation des données. Elles s'affichent également dans le tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
@@ -134,7 +139,7 @@ caps.handback.revision: 19
   
 1.  Dans Administration Centrale, sous **Gestion des applications**, cliquez sur **Gérer les applications Web**.  
   
-2.  Sélectionnez l'application pour laquelle vous voulez affecter une connexion (par exemple, SharePoint -80).  
+2.  Sélectionnez l'application pour laquelle vous voulez affecter une connexion (par exemple, SharePoint -80).  
   
 3.  Cliquez sur **Connexions de service**.  
   
@@ -153,7 +158,7 @@ caps.handback.revision: 19
   
 3.  Cliquez sur **Propriétés** dans le ruban.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Administration et configuration d’un serveur Power Pivot dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

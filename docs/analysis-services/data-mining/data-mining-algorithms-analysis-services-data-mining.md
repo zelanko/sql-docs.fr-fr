@@ -1,37 +1,42 @@
 ---
-title: "Algorithmes d&#39;exploration de donn&#233;es (Analysis Services - Exploration de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "algorithmes de segmentation [Analysis Services]"
-  - "clustering [exploration de données]"
-  - "algorithmes d'apprentissage"
-  - "exploration de données [Analysis Services], modèles"
-  - "algorithmes [exploration de données]"
-  - "modèles d’exploration de données [Analysis Services], algorithmes"
-  - "apprentissage inductif"
-  - "modèles d’exploration de données [Analysis Services], création"
-  - "exploration de données [Analysis Services], algorithmes"
-  - "machine learning algorithms [Analysis Services]"
+title: "Algorithmes d’exploration de données (Analysis Services - Exploration de données) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- segmentation algorithms [Analysis Services]
+- clustering [Data Mining]
+- learning algorithms
+- data mining [Analysis Services], models
+- algorithms [data mining]
+- mining models [Analysis Services], algorithms
+- inductive learning
+- mining models [Analysis Services], creating
+- data mining [Analysis Services], algorithms
+- machine learning algorithms [Analysis Services]
 ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
 caps.latest.revision: 74
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 74
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 85f1333bc1f9674dcdb5274e0b2768c401fd2d7c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Algorithmes d&#39;exploration de donn&#233;es (Analysis Services - Exploration de donn&#233;es)
+# <a name="data-mining-algorithms-analysis-services---data-mining"></a>Algorithmes d'exploration de données (Analysis Services - Exploration de données)
   Un *algorithme d’exploration de données* est un ensemble d’heuristiques et de calculs qui crée un modèle d’exploration de données à partir de données. Pour créer un modèle, l'algorithme analyse d'abord les données que vous fournissez, à la recherche de types spécifiques de modèles ou de tendances. L’algorithme utilise les résultats de cette analyse sur plusieurs itérations pour trouver les paramètres optimaux pour la création du modèle d’exploration de données. Ensuite, ces paramètres sont appliqués au jeu de données entier pour extraire des modèles utilisables et des statistiques détaillées.  
   
- Le modèle d'exploration de données qu'un algorithme crée à partir de vos données peut prendre des formes variées, dont les suivantes :  
+ Le modèle d'exploration de données qu'un algorithme crée à partir de vos données peut prendre des formes variées, dont les suivantes :  
   
 -   Un ensemble de clusters qui décrivent la manière dont les cas sont liés dans un dataset.  
   
@@ -43,38 +48,38 @@ caps.handback.revision: 74
   
  Les algorithmes fournis dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining sont des méthodes bien connues, mais aussi les plus populaires, pour dériver des modèles à partir de données. Pour prendre un exemple, le clustering K-means est l’un des algorithmes de clustering les plus anciens. Largement répandu dans une multitude d’outils différents, il propose de nombreuses implémentations et options. Toutefois, l’implémentation spécifique du clustering K-means utilisée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining a été développée par Microsoft Research, puis optimisée en terme de performances avec [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Tous les algorithmes d’exploration de données Microsoft sont largement personnalisables et entièrement programmables à l’aide des API fournies. Vous pouvez également automatiser la création, la formation et le recyclage de modèles à l’aide des composants d’exploration de données fournis dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- Vous pouvez également utiliser des algorithmes tiers qui sont conformes à la spécification OLE DB pour l’exploration de données, ou développer des algorithmes personnalisés qui peuvent être inscrits en tant que services, puis utilisés dans l’infrastructure d’exploration de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Vous pouvez également utiliser des algorithmes tiers qui sont conformes à la spécification OLE DB pour l’exploration de données, ou développer des algorithmes personnalisés qui peuvent être inscrits en tant que services, puis utilisés dans l’infrastructure d’exploration de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Choix de l'algorithme adéquat  
- Le choix du meilleur algorithme à utiliser pour une tâche analytique spécifique peut être un véritable défi. Vous pouvez utiliser des algorithmes différents pour effectuer la même tâche professionnelle, mais chaque algorithme produit un résultat différent et certains algorithmes peuvent produire plusieurs types de résultats. Par exemple, vous pouvez utiliser l’algorithme MDT ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) pas seulement pour des prédictions, mais aussi comme manière de réduire le nombre de colonnes dans un dataset, car l’arbre de décision peut identifier les colonnes qui n’affectent pas le modèle d’exploration de données final.  
+## <a name="choosing-the-right-algorithm"></a>Choix de l'algorithme adéquat  
+ Le choix du meilleur algorithme à utiliser pour une tâche analytique spécifique peut être un véritable défi. Vous pouvez utiliser des algorithmes différents pour effectuer la même tâche professionnelle, mais chaque algorithme produit un résultat différent et certains algorithmes peuvent produire plusieurs types de résultats. Par exemple, vous pouvez utiliser l’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) pas seulement pour des prédictions, mais aussi comme manière de réduire le nombre de colonnes dans un dataset, car l’arbre de décision peut identifier les colonnes qui n’affectent pas le modèle d’exploration de données final.  
   
-### Choix d'un algorithme par type  
+### <a name="choosing-an-algorithm-by-type"></a>Choix d'un algorithme par type  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] L’exploration de données inclut les types d’algorithmes suivants :  
   
--   Les **algorithmes de classification** prévoient une ou plusieurs variables discrètes, en fonction des autres attributs du jeu de données.  
+-   Les**algorithmes de classification** prévoient une ou plusieurs variables discrètes, en fonction des autres attributs du jeu de données.  
   
--   Les **algorithmes de régression** prévoient une ou plusieurs variables continues, telles que les bénéfices ou les pertes, en fonction d’autres attributs du jeu de données.  
+-   Les**algorithmes de régression** prévoient une ou plusieurs variables continues, telles que les bénéfices ou les pertes, en fonction d’autres attributs du jeu de données.  
   
--   Les **algorithmes de segmentation** répartissent les données dans des groupes (ou clusters) d’éléments possédant des propriétés similaires.  
+-   Les**algorithmes de segmentation** répartissent les données dans des groupes (ou clusters) d’éléments possédant des propriétés similaires.  
   
--   Les **algorithmes d’association** recherchent des corrélations entre différents attributs d’un jeu de données. L'application la plus courante de ce genre d'algorithme concerne la création de règles d'association, utilisables dans une analyse de panier d'achat.  
+-   Les**algorithmes d’association** recherchent des corrélations entre différents attributs d’un jeu de données. L'application la plus courante de ce genre d'algorithme concerne la création de règles d'association, utilisables dans une analyse de panier d'achat.  
   
--   Les **algorithmes d’analyse de séquence** synthétisent les séquences ou épisodes fréquents dans des données, comme une série de clics dans un site web ou une série de d’événements de journaux précédant la maintenance d’une machine.  
+-   Les**algorithmes d’analyse de séquence** synthétisent les séquences ou épisodes fréquents dans des données, comme une série de clics dans un site web ou une série de d’événements de journaux précédant la maintenance d’une machine.  
   
  Toutefois, il n'y a aucune raison pour laquelle vous devriez être limité à un algorithme dans vos solutions. Les analystes expérimentés utilisent parfois un algorithme pour déterminer les entrées les plus efficaces (autrement dit, les variables), puis appliquent un algorithme différent pour prédire un résultat spécifique en fonction de ces données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] L’exploration de données vous permet de générer plusieurs modèles sur une structure d’exploration de données unique ; ainsi, avec une seule solution d’exploration de données, vous pouvez utiliser un algorithme de clustering, un modèle d’arbres de décision et un modèle Naïve Bayes pour obtenir des vues différentes de vos données. Vous pouvez également utiliser plusieurs algorithmes dans une seule solution pour effectuer des tâches distinctes : par exemple, vous pouvez utiliser la régression pour obtenir des prévisions financières et un algorithme de réseau neuronal pour effectuer une analyse des facteurs qui influencent les prévisions.  
   
-### Choix d'un algorithme par tâche  
+### <a name="choosing-an-algorithm-by-task"></a>Choix d'un algorithme par tâche  
  Pour vous aider à sélectionner un algorithme en vue d'une utilisation avec une tâche spécifique, le tableau suivant fournit des suggestions pour les types de tâches pour lesquelles chaque algorithme est traditionnellement utilisé.  
   
 |Exemples de tâches|Algorithmes Microsoft à utiliser|  
 |-----------------------|---------------------------------|  
-|**Prédiction d’un attribut discret :**<br /><br /> Signaler les clients dans une liste de prospects comme intéressants ou inintéressants.<br /><br /> Calculer la probabilité qu'un serveur échoue dans les 6 mois suivants.<br /><br /> Classer les résultats des patients et explorer les facteurs connexes.|[Algorithme MDT (Microsoft Decision Trees)](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)<br /><br /> [Algorithme MNB (Microsoft Naive Bayes)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)<br /><br /> [Algorithme de gestion de clusters Microsoft](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)<br /><br /> [Algorithme MNN (Microsoft Neural Network)](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)|  
+|**Prédiction d’un attribut discret :**<br /><br /> Signaler les clients dans une liste de prospects comme intéressants ou inintéressants.<br /><br /> Calculer la probabilité qu'un serveur échoue dans les 6 mois suivants.<br /><br /> Classer les résultats des patients et explorer les facteurs connexes.|[Algorithme MDT (Microsoft Decision Trees)](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)<br /><br /> [Algorithme MNB (Microsoft Naive Bayes)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)<br /><br /> [Algorithme de gestion de clusters Microsoft](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)<br /><br /> [Algorithme MNN (Microsoft Neural Network)](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)|  
 |**Prédiction d’un attribut continu :**<br /><br /> Prévoir les ventes de l'année suivante.<br /><br /> Prédire les visiteurs du site compte tendu des tendances historiques et saisonnières passées.<br /><br /> Générer un score de risque en fonction de données démographiques.|[Algorithme MDT (Microsoft Decision Trees)](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)<br /><br /> [Algorithme MTS (Microsoft Time Series)](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)<br /><br /> [Algorithme MLR (Microsoft Linear Regression)](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)|  
 |**Prédiction d’une séquence :**<br /><br /> Effectuer une analyse des parcours de visite du site Web d'une société.<br /><br /> Analyser les facteurs conduisant à la défaillance d'un serveur.<br /><br /> Capturer et analyser les séquences d'activités pendant les visites de patients, afin de formuler les meilleures pratiques autour des activités courantes.|[Algorithme MSC (Microsoft Sequence Clustering)](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)|  
 |**Recherche de groupes d’éléments communs dans des transactions :**<br /><br /> Utiliser l'analyse du panier d'achat pour déterminer le placement d'un produit.<br /><br /> Suggérer des produits supplémentaires à acheter par un client.<br /><br /> Analyser les données d'enquête de participants à un événement afin de rechercher les activités qui ont été mises en corrélation, pour planifier de futures activités.|[Algorithme Microsoft Association](../../analysis-services/data-mining/microsoft-association-algorithm.md)<br /><br /> [Algorithme MDT (Microsoft Decision Trees)](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)|  
 |**Recherche de groupes d’éléments similaires :**<br /><br /> Créer des groupes de patients avec profils à risque basés sur des attributs tels que des données démographiques et des comportements.<br /><br /> Analyser les utilisateurs par consultation des habitudes d'achat.<br /><br /> Identifier les serveurs qui ont des caractéristiques d'utilisation similaires.|[Algorithme de gestion de clusters Microsoft](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)<br /><br /> [Algorithme MSC (Microsoft Sequence Clustering)](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)|  
   
-## Contenu connexe  
+## <a name="related-content"></a>Contenu connexe  
  Le tableau suivant fournit des liens vers des ressources d’apprentissage pour chacun des algorithmes d’exploration de données fournis dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 |||  
@@ -84,11 +89,11 @@ caps.handback.revision: 74
 |**Références techniques**|Fournit des informations techniques sur l'implémentation de l'algorithme, à l'aide de références universitaires selon les besoins. Dresse la liste des paramètres que vous pouvez configurer pour contrôler le comportement de l'algorithme et personnaliser les résultats dans le modèle. Décrit les spécifications de données et fournit des conseils en matière de performances, si possible.|  
 ||[Références techniques relatives à l'algorithme Microsoft Association](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)<br /><br /> [Références techniques relatives à l'algorithme de gestion de clusters Microsoft](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Références techniques relatives à l'algorithme MDT (Microsoft Decision Trees)](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Références techniques relatives à l'algorithme MLR (Microsoft Linear Regression)](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Références techniques relatives à l'algorithme MLR (Microsoft Logistic Regression)](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Références techniques relatives à l'algorithme MNB (Microsoft Naive Bayes)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Microsoft Neural Network Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Références techniques relatives à l'algorithme MSC (Microsoft Sequence Clustering)](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)<br /><br /> [Références techniques relatives à l'algorithme MTS (Microsoft Time Series)](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)|  
 |**Contenu de modèle**|Explique comment les informations sont structurées dans chaque type de modèle d'exploration de données et indique comment interpréter les informations stockées dans chacun des nœuds.|  
-||[Contenu du modèle d’exploration de données pour les modèles d’association &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)<br /><br /> [Contenu du modèle d’exploration de données pour les modèles de clustering &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)<br /><br /> [Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)<br /><br /> [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)<br /><br /> [Contenu du modèle d’exploration de données pour les modèles de régression logistique &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining model content for logistic regression models.md)<br /><br /> [Contenu du modèle d’exploration de données pour les modèles Naive Bayes &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)<br /><br /> [Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)<br /><br /> [Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining model content for sequence clustering models.md)<br /><br /> [Contenu du modèle d’exploration de données pour les modèles de séries chronologiques &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|  
+||[Contenu du modèle d’exploration de données pour les modèles d’association &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)<br /><br /> [Contenu du modèle d’exploration de données pour les modèles de clustering &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)<br /><br /> [Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)<br /><br /> [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)<br /><br /> [Contenu du modèle d’exploration de données pour les modèles de régression logistique &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)<br /><br /> [Contenu du modèle d’exploration de données pour les modèles Naive Bayes &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)<br /><br /> [Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)<br /><br /> [Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)<br /><br /> [Contenu du modèle d’exploration de données pour les modèles de séries chronologiques &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|  
 |**Requêtes d’exploration de données**|Fournit plusieurs requêtes que vous pouvez utiliser avec chaque type de modèle. Les exemples incluent des requêtes de contenu qui vous permettent d'en savoir plus sur les schémas du modèle, ainsi que des requêtes de prédiction pour vous aider à établir des prédictions en fonction de ces schémas.|  
 ||[Exemples de requêtes de modèle d'association](../../analysis-services/data-mining/association-model-query-examples.md)<br /><br /> [Exemples de requêtes de modèle de clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)<br /><br /> [Exemples de requêtes de modèle d'arbre de décision](../../analysis-services/data-mining/decision-trees-model-query-examples.md)<br /><br /> [Exemples de requête de modèle de régression linéaire](../../analysis-services/data-mining/linear-regression-model-query-examples.md)<br /><br /> [Exemples de requêtes de modèle de régression logistique](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)<br /><br /> [Naive Bayes Model Query Examples](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)<br /><br /> [Neural Network Model Query Examples](../../analysis-services/data-mining/neural-network-model-query-examples.md)<br /><br /> [Sequence Clustering Model Query Examples](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)<br /><br /> [Time Series Model Query Examples](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
   
-## Tâches associées  
+## <a name="related-tasks"></a>Tâches associées  
   
 |**Rubrique**|**Description**|  
 |---------------|---------------------|  
@@ -98,7 +103,8 @@ caps.handback.revision: 74
 |Afficher le contenu d'un modèle à l'aide d'un format tabulaire générique|[Explorer un modèle à l'aide de la visionneuse de l'arborescence de contenu générique Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)|  
 |En savoir plus sur la configuration de vos données et l'utilisation d'algorithmes pour créer des modèles|[Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)<br /><br /> [Modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Outils d'exploration de données](../../analysis-services/data-mining/data-mining-tools.md)  
   
   
+

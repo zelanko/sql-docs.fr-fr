@@ -1,24 +1,29 @@
 ---
-title: "Cr&#233;er et g&#233;rer des hi&#233;rarchies (SSAS Tabulaire) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Créer et gérer des hiérarchies (SSAS tabulaire) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 63c10ca6e8486e67db96d7fe4d1e6afe76133ef8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cr&#233;er et g&#233;rer des hi&#233;rarchies (SSAS Tabulaire)
+# <a name="create-and-manage-hierarchies-ssas-tabular"></a>Créer et gérer des hiérarchies (SSAS Tabulaire)
   Les hiérarchies peuvent être créées et gérées dans le générateur de modèles, dans la vue de diagramme. Pour afficher le concepteur de modèles dans la Vue de diagramme, dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], cliquez sur le menu **Modèle** , pointez sur **Vue du modèle**, puis cliquez sur **Vue de diagramme**.  
   
  Cette rubrique inclut les tâches suivantes :  
@@ -32,7 +37,7 @@ caps.handback.revision: 10
 ##  <a name="bkmk_create"></a> Créer une hiérarchie  
  Vous pouvez créer une hiérarchie en utilisant les colonnes et le menu contextuel de table. Lorsque vous créez une hiérarchie, un nouveau niveau parent s'affiche avec les colonnes sélectionnées en tant que niveaux enfants.  
   
-#### Pour créer une hiérarchie à partir du menu contextuel  
+#### <a name="to-create-a-hierarchy-from-the-context-menu"></a>Pour créer une hiérarchie à partir du menu contextuel  
   
 1.  Dans le générateur de modèles (Vue de diagramme), dans une fenêtre de table, cliquez avec le bouton droit sur une colonne, puis sélectionnez **Créer une hiérarchie**.  
   
@@ -50,21 +55,21 @@ caps.handback.revision: 10
 ##  <a name="bkmk_edit"></a> Modifier une hiérarchie  
  Vous pouvez renommer une hiérarchie, renommer un niveau enfant, modifier l'ordre des niveaux enfants, ajouter des colonnes supplémentaires en tant que niveaux enfants, supprimer un niveau enfant d'une hiérarchie, afficher le nom de la source d'un niveau enfant (le nom de la colonne) et masquer un niveau enfant s'il a le même nom que le niveau de hiérarchie parent.  
   
-#### Pour modifier le nom d'une hiérarchie ou d'un niveau enfant  
+#### <a name="to-change-the-name-of-a-hierarchy-or-child-level"></a>Pour modifier le nom d'une hiérarchie ou d'un niveau enfant  
   
 1.  Cliquez avec le bouton droit sur le niveau de hiérarchie parent ou sur un niveau enfant, puis sélectionnez **Renommer**.  
   
 2.  Entrez le nouveau nom ou modifiez le nom existant.  
   
-#### Pour modifier l'ordre d'un niveau enfant dans une hiérarchie  
+#### <a name="to-change-the-order-of-a-child-level-in-a-hierarchy"></a>Pour modifier l'ordre d'un niveau enfant dans une hiérarchie  
   
 -   Cliquez et faites glisser un niveau enfant vers une nouvelle position dans la hiérarchie.  
   
 -   Ou cliquez avec le bouton droit sur un niveau enfant de la hiérarchie, puis cliquez sur Monter pour déplacer le niveau plus haut dans la liste, ou sur Descendre pour déplacer le niveau plus bas dans la liste.  
   
--   Vous pouvez également cliquer sur un niveau enfant pour le sélectionner, puis appuyez sur Alt + Flèche haut pour déplacer le niveau vers le haut dans la liste, ou sur Alt + Flèche bas pour déplacer le niveau vers le bas.  
+-   Vous pouvez également cliquer sur un niveau enfant pour le sélectionner, puis appuyez sur Alt + Flèche haut pour déplacer le niveau vers le haut dans la liste, ou sur Alt + Flèche bas pour déplacer le niveau vers le bas.  
   
-#### Pour ajouter un autre niveau enfant à une hiérarchie  
+#### <a name="to-add-another-child-level-to-a-hierarchy"></a>Pour ajouter un autre niveau enfant à une hiérarchie  
   
 -   Cliquez et faites glisser une colonne sur le niveau parent ou à un emplacement spécifique de la hiérarchie. La colonne est copiée en tant que niveau enfant de la hiérarchie.  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 10
 > [!NOTE]  
 >  Vous pouvez ajouter une colonne masquée (une colonne qui n'apparaît pas dans les rapports) en tant que niveau enfant à la hiérarchie. Le niveau enfant n'est pas masqué.  
   
-#### Pour supprimer un niveau enfant d'une hiérarchie  
+#### <a name="to-remove-a-child-level-from-a-hierarchy"></a>Pour supprimer un niveau enfant d'une hiérarchie  
   
 -   Cliquez avec le bouton droit sur un niveau enfant, puis sélectionnez **Supprimer de la hiérarchie**.  
   
@@ -82,21 +87,21 @@ caps.handback.revision: 10
 > [!NOTE]  
 >  Si vous renommez un niveau de hiérarchie enfant, il ne porte plus le même nom que la colonne à partir de laquelle il a été copié. Utilisez la commande **Afficher le nom de la source** pour voir la colonne à partir de laquelle il a été copié.  
   
-#### Pour afficher un nom de source  
+#### <a name="to-show-a-source-name"></a>Pour afficher un nom de source  
   
 -   Cliquez avec le bouton droit sur un niveau enfant de la hiérarchie, puis sélectionnez **Afficher le nom de la source**. Le nom de la colonne à partir de laquelle il a été copié s'affiche.  
   
 ##  <a name="bkmk_delete"></a> Supprimer une hiérarchie  
   
-#### Pour supprimer une hiérarchie et ses niveaux enfants  
+#### <a name="to-delete-a-hierarchy-and-remove-its-child-levels"></a>Pour supprimer une hiérarchie et ses niveaux enfants  
   
 -   Cliquez avec le bouton droit sur le niveau de hiérarchie parent, puis cliquez sur Supprimer la hiérarchie.  
   
 -   Ou bien, cliquez sur le niveau de hiérarchie parent, puis appuyez sur Supprimer. Cela supprime également tous les niveaux enfants.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Générateur de modèles tabulaires &#40;SSAS&#41;](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
- [Hiérarchies &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
+ [Hiérarchies &#40; SSAS tabulaire &#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
  [Mesures &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   
   

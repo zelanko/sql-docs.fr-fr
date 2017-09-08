@@ -1,24 +1,29 @@
 ---
-title: "Cr&#233;er et g&#233;rer des mesures (SSAS Tabulaire) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Créer et gérer des mesures (SSAS tabulaire) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 19c19be451a22fef66b98ac71355b4963240767a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cr&#233;er et g&#233;rer des mesures (SSAS Tabulaire)
+# <a name="create-and-manage-measures-ssas-tabular"></a>Créer et gérer des mesures (SSAS Tabulaire)
   Une mesure est une formule créée pour être utilisée dans un rapport ou un tableau croisé dynamique (ou un graphique croisé dynamique) Excel. Les mesures peuvent reposer sur des fonctions d'agrégation standard, comme COUNT ou SUM, ou vous pouvez définir votre propre formule à l'aide de DAX. Les tâches de cette rubrique décrivent comment créer et gérer des mesures à l'aide de la grille de mesures d'une table.  
   
  Cette rubrique inclut les tâches suivantes :  
@@ -33,7 +38,7 @@ caps.handback.revision: 18
   
 -   [Pour supprimer une mesure](#bkmk_delete)  
   
-## Tâches  
+## <a name="tasks"></a>Tâches  
  Pour créer et gérer des mesures, vous utiliserez la grille de mesures d'une table. Vous pouvez afficher la grille de mesures pour une table dans le générateur de modèles dans la vue de données uniquement. Vous ne pouvez pas créer de mesures ni afficher la grille de mesures dans la vue de diagramme ; toutefois, vous pouvez afficher des mesures existantes dans la vue de diagramme. Pour afficher la grille de mesures d'une table, cliquez sur le menu **Table** , puis sur **Afficher la grille de mesures**.  
   
 ###  <a name="bkmk_create_stand"></a> Pour créer une mesure qui utilise une formule d'agrégation standard  
@@ -60,9 +65,9 @@ caps.handback.revision: 18
   
 -   Dans la grille de mesures, cliquez avec le bouton droit sur une mesure, puis sélectionnez **Supprimer**.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mesures &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [Indicateurs de performance clés &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [Colonnes calculées &#40;SSAS tabulaire&#41;](../../analysis-services/tabular-models/calculated-columns-ssas-tabular.md)  
+ [Colonnes calculées &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   
