@@ -164,4 +164,4 @@ Pendant l’installation, SQL Server 2016 Analysis Services ajoute un compte sp�
 
 Vous pouvez configurer votre service de sorte qu’il n’envoie pas de données d’utilisation, comme le décrit la section « Définir des sous-clés de Registre sur le serveur ». Toutefois, cela ne supprime pas le compte de service. 
  
-
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
