@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d2546e40-fdfc-414b-8196-76ed1f124bf5
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d6ed803c39e37a43b3db6c78f7416272954d1692
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: e2bc469930621e79c05435c042240510d7826648
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>Fonctions scalaires définies par l’utilisateur pour l’OLTP en mémoire
@@ -77,7 +77,7 @@ END
   
  Vous pouvez utiliser ces fonctions scalaires définies par l’utilisateur dans des procédures stockées compilées en mode natif et des fonctions définies par l’utilisateur compilées en mode natif et dans les cas où les fonctions intégrées sont autorisées. Vous pouvez également utiliser des fonctions scalaires définies par l’utilisateur compilées en mode natif dans des modules Transact-SQL traditionnels.  
   
- Vous pouvez utiliser ces fonctions scalaires définies par l’utilisateur en mode interop dans les cas où une fonction scalaire définie par l’utilisateur interprétée peut être utilisée. Cependant, des limitations de transaction entre conteneurs s’appliquent, comme décrit dans la section **Niveaux d’isolation pris en charge pour les transactions entre conteneurs** dans [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)(Transactions avec des tables optimisées en mémoire). Pour plus d’informations sur le mode interop, consultez [Accéder aux tables optimisées en mémoire à l’aide du Transact-SQL interprété](../../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md).  
+ Vous pouvez utiliser ces fonctions scalaires définies par l’utilisateur en mode interop dans les cas où une fonction scalaire définie par l’utilisateur interprétée peut être utilisée. Cependant, des limitations de transaction entre conteneurs s’appliquent, comme décrit dans la section **Niveaux d’isolation pris en charge pour les transactions entre conteneurs** dans [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)(Transactions avec des tables optimisées en mémoire). Pour plus d’informations sur le mode interop, consultez [Accéder aux tables mémoire optimisées à l’aide du Transact-SQL interprété](../../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md).  
   
  Les fonctions scalaires définies par l’utilisateur compilées en mode natif nécessitent un contexte d’exécution explicite. Pour plus d’informations, consultez [Clause EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md). EXECUTE AS CALLER n’est pas pris en charge. Pour plus d’informations, consultez [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   

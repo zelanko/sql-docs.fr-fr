@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 64297656b09d9f0843127887b490cef98d07b835
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 36377fe5db9440651b4e63a2c848efc290470d3e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>Protection de votre propriété intellectuelle SQL Server
@@ -34,7 +34,7 @@ L’administrateur/propriétaire d’un ordinateur peut toujours accéder à l�
 
 Les procédures stockées et les données peuvent être chiffrées, mais la structure de données ne peut pas être masquée, et les utilisateurs qui peuvent attacher un débogueur au processus serveur peuvent récupérer les procédures déchiffrées et les données en mémoire au moment de l’exécution.
 
-Si les clients ne sont pas des administrateurs sur les ordinateurs, vous pouvez empêcher l’accès par les clients. Vous pouvez utiliser [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption-tde.md) pour chiffrer les fichiers de données, vous pouvez chiffrer les sauvegardes et vous pouvez auditer les actions de tous les utilisateurs. Mais les administrateurs de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] et les administrateurs de l’ordinateur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] peuvent annuler ces opérations.
+Si les clients ne sont pas des administrateurs sur les ordinateurs, vous pouvez empêcher l’accès par les clients. Vous pouvez utiliser [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md) pour chiffrer les fichiers de données, vous pouvez chiffrer les sauvegardes et vous pouvez auditer les actions de tous les utilisateurs. Mais les administrateurs de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] et les administrateurs de l’ordinateur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] peuvent annuler ces opérations.
 
 ## <a name="solution"></a>Solution
 Il existe différentes manières de configurer l’accès aux données par les clients sans installer [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] sur vos ordinateurs clients. Le plus simple consiste probablement à utiliser [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] pour faire en sorte que les clients ne soient pas administrateurs, par exemple en association avec [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Pour plus d’informations sur la prise en main de [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], consultez [Définition de la base de données SQL Présentation de SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview).  
