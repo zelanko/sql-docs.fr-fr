@@ -1,22 +1,27 @@
 ---
-title: "Colonnes de donn&#233;es File Load and Save | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "Chargement de fichier et enregistrer des colonnes de données | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 0101e809-d6ea-4d0c-95ec-65dd77acf665
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fc37f3342781ace5e54a3ab9550e046933d25928
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Colonnes de donn&#233;es File Load and Save
+# <a name="file-load-and-save-data-columns"></a>Colonnes de données File Load and Save
   La catégorie d'événement File Load and Save contient les classes d'événements décrites dans le tableau ci-dessous.  
   
 |**ID d'événement**|**Nom d'événement**|**Description de l'événement**|  
@@ -32,13 +37,13 @@ caps.handback.revision: 5
   
  Le tableau suivant répertorie les colonnes de données de cette classe d'événements.  
   
-## File Load Begin  
+## <a name="file-load-begin"></a>File Load Begin  
   
 |**Nom de la colonne**|**ID de la colonne**|**Type de colonne**|**Description de la colonne**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Classe d'événements utilisée pour catégoriser les événements.|  
-|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
-|StartTime|3|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|StartTime|3|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
 |JobID|7|1|ID du travail pour la progression.|  
 |SessionType|8|8|Type de session (entité qui a provoqué l'opération).|  
 |ObjectID|11|8|ID d'objet (notez il s'agit d'une chaîne).|  
@@ -52,14 +57,14 @@ caps.handback.revision: 5
 |TextData|42|9|Données texte associées à l'événement.|  
 |ServerName|43|8|Nom du serveur produisant l'événement.|  
   
-## File Load End  
+## <a name="file-load-end"></a>File Load End  
   
 |**Nom de la colonne**|**ID de la colonne**|**Type de colonne**|**Description de la colonne**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Classe d'événements utilisée pour catégoriser les événements.|  
-|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
-|StartTime|3|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
-|EndTime|4|5|Heure de fin de l'événement. Cette colonne n'est pas remplie pour les classes d'événements de démarrage, comme SQL:BatchStarting ou SP:Starting. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|StartTime|3|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|EndTime|4|5|Heure de fin de l'événement. Cette colonne n'est pas remplie pour les classes d'événements de démarrage, comme SQL:BatchStarting ou SP:Starting. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
 |Duration|5|2|Durée (en millisecondes) de l'événement.|  
 |JobID|7|1|ID du travail pour la progression.|  
 |SessionType|8|8|Type de session (entité qui a provoqué l'opération).|  
@@ -69,7 +74,7 @@ caps.handback.revision: 5
 |ObjectName|13|8|Nom de l'objet.|  
 |ObjectPath|14|8|Chemin d'accès de l'objet. Liste de parents séparés par une virgule, commençant par le parent de l'objet.|  
 |Severity|22|1|Niveau de gravité d'une exception.|  
-|Réussi|23|1|1 = réussite. 0 = échec (1 signifie la réussite de la vérification d'autorisations et 0 l'échec de cette vérification, par exemple).|  
+|Réussi|23|1|1 = réussite. 0 = échec (1 signifie la réussite de la vérification d'autorisations et 0 l'échec de cette vérification, par exemple).|  
 |Erreur|24|1|Numéro d'erreur d'un événement donné.|  
 |ConnectionID|25|1|ID de connexion unique.|  
 |DatabaseName|28|8|Nom de la base de données dans laquelle l'instruction de l'utilisateur s'exécute.|  
@@ -78,13 +83,13 @@ caps.handback.revision: 5
 |TextData|42|9|Données texte associées à l'événement.|  
 |ServerName|43|8|Nom du serveur produisant l'événement.|  
   
-## File Save Begin  
+## <a name="file-save-begin"></a>File Save Begin  
   
 |**Nom de la colonne**|**ID de la colonne**|**Type de colonne**|**Description de la colonne**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Classe d'événements utilisée pour catégoriser les événements.|  
-|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
-|StartTime|3|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|StartTime|3|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
 |JobID|7|1|ID du travail pour la progression.|  
 |SessionType|8|8|Type de session (entité qui a provoqué l'opération).|  
 |ObjectID|11|8|ID d'objet (notez il s'agit d'une chaîne).|  
@@ -98,14 +103,14 @@ caps.handback.revision: 5
 |TextData|42|9|Données texte associées à l'événement.|  
 |ServerName|43|8|Nom du serveur produisant l'événement.|  
   
-## File Save End  
+## <a name="file-save-end"></a>File Save End  
   
 |**Nom de la colonne**|**ID de la colonne**|**Type de colonne**|**Description de la colonne**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Classe d'événements utilisée pour catégoriser les événements.|  
-|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
-|StartTime|3|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
-|EndTime|4|5|Heure de fin de l'événement. Cette colonne n'est pas remplie pour les classes d'événements de démarrage, comme SQL:BatchStarting ou SP:Starting. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|StartTime|3|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|EndTime|4|5|Heure de fin de l'événement. Cette colonne n'est pas remplie pour les classes d'événements de démarrage, comme SQL:BatchStarting ou SP:Starting. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
 |Duration|5|2|Durée (en millisecondes) de l'événement.|  
 |JobID|7|1|ID du travail pour la progression.|  
 |SessionType|8|8|Type de session (entité qui a provoqué l'opération).|  
@@ -115,7 +120,7 @@ caps.handback.revision: 5
 |ObjectName|13|8|Nom de l'objet.|  
 |ObjectPath|14|8|Chemin d'accès de l'objet. Liste de parents séparés par une virgule, commençant par le parent de l'objet.|  
 |Severity|22|1|Niveau de gravité d'une exception.|  
-|Réussi|23|1|1 = réussite. 0 = échec (1 signifie la réussite de la vérification d'autorisations et 0 l'échec de cette vérification, par exemple).|  
+|Réussi|23|1|1 = réussite. 0 = échec (1 signifie la réussite de la vérification d'autorisations et 0 l'échec de cette vérification, par exemple).|  
 |Erreur|24|1|Numéro d'erreur d'un événement donné.|  
 |ConnectionID|25|1|ID de connexion unique.|  
 |DatabaseName|28|8|Nom de la base de données dans laquelle l'instruction de l'utilisateur s'exécute.|  
@@ -124,13 +129,13 @@ caps.handback.revision: 5
 |TextData|42|9|Données texte associées à l'événement.|  
 |ServerName|43|8|Nom du serveur produisant l'événement.|  
   
-## PageOut Begin  
+## <a name="pageout-begin"></a>PageOut Begin  
   
 |**Nom de la colonne**|**ID de la colonne**|**Type de colonne**|**Description de la colonne**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Classe d'événements utilisée pour catégoriser les événements.|  
-|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
-|StartTime|3|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|StartTime|3|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
 |JobID|7|1|ID du travail pour la progression.|  
 |SessionType|8|8|Type de session (entité qui a provoqué l'opération).|  
 |ObjectID|11|8|ID d'objet (notez il s'agit d'une chaîne).|  
@@ -144,14 +149,14 @@ caps.handback.revision: 5
 |TextData|42|9|Données texte associées à l'événement.|  
 |ServerName|43|8|Nom du serveur produisant l'événement.|  
   
-## PageOut End  
+## <a name="pageout-end"></a>PageOut End  
   
 |**Nom de la colonne**|**ID de la colonne**|**Type de colonne**|**Description de la colonne**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Classe d'événements utilisée pour catégoriser les événements.|  
-|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
-|StartTime|3|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
-|EndTime|4|5|Heure de fin de l'événement. Cette colonne n'est pas remplie pour les classes d'événements de démarrage, comme SQL:BatchStarting ou SP:Starting. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|StartTime|3|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|EndTime|4|5|Heure de fin de l'événement. Cette colonne n'est pas remplie pour les classes d'événements de démarrage, comme SQL:BatchStarting ou SP:Starting. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
 |Duration|5|2|Durée (en millisecondes) de l'événement.|  
 |JobID|7|1|ID du travail pour la progression.|  
 |SessionType|8|8|Type de session (entité qui a provoqué l'opération).|  
@@ -161,7 +166,7 @@ caps.handback.revision: 5
 |ObjectName|13|8|Nom de l'objet.|  
 |ObjectPath|14|8|Chemin d'accès de l'objet. Liste de parents séparés par une virgule, commençant par le parent de l'objet.|  
 |Severity|22|1|Niveau de gravité d'une exception.|  
-|Réussi|23|1|1 = réussite. 0 = échec (1 signifie la réussite de la vérification d'autorisations et 0 l'échec de cette vérification, par exemple).|  
+|Réussi|23|1|1 = réussite. 0 = échec (1 signifie la réussite de la vérification d'autorisations et 0 l'échec de cette vérification, par exemple).|  
 |Erreur|24|1|Numéro d'erreur d'un événement donné.|  
 |ConnectionID|25|1|ID de connexion unique.|  
 |DatabaseName|28|8|Nom de la base de données dans laquelle l'instruction de l'utilisateur s'exécute.|  
@@ -170,13 +175,13 @@ caps.handback.revision: 5
 |TextData|42|9|Données texte associées à l'événement.|  
 |ServerName|43|8|Nom du serveur produisant l'événement.|  
   
-## PageIn Begin  
+## <a name="pagein-begin"></a>PageIn Begin  
   
 |**Nom de la colonne**|**ID de la colonne**|**Type de colonne**|**Description de la colonne**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Classe d'événements utilisée pour catégoriser les événements.|  
-|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
-|StartTime|3|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|StartTime|3|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
 |JobID|7|1|ID du travail pour la progression.|  
 |SessionType|8|8|Type de session (entité qui a provoqué l'opération).|  
 |ObjectID|11|8|ID d'objet (notez il s'agit d'une chaîne).|  
@@ -190,14 +195,14 @@ caps.handback.revision: 5
 |TextData|42|9|Données texte associées à l'événement.|  
 |ServerName|43|8|Nom du serveur produisant l'événement.|  
   
-## PageIn End  
+## <a name="pagein-end"></a>PageIn End  
   
 |**Nom de la colonne**|**ID de la colonne**|**Type de colonne**|**Description de la colonne**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Classe d'événements utilisée pour catégoriser les événements.|  
-|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
-|StartTime|3|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
-|EndTime|4|5|Heure de fin de l'événement. Cette colonne n'est pas remplie pour les classes d'événements de démarrage, comme SQL:BatchStarting ou SP:Starting. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|CurrentTime|2|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|StartTime|3|5|Heure à laquelle a débuté l'événement, si disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|EndTime|4|5|Heure de fin de l'événement. Cette colonne n'est pas remplie pour les classes d'événements de démarrage, comme SQL:BatchStarting ou SP:Starting. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
 |Duration|5|2|Durée (en millisecondes) de l'événement.|  
 |JobID|7|1|ID du travail pour la progression.|  
 |SessionType|8|8|Type de session (entité qui a provoqué l'opération).|  
@@ -207,7 +212,7 @@ caps.handback.revision: 5
 |ObjectName|13|8|Nom de l'objet.|  
 |ObjectPath|14|8|Chemin d'accès de l'objet. Liste de parents séparés par une virgule, commençant par le parent de l'objet.|  
 |Severity|22|1|Niveau de gravité d'une exception.|  
-|Réussi|23|1|1 = réussite. 0 = échec (1 signifie la réussite de la vérification d'autorisations et 0 l'échec de cette vérification, par exemple).|  
+|Réussi|23|1|1 = réussite. 0 = échec (1 signifie la réussite de la vérification d'autorisations et 0 l'échec de cette vérification, par exemple).|  
 |Erreur|24|1|Numéro d'erreur d'un événement donné.|  
 |ConnectionID|25|1|ID de connexion unique.|  
 |DatabaseName|28|8|Nom de la base de données dans laquelle l'instruction de l'utilisateur s'exécute.|  
@@ -216,7 +221,7 @@ caps.handback.revision: 5
 |TextData|42|9|Données texte associées à l'événement.|  
 |ServerName|43|8|Nom du serveur produisant l'événement.|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Chargement de fichier et enregistrement de catégorie d'événement](../../analysis-services/trace-events/file-load-and-save-event-category.md)  
   
   

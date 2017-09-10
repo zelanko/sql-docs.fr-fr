@@ -1,34 +1,45 @@
 ---
-title: "Invoke-ProcessASDatabase | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: Invoke-ProcessASDatabase | Documents Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 66d5d154-88ce-4c2e-b1ef-e2d2f6fb1c44
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: f8e83493ed934a3f9bf32a1cef35969f04996223
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Invoke-ProcessASDatabase
+# <a name="invoke-processasdatabase"></a>Invoke-ProcessASDatabase
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Effectue l’opération **Process** sur un **Database** spécifié avec un **ProcessType** ou **RefreshType** spécifique, selon le type de métadonnées sous-jacentes.  
   
  Utilisez **ProcessType** pour la base de données avec des métadonnées multidimensionnelles (y compris les bases de données tabulaires au niveau de compatibilité 1050, 1100 ou 1103).  
   
  Utilisez **RefreshType** pour les bases de données tabulaires au niveau de compatibilité 1200 ou supérieur.  
+
+>[!NOTE] 
+>Cet article peut contenir des exemples et des informations obsolètes. Utilisez l’applet de commande Get-Help pour la dernière version.
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
  `Invoke-ProcessASDatabase [-DatabaseName] <string> [-RefreshType] <RefreshType> {Full | ClearValues | Calculate |     DataOnly | Automatic | Add | Defragment} [-Server <string>] [-Credential <pscredential>] [-WhatIf] [-Confirm]     [<CommonParameters>]`  
   
  `Invoke-ProcessASDatabase [-DatabaseName] <string> [-ProcessType] <ProcessType> {ProcessFull | ProcessAdd |     ProcessUpdate | ProcessIndexes | ProcessData | ProcessDefault | ProcessClear | ProcessStructure |     ProcessClearStructureOnly | ProcessScriptCache | ProcessRecalc | ProcessDefrag} [-Server <string>] [-Credential     <pscredential>] [-WhatIf] [-Confirm]  [<CommonParameters>]`  
   
-## Description  
+## <a name="description"></a>Description  
  L’applet de commande **Invoke-ProcessASDatabase** traite une base de données au niveau que vous spécifiez. Par exemple, pour les bases de données tabulaires au niveau de compatibilité 1200, le réglage de **RefreshType** sur **Full** remplace les données existantes par des nouvelles.  
   
  Le type de traitement (multidimensionnel) ou le type d’actualisation (tabulaire) est nécessaire et peut être spécifié avant ou après les paramètres de la base de données et du serveur :  
@@ -37,9 +48,9 @@ caps.handback.revision: 11
   
 -   Pour le traitement tabulaire, consultez [Traiter une base de données, une table ou une partition &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md).  
   
-## Paramètres  
+## <a name="parameters"></a>Paramètres  
   
-### -DatabaseName \<string>  
+### <a name="-databasename-string"></a>-DatabaseName \<chaîne >  
  Spécifie la base de données tabulaire ou multidimensionnelle à traiter.  
   
 |||  
@@ -50,7 +61,7 @@ caps.handback.revision: 11
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### -Server\<Microsoft.AnalysisSevices.Server>  
+### <a name="-servermicrosoftanalysissevicesserver"></a>-Server\<Microsoft.AnalysisSevices.Server >  
  Spécifie éventuellement l’instance de serveur à laquelle se connecter si vous n’utilisez pas le répertoire de fournisseur **SQLAS** correspondant au contexte.  
   
 |||  
@@ -61,29 +72,29 @@ caps.handback.revision: 11
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### -RefreshType \<Microsoft.AnalysisServices.RefreshType>  
- Spécifie le type de processus pour une base de données tabulaire au niveau de compatibilité 1200.  Les valeurs valides sont Full, ClearValues, Calculate, DataOnly, Automatic, Add et Defragment. Consultez [Traiter une base de données, une table ou une partition &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) pour des descriptions et des conseils.  
+### <a name="-refreshtype-microsoftanalysisservicesrefreshtype"></a>-RefreshType \<Microsoft.AnalysisServices.RefreshType >  
+ Spécifie le type de processus pour une base de données tabulaire.  Les valeurs valides sont Full, ClearValues, Calculate, DataOnly, Automatic, Add et Defragment. Consultez [Traiter une base de données, une table ou une partition &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) pour des descriptions et des conseils.  
   
 |||  
 |-|-|  
 |Requis ?|true|  
-|Position ?|1|  
+|Position ?|1|  
 |Valeur par défaut||  
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### -ProcessType \<Microsoft.AnalysisServices.ProcessType>  
+### <a name="-processtype-microsoftanalysisservicesprocesstype"></a>-ProcessType \<Microsoft.AnalysisServices.ProcessType >  
  Spécifie le type de processus pour une base de données multidimensionnelle ou tabulaire aux niveaux de compatibilité 1050-1103. Les valeurs valides sont ProcessFull, ProcessAdd, ProcessUpdate, ProcessIndexes, ProcessData, ProcessDefault, ProcessClear, ProcessStructure, ProcessCelarStructureOnly, ProcessScriptCache et ProcessRecalc. Consultez [Options et paramètres de traitement &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md) pour des descriptions et des conseils.  
   
 |||  
 |-|-|  
 |Requis ?|true|  
-|Position ?|1|  
+|Position ?|1|  
 |Valeur par défaut||  
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-### -Credential  
+### <a name="-credential"></a>-Credential  
  Si ce paramètre est déclaré, le nom d’utilisateur et le mot de passe transmis seront utilisés pour se connecter à l’instance d’Analysis Services. Si aucune information d’identification n’est indiquée, le compte Windows par défaut de l’utilisateur qui exécute le script est utilisé.  
   
 |||  
@@ -94,7 +105,7 @@ caps.handback.revision: 11
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-## -Whatif  
+## <a name="-whatif"></a>-Whatif  
  Incluez ce paramètre pour obtenir des informations sur l’impact de l’opération avant son exécution.  
   
 |||  
@@ -105,7 +116,7 @@ caps.handback.revision: 11
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
   
-## -Confirm  
+## <a name="-confirm"></a>-Confirm  
  Incluez ce paramètre pour confirmer interactivement l’opération par une réponse (oui ou non) avant son exécution.  
   
 |||  
@@ -116,7 +127,7 @@ caps.handback.revision: 11
 |Accepter l'entrée de pipeline ?||  
 |Accepter les caractères génériques ?|false|  
   
-## Exemple 1 (fournisseur SQLAS)  
+## <a name="example-1-sqlas-provider"></a>Exemple 1 (fournisseur SQLAS)  
  Cet exemple utilise le fournisseur **SQLAS** pour définir comme contexte la liste des bases de données sur une instance par défaut.  Si vous répertoriez le contenu du répertoire de bases de données, vous verrez toutes les bases de données ainsi que leur état de processus et le mode lecture/écriture.  
   
  À partir du dossier de base de données, vous pouvez exécuter **Invoke-ProcessASDatabase** en spécifiant simplement le nom de la base de données.  
@@ -138,7 +149,7 @@ PS SQLSERVER:\sqlas\ssas-srv-01\default\databases> Invoke-ProcessASDatabase "adv
   
  Vous pouvez vérifier que le traitement a abouti en consultant la page des propriétés de la base de données dans Management Studio, en démarrant une nouvelle session ou en retournant l’état de traitement d’un objet de base de données (via [Microsoft.AnalysisServices.ProcessableMajorObject.LastProcessed](https://msdn.microsoft.com/library/microsoft.analysisservices.processablemajorobject.lastprocessed.aspx)).  
   
-## Exemple 2  
+## <a name="example-2"></a>Exemple 2  
  Cet exemple montre la même opération en n’utilisant que l’applet de commande sans le fournisseur. Des paramètres supplémentaires sont requis pour spécifier le type de serveur et de processus.  
   
 ```  
@@ -147,7 +158,5 @@ PS  SQL Server >  Invoke-ProcessASDatabase -databasename "AdventureWorks" -serve
   
 ```  
   
-## Voir aussi  
- [Niveau de compatibilité pour les modèles tabulaires dans Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   

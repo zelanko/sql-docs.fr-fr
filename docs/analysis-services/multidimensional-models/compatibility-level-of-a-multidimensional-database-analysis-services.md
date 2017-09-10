@@ -1,24 +1,29 @@
 ---
-title: "Niveau de compatibilit&#233; d’une base de donn&#233;es multidimensionnelle (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Niveau de compatibilité d’une base de données multidimensionnelle (Analysis Services) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 946cb28ca1e25508ac0d997c982d82886dbf4402
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Niveau de compatibilit&#233; d’une base de donn&#233;es multidimensionnelle (Analysis Services)
+# <a name="compatibility-level-of-a-multidimensional-database-analysis-services"></a>Niveau de compatibilité d’une base de données multidimensionnelle (Analysis Services)
   Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], la propriété du niveau de compatibilité de la base de données détermine le niveau fonctionnel d'une base de données. Les niveaux de compatibilité sont propres à chaque type de modèle. Par exemple, un niveau de compatibilité de **1 100** a une signification différente selon que la base de données est multidimensionnelle ou tabulaire.  
   
  Cette rubrique décrit le niveau de compatibilité des bases de données multidimensionnelles uniquement. Pour plus d’informations sur les solutions tabulaires, consultez [Niveau de compatibilité pour les modèles tabulaires dans Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).  
@@ -40,21 +45,21 @@ caps.handback.revision: 18
 > [!WARNING]  
 >  La définition de la compatibilité de la base de données sur un niveau supérieur est irrévocable. Après avoir augmenté le niveau de compatibilité à **1 100**, vous devez continuer à exécuter la base de données sur des serveurs plus récents. Vous ne pouvez pas revenir au niveau **1 050**. Vous ne pouvez pas attacher ni restaurer une base de données **1 100** sur une version de serveur antérieure à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables  
  Les niveaux de compatibilité de la base de données ont été introduits dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Vous devez disposer de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou ultérieur pour visualiser ou définir le niveau de compatibilité de la base de données.  
   
  La base de données ne peut pas être un cube local. Les cubes locaux ne prennent pas en charge la propriété **CompatibilityLevel** .  
   
  La base de données doit avoir été créée dans une version précédente (SQL Server 2008 R2 ou antérieure), puis attachée ou restaurée sur un serveur [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou plus récent. Les bases de données déployées vers SQL Server 2012 sont déjà au niveau **1100** et ne peuvent pas être déclassifiées pour s'exécuter à un niveau inférieur.  
   
-## Déterminer le niveau de compatibilité de la base de données existant pour une base de données multidimensionnelle  
+## <a name="determine-the-existing-database-compatibility-level-for-a-multidimensional-database"></a>Déterminer le niveau de compatibilité de la base de données existant pour une base de données multidimensionnelle  
  La seule façon d'afficher ou modifier le niveau de compatibilité de la base de données est de passer par XMLA. Vous pouvez afficher ou modifier le script XMLA qui spécifie la base de données dans SQL Server Management Studio.  
   
  Si vous recherchez la définition XMLA d'une base de données pour la propriété **CompatibilityLevel** et qu'elle 'existe pas, vous disposez probablement d'une base de données au niveau de compatibilité **1050** .  
   
  Vous trouverez des instructions pour l'affichage et la modification du script XMLA dans la section suivante.  
   
-## Définir le niveau de compatibilité de la base de données dans SQL Server Management Studio  
+## <a name="set-the-database-compatibility-level-in-sql-server-management-studio"></a>Définir le niveau de compatibilité de la base de données dans SQL Server Management Studio  
   
 1.  Avant d'augmenter le niveau de compatibilité, sauvegardez la base de données au cas où vous souhaiteriez annuler les modifications apportées.  
   
@@ -80,7 +85,7 @@ caps.handback.revision: 18
   
 7.  Pour exécuter le script, cliquez sur **Exécuter** dans le menu Requête ou appuyez sur F5.  
   
-## Opérations prises en charge qui requièrent le même niveau de compatibilité  
+## <a name="supported-operations-that-require-the-same-compatibility-level"></a>Opérations prises en charge qui requièrent le même niveau de compatibilité  
  Les opérations suivantes requièrent que les bases de données sources partagent le même niveau de compatibilité.  
   
 1.  La fusion de partitions de bases de données différentes est prise en charge uniquement si les deux bases de données partagent le même niveau de compatibilité.  
@@ -89,10 +94,10 @@ caps.handback.revision: 18
   
 3.  La synchronisation des serveurs est prise en charge uniquement pour les serveurs qui partagent la même version et le même niveau de compatibilité de base de données.  
   
-## Étapes suivantes  
+## <a name="next-steps"></a>Étapes suivantes  
  Après avoir augmenté le niveau de compatibilité de la base de données, vous pouvez définir la propriété **StringStoresCompatibilityLevel** dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Cela augmente le stockage des chaînes de mesures et de dimensions. Pour plus d’informations sur cette fonctionnalité, consultez [Configurer le stockage de chaînes pour des dimensions et des partitions](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Sauvegarde, restauration et synchronisation de bases de données &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

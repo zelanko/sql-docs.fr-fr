@@ -1,24 +1,29 @@
 ---
-title: "Utiliser la galerie PowerPivot | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/31/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Utilisez la galerie PowerPivot | Documents Microsoft
+ms.custom: 
+ms.date: 08/31/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: a14deecac6f597c9f09f9659ed165345ef5faceb
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Utiliser la galerie PowerPivot
+# <a name="use-power-pivot-gallery"></a>Utiliser la galerie PowerPivot
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est une bibliothèque de documents SharePoint spéciale qui fournit des fonctions d’aperçu et de gestion des documents pour les classeurs Excel publiés et les rapports Reporting Services contenant des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 > [!NOTE]  
@@ -49,20 +54,20 @@ caps.handback.revision: 14
 >  La Galerie PowerPivot requiert Microsoft Silverlight.  Le navigateur Microsoft Edge ne prend pas en charge Silverlight.   
 > Pour afficher le contenu de la bibliothèque dans Edge, cliquez sur l’onglet **Bibliothèque** dans la Galerie PowerPivot, puis définissez l’affichage de la bibliothèque de documents sur **Tous les documents**.    
 > Pour modifier l’affichage par défaut, cliquez sur l’onglet **Bibliothèque** , puis sur Modifier l’affichage. Cliquez sur Définir cet affichage comme affichage par défaut, puis sur OK pour enregistrer l’affichage par défaut.  
->  Pour plus d'informations sur les composants pris en charge par Edge, consultez le billet du blog Windows intitulé [A break from the past, part 2: Saying goodbye to ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  Pour plus d'informations sur les composants pris en charge par Edge, consultez le billet du blog Windows intitulé [A break from the past, part 2: Saying goodbye to ActiveX, VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
  Pour obtenir la liste complète des prérequis, consultez [Create and Customize Power Pivot Gallery](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md).  
   
 ##  <a name="icons"></a> Icônes dans la Galerie PowerPivot  
  Les icônes fournissent une indication visuelle sur la disponibilité et l'état du contenu.  
   
-|Icône|Description|  
+|Icône| Description|  
 |----------|-----------------|  
-|![GMNI_PowerPivotGalleryIcon_Hourglass](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-hourglass.png "GMNI_PowerPivotGalleryIcon_Hourglass")|L'icône de sablier apparaît lors de la génération d'une image miniature de chaque page dans le document. Actualisez la page pour afficher la mise à jour de l'image.|  
-|![GMNI_PowerPivotGalleryIcon_Truncated](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-truncated.png "GMNI_PowerPivotGalleryIcon_Truncated")|l’icône de pages apparaît lorsqu’un classeur ou un rapport possède plus de pages que la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ne peut en afficher. Pour consulter toutes les pages, vous devez utiliser une application cliente.|  
-|![GMNI_PowerPivotGalleryIcon_Error](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-error.png "GMNI_PowerPivotGalleryIcon_Error")|L'icône d'erreur apparaît lorsqu'une image miniature n'a pas pu être restituée pour le document. Le document est publié dans la bibliothèque, mais ne peut pas être restitué dans les vues personnalisées de la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Vous devez pouvoir consulter le document dans une application cliente, telle que le complément [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel.|  
-|![GMNI_PowerPivotGalleryIcon_badtype](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-badtype.png "GMNI_PowerPivotGalleryIcon_badtype")|l’icône de contenu indisponible s’affiche lorsque le document téléchargé ne peut pas être restitué dans la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Les types de document pris en charge sont les classeurs et rapports [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] créés dans le Générateur de rapports de SQL Server 2008 R2 Reporting Services.<br /><br /> Cette icône apparaît également si vous recyclez un document de la Corbeille.<br /><br /> Si vous obtenez cette icône pour un document qui présentait auparavant une image d'aperçu valide, vous pouvez actualiser l'image en modifiant une propriété du document, puis en enregistrant vos modifications.|  
-|![GMNI_PowerPivotGalleryIcon_Locked](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-locked.png "GMNI_PowerPivotGalleryIcon_Locked")|L'icône de contenu verrouillée apparaît lorsque les images miniatures ont été volontairement désactivées pour ce document. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ne génère pas d’images miniatures ni les classeurs Excel qui ne contiennent pas de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , ni pour les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou les rapports Reporting Services qui ne répondent pas aux conditions requises pour la génération d’instantanés. Pour plus d'informations, consultez la section « Configuration requise » de cette rubrique.|  
+|![GMNI_PowerPivotGalleryIcon_Hourglass](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|L'icône de sablier apparaît lors de la génération d'une image miniature de chaque page dans le document. Actualisez la page pour afficher la mise à jour de l'image.|  
+|![GMNI_PowerPivotGalleryIcon_Truncated](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|l’icône de pages apparaît lorsqu’un classeur ou un rapport possède plus de pages que la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ne peut en afficher. Pour consulter toutes les pages, vous devez utiliser une application cliente.|  
+|![GMNI_PowerPivotGalleryIcon_Error](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-error.gif "GMNI_PowerPivotGalleryIcon_Error")|L'icône d'erreur apparaît lorsqu'une image miniature n'a pas pu être restituée pour le document. Le document est publié dans la bibliothèque, mais ne peut pas être restitué dans les vues personnalisées de la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Vous devez pouvoir consulter le document dans une application cliente, telle que le complément [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel.|  
+|![GMNI_PowerPivotGalleryIcon_badtype](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-badtype.gif "GMNI_PowerPivotGalleryIcon_badtype")|l’icône de contenu indisponible s’affiche lorsque le document téléchargé ne peut pas être restitué dans la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Les types de document pris en charge sont les classeurs et rapports [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] créés dans le Générateur de rapports de SQL Server 2008 R2 Reporting Services.<br /><br /> Cette icône apparaît également si vous recyclez un document de la Corbeille.<br /><br /> Si vous obtenez cette icône pour un document qui présentait auparavant une image d'aperçu valide, vous pouvez actualiser l'image en modifiant une propriété du document, puis en enregistrant vos modifications.|  
+|![GMNI_PowerPivotGalleryIcon_Locked](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-locked.gif "GMNI_PowerPivotGalleryIcon_Locked")|L'icône de contenu verrouillée apparaît lorsque les images miniatures ont été volontairement désactivées pour ce document. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ne génère pas d’images miniatures ni les classeurs Excel qui ne contiennent pas de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , ni pour les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou les rapports Reporting Services qui ne répondent pas aux conditions requises pour la génération d’instantanés. Pour plus d'informations, consultez la section « Configuration requise » de cette rubrique.|  
   
 ##  <a name="add"></a> Enregistrer un classeur Excel dans la Galerie PowerPivot  
  Vous pouvez publier des classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans la bibliothèque à l'aide de toutes les techniques de partage offertes par Excel 2010. Par exemple, dans Excel 2010, vous pouvez utiliser l'option Enregistrer sous pour spécifier tout ou partie d'un chemin d'accès SharePoint à une bibliothèque.  
@@ -91,7 +96,7 @@ caps.handback.revision: 14
   
  Dans une fenêtre de navigateur, vérifiez que le document s'affiche dans la bibliothèque [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Les documents publiés récemment sont affichés dans la liste. Les paramètres de bibliothèque déterminent où le document apparaît (par exemple, trié par ordre croissant par date, ou alphabétiquement par nom). Vous devrez peut-être actualiser la fenêtre du navigateur pour afficher les ajouts les plus récents.  
   
-#### Télécharger un classeur dans la Galerie PowerPivot  
+#### <a name="upload-a-workbook-into-power-pivot-gallery"></a>Télécharger un classeur dans la Galerie PowerPivot  
  Vous avez également la possibilité de télécharger un classeur si vous souhaitez démarrer à partir de SharePoint et sélectionner sur votre ordinateur le fichier à publier.  
   
 1.  Dans un site SharePoint, ouvrez la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -105,12 +110,12 @@ caps.handback.revision: 14
   
 |||  
 |-|-|  
-|![GMNI_btn_NewDocReportGallery](../../analysis-services/power-pivot-sharepoint/media/gmni-btn-newdocreportgallery.png "GMNI_btn_NewDocReportGallery")|Cliquez sur la partie du bouton Nouveau rapport représentant une flèche vers le bas pour lancer le Générateur de rapports ou Excel 2010. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] La Galerie doit utiliser l’une des vues prédéfinies (Théâtre, Galerie ou Carrousel) pour que le bouton Nouveau rapport soit disponible.|  
+|![GMNI_btn_NewDocReportGallery](../../analysis-services/power-pivot-sharepoint/media/gmni-btn-newdocreportgallery.gif "GMNI_btn_NewDocReportGallery")|Cliquez sur la partie du bouton Nouveau rapport représentant une flèche vers le bas pour lancer le Générateur de rapports ou Excel 2010. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] La Galerie doit utiliser l’une des vues prédéfinies (Théâtre, Galerie ou Carrousel) pour que le bouton Nouveau rapport soit disponible.|  
   
-#### Créer un rapport du Générateur de rapports.  
+#### <a name="create-report-builder-report"></a>Créer un rapport du Générateur de rapports.  
  Pour créer un rapport basé sur un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans la bibliothèque, Reporting Services doit être configuré pour l’intégration dans SharePoint des mêmes sites qui contiennent la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Lorsque vous sélectionnez l'option Créer un rapport du Générateur de rapports, le Générateur de rapports est téléchargé à partir du serveur de rapports et installé sur la station de travail locale, lors de sa première utilisation. Un fichier de rapport d’espace réservé est créé pour le nouveau rapport et enregistré dans la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Les informations de connexion au classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont créées automatiquement comme une nouvelle source de données dans le rapport. Ensuite, vous pouvez générer les datasets et la mise en page du rapport dans l'espace de conception. Lorsque vous utilisez le Générateur de rapports pour assembler votre rapport, vous pouvez enregistrer vos modifications et le résultat final sur le document de rapport dans la bibliothèque. Pour éviter des déconnexions de données ultérieures, veillez à conserver les fichiers du classeur et du rapport ensemble dans la même bibliothèque.  
   
-#### Ouvrir le nouveau classeur Excel  
+#### <a name="open-new-excel-workbook"></a>Ouvrir le nouveau classeur Excel  
  Pour créer un classeur Excel à partir d'un classeur existant, vous devez déjà disposer d'Excel et de [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] sur l'ordinateur local. La sélection de l’option Ouvrir le nouveau classeur Excel entraîne le démarrage d’Excel, l’ouverture d’un fichier de classeur (.xlsx) vierge et le chargement des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en arrière-plan comme source de données connectée. Seules les données provenant de la fenêtre [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans le classeur d’origine sont utilisées dans le nouveau classeur. Les tableaux ou graphiques croisés dynamiques du classeur d'origine sont exclus. Le nouveau classeur établit une liaison aux données du classeur d'origine. Les données ne sont pas copiées vers le nouveau classeur.  
   
 ##  <a name="view"></a> Ouvrir un classeur ou un rapport en mode page entière  
@@ -123,7 +128,7 @@ caps.handback.revision: 14
   
 |||  
 |-|-|  
-|![GMNI_btn_NewDataRefreshReportGallery](../../analysis-services/power-pivot-sharepoint/media/gmni-btn-newdatarefreshreportgallery.png "GMNI_btn_NewDataRefreshReportGallery")|Cliquez sur le bouton Gérer l'actualisation des données pour créer ou afficher une planification qui récupère les données mises à jour à partir des sources de données connectées. Pour obtenir des instructions sur la création d’une planification, consultez [Planifier une actualisation des données (PowerPivot pour SharePoint)](http://msdn.microsoft.com/fr-fr/8571208f-6aae-4058-83c6-9f916f5e2f9b).|  
+|![GMNI_btn_NewDataRefreshReportGallery](../../analysis-services/power-pivot-sharepoint/media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|Cliquez sur le bouton Gérer l'actualisation des données pour créer ou afficher une planification qui récupère les données mises à jour à partir des sources de données connectées. Pour obtenir des instructions sur la création d’une planification, consultez [Planifier une actualisation des données (PowerPivot pour SharePoint)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b).|  
   
 ##  <a name="delete"></a> Supprimer un classeur ou un rapport dans la galerie PowerPivot  
  Pour supprimer un document de la bibliothèque, basculez tout d'abord en mode d'affichage Tous les documents.  
@@ -136,7 +141,7 @@ caps.handback.revision: 14
   
 4.  Sélectionnez le classeur ou le rapport que vous voulez supprimer.  
   
-5.  Dans Documents (Fichiers), dans Gérer, cliquez sur le bouton **Supprimer un document**.  
+5.  Dans Documents (Fichiers), dans Gérer, cliquez sur le bouton **Supprimer un document** .  
   
 ##  <a name="image"></a> Actualiser une image miniature  
  Procédez comme suit pour regénérer une image miniature d’un document dans la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -151,19 +156,20 @@ caps.handback.revision: 14
   
 ##  <a name="bkmk_known_issues"></a> Problèmes connus  
   
-### Le type de document n'est pas pris en charge.  
+### <a name="document-type-is-not-supported"></a>Le type de document n'est pas pris en charge.  
  Le type de contenu **Document de Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** n’est pas pris en charge. Si vous activez le type de contenu **Document de Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** pour une bibliothèque de documents et que vous tentez de créer un document de ce type, un message d’erreur similaire à l’un des suivants s’affiche :  
   
 -   Le « nouveau document » nécessite une application et un navigateur Web compatibles avec Microsoft SharePoint Foundation. Pour ajouter un document dans cette bibliothèque de documents, cliquez sur le bouton « Télécharger un document ».  
   
--   « L'adresse Internet 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' n'est pas valide. » Microsoft Excel ne peut pas accéder au fichier 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx'. Plusieurs raisons sont possibles :  
+-   « L'adresse Internet 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' n'est pas valide. » Microsoft Excel ne peut pas accéder au fichier 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx'. Plusieurs raisons sont possibles :  
   
  Le type de contenu **Document de Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** n’est pas automatiquement ajouté aux bibliothèques de documents. Ce problème ne se produit pas, sauf si vous activez manuellement le type de contenu non pris en charge.  
   
-## Voir aussi  
- [Créer un emplacement approuvé pour les sites Power Pivot dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Supprimer la galerie PowerPivot](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)   
- [Créer et personnaliser une Galerie PowerPivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
- [Planifier une actualisation des données (PowerPivot pour SharePoint)](http://msdn.microsoft.com/fr-fr/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
+ [Créer et personnaliser la galerie PowerPivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
+ [Planifier une actualisation des données (PowerPivot pour SharePoint)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
   
   
+

@@ -1,24 +1,29 @@
 ---
-title: "Effacer les caches Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Effacer les Caches Analysis Services | Documents Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 67ea43179411006e5e549c44b13d4a3fa1d6074f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Effacer les caches Analysis Services
+# <a name="clear-the-analysis-services-caches"></a>Effacer les caches Analysis Services
   Analysis Services met en cache des données pour optimiser les performances des requêtes. Cette rubrique fournit des recommandations pour l'utilisation de la commande XMLA ClearCache en vue d'effacer des caches qui ont été créés en réponse à une requête MDX. Les effets de l'exécution de la commande ClearCache varient selon que vous utilisez un modèle tabulaire ou multidimensionnel.  
   
  **À quel moment effacer le cache pour des modèles MDX**  
@@ -37,7 +42,7 @@ caps.handback.revision: 11
   
  Comparées aux recommandations pour effacer les caches de modèles multidimensionnels lors du test des performances, il n'y a aucune recommandation étendue pour effacer les caches de modèles tabulaires. Si vous ne gérer pas le déploiement d'un modèle tabulaire qui contient des données sensibles, il n'y a aucune tâche administrative spécifique qui demande d'effacer le cache.  
   
-## Effacer le cache pour des modèles Analysis Services  
+## <a name="clear-the-cache-for-analysis-services-models"></a>Effacer le cache pour des modèles Analysis Services  
  Pour effacer le cache, utilisez XMLA et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez effacer le cache au niveau de la base de données, du cube, de la dimension, de la table ou du groupe de mesures. Les étapes suivantes pour effacer le cache au niveau de la base de données appliquent aux modèles MDX et aux modèles tabulaires.  
   
 > [!NOTE]  
@@ -47,13 +52,13 @@ caps.handback.revision: 11
   
  L'effacement du cache requiert la fourniture d'un identificateur d'objet à l'instruction **ClearCache** dans une requête XMLA. La première étape de cette rubrique explique comment obtenir un identificateur d'objet.  
   
-#### Étape 1 : obtenir l'identificateur d'objet  
+#### <a name="step-1-get-the-object-identifier"></a>Étape 1 : obtenir l'identificateur d'objet  
   
-1.  Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], cliquez avec le bouton droit sur un objet, sélectionnez **Propriétés** et copiez la valeur de la propriété ID dans le volet **Propriétés**. Cette approche fonctionne pour la base de données, le cube, la dimension ou la table.  
+1.  Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], cliquez avec le bouton droit sur un objet, sélectionnez **Propriétés**et copiez la valeur de la propriété ID dans le volet **Propriétés** . Cette approche fonctionne pour la base de données, le cube, la dimension ou la table.  
   
 2.  Pour obtenir l’ID d’un groupe de mesures, cliquez avec le bouton droit sur le groupe de mesures et sélectionnez **Générer un script du groupe de mesures en tant que**. Choisissez **Create** ou **Alter**, et envoyez la requête dans une fenêtre. L'ID du groupe de mesures sera visible dans la définition de l'objet. Copiez l'ID de la définition d'objet.  
   
-#### Étape 2 : exécuter la requête  
+#### <a name="step-2-run-the-query"></a>Étape 2 : exécuter la requête  
   
 1.  Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], cliquez avec le bouton droit sur une base de données, pointez sur **Nouvelle requête**, puis sélectionnez **XMLA**.  
   
@@ -88,8 +93,7 @@ caps.handback.revision: 11
     </return>  
     ```  
   
-## Voir aussi  
- [Tâches d'administration à l'aide de scripts dans Analysis Services]](../../analysis-services/instances/script-administrative-tasks-in-analysis-services.md)   
+## <a name="see-also"></a>Voir aussi  
  [Analyser une instance Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
   

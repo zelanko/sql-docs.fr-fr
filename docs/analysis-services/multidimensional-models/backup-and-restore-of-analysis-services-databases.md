@@ -1,35 +1,40 @@
 ---
-title: "Sauvegarde et restauration de bases de donn&#233;es Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.ssmsimbi.Restore.f1"
-  - "sql13.asvs.ssmsimbi.Backup.f1"
-helpviewer_keywords: 
-  - "sauvegarde des bases de données [Analysis Services]"
-  - "chiffrement [Analysis Services]"
-  - "bases de données [Analysis Services], restauration"
-  - "cryptographie [Analysis Services]"
-  - "bases de données [Analysis Services], sauvegarde"
-  - "restauration de bases de données [Analysis Services]"
-  - "récupération [Analysis Services]"
+title: "Sauvegarde et restauration de bases de données Analysis Services | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.ssmsimbi.Restore.f1
+- sql13.asvs.ssmsimbi.Backup.f1
+helpviewer_keywords:
+- backing up databases [Analysis Services]
+- encryption [Analysis Services]
+- databases [Analysis Services], restoring
+- cryptography [Analysis Services]
+- databases [Analysis Services], backing up
+- restoring databases [Analysis Services]
+- recovery [Analysis Services]
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 caps.latest.revision: 54
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 54
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 917761cf40eca3847cd304ec4e2aafb46fc06c5d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Sauvegarde et restauration de bases de donn&#233;es Analysis Services
+# <a name="backup-and-restore-of-analysis-services-databases"></a>Sauvegarde et restauration de bases de données Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclut la sauvegarde et la restauration afin que vous puissiez récupérer une base de données et ses objets à partir d'une date et heure spécifiques. La sauvegarde et la restauration peuvent également être utiles pour migrer des bases de données vers des serveurs mis à niveau, déplacer des bases de données entre des serveurs ou déployer une base de données sur un serveur de production. Pour la récupération des données, si vous ne possédez pas encore de plan de sauvegarde et si vos données ont de la valeur, vous devez concevoir et mettre en œuvre un plan au plus tôt.  
   
  Les commandes de restauration et sauvegarde sont effectuées sur une base de données Analysis Services déployée. Pour vos projets et solutions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous devez utiliser un contrôle de code source pour garantir la récupération des versions spécifiques de vos fichiers sources, puis créer un plan de récupération de données pour le référentiel du système de contrôle de code source que vous utilisez.  
@@ -65,10 +70,10 @@ caps.handback.revision: 54
 -   Recherchez des fichiers existants portant le même nom. S'il existe déjà un fichier portant le même nom, la sauvegarde échoue, sauf si vous spécifiez des options pour remplacer le fichier.  
   
 ##  <a name="bkmk_cube"></a> Sauvegarde d'une base de données multidimensionnelle ou tabulaire  
- Les administrateurs peuvent sauvegarder une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans un seul fichier de sauvegarde [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (.abf), quelle que soit la taille de la base de données. Pour obtenir des instructions détaillées, consultez [How to Backup an Analysis Services Database (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) [(Comment sauvegarder une base de données Analysis Services Database (TechMantra)] et [Automate Backup an Analysis Services Database (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html) [Automatiser la sauvegarde d’une base de données Analysis Services (TechMantra)].  
+ Les administrateurs peuvent sauvegarder une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans un seul fichier de sauvegarde [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (.abf), quelle que soit la taille de la base de données. Pour obtenir des instructions détaillées, consultez [How to Backup an Analysis Services Database (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) [(Comment sauvegarder une base de données Analysis Services Database (TechMantra)] et [Automate Backup an Analysis Services Database (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)[Automatiser la sauvegarde d’une base de données Analysis Services (TechMantra)].  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], utilisé pour le chargement et l’interrogation des modèles de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans un environnement SharePoint, charge ses modèles à partir des bases de données de contenu SharePoint. Ces bases de données de contenu sont relationnelles et s'exécutent sur le moteur de base de données relationnelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par conséquent, il n’existe aucune stratégie de sauvegarde et de restauration [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour les modèles de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si vous avez mis en place un plan de récupération d’urgence pour le contenu SharePoint, ce plan englobe les modèles de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] stockés dans les bases de données de contenu.  
+>  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], utilisé pour le chargement et l’interrogation [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modèles de données dans un environnement SharePoint, charge ses modèles à partir de bases de données de contenu SharePoint. Ces bases de données de contenu sont relationnelles et s'exécutent sur le moteur de base de données relationnelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par conséquent, il n’existe aucune stratégie de sauvegarde et de restauration [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour les modèles de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si vous avez mis en place un plan de récupération d’urgence pour le contenu SharePoint, ce plan englobe les modèles de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] stockés dans les bases de données de contenu.  
   
  **Partitions distantes**  
   
@@ -76,7 +81,7 @@ caps.handback.revision: 54
   
  **Contenu d'un fichier de sauvegarde**  
   
- La sauvegarde d'une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] produit un fichier de sauvegarde dont le contenu varie en fonction du mode de stockage utilisé par les objets de la base de données. Cette différence de contenu de sauvegarde résulte du fait que chaque mode de stockage stocke en fait un ensemble différent d'informations dans une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Par exemple, les partitions et les dimensions multidimensionnelles HOLAP (OLAP hybride) stockent les agrégations et les métadonnées dans la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], tandis que les partitions et les dimensions ROLAP (OLAP relationnel) stockent uniquement les métadonnées dans la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Comme le contenu réel d'une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] varie en fonction du mode de stockage de chaque partition, le contenu du fichier de sauvegarde varie également. Le tableau ci-dessous associe le contenu du fichier de sauvegarde au mode de stockage utilisé par les objets.  
+ La sauvegarde d'une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] produit un fichier de sauvegarde dont le contenu varie en fonction du mode de stockage utilisé par les objets de la base de données. Cette différence de contenu de sauvegarde résulte du fait que chaque mode de stockage stocke en fait un ensemble différent d'informations dans une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Par exemple, les partitions et les dimensions multidimensionnelles HOLAP (OLAP hybride) stockent les agrégations et les métadonnées dans la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , tandis que les partitions et les dimensions ROLAP (OLAP relationnel) stockent uniquement les métadonnées dans la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Comme le contenu réel d'une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] varie en fonction du mode de stockage de chaque partition, le contenu du fichier de sauvegarde varie également. Le tableau ci-dessous associe le contenu du fichier de sauvegarde au mode de stockage utilisé par les objets.  
   
 |Mode de stockage|Contenu du fichier de sauvegarde|  
 |------------------|-----------------------------|  
@@ -98,15 +103,15 @@ caps.handback.revision: 54
     > [!IMPORTANT]  
     >  Pour chaque fichier de sauvegarde, l'utilisateur qui exécute la commande de sauvegarde doit avoir l'autorisation d'écrire dans l'emplacement de sauvegarde spécifié pour chaque fichier. L’utilisateur doit aussi avoir l’un des rôles suivants : membre d’un rôle serveur pour l’instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou membre d’un rôle de base de données avec les autorisations de contrôle total (Administrateur) sur la base de données à sauvegarder.  
   
- Pour plus d’informations sur la sauvegarde d’une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Options de sauvegarde](../../analysis-services/multidimensional-models/backup-options.md).  
+ Pour plus d’informations sur la sauvegarde d’une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , consultez [Options de sauvegarde](../../analysis-services/multidimensional-models/backup-options.md).  
   
 ##  <a name="bkmk_restore"></a> Restauration d'une base de données Analysis Services  
  Les administrateurs peuvent restaurer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à partir d'un ou de plusieurs fichiers de sauvegarde.  
   
 > [!NOTE]  
->  Si un fichier de sauvegarde est chiffré, vous devez fournir le mot de passe spécifié pendant la sauvegarde pour pouvoir utiliser ce fichier dans le but de restaurer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+>  Si un fichier de sauvegarde est chiffré, vous devez fournir le mot de passe spécifié pendant la sauvegarde pour pouvoir utiliser ce fichier dans le but de restaurer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- Au cours de la restauration, vous disposez des options suivantes :  
+ Au cours de la restauration, vous disposez des options suivantes :  
   
 -   Vous pouvez restaurer la base de données en utilisant le nom original de la base de données ou vous pouvez spécifier un nouveau nom de base de données.  
   
@@ -117,15 +122,15 @@ caps.handback.revision: 54
 -   Vous pouvez décider que la commande de restauration modifie le dossier de restauration pour chaque partition à restaurer. Les partitions locales peuvent être restaurées dans tout emplacement de dossier local pour l'instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans laquelle la base de données est restaurée. Les partitions distantes peuvent être restaurées dans un dossier quelconque, sur un serveur quelconque, autre que le serveur local ; les partitions distantes ne peuvent pas devenir locales.  
   
     > [!IMPORTANT]  
-    >  Pour chaque fichier de sauvegarde, l'utilisateur qui exécute la commande de restauration doit avoir l'autorisation de lire à partir de l'emplacement de sauvegarde spécifié pour chaque fichier. Pour restaurer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui n'est pas installée sur le serveur, l'utilisateur doit également être un membre du rôle serveur pour cette instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Pour remplacer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], l’utilisateur doit avoir l’un des rôles suivants : membre du rôle serveur pour l’instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou membre d’un rôle de base de données avec les autorisations de contrôle total (Administrateur) sur la base de données à restaurer.  
+    >  Pour chaque fichier de sauvegarde, l'utilisateur qui exécute la commande de restauration doit avoir l'autorisation de lire à partir de l'emplacement de sauvegarde spécifié pour chaque fichier. Pour restaurer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui n'est pas installée sur le serveur, l'utilisateur doit également être un membre du rôle serveur pour cette instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Pour remplacer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , l’utilisateur doit avoir l’un des rôles suivants : membre du rôle serveur pour l’instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou membre d’un rôle de base de données avec les autorisations de contrôle total (Administrateur) sur la base de données à restaurer.  
   
     > [!NOTE]  
     >  Après la restauration d'une base de données existante, l'utilisateur qui a restauré la base de données peut perdre l'accès à la base de données restaurée. Cette perte d'accès peut se produire si, au moment de la sauvegarde, l'utilisateur n'était pas un membre du rôle de serveur ou un membre du rôle de base de données avec les autorisations de contrôle total (Administrateur).  
   
- Pour plus d’informations sur la restauration d’une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Options de restauration](../../analysis-services/multidimensional-models/restore-options.md).  
+ Pour plus d’informations sur la restauration d’une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , consultez [Options de restauration](../../analysis-services/multidimensional-models/restore-options.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Sauvegarde, restauration et synchronisation de bases de données &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)  
+
   
   

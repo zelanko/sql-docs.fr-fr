@@ -1,27 +1,32 @@
 ---
-title: "Exemples de requ&#234;tes de mod&#232;le de clustering | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clustering [exploration de données]"
-  - "requêtes de contenu [DMX]"
-  - "algorithmes de gestion de clusters [Analysis Services]"
+title: "Exemples de requêtes modèle de clustering | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clustering [Data Mining]
+- content queries [DMX]
+- clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0b72ea275e4d396531feabd86780f0dabc736e85
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Exemples de requ&#234;tes de mod&#232;le de clustering
+# <a name="clustering-model-query-examples"></a>Exemples de requêtes de modèle de clustering
   Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez récupérer les métadonnées sur le modèle ou créer une requête de contenu qui fournit des détails sur les séquences découvertes dans l'analyse. Une autre solution consiste à créer une requête de prédiction qui utilise les séquences dans le modèle pour faire des prédictions pour les nouvelles données. Chaque type de requête fournit des informations différentes. Par exemple, une requête de contenu peut fournir des détails supplémentaires sur les clusters identifiés, tandis qu'une requête de prédiction peut vous dire à quel cluster un nouveau point de données est le plus susceptible d'appartenir.  
   
  Cette section explique comment créer des requêtes pour les modèles basés sur l'algorithme de clustering [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -106,7 +111,7 @@ WHERE MODEL_NAME = 'TM_Clustering'
   
  [Retour en haut](#bkmk_top2)  
   
-## Recherche d'informations sur les Clusters  
+## <a name="finding-information-about-clusters"></a>Recherche d'informations sur les Clusters  
  Les requêtes de contenu les plus utiles sur les modèles de clustering retournent généralement le même type d'informations que celles auxquelles vous pouvez accéder à l'aide de **Cluster Viewer**. Il s'agit notamment des profils, des caractéristiques et de la discrimination de cluster. Cette section fournit des exemples de requêtes qui récupèrent ces informations.  
   
 ###  <a name="bkmk_Query3"></a> Exemple de requête 3: retour d'un cluster ou d'une liste de clusters  
@@ -131,7 +136,7 @@ WHERE NODE_TYPE = 5 AND NODE_SUPPORT > 1000
   
 -   La colonne NODE_DESCRIPTION contient une liste séparée par des virgules d'attributs. Notez qu'il est possible d'abréger la liste d'attributs à des fins d'affichage.  
   
--   La table imbriquée dans la colonne NODE_DISTRIBUTION contient la liste complète des attributs du cluster. Si votre client ne prend pas en charge d'ensembles de lignes hiérarchiques, vous pouvez retourner la table imbriquée en ajoutant le mot clé FLATTENED avant la liste des colonnes SELECT. Pour plus d’informations sur l’utilisation du mot clé FLATTENED, consultez [SELECT FROM &#60;modèle&#62;.CONTENT &#40;DMX&#41;](../Topic/SELECT%20FROM%20%3Cmodel%3E.CONTENT%20\(DMX\).md).  
+-   La table imbriquée dans la colonne NODE_DISTRIBUTION contient la liste complète des attributs du cluster. Si votre client ne prend pas en charge d'ensembles de lignes hiérarchiques, vous pouvez retourner la table imbriquée en ajoutant le mot clé FLATTENED avant la liste des colonnes SELECT. Pour plus d’informations sur l’utilisation du mot clé FLATTENED, consultez [SELECT FROM &#60;modèle&#62;.CONTENT &#40;DMX&#41;](../../dmx/select-from-model-content-dmx.md).  
   
  [Retour en haut](#bkmk_top2)  
   
@@ -249,7 +254,7 @@ WHERE IsInNode('001')
   
  [Retour en haut](#bkmk_top2)  
   
-## Exécution de prédictions à l'aide du modèle  
+## <a name="making-predictions-using-the-model"></a>Exécution de prédictions à l'aide du modèle  
  Bien que le clustering soit généralement utilisé pour décrire et comprendre des données, l'implémentation [!INCLUDE[msCoName](../../includes/msconame-md.md)] vous permet également de faire des prédictions sur l'appartenance au cluster et de retourner des probabilités associées à la prédiction. Cette section fournit des exemples de création de requêtes de prédiction sur des modèles de clustering. Vous pouvez faire des prédictions pour plusieurs cas, en spécifiant une source de données tabulaire, ou vous pouvez fournir une par une de nouvelles valeurs en créant une requête singleton. Pour plus de clarté, les exemples dans cette section sont tous des requêtes singleton.  
   
  Pour plus d’informations sur la création de requêtes de prédiction avec DMX, consultez [Outils de requête d’exploration de données](../../analysis-services/data-mining/data-mining-query-tools.md).  
@@ -283,11 +288,11 @@ NATURAL PREDICTION JOIN
 |----------------|----------------|  
 |1|0.55843544003102|  
   
- Dans cet exemple, la différence dans le modèle n'est pas significative. Toutefois, il peut parfois être important de détecter les différences entre la distribution réelle de valeurs et ce que le modèle prédit. La fonction [PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md) est utile dans ce scénario, car elle indique la probabilité qu’un cas ce produise pour un modèle donné.  
+ Dans cet exemple, la différence dans le modèle n'est pas significative. Toutefois, il peut parfois être important de détecter les différences entre la distribution réelle de valeurs et ce que le modèle prédit. L’onglet [PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md) est utile dans ce scénario, car elle indique la probabilité qu’un cas ce produise pour un modèle donné.  
   
  Le nombre retourné par la fonction PredictCaseLikelihood est une probabilité. Par conséquent, il est donc toujours égal à 0 ou 1, la valeur 0,5 représentant un résultat aléatoire. Un score inférieur à 0,5 signifie que le cas prédit est improbable pour le modèle donné, tandis qu'un score supérieur à 0,5 indique que le cas prédit est plus susceptible d'être adapté au modèle que de ne pas l'être.  
   
- Par exemple, la requête suivante retourne deux valeurs qui caractérisent la vraisemblance d'un nouveau cas d'exemple. La valeur non normalisée représente la probabilité pour le modèle actuel donné. Lorsque vous utilisez le mot clé NORMALIZED, le score de vraisemblance retourné par la fonction est ajusté en divisant la « probabilité avec le modèle » par la « probabilité sans le modèle ».  
+ Par exemple, la requête suivante retourne deux valeurs qui caractérisent la vraisemblance d'un nouveau cas d'exemple. La valeur non normalisée représente la probabilité pour le modèle actuel donné. Lorsque vous utilisez le mot clé NORMALIZED, le score de vraisemblance retourné par la fonction est ajusté en divisant la « probabilité avec le modèle » par la « probabilité sans le modèle ».  
   
 ```  
 SELECT  
@@ -360,11 +365,11 @@ NATURAL PREDICTION JOIN
   
  Par défaut, les résultats sont classés par probabilité. Les résultats indiquent que le Cluster 2, bien que sa probabilité soit assez faible, est toujours le mieux adapté au nouveau point de données.  
   
- **Remarque** La colonne supplémentaire `$DISTANCE`représente la distance du point de données au cluster. Par défaut, l'algorithme de gestion de clusters [!INCLUDE[msCoName](../../includes/msconame-md.md)] utilise le clustering EM évolutif qui attribue plusieurs clusters à chaque point de données et qui classe les clusters possibles.  Toutefois, si vous créez votre modèle de clustering à l'aide de l'algorithme K-means, un seul cluster peut être attribué à chaque point de données, et cette requête retournerait une seule ligne. Il est nécessaire de comprendre ces différences pour interpréter les résultats de la fonction [PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md). Pour plus d’informations sur les différences entre le clustering EM et le clustering K-means, consultez [Références techniques relatives à l’algorithme de gestion de clusters Microsoft](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md).  
+ **Remarque** La colonne supplémentaire `$DISTANCE`représente la distance du point de données au cluster. Par défaut, l'algorithme de gestion de clusters [!INCLUDE[msCoName](../../includes/msconame-md.md)] utilise le clustering EM évolutif qui attribue plusieurs clusters à chaque point de données et qui classe les clusters possibles.  Toutefois, si vous créez votre modèle de clustering à l'aide de l'algorithme K-means, un seul cluster peut être attribué à chaque point de données, et cette requête retournerait une seule ligne. Il est nécessaire de comprendre ces différences pour interpréter les résultats de la fonction [PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md) . Pour plus d’informations sur les différences entre le clustering EM et le clustering K-means, consultez [Références techniques relatives à l’algorithme de gestion de clusters Microsoft](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md).  
   
  [Retour en haut](#bkmk_top2)  
   
-## Liste de fonctions  
+## <a name="function-list"></a>Liste de fonctions  
  Tous les algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)] prennent en charge un ensemble commun de fonctions. Toutefois, les modèles créés avec l'algorithme de gestion de clusters [!INCLUDE[msCoName](../../includes/msconame-md.md)] prennent en charge les fonctions supplémentaires répertoriées dans le tableau suivant.  
   
 |||  
@@ -387,9 +392,9 @@ NATURAL PREDICTION JOIN
   
  Pour en savoir plus sur la syntaxe de fonctions spécifiques, consultez [Informations de référence sur les fonctions DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Requêtes d'exploration de données](../../analysis-services/data-mining/data-mining-queries.md)   
- [Références techniques relatives à l'algorithme de gestion de clusters Microsoft](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
+ [Microsoft Clustering algorithme informations techniques de référence](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
  [Algorithme de gestion de clusters Microsoft](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)  
   
   

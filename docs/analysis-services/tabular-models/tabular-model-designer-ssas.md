@@ -1,26 +1,31 @@
 ---
-title: "G&#233;n&#233;rateur de mod&#232;les tabulaires (SSAS) | Microsoft Docs"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1"
+title: "Générateur de modèles tabulaires (SSAS) | Documents Microsoft"
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 22
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: ee8b777d6e7439e94a2e5687a28ccf521e8aebdc
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# G&#233;n&#233;rateur de mod&#232;les tabulaires (SSAS)
-  Le générateur de modèles tabulaires fait partie de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], intégré à Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], qui propose des modèles de type de projet supplémentaires propres au développement de solutions de modèles tabulaires professionnelles.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] peut être téléchargé gratuitement sur Internet. Pour plus d’informations, consultez [Télécharger SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx).   
+# <a name="tabular-model-designer-ssas"></a>Générateur de modèles tabulaires (SSAS)
+  Le générateur de modèles tabulaires fait partie de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], intégré à Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], qui propose des modèles de type de projet supplémentaires propres au développement de solutions de modèles tabulaires professionnelles.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] peut être téléchargé gratuitement sur Internet. Pour plus d’informations, consultez [Télécharger SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx) .   
   
 ##  <a name="bkmk_benefits"></a> Avantages  
  Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], de nouveaux modèles de projet de création de modèles tabulaires sont ajoutés aux types de projet disponibles. Une fois un nouveau projet de modèle tabulaire créé à l'aide de l'un des modèles, vous pouvez commencer à créer un modèle à l'aide des outils et des assistants du générateur de modèles tabulaires.  
@@ -38,16 +43,16 @@ caps.handback.revision: 22
  **Importer à partir du serveur (tabulaire)**  
  Ce modèle peut être utilisé pour créer un projet de modèle tabulaire en extrayant les métadonnées d'un modèle tabulaire existant dans Analysis Services.  
   
- Les modèles plus anciens présentent des niveaux de compatibilité antérieurs. Vous pouvez effectuer une mise à niveau vers la version 1200 en modifiant la propriété Niveau de compatibilité après l’importation de la définition de modèle.  
+ Les modèles plus anciens présentent des niveaux de compatibilité antérieurs. Vous pouvez mettre à niveau en modifiant la propriété de niveau de compatibilité après l’importation de la définition du modèle.  
   
  **Importer à partir de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**  
- Ce modèle est utilisé pour la création d'un projet de modèle tabulaire en extrayant les métadonnées et les données d'un fichier [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)].  
+ Ce modèle est utilisé pour la création d'un projet de modèle tabulaire en extrayant les métadonnées et les données d'un fichier [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] .  
   
 ##  <a name="bkmk_wind_men"></a> Fenêtres et menus  
  L'environnement de création de modèles tabulaires de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] inclut ce qui suit :  
   
-### Fenêtre de concepteur  
- La fenêtre du concepteur permet de créer des modèles tabulaires en fournissant une représentation visuelle du modèle. Lorsque vous ouvrez le fichier Model.bim, le modèle s'ouvre dans la fenêtre du concepteur. Vous pouvez créer un modèle dans la fenêtre du concepteur à l'aide de deux modes d'affichage différents :  
+### <a name="designer-window"></a>Fenêtre de concepteur  
+ La fenêtre du concepteur permet de créer des modèles tabulaires en fournissant une représentation visuelle du modèle. Lorsque vous ouvrez le fichier Model.bim, le modèle s'ouvre dans la fenêtre du concepteur. Vous pouvez créer un modèle dans la fenêtre du concepteur à l'aide de deux modes d'affichage différents :  
   
  **Vue de données**  
  La vue de données affiche les tables dans un format de grille tabulaire. Vous pouvez également définir des mesures à l'aide de la grille de mesures, qui peut être affichée pour chaque table dans la vue de données uniquement.  
@@ -57,32 +62,32 @@ caps.handback.revision: 22
   
  La plupart des tâches de création de modèles peuvent être effectuées dans l'une ou l'autre vue.  
   
-### Fenêtre Afficher le code  
- Vous pouvez visualiser le code associé à un fichier Model.bim en cliquant avec le bouton droit sur le fichier dans l’Explorateur de solutions et en sélectionnant **Afficher le code**. Pour les modèles tabulaires présentant le niveau de compatibilité 1200, la définition de modèle est exprimée en JSON.  
+### <a name="view-code-window"></a>Fenêtre Afficher le code  
+ Vous pouvez visualiser le code associé à un fichier Model.bim en cliquant avec le bouton droit sur le fichier dans l’Explorateur de solutions et en sélectionnant **Afficher le code** . Pour les modèles tabulaires au niveau de compatibilité 1200 et versions ultérieur, la définition du modèle est exprimée en JSON.  
   
  Notez que vous devrez disposer d’une version complète de Visual Studio qui fournit l’éditeur JSON. Vous pouvez télécharger et installer l’ [édition gratuite Visual Studio Community](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx) si vous n’avez pas besoin des fonctions supplémentaires disponibles dans les éditions commerciales.  
   
-### Explorateur de solutions  
+### <a name="solution-explorer"></a>Explorateur de solutions  
  La fenêtre Explorateur de solutions présente la solution active comme un conteneur logique d'un projet de modèle tabulaire, avec ses éléments associés. Le projet de modèle (.smproj) contient uniquement un objet Références (vide) et le fichier Model.bim. À partir de cette vue, vous pouvez directement ouvrir les éléments de projet pour les modifier et y effectuer d'autres tâches de gestion.  
   
  Les solutions de modèles tabulaires contiennent généralement un seul projet ; toutefois, une solution peut contenir également d'autres projets, par exemple, un projet Integration Services ou Reporting Services. Vous pouvez ajouter plusieurs fichiers à condition qu'ils ne soient pas du même type que les fichiers de projet de modèle tabulaire, et que leur propriété Action de génération ait pour valeur Aucune, ou que la propriété Copier dans le répertoire de sortie soit définie avec la valeur Ne pas copier.  
   
  Pour afficher l'Explorateur de solutions, dans le menu **Affichage** , cliquez sur **Explorateur de solutions**.  
 
-### Explorateur de modèles tabulaires
-  Tout d’abord disponible dans la version d’août 2016 (14.0.60812.0) de [Outils de données SQL Server](https://msdn.microsoft.com/mt186501), l’Explorateur de modèles tabulaires vous permet de naviguer parmi les objets de métadonnées dans les modèles tabulaires 1200.
+### <a name="tabular-model-explorer"></a>Explorateur de modèles tabulaires
+  Première disponibles dans la version d’août 2016 (14.0.60812.0) de [SQL Server Data Tools](https://msdn.microsoft.com/mt186501), l’Explorateur de modèles tabulaires vous permet d’atteindre des objets de métadonnées dans les modèles tabulaires.
 
- Pour afficher l’Explorateur de modèles tabulaires, cliquez sur **Afficher** > **Autres fenêtres**, puis cliquez sur l’**Explorateur de modèles tabulaires**.
+ Pour afficher l’Explorateur de modèles tabulaires, cliquez sur **Afficher** > **Autres fenêtres**, puis cliquez sur l’ **Explorateur de modèles tabulaires**.
    
   ![Explorateur de modèles tabulaires](../../analysis-services/tabular-models/media/tabular-model-explorer.png) 
   
- L’Explorateur de modèles tabulaires organise les objets de métadonnées dans une arborescence qui ressemble étroitement à un modèle tabulaire 1200. Les sources de données, perspectives, relations, rôles, tables et traductions correspondent à des objets de schéma de niveau supérieur. Il existe quelques exceptions, en particulier les indicateurs de performance clé et les mesures qui techniquement ne sont pas des objets de niveau supérieur, mais des objets enfants des diverses tables du modèle. Cependant, le fait de disposer de conteneurs de niveau supérieur consolidés pour l’ensemble des indicateurs de performance clés et des mesures facilite l’utilisation de ces objets, notamment si votre modèle inclut un très grand nombre de tables. Les mesures sont également répertoriées dans leurs tables parent correspondantes, de sorte que vous ayez une vue claire des relations parent-enfant réelles. Si vous sélectionnez une mesure dans le conteneur de mesures de niveau supérieur, la même mesure est également sélectionnée dans la collection enfant sous sa table et vice versa.  
+ L’Explorateur de modèles tabulaires organise les objets de métadonnées dans une arborescence qui ressemble le schéma d’un modèle tabulaire. Les sources de données, perspectives, relations, rôles, tables et traductions correspondent à des objets de schéma de niveau supérieur. Il existe quelques exceptions, en particulier les indicateurs de performance clé et les mesures qui techniquement ne sont pas des objets de niveau supérieur, mais des objets enfants des diverses tables du modèle. Cependant, le fait de disposer de conteneurs de niveau supérieur consolidés pour l’ensemble des indicateurs de performance clés et des mesures facilite l’utilisation de ces objets, notamment si votre modèle inclut un très grand nombre de tables. Les mesures sont également répertoriées dans leurs tables parent correspondantes, de sorte que vous ayez une vue claire des relations parent-enfant réelles. Si vous sélectionnez une mesure dans le conteneur de mesures de niveau supérieur, la même mesure est également sélectionnée dans la collection enfant sous sa table et vice versa.  
  
  Les nœuds d’objet dans l’Explorateur de modèles tabulaires sont liés aux options de menu appropriées qui jusqu’à présent étaient masquées sous les menus Modèle, Table et Colonne dans Visual Studio. Vous pouvez cliquer avec le bouton droit sur un objet pour explorer les options relatives au type d’objet. Tous les types de nœuds d’objet n’ont pas encore de menu contextuel, mais des améliorations ainsi que des options supplémentaires seront intégrées aux prochaines versions. 
 
  L’Explorateur de modèles tabulaires offre également une fonctionnalité de recherche pratique. Il suffit d’entrer une partie du nom dans la zone de recherche pour que l’Explorateur de modèles tabulaires réduise l’arborescence pour n’afficher que les résultats correspondants. 
   
-### Fenêtre Propriétés  
+### <a name="properties-window"></a>Fenêtre Propriétés  
  La fenêtre Propriétés affiche les propriétés de l'objet sélectionné. Les objets suivants ont des propriétés qui peuvent être affichées et modifiées dans la fenêtre Propriétés :  
   
 -   Model.bim  
@@ -99,7 +104,7 @@ caps.handback.revision: 22
   
  Pour afficher la fenêtre **Propriétés** , cliquez sur le menu **Affichage** , puis sur **Fenêtre Propriétés**.  
   
-### Liste d'erreurs  
+### <a name="error-list"></a>Liste d'erreurs  
  La fenêtre Liste d'erreurs contient des messages concernant l'état du modèle :  
   
 -   Notifications concernant les méthodes conseillées pour la sécurité.  
@@ -112,19 +117,19 @@ caps.handback.revision: 22
   
  Par défaut, **Liste d'erreurs** n'apparaît que lorsqu'une erreur est retournée. Vous pouvez, toutefois, afficher la fenêtre **Liste d'erreurs** à tout moment. Pour afficher la fenêtre **Liste d'erreurs** , cliquez sur le menu **Affichage** , puis sur **Liste d'erreurs**.  
   
-### Sortie  
+### <a name="output"></a>Sortie  
  Les informations de génération et de déploiement sont affichées dans la fenêtre **Sortie** (en plus de la boîte de dialogue modale de progression). Pour afficher la fenêtre **Sortie** , cliquez sur le menu **Affichage** , puis sur Sortie.  
   
-### Éléments de menu  
- Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], des éléments de menu supplémentaires spécifiques à la création de modèles tabulaires sont ajoutés à la barre de menus Visual Studio. Le menu **Modèle** peut être utilisé pour lancer l'Assistant Importation de données, voir les connexions existantes, traiter les données d'espace de travail et parcourir l'espace de travail de modèle dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Le menu **Table** est utilisé pour créer et gérer des relations entre des tables, créer et gérer des mesures, spécifier des paramètres de table de données, spécifier des options de calcul et spécifier d'autres propriétés de table. Avec le menu **Colonne** , vous pouvez ajouter et supprimer des colonnes dans une table, masquer et afficher des colonnes et spécifier d'autres propriétés de colonne telles que les types de données et les filtres. Vous pouvez générer et déployer des solutions de modèles tabulaires à partir du menu **Génération** . Les fonctions Copier/Coller sont incluses dans le menu **Édition**.  
+### <a name="menu-items"></a>Éléments de menu  
+ Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], des éléments de menu supplémentaires spécifiques à la création de modèles tabulaires sont ajoutés à la barre de menus Visual Studio. Le menu **Modèle** peut être utilisé pour lancer l'Assistant Importation de données, voir les connexions existantes, traiter les données d'espace de travail et parcourir l'espace de travail de modèle dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Le menu **Table** est utilisé pour créer et gérer des relations entre des tables, créer et gérer des mesures, spécifier des paramètres de table de données, spécifier des options de calcul et spécifier d'autres propriétés de table. Avec le menu **Colonne** , vous pouvez ajouter et supprimer des colonnes dans une table, masquer et afficher des colonnes et spécifier d'autres propriétés de colonne telles que les types de données et les filtres. Vous pouvez générer et déployer des solutions de modèles tabulaires à partir du menu **Génération** . Les fonctions Copier/Coller sont incluses dans le menu **Édition** .  
   
  En plus de ces éléments de menu, des paramètres supplémentaires sont ajoutés aux options Analysis Services accessibles dans les éléments du menu Outils.  
   
-### Barre d'outils  
+### <a name="toolbar"></a>Barre d'outils  
  La barre d'outils Analysis Services fournit un accès rapide et aisé aux commandes de création de modèles utilisées les plus fréquemment.  
   
 ##  <a name="bkmk_vsint"></a> Intégration à Visual Studio  
- **contrôle de code source ;**  
+ **contrôle de code source ;**  
  Les projets Analysis Services s'intègrent au plug-in sélectionné du contrôle de code source. Si vous avez configuré Visual Studio pour utiliser le contrôle de code source, vous pouvez utiliser l'insertion/l'extraction à partir de l'Explorateur de solutions. Pour configurer l'utilisation de Team Foundation Server, consultez [Configurer Visual Studio avec le contrôle de version de Team Foundation](http://msdn.microsoft.com/library/ms253064.aspx). De nombreux plug-ins de contrôle de code source tiers sont également pris en charge.  
   
  **Polices**  
@@ -133,7 +138,7 @@ caps.handback.revision: 22
  **Raccourcis clavier**  
  Les raccourcis clavier Analysis Services peuvent être configurés/remappés via la boîte de dialogue Outils->Options->Clavier. Certains raccourcis globaux de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , permettant notamment la génération, l'enregistrement, le débogage, la création d'un nouveau projet, etc. sont pris en charge dans le contexte du générateur de modèles tabulaires. D'autres raccourcis spécifiques du générateur de modèles tabulaires sont présents dans le contexte d'Analysis Services.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Projets de modèles tabulaires &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
  [Propriétés &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   

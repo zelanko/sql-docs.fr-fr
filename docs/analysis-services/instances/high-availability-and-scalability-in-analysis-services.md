@@ -1,35 +1,40 @@
 ---
-title: "Haute disponibilit&#233; et extensibilit&#233; dans Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Haute disponibilité et extensibilité dans Analysis Services | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d7040a55-1e4d-4c24-9333-689c1b9e2db8
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5417a642fd9522ffb3453caff198480e1d930a0a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Haute disponibilit&#233; et extensibilit&#233; dans Analysis Services
+# <a name="high-availability-and-scalability-in-analysis-services"></a>Haute disponibilité et extensibilité dans Analysis Services
   Cet article décrit les techniques couramment utilisées pour rendre les bases de données Analysis Services hautement disponibles et évolutives. Bien que ces deux objectifs pourraient être traités séparément, ils vont souvent de pair : un déploiement évolutif destiné à des charges de travail de requête ou de traitement volumineuses est généralement associé à certaines attentes en matière de haute disponibilité.  
   
  L’inverse n’est cependant pas toujours vrai. La haute disponibilité, sans mise à l’échelle, peut être le seul objectif lorsque des contrats SLA stricts sont établis pour des charges de travail de requête critiques mais modérées.  
   
  Les techniques permettant de rendre Analysis Services hautement disponible et évolutif sont sensiblement les mêmes pour tous les modes de serveur (multidimensionnel, tabulaire et mode intégré SharePoint). Sauf indication contraire, partez du principe que les informations présentes dans cet article s’appliquent à tous les modes.  
   
-## Points clés  
- Les techniques associées à la disponibilité et la mise à l’échelle étant différentes de celles du moteur de base de données relationnelle, un bref résumé des points clés permet de présenter clairement les techniques utilisées avec Analysis Services :  
+## <a name="key-points"></a>Points clés  
+ Les techniques associées à la disponibilité et la mise à l’échelle étant différentes de celles du moteur de base de données relationnelle, un bref résumé des points clés permet de présenter clairement les techniques utilisées avec Analysis Services :  
   
--   Analysis Services utilise les mécanismes de haute disponibilité et d’extensibilité intégrés dans la plateforme serveur Windows : équilibrage de la charge réseau (NLB), clustering de basculement Windows Server (WSFC), ou les deux.  
+-   Analysis Services utilise les mécanismes de haute disponibilité et d’extensibilité intégrés dans la plateforme serveur Windows : équilibrage de la charge réseau (NLB), clustering de basculement Windows Server (WSFC), ou les deux.  
   
     > [!NOTE]  
-    >  La fonctionnalité Always On du moteur de base de données relationnelle ne s’étend pas à Analysis Services.  Vous ne pouvez pas configurer une instance Analysis Services pour qu’elle s’exécute dans un groupe de disponibilité Always On.  
+    >  La fonctionnalité Always On du moteur de base de données relationnelle ne s’étend pas à Analysis Services.  Vous ne pouvez pas configurer une instance Analysis Services pour qu’elle s’exécute dans un groupe de disponibilité Always On.  
     >   
     >  Bien qu’Analysis Services ne s’exécute pas dans des groupes de disponibilité Always On, il peut à la fois récupérer et traiter des données provenant de bases de données relationnelles Always On. Pour connaître les instructions de configuration d’une base de données relationnelle hautement disponible en vue de son utilisation par Analysis Services, consultez [Analysis Services avec les groupes de disponibilité AlwaysOn](../../database-engine/availability-groups/windows/analysis-services-with-always-on-availability-groups.md).  
   
@@ -60,12 +65,12 @@ caps.handback.revision: 14
   
  Pour répondre à une exigence de haute disponibilité, une autre stratégie consiste à utiliser des machines virtuelles. Si la disponibilité peut être obtenue en mettant en place un serveur de remplacement en plusieurs heures au lieu de quelques minutes, vous pouvez peut-être utiliser des machines virtuelles pouvant être démarrées à la demande, et chargées avec des bases de données mises à jour récupérées à partir d’un emplacement central.  
   
-## Extensibilité à l’aide de bases de données en lecture seule et en lecture-écriture  
+## <a name="scalability-using-read-only-and-read-write-databases"></a>Extensibilité à l’aide de bases de données en lecture seule et en lecture-écriture  
  L’équilibrage de la charge réseau est recommandé pour les charges de travail de traitement et de requête élevées ou intensifiées. Les bases de données Analysis Services dans une solution d’équilibrage de la charge réseau sont définies en tant que bases de données en lecture seule afin de garantir la cohérence entre les requêtes.  
   
  Bien que les instructions données dans l’article [Scale-out querying for Analysis Services using read-only databases](https://technet.microsoft.com/library/ff795582\(v=sql.100\).aspx) (Montée en charge des requêtes pour Analysis Services à l’aide de bases de données en lecture seule) datent de 2008, elles sont toujours valables. Les systèmes d’exploitation et le matériel des serveurs ont évolué, et les références à certaines plateformes et limites de processeur sont obsolètes, mais la technique de base d’utilisation des bases de données en lecture seule et en lecture-écriture pour de grands volumes de requêtes est inchangée.  
   
- L’approche peut être résumée comme suit :  
+ L’approche peut être résumée comme suit :  
   
 -   Utilisez un matériel et des instances d’Analysis Services dédiés pour traiter la base de données. Définissez la base de données sur lecture seule une fois le traitement terminé. Pour obtenir des instructions, consultez [Switch an Analysis Services database between ReadOnly and ReadWrite modes](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md) .  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 14
   
 -   Utilisez robocopy pour copier un répertoire de données entier du serveur de traitement vers chaque serveur de requêtes et attacher la même base de données en lecture seule à tous les serveurs de requêtes. Vous pouvez également utiliser des instantanés SAN, la synchronisation ou tout autre outil ou méthode permettant de déplacer des bases de données de production.  
   
-## Demandes de ressources pour les charges de travail tabulaires et multidimensionnelles  
+## <a name="resource-demands-for-tabular-and-multidimensional-workloads"></a>Demandes de ressources pour les charges de travail tabulaires et multidimensionnelles  
  Le tableau suivant offre un résumé général de l’utilisation des ressources système par Analysis Services pour les requêtes et le traitement, triées par mode de serveur et stockage. Ce résumé peut vous permettre de comprendre sur quoi vous devez mettre l’accent dans un déploiement multiserveur qui gère une charge de travail distribuée.  
   
 |||  
@@ -84,7 +89,7 @@ caps.handback.revision: 14
 |Modèles multidimensionnels utilisant un stockage MOLAP|Choisissez une configuration équilibrée qui combine l’E/S disque pour charger des données rapidement et une mémoire RAM suffisante pour les données en cache.|  
 |Modèles multidimensionnels utilisant un stockage ROLAP|Optimisez l’E/S disque et réduisez la latence du réseau au minimum.|  
   
-## Haute disponibilité et redondance via WSFC  
+## <a name="highly-availability-and-redundancy-through-wsfc"></a>Haute disponibilité et redondance via WSFC  
  Analysis Services peut être installé dans un cluster de basculement Windows Server (WSFC) existant pour obtenir une haute disponibilité qui restaure le service dans les plus brefs délais.  
   
  Les clusters de basculement fournissent un accès complet (lecture et écriture différée) à la base de données, mais un nœud à la fois. Les bases de données secondaires s’exécutent sur des nœuds supplémentaires dans le cluster, constituant des serveurs de remplacement si le premier nœud tombe en panne.  
@@ -97,11 +102,11 @@ caps.handback.revision: 14
 - En cas de mise en cluster d’Analysis Services, vérifiez que les nœuds participant au cluster s’exécutent sur du matériel identique ou très similaire, et que le contexte opérationnel de chaque nœud présente les mêmes caractéristiques : version du système d’exploitation et Service Packs, version d’Analysis Services et Service Packs (ou mises à jour cumulatives), ainsi que le mode serveur.
 - Évitez de réaffecter un nœud passif comme nœud actif d’une autre charge de travail. Tous les gains à court terme en matière d’utilisation de l’ordinateur sont perdus en cas de basculement réel si le nœud ne peut pas gérer les deux charges de travail.
  
- Des instructions détaillées et des informations générales pour le déploiement d’Analysis Services dans un cluster de basculement sont fournies dans le livre blanc [How to Cluster SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx) (Comment mettre en cluster SQL Server Analysis Services). Bien que rédigées pour SQL Server 2012, ces instructions s’appliquent toujours aux versions plus récentes d’Analysis Services.  
+ Des instructions détaillées et des informations générales pour le déploiement d’Analysis Services dans un cluster de basculement sont fournies dans le livre blanc [How to Cluster SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx)(Comment mettre en cluster SQL Server Analysis Services). Bien que rédigées pour SQL Server 2012, ces instructions s’appliquent toujours aux versions plus récentes d’Analysis Services.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Synchroniser des base de données Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [Forcing NUMA affinity for Analysis Services Tabular Databases (Forcer l’affinité NUMA pour les bases de données tabulaires Analysis Services)](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
- [An Analysis Services Case Study: Using Tabular Models in a Large-scale Commercial Solution (Étude de cas Analysis Services : utilisation des modèles tabulaires dans une solution commerciale à grande échelle)](https://msdn.microsoft.com/library/dn751533.aspx)  
+ [Forcer l’affinité NUMA pour les bases de données tabulaires Analysis Services](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
+ [Une étude de cas Analysis Services : Utilisation des modèles tabulaires dans une Solution commerciale à grande échelle](https://msdn.microsoft.com/library/dn751533.aspx)  
   
   

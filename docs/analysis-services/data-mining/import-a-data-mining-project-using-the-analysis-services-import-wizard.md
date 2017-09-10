@@ -1,26 +1,31 @@
 ---
-title: "Importer un projet d&#39;exploration de donn&#233;es &#224; l&#39;aide de l&#39;Assistant Importation d&#39;Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Importer un projet d’exploration de données à l’aide de l’Assistant Importation d’Analysis Services | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aaa433e5bd9b8730c38e4853eda591177e592a92
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Importer un projet d&#39;exploration de donn&#233;es &#224; l&#39;aide de l&#39;Assistant Importation d&#39;Analysis Services
+# <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Importer un projet d'exploration de données à l'aide de l'Assistant Importation d'Analysis Services
   Cette rubrique décrit la méthode de création d’un projet d’exploration de données en important les métadonnées d’un projet existant d’exploration de données sur un autre serveur, à l’aide du modèle **Importer à partir du serveur (Multidimensionnel et exploration de données)**, dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
-## Importez des sources de données, des structures d'exploration de données et des modèles d'exploration de données d'un projet existant d'exploration de données  
+## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>Importez des sources de données, des structures d'exploration de données et des modèles d'exploration de données d'un projet existant d'exploration de données  
  Quand vous utilisez le modèle **Importer à partir du serveur (Multidimensionnel et exploration de données)**, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crée un projet d’exploration de données, puis copie les métadonnées du projet d’exploration de données spécifié. Le nouveau projet contient les mêmes sources de données, vues de source de données, structures d'exploration de données et modèles d'exploration de données que la base de données ssASnoversion à partir de laquelle vous avez effectué l'importation. Toutefois, le projet ne peut pas être utilisé tant que certaines propriétés ne sont pas mises à jour et que les objets n'ont pas été traités comme suit :  
   
 -   Les données elles-mêmes ne sont pas copiées du serveur source vers le nouveau projet d'exploration de données, seules les définitions des sources de données et des vues de source de données sont importées. Par conséquent, une fois l'importation terminée et les objets créés, vous devez remplir les objets avec les données par apprentissage des structures d'exploration de données et des modèles dépendants. Vous pouvez utiliser la commande **Traiter tout** dans le Concepteur d'exploration de données pour effectuer l'apprentissage des modèles et des structures.  
@@ -35,11 +40,11 @@ caps.handback.revision: 6
   
      Si vous ne pouvez pas modifier la base de données de déploiement par défaut pour utiliser une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécutant en mode multidimensionnel ou d'exploration de données, vous pouvez toujours spécifier la base de données de déploiement à l'aide de la boîte de dialogue **Propriétés du projet** .  
   
-#### Pour créer un nouveau projet d'exploration de données en important un projet d'exploration de données existant  
+#### <a name="to-create-a-new-data-mining-project-by-importing-an-existing-data-mining-project"></a>Pour créer un nouveau projet d'exploration de données en important un projet d'exploration de données existant  
   
 1.  Dans le menu [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]Fichier **de** , cliquez sur **Nouveau**, puis sur **Projet**.  
   
-2.  Dans la boîte de dialogue **Nouveau projet**, sous **Modèles installés**, cliquez sur **Business Intelligence** sur **Analysis Services**, puis sur **Importer à partir du serveur (Multidimensionnel et exploration de données)**.  
+2.  Dans la boîte de dialogue **Nouveau projet** , sous **Modèles installés**, cliquez sur **Business Intelligence**sur **Analysis Services**, puis sur **Importer à partir du serveur (Multidimensionnel et exploration de données)**.  
   
 3.  Pour le **Nom**, tapez un nom pour le projet, puis spécifiez un emplacement et le nom de la solution et cliquez sur **OK**.  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 6
      Pour **Base de données**, choisissez la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui contient les objets d'exploration de données que vous souhaitez importer.  
   
     > [!WARNING]  
-    >  Vous ne pouvez pas spécifier les objets que vous souhaitez importer ; lorsque vous choisissez une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existante, tous les objets multidimensionnels et d'exploration de données sont importés.  
+    >  Vous ne pouvez pas spécifier les objets que vous souhaitez importer ; lorsque vous choisissez une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existante, tous les objets multidimensionnels et d'exploration de données sont importés.  
   
      Cliquez sur **Suivant**.  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 6
   
      Le nouveau projet est automatiquement ouvert à l'aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Propriétés de projet &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
   
   

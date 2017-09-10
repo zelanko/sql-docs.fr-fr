@@ -1,63 +1,68 @@
 ---
-title: "Nouveaut&#233;s d’Analysis Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/24/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: "Quel &#39; nouveauté dans Analysis Services | Documents Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/24/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
 caps.latest.revision: 97
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 97
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 212fbb3618bbccc58ea077d59f15dca3c31ca71f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Nouveaut&#233;s d’Analysis Services
-[!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] inclut de nombreuses nouvelles améliorations, telles que de meilleures performances, une plus grande facilité de création de solutions, la gestion automatisée des bases de données, de meilleures relations avec filtrage croisé bidirectionnel, le traitement parallèle des partitions et bien plus encore. Au cœur de la plupart des améliorations apportées à cette version se trouve le nouveau niveau de compatibilité 1200 pour les bases de données model tabulaires.     
+# <a name="what39s-new-in-analysis-services"></a>Quel &#39; nouveauté dans Analysis Services
+SQL Server 2016 Analysis Services inclut de nombreuses nouvelles améliorations de fournir des performances améliorées, solution plus facile de création, de gestion automatisée de la base de données améliorée des relations avec bidirectionnelles entre le filtrage, le traitement des partitions parallèles et bien plus encore. Au cœur de la plupart des améliorations apportées à cette version se trouve le nouveau niveau de compatibilité 1200 pour les bases de données model tabulaires.     
 
 ## <a name="azure-analysis-services"></a>Azure Analysis Services
-Comme nous l’avons annoncé lors de la conférence SQL PASS de 2016, Analysis Services est désormais disponible dans le cloud comme un service Azure. **Azure Analysis Services** prend en charge les modèles tabulaires au niveau de compatibilité 1200. DirectQuery, les partitions, la sécurité de niveau ligne, les relations bidirectionnelles et les traductions sont toutes prises en charge. Pour en savoir plus et effectuer un essai gratuit, consultez [Azure Analysis Services](https://azure.microsoft.com/en-us/services/analysis-services/). 
+Comme nous l’avons annoncé lors de la conférence SQL PASS de 2016, Analysis Services est désormais disponible dans le cloud comme un service Azure. **Azure Analysis Services** prend en charge les modèles tabulaires aux niveaux de compatibilité 1200 et supérieurs. DirectQuery, les partitions, la sécurité de niveau ligne, les relations bidirectionnelles et les traductions sont toutes prises en charge. Pour en savoir plus et effectuer un essai gratuit, consultez [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/). 
 
 ## <a name="whats-new-in-sql-server-2016-service-pack-1-sp1-analysis-services"></a>Nouveautés dans SQL Server 2016 Service Pack 1 (SP1) Analysis Services
 
-[Télécharger SQL Server 2016 SP1](https://www.microsoft.com/en-us/download/details.aspx?id=54276) 
+[Télécharger SQL Server 2016 SP1](http://www.microsoft.com/download/details.aspx?id=54276) 
 
 SQL Server 2016 SP1 Analysis Services offre une amélioration des performances et de la scalabilité grâce à la reconnaissance NUMA (Non-Uniform Memory Access) et à l’allocation de mémoire optimisée en fonction des **blocs Intel TBB** (Intel Threading Building Blocks). Cette nouvelle fonctionnalité permet de réduire le coût total de possession en prenant en charge davantage d’utilisateurs sur une quantité moindre de serveurs d’entreprise plus puissants. 
 
 En particulier, SQL Server 2016 SP1 Analysis Services offre des améliorations dans les domaines clés suivants :
 
--    **Reconnaissance NUMA** : pour une meilleure prise en charge de NUMA, le moteur (VertiPaq) en mémoire dans Analysis Services gère maintenant une file d’attente de travail distincte sur chaque nœud NUMA. Cela garantit que les travaux d’analyse de segment s’exécutent sur le même nœud que celui où la mémoire est allouée pour les données du segment. Notez que la reconnaissance NUMA est activée par défaut uniquement sur les systèmes comptant au moins quatre nœuds NUMA. Sur les systèmes à deux nœuds, les coûts d’accès à la mémoire allouée à distance ne justifient généralement pas la surcharge liée à la gestion des spécificités NUMA.
--    **Allocation de mémoire**: Analysis Services a été boosté avec Intel Threading Building Blocks, allocateur scalable qui fournit des pools de mémoire distincts pour chaque cœur. À mesure que le nombre de cœurs augmente, le système peut évoluer de manière quasi linéaire.
--    **Fragmentation des segments de mémoire** : l’allocateur scalable basé sur Intel TBB permet également d’atténuer les problèmes de performances dus à la fragmentation des segments de mémoire ayant été observés avec les segments de mémoire Windows.
+-   **Reconnaissance NUMA** : pour une meilleure prise en charge de NUMA, le moteur (VertiPaq) en mémoire dans Analysis Services gère maintenant une file d’attente de travail distincte sur chaque nœud NUMA. Cela garantit que les travaux d’analyse de segment s’exécutent sur le même nœud que celui où la mémoire est allouée pour les données du segment. Notez que la reconnaissance NUMA est activée par défaut uniquement sur les systèmes comptant au moins quatre nœuds NUMA. Sur les systèmes à deux nœuds, les coûts d’accès à la mémoire allouée à distance ne justifient généralement pas la surcharge liée à la gestion des spécificités NUMA.
+-   **Allocation de mémoire** : Analysis Services a été boosté avec Intel Threading Building Blocks, allocateur scalable qui fournit des pools de mémoire distincts pour chaque cœur. À mesure que le nombre de cœurs augmente, le système peut évoluer de manière quasi linéaire.
+-   **Fragmentation des segments de mémoire** : l’allocateur scalable basé sur Intel TBB permet également d’atténuer les problèmes de performances dus à la fragmentation des segments de mémoire ayant été observés avec les segments de mémoire Windows.
 
 Des tests de performances et de scalabilité ont montré des gains de débit de requête significatifs lors de l’exécution de SQL Server 2016 SP1 Analysis Services sur de grands serveurs d’entreprise à plusieurs nœuds.
 
 
-## <a name="whats-new-in-includessascurrenttokenssascurrentmdmd"></a>Nouveautés de [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]
+## <a name="whats-new-in-sql-server-2016-analysis-services"></a>Nouveautés de SQL Server 2016 Analysis Services
 
 Alors que la plupart des améliorations apportées à cette version sont spécifiques aux modèles tabulaires, un certain nombre ont été apportées aux modèles multidimensionnels, par exemple, l’optimisation ROLAP du comptage de valeurs pour les sources de données telles que DB2 et Oracle, la prise en charge de plusieurs sélections pour l’extraction avec Excel 2016 et les optimisations de requête Excel.    
 
 #### <a name="get-the-latest-tools"></a>Récupérer les derniers outils
-Outre installer une instance [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] , pour tirer pleinement parti de toutes les améliorations dans cette version, veillez à installer les dernières versions de SSDT et SSMS.    
-- [Télécharger SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx)    
-- [Télécharger SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)   
+Pour tirer pleinement parti de toutes les améliorations dans cette version, veillez à installer les dernières versions de SSDT et SSMS.    
+- [Télécharger SSDT (SQL Server Data Tools)](http://msdn.microsoft.com/library/mt204009.aspx)    
+- [Télécharger SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)   
 
 Si vous utilisez une application personnalisée dépendante d’AMO, vous devrez peut-être installer une version mise à jour d’AMO. Pour obtenir des instructions, consultez [Installer les fournisseurs de données Analysis Services &#40;AMO, ADOMD.NET, MSOLAP&#41;](../analysis-services/instances/install-windows/install-analysis-services-data-providers-amo-adomd-net-msolap.md).    
 
  #### <a name="technet-virtual-labs-sql-server-2016-analysis-services"></a>Ateliers pratiques virtuels TechNet : SQL Server 2016 Analysis Services
-Rien de tel que la pratique ? Suivez les procédures proposées dans [l’atelier pratique consacré aux nouveautés de SQL Server 2016 Analysis Services](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23110&lod=true).
+Rien de tel que la pratique ? Suivez les procédures proposées dans [l’atelier pratique consacré aux nouveautés de SQL Server 2016 Analysis Services](http://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23110&lod=true).
 Dans cet atelier, vous allez créer et surveiller des événements étendus (xEvents), mettre à niveau un projet tabulaire vers le niveau de compatibilité 1200, utiliser des configurations de Visual Studio, implémenter de nouvelles fonctionnalités de calcul, implémenter de nouvelles fonctionnalités de relation entre les tables, configurer des dossiers d’affichage, gérer les traductions de modèle, utiliser le nouveau langage TMSL (Tabular Model Scripting Language), utiliser PowerShell et essayer de nouvelles fonctionnalités du mode DirectQuery.
 
 ## <a name="modeling"></a>Modélisation    
 ### <a name="improved-modeling-performance-for-tabular-1200-models"></a>Amélioration des performances de modélisation pour les modèles 1200 tabulaires    
 Pour les modèles 1200 tabulaires, les opérations de métadonnées effectuées dans SSDT sont beaucoup plus rapides que les modèles tabulaires 1100 ou 1103. À titre de comparaison, sur le même matériel, la création d’une relation sur un modèle défini au niveau de compatibilité de SQL Server 2014 (1103) avec 23 tables prend trois secondes, alors que la même relation sur un modèle défini au niveau de compatibilité 1200 prend à peine une seconde.    
 ### <a name="project-templates-added-for-tabular-1200-models-in-ssdt"></a>Ajout de modèles de projet pour les modèles 1200 tabulaires dans SSDT    
-Avec cette version, vous n’avez plus besoin de deux versions de SSDT pour créer des projets BI et des projets relationnels. [SQL Server Data Tools pour Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx) ajoute des modèles de projet pour les solutions Analysis Services, y compris les **projets tabulaires Analysis Services** utilisés pour créer des modèles au niveau de compatibilité 1200. D’autres modèles de projet Analysis Services pour les solutions multidimensionnelles et d’exploration de données sont également fournis, mais au même niveau de compatibilité (1100 ou 1103) que dans les versions précédentes.    
+Avec cette version, vous n’avez plus besoin de deux versions de SSDT pour créer des projets BI et des projets relationnels. [SQL Server Data Tools pour Visual Studio 2015](http://msdn.microsoft.com/library/mt204009.aspx) ajoute des modèles de projet pour les solutions Analysis Services, y compris les **projets tabulaires Analysis Services** utilisés pour créer des modèles au niveau de compatibilité 1200. D’autres modèles de projet Analysis Services pour les solutions multidimensionnelles et d’exploration de données sont également fournis, mais au même niveau de compatibilité (1100 ou 1103) que dans les versions précédentes.    
 ### <a name="display-folders"></a>Dossiers d’affichage
 Les dossiers d’affichage sont désormais disponibles pour les modèles 1200 tabulaires. Définis dans SQL Server Data Tools et affichés dans les applications clientes comme Excel ou Power BI Desktop, les dossiers d’affichage vous permettent d’organiser facilement des mesures en grand nombre dans des dossiers individuels. De cette façon, les mesures sont présentées de façon hiérarchique, ce qui simplifie la navigation dans les listes de champs.
 ### <a name="bi-directional-cross-filtering"></a>Filtrage croisé bidirectionnel
@@ -77,13 +82,13 @@ Une *table calculée* est une construction de modèle uniquement qui est basée 
 
 ## <a name="instance-management"></a>Gestion d’instances    
  ### <a name="administer-tabular-1200-models-in-ssms"></a>Administration de modèles 1200 tabulaires dans SSMS    
- Dans cette version, une instance d’Analysis Services en mode serveur tabulaire peut exécuter les modèles tabulaires à tous les niveaux de compatibilité (1100, 1103, 1200). La dernière version de [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) a été mise à jour pour afficher les propriétés et permettre l’administration de modèles de base de données pour les modèles tabulaires au niveau de compatibilité 1200.    
+ Dans cette version, une instance d’Analysis Services en mode serveur tabulaire peut exécuter les modèles tabulaires à tous les niveaux de compatibilité (1100, 1103, 1200). La dernière version de [SQL Server Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) a été mise à jour pour afficher les propriétés et permettre l’administration de modèles de base de données pour les modèles tabulaires au niveau de compatibilité 1200.    
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>Traitement en parallèle de plusieurs partitions de tables dans les modèles tabulaires    
  Cette version inclut une nouvelle fonctionnalité de traitement en parallèle des tables avec plusieurs partitions, ce qui améliore les performances de traitement. Il n’y a pas de paramètres de configuration pour cette fonctionnalité. Pour plus d’informations sur la configuration des partitions et le traitement des tables, consultez [Partitions de modèle tabulaire &#40;SSAS Tabulaire&#41;](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>Ajout de comptes d’ordinateur en tant qu’administrateurs dans SSMS    
- Les administrateurs de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peuvent désormais utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour configurer des comptes d’ordinateur en tant que membres du groupe d’administrateurs [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Dans la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** , définissez l’option **Emplacements** pour le domaine des ordinateurs, puis ajoutez le type d’objet **Ordinateurs** . Pour plus d’informations, consultez [Accorder des droits d’administrateur de serveur à une instance Analysis Services](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
+ Les administrateurs de[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peuvent désormais utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour configurer des comptes d’ordinateur en tant que membres du groupe d’administrateurs [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Dans la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** , définissez l’option **Emplacements** pour le domaine des ordinateurs, puis ajoutez le type d’objet **Ordinateurs** . Pour plus d’informations, consultez [Accorder des droits d’administrateur de serveur à une instance Analysis Services](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
  ### <a name="dbcc-for-analysis-services"></a>DBCC pour Analysis Services    
- DBCC (Database Consistency Checker) s’exécute en interne pour détecter la présence potentielle de données endommagées au chargement d’une base de données, mais il peut aussi être exécuté à la demande si vous soupçonnez des problèmes dans vos données ou un modèle. DBCC exécute des vérifications différentes selon que le modèle est tabulaire ou multidimensionnel. Pour plus de détails, consultez [DBCC &#40;Database Consistency Checker&#41; pour les bases de données multidimensionnelles et tabulaires Analysis Services](../analysis-services/instances/database consistency checker (dbcc) for analysis services.md).    
+ DBCC (Database Consistency Checker) s’exécute en interne pour détecter la présence potentielle de données endommagées au chargement d’une base de données, mais il peut aussi être exécuté à la demande si vous soupçonnez des problèmes dans vos données ou un modèle. DBCC exécute des vérifications différentes selon que le modèle est tabulaire ou multidimensionnel. Pour plus de détails, consultez [DBCC &#40;Database Consistency Checker&#41; pour les bases de données multidimensionnelles et tabulaires Analysis Services](../analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services.md).    
  ### <a name="extended-events-updates"></a>Mises à jour des événements étendus    
  Cette version ajoute une interface utilisateur graphique à [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour la configuration et la gestion des événements étendus [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Vous pouvez configurer des flux de données actifs pour surveiller l’activité du serveur en temps réel, conserver les données de session chargées en mémoire pour une analyse plus rapide, ou enregistrer les flux de données dans un fichier pour une analyse hors connexion. Pour plus d’informations, consultez [Surveiller Analysis Services avec des événements étendus SQL Server](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md) , ainsi que [la vidéo et le billet de blog GuyInACube sur l’utilisation des événements étendus avec Analysis Services](http://blogs.msdn.com/b/analysisservices/archive/2015/09/22/using-extended-events-with-sql-server-analysis-services-2016-cpt-2-3.aspx).    
 
@@ -93,14 +98,14 @@ Une *table calculée* est une construction de modèle uniquement qui est basée 
  ### <a name="powershell-for-tabular-models"></a>PowerShell pour les modèles tabulaires    
  Cette version inclut des améliorations de PowerShell pour les modèles tabulaires au niveau de compatibilité 1200. Vous pouvez utiliser toutes les applets de commande applicables, ainsi que les applets de commande spécifiques du mode tabulaire : [Invoke-ProcessASDatabase](../analysis-services/powershell/invoke-processasdatabase.md) et [Invoke-ProcessTable](../analysis-services/powershell/invoke-processtable-cmdlet.md).    
  ### <a name="ssms-scripting-database-operations"></a>Création de scripts SSMS pour les opérations de base de données    
- Dans la [dernière version de SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx), la création de scripts est désormais possible pour les commandes de base de données, notamment Create, Alter, Delete, Backup, Restore, Attach et Detach. La sortie est en langage TMSL (Tabular Model Scripting Language) au format JSON. Pour plus d’informations, consultez [Tabular Model Scripting Language &#40;TMSL&#41; Reference](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) (Informations de référence sur TMSL&#40;Tabular Model Scripting Language&#41;).    
+ Dans la [dernière version de SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx), la création de scripts est désormais possible pour les commandes de base de données, notamment Create, Alter, Delete, Backup, Restore, Attach et Detach. La sortie est en langage TMSL (Tabular Model Scripting Language) au format JSON. Pour plus d’informations, consultez [Tabular Model Scripting Language &#40;TMSL&#41; Reference](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) (Informations de référence sur TMSL&#40;Tabular Model Scripting Language&#41;).    
  ### <a name="analysis-services-execute-ddl-task"></a>Tâche DDL d'exécution de SQL Server Analysis Services    
  La[tâche DDL d’exécution Analysis Services](../integration-services/control-flow/analysis-services-execute-ddl-task.md) prend aussi désormais en charge les commandes en langage TMSL (Tabular Model Scripting Language).     
  ### <a name="ssas-powershell-cmdlet"></a>Applet de commande PowerShell de SSAS    
  L’applet de commande PowerShell **Invoke-ASCmd** de SSAS prend maintenant en charge les commandes en langage TMSL (Tabular Model Scripting Language). D’autres applets de commande PowerShell de SSAS pourraient être prises en charge dans une prochaine version pour pouvoir utiliser les nouvelles métadonnées tabulaires (les exceptions seront signalées dans les notes de publication).    
 Pour plus d'informations, consultez [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md) .    
  ### <a name="tabular-model-scripting-language-tmsl-supported-in-ssms"></a>Prise en charge du langage TMSL (Tabular Model Scripting Language) dans SSMS    
-  Avec la [version la plus récente de SSMS](https://msdn.microsoft.com/library/mt238290.aspx), vous pouvez maintenant créer des scripts pour automatiser la plupart des tâches d’administration pour les modèles 1200 tabulaires. Actuellement, vous pouvez créer des scripts pour les tâches suivantes : Process à tous les niveaux, ainsi que CREATE, ALTER et DELETE au niveau de la base de données.    
+  Avec la [version la plus récente de SSMS](http://msdn.microsoft.com/library/mt238290.aspx), vous pouvez maintenant créer des scripts pour automatiser la plupart des tâches d’administration pour les modèles 1200 tabulaires. Actuellement, vous pouvez créer des scripts pour les tâches suivantes : Process à tous les niveaux, ainsi que CREATE, ALTER et DELETE au niveau de la base de données.    
     
  TMSL fonctionne de manière équivalente à l’extension ASSL de XMLA qui fournit les définitions des objets multidimensionnels. La différence est que TMSL utilise des descripteurs natifs, tels que **model**, **table**et **relationship** , pour décrire les métadonnées tabulaires. Pour plus d’informations sur le schéma, consultez [Tabular Model Scripting Language &#40;TMSL&#41; Reference](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) (Informations de référence sur TMSL&#40;Tabular Model Scripting Language&#41;).    
     
@@ -136,9 +141,9 @@ refresh|Traite l'objet. L’équivalent ASSL est PROCESS.
 La barre de formule mise à jour facilite l’écriture de formules grâce aux améliorations suivantes : des couleurs de syntaxe pour différencier les fonctions, les champs et les mesures, un mode intelligent de suggestions des fonctions et champs, et l’affichage de *tildes*d’erreur pour indiquer une syntaxe incorrecte dans votre expression DAX. Vous pouvez également insérer plusieurs lignes (Alt+Entrée) et des retraits (Tab) dans vos formules. Dans la barre de formule, vous pouvez aussi écrire des commentaires directement dans vos mesures. Tapez simplement deux barres obliques (« // ») pour mettre en commentaire tout le texte suivant ces caractères sur la même ligne.
 
 ### <a name="dax-variables"></a>Variables DAX    
-Cette version inclut désormais la prise en charge des variables DAX. Les variables peuvent maintenant stocker le résultat d’une expression comme une variable nommée, qui peut ensuite être passée en tant qu’argument à d’autres expressions de mesure. Une fois que les valeurs résultantes ont été calculées pour une expression de variable, ces valeurs ne changent pas, même si la variable est référencée dans une autre expression. Pour plus d’informations, consultez [Fonction VAR](https://msdn.microsoft.com/library/mt243785.aspx).    
+Cette version inclut désormais la prise en charge des variables DAX. Les variables peuvent maintenant stocker le résultat d’une expression comme une variable nommée, qui peut ensuite être passée en tant qu’argument à d’autres expressions de mesure. Une fois que les valeurs résultantes ont été calculées pour une expression de variable, ces valeurs ne changent pas, même si la variable est référencée dans une autre expression. Pour plus d’informations, consultez [Fonction VAR](http://msdn.microsoft.com/library/mt243785.aspx).    
 ### <a name="new-dax-functions"></a>Nouvelles fonctions DAX
-Avec cette version, DAX introduit plus de cinquante nouvelles fonctions, qui accélèrent les calculs et améliorent les visualisations dans Power BI. Pour plus d’informations, consultez [New DAX Functions](https://msdn.microsoft.com/library/mt704075.aspx)(Nouvelles fonctions DAX).
+Avec cette version, DAX introduit plus de cinquante nouvelles fonctions, qui accélèrent les calculs et améliorent les visualisations dans Power BI. Pour plus d’informations, consultez [New DAX Functions](http://msdn.microsoft.com/library/mt704075.aspx)(Nouvelles fonctions DAX).
 ### <a name="save-incomplete-measures"></a>Enregistrement des mesures incomplètes
 Vous pouvez maintenant enregistrer les mesures DAX incomplètes directement dans un projet de modèle 1200 tabulaire et les terminer plus tard.
 ### <a name="additional-dax-enhancements"></a>Autres améliorations DAX
@@ -150,15 +155,16 @@ Vous pouvez maintenant enregistrer les mesures DAX incomplètes directement dans
     
 ## <a name="developer"></a>Développeur    
  ### <a name="microsoftanalysisservicestabular-namespace-for-tabular-1200-programmability-in-amo"></a>Espace de noms Microsoft.AnalysisServices.Tabular pour la programmabilité d’objets tabulaires 1200 dans AMO
- Les objets Analysis Services Management (AMO) ont été mis à jour. Ils incluent un nouvel espace de noms tabulaire pour gérer une instance en mode tabulaire de SQL Server 2016 Analysis Services, et fournissent le langage de définition de données (DLL) nécessaire pour créer ou modifier des modèles 1200 tabulaires par programmation. Pour plus d’informations sur l’API, consultez [Microsoft.AnalysisServices.Tabular](Microsoft.AnalysisServices.Tabular.xml) .    
+ Les objets Analysis Services Management (AMO) ont été mis à jour. Ils incluent un nouvel espace de noms tabulaire pour gérer une instance en mode tabulaire de SQL Server 2016 Analysis Services, et fournissent le langage de définition de données (DLL) nécessaire pour créer ou modifier des modèles 1200 tabulaires par programmation. Pour plus d’informations sur l’API, consultez [Microsoft.AnalysisServices.Tabular](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx) .    
  ### <a name="analysis-services-management-objects-amo-updates"></a>Mises à jour d’Analysis Services Management Objects (AMO)
- [Analysis Services Management Objects &#40;AMO&#41;](../Topic/Analysis%20Services%20Management%20Objects%20\(AMO\).md) a été refactorisé pour inclure un deuxième assembly, Microsoft.AnalysisServices.Core.dll. Le nouvel assembly sépare les classes communes (telles que Server, Database et Role) qui ont un champ d’application étendu dans Analysis Services, quel que soit le mode du serveur utilisé.    
+ [Analysis Services Management Objects &#40;AMO&#41;](http://msdn.microsoft.com/library/mt436122.aspx) a été refactorisé pour inclure un deuxième assembly, Microsoft.AnalysisServices.Core.dll. Le nouvel assembly sépare les classes communes (telles que Server, Database et Role) qui ont un champ d’application étendu dans Analysis Services, quel que soit le mode du serveur utilisé.    
     
  Auparavant, ces classes faisaient partie de l'assembly Microsoft.AnalysisServices d’origine. En les déplaçant vers un nouvel assembly, cela rend possible de futures extensions vers AMO, grâce à une séparation claire entre les API génériques et les API contextuelles.    
     
  Les applications existantes ne sont pas affectées par les nouveaux assemblys. Toutefois, si vous décidez de régénérer les applications avec le nouvel assembly AMO, assurez-vous d’ajouter une référence à Microsoft.AnalysisServices.Core.    
     
- De la même façon, les scripts PowerShell qui chargent et appellent AMO doivent charger Microsoft.AnalysisServices.Core.dll. Veillez à mettre à jour tous les scripts avant les faire pointer vers [!INCLUDE[ssASCurrent_md](../includes/ssascurrent-md.md)].    
+ De la même façon, les scripts PowerShell qui chargent et appellent AMO doivent charger Microsoft.AnalysisServices.Core.dll. Veillez à mettre à jour tous les scripts.  
+
 ### <a name="json-editor-for-bim-files"></a>Éditeur JSON pour les fichiers BIM
 Le mode Code dans Visual Studio 2015 affiche maintenant le fichier BIM au format JSON pour les modèles 1200 tabulaires. La version de Visual Studio détermine si les fichiers BIM sont rendus au format JSON via l’éditeur JSON intégré ou sous forme de texte simple.
 
@@ -192,13 +198,16 @@ Cette version comporte des améliorations significatives dans DirectQuery pour l
 -   Contrôle accru de la définition d’exemples de datasets utilisés pour la conception et le test des modèles.    
 -   La sécurité au niveau des lignes (RLS) est maintenant prise en charge pour les modèles 1200 tabulaires en mode DirectQuery. Avant, l’activation de la sécurité au niveau des lignes empêchait le déploiement d’un modèle tabulaire en mode DirectQuery.    
 -   Les colonnes calculées sont maintenant prises en charge pour les modèles 1200 tabulaires en mode DirectQuery. Avant, l’activation des colonnes calculées empêchait le déploiement d’un modèle tabulaire en mode DirectQuery.    
--   L’optimisation des performances inclut l’élimination des jointures redondantes pour VertiPaq et DirectQuery.    
+-   L’optimisation des performances inclut l’élimination des jointures redondantes pour VertiPaq et DirectQuery. 
+
 ### <a name="new-data-sources-for-directquery-mode"></a>Nouvelles sources de données pour le mode DirectQuery    
- Les sources de données Oracle, Teradata et Microsoft Analytics Platform (anciennement Parallel Data Warehouse) sont maintenant prises en charge pour les modèles tabulaires 110x en mode DirectQuery.    
+ Sources de données pris en charge pour les modèles tabulaires 1200 dans le mode DirectQuery maintenant incluent Oracle, Teradata et Microsoft Analytique Platform (anciennement Parallel Data Warehouse).    
     
 Pour en savoir plus, consultez [Mode DirectQuery &#40;SSAS Tabulaire&#41;](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).    
 
 ## <a name="see-also"></a>Voir aussi
-[Blog de l’équipe Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/)    
+[Blog de l’équipe Analysis Services](http://blogs.msdn.microsoft.com/analysisservices/)    
 [Nouveautés de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)    
      
+
+

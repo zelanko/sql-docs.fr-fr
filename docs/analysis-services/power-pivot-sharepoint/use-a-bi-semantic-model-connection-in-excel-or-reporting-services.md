@@ -1,24 +1,29 @@
 ---
-title: "Utiliser une connexion de mod&#232;le s&#233;mantique BI dans Excel ou Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Utiliser une connexion de modèle sémantique BI dans Excel ou Reporting Services | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 1d99b45a632ed04e68b75f456178844ad59e500d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Utiliser une connexion de mod&#232;le s&#233;mantique BI dans Excel ou Reporting Services
+# <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Utiliser une connexion de modèle sémantique BI dans Excel ou Reporting Services
   Cette rubrique explique comment utiliser les connexions de modèles sémantiques BI que vous avez créées à l'aide des instructions fournies dans d'autres rubriques. Si vous n’avez pas encore créé de modèle sémantique BI, consultez [Créer une connexion du modèle sémantique BI à un classeur PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) et [Créer une connexion de modèle sémantique BI à une base de données model tabulaire](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 ##  <a name="bkmk_connect"></a> Se connecter depuis Excel  
@@ -30,7 +35,7 @@ caps.handback.revision: 9
   
 -   Cliquez avec le bouton droit sur une connexion de modèle sémantique BI dans une bibliothèque, puis sélectionnez **Lancer Excel**.  
   
- ![Capture d'écran de la commande de lancement rapide de BISM](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "Capture d'écran de la commande de lancement rapide de BISM")  
+ ![Commande de lancement rapide de capture d’écran de BISM](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "commande de lancement rapide de capture d’écran de BISM")  
   
  Cliquez sur **Activer** lorsque vous êtes invité à activer les connexions de données. Excel ouvre un classeur qui contient une liste de champs de tableau croisé dynamique renseignée avec les champs de la source de données sous-jacente.  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 9
   
 2.  Cliquez sur **À partir d'Analysis Services** et utilisez l'Assistant Connexion de Données pour importer les données.  
   
-3.  Entrez l’URL SharePoint du fichier de connexion du modèle sémantique BI (par exemple **http://mysharepoint/shared documents/myData.bism**). Acceptez l'option d'utilisation des informations d'identification de connexion par défaut, **Utiliser l'authentification Windows**. Cliquez sur **Suivant**.  
+3.  Entrez l’URL SharePoint du fichier de connexion du modèle sémantique BI (par exemple `http://mysharepoint/shared documents/myData.bism`). Acceptez l'option d'utilisation des informations d'identification de connexion par défaut, **Utiliser l'authentification Windows**. Cliquez sur **Suivant**.  
   
 4.  Sur la page suivante, cliquez de nouveau sur **Suivant** . Bien que vous soyez invité à sélectionner une base de données, vous pouvez utiliser uniquement celle spécifiée dans la connexion de modèle sémantique BI.  
   

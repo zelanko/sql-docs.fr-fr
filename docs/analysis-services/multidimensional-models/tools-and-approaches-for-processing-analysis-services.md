@@ -1,27 +1,32 @@
 ---
-title: "Outils et approches de traitement (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "traitement [Analysis Services]"
-  - "traitement [Analysis Services]"
+title: Outils et approches de traitement (Analysis Services) | Documents Microsoft
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- process [Analysis Services]
+- processing [Analysis Services]
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5eecf424cf155c53a2f636590ba002028f24db84
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Outils et approches de traitement (Analysis Services)
+# <a name="tools-and-approaches-for-processing-analysis-services"></a>Outils et approches de traitement (Analysis Services)
   Le traitement est une opération selon laquelle Analysis Services interroge les données provenant d'une source de données relationnelle et remplit des objets Analysis Services à l'aide de ces données.  
   
  En tant qu'administrateur système Analysis Services, vous pouvez exécuter et contrôler le traitement d'objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l'aide des ces approches.  
@@ -49,11 +54,11 @@ caps.handback.revision: 34
 > [!NOTE]  
 >  Cette rubrique décrit les outils et approches pour traiter des modèles multidimensionnels. Pour plus d’informations sur les modèles tabulaires de traitement, consultez [Traiter une base de données, une table ou une partition &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) et [Traiter les données &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
-### Objets de traitement dans SQL Server Management Studio  
+### <a name="processing-objects-in-sql-server-management-studio"></a>Objets de traitement dans SQL Server Management Studio  
   
 1.  Démarrez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et connectez-vous à Analysis Services.  
   
-2.  Cliquez avec le bouton droit sur l’objet Analysis Services à traiter, puis cliquez sur **Traiter**. Vous pouvez traiter les données à tous les niveaux :  
+2.  Cliquez avec le bouton droit sur l’objet Analysis Services à traiter, puis cliquez sur **Traiter**. Vous pouvez traiter les données à tous les niveaux :  
   
     -   Bases de données  
   
@@ -79,7 +84,7 @@ caps.handback.revision: 34
   
      La boîte de dialogue État d'avancement du traitement fournit l'état de chaque commande en cours. Si un message d’état est tronqué, vous pouvez cliquer sur **Afficher les détails** pour lire le message en entier.  
   
-### Traitement d'objets dans les outils de données SQL Server  
+### <a name="processing-objects-in-sql-server-data-tools"></a>Traitement d'objets dans les outils de données SQL Server  
   
 1.  Démarrez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et ouvrez un projet qui a été déployé.  
   
@@ -95,23 +100,23 @@ caps.handback.revision: 34
   
 ##  <a name="bkmk_impactanalysis"></a> Exécuter une analyse d'impact pour identifier les dépendances entre les objets et l'étendue des opérations  
   
-1.  Avant de traiter un objet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vous pouvez analyser l’impact du traitement sur les objets associés en cliquant sur **Analyse d’impact** dans l’une des boîtes de dialogue **Traiter les objets**.  
+1.  Avant de traiter un objet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vous pouvez analyser l’impact du traitement sur les objets associés en cliquant sur **Analyse d’impact** dans l’une des boîtes de dialogue **Traiter les objets** .  
   
-2.  Cliquez avec le bouton droit sur une dimension, un cube, un groupe de mesures ou une partition pour ouvrir une boîte de dialogue **Traiter les objets**.  
+2.  Cliquez avec le bouton droit sur une dimension, un cube, un groupe de mesures ou une partition pour ouvrir une boîte de dialogue **Traiter les objets** .  
   
 3.  Cliquez sur **Analyse d’impact**. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] analyse le modèle et génère un rapport sur les conditions requises pour les objets liés à celui qui est sélectionné en vue du traitement.  
   
-### Traitement d'objets à l'aide de XMLA  
+### <a name="processing-objects-using-xmla"></a>Traitement d'objets à l'aide de XMLA  
   
 1.  Démarrez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et connectez-vous à Analysis Services.  
   
 2.  Cliquez avec le bouton droit sur l’objet à traiter, puis cliquez sur **Traiter**.  
   
-3.  Dans la boîte de dialogue **Traitement**, sélectionnez l’option de traitement à utiliser. Modifiez tout autre paramètre. Exécutez une analyse d'impact pour déterminer si vous devez apporter des modifications.  
+3.  Dans la boîte de dialogue **Traitement** , sélectionnez l’option de traitement à utiliser. Modifiez tout autre paramètre. Exécutez une analyse d'impact pour déterminer si vous devez apporter des modifications.  
   
-4.  Cliquez sur **Script** sur l’écran **Traiter les objets**.  
+4.  Cliquez sur **Script** sur l’écran **Traiter les objets** .  
   
-     Cela génère un script XMLA et ouvre la fenêtre Requête XMLA [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+     Cela génère un script XMLA et ouvre la fenêtre Requête XMLA [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 5.  Fermez la boîte de dialogue. Le script contient la commande et les options de traitement spécifiées dans la boîte de dialogue.  
   
@@ -119,37 +124,37 @@ caps.handback.revision: 34
   
 7.  Dans la barre de menus, cliquez sur **Requête**, puis sur **Exécuter**.  
   
-### Traitement d'objets à l'aide de PowerShell  
+### <a name="processing-objects-using-powershell"></a>Traitement d'objets à l'aide de PowerShell  
   
-1.  À partir de cette version de SQL Server, vous pouvez utiliser les applets de commande Analysis Services PowerShell pour traiter les objets. Les applets de commande suivants peuvent être exécutées de façon interactive ou dans un script :  
+1.  À partir de cette version de SQL Server, vous pouvez utiliser les applets de commande Analysis Services PowerShell pour traiter les objets. Les applets de commande suivants peuvent être exécutées de façon interactive ou dans un script :  
   
     -   [Applet de commande Invoke-ProcessCube](../../analysis-services/powershell/invoke-processcube-cmdlet.md)  
   
-    -   [Applet de commande Invoke-ProcessDimension](../../analysis-services/powershell/invoke-processdimension-cmdlet.md)  
+    -   [Invoke-ProcessDimension, applet de commande](../../analysis-services/powershell/invoke-processdimension-cmdlet.md)  
   
     -   [Applet de commande Invoke-ProcessPartition](../../analysis-services/powershell/invoke-processpartition-cmdlet.md)  
   
     -   [Applet de commande Invoke-ASCmd](../../analysis-services/powershell/invoke-ascmd-cmdlet.md), qui peut être utilisée pour exécuter un script XMLA, MDX ou DMX qui inclut les commandes de traitement.  
   
-### Surveillance du traitement des objets à l'aide de SQL Server Profiler  
+### <a name="monitoring-object-processing-using-sql-server-profiler"></a>Surveillance du traitement des objets à l'aide de SQL Server Profiler  
   
 1.  Connectez-vous à une instance Analysis Services dans SQL Server Profiler.  
   
 2.  Dans Sélection des événements, cliquez sur **Afficher tous les événements** pour ajouter tous les événements à la liste.  
   
-3.  Choisissez l'un des événements suivants :  
+3.  Choisissez l'un des événements suivants :  
   
     -   **Début de la commande** et **Fin de la commande** pour afficher le démarrage et l’arrêt du traitement  
   
     -   **Erreur** pour capturer les erreurs  
   
-    -   **Début du rapport de progression**, **Rapport de progression actuel** et **Fin du rapport de progression** pour créer un rapport sur l’état de processus et afficher les requêtes SQL utilisées pour récupérer les données  
+    -   **Début du rapport de progression**, **Rapport de progression actuel**et **Fin du rapport de progression** pour créer un rapport sur l’état de processus et afficher les requêtes SQL utilisées pour récupérer les données  
   
     -   **Exécuter script MDX Début** et **Exécuter script MDX Fin** pour afficher les calculs de cube  
   
     -   Éventuellement, ajoutez des événements de verrou si vous analysez des problèmes de performances liés au traitement.  
   
-### Traiter des objets Analysis Services à l'aide d'Integration Services  
+### <a name="process-analysis-services-objects-using-integration-services"></a>Traiter des objets Analysis Services à l'aide d'Integration Services  
   
 1.  Dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], créez un package qui utilise la tâche de traitement Analysis Services pour remplir automatiquement des objets avec de nouvelles données quand vous effectuez des mises à jour régulières de votre base de données relationnelle source.  
   
@@ -157,7 +162,7 @@ caps.handback.revision: 34
   
 3.  Modifiez la tâche pour spécifier une connexion à la base de données, les objets à traiter et l'option de traitement. Pour plus d'informations sur la manière d'implémenter cette tâche, consultez [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Traitement d’un modèle multidimensionnel &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

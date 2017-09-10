@@ -1,27 +1,32 @@
 ---
-title: "Cat&#233;gorie d&#39;&#233;v&#233;nement D&#233;couverte de l&#39;&#233;tat du serveur | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Événements de découverte d'état du serveur, catégorie d'événement"
-  - "événements de découverte d'état du serveur [Analysis Services]"
-  - "événements de découverte d'état du serveur"
-  - "classes d’événements [Analysis Services], détection de l’état du serveur"
+title: "État du serveur catégorie d’événement découverte | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Discover Server State event category
+- server state events [Analysis Services]
+- discover server state events
+- event classes [Analysis Services], discover server state
 ms.assetid: b62ebf66-d090-4f74-8c83-11ed518b2018
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 25
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc94790d8903fa644bd79fa9328c60a781b62d4b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cat&#233;gorie d&#39;&#233;v&#233;nement D&#233;couverte de l&#39;&#233;tat du serveur
+# <a name="discover-server-state-event-category"></a>Événements de découverte d'état du serveur, catégorie d'événement
   La catégorie d'événement Découverte de l'état du serveur contient les classes d'événements décrites dans le tableau ci-dessous.  
   
 |Classe d'événements|ID d'événement|Description|  
@@ -32,7 +37,7 @@ caps.handback.revision: 25
   
  Pour plus d’informations sur les colonnes associées à chaque classe d’événements Session Events, consultez [Colonnes de données des événements de découverte d’état du serveur](../../analysis-services/trace-events/discover-server-state-events-data-columns.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Événements de trace Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

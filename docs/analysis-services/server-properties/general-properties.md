@@ -1,57 +1,62 @@
 ---
-title: "Propri&#233;t&#233;s g&#233;n&#233;rales | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "IdleConnectionTimeout, propriété"
-  - "InstanceVisible, propriété"
-  - "TempDir, propriété"
-  - "AdminTimeout, propriété"
-  - "MinIdleSessionTimeout, propriété"
-  - "MaxIdleSessionTimeout, propriété"
-  - "IdleOrphanSessionTimeout, propriété"
-  - "BackupDir, propriété"
-  - "CommitTimeout, propriété"
-  - "ExternalCommandTimeout, propriété"
-  - "Enabled, propriété"
-  - "ForceCommitTimeout, propriété"
-  - "Port, propriété"
-  - "CoordinatorShutdownMode, propriété"
-  - "ServerTimeout, propriété"
-  - "AllowedBrowsingFolders, propriété"
-  - "CoordinatorCancelCount, propriété"
-  - "DataDir, propriété"
-  - "CoordinatorQueryMaxThreads, propriété"
-  - "CoordinatorExecitionMode, propriété"
-  - "ExternalConnectionTimeout, propriété"
-  - "CollationName, propriété"
-  - "EnableFast1033Locale, propriété"
-  - "CoordinatorBuildMaxThreads, propriété"
-  - "Language, propriété"
-  - "StatisticsStoreSize, propriété"
-  - "RepositoryConnectionString, propriété"
+title: "Propriétés générales | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- IdleConnectionTimeout property
+- InstanceVisible property
+- TempDir property
+- AdminTimeout property
+- MinIdleSessionTimeout property
+- MaxIdleSessionTimeout property
+- IdleOrphanSessionTimeout property
+- BackupDir property
+- CommitTimeout property
+- ExternalCommandTimeout property
+- Enabled property
+- ForceCommitTimeout property
+- Port property
+- CoordinatorShutdownMode property
+- ServerTimeout property
+- AllowedBrowsingFolders property
+- CoordinatorCancelCount property
+- DataDir property
+- CoordinatorQueryMaxThreads property
+- CoordinatorExecutionMode property
+- ExternalConnectionTimeout property
+- CollationName property
+- EnableFast1033Locale property
+- CoordinatorBuildMaxThreads property
+- Language property
+- StatisticsStoreSize property
+- RepositoryConnectionString property
 ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 29
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 007ace0dcec576b4a15909d470a701f442221788
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Propri&#233;t&#233;s g&#233;n&#233;rales
+# <a name="general-properties"></a>Propriétés générales
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de serveur répertoriées dans les tableaux suivants. Cette rubrique décrit les propriétés de serveur qui se trouvent dans le fichier msmdsrv.ini et qui ne font pas l'objet d'une section spécifique, traitant par exemple de la sécurité, du réseau ou de ThreadPool. Pour plus d’informations sur les autres propriétés de serveur et la façon de les configurer, consultez [Propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **S’applique à :** mode serveur multidimensionnel et tabulaire, sauf indication contraire  
   
-## Catégorie non spécifique  
+## <a name="non-specific-category"></a>Catégorie non spécifique  
  **AdminTimeout**  
- Propriété dont la valeur est un entier 32 bits signé qui définit le délai d'attente de l'administrateur en secondes. Il s'agit d'une propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+ Propriété dont la valeur est un entier 32 bits signé qui définit le délai d'attente de l'administrateur en secondes. Il s'agit d'une propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  La valeur par défaut de cette propriété, zéro (0), indique l'absence de délai d'attente.  
   
@@ -70,25 +75,21 @@ caps.handback.revision: 29
  La valeur par défaut de cette propriété, zéro (0), indique que le serveur attend indéfiniment. Pour plus d’informations sur les propriétés associées au verrou, consultez le [guide des opérations de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
  **CoordinatorBuildMaxThreads**  
- Propriété dont la valeur est un entier 32 bits signé qui spécifie le nombre maximal de threads alloués à la génération des index de partition. Augmentez cette valeur si vous souhaitez accélérer l'indexation des partitions au prix d'une plus grande consommation de mémoire. Pour plus d’informations sur cette propriété, consultez le [guide des opérations de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
+ Propriété dont la valeur est un entier 32 bits signé qui spécifie le nombre maximal de threads alloués à la génération des index de partition. Augmentez cette valeur si vous souhaitez accélérer l'indexation des partitions au prix d'une plus grande consommation de mémoire. Pour plus d’informations sur cette propriété, consultez le [guide des opérations de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
  **CoordinatorCancelCount**  
- Propriété dont la valeur est un entier 32 bits signé qui spécifie la fréquence selon laquelle le serveur doit vérifier si un événement d'annulation s'est produit (en fonction d'un nombre d'itérations interne). Diminuez ce nombre si vous souhaitez augmenter la fréquence de ces vérifications au détriment des performances générales.  
-  
- **CoordinatorCancelCount** est ignoré en mode serveur tabulaire.  
+ Propriété dont la valeur est un entier 32 bits signé qui spécifie la fréquence selon laquelle le serveur doit vérifier si un événement d'annulation s'est produit (en fonction d'un nombre d'itérations interne). Diminuez ce nombre si vous souhaitez augmenter la fréquence de ces vérifications au détriment des performances générales. Cette propriété est ignorée en mode serveur tabulaire.  
   
  **CoordinatorExecutionMode**  
- Propriété dont la valeur est un entier 32 bits signé qui spécifie le nombre maximal d'opérations parallèles que le serveur essaiera d'effectuer, notamment les opérations de traitement et d'interrogation. Zéro (0) indique que le serveur décidera lui-même, en fonction d'un algorithme interne. Un nombre positif indique le nombre maximal d'opérations au total. Un nombre négatif (précédé du signe moins) indique le nombre maximal d'opérations par processeur.  
-  
- **CoordinatorExecutionMode** est ignoré en mode serveur tabulaire.  
-  
+ Propriété dont la valeur est un entier 32 bits signé qui spécifie le nombre maximal d'opérations parallèles que le serveur essaiera d'effectuer, notamment les opérations de traitement et d'interrogation. Zéro (0) indique que le serveur décidera lui-même, en fonction d'un algorithme interne. Un nombre positif indique le nombre maximal d'opérations au total. Un nombre négatif (précédé du signe moins) indique le nombre maximal d'opérations par processeur.  
+
  La valeur par défaut de cette propriété, -4, indique que le serveur est limité à quatre opérations parallèles par processeur. Pour plus d’informations sur cette propriété, consultez le [guide des opérations de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
  **CoordinatorQueryMaxThreads**  
- Propriété dont la valeur est un entier 32 bits signé qui spécifie le nombre maximal de threads par segment de partition durant la résolution des requêtes. Moins il y a d'utilisateurs simultanés, plus cette valeur peut être élevée, au prix d'une plus grande consommation de mémoire. Inversement, il peut s'avérer nécessaire de diminuer cette valeur s'il y a un grand nombre d'utilisateurs simultanés.  
+ Propriété dont la valeur est un entier 32 bits signé qui spécifie le nombre maximal de threads par segment de partition durant la résolution des requêtes. Moins il y a d'utilisateurs simultanés, plus cette valeur peut être élevée, au prix d'une plus grande consommation de mémoire. Inversement, il peut s'avérer nécessaire de diminuer cette valeur s'il y a un grand nombre d'utilisateurs simultanés.  
   
  **CoordinatorShutdownMode**  
- Propriété booléenne qui définit le mode d'arrêt du coordinateur. Il s'agit d'une propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+ Propriété booléenne qui définit le mode d'arrêt du coordinateur. Il s'agit d'une propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **DataDir**  
  Propriété de type chaîne qui spécifie le nom du répertoire où les données sont stockées.  
@@ -122,10 +123,10 @@ caps.handback.revision: 29
  **ForceCommitTimeout**  
  Propriété dont la valeur est un entier qui spécifie le temps, en millisecondes, pendant lequel une opération de validation d'écriture doit attendre avant l'annulation d'autres commandes qui ont précédé la commande actuelle, notamment les requêtes en cours. Cela permet à la transaction de validation de continuer en annulant les opérations de priorité la plus faible, telles que les requêtes.  
   
- La valeur par défaut de cette propriété, 30 secondes (30 000 millisecondes), indique que l'annulation d'autres commandes ne sera pas forcée tant que la transaction de validation n'a pas attendu 30 secondes.  
+ La valeur par défaut de cette propriété, 30 secondes (30 000 millisecondes), indique que l'annulation d'autres commandes ne sera pas forcée tant que la transaction de validation n'a pas attendu 30 secondes.  
   
 > [!NOTE]  
->  Les requêtes et les processus annulés par cet événement entraînent l’affichage du message d’erreur suivant : « `Server: The operation has been cancelled` ».  
+>  Les requêtes et les processus annulés par cet événement entraînent l’affichage du message d’erreur suivant : «`Server: The operation has been cancelled`».  
   
  Pour plus d’informations sur cette propriété, consultez le [guide des opérations de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
@@ -138,7 +139,7 @@ caps.handback.revision: 29
  La valeur par défaut de cette propriété, zéro (0), indique que le serveur ne ferme pas les connexions inactives.  
   
  **IdleOrphanSessionTimeout**  
- Propriété dont la valeur est un entier qui définit le laps de temps, exprimé en secondes, pendant lequel les sessions orphelines sont conservées dans la mémoire du serveur. Une session orpheline est une session qui n'a plus de connexion associée. La valeur par défaut est 120 secondes.  
+ Propriété dont la valeur est un entier qui définit le laps de temps, exprimé en secondes, pendant lequel les sessions orphelines sont conservées dans la mémoire du serveur. Une session orpheline est une session qui n'a plus de connexion associée. La valeur par défaut est 120 secondes.  
   
  **InstanceVisible**  
  Propriété booléenne qui indique si l'instance de serveur est visible pour découvrir des demandes d'instance de service SQL Server Browser. La valeur par défaut est True. Si vous affectez la valeur False, l'instance n'est pas visible pour SQL Server Browser.  
@@ -155,7 +156,7 @@ caps.handback.revision: 29
  Propriété dont la valeur est un entier qui définit le délai d'attente maximal des sessions inactives, exprimé en secondes. La valeur par défaut, zéro (0), indique que les sessions n'expirent jamais. Toutefois, les sessions inactives seront encore supprimées si le serveur est soumis à des contraintes de ressources.  
   
  **MinIdleSessionTimeout**  
- Propriété dont la valeur est un entier qui définit le délai d'attente minimal des sessions inactives, exprimé en secondes. La valeur par défaut est 2700 secondes. Une fois ce délai expiré, le serveur est autorisé à mettre fin à la session inactive, mais il ne le fera que si de la mémoire est requise.  
+ Propriété dont la valeur est un entier qui définit le délai d'attente minimal des sessions inactives, exprimé en secondes. La valeur par défaut est 2700 secondes. Une fois ce délai expiré, le serveur est autorisé à mettre fin à la session inactive, mais il ne le fera que si de la mémoire est requise.  
   
  **Port**  
  Propriété dont la valeur est un entier qui définit le numéro de port sur lequel le serveur sera à l'écoute des connexions clientes. Si cette propriété n'est pas définie, le serveur recherche dynamiquement le premier port inutilisé.  
@@ -163,20 +164,20 @@ caps.handback.revision: 29
  La valeur par défaut de cette propriété, zéro (0), correspond au port 2383. Pour plus d'informations sur la configuration du port, consultez [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
  **ServerTimeout**  
- Entier qui spécifie le délai d'attente des requêtes, en secondes. La valeur par défaut est 3 600 secondes (ou 60 minutes). Zéro (0) indique qu'aucune requête n'expire.  
+ Entier qui spécifie le délai d'attente des requêtes, en secondes. La valeur par défaut est 3 600 secondes (ou 60 minutes). Zéro (0) indique qu'aucune requête n'expire.  
   
  **TempDir**  
  Propriété de type chaîne qui spécifie l'emplacement de stockage des fichiers temporaires utilisé lors des opérations de traitement, de restauration et autres. La valeur par défaut de cette propriété est déterminée par l'installation. Si elle n'est pas spécifiée, la valeur par défaut est le répertoire Data.  
   
-## Catégorie RequestPrioritization  
+## <a name="requestprioritization-category"></a>Catégorie RequestPrioritization  
  **Activé**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **StatisticsStoreSize**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Voir aussi  
- [propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Déterminer le mode serveur d'une instance Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

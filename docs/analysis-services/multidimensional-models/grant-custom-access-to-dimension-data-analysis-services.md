@@ -1,54 +1,59 @@
 ---
-title: "Octroyer un acc&#232;s personnalis&#233; &#224; des donn&#233;es de dimension (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.roledesignerdialog.dimensiondata.f1"
-helpviewer_keywords: 
-  - "dimensions [Analysis Services], sécurité"
-  - "AllowedSet, propriété"
-  - "IsAllowed, propriété"
-  - "DeniedSet, propriété"
-  - "droits d’accès utilisateur [Analysis Services], dimensions"
-  - "accès personnalisés aux données d'une dimension [Analysis Services]"
-  - "autorisations [Analysis Services], dimensions"
-  - "DefaultMember (propriété)"
-  - "VisualTotals, propriété"
-  - "ApplyDenied, propriété"
+title: "Octroyer un accès personnalisé à des données de dimension (Analysis Services) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.roledesignerdialog.dimensiondata.f1
+helpviewer_keywords:
+- dimensions [Analysis Services], security
+- AllowedSet property
+- IsAllowed property
+- DeniedSet property
+- user access rights [Analysis Services], dimensions
+- custom dimension data access [Analysis Services]
+- permissions [Analysis Services], dimensions
+- DefaultMember property
+- VisualTotals property
+- ApplyDenied property
 ms.assetid: b028720d-3785-4381-9572-157d13ec4291
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 40
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 06975a1a487f4627e25f3028db2ec77ce7525f21
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Octroyer un acc&#232;s personnalis&#233; &#224; des donn&#233;es de dimension (Analysis Services)
+# <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Octroyer un accès personnalisé à des données de dimension (Analysis Services)
   Après avoir activé l'accès en lecture à un cube, vous pouvez définir des autorisations supplémentaires qui accordent ou refusent explicitement l'accès aux membres de dimension (y compris les mesures contenues dans la dimension de mesures contenant toutes les mesures utilisées dans un cube). Par exemple, étant donné plusieurs catégories de revendeurs, vous pouvez définir des autorisations pour exclure les données d'un type spécifique. L'illustration suivante est une représentation avant/après du refus de l'accès au type d'entreprise Warehouse dans la dimension Reseller.  
   
- ![Tableaux croisés dynamiques avec et sans membre de dimension](../../analysis-services/multidimensional-models/media/ssas-permsdimdenied.png "Tableaux croisés dynamiques avec et sans membre de dimension")  
+ ![Les tableaux croisés dynamiques avec et sans un membre de dimension](../../analysis-services/multidimensional-models/media/ssas-permsdimdenied.png "des tableaux croisés dynamiques avec et sans un membre de dimension")  
   
- Par défaut, si vous pouvez lire les données d’un cube [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous disposez automatiquement d’autorisations d’accès en lecture pour toutes les mesures et tous les membres de dimension associés à ce cube. Ce comportement peut être suffisant pour de nombreux scénarios, cependant parfois des exigences de sécurité demandent une stratégie d'autorisation segmentée, avec différents niveaux d'accès pour différents utilisateurs dans la même dimension.  
+ Par défaut, si vous pouvez lire les données d’un cube [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vous disposez automatiquement d’autorisations d’accès en lecture pour toutes les mesures et tous les membres de dimension associés à ce cube. Ce comportement peut être suffisant pour de nombreux scénarios, cependant parfois des exigences de sécurité demandent une stratégie d'autorisation segmentée, avec différents niveaux d'accès pour différents utilisateurs dans la même dimension.  
   
  Vous pouvez limiter l’accès en choisissant les membres auxquels accorder (AllowedSet) ou refuser (DeniedSet) l’accès. Pour ce faire, vous sélectionnez ou désélectionnez les membres de la dimension à inclure ou exclure du rôle.  
   
- La sécurité de base de la dimension est la plus simple : il suffit de sélectionner les attributs de dimension et les hiérarchies d'attributs à inclure ou à exclure dans le rôle. La sécurité avancée est plus complexe et nécessite une connaissance des scripts MDX. Les deux approches sont décrites ci-dessous.  
+ La sécurité de base de la dimension est la plus simple : il suffit de sélectionner les attributs de dimension et les hiérarchies d'attributs à inclure ou à exclure dans le rôle. La sécurité avancée est plus complexe et nécessite une connaissance des scripts MDX. Les deux approches sont décrites ci-dessous.  
 
 > [!NOTE]  
->  Les instructions suivantes supposent une connexion client qui émet des requêtes dans MDX. Si le client utilise DAX, comme Power View dans Power BI, la sécurité de la dimension n’est pas évidente dans les résultats de la requête. Pour plus d’informations, consultez [Présentation de Power View pour les modèles multidimensionnels](https://msdn.microsoft.com/library/jj969574.aspx).
+>  Les instructions suivantes supposent une connexion client qui émet des requêtes dans MDX. Si le client utilise DAX, comme Power View dans Power BI, la sécurité de la dimension n’est pas évidente dans les résultats de la requête. Pour plus d’informations, consultez [Présentation de Power View pour les modèles multidimensionnels](https://msdn.microsoft.com/library/jj969574.aspx) .
       
-## Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables  
  Vous ne pouvez pas utiliser toutes les mesures, ni tous les membres de dimension dans les scénarios d'accès personnalisés. Une connexion échoue si un rôle restreint l'accès à une mesure ou un membre par défaut, ou s'il restreint l'accès à des mesures qui font partie d'expressions de mesure.  
   
- **Vérifier les obstructions en matière de sécurité des dimensions : mesures par défaut, membres par défaut et mesures utilisées dans les expressions de mesure**  
+ **Vérifier les obstructions en matière de sécurité des dimensions : mesures par défaut, membres par défaut et mesures utilisées dans les expressions de mesure**  
   
 1.  Dans SQL Server Management Studio, cliquez avec le bouton droit sur un cube, puis sélectionnez **Générer un script du cube en tant que** | **ALTER To** | **Nouvelle fenêtre d’éditeur de requête**.  
   
@@ -58,17 +63,17 @@ caps.handback.revision: 40
   
 4.  Enfin, recherchez **DefaultMember**. Notez tous les attributs qui servent de membre par défaut à un attribut. Évitez d'appliquer des restrictions à ces attributs quand vous définissez la sécurité des dimensions.  
   
-## Sécurité de base de la dimension  
+## <a name="basic-dimension-security"></a>Sécurité de base de la dimension  
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous à l’instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], développez **Rôles** pour la base de données appropriée dans l’Explorateur d’objets, puis cliquez sur un rôle de base de données (ou créez un rôle de base de données).  
   
-     Le rôle doit déjà avoir l'accès en lecture sur le cube. Si vous avez besoin d’aide pour cette étape, consultez [Octroyer des autorisations de cube ou de modèle &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
+     Le rôle doit déjà avoir l'accès en lecture sur le cube. Pour plus d’informations, consultez [Octroyer des autorisations de cube ou de modèle &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md) .  
   
 2.  Dans **Données de la dimension** | **De base**, sélectionnez la dimension pour laquelle vous définissez des autorisations.  
   
-3.  Choisissez la hiérarchie d'attribut. Tous les attributs ne seront pas disponibles. Seuls les attributs avec **AttributeHierarchyEnabled** s’affichent dans la liste **Hiérarchie d’attribut**.  
+3.  Choisissez la hiérarchie d'attribut. Tous les attributs ne seront pas disponibles. Seuls les attributs avec **AttributeHierarchyEnabled** s’affichent dans la liste **Hiérarchie d’attribut** .  
   
-4.  Choisissez les membres auxquels autoriser ou refuser l'accès. L’autorisation d’accès, via l’option **Sélectionner tous les membres**, est l’option par défaut. Nous vous suggérons de conserver cette valeur par défaut, puis de désélectionner chaque membre individuel qui ne doit pas être visible aux comptes d’utilisateur et de groupe Windows dans le volet **Appartenances** via ce rôle. L'avantage de ce choix est que les nouveaux membres ajoutés dans des opérations de traitement futures sont automatiquement disponibles aux personnes qui se connectent via ce rôle.  
+4.  Choisissez les membres auxquels autoriser ou refuser l'accès. L’autorisation d’accès, via l’option **Sélectionner tous les membres** , est l’option par défaut. Nous vous suggérons de conserver cette valeur par défaut, puis de désélectionner chaque membre individuel qui ne doit pas être visible aux comptes d’utilisateur et de groupe Windows dans le volet **Appartenances** via ce rôle. L'avantage de ce choix est que les nouveaux membres ajoutés dans des opérations de traitement futures sont automatiquement disponibles aux personnes qui se connectent via ce rôle.  
   
      Vous pouvez également **Désélectionner tous les membres** pour révoquer l’accès de façon globale, puis sélectionner les membres à autoriser. Dans les opérations de traitement futures, les nouveaux membres ne sont pas visibles tant que vous ne modifiez pas manuellement la sécurité des données de la dimension pour autoriser l'accès.  
   
@@ -77,7 +82,7 @@ caps.handback.revision: 40
     > [!NOTE]  
     >  Lorsque vous appliquez des autorisations qui suppriment des membres de la dimension, les totaux agrégés ne sont pas automatiquement recalculés. Supposons que le membre **Tous** d’une hiérarchie d’attribut retourne un nombre égal à 200 avant que les autorisations soient appliquées. Une fois les autorisations appliquées qui refusent l’accès à certains membres, **Tous** retourne toujours 200, même si les valeurs de membre visibles à l’utilisateur sont beaucoup moins nombreuses. Pour ne pas dérouter les consommateurs de votre cube, vous pouvez configurer le membre **Tous** pour qu’il soit l’agrégat de ces seuls membres, au lieu d’être l’agrégat de tous les membres de la hiérarchie d’attribut. Pour appeler ce comportement, vous pouvez activer **Valeurs totales affichées** sous l’onglet **Avancé** lors de la configuration de la sécurité de la dimension. Une fois activé, l'agrégation est calculée au moment de la requête au lieu d'être extraite d'agrégations précalculées. Cela peut avoir un effet notable sur les performances de la requête, c'est pourquoi il est conseillé de l'utiliser uniquement lorsque cela est nécessaire.  
   
-## Masquage des mesures  
+## <a name="hiding-measures"></a>Masquage des mesures  
  Dans [Octroyer un accès personnalisé à des données de cellule &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md), il a été expliqué que le masquage complet de tous les aspects visuels d’une mesure, et pas seulement de ses données de cellule, nécessite des autorisations sur les membres de la dimension. Cette section explique comment refuser l'accès aux métadonnées d'objet d'une mesure.  
   
 1.  Dans **Données de la dimension** | **De base**, faites défiler la liste Dimension jusqu’aux dimensions du cube, puis sélectionnez **Dimension de mesures**.  
@@ -87,10 +92,10 @@ caps.handback.revision: 40
 > [!NOTE]  
 >  Vérifiez les conditions préalables pour apprendre à identifier les mesures qui peuvent perturber la sécurité du rôle.  
   
-## Sécurité avancée de la dimension  
+## <a name="advanced-dimension-security"></a>Sécurité avancée de la dimension  
  Si vous êtes familier de MDX, vous pouvez également écrire des expressions MDX qui définissent les critères pour les membres auxquels l'accès est autorisé ou refusé. Cliquez sur **Créer un rôle** | **Données de la dimension** | **Avancé** pour fournir le script.  
   
- Vous pouvez utiliser le Générateur MDX pour écrire l'instruction MDX. Pour plus d’informations, consultez [Générateur MDX &#40;Analysis Services – Données multidimensionnelles&#41;](../Topic/MDX%20Builder%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md). L’onglet **Avancé** a les options suivantes :  
+ Vous pouvez utiliser le Générateur MDX pour écrire l'instruction MDX. Pour plus d’informations, consultez [Générateur MDX &#40;Analysis Services – Données multidimensionnelles&#41;](http://msdn.microsoft.com/library/fecbf093-65ea-4e1b-b637-f04876f1cb0f). L’onglet **Avancé** a les options suivantes :  
   
  **Attribut**  
  Sélectionnez l'attribut dont vous voulez gérer la sécurité des membres.  
@@ -115,7 +120,7 @@ caps.handback.revision: 40
   
 -   Si le rôle de base de données ne définit pas un membre par défaut pour l'attribut, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise le membre par défaut défini pour l'attribut lui-même. Le membre par défaut d’un attribut, sauf si vous spécifiez le contraire, est le membre **Tous** (à moins que l’attribut soit défini comme ne pouvant pas faire l’objet d’une agrégation).  
   
- Par exemple, supposons qu’un rôle de base de données définit **Male** comme membre par défaut de l’attribut **Gender**. Si une requête n’inclut pas explicitement l’attribut **Gender** et ne spécifie pas un membre différent pour cet attribut, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retourne un ensemble de données qui inclut uniquement les clients hommes. Pour plus d’informations sur la définition du membre par défaut, consultez [Définir un membre par défaut](../../analysis-services/multidimensional-models/define-a-default-member.md).  
+ Par exemple, supposons qu’un rôle de base de données définit **Male** comme membre par défaut de l’attribut **Gender** . Si une requête n’inclut pas explicitement l’attribut **Gender** et ne spécifie pas un membre différent pour cet attribut, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retourne un ensemble de données qui inclut uniquement les clients hommes. Pour plus d’informations sur la définition du membre par défaut, consultez [Définir un membre par défaut](../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md).  
   
  **Activer les valeurs visibles**  
  La propriété VisualTotals indique si les valeurs des cellules agrégées affichées sont calculées en fonction de toutes les valeurs des cellules ou en fonction des valeurs des cellules auxquelles le rôle de base de données peut accéder.  
@@ -129,10 +134,10 @@ caps.handback.revision: 40
  **Vérifier**  
  Cliquez pour tester la syntaxe MDX définie dans cette page.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Octroyer des autorisations de cube ou de modèle &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [Octroyer un accès personnalisé à des données de cellule &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
- [Octroyer des autorisations sur des modèles et des structures d’exploration de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Octroyer un accès personnalisé à la cellule de données &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
+ [Accorder des autorisations sur les structures d’exploration de données et modèles &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
  [Octroyer des autorisations sur un objet de source de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

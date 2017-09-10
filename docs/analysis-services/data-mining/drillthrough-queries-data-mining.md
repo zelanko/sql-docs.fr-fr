@@ -1,27 +1,32 @@
 ---
-title: "Requ&#234;tes d&#39;extraction (exploration de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "AllowDrillThrough, propriété"
-  - "extraction [Analysis Services]"
-  - "extraction [DMX]"
+title: "Les requêtes d’extraction (exploration de données) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- AllowDrillThrough property
+- drillthrough [Analysis Services]
+- drillthrough [DMX]
 ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1cb15acfcc31572a34c6bf2fe6c3ec75101a9fd0
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Requ&#234;tes d&#39;extraction (exploration de donn&#233;es)
+# <a name="drillthrough-queries-data-mining"></a>Requêtes d'extraction (exploration de données)
   Une *requête d'extraction* vous permet de récupérer les détails des cas ou des données de structure sous-jacents, en envoyant une requête au modèle d'exploration de données. L'extraction est utile si vous souhaitez consulter les cas utilisés pour l'apprentissage du modèle, par opposition à ceux utilisés pour tester le modèle, ou si vous souhaitez consulter des détails supplémentaires à partir des données de cas.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit deux options différentes pour l'extraction :  
@@ -60,16 +65,16 @@ caps.handback.revision: 25
   
 ##  <a name="bkmk_Considerations"></a> Considérations sur l'utilisation de l'extraction  
   
--   Si vous utilisez l'Assistant Exploration de données, l'option d'activation de l'extraction vers les cas de modèles figure sur la dernière page de l'Assistant. L'extraction est désactivée par défaut. Pour plus d’informations, consultez [Fin de l’Assistant &#40;Assistant Exploration de données&#41;](../Topic/Completing%20the%20Wizard%20\(Data%20Mining%20Wizard\).md).  
+-   Si vous utilisez l'Assistant Exploration de données, l'option d'activation de l'extraction vers les cas de modèles figure sur la dernière page de l'Assistant. L'extraction est désactivée par défaut. Pour plus d’informations, consultez [Fin de l’Assistant &#40;Assistant Exploration de données&#41;](http://msdn.microsoft.com/library/6aef1548-35eb-42fd-ae87-63650a79eda1).  
   
 -   Vous pouvez ajouter la capacité d'extraire un modèle existant d'exploration de données, mais si vous procédez ainsi, le modèle doit être retraité avant que vous ne puissiez extraire les données.  
   
--   Le principe de l'extraction consiste à extraire des informations sur les cas d'apprentissage mis en cache lorsque vous avez traité la structure d'exploration de données. Par conséquent, si vous avez effacé les données en cache après avoir traité la structure en modifiant la propriété <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> en **ClearAfterProcessing**, l’extraction ne fonctionne pas. Pour activer l’extraction vers des colonnes de structure, vous devez modifier la propriété <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> en **KeepTrainingCases**, puis retraiter la structure.  
+-   Le principe de l'extraction consiste à extraire des informations sur les cas d'apprentissage mis en cache lorsque vous avez traité la structure d'exploration de données. Par conséquent, si vous avez effacé les données en cache après avoir traité la structure en modifiant la propriété <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> en **ClearAfterProcessing**, l’extraction ne fonctionne pas. Pour activer l’extraction vers des colonnes de structure, vous devez modifier la propriété <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> en **KeepTrainingCases** , puis retraiter la structure.  
   
 -   Si, contrairement au modèle d'exploration de données, la structure d'exploration de données ne vous autorise pas à extraire les données sous-jacentes, vous pouvez n'afficher les informations que des cas de modèle, mais non de la structure d'exploration de données.  
   
 ###  <a name="bkmk_Security"></a> Problèmes de sécurité pour l'extraction  
- Si vous souhaitez extraire les cas de structure du modèle, vous devez vérifier que la propriété [AllowDrillThrough](../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md) de la structure d'exploration de données et du modèle d'exploration de données possède la valeur **True**. De plus, vous devez être membre d'un rôle ayant les autorisations d'extraction sur la structure et le modèle. Pour plus d’informations sur la façon de créer des rôles, consultez [Concepteur de rôle &#40;Analysis Services - Données multidimensionnelles&#41;](../Topic/Role%20Designer%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md). consultez.  
+ Si vous souhaitez extraire les cas de structure du modèle, vous devez vérifier que la propriété [AllowDrillThrough](../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md) de la structure d'exploration de données et du modèle d'exploration de données possède la valeur **True**. De plus, vous devez être membre d'un rôle ayant les autorisations d'extraction sur la structure et le modèle. Pour plus d’informations sur la façon de créer des rôles, consultez [Concepteur de rôle &#40;Analysis Services - Données multidimensionnelles&#41;](http://msdn.microsoft.com/library/e8ba42db-0565-4d68-b3ab-0c63d8d07192). consultez.  
   
  Les autorisations d'extraction sont définies séparément sur la structure et le modèle. L'autorisation de modèle permet d'effectuer une extraction à partir du modèle, même si vous n'avez pas d'autorisations sur la structure. Les autorisations d’extraction sur la structure permettent en outre d’inclure des colonnes de structure dans les requêtes d’extraction à partir du modèle, à l’aide de la fonction [StructureColumn &#40;DMX&#41;](../../dmx/structurecolumn-dmx.md).  
   
@@ -86,19 +91,19 @@ caps.handback.revision: 25
 |Algorithme MNN (Microsoft Neural Network)|Non pris en charge. Ces algorithmes n'assignent pas de cas aux nœuds spécifiques du contenu.|  
 |Algorithme MLR (Microsoft Logistic Regression)|Non pris en charge. Ces algorithmes n'assignent pas de cas aux nœuds spécifiques du contenu.|  
 |Algorithme MLR (Microsoft Linear Regression)|Pris en charge. Toutefois, comme le modèle crée un nœud unique, **All**, l'extraction retourne tous les cas d'apprentissage pour le modèle. Si le jeu d'apprentissage est volumineux, le chargement des résultats peut durer plusieurs minutes.|  
-|Algorithme MTS (Microsoft Time Series)|Pris en charge. Toutefois, vous ne pouvez pas extraire les données de structure ou de cas en utilisant la **Visionneuse de modèle d'exploration de données** dans le Concepteur de modèle d'exploration de données. Vous devez créer à la place une requête DMX.<br /><br /> De même, vous ne pouvez pas extraire des nœuds spécifiques ni écrire une requête DMX pour récupérer les cas de nœuds spécifiques d'un modèle de série chronologique. Vous pouvez récupérer les données de cas depuis le modèle ou la structure en utilisant d'autres critères, comme les valeurs de date ou d'attribut.<br /><br /> Vous pouvez également retourner les dates des cas du modèle, à l’aide de la fonction [Lag &#40;DMX&#41;](../../dmx/lag-dmx.md).<br /><br /> Si vous souhaitez consulter les détails des nœuds ARTXP et ARIMA créés par l’algorithme MTS (Microsoft Time Series), vous pouvez utiliser la [Visionneuse de l’arborescence de contenu générique Microsoft &#40;exploration de données&#41;](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md).|  
+|Algorithme MTS (Microsoft Time Series)|Pris en charge. Toutefois, vous ne pouvez pas extraire les données de structure ou de cas en utilisant la **Visionneuse de modèle d'exploration de données** dans le Concepteur de modèle d'exploration de données. Vous devez créer à la place une requête DMX.<br /><br /> De même, vous ne pouvez pas extraire des nœuds spécifiques ni écrire une requête DMX pour récupérer les cas de nœuds spécifiques d'un modèle de série chronologique. Vous pouvez récupérer les données de cas depuis le modèle ou la structure en utilisant d'autres critères, comme les valeurs de date ou d'attribut.<br /><br /> Vous pouvez également retourner les dates des cas du modèle, à l’aide de la fonction [Lag &#40;DMX&#41;](../../dmx/lag-dmx.md).<br /><br /> Si vous souhaitez consulter les détails des nœuds ARTXP et ARIMA créés par l’algorithme MTS (Microsoft Time Series), vous pouvez utiliser la [Visionneuse de l’arborescence de contenu générique Microsoft &#40;exploration de données&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).|  
   
 ##  <a name="bkmk_Tasks"></a> Tâches associées  
  Utilisez les liens suivants pour utiliser l'extraction dans des scénarios spécifiques.  
   
 |Tâche|Lien|  
 |----------|----------|  
-|Procédure qui décrit l'utilisation de l'extraction dans le Concepteur d'exploration de données|[Extraire des données de cas à partir d'un modèle d'exploration de données](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
+|Procédure qui décrit l'utilisation de l'extraction dans le Concepteur d'exploration de données|[Extraire des données de cas à partir d’un modèle d’exploration de données](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
 |Pour modifier un modèle d'exploration de données existant afin d'autoriser l'extraction|[Activer l'extraction pour un modèle d'exploration de données](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
 |Activation de l'extraction sur une structure d'exploration de données à l'aide de la clause DMX WITH DRILLTHROUGH|[CREATE MINING STRUCTURE &#40;DMX&#41;](../../dmx/create-mining-structure-dmx.md)|  
 |Pour plus d'informations sur l'assignation d'autorisations qui s'appliquent à l'extraction sur des structures d'exploration de données et des modèles d'exploration de données|[Octroyer des autorisations sur des modèles et des structures d’exploration de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Visionneuses de modèle d’exploration de données](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [Requêtes d'exploration de données](../../analysis-services/data-mining/data-mining-queries.md)  
   

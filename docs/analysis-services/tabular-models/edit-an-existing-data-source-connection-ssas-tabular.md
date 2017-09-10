@@ -1,26 +1,31 @@
 ---
-title: "Modifier une connexion &#224; une source de donn&#233;es existante (SSAS Tabulaire) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.selexistconn.f1"
+title: "Modifier une connexion de Source de données existante (SSAS tabulaire) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.selexistconn.f1
 ms.assetid: 97e63f18-a01d-4c91-a411-e7e6d40a0647
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 67cac388bba3160fe5714a2c21f5741eafd6b32c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Modifier une connexion &#224; une source de donn&#233;es existante (SSAS Tabulaire)
+# <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>Modifier une connexion à une source de données existante (SSAS Tabulaire)
   Cette rubrique décrit la procédure de modification des propriétés d'une connexion de source de données existante dans un modèle tabulaire.  
   
  Après avoir créé une connexion à une source de données externe, vous pouvez modifier cette connexion des différentes façons suivantes :  
@@ -31,10 +36,10 @@ caps.handback.revision: 13
   
 -   Vous pouvez modifier les tables, les vues et les colonnes que vous obtenez à partir de la source de données externe.  
   
-## Modifier une connexion  
+## <a name="modify-a-connection"></a>Modifier une connexion  
  Cette procédure décrit comment modifier une connexion de source de données de base de données. Certaines options relatives à l'utilisation des sources de données diffèrent selon le type de source de données ; toutefois, vous devez pouvoir identifier facilement ces différences.  
   
-#### Pour modifier la source de données externe utilisée par une connexion actuelle  
+#### <a name="to-change-the-external-data-source-used-by-a-current-connection"></a>Pour modifier la source de données externe utilisée par une connexion actuelle  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], cliquez sur le menu **Modèle** , puis sur **Connexions existantes**.  
   
@@ -53,10 +58,10 @@ caps.handback.revision: 13
     > [!NOTE]  
     >  Si la nouvelle source de données contient des tables supplémentaires qui n'étaient pas présentes dans la source de données d'origine, vous devez rouvrir la connexion modifiée et ajouter les tables.  
   
-## Modifier les mappages de tables et de colonnes (liaisons)  
+## <a name="edit-table-and-column-mappings-bindings"></a>Modifier les mappages de tables et de colonnes (liaisons)  
  Cette procédure décrit comment modifier les mappages après avoir modifié une source de données.  
   
-#### Pour modifier des mappages de colonnes lorsqu'une source de données change  
+#### <a name="to-edit-column-mappings-when-a-data-source-changes"></a>Pour modifier des mappages de colonnes lorsqu'une source de données change  
   
 1.  Dans le générateur de modèles, sélectionnez une table.  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 13
   
      Lorsque vous enregistrez l'ensemble actuel de propriétés de table, un message peut apparaître pour vous prévenir que vous devez traiter les tables. Cliquez sur **Traiter** pour charger les données mises à jour dans votre modèle.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Traiter les données &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md)   
  [Sources de données prises en charge &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   

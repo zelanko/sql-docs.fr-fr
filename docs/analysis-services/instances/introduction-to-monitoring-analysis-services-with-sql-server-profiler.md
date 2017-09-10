@@ -1,31 +1,36 @@
 ---
-title: "Introduction &#224; la surveillance d’Analysis Services &#224; l’aide de SQL Server Profiler | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server Profiler, Analysis Services"
-  - "surveillance d'Analysis Services [SQL Server]"
-  - "performances [Analysis Services]"
-  - "performances [Analysis Services], SQL Server Profiler"
-  - "Profiler [SQL Server Profiler], Analysis Services"
+title: "Introduction à la surveillance d’Analysis Services avec SQL Server Profiler | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Profiler, Analysis Services
+- monitoring Analysis Services [SQL Server]
+- performance [Analysis Services]
+- performance [Analysis Services], SQL Server Profiler
+- Profiler [SQL Server Profiler], Analysis Services
 ms.assetid: 568ec549-5ddc-493a-b9f8-3bdc548b562e
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e5b4073390d14a50948ad7cf023a394c3f1ef683
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Introduction &#224; la surveillance d’Analysis Services &#224; l’aide de SQL Server Profiler
-  Vous pouvez utiliser [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour surveiller les événements générés par une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] vous permet d'effectuer les opérations suivantes :  
+# <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>Introduction à la surveillance d’Analysis Services à l’aide de SQL Server Profiler
+  Vous pouvez utiliser [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour surveiller les événements générés par une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]vous permet d'effectuer les opérations suivantes :  
   
 -   Surveiller les performances d'une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -41,8 +46,8 @@ caps.handback.revision: 28
   
 -   Afficher des données sur les événements capturés ou capturer et enregistrer des données sur chaque événement dans un fichier ou une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en vue d'une future analyse ou relecture. Lorsque vous relisez des données, vous pouvez réexécuter les événements enregistrés comme ils se sont produits à l'origine, soit en temps réel, soit en pas à pas.  
   
-## Utilisation de SQL Server Profiler  
- Pour créer ou relire des traces à l'aide de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], vous devez être membre du rôle de serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Si vous êtes membre du rôle de serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vous pouvez démarrer [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] à partir du groupe de programmes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le menu **Démarrer**.  
+## <a name="using-sql-server-profiler"></a>Utilisation de SQL Server Profiler  
+ Pour créer ou relire des traces à l'aide de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , vous devez être membre du rôle de serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si vous êtes membre du rôle de serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vous pouvez démarrer [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] à partir du groupe de programmes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le menu **Démarrer** .  
   
  Lorsque vous utilisez [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], gardez présentes à l'esprit les considérations suivantes :  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 28
   
  Pour optimiser les performances, utilisez [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour ne surveiller que les événements qui vous intéressent le plus. En effet, le fait de surveiller un trop grand nombre d'événements augmente les servitudes logicielles et peut considérablement accroître la taille du fichier ou de la table de trace, surtout si la surveillance se prolonge sur une période importante. En outre, utilisez le filtrage pour limiter la quantité de données recueillies et éviter que les traces ne deviennent trop volumineuses.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Événements de trace Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)   
  [Créer des traces de SQL Server Profiler pour la relecture &#40;Analysis Services&#41;](../../analysis-services/instances/create-profiler-traces-for-replay-analysis-services.md)  
   

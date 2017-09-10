@@ -1,43 +1,36 @@
 ---
-title: "Conseils et meilleures pratiques en mati&#232;re de globalisation (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "traductions [Analysis Services], applications clientes"
-  - "comparaisons de dates"
-  - "comparaisons de jours de la semaine [Analysis Services]"
-  - "heure [Analysis Services]"
-  - "comparaisons de mois [Analysis Services]"
+title: Globalisation conseils et meilleures pratiques (Analysis Services) | Documents Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- translations [Analysis Services], client applications
+- date comparisons
+- day-of-week comparisons [Analysis Services]
+- time [Analysis Services]
+- month comparisons [Analysis Services]
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 79c80dd57b6a6ea1257c00dfb95bf1e9a08a5b99
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Conseils et meilleures pratiques en mati&#232;re de globalisation (Analysis Services)
+# <a name="globalization-tips-and-best-practices-analysis-services"></a>Conseils et meilleures pratiques en matière de globalisation (Analysis Services)
   [!INCLUDE[applies](../includes/applies-md.md)] Multidimensionnel uniquement  
   
  Ces conseils et astuces peuvent vous aider à augmenter la portabilité de vos solutions Business Intelligence et à éviter les erreurs qui sont directement liées aux paramètres de langue et de classement.  
-  
--   [Utilisation de classements similaires dans toute la pile](#bkmk_sameColl)  
-  
--   [Recommandations courantes en matière de classement](#bkmk_recos)  
-  
--   [Respect de la casse des identificateurs d'objets](#bkmk_objid)  
-  
--   [Test des paramètres régionaux à l'aide d'Excel et de SQL Server Profiler](#bkmk_test)  
-  
--   [Écriture de requêtes MDX dans une solution contenant des traductions](#bkmk_mdx)  
-  
--   [Écriture de requêtes MDX contenant des valeurs de date et d'heure](#bkmk_datetime)  
   
 ##  <a name="bkmk_sameColl"></a> Utilisation de classements similaires dans toute la pile  
  Si possible, essayez d'utiliser les mêmes paramètres de classement dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que ceux que vous utilisez pour le moteur de base de données, avec une cohérence dans le respect de la largeur, le respect de la casse et la sensibilité aux accents.  
@@ -46,7 +39,7 @@ caps.handback.revision: 32
   
  Même lorsque les paramètres de classement sont fonctionnellement équivalents, vous pouvez faire face à un cas particulier où un espace dans une chaîne vide est interprété différemment par chaque service.  
   
- Le caractère espace est un « cas spécial », car il peut être représenté comme un jeu de caractères codé sur un octet (SBCS) ou sur deux octets (DBCS) au format Unicode. Dans le moteur relationnel, deux chaînes composées séparées par un espace (une en SBCS et l'autre en DBCS) sont considérées comme identiques. Dans Analysis Services, au cours du traitement, les deux mêmes chaînes composées ne sont pas identiques et la deuxième instance est signalée comme un doublon.  
+ Le caractère espace est un « cas spécial », car il peut être représenté comme un jeu de caractères codé sur un octet (SBCS) ou sur deux octets (DBCS) au format Unicode. Dans le moteur relationnel, deux chaînes composées séparées par un espace (une en SBCS et l'autre en DBCS) sont considérées comme identiques. Dans Analysis Services, au cours du traitement, les deux mêmes chaînes composées ne sont pas identiques et la deuxième instance est signalée comme un doublon.  
   
  Pour plus d'informations et pour obtenir des suggestions de solutions de contournement, consultez [Les vides dans une chaîne Unicode sont traités différemment selon le classement](http://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx).  
   
@@ -65,11 +58,11 @@ caps.handback.revision: 32
   
 -   La langue et les classements chinois varient selon la région, mais sont généralement Chinois simplifié ou Chinois traditionnel.  
   
-     En République populaire de Chine et à Singapour, le Support technique Microsoft considère plutôt le Chinois simplifié avec Pinyin comme l'ordre de tri par défaut. Les classements recommandés sont Chinese_PRC (pour SQL Server 2000), Chinese_PRC_90 (pour SQL Server 2005) ou Chinese_Simplified_Pinyin_100 (pour SQL Server 2008 et versions ultérieures).  
+     En République populaire de Chine et à Singapour, le Support technique Microsoft considère plutôt le Chinois simplifié avec Pinyin comme l'ordre de tri par défaut. Les classements recommandés sont Chinese_PRC (pour SQL Server 2000), Chinese_PRC_90 (pour SQL Server 2005) ou Chinese_Simplified_Pinyin_100 (pour SQL Server 2008 et versions ultérieures).  
   
-     À Taïwan, il est plus courant de voir le Chinois traditionnel avec l'ordre de tri recommandé basé sur le nombre de traits : Chinese_Taiwan_Stroke (pour SQL Server 2000), Chinese_Taiwan_Stroke_90 (pour SQL Server 2005) ou Chinese_Traditional_Stroke_Count_100 (pour SQL Server 2008 et versions ultérieures).  
+     À Taïwan, il est plus courant de voir le Chinois traditionnel avec l'ordre de tri recommandé basé sur le nombre de traits : Chinese_Taiwan_Stroke (pour SQL Server 2000), Chinese_Taiwan_Stroke_90 (pour SQL Server 2005) ou Chinese_Traditional_Stroke_Count_100 (pour SQL Server 2008 et versions ultérieures).  
   
-     Les autres régions (comme Hong Kong et Macao) utilisent également le Chinois traditionnel. Pour les classements, à Hong Kong il n'est pas rare de voir Chinese_Hong_Kong_Stroke_90 (sur SQL Server 2005). À Macao, Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 et versions ultérieures) est utilisé relativement souvent.  
+     Les autres régions (comme Hong Kong et Macao) utilisent également le Chinois traditionnel. Pour les classements, à Hong Kong il n'est pas rare de voir Chinese_Hong_Kong_Stroke_90 (sur SQL Server 2005). À Macao, Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 et versions ultérieures) est utilisé relativement souvent.  
   
 -   Pour le japonais, le classement le plus courant est Japanese_CI_AS. Japanese_XJIS_100 est utilisé dans les installations prenant en charge [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213). On utilise généralement Japanese_BIN2 dans les projets de migration de données, avec des données provenant de plateformes non-Windows ou de sources de données autres que le moteur de base de données relationnelle de SQL Server.  
   
@@ -87,10 +80,10 @@ caps.handback.revision: 32
   
  **Impact du respect de la casse pour les identificateurs d'objets**  
   
- Seuls les identificateurs d'objets, et non les noms d'objets, sont soumis aux comportements de respect de la casse décrits dans le tableau. Si vous constatez un changement dans le fonctionnement de votre solution (comparaison avant/après après l'installation de SQL Server 2012 SP2 ou version ultérieure), il s'agit très probablement d'un problème de traitement. Les requêtes ne sont pas affectées par les identificateurs d'objets. Pour les deux langages de requête (DAX et MDX), le moteur de formule utilise le nom d'objet (et non l'identificateur).  
+ Seuls les identificateurs d'objets, et non les noms d'objets, sont soumis aux comportements de respect de la casse décrits dans le tableau. Si vous constatez un changement dans le fonctionnement de votre solution (comparaison avant/après après l'installation de SQL Server 2012 SP2 ou version ultérieure), il s'agit très probablement d'un problème de traitement. Les requêtes ne sont pas affectées par les identificateurs d'objets. Pour les deux langages de requête (DAX et MDX), le moteur de formule utilise le nom d'objet (et non l'identificateur).  
   
 > [!NOTE]  
->  Les modifications de code liées à la casse sont une modification avec rupture pour certaines applications. Pour plus d’informations, consultez [Modifications avec rupture dans les fonctionnalités Analysis Services de SQL Server 2016](../analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2016.md).  
+>  Les modifications de code liées à la casse sont une modification avec rupture pour certaines applications. Pour plus d’informations, consultez [Modifications avec rupture dans les fonctionnalités Analysis Services de SQL Server 2016](../analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2016.md) .  
   
 ##  <a name="bkmk_test"></a> Test des paramètres régionaux à l'aide d'Excel, de SQL Server Profiler et de SQL Server Management Studio  
  Lors des tests de traductions, la connexion doit spécifier le LCID de la traduction. Comme décrit dans [Get Different Language from SSAS into Excel](http://extremeexperts.com/sql/Tips/ExcelDiffLocale.aspx), vous pouvez utiliser Excel pour tester vos traductions.  
@@ -101,23 +94,23 @@ caps.handback.revision: 32
   
 -   Ajoutez `Locale Identifier=1036` à la chaîne de connexion. Enregistrez et fermez le fichier.  
   
--   Ouvrez Excel | **Données** | **Connexions existantes**. Filtrez la liste pour afficher uniquement les fichiers de connexions sur cet ordinateur. Recherchez la connexion à Adventure Works (examinez soigneusement le nom ; il peut y en avoir plusieurs). Ouvrez la connexion.  
+-   Ouvrez Excel | **Données** | **Connexions existantes**. Filtrez la liste pour afficher uniquement les fichiers de connexions sur cet ordinateur. Recherchez la connexion à Adventure Works (examinez soigneusement le nom ; il peut y en avoir plusieurs). Ouvrez la connexion.  
   
      Vous devriez voir les traductions en français de l'exemple de base de données Adventure Works.  
   
-     ![Tableau croisé dynamique Excel avec des traductions en français](../analysis-services/media/ssas-localetest-excel.png "Tableau croisé dynamique Excel avec des traductions en français")  
+     ![Tableau croisé dynamique Excel avec traductions Français](../analysis-services/media/ssas-localetest-excel.png "tableau croisé dynamique Excel avec traductions Français")  
   
  Vous pouvez utiliser SQL Server Profiler pour confirmer les paramètres régionaux. Cliquez sur un événement `Session Initialize` et examinez la liste des propriétés dans la zone de texte ci-dessous pour trouver `<localeidentifier>1036</localeidentifier>`.  
   
  Dans Management Studio, vous pouvez spécifier Locale Identifier sur une connexion de serveur.  
   
--   Dans l’Explorateur d’objets | **Connecter** | **Analysis Services** | **Options**, cliquez sur l’onglet **Paramètres de connexion supplémentaires**.  
+-   Dans l’Explorateur d’objets | **Connecter** | **Analysis Services** | **Options**, cliquez sur l’onglet **Paramètres de connexion supplémentaires** .  
   
 -   Entrez `Local Identifier=1036` , puis cliquez sur **Connexion**.  
   
 -   Exécutez une requête MDX sur la base de données Adventure Works. Les résultats de la requête doivent être les traductions en français.  
   
-     ![Requête MDX avec des traductions en français dans SSMS](../analysis-services/media/ssas-localetest-ssms.png "Requête MDX avec des traductions en français dans SSMS")  
+     ![Requête MDX avec traductions Français dans SSMS](../analysis-services/media/ssas-localetest-ssms.png "requête MDX avec traductions Français dans SSMS")  
   
 ##  <a name="bkmk_mdx"></a> Écriture de requêtes MDX dans une solution contenant des traductions  
  Les données affichées pour les noms des objets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] correspondent à des traductions, mais les identificateurs de ces mêmes objets ne sont pas traduits. Chaque fois que possible, utilisez les identificateurs et les clés pour les objets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à la place des légendes et des noms traduits. Par exemple, utilisez les clés de membres à la place des noms de membres pour les instructions et les scripts MDX (Multidimensional Expressions) pour garantir la portabilité dans plusieurs langues.  
@@ -126,7 +119,7 @@ caps.handback.revision: 32
 >  Rappelez-vous que les noms d'objets tabulaires ne respectent jamais la casse, quel que soit le classement. Les noms d'objets multidimensionnels, en revanche, suivent le respect de la casse du classement. Comme seuls les noms d'objets multidimensionnels respectent la casse, assurez-vous que toutes les requêtes MDX faisant référence à des objets multidimensionnels ont la casse correcte.  
   
 ##  <a name="bkmk_datetime"></a> Écriture de requêtes MDX contenant des valeurs de date et d'heure  
- Voici quelques suggestions pour rendre vos requêtes MDX de date et d'heure plus portables entre différentes langues :  
+ Voici quelques suggestions pour rendre vos requêtes MDX de date et d'heure plus portables entre différentes langues :  
   
 1.  **Utiliser des parties numériques pour les comparaisons et les opérations**  
   
@@ -144,8 +137,7 @@ caps.handback.revision: 32
   
      La requête MDX suivante, tirée d'un billet de forum, illustre l'utilisation de Format pour retourner des dates dans un format spécifique, quels que soient les paramètres régionaux sous-jacents.  
   
-     Pour lire le billet d’origine, consultez [SSAS 2012 generates invalid dates (billet du forum sur Network Steve](http://www.networksteve.com/forum/topic.php/SSAS_2012_generates_invalid_dates/?TopicId=40504&Posts=2).  
-  
+
     ```  
     WITH MEMBER [LinkTimeAdd11Date_Manual] as Format(dateadd("d",15,"2014-12-11"), "mm/dd/yyyy")  
     member [LinkTimeAdd15Date_Manual] as Format(dateadd("d",11,"2014-12-13"), "mm/dd/yyyy")  
@@ -158,7 +150,7 @@ caps.handback.revision: 32
   
     ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Scénarios de globalisation pour Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [Rédiger des instructions Transact-SQL internationales](../relational-databases/collations/write-international-transact-sql-statements.md)  
   

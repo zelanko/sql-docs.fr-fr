@@ -1,28 +1,33 @@
 ---
-title: "Configurer le pare-feu Windows pour autoriser l&#39;acc&#232;s &#224; Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ports [Analysis Services]"
-  - "pare-feu Windows [Analysis Services]"
-  - "systèmes pare-feu [Analysis Services]"
+title: "Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services | Documents Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ports [Analysis Services]
+- Windows Firewall [Analysis Services]
+- firewall systems [Analysis Services]
 ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
 caps.latest.revision: 47
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 47
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b4fd0a5f94c049cac32b7396e212d3da387f98f5
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Configurer le pare-feu Windows pour autoriser l&#39;acc&#232;s &#224; Analysis Services
+# <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Configurer le pare-feu Windows pour autoriser l'accès à Analysis Services
   Une première étape essentielle pour mettre [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] à disposition sur le réseau consiste à déterminer si vous devez débloquer des ports dans un pare-feu. La plupart des installations nécessitent la création d'au moins une règle de trafic entrant dans le pare-feu qui autorise les connexions à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  Les conditions de configuration du pare-feu varient selon le mode d'installation de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
@@ -33,15 +38,15 @@ caps.handback.revision: 47
   
 -   Ouvrez le port TCP 2382 lors de l'installation de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode SharePoint pour prendre en charge [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013. Dans [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013, l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est externe à SharePoint. Les demandes entrantes à destination de l’instance nommée «[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]» proviennent des applications Web SharePoint via une connexion réseau, qui nécessite un port ouvert. Comme avec d'autres instances nommées [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , créez une règle de trafic entrant pour le service SQL Server Browser sur le port TCP 2382 pour permettre l'accès à [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
--   Pour [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010, n'ouvrez pas les ports du Pare-feu Windows. En tant que complément de SharePoint, le service utilise les ports configurés pour SharePoint et établit uniquement des connexions locales à l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui charge et interroge les modèles de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+-   Pour [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010, n'ouvrez pas les ports du Pare-feu Windows. En tant que complément de SharePoint, le service utilise les ports configurés pour SharePoint et établit uniquement des connexions locales à l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui charge et interroge les modèles de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 -   Pour les instances [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécutant sur des ordinateurs virtuels Windows Azure, utilisez d'autres instructions pour configurer l'accès au serveur. Consultez [Business Intelligence de SQL Server dans les ordinateurs virtuels Windows Azure](http://msdn.microsoft.com/library/windowsazure/jj992719.aspx).  
   
- Bien que l’instance par défaut de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] écoute le port TCP 2383, vous pouvez configurer le serveur pour qu’il écoute un port fixe différent, avec une connexion au serveur au format suivant : \<NomServeur>:\<NuméroPort>.  
+ Bien que l’instance par défaut de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] écoute le port TCP 2383, vous pouvez configurer le serveur pour écouter sur un port fixe différent, la connexion au serveur au format suivant : \<nom_serveur > :\<numéro_port >.  
   
- Seul un port TCP peut être utilisé par une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Sur des ordinateurs disposant de plusieurs cartes réseau ou de plusieurs adresses IP, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] écoute un port TCP à la recherche de toutes les adresses IP affectées ou affectées comme alias à l'ordinateur. Si vous avez des exigences particulières concernant plusieurs ports, pensez à configurer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour l'accès HTTP. Vous pouvez ensuite configurer plusieurs points de terminaison HTTP sur les ports que vous choisissez. Consultez [Configurer l’accès HTTP à Analysis Services sur Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md).  
+ Seul un port TCP peut être utilisé par une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Sur des ordinateurs disposant de plusieurs cartes réseau ou de plusieurs adresses IP, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] écoute un port TCP à la recherche de toutes les adresses IP affectées ou affectées comme alias à l'ordinateur. Si vous avez des exigences particulières concernant plusieurs ports, pensez à configurer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour l'accès HTTP. Vous pouvez ensuite configurer plusieurs points de terminaison HTTP sur les ports que vous choisissez. Consultez [Configurer l’accès HTTP à Analysis Services sur Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
- Cette rubrique contient les sections suivantes :  
+ Cette rubrique contient les sections suivantes :  
   
 -   [Vérifier les paramètres des ports et du pare-feu utilisés par Analysis Services](#bkmk_checkport)  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 47
   
 -   Exécutez **netstat –ao –p TCP** à partir de la ligne de commande pour afficher les informations de port TCP relatives à ce PID.  
   
--   Vérifiez le port à l’aide de SQL Server Management Studio et connectez-vous à un serveur Analysis Services en respectant le format suivant : \<adresse_IP>:<numéro_port>\>.  
+-   Vérifier le port à l’aide de SQL Server Management Studio et connectez-vous à un serveur Analysis Services dans ce format : \<IPAddress > :\<numéro_port >.  
   
  Bien qu'une application puisse être à l'écoute d'un port spécifique, les connexions échouent si un pare-feu bloque l'accès. Pour que des connexions atteignent une instance nommée d'Analysis Services, vous devez débloquer l'accès à msmdsrv.exe ou au port fixe du pare-feu sur lequel s'effectue l'écoute. Les sections suivantes de cette rubrique fournissent des instructions à cet effet.  
   
@@ -86,7 +91,7 @@ caps.handback.revision: 47
   
  Quand vous spécifiez une règle de trafic entrant, veillez à adopter une convention d’affectation de noms qui vous permette par la suite de retrouver facilement ces règles (par exemple, **SQL Server Analysis Services (TCP-entrant) 2383**).  
   
-#### Pare-feu Windows avec fonctions avancées de sécurité  
+#### <a name="windows-firewall-with-advanced-security"></a>Pare-feu Windows avec fonctions avancées de sécurité  
   
 1.  Sur Windows 7 ou Windows Vista, dans le Panneau de configuration, cliquez sur **Système et sécurité**, sélectionnez **Pare-feu Windows**, puis cliquez sur **Paramètres avancés**. Sous Windows Server 2008 ou 2008 R2, ouvrez Outils d'administration et cliquez sur **Pare-feu Windows avec fonctions avancées de sécurité**. Sous Windows Server 2012, ouvrez la page Applications et entrez **Pare-feu Windows**.  
   
@@ -107,7 +112,7 @@ caps.handback.revision: 47
     > [!NOTE]  
     >  Les autres utilisateurs n'auront pas accès à ce serveur, à moins que vous ne leur accordiez les autorisations nécessaires. Pour plus d’informations, consultez [Autorisation de l’accès à des objets et des opérations &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
   
-#### Syntaxe Netsh AdvFirewall  
+#### <a name="netsh-advfirewall-syntax"></a>Syntaxe Netsh AdvFirewall  
   
 -   La commande suivante crée une règle de trafic entrant qui autorise les demandes entrantes sur le port TCP 2383.  
   
@@ -122,9 +127,9 @@ caps.handback.revision: 47
   
  Choisissez l'une des approches suivantes pour activer l'accès à distance à une instance nommée d'Analysis Services :  
   
--   Utilisez les affectations de port dynamiques, ainsi que le service SQL Server Browser. Débloquez le port utilisé par le service SQL Server Browser dans le Pare-feu Windows. Connectez-vous au serveur en respectant le format suivant : \<nom_serveur>\\<nom_instance\>.  
+-   Utilisez les affectations de port dynamiques, ainsi que le service SQL Server Browser. Débloquez le port utilisé par le service SQL Server Browser dans le Pare-feu Windows. Se connecter au serveur au format suivant : \<nom_serveur >\\< nom_instance\>.  
   
--   Utilisez conjointement un port fixe et le service SQL Server Browser. Cette approche vous permet de vous connecter en utilisant le format \<nom_serveur>\\<nom_instance\> et est identique à l’approche d’affectation de port dynamique, à l’exception près que dans ce cas, le serveur écoute un port fixe. Dans ce cas, le service SQL Server Browser fournit un nom de résolution à l'instance Analysis Services qui écoute le port fixe. Pour utiliser cette approche, configurez le serveur de façon à ce qu'il écoute un port fixe, débloquez l'accès à ce port, puis débloquez l'accès au port utilisé par le service SQL Server Browser.  
+-   Utilisez conjointement un port fixe et le service SQL Server Browser. Cette approche vous permet de vous connectez à l’aide de ce format : \<nom_serveur >\\< nom_instance\>, identique à l’approche d’affectation de port dynamique, sauf que, dans ce cas, le serveur écoute sur un port fixe. Dans ce cas, le service SQL Server Browser fournit un nom de résolution à l'instance Analysis Services qui écoute le port fixe. Pour utiliser cette approche, configurez le serveur de façon à ce qu'il écoute un port fixe, débloquez l'accès à ce port, puis débloquez l'accès au port utilisé par le service SQL Server Browser.  
   
  Le service SQL Server Browser est uniquement utilisé avec les instances nommées, et jamais avec l'instance par défaut. Le service est automatiquement installé et activé, dès que vous installez l'une des fonctionnalités SQL Server en tant qu'instance nommée. Si vous choisissez une approche qui nécessite le service SQL Server Browser, assurez-vous qu'il est toujours activé et lancé sur votre serveur.  
   
@@ -139,11 +144,11 @@ caps.handback.revision: 47
 > [!NOTE]  
 >  Le service SQL Server Browser écoute le port UDP 1434 et le port TCP 2382, pour le moteur de base de données et Analysis Services, respectivement. Si vous avez déjà débloqué le port UDP 1434 pour le service SQL Server Browser, il vous faut néanmoins toujours débloquer le port TCP 2382 pour Analysis Services.  
   
-#### Pare-feu Windows avec fonctions avancées de sécurité  
+#### <a name="windows-firewall-with-advanced-security"></a>Pare-feu Windows avec fonctions avancées de sécurité  
   
 1.  Sur Windows 7 ou Windows Vista, dans le Panneau de configuration, cliquez sur **Système et sécurité**, sélectionnez **Pare-feu Windows**, puis cliquez sur **Paramètres avancés**. Sous Windows Server 2008 ou 2008 R2, ouvrez Outils d'administration et cliquez sur **Pare-feu Windows avec fonctions avancées de sécurité**. Sous Windows Server 2012, ouvrez la page Applications et entrez **Pare-feu Windows**.  
   
-2.  Pour débloquer l’accès au service SQL Server Browser, cliquez avec le bouton droit sur **Règles de trafic entrant**, puis sélectionnez **Nouvelle règle**.  
+2.  Pour débloquer l’accès au service SQL Server Browser, cliquez avec le bouton droit sur **Règles de trafic entrant** , puis sélectionnez **Nouvelle règle**.  
   
 3.  Dans Type de règle, cliquez sur **Port** , puis sur **Suivant**.  
   
@@ -155,7 +160,7 @@ caps.handback.revision: 47
   
 7.  Dans Nom, tapez un nom descriptif pour cette règle (par exemple, **SQL Server Browser Service (tcp-entrant) 2382**), puis cliquez sur **Terminer**.  
   
-8.  Pour vérifier que les connexions distantes sont bien activées, ouvrez SQL Server Management Studio ou Excel sur un autre ordinateur et connectez-vous à Analysis Services en spécifiant le nom de réseau du serveur et le nom de l’instance au format suivant : \<NomServeur>\\<NomInstance\>. Par exemple, sur un serveur nommé **AW-SRV01** avec une instance nommée **Finance**, le nom du serveur sera **AW-SRV01\Finance**.  
+8.  Pour vérifier que les connexions distantes sont activées, ouvrez SQL Server Management Studio ou Excel sur un autre ordinateur et connectez-vous à Analysis Services en spécifiant le nom réseau du serveur et le nom de l’instance au format suivant : \<nom_serveur >\\< nom_instance\>. Par exemple, sur un serveur nommé **AW-SRV01** avec une instance nommée **Finance**, le nom du serveur sera **AW-SRV01\Finance**.  
   
  **Option n°2 : utilisez un port fixe pour une instance nommée**  
   
@@ -163,11 +168,11 @@ caps.handback.revision: 47
   
  Pour affecter un port fixe, suivez les instructions de la section [Utiliser un port fixe pour une instance par défaut ou nommée d'Analysis Services](#bkmk_fixed) de cette rubrique, puis revenez à la présente section pour débloquer le port.  
   
-#### Pare-feu Windows avec fonctions avancées de sécurité  
+#### <a name="windows-firewall-with-advanced-security"></a>Pare-feu Windows avec fonctions avancées de sécurité  
   
 1.  Sur Windows 7 ou Windows Vista, dans le Panneau de configuration, cliquez sur **Système et sécurité**, sélectionnez **Pare-feu Windows**, puis cliquez sur **Paramètres avancés**. Sous Windows Server 2008 ou 2008 R2, ouvrez Outils d'administration et cliquez sur **Pare-feu Windows avec fonctions avancées de sécurité**. Sous Windows Server 2012, ouvrez la page Applications et entrez **Pare-feu Windows**.  
   
-2.  Pour débloquer l’accès à Analysis Services, cliquez avec le bouton droit sur **Règles de trafic entrant**, puis sélectionnez **Nouvelle règle**.  
+2.  Pour débloquer l’accès à Analysis Services, cliquez avec le bouton droit sur **Règles de trafic entrant** , puis sélectionnez **Nouvelle règle**.  
   
 3.  Dans Type de règle, cliquez sur **Port** , puis sur **Suivant**.  
   
@@ -179,9 +184,9 @@ caps.handback.revision: 47
   
 7.  Dans Nom, tapez un nom descriptif pour cette règle (par exemple, **SQL Server Analysis Services sur port 54321**), puis cliquez sur **Terminer**.  
   
-8.  Pour vérifier que les connexions distantes sont bien activées, ouvrez SQL Server Management Studio ou Excel sur un autre ordinateur et connectez-vous à Analysis Services en spécifiant le nom de réseau du serveur et le numéro de port au format suivant : \<NomServeur>:\<NuméroPort>.  
+8.  Pour vérifier que les connexions distantes sont activées, ouvrez SQL Server Management Studio ou Excel sur un autre ordinateur et connectez-vous à Analysis Services en spécifiant le nom réseau du serveur et le numéro de port au format suivant : \<nom_serveur > :\<numéro_port >.  
   
-#### Syntaxe Netsh AdvFirewall  
+#### <a name="netsh-advfirewall-syntax"></a>Syntaxe Netsh AdvFirewall  
   
 -   Les commandes suivantes créent des règles de trafic entrant qui débloquent le port TCP 2382 pour le service SQL Server Browser et débloquent le port fixe que vous avez spécifié pour l'instance Analysis Services. Vous pouvez exécuter l'une ou l'autre pour permettre l'accès à une instance nommée d'Analysis Services.  
   
@@ -198,13 +203,13 @@ caps.handback.revision: 47
 ##  <a name="bkmk_fixed"></a> Utiliser un port fixe pour une instance par défaut ou nommée d'Analysis Services  
  Cette section explique comment configurer le service pour l'écoute d'un port fixe. L'utilisation d'un port fixe est la plus courante lorsqu'Analysis Services est installé en tant qu'instance nommée, cependant, vous pouvez également utiliser cette approche si les besoins de l'entreprise et les besoins en matière de sécurité nécessitent l'utilisation de ports non affectés par défaut.  
   
- Notez que l'utilisation d'un port fixe modifie la syntaxe de connexion de l'instance par défaut, puisqu'il vous faudra ajouter le numéro de port après le nom du serveur. Par exemple, la connexion à une instance locale par défaut d'Analysis Services écoutant le port 54321 dans SQL Server Management Studio nécessite que vous tapiez localhost:54321 comme nom de serveur dans la boîte de dialogue Se connecter au serveur de Management Studio.  
+ Notez que l'utilisation d'un port fixe modifie la syntaxe de connexion de l'instance par défaut, puisqu'il vous faudra ajouter le numéro de port après le nom du serveur. Par exemple, la connexion à une instance locale par défaut d'Analysis Services écoutant le port 54321 dans SQL Server Management Studio nécessite que vous tapiez localhost:54321 comme nom de serveur dans la boîte de dialogue Se connecter au serveur de Management Studio.  
   
- Si vous utilisez une instance nommée, vous pouvez affecter un port fixe sans modifier la façon dont vous spécifiez le nom du serveur (c'est-à-dire que vous pouvez utiliser \<nom_serveur\nom_instance> pour vous connecter à une instance nommée à l'écoute d'un port fixe). Cela fonctionne uniquement si le service SQL Server Browser est en cours d'exécution et si vous avez débloqué le port que le service écoute. Le service SQL Server Browser effectuera une redirection vers le port fixe, en fonction de \<nom_serveur\nom_instance>. Tant que vous ouvrez des ports à la fois pour le service SQL Server Browser et pour l'instance nommée d'Analysis Services à l'écoute du port fixe, le service SQL Server Browser assure la résolution de la connexion en instance nommée.  
+ Si vous utilisez une instance nommée, vous pouvez affecter un port fixe sans aucune modification à la façon dont vous spécifiez le nom du serveur (en particulier, vous pouvez utiliser \<nom_serveur\nom_instance > pour vous connecter à une instance nommée à l’écoute sur un port fixe). Cela fonctionne uniquement si le service SQL Server Browser est en cours d'exécution et si vous avez débloqué le port que le service écoute. Service SQL Server Browser fournit la redirection vers le port fixe selon \<nomserveur\nominstance >. Tant que vous ouvrez des ports à la fois pour le service SQL Server Browser et pour l'instance nommée d'Analysis Services à l'écoute du port fixe, le service SQL Server Browser assure la résolution de la connexion en instance nommée.  
   
 1.  Identifiez un port TCP/IP disponible à utiliser.  
   
-     Pour afficher la liste des ports réservés et enregistrés que vous ne devez pas utiliser, consultez les [numéros de port (IANA)](http://go.microsoft.com/fwlink/?LinkID=198469) (en anglais). Pour afficher la liste des ports déjà utilisés par votre système, ouvrez une fenêtre d'invite de commandes et tapez **netstat –a –p TCP** pour afficher la liste des ports TCP ouverts sur le système.  
+     Pour afficher la liste des ports réservés et enregistrés que vous ne devez pas utiliser, consultez les [numéros de port (IANA)](http://go.microsoft.com/fwlink/?LinkID=198469)(en anglais). Pour afficher la liste des ports déjà utilisés par votre système, ouvrez une fenêtre d'invite de commandes et tapez **netstat –a –p TCP** pour afficher la liste des ports TCP ouverts sur le système.  
   
 2.  Après avoir déterminé quel port utiliser, spécifiez-le en modifiant le paramètre de configuration **Port** dans le fichier msmdsrv.ini ou dans la page Propriétés générales d'une instance d'Analysis Services dans SQL Server Management Studio.  
   
@@ -212,7 +217,7 @@ caps.handback.revision: 47
   
 4.  Configurez le Pare-feu Windows pour débloquer le port TCP spécifié. Si vous utilisez un port fixe pour une instance nommée, débloquez le port TCP spécifié pour cette instance et le port TCP 2382 pour le service SQL Server Browser.  
   
-5.  Vérifiez en vous connectant localement (dans Management Studio), puis à distance à partir d'une application cliente sur un autre ordinateur. Pour utiliser Management Studio, connectez-vous à une instance par défaut d’Analysis Services en spécifiant un nom de serveur au format \<nom_serveur>:\<numéro_port>. Pour une instance nommée, spécifiez le nom du serveur sous la forme \<nom_serveur>\\<nom_instance\>.  
+5.  Vérifiez en vous connectant localement (dans Management Studio), puis à distance à partir d'une application cliente sur un autre ordinateur. Pour utiliser Management Studio, connectez-vous à une instance par défaut d’Analysis Services en spécifiant un nom de serveur au format suivant : \<nom_serveur > :\<numéro_port >. Pour une instance nommée, spécifiez le nom du serveur en tant que \<nom_serveur >\\< nom_instance\>.  
   
 ##  <a name="bkmk_cluster"></a> Configuration de port pour un cluster Analysis Services  
  Un cluster de basculement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] écoute toujours sur le port TCP 2383, que vous l'ayez installé comme instance par défaut ou comme instance nommée. Les affectations de ports dynamiques ne sont pas utilisées par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] lorsqu'il est installé sur un cluster de basculement Windows. Veillez à ouvrir le port TCP 2383 sur chaque nœud en exécutant [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans le cluster. Pour plus d'informations sur le clustering [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Procédure : mettre en cluster SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548).  
@@ -220,7 +225,7 @@ caps.handback.revision: 47
 ##  <a name="bkmk_powerpivot"></a> Configuration de port pour PowerPivot pour SharePoint  
  L'architecture du serveur pour [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est fondamentalement différente selon la version de SharePoint que vous utilisez.  
   
- **SharePoint 2013**  
+ **SharePoint 2013**  
   
  Dans SharePoint 2013, Excel Services redirige les demandes de modèles de données Power Pivot, qui sont ensuite chargés sur une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] hors de l'environnement SharePoint. Les connexions suivent le modèle par défaut, où une bibliothèque cliente Analysis Services sur un ordinateur local envoie une demande de connexion à une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] distante dans le même réseau.  
   
@@ -232,9 +237,9 @@ caps.handback.revision: 47
   
  Si vous utilisez SharePoint 2010, il n'est pas nécessaire que vous ouvriez des ports dans le Pare-feu Windows. SharePoint ouvre les ports nécessaires et les compléments, tels que [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint, fonctionnent dans l’environnement SharePoint. Dans une installation [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint 2010, le service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a l’usage exclusif de l’instance du service SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) local, qui est installée avec elle sur le même ordinateur. Il utilise des connexions locales, et non réseau, pour accéder au service du moteur Analysis Services qui charge, interroge et traite les données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sur le serveur SharePoint. Les demandes de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aux applications clientes sont routées via les ports ouverts par le programme d’installation de SharePoint (en particulier, les règles de trafic entrant sont définies de façon à autoriser l’accès à SharePoint – 80, à l’Administration centrale de SharePoint v4, aux services web SharePoint et à SPUserCodeV4). Étant donné que les services Web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] fonctionnent dans une batterie de serveurs SharePoint, les règles de pare-feu SharePoint suffisent pour l’accès à distance aux données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] d’une batterie de serveurs SharePoint.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Service SQL Server Browser &#40;moteur de base de données et SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
- [Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser](../../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md)   
+ [Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [Configurer un pare-feu Windows pour accéder au moteur de base de données](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
   

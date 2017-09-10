@@ -1,35 +1,40 @@
 ---
-title: "Pr&#233;sentation des sch&#233;mas de base de donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Assistant Génération de schéma, schéma de base de données"
-  - "schéma de base de données [Analysis Services]"
-  - "schéma relationnel [Analysis Services], schéma de base de données"
-  - "options du schéma de la zone de sujet [Analysis Services]"
-  - "options du schéma de la zone de transit [Analysis Services]"
-  - "schémas dénormalisés"
+title: "Comprendre les schémas de base de données | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Schema Generation Wizard, database schema
+- database schema [Analysis Services]
+- relational schema [Analysis Services], database schema
+- subject area schema options [Analysis Services]
+- staging area schema options [Analysis Services]
+- denormalized schemas
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 12d62289fe08395c91eff39202b60ee0f67ff82a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Pr&#233;sentation des sch&#233;mas de base de donn&#233;es
+# <a name="understanding-the-database-schemas"></a>Présentation des schémas de base de données
   L'Assistant Génération de schéma crée pour la base de données de la zone de sujet un schéma relationnel dénormalisé basé sur les dimensions et les groupes de mesures définis dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. L'Assistant génère pour chaque dimension une table relationnelle appelée table de dimension, destinée à stocker les données de dimension, et pour chaque groupe de mesures une table relationnelle appelée table de faits, servant à stocker les données de faits. Lorsqu'il génère ces tables relationnelles, l'Assistant ignore les dimensions liées, les groupes de mesures liés et les dimensions de temps de serveur.  
   
-## Validation  
- Avant de commencer à générer le schéma relationnel sous-jacent, l'Assistant Génération de schéma valide les cubes et les dimensions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Si l'Assistant détecte des erreurs, il s'arrête et signale ces erreurs dans la fenêtre Liste des tâches de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Voici quelques exemples d'erreurs qui empêchent la génération :  
+## <a name="validation"></a>Validation  
+ Avant de commencer à générer le schéma relationnel sous-jacent, l'Assistant Génération de schéma valide les cubes et les dimensions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si l'Assistant détecte des erreurs, il s'arrête et signale ces erreurs dans la fenêtre Liste des tâches de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Voici quelques exemples d'erreurs qui empêchent la génération :  
   
 -   Les dimensions qui ont plus d'un attribut clé.  
   
@@ -41,11 +46,11 @@ caps.handback.revision: 28
   
 -   Les clés de substitution mal configurées, par exemple plusieurs attributs utilisant le type d'attribut **ScdOriginalID** ou un attribut utilisant le type **ScdOriginalID** sans être lié à une colonne utilisant le type de données Integer.  
   
-## Tables de dimension  
+## <a name="dimension-tables"></a>Tables de dimension  
  Pour chaque dimension, l'Assistant Génération de schéma crée une table de dimension à inclure dans la base de données de la zone de sujet. La structure de la table de dimension dépend des choix effectués lors de la conception de la dimension sur laquelle elle est basée.  
   
  Columns  
- L'Assistant génère une colonne pour les liaisons associées à chaque attribut de la dimension sur laquelle la table de dimension est basée, par exemple les liaisons pour les propriétés **KeyColumns**, **NameColumn**, **ValueColumn**, **CustomRollupColumn**, **CustomRollupPropertiesColumn** et **UnaryOperatorColumn** de chaque attribut.  
+ L'Assistant génère une colonne pour les liaisons associées à chaque attribut de la dimension sur laquelle la table de dimension est basée, par exemple les liaisons pour les propriétés **KeyColumns**, **NameColumn**, **ValueColumn**, **CustomRollupColumn**, **CustomRollupPropertiesColumn**et **UnaryOperatorColumn** de chaque attribut.  
   
  Relations  
  L'Assistant génère une relation entre la colonne de chaque attribut parent et la clé primaire de la table de dimension.  
@@ -61,11 +66,11 @@ caps.handback.revision: 28
  Translations  
  L'Assistant génère une table séparée pour stocker les valeurs traduites de tout attribut qui nécessite une colonne de traduction. L'Assistant crée également une colonne séparée pour chacune des langues requises.  
   
-## Tables de faits  
+## <a name="fact-tables"></a>Tables de faits  
  Pour chaque groupe de mesures d'un cube, l'Assistant Génération de schéma crée une table de faits à inclure dans la base de données de la zone de sujet. La structure de la table de faits dépend des choix effectués lors de la conception du groupe de mesures sur lequel elle est basée et des relations établies entre le groupe de mesures et les dimensions incluses.  
   
  Columns  
- L’Assistant génère une colonne pour chaque mesure, sauf pour les mesures qui utilisent la fonction d'agrégation **Count**. En effet, de telles mesures ne nécessitent pas de colonne correspondante dans la table de faits.  
+ L’Assistant génère une colonne pour chaque mesure, sauf pour les mesures qui utilisent la fonction d'agrégation **Count** . En effet, de telles mesures ne nécessitent pas de colonne correspondante dans la table de faits.  
   
  L'Assistant génère également une colonne pour chaque colonne d'attribut de granularité de chaque relation de dimension régulière du groupe de mesures et, s'il y a lieu, une ou plusieurs colonnes pour les liaisons associées à chaque attribut d'une dimension qui entretient une relation de dimension de fait avec le groupe de mesures sur lequel cette table est basée.  
   
@@ -82,8 +87,8 @@ caps.handback.revision: 28
  Translations  
  L'Assistant génère une table séparée pour stocker les valeurs traduites de toute propriété du groupe de mesures qui nécessite une colonne de traduction. L'Assistant crée également une colonne séparée pour chacune des langues requises.  
   
-## Conversion de type de données et longueurs par défaut  
- L’Assistant Génération de schéma ignore les types de données dans tous les cas, sauf pour les colonnes utilisant le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **wchar**. Le type de données **wchar** se traduit directement en type de données **nvarchar**. Toutefois, si la longueur spécifiée d’une colonne utilisant le type **wchar** dépasse 4000 octets, l’Assistant Génération de schéma produit une erreur.  
+## <a name="data-type-conversion-and-default-lengths"></a>Conversion de type de données et longueurs par défaut  
+ L’Assistant Génération de schéma ignore les types de données dans tous les cas, sauf pour les colonnes utilisant le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **wchar** . Le type de données **wchar** se traduit directement en type de données **nvarchar** . Toutefois, si la longueur spécifiée d’une colonne utilisant le type **wchar** dépasse 4000 octets, l’Assistant Génération de schéma produit une erreur.  
   
  Le tableau suivant indique la longueur par défaut de la colonne si un élément de données, par exemple la liaison d'un attribut, n'a pas de longueur spécifiée.  
   
@@ -95,8 +100,8 @@ caps.handback.revision: 28
 |CustomRollupPropertiesColumn|500|  
 |UnaryOperatorColumn|1|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Présentation de la génération incrémentielle](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)   
- [Gérer des modifications dans les vues de source de données et les sources de données](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
+ [Gérer les modifications apportées aux vues de sources de données et Sources de données](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
   
   

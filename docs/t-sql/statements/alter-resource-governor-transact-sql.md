@@ -1,0 +1,208 @@
+---
+title: ALTER RESOURCE GOVERNOR (Transact-SQL) | Documents Microsoft
+ms.custom: 
+ms.date: 05/01/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- ALTER RESOURCE GOVERNOR
+- ALTER_RESOURCE_GOVERNOR_TSQL
+- ALTER RESOURCE GOVERNOR RECONFIGURE
+- ALTER_RESOURCE_GOVERNOR_RECONFIGURE_TSQL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- ALTER RESOURCE GOVERNOR
+- RECONFIGURE, ALTER RESOURCE GOVERNOR
+ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
+caps.latest.revision: 49
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: ac7ae791ec7867b13a8547ec60436f25536cd5b7
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  Cette instruction est utilisée pour effectuer les actions du gouverneur de ressources suivantes dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+  
+-   Appliquer les modifications de configuration spécifiées lorsque la créer | ALTER | DROP WORKLOAD GROUP ou CREATE | ALTER | DROP RESOURCE POOL ou CREATE | ALTER | Les instructions DROP EXTERNAL RESOURCE POOL sont émises.  
+  
+-   Activer ou désactiver le gouverneur de ressources.  
+  
+-   Configurer la classification des demandes entrantes.  
+  
+-   Réinitialiser le groupe de charges de travail et les statistiques de pool de ressources.  
+  
+-   Définir les opérations d'E/S maximales par volume disque.  
+  
+ ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Syntaxe  
+  
+```  
+ALTER RESOURCE GOVERNOR   
+      { DISABLE | RECONFIGURE }  
+    | WITH ( CLASSIFIER_FUNCTION = { schema_name.function_name | NULL } )  
+    | RESET STATISTICS  
+    | WITH ( MAX_OUTSTANDING_IO_PER_VOLUME = value )   
+[ ; ]  
+```  
+  
+## <a name="arguments"></a>Arguments  
+ DISABLE  
+ Désactive le gouverneur de ressources. La désactivation du gouverneur de ressources entraîne les résultats suivants :  
+  
+-   La fonction classifieur n’est pas exécutée.  
+  
+-   Toutes les nouvelles connexions sont classifiées automatiquement dans le groupe par défaut.  
+  
+-   Les demandes initiées par le système sont classées dans le groupe de charge de travail interne.  
+  
+-   Tous les paramètres de groupe de charges de travail et de pool de ressources existants sont réinitialisés à leurs valeurs par défaut. Dans ce cas, aucun événement n'est déclenché lorsque les limites sont atteintes.  
+  
+-   La surveillance système normale n'est pas affectée.  
+  
+-   Modifications de configuration peuvent être effectuées, mais les modifications ne prennent pas effet tant que le gouverneur de ressources est activé.  
+  
+-   Lors du redémarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le gouverneur de ressources ne chargera pas sa configuration, mais à la place aura uniquement les groupes et pools par défaut et internes.  
+  
+ RECONFIGURE  
+ Lorsque le gouverneur de ressources n'est pas activé, RECONFIGURE l'active. L’activation du gouverneur de ressources entraîne les résultats suivants :  
+  
+-   La fonction classifieur est exécutée pour les nouvelles connexions afin que leur charge de travail puisse être assignée aux groupes de charges de travail.  
+  
+-   Les limites de ressource qui sont spécifiées dans la configuration de Resource Governor sont honorées et appliquées.  
+  
+-   Les demandes qui ont existé avant d'activer le gouverneur de ressources sont affectées par les modifications de configuration qui ont été effectuées lorsque le gouverneur de ressources était désactivé.  
+  
+ Lorsque le gouverneur de ressources est en cours d’exécution, RECONFIGURE s’applique à n’importe quelle configuration modifications demandées quand la créer | ALTER | DROP WORKLOAD GROUP ou CREATE | ALTER | DROP RESOURCE POOL ou CREATE | ALTER | Les instructions DROP EXTERNAL RESOURCE POOL sont exécutées.  
+  
+> [!IMPORTANT]  
+>  L'instruction ALTER RESOURCE GOVERNOR RECONFIGURE doit être exécutée pour que les modifications de configuration soient appliquées.  
+  
+ CLASSIFIER_FUNCTION = { *nom_schéma***.** *nom_fonction* | NULL}  
+ Enregistre la fonction de classification spécifiée par *nom_schéma.nom_fonction*. Cette fonction classifie chaque nouvelle session et assigne les demandes et requêtes de session à un groupe de charges de travail. Lorsque la valeur NULL est utilisée, les nouvelles sessions sont assignées automatiquement au groupe de charges de travail par défaut.  
+  
+ RESET STATISTICS  
+ Réinitialise les statistiques sur tous les groupes de charges de travail et pools de ressources. Pour plus d’informations, consultez [sys.dm_resource_governor_workload_groups &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) et [sys.dm_resource_governor_resource_pools &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
+  
+ MAX_OUTSTANDING_IO_PER_VOLUME = *valeur*  
+ **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  
+ Définit les opérations d'E/S maximales en file d'attente par volume disque. Ces opérations d'E/S en peuvent être des lectures ou des écritures de toute taille.  La valeur maximale pour MAX_OUTSTANDING_IO_PER_VOLUME est 100. Ce n'est pas un pourcentage. Ce paramètre est conçu pour adapter la gouvernance des ressources d'E/S aux spécifications d'E/S d'un volume disque. Nous vous recommandons d’expérimentez avec différentes valeurs et que vous envisagez d’utiliser un outil d’étalonnage comme IOMeter, [DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223), ou SQLIO (déconseillé) pour identifier la valeur maximale pour le sous-système de stockage. Ce paramètre offre une vérification de la sécurité au niveau du système qui permet à SQL Server d'obtenir le minimum d'E/S par seconde pour les pools de ressources même si d'autres pools sont définis avec le paramètre MAX_IOPS_PER_VOLUME illimité. Pour plus d’informations sur MAX_IOPS_PER_VOLUME, consultez [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md).  
+  
+## <a name="remarks"></a>Notes  
+ ALTER RESOURCE GOVERNOR DISABLE, ALTER RESOURCE GOVERNOR RECONFIGURE et ALTER RESOURCE GOVERNOR RESET STATISTICS ne peuvent pas être utilisés dans une transaction utilisateur.  
+  
+ Le paramètre RECONFIGURE fait partie de la syntaxe du gouverneur de ressources et ne doit pas être confondu avec [reconfigurer](../../t-sql/language-elements/reconfigure-transact-sql.md), qui est une instruction DDL distincte.  
+  
+ Nous vous recommandons de connaître les états du gouverneur de ressources avant d'exécuter des instructions DDL. Pour plus d’informations, consultez [du gouverneur de ressources](../../relational-databases/resource-governor/resource-governor.md).  
+  
+## <a name="permissions"></a>Permissions  
+ Requiert l'autorisation CONTROL SERVER.  
+  
+## <a name="examples"></a>Exemples  
+  
+### <a name="a-starting-the-resource-governor"></a>A. Démarrage du gouverneur de ressources  
+ Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé pour la première fois, le gouverneur de ressources est désactivé. L'exemple suivant permet de démarrer le gouverneur de ressources. Après l'exécution de l'instruction, le gouverneur de ressources s'exécute et peut utiliser les groupes de charges de travail et pools de ressources prédéfinis.  
+  
+```  
+ALTER RESOURCE GOVERNOR RECONFIGURE;  
+```  
+  
+### <a name="b-assigning-new-sessions-to-the-default-group"></a>B. Attribution de nouvelles sessions au groupe par défaut  
+ L'exemple suivant assigne toutes les nouvelles sessions au groupe de charges de travail par défaut en supprimant toute fonction classifieur existante de la configuration du gouverneur de ressources. Lorsqu'aucune fonction n'est désignée comme fonction classifieur, toutes les nouvelles sessions sont assignées au groupe de charges de travail par défaut. Cette modification s'applique uniquement aux nouvelles sessions. Les sessions existantes ne sont pas affectées.  
+  
+```  
+ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = NULL);  
+GO  
+ALTER RESOURCE GOVERNOR RECONFIGURE;  
+```  
+  
+### <a name="c-creating-and-registering-a-classifier-function"></a>C. Création et enregistrement d'une fonction classifieur  
+ L'exemple suivant crée une nouvelle fonction classifieur nommée `dbo.rgclassifier_v1`. La fonction classifie chaque nouvelle session sur la base du nom d'utilisateur ou du nom d'application et assigne les demandes et requêtes de session à un groupe de charges de travail spécifique. Les sessions qui ne sont pas mappées aux noms d'utilisateur ou d'application spécifiés sont assignés au groupe de charges de travail par défaut. La fonction classifieur est ensuite enregistrée et la modification de configuration est appliquée.  
+  
+```  
+-- Store the classifier function in the master database.  
+USE master;  
+GO  
+SET ANSI_NULLS ON;  
+GO  
+SET QUOTED_IDENTIFIER ON;  
+GO  
+CREATE FUNCTION dbo.rgclassifier_v1() RETURNS sysname   
+WITH SCHEMABINDING  
+AS  
+BEGIN  
+-- Declare the variable to hold the value returned in sysname.  
+    DECLARE @grp_name AS sysname  
+-- If the user login is 'sa', map the connection to the groupAdmin  
+-- workload group.   
+    IF (SUSER_NAME() = 'sa')  
+        SET @grp_name = 'groupAdmin'  
+-- Use application information to map the connection to the groupAdhoc  
+-- workload group.  
+    ELSE IF (APP_NAME() LIKE '%MANAGEMENT STUDIO%')  
+        OR (APP_NAME() LIKE '%QUERY ANALYZER%')  
+            SET @grp_name = 'groupAdhoc'  
+-- If the application is for reporting, map the connection to  
+-- the groupReports workload group.  
+    ELSE IF (APP_NAME() LIKE '%REPORT SERVER%')  
+        SET @grp_name = 'groupReports'  
+-- If the connection does not map to any of the previous groups,  
+-- put the connection into the default workload group.  
+    ELSE  
+        SET @grp_name = 'default'  
+    RETURN @grp_name  
+END;  
+GO  
+-- Register the classifier user-defined function and update the   
+-- the in-memory configuration.  
+ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION=dbo.rgclassifier_v1);  
+GO  
+ALTER RESOURCE GOVERNOR RECONFIGURE;  
+GO  
+```  
+  
+### <a name="d-resetting-statistics"></a>D. Réinitialisation des statistiques  
+ L'exemple suivant réinitialise tout le groupe de charges de travail et les statistiques de pool de ressources.  
+  
+```  
+ALTER RESOURCE GOVERNOR RESET STATISTICS;  
+```  
+  
+### <a name="e-setting-the-maxoutstandingiopervolume-option"></a>E. Définition de l'option MAX_OUTSTANDING_IO_PER_VOLUME  
+ L'exemple suivant affecte la valeur 20 à l'option MAX_OUTSTANDING_IO_PER_VOLUME.  
+  
+```  
+ALTER RESOURCE GOVERNOR  
+WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);   
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
+ [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)   
+ [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   
+ [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)   
+ [DROP EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)   
+ [MODIFIER le POOL de ressources externes &#40; Transact-SQL &#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)   
+ [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
+ [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)   
+ [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
+ [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
+ [Sys.dm_resource_governor_workload_groups &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
+ [Sys.dm_resource_governor_resource_pools &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)  
+  
+  
+

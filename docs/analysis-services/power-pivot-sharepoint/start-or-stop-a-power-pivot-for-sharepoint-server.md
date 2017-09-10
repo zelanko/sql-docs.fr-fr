@@ -1,27 +1,32 @@
 ---
-title: "D&#233;marrer ou arr&#234;ter un serveur PowerPivot pour SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Démarrer ou arrêter un PowerPivot pour SharePoint Server | Documents Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f512a256765bbba4b1f641fb9752bd09fae4696
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# D&#233;marrer ou arr&#234;ter un serveur PowerPivot pour SharePoint
+# <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>Démarrer ou arrêter un serveur PowerPivot pour SharePoint
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et une instance de [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] fonctionnent ensemble sur le même serveur d’applications local, pour assurer le traitement coordonné des données et demandes dans une batterie de serveurs SharePoint.  
   
- Cette rubrique contient les sections suivantes :  
+ Cette rubrique contient les sections suivantes :  
   
  [Dépendances du service](#dependencies)  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 8
   
  Vous ne pouvez pas démarrer ou arrêter tous les services physiques simultanément dans la batterie de serveurs. Vous devez sélectionner chaque serveur, puis démarrer ou arrêter un service spécifique.  
   
- Vous ne pouvez pas démarrer, suspendre ou arrêter un service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] d’une application Web spécifique, mais vous pouvez supprimer un service de la liste de connexions par défaut pour le rendre non disponible. Pour plus d’informations, consultez [Connecter une application de service Power Pivot à une application web SharePoint dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/connect power pivot service app to sharepoint web app in ca.md).  
+ Vous ne pouvez pas démarrer, suspendre ou arrêter un service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] d’une application Web spécifique, mais vous pouvez supprimer un service de la liste de connexions par défaut pour le rendre non disponible. Pour plus d’informations, consultez [Connecter une application de service Power Pivot à une application web SharePoint dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md).  
   
 1.  Dans Administration centrale, sous **Paramètres système**, cliquez sur **Gérer les services sur le serveur**.  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 8
 |Nouvelles demandes pour des requêtes ou une actualisation des données|Si vous arrêtez le seul serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint de la batterie, les nouvelles demandes de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ne sont pas traitées et une demande de données génère une erreur signalant que les données sont introuvables.<br /><br /> Si vous disposez d’autres serveurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint, la demande est transmise à l’un des serveurs disponibles.|  
 |Données d'utilisation|Les données d'utilisation ne seront pas recueillies pendant la période d'arrêt des services.|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configuration des comptes de service Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)  
   
   

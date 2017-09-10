@@ -1,0 +1,118 @@
+---
+title: COLUMNPROPERTY (Transact-SQL) | Documents Microsoft
+ms.custom: 
+ms.date: 07/24/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- COLUMNPROPERTY
+- COLUMNPROPERTY_TSQL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- column properties [SQL Server]
+- parameters [SQL Server], properties
+- COLUMNPROPERTY function
+ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
+caps.latest.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: bc9d610cf1c2ee7163f0de53e06a609ba7765ed0
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+Renvoie des informations sur une colonne ou un paramètre.
+  
+![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+  
+## <a name="syntax"></a>Syntaxe  
+  
+```sql
+COLUMNPROPERTY ( id , column , property )   
+```  
+  
+## <a name="arguments"></a>Arguments  
+*id*  
+Est un [expression](../../t-sql/language-elements/expressions-transact-sql.md) qui contient l’identificateur (ID) de la table ou la procédure.
+  
+*colonne*  
+Expression contenant le nom de la colonne ou du paramètre.
+  
+*propriété*  
+Est une expression qui contient les informations à retourner pour *id*, et peut prendre l’une des valeurs suivantes.
+  
+|Valeur| Description|Valeur retournée|  
+|---|---|---|
+|**AllowsNull**|Autorise les valeurs NULL|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrée non valide.|  
+|**ColumnId**|Valeur d’ID de colonne correspondant à **sys.columns.column_id**.|ID de la colonne<br /><br /> **Remarque :** lors de l’interrogation de plusieurs colonnes, les écarts peuvent apparaître dans la séquence de valeurs d’ID de colonne.|  
+|**FullTextTypeColumn**|La colonne de TYPE dans la table qui contient les informations de type de document de la *colonne*.|Identificateur de TYPE COLUMN en texte intégral pour la colonne passée en tant que second paramètre de cette propriété.|  
+|**IsComputed**|Est une colonne calculée.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrée non valide.|  
+|**IsCursorType**|Le paramètre de la procédure est de type CURSOR.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrée non valide.|  
+|**IsDeterministic**|La colonne est déterministe. Cette propriété s'applique uniquement aux colonnes calculées et aux colonnes de la vue.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrée non valide. Aucune colonne calculée ou colonne de la vue.|  
+|**IsFulltextIndexed**|Colonne enregistrée pour l'indexation de texte intégral.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrée non valide.|  
+|**IsIdentity**|La colonne utilise la propriété IDENTITY.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrée non valide.|  
+|**IsIdNotForRepl**|La colonne vérifie le paramètre IDENTITY_INSERT.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrée non valide.|  
+|**IsIndexable**|La colonne peut être indexée.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrée non valide.|  
+|**IsOutParam**|Le paramètre de la procédure est un paramètre de sortie.|1 = TRUE<br /><br /> 0 = FALSE NULL = Entrée non valide.|  
+|**IsPrecise**|La colonne est précise. Cette propriété s'applique uniquement aux colonnes déterministes.|1 = TRUE<br /><br /> 0 = FALSE NULL = Entrée non valide. Colonne non déterministe.|  
+|**IsRowGuidCol**|Colonne possède le **uniqueidentifier** type de données et est défini avec la propriété ROWGUIDCOL.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrée non valide.|  
+|**IsSystemVerified**|Les propriétés de déterminisme et de précision de la colonne peuvent être vérifiées par le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Cette propriété s'applique uniquement aux colonnes calculées et aux colonnes de vues.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrée non valide.|  
+|**IsXmlIndexable**|La colonne XML peut être utilisée dans un index XML.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrée non valide.|  
+|**Précision**|Longueur du type de données de la colonne ou du paramètre.|Longueur du type de données de la colonne spécifiée.<br /><br /> -1 = **xml** ou les types de valeur élevée<br /><br /> NULL = Entrée non valide.|  
+|**Échelle**|Échelle pour le type de données de la colonne ou du paramètre.|L’échelle<br /><br /> NULL = Entrée non valide.|  
+|**StatisticalSemantics**|La colonne est activée en vue de l'indexation sémantique.|1 = TRUE<br /><br /> 0 = FALSE|  
+|**SystemDataAccess**|La colonne est dérivée d'une fonction qui accède aux données dans les catalogues système ou les tables système virtuelles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette propriété s'applique uniquement aux colonnes calculées et aux colonnes de vues.|1 = TRUE (indique un accès en lecture seule)<br /><br /> 0 = FALSE<br /><br /> NULL = Entrée non valide.|  
+|**UserDataAccess**|La colonne est dérivée d'une fonction qui accède aux données dans les tables utilisateur, y compris les vues et les tables temporaires, stockées dans l'instance locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette propriété s'applique uniquement aux colonnes calculées et aux colonnes de vues.|1 = TRUE (indique un accès en lecture seule)<br /><br /> 0 = FALSE<br /><br /> NULL = Entrée non valide.|  
+|**UsesAnsiTrim**|ANSI_PADDING avait pour valeur ON lors de la création de la table. Cette propriété s’applique uniquement aux colonnes ou des paramètres de type **char** ou **varchar**.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrée non valide.|  
+|**IsSparse**|La colonne est éparse. Pour plus d’informations, consultez [Utiliser des colonnes éparses](../../relational-databases/tables/use-sparse-columns.md).|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrée non valide.|  
+|**IsColumnSet**|La colonne est un jeu de colonnes. Pour plus d’informations, consultez [Utiliser des jeux de colonnes](../../relational-databases/tables/use-column-sets.md).|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Entrée non valide.|  
+|**GeneratedAlwaysType**|Valeur de colonne est générée par le système. Correspond à **sys.columns.generated_always_type**|**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = non généré toujours<br /><br /> 1 = générées toujours comme début de ligne<br /><br /> 2 – toujours généré comme fin de ligne|  
+|**IsHidden**|Valeur de colonne est générée par le système. Correspond à **sys.columns.is_hidden**|**S'applique à**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = non masqués<br /><br /> 1 = masqué|  
+  
+## <a name="return-types"></a>Types de retour
+ **int**  
+  
+## <a name="exceptions"></a>Exceptions  
+Retourne la valeur NULL en cas d'erreur ou si un appelant n'est pas autorisé à afficher l'objet.
+  
+Un utilisateur peut voir uniquement les métadonnées des éléments sécurisables qui lui appartiennent ou pour lesquels il dispose d'une autorisation. Cela signifie que les fonctions intégrées générant des métadonnées, telles que COLUMNPROPERTY, peuvent retourner la valeur NULL si l'utilisateur ne dispose d'aucune autorisation sur l'objet. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
+  
+## <a name="remarks"></a>Notes  
+Lorsque vous vérifiez la propriété déterministe d'une colonne, assurez-vous d'abord que la colonne est calculée. **IsDeterministic** renvoie la valeur NULL pour les colonnes. Les colonnes calculées peuvent être spécifiées sous la forme de colonnes d'index.
+  
+## <a name="examples"></a>Exemples  
+L'exemple suivant renvoie la longueur de la colonne `LastName`.
+  
+```sql
+USE AdventureWorks2012;  
+GO  
+SELECT COLUMNPROPERTY( OBJECT_ID('Person.Person'),'LastName','PRECISION')AS 'Column Length';  
+GO  
+```  
+  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+  
+`Column Length`
+  
+------------\-
+  
+ `50`  
+  
+## <a name="see-also"></a>Voir aussi
+[Fonctions de métadonnées &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+MS.date : « 24/07/2017 » [TYPEPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/typeproperty-transact-sql.md)
+  
+  
+

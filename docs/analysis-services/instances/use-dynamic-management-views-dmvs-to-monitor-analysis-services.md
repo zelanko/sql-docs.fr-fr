@@ -1,24 +1,29 @@
 ---
-title: "Utiliser des vues de gestion dynamique (DMV) pour surveiller Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Utilisez les vues de gestion dynamique (DMV) pour surveiller Analysis Services | Documents Microsoft
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c9faafd33f7abaee582821336dcd471d637a1c1
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Utiliser des vues de gestion dynamique (DMV) pour surveiller Analysis Services
+# <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Utiliser des vues de gestion dynamique (DMV) pour surveiller Analysis Services
   Les vues de gestion dynamique (DMV) d'Analysis Services sont des structures de requête qui exposent des informations sur les opérations de serveur local et l'intégrité du serveur. La structure de requête est une interface vers des ensembles de lignes de schéma qui retournent des métadonnées et des informations d'analyse relatives à une instance Analysis Services.  
   
  Pour la plupart des requêtes DMV, vous utilisez une instruction **SELECT** et le schéma **$System** avec un ensemble de lignes de schéma XML/A.  
@@ -69,14 +74,14 @@ FROM $System.<schemaRowset>
 [ORDER BY <expression>[DESC|ASC]]  
 ```  
   
- L'exemple suivant pour DISCOVER_CALC_DEPENDENCY illustre l'utilisation de la clause WHERE pour la fourniture d'un paramètre à la requête :  
+ L'exemple suivant pour DISCOVER_CALC_DEPENDENCY illustre l'utilisation de la clause WHERE pour la fourniture d'un paramètre à la requête :  
   
 ```  
 SELECT * FROM $System.DISCOVER_CALC_DEPENDENCY  
 WHERE OBJECT_TYPE = 'ACTIVE_RELATIONSHIP'  
 ```  
   
- Sinon, pour les ensembles de lignes de schéma soumis à des restrictions, la requête doit inclure la fonction SYSTEMRESTRICTSCHEMA. L'exemple suivant retourne des métadonnées CSDL sur les modèles tabulaires exécutés sur un serveur en mode tabulaire. Notez que CATALOG_NAME respecte la casse :  
+ Sinon, pour les ensembles de lignes de schéma soumis à des restrictions, la requête doit inclure la fonction SYSTEMRESTRICTSCHEMA. L'exemple suivant retourne des métadonnées CSDL sur les modèles tabulaires exécutés sur un serveur en mode tabulaire. Notez que CATALOG_NAME respecte la casse :  
   
 ```  
 Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAME] = 'Adventure Works DW')  
@@ -99,7 +104,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  Si une vue DMV n’est pas disponible pour un ensemble de lignes donné, le serveur retourne l’erreur suivante : « Le type de requête \<schemarowset> n’a pas été reconnu par le serveur ». Toutes les autres erreurs signalent des problèmes de syntaxe.  
+>  Si une vue DMV n’est pas disponible pour un ensemble de lignes donné, le serveur renvoie l’erreur suivante : « la \<schemarowset > type de demande n’est pas reconnu par le serveur ». Toutes les autres erreurs signalent des problèmes de syntaxe.  
   
 |Ensemble de lignes|Description|  
 |------------|-----------------|  
@@ -138,13 +143,13 @@ ORDER BY TABLE_NAME ASC
 |[DISCOVER_TRACE_EVENT_CATEGORIES, ensemble de lignes](../../analysis-services/schema-rowsets/xml/discover-trace-event-categories-rowset.md)|Retourne la liste des catégories disponibles.|  
 |[DISCOVER_TRACES, ensemble de lignes](../../analysis-services/schema-rowsets/xml/discover-traces-rowset.md)|Retourne la liste des traces actives sur la connexion actuelle.|  
 |[DISCOVER_TRANSACTIONS, ensemble de lignes](../../analysis-services/schema-rowsets/xml/discover-transactions-rowset.md)|Retourne la liste des transactions actives sur la connexion actuelle.|  
-|[DISCOVER_XEVENT_TRACE_DEFINITION, ensemble de lignes](../Topic/DISCOVER_XEVENT_TRACE_DEFINITION%20Rowset.md)|Retourne la liste des traces xevent actives sur la connexion actuelle.|  
+|[DISCOVER_XEVENT_TRACE_DEFINITION, ensemble de lignes](http://msdn.microsoft.com/library/e1ce2d2d-f994-4318-801a-ee0385aecd84)|Retourne la liste des traces xevent actives sur la connexion actuelle.|  
 |[Ensemble de lignes DMSCHEMA_MINING_COLUMNS](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-columns-rowset.md)|Répertorie les colonnes de tous les modèles d'exploration de données disponibles sur la connexion actuelle.|  
 |[Ensemble de lignes DMSCHEMA_MINING_FUNCTIONS](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-functions-rowset.md)|Retourne la liste des fonctions prises en charge par les algorithmes d'exploration de données sur le serveur.|  
 |[Ensemble de lignes DMSCHEMA_MINING_MODEL_CONTENT](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)|Retourne un ensemble de lignes composé de colonnes qui décrivent le modèle actuel.|  
 |[Ensemble de lignes DMSCHEMA_MINING_MODEL_CONTENT_PMML](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset.md)|Retourne un ensemble de lignes composé de colonnes qui décrivent le modèle actuel au format PMML.|  
 |[Ensemble de lignes DMSCHEMA_MINING_MODEL_XML](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-xml-rowset.md)|Retourne un ensemble de lignes composé de colonnes qui décrivent le modèle actuel au format PMML.|  
-|[Ensemble de lignes DMSCHEMA_MINING_MODELS ](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-models-rowset.md)|Retourne la liste des modèles d'exploration de données dans la base de données active.|  
+|[Ensemble de lignes DMSCHEMA_MINING_MODELS](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-models-rowset.md)|Retourne la liste des modèles d'exploration de données dans la base de données active.|  
 |[Ensemble de lignes DMSCHEMA_MINING_SERVICE_PARAMETERS](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-service-parameters-rowset.md)|Retourne la liste des paramètres des algorithmes sur le serveur.|  
 |[Ensemble de lignes DMSCHEMA_MINING_SERVICES](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md)|Fournit la liste des algorithmes d'exploration de données disponibles sur le serveur.|  
 |[Ensemble de lignes DMSCHEMA_MINING_STRUCTURE_COLUMNS](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-structure-columns-rowset.md)|Retourne la liste de toutes les colonnes de tous les modèles d'exploration de données disponibles dans la connexion actuelle.|  
@@ -163,8 +168,8 @@ ORDER BY TABLE_NAME ASC
 |[Ensemble de lignes MDSCHEMA_PROPERTIES](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|Retourne le nom complet de chaque propriété, avec le type de propriété, le type de données et d'autres métadonnées.|  
 |[Ensemble de lignes MDSCHEMA_SETS](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|Retourne la liste des ensembles qui sont définis dans la connexion actuelle.|  
   
-## Voir aussi  
- [Guide des opérations SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
+## <a name="see-also"></a>Voir aussi  
+ [Guide des opérations de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
  [Nouveau System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
  [Nouvelle fonction SYSTEMRESTRICTEDSCHEMA pour les ensembles de lignes restreints et les vues de gestion dynamique](http://go.microsoft.com/fwlink/?LinkId=231885)  
   

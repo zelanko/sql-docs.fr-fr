@@ -1,32 +1,37 @@
 ---
-title: "SystemGetCrossValidationResults (Analysis Services - Exploration de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SystemGetCrossValidationResults"
-  - "procédures stockées [Analysis Services], exploration de données"
-  - "validation croisée [exploration de données]"
+title: "SystemGetCrossValidationResults (Analysis Services - Exploration de données) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- SystemGetCrossValidationResults
+- stored procedures [Analysis Services], data mining
+- cross-validation [data mining]
 ms.assetid: f70c3337-c930-434a-b278-caf1ef0c3b3b
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8558bacfce7bd6a70b769b42c60d568e76b433e0
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# SystemGetCrossValidationResults (Analysis Services - Exploration de donn&#233;es)
+# <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults (Analysis Services - Exploration de données)
   Partitionne la structure d'exploration de données dans le nombre spécifié de sections croisées, effectue l'apprentissage d'un modèle pour chaque partition, puis retourne les mesures de précision de chaque partition.  
   
 > [!NOTE]  
->  Cette procédure stockée ne peut pas être utilisée pour effectuer la validation croisée de modèles de clustering ou de modèles créés à l’aide de l’algorithme MTS ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) ou de l’algorithme MSC ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering). Pour la validation croisée des modèles de clustering, vous pouvez utiliser la procédure stockée distincte [SystemGetClusterCrossValidationResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md).  
+>  Cette procédure stockée ne peut pas être utilisée pour effectuer la validation croisée de modèles de clustering ou de modèles créés à l’aide de l’algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) ou de l’algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering). Pour la validation croisée des modèles de clustering, vous pouvez utiliser la procédure stockée distincte [SystemGetClusterCrossValidationResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -41,7 +46,7 @@ SystemGetCrossValidationResults(
 [,<test list>])  
 ```  
   
-## Arguments  
+## <a name="arguments"></a>Arguments  
  *structure d'exploration de données*  
  Nom d'une structure d'exploration de données dans la base de données active.  
   
@@ -60,7 +65,7 @@ SystemGetCrossValidationResults(
  (Facultatif)  
   
  *nombre de replis*  
- Entier qui spécifie en combien de partitions séparer le jeu de données. La valeur minimale est 2. Le nombre maximal de replis est **maximum integer** ou le nombre de cas, la valeur la plus petite étant retenue.  
+ Entier qui spécifie en combien de partitions séparer le jeu de données. La valeur minimale est 2. Le nombre maximal de replis est **maximum integer** ou le nombre de cas, la valeur la plus petite étant retenue.  
   
  Chaque partition contiendra environ le nombre de cas suivant : *max cases*/*fold count*.  
   
@@ -74,7 +79,7 @@ SystemGetCrossValidationResults(
  *max cases*  
  Entier qui spécifie le nombre maximal de cas qui peuvent être testés pour tous les replis.  
   
- La valeur 0 indique que tous les cas de la source de données seront utilisés.  
+ La valeur 0 indique que tous les cas de la source de données seront utilisés.  
   
  Si vous spécifiez une valeur supérieure au nombre réel de cas dans le jeu de données, tous les cas de la source de données sont utilisés.  
   
@@ -101,7 +106,7 @@ SystemGetCrossValidationResults(
   
  (Facultatif)  
   
- *target* *threshold*  
+ *target*  *threshold*  
  **Double** supérieur à 0 et inférieur à 1. Indique le score de probabilité minimal qui doit être obtenu pour que la prédiction de l'état cible spécifié soit comptabilisée comme correcte.  
   
  Une prédiction ayant une probabilité inférieure ou égale à cette valeur est considérée comme incorrecte.  
@@ -111,7 +116,7 @@ SystemGetCrossValidationResults(
  La valeur par défaut est **null**.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne génère pas d’erreur si vous définissez *state threshold* sur 0.0, mais vous ne devez jamais utiliser cette valeur. En effet, un seuil de 0.0 signifie que les prédictions avec une probabilité de 0 pour cent sont comptabilisées comme correctes.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ne génère pas d’une erreur si vous définissez *seuil d’état* à 0.0, mais vous ne devez jamais utiliser cette valeur. En effet, un seuil de 0.0 signifie que les prédictions avec une probabilité de 0 pour cent sont comptabilisées comme correctes.  
   
  (Facultatif)  
   
@@ -122,7 +127,7 @@ SystemGetCrossValidationResults(
   
  (Facultatif)  
   
-## Type de retour  
+## <a name="return-type"></a>Type de retour  
  L'ensemble de lignes retourné contient des scores pour chaque partition dans chaque modèle.  
   
  Le tableau suivant décrit les colonnes de l'ensemble de lignes.  
@@ -132,23 +137,23 @@ SystemGetCrossValidationResults(
 |ModelName|Nom du modèle qui a été testé.|  
 |AttributeName|Nom de la colonne prédictible.|  
 |AttributeState|Valeur cible spécifiée dans la colonne prédictible. Si cette valeur est **null**, la prédiction la plus probable a été utilisée.<br /><br /> Si cette colonne contient une valeur, la précision du modèle est évaluée uniquement par rapport à cette valeur.|  
-|PartitionIndex|Index de base 1 qui identifie la partition à laquelle s'appliquent les résultats.|  
+|PartitionIndex|Index de base 1 qui identifie la partition à laquelle s'appliquent les résultats.|  
 |PartitionSize|Entier qui indique combien de cas ont été inclus dans chaque partition.|  
 |Test|Catégorie du test qui a été effectué. Pour obtenir une description des catégories et des tests inclus dans chaque catégorie, consultez [Mesures dans le rapport de validation croisée](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
 |Measure|Nom de la mesure retournée par le test. Les mesures de chaque modèle dépendent du type de valeur prévisible. Pour obtenir une définition de chaque mesure, consultez [Validation croisée &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).<br /><br /> Pour obtenir la liste des mesures retournées pour chaque type prévisible, consultez [Mesures dans le rapport de validation croisée](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
 |Value|Valeur de la mesure de test spécifiée.|  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Pour retourner des mesures de précision pour le jeu de données complet, utilisez [SystemGetAccuracyResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md).  
   
  Si le modèle d’exploration de données a déjà été partitionné en replis, vous pouvez contourner le traitement et retourner uniquement les résultats de la validation croisée en utilisant [SystemGetAccuracyResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md).  
   
-## Exemples  
+## <a name="examples"></a>Exemples  
  L'exemple suivant montre comment partitionner une structure d'exploration de données pour la validation croisée en deux replis, puis comment tester deux modèles d'exploration de données associés à la structure d'exploration de données, `[v Target Mail]`.  
   
  La ligne trois du code répertorie les modèles d'exploration de données que vous souhaitez tester. Si vous ne spécifiez pas la liste, tous les modèles qui ne sont pas des modèles de clustering et qui sont associés à la structure sont utilisés. La ligne quatre du code spécifie le nombre de partitions. Dans la mesure où aucune valeur n’est spécifiée pour *max cases*, tous les cas de la structure d’exploration de données sont utilisés et distribués de manière égale entre les partitions.  
   
- La ligne cinq spécifie l'attribut prévisible, Bike Buyer, et la ligne six spécifie la valeur à prédire, 1 (qui signifie « oui, achètera »).  
+ La ligne cinq spécifie l'attribut prévisible, Bike Buyer, et la ligne six spécifie la valeur à prédire, 1 (qui signifie « oui, achètera »).  
   
  La valeur NULL de la ligne sept indique qu'il n'existe pas de seuil de probabilité minimal à atteindre. Par conséquent, la première prédiction dont la probabilité est différente de zéro est utilisée pour évaluer la précision.  
   
@@ -163,9 +168,9 @@ NULL
 )  
 ```  
   
- Exemples de résultats :  
+ Exemples de résultats :  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Mesure|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Measure|Value|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |Target Mail DT|Bike Buyer|1|1|500|classification.|Vrai positif|144|  
 |Target Mail DT|Bike Buyer|1|1|500|classification.|Faux positif|105|  
@@ -182,13 +187,13 @@ NULL
 |Target Mail DT|Bike Buyer|1|2|500|Vraisemblance|Finesse|0.038997399132084|  
 |Target Mail DT|Bike Buyer|1|2|500|Vraisemblance|Erreur quadratique moyenne|0.342721344892651|  
   
-## Spécifications  
+## <a name="requirements"></a>Spécifications  
  La validation croisée est uniquement disponible dans [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] depuis [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SystemGetCrossValidationResults](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetAccuracyResults &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetClusterCrossValidationResults &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetClusterAccuracyResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

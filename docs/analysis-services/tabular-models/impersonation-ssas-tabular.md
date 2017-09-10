@@ -1,24 +1,29 @@
 ---
-title: "Emprunt d&#39;identit&#233; (SSAS Tabulaire) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "L’emprunt d’identité (SSAS tabulaire) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1bb694fef39accedea28b1c53576a7ebb161cc51
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Emprunt d&#39;identit&#233; (SSAS Tabulaire)
+# <a name="impersonation-ssas-tabular"></a>Emprunt d'identité (SSAS Tabulaire)
   Cette rubrique explique aux créateurs de modèles tabulaires comment les informations d'identification d'ouverture de session sont utilisées par Analysis Services lors de la connexion à une source de données pour importer et traiter (actualiser) des données.  
   
  Cet article contient les sections suivantes :  
@@ -52,7 +57,7 @@ caps.handback.revision: 20
   
  **Présentation des informations d'identification côté client**  
   
- Lors de la création d'un modèle ou de l'ajout d'une source de données à un modèle existant, vous utilisez l'Assistant Importation de table pour vous connecter à une source de données et sélectionner des tables et des vues à importer dans le modèle. Dans l’Assistant Importation de table, dans la page **Sélectionner des tables et des vues**, vous pouvez utiliser la fonctionnalité **Aperçu Appliquer filtre** pour visualiser un échantillon (limité à 50 lignes) des données que vous allez importer. Vous pouvez également spécifier des filtres pour exclure des données qui ne doivent pas être incluses dans le modèle.  
+ Lors de la création d'un modèle ou de l'ajout d'une source de données à un modèle existant, vous utilisez l'Assistant Importation de table pour vous connecter à une source de données et sélectionner des tables et des vues à importer dans le modèle. Dans l’Assistant Importation de table, dans la page **Sélectionner des tables et des vues** , vous pouvez utiliser la fonctionnalité **Aperçu Appliquer filtre** pour visualiser un échantillon (limité à 50 lignes) des données que vous allez importer. Vous pouvez également spécifier des filtres pour exclure des données qui ne doivent pas être incluses dans le modèle.  
   
  De la même façon, pour les modèles existants qui ont déjà été créés, vous pouvez utiliser la boîte de dialogue **Modifier les propriétés de la table** pour afficher un aperçu et filtrer les données importées dans une table. Les fonctionnalités de filtre et d'aperçu décrites ici utilisent les mêmes fonctionnalités que la fonctionnalité **Afficher un aperçu et appliquer le filtre** dans la page **Sélectionner des tables et des vues** de l'Assistant Importation de table.  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 20
   
 |Option|ImpersonationMode*|Description|  
 |------------|-------------------------|-----------------|  
-|**Nom d’utilisateur et mot de passe Windows spécifiques***\*|ImpersonateWindowsUserAccount|Cette option spécifie que le modèle utilise un compte d'utilisateur Windows pour importer ou traiter des données à partir de la source de données. Le domaine et le nom du compte d’utilisateur utilisent le format suivant : **\<nom_domaine>\\<nom_compte_utilisateur\>**. Lors de la création d'un modèle à l'aide de l'Assistant Importation de table, c'est l'option par défaut.|  
+|**Nom d’utilisateur et mot de passe Windows spécifiques***\*|ImpersonateWindowsUserAccount|Cette option spécifie que le modèle utilise un compte d'utilisateur Windows pour importer ou traiter des données à partir de la source de données. Le domaine et le nom du compte d’utilisateur utilise le format suivant :**\<nom de domaine >\\< nom du compte utilisateur\>**. Lors de la création d'un modèle à l'aide de l'Assistant Importation de table, c'est l'option par défaut.|  
 |**Compte de service**|ImpersonateServiceAccount|Cette option spécifie que le modèle utilise les informations d'identification de sécurité associées à l'instance du service Analysis Services qui gère le modèle.|  
   
  *ImpersonationMode spécifie la valeur de la propriété [Élément DataSourceImpersonationInfo &#40;ASSL&#41;](../../analysis-services/scripting/properties/datasourceimpersonationinfo-element-assl.md) sur la source de données.  
@@ -93,7 +98,7 @@ caps.handback.revision: 20
   
  Pour les modèles qui sont déployés sur un serveur Analysis Services, les informations d’emprunt d’identité peuvent être configurées dans SSMS, dans **Propriétés de la connexion** > **Informations d’emprunt d’identité**.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mode DirectQuery &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
  [Sources de données &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
  [Déploiement d’une solution de modèle tabulaire &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  

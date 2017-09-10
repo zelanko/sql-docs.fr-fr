@@ -1,33 +1,38 @@
 ---
-title: "Jeux de donn&#233;es d&#39;apprentissage et de test | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "test des modèles d'exploration de données"
-  - "exclusion [exploration de données]"
-  - "test des modèles d'exploration de données"
-  - "test de la précision [exploration de données]"
+title: "Apprentissage et jeux de données de test | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- testing mining models
+- holdout [data mining]
+- testing data mining models
+- accuracy testing [data mining]
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9465d0eda4b15827cf20c4b9579a5eff672ce1d1
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Jeux de donn&#233;es d&#39;apprentissage et de test
+# <a name="training-and-testing-data-sets"></a>Jeux de données d'apprentissage et de test
   La séparation des données en jeux d'apprentissage et jeux de test correspond à une partie importante de l'évaluation des modèles d'exploration de données. En général, lorsque vous séparez un jeu de données en un jeu d'apprentissage et un jeu de test, la plupart des données sont utilisées pour l'apprentissage et une plus petite partie des données est utilisée pour les tests. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] échantillonne de manière aléatoire les données afin de s'assurer que les jeux de test et d'apprentissage sont semblables. L'utilisation de données similaires pour l'apprentissage et les tests vous permet de minimiser les effets des différences de données et de mieux comprendre les caractéristiques du modèle.  
   
  Après le traitement d'un modèle à l'aide du jeu d'apprentissage, vous testez le modèle en effectuant des prédictions sur le jeu de test. Comme les données dans le jeu de test contiennent déjà des valeurs connues pour l'attribut que vous souhaitez prédire, il est facile de déterminer si les prédictions du modèle sont correctes.  
   
-## Création de jeux d'apprentissage et de test pour les structures d'exploration de données  
+## <a name="creating-test-and-training-sets-for-data-mining-structures"></a>Création de jeux d'apprentissage et de test pour les structures d'exploration de données  
  Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous séparez le jeu de données d'origine au niveau de la structure d'exploration de données. Les informations sur la taille des jeux de données d'apprentissage et de test, ainsi que les lignes qui appartiennent à un jeu, sont stockées avec la structure, et tous les modèles basés sur cette structure peuvent utiliser les jeux pour effectuer l'apprentissage et le test.  
   
  Vous pouvez définir un jeu de données de test sur une structure d'exploration de données de plusieurs façons :  
@@ -38,8 +43,8 @@ caps.handback.revision: 27
   
 -   en créant et modifiant par programmation les structures à l'aide des objets AMO (Analysis Management Objects) ou du langage de définition de données (DDL) XML.  
   
-### Utilisation de l'Assistant Exploration de données pour diviser une structure d'exploration de données  
- Par défaut, après avoir défini les sources de données pour une structure d'exploration de données, l'Assistant Exploration de données divise les données en deux jeux : l'un avec 70 % des données source pour l'apprentissage du modèle et l'autre avec 30 % des données source pour tester le modèle. Ces valeurs par défaut ont été choisies parce qu’un rapport 70-30 est souvent utilisé dans l’exploration de données, mais avec [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous pouvez modifier ce rapport en fonction de vos besoins.  
+### <a name="using-the-data-mining-wizard-to-divide-a-mining-structure"></a>Utilisation de l'Assistant Exploration de données pour diviser une structure d'exploration de données  
+ Par défaut, après avoir défini les sources de données pour une structure d'exploration de données, l'Assistant Exploration de données divise les données en deux jeux : l'un avec 70 % des données source pour l'apprentissage du modèle et l'autre avec 30 % des données source pour tester le modèle. Ces valeurs par défaut ont été choisies parce qu’un rapport 70-30 est souvent utilisé dans l’exploration de données, mais avec [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous pouvez modifier ce rapport en fonction de vos besoins.  
   
  Vous pouvez également configurer l'Assistant pour définir un nombre maximal de cas d'apprentissage ou vous pouvez associer les limites pour permettre un pourcentage maximal de cas jusqu'à un nombre maximal spécifié de cas. Lorsque vous spécifiez à la fois un pourcentage maximal de cas et un nombre maximal de cas, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise la plus petite des deux limites comme taille du jeu de test. Par exemple, si vous spécifiez une exclusion de 30 % pour les scénarios de test et un nombre maximal de scénarios de test égal à 1000, la taille du jeu de test ne dépassera jamais 1 000 scénarios. Cela peut être utile si vous souhaitez garantir que la taille de votre jeu de test reste cohérente même si des données d'apprentissage supplémentaires sont ajoutées au modèle.  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 27
 > [!NOTE]  
 >  Si vous créez une copie de la structure d'exploration de données à l'aide des instructions **EXPORT** et **IMPORT** , la nouvelle structure d'exploration de données aura les mêmes jeux de données de test et d'apprentissage, car le processus d'exportation crée un nouvel ID mais utilise le même nom. Toutefois, si deux structures d'exploration de données utilisent la même source de données sous-jacente tout en ayant des noms différents, les jeux créés pour chaque structure d'exploration de données seront différents.  
   
-### Modification des propriétés de structure pour créer un jeu de données de test  
+### <a name="modifying-structure-properties-to-create-a-test-data-set"></a>Modification des propriétés de structure pour créer un jeu de données de test  
  Si vous créez et traitez une structure d'exploration de données, puis décidez ultérieurement de mettre de côté un jeu de données de test, vous pouvez modifier les propriétés de la structure d'exploration de données. Pour changer la façon dont les données sont partitionnées, modifiez les propriétés suivantes :  
   
 |Propriété|Description|  
@@ -59,7 +64,7 @@ caps.handback.revision: 27
   
  Si vous ajoutez ou modifiez un jeu de données de test dans une structure existante, vous devez retraiter la structure et tous les modèles associés. En outre, comme la division des données source provoque l'apprentissage du modèle sur un autre sous-ensemble des données, vous pouvez constater des résultats différents de votre modèle.  
   
-### Spécification de l'exclusion par programmation  
+### <a name="specifying-holdout-programmatically"></a>Spécification de l'exclusion par programmation  
  Vous pouvez définir des jeux de données d'apprentissage et de test sur une structure d'exploration de données à l'aide des instructions DMX, AMO ou DDL XML. L'instruction ALTER MINING STRUCTURE ne prend pas en charge l'utilisation de paramètres d'exclusion.  
   
 -   **DMX** Dans le langage DMX (Data Mining Extensions), l’instruction CREATE MINING STRUCTURE a été étendue pour inclure une clause WITH HOLDOUT.  
@@ -70,7 +75,7 @@ caps.handback.revision: 27
   
  Vous pouvez afficher les informations relatives au jeu de données d'exclusion dans une structure d'exploration de données existante en interrogeant l'ensemble de lignes de schéma d'exploration de données. Vous pouvez pour cela effectuer un appel DISCOVER ROWSET ou utiliser une requête DMX.  
   
-## Récupération d'informations sur les données d'exclusion  
+## <a name="retrieving-information-about-holdout-data"></a>Récupération d'informations sur les données d'exclusion  
  Par défaut, toutes les informations relatives aux jeux de données d'apprentissage et de test sont mises en cache afin que vous puissiez utiliser les données existantes pour effectuer l'apprentissage, puis tester les nouveaux modèles. Vous pouvez également définir des filtres à appliquer aux données d'exclusion mises en cache afin de pouvoir évaluer le modèle sur des sous-ensembles des données.  
   
  La façon dont les cas sont divisés en jeux de données d'apprentissage et de test dépend de la façon dont vous configurez l'exclusion et les données que vous fournissez. Si vous souhaitez déterminer le nombre de cas utilisés pour l'apprentissage ou le test ou trouver des détails supplémentaires sur les cas inclus dans les jeux d'apprentissage et de test, vous pouvez interroger la structure du modèle en créant une requête DMX. Par exemple, la requête ci-dessous retourne les cas qui ont été utilisés dans le jeu d'apprentissage du modèle.  
@@ -85,7 +90,7 @@ SELECT * from <structure>.CASES WHERE IsTrainingCase()
 SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> = '<value>'  
 ```  
   
-## Limitations sur l'utilisation de données d'exclusion  
+## <a name="limitations-on-the-use-of-holdout-data"></a>Limitations sur l'utilisation de données d'exclusion  
   
 -   Pour utiliser l’exclusion, la propriété <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> de la structure d’exploration de données doit avoir la valeur par défaut **KeepTrainingCases**. Si vous modifiez la propriété **CacheMode** en lui affectant **ClearAfterProcessing**, puis retraitez la structure d'exploration de données, la partition sera perdue.  
   
@@ -97,7 +102,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 -   Outre les propriétés répertoriées dans le tableau précédent, une propriété en lecture seule, **HoldoutActualSize**, est fournie dans les objets AMO et le langage DDL XML. Toutefois, comme la taille réelle d'une partition ne peut pas être déterminée précisément avant le traitement de la structure, vous devez vérifier si le modèle a été traité avant de récupérer la valeur de la propriété **HoldoutActualSize** .  
   
-## Contenu connexe  
+## <a name="related-content"></a>Contenu connexe  
   
 |Rubriques|Liens|  
 |------------|-----------|  
@@ -107,10 +112,10 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
 |Fournit la syntaxe DMX pour créer des ensembles d'exclusion.|[CREATE MINING STRUCTURE &#40;DMX&#41;](../../dmx/create-mining-structure-dmx.md)|  
 |Récupérer des informations sur les cas dans les jeux d'apprentissage et de test.|[Ensembles de lignes de schéma d'exploration de données](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)<br /><br /> [Ensembles de lignes de schéma d’exploration de données &#40;SSAs&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Outils d'exploration de données](../../analysis-services/data-mining/data-mining-tools.md)   
- [Concepts d'exploration de données](../../analysis-services/data-mining/data-mining-concepts.md)   
+ [Concepts d’exploration de données](../../analysis-services/data-mining/data-mining-concepts.md)   
  [Solutions d'exploration de données](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Test et validation &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Test et validation &#40;Exploration des données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
