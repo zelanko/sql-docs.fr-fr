@@ -23,10 +23,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: e0bdc95320ea2e696444048156dffefcd89e1910
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: 43b840061dec69be8e733929477d79ca9d379814
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="sql-server-technical-documentation"></a>Documentation technique de SQL Server
@@ -85,13 +85,8 @@ Documentation d’aide à l’installation, à la configuration et à l’utilis
 - [Exemples SQL Server sur GitHub](https://github.com/Microsoft/sql-server-samples) 
    
  ## <a name="more-information"></a>Informations complémentaires   
-+ Pour afficher la documentation SQL Server en mode hors connexion, consultez [Visionneuse d’aide et contenu hors connexion pour SQL Server](../release-notes/sql-server-help-installation.md).
++ Pour afficher la documentation SQL Server en mode hors connexion, consultez [Visionneuse d’aide et contenu hors connexion pour SQL Server](sql-server-help-installation.md).
 + [Gestionnaire de configuration SQL Server](../relational-databases/sql-server-configuration-manager.md)
 + [Centre de mise à jour SQL Server - liens et informations pour toutes les versions prises en charge](https://msdn.microsoft.com/library/ff803383.aspx)
-  
-##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) Obtenir de l’aide 
-- [Stack Overflow (tag sql-server) : poser des questions sur le développement SQL](http://stackoverflow.com/questions/tagged/sql-server)
-- [Forums MSDN : poser des questions techniques](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-- [Microsoft Connect : signaler des bogues et demander des fonctionnalités](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit : discussion générale sur SQL Server](https://www.reddit.com/r/SQLServer/)
-- [Termes du contrat de licence Microsoft SQL Server et autres informations](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
