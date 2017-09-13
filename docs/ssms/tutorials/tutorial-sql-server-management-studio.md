@@ -1,12 +1,12 @@
 ---
-title: "Didacticiel : SQL Server Management Studio | Microsoft Docs"
+title: "Didacticiel : SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: 
-ms.date: 06/02/2016
-ms.prod: sql-server-2016
+ms.date: 08/30/2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- database-engine
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,47 +23,46 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: f632115506e3485e9d84476a95b0606f2c859e83
+ms.sourcegitcommit: 5aa858aff03e93db9db36b8caa710cc3a3b874ca
+ms.openlocfilehash: dde887f6e0999c5ebc107a300c33981a38ec7034
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/31/2017
 
 ---
 # <a name="tutorial-sql-server-management-studio"></a>Didacticiel : SQL Server Management Studio
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Ce didacticiel [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vous présente l'environnement intégré pour la gestion de votre infrastructure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] présente une interface graphique pour configurer, surveiller et administrer les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il vous permet également de déployer, surveiller et mettre à niveau les composants de la couche Données utilisés par vos applications, comme les bases de données. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit également des éditeurs de langage [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX et XML pour modifier et déboguer des scripts.  
+Le didacticiel SQL Server Management Studio (SSMS) vous présente l’environnement intégré pour la gestion de votre infrastructure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] présente une interface graphique pour configurer, surveiller et administrer les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il vous permet également de déployer, surveiller et mettre à niveau les composants de la couche Données utilisés par vos applications, comme les bases de données. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit également des éditeurs de langage [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX et XML pour modifier et déboguer des scripts.  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
-Ce didacticiel vous aidera à comprendre la présentation des informations dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et à tirer parti des fonctionnalités. Notez que ce didacticiel utilise la version gratuite de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] téléchargée à partir du centre de téléchargement.  
+Ce didacticiel vous aide à comprendre la présentation des informations dans SSMS et à tirer parti de ses fonctionnalités.
   
-La meilleure façon de se familiariser avec [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] consiste à effectuer des exercices pratiques. Ce didacticiel vous apprendra à gérer les composants de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et à rechercher les fonctionnalités utilisées régulièrement.  
+La meilleure façon de se familiariser avec SSMS est d’effectuer des exercices pratiques. Ce didacticiel vous apprend à gérer les composants de SSMS et à trouver les fonctionnalités utilisées régulièrement.  
   
 Ce didacticiel est divisé en trois leçons :  
   
-[Leçon 1 : Navigation de base dans SQL Server Management Studio](../../tools/sql-server-management-studio/lesson-1-basic-navigation-in-sql-server-management-studio.md)  
+[Leçon 1 : Navigation de base dans SQL Server Management Studio](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
 Dans cette leçon, vous allez apprendre à utiliser les composants de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], reconfigurer la disposition d'environnement et restaurer la disposition par défaut.  
   
-[Leçon 2 : écriture d'instructions Transact-SQL](../../tools/sql-server-management-studio/lesson-2-writing-transact-sql.md)  
-Dans cette leçon, vous allez apprendre à ouvrir l'éditeur de requête, gérer du code et utiliser les autres nouvelles fonctionnalités de l'éditeur de requête.  
+[Leçon 2 : écriture d'instructions Transact-SQL](lesson-2-writing-transact-sql.md)  
+Dans cette leçon, vous découvrez comment ouvrir l’éditeur de requête, gérer du code et utiliser d’autres fonctionnalités de l’éditeur de requête.  
   
-[Leçon 3 : utilisation de modèles, de solutions et de projets de scripts](../../tools/sql-server-management-studio/lesson-3-working-with-templates-solutions-and-script-projects.md)  
+[Leçon 3 : utilisation de modèles, de solutions et de projets de scripts](lesson-3-working-with-templates-solutions-and-script-projects.md)  
 Dans cette leçon, vous allez apprendre à utiliser des modèles et à organiser des scripts dans des solutions et des projets.  
   
 ## <a name="requirements"></a>Spécifications  
-Ce didacticiel est destiné aux administrateurs et aux développeurs de base de données expérimentés, qui ne connaissent pas [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], mais qui maîtrisent les concepts de base de données et le langage [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+Ce didacticiel est destiné aux administrateurs et aux développeurs de base de données expérimentés, qui ne connaissent pas [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], mais qui maîtrisent les concepts des base de données et de [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-Les éléments suivants doivent cependant être installés sur votre système :  
+Pour ce didacticiel, les éléments suivants doivent être installés :  
+
   
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou une version ultérieure avec les exemples de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Pour des raisons de sécurité, les exemples de bases de données ne sont pas installés par défaut. Pour installer les exemples de bases de données, consultez [Installation des exemples SQL Server et des exemples de bases de données](http://sqlserversamples.codeplex.com).  
-  
--   Installez la dernière version de [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) à partir du centre de téléchargement.  
-  
--   Internet Explorer 9.0 ou version ultérieure.  
+-   Installez la dernière version de [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md).  
+-   SQL Server 2016 ou ultérieur, avec l’exemple de base de données AdventureWorks. Pour installer l’exemple de base de données AdventureWorks, consultez [AdventureWorks2014](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2014) et installez la base de données AdventureWorks2014 (OLTP).  
+
   
 ## <a name="see-also"></a>Voir aussi  
 [Didacticiels sur le moteur de base de données](../../relational-databases/database-engine-tutorials.md)  

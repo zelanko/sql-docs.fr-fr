@@ -1,7 +1,7 @@
 ---
 title: "Nouveautés de SQL Server 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/25/2017
+ms.date: 08/31/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 8d10f9e80eb1cc0c2495042e03ff746a017f8e2a
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: 0e254f84039defcc4a1e56cd966e8607efc92503
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Nouveautés de SQL Server 2017
@@ -34,6 +34,7 @@ SQL Server 2017 inclut de nombreuses nouvelles fonctionnalités du moteur de ba
 - Vous pouvez désormais ajouter des **assemblys CLR** à une liste verte, comme une solution de contournement pour la fonctionnalité `clr strict security` décrite dans CTP 2.0. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) et [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) sont ajoutés pour prendre en charge la liste des assemblys approuvés (RC1).  
 - La **reconstruction d’index en ligne pouvant être reprise** reprend une opération de reconstruction d’index en ligne là où elle s’est arrêtée après un échec (par exemple, un basculement vers un réplica ou un espace disque insuffisant), ou s’arrête et reprend ultérieurement une opération de reconstruction d’index en ligne. Consultez les pages [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) et [Instructions pour les opérations d’index en ligne](../relational-databases/indexes/guidelines-for-online-index-operations.md). (CTP 2.0)
 - L’option **IDENTITY_CACHE** pour ALTER DATABASE SCOPED CONFIGURATION vous permet d’éviter les écarts dans les valeurs des colonnes d’identité si un serveur redémarre de façon inattendue ou bascule vers un serveur secondaire. Consultez la page [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). (CTP 2.0)
+- Une nouvelle génération d’améliorations du traitement des requêtes, qui adaptent les stratégies d’optimisation aux conditions d’exécution de la charge de travail de votre application. Pour cette première version de la famille de fonctionnalités de **traitement adaptatif des requêtes**, nous avons trois nouvelles améliorations : **jointures adaptatives en mode batch**, **retour d’allocation de mémoire en mode batch** et **exécution entrelacée** pour les fonctions table à instructions multiples.  Consultez [Traitement adaptatif des requêtes dans les bases de données SQL](../relational-databases/performance/adaptive-query-processing.md).
 - Le **paramétrage de base de données automatique** permet de connaître les éventuels problèmes de performances des requêtes, recommande des solutions et peut corriger automatiquement les problèmes identifiés. Consultez [Paramétrage automatique](../relational-databases/automatic-tuning/automatic-tuning.md). (CTP 2.0)
 - Les nouvelles **fonctionnalités de base de données des graphiques** pour la modélisation des relations plusieurs à plusieurs contiennent une nouvelle syntaxe [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) permettant de créer des tables de nœuds et d’arêtes ainsi que le mot clé [MATCH](../t-sql/queries/match-sql-graph.md) pour les requêtes. Consultez [Traitement des graphiques avec SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md). (CTP 2.0)
 - Une option sp_configure appelée `clr strict security` est activée par défaut pour améliorer la sécurité des assemblys CLR. Consultez [Sécurité CLR stricte](../database-engine/configure-windows/clr-strict-security.md). (CTP 2.0)
@@ -112,14 +113,9 @@ Les développeurs SQL Server ont désormais accès aux bibliothèques Python ML 
 
 Pour plus d’informations, consultez [Nouveautés de SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 
-##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) Obtenir de l’aide 
-- [Stack Overflow (tag sql-server) : poser des questions sur le développement SQL](http://stackoverflow.com/questions/tagged/sql-server)
-- [Forums MSDN : poser des questions techniques](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-- [Microsoft Connect : signaler des bogues et demander des fonctionnalités](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit : discussion générale sur SQL Server](https://www.reddit.com/r/SQLServer/)
-- [Termes du contrat de licence Microsoft SQL Server et autres informations](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
-
 ## <a name="next-steps"></a>Étapes suivantes
 - Consultez les [Notes de publication de SQL Server 2017](sql-server-2017-release-notes.md).
 - Découvrez les [nouveautés de SQL Server 2017 sur Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new).
 - Découvrez les [Nouveautés de SQL Server 2016](what-s-new-in-sql-server-2016.md).
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
