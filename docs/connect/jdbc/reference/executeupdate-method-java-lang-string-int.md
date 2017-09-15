@@ -1,0 +1,71 @@
+---
+title: "Méthode executeUpdate (java.lang.String, int) | Documents Microsoft"
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- SQLServerStatement.executeUpdate (java.lang.String, int)
+apilocation:
+- sqljdbc.jar
+apitype: Assembly
+ms.assetid: 4c52a20e-527e-4d14-9a5a-4cd195aac8ed
+caps.latest.revision: 13
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: bb27e4538eccf87257d16555505442f76461adb0
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
+
+---
+# <a name="executeupdate-method-javalangstring-int"></a>Méthode executeUpdate (java.lang.String, int)
+[!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
+
+  Exécute l’instruction SQL fournie et la signale le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] avec l’indicateur fourni si générée automatiquement des clés qui sont générés par ce [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) objet doit être disponibles pour la récupération.  
+  
+## <a name="syntax"></a>Syntaxe  
+  
+```  
+  
+public final int executeUpdate(java.lang.String sql,  
+                               int flag)  
+```  
+  
+#### <a name="parameters"></a>Paramètres  
+ *SQL*  
+  
+ A **chaîne** qui contient une instruction SQL.  
+  
+ *indicateur*  
+  
+ Un **int** valeur qui indique si les clés générées automatiquement doivent être disponibles. Il doit s'agir de l'une des constantes suivantes :  
+  
+ RETURN_GENERATED_KEYS  
+  
+ NO_GENERATED_KEYS  
+  
+## <a name="return-value"></a>Valeur retournée  
+ Un **int** qui indique le nombre de lignes affectées ou 0 si vous utilisez une instruction DDL.  
+  
+## <a name="exceptions"></a>Exceptions  
+ [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
+  
+## <a name="remarks"></a>Notes  
+ Cette méthode executeUpdate est spécifiée par la méthode executeUpdate dans l’interface java.sql.Statement.  
+  
+ Si l’exécution d’une procédure stockée entraîne un nombre de mises à jour qui est supérieur à un, ou qui génère plusieurs jeux de résultats, utilisez le [exécuter](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) méthode à exécuter la procédure stockée.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Méthode executeUpdate &#40; SQLServerStatement &#41;](../../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)   
+ [Membres de SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
+ [SQLServerStatement, classe](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
+  
+  

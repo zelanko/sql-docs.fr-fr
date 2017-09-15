@@ -1,7 +1,7 @@
 ---
 title: NULLIF (Transact-SQL) | Documents Microsoft
 ms.custom: 
-ms.date: 08/16/2017
+ms.date: 09/08/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -25,16 +25,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e07e3960466d782911c20ced9ce6d88a10406bc2
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: fe8e4663688ce510d9600ebeba9d3c30703ee3aa
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retourne une valeur NULL si les deux expressions spécifiées sont égales.  
+  Retourne une valeur NULL si les deux expressions spécifiées sont égales. Par exemple, `SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` renvoie la valeur NULL pour la première colonne (4 et 4), car les deux valeurs d’entrée sont identiques. La deuxième colonne retourne la première valeur (5), car les deux valeurs d’entrée sont différents. 
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
