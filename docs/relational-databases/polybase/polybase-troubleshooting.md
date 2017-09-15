@@ -2,7 +2,7 @@
 title: "Résolution des problèmes de PolyBase | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 10/25/2016
+ms.date: 8/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,10 +21,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: e65ea926f3a2d2fb3c30c511a1fbba6150de7b42
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: 4026b6c7c7ae2945d49d6c4b63792239608ffea0
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>Résolution des problèmes de Polybase
@@ -227,8 +227,17 @@ ms.lasthandoff: 07/31/2017
  - La taille de ligne maximale, notamment la longueur totale des colonnes à longueur variable, ne peut pas dépasser 1 Mo. 
  - PolyBase ne prend pas en charge les types de données Hive 0.12+ (c’est-à-dire Char(), VarChar()).   
  - Durant l’exportation de données dans un format de fichier ORC à partir de SQL Server ou Azure SQL Data Warehouse, le nombre de colonnes de texte lourdes peut être limité à seulement 50, en raison d’erreurs de mémoire insuffisante Java. Pour contourner ce problème, exportez uniquement une partie des colonnes.
-- [PolyBase ne s’installe pas quand vous ajoutez un nœud à un cluster de basculement SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
-  
+ - Impossible de lire ou d’écrire des données chiffrées au repos dans Hadoop. Cela inclut le chiffrement transparent ou les zones chiffrées HDFS.
+ - PolyBase ne peut pas se connecter à une instance de Hortonworks si Knox est activé. 
+
+[PolyBase ne s’installe pas quand vous ajoutez un nœud à un cluster de basculement SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
+
+## <a name="hadoop-name-node-high-availability"></a>Haute disponibilité des nœuds de nom Hadoop
+De nos jours, PolyBase n’interagit pas avec les services de haute disponibilité des nœuds de nom tels que Zookeeper ou Knox. Toutefois, vous pouvez utiliser une solution de contournement éprouvée pour fournir cette fonctionnalité. 
+
+Cette solution consiste à utiliser le nom DNS pour rediriger les connexions vers le nom de nœud actif. Pour ce faire, vous devez vous assurer que la source de données externe utilise un nom DNS pour communiquer avec le nom de nœud. Quand le basculement du nom de nœud se produit, vous devez changer l’adresse IP associée au nom DNS utilisé dans la définition de la source de données externe. Cette opération redirige toutes les nouvelles connexions vers le nœud de nom correct. Les connexions existantes échouent quand le basculement se produit. Pour automatiser ce processus, une « pulsation » peut exécuter un ping sur le nom de nœud actif. Si la pulsation échoue, on peut supposer qu’un basculement a eu lieu, donnant lieu à un basculement automatiquement vers l’adresse IP des bases de données secondaires.
+
+
 ## <a name="error-messages-and-possible-solutions"></a>Messages d’erreur et solutions possibles
 
 Pour résoudre les erreurs de table externe, consultez le blog de Murshed Zaman [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase setup errors and possible solutions")(Erreur de configuration de PolyBase et solutions possibles).

@@ -1,8 +1,10 @@
 ---
 title: "Installer SQL Server 2016 sur Server Core | Microsoft Docs"
 ms.custom: 
-ms.date: 11/10/2016
-ms.prod: sql-server-2016
+ms.date: 09/05/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,18 +17,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 043a3dbcfcdfe75e77e8d50bd9698a05fbbf02c4
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: 501fac02e6146d417572dfb9f4f3906de7b2eeeb
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="install-sql-server-on-server-core"></a>Installer SQL Server sur Server Core
-  Vous pouvez installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une installation Server Core. Cette rubrique fournit des détails spécifiques à l'installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sur Server Core.  
+Vous pouvez installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une installation Server Core.   
   
- L’option d’installation Server Core offre l’environnement minimal requis pour l’exécution de certains rôles de serveurs spécifiques. Cela permet de réduire les besoins en maintenance et gestion et l'exposition aux attaques de ces rôles de serveur. Pour plus d’informations sur Server Core, consultez [Installer Server Core](https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-server-core). Pour plus d’informations sur Server Core implémenté sur [!INCLUDE[win8srv](../../includes/win8srv-md.md)], consultez [Server Core for Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
+L’option d’installation Server Core offre l’environnement minimal requis pour l’exécution de certains rôles de serveurs spécifiques. Cela permet de réduire les besoins en maintenance et gestion et l'exposition aux attaques de ces rôles de serveur. Pour plus d’informations sur Server Core, consultez [Installer Server Core](http://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core). Pour plus d’informations sur Server Core implémenté sur [!INCLUDE[win8srv](../../includes/win8srv-md.md)], consultez [Server Core for Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
   
- Pour obtenir la liste des systèmes d’exploitation pris en charge, consultez [Configurations matérielle et logicielle requises pour l’installation de SQL Server](https://docs.microsoft.com/en-us/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server).
+ Pour obtenir la liste des systèmes d’exploitation pris en charge, consultez [Configurations matérielle et logicielle requises pour l’installation de SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
 ## <a name="prerequisites"></a>Conditions préalables  
   
@@ -78,9 +80,6 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="install"></a>Install  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ne prend pas en charge l'installation avec l'Assistant d'installation sur le système d'exploitation de Server Core. Lors de l'installation sous Server Core, le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le mode silencieux complet via le paramètre /Q ou le mode silencieux simple via le paramètre /QS. Pour plus d’informations, consultez [Installer SQL Server 2016 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
-  
-> [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ne peut pas être installé côte à côte avec des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un ordinateur qui exécute [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 ou [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core.  
   
  Indépendamment de la méthode d'installation, vous êtes invité à confirmer l'acceptation des termes de la licence de logiciel en tant que personne physique ou pour le compte d'une entité, sauf si votre utilisation du logiciel est régie par un accord distinct, tel qu'un accord de concession de licence en volume de [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou un accord tiers avec un éditeur de logiciels ou un fabricant OEM.  
   
@@ -263,7 +262,7 @@ ms.lasthandoff: 08/02/2017
          Si le fichier DefaultSetup.ini n'existe pas, vous pouvez le créer et le copier dans les dossiers \x86 et \x64 au niveau de la racine du média source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="configure-remote-access-of-includessnoversionincludesssnoversion-mdmd-on-server-core"></a>Configurer l’accès à distance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Server Core  
- Effectuez les actions décrites ci-dessous pour configurer l'accès à distance d'une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] qui s'exécute sur une installation Server Core de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 ou [!INCLUDE[win8srv](../../includes/win8srv-md.md)].  
+ Effectuez les actions décrites ci-dessous pour configurer l’accès à distance d’une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] qui s’exécute sur Server Core.  
   
 ### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Activer les connexions distantes sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
@@ -291,7 +290,7 @@ Pour activer les connexions distantes, utilisez SQLCMD.exe localement et exécut
 ### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Activer TCP/IP sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Le protocole TCP/IP peut être activé via Windows PowerShell pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Server Core. Procédez comme suit :  
   
-1.  Sur un ordinateur qui exécute [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 ou [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core, lancez le Gestionnaire des tâches.  
+1.  Sur le serveur, lancez le Gestionnaire des tâches.  
   
 2.  Dans l'onglet **Applications** , cliquez sur **Nouvelle tâche**.  
   
@@ -299,7 +298,7 @@ Pour activer les connexions distantes, utilisez SQLCMD.exe localement et exécut
   
 4.  Dans la fenêtre **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**, exécutez le script suivant pour activer le protocole TCP/IP :  
   
-```  
+```powershell  
 $smo = 'Microsoft.SqlServer.Management.Smo.'  
 $wmi = new-object ($smo + 'Wmi.ManagedComputer')  
 # Enable the TCP protocol on the default instance.  If the instance is named, replace MSSQLSERVER with the instance name in the following line.  
@@ -331,9 +330,9 @@ Si vous fermez accidentellement l'invite de commandes, vous pouvez démarrer une
 3.  Dans la boîte de dialogue **Créer une nouvelle tâche** , tapez **cmd** dans le champ **Ouvrir** , [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Installer SQL Server 2016 à l’aide d’un fichier de configuration](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
- [Installer SQL Server 2016 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
- [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
+ [Installer SQL Server à l’aide d’un fichier de configuration](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
+ [Installer SQL Server à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [Éditions et fonctionnalités prises en charge de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)   
  [Installer Server Core](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
  [Configurer une installation Server Core de Windows Server 2016 avec Sconfig.cmd](http://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
  [Applets de commande de cluster de basculement dans Windows PowerShell](http://technet.microsoft.com/itpro/powershell/windows/failover-clusters/index)   
