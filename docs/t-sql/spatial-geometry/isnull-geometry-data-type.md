@@ -1,7 +1,7 @@
 ---
 title: "IsNull (Type de données geometry) | Documents Microsoft"
 ms.custom: 
-ms.date: 08/03/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -21,10 +21,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9136a2caf43fea8d5cccd90d8dba85d815511afe
+ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
+ms.openlocfilehash: 5e213bd847f2d5836802d93ade5fa46f3dc3d1a9
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="isnull-geometry-data-type"></a>IsNull (type de données geometry)
@@ -35,7 +35,6 @@ Le type d’un **geometry** instance est null. Retourne 0 si l'instance n'est pa
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 .IsNull  
 ```  
   
@@ -49,10 +48,9 @@ Le type d’un **geometry** instance est null. Retourne 0 si l'instance n'est pa
   
  Cette méthode est utilisée principalement par l'infrastructure SQL Server ; il n'est pas recommandé d'utiliser `IsNull` pour tester si une instance est Null.  
   
-## <a name="examples"></a>Exemples  
-  
+
 ## <a name="see-also"></a>Voir aussi  
- [Méthodes étendues sur les Instances géométriques](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
+ [Méthodes étendues sur des instances geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   
 

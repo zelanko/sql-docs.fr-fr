@@ -1,7 +1,7 @@
 ---
 title: "CRÉER la clé symétrique (Transact-SQL) | Documents Microsoft"
 ms.custom: 
-ms.date: 03/11/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -27,10 +27,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fb573578b51b2e6bf4c5cbedf7ef5bc509523903
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: d3b1490b1ac07d0e6a3f0fc3ed1515dd0872d545
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
@@ -97,26 +97,28 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
   
- CREATION_DISPOSITION  **=**  CREATE_NEW  
+ CREATION_DISPOSITION ** = ** CREATE_NEW  
  Crée une clé sur le périphérique EKM (Extensible Key Management).  S'il existe déjà une clé sur le périphérique, l'instruction échoue et génère une erreur.  
   
- CREATION_DISPOSITION  **=**  OPEN_EXISTING  
+ CREATION_DISPOSITION ** = ** OPEN_EXISTING  
  Mappe une clé symétrique [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à une clé EKM (Extensible Key Management) existante. Si CREATION_DISPOSITION = OPEN_EXISTING n'est pas spécifié, la valeur par défaut est CREATE_NEW.  
   
  *nom_certificat*  
  Spécifie le nom du certificat qui sera utilisé pour chiffrer la clé symétrique. Le certificat doit déjà exister dans la base de données.  
   
  **'** *mot de passe* **'**  
- Spécifie un mot de passe à partir duquel dériver une clé TRIPLE_DES avec laquelle sécuriser la clé symétrique. *mot de passe* doit remplir les conditions de stratégie de mot de passe Windows de l’ordinateur qui exécute l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous devez toujours utiliser des mots de passe forts.  
+ Spécifie un mot de passe à partir duquel dériver une clé TRIPLE_DES avec laquelle sécuriser la clé symétrique. *mot de passe* doit remplir les conditions de stratégie de mot de passe Windows de l’ordinateur qui exécute l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez toujours des mots de passe forts.  
   
  *symmetric_key_name*  
- Spécifie une clé symétrique à utiliser pour chiffrer la clé en cours de création. La clé spécifiée doit déjà exister dans la base de données et elle doit être ouverte.  
+ Spécifie une clé symétrique, utilisé pour chiffrer la clé est créée. La clé spécifiée doit déjà exister dans la base de données et elle doit être ouverte.  
   
  *asym_key_name*  
- Spécifie une clé asymétrique à utiliser pour chiffrer la clé en cours de création. Cette clé asymétrique doit déjà exister dans la base de données.  
+ Spécifie une clé asymétrique, utilisé pour chiffrer la clé est créée. Cette clé asymétrique doit déjà exister dans la base de données.  
   
  \<algorithme >  
- À partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tous les algorithmes autres que AES_128, AES_192 et AES_256 sont déconseillés. Pour utiliser des algorithmes plus anciens (ce qui n’est pas recommandé), vous devez affecter le niveau de compatibilité 120 ou un niveau inférieur à la base de données.  
+Spécifier l’algorithme de chiffrement.   
+> [!WARNING]  
+> À partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tous les algorithmes autres que AES_128, AES_192 et AES_256 sont déconseillés. Pour utiliser des algorithmes plus anciens (non recommandés), vous devez définir le niveau de compatibilité de la base de données à la base de données inférieur ou égal à 120.  
   
 ## <a name="remarks"></a>Notes  
  Lorsqu'une clé symétrique est créée, elle doit être chiffrée à l'aide de l'un des éléments suivants au moins : certificat, mot de passe, clé symétrique, clé asymétrique ou PROVIDER. La clé peut être soumise à plusieurs chiffrements de chaque type. En d'autres termes, une clé symétrique unique peut être chiffrée à l'aide de plusieurs certificats, mots de passe, clés symétriques et clés asymétriques à la fois.  
@@ -128,7 +130,7 @@ CREATE SYMMETRIC KEY key_name
   
  Les clés temporaires appartiennent à l'utilisateur qui les crée. Les clés temporaires sont valides uniquement pour la session en cours.  
   
- IDENTITY_VALUE génère un GUID qui permet de baliser les données chiffrées à l'aide de la nouvelle clé symétrique. Ce balisage peut être utilisé pour faire correspondre les clés aux données chiffrées. Le GUID généré par une expression spécifique sera toujours le même. Lorsqu'une expression est utilisée pour générer un GUID, elle ne peut être réutilisée que si au moins une session l'utilise activement. IDENTITY_VALUE est une clause facultative ; toutefois, nous vous conseillons de l'utiliser pour stocker des données chiffrées à l'aide d'une clé temporaire.  
+ IDENTITY_VALUE génère un GUID qui permet de baliser les données chiffrées à l'aide de la nouvelle clé symétrique. Ce balisage peut être utilisé pour faire correspondre les clés aux données chiffrées. Le GUID généré par une expression spécifique est toujours le même. Lorsqu'une expression est utilisée pour générer un GUID, elle ne peut être réutilisée que si au moins une session l'utilise activement. IDENTITY_VALUE est une clause facultative ; toutefois, nous vous conseillons de l'utiliser pour stocker des données chiffrées à l'aide d'une clé temporaire.  
   
  Il n'y a pas d'algorithme de chiffrement par défaut.  
   
@@ -142,14 +144,12 @@ CREATE SYMMETRIC KEY key_name
  **Éclaircissement concernant les algorithmes DES :**  
   
 -   DESX a été nommé incorrectement. Les clés symétriques créées avec ALGORITHM = DESX utilisent en fait le chiffrement TRIPLE DES avec une clé de 192 bits. L'algorithme DESX n'est pas fourni. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
-  
 -   Les clés symétriques créées avec ALGORITHM = TRIPLE_DES_3KEY utilisent TRIPLE DES avec une clé de 192 bits.  
-  
 -   Les clés symétriques créées avec ALGORITHM = TRIPLE_DES utilisent TRIPLE DES avec une clé de 128 bits.  
   
  **Abandon de l’algorithme RC4 :**  
   
- L'utilisation répétée du même RC4 ou RC4_128 KEY_GUID sur différents blocs de données entraîne la même clé RC4 car [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne fournit pas automatiquement de salt. L'utilisation répétée de la même clé RC4 est une erreur connue qui entraîne un chiffrement très faible. Par conséquent, les mots clés RC4 et RC4_128 sont déconseillés. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+ Une utilisation répétée du même RC4 ou RC4_128 les KEY_GUID sur différents blocs de données, des résultats dans la même clé RC4 car [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne fournit pas automatiquement de salt. L'utilisation répétée de la même clé RC4 est une erreur connue qui entraîne un chiffrement très faible. Par conséquent, les mots clés RC4 et RC4_128 sont déconseillés. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!WARNING]  
 >  L'algorithme RC4 est uniquement pris en charge pour des raisons de compatibilité descendante. Le nouveau matériel ne peut être chiffré à l'aide de RC4 ou de RC4_128 que lorsque la base de données se trouve dans le niveau de compatibilité 90 ou 100. (Non recommandé.) Utilisez à la place un algorithme plus récent, tel qu'un des algorithmes AES. Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], le matériel chiffré à l'aide de RC4 ou de RC4_128 peut être déchiffré dans n'importe quel niveau de compatibilité.  

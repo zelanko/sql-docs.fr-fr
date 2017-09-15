@@ -1,0 +1,67 @@
+---
+title: "JDBC 4.1 conformité pour le pilote JDBC | Documents Microsoft"
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: f087fd40-8451-478e-b465-43112c711515
+caps.latest.revision: 6
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: 8221755d220caec5588c8ed1343e360799b82694
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
+
+---
+# <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>Compatibilité avec JDBC 4.1 pour le pilote JDBC
+[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
+
+    
+> [!NOTE]  
+>  Les versions antérieures de Microsoft JDBC Driver 4.2 pour SQL Server sont compatibles avec les spécifications de l'API Java Database Connectivity 4.0. Cette section ne s'applique pas aux versions antérieures à la version 4.2.  
+  
+ La spécification de l'API Java Database Connectivity 4.1 est prise en charge par Microsoft JDBC Driver 4.2 pour SQL Server, avec les méthodes API suivantes.  
+  
+ **Classe SQLServerConnection**  
+  
+|Nouvelle méthode| Description|Implémentation du pilote JDBC|  
+|----------------|-----------------|--------------------------------|  
+|void abort(Executor executor)|Met fin à une connexion ouverte à SQL Server.|Implémenté comme décrit dans l'interface java.sql.Connection. Pour plus d’informations, consultez [java.sql.Connection](http://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html).|  
+|void setSchema(String schema)|Définit le schéma de la connexion actuelle.|SQL Server ne prend pas en charge la définition du schéma pour la session actuelle. Le pilote enregistre en mode silencieux un message d'avertissement si cette méthode est appelée. Pour plus d’informations, consultez [java.sql.Connection](http://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html).|  
+|String getSchema()|Retourne le nom du schéma pour la connexion actuelle.|SQL Server ne prenant pas en charge la définition du schéma pour la connexion actuelle, le pilote retourne à la place le schéma par défaut de l'utilisateur. Pour plus d’informations, consultez [java.sql.Connection](http://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html).|  
+  
+ **Classe SQLServerDatabaseMetaData**  
+  
+|Nouvelle méthode| Description|Implémentation du pilote JDBC|  
+|----------------|-----------------|--------------------------------|  
+|boolean generatedKeyAlwaysReturned()|Retourne la valeur true, car le pilote prend en charge la récupération des clés générées|Implémenté comme décrit dans l'interface java.sql. DatabaseMetaData. Pour plus d’informations, consultez [java.sql.DatabaseMetaData](http://docs.oracle.com/javase/7/docs/api/java/sql/DatabaseMetaData.html).|  
+|ResultSet getPseudoColumns(String catalog, String schemaPattern,String tableNamePattern,String columnNamePattern)|Récupère une description des pseudo colonnes/colonnes masquées|Retourne un jeu de résultats vide, car SQL Server n'a pas de notion formelle des pseudo colonnes. Pour plus d’informations, consultez [java.sql.DatabaseMetaData](http://docs.oracle.com/javase/7/docs/api/java/sql/DatabaseMetaData.html).|  
+  
+ **Classe SQLServerStatement**  
+  
+|Nouvelle méthode| Description|Implémentation du pilote JDBC|  
+|----------------|-----------------|--------------------------------|  
+|void closeOnCompletion()|Spécifie que cette instruction est fermée quand tous ses jeux de résultats dépendants sont fermés.|Implémenté comme décrit dans l'interface java.sql.Statement. Pour plus d’informations, consultez [java.sql.Statement](http://docs.oracle.com/javase/7/docs/api/java/sql/Statement.html).|  
+|boolean isCloseOnCompletion()|Retourne une valeur indiquant si cette instruction est fermée quand tous ses jeux de résultats dépendants sont fermés.|Implémenté comme décrit dans l'interface java.sql.Statement. Pour plus d’informations, consultez [java.sql.Statement](http://docs.oracle.com/javase/7/docs/api/java/sql/Statement.html).|  
+  
+ La spécification de l'API Java Database Connectivity 4.1 est prise en charge par Microsoft JDBC Driver 4.2 pour SQL Server, avec les fonctionnalités suivantes.  
+  
+|Nouvelle fonctionnalité| Description|  
+|-----------------|-----------------|  
+|Nouvelle fonction d'échappement<br /><br /> Échappement limité des lignes retournées|Partiellement pris en charge<br /><br /> Syntaxe d’échappement : limite \<lignes > [décalage < row_offset >]<br /><br /> La syntaxe d'échappement comporte deux parties : la partie obligatoire « rows » spécifie le nombre de lignes à retourner, la partie facultative « row_offset » spécifie le nombre de lignes à ignorer avant de commencer à retourner des lignes<br /><br /> Le pilote prend en charge uniquement la partie obligatoire en transformant la requête pour utiliser « TOP » au lieu de LIMIT (SQL Server ne prend pas en charge « LIMIT »).<br /><br /> Le pilote lève une exception si la partie facultative « row_offset » est utilisée, car SQL Server n'a pas de construction intégrée pour la prendre en charge.<br /><br /> Pour plus d’informations, consultez [à l’aide des séquences d’échappement SQL](https://msdn.microsoft.com/en-us/library/ms378045.aspx).|  
+  
+ La spécification de l'API Java Database Connectivity 4.1 est prise en charge par Microsoft JDBC Driver 4.2 pour SQL Server, avec les mappages de type de données suivants.  
+  
+|Mappages de type de données| Description|  
+|------------------------|-----------------|  
+|Les nouveaux mappages de type de données sont désormais pris en charge dans les méthodes PreparedStatement.setObject() et PreparedStatement.setNull().|1. Nouveau mappage de type Java à JDBC<br /><br /> (a) java.math.BigInteger à JDBC BIGINT<br /><br /> (b) java.util.Date et java.util.Calendar à JDBC TIMESTAMP<br /><br /> 2. Nouvelles conversions de types de données :<br /><br /> (a) java.math.BigInteger en CHAR, VARCHAR, LONGVARCHAR et BIGINT<br /><br /> (b) java.util.Date et java.util.Calendar en CHAR, VARCHAR, LONGVARCHAR, DATE, TIME et TIMESTAMP<br /><br /> Pour plus d'informations, consultez la spécification JDBC 4.1.|  
+  
+  

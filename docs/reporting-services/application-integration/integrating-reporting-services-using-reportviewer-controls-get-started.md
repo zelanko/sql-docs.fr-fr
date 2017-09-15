@@ -16,16 +16,16 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 6e1d0305fff039aad4d387cbc63026f40db9f97e
-ms.openlocfilehash: 9d229fd4764da21612d1b1cf532f1beaf8116769
+ms.translationtype: MT
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: 51c6e0a0baa59e49ae482db01253c1998894b5f8
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>Intégration de Reporting Services à l’aide de contrôles ReportViewer - mise en route
 
-Découvrez comment les développeurs peuvent incorporer des rapports paginés dans des sites web ASP.Net et les applications Windows forms, via le contrôle de ReportViewer Reporting Services 2016. Vous pouvez ajouter le contrôle à un nouveau projet, ou mettre à jour un projet existant.
+Découvrez comment les développeurs peuvent incorporer des rapports paginés dans des sites web ASP.NET et les applications Windows Forms via le contrôle de ReportViewer Reporting Services 2016. Vous pouvez ajouter le contrôle à un nouveau projet, ou mettre à jour un projet existant.
 
 ## <a name="adding-the-reportviewer-control-to-a-new-web-project"></a>Ajout du contrôle ReportViewer pour un projet web
 
@@ -142,7 +142,7 @@ Pour utiliser le contrôle ReportViewer 2016 dans un projet existant, ajoutez le
 <!DOCTYPE html>
 ```
 
-## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>Ajout du contrôle ReportViewer pour un projet Windows forms
+## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>Ajout du contrôle ReportViewer à un nouveau projet Windows Forms
 
 1. Créer un nouveau **Application Windows Forms** ou ouvrez un projet existant.
 
@@ -242,7 +242,7 @@ Le contrôle Visionneuse de rapports est désormais fourni comme package NuGet. 
 
     ![ssRS-supprimer-old-rvcontrol-boîte à outils](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
-3. Avec le bouton droit cliquez n’importe où dans la boîte à outils, puis sélectionnez **choisir des éléments...** .
+3. Avec le bouton droit cliquez n’importe où dans la boîte à outils, puis sélectionnez **choisir des éléments... **.
 
     ![ssRS-élément boîte à outils-choisissez](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     

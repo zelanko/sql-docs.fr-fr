@@ -1,7 +1,7 @@
 ---
 title: CAST et CONVERT (Transact-SQL) | Documents Microsoft
 ms.custom: 
-ms.date: 09/07/2017
+ms.date: 09/08/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -39,8 +39,8 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 40f0515c07d78963dd10dc8c4ff52e31e096aba8
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: e1ea8183c7655af863fe5f6267958f4c8df367dc
 ms.contentlocale: fr-fr
 ms.lasthandoff: 09/08/2017
 
@@ -48,7 +48,19 @@ ms.lasthandoff: 09/08/2017
 # <a name="cast-and-convert-transact-sql"></a>CAST et CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Convertit une expression d'un type de données en un autre.
+Convertit une expression d'un type de données en un autre.  
+Par exemple, les exemples suivants transformer le type de données d’entrée, deux autres types de données, avec différents niveaux de précision.
+```sql  
+SELECT 9.5 AS Original, CAST(9.5 AS int) AS int, 
+    CAST(9.5 AS decimal(6,4)) AS decimal;
+SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int, 
+    CONVERT(decimal(6,4), 9.5) AS decimal;
+```  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+|Langue source   |int    |decimal |  
+|----|----|----|  
+|9.5 |9 |9.5000 |  
+
 > [!TIP]
 > Nombreux [exemples](#BKMK_examples) en bas de cette rubrique.  
   
@@ -75,17 +87,13 @@ Type de données cible. Cela inclut les **xml**, **bigint**, et **sql_variant**.
 Entier facultatif qui spécifie la longueur du type de données cible. La valeur par défaut est 30.
   
 *style*  
-Expression entière qui spécifie comment la fonction CONVERT doit traduire *expression*. Si le style est NULL, une valeur NULL est retournée. La plage est déterminée par *data_type*. Pour plus d'informations, consultez la section Notes.
+Expression entière qui spécifie comment la fonction CONVERT doit traduire *expression*. Si le style est NULL, une valeur NULL est retournée. La plage est déterminée par *data_type*. 
   
 ## <a name="return-types"></a>Types de retour
 Retourne *expression* traduit en *data_type*.
 
-[Accéder aux 15 exemples à la fin de cette rubrique](#BKMK_examples)
-  
-## <a name="remarks"></a>Notes  
-  
 ## <a name="date-and-time-styles"></a>Styles de date et d'heure  
-Lorsque *expression* est un type de données date ou heure *style* peut prendre l’une des valeurs indiquées dans le tableau suivant. Les autres valeurs sont traitées comme étant 0. . À partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les seuls styles pris en charge lors de la conversion de date et heure types **datetimeoffset** sont 0 ou 1. Tous les autres styles de conversion retournent l'erreur 9809.
+Lorsque *expression* est un type de données date ou heure *style* peut prendre l’une des valeurs indiquées dans le tableau suivant. Les autres valeurs sont traitées comme étant 0. À partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les seuls styles pris en charge lors de la conversion de date et heure types **datetimeoffset** sont 0 ou 1. Tous les autres styles de conversion retournent l'erreur 9809.
   
 >  [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le format de date dans le style arabe à l'aide de l'algorithme koweitien.

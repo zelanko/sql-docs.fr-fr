@@ -1,0 +1,48 @@
+---
+title: Collections ADO | Documents Microsoft
+ms.prod: sql-non-specified
+ms.technology:
+- drivers
+ms.custom: 
+ms.date: 01/19/2017
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ADO collections [ADO]
+- collections [ADO]
+ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
+caps.latest.revision: 10
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: 633ae5b4a31c6b305aada1b6b3984b85caa8a1da
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
+
+---
+# <a name="ado-collections"></a>Collections ADO
+Les relations entre ces collections et les objets ADO sont représentées dans le [modèle objet ADO](../../../ado/reference/ado-api/ado-object-model.md).  
+  
+ Chaque collection peut contenir son objet correspondant. Par exemple, un [erreur](../../../ado/reference/ado-api/error-object.md) objet peut être contenu dans un [erreurs](../../../ado/reference/ado-api/errors-collection-ado.md) collection. Pour plus d’informations sur les objets, consultez [objets ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) ou une rubrique de l’objet spécifique.  
+  
+|||  
+|-|-|  
+|[Erreurs](../../../ado/reference/ado-api/errors-collection-ado.md)|Contient tous les **erreur** objets créés en réponse à une erreur liée au fournisseur.|  
+|[Champs](../../../ado/reference/ado-api/fields-collection-ado.md)|Contient tous les **champ** les objets d’un **Recordset** objet.|  
+|[Paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md)|Contient tous les **paramètre** les objets d’un **commande** objet.|  
+|[Propriétés](../../../ado/reference/ado-api/properties-collection-ado.md)|Contient tous les **propriété** objets pour une instance spécifique d’un objet.|  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Référence des API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
+ [Propriétés dynamiques ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
+ [Constantes énumérées ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
+ [Annexe b : erreurs ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Événements ADO](../../../ado/reference/ado-api/ado-events.md)   
+ [Méthodes ADO](../../../ado/reference/ado-api/ado-methods.md)   
+ [Modèle objet ADO](../../../ado/reference/ado-api/ado-object-model.md)   
+ [Objets et interfaces ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
+ [Propriétés ADO](../../../ado/reference/ado-api/ado-properties.md)
