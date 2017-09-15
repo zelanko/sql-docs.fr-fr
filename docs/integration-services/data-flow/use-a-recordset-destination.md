@@ -102,7 +102,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  Sous l'onglet **Flux de contrôle** du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , ajoutez une tâche de flux de données à l'aire de conception.  
   
-2.  Sous l'onglet **Flux de données** tab, add an OLE DB source to the Flux de données task, and then open the **Éditeur de source OLE DB.**  
+2.  Sous l'onglet **Flux de données**, ajoutez une source OLE DB à la tâche de flux de données, puis ouvrez l'**Éditeur de source OLE DB.**  
   
 3.  Dans la page **Gestionnaire de connexions** de l'éditeur, configurez la source avec les paramètres suivants :  
   

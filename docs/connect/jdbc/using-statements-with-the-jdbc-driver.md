@@ -1,0 +1,54 @@
+---
+title: "Utilisation d’instructions avec le pilote JDBC | Documents Microsoft"
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
+caps.latest.revision: 13
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: 5e4cbbfc9d2b73d0a7c79ebc2791f588a7c8f862
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
+
+---
+# <a name="using-statements-with-the-jdbc-driver"></a>Utilisation d'instructions avec le pilote JDBC
+[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
+
+  Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] peut être utilisé pour manipuler des données dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de données de différentes façons. Vous pouvez utiliser le pilote JDBC pour appliquer des instructions SQL à la base de données ou pour appeler des procédures stockées dans la base de données en utilisant des paramètres d'entrée et de sortie. Le pilote JDBC prend également en charge l'utilisation de séquences d'échappement SQL, de nombres de mises à jour, de clés générées automatiquement, ainsi que l'exécution de mises à jour dans le cadre d'une opération par lot.  
+  
+ Le pilote JDBC fournit trois classes pour récupérer des données d’une [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de données :  
+  
+1.  [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) : permet d’exécuter des instructions SQL sans paramètres.  
+  
+2.  [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) - (hérité de SQLServerStatement), utilisé pour les instructions SQL compilées en cours d’exécution qui peuvent contenir des paramètres IN.  
+  
+3.  [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) - (héritée de SQLServerPreparedStatement), utilisé pour l’exécution des procédures stockées qui peuvent contenir de paramètres, les paramètres OUT, ou les deux.  
+  
+ Les rubriques de cette section expliquent comment vous pouvez utiliser chacune des trois classes d’instructions pour travailler avec des données dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de données.  
+  
+## <a name="in-this-section"></a>Dans cette section  
+  
+|Rubrique| Description|  
+|-----------|-----------------|  
+|[À l’aide d’instructions SQL](../../connect/jdbc/using-statements-with-sql.md)|Décrit comment utiliser des instructions SQL avec le pilote JDBC pour travailler avec des données dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de données.|  
+|[À l’aide d’instructions avec des procédures stockées](../../connect/jdbc/using-statements-with-stored-procedures.md)|Décrit comment utiliser des procédures stockées avec le pilote JDBC pour travailler avec des données dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de données.|  
+|[À l’aide de plusieurs jeux de résultats](../../connect/jdbc/using-multiple-result-sets.md)|Décrit l'utilisation du pilote JDBC pour extraire des données de plusieurs jeux de résultats.|  
+|[À l’aide de séquences d’échappement SQL](../../connect/jdbc/using-sql-escape-sequences.md)|Décrit l'utilisation de séquences d'échappement SQL, telles que les littéraux et fonctions de date et d'heure.|  
+|[L’utilisation de clés générées](../../connect/jdbc/using-auto-generated-keys.md)|Décrit l'utilisation des clés générées automatiquement.|  
+|[Exécution d’opérations de traitement par lots](../../connect/jdbc/performing-batch-operations.md)|Décrit l'utilisation du pilote JDBC pour effectuer des opérations par lot.|  
+|[Gestion d’instructions complexes](../../connect/jdbc/handling-complex-statements.md)|Décrit l'utilisation du pilote JDBC pour exécuter des instructions complexes effectuant plusieurs tâches et pouvant retourner différents types de données.|  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Vue d’ensemble du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+  
+  
