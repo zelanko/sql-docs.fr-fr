@@ -56,10 +56,10 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  *Set_Expression*  
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Property_name*  
+ *Property_Name*  
  Chaîne valide qui fournit le nom d'une propriété de jeu.  
   
- *Nom*  
+ *Property_Value*  
  Expression scalaire valide qui définit la valeur de la propriété de jeu.  
   
 ## <a name="remarks"></a>Notes  
