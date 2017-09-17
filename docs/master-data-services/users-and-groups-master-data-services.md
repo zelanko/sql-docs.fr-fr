@@ -1,5 +1,5 @@
 ---
-title: Les utilisateurs et groupes (Master Data Services) | Documents Microsoft
+title: Utilisateurs et groupes (Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - groups [Master Data Services], about groups
 ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8d08ef5501ae6cbbd17f54c31ab36523fbb28c49
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e7ce67245871cff2682bec6e314a21fdca31a954
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="users-and-groups-master-data-services"></a>Utilisateurs et groupes (Master Data Services)
@@ -46,9 +46,9 @@ ms.lasthandoff: 08/02/2017
  N'affectez pas d'autorisations supplémentaires à un utilisateur individuel et n'incluez pas un utilisateur dans plusieurs groupes qui ont accès à [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. De plus, n'utilisez pas d'autorisations des membres de la hiérarchie à moins que vous ne souhaitiez qu'un groupe ait un accès limité à des membres spécifiques.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter un utilisateur &#40; Master Data Services &#41;](../master-data-services/add-a-user-master-data-services.md)   
- [Ajouter un groupe &#40; Master Data Services &#41;](../master-data-services/add-a-group-master-data-services.md)   
- [Supprimer des utilisateurs ou groupes &#40; Master Data Services &#41;](../master-data-services/delete-users-or-groups-master-data-services.md)   
- [Test d’un utilisateur d’autorisations &#40; Master Data Services &#41;](../master-data-services/test-a-user-s-permissions-master-data-services.md)  
+ [Ajouter un utilisateur &#40;Master Data Services&#41;](../master-data-services/add-a-user-master-data-services.md)   
+ [Ajouter un groupe &#40;Master Data Services&#41;](../master-data-services/add-a-group-master-data-services.md)   
+ [Supprimer des utilisateurs ou des groupes &#40;Master Data Services&#41;](../master-data-services/delete-users-or-groups-master-data-services.md)   
+ [Tester les autorisations d’un utilisateur &#40;Master Data Services&#41;](../master-data-services/test-a-user-s-permissions-master-data-services.md)  
   
   

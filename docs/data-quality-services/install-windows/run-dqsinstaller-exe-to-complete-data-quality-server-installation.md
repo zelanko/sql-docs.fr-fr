@@ -1,5 +1,5 @@
 ---
-title: "Exécuter DQSInstaller.exe pour terminer l’Installation du serveur DQS | Documents Microsoft"
+title: "Exécuter DQSInstaller.exe pour effectuer l’installation du serveur DQS | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,11 +14,11 @@ caps.latest.revision: 33
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e61f0e79491b3c55505031e4b4e1ddef34278ea
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Exécuter DQSInstaller.exe pour terminer l'installation du serveur DQS
@@ -77,7 +77,7 @@ ms.lasthandoff: 08/02/2017
 |-exportkbs|Exportez toutes les bases de connaissances vers un fichier de sauvegarde DQS (.dqsb). Vous devez également spécifier le chemin d'accès complet et le nom du fichier où vous voulez exporter toutes les bases de connaissances.<br /><br /> Pour plus d'informations, consultez [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md).|`dqsinstaller.exe –exportkbs <path><filename>`<br /><br /> Par exemple : `dqsinstaller.exe –exportkbs c:\DQSBackup.dqsb`|  
 |-importkbs|Importez toutes les bases de connaissances à partir d'un fichier de sauvegarde DQS (.dqsb) après l'installation de [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Vous devez également spécifier le chemin d'accès complet et le nom du fichier à partir duquel vous voulez importer toutes les bases de connaissances.<br /><br /> Pour plus d'informations, consultez [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md).|`dqsinstaller.exe –importkbs <path><filename>`<br /><br /> Par exemple : `dqsinstaller.exe –importkbs c:\DQSBackup.dqsb`|  
 |-upgrade|Met à niveau le schéma des bases de données DQS. Vous devez utiliser ce paramètre après avoir installé une mise à jour de SQL Server sur une instance DQS précédemment configurée. Pour plus d'informations, consultez [Upgrade DQS Databases Schema After Installing SQL Server Update](../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md).|`dqsinstaller.exe -upgrade`|  
-|-uninstall|Désinstalle le [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] de l'instance actuelle de SQL Server.<br /><br /> Vous pouvez également exporter toutes les bases de connaissances de l'installation existante du serveur DQS vers un fichier de sauvegarde DQS (.dqsb), avant de désinstaller le serveur DQS. Pour plus d'informations, consultez [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md).<br /><br /> **\*\*Important \* \***  si vous désinstallez [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] à partir d’une instance SQL server à l’aide du `–uninstall` paramètre de ligne de commande, tous les objets DQS sont supprimés dans le cadre du processus de désinstallation. Vous n’êtes pas obligé de les supprimer manuellement après la désinstallation de [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] comme indiqué dans [Supprimer les objets serveur DQS](../../sql-server/install/remove-data-quality-server-objects.md).|**Pour désinstaller uniquement le serveur DQS :**<br /><br /> `dqsinstaller.exe –uninstall`<br /><br /> **Pour exporter toutes les bases de connaissances vers un fichier, puis désinstaller le serveur DQS :**<br /><br /> `dqsinstaller.exe –uninstall <path><filename>`<br /><br /> Par exemple : `dqsinstaller.exe –uninstall c:\DQSBackup.dqsb`|  
+|-uninstall|Désinstalle le [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] de l'instance actuelle de SQL Server.<br /><br /> Vous pouvez également exporter toutes les bases de connaissances de l'installation existante du serveur DQS vers un fichier de sauvegarde DQS (.dqsb), avant de désinstaller le serveur DQS. Pour plus d'informations, consultez [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md).<br /><br /> **\*\* Important \*\*** Si vous désinstallez le [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] à partir d’une instance de serveur SQL à l’aide du paramètre de ligne de commande `–uninstall` , tous les objets DQS sont supprimés dans le cadre du processus de désinstallation. Vous n’êtes pas obligé de les supprimer manuellement après la désinstallation de [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] comme indiqué dans [Supprimer les objets serveur DQS](../../sql-server/install/remove-data-quality-server-objects.md).|**Pour désinstaller uniquement le serveur DQS :**<br /><br /> `dqsinstaller.exe –uninstall`<br /><br /> **Pour exporter toutes les bases de connaissances vers un fichier, puis désinstaller le serveur DQS :**<br /><br /> `dqsinstaller.exe –uninstall <path><filename>`<br /><br /> Par exemple : `dqsinstaller.exe –uninstall c:\DQSBackup.dqsb`|  
   
  **Pour exécuter DQSInstaller.exe à partir d'une invite de commandes :**  
   
@@ -107,7 +107,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Installer Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [Mise à niveau des assemblys SQLCLR après une mise à jour de .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
- [Exporter et importer des Bases de connaissances DQS à l’aide de DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)  
+ [Mettre à niveau des assemblys SQLCLR après une mise à jour de .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
+ [Exporter et importer des bases de connaissances DQS à l’aide de DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)  
   
   

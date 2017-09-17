@@ -1,7 +1,7 @@
 ---
 title: "Présentation de la publication Oracle | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,20 +20,31 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9a7e0593342073272cfe3aae01ea4c28e5e2304
+ms.translationtype: HT
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 5574123253385152cc04e879439b8ea8b26b3b27
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/29/2017
 
 ---
-# <a name="oracle-publishing-overview"></a>Présentation de la publication Oracle
-  À partir de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], vous pouvez inclure des serveurs de publication Oracle dans votre topologie de réplication, en partant d'Oracle version 9i. Les serveurs de publication peuvent être déployés sur tout matériel et système d'exploitation prenant en charge Oracle. La fonctionnalité s'appuie sur les solides fondations de la réplication d'instantané et de la réplication transactionnelle de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en fournissant des performances et une exploitabilité similaires.  
+# <a name="oracle-publishing-overview"></a>Présentation de la publication Oracle  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+
+À partir de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], vous pouvez inclure des serveurs de publication Oracle dans votre topologie de réplication, en partant d'Oracle version 9i. Les serveurs de publication peuvent être déployés sur tout matériel et système d'exploitation prenant en charge Oracle. La fonctionnalité s'appuie sur les solides fondations de la réplication d'instantané et de la réplication transactionnelle de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en fournissant des performances et une exploitabilité similaires.  
   
- La publication Oracle est déconseillée. La réplication hétérogène sur les abonnés non SQL Server est déconseillée. Pour déplacer des données, créez des solutions à l'aide de la Capture de données modifiées et [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les scénarios divers suivants pour la réplication transactionnelle et d'instantané :  
   
-> [!CAUTION]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
+-   Publication de données de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers des Abonnés non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+
+-   La publication de données sur et depuis Oracle présente les restrictions suivantes :  
+  | |Version 2016 ou antérieure |Version 2017 ou ultérieure |
+  |-------|-------|--------|
+  |Réplication depuis Oracle |Prise en charge d’Oracle 10g ou version antérieure uniquement |Prise en charge d’Oracle 10g ou version antérieure uniquement |
+  |Réplication vers Oracle |Jusqu’à Oracle 12c |Non pris en charge |
+
+
+ La réplication hétérogène sur les abonnés non SQL Server est déconseillée. La publication Oracle est déconseillée. Pour déplacer des données, créez des solutions à l'aide de la Capture de données modifiées et [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+
   
 ## <a name="snapshot-replication-for-oracle"></a>Réplication d'instantané pour Oracle  
  Les publications d'instantanés Oracle sont implémentées de manière similaire à celle des publications d'instantanés [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Lorsque l'Agent d'instantané s'exécute pour une publication Oracle, il se connecte au serveur de publication Oracle et traite chaque table de la publication. Lorsqu'il traite la table, l'agent en extrait les lignes et crée des scripts de schéma qui sont ensuite stockés sur le partage des instantanés de la publication. Comme l'ensemble de données complet est créé à chaque exécution de l'Agent d'instantané, les déclencheurs de suivi des modifications ne sont pas ajoutés aux tables Oracle comme dans le cas de la réplication transactionnelle. La réplication d'instantané est un moyen pratique de migrer des données avec un impact minimal sur le système de publication.  
@@ -49,3 +60,4 @@ ms.lasthandoff: 06/22/2017
  [Réplication de base de données hétérogène](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)  
   
   
+

@@ -1,5 +1,5 @@
 ---
-title: "Déploiement de modèles (Master Data Services) | Documents Microsoft"
+title: "Déploiement de modèles (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - deployment packages [Master Data Services]
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 caps.latest.revision: 24
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 24067aaaceb2ad1e6704027c4445be9bf393a18f
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 021c2e7c829f8da9cf1633aa5047c561b11702d6
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="deploying-models-master-data-services"></a>Déploiement de modèles (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un package est un fichier XML qui contient une structure de modèle déployable et, éventuellement, les données du modèle. Utilisez les packages de modèle pour déplacer des copies de modèles d'un environnement MDS vers un autre, ou pour créer de nouveaux modèles dans votre environnement MDS existant.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**Outil MDSModelDeploy** est à compatibilité descendante avec les packages créés dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ou une version ultérieure.  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] **L’outil MDSModelDeploy** offre une compatibilité descendante avec les packages créés dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ou version ultérieure.  
   
 ## <a name="tools-for-deploying-models"></a>Outils pour déployer des modèles  
  Pour utiliser les packages de modèles, vous pouvez opter pour l'un des trois outils, selon vos besoins.  
@@ -73,14 +73,14 @@ ms.lasthandoff: 08/02/2017
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Créez un nouveau package de déploiement d'objets de modèle et/ou de données à l'aide de l'outil MDSModelDeploy.|[Créer un Package de déploiement de modèle à l’aide de MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
-|Créez un nouveau package de déploiement d'objets de modèle uniquement à l'aide de l'Assistant.|[Créer un Package de déploiement de modèle à l’aide de l’Assistant](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)|  
-|Déployez un package d'objets de modèle et des données à l'aide de l'outil MDSModelDeploy.|[Déployer un Package de déploiement de modèle à l’aide de MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
-|Déployez un package d'objets de modèle uniquement à l'aide de l'Assistant.|[Déployer un Package de déploiement de modèle à l’aide de l’Assistant](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)|  
-|Modifiez un package de déploiement de modèle pour déployer les parties sélectionnées d'un modèle, plutôt que le modèle entier.|[Modifier un Package de déploiement de modèle](../master-data-services/edit-a-model-deployment-package.md)|  
+|Créez un nouveau package de déploiement d'objets de modèle et/ou de données à l'aide de l'outil MDSModelDeploy.|[Créer un package de déploiement de modèle à l'aide de MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
+|Créez un nouveau package de déploiement d'objets de modèle uniquement à l'aide de l'Assistant.|[Créer un package de déploiement de modèle à l'aide de l'Assistant](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)|  
+|Déployez un package d'objets de modèle et des données à l'aide de l'outil MDSModelDeploy.|[Déployer un package de déploiement de modèle à l'aide de MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
+|Déployez un package d'objets de modèle uniquement à l'aide de l'Assistant.|[Déployer un package de déploiement de modèle à l'aide de l'Assistant](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)|  
+|Modifiez un package de déploiement de modèle pour déployer les parties sélectionnées d'un modèle, plutôt que le modèle entier.|[Modifier un package de déploiement de modèle](../master-data-services/edit-a-model-deployment-package.md)|  
   
 ## <a name="related-content"></a>Contenu connexe  
   
--   [Options de déploiement de modèle &#40; Master Data Services &#41;](../master-data-services/model-deployment-options-master-data-services.md)  
+-   [Options de déploiement de modèle &#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Chevauchement des autorisations d’accès (Master Data Services) | Documents Microsoft"
+title: Chevauchement des autorisations des utilisateurs et des groupes (Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - groups [Master Data Services], resolving permissions
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4a415162382d8162a336d722d4630f7091427ff2
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 1dcefd134dccc0ae8a7039758dcd987e09b90813
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Chevauchement des autorisations d'accès (Master Data Services)
@@ -84,6 +84,6 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Mode de détermination des autorisations &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [Chevauchement de modèle et les autorisations des membres &#40; Master Data Services &#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
+ [Chevauchement des autorisations de modèle et de membre &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

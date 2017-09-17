@@ -1,5 +1,5 @@
 ---
-title: "Modèle d’autorisations d’objet (Master Data Services) | Documents Microsoft"
+title: "Autorisations d’objet de modèle (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - models [Master Data Services], object permissions
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ee6ede91067d2b358a403458e07af37b2f895ac3
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e1ff72f42a9f3a0440f47f14b837f692a4e789a6
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="model-object-permissions-master-data-services"></a>Autorisations d'objet de modèle (Master Data Services)
@@ -44,10 +44,10 @@ ms.lasthandoff: 08/02/2017
  Billet de blog, [Améliorations de sécurité](http://go.microsoft.com/fwlink/p/?LinkId=615376), sur msdn.com.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affecter des autorisations d’objet modèle &#40; Master Data Services &#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [Autorisations de modèle &#40; Master Data Services &#41;](../master-data-services/model-permissions-master-data-services.md)   
- [Zone fonctionnelle autorisations &#40; Master Data Services &#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
- [Autorisations des membres de hiérarchie &#40; Master Data Services &#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [Mode de détermination des autorisations &#40; Master Data Services &#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [Affecter des autorisations d’objet de modèle &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [Autorisations de modèle &#40;Master Data Services&#41;](../master-data-services/model-permissions-master-data-services.md)   
+ [Autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
+ [Autorisations des membres de la hiérarchie &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [Mode de détermination des autorisations &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

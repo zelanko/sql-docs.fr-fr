@@ -1,7 +1,7 @@
 ---
 title: "Démarrage rapide 1 : technologies OLTP en mémoire pour accélérer les performances Transact-SQL | Microsoft Docs"
 ms.custom: 
-ms.date: 06/12/2017"
+ms.date: 09/05/2017"
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: db24b73ba03d4cde0dfc090ebf2ed8a1661a55e1
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 481c0843888345d3a3440dd22cae2135c00863e1
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Inspection des zones initiales dans OLTP en mémoire
@@ -136,7 +136,7 @@ Une [table optimisée en mémoire](../../relational-databases/in-memory-oltp/mem
   
 #### <a name="natively-compiled-modules"></a>Modules compilés en mode natif  
   
-Le mot clé T-SQL NATIVE_COMPILATION, dans l’instruction CREATE PROCEDURE, permet de créer une procédure native. Les instructions T-SQL sont compilées en code machine lors de la première utilisation de la procédure native chaque fois que la base de données bascule en ligne. Les instructions T-SQL ne subissent plus l’interprétation lente de chaque instruction.  
+Le mot clé T-SQL NATIVE_COMPILATION, dans l’instruction CREATE PROCEDURE, permet de créer une procédure stockée compilée en mode natif. Les instructions T-SQL sont compilées en code machine lors de la première utilisation de la procédure native chaque fois que la base de données bascule en ligne. Les instructions T-SQL ne subissent plus l’interprétation lente de chaque instruction.  
   
 - La compilation native peut être cent fois plus rapide que le mode interprété.  
   
@@ -218,14 +218,12 @@ Dans Microsoft SQL Server, avant de créer une table optimisée en mémoire, vou
 Dans Azure SQL Database, vous ne devez et ne pouvez pas créer un groupe de fichiers de ce type.  
 
 L’exemple de script T-SQL suivant active une base de données pour OLTP en mémoire et configure tous les paramètres recommandés. Il fonctionne avec SQL Server et Azure SQL Database : [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql).
-  
+
+Notez que toutes les fonctionnalités SQL Server ne sont pas prises en charge pour les bases de données avec un groupe de fichiers MEMORY_OPTIMIZED_DATA. Pour plus d’informations sur les limitations, consultez [Fonctionnalités SQL Server non prises en charge pour l’OLTP en mémoire](unsupported-sql-server-features-for-in-memory-oltp.md).
   
 <a name="create-a-memory-optimized-table-26y"></a>  
   
 ## <a name="4-create-a-memory-optimized-table"></a>4. Créer une table optimisée en mémoire  
-  
-  
-  
   
 Le mot-clé Transact-SQL essentiel est le mot-clé MEMORY_OPTIMIZED.  
   
@@ -302,6 +300,7 @@ Le mot clé essentiel est NATIVE_COMPILATION.
   
 Le mot clé SCHEMABINDING signifie que les tables référencées dans la procédure native ne peuvent pas être supprimées, sauf si celle-ci est d’abord supprimée. Pour plus d’informations, consultez [Création de procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md).  
   
+Notez que vous n’avez pas besoin de créer une procédure stockée compilée en mode natif pour accéder à une table à mémoire optimisée. Vous pouvez également référencer les tables à mémoire optimisée à partir de procédures stockées traditionnelles et de lots ad hoc.
   
 <a name="execute-the-native-proc-31e"></a>  
   

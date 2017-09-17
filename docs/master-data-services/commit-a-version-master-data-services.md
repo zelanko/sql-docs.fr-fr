@@ -1,5 +1,5 @@
 ---
-title: Valider une Version (Master Data Services) | Documents Microsoft
+title: Activer une version (Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - versions [Master Data Services], committing
 ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 28fd453f17c08b708b4a49f1f4646eb1be7a51ab
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: f038c98b3299103753cd9daa58e3edc5ebae568b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="commit-a-version-master-data-services"></a>Activer une version (Master Data Services)
@@ -54,13 +54,13 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>Étapes suivantes  
   
--   [Créer un indicateur de Version &#40; Master Data Services &#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
+-   [Créer un indicateur de version &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   
--   [Affecter un indicateur à une Version &#40; Master Data Services &#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
+-   [Affecter un indicateur à une version &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
--   [Copier une Version &#40; Master Data Services &#41;](../master-data-services/copy-a-version-master-data-services.md)  
+-   [Copier une version &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Versions &#40; Master Data Services &#41;](../master-data-services/versions-master-data-services.md)  
+ [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
   

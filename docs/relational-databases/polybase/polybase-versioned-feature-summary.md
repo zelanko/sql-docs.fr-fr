@@ -1,7 +1,7 @@
 ---
 title: "Récapitulatif des fonctionnalités avec version PolyBase | Microsoft Docs"
 ms.custom: 
-ms.date: 04/13/2016
+ms.date: 08/29/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: dcfa27ad11e3027519398b9424056b52afb1617b
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 61b23238b26af3e127ae889e20487987c358e6c2
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>Récapitulatif des fonctionnalités de version PolyBase
@@ -44,8 +44,20 @@ Récapitulatif des fonctionnalités PolyBase disponibles pour les services et pr
 |Exécuter des requêtes PolyBase à partir des outils décisionnels de Microsoft|oui|non|oui|oui|   
 
 
+## <a name="pushdown-computation-supported-t-sql-operators"></a>Opérateurs T-SQL pris en charge pour la transmission des calculs
+Dans SQL Server et APS, tous les opérateurs T-SQL ne peuvent pas être transmis au cluster hadoop. Le tableau ci-dessous répertorie tous les opérateurs pris en charge et une partie des opérateurs non pris en charge. 
 
-  
+||||
+|-|-|-| 
+|**Type d’opérateur**|**Transmissible à Hadoop**|**Transmissible au Stockage Blob**|
+|Projections de colonne|oui|non|
+|Prédicats|oui|non|
+|Agrégats|partielles|non|
+|Jointures entre les tables externes|non|non|
+|Jointures entre les tables externes et les tables locales|non|non|
+|Tris|non|non|
+
+Une agrégation partielle signifie qu’une agrégation finale doit se produire une fois que les données atteignent SQL Server, mais qu’une partie de l’agrégation se produit dans Hadoop. Il s’agit d’une méthode courante de calcul des agrégations dans les systèmes à traitement parallèle massif.  
 ## <a name="see-also"></a>Voir aussi  
  [Guide de PolyBase](../../relational-databases/polybase/polybase-guide.md)  
   

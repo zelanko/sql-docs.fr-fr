@@ -1,5 +1,5 @@
 ---
-title: Membres (Master Data Services) | Documents Microsoft
+title: Membres (Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,17 @@ helpviewer_keywords:
 - members [Master Data Services]
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 caps.latest.revision: 16
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: abda6e0259b924a184d9d7cf888fdf5f430a8dd6
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 3161b24f55c5473829b5d0a0ea090763d1203295
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="members-master-data-services"></a>Membres (services de données de référence)
+# <a name="members-master-data-services"></a>Membres (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], les membres sont les données de référence physiques. Par exemple, un membre peut être un vélo Road-150 spécifique dans une entité Product ou un client spécifique dans une entité Customer.  
   
 ## <a name="how-members-relate-to-other-model-objects"></a>Relations entre les membres et les autres objets de modèle  
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/02/2017
   
  Dans cet exemple, la table représente une entité, les lignes de la table des membres et les colonnes de la table des attributs. Chaque cellule représente une valeur d'attribut pour un membre spécifique.  
   
- ![Entité Master Data Services représentée en tant que Table](../master-data-services/media/mds-conc-entity-table.gif "entité Master Data Services représentée en tant que Table")  
+ ![Entité Master Data Services représentée en tant que table](../master-data-services/media/mds-conc-entity-table.gif "Entité Master Data Services représentée en tant que table")  
   
 ## <a name="member-types"></a>Types de membres  
  Il existe trois types de membres : les membres feuille, les membres consolidés et les membres de collection.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="member-example"></a>Exemple de membre  
  Dans l'exemple suivant, chaque membre est constitué d'une valeur d'attribut : Name, Code, Subcategory, StandardCost, ListPrice et FilePhoto.  
   
- ![Table d’entité produit des vélos](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike Table d’entité produit")  
+ ![Table de l’entité Bike Product](../master-data-services/media/mds-conc-entity-table-w-data.gif "Table de l’entité Bike Product")  
   
 ## <a name="related-tasks"></a>Tâches associées  
   

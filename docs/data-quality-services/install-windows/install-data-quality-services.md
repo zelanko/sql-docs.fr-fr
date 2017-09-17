@@ -1,5 +1,5 @@
 ---
-title: Installer Data Quality Services | Documents Microsoft
+title: Installer Data Quality Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-server-2016
@@ -14,11 +14,11 @@ caps.latest.revision: 49
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4c5b6c77d5a7b08a7fd497278d4f858f34be776e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="install-data-quality-services"></a>Installer Data Quality Services
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/02/2017
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|.NET Framework 4.0 (installé lors de l'installation du [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] , si ce composant n'est pas déjà installé)<br /><br /> Internet Explorer 6.0 SP1 ou version ultérieure.|  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]et [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] peut être installé sur le même ordinateur ou sur des ordinateurs différents. Les deux composants peuvent être installés indépendamment l'un de l'autre, et dans n'importe quel ordre. Toutefois, pour utiliser le [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)], vous avez besoin d'un [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] installé auquel se connecter.  
+>  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] et [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] peuvent être installés sur le même ordinateur ou sur des ordinateurs distincts. Les deux composants peuvent être installés indépendamment l'un de l'autre, et dans n'importe quel ordre. Toutefois, pour utiliser le [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)], vous avez besoin d'un [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] installé auquel se connecter.  
 >   
 >  Connectez-vous à la version [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] en utilisant la version actuelle ou une version antérieure de [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] et la Transformation de nettoyage DQS. Pour plus d’informations sur la mise à niveau de votre version existante de DQS vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consultez [Mettre à niveau Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md).  
 >   
@@ -117,13 +117,13 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Vidéo : Installer et configurer DQS](http://go.microsoft.com/fwlink/?LinkId=238241)   
- [Mise à niveau des assemblys SQLCLR après une mise à jour de .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
- [Exporter et importer des Bases de connaissances DQS à l’aide de DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
- [Mise à niveau de Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)   
- [Supprimer les objets serveur DQS](../../sql-server/install/remove-data-quality-server-objects.md)   
- [Installer les fonctionnalités SQL Server 2016 Business Intelligence](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
+ [Mettre à niveau des assemblys SQLCLR après une mise à jour de .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
+ [Exporter et importer des bases de connaissances DQS à l’aide de DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
+ [Mettre à niveau Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)   
+ [Supprimer des objets Data Quality Server](../../sql-server/install/remove-data-quality-server-objects.md)   
+ [Installer les fonctionnalités Business Intelligence de SQL Server 2016](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
  [Désinstaller SQL Server 2016](../../sql-server/install/uninstall-sql-server.md)   
  [Data Quality Services](../../data-quality-services/data-quality-services.md)   
- [Résoudre les problèmes d’Installation et Configuration de DQS](http://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
+ [Résolution des problèmes d’installation et de configuration dans Data Quality Services (DQS)](http://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
   
   

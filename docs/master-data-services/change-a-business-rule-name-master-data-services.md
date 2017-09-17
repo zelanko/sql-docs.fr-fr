@@ -1,5 +1,5 @@
 ---
-title: "Modifier un nom de règle d’entreprise (Master Data Services) | Documents Microsoft"
+title: "Renommer une règle d’entreprise (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - business rules [Master Data Services], changing name
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5962abe67ba07e8d3dd4442ddb0bfb7c6ecc7bc2
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 0c1bc165b9c1d1fcf198c204e31de6d775932bbe
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="change-a-business-rule-name-master-data-services"></a>Modifier le nom d'une règle d'entreprise (Master Data Services)
-  Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], modifiez le nom d'une règle d'entreprise lorsque le nom affecté ne répond pas aux besoins de votre société.  
+# <a name="change-a-business-rule-name-master-data-services"></a>Renommer une règle d’entreprise (Master Data Services)
+  Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], renommez une règle d'entreprise lorsque le nom affecté ne répond pas aux besoins de votre société.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  

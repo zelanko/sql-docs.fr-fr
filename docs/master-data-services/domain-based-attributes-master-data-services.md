@@ -1,5 +1,5 @@
 ---
-title: "Attributs basés sur un domaine (Master Data Services) | Documents Microsoft"
+title: "Attributs basés sur un domaine (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - attributes [Master Data Services], domain-based attributes
 ms.assetid: df6f33ff-97f6-466c-af74-9780b2247473
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 60a442e917aa4079c5b78e929181a864e81de65a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: b4165f006ea12587b8c3e385d6c1c01e3aa9d9e5
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="domain-based-attributes-master-data-services"></a>Attributs basés sur un domaine (Master Data Services)
@@ -33,7 +33,7 @@ ms.lasthandoff: 08/02/2017
   
  L'entité Subcategory a un attribut basé sur un domaine appelé Category. L'attribut Category est rempli par les valeurs de l'entité Category.  
   
- ![Attributs basés sur le domaine dans une entité](../master-data-services/media/mds-conc-domain-based-attribute-conceptual.gif "attributs basés sur le domaine dans une entité")  
+ ![Attributs basés sur un domaine dans une entité](../master-data-services/media/mds-conc-domain-based-attribute-conceptual.gif "Attributs basés sur un domaine dans une entité")  
   
 ## <a name="use-same-entity-for-multiple-domain-based-attributes"></a>Utiliser des attributs basés sur un domaine dans la même entité  
  Vous pouvez utiliser la même entité en tant qu'attribut basé sur un domaine de plusieurs entités. Par exemple, vous pouvez créer une entité appelée YesNoIndicator avec les membres : Yes, No et Maybe. Vous pouvez créer un attribut basé sur un domaine nommé InStock et utiliser l'entité YesNoIndicator comme source. Vous pouvez également créer un autre attribut basé sur un domaine nommé Approved et utiliser l'entité YesNoIndicator comme source. Lorsque vous voulez que les utilisateurs choisissent dans une liste des membres de l'entité YesNoIndicator, vous pouvez utiliser l'entité comme attribut basé sur un domaine.  

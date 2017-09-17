@@ -1,5 +1,5 @@
 ---
-title: "Créer une vue d’abonnement pour exporter des données (Master Data Services) | Documents Microsoft"
+title: "Créer une vue d’abonnement pour exporter des données (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4934e49ef7b8e4f6b56439dd3b414fc93d5af832
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 863c5976f20cda1edc4ecba9ae81db599ec94d99
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Créer une vue d’abonnement pour exporter des données (Master Data Services)
@@ -69,7 +69,7 @@ ms.lasthandoff: 08/02/2017
   
 |Colonne|Description|  
 |------------|-----------------|  
-|État|État de la vue.<br /><br /> Lorsque vous cliquez sur **enregistrer**, le ![icône de mise à jour d’état](../master-data-services/media/mds-statusicon-updating.png "icône de mise à jour d’état") image s’affiche, indiquant que la vue est mise à jour.<br /><br /> S’il existe des erreurs lors de la création ou la modification d’une vue, le ![icône de statut d’erreur](../master-data-services/media/mds-statusicon-error.png "icône de statut d’erreur") image s’affiche.<br /><br /> Dans le cas contraire, l’état est OK et la ![icône pour l’état OK](../master-data-services/media/mds-statusicon-ok.png "icône pour l’état OK") image s’affiche.|  
+|État|État de la vue.<br /><br /> Quand vous cliquez sur **Enregistrer**, l’image ![Icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône d’état de mise à jour") s’affiche, indiquant que la vue est en cours de mise à jour.<br /><br /> Si des erreurs se produisent pendant la création ou la modification d’une vue, l’image ![Icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") apparaît.<br /><br /> Sinon, l’état est OK ; dans cas, l’image ![Icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
 |Nom|Nom de la vue d’abonnement.|  
 |Modèle|Nom du modèle.|  
 |Options de version|Nom de la version.|  
@@ -92,7 +92,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble : exportation de données &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
- [Supprimer une vue d’abonnement &#40; Master Data Services &#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
- [Créer un indicateur de Version &#40; Master Data Services &#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
+ [Supprimer une vue d’abonnement &#40;Master Data Services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
+ [Créer un indicateur de version &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   
   

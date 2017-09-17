@@ -1,5 +1,5 @@
 ---
-title: "Rendre un groupe d’attributs Visible aux utilisateurs (Master Data Services) | Documents Microsoft"
+title: "Rendre un groupe d’attributs visible pour les utilisateurs (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/15/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d9b4e9b3fb165d2aa8c445daa5d38c7a8d81ed03
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e3922c3ad81de37e73f08bd840def40146c8bf12
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>Rendre un groupe d'attributs visible pour les utilisateurs (Master Data Services)
@@ -34,7 +34,7 @@ ms.lasthandoff: 08/02/2017
   
 -   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
--   Au moins un groupe d'attributs doit exister. Pour plus d’informations, consultez [Create an Attribute Group &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md).  
+-   Au moins un groupe d'attributs doit exister. Pour plus d’informations, consultez [Créer un groupe d’attributs &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md).  
   
 ### <a name="to-make-an-attribute-group-visible-to-users"></a>Pour rendre un groupe d'attributs visible pour les utilisateurs  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/02/2017
 8.  Cliquez sur **Enregistrer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Groupes d’attributs &#40; Master Data Services &#41;](../master-data-services/attribute-groups-master-data-services.md)   
- [Créer un groupe d’attributs &#40; Master Data Services &#41;](../master-data-services/create-an-attribute-group-master-data-services.md)  
+ [Groupes d’attributs &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
+ [Créer un groupe d’attributs &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)  
   
   

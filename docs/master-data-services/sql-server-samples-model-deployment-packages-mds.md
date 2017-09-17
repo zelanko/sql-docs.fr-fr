@@ -1,5 +1,5 @@
 ---
-title: "Exemples de SQL Server : Modèle de Packages de déploiement (MDS) | Documents Microsoft"
+title: "Exemples SQL Server : packages de déploiement de modèle (MDS) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/28/2017
 ms.prod: sql-server-2016
@@ -14,23 +14,23 @@ keywords:
 - sample
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 caps.latest.revision: 21
-author: sabotta
-ms.author: carlasab
+author: smartysanthosh
+ms.author: nagavo
 manager: craigg
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d7a031ba18c6782cdd73ae31ef395bc2ecdcf102
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: bda0dbc730e24017dfc1978e691d3da654a15149
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="sql-server-examples-model-deployment-packages-mds"></a>SQL Server Exemples : Packages de déploiement de modèle (MDS)
-  Des exemples de packages de modèles contenant des données sont inclus avec l’installation de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. L’emplacement par défaut de ces fichiers de package est \<lecteur > \Program Files\Microsoft SQL Server\130\Master Data Services\Samples\Packages.  
+# <a name="sql-server-examples-model-deployment-packages-mds"></a>Exemples SQL Server : packages de déploiement de modèle (MDS)
+  Des exemples de packages de modèles contenant des données sont inclus avec l’installation de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. L’emplacement par défaut de ces packages est \<lecteur>\Program Files\Microsoft SQL Server\130\Master Data Services\Samples\Packages.  
   
  Pour obtenir des instructions sur la façon de déployer les exemples de packages de modèle, consultez [Déployer les exemples de modèles et de données](../master-data-services/master-data-services-installation-and-configuration.md#deploySample). Vous déployez les exemples de packages de package à l’aide de [l’outil MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
 > [!IMPORTANT]  
->  **Mises à jour de l’exemple dans[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
+>  **Mises à jour des exemples dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
 >   
 >  Les exemples de packages ont été mis à jour pour prendre en charge les nouvelles fonctionnalités suivantes.  
 >   
@@ -53,7 +53,7 @@ ms.lasthandoff: 08/02/2017
  
 
  
- Dans Master Data Services, un package est un fichier XML qui contient une structure de modèle déployable et éventuellement des données à partir du modèle. Utilisez les packages de modèle pour déplacer des copies de modèles d’un environnement MDS vers un autre, ou pour créer de nouveaux modèles dans votre environnement [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] existant.  
+ Dans Master Data Services, un package est un fichier XML qui contient une structure de modèle déployable et, éventuellement, les données du modèle. Utilisez les packages de modèle pour déplacer des copies de modèles d’un environnement MDS vers un autre, ou pour créer de nouveaux modèles dans votre environnement [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] existant.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Déployer un package de déploiement de modèle à l'aide de MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  

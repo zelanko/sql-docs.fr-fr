@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 534cc0e8f798c8d231936e1c89835257832c4b16
+ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
+ms.openlocfilehash: d523a3270815fc263fe0ee6fdf7cbce6350529ed
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="distributed-availability-groups"></a>Groupes de disponibilité distribués
@@ -45,8 +45,7 @@ La figure suivante montre une vue générale d’un groupe de disponibilité dis
 <a name="fig1"></a>
 ![Vue d’ensemble d’un groupe de disponibilité distribué][1]
 
-Vous pouvez configurer le déplacement des données dans des groupes de disponibilité distribués sous forme synchrone ou asynchrone. Toutefois, le déplacement des données est légèrement différent au sein des groupes de disponibilité distribués par rapport à un groupe de disponibilité traditionnel. Bien que chaque groupe de disponibilité ait un réplica principal, une seule copie des bases de données participant à un groupe de disponibilité distribué accepte les insertions, les mises à jour et les suppressions. Comme indiqué dans la figure suivante, AG 1 est le groupe de disponibilité principal. Son réplica principal envoie les transactions aux réplicas secondaires d’AG 1 et au réplica principal d’AG2. Le réplica principal d’AG 2 maintient ensuite à jour les réplicas secondaires d’AG 2. 
-
+Vous pouvez configurer le déplacement des données dans des groupes de disponibilité distribués sous forme synchrone ou asynchrone. Toutefois, le déplacement des données est légèrement différent au sein des groupes de disponibilité distribués par rapport à un groupe de disponibilité traditionnel. Bien que chaque groupe de disponibilité ait un réplica principal, une seule copie des bases de données participant à un groupe de disponibilité distribué accepte les insertions, les mises à jour et les suppressions. Comme indiqué dans la figure suivante, AG 1 est le groupe de disponibilité principal. Son réplica principal envoie les transactions aux réplicas secondaires d’AG 1 et au réplica principal d’AG2. Le réplica principal d’AG 2 est également appelé un *redirecteur*. Un redirecteur est un réplica principal dans un groupe de disponibilité secondaire au sein d’un groupe de disponibilité distribué. Le redirecteur reçoit des transactions du réplica principal dans le groupe de disponibilité principal et les transfère aux réplicas secondaires dans son propre groupe de disponibilité.  Le redirecteur maintient ensuite à jour les réplicas secondaires d’AG 2. 
 
 ![Groupe de disponibilité distribué et son déplacement de données][2]
 
@@ -136,7 +135,7 @@ Les groupes de disponibilité distribués peuvent vous aider à augmenter la tai
 * Vous pouvez utiliser le réplica principal du deuxième groupe de disponibilité dans un groupe de disponibilité distribué pour créer un autre groupe de disponibilité distribué, même si la base de données n’est pas dans RECOVERY.
 * Vous pouvez également utiliser le réplica principal du premier groupe de disponibilité pour créer un autre groupe de disponibilité distribué.
 
-En d’autres termes, un réplica principal peut participer à deux groupes de disponibilité distribués différents. Dans la figure suivante, AG 1 et AG 2 participent au groupe de disponibilité distribué AG 1, tandis qu’AG 2 et AG 3 participent au groupe de disponibilité distribué AG 2. Le réplica principal d’AG 2 est à la fois un réplica secondaire pour le groupe de disponibilité distribué AG 1 et un réplica principal du groupe de disponibilité distribué AG 2.
+En d’autres termes, un réplica principal peut participer à deux groupes de disponibilité distribués différents. Dans la figure suivante, AG 1 et AG 2 participent au groupe de disponibilité distribué AG 1, tandis qu’AG 2 et AG 3 participent au groupe de disponibilité distribué AG 2. Le réplica principal (ou redirecteur) d’AG 2 est à la fois un réplica secondaire pour le groupe de disponibilité distribué AG 1 et un réplica principal du groupe de disponibilité distribué AG 2.
 
 ![Augmentation de la taille des instances des lectures avec des groupes de disponibilité distribués][5]
 

@@ -1,7 +1,7 @@
 ---
 title: "Activer et désactiver les groupes de disponibilité Always On (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
+ms.date: 08/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: de6fef9bc4ccda44bd805d281dc0a3780aaa96c8
+ms.sourcegitcommit: daec226de4b93ae00997c07e25ba84352c5258e4
+ms.openlocfilehash: b5e469b56253649e0e23de004b3ae6de54dfb3e9
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/31/2017
 
 ---
 # <a name="enable-and-disable-always-on-availability-groups-sql-server"></a>Activer et désactiver les groupes de disponibilité Always On (SQL Server)
@@ -152,22 +152,22 @@ ms.lasthandoff: 08/02/2017
   
 1.  Remplacez le répertoire (**cd**) par une instance de serveur que vous voulez activer pour les groupes de disponibilité Always On.  
   
-2.  Utilisez l’applet de commande **Enable-SqlAlways On** pour activer les groupes de disponibilité Always On.  
+2.  Utilisez l’applet de commande **Enable-SqlAlwaysOn** pour activer les groupes de disponibilité Always On.  
   
      Pour afficher la syntaxe d’une applet de commande, utilisez l’applet de commande **Get-Help** dans l’environnement PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
     > [!NOTE]  
-    >  Pour plus d’informations sur la manière de contrôler si l’applet de commande **Enable-SqlAlways On** redémarre le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , consultez [À quel moment une applet de commande redémarre-t-elle le service SQL Server ?](#WhenCmdletRestartsSQL), plus loin dans cette rubrique.  
+    >  Pour plus d’informations sur la manière de contrôler si l’applet de commande **Enable-SqlAlwaysOn** redémarre le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez [À quel moment une applet de commande redémarre-t-elle le service SQL Server ?](#WhenCmdletRestartsSQL), plus loin dans cette rubrique.  
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
 -   [fournisseur PowerShell SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-####  <a name="ExmplEnable-SqlHadrServic"></a> Exemple : Enable-SqlAlways On  
+####  <a name="ExmplEnable-SqlHadrServic"></a> Exemple : Enable-SqlAlwaysOn  
  La commande PowerShell suivante active les [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sur une instance de SQL Server (*Ordinateur*\\*Instance*).  
   
 ```  
-Enable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance  
+Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance  
 ```  
   
 ##  <a name="DisableAOAG"></a> Désactiver les groupes de disponibilité Always On  
@@ -214,16 +214,16 @@ Enable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance
   
 1.  Remplacez le répertoire (**cd**) par une instance de serveur actuellement activée que vous voulez désactiver pour les groupes de disponibilité Always On.  
   
-2.  Utilisez l’applet de commande **Disable-SqlAlways On** pour activer les groupes de disponibilité Always On.  
+2.  Utilisez l’applet de commande **Disable-SqlAlwaysOn** pour désactiver les groupes de disponibilité Always On.  
   
      Par exemple, la commande suivante désactive les groupes de disponibilité Always On sur une instance de SQL Server (*Ordinateur*\\*Instance*).  Cette commande nécessite le redémarrage de l'instance et vous serez invité à confirmer ce redémarrage.  
   
     ```  
-    Disable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance  
+    Disable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance  
     ```  
   
     > [!IMPORTANT]  
-    >  Pour plus d’informations sur la manière de contrôler si l’applet de commande **Disable-SqlAlways On** redémarre le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , consultez [À quel moment une applet de commande redémarre-t-elle le service SQL Server ?](#WhenCmdletRestartsSQL), plus loin dans cette rubrique.  
+    >  Pour plus d’informations sur la manière de contrôler si l’applet de commande **Disable-SqlAlwaysOn** redémarre le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez [À quel moment une applet de commande redémarre-t-elle le service SQL Server ?](#WhenCmdletRestartsSQL), plus loin dans cette rubrique.  
   
      Pour afficher la syntaxe d’une applet de commande, utilisez l’applet de commande **Get-Help** dans l’environnement PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
@@ -232,7 +232,7 @@ Enable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance
 -   [fournisseur PowerShell SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ###  <a name="FollowUp"></a> Suivi : Après la désactivation d’Always On  
- Après avoir désactivé des groupes de disponibilité Always On, l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit être redémarrée. Le Gestionnaire de configuration SQL redémarre l'instance de serveur automatiquement. Toutefois, si vous avez utilisé l’applet de commande **Disable-SqlAlways On** , vous devez redémarrer l’instance de serveur manuellement. Pour plus d’informations, consultez [sqlservr Application](../../../tools/sqlservr-application.md).  
+ Après avoir désactivé des groupes de disponibilité Always On, l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit être redémarrée. Le Gestionnaire de configuration SQL redémarre l'instance de serveur automatiquement. Toutefois, si vous avez utilisé l’applet de commande **Disable-SqlAlwaysOn** , vous devez redémarrer l’instance de serveur manuellement. Pour plus d’informations, consultez [sqlservr Application](../../../tools/sqlservr-application.md).  
   
  Sur l'instance de serveur redémarrée :  
   
@@ -253,7 +253,7 @@ Enable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance
 4.  Les bases de données secondaires passent à l'état RESTORING. Vous pouvez les supprimer ou les restaurer à l'aide de RESTORE WITH RECOVERY. Toutefois, les bases de données restaurées ne participent plus à la synchronisation des données des groupes de disponibilité.  
   
 ##  <a name="WhenCmdletRestartsSQL"></a> À quel moment une applet de commande redémarre-t-elle le service SQL Server ?  
- Sur une instance de serveur en cours d’exécution, l’utilisation de l’applet de commande **Enable-SqlAlways On** ou **Disable-SqlAlways On** pour modifier le paramètre Always On actuel peut entraîner le redémarrage du service SQL Server. Le comportement de redémarrage dépend des conditions suivantes :  
+ Sur une instance de serveur en cours d’exécution, l’utilisation de l’applet de commande **Enable-SqlAlwaysOn** ou **Disable-SqlAlwaysOn** pour changer le paramètre Always On actuel peut entraîner le redémarrage du service SQL Server. Le comportement de redémarrage dépend des conditions suivantes :  
   
 |Paramètre -NoServiceRestart spécifié|Paramètre -Force spécifié|Le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a-t-il été redémarré ?|  
 |--------------------------------------------|---------------------------------|---------------------------------------------------------|  

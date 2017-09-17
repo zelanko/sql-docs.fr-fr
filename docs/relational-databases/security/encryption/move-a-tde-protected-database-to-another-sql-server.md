@@ -17,49 +17,25 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 61dab0bbd770679206c7eebee438f2fa22807ac2
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 512d13d8349be9370bb222e1513f5166f2cabeee
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Déplacer une base de données protégée par le chiffrement transparent des données vers un autre serveur SQL Server
   Cette rubrique explique comment protéger une base de données à l'aide du chiffrement transparent des données (TDE), puis la déplacer vers une autre instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Le chiffrement transparent des données effectue le chiffrement et le déchiffrement d'E/S en temps réel des données et des fichiers journaux. Le chiffrement utilise une clé de chiffrement de base de données (DEK), stockée dans l'enregistrement de démarrage de base de données pour être disponible pendant la récupération. La clé de chiffrement de base de données est une clé symétrique sécurisée à l'aide d'un certificat stocké dans la base de données **master** du serveur ou une clé asymétrique protégée par un module de gestion de clés extensible.  
+   
+##  <a name="Restrictions"></a> Limitations et restrictions  
   
- **Dans cette rubrique**  
-  
--   **Avant de commencer :**  
-  
-     [Limitations et restrictions](#Restrictions)  
-  
-     [Sécurité](#Security)  
-  
--   **Pour créer une base de données protégée par le chiffrement transparent des données, utilisez :**  
-  
-     [SQL Server Management Studio](#SSMSCreate)  
-  
-     [Transact-SQL](#TsqlCreate)  
-  
--   **Pour déplacer une base de données, utilisez :**  
-  
-     [SQL Server Management Studio](#SSMSMove)  
-  
-     [Transact-SQL](#TsqlMove)  
-  
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
-  
-###  <a name="Restrictions"></a> Limitations et restrictions  
-  
--   Lors du déplacement d'une base de données protégée par chiffrement transparent des données, vous devez également déplacer le certificat ou la clé asymétrique qui sert à ouvrir la clé DEK. Le certificat ou la clé asymétrique doit être installé dans la base de données **master** du serveur de destination, afin que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puisse accéder aux fichiers de base de données. Pour plus d’informations, consultez [Chiffrement transparent des données &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
+-   Lors du déplacement d'une base de données protégée par chiffrement transparent des données, vous devez également déplacer le certificat ou la clé asymétrique qui sert à ouvrir la clé DEK. Le certificat ou la clé asymétrique doit être installé dans la base de données **master** du serveur de destination, afin que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puisse accéder aux fichiers de base de données. Pour plus d’informations, consultez [Chiffrement transparent des données &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 -   Vous devez conserver des copies du fichier de certificat et du fichier de clé privée pour permettre la récupération du certificat. Le mot de passe de la clé privée ne doit pas forcément être le même que le mot de passe de la clé principale de la base de données.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stocke les fichiers créés ici dans **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA** par défaut. Vos noms et emplacements de fichier peuvent être différents.  
   
-###  <a name="Security"></a> Sécurité  
-  
-####  <a name="Permissions"></a> Autorisations  
+##  <a name="Permissions"></a> Autorisations  
   
 -   Requiert l'autorisation **CONTROL DATABASE** sur la base de données **master** pour créer la clé principale de base de données.  
   
@@ -68,6 +44,8 @@ ms.lasthandoff: 06/22/2017
 -   Requiert l'autorisation **CONTROL DATABASE** sur la base de données chiffrée et l'autorisation **VIEW DEFINITION** sur le certificat ou la clé asymétrique qui sert à chiffrer la clé de chiffrement de la base de données.  
   
 ##  <a name="SSMSProcedure"></a> Pour créer une base de données protégée par le chiffrement transparent des données  
+
+Les procédures suivantes vous montrent comment créer une base de données protégée par TDE à l’aide de SQL Server Management Studio et de Transact-SQL.
   
 ###  <a name="SSMSCreate"></a> Utilisation de SQL Server Management Studio  
   
@@ -109,7 +87,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
-    ```  
+    ```sql  
     -- Create a database master key and a certificate in the master database.  
     USE master ;  
     GO  
@@ -161,7 +139,9 @@ ms.lasthandoff: 06/22/2017
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)  
   
-##  <a name="TsqlProcedure"></a> Pour déplacer une base de données  
+##  <a name="TsqlProcedure"></a> Pour déplacer une base de données protégée par le chiffrement transparent des données 
+
+Les procédures suivantes vous montrent comment déplacer une base de données protégée par TDE à l’aide de SQL Server Management Studio et de Transact-SQL.
   
 ###  <a name="SSMSMove"></a> Utilisation de SQL Server Management Studio  
   
@@ -282,7 +262,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
-    ```  
+    ```sql  
     -- Detach the TDE protected database from the source server.   
     USE master ;  
     GO  
@@ -327,6 +307,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Attacher et détacher une base de données &#40;SQL Server&#41;](../../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [Chiffrement transparent des données avec Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md)  
+ [Chiffrement transparent des données avec Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
   
   

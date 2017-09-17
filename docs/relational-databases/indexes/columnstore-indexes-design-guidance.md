@@ -14,19 +14,19 @@ caps.latest.revision: 16
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b60c6ab2bc24a2865d06c949a0bb5b765fdc7454
+ms.translationtype: HT
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 57fa80162feb8a294733ef15ffaec86d11fcf677
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Index columnstore - Guide de conception
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Recommandations générales pour la conception d’index columnstore. Un petit nombre de décisions judicieuses peuvent vous aider à obtenir les performances de requête élevées et l’excellente compression des données que les index columnstore sont censés fournir. 
+Recommandations générales pour la conception d’index columnstore. Un petit nombre de décisions conceptuelles judicieuses peuvent vous aider à obtenir les performances de requête élevées et l’excellente compression des données que les index columnstore sont censés fournir. 
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables
 
 Cet article part du principe que vous connaissez la terminologie et l’architecture de columnstore. Pour plus d’informations, consultez [Index columnstore - Présentation](../../relational-databases/indexes/columnstore-indexes-overview.md) et [Columnstore index - Architecture](../../relational-databases/indexes/columnstore-indexes-architecture.md).
 

@@ -2,7 +2,7 @@
 title: "Propriétés de la base de données (page Options) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 04/29/2016
+ms.date: 08/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,11 +17,11 @@ caps.latest.revision: 67
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 49b5572874fd642d738b8ffee362cc84540709ea
+ms.translationtype: HT
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 8d3a9c04f09d48823638e1608722268b360610e8
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="database-properties-options-page"></a>Propriétés de la base de données (page Options)
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
  Spécifiez l’un des modèles suivants pour la récupération de la base de données : **Complet**, **Journalisé en bloc**ou **Simple**. Pour plus d’informations sur les modes de récupération, consultez [Modes de récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
  **Niveau de compatibilité**  
- Spécifiez la version la plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prise en charge par la base de données. Les valeurs possibles sont  **SQL Server 2014 (120)**,  **SQL Server 2012 (110)**et **SQL Server 2008 (100)**. Lorsqu'une base de données SQL Server 2005 est mise à niveau vers SQL Server 2014, le niveau de compatibilité de cette base de données passe de 90 à 100.  Le niveau de compatibilité 90 n'est pas pris en charge dans SQL Server 2014. Pour plus d’informations, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+ Spécifiez la version la plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prise en charge par la base de données. Pour connaître les valeurs possibles, consultez [Niveau de compatibilité avec ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Quand une base de données SQL Server est mise à niveau, le niveau de compatibilité pour cette base de données est conservé si possible, ou remplacé par le niveau minimal pris en charge pour le nouveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
  **Type de relation contenant-contenu**  
  Spécifiez aucun ou partiel pour indiquer s'il s'agit d'une base de données à relation contenant-contenu. Pour plus d'informations sur les bases de données à relation contenant-contenu, consultez [Contained Databases](../../relational-databases/databases/contained-databases.md). La propriété de serveur **Activer les bases de données à relation contenant-contenu** doit être définie sur **TRUE** pour qu'une base de données puisse être configurée comme étant à relation contenant-contenu.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/22/2017
  **Fermeture automatique**  
  Spécifiez si la base de données doit être fermée proprement et doit libérer des ressources lorsque le dernier utilisateur ferme sa session. Les valeurs possibles sont **True** et **False**. Lorsque la valeur est **True**, la base de données est fermée proprement et ses ressources sont libérées à la fermeture de session du dernier utilisateur.  
   
- Création automatique des statistiques incrémentielles  
+ **Création automatique des statistiques incrémentielles**  
  Spécifiez si utiliser l'option incrémentielle lorsque les statistiques par partition sont créées. Pour plus d’informations sur les statistiques incrémentielles, consultez [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
  **Création automatique des statistiques**  
@@ -62,14 +62,14 @@ ms.lasthandoff: 06/22/2017
  Spécifiez si la base de données doit automatiquement mettre à jour les statistiques d'optimisation obsolètes. Les valeurs possibles sont **True** et **False**. Quand la valeur est **True**, toutes les statistiques obsolètes requises par une requête pour l’optimisation sont créées automatiquement durant l’optimisation. Pour plus d’informations, consultez [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
  **Mise à jour automatique des statistiques de manière asynchrone**  
- Quand la valeur est **True**, les requêtes à l’origine d’une mise à jour automatique de statistiques obsolètes n’attendent pas la fin de la mise à jour des statistiques pour effectuer la compilation. Les requêtes suivantes utiliseront les statistiques mises à jour une fois celles-ci disponibles.  
+ Quand la valeur est **True**, les requêtes à l’origine d’une mise à jour automatique de statistiques obsolètes n’attendent pas la fin de la mise à jour des statistiques pour effectuer la compilation. Les requêtes suivantes utilisent les statistiques mises à jour une fois celles-ci disponibles.  
   
  Quand la valeur est **False**, les requêtes à l’origine d’une mise à jour automatique des statistiques obsolètes attendent de pouvoir utiliser les statistiques mises à jour dans le plan d’optimisation des requêtes.  
   
  L'attribution de la valeur **True** à cette option n'a aucun effet, sauf si l'option **Mise à jour automatique des statistiques** a également la valeur **True**.  
   
 ## <a name="containment"></a>Relation contenant-contenu  
- Dans les bases de données à relation contenant-contenu, certains paramètres généralement configurés au niveau serveur peuvent l'être au niveau de la base de données.  
+ Dans une base de données à relation contenant-contenu, certains paramètres généralement configurés au niveau serveur peuvent l’être au niveau de la base de données.  
   
  **LCID de la langue de texte intégral par défaut**  
  Spécifie une langue par défaut pour les colonnes de texte intégral indexées. L'analyse linguistique des données de texte intégral indexées dépend de la langue des données. La valeur par défaut de cette option est la langue du serveur. Pour connaître le langue correspondant au paramètre affiché, consultez [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
@@ -130,6 +130,9 @@ ms.lasthandoff: 06/22/2017
  Spécifiez l’une des options suivantes pour l’accès non transactionnel via le système de fichiers aux données FILESTREAM stockées dans les FileTables : **OFF**, **READ_ONLY**ou **FULL**. Si FILESTREAM n'est pas activé sur le serveur, cette valeur est définie sur OFF et est désactivée. Pour plus d’informations, consultez [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Divers  
+**Autoriser l’isolement d’instantané**  
+Active cette fonctionnalité.  
+
  **Valeur par défaut ANSI NULL**  
  Autorise les valeurs NULL pour tous les types de données définis par l’utilisateur ou les colonnes non explicitement définies comme **NOT NULL** lors d’une instruction **CREATE TABLE** ou **ALTER TABLE** (état par défaut). Pour plus d’informations, consultez [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md) et [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md).  
   
@@ -155,7 +158,13 @@ ms.lasthandoff: 06/22/2017
  Quand la valeur est **True**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve les statistiques de corrélation entre deux tables quelconques de la base de données qui sont liées par une contrainte FOREIGN KEY et qui possèdent des colonnes **datetime** .  
   
  Si la valeur **False**est définie, les statistiques de corrélation ne sont pas conservées.  
-  
+ 
+ **Durabilité différée**  
+ Active cette fonctionnalité.  
+ 
+ **Est un instantané Read Committed**  
+ Active cette fonctionnalité.  
+ 
  **Abandon en cas d'arrondi numérique**  
  Spécifiez comment la base de données gère les erreurs d'arrondi. Les valeurs possibles sont **True** et **False**. Lorsque la valeur est **True**, une erreur est générée en cas de perte de précision dans une expression. Lorsque la valeur est **False**, les pertes de précision ne génèrent pas de messages d'erreur, et le résultat est arrondi selon la précision spécifiée pour la colonne ou la variable contenant le résultat. Pour plus d’informations, consultez [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md).  
   
@@ -192,14 +201,27 @@ ms.lasthandoff: 06/22/2017
   
  **Temps de récupération cible (en secondes)**  
  Spécifie la durée maximale (en secondes) de la récupération de la base de données spécifiée en cas d'incident. Pour plus d’informations, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
-  
+
+## <a name="service-broker"></a>Service Broker  
+**Service Broker activé**  
+Active ou désactive le Service Broker.  
+
+**Priorité du service Broker respectée**  
+Propriété de Service Broker en lecture seule.  
+
+**Identificateur de Service Broker**  
+Identificateur en lecture seule.  
+
 ## <a name="state"></a>État  
  **Base de données en lecture seule**  
- Spécifiez si la base de données est en lecture seule. Les valeurs possibles sont **True** et **False**. Lorsque la valeur est **True**, les utilisateurs peuvent uniquement lire les données de la base de données. Ils ne peuvent pas modifier les données ou les objets de la base de données. Toutefois, la base de données elle-même peut être supprimée à l'aide de l'instruction DROP DATABASE. La modification de la configuration de l'option **Base de données en lecture seule** n'est possible que si la base de données n'est pas en cours d'utilisation. La base de données master est l'exception à la règle mais seul l'administrateur système peut utiliser la base de données master pendant la configuration de cette option.  
+ Spécifiez si la base de données est en lecture seule. Les valeurs possibles sont **True** et **False**. Lorsque la valeur est **True**, les utilisateurs peuvent uniquement lire les données de la base de données. Ils ne peuvent pas modifier les données ou les objets de la base de données. Toutefois, la base de données elle-même peut être supprimée à l’aide de l’instruction `DROP DATABASE`. La modification de la configuration de l'option **Base de données en lecture seule** n'est possible que si la base de données n'est pas en cours d'utilisation. La base de données master est l'exception à la règle mais seul l'administrateur système peut utiliser la base de données master pendant la configuration de cette option.  
   
  **État de la base de données**  
  Affiche l'état actuel de la base de données. Ce champ n'est pas modifiable. Pour plus d'informations sur l'option **État de la base de données**, consultez [Database States](../../relational-databases/databases/database-states.md).  
-  
+
+ **Chiffrement activé**  
+ Quand la valeur est **True**, cette base de données est activée pour le chiffrement. Une clé de chiffrement de base de données est alors requise pour effectuer le chiffrement. Pour plus d’informations, consultez [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+ 
  **Restreindre l'accès**  
  Spécifiez les utilisateurs autorisés à accéder à la base de données. Les valeurs possibles sont :  
   
@@ -215,12 +237,10 @@ ms.lasthandoff: 06/22/2017
   
      Seuls les membres des rôles db_owner, dbcreator ou sysadmin peuvent utiliser la base de données.  
   
- **Chiffrement activé**  
- Quand la valeur est **True**, cette base de données est activée pour le chiffrement. Une clé de chiffrement de base de données est alors requise pour effectuer le chiffrement. Pour plus d’informations, consultez [Chiffrement transparent des données &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
-  
+
+
 ## <a name="see-also"></a>Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
-  
   
 

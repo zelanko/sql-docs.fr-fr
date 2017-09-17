@@ -1,7 +1,7 @@
 ---
 title: "Données hiérarchiques (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,11 +21,11 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 502bbf9e763ffc8132e741a33ebe0ec4d0cad499
+ms.translationtype: HT
+ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
+ms.openlocfilehash: 6f4cd91c26935f93d99e2a23965c3c256e2e5bbd
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="hierarchical-data-sql-server"></a>Données hiérarchiques (SQL Server)
@@ -126,7 +126,7 @@ GO
   
   
 ### <a name="xml"></a>XML  
- Un document XML est une arborescence. Par conséquent, une instance de type de données XML unique peut représenter la totalité d'une hiérarchie. Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], lorsqu'un index XML est créé, les valeurs **hierarchyid** sont utilisées en interne pour représenter la position dans la hiérarchie.  
+ Un document XML est une arborescence. Par conséquent, une instance de type de données XML unique peut représenter la totalité d'une hiérarchie. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] when an XML dedex is created, **hierarchyid** values are used deternally to represent the position de the hierarchy.  
   
  Il peut être préférable d'utiliser le type de données XML lorsque les conditions suivantes sont réunies :  
   
@@ -247,7 +247,7 @@ Converted Level  Level     Location         LocationType
 /3/1/            0x7AC0    McMurdo Station  City  
 ```  
   
- Notez que la hiérarchie a une structure valide, même si elle n'est pas cohérente en interne. Bahia est le seul État. Il s'affiche dans la hiérarchie en tant qu'homologue de la ville Brasilia. De même, McMurdo Station n'a pas de pays parent. Les utilisateurs doivent décider si ce type de hiérarchie convient à leur utilisation.  
+ Notez que la hiérarchie a une structure valide, même si elle n’est pas cohérente en interne. Bahia est le seul État. Il s'affiche dans la hiérarchie en tant qu'homologue de la ville Brasilia. De même, McMurdo Station n'a pas de pays parent. Les utilisateurs doivent décider si ce type de hiérarchie convient à leur utilisation.  
   
  Ajoutez une autre ligne et sélectionnez les résultats.  
   
@@ -533,3 +533,4 @@ GO
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   
+

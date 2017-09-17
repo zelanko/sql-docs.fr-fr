@@ -1,5 +1,5 @@
 ---
-title: "Vue d’ensemble : Importation de données à partir des Tables (Master Data Services) | Documents Microsoft"
+title: "Présentation : Importation de données à partir de tables (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - staging process [Master Data Services]
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 caps.latest.revision: 21
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a33ef299ad64c4bc6ca5a96b43feb888b9147565
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 98127d5652b06fa012d5ac3f6865d73adcce9f7e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="overview-importing-data-from-tables-master-data-services"></a>Présentation : Importation de données à partir de tables (Master Data Services)
@@ -78,27 +78,27 @@ ms.lasthandoff: 08/02/2017
   
 -   [Table de mise en lots des membres feuille &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
--   [Table intermédiaire des membres consolidés &#40; Master Data Services &#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [Table de mise en lots des membres consolidés &#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
 -   [Table de mise en lots des relations &#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md)  
   
  Pour chaque entité du modèle, il existe une table de mise en lots. Le nom de la table indique l'entité correspondante et le type d'entité comme membre feuille. L'illustration suivante montre les tables de mise en lots pour les entités Devise, Client et Produit.  
   
- ![Tables intermédiaires dans la base de données MDS](../master-data-services/media/mds-staging-tables.png "Tables intermédiaires dans la base de données MDS")  
+ ![Tables de mise en lots dans la base de données MDS](../master-data-services/media/mds-staging-tables.png "Tables de mise en lots dans la base de données MDS")  
   
  Le nom de la table est spécifié lors de la création d'une entité et ne peut pas être modifié. Si le nom de la table de mise en lots contient un _1 ou tout autre nombre, une autre table de ce nom existait déjà lorsque l'entité a été créée.  
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] inclut les types suivants de procédures stockées de mise en lots.  
   
--   STG.udp_\<nom > _Leaf  
+-   stg.udp_\<nom>_Leaf  
   
--   STG.udp_\<nom > _Consolidated  
+-   stg.udp_\<nom>_Consolidated  
   
--   STG.udp_\<nom > _Relationship  
+-   stg.udp_\<nom>_Relationship  
   
  Pour chaque entité du modèle, il existe trois procédures stockées qui correspondent à un membre feuille, un membre consolidé et les tables de mise en lots de relations.  L'illustration suivante montre les procédures stockées de mise en lots pour les entités Devise, Client et Produit.  
   
- ![Les procédures stockées dans la base de données MDS intermédiaires](../master-data-services/media/mds-staging-storedprocedures.png "intermédiaire de procédures stockées dans la base de données MDS")  
+ ![Procédures stockées de mise en lots dans la base de données MDS](../master-data-services/media/mds-staging-storedprocedures.png "Procédures stockées de mise en lots dans la base de données MDS")  
   
  Pour plus d’informations sur les procédures stockées, consultez [Procédure stockée de mise en lots &#40;Master Data Services&#41;](../master-data-services/staging-stored-procedure-master-data-services.md).  
   
@@ -109,7 +109,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="related-content"></a>Contenu connexe  
   
--   [Validation &#40; Master Data Services &#41;](../master-data-services/validation-master-data-services.md)  
+-   [Validation &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
 -   [Règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   

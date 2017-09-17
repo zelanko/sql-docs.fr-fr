@@ -1,5 +1,5 @@
 ---
-title: Transactions (Master Data Services) | Documents Microsoft
+title: Transactions (Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 caps.latest.revision: 15
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 841657a13d802ba1af2f81436769f76a3c3aa409
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 98cb408b0ec3d5449f0f81dc363e2278ac107f3d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="transactions-master-data-services"></a>Transactions (Master Data Services)
@@ -47,7 +47,7 @@ ms.lasthandoff: 08/02/2017
  Dans la zone fonctionnelle **Gestion des versions** , les administrateurs peuvent consulter toutes les transactions de tous les utilisateurs pour les modèles auxquels ils ont accès, et inverser l'une quelconque de ces transactions.
  
 > [!NOTE]  
->  Les administrateurs peuvent afficher toutes les transactions pour tous les utilisateurs tant qu’ils n’ont pas l’autorisation en lecture seule niveau appliquée dans le **gestion des versions** zone fonctionnelle. Par exemple, si le niveau d’autorisation mise à jour et d’autorisation en lecture seule est défini pour l’administrateur, l’administrateur ne sera pas en mesure de voir les autres transactions d’utilisateur, car l’autorisation en lecture seule est prioritaires sur l’autorisation de mise à jour.
+>  Les administrateurs peuvent afficher toutes les transactions pour tous les utilisateurs tant qu’ils n’ont pas le niveau d’autorisation de lecture seule appliqué dans la zone fonctionnelle **Gestion des versions**. Par exemple, si le niveau d’autorisation de lecture seule et de mise à jour est défini pour l’administrateur, celui-ci ne peut pas voir les autres transactions utilisateur, car l’autorisation de lecture seule est prioritaire sur l’autorisation de mise à jour.
   
  Vous pouvez configurer la durée de conservation des données de journal des transactions en définissant la propriété **Nombre de jours de rétention du journal** dans les paramètres système de la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] et en configurant le paramètre **Nombre de jours de rétention du journal** lorsque vous créez ou modifiez un modèle. Pour plus d’informations, consultez [Paramètres système &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md) et [Créer un modèle &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md).  
   
@@ -98,9 +98,9 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
 ## <a name="related-content"></a>Contenu connexe  
   
--   [Les administrateurs &#40; Master Data Services &#41;](../master-data-services/administrators-master-data-services.md)  
+-   [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
   
--   [Annotations &#40; Master Data Services &#41;](../master-data-services/annotations-master-data-services.md)  
+-   [Annotations &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)  
   
   
 

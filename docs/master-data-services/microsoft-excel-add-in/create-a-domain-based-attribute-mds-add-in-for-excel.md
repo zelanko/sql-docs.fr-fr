@@ -1,5 +1,5 @@
 ---
-title: "Créer un attribut basé sur un domaine (complément MDS pour Excel) | Documents Microsoft"
+title: "Créer un attribut basé sur un domaine (Complément MDS pour Excel) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/25/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f67b43f772e9693f5abbb396b6987527a5220a1d
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 0183ba6f178fbc9f392b4e711ccaba49220ffa3e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>Créer un attribut basé sur un domaine (complément MDS pour Excel)
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/02/2017
   
     -   Pour utiliser des valeurs d'une entité existante, choisissez le nom de l'entité.
     
-    S’il y a plus de 50 entités, vous pouvez filtrer et rechercher pour une entité. Sinon, sélectionnez une entité dans la liste déroulante.  
+    S’il y a plus de 50 entités, vous pouvez filtrer et rechercher une entité. Sinon, sélectionnez une entité dans la liste déroulante.  
   
 6.  Si vous avez choisi **la colonne sélectionnée** à l’étape précédente, dans la zone **Nouveau nom d’entité** , tapez un nom pour la nouvelle entité. Il peut être identique au nom de la colonne (attribut).  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Attributs basés sur un domaine &#40;Master Data Services&#41;](../../master-data-services/domain-based-attributes-master-data-services.md)   
- [Créer une entité &#40; Complément MDS pour Excel &#41;](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)   
+ [Créer une entité &#40;Complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)   
  [Génération d’un modèle &#40;Complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)  
   
   

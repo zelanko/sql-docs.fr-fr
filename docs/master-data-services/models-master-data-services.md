@@ -1,5 +1,5 @@
 ---
-title: "Modèles (Master Data Services) | Documents Microsoft"
+title: "Modèles (services de données de référence) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - models [Master Data Services]
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 635cb271e49ec96f889fdbba508e0374b186a8c9
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 0dd8ddbd08e97d1761881d0c955f02d491fce7af
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="models-master-data-services"></a>Modèles (services de données de référence)
@@ -48,10 +48,10 @@ ms.lasthandoff: 08/02/2017
   
  Cette image montre les relations entre les objets dans un modèle.  
   
- ![Objets dans un modèle de données Master Data Services](../master-data-services/media/mds-conc-model-circles.gif "objets dans un modèle de données Master Data Services")  
+ ![Objets dans un modèle Master Data Services](../master-data-services/media/mds-conc-model-circles.gif "Objets dans un modèle Master Data Services")  
   
 > [!NOTE]  
->  Les hiérarchies dérivées sont également des objets de modèle, mais ils ne figurent pas dans l'image. Les hiérarchies dérivées sont dérivées des relations d'attributs basés sur un domaine qui existent entre les entités. Consultez [dérivée hiérarchies &#40; Master Data Services &#41; ](../master-data-services/derived-hierarchies-master-data-services.md) pour plus d’informations.  
+>  Les hiérarchies dérivées sont également des objets de modèle, mais ils ne figurent pas dans l'image. Les hiérarchies dérivées sont dérivées des relations d'attributs basés sur un domaine qui existent entre les entités. Consultez [Hiérarchies dérivées &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md) pour plus d’informations.  
   
  Les données de référence sont les données contenues dans les objets de modèle. Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], les données de référence sont stockées en tant que membres dans une entité.  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="model-example"></a>Exemple de modèle  
  Dans l'exemple suivant, les objets dans le modèle Product regroupent logiquement les données relatives au produit.  
   
- ![Exemple de données de modèle de produit Master](../master-data-services/media/mds-conc-model.gif "exemple de données principales du modèle de produit")  
+ ![Exemple de données de référence du modèle Product](../master-data-services/media/mds-conc-model.gif "Exemple de données de référence du modèle Product")  
   
  D'autres modèles courants figurent ci-dessous :  
   
@@ -74,20 +74,20 @@ ms.lasthandoff: 08/02/2017
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Créer un modèle pour organiser vos données de référence.|[Créer un modèle de &#40; Master Data Services &#41;](../master-data-services/create-a-model-master-data-services.md)|  
-|Modifier le nom d'un modèle existant.|[Modifier le mode &#40; Master Data Services &#41;](../master-data-services/edit-model-master-data-services.md)|  
-|Supprimer un modèle existant.|[Supprimer un modèle de &#40; Master Data Services &#41;](../master-data-services/delete-a-model-master-data-services.md)|  
+|Créer un modèle pour organiser vos données de référence.|[Créer un modèle &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)|  
+|Modifier le nom d'un modèle existant.|[Modifier un modèle &#40;Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)|  
+|Supprimer un modèle existant.|[Supprimer un modèle &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)|  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
   
 -   [Vue d’ensemble de Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
 -   [Entités &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
--   [Attributs &#40; Master Data Services &#41;](../master-data-services/attributes-master-data-services.md)  
+-   [Attributs &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
--   [Déploiement de modèles &#40; Master Data Services &#41;](../master-data-services/deploying-models-master-data-services.md)  
+-   [Déploiement de modèles &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
--   [Autorisations d’objet modèle &#40; Master Data Services &#41;](../master-data-services/model-object-permissions-master-data-services.md)  
+-   [Autorisations d’objet de modèle &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  
   
   

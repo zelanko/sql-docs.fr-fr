@@ -1,5 +1,5 @@
 ---
-title: "L’accès de navigation (Master Data Services) | Documents Microsoft"
+title: "Accès de navigation (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - security [Master Data Services], navigational access
 ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
 caps.latest.revision: 5
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e3979b0f5749182f3188ee3baafd43cd3e0cbb8b
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 7a26c6e03d53fcd619446a82b2d2196476d159dc
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="navigational-access-master-data-services"></a>Accès de navigation (Master Data Services)
@@ -46,6 +46,6 @@ ms.lasthandoff: 08/02/2017
  Lorsque vous affectez des autorisations aux collections, vous pouvez lire ou mettre à jour le nom, le code, la description et l'ID de propriétaire. Vous pouvez également lire le nom du modèle.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mode de détermination des autorisations &#40; Master Data Services &#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [Mode de détermination des autorisations &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

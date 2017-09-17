@@ -1,5 +1,5 @@
 ---
-title: "Créer et exécuter une relation de synchronisation d’entité (Master Data Services) | Documents Microsoft"
+title: "Créer et exécuter une relation de synchronisation d’entités (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f9efe68604f73df42930c5b3eb348e5c2b3e7965
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 14bc03c2c8c462895102d6c34c62cf23724c706f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>Créer et exécuter une relation de synchronisation d’entités (Master Data Services)
@@ -99,7 +99,7 @@ ms.lasthandoff: 08/02/2017
   
 |Colonne|Description|  
 |------------|-----------------|  
-|État|Le statut de la relation de synchronisation.<br /><br /> Lorsque vous cliquez sur **enregistrer** ou exécuter une relation de synchronisation, le ![icône de mise à jour d’état](../master-data-services/media/mds-statusicon-updating.png "icône de mise à jour d’état") image s’affiche, indiquant que la relation de synchronisation met à jour.<br /><br /> S’il existe des erreurs lors de la création, de modification ou de l’exécution d’une relation de synchronisation, le ![icône de statut d’erreur](../master-data-services/media/mds-statusicon-error.png "icône de statut d’erreur") image s’affiche.<br /><br /> Dans le cas contraire, l’état est OK et la ![icône pour l’état OK](../master-data-services/media/mds-statusicon-ok.png "icône pour l’état OK") image s’affiche.|  
+|État|Le statut de la relation de synchronisation.<br /><br /> Quand vous cliquez sur **Enregistrer** ou que vous exécutez une relation de synchronisation, l’image ![Icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône d’état de mise à jour") s’affiche, indiquant que la relation de synchronisation est en cours de mise à jour.<br /><br /> Si des erreurs se produisent pendant la création, la modification ou l’exécution d’une relation de synchronisation, l’image ![Icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") s’affiche.<br /><br /> Sinon, l’état est OK ; dans cas, l’image ![Icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
 |Modèle source|Nom du modèle source.|  
 |Version source|Nom de la version source.|  
 |Entité source|Nom de l'entité source.|  

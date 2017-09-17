@@ -16,11 +16,11 @@ caps.latest.revision: 12
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f55d3c5e57dfbd0d80e02d5c2fcb0fc6aa9ae81d
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: fc3420c4b87cc1d304e7a58b540d7f9210aac18a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="import-a-policy-based-management-policy"></a>Importer une stratégie de gestion basée sur des stratégies
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est fourni avec des stratégies qui peuvent être utilisées pour contrôler une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par défaut, ces stratégies ne sont pas installées sur le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], mais elles peuvent être importées à partir de l’emplacement par défaut C:\Program Files\Microsoft SQL Server\130\Tools\Policies\DatabaseEngine\1033.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est fourni avec des stratégies qui peuvent être utilisées pour contrôler une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par défaut, ces stratégies ne sont pas installées sur le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], mais elles peuvent être importées à partir de l’emplacement par défaut C:\Program Files\Microsoft SQL Server\###\Tools\Policies\DatabaseEngine\1033 ou C:\Program Files (x86)\Microsoft SQL Server\###\Tools\Policies\DatabaseEngine\1033 sur les installations 64 bits.
   
 ###  <a name="Security"></a> Sécurité  
   
@@ -65,3 +65,4 @@ ms.lasthandoff: 06/22/2017
 6.  Lorsque vous avez terminé, cliquez sur **OK**.  
   
   
+

@@ -1,5 +1,5 @@
 ---
-title: "Modifier une entité (Master Data Services) | Documents Microsoft"
+title: "Modifier une entité (Master Data Services)| Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - entities [Master Data Services], changing name
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1364db68abbbff7ff13899180af78dc87478737d
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: bd0a151b21d3c8bfb138b4aac457587b84699228
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="edit-an-entity-master-data-services"></a>Modifier une entité (Master Data Services)
@@ -63,19 +63,19 @@ ms.lasthandoff: 08/02/2017
 ## <a name="status"></a>État  
  La colonne d’état de la grille affiche l’état de l’opération sur l’entité. Lorsque vous cliquez sur **Enregistrer l’entité**, l’image ci-après s’affiche pour indiquer que l’entité est en cours de mise à jour.  
   
- ![Icône de mise à jour d’état](../master-data-services/media/mds-statusicon-updating.png "icône de mise à jour d’état")  
+ ![Icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône d’état de mise à jour")  
   
  En cas d’erreur lors de la création ou de la modification d’une entité, l’image suivante apparaît.  
   
- ![Icône de statut d’erreur](../master-data-services/media/mds-statusicon-error.png "icône de statut d’erreur")  
+ ![Icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur")  
   
  Si l’état présente la valeur OK, l’image suivante apparaît.  
   
- ![Icône pour l’état OK](../master-data-services/media/mds-statusicon-ok.png "icône pour l’état OK")  
+ ![Icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK")  
   
 ## <a name="see-also"></a>Voir aussi  
  [Hiérarchies explicites &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [Supprimer une entité &#40; Master Data Services &#41;](../master-data-services/delete-an-entity-master-data-services.md)   
- [Entités (Master Data Services)](../master-data-services/entities-master-data-services.md)  
+ [Supprimer une entité &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)   
+ [Entités &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
   

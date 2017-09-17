@@ -1,5 +1,5 @@
 ---
-title: Attribut de groupes (Master Data Services) | Documents Microsoft
+title: "Groupes d’attributs (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - attribute groups [Master Data Services], about attribute groups
 ms.assetid: 648b3d0b-e15a-45f9-8292-3a54a072e62c
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b5c90f2a2df358af81f563f5740450ba130d24e5
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 3762e429085613760b82709bd772313ed6ae667b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="attribute-groups-master-data-services"></a>Groupes d'attributs (Master Data Services)
@@ -45,19 +45,19 @@ ms.lasthandoff: 09/01/2017
 ## <a name="show-or-hide-attribute-groups"></a>Afficher ou masquer les groupes d'attributs  
  Lorsque vous créez un groupe d'attributs, il est automatiquement masqué pour tous les utilisateurs, à l'exception de son créateur. Pour plus d’informations sur le fait de rendre visible le groupe, consultez [Rendre un groupe d’attributs visible pour les utilisateurs &#40;Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md).  
   
- Si vous souhaitez masquer un attribut spécifique dans un groupe, vous pouvez lui affecter une autorisation **Refuser**. Pour plus d’informations, consultez [les autorisations de feuille &#40; Master Data Services &#41; ](../master-data-services/leaf-permissions-master-data-services.md).  
+ Si vous souhaitez masquer un attribut spécifique dans un groupe, vous pouvez lui affecter une autorisation **Refuser** . Pour plus d’informations, consultez [Autorisations de feuille &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md).  
   
 ## <a name="related-tasks"></a>Tâches associées  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Créer un groupe d'attributs et y ajouter des attributs.|[Créer un groupe d’attributs &#40; Master Data Services &#41;](../master-data-services/create-an-attribute-group-master-data-services.md)|  
-|Rendre un groupe d'attributs visible pour les utilisateurs.|[Rendre un groupe d’attributs Visible pour les utilisateurs &#40; Master Data Services &#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)|  
-|Modifier le nom d'un groupe d'attributs existant.|[Modifier un nom de groupe d’attributs &#40; Master Data Services &#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)|  
-|Supprimer un groupe d'attributs existant.|[Supprimer un groupe d’attributs &#40; Master Data Services &#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)|  
+|Créer un groupe d'attributs et y ajouter des attributs.|[Créer un groupe d’attributs &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)|  
+|Rendre un groupe d'attributs visible pour les utilisateurs.|[Rendre un groupe d’attributs visible pour les utilisateurs &#40;Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)|  
+|Modifier le nom d'un groupe d'attributs existant.|[Modifier le nom d’un groupe d’attributs &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)|  
+|Supprimer un groupe d'attributs existant.|[Supprimer un groupe d’attributs &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenu connexe  
   
--   [Attributs &#40; Master Data Services &#41;](../master-data-services/attributes-master-data-services.md)  
+-   [Attributs &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
   

@@ -1,8 +1,10 @@
 ---
-title: "Installer SQL Server avec le partage de fichiers SMB en tant qu’option de stockage | Microsoft Docs"
+title: Installer SQL Server avec le stockage de partage de fichiers SMB | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 09/05/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,28 +17,28 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1f56f9b3716e8950ceea9110f7ece301ac8c0c74
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: 862addca6027f4bb5b45a059d9dd65b254c9f92a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/08/2017
 
 ---
-# <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Installer SQL Server avec le partage de fichiers SMB en tant qu'option de stockage
-  Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les bases de données système (Master, Model, MSDB et TempDB) et les bases de données utilisateur [!INCLUDE[ssDE](../../includes/ssde-md.md)] peuvent être installées avec le serveur de fichiers SMB (Server Message Block) comme option de stockage. Cela s'applique à la fois aux installations autonomes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et aux installations de cluster de basculement (FCI) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+# <a name="install-sql-server-with-smb-fileshare-storage"></a>Installer SQL Server avec le stockage de partage de fichiers SMB
+Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les bases de données système (Master, Model, MSDB et TempDB) et les bases de données utilisateur [!INCLUDE[ssDE](../../includes/ssde-md.md)] peuvent être installées avec le serveur de fichiers SMB (Server Message Block) comme option de stockage. Cela s'applique à la fois aux installations autonomes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et aux installations de cluster de basculement (FCI) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  Le flux de fichier n'est pas pris en charge actuellement sur un partage de fichiers SMB.  
   
-## <a name="installation-considerations"></a>Considérations relatives à l'installation  
+## <a name="installation-considerations"></a>Considérations relatives à l’installation  
   
-### <a name="smb-file-share-formats"></a>Formats de partage de fichiers SMB :  
+### <a name="smb-fileshare-formats"></a>Formats de partage de fichiers SMB :  
  Lors de la spécification du partage de fichiers SMB, ce qui suit correspond à des formats de chemin d'accès UNC (Universal Naming Convention) pris en charge pour les bases de données autonomes et FCI :  
   
 -   \\\NomServeur\NomPartage\  
   
 -   \\\NomServeur\NomPartage  
   
- Pour plus d’informations sur la convention d’affectation des noms (UNC), consultez [UNC](http://go.microsoft.com/fwlink/?LinkId=245534) (http://go.microsoft.com/fwlink/?LinkId=245534).  
+ Pour plus d’informations sur la convention de nommage (UNC), consultez [UNC](http://msdn.microsoft.com/library/gg465305.aspx).  
   
  Le chemin d'accès UNC de bouclage (chemin d'accès UNC dont le nom du serveur est localhost, 127.0.0.1 ou le nom d'ordinateur local) n'est pas pris en charge. Exemple de cas particulier : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisant le cluster du serveur de fichiers qui est hébergé sur le même nœud sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d'exécution n'est pas non plus pris en charge. Pour éviter cette situation, il est recommandé de créer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et un cluster de serveur de fichiers sur des clusters Windows distincts.  
   
@@ -60,10 +62,6 @@ ms.lasthandoff: 08/02/2017
 3.  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
 4.  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
-  
-5.  [sp_attach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md)  
-  
-6.  [sp_attach_single_file_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md)  
   
 ### <a name="installation-options"></a>Options d'installation  
   
@@ -102,12 +100,12 @@ ms.lasthandoff: 08/02/2017
     > [!NOTE]  
     >  Les autorisations de partage FULL CONTROL et les autorisations NTFS sur les dossiers de partage SMB doivent être limitées : au compte de service de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , au compte de service de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et aux utilisateurs Windows avec des rôles de serveur admin.  
   
-     Il est recommandé d'utiliser le compte de domaine en tant que compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si le compte système est utilisé comme compte de service, accordez les autorisations pour le compte d’ordinateur au format suivant : *<nom_domaine>***\\***<nom_ordinateur>***$**.  
+     Il est recommandé d'utiliser le compte de domaine en tant que compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si le compte système est utilisé comme compte de service, accordez les autorisations pour le compte d’ordinateur au format suivant : \<*nom_domaine*>\\<*nom_ordinateur*>\*$*.  
   
     > [!NOTE]  
     >  Pendant l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez spécifier le compte de domaine en tant que compte de service si le partage de fichiers SMB est indiqué comme option de stockage. Avec le partage de fichiers SMB, le compte système peut être spécifié comme compte de service après l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
     >   
-    >  Les comptes virtuels ne peuvent pas être authentifiés sur un emplacement distant. Tous les comptes virtuels utilisent l'autorisation de compte d'ordinateur. Configurez le compte d’ordinateur au format *<nom_domaine>***\\***<nom_ordinateur>***$**.  
+    >  Les comptes virtuels ne peuvent pas être authentifiés sur un emplacement distant. Tous les comptes virtuels utilisent l'autorisation de compte d'ordinateur. Configurez le compte d’ordinateur au format \<*nom_domaine*>\\<*nom_ordinateur*>\*$*.  
   
 -   Le compte utilisé pour installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit avoir des autorisations FULL CONTROL sur le dossier de partage de fichiers SMB utilisé comme répertoire de données, ou tous les autres dossiers de données (répertoire de base de données utilisateur, répertoire du journal de la base de données utilisateur, répertoire TempDB, répertoire du journal TempDB, répertoire de sauvegarde) pendant la configuration des clusters.  
   

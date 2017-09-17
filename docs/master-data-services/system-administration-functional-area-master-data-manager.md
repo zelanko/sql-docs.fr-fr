@@ -1,25 +1,30 @@
 ---
-title: "Zone fonctionnelle Administration de syst&#232;me (Master Data Manager) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Zone fonctionnelle Administration de système (Master Data Manager) | Microsoft Docs"
+ms.custom: 
+ms.date: 04/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: db2ce55d178cd7de3e179e3ae1543d8a9f3460b9
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/07/2017
+
 ---
-# Zone fonctionnelle Administration de syst&#232;me (Master Data Manager)
+# <a name="system-administration-functional-area-master-data-manager"></a>Zone fonctionnelle Administration de système (Master Data Manager)
   Dans la zone fonctionnelle Administration de système, les administrateurs peuvent créer un modèle et tous ses objets. Ils peuvent également créer des règles d'entreprise et créer et déployer des packages de modèles. Pour plus d’informations sur les administrateurs, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
-## Modèle  
+## <a name="model"></a>Modèle  
  [Modèles &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)  
   
  [Créer un modèle &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)  
@@ -48,7 +53,7 @@ caps.handback.revision: 9
   
  [Résolution des problèmes de déploiement de modèle de (Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-model-deployment-master-data-services.aspx)  
   
-## Règles d'entreprise  
+## <a name="business-rules"></a>Règles d'entreprise  
  [Règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
  [Créer et publier une règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
@@ -57,7 +62,8 @@ caps.handback.revision: 9
   
  [Actions de règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Application Web Master Data Manager](../master-data-services/master-data-manager-web-application.md)  
   
   
+

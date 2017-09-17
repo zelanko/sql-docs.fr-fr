@@ -22,11 +22,11 @@ caps.latest.revision: 66
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bbb8b979ba447263a450a9ac4e617977619298a3
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 24d344d6dc7f42ed57c53442f7fada245d25c65a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Gestion de clés extensible à l'aide d'Azure Key Vault (SQL Server)
@@ -36,8 +36,8 @@ ms.lasthandoff: 06/22/2017
   
  Cette rubrique décrit le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Des informations supplémentaires sont disponibles dans les rubriques [Étapes de la configuration de la gestion de clés extensible à l’aide d’Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md), [Utiliser le connecteur SQL Server avec les fonctionnalités de chiffrement SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)et [Résolution des problèmes et maintenance du connecteur SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
   
-##  <a name="Uses"></a> Qu’est-ce que la gestion de clés extensible et pourquoi l’utiliser ?  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit plusieurs types de chiffrement qui permettent de protéger les données sensibles, notamment le [chiffrement transparent des données &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md), le [chiffrement au niveau colonne](../../../t-sql/functions/cryptographic-functions-transact-sql.md) (CLE) et le [chiffrement de sauvegarde](../../../relational-databases/backup-restore/backup-encryption.md). Dans tous ces cas, dans cette hiérarchie de clés classique, les données sont chiffrées à l’aide d’une clé de chiffrement de données symétrique. La clé de chiffrement de données symétrique est ensuite protégée en la chiffrant avec une hiérarchie de clés stockées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Au lieu de ce modèle, l’alternative est le modèle de fournisseur EKM. L’utilisation de l’architecture du fournisseur EKM permet à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de protéger les clés de chiffrement de données à l’aide d’une clé asymétrique stockée en dehors de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , dans un fournisseur de services de chiffrement externe. Ce modèle ajoute une couche de sécurité supplémentaire et sépare la gestion des clés et des données.  
+##  <a name="Uses"></a> Qu’est-ce que la gestion de clés extensible et pourquoi l’utiliser ?  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit plusieurs types de chiffrement qui permettent de protéger les données sensibles, notamment le [chiffrement transparent des données &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md), le [chiffrement au niveau colonne](../../../t-sql/functions/cryptographic-functions-transact-sql.md) (CLE) et le [chiffrement de sauvegarde](../../../relational-databases/backup-restore/backup-encryption.md). Dans tous ces cas, dans cette hiérarchie de clés classique, les données sont chiffrées à l’aide d’une clé de chiffrement de données symétrique. La clé de chiffrement de données symétrique est ensuite protégée en la chiffrant avec une hiérarchie de clés stockées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Au lieu de ce modèle, l’alternative est le modèle de fournisseur EKM. L’utilisation de l’architecture du fournisseur EKM permet à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de protéger les clés de chiffrement de données à l’aide d’une clé asymétrique stockée en dehors de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , dans un fournisseur de services de chiffrement externe. Ce modèle ajoute une couche de sécurité supplémentaire et sépare la gestion des clés et des données.  
    
  L’illustration suivante compare la hiérarchie de clés de gestion de service classique au système Azure Key Vault.  
   

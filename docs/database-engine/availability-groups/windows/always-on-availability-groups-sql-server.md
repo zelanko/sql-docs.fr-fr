@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 519a66344458046238aa4c8ce1b901fe84bacc7f
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 03997ff880842e2cb088ee5f79237a517aca9abb
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Groupes de disponibilité Always On (SQL Server)
@@ -89,28 +89,28 @@ ms.lasthandoff: 08/02/2017
     -   Applets de commande PowerShell. Pour plus d’informations, consultez [Vue d’ensemble des applets de commande PowerShell pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="TermsAndDefinitions"></a> Termes et définitions  
- groupe de disponibilité  
+ **groupe de disponibilité**  
  Conteneur d’un ensemble de bases de données ( *bases de données de disponibilité*) qui basculent ensemble.  
   
- Base de données de disponibilité  
+ **base de données de disponibilité**  
  Base de données qui appartient à un groupe de disponibilité. Pour chaque base de données de disponibilité, le groupe de disponibilité conserve une seule copie en lecture-écriture (la *base de données primaire*) et une à huit copies en lecture seule (les*bases de données secondaires*).  
   
- base de données primaire  
+ **base de données primaire**  
  Copie en lecture-écriture d'une base de données de disponibilité.  
   
- base de données secondaire  
+ **base de données secondaire**  
  Copie en lecture seule d'une base de données de disponibilité.  
   
- réplica de disponibilité  
+ **réplica de disponibilité**  
  Instanciation d'un groupe de disponibilité hébergé par une instance spécifique de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et qui conserve une copie locale de chaque base de données de disponibilité appartenant au groupe de disponibilité. Il existe deux types de réplicas de disponibilité : un seul *réplica principal* et un à huit *réplicas secondaires*.  
   
- réplica principal  
+ **réplica principal**  
  Réplica de disponibilité qui rend les bases de données primaires disponibles pour les connexions en lecture-écriture à partir des clients et envoie également des enregistrements du journal des transactions pour chaque base de données primaire à chaque réplica secondaire.  
   
- réplica secondaire  
+ **réplica secondaire**  
  Réplica de disponibilité qui conserve une copie secondaire de chaque base de données de disponibilité, et sert de cible potentielle d'un basculement du groupe de disponibilité. Éventuellement, un réplica secondaire peut prendre en charge l'accès en lecture seule et la création de sauvegardes sur des bases de données secondaires.  
   
- écouteur de groupe de disponibilité  
+ **écouteur de groupe de disponibilité**  
  Nom du serveur auquel les clients peuvent se connecter afin d’accéder à une base de données dans un réplica principal ou secondaire d’un groupe de disponibilité Always On. Les écouteurs de groupe de disponibilité dirigent les connexions entrantes vers un réplica principal ou un réplica secondaire en lecture seule.  
   
 > [!NOTE]  
@@ -125,7 +125,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [Bases de données à relation contenant-contenu](../../../relational-databases/databases/contained-databases.md)  
   
--   [Chiffrement de base de données](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)  
+-   [Chiffrement de base de données](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
 -   [Instantanés de base de données](../../../database-engine/availability-groups/windows/database-snapshots-with-always-on-availability-groups-sql-server.md)  
   

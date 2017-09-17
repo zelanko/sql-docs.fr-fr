@@ -1,5 +1,5 @@
 ---
-title: Affecter des autorisations de zone fonctionnelle (Master Data Services) | Documents Microsoft
+title: Affecter des autorisations de zone fonctionnelle (Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - functional area permissions [Master Data Services], assigning
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c69ca8461607a43151b6d0dfe2b3988e5f905c90
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 452fccef15919dafdac6d650a3b3cf5db4f2ffd9
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>Affecter des autorisations de zone fonctionnelle (Master Data Services)
@@ -50,10 +50,10 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>Étapes suivantes  
   
--   [Affecter des autorisations d’objet modèle &#40; Master Data Services &#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
+-   [Affecter des autorisations d’objet de modèle &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer un administrateur de modèle &#40; Master Data Services &#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
+ [Créer un administrateur de modèle &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [Sécurité &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

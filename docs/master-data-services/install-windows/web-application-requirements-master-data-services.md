@@ -1,5 +1,5 @@
 ---
-title: "Spécifications de l’Application (Master Data Services) de Web | Documents Microsoft"
+title: "Configuration requise pour l’application web (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 02/13/2017
@@ -14,20 +14,20 @@ keywords:
 - master data services
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 caps.latest.revision: 40
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b3ca26f48614ee2ed12275ec148dcaec3c044ce5
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e8e0c4a9f925192c79dcb998c159d311c80256c5
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="web-application-requirements-master-data-services"></a>Configuration requise pour l'application Web (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] est une application web hébergée par IIS (Internet Information Services). [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] fonctionne uniquement dans Internet Explorer 9 ou version ultérieure. Internet Explorer 8 et versions antérieures, Microsoft Edge et Chrome ne sont pas pris en charge.  
 
-**Pour obtenir des instructions sur la façon d’installer et configurer IIS**, consultez [installation et configuration de IIS](../../master-data-services/master-data-services-installation-and-configuration.md#InstallIIS).
+**Pour obtenir des instructions sur la façon d’installer et de configurer IIS**, consultez [Installation et configuration d’IIS](../../master-data-services/master-data-services-installation-and-configuration.md#InstallIIS).
   
  Utilisez [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] pour créer et configurer l'application Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] configure IIS sur l'ordinateur local, il est dont le mieux adapté aux tâches de configuration Web initiales. Par exemple, configurez un environnement [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] avec une application web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] unique, ou configurez la première application web dans un déploiement par montée en puissance parallèle de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Utilisez les outils IIS pour effectuer des tâches plus complexes, telles que la configuration de plusieurs serveurs Web dans un déploiement avec montée en puissance parallèle.  
   
@@ -77,13 +77,13 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
 |Type|Description|  
 |----------|-----------------|  
 |Compte Windows|Vous devez ouvrir une session sur l'ordinateur serveur Web avec un compte Windows qui a l'autorisation de configurer des rôles, des services de rôle et des fonctionnalités Windows, et créer et gérer des pools d'applications, des sites Web et des applications Web dans IIS sur l'ordinateur local.|  
-|Compte de service|Lorsque vous créez l'application Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] dans [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)], vous devez spécifier une identité pour le pool d'applications dans lequel elle s'exécute. Ce compte peut être différent du compte de service spécifié lors de la création de la base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .<br /><br /> Cette identité doit être un compte d'utilisateur de domaine et est ajoutée au rôle de base de données mds_exec dans la base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] pour l'accès aux bases de données. Pour plus d’informations, consultez [des connexions de base de données, des utilisateurs et rôles](../../master-data-services/database-logins-users-and-roles-master-data-services.md). Ce compte est également ajouté à un groupe Windows [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , **MDS_ServiceAccounts**, qui est autorisé à accéder au répertoire de compilation temporaire, **MDSTempDir**, dans le système de fichiers. Pour plus d’informations, consultez [Autorisations d’accès aux dossiers et aux fichiers &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md).|  
+|Compte de service|Lorsque vous créez l'application Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] dans [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)], vous devez spécifier une identité pour le pool d'applications dans lequel elle s'exécute. Ce compte peut être différent du compte de service spécifié lors de la création de la base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .<br /><br /> Cette identité doit être un compte d'utilisateur de domaine et est ajoutée au rôle de base de données mds_exec dans la base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] pour l'accès aux bases de données. Pour plus d’informations, consultez [Connexions, utilisateurs et rôles de base de données](../../master-data-services/database-logins-users-and-roles-master-data-services.md). Ce compte est également ajouté à un groupe Windows [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , **MDS_ServiceAccounts**, qui est autorisé à accéder au répertoire de compilation temporaire, **MDSTempDir**, dans le système de fichiers. Pour plus d’informations, consultez [Autorisations d’accès aux dossiers et aux fichiers &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Installer Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)   
       
  [Créer une application web Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
- [Page Configuration Web &#40; Gestionnaire de Configuration de Master Data Services &#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
+ [Page Configuration web &#40;Gestionnaire de configuration Master Data Services&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
   
 

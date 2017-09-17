@@ -1,5 +1,5 @@
 ---
-title: "Affecter un indicateur à une Version (Master Data Services) | Documents Microsoft"
+title: "Affecter un indicateur à une version (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - versions [Master Data Services], assigning flags
 ms.assetid: 6629ec7e-32e7-4a1e-8b31-eb43c5923766
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2fe233f28ef0fd602e775f90b5fae083a96a1848
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 74b49ecc3f49ca952e484af32ef98e4dac885655
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="assign-a-flag-to-a-version-master-data-services"></a>Affecter un indicateur à une version (Master Data Services)
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/02/2017
 4.  Appuyez sur ENTRÉE pour enregistrer la modification.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer un indicateur de Version &#40; Master Data Services &#41;](../master-data-services/create-a-version-flag-master-data-services.md)   
- [Versions &#40; Master Data Services &#41;](../master-data-services/versions-master-data-services.md)  
+ [Créer un indicateur de version &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)   
+ [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
   

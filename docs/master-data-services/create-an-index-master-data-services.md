@@ -1,5 +1,5 @@
 ---
-title: "Créer un Index (Master Data Services) | Documents Microsoft"
+title: "Créer un index (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a4d03606ab8a45d6c7b326fd64b6900ac7e67356
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ee405ebea31b8ca2a178b2d287a1ba1b8d4e97f8
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-an-index-master-data-services"></a>Créer un index (Master Data Services)
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/02/2017
   
 |Nom de la colonne|Description|  
 |-----------------|-----------------|  
-|État|État de l’index.<br /><br /> Lorsque vous cliquez sur **enregistrer**, le ![icône de mise à jour d’état](../master-data-services/media/mds-statusicon-updating.png "icône de mise à jour d’état") image s’affiche, indiquant que la mise à jour de l’index.<br /><br /> S’il existe des erreurs lors de la création ou la modification d’un index, le ![icône de statut d’erreur](../master-data-services/media/mds-statusicon-error.png "icône de statut d’erreur") image s’affiche.<br /><br /> Dans le cas contraire, l’état est OK et le ![icône pour l’état OK](../master-data-services/media/mds-statusicon-ok.png "icône pour l’état OK") image s’affiche.|  
+|État|État de l’index.<br /><br /> Quand vous cliquez sur **Enregistrer**, l’image ![Icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône d’état de mise à jour") s’affiche, indiquant que l’index est en cours de mise à jour.<br /><br /> Si des erreurs se produisent pendant la création ou la modification d’un index, l’image ![Icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") apparaît.<br /><br /> Sinon, l’état est OK ; dans cas, l’image ![Icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
 |Nom|Nom de l'index.|  
 |Est unique|Indique si l’index est unique.|  
 |Sur les attributs|Affiche les noms complets des attributs sur lesquels l’index est défini.|  

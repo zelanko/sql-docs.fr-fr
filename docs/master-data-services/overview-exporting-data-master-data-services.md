@@ -1,5 +1,5 @@
 ---
-title: "Vue d’ensemble : Exportation de données (Master Data Services) | Documents Microsoft"
+title: "Vue d’ensemble : exportation de données (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - subscription views [Master Data Services], about subscription views
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 caps.latest.revision: 12
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e22f2f7056bebc648b1ead5d577613e2f252bcbe
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 40f4ec6f9d1e30676dfba32288384a6f0b6fcc6e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="overview-exporting-data-master-data-services"></a>Vue d’ensemble : exportation de données [Master Data Services]
@@ -55,11 +55,11 @@ ms.lasthandoff: 08/02/2017
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
 |Créer une vue d'abonnement de vos données de référence.|[Créer une vue d’abonnement pour exporter des données &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)|  
-|Supprimer une vue d'abonnement existante.|[Supprimer une vue d’abonnement &#40; Master Data Services &#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)|  
+|Supprimer une vue d'abonnement existante.|[Supprimer une vue d’abonnement &#40;Master Data Services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenu connexe  
   
--   [Formats de vue d’abonnement &#40; Master Data Services &#41;](../master-data-services/subscription-view-formats-master-data-services.md)  
+-   [Formats de vue d’abonnement &#40;Master Data Services&#41;](../master-data-services/subscription-view-formats-master-data-services.md)  
   
 -   [Vues](../relational-databases/views/views.md)  
   

@@ -1,8 +1,10 @@
 ---
 title: "Installer SQL Server 2016 avec l’Assistant Installation (programme d’installation) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.date: 09/06/2016
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -19,31 +21,33 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bc6e45c9947ec5601ff6fc54e0babbc5073ccb3a
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: b97afc1f7fd9464e5ef5074e9e2b3d1ccb98d4b0
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installer SQL Server à partir de l’Assistant Installation (programme d’installation)
 
- > Pour consulter le contenu relatif aux versions précédentes de SQL Server, consultez [Installer SQL Server 2014 à partir de l’Assistant Installation (programme d’installation)](https://msdn.microsoft.com/en-US/library/ms143219(SQL.120).aspx).
+ > Cet article explique comment installer SQL Server avec l’Assistant Installation. Il s’applique à [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] et [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]. Pour consulter le contenu relatif aux versions précédentes de SQL Server, consultez [Installer SQL Server 2014 à partir de l’Assistant Installation (programme d’installation)](http://msdn.microsoft.com/library/ms143219(SQL.120).aspx).
 
-  Cette rubrique fournit une procédure d'installation pas à pas d'une nouvelle instance [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] avec l'Assistant Installation du programme d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit une seule arborescence de fonctionnalités pour l'installation de tous les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ce qui vous évite d'installer individuellement les composants. Pour plus d’informations sur les différents composants qui peuvent être installés, consultez [Installation de SQL Server 2016](../../database-engine/install-windows/installation-for-sql-server-2016.md).  Pour plus d’informations sur l’installation individuelle des composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Installer SQL Server 2016](../../database-engine/install-windows/install-sql-server.md).  
+Cette rubrique fournit une procédure d'installation pas à pas d'une nouvelle instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec l'Assistant Installation du programme d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit une seule arborescence de fonctionnalités pour l'installation de tous les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ce qui vous évite d'installer individuellement les composants. Pour plus d’informations sur l’installation individuelle des composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Installer SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components).  
 
  Ces rubriques supplémentaires décrivent d'autres façons d'installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
 
--   [Installer SQL Server 2016 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
+-   [Installer SQL Server à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
--   [Installer SQL Server 2016 à l’aide d’un fichier de configuration](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)  
+-   [Installer SQL Server à l’aide d’un fichier de configuration](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)  
   
--   [Installation de SQL Server 2016 à l’aide de SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)  
+-   [Installer SQL Server à l’aide de SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)  
   
 -   [Créer un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   
--   [Effectuer une mise à niveau vers SQL Server 2016 à l’aide de l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md) 
+-   [Mettre à niveau SQL Server à l’aide de l’Assistant Installation &#40;Installation&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md) 
 
--   [Installer les éditions gratuites de SQL Server 2016 directement à partir d’Internet](../../database-engine/install-windows/install-sql-server.md) 
+## <a name="get-the-installation-media"></a>Obtenir le média d’installation
+
+[!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
   
 ## <a name="prerequisites"></a>Conditions préalables  
  Avant d’installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez les rubriques dans [Planification d’une installation SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
@@ -53,31 +57,35 @@ ms.lasthandoff: 08/02/2017
  
  ###  <a name="bkmk_ga_instalpatch"></a> Installer le correctif obligatoire 
 
-Microsoft a identifié un problème avec la version spécifique des fichiers binaires Microsoft VC++ 2013 Runtime qui sont installés en tant que composants requis par SQL Server 2016. Si cette mise à jour des fichiers binaires du runtime VC n’est pas installée, SQL Server 2016 risque de rencontrer des problèmes de stabilité dans certains scénarios. Avant d’installer SQL Server 2016, suivez les instructions données dans [Notes de publication de SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) pour voir si votre ordinateur nécessite un correctif pour les fichiers binaires du runtime VC. 
+Microsoft a identifié un problème avec la version spécifique des fichiers binaires Microsoft VC++ 2013 Runtime qui sont installés en tant que composants requis par SQL Server. Si cette mise à jour des fichiers binaires du runtime VC n’est pas installée, SQL Server risque de rencontrer des problèmes de stabilité dans certains scénarios. Avant d’installer SQL Server, suivez les instructions données dans [Notes de publication de SQL Server](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) pour voir si votre ordinateur nécessite un correctif pour les fichiers binaires du runtime VC.  
   
-## <a name="to-install-includesscurrentincludessscurrent-mdmd"></a>Pour installer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="to-install-includessnoversionincludesssnoversion-mdmd"></a>Pour installer [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]  
   
 1.  Insérez le support d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Dans le dossier racine, double-cliquez sur Setup.exe. Pour effectuer l'installation à partir d'un partage réseau, recherchez le dossier racine sur le partage, puis double-cliquez sur Setup.exe.  
   
-2.  L'Assistant Installation exécute le Centre d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour créer une nouvelle installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cliquez sur **Installation** dans la zone de navigation gauche, puis cliquez sur **Nouvelle installation autonome [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou ajout de fonctionnalités à une installation existante**.  
-  
-3.  Dans la page Clé du produit, sélectionnez selon le cas l'option correspondant à l'installation d'une édition gratuite de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'une version de production du produit avec clé PID. Pour plus d’informations, consultez [Éditions et composants de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
+1.  L'Assistant Installation exécute le Centre d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour créer une nouvelle installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cliquez sur **Installation** dans la zone de navigation gauche, puis cliquez sur **Nouvelle installation autonome [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou ajout de fonctionnalités à une installation existante**.  
+
+1.  Dans la page Clé du produit, sélectionnez selon le cas l'option correspondant à l'installation d'une édition gratuite de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'une version de production du produit avec clé PID. Pour plus d’informations, consultez [Éditions et fonctionnalités prises en charge de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
      Pour continuer, cliquez sur **Suivant**.  
+
+1.  Dans la page Termes du contrat de licence, prenez connaissance du contrat de licence et, si vous en acceptez les termes, activez la case à cocher **J'accepte les termes du contrat de licence.** , puis cliquez sur **Suivant**. Pour aider à améliorer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez également activer l'option d'utilisation des fonctionnalités et envoyer des rapports à [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
-4.  Dans la page Termes du contrat de licence, prenez connaissance du contrat de licence et, si vous en acceptez les termes, activez la case à cocher **J'accepte les termes du contrat de licence.** , puis cliquez sur **Suivant**. Pour aider à améliorer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez également activer l'option d'utilisation des fonctionnalités et envoyer des rapports à [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+1.  Dans la fenêtre Règles globales, la procédure d'installation passera automatiquement à la fenêtre Mises à jour du produit s'il n'existe aucune erreur de règle.  
   
-5.  Dans la fenêtre Règles globales, la procédure d'installation passera automatiquement à la fenêtre Mises à jour du produit s'il n'existe aucune erreur de règle.  
+1.  La page [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update s'affiche si la case à cocher [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update n'est pas activée dans Panneau de configuration\Tous les éléments du Panneau de configuration\Windows Update\Modifier les paramètres. Une coche sur la page [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update permet de modifier les paramètres de l'ordinateur de façon à inclure les dernières mises à jour lorsque vous recherchez les mises à jour de Windows.  
+
+1.  Dans la page Mises à jour du produit, les dernières mises à jour disponibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'affichent. Si aucune mise à jour du produit n'est découverte, le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'affiche pas cette page et passe automatiquement à la page **Installer les fichiers d'installation** .  
+
+1.  Sur la page Installer les fichiers d'installation, le programme d'installation fournit la progression du téléchargement, de l'extraction et de l'installation des fichiers d'installation. Si une mise à jour de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est trouvée, et est spécifiée pour être incluse, cette mise à jour est également installée. Si aucune mise à jour n’est trouvée, le programme d’installation progresse automatiquement. 
   
-6.  La page [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update s'affiche si la case à cocher [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update n'est pas activée dans Panneau de configuration\Tous les éléments du Panneau de configuration\Windows Update\Modifier les paramètres. Une coche sur la page [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update permet de modifier les paramètres de l'ordinateur de façon à inclure les dernières mises à jour lorsque vous recherchez les mises à jour de Windows.  
+1. Dans les **Règles d’installation**, le programme d’installation de SQL Server vérifie si des problèmes affectent l’exécution de l’installation. En cas d’échec, cliquez sur la colonne **État** pour plus d’informations. Sinon, cliquez sur **Suivant**. 
+
+1. Pour **Type d’installation**, indiquez si vous souhaitez effectuer une nouvelle installation ou ajouter des fonctionnalités à une installation existante. Cliquez sur **Suivant**. 
   
-7.  Dans la page Mises à jour du produit, les dernières mises à jour disponibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'affichent. Si aucune mise à jour du produit n'est découverte, le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'affiche pas cette page et passe automatiquement à la page **Installer les fichiers d'installation** .  
-  
-8.  Sur la page Installer les fichiers d'installation, le programme d'installation fournit la progression du téléchargement, de l'extraction et de l'installation des fichiers d'installation. Si une mise à jour de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est trouvée, et est spécifiée pour être incluse, cette mise à jour est également installée.  
-  
-9. Dans la page Rôle d’installation, sélectionnez **Installation de fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**, puis cliquez sur **Suivant** pour passer à la page Sélection des fonctionnalités.  
-  
-10. Dans la page Sélection de fonctionnalités, sélectionnez les composants que vous voulez installer. Une description de chaque groupe de composants apparaît dans le volet **Description du composant** une fois que vous avez sélectionné le nom de la fonctionnalité. Vous pouvez choisir n'importe quelle combinaison de cases à cocher. Pour plus d’informations, consultez [Éditions et composants de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) et [Éditions et fonctionnalités prises en charge de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+1. Dans la page Sélection de fonctionnalités, sélectionnez les composants que vous voulez installer. Par exemple, pour installer une nouvelle instance du moteur de base de données SQL Server, cochez la case **Services Moteur de base de données**.
+
+    Une description de chaque groupe de composants apparaît dans le volet **Description du composant** une fois que vous avez sélectionné le nom de la fonctionnalité. Vous pouvez choisir n'importe quelle combinaison de cases à cocher. Pour plus d’informations, consultez [Éditions et composants de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) et [Éditions et fonctionnalités prises en charge de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
   
      La configuration requise pour les fonctionnalités sélectionnées est affichée dans le volet **Configuration requise pour les composants sélectionnés** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe les composants requis qui n'ont pas déjà été installés lors de l'étape d'installation décrite plus loin dans cette procédure.  
   
@@ -85,11 +93,11 @@ Microsoft a identifié un problème avec la version spécifique des fichiers bin
   
      Le chemin d'accès spécifié pour les composants partagés doit être un chemin d'accès absolu. Le dossier ne doit pas être compressé ni chiffré. Les lecteurs mappés ne sont pas pris en charge.  
   
-     Si vous installez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un système d'exploitation 64 bits, vous verrez les options suivantes :  
+     SQL Server utilise deux répertoires pour les fonctionnalités partagées :
   
-    1.  Répertoire des fonctionnalités partagées  
+     * Répertoire des fonctionnalités partagées  
   
-    2.  Répertoire des fonctionnalités partagées (x86)  
+     * Répertoire des fonctionnalités partagées (x86)  
   
      Le chemin d'accès spécifié pour chacune des options ci-dessus doit être différent.  
   
@@ -100,11 +108,11 @@ Microsoft a identifié un problème avec la version spécifique des fichiers bin
      **ID d'instance** — Par défaut, le nom de l'instance est utilisé comme ID d'instance. Il permet d'identifier les répertoires d'installation et les clés de Registre de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tel est le cas pour les instances par défaut et les instances nommées. Pour une instance par défaut, le nom de l'instance et l'ID d'instance sont MSSQLSERVER. Pour utiliser un ID d’instance non défini par défaut, spécifiez une autre valeur dans la zone de texte **ID d’instance** .  
   
     > [!NOTE]  
-    >  Les instances autonomes classiques de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], qu’il s’agisse d’instances par défaut ou d’instances nommées, n’utilisent pas de valeur non définie par défaut pour l’ **ID d’instance**.  
+    >  Les instances autonomes classiques de [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)], qu’il s’agisse d’instances par défaut ou d’instances nommées, n’utilisent pas de valeur non définie par défaut pour l’ **ID d’instance**.  
   
      Tous les Service Packs et mises à niveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'appliqueront à chaque composant d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     **Instances installées** — La grille affiche les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui se trouvent sur l'ordinateur où le programme d'installation s'exécute. Si une instance par défaut est déjà installée sur l'ordinateur, vous devez installer une instance nommée de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+     **Instances installées** — La grille affiche les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui se trouvent sur l'ordinateur où le programme d'installation s'exécute. Si une instance par défaut est déjà installée sur l'ordinateur, vous devez installer une instance nommée de [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)].  
   
      Le flux de travail du reste de l'installation dépend des fonctionnalités que vous avez spécifiées pour votre installation. Il est possible que les pages ne soient pas toutes visibles, en fonction de vos sélections.  
   

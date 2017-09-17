@@ -1,5 +1,5 @@
 ---
-title: "Fonctionnalités Master Data Services et tâches | Documents Microsoft"
+title: "Fonctionnalités et tâches Master Data Services | Microsoft Docs"
 ms.custom: 
 ms.date: 04/01/2016
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fdf3bd232ff92759bee00d20ed26879d700ed59b
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: afc9e1fc978556d7a454319cdfc661115f373925
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="master-data-services-features-and-tasks"></a>Fonctionnalités et tâches Master Data Services
@@ -26,39 +26,39 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="create-structures-to-contain-data"></a>Créer des structures pour contenir des données  
   
--   [Modèles (Master Data Services)](../master-data-services/models-master-data-services.md)  
+-   [Modèles &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)  
   
--   [Entités (Master Data Services)](../master-data-services/entities-master-data-services.md)  
+-   [Entités &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
--   [Attributs &#40; Master Data Services &#41;](../master-data-services/attributes-master-data-services.md)  
+-   [Attributs &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
--   [Attributs basés sur un domaine &#40; Master Data Services &#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
+-   [Attributs basés sur un domaine &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [Groupes d’attributs &#40; Master Data Services &#41;](../master-data-services/attribute-groups-master-data-services.md)  
+-   [Groupes d’attributs &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)  
   
 ## <a name="maintain-master-data"></a>Conserver les données de référence  
   
 -   [Complément Master Data Services pour Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
   
--   [Les membres &#40; Master Data Services &#41;](../master-data-services/members-master-data-services.md)  
+-   [Membres &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
--   [Transactions (Master Data Services)](../master-data-services/transactions-master-data-services.md)  
+-   [Transactions &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
--   [Annotations &#40; Master Data Services &#41;](../master-data-services/annotations-master-data-services.md)  
+-   [Annotations &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)  
   
--   [Hiérarchies &#40; Master Data Services &#41;](../master-data-services/hierarchies-master-data-services.md)  
+-   [Hiérarchies &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md)  
   
--   [Collections de &#40; Master Data Services &#41;](../master-data-services/collections-master-data-services.md)  
+-   [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
 ## <a name="improve-data-quality"></a>Améliorer la qualité des données  
   
--   [Les règles d’entreprise &#40; Master Data Services &#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [Règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
--   [Validation &#40; Master Data Services &#41;](../master-data-services/validation-master-data-services.md)  
+-   [Validation &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
--   [Versions &#40; Master Data Services &#41;](../master-data-services/versions-master-data-services.md)  
+-   [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
--   [Notifications &#40; Master Data Services &#41;](../master-data-services/notifications-master-data-services.md)  
+-   [Notifications &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
   
 -   [Sécurité &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   

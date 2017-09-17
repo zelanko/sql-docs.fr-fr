@@ -1,5 +1,5 @@
 ---
-title: "Créer le profil de messagerie de base de données et de la boîte de dialogue compte | Documents Microsoft"
+title: "Boîte de dialogue Créer un compte et un profil de messagerie de base de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ f1_keywords:
 - sql13.mds.configmanager.dbmailprofileacct.f1
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e8f05588d7ad0a4ab6b723f495a34b5343caab63
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 240967b3909a2b3796534cb29c42dfa5838be692
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>Boîte de dialogue Créer un compte et un profil de messagerie de base de données
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/02/2017
 |------------------|-----------------|  
 |**Adresse de messagerie**|Tapez le nom de l'adresse de messagerie du compte. Il s’agit de l’adresse e-mail à partir de laquelle cet e-mail est envoyé, dont le format doit être *nom_e-mail*@*nom_domaine*. Un exemple d’adresse e-mail est sales@contoso.com.|  
 |**Nom complet**|Paramètre facultatif. Tapez le nom à afficher sur les messages électroniques envoyés à partir de ce compte. Un exemple de nom complet est Contoso Sales Group.|  
-|**Adresse de messagerie pour la réponse**|Paramètre facultatif. Tapez l'adresse de messagerie à utiliser pour répondre aux messages envoyés à partir de ce compte. Une adresse de messagerie de réponse exemple est admin@contoso.com.|  
+|**Adresse de messagerie pour la réponse**|Paramètre facultatif. Tapez l'adresse de messagerie à utiliser pour répondre aux messages envoyés à partir de ce compte. Un exemple d’adresse de réponse est admin@contoso.com.|  
 |**Serveur SMTP**|Tapez le nom ou l’adresse IP du serveur SMTP utilisé par le compte pour envoyer des e-mails. Un exemple de format de serveur SMTP est **smtp.***<nom_société>***.com**. Pour plus d'informations, contactez l'administrateur de messagerie.|  
 |**Numéro de port**|Tapez le numéro de port du serveur SMTP de ce compte. Le port SMTP par défaut est le port 25.|  
 |**Ce serveur demande une connexion sécurisée (SSL)**|Chiffre la communication au moyen de SSL (Secure Sockets Layer).|  
@@ -62,6 +62,6 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Page Configuration de base de données &#40;Gestionnaire de configuration Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
-[Configuration et Installation de Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)
+[Installation et configuration de Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Valider une Version par rapport aux règles d’entreprise (Master Data Services) | Documents Microsoft"
+title: "Valider une version par rapport aux règles d’entreprise (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - business rules [Master Data Services], applying to all members
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 036659fbe3b6cafd1272180bbd37737062ed0967
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 2a31c8b91872276636addc25c673f07ba5b11bc7
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>Valider une version par rapport aux règles d'entreprise (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], validez une version pour appliquer des règles d’entreprise à tous les membres dans la version de modèle.  
   
- Cette procédure explique comment utiliser l’application web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] pour valider les données. Si vous avez l'autorisation dans la base de données MDS, vous pouvez utiliser une procédure stockée à la place. Pour plus d’informations, consultez [Validation Stored Procedure &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
+ Cette procédure explique comment utiliser l’application web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] pour valider les données. Si vous avez l'autorisation dans la base de données MDS, vous pouvez utiliser une procédure stockée à la place. Pour plus d’informations, consultez [Procédure stockée de validation &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
 > [!NOTE]  
 >  Tous les membres doivent passer la validation avant qu'une version puisse être validée.  
@@ -62,13 +62,13 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>Étapes suivantes  
   
--   [Verrouiller une Version &#40; Master Data Services &#41;](../master-data-services/lock-a-version-master-data-services.md)  
+-   [Verrouiller une version &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [États de validation &#40; Master Data Services &#41;](../master-data-services/validation-statuses-master-data-services.md)   
- [Stockée de validation Procedure &#40; Master Data Services &#41;](../master-data-services/validation-stored-procedure-master-data-services.md)   
- [Versions &#40; Master Data Services &#41;](../master-data-services/versions-master-data-services.md)   
- [Les règles d’entreprise &#40; Master Data Services &#41;](../master-data-services/business-rules-master-data-services.md)   
- [Valider des membres spécifiques par rapport aux règles d’entreprise &#40; Master Data Services &#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+ [États de validation &#40;Master Data Services&#41;](../master-data-services/validation-statuses-master-data-services.md)   
+ [Procédure stockée de validation &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)   
+ [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
+ [Règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
+ [Valider des membres spécifiques par rapport aux règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
   

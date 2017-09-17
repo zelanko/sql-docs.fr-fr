@@ -1,5 +1,5 @@
 ---
-title: "Exporter et importer des Bases de connaissances DQS à l’aide de DQSInstaller.exe | Documents Microsoft"
+title: "Exporter et importer des bases de connaissances DQS à l’aide de DQSInstaller.exe | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,11 +14,11 @@ caps.latest.revision: 9
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e85b9553a3300f51f52fab300642f15f3f08617f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Exporter et importer des bases de connaissances DQS à l'aide de DQSInstaller.exe
@@ -59,9 +59,9 @@ dqsinstaller.exe –importkbs c:\DQSBackup.dqsb
  Si votre [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] contient des bases de connaissances portant le même nom que celles que vous importez, les noms des bases de connaissances importées sont complétés par un trait de soulignement (_) suivi d'une valeur entière en commençant par 1. Par exemple, si le domaine « CompanyName » apparaît deux fois, le nom de domaine importé est « CompanyName_1 ».  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exécuter DQSInstaller.exe pour terminer l’Installation du serveur DQS](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
+ [Run DQSInstaller.exe to Complete Data Quality Server Installation](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [Installer Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [Exporter une Base de connaissances vers un fichier .dqs](../../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)   
- [Importer une Base de connaissances à partir d’un fichier .dqs](../../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)  
+ [Exporter une base de connaissances vers un fichier .dqs](../../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)   
+ [Importer une base de connaissances à partir d’un fichier .dqs](../../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Tâches d’installation de Master Data Services | Documents Microsoft"
+title: "Tâches d’installation pour Master Data Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/24/2017
 ms.prod: sql-server-2016
@@ -11,18 +11,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
 caps.latest.revision: 32
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f810e987b5cebe9f4b790e298725d1593499e7ee
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ffeb77252907d7b2dfae4c60491ee6d9b239e641
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="installation-tasks-for-master-data-services"></a>Tâches d’installation de Master Data Services
-  Cet article fournit une vue d’ensemble des tâches d’installation, avec des liens vers des instructions. Pour connaître la procédure d’installation et de configuration de Master Data Services, consultez [Installation de Services de données principale et la Configuration](../../master-data-services/master-data-services-installation-and-configuration.md) 
+# <a name="installation-tasks-for-master-data-services"></a>Tâches d’installation pour Master Data Services
+  Cet article fournit une vue d’ensemble des tâches d’installation, avec des liens vers des instructions. Pour connaître la procédure d’installation et de configuration de Master Data Services, consultez [Installation et configuration de Master Data Services](../../master-data-services/master-data-services-installation-and-configuration.md). 
   
 -   [Tâches de pré-installation](#preinstall): permettent de vérifier la configuration requise avant d’installer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/02/2017
   
 |Action|Détails|Rubriques connexes|  
 |------------|-------------|--------------------|  
-|Ouvrir [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] pour terminer les opérations consécutives à l'installation|Une fois l'installation terminée, ouvrez [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]. [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] effectue les opérations de post-installation suivantes sur l’ordinateur local :<br /><br /> Création d’un groupe Windows, **MDS_ServiceAccounts**, pour contenir les comptes de service [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] pour les pools d’applications.<br /><br /> Sous le chemin d’installation de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , création du dossier MDSTempDir et affectation des autorisations pour **MDS_ServiceAccounts**. Ce dossier est l’endroit où les fichiers de compilation temporaires sont compilés pour l’application web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .<br /><br /> Dans le [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] le fichier Web.config, configure le **tempDirectory** attribut de la  **\<compilation >** élément avec le chemin d’accès au dossier MDSTempDir.|[Autorisations d’accès aux dossiers et aux fichiers &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)<br /><br /> [Référence de la configuration web &#40;Master Data Services&#41;](../../master-data-services/web-configuration-reference-master-data-services.md)|  
+|Ouvrir [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] pour terminer les opérations consécutives à l'installation|Une fois l'installation terminée, ouvrez [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]. [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] effectue les opérations de post-installation suivantes sur l’ordinateur local :<br /><br /> Création d’un groupe Windows, **MDS_ServiceAccounts**, pour contenir les comptes de service [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] pour les pools d’applications.<br /><br /> Sous le chemin d’installation de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , création du dossier MDSTempDir et affectation des autorisations pour **MDS_ServiceAccounts**. Ce dossier est l’endroit où les fichiers de compilation temporaires sont compilés pour l’application web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .<br /><br /> Dans le fichier Web.config [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], configuration de l’attribut **tempDirectory** de l’élément **\<compilation>** avec le chemin du dossier MDSTempDir.|[Autorisations d’accès aux dossiers et aux fichiers &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)<br /><br /> [Référence de la configuration web &#40;Master Data Services&#41;](../../master-data-services/web-configuration-reference-master-data-services.md)|  
 |Créer une base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|Utilisez [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] pour créer une base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] pour vos données de référence.|[Créer une base de données Master Data Services](../../master-data-services/install-windows/create-a-master-data-services-database.md)|  
 |Créer une application Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]|Utilisez [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] pour créer et configurer une application Web qui hébergera [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|[Créer une application web Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)|  
 |Associer une base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] à une application Web|Utilisez [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] pour associer votre application Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] à votre base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|[Associer une base de données Master Data Services et une application Web](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)|  
