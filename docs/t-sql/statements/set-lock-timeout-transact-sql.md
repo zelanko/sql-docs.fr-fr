@@ -1,7 +1,7 @@
 ---
 title: SET LOCK_TIMEOUT (Transact-SQL) | Documents Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/11/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -29,10 +29,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ff2f355774338fc94a37411a74706c9b46b7c256
+ms.sourcegitcommit: 754242a86367b07b98caa9f70f457b70d0840075
+ms.openlocfilehash: 3de86c7f33afd6e708ad8e773470ec650e092d2c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="set-locktimeout-transact-sql"></a>SET LOCK_TIMEOUT (Transact-SQL)
@@ -45,8 +45,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SET LOCK_TIMEOUT timeout_period  
 ```  
   
@@ -70,10 +68,10 @@ SET LOCK_TIMEOUT timeout_period
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-set-the-lock-timeout-to-1800-seconds"></a>R : la valeur 1 800 secondes le délai d’attente de verrou  
+### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>R : définir le délai d’attente de verrou à 1 800 millisecondes  
  L'exemple suivant définit le délai d'attente de déverrouillage à `1800` millisecondes.  
   
-```  
+```sql  
 SET LOCK_TIMEOUT 1800;  
 GO  
 ```  
@@ -83,13 +81,13 @@ GO
 ### <a name="b-set-the-lock-timeout-to-wait-forever-for-a-lock-to-be-released"></a>B. Définir le délai d’attente de verrou pour attendre indéfiniment un verrou soit libéré.  
  L’exemple suivant définit le délai d’attente de verrou pour attendre indéfiniment et ne jamais expirer. Il s’agit du comportement par défaut qui est déjà défini au début de chaque connexion.  
   
-```  
+```sql  
 SET LOCK_TIMEOUT -1;  
 ```  
   
  L'exemple suivant définit le délai d'attente de déverrouillage à `1800` millisecondes. Dans cette version, [!INCLUDE[ssDW](../../includes/ssdw-md.md)] sera analyser l’instruction avec succès, mais ignore la valeur 1800 et continuer à utiliser le comportement par défaut.  
   
-```  
+```sql  
 SET LOCK_TIMEOUT 1800;  
 ```  
   

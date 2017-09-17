@@ -1,7 +1,7 @@
 ---
 title: ROLLBACK TRANSACTION (Transact-SQL) | Documents Microsoft
 ms.custom: 
-ms.date: 06/10/2016
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -29,10 +29,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e31f62560b4061610c0d3c0ec3147110a3e84644
+ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
+ms.openlocfilehash: 7a7cf37490b1dab17a061104ab14b5d11d26632d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
@@ -46,7 +46,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 ROLLBACK { TRAN | TRANSACTION }   
      [ transaction_name | @tran_name_variable  
      | savepoint_name | @savepoint_variable ]   
@@ -74,7 +73,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
  ROLLBACK TRANSACTION ne peut pas référencer un *savepoint_name* dans les transactions distribuées démarrées explicitement avec BEGIN DISTRIBUTED TRANSACTION, soit découlant d’une transaction locale.  
   
- Une transaction ne peut pas être annulée après l'exécution d'une instruction COMMIT TRANSACTION, sauf lorsque l'instruction COMMIT TRANSACTION est associée à une transaction imbriquée qui est contenue dans la transaction restaurée. Dans ce cas, la transaction imbriquée est également restaurée, même si vous avez émis une instruction COMMIT TRANSACTION.  
+ Une transaction ne peut pas être annulée après l'exécution d'une instruction COMMIT TRANSACTION, sauf lorsque l'instruction COMMIT TRANSACTION est associée à une transaction imbriquée qui est contenue dans la transaction restaurée. Dans ce cas, la transaction imbriquée est est restaurée, même si vous avez émis une instruction COMMIT TRANSACTION pour celle-ci.  
   
  Dans une transaction, les noms de point d'enregistrement dupliqués sont autorisés. Toutefois, une instruction ROLLBACK TRANSACTION contenant un nom de point d'enregistrement en double n'effectue l'annulation que jusqu'à l'instruction SAVE TRANSACTION la plus récente utilisant ce nom de point d'enregistrement.  
   
@@ -89,11 +88,11 @@ ROLLBACK { TRAN | TRANSACTION }
   
 -   aucune instruction du traitement suivant celle qui a activé le déclencheur n'est exécutée.  
   
- @@TRANCOUNT est incrémenté d’un à l’entrée d’un déclencheur, même en mode autocommit. (Le système traite un déclencheur comme une transaction imbriquée implicite).  
+@@TRANCOUNT est incrémenté d’un à l’entrée d’un déclencheur, même en mode autocommit. (Le système traite un déclencheur comme une transaction imbriquée implicite).  
   
- Les instructions ROLLBACK TRANSACTION contenues dans des procédures stockées n'affectent pas les instructions suivantes dans le traitement qui a appelé la procédure ; les instructions suivantes du traitement sont exécutées. Les instructions ROLLBACK TRANSACTION figurant dans des déclencheurs terminent le traitement contenant l'instruction qui a activé le déclencheur ; les instructions suivantes du traitement ne sont pas exécutées.  
+Les instructions ROLLBACK TRANSACTION contenues dans des procédures stockées n'affectent pas les instructions suivantes dans le traitement qui a appelé la procédure ; les instructions suivantes du traitement sont exécutées. Les instructions ROLLBACK TRANSACTION figurant dans des déclencheurs terminent le traitement contenant l'instruction qui a activé le déclencheur ; les instructions suivantes du traitement ne sont pas exécutées.  
   
- Les effets d'une instruction ROLLBACK sur les curseurs sont définis par les trois règles suivantes :  
+Les effets d'une instruction ROLLBACK sur les curseurs sont définis par les trois règles suivantes :  
   
 1.  avec CURSOR_CLOSE_ON_COMMIT à ON, ROLLBACK ferme tous les curseurs ouverts, sans les désallouer ;  
   
@@ -108,21 +107,15 @@ ROLLBACK { TRAN | TRANSACTION }
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant montre l'effet de la restauration d'une transaction nommée.  
+ L'exemple suivant montre l'effet de la restauration d'une transaction nommée. Après avoir créé une table, les instructions suivantes démarre une transaction nommée, insérer deux lignes, puis restaurer la transaction nommée dans la variable @TransactionName. Une autre instruction en dehors de la transaction nommée insère deux lignes. La requête retourne les résultats de ces instructions.   
   
-```  
+```sql    
 USE tempdb;  
 GO  
-CREATE TABLE ValueTable ([value] int;)  
+CREATE TABLE ValueTable ([value] int);  
 GO  
   
 DECLARE @TransactionName varchar(20) = 'Transaction1';  
-  
---The following statements start a named transaction,  
---insert two rows, and then roll back  
---the transaction named in the variable @TransactionName.  
---Another statement outside of the named transaction inserts two rows.  
---The query returns the results of the previous statements.  
   
 BEGIN TRAN @TransactionName  
        INSERT INTO ValueTable VALUES(1), (2);  
@@ -133,13 +126,15 @@ INSERT INTO ValueTable VALUES(3),(4);
 SELECT [value] FROM ValueTable;  
   
 DROP TABLE ValueTable;  
-  
---Results  
---value  
--------------  
---3  
---4  
 ```  
+[!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]  
+```  
+value  
+-----   
+3    
+4  
+```  
+  
   
 ## <a name="see-also"></a>Voir aussi  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
