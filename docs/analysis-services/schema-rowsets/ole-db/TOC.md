@@ -1,0 +1,5 @@
+# [DBSCHEMA_CATALOGS, ensemble de lignes](dbschema-catalogs-rowset.md)
+# [DBSCHEMA_COLUMNS, ensemble de lignes](dbschema-columns-rowset.md)
+# [DBSCHEMA_PROVIDER_TYPES, ensemble de lignes](dbschema-provider-types-rowset.md)
+# [DBSCHEMA_TABLES, ensemble de lignes](dbschema-tables-rowset.md)
+# [Ensembles de lignes de schéma OLE DB](ole-db-schema-rowsets.md)

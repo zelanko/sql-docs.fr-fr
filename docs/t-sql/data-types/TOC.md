@@ -1,0 +1,52 @@
+# [Vue d’ensemble](data-types-transact-sql.md)  
+# [Constantes](constants-transact-sql.md)  
+# [Conversion](data-type-conversion-database-engine.md)  
+# [Précédence](data-type-precedence-transact-sql.md)  
+# [Synonymes](data-type-synonyms-transact-sql.md)  
+# [Précision, échelle et longueur](precision-scale-and-length-transact-sql.md)  
+# [bit](bit-transact-sql.md)  
+# [cursor](cursor-transact-sql.md)  
+# [Date et heure](date-and-time-types.md)  
+## [date](date-transact-sql.md)  
+## [datetime](datetime-transact-sql.md)  
+## [datetime2](datetime2-transact-sql.md)  
+## [datetimeoffset](datetimeoffset-transact-sql.md)  
+## [smalldatetime](smalldatetime-transact-sql.md)  
+## [time](time-transact-sql.md)  
+
+# [hierarchyid, méthodes](hierarchyid-data-type-method-reference.md)  
+## [GetAncestor (moteur de base de données)](getancestor-database-engine.md)  
+## [GetDescendant (moteur de base de données)](getdescendant-database-engine.md)  
+## [GetLevel (moteur de base de données)](getlevel-database-engine.md)  
+## [GetRoot (moteur de base de données)](getroot-database-engine.md)  
+## [IsDescendantOf (moteur de base de données)](isdescendantof-database-engine.md)  
+## [Parse (moteur de base de données)](parse-database-engine.md)  
+## [Read (moteur de base de données)](read-database-engine.md)  
+## [GetReparentedValue (moteur de base de données)](getreparentedvalue-database-engine.md)  
+## [ToString (moteur de base de données)](tostring-database-engine.md)  
+## [Write (moteur de base de données)](write-database-engine.md)  
+
+# [numeric](numeric-types.md)  
+## [decimal et numeric](decimal-and-numeric-transact-sql.md)  
+## [float et real](float-and-real-transact-sql.md)  
+## [int, bigint, smallint et tinyint](int-bigint-smallint-and-tinyint-transact-sql.md)  
+## [money et smallmoney](money-and-smallmoney-transact-sql.md)  
+
+# [rowversion](rowversion-transact-sql.md)  
+
+# [string et binary](string-and-binary-types.md)  
+## [binary et varbinary](binary-and-varbinary-transact-sql.md)  
+## [char et varchar](char-and-varchar-transact-sql.md)  
+## [nchar et nvarchar](nchar-and-nvarchar-transact-sql.md)  
+## [ntext, text et image](ntext-text-and-image-transact-sql.md)  
+
+# [spatial (geography)](../../t-sql/spatial-geography/spatial-types-geography.md)
+# [spatial (geometry)](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)
+
+# [sql_variant](sql-variant-transact-sql.md)  
+
+# [Table](table-transact-sql.md)  
+
+# [uniqueidentifier](uniqueidentifier-transact-sql.md)  
+
+# [XML](../../t-sql/xml/xml-transact-sql.md)

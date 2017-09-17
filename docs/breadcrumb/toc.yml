@@ -97,7 +97,7 @@
                     - name: Développer un pilote
                       href: /sql/odbc/reference/develop-driver/
                       homepage: /sql/odbc/reference/develop-driver/developing-an-odbc-driver
-                    - name: Installer
+                    - name: Install
                       href: /sql/odbc/reference/install/
                       homepage: /sql/odbc/reference/install/odbc-subkey
                     - name: Syntaxe
@@ -136,10 +136,10 @@
               href: /sql/sql-server/failover-clusters/
               homepage: /sql/sql-server/failover-clusters/high-availability-solutions-sql-server
               items:
-                - name: Installer
+                - name: Install
                   href: /sql/sql-server/failover-clusters/install/
                   homepage: /sql/sql-server/failover-clusters/install/sql-server-failover-cluster-installation
-            - name: Installer
+            - name: Install
               href: /sql/sql-server/install/
               homepage: /sql/sql-server/install/planning-a-sql-server-installation
             - name: Stretch Database
@@ -207,7 +207,7 @@
                         - name: Client
                           href: /sql/analysis-services/multidimensional-models-adomd-net-client/
                           homepage: /sql/analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-functionality
-                        - name: Serveur
+                        - name: Server
                           href: /sql/analysis-services/multidimensional-models-adomd-net-server/
                           homepage: /sql/analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-functionality
                     - name: Objets de gestion d’analyse
@@ -342,7 +342,7 @@
                 - name: Installer sur Windows
                   href: /sql/integration-services/install-windows/
                   homepage: /sql/integration-services/install-windows/install-integration-services
-                - name: .
+                - name: Packages
                   href: /sql/integration-services/packages/
                   homepage: /sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages
                 - name: Performance
@@ -426,10 +426,10 @@
                 - name: Installer MDS dans AlwaysOn
                   href: /sql/master-data-services/installing-mds-in-an-alwayson-group-environment/
                   homepage: /sql/master-data-services/installing-mds-in-an-alwayson-group-environment/installing-mds-in-an-alwayson-group-environment
-                - name: Complément Excel
+                - name: complément pour Excel
                   href: /sql/master-data-services/microsoft-excel-add-in/
                   homepage: /sql/master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel
-            - name: Reporting Services
+            - name: "Reporting\_Services"
               href: /sql/reporting-services/
               homepage: /sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports
               items:
@@ -442,7 +442,7 @@
                 - name: Générateur de rapports
                   href: /sql/reporting-services/report-builder/
                   homepage: /sql/reporting-services/report-builder/report-builder-in-sql-server-2016
-                - name: Données de rapport
+                - name: données de rapport
                   href: /sql/reporting-services/report-data/
                   homepage: /sql/reporting-services/report-data/report-data-ssrs
                 - name: Conception de rapport
@@ -455,7 +455,7 @@
                     - name: SharePoint
                       href: /sql/reporting-services/report-server-sharepoint/
                       homepage: /sql/reporting-services/report-server-sharepoint/reporting-services-report-server
-                - name: Utilisation de rapports
+                - name: Utilisation des rapports
                   href: /sql/reporting-services/reports/
                   homepage: /sql/reporting-services/reports/reporting-services-reports-ssrs
                 - name: Sécurité
@@ -494,10 +494,10 @@
                           href: /sql/reporting-services/report-server-web-service-net-framework-exception-handling/
                           homepage: /sql/reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services
                           items:
-                            - name: Bonnes pratiques
+                            - name: Meilleures pratiques
                               href: /sql/reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/
                               homepage: /sql/reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/best-practices-for-reporting-services-exception-handling
-                            - name: 'SoapException, classe'
+                            - name: classe SoapException
                               href: /sql/reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/
                               homepage: /sql/reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class
                 - name: Extensions
@@ -556,7 +556,7 @@
             - name: Erreurs et événements
               href: /sql/relational-databases/errors-events/
               homepage: /sql/relational-databases/errors-events/errors-and-events-reference-database-engine
-            - name: Classes d’événements
+            - name: Classe d'événements
               href: /sql/relational-databases/event-classes/
               homepage: /sql/relational-databases/event-classes/sql-server-event-class-reference
             - name: Événements étendus
@@ -567,7 +567,7 @@
               homepage: /sql/relational-databases/graphs/sql-graph-overview
             - name: Importer et exporter
               href: /sql/relational-databases/import-export/
-              homepage: /sql/relational-databases/import-export/bulk-import-and-export-of-data-sql-server
+              homepage: /sql/relational-databases/import-export/overview-import-export
             - name: OLTP en mémoire
               href: /sql/relational-databases/in-memory-oltp/
               homepage: /sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization
@@ -798,7 +798,7 @@
                 - name: Tâches
                   href: /sql/relational-databases/server-management-objects-smo/tasks/
                   homepage: /sql/relational-databases/server-management-objects-smo/tasks/backing-up-and-restoring-databases-and-transaction-logs
-            - name: Intégration du CLR
+            - name: intégration du CLR
               href: /sql/relational-databases/clr-integration/
               homepage: /sql/relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts
               items:
@@ -973,10 +973,10 @@
                   href: /sql/relational-databases/sqlxml/annotated-xsd-schemas/
                   homepage: /sql/relational-databases/sqlxml/annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0
                   items:
-                    - name: Using
+                    - name: Utilisant
                       href: /sql/relational-databases/sqlxml-annotated-xsd-schemas-using/
                       homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0
-                    - name: Requêtes XPath
+                    - name: requêtes XPath
                       href: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/
                       homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0
                       items:
@@ -1007,9 +1007,6 @@
                         - name: Sécurité
                           href: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/
                           homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations
-        - name: SQL Server Release Notes
-          href: /sql/release-notes/
-          homepage: /sql/release-notes/sql-server-release-notes
         - name: DMX
           href: /sql/dmx/
           homepage: /sql/dmx/data-mining-extensions-dmx-reference
