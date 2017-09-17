@@ -1,22 +1,27 @@
 ---
-title: "Mettre &#224; niveau les classeurs et l&#39;actualisation planifi&#233;e des donn&#233;es (SharePoint&#160;2013) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Mettre à niveau les classeurs et l’actualisation planifiée des données (SharePoint 2013) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 09907013b8a83b70fae3f0bf91f68f49a08290df
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Mettre &#224; niveau les classeurs et l&#39;actualisation planifi&#233;e des donn&#233;es (SharePoint&#160;2013)
+# <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Mettre à niveau les classeurs et l'actualisation planifiée des données (SharePoint 2013)
   Cette rubrique traite de l’utilisation des classeurs créés dans les environnements [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] précédents et comment mettre à niveau les classeurs [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] afin de pouvoir tirer parti des nouvelles fonctionnalités introduites dans cette version. Pour en savoir plus sur les nouvelles fonctionnalités, consultez [Nouveautés de Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
   
 > [!WARNING]  
@@ -26,27 +31,27 @@ caps.handback.revision: 20
   
 -   [Vue d'ensemble de la mise à niveau des classeurs](#bkmk_overview)  
   
--   [Mettre à niveau des classeurs SQL Server 2008 R2 vers des classeurs SQL Server 2012 Service Pack 1 (SP1)](#bkmk_to_2012sp1_from_2008r2)  
+-   [Mettre à niveau des classeurs SQL Server 2008 R2 vers des classeurs SQL Server 2012 Service Pack 1 (SP1)](#bkmk_to_2012sp1_from_2008r2)  
   
--   [Mise à niveau vers des classeurs Office 2013 à partir de versions créées à l’aide du complément Power Pivot 2012 pour Excel](#bkmk_to_2012sp1_from_2012)  
+-   [Mise à niveau vers des classeurs Office 2013 à partir de versions créées à l’aide du complément Power Pivot 2012 pour Excel](#bkmk_to_2012sp1_from_2012)  
   
--   [Mise à niveau vers des classeurs SQL Server 2012 à partir de versions créées à l’aide du complément Power Pivot 2008 R2 pour Excel 2010](#bkmk_to_2012_from_2008R2)  
+-   [Mise à niveau vers des classeurs SQL Server 2012 à partir de versions créées à l’aide du complément Power Pivot 2008 R2 pour Excel 2010](#bkmk_to_2012_from_2008R2)  
   
 -   [Exécution de plusieurs versions de classeurs sur un serveur plus récent](#bkmk_runold)  
   
 ##  <a name="bkmk_overview"></a> Vue d'ensemble de la mise à niveau des classeurs  
- Un classeur [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] est un fichier de classeur Excel qui contient des données [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] intégrées. La mise à niveau d'un classeur présente deux avantages :  
+ Un classeur [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] est un fichier de classeur Excel qui contient des données [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] intégrées. La mise à niveau d'un classeur présente deux avantages :  
   
 -   Utilisez les nouvelles fonctionnalités de [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)].  
   
 -   Permet l'actualisation planifiée des données pour les classeurs exécutés avec un serveur [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] Analysis Services en mode SharePoint.  
   
 > [!IMPORTANT]  
->  Vous ne pouvez pas restaurer un classeur mis à niveau : assurez-vous de faire une copie du fichier si vous souhaitez l'utiliser dans la version antérieure de [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)], ou dans une version antérieure de [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)].  
+>  Vous ne pouvez pas restaurer un classeur mis à niveau : assurez-vous de faire une copie du fichier si vous souhaitez l'utiliser dans la version antérieure de [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)], ou dans une version antérieure de [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)].  
   
  Le tableau suivant répertorie la prise en charge et le comportement des classeurs [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] sur l’environnement dans lequel le classeur a été créé. Le comportement décrit inclut l'expérience 'utilisateur générale, les options de mise à niveau prises en charge pour mettre à niveau le classeur vers un environnement spécifique, et le comportement de l'actualisation planifiée des données d'un classeur qui n'a pas encore été mis à niveau.  
   
-### Comportement et options de mise à niveau des classeurs  
+### <a name="workbook-behavior-and-upgrade-options"></a>Comportement et options de mise à niveau des classeurs  
   
 |Environnement de création|\<|Prise en charge et comportement|>|  
 |----------------|--------|--------------------------|--------|  
@@ -55,12 +60,12 @@ caps.handback.revision: 20
 |**2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour Excel**|Non pris en charge|Toutes les fonctionnalités|**Expérience :** les utilisateurs peuvent interagir avec le classeur dans le navigateur et l'utiliser comme source de données pour d'autres solutions. La planification de l'actualisation des données est disponible.<br /><br /> **Mise à niveau :** la mise à niveau automatique n'est pas prise en charge. Les utilisateurs peuvent mettre à niveau leurs classeurs vers la version Office 2013.<br /><br /> **Planification de l'actualisation des données :** prise en charge.|  
 |**Excel 2013**|Non pris en charge|Non pris en charge|Toutes les fonctionnalités|  
   
-##  <a name="bkmk_to_2012sp1_from_2008r2"></a> Mettre à niveau des classeurs SQL Server 2008 R2 vers des classeurs SQL Server 2012 Service Pack 1 (SP1)  
+##  <a name="bkmk_to_2012sp1_from_2008r2"></a> Mettre à niveau des classeurs SQL Server 2008 R2 vers des classeurs SQL Server 2012 Service Pack 1 (SP1)  
  Cette section décrit la mise à niveau de classeurs SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour Excel 2010 vers des classeurs SQL Server 2012 SP1 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour Excel 2013.  
   
  **Modification du comportement :** les classeurs SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ne sont pas mis à niveau automatiquement lorsqu’ils sont utilisés dans SQL Server 2012 SP1 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2013. Par conséquent, les actualisations planifiées de données ne fonctionnent pas pour les classeurs SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] .  
   
- Les classeurs SQL Server 2008 R2 s’ouvrent dans [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2013, cependant les actualisations planifiées de données ne fonctionnent pas. Si vous observez l'historique d'actualisation, vous pouvez voir un message d'erreur semblable au message suivant :  
+ Les classeurs SQL Server 2008 R2 s’ouvrent dans [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2013, cependant les actualisations planifiées de données ne fonctionnent pas. Si vous observez l'historique d'actualisation, vous pouvez voir un message d'erreur semblable au message suivant :  
   
  « Le classeur contient un modèle [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] non pris en charge ». Le modèle [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] dans le classeur est au format SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour Excel 2010. Les modèles [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pris en charge sont les suivants :  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 20
   
 -   SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour Excel 2013.  
   
- **Comment mettre à niveau un classeur :** l'actualisation planifiée de données ne fonctionne pas tant que vous n'avez pas mis à niveau le classeur vers un classeur 2012. Pour mettre à niveau le classeur et le modèle qu'il contient, procédez de l'une des façons suivantes :  
+ **Comment mettre à niveau un classeur :** l'actualisation planifiée de données ne fonctionne pas tant que vous n'avez pas mis à niveau le classeur vers un classeur 2012. Pour mettre à niveau le classeur et le modèle qu'il contient, procédez de l'une des façons suivantes :  
   
 -   Téléchargez le classeur et ouvrez-le dans Microsoft Excel 2010 avec le complément SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour Excel installé.  
   
@@ -86,7 +91,7 @@ caps.handback.revision: 20
   
  Pour plus d’informations sur l’historique d’actualisation, consultez [Afficher l’historique d’actualisation des données &#40;Power Pivot pour SharePoint&#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md).  
   
-##  <a name="bkmk_to_2012sp1_from_2012"></a> Mise à niveau vers des classeurs Office 2013 à partir de versions créées à l’aide du complément Power Pivot 2012 pour Excel  
+##  <a name="bkmk_to_2012sp1_from_2012"></a> Mise à niveau vers des classeurs Office 2013 à partir de versions créées à l’aide du complément Power Pivot 2012 pour Excel  
  Cette section décrit la mise à niveau **de** classeurs SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour Excel 2010 **vers** SQL Server 2012 SP1 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour Excel 2013.  
   
  La mise à niveau d'un classeur résout l'erreur suivante qui se produit lors de la tentative d'actualisation planifiée des données sur le classeur de version précédente :  
@@ -95,15 +100,15 @@ caps.handback.revision: 20
   
  **Procédure de mise à niveau d'un classeur**  
   
-1.  Mettez à niveau chaque classeur manuellement en l'ouvrant dans Microsoft Excel 2013.  
+1.  Mettez à niveau chaque classeur manuellement en l'ouvrant dans Microsoft Excel 2013.  
   
-2.  Pour mettre à niveau le classeur et le modèle qu'il contient, téléchargez et ouvrez le classeur dans Microsoft Excel 2013.  
+2.  Pour mettre à niveau le classeur et le modèle qu'il contient, téléchargez et ouvrez le classeur dans Microsoft Excel 2013.  
   
 3.  Ouvrez la fenêtre [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] et mettez à niveau le modèle [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] .  
   
 4.  Ensuite, enregistrez le classeur et republiez-le sur le serveur SharePoint 2013.  
   
-##  <a name="bkmk_to_2012_from_2008R2"></a> Mise à niveau vers des classeurs SQL Server 2012 à partir de versions créées à l’aide du complément Power Pivot 2008 R2 pour Excel 2010  
+##  <a name="bkmk_to_2012_from_2008R2"></a> Mise à niveau vers des classeurs SQL Server 2012 à partir de versions créées à l’aide du complément Power Pivot 2008 R2 pour Excel 2010  
  Cette section décrit la mise à niveau **de** classeurs SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour Excel 2010 **vers** SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour Excel 2010.  
   
  La mise à niveau d'un classeur résout l'erreur suivante qui se produit lors de la tentative d'actualisation planifiée des données sur le classeur de version précédente :  
@@ -112,14 +117,14 @@ caps.handback.revision: 20
   
  **Procédure de mise à niveau d'un classeur**  
   
- Vous pouvez effectuer la mise à niveau de deux façons :  
+ Vous pouvez effectuer la mise à niveau de deux façons :  
   
-1.  Mettez à niveau chaque classeur manuellement en l’ouvrant dans Excel sur un ordinateur doté de la version [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour Excel, puis republiez-le sur le serveur. Lorsque vous ouvrez le classeur dans une version plus récente du complément, les opérations internes suivantes se produisent : le fournisseur de données dans la chaîne de connexion de données du classeur est mis à jour vers MSOLAP.5, les métadonnées sont mises à jour et les relations sont recréées pour assurer la conformité avec une implémentation plus récente.  
+1.  Mettez à niveau chaque classeur manuellement en l’ouvrant dans Excel sur un ordinateur doté de la version [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour Excel, puis republiez-le sur le serveur. Lorsque vous ouvrez le classeur dans une version plus récente du complément, les opérations internes suivantes se produisent : le fournisseur de données dans la chaîne de connexion de données du classeur est mis à jour vers MSOLAP.5, les métadonnées sont mises à jour et les relations sont recréées pour assurer la conformité avec une implémentation plus récente.  
   
 2.  Sinon, un administrateur SharePoint peut activer la fonctionnalité de mise à niveau automatique pour le service système [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] dans une batterie de serveurs SharePoint pour mettre à niveau automatiquement un classeur [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)][!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] quand l’actualisation planifiée des données s’exécute (seuls les classeurs configurés pour une actualisation planifiée des données sont mis à niveau).  
   
     > [!NOTE]  
-    >  La mise à niveau automatique est une fonctionnalité de configuration de serveur ; vous ne pouvez pas l'activer ou la désactiver pour des classeurs, des bibliothèques ou les collections de sites spécifiques.  
+    >  La mise à niveau automatique est une fonctionnalité de configuration de serveur ; vous ne pouvez pas l'activer ou la désactiver pour des classeurs, des bibliothèques ou les collections de sites spécifiques.  
   
  **Procédure de configuration de la mise à niveau automatique lors de l'actualisation des données**  
   
@@ -133,7 +138,7 @@ PS C:\Windows\system32> Get-PowerPivotSystemService
   
  La sortie de la commande Get-PowerPivotSystemService est une liste de propriétés et de valeurs correspondantes. Vous devriez voir **WorkbookUpgradeOnDataRefresh** dans la liste des propriétés. Elle aura la valeur **true** si la mise à niveau automatique est activée. Si elle a la valeur **false**, passez à l'étape suivante, pour activer la mise à niveau automatique des classeurs.  
   
- Pour activer la mise à niveau automatique des classeurs, exécutez la commande suivante :  
+ Pour activer la mise à niveau automatique des classeurs, exécutez la commande suivante :  
   
 ```  
 PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefresh:$true –Confirm:$false  
@@ -149,7 +154,7 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
  Notez que la publication de classeurs de version plus récente sur des instances SQL Server antérieures de [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] n'est pas prise en charge. Une instance de [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] ne charge pas un classeur créé dans la version [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] de [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)], et une instance de SQL Server 2012 ne charge pas les classeurs Office 2013 avec des modèles de données avancés que vous avez créés à l’aide de la version [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] dans Excel.  
   
 ###  <a name="bkmk_msolapxslx"></a> Procédure de contrôle des informations de fournisseur de données de MSOLAP dans un classeur Power Pivot  
- Suivez les instructions suivantes pour vérifier le fournisseur OLE DB utilisé dans un classeur [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . La vérification des informations de connexion de données ne nécessite pas l'installation du complément [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)].  
+ Suivez les instructions suivantes pour vérifier le fournisseur OLE DB utilisé dans un classeur [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . La vérification des informations de connexion de données ne nécessite pas l'installation du complément [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] .  
   
 1.  Dans Excel, dans l'onglet Données, cliquez sur **Connexions**. Cliquez sur **Propriétés**.  
   
@@ -168,10 +173,10 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
   
 2.  Faites défiler jusqu'à MSOLAP. Vérifiez que MSOLAP.5 apparaît parmi les fournisseurs OLAP installés sur le système. Vérifiez que MSOLAP | CurVer est défini sur MSOLAP.5  
   
-## Voir aussi  
- [Migrer PowerPivot vers SharePoint 2013](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Migrer PowerPivot vers SharePoint 2013](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   
  [Mettre à niveau Power Pivot pour SharePoint](../../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [Nouveautés d’Analysis Services](../../../analysis-services/what-s-new-in-analysis-services.md)   
- [Afficher l’historique d’actualisation des données &#40;Power Pivot pour SharePoint&#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
+ [L’actualisation des données de la vue historique &#40; PowerPivot pour SharePoint &#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
   
   

@@ -1,34 +1,39 @@
 ---
-title: "SystemGetAccuracyResults (Analysis Services - Exploration de donn&#233;es) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "procédures stockées [Analysis Services], exploration de données"
-  - "SystemGetAccuracyResults"
-  - "validation croisée [exploration de données]"
+title: "SystemGetAccuracyResults (Analysis Services - Exploration de données) | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- stored procedures [Analysis Services], data mining
+- SystemGetAccuracyResults
+- cross-validation [data mining]
 ms.assetid: 54ff584c-c6ce-4c31-9515-0a645719bd1a
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6b2eca528b40afd905661e2508e93529159b8627
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# SystemGetAccuracyResults (Analysis Services - Exploration de donn&#233;es)
+# <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults (Analysis Services - Exploration de données)
   Retourne les mesures de précision de validation croisée d'une structure d'exploration de données et de tous les modèles connexes, à l'exclusion des modèles de clustering.  
   
  Cette procédure stockée retourne les mesures du jeu de données dans son ensemble sous forme de partition unique. Pour partitionner le jeu de données en sections croisées et retourner les mesures pour chaque partition, utilisez [SystemGetCrossValidationResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md).  
   
 > [!NOTE]  
->  Cette procédure stockée n'est pas prise en charge pour les modèles créés à l'aide de l’algorithme MTS ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) ou de l’algorithme MSC ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering). Également, pour les modèles de clustering, utilisez la procédure stockée distincte [SystemGetClusterAccuracyResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md).  
+>  Cette procédure stockée n'est pas prise en charge pour les modèles créés à l'aide de l’algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) ou de l’algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering). Également, pour les modèles de clustering, utilisez la procédure stockée distincte [SystemGetClusterAccuracyResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -41,7 +46,7 @@ SystemGetAccuracyResults(<mining structure>,
 [,<test list>])  
 ```  
   
-## Arguments  
+## <a name="arguments"></a>Arguments  
  *structure d'exploration de données*  
  Nom d'une structure d'exploration de données dans la base de données active.  
   
@@ -55,7 +60,7 @@ SystemGetAccuracyResults(<mining structure>,
  (Facultatif)  
   
  *data set*  
- Valeur entière indiquant quelle partition de la structure d'exploration de données est utilisée pour le test. Cette valeur est dérivée d'un masque de bits qui représente la somme des valeurs suivantes, où chaque valeur individuelle est facultative :  
+ Valeur entière indiquant quelle partition de la structure d'exploration de données est utilisée pour le test. Cette valeur est dérivée d'un masque de bits qui représente la somme des valeurs suivantes, où chaque valeur individuelle est facultative :  
   
 |||  
 |-|-|  
@@ -65,12 +70,12 @@ SystemGetAccuracyResults(<mining structure>,
   
  Pour obtenir la liste complète des valeurs possibles, consultez la section Remarques de cette rubrique.  
   
- (obligatoire)  
+ (Obligatoire)  
   
  *target attribute*  
  Chaîne qui contient le nom d'un objet prévisible. Un objet prévisible peut être une colonne, une colonne de table imbriquée ou une colonne clé de table imbriquée d'un modèle d'exploration de données.  
   
- (obligatoire)  
+ (Obligatoire)  
   
  *target state*  
  Chaîne qui contient une valeur spécifique à prédire.  
@@ -95,7 +100,7 @@ SystemGetAccuracyResults(<mining structure>,
   
  (Facultatif)  
   
-## Type de retour  
+## <a name="return-type"></a>Type de retour  
  L'ensemble de lignes retourné contient des scores pour chaque partition et des agrégats pour tous les modèles.  
   
  Le tableau ci-dessous dresse la liste des colonnes renvoyées par **GetValidationResults**.  
@@ -106,13 +111,13 @@ SystemGetAccuracyResults(<mining structure>,
 |AttributeName|Nom de la colonne prédictible.|  
 |AttributeState|Une valeur cible dans la colonne prédictible.<br /><br /> Si cette colonne contient une valeur, les mesures sont collectées uniquement pour l'état spécifié.<br /><br /> Si cette valeur n'est spécifiée, ou si la valeur null est spécifiée, les mesures sont calculées pour l'état le plus probable pour chaque prédiction.|  
 |PartitionIndex|Indique la partition à laquelle le résultat s'applique.<br /><br /> Pour cette procédure, toujours 0.|  
-|PartitionCases|Entier qui indique le nombre de lignes dans le cas défini, en fonction du paramètre *\<jeu de données>*.|  
+|PartitionCases|Entier qui indique le nombre de lignes dans le jeu de cas, selon la  *\<jeu de données >* paramètre.|  
 |Test|Type de test qui a été effectué.|  
 |Measure|Nom de la mesure retournée par le test. Les mesures de chaque modèle dépendent du type de modèle et du type de valeur prévisible.<br /><br /> Pour obtenir la liste des mesures retournées pour chaque type prévisible, consultez [Mesures dans le rapport de validation croisée](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).<br /><br /> Pour obtenir une définition de chaque mesure, consultez [Validation croisée &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).|  
 |Value|Valeur de la mesure spécifiée.|  
   
-## Notes  
- Le tableau suivant fournit des exemples des valeurs que vous pouvez utiliser pour spécifier les données de la structure d'exploration de données qui sont utilisées pour la validation croisée. Si vous souhaitez utiliser des scénarios de test pour la validation croisée, la structure d'exploration de données doit déjà contenir un jeu de données de test. Pour plus d’informations sur la définition d’un jeu de données de test lorsque vous créez une structure d’exploration de données, consultez [Jeux de données d’apprentissage et de test](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
+## <a name="remarks"></a>Notes  
+ Le tableau suivant fournit des exemples des valeurs que vous pouvez utiliser pour spécifier les données de la structure d'exploration de données qui sont utilisées pour la validation croisée. Si vous souhaitez utiliser des scénarios de test pour la validation croisée, la structure d'exploration de données doit déjà contenir un jeu de données de test. Pour plus d’informations sur la définition d’un jeu de données de test quand vous créez une structure d’exploration de données, consultez [Jeux de données d’apprentissage et de test](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
   
 |Valeur de type entier|Description|  
 |-------------------|-----------------|  
@@ -124,12 +129,12 @@ SystemGetAccuracyResults(<mining structure>,
 |6|Seuls les scénarios de test sont utilisés. Le filtre de modèle est appliqué.|  
 |7|Les cas d'apprentissage et les scénarios de test sont utilisés. Le filtre de modèle est appliqué.|  
   
- Pour plus d’informations sur les scénarios dans lesquels utiliser la validation croisée, consultez [Test et validation &#40;Exploration des données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
+ Pour plus d’informations sur les scénarios dans lesquels utiliser la validation croisée, consultez [Test et validation &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
   
-## Exemples  
- Cet exemple retourne les mesures de précision d’un modèle d’arbre de décision unique, `v Target Mail DT`, associé à la structure d’exploration de données `vTargetMail`. Le code de la ligne quatre indique que les résultats doivent être basés sur les scénarios de test, filtrés pour chaque modèle par le filtre spécifique à ce modèle.  `[Bike Buyer]` spécifie la colonne qui doit être prédite, et le 1 sur la ligne suivante indique que le modèle sera évalué uniquement pour la valeur 1 spécifique, qui signifie « Oui, achètera ».  
+## <a name="examples"></a>Exemples  
+ Cet exemple retourne les mesures de précision d’un modèle d’arbre de décision unique, `v Target Mail DT`, associé à la structure d’exploration de données `vTargetMail` . Le code de la ligne quatre indique que les résultats doivent être basés sur les scénarios de test, filtrés pour chaque modèle par le filtre spécifique à ce modèle.  `[Bike Buyer]` spécifie la colonne qui doit être prédite, et le 1 sur la ligne suivante indique que le modèle sera évalué uniquement pour la valeur 1 spécifique, qui signifie « Oui, achètera ».  
   
- La dernière ligne du code spécifie que la valeur de seuil d'état est 0,5. Cela signifie que les prédictions dont la probabilité est supérieure à 50 pour cent doivent être comptabilisées comme de « bonnes » prédictions lors du calcul de la précision.  
+ La dernière ligne du code spécifie que la valeur de seuil d'état est 0,5. Cela signifie que les prédictions dont la probabilité est supérieure à 50 pour cent doivent être comptabilisées comme de « bonnes » prédictions lors du calcul de la précision.  
   
 ```  
 CALL SystemGetAccuracyResults (  
@@ -144,7 +149,7 @@ CALL SystemGetAccuracyResults (
   
  Exemples de résultats :  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Mesure|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Measure|Value|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |v Target Mail DT|Bike Buyer|1|0|1638|classification.|Vrai positif|605|  
 |v Target Mail DT|Bike Buyer|1|0|1638|classification.|Faux positif|177|  
@@ -154,13 +159,13 @@ CALL SystemGetAccuracyResults (
 |v Target Mail DT|Bike Buyer|1|0|1638|Vraisemblance|Finesse|0.0936717116894395|  
 |v Target Mail DT|Bike Buyer|1|0|1638|Vraisemblance|Erreur quadratique moyenne|0.361630800104946|  
   
-## Spécifications  
+## <a name="requirements"></a>Spécifications  
  La validation croisée est uniquement disponible dans [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] depuis [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SystemGetCrossValidationResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterCrossValidationResults &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetClusterAccuracyResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

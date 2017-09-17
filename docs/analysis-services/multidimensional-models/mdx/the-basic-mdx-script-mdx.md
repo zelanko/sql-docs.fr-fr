@@ -1,30 +1,35 @@
 ---
-title: "Script MDX de base (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "scripts MDX par défaut"
-  - "instructions [MDX]"
-  - "expressions [MDX], scripts"
-  - "scripts [MDX], à propos des scripts"
+title: Le Script MDX de base (MDX) | Documents Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- default MDX scripts
+- statements [MDX]
+- expressions [MDX], scripts
+- scripts [MDX], about scripts
 ms.assetid: 83d9afda-7d34-42b5-8f28-20172a905f23
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 27
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f3f42d92332116ff94f0175619cc42face9a8b36
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Script MDX de base (MDX)
-  Un script MDX (Multidimensional Expressions) définit le processus de calcul pour un cube dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Il existe deux types de scripts MDX :  
+# <a name="the-basic-mdx-script-mdx"></a>Script MDX de base (MDX)
+  Un script MDX (Multidimensional Expressions) définit le processus de calcul pour un cube dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Il existe deux types de scripts MDX :  
   
  **Script MDX par défaut**  
  Au moment de la création d’un cube, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crée un script MDX par défaut pour celui-ci. Ce script définit un test de calcul pour l'intégralité du cube.  
@@ -32,10 +37,10 @@ caps.handback.revision: 27
  **Script MDX défini par l'utilisateur**  
  Lorsque vous avez créé un cube, vous pouvez ajouter des scripts MDX définis par l'utilisateur qui étendent les possibilités de calcul du cube.  
   
-## Script MDX par défaut  
+## <a name="the-default-mdx-script"></a>Script MDX par défaut  
  Le script MDX par défaut créé par [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] au moment de la définition d’un cube contient une instruction CALCULATE unique. Cette dernière se situe au début du script MDX par défaut et indique que l'intégralité du cube doit être calculée pendant le premier test de calcul.  
   
- Le script MDX par défaut contient également les commandes de script qui créent des jeux nommés, des assignations et des membres calculés dans le Concepteur de cube :  
+ Le script MDX par défaut contient également les commandes de script qui créent des jeux nommés, des assignations et des membres calculés dans le Concepteur de cube :  
   
 -   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ajoute directement les commandes de script au script MDX par défaut.  
   
@@ -47,31 +52,31 @@ caps.handback.revision: 27
   
  Si aucun script MDX n'est associé à un cube, ce dernier utilise le script MDX par défaut. Un cube doit être au moins associé à un script MDX, car il se base sur celui-ci pour déterminer le comportement de calcul. En d'autres termes, un cube qui n'est associé à aucun script MDX ou associé à un script MDX vide ne peut pas calculer de cellules. Si vous créez des cubes par programmation, à l'aide de commandes ASSL (Analysis Services Scripting Language) ou de l'objet AMO (Analysis Management Object), il est recommandé de créer un script MDX par défaut contenant une instruction CALCULATE unique pour le cube.  
   
-## Contenu du script MDX  
- Un script MDX peut contenir les instructions et expressions suivantes :  
+## <a name="mdx-script-content"></a>Contenu du script MDX  
+ Un script MDX peut contenir les instructions et expressions suivantes :  
   
  Toutes les instructions de script MDX  
- Dans les scripts MDX, les instructions de script MDX contrôlent le contexte et la portée des calculs et gèrent le comportement des autres instructions dans le script MDX. Cette catégorie comprend les instructions suivantes :  
+ Dans les scripts MDX, les instructions de script MDX contrôlent le contexte et la portée des calculs et gèrent le comportement des autres instructions dans le script MDX. Cette catégorie comprend les instructions suivantes :  
   
--   [CALCULATE](../Topic/CALCULATE%20Statement%20\(MDX\).md)  
+-   [CALCULATE](../../../mdx/mdx-scripting-calculate.md)  
   
--   [FREEZE](../Topic/FREEZE%20Statement%20\(MDX\).md)  
+-   [FREEZE](../../../mdx/mdx-scripting-freeze.md)  
   
--   [SCOPE](../Topic/SCOPE%20Statement%20\(MDX\).md)  
+-   [SCOPE](../../../mdx/mdx-scripting-scope.md)  
   
  Pour plus d’informations sur les instructions de script MDX, consultez [Instructions de script MDX &#40;MDX&#41;](../../../mdx/mdx-scripting-statements-mdx.md).  
   
- [CREATE MEMBER](../Topic/CREATE%20MEMBER%20Statement%20\(MDX\).md)  
- L'instruction CREATE MEMBER crée des membres calculés. Pour plus d’informations sur la création de membres calculés, consultez [Création de membres calculés dans MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/building-calculated-members-in-mdx-mdx.md).  
+ [CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md)  
+ L'instruction CREATE MEMBER crée des membres calculés. Pour plus d’informations sur la création de membres calculés, consultez [Création de membres calculés dans MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md).  
   
- [CREATE SET](../Topic/CREATE%20SET%20Statement%20\(MDX\).md)  
- L'instruction CREATE SET crée des jeux nommés. Pour plus d’informations sur la création de jeux nommés, consultez [Création de jeux nommés à l’aide d’expressions MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/building-named-sets-in-mdx-mdx.md).  
+ [CREATE SET](../../../mdx/mdx-data-definition-create-set.md)  
+ L'instruction CREATE SET crée des jeux nommés. Pour plus d’informations sur la création de jeux nommés, consultez [Création de jeux nommés à l’aide d’expressions MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md).  
   
  Instructions conditionnelles  
- Les instructions conditionnelles ajoutent une logique conditionnelle aux scripts MDX. Cette catégorie comprend les instructions [CASE](../../../mdx/case-statement-mdx.md) et [IF](../Topic/IF%20Statement%20%20\(MDX\).md).  
+ Les instructions conditionnelles ajoutent une logique conditionnelle aux scripts MDX. Cette catégorie comprend les instructions [CASE](../../../mdx/case-statement-mdx.md) et [IF](../../../mdx/mdx-scripting-if.md) .  
   
  Expressions d'assignation  
- Une expression d'assignation affecte une expression, telle qu'une valeur, à un sous-cube contraint. Une expression de sous-cube contraint est une collection d'expressions de jeux contraints qui définit les « côtés » d'un sous-cube au sein d'un script MDX. Les codes suivants représentent la syntaxe d'une expression de sous-cube contraint :  
+ Une expression d'assignation affecte une expression, telle qu'une valeur, à un sous-cube contraint. Une expression de sous-cube contraint est une collection d'expressions de jeux contraints qui définit les « côtés » d'un sous-cube au sein d'un script MDX. Les codes suivants représentent la syntaxe d'une expression de sous-cube contraint :  
   
 ```  
 <Constrained subcube> ::= (   
@@ -90,7 +95,7 @@ caps.handback.revision: 27
 <Natural hierarchy member> ::= <Natural hierarchy>.<identifier>[.<identifier>...]  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Informations de référence sur le langage MDX &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
  [Principes de base des scripts MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   

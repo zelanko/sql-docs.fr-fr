@@ -1,27 +1,32 @@
 ---
-title: "Filtrer une r&#232;gle dans un mod&#232;le de r&#232;gles d&#39;association | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "filtrage de règles [Analysis Services]"
-  - "visionneuse de modèle d’exploration de données [Analysis Services], règles"
-  - "visionneuse de règles"
+title: "Filtre de modèle de règles d’une règle dans une Association | Documents Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filtering rules [Analysis Services]
+- Mining Model Viewer [Analysis Services], rules
+- Rules Viewer
 ms.assetid: 26cdba5b-5bf1-439e-80a3-8759774e918b
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 88eb75188ed36a8a79178f6b893c5301ffd2d47e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Filtrer une r&#232;gle dans un mod&#232;le de r&#232;gles d&#39;association
+# <a name="filter-a-rule-in-an-association-rules-model"></a>Filtrer une règle dans un modèle de règles d'association
   Vous pouvez utiliser le filtrage avec des modèles d'association pour restreindre les résultats aux associations qui vous intéressent. Par exemple, vous pouvez filtrer les règles pour afficher uniquement celles qui incluent un produit spécifique.  
   
  Dans le Concepteur d’exploration de données, vous pouvez utiliser les contrôles sur l’onglet **Règles** de la Visionneuse de l’algorithme MAR (Microsoft Association Rules) [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour filtrer les règles affichées.  Vous pouvez également créer une requête sur le modèle pour voir uniquement le jeu d’éléments contenant une valeur particulière.  
@@ -29,7 +34,7 @@ caps.handback.revision: 28
 > [!NOTE]  
 >  Cette option est disponible uniquement pour les modèles d'exploration de données créés à l'aide de l'algorithme Microsoft Association.  
   
-### Filtrer une règle dans un modèle d'association  
+### <a name="filter-a-rule-in-an-association-model"></a>Filtrer une règle dans un modèle d'association  
   
 1.  Ouvrez le modèle d'exploration de données à l'aide de la **Visionneuse de l'algorithme MAR (Microsoft Association Rules)**. Pour ce faire, dans SQL Server Management Studio, cliquez avec le bouton droit sur le nom du modèle, puis sélectionnez **Parcourir**. Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], double-cliquez sur la structure d’exploration de données qui contient le modèle, puis cliquez sur l’onglet **Visionneuse de modèle d’exploration de données** du **Concepteur d’exploration de données**.  
   
@@ -49,18 +54,18 @@ caps.handback.revision: 28
   
 8.  Activez ou désactivez la case à cocher **Afficher le nom long** pour basculer entre les modes d'affichage des noms de règles.  
   
-     Les règles sont alors filtrées afin d'afficher uniquement celles qui contiennent l'élément indiqué. La condition de filtre s'applique aux valeurs d'attributs avant ou après le délimiteur de règle, « -> ».  
+     Les règles sont alors filtrées afin d'afficher uniquement celles qui contiennent l'élément indiqué. La condition de filtre s'applique aux valeurs d'attributs avant ou après le délimiteur de règle, « -> ».  
   
     > [!NOTE]  
     >  La visionneuse met en cache la liste initiale des règles, en fonction d'une requête portant sur le modèle d'exploration de données ; en outre, elle n'actualise pas la liste des règles tant que vous ne modifiez pas les conditions de la requête en définissant les lignes maximales, la probabilité, l'importance ou l'affichage des noms longs. Par conséquent, si vous tapez une condition et si l'affichage n'est pas immédiatement actualisé, vous pouvez forcer la visionneuse à actualiser les données en activant, puis en désactivant la case à cocher **Afficher le nom long** .  
   
-### Créer une requête sur les jeux d'éléments dans un modèle d'association  
+### <a name="create-a-query-on-the-itemsets-in-an-association-model"></a>Créer une requête sur les jeux d'éléments dans un modèle d'association  
   
 -   [Exemples de requêtes de modèle d'association](../../analysis-services/data-mining/association-model-query-examples.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tâches de la visionneuse de modèle d'exploration de données et procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Explorer un modèle à l'aide de la visionneuse de l'algorithme MAR (Microsoft Association Rules)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Leçon 3 : Génération d’un scénario de panier d’achat &#40;Didacticiel sur l’exploration de données intermédiaire&#41;](../Topic/Lesson%203:%20Building%20a%20Market%20Basket%20Scenario%20\(Intermediate%20Data%20Mining%20Tutorial\).md)  
+ [Parcourir un modèle à l’aide de la visionneuse de règles Microsoft Association](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [Leçon 3 : Création d’un scénario de panier &#40; didacticiel d’exploration de données intermédiaires &#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)  
   
   

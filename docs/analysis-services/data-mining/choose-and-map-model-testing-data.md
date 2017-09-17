@@ -1,35 +1,40 @@
 ---
-title: "Choisir et mapper les donn&#233;es de test du mod&#232;le | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "colonnes [exploration de données], graphiques d’analyse de précision de l’exploration de données"
-  - "graphique d’analyse de précision de l’exploration de données [Analysis Services], mappages de colonnes"
-  - "mappage de colonnes d’entrée [Analysis Services]"
-  - "mappage des colonnes d'entrée [Analysis Services]"
+title: "Choisir et mapper le modèle de données de test | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [data mining], mining accuracy charts
+- Mining Accuracy Chart [Analysis Services], column mappings
+- input column mapping [Analysis Services]
+- mapping input columns [Analysis Services]
 ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5374180481138f62346ec1ff3aa83eff82403c05
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Choisir et mapper les donn&#233;es de test du mod&#232;le
+# <a name="choose-and-map-model-testing-data"></a>Choisir et mapper les données de test du modèle
   Pour créer un graphique d’analyse de précision dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous devez choisir les données à utiliser pour tester le modèle et mapper les données au modèle.  
   
  Par défaut, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise les données de test du modèle d’exploration de données, sous réserve que vous ayez créé un jeu de données d’exclusion au moment de la génération de la structure d’exploration de données. La création d'un jeu de test d'exclusion est la méthode la plus simple pour tester les modèles basés sur la même structure d'exploration de données, car les noms de colonnes et les types de données correspondront toujours au modèle, et vous pouvez être raisonnablement assuré que la distribution des données est similaire. En outre, le concepteur créera automatiquement les relations entre l'entrée et les colonnes du modèle.  
   
- Ou bien, vous pouvez spécifier une source de données externe. Pour les données externes, il existe certaines exigences supplémentaires :  
+ Ou bien, vous pouvez spécifier une source de données externe. Pour les données externes, il existe certaines exigences supplémentaires :  
   
--   Le jeu de données externes doit être défini comme vue de source de données dans une instance d’[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+-   Le jeu de données externes doit être défini comme vue de source de données dans une instance d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 -   Le jeu de données externes doit au moins contenir une colonne qui peut être mappée à la colonne prédictible dans le modèle d'exploration de données. Vous pouvez choisir d'ignorer certaines colonnes.  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 44
   
 -   Même lorsque vous utilisez le jeu de test d'exclusion, tenez compte du fait que les filtres peuvent provoquer des différences entre les données de test associées à une structure d'exploration de données et les cas de test du modèle d'exploration de données.  
   
- Cette rubrique explique comment choisir et mapper les données de test :  
+ Cette rubrique explique comment choisir et mapper les données de test :  
   
  [Sélectionner des tables d'entrée pour tester la précision d'un modèle d'exploration de données](#bkmk_SelectInputs)  
   
@@ -53,9 +58,9 @@ caps.handback.revision: 44
   
 1.  Dans le Concepteur d'exploration de données de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], double-cliquez sur la structure d'exploration de données qui contient les modèles pour lesquels vous souhaitez établir un graphique.  
   
-2.  Sélectionnez l’onglet **Graphique d’analyse de précision de l’exploration de données**.  
+2.  Sélectionnez l’onglet **Graphique d’analyse de précision de l’exploration de données** .  
   
-3.  Sous l’onglet **Sélection d’entrée** de la vue **Graphique d’analyse de précision de l’exploration de données**, sélectionnez l’une des options suivantes :  
+3.  Sous l’onglet **Sélection d’entrée** de la vue **Graphique d’analyse de précision de l’exploration de données** , sélectionnez l’une des options suivantes :  
   
      **Utiliser des scénarios de test de modèle d'exploration de données**  
   
@@ -71,21 +76,21 @@ caps.handback.revision: 44
   
 1.  Pour ouvrir la structure et les modèles dans le Concepteur d'exploration de données, double-cliquez sur la structure d'exploration de données qui contient les modèles pour lesquels vous souhaitez établir un graphique.  
   
-2.  Sélectionnez l’onglet **Graphique d’analyse de précision de l’exploration de données**, puis l’onglet **Sélection d’entrée**.  
+2.  Sélectionnez l’onglet **Graphique d’analyse de précision de l’exploration de données** , puis l’onglet **Sélection d’entrée** .  
   
-3.  Dans **Sélection d’entrée**, sous **Sélectionner le jeu de données à utiliser pour le graphique d’analyse de précision**, sélectionnez **Spécifier un autre jeu de données**.  
+3.  Dans **Sélection d’entrée** , sous **Sélectionner le jeu de données à utiliser pour le graphique d’analyse de précision**, sélectionnez **Spécifier un autre jeu de données**.  
   
 4.  Cliquez sur le bouton Parcourir **(…)** pour ouvrir une boîte de dialogue et créer la définition du jeu de données externe.  
   
-5.  Dans la boîte de dialogue **Sélectionner la structure d’exploration de données**, sélectionnez la structure d’exploration de données qui contient les modèles à utiliser, puis cliquez sur **OK**.  
+5.  Dans la boîte de dialogue **Sélectionner la structure d’exploration de données** , sélectionnez la structure d’exploration de données qui contient les modèles à utiliser, puis cliquez sur **OK**.  
   
-6.  Dans la table **Sélectionner une ou plusieurs tables d’entrée** de l’onglet **Graphique d’analyse de précision de l’exploration de données**, cliquez sur **Sélectionner la table de cas** pour ouvrir la boîte de dialogue **Sélectionner une table**.  
+6.  Dans la table **Sélectionner une ou plusieurs tables d’entrée** de l’onglet **Graphique d’analyse de précision de l’exploration de données** , cliquez sur **Sélectionner la table de cas** pour ouvrir la boîte de dialogue **Sélectionner une table** .  
   
-7.  Dans la boîte de dialogue **Sélectionner une table**, sélectionnez une source de données dans la liste **Source de données**. Sélectionnez une table qui contient les données à utiliser dans les requêtes de prédiction pour déterminer la précision des modèles.  
+7.  Dans la boîte de dialogue **Sélectionner une table** , sélectionnez une source de données dans la liste **Source de données** . Sélectionnez une table qui contient les données à utiliser dans les requêtes de prédiction pour déterminer la précision des modèles.  
   
-8.  Dans la zone **Nom de la table/vue**, sélectionnez la table qui contient les données à utiliser pour tester les modèles.  
+8.  Dans la zone **Nom de la table/vue** , sélectionnez la table qui contient les données à utiliser pour tester les modèles.  
   
-9. Modifiez les mappages, si nécessaire. Les colonnes de la structure d’exploration de données sont mappées automatiquement aux colonnes portant le même nom dans la table d’entrée. Pour créer des mappages manuellement, cliquez sur une colonne dans la table **Sélectionner une ou plusieurs tables d’entrée** et faites-la glisser vers la colonne correspondante dans la table **Structure d’exploration de données**. Pour supprimer un mappage, cliquez sur la ligne qui lie la colonne de la table **Structure d’exploration de données** à la colonne associée de la table **Sélectionner une ou plusieurs tables d’entrée** et appuyez sur Suppr.  
+9. Modifiez les mappages, si nécessaire. Les colonnes de la structure d’exploration de données sont mappées automatiquement aux colonnes portant le même nom dans la table d’entrée. Pour créer des mappages manuellement, cliquez sur une colonne dans la table **Sélectionner une ou plusieurs tables d’entrée** et faites-la glisser vers la colonne correspondante dans la table **Structure d’exploration de données** . Pour supprimer un mappage, cliquez sur la ligne qui lie la colonne de la table **Structure d’exploration de données** à la colonne associée de la table **Sélectionner une ou plusieurs tables d’entrée** et appuyez sur Suppr.  
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -93,15 +98,15 @@ caps.handback.revision: 44
   
 1.  Dans le Concepteur d’exploration de données, double-cliquez sur la structure qui contient les modèles pour lesquels vous souhaitez établir un graphique.  
   
-2.  Sélectionnez l’onglet **Graphique d’analyse de précision de l’exploration de données**.  
+2.  Sélectionnez l’onglet **Graphique d’analyse de précision de l’exploration de données** .  
   
-3.  Cliquez sur l’onglet **Sélection d’entrée**.  
+3.  Cliquez sur l’onglet **Sélection d’entrée** .  
   
 4.  Dans **Sélectionner le jeu de données à utiliser pour le graphique d’analyse de précision**, sélectionnez l’option **Spécifier un autre jeu de données**.  
   
 5.  Cliquez sur le bouton Parcourir **(…)** pour ouvrir une boîte de dialogue et créer la définition de la source de données externe.  
   
-6.  Dans la boîte de dialogue **Spécifier le mappage des colonnes**, cliquez sur **Sélectionner la table de cas**.  
+6.  Dans la boîte de dialogue **Spécifier le mappage des colonnes** , cliquez sur **Sélectionner la table de cas**.  
   
 7.  Dans la boîte de dialogue Sélectionner une table, sélectionnez une vue de source de données dans la liste, puis sélectionnez la table qui contient les données de cas. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -117,9 +122,9 @@ caps.handback.revision: 44
   
 12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-     Les nouveaux mappages de colonnes sont affichés dans la boîte de dialogue **Spécifier le mappage des colonnes**. Pour supprimer un mappage, sélectionnez la ligne située entre les colonnes, puis appuyez sur la touche Suppr. Pour créer une connexion, sélectionnez une colonne dans la table **Structure d’exploration de données**, puis faites-la glisser vers la colonne correspondante de la table **Sélectionner une ou plusieurs tables d’entrée**.  
+     Les nouveaux mappages de colonnes sont affichés dans la boîte de dialogue **Spécifier le mappage des colonnes** . Pour supprimer un mappage, sélectionnez la ligne située entre les colonnes, puis appuyez sur la touche Suppr. Pour créer une connexion, sélectionnez une colonne dans la table **Structure d’exploration de données** , puis faites-la glisser vers la colonne correspondante de la table **Sélectionner une ou plusieurs tables d’entrée** .  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tâches de test et validation et procédures &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   
