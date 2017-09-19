@@ -12,14 +12,13 @@
 ## [Exécuter et connecter - Docker](quickstart-install-connect-docker.md)
 
 # Concepts
-## Install
+## Installer
 ### [Installer SQL Server](sql-server-linux-setup.md)
 ### [Installer les outils SQL Server](sql-server-linux-setup-tools.md)
 ### [Installer SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 ### [Installer la recherche en texte intégral SQL Server](sql-server-linux-setup-full-text-search.md)
 ### [Installer SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 ### [Approvisionner une machine virtuelle SQL dans Azure](sql-server-linux-azure-virtual-machine.md)
-### [Référentiel de registre GA](sql-server-linux-change-repo.md)
 
 ## Configurer
 ### [Configurer avec mssql-conf](sql-server-linux-configure-mssql-conf.md)
@@ -40,7 +39,7 @@
 ### [Utiliser la copie des journaux de transaction](sql-server-linux-use-log-shipping.md)
 ### [Utiliser la messagerie de base de données et les alertes de messagerie](sql-server-linux-db-mail-sql-agent.md)
 
-## [Migration](sql-server-linux-migrate-overview.md)
+## [Migrer](sql-server-linux-migrate-overview.md)
 ### [Restaurer à partir de Windows](sql-server-linux-migrate-restore-database.md)
 ### [Exporter et importer un fichier BACPAC à partir de Windows](sql-server-linux-migrate-ssms.md)
 ### [Migrer avec SQL Server Migration Assistant](sql-server-linux-migrate-ssma.md)
@@ -80,7 +79,7 @@
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
 
 # Ressources
-## [Dépanner](sql-server-linux-troubleshooting-guide.md)
+## [Résoudre les problèmes](sql-server-linux-troubleshooting-guide.md)
 ## [Documentation SQL Server](../sql-server/sql-server-technical-documentation.md)
 ## [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 ## [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
