@@ -12,14 +12,14 @@ ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 07/17/2017
+ms.date: 09/11/2017
 ms.author: genemi
 ms.workload: ssms-sql-server-management-studio
 ms.translationtype: HT
-ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
-ms.openlocfilehash: 4938dd27bf3f42cc85f22de99fef01adbad08ace
+ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
+ms.openlocfilehash: 917198902baf85f2bae57c9ade9f8d3e29dea357
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="new-and-recently-updated-sql-server-management-studio-ssms-for-sql-server"></a>Nouveautés et mises à jour récentes : SQL Server Management Studio (SSMS) pour SQL Server
@@ -34,7 +34,7 @@ Les mises à jour récentes sont signalées pour la plage de dates et le sujet s
 
 
 
-- *Plage de dates des mises à jour :* &nbsp; **23-05-2017** &nbsp; - au - &nbsp; **17-07-2017**
+- *Plage de dates des mises à jour :* &nbsp; **18-07-2017** &nbsp; - au - &nbsp; **11-09-2017**
 - *Domaine :* &nbsp; **SQL Server Management Studio (SSMS)**.
 
 
@@ -47,48 +47,20 @@ Les mises à jour récentes sont signalées pour la plage de dates et le sujet s
 Les liens suivants renvoient aux nouveaux articles ajoutés récemment.
 
 
-1. [Changer l’inscription d’un serveur (SQL Server Management Studio)](register-servers/change-a-server-s-registration-sql-server-management-studio.md)
-2. [Changer le nom d’un serveur ou d’un groupe de serveurs inscrits](register-servers/change-the-name-of-registered-server-or-registered-server-group.md)
-3. [Se connecter à un serveur inscrit (SQL Server Management Studio)](register-servers/connect-to-a-registered-server-sql-server-management-studio.md)
-4. [Créer un serveur de gestion centralisée et un groupe de serveurs](register-servers/create-a-central-management-server-and-server-group.md)
-5. [Créer un nouveau serveur inscrit (SQL Server Management Studio)](register-servers/create-a-new-registered-server-sql-server-management-studio.md)
-6. [Créer ou modifier un groupe de serveurs (SQL Server Management Studio)](register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)
-7. [Se déconnecter d’un serveur inscrit (SQL Server Management Studio)](register-servers/disconnect-from-a-registered-server-sql-server-management-studio.md)
-8. [Exécuter des instructions sur plusieurs serveurs simultanément](register-servers/execute-statements-against-multiple-servers-simultaneously.md)
-9. [Exporter les informations des serveurs inscrits (SQL Server Management Studio)](register-servers/export-registered-server-information-sql-server-management-studio.md)
-10. [Importer des informations de serveur inscrit (SQL Server Management Studio)](register-servers/import-registered-server-information-sql-server-management-studio.md)
-11. [Déplacer un serveur inscrit ou un groupe de serveurs inscrits](register-servers/move-a-registered-server-or-registered-server-group.md)
-12. [Inscrire un serveur connecté (SQL Server Management Studio)](register-servers/register-a-connected-server-sql-server-management-studio.md)
-13. [Serveurs inscrits – Aide (F1)](register-servers/registered-servers-f1-help.md)
-14. [Inscrire des serveurs](register-servers/register-servers.md)
-15. [Supprimer un serveur inscrit (SQL Server Management Studio)](register-servers/remove-a-registered-server-sql-server-management-studio.md)
-16. [Supprimer un groupe de serveurs (SQL Server Management Studio)](register-servers/remove-a-server-group-sql-server-management-studio.md)
-17. [Afficher des serveurs inscrits dans SQL Server Management Studio](register-servers/view-registered-servers-in-sql-server-management-studio.md)
-18. [Raccourcis clavier dans SQL Server Management Studio](sql-server-management-studio-keyboard-shortcuts.md)
-19. [Utilitaire Ssms](ssms-utility.md)
-20. [Leçon 1-1 - Démarrer SQL Server Management Studio](tutorials/lesson-1-1-start-sql-server-management-studio.md)
-21. [Leçon 1-2 - Connecter avec le composant Serveurs inscrits et l’Explorateur d’objets](tutorials/lesson-1-2-connect-with-registered-servers-and-object-explorer.md)
-22. [Leçon 1-3 - Modifier la disposition d’environnement](tutorials/lesson-1-3-change-the-environment-layout.md)
-23. [Leçon 1-4 - Afficher la fenêtre de requête](tutorials/lesson-1-4-display-the-query-window.md)
-24. [Leçon 1-5 - Afficher la page Détails de l’Explorateur d’objets](tutorials/lesson-1-5-show-the-object-explorer-details-page.md)
-25. [Leçon 1-6 - Sélectionner le schéma de raccourcis clavier](tutorials/lesson-1-6-select-the-keyboard-shortcut-scheme.md)
-26. [Leçon 1-7 - Définir les options de démarrage](tutorials/lesson-1-7-set-the-startup-options.md)
-27. [Leçon 1-8 - Restaurer la configuration par défaut de SQL Server Management Studio](tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md)
-28. [Leçon 1-9 - Résumé : Navigation de base](tutorials/lesson-1-9-summary-basic-navigation.md)
-29. [Leçon 1 : Navigation de base dans SQL Server Management Studio](tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md)
-30. [Leçon 2-1 - Connecter à l’aide de l’Éditeur de requête](tutorials/lesson-2-1-connecting-with-query-editor.md)
-31. [Leçon 2-2 - Ajout d’une mise en retrait](tutorials/lesson-2-2-adding-indentation.md)
-32. [Leçon 2-3 - Agrandissement de l’Éditeur de requête](tutorials/lesson-2-3-maximizing-query-editor.md)
-33. [Leçon 2-4 - Utilisation de commentaires](tutorials/lesson-2-4-using-comments.md)
-34. [Leçon 2-5 - Autres méthodes d’affichage de la fenêtre de code](tutorials/lesson-2-5-other-ways-of-viewing-the-code-window.md)
-35. [Leçon 2-6 - Générer un script pour une table](tutorials/lesson-2-6-script-a-table.md)
-36. [Leçon 2 : écriture d'instructions Transact-SQL](tutorials/lesson-2-writing-transact-sql.md)
-37. [Leçon 3-1 - Créer des scripts au moyen de modèles](tutorials/lesson-3-1-create-scripts-using-templates.md)
-38. [Leçon 3-2 - Créer des modèles personnalisés](tutorials/lesson-3-2-create-custom-templates.md)
-39. [Leçon 3-3 - Enregistrer des scripts sous forme de projets ou de solutions](tutorials/lesson-3-3-save-scripts-as-projects-or-solutions.md)
-40. [Leçon 3-4 - Résumé : Solutions et projets de script](tutorials/lesson-3-4-summary-solutions-and-script-projects.md)
-41. [Leçon 3 : utilisation de modèles, de solutions et de projets de scripts](tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md)
-42. [Didacticiel : SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
+1. [Fenêtre Sortie dans SQL Server Management Studio](output-window.md)
+
+
+
+&nbsp;
+
+## <a name="updated-articles-with-excerpts"></a>Articles mis à jour avec des extraits
+
+Cette section affiche les extraits des mises à jour collectés dans des articles qui ont récemment fait l’objet d’une mise à jour importante.
+
+Les extraits affichés ici apparaissent séparés de leur contexte sémantique propre. Un extrait est parfois séparé de la syntaxe Markdown importante qui l’entoure dans l’article. Ces extraits sont donc donnés à titre indicatif uniquement. Les extraits vous permettent seulement de savoir si les articles correspondants vont vous intéresser et si oui, de cliquer dessus pour les consulter.
+
+Pour cela et pour d’autres raisons, ne copiez pas le code de ces extraits et ne prenez pas à la lettre les extraits de texte. Consultez plutôt l’article.
+
 
 
 
@@ -101,17 +73,11 @@ Les liens suivants renvoient aux nouveaux articles ajoutés récemment.
 
 Cette liste compacte fournit des liens vers tous les articles mis à jour qui sont répertoriés dans la section des extraits.
 
+1. [Télécharger SQL Server Management Studio (SSMS)](#TitleNum_1)
+2. [Se connecter à SQL Server ou Azure SQL Database](#TitleNum_2)
+3. [SQL Server Management Studio : journal des modifications (SSMS)](#TitleNum_3)
+4. [Créer et mettre à jour les tables de base de données](#TitleNum_4)
 
-
-&nbsp;
-
-## <a name="updated-articles-with-excerpts"></a>Articles mis à jour avec des extraits
-
-Cette section affiche les extraits des mises à jour collectés dans des articles qui ont récemment fait l’objet d’une mise à jour importante.
-
-Les extraits affichés ici apparaissent séparés de leur contexte sémantique propre. Un extrait est parfois séparé de la syntaxe Markdown importante qui l’entoure dans l’article. Par conséquent, ces extraits sont donnés à titre indicatif uniquement. Les extraits vous permettent seulement de savoir si les articles correspondants vont vous intéresser et si oui, de cliquer dessus pour les consulter.
-
-Pour cela et pour d’autres raisons, ne copiez pas le code de ces extraits et ne prenez pas à la lettre les extraits de texte. Consultez plutôt l’article.
 
 
 
@@ -121,93 +87,238 @@ Pour cela et pour d’autres raisons, ne copiez pas le code de ces extraits et n
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-sql-server-management-studio---changelog-ssmssql-server-management-studio-changelog-ssmsmd"></a>1. &nbsp; [SQL Server Management Studio - Journal des modifications (SSMS)](sql-server-management-studio-changelog-ssms.md)
+### <a name="1-nbsp-download-sql-server-management-studio-ssmsdownload-sql-server-management-studio-ssmsmd"></a>1. &nbsp; [Télécharger SQL Server Management Studio (SSMS)](download-sql-server-management-studio-ssms.md)
 
-*Mise à jour : 2017-06-08* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*Mise à jour : 07/08/2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Suivant](#TitleNum_2))
+
+<!-- Source markdown line 63.  ms.author= "sstein".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 23260f301f86651061b47065bee43d42c92a7be4 0c2178d96b621b96bfcd2fbb782f24792debb407  (PR=2775  ,  Filename=download-sql-server-management-studio-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=3f12671ace99d5fefc199c7b1c2db31e5b3cfade) -->
+
+
+
+SSMS 17.2 est la dernière version de SQL Server Management Studio. La génération 17.x de SSMS prend en charge presque tous les composants de SQL Server 2008 à SQL Server 2017. La version 17.x prend également en charge la PaaS SQL Analysis Services.
+
+La version 17.2 inclut :
+
+- L’authentification multifacteur (MFA)
+  - L’authentification de plusieurs utilisateurs Azure AD pour une authentification universelle avec l’authentification multifacteur (agent utilisateur avec MFA)
+  - Un nouveau champ d’entrée des informations d’identification de l’utilisateur a été ajouté pour l’authentification universelle avec MFA afin de prendre en charge l’authentification de plusieurs utilisateurs.
+- La boîte de dialogue de connexion prend désormais en charge les 5 méthodes d’authentification suivantes :
+  - Authentification Windows
+  - Authentification SQL Server
+  - Active Directory - Authentification universelle avec prise en charge de MFA
+  - Active Directory - Authentification par mot de passe
+  - Active Directory - Authentification intégrée
+
+- L’Assistant Importation/exportation de base de données pour DacFx peut désormais utiliser l’authentification universelle avec MFA.
+- Pour la prise en charge de l’API, consultez [IUniversalAuthProvider Interface](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.iuniversalauthprovider.aspx) (Interface IUniversalAuthProvider).
+- La bibliothèque ADAL gérée utilisée par l’authentification universelle Azure AD avec MFA a été mise à niveau vers la version 3.13.9.
+- Nouvelle interface CLI prenant en charge le paramètre d’administration Azure AD pour SQL Database et SQL Data Warehouse.
+
+ Pour plus d’informations sur les méthodes d’authentification Active Directory, consultez [Authentification universelle avec SQL Database et SQL Data Warehouse (prise en charge de SSMS pour MFA)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication) et [Configurer l’authentification multifacteur Azure SQL Database pour SQL Server Management Studio](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication-configure).
+
+- La fenêtre Sortie a des entrées pour les requêtes exécutées pendant le développement des nœuds de l’Explorateur d’objets
+- Concepteur de vues activé pour les bases de données Azure SQL Database
+- Les options de script par défaut pour les objets de script dans l’Explorateur d’objets de SSMS ont changé :
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_2"/>
+
+### <a name="2-nbsp-connect-to-a-sql-server-or-azure-sql-databaseobjectconnect-to-an-instance-from-object-explorermd"></a>2. &nbsp; [Se connecter à SQL Server ou Azure SQL Database](object/connect-to-an-instance-from-object-explorer.md)
+
+*Mise à jour : 25/08/2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Précédent](#TitleNum_1) | [Suivant](#TitleNum_3))
+
+<!-- Source markdown line 40.  ms.author= "sstein".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 cfd72893c35c87df96dc8605807e542be28936e2 840981d3a115a15774a8e47ee2f6a0e5c4177b01  (PR=2961  ,  Filename=connect-to-an-instance-from-object-explorer.md  ,  Dirpath=docs\ssms\object\  ,  MergeCommitSha40=21f0cfd102a6fcc44dfc9151750f1b3c936aa053) -->
+
+
+
+   ![firewall--../media/connect-to-server/new-firewall-rule.png)
+
+1. Pour créer la règle de pare-feu et vous connecter au serveur, cliquez sur **OK**.
+
+1. Le serveur s’affiche dans l’**Explorateur d’objets** après vous être connecté :
+
+   ![connected--../media/connect-to-server/connected.png)
+
+**Étapes suivantes**
+
+
+[Concevoir, créer et mettre à jour des tables--../visual-db-tools/design-tables-visual-database-tools.md)
+
+**Voir aussi**
+
+
+[SQL Server Management Studio (SSMS)--../sql-server-management-studio-ssms.md) [Télécharger SQL Server Management Studio (SSMS)--../download-sql-server-management-studio-ssms.md)
+
+[Analysis Services](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)
+[Integration Services](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)
+[Reporting Services](https://docs.microsoft.com/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio)
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_3"/>
+
+### <a name="3-nbsp-sql-server-management-studio---changelog-ssmssql-server-management-studio-changelog-ssmsmd"></a>3. &nbsp; [SQL Server Management Studio - Journal des modifications (SSMS)](sql-server-management-studio-changelog-ssms.md)
+
+*Mise à jour : 07/08/2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Précédent](#TitleNum_2) | [Suivant](#TitleNum_4))
 
 <!-- Source markdown line 20.  ms.author= "sstein".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 1668cba64d4988192aedc6daf9362f288668682d 1733ce3c556db1e51cb27bf830429f2c42e8f97e  (PR=1975  ,  Filename=sql-server-management-studio-changelog-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=470e6c83318eaf8eb579d053f65b5353862eb4c7) -->
+<!-- git diff --ignore-all-space --unified=0 1733ce3c556db1e51cb27bf830429f2c42e8f97e 2abb24fd6547e438181039d095cbad027473a57e  (PR=2775  ,  Filename=sql-server-management-studio-changelog-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=3f12671ace99d5fefc199c7b1c2db31e5b3cfade) -->
 
 
 
-**Version SSMS 17.1**
+Cet article fournit des détails sur les mises à jour, les améliorations et les correctifs de bogues des versions actuelles et précédentes de SSMS. Télécharger [versions précédentes de SSMS ci-dessous--#previous-ssms-releases).
 
-Disponibilité générale | Numéro de build : 14.0.17119.0
+**[SSMS 17.2--download-sql-server-management-studio-ssms.md)**
+
+
+Disponibilité générale | Numéro de build : 14.0.17177.0
 
 **Améliorations**
 
 
-- Profileur : Aide > À propos de affiche maintenant le numéro de version (par exemple 17.1)
-- Les utilisateurs Analysis Service peuvent actualiser les informations d’identification de leurs sources de données pour les modèles 1200 TM et supérieur dans le menu contextuel sur la source de données.
-- Les rapports SSIS prédéfinis montrent maintenant les journaux de l’exécution de SSIS Scale Out dans CTP 2.1
-- Application de gestion de SSIS Scale Out
-  - Affichez les informations de base de Scale Out Master.
-  - Ajoutez facilement un worker au déploiement de Scale Out.
-  - Affichez tous les Scale Out workers et les informations de base les concernant. Vous pouvez aussi les activer ou les désactiver facilement.
+- L’authentification multifacteur (MFA)
+  - L’authentification de plusieurs utilisateurs Azure AD pour une authentification universelle avec l’authentification multifacteur (agent utilisateur avec MFA)
+  - Un nouveau champ d’entrée des informations d’identification de l’utilisateur a été ajouté pour l’authentification universelle avec MFA afin de prendre en charge l’authentification de plusieurs utilisateurs.
+- La boîte de dialogue de connexion prend désormais en charge les 5 méthodes d’authentification suivantes :
+  - Authentification Windows
+  - Authentification SQL Server
+  - Active Directory - Authentification universelle avec prise en charge de MFA
+  - Active Directory - Authentification par mot de passe
+  - Active Directory - Authentification intégrée
 
-**Correctifs de bogues**
+- L’Assistant Importation/exportation de base de données pour DacFx utilisant l’authentification universelle avec MFA.
+- Pour la prise en charge de l’API, consultez [IUniversalAuthProvider Interface](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.iuniversalauthprovider.aspx) (Interface IUniversalAuthProvider).
+- La bibliothèque ADAL gérée, utilisée par l’authentification universelle Azure AD avec MFA, a été mise à niveau vers la version 3.13.9.
+- Par ailleurs, une nouvelle interface CLI a été publiée, prenant en charge le paramètre d’administration Azure AD pour SQL Database et SQL Data Warehouse.
 
-- AlwaysOn :
-  - Correction d’un problème où les propriétés d’un réplica de disponibilité étaient toujours affichées avec le mode « Basculement automatique » pour les groupes de disponibilité WSFC.
-  - Correction d’un problème où la liste de routage en lecture seule était remplacée lors de la mise à jour du groupe de disponibilité
-- Always Encrypted : correction d’un problème où des informations générées par DacFx étaient manquantes dans le fichier journal généré.
-- ShowPlan : correction d’un problème où l’interface utilisateur affichait toujours l’attribut de type de jointure réel pour les opérateurs de jointure non adaptatifs.
-- Programme d’installation :
-  - Correction d’un problème où SSMS 17.0 endommageait SSDT sur Visual Studio 2013 [Article de Microsoft Connect 3133479]
-  - Correction d’un problème où cliquer sur « Redémarrer » à la fin du programme d’installation ne redémarrait pas la machine
-- Script : empêchement temporaire de la suppression accidentelle d’objets de base de données Azure par SSMS lors de la création d’un script de suppression, via la désactivation de cette option.  Un correctif approprié sera apporté dans une prochaine version de SSMS.
-- Explorateur d’objets : correction d’un problème où le nœud « Bases de données » n’était pas développé lors de la connexion à une base de données Azure créée avec « AS COPY »
+ Pour plus d’informations sur les méthodes d’authentification Active Directory, consultez [Authentification universelle avec SQL Database et SQL Data Warehouse (prise en charge de SSMS pour MFA)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication) et [Configurer l’authentification multifacteur Azure SQL Database pour SQL Server Management Studio](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication-configure).
+
+- La fenêtre Sortie a des entrées pour les requêtes exécutées pendant le développement des nœuds de l’Explorateur d’objets
 
 
-
-
-
-
-<a name="similars2"/>
 
 &nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_4"/>
+
+### <a name="4-nbsp-create-and-update-database-tablesvisual-db-toolsdesign-tables-visual-database-toolsmd"></a>4. &nbsp; [Créer et mettre à jour les tables de base de données](visual-db-tools/design-tables-visual-database-tools.md)
+
+*Mise à jour : 25/08/2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Précédent](#TitleNum_3))
+
+<!-- Source markdown line 30.  ms.author= "sstein".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 f63884ac2d04889e70c505cb5262c8dd81d73ee7 4b4c7aa5e8a0548405f02d11a66b722219fa78f0  (PR=2961  ,  Filename=design-tables-visual-database-tools.md  ,  Dirpath=docs\ssms\visual-db-tools\  ,  MergeCommitSha40=21f0cfd102a6fcc44dfc9151750f1b3c936aa053) -->
+
+
+
+**Créer une table**
+
+
+1. Cliquez avec le bouton droit sur le nœud **Tables** de votre base de données et sélectionnez **Nouvelle** > **Table** :
+
+    ![Nouvelle table--../media/design-tables/new-table.png)
+
+1. Ajouter [colonnes--column-properties-visual-database-tools.md) à votre table :
+
+    ![concevoir une table--../media/design-tables/new-table2.png)
+
+1. Fermez le concepteur et enregistrez vos modifications.
+
+**Mettre à jour une table**
+
+
+1. Cliquez avec le bouton droit sur la table sous le nœud **Tables** de votre base de données et sélectionnez **Conception** :
+
+   ![Mettre à jour une table--../media/design-tables/update-table.png)
+
+1. Mettez à jour les paramètres de la table que vous souhaitez :
+
+   ![--../media/design-tables/update-table2.png)
+
+1. Fermez le concepteur et enregistrez vos modifications.
+
+**Voir aussi**
+
+
+[Tables](http://msdn.microsoft.com/82d7819c-b801-4309-a849-baa63083e83f) [Propriétés de la table &#40;Visual Database Tools&#41;--../../ssms/visual-db-tools/table-properties-visual-database-tools.md) [Propriétés des colonnes--column-properties-visual-database-tools.md) [Ajouter des colonnes à une table--../../relational-databases/tables/add-columns-to-a-table-database-engine.md) [Clés primaire et étrangère--../../relational-databases/tables/primary-and-foreign-key-constraints.md) [Index--../../relational-databases/indexes/indexes.md) [Types de données (Transact-SQL)--../../t-sql/data-types/data-types-transact-sql.md) [Télécharger SQL Server Management Studio (SSMS)--../download-sql-server-management-studio-ssms.md)
+
+
+
+
+
+
 
 ## <a name="similar-articles"></a>Articles similaires
 
-Cette section liste les articles très similaires récemment mis à jour dans d’autres domaines, dans le même dépôt GitHub.com : [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
+<!--  HOW TO:
+    Refresh this file's line items with the latest 'Count-in-Similars*' content.
+    Then run Run-533-*.BAT
+-->
 
-<!--  20170717-1101  -->
+Cette section liste les articles très similaires récemment mis à jour dans d’autres zones de sujet, dans notre référentiel public GitHub.com : [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Domaines avec des articles nouveaux ou mis à jour récemment
+#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Zones de sujet avec des articles nouveaux ou mis à jour récemment
 
-- [Nouveaux + Mis à jour (4 + 4) : **Analytique avancée pour SQL** (documentation)](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Nouveaux + Mis à jour (2 + 0) : **Analysis Services pour SQL** (documentation)](../analysis-services/new-updated-analysis-services.md)
-- [Nouveaux + Mis à jour (1 + 2) : **Connexion à SQL** (documentation)](../connect/new-updated-connect.md)
-- [Nouveaux + Mis à jour (6 + 0) : **Moteur de base de données pour SQL** (documentation)](../database-engine/new-updated-database-engine.md)
-- [Nouveaux + Mis à jour (13 + 2) : **Linux pour SQL** (documentation)](../linux/new-updated-linux.md)
-- [Nouveaux + Mis à jour (1 + 0) : **MDS (Master Data Services) pour SQL** (documentation)](../master-data-services/new-updated-master-data-services.md)
-- [Nouveaux + Mis à jour (1 + 0) : **ODBC (Open Database Connectivity) pour SQL** (documentation)](../odbc/new-updated-odbc.md)
-- [Nouveaux + Mis à jour (8 + 4) : **Bases de données relationnelles pour SQL** (documentation)](../relational-databases/new-updated-relational-databases.md)
-- [Nouveaux + Mis à jour (2 + 2) : **Microsoft SQL Server** (documentation)](../sql-server/new-updated-sql-server.md)
-- [Nouveaux + Mis à jour (0 + 1) : **SQL Server Management Studio (SSMS)** (documentation)](../ssms/new-updated-ssms.md)
-- [Nouveaux + Mis à jour (1 + 0) : **Transact-SQL** (documentation)](../t-sql/new-updated-t-sql.md)
-- [Nouveaux + Mis à jour (1 + 0) : **Outils pour SQL** (documentation)](../tools/new-updated-tools.md)
+- [Nouveaux + Mis à jour (3 + 12) : **Analyse avancée pour SQL** (documentation)](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nouveaux + Mis à jour (5 + 0) : **Se connecter à SQL** (documentation)](../connect/new-updated-connect.md)
+- [Nouveaux + Mis à jour (5 + 1) : **Moteur de base de données pour SQL** (documentation)](../database-engine/new-updated-database-engine.md)
+- [Nouveaux + Mis à jour (19 + 82) : **Integration Services pour SQL** (documentation)](../integration-services/new-updated-integration-services.md)
+- [Nouveaux + Mis à jour (1 + 8) : **Linux pour SQL** (documentation)](../linux/new-updated-linux.md)
+- [Nouveaux + Mis à jour (12 + 1) : **Bases de données relationnelles pour SQL** (documentation)](../relational-databases/new-updated-relational-databases.md)
+- [Nouveau + Mis à jour (0 + 1) : **Reporting Services pour SQL** (documentation)](../reporting-services/new-updated-reporting-services.md)
+- [Nouveaux + Mis à jour (7 + 1) : **Microsoft SQL Server** (documentation)](../sql-server/new-updated-sql-server.md)
+- [Nouveau + Mis à jour (1 + 1) : **SQL Server Data Tools (SSDT)** (documentation)](../ssdt/new-updated-ssdt.md)
+- [Nouveau + Mis à jour (0 + 2) : **SQL Server Migration Assistant (SSMA)** (documentation)](../ssma/new-updated-ssma.md)
+- [Nouveau + Mis à jour (1 + 4) : **SQL Server Management Studio (SSMS)** (documentation)](../ssms/new-updated-ssms.md)
+- [Nouveaux + Mis à jour (4 + 1) : **Transact-SQL** (documentation)](../t-sql/new-updated-t-sql.md)
+- [Nouveau + Mis à jour (0 + 1) : **Outils pour SQL** (documentation)](../tools/new-updated-tools.md)
 
-
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Domaines sans article nouveau ou mis à jour récemment
+#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Zones de sujet sans article nouveau ou mis à jour récemment
 
 - [Nouveaux + Mis à jour (0 + 0) : **ActiveX Data Objects (ADO) pour SQL** (documentation)](../ado/new-updated-ado.md)
+- [Nouveau + Mis à jour (0 + 0) : **Analysis Services pour SQL** (documentation)](../analysis-services/new-updated-analysis-services.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Data Quality Services pour SQL** (documentation)](../data-quality-services/new-updated-data-quality-services.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Extensions DMX (Data Mining Extensions) pour SQL** (documentation)](../dmx/new-updated-dmx.md)
-- [Nouveaux + Mis à jour (0 + 0) : **Integration Services pour SQL** (documentation)](../integration-services/new-updated-integration-services.md)
+- [Nouveau + Mis à jour (0 + 0) : **Master Data Services (MDS) for SQL** (documentation)](../master-data-services/new-updated-master-data-services.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Expressions MDX (Multidimensional Expressions) pour SQL** (documentation)](../mdx/new-updated-mdx.md)
+- [Nouveaux + Mis à jour (0 + 0) : **ODBC (Open Database Connectivity) pour SQL** (documentation)](../odbc/new-updated-odbc.md)
 - [Nouveaux + Mis à jour (0 + 0) : **PowerShell pour SQL** (documentation)](../powershell/new-updated-powershell.md)
-- [Nouveaux + Mis à jour (0 + 0) : **Reporting Services pour SQL** (documentation)](../reporting-services/new-updated-reporting-services.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Exemples pour SQL** (documentation)](../sample/new-updated-sample.md)
-- [Nouveaux + Mis à jour (0 + 0) : **SQL Server Data Tools (SSDT)** (documentation)](../ssdt/new-updated-ssdt.md)
-- [Nouveaux + Mis à jour (0 + 0) : **SQL Server Migration Assistant (SSMA)** (documentation)](../ssma/new-updated-ssma.md)
 - [Nouveaux + Mis à jour (0 + 0) : **XQuery pour SQL** (documentation)](../xquery/new-updated-xquery.md)
 
-
-&nbsp;
 
 

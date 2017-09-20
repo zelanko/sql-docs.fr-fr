@@ -19,11 +19,11 @@ caps.latest.revision: 19
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 679625527f4f29d086b50e2291af4cff14b74d3e
+ms.translationtype: HT
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 2172a7e83454030f0cee9eaec1909c0cfb019d63
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd (applet de commande)
@@ -129,7 +129,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Longueur maximale de la sortie de type caractère|-w|-MaxCharLength|  
 |Longueur maximale de la sortie de type binaire|-w|-MaxBinaryLength|  
 |Établir la connexion à l'aide du chiffrement SSL|Aucun paramètre|-EncryptConnection|  
-|Afficher les erreurs|Aucun paramètre|-OutputSqlErrors|  
+|Afficher les erreurs|Aucun paramètre|-OutputSqlErrors : requiert un paramètre booléen $true ou $false|  
 |Sortie des messages vers stderr|-r|Aucun paramètre|  
 |Utiliser les paramètres régionaux du client|-r|Aucun paramètre|  
 |Exécuter la requête spécifiée et rester actif|-Q|Aucun paramètre|  
