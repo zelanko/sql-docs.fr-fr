@@ -1,8 +1,8 @@
 ---
-title: "Quel &#39; nouveauté dans Machine Learning Services | Documents Microsoft"
+title: Quel &#39; est nouvelle dans Machine Learning Services | Documents Microsoft
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 07/31/2017
+ms.date: 09/08/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8719ec8be1c0f7b7b0dc72093707829c30ebbb3f
+ms.sourcegitcommit: fffe2ab906f659a2fb0e2996363ac8e7da000707
+ms.openlocfilehash: 34a404511d72c5775f25dd182b018926b6d0d62e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/18/2017
 
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>Quelles sont les nouveautés dans Machine Learning Services dans SQL Server
@@ -30,27 +30,27 @@ Dans SQL Server 2017, apprentissage devient encore plus performante, avec prise 
 
 Intercepter la dernière annonce ici ! [Python dans SQL Server 2017 : amélioré dans base de données d’apprentissage](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
 
-## <a name="whats-new-in-sql-server-2017-release-candidate-2"></a>Nouveautés de SQL Server 2017 Release Candidate 2
+## <a name="whats-new-in-sql-server-2017"></a>Nouveautés de SQL Server 2017
 
-Microsoft Machine Learning Server dans SQL Server fournit désormais une prise en charge complète pour créer et déployer des solutions d’apprentissage machine. Voici les principales fonctionnalités de cette version :
+Microsoft Machine Learning Server dans SQL Server fournit désormais une prise en charge complète pour créer et déployer des solutions d’apprentissage machine dans R ou Python. Voici les principales fonctionnalités de cette version :
 
 > [!IMPORTANT]
 > 
 > Services de formation d’ordinateur, y compris l’utilisation de R ou Python, ne sont actuellement pas pris en charge lors de l’exécution de SQL Server sur Linux, ou dans la base de données SQL Azure. Recherchez les modifications apportées à une version ultérieure.
 > 
-> Toutefois, calculer les scores natif à l’aide de la fonction PREDICT sont actuellement pris en charge dans l’édition de Linux. 
+> Calculer les scores natif à l’aide de la fonction PREDICT sont actuellement pris en charge dans l’édition de Linux.
  
 ### <a name="in-database-python-integration"></a>Intégration de Python dans base de données
 
-Vous pouvez exécuter les Python dans les procédures stockées, ou exécutez Python à distance à l’aide de l’ordinateur SQL Server en tant que le contexte de calcul. Cette intégration ouvre de nouvelles voies de grande Communauté de Python aux développeurs et les données des chercheurs exploiter la puissance de SQL Server et pour explorer des innovations de Microsoft tels que **revoscalepy** et **microsoftml**.
+Vous pouvez exécuter les Python dans les procédures stockées, ou exécutez Python à distance à l’aide de l’ordinateur SQL Server en tant que le contexte de calcul. Cette intégration ouvre de nouvelles voies pour la grande Communauté des développeurs de Python et des chercheurs de données à utiliser la puissance de SQL Server. 
 
-Les développeurs SQL Server pour accéder à des bibliothèques de Python complètes à partir de l’écosystème open source, y compris les infrastructures plébiscitées telles que scikit-en savoir plus, Tensorflow, Caffe et Theano/Keras. 
+Les développeurs SQL Server pour accéder à des bibliothèques de Python complètes à partir de l’écosystème open source, y compris les infrastructures plébiscitées telles que scikit-en savoir plus, Tensorflow, Caffe et Theano/Keras. Et veillez à Explorer les innovations de Microsoft tels que **revoscalepy** et **microsoftml**!
 
-Mais en cours d’exécution Python dans base de données n’est pas simplement pour l’apprentissage ; Il existe une multitude d’autres applications potentielles pour l’intégration de Python avec SQL, en exploitant les avantages offerts par les langages respectifs pour offrir des solutions puissantes plus intelligentes.
+Python en cours d’exécution dans la base de données n’est pas seulement une affaire d’apprentissage automatique, la façon dont. Il existe une multitude d’autres applications potentielles à l’intégration de Python avec SQL et à l’aide de la puissance de chaque langage pour offrir des solutions puissantes plus intelligentes.
 
 + **revoscalepy**
 
-    Cette version inclut la version finale de **revoscalepy**, qui fournit des équivalents Pythonic évolutives, algorithmes de RevoScaleR de diffusion en continu. Vous pouvez créer des modèles de Python pour des régressions linéaires et logistiques, les arbres de décision, les arbres augmentés et les forêts aléatoires, tout parallèles et capables de les exécuter dans des contextes de calcul à distance.
+    Cette version inclut la version finale de **revoscalepy**, qui fournit des équivalents de Python des algorithmes dans RevoScaleR. Vous pouvez créer des modèles de Python pour des régressions linéaires et logistiques, les arbres de décision, les arbres augmentés et les forêts aléatoires, tout parallèles et capables de les exécuter dans des contextes de calcul à distance.
 
     Pour plus d’informations, consultez [What ' s revoscalepy](python/what-is-revoscalepy.md).
 
@@ -60,9 +60,9 @@ Mais en cours d’exécution Python dans base de données n’est pas simplement
 
 + Prise en charge de Python dans Microsoft Machine Learning Server (autonome)
 
-    SQL Server 2017 inclut la possibilité d’installer une version autonome des plateformes Python et R. À l’aide de Machine Learning Server, vous pouvez distribuer et l’échelle de R ou Python code sans utiliser de SQL Server.
+    SQL Server 2017 inclut la possibilité d’installer une version autonome de la plateforme d’apprentissage Microsoft. À l’aide de Machine Learning Server, vous pouvez distribuer et l’échelle de R ou Python code sans utiliser de SQL Server.
 
-    Pour obtenir un exemple d’utilisation de Python dans Microsoft Machine Learning Server, consultez [publier et consommer le code Python](python/publish-consume-python-code.md).
+    Pour obtenir un exemple de Python s’exécutant dans Microsoft Machine Learning Server, consultez [publier et consommer le code Python](python/publish-consume-python-code.md).
 
 ### <a name="new-algorithms"></a>Nouveaux algorithmes
 
@@ -76,7 +76,7 @@ Pour plus d’informations, consultez [présentation MicrosoftML](using-the-micr
 
 Cette version contient plusieurs options et fonctionnalités pour vous aider à déployer et distribuer des tâches d’apprentissage automatique :
 
-+ À l’Opérationnalisation avec T-SQL
++ Déployer et intégrer des solutions de Python de machine, à l’aide de T-SQL
 
     L’intégration de Python avec T-SQL signifie que vous pouvez appeler n’importe quel code Python à l’aide `sp_execute_external_script`. Cette infrastructure de sécurité permet le déploiement d’entreprise de modèles de Python et des scripts qui peuvent être appelées à partir d’une application à l’aide d’une procédure stockée simple. Performances supplémentaires sont par diffusion en continu des données à partir de SQL pour les processus de Python et la parallélisation anneau MPI.
 
@@ -86,7 +86,7 @@ Cette version contient plusieurs options et fonctionnalités pour vous aider à 
 
 + Performance
 
-    Microsoft a envoyé les limites des performances pour calculer les scores. Avec la base de données de calcul de score, nous avions traité un million de lignes par seconde à l’aide des modèles R. Dans cette version, les nouvelles fonctionnalités pour **en temps réel de calcul de score** et **score native** prise en charge des lots ainsi de meilleures performances dans une seule ligne score et de petite. 
+    Microsoft a envoyé les limites des performances pour calculer les scores. Avec la base de données de calcul de score, nous avions traité un million de lignes par seconde à l’aide des modèles R. Dans cette version, les nouvelles fonctionnalités pour **en temps réel de calcul de score** et **score native** obtenir de meilleures performances dans une ligne et le calcul du score du lot. 
 
 ### <a name="realtime-scoring-and-native-scoring"></a>Calculer les scores en temps réel et le score natif
 
@@ -95,7 +95,7 @@ Calculer les scores en temps réel s’appuie sur les bibliothèques natives C++
 En outre, cette version de SQL Server 2017 inclut une fonction de T-SQL native pour calculer les scores rapide qui peut être exécutée sur n’importe quelle édition de SQL Server, y compris sur Linux. La fonction ne requiert aucune installation de R ou une configuration supplémentaire. Cela signifie que vous pouvez effectuer l’apprentissage d’un modèle à un autre emplacement, enregistrez-le dans SQL Server et puis effectuer le calcul de score sans jamais appeler R. Cette fonctionnalité est appelée _score natif_.
 
   - Calcul de score natif est uniquement disponible dans SQL Server 2017. Elle utilise une fonction de T-SQL qui peut s’exécuter dans n’importe quelle édition de SQL Server, notamment Linux.
- - Calculer les scores en temps réel sont prise en charge dans SQL Server 2017 et Microsoft Machine Learning Server. Vous pouvez runa procédure stockée ou d’effectuer en temps réel à partir du code R de calcul de score.
+ - Calculer les scores en temps réel sont prise en charge dans SQL Server 2017 et Microsoft Machine Learning Server. Vous pouvez exécuter une procédure stockée ou effectuer en temps réel à partir du code R de calcul de score.
  - Calculer les scores en temps réel est également disponible pour SQL Server 2016, si l’instance est mis à niveau vers la dernière version de Microsoft R Server.
 
 Pour plus d’informations, consultez ces articles :
@@ -104,9 +104,9 @@ Pour plus d’informations, consultez ces articles :
  + [Calcul de score en natif](sql-native-scoring.md)
  + [Comment effectuer le calcul de score en temps réel ou évaluation natif](r/how-to-do-realtime-scoring.md)
 
-### <a name="upgrade-your-ml-experience-and-get-pre-trained-models"></a>Mise à niveau de votre expérience de ML et obtenir des modèles dont l’apprentissage
+### <a name="upgrade-your-machine-learning-experience-and-get-pre-trained-models"></a>Mise à niveau de votre expérience d’apprentissage et obtenir des modèles dont l’apprentissage
 
-Si vous avez installé une version antérieure de SQL Server 2016 R Services, vous pouvez désormais mettre à niveau vers la dernière version en basculant de votre serveur pour utiliser la stratégie de cycle de vie moderne. En procédant ainsi, vous pouvez tirer parti d’un cycle de mise en production plus rapide pour R et mise à niveau automatique de tous les composants R. Pour plus d’informations, consultez l’article [Microsoft R Server 9.0.1](https://docs.microsoft.com/r-server/whats-new-in-r-server).
+Si vous avez installé une version antérieure de SQL Server 2016 R Services, vous pouvez désormais mettre à niveau vers la dernière version en basculant de votre serveur pour utiliser la stratégie de cycle de vie des logiciels modernes. En procédant ainsi, vous pouvez tirer parti d’un cycle de mise en production plus rapide pour R et mise à niveau automatique de tous les composants R. Pour plus d’informations, consultez l’article [Microsoft R Server 9.0.1](https://docs.microsoft.com/r-server/whats-new-in-r-server).
 
 Le programme d’installation offre également la possibilité d’installer une collection de modèles dont l’apprentissage au format binaire. Ces modèles prennent en charge l’apprentissage automatique dans les scénarios de reconnaissance d’image, où il peut être difficile pour les clients rechercher des jeux de données volumineux pour former un modèle. Après avoir installé un des modèles dont l’apprentissage, vous pouvez l’utiliser pour la prédiction de vos propres données sans le temps et les dépenses impliqués dans l’apprentissage de ce type de modèle volumineux et complexe.
 
@@ -117,8 +117,8 @@ Pour plus d’informations, consultez [installer dont l’apprentissage des mod�
 Cette version inclut de nombreuses améliorations dans la gestion des packages pour SQL Server. notamment :
 
 - rôles de base de données pour l’administrateur à gérer et auditer les autorisations
-- l’instruction de créer une bibliothèque externe dans T-SQL
-- un ensemble complet de fonctions R pour aider à installer, supprimer ou répertorier les packages appartenant aux utilisateurs.
+- L’instruction de créer une bibliothèque externe dans T-SQL, pour aider les administrateurs à gérer les packages sans avoir à connaître R
+- Un ensemble complet de fonctions R pour aider à installer, supprimer ou répertorier les packages appartenant aux utilisateurs
 
 Pour plus d’informations, consultez [gestion des packages](r/r-package-management-for-sql-server-r-services.md).
 
@@ -128,4 +128,4 @@ Pour plus d’informations, consultez [gestion des packages](r/r-package-managem
 
 + [Configurer R dans Machine Learning Services SQL Server](r/set-up-sql-server-r-services-in-database.md)
 
-+ [Didacticiels d’apprentissage machine](tutorials/machine-learning-services-tutorials.md)
++ [Exemples et didacticiels de machine learning](tutorials/machine-learning-services-tutorials.md)

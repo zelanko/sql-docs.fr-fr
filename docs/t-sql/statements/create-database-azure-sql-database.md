@@ -34,10 +34,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fe808df2a3d0f55ab00946db2bd86aa8d9fb3511
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: cccf648270523e86e502caebfbc7f6ba6a55cfd7
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE (Azure SQL Database)
@@ -130,11 +130,11 @@ Spécifie le classement par défaut pour le catalogue de métadonnées. *DATABAS
 |150 Go|Néant|√|√|√|√|  
 |200 Go|Néant|√|√|√|√|  
 |250 Go|Néant|√ (D)|√ (D)|√|√|  
-|300 Go|Néant|√|√|√|√|  
-|400 Go|Néant|√|√|√|√|
-|500 Go|Néant|√|√|√ (D)|√|
-|750 GO|Néant|√|√|√|√|
-|1 024 GO|Néant|√|√|√|√ (D)|
+|300 Go|Néant|Néant|√|√|√|  
+|400 Go|Néant|Néant|√|√|√|
+|500 Go|Néant|Néant|√|√ (D)|√|
+|750 GO|Néant|Néant|√|√|√|
+|1 024 GO|Néant|Néant|√|√|√ (D)|
 |À partir de 1 024 Go jusqu'à 4096 Go par incréments de 256 Go * |Néant|Néant|Néant|Néant|√|√|  
   
  \*P11 et P15 autorisent MAXSIZE jusqu'à 4 To de 1 024 Go en cours de la taille par défaut.  P11 et P15 peuvent utiliser jusqu'à 4 To de stockage inclus sans frais supplémentaires. Dans le niveau Premium, MAXSIZE supérieure à 1 to n’est actuellement disponible dans les régions suivantes : nous East2, ouest des États-Unis, nous Gov Virginie, Europe de l’ouest, Allemagne Central, Asie du Sud, l’est du Japon, est de l’Australie, Canada Central et est du Canada. Pour connaître les limitations actuelles, consultez [unique des bases de données](https://docs.microsoft.com/azure/sql-database-single-database-resources).  
@@ -292,7 +292,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 
 -  [Sys.dm_database_copies &#40; Base de données SQL Azure &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
 
--   [ALTER DATABASE &#40; Base de données SQL Azure &#41;](https://msdn.microsoft.com/library/mt574871.aspx)   
+-   [ALTER DATABASE &#40; Base de données SQL Azure &#41;](/sql-docs/docs/t-sql/statements/alter-database-azure-sql-database)   
     
   
 

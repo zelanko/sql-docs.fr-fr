@@ -20,17 +20,17 @@ caps.latest.revision: 67
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7cd0ab1950eeaf54da67e7f8dd5bb2da89a26307
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f20330dab55ad3670f6d30037cb6b1962dd5c02c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Créer un rapport de tableau de base (didacticiel SSRS)
 
-Dans ce didacticiel, vous utilisez le Concepteur de rapports dans SQL Server Data Tools pour créer un base [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginé de rapport avec une table, selon le  **[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]**  base de données. Vous pouvez également créer [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] des rapports du Générateur de rapports paginés. 
+Dans ce didacticiel, vous utilisez le Concepteur de rapports dans SQL Server Data Tools pour créer un base [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginé de rapport avec une table, selon le ** [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] ** base de données. Vous pouvez également créer [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] des rapports du Générateur de rapports paginés. 
 
 Tout au long de ce didacticiel, vous serez créer un projet de rapport, définir les informations de connexion, définir une requête, ajouter une région de données de Table, regrouper et nombre total de certains champs et afficher un aperçu du rapport.  
   
@@ -43,7 +43,7 @@ Les éléments suivants doivent cependant être installés sur votre système :
   
 -   La base de données [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] .  Pour plus d’informations, consultez [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)(Exemples de bases de données Adventure Works 2014).  
   
- -   [SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx) doté des composants SQL Server Reporting Services, afin que vous disposiez du Concepteur de rapports.    
+ -   [SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt) avec les composants « SQL Server Reporting Services » installés afin que vous ayez le Concepteur de rapports.    
   
 Vous devez également disposer d’autorisations en lecture seule pour pouvoir récupérer les données de la base de données [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] .
 
@@ -66,4 +66,4 @@ Vous devez également disposer d’autorisations en lecture seule pour pouvoir r
 
 [Didacticiels sur Reporting Services](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

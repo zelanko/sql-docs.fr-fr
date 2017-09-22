@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: eb3b444f7cc248e89d21970d174d9792711dfbc6
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 55d240737f84e8e260222bbb921bd602d2d19062
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Package Integration Services (SSIS) et les paramètres du projet
@@ -164,8 +164,8 @@ Vous pouvez utiliser [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-
   
     > **AVERTISSEMENT !** Vous pouvez effectuer sur place des modifications dans la liste ou utiliser la fenêtre **Propriétés** pour modifier les valeurs des propriétés de paramètre. Vous pouvez supprimer un paramètre à l'aide du bouton **Supprimer (X)** de la barre d'outils. En cliquant sur le dernier bouton de la barre d'outils pour ouvrir la boîte de dialogue **Gérer les valeurs de paramètre** , vous pouvez spécifier une valeur pour un paramètre utilisé uniquement lors de l'exécution du package dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
     
-## <a name="parameterize-dialog-box"></a>Paramétrer (boîte de dialogue)
-Le **paramétrer** boîte de dialogue vous permet d’associer un nouveau paramètre ou existant à la propriété d’une tâche. Vous ouvrez la boîte de dialogue en cliquant avec le bouton droit sur une tâche ou en affichant l'onglet Flux de contrôle dans le Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , puis en cliquant sur **Paramétrer**. La liste suivante décrit les éléments d'interface utilisateur de la boîte de dialogue. Pour plus d’informations sur les paramètres, consultez [Paramètres Integration Services (SSIS)](https://msdn.microsoft.com/library/hh213214.aspx).
+## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
+Le **paramétrer** boîte de dialogue vous permet d’associer un nouveau paramètre ou existant à la propriété d’une tâche. Vous ouvrez la boîte de dialogue en cliquant sur une tâche ou l’onglet flux de contrôle de [ ! INCLURE[ssIS](/sql-docs/docs/integration-services/integration-services-ssis-package-and-project-parameters).
   
 ### <a name="options"></a>Options  
  **Propriété**  
@@ -186,7 +186,7 @@ Le **paramétrer** boîte de dialogue vous permet d’associer un nouveau param�
  **Description**  
  Spécifiez la description du paramètre.  
   
- **Value**  
+ **Valeur**  
  Spécifiez la valeur par défaut du paramètre. Cette opération est aussi appelée « valeur par défaut de conception », qui peut être remplacée ultérieurement au moment du déploiement.  
   
  **Portée**  
@@ -195,7 +195,7 @@ Le **paramétrer** boîte de dialogue vous permet d’associer un nouveau param�
  **Sensibles**  
  Spécifiez si le paramètre contient une valeur sensible en activant ou en désactivant la case à cocher. Les valeurs de paramètre sensibles sont chiffrées dans le catalogue et apparaissent sous la forme d'une valeur Null lorsqu'elles sont affichées avec Transact-SQL ou SQL Server Management Studio.  
   
- **Requis**  
+ **Obligatoire**  
  Spécifiez si le paramètre nécessite qu'une valeur, autre que la valeur de conception par défaut, soit spécifiée pour que le package puisse s'exécuter.  
  
 ## <a name="set-parameter-values-after-the-project-is-deployed"></a>Définissez les valeurs de paramètre après avoir déployé le projet
@@ -216,7 +216,7 @@ L'Assistant Déploiement vous permet de définir des valeurs de paramètre par 
 ### <a name="set-server-defaults-with-transact-sql"></a>Paramètres par défaut du serveur de jeu avec Transact-SQL  
  Pour définir les paramètres par défaut du serveur avec Transact-SQL, utilisez la procédure stockée [catalog.set_object_parameter_value &#40;base de données SSISDB&#41;](../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md). Pour afficher les valeurs par défaut actuelles du serveur, interrogez la vue [catalog.object_parameters &#40;base de données SSISDB&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md). Pour effacer une valeur par défaut du serveur, utilisez la procédure stockée [catalog.clear_object_parameter_value &#40;base de données SSISDB&#41;](../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md).  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  Entrée de blog, [Astuce rapide SSIS : Paramètres requis](http://go.microsoft.com/fwlink/?LinkId=239781), sur le site mattmasson.com.  
   
   

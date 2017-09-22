@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 811709fae77dee6daa46a97a51c44c02e372d9a8
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 87d6c0b358d7747b20ed37f159e713cc10018866
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="install-microsoft-r-server-from-the-command-line"></a>Installer Microsoft R Server à partir de la ligne de commande
@@ -83,7 +83,7 @@ Par défaut, tous le programme d’installation des journaux et des résumés po
 
 Un sous-dossier distinct est créé pour chaque fonctionnalité installée.
 
-Pour configurer une autre instance de Microsoft R Server avec les mêmes paramètres, vous pouvez réutiliser le fichier de configuration qui est créé lors de l’installation. Pour plus d’informations, consultez [Installation de SQL Server à l’aide d’un fichier de configuration](https://msdn.microsoft.com/library/dd239405.aspx)
+Pour configurer une autre instance de Microsoft R Server avec les mêmes paramètres, vous pouvez réutiliser le fichier de configuration qui est créé lors de l’installation. Pour plus d’informations, consultez [installer SQL Server à l’aide d’un fichier de Configuration](/sql-docs/docs/database-engine/install-windows/install-sql-server-2016-using-a-configuration-file)
 
 
 ## <a name="customize-your-r-environment"></a>Personnaliser votre environnement R

@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d642d8d9d732a51c210e5d83cecf2b090ac2f426
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: b840ffc9c1cf621d1c59ee927fff26949b013c0d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>Installation de plusieurs versions Integration Services côte à côte
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/03/2017
       [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Integration Services (SSIS) côte à côte avec les versions antérieures de SSIS. Cette rubrique décrit certaines limitations des installations côte à côte.  
   
 ## <a name="designing-and-maintaining-packages"></a>Conception et gestion de packages  
- Pour concevoir et gérer des packages ciblant SQL Server 2016, SQL Server 2014 ou SQL Server 2012, utilisez SQL Server Data Tools (SSDT) pour Visual Studio 2015. Pour obtenir SSDT, voir [Télécharger la dernière version de SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx).  
+ Pour concevoir et gérer des packages ciblant SQL Server 2016, SQL Server 2014 ou SQL Server 2012, utilisez SQL Server Data Tools (SSDT) pour Visual Studio 2015. Pour obtenir SSDT, voir [Télécharger la dernière version de SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).  
   
  Dans les pages de propriétés d’un projet Integration Services, au niveau de l’onglet **Général** de **Propriétés de configuration**, sélectionnez la propriété **TargetServerVersion** et choisissez SQL Server 2016, SQL Server 2014 ou SQL Server 2012.  
   

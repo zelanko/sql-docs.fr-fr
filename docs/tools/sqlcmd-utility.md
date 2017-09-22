@@ -31,10 +31,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2be7d74bde1731e9b4312ec80eb8a9a75b0c4d70
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 49b2acefb625107a65ee8e88ae3f28fc6473851d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
@@ -177,10 +177,10 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
 **j -** imprime des messages d’erreur bruts à l’écran.
   
  **-K** *application_intent*  
- Déclare le type de la charge de travail de l'application lors de la connexion à un serveur. La seule valeur actuellement prise en charge est **ReadOnly**. Si **-K** n’est pas spécifié, l’utilitaire sqlcmd ne prend pas en charge la connectivité sur un réplica secondaire dans un groupe de disponibilité AlwaysOn. Pour plus d’informations, consultez [Secondaires actifs : réplicas secondaires lisibles (groupes de disponibilité Always On)](https://msdn.microsoft.com/library/ff878253.aspx).  
+ Déclare le type de la charge de travail de l'application lors de la connexion à un serveur. La seule valeur actuellement prise en charge est **ReadOnly**. Si **-K** n’est pas spécifié, l’utilitaire sqlcmd ne prend pas en charge la connectivité sur un réplica secondaire dans un groupe de disponibilité AlwaysOn. Pour plus d’informations, consultez [Secondaires actifs : réplicas secondaires lisibles (groupes de disponibilité Always On)](/sql-docs/docs/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups).  
   
  **-M** *multisubnet_failover*  
- Spécifiez toujours **- M** lors de la connexion à l’écouteur de groupe de disponibilité d’un groupe de disponibilité de SQL Server ou une Instance de Cluster de basculement SQL Server. **-M** accélère la détection et la connexion au serveur (actuellement) actif. Si vous ne spécifiez pas l’option **–M**, **-M** est désactivé. Pour plus d’informations sur [!INCLUDE[ssHADR](../includes/sshadr-md.md)], consultez [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx), [Création et configuration des groupes de disponibilité &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), Clustering de basculement et groupes de disponibilité AlwaysOn (SQL Server)(https://msdn.microsoft.comlibrary/ff929171.aspx, et [Secondaires actifs : réplicas secondaires lisibles (groupes de disponibilité AlwaysOn)](https://msdn.microsoft.com/library/ff878253.aspx.  
+ Spécifiez toujours **- M** lors de la connexion à l’écouteur de groupe de disponibilité d’un groupe de disponibilité de SQL Server ou une Instance de Cluster de basculement SQL Server. **-M** accélère la détection et la connexion au serveur (actuellement) actif. Si vous ne spécifiez pas l’option **–M** , **-M** est désactivé. Pour plus d’informations sur [ ! INCLURE[ssHADR](/sql-docs/docs/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover), [la création et Configuration des groupes de disponibilité &#40; SQL Server &#41; ](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de basculement et groupes de disponibilité Always On (SQL Server)] (https://msdn.microsoft.comlibrary/ff929171.aspx, et [secondaires actifs : réplicas secondaires lisibles (groupes de disponibilité) Always On](https://msdn.microsoft.com/library/ff878253.aspx.  
   
  **-N**  
  Ce commutateur est utilisé par le client pour demander une connexion chiffrée.  
@@ -212,14 +212,14 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
   
  Si l’option **-P** est suivie de plusieurs arguments, un message d’erreur est généré et le programme se termine.  
   
- **-S** [*protocole* :]*serveur*[**\\***nom_instance*][**,***port*]  
+ **-S** [*protocole*:]*serveur*[**\\***nom_instance*][**,***port*]  
  Spécifie l’instance de SQL Server à laquelle se connecter. Cette option définit la variable de script **sqlcmd** SQLCMDSERVER.  
   
- Spécifiez *nom_serveur* pour se connecter à l’instance par défaut de SQL Server sur ce serveur. Spécifiez *nom_serveur* [  **\\**  *nom_instance* ] pour vous connecter à une instance nommée de SQL Server sur ce serveur. Si aucun ordinateur serveur n’est spécifié, **sqlcmd** se connecte à l’instance par défaut de SQL Server sur l’ordinateur local. Cette option est indispensable lorsque vous exécutez **sqlcmd** à partir d’un ordinateur distant connecté au réseau.  
+ Spécifiez *nom_serveur* pour se connecter à l’instance par défaut de SQL Server sur ce serveur. Spécifiez *nom_serveur* [ ** \\ ** *nom_instance* ] pour vous connecter à une instance nommée de SQL Server sur ce serveur. Si aucun ordinateur serveur n’est spécifié, **sqlcmd** se connecte à l’instance par défaut de SQL Server sur l’ordinateur local. Cette option est indispensable lorsque vous exécutez **sqlcmd** à partir d’un ordinateur distant connecté au réseau.  
   
  Le*protocole* peut avoir la valeur **tcp** (TCP/IP), **lpc** (mémoire partagée) ou **np** (canaux nommés).  
   
- Si vous ne spécifiez pas un *nom_serveur* [  **\\**  *nom_instance* ] lorsque vous démarrez **sqlcmd**, SQL Server recherche et qu’il utilise la variable d’environnement SQLCMDSERVER.  
+ Si vous ne spécifiez pas un *nom_serveur* [ ** \\ ** *nom_instance* ] lorsque vous démarrez **sqlcmd**, SQL Server recherche et qu’il utilise la variable d’environnement SQLCMDSERVER.  
   
 > [!NOTE]  
 >  La variable d'environnement OSQLSERVER a été conservée pour assurer une compatibilité descendante. La variable d’environnement SQLCMDSERVER est prioritaire par rapport à la variable d’environnement OSQLSERVER ; **sqlcmd** et **osql** peuvent donc être utilisés l’un à côté de l’autre sans interférence et les anciens scripts continuent à fonctionner.  
@@ -234,18 +234,18 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
   
  Si l’option **-U** est utilisée avec l’option **-E** (décrite plus loin dans cette rubrique), un message d’erreur est généré. Si l’option **–U** est suivie de plusieurs arguments, un message d’erreur est généré et le programme se termine.  
   
- **-z** *new_password*  
+ **-z** *nouveau_mot_de_passe*  
  Modifier le mot de passe :  
   
  `sqlcmd -U someuser -P s0mep@ssword -z a_new_p@a$$w0rd`  
   
- **-Z** *new_password*  
+ **-Z** *nouveau_mot_de_passe*  
  Modifier le mot de passe et quitter :  
   
  `sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd`  
   
  **Options d’entrée/sortie**  
-  **-f** *codepage* | **i:***codepage*[**,o:***codepage*] | **o:***codepage*[**,i:***codepage*]  
+  **-f** *page_de_codes* | **i:***page_de_codes*[**,o:***page_de_codes*] | **o:***page_de_codes*[**,i:***page_de_codes*]  
  Spécifie les pages de codes d'entrée et de sortie. Le numéro de pages de codes est une valeur numérique spécifiant une page de codes Windows installée.  
   
  Règles de conversion des pages de code :  
@@ -359,7 +359,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
  Supprime de la sortie tous les caractères de contrôle, par exemple les tabulations et les caractères de nouvelle ligne. Cela préserve la mise en forme des colonnes lorsque des données sont retournées. Si 1 est spécifié, les caractères de contrôle sont remplacés par un espace. Si 2 est spécifié, les caractères de contrôle sont remplacés par un espace. **-k** est identique à **-k1**.  
   
  **-s** *col_separator*  
- Spécifie le caractère de séparation des colonnes. Le caractère espace est utilisé par défaut. Cette option définit la variable de script **sqlcmd** SQLCMDCOLSEP. Pour utiliser des caractères ayant une signification spéciale pour le système d'exploitation, tels que le « et » commercial (&) ou le point-virgule (;), placez ce caractère entre guillemets ("). Le séparateur des colonnes peut être n'importe quel caractère 8 bits.  
+ Spécifie le caractère de séparation des colonnes. Le caractère espace est utilisé par défaut. Cette option définit la variable de script **sqlcmd** SQLCMDCOLSEP. Pour utiliser des caractères ayant une signification spéciale pour le système d'exploitation, tels que le « et » commercial (&) ou le point-virgule (;), placez ce caractère entre guillemets ("). Le séparateur des colonnes peut être n'importe quel caractère 8 bits.  
   
  **-w** *column_width*  
  Spécifie la largeur d'écran pour la sortie. Cette option définit la variable de script **sqlcmd** SQLCMDWIDTH. La largeur de colonne doit être un nombre supérieur à 8 et inférieur à 65536. Si la largeur de colonne spécifiée n’est pas comprise dans cette plage, **sqlcmd** génère un message d’erreur. La largeur par défaut est de 80 caractères. Lorsque la longueur d'une ligne de sortie est supérieure à la largeur de colonne spécifiée, elle revient à la ligne suivante.  
@@ -685,7 +685,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
   
  **Commandes diverses**  
   **:r \<** *filename***>**  
- Analyse des instructions Transact-SQL supplémentaires et **sqlcmd** commandes à partir du fichier spécifié par  **\<**  *nom de fichier***>**dans le cache d’instruction.  
+ Analyse des instructions Transact-SQL supplémentaires et **sqlcmd** commandes à partir du fichier spécifié par ** \< ** *nom de fichier***>**dans le cache d’instruction.  
   
  Si le fichier contient des instructions Transact-SQL qui ne sont pas suivies par **accédez**, vous devez entrer **accédez** sur la ligne qui suit **: r**.  
   
@@ -700,7 +700,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
  **:Serverlist**  
  Répertorie tous les serveurs configurés localement et les noms des serveurs émettant sur le réseau.  
   
- **:Connect**  *nom_serveur*[**\\***nom_instance*] [-l *délai_expiration*] [-U *nom_utilisateur* [-P *mot_de_passe*]]  
+ **:Connect**  *nom_serveur*[**\\***nom_instance*] [-l *délai_expiration*] [-U *nom_utilisateur* [-P *password*]]  
  Se connecte à une instance de SQL Server. Ferme également la connexion actuelle.  
   
  Options de délai :  

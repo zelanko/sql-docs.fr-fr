@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 91659ce1d2946923480c1fc1a0bcf9a6a15094d8
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: a645a57cac6eef7507aed9ea81df9fc75eb32dd4
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>Étape 3 : Preuve de concept pour la connexion à SQL à l’aide de Ruby
@@ -58,7 +58,7 @@ Dans l’exemple de code, la [TinyTds::Result](https://github.com/rails-sqlserve
   
 ## <a name="step-3--insert-a-row"></a>Étape 3 : Insérer une ligne  
   
-Dans cet exemple, vous allez apprendre à exécuter une [insérer](https://msdn.microsoft.com/library/ms174335.aspx) instruction passer en toute sécurité, des paramètres qui protègent votre application à partir de [injection SQL](https://technet.microsoft.com/library/ms161953(v=sql.105).aspx) vulnérabilité et récupérer le généréautomatiquement[Clé primaire](https://msdn.microsoft.com/library/ms179610.aspx) valeur.    
+Dans cet exemple, vous allez apprendre à exécuter une [insérer](/sql-docs/docs/t-sql/statements/insert-transact-sql) instruction passer en toute sécurité, des paramètres qui protègent votre application à partir de [injection SQL](/sql-docs/docs/relational-databases/tables/primary-and-foreign-key-constraints) valeur.    
   
 Pour utiliser TinyTDS avec Azure, il est recommandé d’exécuter plusieurs `SET` instructions pour modifier la façon dont la session en cours gère des informations spécifiques. Recommandé `SET` instructions sont fournies dans l’exemple de code. Par exemple, `SET ANSI_NULL_DFLT_ON` autorisera les nouvelles colonnes créées pour autoriser les valeurs null même si l’état de la possibilité de valeur null de la colonne n’est pas explicitement défini.  
   

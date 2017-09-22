@@ -1,19 +1,19 @@
 ---
 title: "Configurer les paramètres de SQL Server sur Linux | Documents Microsoft"
 description: "Cette rubrique décrit comment utiliser l’outil mssql-conf pour configurer les paramètres de SQL Server 2017 sur Linux."
-author: luisbosquez
-ms.author: lbosq
+author: rothja
+ms.author: jroth
 manager: jhubbard
-ms.date: 08/24/2017
+ms.date: 09/20/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: 5147b648f2b34496bc46f756639ded028b01fe0e
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 68b895f4497fc5e111bc346d01eb85f1bf0ab222
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurer SQL Server sur Linux avec l’outil mssql-conf
@@ -53,7 +53,11 @@ ms.lasthandoff: 09/05/2017
 
 ## <a id="collation"></a>Modifier le classement de SQL Server
 
-Le **set-classement** option modifie la valeur de classement à un des classements pris en charge :
+Le **set-classement** option modifie la valeur de classement à un des classements pris en charge.
+
+1. Première [sauvegarde toutes les bases de données utilisateur](sql-server-linux-backup-and-restore-database.md) sur votre serveur.
+
+1. Utilisez ensuite le [sp_detach_db](../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md) une procédure stockée à détacher les bases de données utilisateur.
 
 1. Exécutez le **set-classement** option et suivez les invites :
 
@@ -61,7 +65,9 @@ Le **set-classement** option modifie la valeur de classement à un des classemen
    sudo /opt/mssql/bin/mssql-conf set-collation
    ```
 
-1. L’utilitaire mssql-conf va tenter de restaurer les bases de données utilisant le classement spécifié et redémarrez le service. S’il existe des erreurs, il restaure le classement à la valeur précédente.
+1. L’utilitaire mssql-conf va tenter de modifier la valeur de classement spécifié et redémarrez le service. S’il existe des erreurs, il restaure le classement à la valeur précédente.
+
+1. Restaurer vos sauvegardes de base de données utilisateur.
 
 Pour obtenir la liste des classements pris en charge, exécutez le [sys.fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) fonction : `SELECT Name from sys.fn_helpcollations()`.
 
@@ -211,7 +217,7 @@ La première capture phase est contrôlée par le **coredump.coredumptype** para
     | Type |  Description |
     |-----|-----|
     | **Mini** | Mini est le plus petit type de fichier de vidage. Il utilise les informations de système de Linux pour déterminer les threads et les modules dans le processus. L’image mémoire contient uniquement les modules et les piles de threads d’environnement hôte. Il ne contient pas de références de mémoire indirect ou des variables globales. |
-    | **miniplus** | MiniPlus est similaire à mini, mais il inclut la mémoire supplémentaire. Il prend en charge les mécanismes internes de SQLPAL et de l’environnement hôte, en ajoutant les régions de mémoire suivantes pour le vidage :</br></br> -Globals divers</br> -Toute la mémoire au-dessus de 64 To</br> -All nommé trouvées dans les régions   **/proc / $pid/mappages**</br> -Mémoire indirecte des threads et des piles</br> -Informations sur le thread</br> -Associé de Teb et de Peb</br> -Informations module</br> -Arborescence VMM et VAD |
+    | **miniplus** | MiniPlus est similaire à mini, mais il inclut la mémoire supplémentaire. Il prend en charge les mécanismes internes de SQLPAL et de l’environnement hôte, en ajoutant les régions de mémoire suivantes pour le vidage :</br></br> -Globals divers</br> -Toute la mémoire au-dessus de 64 To</br> -All nommé trouvées dans les régions  ** /proc / $pid/mappages**</br> -Mémoire indirecte des threads et des piles</br> -Informations sur le thread</br> -Associé de Teb et de Peb</br> -Informations module</br> -Arborescence VMM et VAD |
     | **filtré** | Conception utilise filtré en fonction des soustraction où toute la mémoire dans le processus est incluse, sauf si spécifiquement exclus. La conception comprend les mécanismes internes de SQLPAL et de l’environnement hôte, à l’exception de certaines régions à partir de l’image mémoire.
     | **complète** | Complète un vidage de processus complète qui inclut toutes les régions se trouve dans **/proc / $pid/mappages**. Cela n’est pas contrôlé par **coredump.captureminiandfull** paramètre. |
 

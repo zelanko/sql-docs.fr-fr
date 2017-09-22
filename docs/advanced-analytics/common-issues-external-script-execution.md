@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: f564922466740d2410f686651d889e7a3fec5fe9
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: be817ff6961e68227cdae8aff14049b55652099c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Problèmes courants liés à l’exécution du script externe dans SQL Server
@@ -64,7 +64,7 @@ Le service Launchpad (Launchpad.exe) s’exécute à l’aide d’un compte de s
 - Outrepasser le contrôle de parcours (SeChangeNotifyPrivilege)
 - Ajuster les quotas de mémoire pour un processus (SeIncreaseQuotaSizePrivilege)
 
-Pour plus d’informations sur ces droits d’utilisateur, consultez la section « privilèges et droits Windows » dans [Windows de configurer les comptes de service et autorisations](https://msdn.microsoft.com/library/ms143504.aspx).
+Pour plus d’informations sur ces droits d’utilisateur, consultez la section « privilèges et droits Windows » dans [Windows de configurer les comptes de service et autorisations](/sql-docs/docs/database-engine/configure-windows/configure-windows-service-accounts-and-permissions).
 
 > [!TIP]
 > Si vous êtes familiarisé avec l’utilisation de l’outil de prise en charge des Diagnostics plate-forme (SDP) pour les diagnostics de SQL Server, vous pouvez utiliser SDP pour passer en revue le fichier de sortie portant le nom MachineName_UserRights.txt.
@@ -329,7 +329,7 @@ Pour résoudre ce problème, vous devez réinstaller le package à la bibliothè
 
 [Collecte de données pour la résolution des problèmes d’apprentissage](data-collection-ml-troubleshooting-process.md)
 
-[FAQ d’installation et de mise à niveau](r/upgrade-and-installation-faq-sql-server-r-services.md)
+[FAQ sur la mise à niveau et l’installation](r/upgrade-and-installation-faq-sql-server-r-services.md)
 
 [Résoudre les problèmes de connexions du moteur de base de données](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)
 

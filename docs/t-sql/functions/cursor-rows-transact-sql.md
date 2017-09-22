@@ -1,7 +1,7 @@
 ---
 title: '@@CURSOR_ROWS (Transact-SQL) | Documents Microsoft'
 ms.custom: 
-ms.date: 07/24/2017
+ms.date: 08/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -25,13 +25,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0e3251891dfaa079933ea79c76154f76f7c2e148
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 10a3a6cabae8d25de670cbacb037a62f4c5a2d54
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="cursorrows-transact-sql"></a>@@CURSOR_ROWS (Transact-SQL)
+# <a name="x40x40cursorrows-transact-sql"></a>& #x 40 ; & #x 40 ; CURSOR_ROWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Retourne le nombre de lignes éligibles se trouvant actuellement dans le dernier curseur ouvert sur la connexion. Afin d'améliorer les performances, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut charger de grands curseurs pilotés par jeux de clés et curseurs statiques de manière asynchrone. @@CURSOR_ROWS peut être appelée pour déterminer que le nombre de lignes qui se qualifient pour un curseur est récupéré en temps @@CURSOR_ROWS est appelée.
@@ -40,7 +40,7 @@ Retourne le nombre de lignes éligibles se trouvant actuellement dans le dernier
   
 ## <a name="syntax"></a>Syntaxe  
   
-```sql
+```
 @@CURSOR_ROWS  
 ```  
   

@@ -15,11 +15,11 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a633c14ae598d3535acc4f721ae5ae392f91a6a2
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 95ed4009d425fbc3383812ba3689f4caff487cd7
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -142,8 +142,8 @@ ms.lasthandoff: 08/09/2017
 |--------------|--------------|  
 |Procédures détaillées pour installer et configurer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint.|[Installer Reporting Services en Mode de SharePoint pour SharePoint 2010](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c) et [ajouter un serveur de rapports supplémentaire à une batterie de serveurs &#40; Montée en puissance SSRS &#41; ](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
 |Effectuez votre déploiement SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] avec montée en puissance parallèle en ajoutant des serveurs de rapports supplémentaires.|[Ajouter un serveur de rapports supplémentaire à une batterie de serveurs &#40; Montée en puissance SSRS &#41; ](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) et [Topologies de déploiement pour les fonctionnalités SQL Server BI dans SharePoint](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).|  
-|Ajoutez des serveurs web frontaux SharePoint supplémentaires dotés des composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour l’affichage et les éléments de rapport.|[Ajouter un serveur Web frontal Reporting Services supplémentaire à une batterie](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
-|Configurez la messagerie électronique pour les fonctionnalités d'abonnement et d'alertes de données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|[Configurer la messagerie électronique pour une application de service Reporting Services &#40;SharePoint 2010 et SharePoint 2013&#41;](https://msdn.microsoft.com/library/hh231673.aspx)|  
+|Ajoutez des serveurs web frontaux SharePoint supplémentaires dotés des composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour l’affichage et les éléments de rapport.|[Ajouter un serveur Web frontal Reporting Services supplémentaire à un pool](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
+|Configurer la messagerie électronique pour [ ! INCLURE[ssRSnoversion](/sql-docs/docs/reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application)|  
 |Les informations récentes pour cette version s'appuient sur TechNet Wiki.|[Conseils, astuces et dépannage pour SQL Server 2012 Reporting Services](http://go.microsoft.com/fwlink/?LinkId=221297).|  
 
 ## <a name="next-steps"></a>Étapes suivantes
@@ -152,4 +152,4 @@ ms.lasthandoff: 08/09/2017
 [Composant WebPart Visionneuse de rapports sur un site SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
 [Quiz : Configuration de SQL Server Reporting Services 2012 pour l'intégration de SharePoint](http://go.microsoft.com/fwlink/?LinkId=306443)  
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

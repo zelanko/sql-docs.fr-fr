@@ -15,17 +15,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 9eee58be471d8b39b051c1343f9eb26a2960b6d6
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 1b59268e884d3e797a74ef65d9e75c405d75a0d5
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Prise en main avec cet exemple simple de l’Assistant Importation et exportation
 En savoir à quoi s’attendre dans le SQL Server Assistant Importation et exportation en parcourant un scénario courant - importez des données à partir d’une feuille de calcul Excel vers une base de données SQL Server. Même si vous envisagez d’utiliser une autre source et une destination différente, cette rubrique vous montre la plupart de ce que vous devez savoir sur l’exécution de l’Assistant.
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Condition préalable - correspond à l’Assistant installé sur votre ordinateur ?
-Si vous souhaitez exécuter l’Assistant, mais [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’est pas installé sur votre ordinateur, vous pouvez installer l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en installant SSDT (SQL Server Data Tools). Pour plus d’informations, consultez [Télécharger SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx).
+Si vous souhaitez exécuter l’Assistant, mais vous n’avez pas [ ! INCLURE[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
 
 ## <a name="heres-the-excel-source-data-for-this-example"></a>Voici les données de la source Excel pour cet exemple
 Voici les données source que vous allez copier - une petite table de deux colonnes dans la feuille de calcul WizardWalkthrough du classeur Excel de WizardWalkthrough.xlsx.

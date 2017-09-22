@@ -17,14 +17,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bf7649b06354bfa621624ddfcf22bdea90bf0467
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 57ac95d7883ce47e1a39d4d50d3f60b968bccf21
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>Prend en charge la fonctionnalité de multi-ciblage dans vos composants personnalisés
- Vous pouvez maintenant utiliser le concepteur SSIS dans SQL Server Data Tools (SSDT) pour créer, gérer et exécuter des packages qui ciblent SQL Server 2016, SQL Server 2014 ou SQL Server 2012. Pour obtenir SSDT pour Visual Studio 2015, consultez [télécharger la dernière SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx). 
+ Vous pouvez maintenant utiliser le concepteur SSIS dans SQL Server Data Tools (SSDT) pour créer, gérer et exécuter des packages qui ciblent SQL Server 2016, SQL Server 2014 ou SQL Server 2012. Pour obtenir SSDT pour Visual Studio 2015, consultez [télécharger la dernière SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt). 
 
  Dans l’Explorateur de solutions, cliquez avec le bouton droit sur un projet Integration Services, puis sélectionnez **Propriétés** pour ouvrir les pages de propriétés du projet. Sous l’onglet **Général** de **Propriétés de configuration**, sélectionnez la propriété **TargetServerVersion** , puis choisissez SQL Server 2016, SQL Server 2014 ou SQL Server 2012.  
    
@@ -39,7 +39,7 @@ Toutes les cinq types d’extensions personnalisées de SSIS prend en charge le 
 -   Modules fournisseurs d'informations
 -   Composants de flux de données
 
-Pour les extensions managées, le concepteur SSIS charge la version de l’extension pour la version cible spécifiée. Par exemple :
+Pour les extensions managées, le concepteur SSIS charge la version de l’extension pour la version cible spécifiée. Exemple :
 -   Lorsque la version cible est SQL Server 2012, le concepteur charge la version 2012 de l’extension.
 -   Lorsque la version cible est SQL Server 2016, le concepteur charge la version 2016 de l’extension.
 

@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 917329cd5305aac791629300f5a90bf52d9d9ce4
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0fbb1f0699328a59749e5bba7efd7661e9b36e5a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>MODIFIER la CONFIGURATION inclus dans l’étendue de base de données (Transact-SQL)
@@ -44,11 +44,11 @@ ms.lasthandoff: 09/01/2017
   
 - Définir le modèle d’estimation de la cardinalité de l’optimiseur de requête indépendant de la base de données au niveau de compatibilité.  
   
-- Activer ou désactiver la détection de paramètres au niveau de la base de données.  
+- Activer ou désactiver la détection de paramètres au niveau de la base de données.
   
-- Activer ou désactiver les correctifs d’optimisation des requêtes au niveau de la base de données.  
+- Activer ou désactiver les correctifs d’optimisation des requêtes au niveau de la base de données.
 
-- Activer ou désactiver le cache d’identité au niveau de la base de données.  
+- Activer ou désactiver le cache d’identité au niveau de la base de données.
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -80,44 +80,54 @@ BASE DE DONNÉES SECONDAIRE
  
 Spécifie les paramètres pour les bases de données secondaires (toutes les bases de données secondaire doivent avoir des valeurs identiques).  
   
-MAXDOP  **=**  {\<valeur > | PRINCIPAL}  
+MAXDOP ** = ** {\<valeur > | PRINCIPAL}  
 **\<valeur >**  
   
 Spécifie la valeur par défaut MAXDOP qui doit être utilisé pour les instructions. 0 est la valeur par défaut et indique que la configuration du serveur doit être utilisée à la place. Se substitue à la MAXDOP dans l’étendue de la base de données (sauf si elle est définie sur 0) la **degré maximal de parallélisme** définie au niveau du serveur par sp_configure. Indicateurs de requête peuvent tout de même remplacer la base de données étendue MAXDOP afin de paramétrer des requêtes spécifiques qui nécessitent des paramètres différents. Tous ces paramètres sont limitées par le MAXDOP définie pour le groupe de charges de travail.   
 
 Vous pouvez utiliser l'option max degree of parallelism pour limiter le nombre de processeurs à utiliser lors de l'exécution des plans parallèles. SQL Server considère que les plans d’exécution parallèle pour les requêtes, les opérations d’index data definition language (DDL), insertion parallèle, la colonne collectiion de statistiques parallèle et remplissage des curseurs statiques et pilotés par la modification en ligne.
  
-Pour définir cette option au niveau de l’instance, consultez [configurer le degré maximal de parallélisme Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Pour ce faire, au niveau de la requête, ajoutez le **QUERYTRACEON** [indicateur de requête](https://msdn.microsoft.com/library/ms181714.aspx)  
+Pour définir cette option au niveau de l’instance, consultez [configurer le degré maximal de parallélisme Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). 
+
+> [!TIP] 
+> Pour ce faire, au niveau de la requête, ajoutez le **MAXDOP** [indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md).  
   
 PRIMARY  
   
-Peut être défini que pour les bases de données secondaires et indique que la configuration est celui défini pour le serveur principal. Si la configuration pour que les modifications principales, secondaire sera également ajuster à la même valeur. **PRINCIPAL** est le paramètre par défaut pour les bases de données secondaires  
+Peut être défini que pour les bases de données secondaires, lors de la base de données sur le serveur principal et indique que la configuration est celui défini pour le serveur principal. Si la configuration pour que les modifications principales, la valeur sur les bases de données secondaires sera modifiée en conséquence sans avoir besoin de définir les éléments secondaires de valeur explicitement. **PRINCIPAL** est le paramètre par défaut pour les bases de données secondaires.  
   
-LEGACY_CARDINALITY_ESTIMATION  **=**  {ON | **OFF** | PRINCIPAL}  
+LEGACY_CARDINALITY_ESTIMATION ** = ** {ON | **OFF** | PRINCIPAL}  
 
-Permet de définir le modèle d’estimation de cardinalité d’optimiseur de requête pour le SQL Server 2012 et version antérieure indépendantes du niveau de compatibilité de la base de données. La valeur par défaut est **OFF**, les jeux de modèle d’estimation de cardinalité d’optimiseur de requête basé sur le niveau de compatibilité de la base de données. Définir cette valeur sur **ON** équivaut à [indicateur de Trace 9481](https://support.microsoft.com/en-us/kb/2801413). Pour définir cette option au niveau de l’instance, consultez [les indicateurs de Trace (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Pour ce faire, au niveau de la requête, ajoutez le **QUERYTRACEON** [indicateur de requête](https://msdn.microsoft.com/library/ms181714.aspx).  
+Permet de définir le modèle d’estimation de cardinalité d’optimiseur de requête pour le SQL Server 2012 et version antérieure indépendantes du niveau de compatibilité de la base de données. La valeur par défaut est **OFF**, les jeux de modèle d’estimation de cardinalité d’optimiseur de requête basé sur le niveau de compatibilité de la base de données. Définir cette valeur sur **ON** équivaut à activer [indicateur de Trace 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
+
+> [!TIP] 
+> Pour ce faire, au niveau de la requête, ajoutez le **QUERYTRACEON** [indicateur de requête](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). En commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, pour effectuer cette opération au niveau de la requête, ajoutez le **indicateur USE** [indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md) au lieu d’utiliser l’indicateur de trace. 
   
 PRIMARY  
   
-Cette valeur est valide uniquement sur les bases de données secondaires et spécifie que le paramètre de modèle de requête optimizer cardinalité estimation sur toutes les bases de données secondaires est la valeur définie pour le serveur principal. Si la configuration sur le serveur principal pour le modèle d’estimation de cardinalité d’optimiseur de requête est modifiée, la valeur sur les bases de données secondaires changent en conséquence. **PRINCIPAL** est le paramètre par défaut pour les bases de données secondaires.  
+Cette valeur est valide uniquement sur les bases de données secondaires lors de la base de données sur le serveur principal et spécifie que le paramètre de modèle de requête optimizer cardinalité estimation sur toutes les bases de données secondaires est la valeur définie pour le serveur principal. Si la configuration sur le serveur principal pour le modèle d’estimation de cardinalité d’optimiseur de requête est modifiée, la valeur sur les bases de données secondaires changent en conséquence. **PRINCIPAL** est le paramètre par défaut pour les bases de données secondaires.  
   
-PARAMETER_SNIFFING  **=**  { **ON** | DÉSACTIVER | PRINCIPAL}  
+PARAMETER_SNIFFING ** = ** { **ON** | DÉSACTIVER | PRINCIPAL}  
 
-Active ou désactive la détection des paramètres. La valeur par défaut est ON. Cette propriété est équivalente à l’ [indicateur de trace 4136](https://support.microsoft.com/en-us/kb/980653). Pour définir cette option au niveau de l’instance, consultez [les indicateurs de Trace (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Pour définir cette option au niveau de la requête, consultez la **OPTIMIZE FOR UNKNOWN** [indicateur de requête](https://msdn.microsoft.com/library/ms181714.aspx).  
+Active ou désactive [la détection des paramètres](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). La valeur par défaut est ON. Cette propriété est équivalente à l’ [indicateur de trace 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
+
+> [!TIP] 
+> Pour ce faire, au niveau de la requête, consultez la **OPTIMIZE FOR UNKNOWN** [indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md). En commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, pour effectuer cette opération au niveau de la requête, le **indicateur USE** [indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md) est également disponible. 
   
 PRIMARY  
   
-Cette valeur est valide uniquement sur les bases de données secondaires et spécifie que la valeur de ce paramètre sur tous les réplicas secondaires est la valeur définie pour le serveur principal. Si la configuration pour que les modifications principales, la valeur sur les bases de données secondaires changent en conséquence. Il s’agit du paramètre par défaut pour les bases de données secondaires.  
+Cette valeur est valide uniquement sur les bases de données secondaires lors de la base de données sur le serveur principal et spécifie que la valeur de ce paramètre sur tous les réplicas secondaires est la valeur définie pour le serveur principal. Si la configuration sur le serveur principal pour l’utilisation de [la détection des paramètres](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) change, la valeur sur les bases de données secondaires change en conséquence, sans avoir besoin de définir les éléments secondaires valeur explicitement. Il s’agit du paramètre par défaut pour les bases de données secondaires.  
   
-QUERY_OPTIMIZER_HOTFIXES  **=**  {ON | **OFF** | PRINCIPAL}  
+QUERY_OPTIMIZER_HOTFIXES ** = ** {ON | **OFF** | PRINCIPAL}  
 
-Active ou désactive les correctifs logiciels de l’optimisation de requête, quelle que soit le niveau de compatibilité de la base de données. La valeur par défaut est **OFF**. Cette propriété est équivalente à l’ [indicateur de trace 4199](https://support.microsoft.com/en-us/kb/974006).   
+Active ou désactive les correctifs logiciels de l’optimisation de requête, quelle que soit le niveau de compatibilité de la base de données. La valeur par défaut est **OFF**. Cela équivaut à activer [indicateur de Trace 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 
-Pour définir cette option au niveau de l’instance, consultez [les indicateurs de Trace (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Pour ce faire, au niveau de la requête, ajoutez le **QUERYTRACEON** [indicateur de requête](https://msdn.microsoft.com/library/ms181714.aspx).  
+> [!TIP] 
+> Pour ce faire, au niveau de la requête, ajoutez le **QUERYTRACEON** [indicateur de requête](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). En commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, pour effectuer cette opération au niveau de la requête, ajoutez l’indicateur USE [indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md) au lieu d’utiliser l’indicateur de trace.  
   
 PRIMARY  
   
-Cette valeur est valide uniquement sur les bases de données secondaires et spécifie que la valeur de ce paramètre sur tous les réplicas secondaires est la valeur définie pour le serveur principal. Si la configuration pour que les modifications principales, la valeur sur les bases de données secondaires changent en conséquence. Il s’agit du paramètre par défaut pour les bases de données secondaires.  
+Cette valeur est valide uniquement sur les bases de données secondaires lors de la base de données sur le serveur principal et spécifie que la valeur de ce paramètre sur tous les réplicas secondaires est la valeur définie pour le serveur principal. Si la configuration pour que les modifications principales, la valeur sur les bases de données secondaires sera modifiée en conséquence sans avoir besoin de définir les éléments secondaires de valeur explicitement. Il s’agit du paramètre par défaut pour les bases de données secondaires.  
   
 DÉSACTIVEZ PROCEDURE_CACHE  
 
@@ -171,7 +181,7 @@ sur la base de données. Cette autorisation peut être accordée par un utilisat
   
  **DacFx**  
   
- Étant donné que ALTER DATABASE SCOPED CONFIGURATION est une nouvelle fonctionnalité de base de données SQL Azure et SQL Server 2016 qui affecte le schéma de base de données, il se peut que l’exportation du schéma (avec ou sans données) ne sera pas peuvent être importés dans une version antérieure de SQL Server, par exemple, SQL Server 2012 ou SQL Server 2014.   Par exemple, une exportation vers un [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) ou un [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) à partir d’une base de données SQL Azure ou de SQL Server 2016 utilisé cette nouvelle fonctionnalité de base de données ne peut pas être importé dans un serveur de bas niveau.  
+ ALTER DATABASE SCOPED CONFIGURATION étant une nouvelle fonctionnalité de base de données SQL Azure et SQL Server 2016 qui affecte le schéma de base de données, les exportations du schéma (avec ou sans données) ne sera pas peuvent être importés dans une version antérieure de SQL Server, par exemple, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou < C2 > [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] . Par exemple, une exportation vers un [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) ou un [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) à partir d’un [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ou [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] utilisé cette nouvelle fonctionnalité de base de données ne peut pas être importé dans un serveur de bas niveau.  
   
 ## <a name="metadata"></a>Métadonnées  
 
@@ -198,10 +208,10 @@ ALTER DATABASE SCOPED CONFIGURATION SET MAXDOP = 1 ;
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=4 ;  
 ```  
   
-Cet exemple définit MAXDOP pour une base de données secondaire, car il s’agit de sa base de données primaire dans un scénario de géo-réplication.  
+Cet exemple définit MAXDOP pour une base de données secondaire pour être la même qu’il est défini pour sa base de données primaire dans un scénario de géo-réplication.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 ```  
   
 ### <a name="c-set-legacycardinalityestimation"></a>C. Jeu LEGACY_CARDINALITY_ESTIMATION  
@@ -209,15 +219,13 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY
 Cet exemple affecte LEGACY_CARDINALITY_ESTIMATION à une base de données secondaire dans un scénario de géo-réplication.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY  
-SET LEGACY_CARDINALITY_ESTIMATION=ON ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=ON ;  
 ```  
   
 Cet exemple définit LEGACY_CARDINALITY_ESTIMATION pour une base de données secondaire, car il s’agit de sa base de données primaire dans un scénario de géo-réplication.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY      
-SET LEGACY_CARDINALITY_ESTIMATION=PRIMARY ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=PRIMARY ;  
 ```  
   
 ### <a name="d-set-parametersniffing"></a>D. Jeu PARAMETER_SNIFFING  
@@ -231,16 +239,14 @@ ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING =OFF ;
 Cet exemple définit PARAMETER_SNIFFING Off pour une base de données primaire dans un scénario de géo-réplication.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY      
-SET PARAMETER_SNIFFING=OFF  ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=OFF ;  
 ```  
   
 Cet exemple définit PARAMETER_SNIFFING pour la base de données secondaire, car il est sur la base de données primaire   
 dans un scénario de géo-réplication.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY      
-SET PARAMETER_SNIFFING =PRIMARY  ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING =PRIMARY ;  
 ```  
   
 ### <a name="e-set-queryoptimizerhotfixes"></a>E. Jeu QUERY_OPTIMIZER_HOTFIXES  
@@ -276,8 +282,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * [Recommandations et des instructions pour l’option de configuration « max degree of parallelism » dans SQL Server](https://support.microsoft.com/en-us/kb/2806535) 
 
 ### <a name="legacycardinalityestimation-resources"></a>Ressources LEGACY_CARDINALITY_ESTIMATION    
-* [Estimation de cardinalité (SQL Server)](https://msdn.microsoft.com/library/dn600374.aspx)
-* [Optimisation de votre requête Plans avec SQL Server estimateur de cardinalité 2014](https://msdn.microsoft.com/library/dn673537.aspx)
+* [Estimation de cardinalité (SQL Server)](/sql-docs/docs/relational-databases/performance/cardinality-estimation-sql-server)
+* [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx) (Optimisation de vos plans de requête avec l’estimateur de cardinalité SQL Server 2014)
 
 ### <a name="parametersniffing-resources"></a>Ressources PARAMETER_SNIFFING    
 * [« Il y a un paramètre ! »](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)

@@ -21,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: ffbc5e8238857651cc35014ce3d4d71976e8f73a
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 20627d31b8b12990de28a5703244789a6171a388
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="performance-counters"></a>Compteurs de performances
@@ -121,5 +121,5 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
     >  Vous devez démarrer le service Journaux et alertes de performance à l'aide d'un compte local ou d'un compte de domaine membre du groupe Administrateurs.  
 
 ## <a name="see-also"></a>Voir aussi  
- [L’exécution de projets et Packages](https://msdn.microsoft.com/library/ms141708.aspx) [événements consignés par un Package Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
+ [L’exécution de projets et Packages](/sql-docs/docs/integration-services/packages/run-integration-services-ssis-packages) [événements consignés par un Package Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
 

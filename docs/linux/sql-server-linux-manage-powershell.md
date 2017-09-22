@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 75bbcf35ae4547c1ba2404324b31eeb4bdd7ea1e
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: e2c1a69f81bafe3f1165c50950bb10fbfc87b579
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Utiliser PowerShell sur Windows pour gérer SQL Server sur Linux
@@ -24,7 +24,7 @@ Cette rubrique présente les [SQL Server PowerShell](https://msdn.microsoft.com/
 
 ## <a name="install-the-newest-version-of-sql-powershell-on-windows"></a>Installer la version la plus récente de SQL PowerShell sur Windows
 
-[SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) sur Windows est inclus avec [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx). Lorsque vous travaillez avec SQL Server, vous devez toujours utiliser la version la plus récente de SSMS et SQL PowerShell. La dernière version de SSMS est continuellement mis à jour et optimisées et est actuellement compatible avec SQL Server RC2 2017 sur Linux. Pour télécharger et installer la version la plus récente, consultez [télécharger SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx). Pour rester à jour, la dernière version de SSMS vous invite lorsqu’il existe une nouvelle version disponible en téléchargement. 
+[SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) sur Windows est inclus avec [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/sql-server-management-studio-ssms). Lorsque vous travaillez avec SQL Server, vous devez toujours utiliser la version la plus récente de SSMS et SQL PowerShell. La dernière version de SSMS est continuellement mis à jour et optimisées et est actuellement compatible avec SQL Server RC2 2017 sur Linux. Pour télécharger et installer la version la plus récente, consultez [télécharger SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). Pour rester à jour, la dernière version de SSMS vous invite lorsqu’il existe une nouvelle version disponible en téléchargement. 
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
@@ -71,7 +71,7 @@ Copiez et collez les commandes ci-dessous à l’invite de PowerShell. Lorsque v
 - Créez une instance de la [Server](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.smo.server.aspx) objet
 - Se connecter à la **Server** et quelques propriétés d’affichage
 
-N’oubliez pas de remplacer  **\<your_server_instance\>**  avec l’adresse IP ou le nom d’hôte de votre instance de SQL Server 2017 RC2 sur Linux.
+N’oubliez pas de remplacer ** \<your_server_instance\> ** avec l’adresse IP ou le nom d’hôte de votre instance de SQL Server 2017 RC2 sur Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -111,7 +111,7 @@ Copiez et collez les commandes ci-dessous à l’invite de PowerShell. Il peuven
 - Utilisez le **Get-SqlErrorLog** ouvre une applet de commande pour vous connecter à l’instance de SQL Server 2017 sur Linux et récupérer l’erreur depuis **hier**
 - Dirigez la sortie vers le **Out-GridView** applet de commande
 
-N’oubliez pas de remplacer  **\<your_server_instance\>**  avec l’adresse IP ou le nom d’hôte de votre instance de SQL Server 2017 RC2 sur Linux.
+N’oubliez pas de remplacer ** \<your_server_instance\> ** avec l’adresse IP ou le nom d’hôte de votre instance de SQL Server 2017 RC2 sur Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -123,5 +123,5 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 # done
 ```
 ## <a name="see-also"></a>Voir aussi
-- [SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/hh245198.aspx)
+- [SQL Server PowerShell](/sql-docs/docs/relational-databases/scripting/sql-server-powershell)
 

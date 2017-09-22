@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 0bcdf5c7eec91bccabc4b7b54f6121bec4d6c7f2
-ms.openlocfilehash: 82784542c0f6c21bf803590aa4af0ea7942516cf
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0d019b77e70316f3976a610cb399e270b54f52b6
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -394,7 +394,7 @@ Pour exécuter le **travail de maintenance du serveur SSIS**, SSIS crée la conn
 ## <a name="back-up-restore-and-move-the-ssis-catalog"></a>Sauvegarder, restaurer et déplacer le catalogue SSIS
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]inclut la base de données SSISDB. Interrogez les vues de la base de données SSISDB pour inspecter les objets, les paramètres et les données opérationnelles stockés dans le catalogue **SSISDB** . Cette rubrique fournit des instructions sur la sauvegarde et la restauration de la base de données.  
+  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] comprend la base de données SSISDB. Interrogez les vues de la base de données SSISDB pour inspecter les objets, les paramètres et les données opérationnelles stockés dans le catalogue **SSISDB** . Cette rubrique fournit des instructions sur la sauvegarde et la restauration de la base de données.  
   
  Le catalogue **SSISDB** stocke les packages que vous avez déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour plus d’informations sur le catalogue, consultez [Catalogue SSIS](../../integration-services/service/ssis-catalog.md).  
   
@@ -455,7 +455,7 @@ Pour exécuter le **travail de maintenance du serveur SSIS**, SSIS crée la conn
   
     ```  
   
-     Les procédures stockées CLR [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] requièrent l'octroi d'autorisations UNSAFE à la connexion, car cette dernière nécessite un accès supplémentaire aux ressources restreintes, par exemple l'API Win32 de Microsoft. Pour plus d’informations sur l’autorisation de code UNSAFE, consultez [Création d’un assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
+     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Les procédures stockées CLR exigent l’octroi d’autorisations UNSAFE à la connexion, car cette dernière nécessite un accès supplémentaire aux ressources restreintes, par exemple l’API Win32 de Microsoft. Pour plus d’informations sur l’autorisation de code UNSAFE, consultez [Création d’un assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
   
     ```  
     Create Login MS_SQLEnableSystemAssemblyLoadingUser  
@@ -563,7 +563,7 @@ Pour exécuter le **travail de maintenance du serveur SSIS**, SSIS crée la conn
      ![Passez en revue les résultats de l’Assistant Mise à niveau de SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "Examinez les résultats dans l’Assistant Mise à niveau de SSISDB")  
 
 ## <a name="always-on-for-ssis-catalog-ssisdb"></a>Always On pour le catalogue SSIS (SSISDB)
-  La fonctionnalité des groupes de disponibilité AlwaysOn est une solution de haute disponibilité et de récupération d’urgence qui offre une alternative au niveau de l’entreprise à la mise en miroir de bases de données. Un groupe de disponibilité prend en charge un environnement de basculement pour un ensemble discret de bases de données utilisateur, appelées bases de données de disponibilité, qui basculent de concert. Pour plus d’informations, consultez [Groupes de disponibilité AlwaysOn](https://msdn.microsoft.com/library/hh510230.aspx).  
+  La fonctionnalité des groupes de disponibilité AlwaysOn est une solution de haute disponibilité et de récupération d’urgence qui offre une alternative au niveau de l’entreprise à la mise en miroir de bases de données. Un groupe de disponibilité prend en charge un environnement de basculement pour un ensemble discret de bases de données utilisateur, appelées bases de données de disponibilité, qui basculent de concert. Pour plus d’informations, consultez [Groupes de disponibilité AlwaysOn](/sql-docs/docs/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).  
   
  Pour assurer la haute disponibilité du catalogue SSIS (base de données SSISDB) et de son contenu (projets, packages, journaux d’exécution, etc.), vous pouvez ajouter la base de données SSISDB (de la même façon que toute autre base de données utilisateur) à un groupe de disponibilité AlwaysOn. Quand un basculement se produit, le nœud secondaire devient automatiquement le nouveau nœud primaire.  
  
@@ -572,7 +572,7 @@ Pour exécuter le **travail de maintenance du serveur SSIS**, SSIS crée la conn
  
  **Dans cette section :**  
   
-1.  [Configuration requise](#prereq)  
+1.  [Conditions préalables](#prereq)  
   
 2.  [Configurer la prise en charge de SSIS pour AlwaysOn](#Firsttime)  
   
@@ -585,7 +585,7 @@ Pour exécuter le **travail de maintenance du serveur SSIS**, SSIS crée la conn
   
 2.  Installez SQL Server 2016 avec la fonctionnalité Integration Services (SSIS) sur chaque nœud du cluster.  
   
-3.  Activer les groupes de disponibilité AlwaysOn pour chaque instance de SQL Server. Pour plus d’informations, consultez [Activer et désactiver les groupes de disponibilité AlwaysOn (SQL Server)](https://msdn.microsoft.com/library/ff878259.aspx) .  
+3.  Activer les groupes de disponibilité AlwaysOn pour chaque instance de SQL Server. Pour plus d’informations, consultez [Activer et désactiver les groupes de disponibilité AlwaysOn (SQL Server)](/sql-docs/docs/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) .  
   
 ###  <a name="Firsttime"></a> Configurer la prise en charge de SSIS pour AlwaysOn  
   
@@ -607,12 +607,12 @@ Pour exécuter le **travail de maintenance du serveur SSIS**, SSIS crée la conn
   
 3.  Cliquez sur **Activer l'intégration du CLR**. Le catalogue utilise des procédures stockées du CLR.  
   
-4.  Cliquez sur **Activer l’exécution automatique des procédures stockées Integration Services au démarrage de SQL Server** pour que la procédure stockée [catalog.startup](https://msdn.microsoft.com/library/hh230984.aspx) soit exécutée à chaque redémarrage de l’instance de serveur SSIS. La procédure stockée effectue la maintenance de l'état des opérations pour le catalogue SSISDB. Elle résout l’état de tous les packages en cours d’exécution si et quand l’instance de serveur SSIS s’arrête.  
+4.  Cliquez sur **Activer l’exécution automatique des procédures stockées Integration Services au démarrage de SQL Server** pour que la procédure stockée [catalog.startup](/sql-docs/docs/integration-services/system-stored-procedures/catalog-startup) soit exécutée à chaque redémarrage de l’instance de serveur SSIS. La procédure stockée effectue la maintenance de l'état des opérations pour le catalogue SSISDB. Elle résout l’état de tous les packages en cours d’exécution si et quand l’instance de serveur SSIS s’arrête.  
   
-5.  Entrez un **mot de passe**, puis cliquez sur **OK**. Le mot de passe protège la clé principale de la base de données utilisée pour le chiffrement des données du catalogue. Enregistrez le mot de passe dans un emplacement sécurisé. Il est également recommandé de sauvegarder la clé principale de base de données. Pour plus d'informations, consultez [Back Up a Database Master Key](https://msdn.microsoft.com/library/aa337546.aspx).  
+5.  Entrez un **mot de passe**, puis cliquez sur **OK**. Le mot de passe protège la clé principale de la base de données utilisée pour le chiffrement des données du catalogue. Enregistrez le mot de passe dans un emplacement sécurisé. Il est également recommandé de sauvegarder la clé principale de base de données. Pour plus d'informations, consultez [Back Up a Database Master Key](/sql-docs/docs/relational-databases/security/encryption/back-up-a-database-master-key).  
   
 ####  <a name="Step2"></a> Étape 2 : ajouter la base de données SSISDB à un groupe de disponibilité AlwaysOn  
- La procédure à suivre pour ajouter la base de données SSISDB à un groupe de disponibilité AlwaysOn est presque identique à celle qui permet d’ajouter n’importe quelle autre base de données utilisateur à un groupe de disponibilité. Voir [Utiliser l’Assistant groupe de disponibilité](https://msdn.microsoft.com/library/hh403415.aspx).  
+ La procédure à suivre pour ajouter la base de données SSISDB à un groupe de disponibilité AlwaysOn est presque identique à celle qui permet d’ajouter n’importe quelle autre base de données utilisateur à un groupe de disponibilité. Voir [Utiliser l’Assistant groupe de disponibilité](/sql-docs/docs/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio).  
   
  Vous devez fournir le mot de passe que vous avez spécifié lors de la création du catalogue SSIS dans la page **Sélectionner les bases de données** de l’Assistant **Nouveau groupe de disponibilité** .  
   

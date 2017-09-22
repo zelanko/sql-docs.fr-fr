@@ -30,10 +30,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 06975a1a487f4627e25f3028db2ec77ce7525f21
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 4ef09ff12c41b6bb5a7610134cb317a81caaf3cf
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Octroyer un accès personnalisé à des données de dimension (Analysis Services)
@@ -48,7 +48,7 @@ ms.lasthandoff: 09/01/2017
  La sécurité de base de la dimension est la plus simple : il suffit de sélectionner les attributs de dimension et les hiérarchies d'attributs à inclure ou à exclure dans le rôle. La sécurité avancée est plus complexe et nécessite une connaissance des scripts MDX. Les deux approches sont décrites ci-dessous.  
 
 > [!NOTE]  
->  Les instructions suivantes supposent une connexion client qui émet des requêtes dans MDX. Si le client utilise DAX, comme Power View dans Power BI, la sécurité de la dimension n’est pas évidente dans les résultats de la requête. Pour plus d’informations, consultez [Présentation de Power View pour les modèles multidimensionnels](https://msdn.microsoft.com/library/jj969574.aspx) .
+>  Les instructions suivantes supposent une connexion client qui émet des requêtes dans MDX. Si le client utilise DAX, comme Power View dans Power BI, la sécurité de la dimension n’est pas évidente dans les résultats de la requête. Pour plus d’informations, consultez [Présentation de Power View pour les modèles multidimensionnels](/sql-docs/docs/analysis-services/multidimensional-models/understanding-power-view-for-multidimensional-models) .
       
 ## <a name="prerequisites"></a>Conditions préalables  
  Vous ne pouvez pas utiliser toutes les mesures, ni tous les membres de dimension dans les scénarios d'accès personnalisés. Une connexion échoue si un rôle restreint l'accès à une mesure ou un membre par défaut, ou s'il restreint l'accès à des mesures qui font partie d'expressions de mesure.  

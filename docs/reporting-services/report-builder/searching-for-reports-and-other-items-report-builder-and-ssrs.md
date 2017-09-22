@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9663bbf0c11ce1d41f02cc22027f2c69aa07b057
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 91286fbfea763ffd8058524ff2e5274179305d8d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>Recherche de rapports et d’autres éléments (Générateur de rapports et SSRS)
@@ -38,9 +38,9 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Recherche et affichage de rapports dans le Gestionnaire de rapports &#40; Le Générateur de rapports et SSRS &#41;](https://msdn.microsoft.com/library/dd255286.aspx)   
+ [Recherche et affichage de rapports dans le Gestionnaire de rapports &#40; Le Générateur de rapports et SSRS &#41;](/sql-docs/docs/reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs)   
  [L’utilisation de Mes rapports &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)   
- [Recherche, affichage et la gestion des rapports &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Ouvrir et fermer un rapport &#40; Le Gestionnaire de rapports &#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  
   
   

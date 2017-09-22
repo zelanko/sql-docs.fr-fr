@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fe3ec4ebb7b62bd1bee9e6ba43c630bc17460dbb
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: a7479a6682c2cd95e3cc465b74642347bf682951
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Procédure pas à pas : publier un package SSIS en tant que vue SQL
@@ -32,7 +32,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ou version ultérieure avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-2.  [SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx).  
+2.  [SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).  
   
 ## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>Étape 1 : créer et déployer le projet SSIS dans le catalogue SSIS  
  Dans cette étape, vous créez un package SSIS qui extrait les données d’une source de données SSIS prise en charge (dans cet exemple, nous utilisons une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) et qui produit en sortie des données en utilisant un composant Data Streaming Destination. Vous générez et déployez ensuite le projet SSIS dans le catalogue SSIS.  

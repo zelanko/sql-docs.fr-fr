@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e5e277b421f98dbabedcb4df80ee902ea87fbd1
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 06b07e613856bd9c3c66ec06d76c5e14ee8d4f4e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="data-sources"></a>Sources de données
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/03/2017
   
 > **REMARQUE :** vous pouvez ajouter des sources de données uniquement aux projets qui sont configurés pour utiliser le modèle de déploiement de package. Si un projet est configuré pour utiliser le modèle de déploiement de projet, vous utilisez les gestionnaires de connexions créés au niveau du projet pour partager les connexions, au lieu d'utiliser les sources de données.  
 >   
->  Pour plus d'informations sur les modèles de déploiement, consultez [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx). Pour plus d’informations sur la conversion d’un projet en modèle de déploiement de projet, consultez [Déployer des projets sur le serveur Integration Services](https://msdn.microsoft.com/library/hh231102.aspx).  
+>  Pour plus d'informations sur les modèles de déploiement, consultez [Deployment of Projects and Packages](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages). Pour plus d’informations sur la conversion d’un projet en modèle de déploiement de projet, consultez [Déployer des projets sur le serveur Integration Services](https://msdn.microsoft.com/library/hh231102.aspx).  
   
  L'utilisation de sources de données dans les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] présente les avantages suivants :  
   

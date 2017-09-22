@@ -27,10 +27,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3cc307b473ce31150de8a970a6d44e46dcdc04c3
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0ec83d1e567c44abba880716bbd700af2810be60
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="integration-services-service-ssis-service"></a>Service Integration Services (Service SSIS)
@@ -71,7 +71,7 @@ ms.lasthandoff: 08/03/2017
  Lorsque vous installez le composant [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est également installé. Par défaut, le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est démarré et le type de démarrage du service est défini comme étant automatique. Toutefois, vous devez également installer [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour utiliser le service afin de gérer les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stockés et en cours d'exécution.  
   
 > [!NOTE]
-> Pour vous connecter directement à une instance du service Integration Services existante, vous devez utiliser la version de SQL Server Management Studio (SSMS) correspondant à la version de SQL Server sur lequel s’exécute le service Integration Services. Par exemple, pour vous connecter au service Integration Services existant s’exécutant sur une instance de SQL Server 2016, vous devez utiliser la version de SSMS publiée pour SQL Server 2016. [Téléchargez SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).
+> Pour vous connecter directement à une instance du service Integration Services existante, vous devez utiliser la version de SQL Server Management Studio (SSMS) correspondant à la version de SQL Server sur lequel s’exécute le service Integration Services. Par exemple, pour vous connecter au service Integration Services existant s’exécutant sur une instance de SQL Server 2016, vous devez utiliser la version de SSMS publiée pour SQL Server 2016. [Téléchargez SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).
 >
 >   Dans la boîte de dialogue **Se connecter au serveur** de SSMS, vous ne pouvez pas entrer le nom d’un serveur sur lequel une version antérieure du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] s’exécute. Toutefois, pour gérer des packages stockés sur un serveur distant, vous ne devez pas vous connecter à l’instance du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur ce serveur distant. Au lieu de cela, modifiez le fichier de configuration du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] afin que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] affiche les packages stockés sur le serveur distant.   
   
@@ -278,7 +278,7 @@ Lorsque vous installez [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.
  Pour se connecter à une instance de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur un serveur distant, que ce soit à partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou d’une autre application de gestion, les utilisateurs de l’application ont besoin d’un ensemble de droits sur le serveur.  
   
 > [!IMPORTANT]
-> Pour vous connecter directement à une instance du service Integration Services existant, vous devez utiliser la version de SQL Server Management Studio (SSMS) correspondant à la version de SQL Server sur lequel s’exécute le service Integration Services. Par exemple, pour vous connecter au service Integration Services existant s’exécutant sur une instance de SQL Server 2016, vous devez utiliser la version de SSMS publiée pour SQL Server 2016. [Téléchargez SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).
+> Pour vous connecter directement à une instance du service Integration Services existant, vous devez utiliser la version de SQL Server Management Studio (SSMS) correspondant à la version de SQL Server sur lequel s’exécute le service Integration Services. Par exemple, pour vous connecter au service Integration Services existant s’exécutant sur une instance de SQL Server 2016, vous devez utiliser la version de SSMS publiée pour SQL Server 2016. [Téléchargez SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).
 >
 >  Pour gérer les packages stockés sur un serveur distant, vous n’avez pas besoin de vous connecter à l’instance du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de ce serveur distant. Au lieu de cela, modifiez le fichier de configuration du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] afin que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] affiche les packages stockés sur le serveur distant.
   

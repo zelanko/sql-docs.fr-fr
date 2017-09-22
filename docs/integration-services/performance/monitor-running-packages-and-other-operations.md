@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 411086a4a75b002faa7e07befa77e7277a494bab
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: e36aeea4440f7c565e9517ebb1b80d21116b4342
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Surveiller les packages en cours d’exécution et autres opérations
@@ -94,7 +94,7 @@ ms.lasthandoff: 08/03/2017
   
  Pour plus d'informations sur les autres méthodes que vous pouvez utiliser pour afficher la liste de packages en cours d'exécution, consultez les rubriques suivantes.  
   
- Accès à [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] Accès Transact-SQL  
  Pour afficher la liste des packages qui s’exécutent sur le serveur, interrogez la vue, [catalog.executions &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md) pour les packages qui ont l’état 2.  
   
  Accès par programmation via l'API managé  
@@ -105,7 +105,7 @@ ms.lasthandoff: 08/03/2017
   
  Pour plus d'informations sur les autres méthodes que vous pouvez utiliser pour arrêter l'exécution d'un package, consultez les rubriques suivantes.  
   
- Accès à [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] Accès Transact-SQL  
  Pour arrêter un package en cours d’exécution sur le serveur, appelez la procédure stockée, [catalog.stop_operation &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md).  
   
  Accès par programmation via l'API managé  
@@ -116,14 +116,14 @@ ms.lasthandoff: 08/03/2017
   
  Pour plus d'informations sur les autres méthodes que vous pouvez utiliser pour afficher l'historique des packages en cours d'exécution, consultez les rubriques suivantes.  
   
- Accès à [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] Accès Transact-SQL  
  Pour afficher des informations relatives aux packages qui ont été exécutés, interrogez la vue, [catalog.executions &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md).  
   
  Accès par programmation via l'API managé  
  Consultez le <xref:Microsoft.SqlServer.Management.IntegrationServices> espace de noms et de ses classes.  
 
 ## <a name="reports"></a> Reports for the Integration Services Server
-  Dans la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], les rapports standards sont disponibles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour vous aider à surveiller [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] les projets qui ont été déployées sur le [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. Ces rapports vous aident à consulter l'état et l'historique du package et, si nécessaire, à identifier la cause des erreurs d'exécution du package.  
+  Dans la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], les rapports standard sont disponibles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour vous aider à surveiller les projets [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Ces rapports vous aident à consulter l'état et l'historique du package et, si nécessaire, à identifier la cause des erreurs d'exécution du package.  
   
  En haut de chaque page de rapport, l'icône de retour permet de revenir à la page précédente, l'icône de rafraîchissement actualise les informations affichées dans la page et l'icône d'impression vous permet d'imprimer la page en cours.  
   
@@ -182,7 +182,7 @@ ms.lasthandoff: 08/03/2017
  Pour obtenir des instructions sur la manière de créer et d’ajouter un rapport personnalisé, consultez [Ajouter un rapport personnalisé à Management Studio](http://msdn.microsoft.com/library/3cf8d726-0a90-4f80-98d0-352a2a59be0f).  
 
 ## <a name="view-reports-for-the-integration-services-server"></a>Afficher les rapports du serveur Integration Services
-  Dans la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], les rapports standards sont disponibles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour vous aider à surveiller [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] les projets qui ont été déployées sur le [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  Pour plus d’informations sur les rapports, consultez [Rapports du serveur Integration Services](#reports).  
+  Dans la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], les rapports standard sont disponibles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour vous aider à surveiller les projets [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  Pour plus d’informations sur les rapports, consultez [Rapports du serveur Integration Services](#reports).  
   
 ### <a name="to-view-reports-for-the-integration-services-server"></a>Pour afficher les rapports du serveur Integration Services  
   
@@ -203,6 +203,6 @@ ms.lasthandoff: 08/03/2017
     -   **Toutes les connexions**  
 
 ## <a name="see-also"></a>Voir aussi  
- [Exécution de projets et de packages](https://msdn.microsoft.com/library/hh213290.aspx)   
- [Rapports de dépannage pour l’exécution des packages](https://msdn.microsoft.com/library/gg471512.aspx)  
+ [Exécution de projets et Packages](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)   
+ [Rapports de dépannage pour l’exécution des packages](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-reports-for-package-execution)  
 

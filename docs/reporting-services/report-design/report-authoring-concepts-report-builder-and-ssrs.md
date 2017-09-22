@@ -18,11 +18,11 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a5a77b4a1dcf646e82658fb61697b82f7e5e807f
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0bbbee2d86c0ec82172ec63317039ace7a19b50c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Concepts de création de rapport (Générateur de rapports et SSRS)
@@ -32,16 +32,16 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Rapports, parties de rapport et les définitions de rapport &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
+ [Rapports, parties de rapports et définitions de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
  Décrit un certain nombre de termes utilisés pour décrire un rapport dans différents états, notamment la définition initiale, le rapport publié et le rapport affiché tel qu'il apparaît à l'utilisateur.  
   
  [Datasets incorporés et partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
  Explique les différences en matière de création, de stockage et de gestion des datasets incorporés et partagés.  
   
- [Régions de données et cartes &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
+ [Cartes et régions de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
  Décrit les types de régions de données qui peuvent être ajoutées à la mise en page d'un rapport. Les régions de données déterminent l'aspect d'un rapport : table, matrice, liste ou graphique.  
   
- [Concept des paramètres de rapport (Générateur de rapports et SSRS)](https://msdn.microsoft.com/library/ee240844.aspx)  
+ [Concept des paramètres de rapport (Générateur de rapports et SSRS)](/sql-docs/docs/reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs)  
  Décrit les moyens de définir et d'utiliser les paramètres de rapport, ainsi que la façon de les gérer indépendamment à partir de la définition de rapport sur le serveur de rapports.  
   
 ## <a name="see-also"></a>Voir aussi  

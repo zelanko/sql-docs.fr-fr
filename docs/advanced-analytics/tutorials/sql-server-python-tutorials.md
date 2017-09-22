@@ -2,7 +2,7 @@
 title: Didacticiels de SQL Server Python | Documents Microsoft
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 08/29/2017
+ms.date: 09/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -19,10 +19,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b891cda72d5a69aafe461918674218fd3279c423
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 70b2ada0c6b2cade444af1f7dde67f0adfd90b35
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-python-tutorials"></a>Didacticiels de SQL Server Python
@@ -47,10 +47,6 @@ Pour plus d’informations sur le programme d’installation, consultez [conditi
 
    Vous allez créer un modèle à l’aide de **rxLinMod**, à partir du nouveau **revoscalepy** bibliothèque. Vous allez lancer le code à partir d’un terminal de Python à distance, mais la modélisation aura lieu dans le contexte de calcul de SQL Server.
 
-+ [Créer un modèle prédictif avec Python (GitHub)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/python/getting-started/rental-prediction)
-
-  Créer un modèle d’apprentissage automatique pour prédire la demande pour une entreprise de location ski et tiens ce modèle pour la prédiction à la demande quotidienne à l’aide de procédures stockées. Toutes les données et code est fourni.
-
 + [Analytique Python de la base de données pour les développeurs SQL](sqldev-in-database-python-for-sql-developers.md)
 
   NOUVEAU ! Générez une solution complète de Python à l’aide de procédures stockées T-SQL. Tout le code Python est inclus.
@@ -67,7 +63,10 @@ Ces exemples et les démonstrations fournies par l’équipe de développement S
 
   Découvrez comment une entreprise de location ski peut utiliser d’apprentissage prévoir les futures Locations, ce qui vous permet du plan d’entreprise et le personnel pour répondre à la demande.
 
-+ [NOUVEAU ! Exécuter le client clusters à l’aide de Python et SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/)
+  > [!TIP]
+  > Inclut désormais un score natif à partir de modèles de Python !
+
++ [Exécuter le client clusters à l’aide de Python et SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/)
 
     Découvrez comment utiliser l’algorithme de Kmeans pour effectuer de clustering non supervisé de clients.
 
@@ -83,14 +82,14 @@ Pour utiliser ces didacticiels, vous devez avoir installé SQL Server 2017 Machi
 
 Après avoir exécuté le programme d’installation de SQL Server, n’oubliez pas ces étapes importantes :
 
-+ Activez la fonctionnalité d’exécution de script externe en exécutant`sp_configure 'external scripts enabled', 1`
-+ Redémarrer le serveur
-+ Assurez-vous que le service qui appelle le runtime externe dispose des autorisations nécessaires
-+ Assurez-vous que votre compte de connexion SQL ou un compte d’utilisateur Windows dispose des autorisations nécessaires pour se connecter au serveur, pour lire des données et à créer des objets de base de données requis par l’exemple
++ Activez la fonctionnalité d’exécution de script externe en exécutant `sp_configure 'external scripts enabled', 1`.
++ Redémarrez le serveur.
++ Assurez-vous que le service qui appelle le runtime externe dispose des autorisations nécessaires.
++ Assurez-vous que votre compte de connexion SQL ou un compte d’utilisateur Windows dispose des autorisations nécessaires pour se connecter au serveur, pour lire des données et à créer des objets de base de données requis par l’exemple.
 
 Si vous rencontrez des problèmes, consultez cet article pour certains problèmes courants : [dépannage Machine Learning Services](../machine-learning-troubleshooting-faq.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Didacticiels de R pour SQL Server](sql-server-r-tutorials.md)
+[Didacticiels R pour SQL Server](sql-server-r-tutorials.md)
 

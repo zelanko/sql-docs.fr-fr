@@ -15,11 +15,11 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: fc9ca2f7181dbda59726b9c38352c349bcf8a472
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 180690083e39317694190a89edc2b57fd9d4bbcf
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Rapports mobiles SQL Server : procédure pas à pas de bout en bout
@@ -37,11 +37,11 @@ Cet article explique comment :
 ## <a name="before-we-start"></a>Avant de commencer  
 Pour suivre la procédure, vous avez besoin de ces produits :  
   
-* Pour créer des sources de données et des indicateurs de performance clés et publier des jeux de données et les rapports mobiles, vous devez avoir accès à un [!INCLUDE[ssRSCurrent_md](../../includes/ssrscurrent-md.md)] [serveur de rapports en mode natif](https://msdn.microsoft.com/library/ms143711.aspx).  
-* Pour [créer des jeux de données partagés](#shared-dataset), vous devez [installer le Générateur de rapports](https://msdn.microsoft.com/library/ff519551.aspx).  
+* Pour créer des sources de données et des indicateurs de performance clés et publier des jeux de données et les rapports mobiles, vous devez avoir accès à un [ ! INCLURE[ssRSCurrent_md](/sql-docs/docs/reporting-services/install-windows/install-reporting-services-native-mode-report-server).  
+* Pour [créer des datasets partagés](/sql-docs/docs/reporting-services/install-windows/install-report-builder).  
 * Pour créer des rapports mobiles, [installez l’Éditeur de rapports mobiles SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766).  
 * [Exemple de base de données AdventureWorks et scripts](http://msftdbprodsamples.codeplex.com/).  
-*  OU : exemple de base de données World Wide Importers, disponible à partir de la page [Microsoft SQL Server Samples (Exemples Microsoft SQL Server)](https://msdn.microsoft.com/library/mt748083.aspx) .
+*  OR : Quatre coins du monde exemple base de données, disponible à partir de la [Microsoft SQL Server Samples](/sql-docs/docs/sample/microsoft-sql-server-samples) page.
 * Pour afficher le résultat 
   *   [Inscrivez-vous au service Power BI](http://go.microsoft.com/fwlink/?LinkID=513879) et
   *  [Téléchargez l’application mobile Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) sur votre appareil mobile : iOS, téléphone Android ou appareil Windows 10.  
@@ -49,7 +49,7 @@ Pour suivre la procédure, vous avez besoin de ces produits :
   
 ## <a name="create-a-shared-data-source"></a>Créer une source de données partagée  
   
-Vous pouvez créer une source de données partagée pour vos rapports mobiles à partir de n’importe quelle source de données prise en charge par Reporting Services. Consultez la [liste des sources de données prises en charge](https://msdn.microsoft.com/library/ms159219.aspx).  
+Vous pouvez créer une source de données partagée pour vos rapports mobiles à partir de n’importe quelle source de données prise en charge par Reporting Services. Consultez le [la liste des sources de données pris en charge](/sql-docs/docs/reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs).  
   
 1. À partir de votre portail web [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , cliquez sur **Nouveau** > **Source de données**.  
   
@@ -66,11 +66,11 @@ Vous pouvez créer une source de données partagée pour vos rapports mobiles à
   
    ![PBI_SSMRP_PortlDataSource](../../reporting-services/mobile-reports/media/pbi-ssmrp-portldatasource.png)  
   
-En savoir plus sur [les sources de données partagées dans Reporting Services](https://msdn.microsoft.com/library/ms155845.aspx).  
+En savoir plus sur [les sources de données partagées dans Reporting Services](/sql-docs/docs/reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs).  
    
 ## <a name="shared-dataset">Créer un jeu de données partagé</a>  
   
-Utilisez un outil client [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] existant, tel que le Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], pour créer le jeu de données partagé.  Cette procédure pas à pas utilise [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Installez le Générateur de rapports](https://msdn.microsoft.com/library/ff519551.aspx)ou lancez-le à partir de votre portail web. Vous allez créer trois jeux de données : un pour la valeur de l’indicateur de performance clé, un pour la tendance de l’indicateur de performance clé et un autre avec davantage de champs pour le rapport mobile Reporting Services.   
+Utiliser un existant [ ! INCLURE[PRODUCT_NAME](/sql-docs/docs/reporting-services/install-windows/install-report-builder), ou lancer à partir de votre portail web. Vous allez créer trois jeux de données : un pour la valeur de l’indicateur de performance clé, un pour la tendance de l’indicateur de performance clé et un autre avec davantage de champs pour le rapport mobile Reporting Services.   
   
 1. À partir de votre portail web [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , cliquez sur **Nouveau** > **Rapport paginé** pour démarrer [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)].  
   

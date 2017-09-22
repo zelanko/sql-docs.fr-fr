@@ -4,16 +4,16 @@ description: "Ce didacticiel de démarrage rapide montre comment installer SQL S
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 09/07/2017
+ms.date: 09/20/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.translationtype: MT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: d454dca437f64a73879ed689fce1100c74a6fcde
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 57be01c49643bafada701849a32b532679513c71
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Installer SQL Server et de créer une base de données sur SUSE Linux Enterprise Server
@@ -72,7 +72,11 @@ Pour configurer SQL Server sur SLES, exécutez les commandes suivantes dans un T
    systemctl status mssql-server
    ```
 
-1. Si vous envisagez de vous connecter à distance, vous devrez peut-être également ouvrir le port TCP du serveur SQL (1433 par défaut) sur votre pare-feu.
+1. Si vous envisagez de vous connecter à distance, vous devrez peut-être également ouvrir le port TCP du serveur SQL (1433 par défaut) sur votre pare-feu. Si vous utilisez le pare-feu SuSE, vous devez modifier le **/etc/sysconfig/SuSEfirewall2** fichier de configuration. Modifier la **FW_SERVICES_EXT_TCP** entrée à inclure le numéro de port SQL Server.
+
+   ```
+   FW_SERVICES_EXT_TCP="1433"
+   ```
 
 À ce stade, SQL Server est en cours d’exécution sur votre ordinateur SLES et est prêt à utiliser.
 

@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3ffb76838940f42d7a696e1c17f227517d89012d
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 8d05ec1ae3be89b7a087938c44b356ccc9dbca43
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Créer et exécuter des travaux de l’Agent SQL Server sur Linux
@@ -24,7 +24,7 @@ Travaux de SQL Server sont utilisés pour exécuter régulièrement la même sé
 
 Pour les problèmes connus avec l’Agent SQL Server dans cette version, consultez le [Release Notes](sql-server-linux-release-notes.md).
 
-## <a name="prerequisites"></a>Configuration requise 
+## <a name="prerequisites"></a>Conditions préalables 
 Pour créer et exécuter des travaux, vous devez d’abord installer le service de l’Agent SQL Server. Pour obtenir des instructions d’installation, consultez le [rubrique installation de l’Agent SQL Server](sql-server-linux-setup-sql-agent.md).
 
 ## <a name="create-a-job-with-transact-sql"></a>Créer un travail avec Transact-SQL
@@ -35,7 +35,7 @@ Les étapes suivantes fournissent un exemple montrant comment créer un travail 
 > [!TIP]
 > Vous pouvez utiliser n’importe quel client de T-SQL pour exécuter ces commandes. Par exemple, sur Linux, vous pouvez utiliser [sqlcmd](sql-server-linux-setup-tools.md) ou [Visual Studio Code](sql-server-linux-develop-use-vscode.md). À partir d’un serveur à distance de Windows, vous pouvez également exécuter des requêtes dans SQL Server Management Studio (SSMS) ou utiliser l’interface utilisateur pour la gestion des travaux, qui est décrit dans la section suivante.
 
-1. **Créer le travail**. L’exemple suivant utilise [sp_add_job](https://msdn.microsoft.com/library/ms182079.aspx) pour créer une tâche nommée `Daily AdventureWorks Backup`.
+1. **Créer le travail**. L’exemple suivant utilise [sp_add_job](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-job-transact-sql) pour créer une tâche nommée `Daily AdventureWorks Backup`.
 
     ```tsql
      -- Adds a new job executed by the SQLServerAgent service 
@@ -49,7 +49,7 @@ Les étapes suivantes fournissent un exemple montrant comment créer un travail 
 
     ```
 
-2. **Ajouter un ou plusieurs étapes de travail**. Le script Transact-SQL suivant utilise [sp_add_jobstep](https://msdn.microsoft.com/library/ms187358.aspx) pour créer une étape de travail qui crée une sauvegarde de la `AdventureWlorks2014` base de données.
+2. **Ajouter un ou plusieurs étapes de travail**. Le script Transact-SQL suivant utilise [sp_add_jobstep](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql) pour créer une étape de travail qui crée une sauvegarde de la `AdventureWlorks2014` base de données.
 
     ```tsql
     -- Adds a step (operation) to the job  
@@ -65,7 +65,7 @@ Les étapes suivantes fournissent un exemple montrant comment créer un travail 
     GO
     ```
 
-3. **Créer une planification de travail**. Cet exemple utilise [sp_add_schedule](https://msdn.microsoft.com/library/ms366342.aspx) pour créer une planification quotidienne de la tâche.
+3. **Créer une planification de travail**. Cet exemple utilise [sp_add_schedule](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql) pour créer une planification quotidienne de la tâche.
 
     ```tsql
     -- Creates a schedule called 'Daily'  
@@ -78,7 +78,7 @@ Les étapes suivantes fournissent un exemple montrant comment créer un travail 
    GO
     ```
 
-4. **Attachez la planification du travail pour la tâche**. Utilisez [sp_attach_schedule](https://msdn.microsoft.com/library/ms186766.aspx) pour attacher la planification du travail pour la tâche.
+4. **Attachez la planification du travail pour la tâche**. Utilisez [sp_attach_schedule](/sql-docs/docs/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql) pour attacher la planification du travail pour la tâche.
 
     ```tsql
     -- Sets the 'Daily' schedule to the 'Daily AdventureWorks Backup' Job  
@@ -88,7 +88,7 @@ Les étapes suivantes fournissent un exemple montrant comment créer un travail 
     GO
     ```
 
-5. **Affecter le travail sur un serveur cible**. Affecter le travail à un serveur cible avec [sp_add_jobserver](https://msdn.microsoft.com/library/ms178625.aspx). Dans cet exemple, le serveur local est la cible.
+5. **Affecter le travail sur un serveur cible**. Affecter le travail à un serveur cible avec [sp_add_jobserver](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql). Dans cet exemple, le serveur local est la cible.
 
     ```tsql
     EXEC dbo.sp_add_jobserver  

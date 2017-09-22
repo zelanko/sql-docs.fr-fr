@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2661e1b32d604f4bdda75d478af9d9ea48ea2d4d
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: bedc8b9d5e8e4c2a9bd8c3271a8463fc860f3fd5
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="r-libraries-and-r-data-types"></a>Bibliothèques R et les Types de données R
@@ -80,7 +80,7 @@ Le tableau suivant présente les modifications de types de données et de valeur
 
 ## <a name="data-types-not-supported-by-r"></a>Types de données non pris en charge par R
 
-Parmi les catégories de types de données pris en charge par le [système SQL Server](https://msdn.microsoft.com/library/ms187752.aspx), les types suivants sont susceptibles de poser des problèmes lorsqu’ils sont passés au code R :
+Parmi les catégories de types de données pris en charge par le [système SQL Server](/sql-docs/docs/t-sql/data-types/data-types-transact-sql), les types suivants sont susceptibles de poser des problèmes lorsqu’ils sont passés au code R :
 
 + Types de données répertoriés dans le **autres** section de la rubrique de système de type SQL : **curseur**, **timestamp**, **hierarchyid**, **uniqueidentifier**, **sql_variant**, **xml**, **table**
 + Tous les types spatiaux
@@ -111,7 +111,7 @@ En général, en cas de doute sur la manière dont un type ou une structure de d
 
 Lorsque vous récupérez des données d’une base de données pour les utiliser dans le code R, vous devez toujours supprimer les colonnes qui ne peuvent pas être utilisés dans R, de même que les colonnes qui ne sont pas utiles pour l’analyse, comme les GUID (uniqueidentifier), les horodateurs et les autres colonnes utilisées pour l’audit, ou les informations de lignage créées par le processus ETL. 
 
-Notez que la conservation des colonnes inutiles peut réduire considérablement les performances du code R, surtout si des colonnes de cardinalité élevée sont utilisées comme facteurs. Par conséquent, nous vous recommandons d’utiliser les procédures stockées système de SQL Server et les vues informations pour obtenir les types de données d’une table spécifique à l’avance et de supprimer ou de convertir les colonnes incompatibles. Pour plus d’informations, consultez [Vues de schémas d’informations système dans Transact-SQL](https://msdn.microsoft.com/library/ms186778.aspx)
+Notez que la conservation des colonnes inutiles peut réduire considérablement les performances du code R, surtout si des colonnes de cardinalité élevée sont utilisées comme facteurs. Par conséquent, nous vous recommandons d’utiliser les procédures stockées système de SQL Server et les vues informations pour obtenir les types de données d’une table spécifique à l’avance et de supprimer ou de convertir les colonnes incompatibles. Pour plus d’informations, consultez [Vues de schémas d’informations système dans Transact-SQL](/sql-docs/docs/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql)
 
 Si un type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] particulier n’est pas pris en charge par R, mais que vous devez utiliser les colonnes de données dans le script R, nous vous recommandons d’utiliser les fonctions [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) pour vous assurer que les conversions de types de données sont effectuées comme attendu avant d’utiliser les données dans votre script R.  
 

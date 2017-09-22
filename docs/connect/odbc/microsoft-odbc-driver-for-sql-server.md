@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e867bb283434a6a7ae515823b370c73e4df4e131
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: cf501a1e52a499ac2e2df8df49024da9763ed66d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Pilote Microsoft ODBC pour SQL Server
@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 
 ODBC est l’API d’accès de données native principale pour les applications écrites en C et C++ pour SQL Server. Il existe un pilote ODBC pour la plupart des sources de données. Autres langues que vous peuvent utiliser ODBC incluent COBOL, Perl, PHP et Python. ODBC est largement utilisé dans les scénarios d’intégration de données.
 
-Le pilote ODBC est fourni avec des outils comme [ **sqlcmd** ](https://msdn.microsoft.com/library/ms162773.aspx) et [ **bcp**](https://msdn.microsoft.com/library/ms162802.aspx). Le **sqlcmd** utilitaire vous permet d’exécuter des instructions Transact-SQL, des procédures système et des scripts SQL. Le **bcp** utilitaire copie en bloc des données entre une instance de Microsoft SQL Server et un fichier de données dans un format que vous choisissez. Vous pouvez utiliser **bcp** pour importer un grand nombre de nouvelles lignes dans des tables SQL Server ou pour exporter des données de tables dans les fichiers de données.  
+Le pilote ODBC est fourni avec des outils comme [ **sqlcmd** ](/sql-docs/docs/tools/sqlcmd-utility) et [ **bcp**](/sql-docs/docs/tools/bcp-utility). Le **sqlcmd** utilitaire vous permet d’exécuter des instructions Transact-SQL, des procédures système et des scripts SQL. Le **bcp** utilitaire copie en bloc des données entre une instance de Microsoft SQL Server et un fichier de données dans un format que vous choisissez. Vous pouvez utiliser **bcp** pour importer un grand nombre de nouvelles lignes dans des tables SQL Server ou pour exporter des données de tables dans les fichiers de données.  
 
 ## <a name="code-example-in-c"></a>Exemple de code en C++
 

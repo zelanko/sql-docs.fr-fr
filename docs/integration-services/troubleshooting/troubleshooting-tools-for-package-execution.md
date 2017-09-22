@@ -22,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: d4d50bedde83e493c8327d9321ebcfb12bc12985
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 2aeb88c7c6829c0efd0cd5f422f65690dd3da2b6
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Outils de dépannage pour l'exécution des packages
@@ -72,9 +72,9 @@ ms.lasthandoff: 08/03/2017
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>Résoudre les problèmes liés à l'exécution des packages à l'aide de la journalisation  
  Vous pouvez contrôler la plupart des opérations réalisées dans vos packages en cours d'exécution en activant la fonction de journalisation. Les modules fournisseur d'informations permettent de capturer des informations sur des événements spécifiques à des fins d'analyse ultérieure, puis d'enregistrer ces informations dans une table de base de données, un fichier plat, un fichier XML ou un autre format de sortie pris en charge.  
   
--   **Activez la journalisation**. Vous pouvez affiner la sortie de journalisation en choisissant uniquement les événements et les éléments d'information que vous souhaitez capturer. Pour plus d’informations, consultez [Journalisation d’Integration Services (SSIS)](https://msdn.microsoft.com/library/ms140246.aspx).  
+-   **Activez la journalisation**. Vous pouvez affiner la sortie de journalisation en choisissant uniquement les événements et les éléments d'information que vous souhaitez capturer. Pour plus d’informations, consultez [Journalisation d’Integration Services (SSIS)](/sql-docs/docs/integration-services/performance/integration-services-ssis-logging).  
   
--   **Sélectionnez l'événement Diagnostic du package pour résoudre les problèmes inhérents au fournisseur.** Il existe des messages de journalisation qui vous permettent de résoudre les problèmes d'interaction d'un package avec des sources de données externes. Pour plus d’informations, voir [Troubleshooting Tools Package Connectivity](https://msdn.microsoft.com/library/cc879309.aspx).  
+-   **Sélectionnez l'événement Diagnostic du package pour résoudre les problèmes inhérents au fournisseur.** Il existe des messages de journalisation qui vous permettent de résoudre les problèmes d'interaction d'un package avec des sources de données externes. Pour plus d’informations, voir [Troubleshooting Tools Package Connectivity](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-tools-for-package-connectivity).  
   
 -   **Améliorez la sortie de journalisation par défaut**. La journalisation ajoute généralement des lignes à la destination de journalisation à chaque exécution d'un package. Bien que chaque ligne de la sortie de journalisation identifie le package par son nom et son identificateur unique, ainsi que l'exécution du package par un ExecutionID unique, une grande partie de la sortie de journalisation au sein d'une seule liste peut s'avérer difficile à analyser.  
   
@@ -111,8 +111,8 @@ ms.lasthandoff: 08/03/2017
  Si vous rencontrez une erreur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sans description qui l'accompagne, vous pouvez localiser cette dernière dans le [Guide de référence des erreurs et des messages propres à Integration Services](../../integration-services/integration-services-error-and-message-reference.md) en recherchant l'erreur d'après son numéro. La liste ne comporte actuellement aucune information de dépannage.  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Débogage de flux de données](../../integration-services/troubleshooting/debugging-data-flow.md)  
+ [Débogage d’un flux de données](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  Entrée de blog, [Ajout du nom de la colonne d'erreur à une sortie d'erreur](http://go.microsoft.com/fwlink/?LinkId=261546)sur dougbert.com.  
 

@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ee8b777d6e7439e94a2e5687a28ccf521e8aebdc
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f8f894ec1836e12eb57a7b2e629ff06464f266fb
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="tabular-model-designer-ssas"></a>Générateur de modèles tabulaires (SSAS)
-  Le générateur de modèles tabulaires fait partie de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], intégré à Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], qui propose des modèles de type de projet supplémentaires propres au développement de solutions de modèles tabulaires professionnelles.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] peut être téléchargé gratuitement sur Internet. Pour plus d’informations, consultez [Télécharger SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx) .   
+  Le Générateur de modèles tabulaires fait partie de [ ! INCLURE[ssBIDevStudioFull](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt) pour plus d’informations.   
   
 ##  <a name="bkmk_benefits"></a> Avantages  
  Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], de nouveaux modèles de projet de création de modèles tabulaires sont ajoutés aux types de projet disponibles. Une fois un nouveau projet de modèle tabulaire créé à l'aide de l'un des modèles, vous pouvez commencer à créer un modèle à l'aide des outils et des assistants du générateur de modèles tabulaires.  

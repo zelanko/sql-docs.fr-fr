@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dab69c7-73af-4340-aef0-de057356b791
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d7317cad5aa1e77653431c128ce1549bc4349e18
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 736b7e0744a95d859bd25a6c7974dc13e79d4bb7
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Extraire, transformer et charger des données sur Linux avec SSIS
@@ -26,7 +26,7 @@ Les packages SSIS en cours d’exécution sur Linux peuvent se connecter à Micr
 
 Vous pouvez utiliser SSIS pour exécuter des packages sur Linux quand vous avez également un ordinateur Windows pour créer et gérer des packages. Les outils de conception et de gestion de SSIS sont des applications Windows. 
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables
 
 Pour exécuter des packages SSIS sur un ordinateur Linux, vous devez d’abord installer SQL Server Integration Services. Pour obtenir des instructions d’installation, consultez [installer SQL Server Integration Services](sql-server-linux-setup-ssis.md).
 
@@ -79,10 +79,10 @@ SSIS inclut les fonctionnalités suivantes :
 - différentes transformations pour le nettoyage, l’agrégation, la fusion et la copie de données
 - interfaces de programmation d’application (API) pour l’extension SSIS avec vos propres scripts personnalisés et les composants
 
-Pour commencer avec SSIS, téléchargez la dernière version de [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md). Puis suivez le didacticiel [SSIS comment créer un Package ETL](https://msdn.microsoft.com/en-us/library/ms169917.aspx).
+Pour commencer avec SSIS, téléchargez la dernière version de [SQL Server Data Tools (SSDT)](/sql-docs/docs/integration-services/ssis-how-to-create-an-etl-package).
 
 ## <a name="see-also"></a>Voir aussi
-- [En savoir plus sur SQL Server Integration Services](https://msdn.microsoft.com/en-us/library/ms141026.aspx)
-- [Développement de SQL Server Integration Services (SSIS) et les outils de gestion](https://msdn.microsoft.com/en-us/library/ms140028.aspx)
-- [Didacticiels sur SQL Server Integration Services](https://msdn.microsoft.com/en-us/library/jj720568.aspx)
+- [En savoir plus sur SQL Server Integration Services](/sql-docs/docs/integration-services/sql-server-integration-services)
+- [Développement de SQL Server Integration Services (SSIS) et les outils de gestion](/sql-docs/docs/integration-services/integration-services-ssis-development-and-management-tools)
+- [Didacticiels sur SQL Server Integration Services](/sql-docs/docs/integration-services/integration-services-tutorials)
 

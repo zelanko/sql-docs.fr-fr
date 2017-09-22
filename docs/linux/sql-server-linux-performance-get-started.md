@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4f4f58b682451b7dabf336241ec94797a4d1469e
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: c6a5fa2872d7888d28ba34aae959aac9b13ea4b0
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Procédure pas à pas pour les fonctionnalités de performances de SQL Server sur Linux
@@ -157,11 +157,11 @@ SQL Server prend en charge les procédures stockées compilées en mode natif qu
 ### <a name="learn-more-about-in-memory-oltp"></a>En savoir plus sur OLTP en mémoire
 Pour plus d’informations sur l’OLTP en mémoire, consultez les rubriques suivantes :
 
-- [Démarrage rapide 1 : technologies OLTP en mémoire pour accélérer les performances Transact-SQL](https://msdn.microsoft.com/library/mt694156.aspx)
-- [Migration vers OLTP en mémoire](https://msdn.microsoft.com/library/dn247639.aspx)
-- [Table temporaire et variable de table plus rapides à l’aide de l’optimisation en mémoire](https://msdn.microsoft.com/library/mt718711.aspx)
-- [Surveiller l’utilisation de la mémoire et résoudre les problèmes connexes](https://msdn.microsoft.com/library/dn465869.aspx)
-- [OLTP en mémoire (optimisation en mémoire)](https://msdn.microsoft.com/library/dn133186.aspx)
+- [Démarrage rapide 1 : technologies OLTP en mémoire pour accélérer les performances Transact-SQL](/sql-docs/docs/relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp)
+- [Migration vers OLTP en mémoire](/sql-docs/docs/relational-databases/in-memory-oltp/migrating-to-in-memory-oltp)
+- [Table temporaire et variable de table plus rapides à l’aide de l’optimisation en mémoire](/sql-docs/docs/relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization)
+- [Surveiller l’utilisation de la mémoire et résoudre les problèmes connexes](/sql-docs/docs/relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage)
+- [OLTP en mémoire (optimisation en mémoire)](/sql-docs/docs/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization)
 
 ## <a name="use-query-store"></a>Utilisez le magasin de requête
 Magasin de requêtes collecte des informations détaillées sur les performances sur les requêtes, les plans d’exécution et les statistiques d’exécution.

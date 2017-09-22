@@ -15,24 +15,24 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 22c9592550b79fa5fa25e31f023a6d53c5b002f5
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 052e0f66818fd3d9e4cd4ad59720da4a7280c988
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Afficher des en-têtes et des pieds de page de groupe (Générateur de rapports et SSRS)
   Vous pouvez mieux contrôler si une ligne statique, telle qu'un en-tête ou un pied de page de groupe, est rendue avec des lignes dynamiques qui sont associées à un groupe dans une région de données de tableau matriciel.  
   
- Pour répéter l'ensemble des en-têtes de lignes ou des en-têtes de colonnes sur plusieurs pages, vous pouvez définir des propriétés pour la région de données de tableau matriciel. Pour plus d’informations, consultez [Afficher des en-têtes de ligne et de colonne sur plusieurs pages (Générateur de rapports et SSRS)](https://msdn.microsoft.com/library/dd207045.aspx).  
+ Pour répéter l'ensemble des en-têtes de lignes ou des en-têtes de colonnes sur plusieurs pages, vous pouvez définir des propriétés pour la région de données de tableau matriciel. Pour plus d’informations, consultez [affichage en-têtes de ligne et colonne sur plusieurs Pages (Générateur de rapports et SSRS)](/sql-docs/docs/reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs).  
   
- Pour contrôler le comportement de rendu des lignes et des colonnes dynamiques qui sont associées aux groupes imbriqués, ou des lignes et des colonnes statiques qui sont associées à des étiquettes ou des sous-totaux, vous devez définir des propriétés pour le membre du tableau matriciel. Un membre du tableau matriciel représente une ligne ou une colonne statique ou dynamique. Un membre statique se répète une fois. Par exemple, une ligne de total global est une ligne statique. Un membre dynamique se répète une fois pour chaque instance de groupe. Par exemple, une ligne associée à un groupe avec l'expression de groupe [Territory] se répète une fois pour chaque valeur unique de secteur. Pour plus d’informations sur les membres du tableau matriciel, consultez [Cellules, lignes et colonnes de région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
+ Pour contrôler le comportement de rendu des lignes et des colonnes dynamiques qui sont associées aux groupes imbriqués, ou des lignes et des colonnes statiques qui sont associées à des étiquettes ou des sous-totaux, vous devez définir des propriétés pour le membre du tableau matriciel. Un membre du tableau matriciel représente une ligne ou une colonne statique ou dynamique. Un membre statique se répète une fois. Par exemple, une ligne de total global est une ligne statique. Un membre dynamique se répète une fois pour chaque instance de groupe. Par exemple, une ligne associée à un groupe avec l'expression de groupe [Territory] se répète une fois pour chaque valeur unique de secteur. Pour plus d’informations sur les membres de tableau matriciel, consultez [cellules de région de données de tableau matriciel, lignes et colonnes &#40; Le Générateur de rapports &#41; et SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
- Vous pouvez sélectionner un membre du tableau matriciel dans le volet Regroupement et définir les propriétés **KeepWithGroup**, **KeepTogether** et **RepeatOnNewPage** dans le volet Propriétés. Utilisez **KeepWithGroup** pour afficher des en-têtes et des pieds de page de groupe sur la même page que le groupe. Utilisez **KeepTogether** pour afficher les membres statiques avec les lignes ou les colonnes d’un groupe. Utilisez **RepeatOnNewPage** pour répéter l’en-tête ou le pied de page de groupe sur chaque page qui affiche au moins une instance complète du membre de groupe de lignes désigné par la valeur **KeepWithGroup** . La propriété**RepeatOnNewPage** n’est pas prise en charge pour les membres de groupe de colonnes.  
+ Vous pouvez sélectionner un membre du tableau matriciel dans le volet Regroupement et définir les propriétés **KeepWithGroup**, **KeepTogether**et **RepeatOnNewPage** dans le volet Propriétés. Utilisez **KeepWithGroup** pour afficher des en-têtes et des pieds de page de groupe sur la même page que le groupe. Utilisez **KeepTogether** pour afficher les membres statiques avec les lignes ou les colonnes d’un groupe. Utilisez **RepeatOnNewPage** pour répéter l’en-tête ou le pied de page de groupe sur chaque page qui affiche au moins une instance complète du membre de groupe de lignes désigné par la valeur **KeepWithGroup** . La propriété**RepeatOnNewPage** n’est pas prise en charge pour les membres de groupe de colonnes.  
   
 > [!NOTE]  
->  **KeepWithGroup**, **KeepTogether** et **RepeatOnNewPage** sont des propriétés de membre de groupe que vous pouvez définir à l’aide du **mode Avancé** du volet de regroupement. Pour plus d’informations, consultez [Volet de regroupement &#40;Générateur de rapports&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md).  
+>  **KeepWithGroup**, **KeepTogether**, et **RepeatOnNewPage** des propriétés de membre de groupe que vous pouvez définir à l’aide de la **Mode avancé** du volet de regroupement. Pour plus d’informations, consultez [volet de regroupement &#40; Le Générateur de rapports &#41; ](../../reporting-services/report-design/grouping-pane-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -74,7 +74,7 @@ ms.lasthandoff: 08/09/2017
 5.  (Facultatif) Affichez l'aperçu du rapport. Dans la mesure du possible, le convertisseur de rapport garde ce membre avec les membres de groupe de colonnes spécifiés.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Cellules, lignes et colonnes de région de données de tableau matriciel (Générateur de rapports et SSRS)](https://msdn.microsoft.com/library/dd220587.aspx)   
+ [Les cellules de région de données de tableau matriciel, lignes et colonnes (Générateur de rapports) et SSRS](/sql-docs/docs/reporting-services/report-design/tablix-data-region-report-builder-and-ssrs)   
  
   
   

@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 649c7cbd03b6d2e61dbbb572a34cdbcd2a7ab7cd
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 622e0ed2242ddc454028962c63b5760a6baad38a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Nouveautés de 2017 du serveur SQL sur Linux
@@ -131,7 +131,7 @@ Mode de compatibilité 140 :
 [Améliorations du Service Pack 1](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/) dans cette version CTP1.1 :
 - Base de données de clonage pour le CLR, Filestream/Filetable, les objets en mémoire et le magasin de requêtes.
 - **CRÉER** ou **ALTER** opérateurs pour les objets de programmabilité.
-- Nouvelle **indicateur USE** option pour fournir des indications pour le processeur de requêtes de requête. En savoir plus ici : [indicateurs de requête](https://msdn.microsoft.com/en-us/library/ms181714.aspx).
+- Nouvelle **indicateur USE** option pour fournir des indications pour le processeur de requêtes de requête. En savoir plus ici : [indicateurs de requête](/sql-docs/docs/t-sql/queries/hints-transact-sql-query).
 - Compte de service SQL peut identifier par programme maintenant activer le verrouillage des Pages dans les autorisations de la mémoire et l’initialisation instantanée des fichiers.
 - Prise en charge pour le nombre de fichiers TempDB, taille de fichier et les paramètres de croissance de fichier.
 - Étendue des diagnostics dans showplan XML.

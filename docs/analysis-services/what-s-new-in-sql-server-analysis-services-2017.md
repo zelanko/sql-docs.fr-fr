@@ -15,10 +15,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 572af6f86f015c88141bb6e78b781b5825be155c
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: eb98483d6237f2db2fdb0cb9aa444dd938a431f0
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="what39s-new-in-sql-server-2017-analysis-services"></a>Quel &#39; est nouvelle dans SQL Server 2017 Analysis Services
@@ -185,7 +185,7 @@ EVALUATE DETAILROWS([Internet Total Sales])
 ```
 
 ## <a name="dax-enhancements"></a>Améliorations DAX
-Cette version inclut un opérateur `IN` pour les expressions DAX. Elle est similaire à l’opérateur [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) couramment utilisé pour spécifier plusieurs valeurs dans une clause `WHERE` .
+Cette version inclut un opérateur `IN` pour les expressions DAX. Elle est similaire à l’opérateur [`TSQL IN`](/sql-docs/docs/t-sql/language-elements/in-transact-sql) couramment utilisé pour spécifier plusieurs valeurs dans une clause `WHERE`.
 
 Auparavant, il était courant de spécifier des filtres à valeurs multiples à l’aide de l’opérateur `OR` logique comme dans l’expression de mesure suivante :
 

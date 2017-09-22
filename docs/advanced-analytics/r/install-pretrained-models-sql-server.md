@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 14789bafd555a4980875de78c85b32f535a8c0fe
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: b52fcc1e4ac77df2968a4ea6cbd6e546ff1b74ac
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="install-pretrained-machine-learning-models-on-sql-server"></a>Installer préformé d’apprentissage des modèles sur SQL Server
@@ -37,8 +37,8 @@ Dont l’apprentissage des modèles ont été apportées pour prendre en charge 
 
 Actuellement, les modèles qui sont disponibles sont des modèles de réseau neuronaux en profondeur (profonds DNN) pour la classification du sentiment analysis et image. Les quatre modèles préformés ont été formés sur CNTK. La configuration de chaque réseau était basée sur les implémentations de référence suivantes :
 
-+ Resnet-18
-+ Resnet à 50.
++ ResNet-18
++ ResNet à 50.
 + ResNet-101
 + AlexNet
 
@@ -133,3 +133,4 @@ L’image doit être redimensionnée pour satisfaire les exigences du modèle fo
 Cet exemple illustre l’utilisation du modèle préformé pour la classification :
 
 [Analyse des sentiments à l’aide du Générateur de fonctionnalités de texte](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
+

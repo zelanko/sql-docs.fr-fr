@@ -2,8 +2,8 @@
 title: "Utiliser Python avec revoscalepy pour créer un modèle | Documents Microsoft"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 07/03/2017
-ms.prod: sql-server-2016
+ms.date: 09/19/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,19 +15,19 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6b7e166971ff74add56bce628838c82a9a6c1128
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: c497ad3e302f2950a65cf41aaa41237f19171ab4
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>Utiliser Python avec revoscalepy pour créer un modèle
 
-Cet exemple montre comment vous pouvez créer un modèle de régression logistique dans SQL Server, à l’aide d’un algorithme à partir de la **revoscalepy** package.
+Cet exemple montre comment vous pouvez créer un modèle de régression linéaire dans SQL Server, à l’aide d’un algorithme à partir de la **revoscalepy** package.
 
 Le **revoscalepy** le package pour Python contient des objets, des transformations, et algorithmes similaires à ceux fournis pour la **RevoScaleR** package pour le langage R. Avec cette bibliothèque, vous pouvez créer un contexte de calcul, déplacer des données entre les contextes de calcul, transforment des données et l’apprentissage des modèles prédictifs à l’aide d’algorithmes populaires tels que la régression logistique et linéaire, les arbres de décision et bien plus encore.
 
-Pour plus d’informations, consultez [What ' s revoscalepy ?](../python/what-is-revoscalepy.md)
+Pour plus d’informations, consultez [What ' s revoscalepy ?](../python/what-is-revoscalepy.md) et [référence de fonction Python](https://docs.microsoft.com/r-server/python-reference/introducing-python-package-reference)
 
 ## <a name="prerequisites"></a>Conditions préalables
 
@@ -112,8 +112,8 @@ Nous allons examiner le code et mettre en évidence certaines étapes clés.
 
 Une source de données est différente à partir d’un contexte de calcul. Le _source de données_ définit les données utilisées dans votre code. Le _contexte de calcul_ définit où le code sera exécuté.
 
-1. Créez des variables de Python, tel que `sql_query` et `sql_connection_string`, qui définissent la source et les données que vous souhaitez utiliser. Passer ces variables au constructeur RxSqlServerData pour implémenter le **objet source de données** nommé `data_source`.
-2. Créer un objet de contexte de calcul à l’aide de la **RxInSqlServer** constructeur. Dans cet exemple, vous passez la chaîne de connexion que vous avez défini précédemment, en supposant que les données sont sur la même instance de SQL Server que vous utiliserez comme contexte de calcul. Toutefois, la source de données et le contexte de calcul peut être sur des serveurs différents. Résultant **objet de contexte de calcul** est nommé `sql_cc`.
+1. Créez des variables de Python, tel que `sql_query` et `sql_connection_string`, qui définissent la source et les données que vous souhaitez utiliser. Passer ces variables à la [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata) constructeur pour implémenter le **objet source de données** nommé `data_source`.
+2. Créer un objet de contexte de calcul à l’aide de la [RxInSqlServer](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxinsqlserverdata) constructeur. Dans cet exemple, vous passez la chaîne de connexion que vous avez défini précédemment, en supposant que les données sont sur la même instance de SQL Server que vous utiliserez comme contexte de calcul. Toutefois, la source de données et le contexte de calcul peut être sur des serveurs différents. Résultant **objet de contexte de calcul** est nommé `sql_cc`.
 3. Choisissez le contexte de calcul active. Par défaut, les opérations sont exécutées localement, ce qui signifie que si vous ne spécifiez pas un contexte de calcul différentes, les données seront extraites à partir de la source de données, et l’ajustement de modèle s’exécute dans votre environnement actuel de Python.
 
 ### <a name="changing-compute-contexts"></a>Modification des contextes de calcul
@@ -126,17 +126,15 @@ Ces conditions s’appliquent dans l’appel à **rxsummary**, où le contexte d
 
 `summary = rx_summary("ArrDelay ~ DayOfWeek", data = data_source, compute_context = sql_compute_context)`
 
-Vous pouvez également utiliser la fonction **rxsetcomputecontext** pour basculer entre les contextes de calcul qui ont déjà été définis. 
+Vous pouvez également utiliser la fonction [rx_set_computecontext](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rx-set-compute-context) pour basculer entre les contextes de calcul qui ont déjà été définis.
 
 ### <a name="setting-the-degree-of-parallelism"></a>Définir le degré de parallélisme
 
-Lorsque vous définissez le contexte de calcul, vous pouvez également définir les paramètres qui contrôlent comment les données sont gérées par le contexte de calcul. Ces paramètres diffèrent selon le type de source de données. 
+Lorsque vous définissez le contexte de calcul, vous pouvez également définir les paramètres qui contrôlent comment les données sont gérées par le contexte de calcul. Ces paramètres diffèrent selon le type de source de données.
 
 Pour les contextes de calcul de SQL Server, vous pouvez définir la taille de lot, ou fournir des conseils sur le degré de parallélisme à utiliser dans les tâches en cours d’exécution.
 
-L’exemple a été exécuté sur un ordinateur équipé de quatre processeurs, et nous définissons le *num_tasks* paramètre 4. Si vous définissez cette valeur sur 0, SQL Server utilise la valeur par défaut, qui consiste à s’exécuter autant de tâches en parallèle que possible, sous les paramètres MAXDOP actuels pour le serveur. Toutefois, même dans les serveurs avec plusieurs processeurs, le nombre exact de tâches qui peuvent être alloués dépend de nombreux autres facteurs, tels que les paramètres du serveur et les autres tâches qui s’exécutent. 
-
-Pour plus d’informations, consultez [RxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver).
+L’exemple a été exécuté sur un ordinateur équipé de quatre processeurs, et nous définissons le *num_tasks* paramètre 4. Si vous définissez cette valeur sur 0, SQL Server utilise la valeur par défaut, qui consiste à s’exécuter autant de tâches en parallèle que possible, sous les paramètres MAXDOP actuels pour le serveur. Toutefois, même dans les serveurs avec plusieurs processeurs, le nombre exact de tâches qui peuvent être alloués dépend de nombreux autres facteurs, tels que les paramètres du serveur et les autres tâches qui s’exécutent.
 
 ## <a name="related-samples"></a>Exemples associés
 

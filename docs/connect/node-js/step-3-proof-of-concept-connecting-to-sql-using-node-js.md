@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0332c6a7636341086abedebe5289e9a2f34d843b
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 783e6bc2e9dd928aaef2b5ecfb71efe47588a9b6
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Étape 3 : Preuve de concept pour la connexion à SQL à l’aide de Node.js
@@ -101,7 +101,7 @@ Toutes les instructions SQL sont exécutées à l’aide de la **Request() nouve
   
 ## <a name="step-3-insert-a-row"></a>Étape 3 : Insérer une ligne  
   
-Dans cet exemple, vous allez apprendre à exécuter une [insérer](https://msdn.microsoft.com/library/ms174335.aspx) instruction passer en toute sécurité, des paramètres qui protègent votre application à partir de [injection SQL](https://technet.microsoft.com/library/ms161953(v=sql.105).aspx) vulnérabilité et récupérer le généréautomatiquement[Clé primaire](https://msdn.microsoft.com/library/ms179610.aspx) valeur.    
+Dans cet exemple, vous allez apprendre à exécuter une [insérer](/sql-docs/docs/t-sql/statements/insert-transact-sql) instruction passer en toute sécurité, des paramètres qui protègent votre application à partir de [injection SQL](/sql-docs/docs/relational-databases/tables/primary-and-foreign-key-constraints) valeur.    
   
   
 ```javascript  

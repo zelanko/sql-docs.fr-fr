@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8221755d220caec5588c8ed1343e360799b82694
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: cffe6569f7bac5308d49bb89f4fb4db259be445b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>Compatibilité avec JDBC 4.1 pour le pilote JDBC
@@ -56,7 +56,7 @@ ms.lasthandoff: 09/09/2017
   
 |Nouvelle fonctionnalité| Description|  
 |-----------------|-----------------|  
-|Nouvelle fonction d'échappement<br /><br /> Échappement limité des lignes retournées|Partiellement pris en charge<br /><br /> Syntaxe d’échappement : limite \<lignes > [décalage < row_offset >]<br /><br /> La syntaxe d'échappement comporte deux parties : la partie obligatoire « rows » spécifie le nombre de lignes à retourner, la partie facultative « row_offset » spécifie le nombre de lignes à ignorer avant de commencer à retourner des lignes<br /><br /> Le pilote prend en charge uniquement la partie obligatoire en transformant la requête pour utiliser « TOP » au lieu de LIMIT (SQL Server ne prend pas en charge « LIMIT »).<br /><br /> Le pilote lève une exception si la partie facultative « row_offset » est utilisée, car SQL Server n'a pas de construction intégrée pour la prendre en charge.<br /><br /> Pour plus d’informations, consultez [à l’aide des séquences d’échappement SQL](https://msdn.microsoft.com/en-us/library/ms378045.aspx).|  
+|Nouvelle fonction d'échappement<br /><br /> Échappement limité des lignes retournées|Partiellement pris en charge<br /><br /> Syntaxe d’échappement : limite \<lignes > [décalage < row_offset >](/sql-docs/docs/connect/jdbc/using-sql-escape-sequences).|  
   
  La spécification de l'API Java Database Connectivity 4.1 est prise en charge par Microsoft JDBC Driver 4.2 pour SQL Server, avec les mappages de type de données suivants.  
   

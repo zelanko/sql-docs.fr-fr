@@ -1,7 +1,7 @@
 ---
 title: '@@OPTIONS (Transact-SQL) | Documents Microsoft'
 ms.custom: 
-ms.date: 10/11/2016
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -24,13 +24,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bc5a7b7899715ee06b8b0e6924893d0d8a04b14d
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 9480ffeffa83650b5cf44ad51547c36d5563b13b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="options-transact-sql"></a>@@OPTIONS (Transact-SQL)
+# <a name="x40x40options-transact-sql"></a>& #x 40 ; & #x 40 ; OPTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retourne des informations sur les options SET actuelles.  
@@ -40,7 +40,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 @@OPTIONS  
 ```  
   
@@ -50,11 +49,11 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>Notes  
  Les options peuvent provenir de l’utilisation de la **définir** commande ou à partir de la **option sp_configure user options** valeur. Configuré avec des valeurs de session le **définir** commande remplacement le **sp_configure** options. De nombreux outils (tels que [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) configurent automatiquement les options de définition. Chaque utilisateur possède un @@OPTIONS (fonction) qui représente la configuration.  
   
- Vous pouvez modifier les options linguistiques et de traitement des requêtes pour une session utilisateur spécifique à l'aide de l'instruction SET. **@@OPTIONS**  peut détecter uniquement les options qui ont pour valeur ON ou OFF.  
+ Vous pouvez modifier les options linguistiques et de traitement des requêtes pour une session utilisateur spécifique à l'aide de l'instruction SET. **@@OPTIONS ** peut détecter uniquement les options qui ont pour valeur ON ou OFF.  
   
- Le **@@OPTIONS**  fonction retourne une image bitmap des options, converti en entier base 10 (décimal). Les paramètres de bit sont stockés dans les emplacements décrits dans une table dans la rubrique [configurer l’Option de Configuration de serveur user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md).  
+ Le **@@OPTIONS ** fonction retourne une image bitmap des options, converti en entier base 10 (décimal). Les paramètres de bit sont stockés dans les emplacements décrits dans une table dans la rubrique [configurer l’Option de Configuration de serveur user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md).  
   
- Pour décoder le **@@OPTIONS**  valeur, convertissez l’entier retourné par **@@OPTIONS**  en binaire, puis recherchez les valeurs de la table de [configurer l’Option de Configuration de serveur user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md). Par exemple, si `SELECT @@OPTIONS;` retourne la valeur `5496`, utilisez la calculatrice de programmation Windows (**calc.exe**) pour convertir la valeur décimale `5496` en binaire. Le résultat est `1010101111000`. Les caractères situés les plus à droite (binaire 1, 2 et 4) sont 0, ce qui indique que les trois premiers éléments de la table sont désactivés. Consultation de la table, vous voyez que celles sont **DISABLE_DEF_CNST_CHK** et **IMPLICIT_TRANSACTIONS**, et **CURSOR_CLOSE_ON_COMMIT**. L’élément suivant (**ANSI_WARNINGS** dans les `1000` position) se trouve sur. Continuer à travailler à gauche si le bitmap et vers le bas dans la liste des options. Lorsque les options de la plus à gauche sont 0, elles sont tronquées par la conversion de type. Le bitmap `1010101111000` est en fait `001010101111000` et représente les 15 options.  
+ Pour décoder le **@@OPTIONS ** valeur, convertissez l’entier retourné par **@@OPTIONS ** en binaire, puis recherchez les valeurs de la table de [configurer l’Option de Configuration de serveur user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md). Par exemple, si `SELECT @@OPTIONS;` retourne la valeur `5496`, utilisez la calculatrice de programmation Windows (**calc.exe**) pour convertir la valeur décimale `5496` en binaire. Le résultat est `1010101111000`. Les caractères situés les plus à droite (binaire 1, 2 et 4) sont 0, ce qui indique que les trois premiers éléments de la table sont désactivés. Consultation de la table, vous voyez que celles sont **DISABLE_DEF_CNST_CHK** et **IMPLICIT_TRANSACTIONS**, et **CURSOR_CLOSE_ON_COMMIT**. L’élément suivant (**ANSI_WARNINGS** dans les `1000` position) se trouve sur. Continuer à travailler à gauche si le bitmap et vers le bas dans la liste des options. Lorsque les options de la plus à gauche sont 0, elles sont tronquées par la conversion de type. Le bitmap `1010101111000` est en fait `001010101111000` et représente les 15 options.  
   
 ## <a name="examples"></a>Exemples  
   

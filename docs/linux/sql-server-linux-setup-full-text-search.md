@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.translationtype: MT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: a542817a861f968cebf3a66f91cfb016d2a685b8
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 67f11f3e21151dba66127b6a86fe0b82a245ad23
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installer la recherche en texte intégral SQL Server sur Linux
@@ -86,7 +86,7 @@ Si vous avez besoin d’une installation hors connexion, recherchez le télécha
 
 ## <a name="supported-languages"></a>Langues prises en charge
 
-Recherche en texte intégral utilise [des analyseurs lexicaux](https://msdn.microsoft.com/library/ms142509.aspx) qui déterminent comment identifier les mots individuels en fonction de langue. Vous pouvez obtenir une liste des analyseurs lexicaux inscrits en interrogeant le **sys.fulltext_languages** affichage catalogue. Analyseurs lexicaux pour les langues suivantes sont installées avec SQL Server 2017 RC2 :
+Recherche en texte intégral utilise [des analyseurs lexicaux](/sql-docs/docs/relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search) qui déterminent comment identifier les mots individuels en fonction de langue. Vous pouvez obtenir une liste des analyseurs lexicaux inscrits en interrogeant le **sys.fulltext_languages** affichage catalogue. Analyseurs lexicaux pour les langues suivantes sont installées avec SQL Server 2017 RC2 :
 
 | Langage | ID de langue |
 |---|---|
@@ -146,7 +146,7 @@ Recherche en texte intégral utilise [des analyseurs lexicaux](https://msdn.micr
 
 ## <a id="filters"></a>Filtres
 
-Recherche en texte intégral fonctionne également avec le texte stocké dans des fichiers binaires. Mais dans ce cas, un filtre installé est nécessaire pour traiter le fichier. Pour plus d’informations sur les filtres, consultez [configurer et gérer des filtres pour la recherche](https://msdn.microsoft.com/library/ms142499.aspx).
+Recherche en texte intégral fonctionne également avec le texte stocké dans des fichiers binaires. Mais dans ce cas, un filtre installé est nécessaire pour traiter le fichier. Pour plus d’informations sur les filtres, consultez [configurer et gérer des filtres pour la recherche](/sql-docs/docs/relational-databases/search/configure-and-manage-filters-for-search).
 
 Vous pouvez afficher une liste des filtres installés en appelant **sp_help_fulltext_system_components 'filtre'**. Pour SQL Server 2017 RC2, les filtres suivants sont installés :
 
@@ -258,9 +258,9 @@ Vous pouvez afficher une liste des filtres installés en appelant **sp_help_full
 |.xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## <a name="semantic-search"></a>Recherche sémantique
-[La recherche sémantique](https://msdn.microsoft.com/library/gg492075.aspx) s’appuie sur la fonctionnalité de recherche en texte intégral pour extraire et d’index statistiquement pertinentes *expressions clés*. Cela vous permet d’interroger la signification des documents dans votre base de données. Il permet également d’identifier les documents sont similaires.
+[La recherche sémantique](/sql-docs/docs/relational-databases/search/semantic-search-sql-server) s’appuie sur la fonctionnalité de recherche en texte intégral pour extraire et d’index statistiquement pertinentes *expressions clés*. Cela vous permet d’interroger la signification des documents dans votre base de données. Il permet également d’identifier les documents sont similaires.
 
-Pour pouvoir utiliser la recherche sémantique, vous devez d’abord télécharger et attacher le [base de données de statistiques linguistiques de sémantique](https://msdn.microsoft.com/library/gg509085.aspx).
+Pour pouvoir utiliser la recherche sémantique, vous devez d’abord télécharger et attacher le [base de données de statistiques linguistiques de sémantique](/sql-docs/docs/relational-databases/search/install-and-configure-semantic-search).
 
 1. Sur un ordinateur Windows, [télécharger le. Fichier MSI de la base de données de statistiques linguistiques de sémantique](https://www.microsoft.com/download/details.aspx?id=54277).
 

@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: e16cfa9447a63e1bb9b627bc3045727e7f481ef3
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 1afd17d5ba2879fd13f0b3703ca84ea02b3cd416
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Événements journalisés par un package Integration Services
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/03/2017
   
  Cette rubrique fournit des informations sur les messages d'événements courants qu'un package enregistre dans le journal des événements des applications. Par défaut, un package enregistre certains de ces messages même si vous n'avez pas activé l'enregistrement sur le package. Toutefois, il existe d'autres messages que le package enregistrera seulement si vous avez activé l'enregistrement sur le package. Que le package enregistre ces messages par défaut ou parce que l'enregistrement a été activé, la source d'événements pour les messages est SQLISPackage.  
   
- Pour obtenir des informations générales sur l’exécution des packages SSIS, consultez [Exécution des projets et des packages](https://msdn.microsoft.com/library/ms141708.aspx).  
+ Pour obtenir des informations générales sur l’exécution des packages SSIS, consultez [Exécution des projets et des packages](/sql-docs/docs/integration-services/packages/run-integration-services-ssis-packages).  
   
  Pour plus d’informations sur la résolution des packages en cours d’utilisation, consultez [Outils de dépannage pour l’exécution des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 08/03/2017
 |12249|DTS_MSG_EVENTLOGENTRY_WARNING|Nom d'événement : %1%r Message : %9%r Opérateur : %2%r Nom de la source : %3%r ID de la source : %4%r ID d'exécution : %5%r Heure de début : %6%r Heure de fin : %7%r Code de données : %8|Ce message signale un avertissement qui s'est produit.|  
 |12258|DTS_MSG_EVENTLOGENTRY_INFORMATION|Nom d'événement : %1%r Message : %9%r Opérateur : %2%r Nom de la source : %3%r ID de la source : %4%r ID d'exécution : %5%r Heure de début : %6%r Heure de fin : %7%r Code de données : %8|Ce message signale des informations qui ne sont pas associées à une erreur ou à un avertissement.|  
 
-## <a name="view-log-entries-in-the-log-events-window"></a>Afficher les entrées de journal dans la fenêtre Journaux d'événements
+## <a name="view-log-entries-in-the-log-events-window"></a>Afficher les entrées de journal dans la fenêtre Journaux d’événements
   Cette procédure explique comment exécuter un package et afficher les entrées de journal qu'il écrit. Vous pouvez visualiser les entrées du journal en temps réel. Les entrées de journal écrites dans la fenêtre **Journaux d’événements** peuvent également être copiées et enregistrées pour une analyse ultérieure.  
   
  Il n’est pas nécessaire d’écrire les entrées de journal dans un journal pour écrire ces entrées dans la fenêtre **Journaux d’événements** .  
