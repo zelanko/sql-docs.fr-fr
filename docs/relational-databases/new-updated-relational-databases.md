@@ -13,13 +13,13 @@ ms.custom: UpdArt.exe
 ms.workload: relational-databases
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 07/17/2017
+ms.date: 09/11/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
-ms.openlocfilehash: 519fbd2bc596112dbb1c662d76e4aeeb230ffc36
+ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
+ms.openlocfilehash: ee7d66bcd8720234f4aec97d24ce16ed21888a3c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="new-and-recently-updated-relational-databases-docs"></a>Contenu nouveau et récemment mis à jour : documentation des bases de données relationnelles
@@ -34,7 +34,7 @@ Les mises à jour récentes sont signalées pour la plage de dates et le sujet s
 
 
 
-- *Plage de dates des mises à jour :* &nbsp; **23-05-2017** &nbsp; - au - &nbsp; **17-07-2017**
+- *Période des mises à jour :* &nbsp; **18-07-2017** &nbsp; au &nbsp; **11-09-2017**
 - *Domaine :* &nbsp; **bases de données relationnelles**.
 
 
@@ -47,14 +47,31 @@ Les mises à jour récentes sont signalées pour la plage de dates et le sujet s
 Les liens suivants renvoient aux nouveaux articles ajoutés récemment.
 
 
-1. [Mécanismes internes d’OLTP en mémoire de SQL Server pour SQL Server 2016](in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md)
-2. [Traitement de requêtes adaptatif dans les bases de données SQL](performance/adaptive-query-processing.md)
-3. [Guide d’amélioration de la confidentialité et du traitement des exigences GDPR avec la plateforme Microsoft SQL](security/microsoft-sql-and-the-gdpr-requirements.md)
-4. [sys.pdw_replicated_table_cache_state (Transact-SQL)](system-catalog-views/sys-pdw-replicated-table-cache-state-transact-sql.md)
-5. [sys.trusted_assemblies (Transact-SQL)](system-catalog-views/sys-trusted-assemblies-transact-sql.md)
-6. [sys.dm_exec_query_parallel_workers (Transact-SQL)](system-dynamic-management-views/sys-dm-exec-query-parallel-workers-transact-sql.md)
-7. [sys.sp_add_trusted_assembly (Transact-SQL)](system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)
-8. [sys.sp_drop_trusted_assembly (Transact-SQL)](system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)
+1. [Importer des données d’Excel vers SQL Server ou Azure SQL Database](import-export/import-data-from-excel-to-sql.md)
+2. [Résoudre les problèmes de connectivité de PolyBase Kerberos](polybase/polybase-troubleshoot-connectivity.md)
+3. [Transparent Data Encryption (TDE)](security/encryption/transparent-data-encryption.md)
+4. [Transparent Data Encryption pour Azure SQL Database et Data Warehouse](security/encryption/transparent-data-encryption-azure-sql.md)
+5. [Transparent Data Encryption avec prise en charge de BYOK pour Azure SQL Database et Data Warehouse](security/encryption/transparent-data-encryption-byok-azure-sql.md)
+6. [PowerShell : Activer Transparent Data Encryption à l’aide de votre propre clé Azure Key Vault](security/encryption/transparent-data-encryption-byok-azure-sql-configure.md)
+7. [Effectuer une rotation du protecteur TDE (Transparent Data Encryption) à l’aide de PowerShell](security/encryption/transparent-data-encryption-byok-azure-sql-key-rotation.md)
+8. [Supprimer un protecteur TDE (Transparent Data Encryption) à l’aide de PowerShell](security/encryption/transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)
+9. [Termes du contrat de licence SQL Server Shared Management Objects (SMO)](server-management-objects-smo/smo-license-terms.md)
+10. [sys.external_libraries (Transact-SQL)](system-catalog-views/sys-external-libraries-transact-sql.md)
+11. [sys.external_library_files (Transact-SQL)](system-catalog-views/sys-external-library-files-transact-sql.md)
+12. [sp_rxPredict](system-stored-procedures/sp-rxpredict-transact-sql.md)
+
+
+
+&nbsp;
+
+## <a name="updated-articles-with-excerpts"></a>Articles mis à jour avec des extraits
+
+Cette section affiche les extraits des mises à jour collectés dans des articles qui ont récemment fait l’objet d’une mise à jour importante.
+
+Les extraits affichés ici apparaissent séparés de leur contexte sémantique propre. Un extrait est parfois séparé de la syntaxe Markdown importante qui l’entoure dans l’article. Ces extraits sont donc donnés à titre indicatif uniquement. Les extraits vous permettent seulement de savoir si les articles correspondants vont vous intéresser et si oui, de cliquer dessus pour les consulter.
+
+Pour cela et pour d’autres raisons, ne copiez pas le code de ces extraits et ne prenez pas à la lettre les extraits de texte. Consultez plutôt l’article.
+
 
 
 
@@ -67,17 +84,8 @@ Les liens suivants renvoient aux nouveaux articles ajoutés récemment.
 
 Cette liste compacte fournit des liens vers tous les articles mis à jour qui sont répertoriés dans la section des extraits.
 
+1. [Paramétrage automatique](#TitleNum_1)
 
-
-&nbsp;
-
-## <a name="updated-articles-with-excerpts"></a>Articles mis à jour avec des extraits
-
-Cette section affiche les extraits de mises à jour collectées à partir des articles qui ont récemment subi une mise à jour importante.
-
-Les extraits affichés ici apparaissent séparés de leur contexte sémantique propre. Un extrait est parfois séparé de la syntaxe Markdown importante qui l’entoure dans l’article. Ces extraits sont donc donnés à titre indicatif uniquement. Les extraits vous permettent seulement de savoir si les articles correspondants vont vous intéresser et si oui, de cliquer dessus pour les consulter.
-
-Pour cela et pour d’autres raisons, ne copiez pas le code de ces extraits et ne prenez pas à la lettre les extraits de texte. Au lieu de cela, consultez l’article.
 
 
 
@@ -87,211 +95,88 @@ Pour cela et pour d’autres raisons, ne copiez pas le code de ces extraits et n
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-altering-memory-optimized-tablesin-memory-oltpaltering-memory-optimized-tablesmd"></a>1. &nbsp; [Modification des tables à mémoire optimisée](in-memory-oltp/altering-memory-optimized-tables.md)
+### <a name="1-nbsp-automatic-tuningautomatic-tuningautomatic-tuningmd"></a>1. &nbsp; [Réglage automatique](automatic-tuning/automatic-tuning.md)
 
-*Mise à jour : 23-06-2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Suivant](#TitleNum_2))
+*Date de mise à jour : 16-08-2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 82.  ms.author= "genemi".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 8359700b5db24838f1bb273526794c2865bbbe11 41d77cf0bbcf53a1b64d6524a24e5736c5a073da  (PR=2171  ,  Filename=altering-memory-optimized-tables.md  ,  Dirpath=docs\relational-databases\in-memory-oltp\  ,  MergeCommitSha40=7d2dbe0bdc4cbd05f11eacf938b35a9c35ace2e7) -->
-
-
-
-**Journalisation d’ALTER TABLE sur des tables à mémoire optimisée**
-
-Sur une table optimisée en mémoire, la plupart des scénarios ALTER TABLE s’exécutent désormais en parallèle, d’où une optimisation des écritures dans le journal des transactions. L’optimisation est obtenue par la journalisation des seules modifications de métadonnées dans le journal des transactions. Cependant, les opérations ALTER TABLE suivantes sont effectuées en mode à thread unique et ne sont pas optimisées pour la journalisation.
-
-L’opération monothread dans ce cas consigne dans le journal des transactions l’intégralité du contenu de la table modifiée. Voici la liste des opérations à thread unique :
-
-- Modifier ou ajouter une colonne pour utiliser un type d’objet volumineux (LOB) : nvarchar(max), varchar(max) ou varbinary(max).
-
-- Ajouter ou supprimer un index COLUMNSTORE.
-
-- Presque tout ce qui affecte une [colonne hors ligne--../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).
-
-    - Provoquer le déplacement d’une colonne sur une ligne en mode hors ligne.
-
-    - Provoquer le déplacement d’une colonne en mode hors ligne sur une ligne.
-
-    - Créer une colonne hors ligne.
-
-    - *Exception :* l’allongement d’une colonne déjà hors ligne est journalisé de la manière optimisée. 
-  
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_2"/>
-
-### <a name="2-nbsp-table-and-row-size-in-memory-optimized-tablesin-memory-oltptable-and-row-size-in-memory-optimized-tablesmd"></a>2. &nbsp; [Taille de la table et des lignes dans les tables à mémoire optimisée](in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)
-
-*Mise à jour : 22-06-2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Précédent](#TitleNum_1) | [Suivant](#TitleNum_3))
-
-<!-- Source markdown line 114.  ms.author= "genemi".  -->
+<!-- Source markdown line 64.  ms.author= "jovanpop".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 27ce0fa2e7bb464f9c3d6e32dd195de3b79abfcd 0a3cacd86024e2b734704ffd37e55ca0b17a0c94  (PR=2163  ,  Filename=table-and-row-size-in-memory-optimized-tables.md  ,  Dirpath=docs\relational-databases\in-memory-oltp\  ,  MergeCommitSha40=fe6de2b16b9792a5399b1c014af72a2a5ee52377) -->
+<!-- git diff --ignore-all-space --unified=0 be765a1acf9bdfd5485520d16160677583e81f8e 135d926227094374e6ec5484e7babee625b44bb2  (PR=2860  ,  Filename=automatic-tuning.md  ,  Dirpath=docs\relational-databases\automatic-tuning\  ,  MergeCommitSha40=e4a6157cb56c6db911406585f841046a431eef99) -->
 
 
 
- 
-  
- Le calcul de la [taille du corps de ligne] est expliqué dans le tableau suivant.  
-  
- Il existe deux calculs différents pour la taille du corps de ligne : la taille calculée et la taille réelle :  
-  
--   La taille calculée, indiquée par [taille calculée du corps de ligne], est utilisée pour déterminer si la limite de taille de ligne de 8 060 octets est dépassée.  
-  
--   La taille réelle, indiquée par [taille réelle du corps de ligne], est la taille de stockage réelle du corps de ligne en mémoire et dans les fichiers de point de contrôle.  
-  
- Les deux tailles [taille calculée du corps de ligne] et [taille réelle du corps de ligne] sont calculées de façon similaire. La seule différence est le calcul de la taille des colonnes (n)varchar(i) et varbinary(i), comme indiqué en bas du tableau suivant. La taille calculée du corps de ligne utilise la taille déclarée *i* comme taille de la colonne, tandis que la taille réelle du corps de ligne utilise la taille réelle des données.  
-  
- Le tableau suivant décrit le calcul de la taille du corps de ligne, fourni en tant que [taille réelle du corps de ligne] = SUM([taille des types superficiels]) + 2 + 2 * [nombre de colonnes de type profond].  
-  
-|Section|Taille|Commentaires|  
-|-------------|----------|--------------|  
-|Colonnes de type superficiel|SUM ([taille des types superficiels]). Les tailles en octets des différents types sont les suivantes :<br /><br /> **Bit**: 1<br /><br /> **Tinyint**: 1<br /><br /> **Smallint**: 2<br /><br /> **Int**: 4<br /><br /> **Real**: 4<br /><br /> **Smalldatetime**: 4<br /><br /> **Smallmoney**: 4<br /><br /> **Bigint**: 8<br /><br /> **Datetime**: 8<br /><br /> **Datetime2**: 8<br /><br /> **Float**: 8<br /><br /> **Money** : 8<br /><br /> **Numeric** (précision <=18) : 8<br /><br /> **Time** : 8<br /><br /> **Numeric**(précision >18) : 16<br /><br /> **Uniqueidentifier** : 16||  
-|Remplissage de colonne superficielle|Les valeurs possibles sont :<br /><br /> 1 s'il y a des colonnes de type profond et la taille de données totale des colonnes superficielles est un nombre impair.<br /><br /> 0 dans les autres cas|Les types profonds sont les types (var)binary et (n)(var)char.|  
+**Correction automatique du choix de plan**
 
 
+..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] peut automatiquement basculer vers le dernier bon plan connu quand il détecte une régression de choix de plan.
+
+![SQL plan choice correction--media/force-last-good-plan.png "Correction du choix de plan SQL")
+
+..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] détecte automatiquement une régression de choix de plan potentielle, notamment le plan à utiliser à la place du plan inapproprié.
+Quand ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] applique le dernier bon plan connu, il surveille automatiquement les performances du plan forcé. Si le plan forcé n’est pas meilleur que le plan régressé, l’obligation d’utiliser le nouveau plan est annulée et ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] compile un nouveau plan. Si ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] détermine que le plan forcé est préférable au plan régressé, il conserve le plan forcé jusqu’à une recompilation ultérieure (par exemple, à la prochaine modification de schéma ou de statistiques).
+
+**Activation de la correction automatique du choix de plan**
 
 
-&nbsp;
+Vous pouvez activer le réglage automatique pour chaque base de données et spécifier que le dernier bon plan connu doit être forcé quand une régression de changement de plan est détectée. Pour cela, utilisez la commande suivante :
 
-&nbsp;
+```
+ALTER DATABASE current
+SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
+```
+Une fois que vous avez activé cette option, ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] force automatiquement les recommandations applicables si le gain d’UC estimé est supérieur à 10 secondes ou si le nombre d’erreurs dans le nouveau plan est supérieur au nombre d’erreurs dans le plan recommandé, puis vérifie que le plan forcé est préférable au plan actuel.
 
----
-
-<a name="TitleNum_3"/>
-
-### <a name="3-nbsp-post-migration-validation-and-optimization-guidepost-migration-validation-and-optimization-guidemd"></a>3. &nbsp; [Guide de validation et d’optimisation post-migration](post-migration-validation-and-optimization-guide.md)
-
-*Mise à jour : 21-06-2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Précédent](#TitleNum_2) | [Suivant](#TitleNum_4))
-
-<!-- Source markdown line 27.  ms.author= "harinid".  -->
-
-&nbsp;
+**Autre possibilité : la correction manuelle du choix de plan**
 
 
-<!-- git diff --ignore-all-space --unified=0 faa2e3dd8be3aeb475bf8c7f71617ebf17969892 f2760dfecda10baeb121929b72a4d8164e81185b  (PR=2126  ,  Filename=post-migration-validation-and-optimization-guide.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=dcbeda6b8372b358b6497f78d6139cad91c8097c) -->
-
-
-
-Voici quelques-uns des scénarios de performance courants rencontrés après la migration vers la plateforme [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] et leur résolution. Certains de ces scénarios sont propres à la migration de [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] vers [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)]\(des versions antérieures aux versions plus récentes), ainsi qu’à la migration d’une plateforme étrangère (comme Oracle, DB2, MySQL et Sybase) vers [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)].
-
-**<a name="CEUpgrade"></a> Régression des requêtes en raison d’un changement de version CE**
-
-
-**S’applique à :** migration de [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] vers [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)].
-
-Quand vous migrez d’une version antérieure de [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] vers [!INCLUDE[ssSQL14--../includes/sssql14-md.md)] ou une version plus récente, et que vous mettez à jour le [niveau de compatibilité de base de données--../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) vers le plus récent, une charge de travail peut être exposée à un risque de régression des performances.
-
-Cela vient du fait qu’à compter de [!INCLUDE[ssSQL14--../includes/sssql14-md.md)], tous les changements de l’optimiseur de requête sont liés au [niveau de compatibilité de base de données--../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) le plus récent, de sorte que les plans ne sont pas changés au moment même de la mise à niveau, mais quand un utilisateur remplace l’option de base de données `COMPATIBILITY_LEVEL` par la plus récente. Cette fonctionnalité, en association avec le magasin de requêtes, vous offre un niveau de contrôle élevé sur les performances des requêtes dans le processus de mise à niveau. 
-
-Pour plus d’informations sur les changements apportés à l’optimiseur de requête dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], consultez [Optimisation de vos plans de requête avec l’estimateur de cardinalité SQL Server 2014](http://msdn.microsoft.com/library/dn673537.aspx).
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_4"/>
-
-### <a name="4-nbsp-sysquerystoreplan-transact-sqlsystem-catalog-viewssys-query-store-plan-transact-sqlmd"></a>4. &nbsp; [sys.query_store_plan (Transact-SQL)](system-catalog-views/sys-query-store-plan-transact-sql.md)
-
-*Mise à jour : 05-06-2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Précédent](#TitleNum_3))
-
-<!-- Source markdown line 58.  ms.author= "rickbyh".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 1b77e34309ba7033578b3c82ed83c8c2fbc93e24 ce4ade9ab906c35cb87068a1fb91c4e1d7549aac  (PR=1940  ,  Filename=sys-query-store-plan-transact-sql.md  ,  Dirpath=docs\relational-databases\system-catalog-views\  ,  MergeCommitSha40=1d363db8e8bd0e1460cdea3c3a7add68e48714c9) -->
-
-
-
-**Limites de l'application forcée d'un plan**
-
-Le Magasin des requêtes a un mécanisme qui permet de forcer l’optimiseur de requête à utiliser un certain plan d’exécution. Toutefois, il existe certaines limitations qui peuvent empêcher l’application d’un plan. 
-
-Premièrement, si le plan contient les constructions suivantes :
-* Instruction Insert bulk.
-* Instruction Insert bulk.
-* Référence à une table externe
-* Requête distribuée ou opérations de recherche en texte intégral
-* Utilisation de requêtes globales 
-* Curseurs
-* Spécification de jointure en étoile non valide 
-
-Deuxièmement, quand les objets sur lesquels s’appuie le plan ne sont plus disponibles :
-* Base de données (si la base de données d'où provient le plan n’existe plus)
-* Index (absent ou désactivé)
-
-Enfin, s’il y a des problèmes avec le plan lui-même :
-* Non conforme pour la requête
-* L’optimiseur de requête a dépassé le nombre d’opérations autorisées
-* Code XML du plan incorrect
+Quand le réglage automatique n’est pas activé, les utilisateurs doivent régulièrement surveiller le système et rechercher les requêtes régressées. Quand un plan régressé est utilisé, ils doivent rechercher un bon plan connu et forcer son utilisation à la place du plan actuel à l’aide de la procédure sp_query_store_force_plan.
 
 
 
 
 
-<a name="similars2"/>
 
-&nbsp;
 
 ## <a name="similar-articles"></a>Articles similaires
 
-Cette section liste les articles très similaires récemment mis à jour dans d’autres domaines, dans le même dépôt GitHub.com : [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
+<!--  HOW TO:
+    Refresh this file's line items with the latest 'Count-in-Similars*' content.
+    Then run Run-533-*.BAT
+-->
 
-<!--  20170717-1101  -->
+Cette section liste les articles très similaires récemment mis à jour dans d’autres domaines, dans notre dépôt public GitHub.com : [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Domaines avec des articles nouveaux ou mis à jour récemment
 
-- [Nouveaux + Mis à jour (4 + 4) : **Analyse avancée pour SQL** (documentation)](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Nouveaux + Mis à jour (2 + 0) : **Analysis Services pour SQL** (documentation)](../analysis-services/new-updated-analysis-services.md)
-- [Nouveaux + Mis à jour (1 + 2) : **Connexion à SQL** (documentation)](../connect/new-updated-connect.md)
-- [Nouveaux + Mis à jour (6 + 0) : **Moteur de base de données pour SQL** (documentation)](../database-engine/new-updated-database-engine.md)
-- [Nouveaux + Mis à jour (13 + 2) : **Linux pour SQL** (documentation)](../linux/new-updated-linux.md)
-- [Nouveaux + Mis à jour (1 + 0) : **MDS (Master Data Services) pour SQL** (documentation)](../master-data-services/new-updated-master-data-services.md)
-- [Nouveaux + Mis à jour (1 + 0) : **ODBC (Open Database Connectivity) pour SQL** (documentation)](../odbc/new-updated-odbc.md)
-- [Nouveaux + Mis à jour (8 + 4) : **Bases de données relationnelles pour SQL** (documentation)](../relational-databases/new-updated-relational-databases.md)
-- [Nouveaux + Mis à jour (2 + 2) : **Microsoft SQL Server** (documentation)](../sql-server/new-updated-sql-server.md)
-- [Nouveaux + Mis à jour (0 + 1) : **SQL Server Management Studio (SSMS)** (documentation)](../ssms/new-updated-ssms.md)
-- [Nouveaux + Mis à jour (1 + 0) : **Transact-SQL** (documentation)](../t-sql/new-updated-t-sql.md)
-- [Nouveaux + Mis à jour (1 + 0) : **Outils pour SQL** (documentation)](../tools/new-updated-tools.md)
-
+- [Nouveaux + Mis à jour (3 + 12) : **Analytique avancée pour SQL** (documentation)](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nouveaux + Mis à jour (5 + 0) : **Se connecter à SQL** (documentation)](../connect/new-updated-connect.md)
+- [Nouveaux + Mis à jour (5 + 1) : **Moteur de base de données pour SQL** (documentation)](../database-engine/new-updated-database-engine.md)
+- [Nouveaux + Mis à jour (19 + 82) : **Integration Services pour SQL** (documentation)](../integration-services/new-updated-integration-services.md)
+- [Nouveaux + Mis à jour (1 + 8) : **Linux pour SQL** (documentation)](../linux/new-updated-linux.md)
+- [Nouveaux + Mis à jour (12 + 1) : **Bases de données relationnelles pour SQL** (documentation)](../relational-databases/new-updated-relational-databases.md)
+- [Nouveaux + Mis à jour (0 + 1) : **Reporting Services pour SQL** (documentation)](../reporting-services/new-updated-reporting-services.md)
+- [Nouveaux + Mis à jour (7 + 1) : **Microsoft SQL Server** (documentation)](../sql-server/new-updated-sql-server.md)
+- [Nouveaux + Mis à jour (1 + 1) : **SQL Server Data Tools (SSDT)** (documentation)](../ssdt/new-updated-ssdt.md)
+- [Nouveaux + Mis à jour (0 + 2) : **SQL Server Migration Assistant (SSMA)** (documentation)](../ssma/new-updated-ssma.md)
+- [Nouveaux + Mis à jour (1 + 4) : **SQL Server Management Studio (SSMS)** (documentation)](../ssms/new-updated-ssms.md)
+- [Nouveaux + Mis à jour (4 + 1) : **Transact-SQL** (documentation)](../t-sql/new-updated-t-sql.md)
+- [Nouveaux + Mis à jour (0 + 1) : **Outils pour SQL** (documentation)](../tools/new-updated-tools.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Domaines sans article nouveau ou mis à jour récemment
 
 - [Nouveaux + Mis à jour (0 + 0) : **ActiveX Data Objects (ADO) pour SQL** (documentation)](../ado/new-updated-ado.md)
+- [Nouveaux + Mis à jour (0 + 0) : **Analysis Services pour SQL** (documentation)](../analysis-services/new-updated-analysis-services.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Data Quality Services pour SQL** (documentation)](../data-quality-services/new-updated-data-quality-services.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Extensions DMX (Data Mining Extensions) pour SQL** (documentation)](../dmx/new-updated-dmx.md)
-- [Nouveaux + Mis à jour (0 + 0) : **Integration Services pour SQL** (documentation)](../integration-services/new-updated-integration-services.md)
+- [Nouveaux + Mis à jour (0 + 0) : **Master Data Services (MDS) for SQL** (documentation)](../master-data-services/new-updated-master-data-services.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Expressions MDX (Multidimensional Expressions) pour SQL** (documentation)](../mdx/new-updated-mdx.md)
+- [Nouveaux + Mis à jour (0 + 0) : **ODBC (Open Database Connectivity) pour SQL** (documentation)](../odbc/new-updated-odbc.md)
 - [Nouveaux + Mis à jour (0 + 0) : **PowerShell pour SQL** (documentation)](../powershell/new-updated-powershell.md)
-- [Nouveaux + Mis à jour (0 + 0) : **Reporting Services pour SQL** (documentation)](../reporting-services/new-updated-reporting-services.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Exemples pour SQL** (documentation)](../sample/new-updated-sample.md)
-- [Nouveaux + Mis à jour (0 + 0) : **SQL Server Data Tools (SSDT)** (documentation)](../ssdt/new-updated-ssdt.md)
-- [Nouveaux + Mis à jour (0 + 0) : **SQL Server Migration Assistant (SSMA)** (documentation)](../ssma/new-updated-ssma.md)
 - [Nouveaux + Mis à jour (0 + 0) : **XQuery pour SQL** (documentation)](../xquery/new-updated-xquery.md)
 
-
-&nbsp;
 
 

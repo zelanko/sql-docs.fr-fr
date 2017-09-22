@@ -1,25 +1,30 @@
 ---
-title: "Modifier les valeurs de domaine | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/08/2011"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.dm.values.f1"
+title: Modifier les valeurs de domaine | Microsoft Docs
+ms.custom: 
+ms.date: 11/08/2011
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3181deac2265f069531a37aebad7804a649310d9
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
+
 ---
-# Modifier les valeurs de domaine
-  Cette rubrique décrit comment modifier et augmenter les métadonnées d'une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Après avoir généré une connaissance par la découverte des connaissances, importé la connaissance dans la base de connaissances ou les domaines, ou basé une base de connaissances sur une autre base de connaissances, vous pouvez modifier de manière interactive les valeurs des données. La génération d'une base de connaissances non seulement bénéficie des processus assistés par ordinateur, mais vous permet aussi d'utiliser votre propre connaissance pour vérifier les valeurs des données et les modifier des manières suivantes :  
+# <a name="change-domain-values"></a>Modifier les valeurs de domaine
+  Cette rubrique décrit comment modifier et augmenter les métadonnées d'une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Après avoir généré une connaissance par la découverte des connaissances, importé la connaissance dans la base de connaissances ou les domaines, ou basé une base de connaissances sur une autre base de connaissances, vous pouvez modifier de manière interactive les valeurs des données. La génération d'une base de connaissances non seulement bénéficie des processus assistés par ordinateur, mais vous permet aussi d'utiliser votre propre connaissance pour vérifier les valeurs des données et les modifier des manières suivantes :  
   
 -   Ajoutez une valeur de domaine à la liste des valeurs, ou sélectionnez une valeur et supprimez-la de la liste.  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 31
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a> Prérequis  
  Pour modifier une valeur de domaine, vous devez avoir une base de connaissances et un domaine ouverts dans l'activité de gestion de l'arborescence du domaine.  
   
 ###  <a name="Security"></a> Sécurité  
@@ -52,12 +57,12 @@ caps.handback.revision: 31
   
  Pour modifier les valeurs, procédez comme suit :  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’Application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécuter l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , ouvrez ou créez une base de connaissances. Sélectionnez **Gestion de l'arborescence du domaine** comme activité, puis cliquez sur **Ouvrir** ou **Créer**. Pour plus d'informations, consultez [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) ou [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
+2.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , ouvrez ou créez une base de connaissances. Sélectionnez **Gestion de l'arborescence du domaine** comme activité, puis cliquez sur **Ouvrir** ou **Créer**. Pour plus d'informations, consultez [Créer une base de connaissances](../data-quality-services/create-a-knowledge-base.md) ou [Ouvrir une base de connaissances](../data-quality-services/open-a-knowledge-base.md).  
   
     > [!NOTE]  
-    >  La gestion de domaine est exécutée dans une page du client Data Quality Service qui contient cinq onglets pour les opérations distinctes de gestion de domaine. Ce n'est pas un processus piloté par l'Assistant ; toute opération de gestion peut être exécutée séparément.  
+    >  La gestion de domaine est exécutée dans une page du client Data Quality Service qui contient cinq onglets pour les opérations distinctes de gestion de domaine. Ce n'est pas un processus piloté par l'Assistant ; toute opération de gestion peut être exécutée séparément.  
   
 3.  Dans la **Liste des domaines** de la page **Gestion de l'arborescence du domaine** , sélectionnez le domaine dans lequel vous souhaitez modifier des valeurs, ou créez un domaine. Si vous devez créer un domaine, consultez [Create a Domain](../data-quality-services/create-a-domain.md). Cliquez sur l'onglet **Valeurs du domaine** .  
   
@@ -65,11 +70,11 @@ caps.handback.revision: 31
   
 5.  Pour modifier l'état d'une valeur, procédez comme suit :  
   
-    -   **Définissez les valeurs du domaine sélectionné rectifiée**: pour modifier état d’une valeur d’erreur ou non valide en correcte, sélectionnez la valeur, puis cliquez sur le **définir les valeurs de domaine sélectionné rectifiée** (check) à partir de la flèche vers le bas dans la barre d’icônes ou de la liste déroulante Type. Si la valeur erronée ou non valide est regroupée avec une valeur correcte, supprimez cette valeur après l'opération.  
+    -   **Définir les valeurs du domaine sélectionné en tant que valeurs corrigées**: pour modifier l'état d'une valeur erronée ou non valide en correcte, sélectionnez la valeur, puis cliquez sur **Définir les valeurs du domaine sélectionné en tant que valeurs corrigées** (coche) à partir de la flèche vers le bas de la barre d'icônes ou de la liste déroulante Type. Si la valeur erronée ou non valide est regroupée avec une valeur correcte, supprimez cette valeur après l'opération.  
   
-    -   **Définissez les valeurs du domaine sélectionné en tant qu’erreurs**: pour changer les état d’une valeur correcte ou non valide à l’erreur, sélectionnez la valeur, puis cliquez sur le **ensemble les valeurs du domaine sélectionné en tant qu’erreurs** icône (croix) à partir de la flèche vers le bas dans la barre d’icônes ou de la liste déroulante Type. Vous pouvez entrer une correction dans la colonne **Corriger vers** , ou la laisser vide.  
+    -   **Définir les valeurs du domaine sélectionné en tant qu'erreurs**: pour modifier l'état d'une valeur correcte ou non valide en erronée, sélectionnez la valeur, puis cliquez sur l'icône **Définir les valeurs du domaine sélectionné en tant qu'erreurs** (croix) à partir de la flèche vers le bas de la barre d'icônes ou de la liste déroulante Type. Vous pouvez entrer une correction dans la colonne **Corriger vers** , ou la laisser vide.  
   
-    -   **Définissez les valeurs du domaine sélectionné comme non valide**: pour modifier état d’une valeur de Correct ou erreur non valide, sélectionnez la valeur, puis cliquez sur le **ensemble les valeurs du domaine sélectionné comme non valide** icône (triangle) à partir de la flèche vers le bas dans la barre d’icônes ou de la liste déroulante Type. Vous pouvez entrer une correction dans la colonne **Corriger vers** , ou la laisser vide.  
+    -   **Définir les valeurs du domaine sélectionné en tant que valeurs non valides**: pour modifier l'état d'une valeur correcte ou erronée en non valide, sélectionnez la valeur, puis cliquez sur l'icône **Définir les valeurs du domaine sélectionné en tant que valeurs non valides** (triangle) à partir de la flèche vers le bas de la barre d'icônes ou de la liste déroulante Type. Vous pouvez entrer une correction dans la colonne **Corriger vers** , ou la laisser vide.  
   
     -   **Corriger vers**: après avoir défini une valeur comme erronée ou non valide, entrez une nouvelle valeur dans la colonne **Corriger vers** . DQS ajoute une nouvelle ligne pour la valeur de remplacement, l'indique comme correcte, puis regroupe les deux valeurs. La nouvelle valeur sera affichée comme valeur de début, avec la valeur de début en gras et la valeur erronée ou non valide mise en retrait.  
   
@@ -84,23 +89,23 @@ caps.handback.revision: 31
   
     -   **Définir une valeur du domaine sélectionné en tant que valeur de début de son groupe**: pour modifier la valeur de début du groupe, sélectionnez une valeur dans le groupe qui n'est pas définie comme valeur de début, puis cliquez sur le bouton **Définir une valeur du domaine sélectionné en tant que valeur de début de son groupe** . La valeur de début est ainsi définie comme remplacement de l'autre valeur. Cette opération fonctionne uniquement si vous avez défini deux ou plusieurs valeurs qui sont un groupe et que vous souhaitez modifier la valeur désignée par DQS par la valeur de début. Notez que la valeur de début est indiquée par une ligne bleue avec la valeur en gras.  
   
-7.  **Vérificateur d'orthographe**: si une valeur a un trait de soulignement ondulé rouge, le vérificateur d'orthographe suggère une correction de la valeur. Cliquez avec le bouton droit sur la valeur avec un trait de soulignement, puis sélectionnez une correction, le cas échéant. Le type de valeur devient (ou demeure) d’erreur et la correction seront ajouté à la **corriger** colonne. Cliquez sur la flèche bas pour afficher les corrections proposées supplémentaires. Entrez une correction manuellement pour l'ajouter au dictionnaire du vérificateur d'orthographe et pouvoir la sélectionner comme correction. Pour plus d'informations, consultez [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) et [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
+7.  **Vérificateur d'orthographe**: si une valeur a un trait de soulignement ondulé rouge, le vérificateur d'orthographe suggère une correction de la valeur. Cliquez avec le bouton droit sur la valeur avec un trait de soulignement, puis sélectionnez une correction, le cas échéant. Le type de valeur devient (ou demeure) erroné et la correction est ajoutée à la colonne **Corriger vers** . Cliquez sur la flèche bas pour afficher les corrections proposées supplémentaires. Entrez une correction manuellement pour l'ajouter au dictionnaire du vérificateur d'orthographe et pouvoir la sélectionner comme correction. Pour plus d'informations, consultez [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) et [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
   
     > [!NOTE]  
-    >  Pour utiliser le vérificateur d’orthographe, vous pouvez activer dans le **Propriétés de domaine** page, ou si elle est désactivée dans le **Propriétés du domaine** page, vous pouvez cliquer sur le **Activer/désactiver le vérificateur d’orthographe** icône sur le **les valeurs du domaine** page pour l’activer sur cette page.  
+    >  Pour utiliser le vérificateur d'orthographe, vous pouvez l'activer dans la page **Propriétés du domaine** ou, s'il est désactivé, dans la page **Propriétés du domaine** , vous pouvez cliquer sur l'icône **Activer/désactiver le vérificateur d'orthographe** dans la page **Valeurs du domaine** pour l'activer sur cette page.  
   
 8.  **Ajouter une valeur de domaine**: cliquez pour ajouter une ligne à la fin de la table. Après avoir entré une valeur, la ligne sera replacée par ordre alphabétique et identifiée comme nouvelle entrée par un symbole précédent en étoile.  
   
-9. **Importer les valeurs du domaine à partir d'Excel**: pour ajouter les nouvelles valeurs d'une feuille de calcul Excel, cliquez sur la flèche bas de l'icône **Importer des valeurs** , puis sélectionnez **Importer les valeurs du domaine à partir d'Excel**. Entrez le nom de fichier, sélectionnez **Utiliser la première ligne comme en-tête** le cas échéant, puis cliquez sur **OK**. Pour plus d’informations, consultez [Import Values from an Excel File into a Domain](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md).  
+9. **Importer les valeurs du domaine à partir d'Excel**: pour ajouter les nouvelles valeurs d'une feuille de calcul Excel, cliquez sur la flèche bas de l'icône **Importer des valeurs** , puis sélectionnez **Importer les valeurs du domaine à partir d'Excel**. Entrez le nom de fichier, sélectionnez **Utiliser la première ligne comme en-tête** le cas échéant, puis cliquez sur **OK**. Pour plus d’informations, consultez [Importer les valeurs d’un fichier Excel dans un domaine](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md).  
   
 10. **Importer des valeurs de projet**: ajoutez les nouvelles valeurs d'un projet de qualité des données en cliquant sur la flèche bas de l'icône **Importer des valeurs** et en sélectionnant **Importer des valeurs de projet**. Entrez le nom de fichier, sélectionnez **Utiliser la première ligne comme en-tête** le cas échéant, puis cliquez sur **OK**. Sélectionnez le projet à partir duquel vous voulez importer des valeurs, puis cliquez sur **OK**. Les valeurs importées seront affichées. Cliquez sur **Terminer**. Pour plus d'informations, consultez Importer les valeurs de projet dans un domaine.  
   
-11. **Supprimer les valeurs du domaine sélectionné**: pour supprimer une ou plusieurs valeurs existantes du domaine, sélectionnez les valeurs dans la table, puis cliquez sur le **Supprimer les valeurs de domaine sélectionné** icône. Comme une entrée DQS_NULL ne peut pas être supprimée, si vous choisissez plusieurs valeurs à supprimer et qu'une entrée DQS_NULL est l'une d'entre elles, l'opération échoue.  
+11. **Supprimer les valeurs du domaine sélectionné**: pour supprimer une ou plusieurs valeurs existantes du domaine, sélectionnez les valeurs dans la table de valeurs, puis cliquez sur l'icône **Supprimer les valeurs du domaine sélectionné** . Comme une entrée DQS_NULL ne peut pas être supprimée, si vous choisissez plusieurs valeurs à supprimer et qu'une entrée DQS_NULL est l'une d'entre elles, l'opération échoue.  
   
-12. Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](../Topic/End%20the%20Domain%20Management%20Activity.md).  
+12. Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [Terminer l’activité de gestion de l’arborescence du domaine](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Suivi : Après avoir modifié les valeurs de domaine  
- Après avoir modifié les valeurs de domaine, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md), ou [créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
+ Après avoir modifié les valeurs de domaine, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Meaning"></a> Signification des valeurs correctes, erronées et non valides  
  Chaque valeur de la table **Valeur** de la page **Valeurs du domaine** se voit affecter un paramètre **Type** égal à **Correcte**, **Erronée**ou **Non valide**. Le type de la valeur est généré initialement par l'activité de découverte des connaissances, et vous pouvez le modifier à votre convenance. Le type final, basé sur la découverte et les modifications interactives, est généré par l'activité de nettoyage. Ces valeurs ont les significations suivantes :  
@@ -113,12 +118,12 @@ caps.handback.revision: 31
   
  Vous pouvez modifier manuellement le type d'une valeur en l'une des deux autres valeurs. DQS n'applique pas la sémantique de validation et d'erreur sur les opérations manuelles. Vous pouvez écrire une correction pour une valeur valide sans modifier son état. Vous pouvez désigner une valeur comme non valide même si elle respecte une règle de domaine. Vous pouvez désigner une valeur comme erronée même si le processus de découverte n'indique pas d'erreur de syntaxe. Vous pouvez également supprimer une correction d'une valeur erronée, marquée comme correcte, sans modifier son état.  
   
- Lorsque vous effectuez des données interactives de nettoyage dans le **gérer et afficher les résultats** page de la **nettoyage** activité, les valeurs non valides et erronées sont inclus dans le **non valide** onglet sur la **gérer et afficher les résultats** page.  
+ Lorsque vous effectuez un nettoyage des données interactif dans la page **Gérer et afficher les résultats** de l'activité **Nettoyage** , les valeurs non valides et erronées sont incluses dans l'onglet **Non valide** de la page **Gérer et afficher les résultats** .  
   
 ##  <a name="Display"></a> Comment afficher les valeurs appropriées  
  Vous pouvez modifier l'affichage comme suit :  
   
--   **Filtre** les résultats que vous voulez dans le tableau, en fonction de leur état, en sélectionnant l’état dans le **filtre** liste déroulante.  
+-   **Filtre** : filtrez les résultats souhaités dans la table, selon leur état, en sélectionnant celui-ci dans la liste déroulante **Filtre** .  
   
 -   **Rechercher** : recherchez les données que vous souhaitez vérifier ou modifier en entrant une ou plusieurs lettres à rechercher dans la zone de texte **Rechercher** . Ces lettres apparaîtront en surbrillance chaque fois qu'elles seront présentes dans une valeur affichée.  
   
@@ -128,9 +133,9 @@ caps.handback.revision: 31
   
 -   Cliquez sur le bouton **Réduire tout** pour masquer toutes les valeurs sauf la valeur de début d'un groupe de synonymes lorsque l'état actuel est développé.  
   
--   Cliquez sur le **Afficher/masquer le panneau de l’historique des modifications de domaine valeurs** collection de valeurs de bouton pour afficher une fenêtre d’aperçu en bas de la table de valeurs indiquant les modifications récentes apportées au domaine.  
+-   Cliquez sur le bouton **Afficher/Masquer le panneau d'historique des modifications de valeurs du domaine** pour afficher un message d'aperçu en bas de la table de valeurs qui affiche les modifications apportées récemment à la collection des valeurs du domaine.  
   
 ##  <a name="Null"></a> Comment gérer les équivalents des valeurs Null  
- Chaque table de la valeur de la **les valeurs du domaine** onglet inclut une valeur DQS_NULL. Une valeur Null dans une source de données apparaît comme SQL_NULL dans la table des valeurs. Vous pouvez définir un ou plusieurs équivalents de valeurs Null comme synonymes de DQS_NULL. Dans ce cas, l'ensemble des valeurs Null et équivalents de valeurs Null est traité comme DQS_NULL.  
+ Chaque table des valeurs dans l'onglet **Valeurs du domaine** inclut une valeur DQS_NULL. Une valeur Null dans une source de données apparaît comme SQL_NULL dans la table des valeurs. Vous pouvez définir un ou plusieurs équivalents de valeurs Null comme synonymes de DQS_NULL. Dans ce cas, l'ensemble des valeurs Null et équivalents de valeurs Null est traité comme DQS_NULL.  
   
   

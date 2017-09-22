@@ -1,22 +1,27 @@
 ---
-title: "Correspondance de donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Correspondance de données | Microsoft Docs"
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04c6e34258d4e732373ea003e8457582bea9c4eb
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
+
 ---
-# Correspondance de donn&#233;es
+# <a name="data-matching"></a>Correspondance de données
   Le processus de correspondance de données de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) permet de réduire la duplication de données et d'améliorer la précision de données dans une source de données. La correspondance analyse le degré de duplication dans tous les enregistrements d'une source de données unique, en retournant les probabilités pondérées d'une correspondance entre chaque ensemble d'enregistrements comparé. Vous pouvez alors décider quels enregistrements sont des correspondances et entreprendre l'action appropriée sur les données sources.  
   
  Le processus de correspondance de DQS présente les avantages suivants :  
@@ -31,11 +36,11 @@ caps.handback.revision: 29
   
 -   Vous pouvez réindexer des données copiées de la source vers la table de mise en lots, ou ne pas les réindexer, en fonction de l'état de la stratégie de correspondance et des données sources. Ne pas réindexer les données peut améliorer les performances.  
   
- Vous pouvez exécuter le processus de correspondance en combinaison avec d'autres processus de nettoyage des données pour améliorer la qualité globale des données. Vous pouvez également effectuer une déduplication des données à l'aide de la fonctionnalités DQS intégrée à Master Data Services. Pour plus d’informations, consultez [vue d’ensemble de Master Data Services & #40 ; MDS & #41 ;](../master-data-services/master-data-services-overview-mds.md).  
+ Vous pouvez exécuter le processus de correspondance en combinaison avec d'autres processus de nettoyage des données pour améliorer la qualité globale des données. Vous pouvez également effectuer une déduplication des données à l'aide de la fonctionnalités DQS intégrée à Master Data Services. Pour plus d’informations, consultez [Vue d’ensemble de Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md).  
   
  L'illustration suivante montre le processus de correspondance des données dans DQS :  
   
- ![Processus de mise en correspondance dans DQS](../data-quality-services/media/dqs-matchingprocess.gif "Processus de mise en correspondance dans DQS")  
+ ![Processus de correspondance dans DQS](../data-quality-services/media/dqs-matchingprocess.gif "Processus de correspondance dans DQS")  
   
 ##  <a name="How"></a> Comment effectuer une correspondance des données  
  Comme avec d'autres processus de qualité des données dans DQS, vous effectuez une correspondance en créant une base de connaissances et en exécutant une activité de correspondance dans un projet de qualité des données en procédant comme suit :  
@@ -54,25 +59,25 @@ caps.handback.revision: 29
 > [!NOTE]  
 >  Des valeurs Null dans les champs de correspondance de deux enregistrements sont considérées comme une correspondance.  
   
- La stratégie de correspondance est exécutée sur les domaines mappés aux exemples de données. Vous pouvez spécifier si les données sont, ou non, copiées de la source de données vers la table de mise en lots et réindexées lorsque vous exécutez la stratégie de correspondance. Vous pouvez effectuer cette opération aussi bien lors de la création de la base de connaissances que lors de l'exécution du projet de correspondance. Ne pas réindexer les données peut entraîner une amélioration des performances. La réindexation n'est pas nécessaire si la condition suivante est remplie : la stratégie de correspondance n'a pas changé, et vous n'avez pas mis à jour la source de données, remappé la stratégie, sélectionné une nouvelle source de données ou mappé un ou plusieurs nouveaux domaines.  
+ La stratégie de correspondance est exécutée sur les domaines mappés aux exemples de données. Vous pouvez spécifier si les données sont, ou non, copiées de la source de données vers la table de mise en lots et réindexées lorsque vous exécutez la stratégie de correspondance. Vous pouvez effectuer cette opération aussi bien lors de la création de la base de connaissances que lors de l'exécution du projet de correspondance. Ne pas réindexer les données peut entraîner une amélioration des performances. La réindexation n'est pas nécessaire si la condition suivante est remplie : la stratégie de correspondance n'a pas changé, et vous n'avez pas mis à jour la source de données, remappé la stratégie, sélectionné une nouvelle source de données ou mappé un ou plusieurs nouveaux domaines.  
   
  Chaque règle de correspondance est enregistrée dans la base de connaissances lors de sa création. Toutefois, une base de connaissances peut être utilisée dans un projet de qualité des données uniquement lorsqu'elle est publiée. En outre, tant que la base de connaissances n'est pas publiée, les règles de correspondance qu'elle contient ne peuvent pas être modifiées par un utilisateur autre que celui qui l'a créée.  
   
 ###  <a name="Project"></a> Exécution d'un projet de correspondance  
- DQS effectue la déduplication des données en comparant chaque ligne des données sources à chaque autre ligne, en utilisant la stratégie de correspondance définie dans la base de connaissances, et en générant une probabilité de correspondance des lignes. Cette opération s'effectue dans un projet de qualité des données avec le type Correspondance. La correspondance est l'une des principales étapes dans un projet de qualité des données. Elle s'effectue mieux après un nettoyage des données, car les données à mettre en correspondance sont alors exemptes d'erreur. Avant d'exécuter un processus de correspondance, vous pouvez exporter les résultats du projet de nettoyage vers une table de données ou un fichier .csv, puis créer un projet de correspondance dans lequel vous mappez les résultats du nettoyage aux domaines qu'il contient.  
+ DQS effectue la déduplication des données en comparant chaque ligne des données sources à chaque autre ligne, en utilisant la stratégie de correspondance définie dans la base de connaissances, et en générant une probabilité de correspondance des lignes. Cette opération s'effectue dans un projet de qualité des données avec le type Correspondance. La correspondance est l'une des principales étapes dans un projet de qualité des données. Elle s'effectue mieux après un nettoyage des données, car les données à mettre en correspondance sont alors exemptes d'erreur. Avant d'exécuter un processus de correspondance, vous pouvez exporter les résultats du projet de nettoyage vers une table de données ou un fichier .csv, puis créer un projet de correspondance dans lequel vous mappez les résultats du nettoyage aux domaines qu'il contient.  
   
  Un projet de correspondance des données se compose d'un processus assisté par ordinateur et d'un processus interactif. Le projet de correspondance applique les règles de correspondance de la stratégie de correspondance à la source de données à évaluer. Ce processus évalue la probabilité que deux lignes soient des correspondances dans un score de correspondance. Seuls les enregistrements ayant une probabilité de correspondance supérieure à une valeur définie par le gestionnaire de données dans la stratégie de correspondance sont considérés comme une correspondance.  
   
- Lorsque DQS exécute l'analyse de correspondance, il crée des clusters des enregistrements qu'il considère comme des correspondances. DQS identifie de façon aléatoire un des enregistrements de chaque cluster comme l'enregistrement pivot, ou principal. Le gestionnaire de données vérifie les résultats de correspondance, puis refuse tout enregistrement qui n'est pas une correspondance appropriée pour un cluster. Le gestionnaire de données sélectionne ensuite une règle de survivance que DQS utilise pour déterminer l'enregistrement qui survivra au processus de correspondance et remplacer les enregistrements correspondants. La règle de survivance peut être « Enregistrement pivot » (par défaut), « Enregistrement le plus complet et le plus long », « Enregistrement le plus complet » ou « Enregistrement le plus long ». DQS détermine l'enregistrement survivant (principal) de chaque cluster en fonction de l'enregistrement se rapprochant le plus du ou des critères dans la règle de survivance. Si plusieurs enregistrements d'un cluster donné respectent à la règle de survivance, DQS sélectionne l'un de ces enregistrements de façon aléatoire. DQS vous donne la possibilité d'afficher les clusters qui ont des enregistrements en commun sous la forme d'un seul cluster en sélectionnant « Afficher les clusters qui ne se chevauchent pas ». Vous devez exécuter le processus de correspondance pour afficher les résultats en fonction de ce paramètre.  
+ Lorsque DQS exécute l'analyse de correspondance, il crée des clusters des enregistrements qu'il considère comme des correspondances. DQS identifie de façon aléatoire un des enregistrements de chaque cluster comme l'enregistrement pivot, ou principal. Le gestionnaire de données vérifie les résultats de correspondance, puis refuse tout enregistrement qui n'est pas une correspondance appropriée pour un cluster. Le gestionnaire de données sélectionne ensuite une règle de survivance que DQS utilise pour déterminer l'enregistrement qui survivra au processus de correspondance et remplacer les enregistrements correspondants. La règle de survivance peut être « Enregistrement pivot » (par défaut), « Enregistrement le plus complet et le plus long », « Enregistrement le plus complet » ou « Enregistrement le plus long ». DQS détermine l'enregistrement survivant (principal) de chaque cluster en fonction de l'enregistrement se rapprochant le plus du ou des critères dans la règle de survivance. Si plusieurs enregistrements d'un cluster donné respectent à la règle de survivance, DQS sélectionne l'un de ces enregistrements de façon aléatoire. DQS vous donne la possibilité d'afficher les clusters qui ont des enregistrements en commun sous la forme d'un seul cluster en sélectionnant « Afficher les clusters qui ne se chevauchent pas ». Vous devez exécuter le processus de correspondance pour afficher les résultats en fonction de ce paramètre.  
   
  Vous pouvez exporter les résultats du processus de correspondance vers une table SQL Server ou vers un fichier .csv. Vous pouvez exporter les résultats de correspondance sous deux formes : soit les enregistrements à correspondance et les enregistrements sans correspondance, soit les enregistrements survivants qui incluent uniquement l'enregistrement survivant d'un cluster et les résultats sans correspondances. Dans les enregistrements survivants, si le même enregistrement est identifié en tant que survivant pour plusieurs clusters, cet enregistrement ne sera exporté qu'une seule fois.  
   
-## Dans cette section  
+## <a name="in-this-section"></a>Dans cette section  
  Vous pouvez effectuer les tâches suivantes liées à la correspondance dans DQS :  
   
 |||  
 |-|-|  
-|Créer et tester les règles de correspondance dans une stratégie de correspondance|[Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)|  
-|Exécuter une correspondance dans un projet de qualité des données|[Run a Matching Project](../data-quality-services/run-a-matching-project.md)|  
+|Créer et tester les règles de correspondance dans une stratégie de correspondance|[Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md)|  
+|Exécuter une correspondance dans un projet de qualité des données|[Exécuter un projet de correspondance](../data-quality-services/run-a-matching-project.md)|  
   
   

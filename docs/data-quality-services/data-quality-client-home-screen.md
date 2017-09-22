@@ -1,29 +1,34 @@
 ---
-title: "&#201;cran d&#39;accueil de Data Quality Client | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/29/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.clienthome.f1"
+title: "Écran d'accueil de Data Quality Client | Microsoft Docs"
+ms.custom: 
+ms.date: 02/29/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 00ed6a9eaa24ff9981ca4184a7ec8ef3107ffc0f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
+
 ---
-# &#201;cran d&#39;accueil de Data Quality Client
-  Utilisez cet écran pour accéder aux interfaces utilisateur de chacun des trois groupes de tâches principaux de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) : gestion des bases de connaissances, projets de qualité des données et administration.  
+# <a name="data-quality-client-home-screen"></a>Écran d'accueil de Data Quality Client
+  Utilisez cet écran pour accéder aux interfaces utilisateur de chacun des trois groupes de tâches principaux de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) : gestion des bases de connaissances, projets de qualité des données et administration.  
   
-## Options  
+## <a name="options"></a>Options  
   
-### Gestion des bases de connaissances  
+### <a name="knowledge-base-management"></a>Gestion des bases de connaissances  
  Une base de connaissances DQS désigne un référentiel de métadonnées utilisé par DQS pour améliorer la qualité des données. Ces métadonnées sont créées à la fois par la plateforme DQS lors d'un processus de découverte des connaissances assisté par ordinateur et par le gestionnaire de données dans un processus interactif de gestion des domaines.  
   
  **Nouvelle Base de connaissances**  
@@ -37,7 +42,7 @@ caps.handback.revision: 14
   
  Vous pouvez ouvrir une base de connaissances verrouillée et la modifier uniquement si vous êtes à l'origine de son verrouillage. Dans ce cas, la base de connaissances s'ouvre dans l'état dans lequel elle se trouvait lors de sa fermeture, qui est indiqué entre parenthèses. Si une base de connaissances est verrouillée et que vous n'êtes pas à l'origine du verrouillage, vous pouvez uniquement l'ouvrir en lecture seule.  
   
-### Projets de qualité des données  
+### <a name="data-quality-projects"></a>Projets de qualité des données  
  Un projet de qualité des données désigne le processus dans lequel DQS procède au nettoyage et à la mise en correspondance des données par le biais d'une correction des données assistée par ordinateur et d'un nettoyage de données interactif.  
   
  **Nouveau projet de qualité des données**  
@@ -49,18 +54,18 @@ caps.handback.revision: 14
  **Projet de qualité des données récent**  
  Dans la liste affichée à l'écran, sélectionnez un projet qui a déjà été créé. Vous pouvez ouvrir un projet verrouillé uniquement si vous êtes à l'origine du verrouillage. Dans ce cas, le projet s'ouvre dans l'état dans lequel il se trouvait lors de sa fermeture, qui est indiqué entre parenthèses. Si le projet est terminé, il s'ouvre à l'étape Exporter de l'activité.  
   
-### Administration  
+### <a name="administration"></a>Administration  
  L'administration de DQS vous permet d'analyser, de configurer et de gérer DQS.  
   
  **Analyse des activités**  
- Affiche une vue de l'état de toutes les activités (à la fois actuelles et historiques) en rapport avec le [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] connecté. Les types d'activités analysées incluent la gestion des connaissances, le projet de qualité des données et la correction des données SSIS.  
+ Affiche une vue de l'état de toutes les activités (à la fois actuelles et historiques) en rapport avec le [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]connecté. Les types d'activités analysées incluent la gestion des connaissances, le projet de qualité des données et la correction des données SSIS.  
   
  **Configuration**  
  Affichez les propriétés de configuration des comptes de service de données de référence (par le biais de Windows Azure Marketplace et directement dans les services de données de référence), les paramètres généraux (nettoyage interactif, mise en correspondance et profilage) et les paramètres de gravité du journal.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Bases de connaissances et domaines DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
- [Projets de qualité des données & #40 ; DQS & #41 ;](../data-quality-services/data-quality-projects-dqs.md)   
+ [Projets de qualité des données &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
  [Administration de DQS](../data-quality-services/dqs-administration.md)  
   
   

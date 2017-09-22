@@ -1,23 +1,28 @@
 ---
-title: "Importer une base de connaissances &#224; partir d&#39;un fichier&#160;.dqs | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Importer une base de connaissances à partir d’un fichier .dqs | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9914672b055d007c76e55f70a87c7af71225de0a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
+
 ---
-# Importer une base de connaissances &#224; partir d&#39;un fichier&#160;.dqs
-  Cette rubrique décrit comment importer une base de connaissances entière à partir d'un fichier de données .dqs dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Vous créez le fichier de données en exportant la base de connaissances existante depuis le [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] application (consultez [Exporter une Base de connaissances dans un fichier .dqs](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)).  
+# <a name="import-a-knowledge-base-from-a-dqs-file"></a>Importer une base de connaissances à partir d'un fichier .dqs
+  Cette rubrique décrit comment importer une base de connaissances entière à partir d'un fichier de données .dqs dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Vous créez le fichier de données en exportant une base de connaissances existante de l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] (consultez [Exporter une base de connaissances vers un fichier .dqs](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)).  
   
  L'utilisation d'un fichier de données .dqs pour exporter le contenu d'une base de connaissances, puis importer le contenu dans une autre base de connaissances sur le même [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] ou un [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] différent simplifie le processus de génération de la connaissance, en permettant de gagner du temps et d'économiser les efforts. Il vous permet de partager une base de connaissances et ses connaissances avec d'autres, ce qui leur fait gagner du temps. Le fichier .dqs contient toutes les informations de la base de connaissances, y compris les domaines et la stratégie de correspondance, à l'exception des informations de données de référence jointes. Les données publiées et non publiées seront importées.  
   
@@ -27,17 +32,17 @@ caps.handback.revision: 17
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a> Prérequis  
  Pour importer une base de connaissances à partir d'un fichier .dqs, vous devez avoir déjà exporté la base de connaissances dans le fichier .dqs.  
   
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour importer une base de connaissances à partir d'un fichier de données .dqs.  
+ Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour importer une base de connaissances à partir d'un fichier de données .dqs.  
   
-##  <a name="Import"></a> Importer une base de connaissances à partir d'un fichier .dqs  
+##  <a name="Import"></a> Importer une base de connaissances à partir d’un fichier .dqs  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’Application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , cliquez sur **Nouvelle base de connaissances**.  
   
@@ -64,6 +69,6 @@ caps.handback.revision: 17
 13. Dans la page d'accueil de Data Quality Services, vérifiez que la base de connaissances est répertoriée sous **Base de connaissances récentes**.  
   
 ##  <a name="FollowUp"></a> Suivi : Après l'importation d'une base de connaissances à partir d'un fichier .dqs  
- Après avoir importé une base de connaissances à partir d'un fichier .dqs, vous pouvez ajouter la connaissance à la base de connaissances ou utiliser la base de connaissances dans un projet de nettoyage ou de correspondance, selon le contenu de la base de connaissances. Pour plus d’informations, consultez [effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md), [Gestion d’un domaine Composite](../data-quality-services/managing-a-composite-domain.md), [créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md), [le nettoyage des données](../data-quality-services/data-cleansing.md), ou [correspondance des données](../data-quality-services/data-matching.md).  
+ Après avoir importé une base de connaissances à partir d'un fichier .dqs, vous pouvez ajouter la connaissance à la base de connaissances ou utiliser la base de connaissances dans un projet de nettoyage ou de correspondance, selon le contenu de la base de connaissances. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md), [Gestion d’un domaine composite](../data-quality-services/managing-a-composite-domain.md), [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md), [Nettoyage des données](../data-quality-services/data-cleansing.md) ou [Correspondance de données](../data-quality-services/data-matching.md).  
   
   

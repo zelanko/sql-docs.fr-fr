@@ -1,22 +1,27 @@
 ---
-title: "Profilage des donn&#233;es et notifications dans DQS | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Profilage des données et notifications dans DQS | Microsoft Docs"
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57de348a0ce74aa33b3d19baa60116580ad30b3c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
+
 ---
-# Profilage des donn&#233;es et notifications dans DQS
+# <a name="data-profiling-and-notifications-in-dqs"></a>Profilage des données et notifications dans DQS
   Le profilage des données dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) est le processus d'analyse des données dans une source de données existante et d'affichage des statistiques sur les données dans des activités DQS. Il vous fournit des mesures automatisées de la qualité des données. Le profilage DQS est intégré à la gestion des connaissances DQS et aux projets de qualité des données. Il est dynamique et réglable. Le profilage a deux objectifs importants : d'abord vous guider au cours des processus de qualité des données et prendre en charge les décisions et, ensuite, évaluer l'efficacité des processus. Le processus de profilage DQS présente les avantages suivants :  
   
 -   Le profilage fournit un aperçu de la qualité des données sources et vous aide à identifier des problèmes de qualité des données.  
@@ -47,11 +52,11 @@ caps.handback.revision: 25
  DQS ne fournit pas de statistiques de profilage pour l'activité de gestion de l'arborescence du domaine.  
   
 ##  <a name="Activity"></a> Profilage des données par activité  
- Le profilage DQS utilise des dimensions standard de qualité des données pour représenter la qualité des données : exhaustivité (dans quelle mesure les données sont présentes), précision (dans quelle mesure les données peuvent être utilisées pour l'usage prévu) et unicité (dans quelle mesure différentes valeurs représentent différentes entités). Par défaut, les valeurs Null et vides sont considérées comme manquantes, ou diminuent le pourcentage d'exhaustivité ; toutefois, vous pouvez également définir d'autres valeurs comme équivalentes aux valeurs Null, auquel cas elles sont également considérées comme manquantes.  
+ Le profilage DQS utilise des dimensions standard de qualité des données pour représenter la qualité des données : exhaustivité (dans quelle mesure les données sont présentes), précision (dans quelle mesure les données peuvent être utilisées pour l'usage prévu) et unicité (dans quelle mesure différentes valeurs représentent différentes entités). Par défaut, les valeurs Null et vides sont considérées comme manquantes, ou diminuent le pourcentage d'exhaustivité ; toutefois, vous pouvez également définir d'autres valeurs comme équivalentes aux valeurs Null, auquel cas elles sont également considérées comme manquantes.  
   
  Le profilage vous fournit les statistiques nécessaires pour évaluer vos processus, mais vous devez interpréter les statistiques. Saisissez la signification de ce que le profilage indique en examinant les statistiques colonne par colonne.  
   
- Les activités DQS ont différents ensembles de statistiques de profilage, comme suit :  
+ Les activités DQS ont différents ensembles de statistiques de profilage, comme suit :  
   
 -   Seule l'activité de nettoyage a des statistiques de profilage pour la précision (en pourcentage par domaine). La précision est affectée par la validité, la cohérence, les erreurs de syntaxe et les règles de domaine.  
   
@@ -65,11 +70,11 @@ caps.handback.revision: 25
   
 -   [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md)  
   
--   [Nettoyer les données à l’aide de DQS & #40 ; interne & #41 ; Base de connaissances](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [Nettoyer des données à l’aide de la base de connaissances DQS &#40;interne&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
--   [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)  
+-   [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md)  
   
--   [Run a Matching Project](../data-quality-services/run-a-matching-project.md)  
+-   [Exécuter un projet de correspondance](../data-quality-services/run-a-matching-project.md)  
   
 ##  <a name="Monitoring"></a> Profilage des données dans l'analyse des activités  
  Les informations de profilage pour les activités de découverte des connaissances, de stratégie de correspondance, de correspondance et de nettoyage sont disponibles non seulement dans les pages des activités dans Data Quality Client, mais également dans l'analyse des activités. L'analyse des activités vous fournit une vue d'ensemble des activités en cours et passées. Outre les propriétés et les processus de calcul connexes des activités, vous pouvez afficher les informations de profilage générées pour chaque activité à un emplacement. Vous sélectionnez une activité dans la table des activités pour afficher les résultats de profilage dans une table ci-dessous. Vous pouvez également exporter les résultats de profilage. Pour plus d’informations, consultez [DQS Administration](../data-quality-services/dqs-administration.md).  
@@ -81,22 +86,22 @@ caps.handback.revision: 25
   
  Une notification est indiquée par une info-bulle avec un point d'exclamation dans l'onglet **Profilage** . Les statistiques associées à la notification sont de couleur rouge pour indiquer la justification statistique pour la notification.  
   
- Vous pouvez activer (par défaut) ou désactiver les notifications dans le **Paramètres généraux** onglet de la **Administration** section de la page d’accueil de Data Quality Client. Lorsque la notification est désactivée, les info-bulles ne sont pas affichées et les statistiques ne sont pas de couleur rouge. Les performances ne sont pas améliorées de façon significative en désactivant les notifications. Le profilage est toujours opérationnel si vous désactivez les notifications.  
+ Vous pouvez activer (par défaut) ou désactiver les notifications dans l'onglet **Paramètres généraux** de la section **Administration** de la page d'accueil de Data Quality Client. Lorsque la notification est désactivée, les info-bulles ne sont pas affichées et les statistiques ne sont pas de couleur rouge. Les performances ne sont pas améliorées de façon significative en désactivant les notifications. Le profilage est toujours opérationnel si vous désactivez les notifications.  
   
  Pour connaître des conditions spécifiques associées aux notifications pour une activité, consultez ce qui suit :  
   
 -   [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md)  
   
--   [Nettoyer les données à l’aide de DQS & #40 ; interne & #41 ; Base de connaissances](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [Nettoyer des données à l’aide de la base de connaissances DQS &#40;interne&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
--   [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)  
+-   [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md)  
   
--   [Run a Matching Project](../data-quality-services/run-a-matching-project.md)  
+-   [Exécuter un projet de correspondance](../data-quality-services/run-a-matching-project.md)  
   
-## Tâches associées  
+## <a name="related-tasks"></a>Tâches associées  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Explique comment activer ou désactiver les notifications dans DQS.|[Enable or Disable Profiling Notifications in DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
+|Explique comment activer ou désactiver les notifications dans DQS.|[Activer ou désactiver les notifications de profilage dans DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
   
   

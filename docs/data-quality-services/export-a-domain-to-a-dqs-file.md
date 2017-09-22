@@ -1,23 +1,28 @@
 ---
-title: "Exporter un domaine vers un fichier&#160;.dqs | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Exporter un domaine vers un fichier .dqs | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 197f51ab86d1ac46ab77d34dd64d98c1034317d6
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
+
 ---
-# Exporter un domaine vers un fichier&#160;.dqs
-  Cette rubrique explique comment exporter un domaine vers un fichier .dqs dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Vous pouvez exporter un domaine ou la totalité d'une base de connaissances vers un fichier de données. Pour plus d’informations sur l’exportation d’une base de connaissances, consultez [Exporter une Base de connaissances dans un fichier .dqs](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md).  
+# <a name="export-a-domain-to-a-dqs-file"></a>Exporter un domaine vers un fichier .dqs
+  Cette rubrique explique comment exporter un domaine vers un fichier .dqs dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Vous pouvez exporter un domaine ou la totalité d'une base de connaissances vers un fichier de données. Pour plus d’informations sur l’exportation d’une base de connaissances, consultez [Exporter une base de connaissances dans un fichier .dqs](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md).  
   
  L'exportation d'un domaine d'une base de connaissances vers un fichier de données .dqs, puis son importation vers une autre base de connaissances, simplifie le processus de génération de connaissances, et permet d'économiser aussi bien du temps que des efforts. Il vous permet de partager un domaine et ses connaissances avec d'autres.  
   
@@ -27,26 +32,26 @@ caps.handback.revision: 18
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a> Prérequis  
  Pour exporter un domaine vers un fichier de données .dqs, vous devez avoir créé et sélectionné un domaine unique ou un domaine composite contenant plusieurs domaines uniques. Vous n'avez pas besoin de disposer d'un fichier .dqs vers lequel effectuer l'exportation ; il en sera créé un automatiquement.  
   
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour exporter un domaine vers un fichier de données .dqs.  
+ Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour exporter un domaine vers un fichier de données .dqs.  
   
-##  <a name="Export"></a> Exporter un domaine vers un fichier .dqs  
+##  <a name="Export"></a> Exporter un domaine vers un fichier .dqs  
  Vous pouvez effectuer une exportation à partir de n'importe quelle page Gestion de l'arborescence du domaine. La commande d'exportation est disponible aussi bien à partir d'un contrôle dans l'interface utilisateur qu'à partir d'une commande dans le menu contextuel du volet Liste des domaines.  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’Application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Sur l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , ouvrez une base de connaissances dans l'activité Gestion de l'arborescence du domaine.  
   
-3.  Dans le **page de gestion de domaine** (avec n’importe quel onglet sélectionné), sélectionnez un domaine unique ou un domaine composite dans la **domaine** liste.  
+3.  Dans la page **Gestion de l'arborescence du domaine** (avec n'importe quel onglet sélectionné), sélectionnez un domaine unique ou un domaine composite dans la liste **Domaine** .  
   
-4.  Cliquez sur l'icône **Exporter des données d'une base de connaissances** située au-dessus de la liste de domaines, puis cliquez sur **Exporter le domaine**. Vous pouvez également cliquer sur le domaine dans le **domaine** liste, pointez sur **Exporter**, puis cliquez sur **Exporter le domaine**.  
+4.  Cliquez sur l'icône **Exporter des données d'une base de connaissances** située au-dessus de la liste de domaines, puis cliquez sur **Exporter le domaine**. Vous pouvez également cliquer avec le bouton droit sur le domaine dans la liste **Domaine** , pointer sur **Exporter**, puis cliquer sur **Exporter le domaine**.  
   
-5.  Dans la **Exporter vers un fichier de données** conserver de la boîte de dialogue, accédez au dossier que vous souhaitez enregistrer le fichier, nommez le fichier ou conservez le nom par défaut, **des fichiers de données DQS (\*.dqs)** comme le **Enregistrer en tant que type**, puis cliquez sur **Enregistrer**.  
+5.  Dans la boîte de dialogue **Exporter vers un fichier de données**, accédez au dossier dans lequel vous voulez enregistrer le fichier, nommez le fichier ou conservez le nom par défaut, conservez **Fichiers de données DQS (\*.dqs**) comme **Type de fichier**, puis cliquez sur **Enregistrer**.  
   
 6.  Dans la boîte de dialogue **Exporter le domaine** , vérifiez que la ligne d'état indique que l'exportation est terminée. Cliquez sur **OK**.  
   

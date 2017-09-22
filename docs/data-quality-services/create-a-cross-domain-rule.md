@@ -1,38 +1,43 @@
 ---
-title: "Cr&#233;er une r&#232;gle inter-domaines | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/22/2011"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.dm.testcdrule.f1"
-  - "sql13.dqs.dm.cdrules.f1"
+title: "Créer une règle inter-domaines | Microsoft Docs"
+ms.custom: 
+ms.date: 11/22/2011
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.dm.testcdrule.f1
+- sql13.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73b05f76f59141094279a8b4231b88e9d9ba6999
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
+
 ---
-# Cr&#233;er une r&#232;gle inter-domaines
+# <a name="create-a-cross-domain-rule"></a>Créer une règle inter-domaines
   Cette rubrique décrit comment créer une règle inter-domaines pour un domaine composite d'une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Une règle inter-domaines teste la relation entre les valeurs des domaines uniques inclus dans un domaine composite. Une règle inter-domaines doit contenir true sur un domaine composite pour que les valeurs de domaine soient considérées comme exactes et conformes aux besoins de l'entreprise. Une règle inter-domaines est utilisée pour valider, corriger et normaliser les valeurs de domaine.  
   
- La clause If et la clause Then d'une règle inter-domaines sont définies chacune pour l'un des domaines uniques du domaine composite. Chaque clause doit être définie pour un seul domaine. Une règle inter-domaines doit être en relation avec plusieurs domaines uniques ; vous ne pouvez pas définir une règle simple de domaine (pour un seul domaine) pour un domaine composite. Pour cela, définissez une règle de domaine pour un seul domaine. La clause If et la clause Then peuvent chacune contenir une ou plusieurs conditions.  
+ La clause If et la clause Then d'une règle inter-domaines sont définies chacune pour l'un des domaines uniques du domaine composite. Chaque clause doit être définie pour un seul domaine. Une règle inter-domaines doit être en relation avec plusieurs domaines uniques ; vous ne pouvez pas définir une règle simple de domaine (pour un seul domaine) pour un domaine composite. Pour cela, définissez une règle de domaine pour un seul domaine. La clause If et la clause Then peuvent chacune contenir une ou plusieurs conditions.  
   
- Une règle inter-domaines ayant des conditions définitives applique la logique de règles aux synonymes de la valeur des conditions, ainsi qu'aux valeurs elles-mêmes. Les conditions définitives pour les clauses If et Then sont La valeur est égale à, La valeur n'est pas égale à, La valeur se trouve dans, ou La valeur ne se trouve pas dans. Par exemple, imaginons que vous ayez la règle inter-domaines suivante pour un domaine composite : « Pour « Ville », si la valeur est égale « à Los Angeles », alors pour « État », la valeur est égale à « CA ». « Si « Los Angeles » et « LA » sont synonymes, cette règle retourne comme corrects « Los Angeles CA » et « LA CA », et comme erronés « Los Angeles WA » et « LA WA ».  
+ Une règle inter-domaines ayant des conditions définitives applique la logique de règles aux synonymes de la valeur des conditions, ainsi qu'aux valeurs elles-mêmes. Les conditions définitives pour les clauses If et Then sont La valeur est égale à, La valeur n'est pas égale à, La valeur se trouve dans, ou La valeur ne se trouve pas dans. Par exemple, imaginons que vous ayez la règle inter-domaines suivante pour un domaine composite : « Pour « Ville », si la valeur est égale « à Los Angeles », alors pour « État », la valeur est égale à « CA ». « Si « Los Angeles » et « LA » sont synonymes, cette règle retourne comme corrects « Los Angeles CA » et « LA CA », et comme erronés « Los Angeles WA » et « LA WA ».  
   
- Exception faite des information sur la validité d’une règle inter-domaines, définitif *puis* clause dans une règle inter-domaines, **valeur est égale à**, corrige également les données pendant l’activité de nettoyage des données. Pour plus d'informations, consultez [Data Correction using Definitive Cross-Domain Rules](../data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) dans [Cleanse Data in a Composite Domain](../data-quality-services/cleanse-data-in-a-composite-domain.md).  
+ En dehors de vous permettre de connaître la validité d'une règle inter-domaines, la clause finale *Then* d'une règle inter-domaines, **La valeur est égale à**, corrige également les données pendant l'activité de nettoyage. Pour plus d'informations, consultez [Data Correction using Definitive Cross-Domain Rules](../data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) dans [Cleanse Data in a Composite Domain](../data-quality-services/cleanse-data-in-a-composite-domain.md).  
   
  Les règles inter-domaines sont prises en compte après toutes les règles simples qui affectent seulement un domaine. La règle inter-domaines n'est appliquée que si une valeur franchit les règles de domaine simple (si elles existent). Le domaine composite et les domaines uniques sur lesquels une règle s'exécute doivent tous être définis avant que la règle ne puisse être exécutée.  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a> Prérequis  
  Pour créer une règle inter-domaines, vous devez avoir créé et ouvert un domaine composite.  
   
 ###  <a name="Security"></a> Sécurité  
@@ -42,12 +47,12 @@ caps.handback.revision: 13
   
 ##  <a name="Create"></a> Créer les règles inter-domaines  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’Application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécuter l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , ouvrez ou créez une base de connaissances. Sélectionnez **Gestion de l'arborescence du domaine** comme activité, puis cliquez sur **Ouvrir** ou **Créer**. Pour plus d'informations, consultez [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) ou [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
+2.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , ouvrez ou créez une base de connaissances. Sélectionnez **Gestion de l'arborescence du domaine** comme activité, puis cliquez sur **Ouvrir** ou **Créer**. Pour plus d'informations, consultez [Créer une base de connaissances](../data-quality-services/create-a-knowledge-base.md) ou [Ouvrir une base de connaissances](../data-quality-services/open-a-knowledge-base.md).  
   
     > [!NOTE]  
-    >  La gestion de domaine est exécutée dans une page du client Data Quality Service qui contient cinq onglets pour les opérations distinctes de gestion de domaine. Ce n'est pas un processus piloté par l'Assistant ; toute opération de gestion peut être exécutée séparément.  
+    >  La gestion de domaine est exécutée dans une page du client Data Quality Service qui contient cinq onglets pour les opérations distinctes de gestion de domaine. Ce n'est pas un processus piloté par l'Assistant ; toute opération de gestion peut être exécutée séparément.  
   
 3.  Dans **Liste des domaines** de la page **Gestion de l'arborescence du domaine** , sélectionnez le domaine composite pour lequel vous souhaitez créer une règle de domaine, ou créez un nouveau domaine composite. Si vous devez créer un domaine, consultez [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md).  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 13
   
 5.  Dans la page **Ajouter une nouvelle règle de domaine**, entrez le nom et la description de la règle.  
   
-6.  Sélectionnez **Active** pour indiquer que la règle sera exécutée (par défaut) et désélectionnez cette option pour empêcher l’exécution de la règle.  
+6.  Sélectionnez **Active** pour spécifier que la règle sera exécutée (valeur par défaut), et désactivez l'option pour empêcher la règle de s'exécuter.  
   
 7.  Créez la clause If comme suit :  
   
@@ -77,13 +82,13 @@ caps.handback.revision: 13
   
 ##  <a name="Test"></a> Tester les règles inter-domaines  
   
-1.  Testez la règle interdomaines comme suit :  
+1.  Testez la règle interdomaines comme suit :  
   
-    1.  Cliquez sur le **exécuter la règle de domaine sélectionné sur les données de test** icône dans l’angle supérieur droit du volet du domaine composite.  
+    1.  Cliquez sur l'icône **Exécuter la règle de domaine sélectionnée sur des données de test** dans l'angle supérieur droit du volet du domaine composite.  
   
     2.  Dans la boîte de dialogue **Tester une règle de domaine** , cliquez sur l'icône **Ajoute un nouveau terme de test pour la règle de domaine** .  
   
-    3.  Entrez les valeurs de test pour le domaine unique associé à la clause If et le domaine unique associé à la clause Then. Les valeurs de test saisies dans le cas clause doit respecter les conditions de cette clause, ou un point d’interrogation sera entré dans le **validité** colonne indiquant que la règle inter-domaines ne s’applique pas aux données de test.  
+    3.  Entrez les valeurs de test pour le domaine unique associé à la clause If et le domaine unique associé à la clause Then. Les valeurs de test écrites dans la clause If doivent répondre aux conditions de cette clause, ou un point d'interrogation sera saisi dans la colonne **Validité** indiquant que la règle inter-domaines ne s'applique pas aux données de test.  
   
     4.  Cliquez à nouveau sur l'icône **Ajoute un nouveau terme de test pour la règle de domaine** pour ajouter un autre ensemble de valeurs de test.  
   
@@ -91,9 +96,9 @@ caps.handback.revision: 13
   
     6.  Une fois le test terminé, cliquez sur **Fermer** dans la boîte de dialogue **Tester la règle de domaine composite** .  
   
-2.  Lorsque vous avez terminé vos règles entre domaines, cliquez sur **Terminer** pour terminer l’activité de gestion de domaine, comme décrit dans [Terminer l’activité de gestion de domaine](../Topic/End%20the%20Domain%20Management%20Activity.md).  
+2.  Lorsque vous avez terminé vos règles inter-domaines, cliquez sur **Terminer** pour terminer l'activité de gestion de domaine, comme décrit dans [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a> Suivi : Après la création d'une règle interdomaines  
- Après avoir créé une règle inter-domaines, vous pouvez effectuer d'autres tâches de gestion de domaine sur le domaine, vous pouvez exécuter la découverte de connaissances pour ajouter des connaissances au domaine ou vous pouvez ajouter une stratégie correspondante au domaine. Pour plus d’informations, consultez [effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md), ou [créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
+##  <a name="FollowUp"></a> Suivi : Après la création d'une règle interdomaines  
+ Après avoir créé une règle inter-domaines, vous pouvez effectuer d'autres tâches de gestion de domaine sur le domaine, vous pouvez exécuter la découverte de connaissances pour ajouter des connaissances au domaine ou vous pouvez ajouter une stratégie correspondante au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
   
   

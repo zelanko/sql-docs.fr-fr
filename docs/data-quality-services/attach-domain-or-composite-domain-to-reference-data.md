@@ -1,47 +1,52 @@
 ---
-title: "Attacher un domaine ou un domaine composite &#224; des donn&#233;es de r&#233;f&#233;rence | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.dm.refdata.f1"
-  - "sql13.dqs.dm.refcatalog.f1"
+title: "Attacher un domaine ou un domaine composite à des données de référence | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.dm.refdata.f1
+- sql13.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5c59c87fa8fc86a1e760e90f7ee2a4f4d733836f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
+
 ---
-# Attacher un domaine ou un domaine composite &#224; des donn&#233;es de r&#233;f&#233;rence
+# <a name="attach-domain-or-composite-domain-to-reference-data"></a>Attacher un domaine ou un domaine composite à des données de référence
   Cette rubrique explique comment attacher des domaines/domaines composites dans une base de connaissances à un service de données de référence dans Windows Azure Marketplace pour générer des connaissances sur les données de référence de haute qualité. Chaque service de données de référence contient un schéma (colonnes de données). Après avoir attaché un domaine ou un domaine composite à un service de données de référence, vous devez mapper le domaine joint, ou chaque domaine au sein du domaine composite joint, aux colonnes appropriées du schéma de service des données de référence. L'attachement d'un domaine composite à un service de données de référence vous permet d'attacher un seul domaine à un service de données de référence, puis de mapper les différents domaines du domaine composite aux colonnes appropriées du schéma de service des données de référence.  
   
 > [!WARNING]  
->  Le domaine composite associé à un service de données de référence est disponible dans la liste déroulante des domaines lors du mappage des domaines aux colonnes du schéma de service de données de référence. Ne mappez pas le domaine composite à une colonne dans le schéma de service de données de référence ; vous devez uniquement mapper les domaines individuels au sein d'un domaine composite aux colonnes appropriées dans le schéma de service de données de référence. Sinon, cela génère une erreur.  
+>  Le domaine composite associé à un service de données de référence est disponible dans la liste déroulante des domaines lors du mappage des domaines aux colonnes du schéma de service de données de référence. Ne mappez pas le domaine composite à une colonne dans le schéma de service de données de référence ; vous devez uniquement mapper les domaines individuels au sein d'un domaine composite aux colonnes appropriées dans le schéma de service de données de référence. Sinon, cela génère une erreur.  
   
- Un schéma de service de données de référence peut avoir une colonne obligatoire qui doit être mappée au domaine approprié si vous choisissez d'utiliser le schéma. La colonne obligatoire d'un schéma de données de référence est identifiée par « (M) » au niveau de son nom. Par exemple, **Adresse** est la colonne de schéma obligatoire dans **Melissa Data – Address Data** et **CompanyName** est la colonne de schéma obligatoire dans **Digital Trowel Inc. – Us companies and professional data for SQL users**.  
+ Un schéma de service de données de référence peut avoir une colonne obligatoire qui doit être mappée au domaine approprié si vous choisissez d'utiliser le schéma. La colonne obligatoire d'un schéma de données de référence est identifiée par « (M) » au niveau de son nom. Par exemple, **Adresse** est la colonne de schéma obligatoire dans **Melissa Data – Address Data** et **CompanyName** est la colonne de schéma obligatoire dans **Digital Trowel Inc. – Us companies and professional data for SQL users**.  
   
  Dans cette rubrique, nous allons créer quatre domaines : **Address Line**, **City**, **State**et **Zip**, sous un domaine composite **Address Verification**; joignez le domaine composite au service de données de référence **Melissa Data – Address Check** , puis mappez les domaines dans le domaine composite aux colonnes appropriées dans le schéma de service de données de référence.  
   
-## Avant de commencer  
+## <a name="before-you-begin"></a>Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
- Vous devez avoir configuré [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) pour utiliser les services de données de référence. Consultez [configurer DQS pour utiliser les données de référence](../data-quality-services/configure-dqs-to-use-reference-data.md).  
+###  <a name="Prerequisites"></a> Prérequis  
+ Vous devez avoir configuré [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) pour utiliser les services de données de référence. Consultez [Configurer DQS pour utiliser des données de référence](../data-quality-services/configure-dqs-to-use-reference-data.md).  
   
 ###  <a name="Security"></a> Sécurité  
   
-#### Autorisations  
+#### <a name="permissions"></a>Autorisations  
  Vous devez disposer du rôle de dqs_kb_editor sur la base de données de DQS_MAIN pour mapper les domaines aux données de référence.  
   
 ##  <a name="Map"></a> Mapper les domaines aux données de référence de Melissa Data  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’Application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécuter l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Dans l'écran d'accueil [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , sous **Gestion des bases de connaissances**, cliquez sur **Nouvelle base de connaissances**.  
   
@@ -66,9 +71,9 @@ caps.handback.revision: 17
          ![Boîte de dialogue Catalogue des fournisseurs de données de référence en ligne](../data-quality-services/media/dqs-onlinereferencedataproviderscatalog.gif "Boîte de dialogue Catalogue des fournisseurs de données de référence en ligne")  
   
         > [!NOTE]  
-        >  -   Dans la boîte de dialogue **Catalogue des fournisseurs de données de référence en ligne** , le nœud **DataMarket Data Quality Services** affiche tous les fournisseurs de services de données de référence auxquels vous vous êtes abonné dans Windows Azure Marketplace. Si vous avez configuré des fournisseurs de service de données de référence de tiers en ligne directs dans DQS, ils apparaîtront sous un autre nœud appelé **3e partie de fournisseurs en ligne directs** (non désormais disponible en tant qu’aucun direct fournisseurs de services de données de référence tiers en ligne sont configurées dans DQS).  
+        >  -   Dans la boîte de dialogue **Catalogue des fournisseurs de données de référence en ligne** , le nœud **DataMarket Data Quality Services** affiche tous les fournisseurs de services de données de référence auxquels vous vous êtes abonné dans Windows Azure Marketplace. Si vous avez configuré des fournisseurs tiers directs en ligne de services de données de référence dans DQS, ils apparaîtront sous un autre nœud appelé **Fournisseurs tiers directs en ligne** (non disponible à présent car aucun tiers fournisseur tiers direct en ligne n'est configuré dans DQS).  
   
-9. Retournez à l'onglet **Données de référence** . Dans la zone **Paramètres des fournisseurs** , modifiez les valeurs dans les zones suivantes, si nécessaire :  
+9. Retournez à l'onglet **Données de référence** . Dans la zone **Paramètres des fournisseurs**, modifiez les valeurs dans les zones suivantes, si nécessaire :  
   
     -   **Seuil de correction automatique**: les corrections des services de données de référence avec un niveau de confiance supérieur à ces valeurs de seuil seront automatiquement effectuées. Entrez une valeur en notation décimale de la valeur de pourcentage correspondante. Par exemple, entrez 0,9 pour 90 %.  
   
@@ -81,9 +86,9 @@ caps.handback.revision: 17
  Vous pouvez maintenant utiliser cette base de connaissances pour l'activité de nettoyage dans un projet de qualité des données afin de normaliser et nettoyer les adresses américaines de vos données sources selon les connaissances fournies par Melissa Data via Windows Azure Marketplace.  
   
 ##  <a name="FollowUp"></a> Suivi : Après le mappage d'un domaine aux données de référence  
- Créez un projet de qualité des données et exécutez l'activité de nettoyage sur vos données sources contenant les adresses américaines en les comparant à la base de connaissances créée dans cette rubrique. Consultez [Nettoyer les données à l’aide des données de référence & #40 ; #41 ; & externes Base de connaissances](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
+ Créez un projet de qualité des données et exécutez l'activité de nettoyage sur vos données sources contenant les adresses américaines en les comparant à la base de connaissances créée dans cette rubrique. Consultez [Nettoyer les données à l’aide de la connaissance des données de référence &#40;externes&#41;](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Services de données de référence dans DQS](../data-quality-services/reference-data-services-in-dqs.md)   
  [Nettoyage de données](../data-quality-services/data-cleansing.md)  
   

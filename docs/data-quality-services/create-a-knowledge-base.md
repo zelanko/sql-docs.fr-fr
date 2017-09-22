@@ -1,30 +1,35 @@
 ---
-title: "Cr&#233;er une base de connaissances | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/04/2013"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.kb.selectkb.f1"
-  - "sql13.dqs.kb.newkb.f1"
+title: "Créer une base de connaissances | Microsoft Docs"
+ms.custom: 
+ms.date: 06/04/2013
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.kb.selectkb.f1
+- sql13.dqs.kb.newkb.f1
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4f440bb34a0939653d6708fcc9c46735fc3cdf9a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
+
 ---
-# Cr&#233;er une base de connaissances
+# <a name="create-a-knowledge-base"></a>Créer une base de connaissances
   Cette rubrique explique comment créer une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) et la préparer pour la gestion de l'arborescence des domaines, la découverte de la connaissance ou l'ajout d'une stratégie correspondante.  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a> Prérequis  
  Pour créer une base de connaissances, vous devez avoir installé [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] et [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
   
 ###  <a name="Security"></a> Sécurité  
@@ -34,7 +39,7 @@ caps.handback.revision: 20
   
 ##  <a name="Createaknowledgebase"></a> Créer une base de connaissances  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’Application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécuter l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , cliquez sur **Nouvelle base de connaissances**.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 20
   
     -   Sélectionnez **Aucun** si vous ne souhaitez pas fonder la nouvelle base de connaissances sur une base de connaissances ou un fichier de données existants.  
   
-    -   Sélectionnez **Base de connaissances existante** pour fonder la nouvelle base de connaissances sur une base de connaissances qui a déjà été créée sur [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]ou sur la base de connaissances par défaut. Sélectionnez la base de connaissances à partir de la **Sélectionner la Base de connaissances** liste déroulante, ou cliquez sur **Parcourir** pour afficher les **Sélectionner une Base de connaissances** boîte de dialogue, sélectionnez une base de connaissances existante base dans la base de la base de connaissances sur, puis cliquez sur **OK**. Lorsque vous sélectionnez une base de connaissances à partir de la Tablet PC, les domaines et les règles correspondantes de la base de connaissances seront affichés dans le volet droit de la boîte de dialogue. Vous pouvez également sélectionner le **des données dans DQS** base de connaissances, qui est la base de connaissances par défaut qui contient les domaines de l’emploi courants et les connaissances relatives à la société des États-Unis, l’adresse et les données de tiers.  
+    -   Sélectionnez **Base de connaissances existante** pour fonder la nouvelle base de connaissances sur une base de connaissances qui a déjà été créée sur [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]ou sur la base de connaissances par défaut. Sélectionnez la base de connaissances dans la liste déroulante **Sélectionner la Base de connaissances** ou cliquez sur **Parcourir** pour afficher la boîte de dialogue **Sélectionner une Base de connaissances** , sélectionnez une base de connaissances existante sur laquelle fonder la nouvelle base de connaissances, puis cliquez **OK**. Lorsque vous sélectionnez une base de connaissances à partir de la tablette, les domaines et les règles correspondantes de la base de connaissances seront affichés dans le volet droit de la boîte de dialogue. Vous pouvez également sélectionner la base de connaissances **Données DQS** , qui est la base de connaissances par défaut contenant les domaines courants prêts à l’emploi et les connaissances relatives aux sociétés, adresses et données externes aux États-Unis.  
   
     -   Sélectionnez **Importer à partir d'un fichier DQS** pour fonder la nouvelle base de connaissances sur un fichier DQS de [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. Cliquez **Parcourir**, sélectionnez un fichier de données de DQS avec une extension .dqs, puis cliquez **OK**.  
   
@@ -59,6 +64,6 @@ caps.handback.revision: 20
 6.  Cliquez sur **Créer**.  
   
 ##  <a name="FollowUp"></a> Suivi : Après la création d'une base de connaissances  
- Après avoir créé une base de connaissances, vous voyez s'afficher un Assistant qui vous permet d'effectuer la découverte des connaissances, un Assistant qui vous permet de créer une stratégie de correspondance, ou des pages pour exécuter la gestion des domaines. Pour plus d’informations sur la découverte des connaissances, gestion de domaine ou stratégie de correspondance, consultez [effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md), ou [créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
+ Après avoir créé une base de connaissances, vous voyez s'afficher un Assistant qui vous permet d'effectuer la découverte des connaissances, un Assistant qui vous permet de créer une stratégie de correspondance, ou des pages pour exécuter la gestion des domaines. Pour plus d’informations sur la découverte des connaissances, la gestion de domaine ou la stratégie de correspondance, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
   
   

@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 00d990aa777630847e0993631ee1c7bbce781d54
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: f723156f18ee6661ffb26f615f9c3598bd6875b4
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="partitioned-tables-and-indexes"></a>Tables et index partitionnés
@@ -68,9 +68,8 @@ ms.lasthandoff: 08/03/2017
 -   la clé d'index est unique et elle ne doit pas contenir la colonne de partitionnement de la table ;  
   
 -   vous souhaitez que la table de base soit impliquée dans des jointures communes à plusieurs tables en utilisant différentes colonnes de jointure.  
-  
- Élimination de partition  
- Processus par lequel l'optimiseur de requête accède uniquement aux partitions pertinentes pour satisfaire les critères de la requête.  
+
+ Élimination de partition Processus par lequel l’optimiseur de requête accède uniquement aux partitions pertinentes pour remplir les critères de la requête.  
   
 ## <a name="performance-guidelines"></a>Recommandations relatives aux performances  
  La nouvelle limite plus élevée de 15 000 partitions affecte la mémoire, les opérations d'index partitionnés, les commandes DBCC et les requêtes. Cette section décrit les implications en matière de performances de l'augmentation du nombre de partitions au-delà de 1000 et fournit des solutions de contournement si nécessaire. La quantité maximale de partitions étant passée à 15 000, vous pouvez stocker des données pendant plus longtemps. Toutefois, vous devez conserver les données uniquement pendant la durée nécessaire et obtenir un compromis entre les performances et le nombre de partitions.  

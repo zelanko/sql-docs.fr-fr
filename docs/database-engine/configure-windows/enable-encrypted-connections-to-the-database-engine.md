@@ -1,7 +1,7 @@
 ---
 title: "Activer les connexions chiffrées dans le moteur de base de données | Microsoft Docs"
 ms.custom: 
-ms.date: 06/12/2017
+ms.date: 09/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5dba6e8516e97ce603b529b8ad4c07eac0db2981
+ms.sourcegitcommit: 754242a86367b07b98caa9f70f457b70d0840075
+ms.openlocfilehash: a00e09f47685eba578296b8e390d3c7d15fc6953
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Activer les connexions chiffrées dans le moteur de base de données
@@ -50,9 +50,7 @@ ms.lasthandoff: 08/02/2017
 > Si vous créez des connexions chiffrées entre un indexeur de la Recherche Azure et SQL Server sur une machine virtuelle Azure, consultez [Configurer une connexion à partir d’un indexeur de la Recherche Azure à SQL Server sur une machine virtuelle Azure](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/). 
   
  
-##  <a name="SSMSProcedure"></a>  
-  
-###  <a name="Provision"></a> Pour installer un certificat sur le serveur  
+##  <a name="Provision"></a> Pour installer un certificat sur le serveur  
   
 1.  Dans le menu **Démarrer** , cliquez sur **Exécuter**puis, dans la zone **Ouvrir** , tapez **MMC** et cliquez sur **OK**.  
   
@@ -74,13 +72,13 @@ ms.lasthandoff: 08/02/2017
   
 10. Remplissez les informations dans l' **Assistant Importation de certificat**afin d'ajouter un certificat à l'ordinateur, puis fermez la console MMC. Pour plus d'informations sur l'ajout d'un certificat à un ordinateur, consultez la documentation Windows.  
   
-###  <a name="Export"></a> Pour exporter le certificat de serveur  
+##  <a name="Export"></a> Pour exporter le certificat de serveur  
   
 1.  Dans le composant logiciel enfichable **Certificats** , recherchez le certificat dans le dossier **Certificats** / **Personnel** , cliquez avec le bouton droit sur **Certificat**, pointez sur **Toutes les tâches**, puis cliquez sur **Exporter**.  
   
 2.  Suivez les étapes de l' **Assistant d'exportation de certificats**en stockant le fichier de certificat à un emplacement approprié.  
   
-###  <a name="ConfigureServerConnections"></a> Pour configurer le serveur afin qu'il accepte les connexions chiffrées  
+##  <a name="ConfigureServerConnections"></a> Pour configurer le serveur afin qu'il accepte les connexions chiffrées  
   
 1.  Dans le **Gestionnaire de configuration SQL Server**, développez **Configuration du réseau SQL Server**, cliquez avec le bouton droit sur **Protocoles pour** *\<instance de serveur>*, puis sélectionnez **Propriétés**.  
   
@@ -89,8 +87,13 @@ ms.lasthandoff: 08/02/2017
 3.  Sur l'onglet **Indicateurs** , dans la zone **ForceEncryption** , sélectionnez **Oui**, puis cliquez sur **OK** pour fermer la boîte de dialogue.  
   
 4.  Redémarrez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+
+### <a name="wildcard-certificates"></a>Certificats génériques  
+À partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client prennent en charge les certificats génériques. Les autres clients ne prennent pas toujours en charge les certificats génériques. Pour plus d’informations, consultez la documentation du client. Vous ne pouvez pas sélectionner un certificat générique à l’aide du Gestionnaire de configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour utiliser un certificat générique, modifiez le Registre de clé `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib`, puis entrez l’empreinte numérique du certificat, sans espaces, comme valeur **Certificat**.  
+> [!WARNING]  
+> [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry_md.md)]  
   
-###  <a name="ConfigureClientConnections"></a> Pour configurer le client afin qu'il demande l'établissement de connexions chiffrées  
+##  <a name="ConfigureClientConnections"></a> Pour configurer le client afin qu'il demande l'établissement de connexions chiffrées  
   
 1.  Copiez le certificat d'origine ou le fichier de certificat exporté sur l'ordinateur client.  
   
@@ -100,7 +103,7 @@ ms.lasthandoff: 08/02/2017
   
 4.  Sur la page **Indicateurs** , dans la zone **Forcer le chiffrement du protocole** , cliquez sur **Oui**.  
   
-###  <a name="EncryptConnection"></a> Pour chiffrer une connexion dans SQL Server Management Studio  
+##  <a name="EncryptConnection"></a> Pour chiffrer une connexion dans SQL Server Management Studio  
   
 1.  Dans la barre d'outils de l'Explorateur d'objets, cliquez sur **Connecter**, puis sur **Moteur de base de données**.  
   

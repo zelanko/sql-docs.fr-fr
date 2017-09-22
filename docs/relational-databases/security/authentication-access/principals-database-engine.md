@@ -33,10 +33,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9ac118739640b288307e09c8fd36ba842d0c7ef1
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: e8567384e8546fa5f48ae287794ecf368f728a2e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="principals-database-engine"></a>Principaux (moteur de base de données)
@@ -83,6 +83,8 @@ Chaque connexion appartient au rôle serveur fixe `public` et chaque utilisateur
 -   \##MS_PolicyEventProcessingLogin##   
 -   \##MS_PolicySigningCertificate##   
 -   \##MS_PolicyTsqlExecutionLogin##   
+ 
+ Ces comptes de principaux n’ont pas de mots de passe modifiables par les administrateurs, car ils utilisent des certificats envoyés à Microsoft.
   
 ## <a name="the-guest-user"></a>Utilisateur invité  
  Chaque base de données inclut un `guest`. Les autorisations accordées à l'utilisateur `guest` sont héritées par les utilisateurs qui ont accès à la base de données, mais n'ont pas de compte d'utilisateur dans la base de données. L’utilisateur `guest` ne peut pas être supprimé, mais vous pouvez le désactiver en révoquant son autorisation CONNECT. Vous pouvez révoquer l’autorisation CONNECT en exécutant l’instruction `REVOKE CONNECT FROM GUEST;` dans n’importe quelle base de données autre que `master` ou `tempdb`.  

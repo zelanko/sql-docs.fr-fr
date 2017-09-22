@@ -1,41 +1,46 @@
 ---
-title: "Configurer DQS pour utiliser des donn&#233;es de r&#233;f&#233;rence | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.administration.rdsconfiguration.f1"
-  - "sql13.dqs.administration.configuration.createDirectRDS.f1"
-  - "sql13.dqs.admin.config.rds.f1"
+title: "Configurer DQS pour utiliser des données de référence | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.administration.rdsconfiguration.f1
+- sql13.dqs.administration.configuration.createDirectRDS.f1
+- sql13.dqs.admin.config.rds.f1
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: db1e4d797fa5794c24569f18e300bc4ab64c725c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
+
 ---
-# Configurer DQS pour utiliser des donn&#233;es de r&#233;f&#233;rence
-  Cette rubrique explique comment configurer [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) afin d'utiliser des données de référence pour le nettoyage de vos données. Vous pouvez utiliser des données de référence provenant de Windows Azure Marketplace ou de fournisseurs de données de référence tiers en ligne directs.  
+# <a name="configure-dqs-to-use-reference-data"></a>Configurer DQS pour utiliser des données de référence
+  Cette rubrique explique comment configurer [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) afin d'utiliser des données de référence pour le nettoyage de vos données. Vous pouvez utiliser des données de référence provenant de Windows Azure Marketplace ou de fournisseurs de données de référence tiers en ligne directs.  
   
-## Avant de commencer  
+## <a name="before-you-begin"></a>Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
- Pour utiliser des données de référence de Marketplace, vous devez disposer d'une clé de compte Marketplace valide. Pour plus d’informations sur la création d’une clé de compte Marketplace, consultez [créer votre compte](http://go.microsoft.com/fwlink/?LinkId=212936) (http://go.microsoft.com/fwlink/?LinkId=212936). Vous pouvez également créer une clé de compte Marketplace à partir de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Pour ce faire, cliquez sur **Configuration** sous **Administration** dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , puis cliquez sur **Créer un ID de compte DataMarket** sous l'onglet **Données de référence** .  
+###  <a name="Prerequisites"></a> Prérequis  
+ Pour utiliser des données de référence de Marketplace, vous devez disposer d'une clé de compte Marketplace valide. Pour obtenir des informations détaillées sur la création d'une clé de compte Marketplace, consultez [Créer votre compte](http://go.microsoft.com/fwlink/?LinkId=212936) (http://go.microsoft.com/fwlink/?LinkId=212936). Vous pouvez également créer une clé de compte Marketplace à partir de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Pour ce faire, cliquez sur **Configuration** sous **Administration** dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , puis cliquez sur **Créer un ID de compte DataMarket** sous l'onglet **Données de référence** .  
   
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Vous devez disposer du rôle dqs_administrator sur la base de données DQS_MAIN pour configurer les paramètres du service de données de référence dans DQS.  
+ Vous devez disposer du rôle dqs_administrator sur la base de données DQS_MAIN pour configurer les paramètres du service de données de référence dans DQS.  
   
 ##  <a name="Marketplace"></a> Configurer DQS pour utiliser des données de référence de Marketplace  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’Application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécuter l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , sous **Administration**, cliquez sur **Configuration**.  
   
@@ -45,9 +50,9 @@ caps.handback.revision: 15
   
  Vous êtes maintenant prêt à utiliser, dans DQS, les services de données de référence Marketplace faisant l'objet d'un abonnement pour la clé de compte Marketplace spécifiée.  
   
-##  <a name="ThirdParty"></a> Configurer DQS pour utiliser des données de référence de fournisseurs de données de référence tiers en ligne directs  
+##  <a name="ThirdParty"></a> Configurer DQS pour utiliser des données de référence de fournisseurs de données de référence tiers en ligne directs  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’Application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécuter l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , sous **Administration**, cliquez sur **Configuration**.  
   
@@ -59,13 +64,13 @@ caps.handback.revision: 15
   
     1.  Dans la zone **Nom** , tapez le nom du nouveau fournisseur de services de données de référence direct.  
   
-    2.  (Facultatif) Dans la **Description** zone, tapez une description du nouveau fournisseur de services de données référence directe.  
+    2.  (Facultatif) Dans la zone **Description** , tapez la description du nouveau fournisseur de services de données de référence direct.  
   
     3.  Dans la zone **Catégorie** , tapez la catégorie des données fournies par le nouveau fournisseur de services de données de référence direct.  
   
-    4.  Dans la zone Schéma, spécifiez le schéma qui définit la chaîne des champs (noms de colonnes) à utiliser à partir du fournisseur de services de données de référence direct. Un nom de champ ne doit pas contenir d'espace, et les champs doivent être séparés par des virgules. Par exemple : `FirstName, LastName, City, State`.  
+    4.  Dans la zone Schéma, spécifiez le schéma qui définit la chaîne des champs (noms de colonnes) à utiliser à partir du fournisseur de services de données de référence direct. Un nom de champ ne doit pas contenir d'espace, et les champs doivent être séparés par des virgules. Par exemple : `FirstName, LastName, City, State`.  
   
-    5.  Dans la zone **URI** , tapez l'URI du fournisseur de services de données de référence direct. Seuls les URI sécurisés (adresse commençant par « https:// ») sont autorisés dans DQS.  
+    5.  Dans la zone **URI** , tapez l'URI du fournisseur de services de données de référence direct. Seuls les URI sécurisés (adresse commençant par « https:// ») sont autorisés dans DQS.  
   
     6.  Dans la zone **Taille de lot maximale** , tapez le nombre maximal d'enregistrements par lot qui seront envoyés au fournisseur de services de données de référence pour être nettoyés. Il est possible de spécifier au maximum 100 enregistrements par lot pour l'activité de nettoyage.  
   
@@ -73,9 +78,9 @@ caps.handback.revision: 15
   
 6.  Cliquez sur **OK** pour enregistrer les données, puis fermez la boîte de dialogue **Créer un fournisseur de services de données de référence tiers en ligne direct** . Le fournisseur de données de référence tiers en ligne direct que vous venez d'ajouter devient disponible dans la grille des **Fournisseurs de services de données de référence** dans DQS.  
   
- Vous êtes maintenant prêt à utiliser, dans DQS, les services de données de référence à partir du fournisseur de données de référence tiers en ligne direct que vous venez de configurer.  
+ Vous êtes maintenant prêt à utiliser, dans DQS, les services de données de référence à partir du fournisseur de données de référence tiers en ligne direct que vous venez de configurer.  
   
-##  <a name="FollowUp"></a> Suivi : Après la configuration de DQS pour utiliser des données de référence  
- Vous devez maintenant mapper les domaines de base de connaissances requis aux données de référence disponibles auprès des fournisseurs de données que vous venez de configurer. Pour ce faire, consultez la page [joindre un domaine ou un domaine Composite aux données de référence](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
+##  <a name="FollowUp"></a> Suivi : Après la configuration de DQS pour utiliser des données de référence  
+ Vous devez maintenant mapper les domaines de base de connaissances requis aux données de référence disponibles auprès des fournisseurs de données que vous venez de configurer. Pour ce faire, consultez [Attacher un domaine ou un domaine composite à des données de référence](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
   
   
