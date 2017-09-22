@@ -60,7 +60,7 @@ Ouvrez une commande de Terminal Server sur l’ordinateur Linux où [!INCLUDE[ss
 - Restreindre l’accès à`mssql`  
    ```  
    sudo chown mssql:mssql mssql.pem mssql.key 
-   sudo chmod 400 mssql.pem mssql.key 
+   sudo chmod 600 mssql.pem mssql.key 
    ```  
  
 - Déplacer vers les répertoires du système SSL (facultatifs)  
