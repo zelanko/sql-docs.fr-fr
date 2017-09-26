@@ -39,10 +39,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
-ms.openlocfilehash: 97080f5d124b25b12b1f9f019e42753c143174e7
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 49ad187a9cdee375d8e03dfabff37fc110b60d94
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Éditions et fonctionnalités prises en charge de SQL Server 2016
@@ -378,7 +378,7 @@ Pour plus d’informations sur les fonctionnalités de client Business Intellige
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|Non|Non| 
 |StreamInsight HA|StreamInsight Premium Edition|Non|Non|Non|Non|   
   
-> [![Télécharger SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **[Télécharger la dernière version de SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**    
+> [![Télécharger SSMS](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)** [Télécharger la dernière version de SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)**    
   
 ## <a name="see-also"></a>Voir aussi  
  [Spécifications de produit pour SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   

@@ -1,50 +1,63 @@
 ---
-title: "Sp&#233;cifier la copie ou l&#39;interrogation de table (Assistant Importation et Exportation SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.impexpwizard.specifytablecopyorquery.f1"
+title: "Spécifier la copie de la Table ou une requête (SQL Server Assistant Importation et exportation) | Documents Microsoft"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.impexpwizard.specifytablecopyorquery.f1
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 caps.latest.revision: 69
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 59820083a0a092fc6704bebd491f1bfc0827732d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/26/2017
+
 ---
-# Sp&#233;cifier la copie ou l&#39;interrogation de table (Assistant Importation et Exportation SQL Server)
-  Une fois que vous avez fourni les informations relatives à la destination de vos données et à la façon de s’y connecter, l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]affiche **Spécifier la copie ou l’interrogation de table**. Dans cette page, choisissez l’une des options suivantes.
--   **Copier les données à partir d’une ou plusieurs tables ou vues**
--   **Écrire une requête pour spécifier les données à transférer**
+# <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Spécifier la copie ou l'interrogation de table (Assistant Importation et Exportation SQL Server)
+  Une fois que vous avez fourni les informations relatives à la destination de vos données et à la façon de s’y connecter, l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche **Spécifier la copie ou l’interrogation de table**. Dans cette page, choisissez l’une des options suivantes.
+-   **Copier les données à partir d’une ou plusieurs tables ou vues**. Vous souhaitez sélectionner une table ou des tables dans une liste.
+-   **Écrire une requête pour spécifier les données à transférer**. Vous souhaitez entrer ou coller le texte d’une requête SQL.
     
-> [!TIP] Si vous devez copier plusieurs bases de données ou des objets de base de données autres que des tables et des vues, utilisez l’Assistant Copie de base de données au lieu de l’Assistant Importation et exportation. Pour plus d’informations, consultez [Utiliser l’Assistant Copie de base de données](../../relational-databases/databases/use-the-copy-database-wizard.md).     
+> [!TIP]
+> Si vous devez copier plusieurs bases de données ou des objets de base de données autres que des tables et des vues, utilisez l’Assistant Copie de base de données au lieu de l’Assistant Importation et exportation. Pour plus d’informations, consultez [Utiliser l’Assistant Copie de base de données](../../relational-databases/databases/use-the-copy-database-wizard.md).     
  
 ## <a name="screen-shot-of-the-specify-table-copy-or-query-page"></a>Capture d’écran de la page Spécifier la copie ou l’interrogation de table    
  La capture d’écran suivante montre la page **Spécifier la copie ou l’interrogation de table** de l’Assistant.    
     
- ![Table copy or query page of the Import and Export Wizard](../../integration-services/import-export-data/media/table-copy-or-query.png "Table copy or query page of the Import and Export Wizard")    
+ ![Page de copie ou l’interrogation de table de l’Assistant Importation et exportation](../../integration-services/import-export-data/media/table-copy-or-query.png "page copie ou l’interrogation de la Table de l’Assistant Importation et exportation")    
     
 ## <a name="specify-whether-to-copy-an-entire-table-or-write-a-query"></a>Indiquez s’il faut copier une table entière ou écrire une requête 
  **Copier les données à partir d’une ou plusieurs tables ou vues**    
- Sélectionnez cette option si vous voulez copier toutes les données dans la source sans effectuer de filtrage ou de tri sur les enregistrements. Après avoir cliqué sur **Suivant**, vous sélectionnez les tables à copier dans la page **Sélectionner les tables et les vues sources**. Pour plus d’informations, consultez [Sélectionner les tables et les vues sources](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md).    
+ Sélectionnez cette option si vous souhaitez copier des données à partir de la source sans filtrage ou de tri d’enregistrements.   
 
-Quand vous sélectionnez **Copier les données à partir d’une ou plusieurs tables ou vues**, vous pouvez effectuer la copie à partir d’une table ou une vue vers la table de destination, ou à partir de plusieurs tables ou vues vers plusieurs tables de destination.    
+Quand vous sélectionnez **Copier les données à partir d’une ou plusieurs tables ou vues**, vous pouvez effectuer la copie à partir d’une table ou une vue vers la table de destination, ou à partir de plusieurs tables ou vues vers plusieurs tables de destination.
+
+ Après avoir cliqué sur **Suivant**, vous sélectionnez les tables à copier dans la page **Sélectionner les tables et les vues sources** . Pour plus d’informations, consultez [Sélectionner les tables et les vues sources](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md).   
     
  **Écrire une requête pour spécifier les données à transférer**    
- Sélectionnez cette option si vous voulez filtrer ou trier les données sources avant de les copier vers la destination. Après avoir cliqué sur **Suivant**, vous fournissez une instruction SQL pour spécifier les colonnes et sélectionner des lignes dans la boîte de dialogue **Fournir une requête source**. Pour plus d’informations, consultez [Fournir une requête source](../../integration-services/import-export-data/provide-a-source-query-sql-server-import-and-export-wizard.md).    
+ Sélectionnez cette option si vous voulez filtrer ou trier les données sources avant de les copier vers la destination.    
     
-Quand vous sélectionnez **Écrire une requête pour spécifier les données à transférer**, vous pouvez uniquement copier les résultats d’une requête dans une table de destination.    
+Quand vous sélectionnez **Écrire une requête pour spécifier les données à transférer**, vous pouvez uniquement copier les résultats d’une requête dans une table de destination.  
+
+Après avoir cliqué sur **Suivant**, vous fournissez une instruction SQL pour spécifier les colonnes et sélectionner des lignes dans la boîte de dialogue **Fournir une requête source** . Pour plus d’informations, consultez [Fournir une requête source](../../integration-services/import-export-data/provide-a-source-query-sql-server-import-and-export-wizard.md).   
     
 ## <a name="why-isnt-the-copy-option-available"></a>Pourquoi l’option Copier n’est-elle pas disponible ?    
- L’option **Copier les données à partir d’une ou plusieurs tables ou vues** peut ne pas être disponible quand l’Assistant utilise un fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour se connecter à votre source de données. Cela se produit quand l’Assistant ne dispose pas d’informations suffisantes sur le fournisseur de données pour demander une liste de tables et de vues à partir de la source de données.    
-    
- L’option **Copier les données à partir d’une ou plusieurs tables ou vues** est disponible uniquement pour les fournisseurs qui disposent d’une section ProviderDescription dans le fichier ProviderDescriptors.xml. (Par défaut, ce fichier se trouve dans \<*lecteur*>:\Program Files\Microsoft SQL Server\130\DTS\ProviderDescriptors.) Chaque section ProviderDescription de ce fichier contient les informations nécessaires pour récupérer les métadonnées du fournisseur correspondant.    
+ L’option **Copier les données à partir d’une ou plusieurs tables ou vues** peut ne pas être disponible quand l’Assistant utilise un fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour se connecter à votre source de données. Cela se produit quand l’Assistant ne dispose pas d’informations suffisantes sur le fournisseur de données pour demander une liste de tables et de vues à partir de la source de données. 
+ 
+Vous pouvez toujours utiliser le **écrire une requête** option, même si vous n’écrivez généralement les requêtes SQL, tant que vous connaissez le nom de la table que vous souhaitez exporter. Dans le **fournir une requête Source** boîte de dialogue, après que vous cliquez sur **suivant**, entrez la requête en tant que `SELECT * FROM <name of table>`. Si le nom de la table contient des espaces ou autres caractères spéciaux, placez ce nom entre crochets - `SELECT * FROM [<name of table>]`.
+
+### <a name="more-info"></a>En savoir plus
+ L’option **Copier les données à partir d’une ou plusieurs tables ou vues** est disponible uniquement pour les fournisseurs qui disposent d’une section ProviderDescription dans le fichier ProviderDescriptors.xml. (Par défaut, ce fichier est \< *lecteur*> : \Program Files\Microsoft SQL Server\130\DTS\ProviderDescriptors.) Chaque section ProviderDescription de ce fichier contient les informations nécessaires pour récupérer les métadonnées du fournisseur correspondant.    
     
  Par défaut, le fichier ProviderDescriptors.xml contient une section ProviderDescription uniquement pour les fournisseurs figurant dans la liste suivante.    
     
@@ -67,4 +80,10 @@ Quand vous sélectionnez **Écrire une requête pour spécifier les données à 
     
 -   Si vous avez sélectionné **Copier les données à partir d’une ou plusieurs tables ou vues** et que votre destination est un fichier plat, la page suivante est **Configurer la destination du fichier plat**. Dans cette page, vous spécifiez les options de mise en forme du fichier plat de destination. (Une fois le fichier plat configuré, la page suivante est **Sélectionner les tables et les vues sources**.) Pour plus d’informations, consultez [Configurer la destination du fichier plat](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md).    
     
--   Si vous avez sélectionné **Écrire une requête pour spécifier les données à transférer**, la page suivante est **Fournir une requête source**. Dans cette page, vous écrivez et testez l’instruction SQL qui sélectionne les données à copier de la source de données vers la destination. (Une fois que vous avez fourni une requête, la page suivante est **Sélectionner les tables et les vues sources**.) Pour plus d’informations, consultez [Fournir une requête source](../../integration-services/import-export-data/provide-a-source-query-sql-server-import-and-export-wizard.md).    
+-   Si vous avez sélectionné **Écrire une requête pour spécifier les données à transférer**, la page suivante est **Fournir une requête source**. Dans cette page, vous écrivez et testez l’instruction SQL qui sélectionne les données à copier de la source de données vers la destination. (Une fois que vous avez fourni une requête, la page suivante est **Sélectionner les tables et les vues sources**.) Pour plus d’informations, consultez [Fournir une requête source](../../integration-services/import-export-data/provide-a-source-query-sql-server-import-and-export-wizard.md).
+
+## <a name="see-also"></a>Voir aussi
+[Bien démarrer avec cet exemple simple de l’Assistant Importation et Exportation](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+
+
+

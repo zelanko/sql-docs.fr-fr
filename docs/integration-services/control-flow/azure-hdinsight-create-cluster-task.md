@@ -1,52 +1,60 @@
 ---
-title: "T&#226;che de cr&#233;ation d’un cluster Azure HDInsight | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "02/28/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.afpcreatecltask.f1"
-  - "sql14.dts.designer.afpcreatecltask.f1"
+title: "Azure HDInsight créer des tâches de Cluster | Documents Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 02/28/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.afpcreatecltask.f1
+- sql14.dts.designer.afpcreatecltask.f1
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 71a24dc15253916c32b07e6024e2ab32514c9d39
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/26/2017
+
 ---
-# T&#226;che de cr&#233;ation d’un cluster Azure HDInsight
-  La **tâche de création d’un cluster Azure HDInsight** permet à un package SSIS de créer un cluster Azure HDInsight dans l’abonnement Azure spécifié.  
+# <a name="azure-hdinsight-create-cluster-task"></a>Tâche de création d’un cluster Azure HDInsight
+Le **Azure tâche** permet à un package SSIS créer un cluster Azure HDInsight dans le groupe de ressources et d’abonnement Azure spécifié.
   
- La **tâche de création d’un cluster Azure HDInsight** est un composant de SQL Server Integration Services (SSIS) Feature Pack pour Azure pour SQL Server 2016. Le Feature Pack est disponible en téléchargement [ici](http://go.microsoft.com/fwlink/?LinkID=626967).  
+Le **Azure tâche** est un composant de la [SQL Server Integration Services (SSIS) Feature Pack pour Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
   
 > [!NOTE]  
->  -   La création d’un nouveau cluster HDInsight prend généralement 10 minutes.  
-> -   Il existe un coût associé à la création et à l’exécution d’un cluster Azure HDInsight. Consultez la rubrique [Tarification HDInsight](http://azure.microsoft.com/en-us/pricing/details/hdinsight/) pour plus d’informations.  
+> - Création d’un nouveau cluster HDInsight peut prendre 10 ~ 20 minutes.  
+> - Il existe un coût associé à la création et exécution d’un cluster Azure HDInsight. Consultez [tarification HDInsight](http://azure.microsoft.com/en-us/pricing/details/hdinsight/) pour plus d’informations.  
   
- Pour ajouter une **tâche de création de cluster Azure HDInsight**, faites-la glisser sur le concepteur SSIS, double-cliquez dessus ou cliquez dessus avec le bouton droit, puis cliquez sur **Modifier** pour afficher la boîte de dialogue **Éditeur de la tâche de création de cluster Azure HDInsight**.  
+Pour ajouter une **tâche de création de cluster Azure HDInsight**, faites-la glisser sur le concepteur SSIS, double-cliquez dessus ou cliquez dessus avec le bouton droit, puis cliquez sur **Modifier** pour afficher la boîte de dialogue **Éditeur de la tâche de création de cluster Azure HDInsight** .  
   
- Le tableau suivant décrit les champs de cette boîte de dialogue.  
+Le tableau suivant fournit une description des champs de cette boîte de dialogue.  
   
 |||  
 |-|-|  
-|**Champ**|**Description**|  
-|AzureSubscriptionConnection|Sélectionnez le gestionnaire de connexions d’un abonnement Azure existant ou créez-en un qui fait référence à un abonnement Azure qui héberge le cluster HDInsight.|  
-|AzureStorageConnection|Sélectionnez un gestionnaire de connexions Azure Storage existant ou créez-en un nouveau qui fait référence à un compte Azure Storage qui sera associé au cluster HDInsight.|  
-|Emplacement|Spécifiez l’emplacement du cluster HDInsight. Le cluster doit être créé au même emplacement que le stockage Azure.|  
+|**Field**|**Description**|  
+|AzureResourceManagerConnection|Sélectionnez un gestionnaire de connexions Azure Resource Manager existant ou créez-en un qui permet de créer le cluster HDInsight.|  
+|AzureStorageConnection|Sélectionnez un gestionnaire de connexions Azure Storage existant ou créez-en un nouveau qui fait référence à un compte Azure Storage qui sera associé au cluster HDInsight.|
+|ID d’abonnement|Spécifiez l’ID de l’abonnement que sera créé dans le cluster HDInsight.|
+|Groupe de ressources|Spécifiez la ressource Azure groupe cluster sera créé dans HDInsight.|
+|Emplacement|Spécifiez l’emplacement du cluster HDInsight. Le cluster doit être créé dans le même emplacement que le compte de stockage Azure spécifié.|  
 |ClusterName|Spécifiez un nom pour le cluster HDInsight à créer.|  
-|ClusterSize|Spécifiez le nombre de nœuds souhaité dans le cluster.|  
-|BlobContainer|Spécifiez le nom du conteneur de stockage par défaut associé au cluster HDInsight.|  
-|UserName|Spécifiez le nom de l’utilisateur qui a accès au cluster.|  
-|Mot de passe|Spécifiez le mot de passe de l’utilisateur.|  
+|ClusterSize|Spécifiez le nombre de nœuds pour créer le cluster.|  
+|BlobContainer|Spécifiez le nom du conteneur de stockage par défaut pour être associé au cluster HDInsight.|  
+|UserName|Spécifiez le nom d’utilisateur à utiliser pour la connexion au cluster HDInsight.|  
+|Mot de passe|Spécifiez le mot de passe à utiliser pour la connexion au cluster HDInsight.|
+|SshUserName|Spécifiez le nom d’utilisateur utilisé pour accéder à distance au cluster HDInsight à l’aide de SSH.|
+|SshPassword|Spécifiez le mot de passe utilisé pour accéder à distance au cluster HDInsight à l’aide de SSH.|
 |FailIfExists|Spécifiez si la tâche doit échouer si le cluster existe déjà.|  
   
 > [!NOTE]  
->  L’emplacement du cluster HDInsight et celui du stockage Azure doivent être identiques.  
-  
-  
+> Les emplacements du cluster HDInsight et le compte de stockage Azure doivent être identiques.
+

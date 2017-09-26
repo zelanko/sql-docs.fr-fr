@@ -1,28 +1,33 @@
 ---
-title: "Mappage de type de donn&#233;es dans l’Assistant Importation et Exportation SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/11/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Mappage de Type de données dans le SQL Server Assistant Importation et exportation | Documents Microsoft"
+ms.custom: 
+ms.date: 01/11/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 caps.latest.revision: 2
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 2
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 4eca10e506087ee5d8106cb05c861c4efa49a65d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/26/2017
+
 ---
-# Mappage de type de donn&#233;es dans l’Assistant Importation et Exportation SQL Server
- Dans l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez définir le nom, le type de données et les propriétés de type de données des colonnes des nouveaux fichiers et tables de destination, mais vous ne pouvez pas spécifier de conversions personnalisées pour les valeurs de colonnes. Le mappage intégré des types de données à partir de la source à la destination est donc important.  
+# <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Mappage de type de données dans l’Assistant Importation et Exportation SQL Server
+ Dans l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez définir le nom, le type de données et les propriétés de type de données des colonnes des nouveaux fichiers et tables de destination, mais vous ne pouvez pas spécifier de conversions personnalisées pour les valeurs de colonnes. Le mappage intégré des types de données à partir de la source à la destination est donc important.  
   
-##  <a name="a-namewizardmappinga-how-does-the-wizard-map-data-types-between-source-and-destination"></a><a name="wizardMapping"></a> Comment l’Assistant mappe-t-il les types de données entre la source et de destination ?
+##  <a name="wizardMapping"></a> Comment l’Assistant mappe-t-il les types de données entre la source et de destination ?
 L’Assistant utilise les fichiers de mappage installés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour mapper les types de données à partir d’une système ou d’une version de base de données à un autre. Par exemple, il peut mapper les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aux types de données Oracle. Par défaut, les fichiers de mappage au format XML sont installés dans les dossiers suivants.
--   **C:\Program Files\Microsoft SQL Server\130\DTS\MappingFiles** (64 bits)
--   **C:\Program Files (x86)\Microsoft SQL Server\130\DTS\MappingFiles** (32 bits).  
+-   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\* * (pour 64 bits)
+-   **C:\Program fichiers (x86) \Microsoft SQL Server\130\DTSMappingFiles\* * (pour 32 bits).  
   
  Si vous modifiez un fichier de mappage existant ou ajoutez un nouveau fichier de mappage au dossier, vous devez fermer et rouvrir l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour charger le fichier de mappage (nouveau ou modifié).  
  
@@ -76,3 +81,5 @@ Voici une partie du fichier de mappage XML qui mappe les types de données SQL S
 </dtm:DataTypeMappings>  
   
 ```  
+
+

@@ -1,27 +1,32 @@
 ---
-title: "Fen&#234;tre Variables | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.variables.f1"
-  - "sql13.dts.designer.variableoptionswindow.f1"
-helpviewer_keywords: 
-  - "Fenêtre Variables, boîte de dialogue"
+title: "Fenêtre variables | Documents Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.variables.f1
+- sql13.dts.designer.variableoptionswindow.f1
+helpviewer_keywords:
+- Variables Window dialog box
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 caps.latest.revision: 53
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: a87438f0f702a46b88b350ee32b734f64b1c6ad2
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/26/2017
+
 ---
-# Fen&#234;tre Variables
+# <a name="variables-window"></a>Fenêtre Variables
   La fenêtre **Variables** permet de créer et de modifier les variables définies par l’utilisateur et d’afficher les variables système.  
   
  Par défaut, la fenêtre **Variables** se trouve sous la zone **Gestionnaires de connexions** du concepteur SSIS, dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Si vous ne voyez pas la fenêtre **Variables** , cliquez sur **Variables** dans le menu **SSIS** pour l'afficher.  
@@ -31,7 +36,7 @@ caps.handback.revision: 52
 > [!NOTE]  
 >  La valeur des propriétés **Nom** et **Espace de noms** doit commencer par une lettre de l’alphabet, conformément à la convention Unicode Standard 2.0, ou par un trait de soulignement (_). Les caractères suivants peuvent être des lettres ou des chiffres, conformément à la convention Unicode standard 2.0, ou un trait de soulignement (\_).  
   
-## Options  
+## <a name="options"></a>Options  
  **Ajouter une variable**  
  Ajoutez une variable définie par l'utilisateur.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 52
  Sélectionnez une variable dans la liste, puis cliquez sur **Supprimer une variable**.  
   
  **Options de la grille**  
- Cliquez sur cette option pour ouvrir la boîte de dialogue **Options de grille variables** où vous pouvez modifier la sélection des colonnes et appliquer des filtres à la fenêtre **Variables**. Pour plus d'informations, consultez [Options de grille variables](../integration-services/variable-grid-options.md).  
+ Cliquez sur cette option pour ouvrir la boîte de dialogue **Options de grille variables** où vous pouvez modifier la sélection des colonnes et appliquer des filtres à la fenêtre **Variables** . Pour plus d'informations, consultez [Options de grille variables](../integration-services/variable-grid-options.md).  
   
  **Nom**  
  Affichez le nom de la variable. Vous pouvez mettre à jour le nom des variables définies par l'utilisateur.  
@@ -64,7 +69,7 @@ caps.handback.revision: 52
  Affichez la valeur de la variable. Vous pouvez mettre à jour la valeur des variables définies par l'utilisateur. Cette valeur peut être un littéral ou une expression. En outre, la valeur peut être une chaîne multiligne. Pour affecter une expression à la variable, cliquez sur le bouton d'ellipse qui est en regard de la colonne **Expression** dans la fenêtre **Variables** .  
   
  **Espace de noms**  
- Affichez le nom de l'espace de noms. Les variables définies par l’utilisateur sont initialement créées dans l’espace de noms **User**, mais vous pouvez modifier le nom de celui-ci dans le champ **Espace de noms**. Pour afficher cette colonne, cliquez sur **Options de la grille**.  
+ Affichez le nom de l'espace de noms. Les variables définies par l’utilisateur sont initialement créées dans l’espace de noms **User** , mais vous pouvez modifier le nom de celui-ci dans le champ **Espace de noms** . Pour afficher cette colonne, cliquez sur **Options de la grille**.  
   
  **Déclencher l'événement lorsque la valeur de la variable change**  
  Indiquez si l’événement **OnVariableValueChanged** doit se déclencher quand une valeur est modifiée. Vous pouvez mettre à jour la valeur des variables système définies par l'utilisateur. Par défaut, la fenêtre **Variables** ne répertorie pas cette colonne. Pour afficher cette colonne, cliquez sur **Options de la grille**.  
@@ -76,11 +81,42 @@ caps.handback.revision: 52
  Affichez l'expression affectée à la variable. Pour affecter une expression, cliquez sur le bouton d'ellipse.  
   
  Si vous affectez une expression à une variable, un marqueur spécial sous la forme d'une icône s'affiche en regard de la variable. Ce marqueur d'icône spécial s'affiche également en regard des gestionnaires de connexions et des tâches contenant des expressions.  
+
+## <a name="variable-grid-options-dialog-box"></a>Boîte de dialogue Options de grille variable
+ Utilisez la boîte de dialogue **Options de grille variables** pour sélectionner les colonnes qui s'affichent dans la fenêtre **Variables** et sélectionner les filtres à appliquer à la liste des variables. Pour plus d'informations sur les propriétés de variable correspondantes, consultez [Variables Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md).  
   
-## Voir aussi  
+### <a name="options-for-filter"></a>Options pour le filtre  
+ **Afficher les variables système**  
+ Sélectionnez cette option pour répertorier les variables système dans la fenêtre **Variables** . Les variables système sont prédéfinies. Vous ne pouvez pas ajouter ou supprimer des variables système. Vous pouvez modifier le paramètre de la propriété **RaiseChangedEvent** .  
+  
+ Cette liste est codée par couleur. Les variables système sont en gris et les variables définies par l'utilisateur en noir.  
+  
+ **Afficher les variables de toutes les étendues**  
+ Sélectionnez cette option pour afficher les variables dans l'étendue du package et dans l'étendue des conteneurs, des tâches et des gestionnaires d'événements dans le package. Désactivez cette option pour afficher uniquement les variables dans l'étendue du package et dans l'étendue d'un conteneur, d'une tâche ou d'un gestionnaire d'événements donné.  
+  
+ Pour plus d’informations sur la portée des variables, consultez [Variables Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md).  
+  
+### <a name="options-for-columns"></a>Options pour les colonnes  
+ Sélectionnez les colonnes que vous souhaitez afficher dans la fenêtre **Variables** .  
+  
+-   **Portée**  
+  
+-   **Data type**  
+  
+-   **Valeur**  
+  
+-   **Espace de noms**  
+  
+-   **Déclencher l'événement lorsque la valeur de la variable change**  
+  
+-   **Description**  
+  
+-   **Expression**  
+  
+## <a name="see-also"></a>Voir aussi  
  [Variables Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md)   
- [Utiliser des variables dans des packages](../Topic/Use%20Variables%20in%20Packages.md)   
- [Expressions Integration Services &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md)   
- [Générer de fichiers de vidage pour l'exécution des packages](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
+ [Utiliser des variables dans des packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
+ [Integration Services &#40; SSIS &#41; Expressions](../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Générer de fichiers de vidage pour l’exécution des packages](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   
   
