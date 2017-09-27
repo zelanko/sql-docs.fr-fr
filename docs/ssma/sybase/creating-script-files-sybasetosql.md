@@ -32,7 +32,7 @@ ms.lasthandoff: 08/02/2017
 # <a name="creating-script-files-sybasetosql"></a>Création de fichiers de Script (SybaseToSQL)
 La première étape avant le lancement de l’application de console SSMA est à créer le fichier de script et, si nécessaire de créer le fichier de la valeur de la variable et le fichier de connexion de serveur.  
   
-Le fichier de script peut être divisé en trois sections, notamment.., :  
+Le fichier de script peut être divisé en trois sections, notamment..,:  
   
 1.  **config :** permet à l’utilisateur définir les paramètres de configuration pour l’application console.  
   

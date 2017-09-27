@@ -599,7 +599,7 @@ ou
   
 -   `write-summary-report-to`Spécifie le chemin d’accès où le rapport de synthèse est généré. Si seul le chemin d’accès du dossier est indiqué, puis de fichiers par nom **ConvertSQLReport.XML** est créé. (attribut facultatif)  
   
-    La création a 2 autres sous-catégories, notamment de rapport de synthèse.., :  
+    La création a 2 autres sous-catégories, notamment de rapport de synthèse viz..,:  
   
     -   erreurs de rapport (= « true/false », la valeur par défaut en tant que « false » (attributs facultatifs)).  
   
