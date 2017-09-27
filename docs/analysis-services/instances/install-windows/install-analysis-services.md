@@ -36,7 +36,7 @@ ms.lasthandoff: 09/21/2017
   
 -   [Télécharger SSDT (SQL Server Data Tools)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)  
   
- Vous aurez besoin de SSMS et SSDT pour travailler avec des données et des instances d’Analysis Services. Outils peuvent être installés n’importe où, mais veillez à configurer des ports sur le serveur avant de tenter une connexion. Pour plus d'informations, consultez [Configure the Windows Firewall to Allow Analysis Services Access](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
+ Vous aurez besoin de SSMS et SSDT pour travailler avec des données et des instances d’Analysis Services. Outils peuvent être installés n’importe où, mais veillez à configurer des ports sur le serveur avant de tenter une connexion. Pour plus d'informations, consultez [Configurer le pare-feu Windows pour autoriser l'accès à Analysis Services](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
   
 ## <a name="install-using-a-wizard"></a>Installer à l’aide d’un assistant  
  La liste suivante montre les pages de l’assistant Installation de SQL Server utilisées pour installer Analysis Services :  

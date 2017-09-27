@@ -44,7 +44,7 @@ ms.lasthandoff: 06/22/2017
   
 -   OLTP en mémoire est installé dans le cadre des **Services Moteur de base de données**.  
   
-     Pour installer la création de rapports ([Déterminer si une table ou une procédure stockée doit être déplacée vers l’OLTP en mémoire](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (pour gérer l’OLTP en mémoire via l’Explorateur d’objets [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ), [Télécharger SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).  
+     Pour installer la création de rapports ([Déterminer si une table ou une procédure stockée doit être déplacée vers l’OLTP en mémoire](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (pour gérer l’OLTP en mémoire via l’Explorateur d’objets [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ), [Télécharger SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).   
   
 ## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>Notes importantes lors de l'utilisation de l' [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
   

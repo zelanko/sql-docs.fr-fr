@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 44308a0c36e49852f199fb8dbfdb6de9db789c9f
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 5aee9077dcf9c0c31746c3e8d3b056376a8e61dc
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Générer de fichiers de vidage pour l'exécution des packages
@@ -36,7 +36,7 @@ ms.lasthandoff: 09/21/2017
   
      Appelez cette procédure stockée pour obliger un package à interrompre son exécution et créer un fichier de vidage.  
   
- Si vous déployez des packages à l’aide du modèle de déploiement de package, vous créez les fichiers de vidage du débogage à l’aide de l’utilitaire **dtexec** ou de l’utilitaire **dtutil** pour spécifier une option de vidage du débogage sur la ligne de commande. Pour plus d’informations, consultez [utilitaire dtexec](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages) et [déploiement de Package hérité &#40; SSIS &#41; ](../../integration-services/packages/legacy-package-deployment-ssis.md).  
+ Si vous déployez des packages à l’aide du modèle de déploiement de package, vous créez les fichiers de vidage du débogage à l’aide de l’utilitaire **dtexec** ou de l’utilitaire **dtutil** pour spécifier une option de vidage du débogage sur la ligne de commande. Pour plus d'informations, consultez [dtexec Utility](../../integration-services/packages/dtexec-utility.md) et [dtutil Utility](../../integration-services/dtutil-utility.md). Pour plus d’informations sur les modèles de déploiement de package, consultez [Déploiement de projets et de packages Integration Services (SSIS)](https://msdn.microsoft.com/library/hh213290.aspx) et [Déploiement de packages hérités &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).   
   
 ## <a name="debug-dump-file-format"></a>Format des fichiers de vidage du débogage  
  Lorsque vous spécifiez une option de vidage de débogage, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée les fichiers de vidage de débogage suivants :  
@@ -45,7 +45,7 @@ ms.lasthandoff: 09/21/2017
   
 -   Fichier de vidage de débogage .tmp. Il s'agit d'un fichier au format texte.  
   
- Par défaut, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stocke ces fichiers dans le dossier, * \<lecteur > :*\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
+ Par défaut, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stocke ces fichiers dans le dossier,  *\<lecteur > :*\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
  Le tableau ci-dessous décrit uniquement certaines sections du fichier .tmp. Le fichier .tmp inclut des données supplémentaires qui ne sont pas répertoriées dans ce tableau.  
   

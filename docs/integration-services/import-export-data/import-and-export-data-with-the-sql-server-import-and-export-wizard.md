@@ -28,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 58908fc8a7b18cff36a41ee26e7a3eab8e84a5d0
+ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
+ms.openlocfilehash: 22419ce21476588f4ff2859185c8b833306fa896
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Importer et exporter des données avec l’Assistant Importation et Exportation SQL Server
@@ -41,11 +41,11 @@ ms.lasthandoff: 09/21/2017
  La fonction de l’Assistant Importation et Exportation[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est de copier simplement des données d’une source vers une destination. Cette présentation décrit les sources de données que l’Assistant peut l’utiliser en tant que sources et destinations, ainsi que les autorisations que nécessaires pour exécuter l’Assistant.
 
 ## <a name="get-the-wizard"></a>Obtenir de l’Assistant
-Si vous souhaitez exécuter l’Assistant, mais vous n’avez pas [ ! INCLURE[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
+Si vous souhaitez exécuter l’Assistant, mais [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’est pas installé sur votre ordinateur, vous pouvez installer l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en installant SSDT (SQL Server Data Tools). Pour plus d’informations, consultez [Télécharger SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 ## <a name="what-happens-when-i-run-the-wizard"></a>Que se passe-t-il lorsque j’exécute l’Assistant ?
 -    **Consultez la liste des étapes.** Pour obtenir une description des étapes de l’Assistant, consultez [les étapes dans le SQL Server Assistant Importation et exportation](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). Il existe également une page distincte de la documentation pour chaque page de l’Assistant.  
-    \- ou \-
+    \-ou\-
 -   **Voir un exemple simple.** Pour examiner rapidement les plusieurs écrans qui s’affichent dans une session normale, examinez cet exemple de bout en bout simple sur une seule page - [prise en main avec cet exemple simple de l’Assistant Importation et exportation](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).  
 
 ##  <a name="wizardSources"></a>Les sources et les destinations puis-je utiliser ?  
