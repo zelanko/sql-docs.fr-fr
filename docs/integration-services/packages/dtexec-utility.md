@@ -217,7 +217,7 @@ dtexec /option [value] [/option [value]]...
   
      Pour afficher plusieurs exemples de l’option **/ConsoleLog** , consultez la section **Notes** .  
   
--   ** /D[ts](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
+-   **/D[ts](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
   
      L’argument *package_path* spécifie le chemin relatif du package [!INCLUDE[ssIS](../../includes/ssis-md.md)] , à partir de la racine du Magasin de packages SSIS, et inclut le nom du package [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Si le chemin ou le nom du fichier spécifié dans l’argument *package_path* contient un espace, vous devez mettre l’argument *package_path* entre guillemets.  
   
