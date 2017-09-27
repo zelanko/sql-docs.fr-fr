@@ -2,7 +2,7 @@
 title: Quel &#39; s de SSMA pour Oracle (OracleToSQL) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/22/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,14 +15,22 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 690d34e4391bcdbcbf7adfe1d80ed8c503d80895
+ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
+ms.openlocfilehash: 0dfba12d3b2d06677817bb087f11cbd922ca390d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
-# <a name="what39s-new-in-ssma--for-oracle-oracletosql"></a>Quel &#39; s de SSMA pour Oracle (OracleToSQL)
+# <a name="what39s-new-in-ssma-for-oracle-oracletosql"></a>Quel &#39; s de SSMA pour Oracle (OracleToSQL)
 Cette rubrique répertorie SSMA pour les modifications d’Oracle dans chaque version.  
+
+## <a name="ssma-v75"></a>Versions 7.5 SSMA
+La version de versions 7.5 de SSMA pour Oracle contient les modifications suivantes :
+- Amélioré avec plusieurs améliorations pour garantir une accessibilité supérieure aux personnes handicapées.
+- Mise à jour pour améliorer les mesures de qualité et de conversion avec des correctifs ciblés, tels que l’amélioration de la gestion des types de données date et float pendant la migration de données, en fonction des commentaires des clients.
+
+> [!IMPORTANT]
+> .NET 4.5.2 est requis pour l’installation de versions 7.5 SSMA. En outre, à partir de v7.4, la version 32 bits de SSMA est interrompue.
 
 ## <a name="ssma-v74"></a>SSMA v7.4
 La version v7.4 de SSMA pour Oracle contient les modifications suivantes :
@@ -65,7 +73,7 @@ La version de v7.2 de SSMA pour Oracle contient les modifications suivantes :
 - Améliorations de télémétrie pour fournir une meilleure points de données pour résoudre les problèmes de client et d’améliorer le taux de conversion de SSMA.
 
 ## <a name="ssma-v71"></a>SSMA v7.1
-La version de v7.1 de SSMA pour Access contient les modifications suivantes :
+La version de v7.1 de SSMA pour Oracle contient les modifications suivantes :
 - 2017 du serveur SQL sur Windows et Linux CTP1 est désormais une plateforme cible prise en charge pour la migration. Cette fonctionnalité est dans technical preview et permet le déplacement de schéma et les données pour les serveurs de SQL Server cible.
 - SSMA prend désormais en charge les mises à jour automatiques pour télécharger la dernière version de SSMA dès qu’elles sont disponibles.
 - Fichiers binaires installables de SSMA sont maintenant remis via des fichiers de package Windows installer (.msi).

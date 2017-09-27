@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: baa5826e9722bfb23afacf729d80bebf88985ed3
+ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
+ms.openlocfilehash: 14277304baaaf6aa40fe279af407c7ce915eaa60
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notes de publication pour 2017 du serveur SQL sur Linux
@@ -73,7 +73,7 @@ Détails du package et les emplacements de téléchargement pour les packages RP
 | [SQL Server Data Tools pour Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
 | [Code Visual Studio](https://code.visualstudio.com) avec la [mssql extension](https://aka.ms/mssql-marketplace) | dernière |
 
-### <a name="unsupported-features-and-services"></a>Services et les fonctionnalités non prises en charge
+### <a name="Unsupported"></a>Services et les fonctionnalités non prises en charge
 
 Les fonctionnalités et les services suivants ne sont pas disponibles sur Linux pour l’instant. La prise en charge de ces fonctionnalités est plus activé lors de la cadence mensuelle de mises à jour le programme d’évaluation.
 
@@ -88,7 +88,7 @@ Les fonctionnalités et les services suivants ne sont pas disponibles sur Linux 
 | &nbsp; | Filetable |
 | &nbsp; | Définir des assemblys CLR avec l’autorisation EXTERNAL_ACCESS ou UNSAFE |
 | &nbsp; | Extension du pool de mémoires tampons |
-| **SQL Server Agent** |  Sous-systèmes : CmdExec, PowerShell, lecteur de file d’attente, SSIS, SSAS, SSRS |
+| **Agent SQL Server** |  Sous-systèmes : CmdExec, PowerShell, lecteur de file d’attente, SSIS, SSAS, SSRS |
 | &nbsp; | Alertes |
 | &nbsp; | l'Agent de lecture du journal ; |
 | &nbsp; | Capture de données modifiées |
@@ -99,7 +99,7 @@ Les fonctionnalités et les services suivants ne sont pas disponibles sur Linux 
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
+| &nbsp; | Reporting Services |
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |
 
@@ -273,7 +273,7 @@ Les fonctionnalités et les services suivants ne sont pas disponibles sur Linux 
 | &nbsp; | Procédures système stockées étendues (XP_CMDSHELL, etc.). |
 | &nbsp; | Filetable |
 | &nbsp; | Définir des assemblys CLR avec l’autorisation EXTERNAL_ACCESS ou UNSAFE |
-| **SQL Server Agent** |  Sous-systèmes : CmdExec, PowerShell, lecteur de file d’attente, SSIS, SSAS, SSRS |
+| **Agent SQL Server** |  Sous-systèmes : CmdExec, PowerShell, lecteur de file d’attente, SSIS, SSAS, SSRS |
 | &nbsp; | Alertes |
 | &nbsp; | l'Agent de lecture du journal ; |
 | &nbsp; | Capture de données modifiées |
@@ -285,7 +285,7 @@ Les fonctionnalités et les services suivants ne sont pas disponibles sur Linux 
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
+| &nbsp; | Reporting Services |
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |
 
@@ -470,7 +470,7 @@ Les fonctionnalités et les services suivants ne sont pas disponibles sur Linux 
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
+| &nbsp; | Reporting Services |
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |
 
@@ -631,7 +631,7 @@ Les fonctionnalités et les services suivants ne sont pas disponibles sur Linux 
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
+| &nbsp; | Reporting Services |
 | &nbsp; | Integration Services | 
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |
@@ -777,7 +777,7 @@ Les fonctionnalités et les services suivants ne sont pas disponibles sur Linux 
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
+| &nbsp; | Reporting Services |
 | &nbsp; | Integration Services | 
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |
@@ -810,7 +810,7 @@ Les sections suivantes décrivent les problèmes connus avec cette version de SQ
 
 - Gestionnaire de Configuration SQL Server ne peut pas se connecter à SQL Server sur Linux.
 
-- **CREATE ASSEMBLY** ne fonctionne pas lorsque vous tentez d’utiliser un fichier. Utilisez le **FROM \<bits\>**  méthode à la place pour l’instant. 
+- **CREATE ASSEMBLY** ne fonctionne pas lorsque vous tentez d’utiliser un fichier. Utilisez le **FROM \<bits\> ** méthode à la place pour l’instant. 
 
 #### <a name="databases"></a>Bases de données
 - Impossible de déplacer les bases de données système avec l’utilitaire mssql-conf.
@@ -949,12 +949,12 @@ Les fonctionnalités et les services suivants ne sont pas disponibles sur Linux 
 | &nbsp; | Authentification Windows |
 | &nbsp; | Gestion de clés extensible |
 | &nbsp; | Utilisation du certificat fourni par l’utilisateur pour les protocoles SSL ou TLS |
-| **Services** | Agent SQL Server |
+| **Services** | SQL Server Agent |
 | &nbsp; | SQL Server Browser |
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
+| &nbsp; | Reporting Services |
 | &nbsp; | Integration Services | 
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |
@@ -987,7 +987,7 @@ Les sections suivantes décrivent les problèmes connus avec cette version de SQ
 
 - Gestionnaire de Configuration SQL Server ne peut pas se connecter à SQL Server sur Linux.
 
-- **CREATE ASSEMBLY** ne fonctionne pas lorsque vous tentez d’utiliser un fichier. Utilisez le **FROM \<bits\>**  méthode à la place pour l’instant. 
+- **CREATE ASSEMBLY** ne fonctionne pas lorsque vous tentez d’utiliser un fichier. Utilisez le **FROM \<bits\> ** méthode à la place pour l’instant. 
 
 #### <a name="databases"></a>Bases de données
 - Modification des emplacements de fichiers de données et les journaux de TempDB n’est pas pris en charge.
@@ -1107,12 +1107,12 @@ Les fonctionnalités et les services suivants ne sont pas disponibles sur Linux 
 | &nbsp; | Authentification Windows |
 | &nbsp; | Gestion de clés extensible |
 | &nbsp; | Utilisation du certificat fourni par l’utilisateur pour les protocoles SSL ou TLS |
-| **Services** | Agent SQL Server |
+| **Services** | SQL Server Agent |
 | &nbsp; | SQL Server Browser |
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
+| &nbsp; | Reporting Services |
 | &nbsp; | Integration Services | 
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |
@@ -1147,7 +1147,7 @@ Les sections suivantes décrivent les problèmes connus avec cette version de SQ
 
 - Gestionnaire de Configuration SQL Server ne peut pas se connecter à SQL Server sur Linux.
 
-- **CREATE ASSEMBLY** ne fonctionne pas lorsque vous tentez d’utiliser un fichier. Utilisez le **FROM \<bits\>**  méthode à la place pour l’instant. 
+- **CREATE ASSEMBLY** ne fonctionne pas lorsque vous tentez d’utiliser un fichier. Utilisez le **FROM \<bits\> ** méthode à la place pour l’instant. 
 
 #### <a name="databases"></a>Bases de données
 - Modification des emplacements de fichiers de données et les journaux de TempDB n’est pas pris en charge.
@@ -1252,12 +1252,12 @@ Les fonctionnalités et les services suivants ne sont pas disponibles sur Linux 
 | &nbsp; | Authentification Windows |
 | &nbsp; | Gestion de clés extensible |
 | &nbsp; | Utilisation du certificat fourni par l’utilisateur pour les protocoles SSL ou TLS |
-| **Services** | Agent SQL Server |
+| **Services** | SQL Server Agent |
 | &nbsp; | SQL Server Browser |
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
+| &nbsp; | Reporting Services |
 | &nbsp; | Integration Services | 
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |
@@ -1292,7 +1292,7 @@ Les sections suivantes décrivent les problèmes connus avec cette version de SQ
 
 - Gestionnaire de Configuration SQL Server ne peut pas se connecter à SQL Server sur Linux.
 
-- **CREATE ASSEMBLY** ne fonctionne pas lorsque vous tentez d’utiliser un fichier. Utilisez le **FROM \<bits\>**  méthode à la place pour l’instant. 
+- **CREATE ASSEMBLY** ne fonctionne pas lorsque vous tentez d’utiliser un fichier. Utilisez le **FROM \<bits\> ** méthode à la place pour l’instant. 
 
 #### <a name="databases"></a>Bases de données
 - Modification des emplacements de fichiers de données et les journaux de TempDB n’est pas pris en charge.
@@ -1388,12 +1388,12 @@ Les fonctionnalités et les services suivants ne sont pas disponibles sur Linux 
 | &nbsp; | Authentification Windows |
 | &nbsp; | Gestion de clés extensible |
 | &nbsp; | Utilisation du certificat fourni par l’utilisateur pour les protocoles SSL ou TLS |
-| **Services** | Agent SQL Server |
+| **Services** | SQL Server Agent |
 | &nbsp; | SQL Server Browser |
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
+| &nbsp; | Reporting Services |
 | &nbsp; | Integration Services | 
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |
@@ -1424,7 +1424,7 @@ Les sections suivantes décrivent les problèmes connus avec cette version de SQ
 
 - Gestionnaire de Configuration SQL Server ne peut pas se connecter à SQL Server sur Linux.
 
-- **CREATE ASSEMBLY** ne fonctionne pas lorsque vous tentez d’utiliser un fichier. Utilisez le **FROM \<bits\>**  méthode à la place pour l’instant.
+- **CREATE ASSEMBLY** ne fonctionne pas lorsque vous tentez d’utiliser un fichier. Utilisez le **FROM \<bits\> ** méthode à la place pour l’instant.
 
 #### <a name="databases"></a>Bases de données
 - Modification des emplacements de fichiers de données et les journaux de TempDB n’est pas pris en charge.

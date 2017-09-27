@@ -1,7 +1,7 @@
 ---
 title: SQL Server Migration Assistant | Documents Microsoft
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/22/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -18,14 +18,14 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: e6cdbf2e39051ad4298966863f16fb7295f6a8a5
+ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
+ms.openlocfilehash: 6310f16ee3f3a57c46e1aab1023c18fcaf6bf074
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="sql-server-migration-assistant"></a>Assistant de migration SQL Server
-Migration Assistant Microsoft SQL Server (SSMA) est un outil conçu pour automatiser la migration de la base de données vers SQL Server à partir de Microsoft Access, DB2, MySQL, Oracle et Sybase.  
+Migration Assistant Microsoft SQL Server (SSMA) est un outil conçu pour automatiser la migration de la base de données vers SQL Server à partir de Microsoft Access, DB2, MySQL, Oracle et SAP ASE.  
   
 ## <a name="migration-sources"></a>Sources de migration  
   
@@ -37,14 +37,14 @@ Migration Assistant Microsoft SQL Server (SSMA) est un outil conçu pour automat
   
 -   [SQL Server Migration Assistant pour Oracle](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
   
--  [SQL Server Migration Assistant pour Sybase ASE](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
+-  [Assistant de Migration SQL Server pour SAP ASE](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
 
 ## <a name="supported-sources-and-target-versions"></a>Sources prises en charge et cibler des Versions
 Pour des sources prises en charge, passez en revue les informations sur le centre de téléchargement pour le téléchargement SSMA.
 
 SSMA prennent en charge les versions suivantes de la cible.
 
-- SQL Server 2008
+- SQL Server 2008
 - SQL Server 2008 R2
 - SQL Server 2012
 - SQL Server 2014
@@ -55,13 +55,12 @@ SSMA prennent en charge les versions suivantes de la cible.
 
 ** Cette cible est pris en charge uniquement par SSMA pour Oracle.
  
-
 ## <a name="downloads"></a>Téléchargements
 - [SSMA pour Access](http://aka.ms/ssmaforaccess)
 - [SSMA pour DB2](http://aka.ms/ssmafordb2)
 - [SSMA pour MySql](http://aka.ms/ssmaformysql)
 - [SSMA pour Oracle](http://aka.ms/ssmafororacle)
-- [SSMA pour Sybase ASE](http://aka.ms/ssmaforsybase)
+- [SSMA pour SAP ASE](http://aka.ms/ssmaforsybase)
  
 ## <a name="getting-ssma-support"></a>Mise en route de la prise en charge SSMA  
 **Aide et support pour Microsoft SQL Server Migration Assistant (SSMA) :**  
