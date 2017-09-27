@@ -6,6 +6,28 @@
 ## [Articles nouveaux et récemment mis à jour](new-updated-integration-services.md)
 ## [Fonctionnalités Integration Services prises en charge par les éditions de SQL Server](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Compatibilité descendante d’Integration Services](integration-services-backward-compatibility.md)
+
+# Démarrages rapides
+## Déployer
+### [Déployer avec SSMS](./ssis-quickstart-deploy-ssms.md)
+### [Déployer avec Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
+### [Déployer avec Transact-SQL (VS Code)](ssis-quickstart-deploy-tsql-vscode.md)
+### [Déployer à partir de l’invite de commandes](./ssis-quickstart-deploy-cmdline.md)
+### [Déployer avec PowerShell](ssis-quickstart-deploy-powershell.md)
+### [Déployer avec C#](./ssis-quickstart-deploy-dotnet.md) 
+## Exécuter
+### [Exécuter avec SSMS](./ssis-quickstart-run-ssms.md)
+### [Exécuter avec Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
+### [Exécuter avec Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
+### [Exécuter à partir de l’invite de commandes](./ssis-quickstart-run-cmdline.md)
+### [Exécuter avec PowerShell](ssis-quickstart-run-powershell.md)
+### [Exécuter avec C#](./ssis-quickstart-run-dotnet.md) 
+
+# [Effectuer un lift-and-shift des packages SSIS vers Azure](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
+## [Didacticiel - déployer, exécuter et surveiller un package sur Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
+## [Se connecter au catalogue SSIS sur Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
+## [Planifier l’exécution de packages sur Azure](lift-shift/ssis-azure-schedule-packages.md)
+## [Se connecter aux sources de données avec l’authentification Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
 # [Installer ou mettre à niveau](../integration-services/install-windows/install-integration-services.md)
 
 # [Outils de développement et de gestion](integration-services-ssis-development-and-management-tools.md)
@@ -46,7 +68,7 @@
 # [Requêtes](integration-services-ssis-queries.md)
 # [Transactions](integration-services-transactions.md)
 # [Déployer des packages](packages/deploy-integration-services-ssis-projects-and-packages.md)
-# [Montée en puissance parallèle](scale-out/integration-services-ssis-scale-out.md)
+# [Scale Out](scale-out/integration-services-ssis-scale-out.md)
 
 # [Service (hérité)](../integration-services/service/integration-services-service-ssis-service.md)
 # [Sécurité](../integration-services/security/security-overview-integration-services.md)

@@ -4,6 +4,7 @@
 ## [Notes de publication](sql-server-linux-release-notes.md)
 ## [Nouveautés de cette version](sql-server-linux-whats-new.md)
 ## [Articles nouveaux et récemment mis à jour](new-updated-linux.md)
+## [Éditions et fonctionnalités prises en charge](sql-server-linux-editions-and-components-2017.md)
 
 # Démarrages rapides
 ## [Installer et connecter - Red Hat](quickstart-install-connect-red-hat.md)
@@ -39,12 +40,15 @@
 ### [Utiliser la copie des journaux de transaction](sql-server-linux-use-log-shipping.md)
 ### [Utiliser la messagerie de base de données et les alertes de messagerie](sql-server-linux-db-mail-sql-agent.md)
 
-## [Migrer](sql-server-linux-migrate-overview.md)
+## [Migration](sql-server-linux-migrate-overview.md)
 ### [Restaurer à partir de Windows](sql-server-linux-migrate-restore-database.md)
 ### [Exporter et importer un fichier BACPAC à partir de Windows](sql-server-linux-migrate-ssms.md)
 ### [Migrer avec SQL Server Migration Assistant](sql-server-linux-migrate-ssma.md)
 ### [Copie en bloc avec bcp](sql-server-linux-migrate-bcp.md)
-### [Charger des données avec (SSIS)](sql-server-linux-migrate-ssis.md)
+
+## [Extraire, transformer, charger](sql-server-linux-migrate-ssis.md)
+### [Configurer SSIS](sql-server-linux-configure-ssis.md)
+### [Planifier des packages SSIS](sql-server-linux-schedule-ssis-packages.md)
 
 ## [Configurer la continuité d’activité](sql-server-linux-business-continuity-dr.md)
 ### [Sauvegarde et restauration](sql-server-linux-backup-and-restore-database.md)
@@ -79,7 +83,7 @@
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
 
 # Ressources
-## [Résoudre les problèmes](sql-server-linux-troubleshooting-guide.md)
+## [Dépanner](sql-server-linux-troubleshooting-guide.md)
 ## [Documentation SQL Server](../sql-server/sql-server-technical-documentation.md)
 ## [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 ## [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
