@@ -38,8 +38,6 @@ Retourne un **datetimeoffset** valeur pour la date et heure spécifiées et avec
 ## <a name="syntax"></a>Syntaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, hour_offset, minute_offset, precision )  
 ```  
   

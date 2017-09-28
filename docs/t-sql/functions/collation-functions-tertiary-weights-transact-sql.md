@@ -40,8 +40,6 @@ Retourne une chaîne binaire de poids pour chaque caractère d'une expression de
 ## <a name="syntax"></a>Syntaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 TERTIARY_WEIGHTS( non_Unicode_character_string_expression )  
 ```  
   

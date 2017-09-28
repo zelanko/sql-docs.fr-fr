@@ -39,8 +39,6 @@ Fonction mathématique qui renvoie le cosinus trigonométrique de l'angle spéci
 ## <a name="syntax"></a>Syntaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 COS ( float_expression )  
 ```  
   

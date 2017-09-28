@@ -38,8 +38,6 @@ Retourne une chaîne qui est le résultat de la concaténation de plusieurs vale
 ## <a name="syntax"></a>Syntaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 CONCAT ( string_value1, string_value2 [, string_valueN ] )  
 ```  
   

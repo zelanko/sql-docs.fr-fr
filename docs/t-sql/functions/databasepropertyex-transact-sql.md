@@ -40,8 +40,6 @@ Retourne le paramètre actuel de l'option ou de la propriété de la base de don
 ## <a name="syntax"></a>Syntaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DATABASEPROPERTYEX ( database , property )  
 ```  
   

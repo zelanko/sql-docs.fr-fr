@@ -39,8 +39,6 @@ Retourne la propriété d'un classement spécifié dans [!INCLUDE[ssCurrent](../
 ## <a name="syntax"></a>Syntaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 COLLATIONPROPERTY( collation_name , property )  
 ```  
   

@@ -39,8 +39,6 @@ Fonction mathématique qui renvoie la cotangente trigonométrique de l’angle s
 ## <a name="syntax"></a>Syntaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 COT ( float_expression )  
 ```  
   

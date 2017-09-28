@@ -40,8 +40,6 @@ Renvoie le plus petit entier supérieur ou égal à l'expression numérique spé
 ## <a name="syntax"></a>Syntaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 CEILING ( numeric_expression )  
 ```  
   

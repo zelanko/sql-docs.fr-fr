@@ -42,8 +42,6 @@ Retourne le nombre d'octets utilisés pour représenter une expression.
 ## <a name="syntax"></a>Syntaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DATALENGTH ( expression )   
 ```  
   

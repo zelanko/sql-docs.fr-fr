@@ -40,8 +40,6 @@ Retourne l’angle en radians dont la tangente est spécifié **float** expressi
 ## <a name="syntax"></a>Syntaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 ATAN ( float_expression )  
 ```  
   

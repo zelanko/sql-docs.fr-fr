@@ -42,8 +42,6 @@ Retourne le nom de l'utilisateur en cours. Cette fonction est équivalente à la
 ## <a name="syntax"></a>Syntaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 CURRENT_USER  
 ```  
 

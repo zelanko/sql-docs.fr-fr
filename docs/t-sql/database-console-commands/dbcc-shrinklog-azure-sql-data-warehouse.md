@@ -32,8 +32,6 @@ Réduit la taille du journal des transactions *sur l’appliance* pour actuel [!
 ## <a name="syntax"></a>Syntaxe  
   
 ```sql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 DBCC SHRINKLOG   
     [ ( SIZE = { target_size [ MB | GB | TB ]  } | DEFAULT ) ]   
     [ WITH NO_INFOMSGS ]   

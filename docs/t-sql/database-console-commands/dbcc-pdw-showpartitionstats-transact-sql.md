@@ -33,8 +33,6 @@ Affiche la taille et le nombre de lignes pour chaque partition d’une table dan
 ## <a name="syntax"></a>Syntaxe  
   
 ```sql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 Show the partition stats for a table  
 DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema_name.] table_name  ")  
 [;]  

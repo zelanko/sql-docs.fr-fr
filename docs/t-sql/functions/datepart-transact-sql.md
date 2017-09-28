@@ -49,8 +49,6 @@ Pour une vue d’ensemble de tous les [!INCLUDE[tsql](../../includes/tsql-md.md)
 ## <a name="syntax"></a>Syntaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DATEPART ( datepart , date )  
 ```  
   

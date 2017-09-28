@@ -40,8 +40,6 @@ Retourne l’angle, en radians, dont le sinus est spécifié **float** expressio
 ## <a name="syntax"></a>Syntaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 ASIN ( float_expression )  
 ```  
   

@@ -40,8 +40,6 @@ Fonction mathématique qui renvoie l’angle, en radians, dont le cosinus est sp
 ## <a name="syntax"></a>Syntaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 ACOS ( float_expression )  
 ```  
   

@@ -40,8 +40,6 @@ Retourne l'angle (en radians), entre l'axe des x positif et le rayon à partir d
 ## <a name="syntax"></a>Syntaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 ATN2 ( float_expression , float_expression )  
 ```  
   

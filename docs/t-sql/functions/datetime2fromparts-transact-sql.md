@@ -38,8 +38,6 @@ Retourne un **datetime2** valeur pour la date et heure spécifiées et avec la p
 ## <a name="syntax"></a>Syntaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precision )  
 ```  
   

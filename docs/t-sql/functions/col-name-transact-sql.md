@@ -41,8 +41,6 @@ Renvoie le nom d'une colonne à partir des numéros d'identification de table et
 ## <a name="syntax"></a>Syntaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 COL_NAME ( table_id , column_id )  
 ```  
   

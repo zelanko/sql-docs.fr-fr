@@ -38,8 +38,6 @@ Retourne un **datetime** valeur pour la date et heure spécifiées.
 ## <a name="syntax"></a>Syntaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )  
 ```  
   
