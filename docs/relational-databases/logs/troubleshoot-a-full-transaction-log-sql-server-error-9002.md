@@ -23,10 +23,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 09bb30a44ef1675353fe8fa5bd9245c3f25c3894
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6631665bbb24d8404e6b115ee0dd608bb6dbef85
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Résoudre les problèmes liés à un journal des transactions saturé (erreur SQL Server 9002)
@@ -40,7 +40,7 @@ ms.lasthandoff: 07/31/2017
  Pour découvrir les raisons qui empêchent de tronquer le journal dans une situation donnée, utilisez les colonnes **log_reuse_wait** et **log_reuse_wait_desc** de l’affichage catalogue **sys.database**. Pour plus d’informations, consultez [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Pour obtenir une description des facteurs susceptibles de retarder la troncation du journal, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
 > **IMPORTANT**  
->  Si la base de données était en mode de récupération quand l’erreur 9002 s’est produite, récupérez la base de données à l’aide de l’instruction [ALTER DATABASE *nom_base_de_données* SET ONLINE après avoir résolu le problème.](https://msdn.microsoft.com/library/bb522682.aspx)  
+>  Si la base de données était en mode de récupération quand l’erreur 9002 s’est produite, récupérez la base de données à l’aide de l’instruction [ALTER DATABASE *nom_base_de_données* SET ONLINE après avoir résolu le problème.](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
  D'autres solutions possibles en cas de saturation du journal des transactions sont les suivantes :  
   
@@ -104,14 +104,14 @@ ms.lasthandoff: 07/31/2017
 ## <a name="complete-or-kill-a-long-running-transaction"></a>Achever ou supprimer une transaction longue
 ### <a name="discovering-long-running-transactions"></a>Découverte des transactions de longue durée
 Une transaction de très longue durée entraîne la saturation du journal des transactions. Pour rechercher des transactions de longue durée, appliquez une des procédures suivantes :
- - **[sys.dm_tran_database_transactions](https://msdn.microsoft.com/library/ms186957.aspx).**
-Cet affichage de gestion dynamique retourne des informations sur les transactions au niveau de la base de données. Pour une transaction de longue durée, les colonnes particulièrement intéressantes incluent l’heure du premier enregistrement de journal [(database_transaction_begin_time)](https://msdn.microsoft.com/library/ms186957.aspx), l’état actuel de la transaction [(database_transaction_state)](https://msdn.microsoft.com/library/ms186957.aspx)et le [numéro séquentiel dans le journal](https://msdn.microsoft.com/library/ms191459.aspx) de l’enregistrement initial dans le journal des transactions [(database_transaction_begin_lsn)](https://msdn.microsoft.com/library/ms186957.aspx).
+ - **[sys.dm_tran_database_transactions](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md).**
+Cet affichage de gestion dynamique retourne des informations sur les transactions au niveau de la base de données. Pour une transaction de longue durée, les colonnes particulièrement intéressantes incluent l’heure du premier enregistrement de journal [(database_transaction_begin_time)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md), l’état actuel de la transaction [(database_transaction_state)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)et le [numéro séquentiel dans le journal](../backup-restore/recover-to-a-log-sequence-number-sql-server.md) de l’enregistrement initial dans le journal des transactions [(database_transaction_begin_lsn)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md).
 
- - **[DBCC OPENTRAN](https://msdn.microsoft.com/library/ms182792.aspx).**
+ - **[DBCC OPENTRAN](../../t-sql/database-console-commands/dbcc-opentran-transact-sql.md).**
 Cette instruction vous permet d'identifier l'ID du propriétaire de la transaction et éventuellement de retrouver la source de la transaction pour y mettre fin dans les règles de l'art (la valider au lieu de la restaurer).
 
 ### <a name="kill-a-transaction"></a>Supprimer une transaction
-Parfois, il vous suffit de mettre un terme au processus ; vous pouvez avoir à utiliser l’instruction [KILL](https://msdn.microsoft.com/library/ms173730.aspx) . Utilisez cette instruction avec précaution, particulièrement lorsque des processus critiques que vous ne voulez pas supprimer sont en cours d’exécution. Pour plus d’informations, voir [KILL (Transact-SQL)](https://msdn.microsoft.com/library/ms173730.aspx).
+Parfois, il vous suffit de mettre un terme au processus ; vous pouvez avoir à utiliser l’instruction [KILL](../../t-sql/language-elements/kill-transact-sql.md) . Utilisez cette instruction avec précaution, particulièrement lorsque des processus critiques que vous ne voulez pas supprimer sont en cours d’exécution. Pour plus d’informations, voir [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md).
 
 ## <a name="see-also"></a>Voir aussi  
 [Article de support de la base de connaissances - Le journal des transactions augmente de manière inattendue ou est saturé sur un ordinateur SQL Server](https://support.microsoft.com/en-us/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

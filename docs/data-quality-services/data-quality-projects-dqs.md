@@ -15,16 +15,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 041ba9cd08e46fec7d9641b63f191cd924a37db0
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 97f98fe5190f03e1d9ac8e78d5832d3b55c5835f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="data-quality-projects-dqs"></a>Projets de qualité des données (DQS)
   Un projet de qualité des données dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) est un moyen d'utiliser une base de connaissances pour améliorer la qualité des données sources en effectuant des activités de *nettoyage des données* et de *correspondance de données* , puis en exportant les données résultantes dans une base de données SQL Server ou un fichier .csv. Vous pouvez créer un projet de qualité des données comme un projet de nettoyage ou un projet de correspondance pour effectuer les activités respectives. Les projets de nettoyage et de correspondance peuvent être exécutés avec la même base de connaissances, car la connaissance pour le nettoyage et la correspondance des données peut être générée dans la même base de connaissances.  
   
- Un projet de qualité des données présente les avantages suivants :  
+ Un projet de qualité des données présente les avantages suivants :  
   
 -   Il vous permet d'effectuer le nettoyage des données sur vos données sources à l'aide de la connaissance dans une base de connaissances DQS.  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 09/09/2017
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
 |Décrit comment créer un projet de qualité des données.|[Créer un projet de qualité des données](../data-quality-services/create-a-data-quality-project.md)|  
-|Décrit comment ouvrir, déverrouiller, renommer et supprimer un projet de qualité des données.|[Ouvrir, déverrouiller, renommer et supprimer un projet de qualité des données](https://msdn.microsoft.com/library/hh510417.aspx)|  
+|Décrit comment ouvrir, déverrouiller, renommer et supprimer un projet de qualité des données.|[Ouvrir, déverrouiller, renommer et supprimer un projet de qualité des données](open-unlock-rename-and-delete-a-data-quality-project.md)|  
 |Décrit comment ouvrir un projet Integration Services dans [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].|[Ouvrir des projets Integration Services dans Data Quality Client](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
 ## <a name="see-also"></a>Voir aussi  

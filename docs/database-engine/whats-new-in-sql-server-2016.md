@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: 0d4b7b0b668c6ac8ff2808f2d02576c9285e682a
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0feecce7b6f80df96d77273863ca1873bd74523e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Nouveautés du moteur de base de données - SQL Server 2016
@@ -303,13 +303,13 @@ Dans [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], la gestion de sauvegarde SQ
 ####  <a name="multipleTempDB"></a> Base de données tempdb
  Plusieurs améliorations ont été apportées à tempdb :
 
--   Les indicateurs de trace 1117 et 1118 ne sont plus nécessaires pour tempdb. Si vous avez plusieurs fichiers de base de données tempdb, ils continuent tous de croître en même temps en fonction des paramètres de croissance. En outre, toutes les allocations dans tempdb utilisent des extensions uniformes.
+-   Les indicateurs de trace 1117 et 1118 ne sont plus nécessaires pour tempdb. Si vous avez plusieurs fichiers de base de données tempdb, ils continuent tous de croître en même temps en fonction des paramètres de croissance. En outre, toutes les allocations dans tempdb utilisent des extensions uniformes.
 
--   Par défaut, le programme d’installation ajoute autant 8 fichiers tempdb ou autant que le nombre de processeurs, la valeur la plus petite étant retenue.
+-   Par défaut, le programme d’installation ajoute autant 8 fichiers tempdb ou autant que le nombre de processeurs, la valeur la plus petite étant retenue.
 
 -   Pendant l’installation, vous pouvez configurer le nombre de fichiers de base de données tempdb, la taille initiale, la croissance automatique et le positionnement des répertoires à l’aide du nouveau contrôle d’entrée de l’interface utilisateur figurant dans la section Configuration du moteur de base de données - TempDB de l’Assistant Installation de SQL Server.
 
--   La taille initiale par défaut est de 8 Mo et la croissance automatique par défaut est de 64 Mo.
+-   La taille initiale par défaut est de 8 Mo et la croissance automatique par défaut est de 64 Mo.
 
 -   Vous pouvez spécifier plusieurs volumes pour les fichiers de base de données tempdb. Si plusieurs répertoires sont spécifiés, les fichiers de données tempdb sont répartis entre les répertoires selon le principe du tourniquet (round robin).
 
@@ -438,7 +438,7 @@ L’amorçage direct permet de répliquer automatiquement un réplica secondaire
 ###  <a name="Tools"></a> Améliorations apportées aux outils
 
 ####  <a name="SSMS"></a> Management Studio
-Télécharger la dernière version de [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
+Télécharger la dernière version de [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] prend en charge ADAL (Active Directory Authentication Library), actuellement en développement, pour établir une connexion à Microsoft Azure. Cette technologie remplace l’authentification basée sur les certificats utilisée dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
 - L’installation de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] exige l’installation préalable de .NET 4.6. Quand [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] est installé, le programme d’installation installe automatiquement le .NET 4.6.

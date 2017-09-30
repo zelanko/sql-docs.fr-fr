@@ -22,11 +22,11 @@ caps.latest.revision: 40
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d848c756eee54184aa10b5553779d0ebf1807366
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: c5a9e33d2ea86fa57c0e7fee684b2096f4c459f5
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Afficher ou modifier le mode de récupération d'une base de données (SQL Server)
@@ -36,13 +36,13 @@ ms.lasthandoff: 06/22/2017
   
   Un *mode de récupération* est une propriété de base de données qui contrôle la façon dont les transactions sont journalisées, précise si le journal des transactions nécessite (et permet) une sauvegarde et spécifie les types d’opérations de restauration disponibles. Il existe trois modes de récupération : simple, complète et utilisant les journaux de transactions. En règle générale, une base de données utilise le mode de restauration complète ou le mode de récupération simple. Il est possible de modifier le mode de récupération d'une base de données à tout moment. La base de données **model** définit le mode de récupération par défaut des nouvelles bases de données.  
   
-  Pour obtenir une explication plus approfondie des [modèles de récupération](https://msdn.microsoft.com/library/ms189275.aspx), consultez le site web sur les [modèles de récupération](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) de SQL Server de l’équipe [MSSQLTips!](https://www.mssqltips.com/)
+  Pour obtenir une explication plus approfondie des [modèles de récupération](recovery-models-sql-server.md), consultez le site web sur les [modèles de récupération](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) de SQL Server de l’équipe [MSSQLTips!](https://www.mssqltips.com/)
   
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 
--   [Back up the transaction log](https://msdn.microsoft.com/library/ms179478.aspx) **before** switching from the [full recovery or bulk-logged recovery model](https://msdn.microsoft.com/library/ms189275.aspx).  
+-   **Avant** de passer en [mode de récupération complète ou en mode de récupération utilisant les journaux de transactions](recovery-models-sql-server.md), [sauvegardez le journal des transactions](back-up-a-transaction-log-sql-server.md).  
   
 -   La récupération jusqu'à une date et heure n'est pas possible dans le mode de récupération utilisant les journaux de transactions. Si vous exécutez des transactions en mode de récupération utilisant les journaux de transactions, pouvant nécessiter une restauration du journal des transactions, ces transactions peuvent être exposées à des pertes de données. Pour optimiser la possibilité de récupérer les données dans un scénario de récupération après sinistre, passez au mode de récupération utilisant les journaux de transactions dans les conditions suivantes :  
   

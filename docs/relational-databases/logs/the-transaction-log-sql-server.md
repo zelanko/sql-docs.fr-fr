@@ -18,11 +18,11 @@ caps.latest.revision: 65
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d23b661d9fd99090a5140100513886d8351460b9
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6e2b36af7393ecd115feefb5c3dffba5e28d1304
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="the-transaction-log-sql-server"></a>Journal des transactions (SQL Server)
@@ -91,7 +91,7 @@ Caractéristiques du journal des transactions [!INCLUDE[ssDEnoversion](../../inc
   
  Pour plus d'informations, consultez [Facteurs pouvant retarder la troncation du journal](#FactorsThatDelayTruncation), plus loin dans cette rubrique.  
   
-> **REMARQUE** La troncation du journal ne réduit pas la taille du fichier journal physique. Pour réduire la taille physique d'un fichier journal physique, vous devez réduire le fichier journal. Pour plus d'informations sur la réduction de la taille du fichier journal physique, consultez [Gérer la taille du fichier journal des transactions](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
+> **REMARQUE** La troncation du journal ne réduit pas la taille du fichier journal physique. Pour réduire la taille physique d'un fichier journal physique, vous devez réduire le fichier journal. Pour plus d'informations sur la réduction de la taille du fichier journal physique, consultez [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
   
 ##  <a name="FactorsThatDelayTruncation"></a> Facteurs pouvant retarder la troncation du journal  
  Lorsque les enregistrements de journal restent actifs longtemps, la troncation du journal des transactions est retardée et le journal des transactions peut se remplir entièrement, comme nous l’avons déjà mentionné dans cette longue rubrique.  
@@ -106,7 +106,7 @@ Caractéristiques du journal des transactions [!INCLUDE[ssDEnoversion](../../inc
 |1|CHECKPOINT|Aucun point de contrôle n'est apparu depuis la dernière troncation du journal ou le début du journal n'est pas encore allé au-delà d'un fichier journal virtuel. (Tous les modes de récupération)<br /><br /> Il s'agit d'une raison courante de retarder la troncation du journal. Pour plus d’informations, consultez [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
 |2|LOG_BACKUP|Une sauvegarde du journal est requise avant que le journal des transactions puisse être tronqué. (Mode de récupération complète ou mode de récupération utilisant les journaux de transactions uniquement)<br /><br /> Lorsque la sauvegarde de journal suivante est terminée, l'espace du journal peut devenir réutilisable.|  
 |3|ACTIVE_BACKUP_OR_RESTORE|Une sauvegarde de données ou une restauration est en cours (tous les modes de récupération).<br /><br /> Si une sauvegarde des données empêche la troncation du journal, l'annulation de l'opération de sauvegarde peut résoudre le problème immédiat.|  
-|4|ACTIVE_TRANSACTION|Une transaction est active (tous les modes de récupération) :<br /><br /> Une transaction longue peut exister au démarrage de la sauvegarde du fichier journal. Dans ce cas, libérer l'espace peut requérir une autre sauvegarde du fichier journal. Notez que les transactions longues empêchent la troncation du journal dans tous les modes de récupération, notamment le mode de récupération simple, où le journal des transactions est généralement tronqué sur chaque point de contrôle automatique.<br /><br /> Une transaction est différée. Une *transaction différée* est en fait une transaction active dont la restauration est bloquée à cause d'une ressource indisponible. Pour plus d’informations sur les causes des transactions différées et la manière de les faire sortir de l’état différé, consultez [Transactions différées &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md).<br /> <br /> Les transactions à long terme peuvent également remplir le journal des transactions de tempdb. La base de données tempdb est implicitement utilisée par les transactions utilisateur pour les objets internes tels que les tables de travail pour le tri, les fichiers de travail pour le hachage, les tables de travail de curseur et la gestion de version de ligne. Même si la transaction utilisateur inclut uniquement les données de lecture (requêtes `SELECT`), des objets internes peuvent être créés et utilisés dans des transactions utilisateur. Ensuite, le journal des transactions tempdb peut être rempli.|  
+|4|ACTIVE_TRANSACTION|Une transaction est active (tous les modes de récupération) :<br /><br /> Une transaction longue peut exister au démarrage de la sauvegarde du fichier journal. Dans ce cas, libérer l'espace peut requérir une autre sauvegarde du fichier journal. Notez que les transactions longues empêchent la troncation du journal dans tous les modes de récupération, notamment le mode de récupération simple, où le journal des transactions est généralement tronqué sur chaque point de contrôle automatique.<br /><br /> Une transaction est différée. Une *transaction différée* est en fait une transaction active dont la restauration est bloquée à cause d'une ressource indisponible. Pour plus d’informations sur les causes des transactions différées et la manière de les faire sortir de l’état différé, consultez [Transactions différées &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md).<br /> <br /> Les transactions à long terme peuvent également remplir le journal des transactions de tempdb. La base de données tempdb est implicitement utilisée par les transactions utilisateur pour les objets internes tels que les tables de travail pour le tri, les fichiers de travail pour le hachage, les tables de travail de curseur et la gestion de version de ligne. Même si la transaction utilisateur inclut uniquement les données de lecture (requêtes `SELECT`), des objets internes peuvent être créés et utilisés dans des transactions utilisateur. Ensuite, le journal des transactions tempdb peut être rempli.|  
 |5|DATABASE_MIRRORING|La mise en miroir de bases de données est interrompue ou, en mode haute performance, la base de données miroir se trouve derrière la base de données principale de manière significative. (Mode de récupération complète uniquement)<br /><br /> Pour plus d’informations, consultez [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).|  
 |6|REPLICATION|Durant les réplications transactionnelles, les transactions liées aux publications ne sont pas encore remises à la base de données de distribution. (Mode de récupération complète uniquement)<br /><br /> Pour plus d'informations sur la réplication transactionnelle, consultez [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md).|  
 |7|DATABASE_SNAPSHOT_CREATION|Un instantané de base de données est créé. (Tous les modes de récupération)<br /><br /> Il s'agit d'une raison courante et habituellement brève du retard de la troncation du journal.|  
@@ -119,11 +119,11 @@ Caractéristiques du journal des transactions [!INCLUDE[ssDEnoversion](../../inc
 |14|OTHER_TRANSIENT|Cette valeur n'est pas utilisée actuellement.|  
   
 ##  <a name="MinimallyLogged"></a> Opérations pouvant faire l’objet d’une journalisation minimale  
- La*journalisation minimale* implique de ne journaliser que les informations obligatoires pour pouvoir récupérer la transaction sans prendre en charge la récupération jusqu’à une date et heure. Cette rubrique identifie les opérations qui sont journalisées au minimum en [mode de récupération](https://msdn.microsoft.com/library/ms189275.aspx) utilisant les journaux de transactions (ainsi qu’en mode de récupération simple, sauf quand une sauvegarde est en cours).  
+ La*journalisation minimale* implique de ne journaliser que les informations obligatoires pour pouvoir récupérer la transaction sans prendre en charge la récupération jusqu’à une date et heure. Cette rubrique identifie les opérations qui sont journalisées au minimum en [mode de récupération](../backup-restore/recovery-models-sql-server.md) utilisant les journaux de transactions (ainsi qu’en mode de récupération simple, sauf quand une sauvegarde est en cours).  
   
 > **REMARQUE** La journalisation minimale n'est pas prise en charge pour les tables optimisées en mémoire.  
   
-> **AUTRE REMARQUE** En [mode de récupération complète](https://msdn.microsoft.com/library/ms189275.aspx), toutes les opérations en bloc sont entièrement journalisées. Cependant, vous pouvez minimiser la journalisation d'un ensemble d'opérations en bloc en faisant temporairement passer la base de données en mode de récupération utilisant les journaux de transactions pour les opérations en bloc. La journalisation minimale est plus efficace que la journalisation complète et réduit la possibilité pour une opération en bloc de grande envergure d'occuper l'espace disponible du journal des transactions pendant une transaction en bloc. En revanche, si la base de données est endommagée ou perdue lors de la journalisation minimale, vous ne pouvez pas récupérer la base de données jusqu'au point de défaillance.  
+> **AUTRE REMARQUE** En [mode de récupération complète](../backup-restore/recovery-models-sql-server.md), toutes les opérations en bloc sont entièrement journalisées. Cependant, vous pouvez minimiser la journalisation d'un ensemble d'opérations en bloc en faisant temporairement passer la base de données en mode de récupération utilisant les journaux de transactions pour les opérations en bloc. La journalisation minimale est plus efficace que la journalisation complète et réduit la possibilité pour une opération en bloc de grande envergure d'occuper l'espace disponible du journal des transactions pendant une transaction en bloc. En revanche, si la base de données est endommagée ou perdue lors de la journalisation minimale, vous ne pouvez pas récupérer la base de données jusqu'au point de défaillance.  
   
  Les opérations suivantes, qui sont entièrement journalisées en mode de récupération complète, font l'objet d'une journalisation minimale en modes simple et de récupération utilisant les journaux de transactions :  
   
@@ -151,7 +151,7 @@ Lorsque la réplication transactionnelle est activée, les opérations SELECT IN
   
     -   Reconstruction d'un nouveau segment de mémoire DROP INDEX (le cas échéant). (La désallocation de pages d’index pendant une opération [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) est **toujours** entièrement journalisée.)
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="RelatedTasks"></a> Tâches associées  
  **Gestion du journal des transactions**  
   
 -   [Gérer la taille du fichier journal des transactions](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  

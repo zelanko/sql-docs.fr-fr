@@ -15,11 +15,11 @@ caps.latest.revision: 31
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9113272fdba93720cdca5dcedb737092af8d4e1d
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 69fce52c0c651388656f5065b1b7b84ff98cbe82
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Index columnstore - Conseils en matière de chargement de données
@@ -32,13 +32,13 @@ Options et recommandations pour le chargement de données dans un index columnst
 
 ## <a name="what-is-bulk-loading"></a>Qu’est-ce que le chargement en masse ?
 Le *chargement en masse* fait référence à la façon dont un grand nombre de lignes sont ajoutées à un magasin de données. Il s’agit de la façon la plus performante de déplacer des données vers un index columnstore, car il opère sur des lots de lignes. Le chargement en masse remplit des rowgroups à leur capacité maximale et les compresse directement dans le columnstore. Seules les lignes situées à la fin d’un chargement qui ne respectent pas la valeur minimale de 102 400 lignes par rowgroup sont placées dans le deltastore.  
-Pour effectuer un chargement en masse, vous pouvez utiliser l’[utilitaire bcp](https://msdn.microsoft.com/library/ms162802.aspx) ou les [services d’intégration](https://msdn.microsoft.com/library/ms141026.aspx), ou bien sélectionner des lignes dans une table en préproduction.
+Pour effectuer un chargement en masse, vous pouvez utiliser l’[utilitaire bcp](../../tools/bcp-utility.md) ou les [services d’intégration](../../integration-services/sql-server-integration-services.md), ou bien sélectionner des lignes dans une table en préproduction.
 
 ![Chargement dans un index columnstore cluster](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "Chargement dans un index columnstore cluster")  
   
  Comme l’indique le diagramme :  
   
-* Un chargement en masse ne trie pas les données. Les données sont insérées dans des groupes de lignes (rowgroup), dans l’ordre de leur réception.
+* Un chargement en masse ne trie pas les données. Les données sont insérées dans des groupes de lignes (rowgroup), dans l’ordre de leur réception.
 * Si la taille du lot est supérieure ou égale à 102 400, les lignes sont directement insérées dans des rowgroup compressés. Pour une importation en bloc efficace, il est recommandé de choisir une taille de lot supérieure ou égale à 102 400 lignes, car cela permet d’éviter de déplacer les lignes de données vers des rowgroup delta avant leur déplacement final vers des rowgroup compressés par un thread d’arrière-plan, le moteur de tuple.
 * Si la taille du lot est inférieure à 102 400 lignes, ou si les lignes restantes sont en nombre inférieur à 102 400, celles-ci sont chargées dans des rowgroup delta.
 
@@ -59,16 +59,16 @@ Si vous avez un index BTree non cluster sur un index columnstore, aucune optimis
 ## <a name="plan-bulk-load-sizes-to-minimize-delta-rowgroups"></a>Planifier les tailles de chargement en masse pour réduire les rowgroups delta
 Les index columnstore fonctionnent de manière optimale quand la plupart des lignes sont compressées dans le columnstore et qu’elles ne se trouvent pas dans des rowgroups delta. Il est préférable de dimensionner vos chargements afin que les lignes soient directement placées dans le columnstore et d’ignorer autant que possible le deltastore.
 
-Les scénarios suivants décrivent à quel moment les lignes chargées sont directement insérées dans le columnstore ou quand elles sont placées dans le deltastore. Dans l'exemple, chaque rowgroup peut avoir 102 400-1 048 576 lignes par rowgroup. Dans la pratique, la taille maximale d’un rowgroup peut être inférieure à 1 048 576 lignes si la mémoire est très sollicitée.  
+Les scénarios suivants décrivent à quel moment les lignes chargées sont directement insérées dans le columnstore ou quand elles sont placées dans le deltastore. Dans l'exemple, chaque rowgroup peut avoir 102 400-1 048 576 lignes par rowgroup. Dans la pratique, la taille maximale d’un rowgroup peut être inférieure à 1 048 576 lignes si la mémoire est très sollicitée.  
   
 |Lignes à charger en masse|Lignes ajoutées au rowgroup compressé|Lignes ajoutées au rowgroup delta|  
 |-----------------------|-------------------------------------------|--------------------------------------|  
-|102 000|0|102 000|  
-|145 000|145 000<br /><br /> Taille de rowgroup : 145 000|0|  
-|1 048 577|1 048 576<br /><br /> Taille de rowgroup : 1 048 576|1|  
-|2 252 152|2 252 152<br /><br /> Tailles de rowgroup : 1 048 576, 1 048 576, 155 000.|0|  
+|102 000|0|102 000|  
+|145 000|145 000<br /><br /> Taille de rowgroup : 145 000|0|  
+|1 048 577|1,048,576<br /><br /> Taille de rowgroup : 1 048 576|1|  
+|2 252 152|2 252 152<br /><br /> Tailles de rowgroup : 1 048 576, 1 048 576, 155 000.|0|  
   
- L’exemple suivant montre les résultats du chargement de 1 048 577 lignes dans une table. Les résultats indiquent un rowgroup COMPRESSÉ dans le columnstore (comme segments de colonne compressés), et 1 ligne dans le deltastore.  
+ L’exemple suivant montre les résultats du chargement de 1 048 577 lignes dans une table. Les résultats indiquent un rowgroup COMPRESSÉ dans le columnstore (comme segments de colonne compressés), et 1 ligne dans le deltastore.  
   
 ```  
 SELECT object_id, index_id, partition_number, row_group_id, delta_store_hobt_id, state state_desc, total_rows, deleted_rows, size_in_bytes   
@@ -87,23 +87,23 @@ INSERT INTO <columnstore index>  SELECT <list of columns> FROM <Staging Table>
   
 ```  
   
- Cette commande charge les données dans l’index columnstore de manière similaire à BCP ou à une insertion en bloc, mais dans un lot unique. Si le nombre de lignes de la table de mise en lots est inférieur à 102 400, les lignes sont chargées dans un rowgroup delta. Dans le cas contraire, elles sont chargées directement dans un rowgroup compressé.  Une limitation clé était que cette opération d’insertion était monothread. Pour charger des données en parallèle, vous pouviez créer plusieurs tables de mise en lots ou émettre des instructions INSERT/SELECT sans chevauchement des plages de lignes de la table de mise en lots.  Cette limitation disparaît avec SQL Server 2016. La commande suivante charge les données de la table de mise en lots en parallèle, mais vous devez spécifier l’option d'insertion en bloc TABLOCK.  
+ Cette commande charge les données dans l’index columnstore de manière similaire à BCP ou à une insertion en bloc, mais dans un lot unique. Si le nombre de lignes de la table de mise en lots est inférieur à 102 400, les lignes sont chargées dans un rowgroup delta. Dans le cas contraire, elles sont chargées directement dans un rowgroup compressé.  Une limitation clé était que cette opération d’insertion était monothread. Pour charger des données en parallèle, vous pouviez créer plusieurs tables de mise en lots ou émettre des instructions INSERT/SELECT sans chevauchement des plages de lignes de la table de mise en lots.  Cette limitation disparaît avec SQL Server 2016. La commande suivante charge les données de la table de mise en lots en parallèle, mais vous devez spécifier l’option d'insertion en bloc TABLOCK.  
   
 ```  
 INSERT INTO <columnstore index>  WITH (TABLOCK)  SELECT <list of columns> FROM <Staging Table>  
 ```  
   
- Les optimisations disponibles lors du chargement dans un index columnstore cluster à partir d’une table de mise en lots sont les suivantes :  
+ Les optimisations disponibles lors du chargement dans un index columnstore cluster à partir d’une table de mise en lots sont les suivantes :  
   
--   Optimisation du journal : journalisation minimale lors du chargement de données dans le rowgroup compressé. Aucune journalisation minimale lorsque des données sont chargées dans le rowgroup delta.  
+-   Optimisation du journal : journalisation minimale lors du chargement de données dans le rowgroup compressé. Aucune journalisation minimale lorsque des données sont chargées dans le rowgroup delta.  
   
--   Optimisation du verrouillage : lors du chargement dans rowgroup compressé, le verrou X sur le rowgroup est acquis. Toutefois, avec un rowgroup delta, un verrou X est acquis au niveau du rowgroup, mais SQL Server continue de verrouiller les verrous PAGE/EXTENT, car le verrou X du rowgroup ne fait pas partie de la hiérarchie de verrouillage.  
+-   Optimisation du verrouillage : lors du chargement dans rowgroup compressé, le verrou X sur le rowgroup est acquis. Toutefois, avec un rowgroup delta, un verrou X est acquis au niveau du rowgroup, mais SQL Server continue de verrouiller les verrous PAGE/EXTENT, car le verrou X du rowgroup ne fait pas partie de la hiérarchie de verrouillage.  
   
  Si vous disposez d’un ou plusieurs index non cluster, aucune optimisation du verrouillage ou du journal n’est effectuée pour l’index proprement dit, mais les optimisations de l’index columnstore cluster décrites ci-dessus ont toujours lieu.  
   
 ## <a name="what-is-trickle-insert"></a>Qu’est-ce que l’insertion segmentée ?
 
-L’*insertion segmentée* fait référence à la façon dont des lignes individuelles sont déplacées vers l’index columnstore. Les insertions segmentées utilisent l’instruction [INSERT INTO](https://msdn.microsoft.com/library/ms174335.aspx). Avec l’insertion segmentée, toutes les lignes sont placées dans le deltastore. Cette fonction est utile pour les lignes en petit nombre, mais peu pratique pour les chargements volumineux.
+L’*insertion segmentée* fait référence à la façon dont des lignes individuelles sont déplacées vers l’index columnstore. Les insertions segmentées utilisent l’instruction [INSERT INTO](../../t-sql/statements/insert-transact-sql.md). Avec l’insertion segmentée, toutes les lignes sont placées dans le deltastore. Cette fonction est utile pour les lignes en petit nombre, mais peu pratique pour les chargements volumineux.
   
 ```  
 INSERT INTO <table-name> VALUES (<set of values>)  

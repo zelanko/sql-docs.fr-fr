@@ -21,10 +21,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e8fbc50a3d0e2c8e9df837f40bdfa5b787225fb3
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 7a78735cc1ccee742982c51a12bab2b5d47b046e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-a-push-subscription"></a>Créer un abonnement par émission (push)
@@ -32,7 +32,7 @@ ms.lasthandoff: 08/03/2017
   
  
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- Créez un abonnement envoyé sur le serveur de publication ou l'Abonné à l'aide de l'Assistant Nouvel abonnement. Exécutez les étapes de l'Assistant pour :  
+ Créez un abonnement envoyé sur le serveur de publication ou l'Abonné à l'aide de l'Assistant Nouvel abonnement. Exécutez les étapes de l'Assistant pour :  
   
 -   Spécifier le serveur de publication et la publication.  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Spécifiez une planification de la synchronisation et le moment choisi pour initialiser l'Abonné.  
   
--   Spécifiez les autres options pour les publications de fusion : type d'abonnement et valeurs pour le filtrage paramétré.  
+-   Spécifiez les autres options pour les publications de fusion : type d'abonnement et valeurs pour le filtrage paramétré.  
   
 -   Spécifiez les autres options pour les publications transactionnelles qui autorisent la mise à jour des abonnements : si les Abonnés doivent valider immédiatement les modifications sur le serveur de publication ou les écrire dans une file d'attente ou encore les informations d'identification utilisées pour la connexion de l'Abonné au serveur de publication.  
   
@@ -95,7 +95,7 @@ ms.lasthandoff: 08/03/2017
   
     -   Si la valeur de **allow_push** est **0**, exécutez [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), en spécifiant **allow_push** pour **@property** et **true** pour **@value**.  
   
-2.  Au niveau du serveur de publication sur la base de données de publication, exécutez [sp_addsubscription](https://msdn.microsoft.com/library/ms181702.aspx). Spécifiez **@publication**, de **@subscriber** et **@destination_db**. Spécifiez la valeur **push** pour **@subscription_type**. Pour plus d'informations sur la mise à jour des abonnements, consultez [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/ms152769.aspx).  
+2.  Au niveau du serveur de publication sur la base de données de publication, exécutez [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md). Spécifiez **@publication**, de **@subscriber** et **@destination_db**. Spécifiez la valeur **push** pour **@subscription_type**. Pour plus d'informations sur la mise à jour des abonnements, consultez [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 3.  Au niveau du serveur de publication sur la base de données de publication, exécutez [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Spécifiez les éléments suivants :  
   

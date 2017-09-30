@@ -14,11 +14,11 @@ caps.latest.revision: 5
 author: jodebrui
 ms.author: jodebrui
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: edf397a4e4922167ae2eafd2c8e78ac97858bd37
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 13128a755dcfd302224a8291a006878a68bdd09f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="overview-and-usage-scenarios"></a>Vue d’ensemble et scénarios d’utilisation
@@ -63,8 +63,8 @@ Les scénarios de charge de travail les plus fréquents sont les suivants : nég
 Utilisez des tables optimisées en mémoire pour vos tables de transactions principales, c’est-à-dire pour les tables qui présentent les transactions les plus critiques pour les performances. Utilisez des procédures stockées compilées en mode natif pour optimiser l’exécution de la logique associée à la transaction commerciale. Plus vous pourrez transmettre la logique aux procédures stockées de la base de données, plus vous tirerez profit de l’OLTP en mémoire.
 
 Pour commencer avec une application existante :
-1. Utilisez le [rapport d’analyse des performances de transaction](https://msdn.microsoft.com/library/dn205133.aspx) pour identifier les objets à migrer. 
-2. Utilisez le [Conseiller d’optimisation de la mémoire](https://msdn.microsoft.com/library/dn284308.aspx) et le [Conseiller de compilation native](https://msdn.microsoft.com/library/dn358355.aspx) pour faciliter la migration.
+1. Utilisez le [rapport d’analyse des performances de transaction](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) pour identifier les objets à migrer. 
+2. Utilisez le [Conseiller d’optimisation de la mémoire](memory-optimization-advisor.md) et le [Conseiller de compilation native](native-compilation-advisor.md) pour faciliter la migration.
 
 #### <a name="customer-case-studies"></a>Études de cas clients
 
@@ -82,8 +82,8 @@ Les modèles d’application courants sont les suivants : intégration de relev�
 
 Utilisez une table optimisée en mémoire pour l’intégration de données. Si l’intégration consiste principalement en des insertions (plutôt que des mises à jour) et l’encombrement de stockage des données dans l’OLTP en mémoire est un critère important :
 
-- Utilisez un travail pour décharger régulièrement les données par lot dans une table sur disque comportant un [index Columnstore cluster](https://msdn.microsoft.com/library/gg492088.aspx), à l’aide d’un travail qui exécute `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`; ou
-- Utilisez une [table optimisée en mémoire temporelle](https://msdn.microsoft.com/library/mt590207.aspx) pour gérer les données d’historique ; dans ce mode, les données d’historique se trouvent sur le disque et le déplacement des données est géré par le système.
+- Utilisez un travail pour décharger régulièrement les données par lot dans une table sur disque comportant un [index Columnstore cluster](../indexes/columnstore-indexes-overview.md), à l’aide d’un travail qui exécute `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`; ou
+- Utilisez une [table optimisée en mémoire temporelle](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) pour gérer les données d’historique ; dans ce mode, les données d’historique se trouvent sur le disque et le déplacement des données est géré par le système.
 
 Le référentiel d’exemples SQL Server contient une application de réseau de distribution d’électricité intelligent qui utilise une table optimisée en mémoire temporelle, un type de table optimisée en mémoire et une procédure stockée compilée en mode natif afin d’accélérer l’intégration de données tout en gérant l’encombrement de stockage des données de capteur dans l’OLTP en mémoire : 
 
@@ -228,10 +228,10 @@ Le script suivant illustre les objets de l’OLTP en mémoire que vous pouvez cr
 - Vous trouverez la démonstration des performances avec l’OLTP en mémoire ici : [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 - [Vidéo de 17 minutes expliquant l’OLTP en mémoire et présentant la démonstration](https://www.youtube.com/watch?v=l5l5eophmK4) (démonstration à 8:25)
 - [Script pour activer l’OLTP en mémoire et définir les options recommandées](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
-- [Documentation principale sur l’OLTP en mémoire](https://msdn.microsoft.com/library/dn133186.aspx)
+- [Documentation principale sur l’OLTP en mémoire](in-memory-oltp-in-memory-optimization.md)
 - [Avantages en matière de performances et d’utilisation des ressources de l’OLTP en mémoire dans Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
 - [Improving temp table and table variable performance using memory optimization](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
 [Optimize Performance using In-Memory Technologies in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)
-- [Tables temporelles à système par version avec tables optimisées en mémoire](https://msdn.microsoft.com/library/mt590207.aspx)
+- [Tables temporelles à système par version avec tables optimisées en mémoire](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 - [In-Memory OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx)(OLTP en mémoire – Modèles de charge de travail courants et considérations relatives à la migration). 
 

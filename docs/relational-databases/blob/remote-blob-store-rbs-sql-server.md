@@ -17,11 +17,11 @@ caps.latest.revision: 19
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5dd24af4232914ff6b86e036827364f1cb8c16a1
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 11edeb0ba81666ecf64adf189bd704de81af5a32
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Magasin d'objets blob distants (RBS) (SQL Server)
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
  Certains fournisseurs de solutions de stockage tiers ont développé des fournisseurs RBS qui sont conformes à ces API standard et qui prennent en charge le stockage d'objets blob sur différentes plateformes de stockage.  
   
 ## <a name="rbs-requirements"></a>Conditions requises du magasin d'objets blob distants (RBS)  
- Le magasin d'objets blob distants nécessite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise pour le serveur de base de données principal sur lequel les métadonnées d'objets blob sont stockées.  Cependant, si vous utilisez le fournisseur FILESTREAM fourni, vous pouvez stocker les objets blob sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard. Pour vous connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], RBS nécessite au moins la version 11 du pilote ODBC pour [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] et la version 13 du pilote ODBC pour [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. Les pilotes sont disponibles à la page [Download ODBC Driver for SQL Server (Télécharger le pilote ODBC pour SQL Server)](https://msdn.microsoft.com/library/mt703139.aspx).   
+ - Le magasin d'objets blob distants nécessite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise pour le serveur de base de données principal sur lequel les métadonnées d'objets blob sont stockées.  Cependant, si vous utilisez le fournisseur FILESTREAM fourni, vous pouvez stocker les objets blob sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard. Pour vous connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], RBS nécessite au moins la version 11 du pilote ODBC pour [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] et la version 13 du pilote ODBC pour [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. Les pilotes sont disponibles à la page [Download ODBC Driver for SQL Server (Télécharger le pilote ODBC pour SQL Server)](https://msdn.microsoft.com/library/mt703139.aspx).    
   
  Le magasin d'objets blob distants comprend un fournisseur FILESTREAM qui vous permet de stocker les objets blob sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous souhaitez utiliser le magasin d'objets blob distants pour stocker des objets blob dans une solution de stockage différente, vous devez utiliser un fournisseur RBS tiers, qui aura été développé pour cette solution de stockage particulière, ou bien développer un fournisseur RBS personnalisé à l'aide de l'API RBS. Un exemple de fournisseur stockant des objets blob sur un système de fichiers NTFS est disponible parmi les ressources pédagogiques du site [CodePlex](http://go.microsoft.com/fwlink/?LinkId=210190).  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 06/22/2017
  Lorsque vous utilisez RBS, la clé symétrique du magasin d'informations d'identification doit régulièrement faire l’objet d’une rotation. Il s'agit d’une meilleure pratique de sécurité courante permettant de suivre les stratégies de sécurité de l'organisation.  Pour effectuer la rotation de la clé symétrique du magasin d’informations d'identification RBS, il est possible d’utiliser le [script ci-dessous](#Key_rotation) dans la base de données RBS.  Vous pouvez également utiliser ce script pour migrer vers des propriétés de chiffrement plus fortes, notamment la longueur de l'algorithme ou de la clé. Sauvegardez votre base de données avant d’effectuer la rotation de la clé.  Le script comprend à la fin quelques étapes de vérification.  
 Si vos stratégies de sécurité nécessitent d’autres propriétés de clé (par exemple, la longueur de l’algorithme ou de la clé) que celles qui sont fournies, le script peut être utilisé comme modèle. Modifiez les propriétés de la clé à deux endroits : 1) la création de la clé temporaire 2) la création de la clé permanente.  
   
-##  <a name="rbsresources"></a> RBS resources  
+##  <a name="rbsresources"></a> Ressources RBS  
   
  **Exemples RBS**  
  Les exemples de magasins d'objets blob distants (RBS) disponibles sur le site [CodePlex](http://go.microsoft.com/fwlink/?LinkId=210190) montrent comment développer une application RBS et comment développer et installer un fournisseur RBS personnalisé.  
@@ -85,7 +85,7 @@ Si vos stratégies de sécurité nécessitent d’autres propriétés de clé (p
  **Blog RBS**  
  Le [blog du magasin d'objets blob distants (RBS)](http://go.microsoft.com/fwlink/?LinkId=210315) fournit des informations supplémentaires qui vous aideront à mieux comprendre, déployer et gérer les magasins d'objets blob distants.  
   
-##  <a name="Key_rotation"></a> Key rotation script  
+##  <a name="Key_rotation"></a> Script de permutation des clés  
  Cet exemple crée une procédure stockée nommée `sp_rotate_rbs_symmetric_credential_key` pour remplacer la clé symétrique du magasin d’informations d’identification RBS actuellement utilisée  
 par celle de votre choix.  Ce remplacement est préférable s’il existe une stratégie de sécurité qui exige   
 une permutation des clés régulière ou si des algorithmes spécifiques le précisent.  

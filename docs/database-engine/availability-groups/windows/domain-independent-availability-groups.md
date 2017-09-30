@@ -1,7 +1,7 @@
 ---
 title: "Groupes de disponibilité indépendants du domaine (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/12/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], domain independent
 ms.assetid: 
 caps.latest.revision: 
-author: MikeRayMSFT
+author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 847c34fedcaa48149a6545d830af021aae26f530
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: b6953bbfb9af88bb0d6c4bb575feb97557c43ea2
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
@@ -45,7 +45,7 @@ La figure suivante montre un exemple de groupe de disponibilité indépendant du
 
 ![Cluster de groupe de travail avec deux nœuds joints à un domaine][2]
 
-Un groupe de disponibilité indépendant du domaine ne sert pas seulement dans les scénarios de récupération d’urgence ou de sites multiples. Il peut être déployé dans un centre de données unique et même utilisé avec un [groupe de disponibilité de base](https://msdn.microsoft.com/library/mt614935.aspx) (également appelé groupe de disponibilité Standard Edition) pour fournir une architecture similaire à ce qui était atteint en utilisant une mise en miroir de bases de données avec des certificats comme indiqué.
+Un groupe de disponibilité indépendant du domaine ne sert pas seulement dans les scénarios de récupération d’urgence ou de sites multiples. Il peut être déployé dans un centre de données unique et même utilisé avec un [groupe de disponibilité de base](basic-availability-groups-always-on-availability-groups.md) (également appelé groupe de disponibilité Standard Edition) pour fournir une architecture similaire à ce qui était atteint en utilisant une mise en miroir de bases de données avec des certificats comme indiqué.
 
 
 ![Vue générale d’un groupe de disponibilité Standard Edition][3]
@@ -123,7 +123,7 @@ CREATE CERTIFICATE [InstanceB_Cert]
 AUTHORIZATION InstanceB_User
 FROM FILE = 'Restore_path\InstanceB_Cert.cer'
 ```
-12. Créez le point de terminaison qui sera utilisé par le groupe de disponibilité sur chaque instance qui sera un réplica. Pour les groupes de disponibilité, le point de terminaison doit être de type DATABASE_MIRRORING. Le point de terminaison utilise le certificat créé à l’étape 4 pour cette instance à des fins d’authentification. Un exemple de syntaxe est indiqué ci-dessous pour créer un point de terminaison à l’aide d’un certificat. Utilisez la méthode de chiffrement appropriée et d’autres options adaptées à votre environnement. Pour plus d’informations sur les options disponibles, consultez [CREATE ENDPOINT (Transact-SQL)](https://msdn.microsoft.com/library/ms181591.aspx).
+12. Créez le point de terminaison qui sera utilisé par le groupe de disponibilité sur chaque instance qui sera un réplica. Pour les groupes de disponibilité, le point de terminaison doit être de type DATABASE_MIRRORING. Le point de terminaison utilise le certificat créé à l’étape 4 pour cette instance à des fins d’authentification. Un exemple de syntaxe est indiqué ci-dessous pour créer un point de terminaison à l’aide d’un certificat. Utilisez la méthode de chiffrement appropriée et d’autres options adaptées à votre environnement. Pour plus d’informations sur les options disponibles, consultez [CREATE ENDPOINT (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md).
 ```
 CREATE ENDPOINT DIAG_EP
 STATE = STARTED
@@ -141,7 +141,7 @@ FOR DATABASE_MIRRORING (
 GRANT CONNECT ON ENDPOINT::DIAG_EP TO 'InstanceX_User';
 GO
 ```
-14. Une fois que les certificats sous-jacents et la sécurité du point de terminaison sont configurés, créez le groupe de disponibilité à l’aide de la méthode de votre choix. Il est recommandé de manuellement sauvegarder, copier et restaurer la sauvegarde utilisée pour initialiser le réplica secondaire. Vous pouvez aussi utiliser [l’amorçage automatique](https://msdn.microsoft.com/library/mt735149.aspx). L’utilisation de l’Assistant pour initialiser les réplicas secondaires implique d’utiliser des fichiers Server Message Block (SMB), ce qui risque de ne pas fonctionner quand vous utilisez un cluster de groupe de travail non joint à un domaine.
+14. Une fois que les certificats sous-jacents et la sécurité du point de terminaison sont configurés, créez le groupe de disponibilité à l’aide de la méthode de votre choix. Il est recommandé de manuellement sauvegarder, copier et restaurer la sauvegarde utilisée pour initialiser le réplica secondaire. Vous pouvez aussi utiliser [l’amorçage automatique](automatically-initialize-always-on-availability-group.md). L’utilisation de l’Assistant pour initialiser les réplicas secondaires implique d’utiliser des fichiers Server Message Block (SMB), ce qui risque de ne pas fonctionner quand vous utilisez un cluster de groupe de travail non joint à un domaine.
 15. Si vous créez un écouteur, vérifiez que son nom et son adresse IP sont inscrits dans DNS.
 
 ### <a name="next-steps"></a>Étapes suivantes 
@@ -151,8 +151,6 @@ GO
 - [Utiliser la boîte de dialogue Nouveau groupe de disponibilité (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 - [Créer un groupe de disponibilité avec Transact-SQL](create-an-availability-group-transact-sql.md)
-
->Ce contenu a été écrit par [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt), Microsoft Most Valued Professional.
 
 <!--Image references-->
 [1]: ./media/diag-wsfc-two-data-centers-same-domain.png

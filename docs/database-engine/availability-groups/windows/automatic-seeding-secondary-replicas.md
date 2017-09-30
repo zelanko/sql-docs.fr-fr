@@ -3,7 +3,7 @@ title: "Amorçage automatique pour les réplicas secondaires (SQL Server) | Micr
 description: "Utilisez l’amorçage automatique pour initialiser les réplicas secondaires."
 services: data-lake-analytics
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/25/2017
 ms.prod:
 - sql-server-2016
 - sql-server-2017
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Automatic seeding [SQL Server], secondary replica
 ms.assetid: 
 caps.latest.revision: 
-author: MikeRayMSFT
+author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: a472109765c0ac77e9064a385a7125877cee0423
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8c1fc9f84428fc60283d6d53bab21a90b5c4049d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>Amorçage automatique pour les réplicas secondaires
@@ -38,7 +38,7 @@ Dans SQL Server 2012 et 2014, la seule façon d’initialiser un réplica secon
 Voici des considérations sur l’utilisation de l’amorçage automatique :
 
 * [Impact en termes de performances et de journal des transactions sur le réplica principal](#performance-and-transaction-log-impact-on-the-primary-replica)
-* [Disposition des disques](#disk-layout)
+* [Disposition du disque](#disk-layout)
 * [Sécurité](#security)
 
 
@@ -273,11 +273,9 @@ Le tableau suivant répertorie les événements étendus relatifs à l’amorça
 
 [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)
 
-[CREATE AVAILABILITY GROUP (Transact-SQL)](https://msdn.microsoft.com/library/ff878399.aspx)
+[CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
 
 [Guide de surveillance et de résolution des problèmes des groupes de disponibilité Always On](http://technet.microsoft.com/library/dn135328.aspx)
-
-> [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt), Microsoft Most Valued Professional, a contribué à la rédaction de cet article.
 
 <!--Image references-->
 [1]: ./media/auto-seed-new-availability-group.png

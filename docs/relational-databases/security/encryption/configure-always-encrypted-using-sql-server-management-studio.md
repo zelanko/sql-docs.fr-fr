@@ -20,17 +20,17 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 80c832db0ffdb9a3666b60a19fdf11a01750b2e1
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 097ce7fb331df64de9b293a6af9e05e7d95f1b37
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configurer Always Encrypted à l’aide de SQL Server Management Studio
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Cet article décrit les tâches de configuration d’Always Encrypted et de gestion des bases de données qui utilisent Always Encrypted avec [SSMS (SQL Server Management Studio)](https://msdn.microsoft.com/library/mt238290.aspx).
+Cet article décrit les tâches de configuration d’Always Encrypted et de gestion des bases de données qui utilisent Always Encrypted avec [SSMS (SQL Server Management Studio)](../../../ssms/download-sql-server-management-studio-ssms.md).
 
 Quand vous utilisez SSMS pour configurer Always Encrypted, SSMS gère à la fois les clés Always Encrypted et les données sensibles. Par conséquent, les clés et les données apparaissent en texte clair à l’intérieur du processus SSMS. Ainsi, il est important que vous exécutiez SSMS sur un ordinateur sécurisé. Si votre base de données est hébergée dans SQL Server, vérifiez que SSMS est exécuté sur un ordinateur autre que celui qui héberge votre instance de SQL Server. L’objectif principal d’Always Encrypted étant de garantir la sécurité des données sensibles chiffrées même si le système de base de données est compromis, l’exécution d’un script PowerShell qui traite des clés ou des données sensibles sur l’ordinateur SQL Server peut réduire ou annuler les avantages de la fonctionnalité. Pour obtenir des recommandations supplémentaires, consultez [Considérations en matière de sécurité pour la gestion des clés](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement).
 
@@ -89,7 +89,7 @@ En supposant que `SSN` est une colonne `char(11)` chiffrée dans la table `Patie
 
 ![always-encrypted-patients](../../../relational-databases/security/encryption/media/always-encrypted-patients.png)
  
-### <a name="en-dis"></a> Enabling and disabling Always Encrypted for a database connection   
+### <a name="en-dis"></a> Activation et désactivation d’Always Encrypted pour une connexion de base de données   
 
 L’activation d’Always Encrypted pour une connexion de base de données indique au fournisseur de données .NET Framework pour SQL Server, utilisé par SQL Server Management Studio, de tenter d’effectuer ces actions de manière transparente :   
 -   Déchiffrer les valeurs qui sont extraites des colonnes chiffrées et retournées dans les résultats de la requête.   
@@ -105,7 +105,7 @@ Pour désactiver Always Encrypted pour une connexion de base de données, spéci
 >  4.   Sélectionnez l’onglet **Propriétés supplémentaires** et saisissez `Column Encryption Setting=Enabled` (pour activer le comportement Always Encrypted) ou supprimez le paramètre (pour désactiver le comportement Always Encrypted).   
 >  5.   Cliquez sur **Se connecter**.   
    
-### <a name="param"></a>Parameterization for Always Encrypted   
+### <a name="param"></a>Paramétrage pour Always Encrypted   
  
 Le paramétrage d’Always Encrypted est une fonctionnalité de SQL Server Management Studio qui convertit automatiquement les variables Transact-SQL en paramètres de requête (instances de [SqlParameter Class](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)). (Nécessite au moins SSMS version 17.0.) Cela permet au fournisseur de données .NET Framework pour SQL Server sous-jacent de détecter les données ciblant les colonnes chiffrées et de chiffrer ces données avant de les envoyer à la base de données. 
   

@@ -20,10 +20,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
-ms.openlocfilehash: 141c83e009e1cf135690297442c6a4864a871bfc
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a5f180c837af757fd5a8df7f356b8c644916612f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Créer une sauvegarde complète de base de données (SQL Server)
@@ -153,7 +153,7 @@ ms.lasthandoff: 07/31/2017
 22. Dans la section **Chiffrement** , sélectionnez la case à cocher **Chiffrer la sauvegarde** si vous souhaitez utiliser un chiffrement pour la sauvegarde. Utilisez la liste déroulante **Algorithme** pour sélectionner un algorithme de chiffrement.  Utilisez la liste déroulante **ertificat ou clé asymétrique** pour sélectionner un certificat ou une clé asymétrique existants. Le chiffrement est pris en charge dans SQL Server 2014 ou les versions ultérieures. Pour plus d’informations sur les options de chiffrement, consultez [Sauvegarder la base de données &#40;page Options de sauvegarde&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md).  
   
   
-Vous pouvez utiliser l’ [Assistant Plan de maintenance](https://msdn.microsoft.com/library/ms191002.aspx) pour créer des sauvegardes de bases de données. 
+Vous pouvez utiliser l’ [Assistant Plan de maintenance](../maintenance-plans/use-the-maintenance-plan-wizard.md) pour créer des sauvegardes de bases de données. 
 
 ### <a name="examples"></a>Exemples  
 #### <a name="a--full-back-up-to-disk-to-default-location"></a>**A.  Sauvegarde complète sur disque à l’emplacement par défaut**

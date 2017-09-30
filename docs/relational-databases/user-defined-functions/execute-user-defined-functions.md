@@ -17,18 +17,18 @@ caps.latest.revision: 35
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08287922d15adabd1128da2edbb1caa65bc3f85f
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 121ec11d9bf1dbd380716da37e78463467d41f54
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="execute-user-defined-functions"></a>Exécuter des fonctions définies par l’utilisateur
   Exécuter une fonction définie par l’utilisateur à l’aide de Transact-SQL
   
 
-> **Remarque :** Consultez la rubrique de la  [fonction définie par l’utilisateur](https://msdn.microsoft.com/library/ms191007.aspx) et [Créer une fonction (Transact SQL)](https://msdn.microsoft.com/library/ms186755.aspx) pour en savoir plus sur les fonctions définies par l’utilisateur. 
+> **Remarque :** Consultez la rubrique de la  [fonction définie par l’utilisateur](user-defined-functions.md) et [Créer une fonction (Transact SQL)](../../t-sql/statements/create-function-transact-sql.md) pour en savoir plus sur les fonctions définies par l’utilisateur. 
   
  
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
 ###  <a name="Security"></a> Sécurité  
   
- Aucune autorisation n’est requise pour exécuter l’instruction [EXECUTE](https://msdn.microsoft.com/library/ms188332.aspx) . Cependant, des autorisations **sont requises** sur les éléments sécurisables référencés dans la chaîne EXECUTE. Par exemple, si la chaîne contient une instruction [INSERT](https://msdn.microsoft.com/library/ms174335.aspx) , l’appelant de l’instruction EXECUTE doit posséder l’autorisation INSERT sur la table cible. Les autorisations sont vérifiées au moment où l'instruction EXECUTE est rencontrée, même si celle-ci est incluse dans un module. Pour plus d’informations, consultez [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
+ Aucune autorisation n’est requise pour exécuter l’instruction [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) . Cependant, des autorisations **sont requises** sur les éléments sécurisables référencés dans la chaîne EXECUTE. Par exemple, si la chaîne contient une instruction [INSERT](../../t-sql/statements/insert-transact-sql.md) , l’appelant de l’instruction EXECUTE doit posséder l’autorisation INSERT sur la table cible. Les autorisations sont vérifiées au moment où l'instruction EXECUTE est rencontrée, même si celle-ci est incluse dans un module. Pour plus d’informations, consultez [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   

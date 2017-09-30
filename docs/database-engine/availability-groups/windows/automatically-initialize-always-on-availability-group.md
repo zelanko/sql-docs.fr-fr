@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: v-saume
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
-ms.openlocfilehash: 6184d0cfedb90d16f1a7c1af109003908e481a89
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 151aa8876623f8d3cca40a953b318f0c0663f92e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Initialiser automatiquement le groupe de disponibilité Always On
@@ -30,7 +30,7 @@ SQL Server 2016 propose un amorçage automatique des groupes de disponibilité.
 
 Pour plus d’informations, consultez [Amorçage automatique pour les réplicas secondaires](automatic-seeding-secondary-replicas.md).
  
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Configuration requise
 
 Dans SQL Server 2016, l’amorçage automatique exige que le chemin des fichiers de données et des fichiers journaux soit le même sur chaque instance de SQL Server qui participe au groupe de disponibilité. Dans SQL Server 2017, vous pouvez utiliser différents chemins, mais Microsoft recommande d’utiliser les mêmes chemins quand tous les réplicas sont hébergés sur la même plateforme (par exemple Windows ou Linux). Les groupes de disponibilité multiplateformes ont des chemins différents pour les réplicas. Pour plus d’informations, consultez [Disposition des disques](automatic-seeding-secondary-replicas.md#disklayout).
 
@@ -284,7 +284,7 @@ Avant d’ajouter une base de données à un groupe de disponibilité par amorç
 
 ## <a name="resources"></a>Ressources
 
-[CREATE AVAILABILITY GROUP (Transact-SQL)](https://msdn.microsoft.com/library/ff878399.aspx)
+[CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
 
 [Guide de surveillance et de résolution des problèmes des groupes de disponibilité Always On](http://technet.microsoft.com/library/dn135328.aspx)
 

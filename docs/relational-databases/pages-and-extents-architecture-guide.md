@@ -17,11 +17,11 @@ caps.latest.revision: 2
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 970981a0f8db1baa802a68ea1186211f031488e6
+ms.translationtype: HT
+ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
+ms.openlocfilehash: 0b7dc681acb41c7d90360ae67331621a738a7cfd
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/20/2017
 
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guide d’architecture des pages et des étendues
@@ -45,7 +45,7 @@ Le tableau suivant présente les types de page utilisés dans les fichiers de do
 |-------|-------|
 |Data |Lignes de données avec toutes les données, sauf text, ntext, image, nvarchar(max), varchar(max), varbinary(max) et xml, lorsque le texte dans la ligne est défini sur ACTIVÉ (ON). |
 |Index |Des entrées d'index. |
-|Test/Image |Types de données d’objets volumineux : (text, ntext, image, nvarchar(max), varchar(max), varbinary(max) et données xml) <br> Colonnes de longueur variable lorsque la ligne de données dépasse 8 Ko : (varchar, nvarchar, varbinary et sql_variant) |
+|Texte/image |Types de données d’objets volumineux : (text, ntext, image, nvarchar(max), varchar(max), varbinary(max) et données xml) <br> Colonnes de longueur variable lorsque la ligne de données dépasse 8 Ko : (varchar, nvarchar, varbinary et sql_variant) |
 |GAM (Global Allocation Map), SGAM (Shared Global Allocation Map) |Informations précisant si ces extensions sont allouées. |
 |Page Free Space (PFS) |Informations sur l'allocation des pages et sur l'espace disponible sur ces pages. |
 |page IAM (Index Allocation Map) |Informations sur les extensions utilisées par une table ou un index par unité l'allocation. |

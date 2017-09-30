@@ -17,10 +17,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 6d75e0e40c5642993cb17b09e421fbfebf40f87a
-ms.openlocfilehash: cd1931ef0f77c0a1e31c29833f38c51416e267c8
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 9076e3fbddd2af5459e4d8895ce969c61a4315ad
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Gérer la taille du fichier journal des transactions
@@ -78,7 +78,7 @@ Surveiller l’utilisation de l’espace du journal via [DBCC SQLPERF (LOGSPACE)
 -   Pour modifier la taille actuelle du fichier selon les unités Ko, Mo, Go et To, utilisez l'option SIZE.  
   -   Pour modifier l'incrément de croissance, utilisez l'option FILEGROWTH. Une valeur 0 indique que la croissance automatique est désactivée et qu'aucun espace supplémentaire n'est autorisé. Un faible incrément de croissance automatique d'un fichier journal peut réduire les performances. L'incrément de croissance d'un fichier journal doit être suffisamment important pour éviter une expansion fréquente. Un incrément de croissance par défaut de 10 % convient généralement.  
 
-Pour plus d’informations sur la modification de la propriété de croissance d’un fichier journal, consultez [ALTER DATABASE (Transact-SQL)](https://msdn.microsoft.com/library/ms174269.aspx).  
+Pour plus d’informations sur la modification de la propriété de croissance d’un fichier journal, consultez [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
   
 -   Pour contrôler la taille maximale d'un fichier journal en Ko, Mo, Go et To ou affecter la valeur UNLIMITED à la croissance, utilisez l'option MAXSIZE.  
   

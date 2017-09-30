@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7b520a605648e8619f8462ae9125842fdeb37ebc
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d0fea4f1ffe507d0b410a16a668a138a7f0dee2e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-backup-to-url"></a>Sauvegarde SQL Server vers une URL
@@ -90,11 +90,11 @@ ms.lasthandoff: 09/01/2017
   
 -   La sauvegarde dans le stockage Premium n’est pas prise en charge.  
   
--   La taille maximale de sauvegarde prise en charge à l’aide d’un objet blob de pages est limitée par la taille maximale d’un objet blob de page unique, c’est-à-dire 1 To. La taille maximale de sauvegarde prise en charge à l’aide d’objets blob de blocs n’est pas limitée par la taille maximale d’un objet blob de blocs unique, qui est de 200 Go, car la sauvegarde vers des objets blob de blocs prend en charge un système de distribution permettant d’accepter des tailles de sauvegarde sensiblement plus importantes.  
+-   La taille maximale de sauvegarde prise en charge à l’aide d’un objet blob de pages est limitée par la taille maximale d’un objet blob de page unique, c’est-à-dire 1 To. La taille maximale de sauvegarde prise en charge à l’aide d’objets blob de blocs n’est pas limitée par la taille maximale d’un objet blob de blocs unique, qui est de 200 Go, car la sauvegarde vers des objets blob de blocs prend en charge un système de distribution permettant d’accepter des tailles de sauvegarde sensiblement plus importantes.  
   
 -   Vous pouvez émettre des instructions de sauvegarde ou de restauration à l’aide de TSQL, SMO, des applets de commande PowerShell, ou de l’Assistant Restauration ou Sauvegarde de SQL Server Management Studio.   
   
--   La création d'un nom d'unité logique n'est pas prise en charge. Par conséquent, l'ajout d'une URL comme unité de sauvegarde à l'aide de sp_dumpdevice ou de SQL Server Management Studio n'est pas pris en charge.  
+-   La création d'un nom d'unité logique n'est pas prise en charge. Par conséquent, l'ajout d'une URL comme unité de sauvegarde à l'aide de sp_dumpdevice ou de SQL Server Management Studio n'est pas pris en charge.  
   
 -   L'ajout d'objets blob de sauvegarde existants n'est pas pris en charge. Des sauvegardes vers un objet blob existant peuvent être remplacées uniquement à l’aide de l’option **WITH FORMAT** . Toutefois, lors de l’utilisation de sauvegardes de capture instantanée de fichier (avec l’argument **WITH FILE_SNAPSHOT** ), l’argument **WITH FORMAT** n’est pas autorisé, pour éviter de laisser orphelines des captures instantanées de fichier qui ont été créées avec la sauvegarde file-snapshot d’origine.  
   
@@ -273,7 +273,7 @@ La tâche Restaurer la base de données propose **URL** comme unité à partir d
 -   [Restauration jusqu'à une date et heure en utilisant STOPAT](#PITR)  
   
 > [!NOTE]  
->  Pour obtenir un didacticiel sur l’utilisation de SQL Server 2016 avec le service de stockage d’objets blob Microsoft Azure, consultez [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](https://msdn.microsoft.com/library/dn466438.aspx)(Didacticiel : Utilisation du service de stockage d’objets blob Microsoft Azure avec des bases de données SQL Server 2016).  
+>  Pour obtenir un didacticiel sur l’utilisation de SQL Server 2016 avec le service de stockage d’objets blob Microsoft Azure, consultez [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)(Didacticiel : Utilisation du service de stockage d’objets blob Microsoft Azure avec des bases de données SQL Server 2016).  
   
 ###  <a name="SAS"></a> Créer une signature d’accès partagé  
  L’exemple suivant crée des signatures d’accès partagé utilisables pour créer des informations d’identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un conteneur nouvellement créé. Le script crée une signature d’accès partagé associée à une stratégie d’accès stockée. Pour plus d’informations, voir [Signatures d’accès partagé, partie 1 : présentation du modèle SAP](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/). L’exemple nécessite Microsoft Azure Powershell. Pour plus d’informations sur l’installation et l’utilisation d’Azure Powershell, consultez [Installation et configuration d’Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
@@ -412,6 +412,6 @@ Write-Host $tSql
 ## <a name="see-also"></a>Voir aussi  
  [Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [Sauvegarder et restaurer des bases de données système &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
- [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](https://msdn.microsoft.com/library/dn466438.aspx)  
+ [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   

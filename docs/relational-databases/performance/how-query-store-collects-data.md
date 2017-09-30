@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
-ms.openlocfilehash: f13f4f60d8df7d2a2fb668cc6d5a93f092973116
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: dcc8a068ee429f889726cfc1b5fa3d0be579135e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="how-query-store-collects-data"></a>Comment le magasin de requêtes collecte les données
@@ -45,7 +45,7 @@ ms.lasthandoff: 07/31/2017
 |**sys.query_store_runtime_stats_interval**|Le magasin de requêtes divise le temps en périodes générées automatiquement (intervalles) et stocke les statistiques agrégées sur cet intervalle pour chaque plan exécuté. La taille de l’intervalle est contrôlée par l’option de configuration Intervalle de collecte des statistiques (dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) ou `INTERVAL_LENGTH_MINUTES` à l’aide des [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 |**sys.query_store_runtime_stats**|Statistiques d'exécution agrégées pour les plans exécutés. Toutes les métriques capturées sont exprimées sous forme de 4 fonctions statistiques : Moyenne, Minimum, Maximum et Écart type.|  
   
- Pour plus d'informations sur les affichages du magasin de requêtes, consultez la section **Affichages, fonctions et procédures associés** de [Analyse des performances à l'aide du magasin de requêtes](https://msdn.microsoft.com/library/dn817826.aspx).  
+ Pour plus d'informations sur les affichages du magasin de requêtes, consultez la section **Affichages, fonctions et procédures associés** de [Analyse des performances à l'aide du magasin de requêtes](monitoring-performance-by-using-the-query-store.md).  
   
 ## <a name="query-processing"></a>Traitement des requêtes  
  Le magasin de requêtes interagit avec le pipeline de traitement des requêtes sur les points clés suivants :  

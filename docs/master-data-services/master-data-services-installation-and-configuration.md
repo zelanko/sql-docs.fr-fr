@@ -16,10 +16,10 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: da09783f5d8bdcd491f73a1b46390918bbb7dd8d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 1993aee7d27d51a3788df44288a014374fcf430c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Installation et configuration de Master Data Services
@@ -37,7 +37,7 @@ Pour obtenir des liens vers des vidéos et d’autres ressources de formation co
   
 > **Télécharger**  
 >-   Pour télécharger [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], accédez au  **[Centre d’évaluation](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/)**.  
->-   Vous avez un compte Azure ?  Cliquez **[ici](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** pour lancer une machine virtuelle avec SQL Server déjà installé.  
+>-   Vous avez un compte Azure ?  Cliquez **[ici](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** pour lancer une machine virtuelle avec SQL Server déjà installé.  
  
 > **Vous ne parvenez pas à créer un site web MDS ?**
 >>Consultez cet article du support technique Microsoft pour obtenir des instructions sur la manière de résoudre ce problème.
@@ -140,7 +140,7 @@ Si vous souhaitez apporter des modifications à l’installation de [!INCLUDE[ss
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
-     Pour plus d’informations sur le classement Windows, consultez [Nom de classement Windows (Transact-SQL)](https://msdn.microsoft.com/library/ms188046.aspx).  
+     Pour plus d’informations sur le classement Windows, consultez [Nom de classement Windows (Transact-SQL)](../t-sql/statements/windows-collation-name-transact-sql.md).  
   
 5.  Dans le champ **Nom d’utilisateur** , indiquez le compte Windows de l’utilisateur qui sera le Super utilisateur par défaut pour Master Data Services. Un Super utilisateur a accès à toutes les zones fonctionnelles et peut ajouter, supprimer et mettre à jour tous les modèles.  
 
@@ -284,7 +284,7 @@ Si vous souhaitez apporter des modifications à l’installation de [!INCLUDE[ss
  Pour obtenir une vue d’ensemble sur l’utilisation d’un modèle et d’entités en vue de créer une structure pour vos données dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], consultez [Vue d’ensemble de Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md).  
   
 ## <a name="did-this-article-help-you-were-listening"></a>Cet article vous a-t-il été utile ? Nous sommes à votre écoute  
- Quels renseignements souhaitez-vous obtenir ? Avez-vous trouvé ce que vous cherchiez ? Nous tenons compte de vos commentaires pour améliorer le contenu de nos articles. Veuillez envoyer vos commentaires à l’adresse suivante : [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Get%20Started%20with%20Master%20Data%20Services)  
+ Quels renseignements souhaitez-vous obtenir ? Avez-vous trouvé ce que vous cherchiez ? Nous tenons compte de vos commentaires pour améliorer le contenu de nos articles. Veuillez envoyer vos commentaires à l’adresse suivante : [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Get%20Started%20with%20Master%20Data%20Services)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Base de données Master Data Services](../master-data-services/master-data-services-database.md)   

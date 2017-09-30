@@ -18,11 +18,11 @@ caps.latest.revision: 49
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ba3bc85a1b6fced603f9f0a137f638a921c0f447
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 41831fe1852600666f5f3cf370cbab675e723cca
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>Sauvegarder un journal des transactions (SQL Server)
@@ -31,11 +31,11 @@ ms.lasthandoff: 06/22/2017
    
 ##  <a name="Restrictions"></a> Limitations et restrictions  
   
--   L’instruction BACKUP n’est pas autorisée dans une transaction explicite ou [implicite](https://msdn.microsoft.com/library/ms187807.aspx) .  Une transaction est explicite si vous définissez le début et la fin de la transaction de manière explicite.
+-   L’instruction BACKUP n’est pas autorisée dans une transaction explicite ou [implicite](../../t-sql/statements/set-implicit-transactions-transact-sql.md) .  Une transaction est explicite si vous définissez le début et la fin de la transaction de manière explicite.
   
 ##  <a name="Recommendations"></a> Recommandations  
   
--   Si une base de données est configurée pour le [mode de récupération](https://msdn.microsoft.com/library/ms189275.aspx) complète ou le mode de récupération utilisant les journaux de transactions, vous devez sauvegarder le journal des transactions assez régulièrement pour protéger vos données et éviter une [saturation](https://msdn.microsoft.com/library/ms175495.aspx) de ce dernier. Cela tronque le journal et prend en charge la restauration de la base de données à un point précis dans le temps. 
+-   Si une base de données est configurée pour le [mode de récupération](recovery-models-sql-server.md) complète ou le mode de récupération utilisant les journaux de transactions, vous devez sauvegarder le journal des transactions assez régulièrement pour protéger vos données et éviter une [saturation](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md) de ce dernier. Cela tronque le journal et prend en charge la restauration de la base de données à un point précis dans le temps. 
   
 -   Par défaut, chaque opération de sauvegarde réussie ajoute une entrée au journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et au journal des événements système. Si vous sauvegardez fréquemment le journal, ces messages de réussite peuvent rapidement s’accumuler, créer des journaux d’erreurs très volumineux et compliquer la recherche d’autres messages. Dans de tels cas, vous pouvez supprimer ces entrées de journal en utilisant l’indicateur de trace 3226 si aucun de vos scripts ne dépend de ces entrées. Pour plus d’informations, consultez [Indicateurs de trace &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
@@ -126,9 +126,9 @@ Les autorisations BACKUP DATABASE et BACKUP LOG requises sont octroyées par dé
   
  Pour chiffrer le fichier de sauvegarde, activez la case à cocher **Chiffrer le fichier de sauvegarde** . Sélectionnez l'algorithme de chiffrement à utiliser pour chiffrer le fichier de sauvegarde et fournissez un certificat ou une clé asymétrique. Les algorithmes disponibles pour le chiffrement sont :  
   
--   AES 128  
+-   AES 128  
   
--   AES 192  
+-   AES 192  
   
 -   AES 256  
   

@@ -15,10 +15,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cfdebd7cafbdd2918ca69972b81c9a2f87933de1
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: b8f5c57ad6f0b73eb7d8f56bd8c34dd03319bf7c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Ouvrir des projets Integration Services dans Data Quality Client
@@ -34,7 +34,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Vous ne pouvez pas supprimer un projet Integration Services verrouillé dans [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Vous devez d'abord le déverrouiller.  
   
-###  <a name="Prerequisites"></a> Prérequis  
+###  <a name="Prerequisites"></a> Conditions préalables  
  Vous devez avoir correctement exécuté un projet Integration Services contenant un package avec un composant de nettoyage DQS pour l'afficher et l'ouvrir dans [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
   
 ###  <a name="Security"></a> Sécurité  
@@ -66,6 +66,6 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Transformation de nettoyage DQS](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
- [Projets Integration Services (SSIS)](https://msdn.microsoft.com/library/ms138028.aspx)  
+ [Projets Integration Services (SSIS)](../integration-services/integration-services-ssis-projects-and-solutions.md)  
   
   

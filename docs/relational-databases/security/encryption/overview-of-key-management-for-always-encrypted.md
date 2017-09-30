@@ -14,11 +14,11 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 611fcbd96531e57dd47a7ae61e5b4b32d84dcb46
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8333a497795ae7968b5d297b62aba83944f1b3ba
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Vue d’ensemble de la gestion des clés pour Always Encrypted
@@ -70,7 +70,7 @@ Quand les clés Always Encrypted sont gérées sans séparation des rôles, une 
 
 ## <a name="tools-for-managing-always-encrypted-keys"></a>Outils de gestion des clés Always Encrypted
 
-Vous pouvez gérer les clés Always Encrypted à l’aide de [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) et [PowerShell](https://msdn.microsoft.com/library/hh245198.aspx):
+Vous pouvez gérer les clés Always Encrypted à l’aide de [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) et [PowerShell](../../scripting/sql-server-powershell.md):
 
 - **SQL Server Management Studio (SSMS)** : fournit des boîtes de dialogue et des Assistants qui combinent des tâches impliquant l’accès au magasin de clés et l’accès à la base de données. SSMS ne prend pas en charge la séparation des rôles, mais il simplifie la configuration des clés. Pour plus d’informations sur la gestion des clés à l’aide de SSMS, consultez :
     - [Approvisionnement des clés principales de colonne](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncmk)

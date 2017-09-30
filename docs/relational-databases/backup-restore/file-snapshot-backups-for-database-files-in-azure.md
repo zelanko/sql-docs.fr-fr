@@ -16,11 +16,11 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ed2e98c34b3efed454130e7e1c6de86545ba6aea
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 509c4b512bc1f0aeafcd82eb896b9291af450aff
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure
@@ -51,10 +51,10 @@ ms.lasthandoff: 06/22/2017
 >  Après la sauvegarde complète initiale nécessaire pour établir la chaîne de sauvegarde du journal des transactions (qui peut être une sauvegarde d’instantanés de fichiers), vous devez uniquement effectuer des sauvegardes du journal des transactions, car chaque jeu de sauvegarde d’instantanés de fichiers du journal des transactions contient des instantanés de fichiers de tous les fichiers de base de données et peut être utilisé pour effectuer une restauration de base de données ou de journal. Après la sauvegarde complète de base de données initiale, aucune sauvegarde complète ou différentielle supplémentaire n’est nécessaire, car le service de stockage d’objets blob Azure gère les différences entre chaque instantané de fichier et l’état actuel de l’objet blob de base pour chaque fichier de base de données.  
   
 > [!NOTE]  
->  Pour obtenir un didacticiel sur l’utilisation de SQL Server 2016 avec le service de stockage d’objets blob Microsoft Azure, consultez [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](https://msdn.microsoft.com/library/dn466438.aspx)(Didacticiel : Utilisation du service de stockage d’objets blob Microsoft Azure avec des bases de données SQL Server 2016).  
+>  Pour obtenir un didacticiel sur l’utilisation de SQL Server 2016 avec le service de stockage d’objets blob Microsoft Azure, consultez [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)(Didacticiel : Utilisation du service de stockage d’objets blob Microsoft Azure avec des bases de données SQL Server 2016).  
   
 ### <a name="restore-using-file-snapshot-backups"></a>Effectuer une restauration à l’aide de sauvegardes d’instantanés de fichiers  
- Chaque jeu de sauvegarde d’instantanés de fichiers contenant un instantané de fichier de chaque fichier de base de données, un processus de restauration requiert au plus deux jeux de sauvegarde d’instantanés de fichiers adjacents. Cela est vrai, que le jeu de sauvegarde provienne d’une sauvegarde de complète base de données ou d’une sauvegarde de fichier journal. Ce processus de restauration diffère nettement de celui qui fait appel à des fichiers de sauvegarde en continu classiques. Avec la sauvegarde en continu classique, le processus de restauration requiert l’utilisation d’une chaîne entière de jeux de sauvegarde : la sauvegarde complète, une sauvegarde différentielle et une ou plusieurs sauvegardes de journaux de transactions. La partie récupération du processus de restauration reste la même, que la restauration utilise une sauvegarde d’instantanés de fichiers ou un jeu de sauvegarde en continu.  
+ Chaque jeu de sauvegarde d’instantanés de fichiers contenant un instantané de fichier de chaque fichier de base de données, un processus de restauration requiert au plus deux jeux de sauvegarde d’instantanés de fichiers adjacents. Cela est vrai, que le jeu de sauvegarde provienne d’une sauvegarde de complète base de données ou d’une sauvegarde de fichier journal. Ce processus de restauration diffère nettement de celui qui fait appel à des fichiers de sauvegarde en continu classiques. Avec la sauvegarde en continu classique, le processus de restauration requiert l’utilisation d’une chaîne entière de jeux de sauvegarde : la sauvegarde complète, une sauvegarde différentielle et une ou plusieurs sauvegardes de journaux de transactions. La partie récupération du processus de restauration reste la même, que la restauration utilise une sauvegarde d’instantanés de fichiers ou un jeu de sauvegarde en continu.  
   
  **Au point dans le temps où a été effectué un jeu de sauvegarde :** pour exécuter une opération RESTORE DATABASE pour restaurer une base de données au point dans le temps où a été effectué un jeu de sauvegarde de capture instantanée de fichier spécifique, seul le jeu de sauvegarde spécifique est nécessaire, ainsi que les objets blob de base eux-mêmes. Étant donné que vous pouvez utiliser un jeu de sauvegarde d’instantanés de fichiers du journal des transactions pour effectuer une opération RESTORE DATABASE, vous utilisez généralement un jeu de sauvegarde du journal des transactions pour exécuter ce type d’opération RESTORE DATABASE et recourez rarement à un jeu de sauvegarde complète de base de données. Un exemple illustrant cette technique est proposé à la fin de cette rubrique.  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Le fichier de sauvegarde ne peut pas être stocké à l’aide du stockage Premium.  
   
--   La fréquence des sauvegardes ne peut être inférieure à 10 minutes.  
+-   La fréquence des sauvegardes ne peut être inférieure à 10 minutes.  
   
 -   Le nombre maximal d’instantanés que vous pouvez stocker est 100.  
   
@@ -181,10 +181,10 @@ GO
 ```  
   
 ## <a name="did-this-article-help-you-were-listening"></a>Cet article vous a-t-il été utile ? Nous sommes à votre écoute  
- Quels renseignements souhaitez-vous obtenir ? Avez-vous trouvé ce que vous cherchiez ? Nous tenons compte de vos commentaires pour améliorer le contenu de nos articles. Envoyez vos commentaires à l’adresse [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20File-Snapshot%20Backups%20for%20Database%20Files%20in%20Azure%20page)  
+ Quels renseignements souhaitez-vous obtenir ? Avez-vous trouvé ce que vous cherchiez ? Nous tenons compte de vos commentaires pour améliorer le contenu de nos articles. Veuillez envoyer vos commentaires à l’adresse suivante : [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20File-Snapshot%20Backups%20for%20Database%20Files%20in%20Azure%20page)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](https://msdn.microsoft.com/library/dn466438.aspx)  
+ [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   
 

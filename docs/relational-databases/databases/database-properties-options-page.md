@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
-ms.openlocfilehash: 8d3a9c04f09d48823638e1608722268b360610e8
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 24561dd19ef8992aba1d5e48ceadd49a68f18c1f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="database-properties-options-page"></a>Propriétés de la base de données (page Options)
@@ -105,10 +105,10 @@ ms.lasthandoff: 08/29/2017
  Spécifiez le modèle d’estimation de la cardinalité de l’optimiseur de requête pour les éventuelles bases de données secondaires, quel que soit le niveau de compatibilité de la base de données. Cette propriété équivaut à l’ [indicateur de trace 9481](https://support.microsoft.com/en-us/kb/2801413).  
   
  **Degré de parallélisme maximal**  
- Spécifiez le paramètre [MAXDOP](https://msdn.microsoft.com/en-us/library/ms189094.aspx) par défaut pour le serveur principal à utiliser pour les instructions.  
+ Spécifiez le paramètre [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) par défaut pour le serveur principal à utiliser pour les instructions.  
   
  **Degré de parallélisme maximal pour le serveur secondaire**  
- Spécifiez le paramètre [MAXDOP](https://msdn.microsoft.com/en-us/library/ms189094.aspx) par défaut pour les éventuels serveurs secondaires à utiliser pour les instructions.  
+ Spécifiez le paramètre [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) par défaut pour les éventuels serveurs secondaires à utiliser pour les instructions.  
   
  **Détection de paramètres**  
  Active ou désactive la détection de paramètres sur la base de données primaire. Cette propriété est équivalente à l’ [indicateur de trace 4136](https://support.microsoft.com/en-us/kb/980653).  

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: v-saume
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1654499b131e9f13362e94f540b6ef8e521f2ad0
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d7eed64649188267eafb4a555fa811d8c9d27f0e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="tune-compression-for-availability-group"></a>Régler la compression pour un groupe de disponibilité
@@ -51,5 +51,5 @@ Indicateur de trace | Description
 
 [Amorçage automatique](https://msdn.microsoft.com/library/mt735149(SQL.130).aspx)
 
-[Conditions préalables relatives à Always On](https://msdn.microsoft.com/library/ff878487.aspx) 
+[Conditions préalables relatives à Always On](prereqs-restrictions-recommendations-always-on-availability.md) 
 

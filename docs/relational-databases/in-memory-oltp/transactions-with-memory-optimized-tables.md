@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 40b7bd5f5f8bf6682a7c85d332cce420baf06105
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 54be2f39c2f0b3c8ea640c1df720213f7936823d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
@@ -41,7 +41,7 @@ Pour des informations générales, consultez [SET TRANSACTION ISOLATION LEVEL (T
   
 ## <a name="pessimistic-versus-optimistic"></a>Approches pessimiste et optimiste  
   
-Les différences fonctionnelles sont dues à la différence entre les approches pessimiste et optimiste pour l’intégrité de la transaction. Les tables optimisées en mémoire utilisent l’approche optimiste :  
+Les différences fonctionnelles sont dues à la différence entre les approches pessimiste et optimiste pour l’intégrité de la transaction. Les tables optimisées en mémoire utilisent l’approche optimiste :  
   
 - L’approche pessimiste utilise des verrous pour bloquer les conflits potentiels avant qu’ils surviennent. Les verrous sont appliqués lorsque l’instruction est exécutée et ouverts lorsque la transaction est validée.  
   
@@ -70,32 +70,32 @@ SQL Server dispose des modes suivants pour l’initiation de la transaction :
   
 ### <a name="code-example-with-explicit-mode"></a>Exemple de code avec le mode Explicite  
   
-Le script Transact-SQL interprété suivant utilise :  
+Le script Transact-SQL interprété suivant utilise :  
   
-- une transaction explicite ;  
+- une transaction explicite ;  
   
-- une table optimisée en mémoire, nommée dbo.Order_mo ;  
+- une table optimisée en mémoire, nommée dbo.Order_mo ;  
   
 - le contexte de niveau d’isolation de la transaction READ COMMITTED.  
   
-Par conséquent, il est nécessaire d’avoir un indicateur de table sur la table optimisée en mémoire. L’indicateur doit être pour SNAPSHOT ou un niveau d’isolation supérieur. Dans le cas de l’exemple de code, l’indicateur est WITH (SNAPSHOT). Si cet indicateur est supprimé, le script rencontre une erreur 41368, pour laquelle une nouvelle tentative automatique n’est pas adaptée :  
+Par conséquent, il est nécessaire d’avoir un indicateur de table sur la table optimisée en mémoire. L’indicateur doit être pour SNAPSHOT ou un niveau d’isolation supérieur. Dans le cas de l’exemple de code, l’indicateur est WITH (SNAPSHOT). Si cet indicateur est supprimé, le script rencontre une erreur 41368, pour laquelle une nouvelle tentative automatique n’est pas adaptée :  
   
-- 41368 : L’accès aux tables optimisées en mémoire selon le niveau d’isolation READ COMMITTED est pris en charge uniquement pour les transactions validées automatiquement. Cela n'est pas pris en charge pour les transactions explicites ou implicites. Spécifiez un niveau d’isolation pris en charge pour la table optimisée en mémoire à l’aide d’un indicateur de table, comme WITH (SNAPSHOT).  
+- 41368 : L’accès aux tables optimisées en mémoire selon le niveau d’isolation READ COMMITTED est pris en charge uniquement pour les transactions validées automatiquement. Cela n'est pas pris en charge pour les transactions explicites ou implicites. Spécifiez un niveau d’isolation pris en charge pour la table optimisée en mémoire à l’aide d’un indicateur de table, comme WITH (SNAPSHOT).  
   
   
   
-    SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
-    GO  
+      SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
+      GO  
   
-    BEGIN TRANSACTION;  -- Explicit transaction.  
+      BEGIN TRANSACTION;  -- Explicit transaction.  
   
       -- Order_mo  is a memory-optimized table.  
-    SELECT *  
+      SELECT *  
        FROM  
                 dbo.Order_mo  as o  WITH (SNAPSHOT)  -- Table hint.  
            JOIN dbo.Customer  as c  on c.CustomerId = o.CustomerId;  
       
-    COMMIT TRANSACTION;  
+      COMMIT TRANSACTION;  
   
 Notez que l’utilisation d’un indicateur `WITH (SNAPSHOT)` peut être évitée grâce à l’utilisation de l’option de base de données `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`. Lorsque cette option a la valeur `ON`, si une table optimisée en mémoire dispose d’un niveau d’isolation bas, celui-ci est élevé automatiquement au niveau d’isolation SNAPSHOT.  
   
@@ -244,7 +244,7 @@ Le script T-SQL interprété suivant illustre l’apparence de la logique de nou
 ## <a name="cross-container-transaction"></a>Transaction entre conteneurs  
   
   
-Une transaction est appelée transaction entre conteneurs si :  
+Une transaction est appelée transaction entre conteneurs si :  
   
 - elle accède à une table optimisée en mémoire à partir du code Transact-SQL interprété ; ou  
 - Exécute une procédure native alors qu’une transaction est déjà ouverte (XACT_STATE() = 1).  
@@ -292,7 +292,7 @@ Dans l’exemple de code Transact-SQL suivant :
 ## <a name="limitations"></a>Limitations  
   
   
-- Les transactions entre bases de données ne sont pas prises en charge avec les tables optimisées en mémoire. Si une transaction accède à une table optimisée en mémoire, elle ne peut pas accéder à une autre base de données, à l’exception de :  
+- Les transactions entre bases de données ne sont pas prises en charge avec les tables optimisées en mémoire. Si une transaction accède à une table optimisée en mémoire, elle ne peut pas accéder à une autre base de données, à l’exception de :  
   - base de données tempdb  
   - lecture seule à partir de la base de données MASTER.  
   
@@ -303,12 +303,12 @@ Dans l’exemple de code Transact-SQL suivant :
   
 ## <a name="natively-compiled-stored-procedures"></a>Procédures stockées compilées en mode natif  
   
-- Dans une procédure native, le bloc ATOMIQUE doit déclarer le niveau d’isolation de la transaction pour l’ensemble du bloc, par exemple :  
+- Dans une procédure native, le bloc ATOMIQUE doit déclarer le niveau d’isolation de la transaction pour l’ensemble du bloc, par exemple :  
   - `... BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, ...) ...`  
   
 - Les instructions de contrôle de transaction explicite ne sont pas autorisées dans le corps d’une procédure native. Les instructions BEGIN TRANSACTION, ROLLBACK TRANSACTION, etc. sont toutes interdites.  
   
-- Pour plus d’informations sur le contrôle des transactions à l’aide de blocs atomiques, consultez [Blocs atomiques](https://msdn.microsoft.com/library/dn452281.aspx)  
+- Pour plus d’informations sur le contrôle des transactions à l’aide de blocs atomiques, consultez [Blocs atomiques](atomic-blocks-in-native-procedures.md)  
   
 <a name="othertxnlinks44ni"/>  
   
