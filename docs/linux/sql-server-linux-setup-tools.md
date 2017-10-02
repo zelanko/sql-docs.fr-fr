@@ -4,7 +4,7 @@ description: "Cette rubrique décrit comment installer les outils SQL Server sur
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
