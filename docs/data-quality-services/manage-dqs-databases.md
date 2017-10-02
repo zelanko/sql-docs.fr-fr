@@ -33,7 +33,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Il existe certaines entités extérieures aux bases de données DQS nécessaires pour que les bases de données DQS soient fonctionnelles, comme [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], en particulier les deux connexions SQL Server (##MS_dqs_db_owner_login## et ##MS_dqs_service_login##), et une procédure stockée d'initialisation (DQInitDQS_MAIN) dans la base de données MASTER.  
   
- Pour obtenir des informations détaillées sur la sauvegarde et la restauration dans SQL Server, consultez [Back Up and Restore of SQL Server Databases](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+ Pour obtenir des informations détaillées sur la sauvegarde et la restauration dans SQL Server, consultez [Sauvegarde et restauration des bases de données SQL Server](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
 ### <a name="default-autogrowth-size-and-recovery-model-for-the-dqs-databases"></a>Taille de croissance automatique et mode de récupération par défaut des bases de données DQS  
  Pour éviter que les bases de données DQS et les journaux des transactions se développent à l'infini et saturent potentiellement le disque dur :  
