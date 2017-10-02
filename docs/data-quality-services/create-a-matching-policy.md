@@ -57,7 +57,7 @@ ms.lasthandoff: 09/09/2017
   
  La création d’une règle de correspondance est un processus itératif, car vous devrez peut-être modifier les poids relatifs des domaines dans la règle, ou bien la similarité ou la propriété prérequise d’un domaine, ou encore le score de correspondance minimal pour la règle, afin d’obtenir les résultats dont vous avez besoin. Vous pouvez également souhaiter créer plusieurs règles, qui seront chacune exécutées pour créer le score de correspondance. Il peut être difficile d'obtenir le résultat dont vous avez besoin avec une seule règle. Plusieurs règles fournissent des vues différentes d'une correspondance requise. Avec plusieurs règles, vous pourrez peut-être inclure moins de domaines dans chaque règle, utiliser des poids plus élevés pour chaque domaine et obtenir de meilleurs résultats. Si les données sont moins précises et moins complètes, vous pouvez avoir besoin de davantage de règles pour trouver les correspondances requises. Si les données sont plus précises et complètes, vous avez besoin de moins de règles.  
   
- Le profilage fournit des informations sur l'exhaustivité et l'unicité. Considérez l'exhaustivité et l'unicité en tandem. Utilisez les données d'exhaustivité et d'unicité pour déterminer le poids à donner à un champ dans le processus de correspondance. Si le niveau d'unicité est élevé dans un champ, l'utilisation de ce champ dans une stratégie de correspondance peut diminuer les résultats de correspondance ; de ce fait, vous pouvez affecter une valeur relativement faible pour le poids de ce champ. Si vous avez un niveau d'unicité faible pour une colonne, mais une faible exhaustivité, vous pouvez décider de ne pas inclure de domaine pour cette colonne. Avec un niveau d'unicité faible, mais un niveau d'exhaustivité élevé, vous pouvez inclure le domaine. Certaines colonnes, telles que le sexe, peuvent naturellement avoir un niveau d'unicité faible. Pour plus d’informations, consultez [Profiler and Results Tabs](#Tabs).  
+ Le profilage fournit des informations sur l'exhaustivité et l'unicité. Considérez l'exhaustivité et l'unicité en tandem. Utilisez les données d'exhaustivité et d'unicité pour déterminer le poids à donner à un champ dans le processus de correspondance. Si le niveau d'unicité est élevé dans un champ, l'utilisation de ce champ dans une stratégie de correspondance peut diminuer les résultats de correspondance ; de ce fait, vous pouvez affecter une valeur relativement faible pour le poids de ce champ. Si vous avez un niveau d'unicité faible pour une colonne, mais une faible exhaustivité, vous pouvez décider de ne pas inclure de domaine pour cette colonne. Avec un niveau d'unicité faible, mais un niveau d'exhaustivité élevé, vous pouvez inclure le domaine. Certaines colonnes, telles que le sexe, peuvent naturellement avoir un niveau d'unicité faible. Pour plus d’informations, consultez [Onglets Générateur de profils et Résultats](#Tabs).  
   
 ##  <a name="Starting"></a> Première étape : Démarrage d'une stratégie de correspondance  
  Vous effectuez l'activité de stratégie de correspondance dans la zone de gestion des bases de connaissances de l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
@@ -136,7 +136,7 @@ ms.lasthandoff: 09/09/2017
   
     -   Si vous double-cliquez sur un enregistrement dans la table des résultats de correspondance, DQS affiche une fenêtre **Détails du score de correspondance** qui présente l'enregistrement pivot et l'enregistrement source (ainsi que les valeurs de tous leurs champs), le score entre elles et une exploration de correspondance d'enregistrement. L'exploration affiche les valeurs de chaque champ de l'enregistrement pivot et de l'enregistrement source pour vous permettre de les comparer, et indique le score de correspondance auquel chaque champ contribue dans le score de correspondance global pour les deux enregistrements.  
   
-14. Affichez les statistiques sous les onglets **Générateur de profils** et **Résultats de correspondance** pour vérifier que vous obtenez les résultats dont vous avez besoin. Pour plus d’informations, consultez [Profiler and Results Tabs](#Tabs).  
+14. Affichez les statistiques sous les onglets **Générateur de profils** et **Résultats de correspondance** pour vérifier que vous obtenez les résultats dont vous avez besoin. Pour plus d’informations, consultez [Onglets Générateur de profils et Résultats](#Tabs).  
   
 15. Si la règle doit être modifiée, effectuez cette opération dans l'éditeur de règles, puis cliquez sur **Redémarrer**.  
   
@@ -168,7 +168,7 @@ ms.lasthandoff: 09/09/2017
   
     -   Si vous double-cliquez sur un enregistrement dans la table des résultats de correspondance, DQS affiche une fenêtre **Détails du score de correspondance** qui présente l'enregistrement pivot et l'enregistrement source (ainsi que les valeurs de tous leurs champs), le score entre elles et une exploration de correspondance d'enregistrement. L'exploration affiche les valeurs de chaque champ de l'enregistrement pivot et de l'enregistrement source pour vous permettre de les comparer, et indique le score de correspondance auquel chaque champ contribue dans le score de correspondance global pour les deux enregistrements.  
   
-5.  Affichez les statistiques sous les onglets **Générateur de profils** et **Résultats de correspondance** pour vérifier que vous obtenez les résultats dont vous avez besoin. Cliquez sur l'onglet **Règles de correspondance** pour voir quels sont les paramètres de domaine pour chaque règle. Pour plus d’informations, consultez [Profiler and Results Tabs](#Tabs).  
+5.  Affichez les statistiques sous les onglets **Générateur de profils** et **Résultats de correspondance** pour vérifier que vous obtenez les résultats dont vous avez besoin. Cliquez sur l'onglet **Règles de correspondance** pour voir quels sont les paramètres de domaine pour chaque règle. Pour plus d’informations, consultez [Onglets Générateur de profils et Résultats](#Tabs).  
   
 6.  Si vous n'êtes pas satisfait des résultats obtenus avec toutes les règles, cliquez sur **Précédent** pour revenir à la page **Stratégie de correspondance** , modifiez une ou plusieurs règles en fonction des besoins, retournez à la page **Résultats de correspondance** , puis cliquez sur **Redémarrer**.  
   
@@ -193,7 +193,7 @@ ms.lasthandoff: 09/09/2017
 ##  <a name="FollowUp"></a> Suivi : Après avoir créé une stratégie de correspondance  
  Après avoir créé une stratégie de correspondance, vous pouvez exécuter un projet de correspondance basé sur la base de connaissances qui contient la stratégie de correspondance. Pour plus d’informations, consultez [Run a Matching Project](../data-quality-services/run-a-matching-project.md).  
   
-##  <a name="Tabs"></a> Profiler and Results Tabs  
+##  <a name="Tabs"></a> Onglets Générateur de profils et Résultats  
  Les onglets Générateur de profils et Résultats contiennent des statistiques pour les pages Stratégie de correspondance et Résultats de correspondance.  
   
 ###  <a name="Profiler"></a> Onglet Générateur de profils  
