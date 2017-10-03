@@ -4,23 +4,23 @@ description: "Ce didacticiel de démarrage rapide montre comment installer SQL S
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 09/20/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 57be01c49643bafada701849a32b532679513c71
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: b39414933684939c69bb3fd80d4e8aba21efa824
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Installer SQL Server et de créer une base de données sur SUSE Linux Enterprise Server
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Dans ce didacticiel de démarrage rapide, vous d’abord installez SQL Server 2017 RC2 sur SUSE Linux Enterprise Server (SLES) v12 SP2. Se connecter avec **sqlcmd** à créer votre première base de données et exécuter des requêtes.
+Dans ce didacticiel de démarrage rapide, vous d’abord installez SQL Server 2017 sur SUSE Linux Enterprise Server (SLES) v12 SP2. Se connecter avec **sqlcmd** à créer votre première base de données et exécuter des requêtes.
 
 > [!TIP]
 > Ce didacticiel nécessite l’entrée d’utilisateur et une connexion internet. Si vous êtes intéressé par le [sans assistance](sql-server-linux-setup.md#unattended) ou [hors connexion](sql-server-linux-setup.md#offline) procédures d’installation, consultez [aide à l’Installation de SQL Server sur Linux](sql-server-linux-setup.md).
@@ -37,12 +37,18 @@ Pour les autres exigences système, consultez [configuration système requise po
 
 Pour configurer SQL Server sur SLES, exécutez les commandes suivantes dans un Terminal Server pour installer le **mssql-serveur** package :
 
+> [!IMPORTANT]
+> Si vous avez déjà installé un CTP ou la version RC de SQL Server 2017, vous devez d’abord supprimer l’ancien référentiel avant d’inscrire un des référentiels de la disponibilité générale. Pour plus d’informations, consultez [modifier les référentiels à partir du référentiel d’aperçu dans le référentiel GA](sql-server-linux-change-repo.md)
+
 1. Téléchargez le fichier de configuration de Microsoft SQL Server SLES référentiel :
 
    ```bash
-   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server.repo
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
    sudo zypper --gpg-auto-import-keys refresh
    ```
+
+   > [!NOTE]
+   > Il s’agit de l’espace de stockage de mise à jour Cumulative (CU). Pour plus d’informations sur les options de votre référentiel et leurs différences, consultez [modifier les référentiels sources](sql-server-linux-setup.md#repositories).
 
 1. Exécutez les commandes suivantes pour installer SQL Server :
 
@@ -57,14 +63,10 @@ Pour configurer SQL Server sur SLES, exécutez les commandes suivantes dans un T
    ```
 
    > [!TIP]
-   > Veillez à spécifier un mot de passe fort pour le compte d’administrateur système (Minimum longueur 8 caractères, y compris les majuscules et minuscules, chiffres en base 10 et/ou des symboles non alphanumériques).
+   > Si vous essayez de SQL Server 2017 dans ce didacticiel, les éditions suivantes sont concédés sous licence librement : Evaluation, Developer et Express.
 
-   > [!TIP]
-   > Lorsque vous installez RC2, sans licences achetées sont requis pour essayer toutes les éditions. S’agissant d’une version release candidate, le message suivant apparaît, quelle que soit l’édition que vous sélectionnez :
-   >
-   > `This is an evaluation version.  There are [175] days left in the evaluation period.`
-   >
-   > Ce message ne reflète pas l’édition que vous avez sélectionné. Il est lié à la période d’évaluation pour RC2.
+   > [!NOTE]
+   > Veillez à spécifier un mot de passe fort pour le compte d’administrateur système (Minimum longueur 8 caractères, y compris les majuscules et minuscules, chiffres en base 10 et/ou des symboles non alphanumériques).
 
 1. Une fois la configuration terminée, vérifiez que le service est en cours d’exécution :
 

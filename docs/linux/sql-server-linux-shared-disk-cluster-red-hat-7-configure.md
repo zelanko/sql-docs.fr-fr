@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: eb3ac975b6962a36e1aaa60a421e977fe42cda90
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 1708138f5eeb082f022f78dfb685f333f3f0a17b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurer des clusters de disques partagés Red Hat Enterprise Linux pour SQL Server
@@ -38,7 +38,7 @@ Pour utiliser une chaîne de connexion qui pointe vers un nom de serveur de cha�
 
 Les sections suivantes les différentes étapes pour configurer une solution de cluster de basculement. 
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables
 
 Pour terminer le scénario de bout en bout ci-dessous, vous avez besoin de deux ordinateurs pour déployer le cluster à deux nœuds et un autre serveur pour configurer le serveur NFS. Étapes ci-dessous décrivent la configuration de ces serveurs.
 
@@ -135,7 +135,7 @@ Sur le serveur NFS, procédez comme suit :
    systemctl enable nfs-server && systemctl start nfs-server
    ```
  
-1.  Modifier `/etc/exports` pour exporter le répertoire que vous souhaitez partager. Vous devez 1 ligne pour chaque action que vous souhaitez. Par exemple : 
+1.  Modifier `/etc/exports` pour exporter le répertoire que vous souhaitez partager. Vous devez 1 ligne pour chaque action que vous souhaitez. Exemple : 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)
@@ -315,7 +315,7 @@ Pour plus d’informations sur l’utilisation de NFS, voir les ressources suiva
    sudo pcs cluster start --all
    ```
 
-   > RHEL HA possède clôtures agents pour VMWare et KVM. Délimitation doit être désactivée sur tous les autres hyperviseurs. La désactivation d’agents de délimitation n’est pas recommandée dans les environnements de production. À compter de la plage de temps RC2, il n’existe aucun agent de délimitation pour les environnements Hyper-v ou le cloud. Si vous exécutez une de ces configurations, vous devez désactiver la délimitation. \**Cela n’est pas recommandée dans un système de production.**
+   > RHEL HA possède clôtures agents pour VMWare et KVM. Délimitation doit être désactivée sur tous les autres hyperviseurs. La désactivation d’agents de délimitation n’est pas recommandée dans les environnements de production. À compter de la plage de temps, il n’existe aucun agent de délimitation pour les environnements Hyper-v ou le cloud. Si vous exécutez une de ces configurations, vous devez désactiver la délimitation. \**Cela n’est pas recommandée dans un système de production.**
 
    La commande suivante désactive les agents de délimitation.
 

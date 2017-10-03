@@ -3,17 +3,18 @@ title: Installer SQL Server Integration Services sur Linux | Documents Microsoft
 description: "Cette rubrique décrit l’installation de SQL Server Integration Services sur Linux."
 author: leolimsft
 ms.author: lle
+ms.reviewer: douglasl
 manager: craigg
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: integration-services
 ms.assetid: 
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c3943870ec10b8430ac4819398908c5459a8b03c
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 520b650e0f1dac950797d481609478c6c6548f5a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Installer SQL Server Integration Services (SSIS) sur Linux
@@ -27,11 +28,8 @@ Installer des serveurs d’intégration de SQL Server pour votre plateforme :
 - [Ubuntu](#ubuntu)
 - [Red Hat Enterprise Linux](#RHEL)
 
-
-
 ## <a name="ubuntu"></a>Installer SSIS sur Ubuntu
 Pour installer le `mssql-server-is` le package sur Ubuntu, procédez comme suit :
-
 
 1.  Importer les clés GPG référentiel public.
 
@@ -39,13 +37,11 @@ Pour installer le `mssql-server-is` le package sur Ubuntu, procédez comme suit�
     curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
     ```
 
-
 2.  Inscrire le référentiel d’Ubuntu de Microsoft SQL Server.
 
     ```bash
     curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server.list | sudo tee /etc/apt/sources.list.d/mssql-server.list
     ```
-
 
 3.  Exécutez les commandes suivantes pour installer SQL Server Integration Services.
 
@@ -55,12 +51,11 @@ Pour installer le `mssql-server-is` le package sur Ubuntu, procédez comme suit�
     ```
 
 
-4.  Après l’installation d’Integration Services, exécutez `ssis-conf`.
+4.  Après l’installation d’Integration Services, exécutez `ssis-conf`. Pour plus d’informations, consultez [configurer de SSIS sur Linux avec ssis-conf](sql-server-linux-configure-ssis.md).
 
     ```bash
     sudo /opt/ssis/bin/ssis-conf setup
     ```
-
 
 5.  Une fois la configuration terminée, définissez le chemin d’accès.
 
@@ -68,20 +63,18 @@ Pour installer le `mssql-server-is` le package sur Ubuntu, procédez comme suit�
     export PATH=/opt/ssis/bin:$PATH
     ```
 
-
+### <a name="update-ssis"></a>Mise à jour SSIS
 Si vous avez déjà `mssql-server-is` installé, vous pouvez mettre à jour vers la dernière version avec la commande suivante :
 
 ```bash
 sudo apt-get install mssql-server-is
 ```
 
-
+### <a name="remove-ssis"></a>Supprimer SSIS
 Pour supprimer `mssql-server-is`, vous pouvez exécuter de commande suivante :
 ```bash
 sudo apt-get remove msssql-server-is
 ```
-
-
 
 ## <a name="RHEL"></a>Installer SSIS sur RHEL
 Pour installer le `mssql-server-is` le package sur RHEL, procédez comme suit :
@@ -115,7 +108,7 @@ Pour installer le `mssql-server-is` le package sur RHEL, procédez comme suit :
     ```
 
 
-5.  Après l’installation, exécutez `ssis-conf`.
+5.  Après l’installation, exécutez `ssis-conf`. Pour plus d’informations, consultez [configurer de SSIS sur Linux avec ssis-conf](sql-server-linux-configure-ssis.md).
 
     ```bash
     sudo /opt/ssis/bin/ssis-conf setup
@@ -128,14 +121,14 @@ Pour installer le `mssql-server-is` le package sur RHEL, procédez comme suit :
     export PATH=/opt/ssis/bin:$PATH
     ```
 
-
+### <a name="update-ssis"></a>Mise à jour SSIS
 Si vous avez déjà `mssql-server-is` installé, vous pouvez mettre à jour vers la dernière version avec la commande suivante :
 
 ```bash
 sudo yum update mssql-server-is
 ```
 
-
+### <a name="remove-ssis"></a>Supprimer SSIS
 Pour supprimer `mssql-server-is`, vous pouvez exécuter de commande suivante :
 ```bash
 sudo yum remove msssql-server-is

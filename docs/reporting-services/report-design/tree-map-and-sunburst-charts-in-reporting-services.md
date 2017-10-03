@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e09afe4634c02db6e74413e7c1c10565450b3559
+ms.sourcegitcommit: 7811cfe9238c92746673fac4fce40a4af44d6dcd
+ms.openlocfilehash: b9f7ca16589b2383eaed959c6556f0b2b6c4cf74
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="tree-map-and-sunburst-charts-in-reporting-services"></a>Graphiques de compartimentage et en rayons de soleil dans Reporting Services
@@ -32,12 +32,13 @@ ms.lasthandoff: 08/09/2017
   
  Un graphique de compartimentage divise la zone de graphique en rectangles représentant les niveaux et les tailles relatives de la hiérarchie de données. Le mappage ressemble à arbre, avec un tronc, des branches et des ramifications de plus en plus petites. Chaque rectangle est subdivisé en rectangles plus petits représentant un niveau inférieur dans la hiérarchie. Les rectangles de niveau supérieur du graphique de compartimentage sont disposés avec le plus grand rectangle dans l’angle supérieur gauche du graphique et le plus petit dans l’angle inférieur droit.  À l’intérieur d’un rectangle, le niveau suivant dans la hiérarchie est également organisé en rectangles allant de l’angle supérieur gauche à l’angle inférieur droit.  
   
- Par exemple, dans l’exemple de graphique de compartimentage suivant, le territoire « Southwest » est le plus grand, et « Germany » le plus petit. Dans le territoire« Southwest », les « Road Bikes » sont plus importants que les « Mountain Bikes ».  
+ Par exemple, dans l’image suivante de l’exemple de mappage d’arborescence, le territoire « Southwest » est le plus grand et Allemagne est le plus petit. Dans le territoire« Southwest », les « Road Bikes » sont plus importants que les « Mountain Bikes ».  
   
  ![exemple_graphique_compartimentage_ssrs](../../reporting-services/report-design/media/ssrs-treemap-example.png "exemple_graphique_compartimentage_ssrs")  
   
 ### <a name="to-insert-a-tree-map-chart-and-configure-for-the-sample-adventureworks-data"></a>Pour insérer un graphique de compartimentage et configurer l’échantillon de données Adventureworks  
- **Remarque :** avant d’ajouter un graphique à votre rapport, créez une source de données et un jeu de données.  Pour des exemples de données et de requête, voir la section [Échantillon de données Adventureworks](#bkmk_sample_data) dans cette rubrique.  
+   
+[!NOTE] Avant d’ajouter un graphique à votre rapport, créez une source de données et le jeu de données.  Pour des exemples de données et de requête, voir la section [Échantillon de données Adventureworks](#bkmk_sample_data) dans cette rubrique.  
   
 1.  Cliquez avec le bouton droit sur l’aire de conception, cliquez sur **Insérer**, puis sur **Graphique** .  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 08/09/2017
  ![exemple_graphique_rayons_de_soleil_ssrs](../../reporting-services/report-design/media/ssrs-sunburst-example.png "exemple_graphique_rayons_de_soleil_ssrs")  
   
 ### <a name="to-insert-a-sunburst-chart-and-configure-for-the-sample-adventureworks-data"></a>Pour insérer un graphique à rayon et configurer l’échantillon de données Adventureworks  
- **Remarque :** avant d’ajouter un graphique à votre rapport, créez une source de données et un jeu de données.  Pour des exemples de données et de requête, voir la section [Échantillon de données Adventureworks](#bkmk_sample_data) dans cette rubrique.  
+ [!NOTE] Avant d’ajouter un graphique à votre rapport, créez une source de données et le jeu de données.  Pour des exemples de données et de requête, voir la section [Échantillon de données Adventureworks](#bkmk_sample_data) dans cette rubrique.  
   
 1.  Cliquez avec le bouton droit sur l’aire de conception, cliquez sur **Insérer**, puis sur **Graphique** .  
   
@@ -100,11 +101,13 @@ ms.lasthandoff: 08/09/2017
   
 5.  Modifiez le titre par défaut du graphique en « Categorized Sales by Territory » (Ventes classées par territoire, avec motif de vente).  
   
-6.  |||  
+6.
+    |||  
     |-|-|  
-    |![propriétés_total_ligne_rayon_de_soleil_ssrs](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "propriétés_total_ligne_rayon_de_soleil_ssrs")|Pour ajouter les valeurs des groupes de catégories au graphique en rayons de soleil en tant qu’étiquettes, définissez la propriété d’étiquette comme suit : **Visible** = true et **UseValueAsLabel**=False.<br /><br /> Les valeurs d’étiquette qui s’affichent sont affectées par la taille de la police, la taille de la zone de graphique et la taille des différents rectangles.  Pour afficher d’autres étiquettes, définissez la propriété de police de l’étiquette LineTotal (Total de la ligne) sur 8 pt au lieu de la valeur par défaut de 10 pt.|  
+    |![propriétés_total_ligne_rayon_de_soleil_ssrs](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "propriétés_total_ligne_rayon_de_soleil_ssrs")|Pour ajouter les valeurs des groupes de catégories au graphique en rayons de soleil en tant qu’étiquettes, définissez la propriété d’étiquette comme suit : **Visible** = true et **UseValueAsLabel**=False.<br /><br /> Les valeurs d’étiquette qui s’affichent sont affectées par la taille de la police, la taille de la zone de graphique et la taille des différents rectangles.  Pour afficher d’autres étiquettes, définissez la propriété de police de l’étiquette LineTotal (Total de la ligne) sur 8 pt au lieu de la valeur par défaut de 10 pt.|
   
 7.  Si vous voulez utiliser une autre plage de couleurs, modifiez la propriété **Palette** du graphique.  
+  
   
      ![palette_visualisation_ssrs](../../reporting-services/report-design/media/ssrs-visualization-palette.png "palette_visualisation_ssrs")  
   

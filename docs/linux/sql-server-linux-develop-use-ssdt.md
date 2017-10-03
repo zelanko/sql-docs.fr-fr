@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: b2e9353126b98cdda0753e1ad6dc4d1a2adbb1eb
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 9a639559de35573c7fb6dfdcc98c9d9680312659
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Utilisez Visual Studio pour créer des bases de données pour SQL Server sur Linux
@@ -37,7 +37,7 @@ SQL Server Data Tools (SSDT), Visual Studio se transforme en un environnement de
 
 ## <a name="upgrade-sql-server-data-tools-to-ssdt-170-rc-release"></a>Mise à niveau de SQL Server Data Tools vers la version RC de 17,0 SSDT
 
-SQL Server 2017 RC2 sur Linux est prise en charge par SSDT version 17,0 RC ou version ultérieure.
+2017 du serveur SQL sur Linux est prise en charge par SSDT version 17,0 RC ou version ultérieure.
 
 * [Téléchargez et installez SSDT 17,0 RC2](https://go.microsoft.com/fwlink/?linkid=837939).
 

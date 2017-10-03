@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 052e0f66818fd3d9e4cd4ad59720da4a7280c988
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 36fd7c4ac62280fb980bb24c89306a006605b665
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Afficher des en-têtes et des pieds de page de groupe (Générateur de rapports et SSRS)
   Vous pouvez mieux contrôler si une ligne statique, telle qu'un en-tête ou un pied de page de groupe, est rendue avec des lignes dynamiques qui sont associées à un groupe dans une région de données de tableau matriciel.  
   
- Pour répéter l'ensemble des en-têtes de lignes ou des en-têtes de colonnes sur plusieurs pages, vous pouvez définir des propriétés pour la région de données de tableau matriciel. Pour plus d’informations, consultez [affichage en-têtes de ligne et colonne sur plusieurs Pages (Générateur de rapports et SSRS)](/sql-docs/docs/reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs).  
+ Pour répéter l'ensemble des en-têtes de lignes ou des en-têtes de colonnes sur plusieurs pages, vous pouvez définir des propriétés pour la région de données de tableau matriciel. Pour plus d’informations, consultez [affichage en-têtes de ligne et colonne sur plusieurs Pages (Générateur de rapports et SSRS)](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md).  
   
  Pour contrôler le comportement de rendu des lignes et des colonnes dynamiques qui sont associées aux groupes imbriqués, ou des lignes et des colonnes statiques qui sont associées à des étiquettes ou des sous-totaux, vous devez définir des propriétés pour le membre du tableau matriciel. Un membre du tableau matriciel représente une ligne ou une colonne statique ou dynamique. Un membre statique se répète une fois. Par exemple, une ligne de total global est une ligne statique. Un membre dynamique se répète une fois pour chaque instance de groupe. Par exemple, une ligne associée à un groupe avec l'expression de groupe [Territory] se répète une fois pour chaque valeur unique de secteur. Pour plus d’informations sur les membres de tableau matriciel, consultez [cellules de région de données de tableau matriciel, lignes et colonnes &#40; Le Générateur de rapports &#41; et SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 09/21/2017
 5.  (Facultatif) Affichez l'aperçu du rapport. Dans la mesure du possible, le convertisseur de rapport garde ce membre avec les membres de groupe de colonnes spécifiés.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Les cellules de région de données de tableau matriciel, lignes et colonnes (Générateur de rapports) et SSRS](/sql-docs/docs/reporting-services/report-design/tablix-data-region-report-builder-and-ssrs)   
+ [Les cellules de région de données de tableau matriciel, lignes et colonnes (Générateur de rapports) et SSRS](tablix-data-region-report-builder-and-ssrs.md)   
  
   
   

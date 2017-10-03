@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 4bc5be85fddcc86de0a3fe845620f5152b568015
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 84cf217faf0980d3ef1daf9a86a4aa362931d199
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Utilisation du chiffrement intégral avec le pilote JDBC
@@ -40,7 +40,7 @@ Always Encrypted permet aux clients de chiffrer les données sensibles et de ne 
     -   Si vous utilisez sqljdbc42.jar, les fichiers de stratégie peuvent être téléchargés à partir de [téléchargement des fichiers de stratégie juridiction Java Cryptography Extension (JCE) Unlimited 8](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)   
     
 ## <a name="enabling-always-encrypted-for-application-queries"></a>Activation d’Always Encrypted pour les requêtes d’application  
-Le moyen le plus simple pour activer le chiffrement des paramètres et le déchiffrement des résultats de requête ciblant des colonnes chiffrées, est en définissant la valeur de la **columnEncryptionSetting** mot clé de chaîne de connexion à ** Activé**.
+Le moyen le plus simple pour activer le chiffrement des paramètres et le déchiffrement des résultats de requête ciblant des colonnes chiffrées, est en définissant la valeur de la **columnEncryptionSetting** mot clé de chaîne de connexion à  **Activé**.
 
 Voici un exemple de chaîne de connexion qui active le chiffrement intégral dans le pilote JDBC :
   
@@ -152,7 +152,7 @@ L’exemple suivant montre le filtrage de données basé sur des valeurs chiffr�
 - Toutes les valeurs sont imprimées par le programme sera en texte brut, comme le pilote JDBC Microsoft pour SQL Server déchiffre de manière transparente les données récupérées à partir des colonnes SSN et BirthDate.
 
 > [!NOTE]  
->  Les requêtes peuvent effectuer des comparaisons d’égalité sur des colonnes si elles sont chiffrées à l’aide du chiffrement déterministe. Pour plus d’informations, consultez la **chiffrement en sélectionnant déterministe ou aléatoire** section de la [Always Encrypted (moteur de base de données)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine) rubrique.  
+>  Les requêtes peuvent effectuer des comparaisons d’égalité sur des colonnes si elles sont chiffrées à l’aide du chiffrement déterministe. Pour plus d’informations, consultez la **chiffrement en sélectionnant déterministe ou aléatoire** section de la [Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) rubrique.  
 
 ```
 String connectionString =  "jdbc:sqlserver://localhost:1433;databaseName=Clinic;user=sa;password=******;columnEncryptionSetting=Enabled;" ;
@@ -214,7 +214,7 @@ Cette section décrit les catégories d’erreurs courantes lors de l’interrog
 
 ### <a name="unsupported-data-type-conversion-errors"></a>Erreurs de Conversion de Type de données non pris en charge
 
-Always Encrypted ne prend en charge que peu de conversions de types de données chiffrées. Consultez [Always Encrypted (moteur de base de données)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine) pour la liste détaillée des conversions de type pris en charge. Pour éviter les erreurs de conversion de types de données, procédez comme suit :
+Always Encrypted ne prend en charge que peu de conversions de types de données chiffrées. Consultez [Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) pour la liste détaillée des conversions de type pris en charge. Pour éviter les erreurs de conversion de types de données, procédez comme suit :
 
 - vous utilisez les méthodes d’accesseur set appropriée lors du passage de valeurs pour les paramètres ciblant des colonnes chiffrées, afin que le type de données SQL Server du paramètre est exactement la même que le type de la colonne cible, ou une conversion du type de données SQL Server du paramètre type de la colonne est pris en charge à la cible. Notez que les nouvelles méthodes d’API ont été ajoutées aux classes SQLServerPreparedStatement et SQLServerCallableStatement de SQLServerResultSet pour passer des paramètres correspondant aux types de données SQL Server spécifiques. Par exemple, si une colonne n’est pas chiffrée, vous pouvez utiliser setTimestamp() méthode pour passer un paramètre à un datetime2 ou à une colonne datetime. Mais quand une colonne est chiffrée, vous devez utiliser la méthode exacte représentant le type de la colonne dans la base de données. Par exemple, utilisez setTimestamp() pour passer des valeurs à une colonne chiffrée datetime2 et setDateTime() permet de passer des valeurs à une colonne datetime chiffré. Consultez [toujours chiffré référence des API pour le pilote JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) pour une liste complète des nouvelles API. 
 - La précision et l’échelle des paramètres ciblant les colonnes des types de données SQL Server decimal et numeric sont les mêmes que celles configurées pour la colonne cible. Notez que les nouvelles méthodes d’API ont été ajoutées aux classes SQLServerPreparedStatement et SQLServerCallableStatement de SQLServerResultSet pour accepter la précision et l’échelle en même temps que les valeurs de données pour les paramètres ou des colonnes représentant les types de données decimal et numeric. Consultez [toujours chiffré référence des API pour le pilote JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) pour une liste complète des API de nouveau/surchargé.  
@@ -314,7 +314,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >  [bibliothèques Azure bibliothèque Active Directory pour java](https://github.com/AzureAD/azure-activedirectory-library-for-java)  
   
 ### <a name="using-windows-certificate-store-provider"></a>À l’aide du fournisseur de magasin de certificats Windows
-Le SQLServerColumnEncryptionCertificateStoreProvider peut servir à stocker des clés principales de colonne dans le magasin de certificats Windows. Pour créer la clé principale de colonne et le chiffrement de colonne clées définitions dans la base de données, utilisez l’Assistant chiffrement intégral de SQL Server Management Studio (SSMS) ou autres outils pris en charge. L’Assistant même peut être utilisé pour générer un certificat auto-signé dans le magasin de certificats Windows qui est utilisé comme clé principale de colonne pour les données toujours chiffrées. Pour plus d’informations sur la clé principale de colonne et de chiffrement de colonne clée syntaxe T-SQL visiter [CREATE COLUMN MASTER KEY](/sql-docs/docs/t-sql/statements/create-column-master-key-transact-sql) et [CREATE COLUMN ENCRPTION KEY](/sql-docs/docs/t-sql/statements/create-column-encryption-key-transact-sql) respectivement.
+Le SQLServerColumnEncryptionCertificateStoreProvider peut servir à stocker des clés principales de colonne dans le magasin de certificats Windows. Pour créer la clé principale de colonne et le chiffrement de colonne clées définitions dans la base de données, utilisez l’Assistant chiffrement intégral de SQL Server Management Studio (SSMS) ou autres outils pris en charge. L’Assistant même peut être utilisé pour générer un certificat auto-signé dans le magasin de certificats Windows qui est utilisé comme clé principale de colonne pour les données toujours chiffrées. Pour plus d’informations sur la clé principale de colonne et de chiffrement de colonne clée syntaxe T-SQL visiter [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) et [CREATE COLUMN ENCRPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) respectivement.
 
 Le nom de la SQLServerColumnEncryptionCertificateStoreProvider est « MSSQL_CERTIFICATE_STORE » et peut être interrogé par les API getName() de l’objet fournisseur. Il est automatiquement enregistré par le pilote et peut être utilisé en toute transparence sans aucune modification de l’application.
 
@@ -356,7 +356,7 @@ Notez que si le magasin de clés est de type PKCS12 le keytool ne demande pas de
 
 Vous pouvez également exporter un certificat à partir du magasin de certificats Windows au format .pfx et l’utiliser avec le SQLServerColumnEncryptionJavaKeyStoreProvider. Le certificat exporté ne peut également être importé dans le magasin de clés Java comme un type de magasin de clés JKS. 
 
-Après avoir créé l’entrée keytool, vous devrez créer les métadonnées de clé principale de colonne dans la base de données nécessite le nom de fournisseur de magasin de clés et le chemin de clé. Pour plus d’informations sur la création des métadonnées de clé principale de colonne, visitez [CREATE COLUMN MASTER KEY](/sql-docs/docs/t-sql/statements/create-column-master-key-transact-sql). Pour SQLServerColumnEncryptionJavaKeyStoreProvider, le chemin de clé est simplement l’alias de la clé. Et le nom de la SQLServerColumnEncryptionJavaKeyStoreProvider 'MSSQL_JAVA_KEYSTORE'. Vous pouvez également interroger ce nom à l’aide de l’API publique de getName() de la classe SQLServerColumnEncryptionJavaKeyStoreProvider. 
+Après avoir créé l’entrée keytool, vous devrez créer les métadonnées de clé principale de colonne dans la base de données nécessite le nom de fournisseur de magasin de clés et le chemin de clé. Pour plus d’informations sur la création des métadonnées de clé principale de colonne, visitez [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md). Pour SQLServerColumnEncryptionJavaKeyStoreProvider, le chemin de clé est simplement l’alias de la clé. Et le nom de la SQLServerColumnEncryptionJavaKeyStoreProvider 'MSSQL_JAVA_KEYSTORE'. Vous pouvez également interroger ce nom à l’aide de l’API publique de getName() de la classe SQLServerColumnEncryptionJavaKeyStoreProvider. 
 
 La syntaxe T-SQL pour la création de la clé principale de colonne est la suivante :
 
@@ -429,7 +429,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
   
 ## <a name="using-column-master-key-store-providers-for-programmatic-key-provisioning"></a>Utilisation des fournisseurs de magasin de clés principales de colonne pour la mise en service des clés par programmation
 
-Pour accéder à des colonnes chiffrées, le pilote JDBC Microsoft pour SQL Server en toute transparence par la recherche et appelle le fournisseur de magasins de clé principale de colonne de droite pour déchiffrer les clés de chiffrement de colonne. En règle générale, un code d’application normal n’appelle pas directement les fournisseurs de magasin de clés principales de colonne. Vous pouvez, toutefois, instancier et appeler explicitement un fournisseur afin de mettre en service et de gérer par programmation les clés Always Encrypted, et ce, dans le but de générer une clé de chiffrement de colonne chiffrée et de déchiffrer une clé de chiffrement de colonne (par exemple, dans le cadre d’une permutation de clé principale de colonne). Pour plus d’informations, consultez [Vue d’ensemble de la gestion des clés pour Always Encrypted](/sql-docs/docs/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted).
+Pour accéder à des colonnes chiffrées, le pilote JDBC Microsoft pour SQL Server en toute transparence par la recherche et appelle le fournisseur de magasins de clé principale de colonne de droite pour déchiffrer les clés de chiffrement de colonne. En règle générale, un code d’application normal n’appelle pas directement les fournisseurs de magasin de clés principales de colonne. Vous pouvez, toutefois, instancier et appeler explicitement un fournisseur afin de mettre en service et de gérer par programmation les clés Always Encrypted, et ce, dans le but de générer une clé de chiffrement de colonne chiffrée et de déchiffrer une clé de chiffrement de colonne (par exemple, dans le cadre d’une permutation de clé principale de colonne). Pour plus d’informations, consultez [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
 Notez que l’implémentation de vos propres outils de gestion de clés peut n’être nécessaire que si vous utilisez un fournisseur de magasin de clés personnalisé. Lorsque vous utilisez des clés stockées dans le magasin de certificats Windows ou dans le coffre de clés Azure, vous pouvez utiliser des outils existants, tels que SQL Server Management Studio ou PowerShell, pour gérer et configurer des clés. Lorsque vous utilisez des clés stockées dans le magasin de clés Java, vous devez configurer par programmation les clés. L’exemple ci-dessous, illustre l’utilisation de la classe de SQLServerColumnEncryptionJavaKeyStoreProvider pour chiffrer la clé avec une clé stockée dans le magasin de clés de Java.
 
 ```  
@@ -650,6 +650,6 @@ Avec SQLServerBulkCopy, vous pouvez copier des données, qui sont déjà chiffr�
 Remarque : Faites attention lorsque vous spécifiez AllowEncryptedValueModifications, car cela peut endommager la base de données, car le pilote JDBC Microsoft pour SQL Server ne vérifie pas si les données sont chiffrées en effet, ou si elle est correctement chiffrée à l’aide de la même chiffrement type, algorithme et clé que la colonne cible.
 
 ## <a name="see-also"></a>Voir aussi  
- [Always Encrypted (moteur de base de données)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)  
+ [Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   
   

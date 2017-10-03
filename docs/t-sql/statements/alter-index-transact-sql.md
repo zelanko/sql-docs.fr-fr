@@ -48,10 +48,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 68aa9ada24b5bcf1dedf7ff8d60d5fad31d68126
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: f61b6469e40ba303cbff14db9bde15161b225ca7
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
@@ -251,7 +251,7 @@ PARTITION
    
 **S’applique à**: SQL Server (à partir de SQL Server 2008) et la base de données SQL Azure.  
   
- Option SORT_IN_TEMPDB, MAXDOP et DATA_COMPRESSION sont les options qui peuvent être spécifiées quand vous régénérez une seule partition (PARTITION = * n *). Les index XML ne peuvent pas être indiqués dans une opération de reconstruction d'une seule partition.  
+ Option SORT_IN_TEMPDB, MAXDOP et DATA_COMPRESSION sont les options qui peuvent être spécifiées quand vous régénérez une seule partition (PARTITION =  *n* ). Les index XML ne peuvent pas être indiqués dans une opération de reconstruction d'une seule partition.  
   
  DISABLE  
  Marque l'index comme désactivé et non disponible pour être utilisé par le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Tout index peut être désactivé. La définition d'un index désactivé est conservé dans le catalogue système sans y inclure de données sous-jacentes. Désactiver un index cluster permet d'éviter l'accès aux données de la table sous-jacente par les utilisateurs. Pour activer un index, utilisez ALTER INDEX REBUILD ou CREATE INDEX WITH DROP_EXISTING. Pour plus d’informations, consultez [désactiver des index et contraintes](../../relational-databases/indexes/disable-indexes-and-constraints.md) et [Enable Indexes and Constraints](../../relational-databases/indexes/enable-indexes-and-constraints.md).  
@@ -356,7 +356,7 @@ FILLFACTOR = *facteur de remplissage*
   
  Pour plus d’informations, consultez [Option SORT_IN_TEMPDB pour les index](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
   
- IGNORE_DUP_KEY ** = ** {ON | {OFF}  
+ IGNORE_DUP_KEY  **=**  {ON | {OFF}  
  Spécifie la réponse d'erreur lorsqu'une opération d'insertion essaie d'insérer des valeurs de clés en double dans un index unique. L'option IGNORE_DUP_KEY s'applique uniquement aux opérations d'insertion après la création ou la régénération de l'index. La valeur par défaut est OFF.  
   
  ON  
@@ -371,7 +371,7 @@ FILLFACTOR = *facteur de remplissage*
   
  Dans la syntaxe de compatibilité descendante, WITH IGNORE_DUP_KEY est équivalent à WITH IGNORE_DUP_KEY = ON.  
   
- STATISTICS_NORECOMPUTE ** = ** {ON | {OFF}  
+ STATISTICS_NORECOMPUTE  **=**  {ON | {OFF}  
  Spécifie si les statistiques de distribution sont recalculées. La valeur par défaut est OFF.  
   
  ON  
@@ -407,7 +407,7 @@ FILLFACTOR = *facteur de remplissage*
  
 **S’applique à**: SQL Server (à partir de SQL Server 2014) et la base de données SQL Azure.  
   
- En ligne ** = ** {ON | **OFF** } \<s’appliqu’à rebuild_index_option >  
+ En ligne  **=**  {ON | **OFF** } \<s’appliqu’à rebuild_index_option >  
  Indique si les tables sous-jacentes et les index associés sont disponibles pour les requêtes et la modification de données pendant l'opération d'index. La valeur par défaut est OFF.  
   
  Pour un index XML ou un index spatial, seul ONLINE = OFF est pris en charge et si ONLINE a la valeur ON, une erreur est générée.  
@@ -433,7 +433,7 @@ FILLFACTOR = *facteur de remplissage*
 
 -  Base de données SQL antérieures à V12 et SQL Server antérieures à SQL Server 2012, ne permettent pas la `ONLINE` est définie sur la construction d’index en cluster ou de reconstruire les opérations lors de la table de base contient **varchar (max)** ou **varbinary (max)** colonnes.
 
-PEUT ÊTRE REPRIS ** = ** {ON | **OFF**}
+PEUT ÊTRE REPRIS  **=**  {ON | **OFF**}
 
 **S’applique à**: à partir de SQL Server 2017 et Azure SQL Database (fonctionnalité est en version préliminaire publique)  
 
@@ -443,13 +443,13 @@ PEUT ÊTRE REPRIS ** = ** {ON | **OFF**}
 
  DÉSACTIVER l’Index de l’opération n’est pas pouvant être reprise.
 
-MAX_DURATION ** = ** *temps* [**MINUTES**] utilisé avec **reprise = ON** (nécessite **ONLINE = ON**).
+MAX_DURATION  **=**  *temps* [**MINUTES**] utilisé avec **reprise = ON** (nécessite **ONLINE = ON**).
  
 **S’applique à**: à partir de SQL Server 2017 et Azure SQL Database (fonctionnalité est en version préliminaire publique)  
 
 Indique le temps (valeur entière spécifiée en minutes) qu’une reprise en ligne opération d’index est exécutée avant en pause. 
 
-ALLOW_ROW_LOCKS ** = ** { **ON** | {OFF}  
+ALLOW_ROW_LOCKS  **=**  { **ON** | {OFF}  
  
 **S’applique à**: SQL Server (à partir de SQL Server 2008) et la base de données SQL Azure.  
   
@@ -461,7 +461,7 @@ ALLOW_ROW_LOCKS ** = ** { **ON** | {OFF}
  OFF  
  Les verrous de ligne ne sont pas utilisés.  
   
-ALLOW_PAGE_LOCKS ** = ** { **ON** | {OFF}  
+ALLOW_PAGE_LOCKS  **=**  { **ON** | {OFF}  
   
 **S’applique à**: SQL Server (à partir de SQL Server 2008) et la base de données SQL Azure.
   
@@ -476,7 +476,7 @@ ALLOW_PAGE_LOCKS ** = ** { **ON** | {OFF}
 > [!NOTE]
 >  Un index ne peut pas être réorganisé lorsque ALLOW_PAGE_LOCKS est désactivé (OFF).  
   
- MAXDOP ** = ** max_degree_of_parallelism  
+ MAXDOP  **=**  max_degree_of_parallelism  
  
 **S’applique à**: SQL Server (à partir de SQL Server 2008) et la base de données SQL Azure.  
   
@@ -501,7 +501,7 @@ ALLOW_PAGE_LOCKS ** = ** { **ON** | {OFF}
 > [!NOTE]
 >  Opérations d’index parallèles ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- COMPRESSION_DELAY ** = ** { **0** |*durée [Minutes]* }  
+ COMPRESSION_DELAY  **=**  { **0** |*durée [Minutes]* }  
  Cette fonctionnalité est disponible à partir de SQL Server 2016  
   
  Pour une table basée sur disque, délai Spécifie le nombre minimal de minutes pendant lesquelles qu'un rowgroup delta à l’état CLOSED doit rester dans le rowgroup delta avant que SQL Server peut compresser dans le rowgroup compressé. Étant donné que les tables sur disque ne suivre insérer et mettre à jour heures sur des lignes individuelles, SQL Server s’applique le délai d’attente pour les groupes de lignes delta à l’état CLOSED.  
@@ -564,7 +564,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 );  
 ```  
   
- En ligne ** = ** {ON | **OFF** } \<s’appliqu’à single_partition_rebuild_index_option >  
+ En ligne  **=**  {ON | **OFF** } \<s’appliqu’à single_partition_rebuild_index_option >  
  Spécifie si un index ou une partition d’index d’une table sous-jacente peut être reconstruite en ligne ou hors connexion. Si **reconstruire** est effectuée en ligne (**ON**) les données de cette table seront disponibles pour la modification de requêtes et des données pendant l’opération d’index.  La valeur par défaut est **OFF**.  
   
  ON  
@@ -580,7 +580,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
 **S’applique à**: SQL Server (à partir de SQL Server 2014) et la base de données SQL Azure.
   
- Une reconstruction d'index en ligne doit attendre les opérations de blocage sur cette table. **WAIT_AT_LOW_PRIORITY** indique que l’opération de reconstruction d’index en ligne attend les verrouillages de faible priorité, laissant les autres opérations se poursuivre pendant l’opération de création d’index en ligne est en attente. L’omission de la **attente basse** option est équivalente à `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Pour plus d’informations, consultez [WAIT_AT_LOW_PRIORITY](/sql-docs/docs/t-sql/statements/alter-index-transact-sql). 
+ Une reconstruction d'index en ligne doit attendre les opérations de blocage sur cette table. **WAIT_AT_LOW_PRIORITY** indique que l’opération de reconstruction d’index en ligne attend les verrouillages de faible priorité, laissant les autres opérations se poursuivre pendant l’opération de création d’index en ligne est en attente. L’omission de la **attente basse** option est équivalente à `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Pour plus d’informations, consultez [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
   
  MAX_DURATION = *temps* [**MINUTES**]  
   
@@ -618,7 +618,7 @@ WAIT_AT_LOW_PRIORITY utilisé avec **reprise = ON** et **ONLINE = ON**.
   
 **S’applique à**: à partir de SQL Server 2017 et Azure SQL Database (fonctionnalité est en version préliminaire publique)
   
- La reprise d’une reconstruction d’index en ligne après qu’une pause se trouve en attente pour les opérations de blocage sur cette table. **WAIT_AT_LOW_PRIORITY** indique que l’opération de reconstruction d’index en ligne attend les verrouillages de faible priorité, laissant les autres opérations se poursuivre pendant l’opération de création d’index en ligne est en attente. L’omission de la **attente basse** option est équivalente à `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Pour plus d’informations, consultez [WAIT_AT_LOW_PRIORITY](/sql-docs/docs/t-sql/statements/alter-index-transact-sql). 
+ La reprise d’une reconstruction d’index en ligne après qu’une pause se trouve en attente pour les opérations de blocage sur cette table. **WAIT_AT_LOW_PRIORITY** indique que l’opération de reconstruction d’index en ligne attend les verrouillages de faible priorité, laissant les autres opérations se poursuivre pendant l’opération de création d’index en ligne est en attente. L’omission de la **attente basse** option est équivalente à `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Pour plus d’informations, consultez [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
 
 
 PAUSE

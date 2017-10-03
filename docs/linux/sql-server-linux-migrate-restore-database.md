@@ -1,6 +1,6 @@
 ---
 title: "Migrer une base de données SQL Server à partir de Windows et Linux | Documents Microsoft"
-description: "Cette rubrique montre comment exécuter la sauvegarde une base de données SQL Server sur Windows et de restauration sur un ordinateur Linux en cours d’exécution SQL Server 2017 RC2."
+description: "Ce didacticiel montre comment exécuter la sauvegarde une base de données SQL Server sur Windows et de restauration sur un ordinateur Linux en cours d’exécution SQL Server 2017."
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.translationtype: MT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: 0405f6faad62b9dbaf32cb9730ac1450da2b2f48
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: a6d84942bfd13d672b3c59416cb64d2ae41ee10f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Migrer une base de données SQL Server à partir de Windows et Linux à l’aide de la sauvegarde et restauration
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-SQL Server de la sauvegarde et la fonctionnalité de restauration est la méthode recommandée pour migrer une base de données SQL Server sur Windows pour SQL Server 2017 RC2 sur Linux. Dans ce didacticiel, vous guidera à travers les étapes requises pour déplacer une base de données pour Linux avec sauvegarde et restauration des techniques.
+SQL Server de la sauvegarde et la fonctionnalité de restauration est la méthode recommandée pour migrer une base de données SQL Server sur Windows à 2017 du serveur SQL sur Linux. Dans ce didacticiel, vous guidera à travers les étapes requises pour déplacer une base de données pour Linux avec sauvegarde et restauration des techniques.
 
 > [!div class="checklist"]
 > * Créer un fichier de sauvegarde de Windows avec SSMS
@@ -29,7 +29,7 @@ SQL Server de la sauvegarde et la fonctionnalité de restauration est la méthod
 > * Restaurer le fichier de sauvegarde sur Linux avec Transact-SQL
 > * Exécutez une requête pour vérifier la migration
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables
 
 Les conditions préalables suivantes sont requises pour effectuer ce didacticiel :
 
@@ -39,8 +39,7 @@ Les conditions préalables suivantes sont requises pour effectuer ce didacticiel
   * Base de données cible à migrer.
 
 * Ordinateur Linux avec les éléments suivants :
-  * SQL Server 2017 RC2. Consultez les Démarrages rapides d’installation pour [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), ou [Ubuntu](quickstart-install-connect-ubuntu.md).
-  * SQL Server 2017 RC2 [des outils de ligne de commande](sql-server-linux-setup-tools.md).
+  * SQL Server 2017 ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), ou [Ubuntu](quickstart-install-connect-ubuntu.md)) avec les outils de ligne de commande.
 
 ## <a name="create-a-backup-on-windows"></a>Créer une sauvegarde sur Windows
 
@@ -84,7 +83,7 @@ Pour restaurer la base de données, vous devez d’abord transférer le fichier 
 
 ## <a id="scp"></a>Copiez le fichier de sauvegarde pour Linux
 
-1. Dans votre session d’interpréteur de commandes, accédez au répertoire contenant votre fichier de sauvegarde. Par exemple :
+1. Dans votre session d’interpréteur de commandes, accédez au répertoire contenant votre fichier de sauvegarde. Exemple :
 
    ```bash
    cd 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\'
@@ -182,7 +181,7 @@ Pour restaurer la sauvegarde de base de données, vous pouvez utiliser la **rest
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Dans ce didacticiel, vous avez appris comment sauvegarder une base de données sur Windows et les déplacer vers un serveur Linux en cours d’exécution SQL Server 2017 RC2. Vous avez appris comment à :
+Dans ce didacticiel, vous avez appris comment sauvegarder une base de données sur Windows et les déplacer vers un serveur Linux en cours d’exécution SQL Server 2017. Vous avez appris comment à :
 > [!div class="checklist"]
 > * Permet de créer un fichier de sauvegarde sur Windows SSMS et Transact-SQL
 > * Installer un interpréteur de commandes Bash sur Windows

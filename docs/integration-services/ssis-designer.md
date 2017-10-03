@@ -29,10 +29,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 03e33d60d1d19449d8f7275ae957b4fa2a74e8e2
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2a0e055789734939dacb7074ec6de5765eecbd88
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="ssis-designer"></a>Concepteur SSIS
@@ -85,7 +85,7 @@ ms.lasthandoff: 09/21/2017
 ### <a name="parameters-tab"></a>Onglet paramètres  
  Les paramètres d'Integration Services (SSIS) vous permettent d'affecter des valeurs aux propriétés des packages au moment de l'exécution du package. Vous pouvez créer des paramètres de projet au niveau du projet et des paramètres de package au niveau du package. Les paramètres du projet sont utilisés pour fournir une entrée externe que le projet reçoit à un ou plusieurs packages du projet. L'utilisation de paramètres de package vous permet de modifier l'exécution du package sans avoir à modifier et à redéployer le package. Cet onglet vous permet de gérer les paramètres du package.  
   
- Pour plus d’informations sur les paramètres, consultez [Paramètres Integration Services (SSIS)](/sql-docs/docs/integration-services/integration-services-ssis-package-and-project-parameters).  
+ Pour plus d’informations sur les paramètres, consultez [Paramètres Integration Services (SSIS)](integration-services-ssis-package-and-project-parameters.md).  
   
 > **IMPORTANT**  Les paramètres sont disponibles uniquement pour les projets développés pour le modèle de déploiement de projet. Par conséquent, vous verrez l'onglet Paramètres uniquement pour les packages qui font partie d'un projet configuré pour utiliser le modèle de déploiement du projet.  
   

@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 6bd05a89f0c06bc03de931b898be18f3cbea0c8c
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: a34954f14ad4c40fdc7376f3f35c6a3def6e2ec7
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Sauvegarde et restauration de bases de données SQL Server sur Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Pour effectuer des sauvegardes de bases de données à partir de SQL Server 2017 RC2 sur Linux avec les mêmes outils que les autres plates-formes. Sur un serveur Linux, vous pouvez utiliser `sqlcmd` pour vous connecter à SQL Server et effectuer des sauvegardes. À partir de Windows, vous pouvez vous connecter à SQL Server sur Linux et effectuer des sauvegardes avec l’interface utilisateur. La fonctionnalité de sauvegarde est le même sur plusieurs plateformes. Par exemple, vous pouvez sauvegarder les bases de données localement, aux lecteurs à distance ou aux [service de stockage d’objets Blob Microsoft Azure](http://msdn.microsoft.com/library/dn435916.aspx). 
+Pour effectuer des sauvegardes de bases de données à partir de 2017 du serveur SQL sur Linux avec les mêmes outils que les autres plates-formes. Sur un serveur Linux, vous pouvez utiliser `sqlcmd` pour vous connecter à SQL Server et effectuer des sauvegardes. À partir de Windows, vous pouvez vous connecter à SQL Server sur Linux et effectuer des sauvegardes avec l’interface utilisateur. La fonctionnalité de sauvegarde est le même sur plusieurs plateformes. Par exemple, vous pouvez sauvegarder les bases de données localement, aux lecteurs à distance ou aux [service de stockage d’objets Blob Microsoft Azure](http://msdn.microsoft.com/library/dn435916.aspx). 
 
 ## <a name="backup-with-sqlcmd"></a>Sauvegarde avec sqlcmd
 
@@ -30,7 +30,7 @@ Dans l’exemple suivant `sqlcmd` se connecte à l’instance locale de SQL Serv
 sqlcmd -H localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
 ```
 
-Lorsque vous exécutez la commande, SQL Server demande un mot de passe. Une fois que vous entrez le mot de passe, l’interpréteur de commandes retournera les résultats de la sauvegarde en cours. Par exemple :
+Lorsque vous exécutez la commande, SQL Server demande un mot de passe. Une fois que vous entrez le mot de passe, l’interpréteur de commandes retournera les résultats de la sauvegarde en cours. Exemple :
 
 ```
 Password:
@@ -75,7 +75,7 @@ Vous pouvez utiliser SSMS à partir d’un ordinateur Windows pour vous connecte
 
 Les étapes suivantes en effectuant une sauvegarde avec SSMS. 
 
-1. Démarrez SSMS et connectez-vous à votre serveur dans SQL Server 2017 RC2 sur Linux.
+1. Démarrez SSMS et connectez-vous à votre serveur dans 2017 du serveur SQL sur Linux.
 
 1. Dans l’Explorateur d’objets, cliquez sur votre base de données, cliquez sur **tâches**, puis cliquez sur **sauvegarder...** .
 

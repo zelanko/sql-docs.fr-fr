@@ -1,19 +1,19 @@
 ---
-title: "Quelles sont les nouveautés de SQL Server 2017 RC1 sur Linux | Documents Microsoft"
+title: "Nouveautés de SQL Server 2017 sur Linux | Documents Microsoft"
 description: "Cette rubrique présente les nouveautés de la version actuelle de 2017 du serveur SQL sur Linux."
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 622e0ed2242ddc454028962c63b5760a6baad38a
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 381dcb3e22f123bfa07c2b387598d3429398e21f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Nouveautés de 2017 du serveur SQL sur Linux
@@ -21,6 +21,13 @@ ms.lasthandoff: 09/21/2017
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Cette rubrique décrit les nouveautés de SQL Server 2017 est en cours d’exécution sur Linux.
+
+## <a name="ga"></a>DISPONIBILITÉ GÉNÉRALE
+
+La version Availaiblity générale (GA) contient les améliorations suivantes et les correctifs :
+
+- Les fichiers de base de données peuvent désormais être hébergés sur NFS. Cela corrige les problèmes avec des scénarios de disque partagées NFS, le montage de stockage à distance pour les plateformes de conteneur et le montage de dossiers Docker pour Windows.
+- Les divers correctifs de bogues et les améliorations.
 
 ## <a name="rc2"></a>RC2
 
@@ -131,7 +138,7 @@ Mode de compatibilité 140 :
 [Améliorations du Service Pack 1](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/) dans cette version CTP1.1 :
 - Base de données de clonage pour le CLR, Filestream/Filetable, les objets en mémoire et le magasin de requêtes.
 - **CRÉER** ou **ALTER** opérateurs pour les objets de programmabilité.
-- Nouvelle **indicateur USE** option pour fournir des indications pour le processeur de requêtes de requête. En savoir plus ici : [indicateurs de requête](/sql-docs/docs/t-sql/queries/hints-transact-sql-query).
+- Nouvelle **indicateur USE** option pour fournir des indications pour le processeur de requêtes de requête. En savoir plus ici : [indicateurs de requête](../t-sql/queries/hints-transact-sql-query.md).
 - Compte de service SQL peut identifier par programme maintenant activer le verrouillage des Pages dans les autorisations de la mémoire et l’initialisation instantanée des fichiers.
 - Prise en charge pour le nombre de fichiers TempDB, taille de fichier et les paramètres de croissance de fichier.
 - Étendue des diagnostics dans showplan XML.

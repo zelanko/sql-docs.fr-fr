@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 105f4ca9859a2c8f0d16cb5e961dc1e395a83b62
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 9cf879fae78095f5fa6cb6f10d20cb0dfe6d12a1
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="data-for-reporting-services-mobile-reports"></a>Data for Reporting Services mobile reports
@@ -29,7 +29,7 @@ Vous pouvez importer les données de deux types de sources :
   
 * **Fichiers Excel locaux**: sélectionnez un document Excel, puis la ou les feuilles de calcul à importer. Après l’importation, les données sont stockées dans la définition du rapport mobile. Pour actualiser les données provenant du fichier Excel d’origine, utilisez la commande **Actualiser les données** dans le coin supérieur droit de l’onglet [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **Data** tab. En savoir plus sur [préparation des données Excel pour les rapports mobiles SSRS](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md).  
   
-* **[! INCLURE[PRODUCT_NAME](/sql-docs/docs/reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs).   
+* **[!INCLUDE[PRODUCT_NAME](../../includes/server-product-name.md)]les datasets partagés**: Parcourez la liste des jeux de données publiée sur le serveur et sélectionnez ceux à ajouter au rapport mobile. Les rapports mobiles basés sur les données du serveur restent toujours connectés aux jeux de données du serveur d’origine et reflètent l’état des données sur le serveur. Consultez la [liste des sources de données prises en charge](https://msdn.microsoft.com/library/ms159219.aspx).   
   
   Pour plus d’informations, consultez [Obtenir des données à partir de datasets partagés dans l’Éditeur de rapports mobiles](../../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md).  
   

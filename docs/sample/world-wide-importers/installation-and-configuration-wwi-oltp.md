@@ -16,10 +16,10 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 38890f32a5431b1c67a75f2330cc97ae3428b2fb
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 3b4a02b7b8c17f6bd5a75714a8fc3357dcfbd9a3
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="installation-and-configuration"></a>Installation et configuration
@@ -28,7 +28,7 @@ Wide World Importers OLTP instructions d’installation et configuration de base
 ## <a name="prerequisites"></a>Conditions préalables
 
 - [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) (ou version ultérieure) ou [base de données SQL Azure](https://azure.microsoft.com/services/sql-database/). Pour obtenir la version complète de l’exemple, utilisez SQL Server Evaluation/développeur/Enterprise Edition.
-- [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). Pour obtenir les meilleurs résultats utilisent la version de juin 2016 ou version ultérieure.
+- [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md). Pour obtenir les meilleurs résultats utilisent la version de juin 2016 ou version ultérieure.
 
 ## <a name="download"></a>Télécharger
 

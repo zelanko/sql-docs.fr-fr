@@ -1,7 +1,7 @@
 ---
 title: Publier et utiliser du Code Python | Documents Microsoft
 ms.custom: 
-ms.date: 04/14/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,25 +13,26 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 77a4c36636b48474a6d227f6ea18e08e50add4bc
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 550056f595b881484f3be272b8ae8b2a6d5455af
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 
 # <a name="publish-and-consume-python-web-services"></a>Publier et consommer des services web de Python
 
-**S’applique à : SQL Server 2017 CTP 2.0 (version préliminaire publique)**
+Vous pouvez déployer une solution de Python de travail à un service web à l’aide de la fonctionnalité à l’Opérationnalisation dans Microsoft Machine Learning Server. Cette rubrique décrit les étapes pour publier, puis exécutez votre solution.
 
-Vous pouvez déployer une solution de Python de travail à un service web à l’aide de la fonctionnalité à l’Opérationnalisation dans Microsoft Machine Learning Server.
-
-Cette rubrique décrit les étapes à suivre pour publier, puis exécutez votre solution.
+> [!IMPORTANT]
+>
+> Cet exemple a été développé pour la version de Python qui est inclus avec Machine Learning Server (autonome) et utilise des fonctionnalités dans Machine Learning Server version 9.1.0.
+ > 
+ > Pour voir un exemple similaire qui tire parti des fonctionnalités de la dernière version de Microsoft Machine Learning Server, version 9.2.0, consultez l’article sur le site de serveur de Machine Learning : [déployer et gérer des services web dans Python](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services).
 
 Le public cible de cet article est chercheurs de données qui souhaitent apprendre à publier du code Python ou des modèles en tant que services web hébergés dans Microsoft Machine Learning Server. Cet article explique comment les applications peuvent utiliser le code ou des modèles. Cet article suppose que vous maîtrisez Python.
 
-> [!IMPORTANT]
-> Les services web Python sont disponibles uniquement avec Python compatibles des installations de SQL Server 2017 CTP 2.0 (version préliminaire publique). Disponibilité de cette fonctionnalité sera développée dans les futures versions.
+**S’applique à : apprentissage Server (autonome) dans SQL Server 2017**
 
 ## <a name="overview-of-workflow"></a>Vue d’ensemble du flux de travail
 

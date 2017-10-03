@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 4951f503a7b5c395f86cb6daf2ba705ca69fbd83
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 2bbb64b775ab59665ac2c8eefdd21e514b4906cd
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configurer les paramètres de SQL Server avec les variables d’environnement sur Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Vous pouvez utiliser plusieurs variables d’environnement différent pour configurer SQL Server 2017 RC2 sur Linux. Ces variables sont utilisées dans deux scénarios :
+Vous pouvez utiliser plusieurs variables d’environnement différent pour configurer SQL Server 2017 sur Linux. Ces variables sont utilisées dans deux scénarios :
 
 - Pour configurer l’installation initiale avec le `mssql-conf setup` commande.
 - Pour configurer un nouveau [conteneur de SQL Server dans Docker](quickstart-install-connect-docker.md).
@@ -71,13 +71,13 @@ Cet exemple de commande docker utilise les variables d’environnement pour cré
 Si vous exécutez sur Linux/macOS Docker, utilisez la syntaxe suivante avec des guillemets simples :
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux:2017-latest
 ```
 
 Si vous exécutez Docker sur Windows, utilisez la syntaxe suivante avec des guillemets doubles :
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux:2017-latest
 ```
 
 ## <a name="next-steps"></a>Étapes suivantes

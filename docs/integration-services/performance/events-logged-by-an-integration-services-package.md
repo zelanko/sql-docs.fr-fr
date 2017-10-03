@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 1afd17d5ba2879fd13f0b3703ca84ea02b3cd416
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: df4b2e68a9b024ed2911d4b5c1d5bcea8984ae15
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Événements journalisés par un package Integration Services
@@ -29,7 +29,7 @@ ms.lasthandoff: 09/21/2017
   
  Cette rubrique fournit des informations sur les messages d'événements courants qu'un package enregistre dans le journal des événements des applications. Par défaut, un package enregistre certains de ces messages même si vous n'avez pas activé l'enregistrement sur le package. Toutefois, il existe d'autres messages que le package enregistrera seulement si vous avez activé l'enregistrement sur le package. Que le package enregistre ces messages par défaut ou parce que l'enregistrement a été activé, la source d'événements pour les messages est SQLISPackage.  
   
- Pour obtenir des informations générales sur l’exécution des packages SSIS, consultez [Exécution des projets et des packages](/sql-docs/docs/integration-services/packages/run-integration-services-ssis-packages).  
+ Pour obtenir des informations générales sur l’exécution des packages SSIS, consultez [Exécution des projets et des packages](../packages/run-integration-services-ssis-packages.md).  
   
  Pour plus d’informations sur la résolution des packages en cours d’utilisation, consultez [Outils de dépannage pour l’exécution des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   

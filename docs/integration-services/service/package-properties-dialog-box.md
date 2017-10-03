@@ -18,16 +18,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 07d44a56b531bc2e933480559a2f6d3d2457578e
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2a3d348ee8bfe53c20d66b5dc39f96b4a4be635c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="package-properties-dialog-box"></a>Propriétés du package, boîte de dialogue
   Utilisez la boîte de dialogue **Propriétés du package** pour afficher et gérer les propriétés des packages stockés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
- Pour plus d’informations, consultez [Serveur Integration Services &#40;SSIS&#41;](/sql-docs/docs/integration-services/integration-services-ssis-packages).  
+ Pour plus d’informations, consultez [Serveur Integration Services &#40;SSIS&#41;](../integration-services-ssis-packages.md).  
   
  **Que voulez-vous faire ?**  
   

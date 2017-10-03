@@ -4,17 +4,17 @@ description: "Cette rubrique décrit les actions de sécurité standard."
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 9aaa786ec53296804f6300aad6add8c10b7fd699
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 254df7047188570cbf766efb29b486d77d095a98
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Procédure pas à pas pour les fonctionnalités de sécurité de SQL Server sur Linux
@@ -27,7 +27,7 @@ Si vous êtes un utilisateur Linux qui est une nouveauté dans SQL Server, les t
 
 ## <a name="create-a-login-and-a-database-user"></a>Créez une connexion et un utilisateur de base de données 
 
-D’autres accorder l’accès à SQL Server en créant une connexion dans la base de données master à l’aide de la [CREATE LOGIN](/sql-docs/docs/t-sql/statements/create-login-transact-sql) instruction. Exemple :
+D’autres accorder l’accès à SQL Server en créant une connexion dans la base de données master à l’aide de la [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) instruction. Exemple :
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
@@ -36,7 +36,7 @@ CREATE LOGIN Larry WITH PASSWORD = '************';
 >  [!NOTE]
 >  Utilisez toujours un mot de passe à la place les astérisques ci-dessus.
 
-Comptes de connexion peuvent se connecter à SQL Server et avoir accès (avec des autorisations limitées) à la base de données master. Pour vous connecter à une base de données utilisateur, un compte de connexion a besoin d’une identité correspondante au niveau base de données, appelé utilisateur de base de données. Les utilisateurs sont spécifiques à chaque base de données et doivent être créés séparément dans chaque base de données à leur accorder l’accès. L’exemple suivant vous permet de passer dans la base de données AdventureWorks2014 et utilise ensuite la [CREATE USER](/sql-docs/docs/t-sql/statements/create-user-transact-sql) instruction pour créer un utilisateur nommé Larry qui est associé à la connexion nommée Larry. Bien que la connexion et l’utilisateur sont liées (mappé à l’autre), ils sont des objets différents. La connexion est un principe de niveau serveur. L’utilisateur est un principal au niveau de la base de données.
+Comptes de connexion peuvent se connecter à SQL Server et avoir accès (avec des autorisations limitées) à la base de données master. Pour vous connecter à une base de données utilisateur, un compte de connexion a besoin d’une identité correspondante au niveau base de données, appelé utilisateur de base de données. Les utilisateurs sont spécifiques à chaque base de données et doivent être créés séparément dans chaque base de données à leur accorder l’accès. L’exemple suivant vous permet de passer dans la base de données AdventureWorks2014 et utilise ensuite la [CREATE USER](../t-sql/statements/create-user-transact-sql.md) instruction pour créer un utilisateur nommé Larry qui est associé à la connexion nommée Larry. Bien que la connexion et l’utilisateur sont liées (mappé à l’autre), ils sont des objets différents. La connexion est un principe de niveau serveur. L’utilisateur est un principal au niveau de la base de données.
 
 ```
 USE AdventureWorks2014;
@@ -67,7 +67,7 @@ La connexion Jerry peut créer plusieurs connexions, et l’utilisateur Jerry pe
 
 Les premiers à se connecter à une base de données utilisateur sera l’administrateur et les comptes de propriétaire de base de données. Toutefois ces utilisateurs ont toutes les autorisations disponibles sur la base de données. Il s’agit plus d’autorisations que la plupart des utilisateurs doivent avoir. 
 
-Lorsque vous êtes novice, vous pouvez attribuer des catégories générales d’autorisations à l’aide de la fonction intégrée *base de données fixe*. Par exemple, le `db_datareader` rôle de base de données fixe peut lire toutes les tables de la base de données, mais n’apportez aucune modification. Accorder une appartenance à un rôle de base de données fixe à l’aide de la [ALTER ROLE](/sql-docs/docs/t-sql/statements/alter-role-transact-sql) instruction. L’exemple suivant ajouter l’utilisateur `Jerry` à la `db_datareader` rôle de base de données fixe.   
+Lorsque vous êtes novice, vous pouvez attribuer des catégories générales d’autorisations à l’aide de la fonction intégrée *base de données fixe*. Par exemple, le `db_datareader` rôle de base de données fixe peut lire toutes les tables de la base de données, mais n’apportez aucune modification. Accorder une appartenance à un rôle de base de données fixe à l’aide de la [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md) instruction. L’exemple suivant ajouter l’utilisateur `Jerry` à la `db_datareader` rôle de base de données fixe.   
    
 ```   
 USE AdventureWorks2014;   
@@ -76,9 +76,9 @@ GO
 ALTER ROLE db_datareader ADD MEMBER Jerry;   
 ```   
 
-Pour obtenir la liste des rôles de base de données fixe, consultez [rôles au niveau de la base de données](/sql-docs/docs/relational-databases/security/authentication-access/database-level-roles).
+Pour obtenir la liste des rôles de base de données fixe, consultez [rôles au niveau de la base de données](../relational-databases/security/authentication-access/database-level-roles.md).
 
-Ensuite, lorsque vous êtes prêt à configurer l’accès plus précis à vos données (hautement recommandés), créer vos propres rôles de base de données défini par l’utilisateur à l’aide de [CREATE ROLE](/sql-docs/docs/t-sql/statements/create-role-transact-sql) instruction. Affecter des autorisations granulaires spécifiques à vous des rôles personnalisés.
+Ensuite, lorsque vous êtes prêt à configurer l’accès plus précis à vos données (hautement recommandés), créer vos propres rôles de base de données défini par l’utilisateur à l’aide de [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md) instruction. Affecter des autorisations granulaires spécifiques à vous des rôles personnalisés.
 
 Par exemple, les instructions suivantes créent un rôle de base de données nommé `Sales`, accorde le `Sales` la possibilité de voir, mettre à jour et supprimer des lignes de groupe la `Orders` de table, puis ajoute l’utilisateur `Jerry` à la `Sales` rôle.   
    
@@ -90,12 +90,12 @@ GRANT DELETE ON Object::Sales TO Orders;
 ALTER ROLE Sales ADD MEMBER Jerry;   
 ```   
 
-Pour plus d’informations sur le système d’autorisation, consultez [mise en route avec des autorisations du moteur de base de données](/sql-docs/docs/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions).
+Pour plus d’informations sur le système d’autorisation, consultez [mise en route avec des autorisations du moteur de base de données](../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 
 
 ## <a name="configure-row-level-security"></a>Configurer la sécurité de niveau ligne  
 
-[Sécurité de niveau ligne](/sql-docs/docs/relational-databases/security/row-level-security) vous permet de restreindre l’accès aux lignes dans une base de données en fonction de l’utilisateur qui exécute une requête. Cette fonctionnalité est utile pour les scénarios de s’assurer que les clients peuvent accéder uniquement leurs propres données ou que les employés peuvent accéder uniquement les données pertinentes à leur service.   
+[Sécurité de niveau ligne](../relational-databases/security/row-level-security.md) vous permet de restreindre l’accès aux lignes dans une base de données en fonction de l’utilisateur qui exécute une requête. Cette fonctionnalité est utile pour les scénarios de s’assurer que les clients peuvent accéder uniquement leurs propres données ou que les employés peuvent accéder uniquement les données pertinentes à leur service.   
 
 Les étapes ci-dessous vous guide dans le paramétrage de plusieurs utilisateurs avec différents au niveau des lignes accès à la `Sales.SalesOrderHeader` table. 
 
@@ -165,7 +165,7 @@ WITH (STATE = OFF);
 
 ## <a name="enable-dynamic-data-masking"></a>Activer le masquage dynamique des données
 
-[Masquage dynamique des données](/sql-docs/docs/relational-databases/security/dynamic-data-masking) vous permet de limiter l’exposition des données sensibles aux utilisateurs d’une application en complètement ou partiellement masquant certaines colonnes. 
+[Masquage dynamique des données](../relational-databases/security/dynamic-data-masking.md) vous permet de limiter l’exposition des données sensibles aux utilisateurs d’une application en complètement ou partiellement masquant certaines colonnes. 
 
 Utilisez un `ALTER TABLE` instruction pour ajouter une fonction de masquage à la `EmailAddress` colonne dans la `Person.EmailAddress` table : 
  
@@ -248,9 +248,9 @@ Pour supprimer le chiffrement transparent des données, exécutez`ALTER DATABASE
 Les opérations de chiffrement et le déchiffrement sont planifiées sur les threads d’arrière-plan par SQL Server. Vous pouvez consulter l'état de ces opérations à l'aide des affichages catalogue et des vues de gestion dynamique mentionnés dans la liste fournie plus loin dans cette rubrique.   
 
 >  [!WARNING]
->  Les fichiers de sauvegarde des bases de données pour lesquelles le chiffrement transparent des données est activé sont également chiffrés à l'aide de la clé de chiffrement de base de données. En conséquence, lorsque vous restaurez ces sauvegardes, le certificat qui protège la clé de chiffrement de base de données doit être disponible. Cela signifie qu'en plus de sauvegarder la base de données, vous devez vous assurer que vous conservez des sauvegardes des certificats du serveur pour empêcher toute perte de données. Une perte de données interviendra si le certificat n'est plus disponible. Pour plus d'informations, consultez [SQL Server Certificates and Asymmetric Keys](/sql-docs/docs/relational-databases/security/sql-server-certificates-and-asymmetric-keys).  
+>  Les fichiers de sauvegarde des bases de données pour lesquelles le chiffrement transparent des données est activé sont également chiffrés à l'aide de la clé de chiffrement de base de données. En conséquence, lorsque vous restaurez ces sauvegardes, le certificat qui protège la clé de chiffrement de base de données doit être disponible. Cela signifie qu'en plus de sauvegarder la base de données, vous devez vous assurer que vous conservez des sauvegardes des certificats du serveur pour empêcher toute perte de données. Une perte de données interviendra si le certificat n'est plus disponible. Pour plus d'informations, consultez [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
 
-Pour plus d’informations sur le chiffrement transparent des données, consultez [Transparent Data Encryption (TDE)](/sql-docs/docs/relational-databases/security/encryption/transparent-data-encryption-tde).   
+Pour plus d’informations sur le chiffrement transparent des données, consultez [Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md).   
 
 
 ## <a name="configure-backup-encryption"></a>Configurer le chiffrement de sauvegarde
@@ -280,10 +280,10 @@ WITH
 GO  
 ```
 
-Pour plus d’informations, consultez [chiffrement de sauvegarde](/sql-docs/docs/relational-databases/backup-restore/backup-encryption).
+Pour plus d’informations, consultez [chiffrement de sauvegarde](../relational-databases/backup-restore/backup-encryption.md).
 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les fonctionnalités de sécurité de SQL Server, consultez [centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](/sql-docs/docs/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database).
+Pour plus d’informations sur les fonctionnalités de sécurité de SQL Server, consultez [centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).
 

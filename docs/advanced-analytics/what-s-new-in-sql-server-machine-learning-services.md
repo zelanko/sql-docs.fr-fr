@@ -2,7 +2,7 @@
 title: Quel &#39; est nouvelle dans Machine Learning Services | Documents Microsoft
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 09/08/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: fffe2ab906f659a2fb0e2996363ac8e7da000707
-ms.openlocfilehash: 34a404511d72c5775f25dd182b018926b6d0d62e
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 0452a71d844cea46ac48871a9e987171a4c241d3
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>Quelles sont les nouveautés dans Machine Learning Services dans SQL Server
@@ -30,16 +30,13 @@ Dans SQL Server 2017, apprentissage devient encore plus performante, avec prise 
 
 Intercepter la dernière annonce ici ! [Python dans SQL Server 2017 : amélioré dans base de données d’apprentissage](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
 
+[!NOTE]
+> Vous pouvez maintenant exécuter R dans les bases de données SQL Azure ! Pour plus d’informations, consultez [cet article](r/using-r-in-azure-sql-database.md), ou ce billet de blog de l’équipe de développement SQL Server : [aperçu annonce de Machine Learning Services avec prise en charge de R dans Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/09/25/announcing-preview-of-machine-learning-services-with-r-support-in-azure-sql-database/).
+
 ## <a name="whats-new-in-sql-server-2017"></a>Nouveautés de SQL Server 2017
 
 Microsoft Machine Learning Server dans SQL Server fournit désormais une prise en charge complète pour créer et déployer des solutions d’apprentissage machine dans R ou Python. Voici les principales fonctionnalités de cette version :
 
-> [!IMPORTANT]
-> 
-> Services de formation d’ordinateur, y compris l’utilisation de R ou Python, ne sont actuellement pas pris en charge lors de l’exécution de SQL Server sur Linux, ou dans la base de données SQL Azure. Recherchez les modifications apportées à une version ultérieure.
-> 
-> Calculer les scores natif à l’aide de la fonction PREDICT sont actuellement pris en charge dans l’édition de Linux.
- 
 ### <a name="in-database-python-integration"></a>Intégration de Python dans base de données
 
 Vous pouvez exécuter les Python dans les procédures stockées, ou exécutez Python à distance à l’aide de l’ordinateur SQL Server en tant que le contexte de calcul. Cette intégration ouvre de nouvelles voies pour la grande Communauté des développeurs de Python et des chercheurs de données à utiliser la puissance de SQL Server. 
@@ -60,9 +57,13 @@ Python en cours d’exécution dans la base de données n’est pas seulement un
 
 + Prise en charge de Python dans Microsoft Machine Learning Server (autonome)
 
-    SQL Server 2017 inclut la possibilité d’installer une version autonome de la plateforme d’apprentissage Microsoft. À l’aide de Machine Learning Server, vous pouvez distribuer et l’échelle de R ou Python code sans utiliser de SQL Server.
+    SQL Server 2017 inclut la possibilité d’installer une version autonome du serveur Microsoft Machine Learning. À l’aide de Machine Learning Server, vous pouvez distribuer et l’échelle de R ou Python code sans utiliser de SQL Server.
 
-    Pour obtenir un exemple de Python s’exécutant dans Microsoft Machine Learning Server, consultez [publier et consommer le code Python](python/publish-consume-python-code.md).
+### <a name="linux-support"></a>Support Linux
+
+Apprentissage à l’aide de R ou Python dans-base de données n’est pas pris en charge dans SQL Server sur Linux. Recherchez des annonces dans une version ultérieure.
+
+Toutefois, sur Linux, vous pouvez effectuer [score native](sql-native-scoring.md) à l’aide de la fonction de prédiction de T-SQL. Calculer les scores native vous permet de score à partir d’un modèle préformé très rapide, sans appeler ou même nécessitant un runtime R. Cela signifie que vous pouvez utiliser SQL Server sur Linux pour générer des prédictions très rapides, à répondre à des applications clientes.
 
 ### <a name="new-algorithms"></a>Nouveaux algorithmes
 

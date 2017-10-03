@@ -18,15 +18,15 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 5cebde92184ac69093222d57eb91750fa13e369c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a5ffcfafc29f0b741d8e6ada0d50ef6f94fecc7f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="working-with-inputs-and-outputs-r-in-sql-quickstart"></a>Utilisation des entrées et sorties (R dans démarrage rapide de SQL)
 
-Lorsque vous souhaitez exécuter le code R dans SQL Server, vous devez encapsuler le script R dans une procédure stockée système, [sp_execute_external_script](/sql-docs/docs/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Cette procédure stockée est utilisée pour démarrer le runtime R dans le contexte de SQL Server, lequel transmet les données à R, gère les sessions utilisateur R en toute sécurité et retourne les résultats au client.
+Lorsque vous souhaitez exécuter le code R dans SQL Server, vous devez encapsuler le script R dans une procédure stockée système, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Cette procédure stockée est utilisée pour démarrer le runtime R dans le contexte de SQL Server, lequel transmet les données à R, gère les sessions utilisateur R en toute sécurité et retourne les résultats au client.
 
 ## <a name="bkmk_SSMSBasics"></a>Créer des données de test simples
 
@@ -76,14 +76,14 @@ Obtient les données de la table, effectue un aller-retour via le runtime R et r
 **Commentaires**
 
 + Dans Management Studio, les résultats sous forme de tableau sont retournés dans le volet **Valeurs**. Les messages retournés par le runtime R sont indiqués dans le volet **Messages**.
-+ Le paramètre *@language * définit l’extension de langage à appeler, dans le cas présent, R.
++ Le paramètre *@language*  définit l’extension de langage à appeler, dans le cas présent, R.
 + Dans le paramètre *@script*, vous définissez les commandes à passer au runtime R. Votre script R entier doit être placé dans cet argument en tant que texte Unicode. Vous pouvez également ajouter le texte à une variable de type **nvarchar**, puis appeler cette variable.
 + Les données retournées par la requête sont passées au runtime R, qui retourne les données à SQL Server sous la forme d’une trame de données.
 + La clause WITH RESULT SETS définit le schéma de la table de données retournée pour SQL Server.
 
 ## <a name="change-input-or-output-variables"></a>Modifier les variables d’entrée ou de sortie
 
-L’exemple précédent utilisait les noms de variables d’entrée et de sortie par défaut, _InputDataSet_ et _OutputDataSet_. Pour définir les données d’entrée associées à _InputDatSet_, vous utilisez la variable * @input_data_1 *.
+L’exemple précédent utilisait les noms de variables d’entrée et de sortie par défaut, _InputDataSet_ et _OutputDataSet_. Pour définir les données d’entrée associées à _InputDatSet_, vous utilisez la variable  *@input_data_1* .
 
 Dans cet exemple, les noms des variables de sortie et d’entrée de la procédure stockée ont été remplacés par *SQLOut* et *SQLIn* :
 

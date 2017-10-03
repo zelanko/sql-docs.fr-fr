@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: be817ff6961e68227cdae8aff14049b55652099c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 1837605f8eaf59224b90a2a00f7dffa32a6d63b1
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Problèmes courants liés à l’exécution du script externe dans SQL Server
@@ -64,7 +64,7 @@ Le service Launchpad (Launchpad.exe) s’exécute à l’aide d’un compte de s
 - Outrepasser le contrôle de parcours (SeChangeNotifyPrivilege)
 - Ajuster les quotas de mémoire pour un processus (SeIncreaseQuotaSizePrivilege)
 
-Pour plus d’informations sur ces droits d’utilisateur, consultez la section « privilèges et droits Windows » dans [Windows de configurer les comptes de service et autorisations](/sql-docs/docs/database-engine/configure-windows/configure-windows-service-accounts-and-permissions).
+Pour plus d’informations sur ces droits d’utilisateur, consultez la section « privilèges et droits Windows » dans [Windows de configurer les comptes de service et autorisations](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
 > [!TIP]
 > Si vous êtes familiarisé avec l’utilisation de l’outil de prise en charge des Diagnostics plate-forme (SDP) pour les diagnostics de SQL Server, vous pouvez utiliser SDP pour passer en revue le fichier de sortie portant le nom MachineName_UserRights.txt.

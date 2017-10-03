@@ -16,10 +16,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: cf762b3aaeb222e456b0b46256a7d7f0efddbf48
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 084223d83c3786610dbce145f27a4c18a6409769
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="install-sql-server-analysis-services"></a>Installer SQL Server Analysis Services
@@ -32,9 +32,9 @@ ms.lasthandoff: 09/21/2017
 ## <a name="get-tools-and-designers"></a>Obtenir les outils et les concepteurs  
  Le programme d’installation de SQL Server n’installe plus les concepteurs de modèles ou les outils de gestion utilisés pour la conception de solutions ou l’administration de serveurs. Dans cette version, les outils ont une installation distincte, que vous pouvez obtenir à partir des liens suivants :  
   
--   [Télécharger SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)  
+-   [Télécharger SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md)  
   
--   [Télécharger SSDT (SQL Server Data Tools)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)  
+-   [Télécharger SSDT (SQL Server Data Tools)](../../../ssdt/download-sql-server-data-tools-ssdt.md)  
   
  Vous aurez besoin de SSMS et SSDT pour travailler avec des données et des instances d’Analysis Services. Outils peuvent être installés n’importe où, mais veillez à configurer des ports sur le serveur avant de tenter une connexion. Pour plus d'informations, consultez [Configurer le pare-feu Windows pour autoriser l'accès à Analysis Services](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
   

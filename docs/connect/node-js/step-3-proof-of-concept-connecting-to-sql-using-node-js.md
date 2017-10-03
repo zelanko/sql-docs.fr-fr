@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 783e6bc2e9dd928aaef2b5ecfb71efe47588a9b6
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 1d25bbbad2e6506e505125e2aa9de6212298b4b3
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Étape 3 : Preuve de concept pour la connexion à SQL à l’aide de Node.js
@@ -101,7 +101,7 @@ Toutes les instructions SQL sont exécutées à l’aide de la **Request() nouve
   
 ## <a name="step-3-insert-a-row"></a>Étape 3 : Insérer une ligne  
   
-Dans cet exemple, vous allez apprendre à exécuter une [insérer](/sql-docs/docs/t-sql/statements/insert-transact-sql) instruction passer en toute sécurité, des paramètres qui protègent votre application à partir de [injection SQL](/sql-docs/docs/relational-databases/tables/primary-and-foreign-key-constraints) valeur.    
+Dans cet exemple, vous allez apprendre à exécuter une [insérer](../../t-sql/statements/insert-transact-sql.md) instruction passer en toute sécurité, des paramètres qui protègent votre application à partir de [injection SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) valeur.    
   
   
 ```javascript  

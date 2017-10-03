@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 68b895f4497fc5e111bc346d01eb85f1bf0ab222
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 14a7f9cb0f9888339140a226d31368deaf7b32f5
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurer SQL Server sur Linux avec l’outil mssql-conf
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-**MSSQL-conf** est un script de configuration qui est installé avec SQL Server 2017 RC2 pour Red Hat Enterprise Linux, SUSE Linux Enterprise Server et Ubuntu. Vous pouvez utiliser cet utilitaire pour définir les paramètres suivants :
+**MSSQL-conf** est un script de configuration qui est installé avec SQL Server 2017 pour Red Hat Enterprise Linux, SUSE Linux Enterprise Server et Ubuntu. Vous pouvez utiliser cet utilitaire pour définir les paramètres suivants :
 
 |||
 |---|---|
@@ -217,7 +217,7 @@ La première capture phase est contrôlée par le **coredump.coredumptype** para
     | Type |  Description |
     |-----|-----|
     | **Mini** | Mini est le plus petit type de fichier de vidage. Il utilise les informations de système de Linux pour déterminer les threads et les modules dans le processus. L’image mémoire contient uniquement les modules et les piles de threads d’environnement hôte. Il ne contient pas de références de mémoire indirect ou des variables globales. |
-    | **miniplus** | MiniPlus est similaire à mini, mais il inclut la mémoire supplémentaire. Il prend en charge les mécanismes internes de SQLPAL et de l’environnement hôte, en ajoutant les régions de mémoire suivantes pour le vidage :</br></br> -Globals divers</br> -Toute la mémoire au-dessus de 64 To</br> -All nommé trouvées dans les régions  ** /proc / $pid/mappages**</br> -Mémoire indirecte des threads et des piles</br> -Informations sur le thread</br> -Associé de Teb et de Peb</br> -Informations module</br> -Arborescence VMM et VAD |
+    | **miniplus** | MiniPlus est similaire à mini, mais il inclut la mémoire supplémentaire. Il prend en charge les mécanismes internes de SQLPAL et de l’environnement hôte, en ajoutant les régions de mémoire suivantes pour le vidage :</br></br> -Globals divers</br> -Toute la mémoire au-dessus de 64 To</br> -All nommé trouvées dans les régions   **/proc / $pid/mappages**</br> -Mémoire indirecte des threads et des piles</br> -Informations sur le thread</br> -Associé de Teb et de Peb</br> -Informations module</br> -Arborescence VMM et VAD |
     | **filtré** | Conception utilise filtré en fonction des soustraction où toute la mémoire dans le processus est incluse, sauf si spécifiquement exclus. La conception comprend les mécanismes internes de SQLPAL et de l’environnement hôte, à l’exception de certaines régions à partir de l’image mémoire.
     | **complète** | Complète un vidage de processus complète qui inclut toutes les régions se trouve dans **/proc / $pid/mappages**. Cela n’est pas contrôlé par **coredump.captureminiandfull** paramètre. |
 

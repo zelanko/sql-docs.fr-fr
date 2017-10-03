@@ -4,23 +4,23 @@ description:
 author: sanagama
 ms.author: sanagama
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 7fc69e2d9a5e86e63ceb40e43befa65ab2cfdb7d
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 1463c56a247a2d578fc0a69f96cb8ead829dfba3
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Données de copie en bloc avec bcp à SQL Server sur Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Cette rubrique montre comment utiliser le [bcp](/sql-docs/docs/tools/bcp-utility) utilitaire de ligne de commande pour copier en bloc des données entre une instance de SQL Server 2017 RC2 sur Linux et un fichier de données dans un format spécifié par l’utilisateur.
+Cette rubrique montre comment utiliser le [bcp](../tools/bcp-utility.md) utilitaire de ligne de commande pour copier en bloc des données entre une instance de 2017 du serveur SQL sur Linux et un fichier de données dans un format spécifié par l’utilisateur.
 
 Vous pouvez utiliser `bcp` pour importer un grand nombre de lignes dans des tables SQL Server ou pour exporter des données à partir de tables SQL Server dans les fichiers de données. Sauf lorsqu’il est utilisé avec l’option queryout, `bcp` ne nécessite aucune connaissance de Transact-SQL. Le `bcp` utilitaire de ligne de commande fonctionne avec Microsoft SQL Server exécuté localement ou dans le cloud, sur Linux, Windows ou Docker et base de données SQL Azure et Azure SQL Data Warehouse.
 
@@ -136,8 +136,8 @@ Il doit afficher les éléments suivants dans la fenêtre de Terminal Server :
 ```
 
 ## <a name="see-also"></a>Voir aussi
-- [bcp (utilitaire)](/sql-docs/docs/tools/bcp-utility)
-- [Formats de données pour la compatibilité lors de l’utilisation de bcp](/sql-docs/docs/relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server)
-- [Importer des données en bloc à l’aide de BULK INSERT](/sql-docs/docs/relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server)
-- [INSERTION en bloc (Transact-SQL)](/sql-docs/docs/t-sql/statements/bulk-insert-transact-sql)
+- [bcp (utilitaire)](../tools/bcp-utility.md)
+- [Formats de données pour la compatibilité lors de l’utilisation de bcp](../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)
+- [Importer des données en bloc à l’aide de BULK INSERT](../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
+- [INSERTION en bloc (Transact-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)
 

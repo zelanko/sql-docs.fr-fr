@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 6b712ca0975108b0b7fb4bfe0a5ffa50ce44c8fb
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0d949644408de74f118d352a89047137cdcd0350
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>Créer des packages dans les outils de données SQL Server
@@ -52,7 +52,7 @@ ms.lasthandoff: 09/21/2017
  Pour obtenir une vidéo qui montre comment créer un package de base à l’aide du modèle de package par défaut, consultez [Création d’un package de base (Vidéo liée à SQL Server)](http://go.microsoft.com/fwlink/?LinkId=131023).  
 
 ## <a name="get-sql-server-data-tools"></a>Obtenir SQL Server Data Tools
-Pour installer SQL Server Data Tools (SSDT), consultez [Télécharger SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
+Pour installer SQL Server Data Tools (SSDT), consultez [Télécharger SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ## <a name="create-a-package-in-sql-server-data-tools-using-the-package-template"></a>Créer un package dans SQL Server Data Tools à l’aide du modèle de package  
   

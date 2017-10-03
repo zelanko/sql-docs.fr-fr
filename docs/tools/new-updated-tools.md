@@ -12,14 +12,14 @@ ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.workload: tools
 ms.translationtype: MT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: 1dcb3604619114a1c8d66267dfa7f74c125ce72d
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: c3e9acadb822a833558f8cc805a087c27198e7cd
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-tools-for-sql-server"></a>Nouveaux et mis à jour récemment : Tools pour SQL Server
@@ -34,7 +34,7 @@ Les mises à jour récentes sont signalées pour la plage de dates et le sujet s
 
 
 
-- *Plage de dates de mises à jour :* &nbsp; **2017-07-18** &nbsp; - à - &nbsp; **2017-09-11.**
+- *Plage de dates de mises à jour :* &nbsp; **2017-09-11** &nbsp; - à - &nbsp; **2017-09-27**
 - *Zone de sujet :* &nbsp; **Tools pour SQL Server**.
 
 
@@ -44,7 +44,7 @@ Les mises à jour récentes sont signalées pour la plage de dates et le sujet s
 
 ## <a name="new-articles-created-recently"></a>Nouveaux articles créés récemment
 
-Les liens suivants atteindre de nouveaux articles qui ont été ajoutées récemment.
+Les liens suivants renvoient aux nouveaux articles ajoutés récemment.
 
 
 ***Il n’y a aucun nouvel article pour cette fois.***
@@ -55,7 +55,7 @@ Les liens suivants atteindre de nouveaux articles qui ont été ajoutées récem
 
 ## <a name="updated-articles-with-excerpts"></a>Articles mis à jour avec des extraits
 
-Cette section affiche les extraits de mises à jour collectées à partir des articles qui ont récemment subi une mise à jour importante.
+Cette section affiche les extraits des mises à jour collectés dans des articles qui ont récemment fait l’objet d’une mise à jour importante.
 
 Les extraits affichés ici apparaissent séparés de leur contexte sémantique propre. Un extrait est parfois séparé de la syntaxe Markdown importante qui l’entoure dans l’article. Ces extraits sont donc donnés à titre indicatif uniquement. Les extraits vous permettent seulement de savoir si les articles correspondants vont vous intéresser et si oui, de cliquer dessus pour les consulter.
 
@@ -69,51 +69,17 @@ Pour cela et pour d’autres raisons, ne copiez pas le code de ces extraits et n
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>Liste compacte d’articles mis à jour récemment
+### <a name="compact-list-of-articles-updated-recently"></a>Liste compacte d’articles mis à jour récemment
 
-Cette liste compacte fournit des liens vers tous les articles mis à jour qui sont répertoriées dans la section extraits.
-
-1. [Outils et utilitaires de base de données SQL Azure, SQL Server et SQL Data Warehouse](#TitleNum_1)
+Cette liste compacte fournit des liens vers tous les articles mis à jour qui sont répertoriés dans la section des extraits.
 
 
 
 
-&nbsp;
 
 &nbsp;
 
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-tools-and-utilities-for-azure-sql-database-sql-server-and-sql-data-warehouseoverview-sql-toolsmd"></a>1. &nbsp;[Outils et utilitaires de base de données SQL Azure, SQL Server et SQL Data Warehouse](overview-sql-tools.md)
-
-*Mise à jour : 2017-08-25* &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
-
-<!-- Source markdown line 22.  ms.author= "sstein".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 7f3767cca36fb78560c902a5637362727169b2ca f0b1e34fc9737079f522efe86e9e27c697b4b11d  (PR=2961  ,  Filename=overview-sql-tools.md  ,  Dirpath=docs\tools\  ,  MergeCommitSha40=21f0cfd102a6fcc44dfc9151750f1b3c936aa053) -->
-
-
-
-! [--.. / includes/media/sql-database-tools.png) cet article fournit une liste des outils disponibles pour l’utilisation avec SQL Server, base de données SQL Azure, entrepôt de données SQL et les applications basées sur SQL Server.
-
-Si vous souhaitez accéder au travail et commencer à créer des tables, les requêtes en cours d’exécution, essentiellement concevoir et gérer votre base de données, puis [**SQL Server Management Studio (SSMS)**--... / ssms/download-sql-server-management-studio-ssms.md) est très probablement votre outil. SSMS est gratuit et s’exécute sur Windows.
-
-Si vous exécutez Linux ou macOS, essayez [Visual Studio Code](https://code.visualstudio.com/) avec la [ **mssql pour Visual Studio Code** ](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) extension. Ces outils sont pour le développement de Microsoft SQL Server, base de données SQL Azure et SQL Data Warehouse avec un jeu complet de fonctionnalités et sont également disponibles. Consultez [utiliser le Code de Visual Studio pour créer et exécuter des scripts Transact-SQL pour SQL Server](../linux/sql-server-linux-develop-use-vscode.md).
-
-
-**Outils SQL**
-
-
-| Outil |  Description |
-|:--|:--|
-| [SQL Server Management Studio (SSMS)--... / ssms/download-sql-server-management-studio-ssms.md) | Utilisez SQL Server Management Studio (SSMS) pour les requêtes, concevoir et gérer votre SQL Server, base de données SQL Azure et Azure SQL Data Warehouse. |
-| [SQL Server Data Tools (SSDT)--... / ssdt/download-sql-server-data-tools-ssdt.md) | Activez Visual Studio dans un environnement de développement puissant pour SQL Server, base de données SQL Azure et Azure SQL Data Warehouse. |
-| [Code Visual Studio](https://code.visualstudio.com/)| Code Visual Studio fonctionne sur Windows, Linux et macOS. Après avoir installé Visual Studio Code, vous devez installer le [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) pour le développement de Microsoft SQL Server, base de données SQL Azure et SQL Data Warehouse. |
-| [Configuration Manager--... / tools/configuration-manager/sql-server-configuration-manager-help.md) | Utilisez le Gestionnaire de Configuration SQL Server pour configurer les services SQL Server et de configurer la connectivité réseau.|
-
+***Aucun article dans ce domaine n’a été mis à jour récemment.***
 
 
 
@@ -127,35 +93,35 @@ Si vous exécutez Linux ou macOS, essayez [Visual Studio Code](https://code.visu
     Then run Run-533-*.BAT
 -->
 
-Cette section répertorie les articles très similaires pour les articles récemment mis à jour dans les autres domaines au sein de notre référentiel GitHub.com public : [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
+Cette section liste les articles très similaires récemment mis à jour dans d’autres domaines, dans notre dépôt public GitHub.com : [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Zones de sujet avec des articles nouveaux ou mis à jour récemment
 
-- [Nouveau + mis à jour (3 + 12) : **avancées d’Analytique pour SQL** documents](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Nouveau + mis à jour (5 + 0) : **se connecter à SQL** documents](../connect/new-updated-connect.md)
-- [Nouveau + mis à jour (5 + 1) : **moteur de base de données pour SQL** documents](../database-engine/new-updated-database-engine.md)
-- [Nouveau + mis à jour (19 + 82) : **Integration Services pour SQL** documents](../integration-services/new-updated-integration-services.md)
-- [Nouveau + mis à jour (1 + 8) : **Linux pour SQL** documents](../linux/new-updated-linux.md)
-- [Nouveau + mis à jour (12 + 1) : **des bases de données relationnelles pour SQL** documents](../relational-databases/new-updated-relational-databases.md)
-- [Nouveau + mis à jour (0 + 1) : **Reporting Services pour SQL** documents](../reporting-services/new-updated-reporting-services.md)
-- [Nouveau + mis à jour (7 + 1) : **Microsoft SQL Server** documents](../sql-server/new-updated-sql-server.md)
-- [Nouveau + mis à jour (1 + 1) : **SQL Server Data Tools (SSDT)** documents](../ssdt/new-updated-ssdt.md)
-- [Nouveau + mis à jour (0 + 2) : **SQL Server Migration Assistant (SSMA)** documents](../ssma/new-updated-ssma.md)
-- [Nouveau + mis à jour (1 + 4) : **SQL Server Management Studio (SSMS)** documents](../ssms/new-updated-ssms.md)
-- [Nouveau + mis à jour (4 + 1) : **Transact-SQL** documents](../t-sql/new-updated-t-sql.md)
-- [Nouveau + mis à jour (0 + 1) : **Tools pour SQL** documents](../tools/new-updated-tools.md)
+- [Nouveau + mis à jour (0 + 1) : **avancées d’Analytique pour SQL** documents](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nouveau + mis à jour (0 + 1) : **Analysis Services pour SQL** documents](../analysis-services/new-updated-analysis-services.md)
+- [Nouveau + mis à jour (4 + 1) : **moteur de base de données pour SQL** documents](../database-engine/new-updated-database-engine.md)
+- [Nouveau + mis à jour (17 + 0) : **Integration Services pour SQL** documents](../integration-services/new-updated-integration-services.md)
+- [Nouveau + mis à jour (3 + 0) : **Linux pour SQL** documents](../linux/new-updated-linux.md)
+- [Nouveau + mis à jour (1 + 1) : **des bases de données relationnelles pour SQL** documents](../relational-databases/new-updated-relational-databases.md)
+- [Nouveau + mis à jour (2 + 0) : **Reporting Services pour SQL** documents](../reporting-services/new-updated-reporting-services.md)
+- [Nouveau + mis à jour (0 + 1) : **SQL Server Management Studio (SSMS)** documents](../ssms/new-updated-ssms.md)
+- [Nouveau + mis à jour (0 + 1) : **Transact-SQL** documents](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Zones de sujet sans article nouveau ou mis à jour récemment
 
 - [Nouveaux + Mis à jour (0 + 0) : **ActiveX Data Objects (ADO) pour SQL** (documentation)](../ado/new-updated-ado.md)
-- [Nouveau + mis à jour (0 0 +) : **Analysis Services pour SQL** documents](../analysis-services/new-updated-analysis-services.md)
+- [Nouveau + mis à jour (0 0 +) : **se connecter à SQL** documents](../connect/new-updated-connect.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Data Quality Services pour SQL** (documentation)](../data-quality-services/new-updated-data-quality-services.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Extensions DMX (Data Mining Extensions) pour SQL** (documentation)](../dmx/new-updated-dmx.md)
-- [Nouveau + mis à jour (0 0 +) : **Master Data Services (MDS) pour SQL** documents](../master-data-services/new-updated-master-data-services.md)
+- [Nouveaux + Mis à jour (0 + 0) : **Master Data Services (MDS) for SQL** (documentation)](../master-data-services/new-updated-master-data-services.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Expressions MDX (Multidimensional Expressions) pour SQL** (documentation)](../mdx/new-updated-mdx.md)
 - [Nouveaux + Mis à jour (0 + 0) : **ODBC (Open Database Connectivity) pour SQL** (documentation)](../odbc/new-updated-odbc.md)
 - [Nouveaux + Mis à jour (0 + 0) : **PowerShell pour SQL** (documentation)](../powershell/new-updated-powershell.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Exemples pour SQL** (documentation)](../sample/new-updated-sample.md)
+- [Nouveau + mis à jour (0 0 +) : **Microsoft SQL Server** documents](../sql-server/new-updated-sql-server.md)
+- [Nouveaux + Mis à jour (0 + 0) : **SQL Server Data Tools (SSDT)** (documentation)](../ssdt/new-updated-ssdt.md)
+- [Nouveaux + Mis à jour (0 + 0) : **SQL Server Migration Assistant (SSMA)** (documentation)](../ssma/new-updated-ssma.md)
+- [Nouveau + mis à jour (0 0 +) : **Tools pour SQL** documents](../tools/new-updated-tools.md)
 - [Nouveaux + Mis à jour (0 + 0) : **XQuery pour SQL** (documentation)](../xquery/new-updated-xquery.md)
 
 

@@ -23,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 32ca3905c25a2b2182e519b56f23a6699728e854
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6a4d17b808332b595589cb663636b91bf82feee9
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Déployer des projets et des packages Integration Services (SSIS)
@@ -271,7 +271,7 @@ static void Main()
   
 2.  Si le projet et tous les packages réussissent le test de compatibilité, cliquez sur **OK** pour convertir le package.  
   
-> **REMARQUE :** Pour convertir un projet en modèle de déploiement de projet, utilisez **l’Assistant Conversion de projet Integration Services**. Pour plus d’informations, consultez [Assistant Conversion de projet Integration Services](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
+> **REMARQUE :** Pour convertir un projet en modèle de déploiement de projet, utilisez **l’Assistant Conversion de projet Integration Services**. Pour plus d’informations, consultez [Assistant Conversion de projet Integration Services](deploy-integration-services-ssis-projects-and-packages.md).  
 
 ## <a name="integration-services-deployment-wizard"></a>Assistant Déploiement d’Integration Services
   L’ **Assistant Déploiement d’Integration Services** prend en charge deux modèles de déploiement :
@@ -309,14 +309,14 @@ Lancer l’Assistant en :
  La page vous permet de vérifier les paramètres que vous avez sélectionnés. Vous pouvez modifier vos sélections en cliquant sur **Précédent**ou en cliquant sur l'une des étapes dans le volet gauche. Cliquez sur **Déployer** pour démarrer le processus de déploiement.  
   
 #### <a name="results"></a>Résultats  
- Une fois le processus de déploiement terminé, la page **Résultats** doit s’afficher. Cette page indique la réussite ou l’échec de chaque action. Si l'action échoue, cliquez sur **Échec** dans la colonne **Résultat** pour afficher une explication de l'erreur. Cliquez sur **enregistrer le rapport... ** pour enregistrer les résultats dans un fichier XML ou un clic **fermer** pour quitter l’Assistant.
+ Une fois le processus de déploiement terminé, la page **Résultats** doit s’afficher. Cette page indique la réussite ou l’échec de chaque action. Si l'action échoue, cliquez sur **Échec** dans la colonne **Résultat** pour afficher une explication de l'erreur. Cliquez sur **enregistrer le rapport...**  pour enregistrer les résultats dans un fichier XML ou un clic **fermer** pour quitter l’Assistant.
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
 #### <a name="select-source"></a>Sélectionner une source  
  La page **Sélectionner une source** dans l’ **Assistant Déploiement d’Integration Services** affiche les paramètres spécifiques au modèle de déploiement de package si vous avez sélectionné l’option **Déploiement de package** comme **modèle de déploiement**.  
   
- Pour sélectionner les packages source, cliquez sur **Parcourir...** pour sélectionner le **dossier** qui contient les packages ou tapez le chemin d’accès au dossier dans la zone de texte **Chemin d’accès au dossier Packages** et cliquez sur le bouton **Actualiser** au bas de la page. Tous les packages contenus dans le dossier spécifié doivent s’afficher dans la zone de liste. Par défaut, tous les packages sont sélectionnés. Cliquez sur la **case à cocher** dans la première colonne pour choisir les packages à déployer sur le serveur.  
+ Pour sélectionner les packages source, cliquez sur **Parcourir...** pour sélectionner le **dossier** that contains the packages or type the dossier path in the **Packages dossier path** et cliquez sur le bouton **Actualiser** au bas de la page. Tous les packages contenus dans le dossier spécifié doivent s’afficher dans la zone de liste. Par défaut, tous les packages sont sélectionnés. Cliquez sur la **case à cocher** dans la première colonne pour choisir les packages à déployer sur le serveur.  
   
  Consultez les colonnes **État** et **Message** pour vérifier l’état du package. Si l’état est défini sur **Prêt** ou **Avertissement**, l’Assistant Déploiement ne bloquera pas le processus de déploiement. Si l’état est défini sur **Erreur**, l’Assistant ne procédera pas au déploiement des packages sélectionnés. Pour afficher les messages d’avertissement/d’erreur détaillés, cliquez sur le lien dans la colonne **Message** .  
   
@@ -403,7 +403,7 @@ Lancer l’Assistant en :
 14. Cliquez deux fois sur **OK** pour enregistrer vos modifications.  
 
 ## <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Déployer et exécuter des packages SSIS à l'aide de procédures stockées
-  Lorsque vous configurez une [ ! INCLURE[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
+  Lorsque vous configurez un projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] afin d'utiliser le modèle de déploiement de projet, vous pouvez utiliser les procédures stockées du catalogue [!INCLUDE[ssIS](../../includes/ssis-md.md)] pour déployer le projet et pour exécuter des packages. Pour plus d’informations sur le modèle de déploiement de projet, consultez [Déploiement de projets et de packages](https://msdn.microsoft.com/library/hh213290.aspx).  
   
  Vous pouvez également utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour déployer le projet et pour exécuter des packages. Pour plus d’informations, consultez les rubriques de la section **Voir aussi** .  
   

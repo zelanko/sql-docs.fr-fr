@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: a37c630af512d85e22b3547eb520aebe22546040
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0cb8a1ffb609405f5c27ee62d3663ba2b4214d46
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # Propriétés de TCP/IP (onglet Protocoles)
@@ -43,7 +43,7 @@ ms.lasthandoff: 09/21/2017
   
 ## Voir aussi  
  [Choix d'un protocole réseau](https://msdn.microsoft.com/library/ms187892(v=sql.130).aspx)   
- [Création d’une chaîne de connexion valide à l’aide du protocole TCP/IP](/sql-docs/docs/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip)  
+ [Création d’une chaîne de connexion valide à l’aide du protocole TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)  
   
   
 

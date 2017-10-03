@@ -16,10 +16,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 48a6c898c5381bb777863ed7569c6ac302560eb3
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: fc31861f7eef73a2ddb88faa4aa59b1bf289d2ea
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>Utilisation du dossier Mes rapports (Générateur de rapports et SSRS)
@@ -27,7 +27,7 @@ ms.lasthandoff: 09/21/2017
   
  D'un point de vue conceptuel, le dossier Mes rapports est similaire au dossier Mes documents du système de fichiers Windows. Bien que chaque utilisateur dispose d'un dossier appelé Mes rapports, le dossier auquel chaque utilisateur accède est différent du dossier des autres utilisateurs. À l'exception des administrateurs du serveur de rapports, les utilisateurs ne peuvent pas accéder au contenu du dossier Mes rapports qui ne leur appartient pas.  
   
- La fonctionnalité Mes rapports est facultative et peut être désactivée par un administrateur de serveur de rapports. Si elle est activée, le dossier Mes rapports apparaît dans le Dossier racine, qui est accessible au moyen du Gestionnaire de rapports ou d'un navigateur Web. Pour plus d’informations, consultez [recherche et affichage de rapports dans le Gestionnaire de rapports &#40; Le Générateur de rapports et SSRS &#41; ](/sql-docs/docs/reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs).  
+ La fonctionnalité Mes rapports est facultative et peut être désactivée par un administrateur de serveur de rapports. Si elle est activée, le dossier Mes rapports apparaît dans le Dossier racine, qui est accessible au moyen du Gestionnaire de rapports ou d'un navigateur Web. Pour plus d’informations, consultez [recherche et affichage de rapports dans le Gestionnaire de rapports &#40; Le Générateur de rapports et SSRS &#41; ](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md).  
   
  Sur un serveur de rapports configuré en mode intégré SharePoint, il n'existe pas d'équivalent au dossier Mes rapports. Pour plus d’informations, consultez [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   

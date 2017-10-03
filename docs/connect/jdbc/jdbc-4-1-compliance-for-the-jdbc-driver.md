@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: cffe6569f7bac5308d49bb89f4fb4db259be445b
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d5b8e44c007766354e5c03058d16a41cbb72ad0e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>Compatibilité avec JDBC 4.1 pour le pilote JDBC
@@ -56,7 +56,7 @@ ms.lasthandoff: 09/21/2017
   
 |Nouvelle fonctionnalité| Description|  
 |-----------------|-----------------|  
-|Nouvelle fonction d'échappement<br /><br /> Échappement limité des lignes retournées|Partiellement pris en charge<br /><br /> Syntaxe d’échappement : limite \<lignes > [décalage < row_offset >](/sql-docs/docs/connect/jdbc/using-sql-escape-sequences).|  
+|Nouvelle fonction d'échappement<br /><br /> Échappement limité des lignes retournées|Partiellement pris en charge<br /><br /> Syntaxe d’échappement : limite \<lignes > [décalage < row_offset >](using-sql-escape-sequences.md).|  
   
  La spécification de l'API Java Database Connectivity 4.1 est prise en charge par Microsoft JDBC Driver 4.2 pour SQL Server, avec les mappages de type de données suivants.  
   

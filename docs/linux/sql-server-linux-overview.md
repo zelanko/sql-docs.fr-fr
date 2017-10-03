@@ -4,21 +4,21 @@ description: "Cette rubrique décrit comment SQL Server s’exécute sur Linux e
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 1192afb7032f34f0af98c3c1051808e89dc22b63
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 6fdb36fbf294ea1f109728a1f304b5a3f3662122
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sql-server-on-linux"></a>SQL Server sur Linux
 
-SQL Server s’exécute désormais sur Linux ! Cette nouvelle version, SQL Server 2017 RC2, s’exécute sur Linux et est bien des égards simplement de SQL Server. Il est le même moteur de base de données SQL Server, de nombreuses fonctionnalités et des services, quel que soit votre système d’exploitation similaire.
+SQL Server 2017 s’exécute désormais sur Linux. Il est le même moteur de base de données SQL Server, de nombreuses fonctionnalités et des services, quel que soit votre système d’exploitation similaire.
 
 ## <a name="install"></a>Install
 

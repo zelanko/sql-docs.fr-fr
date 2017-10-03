@@ -25,10 +25,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 56ab6a26866958c27b5fc4895fae24316e8a3517
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 640c298b1fbbc22561d04e62e236e683b186ef87
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 09/21/2017
   
  Après la mise à niveau d'un rapport en local ou sur le serveur de rapports, vous pouvez noter la présence d'erreurs, d'avertissements et de messages. Cette présence est liée aux améliorations apportées au modèle objet de rapport interne et aux composants de traitement. En effet, des messages apparaissent lors de la détection de problèmes sous-jacents dans le rapport. Pour plus d’informations, consultez [Reporting Services Backward Compatibility][](../../reporting-services/reporting-services-backward-compatibility.md "la compatibilité descendante | Reporting Services").  
   
- Pour plus d’informations sur les nouvelles fonctionnalités pour [ ! INCLURE[ssRSCurrent](/sql-docs/docs/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs).  
+ Pour plus d’informations sur les nouvelles fonctionnalités pour [ ! INCLURE[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
 
 ##  <a name="bkmk_versionsupported"></a> Versions prises en charge par la mise à niveau  
  Les rapports créés dans une version précédente de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être mis à niveau. Les versions concernées sont les suivantes :  
@@ -138,7 +138,7 @@ ms.lasthandoff: 09/21/2017
   
 -   **Non** Choisissez **Non** si vous ne souhaitez pas convertir les CRI dans le rapport. Ces CRI ne peuvent pas être affichés par le processeur de rapports dans leur version actuelle. Si votre administrateur système projette d’installer une nouvelle version du CRI de l’éditeur de logiciels tiers compatible avec le nouveau format de définition de rapport, vous devez choisir **Non**. Tant que de nouvelles versions ne sont pas disponibles, les CRI apparaissent dans le rapport sous la forme d'une zone de texte vide marquée d'une croix (X) rouge.  
   
- Dans les deux cas, le rapport est mis à niveau vers le nouveau format de définition de rapport et une copie de sauvegarde de l’état d’origine est enregistrée en tant que * \<nom du rapport >* `-` Backup.rdl. Si vous enregistrez le rapport dans votre outil de création de rapports, vous enregistrez le rapport mis à niveau dans le nouveau format de définition de rapport. Si vous publiez le rapport, celui-ci est d'abord enregistré sur votre ordinateur, puis publié sur le serveur de rapports. Vous publiez la version mise à niveau du rapport sur le serveur de rapports.  
+ Dans les deux cas, le rapport est mis à niveau vers le nouveau format de définition de rapport et une copie de sauvegarde de l’état d’origine est enregistrée en tant que  *\<nom du rapport >* `-` Backup.rdl. Si vous enregistrez le rapport dans votre outil de création de rapports, vous enregistrez le rapport mis à niveau dans le nouveau format de définition de rapport. Si vous publiez le rapport, celui-ci est d'abord enregistré sur votre ordinateur, puis publié sur le serveur de rapports. Vous publiez la version mise à niveau du rapport sur le serveur de rapports.  
   
  Si vous n'enregistrez pas le rapport, le rapport d'origine reste inchangé. Toutefois, vous ne pouvez pas modifier ce rapport dans la version de SQL Server 2016 de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou d’un environnement qui utilise un format de définition de rapport plus récent de la création de rapports. Vous pouvez continuer à exécuter la version d’origine du rapport en téléchargeant sur un [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] serveur de rapports à l’aide du portail web. Pour plus d’informations, consultez [portail Web](../../reporting-services/web-portal-ssrs-native-mode.md).  
   

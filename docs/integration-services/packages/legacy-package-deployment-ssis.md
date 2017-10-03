@@ -36,10 +36,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 54d2ef0f186916fa79f7af606b33e42e8f241cb7
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 15c21ac27069d582a7006c38993f48dc3f4ed0be
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="legacy-package-deployment-ssis"></a>Déploiement de packages hérités (SSIS)
@@ -58,7 +58,7 @@ ms.lasthandoff: 09/21/2017
 ## <a name="package-configurations"></a>Configurations du package
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit des configurations de package avec lesquelles vous pouvez mettre à jour les valeurs des propriétés au moment de l'exécution.  
   
-> **REMARQUE :** des configurations sont disponibles pour le modèle de déploiement de package. Les paramètres sont utilisés à la place des configurations pour le modèle de déploiement de projet. Le modèle de déploiement de projet vous permet de déployer [ ! INCLURE[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
+> **REMARQUE :** des configurations sont disponibles pour le modèle de déploiement de package. Les paramètres sont utilisés à la place des configurations pour le modèle de déploiement de projet. Le modèle de déploiement de projet vous permet de déployer des projets [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour plus d'informations sur les modèles de déploiement, consultez [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).   
   
  Une configuration est une paire propriété/valeur que vous ajoutez à un package terminé. En règle générale, vous devez créer un package, définir des propriétés sur les objets du package lors du développement de ce dernier, puis ajouter la configuration au package. Lors de son exécution, le package extrait les nouvelles valeurs de la propriété à partir de la configuration. Par exemple, lorsque vous utilisez une configuration, vous pouvez modifier la chaîne de connexion d'un gestionnaire de connexions ou mettre à jour la valeur d'une variable.  
   
@@ -181,7 +181,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **REMARQUES :**
 >Vous pouvez également accéder à la **Bibliothèque des configurations du package** , en cliquant sur le bouton de sélection (points de suspension) en regard de la propriété **Configuration** . La propriété Configuration apparaît dans la fenêtre des propriétés du package.  
   
->Des configurations sont disponibles pour le modèle de déploiement de package. Les paramètres sont utilisés à la place des configurations pour le modèle de déploiement de projet. Le modèle de déploiement de projet vous permet de déployer [ ! INCLURE[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
+>Des configurations sont disponibles pour le modèle de déploiement de package. Les paramètres sont utilisés à la place des configurations pour le modèle de déploiement de projet. Le modèle de déploiement de projet vous permet de déployer des projets [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour plus d'informations sur les modèles de déploiement, consultez [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).    
   
 >Dans la boîte de dialogue **Bibliothèque des configurations du package** , vous pouvez permettre aux packages d'utiliser des configurations, ajouter et supprimer des configurations et définir l'ordre souhaité dans lequel sont chargées les configurations. 
  
@@ -256,7 +256,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ## <a name="package-configurations-organizer"></a>Bibliothèque des configurations du package
   Utilisez la boîte de dialogue **Bibliothèque des configurations du package** pour activer les configurations du package, afficher une liste des configurations du package actuel et spécifier l'ordre de chargement de préférence des configurations.  
   
-> **REMARQUE :** des configurations sont disponibles pour le modèle de déploiement de package. Les paramètres sont utilisés à la place des configurations pour le modèle de déploiement de projet. Le modèle de déploiement de projet vous permet de déployer [ ! INCLURE[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
+> **REMARQUE :** des configurations sont disponibles pour le modèle de déploiement de package. Les paramètres sont utilisés à la place des configurations pour le modèle de déploiement de projet. Le modèle de déploiement de projet vous permet de déployer des projets [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour plus d'informations sur les modèles de déploiement, consultez [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).    
   
  Si plusieurs configurations mettent à jour la même propriété, les valeurs des configurations du bas de la liste de configuration remplacent les valeurs des configurations du haut de la liste. La dernière valeur chargée dans la propriété est la valeur utilisée à l'exécution du package. De plus, si le package utilise une combinaison de configuration directe (par exemple, un fichier de configuration XML) et de configuration indirecte (par exemple, une variable d'environnement), la configuration indirecte qui pointe vers l'emplacement de la configuration directe doit figurer plus haut dans la liste.  
   
@@ -298,7 +298,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ## <a name="package-configuration-wizard-ui-reference"></a>Référence de l'interface utilisateur de l'Assistant Configuration de package
   **L’Assistant Configuration de package** vous permet de créer des configurations chargées de mettre à jour les propriétés d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ainsi que les objets qui s’y rattachent au moment de l’exécution. Cet Assistant s’exécute quand vous ajoutez une nouvelle configuration ou modifiez une configuration existante dans la boîte de dialogue **Bibliothèque des configurations du package** . Pour ouvrir la boîte de dialogue **Bibliothèque des configurations du package** , sélectionnez **Configurations du package** dans le menu **SSIS** de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations, consultez [Créer des configurations de package](../../integration-services/packages/create-package-configurations.md).  
   
-> **REMARQUE :** des configurations sont disponibles pour le modèle de déploiement de package. Les paramètres sont utilisés à la place des configurations pour le modèle de déploiement de projet. Le modèle de déploiement de projet vous permet de déployer [ ! INCLURE[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
+> **REMARQUE :** des configurations sont disponibles pour le modèle de déploiement de package. Les paramètres sont utilisés à la place des configurations pour le modèle de déploiement de projet. Le modèle de déploiement de projet vous permet de déployer des projets [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour plus d'informations sur les modèles de déploiement, consultez [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
   
  Les sections suivantes décrivent les pages de l'Assistant.  
   
@@ -498,7 +498,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  Cliquez avec le bouton droit sur le projet et cliquez sur **Propriétés**.  
   
-3.  Dans le ** \<nom du projet > Pages de propriétés** boîte de dialogue, cliquez sur **utilitaire de déploiement**.  
+3.  Dans le  **\<nom du projet > Pages de propriétés** boîte de dialogue, cliquez sur **utilitaire de déploiement**.  
   
 4.  Pour mettre à jour les configurations de package quand les packages sont déployés, affectez à **AllowConfigurationChanges** la valeur **True**.  
   

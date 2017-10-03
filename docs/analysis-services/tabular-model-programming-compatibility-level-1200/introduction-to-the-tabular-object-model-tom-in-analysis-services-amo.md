@@ -16,10 +16,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 2f9e5d07831070ad69ccf23a3975fbdc19fa4c83
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: ab4bfb890124538878fd4d618dee05d393a4864c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Présentation du modèle d’objet tabulaire (TOM) dans Analysis Services AMO
@@ -55,11 +55,11 @@ En revanche, lorsque vous gérez des objets qui font partie des métadonnées ta
 
 ### <a name="tom-and-xmla"></a>TOM et XMLA
 
-Sur le câble, TOM utilise le protocole XMLA pour communiquer avec le serveur Analysis Services et de gérer des objets. Lors de la gestion des objets non tabulaires, TOM utilise [ASSL](/sql-docs/docs/analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla), l’extension d’Analysis Services Scripting Language de XMLA. Lors de la gestion des objets tabulaires, TOM utilise le protocole tabulaire SSAS, également une extension de XMLA. Consultez [tabulaires SSAS-T-MS SQL Server Analysis Services documentation du protocole](https://msdn.microsoft.com/library/mt719260.aspx) pour plus d’informations.
+Sur le câble, TOM utilise le protocole XMLA pour communiquer avec le serveur Analysis Services et de gérer des objets. Lors de la gestion des objets non tabulaires, TOM utilise [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), l’extension d’Analysis Services Scripting Language de XMLA. Lors de la gestion des objets tabulaires, TOM utilise le protocole tabulaire SSAS, également une extension de XMLA. Consultez [tabulaires SSAS-T-MS SQL Server Analysis Services documentation du protocole](https://msdn.microsoft.com/library/mt719260.aspx) pour plus d’informations.
 
 ### <a name="tom-and-json"></a>TOM et JSON
 
-Les métadonnées tabulaires sont structurée comme documents JSON, a une syntaxe nouvelle de définition de commande et l’objet modèle via le langage de script de modèle tabulaire [TMSL](/sql-docs/docs/analysis-services/tabular-model-scripting-language-tmsl-reference). Le langage de script utilise JSON pour le corps des demandes et réponses.
+Les métadonnées tabulaires sont structurée comme documents JSON, a une syntaxe nouvelle de définition de commande et l’objet modèle via le langage de script de modèle tabulaire [TMSL](../tabular-model-scripting-language-tmsl-reference.md). Le langage de script utilise JSON pour le corps des demandes et réponses.
 
 Bien que TMSL et TOM exposent les mêmes objets (**Table**, **colonne**, et ainsi de suite) et les mêmes opérations (**créer**, **supprimer**, **Actualiser**), TOM n’utilise pas TMSL sur le câble (il utilise le protocole tabulaire SSAS MS au lieu de cela, comme indiqué précédemment).
 

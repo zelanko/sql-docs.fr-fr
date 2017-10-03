@@ -16,10 +16,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0a59b89b558922f27c91fb2452df157f7baa3918
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 39bd1c3e734a91d2219b405febbccd508c08b78e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planifier la conception de rapports et le déploiement de rapports| Reporting Services
@@ -96,7 +96,7 @@ Cette rubrique offre une vue d'ensemble de la prise en charge de la définition 
   
 -   [Déploiement et prise en charge des versions dans les outils de données SQL Server &#40;SSRS&#41;](../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
--   [SQL Server Data Tools pour Visual Studio 2015](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)  
+-   [SQL Server Data Tools pour Visual Studio 2015](../ssdt/download-sql-server-data-tools-ssdt.md)  
   
 ##  <a name="bkmk_reportviewer"></a> Contrôles ReportViewer  
  Le contrôle ReportViewer [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] peut d'afficher un rapport .rdlc en mode de prévisualisation local ou distant. Il peut afficher un fichier .rdl hébergé sur un serveur de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Le tableau suivant fournit la liste des versions RDL prises en charge par les contrôles de ReportViewer pour le traitement local (.rdlc). La prise en charge RDL côté serveur est résumée dans la section [Prise en charge du serveur de rapports et du schéma RDL](#bkmk_report_server_rdl_schema_support).  

@@ -1,7 +1,7 @@
 ---
 title: "Configurer SQL Server Machine Learning Services (de-de base de données) | Documents Microsoft"
 ms.custom: 
-ms.date: 07/29/2017
+ms.date: 09/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f0065068d53517626c7157c9be884549573ae08b
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 9b3449e8c1f19ee69b36107f3530eac80fae0227
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>Configurer SQL Server Machine Learning Services (de-de base de données)
@@ -97,15 +97,15 @@ Pour utiliser l’apprentissage automatique, vous devez installer SQL Server 201
 
 6. Sur le **prêt pour l’installation** , vérifiez que les éléments suivants sont inclus, puis sélectionnez **installer**.
 
-   **SQL Server 2016**
-   - Services Moteur de base de données
-   - R Services (dans la base de données)
-
    **SQL Server 2017**
    - Services Moteur de base de données
    - Machine Learning Services (en base de données)
    - R ou Python ou les deux
-    
+
+   **SQL Server 2016**
+   - Services Moteur de base de données
+   - R Services (dans la base de données)
+
 7. Une fois l’installation terminée, redémarrez votre ordinateur.
 
 ##  <a name="bkmk_enableFeature"></a>Étape 2 : Activer les services de script externe
@@ -189,12 +189,15 @@ Toutefois, si vous avez besoin d’exécuter des scripts R à partir d’un clie
 
 1. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dans l’Explorateur d’objets, développez **Sécurité**, cliquez avec le bouton droit sur **Connexions**, puis sélectionnez **Nouvelle connexion**.
 2. Dans le **nouvelle connexion** boîte de dialogue, sélectionnez **recherche**.
-3. Sélectionnez le **les Types d’objets** et **groupes** cases à cocher et désactivez toutes les autres cases à cocher. 
-4. Dans **Entrez le nom de l’objet à sélectionner**, type **SQLRUserGroup**, puis sélectionnez **vérifier les noms**.  
-    Le nom du groupe local qui est associé à service Launchpad de l’instance doit se résoudre en quelque chose comme *instancename\SQLRUserGroup*. 
-5. Sélectionnez **OK**.
-6. Par défaut, la connexion est affectée au rôle **public** et est autorisée à se connecter au moteur de base de données.
-7. Sélectionnez **OK**.
+3. Sélectionnez le **les Types d’objets** et **groupes** cases à cocher et désactivez toutes les autres cases à cocher.
+4. Cliquez sur **avancé**, vérifiez que l’emplacement de recherche est l’ordinateur actuel et puis cliquez sur **Rechercher maintenant**.
+5. Faites défiler la liste des comptes de groupe sur le serveur jusqu'à ce que vous trouviez une commençant par `SQLRUserGroup`.
+    
+    + Le nom du groupe associé avec le service Launchpad pour le _instance par défaut_ est toujours simplement **SQLRUserGroup**. Sélectionner ce compte uniquement pour l’instance par défaut.
+    + Si vous utilisez un _instance nommée_, le nom d’instance est ajouté au nom par défaut, `SQLRUserGroup`. Par conséquent, si votre instance est nommée « MLTEST », le nom du groupe utilisateur par défaut pour cette instance serait **SQLRUserGroupMLTest**.
+5. Cliquez sur **OK** pour fermer la boîte de dialogue Recherche avancée, vérifiez que vous avez sélectionné le compte approprié pour l’instance. Chaque instance peut utiliser uniquement son propre service Launchpad et le groupe créé pour ce service.
+6. Cliquez sur **OK** pour fermer la **sélectionner utilisateur ou groupe** boîte de dialogue.
+7. Dans le **nouvelle connexion** boîte de dialogue, cliquez sur **OK**. Par défaut, la connexion est affectée au rôle **public** et est autorisée à se connecter au moteur de base de données.
 
 ### <a name="bkmk_AllowLogon"></a>Autoriser les utilisateurs à exécuter des scripts externes
 

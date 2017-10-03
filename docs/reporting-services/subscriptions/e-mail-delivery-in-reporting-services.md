@@ -20,10 +20,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: bd3def842c9171dd20e53eff37128a7a95779ddf
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0b50ccb5717de8f64f915d7cbedc663ec8345400
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Remise par courrier électronique dans Reporting Services
@@ -88,7 +88,7 @@ ms.lasthandoff: 09/21/2017
  Pour un serveur de rapports en mode natif, vous pouvez configurer l’extension de remise par e-mail via le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif et en modifiant les fichiers de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Dans le cas d’un serveur de rapports en mode SharePoint, l’extension de remise du courrier électronique est configurée dans les pages de gestion de SharePoint et dans les scripts PowerShell.  
   
  
- Pour plus d’informations sur la façon de configurer un serveur de rapports en mode natif, consultez [paramètres de courrier électronique - mode natif de Reporting Services (Gestionnaire de Configuration)](/sql-docs/docs/reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager)
+ Pour plus d’informations sur la façon de configurer un serveur de rapports en mode natif, consultez [paramètres de courrier électronique - mode natif de Reporting Services (Gestionnaire de Configuration)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
  
  
  Pour plus d'informations sur la configuration d'un serveur de rapports en mode SharePoint, consultez :  

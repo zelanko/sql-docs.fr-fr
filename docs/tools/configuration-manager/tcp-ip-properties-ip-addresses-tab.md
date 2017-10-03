@@ -18,16 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: fb0172c59d4ba114a98191b5ac5b5c88c94bb4a3
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 3d2e6ea5bd6d2436946a015addc1e25f3dd98ce1
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Propriétés TCP/IP (onglet Adresses IP)
   La boîte de dialogue **Propriétés TCP/IP (onglet Adresses IP)** permet de configurer les options du protocole TCP/IP pour une adresse IP spécifique. Seules les options **Ports TCP dynamiques** et **Port TCP** peuvent être configurées pour toutes les adresses en une seule fois en sélectionnant **IPAll**.  
   
- Les modifications prennent effet lors du redémarrage de SQL Server. Pour obtenir des informations sur le démarrage et l’arrêt du service SQL Server Browser, consultez [Démarrer et arrêter le service SQL Server Browser](/sql-docs/docs/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services).  
+ Les modifications prennent effet lors du redémarrage de SQL Server. Pour obtenir des informations sur le démarrage et l’arrêt du service SQL Server Browser, consultez [Démarrer et arrêter le service SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 ## <a name="static-vs-dynamic-ports"></a>Ports statiques et Ports dynamiques  
  L’instance par défaut de SQL Server écoute les connexions entrantes sur le port 1433. Le port peut être modifié pour des raisons de sécurité ou parce qu'une application cliente le requiert. Par défaut, les instances nommées (y compris SQL Server Express) sont configurées pour être à l'écoute sur les ports dynamiques. Pour configurer un port statique, ne complétez pas la zone **Ports TCP dynamiques** et spécifiez un numéro de port disponible dans la zone **Port TCP** . Pour plus d'informations sur l'ouverture de ports dans le pare-feu, consultez Configuration du Pare-feu Windows pour autoriser l'accès à SQL Server dans la documentation en ligne.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 09/21/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Choix d'un protocole réseau](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
- [Création d’une chaîne de connexion valide à l’aide de TCP/IP](/sql-docs/docs/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip)   
+ [Création d’une chaîne de connexion valide à l’aide de TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)   
  [Service SQL Server Browser](https://msdn.microsoft.com/library/ms181087(v=sql.130).aspx)  
   
   

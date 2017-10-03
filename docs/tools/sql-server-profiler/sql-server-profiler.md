@@ -30,10 +30,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0ab5d4cbddc6922bc13a37dc42c1915cdd149367
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: ec5830ac7d4a4bf468f7c9af0ae1866e05725ca2
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
@@ -49,7 +49,7 @@ ms.lasthandoff: 09/21/2017
 
  ## <a name="where-is-the-profiler"></a>Où se trouve le Générateur de profils ?
  
- Vous pouvez démarrer le Générateur de profils de plusieurs façons dans SSMS. [Voici une rubrique qui répertorie les méthodes pour démarrer le Générateur de profils.](/sql-docs/docs/tools/sql-server-profiler/start-sql-server-profiler)
+ Vous pouvez démarrer le Générateur de profils de plusieurs façons dans SSMS. [Voici une rubrique qui répertorie les méthodes pour démarrer le Générateur de profils.](start-sql-server-profiler.md)
   
 ## <a name="capture-and-replay-trace-data"></a>Capturer et relire les données de trace 
 Le tableau suivant indique les fonctionnalités que nous vous conseillons d’utiliser dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pour capturer et relire les données de trace.
@@ -57,8 +57,8 @@ Le tableau suivant indique les fonctionnalités que nous vous conseillons d’ut
 ||||  
 |-|-|-|  
 |**Charge de travail fonctionnalité**|**Moteur relationnel**|**Analysis Services**|  
-|**Capture de trace**|Interface utilisateur graphique des[événements étendus](/sql-docs/docs/relational-databases/extended-events/extended-events) dans SQL Server Management Studio|SQL Server Profiler|  
-|**Relecture de trace**|[Distributed Replay](/sql-docs/docs/tools/distributed-replay/sql-server-distributed-replay)|SQL Server Profiler|  
+|**Capture de trace**|Interface utilisateur graphique des[événements étendus](../../relational-databases/extended-events/extended-events.md) dans SQL Server Management Studio|SQL Server Profiler|  
+|**Relecture de trace**|[Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)|SQL Server Profiler|  
   
 ## <a name="sql-server-profiler"></a>SQL Server Profiler  
  Le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] est une interface utilisateur graphique de Trace SQL qui permet de surveiller une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou Analysis Services. Vous pouvez capturer et enregistrer des données sur chaque événement dans un fichier ou dans une table en vue d'une analyse ultérieure. Par exemple, vous pouvez surveiller un environnement de production pour savoir quelles sont les procédures stockées qui affectent les performances en s'exécutant trop lentement. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]est utilisé pour les activités telles que :  

@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: f12ac0e3b42b647d90af01a96b8e9d2e8571447d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: de48d6e15cdb165e865d13a00b6f956816e46e39
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>Assistant Importation et Exportation SQL Server
@@ -30,7 +30,7 @@ ms.lasthandoff: 09/21/2017
 > Cette rubrique décrit uniquement la **première page** de l’Assistant. Si vous avez besoin d’un autre élément, consultez [les tâches et contenu](#related).
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Condition préalable - correspond à l’Assistant installé sur votre ordinateur ?
-Si vous souhaitez exécuter l’Assistant, mais vous n’avez pas [ ! INCLURE[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
+Si vous souhaitez exécuter l’Assistant, mais vous n’avez pas [ ! INCLURE[msCoName](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ## <a name="screen-shot-of-the-welcome-page"></a>Capture d’écran de la page d’accueil  
 La capture d’écran suivante montre la page **Assistant Importation et Exportation SQL Server** de l’Assistant.  
@@ -62,7 +62,7 @@ La capture d’écran suivante montre la page **Assistant Importation et Exporta
 
 -   **Démarrer l’Assistant.** Si vous êtes prêt à exécuter l’Assistant et souhaitez simplement savoir comment le démarrer, consultez [Démarrer l’Assistant Importation et Exportation SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
--   **Procurez-vous l’Assistant.** Si vous souhaitez exécuter l’Assistant, mais vous n’avez pas [ ! INCLURE[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
+-  **Procurez-vous l’Assistant.**  Si vous souhaitez exécuter l’Assistant, mais [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’est pas installé sur votre ordinateur, vous pouvez installer l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en installant SSDT (SQL Server Data Tools). Pour plus d’informations, consultez [Télécharger SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 
 
