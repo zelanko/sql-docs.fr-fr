@@ -1,0 +1,17 @@
+# [Guide du programmeur ADO](ado-programmer-s-guide.md)
+
+# [Données +](../../ado/guide/data/ado-fundamentals.md)
+# [Extensions +](../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+# [Multidimensionnel +](../../ado/guide/multidimensional/ado-md-fundamentals.md)
+# [RDS (Remote Data Service) +](../../ado/guide/remote-data-service/remote-data-service-rds.md)
+# [Annexes +](../../ado/guide/appendixes/appendix-a-providers.md)
+
+# [Références aux bibliothèques ADO dans une application Visual C++](referencing-the-ado-libraries-in-a-visual-c-application.md)
+# [Références aux bibliothèques ADO dans une application Visual Basic 6](referencing-the-ado-libraries-in-a-visual-basic-6-application.md)
+# [Présentation d’ADO](ado-introduction.md)
+# [Problèmes de conception de la sécurité d’ADO](ado-security-design-issues.md)
+# [Historique d’ADO](ado-history.md)
+# [Référencer les bibliothèques ADO](referencing-the-ado-libraries.md)
+# [Prérequis pour l’utilisation de la documentation d’ADO](prerequisites-for-using-the-ado-documentation.md)
+# [Tableau des technologies d’ADO](ado-technology-table.md)
+# [Tableau des tâches ADO](ado-task-table.md)
