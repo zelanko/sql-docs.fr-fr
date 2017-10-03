@@ -23,10 +23,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: fbfcabf1804a8438e07966bac9f612922b37fa4d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2ef79a82259dee5a8767b382ca5ddaa0795dab7e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Nouveautés de SQL Server 2016
@@ -38,7 +38,7 @@ Cette page offre une synthèse ainsi que des liens vers des informations plus d�
 
  **Essayez SQL Server aujourd’hui !** 
 - Téléchargez **gratuitement** [**SQL Server 2016 Developer Edition**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers).
-- Téléchargez la dernière version de [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). 
+- Téléchargez la dernière version de [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). 
 - Vous avez un compte Azure ? Faites tourner une [machine virtuelle sur laquelle SQL Server 2016 est déjà installé](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
 
 ## <a name="sql-server-2016-database-engine"></a>Moteur de base de données SQL Server 2016
@@ -99,7 +99,7 @@ Microsoft a soigneusement remanié Reporting Services dans cette version.
 - **Moteur de génération de rapport repensé** qui prend en charge HTML5 
 - Nouveaux **types de graphiques** de compartimentage et en rayons de soleil 
 
-Consultez la page [Reporting Services (SSRS)](/sql-docs/docs/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs).
+Consultez la page [Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
 ## <a name="next-steps"></a>Étapes suivantes   
 - [Programme d’installation de SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)   

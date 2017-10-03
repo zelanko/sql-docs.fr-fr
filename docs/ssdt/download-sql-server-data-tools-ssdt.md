@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0a64043328380b107fb7e33716ec0bb48d061dd1
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2417dafd4e1410a32f988ea950008da1dbaaaaa9
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>Télécharger SSDT (SQL Server Data Tools)
@@ -123,11 +123,11 @@ Après l’installation de SSDT, parcourez ces didacticiels pour apprendre à cr
   
 -   [Développement de base de données hors connexion orienté projet](https://msdn.microsoft.com/library/hh272702(v=vs.103).aspx)  
   
--   [Didacticiel SSIS : Créer un package ETL simple](/sql-docs/docs/integration-services/ssis-how-to-create-an-etl-package)  
+-   [Didacticiel SSIS : Créer un package ETL simple](../integration-services/ssis-how-to-create-an-etl-package.md)  
   
--   [Didacticiels sur Analysis Services](/sql-docs/docs/analysis-services/analysis-services-tutorials-ssas)  
+-   [Didacticiels sur Analysis Services](../analysis-services/analysis-services-tutorials-ssas.md)  
   
--   [Créer un rapport de tableau de base (didacticiel SSRS)](/sql-docs/docs/reporting-services/create-a-basic-table-report-ssrs-tutorial)  
+-   [Créer un rapport de tableau de base (didacticiel SSRS)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
 
 
