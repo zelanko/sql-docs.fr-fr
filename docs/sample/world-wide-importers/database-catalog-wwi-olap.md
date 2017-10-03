@@ -16,10 +16,10 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f34a56282f5901fe13131cdd2e1c688054fca85f
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 036afa491ae8390c38520d7dff2e5c6cd0d1a419
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="database-catalog"></a>Catalogue de la base de données
@@ -33,7 +33,7 @@ WideWorldImporters utilise les schémas à différentes fins, telles que le stoc
 
 Ces schémas contiennent les données. Un nombre de tables requises par tous les autres schémas et est situé dans le schéma de l’Application.
 
-|Schéma| Description|
+|schéma| Description|
 |-----------------------------|---------------------|
 |Application|Les utilisateurs de l’application, des contacts et des paramètres. Il contient également des tables de référence avec des données qui sont utilisées par plusieurs schémas|
 |Purchasing|Élément du stock achats à partir des fournisseurs et des détails sur les fournisseurs.|  
@@ -44,7 +44,7 @@ Ces schémas contiennent les données. Un nombre de tables requises par tous les
 
 Ces schémas sont utilisés pour les applications externes qui ne sont pas autorisées à accéder directement aux tables de données. Ils contiennent des vues et procédures stockées utilisées par des applications externes.
 
-|Schéma| Description|
+|schéma| Description|
 |-----------------------------|---------------------|
 |Site Web|Tous les accès à la base de données à partir du site Web d’entreprise sont via ce schéma.|
 |Rapports|Tous les accès à la base de données à partir de rapports de Reporting Services sont à ce schéma.|
@@ -56,7 +56,7 @@ Notez que les rapports Power BI et les schémas ne sont pas utilisés dans la ve
 
 Schémas spécial
 
-|Schéma| Description|
+|schéma| Description|
 |-----------------------------|---------------------|
 |Intégration|Objets et procédures requises pour l’intégration de l’entrepôt de données (autrement dit, migrer les données à la base de données WideWorldImportersDW).|
 |Séquences|Contient des séquences utilisées par toutes les tables dans l’application.|
@@ -97,9 +97,9 @@ Détails des fournisseurs et des achats de stock.
 
 Détails des clients, les commerciaux et des ventes de l’élément du stock.
 
-|Table|Description|
+|Table| Description|
 |-----------------------------|---------------------|
-|Clients (Customers)|Tables d’entité principale pour les clients (organisations ou aux individus)|
+|Customers|Tables d’entité principale pour les clients (organisations ou aux individus)|
 |CustomerCategories|Catégories pour les clients (c.-à-d. nouveauté magasins, grande distribution, etc.)|
 |BuyingGroups|Organisations clientes peuvent faire partie de groupes qui exercer une plus grande puissance d’achat|
 |CustomerTransactions|Toutes les transactions financières qui sont liés au client (factures, paiements)|
@@ -181,7 +181,7 @@ Voici les procédures utilisées par une application cliente, par exemple un ser
 
 ### <a name="integration-schema"></a>Schéma de l’intégration
 
-Les procédures stockées dans ce schéma sont utilisés par le processus ETL. Ils obtiennent les données nécessaires à partir des tables différentes pour l’intervalle de temps requis par le [package ETL](https://msdn.microsoft.com/library/mt734218.aspx).
+Les procédures stockées dans ce schéma sont utilisés par le processus ETL. Ils obtiennent les données nécessaires à partir des tables différentes pour l’intervalle de temps requis par le [package ETL](etl-workflow.md).
 
 ### <a name="dataloadsimulation-schema"></a>Schéma de DataLoadSimulation
 

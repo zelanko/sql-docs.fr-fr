@@ -34,10 +34,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0e29110bc0e536375dc2d21ec852a634069fa868
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0fb8883678dad7a62cac9c2109b093ee79e27b27
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
@@ -54,12 +54,12 @@ Passez aux exemples :
 -   [Exemples pour les index non cluster columnstore](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
   
 Accédez aux scénarios :  
--   [Index ColumnStore pour l’analytique opérationnelle en temps réel](https://msdn.microsoft.com/library/dn817827.aspx)  
--   [Index ColumnStore pour l’entreposage des données](https://msdn.microsoft.com/library/dn913734.aspx)  
+-   [Index ColumnStore pour l’analytique opérationnelle en temps réel](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
+-   [Index ColumnStore pour l’entreposage des données](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
   
 Pour en savoir plus :  
--   [Guide des index ColumnStore](https://msdn.microsoft.com/library/gg492088.aspx)  
--   [Récapitulatif des fonctionnalités des index ColumnStore](https://msdn.microsoft.com/library/dn934994.aspx)  
+-   [Guide des index ColumnStore](../../relational-databases/indexes/columnstore-indexes-overview.md)  
+-   [Récapitulatif des fonctionnalités des index ColumnStore](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)  
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
