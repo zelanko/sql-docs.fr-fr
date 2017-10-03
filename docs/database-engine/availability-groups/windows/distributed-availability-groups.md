@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], distributed
 ms.assetid: 
 caps.latest.revision: 
-author: MikeRayMSFT
+author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
-ms.openlocfilehash: d523a3270815fc263fe0ee6fdf7cbce6350529ed
+ms.sourcegitcommit: 0463d237614b25667c8402da70b7c5e4217d4ef5
+ms.openlocfilehash: ee06ae8d3a3a60d77e72ee9e55ee615a1bcf0cb9
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/02/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="distributed-availability-groups"></a>Groupes de disponibilité distribués
@@ -40,7 +40,7 @@ Un groupe de disponibilité traditionnel dispose de ressources configurées dans
 
 Un groupe de disponibilité distribué requiert que les groupes de disponibilité sous-jacents aient un écouteur. Au lieu de fournir le nom du serveur sous-jacent pour une instance autonome (ou, dans le cas d’une instance de cluster de basculement SQL Server, la valeur associée à la ressource de nom réseau) comme vous le feriez avec un groupe de disponibilité traditionnel, vous spécifiez l’écouteur configuré pour le groupe de disponibilité distribué avec le paramètre ENDPOINT_URL quand vous le créez. Bien que chaque groupe de disponibilité sous-jacent du groupe de disponibilité distribué ait un écouteur, un groupe de disponibilité distribué n’en a pas.
 
-La figure suivante montre une vue générale d’un groupe de disponibilité distribué qui englobe deux groupes de disponibilité (AG 1 et AG 2), chacun configuré sur son propre cluster WSFC. Le groupe de disponibilité distribué a un total de quatre réplicas, à raison de deux par groupe de disponibilité. Chaque groupe de disponibilité pouvant prendre en charge le nombre maximal de réplicas, un groupe de disponibilité distribué peut avoir jusqu’à quatre réplicas (Standard Edition) ou 18 (Enterprise Edition).
+La figure suivante montre une vue générale d’un groupe de disponibilité distribué qui englobe deux groupes de disponibilité (AG 1 et AG 2), chacun configuré sur son propre cluster WSFC. Le groupe de disponibilité distribué a un total de quatre réplicas, à raison de deux par groupe de disponibilité. Chaque groupe de disponibilité peut prendre en charge le nombre maximal de réplicas, donc une disponibilité distribuée peut avoir jusqu’à 18 réplicas au total.
 
 <a name="fig1"></a>
 ![Vue d’ensemble d’un groupe de disponibilité distribué][1]
@@ -59,7 +59,7 @@ Pour que le réplica principal d’AG 2 accepte les insertions, les mises à jou
 Les groupes de disponibilité distribués ne fonctionnent qu’avec les groupes de disponibilité qui sont créés avec la même version principale de SQL Server. Par exemple, tous les groupes de disponibilité qui participent à un groupe de disponibilité distribué doivent être créés avec SQL Server 2016. Étant donné que la fonctionnalité de groupes de disponibilité distribués n’existe pas dans SQL Server 2012 ou 2014, les groupes de disponibilité qui ont été créés dans ces versions ne peuvent pas participer à des groupes de disponibilité distribués. 
 
 > [!NOTE]
-> Les groupes de disponibilité distribués peuvent être configurés avec Standard Edition ou Enterprise Edition, mais combiner les éditions dans un groupe de disponibilité distribué n’est pas pris en charge.
+> Les groupes de disponibilité distribués ne peuvent pas être configurés avec l’édition Standard ou une combinaison de l’édition Standard et de l’édition Enterprise.
 
 Étant donné qu’il existe deux groupes de disponibilité distincts, le processus d’installation d’un Service Pack ou d’une mise à jour cumulative sur un réplica qui fait partie d’un groupe de disponibilité distribué est légèrement différent de celui d’un groupe de disponibilité traditionnel :
 
@@ -267,8 +267,6 @@ and ag.is_distributed = 1
 * [Utiliser la boîte de dialogue Nouveau groupe de disponibilité (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 * [Créer un groupe de disponibilité avec Transact-SQL](create-an-availability-group-transact-sql.md)
-
-Ce contenu a été écrit par [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt), Microsoft Most Valued Professional.
 
 <!--Image references-->
 [1]: ./media/dag-01-high-level-view-distributed-ag.png

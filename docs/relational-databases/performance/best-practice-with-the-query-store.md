@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
-ms.openlocfilehash: a13e098829fdf1ffee42075a57750513234dc997
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 2204d520152b1363657a407e5e0534e5051a4e94
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>Bonnes pratiques relatives au magasin de requêtes
@@ -55,7 +55,7 @@ Si les paramètres par défaut sont adaptés pour un démarrage rapide, vous dev
   
  Pendant que le magasin de requêtes collecte requêtes, plans d’exécution et autres statistiques, sa taille dans la base de données croît jusqu’à ce que cette limite soit atteinte. Quand cela se produit, le magasin de requêtes change automatiquement de mode d’opération pour passer en lecture seule et cesse de collecter les nouvelles données, ce qui signifie que l’analyse de vos performances n’est plus précise.  
   
- La valeur par défaut (100 Mo) peut ne pas suffire si votre charge de travail génère un grand nombre de requêtes et de plans différents ou si vous souhaitez conserver l’historique de requêtes sur une plus longue période. Suivez l’utilisation d’espace actuelle et augmentez la taille maximale (Mo) pour empêcher le magasin de requêtes de passer en mode lecture seule.  Utilisez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou exécutez le script suivant pour obtenir les dernières informations concernant la taille du magasin de requêtes :  
+ La valeur par défaut (100 Mo) peut ne pas suffire si votre charge de travail génère un grand nombre de requêtes et de plans différents ou si vous souhaitez conserver l’historique de requêtes sur une plus longue période. Suivez l’utilisation d’espace actuelle et augmentez la taille maximale (Mo) pour empêcher le magasin de requêtes de passer en mode lecture seule.  Utilisez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou exécutez le script suivant pour obtenir les dernières informations concernant la taille du magasin de requêtes :  
   
 ```tsql 
 USE [QueryStoreDB];  
@@ -176,7 +176,7 @@ Les vues du magasin de requêtes de[!INCLUDE[ssManStudio](../../includes/ssmanst
 -   Réécrivez les requêtes problématiques, par exemple, pour profiter du paramétrage des requêtes ou pour implémenter une logique plus optimale.  
   
 ##  <a name="Verify"></a> Vérifier que le magasin de requêtes collecte les données des requêtes en continu  
- Le magasin de requêtes peut modifier discrètement le mode d’opération. Vous avez donc tout intérêt à surveiller régulièrement l’état du magasin de requêtes pour vérifier qu’il fonctionne bien et prendre des mesures pour éviter des défaillances dont les causes étaient évitables. Exécutez la requête suivante pour déterminer le mode d’opération et afficher les paramètres les plus pertinents :  
+ Le magasin de requêtes peut modifier discrètement le mode d’opération. Vous avez donc tout intérêt à surveiller régulièrement l’état du magasin de requêtes pour vérifier qu’il fonctionne bien et prendre des mesures pour éviter des défaillances dont les causes étaient évitables. Exécutez la requête suivante pour déterminer le mode d’opération et afficher les paramètres les plus pertinents :  
   
 ```tsql
 USE [QueryStoreDB];  
@@ -203,14 +203,14 @@ FROM sys.database_query_store_options;
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
- Vous pouvez appliquer une ou deux de ces mesures en exécutant l’instruction suivante qui remet explicitement le mode d’opération en lecture-écriture :  
+ Vous pouvez appliquer une ou deux de ces mesures en exécutant l’instruction suivante qui remet explicitement le mode d’opération en lecture-écriture :  
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);  
 ```  
   
- À titre préventif, prenez les mesures suivantes :  
+ À titre préventif, prenez les mesures suivantes :  
   
 -   Vous pouvez prévenir les changements discrets du mode d’opération en appliquant les bonnes pratiques. Si vous vérifiez que la taille du magasin de requêtes est toujours inférieure à la valeur maximale autorisée, vous réduirez considérablement les chances de passer en mode lecture seule. Activez la stratégie basée sur la taille comme indiqué dans la section [Configurer le magasin de requêtes](#Configure) pour que le magasin de requêtes nettoie automatiquement les données quand la taille s’approche de la limite.  
   
@@ -256,7 +256,7 @@ FROM sys.database_query_store_options;
 ```  
   
 ## <a name="set-the-optimal-query-capture-mode"></a>Définir le mode de capture de requête optimal  
- Conservez les données les plus pertinentes dans le magasin de requêtes. Le tableau suivant décrit des scénarios types pour chaque mode de capture de requête :  
+ Conservez les données les plus pertinentes dans le magasin de requêtes. Le tableau suivant décrit des scénarios types pour chaque mode de capture de requête :  
   
 |Mode de capture de requête|Scénario|  
 |------------------------|--------------|  
@@ -266,7 +266,7 @@ FROM sys.database_query_store_options;
   
 ## <a name="keep-the-most-relevant-data-in-query-store"></a>Conserver les données les plus pertinentes dans le magasin de requêtes  
  Configurez le magasin de requêtes de sorte qu’il ne contienne que les données pertinentes. Ainsi, il s’exécutera toujours en offrant une excellente expérience de résolution des problèmes tout en ayant un impact minime sur votre charge de travail normale.  
-Le tableau suivant décrit les bonnes pratiques :  
+Le tableau suivant décrit les bonnes pratiques :  
   
 |Bonne pratique|Paramètre|  
 |-------------------|-------------|  
@@ -320,7 +320,15 @@ WHERE is_forced_plan = 1;
  Dans les plans d’exécution, les objets sont référencés avec des noms en trois parties (`database.schema.object`).   
 
 Si vous renommez une base de données, le forçage de plan échoue, ce qui entraîne une recompilation dans toutes les exécutions de requête suivantes.  
+
+##  <a name="Recovery"></a>Utiliser des indicateurs de trace sur les serveurs critiques pour améliorer la récupération d’urgence
+ 
+  Vous pouvez utiliser les indicateurs de trace globaux 7745 et 7752 pour améliorer les performances du Magasin des requêtes dans les scénarios de haute disponibilité et de récupération d’urgence.
   
+  L’indicateur de trace 7745 empêche le comportement par défaut où le Magasin des requêtes écrit des données sur le disque avant que SQL Server ne puisse être arrêté.
+  
+  L’indicateur de trace 7752 permet à SQL Server d’exécuter des requêtes avant le chargement complet du Magasin des requêtes. Le comportement du Magasin des requêtes par défaut empêche les requêtes de s’exécuter avant la récupération du Magasin des requêtes.
+
 ## <a name="see-also"></a>Voir aussi  
  [Vues de catalogue du magasin de requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Procédures stockées du magasin de requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   

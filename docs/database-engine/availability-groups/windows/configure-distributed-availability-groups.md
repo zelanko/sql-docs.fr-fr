@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 01f0e6dfacfab0d8528d3b399267c45afef95a11
+ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
+ms.openlocfilehash: 5112630e01953d16f1ed6cec04e16ee5af55d470
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/20/2017
 
 ---
 
@@ -233,7 +233,10 @@ Seul le basculement manuel est pris en charge pour l’instant. L’instruction 
         );  
        
       ```  
-  
+   >[!NOTE]
+   >De même que pour les groupes de disponibilité normaux, l’état de synchronisation entre deux réplicas de groupe de disponibilité faisant partie d’un groupe de disponibilité distribué dépend du mode de disponibilité des deux réplicas. Par exemple, pour obtenir une validation synchrone, le groupe de disponibilité principal et le groupe de disponibilité secondaire doivent tous deux être configurés avec le mode de disponibilité synchronous_commit.  
+
+
 1. Attendez que l’état du groupe de disponibilité distribuée soit défini sur `SYNCHRONIZED`. Exécutez la requête suivante sur le serveur SQL Server qui héberge le réplica principal du groupe de disponibilité principal. 
     
       ```sql  
@@ -340,3 +343,4 @@ ALTER AVAILABILITY GROUP [SQLFCIDAG]
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   
+

@@ -24,11 +24,11 @@ caps.latest.revision: 76
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bc3d3e94cd6d5993b9647a394338649fe357f021
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 401b50d1999f5b5c2ffec0391b8703c873abd3ed
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrer des serveurs à l'aide de la Gestion basée sur des stratégies
@@ -44,7 +44,7 @@ Par exemple, en tant qu’administrateur de la base de données, vous souhaitere
   
 2.  Définir une condition qui spécifie l'état d'une facette de gestion.  
   
-3.  Définir une stratégie qui contient la condition, des conditions supplémentaires qui filtrent les jeux de cibles et le mode d'évaluation.  
+3.  Définissez une stratégie qui contient la condition, des conditions supplémentaires qui filtrent les jeux de cibles et le mode d'évaluation.  
   
 4.  Vérifier si une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est conforme à la stratégie.  
   
@@ -74,11 +74,9 @@ Par exemple, en tant qu’administrateur de la base de données, vous souhaitere
      Lorsque les stratégies automatisées ne sont pas activées, la Gestion basée sur des stratégies n'affecte pas les performances système.  
   
 ## <a name="terms"></a>Termes  
- **Cible gérée de la Gestion basée sur des stratégies** 
- Entités gérées par la Gestion basée sur des stratégies, telles qu’une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], une base de données, une table ou un index. Toutes les cibles dans une instance de serveur forment une hiérarchie cible. Un jeu de cibles est l'ensemble des cibles qui résulte de l'application d'un jeu de filtres cibles à la hiérarchie cible, par exemple toutes les tables de la base de données détenues par le schéma HumanResources.  
+ **Cible gérée de la Gestion basée sur des stratégies** Entités gérées par la Gestion basée sur des stratégies, telles qu’une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], une base de données, une table ou un index. Toutes les cibles dans une instance de serveur forment une hiérarchie cible. Un jeu de cibles est l'ensemble des cibles qui résulte de l'application d'un jeu de filtres cibles à la hiérarchie cible, par exemple toutes les tables de la base de données détenues par le schéma HumanResources.  
   
- **Facette de la Gestion basée sur des stratégies**
-Ensemble de propriétés logiques qui modèlent le comportement ou les caractéristiques de certains types de cibles gérées. Le nombre et les caractéristiques des propriétés sont intégrés à la facette et peuvent être ajoutés ou supprimés uniquement par le créateur de la facette. Un type de cible peut implémenter une ou plusieurs facettes de gestion et une facette de gestion peut être implémentée par un ou plusieurs types de cibles. Certaines propriétés d'une facette peuvent s'appliquer uniquement à une version spécifique.  
+ **Facette de la Gestion basée sur des stratégies**Ensemble de propriétés logiques qui modèlent le comportement ou les caractéristiques de certains types de cibles gérées. Le nombre et les caractéristiques des propriétés sont intégrés à la facette et peuvent être ajoutés ou supprimés uniquement par le créateur de la facette. Un type de cible peut implémenter une ou plusieurs facettes de gestion et une facette de gestion peut être implémentée par un ou plusieurs types de cibles. Certaines propriétés d'une facette peuvent s'appliquer uniquement à une version spécifique.  
   
  **Condition de la Gestion basée sur des stratégies**  
  Expression booléenne qui spécifie un ensemble d'états autorisés pour une cible gérée par la Gestion basée sur des stratégies en ce qui concerne une facette de gestion. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente d’observer les classements au moment de l’évaluation d’une condition. Si les classements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne correspondent pas exactement aux classements Windows, testez votre condition afin de déterminer la façon dont l'algorithme résout les conflits.  
@@ -98,7 +96,7 @@ Ensemble de propriétés logiques qui modèlent le comportement ou les caractér
  Au niveau du serveur, les catégories de stratégies peuvent être appliquées à toutes les bases de données.  
   
  **Stratégie actuelle**  
- Les stratégies actuelles d'une cible sont celles qui gouvernent cette cible. Une stratégie est actuelle en ce qui concerne une cible uniquement si toutes les conditions suivantes sont remplies :  
+ Les stratégies actuelles d'une cible sont celles qui gouvernent cette cible. Une stratégie est actuelle en ce qui concerne une cible uniquement si toutes les conditions suivantes sont remplies :  
   
 -   La stratégie est activée.  
   
@@ -108,7 +106,7 @@ Ensemble de propriétés logiques qui modèlent le comportement ou les caractér
   
 ## <a name="links-to-specific-tasks"></a>Liens vers des tâches spécifiques 
 
- - [Stocker des stratégies de Gestion basée sur des stratégies.](https://msdn.microsoft.com/library/hh213476.aspx)|  
+ - [Stocker des stratégies de Gestion basée sur des stratégies.](policy-based-management-storage.md)|  
  - [Configurer des alertes afin d'informer les administrateurs de stratégie en cas d'échec de stratégie](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
  - [Créer une condition de gestion basée sur des stratégies.](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) 
  - [Supprimer une condition de gestion basée sur des stratégies.](../../relational-databases/policy-based-management/delete-a-policy-based-management-condition.md)
@@ -121,8 +119,8 @@ Ensemble de propriétés logiques qui modèlent le comportement ou les caractér
 
   
  ## <a name="examples"></a>Exemples
- - [Créer la stratégie Désactivé par défaut](https://msdn.microsoft.com/library/bb500172.aspx)
-  - [Configurer un serveur pour exécuter la stratégie Désactivé par défaut](https://msdn.microsoft.com/library/bb522470.aspx)
+ - [Créer la stratégie Désactivé par défaut](lesson-1-1-create-the-off-by-default-policy.md)
+  - [Configurer un serveur pour exécuter la stratégie Désactivé par défaut](lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md)
 ## <a name="see-also"></a>Voir aussi  
  [Vues de la Gestion basée sur des stratégies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

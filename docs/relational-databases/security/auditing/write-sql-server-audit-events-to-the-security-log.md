@@ -1,7 +1,7 @@
 ---
 title: "Écrire des événements d’audit SQL Server dans le journal de sécurité | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,45 +19,32 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 268f1fbd8ea57db8626c84999a3454e4c4459511
+ms.translationtype: HT
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 990b47afdf34cc16f15a658f5a69f840d44a27fe
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/21/2017
 
----
-# <a name="write-sql-server-audit-events-to-the-security-log"></a>Écrire des événements d'audit SQL Server dans le journal de sécurité
-  Dans un environnement extrêmement sécurisé, le journal de sécurité Windows est l'emplacement approprié pour consigner des événements d'accès aux objets. D'autres emplacements d'audit sont pris en charge mais ils sont plus exposés au risque de falsification.  
+---  
+
+# <a name="write-sql-server-audit-events-to-the-security-log"></a>Écrire des événements d'audit SQL Server dans le journal de sécurité  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+
+Dans un environnement extrêmement sécurisé, le journal de sécurité Windows est l'emplacement approprié pour consigner des événements d'accès aux objets. D'autres emplacements d'audit sont pris en charge mais ils sont plus exposés au risque de falsification.  
   
  L'écriture des audits du serveur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans le journal de sécurité Windows est soumise à deux conditions clés :  
   
 -   Le paramètre Auditer l'accès aux objets doit être configuré pour capturer les événements. L’outil de stratégie d’audit (`auditpol.exe`) expose différents paramètres de sous-stratégies dans la catégorie **Auditer l’accès aux objets** . Pour permettre à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d'auditer l'accès aux objets, configurez le paramètre **généré par une application** .  
-  
 -   Le compte sous lequel le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est exécuté doit posséder l’autorisation **Générer des audits de sécurité** pour écrire dans le journal de sécurité Windows. Par défaut, les comptes Service local et Service réseau disposent de cette autorisation. Cette étape n'est pas requise si [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'exécute sous l'un de ces comptes.  
+-   Accordez une autorisation totale au compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur la ruche du Registre `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security`.  
+
+  > [!IMPORTANT]  
+  > [!INCLUDE[ssnoteregistry-md](../../../includes/ssnoteregistry-md.md)]   
   
- La stratégie d'audit Windows peut affecter l'audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'il est configuré pour écrire dans le journal de sécurité Windows, avec la possibilité de perdre des événements si la stratégie d'audit est configurée incorrectement. En général, le journal de sécurité Windows est configuré pour remplacer les événements les plus anciens. Les événements les plus récents sont ainsi préservés. Toutefois, si le journal de sécurité Windows n'est pas configuré pour remplacer les événements les plus anciens, et si le journal de sécurité est plein, le système publie alors l'événement Windows 1104 (le journal est plein). À ce stade :  
-  
+La stratégie d'audit Windows peut affecter l'audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'il est configuré pour écrire dans le journal de sécurité Windows, avec la possibilité de perdre des événements si la stratégie d'audit est configurée incorrectement. En général, le journal de sécurité Windows est configuré pour remplacer les événements les plus anciens. Les événements les plus récents sont ainsi préservés. Toutefois, si le journal de sécurité Windows n'est pas configuré pour remplacer les événements les plus anciens, et si le journal de sécurité est plein, le système publie alors l'événement Windows 1104 (le journal est plein). À ce stade :  
 -   Plus aucun événement de sécurité supplémentaire n'est consigné  
-  
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne sera pas en mesure de détecter que le système n'est pas capable d'enregistrer les événements dans le journal de sécurité, provoquant ainsi la perte potentielle d'événements d'audit  
-  
 -   Une fois le journal de sécurité reconfiguré par l'administrateur, le comportement de consignation retourne à la normale.  
-  
- **Dans cette rubrique**  
-  
--   **Avant de commencer :**  
-  
-     [Limitations et restrictions](#Restrictions)  
-  
-     [Sécurité](#Security)  
-  
--   **Pour écrire des événements d'audit SQL Server dans le journal de sécurité :**  
-  
-     [Configurer le paramètre Auditer l'accès aux objets dans Windows à l'aide de l'outil auditpol](#auditpolAccess)  
-  
-     [Configurer le paramètre Auditer l'accès aux objets dans Windows à l'aide de l'outil secpol](#secpolAccess)  
-  
-     [Octroyer l'autorisation Générer des audits de sécurité à un compte à l'aide de l'outil secpol](#secpolPermission)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -125,3 +112,4 @@ ms.lasthandoff: 06/22/2017
  [SQL Server Audit &#40Moteur de base de données&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   
+
