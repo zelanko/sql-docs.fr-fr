@@ -3,7 +3,7 @@ title: "Éditions et fonctionnalités prises en charge de SQL Server 2017 | Mic
 ms.custom:
 - SQL2016_New_Updated
 - SQL2017_New_Updated
-ms.date: 07/14/2017
+ms.date: 09/14/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -40,10 +40,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 22507f627c33c9424d725ca5d249bd04628b3ea6
+ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
+ms.openlocfilehash: 0a51b818a33e2ee3eb4ce3c3d5682ee571c1c412
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Éditions et fonctionnalités prises en charge de SQL Server 2017
@@ -57,8 +57,6 @@ Pour plus d’informations sur les versions antérieures, consultez :
 * [SQL Server 2016](editions-and-components-of-sql-server-2016.md).  
 * [SQL Server 2014](http://msdn.microsoft.com/library/cc645993(v=sql.120).aspx).
 
->[!NOTE]
->Toutes les informations contenues dans cet article sont susceptibles d’être modifiées, car elles s’appliquent à une version préliminaire de SQL Server 2017. 
   
 La configuration requise pour l'installation varie selon vos besoins applicatifs. Les différentes éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] s'adaptent aux exigences de chaque organisation et de chaque individu en termes de performances, d'exécution et de prix. Les composants [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que vous installez dépendent également de vos exigences spécifiques. Les sections suivantes vous aident à choisir parmi les éditions et les composants disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
@@ -84,7 +82,7 @@ Pour obtenir les notes de publication les plus récentes et des informations sur
 |Enterprise|Offre Premium, l'édition [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise fournit des fonctions Datacenter avancées et complètes avec des performances ultra-rapides, une virtualisation illimitée et des fonctions Business Intelligence de bout en bout qui autorisent un haut niveau de service pour les charges de travail critiques et l'accès de l'utilisateur aux analyses de données.|  
 |Standard|L'édition[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard permet la gestion des données de base et inclut une base de données Business Intelligence destinée aux services des grandes entreprises comme aux PME, leur permettant d'exécuter les applications et prenant en charge des outils de développement communs sur site et dans le cloud, pour une gestion efficace des bases de données avec des ressources informatiques minimales.|  
 |Web|L'édition Web[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] est une option offrant un coût total de possession faible destinée aux hébergeurs Web et aux VAP Web, fournissant des fonctions évolutives, rentables et gérables aux propriétés Web à petite ou grande échelle.|  
-|Développeur|L'édition[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer permet aux développeurs de créer des applications basées sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il inclut toutes les fonctionnalités de l'édition Enterprise, mais sa licence permet uniquement de l'utiliser comme un système de développement et de test, et non comme un serveur de production. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer est la solution idéale pour le développement de<br />                [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] et le test d’applications.|  
+|Développeur|L'édition[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer permet aux développeurs de créer des applications basées sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il inclut toutes les fonctionnalités de l'édition Enterprise, mais sa licence permet uniquement de l'utiliser comme un système de développement et de test, et non comme un serveur de production. L'édition [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer est la solution idéale pour le développement et le test d'applications.|  
 |Éditions Express|L’édition Express est une édition de base comprenant une base de données gratuite, idéale pour découvrir et créer des applications bureautiques et de petites applications serveur pilotées par les données. C'est la solution idéale pour les éditeurs de logiciels, les développeurs et les amateurs de création d'applications clientes. Si vous avez besoin de fonctionnalités de base de données plus évoluées, vous pouvez mettre à niveau de manière transparente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express vers des versions plus sophistiquées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La nouveauté de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est Express LocalDB, une version allégée d'Express qui conserve toutes les fonctions de programmabilité de ce dernier, s'exécute en mode utilisateur, s'installe rapidement sans aucune configuration et n'exige que peu de conditions préalables.|  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-an-internet-server"></a>Utilisation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec un serveur Internet  
@@ -157,9 +155,9 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Mise en miroir de bases de données|Oui|Oui<br /><br /> Sécurité complète uniquement|Témoin uniquement|Témoin uniquement|Témoin uniquement| 
 |Compression de sauvegarde|Oui|Oui|Non|Non|Non| 
 |Instantané de base de données|Oui|Oui|Oui|Oui|Oui|
-|Instances de cluster de basculement Always On|Oui<br /><br /> Le nombre de nœuds correspond au maximum du système d’exploitation|Oui<br /><br /> Prise en charge de 2 nœuds|Non|Non|Non|  
-|Groupes de disponibilité Always On|Oui<br /><br /> Jusqu’à 8 réplicas secondaires, notamment 2 réplicas secondaires synchrones|Non|Non|Non|Non|
-|Groupes de disponibilité de base <sup>2</sup>|Non|Oui<br /><br /> Prise en charge de 2 nœuds|Non|Non|Non|
+|Instances de cluster de basculement Always On<sup>2</sup>|Oui|Oui|Non|Non|Non|  
+|Groupes de disponibilité Always On<sup>3</sup>|Oui|Non|Non|Non|Non|
+|Groupes de disponibilité de base<sup>4</sup>|Non|Oui|Non|Non|Non|
 |Restauration en ligne de pages et de fichiers|Oui|Non|Non|Non|Non|
 |Indexation en ligne|Oui|Non|Non|Non|Non|
 |Reconstructions d’index en ligne pouvant être reprises|Oui|Non|Non|Non|Non|
@@ -170,12 +168,18 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Assistant de récupération de base de données|Oui|Oui|Oui|Oui|Oui|
 |Sauvegarde chiffrée|Oui|Oui|Non|Non|Non|
 |Sauvegarde hybride vers Windows Azure (sauvegarde vers une URL)|Oui|Oui|Non|Non|Non|
-|Groupe de disponibilité sans cluster|Oui|Oui|Oui|Non|Non|Non|
+|Groupe de disponibilité sans cluster|Oui|Oui|Non|Non|Non|Non|
 |Groupe de disponibilité à validation de réplica minimale|Oui|Oui|Oui|Non|Non|Non|
   
- <sup>1</sup> Pour plus d’informations sur l’installation de SQL Server sur Server Core, consultez [Installer SQL Server sur Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md). 
 
-<sup>2</sup> Pour plus d’informations sur les groupes de disponibilité de base, consultez [Groupes de disponibilité de base](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).  
+<sup>1</sup> Pour plus d’informations sur l’installation de SQL Server sur Server Core, consultez [Installer SQL Server sur Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md). 
+
+<sup>2</sup> Dans l’édition Entreprise, le nombre de nœuds correspond au maximum du système d’exploitation. L’édition Standard prend en charge deux nœuds. 
+
+<sup>3</sup> L’édition Entreprise fournit la prise en charge de 8 réplicas secondaires maximum, y compris 2 réplicas secondaires synchrones. 
+
+<sup>4</sup> L’édition Standard prend en charge les groupes de disponibilité de base. Un groupe de disponibilité de base prend en charge deux réplicas, avec une base de données. Pour plus d’informations sur les groupes de disponibilité de base, consultez [Groupes de disponibilité de base](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).  
+
 
 ##  <a name="RDBMSSP"></a> Scalabilité et performances SGBDR  
   
@@ -263,8 +267,8 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Instances utilisateur|Non|Non|Non|Oui|Oui| 
 |LocalDB|Non|Non|Non|Oui|Non| 
 |Connexion administrateur dédiée|Oui|Oui|Oui|Oui avec indicateur de trace|Oui avec indicateur de trace|   
-|Prise en charge de scripts PowerShell|Oui|Oui|Oui|Oui|Oui| 
 |Prise en charge de SysPrep <sup>1</sup>|Oui|Oui|Oui|Oui|Oui| 
+|Prise en charge de scripts PowerShell<sup>2</sup>|Oui|Oui|Oui|Oui|Oui| 
 |Prise en charge des opérations des composants d’application du niveau Données : extraction, déploiement, mise à niveau, suppression|Oui|Oui|Oui|Oui|Oui| 
 |Automation de stratégie (vérification selon la planification et sur modification)|Oui|Oui|Oui|Non|Non|   
 |Collecteur de données de performances|Oui|Oui|Oui|Non|Non| 
@@ -282,6 +286,7 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
   
  <sup>1</sup> Pour plus d’informations, consultez [Considérations relatives à l’installation de SQL Server à l’aide de SysPrep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
  
+ <sup>2</sup> Sur Linux, les scripts PowerShell sont pris en charge à partir d’ordinateurs Windows ciblant des serveurs SQL Server sur Linux. 
 ##  <a name="DevTools"></a> Outils de développement  
   
 |Fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express| 
@@ -393,7 +398,7 @@ Pour plus d’informations sur les fonctionnalités de client Business Intellige
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|Non|Non| 
 |StreamInsight HA|StreamInsight Premium Edition|Non|Non|Non|Non|   
   
-> [![Télécharger SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **[Télécharger la dernière version de SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**    
+> [![Télécharger SSMS](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) **[Télécharger la dernière version de SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)**    
   
 ## <a name="next-steps"></a>Étapes suivantes 
  [Spécifications de produit pour SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
