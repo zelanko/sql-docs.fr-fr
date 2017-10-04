@@ -160,7 +160,7 @@ Avant de configurer le client NFS pour monter le chemin d’accès des fichiers 
 4. **Installez l’agent de ressources FCI pour SQL Server**. Exécutez les commandes suivantes sur les deux nœuds :
 
     ```bash
-    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server.repo
+    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
     sudo zypper --gpg-auto-import-keys refresh
     sudo zypper install mssql-server-ha
     ```
