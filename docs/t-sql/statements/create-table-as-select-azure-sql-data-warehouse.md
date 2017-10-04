@@ -46,8 +46,6 @@ CREATE TABLE AS sélectionnez (SACT) est une des fonctionnalités de T-SQL plus 
 ## <a name="syntax"></a>Syntaxe   
 
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-
 CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name   
     [ ( column_name [ ,...n ] ) ]  
     WITH ( 

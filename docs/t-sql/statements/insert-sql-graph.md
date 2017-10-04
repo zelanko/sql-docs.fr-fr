@@ -28,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 ---
 
 # <a name="insert-sql-graph"></a>INSERT (graphique SQL)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]  
 
   Ajoute une ou plusieurs lignes à un `node` ou `edge` table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
@@ -41,8 +41,6 @@ ms.lasthandoff: 09/01/2017
 La syntaxe pour l’insertion dans une table de nœud est identique à celui d’une table normale. 
 
 ```  
--- Syntax for SQL Server and Azure SQL Database  
-
 [ WITH <common_table_expression> [ ,...n ] ]  
 INSERT   
 {  

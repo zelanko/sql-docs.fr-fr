@@ -39,8 +39,6 @@ Remarque : Des Discussions sur SQL Data Warehouse dans cet article s’applique
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 -- Create a new table. 
 CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name   
     ( 

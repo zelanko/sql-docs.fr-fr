@@ -36,8 +36,6 @@ Modifie le nom, une taille maximale ou un objectif de service pour une base de d
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
--- Syntax for Azure SQL Data Warehouse  
-  
 ALTER DATABASE database_name  
 
   MODIFY NAME = new_database_name  
