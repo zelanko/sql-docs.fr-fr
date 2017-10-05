@@ -128,11 +128,12 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
+```
+-----------
+0
   
- `0`  
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### <a name="d-performing-a-case-sensitive-search"></a>D. Recherche respectant la casse  
 L’exemple suivant effectue une recherche qui respecte la casse de la chaîne `'TEST'` dans `'This is a Test``'`.
@@ -148,9 +149,10 @@ SELECT CHARINDEX ( 'TEST',
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
-  
- `0`  
+```
+-----------
+0
+```  
   
 L’exemple suivant effectue une recherche qui respecte la casse de la chaîne `'Test'` dans `'This is a Test'`.
   
@@ -165,9 +167,10 @@ SELECT CHARINDEX ( 'Test',
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
-  
- `13`  
+```
+-----------
+13
+```  
   
 ### <a name="e-performing-a-case-insensitive-search"></a>E. Recherche ne respectant pas la casse  
 L'exemple suivant effectue une recherche qui ne respecte pas la casse de la chaîne `'TEST'` dans `'This is a Test'`.
@@ -184,9 +187,10 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
-  
- `13`  
+```
+-----------
+13
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
@@ -199,9 +203,10 @@ SELECT CHARINDEX('is', 'This is a string');
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`---------`
-  
- `3`  
+```
+---------
+3
+```  
   
 ### <a name="g-searching-from-a-position-other-than-the-first-position"></a>G. Recherche à partir d’une position autre que la première position  
 L’exemple suivant retourne le premier emplacement de la `is` de chaîne dans `This is a string`, en commençant par la quatrième position.
@@ -212,9 +217,10 @@ SELECT CHARINDEX('is', 'This is a string', 4);
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`---------`
-  
- `6`  
+```
+---------
+ 6
+ ```  
   
 ### <a name="h-results-when-the-string-is-not-found"></a>H. Résultats de la chaîne est introuvable.  
 L’exemple suivant montre la valeur de retour lorsque la *string_pattern* est introuvable dans la chaîne recherchée.
@@ -225,9 +231,10 @@ SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`---------`
-  
- `0`  
+```
+---------
+0
+```  
   
 ## <a name="see-also"></a>Voir aussi
 [Fonctions de chaîne &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
