@@ -11,6 +11,7 @@
 ## [Installer et connecter - SUSE](quickstart-install-connect-suse.md)
 ## [Installer et connecter - Ubuntu](quickstart-install-connect-ubuntu.md)
 ## [Exécuter et connecter - Docker](quickstart-install-connect-docker.md)
+## [Approvisionner une machine virtuelle SQL dans Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
 # Didacticiels
 ## [1_Migrer depuis Windows](sql-server-linux-migrate-restore-database.md)
@@ -24,14 +25,13 @@
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
 
 # Concepts
-## Installer
+## Install
 ### [Installer SQL Server](sql-server-linux-setup.md)
 ### [Installer les outils SQL Server](sql-server-linux-setup-tools.md)
 ### [Installer SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 ### [Installer la recherche en texte intégral SQL Server](sql-server-linux-setup-full-text-search.md)
 ### [Installer SQL Server Integration Services](sql-server-linux-setup-ssis.md)
-### [Enregistrer le référentiel de disponibilité générale](sql-server-linux-change-repo.md)
-### [Approvisionner une machine virtuelle SQL dans Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine)
+### [Référentiel de registre GA](sql-server-linux-change-repo.md)
 
 ## Configurer
 ### [Configurer avec mssql-conf](sql-server-linux-configure-mssql-conf.md)
