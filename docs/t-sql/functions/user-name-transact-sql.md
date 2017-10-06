@@ -77,11 +77,12 @@ GO
   
  Jeu de résultats (pour un utilisateur membre du rôle serveur fixe sysadmin) :  
   
- `------------------------------`  
+ ```
+------------------------------  
+dbo  
   
- `dbo`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ### <a name="c-using-username-in-the-where-clause"></a>C. Utilisation de USER_NAME dans la clause WHERE  
  Le code exemple suivant recherche dans `sysusers` la ligne dans laquelle le nom est égal au résultat de l'application de la fonction système `USER_NAME` à l'utilisateur identifié par le numéro `1`.  
@@ -93,13 +94,13 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `name`  
+ ```
+name  
+------------------------------  
+dbo  
   
- `------------------------------`  
-  
- `dbo`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ### <a name="d-calling-username-during-impersonation-with-execute-as"></a>D. Appel de USER_NAME pendant un emprunt d'identité avec EXECUTE AS  
  Le code exemple suivant illustre le comportement de `USER_NAME` pendant l'emprunt d'identité.  
@@ -119,11 +120,11 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DBO`  
-  
- `Zelig`  
-  
- `DBO`  
+ ```
+DBO  
+Zelig  
+DBO
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

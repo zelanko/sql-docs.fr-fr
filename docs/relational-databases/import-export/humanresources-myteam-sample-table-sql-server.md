@@ -40,7 +40,7 @@ ms.lasthandoff: 10/04/2017
 |**Titre**|**nvarchar(50)**|Nullable|Fonction occupée par l'employé au sein de l'équipe.|  
 |**Arrière-plan**|**nvarchar(50)**|Non Null|Date et heure de dernière mise à jour de la ligne (Par défaut)|  
   
- **Pour créer HumanResources.myTeam**  
+**Pour créer HumanResources.myTeam**  
   
 -   Utilisez les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes :  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 10/04/2017
     GO  
     ```  
   
- **Pour remplir HumanResources.myTeam**  
+**Pour remplir HumanResources.myTeam**  
   
 -   Exécutez les instructions `INSERT` suivantes pour remplir la table de deux lignes :  
   

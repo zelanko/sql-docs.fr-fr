@@ -68,11 +68,12 @@ GO
   
  Voici les résultats obtenus lorsque l'utilisateur de la session est `Surya` :  
   
- `--------------------------------------------------------------`  
-  
- `This session's current user is: Surya`  
-  
- `(1 row(s) affected)`  
+ ```
+--------------------------------------------------------------
+This session's current user is: Surya
+
+(1 row(s) affected)
+```  
   
 ### <a name="b-using-sessionuser-with-default-constraints"></a>B. Utilisation de SESSION_USER avec les contraintes DEFAULT  
  L'exemple suivant crée une table qui utilise `SESSION_USER` en tant que contrainte `DEFAULT` pour obtenir le nom de la personne qui enregistre la réception d'une livraison.  
@@ -127,21 +128,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Order #   Customer #  When Delivered       Received By`  
-  
- `--------  ----------  -------------------  -----------`  
-  
- `5000      7510        2005-03-16 12:02:14  Wanida`  
-  
- `5001      7231        2005-03-16 12:02:14  Wanida`  
-  
- `5002      7028        2005-03-16 12:02:14  Sylvester`  
-  
- `5003      7392        2005-03-16 12:02:14  Alejandro`  
-  
- `5004      7452        2005-03-16 12:02:14  Alejandro`  
-  
- `(5 row(s) affected)`  
+ ```
+Order #   Customer #  When Delivered       Received By
+--------  ----------  -------------------  -----------
+5000      7510        2005-03-16 12:02:14  Wanida
+5001      7231        2005-03-16 12:02:14  Wanida
+5002      7028        2005-03-16 12:02:14  Sylvester
+5003      7392        2005-03-16 12:02:14  Alejandro
+5004      7452        2005-03-16 12:02:14  Alejandro
+
+(5 row(s) affected)
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

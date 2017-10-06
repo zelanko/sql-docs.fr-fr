@@ -198,13 +198,13 @@ SELECT NEXT VALUE FOR Test.CountBy1 AS SecondUse;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `FirstUse`  
+ ```
+FirstUse  
+1  
   
- `1`  
-  
- `SecondUse`  
-  
- `2`  
+SecondUse  
+2
+```  
   
 ### <a name="b-setting-a-variable-to-the-next-sequence-value"></a>B. Définition d'une variable sur la valeur de séquence suivante  
  L'exemple suivant illustre trois façons d'affecter à une variable la valeur suivante d'un numéro séquentiel.  

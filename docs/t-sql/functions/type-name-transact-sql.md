@@ -79,27 +79,20 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `obj_name        col_name                  type_name`  
-  
- `--------------- ------------------------ --------------`  
-  
- `Vendor          AccountNumber            AccountNumber`  
-  
- `Vendor          ActiveFlag               Flag`  
-  
- `Vendor          BusinessEntityID         int`  
-  
- `Vendor          CreditRating             tinyint`  
-  
- `Vendor          ModifiedDate             datetime`  
-  
- `Vendor          Name                     Name`  
-  
- `Vendor          PreferredVendorStatus    Flag`  
-  
- `Vendor          PurchasingWebServiceURL  nvarchar`  
-  
- `(8 row(s) affected)`  
+ ```
+obj_name        col_name                  type_name
+--------------- ------------------------ --------------
+Vendor          AccountNumber            AccountNumber
+Vendor          ActiveFlag               Flag
+Vendor          BusinessEntityID         int
+Vendor          CreditRating             tinyint
+Vendor          ModifiedDate             datetime
+Vendor          Name                     Name
+Vendor          PreferredVendorStatus    Flag
+Vendor          PurchasingWebServiceURL  nvarchar
+
+(8 row(s) affected)
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L’exemple suivant retourne le `TYPE ID` pour le type de données avec l’id `1`.  

@@ -207,11 +207,11 @@ GO
   
  Le jeu de résultats montre que le type de base de l'objet sous-jacent, la table `Employee`, est une table utilisateur.  
   
- `Base Type`  
-  
- `--------`  
-  
- `U`  
+ ```
+Base Type 
+--------  
+U
+```  
   
 ### <a name="b-returning-a-property-value"></a>B. Renvoi d'une valeur de propriété  
  L'exemple suivant renvoie le nombre de déclencheurs UPDATE sur la table spécifiée.  

@@ -102,11 +102,11 @@ FROM dbo.FactSalesQuota;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Distinct_Values   All_Values`  
-  
- `----------------  ----------------`  
-  
- `398974.27         398450.57`  
+ ```
+Distinct_Values   All_Values
+----------------  ----------------
+398974.27         398450.57
+ ```  
   
 ### <a name="c-using-stdev-with-over"></a>C. À l’aide de STDEV avec basculement  
  L’exemple suivant retourne l’écart type des valeurs de quota de ventes pour chaque trimestre de l’année civile. Notez que la clause ORDER BY dans la clause OVER trie le STDEV et la clause ORDER BY de l’instruction SELECT trie le jeu de résultats.  
@@ -123,17 +123,14 @@ ORDER BY CalendarQuarter;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Year  Quarter  SalesQuota              StdDeviation`  
-  
- `----  -------  ----------------------  -------------------`  
-  
- `2002  1         91000.0000             null`  
-  
- `2002  2        140000.0000             34648.23`  
-  
- `2002  3         70000.0000             35921.21`  
-  
- `2002  4        154000.0000             39752.36`  
+ ```
+Year  Quarter  SalesQuota              StdDeviation
+----  -------  ----------------------  -------------------
+2002  1         91000.0000             null
+2002  2        140000.0000             34648.23
+2002  3         70000.0000             35921.21
+2002  4        154000.0000             39752.36
+ ```  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions d’agrégation &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   

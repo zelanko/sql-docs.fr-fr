@@ -78,17 +78,15 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Outer Level`  
+ ```
+Outer Level  
+-----------  
+1  
   
- `-----------`  
-  
- `1`  
-  
- `Inner Level`  
-  
- `-----------`  
-  
- `2`  
+Inner Level  
+-----------  
+2
+```  
   
 ### <a name="b-calling-nestlevel"></a>B. Appel de @@NESTLEVEL  
  L'exemple suivant montre la différence des valeurs retournées par les commandes `SELECT`, `EXEC` et `sp`_`executesql` lorsque chacune d'elles appelle `@@NESTLEVEL`.  
@@ -105,29 +103,25 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Current Nest Level`  
+ ```
+Current Nest Level  
+------------------  
+1  
   
- `------------------`  
+(1 row(s) affected)  
   
- `1`  
+OneGreater  
+-----------  
+2  
   
- `(1 row(s) affected)`  
+(1 row(s) affected)  
   
- `OneGreater`  
+TwoGreater  
+-----------  
+3  
   
- `-----------`  
-  
- `2`  
-  
- `(1 row(s) affected)`  
-  
- `TwoGreater`  
-  
- `-----------`  
-  
- `3`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions de configuration &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   

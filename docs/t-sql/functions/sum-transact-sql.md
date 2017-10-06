@@ -104,17 +104,15 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Color`  
-  
- `--------------- --------------------- ---------------------`  
-  
- `Black           27404.84              5214.9616`  
-  
- `Silver          26462.84              14665.6792`  
-  
- `White           19.00                 6.7926`  
-  
- `(3 row(s) affected)`  
+ ```
+Color
+--------------- --------------------- ---------------------
+Black           27404.84              5214.9616
+Silver          26462.84              14665.6792
+White           19.00                 6.7926
+
+(3 row(s) affected)
+ ```  
   
 ### <a name="b-using-the-over-clause"></a>B. Utilisation de la clause OVER  
  L'exemple suivant utilise la fonction SUM avec la clause OVER pour fournir un total cumulé des ventes annuelles pour chaque secteur dans la table `Sales.SalesPerson` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Les données sont partitionnées par `TerritoryID` et classées logiquement par `SalesYTD`. Cela signifie que la fonction SUM est calculée pour chaque secteur selon l'année de vente. Notez que pour `TerritoryID` 1, il y a deux lignes pour l'année 2005 représentant les deux vendeurs avec leurs ventes de l'année. Les ventes cumulées pour ces deux lignes sont calculées et la troisième ligne représentant les ventes de l'année 2006 est incluse dans le calcul.  
@@ -207,17 +205,14 @@ ORDER BY ProductKey;
   
  Voici un jeu de résultats partiel.  
   
- `ProductKey  TotalPerProduct`  
-  
- `----------  ---------------`  
-  
- `214         31421.0200`  
-  
- `217         31176.0900`  
-  
- `222         29986.4300`  
-  
- `225          7956.1500`  
+ ```
+ProductKey  TotalPerProduct
+----------  ---------------
+214         31421.0200
+217         31176.0900
+222         29986.4300
+225          7956.1500
+ ```
   
 ### <a name="d-calculating-group-totals-with-more-than-one-column"></a>D. Calcul de totaux de groupe avec plusieurs colonnes  
  L'exemple suivant calcule la somme de `ListPrice` et `StandardCost` pour chaque couleur répertoriée dans la table `Product`.  
@@ -234,19 +229,15 @@ ORDER BY Color;
   
  La première partie du jeu de résultats est indiquée ci-dessous :  
   
- `Color       TotalList      TotalCost`  
-  
- `----------  -------------  --------------`  
-  
- `Black       101295.7191    57490.5378`  
-  
- `Blue         24082.9484    14772.0524`  
-  
- `Grey           125.0000       51.5625`  
-  
- `Multi          880.7468      526.4095`  
-  
- `NA            3162.3564     1360.6185`  
+ ```
+Color       TotalList      TotalCost
+----------  -------------  --------------
+Black       101295.7191    57490.5378
+Blue         24082.9484    14772.0524
+Grey           125.0000       51.5625
+Multi          880.7468      526.4095
+NA            3162.3564     1360.6185
+ ```  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions d’agrégation &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   

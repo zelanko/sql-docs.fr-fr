@@ -36,7 +36,6 @@ Installer la recherche en texte intégral de SQL Server pour votre plateforme :
 Utilisez les commandes suivantes pour installer le **FTP du serveur mssql** sur Red Hat Enterprise Linux. 
 
 ```bash
-sudo yum update
 sudo yum install -y mssql-server-fts
 ```
 

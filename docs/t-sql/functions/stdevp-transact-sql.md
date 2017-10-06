@@ -103,11 +103,11 @@ FROM ProductInventory;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Distinct_Values   All_Values`  
-  
- `----------------  ----------------`  
-  
- `397676.79         397226.44`  
+ ```
+Distinct_Values   All_Values  
+----------------  ----------------  
+397676.79         397226.44
+```  
   
 ### <a name="c-using-stdevp-with-over"></a>C. À l’aide de la fonction STDEVP OVER  
  L’exemple suivant retourne le `STDEVP` des valeurs de quota de ventes pour chaque trimestre de l’année civile. Notez que l'argument `ORDER BY` de la clause `OVER` détermine l'ordre des valeurs `STDEVP` tandis que l'argument `ORDER BY` de l'instruction `SELECT` détermine l'ordre de l'ensemble de résultats.  
@@ -124,17 +124,14 @@ ORDER BY CalendarQuarter;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Year  Quarter  SalesQuota              StdDeviation`  
-  
- `----  -------  ----------------------  -------------------`  
-  
- `2002  1         91000.0000             0.00`  
-  
- `2002  2        140000.0000             24500.00`  
-  
- `2002  3         70000.0000             29329.55`  
-  
- `2002  4        154000.0000             34426.55`  
+ ```
+Year  Quarter  SalesQuota              StdDeviation  
+----  -------  ----------------------  -------------------  
+2002  1         91000.0000             0.00  
+2002  2        140000.0000             24500.00  
+2002  3         70000.0000             29329.55  
+2002  4        154000.0000             34426.55
+```  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions d’agrégation &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   

@@ -60,14 +60,12 @@ Utilisez les étapes suivantes pour installer le **mssql-tools** sur Red Hat Ent
 1. Si vous aviez une version précédente de **mssql-tools** installé, supprimez tous les packages unixODBC plus anciens.
 
    ```bash
-   sudo yum update
    sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
    ```
 
 1. Exécutez les commandes suivantes pour installer **mssql-tools** avec le kit du développeur unixODBC.
 
    ```bash
-   sudo yum update
    sudo yum install mssql-tools unixODBC-devel
    ```
 
