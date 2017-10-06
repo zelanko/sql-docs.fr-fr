@@ -48,7 +48,7 @@ Cette documentation sur Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../.
 -   [Utilisation du chiffrement intégral avec le pilote ODBC](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 -   [À l’aide d’Azure Active Directory avec le pilote ODBC](../../../connect/odbc/using-azure-active-directory.md) 
 -   [À l’aide de la résolution IP réseau Transparent](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
-  
+
 ## <a name="community"></a>Communauté  
 - [Blog de l’équipe Microsoft ODBC Driver for SQL Server](http://blogs.msdn.com/sqlnativeclient/default.aspx)  
 - [Forum d'accès aux données SQL Server](http://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
